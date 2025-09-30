@@ -267,39 +267,187 @@ newArticles2025.push(
   }
 );
 
-// Oct 31, 2025 – New featured promos to advertise on Home
+// Sept 30, 2025 – Additional featured content to advertise on homepage
 newArticles2025.push(
   {
-    id: "agent-observability-blueprint-2026",
-    title: "Agent Observability Blueprint 2026: Traces, SLIs, Rollbacks",
-    description: "Wire end‑to‑end traces for tools, KPI SLIs, and instant rollback triggers that keep reliability high.",
+    id: "ai-value-stream-analytics-2026",
+    title: "📈 AI Value Stream Analytics 2026: Trace Spend To ROI",
+    description: "Map prompts, tools, and user actions to business KPIs with end‑to‑end analytics.",
+    category: "Analytics",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-value-stream-analytics-2026",
+    readTime: "9 min read",
+    tags: ["Analytics", "Tracing", "ROI", "KPIs"]
+  },
+  {
+    id: "ai-2027-cost-optimization-playbook",
+    title: "💸 AI 2027 Cost Optimization: Stable UX Under Budget",
+    description: "Tiered routing, caching, and compression to cut spend 30–70% with no regressions.",
+    category: "GenAI",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-2027-cost-optimization-playbook",
+    readTime: "8 min read",
+    tags: ["Cost", "Routing", "Caching", "Optimization"]
+  },
+  {
+    id: "ai-quantum-computing-breakthrough-2026",
+    title: "⚛️ Quantum AI Breakthrough 2026: 1000× Acceleration",
+    description: "Leverage quantum‑enhanced pipelines for combinatorial search and model optimization.",
+    category: "Quantum Computing",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-quantum-computing-breakthrough-2026",
+    readTime: "10 min read",
+    tags: ["Quantum", "Optimization", "Acceleration"]
+  }
+);
+
+// Sept 30, 2025 – Fresh content for homepage banners and showcases
+newArticles2025.push(
+  {
+    id: "ai-governance-live-scorecards-2026",
+    title: "📊 AI Governance Live Scorecards 2026",
+    description: "Guardrails wired to KPIs with PR checks and live canaries—ship faster, stay compliant.",
+    category: "AI Governance",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-governance-live-scorecards-2026",
+    readTime: "7 min read",
+    tags: ["Governance", "Canaries", "Scorecards"]
+  },
+  {
+    id: "edge-real-time-personalization-2026",
+    title: "⚡ Edge Real‑Time Personalization 2026",
+    description: "Scoped IDs, signed configs, and on‑device models for private <100ms personalization.",
+    category: "Edge Computing",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/edge-real-time-personalization-2026",
+    readTime: "6 min read",
+    tags: ["Edge", "Privacy", "Personalization"]
+  },
+  {
+    id: "agent-release-runbooks-2026",
+    title: "✅ Agent Release Runbooks 2026",
+    description: "Budgets, evals, and instant rollback that keep agent releases safe at scale.",
     category: "AI Operations",
     publishedDate: "2025-10-31",
     featured: true,
-    link: "/blog/agent-observability-blueprint-2026",
+    link: "/blog/agent-release-runbooks-2026",
     readTime: "8 min read",
-    tags: ["Observability", "Agents", "SLIs"]
+    tags: ["Agents", "Runbooks", "Rollback"]
+  }
+);
+
+// Mar 2026 – Fresh featured promos to advertise on Home
+newArticles2025.push(
+  {
+    id: "ai-platform-blueprints-2026",
+    title: "AI Platform Blueprints 2026: Guardrails, Traces, Budgets",
+    description: "Governed AI platform patterns with KPI‑linked guardrails, live traces, and predictable spend.",
+    category: "AI Engineering",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-platform-blueprints-2026",
+    readTime: "9 min read",
+    tags: ["Platforms", "Guardrails", "Observability", "Budgets"]
   },
   {
-    id: "secure-genai-data-guardrails-2026",
-    title: "Secure GenAI Data Guardrails 2026: Scoped Access & Redaction",
-    description: "Auth‑aware retrieval, field‑level redaction, and signed outputs enforced by policy tests.",
-    category: "Security",
-    publishedDate: "2025-10-31",
+    id: "edge-agents-2026",
+    title: "Edge Agents 2026: Offline‑Capable Tools at <100ms",
+    description: "On‑device tools, signed configs, and tiered caches for private, sub‑100ms experiences.",
+    category: "Edge Computing",
+    publishedDate: "2025-09-30",
     featured: true,
-    link: "/blog/secure-genai-data-guardrails-2026",
+    link: "/blog/edge-agents-2026",
     readTime: "7 min read",
-    tags: ["Security", "Compliance", "GenAI"]
+    tags: ["Agents", "Edge", "Privacy", "Latency"]
   },
   {
-    id: "sla-aware-inference-routing-2026",
-    title: "SLA‑Aware Inference Routing 2026: Quality Tiers Under Budget",
-    description: "Route prompts by SLA using model tiers, caches, and KPI‑linked budgets for stable UX at lower cost.",
-    category: "GenAI",
-    publishedDate: "2025-10-31",
+    id: "policy-checked-genai-2026",
+    title: "Policy‑Checked GenAI 2026: CI Gates, Canaries, Rollback",
+    description: "CI policy tests, online canaries, and rollback triggers that keep velocity high without regressions.",
+    category: "AI Governance",
+    publishedDate: "2025-09-30",
     featured: true,
-    link: "/blog/sla-aware-inference-routing-2026",
+    link: "/blog/policy-checked-genai-2026",
+    readTime: "7 min read",
+    tags: ["Governance", "Compliance", "Canaries", "Rollback"]
+  }
+);
+
+  }
+);
+
+
+// Sept 30, 2025 – Combined brand-new items to advertise on homepage
+newArticles2025.push(
+  {
+    id: "ai-governance-real-time-guardrails-2025",
+    title: "AI Governance 2025: Real-Time Guardrails that Don't Slow Teams",
+    description: "Inline policy checks, KPI-linked canaries, and instant rollback—ship fast, stay safe.",
+    category: "AI Governance",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-governance-real-time-guardrails-2025",
+    readTime: "7 min read",
+    tags: ["Governance", "Policy Tests", "Canaries", "Rollback"]
+  },
+  {
+    id: "edge-inference-budgets-2025",
+    title: "Edge Inference Budgets 2025: Quality Under Cost and Latency SLAs",
+    description: "Tiered models, warm pools, and cache strategy to deliver <100ms UX under budget.",
+    category: "Edge Computing",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/edge-inference-budgets-2025",
+    readTime: "6 min read",
+    tags: ["Edge", "Latency", "Caching", "Budgets"]
+  },
+  {
+    id: "agent-observability-live-traces-2025",
+    title: "Agent Observability 2025: Live Traces, SLIs, and Safe Actions",
+    description: "End-to-end visibility for agent tools with KPI-linked SLIs and budgeted actions.",
+    category: "AI Operations",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/agent-observability-live-traces-2025",
     readTime: "8 min read",
-    tags: ["Routing", "Budgets", "Caching"]
+    tags: ["Agents", "Observability", "SLIs", "Runbooks"]
+  },
+  {
+    id: "ai-governance-real-time-2026",
+    title: "🛡️ AI Governance in Real Time 2026: Canaries + CI Policy Tests",
+    description: "Prevent regressions with KPI‑linked canaries and lightweight PR policy checks.",
+    category: "AI Governance",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-governance-real-time-2026",
+    readTime: "7 min read",
+    tags: ["Governance", "Canaries", "Policy Tests"]
+  },
+  {
+    id: "edge-inference-warm-pools-2026",
+    title: "⚡ Edge Inference Warm Pools 2026: Sub‑100ms at Predictable Cost",
+    description: "Warm pools, intent prefetch, and tiered caches for global performance on budget.",
+    category: "Edge Computing",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/edge-inference-warm-pools-2026",
+    readTime: "6 min read",
+    tags: ["Edge", "Inference", "Caching", "Cost"]
+  },
+  {
+    id: "agent-release-guardrails-2026",
+    title: "✅ Agent Release Guardrails 2026: Budgets, Approvals, Rollback",
+    description: "Safe agent releases with budgeted actions, approvals, and instant rollback triggers.",
+    category: "AI Operations",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/agent-release-guardrails-2026",
+    readTime: "7 min read",
+    tags: ["Agents", "Runbooks", "Budgets", "Rollback"]
   }
 );

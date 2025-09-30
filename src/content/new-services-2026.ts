@@ -215,3 +215,32 @@ export const newServices2026: NewService[] = [
     launchDate: "2025-09-30"
   }
 ];
+
+// Sept 30, 2025 – New service to advertise on the homepage
+newServices2026.push(
+  {
+    id: "edge-experimentation-suite",
+    name: "Edge Experimentation Suite",
+    title: "🧪 Edge Experimentation Suite: Privacy‑First A/B at <100ms",
+    description: "Run compliant, sub‑100ms experiments with scoped IDs, on‑device metrics, and DP noise—no PII required.",
+    benefits: [
+      "Compliant A/B testing without PII",
+      "Sub‑100ms global latency",
+      "Reliable insights with DP noise",
+      "Geo/account targeting with budgets"
+    ],
+    features: [
+      "Scoped identifier framework",
+      "On‑device metrics aggregation",
+      "Edge flags and geo budgets",
+      "Signed configs and audit trails",
+      "Automated rollback triggers"
+    ],
+    category: "Analytics",
+    pricing: "Starting at $4,000/month",
+    link: "/services/edge-experimentation-suite",
+    icon: "🧪",
+    featured: true,
+    launchDate: "2025-09-30"
+  }
+);

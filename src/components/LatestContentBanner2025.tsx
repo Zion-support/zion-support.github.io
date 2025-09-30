@@ -4,15 +4,40 @@ import { ArrowRight, Sparkles, TrendingUp, Zap } from 'lucide-react';
 const LatestContentBanner2025: React.FC = () => {
   const latestArticles = [
     {
-      id: 1,
-      title: 'AI/ML Pipeline Automation: Complete 2025 Enterprise Guide',
-      slug: 'ai-ml-pipeline-automation-2025',
-      excerpt: 'Master AI/ML pipeline automation with proven strategies achieving 90% faster deployments and 75% cost reduction. Complete guide covering orchestration, monitoring, and MLOps best practices.',
-      category: 'MLOps & Automation',
-      date: '2025-09-30',
-      readTime: '45 min',
-      trending: true,
-      icon: '⚙️'
+      title: "AI 2025: Autonomous Operations Revolution",
+      description: "95% Automation, $2M+ Annual Savings",
+      slug: "ai-autonomous-operations-2025",
+      category: "AI Innovation",
+      emoji: "🚀",
+      highlight: "NEW TODAY",
+      impact: "95% Automation"
+    },
+    {
+      title: "Fortune 500 AI Transformation",
+      description: "$50M Annual Savings, 300% ROI",
+      slug: "fortune-500-ai-transformation",
+      category: "Success Story",
+      emoji: "💰",
+      highlight: "NEW TODAY",
+      impact: "$50M Savings"
+    },
+    {
+      title: "AI Autonomous Operations Service",
+      description: "Enterprise AI Solutions, 95% Automation",
+      slug: "ai-autonomous-operations",
+      category: "New Service",
+      emoji: "⚡",
+      highlight: "NEW TODAY",
+      impact: "95% Automation"
+    },
+    {
+      title: "Autonomous AI Agents in Enterprise",
+      description: "70% Cost Reduction, 10x Productivity",
+      slug: "autonomous-ai-agents-enterprise-2025",
+      category: "AI Strategy",
+      emoji: "🤖",
+      highlight: "NEW TODAY",
+      impact: "70% Cost Savings"
     },
     {
       id: 2,
@@ -79,15 +104,22 @@ const LatestContentBanner2025: React.FC = () => {
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-fuchsia-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
-        {/* Header Section */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-fuchsia-500/20 border border-cyan-500/30 mb-8 animate-fade-in">
-            <Sparkles className="w-5 h-5 text-cyan-400 animate-pulse" />
-            <span className="text-cyan-400 font-bold text-sm tracking-wider uppercase">
-              🔥 3 BRAND NEW ARTICLES PUBLISHED • September 30, 2025
-            </span>
-            <Sparkles className="w-5 h-5 text-fuchsia-400 animate-pulse" />
+      <div className="relative z-10">
+        {/* Header */}
+        <div className="flex items-center gap-3 mb-6 flex-wrap">
+          <motion.div
+            animate={{ rotate: [0, 360] }}
+            transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+          >
+            <Sparkles className="w-8 h-8 text-yellow-400" />
+          </motion.div>
+          <div className="flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
+            <TrendingUp className="w-4 h-4 text-green-400" />
+            <span className="text-sm font-semibold text-white">BREAKTHROUGH CONTENT • SEPT 30, 2025</span>
+          </div>
+          <div className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-yellow-400/20 to-orange-500/20 backdrop-blur-sm rounded-full border border-yellow-400/30">
+            <Zap className="w-4 h-4 text-yellow-400 animate-pulse" />
+            <span className="text-sm font-semibold text-yellow-300">11 NEW ARTICLES</span>
           </div>
 
           <h2 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-fuchsia-400 bg-clip-text text-transparent animate-fade-in">
@@ -100,13 +132,23 @@ const LatestContentBanner2025: React.FC = () => {
           </p>
         </div>
 
-        {/* Featured Articles Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {latestArticles.map((article, index) => (
-            <div 
-              key={article.id}
-              className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-cyan-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20"
-              style={{ animationDelay: `${index * 100}ms` }}
+        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          🚀 JUST PUBLISHED: 11 Revolutionary Breakthrough Articles!
+        </h2>
+        <p className="text-xl text-blue-100 mb-8 max-w-3xl">
+          Discover <span className="font-bold text-yellow-300">11 BRAND NEW cutting-edge articles</span> including our latest: "AI 2025: The Enterprise Autonomous Operations Revolution" (95% automation, $2M+ savings), "Fortune 500 AI Transformation Case Study" ($50M annual savings), and "AI Autonomous Operations Service" - plus 8 more breakthrough insights on Neuromorphic Computing, Quantum-AI Convergence, Zero Trust Security, Edge AI, Synthetic Data, AI Contract Intelligence, and Real-Time Personalization!
+        </p>
+
+        {/* Featured highlights */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+          {breakthroughArticles.map((article, index) => (
+            <motion.div
+              key={article.slug}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+              whileHover={{ scale: 1.05 }}
+              className="group"
             >
               {/* Card glow effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/0 via-fuchsia-500/0 to-cyan-500/0 group-hover:from-cyan-500/10 group-hover:via-fuchsia-500/10 group-hover:to-cyan-500/10 transition-all duration-500"></div>
@@ -200,23 +242,24 @@ const LatestContentBanner2025: React.FC = () => {
           </div>
         </div>
 
-        {/* Stats Section */}
-        <div className="grid md:grid-cols-4 gap-8 mt-20">
-          {[
-            { value: '500+', label: 'Enterprise Clients' },
-            { value: '10B+', label: 'Data Points Processed Daily' },
-            { value: '99.9%', label: 'System Uptime' },
-            { value: '5M+', label: 'Autonomous Operations Hours' }
-          ].map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="text-4xl font-extrabold bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent mb-2">
-                {stat.value}
-              </div>
-              <div className="text-gray-400 text-sm font-medium">
-                {stat.label}
-              </div>
-            </div>
-          ))}
+        {/* Stats */}
+        <div className="mt-8 pt-6 border-t border-white/20 flex flex-wrap gap-8">
+          <div className="text-center">
+            <div className="text-3xl font-bold text-yellow-300">11</div>
+            <div className="text-sm text-blue-200">NEW Articles TODAY</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-green-300">50+</div>
+            <div className="text-sm text-blue-200">Total Expert Articles</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-purple-300">500+</div>
+            <div className="text-sm text-blue-200">Pages of Deep Insights</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-pink-300">10,000x</div>
+            <div className="text-sm text-blue-200">Max Performance Gain</div>
+          </div>
         </div>
       </div>
     </div>

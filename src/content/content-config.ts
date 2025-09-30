@@ -151,6 +151,30 @@ export const featuredBlogPosts: FeaturedItem[] = [
 // Newly featured items to advertise on the homepage
 featuredBlogPosts.unshift(
   {
+    id: "ai-governance-real-time-2026",
+    title: "AI Governance in Real Time 2026",
+    description: "Live canaries + CI policy tests to prevent regressions.",
+    link: "/blog/ai-governance-real-time-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-inference-warm-pools-2026",
+    title: "Edge Inference Warm Pools 2026",
+    description: "Sub‑100ms global with warm pools, prefetch, tiered caches.",
+    link: "/blog/edge-inference-warm-pools-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "agent-release-guardrails-2026",
+    title: "Agent Release Guardrails 2026",
+    description: "Budgets, approvals, and instant rollback for safe releases.",
+    link: "/blog/agent-release-guardrails-2026",
+    type: "article",
+    featured: true
+  },
+  {
     id: "operational-evals-2026",
     title: "Operational Evals 2026",
     description: "KPIs, canaries, and rollback playbooks that keep velocity high",
@@ -171,6 +195,34 @@ featuredBlogPosts.unshift(
     title: "Sovereign RAG Platforms 2026",
     description: "Residency, guardrails, and speed without hurting UX",
     link: "/blog/sovereign-rag-platforms-2026",
+    type: "article",
+    featured: true
+  }
+);
+
+// Highlight newly created articles
+featuredBlogPosts.unshift(
+  {
+    id: "ai-autonomous-ops-blueprint-2026",
+    title: "AI Autonomous Ops Blueprint 2026",
+    description: "Budgets, live traces, and one‑click rollback for safe autonomy",
+    link: "/blog/ai-autonomous-ops-blueprint-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-private-analytics-2026",
+    title: "Edge Private Analytics 2026",
+    description: "Scoped IDs, on‑device metrics, and DP noise without PII",
+    link: "/blog/edge-private-analytics-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "agent-safety-runbooks-2026",
+    title: "Agent Safety Runbooks 2026",
+    description: "Approvals, budgets, and KPI‑linked canary evals",
+    link: "/blog/agent-safety-runbooks-2026",
     type: "article",
     featured: true
   }

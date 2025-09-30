@@ -7,64 +7,54 @@ export const metadata = {
 
 const blogPosts = [
   {
-    title: 'Reliable GenAI Platform 2026: Architecture, Guardrails, and ROI',
-    slug: 'ai-2026-reliable-genai-platform',
-    excerpt: 'Blueprint a governed, reliable, and cost‑efficient GenAI platform with routing, memory, evals, and policy guardrails.',
+<<<<<<< HEAD
+    title: 'AI 2026 Cost Optimization Blueprint: 30–70% Savings without Quality Loss',
+    slug: 'ai-2026-cost-optimization-blueprint',
+    excerpt: 'Cut AI spend with routing, semantic caches, quantization, and token discipline tied to quality scorecards.',
     category: 'Implementation Guide',
-    publishedAt: 'January 2026',
-    image: '🏗️',
-    color: 'indigo',
-    readTime: '18 min read'
-  },
-  {
-    title: 'Trustworthy Autonomous Agents 2026: Guardrails, Evals, and Policy Gates',
-    slug: 'ai-trustworthy-agents-2026',
-    excerpt: 'Design reliable autonomy with layered guardrails, budgeted tools, and live evaluations.',
-    category: 'AI Reliability',
-    publishedAt: 'January 2026',
-    image: '🛡️',
-    color: 'purple',
-    readTime: '16 min read'
-  },
-  {
-    title: 'AI Agent Security Blueprint 2026: Zero‑Trust for Autonomous Systems',
-    slug: 'ai-agent-security-blueprint-2026',
-    excerpt: 'Zero‑trust architecture for agents: isolation, least privilege, scoped secrets, and auditability.',
-    category: 'Security',
-    publishedAt: 'January 2026',
-    image: '🔐',
+    publishedAt: 'January 15, 2026',
+    image: '💸',
     color: 'green',
+    readTime: '13 min read'
+  },
+  {
+    title: 'AI 2025 Agent Reliability Blueprint: Ship Trustworthy Autonomous Workflows',
+    slug: 'ai-2025-agent-reliability-blueprint',
+    excerpt: 'Blueprint for reliable, observable, and governable autonomous agents with policy gates and eval scorecards.',
+    category: 'AI Reliability',
+    publishedAt: 'October 1, 2025',
+    image: '🧭',
+    color: 'indigo',
+=======
+    title: 'AI 2027 Hyper‑Automation Blueprint',
+    slug: 'ai-2027-hyper-automation-blueprint',
+    excerpt: 'Scale reliable hyper‑automation with policy gates, evals, and value stream analytics.',
+    category: 'Implementation Guide',
+    publishedAt: 'October 1, 2025',
+    image: '🧩',
+    color: 'emerald',
+>>>>>>> feature/hyper-automation-blueprint-2027
     readTime: '14 min read'
   },
   {
-    title: 'Reliable Agent Evals 2025: Measure, Guardrail, and Improve',
-    slug: 'ai-reliable-agent-evals-2025',
-    excerpt: 'Blueprint for production agent evaluations: golden tasks, scorecards, policy tests, and continuous improvement.',
-    category: 'AI Reliability',
-    publishedAt: 'September 30, 2025',
-    image: '✅',
+    title: 'AI 2027: Quantum Computing Breakthrough Revolutionizing Enterprise Operations',
+    slug: 'ai-2027-quantum-breakthrough',
+    excerpt: 'Discover how quantum computing breakthroughs in 2027 are revolutionizing enterprise AI operations, delivering unprecedented computational power and optimization capabilities.',
+    category: 'Breakthrough Technology',
+    publishedAt: 'January 15, 2027',
+    image: '⚛️',
     color: 'purple',
     readTime: '12 min read'
   },
   {
-    title: 'AI Enterprise GenAI Agent Platform 2026',
-    slug: 'ai-enterprise-genai-agent-platform-2026',
-    excerpt: 'Blueprint to ship a governed, reliable, and cost‑efficient GenAI agent platform—routing, memory, tools, observability, and guardrails.',
-    category: 'Implementation Guide',
-    publishedAt: 'September 30, 2025',
-    image: '🏗️',
+    title: 'AI 2027: The Dawn of Fully Autonomous Enterprise Operations',
+    slug: 'ai-2027-autonomous-enterprise',
+    excerpt: 'Explore how AI-driven autonomous enterprise systems are transforming business operations, delivering unprecedented efficiency and decision-making capabilities without human intervention.',
+    category: 'Revolutionary Technology',
+    publishedAt: 'February 20, 2027',
+    image: '🤖',
     color: 'green',
-    readTime: '20 min read'
-  },
-  {
-    title: 'AI Voice Interfaces Enterprise 2026',
-    slug: 'ai-voice-interfaces-enterprise-2026',
-    excerpt: 'Design low‑latency, multilingual, privacy‑preserving voice AI with guardrails, evals, and fallbacks.',
-    category: 'Implementation Guide',
-    publishedAt: 'September 30, 2025',
-    image: '🎙️',
-    color: 'indigo',
-    readTime: '18 min read'
+    readTime: '15 min read'
   },
   {
     title: 'Enterprise RAG Guardrails 2026: Safe, Reliable, and Controllable AI',
@@ -276,6 +266,16 @@ const blogPosts = [
     image: '🧩',
     color: 'purple',
     readTime: '16 min read'
+  },
+  {
+    title: 'AI Trends 2026: The Future of Enterprise Technology',
+    slug: 'ai-trends-2026-future-enterprise',
+    excerpt: 'Discover the revolutionary AI trends shaping 2026. From autonomous systems to quantum-enhanced AI, explore the breakthroughs that matter.',
+    category: 'Featured Article',
+    publishedAt: 'January 15, 2026',
+    image: '🚀',
+    color: 'blue',
+    readTime: '15 min read'
   }
 ];
 
@@ -295,24 +295,47 @@ export default function BlogPage() {
         <p className="text-white/70 mb-10">
           Curated research, playbooks, and case studies for enterprise AI leaders.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {blogPosts.slice(0, 8).map((post) => (
-            <Link key={post.slug} href={`/blog/${post.slug}`} className="group">
-              <div className="bg-white/5 border border-white/10 rounded-xl p-6 hover:border-white/30 transition-colors">
-                <div className="mb-2 flex items-center gap-2">
-                  <span className={`px-3 py-1 rounded-full text-xs bg-${post.color}-500/20 text-${post.color}-300 border border-${post.color}-500/30`}>
-                    {post.category}
-                  </span>
-                  <span className="text-sm text-white/60">{post.publishedAt}</span>
-                </div>
-                <h3 className="text-xl font-bold group-hover:text-white transition-colors">
-                  {post.title}
-                </h3>
-                <p className="text-gray-300 mt-2 text-sm">{post.excerpt}</p>
-                <div className="mt-3 text-white/60 text-sm">{post.readTime}</div>
-              </div>
+        
+        {/* Featured Posts */}
+        <div className="mb-12">
+          <h2 className="text-2xl font-bold mb-6">Featured Articles</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <Link href="/blog/ai-2027-autonomous-governance-blueprint" className="block p-6 bg-slate-800 rounded-lg hover:bg-slate-700 transition-colors">
+              <h3 className="text-xl font-semibold mb-2">AI 2027 Autonomous Governance Blueprint</h3>
+              <p className="text-slate-300 mb-3">Comprehensive framework for autonomous AI governance in enterprise environments.</p>
+              <span className="text-blue-400 text-sm">Read more →</span>
             </Link>
-          ))}
+            <Link href="/blog/ai-2026-agent-ops-observability" className="block p-6 bg-slate-800 rounded-lg hover:bg-slate-700 transition-colors">
+              <h3 className="text-xl font-semibold mb-2">Agent Ops Observability 2026</h3>
+              <p className="text-slate-300 mb-3">Advanced observability patterns for AI agent operations and monitoring.</p>
+              <span className="text-fuchsia-400 text-sm">Read more →</span>
+            </Link>
+          </div>
+        </div>
+
+        {/* All Posts */}
+        <div>
+          <h2 className="text-2xl font-bold mb-6">All Articles</h2>
+          <div className="space-y-4">
+            {blogPosts.map((post, index) => (
+              <Link key={index} href={`/blog/${post.slug}`} className="block p-4 bg-slate-800 rounded-lg hover:bg-slate-700 transition-colors">
+                <div className="flex items-start justify-between">
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="text-2xl">{post.image}</span>
+                      <span className={`px-2 py-1 text-xs font-semibold rounded-full bg-${post.color}-100 text-${post.color}-800`}>
+                        {post.category}
+                      </span>
+                      <span className="text-slate-400 text-sm">{post.readTime}</span>
+                    </div>
+                    <h3 className="text-lg font-semibold mb-1">{post.title}</h3>
+                    <p className="text-slate-300 text-sm mb-2">{post.excerpt}</p>
+                    <span className="text-slate-400 text-xs">{post.publishedAt}</span>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
       </main>
     </div>

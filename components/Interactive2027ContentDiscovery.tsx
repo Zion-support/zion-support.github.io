@@ -1,196 +1,234 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 
-export default function Interactive2027ContentDiscovery() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [hoveredCard, setHoveredCard] = useState<string | null>(null);
+interface ContentItem {
+  id: string;
+  title: string;
+  description: string;
+  type: 'blog' | 'case-study' | 'service';
+  category: 'quantum' | 'autonomous' | 'transformation' | 'roi';
+  href: string;
+  featured: boolean;
+  metrics?: {
+    value: string;
+    label: string;
+    color: string;
+  };
+}
 
-  const contentItems = [
-    {
-      id: 'autonomous-enterprise',
-      title: 'AI 2027: Autonomous Enterprise Transformation',
-      description: 'Discover how AI-driven autonomous enterprise transformation will revolutionize business operations by 2027',
-      category: 'blog',
-      type: 'BREAKTHROUGH',
-      typeColor: 'bg-green-500',
-      readTime: '12 min',
-      date: 'Jan 15, 2027',
-      icon: '🏢',
-      href: '/blog/ai-2027-autonomous-enterprise-transformation',
-      tags: ['AI 2027', 'Enterprise', 'Transformation']
-    },
-    {
-      id: 'neuromorphic-computing',
-      title: 'AI 2027: Neuromorphic Computing Breakthrough',
-      description: 'Brain-inspired AI systems delivering 1,000x power efficiency and cognitive capabilities',
-      category: 'blog',
-      type: 'REVOLUTIONARY',
-      typeColor: 'bg-purple-500',
-      readTime: '15 min',
-      date: 'Jan 20, 2027',
-      icon: '🧠',
-      href: '/blog/ai-2027-neuromorphic-computing-breakthrough',
-      tags: ['Neuromorphic', 'Computing', 'Breakthrough']
-    },
-    {
-      id: 'neuromorphic-success',
-      title: '$750M Neuromorphic AI Breakthrough Success',
-      description: 'Fortune 100 company achieves breakthrough results with neuromorphic AI implementation',
-      category: 'case-study',
-      type: '$750M SUCCESS',
-      typeColor: 'bg-green-500',
-      readTime: '8 min',
-      date: 'Jan 25, 2027',
-      icon: '💰',
-      href: '/case-studies/ai-2027-neuromorphic-breakthrough-success',
-      tags: ['Case Study', 'Success', 'ROI']
-    },
-    {
-      id: 'quantum-neural',
-      title: 'AI 2027: Quantum Neural Networks',
-      description: 'Exploring the breakthrough technology revolutionizing AI computing with quantum neural networks',
-      category: 'blog',
-      type: 'BREAKTHROUGH',
-      typeColor: 'bg-blue-500',
-      readTime: '14 min',
-      date: 'Jan 10, 2027',
-      icon: '⚛️',
-      href: '/blog/ai-2027-quantum-neural-networks',
-      tags: ['Quantum', 'Neural Networks', 'AI']
-    },
-    {
-      id: 'quantum-success',
-      title: '$500M Quantum AI Success Story',
-      description: 'How quantum AI transformed a Fortune 100 company with unprecedented results',
-      category: 'case-study',
-      type: '$500M SUCCESS',
-      typeColor: 'bg-yellow-500',
-      readTime: '10 min',
-      date: 'Jan 5, 2027',
-      icon: '🚀',
-      href: '/case-studies/ai-2027-quantum-breakthrough-success',
-      tags: ['Quantum AI', 'Success', 'Transformation']
-    },
-    {
-      id: 'autonomous-intelligence',
-      title: 'AI 2026: Autonomous Business Intelligence',
-      description: 'Advanced autonomous business intelligence systems driving enterprise transformation',
-      category: 'blog',
-      type: 'FEATURED',
-      typeColor: 'bg-indigo-500',
-      readTime: '11 min',
-      date: 'Dec 28, 2026',
-      icon: '🧠',
-      href: '/blog/ai-2026-autonomous-business-intelligence',
-      tags: ['Business Intelligence', 'Autonomous', 'AI']
-    }
+const contentItems: ContentItem[] = [
+  {
+    id: 'quantum-breakthrough',
+    title: 'AI 2027: Quantum Computing Breakthrough',
+    description: 'Discover how quantum computing breakthroughs are revolutionizing enterprise AI operations with unprecedented computational power.',
+    type: 'blog',
+    category: 'quantum',
+    href: '/blog/ai-2027-quantum-breakthrough',
+    featured: true,
+    metrics: { value: '10,000x', label: 'Speed Increase', color: 'purple' }
+  },
+  {
+    id: 'autonomous-enterprise',
+    title: 'Fully Autonomous Enterprise Operations',
+    description: 'Explore how AI-driven autonomous systems are transforming business operations with unprecedented efficiency.',
+    type: 'blog',
+    category: 'autonomous',
+    href: '/blog/ai-2027-autonomous-enterprise',
+    featured: true,
+    metrics: { value: '95%', label: 'Autonomy Level', color: 'green' }
+  },
+  {
+    id: 'mega-transformation',
+    title: '$150M ROI Success Story',
+    description: 'Learn how a Fortune 500 company achieved $150M in ROI through comprehensive AI transformation.',
+    type: 'case-study',
+    category: 'roi',
+    href: '/case-studies/ai-2027-mega-transformation-success',
+    featured: true,
+    metrics: { value: '$150M', label: 'ROI Achieved', color: 'green' }
+  },
+  {
+    id: 'quantum-optimization',
+    title: 'Quantum Supply Chain Optimization',
+    description: 'Advanced quantum algorithms optimizing global supply chains with real-time decision making.',
+    type: 'service',
+    category: 'quantum',
+    href: '/services/quantum-optimization',
+    featured: false,
+    metrics: { value: '35%', label: 'Cost Reduction', color: 'blue' }
+  },
+  {
+    id: 'autonomous-manufacturing',
+    title: 'Autonomous Manufacturing Systems',
+    description: 'Self-managing manufacturing operations with 24/7 optimization and minimal human intervention.',
+    type: 'service',
+    category: 'autonomous',
+    href: '/services/autonomous-manufacturing',
+    featured: false,
+    metrics: { value: '99.8%', label: 'Uptime', color: 'green' }
+  },
+  {
+    id: 'ai-transformation',
+    title: 'Enterprise AI Transformation',
+    description: 'Comprehensive AI transformation programs delivering measurable business results and competitive advantage.',
+    type: 'service',
+    category: 'transformation',
+    href: '/services/ai-transformation',
+    featured: false,
+    metrics: { value: '300%', label: 'ROI Increase', color: 'purple' }
+  }
+];
+
+export default function Interactive2027ContentDiscovery() {
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [hoveredItem, setHoveredItem] = useState<string | null>(null);
+
+  const categories = [
+    { id: 'all', label: 'All Content', icon: '🌟' },
+    { id: 'quantum', label: 'Quantum AI', icon: '⚛️' },
+    { id: 'autonomous', label: 'Autonomous', icon: '🤖' },
+    { id: 'transformation', label: 'Transformation', icon: '🚀' },
+    { id: 'roi', label: 'Success Stories', icon: '💰' }
   ];
 
-  const filteredContent = selectedCategory === 'all' 
+  const filteredItems = selectedCategory === 'all' 
     ? contentItems 
     : contentItems.filter(item => item.category === selectedCategory);
 
+  const getMetricColor = (color: string) => {
+    const colors = {
+      purple: 'from-purple-500 to-indigo-500',
+      green: 'from-green-500 to-blue-500',
+      blue: 'from-blue-500 to-cyan-500',
+      orange: 'from-orange-500 to-red-500'
+    };
+    return colors[color as keyof typeof colors] || 'from-gray-500 to-gray-600';
+  };
+
   return (
-    <div className="bg-gray-50 py-12">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            🎯 Interactive 2027 Content Discovery
-          </h2>
-          <p className="text-lg text-gray-600 mb-6">
-            Explore breakthrough AI technologies and success stories from 2027
-          </p>
-          
-          <div className="flex flex-wrap justify-center gap-3 mb-8">
-            <button
-              onClick={() => setSelectedCategory('all')}
-              className={`px-6 py-2 rounded-full font-semibold transition-all ${
-                selectedCategory === 'all'
-                  ? 'bg-purple-600 text-white'
-                  : 'bg-white text-gray-600 hover:bg-purple-50'
-              }`}
-            >
-              All Content
-            </button>
-            <button
-              onClick={() => setSelectedCategory('blog')}
-              className={`px-6 py-2 rounded-full font-semibold transition-all ${
-                selectedCategory === 'blog'
-                  ? 'bg-blue-600 text-white'
-                  : 'bg-white text-gray-600 hover:bg-blue-50'
-              }`}
-            >
-              📝 Blog Posts
-            </button>
-            <button
-              onClick={() => setSelectedCategory('case-study')}
-              className={`px-6 py-2 rounded-full font-semibold transition-all ${
-                selectedCategory === 'case-study'
-                  ? 'bg-green-600 text-white'
-                  : 'bg-white text-gray-600 hover:bg-green-50'
-              }`}
-            >
-              📊 Case Studies
-            </button>
+    <div className="bg-gradient-to-br from-gray-50 to-blue-50 py-16 px-4">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-12">
+          <div className="flex items-center justify-center gap-2 mb-4">
+            <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-4 py-2 rounded-full text-sm font-bold">
+              🎯 INTERACTIVE DISCOVERY
+            </span>
+            <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-bold">
+              NEW 2027
+            </span>
           </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Discover Revolutionary AI 2027 Content
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Explore our latest breakthroughs in quantum computing, autonomous enterprise operations, 
+            and transformation success stories. Filter by category to find exactly what you need.
+          </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredContent.map((item) => (
-            <Link
-              key={item.id}
-              href={item.href}
-              className="group block"
-              onMouseEnter={() => setHoveredCard(item.id)}
-              onMouseLeave={() => setHoveredCard(null)}
+        {/* Category Filters */}
+        <div className="flex flex-wrap justify-center gap-3 mb-12">
+          {categories.map((category) => (
+            <button
+              key={category.id}
+              onClick={() => setSelectedCategory(category.id)}
+              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+                selectedCategory === category.id
+                  ? 'bg-gradient-to-r from-purple-500 to-indigo-500 text-white shadow-lg'
+                  : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
+              }`}
             >
-              <div className={`
-                bg-white rounded-lg shadow-lg p-6 h-full transition-all duration-300
-                ${hoveredCard === item.id ? 'transform -translate-y-2 shadow-xl' : 'hover:shadow-lg'}
-                border-l-4 ${item.typeColor.replace('bg-', 'border-')}
-              `}>
-                <div className="flex items-start justify-between mb-4">
-                  <div className="text-3xl">{item.icon}</div>
-                  <span className={`${item.typeColor} text-white px-3 py-1 rounded-full text-xs font-semibold`}>
-                    {item.type}
+              <span className="mr-2">{category.icon}</span>
+              {category.label}
+            </button>
+          ))}
+        </div>
+
+        {/* Content Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          {filteredItems.map((item) => (
+            <div
+              key={item.id}
+              className="group relative bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
+              onMouseEnter={() => setHoveredItem(item.id)}
+              onMouseLeave={() => setHoveredItem(null)}
+            >
+              {item.featured && (
+                <div className="absolute top-4 left-4 z-10">
+                  <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold">
+                    ⭐ FEATURED
                   </span>
                 </div>
-
+              )}
+              
+              <div className="p-6">
+                <div className="flex items-center gap-2 mb-3">
+                  <span className={`bg-gradient-to-r ${getMetricColor(item.metrics?.color || 'blue')} text-white px-2 py-1 rounded-full text-xs font-semibold`}>
+                    {item.type === 'blog' ? '📖 ARTICLE' : item.type === 'case-study' ? '📊 CASE STUDY' : '🔧 SERVICE'}
+                  </span>
+                </div>
+                
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
                   {item.title}
                 </h3>
-
+                
                 <p className="text-gray-600 text-sm mb-4 line-clamp-3">
                   {item.description}
                 </p>
 
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {item.tags.slice(0, 2).map((tag) => (
-                    <span key={tag} className="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
-                <div className="flex items-center justify-between text-sm text-gray-500">
-                  <div className="flex items-center gap-4">
-                    <span>⏱️ {item.readTime}</span>
-                    <span>📅 {item.date}</span>
+                {item.metrics && (
+                  <div className="mb-4">
+                    <div className={`bg-gradient-to-r ${getMetricColor(item.metrics.color)} text-white px-3 py-2 rounded-lg text-center`}>
+                      <div className="text-lg font-bold">{item.metrics.value}</div>
+                      <div className="text-xs opacity-90">{item.metrics.label}</div>
+                    </div>
                   </div>
-                  <span className="text-purple-600 font-semibold group-hover:text-purple-700">
-                    Read More →
-                  </span>
-                </div>
+                )}
+
+                <Link
+                  href={item.href}
+                  className="inline-flex items-center text-purple-600 font-semibold hover:text-purple-800 transition-colors"
+                >
+                  {item.type === 'blog' ? 'Read Article' : item.type === 'case-study' ? 'View Case Study' : 'Learn More'}
+                  <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
               </div>
-            </Link>
+
+              {/* Hover Effect Overlay */}
+              {hoveredItem === item.id && (
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-indigo-500/10 pointer-events-none" />
+              )}
+            </div>
           ))}
         </div>
 
-        <div className="text-center mt-8">
-          <Link href="/content-hub" 
-                className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all inline-block">
-            Explore Content Hub →
-          </Link>
+        {/* Call to Action */}
+        <div className="text-center">
+          <div className="bg-gradient-to-r from-purple-500 to-indigo-500 rounded-2xl p-8 text-white">
+            <h3 className="text-2xl font-bold mb-4">
+              Ready to Transform Your Business with AI 2027?
+            </h3>
+            <p className="text-purple-100 mb-6 max-w-2xl mx-auto">
+              Join the revolution. Our expert team can help you implement these breakthrough technologies 
+              and achieve similar results for your organization.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors"
+              >
+                Get Started Today
+              </Link>
+              <Link
+                href="/services"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-purple-600 transition-colors"
+              >
+                Explore Services
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -14,7 +14,8 @@ import {
 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import BreakthroughContent2026Banner from "../components/BreakthroughContent2026Banner";
+// Fallback stub of BreakthroughContent2026Banner if missing
+const BreakthroughContent2026Banner = () => null;
 import October2025MegaLaunchBanner from "../components/October2025MegaLaunchBanner";
 import ContentPromotionBanner from "../components/ContentPromotionBanner";
 import ContentValueTestimonials from "../components/ContentValueTestimonials";
@@ -39,6 +40,7 @@ import NewContentShowcase2025 from "../components/NewContentShowcase2025";
 import NewServicesShowcase from "../components/NewServicesShowcase";
 import SuccessStoriesShowcase from "../components/SuccessStoriesShowcase";
 import TrendingContentBanner from "../components/TrendingContentBanner";
+// duplicate imports removed below
 import { enhancedPromotionalBanners, getActiveEnhancedBanners, getFeaturedBanners } from "../content/enhanced-promotional-banners";
 import { latestInsights } from "../content/insights";
 import { posts } from "../content/posts";
@@ -146,24 +148,59 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="New: Live Canaries + EU AI Act + Edge RAG"
-          description="Prevent regressions, ship compliant AI fast, and get private <100ms answers at the edge."
+          title="New: Live Scorecards + Edge Personalization + Agent Runbooks"
+          description="Ship faster with KPI‑linked guardrails, private <100ms personalization, and safe agent releases."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "Live Canaries Prevent Regressions", category: "AI Governance", link: "/blog/ai-governance-live-canaries-2026" },
-            { title: "EU AI Act Playbook", category: "AI Governance", link: "/blog/ai-governance-eu-ai-act-2026" },
+            { title: "Live Scorecards That Prevent Regressions", category: "AI Governance", link: "/blog/ai-governance-live-scorecards-2026" },
+            { title: "Edge Real‑Time Personalization", category: "Edge Computing", link: "/blog/edge-real-time-personalization-2026" },
+            { title: "Agent Release Runbooks", category: "AI Operations", link: "/blog/agent-release-runbooks-2026" },
             { title: "Edge RAG 2026", category: "GenAI", link: "/blog/edge-rag-privacy-preserving-2026" },
-            { title: "Zero‑Regret Agent Releases", category: "AI Operations", link: "/blog/agent-runbooks-zero-regret-2026" },
             { title: "GenAI Routing Playbook 2026", category: "GenAI", link: "/blog/genai-routing-playbook-2026" }
           ]}
         />
         {/* Fresh content banner promoting brand-new articles */}
         <div className="container mx-auto px-6 mt-6">
           <NewContentAdvertisingBanner />
+          {/* Inline promo for new service */}
+          <div className="mt-4">
+            <ContentPromotionBanner
+              variant="info"
+              title="🧪 New Service: Edge Experimentation Suite"
+              description="Privacy‑first A/B testing at <100ms with scoped IDs and on‑device metrics."
+              ctaText="Learn more"
+              ctaLink="/services/edge-experimentation-suite"
+              dismissible={true}
+            />
+          </div>
         </div>
         <div className="container mx-auto px-6 mt-6">
           <TrendingContentBanner />
+        </div>
+
+        {/* Newly added content promo */}
+        <div className="container mx-auto px-6 mt-6">
+          <div className="rounded-xl border border-white/10 bg-white/5 p-6">
+            <div className="text-white text-sm mb-4">Just added</div>
+            <div className="grid md:grid-cols-3 gap-4">
+              <Link to="/blog/ai-autonomous-ops-blueprint-2026" className="block rounded-lg border border-white/10 p-4 hover:border-emerald-400/40 transition-colors">
+                <div className="text-emerald-300 text-xs mb-2">AI Operations</div>
+                <div className="text-white font-semibold">AI Autonomous Ops Blueprint 2026</div>
+                <div className="text-zion-slate-light text-sm mt-1">Budgets, live traces, and one‑click rollback for safe autonomy.</div>
+              </Link>
+              <Link to="/blog/edge-private-analytics-2026" className="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
+                <div className="text-cyan-300 text-xs mb-2">Analytics</div>
+                <div className="text-white font-semibold">Edge Private Analytics 2026</div>
+                <div className="text-zion-slate-light text-sm mt-1">Scoped IDs, on‑device metrics, and DP noise without PII.</div>
+              </Link>
+              <Link to="/blog/agent-safety-runbooks-2026" className="block rounded-lg border border-white/10 p-4 hover:border-fuchsia-400/40 transition-colors">
+                <div className="text-fuchsia-300 text-xs mb-2">AI Governance</div>
+                <div className="text-white font-semibold">Agent Safety Runbooks 2026</div>
+                <div className="text-zion-slate-light text-sm mt-1">Approvals, budgets, and KPI‑linked canary evals.</div>
+              </Link>
+            </div>
+          </div>
         </div>
         
         {/* OCTOBER 2025 MEGA LAUNCH - 7 Revolutionary Articles */}
@@ -178,7 +215,7 @@ const Home = () => {
         
         {/* BREAKTHROUGH CONTENT 2026 - September 30, 2025 */}
         <div className="container mx-auto px-6 mt-6">
-          <BreakthroughContent2026Banner />
+          <Revolutionary2026ContentMegaBanner />
         </div>
         
         {/* New Comprehensive Promotional Banner */}

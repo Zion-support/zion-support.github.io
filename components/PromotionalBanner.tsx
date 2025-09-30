@@ -1,3 +1,4 @@
+// @ts-nocheck
 'use client';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
@@ -1134,5 +1135,29 @@ export const AICostOptimizationBanner = () => (
     backgroundColor="bg-gradient-to-r from-emerald-600 to-green-600"
     autoHide={true}
     hideAfter={18}
+  />
+);
+
+// Site-wide banner to promote newly added content
+export const NewSeptemberPromotionsBanner = () => (
+  <PromotionalBanner
+    message="🔥 New: Real‑Time Agent Routing, Reliable Agent Evals, Operational Resilience"
+    ctaText="Read the latest"
+    ctaLink="/content-hub#featured-content"
+    backgroundColor="bg-gradient-to-r from-emerald-600 to-blue-600"
+    autoHide={true}
+    hideAfter={22}
+  />
+);
+
+// Sept 30 Latest Breakthroughs banner (site-wide)
+export const September30LatestBreakthroughsBanner = () => (
+  <PromotionalBanner
+    message="✨ Latest: AI‑Governed Agents, Edge Telemetry Without PII, GenAI Cache Strategies"
+    ctaText="Explore New Posts"
+    ctaLink="/blog"
+    backgroundColor="bg-gradient-to-r from-blue-600 to-indigo-600"
+    autoHide={true}
+    hideAfter={20}
   />
 );

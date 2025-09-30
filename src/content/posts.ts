@@ -1155,6 +1155,33 @@ posts.push(
   { slug: "agent-policy-gates-blueprint-2026", title: "Agent Policy Gates 2026: Approvals, Budgets, and Safe Tools", description: "Design approval workflows, budgeted actions, and sandboxed tools to ship reliable agent releases.", category: "AI Operations", publishedAt: "2025-10-31", featured: true, readTime: "7 min read" },
   { slug: "sovereign-rag-platforms-2026", title: "Sovereign RAG Platforms 2026: Residency, Guardrails, and Speed", description: "Region-scoped corpora, auth-aware retrieval, and signed outputs without hurting UX.", category: "GenAI", publishedAt: "2025-09-30", featured: true, readTime: "8 min read" },
   {
+    slug: "ai-platform-value-realization-2026",
+    title: "AI Platform Value Realization 2026: From Pilots to Profit",
+    description: "Operational scorecards and rollout trains that convert AI pilots into durable ROI across business units.",
+    category: "AI Strategy",
+    publishedAt: "2025-10-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "secure-ml-supply-chain-v2-2026",
+    title: "Secure ML Supply Chain v2: Attest Everything, Drift Nothing",
+    description: "Model, data, and prompt provenance with signed attestations and automated drift gates in CI/CD.",
+    category: "Security",
+    publishedAt: "2025-10-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-experiments-under-100ms-2026",
+    title: "Edge Experiments Under 100ms: Privacy‑First A/B Without PII",
+    description: "Geo‑aware flags, scoped IDs, and on‑device metrics enabling compliant experimentation at the edge.",
+    category: "Analytics",
+    publishedAt: "2025-10-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
     slug: "ai-safety-budgets-2026",
     title: "AI Safety Budgets 2026: Guardrails That Keep Velocity High",
     description: "Budget risky actions, set rollback triggers, and wire evals to KPIs for safe automation.",
@@ -1201,34 +1228,127 @@ posts.push(
   }
 );
 
-// Feb 10, 2026 – Brand‑new featured posts to surface on homepage
+// Sept 30, 2025 – Brand new posts to advertise on homepage (featured)
 posts.push(
   {
-    slug: "genai-routing-playbook-2026-v2",
-    title: "GenAI Routing Playbook v2 (2026): Quality Tiers Under Budget",
-    description: "Tier models, cache prompts, and KPI‑linked routes for stable UX at 30–60% lower cost.",
-    category: "GenAI",
-    publishedAt: "2025-10-31",
+    slug: "ai-autonomous-ops-blueprint-2026",
+    title: "AI Autonomous Ops Blueprint 2026: Budgets, Traces, Instant Rollback",
+    description: "Design safe, self-healing AI operations with budgeted actions, live traces, and one-click rollback.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
   },
   {
-    slug: "agent-release-checklists-2026-v2",
-    title: "Agent Release Checklists 2026: Budgets, Canaries, Instant Rollback",
-    description: "Battle‑tested checklists for safe agent releases with budgeted actions and KPI‑linked canaries.",
-    category: "AI Operations",
-    publishedAt: "2025-10-31",
+    slug: "edge-private-analytics-2026",
+    title: "Edge Private Analytics 2026: Scoped IDs, On‑Device Metrics, DP Noise",
+    description: "Ship actionable analytics without PII using scoped identifiers, on-device aggregation, and differential privacy.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "agent-safety-runbooks-2026",
+    title: "Agent Safety Runbooks 2026: Approvals, Budgets, Canary Evals",
+    description: "Battle-tested runbooks for safe agent releases with approvals, budgeted actions, and KPI‑linked canaries.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  }
+);
+
+// Sept 30, 2025 – New promotional articles to surface on homepage
+posts.push(
+  {
+    slug: "ai-governance-live-scorecards-2026",
+    title: "AI Governance Live Scorecards 2026: Guardrails Wired to KPIs",
+    description: "Operational scorecards with PR checks and live canaries that speed delivery while staying compliant.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
   },
   {
-    slug: "privacy-first-telemetry-2026-v2",
-    title: "Privacy‑First Telemetry 2026: Signal‑Rich Analytics Without PII",
-    description: "Scoped IDs, edge aggregation, and DP noise for insights teams love—compliance included.",
-    category: "Analytics",
-    publishedAt: "2025-10-31",
+    slug: "edge-real-time-personalization-2026",
+    title: "Edge Real‑Time Personalization 2026: <100ms Experiences Without PII",
+    description: "Signed configs, scoped IDs, and on‑device models for private, sub‑100ms personalization at scale.",
+    category: "Edge Computing",
+    publishedAt: "2025-09-30",
     featured: true,
     readTime: "6 min read"
+  },
+  {
+    slug: "agent-release-runbooks-2026",
+    title: "Agent Release Runbooks 2026: Budgets, Evals, Instant Rollback",
+    description: "Battle‑tested runbooks for safe agent releases wired to KPIs and error budgets.",
+    category: "AI Operations",
+    publishedAt: "2025-10-31",
+    featured: true,
+    readTime: "8 min read"
+  }
+);
+
+// Sept 30, 2025 – Additional new posts to advertise on homepage
+posts.push(
+  {
+    slug: "ai-agent-reliability-playbook-2026",
+    title: "AI Agent Reliability Playbook 2026: SLOs, Budgets, Rollbacks",
+    description: "Design reliable agent systems with explicit SLOs, budgeted actions, and instant rollback triggers.",
+    category: "AI Engineering",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "privacy-safe-feature-flags-2026",
+    title: "Privacy‑Safe Feature Flags 2026: Sub‑100ms Global Releases",
+    description: "Edge flags with scoped IDs, geo budgets, and DP noise for compliant, fast rollouts.",
+    category: "Architecture",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "platform-roi-scorecards-quickstart-2026",
+    title: "Platform ROI Scorecards Quickstart 2026: Prove Value Fast",
+    description: "Lightweight scorecards that link golden paths to adoption, SLOs, and revenue.",
+    category: "Platform Engineering",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  }
+);
+
+// Sept 30, 2025 – Brand new posts to advertise on homepage
+posts.push(
+  {
+    slug: "ai-governance-real-time-guardrails-2025",
+    title: "AI Governance 2025: Real-Time Guardrails that Don't Slow Teams",
+    description: "Inline policy checks, KPI-linked canaries, and instant rollback that keep shipping velocity high.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-inference-budgets-2025",
+    title: "Edge Inference Budgets 2025: Quality Under Cost and Latency SLAs",
+    description: "Tiered models, warm pools, and cache strategy to deliver <100ms UX within strict budgets.",
+    category: "Edge Computing",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "agent-observability-live-traces-2025",
+    title: "Agent Observability 2025: Live Traces, SLIs, and Safe Actions",
+    description: "End-to-end visibility for agent tools with KPI-linked SLIs and budgeted actions you can trust.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
   }
 );
 
@@ -1668,7 +1788,7 @@ posts.push(
   }
 );
 
-// Mar 1, 2026 – Brand‑new content to advertise across the homepage
+// Mar 2026 – Fresh featured posts to surface on homepage
 posts.push(
   {
     slug: "agent-observability-v2-2026",
@@ -1677,7 +1797,7 @@ posts.push(
     category: "AI Operations",
     publishedAt: "2026-03-01",
     featured: true,
-    readTime: "7 min read"
+    readTime: "8 min read"
   },
   {
     slug: "genai-quality-tiers-2026",
@@ -1696,6 +1816,126 @@ posts.push(
     publishedAt: "2026-02-10",
     featured: true,
     readTime: "6 min read"
+  },
+  {
+    slug: "ai-platform-blueprints-2026",
+    title: "AI Platform Blueprints 2026: Guardrails, Traces, and Budgets",
+    description: "Reference blueprints for governed AI platforms with KPI‑linked guardrails, live traces, and predictable spend.",
+    category: "AI Engineering",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "edge-agents-2026",
+    title: "Edge Agents 2026: Offline‑Capable Tools at <100ms",
+    description: "Design privacy‑first agents with on‑device tools, signed configs, and tiered caches for sub‑100ms UX.",
+    category: "Edge Computing",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "policy-checked-genai-2026",
+    title: "Policy‑Checked GenAI 2026: CI Gates, Canaries, and Rollback",
+    description: "Wire CI policy tests, online canaries, and rollback triggers so teams ship fast without regressions.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  }
+);
+
+// Sept 30, 2025 – New posts to surface and promote on Home
+posts.push(
+  {
+    slug: "ai-real-time-agent-routing-2026",
+    title: "Real‑Time Agent Routing 2026: Quality Tiers Under 100ms",
+    description: "Route tasks across model tiers with caches and KPIs to keep UX snappy under budget.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "reliable-agent-evals-2025",
+    title: "Reliable Agent Evals 2025: KPIs, Canaries, and Rollbacks",
+    description: "Layer offline suites and live canaries tied to product KPIs to prevent regressions while shipping weekly.",
+    category: "AI Engineering",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "ai-operational-resilience-2025",
+    title: "AI Operational Resilience 2025: Predict, Prevent, Remediate",
+    description: "From reactive firefighting to self‑healing ops: budgets, traces, and rollback‑ready automations.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "12 min read"
+  }
+);
+
+// New: Sept 30, 2025 – Fresh featured posts to advertise on the homepage
+posts.push(
+  {
+    slug: "ai-governance-real-time-2026",
+    title: "AI Governance in Real Time 2026: Live Canaries + PR Policy Tests",
+    description: "Wire KPI‑linked canaries and CI policy tests so teams ship weekly without regressions.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-inference-warm-pools-2026",
+    title: "Edge Inference Warm Pools 2026: Sub‑100ms Global with Predictable Cost",
+    description: "Warm pools, intent prefetching, and tiered caches for fast, affordable inference worldwide.",
+    category: "Edge Computing",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "agent-release-guardrails-2026",
+    title: "Agent Release Guardrails 2026: Budgets, Approvals, and Instant Rollback",
+    description: "Battle‑tested checklists for safe agent updates with budgeted actions and one‑click rollback.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  }
+);
+
+// Sept 30, 2025 – Brand new content to surface on homepage
+posts.push(
+  {
+    slug: "ai-governed-agents-in-production-2025",
+    title: "AI‑Governed Agents in Production 2025: Policies, Budgets, Rollback",
+    description: "Ship reliable agents with KPI‑linked policy tests, budgeted actions, and instant rollback playbooks.",
+    category: "AI Engineering",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "edge-telemetry-privacy-2025",
+    title: "Edge Telemetry 2025: Signal‑Rich Insights Without PII",
+    description: "Scoped IDs, on‑device aggregation, and DP noise for analytics teams—no PII collection required.",
+    category: "Observability",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "genai-cache-strategies-2025",
+    title: "GenAI Cache Strategies 2025: Cut Spend 40–70% With Stable UX",
+    description: "Prompt caches, semantic dedupe, and TTL windows that keep quality high under strict budgets.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
   }
 );
 
