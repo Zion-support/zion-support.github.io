@@ -37,6 +37,32 @@ export const posts: BlogPost[] = [
     readTime: "9 min read"
   },
   {
+    slug: "ai-2025-sept-30-real-time-decision-engines-v2",
+    title: "Real-Time Decision Engines v2 — 10M/sec under 1ms",
+    description: "Next-gen warm pools, intent prefetching, and tiered caches that deliver decisions in <1ms at massive scale.",
+    category: "Platform Engineering",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "genai-2025-sept-30-multimodal-fusion-blueprint",
+    title: "Multimodal Fusion Blueprint — 98% Cross-Modal Accuracy",
+    description: "Production patterns for fusing text, vision, and audio with eval scorecards, caches, and safe rollback.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "ai-2025-sept-30-security-mesh",
+    title: "AI Security Mesh — 99.99% Detection with Signed Guardrails",
+    description: "Runtime verifiers, budgeted actions, and signed outputs that stop threats without slowing delivery.",
+    category: "AI Security",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
     slug: "ai-2025-sept-30-neural-code-synthesis",
     title: "Neural Code Synthesis 2025 — 95% Accuracy, 90% Faster Delivery",
     description: "Production blueprint for neural code assistants: policy tests, eval scorecards, and instant rollback for safe velocity.",
