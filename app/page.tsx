@@ -32,16 +32,95 @@ import {
   EnterpriseAISecurityBanner
 } from '../components/NewContentPromotionalBanners';
 import ContentShowcase from '../components/ContentShowcase';
+import NewContent2026MegaBanner from '../components/NewContent2026MegaBanner';
+import AITransformationShowcaseBanner from '../components/AITransformationShowcaseBanner';
+import LatestContent2026Banner from '../components/LatestContent2026Banner';
+import InteractiveAIROICalculator from '../components/InteractiveAIROICalculator';
 
 export const metadata = {
-  title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
-  description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Transform your business with cutting-edge technology and automation.',
-  keywords: 'AI services, micro SaaS, IT services, cloud migration, DevOps, SRE, enterprise software, automation',
+  title: 'Zion Tech Group — AI, Micro SaaS, and IT Services | 300% ROI Guaranteed',
+  description: 'Transform your business with enterprise-grade AI solutions. Get 300% ROI, 85% efficiency gains, and $50M+ revenue growth. Free AI assessment and implementation guide.',
+  keywords: 'AI services, micro SaaS, IT services, AI transformation, AI implementation, AI ROI calculator, enterprise AI, AI consulting, digital transformation, AI automation, AI cost optimization',
+  openGraph: {
+    title: 'Zion Tech Group — AI, Micro SaaS, and IT Services | 300% ROI Guaranteed',
+    description: 'Transform your business with enterprise-grade AI solutions. Get 300% ROI, 85% efficiency gains, and $50M+ revenue growth.',
+    type: 'website',
+    url: 'https://ziontechgroup.com',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Zion Tech Group - AI Transformation Services',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Zion Tech Group — AI, Micro SaaS, and IT Services | 300% ROI Guaranteed',
+    description: 'Transform your business with enterprise-grade AI solutions. Get 300% ROI, 85% efficiency gains, and $50M+ revenue growth.',
+    images: ['/twitter-image.jpg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function HomePage() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "description": "Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.",
+    "url": "https://ziontechgroup.com",
+    "logo": "https://ziontechgroup.com/logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-302-464-0950",
+      "contactType": "customer service",
+      "email": "kleber@ziontechgroup.com"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "364 E Main St STE 1008",
+      "addressLocality": "Middletown",
+      "addressRegion": "DE",
+      "postalCode": "19709",
+      "addressCountry": "US"
+    },
+    "sameAs": [
+      "https://linkedin.com/company/ziontechgroup",
+      "https://twitter.com/ziontechgroup"
+    ],
+    "offers": {
+      "@type": "Offer",
+      "description": "AI Transformation Services with 300% ROI Guarantee",
+      "price": "50000",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    }
+  };
+
   return (
-    <div className="animate-fade-in">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <div className="animate-fade-in">
+      {/* New 2026 Content Banners */}
+      <NewContent2026MegaBanner />
+      <AITransformationShowcaseBanner />
+      <LatestContent2026Banner />
+      
       {/* New Content Promotional Banners */}
       <AIEnterpriseAdoptionBanner />
       <AITrends2025Banner />
@@ -196,6 +275,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Interactive AI ROI Calculator */}
+      <InteractiveAIROICalculator />
 
       {/* Dynamic Content Showcase */}
       <ContentShowcase />
@@ -784,6 +866,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 }
