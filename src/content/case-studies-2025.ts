@@ -234,6 +234,114 @@ export const caseStudies2025: CaseStudy[] = [
     featured: true,
     publishedAt: "2025-09-30",
     readTime: "13 min read"
+  },
+  {
+    id: "ecommerce-ai-personalization-engine",
+    slug: "ecommerce-ai-personalization-engine",
+    title: "ShopGlobal: AI Personalization Engine Drives 340% Revenue Growth",
+    client: "ShopGlobal E-commerce",
+    industry: "E-commerce",
+    description: "Transformed online shopping experience with AI-powered hyper-personalization achieving 340% revenue increase and 85% customer retention improvement.",
+    challenge: "Generic shopping experience with 2.1% conversion rate, 68% cart abandonment, and inability to personalize at scale across 50M+ monthly visitors.",
+    solution: "Deployed real-time AI personalization engine with behavioral prediction, dynamic product recommendations, and individualized pricing strategies. Implemented edge computing for sub-50ms personalization.",
+    results: [
+      {
+        metric: "Revenue Growth",
+        value: "340%",
+        description: "Year-over-year revenue increase from personalization"
+      },
+      {
+        metric: "Conversion Rate",
+        value: "8.7%",
+        description: "Increased from 2.1% to 8.7% with AI personalization"
+      },
+      {
+        metric: "Cart Abandonment",
+        value: "78%",
+        description: "Reduction from 68% to 15% abandonment rate"
+      },
+      {
+        metric: "Customer Retention",
+        value: "85%",
+        description: "Improvement in repeat purchase rate"
+      }
+    ],
+    technologies: ["Real-Time Personalization", "Behavioral AI", "Edge Computing", "Dynamic Pricing", "Recommendation Systems"],
+    featured: true,
+    publishedAt: "2025-09-30",
+    readTime: "15 min read"
+  },
+  {
+    id: "healthcare-ai-diagnostic-assistant",
+    slug: "healthcare-ai-diagnostic-assistant",
+    title: "MedTech Global: AI Diagnostic Assistant Saves 15,000+ Lives Annually",
+    client: "MedTech Global Healthcare",
+    industry: "Healthcare",
+    description: "Revolutionary AI diagnostic assistant achieving 99.2% accuracy in early disease detection, saving 15,000+ lives annually and reducing diagnostic costs by 60%.",
+    challenge: "Delayed diagnoses causing preventable deaths, radiologist shortage, 12% misdiagnosis rate, and inability to scale diagnostic capacity to meet growing demand.",
+    solution: "Deployed multimodal AI diagnostic assistant analyzing medical images, patient records, and genomic data. Implemented federated learning for privacy-preserving model improvement across hospital network.",
+    results: [
+      {
+        metric: "Lives Saved",
+        value: "15,000+",
+        description: "Annual lives saved through early disease detection"
+      },
+      {
+        metric: "Diagnostic Accuracy",
+        value: "99.2%",
+        description: "AI accuracy vs 87% baseline human accuracy"
+      },
+      {
+        metric: "Cost Reduction",
+        value: "60%",
+        description: "Diagnostic cost reduction per patient"
+      },
+      {
+        metric: "Detection Speed",
+        value: "95%",
+        description: "Faster diagnosis from 7 days to 8 hours"
+      }
+    ],
+    technologies: ["Multimodal AI", "Medical Imaging AI", "Federated Learning", "Computer Vision", "Clinical Decision Support"],
+    featured: true,
+    publishedAt: "2025-09-30",
+    readTime: "17 min read"
+  },
+  {
+    id: "energy-ai-grid-optimization",
+    slug: "energy-ai-grid-optimization",
+    title: "PowerGrid Systems: AI Grid Optimization Cuts Energy Waste by $420M",
+    client: "PowerGrid Systems Inc",
+    industry: "Energy & Utilities",
+    description: "AI-powered smart grid optimization achieving $420M annual savings, 99.99% uptime, and 45% reduction in carbon emissions across nationwide energy network.",
+    challenge: "Inefficient grid management causing $600M+ annual waste, frequent blackouts, inability to integrate renewable energy, and rising carbon emissions.",
+    solution: "Deployed AI autonomous grid management with predictive load balancing, real-time renewable integration, and self-healing network capabilities. Built digital twin for simulation and optimization.",
+    results: [
+      {
+        metric: "Cost Savings",
+        value: "$420M",
+        description: "Annual savings from optimized grid operations"
+      },
+      {
+        metric: "Grid Uptime",
+        value: "99.99%",
+        description: "Improved from 97.2% with predictive maintenance"
+      },
+      {
+        metric: "Carbon Reduction",
+        value: "45%",
+        description: "CO2 emissions reduction through optimization"
+      },
+      {
+        metric: "Renewable Integration",
+        value: "85%",
+        description: "Increase in renewable energy capacity"
+      }
+    ],
+    technologies: ["AI Grid Management", "Predictive Analytics", "Digital Twin", "Real-Time Optimization", "Renewable Energy AI"],
+    featured: true,
+    publishedAt: "2025-09-30",
+    readTime: "16 min read"
   }
 ];
 
