@@ -3,6 +3,26 @@ import Link from 'next/link';
 
 const caseStudies = [
   {
+    title: 'Fortune 500 AI Transformation: Breakthrough Success Story 2026',
+    slug: 'fortune-500-ai-2026-breakthrough-success',
+    excerpt: 'Discover how a leading Fortune 500 company achieved unprecedented success through AI transformation, implementing autonomous agent factories and quantum neural networks to drive 400% operational efficiency gains.',
+    company: 'Fortune 500 Manufacturing',
+    industry: 'Global Manufacturing',
+    roi: '$2.3B',
+    duration: '18 months',
+    category: 'Breakthrough Success',
+    publishedAt: 'January 15, 2026',
+    image: '🚀',
+    color: 'blue',
+    readTime: '16 min read',
+    featured: true,
+    metrics: {
+      costSavings: '$2.3B',
+      efficiencyGain: '400%',
+      automation: '95%'
+    }
+  },
+  {
     title: '$150M ROI Success Story - AI 2027 Mega Transformation',
     slug: 'ai-2027-mega-transformation-success',
     excerpt: 'Discover how a Fortune 500 company achieved $150M in ROI through our comprehensive AI 2027 transformation, revolutionizing their operations and market position.',

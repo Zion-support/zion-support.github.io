@@ -8,6 +8,26 @@ export const metadata = {
 
 const blogPosts = [
   {
+    title: 'AI 2026: Breakthrough Innovations Reshaping Enterprise Technology',
+    slug: 'ai-2026-breakthrough-innovations',
+    excerpt: 'Discover the revolutionary AI innovations that are transforming enterprise operations in 2026. From autonomous agent factories to quantum neural networks, explore the cutting-edge technologies driving business transformation.',
+    category: 'Breakthrough Technology',
+    publishedAt: 'January 15, 2026',
+    image: '🚀',
+    color: 'blue',
+    readTime: '15 min read'
+  },
+  {
+    title: 'AI Governance 2026: Enterprise Safety and Compliance Framework',
+    slug: 'ai-governance-2026-enterprise-safety',
+    excerpt: 'Comprehensive guide to AI governance, safety protocols, and compliance frameworks for enterprise organizations in 2026. Learn how to implement robust AI safety measures and ensure regulatory compliance.',
+    category: 'Governance & Safety',
+    publishedAt: 'January 20, 2026',
+    image: '🛡️',
+    color: 'indigo',
+    readTime: '18 min read'
+  },
+  {
     title: 'AI 2027: Edge‑Native Agents — Real‑Time, Reliable, Low‑Latency',
     slug: 'ai-2027-edge-native-agents',
     excerpt: 'Deploy agentic workloads at the edge for sub‑50ms latency with policy guardrails and cost control.',
