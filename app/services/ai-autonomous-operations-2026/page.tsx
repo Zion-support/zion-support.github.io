@@ -1,365 +1,210 @@
 import React from 'react';
-import Link from 'next/link';
+import { Metadata } from 'next';
 
-export default function ServicePage() {
+export const metadata: Metadata = {
+  title: 'Autonomous AI Operations Services 2026 | Zion Tech Group',
+  description: 'Deploy self-managing, self-healing AI systems that operate autonomously. Reduce downtime, optimize performance, and achieve 95% automation.',
+  keywords: 'autonomous AI, self-healing systems, enterprise automation, AI operations, intelligent automation',
+  openGraph: {
+    title: 'Autonomous AI Operations Services 2026',
+    description: 'Transform your operations with self-managing AI systems.',
+    type: 'website',
+  },
+};
+
+export default function AIAutonomousOperationsServices2026() {
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8">
-      <div className="mb-8">
-        <Link href="/services" className="text-blue-600 hover:text-blue-800 transition-colors">
-          ← Back to Services
-        </Link>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="max-w-6xl mx-auto">
+          <header className="text-center mb-16">
+            <div className="inline-block bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-6 py-3 rounded-full text-sm font-semibold mb-6">
+              Autonomous AI Operations
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
+              Autonomous AI Operations Services
+            </h1>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+              Deploy self-managing AI systems that operate independently, heal themselves, and continuously 
+              optimize performance without human intervention.
+            </p>
+          </header>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-blue-500/30">
+              <div className="text-4xl mb-4">🔄</div>
+              <h3 className="text-2xl font-bold text-white mb-4">Self-Healing Infrastructure</h3>
+              <p className="text-gray-300 mb-6">
+                AI systems that automatically detect, diagnose, and resolve issues before they impact operations, 
+                achieving 95% uptime with minimal human intervention.
+              </p>
+              <ul className="text-gray-300 space-y-2 text-sm">
+                <li>• Predictive failure detection</li>
+                <li>• Automated incident response</li>
+                <li>• Self-recovery mechanisms</li>
+                <li>• Proactive maintenance scheduling</li>
+              </ul>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-blue-500/30">
+              <div className="text-4xl mb-4">📊</div>
+              <h3 className="text-2xl font-bold text-white mb-4">Intelligent Optimization</h3>
+              <p className="text-gray-300 mb-6">
+                Continuously optimize system performance, resource allocation, and operational efficiency 
+                using advanced AI algorithms that learn and adapt in real-time.
+              </p>
+              <ul className="text-gray-300 space-y-2 text-sm">
+                <li>• Dynamic resource scaling</li>
+                <li>• Performance tuning automation</li>
+                <li>• Cost optimization algorithms</li>
+                <li>• Workflow efficiency enhancement</li>
+              </ul>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-blue-500/30">
+              <div className="text-4xl mb-4">🔮</div>
+              <h3 className="text-2xl font-bold text-white mb-4">Predictive Analytics</h3>
+              <p className="text-gray-300 mb-6">
+                Anticipate problems before they occur with advanced predictive models that analyze patterns, 
+                trends, and anomalies across your entire infrastructure.
+              </p>
+              <ul className="text-gray-300 space-y-2 text-sm">
+                <li>• Anomaly detection systems</li>
+                <li>• Capacity planning automation</li>
+                <li>• Risk assessment models</li>
+                <li>• Performance forecasting</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border border-blue-500/30 rounded-2xl p-8 mb-16">
+            <h2 className="text-3xl font-bold text-white mb-6 text-center">Autonomous Capabilities</h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="text-xl font-bold text-white mb-4">Operational Autonomy</h3>
+                <ul className="space-y-3 text-gray-300">
+                  <li className="flex items-start">
+                    <span className="text-blue-400 mr-3">✓</span>
+                    <span>Self-managing workflows and processes</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-blue-400 mr-3">✓</span>
+                    <span>Autonomous decision-making for routine tasks</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-blue-400 mr-3">✓</span>
+                    <span>Independent problem-solving and resolution</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-blue-400 mr-3">✓</span>
+                    <span>Continuous learning and adaptation</span>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-white mb-4">Intelligence Features</h3>
+                <ul className="space-y-3 text-gray-300">
+                  <li className="flex items-start">
+                    <span className="text-blue-400 mr-3">✓</span>
+                    <span>Context-aware decision making</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-blue-400 mr-3">✓</span>
+                    <span>Multi-modal data processing</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-blue-400 mr-3">✓</span>
+                    <span>Natural language interaction</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-blue-400 mr-3">✓</span>
+                    <span>Cross-system integration and coordination</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 mb-16">
+            <h2 className="text-3xl font-bold text-white mb-6">Implementation Results</h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="bg-blue-500/20 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+                  <span className="text-3xl font-bold text-blue-300">95%</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">Automation Rate</h3>
+                <p className="text-gray-300 text-sm">Average automation achieved across all operations</p>
+              </div>
+              <div className="text-center">
+                <div className="bg-blue-500/20 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+                  <span className="text-3xl font-bold text-blue-300">90%</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">Uptime Improvement</h3>
+                <p className="text-gray-300 text-sm">Reduction in system downtime and outages</p>
+              </div>
+              <div className="text-center">
+                <div className="bg-blue-500/20 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+                  <span className="text-3xl font-bold text-blue-300">60%</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">Cost Reduction</h3>
+                <p className="text-gray-300 text-sm">Average operational cost savings achieved</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 mb-16">
+            <h2 className="text-3xl font-bold text-white mb-6">Success Stories</h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="text-xl font-bold text-white mb-3">Global Retail Chain</h3>
+                <p className="text-gray-300 mb-4">
+                  Implemented autonomous AI across 500+ stores, achieving 95% automation in inventory management, 
+                  customer service, and operational workflows.
+                </p>
+                <div className="flex items-center text-blue-300 text-sm">
+                  <span className="font-semibold">Results:</span>
+                  <span className="ml-2">$2.3M annual savings, 70% fewer manual interventions</span>
+                </div>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-white mb-3">Manufacturing Enterprise</h3>
+                <p className="text-gray-300 mb-4">
+                  Deployed self-healing production systems that automatically optimize quality control, 
+                  predictive maintenance, and supply chain coordination.
+                </p>
+                <div className="flex items-center text-blue-300 text-sm">
+                  <span className="font-semibold">Results:</span>
+                  <span className="ml-2">45% efficiency gain, 80% reduction in defects</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <div className="bg-gradient-to-r from-blue-600 to-cyan-600 rounded-2xl p-8">
+              <h2 className="text-3xl font-bold text-white mb-4">Transform Your Operations Today</h2>
+              <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
+                Deploy autonomous AI systems that work 24/7 to optimize, heal, and evolve your operations 
+                for maximum efficiency and reliability.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a 
+                  href="/contact" 
+                  className="inline-block bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  Start Your Transformation
+                </a>
+                <a 
+                  href="/blog/autonomous-ai-systems-2026" 
+                  className="inline-block bg-white/10 backdrop-blur-sm text-white px-8 py-3 rounded-full font-semibold hover:bg-white/20 transition-all border border-white/20"
+                >
+                  Learn More
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      
-      <div className="mb-8">
-        <div className="flex items-center gap-3 mb-4">
-          <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-            NEW 2026
-          </span>
-          <span className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-            BREAKTHROUGH
-          </span>
-          <span className="bg-gradient-to-r from-red-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-            FEATURED
-          </span>
-        </div>
-        
-        <h1 className="text-5xl font-bold text-gray-900 mb-6">
-          AI Autonomous Operations 2026
-        </h1>
-        
-        <p className="text-xl text-gray-700 mb-8">
-          Revolutionary autonomous AI systems that operate independently, make complex decisions, 
-          and continuously optimize your enterprise operations without human intervention.
-        </p>
-      </div>
-
-      {/* Hero Stats */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
-        <div className="bg-gradient-to-r from-blue-500 to-purple-500 text-white p-6 rounded-lg text-center">
-          <div className="text-3xl font-bold mb-2">95%</div>
-          <div className="text-sm opacity-90">Efficiency Improvement</div>
-        </div>
-        <div className="bg-gradient-to-r from-green-500 to-teal-500 text-white p-6 rounded-lg text-center">
-          <div className="text-3xl font-bold mb-2">$2.3M</div>
-          <div className="text-sm opacity-90">Average Annual Savings</div>
-        </div>
-        <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white p-6 rounded-lg text-center">
-          <div className="text-3xl font-bold mb-2">24/7</div>
-          <div className="text-sm opacity-90">Autonomous Operation</div>
-        </div>
-        <div className="bg-gradient-to-r from-red-500 to-orange-500 text-white p-6 rounded-lg text-center">
-          <div className="text-3xl font-bold mb-2">89%</div>
-          <div className="text-sm opacity-90">Downtime Reduction</div>
-        </div>
-      </div>
-
-      {/* Key Features */}
-      <section className="mb-12">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8">Revolutionary Capabilities</h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-            <div className="text-4xl mb-4">🧠</div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">Meta-Cognitive Reasoning</h3>
-            <p className="text-gray-700">
-              AI systems that think about their own thinking processes, enabling unprecedented 
-              decision-making capabilities and self-improvement.
-            </p>
-          </div>
-          
-          <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-            <div className="text-4xl mb-4">🔄</div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">Self-Healing Architecture</h3>
-            <p className="text-gray-700">
-              Automatic detection and resolution of system issues, ensuring continuous operation 
-              and optimal performance without human intervention.
-            </p>
-          </div>
-          
-          <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-            <div className="text-4xl mb-4">⚡</div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">Real-Time Adaptation</h3>
-            <p className="text-gray-700">
-              Instant response to changing conditions, market dynamics, and operational requirements 
-              with millisecond precision.
-            </p>
-          </div>
-          
-          <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-            <div className="text-4xl mb-4">🎯</div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">Predictive Optimization</h3>
-            <p className="text-gray-700">
-              Proactive identification and resolution of potential issues before they impact 
-              operations, maximizing uptime and efficiency.
-            </p>
-          </div>
-          
-          <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-            <div className="text-4xl mb-4">⚛️</div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">Quantum Processing</h3>
-            <p className="text-gray-700">
-              Quantum-enhanced algorithms for complex optimization problems that would take 
-              classical computers years to solve.
-            </p>
-          </div>
-          
-          <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-            <div className="text-4xl mb-4">🛡️</div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">Autonomous Security</h3>
-            <p className="text-gray-700">
-              Self-protecting systems that automatically detect, analyze, and neutralize threats 
-              without compromising operations.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Success Stories */}
-      <section className="mb-12">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8">Proven Results</h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-lg">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">🏭 Fortune 500 Manufacturing</h3>
-            <p className="text-gray-700 mb-6">
-              A leading manufacturing company implemented our autonomous AI system for 
-              production line optimization and supply chain management.
-            </p>
-            
-            <div className="space-y-3">
-              <div className="flex justify-between items-center">
-                <span className="text-gray-600">Production Efficiency:</span>
-                <span className="font-bold text-green-600">+127%</span>
-              </div>
-              <div className="flex justify-between items-center">
-                <span className="text-gray-600">Cost Reduction:</span>
-                <span className="font-bold text-green-600">$8.2M annually</span>
-              </div>
-              <div className="flex justify-between items-center">
-                <span className="text-gray-600">Quality Improvement:</span>
-                <span className="font-bold text-green-600">+94%</span>
-              </div>
-              <div className="flex justify-between items-center">
-                <span className="text-gray-600">Downtime Reduction:</span>
-                <span className="font-bold text-green-600">-89%</span>
-              </div>
-            </div>
-          </div>
-          
-          <div className="bg-gradient-to-r from-green-50 to-teal-50 p-8 rounded-lg">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">🏥 Healthcare Network</h3>
-            <p className="text-gray-700 mb-6">
-              A major healthcare network deployed autonomous AI for patient flow optimization, 
-              resource allocation, and predictive diagnostics.
-            </p>
-            
-            <div className="space-y-3">
-              <div className="flex justify-between items-center">
-                <span className="text-gray-600">Patient Wait Time:</span>
-                <span className="font-bold text-green-600">-67%</span>
-              </div>
-              <div className="flex justify-between items-center">
-                <span className="text-gray-600">Resource Utilization:</span>
-                <span className="font-bold text-green-600">+94%</span>
-              </div>
-              <div className="flex justify-between items-center">
-                <span className="text-gray-600">Diagnostic Accuracy:</span>
-                <span className="font-bold text-green-600">+98%</span>
-              </div>
-              <div className="flex justify-between items-center">
-                <span className="text-gray-600">Cost Savings:</span>
-                <span className="font-bold text-green-600">$3.1M annually</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Technical Architecture */}
-      <section className="mb-12">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8">Technical Architecture</h2>
-        
-        <div className="bg-gray-50 p-8 rounded-lg">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">🧠 Neural Decision Engine</h3>
-              <p className="text-gray-700 mb-4">
-                Advanced neural networks that process complex scenarios, analyze multiple variables, 
-                and make optimal decisions in real-time.
-              </p>
-              <ul className="space-y-2 text-gray-700">
-                <li>• Multi-layered deep learning architecture</li>
-                <li>• Real-time decision processing</li>
-                <li>• Continuous learning and adaptation</li>
-                <li>• Context-aware reasoning</li>
-              </ul>
-            </div>
-            
-            <div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">⚛️ Quantum Processing Core</h3>
-              <p className="text-gray-700 mb-4">
-                Quantum-enhanced processing for complex optimization problems and advanced 
-                pattern recognition capabilities.
-              </p>
-              <ul className="space-y-2 text-gray-700">
-                <li>• Quantum algorithm optimization</li>
-                <li>• Parallel processing capabilities</li>
-                <li>• Advanced pattern recognition</li>
-                <li>• Complex scenario analysis</li>
-              </ul>
-            </div>
-            
-            <div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">🔄 Adaptive Learning System</h3>
-              <p className="text-gray-700 mb-4">
-                Continuous learning algorithms that improve performance based on outcomes 
-                and environmental changes.
-              </p>
-              <ul className="space-y-2 text-gray-700">
-                <li>• Reinforcement learning protocols</li>
-                <li>• Performance feedback loops</li>
-                <li>• Dynamic parameter adjustment</li>
-                <li>• Evolutionary optimization</li>
-              </ul>
-            </div>
-            
-            <div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">🛡️ Autonomous Security Layer</h3>
-              <p className="text-gray-700 mb-4">
-                Self-protecting systems that automatically detect and neutralize threats 
-                without human intervention.
-              </p>
-              <ul className="space-y-2 text-gray-700">
-                <li>• Threat detection algorithms</li>
-                <li>• Automated response protocols</li>
-                <li>• Security monitoring systems</li>
-                <li>• Vulnerability assessment</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Implementation Process */}
-      <section className="mb-12">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8">Implementation Process</h2>
-        
-        <div className="space-y-6">
-          <div className="flex gap-6">
-            <div className="flex-shrink-0 w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center font-bold text-lg">
-              1
-            </div>
-            <div className="flex-1">
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Assessment & Strategy Development</h3>
-              <p className="text-gray-700 mb-3">
-                Comprehensive analysis of current systems, identification of optimization opportunities, 
-                and creation of customized implementation strategy tailored to your specific needs.
-              </p>
-              <div className="text-sm text-gray-600">Duration: 1-2 weeks</div>
-            </div>
-          </div>
-          
-          <div className="flex gap-6">
-            <div className="flex-shrink-0 w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center font-bold text-lg">
-              2
-            </div>
-            <div className="flex-1">
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Pilot Deployment & Testing</h3>
-              <p className="text-gray-700 mb-3">
-                Small-scale implementation in a controlled environment to validate performance, 
-                fine-tune parameters, and ensure seamless integration with existing systems.
-              </p>
-              <div className="text-sm text-gray-600">Duration: 3-4 weeks</div>
-            </div>
-          </div>
-          
-          <div className="flex gap-6">
-            <div className="flex-shrink-0 w-12 h-12 bg-purple-500 text-white rounded-full flex items-center justify-center font-bold text-lg">
-              3
-            </div>
-            <div className="flex-1">
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Full-Scale Rollout</h3>
-              <p className="text-gray-700 mb-3">
-                Enterprise-wide deployment with comprehensive monitoring, optimization, 
-                and continuous improvement protocols to maximize ROI and operational excellence.
-              </p>
-              <div className="text-sm text-gray-600">Duration: 6-8 weeks</div>
-            </div>
-          </div>
-          
-          <div className="flex gap-6">
-            <div className="flex-shrink-0 w-12 h-12 bg-red-500 text-white rounded-full flex items-center justify-center font-bold text-lg">
-              4
-            </div>
-            <div className="flex-1">
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Continuous Optimization</h3>
-              <p className="text-gray-700 mb-3">
-                Ongoing monitoring, performance analysis, and system optimization to ensure 
-                maximum efficiency and continuous improvement of autonomous operations.
-              </p>
-              <div className="text-sm text-gray-600">Ongoing support</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ROI Calculator */}
-      <section className="mb-12">
-        <div className="bg-gradient-to-r from-blue-500 to-purple-500 text-white p-8 rounded-lg">
-          <h2 className="text-3xl font-bold mb-4">Calculate Your ROI</h2>
-          <p className="text-lg mb-6 opacity-90">
-            See how much your enterprise could save with autonomous AI operations
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white bg-opacity-10 p-4 rounded-lg">
-              <h3 className="font-semibold mb-2">Small Enterprise</h3>
-              <div className="text-2xl font-bold mb-1">$500K - $2M</div>
-              <div className="text-sm opacity-80">Annual savings potential</div>
-            </div>
-            <div className="bg-white bg-opacity-10 p-4 rounded-lg">
-              <h3 className="font-semibold mb-2">Mid-Size Enterprise</h3>
-              <div className="text-2xl font-bold mb-1">$2M - $10M</div>
-              <div className="text-sm opacity-80">Annual savings potential</div>
-            </div>
-            <div className="bg-white bg-opacity-10 p-4 rounded-lg">
-              <h3 className="font-semibold mb-2">Large Enterprise</h3>
-              <div className="text-2xl font-bold mb-1">$10M+</div>
-              <div className="text-sm opacity-80">Annual savings potential</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="text-center">
-        <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Transform Your Operations?</h2>
-        <p className="text-xl text-gray-700 mb-8">
-          Join the autonomous AI revolution and unlock unprecedented efficiency, cost savings, 
-          and operational excellence for your enterprise.
-        </p>
-        
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link 
-            href="/contact" 
-            className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300"
-          >
-            Schedule Consultation
-          </Link>
-          <Link 
-            href="/case-studies" 
-            className="border-2 border-blue-500 text-blue-500 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-300"
-          >
-            View Success Stories
-          </Link>
-          <Link 
-            href="/blog/ai-2026-next-generation-autonomous-systems" 
-            className="border-2 border-purple-500 text-purple-500 px-8 py-4 rounded-lg font-semibold hover:bg-purple-50 transition-all duration-300"
-          >
-            Read Technical Details
-          </Link>
-        </div>
-      </section>
     </div>
   );
 }

@@ -4,35 +4,35 @@ import { ArrowRight, Sparkles, TrendingUp, Zap, Star, Rocket, Brain, Atom, Bot }
 const NewContentPromoBanner: React.FC = () => {
   const newContent = [
     {
-      title: "Meta-Cognitive AI: The Thinking AI Revolution",
-      description: "Breakthrough AI systems that think about thinking, achieving 95% decision accuracy.",
-      slug: "meta-cognitive-ai-revolution-2025",
-      category: "AI Innovation",
-      icon: "🧠",
-      impact: "95% Decision Accuracy",
-      savings: "$2M+ Annual Savings",
-      featured: true,
-      trending: true
-    },
-    {
-      title: "Quantum-Neural Networks: 1000x Processing Speed",
-      description: "Next-generation hybrid quantum-classical neural networks delivering unprecedented power.",
-      slug: "quantum-neural-networks-2025",
-      category: "Quantum Computing",
-      icon: "⚛️",
-      impact: "1000x Speed Boost",
-      savings: "$5M+ Infrastructure Savings",
-      featured: true,
-      trending: true
-    },
-    {
-      title: "Autonomous Enterprise Operations: 98% Automation",
-      description: "Complete enterprise automation achieving 98% operational autonomy.",
-      slug: "autonomous-enterprise-operations-2025",
-      category: "Automation",
+      title: "Agentic Workflows Blueprint 2026",
+      description: "Compose multi‑tool agents with safe tools and policy tests in CI",
+      slug: "agentic-workflows-blueprint-2026",
+      category: "GenAI",
       icon: "🤖",
-      impact: "98% Automation Rate",
-      savings: "$10M+ Annual Savings",
+      impact: "Multi-Tool Agents",
+      savings: "40% Development Time",
+      featured: true,
+      trending: true
+    },
+    {
+      title: "Edge LLM Caching",
+      description: "Sub‑100ms prompts via tiered KV, signed configs, freshness windows",
+      slug: "edge-llm-caching-blueprint-2025",
+      category: "Architecture",
+      icon: "⚡",
+      impact: "Sub-100ms Response",
+      savings: "60% Cost Reduction",
+      featured: true,
+      trending: true
+    },
+    {
+      title: "AI Operational Scorecards 2026",
+      description: "Guardrails wired to KPIs with PR checks, canaries, and SLOs",
+      slug: "ai-operational-scorecards-2026",
+      category: "AI Strategy",
+      icon: "📊",
+      impact: "95% Uptime SLA",
+      savings: "$3M+ Risk Mitigation",
       featured: true,
       trending: true
     }

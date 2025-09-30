@@ -2,7 +2,7 @@
 import React from 'react';
 import Link from 'next/link';
 import './globals.css';
-import { NewSeptemberPromotionsBanner } from '../components/PromotionalBanner';
+import { September30NewContentShowcase } from '../components/PromotionalBanner';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -62,10 +62,18 @@ function Header() {
             </Link>
           </div>
           <div className="relative group">
-            <Link href="/blog/ai-2028-autonomous-enterprise-revolution" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
-              2028 Breakthroughs
-              <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+            <Link href="/blog/ai-2027-autonomous-enterprise-revolution" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
+              AI 2027 Revolution
+              <span className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
                 REVOLUTIONARY
+              </span>
+            </Link>
+          </div>
+          <div className="relative group">
+            <Link href="/blog/ai-2027-quantum-breakthrough-enterprise" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
+              Quantum AI 2027
+              <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                QUANTUM
               </span>
             </Link>
           </div>
@@ -155,6 +163,14 @@ function Footer() {
                 🏆 $1.2B Success Story
                 <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-2 py-1 rounded-full text-xs font-semibold">MEGA</span>
               </Link>
+              <Link href="/blog/ai-2027-autonomous-enterprise-revolution" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                🚀 AI 2027 Autonomous Revolution
+                <span className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">REVOLUTIONARY</span>
+              </Link>
+              <Link href="/blog/ai-2027-quantum-breakthrough-enterprise" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                ⚛️ Quantum AI 1000x Performance
+                <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold">QUANTUM</span>
+              </Link>
               <Link href="/services/ai-2027-revolutionary-breakthrough-solutions" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
                 🚀 AI 2027 Solutions
                 <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold">BREAKTHROUGH</span>
@@ -203,7 +219,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className="min-h-screen bg-white text-gray-900">
-        <NewSeptemberPromotionsBanner />
+        <September30NewContentShowcase />
         <Header />
         <main className="max-w-6xl mx-auto px-4 py-6 min-h-screen">
           {children}

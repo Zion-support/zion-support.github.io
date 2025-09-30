@@ -31,6 +31,7 @@ export default function ContentHubPage() {
     {
       title: 'AI Implementation',
       articles: [
+        { title: 'Autonomous Infrastructure 2025', slug: '/blog/ai-2025-autonomous-infrastructure-blueprint', readTime: '16 min', featured: true },
         { title: 'AI Enterprise Automation 2026', slug: '/blog/ai-2026-enterprise-automation', readTime: '20 min', featured: true },
         { title: 'AI Operational Resilience 2025', slug: '/blog/ai-operational-resilience-2025', readTime: '12 min', featured: true },
         { title: 'AI Cost Calculator 2026', slug: '/blog/ai-cost-calculator-2026', readTime: '14 min', featured: true },
@@ -67,6 +68,7 @@ export default function ContentHubPage() {
     {
       title: 'AI Analytics & Value',
       articles: [
+        { title: 'Edge Experiments 2025 (Zero‑PII)', slug: '/blog/edge-2025-zero-pii-experiments', readTime: '10 min', featured: true },
         { title: 'AI Value Stream Analytics 2026', slug: '/blog/ai-value-stream-analytics-2026', readTime: '9 min', featured: true },
         { title: 'AI Trustworthy Agents 2026', slug: '/blog/ai-trustworthy-agents-2026', readTime: '11 min', featured: true },
         { title: 'AI Roadmaps 2026', slug: '/blog/ai-roadmaps-2026', readTime: '8 min', featured: false },
@@ -174,6 +176,8 @@ export default function ContentHubPage() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <h2 className="text-xl md:text-2xl font-bold">New this week</h2>
             <div className="flex flex-wrap gap-3">
+              <Link href="/blog/genai-reliability-scorecards-2027" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">GenAI Reliability 2027<span>→</span></Link>
+              <Link href="/blog/edge-private-analytics-2027" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">Edge Private Analytics 2027<span>→</span></Link>
               <Link href="/blog/ai-agent-reliability-playbook-2026" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">Agent Reliability 2026<span>→</span></Link>
               <Link href="/blog/privacy-safe-feature-flags-2026" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">Privacy‑Safe Flags 2026<span>→</span></Link>
               <Link href="/blog/ai-safety-scorecards-2026" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">AI Safety Scorecards<span>→</span></Link>
@@ -191,6 +195,8 @@ export default function ContentHubPage() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <h2 className="text-2xl md:text-3xl font-bold">New this week: Enterprise Breakthroughs, Automation Guides, and Fortune 500 Success Stories</h2>
             <div className="flex flex-wrap gap-3">
+              <Link href="/blog/genai-reliability-scorecards-2027" className="inline-flex items-center gap-2 bg-white text-emerald-700 px-4 py-2 rounded-lg font-semibold hover:bg-emerald-50 transition-colors">Reliability Scorecards 2027<span>→</span></Link>
+              <Link href="/blog/edge-private-analytics-2027" className="inline-flex items-center gap-2 bg-white text-cyan-700 px-4 py-2 rounded-lg font-semibold hover:bg-cyan-50 transition-colors">Edge Analytics 2027<span>→</span></Link>
               <Link href="/blog/ai-2026-enterprise-breakthrough" className="inline-flex items-center gap-2 bg-white text-emerald-700 px-4 py-2 rounded-lg font-semibold hover:bg-emerald-50 transition-colors">AI 2026 Breakthrough<span>→</span></Link>
               <Link href="/blog/ai-automation-2026-complete-guide" className="inline-flex items-center gap-2 bg-white text-teal-700 px-4 py-2 rounded-lg font-semibold hover:bg-teal-50 transition-colors">Automation Guide<span>→</span></Link>
               <Link href="/case-studies/fortune-500-ai-transformation-mega-success-2026" className="inline-flex items-center gap-2 bg-white text-cyan-700 px-4 py-2 rounded-lg font-semibold hover:bg-cyan-50 transition-colors">Fortune 500 Success<span>→</span></Link>
