@@ -10,6 +10,33 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-2025-evidence-driven-evals",
+    title: "Evidence‑Driven Evals 2025: Traceable Quality Linked to KPIs",
+    description: "Design evals that tie model behavior to product KPIs with traces, scorecards, and budgeted guardrails.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "11 min read"
+  },
+  {
+    slug: "ai-2025-cost-controllers-v1",
+    title: "AI Cost Controllers v1 (2025): Budgets, Tiers, and Guardrails",
+    description: "Practical cost governance: route by quality tier, enforce budgets, and prevent overruns with policy tests.",
+    category: "FinOps",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "edge-2025-realtime-personalization",
+    title: "Realtime Personalization 2025 at the Edge: <100ms, Zero‑PII",
+    description: "Edge feature flags, scoped IDs, and on‑device telemetry to deliver private, sub‑100ms personalization.",
+    category: "Edge Computing",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
     slug: "ai-2025-autonomous-infrastructure-blueprint",
     title: "Autonomous Infrastructure 2025: Self‑Healing, Self‑Optimizing, Self‑Scaling",
     description: "Design an AI‑driven infra platform with predictive autoscaling, policy tests, and instant rollback for 99.99% uptime.",
@@ -41,6 +68,12 @@ export const posts: BlogPost[] = [
     title: "Edge‑Native Agents 2027: Private Tools at <100ms",
     description: "Design agents that run close to users with scoped permissions, on‑device tools, and instant rollback.",
     category: "Edge Computing",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    
   {
     slug: "ai-2027-operational-scorecards",
     title: "Operational AI Scorecards 2027: KPIs, Budgets, Rollback",
