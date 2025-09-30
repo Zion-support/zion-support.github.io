@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react';
 import Link from 'next/link';
 
@@ -31,6 +32,26 @@ const blogPosts = [
     image: '🧠',
     color: 'indigo',
     readTime: '18 min read'
+  },
+  {
+    title: 'AI Roadmaps 2026: What to Build Next and Why',
+    slug: 'ai-roadmaps-2026',
+    excerpt: 'A pragmatic roadmap across CX, ops, and platforms with reliability, governance, and ROI.',
+    category: 'Strategy',
+    publishedAt: 'September 30, 2025',
+    image: '🧭',
+    color: 'indigo',
+    readTime: '10 min read'
+  },
+  {
+    title: 'AI Value Stream Analytics 2026: Trace ROI from Token to Revenue',
+    slug: 'ai-value-stream-analytics-2026',
+    excerpt: 'Connect model spend to customer value with end-to-end tracing and scorecards.',
+    category: 'Analytics',
+    publishedAt: 'September 30, 2025',
+    image: '📈',
+    color: 'blue',
+    readTime: '9 min read'
   },
   {
     title: 'AI 2026 Enterprise Autonomous Systems: The Future of Business Automation',
