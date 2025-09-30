@@ -321,6 +321,34 @@ featuredBlogPosts.unshift(
   }
 );
 
+// Advertise freshly added posts (Sept 30, 2025) on homepage banners
+featuredBlogPosts.unshift(
+  {
+    id: "ai-governance-operational-checks-2026",
+    title: "AI Governance Operational Checks 2026",
+    description: "PR policy tests + KPI-linked canaries that keep teams fast and safe",
+    link: "/blog/ai-governance-operational-checks-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-personalization-under-100ms-2026",
+    title: "Edge Personalization 2026",
+    description: "Private <100ms journeys with scoped IDs and on-device models",
+    link: "/blog/edge-personalization-under-100ms-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "agent-release-checklists-v2-2026",
+    title: "Agent Release Checklists v2 (2026)",
+    description: "Budgets, approvals, rollback—battle-tested playbooks for safe releases",
+    link: "/blog/agent-release-checklists-v2-2026",
+    type: "article",
+    featured: true
+  }
+);
+
 // Advertise new content on homepage showcases
 featuredBlogPosts.unshift(
   {

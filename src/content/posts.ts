@@ -1288,6 +1288,37 @@ posts.push(
   }
 );
 
+// Sept 30, 2025 – Brand new articles to advertise prominently on Home
+posts.push(
+  {
+    slug: "ai-governance-operational-checks-2026",
+    title: "AI Governance Operational Checks 2026: PR Gates + Live Canaries",
+    description: "Lightweight PR policy tests and KPI-linked canaries that prevent regressions without slowing delivery.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-personalization-under-100ms-2026",
+    title: "Edge Personalization 2026: Private <100ms Journeys at Scale",
+    description: "Scoped IDs, on-device metrics, and tiny models for privacy-first personalization with stable UX.",
+    category: "Edge Computing",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "agent-release-checklists-v2-2026",
+    title: "Agent Release Checklists v2 (2026): Budgets, Approvals, Rollback",
+    description: "Battle-tested playbooks to ship agent updates safely with budgeted actions and instant rollback.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  }
+);
+
 // Sept 30, 2025 – New posts for homepage promotion and advertising (added)
 posts.push(
   {
