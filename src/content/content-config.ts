@@ -151,6 +151,30 @@ export const featuredBlogPosts: FeaturedItem[] = [
 // Newly featured items to advertise on the homepage
 featuredBlogPosts.unshift(
   {
+    id: "ai-operational-trust-blueprint-2026",
+    title: "AI Operational Trust Blueprint 2026",
+    description: "SLIs + budgets + rollback for trustworthy automation",
+    link: "/blog/ai-operational-trust-blueprint-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-private-insights-2026",
+    title: "Edge Private Insights 2026",
+    description: "Actionable metrics without PII using scoped IDs + DP noise",
+    link: "/blog/edge-private-insights-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "genai-cost-controllers-2026",
+    title: "GenAI Cost Controllers 2026",
+    description: "Tiered quality and caches to cut spend 40–70%",
+    link: "/blog/genai-cost-controllers-2026",
+    type: "article",
+    featured: true
+  },
+  {
     id: "ai-risk-budgets-blueprint-2026",
     title: "AI Risk Budgets Blueprint 2026",
     description: "Budgets + KPI canaries + rollback for safe autonomy",

@@ -1261,6 +1261,37 @@ posts.push(
   }
 );
 
+// Sept 30, 2025 – Brand new content to advertise on homepage (added now)
+posts.push(
+  {
+    slug: "ai-operational-trust-blueprint-2026",
+    title: "AI Operational Trust Blueprint 2026: SLIs, Budgets, Rollback",
+    description: "Design SLIs tied to KPIs, set budgets, and wire instant rollback to ship safe automation.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-private-insights-2026",
+    title: "Edge Private Insights 2026: Actionable Metrics Without PII",
+    description: "Scoped IDs, on-device aggregation, and DP noise that deliver insights teams trust—no PII collected.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "genai-cost-controllers-2026",
+    title: "GenAI Cost Controllers 2026: Quality Tiers Under Budget",
+    description: "Tiered models, semantic caches, and SLA-aware routing that cut spend 40–70% without hurting UX.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  }
+);
+
 // Sept 30, 2025 – Fresh articles to add and advertise on homepage
 posts.push(
   {
