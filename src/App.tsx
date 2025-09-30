@@ -53,23 +53,6 @@ export default function App(): React.JSX.Element {
     enableCaching: true,
   });
 
-<<<<<<< HEAD
-  // Get current pathname for SEO
-  const currentPathname = typeof window !== 'undefined' ? window.location.pathname : '/';
-  const seoData = useSEOData(currentPathname);
-=======
-  // SEO data for the app
-  const seoData = useMemo(() => ({
-    title: 'Zion Tech Group - Advanced AI and IT Solutions',
-    description: 'Leading provider of cutting-edge AI solutions, IT services, and digital transformation for modern businesses.',
-    keywords: ['AI solutions', 'IT services', 'digital transformation', 'automation', 'technology consulting'],
-    ogType: 'website',
-    ogUrl: 'https://ziontechgroup.com',
-    ogImage: '/og-image.png',
-    twitterCard: 'summary_large_image'
-  }), []);
-
->>>>>>> cursor/create-and-deploy-new-content-f092
   // Performance optimization hook
   const { preloadResource, optimizePerformance } = usePerformanceOptimization({
     enablePreloading: true,
@@ -118,25 +101,6 @@ export default function App(): React.JSX.Element {
           break;
       }
     }
-<<<<<<< HEAD
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'P') {
-      event.preventDefault();
-      setShowPerformanceOptimizer(prev => !prev);
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
-      event.preventDefault();
-      setShowPerformanceMonitor(prev => !prev);
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'A') {
-      event.preventDefault();
-      setShowAIDashboard(prev => !prev);
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'S') {
-      event.preventDefault();
-      setShowSEOOptimizer(prev => !prev);
-    }
-=======
->>>>>>> cursor/create-and-deploy-new-content-f092
   }, []);
 
   const enhancedTrackEngagement = useCallback(() => {
@@ -149,100 +113,6 @@ export default function App(): React.JSX.Element {
     trackEngagement();
   }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, trackEngagement]);
 
-<<<<<<< HEAD
-  // Update meta tags function
-  const updateMetaTags = useCallback((data: {
-    title: string;
-    description: string;
-    keywords: string[];
-    ogType: string;
-    ogUrl: string;
-    ogImage: string;
-    twitterCard: string;
-  }) => {
-    if (typeof window !== 'undefined') {
-      // Update title
-      document.title = data.title;
-      
-      // Update meta description
-      let metaDescription = document.querySelector('meta[name="description"]');
-      if (!metaDescription) {
-        metaDescription = document.createElement('meta');
-        metaDescription.setAttribute('name', 'description');
-        document.head.appendChild(metaDescription);
-      }
-      if (metaDescription) {
-        metaDescription.setAttribute('content', data.description);
-      }
-    }
-  }, []);
-
-  // Initialize comprehensive enhancements
-  useEffect(() => {
-    // Get comprehensive enhancements (initialization happens in constructor)
-    getComprehensiveEnhancements();
-    
-    // Initialize individual enhancement systems
-    if (enhancedPerformanceMonitor && typeof enhancedPerformanceMonitor.startMonitoring === 'function') {
-      enhancedPerformanceMonitor.startMonitoring();
-    }
-    if (enhancedAnalytics && typeof enhancedAnalytics.initialize === 'function') {
-      enhancedAnalytics.initialize();
-    }
-    if (advancedCacheSystem && typeof advancedCacheSystem.initialize === 'function') {
-      advancedCacheSystem.initialize();
-    }
-    
-    // Initialize new instances
-    const automationSystem = new AdvancedAutomationSystem();
-    if (typeof automationSystem.initialize === 'function') {
-      automationSystem.initialize();
-    }
-    
-    const accessibilityEnhancer = new AccessibilityEnhancer();
-    if (typeof accessibilityEnhancer.initialize === 'function') {
-      accessibilityEnhancer.initialize();
-    }
-    
-    const securityEnhancer = new SecurityEnhancer();
-    if (typeof securityEnhancer.initialize === 'function') {
-      securityEnhancer.initialize();
-    }
-    
-    // Initialize analytics
-    if (analytics && typeof analytics.initialize === 'function') {
-      analytics.initialize();
-    }
-    
-    // Initialize SEO analytics
-    seoAnalytics.trackPageView(window.location.pathname);
-    
-    // Initialize performance SEO optimizations
-    performanceSEO.optimizeImages();
-    performanceSEO.optimizeFonts();
-    performanceSEO.optimizeCSS();
-
-    // Set default SEO data using the correct method
-    seoManager.updateMetaTags(seoData);
-
-    // Add performance marks for better monitoring
-    if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
-      performance.mark('app-init-start');
-    }
-    
-    // Preload critical resources
-    preloadResource('/og-image.png', 'image');
-    preloadResource('/favicon.ico', 'image');
-
-    // Use passive listeners for better performance
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    document.addEventListener('click', handleClick, { passive: true });
-    document.addEventListener('keydown', handleKeyDown);
-
-=======
-  // Initialize comprehensive enhancements
-  useEffect(() => {
->>>>>>> cursor/create-and-deploy-new-content-f092
     // Initialize basic systems
     analytics.initialize();
     
@@ -294,11 +164,6 @@ export default function App(): React.JSX.Element {
       // Final engagement tracking
       enhancedTrackEngagement();
     };
-<<<<<<< HEAD
-  }, [trackEngagement, handleKeyDown, handleScroll, handleClick, enhancedTrackEngagement, seoData, preloadResource]);
-=======
-  }, [handleScroll, handleClick, handleKeyDown, seoData, preloadResource, enhancedTrackEngagement, trackEngagement]);
->>>>>>> cursor/create-and-deploy-new-content-f092
 
   // Optimize performance on mount
   useEffect(() => {
@@ -466,65 +331,6 @@ export default function App(): React.JSX.Element {
             </div>
           </div>
         )}
-<<<<<<< HEAD
-=======
-
-        {/* Real-time Metrics Display */}
-        {showRealTimeMetrics && (
-          <div className="fixed top-4 right-4 z-40 bg-black bg-opacity-80 text-white p-4 rounded-lg">
-            <h3 className="text-lg font-bold mb-2">Real-time Metrics</h3>
-            <div className="space-y-1 text-sm">
-              <div>Memory: {performanceMetrics.memoryUsage}MB</div>
-              <div>Render: {performanceMetrics.renderTime}ms</div>
-              <div>Network: {performanceMetrics.networkLatency}ms</div>
-              <div>Errors: {performanceMetrics.errorCount}</div>
-            </div>
-            <button
-              onClick={() => setShowRealTimeMetrics(false)}
-              className="mt-2 text-xs text-gray-400 hover:text-white"
-            >
-              Close
-            </button>
-          </div>
-        )}
-
-        {/* Accessibility Panel */}
-        {showAccessibilityPanel && (
-          <div className="fixed bottom-4 left-4 z-40 bg-white rounded-lg shadow-lg p-4 max-w-sm">
-            <h3 className="text-lg font-bold mb-2">Accessibility Tools</h3>
-            <div className="space-y-2">
-              <button className="w-full text-left px-3 py-2 bg-blue-100 rounded hover:bg-blue-200">
-                Increase Text Size
-              </button>
-              <button className="w-full text-left px-3 py-2 bg-blue-100 rounded hover:bg-blue-200">
-                High Contrast Mode
-              </button>
-              <button className="w-full text-left px-3 py-2 bg-blue-100 rounded hover:bg-blue-200">
-                Screen Reader Mode
-              </button>
-            </div>
-            <button
-              onClick={() => setShowAccessibilityPanel(false)}
-              className="mt-2 text-sm text-gray-500 hover:text-gray-700"
-            >
-              Close Panel
-            </button>
-          </div>
-        )}
-
-        {/* Keyboard Shortcuts Help */}
-        <div className="fixed bottom-4 right-4 z-40 bg-gray-800 text-white p-3 rounded-lg shadow-lg text-sm opacity-75 hover:opacity-100 transition-opacity duration-200">
-          <div className="font-semibold mb-1">Keyboard Shortcuts:</div>
-          <div>Ctrl+Shift+D: System Dashboard</div>
-          <div>Ctrl+Shift+P: Performance Optimizer</div>
-          <div>Ctrl+Shift+M: Performance Monitor</div>
-          <div>Ctrl+Shift+A: AI Dashboard</div>
-          <div>Ctrl+Shift+S: SEO Optimizer</div>
-          <div>Ctrl+Shift+R: Real-time Metrics</div>
-          <div>Ctrl+Shift+H: Accessibility Panel</div>
-          <div>Escape: Close All</div>
-        </div>
->>>>>>> cursor/create-and-deploy-new-content-f092
       </div>
     </AdvancedErrorBoundary>
   );

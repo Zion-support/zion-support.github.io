@@ -47,16 +47,6 @@ import April2026QuantumNeuralBanner from "./components/April2026QuantumNeuralBan
 import QuantumConsciousnessFusionBanner from "./components/QuantumConsciousnessFusionBanner";
 import Revolutionary2026ContentShowcaseBanner from "./components/Revolutionary2026ContentShowcaseBanner";
 import May2026RevolutionaryBreakthroughBanner from "./components/May2026RevolutionaryBreakthroughBanner";
-import May2026ContentShowcase from "./components/May2026ContentShowcase";
-import May2026ContentAdvertisingBanner from "./components/May2026ContentAdvertisingBanner";
-import NeuromorphicComputingRevolutionBanner from "./components/NeuromorphicComputingRevolutionBanner";
-import MetaCognitiveAutonomousSystemsBanner from "./components/MetaCognitiveAutonomousSystemsBanner";
-import Ultimate2026ContentShowcaseBanner from "./components/Ultimate2026ContentShowcaseBanner";
-import April2026RevolutionaryContentBanner from "./components/April2026RevolutionaryContentBanner";
-import June2026MegaAutomationBanner from "./components/June2026MegaAutomationBanner";
-import InteractiveContentShowcase2026Advanced from "./components/InteractiveContentShowcase2026Advanced";
-import June2026SuperintelligenceBreakthroughBanner from "./components/June2026SuperintelligenceBreakthroughBanner";
-import June2026ContentShowcaseBanner from "./components/June2026ContentShowcaseBanner";
 
 export default function App(): JSX.Element {
   return (
