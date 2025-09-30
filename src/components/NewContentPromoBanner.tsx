@@ -1,164 +1,229 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Sparkles, TrendingUp, Users, Award, Clock } from 'lucide-react';
+import { 
+  Sparkles, 
+  ArrowRight, 
+  X, 
+  BookOpen, 
+  TrendingUp, 
+  Zap,
+  Shield,
+  Cloud,
+  Brain,
+  Star
+} from 'lucide-react';
 
 interface NewContentPromoBannerProps {
+  variant?: 'info' | 'premium' | 'success' | 'warning';
   className?: string;
-  variant?: 'default' | 'success' | 'warning' | 'info' | 'premium';
 }
 
-export const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
-  className = '',
-  variant = 'default'
+const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({ 
+  variant = 'premium', 
+  className = '' 
 }) => {
-  const [isVisible, setIsVisible] = useState(true);
+  const [isDismissed, setIsDismissed] = useState(false);
 
-  const getVariantStyles = () => {
-    switch (variant) {
-      case 'success':
-        return 'bg-gradient-to-r from-green-500/20 to-emerald-500/20 border-green-400/30 text-green-100';
-      case 'warning':
-        return 'bg-gradient-to-r from-orange-500/20 to-yellow-500/20 border-orange-400/30 text-orange-100';
-      case 'info':
-        return 'bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border-blue-400/30 text-blue-100';
-      case 'premium':
-        return 'bg-gradient-to-r from-purple-500/20 to-pink-500/20 border-purple-400/30 text-purple-100';
-      default:
-        return 'bg-gradient-to-r from-zion-blue/20 to-zion-purple/20 border-zion-blue/30 text-zion-slate-light';
-    }
+  const variants = {
+    info: 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white border-blue-400/30',
+    premium: 'bg-gradient-to-r from-purple-500 to-pink-500 text-white border-purple-400/30',
+    success: 'bg-gradient-to-r from-green-500 to-emerald-500 text-white border-green-400/30',
+    warning: 'bg-gradient-to-r from-orange-500 to-red-500 text-white border-orange-400/30'
   };
 
-  const getIconColor = () => {
-    switch (variant) {
-      case 'success':
-        return 'text-green-400';
-      case 'warning':
-        return 'text-orange-400';
-      case 'info':
-        return 'text-blue-400';
-      case 'premium':
-        return 'text-purple-400';
-      default:
-        return 'text-zion-cyan';
+  const featuredContent = [
+    {
+      title: "AI Safety Budgets 2026",
+      description: "Guardrails wired to KPIs, approvals, rollbacks",
+      icon: Shield,
+      link: "/blog/ai-safety-budgets-2026",
+      category: "AI Strategy"
+    },
+    {
+      title: "Edge Privacy for ML 2026",
+      description: "On‑device filters and scoped identifiers",
+      icon: Cloud,
+      link: "/blog/edge-privacy-ml-2026",
+      category: "Edge"
+    },
+    {
+      title: "Agent Evals in Prod 2026",
+      description: "Online checks that predict outcomes",
+      icon: TrendingUp,
+      link: "/blog/agent-evals-in-prod-2026",
+      category: "GenAI"
+    },
+    {
+      title: "Cost‑Aware Inference 2026",
+      description: "Warm pools and quality tiers under SLAs",
+      icon: Zap,
+      link: "/blog/ai-cost-aware-inference-2026",
+      category: "GenAI"
+    },
+    {
+      title: "Platform Golden Paths 2026",
+      description: "Paved roads that move KPIs",
+      icon: TrendingUp,
+      link: "/blog/platform-golden-paths-kpis-2026",
+      category: "Platform"
+    },
+    {
+      title: "Golden Paths that Move KPIs",
+      description: "Platform engineering that pays",
+      icon: TrendingUp,
+      link: "/blog/platform-golden-paths-kpis-2026",
+      category: "Platform"
+    },
+    {
+      title: "Edge Feature Flags 2026",
+      description: "<100ms global releases with budgets",
+      icon: Zap,
+      link: "/blog/edge-feature-flags-2026",
+      category: "Platform"
+    },
+    {
+      title: "Quality‑Tiered GenAI Routing 2026",
+      description: "Control cost with tiers, caches, and eval signals",
+      icon: Zap,
+      link: "/blog/genai-routing-under-budgets-2026",
+      category: "GenAI"
+    },
+    {
+      title: "On‑Device Agents 2026",
+      description: "Offline‑capable tools, private caches, safe fallbacks",
+      icon: Cloud,
+      link: "/blog/on-device-agents-offline-tools-2026",
+      category: "Edge"
+    },
+    {
+      title: "Zero‑Trust Observability 2026",
+      description: "Signed traces and least‑privilege telemetry",
+      icon: Shield,
+      link: "/blog/zero-trust-observability-2026",
+      category: "Security"
+    },
+    {
+      title: "AI Incident Response Playbooks",
+      description: "Contain incidents in under 60 seconds",
+      icon: TrendingUp,
+      link: "/blog/ai-incident-response-playbooks-2025",
+      category: "Security"
+    },
+    {
+      title: "Edge Privacy Telemetry 2026",
+      description: "Scoped IDs and on‑device redaction",
+      icon: Brain,
+      link: "/blog/edge-privacy-telemetry-2026",
+      category: "Observability"
     }
-  };
+  ];
 
-  if (!isVisible) return null;
+  if (isDismissed) return null;
 
   return (
-    <div className={`relative overflow-hidden rounded-xl p-6 mb-8 animate-fade-in border backdrop-blur-sm ${getVariantStyles()} ${className}`}>
+    <div className={`${variants[variant]} ${className} relative overflow-hidden`}>
       {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-10 -right-10 w-20 h-20 bg-white/10 rounded-full animate-pulse"></div>
-        <div className="absolute -bottom-10 -left-10 w-16 h-16 bg-white/10 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-0 left-0 w-32 h-32 bg-white rounded-full animate-pulse"></div>
+        <div className="absolute bottom-0 right-0 w-24 h-24 bg-white rounded-full animate-bounce"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white rounded-full animate-ping"></div>
       </div>
 
-      <div className="relative z-10">
-        {/* Header with close button */}
-        <div className="flex items-center justify-between mb-4">
-          <div className="flex items-center gap-3">
-            <Sparkles className={`w-6 h-6 ${getIconColor()} animate-pulse`} />
-            <span className="font-bold text-lg">🚀 NEW CONTENT ALERT</span>
-            <Sparkles className={`w-6 h-6 ${getIconColor()} animate-pulse`} />
-          </div>
-          <button
-            onClick={() => setIsVisible(false)}
-            className="text-white/70 hover:text-white transition-colors p-1"
-            aria-label="Close banner"
-          >
-            ×
-          </button>
-        </div>
-
-        {/* Main content */}
-        <div className="grid md:grid-cols-2 gap-6 mb-6">
-          <div>
-            <h3 className="text-xl font-bold mb-3">
-              📚 Fresh Insights & Expert Analysis
-            </h3>
-            <p className="mb-4 opacity-90">
-              Discover our latest technology insights, AI implementation guides, and industry analysis 
-              from our team of experts. Stay ahead with cutting-edge knowledge.
-            </p>
+      <div className="relative z-10 max-w-7xl mx-auto px-6 py-6">
+        <div className="flex items-center justify-between">
+          <div className="flex-1">
+            <div className="flex items-center gap-3 mb-3">
+              <Sparkles className="w-6 h-6 animate-pulse" />
+              <span className="text-lg font-bold">🚀 NEW CONTENT ALERT</span>
+              <Star className="w-5 h-5 animate-spin" />
+            </div>
             
+            <h3 className="text-xl font-bold mb-2">
+              Just Published: New Guides for 2026
+            </h3>
+            
+            <p className="text-white/90 mb-4 text-sm">
+              Discover fresh insights on on‑device agents, GenAI cost controls, secure tool marketplaces,
+              and privacy‑first observability.
+            </p>
+
+            {/* Featured content grid */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
+              {featuredContent.map((item, index) => {
+                const Icon = item.icon;
+                return (
+                  <Link
+                    key={index}
+                    to={item.link}
+                    className="bg-white/10 backdrop-blur-sm rounded-lg p-3 hover:bg-white/20 transition-all duration-300 hover:scale-105 group"
+                  >
+                    <div className="flex items-center gap-2 mb-2">
+                      <Icon className="w-4 h-4 text-white/80" />
+                      <span className="text-xs font-medium text-white/80">{item.category}</span>
+                    </div>
+                    <h4 className="font-semibold text-white text-sm group-hover:text-yellow-300 transition-colors">
+                      {item.title}
+                    </h4>
+                    <p className="text-xs text-white/70 mt-1 line-clamp-2">
+                      {item.description}
+                    </p>
+                  </Link>
+                );
+              })}
+            </div>
+
+            {/* Action buttons */}
+            <div className="flex flex-wrap gap-3">
+              <Link
+                to="/blog"
+                className="bg-white text-purple-600 hover:bg-white/90 px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
+              >
+                <BookOpen className="w-4 h-4" />
+                Read All Articles
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              
+              <Link
+                to="/case-studies"
+                className="border border-white/30 text-white hover:bg-white/10 px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
+              >
+                <TrendingUp className="w-4 h-4" />
+                View Case Studies
+              </Link>
+
+              <Link
+                to="/services"
+                className="border border-white/30 text-white hover:bg-white/10 px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
+              >
+                <Shield className="w-4 h-4" />
+                Explore Services
+              </Link>
+            </div>
+
             {/* Stats */}
-            <div className="grid grid-cols-2 gap-4 mb-4">
-              <div className="bg-white/10 rounded-lg p-3 backdrop-blur-sm">
-                <div className="flex items-center gap-2 mb-1">
-                  <TrendingUp className="w-4 h-4" />
-                  <span className="text-sm font-medium">15+ New Articles</span>
-                </div>
-                <div className="text-xs opacity-75">Fresh content weekly</div>
+            <div className="flex items-center gap-6 mt-4 text-sm text-white/80">
+              <div className="flex items-center gap-1">
+                <span className="font-semibold">13</span>
+                <span>New Articles</span>
               </div>
-              <div className="bg-white/10 rounded-lg p-3 backdrop-blur-sm">
-                <div className="flex items-center gap-2 mb-1">
-                  <Users className="w-4 h-4" />
-                  <span className="text-sm font-medium">10K+ Readers</span>
-                </div>
-                <div className="text-xs opacity-75">Growing community</div>
+              <div className="flex items-center gap-1">
+                <span className="font-semibold">3</span>
+                <span>New Case Studies</span>
+              </div>
+              <div className="flex items-center gap-1">
+                <span className="font-semibold">50+</span>
+                <span>Expert Insights</span>
               </div>
             </div>
           </div>
 
-          <div>
-            <h4 className="font-semibold mb-3">🔥 Featured This Week</h4>
-            <div className="space-y-3">
-              <div className="bg-white/10 rounded-lg p-3 backdrop-blur-sm">
-                <div className="flex items-center gap-2 mb-1">
-                  <Award className="w-4 h-4" />
-                  <span className="text-sm font-medium">AI Ethics Implementation Guide</span>
-                </div>
-                <div className="text-xs opacity-75">Practical framework for ethical AI</div>
-              </div>
-              <div className="bg-white/10 rounded-lg p-3 backdrop-blur-sm">
-                <div className="flex items-center gap-2 mb-1">
-                  <Clock className="w-4 h-4" />
-                  <span className="text-sm font-medium">IoT Security Best Practices</span>
-                </div>
-                <div className="text-xs opacity-75">Comprehensive security strategies</div>
-              </div>
-              <div className="bg-white/10 rounded-lg p-3 backdrop-blur-sm">
-                <div className="flex items-center gap-2 mb-1">
-                  <Sparkles className="w-4 h-4" />
-                  <span className="text-sm font-medium">20+ Quick Insights</span>
-                </div>
-                <div className="text-xs opacity-75">Latest technology trends</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-3">
-          <Link
-            to="/blog"
-            className="bg-white/20 hover:bg-white/30 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2 backdrop-blur-sm border border-white/20"
+          {/* Dismiss button */}
+          <button
+            onClick={() => setIsDismissed(true)}
+            className="ml-4 p-2 hover:bg-white/10 rounded-full transition-colors"
+            aria-label="Dismiss banner"
           >
-            <Sparkles className="w-4 h-4" />
-            Explore All Articles
-            <ArrowRight className="w-4 h-4" />
-          </Link>
-          <Link
-            to="/insights"
-            className="border-2 border-white/30 hover:border-white/50 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2 backdrop-blur-sm"
-          >
-            <TrendingUp className="w-4 h-4" />
-            Browse Insights
-          </Link>
-          <Link
-            to="/newsletter"
-            className="bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2 backdrop-blur-sm border border-white/20"
-          >
-            <Users className="w-4 h-4" />
-            Subscribe
-          </Link>
-        </div>
-
-        {/* Bottom text */}
-        <div className="mt-4 text-center">
-          <p className="text-sm opacity-75">
-            Join thousands of professionals staying ahead with Zion Tech Group's expert insights
-          </p>
+            <X className="w-5 h-5" />
+          </button>
         </div>
       </div>
     </div>

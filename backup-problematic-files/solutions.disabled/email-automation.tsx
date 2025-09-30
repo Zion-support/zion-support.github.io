@@ -1,3 +1,15 @@
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:solutions.disabled/email-automation.tsx
+import React from 'react';
+
+interface Email-automationProps {
+  className?: string;
+}
+
+const Email-automation: React.FC<Email-automationProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Email-automation</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+}
+}

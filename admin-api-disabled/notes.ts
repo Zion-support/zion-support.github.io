@@ -1,7 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { randomUUID } from 'crypto';
 
-type Note = {
+
   id: string;
   targetType: string;
   targetId: string;
@@ -10,17 +8,25 @@ type Note = {
   createdAt: number;
 };
 
+
 const notesStore: Note[] = [];
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { randomUUID } from 'crypto';
+
+
+
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const isAdmin = req.headers['x-admin'] === 'true';
-  if (!isAdmin) return res.status(403).json({ error: 'Admin only' });
-  
+  const isAdmin = req.headers['x-admin'] === 'true'
+  if (!isAdmin) return res.status(403).json({ error: 'Admin only' })
   if (req.method === 'GET') {
-    return res.status(200).json({ notes: getAllNotes() });
+
+
+
   }
-  
   if (req.method === 'POST') {
+
+
     const authorId = String(req.headers['x-admin-user'] || 'admin');
     const { targetType, targetId, text } = req.body || {};
     if (!targetType || !targetId || !text?.trim()) {
@@ -37,10 +43,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     notesStore.push(note);
     return res.status(200).json({ ok: true, note });
   }
-  
   return res.status(405).json({ error: 'Method not allowed' });
 }
-
 export function getAllNotes(): Note[] {
   return [...notesStore].sort((a, b) => b.createdAt - a.createdAt);
-}
+
+
+
+
+

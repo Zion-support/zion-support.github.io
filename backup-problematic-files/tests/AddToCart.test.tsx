@@ -1,11 +1,16 @@
 import React from 'react';
+
 interface AddToCart.testProps {
-  // Add props here as needed
+  className?: string;
 }
-export default function AddToCart.test({ }: AddToCart.testProps) {
+
+const AddToCart.test: React.FC<AddToCart.testProps> = ({ className }) => {
   return (
-    <div>
+    <div className={className || ''}>
       <h1>AddToCart.test</h1>
-      <p>This component is currently under development.</p>
+      <p>This component is under development.</p>
     </div>
   );
+}
+}
+}

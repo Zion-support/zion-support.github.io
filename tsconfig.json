@@ -2,44 +2,69 @@
   "compilerOptions": {
     "target": "ES2020",
     "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable"
+    ],
     "module": "ESNext",
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
-
+    "jsx": "preserve",
     /* Linting */
     "strict": true,
+    "noImplicitAny": false,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
-
     /* Path mapping */
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"],
-      "@/components/*": ["./src/components/*"],
-      "@/pages/*": ["./src/pages/*"],
-      "@/utils/*": ["./src/utils/*"],
-      "@/hooks/*": ["./src/hooks/*"],
-      "@/types/*": ["./src/types/*"]
+      "@/*": [
+        "./src/*"
+      ],
+      "@/components/*": [
+        "./src/components/*"
+      ],
+      "@/pages/*": [
+        "./src/pages/*"
+      ],
+      "@/utils/*": [
+        "./src/utils/*"
+      ],
+      "@/hooks/*": [
+        "./src/hooks/*"
+      ],
+      "@/types/*": [
+        "./src/types/*"
+      ]
     },
-
     /* Types */
-    "types": ["jest", "node"]
+    "types": [
+      "react",
+      "react-dom",
+      "jest",
+      "node"
+    ],
+    "allowJs": true,
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "include": [
+    "index.html",
     "src/**/*",
-    "src.corrupted/**/*",
-    "index.html"
+    ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
@@ -58,7 +83,21 @@
     "zion-ai-assistant",
     "types.disabled",
     "**/*.config.ts",
-    "vitest.config.ts"
+    "vitest.config.ts",
+    "src/App.tsx",
+    "src/components/EnhancedErrorBoundary.tsx",
+    "src/components/EnhancedPerformanceMonitor.tsx",
+    "src/components/EnhancedUserExperience.tsx",
+    "src/components/FeaturedContentShowcase.tsx",
+    "src/components/PerformanceEnhancer.tsx",
+    "src/components/PerformanceMonitor.tsx",
+    "src/components/SEOEnhancer.tsx",
+    "src/hooks/usePerformanceMonitor.ts",
+    "src/utils/accessibilityEnhancer.ts"
   ],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
 }

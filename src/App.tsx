@@ -17,30 +17,9 @@ import AdvancedAnalytics from './components/AdvancedAnalytics';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
-import NotificationSystem from './components/NotificationSystem';
-
-// Temporary fallbacks for referenced components not present in repo
-const Placeholder: React.FC<{ name: string }> = ({ name }) => (
-  <div role="note" aria-label={`${name} placeholder`} />
-);
-const EnhancedSystemDashboard = () => <Placeholder name="EnhancedSystemDashboard" />;
-const KeyboardShortcutsHelp = (props: any) => <Placeholder name="KeyboardShortcutsHelp" />;
-const PerformanceWidget = (props: any) => <Placeholder name="PerformanceWidget" />;
-const PerformanceDashboard = () => <Placeholder name="PerformanceDashboard" />;
-const CommandPalette = (props: any) => <Placeholder name="CommandPalette" />;
-const AdvancedMonitoringDashboard = (props: any) => <Placeholder name="AdvancedMonitoringDashboard" />;
-const RealTimePerformanceMonitor = (props: any) => <Placeholder name="RealTimePerformanceMonitor" />;
-const EnhancedCommandPalette = (props: any) => <Placeholder name="EnhancedCommandPalette" />;
-const ComprehensivePerformanceDashboard = () => <Placeholder name="ComprehensivePerformanceDashboard" />;
-const ComprehensiveMonitoringDashboard = () => <Placeholder name="ComprehensiveMonitoringDashboard" />;
-const PerformanceOptimizationPanel = () => <Placeholder name="PerformanceOptimizationPanel" />;
-const ErrorRecoveryDashboard = () => <Placeholder name="ErrorRecoveryDashboard" />;
-const SystemStatusIndicator = (props: any) => <Placeholder name="SystemStatusIndicator" />;
-const EnhancedNotificationSystem = (props: any) => <Placeholder name="EnhancedNotificationSystem" />;
-const KeyboardShortcutsManager = (props: any) => <Placeholder name="KeyboardShortcutsManager" />;
-const SystemHealthDashboard = (props: any) => <Placeholder name="SystemHealthDashboard" />;
-const AIPerformanceDashboard = (props: any) => <Placeholder name="AIPerformanceDashboard" />;
-const WebsiteEnhancements = (props: any) => <Placeholder name="WebsiteEnhancements" />;
+import { NotificationProvider } from './components/NotificationSystem';
+import AnalyticsTracker from './components/AnalyticsTracker';
+import SystemDashboard from './components/SystemDashboard';
 
 export default function App(): React.JSX.Element {
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
@@ -132,9 +111,84 @@ export default function App(): React.JSX.Element {
     };
   }, []);
 
-  const handleRemoveNotification = useCallback((id: string) => {
-    setNotifications((prev) => prev.filter((n) => n.id !== id));
-  }, []);
+  if (isLoading) {
+    return (
+      <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+        <div className="relative">
+          {/* Spinner */}
+          <div className="w-12 h-12 text-blue-500">
+            <svg
+              className="animate-spin w-full h-full"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <circle
+                className="opacity-25"
+                cx="12"
+                cy="12"
+                r="10"
+                stroke="currentColor"
+                strokeWidth="4"
+              />
+              <path
+                className="opacity-75"
+                fill="currentColor"
+                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+              />
+            </svg>
+          </div>
+
+          {/* Progress Ring */}
+          <div className="absolute inset-0">
+            <svg
+              className="w-full h-full transform -rotate-90"
+              viewBox="0 0 100 100"
+            >
+              <circle
+                cx="50"
+                cy="50"
+                r="45"
+                stroke="currentColor"
+                strokeWidth="8"
+                fill="none"
+                className="opacity-20"
+              />
+              <circle
+                cx="50"
+                cy="50"
+                r="45"
+                stroke="currentColor"
+                strokeWidth="8"
+                fill="none"
+                strokeDasharray={`${2 * Math.PI * 45}`}
+                strokeDashoffset={`${2 * Math.PI * 45 * (1 - loadingProgress / 100)}`}
+                className="transition-all duration-300 ease-in-out"
+                strokeLinecap="round"
+              />
+            </svg>
+          </div>
+        </div>
+
+        {/* Progress Text */}
+        <div className="mt-4 text-center">
+          <div className="text-white text-lg font-semibold mb-2">
+            Loading Zion AI Platform...
+          </div>
+          <div className="text-gray-300 text-sm">
+            {Math.round(loadingProgress)}%
+          </div>
+        </div>
+
+        {/* Loading Dots Animation */}
+        <div className="flex space-x-1 mt-4">
+          <div className="w-2 h-2 bg-blue-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
+          <div className="w-2 h-2 bg-blue-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
+          <div className="w-2 h-2 bg-blue-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
+        </div>
+      </div>
+    );
+  }
 
   return (
     <EnhancedErrorBoundary>
@@ -160,13 +214,13 @@ export default function App(): React.JSX.Element {
         )}
 
         {showPerformanceMonitor && (
-          <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center">
+          <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center" role="dialog" aria-modal="true">
             <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
               <div className="flex justify-between items-center mb-4">
                 <h2 className="text-2xl font-bold">Performance Monitor</h2>
                 <button onClick={() => setShowPerformanceMonitor(false)} className="text-gray-500 hover:text-gray-700 text-2xl">✕</button>
               </div>
-              <PerformanceMonitor showDashboard={true} />
+              <PerformanceMonitor />
             </div>
           </div>
         )}
@@ -175,4 +229,6 @@ export default function App(): React.JSX.Element {
       </div>
     </EnhancedErrorBoundary>
   );
-}
+};
+
+export default App;

@@ -1,94 +1,141 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, createContext, useContext } from 'react';
 
 export interface Notification {
   id: string;
-  type: "success" | "error" | "warning" | "info";
+  type: 'success' | 'error' | 'warning' | 'info';
   title: string;
   message: string;
   duration?: number;
+  persistent?: boolean;
   actions?: Array<{
     label: string;
     action: () => void;
   }>;
 }
 
-interface NotificationSystemProps {
+interface NotificationContextType {
   notifications: Notification[];
-  onRemove: (id: string) => void;
-  maxNotifications?: number;
+  addNotification: (notification: Omit<Notification, 'id'>) => void;
+  removeNotification: (id: string) => void;
+  clearAllNotifications: () => void;
 }
 
-const NotificationSystem: React.FC<NotificationSystemProps> = ({
-  notifications,
-  onRemove,
-  maxNotifications = 5,
-}) => {
-  const [visibleNotifications, setVisibleNotifications] = useState<
-    Notification[]
-  >([]);
+const NotificationContext = createContext<NotificationContextType | undefined>(undefined);
 
-  useEffect(() => {
-    setVisibleNotifications(notifications);
-  }, [notifications]);
+export const useNotifications = () => {
+  const context = useContext(NotificationContext);
+  if (!context) {
+    throw new Error('useNotifications must be used within a NotificationProvider');
+  }
+  return context;
+};
 
-  const addNotification = useCallback((notification: Omit<Notification, 'id'>) => {
+interface NotificationProviderProps {
+  children: React.ReactNode;
+}
+
+export const NotificationProvider: React.FC<NotificationProviderProps> = ({ children }) => {
+  const [notifications, setNotifications] = useState<Notification[]>([]);
+
+  const addNotification = (notification: Omit<Notification, 'id'>) => {
     const id = Math.random().toString(36).substr(2, 9);
-    const newNotification = { ...notification, id };
-    
-    setVisibleNotifications(prev => {
-      const updated = [newNotification, ...prev];
-      return updated.slice(0, maxNotifications);
-    });
-  }, [maxNotifications]);
+    const newNotification: Notification = {
+      id,
+      duration: 5000,
+      ...notification
+    };
 
-  const removeNotification = useCallback((id: string) => {
-    setVisibleNotifications(prev => prev.filter(n => n.id !== id));
-  }, []);
+    setNotifications(prev => [...prev, newNotification]);
 
-  const clearAll = useCallback(() => {
-    setVisibleNotifications([]);
-  }, []);
+    // Auto-remove notification after duration
+    if (!newNotification.persistent && newNotification.duration) {
+      setTimeout(() => {
+        removeNotification(id);
+      }, newNotification.duration);
+    }
+  };
+
+  const removeNotification = (id: string) => {
+    setNotifications(prev => prev.filter(notification => notification.id !== id));
+  };
+
+  const clearAllNotifications = () => {
+    setNotifications([]);
+  };
+
+  return (
+    <NotificationContext.Provider value={{
+      notifications,
+      addNotification,
+      removeNotification,
+      clearAllNotifications
+    }}>
+      {children}
+      <NotificationContainer />
+    </NotificationContext.Provider>
+  );
+};
+
+const NotificationContainer: React.FC = () => {
+  const { notifications, removeNotification } = useNotifications();
+
+  if (notifications.length === 0) return null;
+
+  return (
+    <div className="fixed top-4 right-4 z-50 space-y-2 max-w-sm w-full">
+      {notifications.map(notification => (
+        <NotificationItem
+          key={notification.id}
+          notification={notification}
+          onRemove={removeNotification}
+        />
+      ))}
+    </div>
+  );
+};
+
+interface NotificationItemProps {
+  notification: Notification;
+  onRemove: (id: string) => void;
+}
+
+const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRemove }) => {
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    (window as unknown as { notifications: unknown }).notifications = {
-      add: addNotification,
-      remove: removeNotification,
-      clear: clearAll
-    };
-  }, [addNotification, removeNotification, clearAll]);
+    // Trigger animation
+    setTimeout(() => setIsVisible(true), 100);
+  }, []);
 
-  const handleRemove = useCallback(
-    (id: string) => {
-      setVisibleNotifications((prev) => prev.filter((n) => n.id !== id));
-      onRemove(id);
-    },
-    [onRemove],
-  );
+  const handleRemove = () => {
+    setIsVisible(false);
+    setTimeout(() => onRemove(notification.id), 300);
+  };
 
-  const getNotificationIcon = (type: Notification["type"]) => {
-    switch (type) {
-      case "success":
+  const getIcon = () => {
+    switch (notification.type) {
+      case 'success':
         return (
-          <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+          <svg className="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
         );
-      case "error":
+      case 'error':
         return (
-          <svg className="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
-            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+          <svg className="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
           </svg>
         );
-      case "warning":
+      case 'warning':
         return (
-          <svg className="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-            <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+          <svg className="w-5 h-5 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
           </svg>
         );
-      case "info":
+      case 'info':
         return (
-          <svg className="w-5 h-5 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
-            <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+          <svg className="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
         );
       default:
@@ -96,62 +143,66 @@ const NotificationSystem: React.FC<NotificationSystemProps> = ({
     }
   };
 
-  const getNotificationStyles = (type: Notification["type"]) => {
-    switch (type) {
-      case "success":
-        return "bg-green-50 border-green-200 text-green-800";
-      case "error":
-        return "bg-red-50 border-red-200 text-red-800";
-      case "warning":
-        return "bg-yellow-50 border-yellow-200 text-yellow-800";
-      case "info":
-        return "bg-blue-50 border-blue-200 text-blue-800";
+  const getBackgroundColor = () => {
+    switch (notification.type) {
+      case 'success':
+        return 'bg-green-50 border-green-200';
+      case 'error':
+        return 'bg-red-50 border-red-200';
+      case 'warning':
+        return 'bg-yellow-50 border-yellow-200';
+      case 'info':
+        return 'bg-blue-50 border-blue-200';
       default:
-        return "bg-gray-50 border-gray-200 text-gray-800";
+        return 'bg-gray-50 border-gray-200';
     }
   };
 
   return (
-    <div className="fixed top-4 right-4 z-50 space-y-2">
-      {visibleNotifications.map((notification) => (
-        <div
-          key={notification.id}
-          className={`max-w-sm w-full border rounded-lg shadow-lg p-4 ${getNotificationStyles(notification.type)}`}
-        >
-          <div className="flex items-start">
-            <div className="flex-shrink-0">
-              {getNotificationIcon(notification.type)}
-            </div>
-            <div className="ml-3 flex-1">
-              <h3 className="text-sm font-medium">{notification.title}</h3>
-              <p className="mt-1 text-sm opacity-90">{notification.message}</p>
-              {notification.actions && notification.actions.length > 0 && (
-                <div className="mt-2 flex space-x-2">
-                  {notification.actions.map((action, index) => (
-                    <button
-                      key={index}
-                      onClick={action.action}
-                      className="text-sm font-medium underline hover:no-underline"
-                    >
-                      {action.label}
-                    </button>
-                  ))}
-                </div>
-              )}
-            </div>
-            <div className="ml-4 flex-shrink-0">
-              <button
-                onClick={() => handleRemove(notification.id)}
-                className="text-gray-400 hover:text-gray-600 transition-colors"
-              >
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
-                </svg>
-              </button>
-            </div>
-          </div>
+    <div
+      className={`
+        ${getBackgroundColor()}
+        border rounded-lg shadow-lg p-4 transition-all duration-300 transform
+        ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}
+      `}
+    >
+      <div className="flex items-start">
+        <div className="flex-shrink-0 mr-3">
+          {getIcon()}
         </div>
-      ))}
+        
+        <div className="flex-1 min-w-0">
+          <h4 className="text-sm font-semibold text-gray-900 mb-1">
+            {notification.title}
+          </h4>
+          <p className="text-sm text-gray-600">
+            {notification.message}
+          </p>
+          
+          {notification.actions && notification.actions.length > 0 && (
+            <div className="mt-3 flex space-x-2">
+              {notification.actions.map((action, index) => (
+                <button
+                  key={index}
+                  onClick={action.action}
+                  className="text-xs font-medium text-blue-600 hover:text-blue-800"
+                >
+                  {action.label}
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
+        
+        <button
+          onClick={handleRemove}
+          className="flex-shrink-0 ml-2 text-gray-400 hover:text-gray-600"
+        >
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
     </div>
   );
 };

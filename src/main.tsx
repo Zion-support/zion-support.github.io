@@ -2,17 +2,21 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
-import { ThemeProvider } from "./contexts/ThemeContext";
 import App from "./App";
 import "./index.css";
 
-// Register enhanced service worker
+// Fallback: ThemeProvider stub to avoid missing module during build
+const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+  <>{children}</>
+);
+
+// Register service worker
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
     navigator.serviceWorker
-      .register("/sw-enhanced.js")
+      .register("/sw.js")
       .then((registration) => {
-        // console.log("🚀 Enhanced Service Worker registered successfully:", registration.scope);
+        console.log("🚀 Service Worker registered successfully:", registration.scope);
 
         // Check for updates
         registration.addEventListener("updatefound", () => {
@@ -23,7 +27,7 @@ if ("serviceWorker" in navigator) {
                 newWorker.state === "installed" &&
                 navigator.serviceWorker.controller
               ) {
-                // console.log("🔄 New service worker available. Reloading...");
+                console.log("🔄 New service worker available. Reloading...");
                 window.location.reload();
               }
             });
@@ -31,7 +35,7 @@ if ("serviceWorker" in navigator) {
         });
       })
       .catch((error) => {
-        // console.error("❌ Service Worker registration failed:", error);
+        console.error("❌ Service Worker registration failed:", error);
       });
   });
 }

@@ -1,98 +1,70 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
 
 interface ContentPromotionBannerProps {
-  variant?: 'default' | 'success' | 'warning' | 'info';
-  title: string;
-  description?: string;
-  ctaText: string;
-  ctaLink: string;
-  className?: string;
-  dismissible?: boolean;
-  onDismiss?: () => void;
+	variant?: "info" | "success" | "warning" | "danger";
+	title?: string;
+	description?: string;
+	ctaText?: string;
+	ctaLink?: string;
+	dismissible?: boolean;
 }
 
-export const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({
-  variant = 'default',
-  title,
-  description,
-  ctaText,
-  ctaLink,
-  className = "",
-  dismissible = false,
-  onDismiss
-}) => {
-  const [isVisible, setIsVisible] = React.useState(true);
+const variantStyles: Record<string, string> = {
+  info: 'from-indigo-500/15 to-blue-500/15 border-indigo-400/30 text-indigo-100',
+  success: 'from-emerald-500/15 to-teal-500/15 border-emerald-400/30 text-emerald-100',
+  warning: 'from-amber-500/15 to-orange-500/15 border-amber-400/30 text-amber-100',
+  danger: 'from-rose-500/15 to-red-500/15 border-rose-400/30 text-rose-100'
+};
 
-  const handleDismiss = () => {
-    setIsVisible(false);
-    onDismiss?.();
-  };
+export default function ContentPromotionBanner(props: ContentPromotionBannerProps): React.JSX.Element {
+  const {
+    variant = 'info',
+    title = 'New content just landed',
+    description = 'Explore our latest articles, guides, and success stories.',
+    ctaText = 'Read now',
+    ctaLink = '/blog',
+    dismissible = false,
+    className = ''
+  } = props;
 
-  if (!isVisible) return null;
+  const [visible, setVisible] = useState(true);
 
-  const variantStyles = {
-    default: 'bg-gradient-to-r from-blue-600 to-purple-600',
-    success: 'bg-gradient-to-r from-green-600 to-emerald-600',
-    warning: 'bg-gradient-to-r from-orange-600 to-red-600',
-    info: 'bg-gradient-to-r from-cyan-600 to-blue-600'
-  };
+  if (!visible) {
+    return <></>;
+  }
 
   return (
-    <div className={`relative overflow-hidden ${variantStyles[variant]} ${className}`}>
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent transform -skew-x-12 animate-pulse"></div>
-      </div>
-      
-      <div className="relative z-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-4">
-              <div className="flex-shrink-0">
-                <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-              </div>
-              <div className="flex-1">
-                <h3 className="text-lg font-semibold text-white">
-                  {title}
-                </h3>
-                {description && (
-                  <p className="text-sm text-white/90 mt-1">
-                    {description}
-                  </p>
-                )}
-              </div>
-            </div>
-            
-            <div className="flex items-center space-x-4">
-              <Link
-                to={ctaLink}
-                className="bg-white text-gray-900 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors whitespace-nowrap"
+    <div className={`w-full`}>
+      <div
+        className={`mx-auto px-6 py-4 bg-gradient-to-r ${variantStyles[variant]} border rounded-none ${className}`}
+        role="region"
+        aria-label="Content Promotion Banner"
+      >
+        <div className="container mx-auto flex flex-col md:flex-row md:items-center gap-3 justify-between">
+          <div className="flex-1">
+            <div className="text-sm uppercase tracking-wide opacity-80">Latest</div>
+            <div className="text-white font-semibold text-lg">{title}</div>
+            <div className="text-white/80 text-sm">{description}</div>
+          </div>
+          <div className="flex items-center gap-3">
+            <Link
+              to={ctaLink}
+              className="bg-white text-gray-900 hover:bg-gray-100 px-4 py-2 rounded-lg font-semibold text-sm"
+            >
+              {ctaText}
+            </Link>
+            {dismissible && (
+              <button
+                aria-label="Dismiss promotion"
+                className="text-white/70 hover:text-white text-sm"
+                onClick={() => setVisible(false)}
               >
-                {ctaText}
-              </Link>
-              
-              {dismissible && (
-                <button
-                  onClick={handleDismiss}
-                  className="text-white/80 hover:text-white transition-colors"
-                  aria-label="Dismiss banner"
-                >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
-              )}
-            </div>
+                Dismiss
+              </button>
+            )}
           </div>
         </div>
       </div>
     </div>
   );
-};
-
-export default ContentPromotionBanner;
+}

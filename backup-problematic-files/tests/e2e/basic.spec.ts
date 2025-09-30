@@ -1,4 +1,8 @@
-import React from 'react';
+// Basic.spec utility
+export const Basic.spec = () => {
+  // Implementation here
+  return null;
+};
 
 interface Basic.specProps {
   // Add props here as needed
@@ -11,5 +15,7 @@ export default function Basic.spec({ }: Basic.specProps) {
       <p>This component is currently under development.</p>
     </div>
   );
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:tests/e2e/basic.spec.ts
+}
+}
+}
 }

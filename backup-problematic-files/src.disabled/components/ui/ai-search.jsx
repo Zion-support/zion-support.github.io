@@ -1,28 +1,16 @@
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
   }
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-import React from 'react';
-interface AisearchProps {
-  // Add props here as needed
-}
-export default function Aisearch({ }: AisearchProps) {
-  return (
-    <div>
-      <h1>Aisearch</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
   }
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+' \' \' \"export\": function AISearch({ enabled = true,placeholder = \'Search for AI services,talent,or companies...\',onSearch,onResultClick,className = \' }) {} const [isOpen,setIsOpen] = useState(false)\' const [query,setQuery] = useState(\') const [isSearching,setIsSearching] = useState(false) const [showFilters,setShowFilters] = useState(false) const [isVoiceActive,setIsVoiceActive] = useState(false) const [searchHistory,setSearchHistory] = useState([]) const [savedSearches,setSavedSearches] = useState([]) const [filters,setFilters] = useState({} category[],priceRange[0,10000],\"rating\": \'0\',location[],\"verified\": \'fals\',e,\"featured\": \'false\'}) const [results,setResults] = useState([]) const [suggestions,setSuggestions] = useState([]) const [_selectedResult,setSelectedResult] = useState(null) const searchRef = useRef(null) const inputRef = useRef(null)\';\";\";
+" " " export: function AISearch({ enabled = true,placeholder = "Search for AI services,talent,or companies.",onSearch,onResultClick,className = " }) {} const [isOpen,setIsOpen] = useState(false)" const [query,setQuery] = useState(") const [isSearching,setIsSearching] = useState(false) const [showFilters,setShowFilters] = useState(false) const [isVoiceActive,setIsVoiceActive] = useState(false) const [searchHistory,setSearchHistory] = useState([]) const [savedSearches,setSavedSearches] = useState([]) const [filters,setFilters] = useState({} category[],priceRange[0,10000],rating: "0",location[],verified: "fals",e,featured: "false"}) const [results,setResults] = useState([]) const [suggestions,setSuggestions] = useState([]) const [_selectedResult,setSelectedResult] = useState(null) const searchRef = useRef(null) const inputRef = useRef(null)";";";"""
+

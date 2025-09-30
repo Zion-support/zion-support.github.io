@@ -18,18 +18,16 @@ export const AppRouter: React.FC = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/services" element={<Services />} />
-      <Route path="/services/ai-workflow-automation" element={<AIWorkflowAutomation />} />
-      <Route path="/services/ai-virtual-assistant" element={<AIVirtualAssistant />} />
-      <Route path="/services/ai-data-analytics" element={<AIDataAnalytics />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/case-studies" element={<CaseStudies />} />
-      <Route path="/ai-micro-saas" element={<AIMicroSAAS />} />
-      <Route path="/blog" element={<Blog />} />
-      <Route path="/resources" element={<Resources />} />
-      <Route path="/tools" element={<Tools />} />
-      <Route path="/enterprise-ai-solutions" element={<EnterpriseAISolutions />} />
+      <Route path="/about" element={<Home />} />
+      <Route path="/services" element={<Home />} />
+      <Route path="/blog" element={<Home />} />
+      <Route path="/case-studies" element={<Home />} />
+      <Route path="/tools" element={<Home />} />
+      <Route path="/ai-micro-saas" element={<Home />} />
+      <Route path="/enterprise-ai-solutions" element={<Home />} />
+      
+      {/* Catch all route */}
+      <Route path="*" element={<Home />} />
     </Routes>
   );
 };

@@ -1,226 +1,255 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import performanceEnhancer from '../utils/performanceEnhancements';
+import React, { useState, useEffect } from 'react';
 
-interface PerformanceData {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  bundleSize: number;
-  cacheHitRate: number;
+interface OptimizationSuggestion {
+  id: string;
+  title: string;
+  description: string;
+  impact: 'high' | 'medium' | 'low';
+  category: 'performance' | 'seo' | 'accessibility' | 'security';
+  status: 'pending' | 'applied' | 'ignored';
 }
 
-interface PerformanceOptimizerProps {
-  isVisible?: boolean;
-  onClose?: () => void;
-  _children?: React.ReactNode;
-}
+const PerformanceOptimizer: React.FC = () => {
+  const [suggestions, setSuggestions] = useState<OptimizationSuggestion[]>([]);
+  const [isAnalyzing, setIsAnalyzing] = useState(false);
+  const [analysisProgress, setAnalysisProgress] = useState(0);
 
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ 
-  isVisible = false, 
-  onClose,
-  _children 
-}) => {
-  const [performanceData, setPerformanceData] = useState<PerformanceData>({
-    loadTime: 0,
-    renderTime: 0,
-    memoryUsage: 0,
-    bundleSize: 0,
-    cacheHitRate: 0
-  });
-  const [isOptimizing, setIsOptimizing] = useState(false);
-  const [optimizationLog, setOptimizationLog] = useState<string[]>([]);
-
-  // Update performance data
-  const updatePerformanceData = useCallback(() => {
-    // const _metrics = performanceEnhancer.getMetrics(); // Method doesn't exist
-    const _metrics = {}; // Placeholder
-    setPerformanceData({
-      loadTime: 0, // Default values
-      renderTime: 0,
-      memoryUsage: 0,
-      bundleSize: 0,
-      cacheHitRate: 85
-    });
-  }, []);
-
-  // Add log entry
-  const addLogEntry = useCallback((message: string) => {
-    setOptimizationLog(prev => [...prev, `${new Date().toLocaleTimeString()}: ${message}`]);
-  }, []);
-
-  // Run performance optimizations
-  const runOptimizations = useCallback(async () => {
-    setIsOptimizing(true);
-    addLogEntry('Starting performance optimizations...');
-
-    try {
-      // Optimize bundle
-      addLogEntry('Optimizing bundle...');
-      // performanceEnhancer.optimizeBundle(); // Method doesn't exist
-      
-      // Preload critical resources
-      addLogEntry('Preloading critical resources...');
-      // performanceEnhancer.preloadResource('/images/hero-bg.webp', 'image'); // Method doesn't exist
-      
-      // Update _metrics
-      addLogEntry('Updating performance _metrics...');
-      updatePerformanceData();
-      
-      addLogEntry('Performance optimizations completed successfully!');
-    } catch (error) {
-      addLogEntry(`Error during optimization: ${error}`);
-    } finally {
-      setIsOptimizing(false);
-    }
-  }, [addLogEntry, updatePerformanceData]);
-
-  // Clear cache
-  const clearCache = useCallback(() => {
-    addLogEntry('Clearing application cache...');
-    
-    if ('caches' in window) {
-      caches.keys().then(cacheNames => {
-        cacheNames.forEach(cacheName => {
-          caches.delete(cacheName);
-        });
-        addLogEntry('Cache cleared successfully');
-        updatePerformanceData();
-      });
-    } else {
-      addLogEntry('Cache API not available');
-    }
-  }, [addLogEntry, updatePerformanceData]);
-
-  // Update performance data periodically
   useEffect(() => {
-    if (!isVisible) return;
+    // Simulate analysis
+    const analyzePerformance = () => {
+      setIsAnalyzing(true);
+      setAnalysisProgress(0);
 
-    updatePerformanceData();
-    const interval = setInterval(updatePerformanceData, 5000);
+      const interval = setInterval(() => {
+        setAnalysisProgress(prev => {
+          if (prev >= 100) {
+            setIsAnalyzing(false);
+            clearInterval(interval);
+            generateSuggestions();
+            return 100;
+          }
+          return prev + Math.random() * 20;
+        });
+      }, 200);
+    };
 
-    return () => clearInterval(interval);
-  }, [isVisible, updatePerformanceData]);
+    analyzePerformance();
+  }, []);
 
-  if (!isVisible) return null;
+  const generateSuggestions = () => {
+    const mockSuggestions: OptimizationSuggestion[] = [
+      {
+        id: '1',
+        title: 'Enable Image Compression',
+        description: 'Compress images to reduce load times by up to 40%',
+        impact: 'high',
+        category: 'performance',
+        status: 'pending'
+      },
+      {
+        id: '2',
+        title: 'Implement Lazy Loading',
+        description: 'Load images and components only when needed',
+        impact: 'high',
+        category: 'performance',
+        status: 'pending'
+      },
+      {
+        id: '3',
+        title: 'Add Meta Descriptions',
+        description: 'Improve SEO with proper meta descriptions',
+        impact: 'medium',
+        category: 'seo',
+        status: 'pending'
+      },
+      {
+        id: '4',
+        title: 'Fix Alt Text',
+        description: 'Add alt text to images for accessibility',
+        impact: 'medium',
+        category: 'accessibility',
+        status: 'pending'
+      },
+      {
+        id: '5',
+        title: 'Enable HTTPS',
+        description: 'Secure all connections with HTTPS',
+        impact: 'high',
+        category: 'security',
+        status: 'pending'
+      }
+    ];
+
+    setSuggestions(mockSuggestions);
+  };
+
+  const applySuggestion = (id: string) => {
+    setSuggestions(prev => 
+      prev.map(suggestion => 
+        suggestion.id === id 
+          ? { ...suggestion, status: 'applied' }
+          : suggestion
+      )
+    );
+  };
+
+  const ignoreSuggestion = (id: string) => {
+    setSuggestions(prev => 
+      prev.map(suggestion => 
+        suggestion.id === id 
+          ? { ...suggestion, status: 'ignored' }
+          : suggestion
+      )
+    );
+  };
+
+  const getImpactColor = (impact: string) => {
+    switch (impact) {
+      case 'high': return 'text-red-600 bg-red-100';
+      case 'medium': return 'text-yellow-600 bg-yellow-100';
+      case 'low': return 'text-green-600 bg-green-100';
+      default: return 'text-gray-600 bg-gray-100';
+    }
+  };
+
+  const getCategoryColor = (category: string) => {
+    switch (category) {
+      case 'performance': return 'bg-blue-100 text-blue-800';
+      case 'seo': return 'bg-green-100 text-green-800';
+      case 'accessibility': return 'bg-purple-100 text-purple-800';
+      case 'security': return 'bg-red-100 text-red-800';
+      default: return 'bg-gray-100 text-gray-800';
+    }
+  };
+
+  const getStatusColor = (status: string) => {
+    switch (status) {
+      case 'applied': return 'text-green-600 bg-green-100';
+      case 'ignored': return 'text-gray-600 bg-gray-100';
+      default: return 'text-yellow-600 bg-yellow-100';
+    }
+  };
+
+  if (isAnalyzing) {
+    return (
+      <div className="space-y-4">
+        <div className="text-center">
+          <h3 className="text-lg font-semibold text-gray-800 mb-4">Analyzing Performance...</h3>
+          <div className="w-full bg-gray-200 rounded-full h-2">
+            <div
+              className="bg-blue-600 h-2 rounded-full transition-all duration-300"
+              style={{ width: `${analysisProgress}%` }}
+            />
+          </div>
+          <p className="text-sm text-gray-600 mt-2">{Math.round(analysisProgress)}% complete</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-4xl w-full mx-4 max-h-[90vh] overflow-hidden">
-        {/* Header */}
-        <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
-            Performance Optimizer
-          </h2>
-          <button
-            onClick={onClose}
-            className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
+    <div className="space-y-6">
+      {/* Summary */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="bg-white p-4 rounded-lg shadow">
+          <div className="flex items-center justify-between">
+            <div>
+              <p className="text-sm font-medium text-gray-600">Total Suggestions</p>
+              <p className="text-2xl font-bold text-blue-600">{suggestions.length}</p>
+            </div>
+            <div className="p-2 bg-blue-100 rounded-full">
+              <div className="w-6 h-6 text-blue-600">💡</div>
+            </div>
+          </div>
         </div>
 
-        {/* Content */}
-        <div className="p-6 overflow-y-auto max-h-[calc(90vh-120px)]">
-          {/* Performance Metrics */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
-            <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
-              <h3 className="text-sm font-medium text-blue-600 dark:text-blue-400">Load Time</h3>
-              <p className="text-2xl font-bold text-blue-900 dark:text-blue-100">
-                {performanceData.loadTime}ms
+        <div className="bg-white p-4 rounded-lg shadow">
+          <div className="flex items-center justify-between">
+            <div>
+              <p className="text-sm font-medium text-gray-600">Applied</p>
+              <p className="text-2xl font-bold text-green-600">
+                {suggestions.filter(s => s.status === 'applied').length}
               </p>
             </div>
-            
-            <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg">
-              <h3 className="text-sm font-medium text-green-600 dark:text-green-400">Memory Usage</h3>
-              <p className="text-2xl font-bold text-green-900 dark:text-green-100">
-                {performanceData.memoryUsage.toFixed(2)}MB
-              </p>
-            </div>
-            
-            <div className="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-lg">
-              <h3 className="text-sm font-medium text-purple-600 dark:text-purple-400">Bundle Size</h3>
-              <p className="text-2xl font-bold text-purple-900 dark:text-purple-100">
-                {performanceData.bundleSize}KB
-              </p>
-            </div>
-            
-            <div className="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-lg">
-              <h3 className="text-sm font-medium text-orange-600 dark:text-orange-400">Render Time</h3>
-              <p className="text-2xl font-bold text-orange-900 dark:text-orange-100">
-                {performanceData.renderTime}ms
-              </p>
-            </div>
-            
-            <div className="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-lg">
-              <h3 className="text-sm font-medium text-indigo-600 dark:text-indigo-400">Cache Hit Rate</h3>
-              <p className="text-2xl font-bold text-indigo-900 dark:text-indigo-100">
-                {performanceData.cacheHitRate}%
-              </p>
+            <div className="p-2 bg-green-100 rounded-full">
+              <div className="w-6 h-6 text-green-600">✅</div>
             </div>
           </div>
+        </div>
 
-          {/* Action Buttons */}
-          <div className="flex flex-wrap gap-4 mb-6">
-            <button
-              onClick={runOptimizations}
-              disabled={isOptimizing}
-              className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
-            >
-              {isOptimizing ? (
-                <>
-                  <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
-                  Optimizing...
-                </>
-              ) : (
-                <>
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                  Run Optimizations
-                </>
-              )}
-            </button>
-            
-            <button
-              onClick={clearCache}
-              className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 flex items-center gap-2"
-            >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
-              </svg>
-              Clear Cache
-            </button>
-            
-            <button
-              onClick={updatePerformanceData}
-              className="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 flex items-center gap-2"
-            >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-              </svg>
-              Refresh Metrics
-            </button>
-          </div>
-
-          {/* Optimization Log */}
-          <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
-              Optimization Log
-            </h3>
-            <div className="bg-black text-green-400 p-3 rounded font-mono text-sm max-h-48 overflow-y-auto">
-              {optimizationLog.length === 0 ? (
-                <div className="text-gray-500">No optimization activities yet...</div>
-              ) : (
-                optimizationLog.map((entry, index) => (
-                  <div key={index} className="mb-1">
-                    {entry}
-                  </div>
-                ))
-              )}
+        <div className="bg-white p-4 rounded-lg shadow">
+          <div className="flex items-center justify-between">
+            <div>
+              <p className="text-sm font-medium text-gray-600">Pending</p>
+              <p className="text-2xl font-bold text-yellow-600">
+                {suggestions.filter(s => s.status === 'pending').length}
+              </p>
+            </div>
+            <div className="p-2 bg-yellow-100 rounded-full">
+              <div className="w-6 h-6 text-yellow-600">⏳</div>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Suggestions List */}
+      <div className="space-y-4">
+        {suggestions.map((suggestion) => (
+          <div key={suggestion.id} className="bg-white p-4 rounded-lg shadow">
+            <div className="flex items-start justify-between">
+              <div className="flex-1">
+                <div className="flex items-center space-x-2 mb-2">
+                  <h4 className="text-lg font-semibold text-gray-800">{suggestion.title}</h4>
+                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${getImpactColor(suggestion.impact)}`}>
+                    {suggestion.impact} impact
+                  </span>
+                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${getCategoryColor(suggestion.category)}`}>
+                    {suggestion.category}
+                  </span>
+                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(suggestion.status)}`}>
+                    {suggestion.status}
+                  </span>
+                </div>
+                <p className="text-gray-600 mb-4">{suggestion.description}</p>
+              </div>
+            </div>
+            
+            {suggestion.status === 'pending' && (
+              <div className="flex space-x-2">
+                <button
+                  onClick={() => applySuggestion(suggestion.id)}
+                  className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
+                >
+                  Apply
+                </button>
+                <button
+                  onClick={() => ignoreSuggestion(suggestion.id)}
+                  className="px-4 py-2 bg-gray-600 text-white rounded hover:bg-gray-700 transition-colors"
+                >
+                  Ignore
+                </button>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+
+      {/* Actions */}
+      <div className="bg-white p-4 rounded-lg shadow">
+        <h3 className="text-lg font-semibold text-gray-800 mb-4">Bulk Actions</h3>
+        <div className="flex flex-wrap gap-2">
+          <button className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition-colors">
+            Apply All High Impact
+          </button>
+          <button className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors">
+            Apply All Performance
+          </button>
+          <button className="px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-700 transition-colors">
+            Apply All SEO
+          </button>
+          <button className="px-4 py-2 bg-gray-600 text-white rounded hover:bg-gray-700 transition-colors">
+            Reset Analysis
+          </button>
         </div>
       </div>
     </div>
