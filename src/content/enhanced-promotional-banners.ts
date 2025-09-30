@@ -138,6 +138,46 @@ enhancedPromotionalBanners.push({
   startDate: '2025-09-30'
 });
 
+// Sept 30, 2025 – Promote newly added articles site-wide
+enhancedPromotionalBanners.push({
+  id: 'sept30-2025-autonomous-ops-guardrails',
+  title: '🛡️ Autonomous Ops Guardrails — New',
+  description: 'Budgets, live traces, and instant rollback that keep autonomy safe.',
+  ctaText: 'Read article',
+  ctaLink: '/blog/ai-2026-autonomous-ops-guardrails',
+  variant: 'info',
+  icon: '🛡️',
+  featured: true,
+  priority: 1,
+  startDate: '2025-09-30'
+});
+
+enhancedPromotionalBanners.push({
+  id: 'sept30-2025-private-rate-limiter',
+  title: '⚡ Edge: Private Rate Limiter — New',
+  description: 'Scoped IDs, signed configs, on-device metrics for zero‑PII limits <100ms.',
+  ctaText: 'Explore blueprint',
+  ctaLink: '/blog/edge-2026-private-rate-limiter-blueprint',
+  variant: 'success',
+  icon: '⚡',
+  featured: true,
+  priority: 2,
+  startDate: '2025-09-30'
+});
+
+enhancedPromotionalBanners.push({
+  id: 'sept30-2025-budget-aware-evals',
+  title: '📊 GenAI: Budget‑Aware Evals — New',
+  description: 'KPI‑linked scorecards and evals that prevent regressions without slowing teams.',
+  ctaText: 'See playbook',
+  ctaLink: '/blog/genai-2026-budget-aware-evals',
+  variant: 'success',
+  icon: '📊',
+  featured: true,
+  priority: 3,
+  startDate: '2025-09-30'
+});
+
 // Feature individual CTAs for the three new posts
 enhancedPromotionalBanners.push({
   id: 'ai-2027-autonomous-roadmaps',
