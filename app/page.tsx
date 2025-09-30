@@ -135,15 +135,15 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <div className="animate-fade-in">
+      {/* New 2026 Content Banners - Featured at Top */}
+      <NewContent2026MegaBanner />
+      <AIRevolutionary2026Banner />
+      
       {/* Revolutionary Content 2026 Banner */}
       <RevolutionaryContent2026Banner />
       
       {/* New 2026 Success Story & Guide Banner */}
       <NewContent2026SuccessBanner />
-      
-      {/* New 2026 Content Banners */}
-      <NewContent2026MegaBanner />
-      <AIRevolutionary2026Banner />
       
       {/* Latest 2026 Content Banners */}
       <AIEnterpriseTransformationBanner />
@@ -310,6 +310,14 @@ export default function HomePage() {
               href="/services/ai-finance-automation"
               popular={false}
             />
+            <FeaturedServiceCard
+              title="AI Autonomous Systems"
+              description="Self-managing AI systems with 99.9% uptime and 80% cost reduction"
+              price="$7,999/month"
+              features={['99.9% Uptime', 'Self-Healing', '300% Efficiency']}
+              href="/services/ai-autonomous-systems"
+              popular={true}
+            />
           </div>
         </div>
       </section>
@@ -439,38 +447,38 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <Link href="/blog/ai-multimodal-integration-2025" className="group">
+            <Link href="/blog/ai-enterprise-transformation-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    Featured Article
+                  <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    NEW 2026
                   </span>
-                  <span className="text-sm text-gray-500">22 min read</span>
+                  <span className="text-sm text-gray-500">25 min read</span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Multimodal Integration 2025: The Future of Enterprise AI
+                  AI Enterprise Transformation 2026: Complete Implementation Guide
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Discover how multimodal AI is revolutionizing enterprise operations with text, image, voice, and video integration. Achieve 250% efficiency gains.
+                  Master AI enterprise transformation with proven strategies. Achieve 300% ROI, 90% efficiency gains, and $50M+ savings with our comprehensive framework.
                 </p>
                 <div className="flex items-center text-blue-600 font-semibold">
-                  Read Article →
+                  Read Full Guide →
                 </div>
               </div>
             </Link>
-            <Link href="/case-studies/multimodal-ai-customer-service-transformation" className="group">
+            <Link href="/case-studies/fortune-500-ai-transformation-success" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    Success Story
+                    NEW SUCCESS STORY
                   </span>
-                  <span className="text-sm text-gray-500">E-commerce</span>
+                  <span className="text-sm text-gray-500">Fortune 500</span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  Multimodal AI Customer Service: 80% Faster Response Times
+                  Fortune 500 AI Transformation: $50M Savings Achieved
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  See how a leading e-commerce company achieved 80% faster response times, 95% accuracy, and 60% cost reduction with multimodal AI.
+                  Learn how a Fortune 500 company achieved $50M annual savings, 300% ROI, and 90% efficiency improvement through comprehensive AI transformation.
                 </p>
                 <div className="flex items-center text-blue-600 font-semibold">
                   View Case Study →

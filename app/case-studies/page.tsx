@@ -148,10 +148,10 @@ const caseStudies = [
 
 const industries = [
   { name: 'All Industries', count: caseStudies.length, active: true },
-  { name: 'Manufacturing', count: caseStudies.filter(case => case.industry === 'Manufacturing').length },
-  { name: 'Financial Services', count: caseStudies.filter(case => case.industry === 'Financial Services' || case.industry === 'Fintech').length },
-  { name: 'Healthcare', count: caseStudies.filter(case => case.industry === 'Healthcare').length },
-  { name: 'E-commerce', count: caseStudies.filter(case => case.industry === 'E-commerce' || case.industry === 'Retail').length }
+  { name: 'Manufacturing', count: caseStudies.filter(caseStudy => caseStudy.industry === 'Manufacturing').length },
+  { name: 'Financial Services', count: caseStudies.filter(caseStudy => caseStudy.industry === 'Financial Services' || caseStudy.industry === 'Fintech').length },
+  { name: 'Healthcare', count: caseStudies.filter(caseStudy => caseStudy.industry === 'Healthcare').length },
+  { name: 'E-commerce', count: caseStudies.filter(caseStudy => caseStudy.industry === 'E-commerce' || caseStudy.industry === 'Retail').length }
 ];
 
 export default function CaseStudiesPage() {
