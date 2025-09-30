@@ -304,3 +304,38 @@ error: failed to push some refs to 'https://github.com/Zion-Holdings/zion.app'
 [2025-09-30T21:31:53.421Z] ✅ Check git status successful.
 [2025-09-30T21:31:53.422Z] 🔧 Found merge conflicts, attempting to resolve...
 [2025-09-30T21:31:53.422Z] 🚀 Add all files: git add .
+[2025-09-30T21:31:53.516Z] ✅ Add all files successful.
+[2025-09-30T21:31:53.516Z] 🚀 Check status after add: git status --porcelain
+[2025-09-30T21:31:53.576Z] ✅ Check status after add successful.
+[2025-09-30T21:31:53.576Z] ✅ Conflicts resolved automatically
+[2025-09-30T21:31:53.576Z] 🚀 Commit conflict resolution: git commit -m "Resolve merge conflicts for PR #24319"
+[2025-09-30T21:31:53.644Z] ✅ Commit conflict resolution successful.
+[2025-09-30T21:31:53.644Z] 🚀 Push resolved changes: git push origin main
+[2025-09-30T21:31:55.561Z] ✅ Push resolved changes successful.
+[2025-09-30T21:31:55.562Z] ✅ Successfully resolved conflicts and merged PR #24319
+[2025-09-30T21:31:55.562Z] 🔒 Closing PR #24319...
+[2025-09-30T21:31:55.833Z] ❌ GitHub API request failed: Resource not accessible by integration
+[2025-09-30T21:31:55.833Z] ❌ Failed to close PR #24319: Resource not accessible by integration
+[2025-09-30T21:31:55.833Z] 🗑️ Deleting branch cursor/create-and-deploy-new-content-c5bb...
+[2025-09-30T21:31:55.833Z] 🚀 Delete remote branch cursor/create-and-deploy-new-content-c5bb: git push origin --delete cursor/create-and-deploy-new-content-c5bb
+[2025-09-30T21:31:57.489Z] ❌ Delete remote branch cursor/create-and-deploy-new-content-c5bb failed: Command failed: git push origin --delete cursor/create-and-deploy-new-content-c5bb
+To https://github.com/Zion-Holdings/zion.app
+ ! [remote rejected]           cursor/create-and-deploy-new-content-c5bb (cannot lock ref 'refs/heads/cursor/create-and-deploy-new-content-c5bb': unable to resolve reference 'refs/heads/cursor/create-and-deploy-new-content-c5bb')
+error: failed to push some refs to 'https://github.com/Zion-Holdings/zion.app'
+
+[2025-09-30T21:31:57.490Z] ❌ Failed to delete branch cursor/create-and-deploy-new-content-c5bb: Command failed: git push origin --delete cursor/create-and-deploy-new-content-c5bb
+To https://github.com/Zion-Holdings/zion.app
+ ! [remote rejected]           cursor/create-and-deploy-new-content-c5bb (cannot lock ref 'refs/heads/cursor/create-and-deploy-new-content-c5bb': unable to resolve reference 'refs/heads/cursor/create-and-deploy-new-content-c5bb')
+error: failed to push some refs to 'https://github.com/Zion-Holdings/zion.app'
+
+[2025-09-30T21:31:58.492Z] 🔄 Processing PR #24318: Create and deploy new content
+[2025-09-30T21:31:58.500Z] 🚀 Fetch PR branch cursor/create-and-deploy-new-content-dc53: git fetch origin cursor/create-and-deploy-new-content-dc53
+[2025-09-30T21:31:59.576Z] ✅ Fetch PR branch cursor/create-and-deploy-new-content-dc53 successful.
+[2025-09-30T21:31:59.577Z] 🚀 Merge PR #24318: git merge origin/cursor/create-and-deploy-new-content-dc53 --no-ff -m "Merge PR #24318: Create and deploy new content"
+[2025-09-30T21:31:59.873Z] ❌ Merge PR #24318 failed: Command failed: git merge origin/cursor/create-and-deploy-new-content-dc53 --no-ff -m "Merge PR #24318: Create and deploy new content"
+[2025-09-30T21:31:59.873Z] ⚠️ Merge failed, attempting to resolve conflicts: Command failed: git merge origin/cursor/create-and-deploy-new-content-dc53 --no-ff -m "Merge PR #24318: Create and deploy new content"
+[2025-09-30T21:31:59.873Z] 🔧 Resolving merge conflicts for branch: cursor/create-and-deploy-new-content-dc53
+[2025-09-30T21:31:59.873Z] 🚀 Check git status: git status --porcelain
+[2025-09-30T21:31:59.929Z] ✅ Check git status successful.
+[2025-09-30T21:31:59.929Z] 🔧 Found merge conflicts, attempting to resolve...
+[2025-09-30T21:31:59.930Z] 🚀 Add all files: git add .
