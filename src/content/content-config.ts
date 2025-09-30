@@ -348,6 +348,34 @@ featuredBlogPosts.unshift(
   }
 );
 
+// Advertise the latest April 2026 trio on the homepage
+featuredBlogPosts.unshift(
+  {
+    id: "ai-operational-risk-budgets-2026",
+    title: "AI Operational Risk Budgets 2026",
+    description: "Budgeted actions, KPI canaries, and instant rollback for safe autonomy.",
+    link: "/blog/ai-operational-risk-budgets-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-zero-pii-personalization-2026",
+    title: "Edge Zero‑PII Personalization 2026",
+    description: "Private <100ms personalization with scoped IDs, on‑device models, and DP noise.",
+    link: "/blog/edge-zero-pii-personalization-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "genai-quality-tiers-at-scale-2026",
+    title: "GenAI Quality Tiers at Scale 2026",
+    description: "Predictable cost and stable UX using quality tiers + semantic caches.",
+    link: "/blog/genai-quality-tiers-at-scale-2026",
+    type: "article",
+    featured: true
+  }
+);
+
 export const featuredServices: FeaturedItem[] = [
   {
     id: "ai-predictive-maintenance",
