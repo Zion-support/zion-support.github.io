@@ -2,7 +2,6 @@ import React from 'react';
 
 export default function April2026RevolutionaryBreakthroughBanner() {
   return (
-<<<<<<< HEAD
     <section className="py-16 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 overflow-hidden opacity-30">
@@ -43,12 +42,10 @@ export default function April2026RevolutionaryBreakthroughBanner() {
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-6">
             The world's first self-evolving AI system achieving true meta-cognitive reasoning, 
             quantum consciousness fusion, and autonomous enterprise transformation delivering 
->>>>>>> origin/cursor/create-and-deploy-new-content-c5bb
             <span className="text-purple-400 font-bold"> 1000x performance improvements</span> and 
             <span className="text-blue-400 font-bold"> $5.2B in proven value</span>
           </p>
           
-<<<<<<< HEAD
           {/* Key Metrics */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
             <div className="bg-gradient-to-r from-purple-500/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-4 border border-purple-500/30">
