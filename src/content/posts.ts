@@ -1149,6 +1149,33 @@ export const posts: BlogPost[] = [
 // Newly added content (auto-advertised on Home via latest sort)
 posts.push(
   {
+    slug: "genai-consent-mode-edge-2026",
+    title: "GenAI Consent Mode 2026: On-Device Signals Without PII",
+    description: "Respect user privacy with on-device aggregation, scoped IDs, and consent-aware analytics under strict SLAs.",
+    category: "Analytics",
+    publishedAt: "2025-10-31",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "ai-data-lineage-2026",
+    title: "AI Data Lineage 2026: End-to-End Traceability for Models",
+    description: "Track datasets, prompts, and model versions with signed SBOMs and audit-ready provenance.",
+    category: "MLOps",
+    publishedAt: "2025-10-31",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "agent-policy-gates-blueprint-2026",
+    title: "Agent Policy Gates 2026: Approvals, Budgets, and Safe Tools",
+    description: "Design approval workflows, budgeted actions, and sandboxed tools to ship reliable agent releases.",
+    category: "AI Operations",
+    publishedAt: "2025-10-31",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
     slug: "ai-safety-budgets-2026",
     title: "AI Safety Budgets 2026: Guardrails That Keep Velocity High",
     description: "Budget risky actions, set rollback triggers, and wire evals to KPIs for safe automation.",

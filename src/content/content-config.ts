@@ -19,6 +19,30 @@ export const featuredBlogPosts: FeaturedItem[] = [
     featured: true
   },
   {
+    id: "genai-consent-mode-edge-2026",
+    title: "GenAI Consent Mode 2026",
+    description: "On-device signals without PII using scoped IDs and consent-aware analytics",
+    link: "/blog/genai-consent-mode-edge-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-data-lineage-2026",
+    title: "AI Data Lineage 2026",
+    description: "Signed SBOMs and audit-ready provenance for datasets, prompts, and models",
+    link: "/blog/ai-data-lineage-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "agent-policy-gates-blueprint-2026",
+    title: "Agent Policy Gates 2026",
+    description: "Approvals, budgets, and sandboxed tools for safe agent releases",
+    link: "/blog/agent-policy-gates-blueprint-2026",
+    type: "article",
+    featured: true
+  },
+  {
     id: "ai-trustworthy-agents-2026",
     title: "Trustworthy Autonomous Agents 2026",
     description: "Guardrails, evals, and policy gates for reliable autonomy",
