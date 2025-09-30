@@ -1116,3 +1116,31 @@ featuredBlogPosts.unshift(
     featured: true
   }
 );
+
+// Sept 30, 2025 – Surface three brand-new articles (newly added now)
+featuredBlogPosts.unshift(
+  {
+    id: "ai-2026-runtime-rollback-blueprint",
+    title: "AI 2026: Runtime Rollback Blueprint",
+    description: "Instant rollback with KPI‑linked canaries and budget gates.",
+    link: "/blog/ai-2026-runtime-rollback-blueprint",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-2026-attested-analytics",
+    title: "Edge 2026: Attested Analytics",
+    description: "Signed attestations + scoped IDs + DP for audit‑ready insights.",
+    link: "/blog/edge-2026-attested-analytics",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "genai-2027-economy-modes",
+    title: "GenAI 2027: Economy Modes",
+    description: "Quality tiers + semantic caches + token budgets for 50% savings.",
+    link: "/blog/genai-2027-economy-modes",
+    type: "article",
+    featured: true
+  }
+);
