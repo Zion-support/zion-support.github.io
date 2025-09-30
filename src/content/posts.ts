@@ -9,6 +9,34 @@ export interface BlogPost {
 }
 
 export const posts: BlogPost[] = [
+  // Sept 30, 2025 — New breakthrough content (FEATURED)
+  {
+    slug: "ai-autonomous-cost-intelligence-2025",
+    title: "AI Autonomous Cost Intelligence 2025: Reduce Cloud Spending by 60%",
+    description: "Discover how AI autonomous cost intelligence reduces cloud spending by up to 60% through predictive analytics, automated optimization, and intelligent resource allocation.",
+    category: "FinOps & Cost Intelligence",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "12 min read"
+  },
+  {
+    slug: "ai-conversational-commerce-revolution-2025",
+    title: "AI Conversational Commerce Revolution 2025: The Future of Shopping",
+    description: "Explore how AI-powered conversational commerce is transforming e-commerce with 3.5x higher conversion rates and personalized shopping experiences.",
+    category: "E-Commerce & Retail",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "10 min read"
+  },
+  {
+    slug: "ai-predictive-infrastructure-orchestration-2025",
+    title: "AI Predictive Infrastructure Orchestration 2025: Zero-Downtime Operations",
+    description: "Learn how AI predictive infrastructure orchestration achieves 99.999% uptime and 92% faster incident resolution through intelligent automation.",
+    category: "Infrastructure & DevOps",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "11 min read"
+  },
   // Sept 30, 2025 — Newly added content (featured)
   {
     slug: "ai-2025-sept-30-llm-supply-chains",
