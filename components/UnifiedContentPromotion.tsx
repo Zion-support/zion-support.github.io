@@ -43,6 +43,18 @@ const featuredContent: ContentItem[] = [
     category: 'FinOps'
   },
   {
+    id: 'n3a',
+    title: 'Governed Autonomy Blueprint (2025): Safe, Reliable, Cost-Aware AI',
+    description: 'Budgets, scorecards, guardrails, and live traces that connect SLIs to business KPIs.',
+    link: '/blog/ai-2025-sept-30-governed-autonomy-blueprint',
+    badge: 'New',
+    badgeColor: 'bg-gradient-to-r from-indigo-600 to-blue-600',
+    icon: '🛡️',
+    publishedDate: 'September 30, 2025',
+    readTime: '12 min read',
+    category: 'Governed Autonomy'
+  },
+  {
     id: 'n3',
     title: 'Autonomous Enterprise Operations 2025: From Pilots to Production',
     description: 'Guardrails, live traces, and budgeted actions that convert pilots into durable ROI.',
