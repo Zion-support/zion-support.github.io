@@ -394,6 +394,40 @@ const contentItems: ContentItem[] = [
   }
 ];
 
+// Newly added featured content to advertise on the homepage
+contentItems.unshift(
+  {
+    id: 'ai-governance-real-time-2026',
+    title: 'AI Governance in Real Time 2026: Live Canaries + PR Policy Tests',
+    excerpt: 'Wire KPI‑linked canaries and CI policy tests so teams ship weekly without regressions.',
+    readTime: '7 min read',
+    category: 'AI Governance',
+    href: '/blog/ai-governance-real-time-2026',
+    featured: true,
+    publishedDate: '2025-09-30'
+  },
+  {
+    id: 'edge-inference-warm-pools-2026',
+    title: 'Edge Inference Warm Pools 2026: Sub‑100ms Global with Predictable Cost',
+    excerpt: 'Warm pools, intent prefetching, and tiered caches for fast, affordable inference worldwide.',
+    readTime: '6 min read',
+    category: 'Edge Computing',
+    href: '/blog/edge-inference-warm-pools-2026',
+    featured: true,
+    publishedDate: '2025-09-30'
+  },
+  {
+    id: 'agent-release-guardrails-2026',
+    title: 'Agent Release Guardrails 2026: Budgets, Approvals, and Instant Rollback',
+    excerpt: 'Battle‑tested checklists for safe agent updates with budgeted actions and one‑click rollback.',
+    readTime: '7 min read',
+    category: 'AI Operations',
+    href: '/blog/agent-release-guardrails-2026',
+    featured: true,
+    publishedDate: '2025-09-30'
+  }
+);
+
 interface ContentShowcaseProps {
   title?: string;
   subtitle?: string;
