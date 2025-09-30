@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { 
   NewBlogBanner, 
   AnalyticsPlatformBanner, 
@@ -40,8 +41,18 @@ import {
   InteractiveAICalculatorBanner,
   AIInnovationShowcaseBanner
 } from '../components/NewContent2026Banners';
+import {
+  NewContent2026MegaBanner,
+  AIRevolutionary2026Banner,
+  Revolutionary2026ContentBanner,
+  LatestAIInnovations2026Banner
+} from '../components/NewContent2026Banners';
 import ContentShowcase from '../components/ContentShowcase';
 import InteractiveAIROICalculator from '../components/InteractiveAIROICalculator';
+import InteractiveAI2027Calculator from '../components/InteractiveAI2027Calculator';
+import InteractiveAICalculator2026 from '../components/InteractiveAICalculator2026';
+import FeaturedServiceCard from '../components/FeaturedServiceCard';
+import SuccessStory from '../components/SuccessStory';
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
