@@ -29,7 +29,8 @@ import {
   NewContent2026Banner,
   AICostCalculatorBanner,
   AIImplementationPlaybookBanner,
-  September30LatestBreakthroughsBanner
+  September30LatestBreakthroughsBanner,
+  FreshSeptemberContentBanner
 } from '../components/PromotionalBanner';
 import UltimateContentShowcase2026 from '../src/components/UltimateContentShowcase2026';
 import AIInnovationAdvertisingBanner from '../src/components/AIInnovationAdvertisingBanner';
@@ -230,6 +231,9 @@ export default function HomePage() {
 
       {/* ✨ Latest Sept 30 additions — advertised site-wide */}
       <September30LatestBreakthroughsBanner />
+
+      {/* 🆕 Freshly added guides — advertise prominently */}
+      <FreshSeptemberContentBanner />
 
       {/* NEW: Fresh today – promote brand-new guides */}
       <section className="py-8 bg-gradient-to-r from-emerald-600/20 to-cyan-600/20 border-y border-white/10">

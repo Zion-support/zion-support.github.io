@@ -148,6 +148,26 @@ export const featuredBlogPosts: FeaturedItem[] = [
   }
 ];
 
+// Sept 30, 2025 – Promote two brand-new guides site-wide
+featuredBlogPosts.unshift(
+  {
+    id: "ai-operational-trust-scorecards-2026",
+    title: "AI Operational Trust Scorecards 2026",
+    description: "SLIs wired to KPIs with budgets, canaries, and instant rollback",
+    link: "/blog/ai-operational-trust-scorecards-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-consentless-analytics-2026",
+    title: "Edge Analytics 2026: Consent‑Safe Insights",
+    description: "Scoped IDs, on‑device aggregation, and DP noise at <100ms — zero PII",
+    link: "/blog/edge-consentless-analytics-2026",
+    type: "article",
+    featured: true
+  }
+);
+
 // Oct 2025 – Add two brand-new featured posts
 featuredBlogPosts.unshift(
   {
@@ -163,6 +183,34 @@ featuredBlogPosts.unshift(
     title: "Privacy‑Safe Feature Flags 2026",
     description: "Consent‑aware, scoped IDs, and DP‑hardened experimentation at <100ms",
     link: "/blog/privacy-safe-feature-flags-2026",
+    type: "article",
+    featured: true
+  }
+);
+
+// Sept 30, 2025 – Add three brand-new articles (newly created)
+featuredBlogPosts.unshift(
+  {
+    id: "ai-2026-live-guardrails-blueprint",
+    title: "AI 2026: Live Guardrails Blueprint",
+    description: "Budgets, policy gates, canaries, and instant rollback for safe autonomy.",
+    link: "/blog/ai-2026-live-guardrails-blueprint",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-2026-private-insights-blueprint",
+    title: "Edge Private Insights 2026",
+    description: "Consentless metrics with scoped IDs, edge aggregation, and DP noise.",
+    link: "/blog/ai-2026-private-insights-blueprint",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "genai-routing-budgets-2026",
+    title: "GenAI Budget‑Aware Routing 2026",
+    description: "Stable UX under cost SLAs using quality tiers, caches, and evals.",
+    link: "/blog/genai-routing-budgets-2026",
     type: "article",
     featured: true
   }
