@@ -30,6 +30,14 @@ import {
   AICostCalculatorBanner,
   AIImplementationPlaybookBanner
 } from '../components/PromotionalBanner';
+import { 
+  QuantumConsciousness2027PromotionalBanner,
+  AutonomousEnterprise2026PromotionalBanner 
+} from '../components/QuantumConsciousness2027PromotionalBanner';
+import { 
+  InteractiveQuantumAICalculator,
+  InteractiveAutonomousEnterpriseCalculator 
+} from '../components/InteractiveQuantumAICalculator';
 import {
   AIEnterpriseAdoptionBanner,
   AITrends2025Banner,
@@ -170,11 +178,22 @@ export default function HomePage() {
   return (
     <>
       <div className="animate-fade-in">
-      {/* 🚀 NEW: Revolutionary 2026/2027 Content */}
+      
+      {/* 🚀 NEW: Revolutionary Quantum Consciousness 2027 Content */}
       <section className="max-w-7xl mx-auto px-6 md:px-8 py-8">
         <div className="space-y-8">
+          <QuantumConsciousness2027PromotionalBanner />
+          <AutonomousEnterprise2026PromotionalBanner />
           <NewContent2026RevolutionaryBanner />
           <AutonomousEnterprise2027Banner />
+        </div>
+      </section>
+
+      {/* ⚛️ Interactive Quantum AI Calculator */}
+      <section className="max-w-7xl mx-auto px-6 md:px-8 py-8">
+        <div className="space-y-8">
+          <InteractiveQuantumAICalculator />
+          <InteractiveAutonomousEnterpriseCalculator />
         </div>
       </section>
 
