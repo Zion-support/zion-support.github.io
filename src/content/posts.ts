@@ -10,6 +10,15 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "genai-2025-oct-01-cost-optimization-v4",
+    title: "GenAI Cost Optimization v4 — 60–80% Savings, Stable Quality",
+    description: "Tiered routing, semantic caches, selective distillation, and eval-gated fallbacks to slash cost while preserving UX KPIs.",
+    category: "GenAI",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
     slug: "ai-2025-sept-30-cognitive-assistants-blueprint",
     title: "Cognitive Assistants Blueprint — 92% CSAT, Governed Velocity",
     description: "Production patterns for AI assistants with policy tests, eval scorecards, and KPI‑linked rollback for safe velocity.",
@@ -63,6 +72,7 @@ export const posts: BlogPost[] = [
     featured: true,
     readTime: "9 min read"
   },
+  {
     slug: "ai-2025-sept-30-real-time-decision-engines-v3",
     title: "Real-Time Decision Engines v3 — 10M/sec, <1ms, intent prefetching",
     description: "Warm pools, semantic caches, and intent prefetching deliver ultra‑low latency at massive scale with predictable cost tiers.",
