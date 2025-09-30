@@ -128,6 +128,21 @@ const Home = () => {
         
         <NewContentAnnouncement />
         
+        {/* September 30, 2025 - BREAKING: NEW ENTERPRISE GUIDES */}
+        <NewContentPromoBanner 
+          className="border-b border-white/10" 
+          variant="premium" 
+          title="🚨 BREAKING: 3 Mission-Critical Enterprise Guides Just Released!"
+          description="NEW September 30, 2025: Complete guides for AI-Powered DevSecOps (95% faster security), Quantum-Ready Infrastructure (protect against Q-Day), and Enterprise AI Governance (navigate regulations with confidence)."
+          ctaText="Read Essential Guides"
+          ctaLink="/blog"
+          featuredItems={[
+            { title: "AI-Powered DevSecOps Guide 2025 — 95% Faster Security, 80% Fewer False Positives", category: "DevSecOps & AI", link: "/blog/ai-powered-devsecops-complete-guide-2025" },
+            { title: "Quantum-Ready Cloud Infrastructure — Protect Against Q-Day with PQC Migration", category: "Quantum Computing", link: "/blog/quantum-ready-cloud-infrastructure-2025" },
+            { title: "Enterprise AI Model Governance Framework — Navigate AI Regulations with Confidence", category: "AI Governance", link: "/blog/enterprise-ai-model-governance-framework-2025" }
+          ]}
+        />
+        
         {/* October 2025 - BREAKTHROUGH AI CONTENT */}
         <NewContentPromoBanner 
           className="border-b border-white/10" 
@@ -239,7 +254,7 @@ const Home = () => {
             </h1>
 
             <p className="text-xl md:text-2xl text-zion-slate-light mb-8 leading-relaxed max-w-3xl mx-auto animate-fade-in">
-              🚀 <strong>BREAKTHROUGH OCTOBER 2025:</strong> NEW Production AI Guides Just Released! Ship reliable AI agents, reduce hallucinations 75%, and cut infrastructure costs 60%! 
+              🚨 <strong>BREAKING SEPTEMBER 30, 2025:</strong> 3 Mission-Critical Enterprise Guides Just Released! AI-Powered DevSecOps (95% faster), Quantum-Ready Infrastructure (beat Q-Day), and Enterprise AI Governance (ensure compliance). 
               Transform your business with proven AI solutions delivering $50B+ in client results. 
               Join 500+ companies achieving 400-600% ROI with our expert guidance!
             </p>
@@ -273,6 +288,43 @@ const Home = () => {
               </div>
             </div>
 
+            {/* New Content Announcement - September 30, 2025 */}
+            <div className="bg-gradient-to-r from-red-500/20 to-orange-500/20 border border-red-400/30 rounded-xl p-6 mb-8 animate-fade-in">
+              <div className="flex items-center justify-center gap-3 mb-3">
+                <Sparkles className="w-6 h-6 text-red-400 animate-pulse" />
+                <span className="text-lg font-bold text-red-400">🚨 BREAKING SEPTEMBER 30, 2025: MISSION-CRITICAL ENTERPRISE GUIDES</span>
+                <Sparkles className="w-6 h-6 text-red-400 animate-pulse" />
+              </div>
+              <p className="text-white text-lg font-semibold mb-2">
+                ⚡ JUST RELEASED: 3 essential guides — AI-Powered DevSecOps (95% faster security), Quantum-Ready Infrastructure (beat Q-Day threats), Enterprise AI Governance (navigate regulations)!
+              </p>
+              <p className="text-zion-slate-light text-sm mb-4">
+                Protect your organization with battle-tested strategies. Secure DevOps pipelines without bottlenecks, prepare for quantum computing threats, and build compliant AI systems that regulators approve.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <Link
+                  to="/blog/ai-powered-devsecops-complete-guide-2025"
+                  className="bg-red-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-red-600 transition-colors text-center"
+                >
+                  Read Enterprise Guides
+                </Link>
+                <Link
+                  to="/contact"
+                  className="border border-red-400 text-red-400 px-6 py-2 rounded-lg font-semibold hover:bg-red-400 hover:text-white transition-colors text-center"
+                >
+                  Get Expert Help
+                </Link>
+              </div>
+              <div className="mt-4 flex flex-wrap gap-2 justify-center">
+                <span className="bg-cyan-100/20 text-cyan-200 px-3 py-1 rounded-full text-xs font-medium border border-cyan-300/20">AI-Powered DevSecOps</span>
+                <span className="bg-purple-100/20 text-purple-200 px-3 py-1 rounded-full text-xs font-medium border border-purple-300/20">Quantum Cryptography</span>
+                <span className="bg-green-100/20 text-green-200 px-3 py-1 rounded-full text-xs font-medium border border-green-300/20">AI Governance</span>
+                <span className="bg-red-100/20 text-red-200 px-3 py-1 rounded-full text-xs font-medium border border-red-300/20">Security Automation</span>
+                <span className="bg-yellow-100/20 text-yellow-200 px-3 py-1 rounded-full text-xs font-medium border border-yellow-300/20">Post-Quantum PQC</span>
+                <span className="bg-blue-100/20 text-blue-200 px-3 py-1 rounded-full text-xs font-medium border border-blue-300/20">Compliance</span>
+              </div>
+            </div>
+            
             {/* New Content Announcement - October 2025 */}
             <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-xl p-6 mb-8 animate-fade-in">
               <div className="flex items-center justify-center gap-3 mb-3">
