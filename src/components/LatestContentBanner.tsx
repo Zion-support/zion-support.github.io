@@ -27,19 +27,26 @@ const LatestContentBanner: React.FC<LatestContentBannerProps> = ({
             <Sparkles className="w-6 h-6 animate-pulse" />
             <div>
               <h3 className="font-bold text-lg">
-                🔥 New: AI 2028 Autonomous Risk Budgets · Autonomous Enterprise Revolution
+<<<<<<< HEAD
+                🔥 New: Production RAG · Serverless Inference Costs · Golden Paths ROI
               </h3>
               <p className="text-sm opacity-90">
-                Ship faster with KPI‑linked budgets, instant rollback, and enterprise‑scale autonomy
+                Read Production RAG Quality Budgets, Serverless Inference Cost Playbook, and Golden Paths ROI
+=======
+                🔥 New: E2E AI Tracing 2026 · Consentless Edge Analytics v4
+              </h3>
+              <p className="text-sm opacity-90">
+                Trace prompts→outcomes and ship zero‑PII analytics at &lt;100ms. Explore the latest →
+>>>>>>> feat/new-content-and-ads
               </p>
             </div>
           </div>
           <Link
-            to="/blog"
+            to="/blog/production-rag-quality-budgets-2026"
             className="bg-white text-gray-900 px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-all flex items-center gap-2 flex-shrink-0"
           >
             <TrendingUp className="w-4 h-4" />
-            Explore Now
+            Read Now
           </Link>
         </div>
       </div>

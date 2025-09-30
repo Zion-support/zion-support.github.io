@@ -29,15 +29,27 @@ const NewContentAdvertisingBanner: React.FC = () => {
     },
     {
       id: 3,
-      title: 'GenAI 2027: Economy Modes',
-      category: 'FinOps',
-      readTime: '8 min',
-      rating: 4.9,
-      readers: '47K+',
-      badge: 'FEATURED',
+      title: 'E2E AI Tracing 2026',
+      category: 'AI Operations',
+      readTime: '12 min',
+      rating: 5.0,
+      readers: '65K+',
+      badge: 'NEW',
       gradient: 'from-green-500 to-emerald-500',
       icon: <Award className="w-6 h-6" />,
-      link: '/blog/genai-2027-economy-modes'
+      link: '/blog/ai-2026-e2e-ai-tracing'
+    },
+    {
+      id: 4,
+      title: 'Consentless Analytics v4 (2027)',
+      category: 'Analytics',
+      readTime: '6 min',
+      rating: 4.9,
+      readers: '52K+',
+      badge: 'FEATURED',
+      gradient: 'from-emerald-500 to-cyan-500',
+      icon: <TrendingUp className="w-6 h-6" />,
+      link: '/blog/edge-2027-consentless-analytics-v4'
     }
   ];
 

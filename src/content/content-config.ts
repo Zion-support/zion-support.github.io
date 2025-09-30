@@ -212,6 +212,70 @@ export const featuredBlogPosts: FeaturedItem[] = [
   }
 ];
 
+// Sept 30, 2025 – Promote brand-new posts site-wide (added now)
+featuredBlogPosts.unshift(
+  {
+    id: "production-rag-quality-budgets-2026",
+    title: "Production RAG: Quality Budgets, Freshness Windows, and SLAs",
+    description: "Freshness windows, async warmups, and KPI‑aligned SLAs for reliable RAG.",
+    link: "/blog/production-rag-quality-budgets-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "serverless-inference-cost-playbook-2025",
+    title: "Serverless Inference Cost Playbook",
+    description: "Cut GenAI cost with adaptive batching, warm pools, and quality tiers.",
+    link: "/blog/serverless-inference-cost-playbook-2025",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "golden-paths-roi-2026",
+    title: "Golden Paths ROI 2026",
+    description: "Scorecards linking developer journeys to adoption, SLOs, and revenue.",
+    link: "/blog/golden-paths-roi-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "verifiable-edge-analytics-2026",
+    title: "Verifiable Edge Analytics 2026",
+    description: "Zero‑PII insights with signed attestations under 100ms at the edge",
+    link: "/blog/verifiable-edge-analytics-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "agent-red-teaming-2026",
+    title: "Agent Red‑Teaming 2026",
+    description: "Live evals, budgets, and instant rollback for safe autonomy",
+    link: "/blog/agent-red-teaming-2026",
+    type: "article",
+    featured: true
+  }
+);
+
+// Sept 30, 2025 – Advertise two newly added articles site-wide (added now)
+featuredBlogPosts.unshift(
+  {
+    id: "ai-2029-autonomous-infra-blueprint",
+    title: "AI 2029: Autonomous Infra Blueprint",
+    description: "Self‑healing, self‑optimizing, self‑scaling with rollback in seconds",
+    link: "/blog/ai-2029-autonomous-infra-blueprint",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-2026-e2e-ai-tracing",
+    title: "E2E AI Tracing 2026",
+    description: "Trace prompts → tools → KPIs with rollback‑ready playbooks",
+    link: "/blog/ai-2026-e2e-ai-tracing",
+    type: "article",
+    featured: true
+  }
+);
+
 // Jan 2027 – Feature three brand-new articles
 featuredBlogPosts.unshift(
   {
@@ -1219,6 +1283,14 @@ featuredBlogPosts.unshift(
 
 // Sept 30, 2025 – Surface three brand-new articles (newly added now)
 featuredBlogPosts.unshift(
+  {
+    id: "ai-2025-sept-30-enterprise-ai-safety-blueprint",
+    title: "AI 2025: Enterprise AI Safety",
+    description: "KPI scorecards + CI policy tests + live canaries + instant rollback",
+    link: "/blog/ai-2025-sept-30-enterprise-ai-safety-blueprint",
+    type: "article",
+    featured: true
+  },
   {
     id: "ai-2026-runtime-rollback-blueprint",
     title: "AI 2026: Runtime Rollback Blueprint",

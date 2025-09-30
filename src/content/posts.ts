@@ -10,11 +10,101 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "production-rag-quality-budgets-2026",
+    title: "Production RAG: Quality Budgets, Freshness Windows, and SLAs",
+    description: "Run RAG at scale with explicit quality budgets, freshness controls, and KPI-aligned SLAs that avoid regressions.",
+    category: "GenAI",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "serverless-inference-cost-playbook-2025",
+    title: "Serverless Inference Cost Playbook",
+    description: "Adaptive batching, warm pools, and quality tiers without P95 pain.",
+    category: "GenAI",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "golden-paths-roi-2026",
+    title: "Golden Paths ROI 2026: Scorecards that Prove Platform Value",
+    description: "Link developer journeys to SLOs, adoption, and revenue with actionable scorecards.",
+    category: "Platform Engineering",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "ai-2026-e2e-ai-tracing",
+    title: "E2E AI Tracing 2026: From Prompts to Outcomes",
+    description: "Instrument prompts, tools, calls, budgets, and KPIs with end‑to‑end traces for reliability and cost control.",
+    category: "AI Operations",
+    publishedAt: "2026-01-30",
+    featured: true,
+    readTime: "12 min read"
+  },
+  {
+    slug: "edge-2027-consentless-analytics-v4",
+    title: "Edge 2027: Consentless Analytics v4 — Zero‑PII Insights <100ms",
+    description: "Scoped IDs, on‑device aggregation, and differential privacy for actionable analytics without PII risk.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
     slug: "ai-2025-sept-30-autonomous-control-planes",
     title: "AI 2025: Autonomous Control Planes — Budgets, Gates, Rollback",
     description: "Design budget-aware, policy-gated AI platforms with instant rollback and KPI-linked guardrails.",
     category: "AI Operations",
     publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "ai-2029-self-healing-platforms",
+    title: "AI 2029: Self‑Healing Platforms — Auto‑Contain in <60s",
+    description: "Policy‑tested playbooks, budgeted actions, and live canaries that auto‑contain incidents in under a minute.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "edge-2028-private-personalization",
+    title: "Edge 2028: Private Personalization at <100ms",
+    description: "Scoped IDs, on‑device models, and DP noise enabling zero‑PII personalization worldwide under 100ms.",
+    category: "Edge",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "genai-2028-eval-scorecards",
+    title: "GenAI 2028: Eval Scorecards — KPIs you can trust",
+    description: "Signed attestations, golden tasks, and budget‑linked guardrails for reliable GenAI in production.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "verifiable-edge-analytics-2026",
+    title: "Verifiable Edge Analytics 2026: Zero‑PII Insights with Attestations",
+    description: "Scoped IDs, on‑device aggregation, DP noise, and signed attestations for trustworthy insights under 100ms.",
+    category: "Analytics",
+    publishedAt: "2025-10-31",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "agent-red-teaming-2026",
+    title: "Agent Red‑Teaming 2026: Live Evals, Budgets, and Safe Autonomy",
+    description: "Operational red‑teaming with KPI‑linked evals, budgeted actions, and instant rollback to prevent regressions.",
+    category: "AI Security",
+    publishedAt: "2025-10-30",
     featured: true,
     readTime: "9 min read"
   },
@@ -46,8 +136,6 @@ export const posts: BlogPost[] = [
     readTime: "14 min read"
   },
   {
-// merged: keep both new and existing entries
-    // NEW — Autonomous AI Roadmaps (featured)
     slug: "ai-2027-autonomous-roadmaps",
     title: "AI 2027: Autonomous Roadmaps that Prove ROI",
     description: "Outcome‑led bets, KPI scorecards, budgets, and rollback — a practical 2027 roadmap.",
@@ -57,7 +145,6 @@ export const posts: BlogPost[] = [
     readTime: "9 min read"
   },
   {
-    // NEW — Signed Evals at the Edge (featured)
     slug: "edge-2026-signed-evals",
     title: "Edge 2026: Signed Evals — Zero‑PII, <100ms",
     description: "Scoped IDs, on‑device aggregation, DP noise, and signed attestations for evals you can trust.",
@@ -67,7 +154,6 @@ export const posts: BlogPost[] = [
     readTime: "7 min read"
   },
   {
-    // merged from feature branch
     slug: "ai-2025-sept-30-breaking-enterprise-ai-breakthroughs",
     title: "Sept 30, 2025: Breaking Enterprise AI Breakthroughs",
     description: "8 production‑ready patterns: rollback, scorecards, consentless analytics, and more.",
@@ -86,8 +172,6 @@ export const posts: BlogPost[] = [
     readTime: "7 min read"
   },
   {
-    // merged: keep both variants
-    // NEW — GenAI Cost Tiers v3 (featured)
     slug: "genai-2027-cost-tiers-v3",
     title: "GenAI 2027: Cost Tiers v3 — 40–70% Savings, Stable UX",
     description: "Quality tiers + semantic caches + policy tests for predictable spend without regressions.",
@@ -97,7 +181,6 @@ export const posts: BlogPost[] = [
     readTime: "8 min read"
   },
   {
-    // merged from feature branch
     slug: "genai-2025-sept-30-policy-tests-quickstart",
     title: "GenAI 2025: Policy Tests Quickstart",
     description: "Lightweight CI policy tests wired to KPIs to ship faster without regressions.",
@@ -107,7 +190,6 @@ export const posts: BlogPost[] = [
     readTime: "6 min read"
   },
   {
-    // NEW — Runtime rollback blueprint (featured)
     slug: "ai-2026-runtime-rollback-blueprint",
     title: "AI 2026: Runtime Rollback Blueprint",
     description: "Instant rollback with KPI‑linked canaries, budget gates, and safe fallbacks.",
@@ -117,7 +199,6 @@ export const posts: BlogPost[] = [
     readTime: "9 min read"
   },
   {
-    // NEW — Attested edge analytics (featured)
     slug: "edge-2026-attested-analytics",
     title: "Edge 2026: Attested Analytics (<100ms, Zero‑PII)",
     description: "Signed attestations + scoped IDs + DP for audit‑ready insights at the edge.",
@@ -127,7 +208,6 @@ export const posts: BlogPost[] = [
     readTime: "7 min read"
   },
   {
-    // NEW — GenAI economy modes (featured)
     slug: "genai-2027-economy-modes",
     title: "GenAI 2027: Economy Modes for 50% Cost Savings",
     description: "Quality tiers, semantic caches, and token budgets that cut spend 50%+ with stable UX.",
@@ -137,7 +217,6 @@ export const posts: BlogPost[] = [
     readTime: "8 min read"
   },
   {
-    // NEW — Enterprise roadmap update (featured)
     slug: "ai-2027-enterprise-roadmap-v2",
     title: "AI 2027 Enterprise Roadmap v2",
     description: "Outcome‑led bets, KPI scorecards, and guardrails that scale reliably across portfolios.",
@@ -147,7 +226,6 @@ export const posts: BlogPost[] = [
     readTime: "9 min read"
   },
   {
-    // NEW — Consentless testing v3 at the edge (featured)
     slug: "edge-2026-consentless-testing-v3",
     title: "Edge 2026: Consentless Testing v3",
     description: "Scoped IDs, on‑device metrics, and DP noise enabling compliant A/B at <100ms.",
@@ -157,7 +235,6 @@ export const posts: BlogPost[] = [
     readTime: "7 min read"
   },
   {
-    // NEW — GenAI cost controllers v3 (featured)
     slug: "genai-cost-controllers-v3-2027",
     title: "GenAI Cost Controllers v3 (2027)",
     description: "Quality tiers + semantic caches + policy tests that cut spend 40–70% without UX loss.",
@@ -1284,7 +1361,6 @@ export const posts: BlogPost[] = [
     featured: false,
     readTime: "8 min read",
   },
-  // removed conflicting branch entries
   {
     slug: "finops-scorecards-2025",
     title: "FinOps Scorecards: Guardrails Engineers Actually Use",
@@ -1302,8 +1378,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-08",
     featured: true,
     readTime: "9 min read"
-  }
-  ,
+  },
   {
     slug: "ai-runbooks-with-risk-budgets-2026",
     title: "AI Runbooks with Risk Budgets: Safe Automation That Ships",
@@ -1321,8 +1396,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-12",
     featured: true,
     readTime: "8 min read"
-  }
-  ,
+  },
   {
     slug: "agentic-workflows-blueprint-2026",
     title: "Agentic Workflows Blueprint 2026: Tools, Traces, and Safety Budgets",
@@ -1340,8 +1414,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-10",
     featured: false,
     readTime: "7 min read"
-  }
-  ,
+  },
   {
     slug: "on-device-agents-2026",
     title: "On‑Device Agents 2026: Private Tools That Work Offline",
@@ -1395,8 +1468,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-11",
     featured: false,
     readTime: "8 min read"
-  }
-  ,
+  },
   {
     slug: "ai-governance-scorecards-quickstart-2025",
     title: "AI Governance Scorecards Quickstart: Ship Fast, Stay Safe",
@@ -1549,8 +1621,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "14 min read"
-  }
-  ,
+  },
   {
     slug: "ai-risk-budgets-2026",
     title: "AI Risk Budgets 2026: Ship Faster With Guardrails",
@@ -1676,8 +1747,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-29",
     featured: true,
     readTime: "7 min read"
-  }
-  ,
+  },
   {
     slug: "agentic-workflows-blueprint-2026",
     title: "Agentic Workflows Blueprint 2026: Tools, Traces, Policy Tests",
@@ -1884,8 +1954,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "16 min read"
-  }
-  ,
+  },
   {
     slug: "privacy-first-observability-quickstart-2025",
     title: "Privacy‑First Observability Quickstart: Scoped IDs and Redaction",

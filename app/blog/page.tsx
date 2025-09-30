@@ -3,6 +3,16 @@ import Link from 'next/link';
 
 const blogPosts = [
   {
+    title: 'Executive AI Roadmap — October 2025',
+    slug: 'ai-2025-october-01-executive-ai-roadmap',
+    excerpt: 'A practical 30/60/90 plan: guardrails, cost controls, and data foundations for reliable AI at speed.',
+    category: 'Executive Guide',
+    publishedAt: 'October 1, 2025',
+    image: '🧭',
+    color: 'blue',
+    readTime: '9 min read'
+  },
+  {
     title: 'New Governed Agent Patterns for Reliable Autonomy',
     slug: 'ai-2025-september-30-new-governed-agent-patterns',
     excerpt: 'Policy-first orchestration, approvals, verifiers, budgets, and rollback so autonomy ships safely.',

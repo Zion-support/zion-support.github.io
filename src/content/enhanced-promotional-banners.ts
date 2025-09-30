@@ -140,24 +140,24 @@ enhancedPromotionalBanners.push({
 
 // Feature individual CTAs for the three new posts
 enhancedPromotionalBanners.push({
-  id: 'ai-2027-autonomous-roadmaps',
-  title: '🧭 AI 2027: Autonomous Roadmaps that Prove ROI',
-  description: 'Bets → KPIs → budgets → rollback. A practical 2027 roadmap system.',
+  id: 'ai-2026-autonomous-change-control',
+  title: '🛡️ AI 2026: Autonomous Change Control — New',
+  description: 'Policy gates + budgets + rollback for safe weekly releases.',
   ctaText: 'Read article',
-  ctaLink: '/blog/ai-2027-autonomous-roadmaps',
+  ctaLink: '/blog/ai-2026-autonomous-change-control',
   variant: 'info',
-  icon: '🧭',
+  icon: '🛡️',
   featured: true,
   priority: 1,
   startDate: '2025-09-30'
 });
 
 enhancedPromotionalBanners.push({
-  id: 'edge-2026-signed-evals',
-  title: '🔐 Edge 2026: Signed Evals — Zero‑PII, <100ms',
-  description: 'Scoped IDs, DP noise, and signed attestations for trustworthy evals at the edge.',
+  id: 'edge-2026-privacy-preserving-evals',
+  title: '🔐 Edge 2026: Privacy‑Preserving Evals — New',
+  description: 'Zero‑PII evals at <100ms with scoped IDs and DP noise.',
   ctaText: 'Explore evals',
-  ctaLink: '/blog/edge-2026-signed-evals',
+  ctaLink: '/blog/edge-2026-privacy-preserving-evals',
   variant: 'success',
   icon: '🔐',
   featured: true,
@@ -166,11 +166,11 @@ enhancedPromotionalBanners.push({
 });
 
 enhancedPromotionalBanners.push({
-  id: 'genai-2027-cost-tiers-v3',
-  title: '💸 GenAI 2027: Cost Tiers v3 — 40–70% Savings',
-  description: 'Quality tiers + semantic caches + policy tests for predictable spend and stable UX.',
+  id: 'genai-2026-token-budgets-blueprint',
+  title: '💸 GenAI 2026: Token Budgets Blueprint — New',
+  description: 'Quality tiers + semantic caches + budgets for predictable spend.',
   ctaText: 'See playbook',
-  ctaLink: '/blog/genai-2027-cost-tiers-v3',
+  ctaLink: '/blog/genai-2026-token-budgets-blueprint',
   variant: 'success',
   icon: '💸',
   featured: true,
