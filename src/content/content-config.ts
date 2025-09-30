@@ -271,6 +271,30 @@ featuredBlogPosts.unshift(
     featured: true
   },
   {
+    id: "edge-2026-private-feature-flags",
+    title: "Edge 2026: Private Feature Flags",
+    description: "Signed configs, scoped IDs, and on‑device metrics for zero‑PII rollouts.",
+    link: "/blog/edge-2026-private-feature-flags",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "agent-release-guardrails-2026",
+    title: "Agent Release Guardrails 2026",
+    description: "Budgets, approvals, KPI‑linked canaries, instant rollback.",
+    link: "/blog/agent-release-guardrails-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-2027-cost-optimization-playbook",
+    title: "AI 2027 Cost Optimization Playbook",
+    description: "Tiered routing, caches, compression to cut spend 30–70% without regressions.",
+    link: "/blog/ai-2027-cost-optimization-playbook",
+    type: "article",
+    featured: true
+  },
+  {
     id: "edge-consentless-metrics-2026",
     title: "Edge Consentless Metrics 2026",
     description: "Actionable insights without PII using scoped IDs & DP",
@@ -410,6 +434,22 @@ featuredBlogPosts.unshift(
 
 // Promote brand-new content on homepage showcases (added Sept 30, 2025)
 featuredBlogPosts.unshift(
+  {
+    id: "ai-enterprise-transformation-2027",
+    title: "AI Enterprise Transformation 2027",
+    description: "Plan, fund, and scale enterprise AI with measurable ROI and safety.",
+    link: "/blog/ai-enterprise-transformation-2027",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "agentic-workflow-orchestration-2026",
+    title: "Agentic Workflow Orchestration 2026",
+    description: "Budgets, KPI canaries, and rollback for safe agent workflows.",
+    link: "/blog/agentic-workflow-orchestration-2026",
+    type: "article",
+    featured: true
+  },
   {
     id: "ai-sla-scorecards-2026-q1",
     title: "AI SLA Scorecards 2026 Q1",
@@ -792,6 +832,18 @@ featuredBlogPosts.unshift(
     title: "GenAI Quality Tiers v2 (2026)",
     description: "Stable UX under strict budgets with caches and KPI routing",
     link: "/blog/genai-quality-tiers-v2-2026",
+    type: "article",
+    featured: true
+  }
+);
+
+// Oct 2025 – Surface newly created FinOps Scorecards article site-wide
+featuredBlogPosts.unshift(
+  {
+    id: "ai-2028-autonomous-finops-scorecards",
+    title: "AI 2028: Autonomous FinOps Scorecards",
+    description: "Prevent cost regressions with KPI-linked scorecards, budget-aware routing, rollback.",
+    link: "/blog/ai-2028-autonomous-finops-scorecards",
     type: "article",
     featured: true
   }
