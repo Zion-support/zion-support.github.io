@@ -2403,3 +2403,34 @@ posts.push(
   }
 );
 
+// Sept 30, 2025 – New Today: Add three fresh articles and feature on Home
+posts.push(
+  {
+    slug: "ai-operational-trust-v3-2026",
+    title: "AI Operational Trust v3 (2026): SLIs, Budgets, Instant Rollback",
+    description: "Third‑gen operational scorecards tying SLIs to KPIs with budgeted actions and one‑click rollback.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-private-insights-v3-2026",
+    title: "Edge Private Insights v3 (2026): Scoped IDs, DP Noise, <100ms",
+    description: "Next‑gen privacy‑first analytics with on‑device aggregation and differential privacy at the edge.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "agent-release-guardrails-v3-2026",
+    title: "Agent Release Guardrails v3 (2026): Budgets, Canaries, Recovery",
+    description: "Upgraded release checklists with KPI‑linked canaries, budgeted actions, and rapid recovery playbooks.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  }
+);
+
