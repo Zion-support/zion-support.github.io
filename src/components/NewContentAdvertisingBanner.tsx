@@ -16,6 +16,30 @@ const NewContentAdvertisingBanner: React.FC = () => {
       link: '/blog/ai-2025-sept-30-platform-roi-scorecards'
     },
     {
+      id: 4,
+      title: 'AI 2027: Quantum‑Enhanced Machine Learning',
+      category: 'Quantum',
+      readTime: '14 min',
+      rating: 5.0,
+      readers: '41K+',
+      badge: 'NEW',
+      gradient: 'from-purple-500 to-indigo-500',
+      icon: <Zap className="w-6 h-6" />,
+      link: '/blog/ai-2027-quantum-enhanced-machine-learning'
+    },
+    {
+      id: 5,
+      title: 'AI 2027: Neuromorphic Computing for the Enterprise',
+      category: 'AI Strategy',
+      readTime: '12 min',
+      rating: 4.9,
+      readers: '38K+',
+      badge: 'FEATURED',
+      gradient: 'from-rose-500 to-orange-500',
+      icon: <Star className="w-6 h-6" />,
+      link: '/blog/ai-2027-neuromorphic-computing-enterprise'
+    },
+    {
       id: 2,
       title: 'Edge 2025: Consentless Experiments v3',
       category: 'Analytics',

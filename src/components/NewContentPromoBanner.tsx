@@ -15,6 +15,39 @@ const NewContentPromoBanner: React.FC = () => {
       trending: true
     },
     {
+      title: "AI 2027: Quantum‑Enhanced Machine Learning",
+      description: "Quantum‑accelerated training and inference delivering 1000x speedups for complex optimization.",
+      slug: "ai-2027-quantum-enhanced-machine-learning",
+      category: "Quantum",
+      icon: "🧪",
+      impact: "1000x Speedups",
+      savings: "Lower Energy",
+      featured: true,
+      trending: true
+    },
+    {
+      title: "AI 2027: Neuromorphic Computing for the Enterprise",
+      description: "Brain‑inspired architectures enabling 1000x energy efficiency and real‑time adaptation.",
+      slug: "ai-2027-neuromorphic-computing-enterprise",
+      category: "AI Strategy",
+      icon: "🧠",
+      impact: "1000x Efficiency",
+      savings: "Edge Ready",
+      featured: true,
+      trending: true
+    },
+    {
+      title: "AI 2028: Autonomous Governance Blueprint",
+      description: "KPI‑linked scorecards, PR policy tests, and rollback for safe autonomy at scale.",
+      slug: "ai-2028-autonomous-governance-blueprint",
+      category: "AI Governance",
+      icon: "🛡️",
+      impact: "Zero‑Regret",
+      savings: "Fewer Incidents",
+      featured: true,
+      trending: true
+    },
+    {
       title: "AI 2028: Autonomous Enterprise Revolution",
       description: "Outcome‑led autonomy at scale with budgets, KPIs, canaries, and rollback.",
       slug: "ai-2028-autonomous-enterprise-revolution",
