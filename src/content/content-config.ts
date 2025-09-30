@@ -212,6 +212,26 @@ export const featuredBlogPosts: FeaturedItem[] = [
   }
 ];
 
+// Surface brand-new content (Oct 30, 2025)
+featuredBlogPosts.unshift(
+  {
+    id: "ai-2026-governed-agent-runbooks",
+    title: "AI 2026: Governed Agent Runbooks",
+    description: "Budgets, KPI canaries, and instant rollback for safe autonomy.",
+    link: "/blog/ai-2026-governed-agent-runbooks",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-rate-limiter-blueprint-2026",
+    title: "Edge 2026: Private Rate Limiter Blueprint",
+    description: "Scoped IDs, signed configs, and on‑device metrics for zero‑PII limits.",
+    link: "/blog/edge-rate-limiter-blueprint-2026",
+    type: "article",
+    featured: true
+  }
+);
+
 // Sept 30, 2025 – Promote brand-new posts site-wide (added now)
 featuredBlogPosts.unshift(
   {
