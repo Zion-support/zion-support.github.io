@@ -378,11 +378,6 @@ const Home = () => {
                 <div className="text-white font-semibold">Zero‑PII Edge Analytics 2026</div>
                 <div className="text-zion-slate-light text-sm mt-1">Scoped IDs, edge aggregation, DP noise at &lt;100ms.</div>
               </Link>
-              <Link to="/blog/agent-release-zero-regret-2026" className="block rounded-lg border border-white/10 p-4 hover:border-emerald-400/40 transition-colors">
-                <div className="text-emerald-300 text-xs mb-2">AI Operations</div>
-                <div className="text-white font-semibold">Zero‑Regret Agent Releases 2026</div>
-                <div className="text-zion-slate-light text-sm mt-1">Budgeted actions, KPI canaries, and instant rollback.</div>
-              </Link>
               <Link to="/blog/fintech-2025-sept-30-ai-financial-modeling-guide" className="block rounded-lg border border-white/10 p-4 hover:border-blue-400/40 transition-colors">
                 <div className="text-blue-300 text-xs mb-2">FinTech AI</div>
                 <div className="text-white font-semibold">AI Financial Modeling Guide</div>

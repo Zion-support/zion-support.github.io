@@ -43,7 +43,6 @@ export default function ContentHubPage() {
         { title: 'AI Voice Interfaces Enterprise 2026', slug: '/blog/ai-voice-interfaces-enterprise-2026', readTime: '18 min', featured: true },
         { title: 'AI Autonomous Agents 2025', slug: '/blog/ai-autonomous-agents-2025', readTime: '18 min', featured: false },
         { title: 'AI Governance Framework 2025', slug: '/blog/ai-governance-framework-2025', readTime: '15 min', featured: false },
-        { title: 'Agent Releases 2026: Zero‑Regret', slug: '/blog/agent-release-zero-regret-2026', readTime: '8 min', featured: true },
       ]
     },
     {
