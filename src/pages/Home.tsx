@@ -154,11 +154,11 @@ const Home = () => {
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "AI Operational Scorecards v4 (2026)", category: "AI Operations", link: "/blog/ai-operational-scorecards-v4-2026" },
-            { title: "Edge Zero‑PII Insights 2026", category: "Analytics", link: "/blog/edge-zero-pii-insights-2026" },
+            { title: "AI Trust Scorecards v5 (2027)", category: "AI Governance", link: "/blog/ai-trust-scorecards-v5-2027" },
+            { title: "Private Evals at the Edge (2026)", category: "Analytics", link: "/blog/edge-private-evals-2026" },
+            { title: "AgentOps Runbooks v3 (2026)", category: "AI Operations", link: "/blog/agentops-runbooks-v3-2026" },
             { title: "GenAI Quality Tiers v2 (2026)", category: "GenAI", link: "/blog/genai-quality-tiers-v2-2026" },
-            { title: "Edge RAG 2026", category: "GenAI", link: "/blog/edge-rag-privacy-preserving-2026" },
-            { title: "PR Policy Tests 2026", category: "AI Governance", link: "/blog/ai-governance-pr-policy-tests-2026" }
+            { title: "Edge RAG 2026", category: "GenAI", link: "/blog/edge-rag-privacy-preserving-2026" }
           ]}
         />
         {/* Fresh content banner promoting brand-new articles */}
