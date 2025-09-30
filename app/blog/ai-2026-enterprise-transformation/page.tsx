@@ -2,20 +2,13 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-<<<<<<< HEAD
   title: 'AI Enterprise Transformation 2026: Complete Implementation Guide',
   description: 'Master AI enterprise transformation with proven strategies, ROI frameworks, and implementation roadmaps. Achieve 300% ROI with our comprehensive guide.',
   keywords: 'AI enterprise transformation, AI implementation, enterprise AI strategy, AI ROI, digital transformation, AI adoption',
-=======
-  title: 'AI Enterprise Transformation in 2026: The Complete Guide',
-  description: 'Discover how AI is revolutionizing enterprise operations in 2026. Learn about cutting-edge AI solutions, implementation strategies, and real-world success stories.',
-  keywords: 'AI enterprise transformation, artificial intelligence 2026, enterprise AI solutions, digital transformation, AI implementation',
->>>>>>> cursor/create-and-deploy-new-content-ab3b
 };
 
 export default function AIEnterpriseTransformation2026() {
   return (
-<<<<<<< HEAD
     <div className="max-w-4xl mx-auto px-4 py-12">
       <article className="prose prose-lg max-w-none">
         <header className="mb-12">
@@ -612,7 +605,6 @@ export default function AIEnterpriseTransformation2026() {
           </div>
         </article>
       </div>
->>>>>>> cursor/create-and-deploy-new-content-ab3b
     </div>
   );
 }

@@ -46,7 +46,6 @@ import {
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
-import InteractivePromotionalSection from '../components/InteractivePromotionalSection';
 import LatestContent2026ShowcaseBanner from '../components/LatestContent2026ShowcaseBanner';
 import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
 import InteractiveContentShowcase2026 from '../components/InteractiveContentShowcase2026';
@@ -54,8 +53,10 @@ import LatestContent2025Banner from '../components/LatestContent2025Banner';
 import RevolutionaryAI2025Banner from '../components/RevolutionaryAI2025Banner';
 import InteractiveAICalculator2025 from '../components/InteractiveAICalculator2025';
 import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
-import LatestContent2026ShowcaseBanner from '../components/LatestContent2026ShowcaseBanner';
 import InteractiveAI2026Calculator from '../components/InteractiveAI2026Calculator';
+import Revolutionary2026ContentMegaBanner from '../components/Revolutionary2026ContentMegaBanner';
+import AI2026BreakthroughShowcaseBanner from '../components/AI2026BreakthroughShowcaseBanner';
+import EnterpriseAI2026TransformationBanner from '../components/EnterpriseAI2026TransformationBanner';
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
@@ -137,7 +138,6 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <div className="animate-fade-in">
-<<<<<<< HEAD
       {/* Revolutionary AI 2025 Banner */}
       <RevolutionaryAI2025Banner />
       
@@ -146,15 +146,18 @@ export default function HomePage() {
       
       {/* Revolutionary Content 2026 Banner */}
       <RevolutionaryContent2026Banner />
-=======
+      
       {/* Latest 2026 Mega Content Banners */}
       <Revolutionary2026ContentBanner />
-      <AI2026ContentShowcaseBanner />
-      <AIEnterpriseAutomationRevolutionBanner />
-      <AIQuantumComputingBreakthroughBanner />
-      <AIMegaTransformationSuccessBanner />
-      <AI2026InnovationShowcaseBanner />
->>>>>>> feature/new-content-and-advertising-2026
+      
+      {/* Revolutionary 2026 Content Mega Banner */}
+      <Revolutionary2026ContentMegaBanner />
+      
+      {/* AI 2026 Breakthrough Showcase */}
+      <AI2026BreakthroughShowcaseBanner />
+      
+      {/* Enterprise AI 2026 Transformation */}
+      <EnterpriseAI2026TransformationBanner />
       
       {/* Latest 2026 Content Banners */}
       <AIEnterpriseTransformationBanner />
@@ -325,11 +328,9 @@ export default function HomePage() {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Interactive AI Calculator 2025 */}
       <InteractiveAICalculator2025 />
 
-=======
       {/* Interactive AI ROI Calculator */}
       <section id="roi-calculator" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="max-w-6xl mx-auto px-4">
@@ -361,9 +362,6 @@ export default function HomePage() {
           <InteractiveAI2026Calculator />
         </div>
       </section>
->>>>>>> feature/new-content-and-advertising-2026
-      {/* Interactive Promotional Section */}
-      <InteractivePromotionalSection />
 
       {/* Dynamic Content Showcase */}
       <ContentShowcase />
