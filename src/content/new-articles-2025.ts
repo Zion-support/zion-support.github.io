@@ -12,6 +12,39 @@ export interface NewArticle {
 
 export const newArticles2025: NewArticle[] = [
   {
+    id: "realtime-ai-decision-engines-2025",
+    title: "⚡ Real-Time AI Decision Engines: 10M/sec Under 1ms Latency",
+    description: "Architect ultra-low-latency decision systems with tiered models, caches, and inline canaries delivering reliable sub‑1ms actions at scale.",
+    category: "Real-Time AI",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/real-time-ai-decision-engines-2025",
+    readTime: "10 min read",
+    tags: ["Low Latency", "Caching", "SLAs", "Tracing"]
+  },
+  {
+    id: "privacy-first-telemetry-quickstart-2025",
+    title: "🔒 Privacy‑First Telemetry Quickstart: Signal‑Rich, PII‑Safe Analytics",
+    description: "Implement scoped identifiers, field‑level filters, and DP noise to keep insights high and risk low—no data leaks, no regressions.",
+    category: "Observability",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/privacy-first-telemetry-quickstart-2025",
+    readTime: "7 min read",
+    tags: ["Telemetry", "Privacy", "DP", "Scoped IDs"]
+  },
+  {
+    id: "agent-runbooks-2025",
+    title: "🤖 Agent Runbooks 2025: Budgeted Actions, Rollbacks, and Safety Gates",
+    description: "Design reliable agentic workflows with budgeted actions, approvals, and instant rollback—ship autonomy without surprises.",
+    category: "AI Operations",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/agent-runbooks-2025",
+    readTime: "8 min read",
+    tags: ["Agents", "Runbooks", "Budgets", "Safety"]
+  },
+  {
     id: "multimodal-ai-revolution-2025",
     title: "🎭 Multimodal AI Revolution: Unified Vision-Language-Audio Processing",
     description: "Master cutting-edge multimodal AI achieving 98% accuracy across vision, language, and audio. Learn unified embeddings, cross-modal attention, and real-world applications transforming industries.",
