@@ -43,10 +43,17 @@ import {
   InteractiveAICalculatorBanner,
   AIInnovationShowcaseBanner
 } from '../components/NewContent2026Banners';
+import {
+  AI2025BreakthroughBanner,
+  AIAutonomousSystemsBanner as AIAutonomousSystems2025Banner,
+  AITransformationSuccessBanner,
+  LatestContentShowcaseBanner as LatestContent2025ShowcaseBanner
+} from '../components/NewContent2025Banners';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
 import InteractivePromotionalSection from '../components/InteractivePromotionalSection';
+import InteractiveContentShowcase2025 from '../components/InteractiveContentShowcase2025';
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
@@ -128,6 +135,12 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <div className="animate-fade-in">
+      {/* Latest 2025 Content Banners */}
+      <AI2025BreakthroughBanner />
+      <AIAutonomousSystems2025Banner />
+      <AITransformationSuccessBanner />
+      <LatestContent2025ShowcaseBanner />
+      
       {/* Latest 2026 Content Banners */}
       <AIEnterpriseTransformationBanner />
       <AIAutonomousSystemsBanner />
@@ -304,6 +317,9 @@ export default function HomePage() {
       {/* Interactive Promotional Section */}
       <InteractivePromotionalSection />
 >>>>>>> cursor/create-and-deploy-new-content-1102
+
+      {/* Interactive Content Showcase */}
+      <InteractiveContentShowcase2025 />
 
       {/* Dynamic Content Showcase */}
       <ContentShowcase />
@@ -859,31 +875,31 @@ export default function HomePage() {
               <h3 className="text-2xl font-bold mb-6">Latest Content Highlights</h3>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
+                  <div className="text-2xl">🚀</div>
+                  <div>
+                    <h4 className="font-semibold mb-1">AI 2025 Enterprise Breakthrough</h4>
+                    <p className="text-sm opacity-90">$50B transformation market with 300% ROI</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="text-2xl">🤖</div>
+                  <div>
+                    <h4 className="font-semibold mb-1">AI Autonomous Systems 2025</h4>
+                    <p className="text-sm opacity-90">90% process automation with 99.9% uptime</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="text-2xl">📈</div>
+                  <div>
+                    <h4 className="font-semibold mb-1">AI Transformation Mega Success</h4>
+                    <p className="text-sm opacity-90">500% ROI in 6 months - GlobalCorp case study</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
                   <div className="text-2xl">🎯</div>
                   <div>
                     <h4 className="font-semibold mb-1">Multimodal AI Integration 2025</h4>
                     <p className="text-sm opacity-90">250% efficiency gains with text, voice, and video AI</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="text-2xl">⚡</div>
-                  <div>
-                    <h4 className="font-semibold mb-1">Multimodal Customer Service Success</h4>
-                    <p className="text-sm opacity-90">80% faster response times and 60% cost reduction</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="text-2xl">🚀</div>
-                  <div>
-                    <h4 className="font-semibold mb-1">AI Enterprise Adoption 2025 Guide</h4>
-                    <p className="text-sm opacity-90">Complete business transformation strategy</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="text-2xl">⚙️</div>
-                  <div>
-                    <h4 className="font-semibold mb-1">Workflow Automation Guide</h4>
-                    <p className="text-sm opacity-90">Reduce manual work by 80%</p>
                   </div>
                 </div>
               </div>
