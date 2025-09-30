@@ -35,6 +35,9 @@ import UltimateContentShowcase2026 from '../src/components/UltimateContentShowca
 import AIInnovationAdvertisingBanner from '../src/components/AIInnovationAdvertisingBanner';
 import LatestTrendsShowcase2026 from '../src/components/LatestTrendsShowcase2026';
 import NewServicesPromotionalBanner from '../src/components/NewServicesPromotionalBanner';
+import New2026ContentBreakthroughBanner from '../components/New2026ContentBreakthroughBanner';
+import AIGovernance2026Banner from '../components/AIGovernance2026Banner';
+import Ultimate2026ContentShowcaseBanner from '../components/Ultimate2026ContentShowcaseBanner';
 import {
   AIEnterpriseAdoptionBanner,
   AITrends2025Banner,
@@ -181,6 +184,15 @@ export default function HomePage() {
       <div className="animate-fade-in">
       {/* 🚀 AI 2027 REVOLUTIONARY BREAKTHROUGH BANNER */}
       <AI2027RevolutionaryBreakthroughBanner />
+      
+      {/* 🆕 ULTIMATE 2026 CONTENT SHOWCASE - NEW BREAKTHROUGH CONTENT */}
+      <Ultimate2026ContentShowcaseBanner />
+      
+      {/* 🚀 AI 2026 BREAKTHROUGH INNOVATIONS BANNER */}
+      <New2026ContentBreakthroughBanner />
+      
+      {/* 🛡️ AI GOVERNANCE 2026 ENTERPRISE SAFETY BANNER */}
+      <AIGovernance2026Banner />
       
       {/* 🚀 ULTIMATE CONTENT SHOWCASE 2026 */}
       <UltimateContentShowcase2026 />
