@@ -1594,6 +1594,58 @@ latestArticles.unshift(
   }
 );
 
+// Sept 30, 2025 – Add three new articles to surface across homepage showcases
+latestArticles.unshift(
+  {
+    id: "ai-2025-sept-30-breaking-enterprise-ai-breakthroughs",
+    slug: "ai-2025-sept-30-breaking-enterprise-ai-breakthroughs",
+    title: "Sept 30, 2025: Breaking Enterprise AI Breakthroughs",
+    description: "8 production‑ready patterns: rollback, scorecards, consentless analytics, and more.",
+    excerpt: "From real‑time engines to policy tests in CI—what you can ship today without regressions.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "AI Strategy",
+    tags: ["Breakthroughs", "Governance", "Edge"],
+    featured: true,
+    readTime: "10 min read",
+    image: "/images/ai-2025-breaking-enterprise-ai-breakthroughs.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "edge-2025-sept-30-zero-pii-experiments-v2",
+    slug: "edge-2025-sept-30-zero-pii-experiments-v2",
+    title: "Edge 2025: Zero‑PII Experiments v2 (<100ms)",
+    description: "Scoped IDs, on‑device metrics, and DP noise enabling compliant A/B worldwide.",
+    excerpt: "Stand up privacy‑first experiments with edge aggregation and budgeted rollouts.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "Analytics",
+    tags: ["Edge", "Privacy", "Experiments"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/edge-2025-zero-pii-experiments-v2.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "genai-2025-sept-30-policy-tests-quickstart",
+    slug: "genai-2025-sept-30-policy-tests-quickstart",
+    title: "GenAI 2025: Policy Tests Quickstart",
+    description: "Lightweight CI policy tests wired to KPIs to ship faster without regressions.",
+    excerpt: "A practical quickstart to add PR policy checks that teams actually adopt.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "AI Governance",
+    tags: ["Policy", "CI", "Scorecards"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/genai-2025-policy-tests-quickstart.jpg",
+    newBadge: true,
+    trending: true
+  }
+);
+
 export const featuredArticles = latestArticles.filter(article => article.featured);
 export const trendingArticles = latestArticles.filter(article => article.trending);
 export const newArticles = latestArticles.filter(article => article.newBadge);
