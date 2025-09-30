@@ -10,10 +10,44 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+<<<<<<< HEAD
     slug: "ai-2027-edge-native-agents",
     title: "Edge‑Native Agents 2027: Private Tools at <100ms",
     description: "Design agents that run close to users with scoped permissions, on‑device tools, and instant rollback.",
     category: "Edge Computing",
+=======
+    slug: "ai-2025-autonomous-infra-blueprint",
+    title: "Autonomous Infra 2025: Self‑Healing, Cost‑Guarded",
+    description: "Predictive scaling, budgeted actions, and instant rollback for 99.99% uptime at lower cost.",
+    category: "Infrastructure",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "genai-evals-scorecards-2025",
+    title: "GenAI Evals Scorecards 2025: Tie Quality to KPIs",
+    description: "Multi‑tier evals wired to product KPIs with PR checks and canaries to prevent regressions.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "10 min read"
+  },
+  {
+    slug: "edge-governed-flags-2025",
+    title: "Edge‑Governed Flags 2025: Sub‑100ms Global, Zero PII",
+    description: "Scoped IDs, regional policy, and DP noise for safe, private experiments worldwide.",
+    category: "Edge Computing",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "genai-reliability-scorecards-2027",
+    title: "GenAI Reliability Scorecards 2027: KPIs, Budgets, Rollback",
+    description: "Live KPI scorecards and budgeted routes that keep GenAI reliable and affordable.",
+    category: "AI Governance",
+>>>>>>> cursor/create-and-deploy-new-content-60b5
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
