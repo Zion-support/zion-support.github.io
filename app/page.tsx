@@ -24,6 +24,8 @@ import LatestBreakthroughsBanner from '../components/LatestBreakthroughsBanner';
 import AI2030QuantumConsciousnessRevolutionBanner from '../components/AI2030QuantumConsciousnessRevolutionBanner';
 import AI2029MetaCognitiveSuperintelligenceBanner from '../components/AI2029MetaCognitiveSuperintelligenceBanner';
 import UltimateContentShowcase2030 from '../components/UltimateContentShowcase2030';
+import AI2026AutonomousCloudOrchestrationBanner from '../components/AI2026AutonomousCloudOrchestrationBanner';
+import AI2026QuantumNeuralOptimizationBanner from '../components/AI2026QuantumNeuralOptimizationBanner';
 
 export default function HomePage() {
   return (
@@ -44,8 +46,14 @@ export default function HomePage() {
 =======
       </section>
 
-  {/* Revolutionary Content Mega Banner - Featured prominently */}
-  <January2026RevolutionaryContentMegaBanner />
+      {/* NEW JANUARY 2026 REVOLUTIONARY CONTENT MEGA BANNER - FEATURED PROMINENTLY */}
+      <January2026RevolutionaryContentMegaBanner />
+      
+      {/* NEW: AI 2026 Autonomous Cloud Orchestration Banner - Featured prominently */}
+      <AI2026AutonomousCloudOrchestrationBanner />
+      
+      {/* NEW: AI 2026 Quantum-Neural Optimization Banner - Featured prominently */}
+      <AI2026QuantumNeuralOptimizationBanner />
 
   {/* Fresh content promo — newly published */}
   <section className="py-4 border-t border-b border-white/10 bg-white/5">
