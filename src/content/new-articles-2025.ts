@@ -12,6 +12,28 @@ export interface NewArticle {
 
 export const newArticles2025: NewArticle[] = [
   {
+    id: "ai-agent-evaluations-2026",
+    title: "🧪 AI Agent Evaluations 2026: Reliable Metrics & Safe Deployments",
+    description: "Blueprint for robust agent evals: task suites, rubric scoring, long-horizon reliability, safety budgets, and HIL governance.",
+    category: "Agentic AI",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-agent-evaluations-2026",
+    readTime: "16 min read",
+    tags: ["Agent Evals", "Safety Budgets", "Reliability", "Governance"]
+  },
+  {
+    id: "ai-platform-cost-optimization-2026",
+    title: "💸 AI Platform Cost Optimization 2026: 50–80% Savings Playbook",
+    description: "Cut AI platform costs 50–80% with autoscaling, quantization, spot capacity, and FinOps governance. 12‑week roadmap.",
+    category: "FinOps",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-platform-cost-optimization-2026",
+    readTime: "14 min read",
+    tags: ["FinOps", "Autoscaling", "Quantization", "Spot Instances"]
+  },
+  {
     id: "multimodal-ai-revolution-2025",
     title: "🎭 Multimodal AI Revolution: Unified Vision-Language-Audio Processing",
     description: "Master cutting-edge multimodal AI achieving 98% accuracy across vision, language, and audio. Learn unified embeddings, cross-modal attention, and real-world applications transforming industries.",
