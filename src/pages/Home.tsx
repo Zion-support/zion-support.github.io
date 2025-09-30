@@ -22,6 +22,7 @@ import EnhancedTestimonials from "../components/EnhancedTestimonials";
 import Header from "../components/Header";
 import LatestArticlesShowcase from "../components/LatestArticlesShowcase";
 import LatestContentBanner from "../components/LatestContentBanner";
+import LatestContentBanner2025 from "../components/LatestContentBanner2025";
 import LatestInsights from "../components/LatestInsights";
 import ModernFeatures from "../components/ModernFeatures";
 import NewContentAnnouncement from "../components/NewContentAnnouncement";
@@ -113,6 +114,11 @@ const Home = () => {
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
+        
+        {/* NEW CONTENT ANNOUNCEMENT - September 30, 2025 */}
+        <div className="container mx-auto px-6 pt-6">
+          <LatestContentBanner2025 />
+        </div>
         
         {/* Enhanced Promotional Banners */}
         {getFeaturedBanners().slice(0, 3).map((banner) => (
