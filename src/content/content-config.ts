@@ -384,3 +384,31 @@ featuredBlogPosts.unshift(
     featured: true
   }
 );
+
+// Mar 2026 – Surface newest posts at the very top for homepage ads
+featuredBlogPosts.unshift(
+  {
+    id: "ai-governance-pr-policy-tests-2026",
+    title: "PR Policy Tests 2026",
+    description: "Lightweight CI policy tests wired to product KPIs—fast and safe delivery.",
+    link: "/blog/ai-governance-pr-policy-tests-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-zero-pii-analytics-2026",
+    title: "Zero‑PII Edge Analytics 2026",
+    description: "Scoped IDs, on‑device aggregation, and DP noise for actionable insights.",
+    link: "/blog/edge-zero-pii-analytics-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "agent-release-zero-regret-2026",
+    title: "Zero‑Regret Agent Releases 2026",
+    description: "Budgeted actions, KPI‑linked canaries, and instant rollback for safe automation.",
+    link: "/blog/agent-release-zero-regret-2026",
+    type: "article",
+    featured: true
+  }
+);
