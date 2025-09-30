@@ -148,6 +148,82 @@ export const featuredBlogPosts: FeaturedItem[] = [
   }
 ];
 
+// Jan 2027 – Feature three brand-new articles
+featuredBlogPosts.unshift(
+  {
+    id: "ai-2027-revolutionary-breakthrough",
+    title: "AI 2027 Revolutionary Breakthrough",
+    description: "Quantum‑neural advances enable 95% automation and 1000x performance.",
+    link: "/blog/ai-2027-revolutionary-breakthrough",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-2027-hyper-automation-blueprint",
+    title: "AI 2027 Hyper‑Automation Blueprint",
+    description: "End‑to‑end autonomy with budgets, guards, and instant rollback.",
+    link: "/blog/ai-2027-hyper-automation-blueprint",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-2027-quantum-breakthrough-enterprise",
+    title: "Quantum Breakthrough 2027 for the Enterprise",
+    description: "Enterprise‑ready quantum‑neural systems with security and ROI.",
+    link: "/blog/ai-2027-quantum-breakthrough-enterprise",
+    type: "article",
+    featured: true
+  }
+);
+
+// Advertise Q4 2026 brand-new content on homepage showcases (added now)
+featuredBlogPosts.unshift(
+  {
+    id: "ai-operational-trust-2026-q4",
+    title: "AI Operational Trust 2026 Q4",
+    description: "SLIs, budgets, and instant rollback for safe autonomy",
+    link: "/blog/ai-operational-trust-2026-q4",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-consentless-experiments-2026-q4",
+    title: "Edge Consentless Experiments 2026 Q4",
+    description: "Scoped IDs, on‑device metrics, and DP noise for compliant A/B",
+    link: "/blog/edge-consentless-experiments-2026-q4",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-governance-real-time-2026",
+    title: "AI Governance in Real Time 2026",
+    description: "Live canaries + CI policy tests—ship weekly without regressions",
+    link: "/blog/ai-governance-real-time-2026",
+    type: "article",
+    featured: true
+  }
+);
+
+// Feb 2027 – Surface two brand-new featured guides site-wide
+featuredBlogPosts.unshift(
+  {
+    id: "executive-ai-funding-blueprint-2027",
+    title: "Executive AI Funding Blueprint 2027",
+    description: "KPI-linked scorecards, budgets, and governance gates that prove ROI.",
+    link: "/blog/ai-2027-executive-ai-funding-blueprint",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-zero-pii-analytics-v3-2027",
+    title: "Zero‑PII Edge Analytics v3 (2027)",
+    description: "Scoped IDs, on‑device aggregation, and DP delivering insights under 100ms.",
+    link: "/blog/edge-2027-zero-pii-analytics-v3",
+    type: "article",
+    featured: true
+  }
+);
+
 // Sept 30, 2025 – Promote two brand-new guides site-wide
 featuredBlogPosts.unshift(
   {
@@ -589,6 +665,54 @@ export const getLatestContent = (count: number = 5): FeaturedItem[] => {
     .slice(0, count);
 };
 
+// Sept 30, 2025 – Advertise brand-new guides site-wide
+featuredBlogPosts.unshift(
+  {
+    id: "ai-2027-operational-risk-budgets",
+    title: "AI 2027: Operational Risk Budgets",
+    description: "Budgets, KPI canaries, and instant rollback for safe autonomy",
+    link: "/blog/ai-2027-operational-risk-budgets",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-2027-consentless-analytics-v4",
+    title: "Edge 2027: Consentless Analytics v4",
+    description: "Zero‑PII analytics with scoped IDs, edge aggregation, and DP noise",
+    link: "/blog/edge-2027-consentless-analytics-v4",
+    type: "article",
+    featured: true
+  }
+);
+
+// Add brand-new featured items to advertise site-wide (Feb 2027 / Oct 2026)
+featuredBlogPosts.unshift(
+  {
+    id: "ai-trust-scorecards-v5-2027",
+    title: "AI Trust Scorecards v5 (2027)",
+    description: "KPI‑linked scorecards with budgets, canaries, and instant rollback",
+    link: "/blog/ai-trust-scorecards-v5-2027",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-private-evals-2026",
+    title: "Private Evals at the Edge (2026)",
+    description: "Zero‑PII eval signals with scoped IDs and on‑device aggregation",
+    link: "/blog/edge-private-evals-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "agentops-runbooks-v3-2026",
+    title: "AgentOps Runbooks v3 (2026)",
+    description: "Budgeted actions, KPI canaries, and one‑click rollback",
+    link: "/blog/agentops-runbooks-v3-2026",
+    type: "article",
+    featured: true
+  }
+);
+
 // Surface fresh featured content (added Sept 30, 2025)
 featuredBlogPosts.unshift(
   {
@@ -832,6 +956,18 @@ featuredBlogPosts.unshift(
     title: "GenAI Quality Tiers v2 (2026)",
     description: "Stable UX under strict budgets with caches and KPI routing",
     link: "/blog/genai-quality-tiers-v2-2026",
+    type: "article",
+    featured: true
+  }
+);
+
+// Oct 2025 – Surface newly created FinOps Scorecards article site-wide
+featuredBlogPosts.unshift(
+  {
+    id: "ai-2028-autonomous-finops-scorecards",
+    title: "AI 2028: Autonomous FinOps Scorecards",
+    description: "Prevent cost regressions with KPI-linked scorecards, budget-aware routing, rollback.",
+    link: "/blog/ai-2028-autonomous-finops-scorecards",
     type: "article",
     featured: true
   }

@@ -12,6 +12,28 @@ export interface NewArticle {
 
 export const newArticles2025: NewArticle[] = [
   {
+    id: "ai-agent-evaluations-2026",
+    title: "🧪 AI Agent Evaluations 2026: Reliable Metrics & Safe Deployments",
+    description: "Blueprint for robust agent evals: task suites, rubric scoring, long-horizon reliability, safety budgets, and HIL governance.",
+    category: "Agentic AI",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-agent-evaluations-2026",
+    readTime: "16 min read",
+    tags: ["Agent Evals", "Safety Budgets", "Reliability", "Governance"]
+  },
+  {
+    id: "ai-platform-cost-optimization-2026",
+    title: "💸 AI Platform Cost Optimization 2026: 50–80% Savings Playbook",
+    description: "Cut AI platform costs 50–80% with autoscaling, quantization, spot capacity, and FinOps governance. 12‑week roadmap.",
+    category: "FinOps",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-platform-cost-optimization-2026",
+    readTime: "14 min read",
+    tags: ["FinOps", "Autoscaling", "Quantization", "Spot Instances"]
+  },
+  {
     id: "multimodal-ai-revolution-2025",
     title: "🎭 Multimodal AI Revolution: Unified Vision-Language-Audio Processing",
     description: "Master cutting-edge multimodal AI achieving 98% accuracy across vision, language, and audio. Learn unified embeddings, cross-modal attention, and real-world applications transforming industries.",
@@ -21,39 +43,6 @@ export const newArticles2025: NewArticle[] = [
     link: "/blog/multimodal-ai-revolution-2025",
     readTime: "18 min read",
     tags: ["Multimodal AI", "Computer Vision", "NLP", "Audio Processing", "Deep Learning"]
-  },
-  {
-    id: "ai-e2e-tracing-2025",
-    title: "🧭 E2E AI Tracing: From Prompt to Outcome KPIs",
-    description: "Instrument prompts, tools, and UX to KPIs. Prove ROI and prevent regressions.",
-    category: "Observability",
-    publishedDate: "2025-09-30",
-    featured: true,
-    link: "/blog/ai-e2e-tracing-2025",
-    readTime: "7 min read",
-    tags: ["Tracing", "Observability", "KPIs", "GenAI"]
-  },
-  {
-    id: "edge-personalization-2026",
-    title: "⚡ Edge Personalization: Private <100ms Experiences",
-    description: "On‑device signals, signed configs, and tiny models for private, fast personalization.",
-    category: "Edge Computing",
-    publishedDate: "2025-10-15",
-    featured: true,
-    link: "/blog/edge-personalization-2026",
-    readTime: "6 min read",
-    tags: ["Edge", "Personalization", "Privacy", "On‑device ML"]
-  },
-  {
-    id: "policy-tests-quickstart-2025",
-    title: "✅ Policy Tests Quickstart: Ship Fast, Stay Safe",
-    description: "Lightweight CI policy tests wired to KPIs. Catch risks without slowing delivery.",
-    category: "AI Governance",
-    publishedDate: "2025-09-30",
-    featured: true,
-    link: "/blog/policy-tests-quickstart-2025",
-    readTime: "6 min read",
-    tags: ["Governance", "CI", "Policy Tests"]
   },
   {
     id: "blockchain-ai-integration-2025",
@@ -533,3 +522,41 @@ newArticles2025.push(
     tags: ["Agents", "Runbooks", "Budgets", "Rollback"]
   }
 );
+
+// Sept 30, 2025 – New additions to advertise across the front end
+newArticles2025.push(
+	{
+		id: "ai-safety-scorecards-2026",
+		title: "🛡️ AI Safety Scorecards 2026: Guardrails Tied to KPIs",
+		description: "Live policy checks and KPI‑linked scorecards to prevent regressions while shipping weekly.",
+		category: "AI Governance",
+		publishedDate: "2025-09-30",
+		featured: true,
+		link: "/blog/ai-safety-scorecards-2026",
+		readTime: "7 min read",
+		tags: ["Governance", "Scorecards", "Policy Tests"]
+	},
+	{
+		id: "edge-governed-flags-2026",
+		title: "🏷️ Edge‑Governed Feature Flags 2026: Zero‑PII @ <100ms",
+		description: "Signed configs, scoped IDs, and on‑device telemetry for private global rollouts.",
+		category: "Edge Computing",
+		publishedDate: "2025-09-30",
+		featured: true,
+		link: "/blog/edge-governed-flags-2026",
+		readTime: "6 min read",
+		tags: ["Edge", "Privacy", "Feature Flags"]
+	},
+	{
+		id: "ai-agent-reliability-playbook-2026",
+		title: "✅ Agent Reliability Playbook 2026: Budgets, Canaries, Rollback",
+		description: "Budgeted actions, KPI‑linked canaries, and instant rollback for safe automation.",
+		category: "AI Operations",
+		publishedDate: "2025-09-30",
+		featured: true,
+		link: "/blog/ai-agent-reliability-playbook-2026",
+		readTime: "8 min read",
+		tags: ["Agents", "Runbooks", "Reliability"]
+	}
+);
+

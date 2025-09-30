@@ -16,15 +16,6 @@ export const posts: BlogPost[] = [
     category: "AI Governance",
     publishedAt: "2025-09-30",
     featured: true,
-    readTime: "8 min read"
-  },
-  {
-    slug: "edge-consentless-analytics-2026",
-    title: "Edge Analytics 2026: Consent‑Safe Insights",
-    description: "Scoped IDs, on‑device aggregation, and DP noise at <100ms — zero PII.",
-    category: "Analytics",
-    publishedAt: "2025-09-30",
-    featured: true,
     readTime: "7 min read"
   },
   {
@@ -43,14 +34,15 @@ export const posts: BlogPost[] = [
     category: "Edge Computing",
     publishedAt: "2025-09-30",
     featured: true,
-    readTime: "10 min read"
+    readTime: "6 min read"
   },
   {
-    slug: "ai-2027-cost-optimization-playbook",
-    title: "AI 2027 Cost Optimization Playbook",
-    description: "Tiered routing, caching, and compression to cut spend 30–70% with no regressions.",
+    slug: "genai-cache-playbook-2026",
+    title: "GenAI Cache Playbook 2026: Semantic, Programmatic, and Tiered Caches",
+    description: "Stabilize UX and cut costs 30–70% with semantic caches and budget‑aware routing.",
     category: "GenAI",
     publishedAt: "2025-09-30",
+<<<<<<< HEAD
     featured: true,
     readTime: "8 min read"
   },
@@ -78,24 +70,17 @@ export const posts: BlogPost[] = [
     description: "Next‑gen scorecards linking SLIs to KPIs with budgeted actions, PR policy tests, and instant rollback.",
     category: "AI Governance",
     publishedAt: "2026-12-01",
+=======
+>>>>>>> 24e17132c1344b429cef13f136704b6705d13023
     featured: true,
     readTime: "9 min read"
   },
   {
-    slug: "edge-private-evals-2026",
-    title: "Private Evals at the Edge (2026): <100ms, Zero‑PII",
-    description: "On‑device evals with scoped IDs, local aggregation, and DP noise for safe, fast feedback loops.",
-    category: "Analytics",
-    publishedAt: "2026-12-01",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "agentops-runbooks-v3-2026",
-    title: "AgentOps Runbooks v3 (2026): Approvals, Budgets, One‑Click Recovery",
-    description: "Battle‑tested operational runbooks for agents with KPI‑linked canaries and instant rollback.",
-    category: "AI Operations",
-    publishedAt: "2026-12-01",
+    slug: "ai-enterprise-cost-guardrails-2026",
+    title: "AI Enterprise Cost Guardrails 2026: Budgets, Tiers, Approvals",
+    description: "Cost SLOs, quality tiers, and approvals that keep spend predictable without hurting quality.",
+    category: "FinOps",
+    publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
   },
@@ -1650,6 +1635,55 @@ posts.push(
     publishedAt: "2025-10-13",
     featured: true,
     readTime: "8 min read"
+  }
+);
+
+// Sept 30, 2025 – New posts matching homepage promos (ensure links resolve)
+posts.push(
+  {
+    slug: "agentops-runbooks-v3-2026",
+    title: "AgentOps Runbooks v3 (2026): Budgets, Canaries, Rollback",
+    description: "Third‑gen operational runbooks wiring KPI‑linked canaries, budgeted actions, and instant rollback.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "edge-private-evals-2026",
+    title: "Private Evals at the Edge (2026): KPI‑Linked, <100ms, Zero PII",
+    description: "Run evaluation suites on‑device with scoped IDs and DP noise. Wire to KPIs for safe velocity.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "genai-quality-tiers-v2-2026",
+    title: "GenAI Quality Tiers v2 (2026): Predictable Cost, Stable UX",
+    description: "Tier models, add semantic caches, and route by SLA to cut spend 40–70% without degrading UX.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "edge-rag-privacy-preserving-2026",
+    title: "Edge RAG 2026: Privacy‑Preserving Retrieval with <100ms Latency",
+    description: "Region‑scoped corpora, auth‑aware retrieval, and signed outputs—zero PII collection at the edge.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "ai-trust-scorecards-v5-2027",
+    title: "AI Trust Scorecards v5 (2027): Live Canaries + PR Policy Tests",
+    description: "End‑to‑end governance: KPI‑linked live canaries, PR checks, and rollback automation that teams adopt.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
   }
 );
 

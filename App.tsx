@@ -2,11 +2,17 @@ import React, { JSX } from "react";
 import LatestContentBanner2025 from "./src/components/LatestContentBanner2025";
 import FeaturedContentBanner2025 from "./src/components/FeaturedContentBanner2025";
 import NewContentPromoBanner from "./src/components/NewContentPromoBanner";
-import Revolutionary2026ContentMegaBanner from "./src/components/Revolutionary2026ContentMegaBanner";
-import Ultimate2026ContentShowcase from "./src/components/Ultimate2026ContentShowcase";
-import UltimateContentAdvertisingBanner from "./src/components/UltimateContentAdvertisingBanner";
-import UltimateContentShowcase2026 from "./components/UltimateContentShowcase2026";
-import RevolutionaryContentMegaBanner2026 from "./components/RevolutionaryContentMegaBanner2026";
+import January2026ContentBanner from "./components/January2026ContentBanner";
+import AIAdvertisingBanner from "./components/AIAdvertisingBanner";
+import EnterpriseSolutionsBanner from "./components/EnterpriseSolutionsBanner";
+import NewContentAnnouncementBanner from "./components/NewContentAnnouncementBanner";
+import UltimateContentShowcase2026 from "./src/components/UltimateContentShowcase2026";
+import AIInnovationAdvertisingBanner from "./src/components/AIInnovationAdvertisingBanner";
+import LatestTrendsShowcase2026 from "./src/components/LatestTrendsShowcase2026";
+import NewServicesPromotionalBanner from "./src/components/NewServicesPromotionalBanner";
+import January2026BreakthroughContentBanner from "./components/January2026BreakthroughContentBanner";
+import Revolutionary2026ContentMegaBanner from "./components/Revolutionary2026ContentMegaBanner";
+import New2026ContentBreakthroughBanner from "./components/New2026ContentBreakthroughBanner";
 
 export default function App(): JSX.Element {
   return (
@@ -80,15 +86,28 @@ export default function App(): JSX.Element {
               Quantum-Neural Networks with 1000x processing speed, and Autonomous Operations achieving 98% automation rates.
             </p>
 
-            {/* Advertising Banner */}
-            <div className="bg-gradient-to-r from-yellow-500/20 to-orange-500/20 backdrop-blur-sm rounded-2xl p-6 border border-yellow-500/30 mb-12">
+            {/* NEW CONTENT ADVERTISING BANNER */}
+            <div className="bg-gradient-to-r from-purple-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-6 border border-purple-500/30 mb-12">
               <div className="text-center">
                 <h3 className="text-2xl font-bold text-white mb-2">
-                  🎯 NEW: Ultimate 2026 Content Library Now Available!
+                  🚀 BREAKING: Revolutionary 2026 AI Breakthroughs Now Live!
                 </h3>
-                <p className="text-yellow-200 text-lg">
-                  6 Revolutionary Masterclass Guides • $500M+ Proven Savings • 98% Automation Rates
+                <p className="text-purple-200 text-lg mb-4">
+                  Meta-Cognitive AI • Quantum-Neural Networks • Autonomous Operations
                 </p>
+                <div className="flex flex-wrap justify-center gap-4 text-sm">
+                  <span className="bg-purple-500/20 px-3 py-1 rounded-full text-purple-300">95% Decision Accuracy</span>
+                  <span className="bg-cyan-500/20 px-3 py-1 rounded-full text-cyan-300">1000x Processing Speed</span>
+                  <span className="bg-green-500/20 px-3 py-1 rounded-full text-green-300">98% Automation Rate</span>
+                </div>
+                <div className="mt-4">
+                  <a 
+                    href="#revolutionary-breakthroughs" 
+                    className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-2 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50"
+                  >
+                    Explore Revolutionary Content →
+                  </a>
+                </div>
               </div>
             </div>
             
@@ -139,9 +158,14 @@ export default function App(): JSX.Element {
         <January2026BreakthroughContentBanner />
       </section>
 
+      {/* New 2026 Content Breakthrough Banner */}
+      <section>
+        <New2026ContentBreakthroughBanner />
+      </section>
+
       {/* Revolutionary 2026 Content Section */}
       <section id="revolutionary-breakthroughs">
-        <January2026RevolutionaryContentBanner />
+        <Revolutionary2026ContentMegaBanner />
       </section>
 
       {/* Future Tech Showcase 2026 */}

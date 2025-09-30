@@ -4,35 +4,57 @@ import { ArrowRight, Sparkles, TrendingUp, Zap, Star, Rocket, Brain, Atom, Bot }
 const NewContentPromoBanner: React.FC = () => {
   const newContent = [
     {
-      title: "Agentic Workflows Blueprint 2026",
-      description: "Compose multi‑tool agents with safe tools and policy tests in CI",
-      slug: "agentic-workflows-blueprint-2026",
-      category: "GenAI",
-      icon: "🤖",
-      impact: "Multi-Tool Agents",
-      savings: "40% Development Time",
-      featured: true,
-      trending: true
-    },
-    {
-      title: "Edge LLM Caching",
-      description: "Sub‑100ms prompts via tiered KV, signed configs, freshness windows",
-      slug: "edge-llm-caching-blueprint-2025",
-      category: "Architecture",
-      icon: "⚡",
-      impact: "Sub-100ms Response",
-      savings: "60% Cost Reduction",
-      featured: true,
-      trending: true
-    },
-    {
-      title: "AI Operational Scorecards 2026",
-      description: "Guardrails wired to KPIs with PR checks, canaries, and SLOs",
-      slug: "ai-operational-scorecards-2026",
-      category: "AI Strategy",
+      title: "AI Trust Scorecards v5 (2027)",
+      description: "Live canaries + PR policy tests wired to KPIs for real reliability",
+      slug: "ai-trust-scorecards-v5-2027",
+      category: "AI Governance",
       icon: "📊",
-      impact: "95% Uptime SLA",
-      savings: "$3M+ Risk Mitigation",
+      impact: "Proven Reliability",
+      savings: "Fewer Incidents",
+      featured: true,
+      trending: true
+    },
+    {
+      title: "Private Evals at the Edge (2026)",
+      description: "On‑device evals with scoped IDs and DP noise under <100ms",
+      slug: "edge-private-evals-2026",
+      category: "Analytics",
+      icon: "📈",
+      impact: "<100ms Evals",
+      savings: "Zero PII",
+      featured: true,
+      trending: true
+    },
+    {
+      title: "AgentOps Runbooks v3 (2026)",
+      description: "Budgets, canaries, and rollback playbooks that teams actually adopt",
+      slug: "agentops-runbooks-v3-2026",
+      category: "AI Operations",
+      icon: "🤖",
+      impact: "Faster Recovery",
+      savings: "Fewer Incidents",
+      featured: true,
+      trending: true
+    },
+    {
+      title: "GenAI Quality Tiers v2 (2026)",
+      description: "Tiering + semantic caches for predictable cost without UX loss",
+      slug: "genai-quality-tiers-v2-2026",
+      category: "GenAI",
+      icon: "🧠",
+      impact: "40–70% Savings",
+      savings: "Stable UX",
+      featured: true,
+      trending: true
+    },
+    {
+      title: "Edge RAG (Privacy‑Preserving) 2026",
+      description: "Region‑scoped corpora, auth‑aware retrieval, and signed outputs at the edge",
+      slug: "edge-rag-privacy-preserving-2026",
+      category: "GenAI",
+      icon: "🔐",
+      impact: "Zero PII",
+      savings: "<100ms Latency",
       featured: true,
       trending: true
     }
