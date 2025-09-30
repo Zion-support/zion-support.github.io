@@ -10,6 +10,33 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "real-time-decision-engines-2026",
+    title: "Real‑Time Decision Engines 2026: 10M/sec under 1ms",
+    description: "Edge warm pools, intent prefetching, and semantic caches for deterministic, low‑latency decisions.",
+    category: "Platform Engineering",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "10 min read"
+  },
+  {
+    slug: "federated-learning-enterprise-2026",
+    title: "Federated Learning 2026: Enterprise‑Grade Privacy by Design",
+    description: "Train across subsidiaries without centralizing data using scoped IDs, secure aggregation, and DP noise.",
+    category: "Machine Learning",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "cognitive-financial-modeling-2027",
+    title: "AI Financial Modeling 2027: 95% Prediction Accuracy with Guardrails",
+    description: "Budget‑aware forecasting with KPI‑linked scorecards, evals, and instant rollback for safety.",
+    category: "FinTech AI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "11 min read"
+  },
+  {
     slug: "ai-2027-cost-optimization-playbook",
     title: "AI 2027 Cost Optimization Playbook",
     description: "Tiered routing, caching, and compression to cut spend 30–70% with no regressions.",
