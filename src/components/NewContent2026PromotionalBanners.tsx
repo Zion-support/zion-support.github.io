@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 
 export const NewContent2026PromotionalBanner = () => {
   return (
@@ -16,37 +15,37 @@ export const NewContent2026PromotionalBanner = () => {
             </div>
           </div>
           <div className="flex flex-wrap gap-2 text-sm">
-            <Link 
+            <a 
               href="/blog/ai-agent-evals-2026" 
               className="bg-white/20 hover:bg-white/30 px-3 py-1 rounded-full transition-colors"
             >
               Agent Evals
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/blog/ai-ethical-framework-2026" 
               className="bg-white/20 hover:bg-white/30 px-3 py-1 rounded-full transition-colors"
             >
               AI Ethics
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/blog/ai-multimodal-enterprise-integration-2026" 
               className="bg-white/20 hover:bg-white/30 px-3 py-1 rounded-full transition-colors"
             >
               Multimodal AI
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/case-studies/ai-ethical-framework-success-2026" 
               className="bg-white/20 hover:bg-white/30 px-3 py-1 rounded-full transition-colors"
             >
               Success Story
-            </Link>
+            </a>
           </div>
-          <Link
+          <a
             href="/blog"
             className="bg-white text-indigo-700 hover:bg-gray-100 px-4 py-2 rounded-lg font-semibold transition-colors"
           >
             Explore All
-          </Link>
+          </a>
         </div>
       </div>
     </div>
@@ -71,12 +70,12 @@ export const AIAgentEvalsBanner = () => {
             <p className="text-gray-600 mb-4">
               Practical eval frameworks, traces, and policy gates to ship trustworthy agents. Learn how to implement reliable AI agent evaluation systems.
             </p>
-            <Link
+            <a
               href="/blog/ai-agent-evals-2026"
               className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold"
             >
               Read Article →
-            </Link>
+            </a>
           </div>
           <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center">
             <span className="text-2xl">🤖</span>
@@ -105,12 +104,12 @@ export const AIEthicsFrameworkBanner = () => {
             <p className="text-gray-600 mb-4">
               Comprehensive guide to implementing ethical AI frameworks in enterprise environments with practical implementation strategies.
             </p>
-            <Link
+            <a
               href="/blog/ai-ethical-framework-2026"
               className="inline-flex items-center text-green-600 hover:text-green-700 font-semibold"
             >
               Read Guide →
-            </Link>
+            </a>
           </div>
           <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center">
             <span className="text-2xl">⚖️</span>
@@ -139,12 +138,12 @@ export const MultimodalAIBanner = () => {
             <p className="text-gray-600 mb-4">
               Master multimodal AI integration in enterprise environments with comprehensive strategies for text, image, video, and audio AI systems.
             </p>
-            <Link
+            <a
               href="/blog/ai-multimodal-enterprise-integration-2026"
               className="inline-flex items-center text-purple-600 hover:text-purple-700 font-semibold"
             >
               Read Complete Guide →
-            </Link>
+            </a>
           </div>
           <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center">
             <span className="text-2xl">🎯</span>
@@ -175,12 +174,12 @@ export const EthicsSuccessCaseStudyBanner = () => {
             <p className="text-gray-600 mb-4">
               See how a Fortune 500 company achieved $5.2M ROI with comprehensive AI ethical framework implementation, achieving 99.7% compliance and zero incidents.
             </p>
-            <Link
+            <a
               href="/case-studies/ai-ethical-framework-success-2026"
               className="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold"
             >
               View Case Study →
-            </Link>
+            </a>
           </div>
           <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center">
             <span className="text-2xl">💰</span>
@@ -205,7 +204,7 @@ export const Comprehensive2026ContentBanner = () => {
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <Link href="/blog/ai-agent-evals-2026" className="group">
+          <a href="/blog/ai-agent-evals-2026" className="group">
             <div className="bg-white/10 hover:bg-white/20 rounded-lg p-6 transition-colors">
               <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-4">
                 <span className="text-2xl">🤖</span>
@@ -217,9 +216,9 @@ export const Comprehensive2026ContentBanner = () => {
                 Shipping reliable autonomy with practical evaluation frameworks
               </p>
             </div>
-          </Link>
+          </a>
 
-          <Link href="/blog/ai-ethical-framework-2026" className="group">
+          <a href="/blog/ai-ethical-framework-2026" className="group">
             <div className="bg-white/10 hover:bg-white/20 rounded-lg p-6 transition-colors">
               <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-4">
                 <span className="text-2xl">⚖️</span>
@@ -231,9 +230,9 @@ export const Comprehensive2026ContentBanner = () => {
                 Building responsible AI systems for enterprise environments
               </p>
             </div>
-          </Link>
+          </a>
 
-          <Link href="/blog/ai-multimodal-enterprise-integration-2026" className="group">
+          <a href="/blog/ai-multimodal-enterprise-integration-2026" className="group">
             <div className="bg-white/10 hover:bg-white/20 rounded-lg p-6 transition-colors">
               <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-4">
                 <span className="text-2xl">🎯</span>
@@ -245,9 +244,9 @@ export const Comprehensive2026ContentBanner = () => {
                 Complete guide to enterprise multimodal AI systems
               </p>
             </div>
-          </Link>
+          </a>
 
-          <Link href="/case-studies/ai-ethical-framework-success-2026" className="group">
+          <a href="/case-studies/ai-ethical-framework-success-2026" className="group">
             <div className="bg-white/10 hover:bg-white/20 rounded-lg p-6 transition-colors">
               <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-4">
                 <span className="text-2xl">💰</span>
@@ -259,16 +258,16 @@ export const Comprehensive2026ContentBanner = () => {
                 Fortune 500 ethical framework implementation case study
               </p>
             </div>
-          </Link>
+          </a>
         </div>
 
         <div className="text-center mt-8">
-          <Link
+          <a
             href="/blog"
             className="bg-white text-indigo-700 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors"
           >
             Explore All 2026 Content
-          </Link>
+          </a>
         </div>
       </div>
     </div>
