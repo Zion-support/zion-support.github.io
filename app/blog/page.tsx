@@ -11,6 +11,7 @@ export const metadata: Metadata = {
 const blogPosts = [
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     title: 'AI 2026 Revolutionary Breakthroughs: The Future is Here',
@@ -47,6 +48,22 @@ const blogPosts = [
     slug: 'ai-cost-optimization-2026',
     excerpt: 'Learn proven AI cost optimization strategies that reduce operational expenses by 70% while improving performance. Complete guide with ROI calculations and implementation tips.',
     category: 'ROI Guide',
+=======
+    title: 'AI 2026: Enterprise Autonomous Systems Revolution',
+    slug: 'ai-2026-enterprise-autonomous-systems',
+    excerpt: 'Discover how autonomous AI systems are achieving 90% efficiency gains and transforming enterprise infrastructure across industries.',
+    category: 'NEW ARTICLE',
+    readTime: '15 min read',
+    publishedAt: 'January 20, 2026',
+    image: '🤖',
+    color: 'cyan'
+  },
+  {
+    title: 'AI Cost Optimization 2026: Advanced Strategies for 70% Savings',
+    slug: 'ai-cost-optimization-2026-strategies',
+    excerpt: 'Master AI cost optimization with proven strategies that deliver 70% cost reduction and 300% ROI. Learn advanced techniques for enterprise AI efficiency.',
+    category: 'FEATURED',
+>>>>>>> origin/cursor/create-and-deploy-new-content-9682
     readTime: '12 min read',
     publishedAt: 'January 20, 2026',
     image: '💰',
