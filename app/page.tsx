@@ -72,6 +72,8 @@ import InteractiveAICalculator2025 from '../components/InteractiveAICalculator20
 import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
 import LatestContent2026ShowcaseBanner from '../components/LatestContent2026ShowcaseBanner';
 import InteractiveAI2026Calculator from '../components/InteractiveAI2026Calculator';
+import NewContent2026PromotionalBanner from '../components/NewContent2026PromotionalBanner';
+import InteractiveAI2026ROICalculator from '../components/InteractiveAI2026ROICalculator';
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
@@ -153,16 +155,9 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <div className="animate-fade-in">
-<<<<<<< HEAD
-      {/* Revolutionary AI 2025 Banner */}
-      <RevolutionaryAI2025Banner />
+      {/* New Content 2026 Promotional Banner */}
+      <NewContent2026PromotionalBanner />
       
-      {/* Latest Content 2025 Banner */}
-      <LatestContent2025Banner />
-      
-      {/* Revolutionary Content 2026 Banner */}
-      <RevolutionaryContent2026Banner />
-=======
       {/* Latest 2026 Mega Content Banners */}
       <Revolutionary2026ContentBanner />
       <AI2026ContentShowcaseBanner />
@@ -170,11 +165,7 @@ export default function HomePage() {
       <AIQuantumComputingBreakthroughBanner />
       <AIMegaTransformationSuccessBanner />
       <AI2026InnovationShowcaseBanner />
-<<<<<<< HEAD
->>>>>>> feature/new-content-and-advertising-2026
-=======
       <LatestContent2026MegaBanner />
->>>>>>> cursor/create-and-deploy-new-content-a02c
       
       {/* Latest 2026 Content Banners */}
       <AIEnterpriseTransformationBanner />
@@ -370,7 +361,7 @@ export default function HomePage() {
               See how much you could save and achieve with enterprise AI solutions.
             </p>
           </div>
-          <InteractiveAIROICalculator />
+          <InteractiveAI2026ROICalculator />
         </div>
       </section>
 
