@@ -277,6 +277,20 @@ enhancedPromotionalBanners.push({
   startDate: '2025-09-30'
 });
 
+// Sept 30, 2025 – Promote two brand-new 2028 posts site-wide
+enhancedPromotionalBanners.push({
+  id: 'sept30-2025-new-2028-pair',
+  title: '🚀 New 2028: Risk Budgets + Autonomous Enterprise',
+  description: 'KPI risk budgets, live canaries, rollback — plus an executive blueprint to prove ROI.',
+  ctaText: 'Explore the 2028 posts',
+  ctaLink: '/blog',
+  variant: 'success',
+  icon: '🚀',
+  featured: true,
+  priority: 0,
+  startDate: '2025-09-30'
+});
+
 enhancedPromotionalBanners.push({
   id: 'sept30-2025-fresh-trio-q4',
   title: '🚀 New: Operational Scorecards, Consentless Metrics, Budget‑Aware Routing',

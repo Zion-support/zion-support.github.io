@@ -1092,6 +1092,22 @@ featuredBlogPosts.unshift(
 // Sept 30, 2025 – Advertise three newly added articles site-wide
 featuredBlogPosts.unshift(
   {
+    id: "ai-2028-autonomous-risk-budgets",
+    title: "AI 2028: Autonomous Risk Budgets",
+    description: "Budget‑aware routing, KPI canaries, and instant rollback for safe velocity.",
+    link: "/blog/ai-2028-autonomous-risk-budgets",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-2028-autonomous-enterprise-revolution",
+    title: "AI 2028: Autonomous Enterprise Revolution",
+    description: "Outcome‑led bets, KPI scorecards, budgets, and rollback that prove ROI.",
+    link: "/blog/ai-2028-autonomous-enterprise-revolution",
+    type: "article",
+    featured: true
+  },
+  {
     id: "ai-2027-enterprise-roadmap-v2",
     title: "AI 2027 Enterprise Roadmap v2",
     description: "Outcome‑led bets, KPI scorecards, and guardrails that scale reliably.",
