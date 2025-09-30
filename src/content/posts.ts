@@ -10,6 +10,33 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-operational-scorecards-v4-2026",
+    title: "AI Operational Scorecards v4 (2026): KPIs, Budgets, Rollback",
+    description: "SLIs mapped to KPIs, budgeted actions, and instant rollback teams adopt fast.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "edge-zero-pii-insights-2026",
+    title: "Edge Zero‑PII Insights 2026: Scoped IDs, On‑Device Aggregation",
+    description: "Scoped IDs, on‑device aggregation, and DP noise—zero PII at <100ms.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "genai-quality-tiers-v2-2026",
+    title: "GenAI Quality Tiers v2 (2026): Predictable Cost, Stable UX",
+    description: "Quality tiers and semantic caches for predictable cost and stable experience.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
     slug: "ai-2025-autonomous-infrastructure-blueprint",
     title: "Autonomous Infrastructure 2025: Self‑Healing, Self‑Optimizing, Self‑Scaling",
     description: "Design an AI‑driven infra platform with predictive autoscaling, policy tests, and instant rollback for 99.99% uptime.",
