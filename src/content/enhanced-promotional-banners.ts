@@ -166,3 +166,30 @@ export const getActiveEnhancedBanners = (): EnhancedPromotionalBanner[] => {
 export const getFeaturedBanners = (): EnhancedPromotionalBanner[] => {
   return getActiveEnhancedBanners().filter(banner => banner.featured);
 };
+
+// Sept 30, 2025 – New banners to advertise fresh content
+enhancedPromotionalBanners.push({
+  id: 'sept30-autonomy-blueprint-2026',
+  title: '🧭 Enterprise Autonomy Blueprint 2026 — New',
+  description: 'From pilots to governed production. Budgets, traces, and instant rollback.',
+  ctaText: 'Read the blueprint',
+  ctaLink: '/blog/ai-enterprise-autonomy-blueprint-2026',
+  variant: 'success',
+  icon: '🧭',
+  featured: true,
+  priority: 1,
+  startDate: '2025-09-30'
+});
+
+enhancedPromotionalBanners.push({
+  id: 'sept30-edge-trustless-analytics-2026',
+  title: '🔐 Edge Trustless Analytics — Verifiable, PII‑Safe',
+  description: 'Scoped IDs, on‑device aggregation, and signed attestations for insights without PII.',
+  ctaText: 'Explore the guide',
+  ctaLink: '/blog/edge-trustless-analytics-2026',
+  variant: 'info',
+  icon: '🔐',
+  featured: true,
+  priority: 2,
+  startDate: '2025-09-30'
+});

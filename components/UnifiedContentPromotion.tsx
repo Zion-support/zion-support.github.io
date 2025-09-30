@@ -30,6 +30,18 @@ const featuredContent: ContentItem[] = [
     category: 'Enterprise AI'
   },
   {
+    id: '9',
+    title: 'Enterprise Autonomy Blueprint 2026: From Pilots to Production',
+    description: 'Playbooks for governed, reliable autonomy with budgets, live traces, and rollback.',
+    link: '/blog/ai-enterprise-autonomy-blueprint-2026',
+    badge: 'New',
+    badgeColor: 'bg-gradient-to-r from-emerald-600 to-teal-600',
+    icon: '🧭',
+    publishedDate: 'September 30, 2025',
+    readTime: '9 min read',
+    category: 'AI Operations'
+  },
+  {
     id: '2',
     title: 'Manufacturing Transformation: 90% Efficiency Gain',
     description: 'Fortune 500 manufacturer achieves $50M annual savings and 90% efficiency improvement through comprehensive AI transformation. Complete case study with implementation details.',
