@@ -1663,7 +1663,6 @@ posts.unshift(
     category: "GenAI",
     publishedAt: "2025-09-30",
     featured: true,
-<<<<<<< HEAD
     readTime: "8 min read",
   }
 );
@@ -1699,9 +1698,6 @@ posts.unshift(
     publishedAt: "2025-10-02",
     featured: true,
     readTime: "8 min read",
-=======
-    readTime: "6 min read",
->>>>>>> origin/cursor/create-and-deploy-new-content-fdff
   }
 );
 

@@ -146,7 +146,7 @@ export default function HomePage() {
       <April2026MegaBreakthroughBanner />
       
       {/* New Content 2026 Showcase Banner - Latest Content */}
-      <NewContent2026ShowcaseBanner />
+      <NewContentShowcaseBanner />
       
       {/* Ultimate 2026 Hyperintelligence Banner */}
       <Ultimate2026HyperintelligenceBanner />
