@@ -187,6 +187,9 @@ export default function HomePage() {
       
       {/* 🔥 AI INNOVATION ADVERTISING BANNER */}
       <AIInnovationAdvertisingBanner />
+
+      {/* 📰 Latest Content Showcase (auto-updating) */}
+      <ContentShowcase title="Latest Research & Playbooks" subtitle="Fresh, high-signal guides and case studies" maxItems={6} />
       
       {/* 🌟 LATEST TRENDS SHOWCASE 2026 */}
       <LatestTrendsShowcase2026 />
