@@ -63,7 +63,7 @@ const LatestContentBanner2025: React.FC = () => {
           <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-fuchsia-500/20 border border-cyan-500/30 mb-8 animate-fade-in">
             <Sparkles className="w-5 h-5 text-cyan-400 animate-pulse" />
             <span className="text-cyan-400 font-bold text-sm tracking-wider uppercase">
-              🔥 4 NEW ARTICLES PUBLISHED • September 30, 2025
+              🔥 4 BRAND NEW ARTICLES PUBLISHED • September 30, 2025
             </span>
             <Sparkles className="w-5 h-5 text-fuchsia-400 animate-pulse" />
           </div>
