@@ -123,6 +123,8 @@ import AutonomousBusinessSystemsMegaBanner from '../components/AutonomousBusines
 import QuantumAI2027BreakthroughBanner from '../components/QuantumAI2027BreakthroughBanner';
 import AutonomousBusinessIntelligence2026Banner from '../components/AutonomousBusinessIntelligence2026Banner';
 import NewContent2027ShowcaseBanner from '../components/NewContent2027ShowcaseBanner';
+import RevolutionaryAI2026BreakthroughBanner from '../components/RevolutionaryAI2026BreakthroughBanner';
+import Ultimate2026ContentShowcaseBanner from '../components/Ultimate2026ContentShowcaseBanner';
 
 export const metadata = {
   title: 'Zion Tech Group — Revolutionary AI Breakthroughs 2026 | 1000x Performance Gains',
@@ -182,6 +184,12 @@ export default function HomePage() {
       </section>
       {/* 🚀 NEWEST 2027 CONTENT - BREAKTHROUGH QUANTUM AI & AUTONOMOUS INTELLIGENCE! */}
       <NewContent2027ShowcaseBanner />
+      
+      {/* 🔥 REVOLUTIONARY AI 2026 BREAKTHROUGHS - AUTONOMOUS INTELLIGENCE & QUANTUM COMPUTING! */}
+      <RevolutionaryAI2026BreakthroughBanner />
+      
+      {/* 🌟 ULTIMATE 2026 CONTENT SHOWCASE - CUTTING-EDGE AI INNOVATIONS! */}
+      <Ultimate2026ContentShowcaseBanner />
 
       {/* 📣 Featured: New — Autonomous Governance & Agent Ops Observability */}
       <div className="bg-gradient-to-r from-purple-700/20 to-fuchsia-700/20 border border-white/10 rounded-2xl p-6 mb-8">
