@@ -1,298 +1,996 @@
-// Content configuration for featured items and promotional content
+export interface BlogPost {
+  id: string;
+  title: string;
+  excerpt: string;
+  date: string;
+  category: string;
+  readTime: string;
+  image: string;
+  featured?: boolean;
+  slug: string;
+  tags: string[];
+}
 
-export interface FeaturedItem {
+export interface CaseStudy {
+  id: string;
+  title: string;
+  excerpt: string;
+  company: string;
+  industry: string;
+  challenge: string;
+  solution: string;
+  result: string;
+  metric: string;
+  featured?: boolean;
+  slug: string;
+  tags: string[];
+}
+
+export interface Service {
   id: string;
   title: string;
   description: string;
-  link: string;
-  type: 'article' | 'service' | 'case-study';
-  featured: boolean;
+  category: string;
+  pricing: {
+    starting: string;
+    popular?: boolean;
+  };
+  features: string[];
+  metrics?: Array<{
+    value: string;
+    label: string;
+  }>;
+  testimonial?: {
+    quote: string;
+    author: string;
+    company: string;
+  };
+  cta: {
+    primary: string;
+    secondary: string;
+  };
+  icon: string;
+  featured?: boolean;
+  slug: string;
+  tags: string[];
 }
 
-export const featuredBlogPosts: FeaturedItem[] = [
+export interface PromotionalBanner {
+  id: string;
+  message: string;
+  ctaText: string;
+  ctaLink: string;
+  backgroundColor: string;
+  textColor: string;
+  showClose: boolean;
+  autoHide: boolean;
+  hideAfter: number;
+  active: boolean;
+  priority: number;
+}
+
+// Blog Posts Configuration
+export const blogPosts: BlogPost[] = [
   {
-    id: "realtime-ai-decision-engines-2025",
-    title: "Real-Time AI Decision Engines",
-    description: "10M/sec under 1ms with tiered models and caches",
-    link: "/blog/real-time-ai-decision-engines-2025",
-    type: "article",
-    featured: true
+    id: 'ai-platform-engineering-2025',
+    title: 'AI Platform Engineering 2025: Scorecards, Trains, and Golden Paths',
+    excerpt: 'Practical platform patterns that link capabilities to adoption, SLOs, and ROI.',
+    date: 'October 8, 2025',
+    category: 'Platform Engineering',
+    readTime: '9 min',
+    image: '🛤️',
+    featured: true,
+    slug: '/blog/ai-platform-engineering-2025',
+    tags: ['Platform', 'ROI', 'Golden Paths']
   },
   {
-    id: "genai-consent-mode-edge-2026",
-    title: "GenAI Consent Mode 2026",
-    description: "On-device signals without PII using scoped IDs and consent-aware analytics",
-    link: "/blog/genai-consent-mode-edge-2026",
-    type: "article",
-    featured: true
+    id: 'serverless-inference-cost-playbook-2025',
+    title: 'Serverless Inference Cost Playbook: Latency Budgets Without Bill Shock',
+    excerpt: 'Concurrency shaping, tiered models, and result caching to cut spend 35–60%.',
+    date: 'October 8, 2025',
+    category: 'GenAI',
+    readTime: '8 min',
+    image: '🧰',
+    featured: true,
+    slug: '/blog/serverless-inference-cost-playbook-2025',
+    tags: ['GenAI', 'Cost', 'Serverless']
   },
   {
-    id: "ai-data-lineage-2026",
-    title: "AI Data Lineage 2026",
-    description: "Signed SBOMs and audit-ready provenance for datasets, prompts, and models",
-    link: "/blog/ai-data-lineage-2026",
-    type: "article",
-    featured: true
+    id: 'cloud-finops-guardrails-2025',
+    title: 'Cloud FinOps Guardrails Engineers Actually Use',
+    excerpt: 'PR checks, budgets, and alerts that reduce waste while keeping teams fast.',
+    date: 'October 8, 2025',
+    category: 'Cloud',
+    readTime: '7 min',
+    image: '💸',
+    featured: true,
+    slug: '/blog/cloud-finops-guardrails-2025',
+    tags: ['Cloud', 'FinOps', 'Guardrails']
   },
   {
-    id: "agent-policy-gates-blueprint-2026",
-    title: "Agent Policy Gates 2026",
-    description: "Approvals, budgets, and sandboxed tools for safe agent releases",
-    link: "/blog/agent-policy-gates-blueprint-2026",
-    type: "article",
-    featured: true
+    id: 'enterprise-rag-v2-2025',
+    title: 'Enterprise RAG v2: Freshness Windows, Guardrails, and KPIs',
+    excerpt: 'Design RAG that stays accurate with freshness TTLs, evals, and safe tools.',
+    date: 'October 8, 2025',
+    category: 'GenAI',
+    readTime: '9 min',
+    image: '🏢',
+    featured: true,
+    slug: '/blog/enterprise-rag-v2-2025',
+    tags: ['GenAI', 'RAG', 'Evaluation']
   },
   {
-    id: "ai-trustworthy-agents-2026",
-    title: "Trustworthy Autonomous Agents 2026",
-    description: "Guardrails, evals, and policy gates for reliable autonomy",
-    link: "/blog/ai-trustworthy-agents-2026",
-    type: "article",
-    featured: true
+    id: 'ai-revolution-2025',
+    title: 'AI Revolution 2025: The Complete Business Transformation Guide',
+    excerpt: 'Discover how AI is reshaping industries and creating unprecedented opportunities for growth in 2025.',
+    date: 'January 17, 2025',
+    category: 'AI Trends',
+    readTime: '12 min',
+    image: '🚀',
+    featured: true,
+    slug: '/blog/ai-revolution-2025',
+    tags: ['AI', 'Business Strategy', 'Transformation', '2025 Trends']
   },
   {
-    id: "ai-agent-security-blueprint-2026",
-    title: "AI Agent Security Blueprint 2026",
-    description: "Zero‑trust for agents: isolation, least privilege, auditability",
-    link: "/blog/ai-agent-security-blueprint-2026",
-    type: "article",
-    featured: true
+    id: 'ai-workflow-automation',
+    title: 'AI Workflow Automation: Transforming Business Operations',
+    excerpt: 'Discover how AI-powered workflow automation is revolutionizing business processes, reducing manual work by 80% and improving efficiency across industries.',
+    date: 'January 15, 2025',
+    category: 'Automation',
+    readTime: '6 min',
+    image: '🤖',
+    featured: false,
+    slug: '/blog/ai-workflow-automation',
+    tags: ['Automation', 'Workflow', 'AI', 'Productivity']
   },
   {
-    id: "ai-2027-autonomous-governance-blueprint",
-    title: "AI 2027 Autonomous Governance Blueprint",
-    description: "Policy gates, budgets, and verifiable outcomes for safe autonomy",
-    link: "/blog/ai-2027-autonomous-governance-blueprint",
-    type: "article",
-    featured: true
+    id: 'cloud-migration-best-practices',
+    title: 'Cloud Migration Best Practices for 2025',
+    excerpt: 'Learn the essential strategies for successful cloud migration, including zero-downtime approaches and cost optimization techniques.',
+    date: 'January 12, 2025',
+    category: 'Cloud',
+    readTime: '7 min',
+    image: '☁️',
+    featured: false,
+    slug: '/blog/cloud-migration-best-practices',
+    tags: ['Cloud', 'Migration', 'Best Practices', 'DevOps']
   },
   {
-    id: "ai-2026-agent-ops-observability",
-    title: "Agent Ops Observability 2026",
-    description: "Metrics, traces, evals, and guardrails for reliable autonomy",
-    link: "/blog/ai-2026-agent-ops-observability",
-    type: "article",
-    featured: true
+    id: 'cybersecurity-ai-era',
+    title: 'Cybersecurity in the AI Era: Protecting Your Digital Assets',
+    excerpt: 'Explore advanced cybersecurity strategies for AI-powered environments, including zero-trust architecture and automated threat detection.',
+    date: 'January 10, 2025',
+    category: 'Security',
+    readTime: '5 min',
+    image: '🔒',
+    featured: false,
+    slug: '/blog/cybersecurity-ai-era',
+    tags: ['Cybersecurity', 'AI Security', 'Zero Trust', 'Threat Detection']
   },
   {
-    id: "privacy-first-telemetry-quickstart-2025",
-    title: "Privacy‑First Telemetry Quickstart",
-    description: "Signal‑rich analytics with scoped IDs and DP noise",
-    link: "/blog/privacy-first-telemetry-quickstart-2025",
-    type: "article",
-    featured: true
+    id: 'data-analytics-revolution',
+    title: 'Data Analytics Revolution: From Insights to Action',
+    excerpt: 'See how modern data analytics platforms are transforming raw data into actionable business insights with real-time dashboards and predictive modeling.',
+    date: 'January 8, 2025',
+    category: 'Analytics',
+    readTime: '6 min',
+    image: '📊',
+    featured: false,
+    slug: '/blog/data-analytics-revolution',
+    tags: ['Data Analytics', 'Insights', 'Predictive Modeling', 'Business Intelligence']
   },
   {
-    id: "agent-runbooks-2025",
-    title: "Agent Runbooks: Budgets & Rollbacks",
-    description: "Ship safe autonomy with budgeted actions and safety gates",
-    link: "/blog/agent-runbooks-2025",
-    type: "article",
-    featured: true
+    id: 'devops-automation-scaling',
+    title: 'DevOps Automation: Scaling Infrastructure with Intelligence',
+    excerpt: 'Learn how automated DevOps practices are enabling rapid deployment, infrastructure scaling, and continuous integration at enterprise scale.',
+    date: 'January 5, 2025',
+    category: 'DevOps',
+    readTime: '8 min',
+    image: '⚙️',
+    featured: false,
+    slug: '/blog/devops-automation-scaling',
+    tags: ['DevOps', 'Automation', 'Infrastructure', 'CI/CD']
   },
   {
-    id: "multimodal-ai-2025",
-    title: "Multimodal AI Revolution 2025",
-    description: "Master unified vision-language-audio AI achieving 98% accuracy",
-    link: "/blog/multimodal-ai-revolution-2025",
-    type: "article",
-    featured: true
+    id: 'ai-virtual-assistants-customer-service',
+    title: 'The Rise of AI Virtual Assistants in Customer Service',
+    excerpt: 'Discover how AI virtual assistants are revolutionizing customer support with 24/7 availability, natural language processing, and personalized interactions.',
+    date: 'January 3, 2025',
+    category: 'AI',
+    readTime: '5 min',
+    image: '💬',
+    featured: false,
+    slug: '/blog/ai-virtual-assistants-customer-service',
+    tags: ['AI', 'Virtual Assistant', 'Customer Service', 'NLP']
+  }
+  ,
+  {
+    id: 'serverless-inference-costs-2025',
+    title: 'Serverless Inference Cost Playbook 2025',
+    excerpt: 'Cut inference spend 40–70% with adaptive batching, warm pools, and tiered quality without hurting P95.',
+    date: 'October 05, 2025',
+    category: 'AI Infrastructure',
+    readTime: '9 min',
+    image: '🧰',
+    featured: true,
+    slug: '/blog/serverless-inference-cost-playbook-2025',
+    tags: ['Serverless', 'Inference', 'Cost', 'AI Infra']
   },
   {
-    id: "blockchain-ai-2025",
-    title: "Blockchain-AI Integration 2025",
-    description: "Trustless intelligence with decentralized AI governance",
-    link: "/blog/blockchain-ai-integration-2025",
-    type: "article",
-    featured: true
+    id: 'production-rag-architectures-2025',
+    title: 'RAG Architectures That Actually Work in Production',
+    excerpt: 'Proven patterns for chunking, freshness, hybrid search, and evals that keep quality high.',
+    date: 'October 04, 2025',
+    category: 'GenAI',
+    readTime: '12 min',
+    image: '📚',
+    featured: true,
+    slug: '/blog/production-rag-architectures-2025',
+    tags: ['RAG', 'Vector Search', 'Evals', 'GenAI']
   },
   {
-    id: "green-ai-2025",
-    title: "Green AI & Sustainability 2025",
-    description: "Carbon-neutral ML achieving 90% carbon reduction",
-    link: "/blog/green-ai-sustainability-2025",
-    type: "article",
-    featured: true
+    id: 'secure-genai-guardrails-2025',
+    title: 'Secure GenAI: Policy‑First Guardrails That Scale',
+    excerpt: 'Prompt isolation, PII redaction, and network egress controls—ship safely without slowing teams.',
+    date: 'October 03, 2025',
+    category: 'Security',
+    readTime: '8 min',
+    image: '🛡️',
+    featured: false,
+    slug: '/blog/secure-genai-guardrails-2025',
+    tags: ['GenAI', 'Security', 'Compliance']
+  }
+  ,
+  {
+    id: 'secure-ml-supply-chain-2026',
+    title: 'Secure ML Supply Chain 2026: SBOMs, Attestations, and Drift Guards',
+    excerpt: 'Continuously track models, datasets, and prompts with signed SBOMs and policy checks.',
+    date: 'October 13, 2025',
+    category: 'Security',
+    readTime: '7 min',
+    image: '🔐',
+    featured: true,
+    slug: '/blog/secure-ml-supply-chain-2026',
+    tags: ['ML', 'Supply Chain', 'SBOM', 'Security']
   },
   {
-    id: "ai-compliance-2025",
-    title: "AI Regulatory Compliance 2025",
-    description: "Navigate EU AI Act, GDPR, and global regulations",
-    link: "/blog/ai-regulatory-compliance-2025",
-    type: "article",
-    featured: true
+    id: 'genai-routing-blueprint-2026',
+    title: 'GenAI Routing Blueprint 2026: Quality Tiers, Caches, and Budgets',
+    excerpt: 'Route traffic by SLA with tiered models, edge caches, and KPI‑linked budgets.',
+    date: 'October 13, 2025',
+    category: 'GenAI',
+    readTime: '8 min',
+    image: '🧭',
+    featured: true,
+    slug: '/blog/genai-routing-blueprint-2026',
+    tags: ['Routing', 'Quality Tiers', 'Budgets', 'Caching']
   },
   {
-    id: "agentic-control-planes-2026",
-    title: "Agentic Control Planes 2026",
-    description: "Budgets, policy gates, and instant recovery for agent platforms",
-    link: "/blog/agentic-control-planes-2026",
-    type: "article",
-    featured: true
-  },
-  {
-    id: "edge-eval-canaries-2026",
-    title: "Edge Evals & Canaries 2026",
-    description: "KPI‑linked evals and live canaries at <100ms",
-    link: "/blog/edge-eval-canaries-2026",
-    type: "article",
-    featured: true
-  },
-  {
-    id: "ai-value-stream-maps-2026",
-    title: "AI Value Stream Maps 2026",
-    description: "Trace prompts and tools to business outcomes",
-    link: "/blog/ai-value-stream-maps-2026",
-    type: "article",
-    featured: true
+    id: 'golden-paths-roi-2026',
+    title: 'Golden Paths ROI 2026: Scorecards that Prove Platform Value',
+    excerpt: 'Link developer journeys to SLOs, adoption, and revenue with actionable scorecards.',
+    date: 'October 13, 2025',
+    category: 'Platform Engineering',
+    readTime: '7 min',
+    image: '🛤️',
+    featured: true,
+    slug: '/blog/golden-paths-roi-2026',
+    tags: ['Golden Paths', 'Scorecards', 'ROI']
   }
 ];
 
-// Newly featured items to advertise on the homepage
-featuredBlogPosts.unshift(
+// Case Studies Configuration
+export const caseStudies: CaseStudy[] = [
   {
-    id: "ai-governance-real-time-2026",
-    title: "AI Governance in Real Time 2026",
-    description: "Live canaries + CI policy tests to prevent regressions.",
-    link: "/blog/ai-governance-real-time-2026",
-    type: "article",
-    featured: true
+    id: 'techcorp-ai-transformation',
+    title: 'TechCorp AI Transformation: 90% Efficiency Gain',
+    excerpt: 'How a leading e-commerce company transformed their operations with AI-powered automation, achieving unprecedented efficiency gains and cost savings.',
+    company: 'TechCorp Inc.',
+    industry: 'E-commerce',
+    challenge: 'Manual data processing taking 40 hours/week',
+    solution: 'AI Data Analytics automation',
+    result: '90% time reduction, 60% cost savings',
+    metric: '$500K saved annually',
+    featured: true,
+    slug: '/case-studies/techcorp-ai-transformation',
+    tags: ['AI Transformation', 'E-commerce', 'Automation', 'Cost Savings']
   },
   {
-    id: "edge-inference-warm-pools-2026",
-    title: "Edge Inference Warm Pools 2026",
-    description: "Sub‑100ms global with warm pools, prefetch, tiered caches.",
-    link: "/blog/edge-inference-warm-pools-2026",
-    type: "article",
-    featured: true
+    id: 'healthtech-solutions',
+    title: 'HealthTech Solutions: AI Virtual Assistant Success',
+    excerpt: 'Healthcare company achieves 95% customer satisfaction with AI virtual assistant implementation.',
+    company: 'HealthTech Solutions',
+    industry: 'Healthcare',
+    challenge: 'Customer support overwhelmed with queries',
+    solution: 'AI Virtual Assistant implementation',
+    result: '80% faster response time, 24/7 support',
+    metric: '95% customer satisfaction',
+    featured: true,
+    slug: '/case-studies/healthtech-solutions',
+    tags: ['Healthcare', 'AI Assistant', 'Customer Service', 'Automation']
   },
   {
-    id: "agent-release-guardrails-2026",
-    title: "Agent Release Guardrails 2026",
-    description: "Budgets, approvals, and instant rollback for safe releases.",
-    link: "/blog/agent-release-guardrails-2026",
-    type: "article",
-    featured: true
-  },
-  {
-    id: "operational-evals-2026",
-    title: "Operational Evals 2026",
-    description: "KPIs, canaries, and rollback playbooks that keep velocity high",
-    link: "/blog/ai-operational-evals-2026",
-    type: "article",
-    featured: true
-  },
-  {
-    id: "edge-ab-testing-2026",
-    title: "Edge A/B Testing 2026",
-    description: "Private experiments at <100ms with scoped IDs and DP noise",
-    link: "/blog/edge-ab-testing-2026",
-    type: "article",
-    featured: true
-  },
-  {
-    id: "sovereign-rag-platforms-2026",
-    title: "Sovereign RAG Platforms 2026",
-    description: "Residency, guardrails, and speed without hurting UX",
-    link: "/blog/sovereign-rag-platforms-2026",
-    type: "article",
-    featured: true
-  }
-);
-
-// Highlight newly created articles
-featuredBlogPosts.unshift(
-  {
-    id: "ai-autonomous-ops-blueprint-2026",
-    title: "AI Autonomous Ops Blueprint 2026",
-    description: "Budgets, live traces, and one‑click rollback for safe autonomy",
-    link: "/blog/ai-autonomous-ops-blueprint-2026",
-    type: "article",
-    featured: true
-  },
-  {
-    id: "edge-private-analytics-2026",
-    title: "Edge Private Analytics 2026",
-    description: "Scoped IDs, on‑device metrics, and DP noise without PII",
-    link: "/blog/edge-private-analytics-2026",
-    type: "article",
-    featured: true
-  },
-  {
-    id: "agent-safety-runbooks-2026",
-    title: "Agent Safety Runbooks 2026",
-    description: "Approvals, budgets, and KPI‑linked canary evals",
-    link: "/blog/agent-safety-runbooks-2026",
-    type: "article",
-    featured: true
-  }
-);
-
-export const featuredServices: FeaturedItem[] = [
-  {
-    id: "ai-predictive-maintenance",
-    title: "AI Predictive Maintenance",
-    description: "85% reduction in downtime with 98% prediction accuracy",
-    link: "/services/ai-predictive-maintenance",
-    type: "service",
-    featured: true
-  },
-  {
-    id: "ai-talent-acquisition",
-    title: "AI Talent Acquisition Suite",
-    description: "10x faster hiring with 95% match accuracy",
-    link: "/services/ai-talent-acquisition",
-    type: "service",
-    featured: true
-  },
-  {
-    id: "ai-fraud-prevention",
-    title: "AI Fraud Prevention System",
-    description: "99.95% detection accuracy in sub-100ms",
-    link: "/services/ai-fraud-prevention",
-    type: "service",
-    featured: true
-  },
-  {
-    id: "ai-creative-studio",
-    title: "AI Creative Studio",
-    description: "100x faster content creation at 90% lower cost",
-    link: "/services/ai-creative-studio",
-    type: "service",
-    featured: true
+    id: 'financeflow-automation',
+    title: 'FinanceFlow: AI Workflow Automation Success',
+    excerpt: 'Fintech startup achieves 300% ROI with AI workflow automation platform.',
+    company: 'FinanceFlow Ltd.',
+    industry: 'Fintech',
+    challenge: 'Complex workflow bottlenecks',
+    solution: 'AI Workflow Automation platform',
+    result: '75% process efficiency improvement',
+    metric: '300% ROI in 6 months',
+    featured: true,
+    slug: '/case-studies/financeflow-automation',
+    tags: ['Fintech', 'Workflow Automation', 'ROI', 'Process Efficiency']
   }
 ];
 
-export const getLatestContent = (count: number = 5): FeaturedItem[] => {
-  return [...featuredBlogPosts, ...featuredServices]
-    .filter(item => item.featured)
-    .slice(0, count);
+// Services Configuration
+export const services: Service[] = [
+  {
+    id: 'ai-analytics-platform',
+    title: 'AI Analytics Platform',
+    description: 'Transform data into actionable insights with predictive modeling and real-time dashboards',
+    category: 'AI & Analytics',
+    pricing: {
+      starting: '$199/month',
+      popular: true
+    },
+    features: [
+      'Predictive Analytics',
+      'Real-time Dashboards',
+      'Data Integration',
+      'Automated Reporting',
+      'Machine Learning Models',
+      'Custom Visualizations'
+    ],
+    metrics: [
+      { value: '85%', label: 'Faster Decision Making' },
+      { value: '98%', label: 'Prediction Accuracy' },
+      { value: '300%', label: 'ROI Improvement' }
+    ],
+    testimonial: {
+      quote: 'The AI Analytics Platform transformed how we make decisions. We can now predict trends and optimize operations like never before.',
+      author: 'Sarah Chen',
+      company: 'TechCorp Inc.'
+    },
+    cta: {
+      primary: 'Start Free Trial',
+      secondary: 'View Case Studies'
+    },
+    icon: '📊',
+    featured: true,
+    slug: '/services/ai-analytics-platform',
+    tags: ['Analytics', 'AI', 'Data Visualization', 'Predictive Modeling']
+  },
+  {
+    id: 'ai-workflow-automation',
+    title: 'AI Workflow Automation',
+    description: 'Automate business processes with intelligent workflow design and smart triggers',
+    category: 'AI & Automation',
+    pricing: {
+      starting: '$149/month'
+    },
+    features: [
+      'Process Automation',
+      'Smart Triggers',
+      'Performance Monitoring',
+      'Exception Handling',
+      'Integration APIs',
+      'Custom Workflows'
+    ],
+    metrics: [
+      { value: '75%', label: 'Process Efficiency' },
+      { value: '60%', label: 'Time Savings' },
+      { value: '90%', label: 'Error Reduction' }
+    ],
+    cta: {
+      primary: 'Get Started',
+      secondary: 'View Demo'
+    },
+    icon: '⚙️',
+    featured: true,
+    slug: '/services/ai-workflow-automation',
+    tags: ['Automation', 'Workflow', 'AI', 'Process Optimization']
+  },
+  {
+    id: 'ai-virtual-assistant',
+    title: 'AI Virtual Assistant',
+    description: '24/7 intelligent customer support with natural language processing',
+    category: 'AI & Customer Service',
+    pricing: {
+      starting: '$99/month'
+    },
+    features: [
+      '24/7 Support',
+      'Multi-channel',
+      'Personalized Responses',
+      'Natural Language Processing',
+      'Sentiment Analysis',
+      'Escalation Management'
+    ],
+    metrics: [
+      { value: '95%', label: 'Customer Satisfaction' },
+      { value: '80%', label: 'Faster Response' },
+      { value: '50%', label: 'Cost Reduction' }
+    ],
+    cta: {
+      primary: 'Try Demo',
+      secondary: 'Learn More'
+    },
+    icon: '💬',
+    featured: true,
+    slug: '/services/ai-virtual-assistant',
+    tags: ['AI Assistant', 'Customer Service', 'NLP', 'Automation']
+  },
+  {
+    id: 'cloud-migration',
+    title: 'Cloud Migration',
+    description: 'Seamless migration to cloud infrastructure with zero downtime',
+    category: 'Cloud Services',
+    pricing: {
+      starting: '$2,999'
+    },
+    features: [
+      'Zero Downtime',
+      'Security Compliance',
+      'Cost Optimization',
+      'Performance Monitoring',
+      'Disaster Recovery',
+      'Scalability Planning'
+    ],
+    cta: {
+      primary: 'Get Quote',
+      secondary: 'View Process'
+    },
+    icon: '☁️',
+    featured: false,
+    slug: '/services/cloud-migration',
+    tags: ['Cloud', 'Migration', 'Infrastructure', 'DevOps']
+  },
+  {
+    id: 'devops-automation',
+    title: 'DevOps Automation',
+    description: 'Automate CI/CD pipelines and infrastructure management',
+    category: 'DevOps & Infrastructure',
+    pricing: {
+      starting: '$399/month'
+    },
+    features: [
+      'CI/CD Pipelines',
+      'Infrastructure as Code',
+      'Auto-scaling',
+      'Monitoring & Alerting',
+      'Security Scanning',
+      'Performance Optimization'
+    ],
+    cta: {
+      primary: 'Start Setup',
+      secondary: 'View Benefits'
+    },
+    icon: '🔧',
+    featured: false,
+    slug: '/services/devops-automation',
+    tags: ['DevOps', 'CI/CD', 'Infrastructure', 'Automation']
+  },
+  {
+    id: 'cybersecurity-consulting',
+    title: 'Cybersecurity Consulting',
+    description: 'Advanced threat detection and zero-trust security architecture',
+    category: 'Security & Compliance',
+    pricing: {
+      starting: '$599/month'
+    },
+    features: [
+      'Threat Detection',
+      'Zero-trust Architecture',
+      'Compliance',
+      'Security Audits',
+      'Incident Response',
+      'Security Training'
+    ],
+    cta: {
+      primary: 'Security Audit',
+      secondary: 'View Services'
+    },
+    icon: '🛡️',
+    featured: false,
+    slug: '/services/cybersecurity-consulting',
+    tags: ['Cybersecurity', 'Zero Trust', 'Compliance', 'Threat Detection']
+  }
+];
+
+// Promotional Banners Configuration
+export const promotionalBanners: PromotionalBanner[] = [
+  {
+    id: 'fresh-sep-29-2025-new-posts',
+    message: '🚀 New Today: AI Platform Blueprints 2026 + Edge Personalization 2026',
+    ctaText: 'Read the latest',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-indigo-700 to-teal-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 0
+  },
+  {
+    id: 'fresh-oct-29-2025-ai-sre',
+    message: '🛠️ New: AI SRE Blueprints 2026 + Privacy‑First A/B Testing',
+    ctaText: 'Read the latest',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-indigo-700 to-purple-700',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 0
+  },
+  {
+    id: 'fresh-oct-15-2025',
+    message: '🚀 New: AI Governance Routing Blueprint 2026 + Governance Scorecards Service',
+    ctaText: 'Explore',
+    ctaLink: '/blog/ai-governance-routing-blueprint-2026',
+    backgroundColor: 'bg-gradient-to-r from-indigo-700 to-purple-700',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 0
+  },
+  {
+    id: 'fresh-oct-13-2025-new-content',
+    message: '🚀 New: AI Safety Budgets 2026 + Edge Personalization 2026',
+    ctaText: 'Read the latest',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-indigo-700 to-purple-700',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 0
+  },
+  {
+    id: 'fresh-oct-14-2025',
+    message: '✨ New: AI Safety Budgets 2026 + Edge Personalization 2026',
+    ctaText: 'Explore updates',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-indigo-700 to-purple-700',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 20,
+    active: true,
+    priority: 0
+  },
+  {
+    id: 'fresh-oct-8-2025',
+    message: '✨ New: AI Platform Engineering, Serverless Cost Playbook, Cloud FinOps Guardrails',
+    ctaText: 'Read now',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-indigo-700 to-purple-700',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 20,
+    active: true,
+    priority: 0
+  },
+  {
+    id: 'fresh-oct-12-2025',
+    message: '🚀 New: AI Platform SLOs, RAG Evals in the Loop, Edge Flags 2026',
+    ctaText: 'Explore new content',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-indigo-700 to-purple-700',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 0
+  },
+  {
+    id: 'fresh-content-oct-2025',
+    message: '✨ New: Governance Scorecards 2026, Freshness‑Aware RAG v2, Edge Flags 2026',
+    ctaText: 'Read the latest',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-indigo-600 to-purple-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 15,
+    active: true,
+    priority: 0
+  },
+  {
+    id: 'agentic-workflows-2026-banner',
+    message: '🧩 Agentic Workflows Blueprint 2026: Tools, Traces, Policy Tests',
+    ctaText: 'Read Blueprint',
+    ctaLink: '/blog/agentic-workflows-blueprint-2026',
+    backgroundColor: 'bg-gradient-to-r from-sky-600 to-indigo-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 16,
+    active: true,
+    priority: 0
+  },
+  {
+    id: 'edge-llm-caching-2025-banner',
+    message: '⚡ Edge LLM Caching: Sub‑100ms Prompts with Tiered KV',
+    ctaText: 'Explore Guide',
+    ctaLink: '/blog/edge-llm-caching-blueprint-2025',
+    backgroundColor: 'bg-gradient-to-r from-orange-600 to-amber-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 15,
+    active: true,
+    priority: 1
+  },
+  {
+    id: 'ai-operational-scorecards-2026-banner',
+    message: '📈 AI Operational Scorecards 2026: Guardrails That Drive Outcomes',
+    ctaText: 'See Scorecards',
+    ctaLink: '/blog/ai-operational-scorecards-2026',
+    backgroundColor: 'bg-gradient-to-r from-emerald-600 to-teal-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 1
+  },
+  {
+    id: 'governance-scorecards-2026',
+    message: '📚 AI Governance 2026: Scorecards Engineers Actually Use',
+    ctaText: 'Read Article',
+    ctaLink: '/blog/ai-governance-scorecards-2026',
+    backgroundColor: 'bg-gradient-to-r from-emerald-600 to-teal-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 1
+  },
+  {
+    id: 'freshness-aware-rag-v2',
+    message: '🧭 Freshness‑Aware RAG v2: TTL Budgets and SLAs',
+    ctaText: 'Explore',
+    ctaLink: '/blog/freshness-aware-rag-v2',
+    backgroundColor: 'bg-gradient-to-r from-cyan-600 to-blue-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 16,
+    active: true,
+    priority: 2
+  },
+  {
+    id: 'edge-flags-blueprint-2026',
+    message: '⚡ Edge Flags Blueprint 2026: <100ms Global Releases',
+    ctaText: 'Read Blueprint',
+    ctaLink: '/blog/edge-flags-blueprint-2026',
+    backgroundColor: 'bg-gradient-to-r from-purple-600 to-pink-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 16,
+    active: true,
+    priority: 2
+  },
+  {
+    id: 'new-blog-banner',
+    message: '🔥 New: AI Platform Engineering 2025 + Secure ML Supply Chain',
+    ctaText: 'Read Now',
+    ctaLink: '/blog/ai-platform-engineering-2025',
+    backgroundColor: 'bg-gradient-to-r from-orange-600 to-red-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 15,
+    active: true,
+    priority: 1
+  },
+  {
+    id: 'ai-risk-register-banner',
+    message: '🛡️ New: AI Risk Register That Drives Action',
+    ctaText: 'Read Playbook',
+    ctaLink: '/blog/ai-risk-register-2025',
+    backgroundColor: 'bg-gradient-to-r from-red-600 to-rose-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 16,
+    active: true,
+    priority: 1
+  },
+  {
+    id: 'practical-evals-banner',
+    message: '📈 Practical AI Evals That Predict Outcomes',
+    ctaText: 'See Scorecards',
+    ctaLink: '/blog/practical-evals-scorecards-2025',
+    backgroundColor: 'bg-gradient-to-r from-emerald-600 to-teal-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 2
+  },
+  {
+    id: 'analytics-platform-banner',
+    message: '🚀 Launch: AI Analytics Platform - Transform Data into Actionable Insights',
+    ctaText: 'Explore Platform',
+    ctaLink: '/services/ai-analytics-platform',
+    backgroundColor: 'bg-gradient-to-r from-teal-600 to-cyan-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 2
+  },
+  {
+    id: 'techcorp-success-banner',
+    message: '🏆 Success Story: TechCorp Achieved 90% Efficiency Gain with AI Transformation',
+    ctaText: 'View Case Study',
+    ctaLink: '/case-studies/techcorp-ai-transformation',
+    backgroundColor: 'bg-gradient-to-r from-green-600 to-emerald-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 20,
+    active: true,
+    priority: 3
+  },
+  {
+    id: 'free-trial-banner',
+    message: '🎯 Limited Time: 30-Day Free Trial for AI Analytics Platform - No Credit Card Required',
+    ctaText: 'Start Free Trial',
+    ctaLink: '/services/ai-analytics-platform#pricing',
+    backgroundColor: 'bg-gradient-to-r from-yellow-600 to-orange-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: false,
+    hideAfter: 0,
+    active: true,
+    priority: 4
+  },
+  {
+    id: 'cloud-finops-guardrails-banner',
+    message: '💸 Cloud FinOps Guardrails Engineers Actually Use',
+    ctaText: 'Cut Spend',
+    ctaLink: '/blog/cloud-finops-guardrails-2025',
+    backgroundColor: 'bg-gradient-to-r from-sky-600 to-blue-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 16,
+    active: true,
+    priority: 2
+  },
+  {
+    id: 'practical-evals-2025-banner',
+    message: '📈 Practical AI Evals That Predict Business Outcomes',
+    ctaText: 'See Scorecards',
+    ctaLink: '/blog/practical-evals-scorecards-2025',
+    backgroundColor: 'bg-gradient-to-r from-indigo-600 to-purple-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 16,
+    active: true,
+    priority: 2
+  },
+  {
+    id: 'serverless-inference-costs-banner',
+    message: '🧰 Serverless Inference Cost Playbook',
+    ctaText: 'Optimize',
+    ctaLink: '/blog/serverless-inference-cost-playbook-2025',
+    backgroundColor: 'bg-gradient-to-r from-emerald-600 to-teal-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 16,
+    active: true,
+    priority: 3
+  }
+  ,
+  {
+    id: 'fresh-oct-16-2025-privacy-bluegreen',
+    message: '🔐 New: Privacy‑First Insights 2026 + Blue‑Green Agent Releases 2026',
+    ctaText: 'Explore',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-cyan-700 to-emerald-700',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 0
+  },
+  {
+    id: 'fresh-oct-13-2025-new',
+    message: '🚀 New: Secure ML Supply Chain, GenAI Routing, Golden Paths ROI',
+    ctaText: 'Explore the latest',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-indigo-700 to-purple-700',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 0
+  },
+  {
+    id: 'fresh-oct-13-2025',
+    message: '🚀 New: Secure ML Supply Chain, GenAI Routing, Golden Paths ROI',
+    ctaText: 'Explore the latest',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-indigo-700 to-purple-700',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 0
+  },
+  {
+    id: 'fresh-content-oct-2025',
+    message: '🚀 Fresh: Serverless Inference, Production RAG, Secure GenAI',
+    ctaText: 'Read the latest',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-cyan-600 to-blue-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 20,
+    active: true,
+    priority: 0
+  },
+  {
+    id: 'ai-incident-response-playbooks-2025',
+    message: '🛡️ NEW: AI Incident Response Playbooks 2025 - Budgeted Actions & Approvals',
+    ctaText: 'Read Playbooks',
+    ctaLink: '/blog/ai-incident-response-playbooks-2025',
+    backgroundColor: 'bg-gradient-to-r from-red-600 to-orange-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 20,
+    active: true,
+    priority: 0
+  },
+  {
+    id: 'privacy-preserving-analytics-2025',
+    message: '🔒 NEW: Privacy-Preserving Analytics - DP-Backed Telemetry You Can Ship Today',
+    ctaText: 'Explore Guide',
+    ctaLink: '/blog/privacy-preserving-analytics-2025',
+    backgroundColor: 'bg-gradient-to-r from-indigo-600 to-purple-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 1
+  },
+  {
+    id: 'edge-llm-caching-2026',
+    message: '⚡ NEW: Edge LLM Caching Blueprint 2026 - Sub-100ms Prompts at Scale',
+    ctaText: 'Read Blueprint',
+    ctaLink: '/blog/edge-llm-caching-blueprint-2026',
+    backgroundColor: 'bg-gradient-to-r from-green-600 to-emerald-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 1
+  },
+  {
+    id: 'ai-autonomous-infrastructure-service',
+    message: '🤖 NEW SERVICE: AI Autonomous Infrastructure Platform - Self-Healing Systems',
+    ctaText: 'Explore Service',
+    ctaLink: '/services/ai-autonomous-infrastructure-platform',
+    backgroundColor: 'bg-gradient-to-r from-blue-600 to-cyan-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 22,
+    active: true,
+    priority: 1
+  },
+  {
+    id: 'quantum-ai-hybrid-computing-service',
+    message: '⚛️ NEW SERVICE: Quantum-AI Hybrid Computing - 1000x Faster Problem Solving',
+    ctaText: 'Learn More',
+    ctaLink: '/services/quantum-ai-hybrid-computing',
+    backgroundColor: 'bg-gradient-to-r from-purple-600 to-pink-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 22,
+    active: true,
+    priority: 2
+  },
+  {
+    id: 'zero-trust-security-ai-service',
+    message: '🔐 NEW SERVICE: Zero Trust Security with AI - 90% Incident Reduction',
+    ctaText: 'Get Protected',
+    ctaLink: '/services/zero-trust-security-ai',
+    backgroundColor: 'bg-gradient-to-r from-gray-700 to-gray-900',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 22,
+    active: true,
+    priority: 2
+  },
+  {
+    id: 'ai-governance-scorecards-service',
+    message: '📊 NEW SERVICE: AI Governance Scorecards - 100% Compliance Automation',
+    ctaText: 'Start Governance',
+    ctaLink: '/services/ai-governance-scorecards',
+    backgroundColor: 'bg-gradient-to-r from-teal-600 to-cyan-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 22,
+    active: true,
+    priority: 3
+  }
+];
+
+// Utility functions for content management
+export const getFeaturedContent = () => {
+  return {
+    blogPosts: blogPosts.filter(post => post.featured),
+    caseStudies: caseStudies.filter(study => study.featured),
+    services: services.filter(service => service.featured)
+  };
 };
 
-// Surface brand-new articles at the very top of featured content
-featuredBlogPosts.unshift(
-  {
-    id: "ai-governance-live-scorecards-2026",
-    title: "AI Governance Live Scorecards 2026",
-    description: "CI policy tests + live scorecards preventing regressions before they ship",
-    link: "/blog/ai-governance-live-scorecards-2026",
-    type: "article",
-    featured: true
-  },
-  {
-    id: "edge-real-time-personalization-2026",
-    title: "Edge Real‑Time Personalization 2026",
-    description: "Private <100ms personalization with scoped IDs and on‑device metrics",
-    link: "/blog/edge-real-time-personalization-2026",
-    type: "article",
-    featured: true
-  },
-  {
-    id: "agent-release-runbooks-2026",
-    title: "Agent Release Runbooks 2026",
-    description: "Approvals, budgets, and instant rollback for safe autonomous releases",
-    link: "/blog/agent-release-runbooks-2026",
-    type: "article",
-    featured: true
-  }
-);
+export const getActiveBanners = () => {
+  return promotionalBanners
+    .filter(banner => banner.active)
+    .sort((a, b) => a.priority - b.priority);
+};
+
+export const getContentByTag = (tag: string) => {
+  return {
+    blogPosts: blogPosts.filter(post => post.tags.includes(tag)),
+    caseStudies: caseStudies.filter(study => study.tags.includes(tag)),
+    services: services.filter(service => service.tags.includes(tag))
+  };
+};
+
+// Import new content
+import { newBlogPosts2025, featuredBlogPosts, trendingBlogPosts } from './new-blog-posts-2025';
+import { newServices2025, featuredServices, trendingServices } from './new-services-2025';
+
+export const getRecentContent = (limit: number = 3) => {
+  const allContent = [
+    ...blogPosts.map(post => ({ ...post, type: 'blog' as const })),
+    ...newBlogPosts2025.map(post => ({ ...post, type: 'blog' as const, date: post.publishedAt })),
+    ...caseStudies.map(study => ({ ...study, type: 'case-study' as const })),
+    ...services.map(service => ({ ...service, type: 'service' as const })),
+    ...newServices2025.map(service => ({ ...service, type: 'service' as const, date: '2025-01-30' }))
+  ];
+  
+  return allContent
+    .sort((a, b) => {
+      const aTime = 'date' in a ? new Date((a as any).date).getTime() : 0;
+      const bTime = 'date' in b ? new Date((b as any).date).getTime() : 0;
+      return bTime - aTime;
+    })
+    .slice(0, limit);
+};
+
+// Export new content for use in components
+export { newBlogPosts2025, featuredBlogPosts, trendingBlogPosts, newServices2025, featuredServices, trendingServices };
