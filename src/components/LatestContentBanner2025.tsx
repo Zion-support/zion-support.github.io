@@ -5,64 +5,64 @@ import { motion } from "framer-motion";
 const LatestContentBanner2025 = () => {
   const newArticles = [
     {
+      title: "Autonomous Code Refactoring 2026",
+      description: "Self-Healing Codebases at Scale",
+      slug: "autonomous-code-refactoring-2026",
+      category: "AI Engineering"
+    },
+    {
+      title: "Quantum-ML Hybrid Computing 2026",
+      description: "1000x Speedup for Optimization",
+      slug: "quantum-ml-hybrid-computing-2026",
+      category: "Quantum Computing"
+    },
+    {
+      title: "Neuromorphic Edge AI 2026",
+      description: "Brain-Inspired Computing at 10,000x Efficiency",
+      slug: "neuromorphic-edge-ai-2026",
+      category: "Edge Computing"
+    },
+    {
+      title: "Swarm Intelligence Robotics 2026",
+      description: "Coordinated Autonomous Systems",
+      slug: "swarm-intelligence-robotics-2026",
+      category: "Robotics"
+    },
+    {
+      title: "AI Drug Discovery 2026",
+      description: "From Years to Months with 100x Acceleration",
+      slug: "ai-drug-discovery-acceleration-2026",
+      category: "Healthcare AI"
+    },
+    {
+      title: "Generative UI Systems 2026",
+      description: "Self-Designing Adaptive Interfaces",
+      slug: "generative-ui-systems-2026",
+      category: "UX AI"
+    },
+    {
+      title: "Cognitive AI Assistants 2026",
+      description: "Human-Level Understanding at Scale",
+      slug: "cognitive-ai-assistants-2026",
+      category: "Conversational AI"
+    },
+    {
+      title: "Autonomous Supply Chain 2026",
+      description: "AI-Driven Logistics Achieving 40% Cost Reduction",
+      slug: "autonomous-supply-chain-optimization-2026",
+      category: "Supply Chain"
+    },
+    {
       title: "AI Composite Agents 2026",
       description: "Multi-Model Intelligence Orchestration",
       slug: "ai-composite-agents-2026",
       category: "AI Engineering"
     },
     {
-      title: "Cognitive Load Optimization AI 2026",
-      description: "Reducing Human Decision Fatigue",
-      slug: "cognitive-load-optimization-ai-2026",
-      category: "Human-Centered AI"
-    },
-    {
-      title: "AI Contract Intelligence 2026",
-      description: "Automated Legal Analysis at Scale",
-      slug: "ai-contract-intelligence-2026",
-      category: "Legal Tech"
-    },
-    {
-      title: "AI-Powered Incident Prediction 2026",
-      description: "Preventing Outages Before They Happen",
-      slug: "ai-powered-incident-prediction-2026",
-      category: "Site Reliability"
-    },
-    {
       title: "Real-Time Personalization at the Edge 2026",
       description: "Sub-50ms Adaptive Experiences",
       slug: "real-time-personalization-edge-2026",
       category: "Edge Computing"
-    },
-    {
-      title: "AI Observability Revolution 2026",
-      description: "Full-Stack Intelligence Monitoring",
-      slug: "ai-observability-revolution-2026",
-      category: "Observability"
-    },
-    {
-      title: "Blockchain-AI Convergence 2026",
-      description: "Decentralized Intelligence Networks",
-      slug: "blockchain-ai-convergence-2026",
-      category: "Blockchain"
-    },
-    {
-      title: "Hyper-Personalization Engine 2026",
-      description: "Real-Time Adaptive User Experiences",
-      slug: "hyper-personalization-engine-2026",
-      category: "User Experience"
-    },
-    {
-      title: "Sustainable AI Computing 2026",
-      description: "Green AI for Carbon-Neutral Operations",
-      slug: "sustainable-ai-computing-2026",
-      category: "Sustainability"
-    },
-    {
-      title: "AI-Powered Data Mesh Architecture 2026",
-      description: "Distributed Data Intelligence",
-      slug: "ai-data-mesh-architecture-2026",
-      category: "Data Architecture"
     }
   ];
 
@@ -95,11 +95,11 @@ const LatestContentBanner2025 = () => {
         </div>
 
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-          🚀 September 30, 2025 — LATEST CONTENT DROP!
+          🚀 September 30, 2025 — REVOLUTIONARY CONTENT DROP!
         </h2>
         <p className="text-xl text-blue-100 mb-8 max-w-3xl">
-          Discover <span className="font-bold text-yellow-300">5 BRAND NEW groundbreaking articles</span> on AI Composite Agents, Cognitive Load Optimization, Contract Intelligence, Incident Prediction, and Edge Personalization. 
-          Plus explore our expanded library of <span className="font-bold text-yellow-300">15+ cutting-edge articles</span> shaping 2026!
+          Discover <span className="font-bold text-yellow-300">8 BRAND NEW groundbreaking articles</span> on Autonomous Code Refactoring, Quantum-ML Computing, Neuromorphic Edge AI, Swarm Robotics, AI Drug Discovery, Generative UI, Cognitive Assistants, and Autonomous Supply Chain! 
+          Plus explore our expanded library of <span className="font-bold text-yellow-300">20+ cutting-edge articles</span> shaping 2026!
         </p>
 
         {/* Featured highlights */}
@@ -155,15 +155,15 @@ const LatestContentBanner2025 = () => {
         {/* Stats */}
         <div className="mt-8 pt-6 border-t border-white/20 flex flex-wrap gap-8">
           <div className="text-center">
-            <div className="text-3xl font-bold text-yellow-300">5</div>
+            <div className="text-3xl font-bold text-yellow-300">8</div>
             <div className="text-sm text-blue-200">NEW Articles TODAY</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-green-300">15+</div>
+            <div className="text-3xl font-bold text-green-300">20+</div>
             <div className="text-sm text-blue-200">Total Latest Articles</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-purple-300">150+</div>
+            <div className="text-3xl font-bold text-purple-300">200+</div>
             <div className="text-sm text-blue-200">Pages of Insights</div>
           </div>
           <div className="text-center">

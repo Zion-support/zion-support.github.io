@@ -122,7 +122,7 @@ const Home = () => {
               <div className="inline-flex items-center gap-3 px-8 py-3 rounded-full bg-white/20 border border-white/40 mb-6 animate-pulse">
                 <Sparkles className="w-6 h-6 text-white" />
                 <span className="text-white font-black text-xl tracking-wider uppercase">
-                  🔥 10 REVOLUTIONARY NEW ARTICLES JUST PUBLISHED! 🔥
+                  🔥 8 REVOLUTIONARY NEW ARTICLES JUST PUBLISHED! 🔥
                 </span>
                 <Sparkles className="w-6 h-6 text-white" />
               </div>
@@ -139,7 +139,7 @@ const Home = () => {
                   className="bg-white text-orange-600 px-10 py-5 rounded-xl font-black text-2xl hover:bg-yellow-50 transition-all duration-300 hover:scale-110 shadow-2xl inline-flex items-center gap-3"
                 >
                   <Rocket className="w-8 h-8" />
-                  <span>Explore All 10 Articles Now</span>
+                  <span>Explore All 8 New Articles Now</span>
                   <ArrowRight className="w-8 h-8" />
                 </Link>
               </div>
@@ -446,11 +446,11 @@ const Home = () => {
             <div className="bg-gradient-to-r from-purple-600/30 to-pink-600/30 border-2 border-purple-400/60 rounded-3xl p-12 mb-8 animate-fade-in shadow-2xl">
               <div className="flex items-center justify-center gap-4 mb-6">
                 <Zap className="w-12 h-12 text-yellow-400 animate-pulse" />
-                <span className="text-4xl font-black text-white drop-shadow-lg">🚀 10 GAME-CHANGING AI BREAKTHROUGHS LIVE NOW!</span>
+                <span className="text-4xl font-black text-white drop-shadow-lg">🚀 8 GAME-CHANGING AI BREAKTHROUGHS LIVE NOW!</span>
                 <Zap className="w-12 h-12 text-yellow-400 animate-pulse" />
               </div>
               <p className="text-white text-2xl font-bold mb-6 text-center">
-                💥 September 30, 2025 — The Biggest Content Drop of the Year!
+                💥 September 30, 2025 — Revolutionary Content Drop!
               </p>
               <p className="text-gray-100 text-xl mb-8 text-center max-w-5xl mx-auto leading-relaxed">
                 Discover revolutionary breakthroughs in <strong className="text-yellow-300">AI Autonomous Code Refactoring</strong>, 
@@ -462,7 +462,7 @@ const Home = () => {
                 <strong className="text-white"> These innovations will define the next decade of technology!</strong>
               </p>
               
-              <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
                 <div className="bg-gradient-to-br from-blue-500/30 to-cyan-500/30 backdrop-blur-sm rounded-xl p-4 border-2 border-cyan-400/40 hover:scale-105 transition-all">
                   <div className="text-4xl mb-2">🤖</div>
                   <div className="text-cyan-300 text-sm font-bold mb-1">AI Engineering</div>
@@ -488,23 +488,16 @@ const Home = () => {
                   <div className="text-4xl mb-2">🤝</div>
                   <div className="text-orange-300 text-sm font-bold mb-1">Swarm Intelligence</div>
                   <div className="text-white font-bold text-sm">Coordinated Robotics</div>
-                  <div className="text-xs text-gray-200 mt-1">1000x efficiency improvement</div>
+                  <div className="text-xs text-gray-200 mt-1">1000+ autonomous agents</div>
                 </div>
-                
+              </div>
+              
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
                 <div className="bg-gradient-to-br from-teal-500/30 to-blue-500/30 backdrop-blur-sm rounded-xl p-4 border-2 border-teal-400/40 hover:scale-105 transition-all">
                   <div className="text-4xl mb-2">💊</div>
                   <div className="text-teal-300 text-sm font-bold mb-1">Healthcare AI</div>
                   <div className="text-white font-bold text-sm">Drug Discovery 100x</div>
                   <div className="text-xs text-gray-200 mt-1">Years to months acceleration</div>
-                </div>
-              </div>
-              
-              <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
-                <div className="bg-gradient-to-br from-indigo-500/30 to-violet-500/30 backdrop-blur-sm rounded-xl p-4 border-2 border-indigo-400/40 hover:scale-105 transition-all">
-                  <div className="text-4xl mb-2">🎯</div>
-                  <div className="text-indigo-300 text-sm font-bold mb-1">Site Reliability</div>
-                  <div className="text-white font-bold text-sm">Incident Prediction AI</div>
-                  <div className="text-xs text-gray-200 mt-1">98% accuracy, zero downtime</div>
                 </div>
                 
                 <div className="bg-gradient-to-br from-yellow-500/30 to-amber-500/30 backdrop-blur-sm rounded-xl p-4 border-2 border-yellow-400/40 hover:scale-105 transition-all">
@@ -521,13 +514,6 @@ const Home = () => {
                   <div className="text-xs text-gray-200 mt-1">Self-designing interfaces</div>
                 </div>
                 
-                <div className="bg-gradient-to-br from-sky-500/30 to-blue-500/30 backdrop-blur-sm rounded-xl p-4 border-2 border-sky-400/40 hover:scale-105 transition-all">
-                  <div className="text-4xl mb-2">⚖️</div>
-                  <div className="text-sky-300 text-sm font-bold mb-1">Legal Tech</div>
-                  <div className="text-white font-bold text-sm">Contract Intelligence</div>
-                  <div className="text-xs text-gray-200 mt-1">99.8% accuracy, 95% faster</div>
-                </div>
-                
                 <div className="bg-gradient-to-br from-lime-500/30 to-green-500/30 backdrop-blur-sm rounded-xl p-4 border-2 border-lime-400/40 hover:scale-105 transition-all">
                   <div className="text-4xl mb-2">💬</div>
                   <div className="text-lime-300 text-sm font-bold mb-1">Conversational AI</div>
@@ -542,7 +528,7 @@ const Home = () => {
                   className="bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 text-white px-12 py-5 rounded-xl font-black text-2xl hover:from-yellow-500 hover:via-orange-600 hover:to-red-600 transition-all shadow-2xl hover:shadow-3xl text-center inline-flex items-center justify-center gap-3"
                 >
                   <Rocket className="w-8 h-8" />
-                  🚀 Read All 10 Revolutionary Articles Now
+                  🚀 Read All 8 Revolutionary Articles Now
                   <ArrowRight className="w-8 h-8" />
                 </Link>
               </div>
