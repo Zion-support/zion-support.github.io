@@ -10,6 +10,33 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "production-rag-quality-budgets-2026",
+    title: "Production RAG: Quality Budgets, Freshness Windows, and SLAs",
+    description: "Run RAG at scale with explicit quality budgets, freshness controls, and KPI-aligned SLAs that avoid regressions.",
+    category: "GenAI",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "serverless-inference-cost-playbook-2025",
+    title: "Serverless Inference Cost Playbook",
+    description: "Adaptive batching, warm pools, and quality tiers without P95 pain.",
+    category: "GenAI",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "golden-paths-roi-2026",
+    title: "Golden Paths ROI 2026: Scorecards that Prove Platform Value",
+    description: "Link developer journeys to SLOs, adoption, and revenue with actionable scorecards.",
+    category: "Platform Engineering",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
     slug: "ai-2025-sept-30-autonomous-control-planes",
     title: "AI 2025: Autonomous Control Planes — Budgets, Gates, Rollback",
     description: "Design budget-aware, policy-gated AI platforms with instant rollback and KPI-linked guardrails.",
