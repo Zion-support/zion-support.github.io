@@ -128,6 +128,21 @@ const Home = () => {
         
         <NewContentAnnouncement />
         
+        {/* October 2025 - BREAKTHROUGH AI CONTENT */}
+        <NewContentPromoBanner 
+          className="border-b border-white/10" 
+          variant="premium" 
+          title="🚀 BREAKTHROUGH: Production AI Guides — Cut Costs 60%, Ship Agents Reliably"
+          description="NEW October 2025: Complete production guides for agentic workflows, LLM evaluation frameworks, and AI infrastructure cost optimization. Battle-tested strategies from companies saving millions annually."
+          ctaText="Read Latest Guides"
+          ctaLink="/blog"
+          featuredItems={[
+            { title: "Agentic Workflows in Production — Ship Reliable AI Agents with 99.9% Uptime", category: "AI Architecture", link: "/blog/ai-2025-oct-agentic-workflows-production-guide" },
+            { title: "LLM Evaluation Frameworks 2025 — Reduce Hallucinations 75%", category: "AI Quality", link: "/blog/ai-2025-oct-llm-evaluation-frameworks" },
+            { title: "AI Infrastructure Cost Optimization — Cut Spending 60% Without Quality Loss", category: "AI Operations", link: "/blog/ai-2025-oct-ai-infrastructure-cost-optimization" }
+          ]}
+        />
+        
         {/* September 30, 2025 - NEW Content Launch */}
         <NewContentPromoBanner 
           className="border-b border-white/10" 
@@ -224,7 +239,7 @@ const Home = () => {
             </h1>
 
             <p className="text-xl md:text-2xl text-zion-slate-light mb-8 leading-relaxed max-w-3xl mx-auto animate-fade-in">
-              🚀 <strong>BREAKTHROUGH 2025:</strong> NEW Content Just Released! Enterprise AI Intelligence, Cybersecurity Revolution & $40B in Success Stories! 
+              🚀 <strong>BREAKTHROUGH OCTOBER 2025:</strong> NEW Production AI Guides Just Released! Ship reliable AI agents, reduce hallucinations 75%, and cut infrastructure costs 60%! 
               Transform your business with proven AI solutions delivering $50B+ in client results. 
               Join 500+ companies achieving 400-600% ROI with our expert guidance!
             </p>
@@ -258,40 +273,40 @@ const Home = () => {
               </div>
             </div>
 
-            {/* New Content Announcement */}
+            {/* New Content Announcement - October 2025 */}
             <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-xl p-6 mb-8 animate-fade-in">
               <div className="flex items-center justify-center gap-3 mb-3">
                 <Sparkles className="w-6 h-6 text-purple-400 animate-pulse" />
-                <span className="text-lg font-bold text-purple-400">🚀 NEW BREAKTHROUGH CONTENT</span>
+                <span className="text-lg font-bold text-purple-400">🔥 OCTOBER 2025: PRODUCTION AI EXCELLENCE</span>
                 <Sparkles className="w-6 h-6 text-purple-400 animate-pulse" />
               </div>
               <p className="text-white text-lg font-semibold mb-2">
-                🎯 Just Published: AI Autonomous Cost Intelligence, Conversational Commerce Revolution, Predictive Infrastructure Orchestration & More!
+                ⚡ JUST RELEASED: Complete production guides for reliable agentic workflows (99.9% uptime), robust LLM evaluation (75% fewer hallucinations), and AI cost optimization (60% savings)!
               </p>
               <p className="text-zion-slate-light text-sm mb-4">
-                Discover how to reduce cloud spending by 60%, achieve 3.5x higher conversion rates with AI commerce, and reach 99.999% uptime with predictive orchestration—plus breakthrough insights on self-healing systems, quantum computing, and zero trust security.
+                Battle-tested patterns from companies saving millions annually. Ship AI agents with confidence, ensure consistent quality, and dramatically reduce infrastructure costs without sacrificing performance.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link
                   to="/blog"
                   className="bg-purple-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-purple-600 transition-colors text-center"
                 >
-                  Read Latest Articles
+                  Read Production Guides
                 </Link>
                 <Link
-                  to="/case-studies"
+                  to="/contact"
                   className="border border-purple-400 text-purple-400 px-6 py-2 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-colors text-center"
                 >
-                  View Success Stories
+                  Get Expert Help
                 </Link>
               </div>
               <div className="mt-4 flex flex-wrap gap-2 justify-center">
-                <span className="bg-green-100/20 text-green-200 px-3 py-1 rounded-full text-xs font-medium border border-green-300/20">Cost Intelligence</span>
-                <span className="bg-purple-100/20 text-purple-200 px-3 py-1 rounded-full text-xs font-medium border border-purple-300/20">AI Infrastructure</span>
-                <span className="bg-pink-100/20 text-pink-200 px-3 py-1 rounded-full text-xs font-medium border border-pink-300/20">Conversational Commerce</span>
-                <span className="bg-blue-100/20 text-blue-200 px-3 py-1 rounded-full text-xs font-medium border border-blue-300/20">Zero Trust Security</span>
-                <span className="bg-indigo-100/20 text-indigo-200 px-3 py-1 rounded-full text-xs font-medium border border-indigo-300/20">Predictive Ops</span>
-                <span className="bg-cyan-100/20 text-cyan-200 px-3 py-1 rounded-full text-xs font-medium border border-cyan-300/20">DevOps Excellence</span>
+                <span className="bg-emerald-100/20 text-emerald-200 px-3 py-1 rounded-full text-xs font-medium border border-emerald-300/20">Agentic Workflows</span>
+                <span className="bg-purple-100/20 text-purple-200 px-3 py-1 rounded-full text-xs font-medium border border-purple-300/20">LLM Evaluation</span>
+                <span className="bg-blue-100/20 text-blue-200 px-3 py-1 rounded-full text-xs font-medium border border-blue-300/20">Cost Optimization</span>
+                <span className="bg-pink-100/20 text-pink-200 px-3 py-1 rounded-full text-xs font-medium border border-pink-300/20">Production Patterns</span>
+                <span className="bg-indigo-100/20 text-indigo-200 px-3 py-1 rounded-full text-xs font-medium border border-indigo-300/20">Quality Frameworks</span>
+                <span className="bg-cyan-100/20 text-cyan-200 px-3 py-1 rounded-full text-xs font-medium border border-cyan-300/20">AI Infrastructure</span>
               </div>
             </div>
           </div>
