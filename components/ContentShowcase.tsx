@@ -460,6 +460,26 @@ const contentItems: ContentItem[] = [
 // Newly added featured content to advertise on the homepage
 contentItems.unshift(
   {
+    id: 'ai-2026-safe-autonomy-scorecards',
+    title: 'AI 2026 Safe Autonomy Scorecards: KPIs, Budgets, Rollback',
+    excerpt: 'Executable scorecards link outcomes to guardrails and one-click rollback for safe autonomy.',
+    readTime: '12 min read',
+    category: 'AI Governance',
+    href: '/blog/ai-2026-safe-autonomy-scorecards',
+    featured: true,
+    publishedDate: '2025-09-30'
+  },
+  {
+    id: 'edge-2026-zero-pii-analytics',
+    title: 'Edge 2026 Zero‑PII Analytics: Scoped IDs, DP Noise, <100ms',
+    excerpt: 'On-device aggregation + scoped IDs + DP noise deliver private insights at <100ms.',
+    readTime: '9 min read',
+    category: 'Analytics',
+    href: '/blog/edge-2026-zero-pii-analytics',
+    featured: true,
+    publishedDate: '2025-09-30'
+  },
+  {
     id: 'ai-governance-real-time-2026',
     title: 'AI Governance in Real Time 2026: Live Canaries + PR Policy Tests',
     excerpt: 'Wire KPI‑linked canaries and CI policy tests so teams ship weekly without regressions.',
