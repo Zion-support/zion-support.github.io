@@ -32,6 +32,8 @@ export default function ContentHubPage() {
         { title: 'AI Implementation Playbook 2026', slug: '/blog/ai-implementation-playbook-2026', readTime: '16 min', featured: true },
         { title: 'AI Multimodal Enterprise Solutions 2026', slug: '/blog/ai-multimodal-enterprise-2026', readTime: '15 min', featured: true },
         { title: 'AI Governance Maturity Model 2026', slug: '/blog/ai-governance-maturity-model-2026', readTime: '14 min', featured: true },
+        { title: 'AI Enterprise GenAI Agent Platform 2026', slug: '/blog/ai-enterprise-genai-agent-platform-2026', readTime: '20 min', featured: true },
+        { title: 'AI Voice Interfaces Enterprise 2026', slug: '/blog/ai-voice-interfaces-enterprise-2026', readTime: '18 min', featured: true },
         { title: 'AI Autonomous Agents 2025', slug: '/blog/ai-autonomous-agents-2025', readTime: '18 min', featured: false },
         { title: 'AI Governance Framework 2025', slug: '/blog/ai-governance-framework-2025', readTime: '15 min', featured: false },
       ]

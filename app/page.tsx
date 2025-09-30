@@ -268,7 +268,7 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link href="/blog/ai-enterprise-rag-guardrails-2026" className="group">
+            <Link href="/blog/ai-voice-interfaces-enterprise-2026" className="group">
               <div className="bg-white text-gray-900 rounded-xl p-6 shadow-2xl hover:shadow-3xl transition-all transform hover:-translate-y-1">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center">
