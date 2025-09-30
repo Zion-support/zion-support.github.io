@@ -31,10 +31,23 @@ import NewContent2026AdvertisingMegaBanner from "./components/NewContent2026Adve
 import InteractiveContentShowcase2026 from "./components/InteractiveContentShowcase2026";
 import February2026ContentMegaBanner from "./components/February2026ContentMegaBanner";
 import NewContent2026BreakthroughShowcaseBanner from "./components/NewContent2026BreakthroughShowcaseBanner";
+// NEW MARCH 2026 BREAKTHROUGH COMPONENTS
+import March2026RevolutionaryBreakthroughBanner from "./components/March2026RevolutionaryBreakthroughBanner";
+import QuantumConsciousnessFusionBanner from "./components/QuantumConsciousnessFusionBanner";
+import NewContentShowcase2026 from "./components/NewContentShowcase2026";
 
 export default function App(): JSX.Element {
   return (
     <div className="min-h-screen bg-slate-950">
+      {/* NEW: March 2026 Revolutionary Breakthrough Banner - MOST PROMINENT */}
+      <March2026RevolutionaryBreakthroughBanner />
+      
+      {/* NEW: Quantum Consciousness Fusion Banner - REVOLUTIONARY TECHNOLOGY */}
+      <QuantumConsciousnessFusionBanner />
+      
+      {/* NEW: Content Showcase 2026 - LATEST CONTENT */}
+      <NewContentShowcase2026 />
+      
       {/* NEW: Revolutionary 2026 Content Mega Breakthrough Banner - Most Prominent */}
       <Revolutionary2026ContentMegaBreakthroughBanner />
       
