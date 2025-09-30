@@ -100,6 +100,18 @@ const featuredContent: ContentItem[] = [
     publishedDate: 'September 30, 2025',
     readTime: '15 min read',
     category: 'Data & AI Architecture'
+  },
+  {
+    id: '8',
+    title: 'Autonomous Data Governance 2026: Policies-as-Code & Continuous Compliance',
+    description: 'Encode policies, enforce at gates, and verify with lineage and audits for safer AI.',
+    link: '/blog/ai-2026-autonomous-data-governance',
+    badge: 'New',
+    badgeColor: 'bg-gradient-to-r from-teal-600 to-emerald-600',
+    icon: '🛡️',
+    publishedDate: 'September 30, 2025',
+    readTime: '16 min read',
+    category: 'Data Governance'
   }
 ];
 
