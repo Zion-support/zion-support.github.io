@@ -99,6 +99,8 @@ import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
 import Revolutionary2026ContentMegaBanner from '../components/Revolutionary2026ContentMegaBanner';
 import AI2027RevolutionaryBreakthroughBanner from '../components/AI2027RevolutionaryBreakthroughBanner';
+import { AI2027QuantumBreakthroughBanner } from '../components/AI2027QuantumBreakthroughBanner';
+import { Ultimate2027ContentShowcaseBanner } from '../components/Ultimate2027ContentShowcaseBanner';
 import Latest2026InnovationsBanner from '../components/Latest2026InnovationsBanner';
 import NewestContent2025Banner from '../components/NewestContent2025Banner';
 import September30FreshContent2025Banner from '../components/September30FreshContent2025Banner';
@@ -181,6 +183,12 @@ export default function HomePage() {
       <div className="animate-fade-in">
       {/* 🚀 AI 2027 REVOLUTIONARY BREAKTHROUGH BANNER */}
       <AI2027RevolutionaryBreakthroughBanner />
+      
+      {/* ⚛️ AI 2027 QUANTUM BREAKTHROUGH BANNER */}
+      <AI2027QuantumBreakthroughBanner />
+      
+      {/* 🎯 ULTIMATE 2027 CONTENT SHOWCASE BANNER */}
+      <Ultimate2027ContentShowcaseBanner />
       
       {/* 🚀 ULTIMATE CONTENT SHOWCASE 2026 */}
       <UltimateContentShowcase2026 />

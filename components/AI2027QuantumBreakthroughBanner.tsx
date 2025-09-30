@@ -1,101 +1,51 @@
 import React from 'react';
 import Link from 'next/link';
 
-export default function AI2027QuantumBreakthroughBanner() {
+export function AI2027QuantumBreakthroughBanner() {
   return (
-    <div className="bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-16">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-12">
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-              QUANTUM BREAKTHROUGH 2027
-            </span>
-            <span className="bg-yellow-400 text-black px-4 py-2 rounded-full text-sm font-semibold">
-              WORLD FIRST
-            </span>
-            <span className="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-              $100M SAVINGS
-            </span>
+    <div className="bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white py-4 px-4 relative overflow-hidden">
+      <div className="absolute inset-0 bg-black opacity-10"></div>
+      <div className="relative z-10 max-w-6xl mx-auto">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="flex-1">
+            <div className="flex items-center gap-2 mb-2">
+              <span className="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm font-semibold animate-pulse">
+                ⚛️ QUANTUM BREAKTHROUGH
+              </span>
+              <span className="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm font-semibold">
+                AI 2027
+              </span>
+            </div>
+            <h2 className="text-xl md:text-2xl font-bold mb-2">
+              Quantum Computing Meets AI: 1000x Performance Revolution
+            </h2>
+            <p className="text-sm md:text-base opacity-90">
+              Experience the future with quantum-AI hybrid systems delivering unprecedented computational power and enterprise transformation
+            </p>
           </div>
-          
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            AI 2027: Quantum Computing Breakthrough
-          </h2>
-          
-          <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed">
-            Revolutionary quantum-enhanced AI achieving <span className="text-yellow-400 font-bold">1000x faster processing</span> 
-            and solving previously impossible enterprise problems
-          </p>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-yellow-400 mb-2">1000x</div>
-              <div className="text-sm md:text-base text-gray-300">Faster Processing</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-green-400 mb-2">99.9%</div>
-              <div className="text-sm md:text-base text-gray-300">Accuracy Rate</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">$100M+</div>
-              <div className="text-sm md:text-base text-gray-300">Annual Savings</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">500%</div>
-              <div className="text-sm md:text-base text-gray-300">ROI Guarantee</div>
-            </div>
-          </div>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/blog/ai-2027-quantum-breakthrough"
-              className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-8 py-4 rounded-lg font-semibold text-lg hover:from-yellow-600 hover:to-orange-600 transition-all shadow-lg hover:shadow-xl"
+          <div className="flex flex-col sm:flex-row gap-3">
+            <Link 
+              href="/blog/ai-2027-quantum-breakthrough-enterprise"
+              className="bg-white text-purple-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center whitespace-nowrap"
             >
-              🚀 Read Full Breakthrough Report
+              Explore Quantum AI
             </Link>
-            <Link
-              href="/case-studies/ai-2027-quantum-breakthrough-success"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-900 transition-colors"
+            <Link 
+              href="/services/ai-2027-quantum-computing-solutions"
+              className="bg-white bg-opacity-20 border-2 border-white text-white px-6 py-2 rounded-lg font-semibold hover:bg-opacity-30 transition-colors text-center whitespace-nowrap"
             >
-              💰 View $100M Success Story
+              Get Quantum Solutions
             </Link>
           </div>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-            <h3 className="text-lg font-bold mb-3 text-yellow-400">🧮 Quantum Neural Networks</h3>
-            <p className="text-gray-300 text-sm mb-4">
-              Hybrid quantum-classical neural networks that leverage quantum superposition for exponential processing power.
-            </p>
-            <div className="text-yellow-400 font-semibold">1000x faster training</div>
-          </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-            <h3 className="text-lg font-bold mb-3 text-blue-400">⚡ Quantum Optimization</h3>
-            <p className="text-gray-300 text-sm mb-4">
-              Quantum annealing algorithms that solve complex optimization problems in seconds instead of days.
-            </p>
-            <div className="text-blue-400 font-semibold">Real-time solutions</div>
-          </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-            <h3 className="text-lg font-bold mb-3 text-green-400">🎯 Quantum Decision Trees</h3>
-            <p className="text-gray-300 text-sm mb-4">
-              Quantum decision-making systems that evaluate millions of scenarios simultaneously for optimal outcomes.
-            </p>
-            <div className="text-green-400 font-semibold">99.9% accuracy</div>
-          </div>
-        </div>
-        
-        <div className="text-center mt-8">
-          <Link
-            href="/services/ai-2027-quantum-enterprise-solutions"
-            className="inline-block bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all"
-          >
-            Get Quantum AI Solutions →
-          </Link>
-        </div>
+      </div>
+      
+      {/* Animated background elements */}
+      <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
+        <div className="absolute top-2 left-4 text-2xl animate-pulse">⚛️</div>
+        <div className="absolute top-2 right-8 text-xl animate-bounce">🧠</div>
+        <div className="absolute bottom-2 left-12 text-lg animate-pulse delay-500">💎</div>
+        <div className="absolute bottom-2 right-4 text-xl animate-bounce delay-1000">🚀</div>
       </div>
     </div>
   );
