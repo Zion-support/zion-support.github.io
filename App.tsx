@@ -1,4 +1,6 @@
 import React, { JSX } from "react";
+import NeuroSyntheticIntelligence2026Banner from "./components/NeuroSyntheticIntelligence2026Banner";
+import AutonomousEnterpriseTransformation2026Banner from "./components/AutonomousEnterpriseTransformation2026Banner";
 import TranscendentIntelligence2027Banner from "./components/TranscendentIntelligence2027Banner";
 import ConsensusIntelligenceBreakthroughBanner from "./components/ConsensusIntelligenceBreakthroughBanner";
 import AutonomousEnterpriseBreakthroughBanner from "./components/AutonomousEnterpriseBreakthroughBanner";
@@ -70,6 +72,12 @@ import AITrends2026AdvertisingBanner from "./components/AITrends2026AdvertisingB
 export default function App(): JSX.Element {
   return (
     <div className="min-h-screen bg-slate-950">
+      {/* NEW: Neuro-Synthetic Intelligence 2026 Banner - Most Prominent */}
+      <NeuroSyntheticIntelligence2026Banner />
+      
+      {/* NEW: Autonomous Enterprise Transformation 2026 Banner - Revolutionary */}
+      <AutonomousEnterpriseTransformation2026Banner />
+      
       {/* NEW: June 2027 Transcendent Intelligence Banner - Most Prominent */}
       <TranscendentIntelligence2027Banner />
 <<<<<<< HEAD
