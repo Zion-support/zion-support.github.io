@@ -29,6 +29,8 @@ import NeuralArchitectureSearchBanner from '../components/NeuralArchitectureSear
 import LatestBreakthroughsBanner from '../components/LatestBreakthroughsBanner';
 import March2026UltimateBreakthroughBanner from '../components/March2026UltimateBreakthroughBanner';
 import ConsensusIntelligence2027Banner from '../components/ConsensusIntelligence2027Banner';
+import January2026UltimateAutonomousEnterpriseBanner from '../components/January2026UltimateAutonomousEnterpriseBanner';
+import February2026QuantumConsciousnessBanner from '../components/February2026QuantumConsciousnessBanner';
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -70,16 +72,16 @@ export default function HomePage() {
                 Get Started Today
               </a>
               <a 
-                href="/blog/ai-2026-march-ultimate-breakthrough-revolution" 
+                href="/blog/ai-2026-january-ultimate-autonomous-enterprise-revolution" 
                 className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
-                Read Latest Breakthroughs →
+                Read January 2026 Breakthrough →
               </a>
               <a 
-                href="/case-studies/ai-2026-march-ultimate-breakthrough-15-billion-success" 
+                href="/case-studies/ai-2026-january-autonomous-enterprise-2-5-billion-success" 
                 className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
-                View $15B Success Story
+                View $2.5B Success Story
               </a>
             </div>
             
@@ -106,7 +108,13 @@ export default function HomePage() {
         </div>
       </header>
 
-      {/* NEW MARCH 2026 ULTIMATE BREAKTHROUGH - MOST PROMINENT */}
+      {/* NEW JANUARY 2026 ULTIMATE AUTONOMOUS ENTERPRISE - MOST PROMINENT */}
+      <January2026UltimateAutonomousEnterpriseBanner />
+      
+      {/* NEW FEBRUARY 2026 QUANTUM CONSCIOUSNESS - FEATURED PROMINENTLY */}
+      <February2026QuantumConsciousnessBanner />
+      
+      {/* NEW MARCH 2026 ULTIMATE BREAKTHROUGH - FEATURED PROMINENTLY */}
       <March2026UltimateBreakthroughBanner />
       
       {/* NEW AI 2027 CONSENSUS INTELLIGENCE REVOLUTION - FEATURED PROMINENTLY */}
@@ -167,33 +175,33 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-6">
-            <Link href="/blog/ai-2026-march-ultimate-breakthrough-revolution" className="group block rounded-xl border border-purple-500/20 bg-gradient-to-br from-purple-900/20 to-indigo-900/20 p-6 hover:border-purple-400/40 transition-all duration-300 hover:scale-105">
+            <Link href="/blog/ai-2026-january-ultimate-autonomous-enterprise-revolution" className="group block rounded-xl border border-purple-500/20 bg-gradient-to-br from-purple-900/20 to-indigo-900/20 p-6 hover:border-purple-400/40 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-2 mb-3">
-                <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-3 py-1 rounded-full text-xs font-bold">2026 BREAKTHROUGH</span>
-                <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold">100,000x</span>
+                <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-3 py-1 rounded-full text-xs font-bold">JAN 2026</span>
+                <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold">99.9% AUTO</span>
               </div>
-              <div className="text-white font-bold text-lg mb-2">March 2026 Ultimate Breakthrough</div>
-              <div className="text-gray-400 text-sm mb-3">Revolutionary AI systems achieving 100,000x performance improvements with 99.99% autonomous operations and $15B+ ROI.</div>
-              <div className="text-purple-300 text-sm font-semibold group-hover:text-purple-200">Explore Ultimate AI →</div>
+              <div className="text-white font-bold text-lg mb-2">January 2026 Autonomous Enterprise</div>
+              <div className="text-gray-400 text-sm mb-3">Revolutionary AI systems achieving 99.9% autonomous operations with $2.5B ROI and zero human intervention.</div>
+              <div className="text-purple-300 text-sm font-semibold group-hover:text-purple-200">Explore Autonomous AI →</div>
             </Link>
             
-            <Link href="/blog/ai-2027-consensus-intelligence-revolution" className="group block rounded-xl border border-cyan-500/20 bg-gradient-to-br from-cyan-900/20 to-blue-900/20 p-6 hover:border-cyan-400/40 transition-all duration-300 hover:scale-105">
+            <Link href="/blog/ai-2026-february-quantum-consciousness-fusion-breakthrough" className="group block rounded-xl border border-cyan-500/20 bg-gradient-to-br from-cyan-900/20 to-blue-900/20 p-6 hover:border-cyan-400/40 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-2 mb-3">
-                <span className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-3 py-1 rounded-full text-xs font-bold">2027 REVOLUTION</span>
+                <span className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-3 py-1 rounded-full text-xs font-bold">FEB 2026</span>
                 <span className="bg-gradient-to-r from-green-400 to-emerald-500 text-black px-3 py-1 rounded-full text-xs font-bold">1,000,000x</span>
               </div>
-              <div className="text-white font-bold text-lg mb-2">Consensus Intelligence Revolution</div>
-              <div className="text-gray-400 text-sm mb-3">Universal consensus intelligence delivering 1,000,000x performance with universal decision-making and $50B+ ROI.</div>
-              <div className="text-cyan-300 text-sm font-semibold group-hover:text-cyan-200">Discover Universal AI →</div>
+              <div className="text-white font-bold text-lg mb-2">February 2026 Quantum Consciousness</div>
+              <div className="text-gray-400 text-sm mb-3">Quantum consciousness fusion delivering 1,000,000x performance with universal intelligence and $5B+ ROI.</div>
+              <div className="text-cyan-300 text-sm font-semibold group-hover:text-cyan-200">Discover Quantum AI →</div>
             </Link>
             
-            <Link href="/case-studies/ai-2026-march-ultimate-breakthrough-15-billion-success" className="group block rounded-xl border border-green-500/20 bg-gradient-to-br from-green-900/20 to-emerald-900/20 p-6 hover:border-green-400/40 transition-all duration-300 hover:scale-105">
+            <Link href="/case-studies/ai-2026-january-autonomous-enterprise-2-5-billion-success" className="group block rounded-xl border border-green-500/20 bg-gradient-to-br from-green-900/20 to-emerald-900/20 p-6 hover:border-green-400/40 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-2 mb-3">
-                <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-xs font-bold">$15B SUCCESS</span>
-                <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold">ULTIMATE ROI</span>
+                <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-xs font-bold">$2.5B SUCCESS</span>
+                <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold">AUTONOMOUS</span>
               </div>
-              <div className="text-white font-bold text-lg mb-2">$15B Ultimate Breakthrough Success</div>
-              <div className="text-gray-400 text-sm mb-3">How a Fortune 50 company achieved $15B ROI with revolutionary AI systems delivering 100,000x performance improvements.</div>
+              <div className="text-white font-bold text-lg mb-2">$2.5B Autonomous Enterprise Success</div>
+              <div className="text-gray-400 text-sm mb-3">How a Fortune 50 company achieved $2.5B ROI with 99.9% autonomous operations and zero human intervention.</div>
               <div className="text-green-300 text-sm font-semibold group-hover:text-green-200">Read Success Story →</div>
             </Link>
           </div>

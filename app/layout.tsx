@@ -46,6 +46,22 @@ function Header() {
           <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors">About</Link>
           <Link href="/services" className="text-gray-700 hover:text-blue-600 transition-colors">Services</Link>
           <div className="relative group">
+            <Link href="/blog/ai-2026-january-ultimate-autonomous-enterprise-revolution" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
+              January 2026 Autonomous Enterprise
+              <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
+                99.9% AUTONOMOUS
+              </span>
+            </Link>
+          </div>
+          <div className="relative group">
+            <Link href="/blog/ai-2026-february-quantum-consciousness-fusion-breakthrough" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
+              February 2026 Quantum Consciousness
+              <span className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
+                1,000,000x PERFORMANCE
+              </span>
+            </Link>
+          </div>
+          <div className="relative group">
             <Link href="/blog/ai-2026-march-ultimate-breakthrough-revolution" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
               March 2026 Ultimate Breakthrough
               <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
