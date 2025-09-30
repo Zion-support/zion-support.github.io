@@ -33,7 +33,6 @@ import February2026ContentMegaBanner from "./components/February2026ContentMegaB
 import NewContent2026BreakthroughShowcaseBanner from "./components/NewContent2026BreakthroughShowcaseBanner";
 import February2026BreakthroughMegaBanner from "./components/February2026BreakthroughMegaBanner";
 import NewContent2026ShowcaseBanner from "./components/NewContent2026ShowcaseBanner";
-import Revolutionary2026ContentMegaBreakthroughBanner from "./components/Revolutionary2026ContentMegaBreakthroughBanner";
 import March2026RevolutionaryBreakthroughBanner from "./components/March2026RevolutionaryBreakthroughBanner";
 import March2026ContentShowcase from "./components/March2026ContentShowcase";
 import March2026AdvertisingMegaBanner from "./components/March2026AdvertisingMegaBanner";
@@ -49,6 +48,19 @@ import Revolutionary2026ContentShowcaseBanner from "./components/Revolutionary20
 import May2026QuantumConsciousnessBanner from "./components/May2026QuantumConsciousnessBanner";
 import June2026AutonomousEnterpriseBanner from "./components/June2026AutonomousEnterpriseBanner";
 import NewContent2026MegaShowcaseBanner from "./components/NewContent2026MegaShowcaseBanner";
+import May2026RevolutionaryBreakthroughBanner from "./components/May2026RevolutionaryBreakthroughBanner";
+import May2026ContentShowcase from "./components/May2026ContentShowcase";
+import May2026ContentAdvertisingBanner from "./components/May2026ContentAdvertisingBanner";
+import May2026RevolutionaryContentBanner from "./components/May2026RevolutionaryContentBanner";
+import May2026ContentShowcaseBanner from "./components/May2026ContentShowcaseBanner";
+import NeuromorphicComputingRevolutionBanner from "./components/NeuromorphicComputingRevolutionBanner";
+import MetaCognitiveAutonomousSystemsBanner from "./components/MetaCognitiveAutonomousSystemsBanner";
+import Ultimate2026ContentShowcaseBanner from "./components/Ultimate2026ContentShowcaseBanner";
+import April2026RevolutionaryContentBanner from "./components/April2026RevolutionaryContentBanner";
+import June2026MegaAutomationBanner from "./components/June2026MegaAutomationBanner";
+import InteractiveContentShowcase2026Advanced from "./components/InteractiveContentShowcase2026Advanced";
+import June2026SuperintelligenceBreakthroughBanner from "./components/June2026SuperintelligenceBreakthroughBanner";
+import June2026ContentShowcaseBanner from "./components/June2026ContentShowcaseBanner";
 
 export default function App(): JSX.Element {
   return (
@@ -61,6 +73,30 @@ export default function App(): JSX.Element {
       
       {/* NEW: 2026 Content Mega Showcase Banner - Most Prominent */}
       <NewContent2026MegaShowcaseBanner />
+      
+      {/* NEW: June 2026 Superintelligence Breakthrough Banner - Most Prominent */}
+      <June2026SuperintelligenceBreakthroughBanner />
+      
+      {/* NEW: June 2026 Content Showcase Banner - Featured Content */}
+      <June2026ContentShowcaseBanner />
+      
+      {/* NEW: June 2026 Mega Enterprise Automation Banner - Most Prominent */}
+      <June2026MegaAutomationBanner />
+      
+      {/* NEW: Interactive Content Showcase 2026 Advanced */}
+      <InteractiveContentShowcase2026Advanced />
+      
+      {/* NEW: May 2026 Revolutionary Breakthrough Banner - Most Prominent */}
+      <May2026RevolutionaryBreakthroughBanner />
+      
+      {/* NEW: May 2026 Content Showcase - Featured Content */}
+      <May2026ContentShowcase />
+      
+      {/* NEW: May 2026 Revolutionary Content Banner - Most Prominent */}
+      <May2026RevolutionaryContentBanner />
+      
+      {/* NEW: May 2026 Content Showcase Banner - Most Prominent */}
+      <May2026ContentShowcaseBanner />
       
       {/* NEW: April 2026 Mega Breakthrough Banner - Most Prominent */}
       <April2026MegaBreakthroughBanner />
@@ -245,6 +281,9 @@ export default function App(): JSX.Element {
         </div>
       </header>
 
+      {/* NEW: May 2026 Content Advertising Banner */}
+      <May2026ContentAdvertisingBanner />
+      
       {/* NEW CONTENT ADVERTISING BANNER */}
       <div className="bg-gradient-to-r from-purple-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-6 border border-purple-500/30 mb-12">
         <div className="text-center">
@@ -412,6 +451,15 @@ export default function App(): JSX.Element {
 
       {/* Interactive Content Showcase 2026 */}
       <InteractiveContentShowcase2026 />
+      
+      {/* Interactive ROI Calculator 2026 */}
+      <InteractiveROICalculator2026 />
+
+      {/* NEW: May 2026 Revolutionary Breakthrough Banner - Mid Page */}
+      <May2026RevolutionaryBreakthroughBanner />
+
+      {/* NEW: June 2026 Mega Enterprise Automation Banner - Mid Page */}
+      <June2026MegaAutomationBanner />
 
       {/* NEW: Revolutionary 2026 Content Showcase Banner - Mid Page */}
       <Revolutionary2026ContentShowcaseBanner />
@@ -513,6 +561,12 @@ export default function App(): JSX.Element {
       <UltimateContentAdvertisingBanner />
       <RevolutionaryAI2026MegaBreakthroughBanner />
       <InteractiveContentShowcase2026 />
+
+      {/* NEW: May 2026 Revolutionary Breakthrough Banner - Pre Footer */}
+      <May2026RevolutionaryBreakthroughBanner />
+
+      {/* NEW: June 2026 Mega Enterprise Automation Banner - Pre Footer */}
+      <June2026MegaAutomationBanner />
 
       {/* Footer */}
       <footer className="bg-slate-900 border-t border-slate-800 py-12">
