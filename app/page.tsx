@@ -144,6 +144,7 @@ export default function HomePage() {
       <AI2026InnovationShowcaseBanner />
       
       {/* Latest 2026 Content Banners */}
+      <LatestContent2026MegaBanner />
       <AIEnterpriseTransformationBanner />
       <AIAutonomousSystemsBanner />
       <ManufacturingTransformationBanner />
@@ -312,21 +313,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Interactive AI ROI Calculator */}
-      <section id="roi-calculator" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Calculate Your AI Transformation ROI
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Use our interactive calculator to project your potential returns from AI transformation. 
-              See how much you could save and achieve with enterprise AI solutions.
-            </p>
-          </div>
-          <InteractiveAIROICalculator />
-        </div>
-      </section>
+      {/* Interactive AI Calculator */}
+      <InteractiveAICalculator2026 />
+
       {/* Interactive Promotional Section */}
       <InteractivePromotionalSection />
 

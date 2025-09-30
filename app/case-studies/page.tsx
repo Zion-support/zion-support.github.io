@@ -10,6 +10,21 @@ export const metadata: Metadata = {
 
 const caseStudies = [
   {
+    title: 'AI Manufacturing Transformation: 90% Efficiency Gain',
+    slug: 'ai-manufacturing-transformation-2026',
+    excerpt: 'See how a Fortune 500 manufacturer achieved 90% efficiency gains and $50M annual savings through comprehensive AI transformation.',
+    company: 'Global Manufacturing Corp',
+    industry: 'Manufacturing',
+    results: {
+      savings: '$50M',
+      efficiency: '90%',
+      quality: '95%',
+      timeline: '12 months'
+    },
+    image: '🏭',
+    color: 'green'
+  },
+  {
     title: 'Fortune 500 AI Transformation: $50M+ Savings & 300% ROI',
     slug: 'fortune-500-ai-transformation-2027',
     excerpt: 'See how a Fortune 500 company achieved $50M+ in savings and a 300% ROI through comprehensive AI transformation with Zion Tech Group.',
