@@ -50,6 +50,7 @@ import May2026RevolutionaryBreakthroughBanner from "./components/May2026Revoluti
 import InteractiveAICalculator2026 from "./components/InteractiveAICalculator2026";
 import May2026ContentShowcaseBanner from "./components/May2026ContentShowcaseBanner";
 import May2026ContentAdvertisingBanner from "./components/May2026ContentAdvertisingBanner";
+import AI2026TrendsShowcaseBanner from "./components/AI2026TrendsShowcaseBanner";
 
 export default function App(): JSX.Element {
   return (
@@ -60,6 +61,8 @@ export default function App(): JSX.Element {
       {/* NEW: May 2026 Revolutionary Breakthrough Banner - Most Prominent */}
       <May2026RevolutionaryBreakthroughBanner />
       
+      {/* NEW: AI 2026 Trends Showcase Banner */}
+      <AI2026TrendsShowcaseBanner />
       {/* NEW: April 2026 Mega Breakthrough Banner - Most Prominent */}
       <April2026MegaBreakthroughBanner />
       
