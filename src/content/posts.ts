@@ -10,6 +10,24 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "genai-2025-oct-01-cost-optimization-v5",
+    title: "GenAI Cost Optimization v5 — 60–85% Savings, Stable Quality",
+    description: "Tier routing, semantic caches, freshness windows, and KPI‑linked scorecards to cut spend without hurting UX.",
+    category: "GenAI",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "10 min read"
+  },
+  {
+    slug: "ai-2025-oct-01-agent-reliability-runbooks-v5",
+    title: "Agent Reliability Runbooks v5 — Budgets, Canaries, Rollback",
+    description: "Govern autonomous agents with budget guards, KPI canaries, and deterministic rollback under live scorecards.",
+    category: "AI Operations",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
     slug: "genai-2025-oct-01-e2e-eval-pipelines",
     title: "E2E Eval Pipelines — KPI‑Linked Gates That Prevent Regressions",
     description: "Design eval pipelines wired to KPIs with cost/quality budgets, canaries, and instant rollback hooks.",
