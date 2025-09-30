@@ -18,6 +18,7 @@ import ContentPromotionBanner from "../components/ContentPromotionBanner";
 import ContentValueTestimonials from "../components/ContentValueTestimonials";
 import EnhancedNewsletterSignup from "../components/EnhancedNewsletterSignup";
 import EnhancedTestimonials from "../components/EnhancedTestimonials";
+import FeaturedContentShowcase from "../components/FeaturedContentShowcase";
 import Header from "../components/Header";
 import ModernFeatures from "../components/ModernFeatures";
 import { latestInsights } from "../content/insights";
@@ -103,8 +104,13 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
+<<<<<<< HEAD
+          title="🚀 NEW: Sept 30, 2025 — Agentic Workflows, Private Edge Telemetry, FinOps Scorecards"
+          description="Just dropped: Reliable Multi‑Agent Orchestration, Privacy‑First Edge Telemetry, and Cost Optimization Scorecards. Ship faster, stay safe, and cut spend 30–60%."
+=======
           title="🚀 NEW: Oct 02 — Agent Runbooks v6, Edge Privacy Observability, CIO Playbook"
           description="Latest drops: Agent Reliability Runbooks v6, Edge Privacy Observability, and CIO Modernization Playbook. Ship faster with safety, privacy, and ROI."
+>>>>>>> origin/cursor/create-and-deploy-new-content-bebe
           ctaText="Read the Latest"
           ctaLink="/blog"
           dismissible={true}
@@ -349,6 +355,15 @@ const Home = () => {
           </div>
         </section>
 
+        {/* Featured Content Showcase */}
+        <FeaturedContentShowcase 
+          title="Latest Technology Insights & Trends"
+          subtitle="Stay ahead with our cutting-edge research, expert analysis, and actionable insights from the world of AI, cybersecurity, and emerging technologies"
+          maxItems={6}
+          showInsights={true}
+          showBlogPosts={true}
+          className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900"
+        />
 
         {/* New Services Showcase */}
         <section className="container mx-auto px-6 py-20 relative z-10">
