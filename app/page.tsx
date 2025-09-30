@@ -94,6 +94,7 @@ import AI2027RevolutionaryBreakthroughBanner from '../components/AI2027Revolutio
 import NewestContent2025Banner from '../components/NewestContent2025Banner';
 import September30FreshContent2025Banner from '../components/September30FreshContent2025Banner';
 import September30FreshContentBanner from '../components/September30FreshContentBanner';
+import September30NewBlogsBanner from '../components/September30NewBlogsBanner';
 import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
 import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
 import InteractiveContentRecommendation from '../components/InteractiveContentRecommendation';
@@ -158,6 +159,9 @@ export default function HomePage() {
       <September30NewAIBreakthroughsBanner />
       
       <September30FreshContentBanner />
+      
+      {/* 🎉 NEW BLOG POSTS - September 30, 2025 - Revolutionary AI Breakthroughs! */}
+      <September30NewBlogsBanner />
       
       {/* New Content 2025 Banner */}
       <NewContent2025Banner />
