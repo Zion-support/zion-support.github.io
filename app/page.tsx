@@ -39,6 +39,8 @@ import Revolutionary2027ContentBanner from '../components/Revolutionary2027Conte
 import AI2027MegaSuccessBanner from '../components/AI2027MegaSuccessBanner';
 import QuantumAIRevolutionBanner from '../components/QuantumAIRevolutionBanner';
 import InteractiveAI2027Calculator from '../components/InteractiveAI2027Calculator';
+import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
+import Latest2026ContentMegaBanner from '../components/Latest2026ContentMegaBanner';
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
@@ -80,6 +82,12 @@ export const metadata = {
 export default function HomePage() {
   return (
     <div className="animate-fade-in">
+      {/* Latest 2026 Content Mega Banner */}
+      <Latest2026ContentMegaBanner />
+      
+      {/* Revolutionary 2026 Content Banner */}
+      <Revolutionary2026ContentBanner />
+      
       {/* Revolutionary 2027 AI Content Banners */}
       <Revolutionary2027ContentBanner />
       <QuantumAIRevolutionBanner />
