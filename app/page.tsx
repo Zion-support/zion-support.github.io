@@ -16,6 +16,7 @@ import January2026BreakthroughShowcaseBanner from '../components/January2026Brea
 import Ultimate2026ContentPromotionalBanner from '../components/Ultimate2026ContentPromotionalBanner';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Ultimate2026HyperintelligenceBanner from '../components/Ultimate2026HyperintelligenceBanner';
 =======
 import NeuralOptimizationRevolutionBanner from '../components/NeuralOptimizationRevolutionBanner';
@@ -31,6 +32,12 @@ import AI2030QuantumConsciousnessRevolutionBanner from '../components/AI2030Quan
 import AI2029MetaCognitiveSuperintelligenceBanner from '../components/AI2029MetaCognitiveSuperintelligenceBanner';
 import UltimateContentShowcase2030 from '../components/UltimateContentShowcase2030';
 >>>>>>> origin/cursor/create-and-deploy-new-content-f6a8
+=======
+import Ultimate2026HyperintelligenceBanner from './components/Ultimate2026HyperintelligenceBanner';
+import Revolutionary2027ContentMegaBanner from '../components/Revolutionary2027ContentMegaBanner';
+import Ultimate2027BreakthroughBanner from '../components/Ultimate2027BreakthroughBanner';
+import NewContent2026ShowcaseBanner from '../components/NewContent2026ShowcaseBanner';
+>>>>>>> feat/content-sept30-ads
 
 export default function HomePage() {
   return (
