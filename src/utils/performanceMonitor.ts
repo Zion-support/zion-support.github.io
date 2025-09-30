@@ -1,86 +1,265 @@
-interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  networkRequests: number;
-}
+// Minimal, type-safe Performance Monitor
 
-interface PerformanceOptimizations {
-  imageOptimization: boolean;
-  codeSplitting: boolean;
-  lazyLoading: boolean;
-  caching: boolean;
+type MetricName = 'CLS' | 'FID' | 'FCP' | 'LCP' | 'TTFB' | 'SLOW_RESOURCE';
+
+interface PerformanceMetric {
+  name: MetricName;
+  value: number;
+  timestamp: number;
+  id: string;
 }
 
 class PerformanceMonitor {
-  private metrics: PerformanceMetrics = {
-    loadTime: 0,
-    renderTime: 0,
-    memoryUsage: 0,
-    networkRequests: 0,
-  };
+  private metrics: PerformanceMetric[] = [];
+  private observers: PerformanceObserver[] = [];
+  private isInitialized = false;
 
-  private optimizations: PerformanceOptimizations = {
-    imageOptimization: true,
-    codeSplitting: true,
-    lazyLoading: true,
-    caching: true,
-  };
-
-  private startTime = 0;
-
-  initialize(): void {
-    this.startTime = performance.now();
-    this.measureLoadTime();
-    this.measureMemoryUsage();
-    this.countNetworkRequests();
-  }
-
-  private measureLoadTime(): void {
-    window.addEventListener('load', () => {
-      this.metrics.loadTime = performance.now() - this.startTime;
-    });
-  }
-
-  private measureMemoryUsage(): void {
-    if ('memory' in performance) {
-      const memory = (performance as any).memory;
-      this.metrics.memoryUsage = memory.usedJSHeapSize / (1024 * 1024); // Convert to MB
+  constructor() {
+    if (typeof window !== 'undefined') {
+      this.init();
     }
   }
 
-  private countNetworkRequests(): void {
-    // Count network requests using Performance Observer
-    if ('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        this.metrics.networkRequests = entries.filter(
-          entry => entry.entryType === 'navigation' || entry.entryType === 'resource'
-        ).length;
+  private init(): void {
+    if (this.isInitialized || typeof window === 'undefined') return;
+    
+    this.isInitialized = true;
+    this.observeWebVitals();
+    this.observeResourceTiming();
+    this.observeNavigationTiming();
+  }
+
+  private observeWebVitals(): void {
+    if (!('PerformanceObserver' in window)) return;
+
+    // First Input Delay (FID)
+    try {
+      const fidObserver = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.processingStart && entry.startTime) {
+            const fid = entry.processingStart - entry.startTime;
+            this.recordMetric({
+              name: 'FID',
+              value: fid,
+              timestamp: Date.now(),
+              id: this.generateId()
+            });
+          }
+        }
       });
-      
-      observer.observe({ entryTypes: ['navigation', 'resource'] });
+      fidObserver.observe({ entryTypes: ['first-input'] });
+      this.observers.push(fidObserver);
+    } catch (e) {
+      console.warn('FID observation failed:', e);
+    }
+
+    // First Contentful Paint (FCP)
+    try {
+      const fcpObserver = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.name === 'first-contentful-paint') {
+            this.recordMetric({
+              name: 'FCP',
+              value: entry.startTime,
+              timestamp: Date.now(),
+              id: this.generateId()
+            });
+          }
+        }
+      });
+      fcpObserver.observe({ entryTypes: ['paint'] });
+      this.observers.push(fcpObserver);
+    } catch (e) {
+      console.warn('FCP observation failed:', e);
+    }
+
+    // Largest Contentful Paint (LCP)
+    try {
+      const lcpObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1];
+        if (lastEntry) {
+          this.recordMetric({
+            name: 'LCP',
+            value: lastEntry.startTime,
+            timestamp: Date.now(),
+            id: this.generateId()
+          });
+        }
+      });
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+      this.observers.push(lcpObserver);
+    } catch (e) {
+      console.warn('LCP observation failed:', e);
+    }
+
+    // Cumulative Layout Shift (CLS)
+    try {
+      let clsValue = 0;
+      const clsObserver = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (!(entry as any).hadRecentInput) {
+            clsValue += (entry as any).value;
+          }
+        }
+        this.recordMetric({
+          name: 'CLS',
+          value: clsValue,
+          timestamp: Date.now(),
+          id: this.generateId()
+        });
+      });
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
+      this.observers.push(clsObserver);
+    } catch (e) {
+      console.warn('CLS observation failed:', e);
     }
   }
 
-  getMetrics(): PerformanceMetrics {
-    return { ...this.metrics };
+  private observeResourceTiming(): void {
+    if ('PerformanceObserver' in window) {
+      try {
+        const resourceObserver = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (entry.duration > 1000) { // Only track slow resources
+              this.recordMetric({
+                name: 'SLOW_RESOURCE',
+                value: entry.duration,
+                timestamp: Date.now(),
+                id: this.generateId()
+              });
+            }
+          }
+        });
+        resourceObserver.observe({ entryTypes: ['resource'] });
+        this.observers.push(resourceObserver);
+      } catch (e) {
+        console.warn('Resource timing observation failed:', e);
+      }
+    }
   }
 
-  getOptimizations(): PerformanceOptimizations {
-    return { ...this.optimizations };
+  private observeNavigationTiming(): void {
+    if ('PerformanceObserver' in window) {
+      try {
+        const navObserver = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            const navEntry = entry as PerformanceNavigationTiming;
+            this.recordMetric({
+              name: 'TTFB',
+              value: navEntry.responseStart - navEntry.requestStart,
+              timestamp: Date.now(),
+              id: this.generateId()
+            });
+          }
+        });
+        navObserver.observe({ entryTypes: ['navigation'] });
+        this.observers.push(navObserver);
+      } catch (e) {
+        console.warn('Navigation timing observation failed:', e);
+      }
+    }
   }
 
-  getPerformanceScore(): number {
-    // Simple performance score calculation
-    const loadScore = Math.max(0, 100 - this.metrics.loadTime / 100);
-    const memoryScore = Math.max(0, 100 - this.metrics.memoryUsage / 10);
-    return Math.round((loadScore + memoryScore) / 2);
+  private recordMetric(metric: PerformanceMetric): void {
+    this.metrics.push(metric);
+    
+    // Keep only last 100 metrics to prevent memory leaks
+    if (this.metrics.length > 100) {
+      this.metrics = this.metrics.slice(-100);
+    }
+
+    // Send to analytics if available
+    this.sendToAnalytics(metric);
   }
 
-  cleanup(): void {
-    // Cleanup any observers or listeners
+  private sendToAnalytics(metric: PerformanceMetric): void {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'performance_metric', {
+        metric_name: metric.name,
+        metric_value: Math.round(metric.value),
+        metric_id: metric.id
+      });
+    }
+  }
+
+  private generateId(): string {
+    return Math.random().toString(36).substr(2, 9);
+  }
+
+  public getMetrics(): PerformanceMetric[] {
+    return [...this.metrics];
+  }
+
+  public getWebVitals(): { [key: string]: number } {
+    const vitals: { [key: string]: number } = {};
+    this.metrics.forEach(metric => {
+      if (["CLS", "FID", "FCP", "LCP", "TTFB"].includes(metric.name)) {
+        vitals[metric.name] = metric.value;
+      }
+    });
+    return vitals;
+  }
+
+  public getPerformanceScore(): number {
+    const vitals = this.getWebVitals();
+    let score = 100;
+
+    // LCP scoring (good: <2.5s, needs improvement: 2.5-4s, poor: >4s)
+    if (vitals.LCP) {
+      if (vitals.LCP > 4000) score -= 30;
+      else if (vitals.LCP > 2500) score -= 15;
+    }
+
+    // FID scoring (good: <100ms, needs improvement: 100-300ms, poor: >300ms)
+    if (vitals.FID) {
+      if (vitals.FID > 300) score -= 25;
+      else if (vitals.FID > 100) score -= 10;
+    }
+
+    // CLS scoring (good: <0.1, needs improvement: 0.1-0.25, poor: >0.25)
+    if (vitals.CLS) {
+      if (vitals.CLS > 0.25) score -= 20;
+      else if (vitals.CLS > 0.1) score -= 10;
+    }
+
+    return Math.max(0, score);
+  }
+
+  public disconnect(): void {
+    this.observers.forEach(observer => observer.disconnect());
+    this.observers = [];
+    this.isInitialized = false;
+  }
+
+  public reportPerformance(): void {
+    const score = this.getPerformanceScore();
+    const vitals = this.getWebVitals();
+    
+    console.log('Performance Report:', {
+      score,
+      vitals,
+      timestamp: new Date().toISOString()
+    });
+
+    // Send performance report to analytics
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'performance_report', {
+        performance_score: score,
+        web_vitals: JSON.stringify(vitals)
+      });
+    }
   }
 }
 
+// Export singleton instance
 export const performanceMonitor = new PerformanceMonitor();
+
+// Auto-report performance after page load
+if (typeof window !== 'undefined') {
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      performanceMonitor.reportPerformance();
+    }, 5000); // Report after 5 seconds
+  });
+}

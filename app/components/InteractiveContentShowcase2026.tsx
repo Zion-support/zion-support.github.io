@@ -9,238 +9,132 @@ export default function InteractiveContentShowcase2026() {
   const content = {
     articles: [
       {
-        title: 'AI Enterprise Transformation 2026: Complete Implementation Guide',
-        description: 'Master AI enterprise transformation with our comprehensive 2026 guide. Achieve 300% ROI, 90% efficiency gains, and $50M+ savings.',
-        href: '/blog/ai-enterprise-transformation-2026',
-        category: 'Featured Article',
-        readTime: '20 min read',
-        metrics: { roi: '300%', efficiency: '90%', savings: '$50M+' },
-        color: 'blue'
+        id: 1,
+        title: 'AI-Powered Autonomous Business Systems 2026',
+        description: 'Explore the revolutionary impact of AI-powered autonomous business systems in 2026, driving efficiency and innovation.',
+        link: '/blog/ai-autonomous-business-systems-2026',
+        category: 'Blog',
+        date: 'Oct 26, 2025',
       },
       {
-        title: 'AI Multimodal Integration 2025: The Future of Enterprise AI',
-        description: 'Discover how multimodal AI is revolutionizing enterprise operations with text, image, voice, and video integration.',
-        href: '/blog/ai-multimodal-integration-2025',
-        category: 'Featured Article',
-        readTime: '22 min read',
-        metrics: { efficiency: '250%', accuracy: '95%', reduction: '60%' },
-        color: 'purple'
+        id: 2,
+        title: 'AI Quantum Computing Breakthroughs 2026',
+        description: 'Discover the latest AI quantum computing breakthroughs and their profound implications for enterprise capabilities.',
+        link: '/blog/ai-quantum-computing-breakthrough-2026',
+        category: 'Blog',
+        date: 'Oct 26, 2025',
       },
       {
-        title: 'AI Trends 2025: Top 10 Predictions & Industry Insights',
-        description: 'Discover the top AI trends shaping 2025. From autonomous agents to edge computing, explore transformative technologies.',
-        href: '/blog/ai-trends-2025-predictions',
-        category: 'Featured Article',
-        readTime: '15 min read',
-        metrics: { trends: '10', impact: 'High', future: '2025' },
-        color: 'green'
-      }
+        id: 3,
+        title: 'AI Enterprise Automation Revolution 2026',
+        description: 'Unlock 500% ROI with our next-gen autonomous AI systems. A complete guide to enterprise automation.',
+        link: '/blog/ai-2026-enterprise-automation-revolution',
+        category: 'Blog',
+        date: 'Oct 20, 2025',
+      },
     ],
     caseStudies: [
       {
-        title: 'AI Supply Chain Optimization: 60% Cost Reduction & 90% Efficiency Gain',
-        description: 'See how a global manufacturer achieved 60% cost reduction and 90% efficiency improvement, saving $12M annually.',
-        href: '/case-studies/ai-supply-chain-optimization-2025',
-        category: 'Success Story',
-        industry: 'Manufacturing',
-        metrics: { reduction: '60%', efficiency: '90%', savings: '$12M' },
-        color: 'green'
+        id: 1,
+        title: 'Manufacturing AI Mega Transformation Success 2026',
+        description: 'See how a leading manufacturing giant achieved 500% ROI and 90% efficiency gains through AI-driven transformation.',
+        link: '/case-studies/ai-manufacturing-transformation-mega-success-2026',
+        category: 'Case Study',
+        company: 'Global Manufacturer',
+        roi: '500%',
       },
       {
-        title: 'Multimodal AI Customer Service: 80% Faster Response Times',
-        description: 'See how a leading e-commerce company achieved 80% faster response times, 95% accuracy, and 60% cost reduction.',
-        href: '/case-studies/multimodal-ai-customer-service-transformation',
-        category: 'Success Story',
-        industry: 'E-commerce',
-        metrics: { response: '80%', accuracy: '95%', reduction: '60%' },
-        color: 'blue'
+        id: 2,
+        title: 'AI Quantum Financial Optimization 2026',
+        description: 'A financial institution leveraged quantum AI to optimize trading strategies, achieving unprecedented returns.',
+        link: '/case-studies/ai-2026-quantum-financial-optimization',
+        category: 'Case Study',
+        company: 'FinTech Innovators',
+        roi: '350%',
       },
       {
-        title: 'AI Finance Automation: 95% Process Reduction & $3M Savings',
-        description: 'See how AI automation achieved 95% process reduction and $3M annual savings for a leading financial services company.',
-        href: '/case-studies/ai-finance-automation',
-        category: 'Success Story',
-        industry: 'Fintech',
-        metrics: { reduction: '95%', savings: '$3M', roi: '340%' },
-        color: 'purple'
-      }
+        id: 3,
+        title: 'AI Autonomous Enterprise Transformation 2026',
+        description: 'A Fortune 500 company achieved full autonomous operations, reducing costs by 70% and boosting productivity.',
+        link: '/case-studies/ai-autonomous-enterprise-transformation-2026',
+        category: 'Case Study',
+        company: 'Fortune 500 Corp',
+        roi: '400%',
+      },
     ],
-    calculators: [
-      {
-        title: 'AI ROI Calculator 2026',
-        description: 'Calculate your potential ROI from AI implementation with our advanced calculator.',
-        href: '/tools/ai-roi-calculator',
-        category: 'Interactive Tool',
-        features: ['ROI Projection', 'Cost Analysis', 'Efficiency Metrics'],
-        color: 'blue'
-      },
-      {
-        title: 'AI Implementation Cost Estimator',
-        description: 'Get accurate cost estimates for your AI transformation project.',
-        href: '/tools/ai-cost-estimator',
-        category: 'Interactive Tool',
-        features: ['Cost Breakdown', 'Timeline Planning', 'Resource Allocation'],
-        color: 'green'
-      },
-      {
-        title: 'AI Efficiency Assessment',
-        description: 'Assess your current AI readiness and identify optimization opportunities.',
-        href: '/tools/ai-efficiency-assessment',
-        category: 'Interactive Tool',
-        features: ['Readiness Score', 'Gap Analysis', 'Recommendations'],
-        color: 'purple'
-      }
-    ]
-  };
-
-  const getColorClasses = (color: string) => {
-    const colors = {
-      blue: 'from-blue-500 to-cyan-500 bg-blue-50 text-blue-800 border-blue-200',
-      purple: 'from-purple-500 to-indigo-500 bg-purple-50 text-purple-800 border-purple-200',
-      green: 'from-green-500 to-teal-500 bg-green-50 text-green-800 border-green-200'
-    };
-    return colors[color as keyof typeof colors] || colors.blue;
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
-      <div className="max-w-7xl mx-auto px-4">
+    <section className="py-20 bg-gradient-to-br from-gray-100 to-blue-100">
+      <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Interactive Content Hub 2026
+          <h2 className="text-4xl font-bold text-gray-900 mb-6">
+            Explore Our Latest 2026 AI Content
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Explore our comprehensive collection of AI insights, case studies, and interactive tools designed to transform your business
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+            Dive into cutting-edge articles and transformative case studies shaping the future of AI in enterprise.
           </p>
         </div>
 
-        {/* Tab Navigation */}
-        <div className="flex justify-center mb-12">
-          <div className="bg-white rounded-full p-2 shadow-lg border border-gray-200">
+        <div className="flex justify-center mb-10">
+          <div className="bg-white p-2 rounded-full shadow-md flex space-x-2">
             <button
               onClick={() => setActiveTab('articles')}
-              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-                activeTab === 'articles'
-                  ? 'bg-blue-600 text-white shadow-lg'
-                  : 'text-gray-600 hover:text-blue-600'
+              className={`px-6 py-3 rounded-full text-lg font-semibold transition-all duration-300 ${
+                activeTab === 'articles' ? 'bg-blue-600 text-white shadow-lg' : 'text-gray-700 hover:bg-gray-100'
               }`}
             >
-              Articles & Guides
+              Articles
             </button>
             <button
               onClick={() => setActiveTab('caseStudies')}
-              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-                activeTab === 'caseStudies'
-                  ? 'bg-blue-600 text-white shadow-lg'
-                  : 'text-gray-600 hover:text-blue-600'
+              className={`px-6 py-3 rounded-full text-lg font-semibold transition-all duration-300 ${
+                activeTab === 'caseStudies' ? 'bg-blue-600 text-white shadow-lg' : 'text-gray-700 hover:bg-gray-100'
               }`}
             >
               Case Studies
             </button>
-            <button
-              onClick={() => setActiveTab('calculators')}
-              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-                activeTab === 'calculators'
-                  ? 'bg-blue-600 text-white shadow-lg'
-                  : 'text-gray-600 hover:text-blue-600'
-              }`}
-            >
-              Interactive Tools
-            </button>
           </div>
         </div>
 
-        {/* Content Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {content[activeTab as keyof typeof content].map((item, index) => (
-            <div key={index} className="group">
-              <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-200 h-full flex flex-col">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className={`px-3 py-1 rounded-full text-xs font-semibold ${getColorClasses(item.color).split(' ')[2]} ${getColorClasses(item.color).split(' ')[3]} ${getColorClasses(item.color).split(' ')[4]}`}>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {activeTab === 'articles' &&
+            content.articles.map((item) => (
+              <Link href={item.link} key={item.id} className="group block">
+                <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200 h-full flex flex-col">
+                  <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-semibold mb-3 self-start">
                     {item.category}
                   </span>
-                  {item.readTime && (
-                    <span className="text-sm text-gray-500">{item.readTime}</span>
-                  )}
-                  {item.industry && (
-                    <span className="text-sm text-gray-500">{item.industry}</span>
-                  )}
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-600 mb-4 flex-grow">{item.description}</p>
+                  <div className="flex items-center justify-between text-sm text-gray-500 mt-auto">
+                    <span>{item.date}</span>
+                    <span className="text-blue-600 group-hover:underline">Read More →</span>
+                  </div>
                 </div>
+              </Link>
+            ))}
 
-                <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
-                  {item.title}
-                </h3>
-
-                <p className="text-gray-600 mb-6 flex-grow">
-                  {item.description}
-                </p>
-
-                {/* Metrics */}
-                {item.metrics && (
-                  <div className="grid grid-cols-3 gap-4 mb-6">
-                    {Object.entries(item.metrics).map(([key, value], idx) => (
-                      <div key={idx} className="text-center">
-                        <div className={`text-lg font-bold ${getColorClasses(item.color).split(' ')[3]}`}>
-                          {value}
-                        </div>
-                        <div className="text-xs text-gray-500 capitalize">
-                          {key.replace(/([A-Z])/g, ' $1').trim()}
-                        </div>
-                      </div>
-                    ))}
+          {activeTab === 'caseStudies' &&
+            content.caseStudies.map((item) => (
+              <Link href={item.link} key={item.id} className="group block">
+                <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200 h-full flex flex-col">
+                  <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold mb-3 self-start">
+                    {item.category}
+                  </span>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-600 mb-4 flex-grow">{item.description}</p>
+                  <div className="flex items-center justify-between text-sm text-gray-500 mt-auto">
+                    <span>ROI: {item.roi}</span>
+                    <span className="text-blue-600 group-hover:underline">View Case Study →</span>
                   </div>
-                )}
-
-                {/* Features for calculators */}
-                {item.features && (
-                  <div className="mb-6">
-                    <div className="text-sm font-semibold text-gray-700 mb-2">Features:</div>
-                    <ul className="text-sm text-gray-600 space-y-1">
-                      {item.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center gap-2">
-                          <span className="w-1.5 h-1.5 bg-blue-500 rounded-full"></span>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-
-                <Link
-                  href={item.href}
-                  className={`inline-block bg-gradient-to-r ${getColorClasses(item.color).split(' ')[0]} ${getColorClasses(item.color).split(' ')[1]} text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 text-center`}
-                >
-                  {activeTab === 'calculators' ? 'Try Tool →' : 'Read More →'}
-                </Link>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* CTA Section */}
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
-            <h3 className="text-3xl font-bold mb-4">
-              Ready to Transform Your Business?
-            </h3>
-            <p className="text-xl mb-8 opacity-90">
-              Get personalized AI insights and implementation guidance from our experts
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+13024640950"
-                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
-              >
-                Call +1 302 464 0950
-              </a>
-              <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"
-              >
-                Get Free Consultation
-              </a>
-            </div>
-          </div>
+                </div>
+              </Link>
+            ))}
         </div>
       </div>
     </section>
