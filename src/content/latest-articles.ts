@@ -17,6 +17,38 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
+    id: "ai-enterprise-transformation-2027",
+    slug: "ai-enterprise-transformation-2027",
+    title: "AI Enterprise Transformation 2027: Strategy, Scorecards, and SLAs",
+    description: "Plan, fund, and scale AI programs with KPI‑linked scorecards and delivery SLAs.",
+    excerpt: "Executive playbook to move from bets to shipped AI with measurable ROI.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "AI Strategy",
+    tags: ["Strategy", "Scorecards", "Delivery"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/ai-enterprise-transformation-2027.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "agentic-workflow-orchestration-2026",
+    slug: "agentic-workflow-orchestration-2026",
+    title: "Agentic Workflow Orchestration 2026: Budgets, Canaries, Rollback",
+    description: "Design safe, fast agent workflows with KPI‑linked canaries and instant rollback.",
+    excerpt: "Blueprint for reliable multi‑tool agents that teams actually adopt.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "AI Operations",
+    tags: ["Agents", "Budgets", "Rollback"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/agentic-workflow-orchestration-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "ai-2026-reliability-runbooks-v4",
     slug: "ai-2026-reliability-runbooks-v4",
     title: "AI 2026: Reliability Runbooks v4",
