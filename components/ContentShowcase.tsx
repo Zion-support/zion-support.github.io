@@ -471,6 +471,30 @@ contentItems.unshift(
   }
 );
 
+// Promote the latest two new posts on the homepage showcase
+contentItems.unshift(
+  {
+    id: 'ai-operational-trust-2026-q4',
+    title: 'AI Operational Trust 2026 Q4: SLIs, Budgets, Rollback',
+    excerpt: 'Outcome‑linked SLIs, budgeted actions, and one‑click rollback for safe autonomy.',
+    readTime: '7 min read',
+    category: 'AI Operations',
+    href: '/blog/ai-operational-trust-2026-q4',
+    featured: true,
+    publishedDate: '2025-09-30'
+  },
+  {
+    id: 'edge-consentless-experiments-2026-q4',
+    title: 'Edge Consentless Experiments 2026 Q4: <100ms A/B Without PII',
+    excerpt: 'Scoped IDs, on‑device metrics, and DP noise for compliant global experiments.',
+    readTime: '6 min read',
+    category: 'Analytics',
+    href: '/blog/edge-consentless-experiments-2026-q4',
+    featured: true,
+    publishedDate: '2025-09-30'
+  }
+);
+
 interface ContentShowcaseProps {
   title?: string;
   subtitle?: string;

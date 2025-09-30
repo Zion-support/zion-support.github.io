@@ -61,21 +61,9 @@ export default function AICostOptimizationPlaybook2027Page() {
   );
 }
 
-import React from 'react';
-import Link from 'next/link';
+// Secondary variant removed to avoid duplicate default export/import redeclarations
 
-export const metadata = {
-	title: 'AI 2027 Cost Optimization Playbook: Reliable, Fast, and Affordable AI',
-	description: 'A pragmatic 2027 playbook to reduce AI costs 30–70% while improving reliability and user experience.',
-	openGraph: {
-		title: 'AI 2027 Cost Optimization Playbook',
-		description: 'Cut AI spend 30–70% with routing, caching, quantization, and guardrails.',
-		url: 'https://ziontechgroup.com/blog/ai-2027-cost-optimization-playbook',
-		images: [{ url: '/og/ai-2027-cost-optimization-playbook.jpg', width: 1200, height: 630 }],
-	},
-};
-
-export default function Page() {
+export function AICostOptimizationPlaybook2027Variant() {
 	return (
 		<div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
 			<div className="max-w-3xl mx-auto px-4 py-12">
