@@ -27,6 +27,7 @@ import ComprehensivePromoBanner from "../components/ComprehensivePromoBanner";
 import NewArticlesPromoBanner from "../components/NewArticlesPromoBanner";
 import NewServicesPromoBanner from "../components/NewServicesPromoBanner";
 import September30NewContentMegaBanner from "../components/September30NewContentMegaBanner";
+import October2025NewContentBanner from "../../components/October2025NewContentBanner";
 import Header from "../components/Header";
 import Revolutionary2026ContentMegaBanner from "../components/Revolutionary2026ContentMegaBanner";
 import September30MegaBanner2025 from "../components/September30MegaBanner2025";
@@ -255,6 +256,11 @@ const Home = () => {
               </Link>
             </div>
           </div>
+        </div>
+
+        {/* New: October 2025 New Content Banner (promotes fresh posts) */}
+        <div className="container mx-auto px-6 mt-6">
+          <October2025NewContentBanner />
         </div>
 
         {/* Newly added content promo */}

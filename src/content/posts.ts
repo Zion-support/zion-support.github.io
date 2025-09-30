@@ -10,6 +10,15 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-2025-sept-30-llm-supply-chains",
+    title: "AI 2025: AI Supply Chains — 99.5% Forecasts, 85% Inventory Cut",
+    description: "Blueprint with freshness windows, quality budgets, signed attestations, and rollback.",
+    category: "Enterprise AI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
     slug: "ai-2026-governed-agent-runbooks",
     title: "AI 2026: Governed Agent Runbooks — Budgets, Canaries, Rollback",
     description: "Production checklists for safe autonomy: budgeted actions, KPI‑linked canaries, instant rollback.",
