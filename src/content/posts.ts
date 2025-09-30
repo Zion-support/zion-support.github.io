@@ -10,6 +10,33 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-2026-runtime-guardrails-blueprint",
+    title: "Runtime Guardrails 2026: CI Policy Tests + Live Canaries",
+    description: "Wire KPIs to guardrails with PR policy tests, budgets, and instant rollback.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "edge-rag-privacy-preserving-2026",
+    title: "Edge RAG 2026: Privacy‑Preserving Retrieval Under 100ms",
+    description: "Hybrid retrieval with signed configs, on‑device caches, and DP noise for private answers.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "platform-roi-scorecards-v2-2026",
+    title: "Platform ROI Scorecards v2 (2026): From Golden Paths to Revenue",
+    description: "Next‑gen scorecards connecting platform adoption to SLOs and business outcomes.",
+    category: "Platform Engineering",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
     slug: "ai-operational-scorecards-v4-2026",
     title: "AI Operational Scorecards v4 (2026): KPIs, Budgets, Rollback",
     description: "SLIs mapped to KPIs, budgeted actions, and instant rollback teams adopt fast.",

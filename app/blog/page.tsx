@@ -8,6 +8,36 @@ export const metadata = {
 
 const blogPosts = [
   {
+    title: 'Runtime Guardrails 2026: CI Policy Tests + Live Canaries',
+    slug: 'ai-2026-runtime-guardrails-blueprint',
+    excerpt: 'Wire KPIs to guardrails with PR policy tests, budgets, and instant rollback for fast, safe delivery.',
+    category: 'AI Governance',
+    publishedAt: 'September 30, 2025',
+    image: '🛡️',
+    color: 'emerald',
+    readTime: '9 min read'
+  },
+  {
+    title: 'Edge RAG 2026: Privacy‑Preserving Retrieval Under 100ms',
+    slug: 'edge-rag-privacy-preserving-2026',
+    excerpt: 'Hybrid retrieval with signed configs, on‑device caches, and DP noise for private answers.',
+    category: 'GenAI',
+    publishedAt: 'September 30, 2025',
+    image: '⚡',
+    color: 'blue',
+    readTime: '8 min read'
+  },
+  {
+    title: 'Platform ROI Scorecards v2 (2026): From Golden Paths to Revenue',
+    slug: 'platform-roi-scorecards-v2-2026',
+    excerpt: 'Next‑gen scorecards connecting platform adoption to SLOs and measurable business outcomes.',
+    category: 'Platform Engineering',
+    publishedAt: 'September 30, 2025',
+    image: '📈',
+    color: 'indigo',
+    readTime: '7 min read'
+  },
+  {
     title: 'Autonomous FinOps 2025: Cut AI Spend 50–85% Safely',
     slug: 'ai-2025-autonomous-finops-blueprint',
     excerpt: 'Tiered routing, semantic caches, and budgeted rollbacks for reliable, low-cost AI at scale.',

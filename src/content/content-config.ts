@@ -168,6 +168,34 @@ featuredBlogPosts.unshift(
   }
 );
 
+// Promote newly added posts (Sept 30, 2025)
+featuredBlogPosts.unshift(
+  {
+    id: "ai-2026-runtime-guardrails-blueprint",
+    title: "Runtime Guardrails 2026",
+    description: "CI policy tests + live canaries wired to KPIs for fast, safe delivery",
+    link: "/blog/ai-2026-runtime-guardrails-blueprint",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-rag-privacy-preserving-2026",
+    title: "Edge RAG 2026",
+    description: "Private <100ms retrieval with signed configs and on‑device caches",
+    link: "/blog/edge-rag-privacy-preserving-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "platform-roi-scorecards-v2-2026",
+    title: "Platform ROI Scorecards v2 (2026)",
+    description: "Connect platform adoption to SLOs and measurable business outcomes",
+    link: "/blog/platform-roi-scorecards-v2-2026",
+    type: "article",
+    featured: true
+  }
+);
+
 // Newly featured items to advertise on the homepage
 featuredBlogPosts.unshift(
   {
