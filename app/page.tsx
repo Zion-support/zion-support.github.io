@@ -20,6 +20,14 @@ import AI2027BreakthroughBanner from '../components/AI2027BreakthroughBanner';
 import EnterpriseTransformation2027Banner from '../components/EnterpriseTransformation2027Banner';
 import AI2027QuantumBreakthroughBanner from '../components/AI2027QuantumBreakthroughBanner';
 import AI2027AutonomousEnterpriseBanner from '../components/AI2027AutonomousEnterpriseBanner';
+import NewestContent2025Banner from '../components/NewestContent2025Banner';
+import September30NewContent2025Banner from '../components/September30NewContent2025Banner';
+import AIInnovationBreakthrough2026Banner from '../components/AIInnovationBreakthrough2026Banner';
+import September30NewContentBanner from '../components/September30NewContentBanner';
+import September30LatestContentBanner from '../components/September30LatestContentBanner';
+import LatestContentBanner2025 from '../src/components/LatestContentBanner2025';
+import Latest2026ContentBanner from '../components/Latest2026ContentBanner';
+import October2025ContentBanner from '../components/October2025ContentBanner';
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
