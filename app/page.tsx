@@ -43,6 +43,24 @@ import {
   InteractiveAICalculatorBanner,
   AIInnovationShowcaseBanner
 } from '../components/NewContent2026Banners';
+<<<<<<< HEAD
+=======
+import {
+  AINeuralSuperintelligenceBanner,
+  AIQuantumComputingBanner,
+  AIAutonomousSystemsBanner as NewAIAutonomousSystemsBanner,
+  NeuralSuperintelligenceCaseStudyBanner,
+  InteractiveAIToolsBanner,
+  LatestContentShowcaseBanner as NewLatestContentShowcaseBanner
+} from '../components/NewContent2026PromotionalBanners';
+import {
+  AITrends2025PromotionalBanner,
+  Fortune500SuccessBanner,
+  InteractiveROICalculatorBanner,
+  AITransformationShowcaseBanner
+} from '../components/NewContent2025Banners';
+import InteractiveAIROICalculator from '../components/InteractiveAIROICalculator';
+>>>>>>> cursor/create-and-deploy-new-content-4092
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
@@ -135,13 +153,17 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <div className="animate-fade-in">
-      {/* Revolutionary Content 2026 Banner */}
+      {/* Latest 2026 Revolutionary Content Banners */}
+      <AINeuralSuperintelligenceBanner />
+      <AIQuantumComputingBanner />
+      <NewAIAutonomousSystemsBanner />
+      <NeuralSuperintelligenceCaseStudyBanner />
+      <InteractiveAIToolsBanner />
+      <NewLatestContentShowcaseBanner />
+      
+      {/* Additional 2026 Content Banners */}
       <RevolutionaryContent2026Banner />
-      
-      {/* New 2026 Success Story & Guide Banner */}
       <NewContent2026SuccessBanner />
-      
-      {/* New 2026 Content Banners */}
       <NewContent2026MegaBanner />
       <AIRevolutionary2026Banner />
       
