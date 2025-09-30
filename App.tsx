@@ -12,6 +12,7 @@ import LatestTrendsShowcase2026 from "./src/components/LatestTrendsShowcase2026"
 import NewServicesPromotionalBanner from "./src/components/NewServicesPromotionalBanner";
 import January2026BreakthroughContentBanner from "./components/January2026BreakthroughContentBanner";
 import Revolutionary2026ContentMegaBanner from "./components/Revolutionary2026ContentMegaBanner";
+import Revolutionary2026ContentMegaBanner2026 from "./components/Revolutionary2026ContentMegaBanner";
 import New2026ContentBreakthroughBanner from "./components/New2026ContentBreakthroughBanner";
 import FutureTechShowcase2026 from "./components/FutureTechShowcase2026";
 import InteractiveROICalculator2026 from "./components/InteractiveROICalculator2026";
@@ -25,7 +26,7 @@ export default function App(): JSX.Element {
   return (
     <div className="min-h-screen bg-slate-950">
       {/* Revolutionary Content Mega Banner - Most Prominent */}
-      <RevolutionaryContentMegaBanner2026 />
+      <Revolutionary2026ContentMegaBanner2026 />
       
       {/* Ultimate Content Showcase 2026 */}
       <UltimateContentShowcase2026 />
