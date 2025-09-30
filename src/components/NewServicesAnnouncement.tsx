@@ -1,7 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Sparkles, Zap, Shield, Globe, Award, TrendingUp, CheckCircle } from 'lucide-react';
-import { newServices } from '../content/new-services';
 
 interface NewServicesAnnouncementProps {
   className?: string;

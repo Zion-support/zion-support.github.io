@@ -1,4 +1,3 @@
-import React from 'react';
 
 const AIPlatformArchitecture2025 = () => {
   return (

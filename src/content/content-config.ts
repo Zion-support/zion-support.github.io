@@ -1049,7 +1049,6 @@ export const getContentByTag = (tag: string) => {
 };
 
 // Import new content
-import { newBlogPosts2025, featuredBlogPosts, trendingBlogPosts } from './new-blog-posts-2025';
 import { newServices2025, featuredServices, trendingServices } from './new-services-2025';
 import { newContentJanuary2025, featuredNewContent, trendingNewContent } from './new-content-2025-january';
 import { newCaseStudies2025, featuredCaseStudies, trendingCaseStudies } from './new-case-studies-2025';
