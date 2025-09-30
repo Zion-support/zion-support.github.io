@@ -22,7 +22,130 @@ export const metadata = {
   },
 };
 
+<<<<<<< HEAD
 export default function ContentHubPage() {
+=======
+export default function ContentHub() {
+  const blogCategories = [
+    {
+      title: 'AI Implementation',
+      articles: [
+        { title: 'AI Cost Calculator 2026', slug: '/blog/ai-cost-calculator-2026', readTime: '14 min', featured: true },
+        { title: 'AI Implementation Playbook 2026', slug: '/blog/ai-implementation-playbook-2026', readTime: '16 min', featured: true },
+        { title: 'AI Multimodal Enterprise Solutions 2026', slug: '/blog/ai-multimodal-enterprise-2026', readTime: '15 min', featured: true },
+        { title: 'AI Governance Maturity Model 2026', slug: '/blog/ai-governance-maturity-model-2026', readTime: '14 min', featured: true },
+        { title: 'AI Autonomous Agents 2025', slug: '/blog/ai-autonomous-agents-2025', readTime: '18 min', featured: false },
+        { title: 'AI Governance Framework 2025', slug: '/blog/ai-governance-framework-2025', readTime: '15 min', featured: false },
+      ]
+    },
+    {
+      title: 'AI Security & Compliance',
+      articles: [
+        { title: 'AI Cybersecurity Automation 2026', slug: '/blog/ai-cybersecurity-automation-2026', readTime: '18 min', featured: true },
+        { title: 'AI Security Compliance 2025', slug: '/blog/ai-security-compliance-2025', readTime: '12 min', featured: false },
+        { title: 'Enterprise AI Security 2025', slug: '/blog/enterprise-ai-security-2025', readTime: '14 min', featured: false },
+        { title: 'GenAI Guardrails 2025', slug: '/blog/genai-guardrails-2025', readTime: '11 min', featured: false },
+        { title: 'AI Data Privacy 2026', slug: '/blog/ai-data-privacy-2026', readTime: '12 min', featured: true },
+      ]
+    },
+    {
+      title: 'AI Sustainability & Green Tech',
+      articles: [
+        { title: 'AI for Sustainability & Green Tech 2026', slug: '/blog/ai-sustainability-green-tech-2026', readTime: '12 min', featured: true },
+        { title: 'Edge AI Blueprint 2026', slug: '/blog/edge-ai-blueprint-2026', readTime: '10 min', featured: false },
+        { title: 'AI Cost Optimization 2025', slug: '/blog/llm-cost-optimization-2025', readTime: '9 min', featured: false },
+      ]
+    },
+    {
+      title: 'AI Analytics & Value',
+      articles: [
+        { title: 'AI Value Stream Analytics 2026', slug: '/blog/ai-value-stream-analytics-2026', readTime: '9 min', featured: true },
+        { title: 'AI Trustworthy Agents 2026', slug: '/blog/ai-trustworthy-agents-2026', readTime: '11 min', featured: true },
+        { title: 'AI Roadmaps 2026', slug: '/blog/ai-roadmaps-2026', readTime: '8 min', featured: false },
+        { title: 'AI FinOps Scorecards 2025', slug: '/blog/ai-finops-scorecards-2025', readTime: '7 min', featured: false },
+      ]
+    }
+  ];
+
+  const caseStudies = [
+    {
+      title: 'AI Supply Chain Optimization 2026',
+      company: 'Global Manufacturing Corp',
+      industry: 'Manufacturing',
+      results: '$50M Savings & 99.5% Efficiency',
+      slug: '/case-studies/ai-supply-chain-optimization-2026',
+      featured: true
+    },
+    {
+      title: 'AI Finance Automation',
+      company: 'FinServe Corp',
+      industry: 'Financial Services',
+      results: '95% Process Reduction & $3M Savings',
+      slug: '/case-studies/ai-finance-automation',
+      featured: true
+    },
+    {
+      title: 'Retail AI Transformation',
+      company: 'RetailAI Corp',
+      industry: 'Retail',
+      results: '150% Revenue Growth',
+      slug: '/case-studies/retail-ai-transformation',
+      featured: true
+    },
+    {
+      title: 'HealthTech AI Transformation',
+      company: 'MedTech Solutions',
+      industry: 'Healthcare',
+      results: '40% Better Diagnostics',
+      slug: '/case-studies/healthtech-ai-transformation',
+      featured: false
+    },
+    {
+      title: 'TechCorp AI Transformation',
+      company: 'TechCorp Inc.',
+      industry: 'E-commerce',
+      results: '90% Efficiency Gain',
+      slug: '/case-studies/techcorp-ai-transformation',
+      featured: false
+    },
+    {
+      title: 'Manufacturing AI Transformation',
+      company: 'ManufacturingAI Ltd',
+      industry: 'Manufacturing',
+      results: '75% Cost Reduction',
+      slug: '/case-studies/manufacturing-ai-transformation',
+      featured: false
+    }
+  ];
+
+  const tools = [
+    {
+      title: 'AI ROI Calculator',
+      description: 'Calculate the potential return on investment for AI implementation',
+      type: 'Calculator',
+      featured: true
+    },
+    {
+      title: 'AI Cost Calculator',
+      description: 'Estimate AI implementation costs and ongoing expenses',
+      type: 'Calculator',
+      featured: false
+    },
+    {
+      title: 'AI Readiness Assessment',
+      description: 'Evaluate your organization\'s readiness for AI implementation',
+      type: 'Assessment',
+      featured: false
+    },
+    {
+      title: 'AI Security Checklist',
+      description: 'Comprehensive checklist for AI security implementation',
+      type: 'Checklist',
+      featured: false
+    }
+  ];
+
+>>>>>>> origin/cursor/create-and-deploy-new-content-def1
   return (
     <div className="min-h-screen bg-slate-950">
       {/* Hero Section */}

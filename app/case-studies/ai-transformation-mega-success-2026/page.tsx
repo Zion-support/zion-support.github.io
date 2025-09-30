@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
 
+<<<<<<< HEAD
 export const metadata: Metadata = {
   title: 'AI Transformation Mega Success 2026: $200M ROI in 12 Months',
   description: 'Fortune 500 manufacturing company achieves $200M ROI, 400% efficiency gains, and 99.9% automation through comprehensive AI transformation. Complete case study with implementation details and results.',
@@ -26,10 +27,19 @@ export const metadata: Metadata = {
     description: 'Fortune 500 manufacturing company achieves $200M ROI, 400% efficiency gains, and 99.9% automation through comprehensive AI transformation.',
     images: ['/og-ai-transformation-success-2026.jpg'],
   },
+=======
+export const metadata = {
+  title: 'AI Transformation Mega Success 2026: $25M ROI Case Study',
+  description: 'See how a Fortune 500 company achieved $25M ROI with comprehensive AI transformation. 99% automation, 90% cost reduction, and complete business revolution.',
+=======
+  keywords: 'AI transformation, ROI, case study, Fortune 500, automation, cost reduction',
+>>>>>>> cursor/create-and-deploy-new-content-e8cb
+>>>>>>> origin/cursor/create-and-deploy-new-content-5fb2
 };
 
 export default function AITransformationMegaSuccess2026() {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-yellow-50 via-white to-green-50">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-r from-yellow-600 via-orange-600 to-red-600 text-white">
@@ -423,6 +433,44 @@ export default function AITransformationMegaSuccess2026() {
               </a>
             </div>
           </section>
+=======
+    <div className="max-w-4xl mx-auto px-4 py-8">
+      <article className="prose prose-lg max-w-none">
+=======
+        <div className="mb-8">
+>>>>>>> cursor/create-and-deploy-new-content-e8cb
+          <div className="flex items-center gap-2 mb-4">
+            <span className="bg-gradient-to-r from-green-500 to-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+              NEW 2026
+            </span>
+=======
+            <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-semibold">
+              Fortune 500
+>>>>>>> cursor/create-and-deploy-new-content-e8cb
+            </span>
+          </div>
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            AI Transformation Mega Success 2026: $25M ROI Case Study
+          </h1>
+          <p className="text-xl text-gray-600 mb-6">
+            See how a Fortune 500 company achieved $25M ROI with comprehensive AI transformation. 
+            99% automation, 90% cost reduction, and complete business revolution.
+            </ul>
+          </section>
+
+              </div>
+            </div>
+          </section>
+        </div>
+
+=======
+          </p>
+          <div className="flex items-center gap-6 text-sm text-gray-500">
+            <span>📅 Published: January 20, 2026</span>
+            <span>⏱️ 35 min read</span>
+            <span>👁️ 3.1K views</span>
+          </div>
+>>>>>>> origin/cursor/create-and-deploy-new-content-5fb2
         </div>
       </article>
 

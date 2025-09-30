@@ -19,6 +19,17 @@ import {
   AIGovernanceBanner,
   FinTechSuccessBanner,
   NewContentShowcaseBanner
+  NewContentShowcaseBanner,
+  AIRoadmapsBanner,
+  AIFinOpsBanner,
+  AIMultimodalEnterpriseBanner,
+  AIEnterpriseAutomationBanner,
+  AIDataAnalyticsEnterpriseBanner,
+  EnterpriseTransformationSuccessBanner,
+  HealthcareTransformationBanner,
+  NewContent2026Banner,
+  AICostCalculatorBanner,
+  AIImplementationPlaybookBanner
 } from '../components/PromotionalBanner';
 import {
   AIEnterpriseAdoptionBanner,
@@ -83,6 +94,19 @@ import AI2027RevolutionaryBreakthroughBanner from '../components/AI2027Revolutio
 import NewestContent2025Banner from '../components/NewestContent2025Banner';
 import September30FreshContent2025Banner from '../components/September30FreshContent2025Banner';
 import September30FreshContentBanner from '../components/September30FreshContentBanner';
+import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
+import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
+import InteractiveContentRecommendation from '../components/InteractiveContentRecommendation';
+import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
+import LatestContent2026Banner from '../components/LatestContent2026Banner';
+import NewContent2026ShowcaseBanner from '../components/NewContent2026ShowcaseBanner';
+import LatestContentPromotionalBanner from '../components/LatestContentPromotionalBanner';
+import NewContentPromotionalBanner2026 from '../components/NewContentPromotionalBanner2026';
+import AIInnovationShowcaseBanner2026 from '../components/AIInnovationShowcaseBanner2026';
+import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
+import UltimateContent2026Showcase from '../components/UltimateContent2026Showcase';
+import Revolutionary2027ContentBanner from '../components/Revolutionary2027ContentBanner';
+import UltimateContent2027Showcase from '../components/UltimateContent2027Showcase';
 import NewContentShowcase2026 from '../src/components/NewContentShowcase2026';
 
 export const metadata = {
@@ -138,7 +162,6 @@ export default function HomePage() {
       {/* Latest AI 2025 Insights Banner */}
       <LatestAI2025InsightsBanner />
       
-=======
       {/* Revolutionary AI 2025 Banner */}
       <RevolutionaryAI2025Banner />
       
@@ -459,7 +482,6 @@ export default function HomePage() {
       <AIAutonomousManufacturing2026Banner />
       <AIFinancialServicesRevolution2026Banner />
       <AIHealthcareDiagnosticBreakthrough2026Banner />
-=======
       
       {/* Latest 2026 Content Banners */}
       <AIEnterpriseAutomationRevolutionBanner />
@@ -498,6 +520,26 @@ export default function HomePage() {
       <NewBlogBanner />
       <WorkflowAutomationBanner />
       <AIAnalyticsBanner />
+      <AICostCalculatorBanner />
+      <AIImplementationPlaybookBanner />
+      
+      {/* New Content Promotional Banner 2026 */}
+      <NewContentPromotionalBanner2026 />
+      
+      {/* AI Innovation Showcase Banner 2026 */}
+      <AIInnovationShowcaseBanner2026 />
+      
+      {/* Revolutionary 2026 Content Banner */}
+      <Revolutionary2026ContentBanner />
+      
+      {/* Ultimate Content 2026 Showcase */}
+      <UltimateContent2026Showcase />
+      
+      {/* Revolutionary 2027 Content Banner */}
+      <Revolutionary2027ContentBanner />
+      
+      {/* Ultimate Content 2027 Showcase */}
+      <UltimateContent2027Showcase />
       
       {/* Hero Section */}
       <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
@@ -827,7 +869,6 @@ export default function HomePage() {
                 </a>
               </div>
             </div>
-=======
       {/* Featured Services */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4">
@@ -911,7 +952,6 @@ export default function HomePage() {
       {/* Interactive AI Calculator 2025 */}
       <InteractiveAICalculator2025 />
 
-=======
       {/* Interactive AI Calculator 2025 */}
       <InteractiveAICalculator2025 />
 
@@ -1029,10 +1069,26 @@ export default function HomePage() {
                       </div>
                     </div>
                   </div>
-=======
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <Link href="/blog/ai-operational-resilience-2026" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    New 2026
+                  </span>
+                  <span className="text-sm text-gray-500">14 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  AI Operational Resilience 2026: Designing for Failure and Recovery
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Ship 99.99% uptime with policy tests, isolation boundaries, and automated recovery.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">Read Article →</div>
+              </div>
+            </Link>
             <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-200">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center">

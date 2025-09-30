@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
+<<<<<<< HEAD
 export const metadata = {
   title: 'AI Neural Interface Success Story: $12M ROI in 8 Months | Zion Tech Group',
   description: 'Discover how a Fortune 500 manufacturing company achieved $12M ROI, 99.7% accuracy, and 500% productivity gains with AI neural interface technology in just 8 months.',
@@ -11,10 +12,13 @@ export const metadata = {
     type: 'article',
     url: 'https://ziontechgroup.com/case-studies/ai-neural-interface-success-2026',
   },
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-5fb2
 };
 
 export default function AINeuralInterfaceSuccess() {
   return (
+<<<<<<< HEAD
     <div className="max-w-4xl mx-auto px-4 py-8">
       <div className="mb-8">
         <Link href="/case-studies" className="text-blue-600 hover:text-blue-800 mb-4 inline-block">
@@ -25,6 +29,9 @@ export default function AINeuralInterfaceSuccess() {
             🧠 SUCCESS STORY
           </span>
           <span className="text-gray-500">January 30, 2026</span>
+=======
+          </div>
+>>>>>>> origin/cursor/create-and-deploy-new-content-5fb2
         </div>
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
           AI Neural Interface Success: $12M ROI in 8 Months
@@ -35,6 +42,7 @@ export default function AINeuralInterfaceSuccess() {
         </p>
       </div>
 
+<<<<<<< HEAD
       <div className="prose prose-lg max-w-none">
         <div className="bg-gradient-to-r from-purple-50 to-blue-50 p-6 rounded-lg mb-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">🏆 Success Metrics</h2>
@@ -177,11 +185,14 @@ export default function AINeuralInterfaceSuccess() {
               <div className="flex justify-between items-center p-4 bg-gray-50 rounded-lg">
                 <span className="font-semibold">Market Share Growth</span>
                 <span className="text-green-600 font-bold">+25%</span>
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-5fb2
               </div>
             </div>
           </div>
         </div>
 
+<<<<<<< HEAD
         <h3 className="text-2xl font-bold text-gray-900 mb-4">🎯 Key Success Factors</h3>
         
         <div className="grid md:grid-cols-2 gap-6 mb-8">
@@ -321,6 +332,13 @@ export default function AINeuralInterfaceSuccess() {
           </div>
         </div>
       </div>
+=======
+              </ul>
+            </div>
+          </div>
+        </div>
+
+>>>>>>> origin/cursor/create-and-deploy-new-content-5fb2
     </div>
   );
 }
