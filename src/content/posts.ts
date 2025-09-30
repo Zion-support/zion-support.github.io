@@ -10,10 +10,28 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-    slug: "ai-2025-sept-30-platform-roi-scorecards",
-    title: "AI 2025: Platform ROI Scorecards",
-    description: "Scorecards that link platform adoption to SLOs, developer velocity, and revenue—prove ROI with data.",
-    category: "Platform Engineering",
+    slug: "ai-2026-governed-agent-runbooks",
+    title: "AI 2026: Governed Agent Runbooks — Budgets, Canaries, Rollback",
+    description: "Production checklists for safe autonomy: budgeted actions, KPI‑linked canaries, instant rollback.",
+    category: "AI Operations",
+    publishedAt: "2025-10-30",
+    featured: true,
+    readTime: "11 min read"
+  },
+  {
+    slug: "edge-2026-private-rate-limiter-blueprint",
+    title: "Edge 2026: Private Rate Limiter Blueprint (<100ms, Zero‑PII)",
+    description: "Scoped IDs, signed configs, and on‑device aggregation for compliant rate limiting at the edge.",
+    category: "Edge Computing",
+    publishedAt: "2025-10-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "ai-2025-sept-30-autonomous-infra-blueprint-v2",
+    title: "AI 2025: Autonomous Infra Blueprint v2 — Self‑Healing in <60s",
+    description: "Updated playbooks with budgeted actions, policy tests, and live canaries for instant containment.",
+    category: "AI Operations",
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"

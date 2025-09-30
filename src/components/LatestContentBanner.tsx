@@ -26,12 +26,12 @@ const LatestContentBanner: React.FC<LatestContentBannerProps> = ({
           <div className="flex items-center gap-3">
             <Sparkles className="w-6 h-6 animate-pulse" />
             <div>
-              <h3 className="font-bold text-lg">🔥 New: Platform ROI Scorecards · Consentless Experiments v3 · Eval & Policy Blueprints</h3>
-              <p className="text-sm opacity-90">Scorecards that prove platform value · Zero‑PII A/B at &lt;100ms · CI policy tests wired to KPIs →</p>
+              <h3 className="font-bold text-lg">🔥 New: Governed Agent Runbooks · Edge Rate Limiter Blueprint</h3>
+              <p className="text-sm opacity-90">Budgets, KPI canaries, rollback for agents + zero‑PII rate limiting at &lt;100ms. Explore the latest →</p>
             </div>
           </div>
           <Link
-            to="/blog/ai-2025-sept-30-platform-roi-scorecards"
+            to="/blog/ai-2026-governed-agent-runbooks"
             className="bg-white text-gray-900 px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-all flex items-center gap-2 flex-shrink-0"
           >
             <TrendingUp className="w-4 h-4" />
