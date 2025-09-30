@@ -1,3 +1,4 @@
+import React, { useMemo, useState } from "react";
 import {
   ArrowRight,
   BarChart3,
@@ -11,7 +12,6 @@ import {
   User,
   Zap
 } from "lucide-react";
-import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
 // import BlogPromotionBanner from "../components/BlogPromotionBanner";
 const BlogPromotionBanner = () => null;
