@@ -10,13 +10,18 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-<<<<<<< HEAD
     slug: "ai-governance-risk-playbook-2025",
     title: "AI Governance Risk Playbook 2025: Practical Controls That Work",
-=======
+    description:
+      "Actionable controls, approval flows, and monitoring that keep GenAI initiatives safe and compliant.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read",
+  },
+  {
     slug: "ai-product-launch-checklist-2025",
     title: "AI Product Launch Checklist: From Pilot to Production",
->>>>>>> cursor/create-and-deploy-new-content-a1d5
     description:
       "Actionable controls, approval flows, and monitoring that keep GenAI initiatives safe and compliant.",
     category: "AI Governance",
