@@ -4,6 +4,9 @@ import Link from 'next/link';
 export const metadata = {
   title: 'AI Enterprise Transformation 2026: Complete Implementation Guide',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/new-content-integration-main
   description: 'Master AI enterprise transformation with proven strategies, ROI frameworks, and implementation roadmaps. Achieve 300% ROI and 70% cost reduction.',
   keywords: 'AI enterprise transformation, AI implementation, enterprise AI strategy, AI ROI, digital transformation',
   openGraph: {
@@ -35,6 +38,9 @@ export const metadata = {
 export default function AIEnterpriseTransformation2026() {
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/new-content-integration-main
     <div className="max-w-4xl mx-auto px-4 py-8">
       <article className="prose prose-lg max-w-none">
         <header className="mb-8">

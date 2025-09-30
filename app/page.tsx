@@ -46,6 +46,7 @@ import {
 import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
 import LatestAI2026ContentBanner from '../components/LatestAI2026ContentBanner';
 import ContentShowcase from '../components/ContentShowcase';
+<<<<<<< HEAD
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
 import InteractivePromotionalSection from '../components/InteractivePromotionalSection';
@@ -61,6 +62,13 @@ import LatestContent2026ShowcaseBanner from '../components/LatestContent2026Show
 import InteractiveAI2026Calculator from '../components/InteractiveAI2026Calculator';
 =======
 >>>>>>> origin/feature/revolutionary-ai-2026-content
+=======
+import InteractiveAIROICalculator from '../components/InteractiveAIROICalculator';
+import InteractiveAI2027Calculator from '../components/InteractiveAI2027Calculator';
+import InteractiveAICalculator2026 from '../components/InteractiveAICalculator2026';
+import FeaturedServiceCard from '../components/FeaturedServiceCard';
+import SuccessStory from '../components/SuccessStory';
+>>>>>>> origin/new-content-integration-main
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
@@ -144,6 +152,7 @@ export default function HomePage() {
       <div className="animate-fade-in">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       {/* Revolutionary AI 2025 Banner */}
       <RevolutionaryAI2025Banner />
       
@@ -153,6 +162,8 @@ export default function HomePage() {
       {/* Revolutionary Content 2026 Banner */}
       <RevolutionaryContent2026Banner />
 =======
+=======
+>>>>>>> origin/new-content-integration-main
       {/* Latest 2026 Mega Content Banners */}
       <Revolutionary2026ContentBanner />
       <AI2026ContentShowcaseBanner />
@@ -168,6 +179,10 @@ export default function HomePage() {
 >>>>>>> origin/feature/revolutionary-ai-2026-content
       
       {/* Latest 2026 Content Banners */}
+<<<<<<< HEAD
+=======
+      <LatestContent2026MegaBanner />
+>>>>>>> origin/new-content-integration-main
       <AIEnterpriseTransformationBanner />
       <AIAutonomousSystemsBanner />
       <ManufacturingTransformationBanner />
@@ -346,6 +361,7 @@ export default function HomePage() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       {/* Interactive AI Calculator 2025 */}
       <InteractiveAICalculator2025 />
 
@@ -389,6 +405,9 @@ export default function HomePage() {
       <InteractiveAI2027Calculator />
 
       {/* Interactive AI 2026 Calculator */}
+=======
+      {/* Interactive AI Calculator */}
+>>>>>>> origin/new-content-integration-main
       <InteractiveAICalculator2026 />
 =======
       {/* Interactive Promotional Section */}
@@ -519,6 +538,9 @@ export default function HomePage() {
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/new-content-integration-main
             <Link href="/blog/ai-enterprise-adoption-2025" className="group">
 =======
             <Link href="/blog/ai-2026-revolutionary-breakthrough" className="group">
@@ -601,7 +623,11 @@ export default function HomePage() {
                 </div>
               </div>
             </Link>
+<<<<<<< HEAD
             <Link href="/case-studies/ai-supply-chain-optimization-2025" className="group">
+=======
+            <Link href="/case-studies/fortune-500-ai-transformation-success" className="group">
+>>>>>>> origin/new-content-integration-main
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -613,7 +639,11 @@ export default function HomePage() {
                   AI Supply Chain Optimization: 60% Cost Reduction & 90% Efficiency Gain
                 </h3>
                 <p className="text-gray-600 mb-4">
+<<<<<<< HEAD
                   See how a global manufacturer achieved 60% cost reduction and 90% efficiency improvement, saving $12M annually.
+=======
+                  See how a Fortune 500 manufacturing company achieved 300% ROI and $12M annual savings through comprehensive AI transformation.
+>>>>>>> origin/new-content-integration-main
                 </p>
                 <div className="flex items-center text-blue-600 font-semibold">
                   View Case Study →
