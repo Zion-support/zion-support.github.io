@@ -10,6 +10,21 @@ export const metadata: Metadata = {
 
 const caseStudies = [
   {
+    title: 'AI Automation Mega Success 2026: $5M Savings & 400% ROI',
+    slug: 'ai-automation-mega-success-2026',
+    excerpt: 'Discover how a Fortune 500 company achieved $5M annual savings and 400% ROI through comprehensive AI automation.',
+    company: 'GlobalTech Manufacturing',
+    industry: 'Manufacturing',
+    results: {
+      savings: '$5M',
+      roi: '400%',
+      automation: '75%',
+      timeline: '8 months'
+    },
+    image: '🚀',
+    color: 'green'
+  },
+  {
     title: 'AI Manufacturing Transformation: 90% Efficiency Gain',
     slug: 'ai-manufacturing-transformation-2026',
     excerpt: 'See how a Fortune 500 manufacturer achieved 90% efficiency gains and $50M annual savings through comprehensive AI transformation.',

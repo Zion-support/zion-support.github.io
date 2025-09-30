@@ -10,6 +10,26 @@ export const metadata: Metadata = {
 
 const blogPosts = [
   {
+    title: 'AI 2026 Revolutionary Breakthroughs: The Future is Here',
+    slug: 'ai-2026-revolutionary-breakthroughs',
+    excerpt: 'Discover the most revolutionary AI breakthroughs of 2026. From quantum AI to neural superintelligence, explore technologies transforming enterprise operations.',
+    category: 'Featured Article',
+    readTime: '20 min read',
+    publishedAt: 'January 20, 2026',
+    image: '🚀',
+    color: 'red'
+  },
+  {
+    title: 'AI Enterprise Automation 2026: Complete Implementation Guide',
+    slug: 'ai-enterprise-automation-2026',
+    excerpt: 'Master AI enterprise automation with proven strategies, implementation frameworks, and achieve 300% ROI with our comprehensive guide.',
+    category: 'Implementation Guide',
+    readTime: '25 min read',
+    publishedAt: 'January 20, 2026',
+    image: '⚙️',
+    color: 'blue'
+  },
+  {
     title: 'AI 2026: Revolutionary Trends Transforming Enterprise',
     slug: 'ai-2026-revolutionary-trends',
     excerpt: 'Discover the revolutionary AI trends shaping 2026. From autonomous enterprise systems to quantum AI, explore how these breakthroughs are transforming business operations.',
