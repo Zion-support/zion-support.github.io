@@ -8,6 +8,26 @@ export const metadata = {
 
 const blogPosts = [
   {
+    title: 'AI Operational Trust Scorecards 2026: SLIs, Budgets, Rollback',
+    slug: 'ai-operational-trust-scorecards-2026',
+    excerpt: 'Wire SLIs to KPIs with budgets, canaries, and automated rollback for trustworthy AI ops.',
+    category: 'Operations',
+    publishedAt: 'September 30, 2025',
+    image: '🧭',
+    color: 'emerald',
+    readTime: '11 min read'
+  },
+  {
+    title: 'AI Infrastructure Automation 2026: 99.99% Uptime, 70% Cost ↓',
+    slug: 'ai-infrastructure-automation-2026',
+    excerpt: 'Self-healing infra with policy tests, predictive autoscaling, and automated recovery.',
+    category: 'Infrastructure',
+    publishedAt: 'September 30, 2025',
+    image: '⚙️',
+    color: 'indigo',
+    readTime: '18 min read'
+  },
+  {
     title: 'Revolutionary AI Breakthroughs: Meta-Cognitive Intelligence Achieves 95% Decision Accuracy',
     slug: 'ai-2026-breakthrough-announcement',
     excerpt: 'Revolutionary AI systems that think about their own thinking processes, achieving unprecedented accuracy in complex enterprise scenarios.',
