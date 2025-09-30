@@ -122,3 +122,40 @@ export const newArticles2025: NewArticle[] = [
     tags: ["Anomaly Detection", "Real-Time AI", "Security", "Monitoring"]
   }
 ];
+
+// Newly added articles to advertise on the front end
+newArticles2025.push(
+  {
+    id: "ai-autonomous-infrastructure-2025",
+    title: "🏗️ AI Autonomous Infrastructure: Self‑Healing, Self‑Optimizing Systems",
+    description: "Zero‑touch ops with predictive autoscaling, policy‑tested releases, and instant rollback.",
+    category: "Infrastructure AI",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-autonomous-infrastructure-2025",
+    readTime: "9 min read",
+    tags: ["Autonomous Systems", "Infrastructure", "SRE", "DevOps"]
+  },
+  {
+    id: "multimodal-ai-foundations-2025",
+    title: "🎭 Multimodal AI Foundations: Vision × Language × Audio",
+    description: "Production patterns for unified embeddings, routing, and KPI‑linked evals.",
+    category: "AI Innovation",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/multimodal-ai-foundations-2025",
+    readTime: "11 min read",
+    tags: ["Multimodal", "Embeddings", "Routing", "LLM"]
+  },
+  {
+    id: "privacy-first-analytics-quickstart-2025",
+    title: "🔒 Privacy‑First Analytics Quickstart",
+    description: "Scoped IDs, DP noise, and on‑device telemetry for actionable insights without PII.",
+    category: "Analytics",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/privacy-first-analytics-quickstart-2025",
+    readTime: "6 min read",
+    tags: ["Analytics", "Privacy", "Edge", "DP"]
+  }
+);
