@@ -39,6 +39,8 @@ import InteractiveAICalculator from '../components/InteractiveAICalculator';
 import NewContent2026MegaSuccessBanner from '../components/NewContent2026MegaSuccessBanner';
 import AITrends2026PredictionsBanner from '../components/AITrends2026PredictionsBanner';
 import InteractiveContentShowcase2026 from '../components/InteractiveContentShowcase2026';
+import UltimateContentShowcase2026Banner from '../components/UltimateContentShowcase2026Banner';
+import RevolutionaryAISuccessBanner from '../components/RevolutionaryAISuccessBanner';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -50,6 +52,12 @@ export default function HomePage() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="animate-fade-in">
+        {/* Ultimate Content Showcase Banner */}
+        <UltimateContentShowcase2026Banner />
+        
+        {/* Revolutionary AI Success Banner */}
+        <RevolutionaryAISuccessBanner />
+        
         {/* New Mega Success Story Banner */}
         <NewContent2026MegaSuccessBanner />
         
