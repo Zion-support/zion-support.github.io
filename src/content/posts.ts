@@ -1233,6 +1233,33 @@ posts.push(
 // Sept 30, 2025 – New articles to expand catalog and promote on homepage
 posts.push(
   {
+    slug: "ai-governance-action-scorecards-2026",
+    title: "AI Governance Action Scorecards 2026: Guardrails That Ship",
+    description: "Wire CI policy tests, live canaries, and rollback triggers to KPIs teams actually use.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-private-experimentation-2026",
+    title: "Edge Private Experimentation 2026: <100ms A/B Without PII",
+    description: "Scoped IDs, on-device metrics, and DP noise for compliant, global experimentation under budget.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "agent-release-zero-regret-2026",
+    title: "Agent Releases 2026: Zero‑Regret with Budgets & Rollback",
+    description: "Budget risky actions, add approvals, and wire instant rollback with KPI‑linked canaries.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
     slug: "ai-enterprise-autonomy-blueprint-2026",
     title: "Enterprise Autonomy Blueprint 2026: From Pilots to Production",
     description: "Reference playbooks for taking autonomous systems from PoCs to governed, reliable production at scale.",

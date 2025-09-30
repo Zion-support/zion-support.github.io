@@ -301,9 +301,9 @@ export default function BlogPage() {
         <div className="mb-12">
           <h2 className="text-2xl font-bold mb-6">Featured Articles</h2>
           <div className="grid md:grid-cols-2 gap-6">
-            <Link href="/blog/ai-2027-autonomous-governance-blueprint" className="block p-6 bg-slate-800 rounded-lg hover:bg-slate-700 transition-colors">
-              <h3 className="text-xl font-semibold mb-2">AI 2027 Autonomous Governance Blueprint</h3>
-              <p className="text-slate-300 mb-3">Comprehensive framework for autonomous AI governance in enterprise environments.</p>
+            <Link href="/blog/agent-release-zero-regret-2026" className="block p-6 bg-slate-800 rounded-lg hover:bg-slate-700 transition-colors">
+              <h3 className="text-xl font-semibold mb-2">Agent Releases 2026: Zero‑Regret with Budgets & Rollback</h3>
+              <p className="text-slate-300 mb-3">Budget risky actions, approvals, and instant rollback with KPI‑linked canaries.</p>
               <span className="text-blue-400 text-sm">Read more →</span>
             </Link>
             <Link href="/blog/ai-2026-agent-ops-observability" className="block p-6 bg-slate-800 rounded-lg hover:bg-slate-700 transition-colors">
