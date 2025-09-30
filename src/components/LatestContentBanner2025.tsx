@@ -5,6 +5,36 @@ import { motion } from "framer-motion";
 const LatestContentBanner2025 = () => {
   const newArticles = [
     {
+      title: "AI Autonomous DevOps 2026",
+      description: "Self-Managing CI/CD Pipelines with Zero Downtime",
+      slug: "ai-autonomous-devops-2026",
+      category: "DevOps AI"
+    },
+    {
+      title: "AI Legal Document Automation 2026",
+      description: "From Contracts to Compliance in Seconds",
+      slug: "ai-legal-document-automation-2026",
+      category: "Legal Tech"
+    },
+    {
+      title: "AI Customer Experience 2026",
+      description: "Hyper-Personalization Achieving 400% Engagement",
+      slug: "ai-customer-experience-hyper-personalization-2026",
+      category: "Customer Experience"
+    },
+    {
+      title: "AI Renewable Energy Optimization 2026",
+      description: "Smart Grids Achieving 95% Efficiency",
+      slug: "ai-renewable-energy-optimization-2026",
+      category: "Energy Tech"
+    },
+    {
+      title: "AI Research Acceleration Platform 2026",
+      description: "10x Faster Scientific Discovery",
+      slug: "ai-research-acceleration-platform-2026",
+      category: "Research AI"
+    },
+    {
       title: "Autonomous Code Refactoring 2026",
       description: "Self-Healing Codebases at Scale",
       slug: "autonomous-code-refactoring-2026",
@@ -21,36 +51,6 @@ const LatestContentBanner2025 = () => {
       description: "Brain-Inspired Computing at 10,000x Efficiency",
       slug: "neuromorphic-edge-ai-2026",
       category: "Edge Computing"
-    },
-    {
-      title: "Swarm Intelligence Robotics 2026",
-      description: "Coordinated Autonomous Systems",
-      slug: "swarm-intelligence-robotics-2026",
-      category: "Robotics"
-    },
-    {
-      title: "AI Drug Discovery 2026",
-      description: "From Years to Months with 100x Acceleration",
-      slug: "ai-drug-discovery-acceleration-2026",
-      category: "Healthcare AI"
-    },
-    {
-      title: "Generative UI Systems 2026",
-      description: "Self-Designing Adaptive Interfaces",
-      slug: "generative-ui-systems-2026",
-      category: "UX AI"
-    },
-    {
-      title: "Cognitive AI Assistants 2026",
-      description: "Human-Level Understanding at Scale",
-      slug: "cognitive-ai-assistants-2026",
-      category: "Conversational AI"
-    },
-    {
-      title: "Autonomous Supply Chain 2026",
-      description: "AI-Driven Logistics Achieving 40% Cost Reduction",
-      slug: "autonomous-supply-chain-optimization-2026",
-      category: "Supply Chain"
     },
     {
       title: "AI Composite Agents 2026",
@@ -98,8 +98,8 @@ const LatestContentBanner2025 = () => {
           🚀 September 30, 2025 — REVOLUTIONARY CONTENT DROP!
         </h2>
         <p className="text-xl text-blue-100 mb-8 max-w-3xl">
-          Discover <span className="font-bold text-yellow-300">8 BRAND NEW groundbreaking articles</span> on Autonomous Code Refactoring, Quantum-ML Computing, Neuromorphic Edge AI, Swarm Robotics, AI Drug Discovery, Generative UI, Cognitive Assistants, and Autonomous Supply Chain! 
-          Plus explore our expanded library of <span className="font-bold text-yellow-300">20+ cutting-edge articles</span> shaping 2026!
+          Discover <span className="font-bold text-yellow-300">5 BRAND NEW groundbreaking articles</span> on AI Autonomous DevOps, Legal Document Automation, Customer Experience Hyper-Personalization, Renewable Energy Optimization, and Research Acceleration! 
+          Plus explore our expanded library of <span className="font-bold text-yellow-300">25+ cutting-edge articles</span> shaping 2026!
         </p>
 
         {/* Featured highlights */}
@@ -155,15 +155,15 @@ const LatestContentBanner2025 = () => {
         {/* Stats */}
         <div className="mt-8 pt-6 border-t border-white/20 flex flex-wrap gap-8">
           <div className="text-center">
-            <div className="text-3xl font-bold text-yellow-300">8</div>
+            <div className="text-3xl font-bold text-yellow-300">5</div>
             <div className="text-sm text-blue-200">NEW Articles TODAY</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-green-300">20+</div>
+            <div className="text-3xl font-bold text-green-300">25+</div>
             <div className="text-sm text-blue-200">Total Latest Articles</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-purple-300">200+</div>
+            <div className="text-3xl font-bold text-purple-300">250+</div>
             <div className="text-sm text-blue-200">Pages of Insights</div>
           </div>
           <div className="text-center">
