@@ -1,5 +1,6 @@
 // @ts-nocheck
 import React from 'react';
+import Link from 'next/link';
 import NewContentAdvertisingBanner from '../components/NewContentAdvertisingBanner';
 import UnifiedContentPromotion from '../components/UnifiedContentPromotion';
 import January2026NeuralArchitectureSearchBanner from '../components/January2026NeuralArchitectureSearchBanner';
@@ -9,6 +10,10 @@ import January2026NewServicesBanner from '../components/January2026NewServicesBa
 import Revolutionary2026ContentAdvertisingBanner from '../components/Revolutionary2026ContentAdvertisingBanner';
 import January2026BreakthroughShowcaseBanner from '../components/January2026BreakthroughShowcaseBanner';
 import Ultimate2026ContentPromotionalBanner from '../components/Ultimate2026ContentPromotionalBanner';
+import NeuralOptimizationRevolutionBanner from '../components/NeuralOptimizationRevolutionBanner';
+import AutonomousBusinessProcessBanner from '../components/AutonomousBusinessProcessBanner';
+import NewContentShowcaseBanner from '../components/NewContentShowcaseBanner';
+import ContentShowcase from '../components/ContentShowcase';
 
 export default function HomePage() {
   return (
@@ -24,19 +29,24 @@ export default function HomePage() {
       <section className="py-6 border-t border-b border-white/10 bg-white/5">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
-            <div className="text-white font-semibold">New this week</div>
+            <div className="text-white font-semibold">New this week - Revolutionary Breakthroughs</div>
             <div className="flex flex-wrap gap-2">
-<<<<<<< HEAD
-              <a href="/blog/ai-2025-oct-02-production-agent-guardrails" className="inline-flex items-center gap-2 bg-emerald-500/20 text-emerald-200 border border-emerald-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-emerald-500/30 transition-colors">Production Agent Guardrails<span>→</span></a>
-=======
-              <a href="/blog/ai-2025-sept-30-governed-autonomy-blueprint" className="inline-flex items-center gap-2 bg-blue-500/20 text-blue-200 border border-blue-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-blue-500/30 transition-colors">Governed Autonomy Blueprint 2025<span>→</span></a>
->>>>>>> cursor/create-and-deploy-new-content-8ae9
-              <a href="/blog/ai-2026-reliable-genai-platform" className="inline-flex items-center gap-2 bg-indigo-500/20 text-indigo-200 border border-indigo-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-indigo-500/30 transition-colors">Reliable GenAI Platform 2026<span>→</span></a>
-              <a href="/blog/ai-2026-e2e-ai-tracing" className="inline-flex items-center gap-2 bg-cyan-500/20 text-cyan-200 border border-cyan-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-cyan-500/30 transition-colors">E2E AI Tracing 2026<span>→</span></a>
+              <a href="/blog/ai-2026-neural-optimization-revolution" className="inline-flex items-center gap-2 bg-purple-500/20 text-purple-200 border border-purple-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-purple-500/30 transition-colors">Neural Optimization 1000x<span>→</span></a>
+              <a href="/blog/ai-2026-autonomous-business-processes" className="inline-flex items-center gap-2 bg-emerald-500/20 text-emerald-200 border border-emerald-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-emerald-500/30 transition-colors">99.9% Autonomous Business<span>→</span></a>
+              <a href="/case-studies/ai-2026-neural-optimization-success-story" className="inline-flex items-center gap-2 bg-blue-500/20 text-blue-200 border border-blue-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-blue-500/30 transition-colors">$500M ROI Success<span>→</span></a>
             </div>
           </div>
         </div>
       </section>
+      
+      {/* New Content Showcase Banner - Featured prominently */}
+      <NewContentShowcaseBanner />
+      
+      {/* Neural Optimization Revolution Banner */}
+      <NeuralOptimizationRevolutionBanner />
+      
+      {/* Autonomous Business Process Banner */}
+      <AutonomousBusinessProcessBanner />
       
       {/* Revolutionary 2026 Content Advertising Banner */}
       <Revolutionary2026ContentAdvertisingBanner />
