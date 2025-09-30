@@ -215,6 +215,30 @@ export const featuredBlogPosts: FeaturedItem[] = [
 // Surface brand-new content (Oct 30, 2025)
 featuredBlogPosts.unshift(
   {
+    id: "ai-2025-sept-30-go-to-market-ai-scorecards",
+    title: "Go-To-Market AI Scorecards",
+    description: "Align AI bets to pipeline, win‑rates, and adoption — with rollback",
+    link: "/blog/ai-2025-sept-30-go-to-market-ai-scorecards",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-2025-sept-30-private-telemetry-blueprint-v2",
+    title: "Private Telemetry Blueprint v2",
+    description: "Zero‑PII, sub‑100ms analytics with scoped IDs and DP noise",
+    link: "/blog/edge-2025-sept-30-private-telemetry-blueprint-v2",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "genai-2025-sept-30-eval-budgeting-blueprint-v3",
+    title: "Eval Budgeting Blueprint v3",
+    description: "Right‑size suites, cache goldens, enforce online policies under KPIs",
+    link: "/blog/genai-2025-sept-30-eval-budgeting-blueprint-v3",
+    type: "article",
+    featured: true
+  },
+  {
     id: "genai-2025-oct-01-e2e-eval-pipelines",
     title: "E2E Eval Pipelines — KPI‑Linked Gates",
     description: "Eval pipelines wired to KPIs with budgets, canaries, and rollback.",
@@ -251,6 +275,34 @@ featuredBlogPosts.unshift(
     title: "Edge 2026: Private Rate Limiter Blueprint",
     description: "Scoped IDs, signed configs, and on‑device metrics for zero‑PII limits.",
     link: "/blog/edge-rate-limiter-blueprint-2026",
+    type: "article",
+    featured: true
+  }
+);
+
+// Oct 02, 2025 – Advertise three brand-new articles site-wide
+featuredBlogPosts.unshift(
+  {
+    id: "ai-2025-oct-02-agent-safety-scorecards",
+    title: "AI 2025: Agent Safety Scorecards",
+    description: "KPIs, budgets, and rollback triggers that keep autonomous agents safe at speed",
+    link: "/blog/ai-2025-oct-02-agent-safety-scorecards",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-2025-oct-02-private-experiments-v4",
+    title: "Edge 2025: Private Experiments v4 (<100ms)",
+    description: "Scoped IDs, on-device metrics, and DP noise for compliant A/B worldwide",
+    link: "/blog/edge-2025-oct-02-private-experiments-v4",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "genai-2025-oct-02-cache-playbook-v2",
+    title: "GenAI 2025: Cache Playbook v2",
+    description: "Tiered + semantic caches with eval gates for 50–70% savings",
+    link: "/blog/genai-2025-oct-02-cache-playbook-v2",
     type: "article",
     featured: true
   }
@@ -1000,6 +1052,34 @@ export const getLatestContent = (count: number = 5): FeaturedItem[] => {
     .filter(item => item.featured)
     .slice(0, count);
 };
+
+// Oct 01, 2025 – Advertise three brand-new articles site-wide
+featuredBlogPosts.unshift(
+  {
+    id: "ai-2025-oct-01-operational-trust-v3",
+    title: "AI 2025: Operational Trust Scorecards v3",
+    description: "SLIs → KPIs with budgets, canaries, and instant rollback.",
+    link: "/blog/ai-2025-oct-01-operational-trust-v3",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-2025-oct-01-private-consentless-experiments",
+    title: "Edge 2025: Consentless Experiments v3 (<100ms)",
+    description: "Scoped IDs, on‑device metrics, DP noise for compliant A/B.",
+    link: "/blog/edge-2025-oct-01-private-consentless-experiments",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "genai-2025-oct-01-quality-tiers-v3",
+    title: "GenAI 2025: Quality Tiers v3",
+    description: "Tiering + semantic caches + eval gates for stable UX.",
+    link: "/blog/genai-2025-oct-01-quality-tiers-v3",
+    type: "article",
+    featured: true
+  }
+);
 
 // Oct 2025 – Promote three brand-new guides site-wide
 featuredBlogPosts.unshift(

@@ -145,6 +145,43 @@ export const newArticles2025: NewArticle[] = [
   }
 ];
 
+// Oct 01, 2025 – New articles to advertise prominently on Home
+newArticles2025.push(
+  {
+    id: "ai-2025-oct-01-operational-trust-v3",
+    title: "📊 AI Operational Trust Scorecards v3 (2025)",
+    description: "SLIs → KPIs with budgets, canaries, and instant rollback — updated v3 playbook.",
+    category: "AI Operations",
+    publishedDate: "2025-10-01",
+    featured: true,
+    link: "/blog/ai-2025-oct-01-operational-trust-v3",
+    readTime: "9 min read",
+    tags: ["Scorecards", "Budgets", "Rollback"]
+  },
+  {
+    id: "edge-2025-oct-01-private-consentless-experiments",
+    title: "🔬 Edge Consentless Experiments v3 (<100ms)",
+    description: "Scoped IDs, on‑device metrics, and DP noise for compliant A/B at <100ms.",
+    category: "Analytics",
+    publishedDate: "2025-10-01",
+    featured: true,
+    link: "/blog/edge-2025-oct-01-private-consentless-experiments",
+    readTime: "7 min read",
+    tags: ["Edge", "Privacy", "Experiments"]
+  },
+  {
+    id: "genai-2025-oct-01-quality-tiers-v3",
+    title: "💸 GenAI Quality Tiers v3 (2025)",
+    description: "Predictable cost and stable UX with tiered routing, semantic caches, and eval gates.",
+    category: "GenAI",
+    publishedDate: "2025-10-01",
+    featured: true,
+    link: "/blog/genai-2025-oct-01-quality-tiers-v3",
+    readTime: "8 min read",
+    tags: ["Quality Tiers", "Caching", "Budgets"]
+  }
+);
+
 // Newly added articles to advertise on the front end
 newArticles2025.push(
   {
@@ -253,6 +290,43 @@ newArticles2025.push(
     link: "/blog/genai-2028-eval-scorecards",
     readTime: "8 min read",
     tags: ["Evals", "Scorecards", "Budgets"]
+  }
+);
+
+// Sept 30, 2025 – Fresh promos to advertise on Home and listings
+newArticles2025.push(
+  {
+    id: "ai-2025-sept-30-autonomous-runbooks-quickstart",
+    title: "✅ Autonomous Runbooks Quickstart (2025)",
+    description: "Budgeted actions, approvals, and instant rollback for safe automation.",
+    category: "AI Operations",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-2025-sept-30-autonomous-runbooks-quickstart",
+    readTime: "7 min read",
+    tags: ["Runbooks", "Automation", "Rollback"]
+  },
+  {
+    id: "edge-2025-sept-30-privacy-preserving-telemetry",
+    title: "🔒 Privacy‑Preserving Telemetry (2025)",
+    description: "Scoped IDs, on‑device redaction, and DP noise for useful, compliant analytics.",
+    category: "Observability",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/edge-2025-sept-30-privacy-preserving-telemetry",
+    readTime: "6 min read",
+    tags: ["Privacy", "Telemetry", "Edge"]
+  },
+  {
+    id: "genai-2025-sept-30-quality-tiers-quickstart",
+    title: "💸 GenAI Quality Tiers Quickstart (2025)",
+    description: "Stable UX with tiered routing, semantic caches, and KPI‑linked budgets.",
+    category: "GenAI",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/genai-2025-sept-30-quality-tiers-quickstart",
+    readTime: "8 min read",
+    tags: ["Quality Tiers", "Caching", "Budgets"]
   }
 );
 
@@ -520,6 +594,43 @@ newArticles2025.push(
     link: "/blog/edge-2026-private-feature-flags",
     readTime: "7 min read",
     tags: ["Edge", "Privacy", "Feature Flags", "DP"]
+  }
+);
+
+// Oct 01, 2025 – Fresh promos to advertise on Home
+newArticles2025.push(
+  {
+    id: "genai-2025-oct-01-e2e-eval-pipelines",
+    title: "GenAI: End‑to‑End Eval Pipelines (2025)",
+    description: "Online evals wired to KPIs with budget‑aware routing and instant rollback.",
+    category: "GenAI",
+    publishedDate: "2025-10-01",
+    featured: true,
+    link: "/blog/genai-2025-oct-01-e2e-eval-pipelines",
+    readTime: "9 min read",
+    tags: ["Evals", "Scorecards", "Budgets"]
+  },
+  {
+    id: "genai-2025-oct-01-cost-optimization-v5",
+    title: "GenAI Cost Optimization v5 (2025)",
+    description: "60–85% savings with tier routing, caches, and KPI‑linked scorecards.",
+    category: "AI Operations",
+    publishedDate: "2025-10-01",
+    featured: true,
+    link: "/blog/genai-2025-oct-01-cost-optimization-v5",
+    readTime: "10 min read",
+    tags: ["FinOps", "Quality Tiers", "Caching"]
+  },
+  {
+    id: "observability-2025-sept-30-e2e-ai-tracing-v2",
+    title: "E2E AI Tracing v2 (2025)",
+    description: "Span budgets, cost telemetry, and KPI‑linked rollback for AI systems.",
+    category: "Observability",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/observability-2025-sept-30-e2e-ai-tracing-v2",
+    readTime: "8 min read",
+    tags: ["Tracing", "Budgets", "KPIs"]
   }
 );
 

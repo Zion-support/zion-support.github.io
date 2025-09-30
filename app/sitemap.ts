@@ -88,5 +88,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.9,
     },
+    {
+      url: `${baseUrl}/blog/ai-2029-meta-cognitive-superintelligence-breakthrough`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/blog/ai-2030-quantum-consciousness-revolution`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/case-studies/ai-2029-meta-cognitive-superintelligence-mega-success`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
   ]
 }

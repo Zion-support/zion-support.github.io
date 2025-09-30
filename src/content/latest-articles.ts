@@ -17,11 +17,59 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
-    id: "ai-2026-autonomous-ops-guardrails",
-    slug: "ai-2026-autonomous-ops-guardrails",
-    title: "AI 2026: Autonomous Ops Guardrails",
-    description: "Budgets, live traces, and instant rollback that keep autonomy safe at speed.",
-    excerpt: "Ship safe autonomy with KPI-linked budgets, live canaries, and rollback-ready playbooks.",
+    id: "ai-governance-risk-budgets-2026",
+    slug: "ai-governance-risk-budgets-2026",
+    title: "AI Governance Risk Budgets 2026: Owners, SLAs, Rollbacks",
+    description: "Budget risky actions with owners, SLAs, and rollback triggers that keep teams fast and safe.",
+    excerpt: "Risk budgets wired to CI policy checks and incident rollback in <60s.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-15",
+    category: "AI Governance",
+    tags: ["Risk", "Budgets", "SLAs"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/ai-governance-risk-budgets-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "privacy-first-feature-flags-2026",
+    slug: "privacy-first-feature-flags-2026",
+    title: "Privacy‑First Feature Flags 2026: Geo Budgets and Instant Rollback",
+    description: "Progressive delivery with scoped IDs, geo budgets, and rollback in under 60 seconds.",
+    excerpt: "Zero‑regret rollouts with privacy by design and budgeted actions.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-15",
+    category: "Architecture",
+    tags: ["Feature Flags", "Privacy", "Progressive Delivery"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/privacy-first-feature-flags-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "reliable-agent-actions-2026",
+    slug: "reliable-agent-actions-2026",
+    title: "Reliable Agent Actions 2026: Deterministic Tools and Live Traces",
+    description: "Design agent actions with deterministic tools, safety budgets, and observable traces.",
+    excerpt: "Make multi‑tool agents reliable with traces, budgets, and guardrails.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-15",
+    category: "GenAI",
+    tags: ["Agents", "Tracing", "Safety"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/reliable-agent-actions-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "ai-security-data-leak-prevention-2026",
+    slug: "ai-security-data-leak-prevention-2026",
+    title: "AI Security 2026: Data‑Leak Prevention with Scoped IDs and Egress Guards",
+    description: "Practical playbooks to prevent prompt and data leaks with scoped identifiers, redaction, and egress controls.",
+    excerpt: "Stop data leaks before they happen with scoped IDs, field‑level filters, and egress guards.",
     author: "Zion Tech Group Team",
     date: "2025-09-30",
     category: "AI Operations",
@@ -525,6 +573,38 @@ export const latestArticles: LatestArticle[] = [
     featured: true,
     readTime: "7 min read",
     image: "/images/secure-ml-supply-chain-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "ai-risk-mitigation-scorecards-2026",
+    slug: "ai-risk-mitigation-scorecards-2026",
+    title: "AI Risk Mitigation Scorecards 2026: From Policy to Practice",
+    description: "Scorecards with owners, SLAs, and CI policy checks that drive action and outcomes.",
+    excerpt: "Make risk programs actionable with owned mitigations, policy tests, and measurable SLAs.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-14",
+    category: "AI Governance",
+    tags: ["Risk", "Scorecards", "Policy"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/ai-risk-mitigation-scorecards-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "edge-privacy-telemetry-2026",
+    slug: "edge-privacy-telemetry-2026",
+    title: "Edge Privacy Telemetry 2026: Scoped IDs, Local Caches, DP Noise",
+    description: "Keep insights rich and PII risk low with privacy‑first telemetry patterns at the edge.",
+    excerpt: "Privacy‑preserving analytics at the edge with scoped identifiers and on‑device redaction.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-14",
+    category: "Observability",
+    tags: ["Privacy", "Edge", "Telemetry"],
+    featured: false,
+    readTime: "6 min read",
+    image: "/images/edge-privacy-telemetry-2026.jpg",
     newBadge: true,
     trending: true
   },
@@ -1546,6 +1626,54 @@ export const latestArticles: LatestArticle[] = [
 // Sept 30, 2025 – Add three brand-new articles (advertised site-wide)
 latestArticles.unshift(
   {
+    id: "ai-2025-sept-30-go-to-market-ai-scorecards",
+    slug: "ai-2025-sept-30-go-to-market-ai-scorecards",
+    title: "Go-To-Market AI Scorecards — Align Bets to Revenue",
+    description: "Tie AI features to pipeline, win‑rates, adoption; guardrails with rollback.",
+    excerpt: "Practical GTM scorecards wired to KPIs for AI features.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "AI Strategy",
+    tags: ["GTM", "Scorecards", "ROI"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/ai-2025-go-to-market-scorecards.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "edge-2025-sept-30-private-telemetry-blueprint-v2",
+    slug: "edge-2025-sept-30-private-telemetry-blueprint-v2",
+    title: "Private Telemetry Blueprint v2 — Zero‑PII, Sub‑100ms",
+    description: "Scoped IDs, on‑device redaction, and DP noise for actionable analytics.",
+    excerpt: "Useful signals without PII risk using edge patterns.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "Observability",
+    tags: ["Privacy", "Telemetry", "DP"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/edge-2025-private-telemetry-v2.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "genai-2025-sept-30-eval-budgeting-blueprint-v3",
+    slug: "genai-2025-sept-30-eval-budgeting-blueprint-v3",
+    title: "Eval Budgeting Blueprint v3 — 60–85% Savings, Stable UX",
+    description: "Right‑size suites, cache golden answers, enforce online policies.",
+    excerpt: "Budget‑aware evals tied to KPIs for reliable savings.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "GenAI",
+    tags: ["Evals", "Budgets", "Quality"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/genai-2025-eval-budgeting-v3.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "ai-2027-quantum-enhanced-machine-learning",
     slug: "ai-2027-quantum-enhanced-machine-learning",
     title: "AI 2027: Quantum‑Enhanced Machine Learning",
@@ -1590,6 +1718,58 @@ latestArticles.unshift(
     featured: true,
     readTime: "11 min read",
     image: "/images/ai-2028-autonomous-governance.jpg",
+    newBadge: true,
+    trending: true
+  }
+);
+
+// Oct 01, 2025 – Add three brand-new articles (to advertise and surface)
+latestArticles.unshift(
+  {
+    id: "ai-2025-oct-01-operational-trust-v3",
+    slug: "ai-2025-oct-01-operational-trust-v3",
+    title: "AI 2025: Operational Trust Scorecards v3",
+    description: "SLIs → KPIs with budgets, canaries, and instant rollback — updated v3 playbook.",
+    excerpt: "Guardrails engineers adopt: PR policy checks, live canaries, KPI‑linked rollback.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-01",
+    category: "AI Operations",
+    tags: ["Scorecards", "Budgets", "Rollback"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/ai-operational-trust-v3-2025.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "edge-2025-oct-01-private-consentless-experiments",
+    slug: "edge-2025-oct-01-private-consentless-experiments",
+    title: "Edge 2025: Consentless Experiments v3 (<100ms)",
+    description: "Scoped IDs, on‑device metrics, and DP noise enabling compliant A/B at <100ms.",
+    excerpt: "Stand up privacy‑first experiments with edge aggregation and budgeted rollouts.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-01",
+    category: "Analytics",
+    tags: ["Edge", "Privacy", "Experiments"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/edge-2025-consentless-experiments-v3.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "genai-2025-oct-01-quality-tiers-v3",
+    slug: "genai-2025-oct-01-quality-tiers-v3",
+    title: "GenAI 2025: Quality Tiers v3",
+    description: "Predictable cost and stable UX using tiered routing, semantic caches, and eval gates.",
+    excerpt: "Cut spend 40–70% with quality tiers, caches, and KPI‑linked scorecards.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-01",
+    category: "GenAI",
+    tags: ["Quality Tiers", "Caching", "Budgets"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/genai-2025-quality-tiers-v3.jpg",
     newBadge: true,
     trending: true
   }
@@ -1647,6 +1827,214 @@ latestArticles.unshift(
   }
 );
 
+// Oct 01, 2025 – Fresh additions to advertise across the front end
+latestArticles.unshift(
+  {
+    id: "ai-2025-oct-01-e2e-eval-pipelines",
+    slug: "genai-2025-oct-01-e2e-eval-pipelines",
+    title: "GenAI 2025: End‑to‑End Eval Pipelines",
+    description: "Online evals wired to KPIs with budget‑aware routing and instant rollback.",
+    excerpt: "Stand up E2E eval pipelines that gate traffic and prevent regressions without slowing teams.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-01",
+    category: "GenAI",
+    tags: ["Evals", "Scorecards", "Budgets"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/genai-2025-e2e-eval-pipelines.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "ai-2025-oct-01-cost-optimization-v5",
+    slug: "genai-2025-oct-01-cost-optimization-v5",
+    title: "GenAI 2025: Cost Optimization v5",
+    description: "60–85% savings with tier routing, caches, and KPI‑linked scorecards.",
+    excerpt: "A practical, production‑ready playbook for predictable GenAI costs and stable UX.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-01",
+    category: "AI Operations",
+    tags: ["FinOps", "Quality Tiers", "Caching"],
+    featured: true,
+    readTime: "10 min read",
+    image: "/images/genai-2025-cost-optimization-v5.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "observability-2025-sept-30-e2e-ai-tracing-v2",
+    slug: "observability-2025-sept-30-e2e-ai-tracing-v2",
+    title: "Observability 2025: E2E AI Tracing v2",
+    description: "Span budgets, cost telemetry, and KPI‑linked rollback for AI systems.",
+    excerpt: "Trace‑driven reliability and cost control with rollback playbooks wired to spans.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "Observability",
+    tags: ["Tracing", "Budgets", "KPIs"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/observability-2025-e2e-tracing-v2.jpg",
+    newBadge: true,
+    trending: true
+  }
+);
+
+// Sept 30, 2025 – New items to promote across homepage and feeds
+latestArticles.unshift(
+  {
+    id: "ai-2025-sept-30-autonomous-runbooks-quickstart",
+    slug: "ai-2025-sept-30-autonomous-runbooks-quickstart",
+    title: "Autonomous Runbooks Quickstart: Budgeted Actions and Instant Rollback",
+    description: "Design incident playbooks that close the loop from detection to safe action in <60s.",
+    excerpt: "Budgets, approvals, and rollback triggers for safe automation at speed.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "AI Operations",
+    tags: ["Runbooks", "Automation", "Rollback"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/autonomous-runbooks-quickstart-2025.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "edge-2025-sept-30-privacy-preserving-telemetry",
+    slug: "edge-2025-sept-30-privacy-preserving-telemetry",
+    title: "Privacy‑Preserving Telemetry: Scoped IDs, On‑Device Redaction, DP Noise",
+    description: "Actionable analytics without PII using edge aggregation and differential privacy.",
+    excerpt: "Stand up privacy‑first telemetry with scoped identifiers and local redaction.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "Observability",
+    tags: ["Privacy", "Telemetry", "Edge"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/privacy-preserving-telemetry-2025.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "genai-2025-sept-30-quality-tiers-quickstart",
+    slug: "genai-2025-sept-30-quality-tiers-quickstart",
+    title: "GenAI Quality Tiers Quickstart: Stable UX at 40–70% Lower Cost",
+    description: "Tiered routing and semantic caches with KPI‑linked budgets.",
+    excerpt: "Predictable costs without regressions using quality tiers and caches.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "GenAI",
+    tags: ["Quality Tiers", "Caching", "Budgets"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/genai-quality-tiers-quickstart-2025.jpg",
+    newBadge: true,
+    trending: true
+  }
+);
+
+// Oct 02, 2025 – Add three brand-new articles (to advertise and surface)
+latestArticles.unshift(
+  {
+    id: "ai-2025-oct-02-agent-safety-scorecards",
+    slug: "ai-2025-oct-02-agent-safety-scorecards",
+    title: "AI 2025: Agent Safety Scorecards",
+    description: "KPIs, budgets, and rollback triggers that keep autonomous agents safe at speed.",
+    excerpt: "Design scorecards for agents with KPI-linked budgets, canaries, and deterministic rollback.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-02",
+    category: "AI Operations",
+    tags: ["Agents", "Scorecards", "Rollback"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/ai-2025-agent-safety-scorecards.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "edge-2025-oct-02-private-experiments-v4",
+    slug: "edge-2025-oct-02-private-experiments-v4",
+    title: "Edge 2025: Private Experiments v4 (<100ms)",
+    description: "Scoped IDs, on-device metrics, and DP noise for compliant A/B testing worldwide.",
+    excerpt: "Stand up privacy-first experiments with edge aggregation, signed configs, and budgets.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-02",
+    category: "Analytics",
+    tags: ["Edge", "Privacy", "Experiments"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/edge-2025-private-experiments-v4.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "genai-2025-oct-02-cache-playbook-v2",
+    slug: "genai-2025-oct-02-cache-playbook-v2",
+    title: "GenAI 2025: Cache Playbook v2",
+    description: "Tiered + semantic caches with eval gates for 50–70% savings and stable UX.",
+    excerpt: "A practical guide to semantic caching with KPI-linked scorecards and rollback.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-02",
+    category: "GenAI",
+    tags: ["Caching", "Quality Tiers", "Budgets"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/genai-2025-cache-playbook-v2.jpg",
+    newBadge: true,
+    trending: true
+  }
+);
+
 export const featuredArticles = latestArticles.filter(article => article.featured);
 export const trendingArticles = latestArticles.filter(article => article.trending);
 export const newArticles = latestArticles.filter(article => article.newBadge);
+
+// Sept 30, 2025 – Surface three brand-new items in Latest Articles
+latestArticles.unshift(
+  {
+    id: "autonomic-decision-engines-2025",
+    slug: "ai-2025-sept-30-autonomic-decision-engines",
+    title: "Autonomic Decision Engines: Sub‑100ms, KPI‑Linked Actions",
+    description: "Budgeted actions, live canaries, and instant rollback for safe automation.",
+    excerpt: "Design decision engines that act fast and safely with rollback on KPIs.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "AI Operations",
+    tags: ["Automation", "Budgets", "Rollback"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/autonomic-decision-engines-2025.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "edge-private-personalization-v2-2025",
+    slug: "edge-2025-sept-30-private-personalization-v2",
+    title: "Edge Private Personalization v2: Zero‑PII, Global <100ms",
+    description: "Scoped IDs, signed configs, and on‑device models for private personalization.",
+    excerpt: "Deliver personalization worldwide without PII using edge patterns.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "Edge Computing",
+    tags: ["Edge", "Privacy", "Personalization"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/edge-private-personalization-v2.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "genai-eval-scorecards-quickstart-2025",
+    slug: "genai-2025-sept-30-eval-scorecards-quickstart",
+    title: "GenAI Eval Scorecards Quickstart: KPIs, Budgets, Rollback",
+    description: "KPI‑linked evals and budget‑aware routing that gate traffic safely.",
+    excerpt: "Stand up eval scorecards fast without slowing teams.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "GenAI",
+    tags: ["Evals", "Scorecards", "Budgets"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/genai-eval-scorecards-quickstart-2025.jpg",
+    newBadge: true,
+    trending: true
+  }
+);

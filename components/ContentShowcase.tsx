@@ -21,6 +21,57 @@ interface ContentItem {
 const contentItems: ContentItem[] = [
   // Newly added items for additional promotion on the homepage
   {
+    id: 'ai-future-enterprise-2026',
+    title: 'AI Future Enterprise 2026: The Complete Transformation Blueprint',
+    excerpt: 'Discover the revolutionary AI technologies reshaping enterprise operations in 2026. From autonomous systems to quantum computing, learn how to build the future-ready enterprise.',
+    type: 'article',
+    readTime: '45 min read',
+    category: 'Enterprise AI',
+    href: '/blog/ai-future-enterprise-2026',
+    featured: true,
+    publishedDate: '2026-01-25',
+    metrics: [
+      { value: '$2.5T', label: 'Global AI Market' },
+      { value: '95%', label: 'Enterprise Automation' },
+      { value: '500%', label: 'Productivity Gain' },
+      { value: '$50M+', label: 'Average ROI' }
+    ]
+  },
+  {
+    id: 'ai-revolutionary-transformation-2026',
+    title: 'AI Revolutionary Transformation 2026: $100M ROI Success Story',
+    excerpt: 'See how a Fortune 500 company achieved $100M ROI with revolutionary AI transformation. Complete case study with implementation details and results.',
+    type: 'case-study',
+    readTime: '35 min read',
+    category: 'Success Story',
+    href: '/case-studies/ai-revolutionary-transformation-2026',
+    featured: true,
+    publishedDate: '2026-01-25',
+    metrics: [
+      { value: '$100M', label: 'Total ROI' },
+      { value: '99.9%', label: 'Uptime' },
+      { value: '98%', label: 'Automation' },
+      { value: '24 mo', label: 'Implementation' }
+    ]
+  },
+  {
+    id: 'ai-next-generation-automation-2026',
+    title: 'AI Next-Generation Automation 2026: The Future of Intelligent Operations',
+    excerpt: 'Discover next-generation AI automation technologies reshaping enterprise operations. From cognitive automation to autonomous decision-making, learn how to build the future of work.',
+    type: 'article',
+    readTime: '28 min read',
+    category: 'Automation',
+    href: '/blog/ai-next-generation-automation-2026',
+    featured: true,
+    publishedDate: '2026-01-25',
+    metrics: [
+      { value: '99%', label: 'Automation Rate' },
+      { value: '$75M', label: 'Average Savings' },
+      { value: '600%', label: 'Productivity Gain' },
+      { value: '24/7', label: 'Operations' }
+    ]
+  },
+  {
     id: 'enterprise-rag-security-2027',
     title: 'Enterprise RAG Security 2027: Auth‑Aware Retrieval and Signed Outputs',
     excerpt: 'Secure RAG with auth‑aware retrieval, freshness windows, prompt firewalls, and signed outputs.',
