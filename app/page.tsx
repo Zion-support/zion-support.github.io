@@ -18,7 +18,13 @@ import {
   AutonomousAgentsBanner,
   AIGovernanceBanner,
   FinTechSuccessBanner,
-  NewContentShowcaseBanner
+  NewContentShowcaseBanner,
+  AgenticAIRevolution2027Banner,
+  EdgeAI2027Banner,
+  QuantumAI2027Banner,
+  RetailerAITransformation2027Banner,
+  TechUnicornAgenticAI2027Banner,
+  NewContent2027MegaShowcase
 } from '../components/PromotionalBanner';
 import {
   AIEnterpriseAdoptionBanner,
@@ -50,6 +56,14 @@ export default function HomePage() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="animate-fade-in">
+        {/* 🔥 LATEST 2027 CONTENT - Featured First! */}
+        <NewContent2027MegaShowcase />
+        <AgenticAIRevolution2027Banner />
+        <EdgeAI2027Banner />
+        <QuantumAI2027Banner />
+        <RetailerAITransformation2027Banner />
+        <TechUnicornAgenticAI2027Banner />
+        
         {/* New Mega Success Story Banner */}
         <NewContent2026MegaSuccessBanner />
         
