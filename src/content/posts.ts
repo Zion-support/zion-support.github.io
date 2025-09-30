@@ -773,51 +773,31 @@ export const posts: BlogPost[] = [
     featured: false,
     readTime: "11 min read",
   },
-<<<<<<< HEAD
   {
-    slug: "privacy-first-feature-flags-2025",
-    title: "Privacy‑First Feature Flags: Zero‑Regret Rollouts at the Edge",
-    description: "Scoped IDs, on‑device filters, and geo budgets for safe global releases under 100ms.",
-    category: "Architecture",
-    publishedAt: "2025-09-29",
+    slug: "ai-2025-sept-30-agentic-workflows-blueprint",
+    title: "Agentic Workflows Blueprint 2025: Reliable Multi‑Agent Orchestration",
+    description: "Guardrails, reviews, and online evals for dependable multi‑agent flows that deliver ROI.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
     featured: true,
-    readTime: "6 min read"
+    readTime: "9 min read"
   },
   {
-    slug: "platform-roi-scorecards-quickstart-2025",
-    title: "Platform ROI Scorecards: A Practical Quickstart",
-    description: "Link platform telemetry to adoption and revenue with scorecards engineers actually use.",
-    category: "AI Strategy",
-    publishedAt: "2025-09-29",
+    slug: "edge-2025-sept-30-private-telemetry-guide",
+    title: "Private Telemetry at the Edge: Useful Insights Without PII",
+    description: "Scoped IDs, local redaction, and DP noise to keep analytics rich and privacy‑first.",
+    category: "Observability",
+    publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
   },
   {
-    slug: "ai-governance-risk-budgets-2026",
-    title: "AI Governance Risk Budgets 2026: Owners, SLAs, Rollbacks",
-    description: "Budget risky actions with owners, SLAs, and rollback triggers that keep teams fast and safe.",
-    category: "AI Governance",
-    publishedAt: "2025-10-15",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "privacy-first-feature-flags-2026",
-    title: "Privacy‑First Feature Flags 2026: Geo Budgets and Instant Rollback",
-    description: "Progressive delivery with scoped IDs, geo budgets, and rollback in under 60 seconds.",
-    category: "Architecture",
-    publishedAt: "2025-10-15",
+    slug: "cloud-2025-sept-30-cost-optimization-scorecards",
+    title: "Cost Optimization Scorecards 2025: Cut Spend Without Regressions",
+    description: "Tiered quality routes, budget alerts, and CI gates that reduce costs 30–60% safely.",
+    category: "Cloud FinOps",
+    publishedAt: "2025-09-30",
     featured: true,
     readTime: "6 min read"
-  },
-  {
-    slug: "reliable-agent-actions-2026",
-    title: "Reliable Agent Actions 2026: Deterministic Tools and Live Traces",
-    description: "Design agent actions with deterministic tools, safety budgets, and observable traces.",
-    category: "GenAI",
-    publishedAt: "2025-10-15",
-    featured: true,
-    readTime: "8 min read"
   }
 ];
-
