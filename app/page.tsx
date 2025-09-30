@@ -21,18 +21,16 @@ import {
   NewContentShowcaseBanner
 } from '../components/PromotionalBanner';
 import {
-  AIEnterpriseAdoptionBanner,
-  AITrends2025Banner,
+  AIEnterpriseAdoptionBanner as NewAIEnterpriseAdoptionBanner,
+  AITrends2025Banner as NewAITrends2025Banner,
   SupplyChainOptimizationBanner,
-  AIBusinessTransformationBanner,
-  AICustomerExperienceBanner,
-  EnterpriseAITransformationBanner,
-  LatestAIInsightsBanner,
-  AIServicesShowcaseBanner,
-  AIWorkflowAutomationBanner,
-  EnterpriseAISecurityBanner,
-  MultimodalAIIntegrationBanner,
-  MultimodalAICustomerServiceBanner
+  AIBusinessTransformationBanner as NewAIBusinessTransformationBanner,
+  AICustomerExperienceBanner as NewAICustomerExperienceBanner,
+  EnterpriseAITransformationBanner as NewEnterpriseAITransformationBanner,
+  LatestAIInsightsBanner as NewLatestAIInsightsBanner,
+  AIServicesShowcaseBanner as NewAIServicesShowcaseBanner,
+  AIWorkflowAutomationBanner as NewAIWorkflowAutomationBanner,
+  EnterpriseAISecurityBanner as NewEnterpriseAISecurityBanner
 } from '../components/NewContentPromotionalBanners';
 import {
   AIEnterpriseTransformationBanner,
@@ -257,6 +255,7 @@ export default function HomePage() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
             <FeaturedServiceCard
               title="AI Data Analytics"
               description="Transform data into actionable insights with predictive modeling and real-time dashboards"
@@ -321,6 +320,103 @@ export default function HomePage() {
               href="/services/ai-finance-automation"
               popular={false}
             />
+=======
+            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 hover:border-blue-300">
+              <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl mb-4">
+                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 4a1 1 0 011-1h12a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1V8zm2 2a1 1 0 000 2h6a1 1 0 100-2H5z" clipRule="evenodd" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">AI Data Analytics</h3>
+              <p className="text-gray-600 mb-4">Transform data into actionable insights with predictive modeling and real-time dashboards</p>
+              <Link href="/services/ai-data-analytics" className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors">
+                <span>Learn More</span>
+                <svg className="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
+              </Link>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 hover:border-blue-300">
+              <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-green-500 to-teal-600 rounded-xl mb-4">
+                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">AI Workflow Automation</h3>
+              <p className="text-gray-600 mb-4">Automate business processes with intelligent workflow design and smart triggers</p>
+              <Link href="/services/ai-workflow-automation" className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors">
+                <span>Learn More</span>
+                <svg className="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
+              </Link>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 hover:border-blue-300">
+              <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl mb-4">
+                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clipRule="evenodd" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">AI Virtual Assistant</h3>
+              <p className="text-gray-600 mb-4">24/7 intelligent customer support with natural language processing</p>
+              <Link href="/services/ai-virtual-assistant" className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors">
+                <span>Learn More</span>
+                <svg className="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
+              </Link>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 hover:border-blue-300">
+              <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl mb-4">
+                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Cloud Migration</h3>
+              <p className="text-gray-600 mb-4">Seamless migration to cloud infrastructure with zero downtime</p>
+              <Link href="/services/cloud-migration" className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors">
+                <span>Learn More</span>
+                <svg className="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
+              </Link>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 hover:border-blue-300">
+              <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl mb-4">
+                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">DevOps Automation</h3>
+              <p className="text-gray-600 mb-4">Automate CI/CD pipelines and infrastructure management</p>
+              <Link href="/services/devops-automation" className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors">
+                <span>Learn More</span>
+                <svg className="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
+              </Link>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 hover:border-blue-300">
+              <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-red-500 to-pink-600 rounded-xl mb-4">
+                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Cybersecurity Consulting</h3>
+              <p className="text-gray-600 mb-4">Advanced threat detection and zero-trust security architecture</p>
+              <Link href="/services/cybersecurity-consulting" className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors">
+                <span>Learn More</span>
+                <svg className="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
+              </Link>
+            </div>
+>>>>>>> cursor/create-and-deploy-new-content-c010
           </div>
         </div>
       </section>
@@ -412,6 +508,7 @@ export default function HomePage() {
               </div>
             </div>
 
+<<<<<<< HEAD
             <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-200">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center">
@@ -437,6 +534,8 @@ export default function HomePage() {
               </div>
             </div>
 
+=======
+>>>>>>> cursor/create-and-deploy-new-content-c010
             <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-200">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
@@ -456,6 +555,31 @@ export default function HomePage() {
                 <Link
                   href="/case-studies/ai-finance-automation"
                   className="text-green-600 font-semibold hover:text-green-700 transition-colors"
+                >
+                  Read More →
+                </Link>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-200">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                  <span className="text-2xl">🤖</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900">Autonomous Agents</h3>
+                  <p className="text-sm text-gray-500">300% ROI achieved</p>
+                </div>
+              </div>
+              <p className="text-gray-600 mb-4">
+                Discover how autonomous AI agents are revolutionizing enterprise workflows 
+                with 300% ROI and 90% efficiency improvements.
+              </p>
+              <div className="flex items-center justify-between">
+                <div className="text-sm text-gray-500">Published Jan 20, 2025</div>
+                <Link
+                  href="/blog/ai-autonomous-agents-2025"
+                  className="text-purple-600 font-semibold hover:text-purple-700 transition-colors"
                 >
                   Read More →
                 </Link>
@@ -544,6 +668,66 @@ export default function HomePage() {
                 </div>
               </div>
             </Link>
+<<<<<<< HEAD
+=======
+            <Link href="/blog/ai-autonomous-agents-2025" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    New Article
+                  </span>
+                  <span className="text-sm text-gray-500">18 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  AI Autonomous Agents 2025: Enterprise Implementation Guide
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Master autonomous AI agents with 300% ROI strategies and enterprise-ready deployment patterns.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  Read Article →
+                </div>
+              </div>
+            </Link>
+            <Link href="/blog/ai-governance-framework-2025" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-indigo-100 text-indigo-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    Featured Article
+                  </span>
+                  <span className="text-sm text-gray-500">15 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  AI Governance Framework 2025: Enterprise Implementation Guide
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Master AI governance with 70% risk reduction and comprehensive enterprise frameworks.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  Read Article →
+                </div>
+              </div>
+            </Link>
+            <Link href="/case-studies/fintech-ai-risk-compliance-2025" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    Success Story
+                  </span>
+                  <span className="text-sm text-gray-500">FinTech</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  FinTech AI Risk Compliance: 70% Risk Reduction & $2.5M Savings
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  See how a leading fintech achieved 70% risk reduction with automated governance frameworks.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  View Case Study →
+                </div>
+              </div>
+            </Link>
+>>>>>>> cursor/create-and-deploy-new-content-c010
           </div>
 
           <div className="text-center">
