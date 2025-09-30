@@ -52,10 +52,27 @@ import NewContent2026MegaBanner from '../components/NewContent2026MegaBanner';
 >>>>>>> origin/cursor/create-and-deploy-new-content-15c5
 =======
 import {
+<<<<<<< HEAD
   MultimodalAIIntegrationBanner,
   MultimodalAICustomerServiceBanner
 } from '../components/MultimodalAIBanners';
 >>>>>>> origin/cursor/create-and-deploy-new-content-1f7b
+=======
+  AINeuralSuperintelligenceBanner,
+  AIQuantumComputingBanner,
+  AIAutonomousSystemsBanner as NewAIAutonomousSystemsBanner,
+  NeuralSuperintelligenceCaseStudyBanner,
+  InteractiveAIToolsBanner,
+  LatestContentShowcaseBanner as NewLatestContentShowcaseBanner
+} from '../components/NewContent2026PromotionalBanners';
+import {
+  AITrends2025PromotionalBanner,
+  Fortune500SuccessBanner,
+  InteractiveROICalculatorBanner,
+  AITransformationShowcaseBanner
+} from '../components/NewContent2025Banners';
+import InteractiveAIROICalculator from '../components/InteractiveAIROICalculator';
+>>>>>>> origin/cursor/create-and-deploy-new-content-4092
 import ContentShowcase from '../components/ContentShowcase';
 <<<<<<< HEAD
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
@@ -165,6 +182,7 @@ export default function HomePage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       {/* Revolutionary AI 2025 Banner */}
       <RevolutionaryAI2025Banner />
       
@@ -193,6 +211,15 @@ export default function HomePage() {
       {/* New 2026 Mega Content Banner */}
       <NewContent2026MegaBanner />
 >>>>>>> origin/cursor/create-and-deploy-new-content-15c5
+=======
+      {/* Latest 2026 Revolutionary Content Banners */}
+      <AINeuralSuperintelligenceBanner />
+      <AIQuantumComputingBanner />
+      <NewAIAutonomousSystemsBanner />
+      <NeuralSuperintelligenceCaseStudyBanner />
+      <InteractiveAIToolsBanner />
+      <NewLatestContentShowcaseBanner />
+>>>>>>> origin/cursor/create-and-deploy-new-content-4092
       
       {/* Latest 2026 Content Banners */}
 <<<<<<< HEAD
