@@ -27,6 +27,9 @@ import ContentShowcase from '../components/ContentShowcase';
 import QuantumTransformationBanner from '../components/QuantumTransformationBanner';
 import NeuralArchitectureSearchBanner from '../components/NeuralArchitectureSearchBanner';
 import LatestBreakthroughsBanner from '../components/LatestBreakthroughsBanner';
+import January2026RevolutionaryBreakthroughsBanner from '../components/January2026RevolutionaryBreakthroughsBanner';
+import January2026AdaptiveNeuralArchitecturesBanner from '../components/January2026AdaptiveNeuralArchitecturesBanner';
+import January2026CognitiveAutomationBanner from '../components/January2026CognitiveAutomationBanner';
 <<<<<<< HEAD
 import April2026MegaBreakthroughBanner from '../components/April2026MegaBreakthroughBanner';
 import QuantumConsciousnessFusionBanner from '../components/QuantumConsciousnessFusionBanner';
@@ -234,6 +237,15 @@ export default function HomePage() {
           </div>
         </div>
       </header>
+
+      {/* NEW JANUARY 2026 REVOLUTIONARY BREAKTHROUGHS - MOST PROMINENT */}
+      <January2026RevolutionaryBreakthroughsBanner />
+      
+      {/* NEW: Adaptive Neural Architectures Banner - Featured prominently */}
+      <January2026AdaptiveNeuralArchitecturesBanner />
+      
+      {/* NEW: Cognitive Automation Banner - Featured prominently */}
+      <January2026CognitiveAutomationBanner />
 
 <<<<<<< HEAD
       {/* NEW: December 2026 Mega Breakthrough Banner - Most Prominent */}
