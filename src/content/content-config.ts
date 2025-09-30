@@ -176,6 +176,26 @@ featuredBlogPosts.unshift(
   }
 );
 
+// Feb 2027 – Surface two brand-new featured guides site-wide
+featuredBlogPosts.unshift(
+  {
+    id: "executive-ai-funding-blueprint-2027",
+    title: "Executive AI Funding Blueprint 2027",
+    description: "KPI-linked scorecards, budgets, and governance gates that prove ROI.",
+    link: "/blog/ai-2027-executive-ai-funding-blueprint",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-zero-pii-analytics-v3-2027",
+    title: "Zero‑PII Edge Analytics v3 (2027)",
+    description: "Scoped IDs, on‑device aggregation, and DP delivering insights under 100ms.",
+    link: "/blog/edge-2027-zero-pii-analytics-v3",
+    type: "article",
+    featured: true
+  }
+);
+
 // Sept 30, 2025 – Promote two brand-new guides site-wide
 featuredBlogPosts.unshift(
   {
