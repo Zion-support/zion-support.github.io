@@ -209,9 +209,9 @@ const Home = () => {
             </h1>
 
             <p className="text-xl md:text-2xl text-zion-slate-light mb-8 leading-relaxed max-w-3xl mx-auto animate-fade-in">
-              🚀 <strong>JUST RELEASED OCT 2025:</strong> Multimodal AI Revolution, Blockchain-AI Integration, Green AI Sustainability & AutoML! 
+              🚀 <strong>JUST RELEASED OCT 2025:</strong> Multimodal AI Revolution, Autonomous Edge Intelligence, Privacy-First Synthetic Data, Explainable AI, Blockchain-AI Integration & Green AI Sustainability! 
               Plus 5 NEW Services: AI Predictive Maintenance, AI Talent Acquisition, AI Fraud Prevention, AI Creative Studio & Legal Research Assistant.
-              Transform your business with revolutionary AI solutions. Join 500+ companies achieving unprecedented results!
+              Transform your business with revolutionary AI solutions featuring 98% latency reduction, 100% privacy compliance, and 96% stakeholder trust. Join 500+ companies achieving unprecedented results!
             </p>
 
             {/* Special Promotion Banner */}
@@ -251,11 +251,18 @@ const Home = () => {
                 <Sparkles className="w-6 h-6 text-purple-400 animate-pulse" />
               </div>
               <p className="text-white text-lg font-semibold mb-2">
+<<<<<<< HEAD
                 🎯 Just Published: 5 Breakthrough Articles + 5 Revolutionary Services! Multimodal AI, Blockchain-AI Integration, Green AI, AI Compliance & AutoML
               </p>
               <p className="text-zion-slate-light text-sm mb-4">
                 Discover breakthrough insights on unified vision-language-audio AI, trustless blockchain intelligence, carbon-neutral ML, global regulatory compliance, and automated neural architecture search. 
                 PLUS: New services for predictive maintenance, talent acquisition, fraud prevention, creative automation, and legal research!
+=======
+                🎯 Just Published: Latest Breakthrough Articles on Autonomous Edge Intelligence, Privacy-Preserving Synthetic Data, Explainable AI & More
+              </p>
+              <p className="text-zion-slate-light text-sm mb-4">
+                Discover cutting-edge insights on edge AI (98% latency reduction), privacy-first ML (100% compliance), explainable AI (96% trust), AI orchestration, quantum computing, and zero trust security.
+>>>>>>> origin/cursor/create-and-deploy-new-content-0a10
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link
@@ -272,6 +279,7 @@ const Home = () => {
                 </Link>
               </div>
               <div className="mt-4 flex flex-wrap gap-2 justify-center">
+<<<<<<< HEAD
                 <span className="bg-purple-100/20 text-purple-200 px-3 py-1 rounded-full text-xs font-medium border border-purple-300/20">🎭 Multimodal AI</span>
                 <span className="bg-rose-100/20 text-rose-200 px-3 py-1 rounded-full text-xs font-medium border border-rose-300/20">⛓️ Blockchain-AI</span>
                 <span className="bg-emerald-100/20 text-emerald-200 px-3 py-1 rounded-full text-xs font-medium border border-emerald-300/20">🌱 Green AI</span>
@@ -280,6 +288,13 @@ const Home = () => {
                 <span className="bg-orange-100/20 text-orange-200 px-3 py-1 rounded-full text-xs font-medium border border-orange-300/20">⚙️ Predictive Maintenance</span>
                 <span className="bg-pink-100/20 text-pink-200 px-3 py-1 rounded-full text-xs font-medium border border-pink-300/20">👥 AI Recruiting</span>
                 <span className="bg-green-100/20 text-green-200 px-3 py-1 rounded-full text-xs font-medium border border-green-300/20">🛡️ Fraud Prevention</span>
+=======
+                <span className="bg-emerald-100/20 text-emerald-200 px-3 py-1 rounded-full text-xs font-medium border border-emerald-300/20">🆕 Edge Intelligence</span>
+                <span className="bg-violet-100/20 text-violet-200 px-3 py-1 rounded-full text-xs font-medium border border-violet-300/20">🆕 Synthetic Data</span>
+                <span className="bg-amber-100/20 text-amber-200 px-3 py-1 rounded-full text-xs font-medium border border-amber-300/20">🆕 Explainable AI</span>
+                <span className="bg-blue-100/20 text-blue-200 px-3 py-1 rounded-full text-xs font-medium border border-blue-300/20">Agent Orchestration</span>
+                <span className="bg-purple-100/20 text-purple-200 px-3 py-1 rounded-full text-xs font-medium border border-purple-300/20">Zero Trust Security</span>
+>>>>>>> origin/cursor/create-and-deploy-new-content-0a10
               </div>
             </div>
           </div>
@@ -288,12 +303,85 @@ const Home = () => {
         {/* Latest Insights Section */}
         {/* Promo ribbon for new content */}
         <div className="container mx-auto px-6">
+<<<<<<< HEAD
           <div className="mb-6 rounded-full bg-gradient-to-r from-emerald-500/15 via-cyan-500/15 to-purple-500/15 border border-emerald-400/30 px-6 py-3 text-white text-sm inline-flex items-center gap-2 animate-pulse">
             <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-bounce"></span>
             🔥 OCT 2025: 5 NEW Articles + 5 NEW Services — Multimodal AI, Blockchain-AI, Green AI, AutoML, Predictive Maintenance & More!
             <Link to="/blog" className="text-cyan-300 underline underline-offset-4 hover:text-white font-bold">Read Now →</Link>
+=======
+          <div className="mb-6 rounded-full bg-emerald-500/15 border border-emerald-400/30 px-6 py-3 text-emerald-200 text-sm inline-flex items-center gap-2">
+            <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            🔥 NEW: Edge Intelligence + Privacy Synthetic Data + Explainable AI — read now
+            <Link to="/blog" className="text-emerald-300 underline underline-offset-4 hover:text-white">View</Link>
+>>>>>>> origin/cursor/create-and-deploy-new-content-0a10
           </div>
         </div>
+        
+        {/* New Articles Showcase Section */}
+        <section className="container mx-auto px-6 py-12 relative z-10">
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="card hover:scale-105 transition-all duration-300 hover:shadow-2xl border-2 border-emerald-400/30">
+              <div className="p-6">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="bg-emerald-500 text-white text-xs px-3 py-1 rounded-full font-bold">🆕 NEW</span>
+                  <span className="text-emerald-400 text-xs font-semibold">Sept 30, 2025</span>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-3">Autonomous Edge Intelligence</h3>
+                <p className="text-zion-slate-light mb-4">
+                  Discover how edge AI delivers 98% latency reduction and 85% bandwidth savings with real-time processing revolution.
+                </p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="bg-emerald-100/20 text-emerald-300 px-2 py-1 rounded text-xs">Edge AI</span>
+                  <span className="bg-cyan-100/20 text-cyan-300 px-2 py-1 rounded text-xs">Real-Time</span>
+                </div>
+                <Link to="/blog/ai-autonomous-edge-intelligence-2025" className="text-emerald-400 font-semibold hover:text-emerald-300 flex items-center gap-2">
+                  Read Article <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+
+            <div className="card hover:scale-105 transition-all duration-300 hover:shadow-2xl border-2 border-violet-400/30">
+              <div className="p-6">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="bg-violet-500 text-white text-xs px-3 py-1 rounded-full font-bold">🆕 NEW</span>
+                  <span className="text-violet-400 text-xs font-semibold">Sept 30, 2025</span>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-3">Privacy-First Synthetic Data</h3>
+                <p className="text-zion-slate-light mb-4">
+                  Learn how synthetic data achieves 100% compliance and 92% model accuracy while eliminating privacy risks completely.
+                </p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="bg-violet-100/20 text-violet-300 px-2 py-1 rounded text-xs">Privacy AI</span>
+                  <span className="bg-fuchsia-100/20 text-fuchsia-300 px-2 py-1 rounded text-xs">Synthetic Data</span>
+                </div>
+                <Link to="/blog/ai-synthetic-data-privacy-2025" className="text-violet-400 font-semibold hover:text-violet-300 flex items-center gap-2">
+                  Read Article <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+
+            <div className="card hover:scale-105 transition-all duration-300 hover:shadow-2xl border-2 border-amber-400/30">
+              <div className="p-6">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="bg-amber-500 text-white text-xs px-3 py-1 rounded-full font-bold">🆕 NEW</span>
+                  <span className="text-amber-400 text-xs font-semibold">Sept 30, 2025</span>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-3">Explainable AI for Enterprise</h3>
+                <p className="text-zion-slate-light mb-4">
+                  Build trust with transparent AI achieving 96% stakeholder confidence and 88% regulatory approval rates.
+                </p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="bg-amber-100/20 text-amber-300 px-2 py-1 rounded text-xs">XAI</span>
+                  <span className="bg-orange-100/20 text-orange-300 px-2 py-1 rounded text-xs">AI Governance</span>
+                </div>
+                <Link to="/blog/ai-explainable-ai-enterprise-2025" className="text-amber-400 font-semibold hover:text-amber-300 flex items-center gap-2">
+                  Read Article <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+        
         {/* <LatestInsights /> */}
 
         {/* New Content Showcase */}
@@ -700,6 +788,7 @@ const Home = () => {
                 <Sparkles className="w-5 h-5 text-purple-500 animate-pulse" />
               </div>
             <p className="text-gray-700 font-semibold mb-2">
+<<<<<<< HEAD
                 🚀 5 Breakthrough Articles: Multimodal AI Revolution, Blockchain-AI Integration, Green AI (90% Carbon Reduction), AI Regulatory Compliance & Neural Architecture Search
               </p>
               <p className="text-gray-600 text-sm mb-4">
@@ -713,6 +802,18 @@ const Home = () => {
                 <span className="bg-rose-100 text-rose-700 px-3 py-1 rounded-full text-xs font-medium">📋 Compliance</span>
                 <span className="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-xs font-medium">⚙️ AutoML</span>
                 <span className="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-xs font-medium">🔧 Services</span>
+=======
+                🚀 Fresh Today: Autonomous Edge Intelligence, Privacy-First Synthetic Data, Explainable AI & Enterprise Orchestration
+              </p>
+              <p className="text-gray-600 text-sm mb-4">
+                Discover how to achieve 98% latency reduction with edge AI, ensure 100% privacy compliance with synthetic data, build 96% stakeholder trust with explainable AI, and optimize multi-agent systems.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <span className="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-xs font-medium">🔥 Edge AI</span>
+                <span className="bg-violet-100 text-violet-700 px-3 py-1 rounded-full text-xs font-medium">🔥 Privacy ML</span>
+                <span className="bg-amber-100 text-amber-700 px-3 py-1 rounded-full text-xs font-medium">🔥 XAI</span>
+                <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">AI Orchestration</span>
+>>>>>>> origin/cursor/create-and-deploy-new-content-0a10
               </div>
             </div>
             
