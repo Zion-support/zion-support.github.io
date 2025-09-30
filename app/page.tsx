@@ -56,12 +56,17 @@ import InteractiveAICalculator2025 from '../components/InteractiveAICalculator20
 import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
 import LatestContent2026ShowcaseBanner from '../components/LatestContent2026ShowcaseBanner';
 import InteractiveAI2026Calculator from '../components/InteractiveAI2026Calculator';
+<<<<<<< HEAD
 import InteractiveAIROICalculator from '../components/InteractiveAIROICalculator';
 import AI2026ContentShowcaseBanner from '../components/AI2026ContentShowcaseBanner';
 import AIEnterpriseAutomationRevolutionBanner from '../components/AIEnterpriseAutomationRevolutionBanner';
 import AIQuantumComputingBreakthroughBanner from '../components/AIQuantumComputingBreakthroughBanner';
 import AIMegaTransformationSuccessBanner from '../components/AIMegaTransformationSuccessBanner';
 import AI2026InnovationShowcaseBanner from '../components/AI2026InnovationShowcaseBanner';
+=======
+import NewContent2026PromotionalBanner from '../components/NewContent2026PromotionalBanner';
+import InteractiveAI2026ROICalculator from '../components/InteractiveAI2026ROICalculator';
+>>>>>>> cursor/create-and-deploy-new-content-d74c
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
@@ -143,14 +148,8 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <div className="animate-fade-in">
-      {/* Revolutionary AI 2025 Banner */}
-      <RevolutionaryAI2025Banner />
-      
-      {/* Latest Content 2025 Banner */}
-      <LatestContent2025Banner />
-      
-      {/* Revolutionary Content 2026 Banner */}
-      <RevolutionaryContent2026Banner />
+      {/* New Content 2026 Promotional Banner */}
+      <NewContent2026PromotionalBanner />
       
       {/* Latest 2026 Mega Content Banners */}
       <Revolutionary2026ContentBanner />
@@ -159,6 +158,7 @@ export default function HomePage() {
       <AIQuantumComputingBreakthroughBanner />
       <AIMegaTransformationSuccessBanner />
       <AI2026InnovationShowcaseBanner />
+      <LatestContent2026MegaBanner />
       
       {/* Latest 2026 Content Banners */}
       <AIEnterpriseTransformationBanner />
@@ -344,7 +344,7 @@ export default function HomePage() {
               See how much you could save and achieve with enterprise AI solutions.
             </p>
           </div>
-          <InteractiveAIROICalculator />
+          <InteractiveAI2026ROICalculator />
         </div>
       </section>
 
