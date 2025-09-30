@@ -43,7 +43,7 @@ export default function AI2026EdgeComputingRevolution() {
         {/* Key Metrics */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
           <div className="bg-white rounded-xl p-6 shadow-lg border border-blue-200 text-center">
-            <div className="text-3xl font-bold text-blue-600 mb-2">< 10ms</div>
+            <div className="text-3xl font-bold text-blue-600 mb-2">&lt; 10ms</div>
             <div className="text-sm text-gray-600">Response Time</div>
           </div>
           <div className="bg-white rounded-xl p-6 shadow-lg border border-purple-200 text-center">
@@ -82,7 +82,7 @@ export default function AI2026EdgeComputingRevolution() {
             <div className="grid md:grid-cols-2 gap-6 mb-8">
               <div className="bg-blue-50 rounded-lg p-6 border border-blue-200">
                 <h4 className="text-xl font-bold text-blue-900 mb-3">Autonomous Vehicles</h4>
-                <p className="text-gray-700">Real-time object detection and path planning with <10ms latency for safety-critical decisions.</p>
+                <p className="text-gray-700">Real-time object detection and path planning with &lt;10ms latency for safety-critical decisions.</p>
               </div>
               <div className="bg-purple-50 rounded-lg p-6 border border-purple-200">
                 <h4 className="text-xl font-bold text-purple-900 mb-3">Smart Manufacturing</h4>

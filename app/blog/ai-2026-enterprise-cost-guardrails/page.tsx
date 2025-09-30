@@ -28,7 +28,6 @@ export default function Page() {
 
 // @ts-nocheck
 import React from 'react';
-import Link from 'next/link';
 
 export const metadata = {
   title: 'Enterprise Cost Guardrails 2026: Cut Spend 30–70% Without Quality Loss',
