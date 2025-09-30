@@ -22,7 +22,6 @@ import {
   AIRoadmapsBanner,
   AIFinOpsBanner,
   AIMultimodalEnterpriseBanner,
-  AIEnterpriseAutomationBanner,
   AIDataAnalyticsEnterpriseBanner,
   EnterpriseTransformationSuccessBanner,
   HealthcareTransformationBanner,
@@ -68,7 +67,6 @@ export default function HomePage() {
       {/* Promotional Banners */}
       <NewContent2026Banner />
       <AIMultimodalEnterpriseBanner />
-      <AIEnterpriseAutomationBanner />
       <AIDataAnalyticsEnterpriseBanner />
       <EnterpriseTransformationSuccessBanner />
       <HealthcareTransformationBanner />
