@@ -1,6 +1,8 @@
 // @ts-nocheck
 import React from 'react';
 import Link from 'next/link';
+import Revolutionary2026ContentMegaBanner from '../components/Revolutionary2026ContentMegaBanner';
+import Ultimate2026ContentShowcaseBanner from '../components/Ultimate2026ContentShowcaseBanner';
 import Revolutionary2027ContentMegaBanner from '../components/Revolutionary2027ContentMegaBanner';
 import Ultimate2027BreakthroughBanner from '../components/Ultimate2027BreakthroughBanner';
 import UnifiedContentPromotion from '../components/UnifiedContentPromotion';
@@ -26,6 +28,12 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Revolutionary 2026 Content Mega Banner - Featured prominently */}
+      <Revolutionary2026ContentMegaBanner />
+      
+      {/* Ultimate 2026 Content Showcase Banner */}
+      <Ultimate2026ContentShowcaseBanner />
+      
       {/* Revolutionary 2027 Content Mega Banner - Featured prominently */}
       <Revolutionary2027ContentMegaBanner />
       
