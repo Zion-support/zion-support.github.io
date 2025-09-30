@@ -4,6 +4,36 @@ import Link from 'next/link';
 
 const blogPosts = [
   {
+    title: 'AI Neural Interfaces 2026: Direct Thought-to-Action Systems',
+    slug: 'ai-neural-interfaces-2026',
+    excerpt: 'Neural intent signals to safe, observable actions with policy guardrails and audits.',
+    category: 'Breakthrough Technology',
+    publishedAt: 'January 22, 2026',
+    image: '🧠',
+    color: 'purple',
+    readTime: '16 min read'
+  },
+  {
+    title: 'AI Quantum Optimization 2026: Hybrid Classical-Quantum Planners',
+    slug: 'ai-quantum-optimization-2026',
+    excerpt: 'Hybrid solvers for routing, scheduling, and allocation with verifiable results and SLAs.',
+    category: 'Featured Article',
+    publishedAt: 'January 22, 2026',
+    image: '⚛️',
+    color: 'blue',
+    readTime: '14 min read'
+  },
+  {
+    title: 'AI Sustainable Technology 2026: Low-Carbon AI Systems',
+    slug: 'ai-sustainable-technology-2026',
+    excerpt: 'Carbon-aware routing, quantization, and observability to reduce AI emissions 20–40%.',
+    category: 'Strategy',
+    publishedAt: 'January 22, 2026',
+    image: '🌿',
+    color: 'green',
+    readTime: '12 min read'
+  },
+  {
     title: 'AI Enterprise GenAI Agent Platform 2026',
     slug: 'ai-enterprise-genai-agent-platform-2026',
     excerpt: 'Blueprint to ship a governed, reliable, and cost‑efficient GenAI agent platform—routing, memory, tools, observability, and guardrails.',
