@@ -3,49 +3,50 @@ import Link from 'next/link';
 
 export const metadata = {
   title: 'Agent Ops Observability 2026 | Zion Tech Group',
-  description: 'Traces, budgets, reviews. Operate multi‑agent systems with reliability, cost control, and measurable outcomes.',
+  description: 'Metrics, traces, evals, and guardrails for reliable autonomy at scale.',
   openGraph: {
     title: 'Agent Ops Observability 2026',
-    description: 'Design observability for agentic workflows: metrics, traces, budgets, and policy tests.',
+    description: 'Instrument agents with traces, evaluations, KPIs, and guardrails to ensure reliability.',
     type: 'article',
     url: 'https://ziontechgroup.com/blog/ai-2026-agent-ops-observability',
     images: [
-      { url: '/og-agent-ops-observability-2026.jpg', width: 1200, height: 630, alt: 'Agent Ops Observability' }
+      { url: '/og-agent-ops-observability-2026.jpg', width: 1200, height: 630, alt: 'Agent Ops Observability 2026' }
     ]
   }
 };
 
-export default function AgentOpsObservability2026() {
+export default function AgentOpsObservability2026Page() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
       <Link href="/blog" className="text-blue-600 hover:text-blue-800 mb-6 inline-block">← Back to Blog</Link>
       <h1 className="text-4xl font-bold text-gray-900 mb-3">Agent Ops Observability 2026</h1>
-      <div className="text-gray-600 mb-8">Published: September 29, 2025 • 14 min read • Agent Ops</div>
+      <div className="text-gray-600 mb-8">Published: September 30, 2025 • 12 min read • AI Reliability</div>
 
       <div className="prose prose-lg max-w-none">
         <p>
-          Reliable autonomy requires deep observability. This guide shows how to instrument metrics, traces,
-          budgets, and reviews so you can operate multi‑agent systems with confidence and clear ROI.
+          Reliable autonomy requires deep visibility. This guide covers metrics, traces, evaluations, and
+          guardrails to monitor and control agent behavior across environments.
         </p>
 
-        <h2>Key Signals</h2>
+        <h2>Observability Pillars</h2>
         <ul>
-          <li>Latency, cost per task, error rates, retry loops</li>
-          <li>Guardrail violations mapped to policies</li>
-          <li>Human approvals and exceptions tracking</li>
+          <li>Structured Metrics: tool success rates, budget use, and action latencies</li>
+          <li>Distributed Tracing: cross-agent spans with inputs, outputs, and annotations</li>
+          <li>Evaluations: offline and online evals linked to KPIs and SLAs</li>
+          <li>Guardrails: policies-as-code, budgets, approvals, and rollback signals</li>
         </ul>
 
-        <h2>Runbooks</h2>
-        <ol>
-          <li>Budget breach: throttle, degrade, or reroute models</li>
-          <li>Policy failure: quarantine workflow and request approval</li>
-          <li>Quality regression: roll back prompts or tools and re‑eval</li>
-        </ol>
+        <h2>Rollout Checklist</h2>
+        <ul>
+          <li>Define SLIs/SLOs and budgets per workflow</li>
+          <li>Add tracing middleware and redaction for sensitive data</li>
+          <li>Automate eval canaries in CI and production</li>
+        </ul>
 
         <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded">
-          <h3 className="m-0">Production Support</h3>
-          <p className="m-0">We integrate traces, guardrails, and dashboards into your agent platform.</p>
-          <Link href="/services/ai-agent-observability" className="inline-block mt-3 bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded">Explore Agent Ops Services</Link>
+          <h3 className="m-0">Need help instrumenting?</h3>
+          <p className="m-0">We deploy observability foundations with policy gates and value stream analytics.</p>
+          <Link href="/services" className="inline-block mt-3 bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded">Explore Services</Link>
         </div>
       </div>
     </div>
