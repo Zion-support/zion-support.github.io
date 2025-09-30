@@ -90,6 +90,7 @@ export const posts: BlogPost[] = [
     featured: true,
     readTime: "7 min read"
   },
+  {
     slug: "ai-2025-sept-30-neural-code-synthesis",
     title: "Neural Code Synthesis 2025 — 95% Accuracy, 90% Faster Delivery",
     description: "Production blueprint for neural code assistants: policy tests, eval scorecards, and instant rollback for safe velocity.",
@@ -2379,6 +2380,37 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "9 min read"
+  }
+);
+
+// Sept 30, 2025 – New banner-linked articles to advertise on homepage
+posts.push(
+  {
+    slug: "ai-2025-prompt-injection-defense-blueprint",
+    title: "Prompt Injection Defense Blueprint (2025): Signed Policies That Scale",
+    description: "Defense-in-depth: signed prompts, model sandboxes, canary evals, and rollback-ready guardrails.",
+    category: "AI Security",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "ai-2026-cost-optimization-blueprint",
+    title: "AI Cost Optimization Blueprint (2026): 40–70% Savings, Stable UX",
+    description: "Tier routing, semantic caches, and eval-gated fallbacks to cut spend without degrading quality.",
+    category: "FinOps",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "10 min read"
+  },
+  {
+    slug: "ai-2025-governed-agent-patterns-v3",
+    title: "Governed Agent Patterns v3 (2025): Budgets, Approvals, Rollback",
+    description: "Production patterns for safe autonomy: budgeted actions, PR policy tests, and one-click recovery.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
   }
 );
 

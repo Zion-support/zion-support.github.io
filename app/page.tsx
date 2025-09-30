@@ -2,7 +2,8 @@ import React from 'react';
 import UnifiedContentPromotion from '../components/UnifiedContentPromotion';
 import ContentShowcase from '../components/ContentShowcase';
 import AI2026RevolutionaryAutonomousEnterpriseBanner from '../components/AI2026RevolutionaryAutonomousEnterpriseBanner';
-import ContentShowcase from '../../components/ContentShowcase';
+import October2025NewContentBanner from '../components/October2025NewContentBanner';
+import NewContentAdvertisingBanner from '../components/NewContentAdvertisingBanner';
 
 export default function HomePage() {
   return (
@@ -16,6 +17,8 @@ export default function HomePage() {
       
       {/* Revolutionary New Content - Featured First */}
       <AI2026RevolutionaryAutonomousEnterpriseBanner />
+      <October2025NewContentBanner />
+      <NewContentAdvertisingBanner />
       
       {/* Additional Content Banners (temporarily disabled if not present) */}
       
