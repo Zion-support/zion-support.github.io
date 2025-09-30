@@ -460,6 +460,26 @@ const contentItems: ContentItem[] = [
 // Newly added featured content to advertise on the homepage
 contentItems.unshift(
   {
+    id: 'enterprise-genai-guardrails-2025-oct-01',
+    title: 'Enterprise GenAI Guardrails 2025: Policy Tests, Budgets, Rollback',
+    excerpt: 'Executable policy tests in CI, budgeted actions, and one‑click rollback.',
+    readTime: '9 min read',
+    category: 'AI Governance',
+    href: '/blog/ai-2025-oct-01-enterprise-genai-guardrails',
+    featured: true,
+    publishedDate: '2025-10-01'
+  },
+  {
+    id: 'edge-private-experiments-2025-oct-01',
+    title: 'Edge Experiments 2025: Consentless A/B with Zero‑PII',
+    excerpt: 'Scoped IDs, on‑device metrics, and DP noise for sub‑100ms, private A/B.',
+    readTime: '7 min read',
+    category: 'Analytics',
+    href: '/blog/edge-2025-oct-01-private-experiments',
+    featured: true,
+    publishedDate: '2025-10-01'
+  },
+  {
     id: 'ai-2026-safe-autonomy-scorecards',
     title: 'AI 2026 Safe Autonomy Scorecards: KPIs, Budgets, Rollback',
     excerpt: 'Executable scorecards link outcomes to guardrails and one-click rollback for safe autonomy.',
