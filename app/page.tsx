@@ -18,9 +18,7 @@ import {
   AutonomousAgentsBanner,
   AIGovernanceBanner,
   FinTechSuccessBanner,
-<<<<<<< HEAD
   NewContentShowcaseBanner
-=======
   NewContentShowcaseBanner,
   AIRoadmapsBanner,
   AIFinOpsBanner,
@@ -32,7 +30,6 @@ import {
   NewContent2026Banner,
   AICostCalculatorBanner,
   AIImplementationPlaybookBanner
->>>>>>> origin/cursor/create-and-deploy-new-content-def1
 } from '../components/PromotionalBanner';
 import {
   AIEnterpriseAdoptionBanner,
@@ -74,7 +71,6 @@ import Revolutionary2026ContentMegaBanner from '../components/Revolutionary2026C
 import UltimateContent2026MegaBanner from '../components/UltimateContent2026MegaBanner';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
-<<<<<<< HEAD
 import InteractivePromotionalSection from '../components/InteractivePromotionalSection';
 import LatestContent2026ShowcaseBanner from '../components/LatestContent2026ShowcaseBanner';
 import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
@@ -98,7 +94,6 @@ import AI2027RevolutionaryBreakthroughBanner from '../components/AI2027Revolutio
 import NewestContent2025Banner from '../components/NewestContent2025Banner';
 import September30FreshContent2025Banner from '../components/September30FreshContent2025Banner';
 import September30FreshContentBanner from '../components/September30FreshContentBanner';
-=======
 import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
 import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
 import InteractiveContentRecommendation from '../components/InteractiveContentRecommendation';
@@ -110,12 +105,9 @@ import NewContentPromotionalBanner2026 from '../components/NewContentPromotional
 import AIInnovationShowcaseBanner2026 from '../components/AIInnovationShowcaseBanner2026';
 import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
 import UltimateContent2026Showcase from '../components/UltimateContent2026Showcase';
-<<<<<<< HEAD
->>>>>>> origin/cursor/create-and-deploy-new-content-5fb2
-=======
 import Revolutionary2027ContentBanner from '../components/Revolutionary2027ContentBanner';
 import UltimateContent2027Showcase from '../components/UltimateContent2027Showcase';
->>>>>>> origin/cursor/create-and-deploy-new-content-90ae
+import NewContentShowcase2026 from '../src/components/NewContentShowcase2026';
 
 export const metadata = {
   title: 'Zion Tech Group — Revolutionary AI Breakthroughs 2026 | 1000x Performance Gains',
@@ -158,6 +150,9 @@ export default function HomePage() {
   return (
     <>
       <div className="animate-fade-in">
+      {/* 🚀 MEGA CONTENT UPDATE - September 30, 2025 - 116+ NEW RESOURCES! */}
+      <NewContentShowcase2026 />
+      
       {/* 🚀 NEWEST CONTENT - September 30, 2025 - 3 Breakthrough AI Technologies! */}
       <September30FreshContentBanner />
       
@@ -167,7 +162,6 @@ export default function HomePage() {
       {/* Latest AI 2025 Insights Banner */}
       <LatestAI2025InsightsBanner />
       
-=======
       {/* Revolutionary AI 2025 Banner */}
       <RevolutionaryAI2025Banner />
       
@@ -488,7 +482,6 @@ export default function HomePage() {
       <AIAutonomousManufacturing2026Banner />
       <AIFinancialServicesRevolution2026Banner />
       <AIHealthcareDiagnosticBreakthrough2026Banner />
-=======
       
       {/* Latest 2026 Content Banners */}
       <AIEnterpriseAutomationRevolutionBanner />
@@ -530,8 +523,6 @@ export default function HomePage() {
       <AICostCalculatorBanner />
       <AIImplementationPlaybookBanner />
       
-<<<<<<< HEAD
-=======
       {/* New Content Promotional Banner 2026 */}
       <NewContentPromotionalBanner2026 />
       
@@ -544,16 +535,12 @@ export default function HomePage() {
       {/* Ultimate Content 2026 Showcase */}
       <UltimateContent2026Showcase />
       
-<<<<<<< HEAD
->>>>>>> origin/cursor/create-and-deploy-new-content-5fb2
-=======
       {/* Revolutionary 2027 Content Banner */}
       <Revolutionary2027ContentBanner />
       
       {/* Ultimate Content 2027 Showcase */}
       <UltimateContent2027Showcase />
       
->>>>>>> origin/cursor/create-and-deploy-new-content-90ae
       {/* Hero Section */}
       <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
         <div className="max-w-4xl mx-auto px-4">
@@ -882,7 +869,6 @@ export default function HomePage() {
                 </a>
               </div>
             </div>
-=======
       {/* Featured Services */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4">
@@ -966,7 +952,6 @@ export default function HomePage() {
       {/* Interactive AI Calculator 2025 */}
       <InteractiveAICalculator2025 />
 
-=======
       {/* Interactive AI Calculator 2025 */}
       <InteractiveAICalculator2025 />
 
@@ -1084,7 +1069,6 @@ export default function HomePage() {
                       </div>
                     </div>
                   </div>
-=======
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
