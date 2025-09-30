@@ -197,6 +197,7 @@ export default function ContentHubPage() {
               <Link href="/case-studies/retail-autonomous-fulfillment-2026" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">Retail Autonomous Fulfillment<span>→</span></Link>
               <Link href="/blog/ai-2026-neural-superintelligence" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">Neural Superintelligence 2026<span>→</span></Link>
               <Link href="/blog/ai-enterprise-autonomous-agents-2026" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">Enterprise Autonomous Agents 2026<span>→</span></Link>
+              <Link href="/blog/ai-2025-sept-30-operational-trust-scorecards-v3" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">Operational Trust v3<span>→</span></Link>
             </div>
           </div>
         </div>
