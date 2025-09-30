@@ -58,6 +58,9 @@ import InteractivePromotionalSection from '../components/InteractivePromotionalS
 import LatestContent2026ShowcaseBanner from '../components/LatestContent2026ShowcaseBanner';
 import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
 import InteractiveContentShowcase2026 from '../components/InteractiveContentShowcase2026';
+import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
+import LatestContent2026ShowcaseBanner from '../components/LatestContent2026ShowcaseBanner';
+import InteractiveAI2026Calculator from '../components/InteractiveAI2026Calculator';
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
@@ -140,6 +143,7 @@ export default function HomePage() {
       />
       <div className="animate-fade-in">
       {/* Latest 2026 Mega Content Banners */}
+      <Revolutionary2026ContentBanner />
       <AI2026ContentShowcaseBanner />
       <AIEnterpriseAutomationRevolutionBanner />
       <AIQuantumComputingBreakthroughBanner />
@@ -330,11 +334,30 @@ export default function HomePage() {
           <InteractiveAIROICalculator />
         </div>
       </section>
+
+      {/* Interactive AI 2026 Calculator */}
+      <section className="py-20 bg-gradient-to-br from-indigo-50 via-white to-purple-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              Advanced AI ROI Calculator 2026
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Get precise projections for your AI transformation with our advanced calculator 
+              that considers industry-specific factors and breakthrough technologies.
+            </p>
+          </div>
+          <InteractiveAI2026Calculator />
+        </div>
+      </section>
       {/* Interactive Promotional Section */}
       <InteractivePromotionalSection />
 
       {/* Dynamic Content Showcase */}
       <ContentShowcase />
+      
+      {/* Latest Content Showcase 2026 */}
+      <LatestContent2026ShowcaseBanner />
       
       {/* Interactive Content Showcase 2026 */}
       <InteractiveContentShowcase2026 />
