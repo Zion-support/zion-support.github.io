@@ -57,10 +57,14 @@ import June2026MegaAutomationBanner from "./components/June2026MegaAutomationBan
 import InteractiveContentShowcase2026Advanced from "./components/InteractiveContentShowcase2026Advanced";
 import June2026SuperintelligenceBreakthroughBanner from "./components/June2026SuperintelligenceBreakthroughBanner";
 import June2026ContentShowcaseBanner from "./components/June2026ContentShowcaseBanner";
+import July2026AutomationBreakthroughBanner from "./components/July2026AutomationBreakthroughBanner";
 
 export default function App(): JSX.Element {
   return (
     <div className="min-h-screen bg-slate-950">
+      {/* NEW: July 2026 Automation Breakthrough Banner - MOST PROMINENT */}
+      <July2026AutomationBreakthroughBanner />
+      
       {/* NEW: June 2026 Superintelligence Breakthrough Banner - Most Prominent */}
       <June2026SuperintelligenceBreakthroughBanner />
       
@@ -442,6 +446,9 @@ export default function App(): JSX.Element {
       {/* NEW: June 2026 Mega Enterprise Automation Banner - Mid Page */}
       <June2026MegaAutomationBanner />
 
+      {/* NEW: July 2026 Automation Breakthrough Banner - Mid Page */}
+      <July2026AutomationBreakthroughBanner />
+
       {/* NEW: Revolutionary 2026 Content Showcase Banner - Mid Page */}
       <Revolutionary2026ContentShowcaseBanner />
       
@@ -548,6 +555,9 @@ export default function App(): JSX.Element {
 
       {/* NEW: June 2026 Mega Enterprise Automation Banner - Pre Footer */}
       <June2026MegaAutomationBanner />
+
+      {/* NEW: July 2026 Automation Breakthrough Banner - Pre Footer */}
+      <July2026AutomationBreakthroughBanner />
 
       {/* Footer */}
       <footer className="bg-slate-900 border-t border-slate-800 py-12">
