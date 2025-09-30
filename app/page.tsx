@@ -60,13 +60,11 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
             <span>🚀 NEW 2026 Content:</span>
-            <Link href="/blog/ai-neural-interfaces-2026" className="underline hover:text-yellow-200">Neural Interfaces</Link>
+            <Link href="/blog/ai-powered-devsecops-2026" className="underline hover:text-yellow-200">AI DevSecOps</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-space-tech-2026" className="underline hover:text-yellow-200">Space AI</Link>
+            <Link href="/blog/ai-voice-interfaces-enterprise-2026" className="underline hover:text-yellow-200">Voice AI</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-synthetic-data-2026" className="underline hover:text-yellow-200">Synthetic Data</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-neural-interface-healthcare-2026" className="underline hover:text-yellow-200">$15M Healthcare ROI</Link>
+            <Link href="/case-studies/manufacturing-ai-transformation-2026" className="underline hover:text-yellow-200">$18M Manufacturing ROI</Link>
             <span className="hidden md:inline">•</span>
             <Link href="/blog/ai-quantum-computing-2026" className="underline hover:text-yellow-200">Quantum Computing</Link>
           </div>
@@ -649,22 +647,60 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <Link to="/blog/ai-agent-orchestration-2026" className="group">
+            <Link to="/blog/ai-powered-devsecops-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    New 2026
+                  <span className="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    🔥 NEW 2026
                   </span>
-                  <span className="text-sm text-gray-500">22 min read</span>
+                  <span className="text-sm text-gray-500">20 min read</span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Agent Orchestration 2026: Multi-Agent System Architecture
+                  AI-Powered DevSecOps 2026: Autonomous Security at Scale
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Master multi-agent systems with 95% automation efficiency and $5M+ ROI through advanced orchestration patterns.
+                  Transform DevSecOps with 99.9% threat detection, autonomous incident response, and 80% cost reduction through AI automation.
                 </p>
                 <div className="flex items-center text-blue-600 font-semibold">
                   Read Article →
+                </div>
+              </div>
+            </Link>
+            <Link to="/blog/ai-voice-interfaces-enterprise-2026" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-indigo-100 text-indigo-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    🔥 NEW 2026
+                  </span>
+                  <span className="text-sm text-gray-500">18 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  AI Voice Interfaces for Enterprise 2026: Conversational AI at Scale
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Enable hands-free productivity with 98% voice accuracy, 50+ language support, and 90% time savings across enterprise operations.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  Read Article →
+                </div>
+              </div>
+            </Link>
+            <Link to="/case-studies/manufacturing-ai-transformation-2026" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    🔥 NEW Case Study
+                  </span>
+                  <span className="text-sm text-gray-500">Manufacturing</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  Manufacturing AI Transformation 2026: $18M ROI Success Story
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  How a Fortune 500 manufacturer achieved $18M ROI with 85% downtime reduction and 92% fewer defects through AI transformation.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  View Case Study →
                 </div>
               </div>
             </Link>
