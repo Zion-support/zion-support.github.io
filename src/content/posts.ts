@@ -855,6 +855,7 @@ export const posts: BlogPost[] = [
     readTime: "11 min read"
   },
   {
+<<<<<<< HEAD
     slug: "ai-powered-fintech-revolution-2026",
     title: "AI-Powered FinTech Revolution 2026: Autonomous Financial Services at Scale",
     description: "Transform financial services with AI achieving 99.9% fraud detection accuracy, instant loan decisions, and personalized wealth management. Master autonomous trading, risk assessment, and regulatory compliance.",
@@ -877,11 +878,18 @@ export const posts: BlogPost[] = [
     title: "AI Climate Tech Solutions 2026: Data-Driven Carbon Reduction at Scale",
     description: "Deploy AI for climate action achieving 40% carbon reduction, optimized renewable energy, and predictive climate modeling. Transform sustainability from cost center to competitive advantage.",
     category: "Climate Tech",
+=======
+    slug: "ai-autonomous-threat-response-2025",
+    title: "AI Autonomous Threat Response 2025: Zero-Touch Security That Scales",
+    description: "Deploy autonomous security systems achieving sub-30 second incident containment with 99.8% accuracy. Reduce MTTR by 95% and eliminate alert fatigue.",
+    category: "Cybersecurity",
+>>>>>>> origin/cursor/create-and-deploy-new-content-34b6
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "14 min read"
   },
   {
+<<<<<<< HEAD
     slug: "ai-content-moderation-2026",
     title: "AI Content Moderation 2026: Real-Time Safety at Billion-User Scale",
     description: "Protect billion-user platforms with AI moderation achieving 99.7% accuracy across text, images, and video. Deploy contextual understanding, cultural awareness, and instant appeals processing.",
@@ -898,5 +906,41 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "16 min read"
+=======
+    slug: "ai-prompt-engineering-mastery-2025",
+    title: "AI Prompt Engineering Mastery 2025: Advanced LLM Optimization Techniques",
+    description: "Master advanced prompt engineering achieving 95%+ accuracy while reducing costs by 70%. Learn few-shot learning, chain-of-thought, RAG integration, and production optimization.",
+    category: "LLM Engineering",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "16 min read"
+  },
+  {
+    slug: "ai-synthetic-data-generation-2025",
+    title: "AI Synthetic Data Generation 2025: Privacy-Preserving Training at Scale",
+    description: "Generate unlimited high-quality training data with 98% statistical parity and perfect privacy. Master GANs, diffusion models, and privacy-preserving synthetic data techniques.",
+    category: "Data Science",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "15 min read"
+  },
+  {
+    slug: "ai-explainability-frameworks-2025",
+    title: "AI Explainability Frameworks 2025: Building Trust Through Transparency",
+    description: "Implement comprehensive explainability achieving 90%+ stakeholder confidence. Master SHAP, LIME, attention visualization, and regulatory-compliant AI transparency.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "13 min read"
+  },
+  {
+    slug: "ai-reinforcement-learning-production-2025",
+    title: "AI Reinforcement Learning in Production 2025: Real-World RL at Scale",
+    description: "Deploy production RL systems achieving 10x better performance than supervised learning. Master PPO, RLHF, safe exploration, and continuous learning in production.",
+    category: "Machine Learning",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "17 min read"
+>>>>>>> origin/cursor/create-and-deploy-new-content-34b6
   }
 ];
