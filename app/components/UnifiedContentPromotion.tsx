@@ -2,22 +2,6 @@
 
 const promoted = [
   {
-<<<<<<< HEAD
-    href: '/blog/ai-2025-october-01-executive-ai-roadmap',
-    title: 'Executive AI Roadmap — October 2025',
-    desc: 'A 90‑day plan to ship reliable AI with guardrails, scorecards, and budgets.',
-    emoji: '🧭',
-    pill: 'New • Oct 1, 2025',
-    theme: 'from-indigo-600 to-sky-600',
-  },
-  {
-    href: '/blog/ai-2025-sept-30-autonomous-risk-budgets-v2',
-    title: 'Autonomous Risk Budgets V2',
-    desc: 'Dynamic guardrails and live scorecards that cut incidents by 80%.',
-    emoji: '🛡️',
-    pill: 'Sep 30, 2025',
-    theme: 'from-rose-600 to-amber-600',
-=======
     href: '/blog/ai-2025-september-30-new-governed-agent-patterns',
     title: 'New Governed Agent Patterns',
     desc: 'Approvals, verifiers, budgets, and rollback for safe autonomy.',
@@ -40,7 +24,6 @@ const promoted = [
     emoji: '🗺️',
     pill: 'New • Sep 30, 2025',
     theme: 'from-fuchsia-600 to-purple-600',
->>>>>>> feat/sept-30-content-promo
   },
 ];
 

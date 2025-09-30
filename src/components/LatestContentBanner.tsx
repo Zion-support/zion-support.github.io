@@ -26,19 +26,8 @@ const LatestContentBanner: React.FC<LatestContentBannerProps> = ({
           <div className="flex items-center gap-3">
             <Sparkles className="w-6 h-6 animate-pulse" />
             <div>
-              <h3 className="font-bold text-lg">
-<<<<<<< HEAD
-                🔥 New: Production RAG · Serverless Inference Costs · Golden Paths ROI
-              </h3>
-              <p className="text-sm opacity-90">
-                Read Production RAG Quality Budgets, Serverless Inference Cost Playbook, and Golden Paths ROI
-=======
-                🔥 New: E2E AI Tracing 2026 · Consentless Edge Analytics v4
-              </h3>
-              <p className="text-sm opacity-90">
-                Trace prompts→outcomes and ship zero‑PII analytics at &lt;100ms. Explore the latest →
->>>>>>> feat/new-content-and-ads
-              </p>
+              <h3 className="font-bold text-lg">🔥 New: E2E AI Tracing 2026 · Consentless Edge Analytics v4</h3>
+              <p className="text-sm opacity-90">Trace prompts→outcomes and ship zero‑PII analytics at &lt;100ms. Explore the latest →</p>
             </div>
           </div>
           <Link
