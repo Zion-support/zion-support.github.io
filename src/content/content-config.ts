@@ -11,6 +11,22 @@ export interface FeaturedItem {
 
 export const featuredBlogPosts: FeaturedItem[] = [
   {
+    id: "ai-agent-evaluations-2026",
+    title: "AI Agent Evaluations 2026",
+    description: "Reliable metrics and release gates for safe agent deployments",
+    link: "/blog/ai-agent-evaluations-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-platform-cost-optimization-2026",
+    title: "AI Platform Cost Optimization 2026",
+    description: "50–80% savings without latency or accuracy loss",
+    link: "/blog/ai-platform-cost-optimization-2026",
+    type: "article",
+    featured: true
+  },
+  {
     id: "multimodal-ai-2025",
     title: "Multimodal AI Revolution 2025",
     description: "Master unified vision-language-audio AI achieving 98% accuracy",
