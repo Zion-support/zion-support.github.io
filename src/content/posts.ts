@@ -10,58 +10,31 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-    slug: "ai-2025-sept-30-autonomous-infra-blueprint-v2",
-    title: "AI 2025: Autonomous Infra Blueprint v2 — Self‑Healing in <60s",
-    description: "Updated playbooks with budgeted actions, policy tests, and live canaries for instant containment.",
-    category: "AI Operations",
+    slug: "ai-2025-sept-30-platform-roi-scorecards",
+    title: "AI 2025: Platform ROI Scorecards",
+    description: "Scorecards that link platform adoption to SLOs, developer velocity, and revenue—prove ROI with data.",
+    category: "Platform Engineering",
     publishedAt: "2025-09-30",
     featured: true,
-    readTime: "9 min read"
+    readTime: "8 min read"
   },
   {
-    slug: "edge-2026-consentless-journeys-blueprint",
-    title: "Edge 2026: Consentless Journeys Blueprint — Zero‑PII at <100ms",
-    description: "Scoped IDs, signed attestations, and DP noise enabling compliant personalization worldwide.",
+    slug: "edge-2025-sept-30-consentless-experiments-v3",
+    title: "Edge 2025: Consentless Experiments v3 (<100ms)",
+    description: "Scoped IDs, on‑device metrics, and DP noise enabling compliant A/B worldwide under 100ms.",
     category: "Analytics",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "8 min read"
-  },
-  {
-    slug: "genai-2027-platform-roi-scorecards",
-    title: "GenAI 2027: Platform ROI Scorecards — Prove Value Every Sprint",
-    description: "KPI‑linked scorecards, golden tasks, and policy tests that quantify ROI and prevent regressions.",
-    category: "AI Governance",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "10 min read"
-  },
-  {
-    slug: "enterprise-rag-security-2027",
-    title: "Enterprise RAG Security 2027: Auth‑Aware Retrieval & Signed Outputs",
-    description: "Secure RAG with auth‑aware retrieval, freshness windows, prompt firewalls, and signed outputs.",
-    category: "AI Security",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "8 min read"
-  },
-  {
-    slug: "edge-consentless-personalization-2027",
-    title: "Edge Personalization 2027: Zero‑PII, <100ms, Scoped IDs",
-    description: "Private, sub‑100ms journeys with scoped IDs, on‑device models, and DP noise.",
-    category: "Edge Computing",
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
   },
   {
-    slug: "ai-2025-september-30-new-governed-agent-patterns",
-    title: "New Governed Agent Patterns (2025)",
-    description: "Policy-first orchestration with approvals, verifiers, budgets, and rollback for safe autonomy.",
-    category: "AI Operations",
+    slug: "genai-2025-sept-30-eval-policy-blueprints",
+    title: "GenAI 2025: Eval & Policy Blueprints",
+    description: "Golden tasks, signed attestations, and CI policy tests wired to KPIs for safe velocity.",
+    category: "AI Governance",
     publishedAt: "2025-09-30",
     featured: true,
-    readTime: "8 min read"
+    readTime: "10 min read"
   },
   {
     slug: "agent-release-zero-regret-2026",
