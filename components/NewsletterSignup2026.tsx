@@ -10,53 +10,46 @@ export default function NewsletterSignup2026() {
     setIsLoading(true);
     
     // Simulate API call
-    setTimeout(() => {
-      setIsSubscribed(true);
-      setIsLoading(false);
-      setEmail('');
-    }, 1000);
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    
+    setIsSubscribed(true);
+    setIsLoading(false);
+    setEmail('');
   };
 
   if (isSubscribed) {
     return (
-      <div className="bg-gradient-to-r from-green-600 to-blue-600 text-white p-8 rounded-2xl text-center">
-        <div className="w-16 h-16 mx-auto mb-4 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
-          <span className="text-2xl">✅</span>
+      <div className="bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 rounded-xl p-6 text-center">
+        <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+          </svg>
         </div>
-        <h3 className="text-2xl font-bold mb-2">Welcome to the AI Innovation Newsletter!</h3>
-        <p className="text-green-100 mb-4">
-          You're now subscribed to receive the latest AI insights, case studies, and exclusive content.
+        <h3 className="text-xl font-bold text-green-900 mb-2">Successfully Subscribed!</h3>
+        <p className="text-green-700">
+          Thank you for subscribing! You'll receive our latest AI insights and updates.
         </p>
-        <div className="bg-white bg-opacity-10 p-4 rounded-lg">
-          <p className="text-sm">
-            <strong>What you'll get:</strong> Weekly AI innovation updates, exclusive case studies, 
-            early access to new content, and invitations to webinars and events.
-          </p>
-        </div>
       </div>
     );
   }
 
   return (
-    <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-8 rounded-2xl">
+    <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-xl p-8">
       <div className="text-center mb-6">
-        <div className="w-16 h-16 mx-auto mb-4 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
-          <span className="text-2xl">📧</span>
-        </div>
-        <h3 className="text-3xl font-bold mb-2">Stay Ahead with AI Innovation</h3>
-        <p className="text-xl opacity-90">
-          Get exclusive access to the latest AI insights, case studies, and transformation guides.
+        <h3 className="text-2xl font-bold mb-2">Stay Ahead with AI Insights</h3>
+        <p className="text-indigo-100">
+          Get the latest AI trends, implementation guides, and success stories delivered to your inbox
         </p>
       </div>
-
+      
       <form onSubmit={handleSubmit} className="max-w-md mx-auto">
-        <div className="flex flex-col sm:flex-row gap-4 mb-6">
+        <div className="flex gap-2 mb-4">
           <input
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Enter your email address"
-            className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
+            className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white/50"
             required
           />
           <button
@@ -64,29 +57,21 @@ export default function NewsletterSignup2026() {
             disabled={isLoading}
             className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            {isLoading ? 'Subscribing...' : 'Subscribe Free'}
+            {isLoading ? 'Subscribing...' : 'Subscribe'}
           </button>
         </div>
+        
+        <div className="text-center">
+          <p className="text-sm text-indigo-200 mb-2">
+            Join 10,000+ AI professionals getting our weekly insights
+          </p>
+          <div className="flex items-center justify-center gap-4 text-xs text-indigo-200">
+            <span>✓ No spam, ever</span>
+            <span>✓ Unsubscribe anytime</span>
+            <span>✓ Free resources included</span>
+          </div>
+        </div>
       </form>
-
-      <div className="grid md:grid-cols-3 gap-4 text-center text-sm">
-        <div className="bg-white bg-opacity-10 p-4 rounded-lg">
-          <div className="font-bold mb-1">📊 Weekly Insights</div>
-          <div className="opacity-80">Latest AI trends and innovations</div>
-        </div>
-        <div className="bg-white bg-opacity-10 p-4 rounded-lg">
-          <div className="font-bold mb-1">🏆 Case Studies</div>
-          <div className="opacity-80">Exclusive success stories</div>
-        </div>
-        <div className="bg-white bg-opacity-10 p-4 rounded-lg">
-          <div className="font-bold mb-1">🎯 Early Access</div>
-          <div className="opacity-80">New content before anyone else</div>
-        </div>
-      </div>
-
-      <div className="text-center mt-6 text-sm opacity-80">
-        <p>Join 15,000+ AI leaders and innovators. No spam, unsubscribe anytime.</p>
-      </div>
     </div>
   );
 }
