@@ -18,7 +18,6 @@ import {
   AutonomousAgentsBanner,
   AIGovernanceBanner,
   FinTechSuccessBanner,
-  NewContentShowcaseBanner
   NewContentShowcaseBanner,
   AIRoadmapsBanner,
   AIFinOpsBanner,
@@ -110,13 +109,10 @@ import Revolutionary2027ContentBanner from '../components/Revolutionary2027Conte
 import UltimateContent2027Showcase from '../components/UltimateContent2027Showcase';
 import NewContentShowcase2026 from '../src/components/NewContentShowcase2026';
 import September30NewAIBreakthroughsBanner from '../components/September30NewAIBreakthroughsBanner';
-<<<<<<< HEAD
 import September30BreakthroughContentBanner from '../components/September30BreakthroughContentBanner';
-=======
 import Revolutionary2026ContentShowcaseBanner from '../components/Revolutionary2026ContentShowcaseBanner';
 import Latest2026ContentMegaBanner from '../components/Latest2026ContentMegaBanner';
 import Ultimate2026ContentShowcaseBanner from '../components/Ultimate2026ContentShowcaseBanner';
->>>>>>> cursor/create-and-deploy-new-content-1b54
 
 export const metadata = {
   title: 'Zion Tech Group — Revolutionary AI Breakthroughs 2026 | 1000x Performance Gains',
@@ -582,27 +578,22 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link
-              to="/services"
+              href="/services"
               className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
             >
               Explore Our Services
             </Link>
             <a
-              to="tel:+13024640950"
+              href="tel:+13024640950"
               className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors"
             >
               Call +1 302 464 0950
             </a>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
+              <div>
               <div className="text-3xl font-bold text-blue-600">500+</div>
               <div className="text-gray-600">Projects Delivered</div>
-            </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-              <div>
-                <div className="text-3xl font-bold text-blue-600">500+</div>
-                <div className="text-gray-600">Projects Delivered</div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-blue-600">99.9%</div>
@@ -978,9 +969,6 @@ export default function HomePage() {
       {/* Interactive AI Calculator 2025 */}
       <InteractiveAICalculator2025 />
 
-      {/* Interactive AI Calculator 2025 */}
-      <InteractiveAICalculator2025 />
-
       {/* Interactive AI ROI Calculator */}
       <section id="roi-calculator" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="max-w-6xl mx-auto px-4">
@@ -1036,6 +1024,22 @@ export default function HomePage() {
             </p>
 
             {/* NEW SECTION: Top 3 Brand New Articles */}
+            <div className="mb-10 rounded-2xl border border-emerald-400/20 bg-emerald-400/10 p-6">
+              <h3 className="text-2xl font-bold mb-4 text-emerald-300">
+                Just Published: Enterprise Autonomous Agents 2026
+              </h3>
+              <p className="text-white/80 mb-4">
+                Learn the operating model, architecture, and ROI framework for deploying autonomous AI agents across your enterprise with provable safety guardrails.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Link href="/blog/ai-enterprise-autonomous-agents-2026" className="inline-flex items-center justify-center rounded-lg bg-emerald-500 px-5 py-3 font-semibold text-white hover:bg-emerald-600 transition-colors">
+                  Read the new guide →
+                </Link>
+                <Link href="/blog" className="inline-flex items-center justify-center rounded-lg bg-white/10 px-5 py-3 font-semibold text-white hover:bg-white/20 transition-colors">
+                  Explore all latest articles
+                </Link>
+              </div>
+            </div>
             <div className="mb-20">
               <div className="text-center mb-12">
                 <span className="inline-block bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-3 rounded-full text-lg font-bold animate-pulse shadow-lg">

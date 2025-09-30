@@ -27,10 +27,7 @@ export const posts: BlogPost[] = [
     featured: true,
     readTime: "7 min read"
   },
-<<<<<<< HEAD
-=======
-  
->>>>>>> cursor/create-and-deploy-new-content-85de
+ 
   {
     slug: "ai-edge-inference-optimization-2025",
     title: "Edge AI Inference Optimization: 1000x Performance Gains",
@@ -847,11 +844,7 @@ export const posts: BlogPost[] = [
     category: "MLOps",
     publishedAt: "2025-09-30",
     featured: true,
-<<<<<<< HEAD
     readTime: "9 min read"
-=======
-    readTime: "7 min read"
->>>>>>> cursor/create-and-deploy-new-content-85de
   },
   {
     slug: "privacy-first-feature-flags-2025",
@@ -1149,7 +1142,6 @@ posts.push(
   }
 );
 
-<<<<<<< HEAD
 // Additional freshly published articles
 posts.push(
   {
@@ -1158,38 +1150,19 @@ posts.push(
     description: "Operationalize AI quality with SLIs, KPI-linked error budgets, and instant rollback triggers.",
     category: "AI Operations",
     publishedAt: "2025-10-14",
-=======
-// Additional fresh content for homepage and promo banners
-posts.push(
-  {
-    slug: "ai-e2e-tracing-blueprint-2025",
-    title: "AI E2E Tracing Blueprint 2025: From Prompt to KPI",
-    description: "Instrument prompts, tools, and UX to business KPIs with robust traces and evals.",
-    category: "Observability",
-    publishedAt: "2025-09-30",
->>>>>>> cursor/create-and-deploy-new-content-85de
     featured: true,
     readTime: "7 min read"
   },
   {
-<<<<<<< HEAD
     slug: "privacy-first-analytics-2026",
     title: "Privacy‑First Analytics 2026: Scoped IDs and On‑Device Telemetry",
     description: "Ship signal‑rich analytics without PII using scoped identifiers, DP noise, and edge processing.",
     category: "Analytics",
     publishedAt: "2025-10-14",
-=======
-    slug: "edge-personalization-playbook-2025",
-    title: "Edge Personalization Playbook 2025: Private <100ms Experiences",
-    description: "Signed configs, tiny models, and geo budgets for privacy-first personalization at the edge.",
-    category: "Edge Computing",
-    publishedAt: "2025-09-30",
->>>>>>> cursor/create-and-deploy-new-content-85de
     featured: true,
     readTime: "6 min read"
   },
   {
-<<<<<<< HEAD
     slug: "genai-routing-playbook-2026",
     title: "GenAI Routing Playbook 2026: Quality Tiers Under Budget",
     description: "Tier models, cache prompts, and route by SLA to cut spend 30–60% with stable UX.",
@@ -1197,15 +1170,6 @@ posts.push(
     publishedAt: "2025-10-14",
     featured: true,
     readTime: "8 min read"
-=======
-    slug: "kpi-linked-policy-tests-quickstart-2025",
-    title: "KPI‑Linked Policy Tests Quickstart: Ship Fast, Stay Safe",
-    description: "Lightweight CI policy tests wired to outcomes—catch risks without slowing delivery.",
-    category: "AI Governance",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "6 min read"
->>>>>>> cursor/create-and-deploy-new-content-85de
   }
 );
 

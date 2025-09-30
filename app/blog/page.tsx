@@ -3,6 +3,16 @@ import Link from 'next/link';
 
 const blogPosts = [
   {
+    title: 'AI Enterprise Autonomous Agents 2026: Operating Models, Architecture, ROI',
+    slug: 'ai-enterprise-autonomous-agents-2026',
+    excerpt: 'Deploy autonomous AI agents with provable guardrails to achieve 400% efficiency gains, 70% cost reduction, and 99.95% uptime.',
+    category: 'Implementation Guide',
+    publishedAt: 'September 30, 2025',
+    image: '🤖',
+    color: 'green',
+    readTime: '18 min read'
+  },
+  {
     title: 'Enterprise RAG Guardrails 2026: Safe, Reliable, and Controllable AI',
     slug: 'ai-2026-enterprise-rag-guardrails',
     excerpt: 'Design enterprise-grade RAG with policy guardrails, verifiable citations, and cost-aware routing. Prevent hallucinations and ensure compliance.',
