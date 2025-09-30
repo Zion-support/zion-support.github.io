@@ -560,6 +560,43 @@ newArticles2025.push(
   }
 );
 
+// Oct 01, 2025 – Fresh promos to advertise on Home
+newArticles2025.push(
+  {
+    id: "genai-2025-oct-01-e2e-eval-pipelines",
+    title: "GenAI: End‑to‑End Eval Pipelines (2025)",
+    description: "Online evals wired to KPIs with budget‑aware routing and instant rollback.",
+    category: "GenAI",
+    publishedDate: "2025-10-01",
+    featured: true,
+    link: "/blog/genai-2025-oct-01-e2e-eval-pipelines",
+    readTime: "9 min read",
+    tags: ["Evals", "Scorecards", "Budgets"]
+  },
+  {
+    id: "genai-2025-oct-01-cost-optimization-v5",
+    title: "GenAI Cost Optimization v5 (2025)",
+    description: "60–85% savings with tier routing, caches, and KPI‑linked scorecards.",
+    category: "AI Operations",
+    publishedDate: "2025-10-01",
+    featured: true,
+    link: "/blog/genai-2025-oct-01-cost-optimization-v5",
+    readTime: "10 min read",
+    tags: ["FinOps", "Quality Tiers", "Caching"]
+  },
+  {
+    id: "observability-2025-sept-30-e2e-ai-tracing-v2",
+    title: "E2E AI Tracing v2 (2025)",
+    description: "Span budgets, cost telemetry, and KPI‑linked rollback for AI systems.",
+    category: "Observability",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/observability-2025-sept-30-e2e-ai-tracing-v2",
+    readTime: "8 min read",
+    tags: ["Tracing", "Budgets", "KPIs"]
+  }
+);
+
 // Sept 30, 2025 – Brand-new content additions to advertise
 newArticles2025.push(
   {

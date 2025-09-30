@@ -193,6 +193,11 @@ const Home = () => {
                 <div className="text-white font-semibold">GenAI Cost Optimization v5</div>
                 <div className="text-zion-slate-light text-sm mt-1">60–85% savings with tier routing, caches, and scorecards.</div>
               </Link>
+              <Link to="/blog/genai-2025-oct-01-e2e-eval-pipelines" className="block rounded-lg border border-white/10 p-4 hover:border-purple-400/40 transition-colors">
+                <div className="text-purple-300 text-xs mb-2">GenAI</div>
+                <div className="text-white font-semibold">End‑to‑End Eval Pipelines</div>
+                <div className="text-zion-slate-light text-sm mt-1">Online evals wired to KPIs with budget‑aware routing.</div>
+              </Link>
               <Link to="/blog/ai-2025-sept-30-security-mesh-v2" className="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
                 <div className="text-cyan-300 text-xs mb-2">AI Security</div>
                 <div className="text-white font-semibold">AI Security Mesh v2</div>
@@ -322,6 +327,11 @@ const Home = () => {
                 <div className="text-emerald-300 text-xs mb-2">Analytics</div>
                 <div className="text-white font-semibold">Federated Learning — Zero‑PII</div>
                 <div className="text-zion-slate-light text-sm mt-1">Scoped IDs, on‑device training, DP noise, and attestations.</div>
+              </Link>
+              <Link to="/blog/observability-2025-sept-30-e2e-ai-tracing-v2" className="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
+                <div className="text-cyan-300 text-xs mb-2">Observability</div>
+                <div className="text-white font-semibold">E2E AI Tracing v2</div>
+                <div className="text-zion-slate-light text-sm mt-1">Span budgets, cost telemetry, KPI‑linked rollback.</div>
               </Link>
             </div>
             {/* Freshly added posts */}

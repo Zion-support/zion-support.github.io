@@ -1699,6 +1699,58 @@ latestArticles.unshift(
   }
 );
 
+// Oct 01, 2025 – Fresh additions to advertise across the front end
+latestArticles.unshift(
+  {
+    id: "ai-2025-oct-01-e2e-eval-pipelines",
+    slug: "genai-2025-oct-01-e2e-eval-pipelines",
+    title: "GenAI 2025: End‑to‑End Eval Pipelines",
+    description: "Online evals wired to KPIs with budget‑aware routing and instant rollback.",
+    excerpt: "Stand up E2E eval pipelines that gate traffic and prevent regressions without slowing teams.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-01",
+    category: "GenAI",
+    tags: ["Evals", "Scorecards", "Budgets"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/genai-2025-e2e-eval-pipelines.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "ai-2025-oct-01-cost-optimization-v5",
+    slug: "genai-2025-oct-01-cost-optimization-v5",
+    title: "GenAI 2025: Cost Optimization v5",
+    description: "60–85% savings with tier routing, caches, and KPI‑linked scorecards.",
+    excerpt: "A practical, production‑ready playbook for predictable GenAI costs and stable UX.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-01",
+    category: "AI Operations",
+    tags: ["FinOps", "Quality Tiers", "Caching"],
+    featured: true,
+    readTime: "10 min read",
+    image: "/images/genai-2025-cost-optimization-v5.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "observability-2025-sept-30-e2e-ai-tracing-v2",
+    slug: "observability-2025-sept-30-e2e-ai-tracing-v2",
+    title: "Observability 2025: E2E AI Tracing v2",
+    description: "Span budgets, cost telemetry, and KPI‑linked rollback for AI systems.",
+    excerpt: "Trace‑driven reliability and cost control with rollback playbooks wired to spans.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "Observability",
+    tags: ["Tracing", "Budgets", "KPIs"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/observability-2025-e2e-tracing-v2.jpg",
+    newBadge: true,
+    trending: true
+  }
+);
+
 export const featuredArticles = latestArticles.filter(article => article.featured);
 export const trendingArticles = latestArticles.filter(article => article.trending);
 export const newArticles = latestArticles.filter(article => article.newBadge);
