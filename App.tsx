@@ -1,4 +1,5 @@
 import React, { JSX } from "react";
+import September30CognitiveAutomationBanner from "./components/September30CognitiveAutomationBanner";
 import January2032TranscendentContentBanner from "./components/January2032TranscendentContentBanner";
 import TranscendentIntelligenceAdvertisingBanner from "./components/TranscendentIntelligenceAdvertisingBanner";
 import September2025NewContentBanner from "./components/September2025NewContentBanner";
@@ -95,6 +96,9 @@ import September2025NewContentBanner from "./components/September2025NewContentB
 export default function App(): JSX.Element {
   return (
     <div className="min-h-screen bg-slate-950">
+      {/* 🚀 BREAKING NEWS: September 30, 2025 - Cognitive Automation Platform Revolution - MOST PROMINENT */}
+      <September30CognitiveAutomationBanner />
+      
       {/* NEWEST: January 2032 Transcendent Content Banner - MOST PROMINENT */}
       <January2032TranscendentContentBanner />
       
