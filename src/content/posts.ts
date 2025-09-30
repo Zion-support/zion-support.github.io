@@ -10,6 +10,24 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-2026-e2e-ai-tracing",
+    title: "E2E AI Tracing 2026: From Prompts to Outcomes",
+    description: "Instrument prompts, tools, calls, budgets, and KPIs with end‑to‑end traces for reliability and cost control.",
+    category: "AI Operations",
+    publishedAt: "2026-01-30",
+    featured: true,
+    readTime: "12 min read"
+  },
+  {
+    slug: "edge-2027-consentless-analytics-v4",
+    title: "Edge 2027: Consentless Analytics v4 — Zero‑PII Insights <100ms",
+    description: "Scoped IDs, on‑device aggregation, and differential privacy for actionable analytics without PII risk.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
     slug: "ai-2025-sept-30-autonomous-control-planes",
     title: "AI 2025: Autonomous Control Planes — Budgets, Gates, Rollback",
     description: "Design budget-aware, policy-gated AI platforms with instant rollback and KPI-linked guardrails.",

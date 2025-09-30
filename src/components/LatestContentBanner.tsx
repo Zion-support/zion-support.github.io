@@ -27,10 +27,10 @@ const LatestContentBanner: React.FC<LatestContentBannerProps> = ({
             <Sparkles className="w-6 h-6 animate-pulse" />
             <div>
               <h3 className="font-bold text-lg">
-                🔥 New: AI 2028 Autonomous Risk Budgets · Autonomous Enterprise Revolution
+                🔥 New: E2E AI Tracing 2026 · Consentless Edge Analytics v4
               </h3>
               <p className="text-sm opacity-90">
-                Ship faster with KPI‑linked budgets, instant rollback, and enterprise‑scale autonomy
+                Trace prompts→outcomes and ship zero‑PII analytics at &lt;100ms. Explore the latest →
               </p>
             </div>
           </div>
