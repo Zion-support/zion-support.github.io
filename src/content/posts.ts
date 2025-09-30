@@ -10,6 +10,33 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-2025-sept-30-autonomous-infra-blueprint-v2",
+    title: "AI 2025: Autonomous Infra Blueprint v2 — Self‑Healing in <60s",
+    description: "Updated playbooks with budgeted actions, policy tests, and live canaries for instant containment.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "edge-2026-consentless-journeys-blueprint",
+    title: "Edge 2026: Consentless Journeys Blueprint — Zero‑PII at <100ms",
+    description: "Scoped IDs, signed attestations, and DP noise enabling compliant personalization worldwide.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "genai-2027-platform-roi-scorecards",
+    title: "GenAI 2027: Platform ROI Scorecards — Prove Value Every Sprint",
+    description: "KPI‑linked scorecards, golden tasks, and policy tests that quantify ROI and prevent regressions.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "10 min read"
+  },
+  {
     slug: "enterprise-rag-security-2027",
     title: "Enterprise RAG Security 2027: Auth‑Aware Retrieval & Signed Outputs",
     description: "Secure RAG with auth‑aware retrieval, freshness windows, prompt firewalls, and signed outputs.",

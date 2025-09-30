@@ -159,7 +159,10 @@ const Home = () => {
             { title: "E2E AI Tracing 2026", category: "Observability", link: "/blog/ai-2026-e2e-ai-tracing" },
             { title: "Edge Rate Limiter Blueprint 2026", category: "Edge Computing", link: "/blog/edge-rate-limiter-blueprint-2026" },
             { title: "AI 2027: Operational Scorecards", category: "AI Operations", link: "/blog/ai-2027-operational-scorecards" },
-            { title: "AI 2027: Autonomous Roadmaps", category: "AI Strategy", link: "/blog/ai-2027-autonomous-roadmaps" }
+            { title: "AI 2027: Autonomous Roadmaps", category: "AI Strategy", link: "/blog/ai-2027-autonomous-roadmaps" },
+            { title: "Autonomous Infra Blueprint v2", category: "AI Operations", link: "/blog/ai-2025-sept-30-autonomous-infra-blueprint-v2" },
+            { title: "Consentless Journeys Blueprint", category: "Analytics", link: "/blog/edge-2026-consentless-journeys-blueprint" },
+            { title: "Platform ROI Scorecards", category: "AI Governance", link: "/blog/genai-2027-platform-roi-scorecards" }
           ]}
         />
         {/* Fresh content banner promoting brand-new articles */}
