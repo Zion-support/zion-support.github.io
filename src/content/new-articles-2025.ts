@@ -560,3 +560,40 @@ newArticles2025.push(
 	}
 );
 
+// Oct 2025 – Brand-new content to advertise
+newArticles2025.push(
+  {
+    id: "ai-operational-trust-scorecards-2026-v2",
+    title: "📊 AI Operational Trust Scorecards 2026 v2",
+    description: "SLIs → KPIs with budgets, canaries, and instant rollback — updated playbook.",
+    category: "AI Operations",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-operational-trust-scorecards-2026-v2",
+    readTime: "9 min read",
+    tags: ["Scorecards", "Budgets", "Rollback"]
+  },
+  {
+    id: "edge-consentless-experiments-2026",
+    title: "🔬 Edge Consentless Experiments 2026",
+    description: "Scoped IDs, on‑device metrics, and DP noise for compliant <100ms A/B.",
+    category: "Edge Computing",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/edge-consentless-experiments-2026",
+    readTime: "7 min read",
+    tags: ["Edge", "A/B", "DP", "Privacy"]
+  },
+  {
+    id: "genai-eval-scorecards-2026",
+    title: "✅ GenAI Eval Scorecards 2026",
+    description: "KPI‑linked evals that gate routes and models with budget‑aware rollbacks.",
+    category: "GenAI",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/genai-eval-scorecards-2026",
+    readTime: "8 min read",
+    tags: ["GenAI", "Evals", "Scorecards", "Budgets"]
+  }
+);
+
