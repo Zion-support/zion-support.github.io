@@ -127,6 +127,23 @@ const Home = () => {
         ))}
         
         <NewContentAnnouncement />
+        
+        {/* September 30, 2025 - NEW Content Launch */}
+        <NewContentPromoBanner 
+          className="border-b border-white/10" 
+          variant="premium" 
+          title="🎉 FRESH CONTENT: AI DevOps, Multi-Agent Systems, Security & Green AI"
+          description="Brand new comprehensive guides published September 30, 2025: Transform your operations with AI-powered DevOps (10x velocity), master multi-agent architectures, secure your AI systems, and cut energy costs 60%."
+          ctaText="Explore New Guides"
+          ctaLink="/blog"
+          featuredItems={[
+            { title: "AI-Powered DevOps Transformation — 10x Deployment Velocity", category: "DevOps & AI", link: "/blog/ai-2025-devops-transformation-complete-guide" },
+            { title: "Multi-Agent AI Systems for Enterprise — Production Patterns", category: "AI Architecture", link: "/blog/ai-2025-multi-agent-systems-enterprise-guide" },
+            { title: "AI Security & Privacy Best Practices 2025 — Protect Your Systems", category: "AI Security", link: "/blog/ai-2025-security-privacy-best-practices" },
+            { title: "Sustainable AI Infrastructure — Cut Energy Costs 60%", category: "AI Infrastructure", link: "/blog/ai-2025-sustainable-ai-infrastructure-guide" }
+          ]}
+        />
+        
         <LatestContentBanner 
           className="border-b border-white/10" 
           variant="info"

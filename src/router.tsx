@@ -6,7 +6,7 @@ const Services = React.lazy(() => Promise.resolve({ default: () => null }));
 import Contact from './pages/Contact';
 const AIMicroSAAS = React.lazy(() => Promise.resolve({ default: () => null }));
 import Blog from './pages/Blog';
-const Resources = React.lazy(() => Promise.resolve({ default: () => null }));
+import Resources from './pages/Resources';
 const Tools = React.lazy(() => Promise.resolve({ default: () => null }));
 const EnterpriseAISolutions = React.lazy(() => Promise.resolve({ default: () => null }));
 const Post = React.lazy(() => Promise.resolve({ default: () => null }));
@@ -14,8 +14,8 @@ const CaseStudies = React.lazy(() => Promise.resolve({ default: () => null }));
 const AIWorkflowAutomation = React.lazy(() => Promise.resolve({ default: () => null }));
 const AIVirtualAssistant = React.lazy(() => Promise.resolve({ default: () => null }));
 const AIDataAnalytics = React.lazy(() => Promise.resolve({ default: () => null }));
-const AIAutonomousOperations = React.lazy(() => Promise.resolve({ default: () => null }));
-const AIPlatformArchitecture = React.lazy(() => Promise.resolve({ default: () => null }));
+import AIAutonomousOperations from './pages/services/AIAutonomousOperations';
+import AIPlatformArchitecture from './pages/services/AIPlatformArchitecture';
 
 export const AppRouter: React.FC = () => {
   return (
@@ -27,7 +27,7 @@ export const AppRouter: React.FC = () => {
       <Route path="/services/ai-virtual-assistant" element={<AIVirtualAssistant />} />
       <Route path="/services/ai-data-analytics" element={<AIDataAnalytics />} />
       <Route path="/services/ai-autonomous-operations" element={<AIAutonomousOperations />} />
-      <Route path="/services/AI-Platform-Architecture" element={<AIPlatformArchitecture />} />
+      <Route path="/services/ai-platform-architecture" element={<AIPlatformArchitecture />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/case-studies" element={<CaseStudies />} />
       <Route path="/ai-micro-saas" element={<AIMicroSAAS />} />
