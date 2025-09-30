@@ -8,6 +8,36 @@ export const metadata = {
 
 const blogPosts = [
   {
+<<<<<<< HEAD
+    title: 'AI 2026: Breakthrough Innovations Reshaping Enterprise Technology',
+    slug: 'ai-2026-breakthrough-innovations',
+    excerpt: 'Discover the revolutionary AI innovations that are transforming enterprise operations in 2026. From autonomous agent factories to quantum neural networks, explore the cutting-edge technologies driving business transformation.',
+    category: 'Breakthrough Technology',
+    publishedAt: 'January 15, 2026',
+    image: '🚀',
+    color: 'blue',
+    readTime: '15 min read'
+  },
+  {
+    title: 'AI Governance 2026: Enterprise Safety and Compliance Framework',
+    slug: 'ai-governance-2026-enterprise-safety',
+    excerpt: 'Comprehensive guide to AI governance, safety protocols, and compliance frameworks for enterprise organizations in 2026. Learn how to implement robust AI safety measures and ensure regulatory compliance.',
+    category: 'Governance & Safety',
+    publishedAt: 'January 20, 2026',
+    image: '🛡️',
+    color: 'indigo',
+    readTime: '18 min read'
+  },
+  {
+    title: 'AI 2027: Edge‑Native Agents — Real‑Time, Reliable, Low‑Latency',
+    slug: 'ai-2027-edge-native-agents',
+    excerpt: 'Deploy agentic workloads at the edge for sub‑50ms latency with policy guardrails and cost control.',
+    category: 'Technical Guide',
+    publishedAt: 'September 30, 2025',
+    image: '⚡',
+    color: 'emerald',
+    readTime: '14 min read'
+=======
     title: 'Revolutionary AI Breakthroughs: Meta-Cognitive Intelligence Achieves 95% Decision Accuracy',
     slug: 'ai-2026-breakthrough-announcement',
     excerpt: 'Revolutionary AI systems that think about their own thinking processes, achieving unprecedented accuracy in complex enterprise scenarios.',
@@ -26,6 +56,7 @@ const blogPosts = [
     image: '⚛️',
     color: 'cyan',
     readTime: '12 min read'
+>>>>>>> origin/cursor/create-and-deploy-new-content-e0a1
   },
   {
     title: 'AI 2027 Hyper‑Automation Blueprint',
@@ -311,6 +342,12 @@ export default function BlogPage() {
         <div className="mb-12">
           <h2 className="text-2xl font-bold mb-6">🚀 Latest Breakthrough Articles</h2>
           <div className="grid md:grid-cols-2 gap-6">
+<<<<<<< HEAD
+            <Link href="/blog/agent-release-zero-regret-2026" className="block p-6 bg-slate-800 rounded-lg hover:bg-slate-700 transition-colors">
+              <h3 className="text-xl font-semibold mb-2">Agent Releases 2026: Zero‑Regret with Budgets & Rollback</h3>
+              <p className="text-slate-300 mb-3">Budget risky actions, approvals, and instant rollback with KPI‑linked canaries.</p>
+              <span className="text-blue-400 text-sm">Read more →</span>
+=======
             <Link href="/blog/ai-2026-breakthrough-announcement" className="block p-6 bg-gradient-to-br from-purple-900/30 to-blue-900/30 rounded-lg hover:bg-purple-900/50 transition-all duration-300 border border-purple-500/30 hover:border-purple-400/60">
               <div className="flex items-center gap-3 mb-3">
                 <span className="text-3xl">🧠</span>
@@ -319,6 +356,7 @@ export default function BlogPage() {
               <h3 className="text-xl font-semibold mb-2 text-white">Meta-Cognitive AI Achieves 95% Decision Accuracy</h3>
               <p className="text-slate-300 mb-3">Revolutionary AI systems that think about their own thinking processes, achieving unprecedented accuracy in complex enterprise scenarios.</p>
               <span className="text-purple-400 text-sm font-semibold">Read the breakthrough →</span>
+>>>>>>> origin/cursor/create-and-deploy-new-content-e0a1
             </Link>
             <Link href="/blog/quantum-ai-enterprise-solutions-2026" className="block p-6 bg-gradient-to-br from-cyan-900/30 to-purple-900/30 rounded-lg hover:bg-cyan-900/50 transition-all duration-300 border border-cyan-500/30 hover:border-cyan-400/60">
               <div className="flex items-center gap-3 mb-3">
