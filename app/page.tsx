@@ -1,5 +1,6 @@
 import React from 'react';
 import UnifiedContentPromotion from '../components/UnifiedContentPromotion';
+import NewContent20252026MegaBanner from '../components/NewContent20252026MegaBanner';
 
 export default function HomePage() {
   return (
@@ -10,6 +11,7 @@ export default function HomePage() {
           <p className="text-lg md:text-xl text-gray-300">Leading AI insights, case studies, and implementation guides.</p>
         </div>
       </section>
+      <NewContent20252026MegaBanner />
       <UnifiedContentPromotion />
     </main>
   );
