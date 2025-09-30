@@ -268,3 +268,31 @@ export const getLatestContent = (count: number = 5): FeaturedItem[] => {
     .filter(item => item.featured)
     .slice(0, count);
 };
+
+// Surface brand-new articles at the very top of featured content
+featuredBlogPosts.unshift(
+  {
+    id: "ai-governance-live-scorecards-2026",
+    title: "AI Governance Live Scorecards 2026",
+    description: "CI policy tests + live scorecards preventing regressions before they ship",
+    link: "/blog/ai-governance-live-scorecards-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-real-time-personalization-2026",
+    title: "Edge Real‑Time Personalization 2026",
+    description: "Private <100ms personalization with scoped IDs and on‑device metrics",
+    link: "/blog/edge-real-time-personalization-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "agent-release-runbooks-2026",
+    title: "Agent Release Runbooks 2026",
+    description: "Approvals, budgets, and instant rollback for safe autonomous releases",
+    link: "/blog/agent-release-runbooks-2026",
+    type: "article",
+    featured: true
+  }
+);

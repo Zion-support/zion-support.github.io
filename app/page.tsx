@@ -219,6 +219,53 @@ export default function HomePage() {
             Fresh Research & Playbooks
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
+            <Link href="/blog/ai-governance-live-scorecards-2026" className="group">
+              <div className="bg-white/5 border border-white/10 rounded-xl p-6 hover:border-emerald-500/40 transition-colors">
+                <div className="mb-2">
+                  <span className="px-3 py-1 rounded-full text-xs bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                    AI Governance
+                  </span>
+                </div>
+                <h3 className="text-xl font-bold group-hover:text-emerald-300 transition-colors">
+                  Live Scorecards + CI Policy Tests (2026)
+                </h3>
+                <p className="text-gray-300 mt-2 text-sm">
+                  Prevent regressions pre-release with CI policy tests and live KPIs.
+                </p>
+              </div>
+            </Link>
+
+            <Link href="/blog/edge-real-time-personalization-2026" className="group">
+              <div className="bg-white/5 border border-white/10 rounded-xl p-6 hover:border-cyan-500/40 transition-colors">
+                <div className="mb-2">
+                  <span className="px-3 py-1 rounded-full text-xs bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">
+                    Edge Computing
+                  </span>
+                </div>
+                <h3 className="text-xl font-bold group-hover:text-cyan-300 transition-colors">
+                  Edge Real‑Time Personalization (2026)
+                </h3>
+                <p className="text-gray-300 mt-2 text-sm">
+                  Private &lt;100ms personalization with scoped IDs and on-device metrics.
+                </p>
+              </div>
+            </Link>
+
+            <Link href="/blog/agent-release-runbooks-2026" className="group">
+              <div className="bg-white/5 border border-white/10 rounded-xl p-6 hover:border-fuchsia-500/40 transition-colors">
+                <div className="mb-2">
+                  <span className="px-3 py-1 rounded-full text-xs bg-fuchsia-500/20 text-fuchsia-300 border border-fuchsia-500/30">
+                    AI Operations
+                  </span>
+                </div>
+                <h3 className="text-xl font-bold group-hover:text-fuchsia-300 transition-colors">
+                  Agent Release Runbooks (2026)
+                </h3>
+                <p className="text-gray-300 mt-2 text-sm">
+                  Approvals, budget guards, canary evals, and instant rollback.
+                </p>
+              </div>
+            </Link>
             <Link href="/blog/ai-2026-cost-optimization-blueprint" className="group">
               <div className="bg-white/5 border border-white/10 rounded-xl p-6 hover:border-emerald-500/40 transition-colors">
                 <div className="mb-2">
