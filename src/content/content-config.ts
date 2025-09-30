@@ -215,6 +215,30 @@ export const featuredBlogPosts: FeaturedItem[] = [
 // Sept 30, 2025 – Promote brand-new posts site-wide (added now)
 featuredBlogPosts.unshift(
   {
+    id: "ai-2025-sept-30-platform-roi-scorecards",
+    title: "AI 2025: Platform ROI Scorecards",
+    description: "Scorecards that link platform adoption to SLOs, velocity, and revenue.",
+    link: "/blog/ai-2025-sept-30-platform-roi-scorecards",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-2025-sept-30-consentless-experiments-v3",
+    title: "Edge 2025: Consentless Experiments v3 (<100ms)",
+    description: "Scoped IDs, on‑device metrics, and DP noise enabling compliant A/B.",
+    link: "/blog/edge-2025-sept-30-consentless-experiments-v3",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "genai-2025-sept-30-eval-policy-blueprints",
+    title: "GenAI 2025: Eval & Policy Blueprints",
+    description: "Golden tasks, attestations, and CI policy tests wired to KPIs.",
+    link: "/blog/genai-2025-sept-30-eval-policy-blueprints",
+    type: "article",
+    featured: true
+  },
+  {
     id: "production-rag-quality-budgets-2026",
     title: "Production RAG: Quality Budgets, Freshness Windows, and SLAs",
     description: "Freshness windows, async warmups, and KPI‑aligned SLAs for reliable RAG.",

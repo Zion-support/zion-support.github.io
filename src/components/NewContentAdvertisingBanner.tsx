@@ -5,52 +5,41 @@ const NewContentAdvertisingBanner: React.FC = () => {
   const featuredContent = [
     {
       id: 1,
-      title: 'AI 2025: Autonomous Control Planes',
-      category: 'AI Operations',
-      readTime: '9 min',
-      rating: 5.0,
-      readers: '120K+',
+      title: 'AI 2025: Platform ROI Scorecards',
+      category: 'Platform Engineering',
+      readTime: '8 min',
+      rating: 4.9,
+      readers: '75K+',
       badge: 'NEW',
       gradient: 'from-blue-500 to-purple-500',
       icon: <Star className="w-6 h-6" />,
-      link: '/blog/ai-2025-sept-30-autonomous-control-planes'
+      link: '/blog/ai-2025-sept-30-platform-roi-scorecards'
     },
     {
       id: 2,
-      title: 'Edge 2026: Attested Analytics',
+      title: 'Edge 2025: Consentless Experiments v3',
       category: 'Analytics',
       readTime: '7 min',
       rating: 4.9,
-      readers: '87K+',
-      badge: 'FEATURED',
+      readers: '52K+',
+      badge: 'NEW',
       gradient: 'from-cyan-500 to-blue-500',
       icon: <TrendingUp className="w-6 h-6" />,
-      link: '/blog/edge-2026-attested-analytics'
+      link: '/blog/edge-2025-sept-30-consentless-experiments-v3'
     },
     {
       id: 3,
-      title: 'E2E AI Tracing 2026',
-      category: 'AI Operations',
-      readTime: '12 min',
+      title: 'GenAI 2025: Eval & Policy Blueprints',
+      category: 'AI Governance',
+      readTime: '10 min',
       rating: 5.0,
-      readers: '65K+',
-      badge: 'NEW',
+      readers: '60K+',
+      badge: 'FEATURED',
       gradient: 'from-green-500 to-emerald-500',
       icon: <Award className="w-6 h-6" />,
-      link: '/blog/ai-2026-e2e-ai-tracing'
+      link: '/blog/genai-2025-sept-30-eval-policy-blueprints'
     },
-    {
-      id: 4,
-      title: 'Consentless Analytics v4 (2027)',
-      category: 'Analytics',
-      readTime: '6 min',
-      rating: 4.9,
-      readers: '52K+',
-      badge: 'FEATURED',
-      gradient: 'from-emerald-500 to-cyan-500',
-      icon: <TrendingUp className="w-6 h-6" />,
-      link: '/blog/edge-2027-consentless-analytics-v4'
-    }
+    
   ];
 
   const achievements = [

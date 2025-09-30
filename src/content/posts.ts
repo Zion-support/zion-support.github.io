@@ -10,30 +10,42 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-<<<<<<< HEAD
-    slug: "ai-2026-neural-architecture-search-breakthrough",
-    title: "Neural Architecture Search: The 2026 Breakthrough Revolutionizing AI Development",
-    description: "Discover how NAS breakthrough technology is delivering 300-500% performance improvements and 95% energy efficiency gains across Fortune 500 enterprises.",
-    category: "AI Development",
-    publishedAt: "2026-01-15",
-=======
+    slug: "ai-2025-sept-30-platform-roi-scorecards",
+    title: "AI 2025: Platform ROI Scorecards",
+    description: "Scorecards that link platform adoption to SLOs, developer velocity, and revenue—prove ROI with data.",
+    category: "Platform Engineering",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "edge-2025-sept-30-consentless-experiments-v3",
+    title: "Edge 2025: Consentless Experiments v3 (<100ms)",
+    description: "Scoped IDs, on‑device metrics, and DP noise enabling compliant A/B worldwide under 100ms.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "genai-2025-sept-30-eval-policy-blueprints",
+    title: "GenAI 2025: Eval & Policy Blueprints",
+    description: "Golden tasks, signed attestations, and CI policy tests wired to KPIs for safe velocity.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "10 min read"
+  },
+  {
     slug: "agent-release-zero-regret-2026",
     title: "Zero‑Regret Agent Releases 2026",
     description: "Budgeted actions, KPI‑linked canaries, sandboxed tools, and one‑click rollback for safe agent updates.",
     category: "AI Operations",
     publishedAt: "2025-09-30",
->>>>>>> feat/new-content-ads-sept30-2025
     featured: true,
     readTime: "15 min read"
   },
   {
-<<<<<<< HEAD
-    slug: "ai-2026-federated-learning-enterprise-breakthrough",
-    title: "Federated Learning Enterprise Breakthrough: Privacy-First AI at Global Scale",
-    description: "Transform your AI capabilities with privacy-preserving federated learning that delivers 300% performance improvements while maintaining 100% regulatory compliance.",
-    category: "Privacy AI",
-    publishedAt: "2026-01-15",
-=======
     slug: "ai-2025-oct-31-governed-agent-patterns-v2",
     title: "Governed Agent Patterns v2 (2025)",
     description: "Approvals, verifiers, budgets, and rollback—production patterns for safe autonomous agents.",
@@ -48,7 +60,6 @@ export const posts: BlogPost[] = [
     description: "Trace prompts, models, and costs to business outcomes with budget‑aware actions and rollback.",
     category: "Observability",
     publishedAt: "2025-09-30",
->>>>>>> feat/new-content-ads-sept30-2025
     featured: true,
     readTime: "18 min read"
   },
