@@ -156,6 +156,35 @@ const Home = React.memo(function Home(): React.JSX.Element {
 						</div>
 					</section>
 				)}
+
+				{/* Latest Insights */}
+				<section className="py-16 bg-white">
+					<div className="container mx-auto px-4 max-w-7xl">
+						<div className="text-center mb-12">
+							<h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Latest Insights</h2>
+							<p className="text-xl text-gray-600 max-w-2xl mx-auto">Fresh strategies and blueprints from our experts</p>
+						</div>
+						<div className="grid md:grid-cols-3 gap-8">
+							<Link href="/app/blog/ai-2025-generative-design-systems-blueprint" className="block bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
+								<h3 className="text-xl font-semibold text-gray-900 mb-2">AI 2025: Generative Design Systems</h3>
+								<p className="text-gray-600">Blueprint for enterprise-grade generative design systems with safety guardrails.</p>
+							</Link>
+							<Link href="/app/blog/ai-2025-multi-agent-ops-control-tower-blueprint" className="block bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
+								<h3 className="text-xl font-semibold text-gray-900 mb-2">AI 2025: Multi‑Agent Ops Control Tower</h3>
+								<p className="text-gray-600">Operational playbook for approvals, observability, and guardrails for AI agents.</p>
+							</Link>
+							<Link href="/content/blog/ai-2025-intelligent-document-processing-breakthroughs" className="block bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
+								<h3 className="text-xl font-semibold text-gray-900 mb-2">AI 2025: IDP Breakthroughs</h3>
+								<p className="text-gray-600">How layout‑aware models and HITL transform document-heavy workflows.</p>
+							</Link>
+						</div>
+						<div className="text-center mt-10">
+							<Link href="/blog" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+								View all insights
+							</Link>
+						</div>
+					</div>
+				</section>
 			</div>
 		</>
 	);
