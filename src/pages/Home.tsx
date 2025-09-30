@@ -104,8 +104,8 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 NEW: Oct 02 — Agent Runbooks v6, Edge Privacy Observability, CIO Playbook"
-          description="Latest drops: Agent Reliability Runbooks v6, Edge Privacy Observability, and CIO Modernization Playbook. Ship faster with safety, privacy, and ROI."
+          title="🚀 NEW: Sept 30, 2025 — Agentic Workflows, Private Edge Telemetry, FinOps Scorecards"
+          description="Just dropped: Reliable Multi‑Agent Orchestration, Privacy‑First Edge Telemetry, and Cost Optimization Scorecards. Ship faster, stay safe, and cut spend 30–60%."
           ctaText="Read the Latest"
           ctaLink="/blog"
           dismissible={true}
