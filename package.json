@@ -5,10 +5,10 @@
   "type": "module",
   "preinstall": "pnpm approve-builds --unsafe-perm || true",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "next dev",
+    "build": "next build",
     "build:no-check": "vite build",
-    "preview": "vite preview",
+    "preview": "next start",
     "lint": "eslint src --report-unused-disable-directives --max-warnings 250",
     "lint:fix": "eslint . --fix",
     "type-check": "tsc -p tsconfig.typecheck.json --noEmit",
