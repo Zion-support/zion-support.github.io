@@ -17,58 +17,46 @@ interface ContentItem {
 }
 
 const featuredContent: ContentItem[] = [
-  // January 2026 — Revolutionary AI Breakthroughs
+  // May 2026 — New Revolutionary Breakthrough Content
   {
-    id: 'jan2026-1',
-    title: 'AI 2026: Autonomous Cognitive Enterprise Breakthrough',
-    description: 'Revolutionary autonomous cognitive enterprise systems achieving 99.8% business automation with self-managing AI.',
-    link: '/blog/ai-2026-autonomous-cognitive-enterprise-breakthrough',
-    badge: 'BREAKTHROUGH',
-    badgeColor: 'bg-gradient-to-r from-purple-600 to-indigo-600',
-    icon: '🧠',
-    publishedDate: 'January 20, 2026',
-    readTime: '25 min read',
-    category: 'Autonomous Enterprise'
+    id: 'may2026-1',
+    title: 'AI 2026 May Revolutionary Breakthrough: Meta-Cognitive Superintelligence',
+    description: 'Discover the revolutionary AI breakthrough featuring meta-cognitive superintelligence, quantum-neural fusion, and autonomous operations delivering unprecedented business value.',
+    link: '/blog/ai-2026-may-revolutionary-breakthrough',
+    badge: 'Revolutionary',
+    badgeColor: 'bg-gradient-to-r from-purple-600 to-blue-600',
+    icon: '🚀',
+    publishedDate: 'May 1, 2026',
+    readTime: '12 min read',
+    category: 'AI Breakthrough'
   },
   {
-    id: 'jan2026-2',
-    title: 'AI 2026: Quantum Neural Superintelligence Breakthrough',
-    description: 'Revolutionary quantum neural superintelligence achieving 10,000x performance improvements with consciousness-level AI.',
-    link: '/blog/ai-2026-quantum-neural-superintelligence-breakthrough',
-    badge: 'SUPERINTELLIGENCE',
-    badgeColor: 'bg-gradient-to-r from-cyan-600 to-blue-600',
-    icon: '⚛️',
-    publishedDate: 'January 22, 2026',
-    readTime: '30 min read',
-    category: 'Quantum AI'
-  },
-  {
-    id: 'jan2026-3',
-    title: 'Autonomous Cognitive Enterprise Success: $5.2B ROI',
-    description: 'How a Fortune 100 technology conglomerate achieved $5.2B ROI through autonomous cognitive enterprise implementation.',
-    link: '/case-studies/ai-2026-autonomous-cognitive-enterprise-5-billion-success',
-    badge: 'MEGA ROI',
+    id: 'may2026-2',
+    title: 'Fortune 500 AI 2026 May Mega Success: $5B+ Value Generated',
+    description: 'See how a Fortune 500 company achieved unprecedented results with our May 2026 AI breakthrough, delivering $5B+ in measurable value and 99.9% operational efficiency.',
+    link: '/case-studies/fortune-500-ai-2026-may-mega-success',
+    badge: 'Mega Success',
     badgeColor: 'bg-gradient-to-r from-green-600 to-emerald-600',
     icon: '💰',
-    publishedDate: 'January 21, 2026',
-    readTime: '20 min read',
-    category: 'Success Stories'
+    publishedDate: 'May 1, 2026',
+    readTime: '10 min read',
+    category: 'Success Story'
   },
   {
-    id: 'jan2026-4',
-    title: 'Quantum Neural Superintelligence Success: $15.8B ROI',
-    description: 'How a global pharmaceutical giant achieved $15.8B ROI through quantum neural superintelligence implementation.',
-    link: '/case-studies/ai-2026-quantum-neural-superintelligence-15-billion-success',
-    badge: 'BREAKTHROUGH',
-    badgeColor: 'bg-gradient-to-r from-orange-600 to-red-600',
-    icon: '🏆',
-    publishedDate: 'January 23, 2026',
-    readTime: '22 min read',
-    category: 'Success Stories'
+    id: 'may2026-3',
+    title: 'AI 2026 Future Trends: Mega Predictions for Enterprise Transformation',
+    description: 'Explore the revolutionary AI trends and predictions for 2026 that will transform enterprise operations, featuring meta-cognitive AI, quantum computing, and autonomous systems.',
+    link: '/blog/ai-2026-future-trends-mega-predictions',
+    badge: 'Future Trends',
+    badgeColor: 'bg-gradient-to-r from-indigo-600 to-purple-600',
+    icon: '🔮',
+    publishedDate: 'May 1, 2026',
+    readTime: '15 min read',
+    category: 'Future Predictions'
   },
-  // Legacy content
+  // Sept 30, 2025 — newly added highlights
   {
-    id: 'legacy1',
+    id: 'nX1',
     title: 'Operational Trust Scorecards v3 — KPIs, Budgets, Instant Rollback',
     description: 'Wire SLIs to KPIs with budgeted actions, live canaries, and deterministic rollback that prevents regressions.',
     link: '/blog/ai-2025-sept-30-operational-trust-scorecards-v3',
@@ -80,7 +68,7 @@ const featuredContent: ContentItem[] = [
     category: 'AI Operations'
   },
   {
-    id: 'legacy2',
+    id: 'nX2',
     title: 'Autonomic Runbooks — Contain Incidents in Under 60 Seconds',
     description: 'Policy‑tested actions, guardrails, and live traces that auto‑contain incidents without sacrificing velocity.',
     link: '/blog/ai-2025-sept-30-autonomic-runbooks',
@@ -92,7 +80,7 @@ const featuredContent: ContentItem[] = [
     category: 'AI Reliability'
   },
   {
-    id: 'legacy3',
+    id: 'nX3',
     title: 'Consentless Telemetry v2 — Useful Insights, Zero‑PII, <100ms',
     description: 'Scoped IDs, on‑device redaction, and DP noise to keep analytics rich and privacy‑first worldwide.',
     link: '/blog/edge-2025-sept-30-consentless-telemetry-v2',
@@ -102,104 +90,443 @@ const featuredContent: ContentItem[] = [
     publishedDate: 'September 30, 2025',
     readTime: '6 min read',
     category: 'Observability'
+  },
+  // Sept 30, 2025 — highlight newest content
+  // Oct 03, 2025 — newest highlights
+  {
+    id: 'o3-1',
+    title: 'Governed Autonomy Scorecards: From SLIs to KPIs',
+    description: 'Operational scorecards with budgets, canaries, and rollback that accelerate delivery without regressions.',
+    link: '/blog/ai-2025-oct-03-governed-autonomy-scorecards',
+    badge: 'New',
+    badgeColor: 'bg-gradient-to-r from-emerald-600 to-teal-600',
+    icon: '🧭',
+    publishedDate: 'October 03, 2025',
+    readTime: '8 min read',
+    category: 'AI Operations'
+  },
+  {
+    id: 'o3-2',
+    title: 'Private Telemetry at the Edge: Useful Signals, Zero PII',
+    description: 'Scoped IDs, on-device redaction, and DP noise for actionable analytics under 100ms with attestations.',
+    link: '/blog/edge-2025-oct-03-private-telemetry-blueprint',
+    badge: 'Fresh',
+    badgeColor: 'bg-gradient-to-r from-cyan-600 to-sky-600',
+    icon: '📈',
+    publishedDate: 'October 03, 2025',
+    readTime: '7 min read',
+    category: 'Observability'
+  },
+  {
+    id: 'o3-3',
+    title: 'GenAI Quality Tiers v4: Save Up To 70% With Stable UX',
+    description: 'Tiered routing, semantic caches, and eval gates that reduce spend while preserving UX.',
+    link: '/blog/genai-2025-oct-03-quality-tiers-blueprint-v4',
+    badge: 'New',
+    badgeColor: 'bg-gradient-to-r from-purple-600 to-pink-600',
+    icon: '🧪',
+    publishedDate: 'October 03, 2025',
+    readTime: '9 min read',
+    category: 'GenAI'
+  },
+  {
+    id: 'n1',
+    title: 'AI Operational Trust Q4 2025: Scorecards That Prevent Regressions',
+    description: 'Wire SLIs to KPIs with budgets, canaries, and attested rollbacks to ship faster and safer.',
+    link: '/blog/ai-operational-trust-q4-2025',
+    badge: 'Fresh',
+    badgeColor: 'bg-gradient-to-r from-emerald-600 to-teal-600',
+    icon: '🧭',
+    publishedDate: 'September 30, 2025',
+    readTime: '8 min read',
+    category: 'AI Operations'
+  },
+  {
+    id: 'n2',
+    title: 'AI Cost Optimization Breakthrough 2026: 40–70% Savings With Stability',
+    description: 'Quality tiers, semantic caches, and policy tests that cut spend without hurting UX.',
+    link: '/blog/ai-cost-optimization-breakthrough-2026',
+    badge: 'New',
+    badgeColor: 'bg-gradient-to-r from-cyan-600 to-sky-600',
+    icon: '💸',
+    publishedDate: 'September 30, 2025',
+    readTime: '9 min read',
+    category: 'FinOps'
+  },
+  {
+    id: 'n3a',
+    title: 'Governed Autonomy Blueprint (2025): Safe, Reliable, Cost-Aware AI',
+    description: 'Budgets, scorecards, guardrails, and live traces that connect SLIs to business KPIs.',
+    link: '/blog/ai-2025-sept-30-governed-autonomy-blueprint',
+    badge: 'New',
+    badgeColor: 'bg-gradient-to-r from-indigo-600 to-blue-600',
+    icon: '🛡️',
+    publishedDate: 'September 30, 2025',
+    readTime: '12 min read',
+    category: 'Governed Autonomy'
+  },
+  {
+    id: 'n3',
+    title: 'Autonomous Enterprise Operations 2025: From Pilots to Production',
+    description: 'Guardrails, live traces, and budgeted actions that convert pilots into durable ROI.',
+    link: '/blog/ai-autonomous-enterprise-operations-2025',
+    badge: 'Featured',
+    badgeColor: 'bg-gradient-to-r from-yellow-600 to-orange-600',
+    icon: '🚀',
+    publishedDate: 'September 30, 2025',
+    readTime: '10 min read',
+    category: 'Enterprise AI'
+  },
+  {
+    id: '1',
+    title: 'AI 2027: Quantum Consciousness Fusion',
+    description: 'Revolutionary breakthrough combining quantum computing with consciousness simulation, achieving 100,000x processing speed and genuine artificial awareness capabilities.',
+    link: '/blog/ai-2027-quantum-consciousness-fusion',
+    badge: 'Quantum Breakthrough',
+    badgeColor: 'bg-gradient-to-r from-blue-600 to-purple-600',
+    icon: '⚛️',
+    publishedDate: 'February 15, 2027',
+    readTime: '15 min read',
+    category: 'Quantum AI'
+  },
+  {
+    id: '10',
+    title: 'E2E AI Tracing 2026: From Prompts to Outcomes',
+    description: 'Instrument prompts, tools, calls, budgets, and outcomes. Wire traces to KPI‑linked scorecards for reliable autonomy.',
+    link: '/blog/ai-2026-e2e-ai-tracing',
+    badge: 'New',
+    badgeColor: 'bg-gradient-to-r from-cyan-600 to-sky-600',
+    icon: '🧭',
+    publishedDate: 'January 30, 2026',
+    readTime: '12 min read',
+    category: 'AI Operations'
+  },
+  {
+    id: '9',
+    title: 'Enterprise Autonomy Blueprint 2026: From Pilots to Production',
+    description: 'Playbooks for governed, reliable autonomy with budgets, live traces, and rollback.',
+    link: '/blog/ai-enterprise-autonomy-blueprint-2026',
+    badge: 'New',
+    badgeColor: 'bg-gradient-to-r from-emerald-600 to-teal-600',
+    icon: '🧭',
+    publishedDate: 'September 30, 2025',
+    readTime: '9 min read',
+    category: 'AI Operations'
+  },
+  {
+    id: '2',
+    title: 'AI 2027: Neuromorphic Quantum Breakthrough',
+    description: 'Brain-inspired computing meets quantum physics, achieving 1,000,000x energy efficiency and human-level processing capabilities that surpass neural networks.',
+    link: '/blog/ai-2027-neuromorphic-quantum-breakthrough',
+    badge: 'Neuromorphic Revolution',
+    badgeColor: 'bg-gradient-to-r from-green-600 to-teal-600',
+    icon: '🧠',
+    publishedDate: 'February 20, 2027',
+    readTime: '14 min read',
+    category: 'Neuromorphic AI'
+  },
+  {
+    id: '3',
+    title: '$2.5B ROI Success: Quantum Neuromorphic AI',
+    description: 'Fortune 100 company achieves unprecedented transformation with consciousness-driven AI, delivering $2.5B ROI in 18 months through quantum neuromorphic breakthrough.',
+    link: '/case-studies/ai-2027-quantum-neuromorphic-success-story',
+    badge: 'Mega Success',
+    badgeColor: 'bg-gradient-to-r from-yellow-600 to-orange-600',
+    icon: '🏆',
+    publishedDate: 'February 25, 2027',
+    readTime: '12 min read',
+    category: 'Success Story'
+  },
+  {
+    id: '4',
+    title: 'AI Operational Resilience 2026: Designing for Failure and Recovery',
+    description: 'Blueprint for 99.99% uptime with policy tests, isolation, chaos drills, and auto-remediation.',
+    link: '/blog/ai-operational-resilience-2026',
+    badge: 'New',
+    badgeColor: 'bg-gradient-to-r from-emerald-600 to-teal-600',
+    icon: '🧯',
+    publishedDate: 'September 30, 2025',
+    readTime: '14 min read',
+    category: 'Operations'
+  },
+  {
+    id: '5',
+    title: 'AI Agent Observability 2026: Metrics, Traces, and Guardrails',
+    description: 'Instrument agents with metrics, traces, and guardrails to ship reliable autonomy with confidence.',
+    link: '/blog/ai-agent-observability-2026',
+    badge: 'Hot',
+    badgeColor: 'bg-gradient-to-r from-pink-600 to-rose-600',
+    icon: '🔎',
+    publishedDate: 'September 30, 2025',
+    readTime: '12 min read',
+    category: 'AI Reliability'
+  },
+  {
+    id: '6',
+    title: 'AI Operational Excellence: Autonomous Agents Driving 10x Efficiency',
+    description: 'How production-grade agents orchestrate operations safely with guardrails and observability.',
+    link: '/blog/ai-operational-excellence-agents-2026',
+    badge: 'New 2026 Insight',
+    badgeColor: 'bg-gradient-to-r from-cyan-600 to-sky-600',
+    icon: '⚙️',
+    publishedDate: 'September 30, 2025',
+    readTime: '14 min read',
+    category: 'Enterprise Automation'
+  },
+  {
+    id: '7',
+    title: 'Intelligent Data Fabric 2026: Real-Time AI for Connected Enterprises',
+    description: 'Unify batch, streaming, and unstructured data to power low-latency AI decisions.',
+    link: '/blog/ai-intelligent-data-fabric-2026',
+    badge: 'New 2026 Guide',
+    badgeColor: 'bg-gradient-to-r from-amber-600 to-orange-600',
+    icon: '🧩',
+    publishedDate: 'September 30, 2025',
+    readTime: '15 min read',
+    category: 'Data & AI Architecture'
+  },
+  {
+    id: '8',
+    title: 'Autonomous Data Governance 2026: Policies-as-Code & Continuous Compliance',
+    description: 'Encode policies, enforce at gates, and verify with lineage and audits for safer AI.',
+    link: '/blog/ai-2026-autonomous-data-governance',
+    badge: 'New',
+    badgeColor: 'bg-gradient-to-r from-teal-600 to-emerald-600',
+    icon: '🛡️',
+    publishedDate: 'September 30, 2025',
+    readTime: '16 min read',
+    category: 'Data Governance'
+  }
+  ,
+  {
+    id: '11',
+    title: 'AI 2026 Agentic Workflow Orchestration',
+    description: 'Guardrails, reviews, and online evals for reliable multi-agent workflows that achieve measurable ROI.',
+    link: '/blog/ai-2026-agentic-workflow-orchestration',
+    badge: 'New',
+    badgeColor: 'bg-gradient-to-r from-fuchsia-600 to-purple-600',
+    icon: '🧩',
+    publishedDate: 'October 1, 2025',
+    readTime: '16 min read',
+    category: 'Implementation Guide'
+  }
+  ,
+  {
+    id: '12',
+    title: 'AI Insights: New Content Highlights — Sept 30, 2025',
+    description: 'Today’s newest additions across workflows, data fabric, and resilience—what changed and why it matters.',
+    link: '/blog/ai-september-30-2025-new-content-highlights',
+    badge: 'Fresh',
+    badgeColor: 'bg-gradient-to-r from-sky-600 to-indigo-600',
+    icon: '🆕',
+    publishedDate: 'September 30, 2025',
+    readTime: '8 min read',
+    category: 'Featured Article'
+  }
+  ,
+  {
+    id: '13',
+    title: 'AI Strategic Roadmaps — October 2025',
+    description: 'Quarterly plan for governed autonomy, cost-aware routing, and data fabric foundations with milestones and risks.',
+    link: '/blog/ai-october-2025-strategic-roadmaps',
+    badge: 'Roadmap',
+    badgeColor: 'bg-gradient-to-r from-emerald-600 to-green-600',
+    icon: '🗺️',
+    publishedDate: 'October 1, 2025',
+    readTime: '10 min read',
+    category: 'Implementation Guide'
   }
 ];
 
 export default function UnifiedContentPromotion() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
   useEffect(() => {
-    setIsVisible(true);
+    if (!isAutoPlaying) return;
+
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % featuredContent.length);
+      setActiveIndex((current) => (current + 1) % featuredContent.length);
     }, 8000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [isAutoPlaying]);
 
-  const currentContent = featuredContent[currentIndex];
+  const activeContent = featuredContent[activeIndex];
 
   return (
-    <section className="py-16 bg-gradient-to-br from-slate-950 via-purple-950 to-indigo-950 border-t border-b border-purple-500/20">
-      <div className="max-w-7xl mx-auto px-4">
+    <div className="relative bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white py-20 overflow-hidden">
+      {/* Background Animation */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl animate-pulse delay-1000"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 relative z-10">
+        {/* Header */}
         <div className="text-center mb-12">
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-6 py-3 rounded-full text-lg font-bold animate-pulse">
-              🌟 FEATURED CONTENT
-            </span>
-            <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-3 rounded-full text-lg font-bold animate-pulse">
-              BREAKTHROUGH
-            </span>
+          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-2 mb-6">
+            <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+            <span className="text-sm font-semibold uppercase tracking-wide">Latest Content & Success Stories</span>
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            Revolutionary AI Breakthroughs
-            <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-400 bg-clip-text text-transparent">
-              Transforming the Future
+          <h2 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+            Transform Your Enterprise with
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-orange-300 to-pink-300">
+              Proven AI Solutions
             </span>
           </h2>
-          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
-            Discover the most advanced AI technologies reshaping business operations, 
-            from autonomous cognitive enterprises to quantum neural superintelligence.
+          <p className="text-xl md:text-2xl opacity-90 max-w-4xl mx-auto leading-relaxed">
+            Real-world success stories, breakthrough technologies, and actionable insights
+            that drive measurable business results
           </p>
         </div>
 
-        <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/30 hover:border-purple-400/50 transition-all duration-300 hover:scale-105">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-xl flex items-center justify-center text-2xl">
-                {currentContent.icon}
+        {/* Main Featured Content */}
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
+          {/* Content Details */}
+          <div className="space-y-6">
+            <div className="flex items-center gap-4">
+              <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center text-4xl">
+                {activeContent.icon}
               </div>
               <div>
-                <div className="flex items-center gap-2 mb-2">
-                  <span className={`${currentContent.badgeColor} text-white px-3 py-1 rounded-full text-sm font-bold animate-pulse`}>
-                    {currentContent.badge}
-                  </span>
-                  <span className="text-gray-400 text-sm">{currentContent.category}</span>
-                </div>
-                <h3 className="text-2xl font-bold text-white">{currentContent.title}</h3>
-                <p className="text-gray-400 text-sm">{currentContent.publishedDate} • {currentContent.readTime}</p>
+                <span className={`${activeContent.badgeColor} text-white px-4 py-1.5 rounded-full text-sm font-bold inline-block mb-2`}>
+                  {activeContent.badge}
+                </span>
+                <p className="text-sm opacity-75">{activeContent.category}</p>
               </div>
             </div>
-            
-            <p className="text-gray-300 text-lg mb-8 leading-relaxed">
-              {currentContent.description}
+
+            <h3 className="text-3xl md:text-4xl font-bold leading-tight">
+              {activeContent.title}
+            </h3>
+
+            <p className="text-lg opacity-90 leading-relaxed">
+              {activeContent.description}
             </p>
 
-            <div className="flex items-center justify-between">
-              <div className="flex space-x-2">
-                {featuredContent.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentIndex(index)}
-                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                      index === currentIndex 
-                        ? 'bg-gradient-to-r from-purple-500 to-indigo-500 scale-125' 
-                        : 'bg-white/30 hover:bg-white/50'
-                    }`}
-                  />
-                ))}
-              </div>
-              
+            <div className="flex items-center gap-4 text-sm opacity-75">
+              <span>{activeContent.publishedDate}</span>
+              <span>•</span>
+              <span>{activeContent.readTime}</span>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href={currentContent.link}
-                className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-purple-700 hover:to-indigo-700 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl"
+                href={activeContent.link}
+                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl text-center inline-flex items-center justify-center gap-2"
               >
-                Read More →
+                Read Full Story
+                <span className="text-xl">→</span>
               </Link>
+              <Link
+                href="/blog"
+                className="border-2 border-white/50 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300 text-center"
+              >
+                Explore All Content
+              </Link>
+            </div>
+          </div>
+
+          {/* Visual Stats */}
+          <div className="grid grid-cols-2 gap-6">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+              <div className="text-4xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-teal-300">
+                300%
+              </div>
+              <div className="text-lg font-semibold mb-1">Average ROI</div>
+              <div className="text-sm opacity-75">Proven across 200+ clients</div>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+              <div className="text-4xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-orange-300">
+                $500M+
+              </div>
+              <div className="text-lg font-semibold mb-1">Client Savings</div>
+              <div className="text-sm opacity-75">Total cost reduction</div>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+              <div className="text-4xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-300">
+                95%
+              </div>
+              <div className="text-lg font-semibold mb-1">Efficiency Gains</div>
+              <div className="text-sm opacity-75">Average improvement</div>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+              <div className="text-4xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-red-300">
+                6 mo
+              </div>
+              <div className="text-lg font-semibold mb-1">ROI Timeline</div>
+              <div className="text-sm opacity-75">Average payback period</div>
             </div>
           </div>
         </div>
 
-        <div className="mt-12 text-center">
-          <Link
-            href="/blog"
-            className="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-indigo-700 hover:to-purple-700 transition-all shadow-lg hover:shadow-xl"
+        {/* Content Carousel Indicators */}
+        <div className="flex items-center justify-center gap-4">
+          <button
+            onClick={() => {
+              setIsAutoPlaying(false);
+              setActiveIndex((current) => (current - 1 + featuredContent.length) % featuredContent.length);
+            }}
+            className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300"
           >
-            Explore All AI Content
-          </Link>
+            ←
+          </button>
+
+          <div className="flex gap-3">
+            {featuredContent.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => {
+                  setIsAutoPlaying(false);
+                  setActiveIndex(index);
+                }}
+                className={`transition-all duration-300 rounded-full ${
+                  index === activeIndex
+                    ? 'w-12 h-3 bg-white'
+                    : 'w-3 h-3 bg-white/30 hover:bg-white/50'
+                }`}
+              />
+            ))}
+          </div>
+
+          <button
+            onClick={() => {
+              setIsAutoPlaying(false);
+              setActiveIndex((current) => (current + 1) % featuredContent.length);
+            }}
+            className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300"
+          >
+            →
+          </button>
+        </div>
+
+        {/* Quick Links */}
+        <div className="mt-16 grid md:grid-cols-3 gap-6">
+          {featuredContent.map((item, index) => (
+            <Link
+              key={item.id}
+              href={item.link}
+              onClick={() => setActiveIndex(index)}
+              className={`bg-white/5 backdrop-blur-sm rounded-xl p-6 border transition-all duration-300 hover:bg-white/10 hover:scale-105 ${
+                index === activeIndex ? 'border-white/50' : 'border-white/10'
+              }`}
+            >
+              <div className="flex items-center gap-3 mb-3">
+                <span className="text-2xl">{item.icon}</span>
+                <span className={`${item.badgeColor} text-white px-3 py-1 rounded-full text-xs font-bold`}>
+                  {item.badge}
+                </span>
+              </div>
+              <h4 className="font-semibold text-lg mb-2 line-clamp-2">{item.title}</h4>
+              <p className="text-sm opacity-75 line-clamp-2">{item.description}</p>
+            </Link>
+          ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 }

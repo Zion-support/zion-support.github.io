@@ -30,15 +30,6 @@ export const posts: BlogPost[] = [
     readTime: "8 min read",
   },
   {
-    slug: "ai-2025-sept-30-causal-evals-blueprint",
-    title: "AI 2025: Causal Evals Blueprint — KPIs, Budgets, Rollback",
-    description: "Causal scorecards wired to KPIs with policy tests, budgets, canaries, and instant rollback.",
-    category: "AI Governance",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "12 min read"
-  },
-  {
     slug: "ai-2026-governed-agent-runbooks",
     title: "AI 2026: Governed Agent Runbooks — Budgets, Canaries, Rollback",
     description: "Production checklists for safe autonomy: budgeted actions, KPI‑linked canaries, instant rollback.",
@@ -444,6 +435,15 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-31",
     featured: true,
     readTime: "7 min read"
+  },
+  {
+    slug: "agent-red-teaming-2026",
+    title: "Agent Red‑Teaming 2026: Live Evals, Budgets, and Safe Autonomy",
+    description: "Operational red‑teaming with KPI‑linked evals, budgeted actions, and instant rollback to prevent regressions.",
+    category: "AI Security",
+    publishedAt: "2025-10-30",
+    featured: true,
+    readTime: "9 min read"
   },
   {
     slug: "ai-2028-autonomous-governance-blueprint",
@@ -1656,7 +1656,6 @@ posts.unshift(
     readTime: "6 min read",
   }
 );
-
 
 // Oct 01-02, 2025 – Add three new posts and surface them site-wide
 posts.unshift(
