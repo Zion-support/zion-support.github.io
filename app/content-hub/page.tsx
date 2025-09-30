@@ -63,6 +63,7 @@ export default function ContentHubPage() {
         { title: 'AI Trustworthy Agents 2026', slug: '/blog/ai-trustworthy-agents-2026', readTime: '11 min', featured: true },
         { title: 'AI Roadmaps 2026', slug: '/blog/ai-roadmaps-2026', readTime: '8 min', featured: false },
         { title: 'AI FinOps Scorecards 2025', slug: '/blog/ai-finops-scorecards-2025', readTime: '7 min', featured: false },
+        { title: 'AI Operational Resilience 2026', slug: '/blog/ai-operational-resilience-2026', readTime: '14 min', featured: true },
       ]
     }
   ];
@@ -284,6 +285,42 @@ export default function ContentHubPage() {
                 </div>
                 <div className="flex items-center justify-center gap-2 w-full bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-400 hover:to-green-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300">
                   <span>Read Guide</span>
+                </div>
+              </div>
+            </Link>
+
+            {/* Newly Featured: Agentic Workflow Orchestration */}
+            <Link href="/blog/agentic-workflow-orchestration-2026" className="group">
+              <div className="bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-fuchsia-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-fuchsia-500/20 p-8">
+                <div className="flex items-start justify-between mb-6">
+                  <div className="text-6xl group-hover:scale-110 transition-transform duration-300">🧩</div>
+                  <div className="flex flex-col gap-2">
+                    <div className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-fuchsia-500 to-purple-500 text-white text-xs font-bold shadow-lg">
+                      <TrendingUp className="w-3 h-3" />
+                      <span>FEATURED</span>
+                    </div>
+                    <span className="px-3 py-1.5 rounded-full bg-fuchsia-500/20 text-fuchsia-300 text-xs font-semibold border border-fuchsia-500/30">
+                      NEW
+                    </span>
+                  </div>
+                </div>
+                <div className="mb-4">
+                  <span className="inline-block px-3 py-1 rounded-full bg-gradient-to-r from-fuchsia-500/20 to-purple-500/20 text-fuchsia-300 text-xs font-semibold border border-fuchsia-500/30">
+                    Agentic Workflows
+                  </span>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-fuchsia-400 transition-colors duration-300 leading-tight">
+                  Agentic Workflow Orchestration 2026
+                </h3>
+                <p className="text-gray-400 mb-6 leading-relaxed text-sm">
+                  Guardrails, reviews, and observability to ship reliable multi-agent workflows with measurable ROI.
+                </p>
+                <div className="flex items-center justify-between text-sm text-gray-500 mb-6 pb-6 border-b border-white/10">
+                  <span>16 min</span>
+                  <span>Sep 30, 2025</span>
+                </div>
+                <div className="flex items-center justify-center gap-2 w-full bg-gradient-to-r from-fuchsia-500 to-purple-600 hover:from-fuchsia-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300">
+                  <span>Read Article</span>
                 </div>
               </div>
             </Link>

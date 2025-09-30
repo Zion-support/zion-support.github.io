@@ -183,6 +183,28 @@ const blogPosts = [
     color: 'green',
     readTime: '13 min read'
   }
+  ,
+  {
+    title: 'AI Operational Resilience 2026: Designing for Failure and Recovery',
+    slug: 'ai-operational-resilience-2026',
+    excerpt: 'Blueprint for 99.99% uptime with policy tests, isolation, chaos testing, and automated recovery for AI systems.',
+    category: 'Operations',
+    publishedAt: 'September 30, 2025',
+    image: '🧯',
+    color: 'orange',
+    readTime: '14 min read'
+  }
+  ,
+  {
+    title: 'Agentic Workflow Orchestration 2026: Reliable AI Workflows',
+    slug: 'agentic-workflow-orchestration-2026',
+    excerpt: 'Orchestrate multi-step agents with policy gates, human approvals, and observability for measurable ROI.',
+    category: 'Architecture',
+    publishedAt: 'September 30, 2025',
+    image: '🧩',
+    color: 'purple',
+    readTime: '16 min read'
+  }
 ];
 
 const categories = [
