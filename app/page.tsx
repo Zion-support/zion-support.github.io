@@ -58,6 +58,7 @@ import Revolutionary2026ContentBanner from '../components/Revolutionary2026Conte
 import LatestAIInnovations2026Banner from '../components/LatestAIInnovations2026Banner';
 import InteractiveAICalculator from '../components/InteractiveAICalculator';
 import EnhancedContentShowcase2025 from '../components/EnhancedContentShowcase2025';
+import LatestContentBanner2025 from '../src/components/LatestContentBanner2025';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -68,6 +69,9 @@ export const metadata = {
 export default function HomePage() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+      {/* 🔥 LATEST CONTENT - September 2025 🔥 */}
+      <LatestContentBanner2025 />
+      
       {/* Revolutionary 2026 Content Banner */}
       <Revolutionary2026ContentBanner />
       
