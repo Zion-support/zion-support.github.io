@@ -65,6 +65,30 @@ export const featuredBlogPosts: FeaturedItem[] = [
     link: "/blog/ai-regulatory-compliance-2025",
     type: "article",
     featured: true
+  },
+  {
+    id: "agentic-control-planes-2026",
+    title: "Agentic Control Planes 2026",
+    description: "Budgets, policy gates, and instant recovery for agent platforms",
+    link: "/blog/agentic-control-planes-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-eval-canaries-2026",
+    title: "Edge Evals & Canaries 2026",
+    description: "KPI‑linked evals and live canaries at <100ms",
+    link: "/blog/edge-eval-canaries-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-value-stream-maps-2026",
+    title: "AI Value Stream Maps 2026",
+    description: "Trace prompts and tools to business outcomes",
+    link: "/blog/ai-value-stream-maps-2026",
+    type: "article",
+    featured: true
   }
 ];
 
