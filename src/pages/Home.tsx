@@ -147,10 +147,6 @@ const Home = () => {
             { title: "Edge LLM Safety Caching 2026", category: "Architecture", link: "/blog/edge-llm-safety-caching-2026" },
             { title: "Platform SLO Guardrails 2026", category: "Platform Engineering", link: "/blog/platform-slo-guardrails-2026" }
           ]}
->>>>>>> cursor/create-and-deploy-new-content-9df8
-=======
-          variant="premium"
->>>>>>> 0ec817424410c98f82057489e9b657c2ec4299d7
         />
         <div className="container mx-auto px-6 mt-6">
           <TrendingContentBanner />
