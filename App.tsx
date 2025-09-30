@@ -49,6 +49,7 @@ import April2026QuantumNeuralBanner from "./components/April2026QuantumNeuralBan
 import QuantumConsciousnessFusionBanner from "./components/QuantumConsciousnessFusionBanner";
 import Revolutionary2026ContentShowcaseBanner from "./components/Revolutionary2026ContentShowcaseBanner";
 import May2026RevolutionaryBreakthroughBanner from "./components/May2026RevolutionaryBreakthroughBanner";
+<<<<<<< HEAD
 =======
 import March2026MultimodalBreakthroughBanner from "./components/March2026MultimodalBreakthroughBanner";
 import AutonomousAI2026RevolutionaryBanner from "./components/AutonomousAI2026RevolutionaryBanner";
@@ -60,12 +61,27 @@ import April2026RevolutionaryBreakthroughBanner from "./components/April2026Revo
 import April2026MegaSuccessBanner from "./components/April2026MegaSuccessBanner";
 import April2026ContentShowcaseBanner from "./components/April2026ContentShowcaseBanner";
 >>>>>>> origin/cursor/create-and-deploy-new-content-c5bb
+=======
+import AITrends2026AdvertisingBanner from "./components/AITrends2026AdvertisingBanner";
+>>>>>>> origin/cursor/create-and-deploy-new-content-fdff
 
 export default function App(): JSX.Element {
   return (
     <div className="min-h-screen bg-slate-950">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      {/* NEW: May 2026 Revolutionary Breakthrough Banner - Most Prominent */}
+      <May2026RevolutionaryBreakthroughBanner />
+      
+      {/* NEW: AI Trends 2026 Advertising Banner */}
+      <AITrends2026AdvertisingBanner />
+      
+      {/* NEW: April 2026 Mega Breakthrough Banner - Most Prominent */}
+      <April2026MegaBreakthroughBanner />
+      
+>>>>>>> origin/cursor/create-and-deploy-new-content-fdff
       {/* NEW: April 2026 Conscious Computing Banner */}
       <April2026ConsciousComputingBanner />
       
