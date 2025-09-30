@@ -10,6 +10,33 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-trust-scorecards-v5-2027",
+    title: "AI Trust Scorecards v5 (2027): KPIs, Budgets, Rollback",
+    description: "Latest playbook for KPI‑linked scorecards with budgeted actions, canaries, and instant rollback to keep AI reliable and affordable.",
+    category: "AI Governance",
+    publishedAt: "2027-02-10",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "edge-private-evals-2026",
+    title: "Private Evals at the Edge (2026): Zero‑PII, <100ms",
+    description: "Consent‑safe evaluation signals with scoped IDs, on‑device aggregation, and DP noise—actionable quality without PII.",
+    category: "Analytics",
+    publishedAt: "2026-10-20",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "agentops-runbooks-v3-2026",
+    title: "AgentOps Runbooks v3 (2026): Budgeted Actions and One‑Click Rollback",
+    description: "Battle‑tested runbooks for safe autonomous operations: approvals, KPI‑linked canaries, rollback playbooks.",
+    category: "AI Operations",
+    publishedAt: "2026-10-18",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
     slug: "ai-2028-autonomous-enterprise-revolution",
     title: "AI 2028: Autonomous Enterprise Revolution",
     description: "From reactive ops to self‑optimizing enterprises: budgets, guardrails, and KPI‑linked autonomy that scales safely.",

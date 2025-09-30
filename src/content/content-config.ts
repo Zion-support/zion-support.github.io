@@ -637,6 +637,34 @@ export const getLatestContent = (count: number = 5): FeaturedItem[] => {
     .slice(0, count);
 };
 
+// Add brand-new featured items to advertise site-wide (Feb 2027 / Oct 2026)
+featuredBlogPosts.unshift(
+  {
+    id: "ai-trust-scorecards-v5-2027",
+    title: "AI Trust Scorecards v5 (2027)",
+    description: "KPI‑linked scorecards with budgets, canaries, and instant rollback",
+    link: "/blog/ai-trust-scorecards-v5-2027",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-private-evals-2026",
+    title: "Private Evals at the Edge (2026)",
+    description: "Zero‑PII eval signals with scoped IDs and on‑device aggregation",
+    link: "/blog/edge-private-evals-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "agentops-runbooks-v3-2026",
+    title: "AgentOps Runbooks v3 (2026)",
+    description: "Budgeted actions, KPI canaries, and one‑click rollback",
+    link: "/blog/agentops-runbooks-v3-2026",
+    type: "article",
+    featured: true
+  }
+);
+
 // Surface fresh featured content (added Sept 30, 2025)
 featuredBlogPosts.unshift(
   {
