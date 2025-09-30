@@ -10,55 +10,7 @@ export const metadata: Metadata = {
 
 const blogPosts = [
   {
-<<<<<<< HEAD
-    title: 'AI 2026: Revolutionary Trends Transforming Enterprise',
-    slug: 'ai-2026-revolutionary-trends',
-    excerpt: 'Discover the revolutionary AI trends shaping 2026. From autonomous enterprise systems to quantum AI, explore how these breakthroughs are transforming business operations.',
-    category: 'Featured Article',
-    readTime: '15 min read',
-    publishedAt: 'January 20, 2026',
-    image: '🚀',
-    color: 'blue'
-  },
-  {
-    title: 'AI Cost Optimization 2026: Achieve 70% Cost Reduction',
-    slug: 'ai-cost-optimization-2026',
-    excerpt: 'Learn proven AI cost optimization strategies that reduce operational expenses by 70% while improving performance. Complete guide with ROI calculations and implementation tips.',
-    category: 'ROI Guide',
-    readTime: '12 min read',
-    publishedAt: 'January 20, 2026',
-    image: '💰',
-    color: 'green'
-  },
-  {
-    title: 'AI 2026 Mega Breakthrough: Revolutionary Technologies Transforming Enterprise',
-    slug: 'ai-2026-mega-breakthrough',
-    excerpt: 'Discover how 2026 is shaping up to be the year of unprecedented AI breakthroughs that will transform every industry.',
-    category: 'Featured Article',
-    readTime: '8 min read',
-    publishedAt: 'January 15, 2026',
-    image: '🚀',
-    color: 'blue'
-=======
-    title: 'AI 2026 Enterprise Automation Revolution: Complete Business Transformation Guide',
-    slug: 'ai-2026-enterprise-automation-revolution',
-    excerpt: 'Discover how AI automation is revolutionizing enterprise operations in 2026. Achieve 400% efficiency gains, 80% cost reduction, and complete digital transformation.',
-    category: 'Featured Article',
-    readTime: '25 min read',
-    publishedAt: 'January 20, 2025',
-    image: '🚀',
-    color: 'purple'
-  },
-  {
-    title: 'AI Quantum Computing Breakthrough 2026: 1000x Processing Revolution',
-    slug: 'ai-quantum-computing-breakthrough-2026',
-    excerpt: 'The quantum leap that changed everything. Discover how quantum computing achieved 1000x processing speeds and unlocked AI capabilities beyond imagination.',
-    category: 'Revolutionary Breakthrough',
-    readTime: '30 min read',
-    publishedAt: 'January 20, 2025',
-    image: '⚛️',
-    color: 'indigo'
->>>>>>> origin/cursor/create-and-deploy-new-content-15c5
+
   },
   {
     title: 'AI 2026 Mega Breakthrough Innovations: Revolutionary Technologies Transforming Enterprise',
