@@ -9,6 +9,34 @@ export interface BlogPost {
 }
 
 export const posts: BlogPost[] = [
+  // Sept 30, 2025 — LATEST: AI Infrastructure & Security Breakthroughs
+  {
+    slug: "ai-2025-september-30-observability-monitoring-revolution",
+    title: "AI Observability 2.0: The Complete Monitoring Revolution — 99.9% Uptime, 85% Faster Detection",
+    description: "Transform AI operations with next-gen observability: deep model insights, hallucination detection, real-time cost tracking, and anomaly detection. Achieve production excellence.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "18 min read"
+  },
+  {
+    slug: "vector-databases-real-time-ai-applications-2025",
+    title: "Vector Databases at Scale: Building Real-Time AI Applications — Sub-100ms Query Latency",
+    description: "Master vector databases for production AI. Build semantic search, RAG systems, and recommendations processing millions of queries per second. Complete architecture guide.",
+    category: "AI Infrastructure",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "22 min read"
+  },
+  {
+    slug: "ai-powered-code-security-scanning-2025",
+    title: "AI-Powered Code Review & Security Scanning Revolution — 90% Fewer False Positives, 95% Detection",
+    description: "Transform security with AI code analysis. Detect vulnerabilities, enforce best practices, and ship secure code faster with intelligent automation developers trust.",
+    category: "Security & DevSecOps",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "20 min read"
+  },
   // Sept 30, 2025 — BREAKING: New Enterprise Guides
   {
     slug: "ai-powered-devsecops-complete-guide-2025",
