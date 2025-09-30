@@ -54,11 +54,19 @@ import May2026RevolutionaryBreakthroughBanner from "./components/May2026Revoluti
 import AITrends2026AdvertisingBanner from "./components/AITrends2026AdvertisingBanner";
 import September2026BreakthroughAdvertisingBanner from "./components/September2026BreakthroughAdvertisingBanner";
 import AutonomousEnterpriseAutomationAdvertisingBanner from "./components/AutonomousEnterpriseAutomationAdvertisingBanner";
+import December2026UltimateBreakthroughBanner from "./components/December2026UltimateBreakthroughBanner";
+import QuantumConsciousnessRevolutionBanner from "./components/QuantumConsciousnessRevolutionBanner";
 
 export default function App(): JSX.Element {
   return (
     <div className="min-h-screen bg-slate-950">
-      {/* NEW: September 2026 Breakthrough Advertising Banner - MOST PROMINENT */}
+      {/* NEW: December 2026 Ultimate Breakthrough Banner - MOST PROMINENT */}
+      <December2026UltimateBreakthroughBanner />
+      
+      {/* NEW: Quantum Consciousness Revolution Banner - HIGHLY PROMINENT */}
+      <QuantumConsciousnessRevolutionBanner />
+      
+      {/* NEW: September 2026 Breakthrough Advertising Banner - PROMINENT */}
       <September2026BreakthroughAdvertisingBanner />
       
       {/* NEW: Autonomous Enterprise Automation Advertising Banner - HIGHLY PROMINENT */}
