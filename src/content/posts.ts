@@ -10,6 +10,33 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "genai-reliability-scorecards-2027",
+    title: "GenAI Reliability Scorecards 2027: KPIs, Evals, Rollback",
+    description: "Design reliability scorecards with offline evals, PR checks, and KPI‑linked canaries for safe velocity.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "edge-private-analytics-2027",
+    title: "Edge Private Analytics 2027: Zero‑PII Metrics in <100ms",
+    description: "Scoped IDs, on‑device aggregation, and DP noise for privacy‑first analytics without cookies or PII.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "genai-cache-playbook-2026",
+    title: "GenAI Cache Playbook 2026: Semantic Caches That Cut Cost 50%",
+    description: "Implement tiered semantic caches, TTL freshness, and routing guards to reduce spend while keeping quality stable.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
     slug: "ai-operational-scorecards-v4-2026",
     title: "AI Operational Scorecards v4 (2026)",
     description: "SLIs mapped to KPIs with budgeted actions and instant rollback.",
