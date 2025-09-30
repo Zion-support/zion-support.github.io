@@ -10,6 +10,7 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+<<<<<<< HEAD
     slug: "production-rag-quality-budgets-2026",
     title: "Production RAG: Quality Budgets, Freshness Windows, and SLAs",
     description: "Run RAG at scale with explicit quality budgets, freshness controls, and KPI-aligned SLAs that avoid regressions.",
@@ -35,6 +36,24 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-13",
     featured: true,
     readTime: "7 min read"
+=======
+    slug: "ai-2026-e2e-ai-tracing",
+    title: "E2E AI Tracing 2026: From Prompts to Outcomes",
+    description: "Instrument prompts, tools, calls, budgets, and KPIs with end‑to‑end traces for reliability and cost control.",
+    category: "AI Operations",
+    publishedAt: "2026-01-30",
+    featured: true,
+    readTime: "12 min read"
+  },
+  {
+    slug: "edge-2027-consentless-analytics-v4",
+    title: "Edge 2027: Consentless Analytics v4 — Zero‑PII Insights <100ms",
+    description: "Scoped IDs, on‑device aggregation, and differential privacy for actionable analytics without PII risk.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+>>>>>>> feat/new-content-and-ads
   },
   {
     slug: "ai-2025-sept-30-autonomous-control-planes",
