@@ -5,36 +5,47 @@ const LatestContentBanner2025: React.FC = () => {
   const latestArticles = [
     {
       id: 1,
-      title: 'AI Edge Intelligence 2025: Processing at the Speed of Thought',
-      slug: 'ai-edge-intelligence-2025',
-      excerpt: 'Discover how Edge AI is revolutionizing real-time decision making with ultra-low latency processing at the network edge.',
-      category: 'Edge AI',
+      title: 'AI Agentic Workflows: The Future of Autonomous Business Operations',
+      slug: 'ai-agentic-workflows-2025',
+      excerpt: 'Discover how AI agents are transforming business workflows with autonomous decision-making, multi-agent collaboration, and intelligent orchestration.',
+      category: 'AI Automation',
       date: '2025-09-30',
-      readTime: '10 min',
-      trending: true,
-      icon: '⚡'
-    },
-    {
-      id: 2,
-      title: 'Generative AI in the Enterprise: Beyond ChatGPT',
-      slug: 'generative-ai-enterprise-2025',
-      excerpt: 'Explore how enterprises are leveraging generative AI for code generation, content creation, and business automation at scale.',
-      category: 'Generative AI',
-      date: '2025-09-30',
-      readTime: '12 min',
+      readTime: '13 min',
       trending: true,
       icon: '🤖'
     },
     {
-      id: 3,
-      title: 'AI-Powered Zero Trust Security: The New Cybersecurity Paradigm',
-      slug: 'ai-security-zero-trust-2025',
-      excerpt: 'Learn how AI is revolutionizing cybersecurity with zero-trust architectures that adapt in real-time to emerging threats.',
-      category: 'Cybersecurity',
+      id: 2,
+      title: 'LLM Cost Optimization: Reduce AI Inference Costs by 80%',
+      slug: 'llm-cost-optimization-2025',
+      excerpt: 'Master proven techniques to dramatically reduce LLM costs: intelligent caching, model compression, prompt optimization, and strategic infrastructure choices.',
+      category: 'FinOps & AI',
       date: '2025-09-30',
-      readTime: '11 min',
+      readTime: '14 min',
       trending: true,
-      icon: '🔒'
+      icon: '💰'
+    },
+    {
+      id: 3,
+      title: 'AI Observability: Monitoring LLM Applications in Production',
+      slug: 'ai-observability-monitoring-2025',
+      excerpt: 'Learn comprehensive strategies for monitoring, tracing, and debugging AI systems in production with real-time quality and security tracking.',
+      category: 'AI Operations',
+      date: '2025-09-30',
+      readTime: '12 min',
+      trending: true,
+      icon: '📊'
+    },
+    {
+      id: 4,
+      title: 'RAG at Scale: Building Production-Ready Retrieval Systems',
+      slug: 'retrieval-augmented-generation-enterprise-2025',
+      excerpt: 'Master enterprise RAG architecture with advanced chunking, hybrid search, and reranking strategies for high-performance knowledge applications.',
+      category: 'RAG & Search',
+      date: '2025-09-30',
+      readTime: '15 min',
+      trending: true,
+      icon: '🔍'
     }
   ];
 
@@ -68,7 +79,7 @@ const LatestContentBanner2025: React.FC = () => {
         </div>
 
         {/* Featured Articles Grid */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {latestArticles.map((article, index) => (
             <div 
               key={article.id}
