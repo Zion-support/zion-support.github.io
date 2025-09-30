@@ -21,6 +21,19 @@ export default function HomePage() {
         </div>
       </section>
 
+  {/* Fresh content promo — newly published */}
+  <section className="py-4 border-t border-b border-white/10 bg-white/5">
+    <div className="max-w-6xl mx-auto px-4">
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+        <div className="text-white/90 font-semibold">New: January 2026 Releases</div>
+        <div className="flex flex-wrap gap-2">
+          <a href="/blog/ai-2026-neural-optimization-revolution" className="inline-flex items-center gap-2 bg-purple-500/20 text-purple-200 border border-purple-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-purple-500/30 transition-colors">Neural Optimization Revolution<span>→</span></a>
+          <a href="/blog/ai-2026-autonomous-business-processes" className="inline-flex items-center gap-2 bg-emerald-500/20 text-emerald-200 border border-emerald-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-emerald-500/30 transition-colors">Autonomous Business Orchestration<span>→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
       {/* Revolutionary 2027 Content Mega Banner - Featured prominently */}
       <Revolutionary2027ContentMegaBanner />
       
