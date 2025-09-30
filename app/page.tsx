@@ -43,6 +43,13 @@ import {
   InteractiveAICalculatorBanner,
   AIInnovationShowcaseBanner
 } from '../components/NewContent2026Banners';
+import {
+  AITrends2025PromotionalBanner,
+  Fortune500SuccessBanner,
+  InteractiveROICalculatorBanner,
+  AITransformationShowcaseBanner
+} from '../components/NewContent2025Banners';
+import InteractiveAIROICalculator from '../components/InteractiveAIROICalculator';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
@@ -128,6 +135,12 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <div className="animate-fade-in">
+      {/* New 2025 Content Banners */}
+      <AITrends2025PromotionalBanner />
+      <Fortune500SuccessBanner />
+      <InteractiveROICalculatorBanner />
+      <AITransformationShowcaseBanner />
+      
       {/* Latest 2026 Content Banners */}
       <AIEnterpriseTransformationBanner />
       <AIAutonomousSystemsBanner />
@@ -294,6 +307,21 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Interactive AI ROI Calculator */}
+      <section id="roi-calculator" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              Calculate Your AI Transformation ROI
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Use our interactive calculator to project your potential returns from AI transformation. 
+              See how much you could save and achieve with enterprise AI solutions.
+            </p>
+          </div>
+          <InteractiveAIROICalculator />
+        </div>
+      </section>
       {/* Interactive Promotional Section */}
       <InteractivePromotionalSection />
 
@@ -413,19 +441,62 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
+<<<<<<< HEAD
             <Link href="/blog/ai-enterprise-adoption-2025" className="group">
+=======
+<<<<<<< HEAD
+            <Link to="/blog/ai-multimodal-integration-2025" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    New Article
+                  <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    Featured Article
                   </span>
-                  <span className="text-sm text-gray-500">20 min read</span>
+                  <span className="text-sm text-gray-500">22 min read</span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Enterprise Adoption 2025: Complete Implementation Guide
+                  AI Multimodal Integration 2025: The Future of Enterprise AI
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Master AI enterprise adoption with proven strategies, ROI frameworks, and implementation roadmaps. Achieve 300% ROI.
+                  Discover how multimodal AI is revolutionizing enterprise operations with text, image, voice, and video integration. Achieve 250% efficiency gains.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  Read Article →
+                </div>
+              </div>
+            </Link>
+            <Link to="/case-studies/multimodal-ai-customer-service-transformation" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    Success Story
+                  </span>
+                  <span className="text-sm text-gray-500">E-commerce</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  Multimodal AI Customer Service: 80% Faster Response Times
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  See how a leading e-commerce company achieved 80% faster response times, 95% accuracy, and 60% cost reduction with multimodal AI.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  View Case Study →
+                </div>
+              </div>
+            </Link>
+            <Link href="/blog/ai-trends-2025-enterprise-transformation" className="group">
+>>>>>>> cursor/create-and-deploy-new-content-6423
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    Featured Article
+                  </span>
+                  <span className="text-sm text-gray-500">25 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  AI Trends 2025: Enterprise Transformation Guide
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Discover revolutionary AI trends reshaping enterprise operations in 2025. From autonomous systems to quantum computing, achieve 300% ROI.
                 </p>
                 <div className="flex items-center text-blue-600 font-semibold">
                   Read Article →
@@ -451,19 +522,19 @@ export default function HomePage() {
                 </div>
               </div>
             </Link>
-            <Link href="/case-studies/ai-supply-chain-optimization-2025" className="group">
+            <Link href="/case-studies/fortune-500-ai-transformation-success" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
                     Success Story
                   </span>
-                  <span className="text-sm text-gray-500">Manufacturing</span>
+                  <span className="text-sm text-gray-500">Fortune 500</span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Supply Chain Optimization: 60% Cost Reduction & 90% Efficiency Gain
+                  Fortune 500 AI Success: 300% ROI in 8 Months
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  See how a global manufacturer achieved 60% cost reduction and 90% efficiency improvement, saving $12M annually.
+                  See how a Fortune 500 manufacturing company achieved 300% ROI and $12M annual savings through comprehensive AI transformation.
                 </p>
                 <div className="flex items-center text-blue-600 font-semibold">
                   View Case Study →
