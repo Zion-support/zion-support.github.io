@@ -152,7 +152,12 @@ import AutonomyBlueprint2026Banner from '../components/AutonomyBlueprint2026Bann
 import September30ContentPromo2025 from '../components/September30ContentPromo2025';
 import AI2026QuantumConsciousnessRevolutionBanner from '../components/AI2026QuantumConsciousnessRevolutionBanner';
 import Revolutionary2026BreakthroughBanner from '../components/Revolutionary2026BreakthroughBanner';
+<<<<<<< HEAD
+import Revolutionary2026BreakthroughContentBanner from '../components/Revolutionary2026BreakthroughContentBanner';
+import Latest2026RevolutionaryContentBanner from '../components/Latest2026RevolutionaryContentBanner';
+=======
 import NewContent2026RevolutionaryBanner from '../components/NewContent2026RevolutionaryBanner';
+>>>>>>> origin/cursor/create-and-deploy-new-content-fc21
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -204,8 +209,13 @@ export default function HomePage() {
         </div>
       </div>
       
+<<<<<<< HEAD
+      {/* 🚀 REVOLUTIONARY AI 2026 BREAKTHROUGH CONTENT - NEW TECHNOLOGIES! */}
+      <Revolutionary2026BreakthroughContentBanner />
+=======
       {/* 🚀 REVOLUTIONARY NEW CONTENT 2026 - FEATURED PROMINENTLY */}
       <NewContent2026RevolutionaryBanner />
+>>>>>>> origin/cursor/create-and-deploy-new-content-fc21
       
       {/* 🚀 REVOLUTIONARY AI 2027 CONTENT - BREAKTHROUGH TECHNOLOGIES! */}
       <NewContent2027RevolutionaryBanner />
@@ -231,6 +241,7 @@ export default function HomePage() {
       
       {/* 🆕 NEW SERVICES PROMOTIONAL BANNER */}
       <NewServicesPromotionalBanner />
+>>>>>>> 79f21eda15789b29f7995ac1c7a147f8127eea5b
       
       {/* 🚀 NEWEST 2027 CONTENT - BREAKTHROUGH QUANTUM AI & AUTONOMOUS INTELLIGENCE! */}
       <NewContent2027ShowcaseBanner />
@@ -302,6 +313,7 @@ export default function HomePage() {
       
       {/* 🚀 REVOLUTIONARY BREAKTHROUGH CONTENT - JANUARY 30, 2026 */}
       <RevolutionaryBreakthrough2026Banner />
+>>>>>>> 79f21eda15789b29f7995ac1c7a147f8127eea5b
       
       {/* 💰 AI COST OPTIMIZATION BREAKTHROUGH - JANUARY 30, 2026 */}
       <AICostOptimizationBanner />
