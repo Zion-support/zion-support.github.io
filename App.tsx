@@ -1,4 +1,6 @@
 import React, { JSX } from "react";
+import January2032TranscendentContentBanner from "./components/January2032TranscendentContentBanner";
+import TranscendentIntelligenceAdvertisingBanner from "./components/TranscendentIntelligenceAdvertisingBanner";
 import November2026QuantumSuperintelligenceBanner from "./components/November2026QuantumSuperintelligenceBanner";
 import December2026UniversalConsciousnessBanner from "./components/December2026UniversalConsciousnessBanner";
 import ComprehensiveContentIntegrationBanner from "./components/ComprehensiveContentIntegrationBanner";
@@ -87,6 +89,12 @@ import October2026BreakthroughShowcaseBanner from "./components/October2026Break
 export default function App(): JSX.Element {
   return (
     <div className="min-h-screen bg-slate-950">
+      {/* NEWEST: January 2032 Transcendent Content Banner - MOST PROMINENT */}
+      <January2032TranscendentContentBanner />
+      
+      {/* NEWEST: Transcendent Intelligence Advertising Banner - HIGHLY PROMINENT */}
+      <TranscendentIntelligenceAdvertisingBanner />
+      
       {/* NEWEST: December 2026 Universal Consciousness Banner - MOST PROMINENT */}
       <December2026UniversalConsciousnessBanner />
       
