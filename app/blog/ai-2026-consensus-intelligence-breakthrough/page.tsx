@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -190,12 +189,7 @@ export default function ConsensusIntelligencePage() {
           </div>
         </article>
       </div>
-=======
-import Link from 'next/link';
-
-export default function AI2026ConsensusIntelligenceBreakthrough() {
-  return (
-    <div className="min-h-screen bg-slate-950 text-white">
+      
       {/* Hero Section */}
       <header className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
         <div className="absolute inset-0 overflow-hidden opacity-20">
@@ -537,7 +531,6 @@ export default function AI2026ConsensusIntelligenceBreakthrough() {
           </div>
         </div>
       </footer>
->>>>>>> origin/cursor/create-and-deploy-new-content-52ce
     </div>
   );
 }
