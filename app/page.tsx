@@ -169,8 +169,23 @@ export const metadata = {
 
 export default function HomePage() {
   return (
-    <>
-      <div className="animate-fade-in">
+    <div className="animate-fade-in">
+      {/* New Content Promo Strip */}
+      <div className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
+        <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
+          <div className="flex items-center gap-2 text-sm md:text-base">
+            <span className="font-bold">🚀 New Articles:</span>
+            <span>Platform Engineering Scorecards 2026, AI Cybersecurity Automation 2025, Edge AI Blueprint 2026</span>
+          </div>
+          <a
+            href="/blog"
+            className="bg-white text-indigo-700 hover:bg-gray-100 px-4 py-1.5 rounded-md text-sm font-semibold"
+          >
+            Read the latest
+          </a>
+        </div>
+      </div>
+      
       {/* 🚀 REVOLUTIONARY AI 2027 CONTENT - BREAKTHROUGH TECHNOLOGIES! */}
       <NewContent2027RevolutionaryBanner />
       
@@ -291,11 +306,6 @@ export default function HomePage() {
               </div>
             </Link>
           </div>
-        </div>
-      </section>
-      
-      {/* 🚀 REVOLUTIONARY BREAKTHROUGH CONTENT - JANUARY 30, 2026 */}
-      <RevolutionaryBreakthrough2026Banner />
       
       {/* 💰 AI COST OPTIMIZATION BREAKTHROUGH - JANUARY 30, 2026 */}
       <AICostOptimizationBanner />
@@ -1271,6 +1281,7 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
+<<<<<<< HEAD
             <Link href="/blog/ai-enterprise-adoption-2025" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
@@ -1283,18 +1294,13 @@ export default function HomePage() {
                   AI Enterprise Adoption 2025: Complete Implementation Guide
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Master AI enterprise adoption with proven strategies, ROI frameworks, and implementation roadmaps. Achieve 300% ROI.
+                  A pragmatic framework to track reliability, velocity, cost, and DevEx.
                 </p>
                 <div className="flex items-center text-blue-600 font-semibold">
                   Read Article →
                 </div>
               </div>
-            </Link>
-            <Link href="/blog/ai-trends-2025-predictions" className="group">
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    Featured Article
+            </a>
                   </span>
                   <span className="text-sm text-gray-500">15 min read</span>
                 </div>
