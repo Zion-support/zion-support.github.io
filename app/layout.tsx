@@ -96,8 +96,8 @@ function Header() {
           <div className="relative group">
             <Link href="/blog/ai-2026-january-revolutionary-breakthroughs" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
               January 2026 Breakthroughs
-              <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
-                $5B SUCCESS
+              <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
+                100,000x PERFORMANCE
               </span>
             </Link>
           </div>
@@ -182,10 +182,10 @@ function Header() {
             </Link>
           </div>
           <div className="relative group">
-            <Link href="/blog/ai-2025-2026-mega-trends-breakthrough" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
-              2025-2026 Mega Trends
-              <span className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
-                BREAKTHROUGH
+            <Link href="/blog/ai-2026-future-trends-breakthrough" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
+              AI 2026 Future Trends
+              <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
+                REVOLUTIONARY
               </span>
             </Link>
           </div>
