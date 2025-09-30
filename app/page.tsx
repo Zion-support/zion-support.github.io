@@ -47,6 +47,7 @@ import NewContent2026PromotionalBanner from '../components/NewContent2026Promoti
 import InteractiveAI2026Calculator from '../components/InteractiveAI2026Calculator';
 import LatestContentBanner2025 from '../src/components/LatestContentBanner2025';
 import Latest2026ContentBanner from '../components/Latest2026ContentBanner';
+import September30NewContentBanner from '../components/September30NewContentBanner';
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
@@ -89,6 +90,9 @@ export default function HomePage() {
   return (
     <>
       <div className="animate-fade-in">
+      {/* 🔥 BREAKING: NEW CONTENT - SEPTEMBER 30, 2025 */}
+      <September30NewContentBanner />
+      
       {/* Latest Content Banner 2025 - September 30 */}
       <LatestContentBanner2025 />
       
