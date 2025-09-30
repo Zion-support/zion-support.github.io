@@ -2,6 +2,7 @@ import React, { JSX } from "react";
 import LatestContentBanner2025 from "./src/components/LatestContentBanner2025";
 import FeaturedContentBanner2025 from "./src/components/FeaturedContentBanner2025";
 import NewContentPromoBanner from "./src/components/NewContentPromoBanner";
+import January2026RevolutionaryContentBanner from "./src/components/January2026RevolutionaryContentBanner";
 
 export default function App(): JSX.Element {
   return (
@@ -78,7 +79,7 @@ export default function App(): JSX.Element {
 
       {/* Revolutionary 2026 Content Section */}
       <section id="revolutionary-breakthroughs">
-        <Revolutionary2026ContentMegaBanner />
+        <January2026RevolutionaryContentBanner />
       </section>
 
       {/* Latest Content Section */}
