@@ -16,6 +16,7 @@ import InteractivePromotionalSection from './components/InteractivePromotionalSe
 import UltimateContent2026MegaBanner from '../components/UltimateContent2026MegaBanner';
 import RevolutionaryAI2026ContentBanner from '../components/RevolutionaryAI2026ContentBanner';
 import NewContent2026PromotionalBanner from '../components/NewContent2026PromotionalBanner';
+import NewContentPromotionalBanner2026 from './components/NewContentPromotionalBanner2026';
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
@@ -97,6 +98,9 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <div className="animate-fade-in">
+      
+      {/* NEW: September 2026 Content Promotional Banner */}
+      <NewContentPromotionalBanner2026 />
       
       {/* Ultimate 2026 Content Mega Banner */}
       <UltimateContent2026MegaBanner />
