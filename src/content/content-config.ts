@@ -873,6 +873,26 @@ featuredBlogPosts.unshift(
   }
 );
 
+// Oct 2025 – Promote two fresh articles site-wide (newly added)
+featuredBlogPosts.unshift(
+  {
+    id: "serverless-inference-cost-playbook-2025",
+    title: "Serverless Inference Cost Playbook",
+    description: "Cut GenAI cost with adaptive batching, warm pools, and quality tiers.",
+    link: "/blog/serverless-inference-cost-playbook-2025",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "golden-paths-roi-2026",
+    title: "Golden Paths ROI 2026",
+    description: "Scorecards linking developer journeys to adoption, SLOs, and revenue.",
+    link: "/blog/golden-paths-roi-2026",
+    type: "article",
+    featured: true
+  }
+);
+
 // Sept 30, 2025 – Feature three brand-new posts just created
 featuredBlogPosts.unshift(
   {
