@@ -29,7 +29,9 @@ import {
   LatestAIInsightsBanner,
   AIServicesShowcaseBanner,
   AIWorkflowAutomationBanner,
-  EnterpriseAISecurityBanner
+  EnterpriseAISecurityBanner,
+  MultimodalAIIntegrationBanner,
+  MultimodalAICustomerServiceBanner
 } from '../components/NewContentPromotionalBanners';
 import ContentShowcase from '../components/ContentShowcase';
 
@@ -43,6 +45,8 @@ export default function HomePage() {
   return (
     <div className="animate-fade-in">
       {/* New Content Promotional Banners */}
+      <MultimodalAIIntegrationBanner />
+      <MultimodalAICustomerServiceBanner />
       <AIEnterpriseAdoptionBanner />
       <AITrends2025Banner />
       <SupplyChainOptimizationBanner />
@@ -313,6 +317,44 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <Link to="/blog/ai-multimodal-integration-2025" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    Featured Article
+                  </span>
+                  <span className="text-sm text-gray-500">22 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  AI Multimodal Integration 2025: The Future of Enterprise AI
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Discover how multimodal AI is revolutionizing enterprise operations with text, image, voice, and video integration. Achieve 250% efficiency gains.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  Read Article →
+                </div>
+              </div>
+            </Link>
+            <Link to="/case-studies/multimodal-ai-customer-service-transformation" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    Success Story
+                  </span>
+                  <span className="text-sm text-gray-500">E-commerce</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  Multimodal AI Customer Service: 80% Faster Response Times
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  See how a leading e-commerce company achieved 80% faster response times, 95% accuracy, and 60% cost reduction with multimodal AI.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  View Case Study →
+                </div>
+              </div>
+            </Link>
             <Link to="/blog/ai-enterprise-adoption-2025" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
@@ -709,9 +751,23 @@ export default function HomePage() {
               <h3 className="text-2xl font-bold mb-6">Latest Content Highlights</h3>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
+                  <div className="text-2xl">🎯</div>
+                  <div>
+                    <h4 className="font-semibold mb-1">Multimodal AI Integration 2025</h4>
+                    <p className="text-sm opacity-90">250% efficiency gains with text, voice, and video AI</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="text-2xl">⚡</div>
+                  <div>
+                    <h4 className="font-semibold mb-1">Multimodal Customer Service Success</h4>
+                    <p className="text-sm opacity-90">80% faster response times and 60% cost reduction</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
                   <div className="text-2xl">🚀</div>
                   <div>
-                    <h4 className="font-semibold mb-1">AI Revolution 2025 Guide</h4>
+                    <h4 className="font-semibold mb-1">AI Enterprise Adoption 2025 Guide</h4>
                     <p className="text-sm opacity-90">Complete business transformation strategy</p>
                   </div>
                 </div>
@@ -720,20 +776,6 @@ export default function HomePage() {
                   <div>
                     <h4 className="font-semibold mb-1">Workflow Automation Guide</h4>
                     <p className="text-sm opacity-90">Reduce manual work by 80%</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="text-2xl">📊</div>
-                  <div>
-                    <h4 className="font-semibold mb-1">AI Analytics Implementation</h4>
-                    <p className="text-sm opacity-90">Transform data into insights</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="text-2xl">🏥</div>
-                  <div>
-                    <h4 className="font-semibold mb-1">HealthTech Success Story</h4>
-                    <p className="text-sm opacity-90">80% efficiency gain with AI</p>
                   </div>
                 </div>
               </div>
