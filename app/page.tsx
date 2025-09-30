@@ -13,6 +13,8 @@ import January2026NeuralArchitectureSearchBanner from '../components/January2026
 import January2026FederatedLearningBanner from '../components/January2026FederatedLearningBanner';
 import January2026RevolutionaryBreakthroughBanner from '../components/January2026RevolutionaryBreakthroughBanner';
 import January2026NewServicesBanner from '../components/January2026NewServicesBanner';
+import January2026RevolutionaryBreakthroughsBanner from '../components/January2026RevolutionaryBreakthroughsBanner';
+import AI2026FutureTrendsBanner from '../components/AI2026FutureTrendsBanner';
 import Revolutionary2026ContentAdvertisingBanner from '../components/Revolutionary2026ContentAdvertisingBanner';
 import January2026BreakthroughShowcaseBanner from '../components/January2026BreakthroughShowcaseBanner';
 import Ultimate2026ContentPromotionalBanner from '../components/Ultimate2026ContentPromotionalBanner';
@@ -91,6 +93,12 @@ export default function HomePage() {
       </section>
 
 <<<<<<< HEAD
+      {/* NEW JANUARY 2026 REVOLUTIONARY BREAKTHROUGHS - Featured prominently */}
+      <January2026RevolutionaryBreakthroughsBanner />
+      
+      {/* NEW AI 2026 FUTURE TRENDS - Featured prominently */}
+      <AI2026FutureTrendsBanner />
+      
       {/* NEW 2026 REVOLUTIONARY CONTENT - Featured prominently */}
       <AI2026RevolutionaryAutonomousSystemsBanner />
       
