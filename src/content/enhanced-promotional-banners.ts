@@ -124,6 +124,20 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
   }
 ];
 
+// Sept 30, 2025 – Fresh homepage banner promoting the new content
+enhancedPromotionalBanners.push({
+  id: 'sept30-fresh-content-2025',
+  title: '🚀 Fresh Drop: Governance Guardrails, Edge Inference, Agent Observability',
+  description: 'Three new deep-dives just landed. Ship fast with policy checks, deliver <100ms at the edge, and get live traces for agents.',
+  ctaText: 'Read the latest',
+  ctaLink: '/blog',
+  variant: 'success',
+  icon: '🚀',
+  featured: true,
+  priority: 0,
+  startDate: '2025-09-30'
+});
+
 export const getActiveEnhancedBanners = (): EnhancedPromotionalBanner[] => {
   const now = new Date();
   return enhancedPromotionalBanners

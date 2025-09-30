@@ -1259,6 +1259,37 @@ posts.push(
   }
 );
 
+// Sept 30, 2025 – Brand new posts to advertise on homepage
+posts.push(
+  {
+    slug: "ai-governance-real-time-guardrails-2025",
+    title: "AI Governance 2025: Real-Time Guardrails that Don't Slow Teams",
+    description: "Inline policy checks, KPI-linked canaries, and instant rollback that keep shipping velocity high.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-inference-budgets-2025",
+    title: "Edge Inference Budgets 2025: Quality Under Cost and Latency SLAs",
+    description: "Tiered models, warm pools, and cache strategy to deliver <100ms UX within strict budgets.",
+    category: "Edge Computing",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "agent-observability-live-traces-2025",
+    title: "Agent Observability 2025: Live Traces, SLIs, and Safe Actions",
+    description: "End-to-end visibility for agent tools with KPI-linked SLIs and budgeted actions you can trust.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  }
+);
+
 // Jan 15, 2026 – Fresh posts to advertise on homepage
 posts.push(
   {
