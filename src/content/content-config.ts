@@ -1041,6 +1041,34 @@ featuredBlogPosts.unshift(
   }
 );
 
+// Sept 30, 2025 – Advertise three newly created articles site‑wide (new)
+featuredBlogPosts.unshift(
+  {
+    id: "ai-2027-quantum-enhanced-machine-learning",
+    title: "AI 2027: Quantum‑Enhanced ML",
+    description: "Quantum‑accelerated training/inference for 1000x optimization speedups.",
+    link: "/blog/ai-2027-quantum-enhanced-machine-learning",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-2027-neuromorphic-computing-enterprise",
+    title: "AI 2027: Neuromorphic Computing for the Enterprise",
+    description: "Brain‑inspired architectures delivering 1000x energy efficiency and realtime learning.",
+    link: "/blog/ai-2027-neuromorphic-computing-enterprise",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-2028-autonomous-governance-blueprint",
+    title: "AI 2028: Autonomous Governance Blueprint",
+    description: "KPI scorecards, PR policy tests, rollback for safe autonomy at scale.",
+    link: "/blog/ai-2028-autonomous-governance-blueprint",
+    type: "article",
+    featured: true
+  }
+);
+
 // Advertise freshly added posts (Sept 30, 2025) on homepage banners
 featuredBlogPosts.unshift(
   {
