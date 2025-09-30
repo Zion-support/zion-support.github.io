@@ -229,3 +229,40 @@ newArticles2025.push(
     tags: ["RAG", "Edge", "Privacy", "Latency"]
   }
 );
+
+// Sept 30, 2025 – Additional featured content to advertise on homepage
+newArticles2025.push(
+  {
+    id: "ai-value-stream-analytics-2026",
+    title: "📈 AI Value Stream Analytics 2026: Trace Spend To ROI",
+    description: "Map prompts, tools, and user actions to business KPIs with end‑to‑end analytics.",
+    category: "Analytics",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-value-stream-analytics-2026",
+    readTime: "9 min read",
+    tags: ["Analytics", "Tracing", "ROI", "KPIs"]
+  },
+  {
+    id: "ai-2027-cost-optimization-playbook",
+    title: "💸 AI 2027 Cost Optimization: Stable UX Under Budget",
+    description: "Tiered routing, caching, and compression to cut spend 30–70% with no regressions.",
+    category: "GenAI",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-2027-cost-optimization-playbook",
+    readTime: "8 min read",
+    tags: ["Cost", "Routing", "Caching", "Optimization"]
+  },
+  {
+    id: "ai-quantum-computing-breakthrough-2026",
+    title: "⚛️ Quantum AI Breakthrough 2026: 1000× Acceleration",
+    description: "Leverage quantum‑enhanced pipelines for combinatorial search and model optimization.",
+    category: "Quantum Computing",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-quantum-computing-breakthrough-2026",
+    readTime: "10 min read",
+    tags: ["Quantum", "Optimization", "Acceleration"]
+  }
+);
