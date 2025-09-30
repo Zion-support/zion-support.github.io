@@ -1155,6 +1155,33 @@ posts.push(
   { slug: "agent-policy-gates-blueprint-2026", title: "Agent Policy Gates 2026: Approvals, Budgets, and Safe Tools", description: "Design approval workflows, budgeted actions, and sandboxed tools to ship reliable agent releases.", category: "AI Operations", publishedAt: "2025-10-31", featured: true, readTime: "7 min read" },
   { slug: "sovereign-rag-platforms-2026", title: "Sovereign RAG Platforms 2026: Residency, Guardrails, and Speed", description: "Region-scoped corpora, auth-aware retrieval, and signed outputs without hurting UX.", category: "GenAI", publishedAt: "2025-09-30", featured: true, readTime: "8 min read" },
   {
+    slug: "ai-platform-value-realization-2026",
+    title: "AI Platform Value Realization 2026: From Pilots to Profit",
+    description: "Operational scorecards and rollout trains that convert AI pilots into durable ROI across business units.",
+    category: "AI Strategy",
+    publishedAt: "2025-10-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "secure-ml-supply-chain-v2-2026",
+    title: "Secure ML Supply Chain v2: Attest Everything, Drift Nothing",
+    description: "Model, data, and prompt provenance with signed attestations and automated drift gates in CI/CD.",
+    category: "Security",
+    publishedAt: "2025-10-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-experiments-under-100ms-2026",
+    title: "Edge Experiments Under 100ms: Privacy‑First A/B Without PII",
+    description: "Geo‑aware flags, scoped IDs, and on‑device metrics enabling compliant experimentation at the edge.",
+    category: "Analytics",
+    publishedAt: "2025-10-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
     slug: "ai-safety-budgets-2026",
     title: "AI Safety Budgets 2026: Guardrails That Keep Velocity High",
     description: "Budget risky actions, set rollback triggers, and wire evals to KPIs for safe automation.",
