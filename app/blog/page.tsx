@@ -3,6 +3,26 @@ import Link from 'next/link';
 
 const blogPosts = [
   {
+    title: 'AI 2026 Safe Autonomy Scorecards: KPIs, Budgets, Rollback',
+    slug: 'ai-2026-safe-autonomy-scorecards',
+    excerpt: 'Executable scorecards wire outcomes to guardrails and automated rollback so teams can ship faster with fewer incidents.',
+    category: 'Implementation Guide',
+    publishedAt: 'September 30, 2025',
+    image: '🧭',
+    color: 'green',
+    readTime: '12 min read'
+  },
+  {
+    title: 'Edge 2026 Zero‑PII Analytics: Scoped IDs, DP Noise, <100ms',
+    slug: 'edge-2026-zero-pii-analytics',
+    excerpt: 'On-device aggregation, scoped identifiers, and differential privacy deliver private insights globally under 100ms.',
+    category: 'Featured Article',
+    publishedAt: 'September 30, 2025',
+    image: '📊',
+    color: 'blue',
+    readTime: '9 min read'
+  },
+  {
     title: 'AI Enterprise Autonomous Agents 2026: Operating Models, Architecture, ROI',
     slug: 'ai-enterprise-autonomous-agents-2026',
     excerpt: 'Deploy autonomous AI agents with provable guardrails to achieve 400% efficiency gains, 70% cost reduction, and 99.95% uptime.',
