@@ -509,6 +509,34 @@ featuredBlogPosts.unshift(
   }
 );
 
+// Mar 2026 – Add three brand-new featured items to advertise on homepage
+featuredBlogPosts.unshift(
+  {
+    id: "ai-governance-runtime-scorecards-v2-2026",
+    title: "Runtime Scorecards v2 (2026)",
+    description: "KPIs, budgets, and instant rollback wired into CI",
+    link: "/blog/ai-governance-runtime-scorecards-v2-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-private-experimentation-v2-2026",
+    title: "Edge Private Experimentation v2 (2026)",
+    description: "Compliant <100ms A/B without PII using scoped IDs + DP",
+    link: "/blog/edge-private-experimentation-v2-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "genai-routing-quality-tiers-v3-2026",
+    title: "GenAI Quality Tiers v3 (2026)",
+    description: "Stable UX under budget with tiers, caches, and evals",
+    link: "/blog/genai-routing-quality-tiers-v3-2026",
+    type: "article",
+    featured: true
+  }
+);
+
 // Advertise brand-new Q4 content on homepage
 featuredBlogPosts.unshift(
   {

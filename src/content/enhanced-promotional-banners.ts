@@ -166,6 +166,20 @@ enhancedPromotionalBanners.push({
   startDate: '2026-01-05'
 });
 
+// Mar 2026 – Promote three brand-new articles site‑wide
+enhancedPromotionalBanners.push({
+  id: 'mar-2026-new-content',
+  title: '✨ New: Runtime Scorecards v2, Edge Experiments v2, GenAI Tiers v3',
+  description: 'Live KPIs + budgets + rollback, compliant <100ms experiments, and predictable GenAI UX under budget.',
+  ctaText: 'Explore the new posts',
+  ctaLink: '/blog',
+  variant: 'success',
+  icon: '✨',
+  featured: true,
+  priority: 0,
+  startDate: '2026-03-25'
+});
+
 export const getActiveEnhancedBanners = (): EnhancedPromotionalBanner[] => {
   const now = new Date();
   return enhancedPromotionalBanners
