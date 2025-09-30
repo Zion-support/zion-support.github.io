@@ -163,6 +163,20 @@ export default function HomePage() {
   return (
     <>
       <div className="animate-fade-in">
+      {/* 🔔 New Article Promo: Reliable Agent Evals 2025 */}
+      <section className="py-6 bg-gradient-to-r from-indigo-700 via-purple-700 to-fuchsia-700 text-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <h2 className="text-2xl md:text-3xl font-bold">
+              New: Reliable Agent Evals 2025 — Measure and Guardrail Autonomy
+            </h2>
+            <Link href="/blog/ai-reliable-agent-evals-2025" className="inline-flex items-center gap-2 bg-white text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
+              Read the article
+              <span>→</span>
+            </Link>
+          </div>
+        </div>
+      </section>
       {/* 🚀 NEWEST 2027 CONTENT - BREAKTHROUGH QUANTUM AI & AUTONOMOUS INTELLIGENCE! */}
       <NewContent2027ShowcaseBanner />
 

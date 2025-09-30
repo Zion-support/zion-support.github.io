@@ -4,6 +4,16 @@ import Link from 'next/link';
 
 const blogPosts = [
   {
+    title: 'Reliable Agent Evals 2025: Measure, Guardrail, and Improve',
+    slug: 'ai-reliable-agent-evals-2025',
+    excerpt: 'Blueprint for production agent evaluations: golden tasks, scorecards, policy tests, and continuous improvement.',
+    category: 'AI Reliability',
+    publishedAt: 'September 30, 2025',
+    image: '✅',
+    color: 'purple',
+    readTime: '12 min read'
+  },
+  {
     title: 'AI Enterprise GenAI Agent Platform 2026',
     slug: 'ai-enterprise-genai-agent-platform-2026',
     excerpt: 'Blueprint to ship a governed, reliable, and cost‑efficient GenAI agent platform—routing, memory, tools, observability, and guardrails.',
