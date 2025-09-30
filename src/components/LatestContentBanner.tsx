@@ -26,25 +26,12 @@ const LatestContentBanner: React.FC<LatestContentBannerProps> = ({
           <div className="flex items-center gap-3">
             <Sparkles className="w-6 h-6 animate-pulse" />
             <div>
-<<<<<<< HEAD
-              <h3 className="font-bold text-lg">
-                🔥 New: Neural Architecture Search · Federated Learning · Privacy-First AI
-              </h3>
-              <p className="text-sm opacity-90">
-                Discover breakthrough AI technologies delivering 300-500% performance improvements and 95% energy efficiency gains →
-              </p>
+              <h3 className="font-bold text-lg">🔥 New: Governed Agent Runbooks · Edge Rate Limiter Blueprint</h3>
+              <p className="text-sm opacity-90">Budgets, KPI canaries, rollback for agents + zero‑PII rate limiting at &lt;100ms. Explore the latest →</p>
             </div>
           </div>
           <Link
-            to="/blog/ai-2026-neural-architecture-search-breakthrough"
-=======
-              <h3 className="font-bold text-lg">🔥 New: Governed Agent Patterns v2 · Consentless Experiments v3</h3>
-              <p className="text-sm opacity-90">Approvals, budgets, rollback for agents + zero‑PII A/B at &lt;100ms. Explore the latest →</p>
-            </div>
-          </div>
-          <Link
-            to="/blog/ai-2025-oct-31-governed-agent-patterns-v2"
->>>>>>> feat/new-content-ads-sept30-2025
+            to="/blog/ai-2026-governed-agent-runbooks"
             className="bg-white text-gray-900 px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-all flex items-center gap-2 flex-shrink-0"
           >
             <TrendingUp className="w-4 h-4" />
