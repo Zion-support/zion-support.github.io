@@ -20,6 +20,52 @@ export interface CaseStudy {
 
 export const caseStudies2025: CaseStudy[] = [
   {
+    id: "global-tech-ai-security-transformation",
+    slug: "global-tech-ai-security-transformation",
+    title: "TechGlobal: AI-Native Security Achieving Zero Breaches",
+    client: "TechGlobal Corporation",
+    industry: "Technology",
+    description: "Transformed enterprise security with AI-native operations achieving 99.9% threat prevention, zero breaches in 24 months, and 87% cost reduction in security operations.",
+    challenge: "Traditional SOC overwhelmed with 2M+ daily alerts, 18-hour average incident response time, and $45M annual breach costs. Manual security processes unable to scale with threat volume.",
+    solution: "Deployed comprehensive AI-native security operations with autonomous threat prevention, real-time zero-day detection, and sub-5s incident response. Implemented distributed AI training infrastructure and automated governance achieving 100% policy compliance.",
+    results: [
+      {
+        metric: "Threat Prevention",
+        value: "99.9%",
+        description: "Threats blocked before execution"
+      },
+      {
+        metric: "Response Time",
+        value: "4.2s",
+        description: "From 18 hours to 4.2 seconds average MTTR"
+      },
+      {
+        metric: "Zero Breaches",
+        value: "24 Months",
+        description: "No successful security breaches in 2 years"
+      },
+      {
+        metric: "Cost Savings",
+        value: "$52M",
+        description: "Annual security operations cost reduction"
+      },
+      {
+        metric: "Compliance",
+        value: "100%",
+        description: "EU AI Act and regulatory compliance achieved"
+      },
+      {
+        metric: "Zero-Day Detection",
+        value: "98%",
+        description: "Previously unknown threat detection accuracy"
+      }
+    ],
+    technologies: ["AI-Native Security Operations", "Distributed AI Training", "AI Governance Automation", "Zero-Day Detection", "Autonomous Incident Response", "Compliance Automation"],
+    featured: true,
+    publishedAt: "2025-09-30",
+    readTime: "20 min read"
+  },
+  {
     id: "global-finance-ai-transformation",
     slug: "global-finance-ai-transformation",
     title: "Global Finance Corp: AI-Powered Trading Platform Transformation",

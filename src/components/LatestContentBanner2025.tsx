@@ -5,6 +5,24 @@ import { motion } from "framer-motion";
 const LatestContentBanner2025 = () => {
   const newArticles = [
     {
+      title: "AI-Native Security Operations 2026",
+      description: "99.9% Threat Prevention with Autonomous Response",
+      slug: "ai-native-security-operations-2026",
+      category: "Cybersecurity"
+    },
+    {
+      title: "Distributed AI Training at Scale 2026",
+      description: "Train LLMs 10x Faster on 1000+ GPU Clusters",
+      slug: "distributed-ai-training-scale-2026",
+      category: "ML Infrastructure"
+    },
+    {
+      title: "AI Governance Automation 2026",
+      description: "100% Compliance Without the Overhead",
+      slug: "ai-governance-automation-enterprise-2026",
+      category: "AI Governance"
+    },
+    {
       title: "AI Autonomous DevOps 2026",
       description: "Self-Managing CI/CD Pipelines with Zero Downtime",
       slug: "ai-autonomous-devops-2026",
@@ -45,24 +63,6 @@ const LatestContentBanner2025 = () => {
       description: "1000x Speedup for Optimization",
       slug: "quantum-ml-hybrid-computing-2026",
       category: "Quantum Computing"
-    },
-    {
-      title: "Neuromorphic Edge AI 2026",
-      description: "Brain-Inspired Computing at 10,000x Efficiency",
-      slug: "neuromorphic-edge-ai-2026",
-      category: "Edge Computing"
-    },
-    {
-      title: "AI Composite Agents 2026",
-      description: "Multi-Model Intelligence Orchestration",
-      slug: "ai-composite-agents-2026",
-      category: "AI Engineering"
-    },
-    {
-      title: "Real-Time Personalization at the Edge 2026",
-      description: "Sub-50ms Adaptive Experiences",
-      slug: "real-time-personalization-edge-2026",
-      category: "Edge Computing"
     }
   ];
 
@@ -98,8 +98,8 @@ const LatestContentBanner2025 = () => {
           🚀 September 30, 2025 — REVOLUTIONARY CONTENT DROP!
         </h2>
         <p className="text-xl text-blue-100 mb-8 max-w-3xl">
-          Discover <span className="font-bold text-yellow-300">5 BRAND NEW groundbreaking articles</span> on AI Autonomous DevOps, Legal Document Automation, Customer Experience Hyper-Personalization, Renewable Energy Optimization, and Research Acceleration! 
-          Plus explore our expanded library of <span className="font-bold text-yellow-300">25+ cutting-edge articles</span> shaping 2026!
+          Discover <span className="font-bold text-yellow-300">3 BRAND NEW cutting-edge articles</span> on AI-Native Security Operations, Distributed AI Training at Scale, and AI Governance Automation! 
+          Plus explore our expanded library of <span className="font-bold text-yellow-300">30+ revolutionary articles</span> shaping 2026!
         </p>
 
         {/* Featured highlights */}
@@ -155,15 +155,15 @@ const LatestContentBanner2025 = () => {
         {/* Stats */}
         <div className="mt-8 pt-6 border-t border-white/20 flex flex-wrap gap-8">
           <div className="text-center">
-            <div className="text-3xl font-bold text-yellow-300">5</div>
+            <div className="text-3xl font-bold text-yellow-300">3</div>
             <div className="text-sm text-blue-200">NEW Articles TODAY</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-green-300">25+</div>
+            <div className="text-3xl font-bold text-green-300">30+</div>
             <div className="text-sm text-blue-200">Total Latest Articles</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-purple-300">250+</div>
+            <div className="text-3xl font-bold text-purple-300">300+</div>
             <div className="text-sm text-blue-200">Pages of Insights</div>
           </div>
           <div className="text-center">
