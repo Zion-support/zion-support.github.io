@@ -7,6 +7,26 @@ export const metadata = {
 
 const blogPosts = [
   {
+    title: 'AI 2026 Cost Optimization Blueprint: 30–70% Savings without Quality Loss',
+    slug: 'ai-2026-cost-optimization-blueprint',
+    excerpt: 'Cut AI spend with routing, semantic caches, quantization, and token discipline tied to quality scorecards.',
+    category: 'Implementation Guide',
+    publishedAt: 'January 15, 2026',
+    image: '💸',
+    color: 'green',
+    readTime: '13 min read'
+  },
+  {
+    title: 'AI 2025 Agent Reliability Blueprint: Ship Trustworthy Autonomous Workflows',
+    slug: 'ai-2025-agent-reliability-blueprint',
+    excerpt: 'Blueprint for reliable, observable, and governable autonomous agents with policy gates and eval scorecards.',
+    category: 'AI Reliability',
+    publishedAt: 'October 1, 2025',
+    image: '🧭',
+    color: 'indigo',
+    readTime: '14 min read'
+  },
+  {
     title: 'AI 2027: Quantum Computing Breakthrough Revolutionizing Enterprise Operations',
     slug: 'ai-2027-quantum-breakthrough',
     excerpt: 'Discover how quantum computing breakthroughs in 2027 are revolutionizing enterprise AI operations, delivering unprecedented computational power and optimization capabilities.',

@@ -215,6 +215,38 @@ export default function HomePage() {
             Fresh Research & Playbooks
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
+            <Link href="/blog/ai-2026-cost-optimization-blueprint" className="group">
+              <div className="bg-white/5 border border-white/10 rounded-xl p-6 hover:border-emerald-500/40 transition-colors">
+                <div className="mb-2">
+                  <span className="px-3 py-1 rounded-full text-xs bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                    Cost Optimization
+                  </span>
+                </div>
+                <h3 className="text-xl font-bold group-hover:text-emerald-300 transition-colors">
+                  AI 2026 Cost Optimization Blueprint
+                </h3>
+                <p className="text-gray-300 mt-2 text-sm">
+                  Cut AI spend 30–70% with routing, semantic caches, and token discipline.
+                </p>
+              </div>
+            </Link>
+
+            <Link href="/blog/ai-2025-agent-reliability-blueprint" className="group">
+              <div className="bg-white/5 border border-white/10 rounded-xl p-6 hover:border-cyan-500/40 transition-colors">
+                <div className="mb-2">
+                  <span className="px-3 py-1 rounded-full text-xs bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">
+                    AI Reliability
+                  </span>
+                </div>
+                <h3 className="text-xl font-bold group-hover:text-cyan-300 transition-colors">
+                  AI 2025 Agent Reliability Blueprint
+                </h3>
+                <p className="text-gray-300 mt-2 text-sm">
+                  Policy gates, eval scorecards, and rollout strategies for trustworthy autonomy.
+                </p>
+              </div>
+            </Link>
+
             <Link href="/blog/ai-2027-autonomous-governance-blueprint" className="group">
               <div className="bg-white/5 border border-white/10 rounded-xl p-6 hover:border-blue-500/40 transition-colors">
                 <div className="mb-2">
