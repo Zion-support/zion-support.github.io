@@ -327,3 +327,31 @@ enhancedPromotionalBanners.push({
   priority: 3,
   startDate: '2026-04-01'
 });
+
+// Oct 2025 – Promote three new articles just added
+enhancedPromotionalBanners.push({
+  id: 'oct-2025-just-added-trio',
+  title: '✨ Just Added: Real‑Time Engines, Federated Learning, FinAI 2027',
+  description: 'Explore sub‑ms decision engines, private federated learning, and high‑accuracy financial AI.',
+  ctaText: 'Read the latest',
+  ctaLink: '/blog',
+  variant: 'success',
+  icon: '✨',
+  featured: true,
+  priority: 0,
+  startDate: '2025-10-01'
+});
+
+// Homepage highlight for the newest drop
+enhancedPromotionalBanners.push({
+  id: 'oct-2025-homepage-new-drop',
+  title: '🚀 New Drop: Decision Engines, Federated Learning, FinAI 2027',
+  description: 'Three fresh deep‑dives now live. Ship faster with private insights and budgeted reliability.',
+  ctaText: 'Explore new posts',
+  ctaLink: '/blog',
+  variant: 'info',
+  icon: '🚀',
+  featured: true,
+  priority: 1,
+  startDate: '2025-10-01'
+});
