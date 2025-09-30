@@ -166,6 +166,27 @@ const Home = () => {
         />
         {/* Fresh content banner promoting brand-new articles */}
         <div className="container mx-auto px-6 mt-6">
+          {/* Brand New Today - advertising newly added posts */}
+          <div className="rounded-xl border border-emerald-400/30 bg-emerald-500/10 p-6 mb-6">
+            <div className="text-white text-sm mb-3">Brand new today</div>
+            <div className="grid md:grid-cols-3 gap-4">
+              <Link to="/blog/ai-2025-sept-30-real-time-decision-engines-v2" className="block rounded-lg border border-white/10 p-4 hover:border-emerald-400/40 transition-colors">
+                <div className="text-emerald-300 text-xs mb-2">Platform Engineering</div>
+                <div className="text-white font-semibold">Real-Time Decision Engines v2</div>
+                <div className="text-zion-slate-light text-sm mt-1">10M/sec under 1ms using warm pools and intent prefetching.</div>
+              </Link>
+              <Link to="/blog/genai-2025-sept-30-multimodal-fusion-blueprint" className="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
+                <div className="text-cyan-300 text-xs mb-2">GenAI</div>
+                <div className="text-white font-semibold">Multimodal Fusion Blueprint</div>
+                <div className="text-zion-slate-light text-sm mt-1">Fuse text, vision, audio with eval scorecards and rollback.</div>
+              </Link>
+              <Link to="/blog/ai-2025-sept-30-security-mesh" className="block rounded-lg border border-white/10 p-4 hover:border-indigo-400/40 transition-colors">
+                <div className="text-indigo-300 text-xs mb-2">AI Security</div>
+                <div className="text-white font-semibold">AI Security Mesh</div>
+                <div className="text-zion-slate-light text-sm mt-1">Runtime verifiers and signed outputs with 99.99% detection.</div>
+              </Link>
+            </div>
+          </div>
           <NewContentAdvertisingBanner />
           {/* Inline promo for new service */}
           <div className="mt-4">
