@@ -291,7 +291,7 @@ export default function AIEnterpriseTransformationMegaSuccess2026() {
                     <ul className="space-y-2 text-gray-700">
                       <li>• <strong>90% Operational Efficiency Gain</strong> across all departments</li>
                       <li>• <strong>70% Reduction in Production Downtime</strong></li>
-                      <li>• <strong>60% Improvement in Supply Chain Responsiveness</li>
+                          <li>• <strong>60% Improvement in Supply Chain Responsiveness</strong></li>
                       <li>• <strong>95% Process Automation Rate</strong></li>
                     </ul>
                   </div>

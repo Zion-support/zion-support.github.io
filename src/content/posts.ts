@@ -58,7 +58,6 @@ export const posts: BlogPost[] = [
     slug: "golden-paths-roi-2026",
     title: "Golden Paths ROI 2026: Scorecards that Prove Platform Value",
     description: "Link developer journeys to SLOs, adoption, and revenue with actionable scorecards.",
->>>>>>> origin/chore/add-sept-29-content-and-promos
     category: "Platform Engineering",
     publishedAt: "2025-10-12",
     featured: true,

@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import ContentPromotionBanner from "../components/ContentPromotionBanner";
+// import ContentPromotionBanner from "../components/ContentPromotionBanner";
 import ContentValueTestimonials from "../components/ContentValueTestimonials";
 import EnhancedNewsletterSignup from "../components/EnhancedNewsletterSignup";
 import EnhancedPromotionalBanner from "../components/EnhancedPromotionalBanner";
@@ -341,14 +341,14 @@ const Home = () => {
         </div>
         
         {/* Content Promotion Banner */}
-        <ContentPromotionBanner
+        {/* <ContentPromotionBanner
           variant="info"
           title="🚀 Fresh: Incident Playbooks + Privacy‑Preserving Analytics"
           description="Budgeted actions, approvals, and DP‑backed telemetry you can ship today."
           ctaText="Read the latest"
           ctaLink="/blog/ai-incident-response-playbooks-2025"
           dismissible={true}
-        />
+        /> */}
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-zion-blue rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>

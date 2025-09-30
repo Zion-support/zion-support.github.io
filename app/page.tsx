@@ -16,7 +16,7 @@ import Latest2026ContentBanner from '../components/Latest2026ContentBanner';
 import September30NewContentBanner from '../components/September30NewContentBanner';
 import September30LatestContentBanner from '../components/September30LatestContentBanner';
 import Revolutionary2026ContentShowcase from '../components/Revolutionary2026ContentShowcase';
-import September30NewContent2025Banner from '../components/September30NewContent2025Banner';
+import September30NewContent2025Banner from './components/September30NewContent2025Banner';
 import Revolutionary2026ContentMegaBanner from '../components/Revolutionary2026ContentMegaBanner';
 import UltimateContent2026MegaBanner from '../components/UltimateContent2026MegaBanner';
 import AIInnovationBreakthrough2026Banner from '../components/AIInnovationBreakthrough2026Banner';
