@@ -135,6 +135,16 @@ const Home = () => {
           <div className="rounded-xl border border-purple-400/30 bg-purple-500/10 p-6">
             <div className="text-white text-sm mb-3">Fresh today</div>
             <div className="grid md:grid-cols-2 gap-4">
+              <Link to="/blog/ai-2025-oct-02-agent-safety-scorecards" className="block rounded-lg border border-white/10 p-4 hover:border-purple-400/40 transition-colors">
+                <div className="text-purple-300 text-xs mb-2">AI Operations</div>
+                <div className="text-white font-semibold">Agent Safety Scorecards</div>
+                <div className="text-zion-slate-light text-sm mt-1">Budgets, canaries, rollback to keep agents safe at speed.</div>
+              </Link>
+              <Link to="/blog/edge-2025-oct-02-private-experiments-v4" className="block rounded-lg border border-white/10 p-4 hover:border-indigo-400/40 transition-colors">
+                <div className="text-indigo-300 text-xs mb-2">Analytics</div>
+                <div className="text-white font-semibold">Private Experiments v4</div>
+                <div className="text-zion-slate-light text-sm mt-1">Scoped IDs + DP noise for compliant A/B at &lt;100ms.</div>
+              </Link>
               <Link to="/blog/genai-2025-oct-01-quality-tiers-v3" className="block rounded-lg border border-white/10 p-4 hover:border-purple-400/40 transition-colors">
                 <div className="text-purple-300 text-xs mb-2">GenAI</div>
                 <div className="text-white font-semibold">GenAI Quality Tiers v3</div>
@@ -188,6 +198,11 @@ const Home = () => {
           <div className="rounded-xl border border-cyan-400/30 bg-cyan-500/10 p-6 mb-6">
             <div className="text-white text-sm mb-3">New today</div>
             <div className="grid md:grid-cols-3 gap-4">
+              <Link to="/blog/genai-2025-oct-02-cache-playbook-v2" className="block rounded-lg border border-white/10 p-4 hover:border-purple-400/40 transition-colors">
+                <div className="text-purple-300 text-xs mb-2">GenAI</div>
+                <div className="text-white font-semibold">GenAI Cache Playbook v2</div>
+                <div className="text-zion-slate-light text-sm mt-1">Semantic caches + eval gates for 50–70% savings.</div>
+              </Link>
               <Link to="/blog/genai-2025-oct-01-cost-optimization-v5" className="block rounded-lg border border-white/10 p-4 hover:border-purple-400/40 transition-colors">
                 <div className="text-purple-300 text-xs mb-2">GenAI</div>
                 <div className="text-white font-semibold">GenAI Cost Optimization v5</div>
