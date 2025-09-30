@@ -108,6 +108,9 @@ import UltimateContent2026Showcase from '../components/UltimateContent2026Showca
 import Revolutionary2027ContentBanner from '../components/Revolutionary2027ContentBanner';
 import UltimateContent2027Showcase from '../components/UltimateContent2027Showcase';
 import NewContentShowcase2026 from '../src/components/NewContentShowcase2026';
+import AIMetaCognitiveRevolutionBanner from '../components/AIMetaCognitiveRevolutionBanner';
+import AINeuromorphicRevolutionBanner from '../components/AINeuromorphicRevolutionBanner';
+import Ultimate2026ContentRevolutionBanner from '../components/Ultimate2026ContentRevolutionBanner';
 
 export const metadata = {
   title: 'Zion Tech Group — Revolutionary AI Breakthroughs 2026 | 1000x Performance Gains',
@@ -150,6 +153,15 @@ export default function HomePage() {
   return (
     <>
       <div className="animate-fade-in">
+      {/* 🚀 NEWEST BREAKTHROUGH CONTENT - January 2026 - Revolutionary AI Technologies! */}
+      <Ultimate2026ContentRevolutionBanner />
+      
+      {/* 🧠 AI Meta-Cognitive Reasoning Revolution */}
+      <AIMetaCognitiveRevolutionBanner />
+      
+      {/* ⚡ Neuromorphic Enterprise Computing Revolution */}
+      <AINeuromorphicRevolutionBanner />
+      
       {/* 🚀 MEGA CONTENT UPDATE - September 30, 2025 - 116+ NEW RESOURCES! */}
       <NewContentShowcase2026 />
       

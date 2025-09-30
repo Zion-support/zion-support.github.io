@@ -158,7 +158,6 @@ export default function BlogPage() {
           </div>
         </div>
 
-<<<<<<< HEAD
         {/* All Posts */}
         <div>
           <h2 className="text-3xl font-bold text-gray-900 mb-8">All Articles</h2>
@@ -193,9 +192,7 @@ export default function BlogPage() {
               </Link>
             ))}
           </div>
-=======
-        {/* Blog Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        </div>
           <BlogPost
             title="AI Operational Resilience 2026: Designing for Failure and Recovery"
             excerpt="Blueprint for 99.99% uptime with policy tests, isolation, and automated recovery."
@@ -509,7 +506,6 @@ export default function BlogPage() {
             featured={true}
             href="/blog/ai-mlops-best-practices-2025"
           />
->>>>>>> origin/pr-update-cursor/create-and-deploy-new-content-6ef6
         </div>
 
         {/* Newsletter Signup */}
