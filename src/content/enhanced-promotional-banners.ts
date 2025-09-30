@@ -152,6 +152,20 @@ enhancedPromotionalBanners.push({
   startDate: '2025-09-30'
 });
 
+// Jan 2026 – Promote newly added articles site-wide
+enhancedPromotionalBanners.push({
+  id: 'jan-2026-new-content',
+  title: '🚀 New: Risk Budgets, Edge Consent Mode, GenAI Quality Tiers',
+  description: 'Ship faster and safer: budgets + KPI canaries, private analytics without PII, and predictable GenAI costs.',
+  ctaText: 'Read the latest',
+  ctaLink: '/blog',
+  variant: 'success',
+  icon: '🚀',
+  featured: true,
+  priority: 0,
+  startDate: '2026-01-05'
+});
+
 export const getActiveEnhancedBanners = (): EnhancedPromotionalBanner[] => {
   const now = new Date();
   return enhancedPromotionalBanners
