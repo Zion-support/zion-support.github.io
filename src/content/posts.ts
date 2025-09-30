@@ -10,6 +10,33 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "meta-cognitive-ai-deep-dive-2026",
+    title: "Meta‑Cognitive AI Deep Dive 2026 — AI that thinks about thinking",
+    description: "Verifier stacks, introspective loops, and KPI‑linked guardrails you can ship today.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "11 min read"
+  },
+  {
+    slug: "quantum-neural-networks-guide-2026",
+    title: "Quantum‑Neural Networks Guide 2026 — 1000x processing speed",
+    description: "Hybrid circuits, warm pools, and policy‑tested fallbacks for predictable acceleration.",
+    category: "Quantum Computing",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "10 min read"
+  },
+  {
+    slug: "autonomous-operations-case-study-2026",
+    title: "Autonomous Operations Case Study 2026 — 98% automation",
+    description: "Budgets, canaries, and rollback delivering near‑complete automation in production.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
     slug: "ai-2025-sept-30-neural-code-synthesis",
     title: "Neural Code Synthesis 2025 — 95% Accuracy, 90% Faster Delivery",
     description: "Production blueprint for neural code assistants: policy tests, eval scorecards, and instant rollback for safe velocity.",
