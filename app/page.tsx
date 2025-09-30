@@ -68,6 +68,11 @@ import Revolutionary2026ContentShowcase from '../components/Revolutionary2026Con
 import September30NewContent2025Banner from '../components/September30NewContent2025Banner';
 import Revolutionary2026ContentMegaBanner from '../components/Revolutionary2026ContentMegaBanner';
 import UltimateContent2026MegaBanner from '../components/UltimateContent2026MegaBanner';
+import {
+  RevolutionaryAIEnterpriseAutomationBanner,
+  QuantumAIBreakthroughBanner,
+  EnterpriseAutomationSuccessBanner
+} from '../components/NewContent2026RevolutionaryBanners';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
 import InteractivePromotionalSection from '../components/InteractivePromotionalSection';
@@ -182,6 +187,15 @@ export default function HomePage() {
       </section>
       {/* 🚀 NEWEST 2027 CONTENT - BREAKTHROUGH QUANTUM AI & AUTONOMOUS INTELLIGENCE! */}
       <NewContent2027ShowcaseBanner />
+
+      {/* 🚀 REVOLUTIONARY AI ENTERPRISE AUTOMATION 2026 */}
+      <RevolutionaryAIEnterpriseAutomationBanner />
+
+      {/* ⚛️ QUANTUM AI BREAKTHROUGH 2026 */}
+      <QuantumAIBreakthroughBanner />
+
+      {/* 🏆 ENTERPRISE AUTOMATION SUCCESS CASE STUDY */}
+      <EnterpriseAutomationSuccessBanner />
 
       {/* 📣 Featured: New — Autonomous Governance & Agent Ops Observability */}
       <div className="bg-gradient-to-r from-purple-700/20 to-fuchsia-700/20 border border-white/10 rounded-2xl p-6 mb-8">
@@ -787,6 +801,7 @@ export default function HomePage() {
         </section>
 
         {/* 🔥 BRAND NEW CONTENT - SEPTEMBER 30, 2025 - 5 EXCLUSIVE PUBLICATIONS! */}
+        <section className="py-16 bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 text-white">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-12">
               <div className="flex items-center justify-center gap-4 mb-6">
