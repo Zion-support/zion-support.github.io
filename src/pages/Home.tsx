@@ -812,6 +812,23 @@ const Home = () => {
                 </article>
               ))}
             </div>
+
+            {/* Just published promo – auto-highlights the three freshest posts */}
+            <div className="mt-10 rounded-xl border border-indigo-200 bg-indigo-50 p-6">
+              <div className="text-indigo-700 text-sm font-semibold mb-4">Just published</div>
+              <div className="grid md:grid-cols-3 gap-4">
+                {[...posts]
+                  .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
+                  .slice(0, 3)
+                  .map((p) => (
+                    <Link key={p.slug} to={`/blog/${p.slug}`} className="block rounded-lg border border-indigo-200 bg-white p-4 hover:border-indigo-400 transition-colors">
+                      <div className="text-xs text-indigo-600 mb-1">{p.category}</div>
+                      <div className="font-semibold text-gray-900">{p.title}</div>
+                      <div className="text-gray-600 text-sm mt-1 line-clamp-2">{p.description}</div>
+                    </Link>
+                ))}
+              </div>
+            </div>
             
             {/* Blog CTA */}
             <div className="mt-12 text-center">

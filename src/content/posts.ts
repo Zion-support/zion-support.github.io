@@ -1292,6 +1292,37 @@ posts.push(
   }
 );
 
+// Sept 30, 2025 – Brand-new trio for immediate homepage promotion
+posts.push(
+  {
+    slug: "ai-change-management-2026",
+    title: "AI Change Management 2026: From Pilot to Org-Wide Adoption",
+    description: "Playbooks, scorecards, and rollout trains that turn pilots into durable adoption across BUs.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-governance-quickstart-2026",
+    title: "Edge Governance Quickstart 2026: Policies Without Latency Penalties",
+    description: "Auth-aware routes, scoped IDs, and signed outputs that enforce policy at <100ms.",
+    category: "Architecture",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "genai-evals-blueprint-2026",
+    title: "GenAI Evals Blueprint 2026: Offline Suites, PR Gates, Live Canaries",
+    description: "Layered evaluation patterns wired to KPIs so teams ship fast without regressions.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  }
+);
+
 // New: Sept 30, 2025 – Fresh trio to advertise on homepage
 posts.push(
   {
