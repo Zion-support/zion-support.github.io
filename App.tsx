@@ -1,4 +1,6 @@
 import React, { JSX } from "react";
+import October2025EnterpriseIntelligenceBanner from "./components/October2025EnterpriseIntelligenceBanner";
+import October2025NewContentShowcaseBanner from "./components/October2025NewContentShowcaseBanner";
 import July2026RevolutionaryBreakthroughBanner from "./components/July2026RevolutionaryBreakthroughBanner";
 import July2026AutonomousIntelligenceBanner from "./components/July2026AutonomousIntelligenceBanner";
 import July2026ContentShowcaseBanner from "./components/July2026ContentShowcaseBanner";
@@ -75,6 +77,12 @@ import NewContent2027AdvertisingBanner from "./components/NewContent2027Advertis
 export default function App(): JSX.Element {
   return (
     <div className="min-h-screen bg-slate-950">
+      {/* ⭐⭐⭐ BREAKING: October 2025 Enterprise Intelligence Revolution - HIGHEST PRIORITY ⭐⭐⭐ */}
+      <October2025EnterpriseIntelligenceBanner />
+      
+      {/* ⭐⭐ NEW: October 2025 Content Showcase - FEATURED CONTENT ⭐⭐ */}
+      <October2025NewContentShowcaseBanner />
+      
       {/* ⭐ LATEST: July 2026 Autonomous Intelligence Banner - TOP PRIORITY ⭐ */}
       <July2026AutonomousIntelligenceBanner />
       
