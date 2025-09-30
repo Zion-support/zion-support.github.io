@@ -44,6 +44,14 @@ function Header() {
           <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors">About</Link>
           <Link href="/services" className="text-gray-700 hover:text-blue-600 transition-colors">Services</Link>
           <div className="relative group">
+            <Link href="/services/ai-autonomous-operations" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
+              AI Operations
+              <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                NEW 2025
+              </span>
+            </Link>
+          </div>
+          <div className="relative group">
             <Link href="/content-hub" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
               Content Hub
               <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
