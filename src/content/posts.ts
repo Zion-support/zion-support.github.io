@@ -37,6 +37,33 @@ export const posts: BlogPost[] = [
     readTime: "8 min read"
   },
   {
+    slug: "ai-operational-scorecards-q4-2026",
+    title: "AI Operational Scorecards Q4 2026: SLIs → KPIs with Budgets",
+    description: "SLIs mapped to business KPIs with budgeted actions, live canaries, and instant rollback.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-consentless-metrics-2026",
+    title: "Edge Consentless Metrics 2026: Scoped IDs, DP Noise, <100ms",
+    description: "Privacy‑first telemetry with on‑device aggregation, scoped identifiers, and differential privacy noise—zero PII.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "genai-budget-aware-routing-2026",
+    title: "GenAI Budget‑Aware Routing 2026: Predictable Cost, Stable UX",
+    description: "Quality tiers, smart caches, and budget controls for consistent quality at optimized spend.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
     slug: "ai-ethics-operational-blueprint-2026",
     title: "AI Ethics Operational Blueprint 2026: Bias, Fairness, Auditability",
     description: "A pragmatic guide to operationalizing AI ethics: bias tests, fairness SLAs, red-team drills, and audit-ready trails.",
@@ -1257,41 +1284,7 @@ posts.push(
   }
 );
 
-<<<<<<< HEAD
-// Mar 2026 – Three brand-new articles to surface at the top and advertise on Home
-posts.push(
-  {
-    slug: "ai-governance-runtime-scorecards-v2-2026",
-    title: "AI Governance Runtime Scorecards v2 (2026): KPIs, Budgets, Rollback",
-    description: "Second‑gen live scorecards wired to product KPIs with CI policy tests, risk budgets, and instant rollback that speed delivery.",
-    category: "AI Governance",
-    publishedAt: "2026-03-20",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "edge-private-experimentation-v2-2026",
-    title: "Edge Private Experimentation v2 (2026): <100ms A/B Without PII",
-    description: "Scoped IDs, on‑device metrics, and DP noise for compliant global experiments under strict latency and cost SLAs.",
-    category: "Analytics",
-    publishedAt: "2026-03-22",
-    featured: true,
-    readTime: "6 min read"
-  },
-  {
-    slug: "genai-routing-quality-tiers-v3-2026",
-    title: "GenAI Routing Quality Tiers v3 (2026): Stable UX Under Budget",
-    description: "Tier models, add semantic caches, and route by SLA using eval signals to cut spend 40–70% without hurting experience.",
-    category: "GenAI",
-    publishedAt: "2026-03-25",
-    featured: true,
-    readTime: "8 min read"
-  }
-);
-
-=======
 // Merge: keep unified content set
->>>>>>> cursor/create-and-deploy-new-content-c3df
 // Sept 30, 2025 – Brand-new content to advertise on homepage (fresh trio v3)
 posts.push(
   {
