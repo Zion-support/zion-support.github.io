@@ -10,6 +10,33 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-trust-scorecards-v5-2027",
+    title: "AI Trust Scorecards v5 (2027): KPIs, Budgets, Guardrails",
+    description: "Next‑gen scorecards linking SLIs to KPIs with budgeted actions, PR policy tests, and instant rollback.",
+    category: "AI Governance",
+    publishedAt: "2026-12-01",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "edge-private-evals-2026",
+    title: "Private Evals at the Edge (2026): <100ms, Zero‑PII",
+    description: "On‑device evals with scoped IDs, local aggregation, and DP noise for safe, fast feedback loops.",
+    category: "Analytics",
+    publishedAt: "2026-12-01",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "agentops-runbooks-v3-2026",
+    title: "AgentOps Runbooks v3 (2026): Approvals, Budgets, One‑Click Recovery",
+    description: "Battle‑tested operational runbooks for agents with KPI‑linked canaries and instant rollback.",
+    category: "AI Operations",
+    publishedAt: "2026-12-01",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
     slug: "ai-operational-scorecards-v4-2026",
     title: "AI Operational Scorecards v4 (2026)",
     description: "SLIs mapped to KPIs with budgeted actions and instant rollback.",
