@@ -133,17 +133,17 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="New: Reliable RAG Ops, Platform KPIs, AI Incident Budgets"
-          description="Keep RAG fresh, prove platform ROI, and contain incidents under 60s—safely."
-          ctaText="Explore new content"
+          title="🚀 NEW: Cut GenAI Costs 70%, 10x Dev Velocity, Sub-100ms AI"
+          description="Latest insights on cost optimization, platform engineering golden paths, trustworthy AI governance, and real-time infrastructure at scale."
+          ctaText="Read Latest Articles"
           ctaLink="/blog"
           featuredItems={[
+            { title: "GenAI Cost Optimization — Cut 70% Without Quality Loss", category: "AI Operations", link: "/blog/ai-2025-oct-03-genai-cost-optimization-at-scale" },
+            { title: "Platform Engineering Golden Paths — 10x Velocity in 90 Days", category: "Platform Engineering", link: "/blog/ai-2025-oct-03-platform-engineering-golden-paths" },
+            { title: "Trustworthy AI Governance — Compliance to Advantage", category: "AI Governance", link: "/blog/ai-2025-oct-03-trustworthy-ai-governance-framework" },
+            { title: "Real-Time AI Infrastructure — Sub-100ms at Global Scale", category: "AI Infrastructure", link: "/blog/ai-2025-oct-03-real-time-ai-infrastructure" },
             { title: "Reliable RAG Ops 2026", category: "GenAI", link: "/blog/reliable-rag-ops-2026" },
-            { title: "Platform KPIs 2026", category: "Platform Engineering", link: "/blog/platform-kpis-2026" },
-            { title: "AI Incident Budgets 2026", category: "Security", link: "/blog/ai-incident-budgets-2026" },
-            { title: "Secure ML Supply Chain 2026", category: "Security", link: "/blog/secure-ml-supply-chain-2026" },
-            { title: "GenAI Routing Blueprint 2026", category: "GenAI", link: "/blog/genai-routing-blueprint-2026" },
-            { title: "Golden Paths ROI 2026", category: "Platform Engineering", link: "/blog/golden-paths-roi-2026" }
+            { title: "Platform KPIs 2026", category: "Platform Engineering", link: "/blog/platform-kpis-2026" }
           ]}
         />
         <div className="container mx-auto px-6 mt-6">
@@ -167,11 +167,11 @@ const Home = () => {
         
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
-          variant="info"
-          title="🚀 Fresh: Autonomous Runbooks + Privacy‑First Flags"
-          description="Budgeted actions, approvals, and zero‑regret rollouts you can ship today."
-          ctaText="Read the latest"
-          ctaLink="/blog/ai-autonomous-incident-runbooks-2025"
+          variant="success"
+          title="🎯 October 2025 Update: GenAI Cost Optimization + Real-Time AI"
+          description="New articles on cutting LLM costs 70%, achieving sub-100ms AI, trustworthy governance frameworks, and 10x developer velocity."
+          ctaText="Explore Latest Insights"
+          ctaLink="/blog"
           dismissible={true}
         />
         {/* Animated background elements */}

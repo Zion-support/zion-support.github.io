@@ -9,33 +9,42 @@ export interface BlogPost {
 }
 
 export const posts: BlogPost[] = [
-  // Sept 30, 2025 — New breakthrough content (FEATURED)
+  // Oct 3, 2025 — Latest content (featured)
   {
-    slug: "ai-autonomous-cost-intelligence-2025",
-    title: "AI Autonomous Cost Intelligence 2025: Reduce Cloud Spending by 60%",
-    description: "Discover how AI autonomous cost intelligence reduces cloud spending by up to 60% through predictive analytics, automated optimization, and intelligent resource allocation.",
-    category: "FinOps & Cost Intelligence",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "12 min read"
-  },
-  {
-    slug: "ai-conversational-commerce-revolution-2025",
-    title: "AI Conversational Commerce Revolution 2025: The Future of Shopping",
-    description: "Explore how AI-powered conversational commerce is transforming e-commerce with 3.5x higher conversion rates and personalized shopping experiences.",
-    category: "E-Commerce & Retail",
-    publishedAt: "2025-09-30",
+    slug: "ai-2025-oct-03-genai-cost-optimization-at-scale",
+    title: "GenAI Cost Optimization at Scale — Cut LLM Costs 70% Without Quality Loss",
+    description: "Proven patterns for token reduction, caching strategies, model routing, and budget enforcement that save millions in production.",
+    category: "AI Operations",
+    publishedAt: "2025-10-03",
     featured: true,
     readTime: "10 min read"
   },
   {
-    slug: "ai-predictive-infrastructure-orchestration-2025",
-    title: "AI Predictive Infrastructure Orchestration 2025: Zero-Downtime Operations",
-    description: "Learn how AI predictive infrastructure orchestration achieves 99.999% uptime and 92% faster incident resolution through intelligent automation.",
-    category: "Infrastructure & DevOps",
-    publishedAt: "2025-09-30",
+    slug: "ai-2025-oct-03-platform-engineering-golden-paths",
+    title: "Platform Engineering Golden Paths — 10x Developer Velocity in 90 Days",
+    description: "How leading teams use paved paths, self-service, and measured bottlenecks to ship features 10x faster.",
+    category: "Platform Engineering",
+    publishedAt: "2025-10-03",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "ai-2025-oct-03-trustworthy-ai-governance-framework",
+    title: "Trustworthy AI Governance Framework — From Compliance to Competitive Advantage",
+    description: "Build trust and unlock AI value with automated guardrails, bias detection, and explainability at scale.",
+    category: "AI Governance",
+    publishedAt: "2025-10-03",
     featured: true,
     readTime: "11 min read"
+  },
+  {
+    slug: "ai-2025-oct-03-real-time-ai-infrastructure",
+    title: "Real-Time AI Infrastructure — Sub-100ms AI at Global Scale",
+    description: "Architecture patterns for low-latency AI inference serving billions of users with edge computing, model optimization, and smart caching.",
+    category: "AI Infrastructure",
+    publishedAt: "2025-10-03",
+    featured: true,
+    readTime: "12 min read"
   },
   // Sept 30, 2025 — Newly added content (featured)
   {
