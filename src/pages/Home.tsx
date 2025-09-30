@@ -188,6 +188,27 @@ const Home = () => {
             </div>
           </div>
           <NewContentAdvertisingBanner />
+          {/* Highlight newly added articles */}
+          <div className="mt-4 rounded-xl border border-white/10 bg-white/5 p-6">
+            <div className="text-white text-sm mb-4">Just added — featured reads</div>
+            <div className="grid md:grid-cols-3 gap-4">
+              <Link to="/blog/ai-2025-sept-30-neural-code-synthesis" className="block rounded-lg border border-white/10 p-4 hover:border-indigo-400/40 transition-colors">
+                <div className="text-indigo-300 text-xs mb-2">AI Engineering</div>
+                <div className="text-white font-semibold">Neural Code Synthesis 2025</div>
+                <div className="text-zion-slate-light text-sm mt-1">95% accuracy, 90% faster delivery with guardrails.</div>
+              </Link>
+              <Link to="/blog/edge-2025-sept-30-consentless-metrics-v3" className="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
+                <div className="text-cyan-300 text-xs mb-2">Analytics</div>
+                <div className="text-white font-semibold">Consentless Metrics v3</div>
+                <div className="text-zion-slate-light text-sm mt-1">Zero‑PII signals under 100ms with attestations.</div>
+              </Link>
+              <Link to="/blog/ai-2025-sept-30-platform-roi-scorecards-v2" className="block rounded-lg border border-white/10 p-4 hover:border-emerald-400/40 transition-colors">
+                <div className="text-emerald-300 text-xs mb-2">Platform Engineering</div>
+                <div className="text-white font-semibold">Platform ROI Scorecards v2</div>
+                <div className="text-zion-slate-light text-sm mt-1">Prove platform value in 4–8 weeks.</div>
+              </Link>
+            </div>
+          </div>
           {/* Inline promo for new service */}
           <div className="mt-4">
             <ContentPromotionBanner
