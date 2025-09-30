@@ -1,4 +1,6 @@
 import React, { JSX } from "react";
+import ConsensusIntelligenceBreakthroughBanner from "./components/ConsensusIntelligenceBreakthroughBanner";
+import AutonomousEnterpriseBreakthroughBanner from "./components/AutonomousEnterpriseBreakthroughBanner";
 import LatestContentBanner2025 from "./src/components/LatestContentBanner2025";
 import FeaturedContentBanner2025 from "./src/components/FeaturedContentBanner2025";
 import NewContentPromoBanner from "./src/components/NewContentPromoBanner";
@@ -31,15 +33,16 @@ import NewContent2026AdvertisingMegaBanner from "./components/NewContent2026Adve
 import InteractiveContentShowcase2026 from "./components/InteractiveContentShowcase2026";
 import February2026ContentMegaBanner from "./components/February2026ContentMegaBanner";
 import NewContent2026BreakthroughShowcaseBanner from "./components/NewContent2026BreakthroughShowcaseBanner";
+<<<<<<< HEAD
 import February2026BreakthroughMegaBanner from "./components/February2026BreakthroughMegaBanner";
 import NewContent2026ShowcaseBanner from "./components/NewContent2026ShowcaseBanner";
-import Revolutionary2026ContentMegaBreakthroughBanner from "./components/Revolutionary2026ContentMegaBreakthroughBanner";
 import March2026RevolutionaryBreakthroughBanner from "./components/March2026RevolutionaryBreakthroughBanner";
 import March2026ContentShowcase from "./components/March2026ContentShowcase";
 import March2026AdvertisingMegaBanner from "./components/March2026AdvertisingMegaBanner";
 import March2026BreakthroughBanner from "./components/March2026BreakthroughBanner";
 import RevolutionaryContentShowcase2026 from "./components/RevolutionaryContentShowcase2026";
 import InteractiveContentHub2026 from "./components/InteractiveContentHub2026";
+<<<<<<< HEAD
 import NewContent2026MegaBreakthroughBanner from "./components/NewContent2026MegaBreakthroughBanner";
 import April2026MegaBreakthroughBanner from "./components/April2026MegaBreakthroughBanner";
 import April2026ConsciousComputingBanner from "./components/April2026ConsciousComputingBanner";
@@ -47,10 +50,40 @@ import April2026QuantumNeuralBanner from "./components/April2026QuantumNeuralBan
 import QuantumConsciousnessFusionBanner from "./components/QuantumConsciousnessFusionBanner";
 import Revolutionary2026ContentShowcaseBanner from "./components/Revolutionary2026ContentShowcaseBanner";
 import May2026RevolutionaryBreakthroughBanner from "./components/May2026RevolutionaryBreakthroughBanner";
+<<<<<<< HEAD
+=======
+import March2026MultimodalBreakthroughBanner from "./components/March2026MultimodalBreakthroughBanner";
+import AutonomousAI2026RevolutionaryBanner from "./components/AutonomousAI2026RevolutionaryBanner";
+import March2026ContentShowcaseBanner from "./components/March2026ContentShowcaseBanner";
+import March2026ServicesPromotionalBanner from "./components/March2026ServicesPromotionalBanner";
+>>>>>>> origin/cursor/create-and-deploy-new-content-071d
+=======
+import April2026RevolutionaryBreakthroughBanner from "./components/April2026RevolutionaryBreakthroughBanner";
+import April2026MegaSuccessBanner from "./components/April2026MegaSuccessBanner";
+import April2026ContentShowcaseBanner from "./components/April2026ContentShowcaseBanner";
+>>>>>>> origin/cursor/create-and-deploy-new-content-c5bb
+=======
+import AITrends2026AdvertisingBanner from "./components/AITrends2026AdvertisingBanner";
+>>>>>>> origin/cursor/create-and-deploy-new-content-fdff
 
 export default function App(): JSX.Element {
   return (
     <div className="min-h-screen bg-slate-950">
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      {/* NEW: May 2026 Revolutionary Breakthrough Banner - Most Prominent */}
+      <May2026RevolutionaryBreakthroughBanner />
+      
+      {/* NEW: AI Trends 2026 Advertising Banner */}
+      <AITrends2026AdvertisingBanner />
+      
+      {/* NEW: April 2026 Mega Breakthrough Banner - Most Prominent */}
+      <April2026MegaBreakthroughBanner />
+      
+>>>>>>> origin/cursor/create-and-deploy-new-content-fdff
       {/* NEW: April 2026 Conscious Computing Banner */}
       <April2026ConsciousComputingBanner />
       
@@ -62,6 +95,20 @@ export default function App(): JSX.Element {
       
       {/* NEW: Revolutionary 2026 Content Showcase Banner */}
       <Revolutionary2026ContentShowcaseBanner />
+=======
+      {/* NEW: April 2026 Revolutionary Breakthrough Banner - Most Prominent */}
+      <April2026RevolutionaryBreakthroughBanner />
+      
+      {/* NEW: April 2026 Mega Success Banner */}
+      <April2026MegaSuccessBanner />
+>>>>>>> origin/cursor/create-and-deploy-new-content-c5bb
+=======
+      {/* NEW: 2026 Consensus Intelligence Breakthrough Banner - Most Prominent */}
+      <ConsensusIntelligenceBreakthroughBanner />
+      
+      {/* NEW: 2026 Autonomous Enterprise Breakthrough Banner - Most Prominent */}
+      <AutonomousEnterpriseBreakthroughBanner />
+>>>>>>> origin/cursor/create-and-deploy-new-content-52ce
       
       {/* NEW: March 2026 Revolutionary Breakthrough Banner - Most Prominent */}
       <March2026AdvertisingMegaBanner />
@@ -83,6 +130,19 @@ export default function App(): JSX.Element {
       
       {/* NEW: Interactive Content Hub 2026 - Advanced Content Exploration */}
       <InteractiveContentHub2026 />
+=======
+      {/* NEW: March 2026 Multimodal AI Breakthrough Banner - Most Prominent */}
+      <March2026MultimodalBreakthroughBanner />
+      
+      {/* NEW: Autonomous AI 2026 Revolutionary Banner - Revolutionary Content */}
+      <AutonomousAI2026RevolutionaryBanner />
+      
+      {/* NEW: March 2026 Content Showcase Banner - Latest Content */}
+      <March2026ContentShowcaseBanner />
+      
+      {/* NEW: March 2026 Services Promotional Banner - Services Advertising */}
+      <March2026ServicesPromotionalBanner />
+>>>>>>> origin/cursor/create-and-deploy-new-content-071d
       
       {/* NEW: Revolutionary 2026 Content Mega Breakthrough Banner - Most Prominent */}
       <Revolutionary2026ContentMegaBreakthroughBanner />
@@ -467,6 +527,9 @@ export default function App(): JSX.Element {
           </div>
         </div>
       </section>
+
+      {/* NEW: April 2026 Content Showcase Banner */}
+      <April2026ContentShowcaseBanner />
 
       {/* Additional Content Banners */}
       <LatestContentBanner2025 />
