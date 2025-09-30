@@ -20,12 +20,13 @@ import EnterpriseSolutionsShowcase2026 from "./components/EnterpriseSolutionsSho
 import AITrendsInsightsBanner2026 from "./components/AITrendsInsightsBanner2026";
 import NewBlogContentShowcase2026 from "./components/NewBlogContentShowcase2026";
 import UltimateContentAdvertisingBanner from "./components/UltimateContentAdvertisingBanner";
+import NewContentAdvertisingBanner2026 from "./components/NewContentAdvertisingBanner2026";
 
 export default function App(): JSX.Element {
   return (
     <div className="min-h-screen bg-slate-950">
       {/* Revolutionary Content Mega Banner - Most Prominent */}
-      <RevolutionaryContentMegaBanner2026 />
+      <Revolutionary2026ContentMegaBanner />
       
       {/* Ultimate Content Showcase 2026 */}
       <UltimateContentShowcase2026 />
@@ -233,6 +234,11 @@ export default function App(): JSX.Element {
       {/* Ultimate Content Advertising Banner */}
       <section>
         <UltimateContentAdvertisingBanner />
+      </section>
+
+      {/* New Content Advertising Banner 2026 */}
+      <section>
+        <NewContentAdvertisingBanner2026 />
       </section>
 
       {/* Latest Content Section */}
