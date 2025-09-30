@@ -151,6 +151,30 @@ export const featuredBlogPosts: FeaturedItem[] = [
 // Newly featured items to advertise on the homepage
 featuredBlogPosts.unshift(
   {
+    id: "ai-operational-scorecards-q4-2026",
+    title: "AI Operational Scorecards Q4 2026",
+    description: "SLIs tied to KPIs with budgeted actions and rollback",
+    link: "/blog/ai-operational-scorecards-q4-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-consentless-metrics-2026",
+    title: "Edge Consentless Metrics 2026",
+    description: "Actionable insights without PII using scoped IDs & DP",
+    link: "/blog/edge-consentless-metrics-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "genai-budget-aware-routing-2026",
+    title: "GenAI Budget‑Aware Routing 2026",
+    description: "Stable UX under cost SLAs with caches and quality tiers",
+    link: "/blog/genai-budget-aware-routing-2026",
+    type: "article",
+    featured: true
+  },
+  {
     id: "ai-slo-scorecards-2026",
     title: "AI SLO Scorecards 2026",
     description: "SLIs, error budgets, rollback triggers wired to KPIs",

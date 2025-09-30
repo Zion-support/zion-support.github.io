@@ -183,6 +183,19 @@ export const getFeaturedBanners = (): EnhancedPromotionalBanner[] => {
 
 // Sept 30, 2025 – New banners to advertise fresh content
 enhancedPromotionalBanners.push({
+  id: 'sept30-2025-fresh-trio-q4',
+  title: '🚀 New: Operational Scorecards, Consentless Metrics, Budget‑Aware Routing',
+  description: 'Three fresh deep‑dives: SLIs to KPIs, zero‑PII analytics, and predictable GenAI cost with stable UX.',
+  ctaText: 'Read the latest',
+  ctaLink: '/blog',
+  variant: 'success',
+  icon: '🚀',
+  featured: true,
+  priority: 0,
+  startDate: '2025-09-30'
+});
+
+enhancedPromotionalBanners.push({
   id: 'sept30-autonomy-blueprint-2026',
   title: '🧭 Enterprise Autonomy Blueprint 2026 — New',
   description: 'From pilots to governed production. Budgets, traces, and instant rollback.',
