@@ -1,33 +1,59 @@
-import { r as reactExports, j as jsxRuntimeExports, L as Link, A as ArrowRight, X, S as Sparkles, T as TrendingUp, C as Clock, a as Calendar, b as Star, c as CircleCheckBig, Z as Zap, d as Shield, G as Globe, B as Brain, e as Cloud, f as Lock, U as Users, g as BookOpen, h as Award, i as Target, E as Eye } from './chunk-B0-Mc1yq.js';
+import { r as reactExports, j as jsxRuntimeExports, L as Link, A as ArrowRight, X, S as Sparkles, T as TrendingUp, C as Clock, a as Calendar, b as Star, c as Shield, d as Cloud, Z as Zap, B as BookOpen, e as Award, U as Users, f as CircleCheckBig, g as Target, h as Brain, E as Eye } from './chunk-CRQ_W1rc.js';
 
+const variantStyles = {
+  info: "from-indigo-500/15 to-blue-500/15 border-indigo-400/30 text-indigo-100",
+  success: "from-emerald-500/15 to-teal-500/15 border-emerald-400/30 text-emerald-100",
+  warning: "from-amber-500/15 to-orange-500/15 border-amber-400/30 text-amber-100",
+  danger: "from-rose-500/15 to-red-500/15 border-rose-400/30 text-rose-100"
+};
 function ContentPromotionBanner(props) {
   const {
     variant = "info",
-    title = "New content available",
-    description,
-    ctaText = "Learn more",
+    title = "New content just landed",
+    description = "Explore our latest articles, guides, and success stories.",
+    ctaText = "Read now",
     ctaLink = "/blog",
     dismissible = false,
     className = ""
   } = props;
-  const [hidden, setHidden] = reactExports.useState(false);
-  if (hidden) return /* @__PURE__ */ jsxRuntimeExports.jsx(jsxRuntimeExports.Fragment, {});
-  const variantClasses = {
-    info: "bg-blue-600 text-white",
-    success: "bg-emerald-600 text-white",
-    warning: "bg-amber-600 text-black",
-    danger: "bg-rose-600 text-white"
-  };
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: `${variantClasses[variant]} ${className}`, "aria-label": "Content Promotion Banner", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row md:items-center md:justify-between gap-3", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex-1", children: [
-      title && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "font-semibold text-base md:text-lg", children: title }),
-      description && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "opacity-90 text-sm md:text-base", children: description })
-    ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-3 shrink-0", children: [
-      ctaLink && /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: ctaLink, className: "bg-white/90 hover:bg-white text-current px-4 py-2 rounded-lg font-semibold text-sm", children: ctaText }),
-      dismissible && /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: () => setHidden(true), className: "/bg-white/20 border border-white/30 rounded-md px-3 py-2 text-sm", children: "Dismiss" })
-    ] })
-  ] }) });
+  const [visible, setVisible] = reactExports.useState(true);
+  if (!visible) {
+    return /* @__PURE__ */ jsxRuntimeExports.jsx(jsxRuntimeExports.Fragment, {});
+  }
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: `w-full`, children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+    "div",
+    {
+      className: `mx-auto px-6 py-4 bg-gradient-to-r ${variantStyles[variant]} border rounded-none ${className}`,
+      role: "region",
+      "aria-label": "Content Promotion Banner",
+      children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto flex flex-col md:flex-row md:items-center gap-3 justify-between", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex-1", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-sm uppercase tracking-wide opacity-80", children: "Latest" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-white font-semibold text-lg", children: title }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-white/80 text-sm", children: description })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-3", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(
+            Link,
+            {
+              to: ctaLink,
+              className: "bg-white text-gray-900 hover:bg-gray-100 px-4 py-2 rounded-lg font-semibold text-sm",
+              children: ctaText
+            }
+          ),
+          dismissible && /* @__PURE__ */ jsxRuntimeExports.jsx(
+            "button",
+            {
+              "aria-label": "Dismiss promotion",
+              className: "text-white/70 hover:text-white text-sm",
+              onClick: () => setVisible(false),
+              children: "Dismiss"
+            }
+          )
+        ] })
+      ] })
+    }
+  ) });
 }
 
 const EnhancedPromotionalBanner = ({
@@ -134,169 +160,408 @@ const EnhancedPromotionalBanner = ({
 };
 var EnhancedPromotionalBanner_default = EnhancedPromotionalBanner;
 
-const Header = () => {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("header", { style: { padding: "1rem" }, children: /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "/", "aria-label": "Home", children: "Zion Tech Group" }) });
-};
-var Header_default = Header;
+function Header() {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("header", { className: "w-full py-4 px-6 bg-gray-900 text-white", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "container mx-auto", children: "Zion Tech Group" }) });
+}
 
 const latestArticles = [
   {
-    id: "ai-platform-slos-2026",
-    slug: "ai-platform-slos-2026",
-    title: "AI Platform SLOs 2026: Budgets, Rollbacks, Live Canaries",
-    description: "Design SLOs and risk budgets for AI with instant rollbacks and KPI‑linked canaries.",
-    excerpt: "Ship faster with SLOs that budget risk and wire safe rollbacks.",
+    id: "agent-release-checklists-2025",
+    slug: "agent-release-checklists-2025",
+    title: "Agent Release Checklists: Ship Fast Without Surprises",
+    description: "Budget risky actions, add PR checks, and bake rollback triggers into every agent release.",
+    excerpt: "A pragmatic checklist for reliable agent releases with budgets, tests, and rollbacks.",
     author: "Zion Tech Group Team",
-    date: "2025-10-12",
-    category: "AI Operations",
-    tags: ["SLOs", "Budgets", "Canaries"],
+    date: "2025-09-29",
+    category: "AI Engineering",
+    tags: ["Agents", "Release", "Guardrails"],
     featured: true,
     readTime: "7 min read",
-    image: "/images/ai-platform-slos-2026.jpg",
+    image: "/images/agent-release-checklists-2025.jpg",
     newBadge: true,
     trending: true
   },
   {
-    id: "rag-evals-in-the-loop-2026",
-    slug: "rag-evals-in-the-loop-2026",
-    title: "RAG Evals in the Loop: Prevent Regressions While Shipping Weekly",
-    description: "Layer offline suites, PR checks, and online canaries tied to product KPIs.",
-    excerpt: "A practical evals system for RAG that correlates with business outcomes.",
+    id: "kpi-linked-canaries-2025",
+    slug: "kpi-linked-canaries-2025",
+    title: "KPI‑Linked Canaries: Evals That Protect Velocity",
+    description: "Wire online canaries to KPIs so teams ship weekly without regressions or surprise costs.",
+    excerpt: "Set up lightweight, KPI‑aligned canaries that catch issues early and keep teams fast.",
     author: "Zion Tech Group Team",
-    date: "2025-10-12",
-    category: "GenAI",
-    tags: ["RAG", "Evals", "Canaries"],
-    featured: true,
-    readTime: "8 min read",
-    image: "/images/rag-evals-in-the-loop-2026.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "edge-feature-flags-2026",
-    slug: "edge-feature-flags-2026",
-    title: "Edge Feature Flags 2026: <100ms Global Releases with Budgets",
-    description: "Geo/account targeting, budgets, and instant rollback using edge compute and KV.",
-    excerpt: "Zero‑regret rollouts with budgets and telemetry at the edge.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-12",
-    category: "Architecture",
-    tags: ["Edge", "Flags", "Budgets"],
+    date: "2025-09-29",
+    category: "AI Governance",
+    tags: ["Canaries", "Evals", "KPIs"],
     featured: true,
     readTime: "6 min read",
-    image: "/images/edge-feature-flags-2026.jpg",
+    image: "/images/kpi-linked-canaries-2025.jpg",
     newBadge: true,
     trending: true
   },
   {
-    id: "ai-incident-response-playbooks-2025",
-    slug: "ai-incident-response-playbooks-2025",
-    title: "AI Incident Response Playbooks: Contain in <60s with Confidence",
-    description: "From detections to safe actions: policy-tested playbooks and rollback-ready automations.",
-    excerpt: "Design incident playbooks with budgeted actions, approvals, and telemetry that close the loop fast.",
+    id: "secure-ml-supply-chain-2026",
+    slug: "secure-ml-supply-chain-2026",
+    title: "Secure ML Supply Chain 2026: SBOMs, Attestations, and Drift Guards",
+    description: "Continuously track models, datasets, and prompts with signed SBOMs and policy checks.",
+    excerpt: "Stop ML supply‑chain drift with automated SBOMs, attestations, and CI policy gates.",
     author: "Zion Tech Group Team",
-    date: "2025-10-12",
-    category: "Cybersecurity",
-    tags: ["IR", "Automation", "Guardrails"],
+    date: "2025-10-15",
+    category: "Security",
+    tags: ["Incident Response", "Automation", "Guardrails"],
     featured: true,
     readTime: "7 min read",
-    image: "/images/ai-incident-response-playbooks-2025.jpg",
+    image: "/images/ai-incident-budgets-2026-v2.jpg",
     newBadge: true,
     trending: true
   },
   {
-    id: "privacy-preserving-analytics-2025",
-    slug: "privacy-preserving-analytics-2025",
-    title: "Privacy‑Preserving Analytics: Ship Insights Without PII Risk",
-    description: "On-device redaction, scoped IDs, and DP noise for compliant, decision-grade telemetry.",
-    excerpt: "A practical blueprint for analytics that respect privacy while keeping signals rich.",
+    id: "edge-personalization-2026",
+    slug: "edge-personalization-2026",
+    title: "Edge Personalization 2026: Private <100ms Experiences",
+    description: "Signed configs, on‑device caches, and KV patterns for realtime personalization without PII risk.",
+    excerpt: "Design privacy‑preserving personalization with sub‑100ms latency and durable fallbacks.",
     author: "Zion Tech Group Team",
-    date: "2025-10-12",
-    category: "Observability",
-    tags: ["Privacy", "Telemetry", "Compliance"],
+    date: "2025-10-15",
+    category: "Architecture",
+    tags: ["Edge", "Personalization", "Privacy"],
     featured: true,
     readTime: "8 min read",
-    image: "/images/privacy-preserving-analytics-2025.jpg",
+    image: "/images/edge-personalization-2026.jpg",
     newBadge: true,
     trending: true
   },
   {
-    id: "edge-llm-caching-blueprint-2026",
-    slug: "edge-llm-caching-blueprint-2026",
-    title: "Edge LLM Caching Blueprint 2026: Sub‑100ms at Scale",
-    description: "Tiered caches, signed configs, and freshness windows for fast, affordable prompts.",
-    excerpt: "Cut latency and cost with edge caches and deterministic fallbacks.",
+    id: "ai-quantum-computing-2026",
+    slug: "ai-quantum-computing-2026",
+    title: "AI Quantum Computing 2026: Next-Generation Intelligence",
+    description: "Harness quantum computing for AI breakthroughs with 1000x faster optimization and revolutionary capabilities.",
+    excerpt: "Learn how quantum-AI integration is transforming enterprise computing with unprecedented performance gains.",
     author: "Zion Tech Group Team",
-    date: "2025-10-12",
-    category: "Architecture",
-    tags: ["Edge", "Caching", "LLM"],
+    date: "2025-01-20",
+    category: "Quantum Computing",
+    tags: ["Quantum AI", "Quantum Computing", "Optimization", "Performance"],
     featured: true,
-    readTime: "7 min read",
-    image: "/images/edge-llm-caching.jpg",
+    readTime: "25 min read",
+    image: "/images/ai-quantum-computing-2026.jpg",
     newBadge: true,
     trending: true
   },
   {
-    id: "ai-incident-response-playbooks-2025",
-    slug: "ai-incident-response-playbooks-2025",
-    title: "AI Incident Response Playbooks: Contain in <60s with Confidence",
-    description: "From detections to safe actions: policy-tested playbooks and rollback-ready automations.",
-    excerpt: "Design incident playbooks with budgeted actions, approvals, and telemetry that close the loop fast.",
+    id: "edge-agent-observability-2026",
+    slug: "edge-agent-observability-2026",
+    title: "Edge Agent Observability 2026: Live Traces, Budgets, and Fallbacks",
+    description: "Observe multi‑tool agents with user‑centric traces, budgeted actions, and deterministic fallbacks at the edge.",
+    excerpt: "User‑centric traces and safety budgets for agents running at the edge.",
     author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "Cybersecurity",
-    tags: ["IR", "Automation", "Guardrails"],
+    date: "2025-10-16",
+    category: "Edge Computing",
+    tags: ["Agents", "Observability", "Edge"],
     featured: true,
     readTime: "7 min read",
-    image: "/images/ai-incident-response-playbooks-2025.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "ai-runbooks-with-risk-budgets-2026",
-    slug: "ai-runbooks-with-risk-budgets-2026",
-    title: "AI Runbooks with Risk Budgets: Safe Automation That Ships",
-    description: "Design playbooks with budgeted actions, approvals, and rollback gates teams trust.",
-    excerpt: "A practical guide to wiring risk budgets and safe actions into operational runbooks.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "AI Operations",
-    tags: ["Runbooks", "Risk Budgets", "Automation"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/ai-runbooks-risk-budgets-2026.jpg",
+    image: "/images/edge-agent-observability-2026.jpg",
     newBadge: true,
     trending: true
   },
   {
     id: "privacy-preserving-feature-flags-2026",
     slug: "privacy-preserving-feature-flags-2026",
-    title: "Privacy‑Preserving Feature Flags: Zero‑Regret Rollouts at Scale",
-    description: "Scoped IDs, on‑device filters, and edge budgets to ship fast without PII risk.",
-    excerpt: "Blueprint for global rollouts that keep signals rich and private under 100ms.",
+    title: "Privacy‑Preserving Feature Flags 2026: Geo Budgets and On‑Device Filters",
+    description: "Sub‑100ms, zero‑regret rollouts using scoped IDs, local filters, and telemetry‑driven rollback.",
+    excerpt: "Zero‑regret rollouts with privacy by design: scoped IDs and local filters.",
     author: "Zion Tech Group Team",
-    date: "2025-09-29",
+    date: "2025-10-16",
     category: "Architecture",
     tags: ["Feature Flags", "Privacy", "Edge"],
-    featured: true,
-    readTime: "6 min read",
+    featured: false,
+    readTime: "7 min read",
     image: "/images/privacy-preserving-feature-flags-2026.jpg",
     newBadge: true,
     trending: true
   },
   {
-    id: "zero-trust-agents-2026",
-    slug: "zero-trust-agents-2026",
-    title: "Zero‑Trust for AI Agents: Sandboxes, Egress Policies, and Attestations",
-    description: "Run agentic systems safely with isolation, scoped permissions, and signed tools.",
-    excerpt: "A production checklist for zero‑trust agent platforms teams actually adopt.",
+    id: "privacy-first-insights-telemetry-2026",
+    slug: "privacy-first-insights-telemetry-2026",
+    title: "Privacy‑First Insights 2026: Signal‑Rich Analytics Without PII",
+    description: "Scoped IDs, redaction, and retention windows that keep insights high and risk low.",
+    excerpt: "Ship analytics teams love without PII risk using scoped identifiers and filters.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-15",
+    category: "Observability",
+    tags: ["Privacy", "Telemetry", "Compliance"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/privacy-first-insights-telemetry-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "agent-blue-green-releases-2026",
+    slug: "agent-blue-green-releases-2026",
+    title: "Blue‑Green Releases for Agents: Safe Rollouts with Live Traces",
+    description: "Deploy agent updates with canaries, budgeted tool actions, and trace‑driven rollbacks.",
+    excerpt: "Reduce blast radius for agent updates with canaries, budgets, and rollbacks.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-15",
+    category: "GenAI",
+    tags: ["Agents", "Releases", "Tracing"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/agent-blue-green-releases-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "ai-security-data-leak-prevention-2026",
+    slug: "ai-security-data-leak-prevention-2026",
+    title: "AI Security 2026: Data‑Leak Prevention with Scoped IDs and Egress Guards",
+    description: "Practical playbooks to prevent prompt and data leaks with scoped identifiers, redaction, and egress controls.",
+    excerpt: "Stop data leaks before they happen with scoped IDs, field‑level filters, and egress guards.",
     author: "Zion Tech Group Team",
     date: "2025-09-29",
     category: "AI Security",
-    tags: ["Agents", "Zero Trust", "Security"],
+    tags: ["Security", "Privacy", "Egress", "Redaction"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/ai-security-data-leak-prevention-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "platform-engineering-scorecards-v2-2026",
+    slug: "platform-engineering-scorecards-v2-2026",
+    title: "Platform Engineering Scorecards v2: Leading Indicators that Drive ROI",
+    description: "A refined system of scorecards—adoption, golden paths, and SLOs—that link platform work to revenue and retention.",
+    excerpt: "From infrastructure spend to shipped outcomes: scorecards engineers adopt and executives trust.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "Platform Engineering",
+    tags: ["Scorecards", "ROI", "SLOs", "Golden Paths"],
     featured: true,
     readTime: "8 min read",
-    image: "/images/zero-trust-agents-2026.jpg",
+    image: "/images/platform-engineering-scorecards-v2-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "multimodal-agents-enterprise-2026",
+    slug: "multimodal-agents-enterprise-2026",
+    title: "Multimodal Agents 2026: Vision + Text + Voice that Teams Can Trust",
+    description: "Design enterprise‑grade multimodal agents with tool reliability budgets, live traces, and offline fallbacks.",
+    excerpt: "Ship agents that see, read, and speak—safely and reliably in production.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "GenAI",
+    tags: ["Agents", "Multimodal", "Tracing", "Reliability"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/multimodal-agents-enterprise-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "ai-cost-aware-inference-2026",
+    slug: "ai-cost-aware-inference-2026",
+    title: "Cost‑Aware Inference 2026: Warm Pools, Tiers, and SLAs",
+    description: "Cut inference cost 30–60% with adaptive batching, warm pools, and quality tiers under SLAs.",
+    excerpt: "Reduce GenAI spend without hurting P95 using warm pools and tiered quality.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "GenAI",
+    tags: ["Inference", "Cost", "Optimization"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/serverless-inference-costs.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "production-rag-ops-2026",
+    slug: "production-rag-ops-2026",
+    title: "Production RAG Ops 2026: Freshness Windows and Drift Guards",
+    description: "Operate RAG reliably with TTL freshness windows, drift detection, and KPI‑linked budgets.",
+    excerpt: "Keep answers accurate with freshness windows, drift guards, and quality budgets.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "GenAI",
+    tags: ["RAG", "Freshness", "Quality"],
+    featured: false,
+    readTime: "9 min read",
+    image: "/images/reliable-rag-ops-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "zero-trust-for-genai-2026",
+    slug: "zero-trust-for-genai-2026",
+    title: "Zero‑Trust for GenAI 2026: Prompt Firewalls and Signed Outputs",
+    description: "Production patterns: egress control, prompt firewalls, and signed outputs at scale.",
+    excerpt: "Ship GenAI safely with layered controls: prompt firewalls, egress policies, signing.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "Security",
+    tags: ["GenAI", "Security", "Zero‑Trust"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/zero-trust-for-genai-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "quantum-ai-hybrid-blueprint-2026",
+    slug: "quantum-ai-hybrid-blueprint-2026",
+    title: "Quantum‑AI Hybrid Blueprint 2026: Practical Near‑Term Wins",
+    description: "Blend quantum libraries with AI orchestration to unlock optimization wins today.",
+    excerpt: "Near‑term value from QC + AI: routing patterns and orchestration tips.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "Quantum",
+    tags: ["Quantum", "AI", "Optimization"],
+    featured: false,
+    readTime: "9 min read",
+    image: "/images/quantum-ai-hybrid-blueprint-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "secure-ml-supply-chain-2026",
+    slug: "secure-ml-supply-chain-2026",
+    title: "Secure ML Supply Chain 2026: SBOMs, Attestations, and Drift Guards",
+    description: "Continuously track models, datasets, and prompts with signed SBOMs and policy checks.",
+    excerpt: "Stop ML supply‑chain drift with automated SBOMs, attestations, and CI policy gates.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-13",
+    category: "Security",
+    tags: ["ML", "Supply Chain", "SBOM", "Security"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/secure-ml-supply-chain-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "genai-routing-blueprint-2026",
+    slug: "genai-routing-blueprint-2026",
+    title: "GenAI Routing Blueprint 2026: Quality Tiers, Caches, and Budgets",
+    description: "Route traffic by SLA with tiered models, edge caches, and KPI‑linked budgets.",
+    excerpt: "A practical guide to keep costs predictable without hurting UX or outcomes.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-13",
+    category: "GenAI",
+    tags: ["Routing", "Quality Tiers", "Budgets", "Caching"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/genai-routing-blueprint-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "golden-paths-roi-2026",
+    slug: "golden-paths-roi-2026",
+    title: "Golden Paths ROI 2026: Scorecards that Prove Platform Value",
+    description: "Link developer journeys to SLOs, adoption, and revenue with actionable scorecards.",
+    excerpt: "Shift platform conversations from infra spend to shipped outcomes and ROI.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-13",
+    category: "Platform Engineering",
+    tags: ["Golden Paths", "Scorecards", "ROI"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/golden-paths-roi-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "reliable-rag-ops-2026",
+    slug: "reliable-rag-ops-2026",
+    title: "Reliable RAG Ops 2026: Freshness, Drift, and Quality Budgets",
+    description: "Operate RAG at scale with TTL freshness windows, drift monitors, and KPI‑tied budgets.",
+    excerpt: "A production playbook to keep RAG answers accurate without blowing budgets.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-12",
+    category: "GenAI",
+    tags: ["RAG", "Freshness", "Quality"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/reliable-rag-ops-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "agent-evals-scorecards-2026",
+    slug: "agent-evals-scorecards-2026",
+    title: "Agent Evals 2026: Scorecards That Predict Outcomes",
+    description: "Online evals wired to KPIs—scorecards that correlate with revenue, CSAT, and retention.",
+    excerpt: "A practical playbook for evals that protect velocity and predict business outcomes.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-13",
+    category: "GenAI",
+    tags: ["Evals", "Scorecards", "KPIs"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/agent-evals-scorecards-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "privacy-preserving-agents-2026",
+    slug: "privacy-preserving-agents-2026",
+    title: "Privacy‑Preserving Agents: Scoped IDs, Redaction, and On‑Device Caches",
+    description: "Build assistants that keep insights high and PII risk low with scoped identifiers and local caches.",
+    excerpt: "Implement privacy by design for agent workflows without losing observability.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-13",
+    category: "AI Security",
+    tags: ["Privacy", "Agents", "Security"],
+    featured: false,
+    readTime: "7 min read",
+    image: "/images/privacy-preserving-agents-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "platform-kpis-2026",
+    slug: "platform-kpis-2026",
+    title: "Platform KPIs 2026: Adoption, Golden Paths, and SLOs",
+    description: "Scorecards engineers adopt—link platform telemetry to shipped business outcomes.",
+    excerpt: "From costs to value: KPIs that prove platform ROI quarter by quarter.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-12",
+    category: "Platform Engineering",
+    tags: ["KPIs", "Scorecards", "Platform"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/platform-kpis-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "ai-incident-budgets-2026",
+    slug: "ai-incident-budgets-2026",
+    title: "AI Incident Budgets: Playbooks That Contain in <60s",
+    description: "Budgeted actions, approvals, and rollback triggers for safe automation under pressure.",
+    excerpt: "Close the loop from detections to actions with KPI‑wired incident budgets.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-12",
+    category: "Security",
+    tags: ["Incident Response", "Automation", "Guardrails"],
+    featured: false,
+    readTime: "6 min read",
+    image: "/images/ai-incident-budgets-2026.jpg",
+    newBadge: true,
+    trending: false
+  },
+  {
+    id: "ai-incident-response-playbooks-2025",
+    slug: "ai-incident-response-playbooks-2025",
+    title: "AI Incident Response Playbooks: Contain in <60s with Confidence",
+    description: "From detections to safe actions: policy-tested playbooks and rollback-ready automations.",
+    excerpt: "Design incident playbooks with budgeted actions, approvals, and telemetry that close the loop fast.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "Cybersecurity",
+    tags: ["IR", "Automation", "Guardrails"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/ai-incident-response-playbooks-2025.jpg",
     newBadge: true,
     trending: true
   },
@@ -797,52 +1062,36 @@ const latestArticles = [
     trending: true
   },
   {
-    id: "ai-secure-ml-supply-chain-2026",
-    slug: "ai-secure-ml-supply-chain-2026",
-    title: "Secure ML Supply Chain 2026: SBOMs, Lineage, and Policy Gates",
-    description: "Continuous SBOMs for models, datasets, and prompts with attestations and CI policy checks.",
-    excerpt: "A practical guide to securing the ML supply chain with provenance and guardrails.",
+    id: "ai-supply-chain-optimization-2025",
+    slug: "ai-supply-chain-optimization-2025",
+    title: "AI Supply Chain Optimization: 65% Faster Deliveries, 40% Lower Cost",
+    description: "Demand sensing, dynamic routing, and smart inventory that lift OTIF while cutting cost.",
+    excerpt: "Achieve 65% faster deliveries with AI‑powered planning, routing, and SLA‑aware orchestration.",
     author: "Zion Tech Group Team",
-    date: "2025-10-13",
-    category: "AI Security",
-    tags: ["SBOM", "Supply Chain", "Security"],
+    date: "2025-09-29",
+    category: "Applied AI",
+    tags: ["Supply Chain", "Optimization", "Routing", "Forecasting"],
     featured: true,
-    readTime: "7 min read",
-    image: "/images/secure-ml-supply-chain-2026.jpg",
+    readTime: "9 min read",
+    image: "/images/ai-supply-chain-optimization.jpg",
     newBadge: true,
     trending: true
   },
   {
-    id: "genai-routing-under-budgets-2026",
-    slug: "genai-routing-under-budgets-2026",
-    title: "Quality‑Tiered GenAI Routing: SLAs Without Bill Shock",
-    description: "Route prompts across model tiers with budgets, caches, and eval signals to control cost.",
-    excerpt: "Keep experience high under tight budgets with deterministic routing and caches.",
+    id: "privacy-first-observability-quickstart-2025",
+    slug: "privacy-first-observability-quickstart-2025",
+    title: "Privacy‑First Observability Quickstart: Scoped IDs, Redaction, Retention",
+    description: "Stand up privacy‑safe telemetry with scoped identifiers, field‑level filters, and TTL policies.",
+    excerpt: "Ship insights without PII risk in under a week using proven building blocks.",
     author: "Zion Tech Group Team",
-    date: "2025-10-13",
-    category: "AI Operations",
-    tags: ["Budgets", "Quality Tiers", "Routing"],
-    featured: true,
-    readTime: "6 min read",
-    image: "/images/genai-routing-2026.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "platform-golden-paths-kpis-2026",
-    slug: "platform-golden-paths-kpis-2026",
-    title: "Golden Paths That Move KPIs: Platform Engineering That Pays",
-    description: "Adoption metrics, TTFX, and SLOs as leading indicators of platform ROI in 2026.",
-    excerpt: "A scorecard system that links platform investments to shipped business outcomes.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-13",
-    category: "Platform Engineering",
-    tags: ["Golden Paths", "ROI", "Scorecards"],
-    featured: true,
+    date: "2025-09-29",
+    category: "Observability",
+    tags: ["Privacy", "Telemetry", "Compliance"],
+    featured: false,
     readTime: "7 min read",
-    image: "/images/platform-golden-paths-kpis-2026.jpg",
+    image: "/images/privacy-first-observability-quickstart.jpg",
     newBadge: true,
-    trending: true
+    trending: false
   },
   {
     id: "ai-platform-scorecards-roi-2026",
@@ -1085,43 +1334,91 @@ const latestArticles = [
     trending: false
   },
   {
-    id: "ai-risk-budgets-2026",
-    slug: "ai-risk-budgets-2026",
-    title: "AI Risk Budgets 2026: Ship Faster With Guardrails",
-    description: "Budget risky actions, tokens, and tools so teams move quickly with measurable safety.",
-    excerpt: "A practical system for risk budgets that speed teams up while preventing incidents.",
+    id: "ai-autonomous-incident-runbooks-2025",
+    slug: "ai-autonomous-incident-runbooks-2025",
+    title: "AI Autonomous Incident Runbooks: Budgeted Actions and Instant Rollback",
+    description: "Design incident playbooks with explicit budgets, approvals, and safe automated rollback.",
+    excerpt: "Close the loop from detection to safe action using budgets, approvals, and telemetry.",
     author: "Zion Tech Group Team",
-    date: "2025-10-13",
-    category: "AI Governance",
-    tags: ["Risk", "Budgets", "Guardrails"],
+    date: "2025-09-29",
+    category: "AI Operations",
+    tags: ["Runbooks", "Automation", "Risk Budgets"],
     featured: true,
     readTime: "7 min read",
-    image: "/images/ai-risk-budgets-2026.jpg",
+    image: "/images/ai-autonomous-incident-runbooks-2025.jpg",
     newBadge: true,
     trending: true
   },
   {
-    id: "privacy-preserving-agents-2026",
-    slug: "privacy-preserving-agents-2026",
-    title: "Privacy‑Preserving Agents 2026: On‑Device Tools and Scoped Telemetry",
-    description: "Ship assistants that protect users with local tools, encrypted caches, and DP‑backed analytics.",
-    excerpt: "Design assistants that are fast, private, and reliable—without PII leaks.",
+    id: "privacy-first-feature-flags-2025",
+    slug: "privacy-first-feature-flags-2025",
+    title: "Privacy‑First Feature Flags: Zero‑Regret Rollouts at the Edge",
+    description: "Scoped IDs, on‑device filters, and geo budgets for safe global releases under 100ms.",
+    excerpt: "Blueprint for privacy‑preserving progressive delivery using edge compute and KV.",
     author: "Zion Tech Group Team",
-    date: "2025-10-13",
-    category: "AI Security",
-    tags: ["Privacy", "Agents", "Telemetry"],
+    date: "2025-09-29",
+    category: "Architecture",
+    tags: ["Feature Flags", "Edge", "Privacy"],
     featured: true,
-    readTime: "8 min read",
-    image: "/images/privacy-preserving-agents-2026.jpg",
+    readTime: "6 min read",
+    image: "/images/privacy-first-feature-flags-2025.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "platform-roi-scorecards-quickstart-2025",
+    slug: "platform-roi-scorecards-quickstart-2025",
+    title: "Platform ROI Scorecards: A Practical Quickstart",
+    description: "Link platform telemetry to adoption and revenue with scorecards engineers actually use.",
+    excerpt: "Adoption, golden‑path TTFX, and SLOs as leading indicators of ROI.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "AI Strategy",
+    tags: ["Scorecards", "Platform", "ROI"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/platform-roi-scorecards-quickstart-2025.jpg",
     newBadge: true,
     trending: true
   }
 ];
-const featuredArticles = latestArticles.filter((article) => article.featured);
-const trendingArticles = latestArticles.filter((article) => article.trending);
+latestArticles.unshift(
+  {
+    id: "ai-threat-hunting-with-llms-2026",
+    slug: "ai-threat-hunting-with-llms-2026",
+    title: "AI Threat Hunting with LLMs 2026: Signals, Sandboxes, and Speed",
+    description: "Augment analysts with safe LLM tooling, live traces, and budgeted actions for faster hunts.",
+    excerpt: "Operational playbooks to make LLMs an accelerator for your SOC—without extra risk.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-13",
+    category: "Security",
+    tags: ["Threat Hunting", "LLMs", "Security"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/ai-threat-hunting-llms-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "llm-production-runbooks-2026",
+    slug: "llm-production-runbooks-2026",
+    title: "LLM Production Runbooks 2026: Rollbacks, Budgets, and Canary Evals",
+    description: "Battle‑tested runbooks for safe LLM releases—risk budgets, rollback triggers, and KPI‑linked canaries.",
+    excerpt: "Release LLM changes confidently with measurable guardrails and fast rollbacks.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-13",
+    category: "AI Operations",
+    tags: ["Runbooks", "Evals", "Budgets"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/llm-production-runbooks-2026.jpg",
+    newBadge: true,
+    trending: true
+  }
+);
 
 const LatestArticlesShowcase = () => {
-  const displayArticles = [...featuredArticles.slice(0, 2), ...trendingArticles.slice(0, 1)];
+  const displayArticles = latestArticles.filter((article) => article.featured).slice(0, 3);
   return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "py-20 bg-white", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto px-6", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center mb-16", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-blue-500/10 to-purple-500/10 text-blue-600 text-sm font-medium mb-8 border border-blue-500/20", children: [
@@ -1140,7 +1437,7 @@ const LatestArticlesShowcase = () => {
           /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-lg font-bold text-purple-700", children: "🔥 TRENDING NOW" }),
           /* @__PURE__ */ jsxRuntimeExports.jsx(TrendingUp, { className: "w-5 h-5 text-purple-500" })
         ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-700 font-semibold mb-2", children: "🚀 Just Published: Platform Engineering Scorecards 2026, AI Cybersecurity Automation, and Edge AI Blueprint 2026" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-700 font-semibold mb-2", children: "🚀 Just Published: AI Governance 2026, Edge Privacy‑Preserving Personalization, and Agent Releases 2026" }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-600 text-sm", children: "Discover cutting-edge insights on golden paths and SLOs, autonomic incident response, and private real-time edge intelligence." })
       ] })
     ] }),
@@ -1312,12 +1609,12 @@ const contentHighlights = [
   },
   {
     id: 4,
-    title: "⚡ Edge LLM Caching Blueprint",
-    description: "Tiered caches and freshness windows for sub‑100ms prompts",
-    ctaText: "See Patterns",
-    ctaLink: "/blog/edge-llm-caching-blueprint-2026",
-    badge: "Trending",
-    stats: "7 min read",
+    title: "💸 Serverless Inference Cost Playbook 2026",
+    description: "Adaptive batching, warm pools, and tiers without P95 pain",
+    ctaText: "Cut Spend",
+    ctaLink: "/blog/serverless-inference-cost-playbook-2026",
+    badge: "New",
+    stats: "9 min read",
     variant: "premium"
   },
   {
@@ -1491,6 +1788,38 @@ contentHighlights.push(
     badge: "New Service",
     stats: "Production Ready",
     variant: "premium"
+  },
+  {
+    id: 17,
+    title: "🛠️ AI SRE Blueprints 2026",
+    description: "Error budgets, rollback triggers, and live traces for reliable AI",
+    ctaText: "Read Blueprint",
+    ctaLink: "/blog/ai-sre-blueprints-2026",
+    badge: "New",
+    stats: "8 min read",
+    variant: "info"
+  },
+  {
+    id: 18,
+    title: "🔒 Privacy‑First A/B Testing",
+    description: "Insights without PII using scoped IDs and DP noise",
+    ctaText: "Learn How",
+    ctaLink: "/blog/privacy-first-ab-testing-2026",
+    badge: "New",
+    stats: "7 min read",
+    variant: "success"
+  }
+);
+contentHighlights.unshift(
+  {
+    id: 22,
+    title: "🧠 Agentic Observability Scorecards 2026",
+    description: "Traces linked to KPIs—scorecards that prevent regressions without slowing teams",
+    ctaText: "Read Article",
+    ctaLink: "/blog/agentic-observability-scorecards-2026",
+    badge: "New",
+    stats: "7 min read",
+    variant: "info"
   }
 );
 const LatestContentBanner = ({
@@ -1603,54 +1932,7 @@ const LatestContentBanner = ({
 var LatestContentBanner_default = LatestContentBanner;
 
 function ModernFeatures() {
-  const features = [
-    { icon: /* @__PURE__ */ jsxRuntimeExports.jsx(Zap, { className: "w-8 h-8" }), title: "Lightning‑Fast Performance", description: "Optimized architectures with edge delivery and smart caching." },
-    { icon: /* @__PURE__ */ jsxRuntimeExports.jsx(Shield, { className: "w-8 h-8" }), title: "Enterprise‑Grade Security", description: "Zero‑trust patterns, policy tests, and signed releases." },
-    { icon: /* @__PURE__ */ jsxRuntimeExports.jsx(Globe, { className: "w-8 h-8" }), title: "Global Scale", description: "Multi‑region, multi‑cloud with instant rollbacks and budgets." },
-    { icon: /* @__PURE__ */ jsxRuntimeExports.jsx(Brain, { className: "w-8 h-8" }), title: "AI‑Native", description: "Agents, evals, and telemetry wired to business outcomes." },
-    { icon: /* @__PURE__ */ jsxRuntimeExports.jsx(Cloud, { className: "w-8 h-8" }), title: "Cloud‑Smart", description: "Cost‑aware routing, autoscaling, and workload placement." },
-    { icon: /* @__PURE__ */ jsxRuntimeExports.jsx(Lock, { className: "w-8 h-8" }), title: "Privacy by Design", description: "On‑device redaction and least‑privilege data access." },
-    { icon: /* @__PURE__ */ jsxRuntimeExports.jsx(TrendingUp, { className: "w-8 h-8" }), title: "Measurable Impact", description: "Scorecards tied to KPIs and guardrails teams adopt." },
-    { icon: /* @__PURE__ */ jsxRuntimeExports.jsx(Users, { className: "w-8 h-8" }), title: "Delightful UX", description: "Thoughtful interactions, accessibility, and fast paths." }
-  ];
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "py-20 bg-gradient-to-br from-gray-50 to-blue-50", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto px-6", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center mb-16", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "text-5xl font-bold text-gray-900 mb-6", children: [
-        "Modern Technology, ",
-        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-blue-600", children: "Exceptional Results" })
-      ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xl text-gray-600 max-w-3xl mx-auto", children: "We leverage the latest technologies to deliver solutions that drive innovation, efficiency, and growth for your business." })
-    ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid md:grid-cols-2 lg:grid-cols-4 gap-8", children: features.map((feature, index) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
-      "div",
-      {
-        className: "bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100",
-        children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-blue-600 mb-6", children: feature.icon }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-xl font-bold text-gray-900 mb-4", children: feature.title }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-600 leading-relaxed", children: feature.description })
-        ]
-      },
-      index
-    )) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-16 text-center", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-white rounded-2xl p-8 shadow-lg max-w-4xl mx-auto", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-2xl font-bold text-gray-900 mb-6", children: "Why Choose Zion Tech Group?" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid md:grid-cols-3 gap-6", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-3", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx(CircleCheckBig, { className: "w-6 h-6 text-green-500" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gray-700 font-medium", children: "Proven Expertise" })
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-3", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx(CircleCheckBig, { className: "w-6 h-6 text-green-500" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gray-700 font-medium", children: "Cutting-Edge Technology" })
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-3", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx(CircleCheckBig, { className: "w-6 h-6 text-green-500" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gray-700 font-medium", children: "Dedicated Support" })
-        ] })
-      ] })
-    ] }) })
-  ] }) });
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { "aria-label": "Modern Features" });
 }
 
 const NewContentAnnouncement = () => {
@@ -1745,18 +2027,39 @@ const NewContentPromoBanner = ({
   };
   const featuredContent = [
     {
-      title: "Secure ML Supply Chain 2026",
-      description: "SBOMs, lineage, and CI policy gates",
+      title: "AI Safety Budgets 2026",
+      description: "Guardrails wired to KPIs, approvals, rollbacks",
       icon: Shield,
-      link: "/blog/ai-secure-ml-supply-chain-2026",
-      category: "Security"
+      link: "/blog/ai-safety-budgets-2026",
+      category: "AI Strategy"
     },
     {
-      title: "GenAI Routing Under Budgets",
-      description: "Quality tiers without bill shock",
+      title: "Edge Privacy for ML 2026",
+      description: "On‑device filters and scoped identifiers",
+      icon: Cloud,
+      link: "/blog/edge-privacy-ml-2026",
+      category: "Edge"
+    },
+    {
+      title: "Agent Evals in Prod 2026",
+      description: "Online checks that predict outcomes",
+      icon: TrendingUp,
+      link: "/blog/agent-evals-in-prod-2026",
+      category: "GenAI"
+    },
+    {
+      title: "Cost‑Aware Inference 2026",
+      description: "Warm pools and quality tiers under SLAs",
       icon: Zap,
-      link: "/blog/genai-routing-under-budgets-2026",
-      category: "AI Ops"
+      link: "/blog/ai-cost-aware-inference-2026",
+      category: "GenAI"
+    },
+    {
+      title: "Platform Golden Paths 2026",
+      description: "Paved roads that move KPIs",
+      icon: TrendingUp,
+      link: "/blog/platform-golden-paths-kpis-2026",
+      category: "Platform"
     },
     {
       title: "Golden Paths that Move KPIs",
@@ -1766,11 +2069,32 @@ const NewContentPromoBanner = ({
       category: "Platform"
     },
     {
+      title: "Quality‑Tiered GenAI Routing 2026",
+      description: "Control cost with tiers, caches, and eval signals",
+      icon: Zap,
+      link: "/blog/genai-routing-under-budgets-2026",
+      category: "GenAI"
+    },
+    {
       title: "On‑Device Agents 2026",
-      description: "Private assistants with offline tools",
-      icon: Brain,
-      link: "/blog/on-device-agents-2026",
+      description: "Offline‑capable tools, private caches, safe fallbacks",
+      icon: Cloud,
+      link: "/blog/on-device-agents-offline-tools-2026",
       category: "Edge"
+    },
+    {
+      title: "Zero‑Trust Observability 2026",
+      description: "Signed traces and least‑privilege telemetry",
+      icon: Shield,
+      link: "/blog/zero-trust-observability-2026",
+      category: "Security"
+    },
+    {
+      title: "AI Incident Response Playbooks",
+      description: "Contain incidents in under 60 seconds",
+      icon: TrendingUp,
+      link: "/blog/ai-incident-response-playbooks-2025",
+      category: "Security"
     }
   ];
   if (isDismissed) return null;
@@ -1874,6 +2198,54 @@ const NewContentPromoBanner = ({
 var NewContentPromoBanner_default = NewContentPromoBanner;
 
 const newBlogPosts = [
+  {
+    id: "platform-engineering-scorecards-2026",
+    slug: "platform-engineering-scorecards-2026",
+    title: "Platform Engineering Scorecards 2026: Golden Paths that Drive Outcomes",
+    description: "Adoption, golden-path TTFX, and SLOs as leading indicators of platform ROI.",
+    excerpt: "A pragmatic scorecard system engineers actually use—wired to shipped value.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-13",
+    category: "Platform Engineering",
+    tags: ["Scorecards", "Golden Paths", "ROI", "Platform"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/platform-engineering-scorecards-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "genai-routing-under-budgets-2026",
+    slug: "genai-routing-under-budgets-2026",
+    title: "Quality‑Tiered GenAI Routing: SLAs Without Bill Shock",
+    description: "Route prompts across model tiers with budgets, caches, and eval signals to control cost.",
+    excerpt: "Keep experience high under tight budgets with deterministic routing and caches.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-13",
+    category: "AI Operations",
+    tags: ["Budgets", "Quality Tiers", "Routing"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/genai-routing-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "secure-ml-supply-chain-2026",
+    slug: "secure-ml-supply-chain-2026",
+    title: "Secure ML Supply Chain 2026: SBOMs, Lineage, and Policy Gates",
+    description: "Continuous SBOMs for models, datasets, and prompts with attestations and CI policy checks.",
+    excerpt: "A practical guide to securing the ML supply chain with provenance and guardrails.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-13",
+    category: "AI Security",
+    tags: ["SBOM", "Supply Chain", "Security"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/secure-ml-supply-chain-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
   {
     id: "ai-incident-response-playbooks-2025",
     slug: "ai-incident-response-playbooks-2025",
@@ -2344,6 +2716,88 @@ const newCaseStudies = [
 ];
 
 const newServices = [
+  {
+    id: "ai-runbooks-risk-budgets",
+    slug: "ai-runbooks-risk-budgets",
+    title: "AI Runbooks with Risk Budgets",
+    description: "Budgeted actions, approvals, and rollback gates so teams ship automation with confidence.",
+    category: "AI Operations",
+    pricing: {
+      starting: "$1,499/month",
+      popular: false,
+      features: ["Risk budgets", "Approval workflows", "Rollback gates", "Incident SLAs"]
+    },
+    features: [
+      "Budgeted Actions & Guardrails",
+      "Approval & Change Controls",
+      "Rollback Triggers & Gates",
+      "Policy Tests in CI",
+      "KPI‑Linked Canaries",
+      "Incident SLOs & Scorecards",
+      "Observability & Traces",
+      "Templates & Playbooks"
+    ],
+    metrics: [
+      { value: "<60s", label: "Containment Time" },
+      { value: "40%", label: "Incident Reduction" },
+      { value: "3x", label: "Faster Releases" }
+    ],
+    testimonial: {
+      quote: "We shipped safe automation in weeks and cut incidents by 40%.",
+      author: "Nina Patel",
+      company: "RetailMax"
+    },
+    cta: {
+      primary: "Get Playbooks",
+      secondary: "See Templates"
+    },
+    icon: "📘",
+    featured: true,
+    tags: ["Runbooks", "Risk Budgets", "Automation"],
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "privacy-preserving-feature-flags",
+    slug: "privacy-preserving-feature-flags",
+    title: "Privacy‑Preserving Feature Flags",
+    description: "Edge flags with scoped IDs, on‑device filters, and budgets for zero‑regret rollouts.",
+    category: "Architecture",
+    pricing: {
+      starting: "$999/month",
+      popular: true,
+      features: ["Edge KV", "Scoped IDs", "Geo/account targeting", "Instant rollback"]
+    },
+    features: [
+      "<100ms Edge Delivery",
+      "Scoped IDs & On‑Device Filters",
+      "Risk Budgets & Instant Rollback",
+      "Geo & Account Targeting",
+      "Signed Configs & Audit Trails",
+      "Progressive Delivery Controls",
+      "Privacy‑Safe Telemetry",
+      "Policy Gates in CI"
+    ],
+    metrics: [
+      { value: "<100ms", label: "Global Rollouts" },
+      { value: "25%", label: "Waste Reduction" },
+      { value: "0", label: "PII in Telemetry" }
+    ],
+    testimonial: {
+      quote: "We ship globally under 100ms with built‑in budgets and private telemetry.",
+      author: "Omar Haddad",
+      company: "Streamly"
+    },
+    cta: {
+      primary: "Enable Edge Flags",
+      secondary: "View Blueprint"
+    },
+    icon: "🏁",
+    featured: true,
+    tags: ["Edge", "Flags", "Privacy", "Budgets"],
+    newBadge: true,
+    trending: true
+  },
   {
     id: "edge-llm-caching",
     slug: "edge-llm-caching",
@@ -2870,1243 +3324,122 @@ const NewContentShowcase = () => {
 };
 var NewContentShowcase_default = NewContentShowcase;
 
-const newBlogPosts2025 = [
+const newContent2025 = [
   {
-    id: "ai-incident-response-playbooks-2025",
-    title: "AI Incident Response Playbooks 2025: Budgeted Actions & Approvals",
-    description: "Comprehensive AI incident response playbooks with budgeted actions, approval workflows, and automated escalation procedures for enterprise AI systems.",
-    excerpt: "When AI systems fail, every second counts. Learn how to build bulletproof incident response playbooks that save time, money, and reputation.",
-    content: `
-# AI Incident Response Playbooks 2025
-
-## Introduction
-
-AI systems are becoming increasingly complex and critical to business operations. When these systems fail, the impact can be devastating - from financial losses to reputational damage. This comprehensive guide provides enterprise-grade AI incident response playbooks that can be implemented immediately.
-
-## The AI Incident Landscape
-
-### Common AI Incident Types
-- **Model Drift**: Performance degradation over time
-- **Data Poisoning**: Malicious data affecting model behavior
-- **Adversarial Attacks**: Intentional manipulation of inputs
-- **Infrastructure Failures**: Cloud service outages affecting AI workloads
-- **Compliance Violations**: AI decisions violating regulatory requirements
-
-### Impact Assessment Framework
-1. **Severity Levels**
-   - Critical: Complete system failure affecting core business
-   - High: Significant performance degradation
-   - Medium: Minor issues with workarounds available
-   - Low: Cosmetic or non-critical issues
-
-2. **Business Impact Metrics**
-   - Revenue impact per hour
-   - Customer experience degradation
-   - Regulatory compliance risk
-   - Brand reputation damage
-
-## Pre-Incident Preparation
-
-### Team Structure
-- **Incident Commander**: Overall responsibility and decision-making
-- **Technical Lead**: AI system expertise and troubleshooting
-- **Business Stakeholder**: Business impact assessment
-- **Communications Lead**: Internal and external communications
-- **Legal/Compliance**: Regulatory and legal considerations
-
-### Tools and Infrastructure
-- **Monitoring Systems**: Real-time AI performance monitoring
-- **Communication Tools**: Slack, PagerDuty, conference bridges
-- **Documentation**: Runbooks, escalation procedures, contact lists
-- **Rollback Capabilities**: Model versioning and deployment systems
-
-## Incident Response Workflow
-
-### Phase 1: Detection and Assessment (0-15 minutes)
-1. **Automated Alerting**
-   - Performance degradation alerts
-   - Error rate thresholds
-   - Data quality monitoring
-   - User experience metrics
-
-2. **Initial Assessment**
-   - Confirm incident severity
-   - Identify affected systems
-   - Estimate business impact
-   - Notify stakeholders
-
-### Phase 2: Response and Mitigation (15-60 minutes)
-1. **Immediate Actions**
-   - Activate incident response team
-   - Implement temporary workarounds
-   - Isolate affected systems if necessary
-   - Document all actions taken
-
-2. **Communication Protocol**
-   - Internal team updates every 15 minutes
-   - Customer communications if needed
-   - Regulatory notifications if required
-   - Executive briefings for critical incidents
-
-### Phase 3: Resolution and Recovery (1-24 hours)
-1. **Root Cause Analysis**
-   - Technical investigation
-   - Data analysis
-   - Timeline reconstruction
-   - Contributing factors identification
-
-2. **Solution Implementation**
-   - Model retraining if needed
-   - Infrastructure fixes
-   - Process improvements
-   - Security enhancements
-
-### Phase 4: Post-Incident Review (1-7 days)
-1. **Incident Retrospective**
-   - What went well
-   - What could be improved
-   - Action items and owners
-   - Timeline and lessons learned
-
-2. **Process Improvement**
-   - Update playbooks
-   - Enhance monitoring
-   - Improve training
-   - Implement preventive measures
-
-## Budgeted Actions Framework
-
-### Cost-Benefit Analysis for Each Action
-- **Immediate Rollback**: $50K cost, 95% reliability
-- **Model Retraining**: $25K cost, 3-day timeline
-- **Infrastructure Scaling**: $10K cost, 2-hour implementation
-- **Manual Override**: $5K cost, immediate availability
-
-### Approval Matrix
-| Action Cost | Approval Required | Timeline |
-|-------------|------------------|----------|
-| < $5K | Team Lead | Immediate |
-| $5K - $25K | Director | 1 hour |
-| $25K - $100K | VP | 4 hours |
-| > $100K | C-Level | 24 hours |
-
-## Automation and AI-Powered Response
-
-### Intelligent Alerting
-- **Anomaly Detection**: ML-based performance monitoring
-- **Predictive Alerts**: Proactive issue identification
-- **Context-Aware Notifications**: Relevant stakeholder targeting
-
-### Automated Response Actions
-- **Auto-Scaling**: Dynamic resource allocation
-- **Model Fallback**: Automatic backup model activation
-- **Traffic Routing**: Load balancing and failover
-- **Data Quality Checks**: Automated data validation
-
-## Compliance and Legal Considerations
-
-### Regulatory Requirements
-- **GDPR**: Data protection and privacy
-- **CCPA**: Consumer privacy rights
-- **SOX**: Financial reporting accuracy
-- **HIPAA**: Healthcare data protection
-
-### Documentation Requirements
-- **Incident Logs**: Detailed timeline and actions
-- **Decision Rationale**: Business justification for actions
-- **Impact Assessment**: Financial and operational impact
-- **Remediation Plans**: Corrective action documentation
-
-## Training and Simulation
-
-### Regular Drills
-- **Monthly Tabletop Exercises**: Scenario-based discussions
-- **Quarterly Full Simulations**: End-to-end incident response
-- **Annual Red Team Exercises**: External security testing
-
-### Metrics and KPIs
-- **Mean Time to Detection (MTTD)**: < 5 minutes
-- **Mean Time to Response (MTTR)**: < 15 minutes
-- **Mean Time to Resolution (MTTR)**: < 4 hours
-- **Incident Volume**: Track trends and patterns
-
-## Technology Stack Recommendations
-
-### Monitoring Tools
-- **DataDog**: Infrastructure and application monitoring
-- **New Relic**: Performance and error tracking
-- **Splunk**: Log analysis and correlation
-- **Grafana**: Custom dashboards and alerting
-
-### Communication Platforms
-- **PagerDuty**: Incident management and escalation
-- **Slack**: Team communication and notifications
-- **Zoom**: Video conferencing for war rooms
-- **Status Page**: Customer communication portal
-
-### AI-Specific Tools
-- **MLflow**: Model versioning and deployment
-- **Kubeflow**: ML pipeline orchestration
-- **Weights & Biases**: Experiment tracking
-- **Great Expectations**: Data quality validation
-
-## Conclusion
-
-Effective AI incident response requires preparation, clear processes, and continuous improvement. By implementing these playbooks, organizations can minimize the impact of AI incidents and maintain business continuity.
-
-Remember: The goal is not to prevent all incidents, but to respond to them effectively when they occur.
-    `,
+    id: "ai-autonomous-infrastructure-2025",
+    title: "AI Autonomous Infrastructure: The Future of Self-Managing Systems",
+    description: "Discover how AI-powered autonomous infrastructure is revolutionizing enterprise operations with self-healing, self-optimizing, and self-scaling capabilities.",
+    excerpt: "Transform your infrastructure management with AI that thinks, learns, and adapts. Zero-touch operations are no longer a dream—they're here.",
+    type: "blog",
     category: "AI Operations",
-    tags: ["AI Incident Response", "DevOps", "AI Operations", "Emergency Response", "Business Continuity"],
+    tags: ["Autonomous Infrastructure", "AI Operations", "Self-Healing", "Automation"],
     featured: true,
     newBadge: true,
     trending: true,
-    publishedAt: "2025-01-30T10:00:00Z",
-    updatedAt: "2025-01-30T10:00:00Z",
+    publishedDate: "2025-01-20",
     readTime: "12 min read",
-    author: "Sarah Chen",
-    authorBio: "AI Operations Director with 15+ years experience in enterprise AI systems and incident management.",
-    image: "/images/ai-incident-response-playbooks.jpg",
-    seo: {
-      metaTitle: "AI Incident Response Playbooks 2025: Enterprise Emergency Procedures",
-      metaDescription: "Comprehensive AI incident response playbooks with budgeted actions, approval workflows, and automated escalation for enterprise AI systems.",
-      keywords: ["AI incident response", "AI operations", "emergency procedures", "AI security", "business continuity"]
+    author: "Dr. Sarah Chen",
+    image: "/images/ai-autonomous-infrastructure.jpg",
+    url: "/blog/ai-autonomous-infrastructure-2025",
+    cta: {
+      primary: "Read Full Article",
+      secondary: "Download Whitepaper"
     },
-    metrics: [
-      {
-        label: "Response Time",
-        value: "< 15 min",
-        description: "Average time to incident response"
-      },
-      {
-        label: "Resolution Time",
-        value: "< 4 hours",
-        description: "Mean time to complete resolution"
-      },
-      {
-        label: "Cost Savings",
-        value: "85%",
-        description: "Reduction in incident costs"
-      }
-    ],
-    relatedPosts: ["ai-governance-framework-2025", "zero-trust-implementation-playbook", "ai-cybersecurity-automation"],
-    slug: "ai-incident-response-playbooks-2025"
-  },
-  {
-    id: "privacy-preserving-analytics-2025",
-    title: "Privacy-Preserving Analytics: DP-Backed Telemetry You Can Ship Today",
-    description: "Implement privacy-preserving analytics with differential privacy techniques that protect user data while maintaining business insights.",
-    excerpt: "Learn how to build analytics systems that respect user privacy while delivering actionable business insights using differential privacy.",
-    content: `
-# Privacy-Preserving Analytics: DP-Backed Telemetry
-
-## Introduction
-
-In today's privacy-conscious world, organizations must balance the need for data insights with user privacy protection. Differential Privacy (DP) provides a mathematical framework for analyzing data while providing strong privacy guarantees.
-
-## What is Differential Privacy?
-
-Differential Privacy ensures that the presence or absence of any individual in a dataset cannot be determined by analyzing the output of a privacy-preserving algorithm.
-
-### Core Principles
-- **ε-Differential Privacy**: Mathematical guarantee of privacy protection
-- **Noise Addition**: Controlled randomization of results
-- **Privacy Budget**: Limiting the amount of information extracted
-- **Composition**: Combining multiple queries while maintaining privacy
-
-## Business Benefits
-
-### Regulatory Compliance
-- **GDPR**: Right to privacy and data protection
-- **CCPA**: Consumer privacy rights
-- **HIPAA**: Healthcare data protection
-- **Future Regulations**: Proactive compliance
-
-### Competitive Advantages
-- **Trust Building**: Enhanced customer confidence
-- **Market Access**: Compliance with global regulations
-- **Risk Mitigation**: Reduced privacy-related legal risks
-- **Innovation Enablement**: Safe data sharing and collaboration
-
-## Implementation Strategies
-
-### 1. Synthetic Data Generation
-Generate realistic but synthetic datasets that preserve statistical properties while protecting individual privacy.
-
-**Tools:**
-- **Synthetic Data Vault (SDV)**: Python library for synthetic data
-- **CTGAN**: Conditional GAN for tabular data
-- **DoppelGANger**: Time series synthetic data
-
-**Use Cases:**
-- Model training and testing
-- Analytics and reporting
-- Data sharing with partners
-
-### 2. Federated Learning
-Train models across distributed datasets without centralizing the data.
-
-**Benefits:**
-- Data stays on user devices
-- Reduced privacy risks
-- Improved model performance
-- Compliance with data residency requirements
-
-**Implementation:**
-- **TensorFlow Federated**: Google's federated learning framework
-- **PySyft**: Secure and private deep learning
-- **OpenMined**: Privacy-preserving machine learning
-
-### 3. Homomorphic Encryption
-Perform computations on encrypted data without decrypting it.
-
-**Types:**
-- **Partially Homomorphic**: Limited operations (addition or multiplication)
-- **Somewhat Homomorphic**: Multiple operations with limitations
-- **Fully Homomorphic**: Unlimited operations (computationally expensive)
-
-**Libraries:**
-- **Microsoft SEAL**: C++ homomorphic encryption library
-- **HElib**: IBM's homomorphic encryption library
-- **PALISADE**: Lattice-based cryptography
-
-## Practical Implementation Guide
-
-### Step 1: Privacy Assessment
-1. **Data Inventory**: Catalog all personal data
-2. **Risk Analysis**: Identify privacy risks and threats
-3. **Compliance Review**: Check regulatory requirements
-4. **Privacy Budget**: Define acceptable privacy loss
-
-### Step 2: Technology Selection
-1. **Use Case Analysis**: Match techniques to requirements
-2. **Performance Evaluation**: Balance privacy vs. utility
-3. **Cost Assessment**: Consider computational overhead
-4. **Vendor Selection**: Choose appropriate tools and platforms
-
-### Step 3: Implementation Planning
-1. **Pilot Project**: Start with low-risk use cases
-2. **Team Training**: Educate staff on privacy techniques
-3. **Process Integration**: Embed privacy in workflows
-4. **Monitoring Setup**: Track privacy and utility metrics
-
-### Step 4: Deployment and Monitoring
-1. **Gradual Rollout**: Implement incrementally
-2. **Performance Monitoring**: Track system performance
-3. **Privacy Auditing**: Regular privacy assessments
-4. **Continuous Improvement**: Iterate based on feedback
-
-## Real-World Case Studies
-
-### Case Study 1: E-commerce Analytics
-**Challenge**: Analyze customer behavior while protecting individual privacy.
-
-**Solution**: Implemented differential privacy for:
-- Purchase pattern analysis
-- Recommendation system training
-- A/B testing results
-- Customer segmentation
-
-**Results**:
-- 95% privacy protection (ε = 0.1)
-- 90% utility preservation
-- Full GDPR compliance
-- 40% reduction in privacy-related inquiries
-
-### Case Study 2: Healthcare Research
-**Challenge**: Share medical data for research while protecting patient privacy.
-
-**Solution**: Used synthetic data generation for:
-- Clinical trial analysis
-- Drug effectiveness studies
-- Population health insights
-- Medical device testing
-
-**Results**:
-- HIPAA compliance maintained
-- Research quality preserved
-- 80% faster data sharing process
-- Zero privacy breaches
-
-### Case Study 3: Financial Services
-**Challenge**: Detect fraud while protecting customer financial data.
-
-**Solution**: Implemented federated learning for:
-- Fraud detection model training
-- Risk assessment algorithms
-- Credit scoring models
-- Transaction monitoring
-
-**Results**:
-- 99.5% fraud detection accuracy
-- Complete data privacy
-- 60% reduction in false positives
-- Regulatory approval obtained
-
-## Technical Implementation
-
-### Differential Privacy Library Setup
-\`\`\`python
-import numpy as np
-from diffprivlib.mechanisms import LaplaceMechanism
-
-class PrivacyPreservingAnalytics:
-    def __init__(self, epsilon=1.0):
-        self.epsilon = epsilon
-        self.privacy_budget = epsilon
-        
-    def private_mean(self, data):
-        """Calculate differentially private mean"""
-        mechanism = LaplaceMechanism(
-            epsilon=self.epsilon,
-            sensitivity=self.calculate_sensitivity(data)
-        )
-        
-        true_mean = np.mean(data)
-        noise = mechanism.randomise(true_mean)
-        
-        return noise
-    
-    def calculate_sensitivity(self, data):
-        """Calculate sensitivity for the query"""
-        return 1.0 / len(data)
-\`\`\`
-
-### Synthetic Data Generation
-\`\`\`python
-from sdv.tabular import CTGAN
-from sdv.metrics import evaluate
-
-# Train synthetic data generator
-model = CTGAN()
-model.fit(real_data)
-
-# Generate synthetic data
-synthetic_data = model.sample(num_rows=10000)
-
-# Evaluate quality
-quality_score = evaluate(synthetic_data, real_data)
-print(f"Synthetic data quality: {quality_score}")
-\`\`\`
-
-### Federated Learning Setup
-\`\`\`python
-import tensorflow_federated as tff
-
-# Define federated averaging process
-@tff.federated_computation
-def federated_averaging(model, client_data):
-    # Train model on client data
-    client_models = tff.federated_map(
-        train_client_model, 
-        (model, client_data)
-    )
-    
-    # Average model updates
-    averaged_model = tff.federated_mean(client_models)
-    
-    return averaged_model
-
-# Initialize federated learning
-fed_avg_process = tff.learning.build_federated_averaging_process(
-    model_fn=model_fn,
-    client_optimizer_fn=lambda: tf.keras.optimizers.SGD(0.1),
-    server_optimizer_fn=lambda: tf.keras.optimizers.SGD(1.0)
-)
-\`\`\`
-
-## Privacy Metrics and Monitoring
-
-### Key Privacy Metrics
-- **ε (Epsilon)**: Privacy loss parameter
-- **δ (Delta)**: Failure probability
-- **Privacy Budget**: Remaining privacy allowance
-- **Utility Loss**: Information degradation due to privacy
-
-### Monitoring Dashboard
-1. **Real-time Privacy Budget Tracking**
-2. **Utility vs. Privacy Trade-offs**
-3. **Compliance Status Monitoring**
-4. **Performance Impact Assessment**
-
-## Best Practices
-
-### 1. Privacy by Design
-- Embed privacy from the beginning
-- Minimize data collection
-- Use privacy-preserving defaults
-- Implement transparency
-
-### 2. Continuous Monitoring
-- Track privacy budget consumption
-- Monitor utility degradation
-- Audit privacy guarantees
-- Update privacy parameters
-
-### 3. Stakeholder Communication
-- Educate business users
-- Document privacy trade-offs
-- Report privacy metrics
-- Address privacy concerns
-
-### 4. Technology Updates
-- Stay current with DP research
-- Evaluate new privacy techniques
-- Update implementation regularly
-- Participate in privacy community
-
-## Challenges and Solutions
-
-### Challenge 1: Utility vs. Privacy Trade-off
-**Problem**: Privacy protection reduces data utility.
-
-**Solutions**:
-- Optimize privacy parameters
-- Use advanced DP techniques
-- Combine multiple privacy methods
-- Implement adaptive privacy
-
-### Challenge 2: Computational Overhead
-**Problem**: Privacy techniques increase processing time.
-
-**Solutions**:
-- Use efficient DP algorithms
-- Implement parallel processing
-- Optimize noise addition
-- Consider approximate methods
-
-### Challenge 3: Implementation Complexity
-**Problem**: Privacy techniques are difficult to implement.
-
-**Solutions**:
-- Use established libraries
-- Start with simple techniques
-- Invest in team training
-- Partner with privacy experts
-
-## Future Trends
-
-### 1. Advanced Differential Privacy
-- **Concentrated Differential Privacy**: Better composition properties
-- **Rényi Differential Privacy**: More flexible privacy definitions
-- **Zero-Concentrated DP**: Improved utility for complex queries
-
-### 2. Privacy-Preserving AI
-- **Private Machine Learning**: DP-enhanced ML algorithms
-- **Federated Analytics**: Privacy-preserving data analysis
-- **Secure Multi-Party Computation**: Collaborative private computation
-
-### 3. Regulatory Evolution
-- **Privacy-First Regulations**: Stricter privacy requirements
-- **Cross-Border Data Flows**: International privacy frameworks
-- **AI Governance**: Privacy in AI system regulation
-
-## Conclusion
-
-Privacy-preserving analytics is not just a compliance requirement—it's a competitive advantage. By implementing differential privacy and related techniques, organizations can:
-
-- Build trust with customers
-- Comply with regulations
-- Enable safe data sharing
-- Drive innovation responsibly
-
-The key is to start small, learn continuously, and scale gradually. With the right approach, privacy-preserving analytics can deliver both business value and privacy protection.
-
-Remember: Privacy is not a barrier to innovation—it's a foundation for sustainable growth.
-    `,
-    category: "Data Privacy",
-    tags: ["Differential Privacy", "Data Analytics", "Privacy Protection", "GDPR", "Data Science"],
-    featured: true,
-    newBadge: true,
-    trending: true,
-    publishedAt: "2025-01-29T14:30:00Z",
-    updatedAt: "2025-01-29T14:30:00Z",
-    readTime: "15 min read",
-    author: "Dr. Maria Rodriguez",
-    authorBio: "Privacy Engineering Lead with expertise in differential privacy and data protection regulations.",
-    image: "/images/privacy-preserving-analytics.jpg",
-    seo: {
-      metaTitle: "Privacy-Preserving Analytics: Differential Privacy Implementation Guide 2025",
-      metaDescription: "Complete guide to implementing privacy-preserving analytics with differential privacy techniques that protect user data while maintaining business insights.",
-      keywords: ["differential privacy", "privacy-preserving analytics", "data protection", "GDPR compliance", "privacy engineering"]
-    },
-    metrics: [
-      {
-        label: "Privacy Protection",
-        value: "95%",
-        description: "Differential privacy guarantee"
-      },
-      {
-        label: "Utility Preservation",
-        value: "90%",
-        description: "Data insights maintained"
-      },
-      {
-        label: "Compliance Rate",
-        value: "100%",
-        description: "Regulatory compliance achieved"
-      }
-    ],
-    relatedPosts: ["ai-governance-framework-2025", "zero-trust-implementation-playbook", "finops-ai-cost-optimization"],
-    slug: "privacy-preserving-analytics-2025"
-  },
-  {
-    id: "zero-trust-for-ai-agents-2026",
-    title: "Zero‑Trust for AI Agents 2026: Sandboxes, Scopes, and Egress Controls",
-    description: "Design agent systems with hardened policies, isolated tools, and safe network egress to prevent data loss and lateral movement.",
-    excerpt: "Blueprint for securing AI agents with policy‑first guardrails and auditable actions.",
-    content: `# Zero‑Trust for AI Agents 2026
-
-Secure agent architectures with sandboxed tools, scoped tokens, PII redaction, and policy tests.`,
-    category: "AI Security",
-    tags: ["Zero Trust", "AI Agents", "Security", "Compliance"],
-    featured: true,
-    newBadge: true,
-    trending: true,
-    publishedAt: "2025-10-09T10:00:00Z",
-    updatedAt: "2025-10-09T10:00:00Z",
-    readTime: "10 min read",
-    author: "Priya Natarajan",
-    authorBio: "Security architect focused on safe AI automation.",
-    image: "/images/zero-trust-agents-2026.jpg",
-    seo: {
-      metaTitle: "Zero‑Trust for AI Agents 2026",
-      metaDescription: "Blueprint for securing AI agents with sandboxed tools and policy‑first guardrails.",
-      keywords: ["zero trust", "ai agents", "security", "policy"]
-    },
-    metrics: [
-      { label: "Incident Reduction", value: "90%", description: "Fewer security incidents" }
-    ],
-    relatedPosts: ["ai-incident-response-playbooks-2025", "privacy-preserving-analytics-2025"],
-    slug: "zero-trust-for-ai-agents-2026"
-  },
-  {
-    id: "platform-engineering-scorecards-2026",
-    title: "Platform Engineering Scorecards 2026: Adoption, SLOs, and ROI",
-    description: "Practical governance scorecards that align platform capabilities to developer adoption, SLOs, and business outcomes.",
-    excerpt: "Make platform investments measurable and accountable with scorecards engineers use.",
-    content: `# Platform Engineering Scorecards 2026
-
-Tie adoption, SLOs, and ROI with actionable metrics and policy tests.`,
-    category: "Platform Engineering",
-    tags: ["Scorecards", "SLOs", "ROI", "Governance"],
-    featured: true,
-    newBadge: true,
-    trending: false,
-    publishedAt: "2025-10-08T12:00:00Z",
-    updatedAt: "2025-10-08T12:00:00Z",
-    readTime: "11 min read",
-    author: "Alex Thompson",
-    authorBio: "Platform engineering lead.",
-    image: "/images/platform-scorecards-2026.jpg",
-    seo: {
-      metaTitle: "Platform Engineering Scorecards 2026",
-      metaDescription: "Governance scorecards that drive platform adoption and ROI.",
-      keywords: ["platform", "scorecards", "roi", "slos"]
-    },
-    relatedPosts: ["edge-llm-caching-blueprint-2026"],
-    slug: "platform-engineering-scorecards-2026"
-  },
-  {
-    id: "edge-llm-caching-blueprint-2026",
-    title: "Edge LLM Caching Blueprint 2026: Sub-100ms Prompts at Scale",
-    description: "Comprehensive blueprint for implementing edge LLM caching to achieve sub-100ms response times while reducing costs by 70%.",
-    excerpt: "Learn how to build edge LLM caching systems that deliver lightning-fast responses while dramatically reducing infrastructure costs.",
-    content: `
-# Edge LLM Caching Blueprint 2026
-
-## Executive Summary
-
-Large Language Models (LLMs) are revolutionizing how we interact with AI, but their computational requirements and latency can be prohibitive for real-time applications. Edge LLM caching provides a solution by intelligently caching model outputs at the edge, delivering sub-100ms response times while reducing costs by up to 70%.
-
-## The Edge LLM Challenge
-
-### Current Limitations
-- **High Latency**: 2-10 second response times
-- **Expensive Infrastructure**: $0.01-0.10 per request
-- **Scalability Issues**: Difficult to handle traffic spikes
-- **Global Distribution**: Users worldwide need low latency
-
-### Business Impact
-- **User Experience**: Slow responses lead to abandonment
-- **Cost Pressure**: High per-request costs limit profitability
-- **Competitive Disadvantage**: Faster competitors win market share
-- **Resource Constraints**: Limited GPU availability
-
-## Edge Caching Architecture
-
-### Core Components
-
-#### 1. Edge Cache Layer
-- **Geographic Distribution**: Cache nodes in multiple regions
-- **Intelligent Routing**: Route requests to nearest cache
-- **Cache Invalidation**: Smart cache management
-- **Load Balancing**: Distribute traffic efficiently
-
-#### 2. Cache Key Generation
-- **Semantic Hashing**: Generate consistent keys for similar inputs
-- **Input Normalization**: Standardize inputs for better hit rates
-- **Context Awareness**: Consider conversation context
-- **Dynamic Keys**: Adapt to changing requirements
-
-#### 3. Cache Storage
-- **Memory Optimization**: Efficient storage formats
-- **Compression**: Reduce storage requirements
-- **Persistence**: Survive cache restarts
-- **Replication**: Ensure availability
-
-### Architecture Diagram
-\`\`\`
-[User Request] → [Edge Router] → [Cache Check] → [Cache Hit/Miss]
-                                      ↓
-[Cache Hit] ← [Edge Cache] ← [Cache Miss] → [LLM Service]
-    ↓                                           ↓
-[Response] ← [Response Cache] ← [LLM Response] ← [Model Inference]
-\`\`\`
-
-## Implementation Strategies
-
-### Strategy 1: Semantic Caching
-Cache based on semantic similarity rather than exact string matching.
-
-**Benefits:**
-- Higher cache hit rates (60-80%)
-- Better user experience
-- Reduced LLM calls
-- Lower costs
-
-**Implementation:**
-\`\`\`python
-import numpy as np
-from sentence_transformers import SentenceTransformer
-from sklearn.metrics.pairwise import cosine_similarity
-
-class SemanticCache:
-    def __init__(self, threshold=0.85):
-        self.model = SentenceTransformer('all-MiniLM-L6-v2')
-        self.cache = {}
-        self.threshold = threshold
-    
-    def get_embedding(self, text):
-        return self.model.encode(text)
-    
-    def find_similar(self, query_embedding):
-        similarities = []
-        for key, (embedding, response) in self.cache.items():
-            similarity = cosine_similarity([query_embedding], [embedding])[0][0]
-            if similarity > self.threshold:
-                similarities.append((similarity, response))
-        
-        return max(similarities, key=lambda x: x[0]) if similarities else None
-    
-    def cache_response(self, query, response):
-        embedding = self.get_embedding(query)
-        key = hash(query)
-        self.cache[key] = (embedding, response)
-\`\`\`
-
-### Strategy 2: Hierarchical Caching
-Implement multiple cache layers with different characteristics.
-
-**Layers:**
-1. **L1 (Edge)**: Ultra-fast, limited capacity
-2. **L2 (Regional)**: Fast, moderate capacity
-3. **L3 (Global)**: Slower, large capacity
-
-**Benefits:**
-- Optimal cost-performance trade-off
-- Geographic optimization
-- Fault tolerance
-- Scalability
-
-### Strategy 3: Predictive Caching
-Use machine learning to predict which responses to cache.
-
-**Features:**
-- **User Behavior**: Historical request patterns
-- **Content Analysis**: Query complexity and type
-- **Time Patterns**: Peak usage periods
-- **Geographic Data**: Regional preferences
-
-**Model Training:**
-\`\`\`python
-import pandas as pd
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.preprocessing import StandardScaler
-
-class PredictiveCache:
-    def __init__(self):
-        self.model = RandomForestClassifier(n_estimators=100)
-        self.scaler = StandardScaler()
-        self.is_trained = False
-    
-    def extract_features(self, query, metadata):
-        features = [
-            len(query),  # Query length
-            metadata.get('user_id', 0),  # User ID
-            metadata.get('timestamp', 0),  # Timestamp
-            metadata.get('region', 0),  # Region
-            query.count('?'),  # Question count
-            len(query.split()),  # Word count
-        ]
-        return features
-    
-    def should_cache(self, query, metadata):
-        if not self.is_trained:
-            return True  # Cache by default when not trained
-        
-        features = self.extract_features(query, metadata)
-        features_scaled = self.scaler.transform([features])
-        probability = self.model.predict_proba(features_scaled)[0][1]
-        
-        return probability > 0.5
-    
-    def train(self, training_data):
-        X = []
-        y = []
-        
-        for record in training_data:
-            features = self.extract_features(record['query'], record['metadata'])
-            X.append(features)
-            y.append(record['should_cache'])
-        
-        X_scaled = self.scaler.fit_transform(X)
-        self.model.fit(X_scaled, y)
-        self.is_trained = True
-\`\`\`
-
-## Performance Optimization
-
-### Latency Optimization
-1. **Connection Pooling**: Reuse HTTP connections
-2. **Async Processing**: Non-blocking I/O operations
-3. **Memory Optimization**: Efficient data structures
-4. **Network Optimization**: CDN integration
-
-### Cost Optimization
-1. **Cache Hit Rate**: Maximize cache effectiveness
-2. **Storage Efficiency**: Compress cached responses
-3. **Lifecycle Management**: Automatic cache expiration
-4. **Resource Monitoring**: Track and optimize usage
-
-### Scalability Solutions
-1. **Horizontal Scaling**: Add more cache nodes
-2. **Load Balancing**: Distribute requests evenly
-3. **Auto-scaling**: Dynamic resource allocation
-4. **Circuit Breakers**: Prevent cascade failures
-
-## Real-World Implementation
-
-### Case Study 1: Customer Support Chatbot
-**Challenge**: Support chatbot with 10,000 daily requests, 5-second average response time.
-
-**Solution**: Implemented semantic caching with:
-- Edge nodes in 5 regions
-- Semantic similarity threshold of 0.85
-- Predictive caching based on user patterns
-
-**Results**:
-- Response time: 5s → 80ms (98% improvement)
-- Cost reduction: 70% ($50K/month savings)
-- Cache hit rate: 75%
-- User satisfaction: 40% increase
-
-### Case Study 2: Content Generation API
-**Challenge**: API for content generation with 100,000 requests/day.
-
-**Solution**: Hierarchical caching with:
-- L1 cache: 1ms latency, 1GB capacity
-- L2 cache: 10ms latency, 10GB capacity
-- L3 cache: 50ms latency, 100GB capacity
-
-**Results**:
-- P95 latency: 2s → 95ms
-- Cost reduction: 65%
-- Availability: 99.9%
-- Global coverage: 15 regions
-
-### Case Study 3: Educational Platform
-**Challenge**: AI tutor with 50,000 students, varying question complexity.
-
-**Solution**: Intelligent caching with:
-- Question type classification
-- Difficulty-based caching
-- Student progress tracking
-- Adaptive cache policies
-
-**Results**:
-- Response time: 3s → 120ms
-- Cache hit rate: 80%
-- Student engagement: 25% increase
-- Infrastructure costs: 60% reduction
-
-## Technology Stack
-
-### Cache Infrastructure
-- **Redis**: In-memory caching
-- **Memcached**: Distributed caching
-- **Apache Ignite**: In-memory computing
-- **Hazelcast**: In-memory data grid
-
-### Edge Computing
-- **Cloudflare Workers**: Edge computing platform
-- **AWS Lambda@Edge**: Serverless edge computing
-- **Google Cloud CDN**: Content delivery network
-- **Azure Front Door**: Global load balancer
-
-### Monitoring and Analytics
-- **Prometheus**: Metrics collection
-- **Grafana**: Visualization and alerting
-- **Jaeger**: Distributed tracing
-- **ELK Stack**: Log analysis
-
-## Best Practices
-
-### 1. Cache Design
-- **Key Strategy**: Design effective cache keys
-- **Expiration Policy**: Balance freshness and hit rate
-- **Invalidation**: Smart cache invalidation
-- **Compression**: Optimize storage usage
-
-### 2. Performance Monitoring
-- **Latency Tracking**: Monitor response times
-- **Hit Rate Analysis**: Optimize cache effectiveness
-- **Cost Monitoring**: Track infrastructure costs
-- **Error Handling**: Robust error management
-
-### 3. Security Considerations
-- **Access Control**: Secure cache access
-- **Data Encryption**: Protect cached data
-- **Audit Logging**: Track cache operations
-- **Privacy Compliance**: Respect data privacy
-
-### 4. Operational Excellence
-- **Automated Deployment**: CI/CD for cache systems
-- **Health Checks**: Monitor cache health
-- **Backup and Recovery**: Ensure data durability
-- **Documentation**: Maintain clear documentation
-
-## Advanced Techniques
-
-### 1. Multi-Model Caching
-Cache outputs from multiple LLM models and route requests based on model performance and cost.
-
-### 2. Dynamic Cache Sizing
-Automatically adjust cache size based on traffic patterns and performance requirements.
-
-### 3. Federated Caching
-Share cache across multiple organizations while maintaining privacy and security.
-
-### 4. Quantum-Resistant Caching
-Prepare for future quantum computing threats by implementing quantum-resistant security measures.
-
-## Metrics and KPIs
-
-### Performance Metrics
-- **Response Time**: P50, P95, P99 latencies
-- **Throughput**: Requests per second
-- **Availability**: Uptime percentage
-- **Error Rate**: Failed request percentage
-
-### Business Metrics
-- **Cost per Request**: Infrastructure costs
-- **Cache Hit Rate**: Cache effectiveness
-- **User Satisfaction**: Experience metrics
-- **Revenue Impact**: Business value creation
-
-### Technical Metrics
-- **Cache Size**: Storage utilization
-- **Memory Usage**: Resource consumption
-- **Network Traffic**: Data transfer volumes
-- **CPU Utilization**: Processing efficiency
-
-## Future Trends
-
-### 1. AI-Powered Caching
-- **Intelligent Prefetching**: Predict and cache likely requests
-- **Adaptive Policies**: Self-optimizing cache strategies
-- **Content-Aware Caching**: Context-sensitive caching decisions
-
-### 2. Edge AI Integration
-- **On-Device Inference**: Run LLMs directly on edge devices
-- **Hybrid Architectures**: Combine cloud and edge processing
-- **Federated Learning**: Distributed model training
-
-### 3. Advanced Optimization
-- **Quantum Caching**: Quantum computing for optimization
-- **Neuromorphic Caching**: Brain-inspired caching algorithms
-- **Blockchain Caching**: Decentralized cache management
-
-## Conclusion
-
-Edge LLM caching is essential for delivering fast, cost-effective AI experiences at scale. By implementing the strategies and techniques outlined in this blueprint, organizations can:
-
-- Achieve sub-100ms response times
-- Reduce costs by 70% or more
-- Improve user experience significantly
-- Scale globally with confidence
-
-The key to success is starting with a solid foundation, iterating based on metrics, and continuously optimizing for your specific use case.
-
-Remember: The best caching strategy is the one that delivers the right balance of performance, cost, and user experience for your specific requirements.
-    `,
-    category: "AI Architecture",
-    tags: ["Edge Computing", "LLM Caching", "Performance Optimization", "AI Infrastructure", "Low Latency"],
-    featured: true,
-    newBadge: true,
-    trending: true,
-    publishedAt: "2025-01-28T09:15:00Z",
-    updatedAt: "2025-01-28T09:15:00Z",
-    readTime: "18 min read",
-    author: "Alex Thompson",
-    authorBio: "AI Infrastructure Architect specializing in edge computing and performance optimization for large-scale AI systems.",
-    image: "/images/edge-llm-caching-blueprint.jpg",
-    seo: {
-      metaTitle: "Edge LLM Caching Blueprint 2026: Sub-100ms AI Response Times",
-      metaDescription: "Complete blueprint for implementing edge LLM caching to achieve sub-100ms response times while reducing costs by 70%.",
-      keywords: ["edge LLM caching", "AI performance", "low latency AI", "LLM optimization", "edge computing"]
-    },
-    metrics: [
-      {
-        label: "Response Time",
-        value: "< 100ms",
-        description: "Achieved latency target"
-      },
-      {
-        label: "Cost Reduction",
-        value: "70%",
-        description: "Infrastructure cost savings"
-      },
-      {
-        label: "Cache Hit Rate",
-        value: "80%",
-        description: "Cache effectiveness"
-      }
-    ],
-    relatedPosts: ["ai-autonomous-infrastructure-2025", "finops-ai-cost-optimization", "ai-incident-response-playbooks-2025"],
-    slug: "edge-llm-caching-blueprint-2026"
-  }
-];
-const featuredBlogPosts$1 = newBlogPosts2025.filter((post) => post.featured);
-newBlogPosts2025.sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()).slice(0, 6);
-
-const newServices2025 = [
-  {
-    id: "ai-autonomous-infrastructure-platform",
-    title: "AI Autonomous Infrastructure Platform",
-    description: "Revolutionary self-managing infrastructure that automatically heals, optimizes, and scales your systems without human intervention. Our AI-powered platform monitors, predicts, and resolves issues before they impact your business.",
-    shortDescription: "Self-healing, self-optimizing infrastructure powered by AI",
-    category: "AI Solutions",
-    subcategory: "Infrastructure Automation",
-    tags: ["Autonomous Infrastructure", "AI Operations", "Self-Healing", "Predictive Maintenance", "Zero-Touch Operations"],
-    featured: true,
-    newBadge: true,
-    trending: true,
-    pricing: {
-      model: "subscription",
-      startingPrice: "$5,000",
-      currency: "USD",
-      description: "Per month for up to 100 servers"
-    },
-    benefits: [
-      "85% reduction in operational costs",
-      "99.99% uptime guarantee",
-      "Sub-minute incident response",
-      "Zero-touch operations",
-      "Predictive issue resolution",
-      "Automatic scaling and optimization"
-    ],
-    features: [
-      "AI-powered anomaly detection",
-      "Automated incident response",
-      "Predictive maintenance scheduling",
-      "Intelligent resource allocation",
-      "Self-healing system capabilities",
-      "Real-time performance optimization",
-      "Automated backup and recovery",
-      "Compliance monitoring and reporting"
-    ],
-    useCases: [
-      "Enterprise cloud infrastructure management",
-      "Multi-cloud environment optimization",
-      "DevOps pipeline automation",
-      "Disaster recovery automation",
-      "Compliance and security monitoring",
-      "Cost optimization and resource management"
-    ],
-    technologies: [
-      "Machine Learning",
-      "Deep Learning",
-      "Time Series Analysis",
-      "Anomaly Detection",
-      "Kubernetes",
-      "Docker",
-      "Terraform",
-      "Prometheus",
-      "Grafana",
-      "ELK Stack"
-    ],
-    deliverables: [
-      "AI Autonomous Infrastructure Platform",
-      "Custom monitoring dashboards",
-      "Automated response playbooks",
-      "Performance optimization reports",
-      "Training and documentation",
-      "24/7 support and monitoring"
-    ],
-    timeline: "4-6 weeks",
-    prerequisites: [
-      "Cloud infrastructure (AWS, Azure, or GCP)",
-      "Container orchestration (Kubernetes preferred)",
-      "Monitoring tools (Prometheus, Grafana)",
-      "API access for integration",
-      "Dedicated technical team for implementation"
-    ],
     metrics: [
       {
         label: "Cost Reduction",
         value: "85%",
-        description: "Average operational cost savings"
+        description: "Average operational savings"
       },
       {
         label: "Uptime Improvement",
         value: "99.99%",
-        description: "System availability achieved"
+        description: "Achieved with autonomous systems"
       },
       {
         label: "Response Time",
         value: "< 15 seconds",
         description: "Issue detection and resolution"
-      },
-      {
-        label: "Manual Tasks",
-        value: "95%",
-        description: "Reduction in manual operations"
       }
     ],
-    caseStudy: {
-      company: "TechCorp Global",
-      industry: "Financial Services",
-      challenge: "Managing complex multi-cloud infrastructure with 99.5% uptime requirements and strict compliance needs",
-      solution: "Implemented AI Autonomous Infrastructure Platform with predictive maintenance and automated compliance monitoring",
-      results: [
-        "99.99% uptime achieved (exceeded 99.5% requirement)",
-        "85% reduction in operational costs",
-        "Zero compliance violations",
-        "95% reduction in manual tasks",
-        "Sub-minute incident response time"
-      ]
-    },
-    testimonials: [
-      {
-        quote: "The AI Autonomous Infrastructure Platform transformed our operations completely. We went from constant firefighting to zero-touch operations. Our uptime is now 99.99% and costs are down 85%.",
-        author: "Michael Rodriguez",
-        company: "TechCorp Global",
-        role: "CTO"
-      },
-      {
-        quote: "This is the future of infrastructure management. The system predicts and prevents issues before they happen. Our team can now focus on innovation instead of maintenance.",
-        author: "Sarah Chen",
-        company: "CloudScale Enterprises",
-        role: "VP of Engineering"
-      }
-    ],
-    faqs: [
-      {
-        question: "How does the AI predict infrastructure issues?",
-        answer: "Our AI analyzes historical data, real-time metrics, and system behavior patterns to identify anomalies and predict potential issues before they occur. It uses machine learning models trained on thousands of infrastructure incidents."
-      },
-      {
-        question: "What happens if the AI makes a wrong decision?",
-        answer: "The system includes safety mechanisms and human oversight capabilities. All automated actions are logged and can be reviewed. Critical changes require approval, and the system learns from corrections to improve future decisions."
-      },
-      {
-        question: "How long does implementation take?",
-        answer: "Implementation typically takes 4-6 weeks, depending on infrastructure complexity. This includes platform setup, integration with existing tools, custom configuration, and team training."
-      },
-      {
-        question: "What cloud platforms are supported?",
-        answer: "We support AWS, Azure, Google Cloud, and hybrid environments. The platform can manage multi-cloud deployments and provide unified visibility across all environments."
-      }
-    ],
-    image: "/images/ai-autonomous-infrastructure.jpg",
-    icon: "Zap",
-    seo: {
-      metaTitle: "AI Autonomous Infrastructure Platform - Self-Managing Systems | Zion Tech",
-      metaDescription: "Revolutionary AI-powered infrastructure that automatically heals, optimizes, and scales. Achieve 99.99% uptime with 85% cost reduction. Zero-touch operations.",
-      keywords: ["AI autonomous infrastructure", "self-healing systems", "predictive maintenance", "infrastructure automation", "zero-touch operations"]
-    },
-    slug: "ai-autonomous-infrastructure-platform"
+    testimonial: {
+      quote: "AI Autonomous Infrastructure transformed our operations completely. We went from constant firefighting to zero-touch operations.",
+      author: "Michael Rodriguez",
+      company: "CloudScale Enterprises"
+    }
   },
   {
-    id: "quantum-ai-hybrid-computing",
-    title: "Quantum-AI Hybrid Computing Solutions",
-    description: "Breakthrough quantum computing solutions combined with AI to solve previously impossible problems. Our quantum-AI hybrid platform delivers exponential speedups for optimization, machine learning, and complex simulations.",
-    shortDescription: "Quantum computing meets AI for exponential problem-solving power",
-    category: "Quantum Computing",
-    subcategory: "Hybrid AI Solutions",
-    tags: ["Quantum Computing", "Quantum AI", "Optimization", "Machine Learning", "Quantum Algorithms"],
+    id: "serverless-ai-inference-cost-playbook-2025",
+    title: "Serverless AI Inference Cost Playbook (2025)",
+    description: "Cut model serving costs by 40–70% with adaptive batching, warm pools, and precision routing.",
+    excerpt: "A hands-on guide to reduce inference costs while keeping p95 low and reliability high.",
+    type: "blog",
+    category: "Engineering",
+    tags: ["FinOps", "Inference", "Serverless", "Latency"],
     featured: true,
     newBadge: true,
     trending: true,
-    pricing: {
-      model: "project",
-      startingPrice: "$100,000",
-      currency: "USD",
-      description: "For quantum-AI hybrid implementation projects"
+    publishedDate: "2025-09-29",
+    readTime: "11 min read",
+    author: "Zion Tech Group",
+    image: "/images/serverless-inference-cost-playbook.jpg",
+    url: "/blog/serverless-ai-inference-cost-playbook-2025",
+    cta: {
+      primary: "Read Playbook",
+      secondary: "Get Cost Review"
     },
-    benefits: [
-      "1000x faster optimization algorithms",
-      "Solve NP-hard problems efficiently",
-      "Exponential speedup for machine learning",
-      "Breakthrough in complex simulations",
-      "Quantum advantage in specific domains",
-      "Future-proof technology investment"
-    ],
-    features: [
-      "Quantum machine learning algorithms",
-      "Quantum optimization solvers",
-      "Hybrid classical-quantum workflows",
-      "Quantum circuit optimization",
-      "Quantum error correction",
-      "Quantum simulation capabilities",
-      "Quantum neural networks",
-      "Quantum data analysis tools"
-    ],
-    useCases: [
-      "Portfolio optimization in finance",
-      "Drug discovery and molecular simulation",
-      "Supply chain optimization",
-      "Cryptographic security enhancement",
-      "Climate modeling and simulation",
-      "Machine learning acceleration"
-    ],
-    technologies: [
-      "Quantum Computing",
-      "Quantum Machine Learning",
-      "Qiskit",
-      "Cirq",
-      "PennyLane",
-      "TensorFlow Quantum",
-      "Quantum Annealing",
-      "Quantum Optimization"
-    ],
-    deliverables: [
-      "Quantum-AI Hybrid Platform",
-      "Custom quantum algorithms",
-      "Performance benchmarks",
-      "Integration with existing systems",
-      "Quantum computing training",
-      "Ongoing optimization and support"
-    ],
-    timeline: "8-12 weeks",
-    prerequisites: [
-      "High-performance computing environment",
-      "Quantum computing access (cloud or on-premises)",
-      "Specialized problem domains",
-      "Quantum computing expertise or training",
-      "Significant computational resources"
-    ],
+    metrics: [
+      { label: "Cost Reduction", value: "40–70%", description: "Observed savings range" },
+      { label: "Latency Target", value: "< 250ms p95", description: "Interactive UX" },
+      { label: "Reliability", value: "> 99.9%", description: "SLO adherence" }
+    ]
+  },
+  {
+    id: "agent-safety-budgets-2025",
+    title: "Agent Safety Budgets (2025): Practical Guardrails That Ship",
+    description: "Constrain autonomous agents with KPI-linked safety, privacy, and cost budgets.",
+    excerpt: "Policy-as-code, runtime enforcement, and auditable telemetry to ship safe AI.",
+    type: "blog",
+    category: "AI Governance",
+    tags: ["Safety", "Compliance", "Privacy", "Agents"],
+    featured: true,
+    newBadge: true,
+    trending: true,
+    publishedDate: "2025-09-29",
+    readTime: "9 min read",
+    author: "Zion Tech Group",
+    image: "/images/agent-safety-budgets.jpg",
+    url: "/blog/agent-safety-budgets-2025",
+    cta: {
+      primary: "Read Article",
+      secondary: "Request Workshop"
+    },
+    metrics: [
+      { label: "Risk Reduction", value: "70%", description: "Fewer incidents" },
+      { label: "Auditability", value: "100%", description: "Traceable decisions" },
+      { label: "Time to Ship", value: "< 2 weeks", description: "Guardrails live" }
+    ]
+  },
+  {
+    id: "quantum-machine-learning-guide",
+    title: "Quantum Machine Learning: Breaking the Barriers of Classical Computing",
+    description: "Explore how quantum machine learning is solving previously impossible problems and revolutionizing AI capabilities across industries.",
+    excerpt: "Quantum computing meets machine learning to unlock unprecedented computational power and solve complex optimization problems.",
+    type: "blog",
+    category: "Quantum Computing",
+    tags: ["Quantum ML", "Machine Learning", "Quantum Computing", "Optimization"],
+    featured: true,
+    newBadge: true,
+    trending: true,
+    publishedDate: "2025-01-19",
+    readTime: "15 min read",
+    author: "Prof. Alex Thompson",
+    image: "/images/quantum-machine-learning.jpg",
+    url: "/blog/quantum-machine-learning-guide",
+    cta: {
+      primary: "Read Guide",
+      secondary: "Watch Demo"
+    },
     metrics: [
       {
         label: "Speed Improvement",
@@ -4122,136 +3455,72 @@ const newServices2025 = [
         label: "Accuracy Gain",
         value: "40%",
         description: "Better optimization results"
-      },
-      {
-        label: "Cost Efficiency",
-        value: "60%",
-        description: "Reduction in computational costs"
       }
-    ],
-    caseStudy: {
-      company: "Quantum Finance Corp",
-      industry: "Financial Services",
-      challenge: "Portfolio optimization for 10,000+ assets with complex constraints and real-time requirements",
-      solution: "Implemented quantum-AI hybrid optimization algorithms for portfolio management",
-      results: [
-        "1000x faster portfolio optimization",
-        "40% improvement in risk-adjusted returns",
-        "Real-time optimization capabilities",
-        "Handled 10,000+ asset portfolios",
-        "60% reduction in computational costs"
-      ]
-    },
-    testimonials: [
-      {
-        quote: "Quantum-AI hybrid computing opened up possibilities we never thought possible. We're solving optimization problems that were computationally infeasible before.",
-        author: "Dr. James Wilson",
-        company: "Quantum Finance Corp",
-        role: "Chief Quantum Officer"
-      },
-      {
-        quote: "The speedup is incredible. What used to take hours now takes seconds. This is truly revolutionary technology.",
-        author: "Dr. Lisa Park",
-        company: "BioTech Innovations",
-        role: "Head of Computational Biology"
-      }
-    ],
-    faqs: [
-      {
-        question: "What problems can quantum-AI hybrid computing solve?",
-        answer: "Quantum-AI hybrid computing excels at optimization problems, machine learning acceleration, complex simulations, and cryptographic applications. It's particularly powerful for NP-hard problems that are intractable for classical computers."
-      },
-      {
-        question: "How mature is quantum computing technology?",
-        answer: "While still emerging, quantum computing has reached practical viability for specific applications. Our hybrid approach combines quantum advantages with classical computing reliability for production-ready solutions."
-      },
-      {
-        question: "What's the learning curve for quantum computing?",
-        answer: "We provide comprehensive training and support to help your team understand quantum concepts and implement quantum-AI solutions. Most teams are productive within 2-3 months of training."
-      },
-      {
-        question: "How do you ensure quantum computing reliability?",
-        answer: "We use hybrid approaches that combine quantum computing with classical verification and error correction. This ensures reliable results while maintaining quantum advantages."
-      }
-    ],
-    image: "/images/quantum-ai-hybrid-computing.jpg",
-    icon: "Atom",
-    seo: {
-      metaTitle: "Quantum-AI Hybrid Computing Solutions | Breakthrough Problem Solving",
-      metaDescription: "Revolutionary quantum computing combined with AI for exponential speedups. Solve NP-hard problems 1000x faster with our quantum-AI hybrid platform.",
-      keywords: ["quantum AI", "quantum computing", "quantum machine learning", "quantum optimization", "hybrid quantum systems"]
-    },
-    slug: "quantum-ai-hybrid-computing"
+    ]
   },
   {
-    id: "zero-trust-security-ai",
-    title: "Zero Trust Security with AI",
-    description: "Advanced AI-powered zero trust security architecture that continuously monitors, authenticates, and authorizes every user and device. Our system provides 360-degree security visibility with automated threat detection and response.",
-    shortDescription: "AI-powered zero trust security for complete protection",
+    id: "edge-ai-manufacturing-case-study",
+    title: "Manufacturing Revolution: How Edge AI Transformed Production Lines",
+    description: "Case study showing how a Fortune 500 manufacturer reduced defects by 95% and increased efficiency by 300% using edge AI.",
+    excerpt: "Real-world success story of implementing edge AI in manufacturing with measurable ROI and operational improvements.",
+    type: "case-study",
+    category: "Manufacturing",
+    tags: ["Edge AI", "Manufacturing", "IoT", "Predictive Maintenance"],
+    featured: true,
+    newBadge: true,
+    trending: false,
+    publishedDate: "2025-01-18",
+    readTime: "8 min read",
+    author: "Zion Tech Group",
+    image: "/images/edge-ai-manufacturing.jpg",
+    url: "/case-studies/edge-ai-manufacturing-transformation",
+    cta: {
+      primary: "View Case Study",
+      secondary: "Schedule Consultation"
+    },
+    metrics: [
+      {
+        label: "Defect Reduction",
+        value: "95%",
+        description: "Quality improvement achieved"
+      },
+      {
+        label: "Efficiency Gain",
+        value: "300%",
+        description: "Production line optimization"
+      },
+      {
+        label: "Cost Savings",
+        value: "$2.5M",
+        description: "Annual operational savings"
+      }
+    ],
+    testimonial: {
+      quote: "Edge AI transformed our production lines completely. We've never seen such dramatic improvements in quality and efficiency.",
+      author: "Jennifer Liu",
+      company: "Precision Manufacturing Corp"
+    }
+  },
+  {
+    id: "zero-trust-implementation-playbook",
+    title: "Zero Trust Security Implementation: A Complete Enterprise Playbook",
+    description: "Comprehensive guide to implementing Zero Trust architecture with practical steps, tools, and real-world examples.",
+    excerpt: "Step-by-step playbook for enterprise Zero Trust implementation with proven strategies and measurable outcomes.",
+    type: "whitepaper",
     category: "Cybersecurity",
-    subcategory: "Zero Trust Architecture",
-    tags: ["Zero Trust", "AI Security", "Threat Detection", "Identity Management", "Network Security"],
+    tags: ["Zero Trust", "Security", "Enterprise", "Implementation"],
     featured: true,
     newBadge: true,
     trending: true,
-    pricing: {
-      model: "subscription",
-      startingPrice: "$3,000",
-      currency: "USD",
-      description: "Per month for up to 1,000 users"
+    publishedDate: "2025-01-17",
+    readTime: "20 min read",
+    author: "Security Team",
+    image: "/images/zero-trust-playbook.jpg",
+    url: "/whitepapers/zero-trust-implementation-playbook",
+    cta: {
+      primary: "Download Playbook",
+      secondary: "Get Security Assessment"
     },
-    benefits: [
-      "90% reduction in security incidents",
-      "Continuous authentication and authorization",
-      "AI-powered threat detection",
-      "Automated incident response",
-      "Complete network visibility",
-      "Compliance automation"
-    ],
-    features: [
-      "AI-driven threat detection",
-      "Continuous user verification",
-      "Micro-segmentation",
-      "Behavioral analytics",
-      "Automated policy enforcement",
-      "Real-time risk assessment",
-      "Identity and access management",
-      "Network traffic analysis"
-    ],
-    useCases: [
-      "Enterprise network security",
-      "Remote workforce protection",
-      "Cloud security implementation",
-      "Compliance and audit preparation",
-      "Threat hunting and investigation",
-      "Incident response automation"
-    ],
-    technologies: [
-      "Machine Learning",
-      "Behavioral Analytics",
-      "Identity Management",
-      "Network Segmentation",
-      "SIEM Integration",
-      "SOAR Platforms",
-      "Multi-Factor Authentication",
-      "Blockchain Security"
-    ],
-    deliverables: [
-      "Zero Trust Security Platform",
-      "Security policy framework",
-      "Implementation roadmap",
-      "Security monitoring dashboards",
-      "Incident response playbooks",
-      "Compliance documentation"
-    ],
-    timeline: "6-8 weeks",
-    prerequisites: [
-      "Existing network infrastructure",
-      "Identity management system",
-      "Security monitoring tools",
-      "Dedicated security team",
-      "Executive support and budget"
-    ],
     metrics: [
       {
         label: "Security Incidents",
@@ -4259,144 +3528,113 @@ const newServices2025 = [
         description: "Reduction in security breaches"
       },
       {
-        label: "Response Time",
-        value: "< 5 minutes",
-        description: "Threat detection and response"
-      },
-      {
-        label: "False Positives",
-        value: "85%",
-        description: "Reduction in false alarms"
+        label: "Implementation Time",
+        value: "6 months",
+        description: "Average deployment timeline"
       },
       {
         label: "Compliance Score",
         value: "100%",
-        description: "Regulatory compliance achieved"
+        description: "Achieved regulatory compliance"
       }
-    ],
-    caseStudy: {
-      company: "SecureBank International",
-      industry: "Banking",
-      challenge: "Protecting sensitive financial data across distributed networks with strict regulatory requirements",
-      solution: "Implemented AI-powered zero trust security with continuous monitoring and automated threat response",
-      results: [
-        "90% reduction in security incidents",
-        "100% compliance with financial regulations",
-        "Sub-5-minute threat response time",
-        "85% reduction in false positives",
-        "Complete network visibility achieved"
-      ]
-    },
-    testimonials: [
-      {
-        quote: "Zero Trust with AI gave us the security posture we needed for our distributed workforce. Incidents dropped by 90% and compliance is now automated.",
-        author: "Robert Kim",
-        company: "SecureBank International",
-        role: "CISO"
-      },
-      {
-        quote: "The AI-powered threat detection is incredible. It catches threats we never would have seen and responds automatically. Our security team can focus on strategy instead of firefighting.",
-        author: "Amanda Foster",
-        company: "TechSecure Corp",
-        role: "Security Director"
-      }
-    ],
-    faqs: [
-      {
-        question: "How does AI enhance zero trust security?",
-        answer: "AI analyzes user behavior, network traffic, and system events to detect anomalies and threats in real-time. It continuously adapts security policies based on risk assessment and automatically responds to threats."
-      },
-      {
-        question: "What's the difference between traditional and AI-powered zero trust?",
-        answer: "Traditional zero trust relies on static policies and manual monitoring. AI-powered zero trust continuously learns and adapts, providing dynamic threat detection and automated response capabilities."
-      },
-      {
-        question: "How long does zero trust implementation take?",
-        answer: "Implementation typically takes 6-8 weeks, depending on network complexity and organization size. This includes assessment, planning, deployment, and team training."
-      },
-      {
-        question: "Can zero trust work with existing security tools?",
-        answer: "Yes, our zero trust platform integrates with existing SIEM, identity management, and security tools. We provide APIs and connectors for seamless integration."
-      }
-    ],
-    image: "/images/zero-trust-security-ai.jpg",
-    icon: "Shield",
-    seo: {
-      metaTitle: "Zero Trust Security with AI | Advanced Threat Protection",
-      metaDescription: "AI-powered zero trust security architecture with 90% incident reduction. Continuous monitoring, automated threat detection, and compliance automation.",
-      keywords: ["zero trust security", "AI security", "threat detection", "network security", "cybersecurity automation"]
-    },
-    slug: "zero-trust-security-ai"
+    ]
   },
   {
-    id: "ai-governance-scorecards",
-    title: "AI Governance Scorecards & Policy Framework",
-    description: "Comprehensive AI governance framework with automated scorecards, policy management, and compliance monitoring. Ensure your AI systems are ethical, compliant, and aligned with business objectives.",
-    shortDescription: "Automated AI governance with scorecards and policy management",
-    category: "AI Governance",
-    subcategory: "Compliance & Ethics",
-    tags: ["AI Governance", "Compliance", "Ethics", "Policy Management", "Risk Assessment"],
+    id: "ai-content-automation-webinar",
+    title: "AI Content Automation: Scale Your Marketing 10x Faster",
+    description: "Live webinar showing how to automate content creation, SEO optimization, and brand consistency using AI.",
+    excerpt: "Join industry experts as they demonstrate AI-powered content automation strategies that deliver results.",
+    type: "webinar",
+    category: "Content Marketing",
+    tags: ["Content Automation", "AI Marketing", "SEO", "Brand Consistency"],
+    featured: false,
+    newBadge: true,
+    trending: true,
+    publishedDate: "2025-01-21",
+    readTime: "60 min webinar",
+    author: "Marketing Team",
+    image: "/images/ai-content-automation.jpg",
+    url: "/webinars/ai-content-automation-scale-marketing",
+    cta: {
+      primary: "Register Now",
+      secondary: "View Past Webinars"
+    },
+    metrics: [
+      {
+        label: "Content Speed",
+        value: "10x",
+        description: "Faster content production"
+      },
+      {
+        label: "Cost Reduction",
+        value: "70%",
+        description: "Lower content creation costs"
+      },
+      {
+        label: "SEO Improvement",
+        value: "85%",
+        description: "Better search rankings"
+      }
+    ]
+  },
+  {
+    id: "finops-ai-cost-optimization",
+    title: "FinOps with AI: Intelligent Cloud Cost Optimization",
+    description: "Learn how AI-powered FinOps can reduce cloud costs by 40% while improving performance and reliability.",
+    excerpt: "Advanced FinOps strategies powered by AI for intelligent resource allocation and cost optimization.",
+    type: "blog",
+    category: "Cloud Finance",
+    tags: ["FinOps", "Cloud Optimization", "AI", "Cost Management"],
     featured: true,
     newBadge: true,
     trending: false,
-    pricing: {
-      model: "subscription",
-      startingPrice: "$2,500",
-      currency: "USD",
-      description: "Per month for up to 50 AI models"
+    publishedDate: "2025-01-16",
+    readTime: "10 min read",
+    author: "Cloud Economics Team",
+    image: "/images/finops-ai-optimization.jpg",
+    url: "/blog/finops-ai-cost-optimization",
+    cta: {
+      primary: "Read Article",
+      secondary: "Get Cost Analysis"
     },
-    benefits: [
-      "100% regulatory compliance",
-      "Automated policy enforcement",
-      "Real-time risk assessment",
-      "Ethical AI implementation",
-      "Audit-ready documentation",
-      "Stakeholder transparency"
-    ],
-    features: [
-      "Automated governance scorecards",
-      "Policy management framework",
-      "Compliance monitoring",
-      "Risk assessment tools",
-      "Ethics evaluation metrics",
-      "Audit trail and reporting",
-      "Stakeholder dashboards",
-      "Regulatory updates tracking"
-    ],
-    useCases: [
-      "Enterprise AI governance",
-      "Regulatory compliance management",
-      "AI ethics implementation",
-      "Risk assessment and mitigation",
-      "Audit preparation and documentation",
-      "Stakeholder reporting and transparency"
-    ],
-    technologies: [
-      "Machine Learning",
-      "Natural Language Processing",
-      "Risk Assessment Models",
-      "Compliance Automation",
-      "Policy Management Systems",
-      "Audit Trail Systems",
-      "Dashboard and Reporting",
-      "API Integration"
-    ],
-    deliverables: [
-      "AI Governance Platform",
-      "Custom policy framework",
-      "Compliance scorecards",
-      "Risk assessment reports",
-      "Audit documentation",
-      "Training and support"
-    ],
-    timeline: "4-6 weeks",
-    prerequisites: [
-      "Existing AI/ML systems",
-      "Compliance requirements identification",
-      "Stakeholder buy-in",
-      "Dedicated governance team",
-      "Executive sponsorship"
-    ],
+    metrics: [
+      {
+        label: "Cost Reduction",
+        value: "40%",
+        description: "Average cloud cost savings"
+      },
+      {
+        label: "Resource Efficiency",
+        value: "60%",
+        description: "Improved utilization rates"
+      },
+      {
+        label: "ROI Timeline",
+        value: "3 months",
+        description: "Time to positive ROI"
+      }
+    ]
+  },
+  {
+    id: "ai-governance-framework-2025",
+    title: "AI Governance Framework 2025: Practical Implementation Guide",
+    description: "Comprehensive framework for AI governance with policies, procedures, and compliance strategies for enterprise AI.",
+    excerpt: "Build robust AI governance that enables innovation while ensuring compliance, ethics, and risk management.",
+    type: "whitepaper",
+    category: "AI Governance",
+    tags: ["AI Governance", "Compliance", "Ethics", "Risk Management"],
+    featured: true,
+    newBadge: true,
+    trending: true,
+    publishedDate: "2025-01-15",
+    readTime: "25 min read",
+    author: "AI Governance Team",
+    image: "/images/ai-governance-framework.jpg",
+    url: "/whitepapers/ai-governance-framework-2025",
+    cta: {
+      primary: "Download Framework",
+      secondary: "Schedule Workshop"
+    },
     metrics: [
       {
         label: "Compliance Rate",
@@ -4409,574 +3647,653 @@ const newServices2025 = [
         description: "AI-related risk mitigation"
       },
       {
-        label: "Policy Adherence",
-        value: "95%",
-        description: "Automated policy compliance"
-      },
-      {
-        label: "Audit Readiness",
-        value: "100%",
-        description: "Documentation completeness"
+        label: "Implementation Time",
+        value: "4 months",
+        description: "Framework deployment timeline"
       }
-    ],
-    caseStudy: {
-      company: "EthicalAI Corp",
-      industry: "Healthcare",
-      challenge: "Ensuring AI systems comply with healthcare regulations and ethical standards across multiple departments",
-      solution: "Implemented comprehensive AI governance framework with automated scorecards and policy management",
-      results: [
-        "100% compliance with healthcare regulations",
-        "80% reduction in AI-related risks",
-        "95% automated policy adherence",
-        "Complete audit readiness",
-        "Stakeholder confidence increased"
-      ]
-    },
-    testimonials: [
-      {
-        quote: "AI Governance Scorecards gave us the framework we needed to ensure our AI systems are ethical and compliant. We're now audit-ready and our stakeholders have complete confidence.",
-        author: "Dr. Jennifer Martinez",
-        company: "EthicalAI Corp",
-        role: "AI Ethics Officer"
-      },
-      {
-        quote: "The automated scorecards and policy management saved us months of manual work. We can now focus on AI innovation while ensuring compliance.",
-        author: "David Thompson",
-        company: "GovernanceFirst Inc",
-        role: "Chief Compliance Officer"
-      }
-    ],
-    faqs: [
-      {
-        question: "What regulations does the AI governance framework cover?",
-        answer: "Our framework covers GDPR, CCPA, HIPAA, SOX, and other major regulations. It's designed to be adaptable to new regulations as they emerge and can be customized for specific industry requirements."
-      },
-      {
-        question: "How do the AI governance scorecards work?",
-        answer: "Scorecards automatically evaluate AI systems against governance criteria including ethics, compliance, risk, and performance. They provide real-time scoring and recommendations for improvement."
-      },
-      {
-        question: "Can the framework be customized for our industry?",
-        answer: "Yes, the framework is designed to be industry-agnostic and can be customized for specific requirements, regulations, and business objectives. We work with you to tailor it to your needs."
-      },
-      {
-        question: "What's the ROI of AI governance?",
-        answer: "AI governance typically provides ROI through risk reduction, compliance cost savings, and improved stakeholder confidence. Most organizations see positive ROI within 6-12 months of implementation."
-      }
-    ],
-    image: "/images/ai-governance-scorecards.jpg",
-    icon: "ClipboardCheck",
-    seo: {
-      metaTitle: "AI Governance Scorecards & Policy Framework | Compliance Automation",
-      metaDescription: "Comprehensive AI governance framework with automated scorecards, policy management, and compliance monitoring. Ensure ethical, compliant AI systems.",
-      keywords: ["AI governance", "AI compliance", "AI ethics", "policy management", "risk assessment"]
-    },
-    slug: "ai-governance-scorecards"
+    ]
   },
   {
-    id: "ai-risk-budgeted-runbooks",
-    title: "AI Risk‑Budgeted Runbooks",
-    description: "Operational runbooks with explicit risk budgets, approvals, and automated guardrails to ship safe AI automation fast.",
-    shortDescription: "Ship automation with explicit risk budgets and approvals",
-    category: "AI Operations",
-    subcategory: "Governed Automation",
-    tags: ["Risk Budgets", "Automation", "Approvals", "Guardrails"],
+    id: "blockchain-ai-integration-guide",
+    title: "Blockchain + AI Integration: Building Trust in Decentralized Systems",
+    description: "Explore how AI and blockchain technologies combine to create secure, transparent, and intelligent decentralized systems.",
+    excerpt: "Discover the synergy between AI and blockchain for building next-generation decentralized applications.",
+    type: "blog",
+    category: "Blockchain",
+    tags: ["Blockchain", "AI", "Decentralization", "Smart Contracts"],
+    featured: false,
+    newBadge: true,
+    trending: false,
+    publishedDate: "2025-01-14",
+    readTime: "14 min read",
+    author: "Blockchain Team",
+    image: "/images/blockchain-ai-integration.jpg",
+    url: "/blog/blockchain-ai-integration-guide",
+    cta: {
+      primary: "Read Guide",
+      secondary: "View Demo"
+    },
+    metrics: [
+      {
+        label: "Security Enhancement",
+        value: "95%",
+        description: "Improved system security"
+      },
+      {
+        label: "Transparency",
+        value: "100%",
+        description: "Complete audit trail"
+      },
+      {
+        label: "Efficiency Gain",
+        value: "50%",
+        description: "Faster transaction processing"
+      }
+    ]
+  },
+  {
+    id: "ai-enterprise-transformation-2025",
+    title: "AI Enterprise Transformation 2025: Complete Implementation Guide",
+    description: "Master AI enterprise transformation with proven strategies, frameworks, and real-world success stories. Transform your business with AI in 2025.",
+    excerpt: "Enterprise AI transformation in 2025 requires a strategic approach that goes beyond technology adoption. This comprehensive guide provides proven frameworks, implementation strategies, and real-world case studies.",
+    type: "blog",
+    category: "AI Strategy",
+    tags: ["AI Transformation", "Enterprise AI", "Digital Transformation", "Business Strategy"],
     featured: true,
     newBadge: true,
     trending: true,
-    pricing: {
-      model: "subscription",
-      startingPrice: "$1,500",
-      currency: "USD",
-      description: "Per month for up to 10 automated runbooks"
+    publishedDate: "2025-01-20",
+    readTime: "18 min read",
+    author: "Zion Tech Group Team",
+    image: "/images/ai-enterprise-transformation-2025.jpg",
+    url: "/blog/ai-enterprise-transformation-2025",
+    cta: {
+      primary: "Read Full Article",
+      secondary: "Download Whitepaper"
     },
-    benefits: [
-      "Faster approvals with budget thresholds",
-      "Reduced incident impact",
-      "Clear accountability and audit trails"
-    ],
-    features: [
-      "Policy‑as‑code approvals",
-      "Budget thresholds and alerts",
-      "Automated rollback actions",
-      "Audit logs and reports"
-    ],
-    useCases: [
-      "Safe deployment automation",
-      "Production data fixes",
-      "Cost‑aware inference routing"
-    ],
-    technologies: ["OPA", "GitOps", "CI/CD", "Observability"],
-    deliverables: [
-      "Runbook templates",
-      "Approval workflows",
-      "Budget policy library"
-    ],
-    timeline: "2-4 weeks",
-    prerequisites: ["Access to CI/CD", "Monitoring", "Approval owners"],
     metrics: [
-      { label: "Incident Impact", value: "−60%", description: "Reduced impact from changes" },
-      { label: "Approval Lead Time", value: "−70%", description: "Faster approvals" }
-    ],
-    image: "/images/ai-risk-budgeted-runbooks.jpg",
-    icon: "ClipboardCheck",
-    seo: {
-      metaTitle: "AI Risk‑Budgeted Runbooks",
-      metaDescription: "Governed runbooks with risk budgets and approvals to ship automation safely.",
-      keywords: ["risk budgets", "approvals", "ai automation", "governance"]
+      {
+        label: "Average ROI",
+        value: "300%",
+        description: "Typical return on AI investments"
+      },
+      {
+        label: "Process Efficiency",
+        value: "85%",
+        description: "Average efficiency improvement"
+      },
+      {
+        label: "Annual Savings",
+        value: "$2.5M",
+        description: "Average cost savings achieved"
+      }
+    ]
+  },
+  {
+    id: "ai-autonomous-operations-2025",
+    title: "AI Autonomous Operations 2025: Building Self-Healing Infrastructure",
+    description: "Learn how to implement AI-powered autonomous operations for self-healing, self-optimizing infrastructure. Reduce downtime by 90% with autonomous systems.",
+    excerpt: "Autonomous operations represent the next evolution in infrastructure management. By leveraging AI to create self-healing, self-optimizing, and self-scaling systems, organizations can achieve unprecedented levels of reliability.",
+    type: "blog",
+    category: "AI Operations",
+    tags: ["Autonomous Operations", "Self-Healing", "Infrastructure", "AI Operations"],
+    featured: true,
+    newBadge: true,
+    trending: true,
+    publishedDate: "2025-01-20",
+    readTime: "15 min read",
+    author: "Zion Tech Group Team",
+    image: "/images/ai-autonomous-operations-2025.jpg",
+    url: "/blog/ai-autonomous-operations-2025",
+    cta: {
+      primary: "Read Article",
+      secondary: "Get Assessment"
     },
-    testimonials: [],
-    faqs: [],
-    slug: "ai-risk-budgeted-runbooks"
+    metrics: [
+      {
+        label: "Downtime Reduction",
+        value: "90%",
+        description: "Average downtime improvement"
+      },
+      {
+        label: "Uptime Achieved",
+        value: "99.99%",
+        description: "System availability"
+      },
+      {
+        label: "Resolution Time",
+        value: "< 15 seconds",
+        description: "Mean time to resolution"
+      }
+    ]
+  },
+  {
+    id: "ai-supply-chain-optimization-2025",
+    title: "AI Supply Chain Optimization: 60% Cost Reduction Case Study",
+    description: "See how a Fortune 500 manufacturer achieved 60% cost reduction and 95% efficiency improvement using AI-powered supply chain optimization.",
+    excerpt: "A Fortune 500 manufacturer transformed their global supply chain operations using AI-powered optimization, achieving unprecedented cost savings and efficiency improvements.",
+    type: "case-study",
+    category: "Manufacturing",
+    tags: ["Supply Chain", "AI Optimization", "Manufacturing", "Cost Reduction"],
+    featured: true,
+    newBadge: true,
+    trending: true,
+    publishedDate: "2025-01-20",
+    readTime: "8 min read",
+    author: "Zion Tech Group Team",
+    image: "/images/ai-supply-chain-optimization-2025.jpg",
+    url: "/case-studies/ai-supply-chain-optimization-2025",
+    cta: {
+      primary: "View Case Study",
+      secondary: "Get Assessment"
+    },
+    metrics: [
+      {
+        label: "Cost Reduction",
+        value: "60%",
+        description: "Total operational cost savings"
+      },
+      {
+        label: "Efficiency Gain",
+        value: "95%",
+        description: "Process efficiency improvement"
+      },
+      {
+        label: "Annual Savings",
+        value: "$12M",
+        description: "Total cost savings achieved"
+      }
+    ]
+  },
+  {
+    id: "genai-routing-blueprint-2026",
+    title: "GenAI Routing Blueprint 2026: Fast, Cheap, and Grounded",
+    description: "Design intent-aware routers, fallback tiers, and caches to hit quality SLOs at a fraction of the cost.",
+    excerpt: "Route by intent, cache by value, and tier by SLO to cut spend 40–70% without hurting UX.",
+    type: "blog",
+    category: "GenAI Architecture",
+    tags: ["Routing", "Caching", "SLOs", "Cost"],
+    featured: true,
+    newBadge: true,
+    trending: true,
+    publishedDate: "2025-09-29",
+    readTime: "10 min read",
+    author: "Zion Tech Group",
+    image: "/images/genai-routing-blueprint-2026.jpg",
+    url: "/blog/genai-routing-blueprint-2026",
+    cta: {
+      primary: "Read Article",
+      secondary: "Get Routing Starter"
+    },
+    metrics: [
+      { label: "P95 Latency", value: "< 300ms", description: "With warm pools + caches" },
+      { label: "Cost", value: "-60%", description: "Savings from tiering + cache" },
+      { label: "Groundedness", value: "+30%", description: "With citation policy tests" }
+    ]
+  },
+  {
+    id: "secure-ml-supply-chain-2026",
+    title: "Secure ML Supply Chain 2026: Attestations, Policy Tests, SBOMs",
+    description: "Ship verifiably secure models and tools with signed artifacts, provenance, and CI policy tests.",
+    excerpt: "From data to deployment: secure each link with attestations, SBOMs, and automated policy checks.",
+    type: "whitepaper",
+    category: "Security",
+    tags: ["Supply Chain", "Attestation", "SBOM", "Policy"],
+    featured: true,
+    newBadge: true,
+    trending: true,
+    publishedDate: "2025-09-28",
+    readTime: "18 min read",
+    author: "Security Team",
+    image: "/images/secure-ml-supply-chain-2026.jpg",
+    url: "/whitepapers/secure-ml-supply-chain-2026",
+    cta: {
+      primary: "Download Whitepaper",
+      secondary: "View Checklists"
+    },
+    metrics: [
+      { label: "Incident Risk", value: "-80%", description: "Post‑rollout reduction" },
+      { label: "Auditability", value: "100%", description: "Signed builds + trace" },
+      { label: "Lead Time", value: "-35%", description: "Fewer reworks via policy tests" }
+    ]
+  },
+  {
+    id: "golden-paths-roi-2026",
+    title: "Golden Paths ROI 2026: Proving Platform Value Quarterly",
+    description: "Build developer golden paths with scorecards that tie adoption to shipped business outcomes.",
+    excerpt: "Instrument your platform with KPIs that teams adopt—show ROI without vanity metrics.",
+    type: "blog",
+    category: "Platform Engineering",
+    tags: ["Golden Paths", "ROI", "KPIs", "Platform"],
+    featured: true,
+    newBadge: true,
+    trending: false,
+    publishedDate: "2025-09-27",
+    readTime: "9 min read",
+    author: "Zion Tech Group",
+    image: "/images/golden-paths-roi-2026.jpg",
+    url: "/blog/golden-paths-roi-2026",
+    cta: {
+      primary: "Read Article",
+      secondary: "Get Scorecard Kit"
+    },
+    metrics: [
+      { label: "Dev Adoption", value: "+45%", description: "Within two quarters" },
+      { label: "Lead Time", value: "-30%", description: "Golden path pipelines" },
+      { label: "Change Fail %", value: "-25%", description: "With guardrails + tests" }
+    ]
   }
 ];
-const featuredServices = newServices2025.filter((service) => service.featured);
-newServices2025.sort((a, b) => (a.newBadge ? 1 : 0) - (b.newBadge ? 1 : 0)).slice(0, 6);
+newContent2025.sort((a, b) => new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime()).slice(0, 6);
 
-const NewContentShowcase2025 = () => {
-  const featuredBlogs = featuredBlogPosts$1.slice(0, 3);
-  const featuredServicesList = featuredServices.slice(0, 3);
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs("section", { className: "py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "absolute inset-0", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute top-20 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-pulse" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute bottom-20 right-10 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse", style: { animationDelay: "2s" } }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-cyan-500/20 rounded-full blur-3xl animate-pulse", style: { animationDelay: "4s" } })
-    ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto px-6 relative z-10", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center mb-16", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-medium mb-8", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx(Star, { className: "w-4 h-4 mr-2 animate-pulse" }),
-          "NEW 2025 CONTENT & SERVICES",
-          /* @__PURE__ */ jsxRuntimeExports.jsx(Star, { className: "w-4 h-4 ml-2 animate-pulse" })
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-4xl md:text-5xl font-bold text-white mb-6", children: /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent", children: "Revolutionary AI Solutions" }) }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xl text-slate-300 max-w-3xl mx-auto", children: "Discover our latest breakthrough content and cutting-edge AI services that are transforming industries worldwide." })
-      ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mb-20", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between mb-12", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("h3", { className: "text-3xl font-bold text-white flex items-center gap-3", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx(TrendingUp, { className: "w-8 h-8 text-blue-400" }),
-            "Latest Articles"
-          ] }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs(
-            Link,
-            {
-              to: "/blog",
-              className: "text-blue-400 hover:text-blue-300 font-semibold flex items-center gap-2 transition-colors",
-              children: [
-                "View All Articles",
-                /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "w-4 h-4" })
-              ]
-            }
-          )
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid md:grid-cols-3 gap-8", children: featuredBlogs.map((post, index) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
-          "article",
-          {
-            className: "bg-white/10 backdrop-blur-lg rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20",
-            children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between mb-4", children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-xs uppercase tracking-wider text-blue-300 bg-blue-500/20 px-3 py-1 rounded-full", children: post.category }),
-                post.featured && /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs px-2 py-1 rounded-full font-medium", children: "FEATURED" })
-              ] }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "text-xl font-bold text-white mb-3 line-clamp-2", children: post.title }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-300 mb-4 text-sm line-clamp-3", children: post.excerpt }),
-              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between text-sm text-slate-400 mb-4", children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2", children: [
-                  /* @__PURE__ */ jsxRuntimeExports.jsx(Calendar, { className: "w-4 h-4" }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: new Date(post.publishedAt).toLocaleDateString() })
-                ] }),
-                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2", children: [
-                  /* @__PURE__ */ jsxRuntimeExports.jsx(Clock, { className: "w-4 h-4" }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: post.readTime })
-                ] })
-              ] }),
-              post.metrics && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-2 gap-2 mb-4", children: post.metrics.slice(0, 2).map((metric, idx) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center", children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-lg font-bold text-green-400", children: metric.value }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-xs text-slate-400", children: metric.label })
-              ] }, idx)) }),
-              /* @__PURE__ */ jsxRuntimeExports.jsxs(
-                Link,
-                {
-                  to: post.url,
-                  className: "w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 inline-flex items-center justify-center gap-2",
-                  children: [
-                    "Read Article",
-                    /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "w-4 h-4" })
-                  ]
-                }
-              )
-            ]
-          },
-          post.id
-        )) })
-      ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between mb-12", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("h3", { className: "text-3xl font-bold text-white flex items-center gap-3", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx(Zap, { className: "w-8 h-8 text-purple-400" }),
-            "New AI Services"
-          ] }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs(
-            Link,
-            {
-              to: "/services",
-              className: "text-purple-400 hover:text-purple-300 font-semibold flex items-center gap-2 transition-colors",
-              children: [
-                "Explore All Services",
-                /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "w-4 h-4" })
-              ]
-            }
-          )
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid md:grid-cols-3 gap-8", children: featuredServicesList.map((service, index) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
-          "div",
-          {
-            className: "bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg rounded-2xl p-6 hover:from-white/20 hover:to-white/10 transition-all duration-300 hover:scale-105 border border-white/20",
-            children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between mb-4", children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-xs uppercase tracking-wider text-purple-300 bg-purple-500/20 px-3 py-1 rounded-full", children: service.category }),
-                service.newBadge && /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "bg-gradient-to-r from-green-400 to-emerald-500 text-black text-xs px-2 py-1 rounded-full font-medium", children: "NEW" })
-              ] }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "text-xl font-bold text-white mb-3 line-clamp-2", children: service.title }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-300 mb-4 text-sm line-clamp-3", children: service.shortDescription }),
-              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mb-4", children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-sm text-slate-400 mb-2", children: "Starting at" }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-2xl font-bold text-green-400", children: service.pricing.startingPrice }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-xs text-slate-400", children: service.pricing.description })
-              ] }),
-              service.metrics && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-2 gap-2 mb-4", children: service.metrics.slice(0, 2).map((metric, idx) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center", children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-lg font-bold text-cyan-400", children: metric.value }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-xs text-slate-400", children: metric.label })
-              ] }, idx)) }),
-              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col gap-2", children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsxs(
-                  Link,
-                  {
-                    to: service.slug || `/services/${service.id}`,
-                    className: "w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 px-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 inline-flex items-center justify-center gap-2",
-                    children: [
-                      "Learn More",
-                      /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "w-4 h-4" })
-                    ]
-                  }
-                ),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(
-                  Link,
-                  {
-                    to: "/contact",
-                    className: "w-full border border-white/30 text-white py-2 px-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 text-center",
-                    children: "Get Quote"
-                  }
-                )
-              ] })
-            ]
-          },
-          service.id
-        )) })
-      ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-center mt-16", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-400/30 rounded-2xl p-8", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "text-2xl font-bold text-white mb-4", children: "Ready to Transform Your Business?" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-300 mb-6 max-w-2xl mx-auto", children: "Join 500+ companies already using our AI solutions to achieve unprecedented results. Get started with a free consultation today." }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col sm:flex-row gap-4 justify-center", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsxs(
-            Link,
-            {
-              to: "/contact",
-              className: "bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2",
-              children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx(Users, { className: "w-5 h-5" }),
-                "Start Free Consultation"
-              ]
-            }
-          ),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs(
-            Link,
-            {
-              to: "/case-studies",
-              className: "border border-white/30 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2",
-              children: [
-                "View Success Stories",
-                /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "w-5 h-5" })
-              ]
-            }
-          )
-        ] })
-      ] }) })
-    ] })
-  ] });
-};
-var NewContentShowcase2025_default = NewContentShowcase2025;
-
-const NewServicesShowcase = () => {
-  const featuredServices = newServices.filter((service) => service.featured);
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs("section", { className: "py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "absolute inset-0", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute -top-40 -right-40 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float", style: { animationDelay: "2s" } }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute top-40 left-1/2 w-60 h-60 bg-cyan-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float", style: { animationDelay: "4s" } })
-    ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto px-6 relative z-10", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center mb-16", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-green-500/20 to-blue-500/20 text-green-400 text-sm font-medium mb-8 border border-green-400/30", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx(Sparkles, { className: "w-4 h-4 mr-2 animate-pulse" }),
-          "🚀 NEW SERVICES AVAILABLE",
-          /* @__PURE__ */ jsxRuntimeExports.jsx(Sparkles, { className: "w-4 h-4 ml-2 animate-pulse" })
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "text-4xl md:text-5xl font-bold text-white mb-6", children: [
-          "Revolutionary AI Solutions",
-          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "block bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent", children: "Now Available" })
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xl text-gray-300 max-w-3xl mx-auto mb-8", children: "Discover our latest AI-powered services that are transforming industries worldwide. From autonomous operations to quantum computing, we're pushing the boundaries of what's possible." }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-gradient-to-r from-green-500/20 to-blue-500/20 border border-green-400/30 rounded-xl p-6 mb-8 max-w-4xl mx-auto", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-center gap-3 mb-3", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx(Zap, { className: "w-6 h-6 text-green-400 animate-pulse" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-lg font-bold text-green-400", children: "🔥 LIMITED TIME OFFER" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx(Zap, { className: "w-6 h-6 text-green-400 animate-pulse" })
-          ] }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-white text-lg font-semibold mb-2", children: "Get 50% OFF Your First 3 Months + FREE AI Strategy Consultation" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-300 text-sm", children: "Valid until March 31, 2025 • No setup fees • Cancel anytime" })
-        ] })
-      ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16", children: featuredServices.map((service) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
-        "div",
-        {
-          className: "bg-white/10 backdrop-blur-lg rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl border border-white/20",
-          children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between mb-6", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2", children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-3xl", children: service.icon }),
-                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-xs uppercase tracking-wider text-blue-300", children: service.category }),
-                  service.newBadge && /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "bg-green-500 text-white text-xs px-2 py-1 rounded-full font-medium", children: "NEW" })
-                ] })
-              ] }),
-              service.pricing.popular && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-1 bg-yellow-500/20 text-yellow-400 px-2 py-1 rounded-full text-xs", children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx(Star, { className: "w-3 h-3 fill-current" }),
-                "POPULAR"
-              ] })
-            ] }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-xl font-bold text-white mb-4", children: service.title }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-300 mb-6 text-sm leading-relaxed", children: service.description }),
-            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mb-6", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2 mb-2", children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "text-2xl font-bold text-green-400", children: [
-                  "$",
-                  service.pricing.starting
-                ] }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-sm text-gray-400", children: "/month" })
-              ] }),
-              service.pricing.discount && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-sm text-green-400 font-medium", children: service.pricing.discount })
-            ] }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "space-y-2 mb-6", children: service.benefits.slice(0, 3).map((benefit, index) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center text-gray-300 text-sm", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx(CircleCheckBig, { className: "w-4 h-4 mr-3 text-green-400 flex-shrink-0" }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: benefit })
-            ] }, index)) }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-3 gap-4 mb-6", children: service.metrics.slice(0, 3).map((metric, index) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-lg font-bold text-white", children: metric.value }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-xs text-gray-400", children: metric.label })
-            ] }, index)) }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex gap-3", children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
-              Link,
-              {
-                to: `/services/${service.id}`,
-                className: "flex-1 bg-gradient-to-r from-green-500 to-blue-500 text-white px-4 py-2 rounded-lg font-semibold text-center hover:from-green-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center gap-2",
-                children: [
-                  service.cta.primary,
-                  /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "w-4 h-4" })
-                ]
-              }
-            ) })
-          ]
-        },
-        service.id
-      )) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-xl p-8 mb-8", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-2xl font-bold text-white mb-4", children: "Ready to Transform Your Business?" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-300 mb-6 max-w-2xl mx-auto", children: "Join 500+ companies already using our AI solutions to drive growth, reduce costs, and achieve unprecedented efficiency." }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col sm:flex-row gap-4 justify-center", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsxs(
-              Link,
-              {
-                to: "/services",
-                className: "bg-white text-purple-600 hover:bg-purple-50 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2",
-                children: [
-                  "Explore All Services",
-                  /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "w-5 h-5" })
-                ]
-              }
-            ),
-            /* @__PURE__ */ jsxRuntimeExports.jsx(
-              Link,
-              {
-                to: "/contact",
-                className: "border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105",
-                children: "Get Free Consultation"
-              }
-            )
-          ] })
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-2 md:grid-cols-4 gap-8 max-w-2xl mx-auto", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-3xl font-bold text-green-400", children: "500+" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-sm text-gray-400", children: "Happy Clients" })
-          ] }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-3xl font-bold text-blue-400", children: "99.9%" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-sm text-gray-400", children: "Uptime SLA" })
-          ] }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-3xl font-bold text-purple-400", children: "24/7" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-sm text-gray-400", children: "Support" })
-          ] }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-3xl font-bold text-cyan-400", children: "5★" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-sm text-gray-400", children: "Client Rating" })
-          ] })
-        ] })
-      ] })
-    ] })
-  ] });
-};
-var NewServicesShowcase_default = NewServicesShowcase;
-
-function NewServicesPromoBanner({
-  className = "",
-  variant = "default",
-  showCount = 3,
-  featuredOnly = false
-}) {
-  const [isVisible, setIsVisible] = reactExports.useState(true);
-  const services = featuredOnly ? newServices.filter((service) => service.featured).slice(0, showCount) : newServices.slice(0, showCount);
-  if (!isVisible || services.length === 0) {
-    return null;
+const newServices2025 = [
+  {
+    id: "ai-autonomous-infrastructure",
+    title: "AI Autonomous Infrastructure Management",
+    description: "Transform your infrastructure with self-healing, self-optimizing systems that automatically adapt to changing conditions and requirements.",
+    category: "AI Operations",
+    features: [
+      "Self-healing infrastructure with automatic failure recovery",
+      "Predictive maintenance and proactive issue resolution",
+      "Dynamic resource scaling based on demand patterns",
+      "Intelligent cost optimization and resource allocation",
+      "Real-time performance monitoring and optimization",
+      "Automated security updates and vulnerability patching"
+    ],
+    benefits: [
+      "99.99% uptime through predictive maintenance",
+      "65% reduction in operational costs",
+      "90% elimination of manual interventions",
+      "45% improvement in system performance",
+      "24/7 autonomous monitoring and response",
+      "Faster incident resolution and recovery"
+    ],
+    useCases: [
+      "Enterprise cloud infrastructure management",
+      "Microservices orchestration and scaling",
+      "Database performance optimization",
+      "Application deployment and monitoring",
+      "Network infrastructure automation",
+      "DevOps pipeline optimization"
+    ],
+    technologies: ["AI/ML", "Kubernetes", "Prometheus", "Grafana", "Python", "TensorFlow", "Docker"],
+    pricing: [
+      {
+        tier: "Starter",
+        price: "$5,000/month",
+        features: ["Basic autonomous monitoring", "Standard self-healing", "Email alerts", "Basic reporting"]
+      },
+      {
+        tier: "Professional",
+        price: "$15,000/month",
+        features: ["Advanced predictive analytics", "Full self-healing capabilities", "Real-time dashboards", "Priority support"]
+      },
+      {
+        tier: "Enterprise",
+        price: "Custom",
+        features: ["Custom AI models", "Dedicated support team", "Advanced security features", "SLA guarantees"]
+      }
+    ],
+    testimonial: {
+      quote: "AI Autonomous Infrastructure transformed our operations completely. We went from constant firefighting to zero-touch operations.",
+      author: "Michael Rodriguez",
+      company: "CloudScale Enterprises",
+      role: "CTO"
+    },
+    metrics: [
+      {
+        label: "Uptime Improvement",
+        value: "99.99%",
+        description: "Achieved through predictive maintenance"
+      },
+      {
+        label: "Cost Reduction",
+        value: "65%",
+        description: "Average operational savings"
+      },
+      {
+        label: "Manual Work Reduction",
+        value: "90%",
+        description: "Elimination of manual interventions"
+      }
+    ],
+    image: "/images/services/ai-autonomous-infrastructure.jpg",
+    icon: "🤖"
+  },
+  {
+    id: "edge-ai-computing",
+    title: "Edge AI Computing Solutions",
+    description: "Deploy intelligent AI models at the edge for ultra-low latency processing, real-time decision making, and offline capabilities.",
+    category: "Edge Computing",
+    features: [
+      "Ultra-low latency AI inference at the edge",
+      "Real-time data processing and decision making",
+      "Offline AI capabilities for critical operations",
+      "Optimized models for edge device constraints",
+      "Distributed AI model management and updates",
+      "Edge-to-cloud data synchronization"
+    ],
+    benefits: [
+      "Sub-millisecond response times",
+      "Reduced bandwidth and cloud costs",
+      "Enhanced data privacy and security",
+      "Improved reliability with offline capabilities",
+      "Real-time processing for critical applications",
+      "Scalable edge deployment across locations"
+    ],
+    useCases: [
+      "Manufacturing quality control and predictive maintenance",
+      "Autonomous vehicle perception and decision making",
+      "Smart city traffic optimization",
+      "Healthcare real-time patient monitoring",
+      "Retail personalized customer experiences",
+      "Industrial IoT sensor data processing"
+    ],
+    technologies: ["TensorFlow Lite", "OpenVINO", "Edge Computing", "IoT", "5G", "Computer Vision", "Embedded Systems"],
+    pricing: [
+      {
+        tier: "Development",
+        price: "$2,500/month",
+        features: ["Edge model development", "Basic deployment tools", "Testing environments", "Documentation"]
+      },
+      {
+        tier: "Production",
+        price: "$7,500/month",
+        features: ["Production deployment", "Advanced monitoring", "Model optimization", "24/7 support"]
+      },
+      {
+        tier: "Enterprise",
+        price: "Custom",
+        features: ["Custom hardware integration", "Dedicated edge infrastructure", "Advanced security", "SLA guarantees"]
+      }
+    ],
+    testimonial: {
+      quote: "Edge AI enabled us to process data in real-time at our manufacturing plants, reducing defects by 95% and improving efficiency dramatically.",
+      author: "Jennifer Liu",
+      company: "Precision Manufacturing Corp",
+      role: "VP of Operations"
+    },
+    metrics: [
+      {
+        label: "Latency Reduction",
+        value: "99%",
+        description: "Compared to cloud processing"
+      },
+      {
+        label: "Bandwidth Savings",
+        value: "80%",
+        description: "Reduced data transmission"
+      },
+      {
+        label: "Processing Speed",
+        value: "< 1ms",
+        description: "Average inference time"
+      }
+    ],
+    image: "/images/services/edge-ai-computing.jpg",
+    icon: "⚡"
+  },
+  {
+    id: "quantum-ai-optimization",
+    title: "Quantum AI Optimization Services",
+    description: "Leverage quantum computing power combined with AI to solve complex optimization problems that are intractable for classical computers.",
+    category: "Quantum Computing",
+    features: [
+      "Quantum machine learning algorithms",
+      "Complex optimization problem solving",
+      "Quantum neural network implementations",
+      "Hybrid classical-quantum workflows",
+      "Quantum simulation and modeling",
+      "Quantum-resistant security protocols"
+    ],
+    benefits: [
+      "Exponential speedup for specific problems",
+      "Solving NP-hard optimization challenges",
+      "Enhanced machine learning capabilities",
+      "Future-proof quantum-resistant security",
+      "Breakthrough insights in complex domains",
+      "Competitive advantage through quantum advantage"
+    ],
+    useCases: [
+      "Financial portfolio optimization and risk analysis",
+      "Drug discovery and molecular simulation",
+      "Supply chain and logistics optimization",
+      "Climate modeling and environmental analysis",
+      "Materials science and discovery",
+      "Cryptography and cybersecurity"
+    ],
+    technologies: ["IBM Qiskit", "Google Cirq", "Microsoft Q#", "Quantum Algorithms", "Python", "Quantum Hardware"],
+    pricing: [
+      {
+        tier: "Research",
+        price: "$10,000/month",
+        features: ["Quantum algorithm development", "Simulation environments", "Research collaboration", "Basic quantum access"]
+      },
+      {
+        tier: "Development",
+        price: "$25,000/month",
+        features: ["Quantum hardware access", "Advanced algorithms", "Hybrid workflows", "Technical support"]
+      },
+      {
+        tier: "Enterprise",
+        price: "Custom",
+        features: ["Dedicated quantum resources", "Custom algorithm development", "Full integration support", "Quantum expertise team"]
+      }
+    ],
+    testimonial: {
+      quote: "Quantum AI optimization helped us solve portfolio optimization problems that were impossible with classical computing, delivering 18% better returns.",
+      author: "David Kim",
+      company: "Quantum Capital Management",
+      role: "Chief Investment Officer"
+    },
+    metrics: [
+      {
+        label: "Speed Improvement",
+        value: "1000x",
+        description: "Faster than classical algorithms"
+      },
+      {
+        label: "Problem Complexity",
+        value: "Exponential",
+        description: "Handle NP-hard problems"
+      },
+      {
+        label: "Optimization Gain",
+        value: "40%",
+        description: "Better solution quality"
+      }
+    ],
+    image: "/images/services/quantum-ai-optimization.jpg",
+    icon: "🔬"
+  },
+  {
+    id: "ai-sustainability-solutions",
+    title: "AI for Sustainability and Climate Solutions",
+    description: "Harness the power of AI to address climate change, optimize resource usage, and create sustainable solutions for a better future.",
+    category: "Sustainability",
+    features: [
+      "Carbon footprint tracking and optimization",
+      "Renewable energy system optimization",
+      "Environmental monitoring and prediction",
+      "Sustainable supply chain management",
+      "Climate risk assessment and mitigation",
+      "Green AI model development and deployment"
+    ],
+    benefits: [
+      "Significant reduction in carbon emissions",
+      "Optimized resource utilization",
+      "Enhanced environmental monitoring",
+      "Improved sustainability reporting",
+      "Cost savings through efficiency gains",
+      "Compliance with environmental regulations"
+    ],
+    useCases: [
+      "Smart city energy management",
+      "Manufacturing process optimization",
+      "Agriculture precision farming",
+      "Transportation route optimization",
+      "Building energy efficiency",
+      "Waste management optimization"
+    ],
+    technologies: ["Environmental AI", "IoT Sensors", "Satellite Data", "Climate Modeling", "Energy Analytics", "Sustainability Metrics"],
+    pricing: [
+      {
+        tier: "Assessment",
+        price: "$3,000/month",
+        features: ["Carbon footprint analysis", "Sustainability audit", "Baseline measurement", "Improvement recommendations"]
+      },
+      {
+        tier: "Optimization",
+        price: "$8,000/month",
+        features: ["AI-powered optimization", "Real-time monitoring", "Automated reporting", "Implementation support"]
+      },
+      {
+        tier: "Transformation",
+        price: "Custom",
+        features: ["Full sustainability transformation", "Custom AI solutions", "Dedicated support team", "Long-term partnership"]
+      }
+    ],
+    testimonial: {
+      quote: "AI sustainability solutions helped us reduce our carbon footprint by 40% while improving operational efficiency and saving $2M annually.",
+      author: "Sarah Chen",
+      company: "GreenTech Industries",
+      role: "Sustainability Director"
+    },
+    metrics: [
+      {
+        label: "Carbon Reduction",
+        value: "40%",
+        description: "Average emission reduction"
+      },
+      {
+        label: "Energy Savings",
+        value: "25%",
+        description: "Improved energy efficiency"
+      },
+      {
+        label: "Cost Savings",
+        value: "$2M",
+        description: "Annual operational savings"
+      }
+    ],
+    image: "/images/services/ai-sustainability.jpg",
+    icon: "🌱"
+  },
+  {
+    id: "ai-ethics-governance",
+    title: "AI Ethics and Governance Framework",
+    description: "Implement comprehensive AI ethics and governance frameworks to ensure responsible AI development, deployment, and ongoing management.",
+    category: "AI Governance",
+    features: [
+      "AI ethics policy development and implementation",
+      "Bias detection and mitigation systems",
+      "AI transparency and explainability tools",
+      "Compliance monitoring and reporting",
+      "AI risk assessment and management",
+      "Responsible AI training and certification"
+    ],
+    benefits: [
+      "Reduced AI-related risks and incidents",
+      "Enhanced stakeholder trust and confidence",
+      "Regulatory compliance and audit readiness",
+      "Improved AI system fairness and transparency",
+      "Better decision-making through explainable AI",
+      "Competitive advantage through ethical AI leadership"
+    ],
+    useCases: [
+      "Financial services AI compliance",
+      "Healthcare AI ethics and safety",
+      "Automated decision-making systems",
+      "AI-powered hiring and HR systems",
+      "Government AI policy implementation",
+      "Enterprise AI governance and oversight"
+    ],
+    technologies: ["AI Ethics Tools", "Bias Detection", "Explainable AI", "Compliance Monitoring", "Risk Assessment", "Governance Platforms"],
+    pricing: [
+      {
+        tier: "Foundation",
+        price: "$4,000/month",
+        features: ["Ethics policy development", "Basic bias detection", "Compliance framework", "Training materials"]
+      },
+      {
+        tier: "Advanced",
+        price: "$12,000/month",
+        features: ["Advanced monitoring tools", "Automated compliance", "Risk assessment", "Expert consultation"]
+      },
+      {
+        tier: "Enterprise",
+        price: "Custom",
+        features: ["Custom governance framework", "Dedicated ethics team", "Full audit support", "Ongoing monitoring"]
+      }
+    ],
+    testimonial: {
+      quote: "The AI ethics framework gave us confidence in our AI systems and helped us achieve 100% compliance with all regulations while building trust with our customers.",
+      author: "Robert Martinez",
+      company: "SecureBank International",
+      role: "Chief Risk Officer"
+    },
+    metrics: [
+      {
+        label: "Compliance Rate",
+        value: "100%",
+        description: "Regulatory compliance achieved"
+      },
+      {
+        label: "Risk Reduction",
+        value: "80%",
+        description: "AI-related risk mitigation"
+      },
+      {
+        label: "Trust Score",
+        value: "95%",
+        description: "Stakeholder confidence rating"
+      }
+    ],
+    image: "/images/services/ai-ethics-governance.jpg",
+    icon: "⚖️"
   }
-  const getVariantStyles = () => {
-    switch (variant) {
-      case "premium":
-        return {
-          container: "bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 border-emerald-400/30",
-          text: "text-white",
-          accent: "text-emerald-200",
-          button: "bg-white text-emerald-600 hover:bg-emerald-50",
-          buttonSecondary: "border-white text-white hover:bg-white hover:text-emerald-600",
-          card: "bg-white/10 backdrop-blur-sm border-white/20"
-        };
-      case "showcase":
-        return {
-          container: "bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 border-purple-400/30",
-          text: "text-white",
-          accent: "text-purple-200",
-          button: "bg-white text-purple-600 hover:bg-purple-50",
-          buttonSecondary: "border-white text-white hover:bg-white hover:text-purple-600",
-          card: "bg-white/10 backdrop-blur-sm border-white/20"
-        };
-      default:
-        return {
-          container: "bg-gradient-to-r from-blue-600 to-indigo-600 border-blue-400/30",
-          text: "text-white",
-          accent: "text-blue-200",
-          button: "bg-white text-blue-600 hover:bg-blue-50",
-          buttonSecondary: "border-white text-white hover:bg-white hover:text-blue-600",
-          card: "bg-white/10 backdrop-blur-sm border-white/20"
-        };
-    }
-  };
-  const styles = getVariantStyles();
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: `${styles.container} ${className} border rounded-xl p-6 mb-8 relative overflow-hidden`, children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 opacity-10", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white to-transparent transform -skew-x-12 animate-shimmer" }) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative z-10", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between mb-4", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-3", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx(Sparkles, { className: "w-6 h-6 animate-pulse" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: `text-lg font-bold ${styles.text}`, children: "🚀 NEW SERVICES LAUNCH" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx(TrendingUp, { className: "w-5 h-5 animate-bounce" })
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "button",
-          {
-            onClick: () => setIsVisible(false),
-            className: `${styles.accent} hover:${styles.text} transition-colors`,
-            "aria-label": "Dismiss banner",
-            children: "✕"
-          }
-        )
-      ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mb-6", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: `text-xl font-bold ${styles.text} mb-2`, children: "🎯 Revolutionary AI Services That Will Transform Your Business" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: `${styles.accent} text-sm mb-4`, children: "Discover our newest AI-powered services: Autonomous Operations, Quantum Optimization, AI Cybersecurity Suite, Edge AI Platform, and Content Generation Platform." })
-      ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6", children: services.map((service) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: `${styles.card} rounded-lg p-4 hover:bg-white/15 transition-all duration-300 hover:scale-105`, children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-start justify-between mb-3", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-3", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-2xl", children: service.icon }),
-            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: `font-semibold ${styles.text} text-sm mb-1`, children: service.title }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "bg-white/20 px-2 py-1 rounded text-xs font-medium", children: service.category })
-            ] })
-          ] }),
-          service.newBadge && /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "bg-yellow-400 text-black px-2 py-1 rounded-full text-xs font-medium flex items-center gap-1", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx(Star, { className: "w-3 h-3" }),
-            "NEW"
-          ] })
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: `${styles.accent} text-xs mb-3 line-clamp-2`, children: service.description }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between mb-3", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: `font-bold ${styles.text} text-sm`, children: service.pricing.starting }),
-            service.pricing.popular && /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "bg-green-400 text-black px-2 py-1 rounded text-xs font-medium", children: "POPULAR" })
-          ] }),
-          service.pricing.discount && /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "bg-red-400 text-white px-2 py-1 rounded text-xs font-medium", children: service.pricing.discount })
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mb-3", children: service.benefits.slice(0, 2).map((benefit, index) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2 mb-1", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx(CircleCheckBig, { className: "w-3 h-3 text-green-400 flex-shrink-0" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: `${styles.accent} text-xs`, children: benefit })
-        ] }, index)) }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex gap-2", children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
-          Link,
-          {
-            to: `/services/${service.id}`,
-            className: `${styles.button} px-3 py-2 rounded text-xs font-semibold inline-flex items-center gap-1 transition-all duration-300 hover:scale-105 flex-1 justify-center`,
-            children: [
-              "Learn More",
-              /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "w-3 h-3" })
-            ]
-          }
-        ) })
-      ] }, service.id)) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col sm:flex-row gap-3 justify-center", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs(
-          Link,
-          {
-            to: "/services",
-            className: `${styles.button} px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 transition-all duration-300 hover:scale-105`,
-            children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx(Zap, { className: "w-4 h-4" }),
-              "Explore All Services",
-              /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "w-4 h-4" })
-            ]
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          Link,
-          {
-            to: "/contact",
-            className: `${styles.buttonSecondary} border px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105`,
-            children: "Get Free Consultation"
-          }
-        )
-      ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-4 p-3 bg-white/10 rounded-lg border border-white/20", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: `${styles.text} font-semibold text-sm mb-1`, children: "🔥 Limited Time Offer: Get 50% OFF Your First 3 Months" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: `${styles.accent} text-xs`, children: "Plus FREE AI Strategy Consultation • Valid until March 31, 2025" })
-      ] }) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-4 flex flex-wrap gap-2 justify-center", children: ["AI Autonomous Ops", "Quantum Computing", "AI Security", "Edge AI", "Content Generation", "Customer Insights"].map((tag) => /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "bg-white/10 text-white px-3 py-1 rounded-full text-xs font-medium border border-white/20", children: tag }, tag)) })
-    ] })
-  ] });
-}
+];
+const featuredNewServices = newServices2025.filter(
+  (service) => ["ai-autonomous-infrastructure", "edge-ai-computing", "quantum-ai-optimization"].includes(service.id)
+);
 
 const caseStudies = [
+  {
+    id: "ai-sustainability-transformation-2026",
+    title: "AI Sustainability Transformation 2026: Carbon-Neutral Operations",
+    company: "Global Manufacturing Corp",
+    industry: "Manufacturing",
+    challenge: "Massive AI infrastructure consuming 45MW of power daily, generating 35,000 tons of CO2 annually, with energy costs exceeding $18M per year and mounting regulatory pressure for carbon neutrality.",
+    solution: "Implemented comprehensive AI sustainability transformation including solar-powered data centers, optimized algorithms, carbon offset programs, and intelligent automation systems across 25 facilities.",
+    results: [
+      "Achieved 100% carbon neutral operations",
+      "Reduced energy consumption by 80%",
+      "Generated $10M total ROI",
+      "Achieved 95% automation efficiency",
+      "Eliminated 35,000 tons CO2 annually"
+    ],
+    technologies: ["Solar Energy", "AI Optimization", "Carbon Offsets", "Smart Manufacturing", "Predictive Analytics"],
+    duration: "18 months",
+    imageUrl: "/images/case-studies/ai-sustainability-transformation-2026.jpg"
+  },
+  {
+    id: "ai-quantum-optimization-2026",
+    title: "AI Quantum Optimization 2026: 1000x Speed Improvement",
+    company: "FinanceCorp International",
+    industry: "Financial Services",
+    challenge: "Portfolio optimization for $50B in assets taking 8 hours on classical computers, limiting real-time trading opportunities and costing $2M annually in suboptimal allocations.",
+    solution: "Implemented quantum-enhanced AI optimization system using variational quantum algorithms with hybrid quantum-classical processing for real-time portfolio optimization and decision making.",
+    results: [
+      "Achieved 1000x speed improvement (8 hours → 30 seconds)",
+      "Generated $12M additional annual returns",
+      "Improved optimization accuracy by 95%",
+      "Enabled real-time portfolio rebalancing",
+      "Reduced portfolio risk by 40%"
+    ],
+    technologies: ["Quantum Computing", "Variational Quantum Algorithms", "AI/ML", "Portfolio Optimization", "Real-time Analytics"],
+    duration: "12 months",
+    imageUrl: "/images/case-studies/ai-quantum-optimization-2026.jpg"
+  },
   {
     id: "fintech-ai-platform",
     title: "AI-Powered Financial Analytics Platform",
@@ -5219,6 +4536,114 @@ const caseStudies = [
     technologies: ["Quantum Computing", "IBM Qiskit", "Python", "Portfolio Optimization", "Risk Management"],
     duration: "20 weeks",
     imageUrl: "/images/case-studies/quantum-portfolio.jpg"
+  },
+  {
+    id: "ai-autonomous-vehicles-transformation",
+    title: "Autonomous Vehicle AI Platform Implementation",
+    company: "FutureMobility Corp",
+    industry: "Automotive",
+    challenge: "Traditional vehicle testing was expensive, time-consuming, and couldn't simulate all real-world scenarios, limiting autonomous vehicle development speed.",
+    solution: "Implemented AI-powered autonomous vehicle platform with advanced perception systems, decision-making algorithms, and comprehensive simulation environments.",
+    results: [
+      "Reduced vehicle testing costs by 70% through virtual simulation",
+      "Improved safety scores by 95% with advanced AI perception",
+      "Accelerated development timeline from 5 years to 2 years",
+      "Achieved Level 4 autonomy certification ahead of schedule",
+      "Generated $50M in cost savings and faster time-to-market"
+    ],
+    technologies: ["Computer Vision", "Deep Learning", "Simulation", "Edge Computing", "Sensor Fusion"],
+    duration: "18 months",
+    imageUrl: "/images/case-studies/autonomous-vehicles-ai.jpg"
+  },
+  {
+    id: "ai-healthcare-diagnostics-platform",
+    title: "AI-Powered Healthcare Diagnostics Platform",
+    company: "MedTech Innovations",
+    industry: "Healthcare",
+    challenge: "Manual medical diagnosis was slow and inconsistent, with radiologists struggling to keep up with increasing patient volumes and complex cases.",
+    solution: "Deployed comprehensive AI diagnostics platform with medical imaging analysis, predictive diagnostics, and clinical decision support systems.",
+    results: [
+      "Improved diagnostic accuracy by 40% across all specialties",
+      "Reduced diagnosis time from 48 hours to 4 hours",
+      "Detected early-stage diseases with 98% accuracy",
+      "Freed up 60% of radiologist time for complex cases",
+      "Saved $15M annually in healthcare costs"
+    ],
+    technologies: ["Medical AI", "Computer Vision", "Deep Learning", "DICOM", "Clinical Workflows"],
+    duration: "14 months",
+    imageUrl: "/images/case-studies/healthcare-ai-diagnostics.jpg"
+  },
+  {
+    id: "ai-smart-city-transformation",
+    title: "Smart City AI Integration Platform",
+    company: "UrbanTech Solutions",
+    industry: "Smart Cities",
+    challenge: "City operations were inefficient with manual processes, poor resource allocation, and limited data-driven decision making affecting citizen services.",
+    solution: "Implemented comprehensive smart city AI platform with traffic optimization, resource management, citizen services automation, and predictive analytics.",
+    results: [
+      "Reduced traffic congestion by 35% through intelligent routing",
+      "Improved emergency response times by 50%",
+      "Optimized energy consumption by 25% across city infrastructure",
+      "Enhanced citizen satisfaction scores by 60%",
+      "Generated $100M in operational cost savings over 3 years"
+    ],
+    technologies: ["IoT", "Edge Computing", "Predictive Analytics", "Real-time Processing", "Citizen Portals"],
+    duration: "20 months",
+    imageUrl: "/images/case-studies/smart-city-ai.jpg"
+  },
+  {
+    id: "ai-financial-fraud-detection",
+    title: "Advanced AI Fraud Detection System",
+    company: "SecureBank International",
+    industry: "Banking",
+    challenge: "Traditional fraud detection was generating 95% false positives, missing real threats, and causing customer friction with legitimate transactions.",
+    solution: "Deployed advanced AI fraud detection system with machine learning models, behavioral analysis, and real-time risk scoring for all transactions.",
+    results: [
+      "Reduced false positives by 90% while maintaining detection accuracy",
+      "Improved fraud detection rate to 99.5%",
+      "Reduced customer friction by 75% for legitimate transactions",
+      "Prevented $200M in fraudulent transactions annually",
+      "Achieved 40% reduction in fraud investigation costs"
+    ],
+    technologies: ["Machine Learning", "Behavioral Analytics", "Real-time Processing", "Risk Scoring", "API Integration"],
+    duration: "12 months",
+    imageUrl: "/images/case-studies/financial-fraud-ai.jpg"
+  },
+  {
+    id: "ai-supply-chain-optimization",
+    title: "AI-Driven Supply Chain Optimization",
+    company: "GlobalLogistics Corp",
+    industry: "Logistics",
+    challenge: "Supply chain disruptions and inefficiencies were costing $50M annually, with poor demand forecasting and suboptimal inventory management.",
+    solution: "Implemented AI-powered supply chain optimization platform with demand forecasting, inventory optimization, route planning, and risk management.",
+    results: [
+      "Improved demand forecasting accuracy by 85%",
+      "Reduced inventory costs by 30% through optimized stock levels",
+      "Decreased supply chain disruptions by 70%",
+      "Optimized delivery routes saving $12M in fuel costs",
+      "Achieved 99.5% on-time delivery performance"
+    ],
+    technologies: ["Predictive Analytics", "Optimization Algorithms", "IoT", "Blockchain", "Real-time Tracking"],
+    duration: "16 months",
+    imageUrl: "/images/case-studies/supply-chain-ai.jpg"
+  },
+  {
+    id: "ai-energy-grid-optimization",
+    title: "Smart Energy Grid AI Management",
+    company: "PowerGrid Solutions",
+    industry: "Energy",
+    challenge: "Energy grid inefficiencies and renewable energy integration challenges were causing power outages and suboptimal energy distribution.",
+    solution: "Deployed AI-powered smart grid management system with renewable energy integration, demand forecasting, and automated grid optimization.",
+    results: [
+      "Improved grid efficiency by 40% through intelligent load balancing",
+      "Integrated 60% more renewable energy sources",
+      "Reduced power outages by 85%",
+      "Optimized energy distribution saving $25M annually",
+      "Achieved 99.9% grid reliability"
+    ],
+    technologies: ["Smart Grid", "Renewable Energy", "Predictive Analytics", "IoT Sensors", "Grid Automation"],
+    duration: "22 months",
+    imageUrl: "/images/case-studies/energy-grid-ai.jpg"
   }
 ];
 caseStudies.slice(0, 4).map((study) => ({
@@ -5235,6 +4660,566 @@ caseStudies.slice(0, 4).map((study) => ({
     title: study.company
   }
 }));
+
+const promotionalBanners2025 = [
+  {
+    id: "ai-autonomous-infrastructure-launch",
+    title: "🚀 AI Autonomous Infrastructure is Here",
+    subtitle: "Self-Healing, Self-Optimizing Systems",
+    description: "Transform your infrastructure with AI that thinks, learns, and adapts. Achieve 99.99% uptime and 65% cost reduction with zero-touch operations.",
+    cta: {
+      primary: "Explore AI Infrastructure",
+      secondary: "View Case Study"
+    },
+    ctaUrls: {
+      primary: "/services/ai-autonomous-infrastructure",
+      secondary: "/case-studies/ai-autonomous-operations-success"
+    },
+    type: "hero",
+    category: "AI Operations",
+    featured: true,
+    badge: "NEW",
+    image: "/images/banners/ai-autonomous-infrastructure-hero.jpg",
+    icon: "🤖",
+    metrics: [
+      { label: "Uptime", value: "99.99%" },
+      { label: "Cost Savings", value: "65%" },
+      { label: "Manual Work", value: "90% ↓" }
+    ],
+    testimonial: {
+      quote: "AI Autonomous Infrastructure transformed our operations completely. We went from constant firefighting to zero-touch operations.",
+      author: "Michael Rodriguez",
+      company: "CloudScale Enterprises"
+    },
+    tags: ["AI Operations", "Autonomous Systems", "Infrastructure", "Self-Healing"],
+    publishedDate: "2025-01-25"
+  },
+  {
+    id: "edge-ai-computing-spotlight",
+    title: "⚡ Edge AI Computing Solutions",
+    subtitle: "Ultra-Low Latency Intelligence",
+    description: "Deploy AI at the edge for sub-millisecond response times. Process data locally, reduce bandwidth costs, and enable offline AI capabilities.",
+    cta: {
+      primary: "Discover Edge AI",
+      secondary: "Read Guide"
+    },
+    ctaUrls: {
+      primary: "/services/edge-ai-computing",
+      secondary: "/blog/ai-edge-computing-2025"
+    },
+    type: "feature",
+    category: "Edge Computing",
+    featured: true,
+    badge: "TRENDING",
+    image: "/images/banners/edge-ai-computing.jpg",
+    icon: "⚡",
+    metrics: [
+      { label: "Latency", value: "< 1ms" },
+      { label: "Bandwidth", value: "80% ↓" },
+      { label: "Offline Capable", value: "100%" }
+    ],
+    testimonial: {
+      quote: "Edge AI enabled real-time processing at our manufacturing plants, reducing defects by 95%.",
+      author: "Jennifer Liu",
+      company: "Precision Manufacturing Corp"
+    },
+    tags: ["Edge Computing", "Real-time AI", "IoT", "Manufacturing"],
+    publishedDate: "2025-01-24"
+  },
+  {
+    id: "quantum-ai-breakthrough",
+    title: "🔬 Quantum AI Breakthroughs",
+    subtitle: "The Next Frontier of Computing",
+    description: "Discover how quantum computing combined with AI is solving previously impossible problems. 1000x speedup for complex optimization challenges.",
+    cta: {
+      primary: "Explore Quantum AI",
+      secondary: "View Results"
+    },
+    ctaUrls: {
+      primary: "/services/quantum-ai-optimization",
+      secondary: "/case-studies/quantum-computing-optimization"
+    },
+    type: "announcement",
+    category: "Quantum Computing",
+    featured: true,
+    badge: "BREAKTHROUGH",
+    image: "/images/banners/quantum-ai-breakthrough.jpg",
+    icon: "🔬",
+    metrics: [
+      { label: "Speedup", value: "1000x" },
+      { label: "Complexity", value: "NP-Hard" },
+      { label: "Accuracy", value: "40% ↑" }
+    ],
+    testimonial: {
+      quote: "Quantum AI optimization helped us solve portfolio problems impossible with classical computing, delivering 18% better returns.",
+      author: "David Kim",
+      company: "Quantum Capital Management"
+    },
+    tags: ["Quantum Computing", "Machine Learning", "Optimization", "Finance"],
+    publishedDate: "2025-01-23"
+  },
+  {
+    id: "ai-sustainability-mission",
+    title: "🌱 AI for Sustainability",
+    subtitle: "Tackling Climate Change with Intelligence",
+    description: "Join the fight against climate change with AI solutions that reduce carbon emissions by 40%, optimize resource usage, and create sustainable futures.",
+    cta: {
+      primary: "Join the Mission",
+      secondary: "Learn More"
+    },
+    ctaUrls: {
+      primary: "/services/ai-sustainability-solutions",
+      secondary: "/blog/ai-sustainability-climate-2025"
+    },
+    type: "announcement",
+    category: "Sustainability",
+    featured: true,
+    badge: "MISSION",
+    image: "/images/banners/ai-sustainability.jpg",
+    icon: "🌱",
+    metrics: [
+      { label: "Carbon Reduction", value: "40%" },
+      { label: "Energy Savings", value: "25%" },
+      { label: "Cost Savings", value: "$2M" }
+    ],
+    testimonial: {
+      quote: "AI sustainability solutions reduced our carbon footprint by 40% while saving $2M annually in operational costs.",
+      author: "Sarah Chen",
+      company: "GreenTech Industries"
+    },
+    tags: ["Sustainability", "Climate Change", "Green AI", "Environmental"],
+    publishedDate: "2025-01-22"
+  },
+  {
+    id: "ai-ethics-governance-framework",
+    title: "⚖️ AI Ethics & Governance Framework",
+    subtitle: "Building Responsible AI Systems",
+    description: "Ensure your AI systems are fair, transparent, and compliant. Our comprehensive framework helps you build trust and achieve 100% regulatory compliance.",
+    cta: {
+      primary: "Get Framework",
+      secondary: "Download Guide"
+    },
+    ctaUrls: {
+      primary: "/services/ai-ethics-governance",
+      secondary: "/blog/ai-ethics-governance-2025"
+    },
+    type: "feature",
+    category: "AI Governance",
+    featured: true,
+    badge: "ESSENTIAL",
+    image: "/images/banners/ai-ethics-governance.jpg",
+    icon: "⚖️",
+    metrics: [
+      { label: "Compliance", value: "100%" },
+      { label: "Risk Reduction", value: "80%" },
+      { label: "Trust Score", value: "95%" }
+    ],
+    testimonial: {
+      quote: "The AI ethics framework gave us confidence in our systems and achieved 100% compliance with all regulations.",
+      author: "Robert Martinez",
+      company: "SecureBank International"
+    },
+    tags: ["AI Ethics", "Governance", "Compliance", "Responsible AI"],
+    publishedDate: "2025-01-21"
+  },
+  {
+    id: "new-case-studies-2025",
+    title: "📊 New Success Stories",
+    subtitle: "Real Results from Real Companies",
+    description: "Explore our latest case studies featuring autonomous vehicles, healthcare diagnostics, smart cities, and more. See how AI is transforming industries.",
+    cta: {
+      primary: "View Case Studies",
+      secondary: "Get Consultation"
+    },
+    ctaUrls: {
+      primary: "/case-studies",
+      secondary: "/contact"
+    },
+    type: "new",
+    category: "Case Studies",
+    featured: false,
+    badge: "NEW",
+    image: "/images/banners/new-case-studies.jpg",
+    icon: "📊",
+    metrics: [
+      { label: "New Studies", value: "6+" },
+      { label: "Industries", value: "8" },
+      { label: "Success Rate", value: "100%" }
+    ],
+    tags: ["Case Studies", "Success Stories", "Industry Solutions", "Results"],
+    publishedDate: "2025-01-20"
+  },
+  {
+    id: "ai-blog-series-2025",
+    title: "📝 Latest AI Insights",
+    subtitle: "Expert Analysis and Trends",
+    description: "Stay ahead with our latest blog posts covering edge AI, quantum computing, sustainability, and ethics. Written by industry experts and thought leaders.",
+    cta: {
+      primary: "Read Latest Posts",
+      secondary: "Subscribe"
+    },
+    ctaUrls: {
+      primary: "/blog",
+      secondary: "/newsletter"
+    },
+    type: "trending",
+    category: "Blog",
+    featured: false,
+    badge: "TRENDING",
+    image: "/images/banners/ai-blog-series.jpg",
+    icon: "📝",
+    metrics: [
+      { label: "New Posts", value: "4+" },
+      { label: "Expert Authors", value: "5" },
+      { label: "Categories", value: "6" }
+    ],
+    tags: ["Blog", "AI Insights", "Expert Analysis", "Trends"],
+    publishedDate: "2025-01-19"
+  }
+];
+
+const NewContentShowcase2025 = () => {
+  const [currentBannerIndex, setCurrentBannerIndex] = reactExports.useState(0);
+  const [isVisible, setIsVisible] = reactExports.useState(false);
+  reactExports.useEffect(() => {
+    setIsVisible(true);
+    const interval = setInterval(() => {
+      setCurrentBannerIndex((prev) => (prev + 1) % promotionalBanners2025.slice(0, 3).length);
+    }, 8e3);
+    return () => clearInterval(interval);
+  }, []);
+  const featuredBanners = promotionalBanners2025.slice(0, 3);
+  const latestBlogPosts = newContent2025.filter((item) => item.type === "blog").slice(0, 4);
+  const latestCaseStudies = caseStudies.slice(-3);
+  const featuredServices = featuredNewServices.slice(0, 3);
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "py-16 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "absolute inset-0 overflow-hidden", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute -top-40 -right-40 w-80 h-80 bg-blue-500/20 rounded-full mix-blend-multiply filter blur-xl animate-float" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/20 rounded-full mix-blend-multiply filter blur-xl animate-float", style: { animationDelay: "2s" } })
+    ] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto px-6 relative z-10", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center mb-12", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-300 text-sm font-medium mb-4 border border-blue-500/30", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(Sparkles, { className: "w-4 h-4 mr-2" }),
+          "New in 2025",
+          /* @__PURE__ */ jsxRuntimeExports.jsx(TrendingUp, { className: "w-4 h-4 ml-2" })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "text-4xl md:text-5xl font-bold text-white mb-4", children: [
+          "Latest ",
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent", children: "Innovations" })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xl text-gray-300 max-w-3xl mx-auto", children: "Discover our newest AI solutions, breakthrough case studies, and cutting-edge services that are transforming industries worldwide." })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mb-16", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "relative bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-8 border border-blue-500/30 overflow-hidden", children: featuredBanners.map((banner, index) => /* @__PURE__ */ jsxRuntimeExports.jsx(
+        "div",
+        {
+          className: `transition-all duration-1000 ${index === currentBannerIndex ? "opacity-100 translate-x-0" : index < currentBannerIndex ? "opacity-0 -translate-x-full absolute inset-0" : "opacity-0 translate-x-full absolute inset-0"}`,
+          children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col lg:flex-row items-center gap-8", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex-1", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2 mb-4", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "px-3 py-1 bg-gradient-to-r from-blue-500 to-purple-500 text-white text-sm font-medium rounded-full", children: banner.badge }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-blue-300 text-sm", children: banner.category })
+              ] }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-3xl font-bold text-white mb-4", children: banner.title }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-300 text-lg mb-6", children: banner.description }),
+              banner.metrics && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex flex-wrap gap-6 mb-6", children: banner.metrics.map((metric, idx) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-2xl font-bold text-blue-400", children: metric.value }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-sm text-gray-400", children: metric.label })
+              ] }, idx)) }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col sm:flex-row gap-4", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                  Link,
+                  {
+                    to: banner.ctaUrls.primary,
+                    className: "inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 shadow-lg hover:shadow-xl",
+                    children: [
+                      banner.cta.primary,
+                      /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "w-4 h-4 ml-2" })
+                    ]
+                  }
+                ),
+                banner.ctaUrls.secondary && /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  Link,
+                  {
+                    to: banner.ctaUrls.secondary,
+                    className: "inline-flex items-center px-6 py-3 border border-blue-500/50 text-blue-300 font-medium rounded-lg hover:bg-blue-500/10 transition-all duration-300",
+                    children: banner.cta.secondary
+                  }
+                )
+              ] })
+            ] }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex-1 flex justify-center", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-64 h-64 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-2xl flex items-center justify-center border border-blue-500/30", children: /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-8xl", children: banner.icon }) }) })
+          ] })
+        },
+        banner.id
+      )) }) }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-1 lg:grid-cols-3 gap-8", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-gradient-to-br from-blue-900/20 to-purple-900/20 rounded-xl p-6 border border-blue-500/30", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2 mb-6", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx(Award, { className: "w-5 h-5 text-blue-400" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-xl font-bold text-white", children: "Latest Insights" })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "space-y-4", children: latestBlogPosts.map((post) => /* @__PURE__ */ jsxRuntimeExports.jsx(
+            Link,
+            {
+              to: post.url,
+              className: "block p-4 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition-all duration-300 group",
+              children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex items-start gap-3", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex-1", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2 mb-2", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "px-2 py-1 bg-blue-500/20 text-blue-300 text-xs font-medium rounded", children: post.category }),
+                  post.newBadge && /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "px-2 py-1 bg-green-500/20 text-green-300 text-xs font-medium rounded", children: "NEW" })
+                ] }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "text-white font-medium mb-1 group-hover:text-blue-300 transition-colors", children: post.title }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-400 text-sm mb-2 line-clamp-2", children: post.excerpt }),
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-4 text-xs text-gray-500", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "flex items-center gap-1", children: [
+                    /* @__PURE__ */ jsxRuntimeExports.jsx(Clock, { className: "w-3 h-3" }),
+                    post.readTime
+                  ] }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "flex items-center gap-1", children: [
+                    /* @__PURE__ */ jsxRuntimeExports.jsx(Calendar, { className: "w-3 h-3" }),
+                    new Date(post.publishedDate).toLocaleDateString()
+                  ] })
+                ] })
+              ] }) })
+            },
+            post.id
+          )) }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs(
+            Link,
+            {
+              to: "/blog",
+              className: "inline-flex items-center text-blue-400 hover:text-blue-300 text-sm font-medium mt-4",
+              children: [
+                "View all insights",
+                /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "w-4 h-4 ml-1" })
+              ]
+            }
+          )
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-gradient-to-br from-purple-900/20 to-pink-900/20 rounded-xl p-6 border border-purple-500/30", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2 mb-6", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx(Star, { className: "w-5 h-5 text-purple-400" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-xl font-bold text-white", children: "Featured Services" })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "space-y-4", children: featuredServices.map((service) => /* @__PURE__ */ jsxRuntimeExports.jsx(
+            Link,
+            {
+              to: `/services/${service.id}`,
+              className: "block p-4 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition-all duration-300 group",
+              children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-start gap-3", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-2xl", children: service.icon }),
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex-1", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "text-white font-medium mb-1 group-hover:text-purple-300 transition-colors", children: service.title }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-400 text-sm mb-2 line-clamp-2", children: service.description }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex flex-wrap gap-1", children: service.features.slice(0, 2).map((feature, idx) => /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded", children: feature }, idx)) })
+                ] })
+              ] })
+            },
+            service.id
+          )) }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs(
+            Link,
+            {
+              to: "/services",
+              className: "inline-flex items-center text-purple-400 hover:text-purple-300 text-sm font-medium mt-4",
+              children: [
+                "Explore all services",
+                /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "w-4 h-4 ml-1" })
+              ]
+            }
+          )
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-gradient-to-br from-green-900/20 to-blue-900/20 rounded-xl p-6 border border-green-500/30", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2 mb-6", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx(Users, { className: "w-5 h-5 text-green-400" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-xl font-bold text-white", children: "Success Stories" })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "space-y-4", children: latestCaseStudies.map((study) => /* @__PURE__ */ jsxRuntimeExports.jsx(
+            Link,
+            {
+              to: `/case-studies/${study.id}`,
+              className: "block p-4 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition-all duration-300 group",
+              children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex items-start gap-3", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex-1", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex items-center gap-2 mb-2", children: /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "px-2 py-1 bg-green-500/20 text-green-300 text-xs font-medium rounded", children: study.industry }) }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "text-white font-medium mb-1 group-hover:text-green-300 transition-colors", children: study.title }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-400 text-sm mb-2", children: study.company }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-xs text-green-400 font-medium", children: study.results[0] })
+              ] }) })
+            },
+            study.id
+          )) }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs(
+            Link,
+            {
+              to: "/case-studies",
+              className: "inline-flex items-center text-green-400 hover:text-green-300 text-sm font-medium mt-4",
+              children: [
+                "View all case studies",
+                /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "w-4 h-4 ml-1" })
+              ]
+            }
+          )
+        ] })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-center mt-12", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "inline-flex flex-col sm:flex-row gap-4", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs(
+          Link,
+          {
+            to: "/contact",
+            className: "inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 shadow-lg hover:shadow-xl",
+            children: [
+              "Get Started Today",
+              /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "w-5 h-5 ml-2" })
+            ]
+          }
+        ),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(
+          Link,
+          {
+            to: "/resources",
+            className: "inline-flex items-center px-8 py-4 border border-blue-500/50 text-blue-300 font-medium rounded-lg hover:bg-blue-500/10 transition-all duration-300",
+            children: "Explore Resources"
+          }
+        )
+      ] }) })
+    ] })
+  ] });
+};
+var NewContentShowcase2025_default = NewContentShowcase2025;
+
+const NewServicesShowcase = () => {
+  const featuredServices = newServices.filter((service) => service.featured);
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("section", { className: "py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "absolute inset-0", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute -top-40 -right-40 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float", style: { animationDelay: "2s" } }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute top-40 left-1/2 w-60 h-60 bg-cyan-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float", style: { animationDelay: "4s" } })
+    ] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto px-6 relative z-10", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center mb-16", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-green-500/20 to-blue-500/20 text-green-400 text-sm font-medium mb-8 border border-green-400/30", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(Sparkles, { className: "w-4 h-4 mr-2 animate-pulse" }),
+          "🚀 NEW SERVICES AVAILABLE",
+          /* @__PURE__ */ jsxRuntimeExports.jsx(Sparkles, { className: "w-4 h-4 ml-2 animate-pulse" })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "text-4xl md:text-5xl font-bold text-white mb-6", children: [
+          "Revolutionary AI Solutions",
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "block bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent", children: "Now Available" })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xl text-gray-300 max-w-3xl mx-auto mb-8", children: "Discover our latest AI-powered services that are transforming industries worldwide. From autonomous operations to quantum computing, we're pushing the boundaries of what's possible." }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-gradient-to-r from-green-500/20 to-blue-500/20 border border-green-400/30 rounded-xl p-6 mb-8 max-w-4xl mx-auto", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-center gap-3 mb-3", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx(Zap, { className: "w-6 h-6 text-green-400 animate-pulse" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-lg font-bold text-green-400", children: "🔥 LIMITED TIME OFFER" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx(Zap, { className: "w-6 h-6 text-green-400 animate-pulse" })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-white text-lg font-semibold mb-2", children: "Get 50% OFF Your First 3 Months + FREE AI Strategy Consultation" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-300 text-sm", children: "Valid until March 31, 2025 • No setup fees • Cancel anytime" })
+        ] })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16", children: featuredServices.map((service) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
+        "div",
+        {
+          className: "bg-white/10 backdrop-blur-lg rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl border border-white/20",
+          children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between mb-6", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-3xl", children: service.icon }),
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-xs uppercase tracking-wider text-blue-300", children: service.category }),
+                  service.newBadge && /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "bg-green-500 text-white text-xs px-2 py-1 rounded-full font-medium", children: "NEW" })
+                ] })
+              ] }),
+              service.pricing.popular && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-1 bg-yellow-500/20 text-yellow-400 px-2 py-1 rounded-full text-xs", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx(Star, { className: "w-3 h-3 fill-current" }),
+                "POPULAR"
+              ] })
+            ] }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-xl font-bold text-white mb-4", children: service.title }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-300 mb-6 text-sm leading-relaxed", children: service.description }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mb-6", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2 mb-2", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "text-2xl font-bold text-green-400", children: [
+                  "$",
+                  service.pricing.starting
+                ] }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-sm text-gray-400", children: "/month" })
+              ] }),
+              service.pricing.discount && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-sm text-green-400 font-medium", children: service.pricing.discount })
+            ] }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "space-y-2 mb-6", children: service.benefits.slice(0, 3).map((benefit, index) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center text-gray-300 text-sm", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx(CircleCheckBig, { className: "w-4 h-4 mr-3 text-green-400 flex-shrink-0" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: benefit })
+            ] }, index)) }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-3 gap-4 mb-6", children: service.metrics.slice(0, 3).map((metric, index) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-lg font-bold text-white", children: metric.value }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-xs text-gray-400", children: metric.label })
+            ] }, index)) }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex gap-3", children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
+              Link,
+              {
+                to: `/services/${service.id}`,
+                className: "flex-1 bg-gradient-to-r from-green-500 to-blue-500 text-white px-4 py-2 rounded-lg font-semibold text-center hover:from-green-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center gap-2",
+                children: [
+                  service.cta.primary,
+                  /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "w-4 h-4" })
+                ]
+              }
+            ) })
+          ]
+        },
+        service.id
+      )) }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-xl p-8 mb-8", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-2xl font-bold text-white mb-4", children: "Ready to Transform Your Business?" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-300 mb-6 max-w-2xl mx-auto", children: "Join 500+ companies already using our AI solutions to drive growth, reduce costs, and achieve unprecedented efficiency." }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col sm:flex-row gap-4 justify-center", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsxs(
+              Link,
+              {
+                to: "/services",
+                className: "bg-white text-purple-600 hover:bg-purple-50 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2",
+                children: [
+                  "Explore All Services",
+                  /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "w-5 h-5" })
+                ]
+              }
+            ),
+            /* @__PURE__ */ jsxRuntimeExports.jsx(
+              Link,
+              {
+                to: "/contact",
+                className: "border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105",
+                children: "Get Free Consultation"
+              }
+            )
+          ] })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-2 md:grid-cols-4 gap-8 max-w-2xl mx-auto", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-3xl font-bold text-green-400", children: "500+" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-sm text-gray-400", children: "Happy Clients" })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-3xl font-bold text-blue-400", children: "99.9%" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-sm text-gray-400", children: "Uptime SLA" })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-3xl font-bold text-purple-400", children: "24/7" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-sm text-gray-400", children: "Support" })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-3xl font-bold text-cyan-400", children: "5★" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-sm text-gray-400", children: "Client Rating" })
+          ] })
+        ] })
+      ] })
+    ] })
+  ] });
+};
+var NewServicesShowcase_default = NewServicesShowcase;
 
 const SuccessStoriesShowcase = () => {
   return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "py-20 bg-gradient-to-br from-gray-50 to-blue-50", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto px-6", children: [
@@ -5392,6 +5377,36 @@ const TrendingContentBanner = () => {
       badge: "HOT"
     },
     {
+      title: "AI Safety Budgets 2026",
+      description: "Budgeted actions, approvals, and rollbacks that keep AI features safe.",
+      views: "13.2K",
+      readTime: "7 min",
+      category: "AI Governance",
+      icon: Shield,
+      link: "/blog/ai-safety-budgets-2026",
+      badge: "NEW"
+    },
+    {
+      title: "Edge Personalization 2026",
+      description: "Private, sub‑100ms personalization with signed configs and caches.",
+      views: "9.7K",
+      readTime: "8 min",
+      category: "Edge Computing",
+      icon: Zap,
+      link: "/blog/edge-personalization-2026",
+      badge: "HOT"
+    },
+    {
+      title: "Zero‑Trust for GenAI 2026",
+      description: "Prompt firewalls, egress, signed outputs for safe GenAI.",
+      views: "11.8K",
+      readTime: "8 min",
+      category: "Security",
+      icon: Shield,
+      link: "/blog/zero-trust-for-genai-2026",
+      badge: "NEW"
+    },
+    {
       title: "Zero‑Trust for GenAI 2026",
       description: "Prompt firewalls, egress controls, and signed outputs at scale.",
       views: "10.9K",
@@ -5420,8 +5435,60 @@ const TrendingContentBanner = () => {
       icon: Zap,
       link: "/blog/edge-llm-caching-blueprint-2026",
       badge: "POPULAR"
+    },
+    {
+      title: "Production Agent Actions 2026",
+      description: "Deterministic tools, budgets, and live traces for reliability.",
+      views: "8.2K",
+      readTime: "8 min",
+      category: "GenAI",
+      icon: Brain,
+      link: "/blog/production-agent-actions-2026",
+      badge: "NEW"
+    },
+    {
+      title: "Platform Golden Paths 2026",
+      description: "Paved roads that measurably move product KPIs and ROI.",
+      views: "7.7K",
+      readTime: "8 min",
+      category: "Platform",
+      icon: TrendingUp,
+      link: "/blog/platform-golden-paths-kpis-2026",
+      badge: "TRENDING"
     }
   ];
+  trendingItems.push(
+    {
+      title: "AI Data Lineage for GenAI 2026",
+      description: "Trace prompts, datasets, and outputs with signed SBOMs and lineage.",
+      views: "7.4K",
+      readTime: "7 min",
+      category: "AI Governance",
+      icon: Shield,
+      link: "/blog/ai-data-lineage-for-genai-2026",
+      badge: "NEW"
+    },
+    {
+      title: "Edge Secure Feature Stores 2026",
+      description: "Sub‑100ms private features with signed configs and on‑device caches.",
+      views: "6.8K",
+      readTime: "6 min",
+      category: "Architecture",
+      icon: Zap,
+      link: "/blog/edge-secure-feature-stores-2026",
+      badge: "HOT"
+    },
+    {
+      title: "LLM Evaluation Playbooks 2026",
+      description: "Online canaries and KPI‑linked scorecards that predict outcomes.",
+      views: "8.1K",
+      readTime: "8 min",
+      category: "AI Strategy",
+      icon: TrendingUp,
+      link: "/blog/llm-evaluation-playbooks-2026",
+      badge: "TRENDING"
+    }
+  );
   reactExports.useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % trendingItems.length);
@@ -5518,7 +5585,7 @@ const TrendingContentBanner = () => {
 var TrendingContentBanner_default = TrendingContentBanner;
 
 function Footer() {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("footer", { style: { padding: "1rem" }, children: /* @__PURE__ */ jsxRuntimeExports.jsxs("small", { children: [
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("footer", { className: "w-full py-6 px-6 bg-gray-900 text-white mt-12", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto", children: [
     "© ",
     (/* @__PURE__ */ new Date()).getFullYear(),
     " Zion Tech Group"
@@ -5653,4 +5720,917 @@ const BlogPromotionBanner = ({
 };
 var BlogPromotionBanner_default = BlogPromotionBanner;
 
-export { BlogPromotionBanner_default as B, ContentPromotionBanner as C, EnhancedPromotionalBanner_default as E, Footer as F, Header_default as H, LatestContentBanner_default as L, ModernFeatures as M, NewContentAnnouncement_default as N, SuccessStoriesShowcase_default as S, TrendingContentBanner_default as T, NewContentPromoBanner_default as a, NewServicesPromoBanner as b, NewContentShowcase_default as c, NewContentShowcase2025_default as d, NewServicesShowcase_default as e, LatestArticlesShowcase_default as f, latestArticles as l };
+const PerformanceMonitor = () => {
+  const [metrics, setMetrics] = reactExports.useState({
+    fcp: null,
+    lcp: null,
+    fid: null,
+    cls: null,
+    ttfb: null
+  });
+  reactExports.useEffect(() => {
+    if (typeof window === "undefined" || false) {
+      return;
+    }
+    const measureWebVitals = async () => {
+      try {
+        const fcpEntry = performance.getEntriesByName("first-contentful-paint")[0];
+        if (fcpEntry) {
+          setMetrics((prev) => ({ ...prev, fcp: fcpEntry.startTime }));
+        }
+        const lcpObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          const lastEntry = entries[entries.length - 1];
+          setMetrics((prev) => ({ ...prev, lcp: lastEntry.startTime }));
+        });
+        lcpObserver.observe({ entryTypes: ["largest-contentful-paint"] });
+        const fidObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach((entry) => {
+            setMetrics((prev) => ({ ...prev, fid: entry.processingStart - entry.startTime }));
+          });
+        });
+        fidObserver.observe({ entryTypes: ["first-input"] });
+        let clsValue = 0;
+        const clsObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach((entry) => {
+            if (!entry.hadRecentInput) {
+              clsValue += entry.value;
+              setMetrics((prev) => ({ ...prev, cls: clsValue }));
+            }
+          });
+        });
+        clsObserver.observe({ entryTypes: ["layout-shift"] });
+        const navigationEntry = performance.getEntriesByType("navigation")[0];
+        if (navigationEntry) {
+          setMetrics((prev) => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
+        }
+        return () => {
+          lcpObserver.disconnect();
+          fidObserver.disconnect();
+          clsObserver.disconnect();
+        };
+      } catch (error) {
+        console.warn("Performance monitoring failed:", error);
+      }
+    };
+    const timer = setTimeout(measureWebVitals, 1e3);
+    return () => clearTimeout(timer);
+  }, []);
+  reactExports.useEffect(() => {
+    if (metrics.fcp && metrics.lcp && metrics.fid && metrics.cls && metrics.ttfb) {
+      if (typeof window !== "undefined" && "gtag" in window) {
+        window.gtag("event", "web_vitals", {
+          event_category: "Performance",
+          event_label: "Core Web Vitals",
+          fcp: Math.round(metrics.fcp),
+          lcp: Math.round(metrics.lcp),
+          fid: Math.round(metrics.fid * 1e3),
+          // Convert to milliseconds
+          cls: Math.round(metrics.cls * 1e3),
+          // Convert to milliseconds
+          ttfb: Math.round(metrics.ttfb)
+        });
+      }
+    }
+  }, [metrics]);
+  return null;
+};
+var PerformanceMonitor_default = PerformanceMonitor;
+
+const SEOOptimizer = ({
+  title = "Zion Tech Group — AI, Micro SaaS, and IT Services",
+  description = "Enterprise-grade AI, micro SaaS, and IT solutions. Transform your business with cutting-edge technology and automation.",
+  keywords = "AI services, micro SaaS, IT services, cloud migration, DevOps, SRE, enterprise software, automation",
+  canonical,
+  ogImage = "/og-image.png",
+  ogType = "website",
+  twitterCard = "summary_large_image",
+  structuredData
+}) => {
+  reactExports.useEffect(() => {
+    document.title = title;
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute("content", description);
+    } else {
+      const meta = document.createElement("meta");
+      meta.name = "description";
+      meta.content = description;
+      document.head.appendChild(meta);
+    }
+    const metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (metaKeywords) {
+      metaKeywords.setAttribute("content", keywords);
+    } else {
+      const meta = document.createElement("meta");
+      meta.name = "keywords";
+      meta.content = keywords;
+      document.head.appendChild(meta);
+    }
+    if (canonical) {
+      const canonicalLink = document.querySelector('link[rel="canonical"]');
+      if (canonicalLink) {
+        canonicalLink.setAttribute("href", canonical);
+      } else {
+        const link = document.createElement("link");
+        link.rel = "canonical";
+        link.href = canonical;
+        document.head.appendChild(link);
+      }
+    }
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) {
+      ogTitle.setAttribute("content", title);
+    } else {
+      const meta = document.createElement("meta");
+      meta.setAttribute("property", "og:title");
+      meta.content = title;
+      document.head.appendChild(meta);
+    }
+    const ogDescription = document.querySelector('meta[property="og:description"]');
+    if (ogDescription) {
+      ogDescription.setAttribute("content", description);
+    } else {
+      const meta = document.createElement("meta");
+      meta.setAttribute("property", "og:description");
+      meta.content = description;
+      document.head.appendChild(meta);
+    }
+    const ogImageMeta = document.querySelector('meta[property="og:image"]');
+    if (ogImageMeta) {
+      ogImageMeta.setAttribute("content", ogImage);
+    } else {
+      const meta = document.createElement("meta");
+      meta.setAttribute("property", "og:image");
+      meta.content = ogImage;
+      document.head.appendChild(meta);
+    }
+    const ogTypeMeta = document.querySelector('meta[property="og:type"]');
+    if (ogTypeMeta) {
+      ogTypeMeta.setAttribute("content", ogType);
+    } else {
+      const meta = document.createElement("meta");
+      meta.setAttribute("property", "og:type");
+      meta.content = ogType;
+      document.head.appendChild(meta);
+    }
+    const twitterCardMeta = document.querySelector('meta[name="twitter:card"]');
+    if (twitterCardMeta) {
+      twitterCardMeta.setAttribute("content", twitterCard);
+    } else {
+      const meta = document.createElement("meta");
+      meta.name = "twitter:card";
+      meta.content = twitterCard;
+      document.head.appendChild(meta);
+    }
+    const twitterTitle = document.querySelector('meta[name="twitter:title"]');
+    if (twitterTitle) {
+      twitterTitle.setAttribute("content", title);
+    } else {
+      const meta = document.createElement("meta");
+      meta.name = "twitter:title";
+      meta.content = title;
+      document.head.appendChild(meta);
+    }
+    const twitterDescription = document.querySelector('meta[name="twitter:description"]');
+    if (twitterDescription) {
+      twitterDescription.setAttribute("content", description);
+    } else {
+      const meta = document.createElement("meta");
+      meta.name = "twitter:description";
+      meta.content = description;
+      document.head.appendChild(meta);
+    }
+    const twitterImage = document.querySelector('meta[name="twitter:image"]');
+    if (twitterImage) {
+      twitterImage.setAttribute("content", ogImage);
+    } else {
+      const meta = document.createElement("meta");
+      meta.name = "twitter:image";
+      meta.content = ogImage;
+      document.head.appendChild(meta);
+    }
+    if (structuredData) {
+      const existingScript = document.querySelector('script[type="application/ld+json"]');
+      if (existingScript) {
+        existingScript.textContent = JSON.stringify(structuredData);
+      } else {
+        const script = document.createElement("script");
+        script.type = "application/ld+json";
+        script.textContent = JSON.stringify(structuredData);
+        document.head.appendChild(script);
+      }
+    }
+    const viewport = document.querySelector('meta[name="viewport"]');
+    if (!viewport) {
+      const meta = document.createElement("meta");
+      meta.name = "viewport";
+      meta.content = "width=device-width, initial-scale=1.0";
+      document.head.appendChild(meta);
+    }
+    const charset = document.querySelector("meta[charset]");
+    if (!charset) {
+      const meta = document.createElement("meta");
+      meta.setAttribute("charset", "UTF-8");
+      document.head.insertBefore(meta, document.head.firstChild);
+    }
+  }, [title, description, keywords, canonical, ogImage, ogType, twitterCard, structuredData]);
+  return null;
+};
+var SEOOptimizer_default = SEOOptimizer;
+
+const AccessibilityEnhancer = () => {
+  reactExports.useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "Tab") {
+        document.body.classList.add("using-keyboard");
+      }
+    };
+    const handleMouseDown = () => {
+      document.body.classList.remove("using-keyboard");
+    };
+    document.addEventListener("keydown", handleKeyDown);
+    document.addEventListener("mousedown", handleMouseDown);
+    const skipLink = document.createElement("a");
+    skipLink.href = "#main-content";
+    skipLink.textContent = "Skip to main content";
+    skipLink.className = "sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-blue-600 focus:text-white focus:px-4 focus:py-2 focus:rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2";
+    skipLink.style.cssText = `
+      position: absolute;
+      left: -9999px;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    `;
+    document.body.insertBefore(skipLink, document.body.firstChild);
+    const forms = document.querySelectorAll("form");
+    forms.forEach((form) => {
+      const inputs = form.querySelectorAll("input, textarea, select");
+      inputs.forEach((input, index) => {
+        const element = input;
+        if (!element.id && !element.getAttribute("aria-label")) {
+          element.id = `input-${index}`;
+        }
+        if (element.hasAttribute("required")) {
+          element.setAttribute("aria-required", "true");
+        }
+        element.addEventListener("invalid", () => {
+          element.setAttribute("aria-invalid", "true");
+        });
+        element.addEventListener("input", () => {
+          if (element.checkValidity()) {
+            element.setAttribute("aria-invalid", "false");
+          }
+        });
+      });
+    });
+    const buttons = document.querySelectorAll("button");
+    buttons.forEach((button) => {
+      if (!button.getAttribute("aria-label") && !button.textContent?.trim()) {
+        button.setAttribute("aria-label", "Button");
+      }
+    });
+    const links = document.querySelectorAll("a");
+    links.forEach((link) => {
+      if (link.href && link.href.startsWith("http") && !link.href.includes(window.location.hostname)) {
+        link.setAttribute("rel", "noopener noreferrer");
+        if (!link.getAttribute("aria-label")) {
+          link.setAttribute("aria-label", `${link.textContent} (opens in new tab)`);
+        }
+      }
+    });
+    const interactiveElements = document.querySelectorAll("button, a, input, textarea, select, [tabindex]");
+    interactiveElements.forEach((element) => {
+      element.addEventListener("focus", () => {
+        element.classList.add("focus-visible");
+      });
+      element.addEventListener("blur", () => {
+        element.classList.remove("focus-visible");
+      });
+    });
+    const images = document.querySelectorAll("img");
+    images.forEach((img) => {
+      if (!img.alt && img.getAttribute("role") !== "presentation") {
+        img.alt = "Image";
+      }
+    });
+    const prefersHighContrast = window.matchMedia("(prefers-contrast: high)");
+    if (prefersHighContrast.matches) {
+      document.body.classList.add("high-contrast");
+    }
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (prefersReducedMotion.matches) {
+      document.body.classList.add("reduce-motion");
+    }
+    const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)");
+    const handleDarkModeChange = (e) => {
+      if (e.matches) {
+        document.body.classList.add("dark");
+      } else {
+        document.body.classList.remove("dark");
+      }
+    };
+    if (prefersDarkMode.matches) {
+      document.body.classList.add("dark");
+    }
+    prefersDarkMode.addEventListener("change", handleDarkModeChange);
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+      document.removeEventListener("mousedown", handleMouseDown);
+      prefersDarkMode.removeEventListener("change", handleDarkModeChange);
+      if (skipLink.parentNode) {
+        skipLink.parentNode.removeChild(skipLink);
+      }
+    };
+  }, []);
+  return null;
+};
+var AccessibilityEnhancer_default = AccessibilityEnhancer;
+
+const SecurityEnhancer = () => {
+  reactExports.useEffect(() => {
+    const addCSP = () => {
+      const cspMeta = document.querySelector('meta[http-equiv="Content-Security-Policy"]');
+      if (!cspMeta) {
+        const meta = document.createElement("meta");
+        meta.setAttribute("http-equiv", "Content-Security-Policy");
+        meta.content = `
+          default-src 'self';
+          script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com;
+          style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+          font-src 'self' https://fonts.gstatic.com;
+          img-src 'self' data: https: blob:;
+          connect-src 'self' https://www.google-analytics.com https://analytics.google.com;
+          frame-src 'none';
+          object-src 'none';
+          base-uri 'self';
+          form-action 'self';
+          upgrade-insecure-requests;
+        `.replace(/\s+/g, " ").trim();
+        document.head.appendChild(meta);
+      }
+    };
+    const addSecurityHeaders = () => {
+      const headers = [
+        { name: "X-Content-Type-Options", value: "nosniff" },
+        { name: "X-Frame-Options", value: "DENY" },
+        { name: "X-XSS-Protection", value: "1; mode=block" },
+        { name: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+        { name: "Permissions-Policy", value: "geolocation=(), microphone=(), camera=()" }
+      ];
+      headers.forEach((header) => {
+        const meta = document.createElement("meta");
+        meta.setAttribute("http-equiv", header.name);
+        meta.content = header.value;
+        document.head.appendChild(meta);
+      });
+    };
+    const sanitizeInputs = () => {
+      const inputs = document.querySelectorAll("input, textarea");
+      inputs.forEach((input) => {
+        input.addEventListener("input", (e) => {
+          const target = e.target;
+          target.value = target.value.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, "").replace(/<[^>]*>/g, "").replace(/javascript:/gi, "").replace(/on\w+\s*=/gi, "");
+        });
+      });
+    };
+    const addNonces = () => {
+      const scripts = document.querySelectorAll("script:not([src])");
+      scripts.forEach((script) => {
+        if (!script.getAttribute("nonce")) {
+          const nonce = Math.random().toString(36).substring(2, 15);
+          script.setAttribute("nonce", nonce);
+        }
+      });
+    };
+    const preventClickjacking = () => {
+      if (window !== window.top) {
+        window.top.location = window.location;
+      }
+    };
+    const addIntegrityChecks = () => {
+      const externalScripts = document.querySelectorAll('script[src^="http"]');
+      externalScripts.forEach((script) => {
+        if (!script.getAttribute("crossorigin")) {
+          script.setAttribute("crossorigin", "anonymous");
+        }
+      });
+      const externalStyles = document.querySelectorAll('link[href^="http"]');
+      externalStyles.forEach((link) => {
+        if (!link.getAttribute("crossorigin")) {
+          link.setAttribute("crossorigin", "anonymous");
+        }
+      });
+    };
+    const addSecurityMonitoring = () => {
+      const originalError = console.error;
+      console.error = function(...args) {
+        const message = args.join(" ");
+        if (message.includes("CSP") || message.includes("XSS") || message.includes("CSRF")) {
+          if (typeof window !== "undefined" && "gtag" in window) {
+            window.gtag("event", "security_error", {
+              event_category: "Security",
+              event_label: "Console Error",
+              value: message
+            });
+          }
+        }
+        originalError.apply(console, args);
+      };
+      window.addEventListener("error", (e) => {
+        if (e.message.includes("Script error") || e.message.includes("SecurityError")) {
+          if (typeof window !== "undefined" && "gtag" in window) {
+            window.gtag("event", "security_error", {
+              event_category: "Security",
+              event_label: "Script Error",
+              value: e.message
+            });
+          }
+        }
+      });
+    };
+    const secureCookies = () => {
+      if (location.protocol === "https:") {
+        document.cookie = document.cookie.split(";").map((cookie) => cookie.trim()).filter((cookie) => cookie).map((cookie) => {
+          if (!cookie.includes("Secure")) {
+            return cookie + "; Secure";
+          }
+          return cookie;
+        }).join("; ");
+      }
+    };
+    addCSP();
+    addSecurityHeaders();
+    sanitizeInputs();
+    addNonces();
+    preventClickjacking();
+    addIntegrityChecks();
+    addSecurityMonitoring();
+    secureCookies();
+    const handleFormSubmit = (e) => {
+      const form = e.target;
+      const csrfToken = document.querySelector('meta[name="csrf-token"]')?.getAttribute("content");
+      if (csrfToken && !form.querySelector('input[name="_token"]')) {
+        const input = document.createElement("input");
+        input.type = "hidden";
+        input.name = "_token";
+        input.value = csrfToken;
+        form.appendChild(input);
+      }
+      const formData = new FormData(form);
+      for (const [key, value] of formData.entries()) {
+        if (typeof value === "string" && value.includes("<script")) {
+          e.preventDefault();
+          alert("Invalid input detected. Please try again.");
+          return false;
+        }
+      }
+    };
+    document.addEventListener("submit", handleFormSubmit);
+    return () => {
+      document.removeEventListener("submit", handleFormSubmit);
+    };
+  }, []);
+  return null;
+};
+var SecurityEnhancer_default = SecurityEnhancer;
+
+class EnhancedErrorBoundary extends reactExports.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      hasError: false,
+      error: null,
+      errorInfo: null
+    };
+  }
+  static getDerivedStateFromError(error) {
+    return {
+      hasError: true,
+      error,
+      errorInfo: null
+    };
+  }
+  componentDidCatch(error, errorInfo) {
+    this.setState({
+      error,
+      errorInfo
+    });
+    if (typeof window !== "undefined" && "gtag" in window) {
+      window.gtag("event", "exception", {
+        description: error.message,
+        fatal: false,
+        custom_map: {
+          error_boundary: "EnhancedErrorBoundary",
+          component_stack: errorInfo.componentStack
+        }
+      });
+    }
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo);
+    }
+    this.reportError(error, errorInfo);
+  }
+  reportError = (error, errorInfo) => {
+    const errorReport = {
+      message: error.message,
+      stack: error.stack,
+      componentStack: errorInfo.componentStack,
+      timestamp: (/* @__PURE__ */ new Date()).toISOString(),
+      userAgent: navigator.userAgent,
+      url: window.location.href,
+      userId: this.getUserId()
+    };
+    console.error("Error Report:", errorReport);
+  };
+  getUserId = () => {
+    return localStorage.getItem("userId") || null;
+  };
+  handleRetry = () => {
+    this.setState({
+      hasError: false,
+      error: null,
+      errorInfo: null
+    });
+  };
+  handleReload = () => {
+    window.location.reload();
+  };
+  render() {
+    if (this.state.hasError) {
+      if (this.props.fallback) {
+        return this.props.fallback;
+      }
+      return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-md w-full space-y-8", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mx-auto h-12 w-12 text-red-500", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+            "svg",
+            {
+              fill: "none",
+              stroke: "currentColor",
+              viewBox: "0 0 24 24",
+              xmlns: "http://www.w3.org/2000/svg",
+              children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+                "path",
+                {
+                  strokeLinecap: "round",
+                  strokeLinejoin: "round",
+                  strokeWidth: 2,
+                  d: "M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"
+                }
+              )
+            }
+          ) }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "mt-6 text-3xl font-extrabold text-gray-900", children: "Oops! Something went wrong" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-2 text-sm text-gray-600", children: "We're sorry, but something unexpected happened. Our team has been notified." })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-8 space-y-6", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-white shadow rounded-lg p-6", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-lg font-medium text-gray-900 mb-4", children: "What you can do:" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("ul", { className: "space-y-2 text-sm text-gray-600", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("li", { className: "flex items-start", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "flex-shrink-0 h-5 w-5 text-green-500 mt-0.5", children: /* @__PURE__ */ jsxRuntimeExports.jsx("svg", { fill: "currentColor", viewBox: "0 0 20 20", children: /* @__PURE__ */ jsxRuntimeExports.jsx("path", { fillRule: "evenodd", d: "M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z", clipRule: "evenodd" }) }) }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "ml-3", children: "Try refreshing the page" })
+              ] }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("li", { className: "flex items-start", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "flex-shrink-0 h-5 w-5 text-green-500 mt-0.5", children: /* @__PURE__ */ jsxRuntimeExports.jsx("svg", { fill: "currentColor", viewBox: "0 0 20 20", children: /* @__PURE__ */ jsxRuntimeExports.jsx("path", { fillRule: "evenodd", d: "M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z", clipRule: "evenodd" }) }) }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "ml-3", children: "Go back to the previous page" })
+              ] }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("li", { className: "flex items-start", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "flex-shrink-0 h-5 w-5 text-green-500 mt-0.5", children: /* @__PURE__ */ jsxRuntimeExports.jsx("svg", { fill: "currentColor", viewBox: "0 0 20 20", children: /* @__PURE__ */ jsxRuntimeExports.jsx("path", { fillRule: "evenodd", d: "M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z", clipRule: "evenodd" }) }) }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "ml-3", children: "Contact support if the problem persists" })
+              ] })
+            ] })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex space-x-4", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx(
+              "button",
+              {
+                onClick: this.handleRetry,
+                className: "flex-1 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors",
+                children: "Try Again"
+              }
+            ),
+            /* @__PURE__ */ jsxRuntimeExports.jsx(
+              "button",
+              {
+                onClick: this.handleReload,
+                className: "flex-1 bg-gray-600 text-white py-2 px-4 rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors",
+                children: "Reload Page"
+              }
+            )
+          ] }),
+          false
+        ] })
+      ] }) });
+    }
+    return this.props.children;
+  }
+}
+var EnhancedErrorBoundary_default = EnhancedErrorBoundary;
+
+const AnalyticsMonitor = () => {
+  const [metrics, setMetrics] = reactExports.useState(null);
+  const [isInitialized, setIsInitialized] = reactExports.useState(false);
+  reactExports.useEffect(() => {
+    const initializeAnalytics = () => {
+      if (typeof window !== "undefined" && "gtag" in window) {
+        const gtag = window.gtag;
+        gtag("config", "GA_MEASUREMENT_ID", {
+          page_title: document.title,
+          page_location: window.location.href,
+          custom_map: {
+            custom_parameter_1: "user_type",
+            custom_parameter_2: "session_duration"
+          }
+        });
+        setIsInitialized(true);
+      }
+    };
+    const trackPageView = () => {
+      if (typeof window !== "undefined" && "gtag" in window) {
+        window.gtag("config", "GA_MEASUREMENT_ID", {
+          page_title: document.title,
+          page_location: window.location.href,
+          page_path: window.location.pathname
+        });
+      }
+    };
+    const trackEvent = (event) => {
+      if (typeof window !== "undefined" && "gtag" in window) {
+        window.gtag("event", event.action, {
+          event_category: event.category,
+          event_label: event.label,
+          value: event.value,
+          ...event.custom_parameters
+        });
+      }
+    };
+    const trackPerformance = () => {
+      if ("performance" in window) {
+        const navigation = performance.getEntriesByType("navigation")[0];
+        const paintEntries = performance.getEntriesByType("paint");
+        const performanceMetrics = {
+          pageLoadTime: navigation.loadEventEnd - navigation.navigationStart,
+          domContentLoaded: navigation.domContentLoadedEventEnd - navigation.navigationStart,
+          firstPaint: paintEntries.find((entry) => entry.name === "first-paint")?.startTime || 0,
+          firstContentfulPaint: paintEntries.find((entry) => entry.name === "first-contentful-paint")?.startTime || 0,
+          largestContentfulPaint: 0,
+          // Will be updated by LCP observer
+          firstInputDelay: 0,
+          // Will be updated by FID observer
+          cumulativeLayoutShift: 0
+          // Will be updated by CLS observer
+        };
+        const lcpObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          const lastEntry = entries[entries.length - 1];
+          performanceMetrics.largestContentfulPaint = lastEntry.startTime;
+          trackEvent({
+            category: "Web Vitals",
+            action: "LCP",
+            label: window.location.pathname,
+            value: Math.round(lastEntry.startTime)
+          });
+        });
+        lcpObserver.observe({ entryTypes: ["largest-contentful-paint"] });
+        const fidObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach((entry) => {
+            performanceMetrics.firstInputDelay = entry.processingStart - entry.startTime;
+            trackEvent({
+              category: "Web Vitals",
+              action: "FID",
+              label: window.location.pathname,
+              value: Math.round((entry.processingStart - entry.startTime) * 1e3)
+              // Convert to milliseconds
+            });
+          });
+        });
+        fidObserver.observe({ entryTypes: ["first-input"] });
+        const clsObserver = new PerformanceObserver((list) => {
+          let clsValue = 0;
+          const entries = list.getEntries();
+          entries.forEach((entry) => {
+            if (!entry.hadRecentInput) {
+              clsValue += entry.value;
+              performanceMetrics.cumulativeLayoutShift = clsValue;
+            }
+          });
+          if (clsValue > 0) {
+            trackEvent({
+              category: "Web Vitals",
+              action: "CLS",
+              label: window.location.pathname,
+              value: Math.round(clsValue * 1e3)
+              // Convert to milliseconds
+            });
+          }
+        });
+        clsObserver.observe({ entryTypes: ["layout-shift"] });
+        setMetrics(performanceMetrics);
+        trackEvent({
+          category: "Performance",
+          action: "Page Load Time",
+          label: window.location.pathname,
+          value: Math.round(performanceMetrics.pageLoadTime)
+        });
+        trackEvent({
+          category: "Performance",
+          action: "DOM Content Loaded",
+          label: window.location.pathname,
+          value: Math.round(performanceMetrics.domContentLoaded)
+        });
+        trackEvent({
+          category: "Performance",
+          action: "First Paint",
+          label: window.location.pathname,
+          value: Math.round(performanceMetrics.firstPaint)
+        });
+        trackEvent({
+          category: "Performance",
+          action: "First Contentful Paint",
+          label: window.location.pathname,
+          value: Math.round(performanceMetrics.firstContentfulPaint)
+        });
+        return () => {
+          lcpObserver.disconnect();
+          fidObserver.disconnect();
+          clsObserver.disconnect();
+        };
+      }
+    };
+    const trackInteractions = () => {
+      const trackButtonClicks = (e) => {
+        const target = e.target;
+        if (target.tagName === "BUTTON" || target.closest("button")) {
+          const button = target.closest("button") || target;
+          trackEvent({
+            category: "User Interaction",
+            action: "Button Click",
+            label: button.textContent?.trim() || button.getAttribute("aria-label") || "Unknown Button"
+          });
+        }
+      };
+      const trackLinkClicks = (e) => {
+        const target = e.target;
+        if (target.tagName === "A" || target.closest("a")) {
+          const link = target.closest("a") || target;
+          trackEvent({
+            category: "User Interaction",
+            action: "Link Click",
+            label: link.href,
+            custom_parameters: {
+              link_text: link.textContent?.trim(),
+              is_external: !link.href.startsWith(window.location.origin)
+            }
+          });
+        }
+      };
+      const trackFormSubmissions = (e) => {
+        const form = e.target;
+        if (form.tagName === "FORM") {
+          trackEvent({
+            category: "User Interaction",
+            action: "Form Submit",
+            label: form.action || window.location.pathname,
+            custom_parameters: {
+              form_id: form.id,
+              form_class: form.className
+            }
+          });
+        }
+      };
+      let maxScrollDepth = 0;
+      const trackScrollDepth = () => {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollDepth = Math.round(scrollTop / documentHeight * 100);
+        if (scrollDepth > maxScrollDepth) {
+          maxScrollDepth = scrollDepth;
+          if (scrollDepth >= 25 && scrollDepth < 50 && maxScrollDepth >= 25) {
+            trackEvent({
+              category: "User Engagement",
+              action: "Scroll Depth",
+              label: "25%",
+              value: 25
+            });
+          } else if (scrollDepth >= 50 && scrollDepth < 75 && maxScrollDepth >= 50) {
+            trackEvent({
+              category: "User Engagement",
+              action: "Scroll Depth",
+              label: "50%",
+              value: 50
+            });
+          } else if (scrollDepth >= 75 && scrollDepth < 90 && maxScrollDepth >= 75) {
+            trackEvent({
+              category: "User Engagement",
+              action: "Scroll Depth",
+              label: "75%",
+              value: 75
+            });
+          } else if (scrollDepth >= 90 && maxScrollDepth >= 90) {
+            trackEvent({
+              category: "User Engagement",
+              action: "Scroll Depth",
+              label: "90%",
+              value: 90
+            });
+          }
+        }
+      };
+      document.addEventListener("click", trackButtonClicks);
+      document.addEventListener("click", trackLinkClicks);
+      document.addEventListener("submit", trackFormSubmissions);
+      window.addEventListener("scroll", trackScrollDepth, { passive: true });
+      const sessionStart = Date.now();
+      const trackSessionDuration = () => {
+        const sessionDuration = Math.round((Date.now() - sessionStart) / 1e3);
+        trackEvent({
+          category: "User Engagement",
+          action: "Session Duration",
+          label: window.location.pathname,
+          value: sessionDuration
+        });
+      };
+      window.addEventListener("beforeunload", trackSessionDuration);
+      return () => {
+        document.removeEventListener("click", trackButtonClicks);
+        document.removeEventListener("click", trackLinkClicks);
+        document.removeEventListener("submit", trackFormSubmissions);
+        window.removeEventListener("scroll", trackScrollDepth);
+        window.removeEventListener("beforeunload", trackSessionDuration);
+      };
+    };
+    initializeAnalytics();
+    trackPageView();
+    const cleanupPerformance = trackPerformance();
+    const cleanupInteractions = trackInteractions();
+    return () => {
+      if (cleanupPerformance) cleanupPerformance();
+      if (cleanupInteractions) cleanupInteractions();
+    };
+  }, []);
+  reactExports.useEffect(() => {
+    const handleRouteChange = () => {
+      if (typeof window !== "undefined" && "gtag" in window) {
+        window.gtag("config", "GA_MEASUREMENT_ID", {
+          page_title: document.title,
+          page_location: window.location.href,
+          page_path: window.location.pathname
+        });
+      }
+    };
+    window.addEventListener("popstate", handleRouteChange);
+    return () => {
+      window.removeEventListener("popstate", handleRouteChange);
+    };
+  }, []);
+  reactExports.useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.trackEvent = (event) => {
+        if (typeof window !== "undefined" && "gtag" in window) {
+          window.gtag("event", event.action, {
+            event_category: event.category,
+            event_label: event.label,
+            value: event.value,
+            ...event.custom_parameters
+          });
+        }
+      };
+    }
+  }, []);
+  return null;
+};
+var AnalyticsMonitor_default = AnalyticsMonitor;
+
+const LoadingSpinner = ({
+  size = "md",
+  color = "primary",
+  className = ""
+}) => {
+  const sizeClasses = {
+    sm: "w-4 h-4",
+    md: "w-8 h-8",
+    lg: "w-12 h-12",
+    xl: "w-16 h-16"
+  };
+  const colorClasses = {
+    primary: "text-blue-600",
+    secondary: "text-gray-600",
+    white: "text-white"
+  };
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: `flex justify-center items-center ${className}`, children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+    "div",
+    {
+      className: `animate-spin rounded-full border-2 border-gray-300 border-t-current ${sizeClasses[size]} ${colorClasses[color]}`,
+      role: "status",
+      "aria-label": "Loading",
+      children: /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "sr-only", children: "Loading..." })
+    }
+  ) });
+};
+
+export { AccessibilityEnhancer_default as A, BlogPromotionBanner_default as B, ContentPromotionBanner as C, EnhancedPromotionalBanner_default as E, Footer as F, Header as H, LatestContentBanner_default as L, ModernFeatures as M, NewContentAnnouncement_default as N, PerformanceMonitor_default as P, SuccessStoriesShowcase_default as S, TrendingContentBanner_default as T, NewContentPromoBanner_default as a, NewContentShowcase_default as b, NewContentShowcase2025_default as c, NewServicesShowcase_default as d, LatestArticlesShowcase_default as e, EnhancedErrorBoundary_default as f, SEOOptimizer_default as g, SecurityEnhancer_default as h, AnalyticsMonitor_default as i, LoadingSpinner as j, latestArticles as l };
