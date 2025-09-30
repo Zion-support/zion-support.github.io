@@ -11,6 +11,30 @@ export interface FeaturedItem {
 
 export const featuredBlogPosts: FeaturedItem[] = [
   {
+    id: "ai-2027-executive-playbook-v2",
+    title: "AI 2027: Executive Playbook v2",
+    description: "Fund, govern, and scale AI with KPI‑linked scorecards and budgets",
+    link: "/blog/ai-2027-executive-playbook-v2",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-2027-private-inference-under-100ms",
+    title: "Edge 2027: Private Inference",
+    description: "Global sub‑100ms inference with scoped IDs and device aggregation",
+    link: "/blog/edge-2027-private-inference-under-100ms",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "genai-2027-cost-controllers-v2",
+    title: "GenAI 2027: Cost Controllers v2",
+    description: "Quality tiers + semantic caches + policy tests for predictable spend",
+    link: "/blog/genai-2027-cost-controllers-v2",
+    type: "article",
+    featured: true
+  },
+  {
     id: "ai-2027-customer-experience-agents",
     title: "AI 2027: Customer Experience Agents",
     description: "24/7 autonomous CX with budgets, KPIs, and instant rollback.",
