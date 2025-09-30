@@ -176,6 +176,34 @@ featuredBlogPosts.unshift(
   }
 );
 
+// Advertise Q4 2026 brand-new content on homepage showcases (added now)
+featuredBlogPosts.unshift(
+  {
+    id: "ai-operational-trust-2026-q4",
+    title: "AI Operational Trust 2026 Q4",
+    description: "SLIs, budgets, and instant rollback for safe autonomy",
+    link: "/blog/ai-operational-trust-2026-q4",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-consentless-experiments-2026-q4",
+    title: "Edge Consentless Experiments 2026 Q4",
+    description: "Scoped IDs, on‑device metrics, and DP noise for compliant A/B",
+    link: "/blog/edge-consentless-experiments-2026-q4",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-governance-real-time-2026",
+    title: "AI Governance in Real Time 2026",
+    description: "Live canaries + CI policy tests—ship weekly without regressions",
+    link: "/blog/ai-governance-real-time-2026",
+    type: "article",
+    featured: true
+  }
+);
+
 // Feb 2027 – Surface two brand-new featured guides site-wide
 featuredBlogPosts.unshift(
   {
