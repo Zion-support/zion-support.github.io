@@ -14,98 +14,55 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
-    slug: "ai-roadmaps-2025-playbook",
-    title: "AI Roadmaps 2025: A Practical Playbook for Measurable Wins",
-    description: "How to prioritize, pilot, and scale AI with ROI gates, evals, and policy checks.",
+    slug: "genai-telemetry-observability-2025",
+    title: "GenAI Telemetry: What to Measure in 2025",
+    description: "Signals, dashboards, and alerting that keep GenAI quality, safety, and cost in check.",
     content: `
-# AI Roadmaps 2025: A Practical Playbook for Measurable Wins
+# GenAI Telemetry: What to Measure in 2025
 
-Most AI initiatives stall due to unclear goals, poor evaluation, and missing rollout controls. This playbook shows how to prioritize high‑impact use cases, design proof‑of‑value pilots, and scale safely with offline+online evals tied to business KPIs.
-
-## Roadmap Essentials
-- Outcome‑driven problem selection
-- Offline eval suites mapped to KPIs
-- Guardrails: policy tests, PII, toxicity
-- Rollout controls: flags, canaries, auto‑rollback
-
-## Execution Checklist
-1. Define measurable success criteria
-2. Build baseline and goldens
-3. Add eval gates in CI
-4. Launch to canary cohorts
-5. Monitor drift and regression
-
-Ship AI that moves the needle—and prove it.
+Operationalize GenAI with observability that tracks quality, safety, and cost. Learn the critical signals, dashboards, and alerting strategies that prevent regressions and runaway bills.
     `,
     author: "Zion Tech Group Team",
-    date: "2025-09-30",
-    category: "AI Strategy",
-    tags: ["Roadmaps", "GenAI", "Evals", "Guardrails"],
+    date: "2025-09-29",
+    category: "GenAI",
+    tags: ["Observability", "Telemetry", "Guardrails", "Quality"],
     featured: true,
     readTime: "7 min read",
-    image: "/images/ai-roadmaps-2025.jpg"
+    image: "/images/genai-telemetry.jpg"
   },
   {
-    slug: "ai-sales-copilot-2025",
-    title: "AI Sales Copilot: Grounded Prompts, CRM Context, Reliable Evals",
-    description: "How to wire CRMs, build prompt libraries, and add evals that boost win‑rates without risk.",
+    slug: "feature-flags-at-the-edge-2025",
+    title: "Feature Flags at the Edge: Instant, Safe Rollouts",
+    description: "Design flags for global low-latency delivery, safe rollbacks, and cohort experimentation.",
     content: `
-# AI Sales Copilot: Grounded Prompts, CRM Context, Reliable Evals
+# Feature Flags at the Edge: Instant, Safe Rollouts
 
-Sales copilots fail without context and measurement. This guide shows how to ground prompts in CRM data, build reusable prompt libraries, and add offline + online evals that correlate with win‑rates.
-
-## What To Ground
-- Opportunities, last touches, stakeholders
-- Product limits, pricing, legal constraints
-
-## Evals That Predict Outcomes
-- Prospect relevance scoring
-- Objection handling quality
-- Call‑to‑action clarity
-
-Wire telemetry to track outcomes and iterate with confidence.
+Architect global feature delivery with edge caching, signed payloads, and cohort targeting to ship faster with confidence.
     `,
     author: "Zion Tech Group Team",
-    date: "2025-09-30",
-    category: "AI Strategy",
-    tags: ["Sales", "Copilot", "CRM", "Evals"],
+    date: "2025-09-28",
+    category: "Architecture",
+    tags: ["Edge", "Flags", "Rollouts", "CD"],
     featured: true,
     readTime: "6 min read",
-    image: "/images/ai-sales-copilot.jpg"
+    image: "/images/edge-feature-flags.jpg"
   },
   {
-    slug: "zero-downtime-migrations-2025",
-    title: "Zero‑Downtime Migrations: Patterns that Keep Pages Green",
-    description: "Dual‑write, read‑shadowing, and progressive delivery to ship schema changes safely.",
+    slug: "ai-product-readiness-checks",
+    title: "AI Product Readiness: Pre‑Launch Checks That Matter",
+    description: "From eval gates to safety reviews—everything to validate before shipping AI to users.",
     content: `
-# Zero‑Downtime Migrations: Patterns that Keep Pages Green
+# AI Product Readiness: Pre‑Launch Checks That Matter
 
-Avoid 2am incidents with dual‑write, read‑shadowing, backfills with idempotency, and progressive cutovers behind flags. Includes checklists and rollback playbooks.
+Use this concise pre‑launch checklist to ensure your AI features meet quality, safety, and reliability bars before release.
     `,
     author: "Zion Tech Group Team",
-    date: "2025-09-30",
-    category: "Platform Engineering",
-    tags: ["Migrations", "Zero Downtime", "Databases"],
-    featured: false,
-    readTime: "5 min read",
-    image: "/images/zero-downtime.jpg"
-  },
-  {
-    slug: "agent-telemetry-traces-2025",
-    title: "Agent Telemetry: What to Trace and Why It Matters",
-    description: "From tool call spans to prompt metadata—what to capture to debug and improve agent behavior.",
-    content: `
-# Agent Telemetry: What to Trace and Why It Matters
-
-Capture spans for tool calls, retries, and model routes. Attach prompt, input size, and guardrail outcomes. Build dashboards that correlate failures to fixes.
-    `,
-    author: "Zion Tech Group Team",
-    date: "2025-09-30",
-    category: "GenAI",
-    tags: ["Telemetry", "Agents", "Tracing"],
+    date: "2025-09-27",
+    category: "Product",
+    tags: ["Product", "Launch", "Governance"],
     featured: true,
     readTime: "5 min read",
-    image: "/images/agent-telemetry.jpg"
+    image: "/images/ai-product-readiness.jpg"
   },
   {
     slug: "genai-evals-in-production-2025",
@@ -224,6 +181,91 @@ Implement these patterns to achieve fast, reliable, and cost‑effective streami
     featured: true,
     readTime: "9 min read",
     image: "/images/real-time-data-pipelines.jpg"
+  },
+  {
+    slug: "genai-telemetry-observability-2025",
+    title: "GenAI Telemetry: What to Measure in 2025",
+    description: "Signals, dashboards, and alerting that keep GenAI quality, safety, and cost in check.",
+    content: `
+# GenAI Telemetry: What to Measure in 2025
+
+Operationalize GenAI with observability that tracks quality, safety, and cost. Learn the critical signals, dashboards, and alerting strategies that prevent regressions and runaway bills.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "GenAI",
+    tags: ["Observability", "Telemetry", "Guardrails", "Quality"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/genai-telemetry.jpg"
+  },
+  {
+    slug: "feature-flags-at-the-edge-2025",
+    title: "Feature Flags at the Edge: Instant, Safe Rollouts",
+    description: "Design flags for global low-latency delivery, safe rollbacks, and cohort experimentation.",
+    content: `
+# Feature Flags at the Edge: Instant, Safe Rollouts
+
+Architect global feature delivery with edge caching, signed payloads, and cohort targeting to ship faster with confidence.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-28",
+    category: "Architecture",
+    tags: ["Edge", "Flags", "Rollouts", "CD"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/edge-feature-flags.jpg"
+  },
+  {
+    slug: "ai-product-readiness-checks",
+    title: "AI Product Readiness: Pre‑Launch Checks That Matter",
+    description: "From eval gates to safety reviews—everything to validate before shipping AI to users.",
+    content: `
+# AI Product Readiness: Pre‑Launch Checks That Matter
+
+Use this concise pre‑launch checklist to ensure your AI features meet quality, safety, and reliability bars before release.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-27",
+    category: "Product",
+    tags: ["Product", "Launch", "Governance"],
+    featured: true,
+    readTime: "5 min read",
+    image: "/images/ai-product-readiness.jpg"
+  },
+  {
+    slug: "ai-cost-optimization-guardrails-2025",
+    title: "AI Cost Guardrails: Keep Quality High While Cutting Spend",
+    description: "Practical controls for token budgets, eval-triggered rollbacks, and model right-sizing.",
+    content: `
+# AI Cost Guardrails: Keep Quality High While Cutting Spend
+
+Implement budget-aware routing, auto-downgrade on saturation, and per-feature token caps with clear SLOs so teams move fast without runaway bills.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "GenAI",
+    tags: ["FinOps", "Quality", "Governance"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/ai-cost-guardrails.jpg"
+  },
+  {
+    slug: "shipping-evals-in-ci-2025",
+    title: "Ship Faster with Evals in CI: A Practical Guide",
+    description: "Turn regressions into red builds. Wire offline evals into your pipeline today.",
+    content: `
+# Ship Faster with Evals in CI: A Practical Guide
+
+Wire offline evals into CI so quality gates block risky changes before they reach users. Learn data selection, goldens, and score thresholds that correlate with outcomes.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "MLOps",
+    tags: ["CI", "Evals", "Guardrails"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/evals-in-ci.jpg"
   },
   {
     slug: "platform-scorecards-that-stick",
