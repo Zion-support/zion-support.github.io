@@ -19,6 +19,23 @@ export interface EnhancedPromotionalBanner {
 
 export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
   {
+    id: 'fresh-content-sep-2025',
+    message: '✨ New: Reliable RAG 2025 + Serverless Inference Cost Playbook',
+    ctaText: 'Read now',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-indigo-600 to-purple-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 0,
+    variant: 'info',
+    icon: '✨',
+    badge: 'NEW',
+    featured: true
+  },
+  {
     id: 'ai-autonomous-infrastructure-launch',
     message: '🚀 NEW: AI Autonomous Infrastructure Platform - Self-Healing Systems That Scale',
     ctaText: 'Start Free Trial',
