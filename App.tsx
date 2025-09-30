@@ -1,4 +1,5 @@
 import React, { JSX } from "react";
+import TranscendentIntelligence2027Banner from "./components/TranscendentIntelligence2027Banner";
 import ConsensusIntelligenceBreakthroughBanner from "./components/ConsensusIntelligenceBreakthroughBanner";
 import AutonomousEnterpriseBreakthroughBanner from "./components/AutonomousEnterpriseBreakthroughBanner";
 import LatestContentBanner2025 from "./src/components/LatestContentBanner2025";
@@ -69,6 +70,8 @@ import AITrends2026AdvertisingBanner from "./components/AITrends2026AdvertisingB
 export default function App(): JSX.Element {
   return (
     <div className="min-h-screen bg-slate-950">
+      {/* NEW: June 2027 Transcendent Intelligence Banner - Most Prominent */}
+      <TranscendentIntelligence2027Banner />
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
