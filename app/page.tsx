@@ -18,16 +18,8 @@ import AITrends2026PredictionsBanner from '../components/AITrends2026Predictions
 import InteractiveContentShowcase2026 from '../components/InteractiveContentShowcase2026';
 import AI2027BreakthroughBanner from '../components/AI2027BreakthroughBanner';
 import EnterpriseTransformation2027Banner from '../components/EnterpriseTransformation2027Banner';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import AI2027QuantumBreakthroughBanner from '../components/AI2027QuantumBreakthroughBanner';
 import AI2027AutonomousEnterpriseBanner from '../components/AI2027AutonomousEnterpriseBanner';
->>>>>>> f09398b3100ba68036375a0049d5022bd1a76a73
-=======
-import AI2027QuantumBreakthroughBanner from '../components/AI2027QuantumBreakthroughBanner';
-import AI2027AutonomousEnterpriseBanner from '../components/AI2027AutonomousEnterpriseBanner';
->>>>>>> 20c9a49c0652b85be47b35bf42ba17b5ee4c516a
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
@@ -109,21 +101,7 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <div className="animate-fade-in">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        {/* 🚀 BRAND NEW CONTENT - September 30, 2025 - MEGA BANNER */}
-        <section className="bg-gradient-to-r from-red-600 via-orange-500 to-yellow-500 border-b-4 border-white/30 relative overflow-hidden">
-          <div className="absolute inset-0 bg-black/10"></div>
-          <div className="container mx-auto px-6 py-12 relative z-10">
-            <div className="text-center">
-              <div className="inline-flex items-center gap-3 px-8 py-3 rounded-full bg-white/20 border border-white/40 mb-6 animate-pulse">
-                <span className="text-white font-black text-2xl tracking-wider uppercase">
-                  🔥 5 GROUNDBREAKING NEW ARTICLES JUST PUBLISHED! 🔥
-                </span>
 =======
-=======
->>>>>>> 20c9a49c0652b85be47b35bf42ba17b5ee4c516a
         {/* AI 2027 Quantum Breakthrough Banner */}
         <AI2027QuantumBreakthroughBanner />
         
@@ -532,10 +510,6 @@ export default function HomePage() {
                     Explore Service →
                   </div>
                 </div>
-<<<<<<< HEAD
->>>>>>> f09398b3100ba68036375a0049d5022bd1a76a73
-=======
->>>>>>> 20c9a49c0652b85be47b35bf42ba17b5ee4c516a
               </div>
             </Link>
 
@@ -643,72 +617,7 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        </section>
-        
-        {/* AI 2027 Breakthrough Banner */}
-        <AI2027BreakthroughBanner />
-        
-        {/* Enterprise Transformation 2027 Banner */}
-        <EnterpriseTransformation2027Banner />
-        
-        {/* Latest 2026 Mega Content Banners */}
-        <AI2026ContentShowcaseBanner />
-        <AIEnterpriseAutomationRevolutionBanner />
-        <AIQuantumComputingBreakthroughBanner />
-        <AIMegaTransformationSuccessBanner />
-        <AI2026InnovationShowcaseBanner />
-        
-        {/* 🔥 LATEST 2027 CONTENT - Featured First! */}
-        <NewContent2027MegaShowcase />
-        <AgenticAIRevolution2027Banner />
-        <EdgeAI2027Banner />
-        <QuantumAI2027Banner />
-        <RetailerAITransformation2027Banner />
-        <TechUnicornAgenticAI2027Banner />
-        
-        {/* New Mega Success Story Banner */}
-        <NewContent2026MegaSuccessBanner />
-        
-        {/* AI Trends 2026 Predictions Banner */}
-        <AITrends2026PredictionsBanner />
-        
-        {/* Revolutionary 2026 Content Banner */}
-        <Revolutionary2026ContentBanner />
-        
-        {/* Latest AI Innovations Banner */}
-        <LatestAIInnovations2026Banner />
-        
-        {/* New Content Promotional Banners */}
-        <AIEnterpriseAdoptionBanner />
-        <AITrends2025Banner />
-        <SupplyChainOptimizationBanner />
-        <AIBusinessTransformationBanner />
-        <AICustomerExperienceBanner />
-        <EnterpriseAITransformationBanner />
-        <LatestAIInsightsBanner />
-        <AIServicesShowcaseBanner />
-        <AIWorkflowAutomationBanner />
-        <EnterpriseAISecurityBanner />
-        
-        {/* Existing Promotional Banners */}
-        <NewContentShowcaseBanner />
-        <AutonomousAgentsBanner />
-        <AIGovernanceBanner />
-        <FinTechSuccessBanner />
-        <AIContentShowcaseBanner />
-        <CustomerServiceAIBanner />
-        <HealthcareAIBanner />
-        <RetailSuccessBanner />
-        <AIRevolutionBanner />
-        <NewBlogBanner />
-        <WorkflowAutomationBanner />
-        <AIAnalyticsBanner />
-      </div>
 =======
-=======
->>>>>>> 20c9a49c0652b85be47b35bf42ba17b5ee4c516a
 
           {/* Contact CTA */}
           <div className="text-center mt-12">
@@ -1230,11 +1139,6 @@ export default function HomePage() {
       <WorkflowAutomationBanner />
       <AIAnalyticsBanner />
       
->>>>>>> a386ae0eb7428348a450717ec685f38ca6d6b726
-<<<<<<< HEAD
->>>>>>> f09398b3100ba68036375a0049d5022bd1a76a73
-=======
->>>>>>> 20c9a49c0652b85be47b35bf42ba17b5ee4c516a
       {/* Hero Section */}
       <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
         <div className="max-w-4xl mx-auto px-4">
@@ -1351,15 +1255,7 @@ export default function HomePage() {
       {/* Dynamic Content Showcase */}
       <ContentShowcase />
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-      {/* Contact Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold text-white mb-4">
 =======
-=======
->>>>>>> 20c9a49c0652b85be47b35bf42ba17b5ee4c516a
       {/* Latest Content Section */}
       <section className="py-20 bg-gradient-to-br from-purple-50 to-blue-50">
         <div className="max-w-6xl mx-auto px-4">
@@ -1491,10 +1387,6 @@ export default function HomePage() {
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-gray-900 mb-6">
-<<<<<<< HEAD
->>>>>>> f09398b3100ba68036375a0049d5022bd1a76a73
-=======
->>>>>>> 20c9a49c0652b85be47b35bf42ba17b5ee4c516a
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray-600 mb-8">
