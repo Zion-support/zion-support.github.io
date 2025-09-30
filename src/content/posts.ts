@@ -592,6 +592,33 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-12",
     featured: false,
     readTime: "6 min read"
+  },
+  {
+    slug: "ai-powered-digital-twins-2025",
+    title: "AI-Powered Digital Twins 2025: Real-Time Simulation & Predictive Intelligence",
+    description: "Discover how AI-powered digital twins achieve 95% accuracy in failure prediction, 60% reduction in downtime, and $5M+ annual savings through real-time simulation.",
+    category: "Industrial AI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "12 min read"
+  },
+  {
+    slug: "serverless-ai-architecture-2025",
+    title: "Serverless AI Architecture 2025: Infinite Scale & Zero Ops",
+    description: "Master serverless AI for infinite scalability, 90% cost reduction, and zero operational overhead. Build applications that scale automatically from 0 to millions.",
+    category: "Cloud Architecture",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "15 min read"
+  },
+  {
+    slug: "ai-enhanced-cybersecurity-2025",
+    title: "AI-Enhanced Cybersecurity 2025: Autonomous Threat Detection & Response",
+    description: "AI-powered security detects threats 10x faster with 99.9% accuracy. Autonomous response systems prevent breaches in seconds, saving $5M+ annually.",
+    category: "Cybersecurity",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "14 min read"
   }
   ,
   {
