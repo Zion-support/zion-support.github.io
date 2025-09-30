@@ -19,6 +19,24 @@ export const posts: BlogPost[] = [
     readTime: "9 min read"
   },
   {
+    slug: "ai-2025-sept-30-security-mesh-v3",
+    title: "AI Security Mesh v3 — Signed Outputs, Verifiers, Rollback",
+    description: "Runtime verifiers, egress control, and instant rollback under live budgets with signed outputs.",
+    category: "AI Security",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "ai-2025-sept-30-policy-tests-quickstart-v2",
+    title: "GenAI Policy Tests Quickstart v2 — KPIs, Budgets, Rollback",
+    description: "Lightweight CI policy tests wired to KPIs with budget-aware gates and rollback hooks.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
     slug: "ai-2025-oct-01-secure-ml-supply-chain",
     title: "Secure ML Supply Chain — SBOMs, attestations, and runtime verifiers",
     description: "Signed models, provenance attestations, and runtime verifiers for end‑to‑end ML integrity without slowing delivery.",

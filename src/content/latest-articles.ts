@@ -17,6 +17,38 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
+    id: "ai-2025-sept-30-security-mesh-v3",
+    slug: "ai-2025-sept-30-security-mesh-v3",
+    title: "AI Security Mesh v3 — Signed Outputs, Verifiers, Rollback",
+    description: "Production guardrails: signed outputs, runtime verifiers, budgeted actions, and deterministic rollback.",
+    excerpt: "Harden AI systems with verifier stacks, budget-aware actions, and rollback hooks without slowing delivery.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "AI Security",
+    tags: ["Security", "Verifiers", "Rollback"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/ai-security-mesh-v3.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "ai-2025-sept-30-policy-tests-quickstart-v2",
+    slug: "ai-2025-sept-30-policy-tests-quickstart-v2",
+    title: "GenAI Policy Tests Quickstart v2 — KPIs, Budgets, Rollback",
+    description: "Lightweight CI policy tests wired to KPIs with budget-aware gates and instant rollback.",
+    excerpt: "Ship faster with PR policy tests, online canaries, and budget gates that prevent regressions.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "AI Governance",
+    tags: ["Policy Tests", "KPIs", "Budgets"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/policy-tests-quickstart-v2.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "ai-2026-autonomous-change-control",
     slug: "ai-2026-autonomous-change-control",
     title: "Autonomous Change Control — Gates, Budgets, Rollback",
