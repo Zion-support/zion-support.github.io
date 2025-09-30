@@ -54,7 +54,6 @@ import April2026UltimateBreakthroughBanner from '../components/April2026Ultimate
 import May2026RevolutionaryBreakthroughBanner from '../components/May2026RevolutionaryBreakthroughBanner';
 import June2026UltimateBreakthroughBanner from '../components/June2026UltimateBreakthroughBanner';
 import Ultimate2026ContentShowcaseBanner from '../components/Ultimate2026ContentShowcaseBanner';
-import April2026MegaBreakthroughBanner from '../components/April2026MegaBreakthroughBanner';
 import JulyAugust2026RevolutionaryBreakthroughBanner from '../components/JulyAugust2026RevolutionaryBreakthroughBanner';
 import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
 import ContentNavigationHub from '../components/ContentNavigationHub';

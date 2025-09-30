@@ -67,11 +67,18 @@ import AITrends2026AdvertisingBanner from "./components/AITrends2026AdvertisingB
 import September2026BreakthroughAdvertisingBanner from "./components/September2026BreakthroughAdvertisingBanner";
 import AutonomousEnterpriseAutomationAdvertisingBanner from "./components/AutonomousEnterpriseAutomationAdvertisingBanner";
 import February2026NewContentBreakthroughBanner from "./components/February2026NewContentBreakthroughBanner";
+import January2027AutonomousCognitiveEnterpriseBanner from "./components/January2027AutonomousCognitiveEnterpriseBanner";
+import NewContent2027AdvertisingBanner from "./components/NewContent2027AdvertisingBanner";
 
 export default function App(): JSX.Element {
   return (
     <div className="min-h-screen bg-slate-950">
-<<<<<<< HEAD
+      {/* NEW: January 2027 Autonomous Cognitive Enterprise Banner - MOST PROMINENT */}
+      <January2027AutonomousCognitiveEnterpriseBanner />
+      
+      {/* NEW: New Content 2027 Advertising Banner */}
+      <NewContent2027AdvertisingBanner />
+      
       {/* NEW: September 2026 Breakthrough Advertising Banner - MOST PROMINENT */}
       <September2026BreakthroughAdvertisingBanner />
       
