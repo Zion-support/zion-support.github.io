@@ -8,7 +8,7 @@ const Home: React.FC = () => {
       <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white py-3">
         <div className="container mx-auto px-4">
           <p className="text-center text-sm md:text-base">
-            🚀 <strong>NEW TODAY:</strong> Multimodal AI Agents, Real-Time Streaming, AI Code Review Automation
+            🚀 <strong>NEW TODAY:</strong> AI Governance & Compliance, RAG Best Practices, AI FinOps Cost Optimization
             <Link to="/blog" className="ml-3 underline font-semibold hover:text-blue-100">
               Read Now →
             </Link>
@@ -40,25 +40,25 @@ const Home: React.FC = () => {
         <div className="mt-16 mb-20">
           <h2 className="text-3xl font-bold text-white text-center mb-8">Latest Insights</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <Link to="/blog/ai-multimodal-agents-2025" className="bg-gradient-to-br from-blue-500/20 to-purple-500/20 backdrop-blur-sm rounded-lg p-6 border border-blue-500/30 hover:border-blue-400 transition-all hover:scale-105">
-              <div className="text-blue-400 text-sm font-semibold mb-2">AI ENGINEERING • SEP 30, 2025</div>
-              <h3 className="text-xl font-bold text-white mb-3">Multimodal AI Agents 2025</h3>
-              <p className="text-gray-300 text-sm mb-4">Vision + Voice + Action under one SLA with unified safety budgets and cross-modal evals.</p>
+            <Link to="/blog/ai-governance-compliance-2025" className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/30 hover:border-cyan-400 transition-all hover:scale-105">
+              <div className="text-cyan-400 text-sm font-semibold mb-2">AI GOVERNANCE • SEP 30, 2025</div>
+              <h3 className="text-xl font-bold text-white mb-3">AI Governance & Compliance 2025</h3>
+              <p className="text-gray-300 text-sm mb-4">Navigate the EU AI Act, model cards, audit trails, and build trustworthy AI systems that meet regulatory standards.</p>
+              <div className="text-cyan-400 text-sm font-semibold">Read more →</div>
+            </Link>
+
+            <Link to="/blog/rag-best-practices-2025" className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 backdrop-blur-sm rounded-lg p-6 border border-green-500/30 hover:border-green-400 transition-all hover:scale-105">
+              <div className="text-green-400 text-sm font-semibold mb-2">RAG & LLMs • SEP 30, 2025</div>
+              <h3 className="text-xl font-bold text-white mb-3">RAG Best Practices 2025</h3>
+              <p className="text-gray-300 text-sm mb-4">Build production-ready RAG with hybrid search, intelligent chunking, and evaluation frameworks that actually work.</p>
+              <div className="text-green-400 text-sm font-semibold">Read more →</div>
+            </Link>
+
+            <Link to="/blog/ai-finops-cost-optimization-2025" className="bg-gradient-to-br from-blue-500/20 to-indigo-500/20 backdrop-blur-sm rounded-lg p-6 border border-blue-500/30 hover:border-blue-400 transition-all hover:scale-105">
+              <div className="text-blue-400 text-sm font-semibold mb-2">FINOPS & COST • SEP 30, 2025</div>
+              <h3 className="text-xl font-bold text-white mb-3">AI FinOps Cost Optimization</h3>
+              <p className="text-gray-300 text-sm mb-4">Reduce AI infrastructure costs by 60% with intelligent routing, caching, and token budget management.</p>
               <div className="text-blue-400 text-sm font-semibold">Read more →</div>
-            </Link>
-
-            <Link to="/blog/realtime-genai-streaming-2025" className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 backdrop-blur-sm rounded-lg p-6 border border-purple-500/30 hover:border-purple-400 transition-all hover:scale-105">
-              <div className="text-purple-400 text-sm font-semibold mb-2">GENAI • SEP 30, 2025</div>
-              <h3 className="text-xl font-bold text-white mb-3">Real-Time GenAI Streaming</h3>
-              <p className="text-gray-300 text-sm mb-4">Sub-second TTFB with quality guardrails, safety filters, and cost controls.</p>
-              <div className="text-purple-400 text-sm font-semibold">Read more →</div>
-            </Link>
-
-            <Link to="/blog/ai-code-review-automation-2025" className="bg-gradient-to-br from-pink-500/20 to-red-500/20 backdrop-blur-sm rounded-lg p-6 border border-pink-500/30 hover:border-pink-400 transition-all hover:scale-105">
-              <div className="text-pink-400 text-sm font-semibold mb-2">DEVOPS • SEP 30, 2025</div>
-              <h3 className="text-xl font-bold text-white mb-3">AI Code Review Automation</h3>
-              <p className="text-gray-300 text-sm mb-4">Ship faster with security and quality built-in. Catch bugs automatically.</p>
-              <div className="text-pink-400 text-sm font-semibold">Read more →</div>
             </Link>
           </div>
         </div>
