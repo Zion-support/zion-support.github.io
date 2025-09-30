@@ -215,6 +215,30 @@ export const featuredBlogPosts: FeaturedItem[] = [
 // Sept 30, 2025 – Promote brand-new posts site-wide (added now)
 featuredBlogPosts.unshift(
   {
+    id: "production-rag-quality-budgets-2026",
+    title: "Production RAG: Quality Budgets, Freshness Windows, and SLAs",
+    description: "Freshness windows, async warmups, and KPI‑aligned SLAs for reliable RAG.",
+    link: "/blog/production-rag-quality-budgets-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "serverless-inference-cost-playbook-2025",
+    title: "Serverless Inference Cost Playbook",
+    description: "Cut GenAI cost with adaptive batching, warm pools, and quality tiers.",
+    link: "/blog/serverless-inference-cost-playbook-2025",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "golden-paths-roi-2026",
+    title: "Golden Paths ROI 2026",
+    description: "Scorecards linking developer journeys to adoption, SLOs, and revenue.",
+    link: "/blog/golden-paths-roi-2026",
+    type: "article",
+    featured: true
+  },
+  {
     id: "verifiable-edge-analytics-2026",
     title: "Verifiable Edge Analytics 2026",
     description: "Zero‑PII insights with signed attestations under 100ms at the edge",
