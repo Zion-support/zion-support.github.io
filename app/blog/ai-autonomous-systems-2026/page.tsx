@@ -61,7 +61,11 @@ export default function AutonomousAISystems2026() {
             <span>By Zion Tech Group</span>
           </div>
         </header>
+      </section>
 
+      {/* Article Content */}
+      <article className="max-w-4xl mx-auto px-4 py-16">
+        <div className="bg-white rounded-2xl shadow-xl p-12">
         <div className="bg-gradient-to-r from-purple-50 to-indigo-50 p-6 rounded-lg mb-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Key Takeaways</h2>
           <ul className="list-disc list-inside space-y-2 text-gray-700">
