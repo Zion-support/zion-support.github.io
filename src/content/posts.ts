@@ -10,6 +10,24 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "enterprise-rag-security-2027",
+    title: "Enterprise RAG Security 2027: Auth‑Aware Retrieval and Signed Outputs",
+    description: "Blueprint for secure RAG: auth‑aware retrieval, freshness windows, prompt firewalls, and signed outputs.",
+    category: "AI Security",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "edge-consentless-personalization-2027",
+    title: "Edge Personalization 2027: Zero‑PII, <100ms, Scoped IDs",
+    description: "Private, sub‑100ms experiences using scoped IDs, on‑device models, and DP noise—no PII required.",
+    category: "Edge Computing",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
     slug: "ai-governance-pr-policy-tests-2027-q4",
     title: "AI Governance: PR Policy Tests Q4 2027 — Ship Fast, Stay Safe",
     description: "CI policy tests wired to KPIs to prevent regressions while preserving velocity.",
