@@ -204,9 +204,9 @@ const Home = () => {
             </h1>
 
             <p className="text-xl md:text-2xl text-zion-slate-light mb-8 leading-relaxed max-w-3xl mx-auto animate-fade-in">
-              🚀 <strong>BREAKTHROUGH 2025:</strong> AI Autonomous Infrastructure, Quantum-AI Hybrid Computing & Zero Trust Security! 
-              Transform your business with revolutionary AI solutions that self-heal, optimize, and scale automatically. 
-              Join 500+ companies achieving unprecedented results!
+              🚀 <strong>JUST PUBLISHED:</strong> Expert guides on Agentic Observability, Production RAG Validation & Cost-Conscious Agent Design! 
+              Plus: AI Autonomous Infrastructure, Quantum-AI Computing & Zero Trust Security. 
+              Transform your business with production-ready AI solutions. Join 500+ companies achieving unprecedented results!
             </p>
 
             {/* Special Promotion Banner */}
@@ -242,36 +242,42 @@ const Home = () => {
             <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-xl p-6 mb-8 animate-fade-in">
               <div className="flex items-center justify-center gap-3 mb-3">
                 <Sparkles className="w-6 h-6 text-purple-400 animate-pulse" />
-                <span className="text-lg font-bold text-purple-400">🚀 NEW BREAKTHROUGH CONTENT</span>
+                <span className="text-lg font-bold text-purple-400">🚀 JUST PUBLISHED: EXPERT AI GUIDES</span>
                 <Sparkles className="w-6 h-6 text-purple-400 animate-pulse" />
               </div>
               <p className="text-white text-lg font-semibold mb-2">
-                🎯 Just Published: AI Autonomous Cost Intelligence, Conversational Commerce Revolution, Predictive Infrastructure Orchestration & More!
+                🎯 New Production-Ready Content: Agentic Observability Playbook, RAG Validation Framework & Cost-Conscious Agent Design!
               </p>
               <p className="text-zion-slate-light text-sm mb-4">
-                Discover how to reduce cloud spending by 60%, achieve 3.5x higher conversion rates with AI commerce, and reach 99.999% uptime with predictive orchestration—plus breakthrough insights on self-healing systems, quantum computing, and zero trust security.
+                Master AI agent monitoring with distributed tracing & error budgets • Validate RAG systems with comprehensive testing frameworks • Build cost-effective agents that save 50-70% on LLM costs. Plus: breakthrough insights on autonomous infrastructure, quantum computing, and zero trust security.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link
-                  to="/blog"
+                  to="/blog/ai-2025-agentic-observability-playbook"
                   className="bg-purple-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-purple-600 transition-colors text-center"
                 >
-                  Read Latest Articles
+                  Read Observability Guide
                 </Link>
                 <Link
-                  to="/case-studies"
+                  to="/blog/ai-2025-production-rag-validation-framework"
+                  className="bg-pink-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-pink-600 transition-colors text-center"
+                >
+                  RAG Testing Framework
+                </Link>
+                <Link
+                  to="/blog/ai-2025-cost-conscious-agent-design"
                   className="border border-purple-400 text-purple-400 px-6 py-2 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-colors text-center"
                 >
-                  View Success Stories
+                  Cost Optimization Guide
                 </Link>
               </div>
               <div className="mt-4 flex flex-wrap gap-2 justify-center">
-                <span className="bg-green-100/20 text-green-200 px-3 py-1 rounded-full text-xs font-medium border border-green-300/20">Cost Intelligence</span>
-                <span className="bg-purple-100/20 text-purple-200 px-3 py-1 rounded-full text-xs font-medium border border-purple-300/20">AI Infrastructure</span>
-                <span className="bg-pink-100/20 text-pink-200 px-3 py-1 rounded-full text-xs font-medium border border-pink-300/20">Conversational Commerce</span>
-                <span className="bg-blue-100/20 text-blue-200 px-3 py-1 rounded-full text-xs font-medium border border-blue-300/20">Zero Trust Security</span>
-                <span className="bg-indigo-100/20 text-indigo-200 px-3 py-1 rounded-full text-xs font-medium border border-indigo-300/20">Predictive Ops</span>
-                <span className="bg-cyan-100/20 text-cyan-200 px-3 py-1 rounded-full text-xs font-medium border border-cyan-300/20">DevOps Excellence</span>
+                <span className="bg-green-100/20 text-green-200 px-3 py-1 rounded-full text-xs font-medium border border-green-300/20">Agent Observability</span>
+                <span className="bg-purple-100/20 text-purple-200 px-3 py-1 rounded-full text-xs font-medium border border-purple-300/20">RAG Validation</span>
+                <span className="bg-pink-100/20 text-pink-200 px-3 py-1 rounded-full text-xs font-medium border border-pink-300/20">Cost Optimization</span>
+                <span className="bg-blue-100/20 text-blue-200 px-3 py-1 rounded-full text-xs font-medium border border-blue-300/20">Production AI</span>
+                <span className="bg-indigo-100/20 text-indigo-200 px-3 py-1 rounded-full text-xs font-medium border border-indigo-300/20">Testing Frameworks</span>
+                <span className="bg-cyan-100/20 text-cyan-200 px-3 py-1 rounded-full text-xs font-medium border border-cyan-300/20">LLM Engineering</span>
               </div>
             </div>
           </div>
@@ -688,20 +694,21 @@ const Home = () => {
             <div className="bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-400/30 rounded-xl p-6 mb-10">
               <div className="flex items-center gap-3 mb-3">
                 <Sparkles className="w-5 h-5 text-purple-500 animate-pulse" />
-                <span className="text-lg font-bold text-purple-700">📚 NEW CONTENT ALERT</span>
+                <span className="text-lg font-bold text-purple-700">📚 NEW EXPERT GUIDES PUBLISHED</span>
                 <Sparkles className="w-5 h-5 text-purple-500 animate-pulse" />
               </div>
             <p className="text-gray-700 font-semibold mb-2">
-                🚀 Just Published: Risk Playbook, Privacy‑Preserving Agents, KPI Policy Tests, and Serverless Inference Cost Playbook
+                🚀 Production-Ready AI Content: Agentic Observability (12 min), RAG Validation Framework (15 min), Cost-Conscious Agent Design (14 min)
               </p>
               <p className="text-gray-600 text-sm mb-4">
-                Discover how to ship fast with guardrails, design privacy‑first agents, wire governance to KPIs, and cut inference costs 40–70%.
+                Master distributed tracing for AI agents, build comprehensive RAG test suites with 80%+ accuracy, and reduce agent costs by 50-70% through intelligent model selection and caching. Battle-tested patterns from real production deployments.
               </p>
               <div className="flex flex-wrap gap-2">
-                <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-medium">AI Governance</span>
-                <span className="bg-rose-100 text-rose-700 px-3 py-1 rounded-full text-xs font-medium">AI Security</span>
-                <span className="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-xs font-medium">Engineering</span>
-                <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">AI Solutions</span>
+                <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-medium">Observability</span>
+                <span className="bg-rose-100 text-rose-700 px-3 py-1 rounded-full text-xs font-medium">Testing</span>
+                <span className="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-xs font-medium">Cost Engineering</span>
+                <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Production AI</span>
+                <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-medium">Agent Systems</span>
               </div>
             </div>
             

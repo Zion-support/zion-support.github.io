@@ -9,6 +9,34 @@ export interface BlogPost {
 }
 
 export const posts: BlogPost[] = [
+  // September 30, 2025 — LATEST: New Expert Content (featured)
+  {
+    slug: "ai-2025-agentic-observability-playbook",
+    title: "Agentic Observability Playbook 2025: Monitor AI Agents in Production",
+    description: "Complete guide to observing, monitoring, and debugging autonomous AI agents at scale. Learn trace visualization, error budgets, and agent health metrics.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "12 min read"
+  },
+  {
+    slug: "ai-2025-production-rag-validation-framework",
+    title: "Production RAG Validation Framework 2025: Test Before You Ship",
+    description: "Comprehensive testing and validation framework for RAG systems. Covers accuracy metrics, retrieval quality, answer faithfulness, and automated test suites.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "15 min read"
+  },
+  {
+    slug: "ai-2025-cost-conscious-agent-design",
+    title: "Cost-Conscious Agent Design 2025: Build AI Agents That Don't Break the Bank",
+    description: "Practical strategies for designing AI agents that deliver value without exploding costs. Covers prompt optimization, caching, model selection, and budget enforcement.",
+    category: "AI Engineering",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "14 min read"
+  },
   // Sept 30, 2025 — Newly added content (featured)
   {
     slug: "ai-2025-sept-30-llm-supply-chains",
