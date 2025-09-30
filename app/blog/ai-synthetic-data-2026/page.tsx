@@ -231,7 +231,7 @@ export default function AISyntheticData2026Page() {
         </h2>
 
         <div className="bg-green-50 rounded-xl p-6 my-8 border-2 border-green-200">
-          <h3 className="text-xl font-bold text-gray-900 mb-4">Why Synthetic Data > Anonymization</h3>
+          <h3 className="text-xl font-bold text-gray-900 mb-4">Why Synthetic Data &gt; Anonymization</h3>
           <div className="space-y-4">
             <div className="flex items-start gap-4">
               <span className="text-2xl">❌</span>
