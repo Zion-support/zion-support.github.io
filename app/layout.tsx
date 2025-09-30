@@ -110,10 +110,26 @@ function Header() {
             </Link>
           </div>
           <div className="relative group">
-            <Link href="/blog/ai-2027-consciousness-fusion-breakthrough" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
-              Consciousness Fusion 2027
+            <Link href="/blog/ai-2027-meta-cognitive-superintelligence-breakthrough" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
+              Meta-Cognitive AI 2027
               <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
-                100,000x
+                SELF-AWARE
+              </span>
+            </Link>
+          </div>
+          <div className="relative group">
+            <Link href="/blog/ai-2026-quantum-neural-superintelligence" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
+              Quantum Superintelligence 2026
+              <span className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
+                10,000x
+              </span>
+            </Link>
+          </div>
+          <div className="relative group">
+            <Link href="/blog/ai-2026-hyper-automation-revolution" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
+              Hyper-Automation 2026
+              <span className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
+                $3.2B ROI
               </span>
             </Link>
           </div>
@@ -259,9 +275,17 @@ function Footer() {
                 💰 $2.5B Quantum Consciousness Success
                 <span className="bg-green-500 text-white px-2 py-1 rounded-full text-xs font-semibold">MEGA SUCCESS</span>
               </Link>
-              <Link href="/case-studies/ai-2027-consciousness-fusion-mega-success" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
-                💰 $2.5B Consciousness Fusion Success
-                <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">100,000x</span>
+              <Link href="/case-studies/ai-2026-quantum-neural-superintelligence-success" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                💰 $5B Quantum Superintelligence Success
+                <span className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">10,000x</span>
+              </Link>
+              <Link href="/case-studies/ai-2026-hyper-automation-revolution-success" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                💰 $3.2B Hyper-Automation Success
+                <span className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">99.5% AUTONOMOUS</span>
+              </Link>
+              <Link href="/case-studies/ai-2027-meta-cognitive-superintelligence-success" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                💰 $4B Meta-Cognitive Success
+                <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">SELF-AWARE</span>
               </Link>
               <Link href="/blog/ai-2028-autonomous-enterprise-revolution" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
                 🤖 AI 2028 Autonomous Enterprise Revolution

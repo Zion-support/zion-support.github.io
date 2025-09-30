@@ -9,6 +9,9 @@ import January2026NewServicesBanner from '../components/January2026NewServicesBa
 import Revolutionary2026ContentAdvertisingBanner from '../components/Revolutionary2026ContentAdvertisingBanner';
 import January2026BreakthroughShowcaseBanner from '../components/January2026BreakthroughShowcaseBanner';
 import Ultimate2026ContentPromotionalBanner from '../components/Ultimate2026ContentPromotionalBanner';
+import January2026QuantumNeuralSuperintelligenceBanner from '../components/January2026QuantumNeuralSuperintelligenceBanner';
+import January2026HyperAutomationRevolutionBanner from '../components/January2026HyperAutomationRevolutionBanner';
+import January2027MetaCognitiveSuperintelligenceBanner from '../components/January2027MetaCognitiveSuperintelligenceBanner';
 
 export default function HomePage() {
   return (
@@ -19,6 +22,15 @@ export default function HomePage() {
           <p className="text-lg md:text-xl text-gray-300">Leading AI insights, case studies, and implementation guides.</p>
         </div>
       </section>
+      
+      {/* January 2027 Meta-Cognitive Superintelligence Banner */}
+      <January2027MetaCognitiveSuperintelligenceBanner />
+      
+      {/* January 2026 Quantum Neural Superintelligence Banner */}
+      <January2026QuantumNeuralSuperintelligenceBanner />
+      
+      {/* January 2026 Hyper-Automation Revolution Banner */}
+      <January2026HyperAutomationRevolutionBanner />
       
       {/* Revolutionary 2026 Content Advertising Banner */}
       <Revolutionary2026ContentAdvertisingBanner />
@@ -57,34 +69,34 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-6">
-            <Link to="/blog/ai-2027-consciousness-fusion-breakthrough" className="group block rounded-xl border border-purple-500/20 bg-gradient-to-br from-purple-900/20 to-indigo-900/20 p-6 hover:border-purple-400/40 transition-all duration-300 hover:scale-105">
+            <Link to="/blog/ai-2027-meta-cognitive-superintelligence-breakthrough" className="group block rounded-xl border border-purple-500/20 bg-gradient-to-br from-purple-900/20 to-indigo-900/20 p-6 hover:border-purple-400/40 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-2 mb-3">
                 <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-3 py-1 rounded-full text-xs font-bold">2027 BREAKTHROUGH</span>
-                <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold">100,000x</span>
+                <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold">SELF-AWARE</span>
               </div>
-              <div className="text-white font-bold text-lg mb-2">AI 2027: Consciousness Fusion</div>
-              <div className="text-gray-400 text-sm mb-3">Revolutionary quantum-enhanced neural architectures achieving consciousness-level reasoning with unprecedented performance improvements.</div>
-              <div className="text-purple-300 text-sm font-semibold group-hover:text-purple-200">Discover the Technology →</div>
+              <div className="text-white font-bold text-lg mb-2">AI 2027: Meta-Cognitive Superintelligence</div>
+              <div className="text-gray-400 text-sm mb-3">Revolutionary meta-cognitive AI systems with self-awareness, recursive learning, and consciousness-level reasoning.</div>
+              <div className="text-purple-300 text-sm font-semibold group-hover:text-purple-200">Explore Consciousness AI →</div>
             </Link>
             
-            <Link to="/case-studies/ai-2027-consciousness-fusion-mega-success" className="group block rounded-xl border border-green-500/20 bg-gradient-to-br from-green-900/20 to-emerald-900/20 p-6 hover:border-green-400/40 transition-all duration-300 hover:scale-105">
+            <Link to="/case-studies/ai-2026-quantum-neural-superintelligence-success" className="group block rounded-xl border border-green-500/20 bg-gradient-to-br from-green-900/20 to-emerald-900/20 p-6 hover:border-green-400/40 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-2 mb-3">
-                <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-xs font-bold">$2.5B ROI</span>
-                <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold">MEGA SUCCESS</span>
+                <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-xs font-bold">$5B ROI</span>
+                <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold">SUPERINTELLIGENCE</span>
               </div>
-              <div className="text-white font-bold text-lg mb-2">Consciousness Fusion Success</div>
-              <div className="text-gray-400 text-sm mb-3">How a Fortune 500 company achieved $2.5B ROI through revolutionary AI consciousness fusion breakthrough.</div>
+              <div className="text-white font-bold text-lg mb-2">Quantum Neural Superintelligence Success</div>
+              <div className="text-gray-400 text-sm mb-3">How a Fortune 500 company achieved $5B ROI through revolutionary quantum neural superintelligence breakthrough.</div>
               <div className="text-green-300 text-sm font-semibold group-hover:text-green-200">Read Success Story →</div>
             </Link>
             
-            <Link to="/blog/ai-2028-autonomous-enterprise-revolution" className="group block rounded-xl border border-blue-500/20 bg-gradient-to-br from-blue-900/20 to-indigo-900/20 p-6 hover:border-blue-400/40 transition-all duration-300 hover:scale-105">
+            <Link to="/blog/ai-2026-hyper-automation-revolution" className="group block rounded-xl border border-red-500/20 bg-gradient-to-br from-red-900/20 to-orange-900/20 p-6 hover:border-red-400/40 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-2 mb-3">
-                <span className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-3 py-1 rounded-full text-xs font-bold">2028 REVOLUTION</span>
-                <span className="bg-gradient-to-r from-green-400 to-emerald-500 text-black px-3 py-1 rounded-full text-xs font-bold">99.9% AUTONOMOUS</span>
+                <span className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-3 py-1 rounded-full text-xs font-bold">HYPER-AUTOMATION</span>
+                <span className="bg-gradient-to-r from-green-400 to-emerald-500 text-black px-3 py-1 rounded-full text-xs font-bold">$3.2B ROI</span>
               </div>
-              <div className="text-white font-bold text-lg mb-2">AI 2028: Autonomous Enterprise</div>
-              <div className="text-gray-400 text-sm mb-3">The future of business: complete enterprise autonomy through revolutionary AI systems achieving unprecedented operational excellence.</div>
-              <div className="text-blue-300 text-sm font-semibold group-hover:text-blue-200">Explore the Future →</div>
+              <div className="text-white font-bold text-lg mb-2">AI 2026: Hyper-Automation Revolution</div>
+              <div className="text-gray-400 text-sm mb-3">Complete enterprise transformation through revolutionary hyper-automation platform delivering 99.5% autonomous operations.</div>
+              <div className="text-red-300 text-sm font-semibold group-hover:text-red-200">Explore Hyper-Automation →</div>
             </Link>
           </div>
         </div>
