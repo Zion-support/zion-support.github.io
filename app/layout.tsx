@@ -69,10 +69,14 @@ export default function RootLayout({
                 <Link href="/" className="text-gray-700 hover:text-blue-600 transition-colors">Home</Link>
                 <Link href="/services" className="text-gray-700 hover:text-blue-600 transition-colors">Services</Link>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <Link href="/services/ai-2027-breakthrough-solutions" className="text-gray-700 hover:text-purple-600 transition-colors font-semibold relative">
                   AI 2027 Solutions
                   <span className="absolute -top-2 -right-2 bg-purple-500 text-white text-xs px-2 py-1 rounded-full">New</span>
                 </Link>
+=======
+                <Link href="/services/ai-2026-revolutionary-solutions" className="text-gray-700 hover:text-purple-600 transition-colors font-semibold">AI 2026</Link>
+>>>>>>> origin/cursor/create-and-deploy-new-content-049c
                 <Link href="/content-hub" className="text-gray-700 hover:text-blue-600 transition-colors relative">
                   Content Hub
                   <span className="absolute -top-2 -right-2 bg-purple-500 text-white text-xs px-2 py-1 rounded-full">New</span>
@@ -83,10 +87,15 @@ export default function RootLayout({
                   Blog
                   <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">New</span>
                 </Link>
+                <Link href="/blog/ai-2026-next-generation-autonomous-systems" className="text-gray-700 hover:text-purple-600 transition-colors font-semibold">Autonomous AI</Link>
                 <Link href="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors relative">
                   Case Studies
                   <span className="absolute -top-2 -right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full">New</span>
                 </Link>
+<<<<<<< HEAD
+=======
+                <Link href="/case-studies/ai-2026-mega-transformation-success-story" className="text-gray-700 hover:text-green-600 transition-colors font-semibold">$100M ROI</Link>
+>>>>>>> origin/cursor/create-and-deploy-new-content-049c
               </nav>
             </div>
           </div>
