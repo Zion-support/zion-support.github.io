@@ -35,7 +35,6 @@ export const featuredBlogPosts: FeaturedItem[] = [
     featured: true
   },
   {
-=======
     id: "multimodal-ai-2025",
     title: "Multimodal AI Revolution 2025",
     description: "Master unified vision-language-audio AI achieving 98% accuracy",

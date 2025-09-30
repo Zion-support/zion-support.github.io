@@ -23,6 +23,39 @@ export const newArticles2025: NewArticle[] = [
     tags: ["Multimodal AI", "Computer Vision", "NLP", "Audio Processing", "Deep Learning"]
   },
   {
+    id: "ai-e2e-tracing-2025",
+    title: "🧭 E2E AI Tracing: From Prompt to Outcome KPIs",
+    description: "Instrument prompts, tools, and UX to KPIs. Prove ROI and prevent regressions.",
+    category: "Observability",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-e2e-tracing-2025",
+    readTime: "7 min read",
+    tags: ["Tracing", "Observability", "KPIs", "GenAI"]
+  },
+  {
+    id: "edge-personalization-2026",
+    title: "⚡ Edge Personalization: Private <100ms Experiences",
+    description: "On‑device signals, signed configs, and tiny models for private, fast personalization.",
+    category: "Edge Computing",
+    publishedDate: "2025-10-15",
+    featured: true,
+    link: "/blog/edge-personalization-2026",
+    readTime: "6 min read",
+    tags: ["Edge", "Personalization", "Privacy", "On‑device ML"]
+  },
+  {
+    id: "policy-tests-quickstart-2025",
+    title: "✅ Policy Tests Quickstart: Ship Fast, Stay Safe",
+    description: "Lightweight CI policy tests wired to KPIs. Catch risks without slowing delivery.",
+    category: "AI Governance",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/policy-tests-quickstart-2025",
+    readTime: "6 min read",
+    tags: ["Governance", "CI", "Policy Tests"]
+  },
+  {
     id: "blockchain-ai-integration-2025",
     title: "⛓️ Blockchain-AI Integration 2025: Trustless Intelligence at Scale",
     description: "Combine blockchain immutability with AI intelligence for trustless, verifiable systems. Achieve decentralized AI governance, transparent model training, and secure data marketplaces.",
