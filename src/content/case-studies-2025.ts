@@ -614,6 +614,115 @@ export const caseStudies2025: CaseStudy[] = [
     publishedAt: "2025-09-30",
     readTime: "16 min read"
   }
+  ,
+  {
+    id: "insurance-ai-claims-processing-revolution-2026",
+    slug: "insurance-ai-claims-processing-revolution-2026",
+    title: "InsureTech Global: AI Claims Processing Revolution",
+    client: "InsureTech Global",
+    industry: "Insurance",
+    description: "Transformed claims processing with AI achieving 95% automation, reducing processing time from 24 hours to 4 minutes, and achieving $280M annual savings.",
+    challenge: "Manual claims processing taking 24 hours with 18% error rate, $420M annual operational costs, 22% fraud rate, and inability to scale with growing claim volume.",
+    solution: "Deployed end-to-end AI claims processing platform with computer vision for damage assessment, NLP for document processing, fraud detection system, and intelligent workflow orchestration.",
+    results: [
+      {
+        metric: "Processing Time",
+        value: "99.7%",
+        description: "Reduction from 24 hours to 4 minutes"
+      },
+      {
+        metric: "Annual Savings",
+        value: "$280M",
+        description: "Total operational cost reduction and fraud prevention"
+      },
+      {
+        metric: "Automation Rate",
+        value: "95%",
+        description: "Straight-through processing without human intervention"
+      },
+      {
+        metric: "Customer Satisfaction",
+        value: "96%",
+        description: "Improved from 68% with faster processing"
+      }
+    ],
+    technologies: ["Computer Vision", "NLP", "Fraud Detection AI", "Workflow Automation", "Multi-agent Systems"],
+    featured: true,
+    publishedAt: "2025-09-30",
+    readTime: "14 min read"
+  },
+  {
+    id: "automotive-ai-autonomous-vehicles-2026",
+    slug: "automotive-ai-autonomous-vehicles-2026",
+    title: "AutoDrive Innovations: Level 4 Autonomy Production Success",
+    client: "AutoDrive Innovations",
+    industry: "Automotive",
+    description: "Achieved production-ready Level 4 autonomous driving with 99.997% safety record, 250M+ autonomous miles, and regulatory approval across 15 states.",
+    challenge: "Developing safe, reliable autonomous driving system capable of handling complex urban environments, edge cases, and achieving regulatory approval for commercial deployment.",
+    solution: "Built end-to-end autonomous driving stack with multimodal sensor fusion, hierarchical planning and control, learned driving policies from 100M+ human driver miles, and triple redundancy on critical systems.",
+    results: [
+      {
+        metric: "Safety Record",
+        value: "99.997%",
+        description: "Incident-free miles driven autonomously"
+      },
+      {
+        metric: "Miles Driven",
+        value: "250M+",
+        description: "Total autonomous miles in production"
+      },
+      {
+        metric: "Perception Latency",
+        value: "<120ms",
+        description: "End-to-end perception to action latency"
+      },
+      {
+        metric: "Regulatory Approval",
+        value: "15 States",
+        description: "Commercial operation authorization"
+      }
+    ],
+    technologies: ["Sensor Fusion", "Computer Vision", "Planning & Control", "Deep Reinforcement Learning", "Safety Systems"],
+    featured: true,
+    publishedAt: "2025-09-30",
+    readTime: "12 min read"
+  },
+  {
+    id: "telecom-ai-network-optimization-2026",
+    slug: "telecom-ai-network-optimization-2026",
+    title: "GlobalTelecom: AI Network Optimization at Scale",
+    client: "GlobalTelecom",
+    industry: "Telecommunications",
+    description: "Achieved 99.999% network uptime, $520M annual savings, and 4x capacity improvement with AI-powered network optimization serving 120M+ subscribers.",
+    challenge: "Network congestion during peak hours, $800M annual CAPEX on underutilized infrastructure, 97.8% uptime missing SLA targets, and manual network planning taking 6-12 months per region.",
+    solution: "Deployed AI-powered network optimization platform with predictive traffic management, anomaly detection and self-healing, and intelligent network planning across 50,000+ base stations.",
+    results: [
+      {
+        metric: "Annual Savings",
+        value: "$520M",
+        description: "OPEX reduction, CAPEX optimization, and SLA penalty reduction"
+      },
+      {
+        metric: "Network Uptime",
+        value: "99.999%",
+        description: "Improved from 97.8% with predictive maintenance"
+      },
+      {
+        metric: "Capacity Increase",
+        value: "4x",
+        description: "Network capacity with same infrastructure"
+      },
+      {
+        metric: "Energy Efficiency",
+        value: "40%",
+        description: "Reduction in power consumption"
+      }
+    ],
+    technologies: ["Predictive Analytics", "Anomaly Detection", "Self-Healing Networks", "Traffic Forecasting", "Optimization AI"],
+    featured: true,
+    publishedAt: "2025-09-30",
+    readTime: "11 min read"
+  }
 ];
 
 export const featuredCaseStudies = caseStudies2025.filter(cs => cs.featured);
