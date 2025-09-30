@@ -801,6 +801,34 @@ export const getLatestContent = (count: number = 5): FeaturedItem[] => {
     .slice(0, count);
 };
 
+// Sept 30, 2025 – Feature three brand-new posts just created
+featuredBlogPosts.unshift(
+  {
+    id: "ai-2025-sept-30-breaking-enterprise-ai-breakthroughs",
+    title: "Sept 30, 2025: Breaking Enterprise AI Breakthroughs",
+    description: "8 production‑ready patterns: rollback, scorecards, consentless analytics, and more.",
+    link: "/blog/ai-2025-sept-30-breaking-enterprise-ai-breakthroughs",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-2025-sept-30-zero-pii-experiments-v2",
+    title: "Edge 2025: Zero‑PII Experiments v2 (<100ms)",
+    description: "Scoped IDs, on‑device metrics, and DP noise enabling compliant A/B worldwide.",
+    link: "/blog/edge-2025-sept-30-zero-pii-experiments-v2",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "genai-2025-sept-30-policy-tests-quickstart",
+    title: "GenAI 2025: Policy Tests Quickstart",
+    description: "Lightweight CI policy tests wired to KPIs to ship faster without regressions.",
+    link: "/blog/genai-2025-sept-30-policy-tests-quickstart",
+    type: "article",
+    featured: true
+  }
+);
+
 // Sept 30, 2025 – Advertise brand-new guides site-wide
 featuredBlogPosts.unshift(
   {

@@ -30,6 +30,34 @@ export const posts: BlogPost[] = [
     readTime: "8 min read"
   },
   {
+    slug: "edge-2025-sept-30-zero-pii-experiments-v2",
+    title: "Edge 2025: Zero‑PII Experiments v2 (<100ms)",
+    description: "Scoped IDs, on‑device metrics, and DP noise enabling compliant A/B worldwide.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    // NEW — GenAI Cost Tiers v3 (featured)
+    slug: "genai-2027-cost-tiers-v3",
+    title: "GenAI 2027: Cost Tiers v3 — 40–70% Savings, Stable UX",
+    description: "Quality tiers + semantic caches + policy tests for predictable spend without regressions.",
+    category: "FinOps",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "genai-2025-sept-30-policy-tests-quickstart",
+    title: "GenAI 2025: Policy Tests Quickstart",
+    description: "Lightweight CI policy tests wired to KPIs to ship faster without regressions.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
     // NEW — Runtime rollback blueprint (featured)
     slug: "ai-2026-runtime-rollback-blueprint",
     title: "AI 2026: Runtime Rollback Blueprint",
