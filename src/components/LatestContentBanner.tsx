@@ -27,19 +27,19 @@ const LatestContentBanner: React.FC<LatestContentBannerProps> = ({
             <Sparkles className="w-6 h-6 animate-pulse" />
             <div>
               <h3 className="font-bold text-lg">
-                🔥 New: Production RAG · Serverless Inference Costs · Golden Paths ROI
+                🔥 New: Runtime Policy Tests v2 · Edge Private Personalization v4 · GenAI Semantic Caches
               </h3>
               <p className="text-sm opacity-90">
-                Read Production RAG Quality Budgets, Serverless Inference Cost Playbook, and Golden Paths ROI
+                Ship faster with KPI‑linked budgets, instant rollback, and enterprise‑scale autonomy
               </p>
             </div>
           </div>
           <Link
-            to="/blog/production-rag-quality-budgets-2026"
+            to="/blog"
             className="bg-white text-gray-900 px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-all flex items-center gap-2 flex-shrink-0"
           >
             <TrendingUp className="w-4 h-4" />
-            Read Now
+            Explore Now
           </Link>
         </div>
       </div>
