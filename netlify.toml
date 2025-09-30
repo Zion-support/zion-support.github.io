@@ -1,6 +1,6 @@
 [build]
-  # Publish prebuilt dist without running a build
-  command = "echo 'Skipping build - deploying prebuilt dist'"
+  # Deploy pre-built dist directory
+  command = "echo 'Deploying pre-built application from dist directory'"
   publish = "dist"
   command_timeout = "30m"
 
@@ -11,6 +11,23 @@
   PUPPETEER_SKIP_DOWNLOAD = "1"
   CYPRESS_INSTALL_BINARY = "0"
   ELECTRON_SKIP_DOWNLOAD = "1"
+
+# Disable Next.js plugin auto-detection since we're using Vite
+[build.processing]
+  skip_processing = false
+
+[build.processing.css]
+  bundle = true
+  minify = true
+
+[build.processing.js]
+  bundle = true
+  minify = true
+
+[build.processing.html]
+  pretty_urls = true
+
+# No plugins - using static site deployment
 
 
 
