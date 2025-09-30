@@ -495,6 +495,30 @@ contentItems.unshift(
   }
 );
 
+// Promote brand-new 2027 content at the very top
+contentItems.unshift(
+  {
+    id: 'genai-reliability-scorecards-2027',
+    title: 'GenAI Reliability Scorecards 2027: KPIs, Budgets, Rollback',
+    excerpt: 'Live KPIs + budgeted actions + rollback to keep GenAI reliable and affordable.',
+    readTime: '8 min read',
+    category: 'AI Governance',
+    href: '/blog/genai-reliability-scorecards-2027',
+    featured: true,
+    publishedDate: '2027-01-20'
+  },
+  {
+    id: 'edge-private-analytics-2027',
+    title: 'Edge Private Analytics 2027: Zero‑PII Insights at <100ms',
+    excerpt: 'Scoped IDs, on‑device aggregation, and DP noise for actionable analytics without PII.',
+    readTime: '7 min read',
+    category: 'Analytics',
+    href: '/blog/edge-private-analytics-2027',
+    featured: true,
+    publishedDate: '2027-01-22'
+  }
+);
+
 interface ContentShowcaseProps {
   title?: string;
   subtitle?: string;
