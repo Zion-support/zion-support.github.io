@@ -19,6 +19,8 @@ import {
   FinTechSuccessBanner,
   NewContentShowcaseBanner
 } from '../components/PromotionalBanner';
+import AI2026RevolutionaryBanner from '../components/AI2026RevolutionaryBanner';
+import AI2026SuccessStoryBanner from '../components/AI2026SuccessStoryBanner';
 import {
   AIEnterpriseAdoptionBanner,
   AITrends2025Banner,
@@ -42,6 +44,10 @@ export const metadata = {
 export default function HomePage() {
   return (
     <div className="animate-fade-in">
+      {/* AI 2026 Revolutionary Banners */}
+      <AI2026RevolutionaryBanner />
+      <AI2026SuccessStoryBanner />
+      
       {/* New Content Promotional Banners */}
       <AIEnterpriseAdoptionBanner />
       <AITrends2025Banner />
