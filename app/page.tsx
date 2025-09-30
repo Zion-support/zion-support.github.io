@@ -1,5 +1,46 @@
 import React from 'react';
-import Link from 'next/link';
+import { 
+  NewBlogBanner, 
+  AnalyticsPlatformBanner, 
+  TechCorpSuccessBanner,
+  WorkflowAutomationBanner,
+  AIAnalyticsBanner,
+  HealthTechSuccessBanner,
+  ComprehensiveAIBanner,
+  EnterpriseAIBanner,
+  NewContentBanner,
+  CustomerServiceAIBanner,
+  HealthcareAIBanner,
+  RetailSuccessBanner,
+  AIContentShowcaseBanner,
+  AIRevolutionBanner,
+  AutonomousAgentsBanner,
+  AIGovernanceBanner,
+  FinTechSuccessBanner,
+  NewContentShowcaseBanner
+} from '../components/PromotionalBanner';
+import {
+  AIEnterpriseAdoptionBanner,
+  AITrends2025Banner,
+  SupplyChainOptimizationBanner,
+  AIBusinessTransformationBanner,
+  AICustomerExperienceBanner,
+  EnterpriseAITransformationBanner,
+  LatestAIInsightsBanner,
+  AIServicesShowcaseBanner,
+  AIWorkflowAutomationBanner,
+  EnterpriseAISecurityBanner
+} from '../components/NewContentPromotionalBanners';
+import ContentShowcase from '../components/ContentShowcase';
+import NewContent2026MegaBanner from '../components/NewContent2026MegaBanner';
+import AIRevolutionary2026Banner from '../components/AIRevolutionary2026Banner';
+import InteractiveAICalculator2026 from '../components/InteractiveAICalculator2026';
+import Revolutionary2027ContentBanner from '../components/Revolutionary2027ContentBanner';
+import AI2027MegaSuccessBanner from '../components/AI2027MegaSuccessBanner';
+import QuantumAIRevolutionBanner from '../components/QuantumAIRevolutionBanner';
+import InteractiveAI2027Calculator from '../components/InteractiveAI2027Calculator';
+import InteractiveAICalculator2026 from '../components/InteractiveAICalculator2026';
+import NewContent2026ShowcaseBanner from '../components/NewContent2026ShowcaseBanner';
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
@@ -55,24 +96,111 @@ export default function HomePage() {
               Zion Tech Group delivers cutting-edge AI micro SaaS services, cloud automation, 
               and enterprise IT solutions that drive growth, efficiency, and innovation.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link
-                href="/services"
-                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
-              >
-                Explore Our Services
-              </Link>
-              <a
-                href="tel:+13024640950"
-                className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors"
-              >
-                Call +1 302 464 0950
-              </a>
-            </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-              <div>
-                <div className="text-3xl font-bold text-blue-600">500+</div>
-                <div className="text-gray-600">Projects Delivered</div>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <FeaturedServiceCard
+              title="AI Data Analytics"
+              description="Transform data into actionable insights with predictive modeling and real-time dashboards"
+              price="$199/month"
+              features={['Predictive Analytics', 'Real-time Dashboards', 'Data Integration']}
+              to="/services/ai-data-analytics"
+              popular={true}
+            />
+            <FeaturedServiceCard
+              title="AI Workflow Automation"
+              description="Automate business processes with intelligent workflow design and smart triggers"
+              price="$149/month"
+              features={['Process Automation', 'Smart Triggers', 'Performance Monitoring']}
+              to="/services/ai-workflow-automation"
+              popular={false}
+            />
+            <FeaturedServiceCard
+              title="AI Virtual Assistant"
+              description="24/7 intelligent customer support with natural language processing"
+              price="$99/month"
+              features={['24/7 Support', 'Multi-channel', 'Personalized Responses']}
+              to="/services/ai-virtual-assistant"
+              popular={false}
+            />
+            <FeaturedServiceCard
+              title="Cloud Migration"
+              description="Seamless migration to cloud infrastructure with zero downtime"
+              price="$2,999"
+              features={['Zero Downtime', 'Security Compliance', 'Cost Optimization']}
+              to="/services/cloud-migration"
+              popular={false}
+            />
+            <FeaturedServiceCard
+              title="DevOps Automation"
+              description="Automate CI/CD pipelines and infrastructure management"
+              price="$399/month"
+              features={['CI/CD Pipelines', 'Infrastructure as Code', 'Auto-scaling']}
+              to="/services/devops-automation"
+              popular={false}
+            />
+            <FeaturedServiceCard
+              title="Cybersecurity Consulting"
+              description="Advanced threat detection and zero-trust security architecture"
+              price="$599/month"
+              features={['Threat Detection', 'Zero-trust Architecture', 'Compliance']}
+              to="/services/cybersecurity-consulting"
+              popular={false}
+            />
+            <FeaturedServiceCard
+              title="AI Edge Computing"
+              description="Real-time AI processing at the edge with sub-50ms response times"
+              price="$799/month"
+              features={['Sub-50ms Latency', 'Edge Intelligence', 'Offline Capability']}
+              to="/services/ai-edge-computing"
+              popular={false}
+            />
+            <FeaturedServiceCard
+              title="AI Finance Automation"
+              description="Automate financial processes with 95% accuracy and $3M+ savings"
+              price="$1,299/month"
+              features={['95% Automation', 'Fraud Detection', 'Real-time Reporting']}
+              to="/services/ai-finance-automation"
+              popular={false}
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* New Content Showcase Banner */}
+      <NewContent2026ShowcaseBanner />
+
+      {/* Interactive AI 2027 Calculator */}
+      <InteractiveAI2027Calculator />
+
+      {/* Interactive AI 2026 Calculator */}
+      <InteractiveAICalculator2026 />
+
+      {/* Dynamic Content Showcase */}
+      <ContentShowcase />
+
+      {/* Latest Innovations Section */}
+      <section className="py-20 bg-gradient-to-br from-indigo-50 via-white to-purple-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              Latest AI Innovations & Breakthroughs
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Stay ahead with cutting-edge AI technologies and revolutionary solutions that are transforming industries
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-200">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center">
+                  <span className="text-2xl">⚡</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900">Edge Computing AI</h3>
+                  <p className="text-sm text-gray-500">Real-time intelligence</p>
+                </div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-blue-600">99.9%</div>
