@@ -743,7 +743,7 @@ export default function HomePage() {
           </div>
         </section>
         {/* Featured Services */}
-      <section className="py-20 bg-white">
+        <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
@@ -1747,6 +1747,44 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+      {/* New: Promo for Sept 30, 2025 trio */}
+      <section className="py-16 bg-gradient-to-r from-cyan-50 to-blue-50">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-10">
+            <span className="inline-block bg-cyan-200 text-cyan-900 px-3 py-1 rounded-full text-xs font-bold mr-2">NEW</span>
+            <span className="text-sm font-semibold text-cyan-700">Sept 30, 2025</span>
+            <h2 className="text-3xl md:text-4xl font-bold mt-3">Fresh: Real-Time AI, Agent Mesh, Cost Controllers</h2>
+            <p className="text-gray-600 mt-2">Three new guides now available</p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            <Link href="/blog/real-time-decision-engines-2027" className="group">
+              <div className="bg-white rounded-xl p-6 border border-cyan-200 hover:border-cyan-400 transition-colors shadow-sm">
+                <div className="text-xs font-bold uppercase tracking-wide text-cyan-700 mb-2">Real-Time AI</div>
+                <h3 className="text-lg font-bold text-gray-900 group-hover:text-cyan-700">Real-Time Decision Engines 2027</h3>
+                <p className="text-gray-600 text-sm mt-2">10M decisions/sec under &lt;1ms with explainability and rollback.</p>
+              </div>
+            </Link>
+            <Link href="/blog/agent-mesh-governance-2027" className="group">
+              <div className="bg-white rounded-xl p-6 border border-indigo-200 hover:border-indigo-400 transition-colors shadow-sm">
+                <div className="text-xs font-bold uppercase tracking-wide text-indigo-700 mb-2">AI Operations</div>
+                <h3 className="text-lg font-bold text-gray-900 group-hover:text-indigo-700">Agent Mesh Governance 2027</h3>
+                <p className="text-gray-600 text-sm mt-2">Policies, budgets, and canaries for reliable agent swarms.</p>
+              </div>
+            </Link>
+            <Link href="/blog/enterprise-ai-cost-controllers-2027" className="group">
+              <div className="bg-white rounded-xl p-6 border border-emerald-200 hover:border-emerald-400 transition-colors shadow-sm">
+                <div className="text-xs font-bold uppercase tracking-wide text-emerald-700 mb-2">AI Engineering</div>
+                <h3 className="text-lg font-bold text-gray-900 group-hover:text-emerald-700">Enterprise AI Cost Controllers 2027</h3>
+                <p className="text-gray-600 text-sm mt-2">Tiered quality and semantic caches for 40–70% cost reduction.</p>
+              </div>
+            </Link>
+          </div>
+          <div className="text-center mt-8">
+            <Link href="/blog" className="inline-block bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-cyan-700">Explore All Insights →</Link>
+          </div>
+        </div>
+      </section>
 
         {/* Featured Content from Main */}
         <section className="py-20 bg-white">

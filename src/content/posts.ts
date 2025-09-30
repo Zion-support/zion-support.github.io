@@ -1228,6 +1228,37 @@ posts.push(
   }
 );
 
+// New: Sept 30, 2025 – Fresh trio to advertise on homepage
+posts.push(
+  {
+    slug: "real-time-decision-engines-2027",
+    title: "Real-Time Decision Engines 2027: 10M Decisions/sec under <1ms",
+    description: "Architect decision systems that process millions of events per second with explainability, audit trails, and rollback triggers.",
+    category: "Real-Time AI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "10 min read"
+  },
+  {
+    slug: "agent-mesh-governance-2027",
+    title: "Agent Mesh Governance 2027: Policies, Budgets, and Live Canaries",
+    description: "Govern hundreds of collaborating agents with KPI-linked policies, budgeted actions, and production canaries.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "enterprise-ai-cost-controllers-2027",
+    title: "Enterprise AI Cost Controllers 2027: Predictable Spend, Stable UX",
+    description: "Tiered quality, semantic caches, and budget-aware routing that cut cost 40–70% without hurting experience.",
+    category: "AI Engineering",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  }
+);
+
 // Sept 30, 2025 – New promotional articles to surface on homepage
 posts.push(
   {

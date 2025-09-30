@@ -378,9 +378,6 @@ newArticles2025.push(
   }
 );
 
-  }
-);
-
 
 // Sept 30, 2025 – Combined brand-new items to advertise on homepage
 newArticles2025.push(
