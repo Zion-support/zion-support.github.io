@@ -192,14 +192,14 @@ const SuccessStoriesShowcase: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/case-studies"
+                href="/case-studies"
                 className="bg-white text-green-600 hover:bg-green-50 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2"
               >
                 View All Case Studies
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <Link
-                to="/contact"
+                href="/contact"
                 className="border border-white text-white hover:bg-white hover:text-green-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
               >
                 Start Your Project

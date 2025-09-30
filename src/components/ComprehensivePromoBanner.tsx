@@ -202,7 +202,7 @@ export default function ComprehensivePromoBanner({
         {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row gap-3 justify-center mb-4">
           <Link
-            to="/services"
+            href="/services"
             className={`${styles.button} px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 transition-all duration-300 hover:scale-105`}
           >
             <Zap className="w-4 h-4" />
@@ -210,7 +210,7 @@ export default function ComprehensivePromoBanner({
             <ArrowRight className="w-4 h-4" />
           </Link>
           <Link
-            to="/blog"
+            href="/blog"
             className={`${styles.button} px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 transition-all duration-300 hover:scale-105`}
           >
             <Award className="w-4 h-4" />
@@ -218,7 +218,7 @@ export default function ComprehensivePromoBanner({
             <ArrowRight className="w-4 h-4" />
           </Link>
           <Link
-            to="/contact"
+            href="/contact"
             className={`${styles.buttonSecondary} border px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105`}
           >
             Get Free Consultation
@@ -237,7 +237,7 @@ export default function ComprehensivePromoBanner({
             </p>
             <div className="flex flex-col sm:flex-row gap-2 justify-center">
               <Link
-                to="/contact"
+                href="/contact"
                 className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-3 rounded-lg font-bold text-sm inline-flex items-center gap-2 transition-all duration-300 hover:scale-105"
               >
                 <Star className="w-4 h-4" />

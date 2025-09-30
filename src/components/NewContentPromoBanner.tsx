@@ -174,7 +174,7 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
             {/* Action buttons */}
             <div className="flex flex-wrap gap-3">
               <Link
-                to="/blog"
+                href="/blog"
                 className="bg-white text-purple-600 hover:bg-white/90 px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
               >
                 <BookOpen className="w-4 h-4" />
@@ -183,7 +183,7 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
               </Link>
               
               <Link
-                to="/case-studies"
+                href="/case-studies"
                 className="border border-white/30 text-white hover:bg-white/10 px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
               >
                 <TrendingUp className="w-4 h-4" />
@@ -191,7 +191,7 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
               </Link>
 
               <Link
-                to="/services"
+                href="/services"
                 className="border border-white/30 text-white hover:bg-white/10 px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
               >
                 <Shield className="w-4 h-4" />

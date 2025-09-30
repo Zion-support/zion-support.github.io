@@ -167,7 +167,7 @@ export default function NewServicesPromoBanner({
         {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <Link
-            to="/services"
+            href="/services"
             className={`${styles.button} px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 transition-all duration-300 hover:scale-105`}
           >
             <Zap className="w-4 h-4" />
@@ -175,7 +175,7 @@ export default function NewServicesPromoBanner({
             <ArrowRight className="w-4 h-4" />
           </Link>
           <Link
-            to="/contact"
+            href="/contact"
             className={`${styles.buttonSecondary} border px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105`}
           >
             Get Free Consultation
