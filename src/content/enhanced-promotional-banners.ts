@@ -450,3 +450,43 @@ enhancedPromotionalBanners.push({
   priority: 1,
   startDate: '2025-10-01'
 });
+
+// Sept 30, 2025 – Brand new promotional banners (priority 0 to surface on Home)
+enhancedPromotionalBanners.push({
+  id: 'sept30-2025-ai-traceability-scorecards',
+  title: '📊 New: AI Traceability Scorecards — Ship Fast, Stay Auditable',
+  description: 'Signed SBOMs, lineage, and KPI‑linked guardrails that teams adopt.',
+  ctaText: 'Read the guide',
+  ctaLink: '/blog/ai-traceability-scorecards-2026',
+  variant: 'success',
+  icon: '📊',
+  featured: true,
+  priority: 0,
+  startDate: '2025-09-30'
+});
+
+enhancedPromotionalBanners.push({
+  id: 'sept30-2025-edge-consent-mode-v3',
+  title: '🔐 Edge Consent Mode v3 — Zero‑PII Insights at <100ms',
+  description: 'Scoped IDs, on‑device aggregation, DP noise. Compliance without killing signals.',
+  ctaText: 'Explore Consent Mode v3',
+  ctaLink: '/blog/edge-consent-mode-v3-2026',
+  variant: 'info',
+  icon: '🔐',
+  featured: true,
+  priority: 0,
+  startDate: '2025-09-30'
+});
+
+enhancedPromotionalBanners.push({
+  id: 'sept30-2025-genai-ci-guardrails',
+  title: '🛡️ GenAI CI Guardrails — Policy Checks That Don’t Slow Teams',
+  description: 'Lightweight PR checks, KPI canaries, and instant rollback keep releases safe.',
+  ctaText: 'See CI Guardrails',
+  ctaLink: '/blog/genai-ci-guardrails-2026',
+  variant: 'success',
+  icon: '🛡️',
+  featured: true,
+  priority: 0,
+  startDate: '2025-09-30'
+});

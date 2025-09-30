@@ -1017,6 +1017,34 @@ featuredBlogPosts.unshift(
   }
 );
 
+// Sept 30, 2025 – Add three brand-new featured posts (to advertise on Home)
+featuredBlogPosts.unshift(
+  {
+    id: "ai-traceability-scorecards-2026",
+    title: "AI Traceability Scorecards 2026",
+    description: "Signed SBOMs, lineage, KPI‑linked guardrails engineers actually adopt",
+    link: "/blog/ai-traceability-scorecards-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-consent-mode-v3-2026",
+    title: "Edge Consent Mode v3 (2026)",
+    description: "Scoped IDs, on‑device aggregation, DP noise for zero‑PII insights",
+    link: "/blog/edge-consent-mode-v3-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "genai-ci-guardrails-2026",
+    title: "GenAI CI Guardrails 2026",
+    description: "Lightweight PR policy checks, KPI canaries, instant rollback",
+    link: "/blog/genai-ci-guardrails-2026",
+    type: "article",
+    featured: true
+  }
+);
+
 // Add brand-new featured items to advertise site-wide (Feb 2027 / Oct 2026)
 featuredBlogPosts.unshift(
   {
