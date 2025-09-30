@@ -8,6 +8,76 @@ export const metadata = {
 
 const blogPosts = [
   {
+<<<<<<< HEAD
+    title: 'Autonomous Infrastructure 2025: Self‑Healing, Self‑Optimizing, Self‑Scaling',
+    slug: 'ai-2025-autonomous-infrastructure-blueprint',
+    excerpt: 'Blueprint for KPI‑linked, policy‑guarded autonomous infrastructure with predictable reliability and cost.',
+    category: 'Platform',
+    publishedAt: 'September 30, 2025',
+    image: '🧱',
+    color: 'blue',
+    readTime: '16 min read'
+  },
+  {
+    title: 'Edge Private Feature Flags (2026): Zero‑PII, Sub‑100ms, Signed Configs',
+    slug: 'edge-2026-private-feature-flags',
+    excerpt: 'Privacy‑safe flags and experiments at the edge with scoped IDs and DP noise.',
+    category: 'Analytics',
+    publishedAt: 'September 30, 2025',
+    image: '🚩',
+    color: 'cyan',
+    readTime: '10 min read'
+  },
+  {
+    title: 'Governed Agent Marketplaces (2027): Budgets, Attestations, Rollback',
+    slug: 'ai-2027-governed-agent-marketplaces',
+    excerpt: 'Design safe third‑party agent ecosystems with budget guards and policy attestations.',
+    category: 'Governance',
+    publishedAt: 'October 1, 2025',
+    image: '🏛️',
+    color: 'emerald',
+    readTime: '13 min read'
+  },
+  {
+    title: 'Autonomous FinOps 2025: Cut AI Spend 50–85% Safely',
+    slug: 'ai-2025-autonomous-finops-blueprint',
+    excerpt: 'Tiered routing, semantic caches, and budgeted rollbacks for reliable, low-cost AI at scale.',
+    category: 'FinOps',
+    publishedAt: 'September 30, 2025',
+    image: '💸',
+    color: 'emerald',
+    readTime: '14 min read'
+  },
+  {
+    title: 'AI Safety Scorecards 2026: SLIs, Budgets, Rollback',
+    slug: 'ai-safety-scorecards-2026',
+    excerpt: 'Wire SLIs to KPIs with budgeted actions, approvals, and instant rollback to ship reliable autonomy.',
+    category: 'AI Governance',
+    publishedAt: 'September 30, 2025',
+    image: '🛡️',
+    color: 'emerald',
+    readTime: '9 min read'
+  },
+  {
+    title: 'Edge‑Governed Flags 2026: Safe Global Experiments',
+    slug: 'edge-governed-flags-2026',
+    excerpt: 'Scoped IDs, regional policy, and DP noise for compliant, sub‑100ms flags and experiments.',
+    category: 'Analytics',
+    publishedAt: 'September 30, 2025',
+    image: '🚩',
+    color: 'blue',
+    readTime: '8 min read'
+  },
+  {
+    title: 'GenAI Cache Playbook 2026: Cut Cost, Keep Quality',
+    slug: 'genai-cache-playbook-2026',
+    excerpt: 'Response + embedding cache, tiered TTL, and cost‑aware routing for 30–70% savings.',
+    category: 'FinOps',
+    publishedAt: 'September 30, 2025',
+    image: '🧠',
+    color: 'green',
+    readTime: '11 min read'
+=======
     title: 'AI 2026: Breakthrough Innovations Reshaping Enterprise Technology',
     slug: 'ai-2026-breakthrough-innovations',
     excerpt: 'Discover the revolutionary AI innovations that are transforming enterprise operations in 2026. From autonomous agent factories to quantum neural networks, explore the cutting-edge technologies driving business transformation.',
@@ -26,6 +96,7 @@ const blogPosts = [
     image: '🛡️',
     color: 'indigo',
     readTime: '18 min read'
+>>>>>>> origin/cursor/create-and-deploy-new-content-eaf5
   },
   {
     title: 'AI 2027: Edge‑Native Agents — Real‑Time, Reliable, Low‑Latency',
