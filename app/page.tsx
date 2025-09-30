@@ -1,6 +1,7 @@
 import React from 'react';
 import UnifiedContentPromotion from '../components/UnifiedContentPromotion';
 import AI2026RevolutionaryAutonomousEnterpriseBanner from '../components/AI2026RevolutionaryAutonomousEnterpriseBanner';
+import ContentShowcase from '../../components/ContentShowcase';
 
 export default function HomePage() {
   return (
@@ -18,6 +19,8 @@ export default function HomePage() {
       {/* Additional Content Banners (temporarily disabled if not present) */}
       
       <UnifiedContentPromotion />
+
+      <ContentShowcase />
     </main>
   );
 }
