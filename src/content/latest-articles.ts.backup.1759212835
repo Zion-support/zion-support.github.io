@@ -17,6 +17,20 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
+<<<<<<< HEAD
+    id: "ai-autonomous-threat-response-2025",
+    slug: "ai-autonomous-threat-response-2025",
+    title: "AI Autonomous Threat Response 2025: Zero-Touch Security Operations",
+    description: "Deploy AI-powered autonomous threat response systems achieving sub-30s incident containment with 99.8% accuracy. Master zero-touch security operations, automated playbooks, and intelligent threat mitigation.",
+    excerpt: "Modern cyber threats move too fast for human-only response. AI autonomous systems achieve sub-30 second containment with 99.8% accuracy, reducing MTTR by 95%.",
+    author: "Zion Tech Group Security Team",
+    date: "2025-09-30",
+    category: "Cybersecurity",
+    tags: ["AI Security", "Autonomous Response", "Threat Detection", "SOC Automation"],
+    featured: true,
+    readTime: "14 min read",
+    image: "/images/ai-autonomous-threat-response-2025.jpg",
+=======
     id: "ai-composite-agents-2026",
     slug: "ai-composite-agents-2026",
     title: "AI Composite Agents 2026: Multi-Model Intelligence Orchestration",
@@ -29,10 +43,25 @@ export const latestArticles: LatestArticle[] = [
     featured: true,
     readTime: "14 min read",
     image: "/images/ai-composite-agents-2026.jpg",
+>>>>>>> origin/cursor/create-and-deploy-new-content-9bae
     newBadge: true,
     trending: true
   },
   {
+<<<<<<< HEAD
+    id: "ai-prompt-engineering-mastery-2025",
+    slug: "ai-prompt-engineering-mastery-2025",
+    title: "Prompt Engineering Mastery 2025: Advanced Techniques for Production LLMs",
+    description: "Master advanced prompt engineering techniques achieving 95%+ accuracy in production LLM applications. Learn few-shot learning, chain-of-thought prompting, RAG, and prompt optimization at scale.",
+    excerpt: "Expert prompt engineering achieves 95%+ accuracy while reducing costs by 70%. Master production patterns for few-shot, CoT, RAG, and systematic optimization.",
+    author: "Zion Tech Group AI Team",
+    date: "2025-09-30",
+    category: "LLM Engineering",
+    tags: ["Prompt Engineering", "LLMs", "Few-Shot Learning", "Chain-of-Thought"],
+    featured: true,
+    readTime: "16 min read",
+    image: "/images/prompt-engineering-mastery-2025.jpg",
+=======
     id: "cognitive-load-optimization-ai-2026",
     slug: "cognitive-load-optimization-ai-2026",
     title: "Cognitive Load Optimization AI 2026: Reducing Human Decision Fatigue",
@@ -45,10 +74,25 @@ export const latestArticles: LatestArticle[] = [
     featured: true,
     readTime: "12 min read",
     image: "/images/cognitive-load-optimization-ai-2026.jpg",
+>>>>>>> origin/cursor/create-and-deploy-new-content-9bae
     newBadge: true,
     trending: true
   },
   {
+<<<<<<< HEAD
+    id: "ai-synthetic-data-generation-2025",
+    slug: "ai-synthetic-data-generation-2025",
+    title: "AI Synthetic Data Generation 2025: Privacy-Preserving Training at Scale",
+    description: "Generate high-quality synthetic training data achieving 98% statistical parity with real data while maintaining perfect privacy. Master GANs, diffusion models, and privacy-preserving synthesis.",
+    excerpt: "Solve data scarcity and privacy challenges with synthetic data achieving 98% statistical parity. Generate unlimited training data with perfect privacy guarantees.",
+    author: "Zion Tech Group Data Science Team",
+    date: "2025-09-30",
+    category: "Data Science",
+    tags: ["Synthetic Data", "Privacy-Preserving AI", "GANs", "Differential Privacy"],
+    featured: true,
+    readTime: "15 min read",
+    image: "/images/synthetic-data-generation-2025.jpg",
+=======
     id: "ai-contract-intelligence-2026",
     slug: "ai-contract-intelligence-2026",
     title: "AI Contract Intelligence 2026: Automated Legal Analysis at Scale",
@@ -93,6 +137,7 @@ export const latestArticles: LatestArticle[] = [
     featured: true,
     readTime: "14 min read",
     image: "/images/real-time-personalization-edge-2026.jpg",
+>>>>>>> origin/cursor/create-and-deploy-new-content-9bae
     newBadge: true,
     trending: true
   },
