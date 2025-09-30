@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-export default function AIOrchestratio nPlatforms2026() {
+export default function AIOrchestrationPlatforms2026() {
   return (
     <article className="min-h-screen bg-white py-12">
       <div className="max-w-4xl mx-auto px-6">
