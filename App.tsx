@@ -79,6 +79,8 @@ import AutonomousEnterpriseAutomationAdvertisingBanner from "./components/Autono
 import February2026NewContentBreakthroughBanner from "./components/February2026NewContentBreakthroughBanner";
 import January2027AutonomousCognitiveEnterpriseBanner from "./components/January2027AutonomousCognitiveEnterpriseBanner";
 import NewContent2027AdvertisingBanner from "./components/NewContent2027AdvertisingBanner";
+import January2026NeuroSyntheticIntelligenceBanner from "./components/January2026NeuroSyntheticIntelligenceBanner";
+import January2026AdaptiveConsciousnessBanner from "./components/January2026AdaptiveConsciousnessBanner";
 
 export default function App(): JSX.Element {
   return (
@@ -112,6 +114,12 @@ export default function App(): JSX.Element {
       
       {/* ⭐ LATEST: July 2026 Content Showcase Banner - HIGHLY FEATURED ⭐ */}
       <July2026ContentShowcaseBanner />
+      
+      {/* 🧠🚀 BREAKING: January 2026 Neuro-Synthetic Intelligence - HIGHEST PRIORITY 🚀🧠 */}
+      <January2026NeuroSyntheticIntelligenceBanner />
+      
+      {/* 🔄🚀 BREAKING: January 2026 Adaptive Consciousness Systems - MOST PROMINENT 🚀🔄 */}
+      <January2026AdaptiveConsciousnessBanner />
       
       {/* NEW: January 2027 Autonomous Cognitive Enterprise Banner - MOST PROMINENT */}
       <January2027AutonomousCognitiveEnterpriseBanner />
