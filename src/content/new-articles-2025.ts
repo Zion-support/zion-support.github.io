@@ -597,3 +597,40 @@ newArticles2025.push(
   }
 );
 
+// Sept 30, 2025 – More fresh featured content to surface across the front end
+newArticles2025.push(
+  {
+    id: "ai-2028-autonomous-governance-blueprint",
+    title: "AI 2028: Autonomous Governance Blueprint",
+    description: "KPI‑linked policy tests, live canaries, and instant rollback that scale governance without slowing teams.",
+    category: "AI Governance",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-2028-autonomous-governance-blueprint",
+    readTime: "10 min read",
+    tags: ["Governance", "Policy Tests", "Canaries", "Rollback"]
+  },
+  {
+    id: "ai-2027-operational-scorecards",
+    title: "AI 2027: Operational Scorecards — Guardrails Engineers Adopt",
+    description: "SLIs wired to KPIs with budgeted actions and rollback to prevent regressions while increasing velocity.",
+    category: "AI Operations",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-2027-operational-scorecards",
+    readTime: "8 min read",
+    tags: ["Scorecards", "Budgets", "SLIs", "Rollback"]
+  },
+  {
+    id: "verifiable-edge-analytics-2026",
+    title: "Verifiable Edge Analytics 2026: Zero‑PII Insights with Attestations",
+    description: "Scoped IDs, on‑device aggregation, DP noise, and signed attestations for trustworthy insights under 100ms.",
+    category: "Analytics",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/verifiable-edge-analytics-2026",
+    readTime: "7 min read",
+    tags: ["Edge", "Analytics", "Privacy", "Attestations"]
+  }
+);
+
