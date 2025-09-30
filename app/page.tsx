@@ -50,6 +50,7 @@ import {
   AITransformationShowcaseBanner
 } from '../components/NewContent2025Banners';
 import InteractiveAIROICalculator from '../components/InteractiveAIROICalculator';
+import InteractiveAIROICalculator2026 from '../components/InteractiveAIROICalculator2026';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
@@ -57,6 +58,8 @@ import InteractivePromotionalSection from '../components/InteractivePromotionalS
 import LatestContent2026ShowcaseBanner from '../components/LatestContent2026ShowcaseBanner';
 import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
 import InteractiveContentShowcase2026 from '../components/InteractiveContentShowcase2026';
+import NewContent2026PromotionalBanner from '../components/NewContent2026PromotionalBanner';
+import LatestAITrends2026Banner from '../components/LatestAITrends2026Banner';
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
@@ -138,16 +141,14 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <div className="animate-fade-in">
-<<<<<<< HEAD
-      {/* New 2025 Content Banners */}
-      <AITrends2025PromotionalBanner />
-      <Fortune500SuccessBanner />
-      <InteractiveROICalculatorBanner />
-      <AITransformationShowcaseBanner />
-=======
+      {/* Latest AI Trends 2026 Banner */}
+      <LatestAITrends2026Banner />
+      
+      {/* New Content 2026 Promotional Banner */}
+      <NewContent2026PromotionalBanner />
+      
       {/* Revolutionary Content 2026 Banner */}
       <RevolutionaryContent2026Banner />
->>>>>>> 3ee1431f4b3ff64239e74586b537363f0fc67c86
       
       {/* Latest 2026 Content Banners */}
       <AIEnterpriseTransformationBanner />
@@ -330,7 +331,7 @@ export default function HomePage() {
               See how much you could save and achieve with enterprise AI solutions.
             </p>
           </div>
-          <InteractiveAIROICalculator />
+          <InteractiveAIROICalculator2026 />
         </div>
       </section>
       {/* Interactive Promotional Section */}
