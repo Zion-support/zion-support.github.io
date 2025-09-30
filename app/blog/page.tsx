@@ -7,6 +7,16 @@ export const metadata = {
 
 const blogPosts = [
   {
+    title: 'AI 2027 Hyper‑Automation Blueprint',
+    slug: 'ai-2027-hyper-automation-blueprint',
+    excerpt: 'Scale reliable hyper‑automation with policy gates, evals, and value stream analytics.',
+    category: 'Implementation Guide',
+    publishedAt: 'October 1, 2025',
+    image: '🧩',
+    color: 'emerald',
+    readTime: '14 min read'
+  },
+  {
     title: 'AI 2027: Quantum Computing Breakthrough Revolutionizing Enterprise Operations',
     slug: 'ai-2027-quantum-breakthrough',
     excerpt: 'Discover how quantum computing breakthroughs in 2027 are revolutionizing enterprise AI operations, delivering unprecedented computational power and optimization capabilities.',
