@@ -17,6 +17,9 @@ interface ContentItem {
 }
 
 const featuredContent: ContentItem[] = [
+  {
+    title: 'AI Agent Observability 2026',
+    href: '/blog/ai-agent-observability-2026',
     publishedDate: 'September 30, 2025',
     readTime: '6 min read',
     category: 'Observability'

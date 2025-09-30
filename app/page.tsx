@@ -22,7 +22,6 @@ import AI2029MetaCognitiveSuperintelligenceBanner from '../components/AI2029Meta
 import UltimateContentShowcase2030 from '../components/UltimateContentShowcase2030';
 import NeuralOptimizationRevolutionBanner from '../components/NeuralOptimizationRevolutionBanner';
 import AutonomousBusinessProcessBanner from '../components/AutonomousBusinessProcessBanner';
-import NewContentShowcaseBanner from '../components/NewContentShowcaseBanner';
 import ContentShowcase from '../components/ContentShowcase';
 import QuantumTransformationBanner from '../components/QuantumTransformationBanner';
 import NeuralArchitectureSearchBanner from '../components/NeuralArchitectureSearchBanner';
@@ -174,7 +173,6 @@ export default function HomePage() {
       <January2026NewServicesBanner />
 
       {/* New Content Advertising Banner - promotes Trustless Evaluation Blueprint (2026) */}
-      <NewContentShowcaseBanner />
       
       {/* Legacy Content Banners */}
       <UnifiedContentPromotion />
