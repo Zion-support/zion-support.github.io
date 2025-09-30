@@ -51,6 +51,9 @@ import May2026RevolutionaryBreakthroughBanner from '../components/May2026Revolut
 import June2026UltimateBreakthroughBanner from '../components/June2026UltimateBreakthroughBanner';
 import Ultimate2026ContentShowcaseBanner from '../components/Ultimate2026ContentShowcaseBanner';
 import April2026MegaBreakthroughBanner from '../components/April2026MegaBreakthroughBanner';
+import UltimateAutonomousRevolutionBanner from '../components/UltimateAutonomousRevolutionBanner';
+import InteractiveROICalculator2026 from '../components/InteractiveROICalculator2026';
+import InteractiveContentDiscovery2026 from '../components/InteractiveContentDiscovery2026';
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -127,6 +130,9 @@ export default function HomePage() {
           </div>
         </div>
       </header>
+
+      {/* ULTIMATE AUTONOMOUS REVOLUTION 2026 - MOST PROMINENT */}
+      <UltimateAutonomousRevolutionBanner />
 
       {/* ULTRA-INTELLIGENT AUTONOMOUS SYSTEMS 2026 - MOST PROMINENT */}
       <UltraIntelligentAutonomousSystems2026Banner />
@@ -426,6 +432,12 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Interactive ROI Calculator */}
+      <InteractiveROICalculator2026 />
+
+      {/* Interactive Content Discovery */}
+      <InteractiveContentDiscovery2026 />
 
       {/* Unified Content Promotion */}
       <UnifiedContentPromotion />
