@@ -259,20 +259,20 @@ const Home = () => {
           <div className="rounded-xl border border-white/10 bg-white/5 p-6">
             <div className="text-white text-sm mb-4">Just added</div>
             <div className="grid md:grid-cols-3 gap-4">
+              <Link to="/blog/enterprise-rag-security-2027" className="block rounded-lg border border-white/10 p-4 hover:border-indigo-400/40 transition-colors">
+                <div className="text-indigo-300 text-xs mb-2">AI Security</div>
+                <div className="text-white font-semibold">Enterprise RAG Security 2027</div>
+                <div className="text-zion-slate-light text-sm mt-1">Auth‑aware retrieval, freshness windows, prompt firewalls, signed outputs.</div>
+              </Link>
+              <Link to="/blog/edge-consentless-personalization-2027" className="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
+                <div className="text-cyan-300 text-xs mb-2">Edge Computing</div>
+                <div className="text-white font-semibold">Edge Personalization 2027</div>
+                <div className="text-zion-slate-light text-sm mt-1">Zero‑PII, sub‑100ms journeys with scoped IDs and on‑device models.</div>
+              </Link>
               <Link to="/blog/real-time-decision-engines-2026" className="block rounded-lg border border-white/10 p-4 hover:border-blue-400/40 transition-colors">
                 <div className="text-blue-300 text-xs mb-2">Platform Engineering</div>
                 <div className="text-white font-semibold">Real‑Time Decision Engines 2026</div>
                 <div className="text-zion-slate-light text-sm mt-1">10M/sec under 1ms using warm pools, intent prefetching, and caches.</div>
-              </Link>
-              <Link to="/blog/federated-learning-enterprise-2026" className="block rounded-lg border border-white/10 p-4 hover:border-rose-400/40 transition-colors">
-                <div className="text-rose-300 text-xs mb-2">Machine Learning</div>
-                <div className="text-white font-semibold">Federated Learning 2026</div>
-                <div className="text-zion-slate-light text-sm mt-1">Train across regions with secure aggregation and DP noise—no centralization.</div>
-              </Link>
-              <Link to="/blog/cognitive-financial-modeling-2027" className="block rounded-lg border border-white/10 p-4 hover:border-emerald-400/40 transition-colors">
-                <div className="text-emerald-300 text-xs mb-2">FinTech AI</div>
-                <div className="text-white font-semibold">AI Financial Modeling 2027</div>
-                <div className="text-zion-slate-light text-sm mt-1">95%+ accuracy with KPI‑linked scorecards, evals, and rollback.</div>
               </Link>
             </div>
           </div>
