@@ -17,6 +17,39 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
+    id: "ai-2028-autonomous-risk-budgets",
+    slug: "ai-2028-autonomous-risk-budgets",
+    title: "AI 2028: Autonomous Risk Budgets — Faster, Safer Releases",
+    description: "Live KPI‑linked budgets that automate guardrails across environments with instant rollback.
+",
+    excerpt: "Design autonomous risk budgets that keep teams fast while containing incidents in seconds.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "AI Operations",
+    tags: ["Risk Budgets", "Automation", "Rollback"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/ai-2028-autonomous-risk-budgets.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "ai-2028-autonomous-enterprise-revolution",
+    slug: "ai-2028-autonomous-enterprise-revolution",
+    title: "AI 2028: Autonomous Enterprise Revolution",
+    description: "From pilots to production: self‑healing systems, budget‑aware routing, and verifiable outcomes.",
+    excerpt: "A field guide to scaling autonomy across the enterprise with measurable ROI and safety.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-01",
+    category: "AI Strategy",
+    tags: ["Autonomy", "Scaling", "Scorecards"],
+    featured: true,
+    readTime: "10 min read",
+    image: "/images/ai-2028-autonomous-enterprise.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "ai-2027-operational-risk-budgets",
     slug: "ai-2027-operational-risk-budgets",
     title: "AI 2027: Operational Risk Budgets — Ship Faster, Stay Safe",

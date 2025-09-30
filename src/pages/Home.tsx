@@ -149,14 +149,13 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="New: Runtime Rollback + Attested Edge Analytics + GenAI Economy Modes"
-          description="Ship faster with instant rollback, audit‑ready zero‑PII analytics, and 50% lower GenAI costs."
+          title="New: Autonomous Risk Budgets + Autonomous Enterprise Revolution"
+          description="KPI‑linked budgets, instant rollback, and enterprise‑scale autonomy with measurable ROI."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "AI 2026: Runtime Rollback Blueprint", category: "AI Operations", link: "/blog/ai-2026-runtime-rollback-blueprint" },
-            { title: "Edge 2026: Attested Analytics", category: "Analytics", link: "/blog/edge-2026-attested-analytics" },
-            { title: "GenAI 2027: Economy Modes", category: "FinOps", link: "/blog/genai-2027-economy-modes" },
+            { title: "AI 2028: Autonomous Risk Budgets", category: "AI Operations", link: "/blog/ai-2028-autonomous-risk-budgets" },
+            { title: "AI 2028: Autonomous Enterprise Revolution", category: "AI Strategy", link: "/blog/ai-2028-autonomous-enterprise-revolution" },
             { title: "Agent Red‑Teaming 2026", category: "AI Security", link: "/blog/agent-red-teaming-2026" },
             { title: "Verifiable Edge Analytics 2026", category: "Analytics", link: "/blog/verifiable-edge-analytics-2026" },
             { title: "AI Executive Playbook 2027", category: "AI Strategy", link: "/blog/ai-executive-playbook-2027" },
