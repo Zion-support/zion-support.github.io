@@ -1228,6 +1228,37 @@ posts.push(
   }
 );
 
+// Sept 30, 2025 – Brand new featured posts to advertise on homepage (new additions)
+posts.push(
+  {
+    slug: "ai-operational-resilience-2026",
+    title: "AI Operational Resilience 2026: Design for Failure, Recover Fast",
+    description: "Error budgets, blast-radius controls, and rollback playbooks for 99.99% uptime.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "privacy-first-experimentation-2026",
+    title: "Privacy‑First Experimentation 2026: Insights Without PII",
+    description: "Scoped IDs, edge aggregation, and DP noise for compliant A/B tests under <100ms.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "genai-routing-blueprints-2026",
+    title: "GenAI Routing Blueprints 2026: Quality Tiers Under Budget",
+    description: "Tier models, cache prompts, and route by SLA using eval signals and budgets.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  }
+);
+
 // Sept 30, 2025 – New promotional articles to surface on homepage
 posts.push(
   {

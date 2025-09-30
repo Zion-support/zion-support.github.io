@@ -200,6 +200,34 @@ featuredBlogPosts.unshift(
   }
 );
 
+// Promote brand-new content on homepage showcases (added Sept 30, 2025)
+featuredBlogPosts.unshift(
+  {
+    id: "ai-operational-resilience-2026",
+    title: "AI Operational Resilience 2026",
+    description: "Error budgets, blast radius limits, rollback playbooks for 99.99% uptime",
+    link: "/blog/ai-operational-resilience-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "privacy-first-experimentation-2026",
+    title: "Privacy‑First Experimentation 2026",
+    description: "Scoped IDs, edge aggregation, DP noise for compliant A/B tests",
+    link: "/blog/privacy-first-experimentation-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "genai-routing-blueprints-2026",
+    title: "GenAI Routing Blueprints 2026",
+    description: "Quality tiers, caches, and eval signals under budget",
+    link: "/blog/genai-routing-blueprints-2026",
+    type: "article",
+    featured: true
+  }
+);
+
 export const featuredServices: FeaturedItem[] = [
   {
     id: "ai-predictive-maintenance",
