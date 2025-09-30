@@ -18,9 +18,13 @@ interface ContentItem {
 
 const featuredContent: ContentItem[] = [
   {
-    title: 'Privacy-First Observability v2',
-    description: 'User-centric traces without PII leaks.',
-    href: '/blog/ai-2025-oct-01-privacy-first-observability-v2',
+    id: 'o3-0',
+    title: 'AI Observability 2026: Complete Guide',
+    description: 'Comprehensive observability strategies for AI systems with real-time monitoring and alerting.',
+    link: '/blog/ai-observability-2026',
+    badge: 'New',
+    badgeColor: 'bg-gradient-to-r from-cyan-600 to-sky-600',
+    icon: '📊',
     publishedDate: 'September 30, 2025',
     readTime: '6 min read',
     category: 'Observability'
