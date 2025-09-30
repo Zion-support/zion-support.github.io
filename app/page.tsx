@@ -19,6 +19,7 @@ import {
   FinTechSuccessBanner,
   NewContentShowcaseBanner
 } from '../components/PromotionalBanner';
+import LatestContentBanner2025 from '../src/components/LatestContentBanner2025';
 import {
   AIEnterpriseAdoptionBanner,
   AITrends2025Banner,
@@ -86,6 +87,9 @@ export default function HomePage() {
   return (
     <>
       <div className="animate-fade-in">
+      {/* LATEST CONTENT BANNER - SEPTEMBER 30, 2025 */}
+      <LatestContentBanner2025 />
+      
       {/* NEW 2026 Content Banner */}
       <section className="py-16 bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 text-white">
         <div className="max-w-6xl mx-auto px-4">
