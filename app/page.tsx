@@ -18,7 +18,21 @@ import {
   AutonomousAgentsBanner,
   AIGovernanceBanner,
   FinTechSuccessBanner,
+<<<<<<< HEAD
   NewContentShowcaseBanner
+=======
+  NewContentShowcaseBanner,
+  AIRoadmapsBanner,
+  AIFinOpsBanner,
+  AIMultimodalEnterpriseBanner,
+  AIEnterpriseAutomationBanner,
+  AIDataAnalyticsEnterpriseBanner,
+  EnterpriseTransformationSuccessBanner,
+  HealthcareTransformationBanner,
+  NewContent2026Banner,
+  AICostCalculatorBanner,
+  AIImplementationPlaybookBanner
+>>>>>>> origin/cursor/create-and-deploy-new-content-def1
 } from '../components/PromotionalBanner';
 import {
   AIEnterpriseAdoptionBanner,
@@ -513,6 +527,8 @@ export default function HomePage() {
       <NewBlogBanner />
       <WorkflowAutomationBanner />
       <AIAnalyticsBanner />
+      <AICostCalculatorBanner />
+      <AIImplementationPlaybookBanner />
       
 <<<<<<< HEAD
 =======
