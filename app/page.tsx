@@ -96,6 +96,202 @@ export default function HomePage() {
   return (
     <>
       <div className="animate-fade-in">
+      {/* 🔥🔥🔥 SEPTEMBER 30, 2025 - GROUNDBREAKING AI INNOVATIONS LAUNCHED! 🔥🔥🔥 */}
+      <section className="py-20 bg-gradient-to-r from-red-600 via-orange-600 to-amber-600 text-white relative overflow-hidden">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-red-400 to-amber-400 animate-pulse"></div>
+          <div className="absolute top-1/4 left-1/4 w-40 h-40 bg-red-400 rounded-full animate-bounce"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-32 h-32 bg-orange-400 rounded-full animate-bounce delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 w-24 h-24 bg-amber-400 rounded-full animate-bounce delay-500"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <div className="text-center mb-12">
+            <div className="flex items-center justify-center gap-4 mb-6">
+              <span className="text-7xl animate-pulse">🚨</span>
+              <h2 className="text-6xl font-black">NEW AI SERVICES LAUNCHED!</h2>
+              <span className="text-7xl animate-pulse">🎯</span>
+            </div>
+            <p className="text-4xl font-bold mb-4">
+              September 30, 2025 — Revolutionary AI Solutions Now Available
+            </p>
+            <p className="text-2xl opacity-95">
+              AI Cybersecurity • Self-Healing Cloud • Intelligent Blockchain
+            </p>
+          </div>
+
+          {/* Featured New Services Grid */}
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            
+            {/* AI Cybersecurity */}
+            <Link href="/services/ai-cybersecurity-2025" className="group">
+              <div className="bg-white rounded-2xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all hover:scale-105 transform">
+                <div className="bg-gradient-to-r from-red-600 to-orange-600 p-6 text-white">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="bg-yellow-400 text-red-900 px-3 py-1 rounded-full text-xs font-bold animate-bounce">
+                      🛡️ NEW SERVICE
+                    </span>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-2">
+                    AI Cybersecurity 2025
+                  </h3>
+                  <p className="text-base opacity-95">
+                    99.99% threat detection with zero-trust architecture
+                  </p>
+                </div>
+                <div className="p-6">
+                  <p className="text-gray-700 mb-4 text-sm">
+                    Revolutionary AI-powered cybersecurity with quantum encryption, zero-trust architecture, 
+                    and 100% ransomware prevention. Protect your enterprise with military-grade security.
+                  </p>
+                  <div className="grid grid-cols-3 gap-2 mb-4 text-center">
+                    <div>
+                      <div className="text-2xl font-bold text-red-600">99.99%</div>
+                      <div className="text-xs text-gray-600">Detection</div>
+                    </div>
+                    <div>
+                      <div className="text-2xl font-bold text-orange-600">100%</div>
+                      <div className="text-xs text-gray-600">Ransomware Block</div>
+                    </div>
+                    <div>
+                      <div className="text-2xl font-bold text-green-600">$80M+</div>
+                      <div className="text-xs text-gray-600">Savings</div>
+                    </div>
+                  </div>
+                  <div className="block w-full bg-red-600 text-white text-center py-3 rounded-lg font-bold hover:bg-red-700 transition-colors">
+                    Explore Service →
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+            {/* AI Cloud Infrastructure */}
+            <Link href="/services/ai-cloud-infrastructure-2025" className="group">
+              <div className="bg-white rounded-2xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all hover:scale-105 transform">
+                <div className="bg-gradient-to-r from-cyan-600 to-blue-600 p-6 text-white">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="bg-yellow-400 text-cyan-900 px-3 py-1 rounded-full text-xs font-bold animate-bounce">
+                      ☁️ NEW SERVICE
+                    </span>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-2">
+                    AI Cloud Infrastructure
+                  </h3>
+                  <p className="text-base opacity-95">
+                    Self-healing systems with 99.999% uptime
+                  </p>
+                </div>
+                <div className="p-6">
+                  <p className="text-gray-700 mb-4 text-sm">
+                    Next-generation cloud infrastructure with AI-powered self-healing, predictive scaling, 
+                    and intelligent optimization. Reduce costs 70% while achieving five-nines uptime.
+                  </p>
+                  <div className="grid grid-cols-3 gap-2 mb-4 text-center">
+                    <div>
+                      <div className="text-2xl font-bold text-cyan-600">99.999%</div>
+                      <div className="text-xs text-gray-600">Uptime</div>
+                    </div>
+                    <div>
+                      <div className="text-2xl font-bold text-blue-600">70%</div>
+                      <div className="text-xs text-gray-600">Cost Cut</div>
+                    </div>
+                    <div>
+                      <div className="text-2xl font-bold text-green-600">98%</div>
+                      <div className="text-xs text-gray-600">Auto-Fix</div>
+                    </div>
+                  </div>
+                  <div className="block w-full bg-cyan-600 text-white text-center py-3 rounded-lg font-bold hover:bg-cyan-700 transition-colors">
+                    Explore Service →
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+            {/* AI Blockchain Integration */}
+            <Link href="/services/ai-blockchain-integration-2025" className="group">
+              <div className="bg-white rounded-2xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all hover:scale-105 transform border-4 border-amber-300">
+                <div className="bg-gradient-to-r from-amber-600 to-orange-600 p-6 text-white">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="bg-white text-amber-900 px-3 py-1 rounded-full text-xs font-bold animate-bounce">
+                      🔗 NEW SERVICE
+                    </span>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-2">
+                    AI Blockchain Integration
+                  </h3>
+                  <p className="text-base opacity-95">
+                    10,000 TPS with intelligent smart contracts
+                  </p>
+                </div>
+                <div className="p-6">
+                  <p className="text-gray-700 mb-4 text-sm">
+                    Enterprise-grade blockchain with AI-powered smart contracts, DeFi optimization, 
+                    and 10,000+ TPS throughput. Transform supply chains and financial operations.
+                  </p>
+                  <div className="grid grid-cols-3 gap-2 mb-4 text-center">
+                    <div>
+                      <div className="text-2xl font-bold text-amber-600">10,000</div>
+                      <div className="text-xs text-gray-600">TPS</div>
+                    </div>
+                    <div>
+                      <div className="text-2xl font-bold text-orange-600">&lt;1s</div>
+                      <div className="text-xs text-gray-600">Finality</div>
+                    </div>
+                    <div>
+                      <div className="text-2xl font-bold text-green-600">85%</div>
+                      <div className="text-xs text-gray-600">Cost Down</div>
+                    </div>
+                  </div>
+                  <div className="block w-full bg-amber-600 text-white text-center py-3 rounded-lg font-bold hover:bg-amber-700 transition-colors">
+                    Explore Service →
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+          </div>
+
+          {/* New Blog Post Announcement */}
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border-2 border-white/30">
+            <div className="text-center mb-6">
+              <h3 className="text-3xl font-bold mb-3">📰 Featured Article</h3>
+              <Link href="/blog/ai-innovation-september-2025" className="group">
+                <h4 className="text-2xl font-bold mb-4 group-hover:underline">
+                  AI Innovation Breakthrough September 2025: Three Technologies Revolutionizing Enterprise
+                </h4>
+                <p className="text-xl opacity-90 mb-6">
+                  Discover how Quantum AI, Self-Healing Infrastructure, and Intelligent Blockchain 
+                  are delivering 300%+ ROI and transforming Fortune 500 operations.
+                </p>
+                <div className="inline-block bg-white text-orange-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg">
+                  Read the Full Article →
+                </div>
+              </Link>
+            </div>
+          </div>
+
+          {/* Contact CTA */}
+          <div className="text-center mt-12">
+            <p className="text-2xl font-bold mb-6">Ready to Transform Your Enterprise?</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="tel:+13024640950"
+                className="bg-white text-orange-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl"
+              >
+                📞 Call +1 302 464 0950
+              </a>
+              <a
+                href="mailto:kleber@ziontechgroup.com"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-orange-600 transition-colors"
+              >
+                ✉️ Email Us Today
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 🔥 BREAKING: NEW CONTENT - JANUARY 30, 2026 */}
       <section className="py-20 bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white relative overflow-hidden">
         {/* Animated Background Elements */}
