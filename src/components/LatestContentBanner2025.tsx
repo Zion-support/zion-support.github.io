@@ -5,6 +5,36 @@ import { motion } from "framer-motion";
 const LatestContentBanner2025 = () => {
   const newArticles = [
     {
+      title: "AI Composite Agents 2026",
+      description: "Multi-Model Intelligence Orchestration",
+      slug: "ai-composite-agents-2026",
+      category: "AI Engineering"
+    },
+    {
+      title: "Cognitive Load Optimization AI 2026",
+      description: "Reducing Human Decision Fatigue",
+      slug: "cognitive-load-optimization-ai-2026",
+      category: "Human-Centered AI"
+    },
+    {
+      title: "AI Contract Intelligence 2026",
+      description: "Automated Legal Analysis at Scale",
+      slug: "ai-contract-intelligence-2026",
+      category: "Legal Tech"
+    },
+    {
+      title: "AI-Powered Incident Prediction 2026",
+      description: "Preventing Outages Before They Happen",
+      slug: "ai-powered-incident-prediction-2026",
+      category: "Site Reliability"
+    },
+    {
+      title: "Real-Time Personalization at the Edge 2026",
+      description: "Sub-50ms Adaptive Experiences",
+      slug: "real-time-personalization-edge-2026",
+      category: "Edge Computing"
+    },
+    {
       title: "AI Observability Revolution 2026",
       description: "Full-Stack Intelligence Monitoring",
       slug: "ai-observability-revolution-2026",
@@ -33,36 +63,6 @@ const LatestContentBanner2025 = () => {
       description: "Distributed Data Intelligence",
       slug: "ai-data-mesh-architecture-2026",
       category: "Data Architecture"
-    },
-    {
-      title: "Intelligent Automation Platforms 2026",
-      description: "Self-Optimizing Business Processes",
-      slug: "intelligent-automation-platforms-2026",
-      category: "Automation"
-    },
-    {
-      title: "Edge-Native Applications 2026",
-      description: "Ultra-Low Latency Distributed Computing",
-      slug: "edge-native-applications-2026",
-      category: "Edge Computing"
-    },
-    {
-      title: "Conversational AI for Enterprises 2026",
-      description: "Human-Level Business Dialogue",
-      slug: "conversational-ai-enterprises-2026",
-      category: "Conversational AI"
-    },
-    {
-      title: "AI Ethics Framework 2026",
-      description: "Responsible AI Development at Scale",
-      slug: "ai-ethics-framework-2026",
-      category: "AI Ethics"
-    },
-    {
-      title: "Spatial Computing AI 2026",
-      description: "Intelligent 3D Environments",
-      slug: "spatial-computing-ai-2026",
-      category: "Spatial Computing"
     }
   ];
 
@@ -95,11 +95,11 @@ const LatestContentBanner2025 = () => {
         </div>
 
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-          🚀 September 30, 2025 Content Release
+          🚀 September 30, 2025 — LATEST CONTENT DROP!
         </h2>
         <p className="text-xl text-blue-100 mb-8 max-w-3xl">
-          Explore our latest cutting-edge insights on AI, emerging technologies, and the future of enterprise innovation. 
-          <span className="font-bold text-yellow-300"> 10 brand new articles</span> covering the most important trends shaping 2026.
+          Discover <span className="font-bold text-yellow-300">5 BRAND NEW groundbreaking articles</span> on AI Composite Agents, Cognitive Load Optimization, Contract Intelligence, Incident Prediction, and Edge Personalization. 
+          Plus explore our expanded library of <span className="font-bold text-yellow-300">15+ cutting-edge articles</span> shaping 2026!
         </p>
 
         {/* Featured highlights */}
@@ -155,16 +155,16 @@ const LatestContentBanner2025 = () => {
         {/* Stats */}
         <div className="mt-8 pt-6 border-t border-white/20 flex flex-wrap gap-8">
           <div className="text-center">
-            <div className="text-3xl font-bold text-yellow-300">10</div>
-            <div className="text-sm text-blue-200">New Articles</div>
+            <div className="text-3xl font-bold text-yellow-300">5</div>
+            <div className="text-sm text-blue-200">NEW Articles TODAY</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-green-300">100+</div>
+            <div className="text-3xl font-bold text-green-300">15+</div>
+            <div className="text-sm text-blue-200">Total Latest Articles</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-purple-300">150+</div>
             <div className="text-sm text-blue-200">Pages of Insights</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-purple-300">10</div>
-            <div className="text-sm text-blue-200">Key Tech Categories</div>
           </div>
           <div className="text-center">
             <div className="text-3xl font-bold text-pink-300">2026</div>
