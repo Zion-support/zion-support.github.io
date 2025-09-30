@@ -21,9 +21,15 @@ import AITrendsInsightsBanner2026 from "./components/AITrendsInsightsBanner2026"
 import NewBlogContentShowcase2026 from "./components/NewBlogContentShowcase2026";
 import UltimateContentAdvertisingBanner from "./components/UltimateContentAdvertisingBanner";
 import RevolutionaryAI2026MegaBreakthroughBanner from "./components/RevolutionaryAI2026MegaBreakthroughBanner";
+import Revolutionary2026MegaBreakthroughBanner from "./components/Revolutionary2026MegaBreakthroughBanner";
+import Revolutionary2026ContentAdvertisingBanner from "./components/Revolutionary2026ContentAdvertisingBanner";
+import January2026BreakthroughShowcaseBanner from "./components/January2026BreakthroughShowcaseBanner";
+import Ultimate2026ContentPromotionalBanner from "./components/Ultimate2026ContentPromotionalBanner";
+import January2026RevolutionaryContentBanner from "./components/January2026RevolutionaryContentBanner";
 import NewContent2026AdvertisingMegaBanner from "./components/NewContent2026AdvertisingMegaBanner";
 import InteractiveContentShowcase2026 from "./components/InteractiveContentShowcase2026";
 import February2026ContentMegaBanner from "./components/February2026ContentMegaBanner";
+import InteractiveROICalculator2026 from "./components/InteractiveROICalculator2026";
 
 export default function App(): JSX.Element {
   return (
@@ -36,6 +42,12 @@ export default function App(): JSX.Element {
       
       {/* Revolutionary AI 2026 Mega Breakthrough Banner - Most Prominent */}
       <Revolutionary2026ContentAdvertisingBanner />
+      
+      {/* NEW: January 2026 Revolutionary Content Banner - Latest Breakthroughs */}
+      <January2026RevolutionaryContentBanner />
+      
+      {/* NEW: 2026 Content Advertising Mega Banner */}
+      <NewContent2026AdvertisingMegaBanner />
       
       {/* January 2026 Breakthrough Showcase Banner */}
       <January2026BreakthroughShowcaseBanner />
@@ -277,7 +289,7 @@ export default function App(): JSX.Element {
         <NewServicesPromotionalBanner />
       </section>
 
-      {/* Interactive ROI Calculator 2026 */}
+      {/* Interactive ROI Calculator 2026 - NEW */}
       <section>
         <InteractiveROICalculator2026 />
       </section>
