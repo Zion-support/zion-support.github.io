@@ -32,11 +32,42 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
 
   const featuredContent = [
     {
+      title: "AI-Powered DevOps 2025",
+      description: "Transform your development pipeline with intelligent automation",
+      icon: Cloud,
+      link: "/blog/ai-powered-devops-2025",
+      category: "DevOps & AI",
+      badge: "NEW"
+    },
+    {
+      title: "Sustainable AI Computing 2025",
+      description: "Green technology practices for energy-efficient AI",
+      icon: Shield,
+      link: "/blog/sustainable-ai-computing-2025",
+      category: "Sustainability",
+      badge: "NEW"
+    },
+    {
+      title: "AI Security Best Practices 2025",
+      description: "Essential security practices for protecting AI systems",
+      icon: Shield,
+      link: "/blog/ai-security-best-practices-2025",
+      category: "Security",
+      badge: "NEW"
+    },
+    {
       title: "AI Safety Budgets 2026",
       description: "Guardrails wired to KPIs, approvals, rollbacks",
       icon: Shield,
       link: "/blog/ai-safety-budgets-2026",
       category: "AI Strategy"
+    },
+    {
+      title: "AI Automation Trends 2025",
+      description: "The future of autonomous systems and intelligent automation",
+      icon: Brain,
+      link: "/blog/ai-automation-trends-2025",
+      category: "AI & Automation"
     },
     {
       title: "Edge Privacy for ML 2026",
@@ -60,39 +91,11 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
       category: "GenAI"
     },
     {
-      title: "Platform Golden Paths 2026",
-      description: "Paved roads that move KPIs",
-      icon: TrendingUp,
-      link: "/blog/platform-golden-paths-kpis-2026",
-      category: "Platform"
-    },
-    {
-      title: "Golden Paths that Move KPIs",
-      description: "Platform engineering that pays",
-      icon: TrendingUp,
-      link: "/blog/platform-golden-paths-kpis-2026",
-      category: "Platform"
-    },
-    {
-      title: "Edge Feature Flags 2026",
-      description: "<100ms global releases with budgets",
-      icon: Zap,
-      link: "/blog/edge-feature-flags-2026",
-      category: "Platform"
-    },
-    {
-      title: "Quality‑Tiered GenAI Routing 2026",
-      description: "Control cost with tiers, caches, and eval signals",
-      icon: Zap,
-      link: "/blog/genai-routing-under-budgets-2026",
-      category: "GenAI"
-    },
-    {
-      title: "On‑Device Agents 2026",
-      description: "Offline‑capable tools, private caches, safe fallbacks",
-      icon: Cloud,
-      link: "/blog/on-device-agents-offline-tools-2026",
-      category: "Edge"
+      title: "Quantum AI Breakthrough 2026",
+      description: "Revolutionary advances in quantum computing and AI",
+      icon: Brain,
+      link: "/blog/quantum-ai-breakthrough-2026",
+      category: "Quantum AI"
     },
     {
       title: "Zero‑Trust Observability 2026",
@@ -138,12 +141,12 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
             </div>
             
             <h3 className="text-xl font-bold mb-2">
-              Just Published: New Guides for 2026
+              Just Published: Essential AI Guides for 2025-2026
             </h3>
             
             <p className="text-white/90 mb-4 text-sm">
-              Discover fresh insights on on‑device agents, GenAI cost controls, secure tool marketplaces,
-              and privacy‑first observability.
+              Explore our latest articles on AI-powered DevOps, sustainable computing, security best practices,
+              and cutting-edge innovations transforming the tech landscape.
             </p>
 
             {/* Featured content grid */}
@@ -202,12 +205,12 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
             {/* Stats */}
             <div className="flex items-center gap-6 mt-4 text-sm text-white/80">
               <div className="flex items-center gap-1">
-                <span className="font-semibold">13</span>
+                <span className="font-semibold">16</span>
                 <span>New Articles</span>
               </div>
               <div className="flex items-center gap-1">
                 <span className="font-semibold">3</span>
-                <span>New Case Studies</span>
+                <span>Fresh This Week</span>
               </div>
               <div className="flex items-center gap-1">
                 <span className="font-semibold">50+</span>
