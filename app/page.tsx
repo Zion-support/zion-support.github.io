@@ -6,6 +6,8 @@ import UltraIntelligentAutonomousSystems2026Banner from '../components/UltraInte
 import QuantumNeuralSuperintelligence2026Banner from '../components/QuantumNeuralSuperintelligence2026Banner';
 import AI2026RevolutionaryAutonomousSystemsBanner from '../components/AI2026RevolutionaryAutonomousSystemsBanner';
 import AI2026QuantumAIRevolutionBanner from '../components/AI2026QuantumAIRevolutionBanner';
+import AI2026RevolutionaryNeuralConsensusBanner from '../components/AI2026RevolutionaryNeuralConsensusBanner';
+import AI2026HyperAutonomousEnterpriseAutomationBanner from '../components/AI2026HyperAutonomousEnterpriseAutomationBanner';
 import Revolutionary2029ContentMegaBanner from '../components/Revolutionary2029ContentMegaBanner';
 import Ultimate2030ConsciousnessBanner from '../components/Ultimate2030ConsciousnessBanner';
 import Revolutionary2027ContentMegaBanner from '../components/Revolutionary2027ContentMegaBanner';
@@ -128,6 +130,12 @@ export default function HomePage() {
         </div>
       </header>
 
+      {/* NEW: AI 2026 Revolutionary Neural Consensus Breakthrough - MOST PROMINENT */}
+      <AI2026RevolutionaryNeuralConsensusBanner />
+
+      {/* NEW: AI 2026 Hyper-Autonomous Enterprise Automation - MOST PROMINENT */}
+      <AI2026HyperAutonomousEnterpriseAutomationBanner />
+
       {/* ULTRA-INTELLIGENT AUTONOMOUS SYSTEMS 2026 - MOST PROMINENT */}
       <UltraIntelligentAutonomousSystems2026Banner />
 
@@ -224,10 +232,10 @@ export default function HomePage() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
             <div className="text-white/90 font-semibold">New: Ultra-Intelligent AI Breakthroughs 2026</div>
             <div className="flex flex-wrap gap-2">
-              <a href="/blog/ai-2026-ultra-intelligent-autonomous-systems-breakthrough" className="inline-flex items-center gap-2 bg-purple-500/20 text-purple-200 border border-purple-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-purple-500/30 transition-colors">Ultra-Intelligent Systems<span>→</span></a>
-              <a href="/case-studies/ai-2026-ultra-intelligent-autonomous-systems-50-billion-success" className="inline-flex items-center gap-2 bg-green-500/20 text-green-200 border border-green-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-green-500/30 transition-colors">$50B Success Story<span>→</span></a>
-              <a href="/blog/ai-2026-quantum-neural-superintelligence-breakthrough" className="inline-flex items-center gap-2 bg-indigo-500/20 text-indigo-200 border border-indigo-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-indigo-500/30 transition-colors">Quantum Neural AI<span>→</span></a>
-              <a href="/blog/ai-2026-april-mega-breakthrough-revolution" className="inline-flex items-center gap-2 bg-purple-500/20 text-purple-200 border border-purple-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-purple-500/30 transition-colors">April 2026 Breakthrough<span>→</span></a>
+              <a href="/blog/ai-2026-revolutionary-neural-consensus-breakthrough" className="inline-flex items-center gap-2 bg-purple-500/20 text-purple-200 border border-purple-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-purple-500/30 transition-colors">Neural Consensus $500B<span>→</span></a>
+              <a href="/blog/ai-2026-hyper-autonomous-enterprise-automation-breakthrough" className="inline-flex items-center gap-2 bg-blue-500/20 text-blue-200 border border-blue-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-blue-500/30 transition-colors">Hyper-Autonomous $300B<span>→</span></a>
+              <a href="/case-studies/ai-2026-revolutionary-neural-consensus-500-billion-success" className="inline-flex items-center gap-2 bg-green-500/20 text-green-200 border border-green-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-green-500/30 transition-colors">$500B Success Story<span>→</span></a>
+              <a href="/case-studies/ai-2026-hyper-autonomous-enterprise-automation-300-billion-success" className="inline-flex items-center gap-2 bg-cyan-500/20 text-cyan-200 border border-cyan-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-cyan-500/30 transition-colors">$300B Success Story<span>→</span></a>
             </div>
           </div>
         </div>
@@ -281,6 +289,26 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-6">
+            <Link href="/blog/ai-2026-revolutionary-neural-consensus-breakthrough" className="group block rounded-xl border border-purple-500/20 bg-gradient-to-br from-purple-900/20 to-indigo-900/20 p-6 hover:border-purple-400/40 transition-all duration-300 hover:scale-105">
+              <div className="flex items-center gap-2 mb-3">
+                <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-3 py-1 rounded-full text-xs font-bold">NEURAL CONSENSUS</span>
+                <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold">$500B VALUE</span>
+              </div>
+              <div className="text-white font-bold text-lg mb-2">Revolutionary Neural Consensus</div>
+              <div className="text-gray-400 text-sm mb-3">Breakthrough AI consensus achieving 1,000,000x performance, 99.999% accuracy, and $500B+ value generation.</div>
+              <div className="text-purple-300 text-sm font-semibold group-hover:text-purple-200">Read Breakthrough Details →</div>
+            </Link>
+            
+            <Link href="/blog/ai-2026-hyper-autonomous-enterprise-automation-breakthrough" className="group block rounded-xl border border-blue-500/20 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 p-6 hover:border-blue-400/40 transition-all duration-300 hover:scale-105">
+              <div className="flex items-center gap-2 mb-3">
+                <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-3 py-1 rounded-full text-xs font-bold">HYPER-AUTONOMOUS</span>
+                <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold">$300B VALUE</span>
+              </div>
+              <div className="text-white font-bold text-lg mb-2">Hyper-Autonomous Enterprise Automation</div>
+              <div className="text-gray-400 text-sm mb-3">Revolutionary automation achieving 99.9% automation rate, 100,000x performance, and $300B+ value generation.</div>
+              <div className="text-blue-300 text-sm font-semibold group-hover:text-blue-200">Read Automation Details →</div>
+            </Link>
+            
             <Link href="/blog/ai-2026-ultra-intelligent-autonomous-systems-breakthrough" className="group block rounded-xl border border-purple-500/20 bg-gradient-to-br from-purple-900/20 to-indigo-900/20 p-6 hover:border-purple-400/40 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-2 mb-3">
                 <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-3 py-1 rounded-full text-xs font-bold">ULTRA-INTELLIGENT</span>
