@@ -257,6 +257,16 @@ export const posts: BlogPost[] = [
     readTime: "10 min read"
   },
   {
+    // NEW — Device‑level segmentation at the edge (featured)
+    slug: "edge-2026-device-segmentation-blueprint",
+    title: "Edge 2026: Device‑Level Segmentation Blueprint",
+    description: "Scoped IDs, on‑device cohorts, and DP noise for zero‑PII personalization under 100ms.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
     slug: "edge-2025-sept-30-zero-pii-experiments-v2",
     title: "Edge 2025: Zero‑PII Experiments v2 (<100ms)",
     description: "Scoped IDs, on‑device metrics, and DP noise enabling compliant A/B worldwide.",
@@ -475,7 +485,7 @@ export const posts: BlogPost[] = [
   {
     slug: "genai-2027-cost-controllers-v2",
     title: "GenAI 2027: Cost Controllers v2 — Predictable Spend, Stable UX",
-    description: "Quality tiers, semantic caches, and policy tests to cut spend 30–70% without regressions.",
+    description: "Deterministic tiering, semantic caches, and policy tests for predictable spend without regressions.",
     category: "FinOps",
     publishedAt: "2025-10-03",
     featured: true,
