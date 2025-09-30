@@ -180,6 +180,7 @@ export default function ContentHubPage() {
               <Link href="/blog/edge-private-analytics-2027" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">Edge Private Analytics 2027<span>→</span></Link>
               <Link href="/blog/ai-agent-reliability-playbook-2026" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">Agent Reliability 2026<span>→</span></Link>
               <Link href="/blog/privacy-safe-feature-flags-2026" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">Privacy‑Safe Flags 2026<span>→</span></Link>
+              <Link href="/blog/ai-2028-autonomous-finops-scorecards" className="inline-flex items-center gap-2 bg-emerald-300/20 text-white px-4 py-2 rounded-lg font-semibold border border-white/20 hover:bg-emerald-300/30 transition-colors">Autonomous FinOps 2028<span>→</span></Link>
               <Link href="/blog/ai-safety-scorecards-2026" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">AI Safety Scorecards<span>→</span></Link>
               <Link href="/blog/edge-governed-flags-2026" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">Edge‑Governed Flags<span>→</span></Link>
               <Link href="/blog/genai-cache-playbook-2026" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">GenAI Cache Playbook<span>→</span></Link>
@@ -522,6 +523,41 @@ export default function ContentHubPage() {
                 </div>
                 <div className="flex items-center justify-center gap-2 w-full bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-400 hover:to-green-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300">
                   <span>Read Guide</span>
+                </div>
+              </div>
+            </Link>
+
+            {/* New Featured: Autonomous FinOps Scorecards 2028 */}
+            <Link href="/blog/ai-2028-autonomous-finops-scorecards" className="group">
+              <div className="bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-emerald-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/20 p-8">
+                <div className="flex items-start justify-between mb-6">
+                  <div className="text-6xl group-hover:scale-110 transition-transform duration-300">📊</div>
+                  <div className="flex flex-col gap-2">
+                    <div className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 text-white text-xs font-bold shadow-lg">
+                      <span>FINOPS</span>
+                    </div>
+                    <span className="px-3 py-1.5 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-semibold border border-emerald-500/30">
+                      NEW
+                    </span>
+                  </div>
+                </div>
+                <div className="mb-4">
+                  <span className="inline-block px-3 py-1 rounded-full bg-gradient-to-r from-emerald-500/20 to-teal-500/20 text-emerald-300 text-xs font-semibold border border-emerald-500/30">
+                    Autonomous Platforms
+                  </span>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-emerald-400 transition-colors duration-300 leading-tight">
+                  AI 2028: Autonomous FinOps Scorecards
+                </h3>
+                <p className="text-gray-400 mb-6 leading-relaxed text-sm">
+                  Prevent cost regressions with KPI-linked scorecards, budget-aware routing, and instant rollback.
+                </p>
+                <div className="flex items-center justify-between text-sm text-gray-500 mb-6 pb-6 border-b border-white/10">
+                  <span>18 min</span>
+                  <span>Oct 2025</span>
+                </div>
+                <div className="flex items-center justify-center gap-2 w-full bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300">
+                  <span>Read FinOps Guide</span>
                 </div>
               </div>
             </Link>
