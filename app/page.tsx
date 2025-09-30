@@ -51,6 +51,12 @@ import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
 import InteractiveAICalculator2026 from '../components/InteractiveAICalculator2026';
+import { 
+  DigitalTwinsPromoBanner, 
+  ServerlessAIPromoBanner, 
+  CybersecurityAIPromoBanner,
+  ComprehensiveNewContentShowcase 
+} from '../components/New2025ContentBanners';
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
@@ -132,6 +138,11 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <div className="animate-fade-in">
+      {/* New September 2025 Content Banners */}
+      <DigitalTwinsPromoBanner />
+      <ServerlessAIPromoBanner />
+      <CybersecurityAIPromoBanner />
+      
       {/* AI 2027 Breakthrough Promotional Banner */}
       <AI2027BreakthroughPromotionalBanner />
       
@@ -418,6 +429,9 @@ export default function HomePage() {
 >>>>>>> cursor/create-and-deploy-new-content-1102
 >>>>>>> origin/feature/revolutionary-ai-2026-content
 
+      {/* New September 2025 Content Showcase */}
+      <ComprehensiveNewContentShowcase />
+
       {/* Dynamic Content Showcase */}
       <ContentShowcase />
       
@@ -540,6 +554,67 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
+            {/* New September 2025 Content */}
+            <Link href="/blog/ai-powered-digital-twins-2025" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200 hover:border-blue-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    NEW ARTICLE
+                  </span>
+                  <span className="text-sm text-gray-500">12 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  AI-Powered Digital Twins: 95% Prediction Accuracy & $5M+ Savings
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Real-time simulation and predictive maintenance achieving 60% downtime reduction and $5M+ annual cost savings.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold group-hover:text-blue-700 transition-colors">
+                  Read Article →
+                </div>
+              </div>
+            </Link>
+
+            <Link href="/blog/serverless-ai-architecture-2025" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200 hover:border-purple-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    FEATURED GUIDE
+                  </span>
+                  <span className="text-sm text-gray-500">15 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
+                  Serverless AI Architecture: Infinite Scale & 90% Cost Reduction
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Master serverless AI with zero ops overhead, auto-scaling from 0 to millions, and 90% cost savings.
+                </p>
+                <div className="flex items-center text-purple-600 font-semibold group-hover:text-purple-700 transition-colors">
+                  Read Guide →
+                </div>
+              </div>
+            </Link>
+
+            <Link href="/blog/ai-enhanced-cybersecurity-2025" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200 hover:border-red-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    SECURITY ESSENTIAL
+                  </span>
+                  <span className="text-sm text-gray-500">14 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-red-600 transition-colors">
+                  AI-Enhanced Cybersecurity: 10x Faster Detection & 99.9% Accuracy
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Autonomous threat detection and response in seconds, preventing breaches and saving $5M+ annually.
+                </p>
+                <div className="flex items-center text-red-600 font-semibold group-hover:text-red-700 transition-colors">
+                  Read Security Guide →
+                </div>
+              </div>
+            </Link>
+
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
