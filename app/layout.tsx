@@ -68,6 +68,7 @@ export default function RootLayout({
               <nav className="hidden md:flex space-x-8">
                 <Link href="/" className="text-gray-700 hover:text-blue-600 transition-colors">Home</Link>
                 <Link href="/services" className="text-gray-700 hover:text-blue-600 transition-colors">Services</Link>
+<<<<<<< HEAD
                 <Link href="/services/ai-2027-breakthrough-solutions" className="text-gray-700 hover:text-purple-600 transition-colors font-semibold relative">
                   AI 2027 Solutions
                   <span className="absolute -top-2 -right-2 bg-purple-500 text-white text-xs px-2 py-1 rounded-full">New</span>
@@ -76,6 +77,8 @@ export default function RootLayout({
                   Content Hub
                   <span className="absolute -top-2 -right-2 bg-purple-500 text-white text-xs px-2 py-1 rounded-full">New</span>
                 </Link>
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-461f
                 <Link href="/blog" className="text-gray-700 hover:text-blue-600 transition-colors relative">
                   Blog
                   <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">New</span>
@@ -101,27 +104,42 @@ export default function RootLayout({
               <div>
                 <h3 className="text-lg font-semibold mb-4">Services</h3>
                 <ul className="space-y-2 text-gray-400">
+<<<<<<< HEAD
                   <li><Link href="/services/ai-2027-breakthrough-solutions" className="hover:text-white">AI 2027 Solutions</Link></li>
                   <li><Link href="/services" className="hover:text-white">AI Solutions</Link></li>
                   <li><Link href="/services/ai-2027-breakthrough-solutions" className="hover:text-white">AI 2027 Solutions</Link></li>
+=======
+                  <li><Link href="/services" className="hover:text-white">AI Solutions</Link></li>
+>>>>>>> origin/cursor/create-and-deploy-new-content-461f
                   <li><Link href="/services" className="hover:text-white">Automation</Link></li>
                   <li><Link href="/services" className="hover:text-white">Digital Transformation</Link></li>
+                  <li><Link href="/services" className="hover:text-white">Cloud Migration</Link></li>
                 </ul>
               </div>
               <div>
                 <h3 className="text-lg font-semibold mb-4">Resources</h3>
                 <ul className="space-y-2 text-gray-400">
                   <li><Link href="/blog" className="hover:text-white">Blog</Link></li>
-                  <li><Link href="/blog/ai-2026-next-generation-autonomous-systems" className="hover:text-white">Autonomous AI Systems</Link></li>
-                  <li><Link href="/blog/ai-2026-quantum-machine-learning" className="hover:text-white">Quantum Machine Learning</Link></li>
                   <li><Link href="/case-studies" className="hover:text-white">Case Studies</Link></li>
+<<<<<<< HEAD
                   <li><Link href="/case-studies/fortune-500-ai-transformation-2027" className="hover:text-white">$200M ROI Success Story</Link></li>
+=======
+                  <li><Link href="/blog/ai-2026-neural-superintelligence" className="hover:text-white">Neural Superintelligence</Link></li>
+                  <li><Link href="/case-studies/neural-superintelligence-mega-success-2026" className="hover:text-white">$500M Success Story</Link></li>
+>>>>>>> origin/cursor/create-and-deploy-new-content-461f
                 </ul>
               </div>
               <div>
                 <h3 className="text-lg font-semibold mb-4">Contact</h3>
+                <p className="text-gray-400 mb-2">
+                  📞 +1 302 464 0950
+                </p>
+                <p className="text-gray-400 mb-2">
+                  📧 kleber@ziontechgroup.com
+                </p>
                 <p className="text-gray-400">
-                  Get in touch for your AI transformation needs.
+                  📍 364 E Main St STE 1008<br />
+                  Middletown, DE 19709
                 </p>
               </div>
             </div>
