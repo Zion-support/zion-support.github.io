@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // eslint.config.js
 import js from "@eslint/js";
 import globals from "globals";
@@ -9,9 +10,51 @@ import cypressPlugin from "eslint-plugin-cypress";
 
 const browserGlobals = globals.browser;
 const nodeGlobals = globals.node;
+=======
+import js from '@eslint/js';
+import tseslint from '@typescript-eslint/eslint-plugin';
+import tsParser from '@typescript-eslint/parser';
+import globals from 'globals';
+>>>>>>> 9a2b7a08498a5b655365060e31fa3ed04a742c13
 
 export default [
-  // Global ignores
+  js.configs.recommended,
+  {
+    files: ['**/*.{js,jsx}'],
+    languageOptions: {
+      ecmaVersion: 2022,
+      sourceType: 'module',
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+      },
+    },
+    rules: {
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+    },
+  },
+  {
+    files: ['**/*.{ts,tsx}'],
+    languageOptions: {
+      parser: tsParser,
+      ecmaVersion: 2022,
+      sourceType: 'module',
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+      },
+    },
+    plugins: {
+      '@typescript-eslint': tseslint,
+    },
+    rules: {
+      ...tseslint.configs.recommended.rules,
+      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-explicit-any': 'warn',
+      'no-console': 'warn',
+    },
+  },
   {
     ignores: [
       'dist/**',
@@ -20,9 +63,8 @@ export default [
       '**/*.config.ts',
       'public/**',
       'backup/**',
-      'backup-pages/**',
-      'backup-merge-conflicts/**',
       'src.corrupted/**',
+<<<<<<< HEAD
       'backup-problematic-files/**',
       'src.disabled/**',
       'src.pages.disabled/**',
@@ -250,3 +292,12 @@ export default [
     }
   }
 ];
+=======
+      'cypress/**',
+      'tests/**',
+      '**/*.test.*',
+      '**/*.spec.*',
+    ],
+  },
+];
+>>>>>>> 9a2b7a08498a5b655365060e31fa3ed04a742c13
