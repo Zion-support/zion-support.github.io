@@ -162,6 +162,11 @@ const Home = () => {
           <October2025MegaLaunchBanner />
         </div>
         
+        {/* SEPTEMBER 30, 2025 - 5 Revolutionary AI Breakthroughs */}
+        <div className="container mx-auto px-6 mt-6 mb-6">
+          <September30NewContentMegaBanner />
+        </div>
+        
         {/* BREAKTHROUGH CONTENT 2026 - September 30, 2025 */}
         <div className="container mx-auto px-6 mt-6">
           <BreakthroughContent2026Banner />
