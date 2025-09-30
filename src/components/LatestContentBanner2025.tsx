@@ -46,6 +46,28 @@ const LatestContentBanner2025: React.FC = () => {
       readTime: '40 min',
       trending: true,
       icon: '🚀'
+    },
+    {
+      id: 5,
+      title: 'Reliable Agent Evals 2025: Measure and Guardrail Autonomy',
+      slug: 'ai-reliable-agent-evals-2025',
+      excerpt: 'Design evals with budgets, policy gates, and metrics to bound autonomous behavior and ship safe agents in production.',
+      category: 'Agent Ops & Governance',
+      date: '2025-09-30',
+      readTime: '32 min',
+      trending: true,
+      icon: '🧪'
+    },
+    {
+      id: 6,
+      title: 'Next‑Gen Multimodal Agents: Vision + Language + Action',
+      slug: 'next-gen-multimodal-agents-2026',
+      excerpt: 'Blueprint to build multimodal agents that perceive, reason, and act with robust safety and operations.',
+      category: 'Multimodal & Agents',
+      date: '2026-01-15',
+      readTime: '38 min',
+      trending: true,
+      icon: '🧠'
     }
   ];
 
