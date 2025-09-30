@@ -5,27 +5,27 @@ const NewContentAdvertisingBanner: React.FC = () => {
   const featuredContent = [
     {
       id: 1,
-      title: 'AI 2027: Operational Trust Blueprint',
+      title: 'AI 2028: Autonomous Enterprise Revolution',
       category: 'AI Strategy',
-      readTime: '8 min',
-      rating: 4.9,
-      readers: '58K+',
-      badge: 'NEW',
+      readTime: '12 min',
+      rating: 5.0,
+      readers: '120K+',
+      badge: 'NEW 2028',
       gradient: 'from-blue-500 to-purple-500',
       icon: <Star className="w-6 h-6" />,
-      link: '/blog/ai-2027-operational-trust-blueprint'
+      link: '/blog/ai-2028-autonomous-enterprise-revolution'
     },
     {
       id: 2,
-      title: 'Edge 2026: Private Feature Flags',
-      category: 'Architecture',
-      readTime: '7 min',
-      rating: 4.8,
-      readers: '41K+',
-      badge: 'TRENDING',
+      title: 'AI 2028: Autonomous FinOps Scorecards',
+      category: 'FinOps',
+      readTime: '10 min',
+      rating: 4.9,
+      readers: '87K+',
+      badge: 'FEATURED',
       gradient: 'from-cyan-500 to-blue-500',
       icon: <TrendingUp className="w-6 h-6" />,
-      link: '/blog/edge-2026-private-feature-flags'
+      link: '/blog/ai-2028-autonomous-finops-scorecards'
     },
     {
       id: 3,
