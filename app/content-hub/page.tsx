@@ -568,8 +568,8 @@ export default function ContentHubPage() {
                 Practical guides and blueprints for implementing AI solutions in your organization.
               </p>
               <div className="space-y-3">
-                <Link href="/blog/ai-enterprise-transformation-roadmap-2026" className="flex items-center gap-2 text-orange-400 hover:text-orange-300 font-semibold transition-colors group">
-                  <span>Enterprise AI Guide</span>
+                <Link href="/blog/ai-2026-reliable-genai-platform" className="flex items-center gap-2 text-orange-400 hover:text-orange-300 font-semibold transition-colors group">
+                  <span>Reliable GenAI Platform 2026</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link href="/blog/ai-implementation-best-practices-2025" className="flex items-center gap-2 text-orange-400 hover:text-orange-300 font-semibold transition-colors group">

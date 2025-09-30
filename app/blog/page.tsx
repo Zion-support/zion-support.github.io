@@ -7,6 +7,16 @@ export const metadata = {
 
 const blogPosts = [
   {
+    title: 'Reliable GenAI Platform 2026: Architecture, Guardrails, and ROI',
+    slug: 'ai-2026-reliable-genai-platform',
+    excerpt: 'Blueprint a governed, reliable, and cost‑efficient GenAI platform with routing, memory, evals, and policy guardrails.',
+    category: 'Implementation Guide',
+    publishedAt: 'January 2026',
+    image: '🏗️',
+    color: 'indigo',
+    readTime: '18 min read'
+  },
+  {
     title: 'Trustworthy Autonomous Agents 2026: Guardrails, Evals, and Policy Gates',
     slug: 'ai-trustworthy-agents-2026',
     excerpt: 'Design reliable autonomy with layered guardrails, budgeted tools, and live evaluations.',
