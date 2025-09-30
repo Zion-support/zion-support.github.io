@@ -115,6 +115,138 @@ const Home = () => {
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
         
+        {/* 🚨 MEGA ANNOUNCEMENT: NEW SERVICES, WHITEPAPERS & CONTENT - September 30, 2025 */}
+        <div className="bg-gradient-to-r from-red-600 via-orange-600 to-yellow-500 border-b-8 border-white shadow-2xl animate-pulse">
+          <div className="container mx-auto px-6 py-16">
+            <div className="text-center">
+              <div className="inline-flex items-center gap-6 px-16 py-6 rounded-full bg-white border-8 border-yellow-300 mb-12 shadow-2xl animate-bounce">
+                <Rocket className="w-16 h-16 text-red-600 animate-bounce" />
+                <span className="text-gray-900 font-black text-5xl tracking-wider uppercase">
+                  🚨 MASSIVE LAUNCH: 12 NEW SERVICES + 12 WHITEPAPERS + 100+ ARTICLES! 🚨
+                </span>
+                <Sparkles className="w-16 h-16 text-orange-600 animate-spin" />
+              </div>
+              <h2 className="text-8xl md:text-9xl font-black text-white mb-10 drop-shadow-2xl">
+                The Biggest Product Launch of 2025!
+              </h2>
+              <p className="text-5xl md:text-6xl text-yellow-100 font-black mb-12 max-w-7xl mx-auto leading-tight">
+                💥 12 Revolutionary AI Services • 12 Premium Whitepapers • 100+ Expert Articles • 10 Case Studies
+              </p>
+              
+              {/* New Services Grid */}
+              <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 mb-8 border-4 border-white/40">
+                <h3 className="text-4xl font-black text-white mb-6">🚀 12 BRAND NEW AI SERVICES JUST LAUNCHED</h3>
+                <div className="grid md:grid-cols-4 gap-4 mb-6">
+                  <div className="bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl p-5 border-4 border-white hover:scale-110 transition-all">
+                    <div className="text-5xl mb-2">🤖</div>
+                    <div className="text-white font-bold">AI Copilot Platform</div>
+                    <div className="text-blue-100 text-sm mt-1">10x Dev Productivity</div>
+                  </div>
+                  <div className="bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl p-5 border-4 border-white hover:scale-110 transition-all">
+                    <div className="text-5xl mb-2">⚛️</div>
+                    <div className="text-white font-bold">Quantum Optimization</div>
+                    <div className="text-purple-100 text-sm mt-1">1000x Speedup</div>
+                  </div>
+                  <div className="bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl p-5 border-4 border-white hover:scale-110 transition-all">
+                    <div className="text-5xl mb-2">🧠</div>
+                    <div className="text-white font-bold">Neuromorphic Edge AI</div>
+                    <div className="text-green-100 text-sm mt-1">10,000x Efficiency</div>
+                  </div>
+                  <div className="bg-gradient-to-br from-red-500 to-orange-500 rounded-xl p-5 border-4 border-white hover:scale-110 transition-all">
+                    <div className="text-5xl mb-2">🛡️</div>
+                    <div className="text-white font-bold">AI Security Ops</div>
+                    <div className="text-red-100 text-sm mt-1">Sub-30s Response</div>
+                  </div>
+                </div>
+                <Link
+                  to="/services"
+                  className="bg-white text-red-600 px-12 py-5 rounded-2xl font-black text-3xl hover:bg-yellow-50 transition-all duration-300 hover:scale-110 shadow-2xl inline-flex items-center gap-4 border-4 border-red-600"
+                >
+                  <Star className="w-10 h-10" />
+                  <span>Explore All 12 New Services</span>
+                  <ArrowRight className="w-10 h-10" />
+                </Link>
+              </div>
+              
+              {/* Whitepapers Section */}
+              <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 mb-8 border-4 border-white/40">
+                <h3 className="text-4xl font-black text-white mb-6">📚 12 PREMIUM WHITEPAPERS AVAILABLE NOW</h3>
+                <div className="grid md:grid-cols-3 gap-4 mb-6">
+                  <div className="bg-white/20 rounded-xl p-5 border-2 border-yellow-300 hover:scale-105 transition-all">
+                    <div className="text-3xl mb-2">📖</div>
+                    <div className="text-white font-bold text-sm">Autonomous AI Infrastructure</div>
+                    <div className="text-yellow-100 text-xs mt-1">150 pages • 12,547 downloads</div>
+                  </div>
+                  <div className="bg-white/20 rounded-xl p-5 border-2 border-yellow-300 hover:scale-105 transition-all">
+                    <div className="text-3xl mb-2">📖</div>
+                    <div className="text-white font-bold text-sm">Quantum Computing ROI</div>
+                    <div className="text-yellow-100 text-xs mt-1">89 pages • 8,932 downloads</div>
+                  </div>
+                  <div className="bg-white/20 rounded-xl p-5 border-2 border-yellow-300 hover:scale-105 transition-all">
+                    <div className="text-3xl mb-2">📖</div>
+                    <div className="text-white font-bold text-sm">AI Security Playbook</div>
+                    <div className="text-yellow-100 text-xs mt-1">200 pages • 15,623 downloads</div>
+                  </div>
+                </div>
+                <Link
+                  to="/resources"
+                  className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-12 py-5 rounded-2xl font-black text-3xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 hover:scale-110 shadow-2xl inline-flex items-center gap-4 border-4 border-white"
+                >
+                  <Award className="w-10 h-10" />
+                  <span>Download All Whitepapers FREE</span>
+                  <ArrowRight className="w-10 h-10" />
+                </Link>
+              </div>
+              
+              {/* Articles & Case Studies */}
+              <div className="grid md:grid-cols-2 gap-6 mb-8">
+                <div className="bg-gradient-to-br from-indigo-600 to-purple-700 rounded-3xl p-8 border-4 border-white/60">
+                  <h3 className="text-3xl font-black text-white mb-4">✨ 100+ NEW ARTICLES</h3>
+                  <p className="text-xl text-white mb-6">Revolutionary insights on AI, ML, Quantum Computing & more</p>
+                  <Link
+                    to="/blog"
+                    className="bg-white text-indigo-700 px-8 py-4 rounded-xl font-bold text-xl hover:bg-indigo-50 transition-all hover:scale-105 inline-flex items-center gap-3"
+                  >
+                    <span>Read Articles</span>
+                    <ArrowRight className="w-6 h-6" />
+                  </Link>
+                </div>
+                <div className="bg-gradient-to-br from-pink-600 to-rose-700 rounded-3xl p-8 border-4 border-white/60">
+                  <h3 className="text-3xl font-black text-white mb-4">💼 10 NEW CASE STUDIES</h3>
+                  <p className="text-xl text-white mb-6">Real results: $500M+ savings, 99.9% accuracy, 1000x speedups</p>
+                  <Link
+                    to="/case-studies"
+                    className="bg-white text-pink-700 px-8 py-4 rounded-xl font-bold text-xl hover:bg-pink-50 transition-all hover:scale-105 inline-flex items-center gap-3"
+                  >
+                    <span>View Case Studies</span>
+                    <ArrowRight className="w-6 h-6" />
+                  </Link>
+                </div>
+              </div>
+              
+              {/* Main CTAs */}
+              <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                <Link
+                  to="/contact"
+                  className="bg-white text-red-600 px-16 py-7 rounded-2xl font-black text-4xl hover:bg-yellow-50 transition-all duration-300 hover:scale-110 shadow-2xl inline-flex items-center gap-4 border-8 border-white"
+                >
+                  <Zap className="w-14 h-14 animate-pulse" />
+                  <span>Get Started Today</span>
+                  <Target className="w-14 h-14" />
+                </Link>
+                <Link
+                  to="/demo"
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-16 py-7 rounded-2xl font-black text-4xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 hover:scale-110 shadow-2xl inline-flex items-center gap-4 border-8 border-white"
+                >
+                  <Rocket className="w-14 h-14 animate-bounce" />
+                  <span>Book Free Demo</span>
+                  <ArrowRight className="w-14 h-14" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+        
         {/* 🔥 BREAKING: 5 NEW REVOLUTIONARY ARTICLES - September 30, 2025 */}
         <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 border-b-4 border-yellow-400/70 shadow-2xl">
           <div className="container mx-auto px-6 py-12">
