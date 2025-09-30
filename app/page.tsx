@@ -31,18 +31,24 @@ import {
   AIWorkflowAutomationBanner,
   EnterpriseAISecurityBanner
 } from '../components/NewContentPromotionalBanners';
+import {
+  AIEnterpriseTransformationBanner,
+  AIAutonomousSystemsBanner,
+  ManufacturingTransformationBanner,
+  AIEnterpriseServicesBanner,
+  LatestContentShowcaseBanner,
+  InteractiveAICalculatorBanner,
+  AIInnovationShowcaseBanner
+} from '../components/NewContent2026Banners';
 import ContentShowcase from '../components/ContentShowcase';
-import NewContent2026MegaBanner from '../components/NewContent2026MegaBanner';
-import AIRevolutionary2026Banner from '../components/AIRevolutionary2026Banner';
-import InteractiveAICalculator2026 from '../components/InteractiveAICalculator2026';
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
-  description: 'Transform your enterprise with AI-powered solutions. Get 300% ROI, 90% efficiency improvement, and $50M+ savings with our proven AI transformation framework. Free consultation available.',
-  keywords: 'AI enterprise transformation, AI services, micro SaaS, IT services, cloud migration, DevOps, SRE, enterprise software, automation, AI ROI calculator, AI implementation, digital transformation, AI consulting, Fortune 500 AI solutions',
+  description: 'Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains. Expert AI consulting, autonomous systems, and digital transformation services.',
+  keywords: 'AI enterprise transformation, AI consulting, autonomous AI systems, enterprise AI services, digital transformation, AI implementation, AI ROI calculator, manufacturing AI, AI automation, AI strategy',
   openGraph: {
     title: 'Zion Tech Group — AI Enterprise Transformation & IT Services',
-    description: 'Transform your enterprise with AI-powered solutions. Get 300% ROI, 90% efficiency improvement, and $50M+ savings.',
+    description: 'Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.',
     type: 'website',
     url: 'https://ziontechgroup.com',
     images: [
@@ -57,7 +63,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Zion Tech Group — AI Enterprise Transformation & IT Services',
-    description: 'Transform your enterprise with AI-powered solutions. Get 300% ROI, 90% efficiency improvement, and $50M+ savings.',
+    description: 'Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.',
     images: ['/og-image.jpg'],
   },
   robots: {
@@ -74,44 +80,119 @@ export const metadata = {
 };
 
 export default function HomePage() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "description": "Leading provider of AI-powered enterprise solutions and digital transformation services",
+    "url": "https://ziontechgroup.com",
+    "logo": "https://ziontechgroup.com/logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-302-464-0950",
+      "contactType": "customer service",
+      "email": "kleber@ziontechgroup.com"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "364 E Main St STE 1008",
+      "addressLocality": "Middletown",
+      "addressRegion": "DE",
+      "postalCode": "19709",
+      "addressCountry": "US"
+    },
+    "sameAs": [
+      "https://linkedin.com/company/zion-tech-group",
+      "https://twitter.com/ziontechgroup"
+    ],
+    "offers": {
+      "@type": "Offer",
+      "name": "AI Enterprise Transformation Services",
+      "description": "Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains",
+      "price": "50000",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    }
+  };
+
   return (
-    <main className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-      <div className="animate-fade-in">
-        {/* New 2026 Content Banners */}
-        <NewContent2026MegaBanner />
-        <AIRevolutionary2026Banner />
-        
-        {/* Revolutionary 2026 Content Banner */}
-        <Revolutionary2026ContentBanner />
-        
-        {/* Latest AI Innovations Banner */}
-        <LatestAIInnovations2026Banner />
-        
-        {/* New Content Promotional Banners */}
-        <AIEnterpriseAdoptionBanner />
-        <AITrends2025Banner />
-        <SupplyChainOptimizationBanner />
-        <AIBusinessTransformationBanner />
-        <AICustomerExperienceBanner />
-        <EnterpriseAITransformationBanner />
-        <LatestAIInsightsBanner />
-        <AIServicesShowcaseBanner />
-        <AIWorkflowAutomationBanner />
-        <EnterpriseAISecurityBanner />
-        
-        {/* Existing Promotional Banners */}
-        <NewContentShowcaseBanner />
-        <AutonomousAgentsBanner />
-        <AIGovernanceBanner />
-        <FinTechSuccessBanner />
-        <AIContentShowcaseBanner />
-        <CustomerServiceAIBanner />
-        <HealthcareAIBanner />
-        <RetailSuccessBanner />
-        <AIRevolutionBanner />
-        <NewBlogBanner />
-        <WorkflowAutomationBanner />
-        <AIAnalyticsBanner />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <main className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="animate-fade-in">
+          {/* New 2026 Content Banners */}
+          <NewContent2026MegaBanner />
+          <AIRevolutionary2026Banner />
+          
+          {/* Revolutionary 2026 Content Banner */}
+          <Revolutionary2026ContentBanner />
+          
+          {/* Latest AI Innovations Banner */}
+          <LatestAIInnovations2026Banner />
+          
+          {/* New Content Promotional Banners */}
+          <AIEnterpriseAdoptionBanner />
+          <AITrends2025Banner />
+          <SupplyChainOptimizationBanner />
+          <AIBusinessTransformationBanner />
+          <AICustomerExperienceBanner />
+          <EnterpriseAITransformationBanner />
+          <LatestAIInsightsBanner />
+          <AIServicesShowcaseBanner />
+          <AIWorkflowAutomationBanner />
+          <EnterpriseAISecurityBanner />
+          
+          {/* Existing Promotional Banners */}
+          <NewContentShowcaseBanner />
+          <AutonomousAgentsBanner />
+          <AIGovernanceBanner />
+          <FinTechSuccessBanner />
+          <AIContentShowcaseBanner />
+          <CustomerServiceAIBanner />
+          <HealthcareAIBanner />
+          <RetailSuccessBanner />
+          <AIRevolutionBanner />
+          <NewBlogBanner />
+          <WorkflowAutomationBanner />
+          <AIAnalyticsBanner />
+      <AIEnterpriseTransformationBanner />
+      <AIAutonomousSystemsBanner />
+      <ManufacturingTransformationBanner />
+      <AIEnterpriseServicesBanner />
+      <LatestContentShowcaseBanner />
+      <InteractiveAICalculatorBanner />
+      <AIInnovationShowcaseBanner />
+      
+      {/* New Content Promotional Banners */}
+      <AIEnterpriseAdoptionBanner />
+      <AITrends2025Banner />
+      <SupplyChainOptimizationBanner />
+      <AIBusinessTransformationBanner />
+      <AICustomerExperienceBanner />
+      <EnterpriseAITransformationBanner />
+      <LatestAIInsightsBanner />
+      <AIServicesShowcaseBanner />
+      <AIWorkflowAutomationBanner />
+      <EnterpriseAISecurityBanner />
+      
+      {/* Existing Promotional Banners */}
+      <NewContentShowcaseBanner />
+      <AutonomousAgentsBanner />
+      <AIGovernanceBanner />
+      <FinTechSuccessBanner />
+      <AIContentShowcaseBanner />
+      <CustomerServiceAIBanner />
+      <HealthcareAIBanner />
+      <RetailSuccessBanner />
+      <AIRevolutionBanner />
+      <NewBlogBanner />
+      <WorkflowAutomationBanner />
+      <AIAnalyticsBanner />
+      
+>>>>>>> 83687f660ab4d793fbd393e78d6f981ce54e0604
       {/* Hero Section */}
       <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
         <div className="max-w-4xl mx-auto px-4">
@@ -241,7 +322,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Interactive AI Calculator */}
+      {/* Interactive AI 2027 Calculator */}
+      <InteractiveAI2027Calculator />
+
+      {/* Interactive AI 2026 Calculator */}
       <InteractiveAICalculator2026 />
 
       {/* Dynamic Content Showcase */}
@@ -877,6 +961,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-    </div>
+        </div>
+      </main>
+    </>
   );
 }
