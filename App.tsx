@@ -46,10 +46,22 @@ import April2026ConsciousComputingBanner from "./components/April2026ConsciousCo
 import April2026QuantumNeuralBanner from "./components/April2026QuantumNeuralBanner";
 import QuantumConsciousnessFusionBanner from "./components/QuantumConsciousnessFusionBanner";
 import Revolutionary2026ContentShowcaseBanner from "./components/Revolutionary2026ContentShowcaseBanner";
+import May2026RevolutionaryBreakthroughBanner from "./components/May2026RevolutionaryBreakthroughBanner";
+import June2026MegaAutomationBanner from "./components/June2026MegaAutomationBanner";
+import InteractiveContentShowcase2026Advanced from "./components/InteractiveContentShowcase2026Advanced";
 
 export default function App(): JSX.Element {
   return (
     <div className="min-h-screen bg-slate-950">
+      {/* NEW: May 2026 Revolutionary Breakthrough Banner - Most Prominent */}
+      <May2026RevolutionaryBreakthroughBanner />
+      
+      {/* NEW: June 2026 Mega Enterprise Automation Banner - Most Prominent */}
+      <June2026MegaAutomationBanner />
+      
+      {/* NEW: Interactive Content Showcase 2026 Advanced */}
+      <InteractiveContentShowcase2026Advanced />
+      
       {/* NEW: April 2026 Mega Breakthrough Banner - Most Prominent */}
       <April2026MegaBreakthroughBanner />
       
@@ -401,6 +413,12 @@ export default function App(): JSX.Element {
       {/* Interactive Content Showcase 2026 */}
       <InteractiveContentShowcase2026 />
 
+      {/* NEW: May 2026 Revolutionary Breakthrough Banner - Mid Page */}
+      <May2026RevolutionaryBreakthroughBanner />
+
+      {/* NEW: June 2026 Mega Enterprise Automation Banner - Mid Page */}
+      <June2026MegaAutomationBanner />
+
       {/* NEW: Revolutionary 2026 Content Showcase Banner - Mid Page */}
       <Revolutionary2026ContentShowcaseBanner />
       
@@ -501,6 +519,12 @@ export default function App(): JSX.Element {
       <UltimateContentAdvertisingBanner />
       <RevolutionaryAI2026MegaBreakthroughBanner />
       <InteractiveContentShowcase2026 />
+
+      {/* NEW: May 2026 Revolutionary Breakthrough Banner - Pre Footer */}
+      <May2026RevolutionaryBreakthroughBanner />
+
+      {/* NEW: June 2026 Mega Enterprise Automation Banner - Pre Footer */}
+      <June2026MegaAutomationBanner />
 
       {/* Footer */}
       <footer className="bg-slate-900 border-t border-slate-800 py-12">
