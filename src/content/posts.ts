@@ -10,6 +10,34 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-2027-revolutionary-breakthrough",
+    title: "AI 2027 Revolutionary Breakthrough",
+    description: "Quantum‑neural advances drive 95% automation and 1000x performance for enterprises.
+",
+    category: "AI Strategy",
+    publishedAt: "2027-01-15",
+    featured: true,
+    readTime: "10 min read"
+  },
+  {
+    slug: "ai-2027-hyper-automation-blueprint",
+    title: "AI 2027 Hyper‑Automation Blueprint",
+    description: "End‑to‑end autonomous operations with budgets, guards, and instant rollback.",
+    category: "Automation",
+    publishedAt: "2027-01-10",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "ai-2027-quantum-breakthrough-enterprise",
+    title: "Quantum Breakthrough 2027 for the Enterprise",
+    description: "Enterprise‑ready quantum‑neural systems: secure, scalable, and ROI‑proven.",
+    category: "AI Research",
+    publishedAt: "2027-01-08",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
     slug: "ai-2027-cost-optimization-playbook",
     title: "AI 2027 Cost Optimization Playbook",
     description: "Tiered routing, caching, and compression to cut spend 30–70% with no regressions.",
