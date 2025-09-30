@@ -1201,6 +1201,37 @@ posts.push(
   }
 );
 
+// Feb 10, 2026 – Brand‑new featured posts to surface on homepage
+posts.push(
+  {
+    slug: "genai-routing-playbook-2026-v2",
+    title: "GenAI Routing Playbook v2 (2026): Quality Tiers Under Budget",
+    description: "Tier models, cache prompts, and KPI‑linked routes for stable UX at 30–60% lower cost.",
+    category: "GenAI",
+    publishedAt: "2025-10-31",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "agent-release-checklists-2026-v2",
+    title: "Agent Release Checklists 2026: Budgets, Canaries, Instant Rollback",
+    description: "Battle‑tested checklists for safe agent releases with budgeted actions and KPI‑linked canaries.",
+    category: "AI Operations",
+    publishedAt: "2025-10-31",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "privacy-first-telemetry-2026-v2",
+    title: "Privacy‑First Telemetry 2026: Signal‑Rich Analytics Without PII",
+    description: "Scoped IDs, edge aggregation, and DP noise for insights teams love—compliance included.",
+    category: "Analytics",
+    publishedAt: "2025-10-31",
+    featured: true,
+    readTime: "6 min read"
+  }
+);
+
 // Jan 15, 2026 – Fresh posts to advertise on homepage
 posts.push(
   {
