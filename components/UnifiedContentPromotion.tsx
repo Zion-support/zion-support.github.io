@@ -17,6 +17,14 @@ interface ContentItem {
 }
 
 const featuredContent: ContentItem[] = [
+  {
+    id: 'o3-0',
+    title: 'AI Observability 2026: Complete Guide',
+    description: 'Comprehensive observability strategies for AI systems with real-time monitoring and alerting.',
+    link: '/blog/ai-observability-2026',
+    badge: 'New',
+    badgeColor: 'bg-gradient-to-r from-cyan-600 to-sky-600',
+    icon: '📊',
     publishedDate: 'September 30, 2025',
     readTime: '6 min read',
     category: 'Observability'
