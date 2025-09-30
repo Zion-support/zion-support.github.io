@@ -115,14 +115,14 @@ const Home = () => {
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
         
-        {/* 🔥 BREAKING: 5 NEW REVOLUTIONARY ARTICLES - September 30, 2025 */}
+        {/* 🚀 MEGA BREAKTHROUGH: 5 NEW REVOLUTIONARY ARTICLES - September 30, 2025 */}
         <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 border-b-4 border-yellow-400/70 shadow-2xl">
           <div className="container mx-auto px-6 py-12">
             <div className="text-center">
               <div className="inline-flex items-center gap-4 px-12 py-5 rounded-full bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 border-4 border-white/60 mb-10 shadow-2xl animate-bounce">
                 <Sparkles className="w-10 h-10 text-white animate-spin" />
                 <span className="text-gray-900 font-black text-3xl tracking-wider uppercase">
-                  🔥 BREAKING: 5 REVOLUTIONARY NEW ARTICLES JUST PUBLISHED! 🔥
+                  🚀 BREAKING: 5 REVOLUTIONARY NEW ARTICLES JUST PUBLISHED! 🚀
                 </span>
                 <Sparkles className="w-10 h-10 text-white animate-spin" />
               </div>
@@ -134,29 +134,29 @@ const Home = () => {
               </p>
               <div className="grid md:grid-cols-5 gap-6 mb-10 max-w-7xl mx-auto">
                 <div className="bg-white/20 backdrop-blur-lg rounded-2xl p-6 border-2 border-yellow-400/70 hover:scale-110 transition-all hover:bg-white/30">
-                  <div className="text-5xl mb-3">⚖️</div>
-                  <div className="text-white font-bold text-base">AI Legal Analysis</div>
-                  <div className="text-yellow-200 text-xs mt-2">10x faster research, 99% accuracy</div>
+                  <div className="text-5xl mb-3">⚙️</div>
+                  <div className="text-white font-bold text-base">Predictive Maintenance</div>
+                  <div className="text-yellow-200 text-xs mt-2">80% downtime reduction, 95% accuracy</div>
                 </div>
                 <div className="bg-white/20 backdrop-blur-lg rounded-2xl p-6 border-2 border-yellow-400/70 hover:scale-110 transition-all hover:bg-white/30">
-                  <div className="text-5xl mb-3">🌐</div>
-                  <div className="text-white font-bold text-base">Federated AI Governance</div>
-                  <div className="text-yellow-200 text-xs mt-2">Zero-trust distributed intelligence</div>
+                  <div className="text-5xl mb-3">⚛️</div>
+                  <div className="text-white font-bold text-base">Quantum-AI Hybrid</div>
+                  <div className="text-yellow-200 text-xs mt-2">10,000x speedup for optimization</div>
                 </div>
                 <div className="bg-white/20 backdrop-blur-lg rounded-2xl p-6 border-2 border-yellow-400/70 hover:scale-110 transition-all hover:bg-white/30">
-                  <div className="text-5xl mb-3">🧬</div>
-                  <div className="text-white font-bold text-base">Self-Evolving Models</div>
-                  <div className="text-yellow-200 text-xs mt-2">95% improvement, zero human input</div>
+                  <div className="text-5xl mb-3">💝</div>
+                  <div className="text-white font-bold text-base">Emotional AI</div>
+                  <div className="text-yellow-200 text-xs mt-2">350% satisfaction boost</div>
                 </div>
                 <div className="bg-white/20 backdrop-blur-lg rounded-2xl p-6 border-2 border-yellow-400/70 hover:scale-110 transition-all hover:bg-white/30">
-                  <div className="text-5xl mb-3">🔐</div>
-                  <div className="text-white font-bold text-base">DevSecOps AI</div>
-                  <div className="text-yellow-200 text-xs mt-2">99.9% accuracy at commit time</div>
+                  <div className="text-5xl mb-3">🚚</div>
+                  <div className="text-white font-bold text-base">Autonomous Supply Chain</div>
+                  <div className="text-yellow-200 text-xs mt-2">99.5% on-time at 35% less cost</div>
                 </div>
                 <div className="bg-white/20 backdrop-blur-lg rounded-2xl p-6 border-2 border-yellow-400/70 hover:scale-110 transition-all hover:bg-white/30">
-                  <div className="text-5xl mb-3">🎯</div>
-                  <div className="text-white font-bold text-base">Holographic AI</div>
-                  <div className="text-yellow-200 text-xs mt-2">10x productivity with spatial AI</div>
+                  <div className="text-5xl mb-3">🛡️</div>
+                  <div className="text-white font-bold text-base">Zero Trust Security</div>
+                  <div className="text-yellow-200 text-xs mt-2">99.97% breach prevention</div>
                 </div>
               </div>
               <div className="flex flex-col sm:flex-row gap-6 justify-center">

@@ -5,6 +5,36 @@ import { motion } from "framer-motion";
 const LatestContentBanner2025 = () => {
   const newArticles = [
     {
+      title: "AI Predictive Maintenance Manufacturing 2026",
+      description: "80% Downtime Reduction with 95% Prediction Accuracy",
+      slug: "ai-predictive-maintenance-manufacturing-2026",
+      category: "Manufacturing AI"
+    },
+    {
+      title: "AI-Quantum Hybrid Optimization 2026",
+      description: "10,000x Speedup for Complex Problems",
+      slug: "ai-quantum-hybrid-optimization-2026",
+      category: "Quantum Computing"
+    },
+    {
+      title: "AI Emotional Intelligence Enterprise 2026",
+      description: "350% Customer Satisfaction Boost",
+      slug: "ai-emotional-intelligence-enterprise-2026",
+      category: "Customer Experience"
+    },
+    {
+      title: "AI Autonomous Supply Chain Resilience 2026",
+      description: "99.5% On-Time Delivery at 35% Lower Cost",
+      slug: "ai-autonomous-supply-chain-resilience-2026",
+      category: "Supply Chain"
+    },
+    {
+      title: "AI Zero Trust Security Architecture 2026",
+      description: "99.97% Breach Prevention at Scale",
+      slug: "ai-zero-trust-security-architecture-2026",
+      category: "Cybersecurity"
+    },
+    {
       title: "AI Autonomous Legal Analysis 2026",
       description: "10x Faster Case Research with 99% Accuracy",
       slug: "ai-autonomous-legal-analysis-2026",
@@ -33,36 +63,6 @@ const LatestContentBanner2025 = () => {
       description: "Spatial Computing Meets Generative AI",
       slug: "holographic-ai-interfaces-2026",
       category: "Spatial Computing"
-    },
-    {
-      title: "Autonomous Code Refactoring 2026",
-      description: "Self-Healing Codebases at Scale",
-      slug: "autonomous-code-refactoring-2026",
-      category: "AI Engineering"
-    },
-    {
-      title: "Quantum-ML Hybrid Computing 2026",
-      description: "1000x Speedup for Optimization",
-      slug: "quantum-ml-hybrid-computing-2026",
-      category: "Quantum Computing"
-    },
-    {
-      title: "Neuromorphic Edge AI 2026",
-      description: "Brain-Inspired Computing at 10,000x Efficiency",
-      slug: "neuromorphic-edge-ai-2026",
-      category: "Edge Computing"
-    },
-    {
-      title: "Swarm Intelligence Robotics 2026",
-      description: "Coordinated Autonomous Systems",
-      slug: "swarm-intelligence-robotics-2026",
-      category: "Robotics"
-    },
-    {
-      title: "AI Drug Discovery 2026",
-      description: "From Years to Months with 100x Acceleration",
-      slug: "ai-drug-discovery-acceleration-2026",
-      category: "Healthcare AI"
     }
   ];
 
@@ -98,8 +98,8 @@ const LatestContentBanner2025 = () => {
           🚀 September 30, 2025 — REVOLUTIONARY CONTENT DROP!
         </h2>
         <p className="text-xl text-blue-100 mb-8 max-w-3xl">
-          Discover <span className="font-bold text-yellow-300">5 BRAND NEW groundbreaking articles</span> on AI Autonomous Legal Analysis, Federated AI Governance Networks, Self-Evolving AI Models, AI-Powered DevSecOps Automation, and Holographic AI Interfaces! 
-          Plus explore our expanded library of <span className="font-bold text-yellow-300">30+ cutting-edge articles</span> shaping 2026!
+          Discover <span className="font-bold text-yellow-300">5 BRAND NEW groundbreaking articles</span> on AI Predictive Maintenance (80% downtime reduction), Quantum-AI Hybrid Optimization (10,000x speedup), Emotional Intelligence AI (350% satisfaction boost), Autonomous Supply Chains (99.5% on-time delivery), and Zero Trust Security (99.97% breach prevention)! 
+          Plus explore our expanded library of <span className="font-bold text-yellow-300">35+ cutting-edge articles</span> shaping 2026!
         </p>
 
         {/* Featured highlights */}
@@ -154,22 +154,22 @@ const LatestContentBanner2025 = () => {
 
         {/* Stats */}
         <div className="mt-8 pt-6 border-t border-white/20 flex flex-wrap gap-8">
-          <div className="text-center">
-            <div className="text-3xl font-bold text-yellow-300">5</div>
-            <div className="text-sm text-blue-200">NEW Articles TODAY</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-green-300">30+</div>
-            <div className="text-sm text-blue-200">Total Latest Articles</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-purple-300">250+</div>
-            <div className="text-sm text-blue-200">Pages of Insights</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-pink-300">2026</div>
-            <div className="text-sm text-blue-200">Future-Ready Topics</div>
-          </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-yellow-300">5</div>
+                <div className="text-sm text-blue-200">NEW Articles TODAY</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-green-300">35+</div>
+                <div className="text-sm text-blue-200">Total Latest Articles</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-purple-300">300+</div>
+                <div className="text-sm text-blue-200">Pages of Insights</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-pink-300">2026</div>
+                <div className="text-sm text-blue-200">Future-Ready Topics</div>
+              </div>
         </div>
       </div>
     </motion.div>
