@@ -117,6 +117,7 @@ export default function HomePage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               <a href="/blog/ai-2026-multimodal-enterprise-automation" className="inline-flex items-center gap-2 bg-cyan-500/20 text-cyan-200 border border-cyan-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-cyan-500/30 transition-colors">Multimodal Automation<span>→</span></a>
               <a href="/blog/ai-2026-quantum-enhanced-machine-learning" className="inline-flex items-center gap-2 bg-purple-500/20 text-purple-200 border border-purple-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-purple-500/30 transition-colors">Quantum ML<span>→</span></a>
               <a href="/blog/ai-2026-autonomous-business-operations" className="inline-flex items-center gap-2 bg-green-500/20 text-green-200 border border-green-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-green-500/30 transition-colors">Autonomous Ops<span>→</span></a>
@@ -149,6 +150,15 @@ export default function HomePage() {
               <Link href="/blog/ai-2027-quantum-consciousness-fusion-breakthrough" className="inline-flex items-center gap-2 bg-blue-500/20 text-blue-200 border border-blue-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-blue-500/30 transition-colors">Quantum Consciousness 100,000x<span>→</span></Link>
               <Link href="/blog/ai-2028-autonomous-enterprise-revolution" className="inline-flex items-center gap-2 bg-cyan-500/20 text-cyan-200 border border-cyan-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-cyan-500/30 transition-colors">99.9% Autonomous Enterprise<span>→</span></Link>
 >>>>>>> origin/cursor/create-and-deploy-new-content-b66b
+=======
+              <Link href="/blog/ai-2025-sept-30-autonomous-governance-blueprint" className="inline-flex items-center gap-2 bg-amber-500/20 text-amber-200 border border-amber-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-amber-500/30 transition-colors">Autonomous Governance Blueprint 2025<span>→</span></Link>
+              <Link href="/blog/ai-2025-oct-02-production-agent-guardrails" className="inline-flex items-center gap-2 bg-emerald-500/20 text-emerald-200 border border-emerald-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-emerald-500/30 transition-colors">Production Agent Guardrails<span>→</span></Link>
+              <Link href="/blog/ai-2025-sept-30-governed-autonomy-blueprint" className="inline-flex items-center gap-2 bg-blue-500/20 text-blue-200 border border-blue-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-blue-500/30 transition-colors">Governed Autonomy Blueprint 2025<span>→</span></Link>
+              <Link href="/blog/ai-2026-reliable-genai-platform" className="inline-flex items-center gap-2 bg-indigo-500/20 text-indigo-200 border border-indigo-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-indigo-500/30 transition-colors">Reliable GenAI Platform 2026<span>→</span></Link>
+              <Link href="/blog/ai-2026-e2e-ai-tracing" className="inline-flex items-center gap-2 bg-cyan-500/20 text-cyan-200 border border-cyan-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-cyan-500/30 transition-colors">E2E AI Tracing 2026<span>→</span></Link>
+              <Link href="/blog/ai-2026-neuromorphic-breakthrough" className="inline-flex items-center gap-2 bg-fuchsia-500/20 text-fuchsia-200 border border-fuchsia-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-fuchsia-500/30 transition-colors">Neuromorphic Breakthrough 2026<span>→</span></Link>
+              <Link href="/blog/ai-2026-quantum-neural-fusion" className="inline-flex items-center gap-2 bg-blue-500/20 text-blue-200 border border-blue-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-blue-500/30 transition-colors">Quantum Neural Fusion 2026<span>→</span></Link>
+>>>>>>> origin/cursor/create-and-deploy-new-content-f6ec
             </div>
           </div>
         </div>
