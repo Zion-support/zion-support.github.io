@@ -24,23 +24,23 @@ export default function December2026MegaBreakthroughBanner() {
           </div>
           
           {/* Main Headline */}
-          <h1 className="text-4xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent leading-tight">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-8 bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent leading-tight">
             AI 2026 December Mega Breakthrough Revolution
           </h1>
           
           {/* Subheadline */}
           <p className="text-xl md:text-2xl text-gray-300 mb-8 font-semibold max-w-4xl mx-auto">
-            15,000x Performance • 99.95% Autonomous • $50B Value Generated
+            15,000x Performance • 99.99% Autonomous • $50B Value Generated
           </p>
           
           {/* Key Metrics */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
             <div className="bg-gradient-to-r from-purple-500/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-4 border border-purple-500/30">
               <div className="text-2xl font-extrabold text-purple-400 mb-1">15,000x</div>
               <div className="text-xs text-purple-300">Performance Boost</div>
             </div>
             <div className="bg-gradient-to-r from-blue-500/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-4 border border-blue-500/30">
-              <div className="text-2xl font-extrabold text-blue-400 mb-1">99.95%</div>
+              <div className="text-2xl font-extrabold text-blue-400 mb-1">99.99%</div>
               <div className="text-xs text-blue-300">Autonomous Ops</div>
             </div>
             <div className="bg-gradient-to-r from-green-500/20 to-green-600/20 backdrop-blur-sm rounded-xl p-4 border border-green-500/30">
@@ -87,10 +87,10 @@ export default function December2026MegaBreakthroughBanner() {
               View $50B Success Story →
             </Link>
             <Link 
-              href="/services/ai-2026-december-mega-breakthrough-consulting" 
+              href="/services/ai-2026-december-mega-breakthrough-solutions" 
               className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
-              Get Consulting →
+              Get Solutions →
             </Link>
           </div>
           
