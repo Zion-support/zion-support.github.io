@@ -397,6 +397,46 @@ enhancedPromotionalBanners.push({
   startDate: '2025-10-01'
 });
 
+// Oct 30, 2025 – Advertise three brand-new articles just added
+enhancedPromotionalBanners.push({
+  id: 'oct-30-2025-runtime-rollback',
+  title: '🛡️ Runtime Rollback Blueprint (2026) — New',
+  description: 'Instant rollback with KPI‑linked canaries and budgets. Safer velocity.',
+  ctaText: 'Read article',
+  ctaLink: '/blog/ai-2026-runtime-rollback-blueprint',
+  variant: 'info',
+  icon: '🛡️',
+  featured: true,
+  priority: 1,
+  startDate: '2025-10-30'
+});
+
+enhancedPromotionalBanners.push({
+  id: 'oct-30-2025-attested-analytics',
+  title: '🔐 Edge Attested Analytics (2026) — New',
+  description: 'Zero‑PII insights with signed proofs at <100ms. Trust your metrics.',
+  ctaText: 'Explore guide',
+  ctaLink: '/blog/edge-2026-attested-analytics',
+  variant: 'success',
+  icon: '🔐',
+  featured: true,
+  priority: 2,
+  startDate: '2025-10-30'
+});
+
+enhancedPromotionalBanners.push({
+  id: 'oct-30-2025-economy-modes',
+  title: '💸 GenAI 2027: Economy Modes — New',
+  description: 'Quality tiers + semantic caches for 40–70% savings with stable UX.',
+  ctaText: 'See playbook',
+  ctaLink: '/blog/genai-2027-economy-modes',
+  variant: 'success',
+  icon: '💸',
+  featured: true,
+  priority: 3,
+  startDate: '2025-10-30'
+});
+
 // Homepage highlight for the newest drop
 enhancedPromotionalBanners.push({
   id: 'oct-2025-homepage-new-drop',
