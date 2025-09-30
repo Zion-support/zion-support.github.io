@@ -109,6 +109,8 @@ import UltimateContent2026Showcase from '../components/UltimateContent2026Showca
 import Revolutionary2027ContentBanner from '../components/Revolutionary2027ContentBanner';
 import UltimateContent2027Showcase from '../components/UltimateContent2027Showcase';
 import NewContentShowcase2026 from '../src/components/NewContentShowcase2026';
+import New2027ContentShowcaseBanner from '../components/New2027ContentShowcaseBanner';
+import Interactive2027ContentDiscovery from '../components/Interactive2027ContentDiscovery';
 import September30NewAIBreakthroughsBanner from '../components/September30NewAIBreakthroughsBanner';
 <<<<<<< HEAD
 import September30BreakthroughContentBanner from '../components/September30BreakthroughContentBanner';
@@ -159,6 +161,12 @@ export default function HomePage() {
   return (
     <>
       <div className="animate-fade-in">
+      {/* 🚀🚀🚀 BREAKTHROUGH 2027 CONTENT - Revolutionary AI Technologies! 🚀🚀🚀 */}
+      <New2027ContentShowcaseBanner />
+      
+      {/* 🎯 INTERACTIVE 2027 CONTENT DISCOVERY */}
+      <Interactive2027ContentDiscovery />
+      
       {/* 🚀🚀🚀 BREAKTHROUGH CONTENT - September 30, 2025 - 3 REVOLUTIONARY INNOVATIONS! 🚀🚀🚀 */}
       <September30BreakthroughContentBanner />
       
