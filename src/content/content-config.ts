@@ -898,6 +898,46 @@ featuredBlogPosts.unshift(
 
 export const featuredServices: FeaturedItem[] = [
   {
+    id: "ai-autonomous-infrastructure-platform",
+    title: "AI Autonomous Infrastructure Platform",
+    description: "99.99% uptime with self-healing, self-optimizing infrastructure",
+    link: "/services/ai-autonomous-infrastructure-platform",
+    type: "service",
+    featured: true
+  },
+  {
+    id: "quantum-ai-acceleration-service",
+    title: "Quantum AI Acceleration Service",
+    description: "1000x faster AI training with quantum-enhanced optimization",
+    link: "/services/quantum-ai-acceleration-service",
+    type: "service",
+    featured: true
+  },
+  {
+    id: "ai-multimodal-content-studio",
+    title: "AI Multimodal Content Studio",
+    description: "98% accuracy across vision, language, and audio AI",
+    link: "/services/ai-multimodal-content-studio",
+    type: "service",
+    featured: true
+  },
+  {
+    id: "ai-autonomous-business-intelligence",
+    title: "AI Autonomous Business Intelligence",
+    description: "95% accuracy in predictive analytics with zero-touch insights",
+    link: "/services/ai-autonomous-business-intelligence",
+    type: "service",
+    featured: true
+  },
+  {
+    id: "ai-neural-architecture-optimization",
+    title: "AI Neural Architecture Optimization",
+    description: "1000x faster architecture design with state-of-the-art performance",
+    link: "/services/ai-neural-architecture-optimization",
+    type: "service",
+    featured: true
+  },
+  {
     id: "ai-predictive-maintenance",
     title: "AI Predictive Maintenance",
     description: "85% reduction in downtime with 98% prediction accuracy",
@@ -1139,6 +1179,46 @@ featuredBlogPosts.unshift(
 
 // Surface brand-new articles at the very top of featured content
 featuredBlogPosts.unshift(
+  {
+    id: "ai-2026-neural-architecture-search-breakthrough",
+    title: "Neural Architecture Search 2026: Auto-Designing AI Networks",
+    description: "Revolutionary NAS algorithms that design optimal neural architectures 1000x faster than humans",
+    link: "/blog/ai-2026-neural-architecture-search-breakthrough",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-2026-federated-learning-enterprise-breakthrough",
+    title: "Federated Learning 2026: Privacy-First Enterprise AI",
+    description: "Train powerful AI models across distributed data without centralizing sensitive information",
+    link: "/blog/ai-2026-federated-learning-enterprise-breakthrough",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-2026-quantum-enhanced-analytics",
+    title: "Quantum-Enhanced Analytics 2026: 1000x Performance Boost",
+    description: "Leverage quantum computing for analytics achieving 1000x speedup in complex data processing",
+    link: "/blog/ai-2026-quantum-enhanced-analytics",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-2026-autonomous-business-intelligence",
+    title: "Autonomous Business Intelligence 2026: Self-Driving Analytics",
+    description: "AI-powered BI that automatically discovers insights and makes data-driven recommendations",
+    link: "/blog/ai-2026-autonomous-business-intelligence",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-2026-edge-computing-revolution",
+    title: "Edge Computing Revolution 2026: Sub-10ms AI Inference",
+    description: "Revolutionary edge AI achieving sub-10ms inference with on-device models and real-time decisions",
+    link: "/blog/ai-2026-edge-computing-revolution",
+    type: "article",
+    featured: true
+  },
   {
     id: "ai-governance-live-scorecards-2026",
     title: "AI Governance Live Scorecards 2026",
