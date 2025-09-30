@@ -94,6 +94,7 @@ import NewestContent2025Banner from '../components/NewestContent2025Banner';
 import September30FreshContent2025Banner from '../components/September30FreshContent2025Banner';
 import September30FreshContentBanner from '../components/September30FreshContentBanner';
 import September30NewBlogsBanner from '../components/September30NewBlogsBanner';
+import OctoberFeaturedContentBanner from '../components/OctoberFeaturedContentBanner';
 import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
 import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
 import InteractiveContentRecommendation from '../components/InteractiveContentRecommendation';
@@ -179,6 +180,9 @@ export default function HomePage() {
       </section>
       {/* 🚀 NEWEST 2027 CONTENT - BREAKTHROUGH QUANTUM AI & AUTONOMOUS INTELLIGENCE! */}
       <NewContent2027ShowcaseBanner />
+
+      {/* 📣 Featured: October — New Risk Mitigation Article */}
+      <OctoberFeaturedContentBanner />
 
       {/* 📣 Featured: September 30, 2025 — Three New Articles */}
       <NewestContent2025Banner />
