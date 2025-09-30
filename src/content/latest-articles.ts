@@ -3056,6 +3056,55 @@ export const latestArticles: LatestArticle[] = [
   }
 ];
 
+// Fresh latest articles to surface on homepage and promo components
+latestArticles.unshift(
+  {
+    id: "ai-agent-reliability-playbook-2026",
+    slug: "ai-agent-reliability-playbook-2026",
+    title: "AI Agent Reliability Playbook 2026: SLOs, Budgets, Rollbacks",
+    description: "Design reliable agent systems with explicit SLOs, budgeted actions, and instant rollback triggers.",
+    excerpt: "Build reliable agent systems with SLOs, budgets, and rollback guards.",
+    author: "Zion Tech Group AI Engineering",
+    date: "2025-10-31",
+    category: "AI Engineering",
+    tags: ["Agents", "SLOs", "Budgets", "Rollbacks"],
+    featured: true,
+    readTime: "8 min read",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "privacy-safe-feature-flags-2026",
+    slug: "privacy-safe-feature-flags-2026",
+    title: "Privacy‑Safe Feature Flags 2026: Sub‑100ms Global Releases",
+    description: "Edge flags with scoped IDs, geo budgets, and DP noise for compliant, fast rollouts.",
+    excerpt: "Roll out safely at the edge with privacy‑first flags and budgets.",
+    author: "Zion Tech Group Architecture",
+    date: "2025-10-31",
+    category: "Architecture",
+    tags: ["Feature Flags", "Edge", "Privacy", "Budgets"],
+    featured: true,
+    readTime: "7 min read",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "platform-roi-scorecards-quickstart-2026",
+    slug: "platform-roi-scorecards-quickstart-2026",
+    title: "Platform ROI Scorecards Quickstart 2026: Prove Value Fast",
+    description: "Lightweight scorecards that link golden paths to adoption, SLOs, and revenue.",
+    excerpt: "Connect platform capabilities to measurable outcomes with quick scorecards.",
+    author: "Zion Tech Group Platform Team",
+    date: "2025-10-31",
+    category: "Platform Engineering",
+    tags: ["Platform", "ROI", "Scorecards", "SLOs"],
+    featured: true,
+    readTime: "6 min read",
+    newBadge: true,
+    trending: true
+  }
+);
+
 export const featuredArticles = latestArticles.filter(article => article.featured);
 export const trendingArticles = latestArticles.filter(article => article.trending);
 export const newArticles = latestArticles.filter(article => article.newBadge);

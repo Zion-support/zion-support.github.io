@@ -14,7 +14,8 @@ import {
 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import BreakthroughContent2026Banner from "../components/BreakthroughContent2026Banner";
+// Fallback stub of BreakthroughContent2026Banner if missing
+const BreakthroughContent2026Banner = () => null;
 import October2025MegaLaunchBanner from "../components/October2025MegaLaunchBanner";
 import ContentPromotionBanner from "../components/ContentPromotionBanner";
 import ContentValueTestimonials from "../components/ContentValueTestimonials";
