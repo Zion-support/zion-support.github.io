@@ -1,32 +1,16 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
-import { ThemeProvider } from './contexts/ThemeContext';
-import App from './App';
-import './index.css';
+import { createRoot } from 'react-dom/client';
+import App from '../App';
+import '../app/globals.css';
 
-// Register service worker
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js')
-      .then((registration) => {
-        console.log('Service Worker registered successfully:', registration.scope);
-      })
-      .catch((error) => {
-        console.log('Service Worker registration failed:', error);
-      });
-  });
+const container = document.getElementById('root');
+if (!container) {
+  throw new Error('Failed to find the root element');
 }
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
+const root = createRoot(container);
+root.render(
   <React.StrictMode>
-    <HelmetProvider>
-      <BrowserRouter>
-        <ThemeProvider>
-          <App />
-        </ThemeProvider>
-      </BrowserRouter>
-    </HelmetProvider>
+    <App />
   </React.StrictMode>
 );

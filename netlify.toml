@@ -1,54 +1,37 @@
-[[redirects]]
-  from = "/api/*"
-  to = "https://backend.example.com/:splat"
-  status = 200
- 
 [build]
-  command = "pnpm build"
+  # Publish prebuilt dist without running a build
+  command = "echo 'Skipping build - deploying prebuilt dist'"
   publish = "dist"
   command_timeout = "30m"
 
 [build.environment]
-  NODE_VERSION = "22.16.0"
-  PNPM_VERSION = "10.17.1"
-  NETLIFY_USE_PNPM = "true"
-  # Disable Next.js auto-detection
-  NETLIFY_NEXT_PLUGIN_SKIP = "true"
-  # Ensure clean installs
-  NPM_CONFIG_PRODUCTION = "false"
-  NODE_ENV = "production"
-  # Optimize build performance
-  CI = "true"
+  NODE_VERSION = "20"
+  # Avoid optional binary downloads (electron, playwright, cypress)
+  PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD = "1"
+  PUPPETEER_SKIP_DOWNLOAD = "1"
+  CYPRESS_INSTALL_BINARY = "0"
+  ELECTRON_SKIP_DOWNLOAD = "1"
 
-# Explicitly disable Next.js plugin to prevent auto-detection
-[build.processing]
-  skip_processing = false
 
-[build.processing.css]
-  bundle = true
-  minify = true
 
-[build.processing.js]
-  bundle = true
-  minify = true
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
 
-[build.processing.html]
-  pretty_urls = true
+[[headers]]
+  for = "/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
 
-[[plugins]]
-  package = "netlify-plugin-cloudinary"
-  [plugins.inputs]
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    X-Content-Type-Options = "nosniff"
 
-[context.production.environment]
-  NODE_ENV = "production"
-  NPM_CONFIG_PRODUCTION = "false"
-
-[context.deploy-preview]
-  command = "pnpm build"
-  [context.deploy-preview.environment]
-    NODE_ENV = "production"
-
-[context.branch-deploy]
-  command = "pnpm build"
-  [context.branch-deploy.environment]
-    NODE_ENV = "production"
+[[headers]]
+  for = "*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    X-Content-Type-Options = "nosniff"

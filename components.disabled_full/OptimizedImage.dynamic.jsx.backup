@@ -1,0 +1,13 @@
+
+
+<<<<<<< HEAD
+</p>''
+>>>>>>> origin/cursor/delete-old-data-records-6bba
+const OptimizedImage = dynamic(() => import(\"./OptimizedImage\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default OptimizedImage\' ,
+const OptimizedImage = dynamic(() => import("./OptimizedImage"),{"; loading: () => <p>Loading.</p,>}) export: "default OptimizedImage" ,"""
+const OptimizedImage = dynamic(() => import("./OptimizedImage"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default OptimizedImage' ,'
+
+</p>'
+
+=======
+>>>>>>> main

@@ -1,0 +1,226 @@
+{
+  "summary": {
+    "totalPages": 14,
+    "brokenLinks": 0,
+    "missingContent": 14,
+    "seoIssues": 0,
+    "accessibilityIssues": 0,
+    "performanceIssues": 0,
+    "recommendations": []
+  },
+  "brokenLinks": [],
+  "missingContent": [
+    {
+      "url": "https://ziontechgroup.com",
+      "issues": {
+        "noContent": true,
+        "noTitle": false,
+        "noDescription": false,
+        "noStructure": true
+      },
+      "contentLength": 0,
+      "titleLength": 38,
+      "descriptionLength": 149,
+      "headingsCount": 0,
+      "imagesCount": 0,
+      "linksCount": 0
+    },
+    {
+      "url": "https://ziontechgroup.com/about",
+      "issues": {
+        "noContent": true,
+        "noTitle": false,
+        "noDescription": false,
+        "noStructure": true
+      },
+      "contentLength": 0,
+      "titleLength": 38,
+      "descriptionLength": 149,
+      "headingsCount": 0,
+      "imagesCount": 0,
+      "linksCount": 0
+    },
+    {
+      "url": "https://ziontechgroup.com/services",
+      "issues": {
+        "noContent": true,
+        "noTitle": false,
+        "noDescription": false,
+        "noStructure": true
+      },
+      "contentLength": 0,
+      "titleLength": 38,
+      "descriptionLength": 149,
+      "headingsCount": 0,
+      "imagesCount": 0,
+      "linksCount": 0
+    },
+    {
+      "url": "https://ziontechgroup.com/contact",
+      "issues": {
+        "noContent": true,
+        "noTitle": false,
+        "noDescription": false,
+        "noStructure": true
+      },
+      "contentLength": 0,
+      "titleLength": 38,
+      "descriptionLength": 149,
+      "headingsCount": 0,
+      "imagesCount": 0,
+      "linksCount": 0
+    },
+    {
+      "url": "https://ziontechgroup.com/team",
+      "issues": {
+        "noContent": true,
+        "noTitle": false,
+        "noDescription": false,
+        "noStructure": true
+      },
+      "contentLength": 0,
+      "titleLength": 38,
+      "descriptionLength": 149,
+      "headingsCount": 0,
+      "imagesCount": 0,
+      "linksCount": 0
+    },
+    {
+      "url": "https://ziontechgroup.com/blog",
+      "issues": {
+        "noContent": true,
+        "noTitle": false,
+        "noDescription": false,
+        "noStructure": true
+      },
+      "contentLength": 0,
+      "titleLength": 38,
+      "descriptionLength": 149,
+      "headingsCount": 0,
+      "imagesCount": 0,
+      "linksCount": 0
+    },
+    {
+      "url": "https://ziontechgroup.com/careers",
+      "issues": {
+        "noContent": true,
+        "noTitle": false,
+        "noDescription": false,
+        "noStructure": true
+      },
+      "contentLength": 0,
+      "titleLength": 38,
+      "descriptionLength": 149,
+      "headingsCount": 0,
+      "imagesCount": 0,
+      "linksCount": 0
+    },
+    {
+      "url": "https://ziontechgroup.com/case-studies",
+      "issues": {
+        "noContent": true,
+        "noTitle": false,
+        "noDescription": false,
+        "noStructure": true
+      },
+      "contentLength": 0,
+      "titleLength": 38,
+      "descriptionLength": 149,
+      "headingsCount": 0,
+      "imagesCount": 0,
+      "linksCount": 0
+    },
+    {
+      "url": "https://ziontechgroup.com/partners",
+      "issues": {
+        "noContent": true,
+        "noTitle": false,
+        "noDescription": false,
+        "noStructure": true
+      },
+      "contentLength": 0,
+      "titleLength": 38,
+      "descriptionLength": 149,
+      "headingsCount": 0,
+      "imagesCount": 0,
+      "linksCount": 0
+    },
+    {
+      "url": "https://ziontechgroup.com/help",
+      "issues": {
+        "noContent": true,
+        "noTitle": false,
+        "noDescription": false,
+        "noStructure": true
+      },
+      "contentLength": 0,
+      "titleLength": 38,
+      "descriptionLength": 149,
+      "headingsCount": 0,
+      "imagesCount": 0,
+      "linksCount": 0
+    },
+    {
+      "url": "https://ziontechgroup.com/documentation",
+      "issues": {
+        "noContent": true,
+        "noTitle": false,
+        "noDescription": false,
+        "noStructure": true
+      },
+      "contentLength": 0,
+      "titleLength": 38,
+      "descriptionLength": 149,
+      "headingsCount": 0,
+      "imagesCount": 0,
+      "linksCount": 0
+    },
+    {
+      "url": "https://ziontechgroup.com/api",
+      "issues": {
+        "noContent": true,
+        "noTitle": false,
+        "noDescription": false,
+        "noStructure": true
+      },
+      "contentLength": 0,
+      "titleLength": 38,
+      "descriptionLength": 149,
+      "headingsCount": 0,
+      "imagesCount": 0,
+      "linksCount": 0
+    },
+    {
+      "url": "https://ziontechgroup.com/privacy-policy",
+      "issues": {
+        "noContent": true,
+        "noTitle": false,
+        "noDescription": false,
+        "noStructure": true
+      },
+      "contentLength": 0,
+      "titleLength": 38,
+      "descriptionLength": 149,
+      "headingsCount": 0,
+      "imagesCount": 0,
+      "linksCount": 0
+    },
+    {
+      "url": "https://ziontechgroup.com/terms-of-service",
+      "issues": {
+        "noContent": true,
+        "noTitle": false,
+        "noDescription": false,
+        "noStructure": true
+      },
+      "contentLength": 0,
+      "titleLength": 38,
+      "descriptionLength": 149,
+      "headingsCount": 0,
+      "imagesCount": 0,
+      "linksCount": 0
+    }
+  ],
+  "recommendations": [],
+  "timestamp": "2025-08-31T18:06:05.151Z"
+}

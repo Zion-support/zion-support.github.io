@@ -1,0 +1,40 @@
+
+<<<<<<< HEAD
+
+import { render, screen, fireEvent } from '@testing-library/react';
+import @testing-library/jest-dom';
+import PWARegistrationdynamic from "../components/PWARegistration.dynamic";
+
+    render(<PWARegistrationdynamic />);
+    expect(screen.getByTestId('pwaregistration.dynamic')).toBeInTheDocument()})';
+=======
+    expect(screen && screen.getByTestId('pwaregistration ; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import PWARegistrationdynamic from "./components/PWARegistration ; describe('PWARegistrationdynamic', () => { test("renders without crashing",() => { render(<PWARegistrationdynamic />); expect(screen && screen.getByTestId("pwaregistration && pwaregistration.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<PWARegistrationdynamic />)}); test("handles user interactions",() => { render(<PWARegistrationdynamic />)}); test("applies correct styling"
+
+
+  test('renders without crashing', () => {
+
+    render(<PWARegistration />);'
+    expect(screen.getByTestId('pwaregistration.dynamic')).toBeInTheDocument();
+  });'
+>>>>>>> main
+  test('displays correct content', () => {
+    render(<PWARegistrationdynamic />);
+    // Add specific content tests based on component});
+  test('handles user interactions', () => {
+    render(<PWARegistrationdynamic />);
+    // Add interaction tests based on component functionality});
+  test('applies correct styling', () => {
+<<<<<<< HEAD
+
+    render(<PWARegistrationdynamic />);
+    // Add styling tests if needed})});
+
+
+=======
+    render(<PWARegistration />);
+    // Add styling tests if needed
+
+
+
+
+>>>>>>> main

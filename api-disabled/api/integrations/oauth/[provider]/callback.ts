@@ -1,0 +1,10 @@
+
+
+
+
+    message:
+      "OAuth mock callback successful. Use /api/integrations/connect to finalize connection."
+  });
+
+
+

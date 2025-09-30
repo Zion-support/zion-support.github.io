@@ -1,111 +1,137 @@
-import { defineConfig } from "vite"
+import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { resolve } from 'path'
-import { visualizer } from 'rollup-plugin-visualizer'
 
-export default defineConfig(({ mode }) => ({
+// https://vitejs.dev/config/
+export default defineConfig({
   plugins: [
     react({
-      // Enable React Fast Refresh
-      fastRefresh: true,
-      // Optimize JSX runtime
+      // Enable JSX runtime
       jsxRuntime: 'automatic',
-      // Enable babel plugin for better tree shaking
-      babel: {
-        plugins: [
-          // Add any babel plugins here if needed
-        ]
-      }
     }),
-    // Add bundle analyzer for analyze mode
-    ...(mode === 'analyze' ? [
-      visualizer({
-        filename: 'dist/stats.html',
-        open: false,
-        gzipSize: true,
-        brotliSize: true
-      })
-    ] : [])
   ],
+  resolve: {
+    alias: {
+      '@': resolve(__dirname, 'src'),
+      '@components': resolve(__dirname, 'src/components'),
+      '@pages': resolve(__dirname, 'src/pages'),
+      '@utils': resolve(__dirname, 'src/utils'),
+      '@hooks': resolve(__dirname, 'src/hooks'),
+      '@styles': resolve(__dirname, 'src/styles'),
+    },
+  },
   build: {
-    outDir: 'dist',
-    // Enable source maps for production debugging
-    sourcemap: true,
-    // Optimize chunk splitting
+    target: 'esnext',
+    minify: 'terser',
+    sourcemap: false,
+    cssCodeSplit: true,
+    reportCompressedSize: true,
+    assetsInlineLimit: 4096,
     rollupOptions: {
+      external: [
+        'next/link',
+        'next/router',
+        'next/image',
+        'next/head',
+        'next/script',
+        'next/dynamic',
+        'next/navigation'
+      ],
       input: {
         main: './index.html'
+      },
+      treeshake: {
+        moduleSideEffects: false,
+        propertyReadSideEffects: false,
+        tryCatchDeoptimization: false
       },
       output: {
         // Manual chunk splitting for better caching
         manualChunks: (id) => {
-          // Vendor chunks
           if (id.includes('node_modules')) {
-            if (id.includes('react') || id.includes('react-dom')) {
-              return 'vendor-react';
+            // Consolidate all vendor chunks into fewer, larger chunks
+            if (id.includes('react') || id.includes('react-dom') || id.includes('react-router')) {
+              return 'react-vendor';
             }
-            if (id.includes('react-router')) {
-              return 'vendor-router';
+            if (id.includes('framer-motion') || id.includes('lucide-react') || id.includes('@headlessui')) {
+              return 'ui-vendor';
             }
-            if (id.includes('framer-motion') || id.includes('lucide-react')) {
-              return 'vendor-ui';
+            if (id.includes('lodash') || id.includes('date-fns') || id.includes('axios')) {
+              return 'utils-vendor';
             }
-            if (id.includes('clsx') || id.includes('tailwind-merge')) {
-              return 'vendor-utils';
-            }
-            // All other node_modules go to vendor
+            // Group all other node_modules into a single vendor chunk
             return 'vendor';
           }
-          // App chunks
-          if (id.includes('src/pages/')) {
-            return 'pages';
-          }
+          // Consolidate component chunks
           if (id.includes('src/components/')) {
             return 'components';
           }
+          // Consolidate utility chunks
           if (id.includes('src/utils/')) {
             return 'utils';
           }
+          // Consolidate hooks
+          if (id.includes('src/hooks/')) {
+            return 'hooks';
+          }
         },
-        // Optimize chunk file names
-        chunkFileNames: 'assets/js/[name]-[hash].js',
-        entryFileNames: 'assets/js/[name]-[hash].js',
-        assetFileNames: 'assets/[ext]/[name]-[hash].[ext]'
-      }
+        chunkFileNames: (chunkInfo) => {
+          const facadeModuleId = chunkInfo.facadeModuleId
+            ? chunkInfo.facadeModuleId.split('/').pop().replace('.tsx', '').replace('.ts', '')
+            : 'chunk';
+          return `assets/js/${facadeModuleId}-[hash].js`;
+        },
+        entryFileNames: 'assets/js/main-[hash].js',
+        assetFileNames: (assetInfo) => {
+          const info = assetInfo.name.split('.');
+          const ext = info[info.length - 1];
+          if (/\.(css)$/.test(assetInfo.name)) {
+            return `assets/css/[name]-[hash].${ext}`;
+          }
+          return `assets/[name]-[hash].${ext}`;
+        },
+      },
     },
-    // Optimize build size
-    minify: 'terser',
+    // Optimize chunk size
+    chunkSizeWarningLimit: 1000,
     terserOptions: {
       compress: {
         drop_console: true,
         drop_debugger: true,
         pure_funcs: ['console.log', 'console.info', 'console.debug'],
+        passes: 3,
+        unsafe: true,
+        unsafe_comps: true,
+        unsafe_math: true,
+        unsafe_proto: true,
         dead_code: true,
         unused: true,
-        side_effects: false
       },
       mangle: {
-        safari10: true
+        safari10: true,
+        toplevel: true,
+        properties: {
+          regex: /^_/
+        }
       },
       format: {
-        comments: false
-      }
+        comments: false,
+        ascii_only: true,
+      },
     },
-    // Set chunk size warning limit
-    chunkSizeWarningLimit: 1000,
-    // Enable CSS code splitting
-    cssCodeSplit: true,
-    // Target modern browsers for better optimization
-    target: ['es2020', 'edge88', 'firefox78', 'chrome87', 'safari14']
   },
   server: {
     port: 3000,
-    // Enable HMR
-    hmr: true,
-    // Enable CORS for development
-    cors: true
+    open: true,
+    cors: true,
+    host: true,
   },
-  // Optimize dependencies
+  preview: {
+    port: 3000,
+    open: true,
+    cors: true,
+    host: true,
+  },
   optimizeDeps: {
     include: [
       'react',
@@ -114,23 +140,21 @@ export default defineConfig(({ mode }) => ({
       'framer-motion',
       'lucide-react',
       'clsx',
-      'tailwind-merge'
+      'tailwind-merge',
+      'axios',
+      'web-vitals',
     ],
-    exclude: ['@testing-library/react', '@testing-library/jest-dom']
+    exclude: ['@vite/client', '@vite/env'],
   },
-  // Resolve aliases for cleaner imports
-  resolve: {
-    alias: {
-      '@': resolve(__dirname, 'src'),
-      '@components': resolve(__dirname, 'src/components'),
-      '@pages': resolve(__dirname, 'src/pages'),
-      '@hooks': resolve(__dirname, 'src/hooks'),
-      '@utils': resolve(__dirname, 'src/utils'),
-      '@styles': resolve(__dirname, 'src/styles')
-    }
+  define: {
+    global: 'globalThis',
   },
-  // CSS optimization
-  css: {
-    devSourcemap: true
-  }
-}))
+  esbuild: {
+    target: 'esnext',
+    format: 'esm',
+    treeShaking: true,
+    minifyIdentifiers: true,
+    minifySyntax: true,
+    minifyWhitespace: true,
+  },
+})

@@ -1,0 +1,74 @@
+// Using React 17+ automatic runtime; no import needed
+
+const promoted = [
+  {
+    href: '/blog/ai-2026-neural-architecture-search-breakthrough',
+    title: 'Neural Architecture Search 2026',
+    desc: 'Revolutionary NAS algorithms that design optimal neural architectures 1000x faster than humans.',
+    emoji: '🧠',
+    pill: 'New • Jan 15, 2026',
+    theme: 'from-purple-600 to-indigo-600',
+  },
+  {
+    href: '/blog/ai-2026-federated-learning-enterprise-breakthrough',
+    title: 'Federated Learning 2026',
+    desc: 'Privacy-first enterprise AI training across distributed data without centralizing sensitive information.',
+    emoji: '🔐',
+    pill: 'New • Jan 15, 2026',
+    theme: 'from-emerald-600 to-teal-600',
+  },
+  {
+    href: '/blog/ai-2026-quantum-enhanced-analytics',
+    title: 'Quantum-Enhanced Analytics 2026',
+    desc: 'Leverage quantum computing for analytics achieving 1000x speedup in complex data processing.',
+    emoji: '⚛️',
+    pill: 'New • Jan 15, 2026',
+    theme: 'from-cyan-600 to-blue-600',
+  },
+  {
+    href: '/services/ai-autonomous-infrastructure-platform',
+    title: 'AI Autonomous Infrastructure',
+    desc: '99.99% uptime with self-healing, self-optimizing infrastructure and zero manual intervention.',
+    emoji: '🏗️',
+    pill: 'New Service • Jan 15, 2026',
+    theme: 'from-orange-600 to-red-600',
+  },
+];
+
+export default function UnifiedContentPromotion() {
+  return (
+    <section className="py-14">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="mb-8 text-center">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white text-sm">
+            <span>Latest from the Blog</span>
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mt-4">Fresh Content</h2>
+          <p className="text-gray-300 mt-2">Actionable playbooks and executive guides</p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-6">
+          {promoted.map((c) => (
+            <a key={c.href} href={c.href} className="group">
+              <div className={`rounded-2xl overflow-hidden border border-white/10 bg-gradient-to-r ${c.theme} p-[1px]`}>
+                <div className="bg-slate-900 rounded-2xl p-6 h-full">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="text-3xl">{c.emoji}</div>
+                    <div className="text-xs text-white/70 border border-white/20 px-3 py-1 rounded-full">{c.pill}</div>
+                  </div>
+                  <h3 className="text-xl md:text-2xl font-bold text-white group-hover:text-white/90">{c.title}</h3>
+                  <p className="text-white/70 mt-2">{c.desc}</p>
+                  <div className="mt-5 inline-flex items-center text-white font-semibold">
+                    <span>Read article</span>
+                    <span className="ml-2 transition-transform group-hover:translate-x-1">→</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
