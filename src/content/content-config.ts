@@ -239,7 +239,6 @@ featuredBlogPosts.unshift(
 // Newly featured items to advertise on the homepage
 featuredBlogPosts.unshift(
   {
-<<<<<<< HEAD
     id: "genai-reliability-scorecards-2027",
     title: "GenAI Reliability Scorecards 2027",
     description: "Live KPIs + budgets + rollback for affordable, reliable GenAI.",
@@ -268,6 +267,30 @@ featuredBlogPosts.unshift(
     title: "AI Operational Scorecards Q4 2026",
     description: "SLIs tied to KPIs with budgeted actions and rollback",
     link: "/blog/ai-operational-scorecards-q4-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-2026-private-feature-flags",
+    title: "Edge 2026: Private Feature Flags",
+    description: "Signed configs, scoped IDs, and on‑device metrics for zero‑PII rollouts.",
+    link: "/blog/edge-2026-private-feature-flags",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "agent-release-guardrails-2026",
+    title: "Agent Release Guardrails 2026",
+    description: "Budgets, approvals, KPI‑linked canaries, instant rollback.",
+    link: "/blog/agent-release-guardrails-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-2027-cost-optimization-playbook",
+    title: "AI 2027 Cost Optimization Playbook",
+    description: "Tiered routing, caches, compression to cut spend 30–70% without regressions.",
+    link: "/blog/ai-2027-cost-optimization-playbook",
     type: "article",
     featured: true
   },
