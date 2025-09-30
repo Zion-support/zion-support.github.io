@@ -17,6 +17,22 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
+    id: "ai-2025-sept-30-enterprise-ai-safety-blueprint",
+    slug: "ai-2025-sept-30-enterprise-ai-safety-blueprint",
+    title: "AI 2025: Enterprise AI Safety Blueprint",
+    description: "KPI-linked scorecards, CI policy tests, canaries, and instant rollback to ship fast without regressions.",
+    excerpt: "Practical, adoption-friendly guardrails: scorecards wired to KPIs, CI policy tests, live canaries, instant rollback.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "AI Governance",
+    tags: ["Scorecards", "Policy Tests", "Rollback"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/ai-2025-enterprise-ai-safety-blueprint.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "ai-2025-sept-30-autonomous-control-planes",
     slug: "ai-2025-sept-30-autonomous-control-planes",
     title: "AI 2025: Autonomous Control Planes — Budgets, Gates, Rollback",
