@@ -1,5 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
+import NewContent2026ShowcaseBanner from './components/NewContent2026ShowcaseBanner';
+import InteractiveContentShowcase from './components/InteractiveContentShowcase';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -103,6 +105,12 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* New Content Showcase Banner */}
+      <NewContent2026ShowcaseBanner />
+
+      {/* Interactive Content Showcase */}
+      <InteractiveContentShowcase />
 
       {/* Contact Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
