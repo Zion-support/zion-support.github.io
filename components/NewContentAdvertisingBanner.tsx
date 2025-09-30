@@ -28,32 +28,32 @@ export default function NewContentAdvertisingBanner() {
             <div className="grid md:grid-cols-4 gap-6 mb-8">
               {[
                 { 
-                  title: 'Private AI Sandbox (2025)',
-                  description: 'Governed, cost‑capped AI experimentation',
-                  icon: '🧪',
-                  href: '/blog/ai-2025-oct-01-private-ai-sandbox',
+                  title: 'Agent Safety Scorecards',
+                  description: 'Budgets, canaries, rollback for safe agents',
+                  icon: '🛡️',
+                  href: '/blog/ai-2025-oct-02-agent-safety-scorecards',
+                  color: 'from-emerald-500 to-teal-500'
+                },
+                { 
+                  title: 'Private Experiments v4',
+                  description: 'Consentless A/B tests under 100ms',
+                  icon: '⚗️',
+                  href: '/blog/edge-2025-oct-02-private-experiments-v4',
                   color: 'from-indigo-500 to-cyan-500'
                 },
                 { 
-                  title: 'Trustless Evaluation Blueprint (2026)',
-                  description: 'Verifiable evals with signed datasets',
-                  icon: '✅',
-                  href: '/blog/ai-2026-trustless-evaluation-blueprint',
-                  color: 'from-purple-500 to-indigo-500'
-                },
-                { 
-                  title: 'Zero‑Knowledge Analytics at the Edge',
-                  description: 'Consentless insights without PII',
-                  icon: '🛡️',
-                  href: '/blog/edge-2026-zero-knowledge-analytics-blueprint',
-                  color: 'from-pink-500 to-purple-500'
-                },
-                { 
-                  title: 'Meta-Cognitive AI Deep Dive',
-                  description: 'AI that thinks about thinking',
+                  title: 'GenAI Cache Playbook v2',
+                  description: 'Semantic caches + eval gates',
                   icon: '🧠',
-                  href: '/blog/meta-cognitive-ai-deep-dive-2026',
-                  color: 'from-red-500 to-pink-500'
+                  href: '/blog/genai-2025-oct-02-cache-playbook-v2',
+                  color: 'from-purple-500 to-pink-500'
+                },
+                { 
+                  title: 'GenAI Cost Optimization v5',
+                  description: 'Tier routing + caches + scorecards',
+                  icon: '💸',
+                  href: '/blog/genai-2025-oct-01-cost-optimization-v5',
+                  color: 'from-rose-500 to-orange-500'
                 }
               ].map((item, index) => (
                 <a
