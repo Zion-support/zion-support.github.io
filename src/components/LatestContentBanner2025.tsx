@@ -120,7 +120,7 @@ const LatestContentBanner2025: React.FC = () => {
           </div>
           <div className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-yellow-400/20 to-orange-500/20 backdrop-blur-sm rounded-full border border-yellow-400/30">
             <Zap className="w-4 h-4 text-yellow-400 animate-pulse" />
-            <span className="text-sm font-semibold text-yellow-300">11 NEW ARTICLES</span>
+            <span className="text-sm font-semibold text-yellow-300">14 NEW ARTICLES</span>
           </div>
 
           <h2 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-fuchsia-400 bg-clip-text text-transparent animate-fade-in">
@@ -134,7 +134,7 @@ const LatestContentBanner2025: React.FC = () => {
         </div>
 
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-          🚀 JUST PUBLISHED: 11 Revolutionary Breakthrough Articles!
+          🚀 JUST PUBLISHED: 14 Revolutionary Breakthrough Articles!
         </h2>
         <p className="text-xl text-blue-100 mb-8 max-w-3xl">
           Discover <span className="font-bold text-yellow-300">11 BRAND NEW cutting-edge articles</span> including our latest: "AI 2025: The Enterprise Autonomous Operations Revolution" (95% automation, $2M+ savings), "Fortune 500 AI Transformation Case Study" ($50M annual savings), and "AI Autonomous Operations Service" - plus 8 more breakthrough insights on Neuromorphic Computing, Quantum-AI Convergence, Zero Trust Security, Edge AI, Synthetic Data, AI Contract Intelligence, and Real-Time Personalization!
@@ -246,7 +246,7 @@ const LatestContentBanner2025: React.FC = () => {
         {/* Stats */}
         <div className="mt-8 pt-6 border-t border-white/20 flex flex-wrap gap-8">
           <div className="text-center">
-            <div className="text-3xl font-bold text-yellow-300">11</div>
+            <div className="text-3xl font-bold text-yellow-300">14</div>
             <div className="text-sm text-blue-200">NEW Articles TODAY</div>
           </div>
           <div className="text-center">
