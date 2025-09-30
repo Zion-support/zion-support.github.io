@@ -1,333 +1,319 @@
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-
-interface CalculatorState {
-  currentCosts: {
-    infrastructure: number;
-    dataProcessing: number;
-    modelTraining: number;
-    maintenance: number;
-    personnel: number;
-  };
-  optimizationLevel: number;
-  timeHorizon: number;
-}
+import React, { useState } from 'react';
 
 export default function InteractiveAICalculator2026() {
-  const [state, setState] = useState<CalculatorState>({
-    currentCosts: {
-      infrastructure: 50000,
-      dataProcessing: 30000,
-      modelTraining: 20000,
-      maintenance: 15000,
-      personnel: 25000,
-    },
-    optimizationLevel: 70,
-    timeHorizon: 12,
+  const [inputs, setInputs] = useState({
+    annualRevenue: 10000000,
+    operationalCosts: 5000000,
+    aiInvestment: 500000,
+    industry: 'manufacturing',
+    companySize: 'large'
   });
 
-  const [results, setResults] = useState({
-    monthlySavings: 0,
-    annualSavings: 0,
-    roi: 0,
-    paybackPeriod: 0,
-  });
-
-  useEffect(() => {
-    calculateResults();
-  }, [state]);
-
-  const calculateResults = () => {
-    const totalCurrentCosts = Object.values(state.currentCosts).reduce((sum, cost) => sum + cost, 0);
-    const savingsPercentage = state.optimizationLevel / 100;
-    const monthlySavings = totalCurrentCosts * savingsPercentage;
-    const annualSavings = monthlySavings * 12;
+  const calculateROI = () => {
+    const { annualRevenue, operationalCosts, aiInvestment, industry, companySize } = inputs;
     
-    // Assume implementation cost is 20% of annual savings
-    const implementationCost = annualSavings * 0.2;
-    const roi = ((annualSavings - implementationCost) / implementationCost) * 100;
-    const paybackPeriod = implementationCost / monthlySavings;
+    // Base savings percentages by industry
+    const industryMultipliers = {
+      manufacturing: { costReduction: 0.25, efficiencyGain: 0.35, qualityImprovement: 0.15 },
+      healthcare: { costReduction: 0.20, efficiencyGain: 0.30, qualityImprovement: 0.25 },
+      financial: { costReduction: 0.30, efficiencyGain: 0.40, qualityImprovement: 0.20 },
+      retail: { costReduction: 0.22, efficiencyGain: 0.28, qualityImprovement: 0.18 },
+      technology: { costReduction: 0.35, efficiencyGain: 0.45, qualityImprovement: 0.30 }
+    };
 
-    setResults({
-      monthlySavings: Math.round(monthlySavings),
-      annualSavings: Math.round(annualSavings),
+    // Company size multipliers
+    const sizeMultipliers = {
+      small: 0.8,
+      medium: 1.0,
+      large: 1.2,
+      enterprise: 1.5
+    };
+
+    const multipliers = industryMultipliers[industry as keyof typeof industryMultipliers];
+    const sizeMultiplier = sizeMultipliers[companySize as keyof typeof sizeMultipliers];
+
+    // Calculate savings
+    const costSavings = operationalCosts * multipliers.costReduction * sizeMultiplier;
+    const efficiencySavings = annualRevenue * multipliers.efficiencyGain * 0.1 * sizeMultiplier;
+    const qualitySavings = annualRevenue * multipliers.qualityImprovement * 0.05 * sizeMultiplier;
+    
+    const totalAnnualSavings = costSavings + efficiencySavings + qualitySavings;
+    const roi = ((totalAnnualSavings - aiInvestment) / aiInvestment) * 100;
+    const paybackPeriod = aiInvestment / (totalAnnualSavings / 12);
+
+    return {
+      totalAnnualSavings: Math.round(totalAnnualSavings),
       roi: Math.round(roi),
       paybackPeriod: Math.round(paybackPeriod * 10) / 10,
-    });
+      costSavings: Math.round(costSavings),
+      efficiencySavings: Math.round(efficiencySavings),
+      qualitySavings: Math.round(qualitySavings)
+    };
   };
 
-  const updateCost = (category: keyof CalculatorState['currentCosts'], value: number) => {
-    setState(prev => ({
-      ...prev,
-      currentCosts: {
-        ...prev.currentCosts,
-        [category]: value,
-      },
-    }));
-  };
+  const results = calculateROI();
 
-  const updateOptimizationLevel = (value: number) => {
-    setState(prev => ({
+  const handleInputChange = (field: string, value: string | number) => {
+    setInputs(prev => ({
       ...prev,
-      optimizationLevel: value,
-    }));
-  };
-
-  const updateTimeHorizon = (value: number) => {
-    setState(prev => ({
-      ...prev,
-      timeHorizon: value,
+      [field]: value
     }));
   };
 
   return (
-    <div className="bg-gradient-to-br from-blue-50 via-white to-teal-50 py-20">
+    <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">
-            AI Cost Optimization Calculator
+        <div className="text-center mb-16">
+          <div className="flex items-center justify-center gap-2 mb-4">
+            <span className="bg-gradient-to-r from-blue-600 to-teal-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+              🧮 Interactive Calculator
+            </span>
+            <span className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+              ✨ 2026 AI ROI
+            </span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+            Calculate Your AI Transformation ROI
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Calculate your potential AI cost savings and ROI with our interactive calculator. 
-            See how much you could save with proper AI optimization strategies.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Discover the potential return on investment for your AI transformation project. 
+            Get personalized projections based on your industry, company size, and investment level.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          {/* Calculator Inputs */}
-          <div className="bg-white rounded-xl shadow-lg p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Current AI Costs (Monthly)</h3>
+          {/* Input Section */}
+          <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-200">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">Your Business Profile</h3>
             
             <div className="space-y-6">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Infrastructure Costs
-                </label>
-                <div className="relative">
-                  <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">$</span>
-                  <input
-                    type="number"
-                    value={state.currentCosts.infrastructure}
-                    onChange={(e) => updateCost('infrastructure', parseInt(e.target.value) || 0)}
-                    className="w-full pl-8 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="50000"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Data Processing Costs
-                </label>
-                <div className="relative">
-                  <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">$</span>
-                  <input
-                    type="number"
-                    value={state.currentCosts.dataProcessing}
-                    onChange={(e) => updateCost('dataProcessing', parseInt(e.target.value) || 0)}
-                    className="w-full pl-8 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="30000"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Model Training Costs
-                </label>
-                <div className="relative">
-                  <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">$</span>
-                  <input
-                    type="number"
-                    value={state.currentCosts.modelTraining}
-                    onChange={(e) => updateCost('modelTraining', parseInt(e.target.value) || 0)}
-                    className="w-full pl-8 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="20000"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Maintenance Costs
-                </label>
-                <div className="relative">
-                  <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">$</span>
-                  <input
-                    type="number"
-                    value={state.currentCosts.maintenance}
-                    onChange={(e) => updateCost('maintenance', parseInt(e.target.value) || 0)}
-                    className="w-full pl-8 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="15000"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Personnel Costs
-                </label>
-                <div className="relative">
-                  <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">$</span>
-                  <input
-                    type="number"
-                    value={state.currentCosts.personnel}
-                    onChange={(e) => updateCost('personnel', parseInt(e.target.value) || 0)}
-                    className="w-full pl-8 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="25000"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Optimization Level: {state.optimizationLevel}%
+                  Annual Revenue ($)
                 </label>
                 <input
-                  type="range"
-                  min="20"
-                  max="90"
-                  value={state.optimizationLevel}
-                  onChange={(e) => updateOptimizationLevel(parseInt(e.target.value))}
-                  className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
+                  type="number"
+                  value={inputs.annualRevenue}
+                  onChange={(e) => handleInputChange('annualRevenue', parseInt(e.target.value) || 0)}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-lg"
+                  placeholder="10,000,000"
                 />
-                <div className="flex justify-between text-xs text-gray-500 mt-1">
-                  <span>20%</span>
-                  <span>90%</span>
-                </div>
               </div>
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Time Horizon: {state.timeHorizon} months
+                  Current Operational Costs ($)
                 </label>
                 <input
-                  type="range"
-                  min="6"
-                  max="36"
-                  value={state.timeHorizon}
-                  onChange={(e) => updateTimeHorizon(parseInt(e.target.value))}
-                  className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
+                  type="number"
+                  value={inputs.operationalCosts}
+                  onChange={(e) => handleInputChange('operationalCosts', parseInt(e.target.value) || 0)}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-lg"
+                  placeholder="5,000,000"
                 />
-                <div className="flex justify-between text-xs text-gray-500 mt-1">
-                  <span>6 months</span>
-                  <span>36 months</span>
-                </div>
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  AI Investment Budget ($)
+                </label>
+                <input
+                  type="number"
+                  value={inputs.aiInvestment}
+                  onChange={(e) => handleInputChange('aiInvestment', parseInt(e.target.value) || 0)}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-lg"
+                  placeholder="500,000"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Industry
+                </label>
+                <select
+                  value={inputs.industry}
+                  onChange={(e) => handleInputChange('industry', e.target.value)}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-lg"
+                >
+                  <option value="manufacturing">Manufacturing</option>
+                  <option value="healthcare">Healthcare</option>
+                  <option value="financial">Financial Services</option>
+                  <option value="retail">Retail</option>
+                  <option value="technology">Technology</option>
+                </select>
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Company Size
+                </label>
+                <select
+                  value={inputs.companySize}
+                  onChange={(e) => handleInputChange('companySize', e.target.value)}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-lg"
+                >
+                  <option value="small">Small (1-50 employees)</option>
+                  <option value="medium">Medium (51-500 employees)</option>
+                  <option value="large">Large (501-5000 employees)</option>
+                  <option value="enterprise">Enterprise (5000+ employees)</option>
+                </select>
               </div>
             </div>
           </div>
 
-          {/* Results */}
+          {/* Results Section */}
           <div className="space-y-6">
-            {/* Monthly Savings */}
-            <div className="bg-gradient-to-r from-green-500 to-green-600 text-white rounded-xl p-8">
-              <div className="text-center">
-                <div className="text-4xl font-bold mb-2">${results.monthlySavings.toLocaleString()}</div>
-                <div className="text-xl opacity-90">Monthly Savings</div>
-                <div className="text-sm opacity-75 mt-2">
-                  {state.optimizationLevel}% reduction in current costs
+            {/* Main ROI Card */}
+            <div className="bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl shadow-xl p-8 text-white">
+              <h3 className="text-2xl font-bold mb-6">Your AI ROI Projection</h3>
+              
+              <div className="grid grid-cols-2 gap-6 mb-6">
+                <div className="text-center">
+                  <div className="text-4xl font-bold mb-2">{results.roi}%</div>
+                  <div className="text-sm opacity-90">Expected ROI</div>
                 </div>
+                <div className="text-center">
+                  <div className="text-4xl font-bold mb-2">{results.paybackPeriod}</div>
+                  <div className="text-sm opacity-90">Months to Break Even</div>
+                </div>
+              </div>
+
+              <div className="text-center">
+                <div className="text-3xl font-bold mb-2">${results.totalAnnualSavings.toLocaleString()}</div>
+                <div className="text-sm opacity-90">Projected Annual Savings</div>
               </div>
             </div>
 
-            {/* Annual Savings */}
-            <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-xl p-8">
-              <div className="text-center">
-                <div className="text-4xl font-bold mb-2">${results.annualSavings.toLocaleString()}</div>
-                <div className="text-xl opacity-90">Annual Savings</div>
-                <div className="text-sm opacity-75 mt-2">
-                  Total yearly cost reduction
+            {/* Breakdown Cards */}
+            <div className="grid grid-cols-1 gap-4">
+              <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
+                <div className="flex items-center justify-between mb-2">
+                  <h4 className="font-semibold text-gray-900">Cost Reduction</h4>
+                  <span className="text-2xl">💰</span>
                 </div>
-              </div>
-            </div>
-
-            {/* ROI */}
-            <div className="bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-xl p-8">
-              <div className="text-center">
-                <div className="text-4xl font-bold mb-2">{results.roi}%</div>
-                <div className="text-xl opacity-90">Return on Investment</div>
-                <div className="text-sm opacity-75 mt-2">
-                  Over {state.timeHorizon} months
+                <div className="text-2xl font-bold text-green-600">
+                  ${results.costSavings.toLocaleString()}
                 </div>
+                <div className="text-sm text-gray-600">Operational cost savings</div>
               </div>
-            </div>
 
-            {/* Payback Period */}
-            <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-xl p-8">
-              <div className="text-center">
-                <div className="text-4xl font-bold mb-2">{results.paybackPeriod}</div>
-                <div className="text-xl opacity-90">Months to Payback</div>
-                <div className="text-sm opacity-75 mt-2">
-                  Break-even point
+              <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
+                <div className="flex items-center justify-between mb-2">
+                  <h4 className="font-semibold text-gray-900">Efficiency Gains</h4>
+                  <span className="text-2xl">⚡</span>
                 </div>
+                <div className="text-2xl font-bold text-blue-600">
+                  ${results.efficiencySavings.toLocaleString()}
+                </div>
+                <div className="text-sm text-gray-600">Productivity improvements</div>
               </div>
-            </div>
 
-            {/* Call to Action */}
-            <div className="bg-white rounded-xl shadow-lg p-8 text-center">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
-                Ready to Achieve These Savings?
-              </h3>
-              <p className="text-gray-600 mb-6">
-                Our AI cost optimization experts can help you implement these strategies 
-                and achieve real results.
-              </p>
-              <div className="space-y-3">
-                <Link
-                  href="/services/ai-cost-optimization"
-                  className="block w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-                >
-                  Get Free Cost Audit
-                </Link>
-                <a
-                  href="tel:+13024640950"
-                  className="block w-full border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-                >
-                  Call +1 302 464 0950
-                </a>
+              <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
+                <div className="flex items-center justify-between mb-2">
+                  <h4 className="font-semibold text-gray-900">Quality Improvements</h4>
+                  <span className="text-2xl">🎯</span>
+                </div>
+                <div className="text-2xl font-bold text-purple-600">
+                  ${results.qualitySavings.toLocaleString()}
+                </div>
+                <div className="text-sm text-gray-600">Error reduction savings</div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Additional Information */}
-        <div className="mt-16 bg-white rounded-xl shadow-lg p-8">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-            How We Calculate Your Savings
-          </h3>
-          <div className="grid md:grid-cols-3 gap-8">
+        {/* Industry Insights */}
+        <div className="mt-16 bg-white rounded-2xl shadow-xl p-8 border border-gray-200">
+          <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Industry-Specific AI Benefits</h3>
+          
+          <div className="grid md:grid-cols-5 gap-6">
             <div className="text-center">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">📊</span>
+                <span className="text-2xl">🏭</span>
               </div>
-              <h4 className="font-semibold text-gray-900 mb-2">Data Analysis</h4>
-              <p className="text-gray-600 text-sm">
-                We analyze your current AI infrastructure and identify optimization opportunities
-              </p>
+              <h4 className="font-bold text-gray-900 mb-2">Manufacturing</h4>
+              <div className="text-sm text-gray-600 space-y-1">
+                <div>• 60% downtime reduction</div>
+                <div>• 40% quality improvement</div>
+                <div>• 25% efficiency gain</div>
+              </div>
             </div>
+
             <div className="text-center">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">⚡</span>
+                <span className="text-2xl">🏥</span>
               </div>
-              <h4 className="font-semibold text-gray-900 mb-2">Optimization Strategies</h4>
-              <p className="text-gray-600 text-sm">
-                Implement proven strategies to reduce costs while improving performance
-              </p>
+              <h4 className="font-bold text-gray-900 mb-2">Healthcare</h4>
+              <div className="text-sm text-gray-600 space-y-1">
+                <div>• 80% faster diagnoses</div>
+                <div>• 99.5% accuracy rate</div>
+                <div>• 30% cost reduction</div>
+              </div>
             </div>
+
             <div className="text-center">
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">📈</span>
+                <span className="text-2xl">🏦</span>
               </div>
-              <h4 className="font-semibold text-gray-900 mb-2">ROI Tracking</h4>
-              <p className="text-gray-600 text-sm">
-                Monitor and measure your savings with detailed reporting and analytics
-              </p>
+              <h4 className="font-bold text-gray-900 mb-2">Financial</h4>
+              <div className="text-sm text-gray-600 space-y-1">
+                <div>• 95% process automation</div>
+                <div>• 99.7% fraud detection</div>
+                <div>• 80% faster processing</div>
+              </div>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🛒</span>
+              </div>
+              <h4 className="font-bold text-gray-900 mb-2">Retail</h4>
+              <div className="text-sm text-gray-600 space-y-1">
+                <div>• 250% customer satisfaction</div>
+                <div>• 60% inventory optimization</div>
+                <div>• 35% sales increase</div>
+              </div>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">💻</span>
+              </div>
+              <h4 className="font-bold text-gray-900 mb-2">Technology</h4>
+              <div className="text-sm text-gray-600 space-y-1">
+                <div>• 90% development speed</div>
+                <div>• 70% bug reduction</div>
+                <div>• 50% deployment time</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="mt-16 text-center">
+          <div className="bg-gradient-to-r from-blue-600 to-teal-600 rounded-2xl p-8 text-white">
+            <h3 className="text-2xl font-bold mb-4">Ready to Start Your AI Transformation?</h3>
+            <p className="text-lg mb-6 opacity-90">
+              Get a personalized AI strategy consultation and detailed implementation roadmap 
+              tailored to your specific business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="tel:+13024640950"
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              >
+                Call +1 302 464 0950
+              </a>
+              <a
+                href="mailto:kleber@ziontechgroup.com"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+              >
+                Get Free Consultation
+              </a>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
