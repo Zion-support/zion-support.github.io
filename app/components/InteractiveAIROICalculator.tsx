@@ -1,60 +1,51 @@
-'use client';
+import React, { useState } from 'react';
+import { Calculator, TrendingUp, DollarSign, Users, Clock } from 'lucide-react';
 
-import React, { useState, useEffect } from 'react';
-
-interface ROICalculatorProps {
-  className?: string;
-}
-
-export default function InteractiveAIROICalculator({ className = '' }: ROICalculatorProps) {
+export default function InteractiveAIROICalculator() {
   const [inputs, setInputs] = useState({
-    annualRevenue: 10000000,
-    operationalCosts: 5000000,
-    currentEfficiency: 70,
-    expectedEfficiencyGain: 90,
-    implementationCost: 2000000,
-    timeToDeploy: 8
+    currentEmployees: 100,
+    averageSalary: 75000,
+    currentProductivity: 100,
+    aiImplementationCost: 500000,
+    timeToImplement: 12
   });
-
-  const [results, setResults] = useState({
-    annualSavings: 0,
-    roi: 0,
-    paybackPeriod: 0,
-    netBenefit: 0,
-    efficiencyGain: 0
-  });
-
-  useEffect(() => {
-    calculateROI();
-  }, [inputs]);
 
   const calculateROI = () => {
-    const { annualRevenue, operationalCosts, currentEfficiency, expectedEfficiencyGain, implementationCost, timeToDeploy } = inputs;
+    const { currentEmployees, averageSalary, currentProductivity, aiImplementationCost, timeToImplement } = inputs;
     
-    // Calculate efficiency improvement
-    const efficiencyGain = (expectedEfficiencyGain - currentEfficiency) / 100;
+    // Calculate annual labor cost
+    const annualLaborCost = currentEmployees * averageSalary;
     
-    // Calculate annual savings based on operational cost reduction
-    const annualSavings = operationalCosts * efficiencyGain;
+    // AI productivity improvement (conservative estimate)
+    const productivityImprovement = 0.3; // 30% improvement
+    const newProductivity = currentProductivity * (1 + productivityImprovement);
+    
+    // Calculate savings from productivity gains
+    const productivitySavings = annualLaborCost * productivityImprovement;
+    
+    // Additional benefits (reduced errors, faster processing, etc.)
+    const additionalBenefits = annualLaborCost * 0.15; // 15% additional benefits
+    
+    // Total annual savings
+    const totalAnnualSavings = productivitySavings + additionalBenefits;
     
     // Calculate ROI
-    const roi = ((annualSavings - implementationCost) / implementationCost) * 100;
+    const roi = ((totalAnnualSavings - aiImplementationCost) / aiImplementationCost) * 100;
     
-    // Calculate payback period in months
-    const monthlySavings = annualSavings / 12;
-    const paybackPeriod = implementationCost / monthlySavings;
+    // Calculate payback period
+    const paybackPeriod = aiImplementationCost / totalAnnualSavings;
     
-    // Calculate net benefit over 3 years
-    const netBenefit = (annualSavings * 3) - implementationCost;
-    
-    setResults({
-      annualSavings,
-      roi,
-      paybackPeriod,
-      netBenefit,
-      efficiencyGain: efficiencyGain * 100
-    });
+    return {
+      roi: Math.max(0, roi),
+      paybackPeriod: Math.max(0, paybackPeriod),
+      totalAnnualSavings,
+      productivitySavings,
+      additionalBenefits,
+      newProductivity
+    };
   };
+
+  const results = calculateROI();
 
   const handleInputChange = (field: string, value: number) => {
     setInputs(prev => ({
@@ -63,224 +54,183 @@ export default function InteractiveAIROICalculator({ className = '' }: ROICalcul
     }));
   };
 
-  const formatCurrency = (amount: number) => {
-    return new Intl.NumberFormat('en-US', {
-      style: 'currency',
-      currency: 'USD',
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 0,
-    }).format(amount);
-  };
-
-  const formatPercentage = (value: number) => {
-    return `${value.toFixed(1)}%`;
-  };
-
   return (
-    <div className={`bg-white rounded-xl shadow-lg p-8 ${className}`}>
-      <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold text-gray-900 mb-4">
-          AI ROI Calculator
-        </h2>
-        <p className="text-lg text-gray-600">
-          Calculate your potential return on investment with AI transformation
-        </p>
-      </div>
-
-      <div className="grid lg:grid-cols-2 gap-8">
-        {/* Input Section */}
-        <div className="space-y-6">
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">Enter Your Business Metrics</h3>
-          
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              Annual Revenue
-            </label>
-            <input
-              type="number"
-              value={inputs.annualRevenue}
-              onChange={(e) => handleInputChange('annualRevenue', Number(e.target.value))}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              placeholder="10,000,000"
-            />
+    <div className="bg-gradient-to-br from-blue-50 to-indigo-100 p-8 rounded-2xl shadow-xl">
+      <div className="max-w-4xl mx-auto">
+        <div className="text-center mb-8">
+          <div className="flex items-center justify-center mb-4">
+            <Calculator className="w-8 h-8 text-blue-600 mr-3" />
+            <h2 className="text-3xl font-bold text-gray-900">AI ROI Calculator</h2>
           </div>
-
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              Annual Operational Costs
-            </label>
-            <input
-              type="number"
-              value={inputs.operationalCosts}
-              onChange={(e) => handleInputChange('operationalCosts', Number(e.target.value))}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              placeholder="5,000,000"
-            />
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              Current Efficiency Level (%)
-            </label>
-            <input
-              type="number"
-              value={inputs.currentEfficiency}
-              onChange={(e) => handleInputChange('currentEfficiency', Number(e.target.value))}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              min="0"
-              max="100"
-            />
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              Expected AI Efficiency Gain (%)
-            </label>
-            <input
-              type="number"
-              value={inputs.expectedEfficiencyGain}
-              onChange={(e) => handleInputChange('expectedEfficiencyGain', Number(e.target.value))}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              min="0"
-              max="100"
-            />
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              AI Implementation Cost
-            </label>
-            <input
-              type="number"
-              value={inputs.implementationCost}
-              onChange={(e) => handleInputChange('implementationCost', Number(e.target.value))}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              placeholder="2,000,000"
-            />
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              Time to Deploy (months)
-            </label>
-            <input
-              type="number"
-              value={inputs.timeToDeploy}
-              onChange={(e) => handleInputChange('timeToDeploy', Number(e.target.value))}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              min="1"
-              max="24"
-            />
-          </div>
-        </div>
-
-        {/* Results Section */}
-        <div className="space-y-6">
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">Your AI ROI Projections</h3>
-          
-          <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-green-600 mb-2">
-                {formatCurrency(results.annualSavings)}
-              </div>
-              <div className="text-gray-700 font-semibold">Annual Savings</div>
-            </div>
-          </div>
-
-          <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-blue-600 mb-2">
-                {formatPercentage(results.roi)}
-              </div>
-              <div className="text-gray-700 font-semibold">ROI</div>
-            </div>
-          </div>
-
-          <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-purple-600 mb-2">
-                {results.paybackPeriod.toFixed(1)}m
-              </div>
-              <div className="text-gray-700 font-semibold">Payback Period</div>
-            </div>
-          </div>
-
-          <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-6">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-orange-600 mb-2">
-                {formatCurrency(results.netBenefit)}
-              </div>
-              <div className="text-gray-700 font-semibold">3-Year Net Benefit</div>
-            </div>
-          </div>
-
-          {/* Efficiency Gain Visualization */}
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl p-6">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-teal-600 mb-2">
-                {formatPercentage(results.efficiencyGain)}
-              </div>
-              <div className="text-gray-700 font-semibold">Efficiency Improvement</div>
-            </div>
-          </div>
-
-          {/* ROI Breakdown */}
-          <div className="bg-gray-50 rounded-xl p-6">
-            <h4 className="text-lg font-semibold text-gray-900 mb-4">ROI Breakdown</h4>
-            <div className="space-y-3">
-              <div className="flex justify-between items-center">
-                <span className="text-gray-600">Investment:</span>
-                <span className="font-semibold">{formatCurrency(inputs.implementationCost)}</span>
-              </div>
-              <div className="flex justify-between items-center">
-                <span className="text-gray-600">Annual Savings:</span>
-                <span className="font-semibold text-green-600">{formatCurrency(results.annualSavings)}</span>
-              </div>
-              <div className="flex justify-between items-center">
-                <span className="text-gray-600">ROI:</span>
-                <span className="font-semibold text-blue-600">{formatPercentage(results.roi)}</span>
-              </div>
-              <div className="flex justify-between items-center border-t border-gray-200 pt-3">
-                <span className="text-gray-900 font-semibold">Net Benefit (3 years):</span>
-                <span className="font-bold text-purple-600">{formatCurrency(results.netBenefit)}</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* CTA Section */}
-      <div className="mt-8 pt-8 border-t border-gray-200">
-        <div className="text-center">
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Ready to Achieve These Results?
-          </h3>
-          <p className="text-gray-600 mb-6">
-            Let our AI experts help you implement a transformation strategy that delivers real ROI.
+          <p className="text-lg text-gray-600">
+            Calculate the potential return on investment for AI implementation in your organization
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="tel:+13024640950"
-              className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg"
-            >
-              Call +1 302 464 0950
-            </a>
-            <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-            >
-              Get Free Consultation
-            </a>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {/* Input Section */}
+          <div className="space-y-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Organization Details</h3>
+            
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Number of Employees
+              </label>
+              <input
+                type="number"
+                value={inputs.currentEmployees}
+                onChange={(e) => handleInputChange('currentEmployees', parseInt(e.target.value) || 0)}
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                min="1"
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Average Annual Salary ($)
+              </label>
+              <input
+                type="number"
+                value={inputs.averageSalary}
+                onChange={(e) => handleInputChange('averageSalary', parseInt(e.target.value) || 0)}
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                min="10000"
+                step="1000"
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Current Productivity Level (%)
+              </label>
+              <input
+                type="number"
+                value={inputs.currentProductivity}
+                onChange={(e) => handleInputChange('currentProductivity', parseInt(e.target.value) || 0)}
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                min="1"
+                max="200"
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                AI Implementation Cost ($)
+              </label>
+              <input
+                type="number"
+                value={inputs.aiImplementationCost}
+                onChange={(e) => handleInputChange('aiImplementationCost', parseInt(e.target.value) || 0)}
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                min="10000"
+                step="10000"
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Implementation Timeline (months)
+              </label>
+              <input
+                type="number"
+                value={inputs.timeToImplement}
+                onChange={(e) => handleInputChange('timeToImplement', parseInt(e.target.value) || 0)}
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                min="1"
+                max="36"
+              />
+            </div>
+          </div>
+
+          {/* Results Section */}
+          <div className="space-y-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Projected Results</h3>
+            
+            {/* ROI */}
+            <div className="bg-white p-6 rounded-xl shadow-md">
+              <div className="flex items-center mb-3">
+                <TrendingUp className="w-6 h-6 text-green-600 mr-2" />
+                <h4 className="text-lg font-semibold text-gray-900">ROI</h4>
+              </div>
+              <div className="text-3xl font-bold text-green-600 mb-2">
+                {results.roi.toFixed(1)}%
+              </div>
+              <p className="text-sm text-gray-600">
+                Return on investment after first year
+              </p>
+            </div>
+
+            {/* Payback Period */}
+            <div className="bg-white p-6 rounded-xl shadow-md">
+              <div className="flex items-center mb-3">
+                <Clock className="w-6 h-6 text-blue-600 mr-2" />
+                <h4 className="text-lg font-semibold text-gray-900">Payback Period</h4>
+              </div>
+              <div className="text-3xl font-bold text-blue-600 mb-2">
+                {results.paybackPeriod.toFixed(1)} years
+              </div>
+              <p className="text-sm text-gray-600">
+                Time to recover implementation costs
+              </p>
+            </div>
+
+            {/* Annual Savings */}
+            <div className="bg-white p-6 rounded-xl shadow-md">
+              <div className="flex items-center mb-3">
+                <DollarSign className="w-6 h-6 text-purple-600 mr-2" />
+                <h4 className="text-lg font-semibold text-gray-900">Annual Savings</h4>
+              </div>
+              <div className="text-3xl font-bold text-purple-600 mb-2">
+                ${results.totalAnnualSavings.toLocaleString()}
+              </div>
+              <p className="text-sm text-gray-600">
+                Total annual cost savings
+              </p>
+            </div>
+
+            {/* Productivity Gain */}
+            <div className="bg-white p-6 rounded-xl shadow-md">
+              <div className="flex items-center mb-3">
+                <Users className="w-6 h-6 text-orange-600 mr-2" />
+                <h4 className="text-lg font-semibold text-gray-900">Productivity Gain</h4>
+              </div>
+              <div className="text-3xl font-bold text-orange-600 mb-2">
+                {((results.newProductivity - inputs.currentProductivity) / inputs.currentProductivity * 100).toFixed(1)}%
+              </div>
+              <p className="text-sm text-gray-600">
+                Increase in productivity levels
+              </p>
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Disclaimer */}
-      <div className="mt-6 pt-6 border-t border-gray-200">
-        <p className="text-sm text-gray-500 text-center">
-          * ROI calculations are estimates based on industry averages and may vary based on specific business conditions, 
-          implementation approach, and market factors. Actual results may differ.
-        </p>
+        {/* Breakdown */}
+        <div className="mt-8 bg-white p-6 rounded-xl shadow-md">
+          <h4 className="text-lg font-semibold text-gray-900 mb-4">Savings Breakdown</h4>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <div className="text-sm text-gray-600">Productivity Savings</div>
+              <div className="text-xl font-semibold text-green-600">
+                ${results.productivitySavings.toLocaleString()}
+              </div>
+            </div>
+            <div>
+              <div className="text-sm text-gray-600">Additional Benefits</div>
+              <div className="text-xl font-semibold text-blue-600">
+                ${results.additionalBenefits.toLocaleString()}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Disclaimer */}
+        <div className="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+          <p className="text-sm text-yellow-800">
+            <strong>Disclaimer:</strong> This calculator provides estimates based on industry averages. 
+            Actual results may vary based on implementation quality, industry specifics, and organizational factors. 
+            Consult with our AI experts for a detailed analysis tailored to your organization.
+          </p>
+        </div>
       </div>
     </div>
   );

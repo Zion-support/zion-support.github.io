@@ -52,6 +52,9 @@ import LatestAIInnovations2026Banner from '../components/LatestAIInnovations2026
 import RevolutionaryContentShowcase2026 from '../components/RevolutionaryContentShowcase2026';
 import AIInnovation2026PromotionalBanner from '../components/AIInnovation2026PromotionalBanner';
 import LatestContentPromotionalBanner from '../components/LatestContentPromotionalBanner';
+import Ultimate2026ContentShowcaseBanner from '../components/Ultimate2026ContentShowcaseBanner';
+import InteractiveAIROICalculator from '../components/InteractiveAIROICalculator';
+import MegaTransformationSuccessBanner from '../components/MegaTransformationSuccessBanner';
 // import NewContentPromotionalBanner2026 from '../components/NewContentPromotionalBanner2026';
 // import AIInnovationShowcaseBanner2026 from '../components/AIInnovationShowcaseBanner2026';
 import AIAdvancedInnovationBanner2026 from '../components/AIAdvancedInnovationBanner2026';
@@ -190,6 +193,19 @@ export default function HomePage() {
         
         {/* Latest Content Promotional Banner */}
         <LatestContentPromotionalBanner />
+        
+        {/* Ultimate 2026 Content Showcase */}
+        <Ultimate2026ContentShowcaseBanner />
+        
+        {/* Mega Transformation Success Stories */}
+        <MegaTransformationSuccessBanner />
+        
+        {/* Interactive AI ROI Calculator */}
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-6xl mx-auto px-4">
+            <InteractiveAIROICalculator />
+          </div>
+        </section>
         
         {/* Hero Section */}
         <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
