@@ -17,6 +17,22 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
+    id: "ai-2025-sept-30-autonomous-control-planes",
+    slug: "ai-2025-sept-30-autonomous-control-planes",
+    title: "AI 2025: Autonomous Control Planes — Budgets, Gates, Rollback",
+    description: "Design budget-aware, policy-gated AI platforms with instant rollback and KPI-linked guardrails.",
+    excerpt: "Operate AI safely at speed with budgets, canaries, policy tests, and instant rollback.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "AI Operations",
+    tags: ["Budgets", "Policy Tests", "Rollback"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/ai-autonomous-control-planes-2025.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "ai-2026-runtime-rollback-blueprint",
     slug: "ai-2026-runtime-rollback-blueprint",
     title: "AI 2026: Runtime Rollback Blueprint",
@@ -68,8 +84,7 @@ export const latestArticles: LatestArticle[] = [
     id: "ai-2028-autonomous-risk-budgets",
     slug: "ai-2028-autonomous-risk-budgets",
     title: "AI 2028: Autonomous Risk Budgets — Faster, Safer Releases",
-    description: "Live KPI‑linked budgets that automate guardrails across environments with instant rollback.
-",
+    description: "Live KPI‑linked budgets that automate guardrails across environments with instant rollback.",
     excerpt: "Design autonomous risk budgets that keep teams fast while containing incidents in seconds.",
     author: "Zion Tech Group Team",
     date: "2025-09-30",

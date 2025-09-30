@@ -812,6 +812,14 @@ featuredBlogPosts.unshift(
 // Sept 30, 2025 – Feature three brand-new posts just created
 featuredBlogPosts.unshift(
   {
+    id: "ai-2025-sept-30-autonomous-control-planes",
+    title: "AI 2025: Autonomous Control Planes",
+    description: "Budgets, policy gates, and instant rollback for safe autonomy",
+    link: "/blog/ai-2025-sept-30-autonomous-control-planes",
+    type: "article",
+    featured: true
+  },
+  {
     id: "ai-2025-sept-30-breaking-enterprise-ai-breakthroughs",
     title: "Sept 30, 2025: Breaking Enterprise AI Breakthroughs",
     description: "8 production‑ready patterns: rollback, scorecards, consentless analytics, and more.",

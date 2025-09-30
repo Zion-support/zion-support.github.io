@@ -10,6 +10,15 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-2025-sept-30-autonomous-control-planes",
+    title: "AI 2025: Autonomous Control Planes — Budgets, Gates, Rollback",
+    description: "Design budget-aware, policy-gated AI platforms with instant rollback and KPI-linked guardrails.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
     slug: "ai-2028-autonomous-governance-blueprint",
     title: "AI 2028: Autonomous Governance Blueprint",
     description: "Budgets, live scorecards, PR policy tests, and rollback for safe autonomy.",

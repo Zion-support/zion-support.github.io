@@ -5,39 +5,39 @@ const NewContentAdvertisingBanner: React.FC = () => {
   const featuredContent = [
     {
       id: 1,
-      title: 'AI 2028: Autonomous Ops Guardrails',
+      title: 'AI 2025: Autonomous Control Planes',
       category: 'AI Operations',
-      readTime: '12 min',
+      readTime: '9 min',
       rating: 5.0,
       readers: '120K+',
       badge: 'NEW',
       gradient: 'from-blue-500 to-purple-500',
       icon: <Star className="w-6 h-6" />,
-      link: '/blog/ai-2028-autonomous-ops-guardrails'
+      link: '/blog/ai-2025-sept-30-autonomous-control-planes'
     },
     {
       id: 2,
-      title: 'Edge 2028: Private Personalization <100ms',
-      category: 'Edge',
-      readTime: '10 min',
+      title: 'Edge 2026: Attested Analytics',
+      category: 'Analytics',
+      readTime: '7 min',
       rating: 4.9,
       readers: '87K+',
       badge: 'FEATURED',
       gradient: 'from-cyan-500 to-blue-500',
       icon: <TrendingUp className="w-6 h-6" />,
-      link: '/blog/edge-2028-private-personalization'
+      link: '/blog/edge-2026-attested-analytics'
     },
     {
       id: 3,
-      title: 'GenAI 2028: Cost Tiers v4',
-      category: 'AI Operations',
+      title: 'GenAI 2027: Economy Modes',
+      category: 'FinOps',
       readTime: '8 min',
       rating: 4.9,
       readers: '47K+',
       badge: 'FEATURED',
       gradient: 'from-green-500 to-emerald-500',
       icon: <Award className="w-6 h-6" />,
-      link: '/blog/genai-2028-cost-tiers-v4'
+      link: '/blog/genai-2027-economy-modes'
     }
   ];
 
@@ -63,7 +63,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
           <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-indigo-500/20 to-pink-500/20 border border-indigo-500/30 mb-8 animate-fade-in">
             <Sparkles className="w-5 h-5 text-indigo-400 animate-pulse" />
             <span className="text-indigo-400 font-bold text-sm tracking-wider uppercase">
-              🚀 NEW CONTENT LAUNCH • January 2026
+              🚀 NEW CONTENT LAUNCH • Sept 30, 2025
             </span>
             <Sparkles className="w-5 h-5 text-pink-400 animate-pulse" />
           </div>
