@@ -10,6 +10,26 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    // NEW — Autonomous incident playbooks (featured)
+    slug: "ai-2026-autonomous-incident-playbooks",
+    title: "AI 2026: Autonomous Incident Playbooks",
+    description: "Budgeted actions, guardrails, and one‑click rollback to stop incidents fast.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "10 min read"
+  },
+  {
+    // NEW — Device‑level segmentation at the edge (featured)
+    slug: "edge-2026-device-segmentation-blueprint",
+    title: "Edge 2026: Device‑Level Segmentation Blueprint",
+    description: "Scoped IDs, on‑device cohorts, and DP noise for zero‑PII personalization under 100ms.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
     // NEW — Runtime rollback blueprint (featured)
     slug: "ai-2026-runtime-rollback-blueprint",
     title: "AI 2026: Runtime Rollback Blueprint",

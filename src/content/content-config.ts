@@ -212,6 +212,26 @@ export const featuredBlogPosts: FeaturedItem[] = [
   }
 ];
 
+// Sept 30, 2025 – Add two brand-new featured posts (autonomous incidents, device segmentation)
+featuredBlogPosts.unshift(
+  {
+    id: "ai-2026-autonomous-incident-playbooks",
+    title: "AI 2026: Autonomous Incident Playbooks",
+    description: "Budgeted actions, guardrails, and one‑click rollback to stop incidents fast.",
+    link: "/blog/ai-2026-autonomous-incident-playbooks",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-2026-device-segmentation-blueprint",
+    title: "Edge 2026: Device‑Level Segmentation Blueprint",
+    description: "Scoped IDs, on‑device cohorts, and DP noise for zero‑PII personalization under 100ms.",
+    link: "/blog/edge-2026-device-segmentation-blueprint",
+    type: "article",
+    featured: true
+  }
+);
+
 // Jan 2027 – Feature three brand-new articles
 featuredBlogPosts.unshift(
   {

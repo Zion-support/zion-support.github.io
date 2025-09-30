@@ -149,11 +149,13 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="New: Runtime Rollback + Attested Edge Analytics + GenAI Economy Modes"
-          description="Ship faster with instant rollback, audit‑ready zero‑PII analytics, and 50% lower GenAI costs."
+          title="New: Autonomous Incident Playbooks + Device‑Level Segmentation"
+          description="Stop incidents fast with budgeted actions and ship private personalization under 100ms."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
+            { title: "AI 2026: Autonomous Incident Playbooks", category: "AI Operations", link: "/blog/ai-2026-autonomous-incident-playbooks" },
+            { title: "Edge 2026: Device‑Level Segmentation", category: "Analytics", link: "/blog/edge-2026-device-segmentation-blueprint" },
             { title: "AI 2026: Runtime Rollback Blueprint", category: "AI Operations", link: "/blog/ai-2026-runtime-rollback-blueprint" },
             { title: "Edge 2026: Attested Analytics", category: "Analytics", link: "/blog/edge-2026-attested-analytics" },
             { title: "GenAI 2027: Economy Modes", category: "FinOps", link: "/blog/genai-2027-economy-modes" },
