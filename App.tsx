@@ -45,17 +45,16 @@ import April2026ConsciousComputingBanner from "./components/April2026ConsciousCo
 import April2026QuantumNeuralBanner from "./components/April2026QuantumNeuralBanner";
 import QuantumConsciousnessFusionBanner from "./components/QuantumConsciousnessFusionBanner";
 import Revolutionary2026ContentShowcaseBanner from "./components/Revolutionary2026ContentShowcaseBanner";
-import May2026UniversalConsciousnessBanner from "./components/May2026UniversalConsciousnessBanner";
-import May2026ContentShowcaseBanner from "./components/May2026ContentShowcaseBanner";
+import May2026RevolutionaryBreakthroughBanner from "./components/May2026RevolutionaryBreakthroughBanner";
 
 export default function App(): JSX.Element {
   return (
     <div className="min-h-screen bg-slate-950">
-      {/* NEW: May 2026 Universal Consciousness Banner - Most Prominent */}
-      <May2026UniversalConsciousnessBanner />
+      {/* NEW: May 2026 Revolutionary Breakthrough Banner - Most Prominent */}
+      <May2026RevolutionaryBreakthroughBanner />
       
-      {/* NEW: May 2026 Content Showcase Banner */}
-      <May2026ContentShowcaseBanner />
+      {/* NEW: Quantum Consciousness Fusion Banner */}
+      <QuantumConsciousnessFusionBanner />
       
       {/* NEW: April 2026 Mega Breakthrough Banner - Most Prominent */}
       <April2026MegaBreakthroughBanner />
@@ -235,38 +234,38 @@ export default function App(): JSX.Element {
       </header>
 
       {/* NEW CONTENT ADVERTISING BANNER */}
-      <div className="bg-gradient-to-r from-indigo-500/20 to-purple-500/20 backdrop-blur-sm rounded-2xl p-6 border border-indigo-500/30 mb-12">
+      <div className="bg-gradient-to-r from-purple-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-6 border border-purple-500/30 mb-12">
         <div className="text-center">
           <h3 className="text-2xl font-bold text-white mb-2">
-            🚀 BREAKING: May 2026 Universal Consciousness Computing Revolution Now Live!
+            🚀 BREAKING: February 2026 Revolutionary AI Breakthroughs Now Live!
           </h3>
-          <p className="text-indigo-200 text-lg mb-4">
-            Universal Consciousness • Quantum Consciousness Fusion • $10B Fortune 500 Success • Complete Technical Guide
+          <p className="text-purple-200 text-lg mb-4">
+            Quantum-Neural Fusion • Enterprise Automation • $2.3B Fortune 500 Success • Complete Mega Guide
           </p>
           <div className="flex flex-wrap justify-center gap-4 text-sm mb-4">
-            <span className="bg-indigo-500/20 px-3 py-1 rounded-full text-indigo-300">10,000x Processing Speed</span>
-            <span className="bg-purple-500/20 px-3 py-1 rounded-full text-purple-300">99.9% Decision Accuracy</span>
-            <span className="bg-pink-500/20 px-3 py-1 rounded-full text-pink-300">$10B Client Value</span>
-            <span className="bg-rose-500/20 px-3 py-1 rounded-full text-rose-300">Universal Consciousness</span>
+            <span className="bg-purple-500/20 px-3 py-1 rounded-full text-purple-300">1000x Processing Speed</span>
+            <span className="bg-cyan-500/20 px-3 py-1 rounded-full text-cyan-300">98% Automation Rate</span>
+            <span className="bg-green-500/20 px-3 py-1 rounded-full text-green-300">$2.3B Client Savings</span>
+            <span className="bg-indigo-500/20 px-3 py-1 rounded-full text-indigo-300">Complete Mega Guide</span>
           </div>
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="/blog/ai-2026-may-mega-breakthrough-revolution"
-              className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-2 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50"
+              href="/blog/ai-2026-quantum-neural-fusion-breakthrough"
+              className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-2 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50"
             >
-              Universal Consciousness Computing →
+              Quantum-Neural Fusion →
             </a>
             <a
-              href="/case-studies/fortune-500-universal-consciousness-10-billion-success"
-              className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-2 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50"
+              href="/blog/ai-enterprise-automation-2026-mega-guide"
+              className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-2 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50"
             >
-              $10B Success Story →
+              Enterprise Automation Guide →
             </a>
             <a
-              href="/blog/ai-2026-may-mega-breakthrough-revolution"
-              className="bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-400 hover:to-rose-500 text-white font-bold py-2 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-pink-500/50"
+              href="/case-studies/fortune-500-ai-2026-breakthrough-mega-success"
+              className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-2 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50"
             >
-              Quantum Consciousness Fusion →
+              $2.3B Success Story →
             </a>
           </div>
         </div>

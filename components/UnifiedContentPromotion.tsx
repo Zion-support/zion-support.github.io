@@ -17,44 +17,31 @@ interface ContentItem {
 }
 
 const featuredContent: ContentItem[] = [
-  // May 2026 — New Revolutionary Breakthrough Content
+  // Sept 30, 2025 — newly added items to advertise
   {
-    id: 'may2026-1',
-    title: 'AI 2026 May Revolutionary Breakthrough: Meta-Cognitive Superintelligence',
-    description: 'Discover the revolutionary AI breakthrough featuring meta-cognitive superintelligence, quantum-neural fusion, and autonomous operations delivering unprecedented business value.',
-    link: '/blog/ai-2026-may-revolutionary-breakthrough',
-    badge: 'Revolutionary',
-    badgeColor: 'bg-gradient-to-r from-purple-600 to-blue-600',
-    icon: '🚀',
-    publishedDate: 'May 1, 2026',
-    readTime: '12 min read',
-    category: 'AI Breakthrough'
+    id: 'n0a',
+    title: 'Autonomous Runbooks Quickstart: Budgeted Actions and Instant Rollback',
+    description: 'Design incident playbooks that close the loop from detection to safe action in <60s.',
+    link: '/blog/ai-2025-sept-30-autonomous-runbooks-quickstart',
+    badge: 'New',
+    badgeColor: 'bg-gradient-to-r from-emerald-600 to-teal-600',
+    icon: '✅',
+    publishedDate: 'September 30, 2025',
+    readTime: '7 min read',
+    category: 'AI Operations'
   },
   {
-    id: 'may2026-2',
-    title: 'Fortune 500 AI 2026 May Mega Success: $5B+ Value Generated',
-    description: 'See how a Fortune 500 company achieved unprecedented results with our May 2026 AI breakthrough, delivering $5B+ in measurable value and 99.9% operational efficiency.',
-    link: '/case-studies/fortune-500-ai-2026-may-mega-success',
-    badge: 'Mega Success',
-    badgeColor: 'bg-gradient-to-r from-green-600 to-emerald-600',
-    icon: '💰',
-    publishedDate: 'May 1, 2026',
-    readTime: '10 min read',
-    category: 'Success Story'
+    id: 'n0b',
+    title: 'Privacy‑Preserving Telemetry: Scoped IDs, On‑Device Redaction, DP Noise',
+    description: 'Actionable analytics without PII using edge aggregation and differential privacy.',
+    link: '/blog/edge-2025-sept-30-privacy-preserving-telemetry',
+    badge: 'Fresh',
+    badgeColor: 'bg-gradient-to-r from-cyan-600 to-sky-600',
+    icon: '🔒',
+    publishedDate: 'September 30, 2025',
+    readTime: '5 min read',
+    category: 'Edge Computing'
   },
-  {
-    id: 'may2026-3',
-    title: 'AI 2026 Future Trends: Mega Predictions for Enterprise Transformation',
-    description: 'Explore the revolutionary AI trends and predictions for 2026 that will transform enterprise operations, featuring meta-cognitive AI, quantum computing, and autonomous systems.',
-    link: '/blog/ai-2026-future-trends-mega-predictions',
-    badge: 'Future Trends',
-    badgeColor: 'bg-gradient-to-r from-indigo-600 to-purple-600',
-    icon: '🔮',
-    publishedDate: 'May 1, 2026',
-    readTime: '15 min read',
-    category: 'Future Predictions'
-  },
-  // Sept 30, 2025 — newly added highlights
   {
     id: 'nX1',
     title: 'Operational Trust Scorecards v3 — KPIs, Budgets, Instant Rollback',
@@ -90,6 +77,18 @@ const featuredContent: ContentItem[] = [
     publishedDate: 'September 30, 2025',
     readTime: '6 min read',
     category: 'Observability'
+  },
+  {
+    id: 'n0c',
+    title: 'GenAI Quality Tiers Quickstart: Stable UX at 40–70% Lower Cost',
+    description: 'Tiered routing and semantic caches with KPI‑linked budgets.',
+    link: '/blog/genai-2025-sept-30-quality-tiers-quickstart',
+    badge: 'Featured',
+    badgeColor: 'bg-gradient-to-r from-indigo-600 to-blue-600',
+    icon: '💸',
+    publishedDate: 'September 30, 2025',
+    readTime: '8 min read',
+    category: 'GenAI'
   },
   // Sept 30, 2025 — highlight newest content
   // Oct 03, 2025 — newest highlights
