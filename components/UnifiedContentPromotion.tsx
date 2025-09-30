@@ -17,7 +17,6 @@ interface ContentItem {
 }
 
 const featuredContent: ContentItem[] = [
-<<<<<<< HEAD
   // Sept 30, 2025 — newly added items to advertise
   {
     id: 'n0a',
@@ -39,8 +38,10 @@ const featuredContent: ContentItem[] = [
     badge: 'Fresh',
     badgeColor: 'bg-gradient-to-r from-cyan-600 to-sky-600',
     icon: '🔒',
-=======
-  // Sept 30, 2025 — newly added highlights
+    publishedDate: 'September 30, 2025',
+    readTime: '5 min read',
+    category: 'Edge Computing'
+  },
   {
     id: 'nX1',
     title: 'Operational Trust Scorecards v3 — KPIs, Budgets, Instant Rollback',
@@ -73,12 +74,10 @@ const featuredContent: ContentItem[] = [
     badge: 'New',
     badgeColor: 'bg-gradient-to-r from-cyan-600 to-sky-600',
     icon: '📈',
->>>>>>> feat/content-sept30-ads
     publishedDate: 'September 30, 2025',
     readTime: '6 min read',
     category: 'Observability'
   },
-<<<<<<< HEAD
   {
     id: 'n0c',
     title: 'GenAI Quality Tiers Quickstart: Stable UX at 40–70% Lower Cost',
@@ -91,8 +90,6 @@ const featuredContent: ContentItem[] = [
     readTime: '8 min read',
     category: 'GenAI'
   },
-=======
->>>>>>> feat/content-sept30-ads
   // Sept 30, 2025 — highlight newest content
   // Oct 03, 2025 — newest highlights
   {
