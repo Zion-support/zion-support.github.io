@@ -1,42 +1,32 @@
-import { defineConfig } from "vite"
+import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { resolve } from 'path'
-import { visualizer } from 'rollup-plugin-visualizer'
 
-export default defineConfig(({ mode }) => ({
+// https://vitejs.dev/config/
+export default defineConfig({
   plugins: [
     react({
-      // Enable React Fast Refresh
-      fastRefresh: true,
-      // Optimize JSX runtime
+      // Enable JSX runtime
       jsxRuntime: 'automatic',
-      // Enable babel plugin for better tree shaking
-      babel: {
-        plugins: [
-          // Add any babel plugins here if needed
-        ]
-      }
     }),
-    // Add bundle analyzer for analyze mode
-    ...(mode === 'analyze' ? [
-      visualizer({
-        filename: 'dist/stats.html',
-        open: false,
-        gzipSize: true,
-        brotliSize: true
-      })
-    ] : [])
   ],
+  resolve: {
+    alias: {
+      '@': resolve(__dirname, 'src'),
+      '@components': resolve(__dirname, 'src/components'),
+      '@pages': resolve(__dirname, 'src/pages'),
+      '@utils': resolve(__dirname, 'src/utils'),
+      '@hooks': resolve(__dirname, 'src/hooks'),
+      '@styles': resolve(__dirname, 'src/styles'),
+    },
+  },
   build: {
-    outDir: 'dist',
-    // Enable source maps for production debugging
-    sourcemap: mode !== 'production',
-    // Performance optimizations
+    target: 'esnext',
     minify: 'terser',
-    cssMinify: true,
+    sourcemap: false,
+    cssCodeSplit: true,
     reportCompressedSize: true,
-    chunkSizeWarningLimit: 1000,
-    // Optimize chunk splitting
+    assetsInlineLimit: 4096,
     rollupOptions: {
       input: {
         main: './index.html'
@@ -49,107 +39,90 @@ export default defineConfig(({ mode }) => ({
       output: {
         // Manual chunk splitting for better caching
         manualChunks: (id) => {
-          // Vendor chunks - more granular splitting
           if (id.includes('node_modules')) {
-            if (id.includes('react') || id.includes('react-dom')) {
-              return 'vendor-react';
+            // Consolidate all vendor chunks into fewer, larger chunks
+            if (id.includes('react') || id.includes('react-dom') || id.includes('react-router')) {
+              return 'react-vendor';
             }
-            if (id.includes('react-router')) {
-              return 'vendor-router';
+            if (id.includes('framer-motion') || id.includes('lucide-react') || id.includes('@headlessui')) {
+              return 'ui-vendor';
             }
-            if (id.includes('framer-motion')) {
-              return 'vendor-framer';
+            if (id.includes('lodash') || id.includes('date-fns') || id.includes('axios')) {
+              return 'utils-vendor';
             }
-            if (id.includes('lucide-react')) {
-              return 'vendor-icons';
-            }
-            if (id.includes('recharts')) {
-              return 'vendor-charts';
-            }
-            if (id.includes('clsx') || id.includes('tailwind-merge')) {
-              return 'vendor-utils';
-            }
-            if (id.includes('axios')) {
-              return 'vendor-http';
-            }
-            // All other node_modules go to vendor
+            // Group all other node_modules into a single vendor chunk
             return 'vendor';
           }
-          // App chunks - more granular splitting
-          if (id.includes('src/pages/')) {
-            return 'pages';
-          }
+          // Consolidate component chunks
           if (id.includes('src/components/')) {
-            // Split large components into separate chunks
-            if (id.includes('Advanced') || id.includes('Comprehensive')) {
-              return 'components-advanced';
-            }
             return 'components';
           }
+          // Consolidate utility chunks
           if (id.includes('src/utils/')) {
-            // Split utils by functionality
-            if (id.includes('advanced') || id.includes('comprehensive')) {
-              return 'utils-advanced';
-            }
             return 'utils';
           }
+          // Consolidate hooks
           if (id.includes('src/hooks/')) {
             return 'hooks';
           }
         },
-        // Optimize chunk file names
-        chunkFileNames: 'assets/js/[name]-[hash].js',
-        entryFileNames: 'assets/js/[name]-[hash].js',
-        assetFileNames: 'assets/[ext]/[name]-[hash].[ext]'
+        chunkFileNames: (chunkInfo) => {
+          const facadeModuleId = chunkInfo.facadeModuleId
+            ? chunkInfo.facadeModuleId.split('/').pop().replace('.tsx', '').replace('.ts', '')
+            : 'chunk';
+          return `assets/js/${facadeModuleId}-[hash].js`;
+        },
+        entryFileNames: 'assets/js/main-[hash].js',
+        assetFileNames: (assetInfo) => {
+          const info = assetInfo.name.split('.');
+          const ext = info[info.length - 1];
+          if (/\.(css)$/.test(assetInfo.name)) {
+            return `assets/css/[name]-[hash].${ext}`;
+          }
+          return `assets/[name]-[hash].${ext}`;
+        },
       },
-      // Enable build parallelization
-      maxParallelFileOps: 5,
-      external: [],
-      plugins: []
     },
+    // Optimize chunk size
+    chunkSizeWarningLimit: 1000,
     terserOptions: {
       compress: {
         drop_console: true,
         drop_debugger: true,
         pure_funcs: ['console.log', 'console.info', 'console.debug'],
-        dead_code: true,
-        unused: true,
-        side_effects: false,
-        // Additional compression options
-        passes: 2,
+        passes: 3,
         unsafe: true,
         unsafe_comps: true,
         unsafe_math: true,
         unsafe_proto: true,
-        unsafe_regexp: true,
-        unsafe_undefined: true
+        dead_code: true,
+        unused: true,
       },
       mangle: {
         safari10: true,
+        toplevel: true,
         properties: {
           regex: /^_/
         }
       },
       format: {
         comments: false,
-        ascii_only: true
-      }
+        ascii_only: true,
+      },
     },
-    // Target modern browsers for better optimization
-    target: ['es2020', 'edge88', 'firefox78', 'chrome87', 'safari14'],
-    // Optimize dependencies
-    commonjsOptions: {
-      include: [/node_modules/]
-    }
   },
   server: {
     port: 3000,
-    // Enable HMR
-    hmr: true,
-    // Enable CORS for development
-    cors: true
+    open: true,
+    cors: true,
+    host: true,
   },
-  // Optimize dependencies
+  preview: {
+    port: 3000,
+    open: true,
+    cors: true,
+    host: true,
+  },
   optimizeDeps: {
     include: [
       'react',
@@ -160,25 +133,19 @@ export default defineConfig(({ mode }) => ({
       'clsx',
       'tailwind-merge',
       'axios',
-      'web-vitals'
+      'web-vitals',
     ],
-    exclude: ['@testing-library/react', '@testing-library/jest-dom'],
-    // Force optimization for better performance
-    force: true
+    exclude: ['@vite/client', '@vite/env'],
   },
-  // Resolve aliases for cleaner imports
-  resolve: {
-    alias: {
-      '@': resolve(__dirname, 'src'),
-      '@components': resolve(__dirname, 'src/components'),
-      '@pages': resolve(__dirname, 'src/pages'),
-      '@hooks': resolve(__dirname, 'src/hooks'),
-      '@utils': resolve(__dirname, 'src/utils'),
-      '@styles': resolve(__dirname, 'src/styles')
-    }
+  define: {
+    global: 'globalThis',
   },
-  // CSS optimization
-  css: {
-    devSourcemap: true
-  }
-}))
+  esbuild: {
+    target: 'esnext',
+    format: 'esm',
+    treeShaking: true,
+    minifyIdentifiers: true,
+    minifySyntax: true,
+    minifyWhitespace: true,
+  },
+})
