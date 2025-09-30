@@ -1,46 +1,7 @@
 import React from 'react';
-import { 
-  NewBlogBanner, 
-  AnalyticsPlatformBanner, 
-  TechCorpSuccessBanner,
-  WorkflowAutomationBanner,
-  AIAnalyticsBanner,
-  HealthTechSuccessBanner,
-  ComprehensiveAIBanner,
-  EnterpriseAIBanner,
-  NewContentBanner,
-  CustomerServiceAIBanner,
-  HealthcareAIBanner,
-  RetailSuccessBanner,
-  AIContentShowcaseBanner,
-  AIRevolutionBanner,
-  AutonomousAgentsBanner,
-  AIGovernanceBanner,
-  FinTechSuccessBanner,
-  NewContentShowcaseBanner
-} from '../components/PromotionalBanner';
-import {
-  AIEnterpriseAdoptionBanner,
-  AITrends2025Banner,
-  SupplyChainOptimizationBanner,
-  AIBusinessTransformationBanner,
-  AICustomerExperienceBanner,
-  EnterpriseAITransformationBanner,
-  LatestAIInsightsBanner,
-  AIServicesShowcaseBanner,
-  AIWorkflowAutomationBanner,
-  EnterpriseAISecurityBanner
-} from '../components/NewContentPromotionalBanners';
-import {
-  AIEnterpriseTransformationBanner,
-  AIAutonomousSystemsBanner,
-  ManufacturingTransformationBanner,
-  AIEnterpriseServicesBanner,
-  LatestContentShowcaseBanner,
-  InteractiveAICalculatorBanner,
-  AIInnovationShowcaseBanner
-} from '../components/NewContent2026Banners';
-import ContentShowcase from '../components/ContentShowcase';
+import Link from 'next/link';
+import NewContent2026ShowcaseBanner from '../components/NewContent2026ShowcaseBanner';
+import NewsletterSignup2026 from '../components/NewsletterSignup2026';
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
@@ -845,37 +806,40 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Additional Promotional Banners */}
-      <AnalyticsPlatformBanner />
-      <HealthTechSuccessBanner />
-      <ComprehensiveAIBanner />
+      {/* New Content Showcase */}
+      <NewContent2026ShowcaseBanner />
 
-      {/* CTA Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">
+      {/* Newsletter Signup */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <NewsletterSignup2026 />
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-4xl font-bold text-white mb-4">
             Ready to Transform Your Business?
           </h2>
-          <p className="text-xl text-gray-600 mb-8">
-            Let's discuss how our AI and IT solutions can drive your success
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            Let's discuss how our AI and technology solutions can accelerate your growth
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              to="tel:+13024640950"
-              className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg"
+              href="tel:+13024640950"
+              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl"
             >
               Call +1 302 464 0950
             </a>
             <a
-              to="mailto:kleber@ziontechgroup.com"
-              className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors"
+              href="mailto:kleber@ziontechgroup.com"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"
             >
-              Get Free Consultation
+              Email Us
             </a>
-          </div>
-          <div className="mt-8 text-sm text-gray-500">
-            <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-            <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
           </div>
         </div>
       </section>

@@ -29,6 +29,7 @@ export default function RootLayout({
               <nav className="hidden md:flex space-x-8">
                 <Link href="/" className="text-gray-700 hover:text-blue-600 transition-colors">Home</Link>
                 <Link href="/services" className="text-gray-700 hover:text-blue-600 transition-colors">Services</Link>
+                <Link href="/content-hub" className="text-gray-700 hover:text-blue-600 transition-colors">Content Hub</Link>
                 <Link href="/blog" className="text-gray-700 hover:text-blue-600 transition-colors">Blog</Link>
                 <Link href="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors">Case Studies</Link>
               </nav>
@@ -56,6 +57,7 @@ export default function RootLayout({
               <div>
                 <h3 className="text-lg font-semibold mb-4">Resources</h3>
                 <ul className="space-y-2 text-gray-400">
+                  <li><Link href="/content-hub" className="hover:text-white">Content Hub</Link></li>
                   <li><Link href="/blog" className="hover:text-white">Blog</Link></li>
                   <li><Link href="/case-studies" className="hover:text-white">Case Studies</Link></li>
                 </ul>

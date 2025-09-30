@@ -1,227 +1,131 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Brain, Rocket, Database, Zap, TrendingUp, Star, Clock } from 'lucide-react';
 
 export default function NewContent2026ShowcaseBanner() {
-  const featuredContent = [
-    {
-      title: 'AI Neural Interfaces 2026',
-      description: 'Brain-computer integration with 95% accuracy and 10x faster processing',
-      href: '/blog/ai-neural-interfaces-2026',
-      icon: Brain,
-      color: 'purple',
-      metrics: { accuracy: '95%', speed: '10x', market: '$50B' },
-      readTime: '25 min',
-      type: 'article'
-    },
-    {
-      title: 'AI Space Technology 2026',
-      description: 'Autonomous spacecraft and intelligent mission planning with 99.9% success',
-      href: '/blog/ai-space-tech-2026',
-      icon: Rocket,
-      color: 'blue',
-      metrics: { market: '$100B', success: '99.9%', speed: '50x' },
-      readTime: '30 min',
-      type: 'article'
-    },
-    {
-      title: 'AI Synthetic Data 2026',
-      description: 'Privacy-preserving data generation with 99% accuracy and 90% cost reduction',
-      href: '/blog/ai-synthetic-data-2026',
-      icon: Database,
-      color: 'green',
-      metrics: { accuracy: '99%', cost: '90%', privacy: '100%' },
-      readTime: '22 min',
-      type: 'article'
-    }
-  ];
-
-  const successStories = [
-    {
-      title: 'Neural Interface Success',
-      description: 'Fortune 500 company achieved $15M ROI with 300% productivity gains',
-      href: '/case-studies/ai-neural-interface-success-2026',
-      metric: '$15M ROI',
-      type: 'case-study'
-    },
-    {
-      title: 'Space Tech Success',
-      description: '99.9% mission success rate with autonomous spacecraft operations',
-      href: '/case-studies/ai-space-tech-success-2026',
-      metric: '99.9% Success',
-      type: 'case-study'
-    },
-    {
-      title: 'Synthetic Data Success',
-      description: '90% cost reduction with privacy-preserving data solutions',
-      href: '/case-studies/ai-synthetic-data-success-2026',
-      metric: '90% Cost Cut',
-      type: 'case-study'
-    }
-  ];
-
-  const getColorClasses = (color: string) => {
-    const colorMap = {
-      purple: 'from-purple-500 to-pink-500',
-      blue: 'from-blue-500 to-cyan-500',
-      green: 'from-green-500 to-teal-500'
-    };
-    return colorMap[color] || 'from-gray-500 to-gray-600';
-  };
-
-  const getTextColor = (color: string) => {
-    const colorMap = {
-      purple: 'text-purple-600',
-      blue: 'text-blue-600',
-      green: 'text-green-600'
-    };
-    return colorMap[color] || 'text-gray-600';
-  };
-
   return (
-    <div className="py-20 bg-gradient-to-br from-indigo-50 via-white to-purple-50">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 mb-6">
-            <span className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-              🚀 NEW 2026 CONTENT SHOWCASE
-            </span>
+    <section className="py-16 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+            New Content Available
           </div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">
-            Revolutionary AI Content & Breakthroughs
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            Latest AI Insights & Success Stories
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover the latest AI innovations, neural interfaces, space technology, and synthetic data solutions 
-            that are reshaping the future of technology in 2026
+          <p className="text-xl text-indigo-100 max-w-3xl mx-auto leading-relaxed">
+            Discover cutting-edge AI trends, proven implementation strategies, and real-world 
+            transformation success stories from industry leaders.
           </p>
         </div>
 
-        {/* Featured Articles */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Featured Articles</h3>
-          <div className="grid md:grid-cols-3 gap-8">
-            {featuredContent.map((item, index) => {
-              const IconComponent = item.icon;
-              return (
-                <Link key={index} href={item.href} className="group">
-                  <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100 hover:border-gray-200 hover:scale-105">
-                    {/* Header */}
-                    <div className="flex items-center gap-3 mb-6">
-                      <div className={`w-16 h-16 bg-gradient-to-r ${getColorClasses(item.color)} rounded-xl flex items-center justify-center`}>
-                        <IconComponent className="w-8 h-8 text-white" />
-                      </div>
-                      <div>
-                        <div className="flex items-center gap-2 mb-2">
-                          <span className={`text-sm font-medium ${getTextColor(item.color)}`}>
-                            📝 {item.type === 'article' ? 'Article' : 'Case Study'}
-                          </span>
-                          <span className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
-                            NEW 2026
-                          </span>
-                        </div>
-                        <div className="flex items-center text-gray-500 text-sm">
-                          <Clock className="w-4 h-4 mr-1" />
-                          {item.readTime} read
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Content */}
-                    <h4 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
-                      {item.title}
-                    </h4>
-                    <p className="text-gray-600 mb-6">
-                      {item.description}
-                    </p>
-
-                    {/* Metrics */}
-                    <div className="flex gap-4 mb-6">
-                      {Object.entries(item.metrics).map(([key, value]) => (
-                        <div key={key} className="text-center">
-                          <div className={`text-2xl font-bold ${getTextColor(item.color)}`}>{value}</div>
-                          <div className="text-xs text-gray-500 capitalize">{key}</div>
-                        </div>
-                      ))}
-                    </div>
-
-                    {/* Footer */}
-                    <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-                      <div className="text-sm text-gray-500">
-                        {item.type === 'article' ? 'Technical Guide' : 'Success Story'}
-                      </div>
-                      <div className="flex items-center text-blue-600 font-semibold group-hover:text-blue-700 transition-colors">
-                        Read More
-                        <ArrowRight className="w-4 h-4 ml-2" />
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* Success Stories */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Proven Success Stories</h3>
-          <div className="grid md:grid-cols-3 gap-8">
-            {successStories.map((story, index) => (
-              <Link key={index} href={story.href} className="group">
-                <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 hover:border-orange-200 hover:scale-105">
-                  <div className="flex items-center gap-2 mb-4">
-                    <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
-                      CASE STUDY
-                    </span>
-                    <span className="text-sm text-gray-500">Fortune 500</span>
-                  </div>
-                  <h4 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">
-                    {story.title}
-                  </h4>
-                  <p className="text-gray-600 text-sm mb-4">
-                    {story.description}
-                  </p>
-                  <div className="flex items-center justify-between">
-                    <div className="text-2xl font-bold text-orange-600">{story.metric}</div>
-                    <div className="flex items-center text-orange-600 font-semibold text-sm group-hover:text-orange-700 transition-colors">
-                      View Story
-                      <ArrowRight className="w-4 h-4 ml-1" />
-                    </div>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-
-        {/* CTA Section */}
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4">
-              Ready to Explore the Future of AI?
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          {/* Featured Blog Post */}
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20">
+            <div className="flex items-center gap-2 mb-4">
+              <span className="bg-blue-500 text-white px-2 py-1 rounded text-xs font-semibold">Blog</span>
+              <span className="text-sm text-indigo-200">Jan 2026</span>
+            </div>
+            <h3 className="text-xl font-bold mb-3 text-white">
+              AI Enterprise Transformation 2026
             </h3>
-            <p className="text-lg mb-6 opacity-90">
-              Discover our complete library of AI innovations, case studies, and success stories 
-              that are transforming businesses worldwide.
+            <p className="text-indigo-100 mb-4 text-sm leading-relaxed">
+              Complete implementation guide for enterprise AI transformation. Achieve 300% ROI, 
+              90% automation, and $10M+ annual savings with proven strategies.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/blog"
-                className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg"
+            <div className="flex items-center justify-between">
+              <Link 
+                href="/blog/ai-enterprise-transformation-2026"
+                className="text-blue-300 hover:text-white font-semibold text-sm transition-colors"
               >
-                <Zap className="w-5 h-5 mr-2 inline" />
-                Explore All Content
+                Read More →
               </Link>
-              <Link
-                href="/case-studies"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-indigo-600 transition-colors"
+              <div className="text-xs text-indigo-200">15 min read</div>
+            </div>
+          </div>
+
+          {/* Implementation Best Practices */}
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20">
+            <div className="flex items-center gap-2 mb-4">
+              <span className="bg-green-500 text-white px-2 py-1 rounded text-xs font-semibold">Guide</span>
+              <span className="text-sm text-indigo-200">Jan 2026</span>
+            </div>
+            <h3 className="text-xl font-bold mb-3 text-white">
+              AI Implementation Best Practices
+            </h3>
+            <p className="text-indigo-100 mb-4 text-sm leading-relaxed">
+              Master AI implementation with proven best practices from 500+ successful deployments. 
+              Learn essential strategies that separate success from failure.
+            </p>
+            <div className="flex items-center justify-between">
+              <Link 
+                href="/blog/ai-implementation-best-practices-2026"
+                className="text-green-300 hover:text-white font-semibold text-sm transition-colors"
               >
-                <TrendingUp className="w-5 h-5 mr-2 inline" />
-                View Success Stories
+                Read More →
               </Link>
+              <div className="text-xs text-indigo-200">12 min read</div>
+            </div>
+          </div>
+
+          {/* Fortune 500 Case Study */}
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20">
+            <div className="flex items-center gap-2 mb-4">
+              <span className="bg-purple-500 text-white px-2 py-1 rounded text-xs font-semibold">Case Study</span>
+              <span className="text-sm text-indigo-200">Jan 2026</span>
+            </div>
+            <h3 className="text-xl font-bold mb-3 text-white">
+              Fortune 500 AI Success Story
+            </h3>
+            <p className="text-indigo-100 mb-4 text-sm leading-relaxed">
+              How a Fortune 500 company achieved $50M ROI, 90% automation, and 300% efficiency 
+              gains through comprehensive AI transformation.
+            </p>
+            <div className="flex items-center justify-between">
+              <Link 
+                href="/case-studies/fortune-500-ai-transformation-success-2026"
+                className="text-purple-300 hover:text-white font-semibold text-sm transition-colors"
+              >
+                Read More →
+              </Link>
+              <div className="text-xs text-indigo-200">18 min read</div>
+            </div>
+          </div>
+        </div>
+
+        <div className="text-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/blog"
+              className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl"
+            >
+              View All Blog Posts
+            </Link>
+            <Link
+              href="/case-studies"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-indigo-600 transition-colors"
+            >
+              Explore Case Studies
+            </Link>
+          </div>
+          
+          <div className="mt-8 p-4 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 max-w-2xl mx-auto">
+            <p className="text-indigo-100 text-sm mb-3">
+              <strong>Stay Updated:</strong> Get the latest AI insights delivered to your inbox
+            </p>
+            <div className="flex gap-2">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 px-4 py-2 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white/50"
+              />
+              <button className="bg-indigo-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-indigo-600 transition-colors">
+                Subscribe
+              </button>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
