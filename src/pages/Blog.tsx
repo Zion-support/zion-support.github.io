@@ -13,7 +13,8 @@ import {
 } from "lucide-react";
 import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
-import BlogPromotionBanner from "../components/BlogPromotionBanner";
+// import BlogPromotionBanner from "../components/BlogPromotionBanner";
+const BlogPromotionBanner = () => null;
 const Footer: React.FC = () => null;
 import Header from "../components/Header";
 

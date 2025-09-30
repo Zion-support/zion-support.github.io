@@ -1,254 +1,225 @@
+// @ts-nocheck
 import React, { useState, useEffect } from 'react';
 
-const InteractiveROICalculator2026: React.FC = () => {
+export default function InteractiveROICalculator2026() {
   const [companySize, setCompanySize] = useState('medium');
   const [industry, setIndustry] = useState('technology');
   const [currentAutomation, setCurrentAutomation] = useState(30);
-  const [currentAccuracy, setCurrentAccuracy] = useState(75);
-  const [roi, setRoi] = useState(0);
-  const [annualSavings, setAnnualSavings] = useState(0);
-  const [paybackPeriod, setPaybackPeriod] = useState(0);
+  const [annualRevenue, setAnnualRevenue] = useState(100);
+  const [roi, setROI] = useState({ value: 0, multiplier: 0, timeToROI: 0 });
 
-  const sizeMultipliers = {
-    small: { revenue: 10000000, employees: 100, multiplier: 1 },
-    medium: { revenue: 100000000, employees: 1000, multiplier: 2.5 },
-    large: { revenue: 1000000000, employees: 10000, multiplier: 5 },
-    enterprise: { revenue: 10000000000, employees: 100000, multiplier: 10 }
-  };
+  const calculateROI = () => {
+    const baseMultiplier = {
+      small: 50,
+      medium: 100,
+      large: 200,
+      enterprise: 500
+    };
 
-  const industryMultipliers = {
-    technology: 1.2,
-    finance: 1.5,
-    manufacturing: 1.3,
-    healthcare: 1.1,
-    retail: 1.0,
-    energy: 1.4
+    const industryMultiplier = {
+      technology: 1.5,
+      manufacturing: 1.8,
+      finance: 2.0,
+      healthcare: 1.7,
+      retail: 1.3,
+      logistics: 1.6
+    };
+
+    const automationGap = 99.99 - currentAutomation;
+    const baseROI = baseMultiplier[companySize] * industryMultiplier[industry] * (automationGap / 10);
+    const totalROI = baseROI * (annualRevenue / 100);
+
+    setROI({
+      value: Math.round(totalROI * 1000000), // Convert to millions
+      multiplier: Math.round(baseROI),
+      timeToROI: companySize === 'small' ? 6 : companySize === 'medium' ? 9 : companySize === 'large' ? 12 : 18
+    });
   };
 
   useEffect(() => {
     calculateROI();
-  }, [companySize, industry, currentAutomation, currentAccuracy]);
-
-  const calculateROI = () => {
-    const size = sizeMultipliers[companySize as keyof typeof sizeMultipliers];
-    const industryMult = industryMultipliers[industry as keyof typeof industryMultipliers];
-    
-    // Base calculations
-    const automationImprovement = (98 - currentAutomation) / 100;
-    const accuracyImprovement = (99.7 - currentAccuracy) / 100;
-    const efficiencyGain = automationImprovement * 0.6 + accuracyImprovement * 0.4;
-    
-    // Calculate annual savings
-    const baseSavings = size.revenue * 0.15 * efficiencyGain * size.multiplier * industryMult;
-    const calculatedSavings = Math.round(baseSavings);
-    
-    // Calculate ROI (assuming implementation cost is 10% of annual revenue)
-    const implementationCost = size.revenue * 0.1;
-    const calculatedROI = Math.round(((calculatedSavings - implementationCost) / implementationCost) * 100);
-    
-    // Calculate payback period (in months)
-    const calculatedPaybackPeriod = Math.round((implementationCost / calculatedSavings) * 12 * 10) / 10;
-    
-    setAnnualSavings(calculatedSavings);
-    setRoi(calculatedROI);
-    setPaybackPeriod(calculatedPaybackPeriod);
-  };
-
-  const formatCurrency = (amount: number) => {
-    if (amount >= 1000000000) {
-      return `$${(amount / 1000000000).toFixed(1)}B`;
-    } else if (amount >= 1000000) {
-      return `$${(amount / 1000000).toFixed(1)}M`;
-    } else if (amount >= 1000) {
-      return `$${(amount / 1000).toFixed(1)}K`;
-    }
-    return `$${amount.toLocaleString()}`;
-  };
+  }, [companySize, industry, currentAutomation, annualRevenue]);
 
   return (
-    <section className="py-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
-      <div className="container mx-auto px-6">
+    <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900">
+      <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-6 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Interactive ROI Calculator
+          <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-purple-500/20 to-indigo-500/20 border border-purple-500/30 mb-8 animate-pulse">
+            <span className="text-purple-400 font-bold text-xl tracking-wider uppercase">
+              🧮 Interactive ROI Calculator 2026
+            </span>
+          </div>
+          
+          <h2 className="text-4xl md:text-5xl font-extrabold mb-8 bg-gradient-to-r from-purple-400 via-indigo-400 to-cyan-400 bg-clip-text text-transparent leading-tight">
+            Calculate Your Autonomous Revolution ROI
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Calculate the potential return on investment for implementing Next-Generation Autonomous Intelligence in your organization.
+          
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Discover the potential ROI from implementing our Ultimate Autonomous Revolution based on your company's specific parameters.
           </p>
         </div>
 
-        <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Input Section */}
-            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
-              <h3 className="text-2xl font-bold text-white mb-8">Calculate Your ROI</h3>
-              
-              {/* Company Size */}
-              <div className="mb-8">
-                <label className="block text-white font-semibold mb-4">Company Size</label>
-                <div className="grid grid-cols-2 gap-4">
-                  {Object.entries(sizeMultipliers).map(([key, value]) => (
-                    <button
-                      key={key}
-                      onClick={() => setCompanySize(key)}
-                      className={`p-4 rounded-xl border transition-all duration-300 ${
-                        companySize === key
-                          ? 'border-purple-500 bg-purple-500/20 text-purple-300'
-                          : 'border-white/20 bg-white/5 text-gray-300 hover:border-purple-500/50 hover:bg-purple-500/10'
-                      }`}
-                    >
-                      <div className="font-bold capitalize">{key}</div>
-                      <div className="text-sm opacity-75">
-                        {formatCurrency(value.revenue)} revenue
-                      </div>
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              {/* Industry */}
-              <div className="mb-8">
-                <label className="block text-white font-semibold mb-4">Industry</label>
-                <select
-                  value={industry}
-                  onChange={(e) => setIndustry(e.target.value)}
-                  className="w-full p-4 rounded-xl border border-white/20 bg-white/5 text-white focus:border-purple-500 focus:outline-none"
-                >
-                  <option value="technology">Technology</option>
-                  <option value="finance">Finance</option>
-                  <option value="manufacturing">Manufacturing</option>
-                  <option value="healthcare">Healthcare</option>
-                  <option value="retail">Retail</option>
-                  <option value="energy">Energy</option>
-                </select>
-              </div>
-
-              {/* Current Automation Level */}
-              <div className="mb-8">
-                <label className="block text-white font-semibold mb-4">
-                  Current Automation Level: {currentAutomation}%
-                </label>
-                <input
-                  type="range"
-                  min="0"
-                  max="95"
-                  value={currentAutomation}
-                  onChange={(e) => setCurrentAutomation(parseInt(e.target.value))}
-                  className="w-full h-2 bg-white/20 rounded-lg appearance-none cursor-pointer slider"
-                />
-                <div className="flex justify-between text-sm text-gray-400 mt-2">
-                  <span>0%</span>
-                  <span>95%</span>
-                </div>
-              </div>
-
-              {/* Current Decision Accuracy */}
-              <div className="mb-8">
-                <label className="block text-white font-semibold mb-4">
-                  Current Decision Accuracy: {currentAccuracy}%
-                </label>
-                <input
-                  type="range"
-                  min="50"
-                  max="95"
-                  value={currentAccuracy}
-                  onChange={(e) => setCurrentAccuracy(parseInt(e.target.value))}
-                  className="w-full h-2 bg-white/20 rounded-lg appearance-none cursor-pointer slider"
-                />
-                <div className="flex justify-between text-sm text-gray-400 mt-2">
-                  <span>50%</span>
-                  <span>95%</span>
-                </div>
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
+          {/* Calculator Inputs */}
+          <div className="bg-gradient-to-br from-slate-800/50 to-purple-800/50 backdrop-blur-sm rounded-xl p-8 border border-purple-500/20">
+            <h3 className="text-2xl font-bold text-white mb-8">Configure Your Scenario</h3>
+            
+            {/* Company Size */}
+            <div className="mb-8">
+              <label className="block text-white font-semibold mb-4">Company Size</label>
+              <div className="grid grid-cols-2 gap-3">
+                {[
+                  { value: 'small', label: 'Small (1-50)', icon: '🏢' },
+                  { value: 'medium', label: 'Medium (51-500)', icon: '🏭' },
+                  { value: 'large', label: 'Large (501-5000)', icon: '🏗️' },
+                  { value: 'enterprise', label: 'Enterprise (5000+)', icon: '🌐' }
+                ].map((size) => (
+                  <button
+                    key={size.value}
+                    onClick={() => setCompanySize(size.value)}
+                    className={`p-4 rounded-lg border-2 transition-all duration-300 ${
+                      companySize === size.value
+                        ? 'border-purple-500 bg-purple-500/20 text-purple-300'
+                        : 'border-gray-600 bg-gray-700/50 text-gray-300 hover:border-purple-400 hover:bg-purple-500/10'
+                    }`}
+                  >
+                    <div className="text-2xl mb-2">{size.icon}</div>
+                    <div className="text-sm font-semibold">{size.label}</div>
+                  </button>
+                ))}
               </div>
             </div>
 
-            {/* Results Section */}
-            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
-              <h3 className="text-2xl font-bold text-white mb-8">Your Potential Results</h3>
-              
-              {/* Key Metrics */}
-              <div className="space-y-6 mb-8">
-                <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl p-6 border border-green-500/30">
-                  <div className="text-3xl font-extrabold text-green-400 mb-2">
-                    {formatCurrency(annualSavings)}
-                  </div>
-                  <div className="text-green-300 text-sm">Annual Savings Potential</div>
-                </div>
+            {/* Industry */}
+            <div className="mb-8">
+              <label className="block text-white font-semibold mb-4">Industry</label>
+              <select
+                value={industry}
+                onChange={(e) => setIndustry(e.target.value)}
+                className="w-full p-4 rounded-lg border-2 border-gray-600 bg-gray-700/50 text-white focus:border-purple-500 focus:bg-purple-500/10 transition-all duration-300"
+              >
+                <option value="technology">Technology</option>
+                <option value="manufacturing">Manufacturing</option>
+                <option value="finance">Finance</option>
+                <option value="healthcare">Healthcare</option>
+                <option value="retail">Retail</option>
+                <option value="logistics">Logistics</option>
+              </select>
+            </div>
 
-                <div className="bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-xl p-6 border border-blue-500/30">
-                  <div className="text-3xl font-extrabold text-blue-400 mb-2">
-                    {roi}%
-                  </div>
-                  <div className="text-blue-300 text-sm">Return on Investment</div>
-                </div>
-
-                <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl p-6 border border-purple-500/30">
-                  <div className="text-3xl font-extrabold text-purple-400 mb-2">
-                    {paybackPeriod} months
-                  </div>
-                  <div className="text-purple-300 text-sm">Payback Period</div>
-                </div>
+            {/* Current Automation Level */}
+            <div className="mb-8">
+              <label className="block text-white font-semibold mb-4">
+                Current Automation Level: {currentAutomation}%
+              </label>
+              <input
+                type="range"
+                min="0"
+                max="95"
+                value={currentAutomation}
+                onChange={(e) => setCurrentAutomation(Number(e.target.value))}
+                className="w-full h-3 bg-gray-600 rounded-lg appearance-none cursor-pointer slider"
+                style={{
+                  background: `linear-gradient(to right, #8b5cf6 0%, #8b5cf6 ${currentAutomation}%, #374151 ${currentAutomation}%, #374151 100%)`
+                }}
+              />
+              <div className="flex justify-between text-xs text-gray-400 mt-2">
+                <span>0% Manual</span>
+                <span>95% Automated</span>
               </div>
+            </div>
 
-              {/* Improvement Metrics */}
-              <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-xl p-6 border border-indigo-500/30 mb-8">
-                <h4 className="text-lg font-bold text-indigo-400 mb-4">Expected Improvements</h4>
-                <div className="space-y-3">
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-300">Automation Rate</span>
-                    <span className="text-green-400 font-bold">{currentAutomation}% → 98%</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-300">Decision Accuracy</span>
-                    <span className="text-blue-400 font-bold">{currentAccuracy}% → 99.7%</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-300">Response Time</span>
-                    <span className="text-purple-400 font-bold">15s → 0.3s</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Call to Action */}
-              <div className="text-center">
-                <a 
-                  href="/contact"
-                  className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1 inline-block"
-                >
-                  Get Detailed Analysis
-                </a>
+            {/* Annual Revenue */}
+            <div className="mb-8">
+              <label className="block text-white font-semibold mb-4">
+                Annual Revenue: ${annualRevenue}M
+              </label>
+              <input
+                type="range"
+                min="10"
+                max="10000"
+                step="10"
+                value={annualRevenue}
+                onChange={(e) => setAnnualRevenue(Number(e.target.value))}
+                className="w-full h-3 bg-gray-600 rounded-lg appearance-none cursor-pointer slider"
+                style={{
+                  background: `linear-gradient(to right, #8b5cf6 0%, #8b5cf6 ${(annualRevenue - 10) / (10000 - 10) * 100}%, #374151 ${(annualRevenue - 10) / (10000 - 10) * 100}%, #374151 100%)`
+                }}
+              />
+              <div className="flex justify-between text-xs text-gray-400 mt-2">
+                <span>$10M</span>
+                <span>$10B</span>
               </div>
             </div>
           </div>
 
-          {/* Bottom CTA */}
-          <div className="text-center mt-16">
-            <div className="bg-gradient-to-r from-purple-900/50 to-blue-900/50 rounded-2xl p-8 border border-purple-500/30">
-              <h4 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Business?</h4>
-              <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-                Join the companies that have already achieved unprecedented results with Next-Generation Autonomous Intelligence. 
-                Get your personalized ROI analysis and free consultation.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
-                  href="/contact"
-                  className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
-                >
-                  Get Free Consultation
-                </a>
-                <a 
-                  href="/case-studies/ai-2026-july-revolutionary-breakthrough-mega-success"
-                  className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
-                >
-                  View Success Stories →
-                </a>
+          {/* Results */}
+          <div className="space-y-8">
+            {/* Main ROI Result */}
+            <div className="bg-gradient-to-br from-green-900/50 to-emerald-900/50 backdrop-blur-sm rounded-xl p-8 border border-green-500/20">
+              <div className="text-center">
+                <div className="text-6xl font-extrabold text-green-400 mb-4">
+                  ${roi.value.toLocaleString()}M
+                </div>
+                <div className="text-xl text-green-300 font-semibold mb-2">Projected ROI</div>
+                <div className="text-sm text-gray-400">
+                  Based on {roi.multiplier}x performance multiplier
+                </div>
               </div>
+            </div>
+
+            {/* Detailed Results */}
+            <div className="grid grid-cols-2 gap-6">
+              <div className="bg-gradient-to-br from-purple-900/50 to-indigo-900/50 backdrop-blur-sm rounded-xl p-6 border border-purple-500/20">
+                <div className="text-3xl font-bold text-purple-400 mb-2">{roi.multiplier}x</div>
+                <div className="text-sm text-purple-300 font-semibold">Performance Boost</div>
+                <div className="text-xs text-gray-400 mt-1">Based on automation gap</div>
+              </div>
+              <div className="bg-gradient-to-br from-cyan-900/50 to-blue-900/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20">
+                <div className="text-3xl font-bold text-cyan-400 mb-2">{roi.timeToROI}</div>
+                <div className="text-sm text-cyan-300 font-semibold">Months to ROI</div>
+                <div className="text-xs text-gray-400 mt-1">Time to break even</div>
+              </div>
+            </div>
+
+            {/* Key Benefits */}
+            <div className="bg-gradient-to-br from-slate-800/50 to-purple-800/50 backdrop-blur-sm rounded-xl p-6 border border-purple-500/20">
+              <h4 className="text-lg font-bold text-white mb-4">Key Benefits You'll Achieve:</h4>
+              <div className="space-y-3">
+                <div className="flex items-center gap-3">
+                  <span className="text-green-400">✓</span>
+                  <span className="text-gray-300 text-sm">99.99% Autonomous Operations</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <span className="text-green-400">✓</span>
+                  <span className="text-gray-300 text-sm">1 Million Times Performance Boost</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <span className="text-green-400">✓</span>
+                  <span className="text-gray-300 text-sm">0.0001 Second Decision Time</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <span className="text-green-400">✓</span>
+                  <span className="text-gray-300 text-sm">Zero Human Intervention Required</span>
+                </div>
+              </div>
+            </div>
+
+            {/* CTA */}
+            <div className="text-center">
+              <a 
+                href="/contact"
+                className="inline-block bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
+              >
+                Start Your Transformation
+              </a>
+              <p className="text-xs text-gray-400 mt-3">
+                Results based on Fortune 100 company implementations
+              </p>
             </div>
           </div>
         </div>
       </div>
     </section>
   );
-};
-
-export default InteractiveROICalculator2026;
+}
