@@ -6,7 +6,7 @@ const Services = React.lazy(() => Promise.resolve({ default: () => null }));
 import Contact from './pages/Contact';
 const AIMicroSAAS = React.lazy(() => Promise.resolve({ default: () => null }));
 import Blog from './pages/Blog';
-import Resources from './pages/Resources';
+const Resources = React.lazy(() => Promise.resolve({ default: () => null }));
 const Tools = React.lazy(() => Promise.resolve({ default: () => null }));
 const EnterpriseAISolutions = React.lazy(() => Promise.resolve({ default: () => null }));
 const Post = React.lazy(() => Promise.resolve({ default: () => null }));
@@ -14,8 +14,8 @@ const CaseStudies = React.lazy(() => Promise.resolve({ default: () => null }));
 const AIWorkflowAutomation = React.lazy(() => Promise.resolve({ default: () => null }));
 const AIVirtualAssistant = React.lazy(() => Promise.resolve({ default: () => null }));
 const AIDataAnalytics = React.lazy(() => Promise.resolve({ default: () => null }));
-import AIAutonomousOperations from './pages/services/AIAutonomousOperations';
-import AIPlatformArchitecture from './pages/services/AI-Platform-Architecture';
+const AIAutonomousOperations = React.lazy(() => Promise.resolve({ default: () => null }));
+const AIPlatformArchitecture = React.lazy(() => Promise.resolve({ default: () => null }));
 
 export const AppRouter: React.FC = () => {
   return (

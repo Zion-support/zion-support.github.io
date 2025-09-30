@@ -52,12 +52,16 @@ import QuantumConsciousnessFusionBanner from "./components/QuantumConsciousnessF
 import Revolutionary2026ContentShowcaseBanner from "./components/Revolutionary2026ContentShowcaseBanner";
 import May2026RevolutionaryBreakthroughBanner from "./components/May2026RevolutionaryBreakthroughBanner";
 import AITrends2026AdvertisingBanner from "./components/AITrends2026AdvertisingBanner";
+import February2026NewContentBreakthroughBanner from "./components/February2026NewContentBreakthroughBanner";
 
 export default function App(): JSX.Element {
   return (
     <div className="min-h-screen bg-slate-950">
       {/* NEW: July 2026 Revolutionary Breakthrough Banner - Most Prominent */}
       <July2026RevolutionaryBreakthroughBanner />
+      
+      {/* NEW: February 2026 New Content Breakthrough Banner - Most Prominent */}
+      <February2026NewContentBreakthroughBanner />
       
       {/* NEW: June 2027 Transcendent Intelligence Banner - Most Prominent */}
       <TranscendentIntelligence2027Banner />
