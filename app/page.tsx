@@ -1,14 +1,8 @@
 // @ts-nocheck
 import React from 'react';
-import NewContentAdvertisingBanner from '../components/NewContentAdvertisingBanner';
 import UnifiedContentPromotion from '../components/UnifiedContentPromotion';
-import January2026NeuralArchitectureSearchBanner from '../components/January2026NeuralArchitectureSearchBanner';
-import January2026FederatedLearningBanner from '../components/January2026FederatedLearningBanner';
-import January2026RevolutionaryBreakthroughBanner from '../components/January2026RevolutionaryBreakthroughBanner';
-import January2026NewServicesBanner from '../components/January2026NewServicesBanner';
-import Revolutionary2026ContentAdvertisingBanner from '../components/Revolutionary2026ContentAdvertisingBanner';
-import January2026BreakthroughShowcaseBanner from '../components/January2026BreakthroughShowcaseBanner';
-import Ultimate2026ContentPromotionalBanner from '../components/Ultimate2026ContentPromotionalBanner';
+import NewContent2026ShowcaseBanner from '../components/NewContent2026ShowcaseBanner';
+import Ultimate2026ContentShowcase from '../components/Ultimate2026ContentShowcase';
 
 export default function HomePage() {
   return (
@@ -26,36 +20,32 @@ export default function HomePage() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
             <div className="text-white font-semibold">New this week</div>
             <div className="flex flex-wrap gap-2">
-              <a href="/blog/ai-2026-reliable-genai-platform" className="inline-flex items-center gap-2 bg-indigo-500/20 text-indigo-200 border border-indigo-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-indigo-500/30 transition-colors">Reliable GenAI Platform 2026<span>→</span></a>
-              <a href="/blog/ai-2026-e2e-ai-tracing" className="inline-flex items-center gap-2 bg-cyan-500/20 text-cyan-200 border border-cyan-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-cyan-500/30 transition-colors">E2E AI Tracing 2026<span>→</span></a>
+              <a href="/blog/ai-2026-multimodal-enterprise-automation" className="inline-flex items-center gap-2 bg-cyan-500/20 text-cyan-200 border border-cyan-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-cyan-500/30 transition-colors">Multimodal Automation<span>→</span></a>
+              <a href="/blog/ai-2026-quantum-enhanced-machine-learning" className="inline-flex items-center gap-2 bg-purple-500/20 text-purple-200 border border-purple-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-purple-500/30 transition-colors">Quantum ML<span>→</span></a>
+              <a href="/blog/ai-2026-autonomous-business-operations" className="inline-flex items-center gap-2 bg-green-500/20 text-green-200 border border-green-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-green-500/30 transition-colors">Autonomous Ops<span>→</span></a>
             </div>
           </div>
         </div>
       </section>
       
+      {/* New Content 2026 Showcase Banner - Latest Content */}
+      <NewContent2026ShowcaseBanner />
+      
       {/* Revolutionary 2026 Content Advertising Banner */}
-      <Revolutionary2026ContentAdvertisingBanner />
       
       {/* January 2026 Breakthrough Showcase Banner */}
-      <January2026BreakthroughShowcaseBanner />
       
       {/* Revolutionary Breakthroughs Banner */}
-      <January2026RevolutionaryBreakthroughBanner />
       
       {/* New Services Banner */}
-      <January2026NewServicesBanner />
 
       {/* New Content Advertising Banner - promotes Trustless Evaluation Blueprint (2026) */}
-      <NewContentAdvertisingBanner />
       
       {/* Legacy Content Banners */}
-      <January2026NeuralArchitectureSearchBanner />
-      <January2026FederatedLearningBanner />
       
       <UnifiedContentPromotion />
 
       {/* Ultimate 2026 Content Promotional Banner */}
-      <Ultimate2026ContentPromotionalBanner />
 
       {/* Latest Revolutionary Content */}
       <section className="py-12">
@@ -150,7 +140,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      <ContentShowcase />
+      {/* Ultimate 2026 Content Showcase */}
+      <Ultimate2026ContentShowcase />
+
     </main>
   );
 }
