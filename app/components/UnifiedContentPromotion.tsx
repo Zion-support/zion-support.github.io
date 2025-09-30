@@ -2,6 +2,22 @@
 
 const promoted = [
   {
+    href: '/blog/ai-operational-trust-q4-2025',
+    title: 'AI Operational Trust Q4 2025',
+    desc: 'Scorecards, budgets, and attested rollbacks that prevent regressions and speed delivery.',
+    emoji: '🧭',
+    pill: 'Fresh • Sep 30, 2025',
+    theme: 'from-emerald-600 to-teal-600',
+  },
+  {
+    href: '/blog/ai-product-launch-checklist-2025',
+    title: 'AI Product Launch Checklist 2025',
+    desc: 'Graduate pilots to production with safety, reliability, and measurable ROI.',
+    emoji: '🚀',
+    pill: 'New • Sep 30, 2025',
+    theme: 'from-cyan-600 to-blue-600',
+  },
+  {
     href: '/blog/ai-2026-neural-architecture-search-breakthrough',
     title: 'Neural Architecture Search 2026',
     desc: 'Revolutionary NAS algorithms that design optimal neural architectures 1000x faster than humans.',

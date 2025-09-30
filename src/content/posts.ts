@@ -10,19 +10,34 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-<<<<<<< HEAD
     slug: "ai-governance-risk-playbook-2025",
     title: "AI Governance Risk Playbook 2025: Practical Controls That Work",
-=======
-    slug: "ai-product-launch-checklist-2025",
-    title: "AI Product Launch Checklist: From Pilot to Production",
->>>>>>> cursor/create-and-deploy-new-content-a1d5
     description:
       "Actionable controls, approval flows, and monitoring that keep GenAI initiatives safe and compliant.",
     category: "AI Governance",
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "6 min read",
+  },
+  {
+    slug: "ai-product-launch-checklist-2025",
+    title: "AI Product Launch Checklist: From Pilot to Production",
+    description:
+      "A battle‑tested checklist to graduate pilots into production with reliability, safety, and ROI.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "ai-operational-trust-q4-2025",
+    title: "AI Operational Trust Q4 2025: Scorecards That Prevent Regressions",
+    description:
+      "Wire SLIs to KPIs with budgets, canaries, and attested rollbacks to ship faster and safer.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read",
   },
   {
     slug: "edge-e2e-observability",
