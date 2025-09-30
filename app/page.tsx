@@ -14,6 +14,8 @@ import January2026NewServicesBanner from '../components/January2026NewServicesBa
 import Revolutionary2026ContentAdvertisingBanner from '../components/Revolutionary2026ContentAdvertisingBanner';
 import January2026BreakthroughShowcaseBanner from '../components/January2026BreakthroughShowcaseBanner';
 import Ultimate2026ContentPromotionalBanner from '../components/Ultimate2026ContentPromotionalBanner';
+import January2026EdgeNativeIntelligenceBanner from '../components/January2026EdgeNativeIntelligenceBanner';
+import January2026RevolutionaryContentBanner from '../components/January2026RevolutionaryContentBanner';
 <<<<<<< HEAD
 <<<<<<< HEAD
 import Ultimate2026HyperintelligenceBanner from '../components/Ultimate2026HyperintelligenceBanner';
@@ -55,6 +57,15 @@ export default function HomePage() {
     </div>
   </section>
 
+      {/* January 2026 Revolutionary Content Banner - Featured prominently */}
+      <January2026RevolutionaryContentBanner />
+      
+      {/* January 2026 Edge-Native Intelligence Banner */}
+      <January2026EdgeNativeIntelligenceBanner />
+      
+      {/* January 2026 Federated Learning Banner */}
+      <January2026FederatedLearningBanner />
+      
       {/* Revolutionary 2027 Content Mega Banner - Featured prominently */}
       <Revolutionary2027ContentMegaBanner />
       
