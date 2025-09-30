@@ -69,11 +69,15 @@ export const posts: BlogPost[] = [
     description: "Design agents that run close to users with scoped permissions, on‑device tools, and instant rollback.",
     category: "Edge Computing",
     publishedAt: "2025-09-30",
+<<<<<<< HEAD
+  },
+=======
     featured: true,
     readTime: "8 min read"
   },
   {
     
+>>>>>>> origin/cursor/create-and-deploy-new-content-f0bd
   {
     slug: "ai-2027-operational-scorecards",
     title: "Operational AI Scorecards 2027: KPIs, Budgets, Rollback",
