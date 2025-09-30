@@ -137,14 +137,14 @@ const NewServicesShowcase: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/services"
+                href="/services"
                 className="bg-white text-purple-600 hover:bg-purple-50 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2"
               >
                 Explore All Services
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <Link
-                to="/contact"
+                href="/contact"
                 className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
               >
                 Get Free Consultation

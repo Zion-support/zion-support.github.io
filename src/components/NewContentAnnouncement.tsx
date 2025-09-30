@@ -74,14 +74,14 @@ const NewContentAnnouncement: React.FC = () => {
 
             <div className="flex flex-col sm:flex-row gap-3">
               <Link
-                to="/blog"
+                href="/blog"
                 className="bg-white text-purple-600 hover:bg-purple-50 px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2"
               >
                 Read Latest Articles
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
-                to="/services"
+                href="/services"
                 className="border border-white text-white hover:bg-white hover:text-purple-600 px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2"
               >
                 Explore New Services

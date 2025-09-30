@@ -42,7 +42,7 @@ const NewContentShowcase: React.FC = () => {
               <h3 className="text-3xl font-bold text-white mb-2">🚀 Revolutionary Services</h3>
               <p className="text-zion-slate-light">Breakthrough AI solutions that are reshaping industries</p>
             </div>
-            <Link to="/services" className="text-zion-cyan hover:text-white transition-colors flex items-center gap-2">
+            <Link href="/services" className="text-zion-cyan hover:text-white transition-colors flex items-center gap-2">
               View All Services
               <ArrowRight className="w-4 h-4" />
             </Link>
@@ -113,7 +113,7 @@ const NewContentShowcase: React.FC = () => {
               <h3 className="text-3xl font-bold text-white mb-2">📚 Latest Articles</h3>
               <p className="text-zion-slate-light">Fresh insights on AI, quantum computing, and cybersecurity</p>
             </div>
-            <Link to="/blog" className="text-zion-cyan hover:text-white transition-colors flex items-center gap-2">
+            <Link href="/blog" className="text-zion-cyan hover:text-white transition-colors flex items-center gap-2">
               View All Articles
               <ArrowRight className="w-4 h-4" />
             </Link>
@@ -173,7 +173,7 @@ const NewContentShowcase: React.FC = () => {
               <h3 className="text-3xl font-bold text-white mb-2">🏆 Success Stories</h3>
               <p className="text-zion-slate-light">Real results from companies using our AI solutions</p>
             </div>
-            <Link to="/case-studies" className="text-zion-cyan hover:text-white transition-colors flex items-center gap-2">
+            <Link href="/case-studies" className="text-zion-cyan hover:text-white transition-colors flex items-center gap-2">
               View All Case Studies
               <ArrowRight className="w-4 h-4" />
             </Link>
@@ -243,14 +243,14 @@ const NewContentShowcase: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/contact"
+                href="/contact"
                 className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-blue-light px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2"
               >
                 <Sparkles className="w-5 h-5" />
                 Start Your Journey
               </Link>
               <Link
-                to="/services"
+                href="/services"
                 className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
               >
                 Explore Services
