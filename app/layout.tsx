@@ -43,6 +43,14 @@ function Header() {
           Zion Tech Group
         </Link>
         <div className="hidden md:flex gap-6">
+          <div className="relative group">
+            <Link href="/blog/ai-2026-december-mega-breakthrough-revolution" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
+              December 2026 Mega Breakthrough
+              <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
+                REVOLUTIONARY
+              </span>
+            </Link>
+          </div>
           <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors">About</Link>
           <Link href="/services" className="text-gray-700 hover:text-blue-600 transition-colors">Services</Link>
           <div className="relative group">
