@@ -76,6 +76,30 @@ const featuredContent: ContentItem[] = [
     publishedDate: 'September 30, 2025',
     readTime: '12 min read',
     category: 'AI Reliability'
+  },
+  {
+    id: '6',
+    title: 'AI Operational Excellence: Autonomous Agents Driving 10x Efficiency',
+    description: 'How production-grade agents orchestrate operations safely with guardrails and observability.',
+    link: '/blog/ai-operational-excellence-agents-2026',
+    badge: 'New 2026 Insight',
+    badgeColor: 'bg-gradient-to-r from-cyan-600 to-sky-600',
+    icon: '⚙️',
+    publishedDate: 'September 30, 2025',
+    readTime: '14 min read',
+    category: 'Enterprise Automation'
+  },
+  {
+    id: '7',
+    title: 'Intelligent Data Fabric 2026: Real-Time AI for Connected Enterprises',
+    description: 'Unify batch, streaming, and unstructured data to power low-latency AI decisions.',
+    link: '/blog/ai-intelligent-data-fabric-2026',
+    badge: 'New 2026 Guide',
+    badgeColor: 'bg-gradient-to-r from-amber-600 to-orange-600',
+    icon: '🧩',
+    publishedDate: 'September 30, 2025',
+    readTime: '15 min read',
+    category: 'Data & AI Architecture'
   }
 ];
 
