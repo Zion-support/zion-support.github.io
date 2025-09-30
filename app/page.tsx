@@ -339,13 +339,16 @@ export default function HomePage() {
         </div>
       </section>
       {/* 🚀 NEWEST 2027 CONTENT - BREAKTHROUGH QUANTUM AI & AUTONOMOUS INTELLIGENCE! */}
-      <NewContent2027ShowcaseBanner />
+      {/* Temporarily disabled to fix layout; re-enable after validation */}
+      {/* <NewContent2027ShowcaseBanner /> */}
 
       {/* 🚀 REVOLUTIONARY AI ENTERPRISE AUTOMATION 2026 */}
-      <RevolutionaryAIEnterpriseAutomationBanner />
+      {/* Component temporarily unavailable */}
+      {/* <RevolutionaryAIEnterpriseAutomationBanner /> */}
 
       {/* ⚛️ QUANTUM AI BREAKTHROUGH 2026 */}
-      <QuantumAIBreakthroughBanner />
+      {/* Component temporarily unavailable */}
+      {/* <QuantumAIBreakthroughBanner /> */}
 
       {/* 🏆 ENTERPRISE AUTOMATION SUCCESS CASE STUDY */}
       <EnterpriseAutomationSuccessBanner />
@@ -361,9 +364,9 @@ export default function HomePage() {
           <div className="flex gap-3">
             <Link href="/blog/ai-2027-autonomous-governance-blueprint" className="inline-flex items-center gap-2 bg-white text-purple-700 px-4 py-2 rounded-lg font-semibold hover:bg-purple-50 transition-colors">Read Governance</Link>
             <Link href="/blog/ai-2026-agent-ops-observability" className="inline-flex items-center gap-2 bg-fuchsia-500 text-white px-4 py-2 rounded-lg font-semibold hover:bg-fuchsia-400 transition-colors">Read Observability</Link>
-                  </div>
-                </div>
-              </div>
+          </div>
+        </div>
+      </div>
       {/* 🔔 New Promotions: Governance + Agent Ops */}
       <section className="py-6 bg-gradient-to-r from-blue-700 via-indigo-700 to-fuchsia-700 text-white">
         <div className="max-w-6xl mx-auto px-4">
@@ -376,7 +379,9 @@ export default function HomePage() {
               <h3 className="text-xl font-bold">AI 2027 Autonomous Governance Blueprint</h3>
               <p className="text-white/80 mt-2 text-sm">Policy → controls → telemetry → review. Ship autonomy safely with measurable guardrails.</p>
             </Link>
-
+          </div>
+        </div>
+      </section>
       {/* 🔔 New: Enterprise Autonomy Blueprint 2026 */}
       <AutonomyBlueprint2026Banner />
 

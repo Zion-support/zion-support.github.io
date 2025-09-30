@@ -36,7 +36,8 @@ export default function Page() {
 
 // Duplicate metadata block removed
 
-export default function AutonomousInfrastructureBlueprint2025() {
+// duplicate removed: use single default export above
+export function AutonomousInfrastructureBlueprint2025() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-10">
       <article className="prose prose-lg max-w-none">
@@ -109,7 +110,8 @@ export default function AutonomousInfrastructureBlueprint2025() {
 
 // Duplicate metadata block removed
 
-export default function Page() {
+// duplicate removed: provide a named component instead of default
+export function AutonomousInfrastructureBlueprint2025Alt() {
   return (
     <main className="max-w-4xl mx-auto px-4 py-12 prose prose-invert">
       <h1>Autonomous Infrastructure 2025</h1>

@@ -27,10 +27,10 @@ const LatestContentBanner: React.FC<LatestContentBannerProps> = ({
             <Sparkles className="w-6 h-6 animate-pulse" />
             <div>
               <h3 className="font-bold text-lg">
-                🔥 New: GenAI Reliability Scorecards 2027 · Edge Private Analytics 2027
+                🔥 New: AI 2026 Reliability Runbooks v4 · Edge Consentless Metrics v2
               </h3>
               <p className="text-sm opacity-90">
-                Plus: GenAI Cache Playbook 2026 — cut cost 50% with semantic caches
+                Explore zero‑PII analytics at &lt;100ms and budgeted runbooks with instant rollback
               </p>
             </div>
           </div>

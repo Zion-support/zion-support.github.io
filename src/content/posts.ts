@@ -10,7 +10,24 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-<<<<<<< HEAD
+    slug: "ai-2026-reliability-runbooks-v4",
+    title: "AI 2026: Reliability Runbooks v4",
+    description: "Budgeted actions, KPI canaries, and instant rollback—v4 playbooks for dependable AI operations.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "edge-2026-consentless-metrics-v2",
+    title: "Edge 2026: Consentless Metrics v2",
+    description: "Zero‑PII signals at <100ms using scoped IDs, edge aggregation, and differential privacy.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
     slug: "ai-executive-playbook-2027",
     title: "AI Executive Playbook 2027: Fund, Govern, and Scale with KPIs",
     description: "Executive‑ready roadmap: KPI‑linked scorecards, budgeted actions, and governance that accelerates delivery.",
@@ -34,7 +51,10 @@ export const posts: BlogPost[] = [
     description: "Signed configs, scoped IDs, and on‑device telemetry for zero‑PII rollouts worldwide under 100ms.",
     category: "Architecture",
     publishedAt: "2025-10-01",
-=======
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
     slug: "ai-2027-executive-playbook-v2",
     title: "AI 2027: Executive Playbook v2 — Fund, Govern, Scale",
     description: "Scorecards tied to KPIs, budget controls, and rollout guardrails to scale AI with confidence.",
@@ -49,13 +69,10 @@ export const posts: BlogPost[] = [
     description: "Scoped IDs, device aggregation, and warm pools for global sub‑100ms inference without PII.",
     category: "Edge Computing",
     publishedAt: "2025-10-03",
->>>>>>> cursor/create-and-deploy-new-content-5b7c
     featured: true,
     readTime: "8 min read"
   },
   {
-<<<<<<< HEAD
-=======
     slug: "genai-2027-cost-controllers-v2",
     title: "GenAI 2027: Cost Controllers v2 — Predictable Spend, Stable UX",
     description: "Quality tiers, semantic caches, and policy tests to cut spend 30–70% without regressions.",
@@ -65,7 +82,6 @@ export const posts: BlogPost[] = [
     readTime: "9 min read"
   },
   {
->>>>>>> cursor/create-and-deploy-new-content-5b7c
     slug: "ai-2027-customer-experience-agents",
     title: "AI 2027: Customer Experience Agents — 24/7 Autonomous CX",
     description: "Deploy trusted CX agents with budgets, live KPIs, and instant rollback that resolve 80% of tickets autonomously.",
