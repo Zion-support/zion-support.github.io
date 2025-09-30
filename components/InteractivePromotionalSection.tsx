@@ -1,4 +1,8 @@
+<<<<<<< HEAD:app/components/InteractivePromotionalSection.tsx
 'use client';
+=======
+"use client";
+>>>>>>> origin/cursor/create-and-deploy-new-content-839d:components/InteractivePromotionalSection.tsx
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
