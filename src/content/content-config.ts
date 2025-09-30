@@ -665,6 +665,34 @@ export const getLatestContent = (count: number = 5): FeaturedItem[] => {
     .slice(0, count);
 };
 
+// Advertise three new high-impact articles site-wide
+featuredBlogPosts.unshift(
+  {
+    id: "ai-executive-playbook-2027",
+    title: "AI Executive Playbook 2027",
+    description: "Fund, govern, and scale AI with measurable ROI and safety",
+    link: "/blog/ai-executive-playbook-2027",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-2027-cost-optimization-playbook",
+    title: "AI 2027 Cost Optimization Playbook",
+    description: "Quality tiers, caches, and budgets to cut spend 30–70%",
+    link: "/blog/ai-2027-cost-optimization-playbook",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-2026-private-feature-flags",
+    title: "Edge 2026: Private Feature Flags",
+    description: "Signed configs, scoped IDs, on‑device metrics for zero‑PII rollouts",
+    link: "/blog/edge-2026-private-feature-flags",
+    type: "article",
+    featured: true
+  }
+);
+
 // Add brand-new featured items to advertise site-wide (Feb 2027 / Oct 2026)
 featuredBlogPosts.unshift(
   {

@@ -27,10 +27,10 @@ const LatestContentBanner: React.FC<LatestContentBannerProps> = ({
             <Sparkles className="w-6 h-6 animate-pulse" />
             <div>
               <h3 className="font-bold text-lg">
-                🔥 New: AI Trust Scorecards v5 (2027) · Edge Private Evals (2026)
+                🔥 New: AI Executive Playbook 2027 · Cost Optimization 2027
               </h3>
               <p className="text-sm opacity-90">
-                Plus: GenAI Quality Tiers v2 (2026) and Edge RAG (Privacy‑Preserving)
+                Plus: Edge 2026 Private Feature Flags — zero‑PII rollouts under 100ms
               </p>
             </div>
           </div>
