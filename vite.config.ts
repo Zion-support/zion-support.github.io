@@ -28,6 +28,15 @@ export default defineConfig({
     reportCompressedSize: true,
     assetsInlineLimit: 4096,
     rollupOptions: {
+      external: [
+        'next/link',
+        'next/router',
+        'next/image',
+        'next/head',
+        'next/script',
+        'next/dynamic',
+        'next/navigation'
+      ],
       input: {
         main: './index.html'
       },
