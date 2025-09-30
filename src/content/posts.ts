@@ -11,28 +11,10 @@ export interface BlogPost {
 export const posts: BlogPost[] = [
   // Sept 30, 2025 — Newly added content (featured)
   {
-    slug: "ai-2025-sept-30-llm-supply-chains",
-    title: "AI 2025: AI Supply Chains — 99.5% Forecasts, 85% Inventory Cut",
-    description: "Blueprint with freshness windows, quality budgets, signed attestations, and rollback.",
-    category: "Enterprise AI",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "9 min read"
-  },
-  {
     slug: "ai-2025-sept-30-operational-trust-scorecards-v2",
     title: "Operational Trust Scorecards v2 — From SLIs to Business KPIs",
     description:
       "Update your scorecards with live canaries, budgeted actions, and rollback hooks that prevent regressions.",
-    category: "AI Operations",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "8 min read",
-  },
-  {
-    slug: "ai-2026-governed-agent-runbooks",
-    title: "AI 2026: Governed Agent Runbooks — Budgets, Canaries, Rollback",
-    description: "Production checklists for safe autonomy: budgeted actions, KPI‑linked canaries, instant rollback.",
     category: "AI Operations",
     publishedAt: "2025-09-30",
     featured: true,
@@ -1623,7 +1605,7 @@ posts.unshift(
   }
 );
 
-// Sept 30, 2025 – Add three more posts and promote across the site
+// Sept 30, 2025 – Freshly added posts to expand content library
 posts.unshift(
   {
     slug: "ai-2025-sept-30-operational-trust-scorecards-v3",
@@ -1654,16 +1636,6 @@ posts.unshift(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "6 min read",
-  },
-  {
-    slug: "genai-2025-sept-30-quality-tiers-quickstart",
-    title: "GenAI Quality Tiers Quickstart: Stable UX at 40–70% Lower Cost",
-    description:
-      "Introduce tiered routing, semantic caches, and KPI‑linked budgets to reduce spend without regressions.",
-    category: "GenAI",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "8 min read",
   }
 );
 
