@@ -62,10 +62,26 @@ function Header() {
             </Link>
           </div>
           <div className="relative group">
+            <Link href="/blog/ai-2026-neural-architecture-search-breakthrough" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
+              Neural Architecture Search
+              <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
+                BREAKTHROUGH
+              </span>
+            </Link>
+          </div>
+          <div className="relative group">
             <Link href="/blog/ai-2026-autonomous-business-intelligence-breakthrough" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
               Autonomous BI 2026
               <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
                 BREAKTHROUGH
+              </span>
+            </Link>
+          </div>
+          <div className="relative group">
+            <Link href="/blog/ai-2026-federated-learning-enterprise-breakthrough" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
+              Federated Learning
+              <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
+                PRIVACY-FIRST
               </span>
             </Link>
           </div>
@@ -137,8 +153,20 @@ function Footer() {
             </div>
           </div>
           <div>
-            <h3 className="font-semibold text-gray-900 mb-3">Latest 2028 Revolutionary Content</h3>
+            <h3 className="font-semibold text-gray-900 mb-3">Latest 2026 Revolutionary Content</h3>
             <div className="space-y-2">
+              <Link href="/blog/ai-2026-neural-architecture-search-breakthrough" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                🚀 Neural Architecture Search
+                <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">BREAKTHROUGH</span>
+              </Link>
+              <Link href="/case-studies/ai-2026-neural-architecture-search-mega-success" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                💰 $200M NAS Success
+                <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-2 py-1 rounded-full text-xs font-semibold">MEGA ROI</span>
+              </Link>
+              <Link href="/blog/ai-2026-federated-learning-enterprise-breakthrough" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                🔒 Federated Learning
+                <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">PRIVACY-FIRST</span>
+              </Link>
               <Link href="/blog/ai-2026-future-trends-breakthrough" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
                 🌟 AI 2026 Future Trends
                 <span className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">BREAKTHROUGH</span>

@@ -10,37 +10,24 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    slug: "ai-2025-september-30-new-governed-agent-patterns",
-    title: "New Governed Agent Patterns (2025)",
-    description: "Policy-first orchestration with approvals, verifiers, budgets, and rollback for safe autonomy.",
-    category: "AI Operations",
-    publishedAt: "2025-09-30",
+    slug: "ai-2026-neural-architecture-search-breakthrough",
+    title: "Neural Architecture Search: The 2026 Breakthrough Revolutionizing AI Development",
+    description: "Discover how NAS breakthrough technology is delivering 300-500% performance improvements and 95% energy efficiency gains across Fortune 500 enterprises.",
+    category: "AI Development",
+    publishedAt: "2026-01-15",
     featured: true,
-    readTime: "12 min read"
+    readTime: "15 min read"
   },
   {
-    slug: "ai-2025-september-30-autonomous-finops-scorecards",
-    title: "Autonomous FinOps Scorecards (2025)",
-    description: "KPI-linked budgets, routing, caching, and rollback to prevent cost regressions.",
-    category: "FinOps",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "14 min read"
-  },
-  {
-    slug: "ai-2025-september-30-enterprise-ai-roadmap",
-    title: "Enterprise AI Roadmap (2025)",
-    description: "Pragmatic roadmap to plan, fund, and govern AI with measurable outcomes.",
-    category: "AI Strategy",
-    publishedAt: "2025-09-30",
+    slug: "ai-2026-federated-learning-enterprise-breakthrough",
+    title: "Federated Learning Enterprise Breakthrough: Privacy-First AI at Global Scale",
+    description: "Transform your AI capabilities with privacy-preserving federated learning that delivers 300% performance improvements while maintaining 100% regulatory compliance.",
+    category: "Privacy AI",
+    publishedAt: "2026-01-15",
     featured: true,
     readTime: "18 min read"
   },
   {
->>>>>>> feat/sept-30-content-promo
     slug: "production-rag-quality-budgets-2026",
     title: "Production RAG: Quality Budgets, Freshness Windows, and SLAs",
     description: "Run RAG at scale with explicit quality budgets, freshness controls, and KPI-aligned SLAs that avoid regressions.",
@@ -66,7 +53,8 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-13",
     featured: true,
     readTime: "7 min read"
-=======
+  },
+  {
     slug: "ai-2026-e2e-ai-tracing",
     title: "E2E AI Tracing 2026: From Prompts to Outcomes",
     description: "Instrument prompts, tools, calls, budgets, and KPIs with end‑to‑end traces for reliability and cost control.",
@@ -83,7 +71,6 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "6 min read"
->>>>>>> feat/new-content-and-ads
   },
   {
     slug: "ai-2025-sept-30-autonomous-control-planes",
