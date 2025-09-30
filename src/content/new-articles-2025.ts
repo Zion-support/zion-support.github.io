@@ -12,6 +12,7 @@ export interface NewArticle {
 
 export const newArticles2025: NewArticle[] = [
   {
+<<<<<<< HEAD
     id: "ai-agent-evaluations-2026",
     title: "🧪 AI Agent Evaluations 2026: Reliable Metrics & Safe Deployments",
     description: "Blueprint for robust agent evals: task suites, rubric scoring, long-horizon reliability, safety budgets, and HIL governance.",
@@ -32,6 +33,39 @@ export const newArticles2025: NewArticle[] = [
     link: "/blog/ai-platform-cost-optimization-2026",
     readTime: "14 min read",
     tags: ["FinOps", "Autoscaling", "Quantization", "Spot Instances"]
+=======
+    id: "realtime-ai-decision-engines-2025",
+    title: "⚡ Real-Time AI Decision Engines: 10M/sec Under 1ms Latency",
+    description: "Architect ultra-low-latency decision systems with tiered models, caches, and inline canaries delivering reliable sub‑1ms actions at scale.",
+    category: "Real-Time AI",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/real-time-ai-decision-engines-2025",
+    readTime: "10 min read",
+    tags: ["Low Latency", "Caching", "SLAs", "Tracing"]
+  },
+  {
+    id: "privacy-first-telemetry-quickstart-2025",
+    title: "🔒 Privacy‑First Telemetry Quickstart: Signal‑Rich, PII‑Safe Analytics",
+    description: "Implement scoped identifiers, field‑level filters, and DP noise to keep insights high and risk low—no data leaks, no regressions.",
+    category: "Observability",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/privacy-first-telemetry-quickstart-2025",
+    readTime: "7 min read",
+    tags: ["Telemetry", "Privacy", "DP", "Scoped IDs"]
+  },
+  {
+    id: "agent-runbooks-2025",
+    title: "🤖 Agent Runbooks 2025: Budgeted Actions, Rollbacks, and Safety Gates",
+    description: "Design reliable agentic workflows with budgeted actions, approvals, and instant rollback—ship autonomy without surprises.",
+    category: "AI Operations",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/agent-runbooks-2025",
+    readTime: "8 min read",
+    tags: ["Agents", "Runbooks", "Budgets", "Safety"]
+>>>>>>> cursor/create-and-deploy-new-content-fe6f
   },
   {
     id: "multimodal-ai-revolution-2025",
