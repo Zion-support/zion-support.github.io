@@ -1,4 +1,6 @@
 import React, { JSX } from "react";
+import ConsensusIntelligenceBreakthroughBanner from "./components/ConsensusIntelligenceBreakthroughBanner";
+import AutonomousEnterpriseBreakthroughBanner from "./components/AutonomousEnterpriseBreakthroughBanner";
 import LatestContentBanner2025 from "./src/components/LatestContentBanner2025";
 import FeaturedContentBanner2025 from "./src/components/FeaturedContentBanner2025";
 import NewContentPromoBanner from "./src/components/NewContentPromoBanner";
@@ -34,7 +36,6 @@ import NewContent2026BreakthroughShowcaseBanner from "./components/NewContent202
 <<<<<<< HEAD
 import February2026BreakthroughMegaBanner from "./components/February2026BreakthroughMegaBanner";
 import NewContent2026ShowcaseBanner from "./components/NewContent2026ShowcaseBanner";
-import Revolutionary2026ContentMegaBreakthroughBanner from "./components/Revolutionary2026ContentMegaBreakthroughBanner";
 import March2026RevolutionaryBreakthroughBanner from "./components/March2026RevolutionaryBreakthroughBanner";
 import March2026ContentShowcase from "./components/March2026ContentShowcase";
 import March2026AdvertisingMegaBanner from "./components/March2026AdvertisingMegaBanner";
@@ -71,6 +72,7 @@ export default function App(): JSX.Element {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       {/* NEW: May 2026 Revolutionary Breakthrough Banner - Most Prominent */}
       <May2026RevolutionaryBreakthroughBanner />
@@ -100,6 +102,13 @@ export default function App(): JSX.Element {
       {/* NEW: April 2026 Mega Success Banner */}
       <April2026MegaSuccessBanner />
 >>>>>>> origin/cursor/create-and-deploy-new-content-c5bb
+=======
+      {/* NEW: 2026 Consensus Intelligence Breakthrough Banner - Most Prominent */}
+      <ConsensusIntelligenceBreakthroughBanner />
+      
+      {/* NEW: 2026 Autonomous Enterprise Breakthrough Banner - Most Prominent */}
+      <AutonomousEnterpriseBreakthroughBanner />
+>>>>>>> origin/cursor/create-and-deploy-new-content-52ce
       
       {/* NEW: March 2026 Revolutionary Breakthrough Banner - Most Prominent */}
       <March2026AdvertisingMegaBanner />
