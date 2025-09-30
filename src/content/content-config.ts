@@ -628,6 +628,22 @@ featuredBlogPosts.unshift(
 // Surface brand-new articles at the very top of featured content
 featuredBlogPosts.unshift(
   {
+    id: "ai-2028-self-healing-platforms",
+    title: "AI 2028: Self‑Healing Platforms",
+    description: "Predictive scaling, budget guards, one‑click rollback for 99.995% uptime",
+    link: "/blog/ai-2028-self-healing-platforms",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-2028-zero-pii-observability",
+    title: "Edge 2028: Zero‑PII Observability",
+    description: "Scoped IDs + on‑device aggregation + DP noise for <100ms insights",
+    link: "/blog/edge-2028-zero-pii-observability",
+    type: "article",
+    featured: true
+  },
+  {
     id: "ai-governance-live-scorecards-2026",
     title: "AI Governance Live Scorecards 2026",
     description: "CI policy tests + live scorecards preventing regressions before they ship",

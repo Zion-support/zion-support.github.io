@@ -10,6 +10,24 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-2028-self-healing-platforms",
+    title: "AI 2028: Self‑Healing Platforms — 99.995% Uptime at Lower Cost",
+    description: "Autonomous platform patterns: predictive scaling, budget guards, and one‑click rollback for extreme reliability.",
+    category: "Platform Engineering",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "11 min read"
+  },
+  {
+    slug: "edge-2028-zero-pii-observability",
+    title: "Edge 2028: Zero‑PII Observability — <100ms Insights without Personal Data",
+    description: "Scoped IDs, on‑device aggregation, DP noise, and windowed TTLs for privacy‑safe, real‑time product analytics.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
     slug: "ai-enterprise-transformation-2027",
     title: "AI Enterprise Transformation 2027: Executive Playbook",
     description: "Practical blueprint to plan, fund, and scale enterprise AI with measurable ROI and safety.",
