@@ -115,6 +115,92 @@ const Home = () => {
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
         
+        {/* 🔥 LATEST: 5 NEW ARTICLES + 3 CASE STUDIES - September 30, 2025 */}
+        <div className="bg-gradient-to-r from-emerald-900 via-teal-900 to-cyan-900 border-b-4 border-yellow-400/50 shadow-2xl">
+          <div className="container mx-auto px-6 py-12">
+            <div className="text-center">
+              <div className="inline-flex items-center gap-4 px-10 py-4 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 border-4 border-white/50 mb-8 shadow-2xl animate-bounce">
+                <Sparkles className="w-8 h-8 text-white animate-spin" />
+                <span className="text-gray-900 font-black text-2xl tracking-wider uppercase">
+                  🚀 TODAY: 5 NEW ARTICLES + 3 CASE STUDIES! 🚀
+                </span>
+                <Sparkles className="w-8 h-8 text-white animate-spin" />
+              </div>
+              <h2 className="text-6xl md:text-7xl font-black text-white mb-6 drop-shadow-2xl animate-pulse">
+                Revolutionary AI Content Just Dropped!
+              </h2>
+              <p className="text-3xl md:text-4xl text-emerald-200 font-bold mb-8 max-w-5xl mx-auto leading-tight">
+                💥 5 Game-Changing Articles + 3 High-ROI Case Studies
+              </p>
+              <div className="grid md:grid-cols-5 gap-4 mb-8 max-w-6xl mx-auto">
+                <div className="bg-white/20 backdrop-blur-lg rounded-xl p-4 border-2 border-emerald-400/60 hover:scale-110 transition-all">
+                  <div className="text-4xl mb-2">💰</div>
+                  <div className="text-white font-bold text-sm">AI Cost Optimization</div>
+                  <div className="text-emerald-200 text-xs mt-1">Save 60-80% on infrastructure</div>
+                </div>
+                <div className="bg-white/20 backdrop-blur-lg rounded-xl p-4 border-2 border-emerald-400/60 hover:scale-110 transition-all">
+                  <div className="text-4xl mb-2">🕸️</div>
+                  <div className="text-white font-bold text-sm">Agent Mesh Networks</div>
+                  <div className="text-emerald-200 text-xs mt-1">10,000+ coordinated agents</div>
+                </div>
+                <div className="bg-white/20 backdrop-blur-lg rounded-xl p-4 border-2 border-emerald-400/60 hover:scale-110 transition-all">
+                  <div className="text-4xl mb-2">👁️</div>
+                  <div className="text-white font-bold text-sm">Vision-Language-Action</div>
+                  <div className="text-emerald-200 text-xs mt-1">AI that sees, understands & acts</div>
+                </div>
+                <div className="bg-white/20 backdrop-blur-lg rounded-xl p-4 border-2 border-emerald-400/60 hover:scale-110 transition-all">
+                  <div className="text-4xl mb-2">✅</div>
+                  <div className="text-white font-bold text-sm">AI Governance</div>
+                  <div className="text-emerald-200 text-xs mt-1">Build trust & compliance</div>
+                </div>
+                <div className="bg-white/20 backdrop-blur-lg rounded-xl p-4 border-2 border-emerald-400/60 hover:scale-110 transition-all">
+                  <div className="text-4xl mb-2">📊</div>
+                  <div className="text-white font-bold text-sm">Data Quality</div>
+                  <div className="text-emerald-200 text-xs mt-1">99%+ data accuracy</div>
+                </div>
+              </div>
+              <div className="bg-gradient-to-r from-blue-500/30 to-purple-500/30 border-2 border-blue-400/60 rounded-2xl p-6 mb-8 max-w-6xl mx-auto">
+                <h3 className="text-3xl font-black text-white mb-4">💼 NEW CASE STUDIES: Proven Results, Massive ROI</h3>
+                <div className="grid md:grid-cols-3 gap-4">
+                  <div className="bg-white/10 rounded-lg p-4">
+                    <div className="text-blue-300 font-bold mb-2">InsureTech Global</div>
+                    <div className="text-5xl font-black text-white mb-1">$280M</div>
+                    <div className="text-emerald-200 text-sm">Annual Savings with AI Claims Processing</div>
+                  </div>
+                  <div className="bg-white/10 rounded-lg p-4">
+                    <div className="text-purple-300 font-bold mb-2">AutoDrive Innovations</div>
+                    <div className="text-5xl font-black text-white mb-1">99.997%</div>
+                    <div className="text-emerald-200 text-sm">Safety Record for Autonomous Driving</div>
+                  </div>
+                  <div className="bg-white/10 rounded-lg p-4">
+                    <div className="text-cyan-300 font-bold mb-2">GlobalTelecom</div>
+                    <div className="text-5xl font-black text-white mb-1">$520M</div>
+                    <div className="text-emerald-200 text-sm">Annual Savings from AI Network Optimization</div>
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-5 justify-center">
+                <Link
+                  to="/blog"
+                  className="bg-gradient-to-r from-emerald-400 via-teal-500 to-cyan-500 text-gray-900 px-12 py-6 rounded-2xl font-black text-3xl hover:from-emerald-500 hover:via-teal-600 hover:to-cyan-600 transition-all duration-300 hover:scale-110 shadow-2xl inline-flex items-center gap-4 border-4 border-white"
+                >
+                  <Rocket className="w-10 h-10 animate-bounce" />
+                  <span>Read All 5 New Articles</span>
+                  <ArrowRight className="w-10 h-10" />
+                </Link>
+                <Link
+                  to="/case-studies"
+                  className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 text-white px-12 py-6 rounded-2xl font-black text-3xl hover:from-blue-500 hover:via-purple-600 hover:to-pink-600 transition-all duration-300 hover:scale-110 shadow-2xl inline-flex items-center gap-4 border-4 border-white"
+                >
+                  <Award className="w-10 h-10 animate-pulse" />
+                  <span>View 3 New Case Studies</span>
+                  <TrendingUp className="w-10 h-10" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+        
         {/* 🎉 MEGA NEW CONTENT ANNOUNCEMENT - September 30, 2025 */}
         <div className="bg-gradient-to-r from-purple-900 via-pink-800 to-red-900 border-b-4 border-yellow-400/50 animate-pulse shadow-2xl">
           <div className="container mx-auto px-6 py-10">
