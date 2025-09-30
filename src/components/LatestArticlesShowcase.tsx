@@ -1,7 +1,10 @@
 import React from 'react';
+import { ArrowRight, Clock, Calendar, Sparkles, TrendingUp } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { latestArticles } from '../content/latest-articles';
 
 const LatestArticlesShowcase: React.FC = () => {
-  const displayArticles = [...featuredArticles.slice(0, 2), ...trendingArticles.slice(0, 1)];
+  const displayArticles = latestArticles.filter(article => article.featured).slice(0, 3);
 
   return (
     <section className="py-20 bg-white">
@@ -34,7 +37,7 @@ const LatestArticlesShowcase: React.FC = () => {
               <TrendingUp className="w-5 h-5 text-purple-500" />
             </div>
             <p className="text-gray-700 font-semibold mb-2">
-              🚀 Just Published: Platform Engineering Scorecards 2026, AI Cybersecurity Automation, and Edge AI Blueprint 2026
+              🚀 Just Published: AI Governance 2026, Edge Privacy‑Preserving Personalization, and Agent Releases 2026
             </p>
             <p className="text-gray-600 text-sm">
               Discover cutting-edge insights on golden paths and SLOs, autonomic incident response, and private real-time edge intelligence.

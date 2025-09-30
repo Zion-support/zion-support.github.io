@@ -32,18 +32,39 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
 
   const featuredContent = [
     {
-      title: "Secure ML Supply Chain 2026",
-      description: "SBOMs, lineage, and CI policy gates",
+      title: "AI Safety Budgets 2026",
+      description: "Guardrails wired to KPIs, approvals, rollbacks",
       icon: Shield,
-      link: "/blog/ai-secure-ml-supply-chain-2026",
-      category: "Security"
+      link: "/blog/ai-safety-budgets-2026",
+      category: "AI Strategy"
     },
     {
-      title: "GenAI Routing Under Budgets",
-      description: "Quality tiers without bill shock",
+      title: "Edge Privacy for ML 2026",
+      description: "On‑device filters and scoped identifiers",
+      icon: Cloud,
+      link: "/blog/edge-privacy-ml-2026",
+      category: "Edge"
+    },
+    {
+      title: "Agent Evals in Prod 2026",
+      description: "Online checks that predict outcomes",
+      icon: TrendingUp,
+      link: "/blog/agent-evals-in-prod-2026",
+      category: "GenAI"
+    },
+    {
+      title: "Cost‑Aware Inference 2026",
+      description: "Warm pools and quality tiers under SLAs",
       icon: Zap,
-      link: "/blog/genai-routing-under-budgets-2026",
-      category: "AI Ops"
+      link: "/blog/ai-cost-aware-inference-2026",
+      category: "GenAI"
+    },
+    {
+      title: "Platform Golden Paths 2026",
+      description: "Paved roads that move KPIs",
+      icon: TrendingUp,
+      link: "/blog/platform-golden-paths-kpis-2026",
+      category: "Platform"
     },
     {
       title: "Golden Paths that Move KPIs",
@@ -53,11 +74,39 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
       category: "Platform"
     },
     {
+      title: "Quality‑Tiered GenAI Routing 2026",
+      description: "Control cost with tiers, caches, and eval signals",
+      icon: Zap,
+      link: "/blog/genai-routing-under-budgets-2026",
+      category: "GenAI"
+    },
+    {
       title: "On‑Device Agents 2026",
-      description: "Private assistants with offline tools",
-      icon: Brain,
-      link: "/blog/on-device-agents-2026",
+      description: "Offline‑capable tools, private caches, safe fallbacks",
+      icon: Cloud,
+      link: "/blog/on-device-agents-offline-tools-2026",
       category: "Edge"
+    },
+    {
+      title: "Zero‑Trust Observability 2026",
+      description: "Signed traces and least‑privilege telemetry",
+      icon: Shield,
+      link: "/blog/zero-trust-observability-2026",
+      category: "Security"
+    },
+    {
+      title: "AI Incident Response Playbooks",
+      description: "Contain incidents in under 60 seconds",
+      icon: TrendingUp,
+      link: "/blog/ai-incident-response-playbooks-2025",
+      category: "Security"
+    },
+    {
+      title: "Edge Privacy Telemetry 2026",
+      description: "Scoped IDs and on‑device redaction",
+      icon: Brain,
+      link: "/blog/edge-privacy-telemetry-2026",
+      category: "Observability"
     }
   ];
 

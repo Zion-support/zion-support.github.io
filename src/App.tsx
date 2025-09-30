@@ -1,146 +1,235 @@
-import React, { useCallback, useEffect, useMemo, useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import React, { Suspense, useCallback, useEffect, useMemo, useState } from 'react';
+import { AppRouter } from './router';
 import './index.css';
 
-// Import pages
-import Home from './pages/Home';
-import Contact from './pages/Contact';
-import Blog from './pages/Blog';
-import Resources from './pages/Resources';
-import Portfolio from './pages/Portfolio';
-import NotFound from './pages/NotFound';
-import AIAutonomousOperations from './pages/services/AIAutonomousOperations';
-import AIPlatformArchitecture from './pages/services/AI-Platform-Architecture';
-import AIIncidentResponsePlaybooks2025 from './pages/blog/ai-incident-response-playbooks-2025/page';
-
-// Import components
-import Header from './components/Header';
-import Footer from './components/Footer';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
+// Import enhancement components
 import PerformanceMonitor from './components/PerformanceMonitor';
+import SEOOptimizer from './components/SEOOptimizer';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import SecurityEnhancer from './components/SecurityEnhancer';
+import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+import AnalyticsMonitor from './components/AnalyticsMonitor';
+import { LoadingSpinner } from './components/LoadingStates';
 
-// Import utilities (with fallbacks)
-const performanceMonitor = {
-  initialize: () => {},
-  cleanup: () => {},
-  getMetrics: () => ({}),
-  getOptimizations: () => ([])
-};
+// Legacy imports for compatibility
+import { performanceMonitor } from './utils/performanceMonitor';
+import { securityManager as enhancedSecurityManager } from './utils/securityHeaders';
+import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
 
-const enhancedSecurityManager = {
-  initialize: () => {}
-};
+// Local stub to avoid type errors when optional performance init is not present
+const initializePerformanceEnhancements = (): void => {};
 
-const accessibilityEnhancer = {
-  initialize: () => {},
-  cleanup: () => {}
-};
+// Temporary fallbacks for referenced components not present in repo
+const Placeholder: React.FC<{ name: string }> = ({ name }) => (
+  <div role="note" aria-label={`${name} placeholder`} />
+);
+const EnhancedSystemDashboard = () => <Placeholder name="EnhancedSystemDashboard" />;
+const KeyboardShortcutsHelp = (props: any) => <Placeholder name="KeyboardShortcutsHelp" />;
+const PerformanceWidget = (props: any) => <Placeholder name="PerformanceWidget" />;
+const PerformanceDashboard = () => <Placeholder name="PerformanceDashboard" />;
+const CommandPalette = (props: any) => <Placeholder name="CommandPalette" />;
+const AdvancedMonitoringDashboard = (props: any) => <Placeholder name="AdvancedMonitoringDashboard" />;
+const RealTimePerformanceMonitor = (props: any) => <Placeholder name="RealTimePerformanceMonitor" />;
+const EnhancedCommandPalette = (props: any) => <Placeholder name="EnhancedCommandPalette" />;
+const ComprehensivePerformanceDashboard = () => <Placeholder name="ComprehensivePerformanceDashboard" />;
+const ComprehensiveMonitoringDashboard = () => <Placeholder name="ComprehensiveMonitoringDashboard" />;
+const PerformanceOptimizationPanel = () => <Placeholder name="PerformanceOptimizationPanel" />;
+const ErrorRecoveryDashboard = () => <Placeholder name="ErrorRecoveryDashboard" />;
+const SystemStatusIndicator = (props: any) => <Placeholder name="SystemStatusIndicator" />;
+const EnhancedNotificationSystem = (props: any) => <Placeholder name="EnhancedNotificationSystem" />;
+const KeyboardShortcutsManager = (props: any) => <Placeholder name="KeyboardShortcutsManager" />;
+const SystemHealthDashboard = (props: any) => <Placeholder name="SystemHealthDashboard" />;
+const AIPerformanceDashboard = (props: any) => <Placeholder name="AIPerformanceDashboard" />;
+const WebsiteEnhancements = (props: any) => <Placeholder name="WebsiteEnhancements" />;
 
 export default function App(): React.JSX.Element {
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
+  const [notifications, setNotifications] = useState<import('./components/NotificationSystem').Notification[]>([]);
 
-  // Initialize performance monitoring
-  useEffect(() => {
-    performanceMonitor.initialize();
-    return () => performanceMonitor.cleanup();
-  }, []);
-
-  // Initialize security enhancements
-  useEffect(() => {
-    enhancedSecurityManager.initialize();
-  }, []);
-
-  // Initialize accessibility enhancements
-  useEffect(() => {
-    accessibilityEnhancer.initialize();
-    return () => accessibilityEnhancer.cleanup();
-  }, []);
-
-  // Performance optimization handlers
-  const handlePerformanceOptimization = useCallback(() => {
-    setShowPerformanceOptimizer(prev => !prev);
-  }, []);
-
-  const handlePerformanceMonitoring = useCallback(() => {
-    setShowPerformanceMonitor(prev => !prev);
-  }, []);
-
-  // Memoized performance data
-  const performanceData = useMemo(() => ({
-    metrics: performanceMonitor.getMetrics(),
-    optimizations: performanceMonitor.getOptimizations(),
+  const seoDataForOptimizer = useMemo(() => ({
+    title: 'Zion Tech Group - Leading AI & Technology Solutions',
+    description: 'Cutting-edge AI, cloud, and digital transformation solutions for modern enterprises.',
+    canonicalUrl: typeof window !== 'undefined' ? window.location.pathname : '/',
   }), []);
 
-  // Handle keyboard shortcuts
-  const handleKeyDown = useCallback((event: KeyboardEvent) => {
-    // Ctrl/Cmd + Shift + P for performance optimizer
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'P') {
-      event.preventDefault();
-      handlePerformanceOptimization();
-    }
-    // Ctrl/Cmd + Shift + M for performance monitor
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
-      event.preventDefault();
-      handlePerformanceMonitoring();
-    }
-  }, [handlePerformanceOptimization, handlePerformanceMonitoring]);
-
+  // Simple hotkeys for demo toggles
   useEffect(() => {
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [handleKeyDown]);
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (!e.ctrlKey || !e.shiftKey) return;
+      switch (e.key.toLowerCase()) {
+        case 'p':
+          e.preventDefault();
+          setShowPerformanceOptimizer((v) => !v);
+          break;
+        case 'm':
+          e.preventDefault();
+          setShowPerformanceMonitor((v) => !v);
+          break;
+        default:
+          break;
+      }
+      try {
+        if (enhancedSecurityManager && typeof (enhancedSecurityManager as any).initialize === 'function') {
+          (enhancedSecurityManager as any).initialize();
+        }
+      
+      // Initialize new performance and accessibility enhancements
+      initializePerformanceEnhancements();
+      accessibilityEnhancer.initialize();
+      
+      // Initialize advanced optimizers
+      // Guard optional advanced systems if present in global scope
+      const advancedPerformanceOptimizer = (window as any).advancedPerformanceOptimizer;
+      const advancedSEOOptimizer = (window as any).advancedSEOOptimizer;
+      const advancedSecurityManager = (window as any).advancedSecurityManager;
+      const advancedAnalytics = (window as any).advancedAnalytics;
+      const advancedErrorHandler = (window as any).advancedErrorHandler;
+      const advancedCachingSystem = (window as any).advancedCachingSystem;
+      const advancedUXOptimizer = (window as any).advancedUXOptimizer;
+      const advancedTestingFramework = (window as any).advancedTestingFramework;
+      const advancedI18n = (window as any).advancedI18n;
 
-  // Log performance metrics in development
-  useEffect(() => {
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Performance metrics:', performanceData);
+      advancedPerformanceOptimizer?.initialize?.();
+      advancedSEOOptimizer?.initialize?.();
+      accessibilityEnhancer.initialize();
+      advancedSecurityManager?.initialize?.();
+      advancedAnalytics?.initialize?.();
+      // advancedErrorHandler is initialized in constructor
+      advancedCachingSystem?.initialize?.();
+      
+      // Register service worker for performance
+      if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
+        navigator.serviceWorker.register('/sw-performance.js')
+          .then((registration) => {
+            console.log('Service Worker registered:', registration);
+          })
+          .catch((error) => {
+            console.log('Service Worker registration failed:', error);
+          });
+      }
+      advancedUXOptimizer?.initialize?.();
+      advancedTestingFramework?.initialize?.();
+      advancedI18n?.initialize?.();
+      // Store enhancements globally for debugging
+      (window as unknown as Record<string, unknown>).enhancements = {
+        performanceOptimizer: advancedPerformanceOptimizer,
+        seoOptimizer: advancedSEOOptimizer,
+        accessibilityEnhancer: accessibilityEnhancer,
+        securityManager: advancedSecurityManager,
+        analytics: advancedAnalytics,
+        errorHandler: advancedErrorHandler,
+        cachingSystem: advancedCachingSystem,
+        uxOptimizer: advancedUXOptimizer
+      };
+      (window as unknown as Record<string, unknown>).performanceOptimizer = advancedPerformanceOptimizer;
+      (window as unknown as Record<string, unknown>).seoOptimizer = advancedSEOOptimizer;
+      (window as unknown as Record<string, unknown>).accessibilityEnhancer = accessibilityEnhancer;
+      (window as unknown as Record<string, unknown>).securityManager = advancedSecurityManager;
+      (window as unknown as Record<string, unknown>).analytics = advancedAnalytics;
+      (window as unknown as Record<string, unknown>).errorHandler = advancedErrorHandler;
+      (window as unknown as Record<string, unknown>).cachingSystem = advancedCachingSystem;
+      (window as unknown as Record<string, unknown>).uxOptimizer = advancedUXOptimizer;
+      (window as unknown as Record<string, unknown>).testingFramework = advancedTestingFramework;
+      (window as unknown as Record<string, unknown>).i18n = advancedI18n;
+    } catch (error) {
+      console.error('Error initializing enhancements:', error);
     }
-  }, [performanceData]);
+    };
+
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, []);
+
+  const handleRemoveNotification = useCallback((id: string) => {
+    setNotifications((prev) => prev.filter((n) => n.id !== id));
+  }, []);
 
   return (
-    <div className="min-h-screen bg-white">
-      <Header />
-      
-      <main className="flex-1">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/resources" element={<Resources />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/blog/ai-incident-response-playbooks-2025" element={<AIIncidentResponsePlaybooks2025 />} />
-          <Route path="/services/ai-autonomous-operations" element={<AIAutonomousOperations />} />
-          <Route path="/services/AI-Platform-Architecture" element={<AIPlatformArchitecture />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </main>
-      
-      <Footer />
-      
-      {/* Performance Tools */}
-      {showPerformanceOptimizer && <PerformanceOptimizer onClose={() => setShowPerformanceOptimizer(false)} />}
-      {showPerformanceMonitor && <PerformanceMonitor onClose={() => setShowPerformanceMonitor(false)} />}
-      
-      {/* Development-only performance tools */}
-      {process.env.NODE_ENV === 'development' && (
-        <div className="fixed bottom-4 right-4 z-50 flex flex-col gap-2">
-          <button
-            onClick={handlePerformanceOptimization}
-            className="px-3 py-2 bg-blue-600 text-white text-xs rounded shadow-lg hover:bg-blue-700 transition-colors"
-            title="Toggle Performance Optimizer (Ctrl+Shift+P)"
-          >
-            Perf Opt
-          </button>
-          <button
-            onClick={handlePerformanceMonitoring}
-            className="px-3 py-2 bg-green-600 text-white text-xs rounded shadow-lg hover:bg-green-700 transition-colors"
-            title="Toggle Performance Monitor (Ctrl+Shift+M)"
-          >
-            Perf Mon
-          </button>
-        </div>
-      )}
-    </div>
+    <EnhancedErrorBoundary>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Enhancement Components */}
+        <PerformanceMonitor />
+        <SEOOptimizer {...seoDataForOptimizer} />
+        <AccessibilityEnhancer />
+        <SecurityEnhancer />
+        <AnalyticsMonitor />
+        
+        {/* Main Application */}
+        <Suspense fallback={
+          <div className="flex items-center justify-center min-h-screen">
+            <LoadingSpinner size="xl" />
+          </div>
+        }>
+          <AppRouter />
+        </Suspense>
+
+        {/* Performance Optimizer Modal */}
+        {showPerformanceOptimizer && (
+          <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center" role="dialog" aria-modal="true">
+            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-2xl font-bold">Performance Optimizer</h2>
+                <button 
+                  onClick={() => setShowPerformanceOptimizer(false)} 
+                  className="text-gray-500 hover:text-gray-700 text-2xl"
+                  aria-label="Close performance optimizer"
+                >
+                  ✕
+                </button>
+              </div>
+              <div className="space-y-4">
+                <p className="text-gray-600">Performance optimization tools and settings.</p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="p-4 border rounded-lg">
+                    <h3 className="font-semibold mb-2">Resource Optimization</h3>
+                    <p className="text-sm text-gray-600">Optimize images, scripts, and stylesheets</p>
+                  </div>
+                  <div className="p-4 border rounded-lg">
+                    <h3 className="font-semibold mb-2">Caching Strategy</h3>
+                    <p className="text-sm text-gray-600">Configure caching for better performance</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Performance Monitor Modal */}
+        {showPerformanceMonitor && (
+          <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center">
+            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-2xl font-bold">Performance Monitor</h2>
+                <button 
+                  onClick={() => setShowPerformanceMonitor(false)} 
+                  className="text-gray-500 hover:text-gray-700 text-2xl"
+                  aria-label="Close performance monitor"
+                >
+                  ✕
+                </button>
+              </div>
+              <div className="space-y-4">
+                <p className="text-gray-600">Real-time performance metrics and monitoring.</p>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <div className="p-4 border rounded-lg">
+                    <h3 className="font-semibold mb-2">Core Web Vitals</h3>
+                    <p className="text-sm text-gray-600">LCP, FID, CLS metrics</p>
+                  </div>
+                  <div className="p-4 border rounded-lg">
+                    <h3 className="font-semibold mb-2">Resource Timing</h3>
+                    <p className="text-sm text-gray-600">Load times and resource usage</p>
+                  </div>
+                  <div className="p-4 border rounded-lg">
+                    <h3 className="font-semibold mb-2">User Experience</h3>
+                    <p className="text-sm text-gray-600">Interaction and engagement metrics</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+    </EnhancedErrorBoundary>
   );
 }

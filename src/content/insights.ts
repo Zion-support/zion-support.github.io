@@ -10,6 +10,38 @@ export type InsightArticle = {
 
 export const latestInsights: InsightArticle[] = [
   {
+    id: "ai-incident-budgets-2026-v2",
+    title: "AI Incident Budgets v2: Close the Loop in <60s",
+    summary: "Budget actions with approvals and rollback triggers tied to KPIs for fast, safe containment.",
+    category: "Security",
+    date: "2025-10-15",
+    readMinutes: 6,
+  },
+  {
+    id: "edge-personalization-2026",
+    title: "Edge Personalization 2026: Private <100ms Experiences",
+    summary: "Signed configs, KV caches, and on‑device filters for realtime, privacy‑preserving UX.",
+    category: "Architecture",
+    date: "2025-10-15",
+    readMinutes: 7,
+  },
+  {
+    id: "privacy-first-flags-quickstart-2026",
+    title: "Privacy‑First Flags Quickstart 2026",
+    summary: "Roll out features globally with scoped IDs, edge filters, and health probes.",
+    category: "Architecture",
+    date: "2025-10-14",
+    readMinutes: 5,
+  },
+  {
+    id: "reliable-agent-actions-checklist-2026",
+    title: "Reliable Agent Actions: A Production Checklist",
+    summary: "Deterministic tools, sandboxing, and live traces for trustworthy automation.",
+    category: "GenAI",
+    date: "2025-10-14",
+    readMinutes: 6,
+  },
+  {
     id: "agent-safety-budgets-2026",
     title: "Agent Safety Budgets 2026: Ship Fast Without Surprises",
     summary: "Budget risky actions, add PR checks, and wire rollbacks for reliable agent releases.",

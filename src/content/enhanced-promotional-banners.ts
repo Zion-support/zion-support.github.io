@@ -19,6 +19,42 @@ export interface EnhancedPromotionalBanner {
 
 export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
   {
+    id: 'fresh-oct-15-2025',
+    message: '✨ New: Incident Budgets v2 + Edge Personalization 2026',
+    ctaText: 'Read now',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-indigo-700 to-purple-700',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 0,
+    variant: 'info',
+    icon: '🆕',
+    animation: 'fade-in',
+    badge: 'NEW',
+    featured: true
+  },
+  {
+    id: 'fresh-oct-14-2025',
+    message: '✨ New: Risk Budgets 2026 • Privacy‑First Flags 2026 • Reliable Agent Actions',
+    ctaText: 'Read now',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-indigo-700 to-purple-700',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 0,
+    variant: 'info',
+    icon: '🆕',
+    animation: 'fade-in',
+    badge: 'NEW',
+    featured: true
+  },
+  {
     id: 'ai-autonomous-infrastructure-launch',
     message: '🚀 NEW: AI Autonomous Infrastructure Platform - Self-Healing Systems That Scale',
     ctaText: 'Start Free Trial',
@@ -34,6 +70,24 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '🤖',
     animation: 'pulse',
     badge: 'LAUNCH SPECIAL',
+    featured: true
+  },
+  {
+    id: 'agent-release-checklists-banner',
+    message: '✅ New: Agent Release Checklists + KPI‑Linked Canaries',
+    ctaText: 'Read now',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-emerald-700 to-teal-700',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 0,
+    variant: 'info',
+    icon: '✅',
+    animation: 'fade-in',
+    badge: 'NEW CONTENT',
     featured: true
   },
   {
@@ -200,6 +254,24 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
   }
   ,
   {
+    id: 'fresh-content-oct-2025-b2',
+    message: '🆕 New today: Agent Evals 2026 + Privacy‑Preserving Agents',
+    ctaText: 'Read the latest',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-indigo-700 to-purple-700',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 20,
+    active: true,
+    priority: 0,
+    variant: 'info',
+    icon: '🆕',
+    animation: 'fade-in',
+    badge: 'JUST IN',
+    featured: true
+  },
+  {
     id: 'fresh-content-oct-2025',
     message: '📚 New: AI Risk Budgets + Privacy‑Preserving Agents — read now',
     ctaText: 'Explore latest',
@@ -216,6 +288,43 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     animation: 'fade-in',
     badge: 'NEW CONTENT',
     featured: true
+  }
+  ,
+  {
+    id: 'ai-supply-chain-optimization-spotlight',
+    message: '🚚 New: AI Supply Chain Optimization—65% Faster Deliveries',
+    ctaText: 'Read Playbook',
+    ctaLink: '/blog/ai-supply-chain-optimization-2025',
+    backgroundColor: 'bg-gradient-to-r from-amber-600 to-orange-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 0,
+    variant: 'premium',
+    icon: '🚚',
+    animation: 'slide-in',
+    badge: 'NEW',
+    featured: true
+  },
+  {
+    id: 'privacy-first-observability-quickstart-spotlight',
+    message: '🔒 New: Privacy‑First Observability Quickstart—Ship Signal‑Rich, PII‑Safe Telemetry',
+    ctaText: 'View Guide',
+    ctaLink: '/blog/privacy-first-observability-quickstart-2025',
+    backgroundColor: 'bg-gradient-to-r from-slate-700 to-gray-900',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 1,
+    variant: 'info',
+    icon: '🔒',
+    animation: 'fade-in',
+    badge: 'GUIDE',
+    featured: false
   }
 ];
 

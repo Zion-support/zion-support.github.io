@@ -40,12 +40,12 @@ const contentHighlights = [
   },
   {
     id: 4,
-    title: "⚡ Edge LLM Caching Blueprint",
-    description: "Tiered caches and freshness windows for sub‑100ms prompts",
-    ctaText: "See Patterns",
-    ctaLink: "/blog/edge-llm-caching-blueprint-2026",
-    badge: "Trending",
-    stats: "7 min read",
+    title: "💸 Serverless Inference Cost Playbook 2026",
+    description: "Adaptive batching, warm pools, and tiers without P95 pain",
+    ctaText: "Cut Spend",
+    ctaLink: "/blog/serverless-inference-cost-playbook-2026",
+    badge: "New",
+    stats: "9 min read",
     variant: "premium" as const
   },
   {
@@ -136,6 +136,16 @@ const contentHighlights = [
 // Additions
 contentHighlights.push(
   {
+    id: 19,
+    title: "📊 Scorecards v2: Ship Fast, Stay Safe",
+    description: "Lightweight platform scorecards + PR checks that predict outcomes.",
+    ctaText: "Read Update",
+    ctaLink: "/blog/ai-governance-scorecards-quickstart-2026-v2",
+    badge: "Update",
+    stats: "7 min read",
+    variant: "info" as const
+  },
+  {
     id: 9,
     title: "🧠 Enterprise RAG Blueprint v2",
     description: "Hybrid search, freshness, and auth-aware retrieval with layered evals.",
@@ -224,6 +234,40 @@ contentHighlights.push(
     badge: "New Service",
     stats: "Production Ready",
     variant: "premium" as const
+  },
+  {
+    id: 17,
+    title: "🛠️ AI SRE Blueprints 2026",
+    description: "Error budgets, rollback triggers, and live traces for reliable AI",
+    ctaText: "Read Blueprint",
+    ctaLink: "/blog/ai-sre-blueprints-2026",
+    badge: "New",
+    stats: "8 min read",
+    variant: "info" as const
+  },
+  {
+    id: 18,
+    title: "🔒 Privacy‑First A/B Testing",
+    description: "Insights without PII using scoped IDs and DP noise",
+    ctaText: "Learn How",
+    ctaLink: "/blog/privacy-first-ab-testing-2026",
+    badge: "New",
+    stats: "7 min read",
+    variant: "success" as const
+  }
+);
+
+// Fresh highlights for new content (Sept 29, 2025)
+contentHighlights.unshift(
+  {
+    id: 22,
+    title: "🧠 Agentic Observability Scorecards 2026",
+    description: "Traces linked to KPIs—scorecards that prevent regressions without slowing teams",
+    ctaText: "Read Article",
+    ctaLink: "/blog/agentic-observability-scorecards-2026",
+    badge: "New",
+    stats: "7 min read",
+    variant: "info" as const
   }
 );
 

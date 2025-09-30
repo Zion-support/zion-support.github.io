@@ -38,6 +38,88 @@ export interface NewService {
 
 export const newServices: NewService[] = [
   {
+    id: "ai-runbooks-risk-budgets",
+    slug: "ai-runbooks-risk-budgets",
+    title: "AI Runbooks with Risk Budgets",
+    description: "Budgeted actions, approvals, and rollback gates so teams ship automation with confidence.",
+    category: "AI Operations",
+    pricing: {
+      starting: "$1,499/month",
+      popular: false,
+      features: ["Risk budgets", "Approval workflows", "Rollback gates", "Incident SLAs"]
+    },
+    features: [
+      "Budgeted Actions & Guardrails",
+      "Approval & Change Controls",
+      "Rollback Triggers & Gates",
+      "Policy Tests in CI",
+      "KPI‑Linked Canaries",
+      "Incident SLOs & Scorecards",
+      "Observability & Traces",
+      "Templates & Playbooks"
+    ],
+    metrics: [
+      { value: "<60s", label: "Containment Time" },
+      { value: "40%", label: "Incident Reduction" },
+      { value: "3x", label: "Faster Releases" }
+    ],
+    testimonial: {
+      quote: "We shipped safe automation in weeks and cut incidents by 40%.",
+      author: "Nina Patel",
+      company: "RetailMax"
+    },
+    cta: {
+      primary: "Get Playbooks",
+      secondary: "See Templates"
+    },
+    icon: "📘",
+    featured: true,
+    tags: ["Runbooks", "Risk Budgets", "Automation"],
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "privacy-preserving-feature-flags",
+    slug: "privacy-preserving-feature-flags",
+    title: "Privacy‑Preserving Feature Flags",
+    description: "Edge flags with scoped IDs, on‑device filters, and budgets for zero‑regret rollouts.",
+    category: "Architecture",
+    pricing: {
+      starting: "$999/month",
+      popular: true,
+      features: ["Edge KV", "Scoped IDs", "Geo/account targeting", "Instant rollback"]
+    },
+    features: [
+      "<100ms Edge Delivery",
+      "Scoped IDs & On‑Device Filters",
+      "Risk Budgets & Instant Rollback",
+      "Geo & Account Targeting",
+      "Signed Configs & Audit Trails",
+      "Progressive Delivery Controls",
+      "Privacy‑Safe Telemetry",
+      "Policy Gates in CI"
+    ],
+    metrics: [
+      { value: "<100ms", label: "Global Rollouts" },
+      { value: "25%", label: "Waste Reduction" },
+      { value: "0", label: "PII in Telemetry" }
+    ],
+    testimonial: {
+      quote: "We ship globally under 100ms with built‑in budgets and private telemetry.",
+      author: "Omar Haddad",
+      company: "Streamly"
+    },
+    cta: {
+      primary: "Enable Edge Flags",
+      secondary: "View Blueprint"
+    },
+    icon: "🏁",
+    featured: true,
+    tags: ["Edge", "Flags", "Privacy", "Budgets"],
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "edge-llm-caching",
     slug: "edge-llm-caching",
     title: "Edge LLM Caching & On‑Device Inference",

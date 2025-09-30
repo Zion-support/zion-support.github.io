@@ -1,0 +1,807 @@
+export interface Service {
+  id: string;
+  title: string;
+  description: string;
+  category: string;
+  features: string[];
+  benefits: string[];
+  useCases: string[];
+  technologies: string[];
+  pricing: {
+    tier: string;
+    price: string;
+    features: string[];
+  }[];
+  testimonial?: {
+    quote: string;
+    author: string;
+    company: string;
+    role: string;
+  };
+  metrics?: {
+    label: string;
+    value: string;
+    description: string;
+  }[];
+  image?: string;
+  icon?: string;
+}
+
+export const newServices2025: Service[] = [
+  {
+    id: "ai-autonomous-infrastructure",
+    title: "AI Autonomous Infrastructure Management",
+    description: "Transform your infrastructure with self-healing, self-optimizing systems that automatically adapt to changing conditions and requirements.",
+    category: "AI Operations",
+    features: [
+      "Self-healing infrastructure with automatic failure recovery",
+      "Predictive maintenance and proactive issue resolution",
+      "Dynamic resource scaling based on demand patterns",
+      "Intelligent cost optimization and resource allocation",
+      "Real-time performance monitoring and optimization",
+      "Automated security updates and vulnerability patching"
+    ],
+    benefits: [
+      "99.99% uptime through predictive maintenance",
+      "65% reduction in operational costs",
+      "90% elimination of manual interventions",
+      "45% improvement in system performance",
+      "24/7 autonomous monitoring and response",
+      "Faster incident resolution and recovery"
+    ],
+    useCases: [
+      "Enterprise cloud infrastructure management",
+      "Microservices orchestration and scaling",
+      "Database performance optimization",
+      "Application deployment and monitoring",
+      "Network infrastructure automation",
+      "DevOps pipeline optimization"
+    ],
+    technologies: ["AI/ML", "Kubernetes", "Prometheus", "Grafana", "Python", "TensorFlow", "Docker"],
+    pricing: [
+      {
+        tier: "Starter",
+        price: "$5,000/month",
+        features: ["Basic autonomous monitoring", "Standard self-healing", "Email alerts", "Basic reporting"]
+      },
+      {
+        tier: "Professional",
+        price: "$15,000/month",
+        features: ["Advanced predictive analytics", "Full self-healing capabilities", "Real-time dashboards", "Priority support"]
+      },
+      {
+        tier: "Enterprise",
+        price: "Custom",
+        features: ["Custom AI models", "Dedicated support team", "Advanced security features", "SLA guarantees"]
+      }
+    ],
+    testimonial: {
+      quote: "AI Autonomous Infrastructure transformed our operations completely. We went from constant firefighting to zero-touch operations.",
+      author: "Michael Rodriguez",
+      company: "CloudScale Enterprises",
+      role: "CTO"
+    },
+    metrics: [
+      {
+        label: "Uptime Improvement",
+        value: "99.99%",
+        description: "Achieved through predictive maintenance"
+      },
+      {
+        label: "Cost Reduction",
+        value: "65%",
+        description: "Average operational savings"
+      },
+      {
+        label: "Manual Work Reduction",
+        value: "90%",
+        description: "Elimination of manual interventions"
+      }
+    ],
+    image: "/images/services/ai-autonomous-infrastructure.jpg",
+    icon: "🤖"
+  },
+  {
+    id: "edge-ai-computing",
+    title: "Edge AI Computing Solutions",
+    description: "Deploy intelligent AI models at the edge for ultra-low latency processing, real-time decision making, and offline capabilities.",
+    category: "Edge Computing",
+    features: [
+      "Ultra-low latency AI inference at the edge",
+      "Real-time data processing and decision making",
+      "Offline AI capabilities for critical operations",
+      "Optimized models for edge device constraints",
+      "Distributed AI model management and updates",
+      "Edge-to-cloud data synchronization"
+    ],
+    benefits: [
+      "Sub-millisecond response times",
+      "Reduced bandwidth and cloud costs",
+      "Enhanced data privacy and security",
+      "Improved reliability with offline capabilities",
+      "Real-time processing for critical applications",
+      "Scalable edge deployment across locations"
+    ],
+    useCases: [
+      "Manufacturing quality control and predictive maintenance",
+      "Autonomous vehicle perception and decision making",
+      "Smart city traffic optimization",
+      "Healthcare real-time patient monitoring",
+      "Retail personalized customer experiences",
+      "Industrial IoT sensor data processing"
+    ],
+    technologies: ["TensorFlow Lite", "OpenVINO", "Edge Computing", "IoT", "5G", "Computer Vision", "Embedded Systems"],
+    pricing: [
+      {
+        tier: "Development",
+        price: "$2,500/month",
+        features: ["Edge model development", "Basic deployment tools", "Testing environments", "Documentation"]
+      },
+      {
+        tier: "Production",
+        price: "$7,500/month",
+        features: ["Production deployment", "Advanced monitoring", "Model optimization", "24/7 support"]
+      },
+      {
+        tier: "Enterprise",
+        price: "Custom",
+        features: ["Custom hardware integration", "Dedicated edge infrastructure", "Advanced security", "SLA guarantees"]
+      }
+    ],
+    testimonial: {
+      quote: "Edge AI enabled us to process data in real-time at our manufacturing plants, reducing defects by 95% and improving efficiency dramatically.",
+      author: "Jennifer Liu",
+      company: "Precision Manufacturing Corp",
+      role: "VP of Operations"
+    },
+    metrics: [
+      {
+        label: "Latency Reduction",
+        value: "99%",
+        description: "Compared to cloud processing"
+      },
+      {
+        label: "Bandwidth Savings",
+        value: "80%",
+        description: "Reduced data transmission"
+      },
+      {
+        label: "Processing Speed",
+        value: "< 1ms",
+        description: "Average inference time"
+      }
+    ],
+    image: "/images/services/edge-ai-computing.jpg",
+    icon: "⚡"
+  },
+  {
+    id: "quantum-ai-optimization",
+    title: "Quantum AI Optimization Services",
+    description: "Leverage quantum computing power combined with AI to solve complex optimization problems that are intractable for classical computers.",
+    category: "Quantum Computing",
+    features: [
+      "Quantum machine learning algorithms",
+      "Complex optimization problem solving",
+      "Quantum neural network implementations",
+      "Hybrid classical-quantum workflows",
+      "Quantum simulation and modeling",
+      "Quantum-resistant security protocols"
+    ],
+    benefits: [
+      "Exponential speedup for specific problems",
+      "Solving NP-hard optimization challenges",
+      "Enhanced machine learning capabilities",
+      "Future-proof quantum-resistant security",
+      "Breakthrough insights in complex domains",
+      "Competitive advantage through quantum advantage"
+    ],
+    useCases: [
+      "Financial portfolio optimization and risk analysis",
+      "Drug discovery and molecular simulation",
+      "Supply chain and logistics optimization",
+      "Climate modeling and environmental analysis",
+      "Materials science and discovery",
+      "Cryptography and cybersecurity"
+    ],
+    technologies: ["IBM Qiskit", "Google Cirq", "Microsoft Q#", "Quantum Algorithms", "Python", "Quantum Hardware"],
+    pricing: [
+      {
+        tier: "Research",
+        price: "$10,000/month",
+        features: ["Quantum algorithm development", "Simulation environments", "Research collaboration", "Basic quantum access"]
+      },
+      {
+        tier: "Development",
+        price: "$25,000/month",
+        features: ["Quantum hardware access", "Advanced algorithms", "Hybrid workflows", "Technical support"]
+      },
+      {
+        tier: "Enterprise",
+        price: "Custom",
+        features: ["Dedicated quantum resources", "Custom algorithm development", "Full integration support", "Quantum expertise team"]
+      }
+    ],
+    testimonial: {
+      quote: "Quantum AI optimization helped us solve portfolio optimization problems that were impossible with classical computing, delivering 18% better returns.",
+      author: "David Kim",
+      company: "Quantum Capital Management",
+      role: "Chief Investment Officer"
+    },
+    metrics: [
+      {
+        label: "Speed Improvement",
+        value: "1000x",
+        description: "Faster than classical algorithms"
+      },
+      {
+        label: "Problem Complexity",
+        value: "Exponential",
+        description: "Handle NP-hard problems"
+      },
+      {
+        label: "Optimization Gain",
+        value: "40%",
+        description: "Better solution quality"
+      }
+    ],
+    image: "/images/services/quantum-ai-optimization.jpg",
+    icon: "🔬"
+  },
+  {
+    id: "ai-sustainability-solutions",
+    title: "AI for Sustainability and Climate Solutions",
+    description: "Harness the power of AI to address climate change, optimize resource usage, and create sustainable solutions for a better future.",
+    category: "Sustainability",
+    features: [
+      "Carbon footprint tracking and optimization",
+      "Renewable energy system optimization",
+      "Environmental monitoring and prediction",
+      "Sustainable supply chain management",
+      "Climate risk assessment and mitigation",
+      "Green AI model development and deployment"
+    ],
+    benefits: [
+      "Significant reduction in carbon emissions",
+      "Optimized resource utilization",
+      "Enhanced environmental monitoring",
+      "Improved sustainability reporting",
+      "Cost savings through efficiency gains",
+      "Compliance with environmental regulations"
+    ],
+    useCases: [
+      "Smart city energy management",
+      "Manufacturing process optimization",
+      "Agriculture precision farming",
+      "Transportation route optimization",
+      "Building energy efficiency",
+      "Waste management optimization"
+    ],
+    technologies: ["Environmental AI", "IoT Sensors", "Satellite Data", "Climate Modeling", "Energy Analytics", "Sustainability Metrics"],
+    pricing: [
+      {
+        tier: "Assessment",
+        price: "$3,000/month",
+        features: ["Carbon footprint analysis", "Sustainability audit", "Baseline measurement", "Improvement recommendations"]
+      },
+      {
+        tier: "Optimization",
+        price: "$8,000/month",
+        features: ["AI-powered optimization", "Real-time monitoring", "Automated reporting", "Implementation support"]
+      },
+      {
+        tier: "Transformation",
+        price: "Custom",
+        features: ["Full sustainability transformation", "Custom AI solutions", "Dedicated support team", "Long-term partnership"]
+      }
+    ],
+    testimonial: {
+      quote: "AI sustainability solutions helped us reduce our carbon footprint by 40% while improving operational efficiency and saving $2M annually.",
+      author: "Sarah Chen",
+      company: "GreenTech Industries",
+      role: "Sustainability Director"
+    },
+    metrics: [
+      {
+        label: "Carbon Reduction",
+        value: "40%",
+        description: "Average emission reduction"
+      },
+      {
+        label: "Energy Savings",
+        value: "25%",
+        description: "Improved energy efficiency"
+      },
+      {
+        label: "Cost Savings",
+        value: "$2M",
+        description: "Annual operational savings"
+      }
+    ],
+    image: "/images/services/ai-sustainability.jpg",
+    icon: "🌱"
+  },
+  {
+    id: "ai-ethics-governance",
+    title: "AI Ethics and Governance Framework",
+    description: "Implement comprehensive AI ethics and governance frameworks to ensure responsible AI development, deployment, and ongoing management.",
+    category: "AI Governance",
+    features: [
+      "AI ethics policy development and implementation",
+      "Bias detection and mitigation systems",
+      "AI transparency and explainability tools",
+      "Compliance monitoring and reporting",
+      "AI risk assessment and management",
+      "Responsible AI training and certification"
+    ],
+    benefits: [
+      "Reduced AI-related risks and incidents",
+      "Enhanced stakeholder trust and confidence",
+      "Regulatory compliance and audit readiness",
+      "Improved AI system fairness and transparency",
+      "Better decision-making through explainable AI",
+      "Competitive advantage through ethical AI leadership"
+    ],
+    useCases: [
+      "Financial services AI compliance",
+      "Healthcare AI ethics and safety",
+      "Automated decision-making systems",
+      "AI-powered hiring and HR systems",
+      "Government AI policy implementation",
+      "Enterprise AI governance and oversight"
+    ],
+    technologies: ["AI Ethics Tools", "Bias Detection", "Explainable AI", "Compliance Monitoring", "Risk Assessment", "Governance Platforms"],
+    pricing: [
+      {
+        tier: "Foundation",
+        price: "$4,000/month",
+        features: ["Ethics policy development", "Basic bias detection", "Compliance framework", "Training materials"]
+      },
+      {
+        tier: "Advanced",
+        price: "$12,000/month",
+        features: ["Advanced monitoring tools", "Automated compliance", "Risk assessment", "Expert consultation"]
+      },
+      {
+        tier: "Enterprise",
+        price: "Custom",
+        features: ["Custom governance framework", "Dedicated ethics team", "Full audit support", "Ongoing monitoring"]
+      }
+    ],
+    testimonial: {
+      quote: "The AI ethics framework gave us confidence in our AI systems and helped us achieve 100% compliance with all regulations while building trust with our customers.",
+      author: "Robert Martinez",
+      company: "SecureBank International",
+      role: "Chief Risk Officer"
+    },
+    metrics: [
+      {
+        label: "Compliance Rate",
+        value: "100%",
+        description: "Regulatory compliance achieved"
+      },
+      {
+        label: "Risk Reduction",
+        value: "80%",
+        description: "AI-related risk mitigation"
+      },
+      {
+        label: "Trust Score",
+        value: "95%",
+        description: "Stakeholder confidence rating"
+      }
+    ],
+<<<<<<< HEAD
+    caseStudy: {
+      company: "EthicalAI Corp",
+      industry: "Healthcare",
+      challenge: "Ensuring AI systems comply with healthcare regulations and ethical standards across multiple departments",
+      solution: "Implemented comprehensive AI governance framework with automated scorecards and policy management",
+      results: [
+        "100% compliance with healthcare regulations",
+        "80% reduction in AI-related risks",
+        "95% automated policy adherence",
+        "Complete audit readiness",
+        "Stakeholder confidence increased"
+      ]
+    },
+    testimonials: [
+      {
+        quote: "AI Governance Scorecards gave us the framework we needed to ensure our AI systems are ethical and compliant. We're now audit-ready and our stakeholders have complete confidence.",
+        author: "Dr. Jennifer Martinez",
+        company: "EthicalAI Corp",
+        role: "AI Ethics Officer"
+      },
+      {
+        quote: "The automated scorecards and policy management saved us months of manual work. We can now focus on AI innovation while ensuring compliance.",
+        author: "David Thompson",
+        company: "GovernanceFirst Inc",
+        role: "Chief Compliance Officer"
+      }
+    ],
+    faqs: [
+      {
+        question: "What regulations does the AI governance framework cover?",
+        answer: "Our framework covers GDPR, CCPA, HIPAA, SOX, and other major regulations. It's designed to be adaptable to new regulations as they emerge and can be customized for specific industry requirements."
+      },
+      {
+        question: "How do the AI governance scorecards work?",
+        answer: "Scorecards automatically evaluate AI systems against governance criteria including ethics, compliance, risk, and performance. They provide real-time scoring and recommendations for improvement."
+      },
+      {
+        question: "Can the framework be customized for our industry?",
+        answer: "Yes, the framework is designed to be industry-agnostic and can be customized for specific requirements, regulations, and business objectives. We work with you to tailor it to your needs."
+      },
+      {
+        question: "What's the ROI of AI governance?",
+        answer: "AI governance typically provides ROI through risk reduction, compliance cost savings, and improved stakeholder confidence. Most organizations see positive ROI within 6-12 months of implementation."
+      }
+    ],
+    image: "/images/ai-governance-scorecards.jpg",
+    icon: "ClipboardCheck",
+    seo: {
+      metaTitle: "AI Governance Scorecards & Policy Framework | Compliance Automation",
+      metaDescription: "Comprehensive AI governance framework with automated scorecards, policy management, and compliance monitoring. Ensure ethical, compliant AI systems.",
+      keywords: ["AI governance", "AI compliance", "AI ethics", "policy management", "risk assessment"]
+    },
+    slug: "ai-governance-scorecards"
+  }
+  ,
+  {
+    id: "ai-risk-budgeted-runbooks",
+    title: "AI Risk‑Budgeted Runbooks",
+    description: "Operational runbooks with explicit risk budgets, approvals, and automated guardrails to ship safe AI automation fast.",
+    shortDescription: "Ship automation with explicit risk budgets and approvals",
+    category: "AI Operations",
+    subcategory: "Governed Automation",
+    tags: ["Risk Budgets", "Automation", "Approvals", "Guardrails"],
+    featured: true,
+    newBadge: true,
+    trending: true,
+    pricing: {
+      model: "subscription",
+      startingPrice: "$1,500",
+      currency: "USD",
+      description: "Per month for up to 10 automated runbooks"
+    },
+    benefits: [
+      "Faster approvals with budget thresholds",
+      "Reduced incident impact",
+      "Clear accountability and audit trails"
+    ],
+    features: [
+      "Policy‑as‑code approvals",
+      "Budget thresholds and alerts",
+      "Automated rollback actions",
+      "Audit logs and reports"
+    ],
+    useCases: [
+      "Safe deployment automation",
+      "Production data fixes",
+      "Cost‑aware inference routing"
+    ],
+    technologies: ["OPA", "GitOps", "CI/CD", "Observability"],
+    deliverables: [
+      "Runbook templates",
+      "Approval workflows",
+      "Budget policy library"
+    ],
+    timeline: "2-4 weeks",
+    prerequisites: ["Access to CI/CD", "Monitoring", "Approval owners"],
+    metrics: [
+      { label: "Incident Impact", value: "−60%", description: "Reduced impact from changes" },
+      { label: "Approval Lead Time", value: "−70%", description: "Faster approvals" }
+    ],
+    image: "/images/ai-risk-budgeted-runbooks.jpg",
+    icon: "ClipboardCheck",
+    seo: {
+      metaTitle: "AI Risk‑Budgeted Runbooks",
+      metaDescription: "Governed runbooks with risk budgets and approvals to ship automation safely.",
+      keywords: ["risk budgets", "approvals", "ai automation", "governance"]
+    },
+    testimonials: [],
+    faqs: [],
+    slug: "ai-risk-budgeted-runbooks"
+  },
+  {
+    id: "ai-platform-architecture-consulting",
+    title: "AI Platform Architecture Consulting",
+    description: "Expert consulting services to design, build, and optimize AI platforms that scale efficiently and deliver maximum ROI. Our architects help you build production-ready AI systems from the ground up.",
+    shortDescription: "Expert AI platform architecture design and optimization",
+    category: "AI Consulting",
+    subcategory: "Architecture & Design",
+    tags: ["AI Architecture", "Platform Design", "Scalability", "Performance Optimization"],
+    featured: true,
+    newBadge: true,
+    trending: true,
+    pricing: {
+      model: "hourly",
+      startingPrice: "$300",
+      currency: "USD",
+      description: "Per hour for senior AI architects"
+    },
+    benefits: [
+      "70% reduction in AI infrastructure costs",
+      "10x faster AI model deployment",
+      "99.9% system reliability",
+      "Scalable architecture design",
+      "Performance optimization",
+      "Future-proof technology stack"
+    ],
+    features: [
+      "AI platform architecture design",
+      "Performance optimization consulting",
+      "Scalability planning and implementation",
+      "Cost optimization strategies",
+      "Technology stack selection",
+      "Migration planning and execution",
+      "Team training and knowledge transfer",
+      "Ongoing support and optimization"
+    ],
+    useCases: [
+      "Enterprise AI platform design",
+      "Legacy system modernization",
+      "Cloud migration planning",
+      "Performance optimization",
+      "Scalability challenges",
+      "Cost reduction initiatives"
+    ],
+    technologies: [
+      "Kubernetes",
+      "Docker",
+      "AWS/Azure/GCP",
+      "TensorFlow",
+      "PyTorch",
+      "MLOps",
+      "Microservices",
+      "API Gateway"
+    ],
+    deliverables: [
+      "AI Platform Architecture Blueprint",
+      "Implementation Roadmap",
+      "Performance Optimization Plan",
+      "Cost Analysis and Projections",
+      "Technology Recommendations",
+      "Training and Documentation"
+    ],
+    timeline: "4-8 weeks",
+    prerequisites: [
+      "Clear business objectives",
+      "Technical team availability",
+      "Infrastructure access",
+      "Budget approval",
+      "Executive sponsorship"
+    ],
+    metrics: [
+      {
+        label: "Cost Reduction",
+        value: "70%",
+        description: "Average infrastructure cost savings"
+      },
+      {
+        label: "Deployment Speed",
+        value: "10x",
+        description: "Faster model deployment"
+      },
+      {
+        label: "System Reliability",
+        value: "99.9%",
+        description: "Achieved uptime"
+      },
+      {
+        label: "Scalability",
+        value: "100x",
+        description: "Traffic handling capacity"
+      }
+    ],
+    caseStudy: {
+      company: "TechScale Enterprises",
+      industry: "Technology",
+      challenge: "AI platform couldn't handle production traffic, with frequent outages and high operational costs",
+      solution: "Redesigned AI platform architecture with microservices, auto-scaling, and optimized infrastructure",
+      results: [
+        "70% reduction in infrastructure costs",
+        "99.9% uptime achieved",
+        "10x faster model deployment",
+        "100x traffic handling capacity",
+        "Zero downtime during peak loads"
+      ]
+    },
+    testimonials: [
+      {
+        quote: "The AI platform architecture consulting transformed our entire AI infrastructure. We now have a system that scales effortlessly and costs 70% less to operate.",
+        author: "Jennifer Liu",
+        company: "TechScale Enterprises",
+        role: "CTO"
+      },
+      {
+        quote: "Zion Tech Group's architects designed a platform that not only solved our current challenges but also prepared us for future growth. The ROI was immediate.",
+        author: "Michael Torres",
+        company: "DataFlow Solutions",
+        role: "VP of Engineering"
+      }
+    ],
+    faqs: [
+      {
+        question: "What's included in AI platform architecture consulting?",
+        answer: "Our consulting includes architecture design, performance optimization, scalability planning, cost analysis, technology recommendations, and implementation guidance. We provide a complete blueprint for your AI platform."
+      },
+      {
+        question: "How long does the consulting engagement take?",
+        answer: "Most engagements take 4-8 weeks depending on complexity. This includes assessment, design, planning, and initial implementation guidance. We also provide ongoing support as needed."
+      },
+      {
+        question: "Do you work with existing AI platforms?",
+        answer: "Yes, we work with both greenfield projects and existing AI platforms. We can help optimize, modernize, or completely redesign your current AI infrastructure."
+      },
+      {
+        question: "What's the typical ROI of AI platform architecture consulting?",
+        answer: "Most clients see 70% cost reduction and 10x performance improvement within 6 months. The consulting typically pays for itself within the first quarter through cost savings and improved efficiency."
+      }
+    ],
+    image: "/images/ai-platform-architecture-consulting.jpg",
+    icon: "Building2",
+    seo: {
+      metaTitle: "AI Platform Architecture Consulting | Expert Design & Optimization",
+      metaDescription: "Expert AI platform architecture consulting for scalable, cost-effective AI systems. Achieve 70% cost reduction and 10x performance improvement.",
+      keywords: ["AI platform architecture", "AI consulting", "platform design", "AI optimization", "scalability consulting"]
+    },
+    slug: "ai-platform-architecture-consulting"
+  },
+  {
+    id: "multi-modal-ai-solutions",
+    title: "Multi-Modal AI Solutions",
+    description: "Revolutionary AI solutions that combine computer vision, natural language processing, and audio processing to create intelligent systems that understand the world like humans do.",
+    shortDescription: "AI that sees, hears, and understands like humans",
+    category: "AI Solutions",
+    subcategory: "Multi-Modal AI",
+    tags: ["Multi-Modal AI", "Computer Vision", "NLP", "Audio Processing", "AI Integration"],
+    featured: true,
+    newBadge: true,
+    trending: true,
+    pricing: {
+      model: "project",
+      startingPrice: "$75,000",
+      currency: "USD",
+      description: "For multi-modal AI implementation projects"
+    },
+    benefits: [
+      "85% improvement in user experience",
+      "60% reduction in manual processing",
+      "Real-time multi-modal understanding",
+      "Enhanced decision-making capabilities",
+      "Seamless human-AI interaction",
+      "Future-ready AI foundation"
+    ],
+    features: [
+      "Computer vision integration",
+      "Natural language processing",
+      "Audio and speech recognition",
+      "Multi-modal data fusion",
+      "Real-time processing capabilities",
+      "Context-aware responses",
+      "Custom model training",
+      "API and SDK development"
+    ],
+    useCases: [
+      "Intelligent virtual assistants",
+      "Automated content analysis",
+      "Smart surveillance systems",
+      "Accessibility applications",
+      "Automotive AI systems",
+      "Healthcare diagnostics"
+    ],
+    technologies: [
+      "OpenCV",
+      "TensorFlow",
+      "PyTorch",
+      "Transformers",
+      "Whisper",
+      "GPT-4V",
+      "CLIP",
+      "DALL-E"
+    ],
+    deliverables: [
+      "Multi-Modal AI Platform",
+      "Custom AI Models",
+      "API Integration",
+      "Performance Benchmarks",
+      "Training and Documentation",
+      "Ongoing Support"
+    ],
+    timeline: "8-12 weeks",
+    prerequisites: [
+      "Multi-modal data sources",
+      "High-performance computing",
+      "Specialized use case requirements",
+      "Integration with existing systems",
+      "User experience design"
+    ],
+    metrics: [
+      {
+        label: "User Experience",
+        value: "85%",
+        description: "Improvement in user satisfaction"
+      },
+      {
+        label: "Processing Efficiency",
+        value: "60%",
+        description: "Reduction in manual processing"
+      },
+      {
+        label: "Accuracy",
+        value: "95%",
+        description: "Multi-modal understanding accuracy"
+      },
+      {
+        label: "Response Time",
+        value: "< 200ms",
+        description: "Real-time processing latency"
+      }
+    ],
+    caseStudy: {
+      company: "VisionTech Innovations",
+      industry: "Healthcare",
+      challenge: "Manual analysis of medical images and patient reports was time-consuming and error-prone",
+      solution: "Implemented multi-modal AI system that combines medical imaging analysis with natural language processing of patient reports",
+      results: [
+        "85% improvement in diagnostic accuracy",
+        "60% reduction in analysis time",
+        "95% accuracy in multi-modal understanding",
+        "Real-time processing capabilities",
+        "Enhanced patient care quality"
+      ]
+    },
+    testimonials: [
+      {
+        quote: "Multi-modal AI transformed our diagnostic capabilities. The system sees what we see and understands what we read, providing insights we never had before.",
+        author: "Dr. Sarah Williams",
+        company: "VisionTech Innovations",
+        role: "Chief Medical Officer"
+      },
+      {
+        quote: "The multi-modal approach gave us a complete picture. Our AI now understands context across different data types, making decisions that were impossible before.",
+        author: "Robert Kim",
+        company: "SmartCity Solutions",
+        role: "AI Director"
+      }
+    ],
+    faqs: [
+      {
+        question: "What makes multi-modal AI different from traditional AI?",
+        answer: "Multi-modal AI processes and understands multiple types of data (text, images, audio) simultaneously, creating a more comprehensive understanding of the world, similar to how humans process information."
+      },
+      {
+        question: "What types of data can multi-modal AI process?",
+        answer: "Our multi-modal AI can process text, images, videos, audio, and sensor data. It can understand relationships between different data types and provide context-aware responses."
+      },
+      {
+        question: "How accurate is multi-modal AI compared to single-modal systems?",
+        answer: "Multi-modal AI typically achieves 95%+ accuracy compared to 80-85% for single-modal systems, as it has more context and can cross-validate information across different data types."
+      },
+      {
+        question: "Can multi-modal AI integrate with existing systems?",
+        answer: "Yes, we provide APIs and SDKs that integrate seamlessly with existing systems. Our solutions are designed to work with your current infrastructure and workflows."
+      }
+    ],
+    image: "/images/multi-modal-ai-solutions.jpg",
+    icon: "Eye",
+    seo: {
+      metaTitle: "Multi-Modal AI Solutions | Vision, Language & Audio Integration",
+      metaDescription: "Revolutionary multi-modal AI that combines vision, language, and audio processing. Achieve 85% better user experience with human-like AI understanding.",
+      keywords: ["multi-modal AI", "computer vision", "natural language processing", "AI integration", "intelligent systems"]
+    },
+    slug: "multi-modal-ai-solutions"
+=======
+    image: "/images/services/ai-ethics-governance.jpg",
+    icon: "⚖️"
+>>>>>>> origin/cursor/create-and-deploy-new-content-fb7e
+  }
+];
+
+export const featuredNewServices = newServices2025.filter(service => 
+  ["ai-autonomous-infrastructure", "edge-ai-computing", "quantum-ai-optimization"].includes(service.id)
+);
+
+export const trendingNewServices = newServices2025.filter(service => 
+  ["ai-sustainability-solutions", "ai-ethics-governance"].includes(service.id)
+);

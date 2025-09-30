@@ -1,8 +1,8 @@
 import React from 'react';
 
-export default function AIVirtualAssistant(): React.JSX.Element {
-	return (
-		<main style={{ padding: '2rem' }}>
-			<h1>AI Virtual Assistant</h1>
-		</main>
-	);
+const AIVirtualAssistant: React.FC = () => {
+  return <div className="container mx-auto px-6 py-16 text-white">AI Virtual Assistant</div>;
+};
+
+export default AIVirtualAssistant;
+

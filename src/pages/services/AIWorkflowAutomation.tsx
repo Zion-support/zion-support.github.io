@@ -1,8 +1,8 @@
 import React from 'react';
 
-export default function AIWorkflowAutomation(): React.JSX.Element {
-	return (
-		<main style={{ padding: '2rem' }}>
-			<h1>AI Workflow Automation</h1>
-		</main>
-	);
+const AIWorkflowAutomation: React.FC = () => {
+  return <div className="container mx-auto px-6 py-16 text-white">AI Workflow Automation</div>;
+};
+
+export default AIWorkflowAutomation;
+

@@ -1,8 +1,8 @@
 import React from 'react';
 
-export default function EnterpriseAISolutions(): React.JSX.Element {
-	return (
-		<main style={{ padding: '2rem' }}>
-			<h1>Enterprise AI Solutions</h1>
-		</main>
-	);
+const EnterpriseAISolutions: React.FC = () => {
+  return <div className="container mx-auto px-6 py-16 text-white">Enterprise AI Solutions</div>;
+};
+
+export default EnterpriseAISolutions;
+

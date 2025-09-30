@@ -1,11 +1,13 @@
-import React from "react";
+import React from 'react';
 
 interface PerformanceOptimizerProps {
-	optimizeImages?: boolean;
-	optimizeCSS?: boolean;
-	optimizeJS?: boolean;
+  isVisible?: boolean;
+  onClose?: () => void;
 }
 
-export default function PerformanceOptimizer(_props: PerformanceOptimizerProps): React.JSX.Element {
-	return <div aria-label="Performance Optimizer" />;
-}
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = () => {
+  return <div role="note" aria-label="PerformanceOptimizer placeholder" />;
+};
+
+export default PerformanceOptimizer;
+

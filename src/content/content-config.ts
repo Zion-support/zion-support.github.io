@@ -240,6 +240,43 @@ export const blogPosts: BlogPost[] = [
     slug: '/blog/secure-genai-guardrails-2025',
     tags: ['GenAI', 'Security', 'Compliance']
   }
+  ,
+  {
+    id: 'secure-ml-supply-chain-2026',
+    title: 'Secure ML Supply Chain 2026: SBOMs, Attestations, and Drift Guards',
+    excerpt: 'Continuously track models, datasets, and prompts with signed SBOMs and policy checks.',
+    date: 'October 13, 2025',
+    category: 'Security',
+    readTime: '7 min',
+    image: '🔐',
+    featured: true,
+    slug: '/blog/secure-ml-supply-chain-2026',
+    tags: ['ML', 'Supply Chain', 'SBOM', 'Security']
+  },
+  {
+    id: 'genai-routing-blueprint-2026',
+    title: 'GenAI Routing Blueprint 2026: Quality Tiers, Caches, and Budgets',
+    excerpt: 'Route traffic by SLA with tiered models, edge caches, and KPI‑linked budgets.',
+    date: 'October 13, 2025',
+    category: 'GenAI',
+    readTime: '8 min',
+    image: '🧭',
+    featured: true,
+    slug: '/blog/genai-routing-blueprint-2026',
+    tags: ['Routing', 'Quality Tiers', 'Budgets', 'Caching']
+  },
+  {
+    id: 'golden-paths-roi-2026',
+    title: 'Golden Paths ROI 2026: Scorecards that Prove Platform Value',
+    excerpt: 'Link developer journeys to SLOs, adoption, and revenue with actionable scorecards.',
+    date: 'October 13, 2025',
+    category: 'Platform Engineering',
+    readTime: '7 min',
+    image: '🛤️',
+    featured: true,
+    slug: '/blog/golden-paths-roi-2026',
+    tags: ['Golden Paths', 'Scorecards', 'ROI']
+  }
 ];
 
 // Case Studies Configuration
@@ -465,6 +502,71 @@ export const services: Service[] = [
 
 // Promotional Banners Configuration
 export const promotionalBanners: PromotionalBanner[] = [
+  {
+    id: 'fresh-oct-29-2025-security-runbooks',
+    message: '🧰 New: AI Threat Hunting with LLMs + LLM Production Runbooks',
+    ctaText: 'Read the latest',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-indigo-700 to-purple-700',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 0
+  },
+  {
+    id: 'fresh-oct-29-2025-ai-sre',
+    message: '🛠️ New: AI SRE Blueprints 2026 + Privacy‑First A/B Testing',
+    ctaText: 'Read the latest',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-indigo-700 to-purple-700',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 0
+  },
+  {
+    id: 'fresh-oct-15-2025',
+    message: '🚀 New: AI Governance Routing Blueprint 2026 + Governance Scorecards Service',
+    ctaText: 'Explore',
+    ctaLink: '/blog/ai-governance-routing-blueprint-2026',
+    backgroundColor: 'bg-gradient-to-r from-indigo-700 to-purple-700',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 0
+  },
+  {
+    id: 'fresh-oct-13-2025-new-content',
+    message: '🚀 New: AI Safety Budgets 2026 + Edge Personalization 2026',
+    ctaText: 'Read the latest',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-indigo-700 to-purple-700',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 0
+  },
+  {
+    id: 'fresh-oct-14-2025',
+    message: '✨ New: AI Safety Budgets 2026 + Edge Personalization 2026',
+    ctaText: 'Explore updates',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-indigo-700 to-purple-700',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 20,
+    active: true,
+    priority: 0
+  },
   {
     id: 'fresh-oct-8-2025',
     message: '✨ New: AI Platform Engineering, Serverless Cost Playbook, Cloud FinOps Guardrails',
@@ -701,6 +803,32 @@ export const promotionalBanners: PromotionalBanner[] = [
   }
   ,
   {
+    id: 'fresh-oct-16-2025-privacy-bluegreen',
+    message: '🔐 New: Privacy‑First Insights 2026 + Blue‑Green Agent Releases 2026',
+    ctaText: 'Explore',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-cyan-700 to-emerald-700',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 0
+  },
+  {
+    id: 'fresh-oct-13-2025-new',
+    message: '🚀 New: Secure ML Supply Chain, GenAI Routing, Golden Paths ROI',
+    ctaText: 'Explore the latest',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-indigo-700 to-purple-700',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 0
+  },
+  {
     id: 'fresh-oct-13-2025',
     message: '🚀 New: Secure ML Supply Chain, GenAI Routing, Golden Paths ROI',
     ctaText: 'Explore the latest',
@@ -816,6 +944,84 @@ export const promotionalBanners: PromotionalBanner[] = [
     hideAfter: 22,
     active: true,
     priority: 3
+  },
+  {
+    id: 'january-2025-breakthrough-content',
+    message: '🚀 BREAKTHROUGH 2025: AI Autonomous Infrastructure, Quantum-AI Hybrid Computing, Zero Trust Security',
+    ctaText: 'Explore New Content',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-purple-600 to-pink-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 25,
+    active: true,
+    priority: 0
+  },
+  {
+    id: 'ai-autonomous-infrastructure-article',
+    message: '🤖 NEW: AI Autonomous Infrastructure 2025 - Self-Healing Systems That Scale',
+    ctaText: 'Read Article',
+    ctaLink: '/blog/ai-autonomous-infrastructure-2025',
+    backgroundColor: 'bg-gradient-to-r from-blue-600 to-cyan-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 20,
+    active: true,
+    priority: 1
+  },
+  {
+    id: 'quantum-ai-hybrid-computing-article',
+    message: '⚛️ NEW: Quantum-AI Hybrid Computing 2025 - The Next Computing Frontier',
+    ctaText: 'Explore Guide',
+    ctaLink: '/blog/quantum-ai-hybrid-computing-2025',
+    backgroundColor: 'bg-gradient-to-r from-indigo-600 to-purple-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 20,
+    active: true,
+    priority: 1
+  },
+  {
+    id: 'ai-content-automation-article',
+    message: '📝 NEW: AI Content Automation 2025 - Scale Production 10x',
+    ctaText: 'Read Guide',
+    ctaLink: '/blog/ai-content-automation-2025',
+    backgroundColor: 'bg-gradient-to-r from-green-600 to-emerald-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 20,
+    active: true,
+    priority: 2
+  },
+  {
+    id: 'retailmax-case-study',
+    message: '🏆 NEW CASE STUDY: RetailMax Achieves 99.9% Uptime with AI Autonomous Infrastructure',
+    ctaText: 'View Case Study',
+    ctaLink: '/case-studies/retailmax-ai-autonomous-infrastructure',
+    backgroundColor: 'bg-gradient-to-r from-orange-600 to-red-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 22,
+    active: true,
+    priority: 2
+  },
+  {
+    id: 'quantum-finance-case-study',
+    message: '💰 NEW CASE STUDY: Quantum Finance Delivers 35% Better Returns with AI',
+    ctaText: 'Read Case Study',
+    ctaLink: '/case-studies/quantum-finance-optimization',
+    backgroundColor: 'bg-gradient-to-r from-yellow-600 to-orange-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 22,
+    active: true,
+    priority: 3
   }
 ];
 
@@ -844,12 +1050,17 @@ export const getContentByTag = (tag: string) => {
 
 // Import new content
 import { newServices2025, featuredServices, trendingServices } from './new-services-2025';
+import { newContentJanuary2025, featuredNewContent, trendingNewContent } from './new-content-2025-january';
+import { newCaseStudies2025, featuredCaseStudies, trendingCaseStudies } from './new-case-studies-2025';
+import { newInsights2025, featuredInsights, trendingInsights } from './new-insights-2025';
 
 export const getRecentContent = (limit: number = 3) => {
   const allContent = [
     ...blogPosts.map(post => ({ ...post, type: 'blog' as const })),
     ...newBlogPosts2025.map(post => ({ ...post, type: 'blog' as const, date: post.publishedAt })),
+    ...newContentJanuary2025.map(post => ({ ...post, type: 'blog' as const, date: post.publishedAt })),
     ...caseStudies.map(study => ({ ...study, type: 'case-study' as const })),
+    ...newCaseStudies2025.map(study => ({ ...study, type: 'case-study' as const, date: study.publishedAt })),
     ...services.map(service => ({ ...service, type: 'service' as const })),
     ...newServices2025.map(service => ({ ...service, type: 'service' as const, date: '2025-01-30' }))
   ];
@@ -864,4 +1075,53 @@ export const getRecentContent = (limit: number = 3) => {
 };
 
 // Export new content for use in components
-export { newBlogPosts2025, featuredBlogPosts, trendingBlogPosts, newServices2025, featuredServices, trendingServices };
+export { 
+  newBlogPosts2025, featuredBlogPosts, trendingBlogPosts, 
+  newServices2025, featuredServices, trendingServices,
+  newContentJanuary2025, featuredNewContent, trendingNewContent,
+  newCaseStudies2025, featuredCaseStudies, trendingCaseStudies,
+  newInsights2025, featuredInsights, trendingInsights
+};
+
+// New banners for fresh content (Sept 29, 2025)
+promotionalBanners.unshift(
+  {
+    id: 'fresh-sep-29-2025-agentic-observability',
+    message: '🧠 New: Agentic Observability Scorecards 2026 — Traces that Predict Outcomes',
+    ctaText: 'Read Article',
+    ctaLink: '/blog/agentic-observability-scorecards-2026',
+    backgroundColor: 'bg-gradient-to-r from-cyan-700 to-blue-700',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 0
+  },
+  {
+    id: 'fresh-sep-29-2025-edge-privacy-cdn',
+    message: '🔐 New: Edge Privacy CDN 2026 — Scoped IDs, Local Filters, Zero PII',
+    ctaText: 'Explore',
+    ctaLink: '/blog/edge-privacy-cdn-2026',
+    backgroundColor: 'bg-gradient-to-r from-indigo-700 to-purple-700',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 0
+  },
+  {
+    id: 'fresh-sep-29-2025-platform-golden-paths',
+    message: '📈 New: Platform Golden Paths + SLOs 2026 — Adoption that Drives ROI',
+    ctaText: 'See Scorecards',
+    ctaLink: '/blog/platform-golden-paths-slos-2026',
+    backgroundColor: 'bg-gradient-to-r from-emerald-700 to-teal-700',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 0
+  }
+);
