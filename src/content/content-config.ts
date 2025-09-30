@@ -11,11 +11,60 @@ export interface FeaturedItem {
 
 export const featuredBlogPosts: FeaturedItem[] = [
   {
-    id: "realtime-ai-decision-engines-2025",
-    title: "Real-Time AI Decision Engines",
-    description: "10M/sec under 1ms with tiered models and caches",
-    link: "/blog/real-time-ai-decision-engines-2025",
+    id: "ai-agent-reliability-playbook-2026",
+    title: "AI Agent Reliability Playbook 2026",
+    description: "Comprehensive guide to building reliable AI agents with monitoring and rollback capabilities",
+    link: "/blog/ai-agent-reliability-playbook-2026",
     type: "article",
+    featured: true
+  },
+  {
+    id: 'fresh-oct-16-2025',
+    message: '🚀 New: AI Agent Reliability Playbook 2026 + Privacy‑Safe Feature Flags',
+    ctaText: 'Read now',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-fuchsia-600 to-purple-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 0
+  },
+  {
+    id: 'agent-reliability-2026-banner',
+    message: '🧩 AI Agent Reliability 2026: Deterministic Tools + Budgeted Actions',
+    ctaText: 'Read Playbook',
+    ctaLink: '/blog/ai-agent-reliability-playbook-2026',
+    backgroundColor: 'bg-gradient-to-r from-sky-600 to-indigo-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 16,
+    active: true,
+    priority: 1
+  },
+  {
+    id: 'privacy-safe-flags-2026-banner',
+    message: '🔒 Privacy‑Safe Feature Flags 2026: Scoped IDs + Edge Filters',
+    ctaText: 'Explore',
+    ctaLink: '/blog/privacy-safe-feature-flags-2026',
+    backgroundColor: 'bg-gradient-to-r from-emerald-600 to-teal-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 16,
+    active: true,
+    priority: 1
+  },
+  {
+    id: 'ai-platform-engineering-2025',
+    title: 'AI Platform Engineering 2025: Scorecards, Trains, and Golden Paths',
+    excerpt: 'Practical platform patterns that link capabilities to adoption, SLOs, and ROI.',
+    date: 'October 8, 2025',
+    category: 'Platform Engineering',
+    readTime: '9 min',
+    image: '🛤️',
     featured: true
   },
   {
@@ -219,10 +268,9 @@ featuredBlogPosts.unshift(
 // Newly featured items to advertise on the homepage
 featuredBlogPosts.unshift(
   {
-<<<<<<< HEAD
-    id: "genai-reliability-scorecards-2027",
-    title: "GenAI Reliability Scorecards 2027",
-    description: "Live KPIs + budgets + rollback for affordable, reliable GenAI.",
+    id: "privacy-safe-feature-flags-2026",
+    title: "Privacy-Safe Feature Flags 2026",
+    description: "Zero-PII feature flags with scoped targeting and consent-aware rollouts",
     link: "/blog/genai-reliability-scorecards-2027",
     type: "article",
     featured: true
