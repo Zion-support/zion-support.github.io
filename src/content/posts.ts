@@ -2052,6 +2052,37 @@ posts.push(
   }
 );
 
+// Sept 30, 2025 – Fresh drop (featured) to surface at top of Home
+posts.push(
+  {
+    slug: "ai-operational-trust-q4-2025",
+    title: "AI Operational Trust Q4 2025: SLIs, Budgets, Instant Rollback",
+    description: "Operational scorecards tying SLIs to KPIs with budgeted actions, canaries, and rapid rollback.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-consentless-analytics-q4-2025",
+    title: "Edge Consentless Analytics Q4 2025: Actionable Insights Without PII",
+    description: "On‑device aggregation, scoped IDs, and DP noise that unlock trustworthy analytics under 100ms.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "genai-routing-quality-tiers-q4-2025",
+    title: "GenAI Routing Quality Tiers Q4 2025: Predictable Cost, Stable UX",
+    description: "Tiered models, semantic caches, and KPI‑aware routing for 30–60% savings with steady experience.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  }
+);
+
 // Dec 30, 2025 – Fresh posts to surface across homepage showcases
 posts.push(
   {
