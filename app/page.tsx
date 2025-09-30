@@ -50,6 +50,8 @@ import Latest2026ContentBanner from '../components/Latest2026ContentBanner';
 import September30NewContentBanner from '../components/September30NewContentBanner';
 import September30LatestContentBanner from '../components/September30LatestContentBanner';
 import Revolutionary2026ContentShowcase from '../components/Revolutionary2026ContentShowcase';
+import Revolutionary2026ContentMegaBanner from '../components/Revolutionary2026ContentMegaBanner';
+import UltimateContent2026MegaBanner from '../components/UltimateContent2026MegaBanner';
 
 export const metadata = {
   title: 'Zion Tech Group — Revolutionary AI Breakthroughs 2026 | 1000x Performance Gains',
@@ -1138,6 +1140,12 @@ export default function HomePage() {
           </div>
         </section>
 
+      {/* Revolutionary 2026 Content Mega Banner */}
+      <Revolutionary2026ContentMegaBanner />
+      
+      {/* Ultimate Content 2026 Mega Banner */}
+      <UltimateContent2026MegaBanner />
+      
       {/* Revolutionary 2026 Content Showcase */}
       <Revolutionary2026ContentShowcase />
 
