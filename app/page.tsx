@@ -7,6 +7,9 @@ import NewContentAdvertisingBanner from '../components/NewContentAdvertisingBann
 >>>>>>> origin/cursor/create-and-deploy-new-content-f6a8
 import UnifiedContentPromotion from '../components/UnifiedContentPromotion';
 import Link from 'next/link';
+import January2026EdgeNativeIntelligenceBanner from '../components/January2026EdgeNativeIntelligenceBanner';
+import January2026SyntheticDataRevolutionBanner from '../components/January2026SyntheticDataRevolutionBanner';
+import January2026ContentMegaBanner from '../components/January2026ContentMegaBanner';
 import January2026NeuralArchitectureSearchBanner from '../components/January2026NeuralArchitectureSearchBanner';
 import January2026FederatedLearningBanner from '../components/January2026FederatedLearningBanner';
 import January2026RevolutionaryBreakthroughBanner from '../components/January2026RevolutionaryBreakthroughBanner';
@@ -46,15 +49,25 @@ export default function HomePage() {
   <section className="py-4 border-t border-b border-white/10 bg-white/5">
     <div className="max-w-6xl mx-auto px-4">
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
-        <div className="text-white/90 font-semibold">New: January 2026 Releases</div>
+        <div className="text-white/90 font-semibold">New: January 2026 Revolutionary Breakthroughs</div>
         <div className="flex flex-wrap gap-2">
-          <a href="/blog/ai-2026-neural-optimization-revolution" className="inline-flex items-center gap-2 bg-purple-500/20 text-purple-200 border border-purple-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-purple-500/30 transition-colors">Neural Optimization Revolution<span>→</span></a>
-          <a href="/blog/ai-2026-autonomous-business-processes" className="inline-flex items-center gap-2 bg-emerald-500/20 text-emerald-200 border border-emerald-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-emerald-500/30 transition-colors">Autonomous Business Orchestration<span>→</span></a>
+          <a href="/blog/ai-2026-edge-native-intelligence-revolution" className="inline-flex items-center gap-2 bg-cyan-500/20 text-cyan-200 border border-cyan-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-cyan-500/30 transition-colors">Edge-Native AI 50x<span>→</span></a>
+          <a href="/blog/ai-2026-synthetic-data-revolution" className="inline-flex items-center gap-2 bg-pink-500/20 text-pink-200 border border-pink-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-pink-500/30 transition-colors">Synthetic Data 1000x<span>→</span></a>
+          <a href="/case-studies/ai-2026-edge-native-intelligence-mega-success" className="inline-flex items-center gap-2 bg-green-500/20 text-green-200 border border-green-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-green-500/30 transition-colors">$500M Success<span>→</span></a>
         </div>
       </div>
     </div>
   </section>
 
+      {/* January 2026 Content Mega Banner - Featured prominently */}
+      <January2026ContentMegaBanner />
+      
+      {/* Edge-Native Intelligence Banner */}
+      <January2026EdgeNativeIntelligenceBanner />
+      
+      {/* Synthetic Data Revolution Banner */}
+      <January2026SyntheticDataRevolutionBanner />
+      
       {/* Revolutionary 2027 Content Mega Banner - Featured prominently */}
       <Revolutionary2027ContentMegaBanner />
       
