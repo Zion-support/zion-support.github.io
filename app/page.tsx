@@ -33,14 +33,19 @@ import {
   EnterpriseAISecurityBanner
 } from '../components/NewContentPromotionalBanners';
 import {
-  AIEnterpriseTransformationBanner,
-  AIAutonomousSystemsBanner,
-  ManufacturingTransformationBanner,
-  AIEnterpriseServicesBanner,
-  LatestContentShowcaseBanner,
-  InteractiveAICalculatorBanner,
-  AIInnovationShowcaseBanner
-} from '../components/NewContent2026Banners';
+  AIEnterpriseAutomationRevolutionBanner,
+  AIQuantumComputingBreakthroughBanner,
+  AIMegaTransformationSuccessBanner,
+  AI2026ContentShowcaseBanner,
+  AI2026InnovationShowcaseBanner
+} from '../components/NewContent2026MegaBanners';
+import {
+  AIAutonomousManufacturing2026Banner,
+  AIFinancialServicesRevolution2026Banner,
+  AIHealthcareDiagnosticBreakthrough2026Banner,
+  MegaContentShowcase2026Banner,
+  Ultimate2026ContentShowcaseBanner
+} from '../components/NewContent2026RevolutionaryBanners';
 import ContentShowcase from '../components/ContentShowcase';
 import InteractiveAIROICalculator from '../components/InteractiveAIROICalculator';
 import NewContent2026PromotionalBanner from '../components/NewContent2026PromotionalBanner';
@@ -585,16 +590,21 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* NEW REVOLUTIONARY 2026 CONTENT BANNERS */}
+      <Ultimate2026ContentShowcaseBanner />
+      <MegaContentShowcase2026Banner />
+      
+      {/* Individual Revolutionary Content Banners */}
+      <AIAutonomousManufacturing2026Banner />
+      <AIFinancialServicesRevolution2026Banner />
+      <AIHealthcareDiagnosticBreakthrough2026Banner />
+      
       {/* Latest 2026 Content Banners */}
-      <NeuralArchitectureSearchBanner />
-      <AIContentGenerationBanner />
-      <AIEnterpriseTransformationBanner />
-      <AIAutonomousSystemsBanner />
-      <ManufacturingTransformationBanner />
-      <AIEnterpriseServicesBanner />
-      <LatestContentShowcaseBanner />
-      <InteractiveAICalculatorBanner />
-      <AIInnovationShowcaseBanner />
+      <AIEnterpriseAutomationRevolutionBanner />
+      <AIQuantumComputingBreakthroughBanner />
+      <AIMegaTransformationSuccessBanner />
+      <AI2026ContentShowcaseBanner />
+      <AI2026InnovationShowcaseBanner />
       
       {/* New Content Promotional Banners */}
       <AIEnterpriseAdoptionBanner />
