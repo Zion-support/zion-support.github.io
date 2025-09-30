@@ -197,6 +197,11 @@ const Home = () => {
             </div>
             {/* Freshly added posts */}
             <div className="grid md:grid-cols-2 gap-4 mt-4">
+              <Link to="/blog/ai-2027-operational-risk-budgets" className="block rounded-lg border border-white/10 p-4 hover:border-amber-400/40 transition-colors">
+                <div className="text-amber-300 text-xs mb-2">AI Operations</div>
+                <div className="text-white font-semibold">AI 2027: Operational Risk Budgets</div>
+                <div className="text-zion-slate-light text-sm mt-1">Budget‑aware routing, KPI canaries, and instant rollback.</div>
+              </Link>
               <Link to="/blog/ai-2026-reliability-runbooks-v4" className="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
                 <div className="text-cyan-300 text-xs mb-2">AI Operations</div>
                 <div className="text-white font-semibold">AI 2026: Reliability Runbooks v4</div>
