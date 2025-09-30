@@ -212,8 +212,17 @@ const blogPosts = [
     image: '💸',
     color: 'green',
     readTime: '13 min read'
-  }
-  ,
+  },
+  {
+    title: 'AI Executive Playbook 2027: Ship Reliable, Measurable AI',
+    slug: 'ai-executive-playbook-2027',
+    excerpt: 'A concise executive guide to planning, funding, and governing AI that delivers measurable outcomes in 2027.',
+    category: 'Strategy',
+    publishedAt: 'January 2027',
+    image: '📘',
+    color: 'indigo',
+    readTime: '12 min read'
+  },
   {
     title: 'AI Operational Resilience 2026: Designing for Failure and Recovery',
     slug: 'ai-operational-resilience-2026',
