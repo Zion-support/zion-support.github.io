@@ -1148,33 +1148,12 @@ export const posts: BlogPost[] = [
 
 // Newly added content (auto-advertised on Home via latest sort)
 posts.push(
-  {
-    slug: "genai-consent-mode-edge-2026",
-    title: "GenAI Consent Mode 2026: On-Device Signals Without PII",
-    description: "Respect user privacy with on-device aggregation, scoped IDs, and consent-aware analytics under strict SLAs.",
-    category: "Analytics",
-    publishedAt: "2025-10-31",
-    featured: true,
-    readTime: "6 min read"
-  },
-  {
-    slug: "ai-data-lineage-2026",
-    title: "AI Data Lineage 2026: End-to-End Traceability for Models",
-    description: "Track datasets, prompts, and model versions with signed SBOMs and audit-ready provenance.",
-    category: "MLOps",
-    publishedAt: "2025-10-31",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "agent-policy-gates-blueprint-2026",
-    title: "Agent Policy Gates 2026: Approvals, Budgets, and Safe Tools",
-    description: "Design approval workflows, budgeted actions, and sandboxed tools to ship reliable agent releases.",
-    category: "AI Operations",
-    publishedAt: "2025-10-31",
-    featured: true,
-    readTime: "7 min read"
-  },
+  { slug: "genai-consent-mode-edge-2026", title: "GenAI Consent Mode 2026: On-Device Signals Without PII", description: "Respect user privacy with on-device aggregation, scoped IDs, and consent-aware analytics under strict SLAs.", category: "Analytics", publishedAt: "2025-10-31", featured: true, readTime: "6 min read" },
+  { slug: "ai-operational-evals-2026", title: "Operational Evals 2026: KPIs, Canaries, and Rollbacks", description: "Wire offline suites, PR checks, and live canaries to KPIs for safe, fast delivery.", category: "AI Engineering", publishedAt: "2025-09-30", featured: true, readTime: "7 min read" },
+  { slug: "edge-ab-testing-2026", title: "Edge A/B Testing 2026: Private Experiments at <100ms", description: "Scoped IDs, on-device metrics, and DP noise to run compliant, latency-free experiments.", category: "Analytics", publishedAt: "2025-09-30", featured: true, readTime: "6 min read" },
+  { slug: "ai-data-lineage-2026", title: "AI Data Lineage 2026: End-to-End Traceability for Models", description: "Track datasets, prompts, and model versions with signed SBOMs and audit-ready provenance.", category: "MLOps", publishedAt: "2025-10-31", featured: true, readTime: "7 min read" },
+  { slug: "agent-policy-gates-blueprint-2026", title: "Agent Policy Gates 2026: Approvals, Budgets, and Safe Tools", description: "Design approval workflows, budgeted actions, and sandboxed tools to ship reliable agent releases.", category: "AI Operations", publishedAt: "2025-10-31", featured: true, readTime: "7 min read" },
+  { slug: "sovereign-rag-platforms-2026", title: "Sovereign RAG Platforms 2026: Residency, Guardrails, and Speed", description: "Region-scoped corpora, auth-aware retrieval, and signed outputs without hurting UX.", category: "GenAI", publishedAt: "2025-09-30", featured: true, readTime: "8 min read" },
   {
     slug: "ai-safety-budgets-2026",
     title: "AI Safety Budgets 2026: Guardrails That Keep Velocity High",

@@ -148,6 +148,34 @@ export const featuredBlogPosts: FeaturedItem[] = [
   }
 ];
 
+// Newly featured items to advertise on the homepage
+featuredBlogPosts.unshift(
+  {
+    id: "operational-evals-2026",
+    title: "Operational Evals 2026",
+    description: "KPIs, canaries, and rollback playbooks that keep velocity high",
+    link: "/blog/ai-operational-evals-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-ab-testing-2026",
+    title: "Edge A/B Testing 2026",
+    description: "Private experiments at <100ms with scoped IDs and DP noise",
+    link: "/blog/edge-ab-testing-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "sovereign-rag-platforms-2026",
+    title: "Sovereign RAG Platforms 2026",
+    description: "Residency, guardrails, and speed without hurting UX",
+    link: "/blog/sovereign-rag-platforms-2026",
+    type: "article",
+    featured: true
+  }
+);
+
 export const featuredServices: FeaturedItem[] = [
   {
     id: "ai-predictive-maintenance",
