@@ -17,6 +17,16 @@ interface ContentItem {
 }
 
 const featuredContent: ContentItem[] = [
+  {
+    title: 'Real-Time Decision Engines v3',
+    description: '10M/sec under 1ms using warm pools and intent prefetching.',
+    href: '/blog/ai-2025-sept-30-real-time-decision-engines-v3',
+    publishedDate: 'September 30, 2025',
+    readTime: '6 min read',
+    category: 'Observability'
+  },
+  // Sept 30, 2025 — highlight newest content
+  // Oct 03, 2025 — newest highlights
   // New 2026 Content - Ultimate Breakthroughs
   {
     id: 'ultimate-2026',

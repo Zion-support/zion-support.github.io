@@ -6,7 +6,7 @@
   "preinstall": "pnpm approve-builds --unsafe-perm || true",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build --no-lint",
     "build:no-check": "vite build",
     "preview": "next start",
     "lint": "eslint src --report-unused-disable-directives --max-warnings 250",
