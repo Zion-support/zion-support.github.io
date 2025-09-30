@@ -37,6 +37,32 @@ export const posts: BlogPost[] = [
     readTime: "8 min read"
   },
   {
+    slug: "ai-governance-real-time-2026",
+    title: "AI Governance in Real Time 2026: Live Canaries + PR Policy Tests",
+    description: "Wire KPI‑linked canaries and CI policy tests so teams ship weekly without regressions.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-inference-warm-pools-2026",
+    title: "Edge Inference Warm Pools 2026: Sub‑100ms Global with Predictable Cost",
+    description: "Warm pools, intent prefetching, and tiered caches for fast, affordable inference worldwide.",
+    category: "Edge Computing",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "agent-release-guardrails-2026",
+    title: "Agent Release Guardrails 2026: Budgets, Approvals, and Instant Rollback",
+    description: "Battle‑tested checklists for safe agent updates with budgeted actions and one‑click rollback.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
     slug: "ai-governance-runtime-scorecards-2026",
     title: "AI Governance Runtime Scorecards 2026: KPIs, Budgets, Rollback",
     description: "Live guardrails wired to KPIs with PR checks, budgets, and instant rollback that speed delivery.",

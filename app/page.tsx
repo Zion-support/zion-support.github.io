@@ -227,6 +227,27 @@ export default function HomePage() {
         maxItems={6}
         showMetrics
       />
+
+      {/* 📣 New: Highlight the three latest posts */}
+      <div className="max-w-6xl mx-auto px-4 mb-10">
+        <div className="grid md:grid-cols-3 gap-4">
+          <Link href="/blog/ai-governance-real-time-2026" className="block bg-slate-800 rounded-xl border border-white/10 p-5 hover:bg-slate-700 transition-colors">
+            <div className="text-xs uppercase tracking-wide text-fuchsia-300 mb-1">New</div>
+            <h3 className="text-lg font-semibold mb-1">AI Governance in Real Time 2026</h3>
+            <p className="text-slate-300 text-sm">Live canaries + PR policy tests so teams ship weekly.</p>
+          </Link>
+          <Link href="/blog/edge-inference-warm-pools-2026" className="block bg-slate-800 rounded-xl border border-white/10 p-5 hover:bg-slate-700 transition-colors">
+            <div className="text-xs uppercase tracking-wide text-blue-300 mb-1">New</div>
+            <h3 className="text-lg font-semibold mb-1">Edge Inference Warm Pools 2026</h3>
+            <p className="text-slate-300 text-sm">Sub‑100ms global with warm pools and tiered caches.</p>
+          </Link>
+          <Link href="/blog/agent-release-guardrails-2026" className="block bg-slate-800 rounded-xl border border-white/10 p-5 hover:bg-slate-700 transition-colors">
+            <div className="text-xs uppercase tracking-wide text-emerald-300 mb-1">New</div>
+            <h3 className="text-lg font-semibold mb-1">Agent Release Guardrails 2026</h3>
+            <p className="text-slate-300 text-sm">Budgets, approvals, KPI canaries, instant rollback.</p>
+          </Link>
+        </div>
+      </div>
       
       {/* 🚀 NEWEST 2027 CONTENT - BREAKTHROUGH QUANTUM AI & AUTONOMOUS INTELLIGENCE! */}
       <NewContent2027ShowcaseBanner />
