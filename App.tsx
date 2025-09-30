@@ -10,6 +10,8 @@ import UltimateContentShowcase2026 from "./src/components/UltimateContentShowcas
 import AIInnovationAdvertisingBanner from "./src/components/AIInnovationAdvertisingBanner";
 import LatestTrendsShowcase2026 from "./src/components/LatestTrendsShowcase2026";
 import NewServicesPromotionalBanner from "./src/components/NewServicesPromotionalBanner";
+import January2026BreakthroughContentBanner from "./components/January2026BreakthroughContentBanner";
+import Revolutionary2026ContentMegaBanner from "./components/Revolutionary2026ContentMegaBanner";
 
 export default function App(): JSX.Element {
   return (
@@ -87,9 +89,19 @@ export default function App(): JSX.Element {
         </div>
       </section>
 
+      {/* January 2026 Breakthrough Content Banner - Prominent Placement */}
+      <section>
+        <January2026BreakthroughContentBanner />
+      </section>
+
       {/* Revolutionary 2026 Content Section */}
       <section id="revolutionary-breakthroughs">
         <Revolutionary2026ContentMegaBanner />
+      </section>
+
+      {/* January 2026 Breakthrough Content Banner */}
+      <section>
+        <January2026BreakthroughContentBanner />
       </section>
 
       {/* Ultimate Content Showcase 2026 */}
