@@ -722,6 +722,144 @@ export const caseStudies2025: CaseStudy[] = [
     featured: true,
     publishedAt: "2025-09-30",
     readTime: "16 min read"
+  },
+  {
+    id: "telecom-ai-network-optimization",
+    slug: "telecom-ai-network-optimization",
+    title: "TelecomGlobal: AI Network Optimization Achieves 99.999% Uptime",
+    client: "TelecomGlobal Networks",
+    industry: "Telecommunications",
+    description: "Revolutionized network operations with AI achieving 99.999% uptime (five nines), 60% cost reduction, and predictive network optimization serving 100M+ subscribers globally.",
+    challenge: "Legacy network infrastructure with frequent outages (92% uptime), manual network optimization taking weeks, $300M annual downtime costs, and inability to predict and prevent failures across distributed infrastructure.",
+    solution: "Deployed AI-powered autonomous network management with predictive maintenance, self-healing capabilities, real-time traffic optimization, and automated resource allocation. Built digital twin for network simulation and optimization before deployment.",
+    results: [
+      {
+        metric: "Network Uptime",
+        value: "99.999%",
+        description: "Improved from 92% to five nines reliability"
+      },
+      {
+        metric: "Cost Reduction",
+        value: "60%",
+        description: "$180M annual operational cost savings"
+      },
+      {
+        metric: "MTTR",
+        value: "98%",
+        description: "Reduction in mean time to repair (hours to minutes)"
+      },
+      {
+        metric: "Capacity Utilization",
+        value: "85%",
+        description: "Network capacity utilization optimization"
+      },
+      {
+        metric: "Customer Satisfaction",
+        value: "+52%",
+        description: "NPS improvement from reduced outages"
+      },
+      {
+        metric: "Predictive Accuracy",
+        value: "94%",
+        description: "Failure prediction accuracy enabling proactive fixes"
+      }
+    ],
+    technologies: ["AI Network Optimization", "Predictive Maintenance", "Self-Healing Networks", "Digital Twin", "Real-Time Analytics"],
+    featured: true,
+    publishedAt: "2025-09-30",
+    readTime: "17 min read"
+  },
+  {
+    id: "insurance-ai-claims-processing",
+    slug: "insurance-ai-claims-processing",
+    title: "InsureTech: AI Claims Processing Achieves 95% Automation",
+    client: "InsureTech Global",
+    industry: "Insurance",
+    description: "Transformed insurance claims processing with AI achieving 95% automation, 24-hour claim settlement vs 30-day industry average, and 40% fraud detection improvement.",
+    challenge: "Manual claims processing taking 30+ days per claim, 85% operational overhead, 15% fraud detection rate missing billions in fraudulent claims, and poor customer satisfaction from slow processing.",
+    solution: "Implemented end-to-end AI claims processing with computer vision for damage assessment, NLP for document analysis, fraud detection AI, and automated decision-making. Built customer-facing AI assistant for instant claim status and guidance.",
+    results: [
+      {
+        metric: "Automation Rate",
+        value: "95%",
+        description: "Claims processed without human intervention"
+      },
+      {
+        metric: "Settlement Speed",
+        value: "24 Hours",
+        description: "Average claim settlement time vs 30-day baseline"
+      },
+      {
+        metric: "Fraud Detection",
+        value: "91%",
+        description: "Fraud detection accuracy up from 15%"
+      },
+      {
+        metric: "Cost Reduction",
+        value: "$250M",
+        description: "Annual operational cost savings"
+      },
+      {
+        metric: "Customer Satisfaction",
+        value: "+68%",
+        description: "CSAT improvement from faster processing"
+      },
+      {
+        metric: "Fraud Prevention",
+        value: "$180M",
+        description: "Annual fraudulent claims prevented"
+      }
+    ],
+    technologies: ["Computer Vision", "NLP", "Fraud Detection AI", "Automated Decision Systems", "Conversational AI"],
+    featured: true,
+    publishedAt: "2025-09-30",
+    readTime: "15 min read"
+  },
+  {
+    id: "hospitality-ai-revenue-optimization",
+    slug: "hospitality-ai-revenue-optimization",
+    title: "HospitalityChain: AI Revenue Optimization Increases RevPAR 45%",
+    client: "Global Hospitality Chain",
+    industry: "Hospitality",
+    description: "Deployed AI-powered revenue management achieving 45% RevPAR increase, 98% occupancy optimization, and personalized guest experiences across 5,000+ properties globally.",
+    challenge: "Static pricing strategy leaving $500M+ in revenue on the table annually, suboptimal inventory management with 68% occupancy, generic guest experiences, and inability to predict demand accurately across diverse markets.",
+    solution: "Built AI revenue optimization platform with dynamic pricing, demand forecasting, personalized marketing, and automated inventory allocation. Implemented AI-powered guest experience personalization analyzing preferences and behavior patterns.",
+    results: [
+      {
+        metric: "RevPAR Increase",
+        value: "45%",
+        description: "Revenue per available room growth"
+      },
+      {
+        metric: "Occupancy Rate",
+        value: "98%",
+        description: "Optimized from 68% baseline occupancy"
+      },
+      {
+        metric: "Revenue Growth",
+        value: "$520M",
+        description: "Additional annual revenue captured"
+      },
+      {
+        metric: "Demand Forecast",
+        value: "96%",
+        description: "Accuracy in demand prediction across all markets"
+      },
+      {
+        metric: "Guest Satisfaction",
+        value: "+55%",
+        description: "NPS improvement from personalization"
+      },
+      {
+        metric: "Direct Bookings",
+        value: "65%",
+        description: "Increase reducing OTA dependency"
+      }
+    ],
+    technologies: ["Dynamic Pricing AI", "Demand Forecasting", "Personalization Engine", "Inventory Optimization", "Predictive Analytics"],
+    featured: true,
+    publishedAt: "2025-09-30",
+    readTime: "16 min read"
   }
   ,
   {
