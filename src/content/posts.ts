@@ -898,5 +898,50 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "16 min read"
+  },
+  {
+    slug: "ai-autonomous-threat-response-2025",
+    title: "AI Autonomous Threat Response 2025: Zero-Touch Security That Scales",
+    description: "Deploy autonomous security systems achieving sub-30 second incident containment with 99.8% accuracy. Reduce MTTR by 95% and eliminate alert fatigue.",
+    category: "Cybersecurity",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "14 min read"
+  },
+  {
+    slug: "ai-prompt-engineering-mastery-2025",
+    title: "AI Prompt Engineering Mastery 2025: Advanced LLM Optimization Techniques",
+    description: "Master advanced prompt engineering achieving 95%+ accuracy while reducing costs by 70%. Learn few-shot learning, chain-of-thought, RAG integration, and production optimization.",
+    category: "LLM Engineering",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "16 min read"
+  },
+  {
+    slug: "ai-synthetic-data-generation-2025",
+    title: "AI Synthetic Data Generation 2025: Privacy-Preserving Training at Scale",
+    description: "Generate unlimited high-quality training data with 98% statistical parity and perfect privacy. Master GANs, diffusion models, and privacy-preserving synthetic data techniques.",
+    category: "Data Science",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "15 min read"
+  },
+  {
+    slug: "ai-explainability-frameworks-2025",
+    title: "AI Explainability Frameworks 2025: Building Trust Through Transparency",
+    description: "Implement comprehensive explainability achieving 90%+ stakeholder confidence. Master SHAP, LIME, attention visualization, and regulatory-compliant AI transparency.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "13 min read"
+  },
+  {
+    slug: "ai-reinforcement-learning-production-2025",
+    title: "AI Reinforcement Learning in Production 2025: Real-World RL at Scale",
+    description: "Deploy production RL systems achieving 10x better performance than supervised learning. Master PPO, RLHF, safe exploration, and continuous learning in production.",
+    category: "Machine Learning",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "17 min read"
   }
 ];
