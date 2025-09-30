@@ -104,9 +104,9 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 MEGA CONTENT UPDATE: 15+ Revolutionary Articles & Insights Added!"
-          description="BREAKTHROUGH: AI Autonomous Operations, Quantum Computing, Zero Trust Security, Enterprise AI Roadmaps, Next-Gen Cloud Infrastructure, Micro SAAS Architecture, AI Business Automation, and 15+ fresh insights with proven ROI metrics!"
-          ctaText="Explore All New Content"
+          title="🚀 NEW: 2025‑10‑03 Content Drop — Control Planes, Eval Budgets, Edge Telemetry"
+          description="Fresh releases: Autonomous Control Planes v2, Eval Budgeting Blueprint, and Privacy‑First Edge Telemetry. Cut costs 30‑60% while improving safety and UX."
+          ctaText="Read the Latest"
           ctaLink="/blog"
           dismissible={true}
         />

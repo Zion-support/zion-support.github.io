@@ -10,6 +10,36 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-2025-oct-03-autonomous-control-planes-v2",
+    title: "Autonomous Control Planes v2: Safer, Cheaper, Faster Releases",
+    description:
+      "Operational guardrails, budget-aware rollouts, and attested rollback patterns for zero-regret shipping.",
+    category: "AI Operations",
+    publishedAt: "2025-10-03",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "genai-2025-oct-03-eval-budgeting-blueprint",
+    title: "Eval Budgeting Blueprint: 60% Cost Reduction Without Quality Loss",
+    description:
+      "Right-size offline suites, cache golden answers, and enforce online policies to cut spend safely.",
+    category: "GenAI",
+    publishedAt: "2025-10-03",
+    featured: true,
+    readTime: "6 min read",
+  },
+  {
+    slug: "edge-2025-oct-03-consentless-telemetry",
+    title: "Consentless Telemetry at the Edge: Private, Useful, and Fast",
+    description:
+      "Techniques for privacy-preserving telemetry: on-device redaction, hashing, and budgeted sampling.",
+    category: "Observability",
+    publishedAt: "2025-10-03",
+    featured: false,
+    readTime: "5 min read",
+  },
+  {
     slug: "ai-governance-risk-playbook-2025",
     title: "AI Governance Risk Playbook 2025: Practical Controls That Work",
     description:
