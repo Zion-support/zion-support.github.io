@@ -10,6 +10,24 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-2025-sept-30-real-time-decision-engines-v3",
+    title: "Real-Time Decision Engines v3 — 10M/sec, <1ms, intent prefetching",
+    description: "Warm pools, semantic caches, and intent prefetching deliver ultra‑low latency at massive scale with predictable cost tiers.",
+    category: "Platform Engineering",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "ai-2025-oct-01-secure-ml-supply-chain",
+    title: "Secure ML Supply Chain — SBOMs, attestations, and runtime verifiers",
+    description: "Signed models, provenance attestations, and runtime verifiers for end‑to‑end ML integrity without slowing delivery.",
+    category: "AI Security",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
     slug: "meta-cognitive-ai-deep-dive-2026",
     title: "Meta‑Cognitive AI Deep Dive 2026 — AI that thinks about thinking",
     description: "Verifier stacks, introspective loops, and KPI‑linked guardrails you can ship today.",
@@ -63,6 +81,7 @@ export const posts: BlogPost[] = [
     featured: true,
     readTime: "7 min read"
   },
+  {
     slug: "ai-2025-sept-30-neural-code-synthesis",
     title: "Neural Code Synthesis 2025 — 95% Accuracy, 90% Faster Delivery",
     description: "Production blueprint for neural code assistants: policy tests, eval scorecards, and instant rollback for safe velocity.",
