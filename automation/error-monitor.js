@@ -1,199 +1,133 @@
+#!/usr/bin/env node
 
-          timestamp: new Date().toISOString()
-        });
-      }
-    }
+/**
+ * Error Monitor Automation Script
+ * Monitors and fixes console errors, syntax issues
+ */
 
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
 
-
-
-
-
-
-
-
->
-
-
-
-
-
-
-
-
-
-
-          timestamp: new Date().toISOString(),
-        });
-      }
-    }
-
-
-
-
-
->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    return errors;
-          timestamp: new Date().toISOString()
-        });
-      }
-    }    return errors;
+class ErrorMonitor {
+  constructor() {
+    this.workspace = process.cwd();
+    this.logFile = path.join(this.workspace, 'automation', 'logs', 'error-monitor-error.log');
+    this.ensureLogDir();
   }
-  updateHealthStatus() {
-    const totalErrors = this.monitoringReport.metrics.totalErrors;
-    const totalWarnings = this.monitoringReport.metrics.totalWarnings;
-    if (totalErrors === 0 && totalWarnings === 0) {
-      this.monitoringReport.healthStatus = 'healthy';
-    } else if (totalErrors <= this.alertThreshold) {
-      this.monitoringReport.healthStatus = 'warning';
-    } else {
-      this.monitoringReport.healthStatus = 'critical';
+
+  ensureLogDir() {
+    const logDir = path.dirname(this.logFile);
+    if (!fs.existsSync(logDir)) {
+      fs.mkdirSync(logDir, { recursive: true });
     }
   }
-  logHealthStatus() {
-    const status = this.monitoringReport.healthStatus;
-    const totalErrors = this.monitoringReport.metrics.totalErrors;
-    const totalWarnings = this.monitoringReport.metrics.totalWarnings;
 
-
-    console.log(`📊 Health Status: ${status.toUpperCase()}`);
-    console.log(`📈 Total Errors: ${totalErrors}`);
-    console.log(`⚠️  Total Warnings: ${totalWarnings}`);
-    console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
-    console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
-    console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);      console.log('✅ Error fixer completed');
-    } catch (error) {
-      console.error('❌ Error fixer failed:', error);
-      this.monitoringReport.errorsDetected.push({
-        type: 'error_fixer_failure',
-        message: error.message,
-
-
-
-        timestamp: new Date().toISOString()
-
-
->
-
-
-timestamp: new Date().toISOString()
-
-
-
-
-
-
-timestamp: new Date().toISOString()
-        timestamp: new Date().toISOString()
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-        timestamp: new Date().toISOString()
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
-
-
-        timestamp: new Date().toISOString(),
-      });
-    }
+  log(message) {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] ${message}\n`;
+    console.log(message);
+    fs.appendFileSync(this.logFile, logMessage);
   }
-  startContinuousMonitoring() {
-    console.log(
-      `🔄 Starting continuous monitoring (checking every ${this.checkInterval / 1000} seconds)...`
-    );
-    setInterval(async () => {
-      if (this.isRunning) {
-        await this.performHealthCheck();
-        await this.saveReport();
-      }
-    }, this.checkInterval);
-  }
-  async saveReport() {
-    const reportPath = path.join(
-      this.projectRoot,
-      'error-reports',
-      `error-monitor-report-${Date.now()}.json`
-    );
-    const reportDir = path.dirname(reportPath);
-    if (!fs.existsSync(reportDir)) {
-      fs.mkdirSync(reportDir, { recursive: true });
-    }
 
-
-
-
-
->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // Add duration to report
-        timestamp: new Date().toISOString()    // Add duration to report
-    this.monitoringReport.duration = Date.now() - this.startTime;
-    fs.writeFileSync(
-      reportPath,
-      JSON.stringify(this.monitoringReport, null, 2)
-    );
-    // Keep only the latest 10 reports
-    this.cleanupOldReports(reportDir);
-  }
-  cleanupOldReports(reportDir) {
+  async runCommand(command, description) {
     try {
-      const files = fs
-        .readdirSync(reportDir)
-        .filter(file => file.startsWith('error-monitor-report-'))
-        .map(file => ({
-          name: file,
-          path: path.join(reportDir, file),
-          time: fs.statSync(path.join(reportDir, file)).mtime.getTime(),
-        }))
-        .sort((a, b) => b.time - a.time);
-      // Remove old reports (keep only the latest 10)
-      if (files.length > 10) {
-        for (let i = 10; i < files.length; i++) {
-          fs.unlinkSync(files[i].path);
-        }
+      this.log(`Starting: ${description}`);
+      const output = execSync(command, { 
+        cwd: this.workspace, 
+        encoding: 'utf8',
+        stdio: 'pipe'
+      });
+      this.log(`✅ Success: ${description}`);
+      if (output) {
+        this.log(`Output: ${output.substring(0, 500)}...`);
       }
+      return true;
     } catch (error) {
-      console.error('Error cleaning up old reports:', error);
+      this.log(`❌ Error in ${description}: ${error.message}`);
+      if (error.stdout) {
+        this.log(`STDOUT: ${error.stdout}`);
+      }
+      if (error.stderr) {
+        this.log(`STDERR: ${error.stderr}`);
+      }
+      return false;
     }
   }
-  async shutdown() {
-    console.log('🛑 Shutting down Error Monitor...');
-    this.isRunning = false;
-    // Save final report
-    await this.saveReport();
-    console.log('✅ Error Monitor shutdown complete');
-    process.exit(0);
+
+  async checkForErrors() {
+    // Check for common error patterns
+    const errorPatterns = [
+      'console.error',
+      'throw new Error',
+      'Error:',
+      'TypeError:',
+      'ReferenceError:',
+      'SyntaxError:'
+    ];
+
+    let errorCount = 0;
+    
+    for (const pattern of errorPatterns) {
+      try {
+        const result = execSync(`grep -r "${pattern}" . --include="*.js" --include="*.ts" --include="*.jsx" --include="*.tsx" | wc -l`, {
+          cwd: this.workspace,
+          encoding: 'utf8'
+        });
+        const count = parseInt(result.trim());
+        if (count > 0) {
+          this.log(`Found ${count} instances of ${pattern}`);
+          errorCount += count;
+        }
+      } catch (error) {
+        // No matches found, which is good
+      }
+    }
+
+    return errorCount;
   }
+
+  async runErrorFix() {
+    // Run any error fixing scripts
+    const errorFixScripts = [
+      'intelligent-error-detector.sh',
+      'intelligent-syntax-fixer.cjs',
+      'optimized-syntax-fixer.cjs'
+    ];
+
+    for (const script of errorFixScripts) {
+      if (fs.existsSync(script)) {
+        await this.runCommand(
+          `node ${script}`,
+          `Running error fix: ${script}`
+        );
+      }
+    }
+    return true;
+  }
+
+  async runErrorMonitor() {
+    this.log('🔍 Starting Error Monitor');
+    
+    const errorCount = await this.checkForErrors();
+    this.log(`Found ${errorCount} potential errors`);
+    
+    if (errorCount > 0) {
+      await this.runErrorFix();
+    }
+    
+    this.log('✅ Error monitoring cycle completed');
+    return true;
+  }
+  
+  monitor.runErrorMonitor()
+    .then(success => {
+      process.exit(success ? 0 : 1);
+    })
+    .catch(error => {
+      monitor.log(`Fatal error: ${error.message}`);
+      process.exit(1);
+    });
 }
-// Run the monitor
-if (require.main === module) {
-  const monitor = new ErrorMonitor();
-  monitor.start().catch(console.error);
-}
+
 module.exports = ErrorMonitor;

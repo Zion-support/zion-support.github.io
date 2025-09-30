@@ -20,3 +20,4 @@ describe('Accessibility Tests', () => {
     expect(screen.getByRole('heading')).toBeInTheDocument();
     expect(screen.getByRole('button')).toBeInTheDocument();
   });
+});

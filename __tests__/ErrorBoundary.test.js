@@ -1,2 +1,26 @@
-const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import ErrorBoundary from "./components/ErrorBoundary" describe("ErrorBoundary",() => {" test("renders without crashing",() => {" render(<ErrorBoundary / / />) expect(screen.getByTestId("errorboundary")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<ErrorBoundary / / />) }) test("handles user interactions",() => {" render(<ErrorBoundary / / />) }) test("applies correct styling",() => {" render(<ErrorBoundary / / />) }) })'"'"
-import _React from 'react"  import '@testing-library/jest-dom import ErrorBoundary from '../components/ErrorBoundary" describe('ErrorBoundary',() => {' test('renders without crashing',() => {' render(<ErrorBoundary / / />) expect(screen.getByTestId("errorboundary")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<ErrorBoundary / / />) }) test('handles user interactions',() => {' render(<ErrorBoundary / / />) }) test('applies correct styling',() => {' render(<ErrorBoundary / / />) }) })
+import React from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import ErrorBoundary from '../components/ErrorBoundary';
+
+
+  test('renders without crashing', () => {
+
+    render(<ErrorBoundary />);
+    expect(screen.getByTestId('errorboundary)).toBeInTheDocument()});
+
+
+  test('displays correct content', () => {
+    render(<ErrorBoundary />);
+
+    // Add specific content tests based on component
+  });
+
+  test('handles user interactions', () => {
+
+    render(<ErrorBoundary />);
+    // Add interaction tests based on component functionality});
+;
+  test('applies correct styling', () => {
+    render(<ErrorBoundary />);
+    // Add styling tests if needed;

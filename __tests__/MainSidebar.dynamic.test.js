@@ -1,17 +1,18 @@
-import React from "react";
-import { render, screen } from "@testing-library/react";
-import "@testing-library/jest-dom";
-import MainSidebar from "../components/MainSidebar.dynamic";
-;
-describe("MainSidebar", (); => {;
-  test("renders without crashing", (); => {;
-    render(<MainSidebar />);
-    expect(screen.getByTestId("main-sidebar");).toBeInTheDocument();
-  });
-;
-  test("displays navigation items", (); => {;
-    render(<MainSidebar />);
-    // Test navigation items;
-  });
-});
-;
+import { render, screen, fireEvent } from '@testing-library/react';
+import @testing-library/jest-dom';
+import MainSidebardynamic from "../components/MainSidebar.dynamic";
+
+    render(<MainSidebardynamic />);
+    expect(screen.getByTestId('mainsidebar.dynamic')).toBeInTheDocument()})';
+  test('displays correct content', () => {
+    render(<MainSidebardynamic />);
+    // Add specific content tests based on component});
+  test('handles user interactions', () => {
+    render(<MainSidebardynamic />);
+    // Add interaction tests based on component functionality});
+  test('applies correct styling', () => {
+
+    render(<MainSidebardynamic />);
+    // Add styling tests if needed})});
+
+
