@@ -7,7 +7,6 @@ export const metadata = {
 
 const blogPosts = [
   {
-<<<<<<< HEAD
     title: 'AI 2026 Cost Optimization Blueprint: 30–70% Savings without Quality Loss',
     slug: 'ai-2026-cost-optimization-blueprint',
     excerpt: 'Cut AI spend with routing, semantic caches, quantization, and token discipline tied to quality scorecards.',
@@ -25,7 +24,9 @@ const blogPosts = [
     publishedAt: 'October 1, 2025',
     image: '🧭',
     color: 'indigo',
-=======
+    readTime: '14 min read'
+  },
+  {
     title: 'AI 2027 Hyper‑Automation Blueprint',
     slug: 'ai-2027-hyper-automation-blueprint',
     excerpt: 'Scale reliable hyper‑automation with policy gates, evals, and value stream analytics.',
@@ -33,7 +34,6 @@ const blogPosts = [
     publishedAt: 'October 1, 2025',
     image: '🧩',
     color: 'emerald',
->>>>>>> feature/hyper-automation-blueprint-2027
     readTime: '14 min read'
   },
   {
