@@ -133,6 +133,7 @@ import NewContent2027ShowcaseBanner from '../components/NewContent2027ShowcaseBa
 import RevolutionaryBreakthrough2026Banner from '../src/components/RevolutionaryBreakthrough2026Banner';
 import AICostOptimizationBanner from '../src/components/AICostOptimizationBanner';
 import AutonomyBlueprint2026Banner from '../components/AutonomyBlueprint2026Banner';
+import September30ContentPromo2025 from '../components/September30ContentPromo2025';
 
 export const metadata = {
   title: 'Zion Tech Group — Revolutionary AI Breakthroughs 2026 | 10x Performance, 90% Cost Reduction',
@@ -198,9 +199,9 @@ export default function HomePage() {
           <div className="flex gap-3">
             <Link href="/blog/ai-2027-autonomous-governance-blueprint" className="inline-flex items-center gap-2 bg-white text-purple-700 px-4 py-2 rounded-lg font-semibold hover:bg-purple-50 transition-colors">Read Governance</Link>
             <Link href="/blog/ai-2026-agent-ops-observability" className="inline-flex items-center gap-2 bg-fuchsia-500 text-white px-4 py-2 rounded-lg font-semibold hover:bg-fuchsia-400 transition-colors">Read Observability</Link>
-          </div>
-        </div>
-      </div>
+                  </div>
+                </div>
+              </div>
       {/* 🔔 New Promotions: Governance + Agent Ops */}
       <section className="py-6 bg-gradient-to-r from-blue-700 via-indigo-700 to-fuchsia-700 text-white">
         <div className="max-w-6xl mx-auto px-4">
@@ -277,6 +278,8 @@ export default function HomePage() {
       
       {/* 🎉 NEW BLOG POSTS - September 30, 2025 - Revolutionary AI Breakthroughs! */}
       <September30NewBlogsBanner />
+      {/* 🔔 New: September 30, 2025 content promo for three fresh posts */}
+      <September30ContentPromo2025 />
       {/* 🚀 New Featured Articles — September 30, 2025 */}
       <section className="py-10 bg-gradient-to-r from-blue-900/40 to-purple-900/40 border-y border-white/10">
         <div className="max-w-6xl mx-auto px-4">
@@ -855,7 +858,8 @@ export default function HomePage() {
               <div className="text-gray-600">Cost Savings</div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
         {/* Featured Services */}
         <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4">
@@ -934,10 +938,8 @@ export default function HomePage() {
               popular={false}
             />
           </div>
+        </div>
         </section>
-
-      {/* Interactive AI Calculator 2025 */}
-      <InteractiveAICalculator2025 />
 
       {/* Interactive AI Calculator 2025 */}
       <InteractiveAICalculator2025 />
