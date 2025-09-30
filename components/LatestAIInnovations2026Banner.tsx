@@ -3,127 +3,144 @@ import Link from 'next/link';
 
 export default function LatestAIInnovations2026Banner() {
   return (
-    <section className="py-16 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white relative overflow-hidden">
+    <section className="py-16 bg-gradient-to-r from-purple-600 via-blue-600 to-teal-600 text-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 transform rotate-12 scale-150"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/20 to-transparent"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-white/10 rounded-full -translate-x-1/2 translate-y-1/2"></div>
+        <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-white/5 rounded-full"></div>
       </div>
       
-      <div className="max-w-7xl mx-auto px-4 relative z-10">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 mb-6">
-            <span className="text-2xl">🌟</span>
-            <span className="font-semibold">Latest AI Innovations 2026</span>
-          </div>
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            Revolutionary AI Technologies
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-blue-300">
-              Reshaping Enterprise Operations
-            </span>
-          </h2>
-          <p className="text-xl opacity-90 max-w-4xl mx-auto mb-8">
-            Discover the cutting-edge AI innovations that are transforming how businesses operate, 
-            compete, and innovate in 2026. From autonomous systems to quantum-enhanced intelligence.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-            <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center mb-4">
-              <span className="text-3xl">🧠</span>
+      <div className="max-w-6xl mx-auto px-4 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Content */}
+          <div>
+            <div className="flex items-center gap-3 mb-4">
+              <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold">
+                🚀 New Release
+              </span>
+              <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold">
+                January 2026
+              </span>
             </div>
-            <h3 className="text-xl font-bold mb-3">Cognitive Superintelligence</h3>
-            <p className="text-sm opacity-90 mb-4">
-              AI systems with human-level reasoning capabilities achieving 99.7% accuracy in complex decision-making.
+            
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+              Latest AI Innovations 2026: 
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-orange-300">
+                Revolutionary Breakthroughs
+              </span>
+            </h2>
+            
+            <p className="text-xl mb-8 opacity-90 leading-relaxed">
+              Discover the cutting-edge AI technologies that are transforming industries in 2026. 
+              From autonomous systems to quantum-enhanced AI, explore the innovations driving 
+              unprecedented business growth and efficiency.
             </p>
-            <Link href="/blog/ai-cognitive-computing-2026" className="text-cyan-300 font-semibold hover:text-cyan-200 transition-colors">
-              Learn More →
-            </Link>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-            <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-500 rounded-xl flex items-center justify-center mb-4">
-              <span className="text-3xl">⚡</span>
+            
+            <div className="grid grid-cols-2 gap-4 mb-8">
+              <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg">
+                <div className="text-2xl font-bold mb-1">400%</div>
+                <div className="text-sm opacity-90">Average ROI</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg">
+                <div className="text-2xl font-bold mb-1">85%</div>
+                <div className="text-sm opacity-90">Efficiency Gain</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg">
+                <div className="text-2xl font-bold mb-1">$2.3M</div>
+                <div className="text-sm opacity-90">Avg. Annual Savings</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg">
+                <div className="text-2xl font-bold mb-1">95%</div>
+                <div className="text-sm opacity-90">Success Rate</div>
+              </div>
             </div>
-            <h3 className="text-xl font-bold mb-3">Quantum-Enhanced AI</h3>
-            <p className="text-sm opacity-90 mb-4">
-              Quantum computing integration enabling exponential processing power for AI systems.
-            </p>
-            <Link href="/blog/ai-quantum-computing-2026" className="text-purple-300 font-semibold hover:text-purple-200 transition-colors">
-              Explore →
-            </Link>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-            <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-teal-500 rounded-xl flex items-center justify-center mb-4">
-              <span className="text-3xl">🤖</span>
-            </div>
-            <h3 className="text-xl font-bold mb-3">Autonomous Systems</h3>
-            <p className="text-sm opacity-90 mb-4">
-              Self-managing AI systems that optimize operations and adapt to changing conditions in real-time.
-            </p>
-            <Link href="/blog/ai-autonomous-enterprise-2026" className="text-green-300 font-semibold hover:text-green-200 transition-colors">
-              Discover →
-            </Link>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-            <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-red-500 rounded-xl flex items-center justify-center mb-4">
-              <span className="text-3xl">🌐</span>
-            </div>
-            <h3 className="text-xl font-bold mb-3">Multimodal Intelligence</h3>
-            <p className="text-sm opacity-90 mb-4">
-              AI systems integrating text, voice, image, and sensor data for comprehensive business insights.
-            </p>
-            <Link href="/blog/ai-multimodal-enterprise-integration-2026" className="text-orange-300 font-semibold hover:text-orange-200 transition-colors">
-              Read More →
-            </Link>
-          </div>
-        </div>
-
-        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 mb-8">
-          <div className="text-center mb-6">
-            <h3 className="text-2xl font-bold mb-4">Proven Results Across Industries</h3>
-            <p className="text-lg opacity-90">
-              Our AI innovations have delivered measurable results for companies worldwide
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-cyan-300 mb-2">95%</div>
-              <div className="text-sm opacity-90">Efficiency Improvement</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-purple-300 mb-2">$12M</div>
-              <div className="text-sm opacity-90">Average Annual Savings</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-green-300 mb-2">300%</div>
-              <div className="text-sm opacity-90">Average ROI in 6 Months</div>
+            
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                href="/blog/ai-autonomous-systems-2026"
+                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-200 shadow-lg hover:shadow-xl text-center"
+              >
+                Explore AI Innovations →
+              </Link>
+              <Link
+                href="/case-studies/ai-retail-transformation-2026"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-all duration-200 text-center"
+              >
+                View Success Stories
+              </Link>
             </div>
           </div>
-        </div>
-
-        <div className="text-center">
-          <div className="inline-flex flex-col sm:flex-row gap-4">
-            <Link
-              href="/services"
-              className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl"
-            >
-              Explore AI Services
-            </Link>
-            <Link
-              href="/case-studies"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-indigo-900 transition-all duration-300"
-            >
-              View Success Stories
-            </Link>
+          
+          {/* Feature Cards */}
+          <div className="space-y-6">
+            <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-200">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-lg flex items-center justify-center">
+                  <span className="text-xl">🤖</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2">AI Autonomous Systems</h3>
+                  <p className="text-sm opacity-90 mb-3">
+                    Self-learning systems that make complex decisions and adapt independently
+                  </p>
+                  <Link
+                    href="/blog/ai-autonomous-systems-2026"
+                    className="text-yellow-300 font-semibold hover:text-yellow-200 transition-colors"
+                  >
+                    Read More →
+                  </Link>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-200">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-teal-500 rounded-lg flex items-center justify-center">
+                  <span className="text-xl">📈</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2">Retail AI Transformation</h3>
+                  <p className="text-sm opacity-90 mb-3">
+                    200% revenue growth and 85% cost reduction in 12 months
+                  </p>
+                  <Link
+                    href="/case-studies/ai-retail-transformation-2026"
+                    className="text-green-300 font-semibold hover:text-green-200 transition-colors"
+                  >
+                    View Case Study →
+                  </Link>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-200">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-400 to-pink-500 rounded-lg flex items-center justify-center">
+                  <span className="text-xl">⚡</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2">Interactive ROI Calculator</h3>
+                  <p className="text-sm opacity-90 mb-3">
+                    Calculate your organization's potential AI transformation ROI
+                  </p>
+                  <a
+                    href="#roi-calculator"
+                    className="text-purple-300 font-semibold hover:text-purple-200 transition-colors"
+                  >
+                    Try Calculator →
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
-          <p className="text-sm opacity-75 mt-4">
-            Join the AI revolution and transform your business today
-          </p>
         </div>
       </div>
+      
+      {/* Floating Elements */}
+      <div className="absolute top-1/4 left-10 w-4 h-4 bg-white/30 rounded-full animate-pulse"></div>
+      <div className="absolute top-1/3 right-20 w-6 h-6 bg-white/20 rounded-full animate-pulse delay-1000"></div>
+      <div className="absolute bottom-1/4 left-1/3 w-3 h-3 bg-white/40 rounded-full animate-pulse delay-2000"></div>
     </section>
   );
 }
