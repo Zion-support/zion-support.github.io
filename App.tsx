@@ -2,9 +2,7 @@ import React, { JSX } from "react";
 import LatestContentBanner2025 from "./src/components/LatestContentBanner2025";
 import FeaturedContentBanner2025 from "./src/components/FeaturedContentBanner2025";
 import NewContentPromoBanner from "./src/components/NewContentPromoBanner";
-import Revolutionary2026ContentMegaBanner from "./src/components/Revolutionary2026ContentMegaBanner";
-import Ultimate2026ContentShowcase from "./src/components/Ultimate2026ContentShowcase";
-import UltimateContentAdvertisingBanner from "./src/components/UltimateContentAdvertisingBanner";
+import January2026RevolutionaryContentBanner from "./src/components/January2026RevolutionaryContentBanner";
 
 export default function App(): JSX.Element {
   return (
@@ -93,7 +91,7 @@ export default function App(): JSX.Element {
 
       {/* Revolutionary 2026 Content Section */}
       <section id="revolutionary-breakthroughs">
-        <Revolutionary2026ContentMegaBanner />
+        <January2026RevolutionaryContentBanner />
       </section>
 
       {/* Ultimate Content Advertising Banner */}
