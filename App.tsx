@@ -62,16 +62,24 @@ import InteractiveContentShowcase2026Advanced from "./components/InteractiveCont
 import June2026SuperintelligenceBreakthroughBanner from "./components/June2026SuperintelligenceBreakthroughBanner";
 import June2026ContentShowcaseBanner from "./components/June2026ContentShowcaseBanner";
 import AI2031SingularityAchievementBanner from "./components/AI2031SingularityAchievementBanner";
-import NewContent2026AdvertisingMegaBanner from "./components/NewContent2026AdvertisingMegaBanner";
 import AITrends2026AdvertisingBanner from "./components/AITrends2026AdvertisingBanner";
 import September2026BreakthroughAdvertisingBanner from "./components/September2026BreakthroughAdvertisingBanner";
 import AutonomousEnterpriseAutomationAdvertisingBanner from "./components/AutonomousEnterpriseAutomationAdvertisingBanner";
 import February2026NewContentBreakthroughBanner from "./components/February2026NewContentBreakthroughBanner";
+import September2025PracticalAIBanner from "./components/September2025PracticalAIBanner";
+import March2026MultimodalBreakthroughBanner from "./components/March2026MultimodalBreakthroughBanner";
+import AutonomousAI2026RevolutionaryBanner from "./components/AutonomousAI2026RevolutionaryBanner";
+import March2026ContentShowcaseBanner from "./components/March2026ContentShowcaseBanner";
+import March2026ServicesPromotionalBanner from "./components/March2026ServicesPromotionalBanner";
+import April2026RevolutionaryBreakthroughBanner from "./components/April2026RevolutionaryBreakthroughBanner";
+import April2026ContentShowcaseBanner from "./components/April2026ContentShowcaseBanner";
 
 export default function App(): JSX.Element {
   return (
     <div className="min-h-screen bg-slate-950">
-<<<<<<< HEAD
+      {/* NEW: September 2025 Practical AI Insights Banner - FEATURED */}
+      <September2025PracticalAIBanner />
+      
       {/* NEW: September 2026 Breakthrough Advertising Banner - MOST PROMINENT */}
       <September2026BreakthroughAdvertisingBanner />
       
