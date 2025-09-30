@@ -1,3 +1,5 @@
+// Normalized, single-source content exports
+
 export const revolutionaryBreakthroughs2025 = [
   {
     id: 'meta-cognitive-ai',

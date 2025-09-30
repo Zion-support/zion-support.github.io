@@ -10,6 +10,11 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+<<<<<<< HEAD
+    slug: "ai-2025-september-30-new-governed-agent-patterns",
+    title: "New Governed Agent Patterns (2025)",
+    description: "Policy-first orchestration with approvals, verifiers, budgets, and rollback for safe autonomy.",
+=======
     slug: "genai-2025-oct-01-e2e-eval-pipelines",
     title: "E2E Eval Pipelines — KPI‑Linked Gates That Prevent Regressions",
     description: "Design eval pipelines wired to KPIs with cost/quality budgets, canaries, and instant rollback hooks.",
@@ -238,6 +243,7 @@ export const posts: BlogPost[] = [
     slug: "autonomous-operations-case-study-2026",
     title: "Autonomous Operations Case Study 2026 — 98% automation",
     description: "Budgets, canaries, and rollback delivering near‑complete automation in production.",
+>>>>>>> origin/cursor/create-and-deploy-new-content-3982
     category: "AI Operations",
     publishedAt: "2025-09-30",
     featured: true,

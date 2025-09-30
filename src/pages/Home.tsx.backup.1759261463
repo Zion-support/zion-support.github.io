@@ -100,6 +100,8 @@ const Home = () => {
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
         
+<<<<<<< HEAD
+=======
         {/* 🚀 SEPTEMBER 30, 2025 - MEGA BREAKTHROUGH ANNOUNCEMENT */}
         <div className="container mx-auto px-6 pt-8">
           <September30MegaBanner2025 />
@@ -414,6 +416,7 @@ const Home = () => {
           <NewServicesPromoBanner variant="showcase" showCount={3} featuredOnly={true} />
         </div>
         
+>>>>>>> origin/cursor/create-and-deploy-new-content-3982
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
