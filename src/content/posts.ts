@@ -1230,6 +1230,37 @@ posts.push(
   }
 );
 
+// Jan 2026 – New articles to create more content and advertise on Home
+posts.push(
+  {
+    slug: "ai-risk-budgets-blueprint-2026",
+    title: "AI Risk Budgets Blueprint 2026: Ship Faster, Stay Safe",
+    description: "Budget actions and tokens, wire canaries to KPIs, and enable instant rollback for safe autonomy.",
+    category: "AI Operations",
+    publishedAt: "2026-01-05",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-consent-mode-2026",
+    title: "Edge Consent Mode 2026: Private Analytics Without PII",
+    description: "Scoped IDs, on‑device aggregation, and DP noise that power compliant insights at <100ms.",
+    category: "Analytics",
+    publishedAt: "2026-01-05",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "genai-quality-tiers-blueprint-2026",
+    title: "GenAI Quality Tiers Blueprint 2026: Predictable Cost, Stable UX",
+    description: "Tier models, add semantic caches, and route by SLA using eval signals to cut spend 30–60%.",
+    category: "GenAI",
+    publishedAt: "2026-01-05",
+    featured: true,
+    readTime: "8 min read"
+  }
+);
+
 // Sept 30, 2025 – Fresh articles to add and advertise on homepage
 posts.push(
   {

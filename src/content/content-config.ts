@@ -151,6 +151,30 @@ export const featuredBlogPosts: FeaturedItem[] = [
 // Newly featured items to advertise on the homepage
 featuredBlogPosts.unshift(
   {
+    id: "ai-risk-budgets-blueprint-2026",
+    title: "AI Risk Budgets Blueprint 2026",
+    description: "Budgets + KPI canaries + rollback for safe autonomy",
+    link: "/blog/ai-risk-budgets-blueprint-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-consent-mode-2026",
+    title: "Edge Consent Mode 2026",
+    description: "Private analytics without PII at <100ms with scoped IDs & DP",
+    link: "/blog/edge-consent-mode-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "genai-quality-tiers-blueprint-2026",
+    title: "GenAI Quality Tiers Blueprint 2026",
+    description: "Predictable cost and stable UX using quality tiers + caches",
+    link: "/blog/genai-quality-tiers-blueprint-2026",
+    type: "article",
+    featured: true
+  },
+  {
     id: "ai-governance-scorecards-q1-2026",
     title: "AI Governance Scorecards Q1 2026",
     description: "Scorecards + CI policy tests wired to outcomes",
