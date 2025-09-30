@@ -8,6 +8,16 @@ export const metadata = {
 
 const blogPosts = [
   {
+    title: 'Autonomous FinOps 2025: Cut AI Spend 50–85% Safely',
+    slug: 'ai-2025-autonomous-finops-blueprint',
+    excerpt: 'Tiered routing, semantic caches, and budgeted rollbacks for reliable, low-cost AI at scale.',
+    category: 'FinOps',
+    publishedAt: 'September 30, 2025',
+    image: '💸',
+    color: 'emerald',
+    readTime: '14 min read'
+  },
+  {
     title: 'AI Safety Scorecards 2026: SLIs, Budgets, Rollback',
     slug: 'ai-safety-scorecards-2026',
     excerpt: 'Wire SLIs to KPIs with budgeted actions, approvals, and instant rollback to ship reliable autonomy.',

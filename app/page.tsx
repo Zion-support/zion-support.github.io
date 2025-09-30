@@ -780,6 +780,11 @@ export default function HomePage() {
             </a>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
+            <a href="/blog/ai-2025-autonomous-finops-blueprint" className="block rounded-xl border border-gray-200 p-6 hover:shadow-xl transition-shadow">
+              <div className="text-xs font-bold uppercase tracking-wide text-emerald-600 mb-2">Brand New</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-1">Autonomous FinOps 2025</h3>
+              <p className="text-gray-600">Cut AI spend 50–85% with routing tiers, semantic caches, and budgeted rollbacks.</p>
+            </a>
             <a href="/blog/ai-2027-cost-optimization-playbook" className="block rounded-xl border border-gray-200 p-6 hover:shadow-xl transition-shadow">
               <div className="text-xs font-bold uppercase tracking-wide text-emerald-600 mb-2">New</div>
               <h3 className="text-xl font-bold text-gray-900 mb-1">AI 2027 Cost Optimization Playbook</h3>
