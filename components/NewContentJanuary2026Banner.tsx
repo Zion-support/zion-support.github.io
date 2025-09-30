@@ -47,7 +47,7 @@ export default function NewContentJanuary2026Banner() {
               </p>
               <div className="grid grid-cols-3 gap-4 mb-6 text-center">
                 <div>
-                  <div className="text-2xl font-bold text-blue-600">< 10ms</div>
+                  <div className="text-2xl font-bold text-blue-600">&lt; 10ms</div>
                   <div className="text-xs text-gray-600">Response Time</div>
                 </div>
                 <div>
@@ -135,7 +135,7 @@ export default function NewContentJanuary2026Banner() {
                   <div className="text-xs text-gray-600">Savings</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-teal-600">< 10ms</div>
+                  <div className="text-2xl font-bold text-teal-600">&lt; 10ms</div>
                   <div className="text-xs text-gray-600">Response</div>
                 </div>
                 <div>

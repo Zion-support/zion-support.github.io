@@ -18,13 +18,9 @@ interface ContentItem {
 
 const featuredContent: ContentItem[] = [
   {
-    id: 'sept30-1',
-    title: 'Observability & Incident Response',
-    description: 'Advanced observability and incident response strategies for modern AI systems.',
-    link: '/blog/ai-2025-sept-30-observability-incident-response',
-    badge: 'NEW',
-    badgeColor: 'bg-green-500',
-    icon: '🔍',
+    title: 'Privacy-First Observability v2',
+    description: 'User-centric traces without PII leaks.',
+    href: '/blog/ai-2025-oct-01-privacy-first-observability-v2',
     publishedDate: 'September 30, 2025',
     readTime: '6 min read',
     category: 'Observability'
