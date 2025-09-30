@@ -18,6 +18,26 @@ const TrendingContentBanner: React.FC = () => {
 
   const trendingItems = [
     {
+      title: "Platform ROI Scorecards v2",
+      description: "Golden paths + adoption funnels that quantify platform ROI in weeks.",
+      views: "15.2K",
+      readTime: "10 min",
+      category: "Platform Engineering",
+      icon: TrendingUp,
+      link: "/blog/ai-2025-sept-30-platform-roi-scorecards-v2",
+      badge: "NEW"
+    },
+    {
+      title: "Consentless Metrics v3",
+      description: "Zero‑PII telemetry: scoped IDs, DP noise, signed attestations <100ms.",
+      views: "14.1K",
+      readTime: "9 min",
+      category: "Analytics",
+      icon: Shield,
+      link: "/blog/edge-2025-sept-30-consentless-metrics-v3",
+      badge: "HOT"
+    },
+    {
       title: "AI Executive Playbook 2027",
       description: "Exec roadmap: KPI scorecards, budgets, and governance.",
       views: "14.8K",
