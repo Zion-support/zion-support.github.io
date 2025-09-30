@@ -1,5 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
+import NewContent2026ShowcaseBanner from '../components/NewContent2026ShowcaseBanner';
+import NewsletterSignup2026 from '../components/NewsletterSignup2026';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -100,6 +102,18 @@ export default function HomePage() {
                 </svg>
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* New Content Showcase */}
+      <NewContent2026ShowcaseBanner />
+
+      {/* Newsletter Signup */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <NewsletterSignup2026 />
           </div>
         </div>
       </section>
