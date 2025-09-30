@@ -51,6 +51,12 @@ export default function App(): React.JSX.Element {
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
   const [notifications, setNotifications] = useState<UILibraryNotification[]>([]);
 
+  interface SEOData {
+    title: string;
+    description: string;
+    canonical: string;
+  }
+
   const seoDataForOptimizer: SEOData = useMemo(() => ({
     title: 'Zion Tech Group - Leading AI & Technology Solutions',
     description: 'Cutting-edge AI, cloud, and digital transformation solutions for modern enterprises.',
