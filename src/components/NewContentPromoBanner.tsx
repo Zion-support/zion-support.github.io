@@ -61,32 +61,11 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
       category: "GenAI"
     },
     {
-      title: "Production RAG Ops 2026",
-      description: "Freshness windows and drift guards",
-      icon: Cloud,
-      link: "/blog/production-rag-ops-2026",
-      category: "GenAI"
-    },
-    {
-      title: "Secure ML Supply Chain 2026",
-      description: "SBOMs, lineage, and CI policy gates",
-      icon: Shield,
-      link: "/blog/ai-secure-ml-supply-chain-2026",
-      category: "Security"
-    },
-    {
-      title: "Zero‑Trust for GenAI 2026",
-      description: "Prompt firewalls, egress, signed outputs",
-      icon: Shield,
-      link: "/blog/zero-trust-for-genai-2026",
-      category: "Security"
-    },
-    {
-      title: "GenAI Routing Under Budgets",
-      description: "Quality tiers without bill shock",
-      icon: Zap,
-      link: "/blog/genai-routing-under-budgets-2026",
-      category: "AI Ops"
+      title: "Platform Golden Paths 2026",
+      description: "Paved roads that move KPIs",
+      icon: TrendingUp,
+      link: "/blog/platform-golden-paths-kpis-2026",
+      category: "Platform"
     },
     {
       title: "Golden Paths that Move KPIs",
@@ -96,11 +75,32 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
       category: "Platform"
     },
     {
+      title: "Quality‑Tiered GenAI Routing 2026",
+      description: "Control cost with tiers, caches, and eval signals",
+      icon: Zap,
+      link: "/blog/genai-routing-under-budgets-2026",
+      category: "GenAI"
+    },
+    {
       title: "On‑Device Agents 2026",
-      description: "Private assistants with offline tools",
-      icon: Brain,
-      link: "/blog/on-device-agents-2026",
+      description: "Offline‑capable tools, private caches, safe fallbacks",
+      icon: Cloud,
+      link: "/blog/on-device-agents-offline-tools-2026",
       category: "Edge"
+    },
+    {
+      title: "Zero‑Trust Observability 2026",
+      description: "Signed traces and least‑privilege telemetry",
+      icon: Shield,
+      link: "/blog/zero-trust-observability-2026",
+      category: "Security"
+    },
+    {
+      title: "AI Incident Response Playbooks",
+      description: "Contain incidents in under 60 seconds",
+      icon: TrendingUp,
+      link: "/blog/ai-incident-response-playbooks-2025",
+      category: "Security"
     }
   ];
 

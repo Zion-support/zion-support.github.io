@@ -249,6 +249,20 @@ contentHighlights.push(
   }
 );
 
+// Fresh highlights for new content (Sept 29, 2025)
+contentHighlights.unshift(
+  {
+    id: 22,
+    title: "🧠 Agentic Observability Scorecards 2026",
+    description: "Traces linked to KPIs—scorecards that prevent regressions without slowing teams",
+    ctaText: "Read Article",
+    ctaLink: "/blog/agentic-observability-scorecards-2026",
+    badge: "New",
+    stats: "7 min read",
+    variant: "info" as const
+  }
+);
+
 export const LatestContentBanner: React.FC<LatestContentBannerProps> = ({
   className = "",
   variant = 'default',
