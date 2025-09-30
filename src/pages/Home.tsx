@@ -170,6 +170,11 @@ const Home = () => {
           <div className="rounded-xl border border-cyan-400/30 bg-cyan-500/10 p-6 mb-6">
             <div className="text-white text-sm mb-3">New today</div>
             <div className="grid md:grid-cols-3 gap-4">
+              <Link to="/blog/genai-2025-oct-01-cost-optimization-v4" className="block rounded-lg border border-white/10 p-4 hover:border-purple-400/40 transition-colors">
+                <div className="text-purple-300 text-xs mb-2">GenAI</div>
+                <div className="text-white font-semibold">GenAI Cost Optimization v4</div>
+                <div className="text-zion-slate-light text-sm mt-1">60–80% savings with tier routing, caches, and eval gates.</div>
+              </Link>
               <Link to="/blog/ai-2025-sept-30-security-mesh-v2" className="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
                 <div className="text-cyan-300 text-xs mb-2">AI Security</div>
                 <div className="text-white font-semibold">AI Security Mesh v2</div>
