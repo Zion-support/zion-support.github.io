@@ -10,6 +10,13 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+<<<<<<< HEAD
+    slug: "ai-2025-evidence-driven-evals",
+    title: "Evidence‑Driven Evals 2025: Traceable Quality Linked to KPIs",
+    description: "Design evals that tie model behavior to product KPIs with traces, scorecards, and budgeted guardrails.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+=======
     slug: "ai-governance-live-metrics-2025",
     title: "AI Governance Live Metrics 2025: Ship Faster Without Regressions",
     description: "CI policy tests + KPI‑linked canaries to prevent regressions before they ship.",
@@ -33,6 +40,7 @@ export const posts: BlogPost[] = [
     description: "Design exec-ready AI scorecards tying model spend to KPIs with guardrails and SLIs.",
     category: "Strategy",
     publishedAt: "2027-01-05",
+>>>>>>> origin/cursor/create-and-deploy-new-content-d4d7
     featured: true,
     readTime: "11 min read"
   },
