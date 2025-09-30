@@ -10,6 +10,33 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-2025-september-30-new-governed-agent-patterns",
+    title: "New Governed Agent Patterns (2025)",
+    description: "Policy-first orchestration with approvals, verifiers, budgets, and rollback for safe autonomy.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "12 min read"
+  },
+  {
+    slug: "ai-2025-september-30-autonomous-finops-scorecards",
+    title: "Autonomous FinOps Scorecards (2025)",
+    description: "KPI-linked budgets, routing, caching, and rollback to prevent cost regressions.",
+    category: "FinOps",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "14 min read"
+  },
+  {
+    slug: "ai-2025-september-30-enterprise-ai-roadmap",
+    title: "Enterprise AI Roadmap (2025)",
+    description: "Pragmatic roadmap to plan, fund, and govern AI with measurable outcomes.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "18 min read"
+  },
+  {
     slug: "production-rag-quality-budgets-2026",
     title: "Production RAG: Quality Budgets, Freshness Windows, and SLAs",
     description: "Run RAG at scale with explicit quality budgets, freshness controls, and KPI-aligned SLAs that avoid regressions.",

@@ -2,20 +2,28 @@
 
 const promoted = [
   {
-    href: '/blog/ai-2025-sept-30-autonomous-risk-budgets-v2',
-    title: 'Autonomous Risk Budgets V2',
-    desc: 'Dynamic guardrails and live scorecards that cut incidents by 80%.',
+    href: '/blog/ai-2025-september-30-new-governed-agent-patterns',
+    title: 'New Governed Agent Patterns',
+    desc: 'Approvals, verifiers, budgets, and rollback for safe autonomy.',
     emoji: '🛡️',
     pill: 'New • Sep 30, 2025',
     theme: 'from-indigo-600 to-sky-600',
   },
   {
-    href: '/blog/ai-2025-sept-30-enterprise-ai-safety-highlights',
-    title: 'Enterprise AI Safety Highlights',
-    desc: 'Runtime guardrails, verified data flows, and live trust metrics.',
-    emoji: '🚦',
+    href: '/blog/ai-2025-september-30-autonomous-finops-scorecards',
+    title: 'Autonomous FinOps Scorecards',
+    desc: 'KPI-linked budgets and routing that prevent cost regressions.',
+    emoji: '📊',
     pill: 'New • Sep 30, 2025',
-    theme: 'from-rose-600 to-amber-600',
+    theme: 'from-emerald-600 to-teal-600',
+  },
+  {
+    href: '/blog/ai-2025-september-30-enterprise-ai-roadmap',
+    title: 'Enterprise AI Roadmap',
+    desc: 'Plan, fund, and govern AI with measurable outcomes.',
+    emoji: '🗺️',
+    pill: 'New • Sep 30, 2025',
+    theme: 'from-fuchsia-600 to-purple-600',
   },
 ];
 
