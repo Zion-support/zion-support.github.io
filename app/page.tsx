@@ -165,6 +165,9 @@ export default function HomePage() {
       <div className="animate-fade-in">
       {/* 🚀 NEWEST 2027 CONTENT - BREAKTHROUGH QUANTUM AI & AUTONOMOUS INTELLIGENCE! */}
       <NewContent2027ShowcaseBanner />
+
+      {/* 📣 Featured: September 30, 2025 — Three New Articles */}
+      <NewestContent2025Banner />
       
       {/* 🚀 QUANTUM AI 2027 BREAKTHROUGH - 1000x PERFORMANCE GAINS! */}
       <QuantumAI2027BreakthroughBanner />
