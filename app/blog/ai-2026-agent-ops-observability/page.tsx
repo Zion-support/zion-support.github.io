@@ -3,62 +3,51 @@ import Link from 'next/link';
 
 export const metadata = {
   title: 'Agent Ops Observability 2026 | Zion Tech Group',
-  description:
-    'How to observe, debug, and continuously improve production multi-agent systems with traces, budgets, and reviews.',
+  description: 'Traces, budgets, reviews. Operate multi‑agent systems with reliability, cost control, and measurable outcomes.',
   openGraph: {
     title: 'Agent Ops Observability 2026',
-    description:
-      'Practical patterns for telemetry, budgets, error taxonomies, and human-in-the-loop reviews.',
-    type: 'article'
+    description: 'Design observability for agentic workflows: metrics, traces, budgets, and policy tests.',
+    type: 'article',
+    url: 'https://ziontechgroup.com/blog/ai-2026-agent-ops-observability',
+    images: [
+      { url: '/og-agent-ops-observability-2026.jpg', width: 1200, height: 630, alt: 'Agent Ops Observability' }
+    ]
   }
 };
 
-export default function Page() {
+export default function AgentOpsObservability2026() {
   return (
-    <div className="min-h-screen bg-slate-950 text-white">
-      <main className="max-w-4xl mx-auto px-6 py-12">
-        <nav className="mb-8">
-          <Link href="/content-hub" className="text-fuchsia-300 hover:text-fuchsia-200">
-            ← Back to Content Hub
-          </Link>
-        </nav>
-        <header className="mb-10">
-          <div className="flex items-center gap-2 mb-4">
-            <span className="px-3 py-1 rounded-full text-xs bg-fuchsia-500/20 text-fuchsia-300 border border-fuchsia-500/30">
-              Agent Ops
-            </span>
-            <span className="text-white/60 text-sm">Sep 30, 2025</span>
-            <span className="text-white/40 text-sm">•</span>
-            <span className="text-white/60 text-sm">12 min read</span>
-          </div>
-          <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
-            Agent Ops Observability 2026
-          </h1>
-          <p className="text-white/70 mt-4 text-lg">
-            Traces for reasoning, budgets for safety, reviews for reliability. A toolkit to run
-            multi-agent systems with confidence.
-          </p>
-        </header>
-        <article className="prose prose-invert prose-lg max-w-none">
-          <h2>Signal over noise</h2>
-          <p>
-            Capture intent, plan, actions, and outcomes in one timeline. Tag errors by taxonomy to
-            drive targeted fixes and regression tests.
-          </p>
-          <h3>Core capabilities</h3>
-          <ul>
-            <li>Distributed tracing for tools, messages, and state</li>
-            <li>Budget and policy checks at decision boundaries</li>
-            <li>Review queues with diff views and auto-rollback</li>
-            <li>Outcome scoring tied to business KPIs</li>
-          </ul>
-          <p>
-            Start small: add traces to one high-value workflow, define 3 budget types, and instrument
-            error taxonomy. Iterate weekly.
-          </p>
-        </article>
-      </main>
+    <div className="max-w-4xl mx-auto px-4 py-8">
+      <Link href="/blog" className="text-blue-600 hover:text-blue-800 mb-6 inline-block">← Back to Blog</Link>
+      <h1 className="text-4xl font-bold text-gray-900 mb-3">Agent Ops Observability 2026</h1>
+      <div className="text-gray-600 mb-8">Published: September 29, 2025 • 14 min read • Agent Ops</div>
+
+      <div className="prose prose-lg max-w-none">
+        <p>
+          Reliable autonomy requires deep observability. This guide shows how to instrument metrics, traces,
+          budgets, and reviews so you can operate multi‑agent systems with confidence and clear ROI.
+        </p>
+
+        <h2>Key Signals</h2>
+        <ul>
+          <li>Latency, cost per task, error rates, retry loops</li>
+          <li>Guardrail violations mapped to policies</li>
+          <li>Human approvals and exceptions tracking</li>
+        </ul>
+
+        <h2>Runbooks</h2>
+        <ol>
+          <li>Budget breach: throttle, degrade, or reroute models</li>
+          <li>Policy failure: quarantine workflow and request approval</li>
+          <li>Quality regression: roll back prompts or tools and re‑eval</li>
+        </ol>
+
+        <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded">
+          <h3 className="m-0">Production Support</h3>
+          <p className="m-0">We integrate traces, guardrails, and dashboards into your agent platform.</p>
+          <Link href="/services/ai-agent-observability" className="inline-block mt-3 bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded">Explore Agent Ops Services</Link>
+        </div>
+      </div>
     </div>
   );
 }
-
