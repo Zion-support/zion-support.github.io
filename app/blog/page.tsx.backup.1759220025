@@ -293,6 +293,8 @@ export default function BlogPage() {
               </Link>
             ))}
           </div>
+<<<<<<< HEAD
+=======
         </div>
           <BlogPost
             title="AI Operational Resilience 2026: Designing for Failure and Recovery"
@@ -607,6 +609,7 @@ export default function BlogPage() {
             featured={true}
             href="/blog/ai-mlops-best-practices-2025"
           />
+>>>>>>> origin/cursor/create-and-deploy-new-content-8e01
         </div>
 
         {/* Newsletter Signup */}

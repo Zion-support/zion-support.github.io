@@ -115,7 +115,7 @@ resource "aws_eks_node_group" "gpu_cluster" {
               <li><strong>Anomaly Detection:</strong> ML models spot unusual patterns (GPU throttling, memory leaks)</li>
               <li><strong>Root Cause Analysis:</strong> LLM-powered incident analyzer correlates logs/metrics/traces</li>
               <li><strong>Automated Remediation:</strong> Playbooks for 47 common failure modes</li>
-              <li><strong>Progressive Rollback:</strong> Revert bad deployments in <60 seconds</li>
+              <li><strong>Progressive Rollback:</strong> Revert bad deployments in &lt;60 seconds</li>
             </ul>
             <div className="mt-4 bg-gray-900 text-gray-100 p-4 rounded text-sm overflow-x-auto">
               <pre>{`# Self-healing policy example
@@ -160,7 +160,7 @@ spec:
               <h4 className="font-semibold text-lg mb-2">Weeks 1-2: Foundation</h4>
               <ul className="list-disc pl-6 space-y-1 text-sm">
                 <li>Audit existing infrastructure: what's manual? what fails often?</li>
-                <li>Define SLOs: uptime (99.9%?), MTTR (<15min?), cost per inference</li>
+                <li>Define SLOs: uptime (99.9%?), MTTR (&lt;15min?), cost per inference</li>
                 <li>Choose IaC tool: Terraform for multi-cloud, Pulumi for type safety</li>
                 <li>Set up GitOps pipeline: ArgoCD or FluxCD for Kubernetes</li>
               </ul>
