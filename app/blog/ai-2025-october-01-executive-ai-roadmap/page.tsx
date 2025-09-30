@@ -1,81 +1,60 @@
-import React from 'react';
-import Link from 'next/link';
-
 export const metadata = {
-	title: 'Executive AI Roadmap — October 2025',
-	description:
-		'Clear 90-day plan for governed autonomy, cost guardrails, and data foundations to ship reliable AI.',
+  title: 'Executive AI Roadmap — October 2025 | Zion Tech Group',
+  description:
+    'A pragmatic 90‑day enterprise roadmap to ship reliable AI with guardrails, live scorecards, budgets, and measurable ROI.',
 };
 
 export default function ExecutiveAIRoadmapPage() {
-	return (
-		<main className="min-h-screen bg-white">
-			<section className="bg-gradient-to-br from-indigo-50 to-blue-50 border-b border-gray-100">
-				<div className="max-w-4xl mx-auto px-6 py-16">
-					<div className="text-sm text-indigo-700 font-semibold mb-3">October 1, 2025 • Executive Guide</div>
-					<h1 className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight">
-						Executive AI Roadmap — Q4 2025
-					</h1>
-					<p className="mt-4 text-lg text-gray-700">
-						A concise, practical 90-day plan to ship reliable AI: governed autonomy,
-						cost guardrails, and data foundations that reduce risk while accelerating ROI.
-					</p>
-					<div className="mt-6 flex items-center gap-3 text-sm text-gray-600">
-						<span>⏱️ 9 min read</span>
-						<span>•</span>
-						<Link href="/blog" className="text-indigo-600 hover:text-indigo-700 font-medium">All Articles</Link>
-					</div>
-				</div>
-			</section>
+  return (
+    <main className="min-h-screen bg-slate-950 text-white">
+      <article className="max-w-3xl mx-auto px-4 py-16">
+        <header className="mb-10">
+          <p className="text-sm text-white/60">Published Oct 1, 2025</p>
+          <h1 className="text-4xl font-extrabold mt-2">Executive AI Roadmap — October 2025</h1>
+          <p className="text-white/70 mt-3">
+            A pragmatic 90‑day enterprise roadmap to ship reliable AI with guardrails, live
+            scorecards, budgets, and measurable ROI.
+          </p>
+        </header>
 
-			<section>
-				<div className="max-w-4xl mx-auto px-6 py-12 prose prose-indigo">
-					<h2>Why now</h2>
-					<p>
-						Organizations are moving beyond pilots. The next quarter is about durable
-						impact with controls: policy-first orchestration, runtime guardrails, and
-						financial accountability.
-					</p>
+        <section className="prose prose-invert prose-slate max-w-none">
+          <h2>Why now</h2>
+          <p>
+            Enterprises are past pilot purgatory. The winners are operationalizing AI with
+            accountability: policies, budgets, and real‑time feedback loops. This roadmap shows
+            how to go from scattered experiments to reliable, governed delivery in 90 days.
+          </p>
 
-					<h2>30/60/90 plan</h2>
-					<ol>
-						<li>
-							<strong>Days 1–30:</strong> Establish decision policies, enable evaluation
-							pipelines, and instrument cost/latency/reliability scorecards.
-						</li>
-						<li>
-							<strong>Days 31–60:</strong> Introduce multi-model routing and caching with
-							budgets and rollback. Prove 30–50% cost reduction without quality loss.
-						</li>
-						<li>
-							<strong>Days 61–90:</strong> Expand to agentic workflows with human-in-the-loop
-							checkpoints. Track business KPIs with live scorecards.
-						</li>
-					</ol>
+          <h3>Days 0‑30: Baseline and guardrails</h3>
+          <ul>
+            <li>Inventory AI surfaces and attach purpose, risk, and owners.</li>
+            <li>Ship policy tests in CI for privacy, safety, and PII controls.</li>
+            <li>Establish token budgets and cost tiers for predictable spend.</li>
+            <li>Stand up live scorecards aligned to business goals.</li>
+          </ul>
 
-					<h2>Reference architecture</h2>
-					<ul>
-						<li>Policy engine controlling prompts, tools, and data access</li>
-						<li>Online evaluations validating outputs and safety</li>
-						<li>Cost-aware router with caching and model fallbacks</li>
-						<li>Observability: traces, cost, latency, and quality signals</li>
-					</ul>
+          <h3>Days 31‑60: Observability and iteration speed</h3>
+          <ul>
+            <li>Wire structured eval events and on‑call feedback loops.</li>
+            <li>Introduce semantic caches and quality tiers to cut latency and cost.</li>
+            <li>Automate rollout/rollback with change gates tied to scorecards.</li>
+          </ul>
 
-					<h2>Business outcomes</h2>
-					<ul>
-						<li>30–70% AI cost reduction via routing and caching</li>
-						<li>Reduced incident frequency and impact with guardrails</li>
-						<li>Measured ROI tied to critical KPIs and SLAs</li>
-					</ul>
+          <h3>Days 61‑90: Scale and accountability</h3>
+          <ul>
+            <li>Harden data contracts and evaluation coverage for critical flows.</li>
+            <li>Publish quarterly ROI scorecards to executives.</li>
+            <li>Adopt operational risk budgets for incident‑free velocity.</li>
+          </ul>
 
-					<h2>Next steps</h2>
-					<p>
-						Start with one high-value workflow and extend. Treat the roadmap as a
-						living document—iterate weekly with data from evaluations and scorecards.
-					</p>
-				</div>
-			</section>
-		</main>
-	);
+          <h3>Outcomes</h3>
+          <p>
+            Organizations following this plan see fewer incidents, faster delivery, and explicit
+            ROI tracing from model spend to business value.
+          </p>
+        </section>
+      </article>
+    </main>
+  );
 }
 
