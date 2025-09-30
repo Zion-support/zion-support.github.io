@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import NewContentShowcase2026 from './components/NewContentShowcase2026';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -40,6 +41,9 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* New Content Showcase */}
+      <NewContentShowcase2026 />
+
       {/* Services Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
@@ -59,10 +63,13 @@ export default function HomePage() {
                   <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 4a1 1 0 011-1h12a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1V8zm2 2a1 1 0 000 2h6a1 1 0 100-2H5z" clipRule="evenodd" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">AI Data Analytics</h3>
-              <p className="text-gray-600 mb-4">Transform data into actionable insights with predictive modeling and real-time dashboards</p>
-              <Link href="/services/ai-data-analytics" className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors">
-                <span>Learn More</span>
+              <div className="flex items-center mb-3">
+                <h3 className="text-xl font-bold text-gray-900">AI Business Automation</h3>
+                <span className="ml-2 bg-green-500 text-white px-2 py-1 rounded-full text-xs font-semibold">NEW</span>
+              </div>
+              <p className="text-gray-600 mb-4">Comprehensive automation platform with 85% cost reduction and 300% productivity increase</p>
+              <Link href="/services/ai-business-automation-platform" className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors">
+                <span>Explore Platform</span>
                 <svg className="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
                 </svg>
@@ -95,6 +102,82 @@ export default function HomePage() {
               <p className="text-gray-600 mb-4">24/7 intelligent customer support with natural language processing</p>
               <Link href="/services/ai-virtual-assistant" className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors">
                 <span>Learn More</span>
+                <svg className="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Success Stories Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Success Stories
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Real results from our AI transformation projects
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300">
+              <div className="flex items-center mb-4">
+                <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold mr-3">HEALTHCARE</span>
+                <span className="text-gray-500 text-sm">Case Study</span>
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Healthcare Revolution</h3>
+              <p className="text-gray-600 mb-6">
+                A major healthcare provider achieved 90% faster diagnosis times and 75% cost reduction using our AI-powered medical imaging and diagnostic systems.
+              </p>
+              <div className="grid grid-cols-2 gap-4 mb-6">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-green-600">90%</div>
+                  <div className="text-sm text-gray-600">Faster Diagnosis</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-blue-600">75%</div>
+                  <div className="text-sm text-gray-600">Cost Reduction</div>
+                </div>
+              </div>
+              <Link 
+                href="/case-studies/ai-healthcare-revolution-2026"
+                className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors"
+              >
+                <span>Read Full Case Study</span>
+                <svg className="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
+              </Link>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300">
+              <div className="flex items-center mb-4">
+                <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold mr-3">ENTERPRISE</span>
+                <span className="text-gray-500 text-sm">Transformation</span>
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Enterprise Transformation</h3>
+              <p className="text-gray-600 mb-6">
+                Discover how organizations worldwide are achieving unprecedented transformation through intelligent automation, predictive analytics, and autonomous systems.
+              </p>
+              <div className="grid grid-cols-2 gap-4 mb-6">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-purple-600">300%</div>
+                  <div className="text-sm text-gray-600">ROI Average</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-orange-600">78%</div>
+                  <div className="text-sm text-gray-600">Adoption Rate</div>
+                </div>
+              </div>
+              <Link 
+                href="/blog/ai-2026-enterprise-transformation"
+                className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors"
+              >
+                <span>Read Complete Guide</span>
                 <svg className="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
                 </svg>
