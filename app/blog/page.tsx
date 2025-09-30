@@ -8,6 +8,36 @@ export const metadata = {
 
 const blogPosts = [
   {
+    title: 'Autonomous Infrastructure 2025: Self‑Healing, Self‑Optimizing, Self‑Scaling',
+    slug: 'ai-2025-autonomous-infrastructure-blueprint',
+    excerpt: 'Blueprint for KPI‑linked, policy‑guarded autonomous infrastructure with predictable reliability and cost.',
+    category: 'Platform',
+    publishedAt: 'September 30, 2025',
+    image: '🧱',
+    color: 'blue',
+    readTime: '16 min read'
+  },
+  {
+    title: 'Edge Private Feature Flags (2026): Zero‑PII, Sub‑100ms, Signed Configs',
+    slug: 'edge-2026-private-feature-flags',
+    excerpt: 'Privacy‑safe flags and experiments at the edge with scoped IDs and DP noise.',
+    category: 'Analytics',
+    publishedAt: 'September 30, 2025',
+    image: '🚩',
+    color: 'cyan',
+    readTime: '10 min read'
+  },
+  {
+    title: 'Governed Agent Marketplaces (2027): Budgets, Attestations, Rollback',
+    slug: 'ai-2027-governed-agent-marketplaces',
+    excerpt: 'Design safe third‑party agent ecosystems with budget guards and policy attestations.',
+    category: 'Governance',
+    publishedAt: 'October 1, 2025',
+    image: '🏛️',
+    color: 'emerald',
+    readTime: '13 min read'
+  },
+  {
     title: 'Autonomous FinOps 2025: Cut AI Spend 50–85% Safely',
     slug: 'ai-2025-autonomous-finops-blueprint',
     excerpt: 'Tiered routing, semantic caches, and budgeted rollbacks for reliable, low-cost AI at scale.',
