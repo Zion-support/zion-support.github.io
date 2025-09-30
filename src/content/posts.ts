@@ -9,33 +9,42 @@ export interface BlogPost {
 }
 
 export const posts: BlogPost[] = [
-  // September 30, 2025 — LATEST: New Expert Content (featured)
+  // Oct 3, 2025 — Latest content (featured)
   {
-    slug: "ai-2025-agentic-observability-playbook",
-    title: "Agentic Observability Playbook 2025: Monitor AI Agents in Production",
-    description: "Complete guide to observing, monitoring, and debugging autonomous AI agents at scale. Learn trace visualization, error budgets, and agent health metrics.",
+    slug: "ai-2025-oct-03-genai-cost-optimization-at-scale",
+    title: "GenAI Cost Optimization at Scale — Cut LLM Costs 70% Without Quality Loss",
+    description: "Proven patterns for token reduction, caching strategies, model routing, and budget enforcement that save millions in production.",
     category: "AI Operations",
-    publishedAt: "2025-09-30",
+    publishedAt: "2025-10-03",
+    featured: true,
+    readTime: "10 min read"
+  },
+  {
+    slug: "ai-2025-oct-03-platform-engineering-golden-paths",
+    title: "Platform Engineering Golden Paths — 10x Developer Velocity in 90 Days",
+    description: "How leading teams use paved paths, self-service, and measured bottlenecks to ship features 10x faster.",
+    category: "Platform Engineering",
+    publishedAt: "2025-10-03",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "ai-2025-oct-03-trustworthy-ai-governance-framework",
+    title: "Trustworthy AI Governance Framework — From Compliance to Competitive Advantage",
+    description: "Build trust and unlock AI value with automated guardrails, bias detection, and explainability at scale.",
+    category: "AI Governance",
+    publishedAt: "2025-10-03",
+    featured: true,
+    readTime: "11 min read"
+  },
+  {
+    slug: "ai-2025-oct-03-real-time-ai-infrastructure",
+    title: "Real-Time AI Infrastructure — Sub-100ms AI at Global Scale",
+    description: "Architecture patterns for low-latency AI inference serving billions of users with edge computing, model optimization, and smart caching.",
+    category: "AI Infrastructure",
+    publishedAt: "2025-10-03",
     featured: true,
     readTime: "12 min read"
-  },
-  {
-    slug: "ai-2025-production-rag-validation-framework",
-    title: "Production RAG Validation Framework 2025: Test Before You Ship",
-    description: "Comprehensive testing and validation framework for RAG systems. Covers accuracy metrics, retrieval quality, answer faithfulness, and automated test suites.",
-    category: "GenAI",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "15 min read"
-  },
-  {
-    slug: "ai-2025-cost-conscious-agent-design",
-    title: "Cost-Conscious Agent Design 2025: Build AI Agents That Don't Break the Bank",
-    description: "Practical strategies for designing AI agents that deliver value without exploding costs. Covers prompt optimization, caching, model selection, and budget enforcement.",
-    category: "AI Engineering",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "14 min read"
   },
   // Sept 30, 2025 — Newly added content (featured)
   {
