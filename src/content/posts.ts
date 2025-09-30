@@ -1230,6 +1230,37 @@ posts.push(
   }
 );
 
+// Sept 30, 2025 – Fresh articles to add and advertise on homepage
+posts.push(
+  {
+    slug: "ai-safety-scorecards-2026",
+    title: "AI Safety Scorecards 2026: KPIs, Budgets, Rollbacks",
+    description: "Operational scorecards that connect safety SLIs to product KPIs with rollback triggers.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-governed-flags-2026",
+    title: "Edge‑Governed Flags 2026: Policies at <100ms",
+    description: "Geo budgets, scoped IDs, and signed configs to ship compliant features worldwide under 100ms.",
+    category: "Architecture",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "genai-cache-playbook-2026",
+    title: "GenAI Cache Playbook 2026: Cut Spend 40–70%",
+    description: "Prompt caches, semantic de‑dupe, and TTL windows that keep quality high under strict budgets.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  }
+);
+
 // Sept 30, 2025 – New articles to expand catalog and promote on homepage
 posts.push(
   {
