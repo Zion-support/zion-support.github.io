@@ -340,3 +340,40 @@ newArticles2025.push(
     tags: ["Governance", "Compliance", "Canaries", "Rollback"]
   }
 );
+
+// New: Sept 30, 2025 – Additional featured highlights to surface on Home
+newArticles2025.push(
+  {
+    id: "ai-governance-real-time-2026",
+    title: "🛡️ AI Governance in Real Time 2026: Canaries + CI Policy Tests",
+    description: "Prevent regressions with KPI‑linked canaries and lightweight PR policy checks.",
+    category: "AI Governance",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-governance-real-time-2026",
+    readTime: "7 min read",
+    tags: ["Governance", "Canaries", "Policy Tests"]
+  },
+  {
+    id: "edge-inference-warm-pools-2026",
+    title: "⚡ Edge Inference Warm Pools 2026: Sub‑100ms at Predictable Cost",
+    description: "Warm pools, intent prefetch, and tiered caches for global performance on budget.",
+    category: "Edge Computing",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/edge-inference-warm-pools-2026",
+    readTime: "6 min read",
+    tags: ["Edge", "Inference", "Caching", "Cost"]
+  },
+  {
+    id: "agent-release-guardrails-2026",
+    title: "✅ Agent Release Guardrails 2026: Budgets, Approvals, Rollback",
+    description: "Safe agent releases with budgeted actions, approvals, and instant rollback triggers.",
+    category: "AI Operations",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/agent-release-guardrails-2026",
+    readTime: "7 min read",
+    tags: ["Agents", "Runbooks", "Budgets", "Rollback"]
+  }
+);
