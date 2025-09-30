@@ -6,6 +6,7 @@ import InteractiveROICalculator2026 from "./components/InteractiveROICalculator2
 import InteractiveContentShowcase2026 from "./components/InteractiveContentShowcase2026";
 
 // Most Recent Content Banners (2025-2026)
+import October2025NewContentBanner from "./components/October2025NewContentBanner";
 import September2025PracticalAIBanner from "./components/September2025PracticalAIBanner";
 import September2025NewContentBanner from "./components/September2025NewContentBanner";
 import October2026NewContentBanner from "./components/October2026NewContentBanner";
@@ -29,6 +30,9 @@ import LatestTrendsShowcase2026 from "./src/components/LatestTrendsShowcase2026"
 export default function App(): JSX.Element {
   return (
     <div className="min-h-screen bg-slate-950">
+      {/* LATEST CONTENT - October 2025 */}
+      <October2025NewContentBanner />
+      
       {/* HERO SECTION - Most Recent Content */}
       <September2025PracticalAIBanner />
       
