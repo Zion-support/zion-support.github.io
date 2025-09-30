@@ -417,6 +417,26 @@ export const getLatestContent = (count: number = 5): FeaturedItem[] => {
     .slice(0, count);
 };
 
+// Surface fresh featured content (added Sept 30, 2025)
+featuredBlogPosts.unshift(
+  {
+    id: "ai-2027-revolutionary-breakthrough",
+    title: "AI 2027 Revolutionary Breakthrough",
+    description: "Quantum leaps in AI performance and autonomy—what it means for the enterprise",
+    link: "/blog/ai-2027-revolutionary-breakthrough",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-executive-playbook-2027",
+    title: "AI Executive Playbook 2027",
+    description: "Fund, govern, and scale AI programs with measurable ROI and safety",
+    link: "/blog/ai-executive-playbook-2027",
+    type: "article",
+    featured: true
+  }
+);
+
 // Surface brand-new articles at the very top of featured content
 featuredBlogPosts.unshift(
   {
