@@ -459,3 +459,40 @@ newArticles2025.push(
     tags: ["Agents", "Runbooks", "Budgets", "Rollback"]
   }
 );
+
+// Sept 30, 2025 – Brand new additions
+newArticles2025.push(
+  {
+    id: "ai-2028-realtime-multimodal-assistants",
+    title: "🤝 Real‑Time Multimodal Assistants (2028): Voice + Vision + Touch",
+    description: "Production patterns for assistants that see, hear, and act with <150ms latency.",
+    category: "Multimodal AI",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-2028-realtime-multimodal-assistants",
+    readTime: "10 min read",
+    tags: ["Multimodal", "Voice", "Vision", "Latency"]
+  },
+  {
+    id: "ai-2027-governed-agent-marketplaces",
+    title: "🏛️ Governed Agent Marketplaces (2027): Safe, Auditable Automation",
+    description: "Policy checks, budgets, and attestations enabling safe third‑party agent ecosystems.",
+    category: "AI Governance",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-2027-governed-agent-marketplaces",
+    readTime: "9 min read",
+    tags: ["Agents", "Governance", "Attestations", "Budgets"]
+  },
+  {
+    id: "edge-2026-private-feature-flags",
+    title: "🔐 Edge Private Feature Flags (2026): Zero‑PII Rollouts at <100ms",
+    description: "Signed configs, scoped IDs, and on‑device metrics for private global rollouts.",
+    category: "Edge Computing",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/edge-2026-private-feature-flags",
+    readTime: "7 min read",
+    tags: ["Edge", "Privacy", "Feature Flags", "DP"]
+  }
+);
