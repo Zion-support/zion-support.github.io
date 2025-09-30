@@ -2046,6 +2046,33 @@ posts.push(
 // Sept 30, 2025 – Fresh Q4 articles to advertise on homepage
 posts.push(
   {
+    slug: "ai-autonomous-ops-blueprint-2026",
+    title: "AI Autonomous Ops Blueprint 2026: Budgets, Traces, Rollback",
+    description: "Budgets, live traces, and one‑click rollback for safe autonomy at scale.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "edge-private-analytics-2026",
+    title: "Edge Private Analytics 2026: Actionable Insights Without PII",
+    description: "Scoped IDs, on‑device metrics, and DP noise for compliant analytics under <100ms.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "agent-safety-runbooks-2026",
+    title: "Agent Safety Runbooks 2026: Approvals, Budgets, Canary Evals",
+    description: "Approvals, budgeted actions, and KPI‑linked canaries for safe agent releases.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
     slug: "ai-governance-scorecards-2026-q4",
     title: "AI Governance Scorecards 2026 Q4: Wire Guardrails to KPIs",
     description: "Operational scorecards that connect model quality to product KPIs with PR checks and live canaries.",
