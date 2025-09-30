@@ -5,6 +5,9 @@ import January2026NeuralArchitectureSearchBanner from '../components/January2026
 import January2026FederatedLearningBanner from '../components/January2026FederatedLearningBanner';
 import January2026RevolutionaryBreakthroughBanner from '../components/January2026RevolutionaryBreakthroughBanner';
 import January2026NewServicesBanner from '../components/January2026NewServicesBanner';
+import Revolutionary2026ContentAdvertisingBanner from '../components/Revolutionary2026ContentAdvertisingBanner';
+import January2026BreakthroughShowcaseBanner from '../components/January2026BreakthroughShowcaseBanner';
+import Ultimate2026ContentPromotionalBanner from '../components/Ultimate2026ContentPromotionalBanner';
 
 export default function HomePage() {
   return (
@@ -15,6 +18,12 @@ export default function HomePage() {
           <p className="text-lg md:text-xl text-gray-300">Leading AI insights, case studies, and implementation guides.</p>
         </div>
       </section>
+      
+      {/* Revolutionary 2026 Content Advertising Banner */}
+      <Revolutionary2026ContentAdvertisingBanner />
+      
+      {/* January 2026 Breakthrough Showcase Banner */}
+      <January2026BreakthroughShowcaseBanner />
       
       {/* Revolutionary Breakthroughs Banner */}
       <January2026RevolutionaryBreakthroughBanner />
@@ -27,6 +36,9 @@ export default function HomePage() {
       <January2026FederatedLearningBanner />
       
       <UnifiedContentPromotion />
+
+      {/* Ultimate 2026 Content Promotional Banner */}
+      <Ultimate2026ContentPromotionalBanner />
 
       {/* Latest Revolutionary Content */}
       <section className="py-12">
