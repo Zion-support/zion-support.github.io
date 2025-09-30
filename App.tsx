@@ -2,10 +2,17 @@ import React, { JSX } from "react";
 import LatestContentBanner2025 from "./src/components/LatestContentBanner2025";
 import FeaturedContentBanner2025 from "./src/components/FeaturedContentBanner2025";
 import NewContentPromoBanner from "./src/components/NewContentPromoBanner";
+import January2026ContentBanner from "./components/January2026ContentBanner";
+import AIAdvertisingBanner from "./components/AIAdvertisingBanner";
+import EnterpriseSolutionsBanner from "./components/EnterpriseSolutionsBanner";
+import NewContentAnnouncementBanner from "./components/NewContentAnnouncementBanner";
 
 export default function App(): JSX.Element {
   return (
     <div className="min-h-screen bg-slate-950">
+      {/* New Content Announcement Banner */}
+      <NewContentAnnouncementBanner />
+      
       {/* Hero Section */}
       <header className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-20">
         <div className="absolute inset-0 overflow-hidden opacity-20">
@@ -94,6 +101,21 @@ export default function App(): JSX.Element {
       {/* Featured Content Section */}
       <section className="py-20">
         <FeaturedContentBanner2025 />
+      </section>
+
+      {/* January 2026 Content Banner */}
+      <section>
+        <January2026ContentBanner />
+      </section>
+
+      {/* AI Advertising Banner */}
+      <section>
+        <AIAdvertisingBanner />
+      </section>
+
+      {/* Enterprise Solutions Banner */}
+      <section>
+        <EnterpriseSolutionsBanner />
       </section>
 
       {/* Services Overview */}
