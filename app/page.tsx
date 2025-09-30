@@ -13,17 +13,7 @@ import January2026RevolutionaryContentMegaBanner from '../components/January2026
 import January2026EdgeNativeIntelligenceBanner from '../components/January2026EdgeNativeIntelligenceBanner';
 import January2026SyntheticDataRevolutionBanner from '../components/January2026SyntheticDataRevolutionBanner';
 import January2026RevolutionaryContentBanner from '../components/January2026RevolutionaryContentBanner';
-import Ultimate2026HyperintelligenceBanner from '../components/Ultimate2026HyperintelligenceBanner';
-import NeuralOptimizationRevolutionBanner from '../components/NeuralOptimizationRevolutionBanner';
-import AutonomousBusinessProcessBanner from '../components/AutonomousBusinessProcessBanner';
-import NewContentShowcaseBanner from '../components/NewContentShowcaseBanner';
-import ContentShowcase from '../components/ContentShowcase';
-import QuantumTransformationBanner from '../components/QuantumTransformationBanner';
-import NeuralArchitectureSearchBanner from '../components/NeuralArchitectureSearchBanner';
-import LatestBreakthroughsBanner from '../components/LatestBreakthroughsBanner';
-import AI2030QuantumConsciousnessRevolutionBanner from '../components/AI2030QuantumConsciousnessRevolutionBanner';
-import AI2029MetaCognitiveSuperintelligenceBanner from '../components/AI2029MetaCognitiveSuperintelligenceBanner';
-import UltimateContentShowcase2030 from '../components/UltimateContentShowcase2030';
+// Removed missing component imports
 
 export default function HomePage() {
   return (
@@ -70,14 +60,7 @@ export default function HomePage() {
       {/* Ultimate 2027 Breakthrough Banner */}
       <Ultimate2027BreakthroughBanner />
 
-      {/* Latest Revolutionary Breakthroughs Banner - Featured prominently */}
-      <LatestBreakthroughsBanner />
-      
-      {/* Quantum Transformation Banner - Featured prominently */}
-      <QuantumTransformationBanner />
-      
-      {/* Neural Architecture Search Banner - Featured prominently */}
-      <NeuralArchitectureSearchBanner />
+      {/* Removed missing component references */}
 
       {/* New this week — promote fresh content */}
       <section className="py-6 border-t border-b border-white/10 bg-white/5">
@@ -98,14 +81,7 @@ export default function HomePage() {
       {/* New Content 2026 Showcase Banner - Latest Content */}
       <NewContent2026ShowcaseBanner />
       
-      {/* Ultimate 2026 Hyperintelligence Banner */}
-      <Ultimate2026HyperintelligenceBanner />
-      
-      {/* AI 2030 Quantum Consciousness Revolution Banner */}
-      <AI2030QuantumConsciousnessRevolutionBanner />
-      
-      {/* AI 2029 Meta-Cognitive Superintelligence Banner */}
-      <AI2029MetaCognitiveSuperintelligenceBanner />
+      {/* Removed missing component references */}
       
       {/* Revolutionary 2026 Content Advertising Banner */}
       
@@ -405,8 +381,6 @@ export default function HomePage() {
 
       {/* Ultimate 2026 Content Showcase */}
       <Ultimate2026ContentShowcase />
-      
-      <UltimateContentShowcase2030 />
     </main>
   );
 }
