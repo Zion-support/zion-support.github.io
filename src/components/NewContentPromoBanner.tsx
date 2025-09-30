@@ -4,6 +4,28 @@ import { ArrowRight, Sparkles, TrendingUp, Zap, Star, Rocket, Brain, Atom, Bot }
 const NewContentPromoBanner: React.FC = () => {
   const newContent = [
     {
+      title: "AI 2028: Autonomous Governance Blueprint",
+      description: "Budgets, live scorecards, PR policy tests, and rollback for safe autonomy.",
+      slug: "ai-2028-autonomous-governance-blueprint",
+      category: "AI Governance",
+      icon: "🛡️",
+      impact: "Zero‑Regret",
+      savings: "Fewer Incidents",
+      featured: true,
+      trending: true
+    },
+    {
+      title: "AI 2028: Autonomous Enterprise Revolution",
+      description: "Outcome‑led autonomy at scale with budgets, KPIs, canaries, and rollback.",
+      slug: "ai-2028-autonomous-enterprise-revolution",
+      category: "Enterprise AI",
+      icon: "🚀",
+      impact: "99.9% Auto",
+      savings: "$50M+ ROI",
+      featured: true,
+      trending: true
+    },
+    {
       title: "AI Enterprise Transformation 2027",
       description: "Executive playbook to plan, fund, and scale AI with measurable ROI.",
       slug: "ai-enterprise-transformation-2027",

@@ -1117,6 +1117,26 @@ featuredBlogPosts.unshift(
   }
 );
 
+// Sept 30, 2025 – Advertise 2028 governance + enterprise revolution
+featuredBlogPosts.unshift(
+  {
+    id: "ai-2028-autonomous-governance-blueprint",
+    title: "AI 2028: Autonomous Governance Blueprint",
+    description: "Budgets, live scorecards, PR policy tests, and rollback for safe autonomy.",
+    link: "/blog/ai-2028-autonomous-governance-blueprint",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-2028-autonomous-enterprise-revolution",
+    title: "AI 2028: Autonomous Enterprise Revolution",
+    description: "Outcome‑led autonomy at scale with budgets, KPIs, canaries, and rollback.",
+    link: "/blog/ai-2028-autonomous-enterprise-revolution",
+    type: "article",
+    featured: true
+  }
+);
+
 // Sept 30, 2025 – Advertise three newly added articles site-wide
 featuredBlogPosts.unshift(
   {
