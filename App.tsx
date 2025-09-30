@@ -2,6 +2,11 @@ import React, { JSX } from "react";
 import AI2033UniversalConsciousnessBanner from "./components/AI2033UniversalConsciousnessBanner";
 import July2026RevolutionaryBreakthroughBanner from "./components/July2026RevolutionaryBreakthroughBanner";
 
+// NEW: Latest 2030-2040 Content Banners
+import AI2030TranscendentBusinessIntelligenceBanner from "./components/AI2030TranscendentBusinessIntelligenceBanner";
+import AI2035PostSingularityTransformationBanner from "./components/AI2035PostSingularityTransformationBanner";
+import AI2040TranscendentEconomyBanner from "./components/AI2040TranscendentEconomyBanner";
+
 // Core Interactive Components
 import InteractiveAI2026Showcase from "./components/InteractiveAI2026Showcase";
 import InteractiveROICalculator2026 from "./components/InteractiveROICalculator2026";
@@ -71,6 +76,15 @@ import Fortune500AI2030TranscendentSuccessBanner from "./components/Fortune500AI
 export default function App(): JSX.Element {
   return (
     <div className="min-h-screen bg-slate-950">
+      {/* NEWEST: AI 2040 Transcendent Economy Revolution - MOST PROMINENT */}
+      <AI2040TranscendentEconomyBanner />
+      
+      {/* NEWEST: AI 2035 Post-Singularity Enterprise Transformation - HIGHLY PROMINENT */}
+      <AI2035PostSingularityTransformationBanner />
+      
+      {/* NEWEST: AI 2030 Transcendent Business Intelligence - FEATURED */}
+      <AI2030TranscendentBusinessIntelligenceBanner />
+      
       {/* HERO SECTION - Latest January 2025 Content */}
       <January2025NewContentBanner />
       
