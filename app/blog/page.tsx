@@ -3,6 +3,26 @@ import Link from 'next/link';
 
 const blogPosts = [
   {
+    title: 'New Governed Agent Patterns for Reliable Autonomy',
+    slug: 'ai-2025-september-30-new-governed-agent-patterns',
+    excerpt: 'Policy-first orchestration, approvals, verifiers, budgets, and rollback so autonomy ships safely.',
+    category: 'Featured Article',
+    publishedAt: 'September 30, 2025',
+    image: '🛡️',
+    color: 'blue',
+    readTime: '12 min read'
+  },
+  {
+    title: 'Autonomous FinOps Scorecards — Prevent Cost Regressions',
+    slug: 'ai-2025-september-30-autonomous-finops-scorecards',
+    excerpt: 'KPI-linked scorecards, routing, caching, and rollback to govern AI spend in real time.',
+    category: 'Implementation Guide',
+    publishedAt: 'September 30, 2025',
+    image: '📊',
+    color: 'green',
+    readTime: '14 min read'
+  },
+  {
     title: 'AI Enterprise Autonomous Agents 2026: Operating Models, Architecture, ROI',
     slug: 'ai-enterprise-autonomous-agents-2026',
     excerpt: 'Deploy autonomous AI agents with provable guardrails to achieve 400% efficiency gains, 70% cost reduction, and 99.95% uptime.',

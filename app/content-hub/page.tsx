@@ -176,6 +176,8 @@ export default function ContentHubPage() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <h2 className="text-xl md:text-2xl font-bold">New this week</h2>
             <div className="flex flex-wrap gap-3">
+              <Link href="/blog/ai-2025-september-30-new-governed-agent-patterns" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">Governed Agent Patterns<span>→</span></Link>
+              <Link href="/blog/ai-2025-september-30-autonomous-finops-scorecards" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">Autonomous FinOps Scorecards<span>→</span></Link>
               <Link href="/blog/ai-2027-operational-risk-budgets" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">Operational Risk Budgets 2027<span>→</span></Link>
               <Link href="/blog/ai-september-30-2025-fresh-enterprise-ai-strategies" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">Fresh Enterprise AI Strategies<span>→</span></Link>
               <Link href="/blog/edge-2026-private-feature-flags" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">Private Feature Flags 2026<span>→</span></Link>
@@ -378,6 +380,57 @@ export default function ContentHubPage() {
             </Link>
 
             {/* New Featured: Fresh Enterprise AI Strategies 2025 */}
+            <Link href="/blog/ai-2025-september-30-new-governed-agent-patterns" className="group">
+              <div className="bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-indigo-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/20 p-8">
+                <div className="flex items-start justify-between mb-6">
+                  <div className="text-6xl group-hover:scale-110 transition-transform duration-300">🛡️</div>
+                  <div className="flex flex-col gap-2">
+                    <div className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 text-white text-xs font-bold shadow-lg">
+                      <span>FEATURED</span>
+                    </div>
+                    <span className="px-3 py-1.5 rounded-full bg-indigo-500/20 text-indigo-300 text-xs font-semibold border border-indigo-500/30">NEW</span>
+                  </div>
+                </div>
+                <div className="mb-4">
+                  <span className="inline-block px-3 py-1 rounded-full bg-gradient-to-r from-indigo-500/20 to-purple-500/20 text-indigo-300 text-xs font-semibold border border-indigo-500/30">Governed Autonomy</span>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-indigo-400 transition-colors duration-300 leading-tight">New Governed Agent Patterns</h3>
+                <p className="text-gray-400 mb-6 leading-relaxed text-sm">Policy-first orchestration with approvals, verifiers, budgets, and rollback.</p>
+                <div className="flex items-center justify-between text-sm text-gray-500 mb-6 pb-6 border-b border-white/10">
+                  <span>12 min</span>
+                  <span>Sep 30, 2025</span>
+                </div>
+                <div className="flex items-center justify-center gap-2 w-full bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300">
+                  <span>Read Patterns</span>
+                </div>
+              </div>
+            </Link>
+
+            <Link href="/blog/ai-2025-september-30-autonomous-finops-scorecards" className="group">
+              <div className="bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-emerald-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/20 p-8">
+                <div className="flex items-start justify-between mb-6">
+                  <div className="text-6xl group-hover:scale-110 transition-transform duration-300">📊</div>
+                  <div className="flex flex-col gap-2">
+                    <div className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 text-white text-xs font-bold shadow-lg">
+                      <span>FINOPS</span>
+                    </div>
+                    <span className="px-3 py-1.5 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-semibold border border-emerald-500/30">NEW</span>
+                  </div>
+                </div>
+                <div className="mb-4">
+                  <span className="inline-block px-3 py-1 rounded-full bg-gradient-to-r from-emerald-500/20 to-teal-500/20 text-emerald-300 text-xs font-semibold border border-emerald-500/30">Autonomous FinOps</span>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-emerald-400 transition-colors duration-300 leading-tight">Autonomous FinOps Scorecards</h3>
+                <p className="text-gray-400 mb-6 leading-relaxed text-sm">KPI-linked budgets, routing, caching, and rollback to prevent regressions.</p>
+                <div className="flex items-center justify-between text-sm text-gray-500 mb-6 pb-6 border-b border-white/10">
+                  <span>14 min</span>
+                  <span>Sep 30, 2025</span>
+                </div>
+                <div className="flex items-center justify-center gap-2 w-full bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300">
+                  <span>Read FinOps Guide</span>
+                </div>
+              </div>
+            </Link>
             <Link href="/blog/ai-september-30-2025-fresh-enterprise-ai-strategies" className="group">
               <div className="bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-emerald-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/20 p-8">
                 <div className="flex items-start justify-between mb-6">
