@@ -5,9 +5,6 @@ export const metadata = {
   description: 'Explore our latest AI insights, guides, and case studies.'
 };
 
-<<<<<<< HEAD
-export default function BlogIndex() {
-=======
 const blogPosts = [
   {
     title: 'Reliable Agent Evals 2025: Measure, Guardrail, and Improve',
@@ -249,6 +246,16 @@ const blogPosts = [
     image: '🧩',
     color: 'purple',
     readTime: '16 min read'
+  },
+  {
+    title: 'AI Trends 2026: The Future of Enterprise Technology',
+    slug: 'ai-trends-2026-future-enterprise',
+    excerpt: 'Discover the revolutionary AI trends shaping 2026. From autonomous systems to quantum-enhanced AI, explore the breakthroughs that matter.',
+    category: 'Featured Article',
+    publishedAt: 'January 15, 2026',
+    image: '🚀',
+    color: 'blue',
+    readTime: '15 min read'
   }
 ];
 
@@ -261,7 +268,6 @@ const categories = [
 ];
 
 export default function BlogPage() {
->>>>>>> cursor/create-and-deploy-new-content-c189
   return (
     <div className="min-h-screen bg-slate-950 text-white">
       <main className="max-w-4xl mx-auto px-6 py-16">
@@ -269,14 +275,47 @@ export default function BlogPage() {
         <p className="text-white/70 mb-10">
           Curated research, playbooks, and case studies for enterprise AI leaders.
         </p>
-        <div className="space-y-4">
-          <Link href="/blog/ai-2027-autonomous-governance-blueprint" className="text-blue-300 hover:text-blue-200 underline">
-            AI 2027 Autonomous Governance Blueprint
-          </Link>
-          <br />
-          <Link href="/blog/ai-2026-agent-ops-observability" className="text-fuchsia-300 hover:text-fuchsia-200 underline">
-            Agent Ops Observability 2026
-          </Link>
+        
+        {/* Featured Posts */}
+        <div className="mb-12">
+          <h2 className="text-2xl font-bold mb-6">Featured Articles</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <Link href="/blog/ai-2027-autonomous-governance-blueprint" className="block p-6 bg-slate-800 rounded-lg hover:bg-slate-700 transition-colors">
+              <h3 className="text-xl font-semibold mb-2">AI 2027 Autonomous Governance Blueprint</h3>
+              <p className="text-slate-300 mb-3">Comprehensive framework for autonomous AI governance in enterprise environments.</p>
+              <span className="text-blue-400 text-sm">Read more →</span>
+            </Link>
+            <Link href="/blog/ai-2026-agent-ops-observability" className="block p-6 bg-slate-800 rounded-lg hover:bg-slate-700 transition-colors">
+              <h3 className="text-xl font-semibold mb-2">Agent Ops Observability 2026</h3>
+              <p className="text-slate-300 mb-3">Advanced observability patterns for AI agent operations and monitoring.</p>
+              <span className="text-fuchsia-400 text-sm">Read more →</span>
+            </Link>
+          </div>
+        </div>
+
+        {/* All Posts */}
+        <div>
+          <h2 className="text-2xl font-bold mb-6">All Articles</h2>
+          <div className="space-y-4">
+            {blogPosts.map((post, index) => (
+              <Link key={index} href={`/blog/${post.slug}`} className="block p-4 bg-slate-800 rounded-lg hover:bg-slate-700 transition-colors">
+                <div className="flex items-start justify-between">
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="text-2xl">{post.image}</span>
+                      <span className={`px-2 py-1 text-xs font-semibold rounded-full bg-${post.color}-100 text-${post.color}-800`}>
+                        {post.category}
+                      </span>
+                      <span className="text-slate-400 text-sm">{post.readTime}</span>
+                    </div>
+                    <h3 className="text-lg font-semibold mb-1">{post.title}</h3>
+                    <p className="text-slate-300 text-sm mb-2">{post.excerpt}</p>
+                    <span className="text-slate-400 text-xs">{post.publishedAt}</span>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
       </main>
     </div>
