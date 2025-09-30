@@ -3,6 +3,26 @@ import Link from 'next/link';
 
 const blogPosts = [
   {
+    title: 'Enterprise RAG Guardrails 2026: Safe, Reliable, and Controllable AI',
+    slug: 'ai-2026-enterprise-rag-guardrails',
+    excerpt: 'Design enterprise-grade RAG with policy guardrails, verifiable citations, and cost-aware routing. Prevent hallucinations and ensure compliance.',
+    category: 'Implementation Guide',
+    publishedAt: 'January 20, 2026',
+    image: '🛡️',
+    color: 'indigo',
+    readTime: '24 min read'
+  },
+  {
+    title: 'Autonomous Enterprise Operations 2026: 90% Efficiency, 300% ROI',
+    slug: 'ai-2026-autonomous-enterprise-operations',
+    excerpt: 'Deploy autonomous AI for incident response, finance, supply chain, and support with provable guardrails and ROI.',
+    category: 'Revolutionary Technology',
+    publishedAt: 'January 18, 2026',
+    image: '🏭',
+    color: 'green',
+    readTime: '28 min read'
+  },
+  {
     title: 'AI 2026 Neural Superintelligence: The Next Frontier of Artificial Intelligence',
     slug: 'ai-2026-neural-superintelligence',
     excerpt: 'Explore the revolutionary AI 2026 neural superintelligence systems that surpass human intelligence, delivering 1000x performance gains and transforming enterprise operations.',
