@@ -1941,6 +1941,28 @@ posts.push(
   }
 );
 
+// Sept 30, 2025 – New content additions to surface on homepage
+posts.push(
+  {
+    slug: "ai-executive-playbook-2027",
+    title: "AI Executive Playbook 2027: Plan, Fund, Govern",
+    description: "Pragmatic roadmap to ship reliable, cost‑effective AI with measurable outcomes across CX, ops, and platforms.",
+    category: "Executive Strategy",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "12 min read"
+  },
+  {
+    slug: "ai-2027-cost-optimization-playbook",
+    title: "AI 2027 Cost Optimization Playbook",
+    description: "Cut AI spend 30–70% with routing, caching, quantization, and guardrails—without sacrificing quality.",
+    category: "Cost Optimization",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "13 min read"
+  }
+);
+
 // Sept 30, 2025 – Brand new content to surface on homepage
 posts.push(
   {
