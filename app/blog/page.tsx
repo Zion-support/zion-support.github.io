@@ -7,6 +7,26 @@ export const metadata = {
 
 const blogPosts = [
   {
+    title: 'Trustworthy Autonomous Agents 2026: Guardrails, Evals, and Policy Gates',
+    slug: 'ai-trustworthy-agents-2026',
+    excerpt: 'Design reliable autonomy with layered guardrails, budgeted tools, and live evaluations.',
+    category: 'AI Reliability',
+    publishedAt: 'January 2026',
+    image: '🛡️',
+    color: 'purple',
+    readTime: '16 min read'
+  },
+  {
+    title: 'AI Agent Security Blueprint 2026: Zero‑Trust for Autonomous Systems',
+    slug: 'ai-agent-security-blueprint-2026',
+    excerpt: 'Zero‑trust architecture for agents: isolation, least privilege, scoped secrets, and auditability.',
+    category: 'Security',
+    publishedAt: 'January 2026',
+    image: '🔐',
+    color: 'green',
+    readTime: '14 min read'
+  },
+  {
     title: 'Reliable Agent Evals 2025: Measure, Guardrail, and Improve',
     slug: 'ai-reliable-agent-evals-2025',
     excerpt: 'Blueprint for production agent evaluations: golden tasks, scorecards, policy tests, and continuous improvement.',
