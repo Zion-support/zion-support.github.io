@@ -10,6 +10,42 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-operational-trust-scorecards-2026",
+    title: "AI Operational Trust Scorecards 2026",
+    description: "SLIs wired to KPIs with budgets, canaries, and instant rollback for safe velocity.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "edge-consentless-analytics-2026",
+    title: "Edge Analytics 2026: Consent‑Safe Insights",
+    description: "Scoped IDs, on‑device aggregation, and DP noise at <100ms — zero PII.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "platform-engineering-scorecards-2026",
+    title: "Platform Engineering Scorecards 2026",
+    description: "SLIs → KPIs with budgets, canaries, and rollback for reliable platforms.",
+    category: "Platform Engineering",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "edge-ai-blueprint-2026",
+    title: "Edge AI Blueprint 2026",
+    description: "Private <100ms personalization with scoped IDs, on‑device models, and DP.",
+    category: "Edge Computing",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "10 min read"
+  },
+  {
     slug: "ai-2027-cost-optimization-playbook",
     title: "AI 2027 Cost Optimization Playbook",
     description: "Tiered routing, caching, and compression to cut spend 30–70% with no regressions.",
