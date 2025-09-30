@@ -1494,6 +1494,58 @@ export const latestArticles: LatestArticle[] = [
   }
 ];
 
+// Sept 30, 2025 – Add three brand-new articles (advertised site-wide)
+latestArticles.unshift(
+  {
+    id: "ai-2027-quantum-enhanced-machine-learning",
+    slug: "ai-2027-quantum-enhanced-machine-learning",
+    title: "AI 2027: Quantum‑Enhanced Machine Learning",
+    description: "Quantum‑accelerated training and inference delivering 1000x speedups for complex optimization.",
+    excerpt: "Fuse quantum solvers with ML to unlock orders‑of‑magnitude gains without sacrificing reliability.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "Quantum",
+    tags: ["Quantum", "Optimization", "ML"],
+    featured: true,
+    readTime: "14 min read",
+    image: "/images/ai-2027-quantum-enhanced-ml.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "ai-2027-neuromorphic-computing-enterprise",
+    slug: "ai-2027-neuromorphic-computing-enterprise",
+    title: "AI 2027: Neuromorphic Computing for the Enterprise",
+    description: "Brain‑inspired architectures enabling 1000x energy efficiency and real‑time adaptation.",
+    excerpt: "Deploy neuromorphic stacks with guardrails, policy tests, and KPI‑linked scorecards.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "AI Strategy",
+    tags: ["Neuromorphic", "Efficiency", "Edge"],
+    featured: true,
+    readTime: "12 min read",
+    image: "/images/ai-2027-neuromorphic-enterprise.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "ai-2028-autonomous-governance-blueprint",
+    slug: "ai-2028-autonomous-governance-blueprint",
+    title: "AI 2028: Autonomous Governance Blueprint",
+    description: "KPI‑linked scorecards, PR policy tests, and rollback for safe autonomy at scale.",
+    excerpt: "A pragmatic playbook to fund, govern, and scale enterprise autonomy without regressions.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "AI Governance",
+    tags: ["Governance", "Scorecards", "Rollback"],
+    featured: true,
+    readTime: "11 min read",
+    image: "/images/ai-2028-autonomous-governance.jpg",
+    newBadge: true,
+    trending: true
+  }
+);
+
 export const featuredArticles = latestArticles.filter(article => article.featured);
 export const trendingArticles = latestArticles.filter(article => article.trending);
 export const newArticles = latestArticles.filter(article => article.newBadge);
