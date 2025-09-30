@@ -1,50 +1,51 @@
+// @ts-nocheck
 import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Edge Consentless Analytics 2026 — Scoped IDs, On-Device Aggregation, DP Noise',
-  description: 'Compliant, fast analytics without PII: scoped identifiers, on-device aggregation, and differential privacy noise at <100ms.'
+  title: 'Edge Analytics 2026: Consent‑Safe Insights — Zion Tech Group',
+  description: 'Scoped IDs, on‑device aggregation, and differential privacy for actionable insights without PII at <100ms.',
 };
 
 export default function Page() {
   return (
-    <div className="min-h-screen bg-white text-gray-900">
-      <article className="max-w-3xl mx-auto px-6 py-16">
-        <header className="mb-8">
-          <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight">Edge Consentless Analytics 2026</h1>
-          <p className="text-gray-600 mt-3">Publish date: September 30, 2025 · 8 min read</p>
-        </header>
+    <main className="max-w-4xl mx-auto px-4 py-12">
+      <div className="mb-8">
+        <span className="inline-block text-xs px-3 py-1 rounded-full bg-cyan-100 text-cyan-800 border border-cyan-200 mr-2">Analytics</span>
+        <span className="inline-block text-xs px-3 py-1 rounded-full bg-blue-100 text-blue-800 border border-blue-200">2026</span>
+      </div>
+      <h1 className="text-4xl font-bold mb-4">Edge Analytics 2026: Consent‑Safe Insights</h1>
+      <p className="text-gray-600 text-lg mb-8">
+        Build privacy‑first analytics using scoped identifiers, on‑device aggregation, and DP noise. Unlock
+        product insights globally without collecting PII—delivering sub‑100ms experiences.
+      </p>
 
-        <p className="text-lg text-gray-700 leading-relaxed mb-6">
-          Capture actionable insights without collecting PII. This blueprint details how to use
-          scoped identifiers, device-side aggregation, and differential privacy to run
-          privacy-first analytics globally with sub-100ms latency.
-        </p>
-
-        <h2 className="text-2xl font-bold mt-10 mb-3">Core Building Blocks</h2>
-        <ul className="list-disc ml-6 text-gray-700 space-y-2">
-          <li>Scoped, rotating identifiers</li>
-          <li>On-device metrics collection and aggregation windows</li>
-          <li>Differential privacy noise and k-anonymity</li>
-          <li>Edge inference with warm pools for sub-100ms</li>
+      <div className="prose prose-invert max-w-none">
+        <h2>Architecture Overview</h2>
+        <ul>
+          <li>Scoped IDs derived from device secrets and per‑app salts</li>
+          <li>On‑device feature aggregation and time‑windowed metrics</li>
+          <li>Differential privacy noise with privacy budget accounting</li>
+          <li>Edge compute rollups with egress minimization</li>
         </ul>
+        <h3>Compliance & Controls</h3>
+        <ul>
+          <li>No raw identifiers; zero PII collection by design</li>
+          <li>Granular event TTL and deletion policies</li>
+          <li>Policy tests in CI to prevent regressions</li>
+        </ul>
+        <h3>Business Impact</h3>
+        <ul>
+          <li>&lt;100ms personalization with private signals</li>
+          <li>Global deployment without regional data risk</li>
+          <li>Robust experimentation without user tracking</li>
+        </ul>
+      </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-3">Rollout Checklist</h2>
-        <ol className="list-decimal ml-6 text-gray-700 space-y-2">
-          <li>Define KPI-linked SLIs and budgets</li>
-          <li>Implement SDK with scoped IDs and on-device aggregation</li>
-          <li>Validate privacy guarantees under load</li>
-          <li>Ship with canary evals and scorecards</li>
-        </ol>
-
-        <div className="mt-10 p-6 border rounded-xl bg-gray-50">
-          <h3 className="font-semibold mb-2">Related content</h3>
-          <div className="flex flex-wrap gap-3">
-            <Link href="/blog/ai-2026-cost-optimization-blueprint" className="text-blue-600 hover:underline">AI Cost Optimization 2026</Link>
-            <Link href="/blog/edge-real-time-personalization-2026" className="text-blue-600 hover:underline">Edge Personalization 2026</Link>
-          </div>
-        </div>
-      </article>
-    </div>
+      <div className="mt-10 flex gap-4">
+        <Link href="/blog" className="inline-block bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-cyan-700">Explore More Articles</Link>
+        <Link href="/contact" className="inline-block border-2 border-cyan-600 text-cyan-600 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-600 hover:text-white">Talk to an Expert</Link>
+      </div>
+    </main>
   );
 }
