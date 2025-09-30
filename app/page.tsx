@@ -19,7 +19,7 @@ import {
   AIGovernanceBanner,
   FinTechSuccessBanner,
   NewContentShowcaseBanner
-} from '../components/PromotionalBanner';
+} from './components/PromotionalBanner';
 import {
   AIEnterpriseAdoptionBanner,
   AITrends2025Banner,
@@ -33,7 +33,7 @@ import {
   EnterpriseAISecurityBanner,
   MultimodalAIIntegrationBanner,
   MultimodalAICustomerServiceBanner
-} from '../components/NewContentPromotionalBanners';
+} from './components/NewContentPromotionalBanners';
 import {
   AIEnterpriseTransformationBanner,
   AIAutonomousSystemsBanner,
@@ -42,11 +42,11 @@ import {
   LatestContentShowcaseBanner,
   InteractiveAICalculatorBanner,
   AIInnovationShowcaseBanner
-} from '../components/NewContent2026Banners';
-import ContentShowcase from '../components/ContentShowcase';
-import FeaturedServiceCard from '../components/FeaturedServiceCard';
-import SuccessStory from '../components/SuccessStory';
-import InteractivePromotionalSection from '../components/InteractivePromotionalSection';
+} from './components/NewContent2026Banners';
+import ContentShowcase from './components/ContentShowcase';
+import FeaturedServiceCard from './components/FeaturedServiceCard';
+import SuccessStory from './components/SuccessStory';
+import InteractivePromotionalSection from './components/InteractivePromotionalSection';
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
@@ -294,16 +294,8 @@ export default function HomePage() {
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Interactive AI 2027 Calculator */}
-      <InteractiveAI2027Calculator />
-
-      {/* Interactive AI 2026 Calculator */}
-      <InteractiveAICalculator2026 />
-=======
       {/* Interactive Promotional Section */}
       <InteractivePromotionalSection />
->>>>>>> cursor/create-and-deploy-new-content-1102
 
       {/* Dynamic Content Showcase */}
       <ContentShowcase />
@@ -421,49 +413,7 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-<<<<<<< HEAD
-            <Link to="/blog/ai-multimodal-integration-2025" className="group">
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    Featured Article
-                  </span>
-                  <span className="text-sm text-gray-500">22 min read</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Multimodal Integration 2025: The Future of Enterprise AI
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Discover how multimodal AI is revolutionizing enterprise operations with text, image, voice, and video integration. Achieve 250% efficiency gains.
-                </p>
-                <div className="flex items-center text-blue-600 font-semibold">
-                  Read Article →
-                </div>
-              </div>
-            </Link>
-            <Link to="/case-studies/multimodal-ai-customer-service-transformation" className="group">
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    Success Story
-                  </span>
-                  <span className="text-sm text-gray-500">E-commerce</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  Multimodal AI Customer Service: 80% Faster Response Times
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  See how a leading e-commerce company achieved 80% faster response times, 95% accuracy, and 60% cost reduction with multimodal AI.
-                </p>
-                <div className="flex items-center text-blue-600 font-semibold">
-                  View Case Study →
-                </div>
-              </div>
-            </Link>
-            <Link to="/blog/ai-enterprise-adoption-2025" className="group">
-=======
             <Link href="/blog/ai-enterprise-adoption-2025" className="group">
->>>>>>> cursor/create-and-deploy-new-content-1102
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -777,7 +727,7 @@ export default function HomePage() {
 
           <div className="text-center">
             <Link
-              to="/blog"
+              href="/blog"
               className="inline-block bg-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-700 transition-colors shadow-lg hover:shadow-xl"
             >
               View All Content
