@@ -1,7 +1,8 @@
 // @ts-nocheck
 import React from 'react';
 import Link from 'next/link';
-import NewContentAdvertisingBanner from '../components/NewContentAdvertisingBanner';
+import Revolutionary2027ContentMegaBanner from '../components/Revolutionary2027ContentMegaBanner';
+import Ultimate2027BreakthroughBanner from '../components/Ultimate2027BreakthroughBanner';
 import UnifiedContentPromotion from '../components/UnifiedContentPromotion';
 import Revolutionary2026ContentAdvertisingBanner from '../components/Revolutionary2026ContentAdvertisingBanner';
 import January2026BreakthroughShowcaseBanner from '../components/January2026BreakthroughShowcaseBanner';
@@ -21,20 +22,26 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Revolutionary 2027 Content Mega Banner - Featured prominently */}
+      <Revolutionary2027ContentMegaBanner />
+      
+      {/* Ultimate 2027 Breakthrough Banner */}
+      <Ultimate2027BreakthroughBanner />
+
       {/* New this week — promote fresh content */}
       <section className="py-6 border-t border-b border-white/10 bg-white/5">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
-            <div className="text-white font-semibold">New this week - Revolutionary Breakthroughs</div>
+            <div className="text-white font-semibold">Latest Revolutionary Breakthroughs</div>
             <div className="flex flex-wrap gap-2">
-              <Link href="/blog/ai-2026-neural-optimization-revolution" className="inline-flex items-center gap-2 bg-purple-500/20 text-purple-200 border border-purple-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-purple-500/30 transition-colors">Neural Optimization 1000x<span>→</span></Link>
-              <Link href="/blog/ai-2026-autonomous-business-processes" className="inline-flex items-center gap-2 bg-emerald-500/20 text-emerald-200 border border-emerald-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-emerald-500/30 transition-colors">99.9% Autonomous Business<span>→</span></Link>
-              <Link href="/case-studies/ai-2026-neural-optimization-success-story" className="inline-flex items-center gap-2 bg-blue-500/20 text-blue-200 border border-blue-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-blue-500/30 transition-colors">$500M ROI Success<span>→</span></Link>
+              <Link href="/blog/ai-2027-quantum-consciousness-fusion-breakthrough" className="inline-flex items-center gap-2 bg-purple-500/20 text-purple-200 border border-purple-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-purple-500/30 transition-colors">Quantum Consciousness 100,000x<span>→</span></Link>
+              <Link href="/blog/ai-2028-autonomous-enterprise-revolution" className="inline-flex items-center gap-2 bg-blue-500/20 text-blue-200 border border-blue-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-blue-500/30 transition-colors">99.9% Autonomous Enterprise<span>→</span></Link>
+              <Link href="/case-studies/ai-2027-consciousness-fusion-mega-success" className="inline-flex items-center gap-2 bg-green-500/20 text-green-200 border border-green-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-green-500/30 transition-colors">$2.5B ROI Success<span>→</span></Link>
+              <Link href="/case-studies/ai-2028-autonomous-enterprise-mega-success" className="inline-flex items-center gap-2 bg-orange-500/20 text-orange-200 border border-orange-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-orange-500/30 transition-colors">$5B ROI Success<span>→</span></Link>
               <Link href="/blog/ai-2026-quantum-neural-fusion-breakthrough" className="inline-flex items-center gap-2 bg-purple-500/20 text-purple-200 border border-purple-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-purple-500/30 transition-colors">Quantum-Neural Fusion<span>→</span></Link>
               <Link href="/blog/ai-enterprise-automation-2026-mega-guide" className="inline-flex items-center gap-2 bg-cyan-500/20 text-cyan-200 border border-cyan-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-cyan-500/30 transition-colors">Enterprise Automation Guide<span>→</span></Link>
               <Link href="/case-studies/fortune-500-ai-2026-breakthrough-mega-success" className="inline-flex items-center gap-2 bg-green-500/20 text-green-200 border border-green-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-green-500/30 transition-colors">$2.3B Success Story<span>→</span></Link>
-              <Link href="/blog/ai-2025-oct-02-production-agent-guardrails" className="inline-flex items-center gap-2 bg-emerald-500/20 text-emerald-200 border border-emerald-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-emerald-500/30 transition-colors">Production Agent Guardrails<span>→</span></Link>
-              <Link href="/blog/ai-2025-sept-30-governed-autonomy-blueprint" className="inline-flex items-center gap-2 bg-indigo-500/20 text-indigo-200 border border-indigo-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-indigo-500/30 transition-colors">Governed Autonomy Blueprint<span>→</span></Link>
+              <Link href="/blog/ai-2026-neural-optimization-revolution" className="inline-flex items-center gap-2 bg-indigo-500/20 text-indigo-200 border border-indigo-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-indigo-500/30 transition-colors">Neural Optimization 1000x<span>→</span></Link>
             </div>
           </div>
         </div>
@@ -55,8 +62,11 @@ export default function HomePage() {
       {/* January 2026 Breakthrough Showcase Banner */}
       <January2026BreakthroughShowcaseBanner />
       
-      {/* New Content Advertising Banner - promotes Trustless Evaluation Blueprint (2026) */}
-      <NewContentAdvertisingBanner />
+      {/* Revolutionary Breakthroughs Banner */}
+      <January2026RevolutionaryBreakthroughBanner />
+      
+      {/* New Services Banner */}
+      <January2026NewServicesBanner />
       
       {/* Hero Section */}
       <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
@@ -106,7 +116,7 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-6">
-            <Link to="/blog/ai-2027-consciousness-fusion-breakthrough" className="group block rounded-xl border border-purple-500/20 bg-gradient-to-br from-purple-900/20 to-indigo-900/20 p-6 hover:border-purple-400/40 transition-all duration-300 hover:scale-105">
+            <Link href="/blog/ai-2027-quantum-consciousness-fusion-breakthrough" className="group block rounded-xl border border-purple-500/20 bg-gradient-to-br from-purple-900/20 to-indigo-900/20 p-6 hover:border-purple-400/40 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-2 mb-3">
                 <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-3 py-1 rounded-full text-xs font-bold">2027 BREAKTHROUGH</span>
                 <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold">100,000x</span>
@@ -116,7 +126,7 @@ export default function HomePage() {
               <div className="text-purple-300 text-sm font-semibold group-hover:text-purple-200">Discover the Technology →</div>
             </Link>
             
-            <Link to="/case-studies/ai-2027-consciousness-fusion-mega-success" className="group block rounded-xl border border-green-500/20 bg-gradient-to-br from-green-900/20 to-emerald-900/20 p-6 hover:border-green-400/40 transition-all duration-300 hover:scale-105">
+            <Link href="/case-studies/ai-2027-consciousness-fusion-mega-success" className="group block rounded-xl border border-green-500/20 bg-gradient-to-br from-green-900/20 to-emerald-900/20 p-6 hover:border-green-400/40 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-2 mb-3">
                 <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-xs font-bold">$2.5B ROI</span>
                 <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold">MEGA SUCCESS</span>
@@ -126,7 +136,7 @@ export default function HomePage() {
               <div className="text-green-300 text-sm font-semibold group-hover:text-green-200">Read Success Story →</div>
             </Link>
             
-            <Link to="/blog/ai-2028-autonomous-enterprise-revolution" className="group block rounded-xl border border-blue-500/20 bg-gradient-to-br from-blue-900/20 to-indigo-900/20 p-6 hover:border-blue-400/40 transition-all duration-300 hover:scale-105">
+            <Link href="/blog/ai-2028-autonomous-enterprise-revolution" className="group block rounded-xl border border-blue-500/20 bg-gradient-to-br from-blue-900/20 to-indigo-900/20 p-6 hover:border-blue-400/40 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-2 mb-3">
                 <span className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-3 py-1 rounded-full text-xs font-bold">2028 REVOLUTION</span>
                 <span className="bg-gradient-to-r from-green-400 to-emerald-500 text-black px-3 py-1 rounded-full text-xs font-bold">99.9% AUTONOMOUS</span>

@@ -10,8 +10,326 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-    slug: "ai-2025-oct-03-autonomous-control-planes-v2",
-    title: "Autonomous Control Planes v2: Safer, Cheaper, Faster Releases",
+    slug: "ai-2025-oct-02-agent-runbooks-v6",
+    title: "Agent Reliability Runbooks v6 — Contain Incidents in Under 60s",
+    description:
+      "Deterministic tools, budgeted actions, and live traces that keep agent systems safe in production.",
+    category: "AI Operations",
+    publishedAt: "2025-10-02",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "ai-2025-oct-01-edge-privacy-observability",
+    title: "Edge Privacy Observability — Traces Without PII Leaks",
+    description:
+      "User‑centric telemetry using scoped IDs, local redaction, and budgeted sampling for sub‑100ms analytics.",
+    category: "Observability",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "6 min read",
+  },
+  {
+    slug: "ai-2025-sept-30-cio-modernization-playbook",
+    title: "CIO Modernization Playbook 2025 — Ship Faster With Fewer Surprises",
+    description:
+      "A pragmatic blueprint for CIOs to modernize platforms with golden paths, guardrails, and KPI‑linked scorecards.",
+    category: "Strategy",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "privacy-first-feature-flags-2026",
+    title: "Privacy‑First Feature Flags 2026: Global Rolls Without PII Risk",
+    description: "Scoped IDs, edge filters, and health checks for instant, safe rollouts under 100ms.",
+    category: "Architecture",
+    publishedAt: "2025-10-14",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "reliable-agent-actions-2026",
+    title: "Reliable Agent Actions 2026: Deterministic Tools and Live Traces",
+    description: "Design agent tools that are testable, auditable, and budget‑controlled for production reliability.",
+    category: "GenAI",
+    publishedAt: "2025-10-14",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "ai-risk-budgets-2026",
+    title: "AI Risk Budgets 2026: Ship Automation Safely at Scale",
+    description: "Budget risky actions, approvals, and rollbacks to move fast without surprises.",
+    category: "AI Governance",
+    publishedAt: "2025-10-14",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "zero-trust-for-genai-2026",
+    title: "Zero‑Trust for GenAI 2026: Prompt Firewalls and Signed Outputs",
+    description: "Production patterns: egress control, prompt firewalls, and signed artifacts for safe GenAI.",
+    category: "Security",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "quantum-ai-hybrid-blueprint-2026",
+    title: "Quantum‑AI Hybrid Blueprint 2026: Practical Near‑Term Wins",
+    description: "Blend quantum libraries with AI orchestration to unlock optimization wins today.",
+    category: "Quantum",
+    publishedAt: "2025-09-29",
+    featured: false,
+    readTime: "9 min read"
+  },
+  {
+    slug: "secure-ml-supply-chain-2026",
+    title: "Secure ML Supply Chain 2026: SBOMs, Attestations, and Drift Guards",
+    description: "Continuously track models, datasets, and prompts with signed SBOMs and policy checks.",
+    category: "Security",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "ai-risk-mitigation-scorecards-2026",
+    title: "AI Risk Mitigation Scorecards 2026: From Policy to Practice",
+    description: "Scorecards with owners, SLAs, and CI policy checks that drive action and outcomes.",
+    category: "AI Governance",
+    publishedAt: "2025-10-14",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-privacy-telemetry-2026",
+    title: "Edge Privacy Telemetry 2026: Scoped IDs, Local Caches, DP Noise",
+    description: "Keep insights rich and PII risk low with privacy‑first telemetry patterns at the edge.",
+    category: "Observability",
+    publishedAt: "2025-10-14",
+    featured: false,
+    readTime: "6 min read"
+  },
+  {
+    slug: "genai-routing-blueprint-2026",
+    title: "GenAI Routing Blueprint 2026: Quality Tiers, Caches, and Budgets",
+    description: "Route traffic by SLA with tiered models, edge caches, and KPI‑linked budgets.",
+    category: "GenAI",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "golden-paths-roi-2026",
+    title: "Golden Paths ROI 2026: Scorecards that Prove Platform Value",
+    description: "Link developer journeys to SLOs, adoption, and revenue with actionable scorecards.",
+    category: "Platform Engineering",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "ai-reliable-rag-ops-2026",
+    title: "Reliable RAG Ops 2026: Freshness Windows, Drift Alerts, Budgets",
+    description: "Keep RAG quality high with TTL windows, drift detectors, and KPI‑tied quality budgets.",
+    category: "GenAI",
+    publishedAt: "2025-10-12",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "platform-engineering-kpis-2026",
+    title: "Platform Engineering KPIs 2026: Adoption, Golden Paths, SLOs",
+    description: "Scorecards that shift the convo from costs to shipped value—adoption, TTFX, SLOs.",
+    category: "Platform Engineering",
+    publishedAt: "2025-10-12",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "ai-incident-budget-playbooks-2026",
+    title: "AI Incident Budgets: Playbooks That Contain in <60s",
+    description: "Budget risky actions, approvals, and rollback triggers for safe, fast incident response.",
+    category: "Security",
+    publishedAt: "2025-10-12",
+    featured: false,
+    readTime: "6 min read"
+  },
+  {
+    slug: "platform-engineering-scorecards-2026",
+    title: "Platform Engineering Scorecards 2026: From Golden Paths to Outcomes",
+    description: "Measure what matters: adoption, golden-path TTFX, SLOs, and shipped value—without slowing delivery.",
+    category: "Platform Engineering",
+    publishedAt: "2025-10-09",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "ai-cybersecurity-automation-2025",
+    title: "AI Cybersecurity Automation: From Detections to Autonomic Response",
+    description: "Behavioral detections, policy tests, and runbooks that auto-contain incidents under 60 seconds.",
+    category: "Security",
+    publishedAt: "2025-10-09",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-ai-blueprint-2026",
+    title: "Edge AI Blueprint 2026: Private, Real‑Time Intelligence at Scale",
+    description: "Signed configs, tiny models, and geo budgets for <100ms on‑device decisions with privacy by design.",
+    category: "Edge Computing",
+    publishedAt: "2025-10-09",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "ai-platform-roi-2025",
+    title: "AI Platform ROI Scorecards: Proving Value Quarter by Quarter",
+    description: "Lightweight scorecards that link capabilities to adoption, golden paths, SLOs, and outcomes.",
+    category: "AI Strategy",
+    publishedAt: "2025-10-03",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "secure-ml-supply-chain-2025",
+    title: "Secure ML Supply Chain: From SBOMs to Model Lineage",
+    description: "End-to-end provenance and controls for datasets, models, and inference routes.",
+    category: "Security",
+    publishedAt: "2025-10-03",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "edge-cdn-ml-personalization-2025",
+    title: "Edge CDN + On‑Device ML: Personalization Under 100ms",
+    description: "Combine edge KV, signed configs, and tiny models for private, real‑time personalization.",
+    category: "Edge Computing",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "ai-sales-copilot-2025",
+    title: "AI Sales Copilot: Grounded Prompts, CRM Context, Reliable Evals",
+    description: "Wire CRMs, build prompt libraries, and add evals that correlate with win‑rates.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "genai-evals-in-production-2025",
+    title: "GenAI Evals in Production: Policy Tests That Scale",
+    description: "Layered evaluation: offline suites, pre-merge checks, and online canaries tied to KPIs.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "feature-flags-edge-2025",
+    title: "Feature Flags at the Edge: <100ms Global Releases",
+    description: "Consistency models, cache strategies, and validation flows for instant global rollouts.",
+    category: "Architecture",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "secure-agents-runtime-2026",
+    title: "Secure AI Agents Runtime: Sandboxes, Egress Policies, and Traces",
+    description: "A production checklist for running AI agents safely with isolation, policy gates, and observability.",
+    category: "AI Security",
+    publishedAt: "2025-10-09",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "edge-e2e-observability-2026",
+    title: "Edge E2E Observability: User-Centric Tracing and <100ms Telemetry",
+    description: "Blueprint for capturing user-centric telemetry across edge, CDN, and app layers without latency tax.",
+    category: "Architecture",
+    publishedAt: "2025-10-09",
+    featured: false,
+    readTime: "7 min read"
+  },
+  {
+    slug: "ai-cost-controllers-2026",
+    title: "AI Cost Controllers: Budgets, Tiered Quality, and Guardrails",
+    description: "Keep GenAI spend predictable with dynamic budgets, tiered models, and policy‑backed routes.",
+    category: "Cloud",
+    publishedAt: "2025-10-09",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "ai-governance-blueprint-2025",
+    title: "AI Governance Blueprint 2025: Practical Guardrails That Ship",
+    description: "Scorecards, policy tests, and change-control that keep AI initiatives fast and compliant.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "real-time-genai-guardrails-2025",
+    title: "Real‑Time GenAI Guardrails: Inline Filters, Canaries, and Evals",
+    description: "How to run fast with live canaries, inline moderation, and KPI‑linked evals at scale.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+    featured: false,
+    readTime: "8 min read"
+  },
+  {
+    slug: "ai-governance-scorecards-2026",
+    title: "AI Governance 2026: Scorecards Engineers Actually Use",
+    description: "Guardrails wired to product KPIs with PR checks and online canaries that speed teams up.",
+    category: "AI Strategy",
+    publishedAt: "2025-10-07",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "freshness-aware-rag-v2",
+    title: "Freshness‑Aware RAG v2: TTL Budgets and Versioned Corpora",
+    description: "Keep answers accurate with freshness windows, async warmups, and KPI‑aligned evaluation.",
+    category: "GenAI",
+    publishedAt: "2025-10-07",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "ai-platform-roadmaps-2026",
+    title: "AI Product Roadmaps 2026: From Bet to Business Impact",
+    description: "Outcome-led roadmaps that connect bets to scorecards, trains, and shipped value.",
+    category: "AI Strategy",
+    publishedAt: "2025-10-06",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "genai-guardrails-blueprints-2026",
+    title: "GenAI Guardrails Blueprints: Policy Tests, Canaries, and SLAs",
+    description: "Composable guardrail patterns that scale across products without slowing teams.",
+    category: "GenAI",
+    publishedAt: "2025-10-06",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "cloud-finops-scorecards-2026",
+    title: "Cloud FinOps Scorecards: Guardrails Engineers Actually Use",
+    description: "PR gates, alerts, and budgets that cut waste 25–40% while keeping velocity high.",
+    category: "Cloud",
+    publishedAt: "2025-10-06",
+    featured: false,
+    readTime: "6 min read"
+  },
+  {
+    slug: "genai-platform-blueprint-2025",
+    title: "GenAI Platform Blueprint: Shipping Weekly With Guardrails",
     description:
       "Operational guardrails, budget-aware rollouts, and attested rollback patterns for zero-regret shipping.",
     category: "AI Operations",
@@ -485,5 +803,31 @@ export const posts: BlogPost[] = [
     featured: false,
     readTime: "11 min read",
   },
+  {
+    slug: "ai-2025-sept-30-agentic-workflows-blueprint",
+    title: "Agentic Workflows Blueprint 2025: Reliable Multi‑Agent Orchestration",
+    description: "Guardrails, reviews, and online evals for dependable multi‑agent flows that deliver ROI.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "edge-2025-sept-30-private-telemetry-guide",
+    title: "Private Telemetry at the Edge: Useful Insights Without PII",
+    description: "Scoped IDs, local redaction, and DP noise to keep analytics rich and privacy‑first.",
+    category: "Observability",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "cloud-2025-sept-30-cost-optimization-scorecards",
+    title: "Cost Optimization Scorecards 2025: Cut Spend Without Regressions",
+    description: "Tiered quality routes, budget alerts, and CI gates that reduce costs 30–60% safely.",
+    category: "Cloud FinOps",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  }
 ];
-
