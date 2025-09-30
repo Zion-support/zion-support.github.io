@@ -2,6 +2,9 @@ import React, { JSX } from "react";
 import LatestContentBanner2025 from "./src/components/LatestContentBanner2025";
 import FeaturedContentBanner2025 from "./src/components/FeaturedContentBanner2025";
 import NewContentPromoBanner from "./src/components/NewContentPromoBanner";
+<<<<<<< HEAD
+import Revolutionary2026ContentMegaBanner from "./src/components/Revolutionary2026ContentMegaBanner";
+=======
 import January2026ContentBanner from "./components/January2026ContentBanner";
 import AIAdvertisingBanner from "./components/AIAdvertisingBanner";
 import EnterpriseSolutionsBanner from "./components/EnterpriseSolutionsBanner";
@@ -15,6 +18,7 @@ import NewContentAdvertisingBanner from "./src/components/NewContentAdvertisingB
 import EnterpriseSolutionsShowcase2026 from "./src/components/EnterpriseSolutionsShowcase2026";
 import AITrendsInsightsBanner2026 from "./src/components/AITrendsInsightsBanner2026";
 import NewBlogContentShowcase2026 from "./src/components/NewBlogContentShowcase2026";
+>>>>>>> origin/cursor/create-and-deploy-new-content-3a62
 
 export default function App(): JSX.Element {
   return (
