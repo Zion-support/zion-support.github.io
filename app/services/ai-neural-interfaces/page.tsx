@@ -2,285 +2,304 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Neural Interfaces - Brain-Computer Integration Services',
-  description: 'Revolutionary neural interface services enabling direct brain-computer communication with 99% accuracy and 400% productivity gains.',
-  keywords: 'neural interfaces, brain-computer interface, AI services, neural computing, human-AI collaboration',
+  title: 'AI Neural Interfaces Service - Brain-Computer Integration Solutions',
+  description: 'Transform your business with AI neural interfaces. Achieve 95% accuracy in neural signal interpretation and 300% productivity gains with brain-computer integration technology.',
+  keywords: 'neural interfaces, brain-computer interface, AI neural technology, neural signal processing, human-computer interaction',
 };
 
-export default function AINeuralInterfaces() {
+export default function AINeuralInterfacesService() {
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8">
-      <div className="mb-12">
-        <div className="flex items-center gap-2 mb-6">
-          <span className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-            NEW 2026
-          </span>
-          <span className="bg-gradient-to-r from-green-500 to-teal-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-            BREAKTHROUGH
-          </span>
-        </div>
-        <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-          AI Neural Interfaces
-        </h1>
-        <p className="text-2xl text-gray-600 mb-8 max-w-4xl">
-          Revolutionize human-AI interaction with direct brain-computer communication. 
-          Achieve 99% accuracy, 400% productivity gains, and unlock unprecedented human potential.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4">
-          <Link
-            href="/contact"
-            className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-blue-700 transition-all shadow-lg hover:shadow-xl text-center"
-          >
-            Get Started Today
-          </Link>
-          <Link
-            href="/case-studies/ai-neural-interface-success-2026"
-            className="border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-600 hover:text-white transition-colors text-center"
-          >
-            View Success Story
-          </Link>
-        </div>
+    <div className="max-w-6xl mx-auto px-4 py-12">
+      <div className="mb-8">
+        <Link href="/services" className="text-blue-600 hover:text-blue-700 transition-colors">
+          ← Back to Services
+        </Link>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-8 mb-16">
-        <div className="text-center">
-          <div className="text-4xl font-bold text-purple-600 mb-2">99%</div>
-          <div className="text-gray-600">Accuracy Rate</div>
-        </div>
-        <div className="text-center">
-          <div className="text-4xl font-bold text-blue-600 mb-2">400%</div>
-          <div className="text-gray-600">Productivity Gain</div>
-        </div>
-        <div className="text-center">
-          <div className="text-4xl font-bold text-green-600 mb-2">$100M</div>
-          <div className="text-gray-600">ROI Achieved</div>
-        </div>
-      </div>
-
-      <div className="mb-16">
-        <h2 className="text-4xl font-bold text-gray-900 mb-8 text-center">
-          Revolutionary Neural Interface Solutions
-        </h2>
-        <div className="grid md:grid-cols-2 gap-8">
-          <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-lg">
-            <div className="w-16 h-16 bg-gradient-to-r from-purple-100 to-blue-100 rounded-lg flex items-center justify-center mb-6">
-              <span className="text-2xl">🧠</span>
+      <div className="grid lg:grid-cols-3 gap-12">
+        {/* Main Content */}
+        <div className="lg:col-span-2">
+          <header className="mb-8">
+            <div className="flex items-center gap-2 mb-4">
+              <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                REVOLUTIONARY SERVICE
+              </span>
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Direct Brain-Computer Interface</h3>
-            <p className="text-gray-600 mb-6">
-              Enable direct communication between the human brain and AI systems with 99% accuracy. 
-              Convert thoughts to text, commands, and data input instantly.
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+              AI Neural Interfaces Service
+            </h1>
+            <p className="text-xl text-gray-600 mb-6">
+              Revolutionary brain-computer integration technology that enables direct communication 
+              between human cognition and AI systems, delivering unprecedented productivity gains and operational efficiency.
             </p>
-            <ul className="space-y-2 text-gray-600">
-              <li>• Non-invasive neural sensors</li>
-              <li>• Real-time signal processing</li>
-              <li>• 99% accuracy rate</li>
-              <li>• Zero learning curve</li>
-            </ul>
-          </div>
-          <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-lg">
-            <div className="w-16 h-16 bg-gradient-to-r from-green-100 to-teal-100 rounded-lg flex items-center justify-center mb-6">
-              <span className="text-2xl">⚡</span>
+            <div className="flex items-center gap-6 text-sm text-gray-500">
+              <span>Starting from $2,999/month</span>
+              <span>95% accuracy guarantee</span>
+              <span>24/7 support</span>
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Cognitive Enhancement</h3>
-            <p className="text-gray-600 mb-6">
-              Augment human cognitive capabilities with AI-powered assistance. Access vast knowledge 
-              bases, perform complex calculations, and solve problems at superhuman speeds.
-            </p>
-            <ul className="space-y-2 text-gray-600">
-              <li>• Memory augmentation</li>
-              <li>• Real-time problem solving</li>
-              <li>• Knowledge base access</li>
-              <li>• Enhanced creativity</li>
-            </ul>
-          </div>
-          <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-lg">
-            <div className="w-16 h-16 bg-gradient-to-r from-blue-100 to-purple-100 rounded-lg flex items-center justify-center mb-6">
-              <span className="text-2xl">🤝</span>
+          </header>
+
+          {/* Key Benefits */}
+          <section className="mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Choose AI Neural Interfaces?</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-xl border border-purple-200">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">🧠 Cognitive Enhancement</h3>
+                <p className="text-gray-700 mb-4">
+                  Achieve 300% productivity gains through real-time cognitive augmentation, 
+                  allowing professionals to access AI-powered insights directly through thought-based queries.
+                </p>
+                <div className="bg-white/50 p-3 rounded-lg">
+                  <p className="text-sm text-purple-800 font-semibold">
+                    Result: 250% faster decision-making in complex scenarios
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-200">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">⚡ Hands-Free Operations</h3>
+                <p className="text-gray-700 mb-4">
+                  Enable hands-free control of complex systems in manufacturing, logistics, 
+                  and healthcare environments, improving safety and operational efficiency.
+                </p>
+                <div className="bg-white/50 p-3 rounded-lg">
+                  <p className="text-sm text-blue-800 font-semibold">
+                    Result: 40% reduction in workplace accidents
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-r from-green-50 to-teal-50 p-6 rounded-xl border border-green-200">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">🔒 Privacy & Security</h3>
+                <p className="text-gray-700 mb-4">
+                  Advanced encryption and privacy protection ensure secure neural signal processing 
+                  with zero risk of data exposure or unauthorized access.
+                </p>
+                <div className="bg-white/50 p-3 rounded-lg">
+                  <p className="text-sm text-green-800 font-semibold">
+                    Result: 100% privacy protection with enterprise-grade security
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-r from-orange-50 to-red-50 p-6 rounded-xl border border-orange-200">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">🎯 Real-Time Processing</h3>
+                <p className="text-gray-700 mb-4">
+                  Sub-100ms neural response times enable real-time interaction with AI systems, 
+                  providing instant feedback and seamless human-AI collaboration.
+                </p>
+                <div className="bg-white/50 p-3 rounded-lg">
+                  <p className="text-sm text-orange-800 font-semibold">
+                    Result: Real-time AI assistance with instant response
+                  </p>
+                </div>
+              </div>
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Human-AI Collaboration</h3>
-            <p className="text-gray-600 mb-6">
-              Seamless collaboration between humans and AI systems. Share thoughts, ideas, and 
-              insights in real-time for unprecedented productivity gains.
-            </p>
-            <ul className="space-y-2 text-gray-600">
-              <li>• Thought-based communication</li>
-              <li>• Shared neural workspaces</li>
-              <li>• Real-time collaboration</li>
-              <li>• Enhanced team dynamics</li>
-            </ul>
-          </div>
-          <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-lg">
-            <div className="w-16 h-16 bg-gradient-to-r from-orange-100 to-red-100 rounded-lg flex items-center justify-center mb-6">
-              <span className="text-2xl">🛡️</span>
+          </section>
+
+          {/* Technical Specifications */}
+          <section className="mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Technical Specifications</h2>
+            <div className="bg-gray-50 rounded-xl p-8">
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">Performance Metrics</h3>
+                  <ul className="space-y-3">
+                    <li className="flex justify-between">
+                      <span className="text-gray-700">Neural Signal Accuracy</span>
+                      <span className="font-bold text-purple-600">95%</span>
+                    </li>
+                    <li className="flex justify-between">
+                      <span className="text-gray-700">Response Time</span>
+                      <span className="font-bold text-blue-600">&lt;100ms</span>
+                    </li>
+                    <li className="flex justify-between">
+                      <span className="text-gray-700">Battery Life</span>
+                      <span className="font-bold text-green-600">16+ hours</span>
+                    </li>
+                    <li className="flex justify-between">
+                      <span className="text-gray-700">Wireless Range</span>
+                      <span className="font-bold text-orange-600">50 meters</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">Compatibility</h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+                      <span className="text-gray-700">Windows 10/11</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+                      <span className="text-gray-700">macOS 12+</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+                      <span className="text-gray-700">Linux Ubuntu 20.04+</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+                      <span className="text-gray-700">Cloud Integration</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Advanced Security</h3>
-            <p className="text-gray-600 mb-6">
-              Enterprise-grade security and privacy protection. Ensure complete data protection 
-              and regulatory compliance with advanced encryption and monitoring.
-            </p>
-            <ul className="space-y-2 text-gray-600">
-              <li>• End-to-end encryption</li>
-              <li>• Privacy protection</li>
-              <li>• Regulatory compliance</li>
-              <li>• Secure data transmission</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+          </section>
 
-      <div className="mb-16">
-        <h2 className="text-4xl font-bold text-gray-900 mb-8 text-center">
-          Implementation Process
-        </h2>
-        <div className="grid md:grid-cols-4 gap-6">
-          <div className="text-center">
-            <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">1</div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Assessment</h3>
-            <p className="text-gray-600">Evaluate your organization's needs and readiness for neural interface technology.</p>
-          </div>
-          <div className="text-center">
-            <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-teal-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">2</div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Design</h3>
-            <p className="text-gray-600">Create a customized neural interface solution tailored to your specific requirements.</p>
-          </div>
-          <div className="text-center">
-            <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">3</div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Deploy</h3>
-            <p className="text-gray-600">Implement the solution with comprehensive training and support for your team.</p>
-          </div>
-          <div className="text-center">
-            <div className="w-16 h-16 bg-gradient-to-r from-orange-600 to-red-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">4</div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Optimize</h3>
-            <p className="text-gray-600">Continuously monitor and optimize performance for maximum ROI and user satisfaction.</p>
-          </div>
-        </div>
-      </div>
+          {/* Implementation Process */}
+          <section className="mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Implementation Process</h2>
+            <div className="space-y-6">
+              <div className="flex items-start gap-4 p-6 bg-white border border-gray-200 rounded-xl shadow-sm">
+                <div className="w-12 h-12 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center font-bold text-lg">
+                  1
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Assessment & Planning</h3>
+                  <p className="text-gray-600 mb-3">
+                    Comprehensive evaluation of your current workflows and identification of optimal neural interface applications.
+                  </p>
+                  <div className="bg-purple-50 p-3 rounded-lg">
+                    <p className="text-sm text-purple-800">
+                      <strong>Duration:</strong> 1-2 weeks | <strong>Deliverable:</strong> Custom implementation roadmap
+                    </p>
+                  </div>
+                </div>
+              </div>
 
-      <div className="mb-16">
-        <h2 className="text-4xl font-bold text-gray-900 mb-8 text-center">
-          Pricing & Packages
-        </h2>
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-lg">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Starter</h3>
-            <div className="text-4xl font-bold text-gray-900 mb-6">$50K<span className="text-lg text-gray-600">/month</span></div>
-            <ul className="space-y-3 text-gray-600 mb-8">
-              <li>• Up to 100 users</li>
-              <li>• Basic neural interface hardware</li>
-              <li>• Standard AI integration</li>
-              <li>• 24/7 support</li>
-              <li>• Basic training program</li>
-            </ul>
-            <Link
-              href="/contact"
-              className="w-full bg-gray-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors text-center block"
-            >
-              Get Started
-            </Link>
-          </div>
-          <div className="bg-white border-2 border-purple-600 rounded-xl p-8 shadow-lg relative">
-            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-              <span className="bg-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">Most Popular</span>
+              <div className="flex items-start gap-4 p-6 bg-white border border-gray-200 rounded-xl shadow-sm">
+                <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center font-bold text-lg">
+                  2
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Hardware Setup & Calibration</h3>
+                  <p className="text-gray-600 mb-3">
+                    Installation and calibration of neural interface hardware with personalized training for each user.
+                  </p>
+                  <div className="bg-blue-50 p-3 rounded-lg">
+                    <p className="text-sm text-blue-800">
+                      <strong>Duration:</strong> 2-3 weeks | <strong>Deliverable:</strong> Fully calibrated neural interface system
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4 p-6 bg-white border border-gray-200 rounded-xl shadow-sm">
+                <div className="w-12 h-12 bg-green-100 text-green-600 rounded-full flex items-center justify-center font-bold text-lg">
+                  3
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">AI Integration & Training</h3>
+                  <p className="text-gray-600 mb-3">
+                    Integration with your existing AI systems and comprehensive training program for optimal performance.
+                  </p>
+                  <div className="bg-green-50 p-3 rounded-lg">
+                    <p className="text-sm text-green-800">
+                      <strong>Duration:</strong> 3-4 weeks | <strong>Deliverable:</strong> Fully integrated AI-neural system
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4 p-6 bg-white border border-gray-200 rounded-xl shadow-sm">
+                <div className="w-12 h-12 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center font-bold text-lg">
+                  4
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Full Deployment & Support</h3>
+                  <p className="text-gray-600 mb-3">
+                    Complete deployment across your organization with ongoing support, monitoring, and optimization.
+                  </p>
+                  <div className="bg-orange-50 p-3 rounded-lg">
+                    <p className="text-sm text-orange-800">
+                      <strong>Duration:</strong> Ongoing | <strong>Deliverable:</strong> 24/7 support and continuous optimization
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Professional</h3>
-            <div className="text-4xl font-bold text-gray-900 mb-6">$150K<span className="text-lg text-gray-600">/month</span></div>
-            <ul className="space-y-3 text-gray-600 mb-8">
-              <li>• Up to 500 users</li>
-              <li>• Advanced neural interface hardware</li>
-              <li>• Custom AI integration</li>
-              <li>• Priority support</li>
-              <li>• Comprehensive training program</li>
-              <li>• Custom development</li>
-            </ul>
-            <Link
-              href="/contact"
-              className="w-full bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors text-center block"
-            >
-              Get Started
-            </Link>
-          </div>
-          <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-lg">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise</h3>
-            <div className="text-4xl font-bold text-gray-900 mb-6">Custom</div>
-            <ul className="space-y-3 text-gray-600 mb-8">
-              <li>• Unlimited users</li>
-              <li>• Premium neural interface hardware</li>
-              <li>• Full AI ecosystem integration</li>
-              <li>• Dedicated support team</li>
-              <li>• Executive training program</li>
-              <li>• Custom development</li>
-              <li>• On-site implementation</li>
-            </ul>
-            <Link
-              href="/contact"
-              className="w-full bg-gray-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors text-center block"
-            >
-              Contact Sales
-            </Link>
-          </div>
+          </section>
         </div>
-      </div>
 
-      <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl p-12 mb-16">
-        <div className="text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Organization?</h2>
-          <p className="text-xl mb-8 opacity-90 max-w-3xl mx-auto">
-            Join the neural interface revolution and unlock unprecedented human potential. 
-            Schedule a consultation to discover how this technology can transform your organization.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
-            >
-              Schedule Consultation
-            </Link>
-            <Link
-              href="/case-studies/ai-neural-interface-success-2026"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-600 transition-colors"
-            >
-              View Success Story
-            </Link>
-          </div>
-        </div>
-      </div>
+        {/* Sidebar */}
+        <div className="lg:col-span-1">
+          <div className="sticky top-8">
+            {/* Pricing Card */}
+            <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-2xl p-8 mb-8">
+              <h3 className="text-2xl font-bold mb-4">Service Pricing</h3>
+              <div className="space-y-4">
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                  <div className="text-3xl font-bold mb-2">$2,999</div>
+                  <div className="text-sm opacity-90">per month</div>
+                  <div className="text-xs opacity-75 mt-1">Basic Package</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                  <div className="text-3xl font-bold mb-2">$4,999</div>
+                  <div className="text-sm opacity-90">per month</div>
+                  <div className="text-xs opacity-75 mt-1">Professional Package</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                  <div className="text-3xl font-bold mb-2">$7,999</div>
+                  <div className="text-sm opacity-90">per month</div>
+                  <div className="text-xs opacity-75 mt-1">Enterprise Package</div>
+                </div>
+              </div>
+              <div className="mt-6 pt-6 border-t border-white/20">
+                <Link
+                  href="/contact"
+                  className="block w-full bg-white text-purple-600 text-center py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  Get Quote
+                </Link>
+              </div>
+            </div>
 
-      <div className="mb-16">
-        <h2 className="text-4xl font-bold text-gray-900 mb-8 text-center">
-          Frequently Asked Questions
-        </h2>
-        <div className="space-y-6">
-          <div className="bg-white border border-gray-200 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Is neural interface technology safe?</h3>
-            <p className="text-gray-600">
-              Yes, our neural interface technology is completely safe and non-invasive. We use advanced 
-              sensors that don't require any surgical procedures and have been tested extensively for 
-              safety and effectiveness.
-            </p>
-          </div>
-          <div className="bg-white border border-gray-200 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-gray-900 mb-3">How long does implementation take?</h3>
-            <p className="text-gray-600">
-              Implementation typically takes 3-6 months, depending on the size of your organization 
-              and the complexity of your requirements. We provide comprehensive training and support 
-              throughout the process.
-            </p>
-          </div>
-          <div className="bg-white border border-gray-200 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-gray-900 mb-3">What kind of ROI can we expect?</h3>
-            <p className="text-gray-600">
-              Our clients typically see 300-500% productivity gains and achieve ROI within 12-18 months. 
-              The exact ROI depends on your specific use case and implementation scale.
-            </p>
-          </div>
-          <div className="bg-white border border-gray-200 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Is this technology compatible with our existing systems?</h3>
-            <p className="text-gray-600">
-              Yes, our neural interface technology is designed to integrate seamlessly with existing 
-              enterprise systems and workflows. We provide comprehensive integration support and 
-              customization as needed.
-            </p>
+            {/* Contact Card */}
+            <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-200">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Ready to Get Started?</h3>
+              <p className="text-gray-600 mb-6">
+                Schedule a consultation to discuss how AI neural interfaces can transform your business operations.
+              </p>
+              <div className="space-y-3">
+                <a
+                  href="/contact"
+                  className="block w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all"
+                >
+                  Schedule Consultation
+                </a>
+                <a
+                  href="tel:+13024640950"
+                  className="block w-full border-2 border-purple-600 text-purple-600 text-center py-3 rounded-lg font-semibold hover:bg-purple-600 hover:text-white transition-all"
+                >
+                  Call +1 302 464 0950
+                </a>
+              </div>
+              <div className="mt-6 pt-6 border-t border-gray-200 text-sm text-gray-500">
+                <p>📧 kleber@ziontechgroup.com</p>
+                <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+              </div>
+            </div>
+
+            {/* Related Services */}
+            <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-200 mt-8">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Related Services</h3>
+              <div className="space-y-4">
+                <Link href="/services/ai-quantum-computing" className="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                  <h4 className="font-semibold text-gray-900">AI Quantum Computing</h4>
+                  <p className="text-sm text-gray-600">1000x faster optimization</p>
+                </Link>
+                <Link href="/services/ai-synthetic-data" className="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                  <h4 className="font-semibold text-gray-900">AI Synthetic Data</h4>
+                  <p className="text-sm text-gray-600">Privacy-preserving ML</p>
+                </Link>
+                <Link href="/services/ai-space-technology" className="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                  <h4 className="font-semibold text-gray-900">AI Space Technology</h4>
+                  <p className="text-sm text-gray-600">Autonomous operations</p>
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </div>

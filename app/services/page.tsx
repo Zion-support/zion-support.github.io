@@ -154,13 +154,35 @@ export default function ServicesPage() {
         'Quality Validation',
         'Real-time Generation'
       ],
-      popular: true,
+      popular: false,
       icon: '🔒',
       benefits: [
         '90% privacy protection guaranteed',
         '50% faster AI development',
         '$3M+ annual cost savings',
         'Full GDPR/HIPAA compliance'
+      ]
+    },
+    {
+      id: 'ai-quantum-computing',
+      title: 'AI Quantum Computing Services',
+      description: 'Revolutionary quantum AI solutions delivering 1000x faster processing and unprecedented optimization capabilities.',
+      price: '$49,999',
+      features: [
+        '1000x Faster Processing',
+        'Quantum Optimization Algorithms',
+        'Real-time Decision Making',
+        'Advanced Quantum Models',
+        '24/7 Quantum Monitoring',
+        'Custom Quantum Development'
+      ],
+      popular: true,
+      icon: '⚛️',
+      benefits: [
+        '1000x processing speed increase',
+        '85% operational cost reduction',
+        '99.9% system uptime guarantee',
+        'Industry-leading competitive advantage'
       ]
     }
   ];

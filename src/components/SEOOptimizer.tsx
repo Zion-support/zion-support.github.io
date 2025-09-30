@@ -1,5 +1,24 @@
 import React, { useEffect } from 'react';
 
+// Hook for getting SEO data based on pathname
+export const useSEOData = (pathname: string) => {
+  const seoData = {
+    title: 'Zion Tech Group - Leading AI & Technology Solutions',
+    description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises. Expert consulting, cloud services, and innovative technology implementations.',
+    keywords: ['AI solutions', 'quantum computing', 'digital transformation', 'cloud services', 'enterprise technology'],
+    canonical: `https://zion.app${pathname}`,
+    ogTitle: 'Zion Tech Group - AI & Technology Solutions',
+    ogDescription: 'Transform your business with cutting-edge AI and technology solutions.',
+    ogImage: 'https://zion.app/og-image.jpg',
+    twitterCard: 'summary_large_image',
+    twitterTitle: 'Zion Tech Group - AI & Technology Solutions',
+    twitterDescription: 'Transform your business with cutting-edge AI and technology solutions.',
+    twitterImage: 'https://zion.app/twitter-image.jpg'
+  };
+
+  return seoData;
+};
+
 interface SEOOptimizerProps {
   title?: string;
   description?: string;
@@ -177,4 +196,5 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   return null;
 };
 
+export { SEOOptimizer };
 export default SEOOptimizer;
