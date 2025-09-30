@@ -2,6 +2,46 @@
 
 const promoted = [
   {
+<<<<<<< HEAD
+    href: '/blog/ai-2025-september-30-new-governed-agent-patterns',
+    title: 'New Governed Agent Patterns',
+    desc: 'Approvals, verifiers, budgets, and rollback for safe autonomy.',
+    emoji: '🛡️',
+    pill: 'New • Sep 30, 2025',
+    theme: 'from-indigo-600 to-sky-600',
+  },
+  {
+    href: '/blog/ai-2025-september-30-autonomous-finops-scorecards',
+    title: 'Autonomous FinOps Scorecards',
+    desc: 'KPI-linked budgets and routing that prevent cost regressions.',
+    emoji: '📊',
+    pill: 'New • Sep 30, 2025',
+    theme: 'from-emerald-600 to-teal-600',
+  },
+  {
+    href: '/blog/genai-2025-oct-01-quality-tiers-v3',
+    title: 'GenAI Quality Tiers v3',
+    desc: 'Intent-aware tier routing with semantic caches and KPI scorecards for safe savings.',
+    emoji: '🧪',
+    pill: 'New • Oct 01, 2025',
+    theme: 'from-purple-600 to-indigo-600',
+  },
+  {
+    href: '/blog/edge-2025-oct-01-consentless-journeys-blueprint',
+    title: 'Consentless Journeys Blueprint',
+    desc: 'Edge-native personalization <100ms with zero‑PII analytics and signed evaluations.',
+    emoji: '⚡',
+    pill: 'New • Oct 01, 2025',
+    theme: 'from-cyan-600 to-blue-600',
+  },
+  {
+    href: '/blog/ai-product-launch-checklist-2025',
+    title: 'AI Product Launch Checklist 2025',
+    desc: 'Graduate pilots to production with safety, reliability, and measurable ROI.',
+    emoji: '🚀',
+    pill: 'New • Sep 30, 2025',
+    theme: 'from-cyan-600 to-blue-600',
+=======
     href: '/blog/ai-2026-hyperintelligence-breakthrough',
     title: 'AI 2026: Hyperintelligence Breakthrough',
     desc: 'Revolutionary cognitive enhancement achieving 10,000x performance with sub-millisecond decision-making.',
@@ -16,11 +56,25 @@ const promoted = [
     emoji: '🏆',
     pill: 'MEGA SUCCESS • Jan 26, 2026',
     theme: 'from-green-600 to-emerald-600',
+>>>>>>> origin/cursor/create-and-deploy-new-content-6d13
   },
   {
     href: '/blog/ai-2026-neural-architecture-search-breakthrough',
     title: 'Neural Architecture Search 2026',
     desc: 'Revolutionary NAS algorithms that design optimal neural architectures 1000x faster than humans.',
+<<<<<<< HEAD
+    emoji: '🧠',
+    pill: 'New • Jan 15, 2026',
+    theme: 'from-purple-600 to-indigo-600',
+  },
+  {
+    href: '/blog/ai-2026-neuromorphic-breakthrough',
+    title: 'Neuromorphic Breakthrough 2026',
+    desc: 'Brain-inspired computing with event-driven inference and on-device learning for 1000x efficiency.',
+    emoji: '🧠',
+    pill: 'New • Jan 30, 2026',
+    theme: 'from-fuchsia-600 to-purple-600',
+=======
     emoji: '🔬',
     pill: 'New • Jan 15, 2026',
     theme: 'from-cyan-600 to-blue-600',
@@ -32,6 +86,7 @@ const promoted = [
     emoji: '🚀',
     pill: 'NEW SERVICE • Jan 25, 2026',
     theme: 'from-orange-600 to-red-600',
+>>>>>>> origin/cursor/create-and-deploy-new-content-6d13
   },
 ];
 
