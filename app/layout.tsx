@@ -31,7 +31,6 @@ export default function RootLayout({
                 <Link href="/services" className="text-gray-700 hover:text-blue-600 transition-colors">Services</Link>
                 <Link href="/blog" className="text-gray-700 hover:text-blue-600 transition-colors">Blog</Link>
                 <Link href="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors">Case Studies</Link>
-                <Link href="/contact" className="text-gray-700 hover:text-blue-600 transition-colors">Contact</Link>
               </nav>
             </div>
           </div>
@@ -59,7 +58,6 @@ export default function RootLayout({
                 <ul className="space-y-2 text-gray-400">
                   <li><Link href="/blog" className="hover:text-white">Blog</Link></li>
                   <li><Link href="/case-studies" className="hover:text-white">Case Studies</Link></li>
-                  <li><Link href="/contact" className="hover:text-white">Contact</Link></li>
                 </ul>
               </div>
               <div>
