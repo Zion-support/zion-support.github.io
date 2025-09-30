@@ -98,6 +98,31 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     priority: 2,
     startDate: '2025-09-30',
   }
+  ,
+  {
+    id: 'eu-ai-act-2026-playbook',
+    title: '📜 EU AI Act Playbook 2026 — Move Fast, Stay Compliant',
+    description: 'Model registries, audit trails, and KPI‑linked policy tests you can ship today.',
+    ctaText: 'Read the playbook',
+    ctaLink: '/blog/ai-governance-eu-ai-act-2026',
+    variant: 'info',
+    icon: '📜',
+    featured: true,
+    priority: 1,
+    startDate: '2025-10-30',
+  },
+  {
+    id: 'edge-rag-privacy-2026',
+    title: '🛰️ Edge RAG — Private Answers in <100ms',
+    description: 'Hybrid retrieval with signed configs and TTL windows. No PII, all insights.',
+    ctaText: 'Explore Edge RAG',
+    ctaLink: '/blog/edge-rag-privacy-preserving-2026',
+    variant: 'success',
+    icon: '🛰️',
+    featured: true,
+    priority: 2,
+    startDate: '2025-10-30',
+  }
 ];
 
 export const getActiveEnhancedBanners = (): EnhancedPromotionalBanner[] => {
