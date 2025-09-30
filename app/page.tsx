@@ -234,6 +234,129 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* NEW SEPT 2025 Content Banner */}
+        <section className="py-16 bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 text-white">
+          <div className="max-w-6xl mx-auto px-4">
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <span className="bg-white text-green-600 px-6 py-2 rounded-full text-sm font-bold uppercase tracking-wide animate-pulse">
+                🎉 New Content Alert — September 2025
+              </span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-center mb-6">
+              Fresh Insights: Enterprise AI Revolution
+            </h2>
+            <p className="text-xl text-center text-green-50 max-w-3xl mx-auto mb-10">
+              Explore our latest in-depth guides on AI transformation — featuring real-world results, 
+              implementation strategies, and proven ROI frameworks from 500+ successful deployments.
+            </p>
+            
+            <div className="grid md:grid-cols-2 gap-8">
+              <Link href="/blog/ai-agents-revolution-sept-2025" className="group">
+                <div className="bg-white text-gray-900 rounded-xl p-8 shadow-2xl hover:shadow-3xl transition-all transform hover:-translate-y-1">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-blue-500 rounded-lg flex items-center justify-center">
+                      <span className="text-3xl">🤖</span>
+                    </div>
+                    <div>
+                      <span className="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-bold mb-2">
+                        FEATURED
+                      </span>
+                      <h3 className="text-2xl font-bold group-hover:text-purple-600 transition-colors">
+                        The AI Agents Revolution
+                      </h3>
+                    </div>
+                  </div>
+                  <p className="text-gray-600 mb-6 leading-relaxed">
+                    Discover how autonomous AI agents are achieving 85% automation rates, $5M+ cost savings, 
+                    and 10x productivity gains. Complete implementation roadmap included.
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <div className="flex gap-4 text-sm text-gray-500">
+                      <span>📅 Sept 30, 2025</span>
+                      <span>⏱️ 12 min read</span>
+                    </div>
+                    <div className="text-purple-600 font-bold group-hover:text-purple-700">
+                      Read Now →
+                    </div>
+                  </div>
+                  <div className="mt-6 pt-6 border-t border-gray-200">
+                    <div className="grid grid-cols-3 gap-4 text-center">
+                      <div>
+                        <div className="text-2xl font-bold text-purple-600">85%</div>
+                        <div className="text-xs text-gray-600">Automation Rate</div>
+                      </div>
+                      <div>
+                        <div className="text-2xl font-bold text-green-600">$5M+</div>
+                        <div className="text-xs text-gray-600">Cost Savings</div>
+                      </div>
+                      <div>
+                        <div className="text-2xl font-bold text-blue-600">10x</div>
+                        <div className="text-xs text-gray-600">Productivity</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+
+              <Link href="/blog/generative-ai-enterprise-sept-2025" className="group">
+                <div className="bg-white text-gray-900 rounded-xl p-8 shadow-2xl hover:shadow-3xl transition-all transform hover:-translate-y-1">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center">
+                      <span className="text-3xl">⚡</span>
+                    </div>
+                    <div>
+                      <span className="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-bold mb-2">
+                        COMPREHENSIVE GUIDE
+                      </span>
+                      <h3 className="text-2xl font-bold group-hover:text-blue-600 transition-colors">
+                        Generative AI in Enterprise
+                      </h3>
+                    </div>
+                  </div>
+                  <p className="text-gray-600 mb-6 leading-relaxed">
+                    The complete 2025 implementation guide achieving 400% ROI and 65% cost reduction. 
+                    Step-by-step roadmap with proven strategies from 500+ deployments.
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <div className="flex gap-4 text-sm text-gray-500">
+                      <span>📅 Sept 30, 2025</span>
+                      <span>⏱️ 15 min read</span>
+                    </div>
+                    <div className="text-blue-600 font-bold group-hover:text-blue-700">
+                      Read Now →
+                    </div>
+                  </div>
+                  <div className="mt-6 pt-6 border-t border-gray-200">
+                    <div className="grid grid-cols-3 gap-4 text-center">
+                      <div>
+                        <div className="text-2xl font-bold text-blue-600">400%</div>
+                        <div className="text-xs text-gray-600">Average ROI</div>
+                      </div>
+                      <div>
+                        <div className="text-2xl font-bold text-green-600">65%</div>
+                        <div className="text-xs text-gray-600">Cost Reduction</div>
+                      </div>
+                      <div>
+                        <div className="text-2xl font-bold text-purple-600">6-12</div>
+                        <div className="text-xs text-gray-600">Months to ROI</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </div>
+            
+            <div className="text-center mt-10">
+              <Link
+                href="/blog"
+                className="inline-block bg-white text-green-600 px-10 py-4 rounded-lg font-bold text-lg hover:bg-green-50 transition-colors shadow-xl"
+              >
+                Explore All Latest Insights →
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* Dynamic Content Showcase */}
         <ContentShowcase />
         
