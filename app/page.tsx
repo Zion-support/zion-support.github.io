@@ -777,9 +777,7 @@ export default function HomePage() {
         <div className="max-w-4xl mx-auto px-4">
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
             Transform Your Business with
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-600">
-              {' '}AI-Powered Solutions
-            </span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-600"> AI-Powered Solutions</span>
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
             Zion Tech Group delivers cutting-edge AI micro SaaS services, cloud automation, 
@@ -819,6 +817,9 @@ export default function HomePage() {
           </div>
         </section>
         {/* Featured Services */}
+        {
+          /* eslint-disable-next-line */
+        }
         <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
@@ -897,9 +898,6 @@ export default function HomePage() {
             />
           </div>
         </section>
-
-      {/* Interactive AI Calculator 2025 */}
-      <InteractiveAICalculator2025 />
 
       {/* Interactive AI Calculator 2025 */}
       <InteractiveAICalculator2025 />
