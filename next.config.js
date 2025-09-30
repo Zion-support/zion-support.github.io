@@ -1,5 +1,5 @@
-const { i18n } = require('./next-i18next.config');
+import { i18n } from './next-i18next.config.js';
 
-module.exports = {
+export default {
   i18n,
 };

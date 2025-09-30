@@ -1,34 +1,23 @@
-<<<<<<< HEAD
-export { default } from "./ErrorBoundary";
-=======
 import React from "react";
 
-type Props = React.PropsWithChildren;
-
-interface State {
-  hasError: boolean;
-}
-
-export default class EnhancedErrorBoundary extends React.Component<Props, State> {
-  constructor(props: Props) {
+class EnhancedErrorBoundary extends React.Component<{ children: React.ReactNode }, { hasError: boolean }> {
+  constructor(props: { children: React.ReactNode }) {
     super(props);
     this.state = { hasError: false };
   }
 
-  static getDerivedStateFromError(): State {
+  static getDerivedStateFromError(): { hasError: boolean } {
     return { hasError: true };
   }
 
-  componentDidCatch(_error: unknown) {
-    // no-op stub
-  }
+  componentDidCatch(): void {}
 
   render(): React.ReactNode {
     if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
+      return null;
     }
     return this.props.children;
   }
 }
->>>>>>> origin/main
 
+export default EnhancedErrorBoundary;
