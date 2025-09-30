@@ -192,3 +192,40 @@ newArticles2025.push(
     tags: ["Analytics", "Privacy", "Edge", "DP"]
   }
 );
+
+// Jan 15, 2026 – Fresh featured items to surface on Home
+newArticles2025.push(
+  {
+    id: "genai-routing-playbook-2026",
+    title: "GenAI Routing Playbook 2026: Quality Tiers Under Budget",
+    description: "Tier models, cache prompts, and route by SLA to cut spend 30–60% with stable UX.",
+    category: "GenAI",
+    publishedDate: "2025-10-30",
+    featured: true,
+    link: "/blog/genai-routing-playbook-2026",
+    readTime: "8 min read",
+    tags: ["GenAI", "Routing", "Budgets", "Caching"]
+  },
+  {
+    id: "agent-runbooks-zero-regret-2026",
+    title: "Agent Runbooks 2026: Zero‑Regret Releases with Budgets & Rollback",
+    description: "Budgeted actions, approvals, and instant rollback so agent updates are safe at scale.",
+    category: "AI Operations",
+    publishedDate: "2025-10-30",
+    featured: true,
+    link: "/blog/agent-runbooks-zero-regret-2026",
+    readTime: "7 min read",
+    tags: ["Agents", "Runbooks", "Budgets", "Rollback"]
+  },
+  {
+    id: "edge-rag-privacy-preserving-2026",
+    title: "Edge RAG 2026: Private Retrieval with Sub‑100ms Answers",
+    description: "Hybrid edge retrieval with signed configs, TTL windows, and on‑device caches. Fast answers without PII risk.",
+    category: "GenAI",
+    publishedDate: "2025-10-30",
+    featured: true,
+    link: "/blog/edge-rag-privacy-preserving-2026",
+    readTime: "8 min read",
+    tags: ["RAG", "Edge", "Privacy", "Latency"]
+  }
+);
