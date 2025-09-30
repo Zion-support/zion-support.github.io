@@ -19,6 +19,20 @@ interface ContentItem {
 
 const contentItems: ContentItem[] = [
   {
+    id: 'ai-reliable-agent-evals-2025',
+    title: 'Reliable Agent Evals 2025: Measure and Guardrail Autonomy',
+    excerpt: 'Design evals that tie safety budgets, approvals, and KPIs to dependable autonomy.',
+    readTime: '9 min read',
+    category: 'Autonomous AI',
+    href: '/blog/ai-reliable-agent-evals-2025',
+    featured: true,
+    publishedDate: '2025-09-30',
+    metrics: [
+      { value: '0.3%', label: 'Policy Violations' },
+      { value: '↗ KPI', label: 'On-Target Outcomes' }
+    ]
+  },
+  {
     id: 'ai-cost-calculator-2026',
     title: 'AI Cost Calculator 2026: Optimize Your AI Spending',
     excerpt: 'Cut LLM costs by up to 70% with routing, caching, compression, and quantization.',

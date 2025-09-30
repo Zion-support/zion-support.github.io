@@ -108,6 +108,7 @@ import Revolutionary2026ContentBanner from '../components/Revolutionary2026Conte
 import UltimateContent2026Showcase from '../components/UltimateContent2026Showcase';
 import Revolutionary2027ContentBanner from '../components/Revolutionary2027ContentBanner';
 import UltimateContent2027Showcase from '../components/UltimateContent2027Showcase';
+// import { ContentAnnouncementBanner, September2025ContentShowcase } from '../components/September2025ContentBanners';
 import NewContentShowcase2026 from '../src/components/NewContentShowcase2026';
 import AIMetaCognitiveRevolutionBanner from '../components/AIMetaCognitiveRevolutionBanner';
 import AINeuromorphicRevolutionBanner from '../components/AINeuromorphicRevolutionBanner';
@@ -164,6 +165,7 @@ export default function HomePage() {
   return (
     <>
       <div className="animate-fade-in">
+      {/** September 2025 banners temporarily disabled to avoid import bloat */}
       {/* 🔔 New Article Promo: Reliable Agent Evals 2025 */}
       <section className="py-6 bg-gradient-to-r from-indigo-700 via-purple-700 to-fuchsia-700 text-white">
         <div className="max-w-6xl mx-auto px-4">
