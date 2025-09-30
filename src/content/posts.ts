@@ -1230,6 +1230,37 @@ posts.push(
   }
 );
 
+// Sept 30, 2025 – New articles to expand catalog and promote on homepage
+posts.push(
+  {
+    slug: "ai-enterprise-autonomy-blueprint-2026",
+    title: "Enterprise Autonomy Blueprint 2026: From Pilots to Production",
+    description: "Reference playbooks for taking autonomous systems from PoCs to governed, reliable production at scale.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "edge-trustless-analytics-2026",
+    title: "Edge Trustless Analytics 2026: Verifiable, PII‑Safe Insights",
+    description: "Scoped IDs, on‑device aggregation, and signed attestations for analytics teams—no PII collection required.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "agentic-control-planes-blueprint-2027",
+    title: "Agentic Control Planes 2027: Budgets, Policies, Instant Recovery",
+    description: "Operate fleets of agents with budgeted actions, policy gates, live canaries, and one‑click rollback.",
+    category: "AI Engineering",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  }
+);
+
 // Sept 30, 2025 – New posts for homepage promotion and advertising (added)
 posts.push(
   {
