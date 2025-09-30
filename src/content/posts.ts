@@ -1385,6 +1385,37 @@ posts.push(
   }
 );
 
+// Mar 2026 – Brand-new posts to advertise and surface on Home
+posts.push(
+  {
+    slug: "ai-governance-pr-policy-tests-2026",
+    title: "PR Policy Tests 2026: Guardrails That Accelerate Delivery",
+    description: "Lightweight CI policy tests wired to product KPIs—catch risks without slowing teams.",
+    category: "AI Governance",
+    publishedAt: "2025-10-31",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-zero-pii-analytics-2026",
+    title: "Zero‑PII Edge Analytics 2026: Insights Under 100ms",
+    description: "Scoped IDs, on‑device aggregation, and DP noise for actionable analytics with zero PII collection.",
+    category: "Analytics",
+    publishedAt: "2025-10-31",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "agent-release-zero-regret-2026",
+    title: "Zero‑Regret Agent Releases 2026: Budgets, Canaries, Rollback",
+    description: "Budget risky actions, add KPI‑linked canaries, and enable instant rollback for safe automation.",
+    category: "AI Operations",
+    publishedAt: "2025-10-31",
+    featured: true,
+    readTime: "8 min read"
+  }
+);
+
 // Sept 30, 2025 – Additional new posts to advertise on homepage
 posts.push(
   {

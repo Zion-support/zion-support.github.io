@@ -155,9 +155,9 @@ const Home = () => {
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "Scorecards Wired to KPIs (Q4 2026)", category: "AI Governance", link: "/blog/ai-governance-scorecards-2026-q4" },
-            { title: "Bust Edge Cold Starts <100ms", category: "Edge Computing", link: "/blog/edge-inference-cold-starts-2026" },
-            { title: "Agent Release Playbooks (Q4 2026)", category: "AI Operations", link: "/blog/agent-release-playbooks-2026-q4" },
+            { title: "PR Policy Tests 2026", category: "AI Governance", link: "/blog/ai-governance-pr-policy-tests-2026" },
+            { title: "Zero‑PII Edge Analytics 2026", category: "Analytics", link: "/blog/edge-zero-pii-analytics-2026" },
+            { title: "Zero‑Regret Agent Releases 2026", category: "AI Operations", link: "/blog/agent-release-zero-regret-2026" },
             { title: "Edge RAG 2026", category: "GenAI", link: "/blog/edge-rag-privacy-preserving-2026" },
             { title: "GenAI Routing Playbook 2026", category: "GenAI", link: "/blog/genai-routing-playbook-2026" }
           ]}
