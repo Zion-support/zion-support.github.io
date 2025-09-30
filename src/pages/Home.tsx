@@ -148,14 +148,14 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="New: Live Scorecards + Edge Personalization + Agent Runbooks"
-          description="Ship faster with KPI‑linked guardrails, private <100ms personalization, and safe agent releases."
+          title="New: Exec Scorecards + Edge Insights + Agent Runbooks"
+          description="Outcome‑linked scorecards, consent‑safe edge analytics, and safe agent releases."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "Live Scorecards That Prevent Regressions", category: "AI Governance", link: "/blog/ai-governance-live-scorecards-2026" },
-            { title: "Edge Real‑Time Personalization", category: "Edge Computing", link: "/blog/edge-real-time-personalization-2026" },
-            { title: "Agent Release Runbooks", category: "AI Operations", link: "/blog/agent-release-runbooks-2026" },
+            { title: "Exec Scorecards Quickstart 2025", category: "AI Strategy", link: "/blog/ai-exec-scorecards-quickstart-2025-v2" },
+            { title: "Consent‑Safe Edge Insights 2025", category: "Analytics", link: "/blog/edge-consentless-insights-2025" },
+            { title: "Agent Runbooks Quickstart 2025", category: "AI Operations", link: "/blog/agent-runbooks-quickstart-2025-v2" },
             { title: "Edge RAG 2026", category: "GenAI", link: "/blog/edge-rag-privacy-preserving-2026" },
             { title: "GenAI Routing Playbook 2026", category: "GenAI", link: "/blog/genai-routing-playbook-2026" }
           ]}
@@ -189,16 +189,16 @@ const Home = () => {
                 <div className="text-white font-semibold">AI Autonomous Ops Blueprint 2026</div>
                 <div className="text-zion-slate-light text-sm mt-1">Budgets, live traces, and one‑click rollback for safe autonomy.</div>
               </Link>
-              <Link to="/blog/edge-private-analytics-2026" className="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
-                <div className="text-cyan-300 text-xs mb-2">Analytics</div>
-                <div className="text-white font-semibold">Edge Private Analytics 2026</div>
-                <div className="text-zion-slate-light text-sm mt-1">Scoped IDs, on‑device metrics, and DP noise without PII.</div>
-              </Link>
-              <Link to="/blog/agent-safety-runbooks-2026" className="block rounded-lg border border-white/10 p-4 hover:border-fuchsia-400/40 transition-colors">
-                <div className="text-fuchsia-300 text-xs mb-2">AI Governance</div>
-                <div className="text-white font-semibold">Agent Safety Runbooks 2026</div>
-                <div className="text-zion-slate-light text-sm mt-1">Approvals, budgets, and KPI‑linked canary evals.</div>
-              </Link>
+                <Link to="/blog/edge-consentless-insights-2025" className="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
+                  <div className="text-cyan-300 text-xs mb-2">Analytics</div>
+                  <div className="text-white font-semibold">Consent‑Safe Edge Insights 2025</div>
+                  <div className="text-zion-slate-light text-sm mt-1">Scoped IDs, on‑device metrics, and DP noise without PII.</div>
+                </Link>
+                <Link to="/blog/agent-runbooks-quickstart-2025-v2" className="block rounded-lg border border-white/10 p-4 hover:border-fuchsia-400/40 transition-colors">
+                  <div className="text-fuchsia-300 text-xs mb-2">AI Operations</div>
+                  <div className="text-white font-semibold">Agent Runbooks Quickstart 2025</div>
+                  <div className="text-zion-slate-light text-sm mt-1">Budgets, approvals, and KPI‑linked canary evals.</div>
+                </Link>
             </div>
           </div>
         </div>

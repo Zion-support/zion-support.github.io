@@ -1261,6 +1261,37 @@ posts.push(
   }
 );
 
+// Sept 30, 2025 – Brand-new content (to be advertised on homepage)
+posts.push(
+  {
+    slug: "ai-exec-scorecards-quickstart-2025-v2",
+    title: "Executive Scorecards Quickstart 2025: Prove AI Value in 30 Days",
+    description: "Spin up outcome‑linked scorecards that tie SLIs to business KPIs with instant rollback triggers.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "edge-consentless-insights-2025",
+    title: "Consent‑Safe Edge Insights 2025: Scoped IDs, On‑Device Metrics",
+    description: "Actionable analytics without PII using scoped identifiers, edge aggregation, and DP noise under strict SLAs.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "agent-runbooks-quickstart-2025-v2",
+    title: "Agent Runbooks Quickstart 2025: Budgets, Approvals, Rollback",
+    description: "A starter kit for safe agent releases—budgeted actions, approval flows, and KPI‑linked canaries.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  }
+);
+
 // Sept 30, 2025 – New promotional articles to surface on homepage
 posts.push(
   {
