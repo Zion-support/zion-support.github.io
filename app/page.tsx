@@ -586,9 +586,6 @@ export default function HomePage() {
                 </div>
               </div>
             </Link>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
             <Link href="/blog/ai-enterprise-transformation-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
@@ -627,7 +624,6 @@ export default function HomePage() {
                 </div>
               </div>
             </Link>
->>>>>>> origin/feature/revolutionary-ai-2026-content
             <Link href="/blog/ai-trends-2025-predictions" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
@@ -647,16 +643,8 @@ export default function HomePage() {
                 </div>
               </div>
             </Link>
-<<<<<<< HEAD
-            <Link href="/case-studies/ai-supply-chain-optimization-2025" className="group">
-=======
-            <Link href="/case-studies/fortune-500-ai-transformation-success" className="group">
->>>>>>> origin/new-content-integration-main
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
-=======
             <Link href="/case-studies/global-manufacturing-ai-transformation" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200 hover:border-green-200">
->>>>>>> origin/cursor/create-and-deploy-new-content-537c
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
                     Success Story
@@ -667,23 +655,13 @@ export default function HomePage() {
                   Global Manufacturing AI Transformation: $50M Savings & 95% Efficiency Gains
                 </h3>
                 <p className="text-gray-600 mb-4">
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  See how a global manufacturer achieved 60% cost reduction and 90% efficiency improvement, saving $12M annually.
-=======
-                  See how a Fortune 500 manufacturing company achieved 300% ROI and $12M annual savings through comprehensive AI transformation.
->>>>>>> origin/new-content-integration-main
-=======
                   See how a Fortune 500 manufacturer achieved $50M annual savings and 95% efficiency improvements across 47 countries.
->>>>>>> origin/cursor/create-and-deploy-new-content-537c
                 </p>
                 <div className="flex items-center text-green-600 font-semibold group-hover:text-green-700 transition-colors">
                   View Case Study →
                 </div>
               </div>
             </Link>
-<<<<<<< HEAD
-=======
             <Link href="/blog/ai-autonomous-agents-2025" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
@@ -937,7 +915,6 @@ export default function HomePage() {
                 </div>
               </div>
             </Link>
->>>>>>> origin/feature/revolutionary-ai-2026-content
           </div>
 
           <div className="text-center">
