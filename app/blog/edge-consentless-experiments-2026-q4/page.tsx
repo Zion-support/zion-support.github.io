@@ -3,6 +3,29 @@ import React from 'react';
 
 export const metadata = {
   title: 'Edge Consentless Experiments 2026 Q4: <100ms A/B Without PII',
+  description: 'Scoped IDs, on‑device metrics, and DP noise for compliant global experiments.',
+};
+
+export default function Page() {
+  return (
+    <main className="max-w-3xl mx-auto px-6 py-16">
+      <h1 className="text-3xl font-bold mb-4">Edge Consentless Experiments 2026 Q4</h1>
+      <p className="text-gray-600 mb-8">Sub‑100ms experiments using scoped IDs, device aggregation, and DP noise.</p>
+      <div className="prose prose-invert">
+        <p>
+          Learn how to run high‑speed, privacy‑preserving experiments globally without collecting PII,
+          using scoped identifiers, on‑device aggregation, and differential privacy techniques.
+        </p>
+      </div>
+    </main>
+  );
+}
+
+// @ts-nocheck
+import React from 'react';
+
+export const metadata = {
+  title: 'Edge Consentless Experiments 2026 Q4: <100ms A/B Without PII',
   description: 'Scoped IDs, on‑device metrics, and DP noise enabling compliant, global experimentation under strict SLAs.'
 };
 
