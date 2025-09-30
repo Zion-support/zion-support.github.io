@@ -1,7 +1,11 @@
 <<<<<<< HEAD:src/pages/Home.tsx.backup.1759185684
+<<<<<<< HEAD:src/pages/Home.tsx.backup.1759185684
 =======
 import React from 'react';
 >>>>>>> cursor/create-and-deploy-new-content-ff76:src/pages/Home.tsx
+=======
+import { Helmet } from "react-helmet-async";
+>>>>>>> 9a2b7a08498a5b655365060e31fa3ed04a742c13:src/pages/Home.tsx
 import {
   ArrowRight,
   Award,

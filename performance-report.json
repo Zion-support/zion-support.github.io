@@ -1,24 +1,12 @@
 {
-  "timestamp": "2025-09-29T12:34:35.674Z",
-  "optimizations": {
-    "bundleOptimization": "Enabled with code splitting",
-    "imageOptimization": "Recommended for production",
-    "cssOptimization": "Tailwind CSS with purging enabled",
-    "performanceMonitoring": "Core Web Vitals tracking enabled"
-  },
+  "timestamp": "2025-09-30T01:30:08.943Z",
+  "bundleSize": "Analyzed",
+  "coreWebVitals": "Monitored",
   "recommendations": [
-    "Enable gzip compression on server",
-    "Implement service worker for caching",
-    "Use CDN for static assets",
-    "Optimize images with WebP/AVIF formats",
     "Implement lazy loading for images",
-    "Use preconnect for external domains"
-  ],
-  "metrics": {
-    "targetLCP": "< 2.5s",
-    "targetFID": "< 100ms",
-    "targetCLS": "< 0.1",
-    "targetFCP": "< 1.8s",
-    "targetTTFB": "< 800ms"
-  }
+    "Use code splitting for large components",
+    "Optimize third-party libraries",
+    "Enable gzip compression",
+    "Use CDN for static assets"
+  ]
 }

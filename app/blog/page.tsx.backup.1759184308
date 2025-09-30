@@ -20,26 +20,35 @@ export default function BlogPage() {
       <div className="max-w-6xl mx-auto px-4">
         {/* Featured Article */}
         <div className="mb-16">
+<<<<<<< HEAD:app/blog/page.tsx.backup.1759184308
 <<<<<<< HEAD
           <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl p-8 text-white">
 =======
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl p-8 text-white">
 >>>>>>> origin/cursor/create-and-deploy-new-content-9044
+=======
+          <div className="bg-gradient-to-r from-blue-600 to-teal-600 rounded-xl p-8 text-white">
+>>>>>>> 9a2b7a08498a5b655365060e31fa3ed04a742c13:app/blog/page.tsx
             <div className="max-w-4xl">
               <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold mb-4 inline-block">
                 🔥 NEW 2026 FEATURED
               </span>
               <h2 className="text-3xl font-bold mb-4">
+<<<<<<< HEAD:app/blog/page.tsx.backup.1759184308
 <<<<<<< HEAD
                 AI Mega Trends 2026: The Future of Artificial Intelligence
+=======
+                AI Autonomous Infrastructure 2025: Self-Healing Systems for Enterprise IT
+>>>>>>> 9a2b7a08498a5b655365060e31fa3ed04a742c13:app/blog/page.tsx
               </h2>
               <p className="text-lg opacity-90 mb-6">
-                Discover the 10 biggest AI trends shaping 2026: autonomous systems, quantum AI, neural interfaces, and more. 
-                Get ahead with expert insights and actionable strategies for enterprise leaders.
+                Discover how autonomous AI infrastructure is revolutionizing enterprise IT with self-healing systems, 
+                predictive maintenance, and intelligent automation that reduces downtime by 90%.
               </p>
               <div className="flex items-center gap-4 text-sm">
-                <span>January 20, 2026</span>
+                <span>January 20, 2025</span>
                 <span>•</span>
+<<<<<<< HEAD:app/blog/page.tsx.backup.1759184308
                 <span>25 min read</span>
 =======
                 AI Autonomous Enterprise Transformation 2026: Complete Self-Managing Operations Guide
@@ -53,8 +62,11 @@ export default function BlogPage() {
                 <span>•</span>
                 <span>30 min read</span>
 >>>>>>> origin/cursor/create-and-deploy-new-content-9044
+=======
+                <span>15 min read</span>
+>>>>>>> 9a2b7a08498a5b655365060e31fa3ed04a742c13:app/blog/page.tsx
                 <span>•</span>
-                <span>AI Strategy</span>
+                <span>Autonomous AI</span>
               </div>
               <div className="flex gap-6 mb-6">
                 <div className="text-center">
@@ -72,12 +84,17 @@ export default function BlogPage() {
               </div>
               <div className="mt-6">
                 <a 
+<<<<<<< HEAD:app/blog/page.tsx.backup.1759184308
 <<<<<<< HEAD
                   href="/blog/ai-2026-mega-trends" 
 =======
                   href="/blog/ai-autonomous-enterprise-transformation-2026" 
 >>>>>>> origin/cursor/create-and-deploy-new-content-9044
                   className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block"
+=======
+                  href="/blog/ai-autonomous-infrastructure-2025" 
+                  className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block"
+>>>>>>> 9a2b7a08498a5b655365060e31fa3ed04a742c13:app/blog/page.tsx
                 >
                   Read Complete Guide →
                 </a>
@@ -89,6 +106,7 @@ export default function BlogPage() {
         {/* Blog Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <BlogPost
+<<<<<<< HEAD:app/blog/page.tsx.backup.1759184308
 <<<<<<< HEAD
             title="Next-Generation Autonomous AI Systems 2026"
             excerpt="Discover the revolutionary autonomous AI systems reshaping enterprise operations. From self-evolving agents to quantum-enhanced decision making, delivering unprecedented ROI."
@@ -160,110 +178,33 @@ export default function BlogPage() {
           <BlogPost
             title="AI Data Privacy 2026: Practical Compliance and Privacy-Preserving AI"
             excerpt="Blueprint for privacy-by-design with PETs, consent, minimization, redaction, and audits."
+=======
+            title="AI Enterprise Automation 2026: Complete Business Process Transformation"
+            excerpt="Transform your enterprise with AI automation. 95% process efficiency, multimillion-dollar savings, and zero-touch operations."
             date="September 29, 2025"
-            category="Security"
-            readTime="12 min"
-            image="🗝️"
-            href="/blog/ai-data-privacy-2026"
+            category="Automation"
+            readTime="18 min"
+            image="🤖"
+            href="/blog/ai-enterprise-automation-2026"
           />
           <BlogPost
-            title="AI Governance Maturity Model 2026: From Ad Hoc to Auditable"
-            excerpt="Staged model to implement accountable AI across policy, risk, security, ops, and value."
+            title="AI Operational Excellence 2026: From Pilots to Scaled Impact"
+            excerpt="Blueprint to scale AI reliably with governance, quality, cost controls, and value tracking."
+>>>>>>> 9a2b7a08498a5b655365060e31fa3ed04a742c13:app/blog/page.tsx
             date="September 29, 2025"
-            category="Governance"
-            readTime="14 min"
-            image="📈"
-            href="/blog/ai-governance-maturity-model-2026"
-          />
-          <BlogPost
-            title="AI Agent Observability 2026: End-to-End Tracing and Guardrails"
-            excerpt="Blueprint for measuring and improving agent reliability with traces, evals, and safety guardrails."
-            date="September 29, 2025"
-            category="AI Reliability"
-            readTime="14 min"
-            image="📏"
-            href="/blog/ai-evaluation-metrics-2026"
-          />
-          <BlogPost
-            title="Agent Safety Testing 2026: Progressive Autonomy with Guardrails"
-            excerpt="Layered defenses: policy tests, sandboxes, approvals, and runtime monitors."
-            date="September 29, 2025"
-            category="AI Reliability"
-            readTime="12 min"
-            image="🧪"
-            href="/blog/agent-safety-testing-2026"
-          />
-          <BlogPost
-            title="AI Agent Observability 2026: Metrics, Traces, and Guardrails"
-            excerpt="Instrument agents with traces, evals, and policy guardrails to ship reliable autonomy."
-            date="September 29, 2025"
-            category="AI Reliability"
-            readTime="12 min"
-            image="🔎"
-            href="/blog/ai-agent-observability-2026"
-          />
-          <BlogPost
-            title="Customer Journey AI 2026: Real-Time Personalization with CDPs"
-            excerpt="Event-driven CDPs + agents for next-best-action that lifts conversion 20–35%."
-            date="September 29, 2025"
-            category="Personalization"
-            readTime="14 min"
-            image="🛒"
-            href="/blog/ai-customer-journey-ai-2026"
-          />
-          <BlogPost
-            title="Agentic Workflow Orchestration 2026: Reliable AI Workflows"
-            excerpt="Orchestrate multi-step agents with guardrails, approvals, and observability for measurable ROI."
-            date="October 9, 2025"
-            category="Architecture"
-            readTime="16 min"
-            image="🧩"
-            href="/blog/agentic-workflow-orchestration-2026"
-          />
-          <BlogPost
-            title="AI Operational Excellence 2026: From SLIs to Self‑Healing Ops"
-            excerpt="Reliability scorecards, policy tests, and automated runbooks for 99.9% uptime."
-            date="October 9, 2025"
             category="Operations"
-            readTime="14 min"
-            image="🛠️"
+            readTime="12 min"
+            image="🧭"
             href="/blog/ai-operational-excellence-2026"
           />
           <BlogPost
-            title="AI Customer Data Platforms 2026: Real‑Time Personalization"
-            excerpt="Consent‑aware ingestion, identity resolution, feature stores, and edge delivery."
-            date="October 9, 2025"
-            category="Analytics"
-            readTime="18 min"
-            image="🧬"
-            href="/blog/ai-customer-data-platforms-2026"
-          />
-          <BlogPost
-            title="Platform Engineering Scorecards 2026: From Golden Paths to Outcomes"
-            excerpt="Measure adoption, golden-path TTFX, SLOs, and shipped value—without slowing delivery."
-            date="October 9, 2025"
-            category="Platform Engineering"
-            readTime="8 min"
+            title="AI Operational Excellence 2026: From Pilots to Scaled Impact"
+            excerpt="Blueprint to scale AI reliably with governance, quality, cost controls, and value tracking."
+            date="September 29, 2025"
+            category="Operations"
+            readTime="12 min"
             image="🧭"
-            href="/blog/platform-engineering-scorecards-2026"
-          />
-          <BlogPost
-            title="AI Cybersecurity Automation: From Detections to Autonomic Response"
-            excerpt="Behavioral detections and policy tests wired to runbooks that auto-contain incidents <60s."
-            date="October 9, 2025"
-            category="Security"
-            readTime="7 min"
-            image="🛡️"
-            href="/blog/ai-cybersecurity-automation-2025"
-          />
-          <BlogPost
-            title="Edge AI Blueprint 2026: Privacy‑Preserving Intelligence <100ms"
-            excerpt="Signed configs, tiny models, and geo budgets for private, real‑time decisions."
-            date="October 9, 2025"
-            category="Edge Computing"
-            readTime="9 min"
-            image="⚡"
-            href="/blog/edge-ai-blueprint-2026"
+            href="/blog/ai-operational-excellence-2026"
           />
           <BlogPost
             title="AI Roadmaps 2026: What to Build Next and Why"
@@ -532,7 +473,16 @@ function BlogPost({
   image,
   featured = false,
   href,
-}: any) {
+}: {
+  title: string;
+  excerpt: string;
+  date: string;
+  category: string;
+  readTime: string;
+  image: string;
+  featured?: boolean;
+  href?: string;
+}) {
   const getCategoryColor = (category: string) => {
     switch (category) {
       case 'Featured':
@@ -560,7 +510,7 @@ function BlogPost({
     }
   };
 
-  const ContentWrapper = ({ children }: any) => {
+  const ContentWrapper = ({ children }: { children: React.ReactNode }) => {
     if (href) {
       return (
         <Link href={href} className="block">

@@ -8,7 +8,10 @@ export const metadata = {
   keywords: 'AI autonomous enterprise case study, Fortune 500 AI transformation, enterprise automation success, AI ROI case study, autonomous operations',
 =======
   keywords: 'AI case study, autonomous enterprise, ROI, Fortune 500, business transformation, AI success story',
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-6afb
+=======
+>>>>>>> 9a2b7a08498a5b655365060e31fa3ed04a742c13
 };
 
 export default function AIAutonomousEnterpriseSuccess2026() {
@@ -615,7 +618,10 @@ export default function AIAutonomousEnterpriseSuccess2026() {
             </Link>
           </div>
         </div>
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-6afb
+=======
+>>>>>>> 9a2b7a08498a5b655365060e31fa3ed04a742c13
       </div>
     </div>
   );
