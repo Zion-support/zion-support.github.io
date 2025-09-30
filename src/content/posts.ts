@@ -23,15 +23,9 @@ export const posts: BlogPost[] = [
     title: "AI Model Governance & Compliance 2025: Enterprise Frameworks",
     description: "Implement comprehensive AI governance achieving 100% regulatory compliance with EU AI Act, GDPR, and SOC 2. Learn model versioning, bias detection, and automated compliance reporting.",
     category: "AI Governance",
-    publishedAt: "2025-09-30",
     publishedAt: "2025-09-29",
     featured: true,
     readTime: "7 min read"
-  },
-  {
-    publishedAt: "2025-09-29",
-    featured: true,
-    readTime: "22 min read"
   },
   {
     slug: "ai-edge-inference-optimization-2025",
@@ -767,6 +761,10 @@ export const posts: BlogPost[] = [
     description: "Budget actions, tokens, and tools so teams move quickly with safe, measurable automation.",
     category: "AI Governance",
     publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
     slug: "ai-autonomous-incident-runbooks-2025",
     title: "AI Autonomous Incident Runbooks: Budgeted Actions and Instant Rollback",
     description: "Design incident playbooks with explicit budgets, approvals, and safe automated rollback.",
@@ -844,6 +842,10 @@ export const posts: BlogPost[] = [
     description: "Monitor model performance in real‑time with automated drift detection and instant rollbacks.",
     category: "MLOps",
     publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
     slug: "privacy-first-feature-flags-2025",
     title: "Privacy‑First Feature Flags: Zero‑Regret Rollouts at the Edge",
     description: "Scoped IDs, on‑device filters, and geo budgets for safe global releases under 100ms.",
@@ -1059,6 +1061,9 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "16 min read"
+  }
+  ,
+  {
     slug: "privacy-first-observability-quickstart-2025",
     title: "Privacy‑First Observability Quickstart: Scoped IDs and Redaction",
     description: "Ship signal‑rich telemetry without PII risk using scoped identifiers and field‑level filters.",
@@ -1066,8 +1071,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-29",
     featured: false,
     readTime: "6 min read"
-  }
-  ,
+  },
   {
     slug: "ai-sre-blueprints-2026",
     title: "AI SRE Blueprints 2026: Error Budgets, Rollbacks, and Live Traces",
@@ -1105,6 +1109,37 @@ posts.push(
     description: "Battle-tested runbooks for safe LLM releases—risk budgets, rollback triggers, and KPI-linked canaries.",
     category: "AI Operations",
     publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "8 min read"
+  }
+);
+
+// Additional freshly published articles
+posts.push(
+  {
+    slug: "ai-reliability-scorecards-2026",
+    title: "AI Reliability Scorecards 2026: SLIs, Error Budgets, Rollbacks",
+    description: "Operationalize AI quality with SLIs, KPI-linked error budgets, and instant rollback triggers.",
+    category: "AI Operations",
+    publishedAt: "2025-10-14",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "privacy-first-analytics-2026",
+    title: "Privacy‑First Analytics 2026: Scoped IDs and On‑Device Telemetry",
+    description: "Ship signal‑rich analytics without PII using scoped identifiers, DP noise, and edge processing.",
+    category: "Analytics",
+    publishedAt: "2025-10-14",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "genai-routing-playbook-2026",
+    title: "GenAI Routing Playbook 2026: Quality Tiers Under Budget",
+    description: "Tier models, cache prompts, and route by SLA to cut spend 30–60% with stable UX.",
+    category: "GenAI",
+    publishedAt: "2025-10-14",
     featured: true,
     readTime: "8 min read"
   }
