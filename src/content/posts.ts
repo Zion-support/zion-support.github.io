@@ -10,6 +10,33 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-e2e-tracing-2025",
+    title: "E2E AI Tracing: From Prompt to Outcome KPIs",
+    description: "Connect prompts, tools, and UX to measurable KPIs to prove ROI and prevent regressions.",
+    category: "Observability",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-personalization-2026",
+    title: "Edge Personalization: Privacy‑First, Sub‑100ms Experiences",
+    description: "On‑device signals, signed configs, and micro‑models for private, fast personalization.",
+    category: "Edge Computing",
+    publishedAt: "2025-10-15",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "policy-tests-quickstart-2025",
+    title: "Policy Tests Quickstart: Ship Fast, Stay Safe",
+    description: "Lightweight CI policy tests that catch risks while preserving engineering velocity.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
     slug: "ai-unified-observability-platform-2025",
     title: "Unified AI Observability Platform: Complete Stack Visibility in 2025",
     description: "Master end-to-end AI observability with distributed tracing, real-time metrics, and intelligent alerting. Achieve 99.9% system reliability with unified monitoring across your entire AI stack.",
