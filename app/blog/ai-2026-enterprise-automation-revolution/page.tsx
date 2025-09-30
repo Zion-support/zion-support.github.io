@@ -1,11 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI Enterprise Automation Revolution 2026: Complete Business Transformation Guide',
+  title: 'AI Enterprise Automation Revolution 2026: Complete Business Transformation Guide | Zion Tech Group',
   description: 'Discover how AI automation is revolutionizing enterprise operations in 2026. Achieve 400% ROI, 85% cost reduction, and 95% efficiency gains with our comprehensive implementation guide.',
   keywords: 'AI enterprise automation, business process automation, AI transformation, enterprise AI, automation ROI, digital transformation, AI implementation',
   openGraph: {
@@ -16,13 +14,6 @@ export const metadata: Metadata = {
     authors: ['Zion Tech Group'],
     tags: ['AI', 'Automation', 'Enterprise', 'Digital Transformation'],
   },
-=======
-
-export const metadata = {
-  title: 'AI Enterprise Automation Revolution 2026: Complete Transformation Guide',
-  description: 'Discover how AI enterprise automation is revolutionizing business operations in 2026. Achieve 95% automation, $50M+ savings, and complete digital transformation with our proven framework.',
-  keywords: 'AI enterprise automation, business process automation, AI transformation, enterprise AI, automation framework, digital transformation',
->>>>>>> origin/content-and-advertising-update-2026
 };
 
 export default function AIEnterpriseAutomationRevolution2026() {
