@@ -53,6 +53,7 @@ import InteractiveContentShowcase2026 from '../components/InteractiveContentShow
 import NewContent2026MegaBanner from '../components/NewContent2026MegaBanner';
 import AIRevolutionary2026Banner from '../components/AIRevolutionary2026Banner';
 import InteractiveAICalculator2026 from '../components/InteractiveAICalculator2026';
+import NewContent2026SuccessBanner from '../components/NewContent2026SuccessBanner';
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
@@ -136,6 +137,9 @@ export default function HomePage() {
       <div className="animate-fade-in">
       {/* Revolutionary Content 2026 Banner */}
       <RevolutionaryContent2026Banner />
+      
+      {/* New 2026 Success Story & Guide Banner */}
+      <NewContent2026SuccessBanner />
       
       {/* New 2026 Content Banners */}
       <NewContent2026MegaBanner />
@@ -511,19 +515,19 @@ export default function HomePage() {
                 </div>
               </div>
             </Link>
-            <Link href="/case-studies/ai-supply-chain-optimization-2025" className="group">
+            <Link href="/case-studies/fortune-500-ai-transformation-success" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
                     Success Story
                   </span>
-                  <span className="text-sm text-gray-500">Manufacturing</span>
+                  <span className="text-sm text-gray-500">Fortune 500</span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Supply Chain Optimization: 60% Cost Reduction & 90% Efficiency Gain
+                  Fortune 500 AI Transformation: $50M Savings Achieved
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  See how a global manufacturer achieved 60% cost reduction and 90% efficiency improvement, saving $12M annually.
+                  Learn how a Fortune 500 company achieved $50M annual savings, 300% ROI, and 90% efficiency improvement through comprehensive AI transformation.
                 </p>
                 <div className="flex items-center text-blue-600 font-semibold">
                   View Case Study →
@@ -616,17 +620,17 @@ export default function HomePage() {
               <h3 className="text-2xl font-bold mb-6">Latest Content Highlights</h3>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <div className="text-2xl">🎯</div>
+                  <div className="text-2xl">💰</div>
                   <div>
-                    <h4 className="font-semibold mb-1">Multimodal AI Integration 2025</h4>
-                    <p className="text-sm opacity-90">250% efficiency gains with text, voice, and video AI</p>
+                    <h4 className="font-semibold mb-1">Fortune 500 AI Success: $50M Savings</h4>
+                    <p className="text-sm opacity-90">Learn how a Fortune 500 company achieved 300% ROI</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <div className="text-2xl">⚡</div>
+                  <div className="text-2xl">🎯</div>
                   <div>
-                    <h4 className="font-semibold mb-1">Multimodal Customer Service Success</h4>
-                    <p className="text-sm opacity-90">80% faster response times and 60% cost reduction</p>
+                    <h4 className="font-semibold mb-1">AI Trends 2026 Comprehensive Guide</h4>
+                    <p className="text-sm opacity-90">Complete guide to enterprise AI transformation</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
