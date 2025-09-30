@@ -200,6 +200,34 @@ featuredBlogPosts.unshift(
   }
 );
 
+// New featured items to surface the latest posts
+featuredBlogPosts.unshift(
+  {
+    id: 'ai-autonomous-infra-blueprint-2026',
+    title: 'AI Autonomous Infra 2026',
+    description: 'Self‑healing, self‑optimizing, self‑scaling with budgets and live canaries',
+    link: '/blog/ai-autonomous-infra-blueprint-2026',
+    type: 'article',
+    featured: true
+  },
+  {
+    id: 'eu-ai-act-engineering-playbook-2026',
+    title: 'EU AI Act Engineering Playbook 2026',
+    description: 'Ship fast, stay compliant with attestations and policy tests',
+    link: '/blog/eu-ai-act-engineering-playbook-2026',
+    type: 'article',
+    featured: true
+  },
+  {
+    id: 'edge-rag-cold-starts-2026',
+    title: 'Edge RAG Cold‑Starts 2026',
+    description: 'Warm pools, prefetch, tiered caches for <100ms private answers',
+    link: '/blog/edge-rag-cold-starts-2026',
+    type: 'article',
+    featured: true
+  }
+);
+
 export const featuredServices: FeaturedItem[] = [
   {
     id: "ai-predictive-maintenance",

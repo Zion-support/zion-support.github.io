@@ -138,6 +138,20 @@ enhancedPromotionalBanners.push({
   startDate: '2025-09-30'
 });
 
+// Sept 30, 2025 – New homepage promo for latest content set
+enhancedPromotionalBanners.push({
+  id: 'sept30-autonomous-euai-edge-2025',
+  title: '🔥 New: Autonomous Infra, EU AI Act Playbook, Edge RAG Cold‑Starts',
+  description: 'Zero‑touch ops with budgets + live canaries, practical EU AI Act guardrails, and <100ms private answers with warm pools.',
+  ctaText: 'Explore the new content',
+  ctaLink: '/blog',
+  variant: 'success',
+  icon: '✨',
+  featured: true,
+  priority: 0,
+  startDate: '2025-09-30'
+});
+
 export const getActiveEnhancedBanners = (): EnhancedPromotionalBanner[] => {
   const now = new Date();
   return enhancedPromotionalBanners

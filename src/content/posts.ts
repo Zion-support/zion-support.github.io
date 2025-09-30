@@ -1846,3 +1846,35 @@ posts.push(
   }
 );
 
+
+// Sept 30, 2025 – New content set to advertise on the homepage
+posts.push(
+  {
+    slug: "ai-autonomous-infra-blueprint-2026",
+    title: "AI Autonomous Infra 2026: Self‑Healing, Self‑Optimizing, Self‑Scaling",
+    description: "Operable blueprints for zero‑touch platforms with budgets, live canaries, and instant rollback.",
+    category: "AI Engineering",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "eu-ai-act-engineering-playbook-2026",
+    title: "EU AI Act Engineering Playbook 2026: Ship Fast, Stay Compliant",
+    description: "Model registries, attestations, and KPI‑linked policy tests that engineers actually use.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-rag-cold-starts-2026",
+    title: "Edge RAG Cold‑Starts 2026: Warm Pools, Prefetch, Tiered Caches",
+    description: "Deliver fresh, private answers worldwide in <100ms with smart warmups and cache tiers.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  }
+);
+
