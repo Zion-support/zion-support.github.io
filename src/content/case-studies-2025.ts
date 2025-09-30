@@ -234,6 +234,150 @@ export const caseStudies2025: CaseStudy[] = [
     featured: true,
     publishedAt: "2025-09-30",
     readTime: "13 min read"
+  },
+  {
+    id: "telecom-ai-network-optimization",
+    slug: "telecom-ai-network-optimization",
+    title: "GlobalTelecom: AI Network Optimization Revolution",
+    client: "GlobalTelecom Inc",
+    industry: "Telecommunications",
+    description: "Transformed network operations with AI achieving 99.999% uptime, 60% cost reduction, and 10x capacity improvement through autonomous optimization.",
+    challenge: "Legacy networks with frequent outages, 55% utilization efficiency, high operational costs of $2B annually, and inability to predict network failures.",
+    solution: "Deployed AI-powered network optimization platform with autonomous traffic management, predictive maintenance, and self-healing capabilities across 100,000+ cell towers.",
+    results: [
+      {
+        metric: "Uptime Improvement",
+        value: "99.999%",
+        description: "From 99.5% to five-nines reliability"
+      },
+      {
+        metric: "Cost Reduction",
+        value: "60%",
+        description: "$1.2B annual savings in operations and maintenance"
+      },
+      {
+        metric: "Capacity Increase",
+        value: "10x",
+        description: "Network capacity without adding infrastructure"
+      },
+      {
+        metric: "Failure Prediction",
+        value: "99.5%",
+        description: "Accuracy in predicting network failures 48 hours ahead"
+      }
+    ],
+    technologies: ["AI Network Optimization", "Predictive Maintenance", "Autonomous Operations", "Machine Learning"],
+    featured: true,
+    publishedAt: "2025-09-30",
+    readTime: "17 min read"
+  },
+  {
+    id: "ecommerce-ai-personalization-engine",
+    slug: "ecommerce-ai-personalization-engine",
+    title: "ShopGlobal: AI Personalization Driving 400% Revenue Growth",
+    client: "ShopGlobal Corporation",
+    industry: "E-commerce",
+    description: "Achieved 400% revenue growth with AI personalization delivering perfect product recommendations and dynamic pricing in real-time across 50M+ customers.",
+    challenge: "Generic shopping experiences with 2% conversion rates, high cart abandonment (78%), and inability to personalize at scale for diverse customer base.",
+    solution: "Implemented AI-powered hyper-personalization engine analyzing browsing behavior, purchase history, and contextual signals to deliver individualized experiences for every customer.",
+    results: [
+      {
+        metric: "Revenue Growth",
+        value: "400%",
+        description: "Year-over-year revenue increase after AI deployment"
+      },
+      {
+        metric: "Conversion Rate",
+        value: "8x",
+        description: "Increased from 2% to 16% through personalization"
+      },
+      {
+        metric: "Cart Abandonment",
+        value: "72%",
+        description: "Reduced from 78% to 22% with AI interventions"
+      },
+      {
+        metric: "Customer LTV",
+        value: "3.5x",
+        description: "Lifetime value increase through personalized engagement"
+      }
+    ],
+    technologies: ["AI Personalization", "Real-Time Analytics", "Dynamic Pricing", "Behavioral AI"],
+    featured: true,
+    publishedAt: "2025-09-30",
+    readTime: "15 min read"
+  },
+  {
+    id: "energy-ai-grid-management",
+    slug: "energy-ai-grid-management",
+    title: "PowerGrid Solutions: AI-Powered Smart Grid Revolution",
+    client: "PowerGrid Solutions",
+    industry: "Energy",
+    description: "Revolutionized energy distribution with AI achieving 45% efficiency improvement, 100% renewable integration, and zero blackouts through intelligent grid management.",
+    challenge: "Inefficient grid with 35% energy waste, inability to integrate renewable sources, frequent blackouts affecting 5M+ customers, and $800M annual losses.",
+    solution: "Deployed AI-powered smart grid platform managing energy flow in real-time, predicting demand with 99% accuracy, and automatically balancing renewable and traditional sources.",
+    results: [
+      {
+        metric: "Efficiency Gain",
+        value: "45%",
+        description: "Energy distribution efficiency improvement"
+      },
+      {
+        metric: "Renewable Integration",
+        value: "100%",
+        description: "Seamless integration of solar and wind power"
+      },
+      {
+        metric: "Blackout Elimination",
+        value: "Zero",
+        description: "No unplanned outages in 18 months"
+      },
+      {
+        metric: "Cost Savings",
+        value: "$640M",
+        description: "Annual savings from reduced waste and optimization"
+      }
+    ],
+    technologies: ["AI Grid Management", "Predictive Analytics", "Real-Time Optimization", "Renewable Integration"],
+    featured: true,
+    publishedAt: "2025-09-30",
+    readTime: "16 min read"
+  },
+  {
+    id: "insurance-ai-claims-processing",
+    slug: "insurance-ai-claims-processing",
+    title: "SecureLife Insurance: AI Claims Processing Transformation",
+    client: "SecureLife Insurance Group",
+    industry: "Insurance",
+    description: "Transformed claims processing with AI achieving 99.2% fraud detection, 95% faster processing, and 40% cost reduction while improving customer satisfaction.",
+    challenge: "Manual claims processing taking 45-60 days, 12% fraud rate costing $500M annually, poor customer satisfaction (55%), and processing costs of $1.2B yearly.",
+    solution: "Implemented AI-powered claims processing system with intelligent document analysis, fraud detection, and automated decision-making for routine claims.",
+    results: [
+      {
+        metric: "Processing Speed",
+        value: "95%",
+        description: "From 45 days to 2 days average processing time"
+      },
+      {
+        metric: "Fraud Detection",
+        value: "99.2%",
+        description: "Accuracy in identifying fraudulent claims saving $450M"
+      },
+      {
+        metric: "Cost Reduction",
+        value: "40%",
+        description: "$480M annual savings in processing costs"
+      },
+      {
+        metric: "Customer Satisfaction",
+        value: "92%",
+        description: "Improved from 55% to 92% satisfaction rating"
+      }
+    ],
+    technologies: ["AI Claims Processing", "Fraud Detection AI", "Document Intelligence", "Natural Language Processing"],
+    featured: true,
+    publishedAt: "2025-09-30",
+    readTime: "14 min read"
   }
 ];
 
