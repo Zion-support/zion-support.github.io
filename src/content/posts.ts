@@ -10,6 +10,24 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-2025-sept-30-platform-roi-scorecards-v2",
+    title: "Platform ROI Scorecards v2 — Proving Value in Weeks",
+    description: "KPI-linked developer scorecards, golden paths, and adoption funnels that quantify platform ROI in 4–8 weeks.",
+    category: "Platform Engineering",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "10 min read"
+  },
+  {
+    slug: "edge-2025-sept-30-consentless-metrics-v3",
+    title: "Consentless Metrics v3 — Zero‑PII Signals under 100ms",
+    description: "Scoped IDs, on‑device aggregation, DP noise, and signed attestations for privacy‑preserving analytics worldwide.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
     slug: "ai-2026-governed-agent-runbooks",
     title: "AI 2026: Governed Agent Runbooks — Budgets, Canaries, Rollback",
     description: "Production checklists for safe autonomy: budgeted actions, KPI‑linked canaries, instant rollback.",

@@ -150,13 +150,13 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="New: Zero‑Regret Agent Releases + E2E AI Tracing"
-          description="Budgeted actions, KPI‑linked canaries, and rollback + trace tokens → KPIs."
+          title="New: Platform ROI Scorecards v2 + Consentless Metrics v3"
+          description="Golden paths that prove ROI in weeks + zero‑PII telemetry under 100ms."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "Zero‑Regret Agent Releases 2026", category: "AI Operations", link: "/blog/agent-release-zero-regret-2026" },
-            { title: "E2E AI Tracing 2026", category: "Observability", link: "/blog/ai-2026-e2e-ai-tracing" },
+            { title: "Platform ROI Scorecards v2", category: "Platform Engineering", link: "/blog/ai-2025-sept-30-platform-roi-scorecards-v2" },
+            { title: "Consentless Metrics v3", category: "Analytics", link: "/blog/edge-2025-sept-30-consentless-metrics-v3" },
             { title: "Edge Rate Limiter Blueprint 2026", category: "Edge Computing", link: "/blog/edge-rate-limiter-blueprint-2026" },
             { title: "AI 2027: Operational Scorecards", category: "AI Operations", link: "/blog/ai-2027-operational-scorecards" },
             { title: "AI 2027: Autonomous Roadmaps", category: "AI Strategy", link: "/blog/ai-2027-autonomous-roadmaps" },
@@ -220,6 +220,16 @@ const Home = () => {
             </div>
             {/* Freshly added posts */}
             <div className="grid md:grid-cols-2 gap-4 mt-4">
+              <Link to="/blog/ai-2025-sept-30-platform-roi-scorecards-v2" className="block rounded-lg border border-white/10 p-4 hover:border-emerald-400/40 transition-colors">
+                <div className="text-emerald-300 text-xs mb-2">Platform Engineering</div>
+                <div className="text-white font-semibold">Platform ROI Scorecards v2</div>
+                <div className="text-zion-slate-light text-sm mt-1">Prove platform impact in weeks with KPI-linked scorecards.</div>
+              </Link>
+              <Link to="/blog/edge-2025-sept-30-consentless-metrics-v3" className="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
+                <div className="text-cyan-300 text-xs mb-2">Analytics</div>
+                <div className="text-white font-semibold">Consentless Metrics v3</div>
+                <div className="text-zion-slate-light text-sm mt-1">Zero‑PII telemetry with DP noise and attestations.</div>
+              </Link>
               <Link to="/blog/ai-2027-operational-risk-budgets" className="block rounded-lg border border-white/10 p-4 hover:border-amber-400/40 transition-colors">
                 <div className="text-amber-300 text-xs mb-2">AI Operations</div>
                 <div className="text-white font-semibold">AI 2027: Operational Risk Budgets</div>
@@ -230,11 +240,7 @@ const Home = () => {
                 <div className="text-white font-semibold">AI 2026: Reliability Runbooks v4</div>
                 <div className="text-zion-slate-light text-sm mt-1">Budgeted actions, KPI canaries, and instant rollback—v4 playbooks.</div>
               </Link>
-              <Link to="/blog/edge-2026-consentless-metrics-v2" className="block rounded-lg border border-white/10 p-4 hover:border-rose-400/40 transition-colors">
-                <div className="text-rose-300 text-xs mb-2">Analytics</div>
-                <div className="text-white font-semibold">Edge 2026: Consentless Metrics v2</div>
-                <div className="text-zion-slate-light text-sm mt-1">Zero‑PII signals at &lt;100ms with scoped IDs, edge aggregation, DP.</div>
-              </Link>
+              
             </div>
             {/* Newly created articles – highlight */}
             <div className="grid md:grid-cols-3 gap-4 mt-4">
