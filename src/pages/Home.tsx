@@ -130,6 +130,24 @@ const Home = () => {
         <div className="container mx-auto px-6 pt-8">
           <September30MegaBanner2025 />
         </div>
+        {/* Fresh Today: advertise newly added content */}
+        <div className="container mx-auto px-6 mt-6">
+          <div className="rounded-xl border border-purple-400/30 bg-purple-500/10 p-6">
+            <div className="text-white text-sm mb-3">Fresh today</div>
+            <div className="grid md:grid-cols-2 gap-4">
+              <Link to="/blog/genai-2025-oct-01-quality-tiers-v3" className="block rounded-lg border border-white/10 p-4 hover:border-purple-400/40 transition-colors">
+                <div className="text-purple-300 text-xs mb-2">GenAI</div>
+                <div className="text-white font-semibold">GenAI Quality Tiers v3</div>
+                <div className="text-zion-slate-light text-sm mt-1">50% savings with stable UX using tier routing and eval gates.</div>
+              </Link>
+              <Link to="/blog/ai-2025-oct-01-privacy-first-observability-v2" className="block rounded-lg border border-white/10 p-4 hover:border-indigo-400/40 transition-colors">
+                <div className="text-indigo-300 text-xs mb-2">Observability</div>
+                <div className="text-white font-semibold">Privacy‑First Observability v2</div>
+                <div className="text-zion-slate-light text-sm mt-1">User‑centric traces without PII using scoped IDs and redaction.</div>
+              </Link>
+            </div>
+          </div>
+        </div>
         
         {/* Enhanced Promotional Banners */}
         {getFeaturedBanners().slice(0, 4).map((banner) => (
