@@ -20,50 +20,250 @@ export interface CaseStudy {
 
 export const caseStudies2025: CaseStudy[] = [
   {
-    id: "global-tech-ai-security-transformation",
-    slug: "global-tech-ai-security-transformation",
-    title: "TechGlobal: AI-Native Security Achieving Zero Breaches",
-    client: "TechGlobal Corporation",
-    industry: "Technology",
-    description: "Transformed enterprise security with AI-native operations achieving 99.9% threat prevention, zero breaches in 24 months, and 87% cost reduction in security operations.",
-    challenge: "Traditional SOC overwhelmed with 2M+ daily alerts, 18-hour average incident response time, and $45M annual breach costs. Manual security processes unable to scale with threat volume.",
-    solution: "Deployed comprehensive AI-native security operations with autonomous threat prevention, real-time zero-day detection, and sub-5s incident response. Implemented distributed AI training infrastructure and automated governance achieving 100% policy compliance.",
+    id: "fintech-ai-fraud-detection-revolution-2025",
+    slug: "fintech-ai-fraud-detection-revolution-2025",
+    title: "FinTech Global: AI Fraud Detection Saves $950M Annually",
+    client: "FinTech Global Corporation",
+    industry: "Financial Technology",
+    description: "Deployed real-time AI fraud detection achieving 99.98% accuracy, $950M annual savings, and 98% reduction in false positives across 200M+ daily transactions.",
+    challenge: "Legacy fraud detection missing 35% of fraudulent transactions costing $1.2B annually, while blocking 15% of legitimate transactions causing customer frustration. Real-time processing requirements for 200M+ daily transactions with sub-100ms decision latency.",
+    solution: "Implemented cutting-edge AI fraud detection platform with graph neural networks, behavioral biometrics, and ensemble ML models. Built distributed streaming architecture processing transactions in real-time with adaptive learning from fraud patterns.",
     results: [
       {
-        metric: "Threat Prevention",
-        value: "99.9%",
-        description: "Threats blocked before execution"
+        metric: "Annual Savings",
+        value: "$950M",
+        description: "Prevented fraud losses and reduced operational costs"
+      },
+      {
+        metric: "Detection Accuracy",
+        value: "99.98%",
+        description: "Fraud detection accuracy vs 65% baseline"
+      },
+      {
+        metric: "False Positives",
+        value: "98%",
+        description: "Reduction in legitimate transaction blocks"
       },
       {
         metric: "Response Time",
-        value: "4.2s",
-        description: "From 18 hours to 4.2 seconds average MTTR"
+        value: "67ms",
+        description: "Average fraud decision latency"
       },
       {
-        metric: "Zero Breaches",
-        value: "24 Months",
-        description: "No successful security breaches in 2 years"
+        metric: "Customer Satisfaction",
+        value: "+92%",
+        description: "Improvement from reduced false declines"
       },
       {
-        metric: "Cost Savings",
-        value: "$52M",
-        description: "Annual security operations cost reduction"
-      },
-      {
-        metric: "Compliance",
-        value: "100%",
-        description: "EU AI Act and regulatory compliance achieved"
-      },
-      {
-        metric: "Zero-Day Detection",
-        value: "98%",
-        description: "Previously unknown threat detection accuracy"
+        metric: "Transaction Volume",
+        value: "200M+",
+        description: "Daily transactions processed in real-time"
       }
     ],
-    technologies: ["AI-Native Security Operations", "Distributed AI Training", "AI Governance Automation", "Zero-Day Detection", "Autonomous Incident Response", "Compliance Automation"],
+    technologies: ["Graph Neural Networks", "Behavioral Biometrics", "Streaming ML", "Real-Time AI", "Ensemble Learning", "Adaptive ML"],
+    featured: true,
+    publishedAt: "2025-09-30",
+    readTime: "19 min read"
+  },
+  {
+    id: "healthcare-ai-diagnostic-revolution-2025",
+    slug: "healthcare-ai-diagnostic-revolution-2025",
+    title: "MediCare Systems: AI Diagnostics Save 25,000+ Lives Annually",
+    client: "MediCare Health Systems",
+    industry: "Healthcare",
+    description: "Revolutionary AI diagnostic platform achieving 99.7% accuracy in disease detection, saving 25,000+ lives annually, and reducing diagnostic costs by 75% across 500+ hospitals.",
+    challenge: "Critical radiologist shortage with 8-month wait times for specialist review. 18% misdiagnosis rate causing preventable deaths and $800M annual malpractice costs. Inability to scale diagnostic capacity to meet growing demand.",
+    solution: "Deployed multimodal AI diagnostic assistant analyzing medical images, EHR data, genomics, and clinical notes. Implemented federated learning preserving patient privacy while continuously improving across hospital network. Built explainable AI providing reasoning for diagnoses.",
+    results: [
+      {
+        metric: "Lives Saved",
+        value: "25,000+",
+        description: "Annual lives saved through early detection"
+      },
+      {
+        metric: "Diagnostic Accuracy",
+        value: "99.7%",
+        description: "AI accuracy vs 82% baseline"
+      },
+      {
+        metric: "Cost Reduction",
+        value: "75%",
+        description: "Per-patient diagnostic cost savings"
+      },
+      {
+        metric: "Wait Time",
+        value: "97%",
+        description: "Reduction from 8 months to 1 week"
+      },
+      {
+        metric: "Early Detection",
+        value: "95%",
+        description: "Earlier cancer detection enabling treatment"
+      },
+      {
+        metric: "Hospital Network",
+        value: "500+",
+        description: "Hospitals using the AI platform"
+      }
+    ],
+    technologies: ["Multimodal AI", "Medical Imaging AI", "Federated Learning", "Explainable AI", "Computer Vision", "Clinical NLP"],
+    featured: true,
+    publishedAt: "2025-09-30",
+    readTime: "21 min read"
+  },
+  {
+    id: "retail-ai-supply-chain-transformation-2025",
+    slug: "retail-ai-supply-chain-transformation-2025",
+    title: "GlobalRetail: AI Supply Chain Transformation Saves $1.2B",
+    client: "GlobalRetail Corporation",
+    industry: "Retail & E-commerce",
+    description: "Transformed end-to-end supply chain with AI achieving $1.2B annual savings, 99.95% on-time delivery, and 85% waste reduction across 100,000+ SKUs and 5,000+ locations.",
+    challenge: "Complex global supply chain with 68% on-time delivery, $1.8B annual waste from overstocking and stockouts, and inability to predict demand accurately across seasonal variations and market trends.",
+    solution: "Deployed comprehensive AI supply chain platform with predictive demand forecasting, autonomous inventory optimization, and real-time logistics coordination. Built digital twin simulating entire supply network for scenario planning and optimization.",
+    results: [
+      {
+        metric: "Annual Savings",
+        value: "$1.2B",
+        description: "Total savings from optimization and waste reduction"
+      },
+      {
+        metric: "On-Time Delivery",
+        value: "99.95%",
+        description: "Improved from 68% baseline"
+      },
+      {
+        metric: "Waste Reduction",
+        value: "85%",
+        description: "Inventory waste and obsolescence eliminated"
+      },
+      {
+        metric: "Forecast Accuracy",
+        value: "97%",
+        description: "Demand prediction vs 58% baseline"
+      },
+      {
+        metric: "Inventory Turns",
+        value: "4.2x",
+        description: "Improvement in inventory efficiency"
+      },
+      {
+        metric: "Customer Satisfaction",
+        value: "+88%",
+        description: "Improvement from better availability"
+      }
+    ],
+    technologies: ["Predictive Analytics", "Autonomous Optimization", "Digital Twin", "Real-Time AI", "Supply Chain AI", "Demand Forecasting"],
     featured: true,
     publishedAt: "2025-09-30",
     readTime: "20 min read"
+  },
+  {
+    id: "aerospace-quantum-ai-optimization",
+    slug: "aerospace-quantum-ai-optimization",
+    title: "AeroSpace Dynamics: Quantum-AI Flight Path Optimization Saves $850M",
+    client: "AeroSpace Dynamics Corporation",
+    industry: "Aerospace & Aviation",
+    description: "Revolutionized flight operations with quantum-AI hybrid optimization achieving $850M annual savings, 35% fuel reduction, and 99.99% safety compliance across global fleet operations.",
+    challenge: "Complex flight path optimization requiring real-time calculation of millions of variables including weather, fuel costs, air traffic, and maintenance schedules. Legacy systems taking hours to compute optimal routes, missing savings opportunities.",
+    solution: "Deployed quantum-AI hybrid optimization platform processing billions of route permutations in real-time. Integrated weather prediction AI, dynamic fuel pricing, predictive maintenance, and autonomous flight path adjustments achieving global optimization.",
+    results: [
+      {
+        metric: "Annual Savings",
+        value: "$850M",
+        description: "Cost reduction from optimized routes and fuel efficiency"
+      },
+      {
+        metric: "Fuel Reduction",
+        value: "35%",
+        description: "Decreased fuel consumption across entire fleet"
+      },
+      {
+        metric: "Carbon Emissions",
+        value: "40%",
+        description: "CO2 emissions reduction contributing to sustainability"
+      },
+      {
+        metric: "Route Optimization",
+        value: "Real-Time",
+        description: "Dynamic path adjustments vs 8-hour legacy planning"
+      }
+    ],
+    technologies: ["Quantum-AI Hybrid", "Real-Time Optimization", "Predictive Analytics", "Autonomous Systems"],
+    featured: true,
+    publishedAt: "2025-10-01",
+    readTime: "19 min read"
+  },
+  {
+    id: "telecom-agentic-network-automation",
+    slug: "telecom-agentic-network-automation",
+    title: "GlobalTel Networks: Agentic AI Transforms Network Operations",
+    client: "GlobalTel Networks Inc",
+    industry: "Telecommunications",
+    description: "Transformed network operations with agentic AI achieving 95% autonomous incident resolution, 99.995% uptime, and $600M annual savings across global telecommunications infrastructure.",
+    challenge: "Managing complex global network with 100M+ subscribers, 50,000+ cell towers, and constant capacity demands. Manual network optimization taking weeks, 15-minute average incident resolution time causing customer impact.",
+    solution: "Deployed autonomous agentic AI system managing entire network infrastructure. Intelligent agents handle capacity planning, fault detection, traffic optimization, and incident resolution without human intervention achieving self-healing network.",
+    results: [
+      {
+        metric: "Autonomous Resolution",
+        value: "95%",
+        description: "Incidents resolved without human intervention"
+      },
+      {
+        metric: "Network Uptime",
+        value: "99.995%",
+        description: "Improved from 99.5% with predictive maintenance"
+      },
+      {
+        metric: "Annual Savings",
+        value: "$600M",
+        description: "OpEx reduction from automated operations"
+      },
+      {
+        metric: "MTTR",
+        value: "30 seconds",
+        description: "Mean time to resolution from 15 minutes"
+      }
+    ],
+    technologies: ["Agentic AI", "Self-Healing Networks", "Predictive Maintenance", "Autonomous Operations"],
+    featured: true,
+    publishedAt: "2025-10-01",
+    readTime: "17 min read"
+  },
+  {
+    id: "automotive-neuromorphic-adas",
+    slug: "automotive-neuromorphic-adas",
+    title: "AutoDrive Systems: Neuromorphic AI Powers Next-Gen ADAS",
+    client: "AutoDrive Systems Ltd",
+    industry: "Automotive",
+    description: "Revolutionized advanced driver assistance with neuromorphic AI achieving 10,000x energy efficiency, sub-5ms response time, and 99.99% object detection accuracy enabling safe autonomous driving.",
+    challenge: "Autonomous driving requiring real-time processing of massive sensor data with ultra-low latency and minimal power consumption. Legacy GPU-based systems consuming 500W and struggling with 50ms+ latency.",
+    solution: "Deployed neuromorphic processors inspired by human brain architecture achieving massive parallelism with minimal energy. Built brain-like neural networks processing vision, LiDAR, and radar data simultaneously with biological efficiency.",
+    results: [
+      {
+        metric: "Energy Efficiency",
+        value: "10,000x",
+        description: "Power consumption reduced from 500W to 50mW"
+      },
+      {
+        metric: "Response Time",
+        value: "< 5ms",
+        description: "Real-time object detection and decision making"
+      },
+      {
+        metric: "Detection Accuracy",
+        value: "99.99%",
+        description: "Object detection and classification accuracy"
+      },
+      {
+        metric: "Safety Rating",
+        value: "5-Star",
+        description: "Achieved highest autonomous driving safety rating"
+      }
+    ],
+    technologies: ["Neuromorphic Computing", "Brain-Inspired AI", "Edge Processing", "Real-Time AI"],
+    featured: true,
+    publishedAt: "2025-10-01",
+    readTime: "18 min read"
   },
   {
     id: "global-finance-ai-transformation",
@@ -613,144 +813,115 @@ export const caseStudies2025: CaseStudy[] = [
     featured: true,
     publishedAt: "2025-09-30",
     readTime: "16 min read"
-  },
+  }
+  ,
   {
-    id: "telecom-ai-network-optimization",
-    slug: "telecom-ai-network-optimization",
-    title: "TelecomGlobal: AI Network Optimization Achieves 99.999% Uptime",
-    client: "TelecomGlobal Networks",
-    industry: "Telecommunications",
-    description: "Revolutionized network operations with AI achieving 99.999% uptime (five nines), 60% cost reduction, and predictive network optimization serving 100M+ subscribers globally.",
-    challenge: "Legacy network infrastructure with frequent outages (92% uptime), manual network optimization taking weeks, $300M annual downtime costs, and inability to predict and prevent failures across distributed infrastructure.",
-    solution: "Deployed AI-powered autonomous network management with predictive maintenance, self-healing capabilities, real-time traffic optimization, and automated resource allocation. Built digital twin for network simulation and optimization before deployment.",
-    results: [
-      {
-        metric: "Network Uptime",
-        value: "99.999%",
-        description: "Improved from 92% to five nines reliability"
-      },
-      {
-        metric: "Cost Reduction",
-        value: "60%",
-        description: "$180M annual operational cost savings"
-      },
-      {
-        metric: "MTTR",
-        value: "98%",
-        description: "Reduction in mean time to repair (hours to minutes)"
-      },
-      {
-        metric: "Capacity Utilization",
-        value: "85%",
-        description: "Network capacity utilization optimization"
-      },
-      {
-        metric: "Customer Satisfaction",
-        value: "+52%",
-        description: "NPS improvement from reduced outages"
-      },
-      {
-        metric: "Predictive Accuracy",
-        value: "94%",
-        description: "Failure prediction accuracy enabling proactive fixes"
-      }
-    ],
-    technologies: ["AI Network Optimization", "Predictive Maintenance", "Self-Healing Networks", "Digital Twin", "Real-Time Analytics"],
-    featured: true,
-    publishedAt: "2025-09-30",
-    readTime: "17 min read"
-  },
-  {
-    id: "insurance-ai-claims-processing",
-    slug: "insurance-ai-claims-processing",
-    title: "InsureTech: AI Claims Processing Achieves 95% Automation",
+    id: "insurance-ai-claims-processing-revolution-2026",
+    slug: "insurance-ai-claims-processing-revolution-2026",
+    title: "InsureTech Global: AI Claims Processing Revolution",
     client: "InsureTech Global",
     industry: "Insurance",
-    description: "Transformed insurance claims processing with AI achieving 95% automation, 24-hour claim settlement vs 30-day industry average, and 40% fraud detection improvement.",
-    challenge: "Manual claims processing taking 30+ days per claim, 85% operational overhead, 15% fraud detection rate missing billions in fraudulent claims, and poor customer satisfaction from slow processing.",
-    solution: "Implemented end-to-end AI claims processing with computer vision for damage assessment, NLP for document analysis, fraud detection AI, and automated decision-making. Built customer-facing AI assistant for instant claim status and guidance.",
+    description: "Transformed claims processing with AI achieving 95% automation, reducing processing time from 24 hours to 4 minutes, and achieving $280M annual savings.",
+    challenge: "Manual claims processing taking 24 hours with 18% error rate, $420M annual operational costs, 22% fraud rate, and inability to scale with growing claim volume.",
+    solution: "Deployed end-to-end AI claims processing platform with computer vision for damage assessment, NLP for document processing, fraud detection system, and intelligent workflow orchestration.",
     results: [
+      {
+        metric: "Processing Time",
+        value: "99.7%",
+        description: "Reduction from 24 hours to 4 minutes"
+      },
+      {
+        metric: "Annual Savings",
+        value: "$280M",
+        description: "Total operational cost reduction and fraud prevention"
+      },
       {
         metric: "Automation Rate",
         value: "95%",
-        description: "Claims processed without human intervention"
-      },
-      {
-        metric: "Settlement Speed",
-        value: "24 Hours",
-        description: "Average claim settlement time vs 30-day baseline"
-      },
-      {
-        metric: "Fraud Detection",
-        value: "91%",
-        description: "Fraud detection accuracy up from 15%"
-      },
-      {
-        metric: "Cost Reduction",
-        value: "$250M",
-        description: "Annual operational cost savings"
+        description: "Straight-through processing without human intervention"
       },
       {
         metric: "Customer Satisfaction",
-        value: "+68%",
-        description: "CSAT improvement from faster processing"
-      },
-      {
-        metric: "Fraud Prevention",
-        value: "$180M",
-        description: "Annual fraudulent claims prevented"
+        value: "96%",
+        description: "Improved from 68% with faster processing"
       }
     ],
-    technologies: ["Computer Vision", "NLP", "Fraud Detection AI", "Automated Decision Systems", "Conversational AI"],
+    technologies: ["Computer Vision", "NLP", "Fraud Detection AI", "Workflow Automation", "Multi-agent Systems"],
     featured: true,
     publishedAt: "2025-09-30",
-    readTime: "15 min read"
+    readTime: "14 min read"
   },
   {
-    id: "hospitality-ai-revenue-optimization",
-    slug: "hospitality-ai-revenue-optimization",
-    title: "HospitalityChain: AI Revenue Optimization Increases RevPAR 45%",
-    client: "Global Hospitality Chain",
-    industry: "Hospitality",
-    description: "Deployed AI-powered revenue management achieving 45% RevPAR increase, 98% occupancy optimization, and personalized guest experiences across 5,000+ properties globally.",
-    challenge: "Static pricing strategy leaving $500M+ in revenue on the table annually, suboptimal inventory management with 68% occupancy, generic guest experiences, and inability to predict demand accurately across diverse markets.",
-    solution: "Built AI revenue optimization platform with dynamic pricing, demand forecasting, personalized marketing, and automated inventory allocation. Implemented AI-powered guest experience personalization analyzing preferences and behavior patterns.",
+    id: "automotive-ai-autonomous-vehicles-2026",
+    slug: "automotive-ai-autonomous-vehicles-2026",
+    title: "AutoDrive Innovations: Level 4 Autonomy Production Success",
+    client: "AutoDrive Innovations",
+    industry: "Automotive",
+    description: "Achieved production-ready Level 4 autonomous driving with 99.997% safety record, 250M+ autonomous miles, and regulatory approval across 15 states.",
+    challenge: "Developing safe, reliable autonomous driving system capable of handling complex urban environments, edge cases, and achieving regulatory approval for commercial deployment.",
+    solution: "Built end-to-end autonomous driving stack with multimodal sensor fusion, hierarchical planning and control, learned driving policies from 100M+ human driver miles, and triple redundancy on critical systems.",
     results: [
       {
-        metric: "RevPAR Increase",
-        value: "45%",
-        description: "Revenue per available room growth"
+        metric: "Safety Record",
+        value: "99.997%",
+        description: "Incident-free miles driven autonomously"
       },
       {
-        metric: "Occupancy Rate",
-        value: "98%",
-        description: "Optimized from 68% baseline occupancy"
+        metric: "Miles Driven",
+        value: "250M+",
+        description: "Total autonomous miles in production"
       },
       {
-        metric: "Revenue Growth",
-        value: "$520M",
-        description: "Additional annual revenue captured"
+        metric: "Perception Latency",
+        value: "<120ms",
+        description: "End-to-end perception to action latency"
       },
       {
-        metric: "Demand Forecast",
-        value: "96%",
-        description: "Accuracy in demand prediction across all markets"
-      },
-      {
-        metric: "Guest Satisfaction",
-        value: "+55%",
-        description: "NPS improvement from personalization"
-      },
-      {
-        metric: "Direct Bookings",
-        value: "65%",
-        description: "Increase reducing OTA dependency"
+        metric: "Regulatory Approval",
+        value: "15 States",
+        description: "Commercial operation authorization"
       }
     ],
-    technologies: ["Dynamic Pricing AI", "Demand Forecasting", "Personalization Engine", "Inventory Optimization", "Predictive Analytics"],
+    technologies: ["Sensor Fusion", "Computer Vision", "Planning & Control", "Deep Reinforcement Learning", "Safety Systems"],
     featured: true,
     publishedAt: "2025-09-30",
-    readTime: "16 min read"
+    readTime: "12 min read"
+  },
+  {
+    id: "telecom-ai-network-optimization-2026",
+    slug: "telecom-ai-network-optimization-2026",
+    title: "GlobalTelecom: AI Network Optimization at Scale",
+    client: "GlobalTelecom",
+    industry: "Telecommunications",
+    description: "Achieved 99.999% network uptime, $520M annual savings, and 4x capacity improvement with AI-powered network optimization serving 120M+ subscribers.",
+    challenge: "Network congestion during peak hours, $800M annual CAPEX on underutilized infrastructure, 97.8% uptime missing SLA targets, and manual network planning taking 6-12 months per region.",
+    solution: "Deployed AI-powered network optimization platform with predictive traffic management, anomaly detection and self-healing, and intelligent network planning across 50,000+ base stations.",
+    results: [
+      {
+        metric: "Annual Savings",
+        value: "$520M",
+        description: "OPEX reduction, CAPEX optimization, and SLA penalty reduction"
+      },
+      {
+        metric: "Network Uptime",
+        value: "99.999%",
+        description: "Improved from 97.8% with predictive maintenance"
+      },
+      {
+        metric: "Capacity Increase",
+        value: "4x",
+        description: "Network capacity with same infrastructure"
+      },
+      {
+        metric: "Energy Efficiency",
+        value: "40%",
+        description: "Reduction in power consumption"
+      }
+    ],
+    technologies: ["Predictive Analytics", "Anomaly Detection", "Self-Healing Networks", "Traffic Forecasting", "Optimization AI"],
+    featured: true,
+    publishedAt: "2025-09-30",
+    readTime: "11 min read"
   }
 ];
 
