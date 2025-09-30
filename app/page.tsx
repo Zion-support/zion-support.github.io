@@ -65,7 +65,9 @@ import RevolutionaryAI2025Banner from '../components/RevolutionaryAI2025Banner';
 import InteractiveAICalculator2025 from '../components/InteractiveAICalculator2025';
 import NewContent2025Banner from '../components/NewContent2025Banner';
 import LatestAI2025InsightsBanner from '../components/LatestAI2025InsightsBanner';
->>>>>>> origin/content-merge-2025
+import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
+import LatestContent2026ShowcaseBanner from '../components/LatestContent2026ShowcaseBanner';
+import InteractiveAI2026Calculator from '../components/InteractiveAI2026Calculator';
 
 export const metadata = {
   title: 'Zion Tech Group — Revolutionary AI Breakthroughs 2026 | 1000x Performance Gains',
@@ -795,6 +797,9 @@ export default function HomePage() {
       <LatestContentShowcaseBanner />
       <InteractiveAICalculatorBanner />
       <AIInnovationShowcaseBanner />
+      
+      {/* Latest Content Showcase */}
+      <LatestContent2026ShowcaseBanner />
       
       {/* New Content Promotional Banners */}
       <MultimodalAIIntegrationBanner />
