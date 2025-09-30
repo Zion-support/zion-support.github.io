@@ -33,6 +33,20 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
 
   const featuredContent = [
     {
+      title: "LLM Production Runbooks 2026",
+      description: "Rollbacks, budgets, and KPI‑linked canary evals",
+      icon: Shield,
+      link: "/blog/llm-production-runbooks-2026",
+      category: "AI Operations"
+    },
+    {
+      title: "AI Threat Hunting with LLMs 2026",
+      description: "Analyst playbooks with safe tools and live traces",
+      icon: Shield,
+      link: "/blog/ai-threat-hunting-with-llms-2026",
+      category: "Security"
+    },
+    {
       title: "AI Safety Budgets 2026",
       description: "Guardrails wired to KPIs, approvals, rollbacks",
       icon: Shield,
