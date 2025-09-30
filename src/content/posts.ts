@@ -19,6 +19,33 @@ export const posts: BlogPost[] = [
     readTime: "10 min read"
   },
   {
+    slug: "ai-2025-sept-30-autonomous-governance-blueprint-v2",
+    title: "Autonomous Governance Blueprint v2 — KPIs, Policy Tests, Rollback",
+    description: "Pragmatic governance: KPI-linked scorecards, CI policy tests, and instant rollback for safe autonomy.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "genai-2025-sept-30-quality-tiers-v4",
+    title: "GenAI Quality Tiers v4 — 60% Savings With Stable UX",
+    description: "Advanced tier routing, semantic caches, and eval‑gated fallbacks that preserve KPIs while cutting spend.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "edge-2025-sept-30-zero-pii-experiments-v3",
+    title: "Zero‑PII Experiments v3 — Sub‑100ms Global A/B at the Edge",
+    description: "Scoped IDs, on‑device metrics, and DP noise for compliant A/B testing worldwide under 100ms.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
     slug: "edge-2025-oct-01-consentless-feature-flags-v4",
     title: "Consentless Feature Flags v4 — Private Global Rollouts <100ms",
     description: "Scoped IDs, signed configs, and on‑device metrics enabling zero‑PII progressive delivery worldwide.",

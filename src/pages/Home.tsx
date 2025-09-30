@@ -170,6 +170,21 @@ const Home = () => {
           <div className="rounded-xl border border-cyan-400/30 bg-cyan-500/10 p-6 mb-6">
             <div className="text-white text-sm mb-3">New today</div>
             <div className="grid md:grid-cols-3 gap-4">
+              <Link to="/blog/ai-2025-sept-30-autonomous-governance-blueprint-v2" className="block rounded-lg border border-white/10 p-4 hover:border-purple-400/40 transition-colors">
+                <div className="text-purple-300 text-xs mb-2">AI Governance</div>
+                <div className="text-white font-semibold">Autonomous Governance Blueprint v2</div>
+                <div className="text-zion-slate-light text-sm mt-1">Scorecards, CI policy tests, and instant rollback.</div>
+              </Link>
+              <Link to="/blog/genai-2025-sept-30-quality-tiers-v4" className="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
+                <div className="text-cyan-300 text-xs mb-2">GenAI</div>
+                <div className="text-white font-semibold">GenAI Quality Tiers v4</div>
+                <div className="text-zion-slate-light text-sm mt-1">Tier routing + semantic caches with eval gates.</div>
+              </Link>
+              <Link to="/blog/edge-2025-sept-30-zero-pii-experiments-v3" className="block rounded-lg border border-white/10 p-4 hover:border-indigo-400/40 transition-colors">
+                <div className="text-indigo-300 text-xs mb-2">Analytics</div>
+                <div className="text-white font-semibold">Zero‑PII Experiments v3</div>
+                <div className="text-zion-slate-light text-sm mt-1">Compliant A/B with scoped IDs and DP noise.</div>
+              </Link>
               <Link to="/blog/genai-2025-oct-01-cost-optimization-v4" className="block rounded-lg border border-white/10 p-4 hover:border-purple-400/40 transition-colors">
                 <div className="text-purple-300 text-xs mb-2">GenAI</div>
                 <div className="text-white font-semibold">GenAI Cost Optimization v4</div>
@@ -250,6 +265,21 @@ const Home = () => {
           <div className="mt-6 rounded-xl border border-white/10 bg-white/5 p-6">
             <div className="text-white text-sm mb-4">Featured this week</div>
             <div className="grid md:grid-cols-3 gap-4">
+              <Link to="/blog/genai-2025-sept-30-quality-tiers-v4" className="block rounded-lg border border-white/10 p-4 hover:border-purple-400/40 transition-colors">
+                <div className="text-purple-300 text-xs mb-2">GenAI</div>
+                <div className="text-white font-semibold">GenAI Quality Tiers v4</div>
+                <div className="text-zion-slate-light text-sm mt-1">Stable UX with 60%+ savings.</div>
+              </Link>
+              <Link to="/blog/edge-2025-sept-30-zero-pii-experiments-v3" className="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
+                <div className="text-cyan-300 text-xs mb-2">Analytics</div>
+                <div className="text-white font-semibold">Zero‑PII Experiments v3</div>
+                <div className="text-zion-slate-light text-sm mt-1">Sub‑100ms global A/B with DP noise.</div>
+              </Link>
+              <Link to="/blog/ai-2025-sept-30-autonomous-governance-blueprint-v2" className="block rounded-lg border border-white/10 p-4 hover:border-emerald-400/40 transition-colors">
+                <div className="text-emerald-300 text-xs mb-2">AI Governance</div>
+                <div className="text-white font-semibold">Autonomous Governance v2</div>
+                <div className="text-zion-slate-light text-sm mt-1">KPI scorecards, CI policy tests, rollback.</div>
+              </Link>
               <Link to="/blog/ai-2028-autonomous-governance-blueprint" className="block rounded-lg border border-white/10 p-4 hover:border-purple-400/40 transition-colors">
                 <div className="text-purple-300 text-xs mb-2">AI Governance</div>
                 <div className="text-white font-semibold">AI 2028: Autonomous Governance Blueprint</div>
