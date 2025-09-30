@@ -44,6 +44,10 @@ import MetaCognitiveRevolutionBanner from '../components/MetaCognitiveRevolution
 import NeuromorphicComputingRevolutionBanner from '../components/NeuromorphicComputingRevolutionBanner';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import March2026MegaBreakthroughBanner from '../components/March2026MegaBreakthroughBanner';
+import April2026UltimateBreakthroughBanner from '../components/April2026UltimateBreakthroughBanner';
+import May2026RevolutionaryBreakthroughBanner from '../components/May2026RevolutionaryBreakthroughBanner';
+import June2026UltimateBreakthroughBanner from '../components/June2026UltimateBreakthroughBanner';
+import Ultimate2026ContentShowcaseBanner from '../components/Ultimate2026ContentShowcaseBanner';
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -120,6 +124,15 @@ export default function HomePage() {
           </div>
         </div>
       </header>
+
+      {/* NEW APRIL 2026 ULTIMATE BREAKTHROUGH - MOST PROMINENT */}
+      <April2026UltimateBreakthroughBanner />
+
+      {/* NEW MAY 2026 REVOLUTIONARY BREAKTHROUGH - FEATURED PROMINENTLY */}
+      <May2026RevolutionaryBreakthroughBanner />
+
+      {/* NEW JUNE 2026 ULTIMATE BREAKTHROUGH - FEATURED PROMINENTLY */}
+      <June2026UltimateBreakthroughBanner />
 
       {/* NEW MARCH 2026 MEGA BREAKTHROUGH - MOST PROMINENT */}
       <March2026MegaBreakthroughBanner />
@@ -406,7 +419,7 @@ export default function HomePage() {
       <UnifiedContentPromotion />
 
       {/* Ultimate 2026 Content Showcase */}
-      <Ultimate2026ContentPromotionalBanner />
+      <Ultimate2026ContentShowcaseBanner />
       
       <UltimateContentShowcase2030 />
     </div>
