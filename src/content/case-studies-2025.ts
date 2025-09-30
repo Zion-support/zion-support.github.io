@@ -20,6 +20,7 @@ export interface CaseStudy {
 
 export const caseStudies2025: CaseStudy[] = [
   {
+<<<<<<< HEAD
     id: "global-tech-ai-security-transformation",
     slug: "global-tech-ai-security-transformation",
     title: "TechGlobal: AI-Native Security Achieving Zero Breaches",
@@ -64,6 +65,114 @@ export const caseStudies2025: CaseStudy[] = [
     featured: true,
     publishedAt: "2025-09-30",
     readTime: "20 min read"
+=======
+    id: "aerospace-quantum-ai-optimization",
+    slug: "aerospace-quantum-ai-optimization",
+    title: "AeroSpace Dynamics: Quantum-AI Flight Path Optimization Saves $850M",
+    client: "AeroSpace Dynamics Corporation",
+    industry: "Aerospace & Aviation",
+    description: "Revolutionized flight operations with quantum-AI hybrid optimization achieving $850M annual savings, 35% fuel reduction, and 99.99% safety compliance across global fleet operations.",
+    challenge: "Complex flight path optimization requiring real-time calculation of millions of variables including weather, fuel costs, air traffic, and maintenance schedules. Legacy systems taking hours to compute optimal routes, missing savings opportunities.",
+    solution: "Deployed quantum-AI hybrid optimization platform processing billions of route permutations in real-time. Integrated weather prediction AI, dynamic fuel pricing, predictive maintenance, and autonomous flight path adjustments achieving global optimization.",
+    results: [
+      {
+        metric: "Annual Savings",
+        value: "$850M",
+        description: "Cost reduction from optimized routes and fuel efficiency"
+      },
+      {
+        metric: "Fuel Reduction",
+        value: "35%",
+        description: "Decreased fuel consumption across entire fleet"
+      },
+      {
+        metric: "Carbon Emissions",
+        value: "40%",
+        description: "CO2 emissions reduction contributing to sustainability"
+      },
+      {
+        metric: "Route Optimization",
+        value: "Real-Time",
+        description: "Dynamic path adjustments vs 8-hour legacy planning"
+      }
+    ],
+    technologies: ["Quantum-AI Hybrid", "Real-Time Optimization", "Predictive Analytics", "Autonomous Systems"],
+    featured: true,
+    publishedAt: "2025-10-01",
+    readTime: "19 min read"
+  },
+  {
+    id: "telecom-agentic-network-automation",
+    slug: "telecom-agentic-network-automation",
+    title: "GlobalTel Networks: Agentic AI Transforms Network Operations",
+    client: "GlobalTel Networks Inc",
+    industry: "Telecommunications",
+    description: "Transformed network operations with agentic AI achieving 95% autonomous incident resolution, 99.995% uptime, and $600M annual savings across global telecommunications infrastructure.",
+    challenge: "Managing complex global network with 100M+ subscribers, 50,000+ cell towers, and constant capacity demands. Manual network optimization taking weeks, 15-minute average incident resolution time causing customer impact.",
+    solution: "Deployed autonomous agentic AI system managing entire network infrastructure. Intelligent agents handle capacity planning, fault detection, traffic optimization, and incident resolution without human intervention achieving self-healing network.",
+    results: [
+      {
+        metric: "Autonomous Resolution",
+        value: "95%",
+        description: "Incidents resolved without human intervention"
+      },
+      {
+        metric: "Network Uptime",
+        value: "99.995%",
+        description: "Improved from 99.5% with predictive maintenance"
+      },
+      {
+        metric: "Annual Savings",
+        value: "$600M",
+        description: "OpEx reduction from automated operations"
+      },
+      {
+        metric: "MTTR",
+        value: "30 seconds",
+        description: "Mean time to resolution from 15 minutes"
+      }
+    ],
+    technologies: ["Agentic AI", "Self-Healing Networks", "Predictive Maintenance", "Autonomous Operations"],
+    featured: true,
+    publishedAt: "2025-10-01",
+    readTime: "17 min read"
+  },
+  {
+    id: "automotive-neuromorphic-adas",
+    slug: "automotive-neuromorphic-adas",
+    title: "AutoDrive Systems: Neuromorphic AI Powers Next-Gen ADAS",
+    client: "AutoDrive Systems Ltd",
+    industry: "Automotive",
+    description: "Revolutionized advanced driver assistance with neuromorphic AI achieving 10,000x energy efficiency, sub-5ms response time, and 99.99% object detection accuracy enabling safe autonomous driving.",
+    challenge: "Autonomous driving requiring real-time processing of massive sensor data with ultra-low latency and minimal power consumption. Legacy GPU-based systems consuming 500W and struggling with 50ms+ latency.",
+    solution: "Deployed neuromorphic processors inspired by human brain architecture achieving massive parallelism with minimal energy. Built brain-like neural networks processing vision, LiDAR, and radar data simultaneously with biological efficiency.",
+    results: [
+      {
+        metric: "Energy Efficiency",
+        value: "10,000x",
+        description: "Power consumption reduced from 500W to 50mW"
+      },
+      {
+        metric: "Response Time",
+        value: "< 5ms",
+        description: "Real-time object detection and decision making"
+      },
+      {
+        metric: "Detection Accuracy",
+        value: "99.99%",
+        description: "Object detection and classification accuracy"
+      },
+      {
+        metric: "Safety Rating",
+        value: "5-Star",
+        description: "Achieved highest autonomous driving safety rating"
+      }
+    ],
+    technologies: ["Neuromorphic Computing", "Brain-Inspired AI", "Edge Processing", "Real-Time AI"],
+    featured: true,
+    publishedAt: "2025-10-01",
+    readTime: "18 min read"
+>>>>>>> origin/cursor/create-and-deploy-new-content-ae79
   },
   {
     id: "global-finance-ai-transformation",
