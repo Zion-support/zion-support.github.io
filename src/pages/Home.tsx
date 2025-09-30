@@ -291,10 +291,10 @@ const Home = () => {
                 <div className="text-white font-semibold">AI 2028: Autonomous Governance Blueprint</div>
                 <div className="text-zion-slate-light text-sm mt-1">Policy tests in CI, live canaries, instant rollback.</div>
               </Link>
-              <Link to="/blog/ai-2027-operational-scorecards" className="block rounded-lg border border-white/10 p-4 hover:border-emerald-400/40 transition-colors">
-                <div className="text-emerald-300 text-xs mb-2">AI Operations</div>
-                <div className="text-white font-semibold">AI 2027: Operational Scorecards</div>
-                <div className="text-zion-slate-light text-sm mt-1">SLIs wired to KPIs with budgets and rollback.</div>
+              <Link to="/blog/ai-2025-sept-30-causal-evals-blueprint" className="block rounded-lg border border-white/10 p-4 hover:border-rose-400/40 transition-colors">
+                <div className="text-rose-300 text-xs mb-2">AI Governance</div>
+                <div className="text-white font-semibold">AI 2025: Causal Evals Blueprint</div>
+                <div className="text-zion-slate-light text-sm mt-1">Causal scorecards wired to KPIs with budgets and rollback.</div>
               </Link>
               <Link to="/blog/verifiable-edge-analytics-2026" className="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
                 <div className="text-cyan-300 text-xs mb-2">Analytics</div>
