@@ -62,7 +62,6 @@ import InteractiveContentShowcase2026Advanced from "./components/InteractiveCont
 import June2026SuperintelligenceBreakthroughBanner from "./components/June2026SuperintelligenceBreakthroughBanner";
 import June2026ContentShowcaseBanner from "./components/June2026ContentShowcaseBanner";
 import AI2031SingularityAchievementBanner from "./components/AI2031SingularityAchievementBanner";
-import NewContent2026AdvertisingMegaBanner from "./components/NewContent2026AdvertisingMegaBanner";
 import AITrends2026AdvertisingBanner from "./components/AITrends2026AdvertisingBanner";
 import September2026BreakthroughAdvertisingBanner from "./components/September2026BreakthroughAdvertisingBanner";
 import AutonomousEnterpriseAutomationAdvertisingBanner from "./components/AutonomousEnterpriseAutomationAdvertisingBanner";
@@ -72,6 +71,8 @@ import March2026MultimodalBreakthroughBanner from "./components/March2026Multimo
 import AutonomousAI2026RevolutionaryBanner from "./components/AutonomousAI2026RevolutionaryBanner";
 import March2026ContentShowcaseBanner from "./components/March2026ContentShowcaseBanner";
 import March2026ServicesPromotionalBanner from "./components/March2026ServicesPromotionalBanner";
+import April2026RevolutionaryBreakthroughBanner from "./components/April2026RevolutionaryBreakthroughBanner";
+import April2026ContentShowcaseBanner from "./components/April2026ContentShowcaseBanner";
 
 export default function App(): JSX.Element {
   return (
