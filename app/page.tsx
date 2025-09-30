@@ -120,13 +120,6 @@ import September30BreakthroughContentBanner from '../components/September30Break
 import Revolutionary2026ContentShowcaseBanner from '../components/Revolutionary2026ContentShowcaseBanner';
 import Latest2026ContentMegaBanner from '../components/Latest2026ContentMegaBanner';
 import Ultimate2026ContentShowcaseBanner from '../components/Ultimate2026ContentShowcaseBanner';
-import RevolutionaryQuantumAIBreakthroughBanner from '../components/RevolutionaryQuantumAIBreakthroughBanner';
-import AutonomousBusinessSystemsMegaBanner from '../components/AutonomousBusinessSystemsMegaBanner';
-import QuantumAI2027BreakthroughBanner from '../components/QuantumAI2027BreakthroughBanner';
-import AutonomousBusinessIntelligence2026Banner from '../components/AutonomousBusinessIntelligence2026Banner';
-import NewContent2027ShowcaseBanner from '../components/NewContent2027ShowcaseBanner';
-import RevolutionaryBreakthrough2026Banner from '../src/components/RevolutionaryBreakthrough2026Banner';
-import AICostOptimizationBanner from '../src/components/AICostOptimizationBanner';
 
 export const metadata = {
   title: 'Zion Tech Group — Revolutionary AI Breakthroughs 2026 | 10x Performance, 90% Cost Reduction',
