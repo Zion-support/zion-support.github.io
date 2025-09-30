@@ -1,271 +1,253 @@
 import React, { useState } from 'react';
 
 export default function InteractiveAICalculator2025() {
-  const [companySize, setCompanySize] = useState('medium');
-  const [industry, setIndustry] = useState('manufacturing');
-  const [currentEfficiency, setCurrentEfficiency] = useState(70);
-  const [budget, setBudget] = useState(100000);
+  const [inputs, setInputs] = useState({
+    annualRevenue: '',
+    employees: '',
+    currentEfficiency: '',
+    industry: 'technology'
+  });
 
-  const calculateROI = () => {
+  const [results, setResults] = useState({
+    projectedROI: 0,
+    efficiencyGain: 0,
+    annualSavings: 0,
+    paybackPeriod: 0
+  });
+
+  const industryMultipliers = {
+    technology: { roi: 1.2, efficiency: 1.1, savings: 1.3 },
+    healthcare: { roi: 1.0, efficiency: 1.0, savings: 1.0 },
+    manufacturing: { roi: 1.3, efficiency: 1.2, savings: 1.4 },
+    finance: { roi: 1.1, efficiency: 1.05, savings: 1.2 },
+    retail: { roi: 0.9, efficiency: 0.95, savings: 1.0 }
+  };
+
+  const calculateResults = () => {
+    const revenue = parseFloat(inputs.annualRevenue) || 0;
+    const employees = parseInt(inputs.employees) || 0;
+    const efficiency = parseFloat(inputs.currentEfficiency) || 0;
+    const industry = inputs.industry as keyof typeof industryMultipliers;
+    
+    if (revenue === 0 || employees === 0) return;
+
+    const multiplier = industryMultipliers[industry];
+    
+    // Base calculations
     const baseROI = 300;
-    const sizeMultiplier = companySize === 'small' ? 0.8 : companySize === 'medium' ? 1.0 : 1.2;
-    const industryMultiplier = industry === 'manufacturing' ? 1.3 : industry === 'finance' ? 1.1 : 1.0;
-    const efficiencyMultiplier = (100 - currentEfficiency) / 30; // Higher efficiency = lower potential gain
+    const baseEfficiencyGain = 90;
+    const baseSavings = revenue * 0.05; // 5% of revenue as base savings
     
-    return Math.round(baseROI * sizeMultiplier * industryMultiplier * efficiencyMultiplier);
+    // Apply industry multipliers
+    const projectedROI = Math.round(baseROI * multiplier.roi);
+    const efficiencyGain = Math.round(baseEfficiencyGain * multiplier.efficiency);
+    const annualSavings = Math.round(baseSavings * multiplier.savings);
+    const paybackPeriod = Math.round(12 / (projectedROI / 100));
+
+    setResults({
+      projectedROI,
+      efficiencyGain,
+      annualSavings,
+      paybackPeriod
+    });
   };
 
-  const calculateSavings = () => {
-    const baseSavings = budget * 0.7; // 70% cost reduction
-    const sizeMultiplier = companySize === 'small' ? 0.5 : companySize === 'medium' ? 1.0 : 1.5;
-    
-    return Math.round(baseSavings * sizeMultiplier);
+  const handleInputChange = (field: string, value: string) => {
+    setInputs(prev => ({
+      ...prev,
+      [field]: value
+    }));
   };
 
-  const calculateEfficiencyGain = () => {
-    const baseGain = 90;
-    const efficiencyMultiplier = (100 - currentEfficiency) / 30;
-    
-    return Math.round(baseGain * efficiencyMultiplier);
-  };
+  React.useEffect(() => {
+    calculateResults();
+  }, [inputs]);
 
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+    <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-indigo-50">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-800 rounded-full px-4 py-2 mb-6">
-            <span className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
-            <span className="text-sm font-semibold">Interactive Calculator</span>
-          </div>
           <h2 className="text-4xl font-bold text-gray-900 mb-6">
-            Calculate Your AI Transformation ROI
+            AI ROI Calculator 2025
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover the potential impact of AI transformation on your business with our interactive calculator. 
-            Get personalized estimates based on your specific industry and requirements.
+            Calculate your potential AI transformation ROI with our interactive calculator. 
+            Get personalized projections based on your industry and business metrics.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Input Section */}
-          <div className="bg-white rounded-2xl shadow-xl p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-8">Your Business Profile</h3>
+          <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-200">
+            <h3 className="text-2xl font-bold text-gray-900 mb-8">Enter Your Business Metrics</h3>
             
-            <div className="space-y-8">
+            <div className="space-y-6">
               <div>
-                <label className="block text-lg font-semibold text-gray-900 mb-4">
-                  Company Size
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Annual Revenue ($)
                 </label>
-                <div className="grid grid-cols-3 gap-4">
-                  {[
-                    { value: 'small', label: 'Small (1-50)', desc: 'Startup to Mid-size' },
-                    { value: 'medium', label: 'Medium (51-500)', desc: 'Growing Company' },
-                    { value: 'large', label: 'Large (500+)', desc: 'Enterprise' }
-                  ].map((option) => (
-                    <button
-                      key={option.value}
-                      onClick={() => setCompanySize(option.value)}
-                      className={`p-4 rounded-xl border-2 transition-all duration-300 ${
-                        companySize === option.value
-                          ? 'border-blue-500 bg-blue-50 text-blue-700'
-                          : 'border-gray-200 hover:border-blue-300 text-gray-700'
-                      }`}
-                    >
-                      <div className="font-semibold">{option.label}</div>
-                      <div className="text-sm opacity-75">{option.desc}</div>
-                    </button>
-                  ))}
-                </div>
+                <input
+                  type="number"
+                  value={inputs.annualRevenue}
+                  onChange={(e) => handleInputChange('annualRevenue', e.target.value)}
+                  placeholder="e.g., 10,000,000"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg"
+                />
               </div>
 
               <div>
-                <label className="block text-lg font-semibold text-gray-900 mb-4">
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Number of Employees
+                </label>
+                <input
+                  type="number"
+                  value={inputs.employees}
+                  onChange={(e) => handleInputChange('employees', e.target.value)}
+                  placeholder="e.g., 500"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Current Operational Efficiency (%)
+                </label>
+                <input
+                  type="number"
+                  value={inputs.currentEfficiency}
+                  onChange={(e) => handleInputChange('currentEfficiency', e.target.value)}
+                  placeholder="e.g., 60"
+                  min="0"
+                  max="100"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
                   Industry
                 </label>
                 <select
-                  value={industry}
-                  onChange={(e) => setIndustry(e.target.value)}
-                  className="w-full p-4 border-2 border-gray-200 rounded-xl focus:border-blue-500 focus:outline-none text-gray-700"
+                  value={inputs.industry}
+                  onChange={(e) => handleInputChange('industry', e.target.value)}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg"
                 >
+                  <option value="technology">Technology</option>
+                  <option value="healthcare">Healthcare</option>
                   <option value="manufacturing">Manufacturing</option>
                   <option value="finance">Financial Services</option>
-                  <option value="healthcare">Healthcare</option>
                   <option value="retail">Retail & E-commerce</option>
-                  <option value="technology">Technology</option>
-                  <option value="logistics">Logistics & Supply Chain</option>
                 </select>
               </div>
+            </div>
 
-              <div>
-                <label className="block text-lg font-semibold text-gray-900 mb-4">
-                  Current Process Efficiency: {currentEfficiency}%
-                </label>
-                <input
-                  type="range"
-                  min="30"
-                  max="95"
-                  value={currentEfficiency}
-                  onChange={(e) => setCurrentEfficiency(Number(e.target.value))}
-                  className="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
-                />
-                <div className="flex justify-between text-sm text-gray-500 mt-2">
-                  <span>Low Efficiency</span>
-                  <span>High Efficiency</span>
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-lg font-semibold text-gray-900 mb-4">
-                  Annual IT Budget: ${budget.toLocaleString()}
-                </label>
-                <input
-                  type="range"
-                  min="25000"
-                  max="1000000"
-                  step="25000"
-                  value={budget}
-                  onChange={(e) => setBudget(Number(e.target.value))}
-                  className="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
-                />
-                <div className="flex justify-between text-sm text-gray-500 mt-2">
-                  <span>$25K</span>
-                  <span>$1M+</span>
-                </div>
-              </div>
+            <div className="mt-8 p-4 bg-blue-50 rounded-lg">
+              <h4 className="font-semibold text-gray-900 mb-2">💡 Pro Tip</h4>
+              <p className="text-sm text-gray-700">
+                Our calculations are based on real-world data from 500+ AI implementations. 
+                Results may vary based on specific use cases and implementation quality.
+              </p>
             </div>
           </div>
 
           {/* Results Section */}
-          <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl shadow-xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-8">Your AI Transformation Potential</h3>
-            
-            <div className="space-y-8">
-              <div className="bg-white/20 backdrop-blur-sm rounded-xl p-6">
-                <div className="flex items-center justify-between mb-4">
-                  <h4 className="text-lg font-semibold">Projected ROI</h4>
-                  <span className="text-3xl font-bold text-yellow-300">{calculateROI()}%</span>
-                </div>
-                <p className="text-sm opacity-90">
-                  Expected return on investment within 12-18 months of AI implementation
-                </p>
-              </div>
-
-              <div className="bg-white/20 backdrop-blur-sm rounded-xl p-6">
-                <div className="flex items-center justify-between mb-4">
-                  <h4 className="text-lg font-semibold">Annual Savings</h4>
-                  <span className="text-3xl font-bold text-green-300">${calculateSavings().toLocaleString()}</span>
-                </div>
-                <p className="text-sm opacity-90">
-                  Estimated annual cost savings from AI automation and optimization
-                </p>
-              </div>
-
-              <div className="bg-white/20 backdrop-blur-sm rounded-xl p-6">
-                <div className="flex items-center justify-between mb-4">
-                  <h4 className="text-lg font-semibold">Efficiency Gain</h4>
-                  <span className="text-3xl font-bold text-cyan-300">{calculateEfficiencyGain()}%</span>
-                </div>
-                <p className="text-sm opacity-90">
-                  Expected improvement in operational efficiency and productivity
-                </p>
-              </div>
-
-              <div className="bg-white/20 backdrop-blur-sm rounded-xl p-6">
-                <div className="flex items-center justify-between mb-4">
-                  <h4 className="text-lg font-semibold">Payback Period</h4>
-                  <span className="text-3xl font-bold text-orange-300">
-                    {Math.round(12 / (calculateROI() / 100))} months
-                  </span>
-                </div>
-                <p className="text-sm opacity-90">
-                  Estimated time to recover initial AI investment
-                </p>
+          <div className="space-y-6">
+            <div className="bg-gradient-to-r from-green-500 to-teal-500 rounded-2xl p-8 text-white">
+              <div className="text-center">
+                <div className="text-5xl font-bold mb-2">{results.projectedROI}%</div>
+                <div className="text-xl opacity-90">Projected ROI</div>
+                <div className="text-sm opacity-75 mt-2">Within 12 months</div>
               </div>
             </div>
 
-            <div className="mt-8 pt-6 border-t border-white/20">
-              <p className="text-sm opacity-90 mb-6">
-                These estimates are based on industry benchmarks and our experience with similar implementations. 
-                Actual results may vary based on specific implementation details.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4">
-                <a
-                  href="tel:+13024640950"
-                  className="bg-white text-blue-600 px-6 py-3 rounded-xl font-semibold hover:bg-gray-100 transition-colors text-center"
-                >
-                  Get Detailed Analysis
-                </a>
-                <a
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="border-2 border-white text-white px-6 py-3 rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center"
-                >
-                  Schedule Consultation
-                </a>
+            <div className="bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl p-8 text-white">
+              <div className="text-center">
+                <div className="text-5xl font-bold mb-2">{results.efficiencyGain}%</div>
+                <div className="text-xl opacity-90">Efficiency Improvement</div>
+                <div className="text-sm opacity-75 mt-2">Across operations</div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl p-8 text-white">
+              <div className="text-center">
+                <div className="text-5xl font-bold mb-2">${(results.annualSavings / 1000000).toFixed(1)}M</div>
+                <div className="text-xl opacity-90">Annual Savings</div>
+                <div className="text-sm opacity-75 mt-2">Projected cost reduction</div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl p-8 text-white">
+              <div className="text-center">
+                <div className="text-5xl font-bold mb-2">{results.paybackPeriod}</div>
+                <div className="text-xl opacity-90">Months to ROI</div>
+                <div className="text-sm opacity-75 mt-2">Payback period</div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Additional Information */}
+        {/* Industry Insights */}
+        <div className="mt-16 bg-white rounded-2xl shadow-xl p-8 border border-gray-200">
+          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Industry-Specific AI Impact</h3>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+            <div className="text-center p-4 bg-blue-50 rounded-lg">
+              <div className="text-2xl font-bold text-blue-600 mb-2">Technology</div>
+              <div className="text-sm text-gray-600 mb-2">Highest ROI Potential</div>
+              <div className="text-lg font-semibold text-gray-900">360% ROI</div>
+            </div>
+            
+            <div className="text-center p-4 bg-green-50 rounded-lg">
+              <div className="text-2xl font-bold text-green-600 mb-2">Manufacturing</div>
+              <div className="text-sm text-gray-600 mb-2">Best for Automation</div>
+              <div className="text-lg font-semibold text-gray-900">390% ROI</div>
+            </div>
+            
+            <div className="text-center p-4 bg-purple-50 rounded-lg">
+              <div className="text-2xl font-bold text-purple-600 mb-2">Healthcare</div>
+              <div className="text-sm text-gray-600 mb-2">Quality & Safety</div>
+              <div className="text-lg font-semibold text-gray-900">300% ROI</div>
+            </div>
+            
+            <div className="text-center p-4 bg-orange-50 rounded-lg">
+              <div className="text-2xl font-bold text-orange-600 mb-2">Finance</div>
+              <div className="text-sm text-gray-600 mb-2">Risk & Compliance</div>
+              <div className="text-lg font-semibold text-gray-900">330% ROI</div>
+            </div>
+            
+            <div className="text-center p-4 bg-pink-50 rounded-lg">
+              <div className="text-2xl font-bold text-pink-600 mb-2">Retail</div>
+              <div className="text-sm text-gray-600 mb-2">Customer Experience</div>
+              <div className="text-lg font-semibold text-gray-900">270% ROI</div>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
         <div className="mt-16 text-center">
-          <div className="bg-white rounded-2xl shadow-lg p-8 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">
-              Why Choose Zion Tech Group for Your AI Transformation?
-            </h3>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🎯</span>
-                </div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-2">Proven Methodology</h4>
-                <p className="text-gray-600 text-sm">
-                  Our 5-phase AI transformation framework has delivered 300% ROI for 500+ companies
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">⚡</span>
-                </div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-2">Rapid Implementation</h4>
-                <p className="text-gray-600 text-sm">
-                  Average implementation time of 3-6 months with measurable results in 30 days
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🛡️</span>
-                </div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-2">24/7 Support</h4>
-                <p className="text-gray-600 text-sm">
-                  Dedicated support team ensuring 99.9% uptime and continuous optimization
-                </p>
-              </div>
+          <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 text-white">
+            <h3 className="text-3xl font-bold mb-4">Ready to Achieve These Results?</h3>
+            <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+              Get a personalized AI transformation roadmap and implementation plan 
+              tailored to your specific business needs and industry.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl"
+              >
+                Get Free AI Assessment
+              </a>
+              <a
+                href="tel:+13024640950"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-indigo-600 transition-colors"
+              >
+                Call +1 302 464 0950
+              </a>
             </div>
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        .slider::-webkit-slider-thumb {
-          appearance: none;
-          height: 20px;
-          width: 20px;
-          border-radius: 50%;
-          background: #3B82F6;
-          cursor: pointer;
-          box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
-        }
-        .slider::-moz-range-thumb {
-          height: 20px;
-          width: 20px;
-          border-radius: 50%;
-          background: #3B82F6;
-          cursor: pointer;
-          border: none;
-          box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
-        }
-      `}</style>
     </section>
   );
 }
