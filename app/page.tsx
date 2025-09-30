@@ -47,11 +47,8 @@ import InteractiveAICalculator from '../components/InteractiveAICalculator';
 import NewContent2026MegaSuccessBanner from '../components/NewContent2026MegaSuccessBanner';
 import AITrends2026PredictionsBanner from '../components/AITrends2026PredictionsBanner';
 import InteractiveContentShowcase2026 from '../components/InteractiveContentShowcase2026';
-<<<<<<< HEAD
 import AI2027BreakthroughBanner from '../components/AI2027BreakthroughBanner';
 import EnterpriseTransformation2027Banner from '../components/EnterpriseTransformation2027Banner';
-=======
->>>>>>> 51eb320c7d90daed23063c2d5ff31c1132e91192
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -137,7 +134,7 @@ export default function HomePage() {
         <AIQuantumComputingBreakthroughBanner />
         <AIMegaTransformationSuccessBanner />
         <AI2026InnovationShowcaseBanner />
-=======
+        
         {/* 🔥 LATEST 2027 CONTENT - Featured First! */}
         <NewContent2027MegaShowcase />
         <AgenticAIRevolution2027Banner />
@@ -145,7 +142,6 @@ export default function HomePage() {
         <QuantumAI2027Banner />
         <RetailerAITransformation2027Banner />
         <TechUnicornAgenticAI2027Banner />
->>>>>>> 51eb320c7d90daed23063c2d5ff31c1132e91192
         
         {/* New Mega Success Story Banner */}
         <NewContent2026MegaSuccessBanner />
@@ -158,8 +154,6 @@ export default function HomePage() {
         
         {/* Latest AI Innovations Banner */}
         <LatestAIInnovations2026Banner />
-<<<<<<< HEAD
-=======
         
         {/* New Content Promotional Banners */}
         <AIEnterpriseAdoptionBanner />
@@ -186,7 +180,6 @@ export default function HomePage() {
         <NewBlogBanner />
         <WorkflowAutomationBanner />
         <AIAnalyticsBanner />
->>>>>>> 51eb320c7d90daed23063c2d5ff31c1132e91192
       </div>
       {/* Hero Section */}
       <section className="relative py-20 px-6">
