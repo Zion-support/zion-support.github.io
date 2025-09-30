@@ -1,4 +1,5 @@
 import React, { JSX } from "react";
+import AI2027TranscendentIntelligenceBanner from "./components/AI2027TranscendentIntelligenceBanner";
 import July2026RevolutionaryBreakthroughBanner from "./components/July2026RevolutionaryBreakthroughBanner";
 import InteractiveAI2026Showcase from "./components/InteractiveAI2026Showcase";
 import InteractiveROICalculator2026 from "./components/InteractiveROICalculator2026";
@@ -56,16 +57,14 @@ import AITrends2026AdvertisingBanner from "./components/AITrends2026AdvertisingB
 export default function App(): JSX.Element {
   return (
     <div className="min-h-screen bg-slate-950">
+      {/* NEW: AI 2027 Transcendent Intelligence Banner - Most Prominent */}
+      <AI2027TranscendentIntelligenceBanner />
+      
       {/* NEW: July 2026 Revolutionary Breakthrough Banner - Most Prominent */}
       <July2026RevolutionaryBreakthroughBanner />
       
       {/* NEW: June 2027 Transcendent Intelligence Banner - Most Prominent */}
       <TranscendentIntelligence2027Banner />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       {/* NEW: May 2026 Revolutionary Breakthrough Banner - Most Prominent */}
       <May2026RevolutionaryBreakthroughBanner />
       
@@ -75,7 +74,6 @@ export default function App(): JSX.Element {
       {/* NEW: April 2026 Mega Breakthrough Banner - Most Prominent */}
       <April2026MegaBreakthroughBanner />
       
->>>>>>> origin/cursor/create-and-deploy-new-content-fdff
       {/* NEW: April 2026 Conscious Computing Banner */}
       <April2026ConsciousComputingBanner />
       
@@ -87,20 +85,18 @@ export default function App(): JSX.Element {
       
       {/* NEW: Revolutionary 2026 Content Showcase Banner */}
       <Revolutionary2026ContentShowcaseBanner />
-=======
+      
       {/* NEW: April 2026 Revolutionary Breakthrough Banner - Most Prominent */}
       <April2026RevolutionaryBreakthroughBanner />
       
       {/* NEW: April 2026 Mega Success Banner */}
       <April2026MegaSuccessBanner />
->>>>>>> origin/cursor/create-and-deploy-new-content-c5bb
-=======
+      
       {/* NEW: 2026 Consensus Intelligence Breakthrough Banner - Most Prominent */}
       <ConsensusIntelligenceBreakthroughBanner />
       
       {/* NEW: 2026 Autonomous Enterprise Breakthrough Banner - Most Prominent */}
       <AutonomousEnterpriseBreakthroughBanner />
->>>>>>> origin/cursor/create-and-deploy-new-content-52ce
       
       {/* NEW: March 2026 Revolutionary Breakthrough Banner - Most Prominent */}
       <March2026AdvertisingMegaBanner />
