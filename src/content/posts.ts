@@ -1257,59 +1257,30 @@ posts.push(
   }
 );
 
-<<<<<<< HEAD
-// Sept 30, 2025 – Brand-new content to advertise on homepage (fresh trio v3)
+// Sept 30, 2025 – Additional fresh posts to advertise on homepage
 posts.push(
-  // Sept 30, 2025 – Combine newly added items from both branches
   {
-    slug: "ai-sla-scorecards-2026-q1",
-    title: "AI SLA Scorecards 2026 Q1: SLIs, Budgets, Rollback",
-    description: "Operational scorecards tying model SLIs to KPIs with budgeted actions and instant rollback.",
-    category: "AI Governance",
+    slug: "ai-operational-trust-scorecards-v2-2026",
+    title: "AI Operational Trust Scorecards v2 (2026): SLIs, Budgets, Rollback",
+    description: "Second‑gen scorecards wiring SLIs to KPIs with budgeted actions and instant rollback.",
+    category: "AI Operations",
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
   },
   {
-    slug: "edge-private-insights-v2-2026",
-    title: "Edge Private Insights v2 (2026): Scoped IDs, DP Noise, <100ms",
-    description: "Second‑gen private analytics with on‑device aggregation, scoped IDs, and differential privacy under 100ms.",
+    slug: "edge-private-insights-blueprint-2026",
+    title: "Edge Private Insights Blueprint 2026: Zero‑PII Analytics at <100ms",
+    description: "On‑device aggregation, scoped IDs, and DP noise that unlock compliant insights without latency tax.",
     category: "Analytics",
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "6 min read"
   },
   {
-    slug: "agent-release-runbooks-v2-2026",
-    title: "Agent Release Runbooks v2 (2026): Budgets, Canaries, Recovery",
-    description: "Upgraded runbooks with KPI‑linked canaries, budgeted actions, sandboxed tools, and one‑click recovery.",
-    category: "AI Operations",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "8 min read"
-  },
-  {
-    slug: "ai-2026-autonomous-ops-q4-playbook",
-    title: "Autonomous Ops Q4 2026: Budgets, Traces, Instant Rollback",
-    description: "A pragmatic playbook to operate autonomous systems safely with explicit budgets, live traces, and one‑click rollback.",
-    category: "AI Operations",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "8 min read"
-  },
-  {
-    slug: "edge-analytics-consentless-2026-v2",
-    title: "Consentless Edge Analytics v2 (2026): Actionable Insights, Zero PII",
-    description: "Scoped IDs, on‑device aggregation, and DP noise that unlock insights without collecting PII—now faster and cheaper.",
-    category: "Analytics",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "6 min read"
-  },
-  {
-    slug: "genai-quality-tiers-v2-2026",
-    title: "GenAI Quality Tiers v2 (2026): Stable UX Under Strict Budgets",
-    description: "Tiered models, semantic caches, and KPI‑linked routing that cut spend 40–70% while preserving experience.",
+    slug: "genai-routing-quality-tiers-2026",
+    title: "GenAI Routing Quality Tiers 2026: Stable UX Under Budget",
+    description: "Tier models, add caches, and route by SLA using eval signals to cut spend 30–60%.",
     category: "GenAI",
     publishedAt: "2025-09-30",
     featured: true,
@@ -1348,7 +1319,7 @@ posts.push(
   }
 );
 
-// Sept 30, 2025 – Newly added trio to expand content and surface on Home
+// Sept 30, 2025 – Unified trio to expand content and surface on Home
 posts.push(
   {
     slug: "ai-slo-scorecards-2026",
@@ -1362,7 +1333,7 @@ posts.push(
   {
     slug: "edge-private-insights-2026",
     title: "Edge Private Insights 2026: Actionable Metrics Without PII",
-    description: "Scoped IDs, on‑device aggregation, and DP noise—insights teams love without risk.",
+    description: "Scoped IDs, on‑device aggregation, and DP noise that deliver insights teams trust—no PII collected.",
     category: "Analytics",
     publishedAt: "2025-09-30",
     featured: true,
