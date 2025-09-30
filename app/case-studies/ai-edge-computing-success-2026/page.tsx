@@ -47,7 +47,7 @@ export default function AIEdgeComputingSuccess2026() {
             <div className="text-sm text-gray-600">Annual Savings</div>
           </div>
           <div className="bg-white rounded-xl p-6 shadow-lg border border-blue-200 text-center">
-            <div className="text-3xl font-bold text-blue-600 mb-2">< 10ms</div>
+            <div className="text-3xl font-bold text-blue-600 mb-2">&lt; 10ms</div>
             <div className="text-sm text-gray-600">Response Time</div>
           </div>
           <div className="bg-white rounded-xl p-6 shadow-lg border border-purple-200 text-center">
@@ -155,7 +155,7 @@ export default function AIEdgeComputingSuccess2026() {
               <div className="space-y-4">
                 <div className="flex justify-between items-center p-4 bg-green-50 rounded-lg border border-green-200">
                   <span className="font-semibold text-gray-900">Response Time</span>
-                  <span className="text-green-600 font-bold">500ms → <10ms (98% improvement)</span>
+                  <span className="text-green-600 font-bold">500ms → &lt;10ms (98% improvement)</span>
                 </div>
                 <div className="flex justify-between items-center p-4 bg-blue-50 rounded-lg border border-blue-200">
                   <span className="font-semibold text-gray-900">System Uptime</span>

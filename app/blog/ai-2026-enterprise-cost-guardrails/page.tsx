@@ -29,7 +29,8 @@ export default function Page() {
 // @ts-nocheck
 import React from 'react';
 
-export const metadata = {
+// duplicate metadata removed (consolidated above)
+export const metadata2 = {
   title: 'Enterprise Cost Guardrails 2026: Cut Spend 30–70% Without Quality Loss',
   description:
     'Implement policy-aware guardrails, routing, and caching to slash AI spend while maintaining reliability, latency, and quality across workloads.',
@@ -42,7 +43,7 @@ export const metadata = {
   },
 };
 
-export default function EnterpriseCostGuardrails2026() {
+export function EnterpriseCostGuardrails2026() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-emerald-950 text-white">
       <main className="container mx-auto px-6 py-12">
