@@ -151,6 +151,30 @@ export const featuredBlogPosts: FeaturedItem[] = [
 // Newly featured items to advertise on the homepage
 featuredBlogPosts.unshift(
   {
+    id: "ai-governance-real-time-2026",
+    title: "AI Governance in Real Time 2026",
+    description: "Live canaries + CI policy tests to prevent regressions.",
+    link: "/blog/ai-governance-real-time-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-inference-warm-pools-2026",
+    title: "Edge Inference Warm Pools 2026",
+    description: "Sub‑100ms global with warm pools, prefetch, tiered caches.",
+    link: "/blog/edge-inference-warm-pools-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "agent-release-guardrails-2026",
+    title: "Agent Release Guardrails 2026",
+    description: "Budgets, approvals, and instant rollback for safe releases.",
+    link: "/blog/agent-release-guardrails-2026",
+    type: "article",
+    featured: true
+  },
+  {
     id: "operational-evals-2026",
     title: "Operational Evals 2026",
     description: "KPIs, canaries, and rollback playbooks that keep velocity high",
