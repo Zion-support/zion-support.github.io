@@ -1886,3 +1886,55 @@ latestArticles.unshift(
 export const featuredArticles = latestArticles.filter(article => article.featured);
 export const trendingArticles = latestArticles.filter(article => article.trending);
 export const newArticles = latestArticles.filter(article => article.newBadge);
+
+// Sept 30, 2025 – Surface three brand-new items in Latest Articles
+latestArticles.unshift(
+  {
+    id: "autonomic-decision-engines-2025",
+    slug: "ai-2025-sept-30-autonomic-decision-engines",
+    title: "Autonomic Decision Engines: Sub‑100ms, KPI‑Linked Actions",
+    description: "Budgeted actions, live canaries, and instant rollback for safe automation.",
+    excerpt: "Design decision engines that act fast and safely with rollback on KPIs.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "AI Operations",
+    tags: ["Automation", "Budgets", "Rollback"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/autonomic-decision-engines-2025.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "edge-private-personalization-v2-2025",
+    slug: "edge-2025-sept-30-private-personalization-v2",
+    title: "Edge Private Personalization v2: Zero‑PII, Global <100ms",
+    description: "Scoped IDs, signed configs, and on‑device models for private personalization.",
+    excerpt: "Deliver personalization worldwide without PII using edge patterns.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "Edge Computing",
+    tags: ["Edge", "Privacy", "Personalization"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/edge-private-personalization-v2.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "genai-eval-scorecards-quickstart-2025",
+    slug: "genai-2025-sept-30-eval-scorecards-quickstart",
+    title: "GenAI Eval Scorecards Quickstart: KPIs, Budgets, Rollback",
+    description: "KPI‑linked evals and budget‑aware routing that gate traffic safely.",
+    excerpt: "Stand up eval scorecards fast without slowing teams.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "GenAI",
+    tags: ["Evals", "Scorecards", "Budgets"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/genai-eval-scorecards-quickstart-2025.jpg",
+    newBadge: true,
+    trending: true
+  }
+);

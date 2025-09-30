@@ -321,6 +321,46 @@ export const getFeaturedBanners = (): EnhancedPromotionalBanner[] => {
   return getActiveEnhancedBanners().filter(banner => banner.featured);
 };
 
+// Sept 30, 2025 – Advertise three brand-new pieces across the front end
+enhancedPromotionalBanners.push({
+  id: 'sept30-2025-autonomic-decision-engines',
+  title: '🚀 New: Autonomic Decision Engines — Sub‑100ms, KPI‑Linked',
+  description: 'Budgeted actions, live canaries, instant rollback. Ship fast, stay safe.',
+  ctaText: 'Read article',
+  ctaLink: '/blog/ai-2025-sept-30-autonomic-decision-engines',
+  variant: 'success',
+  icon: '🚀',
+  featured: true,
+  priority: 0,
+  startDate: '2025-09-30'
+});
+
+enhancedPromotionalBanners.push({
+  id: 'sept30-2025-edge-private-personalization-v2',
+  title: '🔐 Edge Private Personalization v2 — Zero‑PII, <100ms',
+  description: 'Scoped IDs, signed configs, and on‑device models for private, fast UX.',
+  ctaText: 'Explore guide',
+  ctaLink: '/blog/edge-2025-sept-30-private-personalization-v2',
+  variant: 'info',
+  icon: '🔐',
+  featured: true,
+  priority: 1,
+  startDate: '2025-09-30'
+});
+
+enhancedPromotionalBanners.push({
+  id: 'sept30-2025-genai-eval-scorecards-quickstart',
+  title: '📊 GenAI Eval Scorecards — Quickstart',
+  description: 'KPI‑linked evals and budget‑aware routing that prevent regressions.',
+  ctaText: 'See quickstart',
+  ctaLink: '/blog/genai-2025-sept-30-eval-scorecards-quickstart',
+  variant: 'success',
+  icon: '📊',
+  featured: true,
+  priority: 2,
+  startDate: '2025-09-30'
+});
+
 // Sept 30, 2025 – New banners to advertise fresh content
 enhancedPromotionalBanners.push({
   id: 'sept30-2025-just-added-trio',

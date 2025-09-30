@@ -831,3 +831,37 @@ export const posts: BlogPost[] = [
     readTime: "6 min read"
   }
 ];
+
+// Sept 30, 2025 – Add three brand-new posts to advertise across the site
+posts.unshift(
+  {
+    slug: "ai-2025-sept-30-autonomic-decision-engines",
+    title: "Autonomic Decision Engines: Sub‑100ms, KPI‑Linked Actions",
+    description:
+      "Design decision engines with budgeted actions, live canaries, and rollback ready to contain incidents in seconds.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "edge-2025-sept-30-private-personalization-v2",
+    title: "Edge Private Personalization v2: Zero‑PII, Global <100ms",
+    description:
+      "Scoped IDs, signed configs, and on‑device models for privacy‑first personalization with stable SLAs.",
+    category: "Edge Computing",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read",
+  },
+  {
+    slug: "genai-2025-sept-30-eval-scorecards-quickstart",
+    title: "GenAI Eval Scorecards Quickstart: KPIs, Budgets, Rollback",
+    description:
+      "Stand up KPI‑linked evals and budget‑aware routing that gate traffic and trigger instant rollback without slowing teams.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read",
+  }
+);
