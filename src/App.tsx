@@ -86,8 +86,6 @@ const App: React.FC = () => {
       document.removeEventListener('click', handleClick);
       document.removeEventListener('keydown', handleKeyDown);
     };
-
-    initializeApp();
   }, []);
 
   if (isLoading) {
