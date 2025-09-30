@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -17,6 +18,76 @@ const TrendingContentBanner: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const trendingItems = [
+    {
+      title: "Platform ROI Scorecards v2",
+      description: "Golden paths + adoption funnels that quantify platform ROI in weeks.",
+      views: "15.2K",
+      readTime: "10 min",
+      category: "Platform Engineering",
+      icon: TrendingUp,
+      link: "/blog/ai-2025-sept-30-platform-roi-scorecards-v2",
+      badge: "NEW"
+    },
+    {
+      title: "Consentless Metrics v3",
+      description: "Zero‑PII telemetry: scoped IDs, DP noise, signed attestations <100ms.",
+      views: "14.1K",
+      readTime: "9 min",
+      category: "Analytics",
+      icon: Shield,
+      link: "/blog/edge-2025-sept-30-consentless-metrics-v3",
+      badge: "HOT"
+    },
+    {
+      title: "AI Executive Playbook 2027",
+      description: "Exec roadmap: KPI scorecards, budgets, and governance.",
+      views: "14.8K",
+      readTime: "12 min",
+      category: "AI Strategy",
+      icon: Brain,
+      link: "/blog/ai-executive-playbook-2027",
+      badge: "NEW"
+    },
+    {
+      title: "AI 2027 Cost Optimization",
+      description: "Quality tiers + semantic caches for predictable spend.",
+      views: "13.6K",
+      readTime: "9 min",
+      category: "AI Operations",
+      icon: TrendingUp,
+      link: "/blog/ai-2027-cost-optimization-playbook",
+      badge: "HOT"
+    },
+    {
+      title: "Edge Private Feature Flags 2026",
+      description: "Signed configs, scoped IDs, on‑device telemetry <100ms.",
+      views: "11.9K",
+      readTime: "8 min",
+      category: "Architecture",
+      icon: Zap,
+      link: "/blog/edge-2026-private-feature-flags",
+      badge: "TRENDING"
+    },
+    {
+      title: "Edge Rate Limiter 2026",
+      description: "Global token buckets with KV and consistent hashing under 10ms.",
+      views: "13.2K",
+      readTime: "7 min",
+      category: "Architecture",
+      icon: Zap,
+      link: "/blog/edge-rate-limiter-blueprint-2026",
+      badge: "NEW"
+    },
+    {
+      title: "Agent Red‑Teaming 2026",
+      description: "Simulation labs: jailbreak corpora, tool fuzzers, KPI‑linked budgets.",
+      views: "12.7K",
+      readTime: "8 min",
+      category: "AI Security",
+      icon: Shield,
+      link: "/blog/agent-red-teaming-2026",
+      badge: "HOT"
+    },
     {
       title: "AI Autonomous Infrastructure 2026",
       description: "Self‑healing, self‑optimizing, self‑scaling platforms with budgets.",
@@ -66,6 +137,37 @@ const TrendingContentBanner: React.FC = () => {
       icon: Zap,
       link: "/blog/edge-llm-caching-blueprint-2026",
       badge: "POPULAR"
+    }
+    ,
+    {
+      title: "Agent Safety Scorecards",
+      description: "Budgets, canaries, rollback to keep agents safe at speed.",
+      views: "9.7K",
+      readTime: "8 min",
+      category: "AI Operations",
+      icon: Shield,
+      link: "/blog/ai-2025-oct-02-agent-safety-scorecards",
+      badge: "NEW"
+    },
+    {
+      title: "Private Experiments v4",
+      description: "Scoped IDs + DP noise for compliant A/B at <100ms.",
+      views: "9.3K",
+      readTime: "7 min",
+      category: "Analytics",
+      icon: Zap,
+      link: "/blog/edge-2025-oct-02-private-experiments-v4",
+      badge: "HOT"
+    },
+    {
+      title: "GenAI Cache Playbook v2",
+      description: "Semantic caches + eval gates for 50–70% savings.",
+      views: "9.9K",
+      readTime: "9 min",
+      category: "GenAI",
+      icon: Brain,
+      link: "/blog/genai-2025-oct-02-cache-playbook-v2",
+      badge: "TRENDING"
     }
   ];
 

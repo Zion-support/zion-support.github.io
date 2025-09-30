@@ -1,212 +1,176 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Sparkles, Zap, Shield, Globe, CheckCircle, Star, TrendingUp } from 'lucide-react';
-import { newServices } from '../content/new-services';
+import { ArrowRight, Rocket, Star, Zap } from 'lucide-react';
+import { newServices2026 } from '../content/new-services-2026';
 
 interface NewServicesPromoBannerProps {
-  className?: string;
-  variant?: 'default' | 'premium' | 'showcase';
+  variant?: 'default' | 'showcase' | 'premium' | 'grid';
   showCount?: number;
   featuredOnly?: boolean;
+  className?: string;
 }
 
-export default function NewServicesPromoBanner({
-  className = '',
+const NewServicesPromoBanner: React.FC<NewServicesPromoBannerProps> = ({
   variant = 'default',
   showCount = 3,
-  featuredOnly = false
-}: NewServicesPromoBannerProps) {
-  const [isVisible, setIsVisible] = useState(true);
-  
-  const services = featuredOnly 
-    ? newServices.filter(service => service.featured).slice(0, showCount)
-    : newServices.slice(0, showCount);
+  featuredOnly = true,
+  className = ''
+}) => {
+  const services = featuredOnly
+    ? newServices2026.filter(s => s.featured).slice(0, showCount)
+    : newServices2026.slice(0, showCount);
 
-  if (!isVisible || services.length === 0) {
-    return null;
+  if (variant === 'showcase') {
+    return (
+      <div className={`bg-gradient-to-br from-emerald-600 via-teal-600 to-cyan-600 rounded-3xl p-8 md:p-12 text-white ${className}`}>
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center px-4 py-2 bg-yellow-400/20 rounded-full text-yellow-300 mb-6">
+              <Rocket className="w-5 h-5 mr-2" />
+              <span className="font-bold">NEW SERVICES LAUNCHED</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              Revolutionary AI Services Now Available
+            </h2>
+            <p className="text-xl text-emerald-100 max-w-3xl mx-auto">
+              Transform your business with our newest AI-powered solutions delivering unprecedented results
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 mb-8">
+            {services.map((service) => (
+              <div
+                key={service.id}
+                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 hover:bg-white/20 transition-all hover:scale-105"
+              >
+                <div className="text-4xl mb-4">{service.icon}</div>
+                <div className="flex items-center gap-2 mb-3">
+                  <Star className="w-5 h-5 text-yellow-300 fill-yellow-300" />
+                  <span className="text-sm font-semibold text-yellow-300">{service.category}</span>
+                </div>
+                <h3 className="text-2xl font-bold mb-3">{service.name}</h3>
+                <p className="text-emerald-100 mb-4">{service.description}</p>
+                <div className="space-y-2 mb-6">
+                  {service.benefits.slice(0, 3).map((benefit, idx) => (
+                    <div key={idx} className="flex items-start gap-2">
+                      <Zap className="w-4 h-4 text-yellow-300 flex-shrink-0 mt-1" />
+                      <span className="text-sm text-white">{benefit}</span>
+                    </div>
+                  ))}
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-semibold text-emerald-200">{service.pricing}</span>
+                  <Link
+                    to={service.link}
+                    className="bg-white text-emerald-600 px-4 py-2 rounded-lg font-semibold hover:bg-emerald-50 transition-colors flex items-center gap-1"
+                  >
+                    Learn More
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <Link
+              to="/services"
+              className="inline-flex items-center gap-2 bg-white text-emerald-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-emerald-50 transition-all hover:scale-105"
+            >
+              View All Services
+              <ArrowRight className="w-6 h-6" />
+            </Link>
+          </div>
+        </div>
+      </div>
+    );
   }
 
-  const getVariantStyles = () => {
-    switch (variant) {
-      case 'premium':
-        return {
-          container: 'bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 border-emerald-400/30',
-          text: 'text-white',
-          accent: 'text-emerald-200',
-          button: 'bg-white text-emerald-600 hover:bg-emerald-50',
-          buttonSecondary: 'border-white text-white hover:bg-white hover:text-emerald-600',
-          card: 'bg-white/10 backdrop-blur-sm border-white/20'
-        };
-      case 'showcase':
-        return {
-          container: 'bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 border-purple-400/30',
-          text: 'text-white',
-          accent: 'text-purple-200',
-          button: 'bg-white text-purple-600 hover:bg-purple-50',
-          buttonSecondary: 'border-white text-white hover:bg-white hover:text-purple-600',
-          card: 'bg-white/10 backdrop-blur-sm border-white/20'
-        };
-      default:
-        return {
-          container: 'bg-gradient-to-r from-blue-600 to-indigo-600 border-blue-400/30',
-          text: 'text-white',
-          accent: 'text-blue-200',
-          button: 'bg-white text-blue-600 hover:bg-blue-50',
-          buttonSecondary: 'border-white text-white hover:bg-white hover:text-blue-600',
-          card: 'bg-white/10 backdrop-blur-sm border-white/20'
-        };
-    }
-  };
-
-  const styles = getVariantStyles();
-
-  return (
-    <div className={`${styles.container} ${className} border rounded-xl p-6 mb-8 relative overflow-hidden`}>
-      {/* Background Animation */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white to-transparent transform -skew-x-12 animate-shimmer"></div>
-      </div>
-      
-      <div className="relative z-10">
-        {/* Header */}
-        <div className="flex items-center justify-between mb-4">
-          <div className="flex items-center gap-3">
-            <Sparkles className="w-6 h-6 animate-pulse" />
-            <span className={`text-lg font-bold ${styles.text}`}>
-              🚀 NEW SERVICES LAUNCH
-            </span>
-            <TrendingUp className="w-5 h-5 animate-bounce" />
-          </div>
-          <button
-            onClick={() => setIsVisible(false)}
-            className={`${styles.accent} hover:${styles.text} transition-colors`}
-            aria-label="Dismiss banner"
-          >
-            ✕
-          </button>
+  if (variant === 'premium') {
+    return (
+      <div className={`bg-gradient-to-r from-orange-600 to-red-600 rounded-2xl p-8 text-white ${className}`}>
+        <div className="flex items-center gap-3 mb-6">
+          <Rocket className="w-8 h-8 text-yellow-300" />
+          <h2 className="text-3xl font-bold">New Services Available</h2>
         </div>
-
-        {/* Main Content */}
-        <div className="mb-6">
-          <h3 className={`text-xl font-bold ${styles.text} mb-2`}>
-            🎯 Revolutionary AI Services That Will Transform Your Business
-          </h3>
-          <p className={`${styles.accent} text-sm mb-4`}>
-            Discover our newest AI-powered services: Autonomous Operations, Quantum Optimization, 
-            AI Cybersecurity Suite, Edge AI Platform, and Content Generation Platform.
-          </p>
-        </div>
-
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
+        <p className="text-orange-100 text-lg mb-8">
+          Discover our latest AI-powered solutions transforming businesses worldwide
+        </p>
+        <div className="grid md:grid-cols-3 gap-6">
           {services.map((service) => (
-            <div key={service.id} className={`${styles.card} rounded-lg p-4 hover:bg-white/15 transition-all duration-300 hover:scale-105`}>
-              <div className="flex items-start justify-between mb-3">
-                <div className="flex items-center gap-3">
-                  <span className="text-2xl">{service.icon}</span>
-                  <div>
-                    <h4 className={`font-semibold ${styles.text} text-sm mb-1`}>
-                      {service.title}
-                    </h4>
-                    <span className="bg-white/20 px-2 py-1 rounded text-xs font-medium">
-                      {service.category}
-                    </span>
-                  </div>
-                </div>
-                {service.newBadge && (
-                  <span className="bg-yellow-400 text-black px-2 py-1 rounded-full text-xs font-medium flex items-center gap-1">
-                    <Star className="w-3 h-3" />
-                    NEW
-                  </span>
-                )}
+            <div key={service.id} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all">
+              <div className="text-3xl mb-3">{service.icon}</div>
+              <h3 className="text-xl font-bold mb-2">{service.name}</h3>
+              <p className="text-orange-100 text-sm mb-4 line-clamp-2">{service.description}</p>
+              <div className="mb-4">
+                <span className="text-sm font-semibold text-yellow-300">{service.benefits[0]}</span>
               </div>
-              
-              <p className={`${styles.accent} text-xs mb-3 line-clamp-2`}>
-                {service.description}
-              </p>
-              
-              <div className="flex items-center justify-between mb-3">
-                <div className="flex items-center gap-2">
-                  <span className={`font-bold ${styles.text} text-sm`}>
-                    {service.pricing.starting}
-                  </span>
-                  {service.pricing.popular && (
-                    <span className="bg-green-400 text-black px-2 py-1 rounded text-xs font-medium">
-                      POPULAR
-                    </span>
-                  )}
-                </div>
-                {service.pricing.discount && (
-                  <span className="bg-red-400 text-white px-2 py-1 rounded text-xs font-medium">
-                    {service.pricing.discount}
-                  </span>
-                )}
-              </div>
-
-              {/* Key Benefits */}
-              <div className="mb-3">
-                {service.benefits.slice(0, 2).map((benefit, index) => (
-                  <div key={index} className="flex items-center gap-2 mb-1">
-                    <CheckCircle className="w-3 h-3 text-green-400 flex-shrink-0" />
-                    <span className={`${styles.accent} text-xs`}>
-                      {benefit}
-                    </span>
-                  </div>
-                ))}
-              </div>
-
-              <div className="flex gap-2">
-                <Link
-                  to={`/services/${service.id}`}
-                  className={`${styles.button} px-3 py-2 rounded text-xs font-semibold inline-flex items-center gap-1 transition-all duration-300 hover:scale-105 flex-1 justify-center`}
-                >
-                  Learn More
-                  <ArrowRight className="w-3 h-3" />
-                </Link>
-              </div>
+              <Link
+                to={service.link}
+                className="inline-flex items-center gap-2 text-yellow-300 font-semibold hover:text-yellow-200"
+              >
+                Learn More <ArrowRight className="w-4 h-4" />
+              </Link>
             </div>
           ))}
         </div>
+      </div>
+    );
+  }
 
-        {/* Action Buttons */}
-        <div className="flex flex-col sm:flex-row gap-3 justify-center">
-          <Link
-            to="/services"
-            className={`${styles.button} px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 transition-all duration-300 hover:scale-105`}
-          >
-            <Zap className="w-4 h-4" />
-            Explore All Services
-            <ArrowRight className="w-4 h-4" />
-          </Link>
-          <Link
-            to="/contact"
-            className={`${styles.buttonSecondary} border px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105`}
-          >
-            Get Free Consultation
-          </Link>
-        </div>
-
-        {/* Special Offer */}
-        <div className="mt-4 p-3 bg-white/10 rounded-lg border border-white/20">
-          <div className="text-center">
-            <p className={`${styles.text} font-semibold text-sm mb-1`}>
-              🔥 Limited Time Offer: Get 50% OFF Your First 3 Months
-            </p>
-            <p className={`${styles.accent} text-xs`}>
-              Plus FREE AI Strategy Consultation • Valid until March 31, 2025
-            </p>
+  if (variant === 'grid') {
+    return (
+      <div className={`bg-white rounded-xl shadow-lg p-8 ${className}`}>
+        <div className="flex items-center justify-between mb-6">
+          <div className="flex items-center gap-3">
+            <Rocket className="w-7 h-7 text-indigo-600" />
+            <h3 className="text-2xl font-bold text-gray-900">New Services</h3>
           </div>
+          <Link to="/services" className="text-indigo-600 font-semibold hover:text-indigo-800">
+            View All →
+          </Link>
         </div>
-
-        {/* Tags */}
-        <div className="mt-4 flex flex-wrap gap-2 justify-center">
-          {['AI Autonomous Ops', 'Quantum Computing', 'AI Security', 'Edge AI', 'Content Generation', 'Customer Insights'].map((tag) => (
-            <span key={tag} className="bg-white/10 text-white px-3 py-1 rounded-full text-xs font-medium border border-white/20">
-              {tag}
-            </span>
+        <div className="grid md:grid-cols-3 gap-6">
+          {services.map((service) => (
+            <Link
+              key={service.id}
+              to={service.link}
+              className="border border-gray-200 rounded-xl p-5 hover:shadow-xl hover:border-indigo-300 transition-all group"
+            >
+              <div className="text-3xl mb-3">{service.icon}</div>
+              <h4 className="font-bold text-gray-900 mb-2 group-hover:text-indigo-600">
+                {service.name}
+              </h4>
+              <p className="text-sm text-gray-600 mb-3 line-clamp-2">{service.description}</p>
+              <div className="text-sm font-semibold text-indigo-600">{service.pricing}</div>
+            </Link>
           ))}
         </div>
       </div>
+    );
+  }
+
+  // Default variant
+  return (
+    <div className={`bg-gradient-to-r from-green-600 to-teal-600 rounded-xl p-6 text-white ${className}`}>
+      <div className="flex items-center gap-3 mb-4">
+        <Rocket className="w-6 h-6 text-yellow-300" />
+        <h3 className="text-2xl font-bold">New Services Just Launched</h3>
+      </div>
+      <div className="grid md:grid-cols-3 gap-4">
+        {services.map((service) => (
+          <div key={service.id} className="bg-white/10 rounded-lg p-4 hover:bg-white/20 transition-all">
+            <div className="text-2xl mb-2">{service.icon}</div>
+            <h4 className="font-semibold mb-2">{service.name}</h4>
+            <p className="text-sm text-green-100 mb-3 line-clamp-2">{service.description}</p>
+            <Link to={service.link} className="text-yellow-300 text-sm font-semibold hover:underline">
+              Explore Service →
+            </Link>
+          </div>
+        ))}
+      </div>
     </div>
   );
-}
+};
+
+export default NewServicesPromoBanner;

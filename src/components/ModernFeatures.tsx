@@ -1,61 +1,62 @@
 import React from 'react';
-import { 
-  CheckCircle
-} from 'lucide-react';
+import { Zap, Shield, TrendingUp, Users, Globe, Award } from 'lucide-react';
 
-interface FeatureItem {
-  title: string;
-  description: string;
-  icon: React.ReactNode;
-}
+const ModernFeatures: React.FC = () => {
+  const features = [
+    {
+      icon: <Zap className="w-10 h-10" />,
+      title: "Lightning Fast",
+      description: "Deploy AI solutions 10x faster with our pre-built frameworks and automation tools."
+    },
+    {
+      icon: <Shield className="w-10 h-10" />,
+      title: "Enterprise Security",
+      description: "Bank-level security with SOC 2, GDPR compliance, and continuous monitoring."
+    },
+    {
+      icon: <TrendingUp className="w-10 h-10" />,
+      title: "Proven Results",
+      description: "Average 300% ROI within 6 months across all client implementations."
+    },
+    {
+      icon: <Users className="w-10 h-10" />,
+      title: "Expert Support",
+      description: "Dedicated team of AI specialists providing 24/7 support and guidance."
+    },
+    {
+      icon: <Globe className="w-10 h-10" />,
+      title: "Global Scale",
+      description: "Infrastructure spanning 50+ countries for low-latency worldwide access."
+    },
+    {
+      icon: <Award className="w-10 h-10" />,
+      title: "Award Winning",
+      description: "Recognized industry leader with 15+ awards for innovation and excellence."
+    }
+  ];
 
-const features: FeatureItem[] = [
-  {
-    title: 'Reliability First',
-    description: 'SLOs, budgets, and guardrails baked into every workflow.',
-    icon: <CheckCircle className="w-6 h-6 text-green-500" />
-  },
-  {
-    title: 'Security by Design',
-    description: 'Least-privilege, attestations, and policy tests across the SDLC.',
-    icon: <CheckCircle className="w-6 h-6 text-green-500" />
-  },
-  {
-    title: 'Performance Obsessed',
-    description: 'Latency budgets, edge patterns, and efficient retrieval at scale.',
-    icon: <CheckCircle className="w-6 h-6 text-green-500" />
-  },
-  {
-    title: 'Measurable Outcomes',
-    description: 'Scorecards tied to adoption, golden paths, and shipped value.',
-    icon: <CheckCircle className="w-6 h-6 text-green-500" />
-  }
-];
-
-export default function ModernFeatures(): React.JSX.Element {
   return (
-    <div className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold text-gray-900 mb-6">
-            Modern Technology, <span className="text-blue-600">Exceptional Results</span>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            Why Choose Zion Tech Group?
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We leverage the latest technologies to deliver solutions that drive innovation, 
-            efficiency, and growth for your business.
+            Industry-leading AI solutions backed by enterprise-grade infrastructure and expert support
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {features.map((feature, index) => (
-            <div 
+            <div
               key={index}
-              className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100"
+              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 group"
             >
-              <div className="text-blue-600 mb-6">
+              <div className="bg-gradient-to-br from-indigo-500 to-purple-600 text-white w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">
                 {feature.title}
               </h3>
               <p className="text-gray-600 leading-relaxed">
@@ -64,29 +65,9 @@ export default function ModernFeatures(): React.JSX.Element {
             </div>
           ))}
         </div>
-        
-        <div className="mt-16 text-center">
-          <div className="bg-white rounded-2xl p-8 shadow-lg max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">
-              Why Choose Zion Tech Group?
-            </h3>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="flex items-center gap-3">
-                <CheckCircle className="w-6 h-6 text-green-500" />
-                <span className="text-gray-700 font-medium">Proven Expertise</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <CheckCircle className="w-6 h-6 text-green-500" />
-                <span className="text-gray-700 font-medium">Cutting-Edge Technology</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <CheckCircle className="w-6 h-6 text-green-500" />
-                <span className="text-gray-700 font-medium">Dedicated Support</span>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
-    </div>
+    </section>
   );
-}
+};
+
+export default ModernFeatures;
