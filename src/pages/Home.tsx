@@ -204,9 +204,9 @@ const Home = () => {
             </h1>
 
             <p className="text-xl md:text-2xl text-zion-slate-light mb-8 leading-relaxed max-w-3xl mx-auto animate-fade-in">
-              🚀 <strong>BREAKTHROUGH 2025:</strong> AI Autonomous Infrastructure, Quantum-AI Hybrid Computing & Zero Trust Security! 
-              Transform your business with revolutionary AI solutions that self-heal, optimize, and scale automatically. 
-              Join 500+ companies achieving unprecedented results!
+              🚀 <strong>BREAKTHROUGH 2025:</strong> Real-Time Data Processing, Enterprise Conversational AI & Edge IoT Revolution! 
+              Transform your business with proven AI solutions delivering $25B+ in client results. 
+              Join 500+ companies achieving 300-500% ROI with our expert guidance!
             </p>
 
             {/* Special Promotion Banner */}
@@ -242,36 +242,73 @@ const Home = () => {
             <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-xl p-6 mb-8 animate-fade-in">
               <div className="flex items-center justify-center gap-3 mb-3">
                 <Sparkles className="w-6 h-6 text-purple-400 animate-pulse" />
-                <span className="text-lg font-bold text-purple-400">🚀 NEW BREAKTHROUGH CONTENT</span>
+                <span className="text-lg font-bold text-purple-400">🔥 BREAKTHROUGH CONTENT — JUST PUBLISHED!</span>
                 <Sparkles className="w-6 h-6 text-purple-400 animate-pulse" />
               </div>
               <p className="text-white text-lg font-semibold mb-2">
-                🎯 Just Published: AI Autonomous Cost Intelligence, Conversational Commerce Revolution, Predictive Infrastructure Orchestration & More!
+                🚀 NEW RELEASES: Real-Time Data Processing, Enterprise Conversational AI, Edge AI for Industrial IoT + $25B in Proven Success Stories
               </p>
               <p className="text-zion-slate-light text-sm mb-4">
-                Discover how to reduce cloud spending by 60%, achieve 3.5x higher conversion rates with AI commerce, and reach 99.999% uptime with predictive orchestration—plus breakthrough insights on self-healing systems, quantum computing, and zero trust security.
+                Explore our latest insights on AI-powered stream analytics, conversational AI deployment playbooks, edge computing transformation, 
+                plus case studies showcasing $12B retail transformation, $5B healthcare AI success, and $8B fraud prevention victory.
               </p>
+              
+              {/* Featured Articles Grid */}
+              <div className="grid md:grid-cols-3 gap-4 mb-4">
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-purple-300/30 hover:bg-white/20 transition-all">
+                  <div className="text-xs text-purple-300 mb-1">AI & Analytics</div>
+                  <h4 className="text-white font-semibold text-sm mb-2">Real-Time Data Processing Revolution</h4>
+                  <p className="text-purple-200 text-xs">Sub-second insights, automated decisions, 75% cost reduction</p>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-purple-300/30 hover:bg-white/20 transition-all">
+                  <div className="text-xs text-purple-300 mb-1">Enterprise AI</div>
+                  <h4 className="text-white font-semibold text-sm mb-2">Conversational AI Deployment Guide</h4>
+                  <p className="text-purple-200 text-xs">70% cost reduction, 24/7 availability, 98%+ accuracy</p>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-purple-300/30 hover:bg-white/20 transition-all">
+                  <div className="text-xs text-purple-300 mb-1">Edge Computing</div>
+                  <h4 className="text-white font-semibold text-sm mb-2">Edge AI for Industrial IoT</h4>
+                  <p className="text-purple-200 text-xs">90% downtime reduction, 150-350% ROI in Year 1</p>
+                </div>
+              </div>
+
+              {/* Success Stories Highlights */}
+              <div className="bg-gradient-to-r from-emerald-500/20 to-blue-500/20 rounded-lg p-4 mb-4 border border-emerald-300/30">
+                <p className="text-emerald-200 font-semibold mb-2 text-sm">💎 SUCCESS STORIES: $25B+ Combined Impact</p>
+                <div className="grid md:grid-cols-3 gap-2 text-xs">
+                  <div className="text-white">
+                    <span className="font-bold text-emerald-300">$12B</span> Retail Omnichannel Transformation
+                  </div>
+                  <div className="text-white">
+                    <span className="font-bold text-blue-300">$5B</span> Healthcare AI Diagnostics Platform
+                  </div>
+                  <div className="text-white">
+                    <span className="font-bold text-purple-300">$8B</span> Financial Services Fraud Prevention
+                  </div>
+                </div>
+              </div>
+
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link
                   to="/blog"
-                  className="bg-purple-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-purple-600 transition-colors text-center"
+                  className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-lg font-bold hover:from-purple-600 hover:to-pink-600 transition-all shadow-lg hover:shadow-xl text-center"
                 >
-                  Read Latest Articles
+                  📖 Read Latest Articles
                 </Link>
                 <Link
                   to="/case-studies"
-                  className="border border-purple-400 text-purple-400 px-6 py-2 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-colors text-center"
+                  className="bg-gradient-to-r from-emerald-500 to-blue-500 text-white px-6 py-3 rounded-lg font-bold hover:from-emerald-600 hover:to-blue-600 transition-all shadow-lg hover:shadow-xl text-center"
                 >
-                  View Success Stories
+                  🏆 View Success Stories
                 </Link>
               </div>
               <div className="mt-4 flex flex-wrap gap-2 justify-center">
-                <span className="bg-green-100/20 text-green-200 px-3 py-1 rounded-full text-xs font-medium border border-green-300/20">Cost Intelligence</span>
-                <span className="bg-purple-100/20 text-purple-200 px-3 py-1 rounded-full text-xs font-medium border border-purple-300/20">AI Infrastructure</span>
-                <span className="bg-pink-100/20 text-pink-200 px-3 py-1 rounded-full text-xs font-medium border border-pink-300/20">Conversational Commerce</span>
-                <span className="bg-blue-100/20 text-blue-200 px-3 py-1 rounded-full text-xs font-medium border border-blue-300/20">Zero Trust Security</span>
-                <span className="bg-indigo-100/20 text-indigo-200 px-3 py-1 rounded-full text-xs font-medium border border-indigo-300/20">Predictive Ops</span>
-                <span className="bg-cyan-100/20 text-cyan-200 px-3 py-1 rounded-full text-xs font-medium border border-cyan-300/20">DevOps Excellence</span>
+                <span className="bg-purple-100/20 text-purple-200 px-3 py-1 rounded-full text-xs font-medium border border-purple-300/20">Real-Time Analytics</span>
+                <span className="bg-rose-100/20 text-rose-200 px-3 py-1 rounded-full text-xs font-medium border border-rose-300/20">Conversational AI</span>
+                <span className="bg-blue-100/20 text-blue-200 px-3 py-1 rounded-full text-xs font-medium border border-blue-300/20">Edge Computing</span>
+                <span className="bg-emerald-100/20 text-emerald-200 px-3 py-1 rounded-full text-xs font-medium border border-emerald-300/20">Retail AI</span>
+                <span className="bg-cyan-100/20 text-cyan-200 px-3 py-1 rounded-full text-xs font-medium border border-cyan-300/20">Healthcare AI</span>
+                <span className="bg-yellow-100/20 text-yellow-200 px-3 py-1 rounded-full text-xs font-medium border border-yellow-300/20">Fraud Prevention</span>
               </div>
             </div>
           </div>
@@ -280,10 +317,10 @@ const Home = () => {
         {/* Latest Insights Section */}
         {/* Promo ribbon for new content */}
         <div className="container mx-auto px-6">
-          <div className="mb-6 rounded-full bg-emerald-500/15 border border-emerald-400/30 px-6 py-3 text-emerald-200 text-sm inline-flex items-center gap-2">
+          <div className="mb-6 rounded-full bg-gradient-to-r from-emerald-500/15 to-blue-500/15 border border-emerald-400/30 px-6 py-3 text-white text-sm inline-flex items-center gap-2 shadow-lg">
             <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            New: Edge LLM Caching, Governance Scorecards, Serverless Cost Playbook — read now
-            <Link to="/insights" className="text-emerald-300 underline underline-offset-4 hover:text-white">View</Link>
+            🆕 NEW: Real-Time Data Processing, Conversational AI, Edge IoT + $25B Success Stories
+            <Link to="/blog" className="text-emerald-300 font-semibold underline underline-offset-4 hover:text-white">Read Now →</Link>
           </div>
         </div>
         {/* <LatestInsights /> */}
@@ -730,6 +767,19 @@ const Home = () => {
             
             {/* Blog CTA */}
             <div className="mt-12 text-center">
+              <div className="bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-400/30 rounded-xl p-6 mb-6 max-w-4xl mx-auto">
+                <p className="text-gray-700 font-semibold mb-3">
+                  🔥 <strong>JUST PUBLISHED:</strong> Breakthrough insights on Real-Time Analytics, Conversational AI, and Edge Computing + $25B in proven success stories
+                </p>
+                <div className="flex flex-wrap gap-2 justify-center">
+                  <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-medium">Real-Time Processing</span>
+                  <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Conversational AI</span>
+                  <span className="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-xs font-medium">Edge Computing</span>
+                  <span className="bg-rose-100 text-rose-700 px-3 py-1 rounded-full text-xs font-medium">$12B Retail</span>
+                  <span className="bg-cyan-100 text-cyan-700 px-3 py-1 rounded-full text-xs font-medium">$5B Healthcare</span>
+                  <span className="bg-amber-100 text-amber-700 px-3 py-1 rounded-full text-xs font-medium">$8B Fraud Prevention</span>
+                </div>
+              </div>
               <Link
                 to="/blog"
                 className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"

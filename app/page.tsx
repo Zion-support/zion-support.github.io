@@ -301,7 +301,6 @@ export default function HomePage() {
               <div className="text-white font-bold text-lg mb-2">AI 2026 Future Trends</div>
               <div className="text-gray-400 text-sm mb-3">Discover the revolutionary AI trends and breakthroughs that will reshape everything in 2026, from consciousness to quantum AI.</div>
               <div className="text-blue-300 text-sm font-semibold group-hover:text-blue-200">Explore Future Trends →</div>
->>>>>>> cursor/create-and-deploy-new-content-4eb2
             </Link>
           </div>
         </div>
