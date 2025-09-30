@@ -18,7 +18,12 @@ import {
   AutonomousAgentsBanner,
   AIGovernanceBanner,
   FinTechSuccessBanner,
-  NewContentShowcaseBanner
+  NewContentShowcaseBanner,
+  AIEdgeComputingBanner,
+  AICustomerIntelligenceBanner,
+  BankingAISuccessBanner,
+  TelecomAISuccessBanner,
+  September30NewContentShowcase
 } from '../components/PromotionalBanner';
 import {
   AIEnterpriseAdoptionBanner,
@@ -92,6 +97,17 @@ export default function HomePage() {
       <div className="animate-fade-in">
       {/* 🔥 BREAKING: NEW CONTENT - SEPTEMBER 30, 2025 */}
       <September30NewContentBanner />
+      
+      {/* 🚀 NEW CONTENT SHOWCASE - SEPTEMBER 30, 2025 */}
+      <September30NewContentShowcase />
+      
+      {/* NEW: AI Edge Computing & Customer Intelligence */}
+      <AIEdgeComputingBanner />
+      <AICustomerIntelligenceBanner />
+      
+      {/* NEW SUCCESS STORIES: Banking & Telecom */}
+      <BankingAISuccessBanner />
+      <TelecomAISuccessBanner />
       
       {/* Latest Content Banner 2025 - September 30 */}
       <LatestContentBanner2025 />
@@ -458,6 +474,217 @@ export default function HomePage() {
               <div>
                 <div className="text-3xl font-bold text-blue-600">$2M+</div>
                 <div className="text-gray-600">Cost Savings</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 🆕 LATEST PUBLICATIONS - SEPTEMBER 30, 2025 */}
+        <section className="py-20 bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 text-white">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center gap-3 bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full mb-6 animate-pulse">
+                <span className="text-3xl">⚡</span>
+                <span className="text-xl font-bold">BREAKING: 4 NEW PUBLICATIONS TODAY!</span>
+                <span className="text-3xl">🔥</span>
+              </div>
+              <h2 className="text-5xl md:text-6xl font-black mb-6">
+                Latest AI Innovations & Success Stories
+              </h2>
+              <p className="text-2xl text-purple-100 max-w-4xl mx-auto">
+                Fresh insights on Edge Computing, Customer Intelligence, plus proven success stories 
+                delivering $370M+ combined ROI
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              {/* AI Edge Computing */}
+              <Link href="/blog/ai-edge-computing-transformation-2026" className="group">
+                <div className="bg-white rounded-2xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all hover:scale-105 transform">
+                  <div className="bg-gradient-to-r from-blue-600 to-cyan-600 p-8 text-white">
+                    <div className="flex items-center gap-2 mb-4">
+                      <span className="bg-yellow-400 text-blue-900 px-4 py-2 rounded-full text-sm font-bold animate-bounce">
+                        🆕 BLOG POST
+                      </span>
+                    </div>
+                    <h3 className="text-3xl font-bold mb-3">
+                      AI Edge Computing Transformation 2026
+                    </h3>
+                    <p className="text-xl text-blue-100">
+                      95% latency reduction with distributed intelligence
+                    </p>
+                  </div>
+                  <div className="p-8 bg-gradient-to-br from-blue-50 to-cyan-50">
+                    <p className="text-gray-700 mb-6 text-lg leading-relaxed">
+                      Deploy real-time AI at the edge for sub-10ms response times. Achieve 95% latency 
+                      reduction, 85% cost savings, and autonomous edge operations.
+                    </p>
+                    <div className="grid grid-cols-3 gap-4 mb-6">
+                      <div className="text-center">
+                        <div className="text-3xl font-bold text-blue-600">95%</div>
+                        <div className="text-sm text-gray-600">Latency ↓</div>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-3xl font-bold text-cyan-600">85%</div>
+                        <div className="text-sm text-gray-600">Cost ↓</div>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-3xl font-bold text-green-600">&lt;10ms</div>
+                        <div className="text-sm text-gray-600">Response</div>
+                      </div>
+                    </div>
+                    <div className="bg-blue-600 text-white text-center py-4 rounded-xl font-bold text-lg group-hover:bg-blue-700 transition-colors">
+                      Read Complete Guide →
+                    </div>
+                  </div>
+                </div>
+              </Link>
+
+              {/* AI Customer Intelligence */}
+              <Link href="/blog/ai-powered-customer-intelligence-2026" className="group">
+                <div className="bg-white rounded-2xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all hover:scale-105 transform">
+                  <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-8 text-white">
+                    <div className="flex items-center gap-2 mb-4">
+                      <span className="bg-yellow-400 text-purple-900 px-4 py-2 rounded-full text-sm font-bold animate-bounce">
+                        🆕 BLOG POST
+                      </span>
+                    </div>
+                    <h3 className="text-3xl font-bold mb-3">
+                      AI-Powered Customer Intelligence 2026
+                    </h3>
+                    <p className="text-xl text-purple-100">
+                      45% revenue growth with 360° customer understanding
+                    </p>
+                  </div>
+                  <div className="p-8 bg-gradient-to-br from-purple-50 to-pink-50">
+                    <p className="text-gray-700 mb-6 text-lg leading-relaxed">
+                      Build complete customer profiles and predictive analytics. Achieve 45% revenue 
+                      growth, 92% prediction accuracy, and 3.5x customer lifetime value.
+                    </p>
+                    <div className="grid grid-cols-3 gap-4 mb-6">
+                      <div className="text-center">
+                        <div className="text-3xl font-bold text-purple-600">45%</div>
+                        <div className="text-sm text-gray-600">Revenue ↑</div>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-3xl font-bold text-pink-600">92%</div>
+                        <div className="text-sm text-gray-600">Accuracy</div>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-3xl font-bold text-green-600">3.5x</div>
+                        <div className="text-sm text-gray-600">CLV</div>
+                      </div>
+                    </div>
+                    <div className="bg-purple-600 text-white text-center py-4 rounded-xl font-bold text-lg group-hover:bg-purple-700 transition-colors">
+                      Read Complete Guide →
+                    </div>
+                  </div>
+                </div>
+              </Link>
+
+              {/* Banking Success Story */}
+              <Link href="/case-studies/banking-ai-transformation-2025" className="group">
+                <div className="bg-white rounded-2xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all hover:scale-105 transform border-4 border-green-300">
+                  <div className="bg-gradient-to-r from-indigo-600 to-blue-600 p-8 text-white">
+                    <div className="flex items-center gap-2 mb-4">
+                      <span className="bg-yellow-400 text-indigo-900 px-4 py-2 rounded-full text-sm font-bold animate-bounce">
+                        🏆 CASE STUDY
+                      </span>
+                    </div>
+                    <h3 className="text-3xl font-bold mb-3">
+                      Banking AI: $250M ROI Success
+                    </h3>
+                    <p className="text-xl text-indigo-100">
+                      Fortune 100 bank transforms with AI
+                    </p>
+                  </div>
+                  <div className="p-8 bg-gradient-to-br from-indigo-50 to-blue-50">
+                    <p className="text-gray-700 mb-6 text-lg leading-relaxed">
+                      How GlobalBank achieved $250M ROI, 99.8% fraud detection, and 85% operational 
+                      efficiency through comprehensive AI transformation.
+                    </p>
+                    <div className="grid grid-cols-3 gap-4 mb-6">
+                      <div className="text-center">
+                        <div className="text-3xl font-bold text-indigo-600">$250M</div>
+                        <div className="text-sm text-gray-600">ROI</div>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-3xl font-bold text-blue-600">99.8%</div>
+                        <div className="text-sm text-gray-600">Fraud Detect</div>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-3xl font-bold text-green-600">85%</div>
+                        <div className="text-sm text-gray-600">Efficiency</div>
+                      </div>
+                    </div>
+                    <div className="bg-indigo-600 text-white text-center py-4 rounded-xl font-bold text-lg group-hover:bg-indigo-700 transition-colors">
+                      Read Success Story →
+                    </div>
+                  </div>
+                </div>
+              </Link>
+
+              {/* Telecom Success Story */}
+              <Link href="/case-studies/telecom-ai-transformation-2025" className="group">
+                <div className="bg-white rounded-2xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all hover:scale-105 transform border-4 border-teal-300">
+                  <div className="bg-gradient-to-r from-teal-600 to-cyan-600 p-8 text-white">
+                    <div className="flex items-center gap-2 mb-4">
+                      <span className="bg-yellow-400 text-teal-900 px-4 py-2 rounded-full text-sm font-bold animate-bounce">
+                        🏆 CASE STUDY
+                      </span>
+                    </div>
+                    <h3 className="text-3xl font-bold mb-3">
+                      Telecom AI: $120M Savings Success
+                    </h3>
+                    <p className="text-xl text-teal-100">
+                      Global operator achieves massive efficiency gains
+                    </p>
+                  </div>
+                  <div className="p-8 bg-gradient-to-br from-teal-50 to-cyan-50">
+                    <p className="text-gray-700 mb-6 text-lg leading-relaxed">
+                      TelecomGlobal achieves $120M annual savings, 95% network efficiency, and 40% 
+                      churn reduction with AI-powered transformation.
+                    </p>
+                    <div className="grid grid-cols-3 gap-4 mb-6">
+                      <div className="text-center">
+                        <div className="text-3xl font-bold text-teal-600">$120M</div>
+                        <div className="text-sm text-gray-600">Savings</div>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-3xl font-bold text-cyan-600">95%</div>
+                        <div className="text-sm text-gray-600">Network</div>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-3xl font-bold text-green-600">40%</div>
+                        <div className="text-sm text-gray-600">Churn ↓</div>
+                      </div>
+                    </div>
+                    <div className="bg-teal-600 text-white text-center py-4 rounded-xl font-bold text-lg group-hover:bg-teal-700 transition-colors">
+                      Read Success Story →
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </div>
+
+            <div className="text-center bg-white/10 backdrop-blur-sm rounded-2xl p-10 border-2 border-white/20">
+              <h3 className="text-3xl font-bold mb-4">Want These Results for Your Organization?</h3>
+              <p className="text-xl mb-8 text-purple-100">
+                Our AI experts have delivered $370M+ in proven ROI. Schedule your free consultation today.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="tel:+13024640950"
+                  className="bg-white text-purple-600 px-10 py-5 rounded-xl font-bold text-xl hover:bg-purple-50 transition-all hover:scale-105 shadow-2xl"
+                >
+                  📞 Call +1 302 464 0950
+                </a>
+                <a
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="border-3 border-white text-white px-10 py-5 rounded-xl font-bold text-xl hover:bg-white hover:text-purple-600 transition-all hover:scale-105"
+                >
+                  📧 Schedule Free Consultation
+                </a>
               </div>
             </div>
           </div>
