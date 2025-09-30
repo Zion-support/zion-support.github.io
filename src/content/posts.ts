@@ -9,6 +9,34 @@ export interface BlogPost {
 }
 
 export const posts: BlogPost[] = [
+  // Sept 30, 2025 — BREAKING: New Enterprise Guides
+  {
+    slug: "ai-powered-devsecops-complete-guide-2025",
+    title: "AI-Powered DevSecOps Complete Guide 2025: Security at DevOps Speed",
+    description: "Integrate AI-driven security testing, achieve 95% faster vulnerability detection, 80% fewer false positives, and continuous compliance without sacrificing velocity.",
+    category: "DevSecOps & AI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "14 min read"
+  },
+  {
+    slug: "quantum-ready-cloud-infrastructure-2025",
+    title: "Quantum-Ready Cloud Infrastructure 2025: Post-Quantum Cryptography Migration",
+    description: "Complete migration guide to protect against quantum threats. Implement hybrid cryptography, deploy PQC algorithms, and future-proof your systems before Q-Day.",
+    category: "Quantum Computing",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "16 min read"
+  },
+  {
+    slug: "enterprise-ai-model-governance-framework-2025",
+    title: "Enterprise AI Model Governance Framework 2025: The Complete Guide",
+    description: "Build enterprise-grade AI governance with model registries, bias monitoring, compliance automation, and lifecycle management. Navigate regulatory requirements with confidence.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "18 min read"
+  },
   // Sept 30, 2025 — Newly added content (featured)
   {
     slug: "ai-2025-sept-30-llm-supply-chains",
