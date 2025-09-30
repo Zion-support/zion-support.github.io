@@ -98,6 +98,7 @@ export default function HomePage() {
             <div className="text-white font-semibold">Latest Revolutionary Breakthroughs</div>
             <div className="flex flex-wrap gap-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
               <a href="/blog/ai-2026-multimodal-enterprise-automation" className="inline-flex items-center gap-2 bg-cyan-500/20 text-cyan-200 border border-cyan-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-cyan-500/30 transition-colors">Multimodal Automation<span>→</span></a>
               <a href="/blog/ai-2026-quantum-enhanced-machine-learning" className="inline-flex items-center gap-2 bg-purple-500/20 text-purple-200 border border-purple-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-purple-500/30 transition-colors">Quantum ML<span>→</span></a>
               <a href="/blog/ai-2026-autonomous-business-operations" className="inline-flex items-center gap-2 bg-green-500/20 text-green-200 border border-green-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-green-500/30 transition-colors">Autonomous Ops<span>→</span></a>
@@ -109,6 +110,19 @@ export default function HomePage() {
               <Link href="/case-studies/ai-2026-neural-architecture-search-500x-success" className="inline-flex items-center gap-2 bg-orange-500/20 text-orange-200 border border-orange-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-orange-500/30 transition-colors">500x Dev Speed<span>→</span></Link>
               <Link href="/blog/ai-2027-quantum-consciousness-fusion-breakthrough" className="inline-flex items-center gap-2 bg-indigo-500/20 text-indigo-200 border border-indigo-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-indigo-500/30 transition-colors">Quantum Consciousness 100,000x<span>→</span></Link>
 >>>>>>> origin/cursor/create-and-deploy-new-content-0233
+=======
+              <Link href="/blog/ai-2027-quantum-consciousness-fusion-breakthrough" className="inline-flex items-center gap-2 bg-purple-500/20 text-purple-200 border border-purple-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-purple-500/30 transition-colors">Quantum Consciousness 100,000x<span>→</span></Link>
+              <Link href="/blog/ai-2028-autonomous-enterprise-revolution" className="inline-flex items-center gap-2 bg-blue-500/20 text-blue-200 border border-blue-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-blue-500/30 transition-colors">99.9% Autonomous Enterprise<span>→</span></Link>
+              <Link href="/case-studies/ai-2027-consciousness-fusion-mega-success" className="inline-flex items-center gap-2 bg-green-500/20 text-green-200 border border-green-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-green-500/30 transition-colors">$2.5B ROI Success<span>→</span></Link>
+              <Link href="/case-studies/ai-2028-autonomous-enterprise-mega-success" className="inline-flex items-center gap-2 bg-orange-500/20 text-orange-200 border border-orange-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-orange-500/30 transition-colors">$5B ROI Success<span>→</span></Link>
+              <Link href="/blog/ai-2026-quantum-neural-fusion-breakthrough" className="inline-flex items-center gap-2 bg-purple-500/20 text-purple-200 border border-purple-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-purple-500/30 transition-colors">Quantum-Neural Fusion<span>→</span></Link>
+              <Link href="/blog/ai-enterprise-automation-2026-mega-guide" className="inline-flex items-center gap-2 bg-cyan-500/20 text-cyan-200 border border-cyan-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-cyan-500/30 transition-colors">Enterprise Automation Guide<span>→</span></Link>
+              <Link href="/case-studies/fortune-500-ai-2026-breakthrough-mega-success" className="inline-flex items-center gap-2 bg-green-500/20 text-green-200 border border-green-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-green-500/30 transition-colors">$2.3B Success Story<span>→</span></Link>
+              <Link href="/blog/ai-2026-neural-optimization-revolution" className="inline-flex items-center gap-2 bg-indigo-500/20 text-indigo-200 border border-indigo-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-indigo-500/30 transition-colors">Neural Optimization 1000x<span>→</span></Link>
+              <Link href="/blog/ai-2025-sept-30-enterprise-ai-roadmap-v2" className="inline-flex items-center gap-2 bg-teal-500/20 text-teal-200 border border-teal-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-teal-500/30 transition-colors">Enterprise AI Roadmap v2<span>→</span></Link>
+              <Link href="/blog/ai-2025-sept-30-governed-agent-patterns" className="inline-flex items-center gap-2 bg-fuchsia-500/20 text-fuchsia-200 border border-fuchsia-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-fuchsia-500/30 transition-colors">Governed Agent Patterns<span>→</span></Link>
+              <Link href="/blog/ai-2025-sept-30-autonomous-finops-scorecards-v2" className="inline-flex items-center gap-2 bg-emerald-500/20 text-emerald-200 border border-emerald-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-emerald-500/30 transition-colors">Autonomous FinOps v2<span>→</span></Link>
+>>>>>>> origin/cursor/create-and-deploy-new-content-a935
             </div>
           </div>
         </div>
