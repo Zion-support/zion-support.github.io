@@ -33,6 +33,8 @@ export default function HomePage() {
 >>>>>>> cursor/create-and-deploy-new-content-8ae9
               <a href="/blog/ai-2026-reliable-genai-platform" className="inline-flex items-center gap-2 bg-indigo-500/20 text-indigo-200 border border-indigo-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-indigo-500/30 transition-colors">Reliable GenAI Platform 2026<span>→</span></a>
               <a href="/blog/ai-2026-e2e-ai-tracing" className="inline-flex items-center gap-2 bg-cyan-500/20 text-cyan-200 border border-cyan-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-cyan-500/30 transition-colors">E2E AI Tracing 2026<span>→</span></a>
+              <a href="/blog/ai-2026-neuromorphic-breakthrough" className="inline-flex items-center gap-2 bg-fuchsia-500/20 text-fuchsia-200 border border-fuchsia-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-fuchsia-500/30 transition-colors">Neuromorphic Breakthrough 2026<span>→</span></a>
+              <a href="/blog/ai-2026-quantum-neural-fusion" className="inline-flex items-center gap-2 bg-blue-500/20 text-blue-200 border border-blue-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-blue-500/30 transition-colors">Quantum Neural Fusion 2026<span>→</span></a>
             </div>
           </div>
         </div>

@@ -26,6 +26,22 @@ const promoted = [
     theme: 'from-purple-600 to-indigo-600',
   },
   {
+    href: '/blog/ai-2026-neuromorphic-breakthrough',
+    title: 'Neuromorphic Breakthrough 2026',
+    desc: 'Brain-inspired computing with event-driven inference and on-device learning for 1000x efficiency.',
+    emoji: '🧠',
+    pill: 'New • Jan 30, 2026',
+    theme: 'from-fuchsia-600 to-purple-600',
+  },
+  {
+    href: '/blog/ai-2026-quantum-neural-fusion',
+    title: 'Quantum Neural Fusion 2026',
+    desc: 'Quantum-inspired optimization fused with deep learning for massive speedups in complex tasks.',
+    emoji: '⚛️',
+    pill: 'New • Jan 30, 2026',
+    theme: 'from-indigo-600 to-blue-600',
+  },
+  {
     href: '/blog/ai-2026-federated-learning-enterprise-breakthrough',
     title: 'Federated Learning 2026',
     desc: 'Privacy-first enterprise AI training across distributed data without centralizing sensitive information.',
