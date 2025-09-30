@@ -762,7 +762,7 @@ export const posts: BlogPost[] = [
     category: "AI Governance",
     publishedAt: "2025-10-13",
     featured: true,
-    readTime: "6 min read"
+    readTime: "7 min read"
   },
   {
     slug: "ai-autonomous-incident-runbooks-2025",
@@ -843,7 +843,7 @@ export const posts: BlogPost[] = [
     category: "MLOps",
     publishedAt: "2025-09-30",
     featured: true,
-    readTime: "8 min read"
+    readTime: "9 min read"
   },
   {
     slug: "privacy-first-feature-flags-2025",
@@ -1061,7 +1061,8 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "16 min read"
-  },
+  }
+  ,
   {
     slug: "privacy-first-observability-quickstart-2025",
     title: "Privacy‑First Observability Quickstart: Scoped IDs and Redaction",
@@ -1070,8 +1071,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-29",
     featured: false,
     readTime: "6 min read"
-  }
-  ,
+  },
   {
     slug: "ai-sre-blueprints-2026",
     title: "AI SRE Blueprints 2026: Error Budgets, Rollbacks, and Live Traces",
@@ -1095,6 +1095,33 @@ export const posts: BlogPost[] = [
 // Newly added content (auto-advertised on Home via latest sort)
 posts.push(
   {
+    slug: "ai-safety-budgets-2026",
+    title: "AI Safety Budgets 2026: Guardrails That Keep Velocity High",
+    description: "Budget risky actions, set rollback triggers, and wire evals to KPIs for safe automation.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-privacy-telemetry-2026",
+    title: "Edge Privacy Telemetry 2026: Signal‑Rich, PII‑Safe Analytics",
+    description: "On‑device aggregation, scoped IDs, and DP noise to get insights without collecting PII.",
+    category: "Observability",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "agent-release-checklists-2026",
+    title: "Agent Release Checklists 2026: Budgets, Canaries, and Rollback",
+    description: "A practical checklist for shipping agent updates with budgets, live canaries, and instant rollback.",
+    category: "AI Operations",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
     slug: "ai-threat-hunting-with-llms-2026",
     title: "AI Threat Hunting with LLMs 2026: Signals, Sandboxes, and Speed",
     description: "Operational playbooks to augment analysts with safe LLM tooling, live traces, and budgeted actions.",
@@ -1114,34 +1141,61 @@ posts.push(
   }
 );
 
-// Newly authored content for Sept 30, 2025
+// Additional freshly published articles
 posts.push(
   {
-    slug: "ai-guardrails-scorecards-2027",
-    title: "AI Guardrails Scorecards 2027: KPIs, PR Checks, and Live Canaries",
-    description: "Practical scorecards that connect AI guardrails to product outcomes without slowing teams.",
-    category: "AI Governance",
+    slug: "ai-reliability-scorecards-2026",
+    title: "AI Reliability Scorecards 2026: SLIs, Error Budgets, Rollbacks",
+    description: "Operationalize AI quality with SLIs, KPI-linked error budgets, and instant rollback triggers.",
+    category: "AI Operations",
+    publishedAt: "2025-10-14",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "ai-e2e-tracing-blueprint-2025",
+    title: "AI E2E Tracing Blueprint 2025: From Prompt to KPI",
+    description: "Instrument prompts, tools, and UX to business KPIs with robust traces and evals.",
+    category: "Observability",
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
   },
   {
-    slug: "edge-tracing-under-100ms-2027",
-    title: "Edge Tracing Under 100ms: User-Centric Telemetry Without Latency Tax",
-    description: "Design globally fast traces using edge compute, KV, and sampling aligned to UX SLAs.",
-    category: "Observability",
+    slug: "privacy-first-analytics-2026",
+    title: "Privacy‑First Analytics 2026: Scoped IDs and On‑Device Telemetry",
+    description: "Ship signal‑rich analytics without PII using scoped identifiers, DP noise, and edge processing.",
+    category: "Analytics",
+    publishedAt: "2025-10-14",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "edge-personalization-playbook-2025",
+    title: "Edge Personalization Playbook 2025: Private <100ms Experiences",
+    description: "Signed configs, tiny models, and geo budgets for privacy-first personalization at the edge.",
+    category: "Edge Computing",
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "6 min read"
   },
   {
-    slug: "agent-actions-risk-budgets-2027",
-    title: "Agent Actions with Risk Budgets: Safe Autonomy That Ships",
-    description: "Budget risky actions, add approvals, and wire instant rollbacks—trusted agent operations at scale.",
-    category: "AI Operations",
-    publishedAt: "2025-09-30",
+    slug: "genai-routing-playbook-2026",
+    title: "GenAI Routing Playbook 2026: Quality Tiers Under Budget",
+    description: "Tier models, cache prompts, and route by SLA to cut spend 30–60% with stable UX.",
+    category: "GenAI",
+    publishedAt: "2025-10-14",
     featured: true,
     readTime: "8 min read"
+  },
+  {
+    slug: "kpi-linked-policy-tests-quickstart-2025",
+    title: "KPI‑Linked Policy Tests Quickstart: Ship Fast, Stay Safe",
+    description: "Lightweight CI policy tests wired to outcomes—catch risks without slowing delivery.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
   }
 );
 

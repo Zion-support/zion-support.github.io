@@ -21,6 +21,10 @@ import ContentValueTestimonials from "../components/ContentValueTestimonials";
 import EnhancedNewsletterSignup from "../components/EnhancedNewsletterSignup";
 import EnhancedPromotionalBanner from "../components/EnhancedPromotionalBanner";
 import EnhancedTestimonials from "../components/EnhancedTestimonials";
+import ComprehensivePromoBanner from "../components/ComprehensivePromoBanner";
+import NewArticlesPromoBanner from "../components/NewArticlesPromoBanner";
+import NewServicesPromoBanner from "../components/NewServicesPromoBanner";
+import September30NewContentMegaBanner from "../components/September30NewContentMegaBanner";
 import Header from "../components/Header";
 import September30MegaBanner2025 from "../components/September30MegaBanner2025";
 import LatestArticlesShowcase from "../components/LatestArticlesShowcase";
@@ -28,6 +32,7 @@ import LatestContentBanner from "../components/LatestContentBanner";
 import LatestInsights from "../components/LatestInsights";
 import ModernFeatures from "../components/ModernFeatures";
 import NewContentAnnouncement from "../components/NewContentAnnouncement";
+import NewContentAdvertisingBanner from "../components/NewContentAdvertisingBanner";
 import NewContentPromoBanner from "../components/NewContentPromoBanner";
 import NewContentShowcase from "../components/NewContentShowcase";
 import NewContentShowcase2025 from "../components/NewContentShowcase2025";
@@ -151,12 +156,16 @@ const Home = () => {
           ctaLink="/blog"
           featuredItems={[
             { title: "E2E AI Tracing", category: "Observability", link: "/blog/ai-e2e-tracing-2025" },
-            { title: "Edge Personalization", category: "Edge Computing", link: "/blog/edge-personalization-2025" },
+            { title: "Edge Personalization", category: "Edge Computing", link: "/blog/edge-personalization-2026" },
             { title: "Policy Tests Quickstart", category: "AI Governance", link: "/blog/policy-tests-quickstart-2025" },
             { title: "Secure ML Supply Chain 2026", category: "Security", link: "/blog/secure-ml-supply-chain-2026" },
             { title: "GenAI Routing Blueprint 2026", category: "GenAI", link: "/blog/genai-routing-blueprint-2026" }
           ]}
         />
+        {/* Fresh content banner promoting brand-new articles */}
+        <div className="container mx-auto px-6 mt-6">
+          <NewContentAdvertisingBanner />
+        </div>
         <div className="container mx-auto px-6 mt-6">
           <TrendingContentBanner />
         </div>

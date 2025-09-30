@@ -11,6 +11,31 @@ export interface FeaturedItem {
 
 export const featuredBlogPosts: FeaturedItem[] = [
   {
+    id: "realtime-ai-decision-engines-2025",
+    title: "Real-Time AI Decision Engines",
+    description: "10M/sec under 1ms with tiered models and caches",
+    link: "/blog/real-time-ai-decision-engines-2025",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "privacy-first-telemetry-quickstart-2025",
+    title: "Privacy‑First Telemetry Quickstart",
+    description: "Signal‑rich analytics with scoped IDs and DP noise",
+    link: "/blog/privacy-first-telemetry-quickstart-2025",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "agent-runbooks-2025",
+    title: "Agent Runbooks: Budgets & Rollbacks",
+    description: "Ship safe autonomy with budgeted actions and safety gates",
+    link: "/blog/agent-runbooks-2025",
+    type: "article",
+    featured: true
+  },
+  {
+=======
     id: "multimodal-ai-2025",
     title: "Multimodal AI Revolution 2025",
     description: "Master unified vision-language-audio AI achieving 98% accuracy",

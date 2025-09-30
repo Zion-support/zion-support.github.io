@@ -5,6 +5,17 @@ import { Sparkles, TrendingUp, ArrowRight, Zap, Rocket, Star } from 'lucide-reac
 const September30NewContent2025Banner: React.FC = () => {
   const newArticles = [
     {
+      id: 0,
+      title: 'AI-Accelerated Customer Experience 2025',
+      slug: 'ai-accelerated-customer-experience-2025',
+      excerpt: 'Real-time intent detection and autonomous workflows delivering 95% CSAT and 40% cost reduction across channels.',
+      category: 'Customer Experience',
+      date: '2025-09-30',
+      readTime: '18 min',
+      icon: '✨',
+      gradient: 'from-cyan-600 to-blue-700'
+    },
+    {
       id: 1,
       title: 'AI-Powered Autonomous Operations 2025',
       slug: 'ai-autonomous-operations-2025',

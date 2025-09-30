@@ -191,27 +191,27 @@ export default function HomePage() {
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
                 <h3 className="text-2xl font-bold mb-6">Latest Content Highlights</h3>
                 <div className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <div className="text-2xl">🎯</div>
+                  <a href="/blog/ai-2026-enterprise-rag-guardrails" className="flex items-start gap-3 group">
+                    <div className="text-2xl">🛡️</div>
                     <div>
-                      <h4 className="font-semibold mb-1">AI Enterprise Revolution 2026</h4>
-                      <p className="text-sm opacity-90">300% ROI with autonomous systems</p>
+                      <h4 className="font-semibold mb-1 group-hover:underline">Enterprise RAG Guardrails 2026</h4>
+                      <p className="text-sm opacity-90">Safe, reliable RAG with verifiable citations</p>
                     </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="text-2xl">⚡</div>
+                  </a>
+                  <a href="/blog/ai-2026-autonomous-enterprise-operations" className="flex items-start gap-3 group">
+                    <div className="text-2xl">🏭</div>
                     <div>
-                      <h4 className="font-semibold mb-1">Manufacturing Success Story</h4>
-                      <p className="text-sm opacity-90">$50M savings, 90% efficiency gain</p>
+                      <h4 className="font-semibold mb-1 group-hover:underline">Autonomous Enterprise Operations 2026</h4>
+                      <p className="text-sm opacity-90">90% efficiency, 300% ROI with guardrailed agents</p>
                     </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="text-2xl">🚀</div>
+                  </a>
+                  <a href="/blog/ai-cloud-cost-optimization-2025" className="flex items-start gap-3 group">
+                    <div className="text-2xl">💸</div>
                     <div>
-                      <h4 className="font-semibold mb-1">Cost Optimization Guide</h4>
-                      <p className="text-sm opacity-90">Achieve 70% cost reduction</p>
+                      <h4 className="font-semibold mb-1 group-hover:underline">AI Cloud Cost Optimization</h4>
+                      <p className="text-sm opacity-90">Cut spend by 70–85% with smart routing</p>
                     </div>
-                  </div>
+                  </a>
                 </div>
                 <div className="mt-6 pt-4 border-t border-white/20">
                   <Link

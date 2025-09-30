@@ -52,6 +52,54 @@ const featuredContent: ContentItem[] = [
     publishedDate: 'January 10, 2026',
     readTime: '15 min read',
     category: 'Cost Optimization'
+  },
+  {
+    id: '4',
+    title: 'AI Operational Resilience 2026: Designing for Failure and Recovery',
+    description: 'Blueprint for 99.99% uptime with policy tests, isolation, chaos drills, and auto-remediation.',
+    link: '/blog/ai-operational-resilience-2026',
+    badge: 'New',
+    badgeColor: 'bg-gradient-to-r from-emerald-600 to-teal-600',
+    icon: '🧯',
+    publishedDate: 'September 30, 2025',
+    readTime: '14 min read',
+    category: 'Operations'
+  },
+  {
+    id: '5',
+    title: 'AI Agent Observability 2026: Metrics, Traces, and Guardrails',
+    description: 'Instrument agents with metrics, traces, and guardrails to ship reliable autonomy with confidence.',
+    link: '/blog/ai-agent-observability-2026',
+    badge: 'Hot',
+    badgeColor: 'bg-gradient-to-r from-pink-600 to-rose-600',
+    icon: '🔎',
+    publishedDate: 'September 30, 2025',
+    readTime: '12 min read',
+    category: 'AI Reliability'
+  },
+  {
+    id: '6',
+    title: 'AI Operational Excellence: Autonomous Agents Driving 10x Efficiency',
+    description: 'How production-grade agents orchestrate operations safely with guardrails and observability.',
+    link: '/blog/ai-operational-excellence-agents-2026',
+    badge: 'New 2026 Insight',
+    badgeColor: 'bg-gradient-to-r from-cyan-600 to-sky-600',
+    icon: '⚙️',
+    publishedDate: 'September 30, 2025',
+    readTime: '14 min read',
+    category: 'Enterprise Automation'
+  },
+  {
+    id: '7',
+    title: 'Intelligent Data Fabric 2026: Real-Time AI for Connected Enterprises',
+    description: 'Unify batch, streaming, and unstructured data to power low-latency AI decisions.',
+    link: '/blog/ai-intelligent-data-fabric-2026',
+    badge: 'New 2026 Guide',
+    badgeColor: 'bg-gradient-to-r from-amber-600 to-orange-600',
+    icon: '🧩',
+    publishedDate: 'September 30, 2025',
+    readTime: '15 min read',
+    category: 'Data & AI Architecture'
   }
 ];
 
