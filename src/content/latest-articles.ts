@@ -17,7 +17,6 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
-<<<<<<< HEAD
     id: "ai-2027-operational-risk-budgets",
     slug: "ai-2027-operational-risk-budgets",
     title: "AI 2027: Operational Risk Budgets",
@@ -46,7 +45,10 @@ export const latestArticles: LatestArticle[] = [
     featured: true,
     readTime: "6 min read",
     image: "/images/edge-consentless-analytics-v4-2027.jpg",
-=======
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "verifiable-edge-analytics-2026",
     slug: "verifiable-edge-analytics-2026",
     title: "Verifiable Edge Analytics 2026: Zero‑PII Insights with Attestations",
@@ -59,7 +61,6 @@ export const latestArticles: LatestArticle[] = [
     featured: true,
     readTime: "7 min read",
     image: "/images/verifiable-edge-analytics-2026.jpg",
->>>>>>> cursor/create-and-deploy-new-content-308c
     newBadge: true,
     trending: true
   },
