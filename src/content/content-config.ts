@@ -386,14 +386,6 @@ featuredBlogPosts.unshift(
     type: "article",
     featured: true
   },
-  {
-    id: "agent-red-teaming-2026",
-    title: "Agent Red‑Teaming 2026",
-    description: "Live evals, budgets, and instant rollback for safe autonomy",
-    link: "/blog/agent-red-teaming-2026",
-    type: "article",
-    featured: true
-  }
 );
 
 // Sept 30, 2025 – Advertise two newly added articles site-wide (added now)
@@ -1467,14 +1459,6 @@ featuredBlogPosts.unshift(
     type: "article",
     featured: true
   },
-  {
-    id: "agent-release-zero-regret-2026",
-    title: "Zero‑Regret Agent Releases 2026",
-    description: "Budgeted actions, KPI‑linked canaries, and instant rollback for safe automation.",
-    link: "/blog/agent-release-zero-regret-2026",
-    type: "article",
-    featured: true
-  }
 );
 
 // Mar 2026 – Add three brand-new featured items to advertise on homepage
