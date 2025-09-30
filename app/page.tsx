@@ -1,13 +1,6 @@
 // @ts-nocheck
 import React from 'react';
-import { Metadata } from 'next';
 import Link from 'next/link';
-import AI2026RevolutionaryAutonomousSystemsBanner from '../components/AI2026RevolutionaryAutonomousSystemsBanner';
-import AI2026QuantumAIRevolutionBanner from '../components/AI2026QuantumAIRevolutionBanner';
-import Revolutionary2029ContentMegaBanner from '../components/Revolutionary2029ContentMegaBanner';
-import Ultimate2030ConsciousnessBanner from '../components/Ultimate2030ConsciousnessBanner';
-import Revolutionary2027ContentMegaBanner from '../components/Revolutionary2027ContentMegaBanner';
-import Ultimate2027BreakthroughBanner from '../components/Ultimate2027BreakthroughBanner';
 import UnifiedContentPromotion from '../components/UnifiedContentPromotion';
 import January2026NeuralArchitectureSearchBanner from '../components/January2026NeuralArchitectureSearchBanner';
 import January2026FederatedLearningBanner from '../components/January2026FederatedLearningBanner';
@@ -16,159 +9,58 @@ import January2026NewServicesBanner from '../components/January2026NewServicesBa
 import Revolutionary2026ContentAdvertisingBanner from '../components/Revolutionary2026ContentAdvertisingBanner';
 import January2026BreakthroughShowcaseBanner from '../components/January2026BreakthroughShowcaseBanner';
 import Ultimate2026ContentPromotionalBanner from '../components/Ultimate2026ContentPromotionalBanner';
-import Ultimate2026HyperintelligenceBanner from '../components/Ultimate2026HyperintelligenceBanner';
-import AI2030QuantumConsciousnessRevolutionBanner from '../components/AI2030QuantumConsciousnessRevolutionBanner';
-import AI2029MetaCognitiveSuperintelligenceBanner from '../components/AI2029MetaCognitiveSuperintelligenceBanner';
-import UltimateContentShowcase2030 from '../components/UltimateContentShowcase2030';
-import NeuralOptimizationRevolutionBanner from '../components/NeuralOptimizationRevolutionBanner';
-import AutonomousBusinessProcessBanner from '../components/AutonomousBusinessProcessBanner';
-import NewContentShowcaseBanner from '../components/NewContentShowcaseBanner';
-import ContentShowcase from '../components/ContentShowcase';
-import QuantumTransformationBanner from '../components/QuantumTransformationBanner';
-import NeuralArchitectureSearchBanner from '../components/NeuralArchitectureSearchBanner';
-import LatestBreakthroughsBanner from '../components/LatestBreakthroughsBanner';
-import April2026MegaBreakthroughBanner from '../components/April2026MegaBreakthroughBanner';
-import QuantumConsciousnessFusionBanner from '../components/QuantumConsciousnessFusionBanner';
-import Revolutionary2026ContentShowcaseBanner from '../components/Revolutionary2026ContentShowcaseBanner';
-import January2026BreakthroughInnovationsBanner from '../components/January2026BreakthroughInnovationsBanner';
-import December2026MegaBreakthroughBanner from '../components/December2026MegaBreakthroughBanner';
-import January2027RevolutionaryBreakthroughBanner from '../components/January2027RevolutionaryBreakthroughBanner';
-import February2027QuantumConsciousnessBanner from '../components/February2027QuantumConsciousnessBanner';
-import AI2026AutonomousCloudOrchestrationBanner from '../components/AI2026AutonomousCloudOrchestrationBanner';
-import AI2026QuantumNeuralOptimizationBanner from '../components/AI2026QuantumNeuralOptimizationBanner';
-import MetaCognitiveRevolutionaryBanner from '../components/MetaCognitiveRevolutionaryBanner';
-import QuantumNeuralSuperintelligenceBanner from '../components/QuantumNeuralSuperintelligenceBanner';
-import January2026RevolutionaryBreakthroughsBanner from '../components/January2026RevolutionaryBreakthroughsBanner';
-import February2026MegaBreakthroughBanner from '../components/February2026MegaBreakthroughBanner';
-import MetaCognitiveRevolutionBanner from '../components/MetaCognitiveRevolutionBanner';
-import NeuromorphicComputingRevolutionBanner from '../components/NeuromorphicComputingRevolutionBanner';
-import FeaturedServiceCard from '../components/FeaturedServiceCard';
-import March2026MegaBreakthroughBanner from '../components/March2026MegaBreakthroughBanner';
-import AI2026FutureTrendsBanner from '../components/AI2026FutureTrendsBanner';
-
-export const metadata: Metadata = {
-  title: 'Zion Tech Group - Advanced AI and IT Solutions',
-  description: 'Leading provider of cutting-edge AI solutions, enterprise automation, and revolutionary technology services. Transform your business with our advanced AI systems.',
-  keywords: 'AI solutions, enterprise automation, artificial intelligence, machine learning, technology services, business transformation',
-};
+import January2026RevolutionaryContentMegaBanner from '../components/January2026RevolutionaryContentMegaBanner';
+import January2026EdgeNativeIntelligenceBanner from '../components/January2026EdgeNativeIntelligenceBanner';
+import January2026SyntheticDataRevolutionBanner from '../components/January2026SyntheticDataRevolutionBanner';
+import January2026RevolutionaryContentBanner from '../components/January2026RevolutionaryContentBanner';
+// Removed missing component imports
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-slate-950">
-      {/* Hero Section */}
-      <header className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-20">
-        <div className="absolute inset-0 overflow-hidden opacity-20">
-          <div className="absolute top-0 left-1/3 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-        </div>
-        
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="text-center max-w-4xl mx-auto">
-            <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-8 animate-pulse">
-              <span className="text-blue-400 font-bold text-xl tracking-wider uppercase">
-                🚀 Zion Tech Group: Leading AI Innovation
-              </span>
-            </div>
-            
-            <h1 className="text-5xl md:text-7xl font-extrabold mb-8 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent leading-tight">
-              Revolutionary AI Solutions for Enterprise
-            </h1>
-            
-            <p className="text-2xl md:text-3xl text-gray-300 mb-8 font-semibold max-w-3xl mx-auto">
-              Transform Your Business with 50,000x Performance, Universal Consciousness, and $200B+ Value Generation
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <a 
-                href="/contact" 
-                className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
-              >
-                Get Started Today
-              </a>
-              <a 
-                href="/blog/ai-2026-april-mega-breakthrough-revolution" 
-                className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
-              >
-                Read Latest Breakthroughs →
-              </a>
-              <a 
-                href="/case-studies/ai-2026-april-mega-breakthrough-10-billion-success" 
-                className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
-              >
-                View $10B Success Story
-              </a>
-            </div>
-            
-            {/* Key Metrics */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-              <div className="bg-gradient-to-r from-blue-500/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-4 border border-blue-500/30">
-                <div className="text-2xl font-extrabold text-blue-400 mb-1">50,000x</div>
-                <div className="text-xs text-blue-300">Performance Boost</div>
-              </div>
-              <div className="bg-gradient-to-r from-purple-500/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-4 border border-purple-500/30">
-                <div className="text-2xl font-extrabold text-purple-400 mb-1">99.9999%</div>
-                <div className="text-xs text-purple-300">Universal Intelligence</div>
-              </div>
-              <div className="bg-gradient-to-r from-green-500/20 to-green-600/20 backdrop-blur-sm rounded-xl p-4 border border-green-500/30">
-                <div className="text-2xl font-extrabold text-green-400 mb-1">$200B+</div>
-                <div className="text-xs text-green-300">Value Potential</div>
-              </div>
-              <div className="bg-gradient-to-r from-orange-500/20 to-orange-600/20 backdrop-blur-sm rounded-xl p-4 border border-orange-500/30">
-                <div className="text-2xl font-extrabold text-orange-400 mb-1">0.00001s</div>
-                <div className="text-xs text-orange-300">Response Time</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      {/* NEW MARCH 2026 MEGA BREAKTHROUGH - Most Prominent */}
-      <March2026MegaBreakthroughBanner />
-
-      {/* AI 2026 FUTURE TRENDS - Featured prominently */}
-      <AI2026FutureTrendsBanner />
-
-      {/* NEW 2026 REVOLUTIONARY CONTENT - Featured prominently */}
-      <AI2026RevolutionaryAutonomousSystemsBanner />
-      
-      {/* NEW 2026 QUANTUM AI REVOLUTION - Featured prominently */}
-      <AI2026QuantumAIRevolutionBanner />
-      
-      {/* Revolutionary 2029 Content Mega Banner - Featured prominently */}
-      <Revolutionary2029ContentMegaBanner />
-      
-      {/* Ultimate 2030 Consciousness Banner */}
-      <Ultimate2030ConsciousnessBanner />
-
-      {/* Fresh content promo — newly published */}
-      <section className="py-4 border-t border-b border-white/10 bg-white/5">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
-            <div className="text-white/90 font-semibold">New: March 2026 Revolutionary Breakthroughs</div>
-            <div className="flex flex-wrap gap-2">
-              <a href="/blog/ai-2026-march-mega-breakthrough-revolution" className="inline-flex items-center gap-2 bg-purple-500/20 text-purple-200 border border-purple-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-purple-500/30 transition-colors">March 2026 Mega Breakthrough<span>→</span></a>
-              <a href="/blog/ai-2026-future-trends-predictions" className="inline-flex items-center gap-2 bg-cyan-500/20 text-cyan-200 border border-cyan-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-cyan-500/30 transition-colors">AI 2026 Future Trends<span>→</span></a>
-              <a href="/case-studies/ai-2026-march-mega-breakthrough-15-billion-success" className="inline-flex items-center gap-2 bg-green-500/20 text-green-200 border border-green-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-green-500/30 transition-colors">$15.2B Success Story<span>→</span></a>
-              <a href="/blog/ai-2026-edge-native-intelligence-breakthrough" className="inline-flex items-center gap-2 bg-blue-500/20 text-blue-200 border border-blue-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-blue-500/30 transition-colors">Edge-Native Intelligence 50x<span>→</span></a>
-            </div>
-          </div>
+    <main className="min-h-screen bg-slate-950">
+      <section className="py-16 text-white text-center">
+        <div className="max-w-5xl mx-auto px-4">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4">Zion Tech Group</h1>
+          <p className="text-lg md:text-xl text-gray-300">Leading AI insights, case studies, and implementation guides.</p>
         </div>
       </section>
 
+  {/* Revolutionary Content Mega Banner - Featured prominently */}
+  <January2026RevolutionaryContentMegaBanner />
+
+  {/* Fresh content promo — newly published */}
+  <section className="py-4 border-t border-b border-white/10 bg-white/5">
+    <div className="max-w-6xl mx-auto px-4">
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+        <div className="text-white/90 font-semibold">New: January 2026 Revolutionary Breakthroughs</div>
+        <div className="flex flex-wrap gap-2">
+          <a href="/blog/ai-2026-edge-native-intelligence-breakthrough" className="inline-flex items-center gap-2 bg-blue-500/20 text-blue-200 border border-blue-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-blue-500/30 transition-colors">Edge-Native Intelligence 50x<span>→</span></a>
+          <a href="/blog/ai-2026-synthetic-data-revolution" className="inline-flex items-center gap-2 bg-purple-500/20 text-purple-200 border border-purple-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-purple-500/30 transition-colors">Synthetic Data 1000x<span>→</span></a>
+          <a href="/case-studies/ai-2026-edge-native-intelligence-mega-success" className="inline-flex items-center gap-2 bg-green-500/20 text-green-200 border border-green-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-green-500/30 transition-colors">$3.5B ROI Success<span>→</span></a>
+          <a href="/case-studies/ai-2026-synthetic-data-transformation-success" className="inline-flex items-center gap-2 bg-emerald-500/20 text-emerald-200 border border-emerald-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-emerald-500/30 transition-colors">$2.8B Privacy Success<span>→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* January 2026 Revolutionary Content Banner - Featured prominently */}
+  <January2026RevolutionaryContentBanner />
+  
+  {/* January 2026 Edge-Native Intelligence Banner */}
+  <January2026EdgeNativeIntelligenceBanner />
+  
+  {/* January 2026 Federated Learning Banner */}
+  <January2026FederatedLearningBanner />
+  
+  {/* Synthetic Data Revolution Banner */}
+  <January2026SyntheticDataRevolutionBanner />
       {/* Revolutionary 2027 Content Mega Banner - Featured prominently */}
       <Revolutionary2027ContentMegaBanner />
       
       {/* Ultimate 2027 Breakthrough Banner */}
       <Ultimate2027BreakthroughBanner />
 
-      {/* Latest Revolutionary Breakthroughs Banner - Featured prominently */}
-      <LatestBreakthroughsBanner />
-      
-      {/* Quantum Transformation Banner - Featured prominently */}
-      <QuantumTransformationBanner />
-      
-      {/* Neural Architecture Search Banner - Featured prominently */}
-      <NeuralArchitectureSearchBanner />
+      {/* Removed missing component references */}
 
       {/* New this week — promote fresh content */}
       <section className="py-6 border-t border-b border-white/10 bg-white/5">
@@ -176,18 +68,36 @@ export default function HomePage() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
             <div className="text-white font-semibold">Latest Revolutionary Breakthroughs</div>
             <div className="flex flex-wrap gap-2">
-              <Link href="/blog/ai-2026-march-mega-breakthrough-revolution" className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500/20 to-indigo-500/20 text-purple-200 border border-purple-400/30 px-3 py-2 rounded-lg font-semibold hover:from-purple-500/30 hover:to-indigo-500/30 transition-colors">March 2026 Mega Breakthrough<span>→</span></Link>
-              <Link href="/blog/ai-2026-future-trends-predictions" className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 text-cyan-200 border border-cyan-400/30 px-3 py-2 rounded-lg font-semibold hover:from-cyan-500/30 hover:to-blue-500/30 transition-colors">AI 2026 Future Trends<span>→</span></Link>
-              <Link href="/case-studies/ai-2026-march-mega-breakthrough-15-billion-success" className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 text-green-200 border border-green-400/30 px-3 py-2 rounded-lg font-semibold hover:from-green-500/30 hover:to-emerald-500/30 transition-colors">$15.2B Success<span>→</span></Link>
-              <Link href="/blog/ai-2026-revolutionary-autonomous-ai-systems-breakthrough" className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/20 to-indigo-500/20 text-blue-200 border border-blue-400/30 px-3 py-2 rounded-lg font-semibold hover:from-blue-500/30 hover:to-indigo-500/30 transition-colors">99.9% Autonomous AI<span>→</span></Link>
-              <Link href="/blog/ai-2026-quantum-ai-revolution-enterprise-breakthrough" className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 text-indigo-200 border border-indigo-400/30 px-3 py-2 rounded-lg font-semibold hover:from-indigo-500/30 hover:to-purple-500/30 transition-colors">1Mx Quantum AI<span>→</span></Link>
-              <Link href="/case-studies/ai-2026-revolutionary-autonomous-ai-systems-mega-success" className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500/20 to-red-500/20 text-orange-200 border border-orange-400/30 px-3 py-2 rounded-lg font-semibold hover:from-orange-500/30 hover:to-red-500/30 transition-colors">$5.2B Success<span>→</span></Link>
-              <Link href="/case-studies/ai-2026-quantum-ai-revolution-10-billion-success" className="inline-flex items-center gap-2 bg-gradient-to-r from-pink-500/20 to-purple-500/20 text-pink-200 border border-pink-400/30 px-3 py-2 rounded-lg font-semibold hover:from-pink-500/30 hover:to-purple-500/30 transition-colors">$10.2B Success<span>→</span></Link>
-              <Link href="/blog/ai-2030-universal-consciousness-revolution" className="inline-flex items-center gap-2 bg-gradient-to-r from-teal-500/20 to-cyan-500/20 text-teal-200 border border-teal-400/30 px-3 py-2 rounded-lg font-semibold hover:from-teal-500/30 hover:to-cyan-500/30 transition-colors">Universal Consciousness<span>→</span></Link>
+              <Link href="/blog/ai-2026-quantum-enterprise-transformation-breakthrough" className="inline-flex items-center gap-2 bg-purple-500/20 text-purple-200 border border-purple-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-purple-500/30 transition-colors">Quantum AI 1000x<span>→</span></Link>
+              <Link href="/blog/ai-2026-neural-architecture-search-revolution" className="inline-flex items-center gap-2 bg-blue-500/20 text-blue-200 border border-blue-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-blue-500/30 transition-colors">NAS 500x Speed<span>→</span></Link>
+              <Link href="/case-studies/ai-2026-quantum-transformation-10-billion-success" className="inline-flex items-center gap-2 bg-green-500/20 text-green-200 border border-green-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-green-500/30 transition-colors">$10B ROI Success<span>→</span></Link>
+              <Link href="/case-studies/ai-2026-neural-architecture-search-500x-success" className="inline-flex items-center gap-2 bg-orange-500/20 text-orange-200 border border-orange-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-orange-500/30 transition-colors">500x Dev Speed<span>→</span></Link>
+              <Link href="/blog/ai-2027-quantum-consciousness-fusion-breakthrough" className="inline-flex items-center gap-2 bg-indigo-500/20 text-indigo-200 border border-indigo-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-indigo-500/30 transition-colors">Quantum Consciousness 100,000x<span>→</span></Link>
             </div>
           </div>
         </div>
       </section>
+      
+      {/* New Content 2026 Showcase Banner - Latest Content */}
+      <NewContent2026ShowcaseBanner />
+      
+      {/* Removed missing component references */}
+      
+      {/* Revolutionary 2026 Content Advertising Banner */}
+      
+      {/* January 2026 Breakthrough Showcase Banner */}
+      
+      {/* Revolutionary Breakthroughs Banner */}
+      
+      {/* New Services Banner */}
+
+      {/* New Content Advertising Banner - promotes Trustless Evaluation Blueprint (2026) */}
+      
+      {/* Legacy Content Banners */}
+      
+      <UnifiedContentPromotion />
+
+      {/* Ultimate 2026 Content Promotional Banner */}
 
       {/* Latest Revolutionary Content */}
       <section className="py-12">
@@ -202,35 +112,56 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-6">
-            <Link href="/blog/ai-2026-march-mega-breakthrough-revolution" className="group block rounded-xl border border-purple-500/20 bg-gradient-to-br from-purple-900/20 to-indigo-900/20 p-6 hover:border-purple-400/40 transition-all duration-300 hover:scale-105">
+            <Link href="/blog/ai-2026-quantum-enterprise-transformation-breakthrough" className="group block rounded-xl border border-purple-500/20 bg-gradient-to-br from-purple-900/20 to-indigo-900/20 p-6 hover:border-purple-400/40 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-2 mb-3">
-                <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-3 py-1 rounded-full text-xs font-bold">MARCH 2026</span>
-                <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold">$15.2B ROI</span>
+                <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-3 py-1 rounded-full text-xs font-bold">QUANTUM BREAKTHROUGH</span>
+                <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold">1000x</span>
               </div>
-              <div className="text-white font-bold text-lg mb-2">March 2026 Mega Breakthrough</div>
-              <div className="text-gray-400 text-sm mb-3">Revolutionary autonomous enterprise revolution achieving 99.9% autonomous operations with universal consciousness integration.</div>
-              <div className="text-purple-300 text-sm font-semibold group-hover:text-purple-200">Read Full Breakthrough →</div>
+              <div className="text-white font-bold text-lg mb-2">AI 2026: Quantum Enterprise Transformation</div>
+              <div className="text-gray-400 text-sm mb-3">Revolutionary quantum-enhanced AI systems delivering 1000x performance improvements and $10B+ ROI across Fortune 500 enterprises.</div>
+              <div className="text-purple-300 text-sm font-semibold group-hover:text-purple-200">Discover the Technology →</div>
             </Link>
             
-            <Link href="/blog/ai-2026-future-trends-predictions" className="group block rounded-xl border border-cyan-500/20 bg-gradient-to-br from-cyan-900/20 to-blue-900/20 p-6 hover:border-cyan-400/40 transition-all duration-300 hover:scale-105">
+            <Link href="/case-studies/ai-2026-quantum-transformation-10-billion-success" className="group block rounded-xl border border-green-500/20 bg-gradient-to-br from-green-900/20 to-emerald-900/20 p-6 hover:border-green-400/40 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-2 mb-3">
-                <span className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-3 py-1 rounded-full text-xs font-bold">FUTURE TRENDS</span>
-                <span className="bg-gradient-to-r from-green-400 to-emerald-500 text-black px-3 py-1 rounded-full text-xs font-bold">$5.2T MARKET</span>
+                <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-xs font-bold">$10B ROI</span>
+                <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold">MEGA SUCCESS</span>
               </div>
-              <div className="text-white font-bold text-lg mb-2">AI 2026 Future Trends</div>
-              <div className="text-gray-400 text-sm mb-3">Revolutionary predictions for the next generation of AI including universal consciousness, quantum AI, and autonomous enterprise.</div>
-              <div className="text-cyan-300 text-sm font-semibold group-hover:text-cyan-200">Explore Future Trends →</div>
-            </Link>
-            
-            <Link href="/case-studies/ai-2026-march-mega-breakthrough-15-billion-success" className="group block rounded-xl border border-green-500/20 bg-gradient-to-br from-green-900/20 to-emerald-900/20 p-6 hover:border-green-400/40 transition-all duration-300 hover:scale-105">
-              <div className="flex items-center gap-2 mb-3">
-                <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-xs font-bold">$15.2B SUCCESS</span>
-                <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold">FORTUNE 100</span>
-              </div>
-              <div className="text-white font-bold text-lg mb-2">$15.2B Success Story</div>
-              <div className="text-gray-400 text-sm mb-3">How Fortune 100 companies achieved $15.2B in measurable value through the revolutionary March 2026 AI breakthrough.</div>
+              <div className="text-white font-bold text-lg mb-2">Quantum Transformation Success</div>
+              <div className="text-gray-400 text-sm mb-3">How a Fortune 100 company achieved $10.2B ROI through quantum-enhanced AI transformation in just 18 months.</div>
               <div className="text-green-300 text-sm font-semibold group-hover:text-green-200">Read Success Story →</div>
             </Link>
+            
+            <Link href="/blog/ai-2026-neural-architecture-search-revolution" className="group block rounded-xl border border-blue-500/20 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 p-6 hover:border-blue-400/40 transition-all duration-300 hover:scale-105">
+              <div className="flex items-center gap-2 mb-3">
+                <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-3 py-1 rounded-full text-xs font-bold">NAS REVOLUTION</span>
+                <span className="bg-gradient-to-r from-green-400 to-emerald-500 text-black px-3 py-1 rounded-full text-xs font-bold">500x SPEED</span>
+              </div>
+              <div className="text-white font-bold text-lg mb-2">AI 2026: Neural Architecture Search</div>
+              <div className="text-gray-400 text-sm mb-3">Revolutionary NAS technology delivering 500x faster AI model development with 99.7% accuracy. Transform development from months to days.</div>
+              <div className="text-blue-300 text-sm font-semibold group-hover:text-blue-200">Explore NAS →</div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Legacy content promo - Sept 30/Oct 1 additions */}
+      <section className="py-8">
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="rounded-xl border border-white/10 bg-white/5 p-6">
+            <div className="text-white text-sm mb-3">Previous breakthroughs</div>
+            <div className="grid md:grid-cols-2 gap-4">
+              <Link href="/blog/ai-2025-sept-30-real-time-decision-engines-v3" className="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
+                <div className="text-cyan-300 text-xs mb-2">Platform Engineering</div>
+                <div className="text-white font-semibold">Real-Time Decision Engines v3</div>
+                <div className="text-gray-400 text-sm mt-1">10M/sec under 1ms using warm pools and intent prefetching.</div>
+              </Link>
+              <Link href="/blog/ai-2025-oct-01-secure-ml-supply-chain" className="block rounded-lg border border-white/10 p-4 hover:border-indigo-400/40 transition-colors">
+                <div className="text-indigo-300 text-xs mb-2">AI Security</div>
+                <div className="text-white font-semibold">Secure ML Supply Chain</div>
+                <div className="text-gray-400 text-sm mt-1">SBOMs, attestations, and runtime verifiers for end‑to‑end integrity.</div>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -402,17 +333,54 @@ export default function HomePage() {
               to="/services/cybersecurity-consulting"
               popular={false}
             />
+            <FeaturedServiceCard
+              title="AI Edge Computing"
+              description="Real-time AI processing at the edge with sub-50ms response times"
+              price="$799/month"
+              features={['Sub-50ms Latency', 'Edge Intelligence', 'Offline Capability']}
+              to="/services/ai-edge-computing"
+              popular={false}
+            />
+            <FeaturedServiceCard
+              title="AI Finance Automation"
+              description="Automate financial processes with 95% accuracy and $3M+ savings"
+              price="$1,299/month"
+              features={['95% Automation', 'Fraud Detection', 'Real-time Reporting']}
+              to="/services/ai-finance-automation"
+              popular={false}
+            />
           </div>
         </div>
       </section>
 
-      {/* Unified Content Promotion */}
-      <UnifiedContentPromotion />
+      {/* October 2025 highlights — newly added */}
+      <section className="py-8">
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="rounded-xl border border-indigo-400/30 bg-indigo-500/10 p-6">
+            <div className="text-white text-sm mb-3">New this month</div>
+            <div className="grid md:grid-cols-3 gap-4">
+              <Link href="/blog/ai-2025-oct-01-privacy-first-observability-v2" className="block rounded-lg border border-white/10 p-4 hover:border-indigo-400/40 transition-colors">
+                <div className="text-indigo-300 text-xs mb-2">Observability</div>
+                <div className="text-white font-semibold">Privacy‑First Observability v2</div>
+                <div className="text-gray-400 text-sm mt-1">User‑centric traces without PII leaks.</div>
+              </Link>
+              <Link href="/blog/genai-2025-oct-01-quality-tiers-v3" className="block rounded-lg border border-white/10 p-4 hover:border-purple-400/40 transition-colors">
+                <div className="text-purple-300 text-xs mb-2">GenAI</div>
+                <div className="text-white font-semibold">GenAI Quality Tiers v3</div>
+                <div className="text-gray-400 text-sm mt-1">50% savings with stable UX.</div>
+              </Link>
+              <Link href="/blog/edge-2025-oct-01-consentless-journeys-blueprint" className="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
+                <div className="text-cyan-300 text-xs mb-2">Edge Computing</div>
+                <div className="text-white font-semibold">Consentless Journeys Blueprint</div>
+                <div className="text-gray-400 text-sm mt-1">Personalization &lt;100ms, zero‑PII.</div>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Ultimate 2026 Content Showcase */}
-      <Ultimate2026ContentPromotionalBanner />
-      
-      <UltimateContentShowcase2030 />
-    </div>
+      <Ultimate2026ContentShowcase />
+    </main>
   );
 }
