@@ -171,6 +171,7 @@ featuredBlogPosts.unshift(
 // Newly featured items to advertise on the homepage
 featuredBlogPosts.unshift(
   {
+<<<<<<< HEAD
     id: "genai-reliability-scorecards-2027",
     title: "GenAI Reliability Scorecards 2027",
     description: "Live KPIs + budgets + rollback for affordable, reliable GenAI.",
