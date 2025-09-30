@@ -18,7 +18,7 @@ export default function EdgeConsentlessPersonalization2027(): React.JSX.Element 
 
       <div className="container mx-auto px-6 py-16">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          Edge Personalization 2027 — Zero‑PII, <100ms, Scoped IDs
+          Edge Personalization 2027 — Zero‑PII, &lt;100ms, Scoped IDs
         </h1>
         <p className="text-zion-slate-light mb-8">
           Scoped IDs • On‑device inference • Differential privacy • Global sub‑100ms

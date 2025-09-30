@@ -2,6 +2,9 @@ import React from 'react';
 import UnifiedContentPromotion from '../components/UnifiedContentPromotion';
 import January2026NeuralArchitectureSearchBanner from '../components/January2026NeuralArchitectureSearchBanner';
 import January2026FederatedLearningBanner from '../components/January2026FederatedLearningBanner';
+import January2026MegaContentShowcaseBanner from './components/January2026MegaContentShowcaseBanner';
+import RevolutionaryAI2026BreakthroughBanner from './components/RevolutionaryAI2026BreakthroughBanner';
+import Fortune500SuccessShowcaseBanner from './components/Fortune500SuccessShowcaseBanner';
 
 export default function HomePage() {
   return (
@@ -16,6 +19,15 @@ export default function HomePage() {
       {/* New Content Banners */}
       <January2026NeuralArchitectureSearchBanner />
       <January2026FederatedLearningBanner />
+      
+      {/* January 2026 Mega Content Showcase */}
+      <January2026MegaContentShowcaseBanner />
+      
+      {/* Revolutionary AI 2026 Breakthrough Banner */}
+      <RevolutionaryAI2026BreakthroughBanner />
+      
+      {/* Fortune 500 Success Showcase Banner */}
+      <Fortune500SuccessShowcaseBanner />
       
       <UnifiedContentPromotion />
     </main>
