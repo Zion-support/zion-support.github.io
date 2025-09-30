@@ -30,6 +30,9 @@ import QuantumTransformationBanner from '../components/QuantumTransformationBann
 import NeuralArchitectureSearchBanner from '../components/NeuralArchitectureSearchBanner';
 import LatestBreakthroughsBanner from '../components/LatestBreakthroughsBanner';
 import April2026MegaBreakthroughBanner from '../components/April2026MegaBreakthroughBanner';
+import July2026MegaBreakthroughBanner from '../components/July2026MegaBreakthroughBanner';
+import August2026QuantumConsciousnessBanner from '../components/August2026QuantumConsciousnessBanner';
+import July2026ContentShowcaseBanner from '../components/July2026ContentShowcaseBanner';
 import QuantumConsciousnessFusionBanner from '../components/QuantumConsciousnessFusionBanner';
 import Revolutionary2026ContentShowcaseBanner from '../components/Revolutionary2026ContentShowcaseBanner';
 import January2026BreakthroughInnovationsBanner from '../components/January2026BreakthroughInnovationsBanner';
@@ -134,17 +137,11 @@ export default function HomePage() {
         </div>
       </header>
 
-      {/* ULTIMATE AUTONOMOUS REVOLUTION 2026 - MOST PROMINENT */}
-      <UltimateAutonomousRevolutionBanner />
+      {/* NEW AUGUST 2026 QUANTUM CONSCIOUSNESS - MOST PROMINENT */}
+      <August2026QuantumConsciousnessBanner />
 
-      {/* NEW JULY & AUGUST 2026 REVOLUTIONARY BREAKTHROUGHS - MOST PROMINENT */}
-      <JulyAugust2026RevolutionaryBreakthroughBanner />
-
-      {/* ULTRA-INTELLIGENT AUTONOMOUS SYSTEMS 2026 - MOST PROMINENT */}
-      <UltraIntelligentAutonomousSystems2026Banner />
-
-      {/* QUANTUM NEURAL SUPERINTELLIGENCE 2026 - MOST PROMINENT */}
-      <QuantumNeuralSuperintelligence2026Banner />
+      {/* NEW JULY 2026 MEGA BREAKTHROUGH - FEATURED PROMINENTLY */}
+      <July2026MegaBreakthroughBanner />
 
       {/* NEW APRIL 2026 ULTIMATE BREAKTHROUGH - MOST PROMINENT */}
       <April2026UltimateBreakthroughBanner />
@@ -271,6 +268,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* July 2026 Content Showcase */}
+      <July2026ContentShowcaseBanner />
 
       {/* Featured New Content Showcase */}
       <section className="py-20 bg-gradient-to-br from-indigo-50 via-white to-purple-50">
