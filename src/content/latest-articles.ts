@@ -1699,7 +1699,6 @@ latestArticles.unshift(
   }
 );
 
-<<<<<<< HEAD
 // Oct 01, 2025 – Fresh additions to advertise across the front end
 latestArticles.unshift(
   {
@@ -1747,7 +1746,11 @@ latestArticles.unshift(
     featured: true,
     readTime: "8 min read",
     image: "/images/observability-2025-e2e-tracing-v2.jpg",
-=======
+    newBadge: true,
+    trending: true
+  }
+);
+
 // Oct 02, 2025 – Add three brand-new articles (to advertise and surface)
 latestArticles.unshift(
   {
@@ -1795,7 +1798,6 @@ latestArticles.unshift(
     featured: true,
     readTime: "9 min read",
     image: "/images/genai-2025-cache-playbook-v2.jpg",
->>>>>>> feat/oct-02-content
     newBadge: true,
     trending: true
   }

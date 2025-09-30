@@ -36,6 +36,9 @@ export default function HomePage() {
               <Link href="/case-studies/ai-2026-neural-optimization-success-story" className="inline-flex items-center gap-2 bg-blue-500/20 text-blue-200 border border-blue-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-blue-500/30 transition-colors">$500M ROI Success<span>→</span></Link>
               <Link href="/blog/ai-2025-oct-02-production-agent-guardrails" className="inline-flex items-center gap-2 bg-emerald-500/20 text-emerald-200 border border-emerald-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-emerald-500/30 transition-colors">Production Agent Guardrails<span>→</span></Link>
               <Link href="/blog/ai-2025-sept-30-governed-autonomy-blueprint" className="inline-flex items-center gap-2 bg-indigo-500/20 text-indigo-200 border border-indigo-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-indigo-500/30 transition-colors">Governed Autonomy Blueprint<span>→</span></Link>
+              <Link href="/blog/ai-2025-oct-02-agent-safety-scorecards" className="inline-flex items-center gap-2 bg-indigo-500/20 text-indigo-200 border border-indigo-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-indigo-500/30 transition-colors">Agent Safety Scorecards<span>→</span></Link>
+              <Link href="/blog/edge-2025-oct-02-private-experiments-v4" className="inline-flex items-center gap-2 bg-cyan-500/20 text-cyan-200 border border-cyan-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-cyan-500/30 transition-colors">Private Experiments v4<span>→</span></Link>
+              <Link href="/blog/genai-2025-oct-02-cache-playbook-v2" className="inline-flex items-center gap-2 bg-purple-500/20 text-purple-200 border border-purple-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-purple-500/30 transition-colors">Cache Playbook v2<span>→</span></Link>
             </div>
           </div>
         </div>
