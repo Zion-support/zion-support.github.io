@@ -71,10 +71,22 @@ import AutonomousEnterpriseAutomationAdvertisingBanner from "./components/Autono
 import February2026NewContentBreakthroughBanner from "./components/February2026NewContentBreakthroughBanner";
 import January2027AutonomousCognitiveEnterpriseBanner from "./components/January2027AutonomousCognitiveEnterpriseBanner";
 import NewContent2027AdvertisingBanner from "./components/NewContent2027AdvertisingBanner";
+import December2026UltimateSingularityBanner from "./components/December2026UltimateSingularityBanner";
+import January2027UniversalConsciousnessBanner from "./components/January2027UniversalConsciousnessBanner";
+import NewContent2027PromotionalBanner from "./components/NewContent2027PromotionalBanner";
 
 export default function App(): JSX.Element {
   return (
     <div className="min-h-screen bg-slate-950">
+      {/* ⭐ LATEST: January 2027 Universal Consciousness Revolution - TOP PRIORITY ⭐ */}
+      <January2027UniversalConsciousnessBanner />
+      
+      {/* ⭐ LATEST: December 2026 Ultimate Singularity Breakthrough - HIGHLY FEATURED ⭐ */}
+      <December2026UltimateSingularityBanner />
+      
+      {/* ⭐ NEW 2027 CONTENT PROMOTIONAL BANNER - FEATURED PROMINENTLY ⭐ */}
+      <NewContent2027PromotionalBanner />
+      
       {/* ⭐ LATEST: July 2026 Autonomous Intelligence Banner - TOP PRIORITY ⭐ */}
       <July2026AutonomousIntelligenceBanner />
       
