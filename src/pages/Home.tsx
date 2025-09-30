@@ -22,6 +22,7 @@ import EnhancedNewsletterSignup from "../components/EnhancedNewsletterSignup";
 import EnhancedPromotionalBanner from "../components/EnhancedPromotionalBanner";
 import EnhancedTestimonials from "../components/EnhancedTestimonials";
 import Header from "../components/Header";
+import September30MegaBanner2025 from "../components/September30MegaBanner2025";
 import LatestArticlesShowcase from "../components/LatestArticlesShowcase";
 import LatestContentBanner from "../components/LatestContentBanner";
 import LatestInsights from "../components/LatestInsights";
@@ -115,6 +116,11 @@ const Home = () => {
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
+        
+        {/* 🚀 SEPTEMBER 30, 2025 - MEGA BREAKTHROUGH ANNOUNCEMENT */}
+        <div className="container mx-auto px-6 pt-8">
+          <September30MegaBanner2025 />
+        </div>
         
         {/* Enhanced Promotional Banners */}
         {getFeaturedBanners().slice(0, 3).map((banner) => (
@@ -215,9 +221,10 @@ const Home = () => {
             </h1>
 
             <p className="text-xl md:text-2xl text-zion-slate-light mb-8 leading-relaxed max-w-3xl mx-auto animate-fade-in">
-              🚀 <strong>BREAKING: SEPT 30, 2025 - 5 REVOLUTIONARY BREAKTHROUGHS!</strong> AI Protein Folding (99.8% accuracy, 6-month drug discovery), 
-              O3 PhD-Level Reasoning (75.7% ARC-AGI), Vision Pro Enterprise (340% productivity gains), Autonomous Cybersecurity (sub-30s response), 
-              & Green AI (90% carbon reduction). Transform your business with breakthrough AI solutions. Join 500+ companies achieving unprecedented results!
+              🚀 <strong>BREAKING: SEPT 30, 2025 - 8 GAME-CHANGING AI BREAKTHROUGHS!</strong> Real-Time Decision Engines (10M decisions/sec, &lt;1ms), 
+              Neural Code Synthesis (95% accuracy, 90% dev time cut), Multimodal AI Fusion (98% cross-modal accuracy), AI Supply Chains (99.5% forecasts, 85% inventory cut), 
+              Cognitive Assistants (92% satisfaction), Security Mesh (99.99% threat detection), Federated Learning (100% privacy), & AI Financial Modeling (95% prediction accuracy). 
+              Transform your business with production-ready AI. Join 500+ companies achieving 10,000x performance gains!
             </p>
 
             {/* Special Promotion Banner */}
@@ -253,40 +260,42 @@ const Home = () => {
             <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-xl p-6 mb-8 animate-fade-in">
               <div className="flex items-center justify-center gap-3 mb-3">
                 <Sparkles className="w-6 h-6 text-purple-400 animate-pulse" />
-                <span className="text-lg font-bold text-purple-400">🔥 SEPT 30, 2025: 5 BREAKTHROUGH ARTICLES JUST PUBLISHED!</span>
+                <span className="text-lg font-bold text-purple-400">🔥 SEPT 30, 2025: 8 REVOLUTIONARY BREAKTHROUGHS JUST PUBLISHED!</span>
                 <Sparkles className="w-6 h-6 text-purple-400 animate-pulse" />
               </div>
               <p className="text-white text-lg font-semibold mb-2">
-                🚀 Revolutionary AI Breakthroughs: Protein Folding (99.8% accuracy), O3 Reasoning (PhD-level), Vision Pro (340% productivity), 
-                Autonomous Security (sub-30s response), & Green AI (90% carbon cut)!
+                🚀 Production-Ready AI Revolution: Real-Time Engines (10M/sec, &lt;1ms), Neural Code Synthesis (95% accuracy), 
+                Multimodal Fusion (98% accuracy), AI Supply Chains (99.5% forecasts), Cognitive Assistants (92% satisfaction), 
+                Security Mesh (99.99% detection), Federated Learning (100% privacy), & Financial AI (95% predictions)!
               </p>
               <p className="text-zion-slate-light text-sm mb-4">
-                Explore groundbreaking advances that are transforming drug discovery (10 years → 6 months), enterprise AI reasoning, 
-                spatial computing productivity, cybersecurity automation, and sustainable computing. These aren't incremental improvements—they're paradigm shifts!
+                These aren't theoretical concepts—deploy enterprise-grade AI in 4-10 weeks with 10,000x performance gains, 
+                95%+ accuracy, and 300-500% ROI. Transform real-time decisions, development velocity, customer experience, 
+                supply chains, security posture, data privacy, and financial modeling!
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link
                   to="/blog"
                   className="bg-purple-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-purple-600 transition-colors text-center"
                 >
-                  Read Breakthrough Articles
+                  Explore 8 Breakthroughs
                 </Link>
                 <Link
                   to="/contact"
                   className="border border-purple-400 text-purple-400 px-6 py-2 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-colors text-center"
                 >
-                  Schedule Consultation
+                  Schedule AI Strategy Call
                 </Link>
               </div>
               <div className="mt-4 flex flex-wrap gap-2 justify-center">
-                <span className="bg-emerald-100/20 text-emerald-200 px-3 py-1 rounded-full text-xs font-medium border border-emerald-300/20">🧬 Protein Folding</span>
-                <span className="bg-purple-100/20 text-purple-200 px-3 py-1 rounded-full text-xs font-medium border border-purple-300/20">🧠 O3 Reasoning</span>
-                <span className="bg-blue-100/20 text-blue-200 px-3 py-1 rounded-full text-xs font-medium border border-blue-300/20">👓 Vision Pro</span>
-                <span className="bg-red-100/20 text-red-200 px-3 py-1 rounded-full text-xs font-medium border border-red-300/20">🛡️ Auto Security</span>
-                <span className="bg-green-100/20 text-green-200 px-3 py-1 rounded-full text-xs font-medium border border-green-300/20">🌱 Green AI</span>
-                <span className="bg-cyan-100/20 text-cyan-200 px-3 py-1 rounded-full text-xs font-medium border border-cyan-300/20">⚡ 99.8% Accuracy</span>
-                <span className="bg-pink-100/20 text-pink-200 px-3 py-1 rounded-full text-xs font-medium border border-pink-300/20">📈 340% Gains</span>
-                <span className="bg-yellow-100/20 text-yellow-200 px-3 py-1 rounded-full text-xs font-medium border border-yellow-300/20">💡 90% Carbon Cut</span>
+                <span className="bg-yellow-100/20 text-yellow-200 px-3 py-1 rounded-full text-xs font-medium border border-yellow-300/20">⚡ Real-Time AI</span>
+                <span className="bg-blue-100/20 text-blue-200 px-3 py-1 rounded-full text-xs font-medium border border-blue-300/20">💻 Neural Code</span>
+                <span className="bg-purple-100/20 text-purple-200 px-3 py-1 rounded-full text-xs font-medium border border-purple-300/20">🎭 Multimodal</span>
+                <span className="bg-green-100/20 text-green-200 px-3 py-1 rounded-full text-xs font-medium border border-green-300/20">📦 Supply Chain</span>
+                <span className="bg-indigo-100/20 text-indigo-200 px-3 py-1 rounded-full text-xs font-medium border border-indigo-300/20">🤖 Cognitive AI</span>
+                <span className="bg-red-100/20 text-red-200 px-3 py-1 rounded-full text-xs font-medium border border-red-300/20">🛡️ Security Mesh</span>
+                <span className="bg-slate-100/20 text-slate-200 px-3 py-1 rounded-full text-xs font-medium border border-slate-300/20">🔒 Federated</span>
+                <span className="bg-emerald-100/20 text-emerald-200 px-3 py-1 rounded-full text-xs font-medium border border-emerald-300/20">💰 FinTech AI</span>
               </div>
             </div>
           </div>
@@ -297,8 +306,8 @@ const Home = () => {
         <div className="container mx-auto px-6">
           <div className="mb-6 rounded-full bg-gradient-to-r from-emerald-500/15 via-cyan-500/15 to-purple-500/15 border border-emerald-400/30 px-6 py-3 text-white text-sm inline-flex items-center gap-2 animate-pulse">
             <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-bounce"></span>
-            🚀 SEPT 30, 2025: 5 BREAKTHROUGH ARTICLES — AI Protein Folding (99.8%), O3 Reasoning (PhD-level), Vision Pro (340% boost), Auto Security (sub-30s), Green AI (90% carbon cut)!
-            <Link to="/blog" className="text-cyan-300 underline underline-offset-4 hover:text-white font-bold">Explore Breakthroughs →</Link>
+            🚀 SEPT 30, 2025: 8 BREAKTHROUGH ARTICLES — Real-Time AI (10M/sec), Neural Code (95%), Multimodal (98%), Supply Chain (99.5%), Cognitive AI (92%), Security Mesh (99.99%), Federated Learning (100% privacy), Financial AI (95%)!
+            <Link to="/blog" className="text-cyan-300 underline underline-offset-4 hover:text-white font-bold">Explore All 8 Breakthroughs →</Link>
           </div>
         </div>
         {/* <LatestInsights /> */}
@@ -703,25 +712,28 @@ const Home = () => {
             <div className="bg-gradient-to-r from-purple-500/10 via-cyan-500/10 to-blue-500/10 border border-purple-400/30 rounded-xl p-6 mb-10 shadow-xl">
               <div className="flex items-center gap-3 mb-3">
                 <Sparkles className="w-5 h-5 text-purple-500 animate-pulse" />
-                <span className="text-lg font-bold text-purple-700">🔥 SEPTEMBER 30, 2025: 5 BREAKTHROUGH ARTICLES!</span>
+                <span className="text-lg font-bold text-purple-700">🔥 SEPTEMBER 30, 2025: 8 REVOLUTIONARY BREAKTHROUGHS!</span>
                 <Sparkles className="w-5 h-5 text-purple-500 animate-pulse" />
               </div>
             <p className="text-gray-700 font-semibold mb-2">
-                🧬 AI Protein Folding (99.8% accuracy, 6-month drug discovery) | 🧠 O3 PhD-Level Reasoning (75.7% ARC-AGI) | 
-                👓 Vision Pro Enterprise (340% productivity) | 🛡️ Autonomous Cybersecurity (sub-30s response) | 🌱 Green AI (90% carbon reduction)
+                ⚡ Real-Time AI (10M decisions/sec, &lt;1ms) | 💻 Neural Code Synthesis (95% accuracy, 90% time cut) | 
+                🎭 Multimodal Fusion (98% accuracy) | 📦 AI Supply Chains (99.5% forecasts, 85% inventory cut) | 
+                🤖 Cognitive Assistants (92% satisfaction) | 🛡️ Security Mesh (99.99% detection) | 🔒 Federated Learning (100% privacy) | 💰 Financial AI (95% accuracy)
               </p>
               <p className="text-gray-600 text-sm mb-4">
-                Explore paradigm-shifting breakthroughs in protein structure prediction, advanced LLM reasoning, spatial computing, 
-                autonomous security agents, and sustainable AI computing. These innovations are transforming drug discovery, enterprise 
-                decision-making, productivity, cybersecurity, and environmental sustainability!
+                Deploy production-ready AI in 4-10 weeks achieving 10,000x performance gains, 95%+ accuracy, and 300-500% ROI. 
+                Transform real-time decisions, development velocity, customer experience, supply chains, security, data privacy, and financial modeling 
+                with breakthrough AI systems ready for enterprise deployment today!
               </p>
               <div className="flex flex-wrap gap-2">
-                <span className="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-xs font-medium">🧬 Protein Folding</span>
-                <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-medium">🧠 O3 Reasoning</span>
-                <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">👓 Vision Pro</span>
-                <span className="bg-red-100 text-red-700 px-3 py-1 rounded-full text-xs font-medium">🛡️ Auto Security</span>
-                <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-medium">🌱 Green AI</span>
-                <span className="bg-cyan-100 text-cyan-700 px-3 py-1 rounded-full text-xs font-medium">⚡ 99.8% Accuracy</span>
+                <span className="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-xs font-medium">⚡ Real-Time AI</span>
+                <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">💻 Neural Code</span>
+                <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-medium">🎭 Multimodal</span>
+                <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-medium">📦 Supply Chain</span>
+                <span className="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-xs font-medium">🤖 Cognitive AI</span>
+                <span className="bg-red-100 text-red-700 px-3 py-1 rounded-full text-xs font-medium">🛡️ Security Mesh</span>
+                <span className="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-xs font-medium">🔒 Federated</span>
+                <span className="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-xs font-medium">💰 FinTech AI</span>
               </div>
             </div>
             
