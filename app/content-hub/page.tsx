@@ -39,6 +39,7 @@ export default function ContentHubPage() {
         { title: 'AI Voice Interfaces Enterprise 2026', slug: '/blog/ai-voice-interfaces-enterprise-2026', readTime: '18 min', featured: true },
         { title: 'AI Autonomous Agents 2025', slug: '/blog/ai-autonomous-agents-2025', readTime: '18 min', featured: false },
         { title: 'AI Governance Framework 2025', slug: '/blog/ai-governance-framework-2025', readTime: '15 min', featured: false },
+        { title: 'Agent Releases 2026: Zero‑Regret', slug: '/blog/agent-release-zero-regret-2026', readTime: '8 min', featured: true },
       ]
     },
     {
@@ -49,6 +50,7 @@ export default function ContentHubPage() {
         { title: 'Enterprise AI Security 2025', slug: '/blog/enterprise-ai-security-2025', readTime: '14 min', featured: false },
         { title: 'GenAI Guardrails 2025', slug: '/blog/genai-guardrails-2025', readTime: '11 min', featured: false },
         { title: 'AI Data Privacy 2026', slug: '/blog/ai-data-privacy-2026', readTime: '12 min', featured: true },
+        { title: 'Action Scorecards 2026', slug: '/blog/ai-governance-action-scorecards-2026', readTime: '7 min', featured: true },
       ]
     },
     {
@@ -69,6 +71,7 @@ export default function ContentHubPage() {
         { title: 'AI Operational Resilience 2026', slug: '/blog/ai-operational-resilience-2026', readTime: '14 min', featured: true },
         { title: 'AI Enterprise Automation Revolution 2026', slug: '/blog/ai-2026-enterprise-automation-revolution', readTime: '22 min', featured: true },
         { title: 'AI 2026 Quantum Neural Networks', slug: '/blog/ai-2026-quantum-neural-networks', readTime: '18 min', featured: true },
+        { title: 'Edge Private Experimentation 2026', slug: '/blog/edge-private-experimentation-2026', readTime: '6 min', featured: true },
       ]
     }
   ];
