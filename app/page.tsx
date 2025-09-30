@@ -1,5 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
 import Link from 'next/link';
+=======
+import { Link } from 'react-router-dom';
+>>>>>>> origin/cursor/create-and-deploy-new-content-4f57
 import { 
   NewBlogBanner, 
   AnalyticsPlatformBanner, 
@@ -326,13 +330,51 @@ export default function HomePage() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-xl p-8 border border-purple-200 relative">
+              <div className="absolute top-4 right-4 bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                NEW 2026
+              </div>
+              <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-6">
+                <span className="text-white text-2xl">⚡</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">AI Quantum Solutions</h3>
+              <p className="text-gray-600 mb-6">
+                1000x performance gains with revolutionary quantum AI algorithms and optimization
+              </p>
+              <ul className="text-sm text-gray-600 space-y-2 mb-6">
+                <li>• Quantum optimization algorithms</li>
+                <li>• Quantum machine learning</li>
+                <li>• Quantum cryptography</li>
+                <li>• $50M+ annual savings</li>
+              </ul>
+              <div className="flex justify-between items-center">
+                <div className="text-purple-600 font-bold">Starting at $5,000/month</div>
+                <Link to="/services/ai-2026-quantum-solutions" className="text-purple-600 font-semibold hover:text-purple-700">
+                  Learn More →
+                </Link>
+              </div>
+            </div>
+            
+            <FeaturedServiceCard
+              title="AI Enterprise Automation"
+              description="400% ROI with autonomous workflows and intelligent process optimization"
+              price="$2,999/month"
+              features={['Autonomous Workflows', '400% ROI', 'Process Mining', 'Intelligent Optimization']}
+              to="/services/ai-enterprise-automation"
+              popular={true}
+            />
             <FeaturedServiceCard
               title="AI Data Analytics"
               description="Transform data into actionable insights with predictive modeling and real-time dashboards"
               price="$199/month"
               features={['Predictive Analytics', 'Real-time Dashboards', 'Data Integration']}
+<<<<<<< HEAD
               href="/services/ai-data-analytics"
               popular={true}
+=======
+              to="/services/ai-data-analytics"
+              popular={false}
+>>>>>>> origin/cursor/create-and-deploy-new-content-4f57
             />
             <FeaturedServiceCard
               title="AI Workflow Automation"
@@ -374,6 +416,7 @@ export default function HomePage() {
               href="/services/cybersecurity-consulting"
               popular={false}
             />
+<<<<<<< HEAD
             <FeaturedServiceCard
               title="AI Edge Computing"
               description="Real-time AI processing at the edge with sub-50ms response times"
@@ -398,6 +441,8 @@ export default function HomePage() {
               href="/services/ai-2026-revolutionary-solutions"
               popular={true}
             />
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-4f57
           </div>
         </div>
       </section>
