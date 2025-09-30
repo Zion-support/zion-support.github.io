@@ -152,6 +152,19 @@ export default function ContentHubPage() {
   // Merged content definitions above
   return (
     <div className="min-h-screen bg-slate-950">
+      {/* 🔥 New This Week */}
+      <section className="py-8 bg-gradient-to-r from-emerald-700 via-teal-700 to-cyan-700 text-white border-b border-white/10">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <h2 className="text-2xl md:text-3xl font-bold">New this week: Governance, Routing, and Data Controls</h2>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/blog/ai-2026-real-time-agent-routing" className="inline-flex items-center gap-2 bg-white text-emerald-700 px-4 py-2 rounded-lg font-semibold hover:bg-emerald-50 transition-colors">Agent Routing 2026<span>→</span></Link>
+              <Link href="/blog/ai-2026-autonomous-data-governance" className="inline-flex items-center gap-2 bg-white text-teal-700 px-4 py-2 rounded-lg font-semibold hover:bg-teal-50 transition-colors">Data Governance 2026<span>→</span></Link>
+              <Link href="/blog/ai-2025-generative-ai-governance-blueprint" className="inline-flex items-center gap-2 bg-white text-cyan-700 px-4 py-2 rounded-lg font-semibold hover:bg-cyan-50 transition-colors">GenAI Governance 2025<span>→</span></Link>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-20">
         <div className="absolute inset-0 overflow-hidden opacity-20">
