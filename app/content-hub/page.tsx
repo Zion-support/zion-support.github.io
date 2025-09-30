@@ -176,6 +176,7 @@ export default function ContentHubPage() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <h2 className="text-xl md:text-2xl font-bold">New this week</h2>
             <div className="flex flex-wrap gap-3">
+              <Link href="/blog/ai-2027-operational-risk-budgets" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">Operational Risk Budgets 2027<span>→</span></Link>
               <Link href="/blog/ai-september-30-2025-fresh-enterprise-ai-strategies" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">Fresh Enterprise AI Strategies<span>→</span></Link>
               <Link href="/blog/ai-2027-operational-risk-budgets" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">Operational Risk Budgets 2027<span>→</span></Link>
               <Link href="/blog/edge-2027-consentless-analytics-v4" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">Consentless Analytics v4<span>→</span></Link>

@@ -10,6 +10,15 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-2027-operational-risk-budgets",
+    title: "AI 2027: Operational Risk Budgets — Ship Faster, Stay Safe",
+    description: "Budget‑aware routing, KPI‑linked canaries, and instant rollback to prevent incidents while increasing velocity.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "11 min read"
+  },
+  {
     slug: "ai-2026-reliability-runbooks-v4",
     title: "AI 2026: Reliability Runbooks v4",
     description: "Budgeted actions, KPI canaries, and instant rollback—v4 playbooks for dependable AI operations.",
