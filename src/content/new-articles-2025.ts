@@ -307,6 +307,17 @@ newArticles2025.push(
 // Sept 30, 2025 – Fresh content for homepage banners and showcases
 newArticles2025.push(
   {
+    id: "ai-operational-scorecards-v4-2026",
+    title: "📊 AI Operational Scorecards v4 (2026)",
+    description: "SLIs mapped to KPIs with budgeted actions, canaries, and instant rollback.",
+    category: "AI Operations",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-operational-scorecards-v4-2026",
+    readTime: "8 min read",
+    tags: ["Scorecards", "SLIs", "Budgets", "Rollback"]
+  },
+  {
     id: "ai-governance-live-scorecards-2026",
     title: "📊 AI Governance Live Scorecards 2026",
     description: "Guardrails wired to KPIs with PR checks and live canaries—ship faster, stay compliant.",
@@ -446,5 +457,42 @@ newArticles2025.push(
     link: "/blog/agent-release-guardrails-2026",
     readTime: "7 min read",
     tags: ["Agents", "Runbooks", "Budgets", "Rollback"]
+  }
+);
+
+// Sept 30, 2025 – Brand new additions
+newArticles2025.push(
+  {
+    id: "ai-2028-realtime-multimodal-assistants",
+    title: "🤝 Real‑Time Multimodal Assistants (2028): Voice + Vision + Touch",
+    description: "Production patterns for assistants that see, hear, and act with <150ms latency.",
+    category: "Multimodal AI",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-2028-realtime-multimodal-assistants",
+    readTime: "10 min read",
+    tags: ["Multimodal", "Voice", "Vision", "Latency"]
+  },
+  {
+    id: "ai-2027-governed-agent-marketplaces",
+    title: "🏛️ Governed Agent Marketplaces (2027): Safe, Auditable Automation",
+    description: "Policy checks, budgets, and attestations enabling safe third‑party agent ecosystems.",
+    category: "AI Governance",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-2027-governed-agent-marketplaces",
+    readTime: "9 min read",
+    tags: ["Agents", "Governance", "Attestations", "Budgets"]
+  },
+  {
+    id: "edge-2026-private-feature-flags",
+    title: "🔐 Edge Private Feature Flags (2026): Zero‑PII Rollouts at <100ms",
+    description: "Signed configs, scoped IDs, and on‑device metrics for private global rollouts.",
+    category: "Edge Computing",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/edge-2026-private-feature-flags",
+    readTime: "7 min read",
+    tags: ["Edge", "Privacy", "Feature Flags", "DP"]
   }
 );

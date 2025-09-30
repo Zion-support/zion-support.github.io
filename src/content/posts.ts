@@ -46,19 +46,23 @@ export const posts: BlogPost[] = [
     readTime: "11 min read"
   },
   {
-    slug: "ai-infra-cost-optimization-2027",
-    title: "AI Infra Cost Optimization 2027: Fast, Reliable, Affordable",
-    description: "Cut AI infra spend 30–70% via quality tiers, caching, routing, and quantization.",
-    category: "Implementation Guide",
-    publishedAt: "2027-01-08",
+    slug: "ai-2025-cost-controllers-v1",
+    title: "AI Cost Controllers v1 (2025): Budgets, Tiers, and Guardrails",
+    description: "Practical cost governance: route by quality tier, enforce budgets, and prevent overruns with policy tests.",
+    category: "FinOps",
+    publishedAt: "2025-09-30",
     featured: true,
-    readTime: "12 min read"
+    readTime: "9 min read"
   },
   {
     slug: "genai-reliability-scorecards-2027",
     title: "GenAI Reliability Scorecards 2027: KPIs, Budgets, Rollback",
     description: "Live KPI scorecards and budgeted routes that keep GenAI reliable and affordable.",
     category: "AI Governance",
+    slug: "edge-2025-realtime-personalization",
+    title: "Realtime Personalization 2025 at the Edge: <100ms, Zero‑PII",
+    description: "Edge feature flags, scoped IDs, and on‑device telemetry to deliver private, sub‑100ms personalization.",
+    category: "Edge Computing",
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
@@ -68,6 +72,48 @@ export const posts: BlogPost[] = [
     title: "Edge Private Analytics 2027: Zero‑PII Insights at <100ms",
     description: "Scoped IDs, on‑device aggregation, and DP noise to unlock insights without PII.",
     category: "Analytics",
+    slug: "ai-2025-autonomous-infrastructure-blueprint",
+    title: "Autonomous Infrastructure 2025: Self‑Healing, Self‑Optimizing, Self‑Scaling",
+    description: "Design an AI‑driven infra platform with predictive autoscaling, policy tests, and instant rollback for 99.99% uptime.",
+    category: "Platform Engineering",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "12 min read"
+  },
+  {
+    slug: "edge-2025-zero-pii-experiments",
+    title: "Edge Experiments 2025: Zero‑PII Global A/B at <100ms",
+    description: "Scoped IDs, on‑device metrics, and DP noise for compliant experimentation with sub‑100ms reads worldwide.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "genai-2025-routing-caches-v1",
+    title: "GenAI Routing v1 (2025): Tiered Models + Semantic Caches",
+    description: "Predictable cost and stable UX using route guards, tiered models, and cache hits tied to product KPIs.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "10 min read"
+  },
+  {
+    slug: "ai-2027-edge-native-agents",
+    title: "Edge‑Native Agents 2027: Private Tools at <100ms",
+    description: "Design agents that run close to users with scoped permissions, on‑device tools, and instant rollback.",
+    category: "Edge Computing",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    
+  {
+    slug: "ai-2027-operational-scorecards",
+    title: "Operational AI Scorecards 2027: KPIs, Budgets, Rollback",
+    description: "Live scorecards that link SLIs to product KPIs with budgeted actions and one‑click recovery.",
+    category: "AI Operations",
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
@@ -1747,31 +1793,31 @@ posts.push(
   }
 );
 
-// Sept 30, 2025 – Brand-new trio for immediate homepage promotion
+// Sept 30, 2025 – New content additions for homepage advertising (fresh drop)
 posts.push(
   {
-    slug: "ai-change-management-2026",
-    title: "AI Change Management 2026: From Pilot to Org-Wide Adoption",
-    description: "Playbooks, scorecards, and rollout trains that turn pilots into durable adoption across BUs.",
-    category: "AI Strategy",
+    slug: "ai-reasoning-agents-production-2026",
+    title: "Reasoning Agents in Production 2026: Tools, Traces, and Budgets",
+    description: "Ship reliable reasoning agents with deterministic tools, live traces, and KPI‑linked budgets.",
+    category: "AI Engineering",
     publishedAt: "2025-09-30",
     featured: true,
-    readTime: "7 min read"
+    readTime: "9 min read"
   },
   {
-    slug: "edge-governance-quickstart-2026",
-    title: "Edge Governance Quickstart 2026: Policies Without Latency Penalties",
-    description: "Auth-aware routes, scoped IDs, and signed outputs that enforce policy at <100ms.",
+    slug: "vector-database-optimization-2026",
+    title: "Vector Database Optimization 2026: Billion‑Scale Under 10ms",
+    description: "HNSW tuning, PQ/IVF, and hybrid search to hit sub‑10ms latency at billion‑vector scale.",
     category: "Architecture",
     publishedAt: "2025-09-30",
     featured: true,
-    readTime: "6 min read"
+    readTime: "8 min read"
   },
   {
-    slug: "genai-evals-blueprint-2026",
-    title: "GenAI Evals Blueprint 2026: Offline Suites, PR Gates, Live Canaries",
-    description: "Layered evaluation patterns wired to KPIs so teams ship fast without regressions.",
-    category: "GenAI",
+    slug: "llm-fine-tuning-breakthrough-2026",
+    title: "LLM Fine‑Tuning Breakthrough 2026: QLoRA + Distillation in Days",
+    description: "Achieve domain‑expert models fast with QLoRA, distillation, and evals wired to outcomes.",
+    category: "Machine Learning",
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
