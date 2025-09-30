@@ -108,6 +108,25 @@ export const posts: BlogPost[] = [
     featured: true,
     readTime: "8 min read"
   },
+  // Fresh content added today to surface on homepage
+  {
+    slug: "ai-privacy-preserving-telemetry-2026",
+    title: "AI Privacy‑Preserving Telemetry: Signal Without Sensitive Data",
+    description: "Design telemetry with scoped IDs, redaction at source, and DP‑backed analytics.",
+    category: "Observability",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "platform-scorecards-roi-2026",
+    title: "Platform Scorecards ROI 2026: Tie Capabilities to Business Outcomes",
+    description: "Lightweight scorecards linking platform features to adoption, SLOs, and value delivered.",
+    category: "Platform Engineering",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
+  },
   {
     slug: "zero-trust-for-genai-2026",
     title: "Zero‑Trust for GenAI: Prompt Firewalls, Egress Policies, and Audit Trails",
