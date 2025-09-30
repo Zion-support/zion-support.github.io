@@ -218,7 +218,7 @@ export const posts: BlogPost[] = [
   {
     slug: "genai-2027-cost-controllers-v2",
     title: "GenAI 2027: Cost Controllers v2 — Predictable Spend, Stable UX",
-    description: "Quality tiers, semantic caches, and policy tests to cut spend 30–70% without regressions.",
+    description: "Deterministic tiering, semantic caches, and policy tests for predictable spend without regressions.",
     category: "FinOps",
     publishedAt: "2025-10-03",
     featured: true,
