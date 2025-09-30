@@ -14,6 +14,147 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "ai-ethics-business-implementation-guide",
+    title: "AI Ethics Implementation Guide: From Principles to Practice",
+    description: "Practical controls, policy tests, and approval flows that enable fast, safe AI shipping.",
+    content: `
+# AI Ethics Implementation Guide: From Principles to Practice
+
+Principles are not enough. This guide shows how to turn AI ethics into shippable policy tests, approvals, and telemetry that unblock delivery while protecting your brand.
+
+## Core Controls
+- Data usage policies with automated checks
+- Prompt isolation and PII redaction
+- Red/black safety canaries with auto‑rollback
+
+## Operating Model
+- Risk tiers and review SLAs
+- Clear ownership and escalation paths
+- Continuous policy validation in CI/CD
+
+Adopt these patterns to move fast without breaking trust.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "AI Governance",
+    tags: ["AI Ethics", "Governance", "Policy", "Compliance"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/ai-ethics-implementation.jpg"
+  },
+  {
+    slug: "iot-security-best-practices-2025",
+    title: "IoT Security: Comprehensive Best Practices for 2025",
+    description: "Device identity, fleet patching, secure update channels, and incident response for IoT at scale.",
+    content: `
+# IoT Security: Comprehensive Best Practices for 2025
+
+Harden IoT fleets with device identity, signed updates, immutable roots of trust, and zero‑trust networking.
+
+## Checklist
+- Secure boot and attestation
+- Mutual TLS with short‑lived certs
+- Fleet patching and staged rollouts
+- SBOM tracking and vuln monitoring
+
+Cut incidents and improve uptime with pragmatic controls that scale.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "Security",
+    tags: ["IoT", "Security", "Device Identity", "Patching"],
+    featured: true,
+    readTime: "11 min read",
+    image: "/images/iot-security-best-practices.jpg"
+  },
+  {
+    slug: "enterprise-genai-adoption-roadmap-2025",
+    title: "Enterprise GenAI Adoption Roadmap: From POCs to Reliable ROI",
+    description: "Evaluation programs, guardrails, and org patterns to move from pilot to production in 90 days.",
+    content: `
+# Enterprise GenAI Adoption Roadmap: From POCs to Reliable ROI
+
+Most GenAI pilots stall. Use this roadmap to align strategy, ship safely, and prove value.
+
+## Roadmap
+1. Business‑aligned use cases and metrics
+2. Offline eval suites and CI policy tests
+3. Guardrails and incident playbooks
+4. Staged rollouts with canaries and rollback
+
+Ship confidently and accelerate ROI.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "AI Strategy",
+    tags: ["GenAI", "Roadmap", "Strategy", "Guardrails"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/enterprise-genai-roadmap.jpg"
+  },
+  {
+    slug: "ai-sales-copilot-2025",
+    title: "AI Sales Copilot: Grounded Prompts, CRM Context, Reliable Evals",
+    description: "How to wire CRMs, build prompt libraries, and add evals that boost win‑rates without risk.",
+    content: `
+# AI Sales Copilot: Grounded Prompts, CRM Context, Reliable Evals
+
+Sales copilots fail without context and measurement. This guide shows how to ground prompts in CRM data, build reusable prompt libraries, and add offline + online evals that correlate with win‑rates.
+
+## What To Ground
+- Opportunities, last touches, stakeholders
+- Product limits, pricing, legal constraints
+
+## Evals That Predict Outcomes
+- Prospect relevance scoring
+- Objection handling quality
+- Call‑to‑action clarity
+
+Wire telemetry to track outcomes and iterate with confidence.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "AI Strategy",
+    tags: ["Sales", "Copilot", "CRM", "Evals"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/ai-sales-copilot.jpg"
+  },
+  {
+    slug: "zero-downtime-migrations-2025",
+    title: "Zero‑Downtime Migrations: Patterns that Keep Pages Green",
+    description: "Dual‑write, read‑shadowing, and progressive delivery to ship schema changes safely.",
+    content: `
+# Zero‑Downtime Migrations: Patterns that Keep Pages Green
+
+Avoid 2am incidents with dual‑write, read‑shadowing, backfills with idempotency, and progressive cutovers behind flags. Includes checklists and rollback playbooks.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "Platform Engineering",
+    tags: ["Migrations", "Zero Downtime", "Databases"],
+    featured: false,
+    readTime: "5 min read",
+    image: "/images/zero-downtime.jpg"
+  },
+  {
+    slug: "agent-telemetry-traces-2025",
+    title: "Agent Telemetry: What to Trace and Why It Matters",
+    description: "From tool call spans to prompt metadata—what to capture to debug and improve agent behavior.",
+    content: `
+# Agent Telemetry: What to Trace and Why It Matters
+
+Capture spans for tool calls, retries, and model routes. Attach prompt, input size, and guardrail outcomes. Build dashboards that correlate failures to fixes.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "GenAI",
+    tags: ["Telemetry", "Agents", "Tracing"],
+    featured: true,
+    readTime: "5 min read",
+    image: "/images/agent-telemetry.jpg"
+  },
+  {
     slug: "genai-evals-in-production-2025",
     title: "GenAI Evals in Production: Policy Tests That Scale",
     description: "From offline suites to online canaries: patterns that keep quality high as usage grows.",
