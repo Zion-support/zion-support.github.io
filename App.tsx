@@ -28,6 +28,7 @@ import Ultimate2026ContentPromotionalBanner from "./components/Ultimate2026Conte
 import Revolutionary2026ContentMegaBreakthroughBanner from "./components/Revolutionary2026ContentMegaBreakthroughBanner";
 import January2026RevolutionaryContentBanner from "./components/January2026RevolutionaryContentBanner";
 import NewContent2026AdvertisingMegaBanner from "./components/NewContent2026AdvertisingMegaBanner";
+import AI2026ConsultingAdvertisingBanner from "./components/AI2026ConsultingAdvertisingBanner";
 import InteractiveContentShowcase2026 from "./components/InteractiveContentShowcase2026";
 import February2026ContentMegaBanner from "./components/February2026ContentMegaBanner";
 import NewContent2026BreakthroughShowcaseBanner from "./components/NewContent2026BreakthroughShowcaseBanner";
@@ -120,6 +121,9 @@ export default function App(): JSX.Element {
       
       {/* NEW: Interactive Content Hub 2026 - Advanced Content Exploration */}
       <InteractiveContentHub2026 />
+      
+      {/* NEW: AI 2026 Consulting Services Banner - Most Prominent */}
+      <AI2026ConsultingAdvertisingBanner />
       
       {/* NEW: Revolutionary 2026 Content Mega Breakthrough Banner - Most Prominent */}
       <Revolutionary2026ContentMegaBreakthroughBanner />
