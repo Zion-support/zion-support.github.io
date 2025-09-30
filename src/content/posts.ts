@@ -10,6 +10,33 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-enterprise-transformation-2027",
+    title: "AI Enterprise Transformation 2027",
+    description: "Executive playbook to plan, fund, and scale AI with measurable ROI.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "agentic-workflow-orchestration-2026",
+    title: "Agentic Workflow Orchestration 2026",
+    description: "Budgets, KPI‑linked canaries, and rollback for safe velocity.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "ai-financial-modeling-2027",
+    title: "AI Financial Modeling 2027",
+    description: "95%+ accuracy with KPI‑linked scorecards, evals, and rollback.",
+    category: "FinTech AI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
     slug: "ai-operational-trust-scorecards-2026",
     title: "AI Operational Trust Scorecards 2026",
     description: "SLIs wired to KPIs with budgets, canaries, and instant rollback for safe velocity.",
@@ -42,9 +69,8 @@ export const posts: BlogPost[] = [
     description: "Stabilize UX and cut costs 30–70% with semantic caches and budget‑aware routing.",
     category: "GenAI",
     publishedAt: "2025-09-30",
-<<<<<<< HEAD
     featured: true,
-    readTime: "8 min read"
+    readTime: "9 min read"
   },
   {
     slug: "edge-2026-private-feature-flags",
@@ -70,8 +96,6 @@ export const posts: BlogPost[] = [
     description: "Next‑gen scorecards linking SLIs to KPIs with budgeted actions, PR policy tests, and instant rollback.",
     category: "AI Governance",
     publishedAt: "2026-12-01",
-=======
->>>>>>> 24e17132c1344b429cef13f136704b6705d13023
     featured: true,
     readTime: "9 min read"
   },
