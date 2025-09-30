@@ -37,12 +37,29 @@ import {
   AIOperationalExcellenceBanner,
   AIAgentObservabilityBanner,
   ManufacturingTransformationBanner,
-  Latest2026ContentBanner,
-  AISecurityEnterprise2026Banner,
-  AIMultimodalEnterprise2026Banner,
-  AISustainabilityTransformationBanner,
-  LatestContent2026Banner
-} from '../components/PromotionalBanner';
+  AIEnterpriseServicesBanner,
+  LatestContentShowcaseBanner,
+  InteractiveAICalculatorBanner,
+  AIInnovationShowcaseBanner
+} from '../components/NewContent2026Banners';
+import AI2026ContentShowcaseBanner from '../components/AI2026ContentShowcaseBanner';
+import AIEnterpriseAutomationRevolutionBanner from '../components/AIEnterpriseAutomationRevolutionBanner';
+import AIQuantumComputingBreakthroughBanner from '../components/AIQuantumComputingBreakthroughBanner';
+import AIMegaTransformationSuccessBanner from '../components/AIMegaTransformationSuccessBanner';
+import AI2026InnovationShowcaseBanner from '../components/AI2026InnovationShowcaseBanner';
+import ContentShowcase from '../components/ContentShowcase';
+import InteractiveAIROICalculator from '../components/InteractiveAIROICalculator';
+import NewContent2026PromotionalBanner from '../components/NewContent2026PromotionalBanner';
+import InteractiveAI2026Calculator from '../components/InteractiveAI2026Calculator';
+import LatestContentBanner2025 from '../src/components/LatestContentBanner2025';
+import Latest2026ContentBanner from '../components/Latest2026ContentBanner';
+import September30NewContentBanner from '../components/September30NewContentBanner';
+import September30LatestContentBanner from '../components/September30LatestContentBanner';
+import Revolutionary2026ContentShowcase from '../components/Revolutionary2026ContentShowcase';
+import September30NewContent2025Banner from '../components/September30NewContent2025Banner';
+import Revolutionary2026ContentMegaBanner from '../components/Revolutionary2026ContentMegaBanner';
+import UltimateContent2026MegaBanner from '../components/UltimateContent2026MegaBanner';
+import Revolutionary2027ContentBanner from '../components/Revolutionary2027ContentBanner';
 import {
   NewContent2026Banner as NewContent2026BannerComponent,
   AutonomousOperationsBanner,
@@ -146,8 +163,11 @@ export default function HomePage() {
       {/* 🚀 NEWEST 2027 CONTENT - BREAKTHROUGH QUANTUM AI & AUTONOMOUS INTELLIGENCE! */}
       <NewContent2027ShowcaseBanner />
 
-      {/* 🌟 NEW 2026 CONTENT SHOWCASE - REVOLUTIONARY AI & TECH INSIGHTS! */}
-      <Ultimate2026ContentShowcaseBanner />
+      {/* 🌟 REVOLUTIONARY 2027 CONTENT - QUANTUM CONSCIOUSNESS & NEUROMORPHIC BREAKTHROUGHS! */}
+      <Revolutionary2027ContentBanner />
+
+      {/* 🚀 REVOLUTIONARY AI ENTERPRISE AUTOMATION 2026 */}
+      <RevolutionaryAIEnterpriseAutomationBanner />
 
       {/* 🚀 REVOLUTIONARY AI 2026 BREAKTHROUGHS */}
       <RevolutionaryAI2026BreakthroughBanner />

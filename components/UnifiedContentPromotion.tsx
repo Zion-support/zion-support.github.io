@@ -18,6 +18,7 @@ interface ContentItem {
 
 const featuredContent: ContentItem[] = [
   {
+<<<<<<< HEAD
     id: 'o3-0',
     title: 'AI Observability 2026: Complete Guide',
     description: 'Comprehensive observability strategies for AI systems with real-time monitoring and alerting.',
@@ -114,6 +115,18 @@ const featuredContent: ContentItem[] = [
     publishedDate: 'September 30, 2025',
     readTime: '10 min read',
     category: 'Enterprise AI'
+=======
+    id: '1',
+    title: 'AI 2027: Quantum Consciousness Fusion',
+    description: 'Revolutionary breakthrough combining quantum computing with consciousness simulation, achieving 100,000x processing speed and genuine artificial awareness capabilities.',
+    link: '/blog/ai-2027-quantum-consciousness-fusion',
+    badge: 'Quantum Breakthrough',
+    badgeColor: 'bg-gradient-to-r from-blue-600 to-purple-600',
+    icon: '⚛️',
+    publishedDate: 'February 15, 2027',
+    readTime: '15 min read',
+    category: 'Quantum AI'
+>>>>>>> 93f1c10ce5fd (feat: Add 2027 content and update links)
   },
   {
     id: '1',
