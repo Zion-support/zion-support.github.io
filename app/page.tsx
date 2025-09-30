@@ -2,6 +2,7 @@ import React from 'react';
 import UnifiedContentPromotion from '../components/UnifiedContentPromotion';
 import ContentShowcase from '../components/ContentShowcase';
 import AI2026RevolutionaryAutonomousEnterpriseBanner from '../components/AI2026RevolutionaryAutonomousEnterpriseBanner';
+import ContentShowcase from '../../components/ContentShowcase';
 
 export default function HomePage() {
   return (

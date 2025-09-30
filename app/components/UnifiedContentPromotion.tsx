@@ -10,6 +10,22 @@ const promoted = [
     theme: 'from-indigo-600 to-sky-600',
   },
   {
+    href: '/blog/ai-2026-autonomous-change-control',
+    title: 'Autonomous Change Control — Gates, Budgets, Rollback',
+    desc: 'Ship weekly without regressions using CI policy tests and instant rollback.',
+    emoji: '🚦',
+    pill: 'New • Sep 30, 2025',
+    theme: 'from-emerald-600 to-teal-600',
+  },
+  {
+    href: '/blog/edge-2026-privacy-preserving-evals',
+    title: 'Edge 2026: Privacy‑Preserving Evals (<100ms)',
+    desc: 'Scoped IDs, on‑device aggregation, and DP noise for trustworthy eval signals.',
+    emoji: '🔐',
+    pill: 'New • Sep 30, 2025',
+    theme: 'from-fuchsia-600 to-pink-600',
+  },
+  {
     href: '/blog/ai-2025-sept-30-autonomous-risk-budgets-v2',
     title: 'Autonomous Risk Budgets V2',
     desc: 'Dynamic guardrails and live scorecards that cut incidents by 80%.',

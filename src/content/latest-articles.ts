@@ -17,6 +17,38 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
+    id: "ai-2026-autonomous-change-control",
+    slug: "ai-2026-autonomous-change-control",
+    title: "Autonomous Change Control — Gates, Budgets, Rollback",
+    description: "Ship weekly without regressions using CI policy tests, KPI-linked canaries, and instant rollback.",
+    excerpt: "A practical blueprint to ship fast with policy tests, live canaries, budgeted actions, and deterministic rollback.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "AI Operations",
+    tags: ["Policy Tests", "Canaries", "Rollback"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/ai-2026-autonomous-change-control.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "edge-2026-privacy-preserving-evals",
+    slug: "edge-2026-privacy-preserving-evals",
+    title: "Edge 2026: Privacy‑Preserving Evals (<100ms)",
+    description: "Scoped IDs, on‑device aggregation, and DP noise for trustworthy eval signals without PII.",
+    excerpt: "Design evaluators that run on device with scoped IDs, DP noise, and attestations for verifiable signals.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "Analytics",
+    tags: ["Edge", "Privacy", "Evals"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/edge-2026-privacy-preserving-evals.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "ai-2029-autonomous-infra-blueprint",
     slug: "ai-2029-autonomous-infra-blueprint",
     title: "AI 2029: Autonomous Infrastructure Blueprint",
