@@ -70,11 +70,11 @@ export default function RootLayout({
                 <Link href="/services" className="text-gray-700 hover:text-blue-600 transition-colors">Services</Link>
                 <Link href="/blog" className="text-gray-700 hover:text-blue-600 transition-colors relative">
                   Blog
-                  <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">New</span>
+                  <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full animate-pulse">New 2027</span>
                 </Link>
                 <Link href="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors relative">
                   Case Studies
-                  <span className="absolute -top-2 -right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full">New</span>
+                  <span className="absolute -top-2 -right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full animate-pulse">$1B ROI</span>
                 </Link>
               </nav>
             </div>
@@ -104,8 +104,9 @@ export default function RootLayout({
                 <ul className="space-y-2 text-gray-400">
                   <li><Link href="/blog" className="hover:text-white">Blog</Link></li>
                   <li><Link href="/case-studies" className="hover:text-white">Case Studies</Link></li>
-                  <li><Link href="/blog/ai-2026-neural-superintelligence" className="hover:text-white">Neural Superintelligence</Link></li>
-                  <li><Link href="/case-studies/neural-superintelligence-mega-success-2026" className="hover:text-white">$500M Success Story</Link></li>
+                  <li><Link href="/blog/ai-2027-quantum-revolution" className="hover:text-white">🚀 Quantum AI 2027</Link></li>
+                  <li><Link href="/case-studies/fortune-500-quantum-ai-transformation-2027" className="hover:text-white">🏆 $1B ROI Success</Link></li>
+                  <li><Link href="/blog/ai-autonomous-business-processes-2027" className="hover:text-white">🤖 Autonomous Systems</Link></li>
                 </ul>
               </div>
               <div>

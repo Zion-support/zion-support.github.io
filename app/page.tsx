@@ -45,6 +45,8 @@ import ContentShowcase from '../components/ContentShowcase';
 import InteractiveAIROICalculator from '../components/InteractiveAIROICalculator';
 import NewContent2026PromotionalBanner from '../components/NewContent2026PromotionalBanner';
 import InteractiveAI2026Calculator from '../components/InteractiveAI2026Calculator';
+import NewContent2027PromotionalBanner from '../components/NewContent2027PromotionalBanner';
+import Ultimate2027ContentShowcaseBanner from '../components/Ultimate2027ContentShowcaseBanner';
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
@@ -87,6 +89,9 @@ export default function HomePage() {
   return (
     <>
       <div className="animate-fade-in">
+      {/* NEW 2027 Content Banner */}
+      <NewContent2027PromotionalBanner />
+
       {/* NEW 2026 Content Banner */}
       <section className="py-16 bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 text-white">
         <div className="max-w-6xl mx-auto px-4">
@@ -301,6 +306,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Ultimate 2027 Content Showcase */}
+      <Ultimate2027ContentShowcaseBanner />
 
       {/* Latest 2026 Content Banners */}
       <NeuralArchitectureSearchBanner />
