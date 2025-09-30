@@ -126,17 +126,58 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
 
 // Sept 30, 2025 – Fresh homepage banner promoting the new content
 enhancedPromotionalBanners.push({
-  id: 'verifiable-edge-analytics-2026',
-  title: '🔐 Verifiable Edge Analytics 2026 — Zero‑PII, Signed Attestations',
-  description: 'Scoped IDs, on‑device aggregation, DP noise, and signed attestations for trustworthy insights under 100ms.',
-  ctaText: 'Read the guide',
-  ctaLink: '/blog/verifiable-edge-analytics-2026',
+  id: 'sept30-2025-new-content-autonomous-roadmaps-evals-costtiers',
+  title: '🚀 New: Autonomous Roadmaps, Signed Evals, GenAI Cost Tiers v3',
+  description: 'Outcome‑led AI roadmaps, verifiable edge evals, and predictable GenAI costs with stable UX.',
+  ctaText: 'Read the latest',
+  ctaLink: '/blog',
+  variant: 'success',
+  icon: '🚀',
+  featured: true,
+  priority: 0,
+  startDate: '2025-09-30'
+});
+
+// Feature individual CTAs for the three new posts
+enhancedPromotionalBanners.push({
+  id: 'ai-2027-autonomous-roadmaps',
+  title: '🧭 AI 2027: Autonomous Roadmaps that Prove ROI',
+  description: 'Bets → KPIs → budgets → rollback. A practical 2027 roadmap system.',
+  ctaText: 'Read article',
+  ctaLink: '/blog/ai-2027-autonomous-roadmaps',
+  variant: 'info',
+  icon: '🧭',
+  featured: true,
+  priority: 1,
+  startDate: '2025-09-30'
+});
+
+enhancedPromotionalBanners.push({
+  id: 'edge-2026-signed-evals',
+  title: '🔐 Edge 2026: Signed Evals — Zero‑PII, <100ms',
+  description: 'Scoped IDs, DP noise, and signed attestations for trustworthy evals at the edge.',
+  ctaText: 'Explore evals',
+  ctaLink: '/blog/edge-2026-signed-evals',
   variant: 'success',
   icon: '🔐',
   featured: true,
-  priority: 0,
-  startDate: '2025-10-31'
+  priority: 2,
+  startDate: '2025-09-30'
 });
+
+enhancedPromotionalBanners.push({
+  id: 'genai-2027-cost-tiers-v3',
+  title: '💸 GenAI 2027: Cost Tiers v3 — 40–70% Savings',
+  description: 'Quality tiers + semantic caches + policy tests for predictable spend and stable UX.',
+  ctaText: 'See playbook',
+  ctaLink: '/blog/genai-2027-cost-tiers-v3',
+  variant: 'success',
+  icon: '💸',
+  featured: true,
+  priority: 3,
+  startDate: '2025-09-30'
+});
+
 
 enhancedPromotionalBanners.push({
   id: 'sept30-fresh-content-2025',

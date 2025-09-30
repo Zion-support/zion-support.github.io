@@ -10,6 +10,36 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    // NEW — Autonomous AI Roadmaps (featured)
+    slug: "ai-2027-autonomous-roadmaps",
+    title: "AI 2027: Autonomous Roadmaps that Prove ROI",
+    description: "Outcome‑led bets, KPI scorecards, budgets, and rollback — a practical 2027 roadmap.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    // NEW — Signed Evals at the Edge (featured)
+    slug: "edge-2026-signed-evals",
+    title: "Edge 2026: Signed Evals — Zero‑PII, <100ms",
+    description: "Scoped IDs, on‑device aggregation, DP noise, and signed attestations for evals you can trust.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    // NEW — GenAI Cost Tiers v3 (featured)
+    slug: "genai-2027-cost-tiers-v3",
+    title: "GenAI 2027: Cost Tiers v3 — 40–70% Savings, Stable UX",
+    description: "Quality tiers + semantic caches + policy tests for predictable spend without regressions.",
+    category: "FinOps",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
     // NEW — Runtime rollback blueprint (featured)
     slug: "ai-2026-runtime-rollback-blueprint",
     title: "AI 2026: Runtime Rollback Blueprint",
