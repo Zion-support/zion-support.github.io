@@ -24,14 +24,15 @@ import TrendingContentBanner from "../components/TrendingContentBanner";
 import ComprehensivePromoBanner from "../components/ComprehensivePromoBanner";
 import NewArticlesPromoBanner from "../components/NewArticlesPromoBanner";
 import NewServicesPromoBanner from "../components/NewServicesPromoBanner";
+import September30NewContentMegaBanner from "../components/September30NewContentMegaBanner";
+import October2025NewContentBanner from "../../components/October2025NewContentBanner";
+import Header from "../components/Header";
+import Revolutionary2026ContentMegaBanner from "../components/Revolutionary2026ContentMegaBanner";
 import September30MegaBanner2025 from "../components/September30MegaBanner2025";
 import October2025MegaLaunchBanner from "../components/October2025MegaLaunchBanner";
-import September30NewContentMegaBanner from "../components/September30NewContentMegaBanner";
-import Revolutionary2026ContentMegaBanner from "../components/Revolutionary2026ContentMegaBanner";
 import ContentValueTestimonials from "../components/ContentValueTestimonials";
 import EnhancedNewsletterSignup from "../components/EnhancedNewsletterSignup";
 import EnhancedTestimonials from "../components/EnhancedTestimonials";
-import Header from "../components/Header";
 import ModernFeatures from "../components/ModernFeatures";
 import { latestInsights } from "../content/insights";
 import { posts } from "../content/posts";
@@ -391,6 +392,11 @@ const Home = () => {
           </div>
         </div>
 
+        {/* New: October 2025 New Content Banner (promotes fresh posts) */}
+        <div className="container mx-auto px-6 mt-6">
+          <October2025NewContentBanner />
+        </div>
+
         {/* Newly added content promo */}
         <div className="container mx-auto px-6 mt-6">
           <div className="rounded-xl border border-white/10 bg-white/5 p-6">
@@ -448,8 +454,8 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 NEW: Oct 02 — Agent Runbooks v6, Edge Privacy Observability, CIO Playbook"
-          description="Latest drops: Agent Reliability Runbooks v6, Edge Privacy Observability, and CIO Modernization Playbook. Ship faster with safety, privacy, and ROI."
+          title="🚀 NEW: Oct 03 — Governed Autonomy Scorecards, Private Edge Telemetry, GenAI Quality Tiers v4"
+          description="Fresh drops: Governed Autonomy Scorecards, Private Telemetry at the Edge, and GenAI Quality Tiers v4. Ship faster with safety, privacy, and ROI."
           ctaText="Read the Latest"
           ctaLink="/blog"
           dismissible={true}
@@ -555,7 +561,7 @@ const Home = () => {
         <section className="container mx-auto px-6 py-16 relative z-10">
           <div className="text-center mb-12">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/20 text-purple-400 text-sm font-medium mb-6 animate-pulse">
-              🔥 HOT NEW CONTENT - JANUARY 2025
+              🔥 HOT NEW CONTENT - OCTOBER 2025
             </div>
             <h2 className="text-3xl font-bold text-white mb-4">
               Revolutionary AI & Technology Insights

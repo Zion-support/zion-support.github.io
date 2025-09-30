@@ -11,10 +11,28 @@ export interface BlogPost {
 export const posts: BlogPost[] = [
   // Sept 30, 2025 — Newly added content (featured)
   {
+    slug: "ai-2025-sept-30-llm-supply-chains",
+    title: "AI 2025: AI Supply Chains — 99.5% Forecasts, 85% Inventory Cut",
+    description: "Blueprint with freshness windows, quality budgets, signed attestations, and rollback.",
+    category: "Enterprise AI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
     slug: "ai-2025-sept-30-operational-trust-scorecards-v2",
     title: "Operational Trust Scorecards v2 — From SLIs to Business KPIs",
     description:
       "Update your scorecards with live canaries, budgeted actions, and rollback hooks that prevent regressions.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "ai-2026-governed-agent-runbooks",
+    title: "AI 2026: Governed Agent Runbooks — Budgets, Canaries, Rollback",
+    description: "Production checklists for safe autonomy: budgeted actions, KPI‑linked canaries, instant rollback.",
     category: "AI Operations",
     publishedAt: "2025-09-30",
     featured: true,
@@ -1507,6 +1525,40 @@ export const posts: BlogPost[] = [
   }
 ];
 
+// Oct 03, 2025 – New posts to surface on homepage and promos
+posts.unshift(
+  {
+    slug: "ai-2025-oct-03-governed-autonomy-scorecards",
+    title: "Governed Autonomy Scorecards: From SLIs to KPIs",
+    description:
+      "Operational scorecards with budgets, canaries, and rollback that accelerate delivery without regressions.",
+    category: "AI Operations",
+    publishedAt: "2025-10-03",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "edge-2025-oct-03-private-telemetry-blueprint",
+    title: "Private Telemetry at the Edge: Useful Signals, Zero PII",
+    description:
+      "Scoped IDs, on-device redaction, and DP noise for actionable analytics under 100ms with audit-ready attestations.",
+    category: "Observability",
+    publishedAt: "2025-10-03",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "genai-2025-oct-03-quality-tiers-blueprint-v4",
+    title: "GenAI Quality Tiers v4: Save Up To 70% With Stable UX",
+    description:
+      "Tiered routing, semantic caches, and eval gates that reduce spend while preserving user experience.",
+    category: "GenAI",
+    publishedAt: "2025-10-03",
+    featured: true,
+    readTime: "9 min read",
+  }
+);
+
 // Sept 30, 2025 – Add three brand-new posts to advertise across the site
 posts.unshift(
   {
@@ -1571,27 +1623,38 @@ posts.unshift(
   }
 );
 
-// Sept 30, 2025 – Freshly added posts to expand content library
+// Sept 30, 2025 – Add three more posts and promote across the site
 posts.unshift(
   {
-    slug: "ai-2025-sept-30-autonomous-runbooks-quickstart",
-    title: "Autonomous Runbooks Quickstart: Budgeted Actions and Instant Rollback",
+    slug: "ai-2025-sept-30-operational-trust-scorecards-v3",
+    title: "Operational Trust Scorecards v3 — KPIs, Budgets, Instant Rollback",
     description:
-      "Stand up incident playbooks with budgets, approvals, and rollback triggers that contain issues in under 60 seconds.",
+      "Wire SLIs to KPIs with budgeted actions, live canaries, and deterministic rollback that prevents regressions.",
     category: "AI Operations",
     publishedAt: "2025-09-30",
     featured: true,
-    readTime: "7 min read",
+    readTime: "9 min read",
   },
   {
-    slug: "edge-2025-sept-30-privacy-preserving-telemetry",
-    title: "Privacy‑Preserving Telemetry: Scoped IDs, On‑Device Redaction, DP Noise",
+    slug: "ai-2025-sept-30-autonomic-runbooks",
+    title: "Autonomic Runbooks — Contain Incidents in Under 60 Seconds",
     description:
-      "Actionable analytics without PII using scoped identifiers, local redaction, and differential privacy at the edge.",
+      "Policy‑tested actions, guardrails, and live traces that auto‑contain incidents without sacrificing velocity.",
+    category: "AI Reliability",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "edge-2025-sept-30-consentless-telemetry-v2",
+    title: "Consentless Telemetry v2 — Useful Insights, Zero‑PII, <100ms",
+    description:
+      "Scoped IDs, on‑device redaction, and DP noise to keep analytics rich and privacy‑first worldwide.",
     category: "Observability",
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "6 min read",
+<<<<<<< HEAD
   },
   {
     slug: "genai-2025-sept-30-quality-tiers-quickstart",
@@ -1600,6 +1663,74 @@ posts.unshift(
       "Introduce tiered routing, semantic caches, and KPI‑linked budgets to reduce spend without regressions.",
     category: "GenAI",
     publishedAt: "2025-09-30",
+=======
+  }
+);
+
+// Oct 01-02, 2025 – Add three new posts and surface them site-wide
+posts.unshift(
+  {
+    slug: "ai-2025-oct-01-operational-trust-v4",
+    title: "Operational Trust Scorecards v4 — SLIs → KPIs with Budgets",
+    description:
+      "Next-gen scorecards: live canaries, budgeted actions, and attested rollback wired to product KPIs.",
+    category: "AI Operations",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "edge-2025-oct-01-consentless-journeys-v3",
+    title: "Consentless Journeys v3 — Private Personalization <100ms",
+    description:
+      "Scoped IDs, signed configs, and on-device models for zero‑PII journeys worldwide under 100ms.",
+    category: "Edge Computing",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "genai-2025-oct-02-cache-playbook-v3",
+    title: "GenAI Cache Playbook v3 — Semantic + Tiered Caches",
+    description:
+      "Blend semantic + tiered caches with eval‑gated fallbacks to cut spend 60–80% while preserving UX KPIs.",
+    category: "GenAI",
+    publishedAt: "2025-10-02",
+>>>>>>> cursor/create-and-deploy-new-content-31d6
+    featured: true,
+    readTime: "8 min read",
+  }
+);
+
+// Oct 01-02, 2025 – Add three new posts and surface them site-wide
+posts.unshift(
+  {
+    slug: "ai-2025-oct-01-operational-trust-v4",
+    title: "Operational Trust Scorecards v4 — SLIs → KPIs with Budgets",
+    description:
+      "Next-gen scorecards: live canaries, budgeted actions, and attested rollback wired to product KPIs.",
+    category: "AI Operations",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "edge-2025-oct-01-consentless-journeys-v3",
+    title: "Consentless Journeys v3 — Private Personalization <100ms",
+    description:
+      "Scoped IDs, signed configs, and on-device models for zero‑PII journeys worldwide under 100ms.",
+    category: "Edge Computing",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "genai-2025-oct-02-cache-playbook-v3",
+    title: "GenAI Cache Playbook v3 — Semantic + Tiered Caches",
+    description:
+      "Blend semantic + tiered caches with eval‑gated fallbacks to cut spend 60–80% while preserving UX KPIs.",
+    category: "GenAI",
+    publishedAt: "2025-10-02",
     featured: true,
     readTime: "8 min read",
   }

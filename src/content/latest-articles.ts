@@ -1723,6 +1723,58 @@ latestArticles.unshift(
   }
 );
 
+// Oct 03, 2025 – Add three brand-new articles (site-wide promotion)
+latestArticles.unshift(
+  {
+    id: "ai-2025-oct-03-governed-autonomy-scorecards",
+    slug: "ai-2025-oct-03-governed-autonomy-scorecards",
+    title: "AI 2025: Governed Autonomy Scorecards — From SLIs to KPIs",
+    description: "Operational scorecards with budgets, canaries, and rollback that accelerate delivery without regressions.",
+    excerpt: "Make autonomy measurable with KPI‑linked scorecards and instant rollback playbooks.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-03",
+    category: "AI Operations",
+    tags: ["Scorecards", "Budgets", "Rollback"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/ai-2025-governed-autonomy-scorecards.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "edge-2025-oct-03-private-telemetry-blueprint",
+    slug: "edge-2025-oct-03-private-telemetry-blueprint",
+    title: "Edge 2025: Private Telemetry Blueprint (<100ms)",
+    description: "Scoped IDs, on‑device redaction, and DP noise for actionable analytics without PII.",
+    excerpt: "Stand up privacy‑first telemetry with edge aggregation and signed attestations.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-03",
+    category: "Analytics",
+    tags: ["Edge", "Privacy", "Telemetry"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/edge-2025-private-telemetry-blueprint.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "genai-2025-oct-03-quality-tiers-blueprint",
+    slug: "genai-2025-oct-03-quality-tiers-blueprint",
+    title: "GenAI 2025: Quality Tiers Blueprint v4",
+    description: "Predictable cost and stable UX using tiered routing, semantic caches, and eval gates—v4 updates.",
+    excerpt: "Cut spend up to 70% with quality tiers, caches, and KPI‑linked scorecards.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-03",
+    category: "GenAI",
+    tags: ["Quality Tiers", "Caching", "Budgets"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/genai-2025-quality-tiers-blueprint-v4.jpg",
+    newBadge: true,
+    trending: true
+  }
+);
+
 // Oct 01, 2025 – Add three brand-new articles (to advertise and surface)
 latestArticles.unshift(
   {

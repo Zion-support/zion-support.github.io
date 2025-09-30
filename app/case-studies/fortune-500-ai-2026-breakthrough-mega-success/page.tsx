@@ -1,6 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
-import Fortune500AI2026BreakthroughMegaSuccess from '../../../../blog/fortune-500-ai-2026-breakthrough-mega-success';
+import Fortune500AI2026BreakthroughMegaSuccess from '../../../blog/fortune-500-ai-2026-breakthrough-mega-success';
 
 export const metadata: Metadata = {
   title: '💰 Fortune 500 AI 2026: $2.3B Savings Breakthrough Success | Zion Tech Group',
