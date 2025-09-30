@@ -98,9 +98,11 @@ export default function RootLayout({
                 <h3 className="text-lg font-semibold mb-4">Resources</h3>
                 <ul className="space-y-2 text-gray-400">
                   <li><Link href="/blog" className="hover:text-white">Blog</Link></li>
+                  <li><Link href="/blog/ai-2026-revolutionary-breakthrough" className="hover:text-white">🚀 AI 2026 Revolutionary Breakthrough</Link></li>
                   <li><Link href="/blog/ai-2026-next-generation-autonomous-systems" className="hover:text-white">Autonomous AI Systems</Link></li>
                   <li><Link href="/blog/ai-2026-quantum-machine-learning" className="hover:text-white">Quantum Machine Learning</Link></li>
                   <li><Link href="/case-studies" className="hover:text-white">Case Studies</Link></li>
+                  <li><Link href="/case-studies/ai-2026-mega-transformation-success-story" className="hover:text-white">🏆 $100M Fortune 500 Success Story</Link></li>
                   <li><Link href="/case-studies/fortune-500-ai-transformation-2027" className="hover:text-white">$200M ROI Success Story</Link></li>
                 </ul>
               </div>
