@@ -1,0 +1,13 @@
+{
+  "timestamp": "2025-08-30T00:07:41.664Z",
+  "duration": 23959,
+  "totalErrors": 12,
+  "fixedErrors": 0,
+  "remainingErrors": 12,
+  "success": false,
+  "details": {
+    "startTime": "2025-08-30T00:07:17.705Z",
+    "endTime": "2025-08-30T00:07:41.664Z",
+    "projectRoot": "/workspace"
+  }
+}
