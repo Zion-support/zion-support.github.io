@@ -1,230 +1,211 @@
-'use client';
-
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 export default function InteractiveAI2027Calculator() {
-  const [companySize, setCompanySize] = useState(1000);
-  const [currentAutomation, setCurrentAutomation] = useState(20);
-  const [industry, setIndustry] = useState('manufacturing');
-  const [results, setResults] = useState(null);
+  const [companySize, setCompanySize] = useState('small');
+  const [industry, setIndustry] = useState('technology');
+  const [currentAIUsage, setCurrentAIUsage] = useState('none');
+  const [budget, setBudget] = useState('50000');
 
-  const calculateSavings = () => {
-    const baseMultiplier = {
-      manufacturing: 1.2,
-      healthcare: 1.1,
-      finance: 1.3,
-      retail: 1.0,
-      technology: 1.4
+  const calculateROI = () => {
+    const sizeMultiplier = {
+      small: 1,
+      medium: 2.5,
+      large: 5,
+      enterprise: 10
     };
 
-    const sizeMultiplier = Math.log10(companySize) / 3;
-    const automationGap = 95 - currentAutomation;
-    const industryMultiplier = baseMultiplier[industry] || 1.0;
+    const industryMultiplier = {
+      technology: 1.5,
+      healthcare: 1.3,
+      finance: 1.4,
+      manufacturing: 1.2,
+      retail: 1.1,
+      other: 1.0
+    };
 
-    const annualSavings = Math.round(
-      (companySize * 50 * sizeMultiplier * industryMultiplier * (automationGap / 75)) * 1000
-    );
+    const aiUsageMultiplier = {
+      none: 1.0,
+      basic: 0.8,
+      moderate: 0.6,
+      advanced: 0.4
+    };
 
-    const roi = Math.round((annualSavings / 500000) * 100);
-    const efficiencyGain = Math.round(automationGap * 1.2);
-    const timeToROI = Math.round(12 / (roi / 100));
-
-    setResults({
-      annualSavings,
-      roi,
-      efficiencyGain,
-      timeToROI,
-      newAutomationLevel: Math.min(95, currentAutomation + automationGap * 0.8)
-    });
+    const baseROI = 300;
+    const sizeFactor = sizeMultiplier[companySize as keyof typeof sizeMultiplier];
+    const industryFactor = industryMultiplier[industry as keyof typeof industryMultiplier];
+    const aiFactor = aiUsageMultiplier[currentAIUsage as keyof typeof aiUsageMultiplier];
+    
+    const calculatedROI = Math.round(baseROI * sizeFactor * industryFactor * aiFactor);
+    const annualSavings = Math.round(parseInt(budget) * (calculatedROI / 100));
+    const monthlySavings = Math.round(annualSavings / 12);
+    
+    return { calculatedROI, annualSavings, monthlySavings };
   };
 
-  useEffect(() => {
-    calculateSavings();
-  }, [companySize, currentAutomation, industry]);
+  const { calculatedROI, annualSavings, monthlySavings } = calculateROI();
 
   return (
-    <div className="bg-gradient-to-br from-blue-50 via-white to-purple-50 py-16">
+    <section className="py-20 bg-gradient-to-br from-indigo-50 via-white to-purple-50">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+            <span className="w-2 h-2 bg-indigo-400 rounded-full animate-pulse"></span>
+            INTERACTIVE CALCULATOR
+          </div>
+          <h2 className="text-4xl font-bold text-gray-900 mb-6">
             AI 2027 ROI Calculator
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">
+              Calculate Your Potential Returns
+            </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Calculate your potential savings and ROI with our revolutionary AI 2027 solutions. 
-            See how quantum-enhanced AI can transform your business operations.
+            Discover how AI 2027 technologies can transform your business with our advanced ROI calculator. Get personalized projections based on your company profile.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          <div className="bg-white rounded-xl shadow-lg p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Configure Your Scenario</h3>
+          {/* Calculator Form */}
+          <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-200">
+            <h3 className="text-2xl font-bold text-gray-900 mb-8">Your Company Profile</h3>
             
             <div className="space-y-6">
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
-                  Company Size (Employees)
-                </label>
-                <input
-                  type="range"
-                  min="100"
-                  max="100000"
-                  step="100"
-                  value={companySize}
-                  onChange={(e) => setCompanySize(parseInt(e.target.value))}
-                  className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
-                />
-                <div className="flex justify-between text-sm text-gray-500 mt-1">
-                  <span>100</span>
-                  <span className="font-semibold text-blue-600">{companySize.toLocaleString()}</span>
-                  <span>100,000+</span>
+                <label className="block text-sm font-semibold text-gray-700 mb-3">Company Size</label>
+                <div className="grid grid-cols-2 gap-3">
+                  {[
+                    { value: 'small', label: 'Small (1-50)', desc: '1-50 employees' },
+                    { value: 'medium', label: 'Medium (51-200)', desc: '51-200 employees' },
+                    { value: 'large', label: 'Large (201-1000)', desc: '201-1000 employees' },
+                    { value: 'enterprise', label: 'Enterprise (1000+)', desc: '1000+ employees' }
+                  ].map((option) => (
+                    <button
+                      key={option.value}
+                      onClick={() => setCompanySize(option.value)}
+                      className={`p-4 rounded-lg border-2 text-left transition-all ${
+                        companySize === option.value
+                          ? 'border-indigo-500 bg-indigo-50 text-indigo-700'
+                          : 'border-gray-200 hover:border-gray-300'
+                      }`}
+                    >
+                      <div className="font-semibold">{option.label}</div>
+                      <div className="text-sm text-gray-500">{option.desc}</div>
+                    </button>
+                  ))}
                 </div>
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
-                  Current Automation Level: {currentAutomation}%
-                </label>
-                <input
-                  type="range"
-                  min="0"
-                  max="80"
-                  step="5"
-                  value={currentAutomation}
-                  onChange={(e) => setCurrentAutomation(parseInt(e.target.value))}
-                  className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
-                />
-                <div className="flex justify-between text-sm text-gray-500 mt-1">
-                  <span>0%</span>
-                  <span>80%</span>
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
-                  Industry
-                </label>
+                <label className="block text-sm font-semibold text-gray-700 mb-3">Industry</label>
                 <select
                   value={industry}
                   onChange={(e) => setIndustry(e.target.value)}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
                 >
-                  <option value="manufacturing">Manufacturing</option>
+                  <option value="technology">Technology</option>
                   <option value="healthcare">Healthcare</option>
                   <option value="finance">Finance</option>
+                  <option value="manufacturing">Manufacturing</option>
                   <option value="retail">Retail</option>
-                  <option value="technology">Technology</option>
+                  <option value="other">Other</option>
                 </select>
+              </div>
+
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-3">Current AI Usage</label>
+                <div className="space-y-3">
+                  {[
+                    { value: 'none', label: 'No AI Implementation', desc: 'Starting from scratch' },
+                    { value: 'basic', label: 'Basic AI Tools', desc: 'Simple automation tools' },
+                    { value: 'moderate', label: 'Moderate AI Usage', desc: 'Some AI-powered processes' },
+                    { value: 'advanced', label: 'Advanced AI', desc: 'Comprehensive AI strategy' }
+                  ].map((option) => (
+                    <button
+                      key={option.value}
+                      onClick={() => setCurrentAIUsage(option.value)}
+                      className={`w-full p-4 rounded-lg border-2 text-left transition-all ${
+                        currentAIUsage === option.value
+                          ? 'border-indigo-500 bg-indigo-50 text-indigo-700'
+                          : 'border-gray-200 hover:border-gray-300'
+                      }`}
+                    >
+                      <div className="font-semibold">{option.label}</div>
+                      <div className="text-sm text-gray-500">{option.desc}</div>
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-3">
+                  Annual AI Budget ($)
+                </label>
+                <input
+                  type="number"
+                  value={budget}
+                  onChange={(e) => setBudget(e.target.value)}
+                  className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                  placeholder="50000"
+                />
               </div>
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-blue-600 to-purple-600 text-white rounded-xl shadow-lg p-8">
-            <h3 className="text-2xl font-bold mb-6">Your AI 2027 Projection</h3>
+          {/* Results */}
+          <div className="bg-gradient-to-br from-indigo-600 to-purple-600 rounded-2xl shadow-xl p-8 text-white">
+            <h3 className="text-2xl font-bold mb-8">Your AI 2027 Projections</h3>
             
-            {results && (
-              <div className="space-y-6">
-                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                  <div className="text-4xl font-bold text-green-300 mb-2">
-                    ${results.annualSavings.toLocaleString()}
-                  </div>
-                  <div className="text-lg opacity-90">Annual Savings</div>
-                  <div className="text-sm opacity-75 mt-1">
-                    Based on AI 2027 quantum-enhanced automation
-                  </div>
-                </div>
+            <div className="space-y-8">
+              <div className="text-center">
+                <div className="text-6xl font-bold mb-2">{calculatedROI}%</div>
+                <div className="text-xl text-indigo-200">Expected ROI</div>
+                <div className="text-sm text-indigo-300 mt-2">Based on industry benchmarks and AI 2027 capabilities</div>
+              </div>
 
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 text-center">
-                    <div className="text-2xl font-bold text-blue-300">{results.roi}%</div>
-                    <div className="text-sm opacity-90">ROI</div>
-                  </div>
-                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 text-center">
-                    <div className="text-2xl font-bold text-purple-300">{results.efficiencyGain}%</div>
-                    <div className="text-sm opacity-90">Efficiency Gain</div>
-                  </div>
-                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 text-center">
-                    <div className="text-2xl font-bold text-orange-300">{results.timeToROI}</div>
-                    <div className="text-sm opacity-90">Months to ROI</div>
-                  </div>
-                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 text-center">
-                    <div className="text-2xl font-bold text-cyan-300">{results.newAutomationLevel}%</div>
-                    <div className="text-sm opacity-90">New Automation</div>
-                  </div>
+              <div className="grid grid-cols-2 gap-6">
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
+                  <div className="text-3xl font-bold mb-2">${annualSavings.toLocaleString()}</div>
+                  <div className="text-sm text-indigo-200">Annual Savings</div>
                 </div>
-
-                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                  <h4 className="text-lg font-bold mb-3">Key Benefits</h4>
-                  <ul className="space-y-2 text-sm">
-                    <li className="flex items-center gap-2">
-                      <span className="w-2 h-2 bg-green-400 rounded-full"></span>
-                      Quantum-enhanced processing for 1000x performance
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                      Autonomous business operations
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
-                      Real-time optimization and learning
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-2 h-2 bg-orange-400 rounded-full"></span>
-                      Self-healing infrastructure
-                    </li>
-                  </ul>
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
+                  <div className="text-3xl font-bold mb-2">${monthlySavings.toLocaleString()}</div>
+                  <div className="text-sm text-indigo-200">Monthly Savings</div>
                 </div>
               </div>
-            )}
-          </div>
-        </div>
 
-        <div className="text-center mt-12">
-          <div className="bg-white rounded-xl shadow-lg p-8 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Ready to Achieve These Results?
-            </h3>
-            <p className="text-lg text-gray-600 mb-6">
-              Our AI 2027 solutions can help you achieve these projected savings and more. 
-              Get a personalized implementation plan tailored to your specific needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
-              >
-                Get Personalized Plan
-              </a>
-              <a
-                href="/services/ai-2027-revolutionary-solutions"
-                className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors"
-              >
-                Explore Solutions
-              </a>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+                <h4 className="font-bold mb-4">Key Benefits You'll Experience:</h4>
+                <ul className="space-y-2 text-sm">
+                  <li className="flex items-center gap-2">
+                    <span className="w-2 h-2 bg-green-400 rounded-full"></span>
+                    {Math.round(calculatedROI * 0.3)}% reduction in operational costs
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-2 h-2 bg-green-400 rounded-full"></span>
+                    {Math.round(calculatedROI * 0.2)}% increase in productivity
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-2 h-2 bg-green-400 rounded-full"></span>
+                    {Math.round(calculatedROI * 0.15)}% improvement in decision speed
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-2 h-2 bg-green-400 rounded-full"></span>
+                    {Math.round(calculatedROI * 0.25)}% enhancement in customer satisfaction
+                  </li>
+                </ul>
+              </div>
+
+              <div className="text-center">
+                <button className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg">
+                  Get Your Custom AI Strategy
+                </button>
+                <div className="text-sm text-indigo-200 mt-3">
+                  Free consultation with our AI experts
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        .slider::-webkit-slider-thumb {
-          appearance: none;
-          height: 20px;
-          width: 20px;
-          border-radius: 50%;
-          background: #3B82F6;
-          cursor: pointer;
-          box-shadow: 0 0 2px 0 #555;
-        }
-        .slider::-moz-range-thumb {
-          height: 20px;
-          width: 20px;
-          border-radius: 50%;
-          background: #3B82F6;
-          cursor: pointer;
-          border: none;
-          box-shadow: 0 0 2px 0 #555;
-        }
-      `}</style>
-    </div>
+    </section>
   );
 }

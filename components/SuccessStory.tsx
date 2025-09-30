@@ -18,38 +18,33 @@ export default function SuccessStory({
   metric
 }: SuccessStoryProps) {
   return (
-    <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
-      <div className="flex items-center gap-3 mb-4">
-        <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-teal-600 rounded-lg flex items-center justify-center">
-          <span className="text-white font-bold text-lg">
-            {company.charAt(0)}
-          </span>
-        </div>
-        <div>
-          <h3 className="text-xl font-bold text-gray-900">{company}</h3>
-          <p className="text-sm text-gray-500">{industry}</p>
-        </div>
+    <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200">
+      <div className="flex items-center justify-between mb-4">
+        <h3 className="text-xl font-bold text-gray-900">{company}</h3>
+        <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">
+          {industry}
+        </span>
       </div>
       
       <div className="space-y-4">
         <div>
-          <h4 className="font-semibold text-gray-900 mb-1">Challenge:</h4>
-          <p className="text-sm text-gray-600">{challenge}</p>
+          <h4 className="font-semibold text-gray-900 mb-2">Challenge:</h4>
+          <p className="text-gray-600 text-sm">{challenge}</p>
         </div>
         
         <div>
-          <h4 className="font-semibold text-gray-900 mb-1">Solution:</h4>
-          <p className="text-sm text-gray-600">{solution}</p>
+          <h4 className="font-semibold text-gray-900 mb-2">Solution:</h4>
+          <p className="text-gray-600 text-sm">{solution}</p>
         </div>
         
         <div>
-          <h4 className="font-semibold text-gray-900 mb-1">Result:</h4>
-          <p className="text-sm text-gray-600">{result}</p>
+          <h4 className="font-semibold text-gray-900 mb-2">Result:</h4>
+          <p className="text-gray-600 text-sm">{result}</p>
         </div>
         
-        <div className="pt-4 border-t border-gray-100">
-          <div className="text-lg font-bold text-blue-600">{metric}</div>
-          <div className="text-xs text-gray-500">Key Performance Indicator</div>
+        <div className="bg-green-50 border border-green-200 rounded-lg p-3">
+          <div className="text-green-800 font-bold text-lg">{metric}</div>
+          <div className="text-green-600 text-sm">Total Impact</div>
         </div>
       </div>
     </div>
