@@ -53,11 +53,13 @@ import InteractiveContentShowcase2026 from '../components/InteractiveContentShow
 import LatestContent2025Banner from '../components/LatestContent2025Banner';
 import RevolutionaryAI2025Banner from '../components/RevolutionaryAI2025Banner';
 import InteractiveAICalculator2025 from '../components/InteractiveAICalculator2025';
+import NewContent2026MegaBanner from '../components/NewContent2026MegaBanner';
+import LatestAIInnovations2026Banner from '../components/LatestAIInnovations2026Banner';
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
-  description: 'Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains. Expert AI consulting, autonomous systems, and digital transformation services.',
-  keywords: 'AI enterprise transformation, AI consulting, autonomous AI systems, enterprise AI services, digital transformation, AI implementation, AI ROI calculator, manufacturing AI, AI automation, AI strategy',
+  description: 'Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains. Expert AI consulting, autonomous systems, and digital transformation services. Latest 2026 AI innovations and Fortune 500 success stories.',
+  keywords: 'AI enterprise transformation, AI consulting, autonomous AI systems, enterprise AI services, digital transformation, AI implementation, AI ROI calculator, manufacturing AI, AI automation, AI strategy, AI cost optimization, Fortune 500 AI transformation, AI 2026 innovations',
   openGraph: {
     title: 'Zion Tech Group — AI Enterprise Transformation & IT Services',
     description: 'Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.',
@@ -134,6 +136,12 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <div className="animate-fade-in">
+      {/* New Content 2026 Mega Banner */}
+      <NewContent2026MegaBanner />
+      
+      {/* Latest AI Innovations 2026 Banner */}
+      <LatestAIInnovations2026Banner />
+      
       {/* Revolutionary AI 2025 Banner */}
       <RevolutionaryAI2025Banner />
       

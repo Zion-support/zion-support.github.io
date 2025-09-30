@@ -10,6 +10,26 @@ export const metadata: Metadata = {
 
 const blogPosts = [
   {
+    title: 'AI 2026: Enterprise Autonomous Systems Revolution',
+    slug: 'ai-2026-enterprise-autonomous-systems',
+    excerpt: 'Discover how autonomous AI systems are achieving 90% efficiency gains and transforming enterprise infrastructure across industries.',
+    category: 'NEW ARTICLE',
+    readTime: '15 min read',
+    publishedAt: 'January 20, 2026',
+    image: '🤖',
+    color: 'cyan'
+  },
+  {
+    title: 'AI Cost Optimization 2026: Advanced Strategies for 70% Savings',
+    slug: 'ai-cost-optimization-2026-strategies',
+    excerpt: 'Master AI cost optimization with proven strategies that deliver 70% cost reduction and 300% ROI. Learn advanced techniques for enterprise AI efficiency.',
+    category: 'FEATURED',
+    readTime: '12 min read',
+    publishedAt: 'January 20, 2026',
+    image: '💰',
+    color: 'green'
+  },
+  {
     title: 'AI 2026 Mega Breakthrough: Revolutionary Technologies Transforming Enterprise',
     slug: 'ai-2026-mega-breakthrough',
     excerpt: 'Discover how 2026 is shaping up to be the year of unprecedented AI breakthroughs that will transform every industry.',
