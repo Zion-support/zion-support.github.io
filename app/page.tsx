@@ -18,7 +18,6 @@ import {
   AutonomousAgentsBanner,
   AIGovernanceBanner,
   FinTechSuccessBanner,
-  NewContentShowcaseBanner
   NewContentShowcaseBanner,
   AIRoadmapsBanner,
   AIFinOpsBanner,
@@ -110,13 +109,10 @@ import Revolutionary2027ContentBanner from '../components/Revolutionary2027Conte
 import UltimateContent2027Showcase from '../components/UltimateContent2027Showcase';
 import NewContentShowcase2026 from '../src/components/NewContentShowcase2026';
 import September30NewAIBreakthroughsBanner from '../components/September30NewAIBreakthroughsBanner';
-<<<<<<< HEAD
 import September30BreakthroughContentBanner from '../components/September30BreakthroughContentBanner';
-=======
 import Revolutionary2026ContentShowcaseBanner from '../components/Revolutionary2026ContentShowcaseBanner';
 import Latest2026ContentMegaBanner from '../components/Latest2026ContentMegaBanner';
 import Ultimate2026ContentShowcaseBanner from '../components/Ultimate2026ContentShowcaseBanner';
->>>>>>> cursor/create-and-deploy-new-content-1b54
 
 export const metadata = {
   title: 'Zion Tech Group — Revolutionary AI Breakthroughs 2026 | 1000x Performance Gains',
@@ -621,7 +617,6 @@ export default function HomePage() {
         </section>
 
         {/* 🔥 BRAND NEW CONTENT - SEPTEMBER 30, 2025 - 5 EXCLUSIVE PUBLICATIONS! */}
-        <section className="bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 text-white py-20">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-12">
               <div className="flex items-center justify-center gap-4 mb-6">

@@ -11,27 +11,30 @@ export interface FeaturedItem {
 
 export const featuredBlogPosts: FeaturedItem[] = [
   {
-<<<<<<< HEAD
     id: "ai-agent-evaluations-2026",
     title: "AI Agent Evaluations 2026",
     description: "Reliable metrics and release gates for safe agent deployments",
     link: "/blog/ai-agent-evaluations-2026",
-=======
-    id: "realtime-ai-decision-engines-2025",
-    title: "Real-Time AI Decision Engines",
-    description: "10M/sec under 1ms with tiered models and caches",
-    link: "/blog/real-time-ai-decision-engines-2025",
->>>>>>> cursor/create-and-deploy-new-content-fe6f
     type: "article",
     featured: true
   },
   {
-<<<<<<< HEAD
+    id: "realtime-ai-decision-engines-2025",
+    title: "Real-Time AI Decision Engines",
+    description: "10M/sec under 1ms with tiered models and caches",
+    link: "/blog/real-time-ai-decision-engines-2025",
+    type: "article",
+    featured: true
+  },
+  {
     id: "ai-platform-cost-optimization-2026",
     title: "AI Platform Cost Optimization 2026",
     description: "50–80% savings without latency or accuracy loss",
     link: "/blog/ai-platform-cost-optimization-2026",
-=======
+    type: "article",
+    featured: true
+  },
+  {
     id: "privacy-first-telemetry-quickstart-2025",
     title: "Privacy‑First Telemetry Quickstart",
     description: "Signal‑rich analytics with scoped IDs and DP noise",
@@ -44,7 +47,6 @@ export const featuredBlogPosts: FeaturedItem[] = [
     title: "Agent Runbooks: Budgets & Rollbacks",
     description: "Ship safe autonomy with budgeted actions and safety gates",
     link: "/blog/agent-runbooks-2025",
->>>>>>> cursor/create-and-deploy-new-content-fe6f
     type: "article",
     featured: true
   },
