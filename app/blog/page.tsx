@@ -114,6 +114,26 @@ const blogPosts = [
     readTime: '16 min read'
   },
   {
+    title: 'AI Insights: New Content Highlights — September 30, 2025',
+    slug: 'ai-september-30-2025-new-content-highlights',
+    excerpt: 'A concise overview of today’s new guides across workflows, data fabric, and resilience—what changed and why it matters.',
+    category: 'Featured Article',
+    publishedAt: 'September 30, 2025',
+    image: '🆕',
+    color: 'blue',
+    readTime: '8 min read'
+  },
+  {
+    title: 'AI Strategic Roadmaps — October 2025',
+    slug: 'ai-october-2025-strategic-roadmaps',
+    excerpt: 'Quarterly plan for governed autonomy, cost-aware routing, and data fabric foundations with milestones and risks.',
+    category: 'Implementation Guide',
+    publishedAt: 'October 1, 2025',
+    image: '🗺️',
+    color: 'green',
+    readTime: '10 min read'
+  },
+  {
     title: 'AI 2026 Intelligent Data Fabric: Real-Time Decisions at Scale',
     slug: 'ai-2026-intelligent-data-fabric',
     excerpt: 'Unify batch, streaming, and unstructured data into a governed fabric powering low-latency AI decisions and observability.',

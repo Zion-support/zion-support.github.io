@@ -150,6 +150,32 @@ const featuredContent: ContentItem[] = [
     readTime: '16 min read',
     category: 'Implementation Guide'
   }
+  ,
+  {
+    id: '12',
+    title: 'AI Insights: New Content Highlights — Sept 30, 2025',
+    description: 'Today’s newest additions across workflows, data fabric, and resilience—what changed and why it matters.',
+    link: '/blog/ai-september-30-2025-new-content-highlights',
+    badge: 'Fresh',
+    badgeColor: 'bg-gradient-to-r from-sky-600 to-indigo-600',
+    icon: '🆕',
+    publishedDate: 'September 30, 2025',
+    readTime: '8 min read',
+    category: 'Featured Article'
+  }
+  ,
+  {
+    id: '13',
+    title: 'AI Strategic Roadmaps — October 2025',
+    description: 'Quarterly plan for governed autonomy, cost-aware routing, and data fabric foundations with milestones and risks.',
+    link: '/blog/ai-october-2025-strategic-roadmaps',
+    badge: 'Roadmap',
+    badgeColor: 'bg-gradient-to-r from-emerald-600 to-green-600',
+    icon: '🗺️',
+    publishedDate: 'October 1, 2025',
+    readTime: '10 min read',
+    category: 'Implementation Guide'
+  }
 ];
 
 export default function UnifiedContentPromotion() {
