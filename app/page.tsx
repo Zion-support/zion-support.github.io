@@ -168,6 +168,31 @@ export default function HomePage() {
   return (
     <>
       <div className="animate-fade-in">
+      {/* 🔔 Fresh today: Promote two new Sept 30, 2025 posts */}
+      <section className="max-w-7xl mx-auto px-6 md:px-8 py-8">
+        <div className="bg-gradient-to-br from-emerald-50 to-cyan-50 dark:from-emerald-900/30 dark:to-cyan-900/30 border border-emerald-200/60 dark:border-emerald-500/20 rounded-2xl p-6 md:p-8">
+          <div className="flex items-center justify-between gap-4 mb-6">
+            <h2 className="text-xl md:text-2xl font-bold">Just published — Sept 30, 2025</h2>
+            <Link href="/blog" className="text-emerald-700 dark:text-emerald-300 hover:underline font-semibold">Browse blog →</Link>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6">
+            <Link href="/blog/ai-september-30-2025-autonomous-risk-mitigation" className="group">
+              <div className="rounded-xl p-5 border border-emerald-200/60 dark:border-emerald-500/30 hover:border-emerald-300 transition-all bg-white/80 dark:bg-emerald-900/20">
+                <div className="text-sm text-emerald-700 dark:text-emerald-300 font-semibold mb-2">Safety Blueprint • 9 min read</div>
+                <div className="text-lg md:text-xl font-bold mb-2 group-hover:text-emerald-700 dark:group-hover:text-emerald-300">Autonomous Risk Mitigation: Budgets, Guardrails, Auto‑Rollback</div>
+                <div className="text-gray-600 dark:text-gray-300">Protect KPIs with risk budgets and automated rollback for autonomous agents.</div>
+              </div>
+            </Link>
+            <Link href="/blog/ai-september-30-2025-enterprise-innovation-roadmap" className="group">
+              <div className="rounded-xl p-5 border border-cyan-200/60 dark:border-cyan-500/30 hover:border-cyan-300 transition-all bg-white/80 dark:bg-cyan-900/20">
+                <div className="text-sm text-cyan-700 dark:text-cyan-300 font-semibold mb-2">Playbook • 8 min read</div>
+                <div className="text-lg md:text-xl font-bold mb-2 group-hover:text-cyan-700 dark:group-hover:text-cyan-300">Enterprise AI Innovation Roadmap: Pilot → Platform → Outcomes</div>
+                <div className="text-gray-600 dark:text-gray-300">Scale AI with governance, budgets, and ROI tracking across units.</div>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
       {/* 🔥 New on the blog — highlight latest posts */}
       <section className="max-w-7xl mx-auto px-6 md:px-8 py-10">
         <div className="bg-white/70 dark:bg-white/10 backdrop-blur border border-gray-200/60 dark:border-white/10 rounded-2xl p-6 md:p-8">
