@@ -10,6 +10,42 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-governance-pr-policy-tests-2027-q4",
+    title: "AI Governance: PR Policy Tests Q4 2027 — Ship Fast, Stay Safe",
+    description: "CI policy tests wired to KPIs to prevent regressions while preserving velocity.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-consentless-analytics-2027",
+    title: "Edge Consentless Analytics 2027: Zero‑PII Insights at <100ms",
+    description: "Scoped IDs, on‑device aggregation, and DP noise for global analytics without PII.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "genai-cache-playbook-2026",
+    title: "GenAI Cache Playbook 2026: Semantic, Programmatic, and Tiered Caches",
+    description: "Stabilize UX and cut costs 30–70% with semantic caches and budget‑aware routing.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "ai-enterprise-cost-guardrails-2026",
+    title: "AI Enterprise Cost Guardrails 2026: Budgets, Tiers, Approvals",
+    description: "Cost SLOs, quality tiers, and approvals that keep spend predictable without hurting quality.",
+    category: "FinOps",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
     slug: "ai-operational-scorecards-v4-2026",
     title: "AI Operational Scorecards v4 (2026)",
     description: "SLIs mapped to KPIs with budgeted actions and instant rollback.",
