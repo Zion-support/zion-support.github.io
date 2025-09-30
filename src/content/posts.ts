@@ -1315,6 +1315,37 @@ posts.push(
   }
 );
 
+// New: Sept 30, 2025 – Additional content to advertise and surface on Home
+posts.push(
+  {
+    slug: "ai-autonomous-observability-2026",
+    title: "AI Autonomous Observability 2026: Self‑Healing Signals, Zero Blind Spots",
+    description: "Auto‑instrumentation, signed traces, and budgeted signals that detect and remediate issues in minutes.",
+    category: "Observability",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "sovereign-genai-platforms-2026",
+    title: "Sovereign GenAI Platforms 2026: Residency, Guardrails, and Speed",
+    description: "Architect region‑scoped corpora, policy‑enforced routes, and on‑device caches without hurting UX.",
+    category: "AI Engineering",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "incident-runbooks-kpi-linked-2026",
+    title: "Incident Runbooks 2026: KPI‑Linked Budgets and Instant Rollback",
+    description: "From detections to safe actions with budgeted steps, approvals, and rollbacks wired to outcomes.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  }
+);
+
 // Sept 30, 2025 – New content for homepage promotion
 posts.push(
   {
