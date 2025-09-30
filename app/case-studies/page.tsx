@@ -1,170 +1,239 @@
 import React from 'react';
 import Link from 'next/link';
 
-export const metadata = {
-  title: 'AI Success Stories & Case Studies - Zion Tech Group',
-  description: 'Explore real-world AI transformation success stories from Fortune 500 companies. See how our clients achieved 300% ROI and unprecedented efficiency gains.',
-  keywords: 'AI case studies, AI success stories, enterprise AI transformation, AI ROI, Fortune 500 AI, AI implementation results',
-};
+const caseStudies = [
+  {
+    title: 'Neural Superintelligence Mega Success 2026: $500M Revenue Increase',
+    slug: 'neural-superintelligence-mega-success-2026',
+    excerpt: 'See how a Fortune 500 company achieved $500M additional revenue and 1000x performance gains through neural superintelligence implementation in just 6 months.',
+    category: 'Success Story',
+    publishedAt: 'January 20, 2026',
+    image: '💰',
+    color: 'green',
+    metrics: {
+      revenue: '$500M',
+      roi: '1000x',
+      efficiency: '99.9%',
+      timeline: '6 months'
+    }
+  },
+  {
+    title: 'AI Manufacturing Transformation: 90% Efficiency Gain',
+    slug: 'ai-manufacturing-transformation-2026',
+    excerpt: 'See how a Fortune 500 manufacturer achieved 90% efficiency gains and $50M annual savings through comprehensive AI transformation.',
+    category: 'Manufacturing',
+    publishedAt: 'January 15, 2026',
+    image: '🏭',
+    color: 'blue',
+    metrics: {
+      savings: '$50M+',
+      roi: '300%',
+      efficiency: '85%',
+      timeline: '12 months'
+    }
+  },
+  {
+    title: 'AI FinTech Quantum Transformation: $100M Revenue & 99.9% Security',
+    slug: 'ai-fintech-quantum-transformation-2026',
+    excerpt: 'Discover how a leading fintech achieved $100M additional revenue and 99.9% security compliance through quantum AI transformation.',
+    category: 'FinTech',
+    publishedAt: 'January 10, 2026',
+    image: '🏦',
+    color: 'purple',
+    metrics: {
+      revenue: '$100M',
+      security: '99.9%',
+      efficiency: '95%',
+      timeline: '8 months'
+    }
+  },
+  {
+    title: 'AI Healthcare Revolution: 40% Better Outcomes',
+    slug: 'ai-healthcare-revolution-2026',
+    excerpt: 'See how a major healthcare system achieved 40% better patient outcomes and 60% faster diagnostics through AI transformation.',
+    category: 'Healthcare',
+    publishedAt: 'January 5, 2026',
+    image: '🏥',
+    color: 'green',
+    metrics: {
+      outcomes: '40%',
+      speed: '60%',
+      accuracy: '95%',
+      timeline: '10 months'
+    }
+  }
+];
+
+const categories = [
+  { name: 'All', count: caseStudies.length, color: 'gray' },
+  { name: 'Success Story', count: caseStudies.filter(study => study.category === 'Success Story').length, color: 'green' },
+  { name: 'Manufacturing', count: caseStudies.filter(study => study.category === 'Manufacturing').length, color: 'blue' },
+  { name: 'FinTech', count: caseStudies.filter(study => study.category === 'FinTech').length, color: 'purple' },
+  { name: 'Healthcare', count: caseStudies.filter(study => study.category === 'Healthcare').length, color: 'green' }
+];
 
 export default function CaseStudiesPage() {
   return (
-    <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-green-50 via-white to-teal-50 py-20">
-        <div className="max-w-4xl mx-auto px-4">
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+      <div className="max-w-7xl mx-auto px-4 py-12">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
             AI Success
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-teal-600">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-blue-600">
               {' '}Stories
             </span>
           </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Real-world transformations from Fortune 500 companies. Discover how our clients achieved unprecedented results through AI implementation.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Discover how our AI solutions have transformed businesses across industries, 
+            delivering unprecedented results and competitive advantages.
           </p>
-          <div className="flex items-center gap-4 text-sm text-gray-500">
-            <span>Fortune 500 Clients</span>
-            <span>•</span>
-            <span>Proven Results</span>
-            <span>•</span>
-            <span>Measurable ROI</span>
+        </div>
+
+        {/* Categories */}
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          {categories.map((category) => (
+            <button
+              key={category.name}
+              className={`px-6 py-3 rounded-full font-semibold transition-colors ${
+                category.color === 'gray'
+                  ? 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  : category.color === 'green'
+                  ? 'bg-green-100 text-green-700 hover:bg-green-200'
+                  : category.color === 'blue'
+                  ? 'bg-blue-100 text-blue-700 hover:bg-blue-200'
+                  : 'bg-purple-100 text-purple-700 hover:bg-purple-200'
+              }`}
+            >
+              {category.name} ({category.count})
+            </button>
+          ))}
+        </div>
+
+        {/* Featured Case Studies */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">Featured Success Stories</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {caseStudies.slice(0, 3).map((study) => (
+              <Link key={study.slug} href={`/case-studies/${study.slug}`} className="group">
+                <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-gray-200 hover:border-green-200">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${
+                      study.color === 'green' ? 'bg-green-100' :
+                      study.color === 'blue' ? 'bg-blue-100' :
+                      'bg-purple-100'
+                    }`}>
+                      <span className="text-2xl">{study.image}</span>
+                    </div>
+                    <div>
+                      <div className={`text-sm font-semibold ${
+                        study.color === 'green' ? 'text-green-600' :
+                        study.color === 'blue' ? 'text-blue-600' :
+                        'text-purple-600'
+                      }`}>
+                        {study.category}
+                      </div>
+                      <div className="text-sm text-gray-500">Case Study</div>
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-green-600 transition-colors">
+                    {study.title}
+                  </h3>
+                  <p className="text-gray-600 mb-4 line-clamp-3">
+                    {study.excerpt}
+                  </p>
+                  
+                  {/* Metrics */}
+                  <div className="grid grid-cols-2 gap-4 mb-4">
+                    {Object.entries(study.metrics).slice(0, 2).map(([key, value]) => (
+                      <div key={key} className="text-center">
+                        <div className="text-lg font-bold text-gray-900">{value}</div>
+                        <div className="text-xs text-gray-500 capitalize">{key}</div>
+                      </div>
+                    ))}
+                  </div>
+                  
+                  <div className="flex items-center justify-between">
+                    <div className="text-sm text-gray-500">{study.publishedAt}</div>
+                    <div className="text-green-600 font-semibold group-hover:text-green-700 transition-colors">
+                      Read Case Study →
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
-      </section>
 
-      {/* Featured Case Studies */}
-      <section className="py-16">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              🏆 Featured Success Stories
-            </h2>
-            <p className="text-lg text-gray-600">
-              Real transformations with measurable business impact
-            </p>
+        {/* All Case Studies */}
+        <div>
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">All Case Studies</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {caseStudies.map((study) => (
+              <Link key={study.slug} href={`/case-studies/${study.slug}`} className="group">
+                <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
+                      study.color === 'green' ? 'bg-green-100 text-green-800' :
+                      study.color === 'blue' ? 'bg-blue-100 text-blue-800' :
+                      'bg-purple-100 text-purple-800'
+                    }`}>
+                      {study.category}
+                    </span>
+                    <span className="text-sm text-gray-500">Case Study</span>
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-green-600 transition-colors">
+                    {study.title}
+                  </h3>
+                  <p className="text-gray-600 mb-3 text-sm line-clamp-2">
+                    {study.excerpt}
+                  </p>
+                  
+                  {/* Key Metric */}
+                  <div className="text-center mb-3 p-2 bg-gray-50 rounded-lg">
+                    <div className="text-lg font-bold text-gray-900">
+                      {Object.values(study.metrics)[0]}
+                    </div>
+                    <div className="text-xs text-gray-500">
+                      {Object.keys(study.metrics)[0]}
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center justify-between">
+                    <div className="text-sm text-gray-500">{study.publishedAt}</div>
+                    <div className="text-green-600 font-semibold group-hover:text-green-700 transition-colors">
+                      Read →
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            ))}
           </div>
+        </div>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
-            <Link href="/case-studies/ai-2026-mega-transformation-success-story" className="group">
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border-2 border-green-200 hover:border-green-400 transform hover:-translate-y-1">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-green-100 to-teal-100 rounded-lg flex items-center justify-center">
-                    <span className="text-2xl">🏆</span>
-                  </div>
-                  <div>
-                    <div className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">FORTUNE 500</div>
-                  </div>
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 group-hover:text-green-600 transition-colors mb-3">
-                  $100M Success Story: Fortune 500 Mega Breakthrough
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  How a Fortune 500 manufacturing giant achieved 95% efficiency gains, 300% productivity improvement, 
-                  and $100M ROI through our AI 2026 transformation solutions.
-                </p>
-                <div className="grid grid-cols-2 gap-4 mb-4">
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-green-600">$100M</div>
-                    <div className="text-xs text-gray-600">ROI in First Year</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-green-600">95%</div>
-                    <div className="text-xs text-gray-600">Efficiency Gains</div>
-                  </div>
-                </div>
-                <div className="flex items-center justify-between">
-                  <div className="text-sm text-gray-500">Published Jan 25, 2026</div>
-                  <div className="text-green-600 font-semibold group-hover:text-green-700 transition-colors">
-                    Read Case Study →
-                  </div>
-                </div>
-              </div>
+        {/* CTA Section */}
+        <div className="mt-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl p-8 text-white text-center">
+          <h3 className="text-2xl font-bold mb-4">Ready to Create Your Success Story?</h3>
+          <p className="text-green-100 mb-6 max-w-2xl mx-auto">
+            Join the companies that have transformed their operations with our AI solutions. 
+            Let's discuss how we can help you achieve similar results.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+            >
+              Start Your Transformation
             </Link>
-
-            <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-200">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-100 to-indigo-100 rounded-lg flex items-center justify-center">
-                  <span className="text-2xl">🏥</span>
-                </div>
-                <div>
-                  <div className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold">COMING SOON</div>
-                </div>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                Healthcare AI Transformation
-              </h3>
-              <p className="text-gray-600 mb-4">
-                Learn how a major healthcare provider achieved 80% efficiency gains, 50% reduction in diagnostic time, 
-                and improved patient outcomes through our AI solutions.
-              </p>
-              <div className="grid grid-cols-2 gap-4 mb-4">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-600">80%</div>
-                  <div className="text-xs text-gray-600">Efficiency Gains</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-600">50%</div>
-                  <div className="text-xs text-gray-600">Faster Diagnosis</div>
-                </div>
-              </div>
-              <div className="flex items-center justify-between">
-                <div className="text-sm text-gray-500">Coming Soon</div>
-                <div className="text-blue-600 font-semibold">
-                  Learn More →
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Results Summary */}
-          <div className="bg-gradient-to-r from-gray-50 to-blue-50 border border-gray-200 rounded-lg p-8 mb-16">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Proven Results Across All Industries</h3>
-            <div className="grid md:grid-cols-4 gap-6">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-green-600 mb-2">300%</div>
-                <div className="text-gray-600 font-semibold">Average ROI</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-green-600 mb-2">95%</div>
-                <div className="text-gray-600 font-semibold">Efficiency Improvement</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-green-600 mb-2">70%</div>
-                <div className="text-gray-600 font-semibold">Cost Reduction</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-green-600 mb-2">500+</div>
-                <div className="text-gray-600 font-semibold">Projects Delivered</div>
-              </div>
-            </div>
-          </div>
-
-          {/* CTA Section */}
-          <div className="bg-gradient-to-r from-green-50 to-teal-50 border border-green-200 rounded-lg p-8 text-center">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Ready to Write Your Success Story?
-            </h3>
-            <p className="text-gray-600 mb-6">
-              Join the ranks of Fortune 500 companies that have transformed their operations with Zion Tech Group's AI solutions. 
-              Let's discuss how we can achieve similar results for your organization.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+13024640950"
-                className="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
-              >
-                Call +1 302 464 0950
-              </a>
-              <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-green-600 text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-green-600 hover:text-white transition-colors"
-              >
-                Get Free Consultation
-              </a>
-            </div>
+            <Link
+              href="/services"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
+            >
+              Explore Our Solutions
+            </Link>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 }
