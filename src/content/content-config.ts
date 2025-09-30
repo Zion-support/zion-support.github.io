@@ -148,6 +148,34 @@ export const featuredBlogPosts: FeaturedItem[] = [
   }
 ];
 
+// Jan 2027 – Feature three brand-new articles
+featuredBlogPosts.unshift(
+  {
+    id: "ai-2027-revolutionary-breakthrough",
+    title: "AI 2027 Revolutionary Breakthrough",
+    description: "Quantum‑neural advances enable 95% automation and 1000x performance.",
+    link: "/blog/ai-2027-revolutionary-breakthrough",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-2027-hyper-automation-blueprint",
+    title: "AI 2027 Hyper‑Automation Blueprint",
+    description: "End‑to‑end autonomy with budgets, guards, and instant rollback.",
+    link: "/blog/ai-2027-hyper-automation-blueprint",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-2027-quantum-breakthrough-enterprise",
+    title: "Quantum Breakthrough 2027 for the Enterprise",
+    description: "Enterprise‑ready quantum‑neural systems with security and ROI.",
+    link: "/blog/ai-2027-quantum-breakthrough-enterprise",
+    type: "article",
+    featured: true
+  }
+);
+
 // Sept 30, 2025 – Promote two brand-new guides site-wide
 featuredBlogPosts.unshift(
   {

@@ -19,6 +19,15 @@ export const posts: BlogPost[] = [
     readTime: "10 min read"
   },
   {
+    slug: "ai-2027-revolutionary-breakthrough",
+    title: "AI 2027 Revolutionary Breakthrough",
+    description: "Quantum‑neural advances drive 95% automation and 1000x performance for enterprises.",
+    category: "AI Strategy",
+    publishedAt: "2027-01-15",
+    featured: true,
+    readTime: "10 min read"
+  },
+  {
     slug: "agentic-workflow-orchestration-2026",
     title: "Agentic Workflow Orchestration 2026: Budgeted, Observable, Safe",
     description: "Design agentic workflows with budgets, KPI‑linked canaries, and one‑click rollback for safe velocity.",
@@ -28,11 +37,29 @@ export const posts: BlogPost[] = [
     readTime: "9 min read"
   },
   {
+    slug: "ai-2027-hyper-automation-blueprint",
+    title: "AI 2027 Hyper‑Automation Blueprint",
+    description: "End‑to‑end autonomous operations with budgets, guards, and instant rollback.",
+    category: "Automation",
+    publishedAt: "2027-01-10",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
     slug: "genai-reliability-scorecards-2027",
     title: "GenAI Reliability Scorecards 2027: KPIs, Budgets, Rollback",
     description: "Live KPIs with budgeted actions and instant rollback to keep GenAI reliable and affordable.",
     category: "AI Governance",
     publishedAt: "2027-01-20",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "ai-2027-quantum-breakthrough-enterprise",
+    title: "Quantum Breakthrough 2027 for the Enterprise",
+    description: "Enterprise‑ready quantum‑neural systems: secure, scalable, and ROI‑proven.",
+    category: "AI Research",
+    publishedAt: "2027-01-08",
     featured: true,
     readTime: "8 min read"
   },
