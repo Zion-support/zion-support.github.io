@@ -533,3 +533,40 @@ newArticles2025.push(
     tags: ["Agents", "Runbooks", "Budgets", "Rollback"]
   }
 );
+
+// Sept 30, 2025 – New additions to advertise across the front end
+newArticles2025.push(
+	{
+		id: "ai-safety-scorecards-2026",
+		title: "🛡️ AI Safety Scorecards 2026: Guardrails Tied to KPIs",
+		description: "Live policy checks and KPI‑linked scorecards to prevent regressions while shipping weekly.",
+		category: "AI Governance",
+		publishedDate: "2025-09-30",
+		featured: true,
+		link: "/blog/ai-safety-scorecards-2026",
+		readTime: "7 min read",
+		tags: ["Governance", "Scorecards", "Policy Tests"]
+	},
+	{
+		id: "edge-governed-flags-2026",
+		title: "🏷️ Edge‑Governed Feature Flags 2026: Zero‑PII @ <100ms",
+		description: "Signed configs, scoped IDs, and on‑device telemetry for private global rollouts.",
+		category: "Edge Computing",
+		publishedDate: "2025-09-30",
+		featured: true,
+		link: "/blog/edge-governed-flags-2026",
+		readTime: "6 min read",
+		tags: ["Edge", "Privacy", "Feature Flags"]
+	},
+	{
+		id: "ai-agent-reliability-playbook-2026",
+		title: "✅ Agent Reliability Playbook 2026: Budgets, Canaries, Rollback",
+		description: "Budgeted actions, KPI‑linked canaries, and instant rollback for safe automation.",
+		category: "AI Operations",
+		publishedDate: "2025-09-30",
+		featured: true,
+		link: "/blog/ai-agent-reliability-playbook-2026",
+		readTime: "8 min read",
+		tags: ["Agents", "Runbooks", "Reliability"]
+	}
+);
