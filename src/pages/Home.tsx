@@ -193,6 +193,19 @@ const Home = () => {
                 <div className="text-zion-slate-light text-sm mt-1">Budgets, KPI‑linked canaries, and rollback for safe velocity.</div>
               </Link>
             </div>
+            {/* Freshly added posts */}
+            <div className="grid md:grid-cols-2 gap-4 mt-4">
+              <Link to="/blog/ai-2026-reliability-runbooks-v4" className="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
+                <div className="text-cyan-300 text-xs mb-2">AI Operations</div>
+                <div className="text-white font-semibold">AI 2026: Reliability Runbooks v4</div>
+                <div className="text-zion-slate-light text-sm mt-1">Budgeted actions, KPI canaries, and instant rollback—v4 playbooks.</div>
+              </Link>
+              <Link to="/blog/edge-2026-consentless-metrics-v2" className="block rounded-lg border border-white/10 p-4 hover:border-rose-400/40 transition-colors">
+                <div className="text-rose-300 text-xs mb-2">Analytics</div>
+                <div className="text-white font-semibold">Edge 2026: Consentless Metrics v2</div>
+                <div className="text-zion-slate-light text-sm mt-1">Zero‑PII signals at &lt;100ms with scoped IDs, edge aggregation, DP.</div>
+              </Link>
+            </div>
           </div>
         </div>
 

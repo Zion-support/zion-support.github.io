@@ -292,6 +292,26 @@ featuredBlogPosts.unshift(
   }
 );
 
+// Sept 30, 2025 – Advertise two brand-new posts site-wide (newly added)
+featuredBlogPosts.unshift(
+  {
+    id: "ai-2026-reliability-runbooks-v4",
+    title: "AI 2026: Reliability Runbooks v4",
+    description: "Budgeted actions, KPI canaries, and instant rollback—v4 playbooks.",
+    link: "/blog/ai-2026-reliability-runbooks-v4",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-2026-consentless-metrics-v2",
+    title: "Edge 2026: Consentless Metrics v2",
+    description: "Scoped IDs + on‑device aggregation + DP noise for zero‑PII metrics.",
+    link: "/blog/edge-2026-consentless-metrics-v2",
+    type: "article",
+    featured: true
+  }
+);
+
 // New articles added Sept 30, 2025 — advertise site-wide
 featuredBlogPosts.unshift(
 	{

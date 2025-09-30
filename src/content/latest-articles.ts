@@ -17,6 +17,38 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
+    id: "ai-2026-reliability-runbooks-v4",
+    slug: "ai-2026-reliability-runbooks-v4",
+    title: "AI 2026: Reliability Runbooks v4",
+    description: "Budgeted actions, KPI‑linked canaries, and instant rollback—now with v4 playbooks.",
+    excerpt: "Production‑ready runbooks that keep autonomy safe without slowing teams.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "AI Operations",
+    tags: ["Runbooks", "Guardrails", "Rollback"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/ai-2026-reliability-runbooks-v4.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "edge-2026-consentless-metrics-v2",
+    slug: "edge-2026-consentless-metrics-v2",
+    title: "Edge 2026: Consentless Metrics v2",
+    description: "Scoped IDs, on‑device aggregation, and DP noise for actionable signals—v2 patterns.",
+    excerpt: "Ship zero‑PII metrics at <100ms with audit‑ready pipelines.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "Analytics",
+    tags: ["Edge", "Privacy", "Analytics"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/edge-2026-consentless-metrics-v2.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "ai-2027-operational-risk-budgets",
     slug: "ai-2027-operational-risk-budgets",
     title: "AI 2027: Operational Risk Budgets",
