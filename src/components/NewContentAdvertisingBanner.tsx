@@ -5,15 +5,15 @@ const NewContentAdvertisingBanner: React.FC = () => {
   const featuredContent = [
     {
       id: 1,
-      title: 'AI 2025: Autonomous Control Planes',
-      category: 'AI Operations',
+      title: 'Neural Code Synthesis 2025',
+      category: 'AI Engineering',
       readTime: '9 min',
       rating: 5.0,
       readers: '120K+',
       badge: 'NEW',
       gradient: 'from-blue-500 to-purple-500',
       icon: <Star className="w-6 h-6" />,
-      link: '/blog/ai-2025-sept-30-autonomous-control-planes'
+      link: '/blog/ai-2025-sept-30-neural-code-synthesis'
     },
     {
       id: 2,
