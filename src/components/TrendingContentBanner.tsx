@@ -1,16 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { 
-  TrendingUp, 
-  ArrowRight, 
-  Eye, 
-  Clock, 
-  Star,
-  BookOpen,
-  Zap,
-  Brain,
-  Cloud,
-  Shield
-} from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { TrendingUp, Eye, Clock, Star, ArrowRight, BookOpen, Zap } from 'lucide-react';
 
 const TrendingContentBanner: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -189,6 +179,21 @@ const TrendingContentBanner: React.FC = () => {
                 <span className="text-xs font-medium text-zion-slate-light uppercase tracking-wider">
                   {currentItem.category}
                 </span>
+<<<<<<< HEAD
+                {currentItem.isNew && (
+                  <span className="px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 flex items-center gap-1">
+                    <Zap className="w-3 h-3" />
+                    NEW
+                  </span>
+                )}
+                {currentItem.isHot && (
+                  <span className="px-2 py-1 rounded-full text-xs font-medium bg-red-100 text-red-800 flex items-center gap-1">
+                    <Zap className="w-3 h-3" />
+                    HOT
+                  </span>
+                )}
+=======
+>>>>>>> 9ef04c5375493e935408b2d06dd1c76d2bb587ee
               </div>
               
               <h3 className="text-lg font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors">
