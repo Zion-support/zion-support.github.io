@@ -2,6 +2,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
+import September2025FreshContentBanner from '../components/September2025FreshContentBanner';
 import UltraIntelligentAutonomousSystems2026Banner from '../components/UltraIntelligentAutonomousSystems2026Banner';
 import QuantumNeuralSuperintelligence2026Banner from '../components/QuantumNeuralSuperintelligence2026Banner';
 import AI2026RevolutionaryAutonomousSystemsBanner from '../components/AI2026RevolutionaryAutonomousSystemsBanner';
@@ -137,10 +138,10 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </footer>
-    </div>
-      {/* New Content Advertising Banner */}
-      <NewContentAdvertisingBanner />
+      </header>
+      
+      {/* FEATURED: SEPTEMBER 2025 FRESH CONTENT - TOP PRIORITY */}
+      <September2025FreshContentBanner />
 
       {/* NEW AUGUST 2026 QUANTUM CONSCIOUSNESS - MOST PROMINENT */}
       <August2026QuantumConsciousnessBanner />
