@@ -19,6 +19,33 @@ export const posts: BlogPost[] = [
     readTime: "9 min read"
   },
   {
+    slug: "ai-2025-sept-30-runtime-guardrails-blueprint",
+    title: "Runtime Guardrails Blueprint — Budgets, Gates, Instant Rollback",
+    description: "Executable policy tests, KPI‑linked canaries, and budgeted actions for safe autonomy in production.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "11 min read"
+  },
+  {
+    slug: "edge-2025-sept-30-attested-analytics-v2",
+    title: "Attested Edge Analytics v2 — Zero‑PII Insights with Proofs",
+    description: "Scoped IDs, on‑device aggregation, DP noise, and signed attestations delivering <100ms private analytics.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "genai-2025-sept-30-budget-aware-routing",
+    title: "Budget‑Aware Routing — Stable UX Under Cost SLAs",
+    description: "Tiered models, semantic caches, and eval gates to hold quality while cutting spend 40–70%.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
     slug: "ai-2025-sept-30-cognitive-assistants-blueprint",
     title: "Cognitive Assistants Blueprint — 92% CSAT, Governed Velocity",
     description: "Production patterns for AI assistants with policy tests, eval scorecards, and KPI‑linked rollback for safe velocity.",

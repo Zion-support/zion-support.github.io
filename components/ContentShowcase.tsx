@@ -461,6 +461,36 @@ const contentItems: ContentItem[] = [
 // Newly added featured content to advertise on the homepage
 contentItems.unshift(
   {
+    id: 'ai-2025-sept-30-runtime-guardrails-blueprint',
+    title: 'Runtime Guardrails Blueprint — Budgets, Gates, Instant Rollback',
+    excerpt: 'Executable policy tests, KPI‑linked canaries, and budgeted actions for safe autonomy in production.',
+    readTime: '11 min read',
+    category: 'AI Governance',
+    href: '/blog/ai-2025-sept-30-runtime-guardrails-blueprint',
+    featured: true,
+    publishedDate: '2025-09-30'
+  },
+  {
+    id: 'edge-2025-sept-30-attested-analytics-v2',
+    title: 'Attested Edge Analytics v2 — Zero‑PII Insights with Proofs',
+    excerpt: 'Scoped IDs, on‑device aggregation, DP noise, and signed attestations delivering <100ms private analytics.',
+    readTime: '8 min read',
+    category: 'Analytics',
+    href: '/blog/edge-2025-sept-30-attested-analytics-v2',
+    featured: true,
+    publishedDate: '2025-09-30'
+  },
+  {
+    id: 'genai-2025-sept-30-budget-aware-routing',
+    title: 'Budget‑Aware Routing — Stable UX Under Cost SLAs',
+    excerpt: 'Tiered models, semantic caches, and eval gates to hold quality while cutting spend 40–70%.',
+    readTime: '9 min read',
+    category: 'GenAI',
+    href: '/blog/genai-2025-sept-30-budget-aware-routing',
+    featured: true,
+    publishedDate: '2025-09-30'
+  },
+  {
     id: 'enterprise-genai-guardrails-2025-oct-01',
     title: 'Enterprise GenAI Guardrails 2025: Policy Tests, Budgets, Rollback',
     excerpt: 'Executable policy tests in CI, budgeted actions, and one‑click rollback.',
