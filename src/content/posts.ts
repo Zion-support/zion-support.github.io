@@ -1226,6 +1226,37 @@ posts.push(
   }
 );
 
+// Oct 31, 2025 – Fresh featured posts to surface on homepage
+posts.push(
+  {
+    slug: "agent-observability-blueprint-2026",
+    title: "Agent Observability Blueprint 2026: Traces, SLIs, and Rollbacks",
+    description: "End-to-end traces for agent tools, KPI-linked SLIs, and instant rollback triggers that keep reliability high.",
+    category: "AI Operations",
+    publishedAt: "2025-10-31",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "secure-genai-data-guardrails-2026",
+    title: "Secure GenAI Data Guardrails 2026: Scoped Access, Redaction, Attestations",
+    description: "Protect data with auth-aware retrieval, field-level redaction, and signed outputs enforced by policy tests.",
+    category: "Security",
+    publishedAt: "2025-10-31",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "sla-aware-inference-routing-2026",
+    title: "SLA‑Aware Inference Routing 2026: Quality Tiers Under Budget",
+    description: "Dynamically route prompts by SLA using model tiers, caches, and KPI‑linked budgets—stable UX at lower cost.",
+    category: "GenAI",
+    publishedAt: "2025-10-31",
+    featured: true,
+    readTime: "8 min read"
+  }
+);
+
 // Additional freshly published articles
 posts.push(
   {
@@ -1428,6 +1459,73 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
+  }
+);
+
+// New content to backfill promo links and advertise on the homepage
+posts.push(
+  {
+    slug: "edge-privacy-ml-2026",
+    title: "Edge Privacy for ML 2026: Scoped IDs and On‑Device Redaction",
+    description: "Ship signal‑rich analytics without PII using scoped identifiers and local redaction.",
+    category: "Observability",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "agent-evals-in-prod-2026",
+    title: "Agent Evals in Production 2026: Online Checks that Predict Outcomes",
+    description: "Run lightweight online evals tied to KPIs to prevent regressions while shipping weekly.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "ai-cost-aware-inference-2026",
+    title: "Cost‑Aware Inference 2026: Warm Pools and Quality Tiers Under SLAs",
+    description: "Keep costs predictable with warm pools, batching, and tiered quality routes.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "platform-golden-paths-kpis-2026",
+    title: "Platform Golden Paths 2026: Paved Roads that Move KPIs",
+    description: "Design golden paths linked to adoption, SLOs, and revenue with actionable scorecards.",
+    category: "Platform Engineering",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "genai-routing-under-budgets-2026",
+    title: "Quality‑Tiered GenAI Routing 2026: Control Cost with Caches and Evals",
+    description: "Route by SLA with caches and eval signals to balance cost, speed, and quality.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "on-device-agents-offline-tools-2026",
+    title: "On‑Device Agents 2026: Offline‑Capable Tools and Private Caches",
+    description: "Ship privacy‑first assistants with on‑device tools, local caches, and safe fallbacks.",
+    category: "Edge Computing",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "zero-trust-observability-2026",
+    title: "Zero‑Trust Observability 2026: Signed Traces and Least‑Privilege Telemetry",
+    description: "Protect data with signed traces, scoped IDs, and policy‑enforced telemetry routes.",
+    category: "Security",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
   }
 );
 
