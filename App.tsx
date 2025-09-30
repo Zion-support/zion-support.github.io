@@ -1,7 +1,11 @@
 import React, { JSX } from "react";
+import November2026QuantumSuperintelligenceBanner from "./components/November2026QuantumSuperintelligenceBanner";
+import December2026UniversalConsciousnessBanner from "./components/December2026UniversalConsciousnessBanner";
 import ComprehensiveContentIntegrationBanner from "./components/ComprehensiveContentIntegrationBanner";
 import AI2027TranscendentIntelligenceBanner from "./components/AI2027TranscendentIntelligenceBanner";
 import July2026RevolutionaryBreakthroughBanner from "./components/July2026RevolutionaryBreakthroughBanner";
+import July2026AutonomousIntelligenceBanner from "./components/July2026AutonomousIntelligenceBanner";
+import July2026ContentShowcaseBanner from "./components/July2026ContentShowcaseBanner";
 import InteractiveAI2026Showcase from "./components/InteractiveAI2026Showcase";
 import InteractiveROICalculator2026 from "./components/InteractiveROICalculator2026";
 import TranscendentIntelligence2027Banner from "./components/TranscendentIntelligence2027Banner";
@@ -83,6 +87,12 @@ import October2026BreakthroughShowcaseBanner from "./components/October2026Break
 export default function App(): JSX.Element {
   return (
     <div className="min-h-screen bg-slate-950">
+      {/* NEWEST: December 2026 Universal Consciousness Banner - MOST PROMINENT */}
+      <December2026UniversalConsciousnessBanner />
+      
+      {/* NEWEST: November 2026 Quantum Superintelligence Banner - MOST PROMINENT */}
+      <November2026QuantumSuperintelligenceBanner />
+      
       {/* NEWEST: July 2026 Autonomous Intelligence Banner - MOST PROMINENT */}
       <July2026AutonomousIntelligenceBanner />
       
@@ -122,7 +132,6 @@ export default function App(): JSX.Element {
       <AutonomousEnterpriseAutomationAdvertisingBanner />
       
       {/* NEW: July 2026 Revolutionary Breakthrough Banner - PROMINENT */}
->>>>>>> 9c620609b277c476f65918aed44a419c7b8877f3
       <July2026RevolutionaryBreakthroughBanner />
       
       {/* NEW: February 2026 New Content Breakthrough Banner - Most Prominent */}
