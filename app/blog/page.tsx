@@ -3,6 +3,16 @@ import Link from 'next/link';
 
 const blogPosts = [
   {
+    title: 'Production Agent Guardrails — October 2, 2025',
+    slug: 'ai-2025-oct-02-production-agent-guardrails',
+    excerpt: 'Approvals, verifiers, budgets, online evals, and rollback to ship agentic systems safely in production.',
+    category: 'Implementation Guide',
+    publishedAt: 'October 2, 2025',
+    image: '🛡️',
+    color: 'green',
+    readTime: '15 min read'
+  },
+  {
     title: 'Executive AI Roadmap — October 2025',
     slug: 'ai-2025-october-01-executive-ai-roadmap',
     excerpt: 'A practical 30/60/90 plan: guardrails, cost controls, and data foundations for reliable AI at speed.',

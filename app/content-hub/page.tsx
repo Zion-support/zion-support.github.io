@@ -176,6 +176,7 @@ export default function ContentHubPage() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <h2 className="text-xl md:text-2xl font-bold">New this week</h2>
             <div className="flex flex-wrap gap-3">
+              <Link href="/blog/ai-2025-oct-02-production-agent-guardrails" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">Production Agent Guardrails<span>→</span></Link>
               <Link href="/blog/ai-2026-trustless-evaluation-blueprint" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">Trustless Evaluation Blueprint 2026<span>→</span></Link>
               <Link href="/blog/ai-2025-september-30-new-governed-agent-patterns" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">Governed Agent Patterns<span>→</span></Link>
               <Link href="/blog/ai-2025-september-30-autonomous-finops-scorecards" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">Autonomous FinOps Scorecards<span>→</span></Link>
