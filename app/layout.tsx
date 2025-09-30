@@ -109,7 +109,6 @@ function Footer() {
                 Content Hub
                 <span className="bg-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold">NEW</span>
               </Link>
-<<<<<<< HEAD
               <Link href="/blog/ai-neural-interfaces-2026" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
                 🧠 Neural Interfaces 2026
                 <span className="bg-yellow-400 text-black px-2 py-1 rounded-full text-xs font-semibold">FEATURED</span>
@@ -122,16 +121,11 @@ function Footer() {
                 🔒 Synthetic Data AI
                 <span className="bg-yellow-400 text-black px-2 py-1 rounded-full text-xs font-semibold">FEATURED</span>
               </Link>
-              <Link href="/blog/ai-2026-mega-breakthrough" className="block text-gray-600 hover:text-blue-600 transition-colors">🚀 AI 2026 Mega Breakthrough</Link>
-              <Link href="/blog/ai-autonomous-enterprise-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🏢 Autonomous Enterprise 2026</Link>
-              <Link href="/blog/ai-quantum-optimization-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">⚡ Quantum AI (1000x Faster)</Link>
-=======
               <Link href="/blog/ai-cognitive-computing-breakthrough-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🧠 Cognitive Computing Breakthrough</Link>
               <Link href="/blog/ai-autonomous-business-systems-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🤖 Autonomous Business Systems</Link>
               <Link href="/blog/ai-quantum-hybrid-computing-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">⚛️ Quantum Hybrid Computing</Link>
               <Link href="/case-studies/ai-sustainability-transformation-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🌱 $10M Sustainability ROI</Link>
               <Link href="/case-studies/ai-autonomous-business-systems-success-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">📊 $15M ROI Success Story</Link>
->>>>>>> origin/cursor/create-and-deploy-new-content-5fb2
               <Link href="/case-studies" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
                 Case Studies
                 <span className="bg-yellow-500 text-white px-2 py-1 rounded-full text-xs font-semibold">FEATURED</span>

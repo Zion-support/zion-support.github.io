@@ -110,7 +110,13 @@ import Revolutionary2027ContentBanner from '../components/Revolutionary2027Conte
 import UltimateContent2027Showcase from '../components/UltimateContent2027Showcase';
 import NewContentShowcase2026 from '../src/components/NewContentShowcase2026';
 import September30NewAIBreakthroughsBanner from '../components/September30NewAIBreakthroughsBanner';
+<<<<<<< HEAD
 import September30BreakthroughContentBanner from '../components/September30BreakthroughContentBanner';
+=======
+import Revolutionary2026ContentShowcaseBanner from '../components/Revolutionary2026ContentShowcaseBanner';
+import Latest2026ContentMegaBanner from '../components/Latest2026ContentMegaBanner';
+import Ultimate2026ContentShowcaseBanner from '../components/Ultimate2026ContentShowcaseBanner';
+>>>>>>> cursor/create-and-deploy-new-content-1b54
 
 export const metadata = {
   title: 'Zion Tech Group — Revolutionary AI Breakthroughs 2026 | 1000x Performance Gains',
@@ -155,6 +161,15 @@ export default function HomePage() {
       <div className="animate-fade-in">
       {/* 🚀🚀🚀 BREAKTHROUGH CONTENT - September 30, 2025 - 3 REVOLUTIONARY INNOVATIONS! 🚀🚀🚀 */}
       <September30BreakthroughContentBanner />
+      
+      {/* 🚀 NEW 2026 CONTENT SHOWCASE - Revolutionary AI Technologies! */}
+      <Ultimate2026ContentShowcaseBanner />
+      
+      {/* 🌟 Latest 2026 Content Mega Showcase */}
+      <Latest2026ContentMegaBanner />
+      
+      {/* 🚀 Revolutionary 2026 Content Showcase */}
+      <Revolutionary2026ContentShowcaseBanner />
       
       {/* 🚀 MEGA CONTENT UPDATE - September 30, 2025 - 116+ NEW RESOURCES! */}
       <NewContentShowcase2026 />
