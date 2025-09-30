@@ -128,7 +128,7 @@ const Home = () => {
         </div>
         
         {/* Enhanced Promotional Banners */}
-        {getFeaturedBanners().slice(0, 3).map((banner) => (
+        {getFeaturedBanners().slice(0, 4).map((banner) => (
           <EnhancedPromotionalBanner
             key={banner.id}
             banner={banner}
@@ -146,16 +146,15 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="New: E2E AI Tracing, Edge Personalization, CI Policy Tests"
-          description="Trace prompts to outcomes, personalize privately at the edge, and ship faster with CI policy tests."
+          title="New: EU AI Act Playbook + Edge RAG — Private <100ms"
+          description="Model registries, audit trails, KPI‑linked policy tests, and hybrid edge retrieval without PII."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "E2E AI Tracing", category: "Observability", link: "/blog/ai-e2e-tracing-2025" },
-            { title: "Edge Personalization", category: "Edge Computing", link: "/blog/edge-personalization-2026" },
-            { title: "Policy Tests Quickstart", category: "AI Governance", link: "/blog/policy-tests-quickstart-2025" },
-            { title: "Secure ML Supply Chain 2026", category: "Security", link: "/blog/secure-ml-supply-chain-2026" },
-            { title: "GenAI Routing Blueprint 2026", category: "GenAI", link: "/blog/genai-routing-blueprint-2026" }
+            { title: "EU AI Act Playbook", category: "AI Governance", link: "/blog/ai-governance-eu-ai-act-2026" },
+            { title: "Edge RAG 2026", category: "GenAI", link: "/blog/edge-rag-privacy-preserving-2026" },
+            { title: "Agent Safety Checklists", category: "AI Operations", link: "/blog/agent-safety-checklists-2026" },
+            { title: "GenAI Routing Blueprint 2026", category: "GenAI", link: "/blog/genai-routing-playbook-2026" }
           ]}
         />
         {/* Fresh content banner promoting brand-new articles */}
