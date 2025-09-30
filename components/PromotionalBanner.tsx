@@ -1141,10 +1141,10 @@ export const AICostOptimizationBanner = () => (
 // Site-wide banner to promote newly added content
 export const NewSeptemberPromotionsBanner = () => (
   <PromotionalBanner
-    message="🔥 New: Real‑Time Agent Routing, Reliable Agent Evals, Operational Resilience"
+    message="🔥 New: AI 2028 Autonomous Enterprise, Quantum Computing Breakthrough & $200M Success Stories"
     ctaText="Read the latest"
-    ctaLink="/content-hub#featured-content"
-    backgroundColor="bg-gradient-to-r from-emerald-600 to-blue-600"
+    ctaLink="/blog"
+    backgroundColor="bg-gradient-to-r from-purple-600 to-indigo-600"
     autoHide={true}
     hideAfter={22}
   />
