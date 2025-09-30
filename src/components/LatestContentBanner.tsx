@@ -27,10 +27,10 @@ const LatestContentBanner: React.FC<LatestContentBannerProps> = ({
             <Sparkles className="w-6 h-6 animate-pulse" />
             <div>
               <h3 className="font-bold text-lg">
-                🔥 New Today: SLO Scorecards · Edge Insights (no PII) · GenAI Quality Tiers
+                🔥 New Today: Live AI Governance Metrics · Zero‑PII Personalization
               </h3>
               <p className="text-sm opacity-90">
-                Now live: 3 new guides + dozens of updated insights
+                Fresh guides just dropped: ship faster without regressions, personalize privately
               </p>
             </div>
           </div>

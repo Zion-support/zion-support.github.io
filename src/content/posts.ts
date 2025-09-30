@@ -10,6 +10,24 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-governance-live-metrics-2025",
+    title: "AI Governance Live Metrics 2025: Ship Faster Without Regressions",
+    description: "CI policy tests + KPI‑linked canaries to prevent regressions before they ship.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-zero-pii-personalization-2025",
+    title: "Edge Zero‑PII Personalization 2025: <100ms, Private by Design",
+    description: "Scoped IDs, on‑device models, and DP noise for real‑time personalization without PII.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
     slug: "ai-executive-scorecards-2027",
     title: "AI Executive Scorecards 2027: Proving ROI with Live KPIs",
     description: "Design exec-ready AI scorecards tying model spend to KPIs with guardrails and SLIs.",
