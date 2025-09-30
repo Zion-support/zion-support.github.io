@@ -234,3 +234,56 @@ enhancedPromotionalBanners.push({
   priority: 2,
   startDate: '2025-09-30'
 });
+
+// Apr 2026 – Promote three brand-new posts site-wide
+enhancedPromotionalBanners.push({
+  id: 'apr-2026-new-content-trio',
+  title: '🚀 New: AI SLA Scorecards, Edge Private Insights v2, Runbooks v2',
+  description: 'SLIs to KPIs + zero‑PII analytics + safe agent releases with one‑click recovery.',
+  ctaText: 'Read the latest',
+  ctaLink: '/blog',
+  variant: 'success',
+  icon: '🚀',
+  featured: true,
+  priority: 0,
+  startDate: '2026-04-01'
+});
+
+enhancedPromotionalBanners.push({
+  id: 'apr-2026-ai-sla-scorecards',
+  title: '📊 AI SLA Scorecards 2026 Q1 — New',
+  description: 'SLIs wired to KPIs with budgets and instant rollback for safe velocity.',
+  ctaText: 'Read article',
+  ctaLink: '/blog/ai-sla-scorecards-2026-q1',
+  variant: 'info',
+  icon: '📊',
+  featured: true,
+  priority: 1,
+  startDate: '2026-04-01'
+});
+
+enhancedPromotionalBanners.push({
+  id: 'apr-2026-edge-private-insights-v2',
+  title: '🔐 Edge Private Insights v2 (2026)',
+  description: 'Scoped IDs, on‑device aggregation, DP noise — <100ms insights without PII.',
+  ctaText: 'Explore',
+  ctaLink: '/blog/edge-private-insights-v2-2026',
+  variant: 'success',
+  icon: '🔐',
+  featured: true,
+  priority: 2,
+  startDate: '2026-04-01'
+});
+
+enhancedPromotionalBanners.push({
+  id: 'apr-2026-agent-runbooks-v2',
+  title: '🧭 Agent Release Runbooks v2 (2026)',
+  description: 'Budgets, KPI canaries, approvals, and one‑click rollback for safe autonomy.',
+  ctaText: 'See templates',
+  ctaLink: '/blog/agent-release-runbooks-v2-2026',
+  variant: 'warning',
+  icon: '🧭',
+  featured: true,
+  priority: 3,
+  startDate: '2026-04-01'
+});
