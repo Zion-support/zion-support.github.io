@@ -10,33 +10,22 @@ import {
   Target,
   TrendingUp,
   Users,
-  Zap,
+  Zap
 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import ContentPromotionBanner from "../components/ContentPromotionBanner";
-import EnhancedPromotionalBanner from "../components/EnhancedPromotionalBanner";
-import NewContentAnnouncement from "../components/NewContentAnnouncement";
-import LatestContentBanner from "../components/LatestContentBanner";
-import NewContentPromoBanner from "../components/NewContentPromoBanner";
-import NewContentAdvertisingBanner from "../components/NewContentAdvertisingBanner";
-import TrendingContentBanner from "../components/TrendingContentBanner";
-import ComprehensivePromoBanner from "../components/ComprehensivePromoBanner";
-import NewArticlesPromoBanner from "../components/NewArticlesPromoBanner";
-import NewServicesPromoBanner from "../components/NewServicesPromoBanner";
-import September30NewContentMegaBanner from "../components/September30NewContentMegaBanner";
-import October2025NewContentBanner from "../../components/October2025NewContentBanner";
-import Header from "../components/Header";
-import Revolutionary2026ContentMegaBanner from "../components/Revolutionary2026ContentMegaBanner";
-import September30MegaBanner2025 from "../components/September30MegaBanner2025";
-import October2025MegaLaunchBanner from "../components/October2025MegaLaunchBanner";
 import ContentValueTestimonials from "../components/ContentValueTestimonials";
 import EnhancedNewsletterSignup from "../components/EnhancedNewsletterSignup";
 import EnhancedTestimonials from "../components/EnhancedTestimonials";
+import Header from "../components/Header";
+import LatestContentBanner from "../components/LatestContentBanner";
+import LatestInsights from "../components/LatestInsights";
 import ModernFeatures from "../components/ModernFeatures";
-import { latestInsights } from "../content/insights";
+import NewContentPromoBanner from "../components/NewContentPromoBanner";
+import TrendingContentBanner from "../components/TrendingContentBanner";
+import { featuredInsights, latestInsights, newInsights } from "../content/new-insights";
 import { posts } from "../content/posts";
-import { getFeaturedBanners } from "../content/enhanced-promotional-banners";
 
 const Home = () => {
   return (
@@ -114,345 +103,18 @@ const Home = () => {
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
-        
-        {/* 🚀 SEPTEMBER 30, 2025 - MEGA BREAKTHROUGH ANNOUNCEMENT */}
-        <div className="container mx-auto px-6 pt-8">
-          <September30MegaBanner2025 />
-        </div>
-        
-        {/* Enhanced Promotional Banners */}
-        {getFeaturedBanners().slice(0, 4).map((banner) => (
-          <EnhancedPromotionalBanner
-            key={banner.id}
-            banner={banner}
-            className="border-b border-white/10"
-          />
-        ))}
-        
-        <NewContentAnnouncement />
-        <LatestContentBanner 
-          className="border-b border-white/10" 
-          variant="info"
-          autoRotate
-          rotationInterval={7000}
-        />
-        <NewContentPromoBanner 
-          className="border-b border-white/10" 
-          variant="premium" 
-          title="New: Consentless Journeys + E2E AI Observability"
-          description="Blueprints you can ship today: personalized, zero‑PII journeys and token‑to‑KPI traces."
-          ctaText="Explore new content"
-          ctaLink="/blog"
-          featuredItems={[
-            { title: "Consentless Journeys Blueprint", category: "Analytics", link: "/blog/edge-2026-consentless-journeys-blueprint" },
-            { title: "E2E Observability Blueprint", category: "Observability", link: "/blog/ai-2026-e2e-observability-blueprint" },
-            { title: "Edge Rate Limiter Blueprint 2026", category: "Edge Computing", link: "/blog/edge-rate-limiter-blueprint-2026" },
-            { title: "AI 2027: Operational Scorecards", category: "AI Operations", link: "/blog/ai-2027-operational-scorecards" },
-            { title: "AI 2027: Autonomous Roadmaps", category: "AI Strategy", link: "/blog/ai-2027-autonomous-roadmaps" },
-            { title: "Autonomous Infra Blueprint v2", category: "AI Operations", link: "/blog/ai-2025-sept-30-autonomous-infra-blueprint-v2" },
-            { title: "Platform ROI Scorecards", category: "AI Governance", link: "/blog/genai-2027-platform-roi-scorecards" }
-          ]}
-        />
-        {/* Fresh content banner promoting brand-new articles */}
-        <div className="container mx-auto px-6 mt-6">
-          <September30BrandNewTodayBanner />
-          {/* Auto-advertise newly added content */}
-          <div className="rounded-xl border border-cyan-400/30 bg-cyan-500/10 p-6 mb-6">
-            <div className="text-white text-sm mb-3">New today</div>
-            <div className="grid md:grid-cols-3 gap-4">
-              <Link to="/blog/ai-2025-oct-01-enterprise-rag-security-v2" className="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
-                <div className="text-cyan-300 text-xs mb-2">AI Security</div>
-                <div className="text-white font-semibold">Enterprise RAG Security v2</div>
-                <div className="text-zion-slate-light text-sm mt-1">Auth-aware retrieval, freshness windows, and signed outputs.</div>
-              </Link>
-              <Link to="/blog/genai-2025-oct-01-cost-optimization-blueprint" className="block rounded-lg border border-white/10 p-4 hover:border-indigo-400/40 transition-colors">
-                <div className="text-indigo-300 text-xs mb-2">GenAI</div>
-                <div className="text-white font-semibold">GenAI Cost Optimization</div>
-                <div className="text-zion-slate-light text-sm mt-1">Quality tiers, caches, and budgets for 40–70% savings.</div>
-              </Link>
-              <Link to="/blog/edge-2025-oct-01-zero-pii-telemetry-v2" className="block rounded-lg border border-white/10 p-4 hover:border-emerald-400/40 transition-colors">
-                <div className="text-emerald-300 text-xs mb-2">Analytics</div>
-                <div className="text-white font-semibold">Zero‑PII Telemetry v2</div>
-                <div className="text-zion-slate-light text-sm mt-1">Sub‑100ms metrics with DP noise and attestations.</div>
-              </Link>
-            </div>
-          </div>
-          {/* Brand New Today - advertising newly added posts */}
-          <div className="rounded-xl border border-emerald-400/30 bg-emerald-500/10 p-6 mb-6">
-            <div className="text-white text-sm mb-3">Brand new today</div>
-            <div className="grid md:grid-cols-3 gap-4">
-              <Link to="/blog/ai-2025-sept-30-operational-trust-scorecards-v2" className="block rounded-lg border border-white/10 p-4 hover:border-emerald-400/40 transition-colors">
-                <div className="text-emerald-300 text-xs mb-2">AI Operations</div>
-                <div className="text-white font-semibold">Operational Trust Scorecards v2</div>
-                <div className="text-zion-slate-light text-sm mt-1">SLIs → KPIs with budgets and rollback.</div>
-              </Link>
-              <Link to="/blog/edge-2025-sept-30-consentless-journeys-v2" className="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
-                <div className="text-cyan-300 text-xs mb-2">Edge Computing</div>
-                <div className="text-white font-semibold">Consentless Journeys v2</div>
-                <div className="text-zion-slate-light text-sm mt-1">Private, real‑time personalization under 100ms.</div>
-              </Link>
-              <Link to="/blog/genai-2025-sept-30-runtime-rollback-v3" className="block rounded-lg border border-white/10 p-4 hover:border-purple-400/40 transition-colors">
-                <div className="text-purple-300 text-xs mb-2">GenAI</div>
-                <div className="text-white font-semibold">Runtime Rollback v3</div>
-                <div className="text-zion-slate-light text-sm mt-1">Deterministic fallbacks and signed outputs.</div>
-              </Link>
-              <Link to="/blog/ai-2025-sept-30-governance-live-scorecards" className="block rounded-lg border border-white/10 p-4 hover:border-emerald-400/40 transition-colors">
-                <div className="text-emerald-300 text-xs mb-2">Platform Engineering</div>
-                <div className="text-white font-semibold">Governance Live Scorecards</div>
-                <div className="text-zion-slate-light text-sm mt-1">KPI-linked policy tests and live canaries that prevent regressions.</div>
-              </Link>
-              <Link to="/blog/ai-2025-sept-30-private-insights-blueprint" className="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
-                <div className="text-cyan-300 text-xs mb-2">Analytics</div>
-                <div className="text-white font-semibold">Private Insights Blueprint</div>
-                <div className="text-zion-slate-light text-sm mt-1">Scoped IDs + on-device aggregation + DP noise at &lt;100ms.</div>
-              </Link>
-              <Link to="/blog/ai-2025-sept-30-security-mesh" className="block rounded-lg border border-white/10 p-4 hover:border-indigo-400/40 transition-colors">
-                <div className="text-indigo-300 text-xs mb-2">AI Security</div>
-                <div className="text-white font-semibold">AI Security Mesh</div>
-                <div className="text-zion-slate-light text-sm mt-1">Runtime verifiers and signed outputs with 99.99% detection.</div>
-              </Link>
-            </div>
-          </div>
-          <NewContentAdvertisingBanner />
-          {/* Highlight newly added articles */}
-          <div className="mt-4 rounded-xl border border-white/10 bg-white/5 p-6">
-            <div className="text-white text-sm mb-4">Just added — featured reads</div>
-            <div className="grid md:grid-cols-3 gap-4">
-              <Link to="/blog/ai-2025-sept-30-neural-code-synthesis" className="block rounded-lg border border-white/10 p-4 hover:border-indigo-400/40 transition-colors">
-                <div className="text-indigo-300 text-xs mb-2">AI Engineering</div>
-                <div className="text-white font-semibold">Neural Code Synthesis 2025</div>
-                <div className="text-zion-slate-light text-sm mt-1">95% accuracy, 90% faster delivery with guardrails.</div>
-              </Link>
-              <Link to="/blog/edge-2025-sept-30-consentless-metrics-v3" className="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
-                <div className="text-cyan-300 text-xs mb-2">Analytics</div>
-                <div className="text-white font-semibold">Consentless Metrics v3</div>
-                <div className="text-zion-slate-light text-sm mt-1">Zero‑PII signals under 100ms with attestations.</div>
-              </Link>
-              <Link to="/blog/ai-2025-sept-30-platform-roi-scorecards-v2" className="block rounded-lg border border-white/10 p-4 hover:border-emerald-400/40 transition-colors">
-                <div className="text-emerald-300 text-xs mb-2">Platform Engineering</div>
-                <div className="text-white font-semibold">Platform ROI Scorecards v2</div>
-                <div className="text-zion-slate-light text-sm mt-1">Prove platform value in 4–8 weeks.</div>
-              </Link>
-            </div>
-          </div>
-          {/* Newly added — Sept 30 spotlight */}
-          <div className="mt-4 rounded-xl border border-cyan-400/30 bg-cyan-500/10 p-6">
-            <div className="text-white text-sm mb-4">Brand new today — Sept 30</div>
-            <div className="grid md:grid-cols-3 gap-4">
-              <Link to="/blog/ai-2025-sept-30-autonomic-decision-engines" className="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
-                <div className="text-cyan-300 text-xs mb-2">AI Operations</div>
-                <div className="text-white font-semibold">Autonomic Decision Engines</div>
-                <div className="text-zion-slate-light text-sm mt-1">Sub‑100ms, KPI‑linked actions with budgets, canaries, rollback.</div>
-              </Link>
-              <Link to="/blog/edge-2025-sept-30-private-personalization-v2" className="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
-                <div className="text-cyan-300 text-xs mb-2">Edge Computing</div>
-                <div className="text-white font-semibold">Edge Private Personalization v2</div>
-                <div className="text-zion-slate-light text-sm mt-1">Zero‑PII, global &lt;100ms journeys with scoped IDs and DP.</div>
-              </Link>
-              <Link to="/blog/genai-2025-sept-30-eval-scorecards-quickstart" className="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
-                <div className="text-cyan-300 text-xs mb-2">GenAI</div>
-                <div className="text-white font-semibold">GenAI Eval Scorecards Quickstart</div>
-                <div className="text-zion-slate-light text-sm mt-1">KPI‑linked evals, budgets, and instant rollback.</div>
-              </Link>
-            </div>
-          </div>
-          {/* Inline promo for new service */}
-          <div className="mt-4">
-            <ContentPromotionBanner
-              variant="info"
-              title="🧪 New Service: Edge Experimentation Suite"
-              description="Privacy‑first A/B testing at <100ms with scoped IDs and on‑device metrics."
-              ctaText="Learn more"
-              ctaLink="/services/edge-experimentation-suite"
-              dismissible={true}
-            />
-          </div>
-          {/* Newly added featured articles */}
-          <div className="mt-6 rounded-xl border border-white/10 bg-white/5 p-6">
-            <div className="text-white text-sm mb-4">Featured this week</div>
-            <div className="grid md:grid-cols-3 gap-4">
-              <Link to="/blog/genai-2025-sept-30-quality-tiers-v4" className="block rounded-lg border border-white/10 p-4 hover:border-purple-400/40 transition-colors">
-                <div className="text-purple-300 text-xs mb-2">GenAI</div>
-                <div className="text-white font-semibold">GenAI Quality Tiers v4</div>
-                <div className="text-zion-slate-light text-sm mt-1">Stable UX with 60%+ savings.</div>
-              </Link>
-              <Link to="/blog/edge-2025-sept-30-zero-pii-experiments-v3" className="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
-                <div className="text-cyan-300 text-xs mb-2">Analytics</div>
-                <div className="text-white font-semibold">Zero‑PII Experiments v3</div>
-                <div className="text-zion-slate-light text-sm mt-1">Sub‑100ms global A/B with DP noise.</div>
-              </Link>
-              <Link to="/blog/ai-2025-sept-30-autonomous-governance-blueprint-v2" className="block rounded-lg border border-white/10 p-4 hover:border-emerald-400/40 transition-colors">
-                <div className="text-emerald-300 text-xs mb-2">AI Governance</div>
-                <div className="text-white font-semibold">Autonomous Governance v2</div>
-                <div className="text-zion-slate-light text-sm mt-1">KPI scorecards, CI policy tests, rollback.</div>
-              </Link>
-              <Link to="/blog/ai-2028-autonomous-governance-blueprint" className="block rounded-lg border border-white/10 p-4 hover:border-purple-400/40 transition-colors">
-                <div className="text-purple-300 text-xs mb-2">AI Governance</div>
-                <div className="text-white font-semibold">AI 2028: Autonomous Governance Blueprint</div>
-                <div className="text-zion-slate-light text-sm mt-1">Policy tests in CI, live canaries, instant rollback.</div>
-              </Link>
-              <Link to="/blog/ai-2025-sept-30-causal-evals-blueprint" className="block rounded-lg border border-white/10 p-4 hover:border-rose-400/40 transition-colors">
-                <div className="text-rose-300 text-xs mb-2">AI Governance</div>
-                <div className="text-white font-semibold">AI 2025: Causal Evals Blueprint</div>
-                <div className="text-zion-slate-light text-sm mt-1">Causal scorecards wired to KPIs with budgets and rollback.</div>
-              </Link>
-              <Link to="/blog/verifiable-edge-analytics-2026" className="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
-                <div className="text-cyan-300 text-xs mb-2">Analytics</div>
-                <div className="text-white font-semibold">Verifiable Edge Analytics 2026</div>
-                <div className="text-zion-slate-light text-sm mt-1">Zero‑PII insights with signed attestations under 100ms.</div>
-              </Link>
-            </div>
-          {/* October 2025 highlights — newly added */}
-          <div className="rounded-xl border border-indigo-400/30 bg-indigo-500/10 p-6 mb-6">
-            <div className="text-white text-sm mb-3">New this month</div>
-            <div className="grid md:grid-cols-3 gap-4">
-              <Link to="/blog/ai-2025-oct-01-privacy-first-observability-v2" className="block rounded-lg border border-white/10 p-4 hover:border-indigo-400/40 transition-colors">
-                <div className="text-indigo-300 text-xs mb-2">Observability</div>
-                <div className="text-white font-semibold">Privacy‑First Observability v2</div>
-                <div className="text-zion-slate-light text-sm mt-1">User‑centric traces without PII leaks.</div>
-              </Link>
-              <Link to="/blog/genai-2025-oct-01-quality-tiers-v3" className="block rounded-lg border border-white/10 p-4 hover:border-purple-400/40 transition-colors">
-                <div className="text-purple-300 text-xs mb-2">GenAI</div>
-                <div className="text-white font-semibold">GenAI Quality Tiers v3</div>
-                <div className="text-zion-slate-light text-sm mt-1">50% savings with stable UX.</div>
-              </Link>
-              <Link to="/blog/edge-2025-oct-01-consentless-journeys-blueprint" className="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
-                <div className="text-cyan-300 text-xs mb-2">Edge Computing</div>
-                <div className="text-white font-semibold">Consentless Journeys Blueprint</div>
-                <div className="text-zion-slate-light text-sm mt-1">Personalization &lt;100ms, zero‑PII.</div>
-              </Link>
-            </div>
-          </div>
-          </div>
-        </div>
+        <LatestContentBanner className="border-b border-white/10" variant="info" />
+        <NewContentPromoBanner className="border-b border-white/10" variant="premium" />
         <div className="container mx-auto px-6 mt-6">
           <TrendingContentBanner />
-          {/* Inline promotion for brand-new content */}
-          <div className="mt-6 rounded-xl border border-white/10 bg-white/5 p-6">
-            <div className="text-white text-sm mb-4">New this week</div>
-            <div className="grid md:grid-cols-2 gap-4">
-              <Link to="/blog/ai-2025-sept-30-cognitive-assistants-blueprint" className="block rounded-lg border border-white/10 p-4 hover:border-indigo-400/40 transition-colors">
-                <div className="text-indigo-300 text-xs mb-2">AI Engineering</div>
-                <div className="text-white font-semibold">Cognitive Assistants Blueprint</div>
-                <div className="text-zion-slate-light text-sm mt-1">Policy tests, eval scorecards, KPI‑linked rollback for safe velocity.</div>
-              </Link>
-              <Link to="/blog/edge-2025-sept-30-federated-learning-zero-pii" className="block rounded-lg border border-white/10 p-4 hover:border-emerald-400/40 transition-colors">
-                <div className="text-emerald-300 text-xs mb-2">Analytics</div>
-                <div className="text-white font-semibold">Federated Learning — Zero‑PII</div>
-                <div className="text-zion-slate-light text-sm mt-1">Scoped IDs, on‑device training, DP noise, and attestations.</div>
-              </Link>
-            </div>
-            {/* Freshly added posts */}
-            <div className="grid md:grid-cols-2 gap-4 mt-4">
-              <Link to="/blog/ai-2025-sept-30-platform-roi-scorecards-v2" className="block rounded-lg border border-white/10 p-4 hover:border-emerald-400/40 transition-colors">
-                <div className="text-emerald-300 text-xs mb-2">Platform Engineering</div>
-                <div className="text-white font-semibold">Platform ROI Scorecards v2</div>
-                <div className="text-zion-slate-light text-sm mt-1">Prove platform impact in weeks with KPI-linked scorecards.</div>
-              </Link>
-              <Link to="/blog/edge-2025-sept-30-consentless-metrics-v3" className="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
-                <div className="text-cyan-300 text-xs mb-2">Analytics</div>
-                <div className="text-white font-semibold">Consentless Metrics v3</div>
-                <div className="text-zion-slate-light text-sm mt-1">Zero‑PII telemetry with DP noise and attestations.</div>
-              </Link>
-              <Link to="/blog/ai-2027-operational-risk-budgets" className="block rounded-lg border border-white/10 p-4 hover:border-amber-400/40 transition-colors">
-                <div className="text-amber-300 text-xs mb-2">AI Operations</div>
-                <div className="text-white font-semibold">AI 2027: Operational Risk Budgets</div>
-                <div className="text-zion-slate-light text-sm mt-1">Budget‑aware routing, KPI canaries, and instant rollback.</div>
-              </Link>
-              <Link to="/blog/ai-2026-reliability-runbooks-v4" className="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
-                <div className="text-cyan-300 text-xs mb-2">AI Operations</div>
-                <div className="text-white font-semibold">AI 2026: Reliability Runbooks v4</div>
-                <div className="text-zion-slate-light text-sm mt-1">Budgeted actions, KPI canaries, and instant rollback—v4 playbooks.</div>
-              </Link>
-              
-            </div>
-            {/* Newly created articles – highlight */}
-            <div className="grid md:grid-cols-3 gap-4 mt-4">
-              <Link to="/blog/ai-operational-trust-scorecards-2026" className="block rounded-lg border border-white/10 p-4 hover:border-purple-400/40 transition-colors">
-                <div className="text-purple-300 text-xs mb-2">AI Operations</div>
-                <div className="text-white font-semibold">AI Operational Trust Scorecards 2026</div>
-                <div className="text-zion-slate-light text-sm mt-1">SLIs → KPIs with budgets, canaries, and instant rollback.</div>
-              </Link>
-              <Link to="/blog/edge-zero-pii-analytics-2026" className="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
-                <div className="text-cyan-300 text-xs mb-2">Analytics</div>
-                <div className="text-white font-semibold">Zero‑PII Edge Analytics 2026</div>
-                <div className="text-zion-slate-light text-sm mt-1">Scoped IDs, edge aggregation, DP noise at &lt;100ms.</div>
-              </Link>
-              <Link to="/blog/fintech-2025-sept-30-ai-financial-modeling-guide" className="block rounded-lg border border-white/10 p-4 hover:border-blue-400/40 transition-colors">
-                <div className="text-blue-300 text-xs mb-2">FinTech AI</div>
-                <div className="text-white font-semibold">AI Financial Modeling Guide</div>
-                <div className="text-zion-slate-light text-sm mt-1">Backtests, budgets, and governance for reliable financial AI.</div>
-              </Link>
-            </div>
-          </div>
         </div>
-
-        {/* New: October 2025 New Content Banner (promotes fresh posts) */}
-        <div className="container mx-auto px-6 mt-6">
-          <October2025NewContentBanner />
-        </div>
-
-        {/* Newly added content promo */}
-        <div className="container mx-auto px-6 mt-6">
-          <div className="rounded-xl border border-white/10 bg-white/5 p-6">
-            <div className="text-white text-sm mb-4">Just added</div>
-            <div className="grid md:grid-cols-3 gap-4">
-              <Link to="/blog/enterprise-rag-security-2027" className="block rounded-lg border border-white/10 p-4 hover:border-indigo-400/40 transition-colors">
-                <div className="text-indigo-300 text-xs mb-2">AI Security</div>
-                <div className="text-white font-semibold">Enterprise RAG Security 2027</div>
-                <div className="text-zion-slate-light text-sm mt-1">Auth‑aware retrieval, freshness windows, prompt firewalls, signed outputs.</div>
-              </Link>
-              <Link to="/blog/edge-consentless-personalization-2027" className="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
-                <div className="text-cyan-300 text-xs mb-2">Edge Computing</div>
-                <div className="text-white font-semibold">Edge Personalization 2027</div>
-                <div className="text-zion-slate-light text-sm mt-1">Zero‑PII, sub‑100ms journeys with scoped IDs and on‑device models.</div>
-              </Link>
-              <Link to="/blog/real-time-decision-engines-2026" className="block rounded-lg border border-white/10 p-4 hover:border-blue-400/40 transition-colors">
-                <div className="text-blue-300 text-xs mb-2">Platform Engineering</div>
-                <div className="text-white font-semibold">Real‑Time Decision Engines 2026</div>
-                <div className="text-zion-slate-light text-sm mt-1">10M/sec under 1ms using warm pools, intent prefetching, and caches.</div>
-              </Link>
-            </div>
-          </div>
-        </div>
-        
-        {/* OCTOBER 2025 MEGA LAUNCH - 7 Revolutionary Articles */}
-        <div className="container mx-auto px-6 mt-6">
-          <October2025MegaLaunchBanner />
-        </div>
-        
-        {/* SEPTEMBER 30, 2025 - 5 Revolutionary AI Breakthroughs */}
-        <div className="container mx-auto px-6 mt-6 mb-6">
-          <September30NewContentMegaBanner />
-        </div>
-        
-        {/* BREAKTHROUGH CONTENT 2026 - September 30, 2025 */}
-        <div className="container mx-auto px-6 mt-6">
-          <Revolutionary2026ContentMegaBanner />
-        </div>
-        
-        {/* New Comprehensive Promotional Banner */}
-        <div className="container mx-auto px-6 mt-6">
-          <ComprehensivePromoBanner variant="hero" showCount={4} />
-        </div>
-        
-        {/* New Articles Promotional Banner */}
-        <div className="container mx-auto px-6 mt-6">
-          <NewArticlesPromoBanner variant="premium" showCount={3} />
-        </div>
-        
-        {/* New Services Promotional Banner */}
-        <div className="container mx-auto px-6 mt-6">
-          <NewServicesPromoBanner variant="showcase" showCount={3} featuredOnly={true} />
-        </div>
-        
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 NEW: Oct 03 — Governed Autonomy Scorecards, Private Edge Telemetry, GenAI Quality Tiers v4"
-          description="Fresh drops: Governed Autonomy Scorecards, Private Telemetry at the Edge, and GenAI Quality Tiers v4. Ship faster with safety, privacy, and ROI."
-          ctaText="Read the Latest"
-          ctaLink="/blog"
+          title="🚀 Fresh: AI Platform Engineering 2025 + Edge AI Latency Budgets"
+          description="New long‑form guide plus new articles across Platform, Governance, Security, and MLOps."
+          ctaText="Read the latest"
+          ctaLink="/blog/ai-platform-engineering-2025"
           dismissible={true}
         />
         {/* Animated background elements */}
@@ -494,15 +156,65 @@ const Home = () => {
             <div className="bg-gradient-to-r from-green-500/20 to-blue-500/20 border border-green-400/30 rounded-xl p-6 mb-8 animate-fade-in">
               <div className="flex items-center justify-center gap-3 mb-3">
                 <Sparkles className="w-6 h-6 text-green-400 animate-pulse" />
-                <span className="text-lg font-bold text-green-400">LIMITED TIME OFFER</span>
+                <span className="text-lg font-bold text-green-400">🔥 NEW: AI AUTONOMOUS OPERATIONS</span>
                 <Sparkles className="w-6 h-6 text-green-400 animate-pulse" />
               </div>
               <p className="text-white text-lg font-semibold mb-2">
-                🎯 Get 50% OFF Your First 3 Months + FREE AI Strategy Consultation
+                🚀 Revolutionary AI that manages your entire infrastructure autonomously - Self-healing, self-optimizing, self-scaling!
               </p>
-              <p className="text-zion-slate-light text-sm">
-                Valid until March 31, 2025 • No setup fees • Cancel anytime
+              <p className="text-zion-slate-light text-sm mb-4">
+                Get 50% OFF Your First 3 Months + FREE AI Strategy Consultation • Valid until March 31, 2025
               </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <Link
+                  to="/services/ai-autonomous-operations"
+                  className="bg-green-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-green-600 transition-colors text-center"
+                >
+                  Explore AI Autonomous Operations
+                </Link>
+                <Link
+                  to="/contact"
+                  className="border border-green-400 text-green-400 px-6 py-2 rounded-lg font-semibold hover:bg-green-400 hover:text-white transition-colors text-center"
+                >
+                  Start Free Trial
+                </Link>
+              </div>
+            </div>
+
+            {/* New Content Announcement */}
+            <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-xl p-6 mb-8 animate-fade-in">
+              <div className="flex items-center justify-center gap-3 mb-3">
+                <Sparkles className="w-6 h-6 text-purple-400 animate-pulse" />
+                <span className="text-lg font-bold text-purple-400">📚 FRESH CONTENT ALERT</span>
+                <Sparkles className="w-6 h-6 text-purple-400 animate-pulse" />
+              </div>
+              <p className="text-white text-lg font-semibold mb-2">
+                🎯 Just Published: New guides on Autonomous Ops, AI Cybersecurity, Cloud Scorecards, GenAI Evals, and Edge Flags
+              </p>
+              <p className="text-zion-slate-light text-sm mb-4">
+                Discover cutting-edge insights on SLO-driven controllers, behavioral detections, scalable cloud governance, live eval canaries, and zero‑regret rollouts.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <Link
+                  to="/blog"
+                  className="bg-purple-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-purple-600 transition-colors text-center"
+                >
+                  Read Latest Articles
+                </Link>
+                <Link
+                  to="/insights"
+                  className="border border-purple-400 text-purple-400 px-6 py-2 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-colors text-center"
+                >
+                  View Insights
+                </Link>
+              </div>
+              <div className="mt-4 flex flex-wrap gap-2 justify-center">
+                <span className="bg-purple-100/20 text-purple-200 px-3 py-1 rounded-full text-xs font-medium border border-purple-300/20">Autonomous Ops</span>
+                <span className="bg-rose-100/20 text-rose-200 px-3 py-1 rounded-full text-xs font-medium border border-rose-300/20">AI Security</span>
+                <span className="bg-blue-100/20 text-blue-200 px-3 py-1 rounded-full text-xs font-medium border border-blue-300/20">Cloud Scorecards</span>
+                <span className="bg-emerald-100/20 text-emerald-200 px-3 py-1 rounded-full text-xs font-medium border border-emerald-300/20">GenAI Evals</span>
+                <span className="bg-cyan-100/20 text-cyan-200 px-3 py-1 rounded-full text-xs font-medium border border-cyan-300/20">Edge Flags</span>
+              </div>
             </div>
 
             {/* Stats */}
@@ -552,227 +264,107 @@ const Home = () => {
           </div>
         </section>
 
-        {/* New Content Showcase */}
-        <section className="container mx-auto px-6 py-16 relative z-10">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/20 text-purple-400 text-sm font-medium mb-6 animate-pulse">
-              🔥 HOT NEW CONTENT - OCTOBER 2025
-            </div>
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Revolutionary AI & Technology Insights
-            </h2>
-            <p className="text-lg text-zion-slate-light max-w-3xl mx-auto">
-              Discover our latest breakthrough articles on AI autonomous operations, quantum computing, 
-              edge AI manufacturing, and Zero Trust security implementation.
-            </p>
+        {/* Latest Insights Section */}
+        {/* Promo ribbon for new content */}
+        <div className="container mx-auto px-6">
+          <div className="mb-6 rounded-full bg-emerald-500/15 border border-emerald-400/30 px-6 py-3 text-emerald-200 text-sm inline-flex items-center gap-2">
+            <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            New: AI Product Roadmaps, SBOM Automation, and Online GenAI Evals — read now
+            <Link to="/insights" className="text-emerald-300 underline underline-offset-4 hover:text-white">View</Link>
           </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            {/* AI Autonomous Operations */}
-            <div className="bg-gradient-to-br from-red-500/20 to-orange-500/20 border border-red-400/30 rounded-xl p-6 hover:scale-105 transition-all duration-300 group">
-              <div className="bg-red-500/20 w-12 h-12 rounded-lg flex items-center justify-center mb-4 group-hover:bg-red-500/30 transition-colors">
-                <Zap className="w-6 h-6 text-red-400" />
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">AI Autonomous Operations</h3>
-              <p className="text-zion-slate-light text-sm mb-3">
-                99.9% uptime, 75% cost reduction, self-healing infrastructure
-              </p>
-              <Link to="/blog/revolutionary-ai-autonomous-operations-2025" className="text-red-400 text-sm font-medium hover:text-red-300 transition-colors">
-                Read Article →
-              </Link>
-            </div>
-
-            {/* Quantum Computing */}
-            <div className="bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border border-blue-400/30 rounded-xl p-6 hover:scale-105 transition-all duration-300 group">
-              <div className="bg-blue-500/20 w-12 h-12 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-500/30 transition-colors">
-                <Target className="w-6 h-6 text-blue-400" />
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Quantum Computing</h3>
-              <p className="text-zion-slate-light text-sm mb-3">
-                Real-world business applications beyond the hype
-              </p>
-              <Link to="/blog/quantum-computing-business-applications-2025" className="text-blue-400 text-sm font-medium hover:text-blue-300 transition-colors">
-                Read Article →
-              </Link>
-            </div>
-
-            {/* AI Business Automation */}
-            <div className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 border border-green-400/30 rounded-xl p-6 hover:scale-105 transition-all duration-300 group">
-              <div className="bg-green-500/20 w-12 h-12 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-500/30 transition-colors">
-                <Users className="w-6 h-6 text-green-400" />
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">AI Business Automation</h3>
-              <p className="text-zion-slate-light text-sm mb-3">
-                $2.3M annual savings, 80% efficiency gains
-              </p>
-              <Link to="/blog/ai-powered-business-automation-2025" className="text-green-400 text-sm font-medium hover:text-green-300 transition-colors">
-                Read Article →
-              </Link>
-            </div>
-
-            {/* Next-Gen Cloud Infrastructure */}
-            <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-xl p-6 hover:scale-105 transition-all duration-300 group">
-              <div className="bg-purple-500/20 w-12 h-12 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-500/30 transition-colors">
-                <Shield className="w-6 h-6 text-purple-400" />
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Next-Gen Cloud Infrastructure</h3>
-              <p className="text-zion-slate-light text-sm mb-3">
-                300% performance boost, 60% cost reduction
-              </p>
-              <Link to="/blog/next-gen-cloud-infrastructure" className="text-purple-400 text-sm font-medium hover:text-purple-300 transition-colors">
-                Read Article →
-              </Link>
-            </div>
-          </div>
-
-          {/* Second Row of Content Cards */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            {/* Enterprise AI Implementation */}
-            <div className="bg-gradient-to-br from-orange-500/20 to-red-500/20 border border-orange-400/30 rounded-xl p-6 hover:scale-105 transition-all duration-300 group">
-              <div className="bg-orange-500/20 w-12 h-12 rounded-lg flex items-center justify-center mb-4 group-hover:bg-orange-500/30 transition-colors">
-                <Star className="w-6 h-6 text-orange-400" />
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Enterprise AI Implementation</h3>
-              <p className="text-zion-slate-light text-sm mb-3">
-                500% ROI in 6 months, strategic roadmaps
-              </p>
-              <Link to="/blog/enterprise-ai-implementation-roadmap" className="text-orange-400 text-sm font-medium hover:text-orange-300 transition-colors">
-                Read Article →
-              </Link>
-            </div>
-
-            {/* Edge AI Manufacturing */}
-            <div className="bg-gradient-to-br from-teal-500/20 to-green-500/20 border border-teal-400/30 rounded-xl p-6 hover:scale-105 transition-all duration-300 group">
-              <div className="bg-teal-500/20 w-12 h-12 rounded-lg flex items-center justify-center mb-4 group-hover:bg-teal-500/30 transition-colors">
-                <Shield className="w-6 h-6 text-teal-400" />
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Edge AI Manufacturing</h3>
-              <p className="text-zion-slate-light text-sm mb-3">
-                40% quality improvement, 30% defect reduction
-              </p>
-              <Link to="/blog/edge-ai-manufacturing-revolution" className="text-teal-400 text-sm font-medium hover:text-teal-300 transition-colors">
-                Read Article →
-              </Link>
-            </div>
-
-            {/* Zero Trust Security */}
-            <div className="bg-gradient-to-br from-indigo-500/20 to-purple-500/20 border border-indigo-400/30 rounded-xl p-6 hover:scale-105 transition-all duration-300 group">
-              <div className="bg-indigo-500/20 w-12 h-12 rounded-lg flex items-center justify-center mb-4 group-hover:bg-indigo-500/30 transition-colors">
-                <Shield className="w-6 h-6 text-indigo-400" />
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Zero Trust Security</h3>
-              <p className="text-zion-slate-light text-sm mb-3">
-                95% reduction in security incidents
-              </p>
-              <Link to="/blog/zero-trust-security-implementation-guide" className="text-indigo-400 text-sm font-medium hover:text-indigo-300 transition-colors">
-                Read Article →
-              </Link>
-            </div>
-
-            {/* Micro SAAS Platform Architecture */}
-            <div className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 rounded-xl p-6 hover:scale-105 transition-all duration-300 group">
-              <div className="bg-cyan-500/20 w-12 h-12 rounded-lg flex items-center justify-center mb-4 group-hover:bg-cyan-500/30 transition-colors">
-                <Target className="w-6 h-6 text-cyan-400" />
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Micro SAAS Platform Architecture</h3>
-              <p className="text-zion-slate-light text-sm mb-3">
-                10x growth in 12 months, scalable patterns
-              </p>
-              <Link to="/blog/micro-saas-platform-architecture" className="text-cyan-400 text-sm font-medium hover:text-cyan-300 transition-colors">
-                Read Article →
-              </Link>
-            </div>
-          </div>
-
-          <div className="text-center">
-            <Link
-              to="/blog"
-              className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 border border-white/20"
-            >
-              View All Articles
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-        </section>
-
+        </div>
+        <LatestInsights />
 
         {/* New Services Showcase */}
-        <section className="container mx-auto px-6 py-20 relative z-10">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-red-500/20 text-red-400 text-sm font-medium mb-6 animate-pulse">
-              🔥 HOT NEW SERVICES - 2025
-            </div>
-            <h2 className="text-4xl font-bold text-white mb-4 animate-slide-up">
-              Revolutionary AI-Powered Solutions
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Transform your business with our cutting-edge AI micro SAAS platform. 
-              From workflow automation to predictive analytics - we've got you covered.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            <div className="card group hover:scale-105 transition-all duration-300 hover:shadow-2xl border-2 border-green-500/30 bg-green-500/10">
-              <div className="bg-green-500/20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:bg-green-500/30 transition-colors border border-green-500/30 shadow-lg">
-                <Zap className="w-8 h-8 text-green-400 group-hover:scale-110 transition-transform duration-300" />
+        <section className="py-20 bg-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-50/50 to-purple-50/50"></div>
+          <div className="container mx-auto px-6 relative z-10">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-medium mb-8">
+                <Sparkles className="w-4 h-4 mr-2" />
+                New Services Available
               </div>
-              <h3 className="text-xl font-semibold text-white mb-4">
-                AI Workflow Automation
-              </h3>
-              <p className="text-zion-slate-light mb-4">
-                Reduce manual tasks by 80% with intelligent process automation. 
-                Starting at just $99/month.
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                Latest AI & Security Solutions
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Discover our newest services designed to accelerate your digital transformation 
+                and protect your business from evolving threats.
               </p>
-              <div className="bg-green-500/20 rounded-lg p-3 mb-4">
-                <div className="text-green-400 font-bold text-lg">💰 Save $50,000+ annually</div>
-                <div className="text-green-300 text-sm">Average ROI in 3 months</div>
-              </div>
-              <Link to="/services/ai-workflow-automation" className="btn-primary w-full text-center">
-                Start Free Trial
-              </Link>
             </div>
 
-            <div className="card group hover:scale-105 transition-all duration-300 hover:shadow-2xl border-2 border-blue-500/30 bg-blue-500/10">
-              <div className="bg-blue-500/20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-500/30 transition-colors border border-blue-500/30 shadow-lg">
-                <Users className="w-8 h-8 text-blue-400 group-hover:scale-110 transition-transform duration-300" />
+            <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+              <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl p-8 text-white hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+                <div className="flex items-center justify-between mb-6">
+                  <Zap className="w-12 h-12 text-blue-300" />
+                  <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-medium">NEW</span>
+                </div>
+                <h3 className="text-2xl font-bold mb-4">AI Automation Platform</h3>
+                <p className="text-blue-100 mb-6">
+                  Transform your business processes with intelligent automation. 
+                  Reduce costs by 75% and increase efficiency by 10x.
+                </p>
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center text-blue-100">
+                    <CheckCircle className="w-5 h-5 mr-3 text-blue-300" />
+                    <span className="text-sm">Process Mining & Discovery</span>
+                  </div>
+                  <div className="flex items-center text-blue-100">
+                    <CheckCircle className="w-5 h-5 mr-3 text-blue-300" />
+                    <span className="text-sm">Smart Automation Bots</span>
+                  </div>
+                  <div className="flex items-center text-blue-100">
+                    <CheckCircle className="w-5 h-5 mr-3 text-blue-300" />
+                    <span className="text-sm">Low-Code Workflow Builder</span>
+                  </div>
+                </div>
+                <Link 
+                  to="/services/ai-automation-platform" 
+                  className="bg-white text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 transition-colors"
+                >
+                  Learn More
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-4">
-                AI Virtual Assistant
-              </h3>
-              <p className="text-zion-slate-light mb-4">
-                24/7 intelligent customer support and business operations. 
-                Starting at just $79/month.
-              </p>
-              <div className="bg-blue-500/20 rounded-lg p-3 mb-4">
-                <div className="text-blue-400 font-bold text-lg">📈 40% increase in conversions</div>
-                <div className="text-blue-300 text-sm">90% faster response time</div>
-              </div>
-              <Link to="/services/ai-virtual-assistant" className="btn-primary w-full text-center">
-                Get Started Now
-              </Link>
-            </div>
 
-            <div className="card group hover:scale-105 transition-all duration-300 hover:shadow-2xl border-2 border-purple-500/30 bg-purple-500/10">
-              <div className="bg-purple-500/20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:bg-purple-500/30 transition-colors border border-purple-500/30 shadow-lg">
-                <Target className="w-8 h-8 text-purple-400 group-hover:scale-110 transition-transform duration-300" />
+              <div className="bg-gradient-to-br from-gray-900 to-blue-900 rounded-2xl p-8 text-white hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+                <div className="flex items-center justify-between mb-6">
+                  <Shield className="w-12 h-12 text-blue-400" />
+                  <span className="bg-red-500/20 px-3 py-1 rounded-full text-sm font-medium border border-red-500/30">SECURE</span>
+                </div>
+                <h3 className="text-2xl font-bold mb-4">AI Cybersecurity Suite</h3>
+                <p className="text-gray-300 mb-6">
+                  Advanced AI-powered security that detects and prevents threats 
+                  with 99.9% accuracy and sub-minute response times.
+                </p>
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center text-gray-300">
+                    <CheckCircle className="w-5 h-5 mr-3 text-green-400" />
+                    <span className="text-sm">Real-time Threat Detection</span>
+                  </div>
+                  <div className="flex items-center text-gray-300">
+                    <CheckCircle className="w-5 h-5 mr-3 text-green-400" />
+                    <span className="text-sm">Automated Incident Response</span>
+                  </div>
+                  <div className="flex items-center text-gray-300">
+                    <CheckCircle className="w-5 h-5 mr-3 text-green-400" />
+                    <span className="text-sm">Zero-Trust Architecture</span>
+                  </div>
+                </div>
+                <Link 
+                  to="/services/ai-cybersecurity-suite" 
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 transition-colors"
+                >
+                  Explore Security
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-4">
-                AI Data Analytics
-              </h3>
-              <p className="text-zion-slate-light mb-4">
-                Transform data into actionable insights with machine learning. 
-                Starting at just $149/month.
-              </p>
-              <div className="bg-purple-500/20 rounded-lg p-3 mb-4">
-                <div className="text-purple-400 font-bold text-lg">🎯 60% better decisions</div>
-                <div className="text-purple-300 text-sm">70% risk reduction</div>
-              </div>
-              <Link to="/services/ai-data-analytics" className="btn-primary w-full text-center">
-                View Demo
-              </Link>
             </div>
           </div>
         </section>
+
+        {/* Latest Insights Section */}
+        <LatestInsights />
 
         {/* Features Section */}
         <section className="container mx-auto px-6 py-20 relative z-10">
@@ -901,20 +493,78 @@ const Home = () => {
             <h3 className="text-3xl font-bold text-white">Latest Insights</h3>
             <Link to="/insights" className="text-zion-cyan hover:underline">View all</Link>
           </div>
-          <div className="grid md:grid-cols-4 gap-6">
-            {latestInsights.slice(0, 4).map((item) => (
+          <div className="grid md:grid-cols-3 gap-6">
+            {[...latestInsights.slice(0, 2), ...featuredInsights.slice(0, 1)].map((item) => (
               <article key={item.id} className="card hover:scale-105 transition-all duration-300 hover:shadow-2xl">
                 <div className="p-6">
-                  <div className="text-xs uppercase tracking-wider text-zion-cyan mb-2">{item.category}</div>
+                  <div className="flex items-center justify-between mb-2">
+                    <div className="text-xs uppercase tracking-wider text-zion-cyan">{item.category}</div>
+                    {item.featured && (
+                      <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs px-2 py-1 rounded-full font-medium">
+                        FEATURED
+                      </span>
+                    )}
+                  </div>
                   <h4 className="text-xl font-semibold text-white mb-2">{item.title}</h4>
                   <p className="text-zion-slate-light mb-4">{item.summary}</p>
-                  <div className="text-sm text-zion-slate flex items-center justify-between">
+                  <div className="flex items-center justify-between text-sm text-zion-slate">
                     <span>{new Date(item.date).toLocaleDateString()}</span>
                     <span>{item.readMinutes} min read</span>
                   </div>
                 </div>
               </article>
             ))}
+          </div>
+        </section>
+
+        {/* New Content Announcement */}
+        <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-black opacity-10"></div>
+          <div className="container mx-auto px-6 relative z-10">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 text-white text-sm font-medium mb-6 border border-white/30">
+                <Sparkles className="w-4 h-4 mr-2" />
+                Fresh Content Available
+              </div>
+              <h2 className="text-4xl font-bold mb-4">
+                Latest Articles & Insights
+              </h2>
+              <p className="text-xl text-indigo-100 max-w-3xl mx-auto">
+                Stay ahead of the curve with our latest articles on AI automation, 
+                cybersecurity, and emerging technologies.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {newInsights.slice(0, 3).map((insight) => (
+                <div key={insight.id} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-xs uppercase tracking-wider text-indigo-300">{insight.category}</span>
+                    {insight.featured && (
+                      <span className="bg-yellow-400 text-black text-xs px-2 py-1 rounded-full font-medium">
+                        FEATURED
+                      </span>
+                    )}
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-3">{insight.title}</h3>
+                  <p className="text-indigo-100 mb-4 text-sm">{insight.summary}</p>
+                  <div className="flex items-center justify-between text-sm text-indigo-200">
+                    <span>{new Date(insight.date).toLocaleDateString()}</span>
+                    <span>{insight.readMinutes} min read</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="text-center mt-12">
+              <Link 
+                to="/blog" 
+                className="bg-white text-indigo-600 hover:bg-indigo-50 px-8 py-4 rounded-lg font-semibold text-lg inline-flex items-center gap-2 transition-all duration-300 hover:scale-105"
+              >
+                Read All Articles
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
           </div>
         </section>
 
@@ -1023,15 +673,39 @@ const Home = () => {
         {/* Latest Articles */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-6">
+            {/* New Content Announcement */}
+            <div className="bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-400/30 rounded-xl p-6 mb-10">
+              <div className="flex items-center gap-3 mb-3">
+                <Sparkles className="w-5 h-5 text-purple-500 animate-pulse" />
+                <span className="text-lg font-bold text-purple-700">📚 NEW CONTENT ALERT</span>
+                <Sparkles className="w-5 h-5 text-purple-500 animate-pulse" />
+              </div>
+              <p className="text-gray-700 font-semibold mb-2">
+                🚀 Just Published: 5 Revolutionary Articles on AI Automation, Cloud Infrastructure, and Enterprise AI Implementation
+              </p>
+              <p className="text-gray-600 text-sm mb-4">
+                Discover the latest insights on AI-powered business automation, next-gen cloud infrastructure, and strategic AI roadmaps for 2025.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-medium">AI Automation</span>
+                <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Cloud Strategy</span>
+                <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-medium">AI Governance</span>
+                <span className="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-xs font-medium">Platform Engineering</span>
+              </div>
+            </div>
+            
             <div className="mb-10 flex items-end justify-between">
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-2">Latest Articles</h2>
-                <p className="text-gray-600">Insights from our team to help you move faster.</p>
+                <p className="text-gray-600">Fresh: AI Platform ROI, Secure ML Supply Chain, and Enterprise RAG Blueprint.</p>
               </div>
               <Link to="/blog" className="text-indigo-700 font-semibold hover:text-indigo-800">View all →</Link>
             </div>
             <div className="grid gap-8 md:grid-cols-3">
-              {posts.slice(0, 3).map((post) => (
+              {[...posts]
+                .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
+                .slice(0, 3)
+                .map((post) => (
                 <article key={post.slug} className="bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
                   <div className="p-6">
                     <div className="text-sm text-indigo-600 font-medium mb-2">{post.category}</div>
@@ -1129,7 +803,7 @@ const Home = () => {
                 <div className="max-w-2xl">
                   <h2 className="text-3xl font-bold mb-2">Latest from Zion Insights</h2>
                   <p className="text-white/90">
-                    Fresh articles on real-time data pipelines, north-star metrics, and safe, scalable GenAI ops.
+                    New: AI Platform ROI scorecards, securing the ML supply chain, and Enterprise RAG v2.
                   </p>
                 </div>
                 <Link to="/blog" className="bg-white text-indigo-700 hover:bg-indigo-50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 self-start md:self-auto">
@@ -1141,16 +815,16 @@ const Home = () => {
               {/* Inline featured list (auto-curated highlights) */}
               <div className="mt-8 grid gap-6 md:grid-cols-3">
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-rose-200 mb-1">AI Governance</div>
-                  <div className="font-semibold text-white">AI Governance Risk Playbook 2025</div>
+                  <div className="text-sm text-purple-200 mb-1">AI Strategy</div>
+                  <div className="font-semibold text-white">AI Platform ROI Scorecards</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-blue-200 mb-1">Observability</div>
-                  <div className="font-semibold text-white">End‑to‑End Observability for Edge Apps</div>
+                  <div className="text-sm text-blue-200 mb-1">GenAI</div>
+                  <div className="font-semibold text-white">Enterprise RAG Blueprint v2</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-purple-200 mb-1">MLOps</div>
-                  <div className="font-semibold text-white">Cost‑Aware MLOps</div>
+                  <div className="text-sm text-rose-200 mb-1">Security</div>
+                  <div className="font-semibold text-white">Secure ML Supply Chain</div>
                 </div>
               </div>
             </div>
