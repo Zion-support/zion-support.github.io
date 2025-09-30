@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 "use client";
 =======
 'use client';
 >>>>>>> origin/cursor/create-and-deploy-new-content-f7bf
+=======
+'use client';
+>>>>>>> origin/cursor/create-and-deploy-new-content-37e0
 
 import React, { useState } from 'react';
 import Link from 'next/link';
