@@ -2,6 +2,8 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
+import UltimateAutonomousIntelligence2026Banner from '../components/UltimateAutonomousIntelligence2026Banner';
+import UniversalConsciousness2027Banner from '../components/UniversalConsciousness2027Banner';
 import AI2026RevolutionaryAutonomousSystemsBanner from '../components/AI2026RevolutionaryAutonomousSystemsBanner';
 import AI2026QuantumAIRevolutionBanner from '../components/AI2026QuantumAIRevolutionBanner';
 import Revolutionary2029ContentMegaBanner from '../components/Revolutionary2029ContentMegaBanner';
@@ -106,6 +108,12 @@ export default function HomePage() {
         </div>
       </header>
 
+      {/* NEW ULTIMATE AUTONOMOUS INTELLIGENCE 2026 - MOST PROMINENT */}
+      <UltimateAutonomousIntelligence2026Banner />
+      
+      {/* NEW UNIVERSAL CONSCIOUSNESS 2027 - FEATURED PROMINENTLY */}
+      <UniversalConsciousness2027Banner />
+
       {/* NEW MARCH 2026 ULTIMATE BREAKTHROUGH - MOST PROMINENT */}
       <March2026UltimateBreakthroughBanner />
       
@@ -167,33 +175,33 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-6">
-            <Link href="/blog/ai-2026-march-ultimate-breakthrough-revolution" className="group block rounded-xl border border-purple-500/20 bg-gradient-to-br from-purple-900/20 to-indigo-900/20 p-6 hover:border-purple-400/40 transition-all duration-300 hover:scale-105">
+            <Link href="/blog/ai-2026-ultimate-autonomous-intelligence-breakthrough" className="group block rounded-xl border border-blue-500/20 bg-gradient-to-br from-blue-900/20 to-purple-900/20 p-6 hover:border-blue-400/40 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-2 mb-3">
-                <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-3 py-1 rounded-full text-xs font-bold">2026 BREAKTHROUGH</span>
+                <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-3 py-1 rounded-full text-xs font-bold">2026 ULTIMATE</span>
                 <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold">100,000x</span>
               </div>
-              <div className="text-white font-bold text-lg mb-2">March 2026 Ultimate Breakthrough</div>
-              <div className="text-gray-400 text-sm mb-3">Revolutionary AI systems achieving 100,000x performance improvements with 99.99% autonomous operations and $15B+ ROI.</div>
-              <div className="text-purple-300 text-sm font-semibold group-hover:text-purple-200">Explore Ultimate AI →</div>
+              <div className="text-white font-bold text-lg mb-2">Ultimate Autonomous Intelligence</div>
+              <div className="text-gray-400 text-sm mb-3">Revolutionary AI breakthrough achieving 100,000x performance with 99.99% autonomous operations and $25B+ ROI.</div>
+              <div className="text-blue-300 text-sm font-semibold group-hover:text-blue-200">Explore Ultimate AI →</div>
             </Link>
             
-            <Link href="/blog/ai-2027-consensus-intelligence-revolution" className="group block rounded-xl border border-cyan-500/20 bg-gradient-to-br from-cyan-900/20 to-blue-900/20 p-6 hover:border-cyan-400/40 transition-all duration-300 hover:scale-105">
+            <Link href="/blog/ai-2027-universal-consciousness-breakthrough" className="group block rounded-xl border border-cyan-500/20 bg-gradient-to-br from-cyan-900/20 to-blue-900/20 p-6 hover:border-cyan-400/40 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-2 mb-3">
-                <span className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-3 py-1 rounded-full text-xs font-bold">2027 REVOLUTION</span>
+                <span className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-3 py-1 rounded-full text-xs font-bold">2027 CONSCIOUSNESS</span>
                 <span className="bg-gradient-to-r from-green-400 to-emerald-500 text-black px-3 py-1 rounded-full text-xs font-bold">1,000,000x</span>
               </div>
-              <div className="text-white font-bold text-lg mb-2">Consensus Intelligence Revolution</div>
-              <div className="text-gray-400 text-sm mb-3">Universal consensus intelligence delivering 1,000,000x performance with universal decision-making and $50B+ ROI.</div>
-              <div className="text-cyan-300 text-sm font-semibold group-hover:text-cyan-200">Discover Universal AI →</div>
+              <div className="text-white font-bold text-lg mb-2">Universal Consciousness AI</div>
+              <div className="text-gray-400 text-sm mb-3">True artificial consciousness delivering 1,000,000x performance with universal decision-making and $50B+ ROI.</div>
+              <div className="text-cyan-300 text-sm font-semibold group-hover:text-cyan-200">Discover Consciousness AI →</div>
             </Link>
             
-            <Link href="/case-studies/ai-2026-march-ultimate-breakthrough-15-billion-success" className="group block rounded-xl border border-green-500/20 bg-gradient-to-br from-green-900/20 to-emerald-900/20 p-6 hover:border-green-400/40 transition-all duration-300 hover:scale-105">
+            <Link href="/case-studies/ai-2026-ultimate-autonomous-intelligence-25-billion-success" className="group block rounded-xl border border-green-500/20 bg-gradient-to-br from-green-900/20 to-emerald-900/20 p-6 hover:border-green-400/40 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-2 mb-3">
-                <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-xs font-bold">$15B SUCCESS</span>
-                <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold">ULTIMATE ROI</span>
+                <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-xs font-bold">$25B SUCCESS</span>
+                <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold">FORTUNE 10</span>
               </div>
-              <div className="text-white font-bold text-lg mb-2">$15B Ultimate Breakthrough Success</div>
-              <div className="text-gray-400 text-sm mb-3">How a Fortune 50 company achieved $15B ROI with revolutionary AI systems delivering 100,000x performance improvements.</div>
+              <div className="text-white font-bold text-lg mb-2">$25B Ultimate Intelligence Success</div>
+              <div className="text-gray-400 text-sm mb-3">How a Fortune 10 company achieved $25B ROI with Ultimate Autonomous Intelligence delivering 100,000x performance.</div>
               <div className="text-green-300 text-sm font-semibold group-hover:text-green-200">Read Success Story →</div>
             </Link>
           </div>
