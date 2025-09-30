@@ -32,8 +32,13 @@ self.addEventListener('activate', (event) => {
       .then((cacheNames) => {
         return Promise.all(
           cacheNames
-            .filter((cacheName) => cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE)
-            .map((cacheName) => caches.delete(cacheName))
+            .filter((cacheName) => {
+              return cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE;
+            })
+            .map((cacheName) => {
+              console.log('Deleting old cache:', cacheName);
+              return caches.delete(cacheName);
+            })
         );
       })
       .then(() => self.clients.claim())
@@ -46,10 +51,14 @@ self.addEventListener('fetch', (event) => {
   const url = new URL(request.url);
 
   // Skip non-GET requests
-  if (request.method !== 'GET') return;
+  if (request.method !== 'GET') {
+    return;
+  }
 
-  // Skip cross-origin requests
-  if (url.origin !== location.origin) return;
+  // Skip chrome-extension and other non-http requests
+  if (!url.protocol.startsWith('http')) {
+    return;
+  }
 
   event.respondWith(
     caches.match(request)
@@ -70,7 +79,7 @@ self.addEventListener('fetch', (event) => {
             // Clone the response
             const responseToCache = response.clone();
 
-            // Cache the response
+            // Cache dynamic content
             caches.open(DYNAMIC_CACHE)
               .then((cache) => {
                 cache.put(request, responseToCache);
@@ -91,7 +100,8 @@ self.addEventListener('fetch', (event) => {
 // Background sync for offline actions
 self.addEventListener('sync', (event) => {
   if (event.tag === 'background-sync') {
-    event.waitUntil(doBackgroundSync());
+    console.log('Background sync triggered');
+    // Handle background sync tasks
   }
 });
 
@@ -128,15 +138,13 @@ self.addEventListener('push', (event) => {
   }
 });
 
-// Background sync function
-async function doBackgroundSync() {
-  // Implement background sync logic here
-  console.log('Performing background sync...');
-}
+// Notification click
+self.addEventListener('notificationclick', (event) => {
+  event.notification.close();
 
-// Message handling
-self.addEventListener('message', (event) => {
-  if (event.data && event.data.type === 'SKIP_WAITING') {
-    self.skipWaiting();
+  if (event.action === 'explore') {
+    event.waitUntil(
+      clients.openWindow('/')
+    );
   }
 });
