@@ -2,6 +2,7 @@ import React from 'react';
 import UnifiedContentPromotion from '../components/UnifiedContentPromotion';
 import January2026NeuralArchitectureSearchBanner from '../components/January2026NeuralArchitectureSearchBanner';
 import January2026FederatedLearningBanner from '../components/January2026FederatedLearningBanner';
+import AI2026RevolutionaryAutonomousEnterpriseBanner from '../components/AI2026RevolutionaryAutonomousEnterpriseBanner';
 
 export default function HomePage() {
   return (
@@ -13,7 +14,10 @@ export default function HomePage() {
         </div>
       </section>
       
-      {/* New Content Banners */}
+      {/* Revolutionary New Content - Featured First */}
+      <AI2026RevolutionaryAutonomousEnterpriseBanner />
+      
+      {/* Additional Content Banners */}
       <January2026NeuralArchitectureSearchBanner />
       <January2026FederatedLearningBanner />
       
