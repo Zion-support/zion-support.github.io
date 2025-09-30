@@ -27,24 +27,24 @@ export default function NewContentAdvertisingBanner() {
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               {[
                 { 
-                  title: 'Meta-Cognitive AI Deep Dive',
-                  description: 'AI that thinks about thinking',
-                  icon: '🧠',
-                  href: '/blog/meta-cognitive-ai-deep-dive-2026',
+                  title: 'Multi‑Agent Control Planes',
+                  description: 'Budgets, policy gates, deterministic rollback',
+                  icon: '🧩',
+                  href: '/blog/ai-2026-multi-agent-control-planes',
                   color: 'from-purple-500 to-indigo-500'
                 },
                 { 
-                  title: 'Quantum-Neural Networks Guide',
-                  description: '1000x processing speed achieved',
-                  icon: '⚛️',
-                  href: '/blog/quantum-neural-networks-guide-2026',
+                  title: 'Zero‑PII Edge Telemetry',
+                  description: 'Scoped IDs, DP noise, attestations',
+                  icon: '🛡️',
+                  href: '/blog/edge-2026-zero-pii-telemetry',
                   color: 'from-pink-500 to-purple-500'
                 },
                 { 
-                  title: 'Autonomous Operations Case Study',
-                  description: '98% automation rates realized',
-                  icon: '🤖',
-                  href: '/blog/autonomous-operations-case-study-2026',
+                  title: 'Quality Tiers v2',
+                  description: '50% cost with stable UX',
+                  icon: '⚖️',
+                  href: '/blog/genai-2026-quality-tiers-v2',
                   color: 'from-red-500 to-pink-500'
                 }
               ].map((item, index) => (
