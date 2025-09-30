@@ -18,6 +18,66 @@ interface ContentItem {
 }
 
 const contentItems: ContentItem[] = [
+<<<<<<< HEAD
+  // Brand new items (Sept 30, 2025)
+  {
+    id: 'ai-2027-operational-trust-blueprint',
+    title: 'AI 2027: Operational Trust Blueprint',
+    excerpt: 'SLIs wired to KPIs with budgeted actions, live canaries, and instant rollback.',
+    readTime: '9 min read',
+    category: 'AI Governance',
+    href: '/blog/ai-2027-operational-trust-blueprint',
+    featured: true,
+    publishedDate: '2025-09-30',
+    metrics: [
+      { value: '↗ KPI', label: 'Outcome Lift' },
+      { value: '↘ MTTR', label: 'Faster Recovery' }
+    ]
+  },
+  {
+    id: 'ai-2027-operational-scorecards',
+    title: 'AI 2027: Operational Scorecards — SLIs, Budgets, Rollback',
+    excerpt: 'Wire SLIs to KPIs with budgeted actions, approvals, and instant rollback for reliable autonomy.',
+    readTime: '9 min read',
+    category: 'AI Governance',
+    href: '/blog/ai-2027-operational-scorecards',
+    featured: true,
+    publishedDate: '2025-09-30',
+    metrics: [
+      { value: '↗ KPI', label: 'Outcome Lift' },
+      { value: '↘ MTTR', label: 'Faster Recovery' }
+    ]
+  },
+  {
+    id: 'edge-consentless-experiments-2026-q4',
+    title: 'Edge Consentless Experiments 2026 Q4: <100ms A/B Without PII',
+    excerpt: 'Scoped IDs, on-device metrics, and DP noise for compliant global experiments.',
+    readTime: '6 min read',
+    category: 'Analytics',
+    href: '/blog/edge-consentless-experiments-2026-q4',
+    featured: true,
+    publishedDate: '2025-09-30',
+    metrics: [
+      { value: '<100ms', label: 'Latency' },
+      { value: '0 PII', label: 'Collected' }
+    ]
+  },
+  {
+    id: 'edge-consentless-analytics-2026',
+    title: 'Edge Consentless Analytics 2026 — Scoped IDs, On‑Device, DP Noise',
+    excerpt: 'Compliant, fast analytics without PII: scoped IDs, device aggregation, and DP noise under 100ms.',
+    readTime: '8 min read',
+    category: 'Analytics',
+    href: '/blog/edge-consentless-analytics-2026',
+    featured: true,
+    publishedDate: '2025-09-30',
+    metrics: [
+      { value: '<100ms', label: 'Latency' },
+      { value: '0 PII', label: 'Collected' }
+    ]
+  },
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-acd2
   // Newly added items for additional promotion on the homepage
   {
     id: 'ai-sla-scorecards-2026-q1',
@@ -33,6 +93,52 @@ const contentItems: ContentItem[] = [
       { value: '↘ MTTR', label: 'Faster Recovery' }
     ]
   },
+<<<<<<< HEAD
+  // Newly created pages to promote (Sept 30, 2025)
+  {
+    id: 'ai-safety-scorecards-2026',
+    title: 'AI Safety Scorecards 2026: SLIs, Budgets, Rollback',
+    excerpt: 'Operational guardrails wired to KPIs with budgeted actions and instant rollback.',
+    readTime: '9 min read',
+    category: 'AI Governance',
+    href: '/blog/ai-safety-scorecards-2026',
+    featured: true,
+    publishedDate: '2025-09-30',
+    metrics: [
+      { value: '↗ KPI', label: 'Outcome Lift' },
+      { value: '↘ MTTR', label: 'Faster Recovery' }
+    ]
+  },
+  {
+    id: 'edge-governed-flags-2026',
+    title: 'Edge‑Governed Flags 2026: Safe Global Experiments',
+    excerpt: 'Scoped IDs, regional policy, and DP noise for sub‑100ms flags and experiments.',
+    readTime: '8 min read',
+    category: 'Analytics',
+    href: '/blog/edge-governed-flags-2026',
+    featured: true,
+    publishedDate: '2025-09-30',
+    metrics: [
+      { value: '<100ms', label: 'Latency' },
+      { value: '0 PII', label: 'Collected' }
+    ]
+  },
+  {
+    id: 'genai-cache-playbook-2026',
+    title: 'GenAI Cache Playbook 2026: Cut Cost, Keep Quality',
+    excerpt: 'Response + embedding caches with tiered TTL and cost‑aware routing for 30–70% savings.',
+    readTime: '11 min read',
+    category: 'FinOps',
+    href: '/blog/genai-cache-playbook-2026',
+    featured: true,
+    publishedDate: '2025-09-30',
+    metrics: [
+      { value: '30–70%', label: 'Savings' },
+      { value: '<200ms', label: 'P95 Latency' }
+    ]
+  },
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-acd2
   {
     id: 'edge-private-insights-v2-2026',
     title: 'Edge Private Insights v2 (2026): Scoped IDs, DP Noise, <100ms',
