@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { 
   NewBlogBanner, 
   AnalyticsPlatformBanner, 
@@ -19,6 +20,8 @@ import {
   FinTechSuccessBanner,
   NewContentShowcaseBanner
 } from '../components/PromotionalBanner';
+import RevolutionaryContent2025Banner from '../components/RevolutionaryContent2025Banner';
+import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
 import {
   AIEnterpriseAdoptionBanner,
   AITrends2025Banner,
@@ -126,6 +129,12 @@ export default function HomePage() {
       />
       <main className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="animate-fade-in">
+          {/* New 2025 Revolutionary Content Banner */}
+          <RevolutionaryContent2025Banner />
+          
+          {/* Latest Content Showcase 2025 */}
+          <LatestContentShowcase2025 />
+          
           {/* New 2026 Content Banners */}
           <AI2026RevolutionaryContentBanner />
           <NewContent2026ShowcaseBanner />
