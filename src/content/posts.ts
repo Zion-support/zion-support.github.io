@@ -10,6 +10,42 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "genai-routing-quality-tiers-q4-2025",
+    title: "GenAI Routing Quality Tiers – Q4 2025",
+    description: "Predictable cost and stable UX using quality tiers, evals, and semantic caches with KPI‑aware routing.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "ai-september-30-2025-innovation-labs",
+    title: "AI Innovation Labs — September 30, 2025",
+    description: "Eight breakthrough initiatives you can deploy now: real‑time engines, neural code, multimodal AI, and more.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "10 min read"
+  },
+  {
+    slug: "ai-september-30-2025-trustworthy-agents",
+    title: "Trustworthy Autonomous Agents — Sept 30, 2025",
+    description: "Guardrails, approvals, budgets, and rollback patterns that keep agentic systems reliable in production.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "ai-september-30-2025-agent-security-blueprint",
+    title: "Agent Security Blueprint — Sept 30, 2025",
+    description: "Zero‑trust for agents: isolation, least privilege, sandboxed tools, and verifiable auditability at scale.",
+    category: "Security",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
     slug: "ai-2028-autonomous-enterprise-revolution",
     title: "AI 2028: Autonomous Enterprise Revolution",
     description: "From reactive ops to self‑optimizing enterprises: budgets, guardrails, and KPI‑linked autonomy that scales safely.",

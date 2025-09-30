@@ -176,6 +176,42 @@ featuredBlogPosts.unshift(
   }
 );
 
+// Sept 30, 2025 – Add brand-new content items to advertise
+featuredBlogPosts.unshift(
+  {
+    id: "genai-routing-quality-tiers-q4-2025",
+    title: "GenAI Routing Quality Tiers – Q4 2025",
+    description: "Predictable cost and stable UX using tiers, evals, and semantic caches.",
+    link: "/blog/genai-routing-quality-tiers-q4-2025",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-september-30-2025-innovation-labs",
+    title: "AI Innovation Labs — September 30, 2025",
+    description: "Eight breakthrough initiatives ready for deployment: engines, neural code, multimodal, and more.",
+    link: "/blog/ai-september-30-2025-innovation-labs",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-september-30-2025-trustworthy-agents",
+    title: "Trustworthy Autonomous Agents — Sept 30, 2025",
+    description: "Approvals, budgets, and rollback patterns that keep agents reliable.",
+    link: "/blog/ai-september-30-2025-trustworthy-agents",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-september-30-2025-agent-security-blueprint",
+    title: "Agent Security Blueprint — Sept 30, 2025",
+    description: "Zero‑trust for agents: isolation, least privilege, and auditable actions.",
+    link: "/blog/ai-september-30-2025-agent-security-blueprint",
+    type: "article",
+    featured: true
+  }
+);
+
 // Feb 2027 – Surface two brand-new featured guides site-wide
 featuredBlogPosts.unshift(
   {
