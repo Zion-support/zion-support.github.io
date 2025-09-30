@@ -10,6 +10,36 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    // NEW — Executive AI Funding Blueprint (featured)
+    slug: "ai-2027-executive-ai-funding-blueprint",
+    title: "Executive AI Funding Blueprint 2027",
+    description: "KPI‑linked scorecards, budgets, and governance gates that prove ROI.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "10 min read"
+  },
+  {
+    // NEW — Zero‑PII Edge Analytics v3 (featured)
+    slug: "edge-2027-zero-pii-analytics-v3",
+    title: "Zero‑PII Edge Analytics v3 (2027)",
+    description: "Scoped IDs, on‑device aggregation, and DP delivering insights under 100ms.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    // NEW — Operational Risk Budgets (featured)
+    slug: "ai-2027-operational-risk-budgets",
+    title: "AI 2027: Operational Risk Budgets",
+    description: "Budgets, KPI canaries, and instant rollback for safe autonomy.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
     // NEW — Enterprise roadmap update (featured)
     slug: "ai-2027-enterprise-roadmap-v2",
     title: "AI 2027 Enterprise Roadmap v2",
