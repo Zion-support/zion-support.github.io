@@ -10,6 +10,33 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-2027-runtime-policy-tests-v2",
+    title: "AI 2027: Runtime Policy Tests v2 — Ship Fast Without Regressions",
+    description: "Lightweight CI + PR policy checks wired to KPIs with instant rollback gates.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-2027-private-personalization-v4",
+    title: "Edge 2027: Private Personalization v4 (<100ms, Zero‑PII)",
+    description: "Scoped IDs, on‑device models, and DP noise for compliant real‑time journeys.",
+    category: "Edge",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "genai-2027-semantic-cache-blueprint",
+    title: "GenAI 2027: Semantic Cache Blueprint — 40–70% Cost Savings",
+    description: "Tiered caches, embeddings, and quality gates that stabilize UX under budget.",
+    category: "FinOps",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
     slug: "ai-2025-sept-30-autonomous-control-planes",
     title: "AI 2025: Autonomous Control Planes — Budgets, Gates, Rollback",
     description: "Design budget-aware, policy-gated AI platforms with instant rollback and KPI-linked guardrails.",

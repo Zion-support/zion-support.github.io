@@ -11,6 +11,30 @@ export interface FeaturedItem {
 
 export const featuredBlogPosts: FeaturedItem[] = [
   {
+    id: "ai-2027-runtime-policy-tests-v2",
+    title: "Runtime Policy Tests v2 (2027)",
+    description: "CI + PR checks wired to KPIs with instant rollback gates.",
+    link: "/blog/ai-2027-runtime-policy-tests-v2",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-2027-private-personalization-v4",
+    title: "Edge Private Personalization v4 (2027)",
+    description: "<100ms zero‑PII journeys via scoped IDs and on‑device models.",
+    link: "/blog/edge-2027-private-personalization-v4",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "genai-2027-semantic-cache-blueprint",
+    title: "GenAI Semantic Cache Blueprint (2027)",
+    description: "Tiered semantic caches + quality gates for 40–70% savings.",
+    link: "/blog/genai-2027-semantic-cache-blueprint",
+    type: "article",
+    featured: true
+  },
+  {
     id: "ai-2027-executive-playbook-v2",
     title: "AI 2027: Executive Playbook v2",
     description: "Fund, govern, and scale AI with KPI‑linked scorecards and budgets",
