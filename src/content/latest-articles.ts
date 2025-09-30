@@ -1626,6 +1626,54 @@ export const latestArticles: LatestArticle[] = [
 // Sept 30, 2025 – Add three brand-new articles (advertised site-wide)
 latestArticles.unshift(
   {
+    id: "ai-2025-sept-30-go-to-market-ai-scorecards",
+    slug: "ai-2025-sept-30-go-to-market-ai-scorecards",
+    title: "Go-To-Market AI Scorecards — Align Bets to Revenue",
+    description: "Tie AI features to pipeline, win‑rates, adoption; guardrails with rollback.",
+    excerpt: "Practical GTM scorecards wired to KPIs for AI features.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "AI Strategy",
+    tags: ["GTM", "Scorecards", "ROI"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/ai-2025-go-to-market-scorecards.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "edge-2025-sept-30-private-telemetry-blueprint-v2",
+    slug: "edge-2025-sept-30-private-telemetry-blueprint-v2",
+    title: "Private Telemetry Blueprint v2 — Zero‑PII, Sub‑100ms",
+    description: "Scoped IDs, on‑device redaction, and DP noise for actionable analytics.",
+    excerpt: "Useful signals without PII risk using edge patterns.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "Observability",
+    tags: ["Privacy", "Telemetry", "DP"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/edge-2025-private-telemetry-v2.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "genai-2025-sept-30-eval-budgeting-blueprint-v3",
+    slug: "genai-2025-sept-30-eval-budgeting-blueprint-v3",
+    title: "Eval Budgeting Blueprint v3 — 60–85% Savings, Stable UX",
+    description: "Right‑size suites, cache golden answers, enforce online policies.",
+    excerpt: "Budget‑aware evals tied to KPIs for reliable savings.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "GenAI",
+    tags: ["Evals", "Budgets", "Quality"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/genai-2025-eval-budgeting-v3.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "ai-2027-quantum-enhanced-machine-learning",
     slug: "ai-2027-quantum-enhanced-machine-learning",
     title: "AI 2027: Quantum‑Enhanced Machine Learning",
@@ -1670,6 +1718,58 @@ latestArticles.unshift(
     featured: true,
     readTime: "11 min read",
     image: "/images/ai-2028-autonomous-governance.jpg",
+    newBadge: true,
+    trending: true
+  }
+);
+
+// Oct 03, 2025 – Add three brand-new articles (site-wide promotion)
+latestArticles.unshift(
+  {
+    id: "ai-2025-oct-03-governed-autonomy-scorecards",
+    slug: "ai-2025-oct-03-governed-autonomy-scorecards",
+    title: "AI 2025: Governed Autonomy Scorecards — From SLIs to KPIs",
+    description: "Operational scorecards with budgets, canaries, and rollback that accelerate delivery without regressions.",
+    excerpt: "Make autonomy measurable with KPI‑linked scorecards and instant rollback playbooks.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-03",
+    category: "AI Operations",
+    tags: ["Scorecards", "Budgets", "Rollback"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/ai-2025-governed-autonomy-scorecards.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "edge-2025-oct-03-private-telemetry-blueprint",
+    slug: "edge-2025-oct-03-private-telemetry-blueprint",
+    title: "Edge 2025: Private Telemetry Blueprint (<100ms)",
+    description: "Scoped IDs, on‑device redaction, and DP noise for actionable analytics without PII.",
+    excerpt: "Stand up privacy‑first telemetry with edge aggregation and signed attestations.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-03",
+    category: "Analytics",
+    tags: ["Edge", "Privacy", "Telemetry"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/edge-2025-private-telemetry-blueprint.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "genai-2025-oct-03-quality-tiers-blueprint",
+    slug: "genai-2025-oct-03-quality-tiers-blueprint",
+    title: "GenAI 2025: Quality Tiers Blueprint v4",
+    description: "Predictable cost and stable UX using tiered routing, semantic caches, and eval gates—v4 updates.",
+    excerpt: "Cut spend up to 70% with quality tiers, caches, and KPI‑linked scorecards.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-03",
+    category: "GenAI",
+    tags: ["Quality Tiers", "Caching", "Budgets"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/genai-2025-quality-tiers-blueprint-v4.jpg",
     newBadge: true,
     trending: true
   }
@@ -1831,6 +1931,58 @@ latestArticles.unshift(
   }
 );
 
+// Sept 30, 2025 – New items to promote across homepage and feeds
+latestArticles.unshift(
+  {
+    id: "ai-2025-sept-30-autonomous-runbooks-quickstart",
+    slug: "ai-2025-sept-30-autonomous-runbooks-quickstart",
+    title: "Autonomous Runbooks Quickstart: Budgeted Actions and Instant Rollback",
+    description: "Design incident playbooks that close the loop from detection to safe action in <60s.",
+    excerpt: "Budgets, approvals, and rollback triggers for safe automation at speed.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "AI Operations",
+    tags: ["Runbooks", "Automation", "Rollback"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/autonomous-runbooks-quickstart-2025.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "edge-2025-sept-30-privacy-preserving-telemetry",
+    slug: "edge-2025-sept-30-privacy-preserving-telemetry",
+    title: "Privacy‑Preserving Telemetry: Scoped IDs, On‑Device Redaction, DP Noise",
+    description: "Actionable analytics without PII using edge aggregation and differential privacy.",
+    excerpt: "Stand up privacy‑first telemetry with scoped identifiers and local redaction.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "Observability",
+    tags: ["Privacy", "Telemetry", "Edge"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/privacy-preserving-telemetry-2025.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "genai-2025-sept-30-quality-tiers-quickstart",
+    slug: "genai-2025-sept-30-quality-tiers-quickstart",
+    title: "GenAI Quality Tiers Quickstart: Stable UX at 40–70% Lower Cost",
+    description: "Tiered routing and semantic caches with KPI‑linked budgets.",
+    excerpt: "Predictable costs without regressions using quality tiers and caches.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "GenAI",
+    tags: ["Quality Tiers", "Caching", "Budgets"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/genai-quality-tiers-quickstart-2025.jpg",
+    newBadge: true,
+    trending: true
+  }
+);
+
 // Oct 02, 2025 – Add three brand-new articles (to advertise and surface)
 latestArticles.unshift(
   {
@@ -1886,3 +2038,55 @@ latestArticles.unshift(
 export const featuredArticles = latestArticles.filter(article => article.featured);
 export const trendingArticles = latestArticles.filter(article => article.trending);
 export const newArticles = latestArticles.filter(article => article.newBadge);
+
+// Sept 30, 2025 – Surface three brand-new items in Latest Articles
+latestArticles.unshift(
+  {
+    id: "autonomic-decision-engines-2025",
+    slug: "ai-2025-sept-30-autonomic-decision-engines",
+    title: "Autonomic Decision Engines: Sub‑100ms, KPI‑Linked Actions",
+    description: "Budgeted actions, live canaries, and instant rollback for safe automation.",
+    excerpt: "Design decision engines that act fast and safely with rollback on KPIs.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "AI Operations",
+    tags: ["Automation", "Budgets", "Rollback"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/autonomic-decision-engines-2025.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "edge-private-personalization-v2-2025",
+    slug: "edge-2025-sept-30-private-personalization-v2",
+    title: "Edge Private Personalization v2: Zero‑PII, Global <100ms",
+    description: "Scoped IDs, signed configs, and on‑device models for private personalization.",
+    excerpt: "Deliver personalization worldwide without PII using edge patterns.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "Edge Computing",
+    tags: ["Edge", "Privacy", "Personalization"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/edge-private-personalization-v2.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "genai-eval-scorecards-quickstart-2025",
+    slug: "genai-2025-sept-30-eval-scorecards-quickstart",
+    title: "GenAI Eval Scorecards Quickstart: KPIs, Budgets, Rollback",
+    description: "KPI‑linked evals and budget‑aware routing that gate traffic safely.",
+    excerpt: "Stand up eval scorecards fast without slowing teams.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "GenAI",
+    tags: ["Evals", "Scorecards", "Budgets"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/genai-eval-scorecards-quickstart-2025.jpg",
+    newBadge: true,
+    trending: true
+  }
+);
