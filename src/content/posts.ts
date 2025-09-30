@@ -850,3 +850,37 @@ export const posts: BlogPost[] = [
   }
 ];
 
+// Oct 03, 2025 – New posts to surface on homepage and promos
+posts.unshift(
+  {
+    slug: "ai-2025-oct-03-governed-autonomy-scorecards",
+    title: "Governed Autonomy Scorecards: From SLIs to KPIs",
+    description:
+      "Operational scorecards with budgets, canaries, and rollback that accelerate delivery without regressions.",
+    category: "AI Operations",
+    publishedAt: "2025-10-03",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "edge-2025-oct-03-private-telemetry-blueprint",
+    title: "Private Telemetry at the Edge: Useful Signals, Zero PII",
+    description:
+      "Scoped IDs, on-device redaction, and DP noise for actionable analytics under 100ms with audit-ready attestations.",
+    category: "Observability",
+    publishedAt: "2025-10-03",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "genai-2025-oct-03-quality-tiers-blueprint-v4",
+    title: "GenAI Quality Tiers v4: Save Up To 70% With Stable UX",
+    description:
+      "Tiered routing, semantic caches, and eval gates that reduce spend while preserving user experience.",
+    category: "GenAI",
+    publishedAt: "2025-10-03",
+    featured: true,
+    readTime: "9 min read",
+  }
+);
+

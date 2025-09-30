@@ -104,8 +104,8 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 NEW: Oct 02 — Agent Runbooks v6, Edge Privacy Observability, CIO Playbook"
-          description="Latest drops: Agent Reliability Runbooks v6, Edge Privacy Observability, and CIO Modernization Playbook. Ship faster with safety, privacy, and ROI."
+          title="🚀 NEW: Oct 03 — Governed Autonomy Scorecards, Private Edge Telemetry, GenAI Quality Tiers v4"
+          description="Fresh drops: Governed Autonomy Scorecards, Private Telemetry at the Edge, and GenAI Quality Tiers v4. Ship faster with safety, privacy, and ROI."
           ctaText="Read the Latest"
           ctaLink="/blog"
           dismissible={true}
@@ -211,7 +211,7 @@ const Home = () => {
         <section className="container mx-auto px-6 py-16 relative z-10">
           <div className="text-center mb-12">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/20 text-purple-400 text-sm font-medium mb-6 animate-pulse">
-              🔥 HOT NEW CONTENT - JANUARY 2025
+              🔥 HOT NEW CONTENT - OCTOBER 2025
             </div>
             <h2 className="text-3xl font-bold text-white mb-4">
               Revolutionary AI & Technology Insights
