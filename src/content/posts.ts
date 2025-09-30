@@ -10,6 +10,15 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-2027-edge-native-agents",
+    title: "Edge‑Native Agents 2027: Private Tools at <100ms",
+    description: "Design agents that run close to users with scoped permissions, on‑device tools, and instant rollback.",
+    category: "Edge Computing",
+    publishedAt: "2027-01-12",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
     slug: "ai-governance-live-metrics-2025",
     title: "AI Governance Live Metrics 2025: Ship Faster Without Regressions",
     description: "CI policy tests + KPI‑linked canaries to prevent regressions before they ship.",
