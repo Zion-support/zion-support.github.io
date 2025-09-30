@@ -296,3 +296,23 @@ featuredBlogPosts.unshift(
     featured: true
   }
 );
+
+// Advertise new content on homepage showcases
+featuredBlogPosts.unshift(
+  {
+    id: "ai-executive-playbook-2027",
+    title: "AI Executive Playbook 2027",
+    description: "Plan, fund, and govern reliable AI with measurable outcomes",
+    link: "/blog/ai-executive-playbook-2027",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-2027-cost-optimization-playbook",
+    title: "AI 2027 Cost Optimization Playbook",
+    description: "Quality tiers, caches, and budgets to cut spend 30–70%",
+    link: "/blog/ai-2027-cost-optimization-playbook",
+    type: "article",
+    featured: true
+  }
+);
