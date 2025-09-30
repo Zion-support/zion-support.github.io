@@ -37,6 +37,14 @@ export const posts: BlogPost[] = [
     readTime: "8 min read"
   },
   {
+    slug: "ai-operational-scorecards-q4-2026",
+    title: "AI Operational Scorecards Q4 2026: SLIs Wired to KPIs",
+    description: "SLIs mapped to KPIs with budgeted actions, live canaries, and instant rollback for safe autonomy.",
+    category: "AI Operations",
+    publishedAt: "2025-10-30",
+    featured: true,
+    readTime: "7 min read"
+  },
     slug: "ai-operational-trust-q4-2025",
     title: "AI Operational Trust Q4 2025: Live Scorecards that Ship",
     description: "KPI‑linked guardrails with PR checks, budgeted actions, and instant rollback to ship faster with confidence.",

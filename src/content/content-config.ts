@@ -420,6 +420,14 @@ export const getLatestContent = (count: number = 5): FeaturedItem[] => {
 // Surface fresh featured content (added Sept 30, 2025)
 featuredBlogPosts.unshift(
   {
+    id: "ai-operational-scorecards-q4-2026",
+    title: "AI Operational Scorecards Q4 2026",
+    description: "SLIs mapped to KPIs, budgeted actions, instant rollback.",
+    link: "/blog/ai-operational-scorecards-q4-2026",
+    type: "article",
+    featured: true
+  },
+  {
     id: "ai-2027-revolutionary-breakthrough",
     title: "AI 2027 Revolutionary Breakthrough",
     description: "Quantum leaps in AI performance and autonomy—what it means for the enterprise",
