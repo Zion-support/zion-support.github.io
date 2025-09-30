@@ -155,11 +155,9 @@ const Home = () => {
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "PR Policy Tests 2026", category: "AI Governance", link: "/blog/ai-governance-pr-policy-tests-2026" },
-            { title: "Zero‑PII Edge Analytics 2026", category: "Analytics", link: "/blog/edge-zero-pii-analytics-2026" },
-            { title: "Zero‑Regret Agent Releases 2026", category: "AI Operations", link: "/blog/agent-release-zero-regret-2026" },
-            { title: "Edge RAG 2026", category: "GenAI", link: "/blog/edge-rag-privacy-preserving-2026" },
-            { title: "GenAI Routing Playbook 2026", category: "GenAI", link: "/blog/genai-routing-playbook-2026" }
+            { title: "AI Operational Trust Q4 2025", category: "AI Operations", link: "/blog/ai-operational-trust-q4-2025" },
+            { title: "Consentless Edge Analytics Q4 2025", category: "Analytics", link: "/blog/edge-consentless-analytics-q4-2025" },
+            { title: "GenAI Quality Tiers Q4 2025", category: "GenAI", link: "/blog/genai-routing-quality-tiers-q4-2025" }
           ]}
         />
         {/* Fresh content banner promoting brand-new articles */}
