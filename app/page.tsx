@@ -110,13 +110,10 @@ import Revolutionary2027ContentBanner from '../components/Revolutionary2027Conte
 import UltimateContent2027Showcase from '../components/UltimateContent2027Showcase';
 import NewContentShowcase2026 from '../src/components/NewContentShowcase2026';
 import September30NewAIBreakthroughsBanner from '../components/September30NewAIBreakthroughsBanner';
-<<<<<<< HEAD
 import September30BreakthroughContentBanner from '../components/September30BreakthroughContentBanner';
-=======
 import Revolutionary2026ContentShowcaseBanner from '../components/Revolutionary2026ContentShowcaseBanner';
 import Latest2026ContentMegaBanner from '../components/Latest2026ContentMegaBanner';
 import Ultimate2026ContentShowcaseBanner from '../components/Ultimate2026ContentShowcaseBanner';
->>>>>>> cursor/create-and-deploy-new-content-1b54
 
 export const metadata = {
   title: 'Zion Tech Group — Revolutionary AI Breakthroughs 2026 | 1000x Performance Gains',
