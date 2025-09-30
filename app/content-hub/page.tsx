@@ -22,7 +22,6 @@ export const metadata = {
   },
 };
 
-<<<<<<< HEAD
 export default function ContentHubPage() {
   const blogCategories = [
     {
@@ -58,7 +57,7 @@ export default function ContentHubPage() {
       title: 'AI Analytics & Value',
       articles: [
         { title: 'AI Value Stream Analytics 2026', slug: '/blog/ai-value-stream-analytics-2026', readTime: '9 min', featured: true },
-        { title: 'AI Trustworthy Agents 2026', slug: '/blog/ai-trustworthy-agents-2026', readTime: '11 min', featured: true },
+        { title: 'Trustworthy AI Agents 2026', slug: '/blog/ai-trustworthy-agents-2026', readTime: '11 min', featured: true },
         { title: 'AI Roadmaps 2026', slug: '/blog/ai-roadmaps-2026', readTime: '8 min', featured: false },
         { title: 'AI FinOps Scorecards 2025', slug: '/blog/ai-finops-scorecards-2025', readTime: '7 min', featured: false },
       ]

@@ -18,7 +18,6 @@ import {
   AutonomousAgentsBanner,
   AIGovernanceBanner,
   FinTechSuccessBanner,
-  NewContentShowcaseBanner
   NewContentShowcaseBanner,
   AIRoadmapsBanner,
   AIFinOpsBanner,
@@ -110,13 +109,10 @@ import Revolutionary2027ContentBanner from '../components/Revolutionary2027Conte
 import UltimateContent2027Showcase from '../components/UltimateContent2027Showcase';
 import NewContentShowcase2026 from '../src/components/NewContentShowcase2026';
 import September30NewAIBreakthroughsBanner from '../components/September30NewAIBreakthroughsBanner';
-<<<<<<< HEAD
 import September30BreakthroughContentBanner from '../components/September30BreakthroughContentBanner';
-=======
 import Revolutionary2026ContentShowcaseBanner from '../components/Revolutionary2026ContentShowcaseBanner';
 import Latest2026ContentMegaBanner from '../components/Latest2026ContentMegaBanner';
 import Ultimate2026ContentShowcaseBanner from '../components/Ultimate2026ContentShowcaseBanner';
->>>>>>> cursor/create-and-deploy-new-content-1b54
 
 export const metadata = {
   title: 'Zion Tech Group — Revolutionary AI Breakthroughs 2026 | 1000x Performance Gains',
@@ -582,13 +578,13 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link
-              to="/services"
+              href="/services"
               className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
             >
               Explore Our Services
             </Link>
             <a
-              to="tel:+13024640950"
+              href="tel:+13024640950"
               className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors"
             >
               Call +1 302 464 0950
@@ -599,23 +595,17 @@ export default function HomePage() {
               <div className="text-3xl font-bold text-blue-600">500+</div>
               <div className="text-gray-600">Projects Delivered</div>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-              <div>
-                <div className="text-3xl font-bold text-blue-600">500+</div>
-                <div className="text-gray-600">Projects Delivered</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-blue-600">99.9%</div>
-                <div className="text-gray-600">Uptime Guarantee</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-blue-600">24/7</div>
-                <div className="text-gray-600">Expert Support</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-blue-600">$2M+</div>
-                <div className="text-gray-600">Cost Savings</div>
-              </div>
+            <div>
+              <div className="text-3xl font-bold text-blue-600">99.9%</div>
+              <div className="text-gray-600">Uptime Guarantee</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-blue-600">24/7</div>
+              <div className="text-gray-600">Expert Support</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-blue-600">$2M+</div>
+              <div className="text-gray-600">Cost Savings</div>
             </div>
           </div>
         </section>
