@@ -254,7 +254,7 @@ export default function AutonomousEnterpriseOperations2027() {
                   <h4 className="font-semibold text-yellow-300 mb-2">Autonomous Capabilities</h4>
                   <ul className="text-gray-300 space-y-1 text-sm">
                     <li>• 98% accuracy in autonomous decisions</li>
-                    <li>• < 1 second average response time</li>
+                    <li>• &lt; 1 second average response time</li>
                     <li>• 90% reduction in error rates</li>
                     <li>• 50% improvement in innovation speed</li>
                   </ul>

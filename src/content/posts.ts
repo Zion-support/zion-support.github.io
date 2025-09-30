@@ -10,6 +10,25 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-2027-quantum-revolution",
+    title: "AI 2027 Quantum Revolution: 1000x Performance, Enterprise Readiness",
+    description: "A practical roadmap to adopt quantum‑enhanced AI with KPIs, cost guardrails, and verified impact.
+",
+    category: "Breakthrough Technology",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "10 min read"
+  },
+  {
+    slug: "ai-2027-cost-optimization-playbook",
+    title: "AI 2027 Cost Optimization Playbook",
+    description: "Cut spend 30–70% with routing, quantization, semantic caches, and budget policies.",
+    category: "Implementation Guide",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "12 min read"
+  },
+  {
     slug: "ai-operational-trust-scorecards-2026",
     title: "AI Operational Trust Scorecards 2026",
     description: "SLIs wired to KPIs with budgets, canaries, and instant rollback for safe velocity.",
@@ -42,36 +61,6 @@ export const posts: BlogPost[] = [
     description: "Stabilize UX and cut costs 30–70% with semantic caches and budget‑aware routing.",
     category: "GenAI",
     publishedAt: "2025-09-30",
-<<<<<<< HEAD
-    featured: true,
-    readTime: "8 min read"
-  },
-  {
-    slug: "edge-2026-private-feature-flags",
-    title: "Edge 2026: Private Feature Flags",
-    description: "Signed configs, scoped IDs, and on‑device metrics for zero‑PII rollouts at <100ms.",
-    category: "Edge Computing",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "agent-release-guardrails-2026",
-    title: "Agent Release Guardrails 2026",
-    description: "Budgets, approvals, KPI‑linked canaries, and instant rollback for safe automation.",
-    category: "AI Operations",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "ai-trust-scorecards-v5-2027",
-    title: "AI Trust Scorecards v5 (2027): KPIs, Budgets, Guardrails",
-    description: "Next‑gen scorecards linking SLIs to KPIs with budgeted actions, PR policy tests, and instant rollback.",
-    category: "AI Governance",
-    publishedAt: "2026-12-01",
-=======
->>>>>>> 24e17132c1344b429cef13f136704b6705d13023
     featured: true,
     readTime: "9 min read"
   },

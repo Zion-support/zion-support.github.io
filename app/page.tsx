@@ -122,17 +122,10 @@ import RevolutionaryBreakthrough2026Banner from '../src/components/Revolutionary
 import AICostOptimizationBanner from '../src/components/AICostOptimizationBanner';
 import AutonomyBlueprint2026Banner from '../components/AutonomyBlueprint2026Banner';
 import September30ContentPromo2025 from '../components/September30ContentPromo2025';
-<<<<<<< HEAD
 import NewContent2026BreakthroughBanner from '../components/NewContent2026BreakthroughBanner';
 import InteractiveAI2026BreakthroughCalculator from '../components/InteractiveAI2026BreakthroughCalculator';
 import FreshContent2027ShowcaseBanner from '../components/FreshContent2027ShowcaseBanner';
 import RevolutionaryAI2027Banner from '../components/RevolutionaryAI2027Banner';
-=======
-import NewContent2026BreakthroughBanner from '../components/NewContent2026BreakthroughBanner';
-import InteractiveAI2026BreakthroughCalculator from '../components/InteractiveAI2026BreakthroughCalculator';
-import FreshContent2027ShowcaseBanner from '../components/FreshContent2027ShowcaseBanner';
-import RevolutionaryAI2027Banner from '../components/RevolutionaryAI2027Banner';
->>>>>>> 24e17132c1344b429cef13f136704b6705d13023
 
 export const metadata = {
   title: 'Zion Tech Group — Revolutionary AI Breakthroughs 2026 | 1000x Performance Gains',
@@ -175,6 +168,31 @@ export default function HomePage() {
   return (
     <>
       <div className="animate-fade-in">
+      {/* 🔥 New on the blog — highlight latest posts */}
+      <section className="max-w-7xl mx-auto px-6 md:px-8 py-10">
+        <div className="bg-white/70 dark:bg-white/10 backdrop-blur border border-gray-200/60 dark:border-white/10 rounded-2xl p-6 md:p-8">
+          <div className="flex items-center justify-between gap-4 mb-6">
+            <h2 className="text-xl md:text-2xl font-bold">New on the blog</h2>
+            <Link href="/blog" className="text-indigo-600 hover:text-indigo-700 font-semibold">View all →</Link>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6">
+            <Link href="/blog/ai-2027-quantum-revolution" className="group">
+              <div className="rounded-xl p-5 border border-indigo-200/60 hover:border-indigo-300 transition-all bg-gradient-to-br from-indigo-50 to-purple-50">
+                <div className="text-sm text-indigo-700 font-semibold mb-2">Breakthrough Technology • 10 min read</div>
+                <div className="text-lg md:text-xl font-bold mb-2 group-hover:text-indigo-700">AI 2027 Quantum Revolution: 1000x Performance</div>
+                <div className="text-gray-600">Roadmap to adopt quantum‑enhanced AI with KPIs, guardrails, and verified impact.</div>
+              </div>
+            </Link>
+            <Link href="/blog/ai-2027-cost-optimization-playbook" className="group">
+              <div className="rounded-xl p-5 border border-emerald-200/60 hover:border-emerald-300 transition-all bg-gradient-to-br from-emerald-50 to-teal-50">
+                <div className="text-sm text-emerald-700 font-semibold mb-2">Implementation Guide • 12 min read</div>
+                <div className="text-lg md:text-xl font-bold mb-2 group-hover:text-emerald-700">AI 2027 Cost Optimization Playbook</div>
+                <div className="text-gray-600">Cut spend 30–70% with routing, quantization, semantic caches, and budgets.</div>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
       {/* 🚀🚀🚀 FRESH CONTENT 2027 - Revolutionary AI Breakthroughs! 🚀🚀🚀 */}
       <RevolutionaryAI2027Banner />
       

@@ -32,13 +32,9 @@ export default function Page() {
 	);
 }
 
-import React from 'react';
-import Link from 'next/link';
+// Duplicate block removed
 
-export const metadata = {
-  title: 'Autonomous Infrastructure 2025 — Self-Healing, Self-Optimizing, Self-Scaling',
-  description: 'Blueprint for autonomous infrastructure: policy-driven automation, predictive scaling, and zero-touch ops.',
-};
+// Duplicate metadata block removed
 
 export default function AutonomousInfrastructureBlueprint2025() {
   return (
@@ -109,13 +105,9 @@ export default function AutonomousInfrastructureBlueprint2025() {
   );
 }
 
-import Link from 'next/link';
+// Duplicate block removed
 
-export const metadata = {
-  title: 'Autonomous Infrastructure 2025: Self‑Healing, Self‑Optimizing, Self‑Scaling',
-  description:
-    'Design an AI‑driven infra platform with predictive autoscaling, policy tests, and instant rollback for 99.99% uptime.',
-};
+// Duplicate metadata block removed
 
 export default function Page() {
   return (
