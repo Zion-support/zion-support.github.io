@@ -49,6 +49,16 @@ import {
   Revolutionary2026ContentBanner,
   LatestAIInnovations2026Banner
 } from '../components/NewContent2026Banners';
+import {
+  AI2026ContentShowcaseBanner,
+  AIEnterpriseAutomationRevolutionBanner,
+  AIQuantumComputingBreakthroughBanner,
+  AIMegaTransformationSuccessBanner,
+  AI2026InnovationShowcaseBanner,
+  LatestContent2026MegaBanner
+} from '../components/NewContent2026MegaBanners';
+import InteractiveAI2026Calculator from '../components/InteractiveAI2026Calculator';
+import InteractiveContentShowcase2026 from '../components/InteractiveContentShowcase2026';
 import ContentShowcase from '../components/ContentShowcase';
 import InteractiveAIROICalculator from '../components/InteractiveAIROICalculator';
 import InteractiveAI2027Calculator from '../components/InteractiveAI2027Calculator';
@@ -142,6 +152,7 @@ export default function HomePage() {
       <AIQuantumComputingBreakthroughBanner />
       <AIMegaTransformationSuccessBanner />
       <AI2026InnovationShowcaseBanner />
+      <LatestContent2026MegaBanner />
       
       {/* Latest 2026 Content Banners */}
       <LatestContent2026MegaBanner />
@@ -315,6 +326,9 @@ export default function HomePage() {
 
       {/* Interactive AI Calculator */}
       <InteractiveAICalculator2026 />
+      
+      {/* New Interactive AI 2026 Calculator */}
+      <InteractiveAI2026Calculator />
 
       {/* Interactive Promotional Section */}
       <InteractivePromotionalSection />
@@ -323,6 +337,9 @@ export default function HomePage() {
       <ContentShowcase />
       
       {/* Interactive Content Showcase 2026 */}
+      <InteractiveContentShowcase2026 />
+      
+      {/* New Interactive Content Showcase 2026 */}
       <InteractiveContentShowcase2026 />
 
       {/* Latest Innovations Section */}
