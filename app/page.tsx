@@ -4,6 +4,8 @@ import Link from 'next/link';
 import April2026MegaBreakthroughBanner from '../components/April2026MegaBreakthroughBanner';
 import QuantumConsciousnessFusionBanner from '../components/QuantumConsciousnessFusionBanner';
 import Revolutionary2026ContentShowcaseBanner from '../components/Revolutionary2026ContentShowcaseBanner';
+import January2026RevolutionaryBreakthroughsBanner from '../components/January2026RevolutionaryBreakthroughsBanner';
+import February2026MegaBreakthroughBanner from '../components/February2026MegaBreakthroughBanner';
 
 export default function HomePage() {
   return (
@@ -75,7 +77,13 @@ export default function HomePage() {
         </div>
       </header>
 
-      {/* NEW: April 2026 Mega Breakthrough Banner - Most Prominent */}
+      {/* NEW: February 2026 Mega Breakthrough Banner - Most Prominent */}
+      <February2026MegaBreakthroughBanner />
+      
+      {/* NEW: January 2026 Revolutionary Breakthroughs Banner */}
+      <January2026RevolutionaryBreakthroughsBanner />
+      
+      {/* NEW: April 2026 Mega Breakthrough Banner */}
       <April2026MegaBreakthroughBanner />
       
       {/* NEW: Quantum Consciousness Fusion Banner */}
