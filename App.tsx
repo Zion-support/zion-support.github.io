@@ -7,6 +7,7 @@ import InteractiveROICalculator2026 from "./components/InteractiveROICalculator2
 import InteractiveContentShowcase2026 from "./components/InteractiveContentShowcase2026";
 
 // Most Recent Content Banners (2025-2026)
+import January2025NewContentBanner from "./components/January2025NewContentBanner";
 import September2025PracticalAIBanner from "./components/September2025PracticalAIBanner";
 import September2025NewContentBanner from "./components/September2025NewContentBanner";
 import October2026NewContentBanner from "./components/October2026NewContentBanner";
@@ -40,7 +41,10 @@ import AI2027TranscendentIntelligenceBanner from "./components/AI2027Transcenden
 export default function App(): JSX.Element {
   return (
     <div className="min-h-screen bg-slate-950">
-      {/* 🌌 BREAKING: AI 2033 Universal Consciousness Integration - MOST PROMINENT */}
+      {/* HERO SECTION - Latest January 2025 Content */}
+      <January2025NewContentBanner />
+      
+      {/* 🌌 BREAKING: AI 2033 Universal Consciousness Integration */}
       <AI2033UniversalConsciousnessBanner />
       
       {/* HERO SECTION - Most Recent Content */}
@@ -120,13 +124,13 @@ export default function App(): JSX.Element {
                 Get Started Today
               </a>
               <a 
-                href="/blog/ai-2025-enterprise-deployment-best-practices" 
+                href="/blog/ai-2025-automated-testing-revolution-enterprise-quality-assurance" 
                 className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
                 Read Latest Insights →
               </a>
               <a 
-                href="/case-studies/retail-ai-personalization-success-2025" 
+                href="/case-studies/ai-2025-automotive-manufacturing-ai-transformation-15-billion-success" 
                 className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 View Success Stories

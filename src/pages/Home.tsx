@@ -245,15 +245,65 @@ const Home = () => {
             <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-xl p-6 mb-8 animate-fade-in">
               <div className="flex items-center justify-center gap-3 mb-3">
                 <Sparkles className="w-6 h-6 text-purple-400 animate-pulse" />
-                <span className="text-lg font-bold text-purple-400">🚀 NEW BREAKTHROUGH CONTENT</span>
+                <span className="text-lg font-bold text-purple-400">🚀 NEW JANUARY 2025 CONTENT RELEASE!</span>
                 <Sparkles className="w-6 h-6 text-purple-400 animate-pulse" />
               </div>
               <p className="text-white text-lg font-semibold mb-2">
-                🎯 Just Published: AI Autonomous Cost Intelligence, Conversational Commerce Revolution, Predictive Infrastructure Orchestration & More!
+                🎯 Just Published: AI Testing Revolution, Cloud-Native Architecture, Cybersecurity Defense & $27B Success Stories!
               </p>
               <p className="text-zion-slate-light text-sm mb-4">
-                Discover how to reduce cloud spending by 60%, achieve 3.5x higher conversion rates with AI commerce, and reach 99.999% uptime with predictive orchestration—plus breakthrough insights on self-healing systems, quantum computing, and zero trust security.
+                Discover breakthrough insights on automated testing (85% defect reduction), cloud-native transformation (400% faster deployment), 
+                AI cybersecurity (99.7% threat prevention), plus game-changing case studies: $15B Automotive Transformation, $12B E-Commerce Success, and more real-world victories.
               </p>
+              
+              {/* Featured Articles Grid */}
+              <div className="grid md:grid-cols-3 gap-4 mb-4">
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-purple-300/30 hover:bg-white/20 transition-all">
+                  <div className="text-xs text-purple-300 mb-1 flex items-center gap-1">
+                    <span className="inline-block px-2 py-0.5 bg-green-500 text-white rounded-full text-[10px] font-bold">NEW</span>
+                    Enterprise AI
+                  </div>
+                  <h4 className="text-white font-semibold text-sm mb-2">Future of Enterprise Intelligence</h4>
+                  <p className="text-purple-200 text-xs">500% ROI, AI-driven transformation, autonomous operations</p>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-purple-300/30 hover:bg-white/20 transition-all">
+                  <div className="text-xs text-purple-300 mb-1 flex items-center gap-1">
+                    <span className="inline-block px-2 py-0.5 bg-green-500 text-white rounded-full text-[10px] font-bold">NEW</span>
+                    Cybersecurity
+                  </div>
+                  <h4 className="text-white font-semibold text-sm mb-2">AI-Powered Cybersecurity 2025</h4>
+                  <p className="text-purple-200 text-xs">99.9% threat detection, sub-60s response, $20M+ savings</p>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-purple-300/30 hover:bg-white/20 transition-all">
+                  <div className="text-xs text-purple-300 mb-1">Real-Time Data</div>
+                  <h4 className="text-white font-semibold text-sm mb-2">Real-Time Data Processing</h4>
+                  <p className="text-purple-200 text-xs">Sub-second insights, 75% cost reduction, automated decisions</p>
+                </div>
+              </div>
+
+              {/* Success Stories Highlights */}
+              <div className="bg-gradient-to-r from-emerald-500/20 to-blue-500/20 rounded-lg p-4 mb-4 border border-emerald-300/30">
+                <p className="text-emerald-200 font-semibold mb-2 text-sm flex items-center gap-2">
+                  💎 SUCCESS STORIES: $65B+ Combined Impact
+                  <span className="inline-block px-2 py-0.5 bg-yellow-500 text-black rounded-full text-[10px] font-bold animate-pulse">NEW ADDED</span>
+                </p>
+                <div className="grid md:grid-cols-4 gap-2 text-xs">
+                  <div className="text-white">
+                    <span className="font-bold text-yellow-300">$22B</span> Telecom Network Optimization
+                  </div>
+                  <div className="text-white">
+                    <span className="font-bold text-emerald-300">$18B</span> Manufacturing AI Transformation
+                  </div>
+                  <div className="text-white">
+                    <span className="font-bold text-blue-300">$12B</span> Retail Omnichannel Success
+                  </div>
+                  <div className="text-white">
+                    <span className="font-bold text-purple-300">$8B</span> Financial Fraud Prevention
+                  </div>
+                </div>
+              </div>
+
+>>>>>>> cursor/create-and-deploy-new-content-5580
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link
                   to="/blog"
@@ -269,12 +319,12 @@ const Home = () => {
                 </Link>
               </div>
               <div className="mt-4 flex flex-wrap gap-2 justify-center">
-                <span className="bg-green-100/20 text-green-200 px-3 py-1 rounded-full text-xs font-medium border border-green-300/20">Cost Intelligence</span>
-                <span className="bg-purple-100/20 text-purple-200 px-3 py-1 rounded-full text-xs font-medium border border-purple-300/20">AI Infrastructure</span>
-                <span className="bg-pink-100/20 text-pink-200 px-3 py-1 rounded-full text-xs font-medium border border-pink-300/20">Conversational Commerce</span>
-                <span className="bg-blue-100/20 text-blue-200 px-3 py-1 rounded-full text-xs font-medium border border-blue-300/20">Zero Trust Security</span>
-                <span className="bg-indigo-100/20 text-indigo-200 px-3 py-1 rounded-full text-xs font-medium border border-indigo-300/20">Predictive Ops</span>
-                <span className="bg-cyan-100/20 text-cyan-200 px-3 py-1 rounded-full text-xs font-medium border border-cyan-300/20">DevOps Excellence</span>
+                <span className="bg-purple-100/20 text-purple-200 px-3 py-1 rounded-full text-xs font-medium border border-purple-300/20">🆕 AI Testing Revolution</span>
+                <span className="bg-rose-100/20 text-rose-200 px-3 py-1 rounded-full text-xs font-medium border border-rose-300/20">🆕 Cloud-Native Architecture</span>
+                <span className="bg-yellow-100/20 text-yellow-200 px-3 py-1 rounded-full text-xs font-medium border border-yellow-300/20">🆕 AI Cybersecurity</span>
+                <span className="bg-emerald-100/20 text-emerald-200 px-3 py-1 rounded-full text-xs font-medium border border-emerald-300/20">🆕 $15B Automotive Success</span>
+                <span className="bg-blue-100/20 text-blue-200 px-3 py-1 rounded-full text-xs font-medium border border-blue-300/20">🆕 $12B E-Commerce Success</span>
+                <span className="bg-cyan-100/20 text-cyan-200 px-3 py-1 rounded-full text-xs font-medium border border-cyan-300/20">Edge Computing</span>
               </div>
             </div>
           </div>
@@ -283,10 +333,17 @@ const Home = () => {
         {/* Latest Insights Section */}
         {/* Promo ribbon for new content */}
         <div className="container mx-auto px-6">
+<<<<<<< HEAD
           <div className="mb-6 rounded-full bg-emerald-500/15 border border-emerald-400/30 px-6 py-3 text-emerald-200 text-sm inline-flex items-center gap-2">
             <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
             New: Edge LLM Caching, Governance Scorecards, Serverless Cost Playbook — read now
             <Link to="/insights" className="text-emerald-300 underline underline-offset-4 hover:text-white">View</Link>
+=======
+          <div className="mb-6 rounded-full bg-gradient-to-r from-yellow-500/15 to-orange-500/15 border border-yellow-400/30 px-6 py-3 text-white text-sm inline-flex items-center gap-2 shadow-lg animate-pulse">
+            <span className="inline-flex h-2 w-2 rounded-full bg-yellow-400 animate-ping"></span>
+            🚀 JUST RELEASED (Jan 20): AI Testing Revolution, Cloud-Native Architecture, Cybersecurity Defense + $27B New Success Stories
+            <Link to="/blog" className="text-yellow-300 font-bold underline underline-offset-4 hover:text-white">Read Now →</Link>
+>>>>>>> cursor/create-and-deploy-new-content-5580
           </div>
         </div>
         {/* <LatestInsights /> */}
