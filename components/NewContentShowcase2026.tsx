@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Clock, ArrowRight, Star, TrendingUp, Zap } from 'lucide-react';
 
 interface ContentItem {
