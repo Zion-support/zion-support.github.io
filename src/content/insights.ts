@@ -305,5 +305,68 @@ export const latestInsights: InsightArticle[] = [
     date: "2025-01-22",
     readMinutes: 6,
   },
+  {
+    id: "ai-business-automation-success",
+    title: "AI Business Automation: $2.3M Annual Savings Achieved",
+    summary:
+      "Real-world case studies showing how AI business automation delivered $2.3M in annual savings, 80% process efficiency gains, and 99% accuracy improvements.",
+    category: "AI & Automation",
+    date: "2025-01-23",
+    readMinutes: 8,
+  },
+  {
+    id: "next-gen-cloud-infrastructure-roi",
+    title: "Next-Gen Cloud Infrastructure: 300% Performance Boost",
+    summary:
+      "How next-generation cloud infrastructure delivered 300% performance improvements, 60% cost reduction, and 99.99% uptime across enterprise deployments.",
+    category: "Cloud Strategy",
+    date: "2025-01-23",
+    readMinutes: 7,
+  },
+  {
+    id: "enterprise-ai-implementation-success",
+    title: "Enterprise AI Implementation: 500% ROI in 6 Months",
+    summary:
+      "Strategic enterprise AI implementation delivering 500% ROI within 6 months, with comprehensive roadmaps and governance frameworks that scale.",
+    category: "AI Strategy",
+    date: "2025-01-23",
+    readMinutes: 9,
+  },
+  {
+    id: "micro-saas-platform-scaling",
+    title: "Micro SAAS Platform Scaling: 10x Growth in 12 Months",
+    summary:
+      "Architecture patterns and best practices for micro SAAS platforms achieving 10x user growth and 500% revenue increase within 12 months.",
+    category: "Platform Engineering",
+    date: "2025-01-23",
+    readMinutes: 6,
+  },
+  {
+    id: "cybersecurity-threat-landscape-2025",
+    title: "2025 Cybersecurity Threat Landscape: What Businesses Need to Know",
+    summary:
+      "The evolving threat landscape and emerging security challenges that businesses must prepare for in 2025, with actionable defense strategies.",
+    category: "Security",
+    date: "2025-01-23",
+    readMinutes: 8,
+  },
+  {
+    id: "cloud-edge-hybrid-architecture",
+    title: "Cloud-Edge Hybrid Architecture: Best Practices for 2025",
+    summary:
+      "Designing and implementing hybrid cloud-edge architectures that optimize performance, cost, and security for modern applications.",
+    category: "Cloud Computing",
+    date: "2025-01-23",
+    readMinutes: 6,
+  },
+  {
+    id: "ai-ethics-business-implementation",
+    title: "AI Ethics in Business: Practical Implementation Guidelines",
+    summary:
+      "How to implement ethical AI practices in your business operations while maintaining competitive advantage and regulatory compliance.",
+    category: "AI Ethics",
+    date: "2025-01-23",
+    readMinutes: 7,
+  },
 ];
 
