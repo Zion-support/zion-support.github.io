@@ -90,7 +90,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* NEW CONTENT BANNER - SEPTEMBER 30, 2026 */}
+        {/* NEW CONTENT BANNER - SEPTEMBER 30, 2025 */}
         <section className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white py-12">
           <div className="max-w-6xl mx-auto px-6">
             <div className="flex items-center justify-center gap-3 mb-4">
@@ -99,59 +99,59 @@ export default function HomePage() {
               <span className="text-4xl animate-bounce">✨</span>
             </div>
             <p className="text-center text-2xl opacity-90 mb-4">
-              Quantum AI • Multimodal Agents • Autonomous Infrastructure
+              AI Agent Mesh • Cost Optimization • Security Red Teaming
             </p>
             <p className="text-center text-lg opacity-80">
-              Discover the latest innovations transforming enterprise technology in 2026
+              Essential guides for building scalable, cost-efficient, and secure AI systems in 2025
             </p>
           </div>
         </section>
 
-        {/* FEATURED NEW ARTICLES - SEPTEMBER 30, 2026 */}
+        {/* FEATURED NEW ARTICLES - SEPTEMBER 30, 2025 */}
         <section className="py-16 bg-white">
           <div className="max-w-6xl mx-auto px-6">
             <h2 className="text-4xl font-bold text-center mb-4 text-gray-900">
               🔥 Latest Breakthrough Articles
             </h2>
             <p className="text-center text-gray-600 mb-12 text-xl">
-              Published September 30, 2026 • Essential reading for enterprise leaders
+              Published September 30, 2025 • Essential reading for enterprise leaders
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               
-              {/* Quantum AI */}
-              <Link href="/blog/ai-quantum-computing-2026" className="group">
-                <div className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 border-2 border-purple-200">
-                  <div className="bg-gradient-to-r from-purple-600 to-indigo-600 p-6 text-white">
+              {/* AI Agent Mesh Orchestration */}
+              <Link href="/blog/ai-agent-mesh-orchestration-2025" className="group">
+                <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 border-2 border-purple-200">
+                  <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-6 text-white">
                     <div className="flex items-center gap-2 mb-3">
                       <span className="bg-yellow-400 text-purple-900 px-3 py-1 rounded-full text-sm font-bold animate-pulse">
-                        ⚡ NEW TODAY
+                        🚀 NEW TODAY
                       </span>
                     </div>
                     <h3 className="text-2xl font-bold mb-2">
-                      Quantum-Enhanced AI Computing
+                      AI Agent Mesh Orchestration
                     </h3>
                     <p className="text-base opacity-90">
-                      The next computing revolution is here
+                      Scale to 1000+ agents with 99.99% uptime
                     </p>
                   </div>
                   <div className="p-6">
                     <p className="text-gray-700 mb-4">
-                      Discover how quantum-enhanced AI delivers 500x faster processing and $50M+ ROI. 
-                      Solve impossible optimization problems in seconds.
+                      Build resilient AI agent meshes with service-mesh patterns. Deploy 1000+ agents 
+                      across multi-cloud with zero-trust security and elastic scaling.
                     </p>
                     <div className="grid grid-cols-3 gap-2 mb-4 text-center">
                       <div>
-                        <div className="text-2xl font-bold text-purple-600">500x</div>
-                        <div className="text-xs text-gray-600">Faster</div>
+                        <div className="text-2xl font-bold text-purple-600">99.99%</div>
+                        <div className="text-xs text-gray-600">Uptime</div>
                       </div>
                       <div>
-                        <div className="text-2xl font-bold text-indigo-600">80%</div>
-                        <div className="text-xs text-gray-600">Cost Cut</div>
+                        <div className="text-2xl font-bold text-pink-600">1000+</div>
+                        <div className="text-xs text-gray-600">Agents</div>
                       </div>
                       <div>
-                        <div className="text-2xl font-bold text-green-600">$50M+</div>
-                        <div className="text-xs text-gray-600">ROI</div>
+                        <div className="text-2xl font-bold text-green-600">45%</div>
+                        <div className="text-xs text-gray-600">Cost ↓</div>
                       </div>
                     </div>
                     <div className="block w-full bg-purple-600 text-white text-center py-3 rounded-lg font-bold hover:bg-purple-700 transition-colors">
@@ -161,39 +161,39 @@ export default function HomePage() {
                 </div>
               </Link>
 
-              {/* Multimodal AI */}
-              <Link href="/blog/ai-multimodal-agents-2026" className="group">
+              {/* AI Cost Optimization */}
+              <Link href="/blog/ai-cost-optimization-2025" className="group">
                 <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 border-2 border-green-200">
                   <div className="bg-gradient-to-r from-green-600 to-teal-600 p-6 text-white">
                     <div className="flex items-center gap-2 mb-3">
                       <span className="bg-yellow-400 text-green-900 px-3 py-1 rounded-full text-sm font-bold animate-pulse">
-                        ⚡ NEW TODAY
+                        💰 NEW TODAY
                       </span>
                     </div>
                     <h3 className="text-2xl font-bold mb-2">
-                      Multimodal AI Agents
+                      Cut LLM Costs by 80%
                     </h3>
                     <p className="text-base opacity-90">
-                      Text, image, video & audio integration
+                      Proven strategies for AI cost optimization
                     </p>
                   </div>
                   <div className="p-6">
                     <p className="text-gray-700 mb-4">
-                      Transform operations with AI agents that seamlessly process all data types. 
-                      Achieve 10x productivity and 95% accuracy.
+                      Reduce AI spending by 80% through semantic caching, intelligent routing, and 
+                      prompt optimization—without sacrificing quality or performance.
                     </p>
                     <div className="grid grid-cols-3 gap-2 mb-4 text-center">
                       <div>
-                        <div className="text-2xl font-bold text-green-600">10x</div>
-                        <div className="text-xs text-gray-600">Faster</div>
+                        <div className="text-2xl font-bold text-green-600">80%</div>
+                        <div className="text-xs text-gray-600">Cost ↓</div>
                       </div>
                       <div>
-                        <div className="text-2xl font-bold text-teal-600">95%</div>
-                        <div className="text-xs text-gray-600">Accuracy</div>
+                        <div className="text-2xl font-bold text-teal-600">$12M+</div>
+                        <div className="text-xs text-gray-600">Saved</div>
                       </div>
                       <div>
-                        <div className="text-2xl font-bold text-blue-600">70%</div>
-                        <div className="text-xs text-gray-600">Savings</div>
+                        <div className="text-2xl font-bold text-blue-600">8 wks</div>
+                        <div className="text-xs text-gray-600">Deploy</div>
                       </div>
                     </div>
                     <div className="block w-full bg-green-600 text-white text-center py-3 rounded-lg font-bold hover:bg-green-700 transition-colors">
@@ -203,42 +203,42 @@ export default function HomePage() {
                 </div>
               </Link>
 
-              {/* Autonomous Infrastructure */}
-              <Link href="/blog/ai-autonomous-infrastructure-2026" className="group">
-                <div className="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 border-2 border-cyan-200">
-                  <div className="bg-gradient-to-r from-cyan-600 to-blue-600 p-6 text-white">
+              {/* AI Security Red Teaming */}
+              <Link href="/blog/ai-security-red-teaming-2025" className="group">
+                <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 border-2 border-red-200">
+                  <div className="bg-gradient-to-r from-red-600 to-orange-600 p-6 text-white">
                     <div className="flex items-center gap-2 mb-3">
-                      <span className="bg-yellow-400 text-cyan-900 px-3 py-1 rounded-full text-sm font-bold animate-pulse">
-                        ⚡ NEW TODAY
+                      <span className="bg-yellow-400 text-red-900 px-3 py-1 rounded-full text-sm font-bold animate-pulse">
+                        🛡️ NEW TODAY
                       </span>
                     </div>
                     <h3 className="text-2xl font-bold mb-2">
-                      Autonomous Infrastructure
+                      AI Security Red Teaming
                     </h3>
                     <p className="text-base opacity-90">
-                      Self-healing systems & zero-touch ops
+                      Defend against prompt injection & attacks
                     </p>
                   </div>
                   <div className="p-6">
                     <p className="text-gray-700 mb-4">
-                      Eliminate downtime with self-healing infrastructure. Achieve 99.99% uptime 
-                      and 85% cost reduction automatically.
+                      Proactive defense against prompt injection, jailbreaks, and data leakage. 
+                      Build defense-in-depth with systematic red teaming methodology.
                     </p>
                     <div className="grid grid-cols-3 gap-2 mb-4 text-center">
                       <div>
-                        <div className="text-2xl font-bold text-cyan-600">99.99%</div>
-                        <div className="text-xs text-gray-600">Uptime</div>
+                        <div className="text-2xl font-bold text-red-600">99.7%</div>
+                        <div className="text-xs text-gray-600">Prevent</div>
                       </div>
                       <div>
-                        <div className="text-2xl font-bold text-blue-600">85%</div>
-                        <div className="text-xs text-gray-600">Cost Cut</div>
+                        <div className="text-2xl font-bold text-orange-600">0</div>
+                        <div className="text-xs text-gray-600">Breaches</div>
                       </div>
                       <div>
-                        <div className="text-2xl font-bold text-green-600">&lt;30s</div>
-                        <div className="text-xs text-gray-600">Response</div>
+                        <div className="text-2xl font-bold text-green-600">6 wks</div>
+                        <div className="text-xs text-gray-600">Harden</div>
                       </div>
                     </div>
-                    <div className="block w-full bg-cyan-600 text-white text-center py-3 rounded-lg font-bold hover:bg-cyan-700 transition-colors">
+                    <div className="block w-full bg-red-600 text-white text-center py-3 rounded-lg font-bold hover:bg-red-700 transition-colors">
                       Read Full Article →
                     </div>
                   </div>
@@ -251,7 +251,7 @@ export default function HomePage() {
             <div className="text-center bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 text-white">
               <h3 className="text-2xl font-bold mb-3">Don't Miss These Game-Changing Insights</h3>
               <p className="text-lg opacity-90 mb-6">
-                Essential reading for CTOs, CIOs, and technology leaders planning their 2026-2027 roadmap
+                Essential reading for CTOs, CIOs, and technology leaders planning their 2025-2026 AI strategy
               </p>
               <Link 
                 href="/blog" 
