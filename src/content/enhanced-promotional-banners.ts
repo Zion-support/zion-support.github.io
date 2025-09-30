@@ -138,6 +138,20 @@ enhancedPromotionalBanners.push({
   startDate: '2025-09-30'
 });
 
+// Sept 30, 2025 – Promote three brand-new articles (2027 theme)
+enhancedPromotionalBanners.push({
+  id: 'sept30-2025-new-2027-trio',
+  title: '🚀 New: GenAI Scorecards, Edge Private Analytics, AI Sustainability',
+  description: 'Reliability and cost KPIs, zero‑PII insights at <100ms, and green AI routing.',
+  ctaText: 'Read the latest',
+  ctaLink: '/blog',
+  variant: 'success',
+  icon: '🚀',
+  featured: true,
+  priority: 0,
+  startDate: '2025-09-30'
+});
+
 // Sept 30, 2025 – Additional banner to advertise the latest content
 enhancedPromotionalBanners.push({
   id: 'sept30-additional-fresh-content-2025',

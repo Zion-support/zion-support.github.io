@@ -10,6 +10,33 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "genai-reliability-scorecards-2027",
+    title: "GenAI Reliability Scorecards 2027: KPIs, Budgets, Rollback",
+    description: "Live KPI scorecards and budgeted routes that keep GenAI reliable and affordable.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "edge-private-analytics-2027",
+    title: "Edge Private Analytics 2027: Zero‑PII Insights at <100ms",
+    description: "Scoped IDs, on‑device aggregation, and DP noise to unlock insights without PII.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "enterprise-ai-sustainability-2027",
+    title: "Enterprise AI Sustainability 2027: 70% Cost & Carbon Reduction",
+    description: "Quality tiers, workload shifting, and green routing to cut spend and emissions.",
+    category: "Strategy",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
     slug: "ai-2026-reliable-genai-platform",
     title: "Reliable GenAI Platform 2026: SLAs, Budgets, and Rollback",
     description: "Blueprint for a dependable GenAI platform with quality tiers, budgets, evals, and instant rollback tied to KPIs.",
@@ -72,6 +99,7 @@ export const posts: BlogPost[] = [
     featured: true,
     readTime: "7 min read"
   },
+  {
     slug: "ai-operational-trust-q4-2025",
     title: "AI Operational Trust Q4 2025: Live Scorecards that Ship",
     description: "KPI‑linked guardrails with PR checks, budgeted actions, and instant rollback to ship faster with confidence.",
@@ -152,6 +180,7 @@ export const posts: BlogPost[] = [
     featured: true,
     readTime: "7 min read"
   },
+  {
     slug: "ai-governance-runtime-scorecards-2026",
     title: "AI Governance Runtime Scorecards 2026: KPIs, Budgets, Rollback",
     description: "Live guardrails wired to KPIs with PR checks, budgets, and instant rollback that speed delivery.",
