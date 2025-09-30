@@ -133,14 +133,16 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="New: KPI Policy Tests, Serverless Inference Cost Playbook, Privacy‑First Telemetry"
-          description="Ship faster with KPI‑linked policy tests, cut LLM spend 40–70%, and get decision‑grade analytics without PII risk."
+          title="New: E2E AI Tracing, Edge Personalization, CI Policy Tests"
+          description="Trace prompts to outcomes, personalize privately at the edge, and ship faster with CI policy tests."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "KPI‑Linked Policy Tests 2026", category: "AI Governance", link: "/blog/kpi-linked-policy-tests-2026" },
-            { title: "Serverless Inference Cost Playbook 2026", category: "AI Engineering", link: "/blog/serverless-inference-cost-playbook-2026" },
-            { title: "Privacy‑First Telemetry 2026", category: "Observability", link: "/blog/privacy-first-telemetry-2026" }
+            { title: "E2E AI Tracing", category: "Observability", link: "/blog/ai-e2e-tracing-2025" },
+            { title: "Edge Personalization", category: "Edge Computing", link: "/blog/edge-personalization-2025" },
+            { title: "Policy Tests Quickstart", category: "AI Governance", link: "/blog/policy-tests-quickstart-2025" },
+            { title: "Secure ML Supply Chain 2026", category: "Security", link: "/blog/secure-ml-supply-chain-2026" },
+            { title: "GenAI Routing Blueprint 2026", category: "GenAI", link: "/blog/genai-routing-blueprint-2026" }
           ]}
         />
         <div className="container mx-auto px-6 mt-6">
@@ -539,7 +541,7 @@ const Home = () => {
                 <div className="text-center mb-12">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 text-white text-sm font-medium mb-6 border border-white/30">
                 <Sparkles className="w-4 h-4 mr-2" />
-                Fresh: KPI Policy Tests + Serverless Inference Cost Playbook + Privacy‑First Telemetry
+                Fresh: E2E AI Tracing, Edge Personalization, CI Policy Tests
               </div>
               <h2 className="text-4xl font-bold mb-4">
                 Latest Articles & Insights
@@ -820,16 +822,16 @@ const Home = () => {
               {/* Inline featured list (auto-curated highlights) */}
               <div className="mt-8 grid gap-6 md:grid-cols-3">
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-purple-200 mb-1">Platform Engineering</div>
-                  <div className="font-semibold text-white">Platform Scorecards 2026</div>
+                  <div className="text-sm text-purple-200 mb-1">Observability</div>
+                  <div className="font-semibold text-white">E2E AI Tracing</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-rose-200 mb-1">Security</div>
-                  <div className="font-semibold text-white">AI Cybersecurity Automation</div>
+                  <div className="text-sm text-rose-200 mb-1">Edge Computing</div>
+                  <div className="font-semibold text-white">Edge Personalization</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-blue-200 mb-1">Edge Computing</div>
-                  <div className="font-semibold text-white">Edge AI Blueprint 2026</div>
+                  <div className="text-sm text-blue-200 mb-1">AI Governance</div>
+                  <div className="font-semibold text-white">Policy Tests Quickstart</div>
                 </div>
               </div>
             </div>

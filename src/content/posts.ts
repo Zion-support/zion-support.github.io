@@ -10,9 +10,55 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-    slug: "ai-autonomous-infrastructure-2026",
-    title: "AI Autonomous Infrastructure 2026: Self‑Healing, Self‑Optimizing, Self‑Scaling",
-    description: "Blueprints and scorecards to operate self‑healing platforms with budgets and safe automation.",
+    slug: "ai-e2e-tracing-2025",
+    title: "E2E AI Tracing: From Prompt to Outcome KPIs",
+    description: "Connect prompts, tools, and UX to measurable KPIs to prove ROI and prevent regressions.",
+    category: "Observability",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-personalization-2025",
+    title: "Edge Personalization: Privacy‑First, Sub‑100ms Experiences",
+    description: "On‑device signals, signed configs, and micro‑models for private, fast personalization.",
+    category: "Edge Computing",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "policy-tests-quickstart-2025",
+    title: "Policy Tests Quickstart: Ship Fast, Stay Safe",
+    description: "Lightweight CI policy tests that catch risks while preserving engineering velocity.",
+    category: "AI Governance",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "secure-ml-supply-chain-2026",
+    title: "Secure ML Supply Chain 2026: SBOMs, Attestations, and Drift Guards",
+    description: "Continuously track models, datasets, and prompts with signed SBOMs and policy checks.",
+    category: "Security",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "genai-routing-blueprint-2026",
+    title: "GenAI Routing Blueprint 2026: Quality Tiers, Caches, and Budgets",
+    description: "Route traffic by SLA with tiered models, edge caches, and KPI‑linked budgets.",
+    category: "GenAI",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "golden-paths-roi-2026",
+    title: "Golden Paths ROI 2026: Scorecards that Prove Platform Value",
+    description: "Link developer journeys to SLOs, adoption, and revenue with actionable scorecards.",
+>>>>>>> origin/chore/add-sept-29-content-and-promos
     category: "Platform Engineering",
     publishedAt: "2025-10-12",
     featured: true,
