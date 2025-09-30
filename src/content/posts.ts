@@ -19,6 +19,33 @@ export const posts: BlogPost[] = [
     readTime: "11 min read"
   },
   {
+    slug: "ai-2025-sept-30-security-mesh-v2",
+    title: "AI Security Mesh v2 — Signed Outputs, Verifiers, Budgeted Actions",
+    description: "Harden AI with runtime verifiers, egress control, and instant rollback under live budgets.",
+    category: "AI Security",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "genai-2025-sept-30-economy-tiers-blueprint",
+    title: "GenAI Economy Tiers Blueprint — 40–70% Savings, Stable UX",
+    description: "Tier routing, semantic caches, and eval gates that keep quality high and bills predictable.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "observability-2025-sept-30-e2e-ai-tracing-v2",
+    title: "E2E AI Tracing v2 — From Token to KPI with Budgets",
+    description: "Span‑level budgets, cost telemetry, and rollback playbooks wired to business KPIs.",
+    category: "Observability",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
     slug: "quantum-neural-networks-guide-2026",
     title: "Quantum‑Neural Networks Guide 2026 — 1000x processing speed",
     description: "Hybrid circuits, warm pools, and policy‑tested fallbacks for predictable acceleration.",
