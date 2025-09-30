@@ -1,5 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
+import PromotionalBanner from '../components/PromotionalBanner';
+import ContentShowcase from '../components/ContentShowcase';
+import NewsletterSignup from '../components/NewsletterSignup';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -39,6 +42,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Promotional Banner */}
+      <PromotionalBanner />
 
       {/* Services Section */}
       <section className="py-20 bg-white">
@@ -101,6 +107,16 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Content Showcase */}
+      <ContentShowcase />
+
+      {/* Newsletter Signup */}
+      <section className="py-16">
+        <div className="container mx-auto px-6">
+          <NewsletterSignup variant="hero" />
         </div>
       </section>
 
