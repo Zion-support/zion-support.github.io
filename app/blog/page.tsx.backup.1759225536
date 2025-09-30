@@ -7,16 +7,85 @@ export const metadata = {
 
 const blogPosts = [
   {
+<<<<<<< HEAD
+    title: 'AI Enterprise Automation 2026: Autonomous Systems with Proven ROI',
+    slug: 'ai-2026-enterprise-automation',
+    excerpt: 'Scale autonomous AI safely with policy gates, evals, and cost-aware routing. Ship measurable automation with clear ROI.',
+    category: 'Implementation Guide',
+    publishedAt: 'January 30, 2026',
+    image: '🏢',
+    color: 'blue',
+    readTime: '20 min read'
+  },
+  {
+    title: 'Real-Time Agent Routing 2026: Faster, Cheaper, More Reliable AI Ops',
+    slug: 'ai-2026-real-time-agent-routing',
+    excerpt: 'Policy-aware model/tool routing with budgets and semantic caching. Cut cost ~40% with better reliability.',
+    category: 'Agent Platforms',
+    publishedAt: 'January 20, 2026',
+    image: '🧭',
+    color: 'indigo',
+    readTime: '18 min read'
+  },
+  {
+    title: 'Trustworthy Autonomous Agents 2026: Guardrails, Evals, and Policy Gates',
+    slug: 'ai-trustworthy-agents-2026',
+    excerpt: 'Design reliable autonomy with layered guardrails, budgeted tools, and live evaluations.',
+    category: 'AI Reliability',
+    publishedAt: 'January 2026',
+    image: '🛡️',
+    color: 'purple',
+    readTime: '16 min read'
+  },
+  {
+    title: 'AI Agent Security Blueprint 2026: Zero‑Trust for Autonomous Systems',
+    slug: 'ai-agent-security-blueprint-2026',
+    excerpt: 'Zero‑trust architecture for agents: isolation, least privilege, scoped secrets, and auditability.',
+    category: 'Security',
+    publishedAt: 'January 2026',
+    image: '🔐',
+    color: 'green',
+    readTime: '14 min read'
+  },
+  {
+    title: 'Reliable Agent Evals 2025: Measure, Guardrail, and Improve',
+    slug: 'ai-reliable-agent-evals-2025',
+    excerpt: 'Blueprint for production agent evaluations: golden tasks, scorecards, policy tests, and continuous improvement.',
+    category: 'AI Reliability',
+    publishedAt: 'September 30, 2025',
+    image: '✅',
+=======
     title: 'AI 2027: Quantum Computing Breakthrough Revolutionizing Enterprise Operations',
     slug: 'ai-2027-quantum-breakthrough',
     excerpt: 'Discover how quantum computing breakthroughs in 2027 are revolutionizing enterprise AI operations, delivering unprecedented computational power and optimization capabilities.',
     category: 'Breakthrough Technology',
     publishedAt: 'January 15, 2027',
     image: '⚛️',
+>>>>>>> origin/cursor/create-and-deploy-new-content-5dd2
     color: 'purple',
     readTime: '12 min read'
   },
   {
+<<<<<<< HEAD
+    title: 'AI Enterprise GenAI Agent Platform 2026',
+    slug: 'ai-enterprise-genai-agent-platform-2026',
+    excerpt: 'Blueprint to ship a governed, reliable, and cost‑efficient GenAI agent platform—routing, memory, tools, observability, and guardrails.',
+    category: 'Implementation Guide',
+    publishedAt: 'September 30, 2025',
+    image: '🏗️',
+    color: 'green',
+    readTime: '20 min read'
+  },
+  {
+    title: 'AI Voice Interfaces Enterprise 2026',
+    slug: 'ai-voice-interfaces-enterprise-2026',
+    excerpt: 'Design low‑latency, multilingual, privacy‑preserving voice AI with guardrails, evals, and fallbacks.',
+    category: 'Implementation Guide',
+    publishedAt: 'September 30, 2025',
+    image: '🎙️',
+    color: 'indigo',
+    readTime: '18 min read'
+=======
     title: 'AI 2027: The Dawn of Fully Autonomous Enterprise Operations',
     slug: 'ai-2027-autonomous-enterprise',
     excerpt: 'Explore how AI-driven autonomous enterprise systems are transforming business operations, delivering unprecedented efficiency and decision-making capabilities without human intervention.',
@@ -25,6 +94,7 @@ const blogPosts = [
     image: '🤖',
     color: 'green',
     readTime: '15 min read'
+>>>>>>> origin/cursor/create-and-deploy-new-content-5dd2
   },
   {
     title: 'Enterprise RAG Guardrails 2026: Safe, Reliable, and Controllable AI',

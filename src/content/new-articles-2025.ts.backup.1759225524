@@ -267,6 +267,42 @@ newArticles2025.push(
   }
 );
 
+<<<<<<< HEAD
+// Oct 31, 2025 – New featured promos to advertise on Home
+newArticles2025.push(
+  {
+    id: "agent-observability-blueprint-2026",
+    title: "Agent Observability Blueprint 2026: Traces, SLIs, Rollbacks",
+    description: "Wire end‑to‑end traces for tools, KPI SLIs, and instant rollback triggers that keep reliability high.",
+    category: "AI Operations",
+    publishedDate: "2025-10-31",
+    featured: true,
+    link: "/blog/agent-observability-blueprint-2026",
+    readTime: "8 min read",
+    tags: ["Observability", "Agents", "SLIs"]
+  },
+  {
+    id: "secure-genai-data-guardrails-2026",
+    title: "Secure GenAI Data Guardrails 2026: Scoped Access & Redaction",
+    description: "Auth‑aware retrieval, field‑level redaction, and signed outputs enforced by policy tests.",
+    category: "Security",
+    publishedDate: "2025-10-31",
+    featured: true,
+    link: "/blog/secure-genai-data-guardrails-2026",
+    readTime: "7 min read",
+    tags: ["Security", "Compliance", "GenAI"]
+  },
+  {
+    id: "sla-aware-inference-routing-2026",
+    title: "SLA‑Aware Inference Routing 2026: Quality Tiers Under Budget",
+    description: "Route prompts by SLA using model tiers, caches, and KPI‑linked budgets for stable UX at lower cost.",
+    category: "GenAI",
+    publishedDate: "2025-10-31",
+    featured: true,
+    link: "/blog/sla-aware-inference-routing-2026",
+    readTime: "8 min read",
+    tags: ["Routing", "Budgets", "Caching"]
+=======
 // Sept 30, 2025 – Additional featured content to advertise on homepage
 newArticles2025.push(
   {
@@ -301,42 +337,6 @@ newArticles2025.push(
     link: "/blog/ai-quantum-computing-breakthrough-2026",
     readTime: "10 min read",
     tags: ["Quantum", "Optimization", "Acceleration"]
-  }
-);
-
-// Mar 2026 – Fresh featured promos to advertise on Home
-newArticles2025.push(
-  {
-    id: "ai-platform-blueprints-2026",
-    title: "AI Platform Blueprints 2026: Guardrails, Traces, Budgets",
-    description: "Governed AI platform patterns with KPI‑linked guardrails, live traces, and predictable spend.",
-    category: "AI Engineering",
-    publishedDate: "2025-09-30",
-    featured: true,
-    link: "/blog/ai-platform-blueprints-2026",
-    readTime: "9 min read",
-    tags: ["Platforms", "Guardrails", "Observability", "Budgets"]
-  },
-  {
-    id: "edge-agents-2026",
-    title: "Edge Agents 2026: Offline‑Capable Tools at <100ms",
-    description: "On‑device tools, signed configs, and tiered caches for private, sub‑100ms experiences.",
-    category: "Edge Computing",
-    publishedDate: "2025-09-30",
-    featured: true,
-    link: "/blog/edge-agents-2026",
-    readTime: "7 min read",
-    tags: ["Agents", "Edge", "Privacy", "Latency"]
-  },
-  {
-    id: "policy-checked-genai-2026",
-    title: "Policy‑Checked GenAI 2026: CI Gates, Canaries, Rollback",
-    description: "CI policy tests, online canaries, and rollback triggers that keep velocity high without regressions.",
-    category: "AI Governance",
-    publishedDate: "2025-09-30",
-    featured: true,
-    link: "/blog/policy-checked-genai-2026",
-    readTime: "7 min read",
-    tags: ["Governance", "Compliance", "Canaries", "Rollback"]
+>>>>>>> origin/cursor/create-and-deploy-new-content-202d
   }
 );
