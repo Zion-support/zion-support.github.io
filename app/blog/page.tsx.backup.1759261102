@@ -3,6 +3,16 @@ import Link from 'next/link';
 
 const blogPosts = [
   {
+<<<<<<< HEAD
+    title: 'Production Agent Guardrails — October 2, 2025',
+    slug: 'ai-2025-oct-02-production-agent-guardrails',
+    excerpt: 'Approvals, verifiers, budgets, online evals, and rollback to ship agentic systems safely in production.',
+    category: 'Implementation Guide',
+    publishedAt: 'October 2, 2025',
+    image: '🛡️',
+    color: 'green',
+    readTime: '15 min read'
+=======
     title: 'AI 2026 Hyper-Autonomous Enterprise Systems: The Future of Business Automation',
     slug: 'ai-2026-hyper-autonomous-enterprise-systems',
     excerpt: 'Discover the revolutionary hyper-autonomous enterprise systems of 2026. Learn how next-generation AI is achieving 99.9% automation rates, 500% efficiency gains, and complete business process transformation.',
@@ -31,6 +41,7 @@ const blogPosts = [
     image: '📊',
     color: 'green',
     readTime: '24 min read'
+>>>>>>> origin/cursor/create-and-deploy-new-content-41b3
   },
   {
     title: 'Executive AI Roadmap — October 2025',
