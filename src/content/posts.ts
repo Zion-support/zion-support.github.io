@@ -10,6 +10,33 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-governance-runtime-scorecards-2026",
+    title: "AI Governance Runtime Scorecards 2026: KPIs, Budgets, Rollback",
+    description: "Live guardrails wired to KPIs with PR checks, budgets, and instant rollback that speed delivery.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-experiments-under-100ms-quickstart-2026",
+    title: "Edge Experiments Quickstart 2026: Private A/B at <100ms",
+    description: "Scoped IDs, on-device metrics, and DP noise for compliant global experimentation without latency tax.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "agent-release-guardrails-checklist-2026-v2",
+    title: "Agent Release Guardrails 2026 v2: Budgets, Approvals, Instant Rollback",
+    description: "Battle‑tested checklist for safe agent releases with budgeted actions and KPI‑linked canaries.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
     slug: "ai-ethics-operational-blueprint-2026",
     title: "AI Ethics Operational Blueprint 2026: Bias, Fairness, Auditability",
     description: "A pragmatic guide to operationalizing AI ethics: bias tests, fairness SLAs, red-team drills, and audit-ready trails.",

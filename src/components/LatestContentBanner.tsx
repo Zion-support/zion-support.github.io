@@ -27,7 +27,7 @@ const LatestContentBanner: React.FC<LatestContentBannerProps> = ({
             <Sparkles className="w-6 h-6 animate-pulse" />
             <div>
               <h3 className="font-bold text-lg">
-                🔥 Fresh Articles: Guardrails Scorecards, Edge Tracing, Agent Risk Budgets
+                🔥 New Today: Runtime Scorecards · Edge A/B &lt;100ms · Agent Guardrails v2
               </h3>
               <p className="text-sm opacity-90">
                 Now live: 3 new guides + dozens of updated insights
