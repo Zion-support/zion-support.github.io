@@ -72,14 +72,22 @@ import June2026ContentShowcaseBanner from "./components/June2026ContentShowcaseB
 import July2026AutomationBreakthroughBanner from "./components/July2026AutomationBreakthroughBanner";
 import August2026BreakthroughAdvertisingBanner from "./components/August2026BreakthroughAdvertisingBanner";
 import August2026MegaBreakthroughBanner from "./components/August2026MegaBreakthroughBanner";
+import September2026BreakthroughAdvertisingBanner from "./components/September2026BreakthroughAdvertisingBanner";
+import AutonomousEnterpriseAutomationAdvertisingBanner from "./components/AutonomousEnterpriseAutomationAdvertisingBanner";
 
 export default function App(): JSX.Element {
   return (
     <div className="min-h-screen bg-slate-950">
-      {/* NEW: August 2026 Breakthrough Advertising Banner - MOST PROMINENT */}
+      {/* NEW: September 2026 Breakthrough Advertising Banner - MOST PROMINENT */}
+      <September2026BreakthroughAdvertisingBanner />
+      
+      {/* NEW: Autonomous Enterprise Automation Advertising Banner - HIGHLY PROMINENT */}
+      <AutonomousEnterpriseAutomationAdvertisingBanner />
+      
+      {/* NEW: August 2026 Breakthrough Advertising Banner - PROMINENT */}
       <August2026BreakthroughAdvertisingBanner />
       
-      {/* NEW: August 2026 Mega Breakthrough Banner - HIGHLY PROMINENT */}
+      {/* NEW: August 2026 Mega Breakthrough Banner - PROMINENT */}
       <August2026MegaBreakthroughBanner />
       
       {/* NEW: July 2026 Automation Breakthrough Banner - PROMINENT */}
@@ -246,11 +254,11 @@ export default function App(): JSX.Element {
             {/* Key Metrics */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
               <div className="bg-gradient-to-r from-blue-500/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-4 border border-blue-500/30">
-                <div className="text-2xl font-extrabold text-blue-400 mb-1">99.95%</div>
+                <div className="text-2xl font-extrabold text-blue-400 mb-1">99.97%</div>
                 <div className="text-xs text-blue-300">Autonomous Operations</div>
               </div>
               <div className="bg-gradient-to-r from-purple-500/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-4 border border-purple-500/30">
-                <div className="text-2xl font-extrabold text-purple-400 mb-1">$8.5B</div>
+                <div className="text-2xl font-extrabold text-purple-400 mb-1">$12B</div>
                 <div className="text-xs text-purple-300">Enterprise Value</div>
               </div>
               <div className="bg-gradient-to-r from-green-500/20 to-green-600/20 backdrop-blur-sm rounded-xl p-4 border border-green-500/30">
@@ -258,7 +266,7 @@ export default function App(): JSX.Element {
                 <div className="text-xs text-green-300">Self-Evolving</div>
               </div>
               <div className="bg-gradient-to-r from-orange-500/20 to-orange-600/20 backdrop-blur-sm rounded-xl p-4 border border-orange-500/30">
-                <div className="text-2xl font-extrabold text-orange-400 mb-1">3,000%</div>
+                <div className="text-2xl font-extrabold text-orange-400 mb-1">4,500%</div>
                 <div className="text-xs text-orange-300">ROI</div>
               </div>
             </div>
@@ -270,32 +278,32 @@ export default function App(): JSX.Element {
       <div className="bg-gradient-to-r from-purple-500/20 to-indigo-500/20 backdrop-blur-sm rounded-2xl p-6 border border-purple-500/30 mb-12">
         <div className="text-center">
           <h3 className="text-2xl font-bold text-white mb-2">
-            🚀 BREAKING: August 2026 Revolutionary AI Breakthroughs Now Live!
+            🚀 BREAKING: September 2026 Revolutionary AI Breakthroughs Now Live!
           </h3>
           <p className="text-purple-200 text-lg mb-4">
-            99.95% Autonomous Operations • Self-Evolving Neural Architectures • $8.5B Proven Success • Complete Mega Guide
+            99.97% Autonomous Operations • Self-Evolving Neural Architectures • $12B Proven Success • Complete Mega Guide
           </p>
           <div className="flex flex-wrap justify-center gap-4 text-sm mb-4">
-            <span className="bg-purple-500/20 px-3 py-1 rounded-full text-purple-300">99.95% Autonomy</span>
+            <span className="bg-purple-500/20 px-3 py-1 rounded-full text-purple-300">99.97% Autonomy</span>
             <span className="bg-indigo-500/20 px-3 py-1 rounded-full text-indigo-300">Self-Evolving AI</span>
-            <span className="bg-green-500/20 px-3 py-1 rounded-full text-green-300">$8.5B Enterprise Value</span>
-            <span className="bg-cyan-500/20 px-3 py-1 rounded-full text-cyan-300">3,000% ROI</span>
+            <span className="bg-green-500/20 px-3 py-1 rounded-full text-green-300">$12B Enterprise Value</span>
+            <span className="bg-cyan-500/20 px-3 py-1 rounded-full text-cyan-300">4,500% ROI</span>
           </div>
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="/blog/ai-2026-august-breakthrough-innovations"
+              href="/blog/ai-2026-september-breakthrough-revolution"
               className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-2 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50"
             >
               Read Full Breakthrough →
             </a>
             <a
-              href="/case-studies/ai-2026-august-breakthrough-8-5-billion-success"
+              href="/case-studies/ai-2026-september-breakthrough-12-billion-success"
               className="bg-gradient-to-r from-indigo-500 to-cyan-600 hover:from-indigo-400 hover:to-cyan-500 text-white font-bold py-2 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50"
             >
-              View $8.5B Success →
+              View $12B Success →
             </a>
             <a
-              href="/services/ai-2026-august-autonomous-intelligence-consulting"
+              href="/services/ai-2026-september-autonomous-intelligence-consulting"
               className="bg-gradient-to-r from-cyan-500 to-teal-600 hover:from-cyan-400 hover:to-teal-500 text-white font-bold py-2 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50"
             >
               Get Intelligence Consultation →
@@ -318,31 +326,31 @@ export default function App(): JSX.Element {
             </div>
             
             <h2 className="text-4xl md:text-5xl font-extrabold mb-6 bg-gradient-to-r from-green-400 via-emerald-400 to-teal-400 bg-clip-text text-transparent">
-              $8.5 Billion in Measurable Value
+              $12 Billion in Measurable Value
             </h2>
             
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              See how Fortune 500 companies achieved unprecedented results with our AI 2026 August Breakthrough Platform, 
-              delivering 99.95% autonomous operations and transformative business outcomes.
+              See how Fortune 500 companies achieved unprecedented results with our AI 2026 September Breakthrough Platform, 
+              delivering 99.97% autonomous operations and transformative business outcomes.
             </p>
             
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-green-500/30">
-                <div className="text-3xl font-extrabold text-green-400 mb-2">$8.5B</div>
+                <div className="text-3xl font-extrabold text-green-400 mb-2">$12B</div>
                 <div className="text-green-300 text-sm">Total Value Generated</div>
               </div>
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-emerald-500/30">
-                <div className="text-3xl font-extrabold text-emerald-400 mb-2">99.95%</div>
+                <div className="text-3xl font-extrabold text-emerald-400 mb-2">99.97%</div>
                 <div className="text-emerald-300 text-sm">Autonomous Operations</div>
               </div>
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-teal-500/30">
-                <div className="text-3xl font-extrabold text-teal-400 mb-2">90</div>
+                <div className="text-3xl font-extrabold text-teal-400 mb-2">60</div>
                 <div className="text-teal-300 text-sm">Days Payback Period</div>
               </div>
             </div>
             
             <a 
-              href="/case-studies/ai-2026-august-breakthrough-8-5-billion-success"
+              href="/case-studies/ai-2026-september-breakthrough-12-billion-success"
               className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
             >
               Read Full Case Study →
@@ -476,16 +484,16 @@ export default function App(): JSX.Element {
                 Get Started Today
               </a>
               <a 
-                href="/blog/ai-2026-august-breakthrough-innovations" 
+                href="/blog/ai-2026-september-breakthrough-revolution" 
                 className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
                 Read Latest Breakthroughs →
               </a>
               <a 
-                href="/case-studies/ai-2026-august-breakthrough-8-5-billion-success" 
+                href="/case-studies/ai-2026-september-breakthrough-12-billion-success" 
                 className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
-                View $8.5B Success Story
+                View $12B Success Story
               </a>
             </div>
           </div>
