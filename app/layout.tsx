@@ -62,13 +62,8 @@ function Header() {
           <div className="relative group">
             <Link href="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
               Case Studies
-<<<<<<< HEAD
               <span className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
                 $85M+ ROI
-=======
-              <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
-                FEATURED
->>>>>>> cursor/create-and-deploy-new-content-9e9b
               </span>
             </Link>
           </div>
