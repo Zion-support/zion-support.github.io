@@ -222,8 +222,21 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 📣 Featured: October — New Risk Mitigation Article */}
-      <OctoberFeaturedContentBanner />
+      {/* 📣 Featured: New — AI Operational Resilience 2025 */}
+      <div className="bg-gradient-to-r from-emerald-700/20 to-cyan-700/20 border border-white/10 rounded-2xl p-6 mb-8">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          <div>
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-xs font-semibold mb-3">NEW</div>
+            <h2 className="text-xl md:text-2xl font-bold text-white">
+              New: AI Operational Resilience 2025 — From Reactive to Self‑Healing
+            </h2>
+          </div>
+          <div className="flex gap-3">
+            <Link href="/blog/ai-operational-resilience-2025" className="inline-flex items-center gap-2 bg-white text-emerald-700 px-4 py-2 rounded-lg font-semibold hover:bg-emerald-50 transition-colors">Read article</Link>
+            <Link href="/content-hub#featured-content" className="inline-flex items-center gap-2 bg-emerald-500 text-white px-4 py-2 rounded-lg font-semibold hover:bg-emerald-400 transition-colors">Explore more</Link>
+          </div>
+        </div>
+      </div>
 
       {/* 📣 Featured: September 30, 2025 — Three New Articles */}
       <NewestContent2025Banner />
