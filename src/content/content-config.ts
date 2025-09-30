@@ -19,6 +19,22 @@ export const featuredBlogPosts: FeaturedItem[] = [
     featured: true
   },
   {
+    id: "ai-trustworthy-agents-2026",
+    title: "Trustworthy Autonomous Agents 2026",
+    description: "Guardrails, evals, and policy gates for reliable autonomy",
+    link: "/blog/ai-trustworthy-agents-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-agent-security-blueprint-2026",
+    title: "AI Agent Security Blueprint 2026",
+    description: "Zero‑trust for agents: isolation, least privilege, auditability",
+    link: "/blog/ai-agent-security-blueprint-2026",
+    type: "article",
+    featured: true
+  },
+  {
     id: "ai-2027-autonomous-governance-blueprint",
     title: "AI 2027 Autonomous Governance Blueprint",
     description: "Policy gates, budgets, and verifiable outcomes for safe autonomy",

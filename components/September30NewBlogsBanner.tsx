@@ -107,12 +107,26 @@ export default function September30NewBlogsBanner() {
         </div>
 
         <div className="text-center mt-12">
-          <Link
-            href="/blog"
-            className="inline-block bg-white text-indigo-600 font-semibold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors text-lg"
-          >
-            View All Latest Articles →
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/blog/ai-trustworthy-agents-2026"
+              className="inline-block bg-white text-purple-700 font-semibold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors text-lg"
+            >
+              New: Trustworthy Agents 2026 →
+            </Link>
+            <Link
+              href="/blog/ai-agent-security-blueprint-2026"
+              className="inline-block bg-white text-teal-700 font-semibold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors text-lg"
+            >
+              New: Agent Security Blueprint →
+            </Link>
+            <Link
+              href="/blog"
+              className="inline-block bg-white/90 text-indigo-700 font-semibold py-4 px-8 rounded-lg hover:bg-white transition-colors text-lg"
+            >
+              View All Latest Articles →
+            </Link>
+          </div>
         </div>
       </div>
     </div>
