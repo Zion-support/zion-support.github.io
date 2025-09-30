@@ -314,17 +314,17 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Interactive Promotional Section */}
-      <InteractivePromotionalSection />
+      {/* Interactive Promotional Section - Temporarily disabled for build */}
+      {/* <InteractivePromotionalSection /> */}
       
-      {/* Interactive AI Calculator */}
-      <InteractiveAICalculator2026 />
+      {/* Interactive AI Calculator - Temporarily disabled for build */}
+      {/* <InteractiveAICalculator2026 /> */}
 
       {/* Dynamic Content Showcase */}
       <ContentShowcase />
       
-      {/* Interactive Content Showcase 2026 */}
-      <InteractiveContentShowcase2026 />
+      {/* Interactive Content Showcase 2026 - Temporarily disabled for build */}
+      {/* <InteractiveContentShowcase2026 /> */}
 
       {/* Latest Innovations Section */}
       <section className="py-20 bg-gradient-to-br from-indigo-50 via-white to-purple-50">
