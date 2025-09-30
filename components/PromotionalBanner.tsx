@@ -827,18 +827,6 @@ export const AISpaceTechnologyBanner = () => (
   />
 );
 
-export const AISustainabilityGreenTechBanner = () => (
-  <PromotionalBanner
-    message="🌱 SUSTAINABLE: AI Green Tech 2025 - 60% Carbon Reduction with Eco-Friendly AI & $100M+ Environmental Savings"
-    ctaText="Read Guide"
-    ctaLink="/blog/ai-sustainability-green-tech-2025"
-    backgroundColor="bg-gradient-to-r from-green-600 to-emerald-600"
-    textColor="text-white"
-    autoHide={true}
-    hideAfter={20}
-  />
-);
-
 export const AIEnterpriseAdoptionBanner = () => (
   <PromotionalBanner
     message="🏢 ENTERPRISE: AI Adoption 2025 - Complete Implementation Guide with 300% ROI & 70% Cost Reduction"
@@ -896,18 +884,6 @@ export const AICustomerExperienceBanner = () => (
     textColor="text-white"
     autoHide={true}
     hideAfter={18}
-  />
-);
-
-export const EnterpriseAITransformationBanner = () => (
-  <PromotionalBanner
-    message="🏢 ENTERPRISE: AI Transformation 2025 - Scale Your Business with Custom AI Implementation & 500% ROI"
-    ctaText="Get Consultation"
-    ctaLink="/contact"
-    backgroundColor="bg-gradient-to-r from-indigo-600 to-blue-600"
-    textColor="text-white"
-    autoHide={true}
-    hideAfter={20}
   />
 );
 
