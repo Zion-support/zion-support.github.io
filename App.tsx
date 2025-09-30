@@ -86,6 +86,7 @@ import April2026RevolutionaryBreakthroughBanner from "./components/April2026Revo
 import April2026ContentShowcaseBanner from "./components/April2026ContentShowcaseBanner";
 import October2026NewContentBanner from "./components/October2026NewContentBanner";
 import October2026BreakthroughShowcaseBanner from "./components/October2026BreakthroughShowcaseBanner";
+import September2025NewContentBanner from "./components/September2025NewContentBanner";
 
 export default function App(): JSX.Element {
   return (
@@ -125,6 +126,9 @@ export default function App(): JSX.Element {
       
       {/* NEW: September 2025 Practical AI Insights Banner - FEATURED */}
       <September2025PracticalAIBanner />
+      
+      {/* ✨ NEW: September 2025 Latest Content Banner - JUST RELEASED! ✨ */}
+      <September2025NewContentBanner />
       
       {/* NEW: September 2026 Breakthrough Advertising Banner - MOST PROMINENT */}
       <September2026BreakthroughAdvertisingBanner />
