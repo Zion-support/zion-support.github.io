@@ -87,6 +87,295 @@ export default function HomePage() {
   return (
     <>
       <div className="animate-fade-in">
+
+      {/* 🚀 LATEST BREAKTHROUGH CONTENT - SEPTEMBER 30, 2025 🚀 */}
+      <section className="relative py-24 bg-gradient-to-r from-indigo-600 via-blue-600 to-cyan-600 text-white overflow-hidden">
+        <div className="absolute inset-0 bg-black opacity-10"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIj48cGF0aCBkPSJNMzYgMzBoLTEydjEyaDEyVjMweiIvPjwvZz48L2c+PC9zdmc+')] opacity-20"></div>
+        <div className="relative max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-3 bg-yellow-400 text-gray-900 px-8 py-4 rounded-full text-xl font-black mb-8 animate-bounce shadow-2xl">
+              <span className="text-3xl">⚡</span>
+              BREAKTHROUGH CONTENT JUST PUBLISHED TODAY
+              <span className="text-3xl">🎯</span>
+            </div>
+            <h1 className="text-6xl md:text-7xl font-black mb-6 leading-tight drop-shadow-lg">
+              5 Revolutionary AI Articles That Will Transform Your Business
+            </h1>
+            <p className="text-3xl font-bold mb-4 opacity-95">
+              Edge Computing • Reasoning Agents • Predictive Maintenance
+            </p>
+            <p className="text-2xl opacity-90">
+              Plus: $55M Manufacturing Success + $185M Energy Grid Success Stories
+            </p>
+          </div>
+
+          {/* Featured New Content Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            
+            {/* Blog Post 1: Autonomous Reasoning Agents */}
+            <Link href="/blog/ai-autonomous-reasoning-agents-2025" className="group transform hover:scale-105 transition-all">
+              <div className="bg-white rounded-2xl shadow-2xl overflow-hidden hover:shadow-3xl">
+                <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-8 text-white">
+                  <div className="flex items-center gap-2 mb-4">
+                    <span className="bg-yellow-400 text-blue-900 px-4 py-2 rounded-full text-xs font-bold animate-pulse">
+                      🆕 BLOG POST
+                    </span>
+                  </div>
+                  <h3 className="text-3xl font-bold mb-3">
+                    🧠 AI Autonomous Reasoning Agents
+                  </h3>
+                  <p className="text-lg opacity-95">
+                    500% productivity gains with intelligent decision-making
+                  </p>
+                </div>
+                <div className="p-8">
+                  <p className="text-gray-700 mb-6 leading-relaxed">
+                    Discover how autonomous reasoning agents achieve 500% productivity improvements, 
+                    95% decision accuracy, and $30M+ annual savings for enterprises.
+                  </p>
+                  <div className="grid grid-cols-3 gap-4 mb-6 text-center">
+                    <div>
+                      <div className="text-3xl font-bold text-blue-600">500%</div>
+                      <div className="text-xs text-gray-600">Productivity</div>
+                    </div>
+                    <div>
+                      <div className="text-3xl font-bold text-indigo-600">95%</div>
+                      <div className="text-xs text-gray-600">Accuracy</div>
+                    </div>
+                    <div>
+                      <div className="text-3xl font-bold text-green-600">$30M+</div>
+                      <div className="text-xs text-gray-600">Savings</div>
+                    </div>
+                  </div>
+                  <div className="block w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-center py-4 rounded-xl font-bold hover:from-blue-700 hover:to-indigo-700 transition-colors text-lg shadow-lg">
+                    Read Full Article →
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+            {/* Blog Post 2: Edge Computing Revolution */}
+            <Link href="/blog/ai-edge-computing-revolution-2025" className="group transform hover:scale-105 transition-all">
+              <div className="bg-white rounded-2xl shadow-2xl overflow-hidden hover:shadow-3xl">
+                <div className="bg-gradient-to-r from-green-600 to-emerald-600 p-8 text-white">
+                  <div className="flex items-center gap-2 mb-4">
+                    <span className="bg-yellow-400 text-green-900 px-4 py-2 rounded-full text-xs font-bold animate-pulse">
+                      🆕 BLOG POST
+                    </span>
+                  </div>
+                  <h3 className="text-3xl font-bold mb-3">
+                    ⚡ AI Edge Computing Revolution
+                  </h3>
+                  <p className="text-lg opacity-95">
+                    98% latency reduction with real-time intelligence
+                  </p>
+                </div>
+                <div className="p-8">
+                  <p className="text-gray-700 mb-6 leading-relaxed">
+                    How edge AI delivers &lt;5ms response times, 85% cost savings, and 100% 
+                    data privacy for IoT and manufacturing applications.
+                  </p>
+                  <div className="grid grid-cols-3 gap-4 mb-6 text-center">
+                    <div>
+                      <div className="text-3xl font-bold text-green-600">&lt;5ms</div>
+                      <div className="text-xs text-gray-600">Response</div>
+                    </div>
+                    <div>
+                      <div className="text-3xl font-bold text-emerald-600">85%</div>
+                      <div className="text-xs text-gray-600">Cost ↓</div>
+                    </div>
+                    <div>
+                      <div className="text-3xl font-bold text-blue-600">100%</div>
+                      <div className="text-xs text-gray-600">Private</div>
+                    </div>
+                  </div>
+                  <div className="block w-full bg-gradient-to-r from-green-600 to-emerald-600 text-white text-center py-4 rounded-xl font-bold hover:from-green-700 hover:to-emerald-700 transition-colors text-lg shadow-lg">
+                    Read Full Article →
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+            {/* Blog Post 3: Predictive Maintenance */}
+            <Link href="/blog/ai-predictive-maintenance-2025" className="group transform hover:scale-105 transition-all">
+              <div className="bg-white rounded-2xl shadow-2xl overflow-hidden hover:shadow-3xl">
+                <div className="bg-gradient-to-r from-orange-600 to-red-600 p-8 text-white">
+                  <div className="flex items-center gap-2 mb-4">
+                    <span className="bg-yellow-400 text-orange-900 px-4 py-2 rounded-full text-xs font-bold animate-pulse">
+                      🆕 BLOG POST
+                    </span>
+                  </div>
+                  <h3 className="text-3xl font-bold mb-3">
+                    🔧 AI Predictive Maintenance
+                  </h3>
+                  <p className="text-lg opacity-95">
+                    92% downtime reduction predicting failures weeks ahead
+                  </p>
+                </div>
+                <div className="p-8">
+                  <p className="text-gray-700 mb-6 leading-relaxed">
+                    Eliminate unplanned downtime with AI that predicts equipment failures 3+ weeks 
+                    in advance with 97% accuracy, saving millions annually.
+                  </p>
+                  <div className="grid grid-cols-3 gap-4 mb-6 text-center">
+                    <div>
+                      <div className="text-3xl font-bold text-orange-600">92%</div>
+                      <div className="text-xs text-gray-600">Downtime ↓</div>
+                    </div>
+                    <div>
+                      <div className="text-3xl font-bold text-red-600">97%</div>
+                      <div className="text-xs text-gray-600">Accuracy</div>
+                    </div>
+                    <div>
+                      <div className="text-3xl font-bold text-green-600">3 wks</div>
+                      <div className="text-xs text-gray-600">Warning</div>
+                    </div>
+                  </div>
+                  <div className="block w-full bg-gradient-to-r from-orange-600 to-red-600 text-white text-center py-4 rounded-xl font-bold hover:from-orange-700 hover:to-red-700 transition-colors text-lg shadow-lg">
+                    Read Full Article →
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+            {/* Case Study 1: Manufacturing Edge AI */}
+            <Link href="/case-studies/ai-edge-manufacturing-success-2025" className="group transform hover:scale-105 transition-all">
+              <div className="bg-white rounded-2xl shadow-2xl overflow-hidden hover:shadow-3xl border-4 border-blue-300">
+                <div className="bg-gradient-to-r from-blue-600 to-cyan-600 p-8 text-white">
+                  <div className="flex items-center gap-2 mb-4">
+                    <span className="bg-yellow-400 text-blue-900 px-4 py-2 rounded-full text-xs font-bold animate-pulse">
+                      🏆 CASE STUDY
+                    </span>
+                  </div>
+                  <h3 className="text-3xl font-bold mb-3">
+                    💰 $55M ROI: Manufacturing Success
+                  </h3>
+                  <p className="text-lg opacity-95">
+                    Fortune 500 achieves 97% quality improvement with edge AI
+                  </p>
+                </div>
+                <div className="p-8">
+                  <p className="text-gray-700 mb-6 leading-relaxed">
+                    Automotive manufacturer deploys edge AI across 20 factories, achieving 97% quality gains, 
+                    92% downtime reduction, and $55M first-year ROI.
+                  </p>
+                  <div className="grid grid-cols-3 gap-4 mb-6 text-center">
+                    <div>
+                      <div className="text-3xl font-bold text-blue-600">$55M</div>
+                      <div className="text-xs text-gray-600">ROI</div>
+                    </div>
+                    <div>
+                      <div className="text-3xl font-bold text-cyan-600">97%</div>
+                      <div className="text-xs text-gray-600">Quality ↑</div>
+                    </div>
+                    <div>
+                      <div className="text-3xl font-bold text-green-600">20</div>
+                      <div className="text-xs text-gray-600">Factories</div>
+                    </div>
+                  </div>
+                  <div className="block w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white text-center py-4 rounded-xl font-bold hover:from-blue-700 hover:to-cyan-700 transition-colors text-lg shadow-lg">
+                    Read Success Story →
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+            {/* Case Study 2: Energy Grid Predictive */}
+            <Link href="/case-studies/ai-predictive-energy-success-2025" className="group transform hover:scale-105 transition-all">
+              <div className="bg-white rounded-2xl shadow-2xl overflow-hidden hover:shadow-3xl border-4 border-green-300">
+                <div className="bg-gradient-to-r from-green-600 to-emerald-600 p-8 text-white">
+                  <div className="flex items-center gap-2 mb-4">
+                    <span className="bg-yellow-400 text-green-900 px-4 py-2 rounded-full text-xs font-bold animate-pulse">
+                      🏆 CASE STUDY
+                    </span>
+                  </div>
+                  <h3 className="text-3xl font-bold mb-3">
+                    💰 $185M Savings: Energy Grid
+                  </h3>
+                  <p className="text-lg opacity-95">
+                    Utility achieves 99.98% uptime & zero failures
+                  </p>
+                </div>
+                <div className="p-8">
+                  <p className="text-gray-700 mb-6 leading-relaxed">
+                    Regional utility transforms grid reliability with AI predictive maintenance, achieving 
+                    99.98% uptime, zero catastrophic failures, and $185M savings.
+                  </p>
+                  <div className="grid grid-cols-3 gap-4 mb-6 text-center">
+                    <div>
+                      <div className="text-3xl font-bold text-green-600">$185M</div>
+                      <div className="text-xs text-gray-600">Saved</div>
+                    </div>
+                    <div>
+                      <div className="text-3xl font-bold text-emerald-600">99.98%</div>
+                      <div className="text-xs text-gray-600">Uptime</div>
+                    </div>
+                    <div>
+                      <div className="text-3xl font-bold text-blue-600">Zero</div>
+                      <div className="text-xs text-gray-600">Failures</div>
+                    </div>
+                  </div>
+                  <div className="block w-full bg-gradient-to-r from-green-600 to-emerald-600 text-white text-center py-4 rounded-xl font-bold hover:from-green-700 hover:to-emerald-700 transition-colors text-lg shadow-lg">
+                    Read Success Story →
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+            {/* CTA Card */}
+            <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl shadow-2xl p-10 flex flex-col justify-center items-center text-white">
+              <div className="text-center mb-8">
+                <div className="text-6xl mb-6">🚀</div>
+                <h3 className="text-3xl font-bold mb-4">
+                  Want These Results?
+                </h3>
+                <p className="text-lg opacity-90 mb-8">
+                  Transform your organization with proven AI solutions delivering real ROI
+                </p>
+              </div>
+              <div className="space-y-4 w-full">
+                <a 
+                  href="tel:+13024640950"
+                  className="block w-full bg-white text-gray-900 text-center py-4 rounded-xl font-bold hover:bg-gray-100 transition-colors text-lg shadow-lg"
+                >
+                  📞 Call +1 302 464 0950
+                </a>
+                <a 
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="block w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white text-center py-4 rounded-xl font-bold hover:from-blue-700 hover:to-cyan-700 transition-colors text-lg"
+                >
+                  📧 Schedule Consultation
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          {/* Bottom CTA */}
+          <div className="text-center bg-white/10 backdrop-blur-sm rounded-2xl p-10 border-2 border-white/20">
+            <h3 className="text-4xl font-bold mb-6">Essential Reading for Technology Leaders</h3>
+            <p className="text-2xl mb-8 opacity-95">
+              Join thousands of CTOs, CIOs, and executives implementing these breakthrough AI strategies
+            </p>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <Link
+                href="/blog"
+                className="bg-white text-blue-600 px-10 py-5 rounded-xl font-bold text-xl hover:bg-gray-100 transition-all hover:scale-105 shadow-2xl"
+              >
+                📚 Explore All Articles
+              </Link>
+              <Link
+                href="/case-studies"
+                className="border-2 border-white text-white px-10 py-5 rounded-xl font-bold text-xl hover:bg-white hover:text-blue-600 transition-all hover:scale-105"
+              >
+                🏆 View All Success Stories
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 🔥 BRAND NEW CONTENT - JUST PUBLISHED! */}
       <section className="py-20 bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white">
         <div className="max-w-7xl mx-auto px-6">
