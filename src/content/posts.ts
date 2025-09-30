@@ -1994,3 +1994,34 @@ posts.push(
   }
 );
 
+// New: Additional September 2025 posts to advertise on homepage
+posts.push(
+  {
+    slug: "ai-governance-runtime-guardrails-2026",
+    title: "AI Governance Runtime Guardrails 2026: Inline Policies Without Friction",
+    description: "Run-time policy checks, KPI-linked canaries, and instant rollback that keep teams fast and compliant.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-privacy-insights-2026",
+    title: "Edge Privacy Insights 2026: Actionable Metrics Without PII",
+    description: "Scoped IDs, on-device aggregation, and DP noise for trustworthy insights with zero PII collection.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "agentic-runtime-safety-2026",
+    title: "Agentic Runtime Safety 2026: Budgets, Sandboxes, and Rollback",
+    description: "Budget risky actions, sandbox tools, and wire rollback so agent releases are safe by default.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  }
+);
+
