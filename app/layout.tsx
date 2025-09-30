@@ -68,6 +68,22 @@ function Header() {
             </Link>
           </div>
           <div className="relative group">
+            <Link href="/blog/ai-neural-interfaces-2026" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
+              Neural Interfaces
+              <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                BREAKTHROUGH
+              </span>
+            </Link>
+          </div>
+          <div className="relative group">
+            <Link href="/blog/ai-space-tech-2026" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
+              Space AI
+              <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                REVOLUTIONARY
+              </span>
+            </Link>
+          </div>
+          <div className="relative group">
             <Link href="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
               Case Studies
               <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
@@ -119,15 +135,15 @@ function Footer() {
               </Link>
               <Link href="/blog/ai-neural-interfaces-2026" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
                 🧠 Neural Interfaces 2026
-                <span className="bg-yellow-400 text-black px-2 py-1 rounded-full text-xs font-semibold">FEATURED</span>
+                <span className="bg-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold">BREAKTHROUGH</span>
               </Link>
               <Link href="/blog/ai-space-tech-2026" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
                 🚀 Space AI Technology
-                <span className="bg-yellow-400 text-black px-2 py-1 rounded-full text-xs font-semibold">FEATURED</span>
+                <span className="bg-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold">REVOLUTIONARY</span>
               </Link>
               <Link href="/blog/ai-synthetic-data-2026" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
                 🔒 Synthetic Data AI
-                <span className="bg-yellow-400 text-black px-2 py-1 rounded-full text-xs font-semibold">FEATURED</span>
+                <span className="bg-green-500 text-white px-2 py-1 rounded-full text-xs font-semibold">PRIVACY BREAKTHROUGH</span>
               </Link>
               <Link href="/blog/ai-2026-mega-breakthrough" className="block text-gray-600 hover:text-blue-600 transition-colors">🚀 AI 2026 Mega Breakthrough</Link>
               <Link href="/blog/ai-autonomous-enterprise-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🏢 Autonomous Enterprise 2026</Link>
@@ -138,6 +154,8 @@ function Footer() {
               </Link>
               <Link href="/case-studies/ai-mega-transformation-success-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">💰 $150M ROI Success Story</Link>
               <Link href="/case-studies/ai-neural-interface-success-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">💰 $12M ROI Neural Interface</Link>
+              <Link href="/services/ai-neural-interfaces-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🧠 Neural Interface Service</Link>
+              <Link href="/services/ai-space-technology-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🚀 Space AI Service</Link>
             </div>
           </div>
           <div>
