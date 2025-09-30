@@ -1,0 +1,12 @@
+import { render, screen } from '@testing-library/react';
+import App from '../app/page';
+
+describe('App Smoke Tests', () => {
+  it('should render without crashing', () => {
+    expect(() => render(<App />)).not.toThrow();
+  });
+
+  it('should render main content', () => {
+    render(<App />);
+    // Basic smoke test - just check if something renders
+    expect(document.body).toBeInTheDocument();

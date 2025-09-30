@@ -1,0 +1,26 @@
+[build]
+  # Use build script with fallback Python handling
+  command = "bash build.sh"
+  publish = "dist"
+  command_timeout = "30m"
+
+[build.environment]
+  NODE_VERSION = "20"
+<<<<<<< HEAD
+  PYTHON_VERSION = "3.12.6"
+  MISE_PYTHON_COMPILE = "true"
+=======
+  PYTHON_VERSION = "3.11.9"
+  MISE_PYTHON_COMPILE = "false"
+>>>>>>> origin/cursor/install-python-dependencies-with-build-43b8
+
+[[plugins]]
+  package = "netlify-plugin-compress"
+  [plugins.inputs]
+    gzip = true
+    brotli = true
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

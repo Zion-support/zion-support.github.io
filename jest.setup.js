@@ -1,15 +1,84 @@
-// Jest setup file
-// Add any global test setup here
+import "@testing-library/jest-dom";
 
-// Mock TextEncoder and TextDecoder for React Router v7 compatibility
-import { TextEncoder, TextDecoder } from 'util';
-global.TextEncoder = TextEncoder;
-global.TextDecoder = TextDecoder;
 
-// Mock window.matchMedia
-Object.defineProperty(window, 'matchMedia', {
+
+
+// Mock Next.js router
+jest.mock("next/router", () => ({
+  useRouter() {
+    return {
+// Mock Next && Next.js router
+jest && jest.mock("next/router", () => ({
+  useRouter() {
+    return {
+      route: "/",
+      pathname: "/",
+      query: {},
+      asPath: "/",
+      push: jest.fn(),
+      pop: jest.fn(),
+      reload: jest.fn(),
+      back: jest.fn(),
+      prefetch: jest.fn().mockResolvedValue(undefined),
+      beforePopState: jest.fn(),
+      events: {
+        on: jest.fn(),
+        off: jest.fn(),
+        emit: jest.fn(),
+      },
+      isFallback: false,
+    };
+  },
+}));
+// Mock IntersectionObserver
+global.IntersectionObserver = class IntersectionObserver {
+  constructor() {}
+global.ResizeObserver = class ResizeObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+jest.mock('next/link', () => ({
+  _esModule: true,
+  default: ({ children, href, ...props }) => {
+    return <a href={href} {...props}>{children}</a>;  },
+}));
+
+// Mock window.matchMedia,Object.defineProperty(window, 'matchMedia', {
   writable: true,
   value: jest.fn().mockImplementation(query => ({
+    matches: false,
+    media: query,
+    onchange: null,
+    addListener: jest.fn(), // deprecated,
+removeListener: jest.fn(), // deprecated,
+addEventListener: jest.fn(),
+    removeEventListener: jest.fn(),
+    dispatchEvent: jest.fn()
+  }))
+}),
+// Mock IntersectionObserver,
+global.IntersectionObserver = class IntersectionObserver {constructor() {}});
+  return function MockedImage({ src, alt, ...props }) {
+    return React.createElement("img", { src, alt, ...props });
+  };
+});
+
+// Mock Next.js Link component
+jest.mock("next/link", () => {
+  const React = require("react");
+  return {
+    _esModule: true,
+    default: ({ children, href, ...props }) => {
+      return React.createElement("a", { href, ...props }, children);
+    },
+  };
+});
+
+// Mock window.matchMedia
+Object.defineProperty(window, "matchMedia", {
+  writable: true,
+  value: jest.fn().mockImplementation((query) => ({
     matches: false,
     media: query,
     onchange: null,
@@ -24,12 +93,6 @@ Object.defineProperty(window, 'matchMedia', {
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
-  disconnect() {}
-  observe() {}
-  unobserve() {}
-};
-
-// Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {
   constructor() {}
   disconnect() {}
@@ -37,45 +100,18 @@ global.ResizeObserver = class ResizeObserver {
   unobserve() {}
 };
 
-// Mock ResizeObserver for performance monitor tests
-global.ResizeObserver = jest.fn().mockImplementation(() => ({
-  observe: jest.fn(),
-  disconnect: jest.fn(),
-}));
+// Global test setup,
+beforeEach(() => {
+  // Reset all mocks before each test,
+jest.clearAllMocks()
+}),
+beforeEach(() => {
+  // Reset all mocks before each test
+  jest.clearAllMocks();
 
-// Mock window.scrollTo
-Object.defineProperty(window, 'scrollTo', {
-  writable: true,
-  value: jest.fn(),
 });
 
-// Mock performance API
-global.performance = {
-  ...global.performance,
-  getEntriesByType: jest.fn().mockReturnValue([]),
-  mark: jest.fn(),
-  measure: jest.fn(),
-  clearMarks: jest.fn(),
-  clearMeasures: jest.fn(),
-  now: jest.fn().mockReturnValue(Date.now()),
-  navigation: {
-    loadEventEnd: 1000,
-    loadEventStart: 500,
-    domContentLoadedEventEnd: 800,
-    domContentLoadedEventStart: 600,
-    responseEnd: 400,
-    responseStart: 200,
-    requestStart: 100,
-    fetchStart: 0
-  }
-};
-
-// Mock PerformanceObserver
-global.PerformanceObserver = jest.fn().mockImplementation(() => ({
-  observe: jest.fn(),
-  disconnect: jest.fn(),
-  takeRecords: jest.fn().mockReturnValue([])
-}));
-
-// Setup testing library matchers
-import '@testing-library/jest-dom';
+// Global test setup
+beforeEach(() => {
+  jest.clearAllMocks();
+});
