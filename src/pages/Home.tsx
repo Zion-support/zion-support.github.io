@@ -149,14 +149,14 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="New: Reliable GenAI Platform + Edge Privacy Insights + Experiments"
-          description="Ship dependable GenAI with KPI‑linked guardrails, private <100ms insights, and global experiments."
+          title="New: Autonomous Infra + GenAI Evals Scorecards + Edge‑Governed Flags"
+          description="Self‑healing infra with budgets, KPI‑tied evals, and sub‑100ms private experiments."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "Reliable GenAI Platform 2026", category: "GenAI", link: "/blog/ai-2026-reliable-genai-platform" },
-            { title: "Edge Privacy Insights 2026", category: "Analytics", link: "/blog/edge-privacy-insights-2026" },
-            { title: "Consentless Experiments Q4 2026", category: "Analytics", link: "/blog/edge-consentless-experiments-2026-q4" }
+            { title: "Autonomous Infra 2025", category: "Infrastructure", link: "/blog/ai-2025-autonomous-infra-blueprint" },
+            { title: "GenAI Evals Scorecards 2025", category: "GenAI", link: "/blog/genai-evals-scorecards-2025" },
+            { title: "Edge‑Governed Flags 2025", category: "Edge Computing", link: "/blog/edge-governed-flags-2025" }
           ]}
         />
         {/* Fresh content banner promoting brand-new articles */}
