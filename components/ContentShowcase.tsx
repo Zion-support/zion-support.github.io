@@ -121,6 +121,20 @@ const contentItems: ContentItem[] = [
     publishedDate: '2025-09-30'
   },
   {
+    id: 'ai-infrastructure-automation-2026',
+    title: 'AI Infrastructure Automation 2026 — 99.99% Uptime',
+    excerpt: 'Self-healing cloud with predictive scaling and automated recovery. 70% lower costs.',
+    readTime: '18 min read',
+    category: 'Infrastructure',
+    href: '/blog/ai-infrastructure-automation-2026',
+    featured: true,
+    publishedDate: '2025-09-30',
+    metrics: [
+      { value: '99.99%', label: 'Uptime' },
+      { value: '70%', label: 'Cost ↓' }
+    ]
+  },
+  {
     id: 'ai-finops-scorecards-2025',
     title: 'AI FinOps Scorecards 2025: Control LLM Spend',
     excerpt: 'Cut LLM costs 30–70% with scorecards, routing, caching, and prompt budgets.',
