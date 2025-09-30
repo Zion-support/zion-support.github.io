@@ -30,6 +30,18 @@ const featuredContent: ContentItem[] = [
     category: 'Quantum AI'
   },
   {
+    id: '10',
+    title: 'E2E AI Tracing 2026: From Prompts to Outcomes',
+    description: 'Instrument prompts, tools, calls, budgets, and outcomes. Wire traces to KPI‑linked scorecards for reliable autonomy.',
+    link: '/blog/ai-2026-e2e-ai-tracing',
+    badge: 'New',
+    badgeColor: 'bg-gradient-to-r from-cyan-600 to-sky-600',
+    icon: '🧭',
+    publishedDate: 'January 30, 2026',
+    readTime: '12 min read',
+    category: 'AI Operations'
+  },
+  {
     id: '9',
     title: 'Enterprise Autonomy Blueprint 2026: From Pilots to Production',
     description: 'Playbooks for governed, reliable autonomy with budgets, live traces, and rollback.',

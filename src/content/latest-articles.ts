@@ -17,6 +17,22 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
+    id: "ai-2026-e2e-ai-tracing",
+    slug: "ai-2026-e2e-ai-tracing",
+    title: "E2E AI Tracing 2026: From Prompts to Outcomes",
+    description: "Instrument prompts, tools, calls, budgets, and KPIs with end‑to‑end traces.",
+    excerpt: "A practical blueprint for trace‑driven reliability, cost control, and faster incident triage.",
+    author: "Zion Tech Group Team",
+    date: "2026-01-30",
+    category: "AI Operations",
+    tags: ["Tracing", "Observability", "Guardrails"],
+    featured: true,
+    readTime: "12 min read",
+    image: "/images/e2e-ai-tracing-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "ai-2026-reliability-runbooks-v4",
     slug: "ai-2026-reliability-runbooks-v4",
     title: "AI 2026: Reliability Runbooks v4",

@@ -431,13 +431,13 @@ export default function ContentHubPage() {
             </Link>
 
             {/* New Featured: AI 2026 Autonomous Business Intelligence */}
-            <Link href="/blog/ai-2026-autonomous-business-intelligence" className="group">
+              <Link href="/blog/ai-2026-e2e-ai-tracing" className="group">
               <div className="bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-blue-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20 p-8">
                 <div className="flex items-start justify-between mb-6">
-                  <div className="text-6xl group-hover:scale-110 transition-transform duration-300">🤖</div>
+                  <div className="text-6xl group-hover:scale-110 transition-transform duration-300">🧭</div>
                   <div className="flex flex-col gap-2">
                     <div className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-xs font-bold shadow-lg">
-                      <span>AUTONOMOUS</span>
+                      <span>TRACING</span>
                     </div>
                     <span className="px-3 py-1.5 rounded-full bg-blue-500/20 text-blue-300 text-xs font-semibold border border-blue-500/30">
                       NEW
@@ -446,21 +446,21 @@ export default function ContentHubPage() {
                 </div>
                 <div className="mb-4">
                   <span className="inline-block px-3 py-1 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 text-blue-300 text-xs font-semibold border border-blue-500/30">
-                    Business Intelligence
+                    AI Operations
                   </span>
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors duration-300 leading-tight">
-                  AI 2026 Autonomous Business Intelligence
+                  E2E AI Tracing 2026: From Prompts to Outcomes
                 </h3>
                 <p className="text-gray-400 mb-6 leading-relaxed text-sm">
-                  300% ROI improvements through self-evolving autonomous business intelligence systems.
+                  Instrument prompts, tools, external calls, budgets, and KPIs with end‑to‑end traces.
                 </p>
                 <div className="flex items-center justify-between text-sm text-gray-500 mb-6 pb-6 border-b border-white/10">
-                  <span>22 min</span>
+                  <span>12 min</span>
                   <span>Jan 30, 2026</span>
                 </div>
                 <div className="flex items-center justify-center gap-2 w-full bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300">
-                  <span>Read Autonomous Guide</span>
+                  <span>Read Tracing Guide</span>
                 </div>
               </div>
             </Link>
