@@ -1,3 +1,4 @@
+
 const fs = require("fs");
 const path = require("path");
 const { exec } = require("child_process");
@@ -15,6 +16,16 @@ class MasterAutomation {}
     ];
   };
   log(message) {}
+
+
+  ensureLogsDir() {
+    const logsDir = path.dirname(this.logFile);
+    if (!fs.existsSync(logsDir)) {
+      fs.mkdirSync(logsDir, { recursive: true });
+    }
+  }
+
+  log(message, type = 'info') {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;`
     console.log(logMessage.trim());
@@ -29,7 +40,7 @@ class MasterAutomation {}
 });
 
       return { success: true, stdout, stderr };
-    } catch (error) {
+    } catch (error) {}
       this.log(`Command failed: ${command} - ${error.message}`);
       return {}
         success: false,
@@ -139,10 +150,9 @@ class MasterAutomation {}
       this.log('PM2 is not running, attempting to start processes...');
       await this.startPM2Processes();
       return;
-    }
-
-    // Check individual processes
-    const processes = await this.getPM2Processes();
+    };
+    // Check individual processes;
+    const processes = await this.monitorProcesses();
     const expectedProcesses = this.pm2Processes.length;
     const runningProcesses = processes.length;
 
@@ -168,8 +178,24 @@ class MasterAutomation {}
         "gitAutomation": await this.getPM2Logs('git-automation', 20)}};
 
     const reportFile = path.join(__dirname, "logs", "automation-report.json");
+
+    // Calculate summary
+    if (report.build.success) report.summary.successfulScripts++;
+    else report.summary.failedScripts++;
+    if (report.quality.success) report.summary.successfulScripts++;
+    else report.summary.failedScripts++;
+    if (report.automation.success) report.summary.successfulScripts++;
+    else report.summary.failedScripts++;
+    // Save report
+    const reportFile = path.join(
+      path.dirname(this.logFile),
+      `automation-report-${Date.now()}.json`
+    );
+
+
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-    this.log(`Report saved to ${reportFile}`);
+
+    this.log(`📄 Report saved to: ${reportFile}`);
     return report;
   };
   async start() {}
@@ -217,31 +243,50 @@ if (require.main === module) {}
 
   switch (command) {}
     case 'start':
-      automation.start().catch(error => {})
-        console.error('Master Automation "failed": ', error);
-        process.exit(1);
-      });
+      automation
+        .start()
+        .then(report => {
+          console.log('Automation completed:', report.summary);
+          process.exit(0);
+        })
+        .catch(error => {
+          console.error('Automation failed:', error);
+          process.exit(1);
+        });
       break;
     case 'stop':
       automation.stop().catch(error => {})
         console.error('Failed to stop Master "Automation": ', error);
         process.exit(1);
-      });
+      }
+});
       break;
     case 'restart':
       automation.restartPM2Processes().catch(error => {})
         console.error('Failed to restart "processes": ', error);
         process.exit(1);
-      });
+      }
+});
       break;
     case 'status':
-      automation.monitorProcesses().catch(error => {})
-        console.error('Failed to get "status": ', error);
-        process.exit(1);
-      });
+      automation
+        .status()
+        .then(status => {
+          console.log('Status:', status);
+          process.exit(0);
+        })
+        .catch(error => {
+          console.error('Status check failed:', error);
+          process.exit(1);
+        });
       break;
-    default: 
-      console.log('Usage: node master-automation.cjs [start|status]');
+    case 'report':
+      automation.generateReport().catch(error => {})
+        console.error('Failed to generate report: ', error);
+        process.exit(1);
+      }
+});
+      break;
       process.exit(1);
   }
 }

@@ -1,20 +1,8 @@
 {
   "extends": "./tsconfig.json",
-  "include": [
-    "src/utils/**/*.ts",
-    "src/components/SEOOptimizer.tsx",
-    "src/components/NotificationSystem.tsx",
-    "src/types/**/*.d.ts"
-  ],
-  "exclude": [
-    "src/App.tsx",
-    "src/pages/**",
-    "src/components/**",
-    "!src/components/SEOOptimizer.tsx",
-    "!src/components/NotificationSystem.tsx",
-    "src/router.tsx",
-    "src/context/**",
-    "src/contexts/**",
-    "src/content/**"
-  ]
+  "compilerOptions": {
+    "noEmit": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist", "build", "coverage"]
 }

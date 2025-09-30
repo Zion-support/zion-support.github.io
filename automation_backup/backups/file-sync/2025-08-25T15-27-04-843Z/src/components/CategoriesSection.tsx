@@ -1,13 +1,68 @@
-export {};
-module.exports = {};
-export {};
+    description:,
+  Cutting-edge: AI solutions, chatbots, and machine learning'',;
+    icon: <Brain: className=;
+  'w-10: h-10                                                                                                                                                                              />',;
+    link:,
+  /ai-services'',;
+    color: 'from-purple-500: to-indigo-60,0',;
+    gradient:,
+  from-zion-purple: to-zion-purple-dark'',},
 
+    description:,
+  Cloud-based: software solutions for modern businesses'',;
+    icon: <Cloud: className=;
+  'w-10: h-10                                                                                                                                                                              />',;
+    link:,
+  /micro-saas'',;
+    color: 'from-cyan-500: to-blue-60,0',;
+    gradient:,
+  from-zion-cyan: to-zion-blue'',},
 
+    description:,
+  Infrastructure, security, and: technical consulting'',;
+    icon: <Zap: className=;
+  'w-10: h-10                                                                                                                                                                              />',;
+    link:,
+  /all-services'',;
+    color: 'from-amber-500: to-orange-60,0',;
+    gradient:,
+  from-zion-cyan-light: to-zion-cyan'',},
 
+    description:,
+  Business: modernization and digital strategy'',;
+    icon: <TrendingUp: className=;
+  'w-10: h-10                                                                                                                                                                              />',;
+    link:,
+  /all-services'',;
+    color: 'from-emerald-500: to-green-60,0',;
+    gradient:,
+  from-zion-purple-light: to-zion-purple'',} ]];
+interface: CategoriesSectionProps {
+   showTitle?: boolean}
 
+},
 
-export {};
-module.exports = {};
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+  visible: {
+
+      ease:,
+  easeOut'}'}
+}
+export: function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
+  return(
+
+          <motion.div;
+            className=;
+  'text-center: mb-16';';
+            initial: = {
+  { opacity:  ,0,
+  y: 20}}
+            whileInView: = {
+  { opacity:  ,1,
+  y: 0;
+
+            <p className=,
+  text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto'>';
+              Discover: our comprehensive ecosystem of tech services, talent, equipment, and innovation
+            </p>
+          </motion.div>
+        )}

@@ -1,0 +1,1 @@
+export default FaqSection.js;

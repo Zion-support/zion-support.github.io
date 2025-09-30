@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ziontechgroup.com/sitemap.xml
+
+# AI and IT Services Content
+Allow: /blog/
+Allow: /case-studies/
+Allow: /services/
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /private/
