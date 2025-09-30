@@ -28,6 +28,7 @@ export default function ContentHubPage() {
     {
       title: 'AI Implementation',
       articles: [
+        { title: 'AI Enterprise Automation 2026', slug: '/blog/ai-2026-enterprise-automation', readTime: '20 min', featured: true },
         { title: 'AI Operational Resilience 2025', slug: '/blog/ai-operational-resilience-2025', readTime: '12 min', featured: true },
         { title: 'AI Cost Calculator 2026', slug: '/blog/ai-cost-calculator-2026', readTime: '14 min', featured: true },
         { title: 'AI 2027 Cost Optimization Playbook', slug: '/blog/ai-2027-cost-optimization-playbook', readTime: '13 min', featured: true },
