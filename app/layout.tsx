@@ -110,6 +110,22 @@ function Header() {
             </Link>
           </div>
           <div className="relative group">
+            <Link href="/blog/ai-2027-consciousness-fusion-breakthrough" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
+              Consciousness Fusion 2027
+              <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
+                100,000x
+              </span>
+            </Link>
+          </div>
+          <div className="relative group">
+            <Link href="/blog/ai-2028-autonomous-enterprise-revolution" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
+              Autonomous Enterprise 2028
+              <span className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
+                99.9% AUTONOMOUS
+              </span>
+            </Link>
+          </div>
+          <div className="relative group">
             <Link href="/blog" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
               Blog
               <span className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
@@ -242,6 +258,14 @@ function Footer() {
               <Link href="/case-studies/ai-2027-quantum-consciousness-mega-success" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
                 💰 $2.5B Quantum Consciousness Success
                 <span className="bg-green-500 text-white px-2 py-1 rounded-full text-xs font-semibold">MEGA SUCCESS</span>
+              </Link>
+              <Link href="/case-studies/ai-2027-consciousness-fusion-mega-success" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                💰 $2.5B Consciousness Fusion Success
+                <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">100,000x</span>
+              </Link>
+              <Link href="/blog/ai-2028-autonomous-enterprise-revolution" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                🤖 AI 2028 Autonomous Enterprise Revolution
+                <span className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">99.9% AUTONOMOUS</span>
               </Link>
               <Link href="/case-studies/ai-2027-quantum-neuromorphic-success-story" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
                 💰 $2.5B Quantum Success
