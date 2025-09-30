@@ -211,6 +211,19 @@ export const getFeaturedBanners = (): EnhancedPromotionalBanner[] => {
 
 // Sept 30, 2025 – New banners to advertise fresh content
 enhancedPromotionalBanners.push({
+  id: 'sept30-2025-just-added-trio',
+  title: '✨ Just Added: Real‑Time Engines, Federated Learning, FinAI 2027',
+  description: 'Explore sub‑ms decision engines, private federated learning, and high‑accuracy financial AI.',
+  ctaText: 'Read the latest',
+  ctaLink: '/blog',
+  variant: 'success',
+  icon: '✨',
+  featured: true,
+  priority: 0,
+  startDate: '2025-09-30'
+});
+
+enhancedPromotionalBanners.push({
   id: 'sept30-2025-fresh-trio-q4',
   title: '🚀 New: Operational Scorecards, Consentless Metrics, Budget‑Aware Routing',
   description: 'Three fresh deep‑dives: SLIs to KPIs, zero‑PII analytics, and predictable GenAI cost with stable UX.',
