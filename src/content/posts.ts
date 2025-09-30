@@ -64,6 +64,24 @@ export const posts: BlogPost[] = [
     readTime: "7 min read"
   },
   {
+    slug: "ai-risk-mitigation-scorecards-2026",
+    title: "AI Risk Mitigation Scorecards 2026: From Policy to Practice",
+    description: "Scorecards with owners, SLAs, and CI policy checks that drive action and outcomes.",
+    category: "AI Governance",
+    publishedAt: "2025-10-14",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-privacy-telemetry-2026",
+    title: "Edge Privacy Telemetry 2026: Scoped IDs, Local Caches, DP Noise",
+    description: "Keep insights rich and PII risk low with privacy‑first telemetry patterns at the edge.",
+    category: "Observability",
+    publishedAt: "2025-10-14",
+    featured: false,
+    readTime: "6 min read"
+  },
+  {
     slug: "genai-routing-blueprint-2026",
     title: "GenAI Routing Blueprint 2026: Quality Tiers, Caches, and Budgets",
     description: "Route traffic by SLA with tiered models, edge caches, and KPI‑linked budgets.",
@@ -609,24 +627,32 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-29",
     featured: true,
     readTime: "7 min read"
-  }
-  ,
+  },
   {
-    slug: "ai-supply-chain-optimization-2025",
-    title: "AI Supply Chain Optimization: 65% Faster Deliveries Under Budget",
-    description: "From demand sensing to route optimization—AI patterns that cut costs and boost OTIF.",
-    category: "Applied AI",
-    publishedAt: "2025-09-29",
+    slug: "ai-governance-risk-budgets-2026",
+    title: "AI Governance Risk Budgets 2026: Owners, SLAs, Rollbacks",
+    description: "Budget risky actions with owners, SLAs, and rollback triggers that keep teams fast and safe.",
+    category: "AI Governance",
+    publishedAt: "2025-10-15",
     featured: true,
     readTime: "7 min read"
   },
   {
-    slug: "privacy-first-observability-quickstart-2025",
-    title: "Privacy‑First Observability Quickstart: Scoped IDs and Redaction",
-    description: "Ship signal‑rich telemetry without PII risk using scoped identifiers and field‑level filters.",
-    category: "Observability",
-    publishedAt: "2025-09-29",
-    featured: false,
+    slug: "privacy-first-feature-flags-2026",
+    title: "Privacy‑First Feature Flags 2026: Geo Budgets and Instant Rollback",
+    description: "Progressive delivery with scoped IDs, geo budgets, and rollback in under 60 seconds.",
+    category: "Architecture",
+    publishedAt: "2025-10-15",
+    featured: true,
     readTime: "6 min read"
+  },
+  {
+    slug: "reliable-agent-actions-2026",
+    title: "Reliable Agent Actions 2026: Deterministic Tools and Live Traces",
+    description: "Design agent actions with deterministic tools, safety budgets, and observable traces.",
+    category: "GenAI",
+    publishedAt: "2025-10-15",
+    featured: true,
+    readTime: "8 min read"
   }
 ];

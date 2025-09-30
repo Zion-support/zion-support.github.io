@@ -33,39 +33,32 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
 
   const featuredContent = [
     {
-      title: "Secure ML Supply Chain 2026",
-      description: "SBOMs, lineage, and CI policy gates",
+      title: "AI Governance Risk Budgets 2026",
+      description: "Owners, SLAs, rollback triggers",
       icon: Shield,
-      link: "/blog/ai-secure-ml-supply-chain-2026",
-      category: "Security"
+      link: "/blog/ai-governance-risk-budgets-2026",
+      category: "AI Governance"
     },
     {
-      title: "Zero‑Trust for GenAI 2026",
-      description: "Prompt firewalls, egress, signed outputs",
-      icon: Shield,
-      link: "/blog/zero-trust-for-genai-2026",
-      category: "Security"
-    },
-    {
-      title: "GenAI Routing Under Budgets",
-      description: "Quality tiers without bill shock",
+      title: "Privacy‑First Feature Flags 2026",
+      description: "Geo budgets, instant rollback",
       icon: Zap,
-      link: "/blog/genai-routing-under-budgets-2026",
-      category: "AI Ops"
+      link: "/blog/privacy-first-feature-flags-2026",
+      category: "Architecture"
     },
     {
-      title: "Golden Paths that Move KPIs",
-      description: "Platform engineering that pays",
+      title: "Reliable Agent Actions 2026",
+      description: "Deterministic tools and traces",
       icon: TrendingUp,
-      link: "/blog/platform-golden-paths-kpis-2026",
-      category: "Platform"
+      link: "/blog/reliable-agent-actions-2026",
+      category: "GenAI"
     },
     {
-      title: "On‑Device Agents 2026",
-      description: "Private assistants with offline tools",
+      title: "Secure ML Supply Chain 2026",
+      description: "SBOMs and attestations",
       icon: Brain,
-      link: "/blog/on-device-agents-2026",
-      category: "Edge"
+      link: "/blog/secure-ml-supply-chain-2026",
+      category: "Security"
     }
   ];
 

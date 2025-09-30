@@ -218,6 +218,25 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
   }
   ,
   {
+    id: 'fresh-oct-15-2025',
+    message: '✨ New: Risk Budgets • Privacy‑First Flags • Reliable Agent Actions',
+    ctaText: 'Explore now',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-indigo-700 to-purple-700',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 20,
+    active: true,
+    priority: 0,
+    variant: 'info',
+    icon: '✨',
+    animation: 'fade-in',
+    badge: 'NEW',
+    featured: true
+  }
+  ,
+  {
     id: 'fresh-content-oct-2025-b2',
     message: '🆕 New today: Agent Evals 2026 + Privacy‑Preserving Agents',
     ctaText: 'Read the latest',
