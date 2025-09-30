@@ -1199,3 +1199,34 @@ posts.push(
   }
 );
 
+// New September 30, 2025 content for homepage promotion
+posts.push(
+  {
+    slug: "ai-voice-interfaces-enterprise-2026",
+    title: "AI Voice Interfaces 2026: Hands‑Free Productivity at Enterprise Scale",
+    description: "98% accuracy, 50+ languages, and task automation with secure, audited voice actions.",
+    category: "AI UX",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "18 min read"
+  },
+  {
+    slug: "ai-enterprise-genai-agent-platform-2026",
+    title: "Enterprise GenAI Agent Platform 2026: Reliability, Budgets, Guardrails",
+    description: "Blueprint for agent platforms with budgets, evals, sandboxes, and KPI‑linked routes.",
+    category: "AI Engineering",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "20 min read"
+  },
+  {
+    slug: "manufacturing-ai-transformation-2026",
+    title: "Manufacturing AI Transformation 2026: $18M ROI, 85% Downtime Reduction",
+    description: "Predictive quality, computer vision, and agentic maintenance delivering outsized ROI.",
+    category: "Case Study",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "14 min read"
+  }
+);
+
