@@ -4,57 +4,35 @@ import { ArrowRight, Sparkles, TrendingUp, Zap, Star, Rocket, Brain, Atom, Bot }
 const NewContentPromoBanner: React.FC = () => {
   const newContent = [
     {
-      title: "AI Trust Scorecards v5 (2027)",
-      description: "Live canaries + PR policy tests wired to KPIs for real reliability",
-      slug: "ai-trust-scorecards-v5-2027",
-      category: "AI Governance",
-      icon: "📊",
-      impact: "Proven Reliability",
-      savings: "Fewer Incidents",
+      title: "Real‑Time Decision Engines 2026",
+      description: "10M/sec under 1ms using warm pools, intent prefetching, and tiered caches",
+      slug: "real-time-decision-engines-2026",
+      category: "Platform Engineering",
+      icon: "⚡",
+      impact: "<1ms Latency",
+      savings: "Massive Throughput",
       featured: true,
       trending: true
     },
     {
-      title: "Private Evals at the Edge (2026)",
-      description: "On‑device evals with scoped IDs and DP noise under <100ms",
-      slug: "edge-private-evals-2026",
-      category: "Analytics",
-      icon: "📈",
-      impact: "<100ms Evals",
-      savings: "Zero PII",
-      featured: true,
-      trending: true
-    },
-    {
-      title: "AgentOps Runbooks v3 (2026)",
-      description: "Budgets, canaries, and rollback playbooks that teams actually adopt",
-      slug: "agentops-runbooks-v3-2026",
-      category: "AI Operations",
-      icon: "🤖",
-      impact: "Faster Recovery",
-      savings: "Fewer Incidents",
-      featured: true,
-      trending: true
-    },
-    {
-      title: "GenAI Quality Tiers v2 (2026)",
-      description: "Tiering + semantic caches for predictable cost without UX loss",
-      slug: "genai-quality-tiers-v2-2026",
-      category: "GenAI",
-      icon: "🧠",
-      impact: "40–70% Savings",
-      savings: "Stable UX",
-      featured: true,
-      trending: true
-    },
-    {
-      title: "Edge RAG (Privacy‑Preserving) 2026",
-      description: "Region‑scoped corpora, auth‑aware retrieval, and signed outputs at the edge",
-      slug: "edge-rag-privacy-preserving-2026",
-      category: "GenAI",
-      icon: "🔐",
+      title: "Federated Learning 2026",
+      description: "Enterprise FL with secure aggregation and DP noise—no centralization required",
+      slug: "federated-learning-enterprise-2026",
+      category: "Machine Learning",
+      icon: "🧩",
       impact: "Zero PII",
-      savings: "<100ms Latency",
+      savings: "Regional Training",
+      featured: true,
+      trending: true
+    },
+    {
+      title: "AI Financial Modeling 2027",
+      description: "KPI‑linked evals and rollback for 95%+ accuracy and reliable forecasts",
+      slug: "cognitive-financial-modeling-2027",
+      category: "FinTech AI",
+      icon: "💹",
+      impact: "95%+ Accuracy",
+      savings: "Risk Controls",
       featured: true,
       trending: true
     }
@@ -87,7 +65,7 @@ const NewContentPromoBanner: React.FC = () => {
           </div>
 
           <h2 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-            🚀 Revolutionary AI Breakthroughs 2025
+            🚀 Revolutionary AI Breakthroughs 2025–2027
           </h2>
           
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
