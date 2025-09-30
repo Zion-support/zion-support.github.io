@@ -2,6 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { AppRouter } from './router';
 import { LoadingSpinner } from './components/LoadingStates';
 import PerformanceMonitor from './components/PerformanceMonitor';
+import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+import { NotificationProvider } from './components/NotificationSystem';
+import AnalyticsTracker from './components/AnalyticsTracker';
+import SystemDashboard from './components/SystemDashboard';
 
 const App: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -115,10 +119,17 @@ const App: React.FC = () => {
   }
 
   return (
-    <div className="App">
-      <AppRouter />
-      <PerformanceMonitor />
-    </div>
+    <EnhancedErrorBoundary>
+      <AnalyticsTracker>
+        <NotificationProvider>
+          <div className="App">
+            <AppRouter />
+            <PerformanceMonitor />
+            <SystemDashboard />
+          </div>
+        </NotificationProvider>
+      </AnalyticsTracker>
+    </EnhancedErrorBoundary>
   );
 };
 
