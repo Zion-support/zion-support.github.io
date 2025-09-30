@@ -1,6 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
-import AI2026JanuaryBreakthroughAnnouncement from '../../../../blog/ai-2026-january-breakthrough-announcement';
+import AI2026JanuaryBreakthroughAnnouncement from '../../../blog/ai-2026-january-breakthrough-announcement';
 
 export const metadata: Metadata = {
   title: '🚀 January 2026 AI Breakthrough: Meta-Cognitive AI Revolution | Zion Tech Group',

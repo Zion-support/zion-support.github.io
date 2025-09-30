@@ -4,10 +4,6 @@ import Link from 'next/link';
 import Revolutionary2027ContentMegaBanner from '../components/Revolutionary2027ContentMegaBanner';
 import Ultimate2027BreakthroughBanner from '../components/Ultimate2027BreakthroughBanner';
 import UnifiedContentPromotion from '../components/UnifiedContentPromotion';
-import January2026NeuralArchitectureSearchBanner from '../components/January2026NeuralArchitectureSearchBanner';
-import January2026FederatedLearningBanner from '../components/January2026FederatedLearningBanner';
-import January2026RevolutionaryBreakthroughBanner from '../components/January2026RevolutionaryBreakthroughBanner';
-import January2026NewServicesBanner from '../components/January2026NewServicesBanner';
 import Revolutionary2026ContentAdvertisingBanner from '../components/Revolutionary2026ContentAdvertisingBanner';
 import January2026BreakthroughShowcaseBanner from '../components/January2026BreakthroughShowcaseBanner';
 import Ultimate2026ContentPromotionalBanner from '../components/Ultimate2026ContentPromotionalBanner';
@@ -41,6 +37,9 @@ export default function HomePage() {
               <Link href="/blog/ai-2028-autonomous-enterprise-revolution" className="inline-flex items-center gap-2 bg-blue-500/20 text-blue-200 border border-blue-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-blue-500/30 transition-colors">99.9% Autonomous Enterprise<span>→</span></Link>
               <Link href="/case-studies/ai-2027-consciousness-fusion-mega-success" className="inline-flex items-center gap-2 bg-green-500/20 text-green-200 border border-green-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-green-500/30 transition-colors">$2.5B ROI Success<span>→</span></Link>
               <Link href="/case-studies/ai-2028-autonomous-enterprise-mega-success" className="inline-flex items-center gap-2 bg-orange-500/20 text-orange-200 border border-orange-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-orange-500/30 transition-colors">$5B ROI Success<span>→</span></Link>
+              <Link href="/blog/ai-2026-quantum-neural-fusion-breakthrough" className="inline-flex items-center gap-2 bg-purple-500/20 text-purple-200 border border-purple-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-purple-500/30 transition-colors">Quantum-Neural Fusion<span>→</span></Link>
+              <Link href="/blog/ai-enterprise-automation-2026-mega-guide" className="inline-flex items-center gap-2 bg-cyan-500/20 text-cyan-200 border border-cyan-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-cyan-500/30 transition-colors">Enterprise Automation Guide<span>→</span></Link>
+              <Link href="/case-studies/fortune-500-ai-2026-breakthrough-mega-success" className="inline-flex items-center gap-2 bg-green-500/20 text-green-200 border border-green-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-green-500/30 transition-colors">$2.3B Success Story<span>→</span></Link>
               <Link href="/blog/ai-2026-neural-optimization-revolution" className="inline-flex items-center gap-2 bg-indigo-500/20 text-indigo-200 border border-indigo-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-indigo-500/30 transition-colors">Neural Optimization 1000x<span>→</span></Link>
             </div>
           </div>
@@ -76,7 +75,6 @@ export default function HomePage() {
       
       {/* New Services Banner */}
       <January2026NewServicesBanner />
-
       
       {/* Hero Section */}
       <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
@@ -93,24 +91,20 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link
-              href="/blog/ai-future-enterprise-2026"
+              href="/blog/ai-2026-quantum-neural-fusion-breakthrough"
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all shadow-lg hover:shadow-xl"
             >
-              🔮 Read Future Enterprise 2026
+              🔮 Read Quantum-Neural Fusion
             </Link>
             <Link
-              href="/case-studies/ai-revolutionary-transformation-2026"
+              href="/case-studies/fortune-500-ai-2026-breakthrough-mega-success"
               className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-green-700 hover:to-blue-700 transition-all shadow-lg hover:shadow-xl"
             >
-              🏆 View $100M Success Story
+              🏆 View $2.3B Success Story
             </Link>
           </div>
         </div>
       </section>
-
-      {/* Legacy Content Banners */}
-      <January2026NeuralArchitectureSearchBanner />
-      <January2026FederatedLearningBanner />
       
       <UnifiedContentPromotion />
 
