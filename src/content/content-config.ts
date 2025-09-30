@@ -1088,3 +1088,31 @@ featuredBlogPosts.unshift(
     featured: true
   }
 );
+
+// Sept 30, 2025 – Advertise three newly added articles site-wide
+featuredBlogPosts.unshift(
+  {
+    id: "ai-2027-enterprise-roadmap-v2",
+    title: "AI 2027 Enterprise Roadmap v2",
+    description: "Outcome‑led bets, KPI scorecards, and guardrails that scale reliably.",
+    link: "/blog/ai-2027-enterprise-roadmap-v2",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-2026-consentless-testing-v3",
+    title: "Edge 2026: Consentless Testing v3",
+    description: "Scoped IDs, on‑device metrics, and DP noise for compliant A/B at <100ms.",
+    link: "/blog/edge-2026-consentless-testing-v3",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "genai-cost-controllers-v3-2027",
+    title: "GenAI Cost Controllers v3 (2027)",
+    description: "Quality tiers + semantic caches + policy tests for 40–70% savings.",
+    link: "/blog/genai-cost-controllers-v3-2027",
+    type: "article",
+    featured: true
+  }
+);
