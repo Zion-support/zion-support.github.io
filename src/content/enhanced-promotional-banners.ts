@@ -717,6 +717,58 @@ enhancedPromotionalBanners.unshift(
   }
 );
 
+// Oct 8, 2025 – Promote three new posts
+enhancedPromotionalBanners.unshift(
+  {
+    id: 'oct-08-2025-new-content-drop',
+    title: '🚀 NEW TODAY (Oct 8): Governed Agents, Edge Private Analytics, Cache Strata v5',
+    description: 'Budgets + SLIs for 10k+ agents, zero‑PII analytics under 100ms, and cache tiers that cut cost 60–85%.',
+    ctaText: 'Explore today\'s posts',
+    ctaLink: '/blog',
+    variant: 'success',
+    icon: '🚀',
+    featured: true,
+    priority: 0,
+    startDate: '2025-10-08'
+  },
+  {
+    id: 'oct-08-governed-multiagent-platforms',
+    title: '🛡️ Governed Multi‑Agent Platforms — Budgets, SLIs, Rollback',
+    description: 'Run 10k+ agents safely with budgeted tools, KPI‑linked SLIs, and instant rollback.',
+    ctaText: 'Read the playbook',
+    ctaLink: '/blog/ai-2025-oct-08-governed-multiagent-platforms',
+    variant: 'success',
+    icon: '🛡️',
+    featured: true,
+    priority: 1,
+    startDate: '2025-10-08'
+  },
+  {
+    id: 'oct-08-edge-private-analytics-v4',
+    title: '🔐 Edge Private Analytics v4 — Zero‑PII, <100ms',
+    description: 'Scoped IDs, on‑device aggregation, and DP noise for compliant insights without data risk.',
+    ctaText: 'Learn the blueprint',
+    ctaLink: '/blog/ai-2025-oct-08-edge-private-analytics-v4',
+    variant: 'info',
+    icon: '🔐',
+    featured: true,
+    priority: 2,
+    startDate: '2025-10-08'
+  },
+  {
+    id: 'oct-08-cache-strata-v5',
+    title: '⚡ Cache Strata v5 — Features → Chunks → Answers',
+    description: 'Tiered caches with freshness windows and coalescing. 45% quality ↑, 60–85% cost ↓.',
+    ctaText: 'Read the cache guide',
+    ctaLink: '/blog/ai-2025-oct-08-cache-strata-v5',
+    variant: 'success',
+    icon: '⚡',
+    featured: true,
+    priority: 3,
+    startDate: '2025-10-08'
+  }
+);
+
 // Oct 7, 2025 – Promote two new posts
 enhancedPromotionalBanners.unshift(
   {
