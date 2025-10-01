@@ -14,9 +14,37 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+    slug: "enterprise-ai-value-realization-2025-10-08",
+    title: "Enterprise AI Value Realization: 90 Days to Outcomes",
+    description: "Blueprint to convert AI pilots into shipped outcomes in 90 days: KPI scorecards, evaluator gates, tiered routing + caches, rollback-first ops.",
+    content: `
+# Enterprise AI Value Realization: 90 Days to Outcomes
+
+Large AI programs often stall in pilot mode. This pragmatic guide shows how to deliver production outcomes in 90 days with:
+
+## Core Moves
+- KPI-linked scorecards that predict production outcomes
+- Evaluator-driven release gates wired to business metrics
+- Tiered routing and semantic caches for predictable cost and latency
+- Rollback-first operations with canary scorecards and blast-radius checks
+
+## 90-Day Plan
+- Weeks 1–2: Align on metrics, draft policy tests, and wire dashboards
+- Weeks 3–6: Dark-ship routes with caches + coalescing; validate scorecards
+- Weeks 7–10: Gradual exposure with canaries; tighten SLOs and budgets
+- Weeks 11–12: Lock-in wins in CI; publish weekly value scorecards
+
+Need help landing this quickly and safely? Our team can partner with yours.
+    `,
+    author: "Zion Tech Group Platform Office",
+    date: "2025-10-08",
+    category: "AI Operations",
+    tags: ["Execution", "Scorecards", "Guardrails", "Cost"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/enterprise-ai-value-realization-2025.jpg"
+  },
+  {
     slug: "ai-2025-oct-01-governed-agent-platforms-v2",
     title: "Governed Agent Platforms v2: Budgets, Scorecards, Instant Rollback",
     description: "Ship enterprise agent platforms safely: KPI scorecards, budget-aware routing, CI policy tests, and one-click rollback.",
@@ -105,73 +133,6 @@ Need a playbook tailored to your platform? Our team can help you land this safel
     featured: true,
     readTime: "8 min read",
     image: "/images/risk-controlled-autonomy-2025.jpg"
-=======
-    slug: "ai-2025-oct-03-ai-budgets-blueprint",
-    title: "Enterprise AI Budgets Blueprint: Quality Tiers, Caches, Rollback",
-    description: "Cut GenAI costs 40–70% with tiered routing, semantic caches, and rollback-first ops—without UX regressions.",
-    content: `
-# Enterprise AI Budgets Blueprint
-
-This playbook shows how to stabilize UX while reducing spend using:
-
-- Quality-tier routing with evaluator gates
-- Prompt/embedding/retrieval caches with freshness windows
-- Request coalescing and negative caches
-- Budget-aware fallbacks and rollback-first deployment rituals
-
-Results: 40–70% cost reduction with steady task success and tighter P95 tails.
-=======
-    slug: "ai-2025-oct-01-autonomous-finops-scorecards",
-    title: "Autonomous FinOps Scorecards 2025: Prevent Cost Regressions",
-    description: "KPI-linked scorecards, budget-aware routing, and rollback that keep spend predictable without hurting UX.",
-    content: `
-# Autonomous FinOps Scorecards 2025
-
-This guide shows how to wire budget visibility and guardrails into GenAI platforms so teams ship faster with steady spend.
-
-## Ship This
-- KPI-linked scorecards that teams actually review
-- Budget-aware routing with quality tiers and fallbacks
-- Canary gates and instant rollback on cost regressions
-
-## Outcomes
-- 30–70% cost reduction with tight p95
-- Fewer surprises and cleaner postmortems
->>>>>>> origin/cursor/create-and-deploy-new-content-513e
-    `,
-    author: "Zion Tech Group FinOps Lab",
-    date: "2025-10-03",
-    category: "FinOps",
-<<<<<<< HEAD
-    tags: ["Cost", "Quality Tiers", "Caching", "Budgets", "Rollback"],
-    featured: true,
-    readTime: "8 min read",
-    image: "/images/ai-budgets-blueprint.jpg"
-  },
-  {
-    slug: "ai-2025-oct-03-policy-tests-end-to-end",
-    title: "End-to-End Policy Tests for AI: Ship Faster, Safely",
-    description: "Gate risky changes with CI policy tests tied to KPIs; add online canaries and instant rollback.",
-    content: `
-# End-to-End Policy Tests for AI
-
-Bake safety into velocity with:
-
-- CI policy tests mapped to production KPIs
-- Golden tasks and calibrated metrics (task success, harmlessness, latency, cost)
-- Canary routes with online evals and pass/fail thresholds
-- One-click rollback hooks and weekly scorecards
-
-Outcome: Faster iteration with fewer incidents and measurable reliability.
-    `,
-    author: "Zion Tech Group Reliability Lab",
-    date: "2025-10-03",
-    category: "AI Reliability",
-    tags: ["Policy Tests", "Scorecards", "Evals", "Rollback"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/policy-tests-end-to-end.jpg"
->>>>>>> origin/cursor/create-and-deploy-new-content-1d9d
   },
   {
     slug: "ai-2025-oct-02-private-experiments-blueprint",
@@ -218,34 +179,6 @@ Revert in seconds on breach while maintaining high deploy velocity.
     featured: true,
     readTime: "9 min read",
     image: "/images/rollback-guardrails-blueprint.jpg"
-=======
-    slug: "ai-2025-oct-01-production-evals-playbook",
-    title: "Production Evals Playbook: Scorecards That Predict Prod",
-    description: "Design eval pipelines that correlate with KPIs and gate risky changes. Ship faster with fewer regressions.",
-    content: `
-# Production Evals Playbook: Scorecards That Predict Prod
-
-Most eval suites fail to predict production behavior. This playbook shows how to build eval pipelines that correlate with business KPIs and act as reliable change gates.
-
-## What You’ll Implement
-- Golden task sets mapped to critical user journeys
-- Calibrated metrics (task success, harmlessness, helpfulness)
-- Budget‑linked scorecards with pass/fail thresholds
-- Online canaries and instant rollback hooks
-
-## Outcomes
-- Fewer regressions and faster iteration
-- Measurable trust in AI quality
-- Clear ownership with a weekly review ritual
-    `,
-    author: "Zion Tech Group Reliability Lab",
-    date: "2025-10-01",
-    category: "AI Reliability",
-    tags: ["Evaluations", "Scorecards", "Guardrails", "E2E"],
-    featured: true,
-    readTime: "8 min read",
-    image: "/images/production-evals-playbook.jpg"
->>>>>>> origin/cursor/create-and-deploy-new-content-268f
   },
   {
     slug: "ai-2025-oct-04-enterprise-agents-in-production",
@@ -323,53 +256,6 @@ Keep experience KPIs stable while reducing spend.
     featured: false,
     readTime: "6 min read",
     image: "/images/cost-aware-routing.jpg"
-=======
-    tags: ["FinOps", "Budgets", "Scorecards", "Routing"],
-    featured: true,
-    readTime: "8 min read",
-    image: "/images/autonomous-finops-scorecards-2025.jpg"
-  },
-  {
-    slug: "edge-2025-oct-03-consentless-experiments-v4",
-    title: "Consentless Experiments v4 (2025): Compliant <100ms A/B",
-    description: "Scoped IDs, on-device aggregation, and DP noise for fast, privacy-first experiments worldwide.",
-    content: `
-# Consentless Experiments v4 (2025)
-
-Blueprint to run global A/B without centralizing PII:
-- Signed configs and cacheable variants
-- Scoped, rotating identifiers
-- On-device aggregation + DP noise
-- KPI-linked canaries and rollback
-    `,
-    author: "Zion Tech Group Privacy Lab",
-    date: "2025-10-03",
-    category: "Experimentation",
-    tags: ["A/B", "Privacy", "Edge", "DP"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/consentless-experiments-v4-2025.jpg"
-  },
-  {
-    slug: "genai-2025-oct-03-cost-controllers-v4",
-    title: "GenAI Cost Controllers v4 (2025): Tiers + Caches at Scale",
-    description: "Stabilize UX under budget with tiered routing, semantic caches, and evaluator-backed policies.",
-    content: `
-# GenAI Cost Controllers v4 (2025)
-
-Cut spend 40–70% while improving tails using:
-- Tiered model routing by SLA bands
-- Prompt/embedding/retrieval caches
-- Online evals as deploy gates; rollback-first ops
-    `,
-    author: "Zion Tech Group Platform Team",
-    date: "2025-10-03",
-    category: "GenAI Engineering",
-    tags: ["Cost", "Quality Tiers", "Caching", "Evals"],
-    featured: true,
-    readTime: "9 min read",
-    image: "/images/genai-cost-controllers-v4-2025.jpg"
->>>>>>> origin/cursor/create-and-deploy-new-content-513e
   },
   {
     slug: "ai-2025-oct-01-enterprise-ai-governance-blueprint",
@@ -1674,94 +1560,6 @@ The future of business software is here, and it's micro SAAS. Don't get left beh
     featured: false,
     readTime: "9 min read",
     image: "/images/micro-saas-platform.jpg"
-  }
-  ,
-  {
-    slug: "ai-2025-oct-08-governed-multiagent-platforms",
-    title: "Governed Multi‑Agent Platforms: Budgets, SLIs, and Instant Rollback",
-    description: "Production blueprint to run 10k+ agents safely with budgeted tools, KPI‑linked SLIs, evaluator gates, and one‑click rollback.",
-    content: `
-# Governed Multi‑Agent Platforms: Budgets, SLIs, and Instant Rollback
-
-Modern agent platforms can move 10x faster when autonomy is paired with strong guardrails.
-
-## What You'll Implement
-- Budgeted tools with scopes and quotas
-- KPI‑linked SLIs wired to canary scorecards
-- Evaluator‑driven change gates that predict production
-- One‑click rollback with immutable artifacts
-
-## Outcomes
-- Fewer incidents with faster iteration
-- 30–70% GenAI cost reduction via quality‑tier routing and caches
-- Clear ownership through weekly scorecards
-
-Need help landing this safely in weeks, not quarters? Our team can partner with yours.
-    `,
-    author: "Zion Tech Group Platform Office",
-    date: "2025-10-08",
-    category: "AI Operations",
-    tags: ["Agents", "Governance", "Budgets", "SLIs", "Rollback"],
-    featured: true,
-    readTime: "8 min read",
-    image: "/images/governed-multiagent-platforms-2025.jpg"
-  }
-  ,
-  {
-    slug: "ai-2025-oct-08-edge-private-analytics-v4",
-    title: "Edge Private Analytics v4: Zero‑PII Insights in <100ms",
-    description: "Scoped IDs, on‑device aggregation, and DP noise deliver decision‑grade analytics with zero centralized PII.",
-    content: `
-# Edge Private Analytics v4: Zero‑PII Insights in <100ms
-
-Unlock rich analytics without centralizing PII.
-
-## Blueprint
-- Scoped, rotating identifiers with field‑level redaction
-- On‑device aggregation powered by signed configs
-- Differential privacy for cohort metrics
-- Budgeted routes with deterministic fallbacks
-
-## Results
-- Sub‑100ms decisioning globally
-- 90%+ reduction in sensitive data flows
-- Trusted lift estimates with DP guarantees
-    `,
-    author: "Zion Tech Group Privacy Lab",
-    date: "2025-10-08",
-    category: "Analytics",
-    tags: ["Privacy", "Edge", "DP", "Telemetry"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/edge-private-analytics-v4.jpg"
-  }
-  ,
-  {
-    slug: "ai-2025-oct-08-cache-strata-v5",
-    title: "Cache Strata v5: Features → Chunks → Answers, Cost ↓ 60–85%",
-    description: "Tiered caches and freshness windows that raise answer quality 45% while cutting GenAI cost by 60–85%.",
-    content: `
-# Cache Strata v5: Features → Chunks → Answers
-
-Production‑proven caching layers for LLM and RAG systems.
-
-## Layers
-- Feature cache for hot signals
-- Chunk cache with freshness windows and quality budgets
-- Answer cache with request coalescing and negative entries
-
-## Rollout
-- Start dark; compare cost/request and task success
-- Gate tier promotions with online evaluators
-- Weekly scorecards; one regression → one fix
-    `,
-    author: "Zion Tech Group Platform Team",
-    date: "2025-10-08",
-    category: "GenAI Engineering",
-    tags: ["Caching", "RAG", "Latency", "Cost"],
-    featured: true,
-    readTime: "8 min read",
-    image: "/images/cache-strata-v5.jpg"
   }
   ,
   {
