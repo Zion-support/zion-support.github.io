@@ -146,16 +146,39 @@ const HomePage: React.FC = () => {
                 icon="rocket"
                 badge="New"
                 date={new Date().toLocaleDateString()}
+<<<<<<< HEAD
+                title="Fresh: Production Evals Playbook + Safer AI + Lower Costs"
+                description="New: Production Evals Playbook joins guardrails-as-code, actionable observability, and cost playbooks that cut spend without slowing teams."
+=======
                 title="Just dropped: AI Reliability, Edge Caching, Exec AI Playbook"
                 description="Fresh guidance on SLIs and rollback, sub‑100ms edge prompts, and an executive blueprint to plan, fund, and govern AI."
 =======
                 title="Fresh Content: Rollback-First Ops, Private Edge Flags, Clear LLM Costs"
                 description="Three new deep-dives: incident guardrails with instant rollback, private signed edge flags under 50ms, and LLM spend mapping tied to SLAs and teams."
+>>>>>>> origin/cursor/create-and-deploy-new-content-6c5f
                 ctaText="Read the latest posts"
                 ctaLink="/blog"
                 showCount={3}
                 featuredItems={[
                   {
+<<<<<<< HEAD
+                    title: 'Production Evals Playbook: Scorecards That Predict Prod',
+                    category: 'AI Reliability',
+                    link: '/blog',
+                    metrics: '8 min • 2025-10-01'
+                  },
+                  {
+                    title: 'Real-Time Decision Engines: Sub-1ms at 10M+ Events/sec',
+                    category: 'Real-Time AI',
+                    link: '/blog',
+                    metrics: '9 min • 2025-10-06'
+                  },
+                  {
+                    title: 'Autonomous FinOps v3: 30–70% GenAI Spend Down, No Regressions',
+                    category: 'FinOps',
+                    link: '/blog',
+                    metrics: '7 min • 2025-10-06'
+=======
                     title: 'AI Reliability Scorecards 2026: SLIs, Error Budgets, Rollbacks',
                     category: 'AI Operations',
                     link: '/blog/ai-2025-oct-05-ai-reliability-scorecards-2026',
@@ -189,6 +212,7 @@ const HomePage: React.FC = () => {
                     category: 'Cloud',
                     link: '/blog/llm-cost-mapping-spend-by-feature-team-sla-2025-10-04',
                     metrics: '7 min • 2025-10-04'
+>>>>>>> origin/cursor/create-and-deploy-new-content-6c5f
                   }
                 ]}
               />
