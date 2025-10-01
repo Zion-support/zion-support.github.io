@@ -1,36 +1,24 @@
-[[redirects]]
-  from = "/api/*"
-  to = "https://backend.example.com/:splat"
-  status = 200
- 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-
 [build]
-  command = "pnpm run build:minimal"
+  # Build with Vite and deploy dist directory
+  command = "pnpm run build:optimized"
   publish = "dist"
   command_timeout = "30m"
+  functions = "netlify/functions"
+  # Explicitly ignore Next.js plugin
+  ignore_next = true
 
 [build.environment]
-  # Use Active LTS for stability on Netlify
-  NODE_VERSION = "22"
-  PNPM_VERSION = "10.17.1"
-  NETLIFY_USE_PNPM = "true"
-  # Disable Next.js auto-detection
+  NODE_VERSION = "20"
+  # Avoid optional binary downloads (electron, playwright, cypress)
+  PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD = "1"
+  PUPPETEER_SKIP_DOWNLOAD = "1"
+  CYPRESS_INSTALL_BINARY = "0"
+  ELECTRON_SKIP_DOWNLOAD = "1"
+  # Disable Next.js telemetry and detection
+  NEXT_TELEMETRY_DISABLED = "1"
   NETLIFY_NEXT_PLUGIN_SKIP = "true"
-  # Ensure clean installs
-  NPM_CONFIG_PRODUCTION = "false"
-  NODE_ENV = "production"
-  # Ensure optional platform binaries for Rollup are installed on Netlify
-  NPM_CONFIG_INCLUDE = "optional"
-  # Force Rollup to use JS implementation if native is unavailable
-  ROLLUP_SKIP_NODEJS_NATIVE = "true"
-  # Optimize build performance
-  CI = "true"
 
-# Explicitly disable Next.js plugin to prevent auto-detection
+# Disable Next.js plugin auto-detection since we're using Vite
 [build.processing]
   skip_processing = false
 
@@ -45,40 +33,16 @@
 [build.processing.html]
   pretty_urls = true
 
+# Cloudinary plugin for image optimization
 [[plugins]]
   package = "netlify-plugin-cloudinary"
-  [plugins.inputs]
 
-[context.production.environment]
-  NODE_ENV = "production"
-  NPM_CONFIG_PRODUCTION = "false"
 
-[context.deploy-preview]
-  command = "pnpm run build:minimal"
-  [context.deploy-preview.environment]
-    NODE_ENV = "production"
 
-[context.branch-deploy]
-  command = "pnpm run build:minimal"
-  [context.branch-deploy.environment]
-    NODE_ENV = "production"
-
-# Security and caching headers
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Frame-Options = "DENY"
-    X-Content-Type-Options = "nosniff"
-    X-XSS-Protection = "1; mode=block"
-    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
-    Referrer-Policy = "strict-origin-when-cross-origin"
-    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'"
-
-[[headers]]
-  for = "/assets/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
 
 [[headers]]
   for = "/static/*"
@@ -96,62 +60,3 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
     X-Content-Type-Options = "nosniff"
-
-[[headers]]
-  for = "/*.html"
-  [headers.values]
-    Cache-Control = "public, max-age=3600"
-
-# Advanced Performance Headers
-[[headers]]
-  for = "/assets/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-    X-Content-Type-Options = "nosniff"
-    X-Frame-Options = "DENY"
-
-[[headers]]
-  for = "*.js"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-    X-Content-Type-Options = "nosniff"
-    Cross-Origin-Embedder-Policy = "require-corp"
-
-[[headers]]
-  for = "*.css"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-    X-Content-Type-Options = "nosniff"
-
-# Security Headers
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Frame-Options = "DENY"
-    X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "strict-origin-when-cross-origin"
-    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
-
-# Performance Headers
-[[headers]]
-  for = "/*"
-  [headers.values]
-    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
-    X-XSS-Protection = "1; mode=block"
-
-# Ultimate Security Headers
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-DNS-Prefetch-Control = "on"
-    X-Download-Options = "noopen"
-    X-Permitted-Cross-Domain-Policies = "none"
-    Cross-Origin-Resource-Policy = "same-origin"
-    Cross-Origin-Embedder-Policy = "require-corp"
-    Cross-Origin-Opener-Policy = "same-origin"
-    
-# Enhanced CSP for production
-[[headers]]
-  for = "/*"
-  [headers.values]
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"

@@ -1,5 +1,0 @@
-describe('Minimal JS Test Suite', () => {
-  it('should pass', () => {
-    expect(true).toBe(true);
-  });
-});

@@ -152,5 +152,4 @@ import: {
           </motion.div>
         </div>
       </section>
-  );
-};
+

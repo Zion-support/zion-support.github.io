@@ -1,11 +1,31 @@
 #!/bin/bash
-cd /workspace
 
-# Complete the merge
-git add .
-git commit -m "Merge remote-tracking branch 'origin/cursor/fix-netlify-build-and-merge-to-main-561a' - Resolve conflicts and integrate fixes"
+echo "🚀 Completing the current merge..."
 
-# Push to main
-git push origin main
+# Check current status
+echo "📍 Current git status:"
+git status
 
-echo "Merge completed successfully"
+# Check if there are any unmerged files
+unmerged_files=$(git status --porcelain | grep "^UU" | awk '{print $2}')
+
+if [ -n "$unmerged_files" ]; then
+    echo "⚠️  Found unmerged files:"
+    echo "$unmerged_files"
+    
+    # Resolve conflicts by keeping our changes
+    for file in $unmerged_files; do
+        echo "🔧 Resolving conflicts in: $file"
+        git checkout --ours "$file"
+        git add "$file"
+    done
+    
+    # Complete the merge
+    echo "✅ Completing merge..."
+    git commit -m "Merge remote main into feature branch - conflicts resolved"
+else
+    echo "✅ No conflicts found, completing merge..."
+    git commit -m "Merge remote main into feature branch"
+fi
+
+echo "🎉 Merge completed successfully!"

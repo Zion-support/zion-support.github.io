@@ -1,7 +1,0 @@
-{
-  "timestamp": "2025-09-05T14:45:56.902Z",
-  "tests": [
-    {
-      "script": "scripts/health-check.cjs",
-      "description": "Health Check Script",
-      "status": "failed",

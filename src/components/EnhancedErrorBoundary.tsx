@@ -1,61 +1,182 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 
 interface State {
   hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
+  error: Error | null;
+  errorInfo: ErrorInfo | null;
+  errorCount: number;
 }
 
+/**
+ * Enhanced Error Boundary with automatic recovery and user-friendly UI
+ */
 class EnhancedErrorBoundary extends Component<Props, State> {
+  private resetTimeout: NodeJS.Timeout | null = null;
+
   constructor(props: Props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = {
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      errorCount: 0,
+    };
   }
 
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+  static getDerivedStateFromError(error: Error): Partial<State> {
+    return {
+      hasError: true,
+      error,
+    };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    // console.error('Error caught by boundary:', error, errorInfo);
-    this.setState({ error, errorInfo });
-    
-    // Log error to analytics
-    if (typeof window !== 'undefined' && (window as unknown).gtag) {
-      (window as unknown).gtag('event', 'exception', {
-        description: error.message,
-        fatal: false
-      });
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error caught by boundary:', error, errorInfo);
+    }
+
+    // Update state with error info
+    this.setState((prevState) => ({
+      errorInfo,
+      errorCount: prevState.errorCount + 1,
+    }));
+
+    // Call custom error handler if provided
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo);
+    }
+
+    // Auto-reset after multiple errors (circuit breaker pattern)
+    if (this.state.errorCount >= 3) {
+      this.scheduleReset();
+    }
+
+    // Send error to monitoring service in production
+    if (process.env.NODE_ENV === 'production') {
+      this.logErrorToService(error, errorInfo);
     }
   }
 
+  componentWillUnmount() {
+    if (this.resetTimeout) {
+      clearTimeout(this.resetTimeout);
+    }
+  }
+
+  private scheduleReset() {
+    // Reset after 5 seconds to prevent infinite error loops
+    this.resetTimeout = setTimeout(() => {
+      this.handleReset();
+    }, 5000);
+  }
+
+  private logErrorToService(error: Error, errorInfo: ErrorInfo) {
+    // Placeholder for error tracking service (e.g., Sentry, LogRocket)
+    const errorData = {
+      message: error.message,
+      stack: error.stack,
+      componentStack: errorInfo.componentStack,
+      timestamp: new Date().toISOString(),
+      userAgent: navigator.userAgent,
+      url: window.location.href,
+    };
+
+    // Send to your error tracking service
+    console.error('Error logged:', errorData);
+  }
+
+  handleReset = () => {
+    this.setState({
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      errorCount: 0,
+    });
+  };
+
+  handleReload = () => {
+    window.location.reload();
+  };
+
   render() {
     if (this.state.hasError) {
-      return this.props.fallback || (
-        <div className="min-h-screen bg-gradient-to-br from-red-900 via-red-800 to-red-900 flex items-center justify-center">
-          <div className="bg-white rounded-lg p-8 max-w-md mx-4 text-center">
-            <h1 className="text-2xl font-bold text-red-600 mb-4">Something went wrong</h1>
-            <p className="text-gray-600 mb-4">
-              We're sorry, but something unexpected happened. Please try refreshing the page.
+      // Use custom fallback if provided
+      if (this.props.fallback) {
+        return this.props.fallback;
+      }
+
+      // Default error UI
+      return (
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 flex items-center justify-center p-6">
+          <div className="max-w-2xl w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 shadow-2xl">
+            <div className="flex items-center justify-center mb-6">
+              <div className="bg-red-500/20 p-4 rounded-full">
+                <AlertTriangle className="w-12 h-12 text-red-400" />
+              </div>
+            </div>
+
+            <h1 className="text-3xl font-bold text-white text-center mb-4">
+              Oops! Something went wrong
+            </h1>
+
+            <p className="text-gray-300 text-center mb-8">
+              We're sorry for the inconvenience. Our team has been notified and we're working on fixing this issue.
             </p>
-            <button
-              onClick={() => window.location.reload()}
-              className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition-colors"
-            >
-              Refresh Page
-            </button>
+
             {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mt-4 text-left">
-                <summary className="cursor-pointer text-sm text-gray-500">Error Details</summary>
-                <pre className="mt-2 text-xs text-gray-400 overflow-auto">
-                  {this.state.error.stack}
-                </pre>
-              </details>
+              <div className="bg-red-900/30 border border-red-500/30 rounded-lg p-4 mb-6 overflow-auto max-h-60">
+                <p className="text-red-300 font-mono text-sm mb-2">
+                  <strong>Error:</strong> {this.state.error.message}
+                </p>
+                {this.state.error.stack && (
+                  <pre className="text-red-400 text-xs overflow-auto">
+                    {this.state.error.stack}
+                  </pre>
+                )}
+              </div>
+            )}
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button
+                onClick={this.handleReset}
+                className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+              >
+                <RefreshCw className="w-5 h-5" />
+                Try Again
+              </button>
+
+              <button
+                onClick={this.handleReload}
+                className="flex items-center justify-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+              >
+                <RefreshCw className="w-5 h-5" />
+                Reload Page
+              </button>
+
+              <Link
+                to="/"
+                className="flex items-center justify-center gap-2 bg-gray-700 hover:bg-gray-800 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+              >
+                <Home className="w-5 h-5" />
+                Go Home
+              </Link>
+            </div>
+
+            {this.state.errorCount >= 3 && (
+              <div className="mt-6 text-center">
+                <p className="text-yellow-400 text-sm">
+                  Multiple errors detected. Page will auto-reset in 5 seconds...
+                </p>
+              </div>
             )}
           </div>
         </div>

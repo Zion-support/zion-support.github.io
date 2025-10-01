@@ -1,0 +1,5 @@
+
+export const lazyLoadComponents = () => {
+  console.log('Lazy loading components...');
+
+};

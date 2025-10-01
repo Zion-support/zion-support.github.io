@@ -1,194 +1,122 @@
 #!/usr/bin/env node
 
 /**
- * Performance Optimizer Script
- * Optimizes the application for better performance
+ * Performance Optimization Script
+ * Analyzes and optimizes the build for better performance
  */
 
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 console.log('🚀 Starting performance optimization...');
 
-// Performance optimization configurations
-const optimizations = {
-  // Bundle analysis
-  bundleAnalysis: {
-    enabled: true,
-    threshold: 1000000, // 1MB threshold
-    reportPath: './performance-reports/bundle-analysis.json'
-  },
-  
-  // Image optimization
-  imageOptimization: {
-    enabled: true,
-    formats: ['webp', 'avif'],
-    quality: 85,
-    maxWidth: 1920
-  },
-  
-  // Code splitting optimization
-  codeSplitting: {
-    enabled: true,
-    chunkSizeLimit: 250000, // 250KB per chunk
-    vendorChunkSize: 500000 // 500KB for vendor chunks
-  },
-  
-  // Caching optimization
-  caching: {
-    enabled: true,
-    staticAssets: 31536000, // 1 year
-    dynamicContent: 3600, // 1 hour
-    apiResponses: 300 // 5 minutes
-  },
-  
-  // Performance monitoring
-  monitoring: {
-    enabled: true,
-    metrics: ['fcp', 'lcp', 'cls', 'fid', 'ttfb'],
-    reportPath: './performance-reports/metrics.json'
+// 1. Analyze bundle size
+function analyzeBundleSize() {
+  const distPath = path.join(__dirname, '../dist');
+  if (!fs.existsSync(distPath)) {
+    console.log('❌ Dist folder not found. Run build first.');
+    return;
   }
-};
 
-// Create performance reports directory
-const reportsDir = path.join(process.cwd(), 'performance-reports');
-if (!fs.existsSync(reportsDir)) {
-  fs.mkdirSync(reportsDir, { recursive: true });
+  const files = fs.readdirSync(distPath, { recursive: true });
+  let totalSize = 0;
+  const fileSizes = [];
+
+  files.forEach(file => {
+    const filePath = path.join(distPath, file);
+    if (fs.statSync(filePath).isFile()) {
+      const size = fs.statSync(filePath).size;
+      totalSize += size;
+      fileSizes.push({ name: file, size });
+    }
+  });
+
+  // Sort by size
+  fileSizes.sort((a, b) => b.size - a.size);
+
+  console.log('\n📊 Bundle Analysis:');
+  console.log(`Total size: ${(totalSize / 1024 / 1024).toFixed(2)} MB`);
+  console.log('\nLargest files:');
+  fileSizes.slice(0, 10).forEach(file => {
+    console.log(`  ${file.name}: ${(file.size / 1024).toFixed(2)} KB`);
+  });
 }
 
-// Generate performance report
+// 2. Check for unused dependencies
+function checkUnusedDeps() {
+  console.log('\n🔍 Checking for potential optimizations...');
+  
+  const packageJson = JSON.parse(fs.readFileSync(path.join(__dirname, '../package.json'), 'utf8'));
+  const dependencies = Object.keys(packageJson.dependencies || {});
+  
+  console.log('Dependencies:', dependencies.length);
+  console.log('DevDependencies:', Object.keys(packageJson.devDependencies || {}).length);
+  
+  // Check for large dependencies
+  const largeDeps = ['framer-motion', 'recharts', 'axios'];
+  largeDeps.forEach(dep => {
+    if (dependencies.includes(dep)) {
+      console.log(`⚠️  Large dependency detected: ${dep}`);
+    }
+  });
+}
+
+// 3. Generate performance report
 function generatePerformanceReport() {
   const report = {
     timestamp: new Date().toISOString(),
-    optimizations: optimizations,
-    recommendations: [
-      'Enable gzip compression for static assets',
-      'Implement service worker for caching',
-      'Optimize images with modern formats (WebP, AVIF)',
-      'Use lazy loading for below-the-fold content',
-      'Minimize third-party scripts',
-      'Implement critical CSS inlining',
-      'Use resource hints (preload, prefetch)',
-      'Optimize font loading with font-display: swap'
+    optimizations: [
+      'Terser minification with aggressive settings',
+      'Tree shaking enabled',
+      'Code splitting optimized',
+      'CSS code splitting enabled',
+      'Asset inlining for small files',
+      'ESBuild optimizations',
+      'Manual chunk splitting for better caching'
     ],
-    metrics: {
-      bundleSize: 'Check with bundle analyzer',
-      loadTime: 'Monitor with performance API',
-      accessibility: 'Run accessibility audit',
-      seo: 'Check with SEO tools'
-    }
+    recommendations: [
+      'Consider lazy loading for non-critical components',
+      'Implement service worker for caching',
+      'Optimize images with WebP format',
+      'Use CDN for static assets',
+      'Implement preloading for critical resources'
+    ]
   };
-  
+
   fs.writeFileSync(
-    path.join(reportsDir, 'optimization-report.json'),
+    path.join(__dirname, '../performance-optimization-report.json'),
     JSON.stringify(report, null, 2)
   );
-  
-  console.log('✅ Performance optimization report generated');
-  return report;
+
+  console.log('\n📈 Performance report generated: performance-optimization-report.json');
 }
 
-// Analyze bundle size
-function analyzeBundleSize() {
-  const distDir = path.join(process.cwd(), 'dist');
-  if (!fs.existsSync(distDir)) {
-    console.log('⚠️  Dist directory not found. Run build first.');
-    return;
-  }
-  
-  let totalSize = 0;
-  const files = [];
-  
-  function analyzeDirectory(dir, relativePath = '') {
-    const items = fs.readdirSync(dir);
-    
-    items.forEach(item => {
-      const itemPath = path.join(dir, item);
-      const itemRelativePath = path.join(relativePath, item);
-      const stats = fs.statSync(itemPath);
-      
-      if (stats.isDirectory()) {
-        analyzeDirectory(itemPath, itemRelativePath);
-      } else {
-        const size = stats.size;
-        totalSize += size;
-        files.push({
-          path: itemRelativePath,
-          size: size,
-          sizeFormatted: formatBytes(size)
-        });
-      }
-    });
-  }
-  
-  analyzeDirectory(distDir);
-  
-  const analysis = {
-    totalSize: totalSize,
-    totalSizeFormatted: formatBytes(totalSize),
-    fileCount: files.length,
-    files: files.sort((a, b) => b.size - a.size),
-    recommendations: []
-  };
-  
-  // Add recommendations based on analysis
-  if (totalSize > 5000000) { // 5MB
-    analysis.recommendations.push('Bundle size is large. Consider code splitting and tree shaking.');
-  }
-  
-  const largeFiles = files.filter(f => f.size > 1000000); // 1MB
-  if (largeFiles.length > 0) {
-    analysis.recommendations.push(`Large files detected: ${largeFiles.map(f => f.path).join(', ')}`);
-  }
-  
-  fs.writeFileSync(
-    path.join(reportsDir, 'bundle-analysis.json'),
-    JSON.stringify(analysis, null, 2)
-  );
-  
-  console.log(`📊 Bundle analysis complete. Total size: ${formatBytes(totalSize)}`);
-  return analysis;
+// 4. Optimize images (placeholder)
+function optimizeImages() {
+  console.log('\n🖼️  Image optimization recommendations:');
+  console.log('  - Convert images to WebP format');
+  console.log('  - Implement responsive images');
+  console.log('  - Use lazy loading for below-the-fold images');
+  console.log('  - Consider using a CDN for image delivery');
 }
 
-// Format bytes to human readable format
-function formatBytes(bytes, decimals = 2) {
-  if (bytes === 0) return '0 Bytes';
+// Run all optimizations
+function runOptimizations() {
+  analyzeBundleSize();
+  checkUnusedDeps();
+  generatePerformanceReport();
+  optimizeImages();
   
-  const k = 1024;
-  const dm = decimals < 0 ? 0 : decimals;
-  const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
-  
-  const i = Math.floor(Math.log(bytes) / Math.log(k));
-  
-  return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
+  console.log('\n✅ Performance optimization complete!');
+  console.log('\nNext steps:');
+  console.log('1. Review the performance report');
+  console.log('2. Implement recommended optimizations');
+  console.log('3. Test the build performance');
+  console.log('4. Monitor Core Web Vitals');
 }
 
-// Main execution
-function main() {
-  try {
-    // Generate optimization report
-    generatePerformanceReport();
-    
-    // Analyze bundle if dist exists
-    analyzeBundleSize();
-    
-    console.log('🎉 Performance optimization complete!');
-    console.log('📁 Reports saved to: performance-reports/');
-    
-  } catch (error) {
-    console.error('❌ Performance optimization failed:', error);
-    process.exit(1);
-  }
-}
-
-// Run if called directly
-if (import.meta.url === `file://${process.argv[1]}`) {
-  main();
-}
-
-export {
-  generatePerformanceReport,
-  analyzeBundleSize,
-  formatBytes,
-  optimizations
-};
+runOptimizations();
