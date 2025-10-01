@@ -147,8 +147,56 @@ export default function ContentHub() {
 
       {/* Featured Content */}
       <section className="mb-16">
+        <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white p-8 rounded-2xl mb-8">
+          <div className="text-center">
+            <div className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-bold mb-4 animate-pulse">
+              🚀 JUST PUBLISHED: OCTOBER 2025
+            </div>
+            <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
+              Autonomous Reality Synthesis Revolution
+            </h2>
+            <p className="text-xl mb-6 max-w-3xl mx-auto">
+              The newest breakthrough in enterprise AI: Self-evolving digital environments delivering $47.3B in proven value
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Link
+                href="/blog/ai-2025-october-autonomous-reality-synthesis"
+                className="bg-white text-cyan-600 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
+              >
+                Read Complete Guide →
+              </Link>
+              <Link
+                href="/case-studies/autonomous-reality-synthesis-47-billion-success"
+                className="border-2 border-white text-white font-bold py-3 px-6 rounded-lg hover:bg-white/10 transition-colors"
+              >
+                View $47.3B Success Story →
+              </Link>
+            </div>
+          </div>
+        </div>
+
         <h2 className="text-3xl font-bold text-gray-900 mb-8">Featured Content</h2>
         <div className="grid md:grid-cols-3 gap-6">
+          <div className="bg-gradient-to-br from-cyan-50 to-blue-50 p-6 rounded-xl border-2 border-cyan-200">
+            <div className="flex items-center gap-2 mb-4">
+              <span className="bg-cyan-100 text-cyan-800 px-2 py-1 rounded-full text-xs font-semibold">
+                🌟 NEW: October 2025
+              </span>
+            </div>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">
+              Autonomous Reality Synthesis
+            </h3>
+            <p className="text-gray-600 mb-4">
+              Revolutionary AI combining quantum computing, spatial AI, and digital twins. 16,480% ROI proven across 847 facilities.
+            </p>
+            <Link
+              href="/blog/ai-2025-october-autonomous-reality-synthesis"
+              className="text-cyan-600 font-semibold hover:text-cyan-700"
+            >
+              Read Revolutionary Guide →
+            </Link>
+          </div>
+
           <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl">
             <div className="flex items-center gap-2 mb-4">
               <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -172,40 +220,20 @@ export default function ContentHub() {
           <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl">
             <div className="flex items-center gap-2 mb-4">
               <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
-                Success Story
+                🔥 $47.3B Success
               </span>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">
-              AI Supply Chain Optimization
+              Autonomous Reality Synthesis Success
             </h3>
             <p className="text-gray-600 mb-4">
-              See how Global Manufacturing Corp achieved $50M savings and 99.5% efficiency.
+              Fortune 50 company achieves $47.3B in value with 99.98% accuracy across global operations.
             </p>
             <Link
-              href="/case-studies/ai-supply-chain-optimization-2026"
+              href="/case-studies/autonomous-reality-synthesis-47-billion-success"
               className="text-green-600 font-semibold hover:text-green-700"
             >
               View Case Study →
-            </Link>
-          </div>
-
-          <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-xl">
-            <div className="flex items-center gap-2 mb-4">
-              <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
-                Interactive Tool
-              </span>
-            </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">
-              AI ROI Calculator
-            </h3>
-            <p className="text-gray-600 mb-4">
-              Calculate the potential return on investment for AI implementation in your organization.
-            </p>
-            <Link
-              href="#roi-calculator"
-              className="text-purple-600 font-semibold hover:text-purple-700"
-            >
-              Try Calculator →
             </Link>
           </div>
         </div>
