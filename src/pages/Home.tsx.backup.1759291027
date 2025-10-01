@@ -121,6 +121,12 @@ const Home = () => {
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
         
+<<<<<<< HEAD
+        {/* 🌟 OCTOBER 1, 2025 - BRAND NEW CONTENT: Multimodal AI, Security Mesh & RAG 2.0 */}
+        <div className="container mx-auto px-4 py-8">
+          <October2025NewContentBanner />
+        </div>
+=======
         {/* 🎉 JANUARY 2026 - BREAKTHROUGH: Revolutionary AI Systems */}
         <NewContentPromoBanner 
           className="border-b border-white/10" 
@@ -150,6 +156,7 @@ const Home = () => {
             { title: "Quantum-Inspired AI Optimization 2025 — Solve Complex Problems 1000x Faster on Classical Hardware (95% Optimality)", category: "Quantum Computing", link: "/blog/ai-2025-december-quantum-inspired-optimization" }
           ]}
         />
+>>>>>>> origin/cursor/create-and-deploy-new-content-a082
         
         {/* 🔥 NOVEMBER 1, 2025 - BRAND NEW: Federated Learning, LLMOps & Platform Engineering */}
         <NewContentPromoBanner 
