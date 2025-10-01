@@ -1,6 +1,7 @@
 import React, { JSX } from "react";
 
 // 🚀🚀🚀 LATEST OCTOBER 2025 NEW CONTENT - HIGHEST PRIORITY 🚀🚀🚀
+import October2025NewContentBanner from "./components/October2025NewContentBanner";
 import October2025NewContentHighlightBanner from "./components/October2025NewContentHighlightBanner";
 import SyntheticConsciousnessRevolutionBanner from "./components/SyntheticConsciousnessRevolutionBanner";
 
@@ -15,9 +16,6 @@ import Fortune500AI2027InfiniteValueBanner from "./components/Fortune500AI2027In
 
 // EXISTING IMPORTS
 import AI2033UniversalConsciousnessBanner from "./components/AI2033UniversalConsciousnessBanner";
-
-// 🚀 LATEST: October 2025 Revolutionary Content - MOST PROMINENT
-import October2025NewContentBanner from "./components/October2025NewContentBanner";
 
 // NEWEST: January 2025 Content Banners - MOST PROMINENT
 import January2025NewContentBanner from "./components/January2025NewContentBanner";
@@ -68,6 +66,9 @@ import Fortune500SuccessAdvertisingBanner from "./components/Fortune500SuccessAd
 export default function App(): JSX.Element {
   return (
     <div className="min-h-screen bg-slate-950">
+      {/* 🚀 NEW: October 2025 Latest Content - MOST RECENT & FEATURED 🚀 */}
+      <October2025NewContentBanner />
+      
       {/* 🚀🚀🚀 OCTOBER 2025 NEW CONTENT HIGHLIGHT - MOST PROMINENT 🚀🚀🚀 */}
       {/* Featured: Platform Engineering, Prompt Engineering, and $20B Insurance Case Study */}
       <October2025NewContentHighlightBanner />
@@ -225,12 +226,9 @@ export default function App(): JSX.Element {
       
       {/* 🚀🚀🚀 EXISTING CONTENT - FEATURED BELOW 🚀🚀🚀 */}
       
-<<<<<<< HEAD
-=======
       {/* 🚀🚀🚀 BREAKING: September 30, 2025 — NEW CONTENT JUST PUBLISHED! — HIGHEST PRIORITY 🚀🚀🚀 */}
       <September30NewContentMegaBanner />
       
->>>>>>> cursor/create-and-deploy-new-content-45e2
       {/* 🚀 NEWEST: January 2025 Revolutionary AI Content - MOST PROMINENT */}
       <January2025NewContentBanner />
       
