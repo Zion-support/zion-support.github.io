@@ -99,6 +99,20 @@ const Home = () => {
         <link rel="canonical" href="https://ziontechgroup.com" />
       </Helmet>
       <AdvertisingBanner />
+      {/* Promo: New Enterprise AI Governance Blueprint */}
+      <NewContentPromoBanner 
+        className="border-b border-white/10" 
+        variant="premium" 
+        title="🛡️ NEW: Enterprise AI Governance 2025 — Scorecards & Guardrails"
+        description="Ship AI safely with policy tests in CI, KPI-linked scorecards, budget-aware routing, and instant rollback."
+        ctaText="Read Governance Blueprint"
+        ctaLink="/blog/ai-2025-oct-01-enterprise-ai-governance-blueprint"
+        featuredItems={[
+          { title: "Enterprise AI Governance — Zero‑Regret Rollouts", category: "AI Governance", link: "/blog/ai-2025-oct-01-enterprise-ai-governance-blueprint" },
+          { title: "Agent Copilots — Guardrails That Scale", category: "AI Agents", link: "/blog/ai-2025-oct-01-enterprise-agent-copilots" },
+          { title: "Cache Playbook PRO — 60–85% Cost ↓", category: "GenAI Engineering", link: "/blog/ai-2025-oct-02-cache-playbook-pro" }
+        ]}
+      />
       <NewContentPromoBanner 
         className="border-b border-white/10" 
         variant="premium" 
