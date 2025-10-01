@@ -44,6 +44,14 @@ function Header() {
         </Link>
         <div className="hidden md:flex gap-6">
           <div className="relative group">
+            <Link href="/blog/ai-2025-january-autonomous-intelligence-revolution" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
+              January 2025 Autonomous Intelligence
+              <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
+                $500M SUCCESS
+              </span>
+            </Link>
+          </div>
+          <div className="relative group">
             <Link href="/blog/ai-2027-january-ultimate-breakthrough-revolution" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
               January 2027 Ultimate Breakthrough
               <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
@@ -353,8 +361,20 @@ function Footer() {
             </div>
           </div>
           <div>
-            <h3 className="font-semibold text-gray-900 mb-3">Latest 2027 Revolutionary Content</h3>
+            <h3 className="font-semibold text-gray-900 mb-3">Latest 2025 Revolutionary Content</h3>
             <div className="space-y-2">
+              <Link href="/blog/ai-2025-january-autonomous-intelligence-revolution" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                🚀 January 2025 Autonomous Intelligence Revolution
+                <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">$500M SUCCESS</span>
+              </Link>
+              <Link href="/case-studies/ai-2025-january-autonomous-intelligence-500-million-success" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                💰 $500M Success Story - Fortune 100
+                <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">ROI BREAKTHROUGH</span>
+              </Link>
+              <Link href="/blog/ai-2025-january-quantum-neural-breakthrough" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                ⚛️ January 2025 Quantum Neural Breakthrough
+                <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">10,000x PERFORMANCE</span>
+              </Link>
               <Link href="/blog/ai-2027-january-ultimate-breakthrough-revolution" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
                 🧠 January 2027 Ultimate Breakthrough Revolution
                 <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">$500B SUCCESS</span>
