@@ -3,7 +3,7 @@
  * Tracks Core Web Vitals and custom performance metrics
  */
 
-import { onCLS, onFID, onFCP, onLCP, onTTFB, Metric } from 'web-vitals';
+import { onCLS, onINP, onFCP, onLCP, onTTFB, Metric } from 'web-vitals';
 
 export interface PerformanceMetrics {
   cls?: number;
@@ -27,8 +27,8 @@ class PerformanceMonitor {
       this.updateMetric('cls', metric.value);
     });
 
-    // First Input Delay
-    onFID((metric: Metric) => {
+    // Interaction to Next Paint (replaces FID)
+    onINP((metric: Metric) => {
       this.updateMetric('fid', metric.value);
     });
 
@@ -88,12 +88,75 @@ class PerformanceMonitor {
   /**
    * Send metrics to analytics (implement your analytics service)
    */
-  sendToAnalytics() {
-    // Placeholder for analytics integration
-    // Example: Google Analytics, Mixpanel, etc.
+  async sendToAnalytics() {
     if (process.env.NODE_ENV === 'production') {
-      // Send metrics to your analytics service
-      console.log('Performance metrics:', this.metrics);
+      try {
+        // Send to Google Analytics 4 (if available)
+        if (typeof window !== 'undefined' && (window as any).gtag) {
+          const gtag = (window as any).gtag;
+          
+          // Send Core Web Vitals
+          Object.entries(this.metrics).forEach(([key, value]) => {
+            if (value !== undefined) {
+              gtag('event', 'web_vitals', {
+                metric_name: key.toUpperCase(),
+                metric_value: Math.round(value),
+                metric_rating: this.getMetricRating(key as keyof PerformanceMetrics, value)
+              });
+            }
+          });
+          
+          // Send overall performance score
+          gtag('event', 'performance_score', {
+            score: this.getPerformanceScore(),
+            timestamp: Date.now()
+          });
+        }
+        
+        // Send to custom analytics endpoint
+        if (process.env.REACT_APP_ANALYTICS_ENDPOINT) {
+          await fetch(process.env.REACT_APP_ANALYTICS_ENDPOINT, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              type: 'performance_metrics',
+              data: {
+                ...this.metrics,
+                score: this.getPerformanceScore(),
+                timestamp: Date.now(),
+                url: window.location.href,
+                userAgent: navigator.userAgent
+              }
+            })
+          });
+        }
+        
+        console.log('Performance metrics sent to analytics:', this.metrics);
+      } catch (error) {
+        console.error('Failed to send performance metrics to analytics:', error);
+      }
+    }
+  }
+
+  /**
+   * Get rating for a specific metric
+   */
+  private getMetricRating(key: keyof PerformanceMetrics, value: number): string {
+    switch (key) {
+      case 'cls':
+        return value <= 0.1 ? 'good' : value <= 0.25 ? 'needs-improvement' : 'poor';
+      case 'fid':
+        return value <= 100 ? 'good' : value <= 300 ? 'needs-improvement' : 'poor';
+      case 'lcp':
+        return value <= 2500 ? 'good' : value <= 4000 ? 'needs-improvement' : 'poor';
+      case 'fcp':
+        return value <= 1800 ? 'good' : value <= 3000 ? 'needs-improvement' : 'poor';
+      case 'ttfb':
+        return value <= 600 ? 'good' : value <= 1500 ? 'needs-improvement' : 'poor';
+      default:
+        return 'unknown';
     }
   }
 

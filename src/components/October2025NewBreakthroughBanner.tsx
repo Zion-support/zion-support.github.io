@@ -5,7 +5,7 @@ import { octoberNewBreakthroughContent, octoberContentStats } from "../content/o
 const October2025NewBreakthroughBanner = () => {
   const stats = octoberContentStats;
 
-  const iconMap: Record<string, React.ComponentType<any>> = {
+  const iconMap: Record<string, React.ComponentType<React.SVGProps<SVGSVGElement>>> = {
     '🧠': Brain,
     '💰': DollarSign,
     '🎨': Eye

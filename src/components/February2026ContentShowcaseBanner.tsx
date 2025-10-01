@@ -1,6 +1,5 @@
 import React from 'react';
-import { ArrowRight, Sparkles, Zap, Brain, CheckCircle, Star, Users, Award, TrendingUp } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { ArrowRight, Sparkles, Zap, Brain, Star, Users, Award, TrendingUp } from 'lucide-react';
 
 const February2026ContentShowcaseBanner = () => {
   const featuredContent = [

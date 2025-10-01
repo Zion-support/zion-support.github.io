@@ -16,7 +16,7 @@ export interface CacheEntry<T> {
 }
 
 class CacheManager {
-  private memoryCache: Map<string, CacheEntry<any>> = new Map();
+  private memoryCache: Map<string, CacheEntry<unknown>> = new Map();
   private readonly DEFAULT_TTL = 5 * 60 * 1000; // 5 minutes
   private readonly DEFAULT_MAX_SIZE = 100;
 
@@ -195,7 +195,9 @@ class CacheManager {
     // Implement LRU eviction if cache is full
     if (this.memoryCache.size >= maxSize) {
       const firstKey = this.memoryCache.keys().next().value;
-      this.memoryCache.delete(firstKey);
+      if (firstKey) {
+        this.memoryCache.delete(firstKey);
+      }
     }
     this.memoryCache.set(key, entry);
   }

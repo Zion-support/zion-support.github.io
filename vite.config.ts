@@ -37,32 +37,64 @@ export default defineConfig({
       output: {
         // Manual chunk splitting for better caching
         manualChunks: (id) => {
+          // Vendor chunks - more granular splitting
           if (id.includes('node_modules')) {
-            // Consolidate all vendor chunks into fewer, larger chunks
-            if (id.includes('react') || id.includes('react-dom') || id.includes('react-router')) {
-              return 'react-vendor';
+            if (id.includes('react') || id.includes('react-dom')) {
+              return 'vendor-react';
             }
-            if (id.includes('framer-motion') || id.includes('lucide-react') || id.includes('@headlessui')) {
-              return 'ui-vendor';
+            if (id.includes('react-router')) {
+              return 'vendor-router';
             }
-            if (id.includes('lodash') || id.includes('date-fns') || id.includes('axios')) {
-              return 'utils-vendor';
+            if (id.includes('framer-motion')) {
+              return 'vendor-framer';
             }
-            // Group all other node_modules into a single vendor chunk
+            if (id.includes('lucide-react')) {
+              return 'vendor-icons';
+            }
+            if (id.includes('recharts')) {
+              return 'vendor-charts';
+            }
+            if (id.includes('clsx') || id.includes('tailwind-merge')) {
+              return 'vendor-utils';
+            }
+            if (id.includes('axios')) {
+              return 'vendor-http';
+            }
+            if (id.includes('web-vitals')) {
+              return 'vendor-vitals';
+            }
+            // All other node_modules go to vendor
             return 'vendor';
           }
-          // Consolidate component chunks
+          // App chunks - more granular splitting
+          if (id.includes('src/pages/')) {
+            return 'pages';
+          }
           if (id.includes('src/components/')) {
+            // Split large components into separate chunks
+            if (id.includes('Advanced') || id.includes('Comprehensive')) {
+              return 'components-advanced';
+            }
+            if (id.includes('Dashboard') || id.includes('Monitor')) {
+              return 'components-dashboard';
+            }
             return 'components';
           }
-          // Consolidate utility chunks
           if (id.includes('src/utils/')) {
+            // Split utils by functionality
+            if (id.includes('advanced') || id.includes('comprehensive')) {
+              return 'utils-advanced';
+            }
+            if (id.includes('performance') || id.includes('monitor')) {
+              return 'utils-performance';
+            }
             return 'utils';
           }
-          // Consolidate hooks
           if (id.includes('src/hooks/')) {
             return 'hooks';
           }
+          // Default chunk
+          return 'app';
         },
         chunkFileNames: (chunkInfo) => {
           const facadeModuleId = chunkInfo.facadeModuleId

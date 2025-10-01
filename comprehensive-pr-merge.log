@@ -509,3 +509,22 @@ error: failed to push some refs to 'https://github.com/Zion-Holdings/zion.app'
 [2025-09-30T21:32:36.116Z] ✅ Check git status successful.
 [2025-09-30T21:32:36.116Z] 🔧 Found merge conflicts, attempting to resolve...
 [2025-09-30T21:32:36.116Z] 🚀 Add all files: git add .
+[2025-10-01T18:22:23.012Z] 🚀 Starting Comprehensive PR Merger...
+[2025-10-01T18:22:23.014Z] 🚀 Switch to main branch: git checkout main
+[2025-10-01T18:22:23.125Z] ✅ Switch to main branch successful.
+[2025-10-01T18:22:23.126Z] 🚀 Pull latest main: git pull origin main
+[2025-10-01T18:22:24.087Z] ✅ Pull latest main successful.
+[2025-10-01T18:22:24.088Z] 🔍 Fetching open PRs from GitHub...
+[2025-10-01T18:22:24.380Z] Found 4 open PRs
+[2025-10-01T18:22:24.380Z] 📋 Found 4 open PRs to process
+[2025-10-01T18:22:24.380Z] 🔄 Processing PR #24644: Fix errors and merge to main
+[2025-10-01T18:22:24.384Z] 🚀 Fetch PR branch cursor/fix-errors-and-merge-to-main-0e98: git fetch origin cursor/fix-errors-and-merge-to-main-0e98
+[2025-10-01T18:22:25.341Z] ✅ Fetch PR branch cursor/fix-errors-and-merge-to-main-0e98 successful.
+[2025-10-01T18:22:25.342Z] 🚀 Merge PR #24644: git merge origin/cursor/fix-errors-and-merge-to-main-0e98 --no-ff -m "Merge PR #24644: Fix errors and merge to main"
+[2025-10-01T18:22:25.715Z] ❌ Merge PR #24644 failed: Command failed: git merge origin/cursor/fix-errors-and-merge-to-main-0e98 --no-ff -m "Merge PR #24644: Fix errors and merge to main"
+[2025-10-01T18:22:25.715Z] ⚠️ Merge failed, attempting to resolve conflicts: Command failed: git merge origin/cursor/fix-errors-and-merge-to-main-0e98 --no-ff -m "Merge PR #24644: Fix errors and merge to main"
+[2025-10-01T18:22:25.716Z] 🔧 Resolving merge conflicts for branch: cursor/fix-errors-and-merge-to-main-0e98
+[2025-10-01T18:22:25.716Z] 🚀 Check git status: git status --porcelain
+[2025-10-01T18:22:25.825Z] ✅ Check git status successful.
+[2025-10-01T18:22:25.825Z] 🔧 Found merge conflicts, attempting to resolve...
+[2025-10-01T18:22:25.825Z] 🚀 Add all files: git add .
