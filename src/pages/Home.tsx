@@ -21,6 +21,7 @@ import EnhancedNewsletterSignup from "../components/EnhancedNewsletterSignup";
 import EnhancedPromotionalBanner from "../components/EnhancedPromotionalBanner";
 import EnhancedTestimonials from "../components/EnhancedTestimonials";
 import Header from "../components/Header";
+import October2025NewAdvancedAIContentBanner from "../components/October2025NewAdvancedAIContentBanner";
 import October2025EdgeAIQuantumCryptoBanner from "../components/October2025EdgeAIQuantumCryptoBanner";
 import October2025BreakthroughContentBanner from "../components/October2025BreakthroughContentBanner";
 import October2025AIRevolutionBanner from "../components/October2025AIRevolutionBanner";
@@ -120,6 +121,9 @@ const Home = () => {
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
+        
+        {/* 🚀 OCTOBER 2025 - NEW ADVANCED AI PLATFORMS: Federated AI, Synthetic Data & AI Governance */}
+        <October2025NewAdvancedAIContentBanner />
         
         {/* 🎉 JANUARY 2026 - BREAKTHROUGH: Revolutionary AI Systems */}
         <NewContentPromoBanner 
