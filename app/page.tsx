@@ -3,6 +3,9 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 
+// 🌱🌱🌱 NEWEST TODAY: OCTOBER 1, 2025 GREEN AI REVOLUTION - ABSOLUTE #1 TOP PRIORITY! 🌱🌱🌱
+import October2025GreenAIBanner from '../components/October2025GreenAIBanner';
+
 // 🌱🌱🌱 NEWEST: AI 2026 SUSTAINABLE REVOLUTION - ABSOLUTE #1 TOP PRIORITY! 🌱🌱🌱
 import AI2026SustainableRevolutionBanner from '../components/AI2026SustainableRevolutionBanner';
 
@@ -152,6 +155,10 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-slate-950">
+      {/* 🌱🌱🌱 NEWEST TODAY: OCTOBER 1, 2025 GREEN AI REVOLUTION - ABSOLUTE #1 TOP PRIORITY! 🌱🌱🌱 */}
+      {/* 💎💎💎 JUST PUBLISHED: $470B Value Creation, 95% Energy Reduction, Carbon Neutral Operations, 42% Performance Boost - GREEN AI BREAKTHROUGH! 💎💎💎 */}
+      <October2025GreenAIBanner />
+      
       {/* 🌱🌱🌱 NEWEST: AI 2026 SUSTAINABLE REVOLUTION - ABSOLUTE #1 TOP PRIORITY! 🌱🌱🌱 */}
       {/* 💎💎💎 JUST PUBLISHED: $2.5B Success Story, 99.9% Energy Efficiency, 85% Carbon Reduction, Revolutionary Sustainable AI - ENVIRONMENTAL BREAKTHROUGH! 💎💎💎 */}
       <AI2026SustainableRevolutionBanner />
