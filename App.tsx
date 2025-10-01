@@ -1,5 +1,9 @@
 import React, { JSX } from "react";
 
+// 🚀🚀🚀 ABSOLUTE NEWEST: OCTOBER 2025 - MANUFACTURING & LOGISTICS REVOLUTION - #1 TOP PRIORITY! 🚀🚀🚀
+// 💎💎💎 JUST PUBLISHED TODAY: $12.9B Combined Savings, 97% Automation, 2,197% Avg ROI - BREAKTHROUGH RESULTS! 💎💎💎
+import October2025NewManufacturingLogisticsBanner from "./components/October2025NewManufacturingLogisticsBanner";
+
 // 🤖🤖🤖 ABSOLUTE NEWEST: OCTOBER 1, 2025 - AI AGENT SWARM REVOLUTION - #1 TOP PRIORITY! 🤖🤖🤖
 // 💎💎💎 JUST PUBLISHED TODAY: $420M Savings, 94% Automation, 10x Productivity, 2,500+ Coordinated Agents! 💎💎💎
 import October2025AgentSwarmRevolutionBanner from "./components/October2025AgentSwarmRevolutionBanner";
@@ -347,6 +351,10 @@ import Fortune500SuccessAdvertisingBanner from "./components/Fortune500SuccessAd
 export default function App(): JSX.Element {
   return (
     <div className="min-h-screen bg-slate-950">
+      {/* 🚀🚀🚀 ABSOLUTE NEWEST: OCTOBER 2025 - MANUFACTURING & LOGISTICS REVOLUTION - #1 TOP PRIORITY! 🚀🚀🚀 */}
+      {/* 💎💎💎 JUST PUBLISHED TODAY: $12.9B Combined Savings, 97% Manufacturing Automation, 94% Logistics Accuracy, 2,197% Avg ROI! 💎💎💎 */}
+      <October2025NewManufacturingLogisticsBanner />
+      
       {/* 🔥🔥🔥 ABSOLUTE NEWEST: OCTOBER 2025 - 3 REVOLUTIONARY AI BREAKTHROUGHS - #1 TOP PRIORITY! 🔥🔥🔥 */}
       {/* 💎💎💎 JUST PUBLISHED: Autonomous DevSecOps, Edge-to-Cloud Intelligence, Workforce Augmentation - $25.8M COMBINED SAVINGS! 💎💎💎 */}
       <October2025NewAIContentBreakthroughBanner />
