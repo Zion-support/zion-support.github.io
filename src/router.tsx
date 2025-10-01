@@ -6,6 +6,7 @@ import Services from './pages/Services';
 import Contact from './pages/Contact';
 import Blog from './pages/Blog';
 import CaseStudies from './pages/CaseStudies';
+import PostBySlug from './pages/blog/PostBySlug';
 import AIWorkflowAutomation from './pages/services/AIWorkflowAutomation';
 import AIVirtualAssistant from './pages/services/AIVirtualAssistant';
 import AIDataAnalytics from './pages/services/AIDataAnalytics';
@@ -39,6 +40,7 @@ export const AppRouter: React.FC = () => {
       <Route path="/case-studies/global-fintech-ai-transformation-2025" element={<GlobalFinTechAITransformation />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/blog" element={<Blog />} />
+      <Route path="/blog/:slug" element={<PostBySlug />} />
       <Route path="/blog/ai-2025-oct-multimodal-enterprise-intelligence" element={<MultimodalEnterpriseIntelligence />} />
       <Route path="/blog/ai-2025-oct-adaptive-learning-platforms" element={<AdaptiveLearningPlatforms />} />
       <Route path="/blog/ai-2025-oct-cognitive-automation-enterprise-revolution" element={<CognitiveAutomationEnterpriseRevolution />} />

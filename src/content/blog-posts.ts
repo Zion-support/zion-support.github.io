@@ -38,6 +38,77 @@ Includes rollout checklists, SLO templates, and cost/latency trade-off playbooks
     image: "/images/vector-db-optimization-2025.jpg"
   },
   {
+    slug: "ai-2025-oct-03-real-time-decision-engines",
+    title: "Real-Time Decision Engines 2025: 10M+/sec Decisions under 1ms",
+    description: "Architect ultra-low-latency decision engines with streaming features, tiered caches, and budgeted routes. Proven patterns for <1ms actions at 10M+ events/sec.",
+    content: `
+# Real-Time Decision Engines 2025
+
+Enterprise decision systems processing millions of events per second require rigor around latency budgets, cache tiers, and safe rollback. This guide covers:
+
+- Event pipelines with streaming features and windowed joins
+- Cost-aware routing with guardrails and quality tiers
+- Tiered caching (feature/result/negative) to tighten tails
+- Canary scorecards wired to business KPIs for safe changes
+
+Includes rollout checklist, SLO templates, and incident playbooks.
+    `,
+    author: "Zion Tech Group Real-Time AI Team",
+    date: "2025-10-03",
+    category: "Real-Time AI",
+    tags: ["Streaming", "Decisioning", "Latency", "Caching", "KPIs"],
+    featured: true,
+    readTime: "10 min read",
+    image: "/images/real-time-decision-engines-2025.jpg"
+  },
+  {
+    slug: "ai-2025-oct-03-privacy-first-analytics",
+    title: "Privacy‑First Analytics 2025: Signal‑Rich Insights Without PII",
+    description: "On-device aggregation, scoped IDs, and DP noise to unlock analytics without collecting PII—trusted by security and loved by product.",
+    content: `
+# Privacy‑First Analytics 2025
+
+Ship decision‑grade insights with:
+
+- Scoped identifiers and field‑level redaction
+- On‑device aggregation with signed configs
+- DP noise for safe cohort reporting
+- Retention policies that preserve signal, not risk
+
+Operational playbooks, CI policy tests, and dashboards included.
+    `,
+    author: "Zion Tech Group Privacy Engineering",
+    date: "2025-10-03",
+    category: "Analytics",
+    tags: ["Privacy", "DP", "Edge", "Telemetry"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/privacy-first-analytics-2025.jpg"
+  },
+  {
+    slug: "ai-2025-oct-03-agent-observability",
+    title: "Agent Observability 2025: Live Traces, SLIs, and Rollback",
+    description: "End‑to‑end visibility for agent tools with KPI‑linked SLIs, budgeted actions, and instant rollback triggers.",
+    content: `
+# Agent Observability 2025
+
+See, trust, and control agent behavior in production:
+
+- Tool traces with budgets and approvals
+- KPI‑linked SLIs and lightweight online evals
+- Canary routes and one‑click rollback
+
+Reference dashboards and runbooks provided.
+    `,
+    author: "Zion Tech Group AI Operations",
+    date: "2025-10-03",
+    category: "AI Operations",
+    tags: ["Agents", "Observability", "SLIs", "Rollback"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/agent-observability-2025.jpg"
+  },
+  {
     slug: "ai-2025-oct-01-hyper-personalization-engines-revolution",
     title: "Hyper-Personalization Engines 2025: 12.4x Engagement, 8x Conversion",
     description: "Deploy real-time personalization engines with event streams, vector user models, and bandit routing. Proven patterns yielding 12.4x engagement and 8x conversion uplifts.",
