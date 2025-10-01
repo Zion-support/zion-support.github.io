@@ -8,6 +8,11 @@ import January2026RevolutionaryBreakthroughsMegaBanner from '../components/Janua
 import January2026UltraAutonomousEnterpriseBanner from '../components/January2026UltraAutonomousEnterpriseBanner';
 import January2026QuantumConsciousnessBIBanner from '../components/January2026QuantumConsciousnessBIBanner';
 import January2026NeuralQuantumFusionBanner from '../components/January2026NeuralQuantumFusionBanner';
+
+// 🔥🔥🔥 BRAND NEW: JANUARY 2026 - QUANTUM CONSCIOUSNESS & AUTONOMOUS ENTERPRISE BREAKTHROUGHS - ABSOLUTE #1 TOP PRIORITY! 🔥🔥🔥
+// 💎💎💎 JUST PUBLISHED TODAY: Quantum Consciousness Breakthrough ($500B), Autonomous Enterprise Revolution ($127B) - $627B COMBINED VALUE! 💎💎💎
+import AI2026QuantumConsciousnessRevolutionaryBanner from '../components/AI2026QuantumConsciousnessRevolutionaryBanner';
+import AI2026FutureAutonomousEnterpriseRevolutionBanner from '../components/AI2026FutureAutonomousEnterpriseRevolutionBanner';
 import {
   NewBlogBanner,
   AnalyticsPlatformBanner,
@@ -77,6 +82,13 @@ export const metadata = {
 export default function HomePage() {
   return (
     <div className="animate-fade-in">
+      {/* 🔥🔥🔥 BRAND NEW: JANUARY 2026 - QUANTUM CONSCIOUSNESS & AUTONOMOUS ENTERPRISE BREAKTHROUGHS - ABSOLUTE #1 TOP PRIORITY! 🔥🔥🔥 */}
+      {/* 💎💎💎 JUST PUBLISHED TODAY: Quantum Consciousness Breakthrough ($500B), Autonomous Enterprise Revolution ($127B) - $627B COMBINED VALUE! 💎💎💎 */}
+      <AI2026QuantumConsciousnessRevolutionaryBanner />
+      
+      {/* Future Autonomous Enterprise Revolution */}
+      <AI2026FutureAutonomousEnterpriseRevolutionBanner />
+      
       {/* 🚀🚀🚀 ABSOLUTE NEWEST: JANUARY 2026 - REVOLUTIONARY AI BREAKTHROUGHS - ABSOLUTE #1 TOP PRIORITY! 🚀🚀🚀 */}
       {/* 💎💎💎 JUST PUBLISHED: Ultra-Autonomous Enterprise, Quantum Consciousness BI, Neural-Quantum Fusion - $36.8B Combined Value! 💎💎💎 */}
       <January2026RevolutionaryBreakthroughsMegaBanner />
@@ -91,10 +103,16 @@ export default function HomePage() {
       <January2026NeuralQuantumFusionBanner />
 
       {/* New Content Promo Strip */}
-      <div className="w-full bg-gradient-to-r from-green-600 to-blue-600 text-white">
+      <div className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
-            <span>🚀 NEW 2026 Content:</span>
+            <span>🔥 BRAND NEW 2026 Content:</span>
+            <Link href="/blog/ai-2026-quantum-consciousness-breakthrough" className="underline hover:text-yellow-200">Quantum Consciousness</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/blog/ai-2026-future-autonomous-enterprise-revolution" className="underline hover:text-yellow-200">Autonomous Enterprise</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/case-studies/ai-2026-global-enterprise-quantum-consciousness-transformation-500-billion-success" className="underline hover:text-yellow-200">$500B Success Story</Link>
+            <span className="hidden md:inline">•</span>
             <a to="/blog/ai-agent-orchestration-2026" className="underline hover:text-yellow-200">AI Agent Orchestration</a>
             <span className="hidden md:inline">•</span>
             <a to="/blog/ai-sustainability-green-tech-2026" className="underline hover:text-yellow-200">AI Sustainability</a>
