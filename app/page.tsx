@@ -88,6 +88,7 @@ import March2026QuantumConsciousnessTransformationBanner from '../components/Mar
 import February2026NextGenerationAutonomousIntelligenceBanner from '../components/February2026NextGenerationAutonomousIntelligenceBanner';
 import FebruaryMarch2026ContentShowcaseBanner from '../components/FebruaryMarch2026ContentShowcaseBanner';
 import February2026QuantumNeuralSuperintelligenceBanner from '../components/February2026QuantumNeuralSuperintelligenceBanner';
+import January2026RevolutionaryContentShowcaseBanner from '../components/January2026RevolutionaryContentShowcaseBanner';
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -173,6 +174,10 @@ export default function HomePage() {
       
       {/* 🚀🚀🚀 DECEMBER 2025 NEW CONTENT SHOWCASE - LATEST 🚀🚀🚀 */}
       <December2025NewContentShowcase />
+      
+      {/* 🚀🚀🚀 NEWEST: January 2026 Revolutionary Content Showcase - TOP PRIORITY! 🚀🚀🚀 */}
+      {/* Featured: Meta-Cognitive Intelligence, Neuromorphic Computing, Quantum-Neural Fusion - ALL NEW! */}
+      <January2026RevolutionaryContentShowcaseBanner />
       
       {/* 🧠🧠🧠 NEWEST: February 2026 Quantum Neural Superintelligence - REVOLUTIONARY BREAKTHROUGH 🧠🧠🧠 */}
       <February2026QuantumNeuralSuperintelligenceBanner />
