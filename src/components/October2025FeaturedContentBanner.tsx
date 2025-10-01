@@ -31,6 +31,34 @@ const October2025FeaturedContentBanner = () => {
         { value: "68%", label: "Cost Reduction" },
         { value: "$18.7M", label: "Annual Value" }
       ]
+    },
+    {
+      title: "Autonomous FinOps Playbook",
+      description: "Policy guardrails, tiered caching, 30–50% cost reduction",
+      link: "/blog/autonomous-finops-playbook-2025-oct",
+      icon: TrendingUp,
+      gradient: "from-cyan-600 to-blue-600",
+      bgGradient: "from-cyan-900/40 to-blue-900/40",
+      borderColor: "border-cyan-500/30",
+      stats: [
+        { value: "30–50%", label: "Spend Reduction" },
+        { value: "<200ms", label: "Cache Hit P95" },
+        { value: "Safe", label: "Rollback Ready" }
+      ]
+    },
+    {
+      title: "Production Agents Blueprint",
+      description: "Evals, rollbacks, approvals — safe autonomy that scales",
+      link: "/blog/production-agents-evals-rollbacks-approval-gates-2025-oct",
+      icon: Sparkles,
+      gradient: "from-purple-600 to-pink-600",
+      bgGradient: "from-purple-900/40 to-pink-900/40",
+      borderColor: "border-purple-500/30",
+      stats: [
+        { value: "80%", label: "Task Completion" },
+        { value: "24/7", label: "Safe Ops" },
+        { value: "Eval", label: "Gated Releases" }
+      ]
     }
   ];
 

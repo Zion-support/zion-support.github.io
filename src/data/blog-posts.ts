@@ -369,4 +369,34 @@ export const BLOG_POSTS: BlogPost[] = [
     publishedAt: '2025-10-02',
     readTime: 6,
   },
+  {
+    id: '25',
+    title: 'Autonomous FinOps Playbook: Real-Time Guardrails That Cut Spend 40%',
+    slug: 'autonomous-finops-playbook-2025-oct',
+    excerpt:
+      'Implement policy-driven budgets, adaptive model routing, and multi-tier caching to shrink LLM and cloud costs—without slowing teams.',
+    content:
+      'This playbook operationalizes Autonomous FinOps across AI and cloud. You will implement budget policies as code, latency-aware cache tiers (semantic, workflow, response), and dynamic model routing based on quality/cost bands. Includes reference policies, Grafana dashboards, rollout stages, and incident-ready rollback patterns. Proven to cut GenAI and cloud spend by 30–50% while improving reliability.',
+    featuredImage: '/images/blog/autonomous-finops-playbook.jpg',
+    category: 'Cloud',
+    tags: ['FinOps', 'Guardrails', 'LLM', 'Cost Optimization'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-01',
+    readTime: 8,
+  },
+  {
+    id: '26',
+    title: 'Production Agents: Evals, Rollbacks, and Approval Gates That Scale',
+    slug: 'production-agents-evals-rollbacks-approval-gates-2025-oct',
+    excerpt:
+      'A pragmatic blueprint for agentic systems that act safely: tool permissions, reversible actions, human-in-the-loop, and continuous evals.',
+    content:
+      'Move from assistant demos to production agents. We detail capability scoping, intent verification, deterministic tool contracts, sandboxed execution, and rollback-first design. Learn to wire evals into deploy gates, add approval workflows for risky actions, and measure task completion with business-grounded metrics. Includes architecture diagrams and a phased rollout plan.',
+    featuredImage: '/images/blog/production-agents-evals-rollbacks.jpg',
+    category: 'AI',
+    tags: ['Agents', 'Reliability', 'Safety', 'Evals'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-01',
+    readTime: 9,
+  },
 ];
