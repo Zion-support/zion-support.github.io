@@ -123,7 +123,7 @@ const Home = () => {
                 </div>
               </div>
               <Link
-                to="/blog"
+                to="/blog/ai-2025-oct-01-enterprise-ai-transformation-roadmap"
                 className="inline-flex items-center gap-2 bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 Explore New Content
