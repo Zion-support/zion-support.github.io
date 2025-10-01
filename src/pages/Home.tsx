@@ -26,6 +26,7 @@ import October2025EdgeAIQuantumCryptoBanner from "../components/October2025EdgeA
 import October2025BreakthroughContentBanner from "../components/October2025BreakthroughContentBanner";
 import October2025AIRevolutionBanner from "../components/October2025AIRevolutionBanner";
 import October2025NewContentBanner from "../components/October2025NewContentBanner";
+import October2025CuttingEdgeContentBanner from "../components/October2025CuttingEdgeContentBanner";
 import LatestArticlesShowcase from "../components/LatestArticlesShowcase";
 import LatestContentBanner from "../components/LatestContentBanner";
 import LatestInsights from "../components/LatestInsights";
@@ -122,9 +123,9 @@ const Home = () => {
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
         
-<<<<<<< HEAD
-        {/* 🎯 OCTOBER 1, 2025 - BREAKING NEWS: Latest Enterprise Solutions */}
-=======
+        {/* 🔥🔥🔥 OCTOBER 1, 2025 - JUST PUBLISHED: Latest Cutting-Edge Content */}
+        <October2025CuttingEdgeContentBanner />
+        
         {/* 🎯 OCTOBER 2025 - LATEST: Enterprise AI & Security Revolution */}
         <NewContentPromoBanner 
           className="border-b border-white/10" 
@@ -140,8 +141,7 @@ const Home = () => {
           ]}
         />
         
-        {/* 🔥 FEBRUARY 2026 - BREAKING: Latest Revolutionary AI Breakthroughs */}
->>>>>>> pr-merges-backup
+        {/* 🔥 ENTERPRISE SOLUTIONS */}
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
