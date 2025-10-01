@@ -14,6 +14,30 @@ export interface EnhancedPromotionalBanner {
 
 export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
   {
+    id: 'oct-01-agent-swarm-breakthrough-2025',
+    title: '🔥🤖 BREAKTHROUGH: Revolutionary Agent Swarm Platform — 100,000+ AI Agents Working in Perfect Harmony',
+    description: 'Just launched! Coordinate massive swarms of 100,000+ specialized AI agents achieving 99.999% reliability, sub-second response times, and 95% cost reduction. $890M healthcare success story + production-ready services now available.',
+    ctaText: 'Explore Agent Swarms',
+    ctaLink: '/services/ai-2025-october-agent-swarm-platform-services',
+    variant: 'success',
+    icon: '🤖',
+    featured: true,
+    priority: 0,
+    startDate: '2025-10-01',
+  },
+  {
+    id: 'oct-01-healthcare-890m-success-2025',
+    title: '💰 $890M Value Creation: Global Healthcare Network Transforms with 75,000 AI Agents',
+    description: 'Incredible results! 98.7% diagnostic accuracy, 89% faster diagnoses, 99.97% uptime, and $890M annual value. See how agent swarms revolutionized healthcare for 150M patients.',
+    ctaText: 'Read Success Story',
+    ctaLink: '/case-studies/ai-2025-oct-01-global-healthcare-agent-swarm-890m-success',
+    variant: 'success',
+    icon: '🏥',
+    featured: true,
+    priority: 1,
+    startDate: '2025-10-01',
+  },
+  {
     id: 'oct-01-enterprise-platform-automation-2025',
     title: '🚀 NEW TODAY: Enterprise AI Platform Revolution & Intelligent Automation Breakthrough',
     description: 'Transform your enterprise! Build comprehensive AI platforms with 40-60% cost reduction and $500M value creation. Plus: End manual operations with intelligent automation achieving 300-500% ROI.',
@@ -22,7 +46,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     variant: 'success',
     icon: '🚀',
     featured: true,
-    priority: 0,
+    priority: 2,
     startDate: '2025-10-01',
   },
   {
