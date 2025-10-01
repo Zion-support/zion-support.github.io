@@ -13,9 +13,7 @@ export default function ContentHub() {
     {
       title: 'AI Implementation',
       articles: [
-        { title: 'Digital Twin CX Revolution (Oct 2025)', slug: '/blog/ai-2025-october-digital-twin-cx-revolution', readTime: '14 min', featured: true },
-        { title: 'Digital Transformation Excellence 2025', slug: '/blog/ai-2025-october-digital-transformation-enterprise-excellence', readTime: '22 min', featured: true },
-        { title: 'Cloud-Native AI Platform Excellence 2025', slug: '/blog/ai-2025-october-cloud-native-ai-platform-excellence', readTime: '26 min', featured: true },
+        { title: 'Neural Adaptive Systems: The $89B Enterprise AI Revolution', slug: '/blog/ai-2025-oct-neural-adaptive-systems-enterprise-revolution', readTime: '24 min', featured: true, isNew: true },
         { title: 'AI Agent Swarms Enterprise Orchestration 2026', slug: '/blog/ai-agent-swarms-enterprise-orchestration-2026', readTime: '28 min', featured: true },
         { title: 'Quantum-Enhanced AI Enterprise Breakthrough 2026', slug: '/blog/quantum-enhanced-ai-enterprise-breakthrough-2026', readTime: '32 min', featured: true },
         { title: 'Agentic Workflow Orchestration 2026', slug: '/blog/agentic-workflow-orchestration-2026', readTime: '16 min', featured: true },
@@ -32,6 +30,7 @@ export default function ContentHub() {
     {
       title: 'AI Security & Compliance',
       articles: [
+        { title: 'Sovereign AI Systems: The $127B Data Independence Revolution', slug: '/blog/ai-2025-oct-sovereign-ai-systems-enterprise-transformation', readTime: '28 min', featured: true, isNew: true },
         { title: 'AI Cybersecurity Automation 2026', slug: '/blog/ai-cybersecurity-automation-2026', readTime: '18 min', featured: true },
         { title: 'AI Security Compliance 2025', slug: '/blog/ai-security-compliance-2025', readTime: '12 min', featured: false },
         { title: 'Enterprise AI Security 2025', slug: '/blog/enterprise-ai-security-2025', readTime: '14 min', featured: false },
@@ -63,28 +62,22 @@ export default function ContentHub() {
 
   const caseStudies = [
     {
-      title: 'Global Retail Digital Transformation',
-      company: 'Global Retail Corporation',
-      industry: 'Retail & E-commerce',
-      results: '$12.4B Value & 98.7% Automation',
-      slug: '/case-studies/ai-2025-oct-global-retail-digital-transformation-12-4-billion-success',
-      featured: true
+      title: 'Fortune 100 Neural Adaptive Systems Success',
+      company: 'Global Manufacturing Leader',
+      industry: 'Manufacturing',
+      results: '$4.2B Value & 89% Defect Reduction',
+      slug: '/case-studies/ai-2025-oct-fortune-100-neural-adaptive-4-2-billion-success',
+      featured: true,
+      isNew: true
     },
     {
-      title: 'Omnichannel Personalization — $2.1B Impact',
-      company: 'Fortune 500 Retailer',
-      industry: 'Retail & E-commerce',
-      results: '$2.1B value, 18% margin uplift',
-      slug: '/case-studies/ai-2025-oct-02-fortune-500-omnichannel-personalization-2-1b-success',
-      featured: true
-    },
-    {
-      title: 'Fortune 50 Cloud-Native AI Platform',
-      company: 'Global Technology Corporation',
-      industry: 'Technology & SaaS',
-      results: '$8.7B Value & 99.99% Uptime',
-      slug: '/case-studies/ai-2025-oct-fortune-50-cloud-native-platform-8-7-billion-success',
-      featured: true
+      title: 'Global Bank Sovereign AI Transformation',
+      company: 'Top 10 Global Bank',
+      industry: 'Financial Services',
+      results: '$8.7B Value & 100% Data Sovereignty',
+      slug: '/case-studies/ai-2025-oct-global-bank-sovereign-ai-8-7-billion-success',
+      featured: true,
+      isNew: true
     },
     {
       title: 'AI Agent Swarms Manufacturing Success 2026',
@@ -191,26 +184,32 @@ export default function ContentHub() {
         <div className="bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 text-white p-8 rounded-2xl mb-8 shadow-2xl">
           <div className="text-center">
             <div className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-bold mb-4 animate-pulse">
-              🔥 BREAKING: NEURAL SWARM INTELLIGENCE - OCTOBER 2025
+              🚀 JUST PUBLISHED: OCTOBER 2025 - NEW RELEASES
             </div>
             <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
-              Neural Swarm Intelligence Revolution: 18,750% ROI Achieved
+              Neural Adaptive Systems & Sovereign AI Revolution
             </h2>
             <p className="text-xl mb-6 max-w-3xl mx-auto">
-              The most significant breakthrough in enterprise AI: Thousands of AI agents operating as unified cognitive entities delivering $89.3B+ in verified value
+              Two groundbreaking enterprise AI solutions: Self-optimizing neural systems delivering $89B+ and sovereign AI achieving $127B+ in proven value
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link
-                href="/blog/ai-2025-neural-swarm-intelligence-enterprise-revolution"
-                className="bg-white text-purple-600 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors shadow-lg"
+                href="/blog/ai-2025-oct-neural-adaptive-systems-enterprise-revolution"
+                className="bg-white text-cyan-600 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
               >
-                Discover Swarm Intelligence →
+                Neural Adaptive Systems ($89B) →
               </Link>
               <Link
-                href="/case-studies/neural-swarm-intelligence-global-manufacturing-success"
+                href="/blog/ai-2025-oct-sovereign-ai-systems-enterprise-transformation"
+                className="bg-white text-purple-600 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
+              >
+                Sovereign AI ($127B) →
+              </Link>
+              <Link
+                href="/case-studies/ai-2025-oct-fortune-100-neural-adaptive-4-2-billion-success"
                 className="border-2 border-white text-white font-bold py-3 px-6 rounded-lg hover:bg-white/10 transition-colors"
               >
-                View $4.9B Manufacturing Success →
+                View $4.2B Success Story →
               </Link>
               <Link
                 href="/guides/neural-swarm-intelligence-implementation-guide-2025"
@@ -259,73 +258,53 @@ export default function ContentHub() {
               </span>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">
-              Neural Swarm Intelligence Revolution
+              Neural Adaptive Systems
             </h3>
             <p className="text-gray-600 mb-4">
-              Thousands of AI agents operating as unified cognitive entities. $89.3B+ value delivered with 18,750% ROI across 1,247 deployments.
+              Self-optimizing AI that evolves in real-time. 847% ROI with $89B in proven value across 1,247 implementations.
             </p>
             <Link
-              href="/blog/ai-2025-neural-swarm-intelligence-enterprise-revolution"
-              className="text-purple-600 font-semibold hover:text-purple-700"
+              href="/blog/ai-2025-oct-neural-adaptive-systems-enterprise-revolution"
+              className="text-cyan-600 font-semibold hover:text-cyan-700"
             >
-              Discover Swarm Intelligence →
+              Read Complete Guide →
             </Link>
           </div>
-          
-          <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-6 rounded-xl border-2 border-blue-300 shadow-lg">
+
+          <div className="bg-gradient-to-br from-purple-50 to-indigo-50 p-6 rounded-xl border-2 border-purple-200">
             <div className="flex items-center gap-2 mb-4">
-              <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
-                🚀 NEW: October 2025
+              <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
+                🌟 NEW: October 2025
               </span>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">
-              Cognitive Enterprise Mesh
+              Sovereign AI Systems
             </h3>
             <p className="text-gray-600 mb-4">
-              End the integration crisis with self-organizing AI systems. $124.7B verified value, 22,400% ROI, 99.94% uptime guaranteed.
+              Complete data independence with zero external dependencies. $127B in value with 99.99% uptime and total sovereignty.
             </p>
             <Link
-              href="/blog/ai-2025-cognitive-enterprise-mesh-breakthrough"
-              className="text-blue-600 font-semibold hover:text-blue-700"
+              href="/blog/ai-2025-oct-sovereign-ai-systems-enterprise-transformation"
+              className="text-purple-600 font-semibold hover:text-purple-700"
             >
-              Explore Cognitive Mesh →
+              Read Sovereignty Guide →
             </Link>
           </div>
 
           <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl border-2 border-blue-200">
             <div className="flex items-center gap-2 mb-4">
-              <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
-                🚀 NEW: October 2025
-              </span>
-            </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">
-              Cloud-Native AI Platform Excellence
-            </h3>
-            <p className="text-gray-600 mb-4">
-              Build scalable platforms achieving 99.99% uptime, 450% performance gains, $8.7B value across 2,500+ deployments.
-            </p>
-            <Link
-              href="/blog/ai-2025-october-cloud-native-ai-platform-excellence"
-              className="text-blue-600 font-semibold hover:text-blue-700"
-            >
-              Read Platform Guide →
-            </Link>
-          </div>
-
-          <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl border-2 border-green-200">
-            <div className="flex items-center gap-2 mb-4">
               <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
-                🔥 $12.4B Success
+                🔥 $4.2B Success
               </span>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">
-              Retail Digital Transformation
+              Fortune 100 Neural Adaptive Success
             </h3>
             <p className="text-gray-600 mb-4">
-              Fortune 100 retailer achieves $12.4B value with 98.7% automation and revolutionary customer experiences.
+              Global manufacturer achieves $4.2B in value with 89% defect reduction across 247 facilities worldwide.
             </p>
             <Link
-              href="/case-studies/ai-2025-oct-global-retail-digital-transformation-12-4-billion-success"
+              href="/case-studies/ai-2025-oct-fortune-100-neural-adaptive-4-2-billion-success"
               className="text-green-600 font-semibold hover:text-green-700"
             >
               View Case Study →
@@ -345,6 +324,11 @@ export default function ContentHub() {
                 {category.articles.map((article, articleIndex) => (
                   <div key={articleIndex} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
                     <div className="flex items-center gap-2 mb-3">
+                      {article.isNew && (
+                        <span className="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
+                          NEW
+                        </span>
+                      )}
                       {article.featured && (
                         <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
                           Featured
@@ -376,6 +360,11 @@ export default function ContentHub() {
           {caseStudies.map((study, index) => (
             <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
               <div className="flex items-center gap-2 mb-3">
+                {study.isNew && (
+                  <span className="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
+                    NEW
+                  </span>
+                )}
                 {study.featured && (
                   <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
                     Featured
