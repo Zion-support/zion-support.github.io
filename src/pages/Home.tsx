@@ -16,6 +16,7 @@ import Header from "../components/Header";
 import ModernFeatures from "../components/ModernFeatures";
 import LatestInsights from "../components/LatestInsights";
 import AdvertisingBanner from "../components/AdvertisingBanner";
+import October2025NewBreakthroughBanner from "../components/October2025NewBreakthroughBanner";
 import { latestInsights } from "../content/insights";
 import { Users, Zap } from "lucide-react";
 
@@ -196,6 +197,9 @@ const Home = () => {
             </div>
           </div>
         </section>
+
+        {/* 🚀 OCTOBER 2, 2025 - BREAKTHROUGH: NEXT-GEN ENTERPRISE AI SYSTEMS! 🚀 */}
+        <October2025NewBreakthroughBanner />
 
         {/* NEW CONTENT HIGHLIGHT SECTION */}
         <section className="container mx-auto px-6 py-16 relative z-10">
