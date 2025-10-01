@@ -538,8 +538,6 @@ const Home = () => {
               Join 500+ companies achieving 400-600% ROI with our expert guidance!
             </p>
 
-<<<<<<< HEAD
-=======
             {/* 🔥 FEBRUARY 2026 - BREAKING: REVOLUTIONARY AI BREAKTHROUGHS 🔥 */}
             <div className="bg-gradient-to-r from-pink-500/20 to-red-500/20 border border-pink-400/30 rounded-xl p-6 mb-8 animate-fade-in shadow-2xl">
               <div className="flex items-center justify-center gap-3 mb-3">
@@ -573,9 +571,7 @@ const Home = () => {
                 <span className="bg-orange-100/20 text-orange-200 px-3 py-1 rounded-full text-xs font-medium border border-orange-300/20">Edge AI</span>
                 <span className="bg-rose-100/20 text-rose-200 px-3 py-1 rounded-full text-xs font-medium border border-rose-300/20">Real-Time Intelligence</span>
               </div>
-            </div>
-
->>>>>>> origin/main
+              </div>
             {/* January 20, 2026 - LATEST: REVOLUTIONARY AI BREAKTHROUGHS */}
             <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-xl p-6 mb-8 animate-fade-in shadow-2xl">
               <div className="flex items-center justify-center gap-3 mb-3">
@@ -609,13 +605,9 @@ const Home = () => {
                 <span className="bg-indigo-100/20 text-indigo-200 px-3 py-1 rounded-full text-xs font-medium border border-indigo-300/20">AI Governance</span>
                 <span className="bg-violet-100/20 text-violet-200 px-3 py-1 rounded-full text-xs font-medium border border-violet-300/20">Enterprise Scale</span>
               </div>
-            </div>
-            
-<<<<<<< HEAD
-            {/* October 2025 - Enterprise AI & Security Revolution */}
-=======
-            {/* October 2025 - LATEST: Enterprise AI & Security Revolution */}
->>>>>>> origin/main
+              </div>
+              
+              {/* October 2025 - Enterprise AI & Security Revolution */}
             <div className="bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-400/30 rounded-xl p-6 mb-8 animate-fade-in shadow-2xl">
               <div className="flex items-center justify-center gap-3 mb-3">
                 <Sparkles className="w-6 h-6 text-purple-400 animate-pulse" />
