@@ -70,6 +70,8 @@ import Ultimate2026HyperintelligenceBanner from '../components/Ultimate2026Hyper
 import AI2030QuantumConsciousnessRevolutionBanner from '../components/AI2030QuantumConsciousnessRevolutionBanner';
 import AI2029MetaCognitiveSuperintelligenceBanner from '../components/AI2029MetaCognitiveSuperintelligenceBanner';
 import UltimateContentShowcase2030 from '../components/UltimateContentShowcase2030';
+import New2026ContentShowcase from '../components/New2026ContentShowcase';
+import NewServicesShowcase from '../components/NewServicesShowcase';
 import NeuralOptimizationRevolutionBanner from '../components/NeuralOptimizationRevolutionBanner';
 import AutonomousBusinessProcessBanner from '../components/AutonomousBusinessProcessBanner';
 import NewContentShowcaseBanner from '../components/NewContentShowcaseBanner';
@@ -804,6 +806,12 @@ export default function HomePage() {
       <Ultimate2026ContentShowcaseBanner />
       
       <UltimateContentShowcase2030 />
+
+      {/* 🚀🚀🚀 NEW 2026 CONTENT SHOWCASE - LATEST BREAKTHROUGHS 🚀🚀🚀 */}
+      <New2026ContentShowcase />
+
+      {/* 🚀🚀🚀 NEW SERVICES SHOWCASE - REVOLUTIONARY AI SERVICES 🚀🚀🚀 */}
+      <NewServicesShowcase />
     </div>
   );
 }
