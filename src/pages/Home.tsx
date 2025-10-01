@@ -136,6 +136,47 @@ const Home = () => {
               and next-generation cloud infrastructure. Join 500+ companies already scaling with us!
             </p>
 
+            {/* NEW CONTENT ALERT - October 30, 2025 */}
+            <div className="bg-gradient-to-r from-purple-600/20 to-pink-500/20 border border-purple-400/40 rounded-xl p-6 mb-8 animate-fade-in shadow-2xl">
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <Sparkles className="w-6 h-6 text-purple-400 animate-pulse" />
+                <span className="text-xl font-bold text-purple-300">🚀 FRESH CONTENT ALERT - October 30, 2025</span>
+                <Sparkles className="w-6 h-6 text-purple-400 animate-pulse" />
+              </div>
+              <h3 className="text-white text-2xl font-bold mb-3 text-center">
+                3 Game-Changing Articles Just Published!
+              </h3>
+              <div className="grid md:grid-cols-3 gap-4 mb-6">
+                <Link to="/blog/ai-2025-oct-30-multicloud-orchestration-revolution" className="bg-white/10 backdrop-blur-sm rounded-lg p-4 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20">
+                  <div className="text-cyan-400 text-sm font-semibold mb-2">☁️ CLOUD ARCHITECTURE</div>
+                  <h4 className="text-white font-bold mb-2">Multi-Cloud Orchestration Revolution</h4>
+                  <p className="text-gray-300 text-sm mb-3">78% complexity reduction, 42% cost savings across AWS, Azure & GCP</p>
+                  <span className="text-purple-400 text-xs font-semibold">14 min read →</span>
+                </Link>
+                <Link to="/blog/ai-2025-oct-30-ai-code-review-automation" className="bg-white/10 backdrop-blur-sm rounded-lg p-4 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20">
+                  <div className="text-green-400 text-sm font-semibold mb-2">⚡ DEVOPS</div>
+                  <h4 className="text-white font-bold mb-2">AI Code Review Automation</h4>
+                  <p className="text-gray-300 text-sm mb-3">10x faster reviews, 85% fewer bugs, $4M+ annual savings</p>
+                  <span className="text-purple-400 text-xs font-semibold">12 min read →</span>
+                </Link>
+                <Link to="/blog/ai-2025-oct-30-real-time-fraud-detection" className="bg-white/10 backdrop-blur-sm rounded-lg p-4 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20">
+                  <div className="text-red-400 text-sm font-semibold mb-2">🛡️ AI SECURITY</div>
+                  <h4 className="text-white font-bold mb-2">Real-Time Fraud Detection</h4>
+                  <p className="text-gray-300 text-sm mb-3">99.8% accuracy in <50ms, 94% fraud loss reduction</p>
+                  <span className="text-purple-400 text-xs font-semibold">13 min read →</span>
+                </Link>
+              </div>
+              <div className="flex justify-center">
+                <Link
+                  to="/blog"
+                  className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-bold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 hover:scale-105 shadow-lg inline-flex items-center gap-2"
+                >
+                  <ArrowRight className="w-5 h-5" />
+                  Read All New Articles
+                </Link>
+              </div>
+            </div>
+
             {/* Special Promotion Banner */}
             <div className="bg-gradient-to-r from-green-500/20 to-blue-500/20 border border-green-400/30 rounded-xl p-6 mb-8 animate-fade-in">
               <div className="flex items-center justify-center gap-3 mb-3">
@@ -574,24 +615,31 @@ const Home = () => {
         <section className="py-20 bg-white">
           <div className="container mx-auto px-6">
             {/* New Content Announcement */}
-            <div className="bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-400/30 rounded-xl p-6 mb-10">
+            <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-2 border-purple-400/40 rounded-xl p-6 mb-10 shadow-xl">
               <div className="flex items-center gap-3 mb-3">
                 <Sparkles className="w-5 h-5 text-purple-500 animate-pulse" />
-                <span className="text-lg font-bold text-purple-700">📚 NEW CONTENT ALERT</span>
+                <span className="text-lg font-bold text-purple-700">🔥 HOT OFF THE PRESS - October 30, 2025</span>
                 <Sparkles className="w-5 h-5 text-purple-500 animate-pulse" />
               </div>
-              <p className="text-gray-700 font-semibold mb-2">
-                🚀 Just Published: 5 Revolutionary Articles on AI Automation, Cloud Infrastructure, and Enterprise AI Implementation
+              <p className="text-gray-700 font-bold text-xl mb-2">
+                3 Must-Read Articles: Multi-Cloud, AI Code Review & Fraud Detection
               </p>
-              <p className="text-gray-600 text-sm mb-4">
-                Discover the latest insights on AI-powered business automation, next-gen cloud infrastructure, and strategic AI roadmaps for 2025.
+              <p className="text-gray-600 mb-4">
+                Discover cutting-edge strategies for multi-cloud orchestration (78% complexity reduction!), AI-powered code reviews (10x faster!), and real-time fraud detection (99.8% accuracy in <50ms!)
               </p>
-              <div className="flex flex-wrap gap-2">
-                <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-medium">AI Automation</span>
-                <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Cloud Strategy</span>
-                <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-medium">AI Governance</span>
-                <span className="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-xs font-medium">Platform Engineering</span>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="bg-cyan-100 text-cyan-700 px-3 py-1 rounded-full text-xs font-medium">☁️ Multi-Cloud</span>
+                <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-medium">⚡ DevOps</span>
+                <span className="bg-red-100 text-red-700 px-3 py-1 rounded-full text-xs font-medium">🛡️ Security</span>
+                <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-medium">🤖 AI/ML</span>
               </div>
+              <Link 
+                to="/blog" 
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 hover:scale-105"
+              >
+                <ArrowRight className="w-4 h-4" />
+                Read the Latest Articles
+              </Link>
             </div>
             
             <div className="mb-10 flex items-end justify-between">
