@@ -160,64 +160,64 @@ const Home = () => {
           <div className="bg-gradient-to-br from-emerald-900/40 via-teal-900/30 to-cyan-900/40 rounded-2xl border-2 border-emerald-400/50 p-8 md:p-12 shadow-2xl">
             <div className="flex items-center gap-3 mb-6">
               <span className="inline-flex h-3 w-3 rounded-full bg-emerald-400 animate-pulse"></span>
-              <span className="text-emerald-400 font-bold text-lg uppercase tracking-wider">🔥 Just Published - October 2025</span>
+              <span className="text-emerald-400 font-bold text-lg uppercase tracking-wider">🔥 Just Published - October 1, 2025</span>
             </div>
             
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              New Cutting-Edge AI Resources Available Now
+              Revolutionary AI Solutions Just Released
             </h2>
             
             <p className="text-xl text-emerald-100 mb-8 max-w-3xl">
-              Discover our latest insights, services, and success stories from the frontlines of AI innovation.
+              Explore our latest breakthrough content: Fleet management AI saving $890M annually, intelligent energy grids, and predictive healthcare transforming patient outcomes.
             </p>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-              {/* Blog Post 1 */}
+              {/* Blog Post 1 - Fleet Management */}
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30 hover:border-emerald-400/60 transition-all hover:scale-105 hover:shadow-xl">
-                <div className="text-emerald-400 text-sm font-semibold mb-2 uppercase">📝 New Guide</div>
-                <h3 className="text-lg font-bold text-white mb-3">Edge Inference Patterns</h3>
-                <p className="text-emerald-100 text-sm mb-4">Production-ready AI deployment guide with real-world patterns and 12-minute read</p>
+                <div className="text-emerald-400 text-sm font-semibold mb-2 uppercase">🚚 Transportation</div>
+                <h3 className="text-lg font-bold text-white mb-3">Autonomous Fleet Management</h3>
+                <p className="text-emerald-100 text-sm mb-4">73% cost reduction with AI-powered fleet optimization. $890M annual savings at Fortune 500 scale.</p>
                 <Link 
-                  to="/blog/ai-2025-oct-edge-inference-patterns-production-guide" 
+                  to="/blog/ai-2025-oct-01-autonomous-fleet-management-revolution" 
                   className="inline-flex items-center text-emerald-300 hover:text-white font-semibold text-sm"
                 >
                   Read Now <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
               </div>
 
-              {/* Blog Post 2 */}
+              {/* Blog Post 2 - Energy Grid */}
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 hover:border-cyan-400/60 transition-all hover:scale-105 hover:shadow-xl">
-                <div className="text-cyan-400 text-sm font-semibold mb-2 uppercase">📊 Strategy</div>
-                <h3 className="text-lg font-bold text-white mb-3">North Star Metrics Framework</h3>
-                <p className="text-cyan-100 text-sm mb-4">Measure AI product success with proven metrics used by leading companies</p>
+                <div className="text-cyan-400 text-sm font-semibold mb-2 uppercase">⚡ Energy</div>
+                <h3 className="text-lg font-bold text-white mb-3">Smart Grid Optimization</h3>
+                <p className="text-cyan-100 text-sm mb-4">61% energy savings with intelligent grid AI. $2.3B value creation for utilities.</p>
                 <Link 
-                  to="/blog/ai-2025-oct-northstar-metrics-ai-product-success" 
+                  to="/blog/ai-2025-oct-01-intelligent-energy-grid-optimization" 
                   className="inline-flex items-center text-cyan-300 hover:text-white font-semibold text-sm"
                 >
                   Learn More <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
               </div>
 
-              {/* New Service */}
+              {/* Blog Post 3 - Healthcare */}
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30 hover:border-blue-400/60 transition-all hover:scale-105 hover:shadow-xl">
-                <div className="text-blue-400 text-sm font-semibold mb-2 uppercase">🚀 Service Launch</div>
-                <h3 className="text-lg font-bold text-white mb-3">Edge AI Platform</h3>
-                <p className="text-blue-100 text-sm mb-4">Deploy intelligence at the edge with <10ms latency. Starting at $4,999/mo</p>
+                <div className="text-blue-400 text-sm font-semibold mb-2 uppercase">🏥 Healthcare</div>
+                <h3 className="text-lg font-bold text-white mb-3">Predictive Healthcare AI</h3>
+                <p className="text-blue-100 text-sm mb-4">82% better patient outcomes with AI-powered personalized medicine. $1.7B cost savings.</p>
                 <Link 
-                  to="/services/ai-2025-october-edge-ai-platform" 
+                  to="/blog/ai-2025-oct-01-predictive-healthcare-ai-platform" 
                   className="inline-flex items-center text-blue-300 hover:text-white font-semibold text-sm"
                 >
                   Explore Platform <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
               </div>
 
-              {/* Case Study */}
+              {/* Case Study - Fortune 500 Fleet */}
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:border-purple-400/60 transition-all hover:scale-105 hover:shadow-xl">
                 <div className="text-purple-400 text-sm font-semibold mb-2 uppercase">💼 Success Story</div>
-                <h3 className="text-lg font-bold text-white mb-3">$127M Manufacturing Win</h3>
-                <p className="text-purple-100 text-sm mb-4">How a Fortune 500 manufacturer transformed operations with edge AI</p>
+                <h3 className="text-lg font-bold text-white mb-3">$890M Fleet Transformation</h3>
+                <p className="text-purple-100 text-sm mb-4">Fortune 500 logistics leader achieves 340% ROI with autonomous fleet AI across 18,000 vehicles</p>
                 <Link 
-                  to="/case-studies/ai-2025-oct-global-manufacturing-edge-ai-success-127m" 
+                  to="/case-studies/ai-2025-oct-fortune-500-fleet-transformation-890m" 
                   className="inline-flex items-center text-purple-300 hover:text-white font-semibold text-sm"
                 >
                   Read Case Study <ArrowRight className="w-4 h-4 ml-1" />
@@ -235,7 +235,7 @@ const Home = () => {
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <div className="text-emerald-200 text-sm">
-                <span className="font-bold">3 Months FREE</span> on Edge AI Platform ends Oct 31st
+                <span className="font-bold">LIMITED TIME:</span> 50% OFF Implementation + Free Pilot Programs
               </div>
             </div>
           </div>
@@ -246,8 +246,8 @@ const Home = () => {
         <div className="container mx-auto px-6">
           <div className="mb-6 rounded-full bg-emerald-500/15 border border-emerald-400/30 px-6 py-3 text-emerald-200 text-sm inline-flex items-center gap-2">
             <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            New: Edge inference patterns and North‑Star metrics just dropped — read now
-            <Link to="/insights" className="text-emerald-300 underline underline-offset-4 hover:text-white">View</Link>
+            NEW: Fleet AI ($890M savings), Smart Grid ($2.3B value), Healthcare AI (82% better outcomes)
+            <Link to="/blog" className="text-emerald-300 underline underline-offset-4 hover:text-white">Read</Link>
           </div>
         </div>
         <LatestInsights />
@@ -255,10 +255,10 @@ const Home = () => {
           <div className="rounded-xl bg-indigo-600/15 border border-indigo-400/30 px-6 py-4 text-indigo-200 text-sm flex items-center justify-between">
             <div className="flex items-center gap-2">
               <span className="inline-flex h-2 w-2 rounded-full bg-indigo-400 animate-ping"></span>
-              <span className="font-medium">Fresh on the blog:</span>
-              <span className="hidden sm:inline">Edge Inference Patterns • North‑Star Metrics</span>
+              <span className="font-medium">October 2025 Breakthrough Content:</span>
+              <span className="hidden sm:inline">Fleet AI • Energy Grid • Healthcare AI • Fortune 500 Case Study</span>
             </div>
-            <Link to="/blog" className="text-indigo-200 underline underline-offset-4 hover:text-white">Read now</Link>
+            <Link to="/blog" className="text-indigo-200 underline underline-offset-4 hover:text-white">Explore all</Link>
           </div>
         </div>
 
