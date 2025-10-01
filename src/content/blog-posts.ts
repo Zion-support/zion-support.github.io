@@ -44,6 +44,75 @@ Ready to operationalize this in your stack? Our team can help you land it safely
     image: "/images/enterprise-ai-governance-2025.jpg"
   },
   {
+    slug: "ai-2025-oct-03-platform-reliability-scorecards-2027",
+    title: "AI Platform Reliability Scorecards 2027: SLIs That Drive Outcomes",
+    description: "Design platform scorecards engineers adopt—SLIs tied to KPIs, budgets, and rollback triggers.",
+    content: `
+# AI Platform Reliability Scorecards 2027
+
+Reliability that moves business metrics requires SLIs teams adopt and review weekly. This guide ships:
+
+## What You’ll Implement
+- Leading indicator SLIs tied to KPIs (adoption, latency, error budgets)
+- CI policy tests + online canaries as deploy gates
+- Budgeted actions and reversible changes with one-click rollback
+
+## Outcomes
+- Fewer regressions with faster delivery
+- Clear ROI from platform work
+- Shared rituals product and engineering trust
+    `,
+    author: "Zion Tech Group Platform Team",
+    date: "2025-10-03",
+    category: "Platform Engineering",
+    tags: ["Scorecards", "SLIs", "Budgets", "Rollback"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/platform-reliability-scorecards-2027.jpg"
+  },
+  {
+    slug: "edge-2026-oct-03-consentless-experiments-v4",
+    title: "Edge Experiments v4 (2026): Zero‑PII A/B Under 100ms",
+    description: "Run compliant experiments with scoped IDs, on-device aggregation, and DP noise—global <100ms.",
+    content: `
+# Edge Experiments v4 (2026)
+
+Blueprint for compliant, fast experimentation:
+
+- Signed configs + cacheable variants at the edge
+- Scoped, rotating IDs; on-device aggregation with DP
+- Canary scorecards and instant rollback
+    `,
+    author: "Zion Tech Group Privacy Lab",
+    date: "2025-10-03",
+    category: "Experimentation",
+    tags: ["Edge", "A/B", "Privacy", "DP"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/edge-experiments-v4-2026.jpg"
+  },
+  {
+    slug: "genai-2027-oct-03-cost-controllers-v4",
+    title: "GenAI Cost Controllers v4 (2027): Quality Tiers + Caches at Scale",
+    description: "Stabilize UX under budget with tiered routing, semantic caches, and evaluator-backed policies.",
+    content: `
+# GenAI Cost Controllers v4 (2027)
+
+Cut spend 40–70% while tightening tails:
+
+- Tiered model routing by SLA bands
+- Prompt/embedding/retrieval caches with freshness windows
+- Online evals as deploy gates; rollback-first ops
+    `,
+    author: "Zion Tech Group FinOps Lab",
+    date: "2025-10-03",
+    category: "GenAI Engineering",
+    tags: ["Cost", "Quality Tiers", "Caching", "Evals"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/genai-cost-controllers-v4-2027.jpg"
+  },
+  {
     slug: "ai-2025-oct-01-private-feature-flags-zero-pii",
     title: "Private Feature Flags: Zero‑PII Experiments Under 100ms",
     description: "Run high‑velocity A/B tests without centralizing PII using signed configs, scoped IDs, and edge analytics.",

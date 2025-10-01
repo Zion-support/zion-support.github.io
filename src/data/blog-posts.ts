@@ -27,6 +27,51 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: 5,
   },
   {
+    id: '31',
+    title: 'AI Platform Reliability Scorecards 2027: SLIs That Drive Outcomes',
+    slug: 'ai-2025-oct-03-platform-reliability-scorecards-2027',
+    excerpt:
+      'Design scorecards engineers adopt—SLIs tied to KPIs, policy tests, canaries, and rollback.',
+    content:
+      'A practical system for platform reliability: pick leading indicator SLIs mapped to KPIs, wire policy tests in CI, run online canaries, and make changes reversible by default with one-click rollback. Includes dashboards and weekly review rituals.',
+    featuredImage: '/images/blog/platform-reliability-scorecards-2027.jpg',
+    category: 'Platform',
+    tags: ['Scorecards', 'SLIs', 'Budgets', 'Rollback'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-03',
+    readTime: 8,
+  },
+  {
+    id: '32',
+    title: 'Edge Experiments v4 (2026): Zero‑PII A/B Under 100ms',
+    slug: 'edge-2026-oct-03-consentless-experiments-v4',
+    excerpt:
+      'Scoped IDs, on-device aggregation, and DP noise for compliant, global experiments at <100ms.',
+    content:
+      'Blueprint for privacy-first A/B: signed configs, cacheable variants at the edge, scoped rotating IDs, and DP aggregation. Canary scorecards + instant rollback keep teams fast and safe.',
+    featuredImage: '/images/blog/edge-experiments-v4-2026.jpg',
+    category: 'Experimentation',
+    tags: ['Edge', 'A/B', 'Privacy', 'DP'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-03',
+    readTime: 7,
+  },
+  {
+    id: '33',
+    title: 'GenAI Cost Controllers v4 (2027): Quality Tiers + Caches at Scale',
+    slug: 'genai-2027-oct-03-cost-controllers-v4',
+    excerpt:
+      'Stabilize UX under budget with tiered routing, semantic caches, and evaluator-backed policies.',
+    content:
+      'Cut spend 40–70% without regressions: tiered model routing by SLA, prompt/embedding/retrieval caches with freshness windows, and online evals as deploy gates. Rollback-first operations included.',
+    featuredImage: '/images/blog/genai-cost-controllers-v4-2027.jpg',
+    category: 'GenAI',
+    tags: ['Cost', 'Quality Tiers', 'Caching', 'Evals'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-03',
+    readTime: 9,
+  },
+  {
     id: '23',
     title: 'Autonomous Cost Control: Real-Time FinOps with AI Guardrails',
     slug: 'autonomous-cost-control-real-time-finops-2025',

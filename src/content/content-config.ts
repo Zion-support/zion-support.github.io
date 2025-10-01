@@ -1700,6 +1700,34 @@ featuredBlogPosts.unshift(
   }
 );
 
+// Oct 3, 2025 – Advertise newly added articles (platform scorecards, edge experiments v4, cost controllers v4)
+featuredBlogPosts.unshift(
+  {
+    id: "ai-2025-oct-03-platform-reliability-scorecards-2027",
+    title: "AI Platform Reliability Scorecards 2027",
+    description: "SLIs tied to KPIs, policy tests, canaries, and rollback that drive outcomes.",
+    link: "/blog/ai-2025-oct-03-platform-reliability-scorecards-2027",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-2026-oct-03-consentless-experiments-v4",
+    title: "Edge Experiments v4 (2026)",
+    description: "Zero‑PII A/B with scoped IDs, on‑device aggregation, DP noise at <100ms.",
+    link: "/blog/edge-2026-oct-03-consentless-experiments-v4",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "genai-2027-oct-03-cost-controllers-v4",
+    title: "GenAI Cost Controllers v4 (2027)",
+    description: "Tiered routing + semantic caches + eval gates for 40–70% savings.",
+    link: "/blog/genai-2027-oct-03-cost-controllers-v4",
+    type: "article",
+    featured: true
+  }
+);
+
 // Sept 30, 2025 – Surface three brand-new articles (newly added now)
 featuredBlogPosts.unshift(
   {
