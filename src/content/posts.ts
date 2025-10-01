@@ -10,8 +10,6 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-<<<<<<< HEAD
-=======
     slug: "ai-2027-operational-trust-blueprint",
     title: "AI 2027: Operational Trust Blueprint",
     description: "SLIs wired to KPIs with budgets, canaries, and instant rollback.",
@@ -498,7 +496,6 @@ export const posts: BlogPost[] = [
     readTime: "7 min read"
   },
   {
->>>>>>> eb2b3b0c2ee1 (Checkpoint before follow-up message)
     slug: "ai-governance-runtime-scorecards-2026",
     title: "AI Governance Runtime Scorecards 2026: KPIs, Budgets, Rollback",
     description: "Live guardrails wired to KPIs with PR checks, budgets, and instant rollback that speed delivery.",
