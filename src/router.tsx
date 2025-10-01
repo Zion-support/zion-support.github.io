@@ -1,21 +1,29 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
-const About = React.lazy(() => Promise.resolve({ default: () => null }));
-const Services = React.lazy(() => Promise.resolve({ default: () => null }));
+import About from './pages/About';
+import Services from './pages/Services';
 import Contact from './pages/Contact';
-const AIMicroSAAS = React.lazy(() => Promise.resolve({ default: () => null }));
 import Blog from './pages/Blog';
-const Resources = React.lazy(() => Promise.resolve({ default: () => null }));
-const Tools = React.lazy(() => Promise.resolve({ default: () => null }));
-const EnterpriseAISolutions = React.lazy(() => Promise.resolve({ default: () => null }));
-const Post = React.lazy(() => Promise.resolve({ default: () => null }));
-const CaseStudies = React.lazy(() => Promise.resolve({ default: () => null }));
-const AIWorkflowAutomation = React.lazy(() => Promise.resolve({ default: () => null }));
-const AIVirtualAssistant = React.lazy(() => Promise.resolve({ default: () => null }));
-const AIDataAnalytics = React.lazy(() => Promise.resolve({ default: () => null }));
-const AIAutonomousOperations = React.lazy(() => Promise.resolve({ default: () => null }));
-const AIPlatformArchitecture = React.lazy(() => Promise.resolve({ default: () => null }));
+import CaseStudies from './pages/CaseStudies';
+import PostBySlug from './pages/blog/PostBySlug';
+import AIWorkflowAutomation from './pages/services/AIWorkflowAutomation';
+import AIVirtualAssistant from './pages/services/AIVirtualAssistant';
+import AIDataAnalytics from './pages/services/AIDataAnalytics';
+import AIIntelligentDocumentProcessing from './pages/services/AIIntelligentDocumentProcessing';
+import RealTimeCognitiveAutomation from './pages/services/RealTimeCognitiveAutomation';
+import AdvancedCybersecurityAI from './pages/services/AdvancedCybersecurityAI';
+import MultimodalEnterpriseIntelligence from './pages/blog/ai-2025-oct-multimodal-enterprise-intelligence';
+import AdaptiveLearningPlatforms from './pages/blog/ai-2025-oct-adaptive-learning-platforms';
+import CognitiveAutomationEnterpriseRevolution from './pages/blog/ai-2025-oct-cognitive-automation-enterprise-revolution';
+import EnterpriseAITransformationSuccessStrategies from './pages/blog/ai-2025-oct-enterprise-ai-transformation-success-strategies';
+import NextGenIntelligentAutomationBreakthrough from './pages/blog/ai-2025-oct-next-gen-intelligent-automation-breakthrough';
+import GlobalRetailAITransformation from './pages/case-studies/global-retail-ai-transformation-2025';
+import HealthcareAITransformation from './pages/case-studies/healthcare-ai-transformation-2025';
+import GlobalFinTechAITransformation from './pages/case-studies/global-fintech-ai-transformation-2025';
+import MultiAgentEnterpriseOrchestration from './pages/blog/ai-2025-multiagent-enterprise-orchestration-revolution';
+import CognitiveComputingTransformation from './pages/blog/ai-2025-cognitive-computing-enterprise-transformation';
+import GlobalTelecomCognitiveTransformation from './pages/case-studies/global-telecom-cognitive-transformation-4-7-billion';
 
 export const AppRouter: React.FC = () => {
   return (
@@ -26,16 +34,24 @@ export const AppRouter: React.FC = () => {
       <Route path="/services/ai-workflow-automation" element={<AIWorkflowAutomation />} />
       <Route path="/services/ai-virtual-assistant" element={<AIVirtualAssistant />} />
       <Route path="/services/ai-data-analytics" element={<AIDataAnalytics />} />
-      <Route path="/services/ai-autonomous-operations" element={<AIAutonomousOperations />} />
-      <Route path="/services/AI-Platform-Architecture" element={<AIPlatformArchitecture />} />
-      <Route path="/contact" element={<Contact />} />
+      <Route path="/services/ai-intelligent-document-processing" element={<AIIntelligentDocumentProcessing />} />
+      <Route path="/services/real-time-cognitive-automation" element={<RealTimeCognitiveAutomation />} />
+      <Route path="/services/advanced-cybersecurity-ai" element={<AdvancedCybersecurityAI />} />
       <Route path="/case-studies" element={<CaseStudies />} />
-      <Route path="/ai-micro-saas" element={<AIMicroSAAS />} />
+      <Route path="/case-studies/global-retail-ai-transformation-2025" element={<GlobalRetailAITransformation />} />
+      <Route path="/case-studies/healthcare-ai-transformation-2025" element={<HealthcareAITransformation />} />
+      <Route path="/case-studies/global-fintech-ai-transformation-2025" element={<GlobalFinTechAITransformation />} />
+      <Route path="/case-studies/global-telecom-cognitive-transformation-4-7-billion" element={<GlobalTelecomCognitiveTransformation />} />
+      <Route path="/contact" element={<Contact />} />
       <Route path="/blog" element={<Blog />} />
-      <Route path="/blog/:slug" element={<Post />} />
-      <Route path="/resources" element={<Resources />} />
-      <Route path="/tools" element={<Tools />} />
-      <Route path="/enterprise-ai-solutions" element={<EnterpriseAISolutions />} />
+      <Route path="/blog/:slug" element={<PostBySlug />} />
+      <Route path="/blog/ai-2025-oct-multimodal-enterprise-intelligence" element={<MultimodalEnterpriseIntelligence />} />
+      <Route path="/blog/ai-2025-oct-adaptive-learning-platforms" element={<AdaptiveLearningPlatforms />} />
+      <Route path="/blog/ai-2025-oct-cognitive-automation-enterprise-revolution" element={<CognitiveAutomationEnterpriseRevolution />} />
+      <Route path="/blog/ai-2025-oct-enterprise-ai-transformation-success-strategies" element={<EnterpriseAITransformationSuccessStrategies />} />
+      <Route path="/blog/ai-2025-oct-next-gen-intelligent-automation-breakthrough" element={<NextGenIntelligentAutomationBreakthrough />} />
+      <Route path="/blog/ai-2025-multiagent-enterprise-orchestration-revolution" element={<MultiAgentEnterpriseOrchestration />} />
+      <Route path="/blog/ai-2025-cognitive-computing-enterprise-transformation" element={<CognitiveComputingTransformation />} />
     </Routes>
   );
 };

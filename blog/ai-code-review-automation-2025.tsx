@@ -65,7 +65,7 @@ const AICodeReviewAutomation2025: React.FC = () => {
                 <li><strong>Dependency Scanners:</strong> Known CVEs in dependencies</li>
               </ul>
               <p className="mt-3 text-sm text-gray-600 dark:text-gray-400">
-                <strong>Latency:</strong> <1 second | <strong>Cost:</strong> $0.001/PR
+                <strong>Latency:</strong> &lt;1 second | <strong>Cost:</strong> $0.001/PR
               </p>
             </div>
 
@@ -134,7 +134,7 @@ function selectReviewTier(pr) {
           <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
             <p className="text-sm">
               <strong>💡 Pro Tip:</strong> Track false positive rates per layer and tune thresholds to minimize noise.
-              Aim for <5% false positive rate to maintain developer trust.
+              Aim for &lt;5% false positive rate to maintain developer trust.
             </p>
           </div>
         </section>

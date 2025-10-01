@@ -51,7 +51,7 @@ function Badge() {const badgeVariants = cva('inline-flex items-center rounded-fu
 }
 
 export { Badge, badgeVariants }
-import React from 'react';
+
 
 interface BadgeProps {
   children: React.ReactNode;

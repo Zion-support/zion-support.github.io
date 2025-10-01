@@ -1,11 +1,24 @@
 import React from 'react';
 import { ArrowRight, Sparkles, TrendingUp, Zap, Star, Users, Award, Target } from 'lucide-react';
 
+interface FeaturedContent {
+  id: number;
+  title: string;
+  category: string;
+  readTime: string;
+  rating: number;
+  readers: string;
+  badge: string;
+  gradient: string;
+  icon: React.ReactNode;
+  link: string;
+}
+
 const NewContentAdvertisingBanner: React.FC = () => {
-  const featuredContent = [
+  const featuredContent: FeaturedContent[] = [
     {
       id: 0,
-      title: 'Autonomous Customer Service 2025',
+      title: 'Governed Agent Rollbacks',
       category: 'AI Operations',
       readTime: '7 min',
       rating: 5.0,
@@ -13,7 +26,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
       badge: 'NEW',
       gradient: 'from-pink-500 to-red-500',
       icon: <Sparkles className="w-6 h-6" />,
-      link: '/blog/ai-2025-oct-02-autonomous-customer-service-playbook'
+      link: '/blog/ai-2025-oct-03-governed-agent-rollbacks'
     },
     {
       id: 7,
@@ -29,15 +42,15 @@ const NewContentAdvertisingBanner: React.FC = () => {
     },
     {
       id: 1,
-      title: 'Neural Code Synthesis 2025',
-      category: 'AI Engineering',
-      readTime: '9 min',
+      title: 'GenAI Cache Quality Tiers v2',
+      category: 'GenAI Engineering',
+      readTime: '8 min',
       rating: 5.0,
       readers: '120K+',
       badge: 'NEW',
       gradient: 'from-blue-500 to-purple-500',
       icon: <Star className="w-6 h-6" />,
-      link: '/blog/ai-2025-sept-30-neural-code-synthesis'
+      link: '/blog/genai-2025-oct-03-cache-quality-tiers-v2'
     },
     {
       id: 2,
@@ -53,15 +66,15 @@ const NewContentAdvertisingBanner: React.FC = () => {
     },
     {
       id: 3,
-      title: 'E2E AI Tracing 2026',
-      category: 'AI Operations',
-      readTime: '12 min',
+      title: 'Consentless Journeys Blueprint',
+      category: 'Experimentation',
+      readTime: '7 min',
       rating: 5.0,
       readers: '65K+',
       badge: 'NEW',
       gradient: 'from-green-500 to-emerald-500',
       icon: <Award className="w-6 h-6" />,
-      link: '/blog/ai-2026-e2e-ai-tracing'
+      link: '/blog/edge-2025-oct-03-consentless-journeys-blueprint'
     },
     {
       id: 4,
@@ -212,7 +225,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
 
                 {/* CTA Button */}
                 <a
-                  href={(content as any).link || '/blog'}
+                  href={content.link || '/blog'}
                   className={`group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r ${content.gradient} hover:opacity-90 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1`}
                 >
                   <span>Read Now</span>

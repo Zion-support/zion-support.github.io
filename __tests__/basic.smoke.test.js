@@ -10,3 +10,5 @@ describe('Basic Smoke Tests', () => {
   it('should be able to test async operations', async () => {
     const result = await Promise.resolve('test');
     expect(result).toBe('test');
+  });
+});

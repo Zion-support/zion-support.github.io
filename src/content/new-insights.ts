@@ -20,46 +20,6 @@ export const newInsights = [
     `
   },
   {
-    id: "ai-ops-slo-controllers",
-    title: "AI Ops SLO Controllers: Self‑Healing at Scale",
-    summary: "Controllers that watch SLOs and trigger safe rollbacks, warm pools, and canaries.",
-    category: "AI Operations",
-    date: "2025-10-06",
-    readMinutes: 7,
-    featured: true,
-    tags: ["SLOs", "Autonomous Ops", "Controllers"],
-    content: `
-      <h2>Operate by SLOs</h2>
-      <p>Encode SLOs as controllers that take action automatically: rollback, scale, shed load, or switch tiers.</p>
-      <h3>Playbook</h3>
-      <ul>
-        <li>Golden signals with budget tracking</li>
-        <li>Pre‑approved remediation flows</li>
-        <li>Guardrail checks and audit trails</li>
-      </ul>
-    `
-  },
-  {
-    id: "cost-aware-rag",
-    title: "Cost‑Aware RAG: Freshness Budgets and Hybrid Retrieval",
-    summary: "Balance freshness, quality, and cost with TTL windows and tiered retrieval.",
-    category: "GenAI",
-    date: "2025-10-06",
-    readMinutes: 8,
-    featured: true,
-    tags: ["RAG", "Freshness", "Hybrid"],
-    content: `
-      <h2>Freshness Windows</h2>
-      <p>Apply TTL budgets by corpus and route requests by intent to control cost while keeping answers fresh.</p>
-      <h3>Hybrid Stack</h3>
-      <ul>
-        <li>BM25 + vectors with recency boost</li>
-        <li>Async warm caches and versioned corpora</li>
-        <li>Online canaries tied to KPI deltas</li>
-      </ul>
-    `
-  },
-  {
     id: "guardrails-scorecards-evals-2025",
     title: "Guardrails Engineers Adopt: Scorecards, PR Gates, Online Canaries",
     summary: "Lightweight, outcome‑linked guardrails that speed delivery while managing risk.",
@@ -323,6 +283,28 @@ export const newInsights = [
     `
   }
 ];
+
+// Added: October 7, 2025
+newInsights.unshift({
+  id: "ai-governance-scorecards-2026",
+  title: "AI Governance 2026: Scorecards Engineers Actually Use",
+  summary: "Outcome‑linked guardrails with PR checks and online canaries that accelerate delivery.",
+  category: "AI Strategy",
+  date: "2025-10-07",
+  readMinutes: 7,
+  featured: true,
+  tags: ["Governance", "Policy", "Scorecards"],
+  content: `
+    <h2>Guardrails That Ship</h2>
+    <p>Adopt scorecards tied to KPIs, small PR checks for risky changes, and budgeted online canaries.</p>
+    <h3>What to Implement</h3>
+    <ul>
+      <li>Scorecards with owners and review cadence</li>
+      <li>Policy tests in CI for high‑risk areas</li>
+      <li>Live canaries with rollback triggers</li>
+    </ul>
+  `
+});
 
 export const featuredInsights = newInsights.filter(insight => insight.featured);
 export const latestInsights = newInsights.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());

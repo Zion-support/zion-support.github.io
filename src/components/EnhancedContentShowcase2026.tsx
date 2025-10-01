@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 interface ContentItem {
   id: string;
@@ -212,7 +212,7 @@ export default function EnhancedContentShowcase2026() {
         {/* Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {sortedContent.map((item) => (
-            <Link key={item.id} href={item.href} className="group">
+            <Link key={item.id} to={item.href} className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-200 group-hover:border-blue-300">
                 {/* Featured Badge */}
                 {item.featured && (
@@ -275,7 +275,7 @@ export default function EnhancedContentShowcase2026() {
         {/* Call to Action */}
         <div className="text-center mt-12">
           <Link
-            href="/blog"
+            to="/blog"
             className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl"
           >
             Explore All AI Content →
