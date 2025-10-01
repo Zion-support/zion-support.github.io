@@ -167,6 +167,20 @@ const Home = () => {
           { title: "Runtime Rollback Guardrails", category: "Reliability", link: "/blog/ai-2025-oct-01-runtime-rollback-guardrails" }
         ]}
       />
+
+      {/* Promo: Brand new 2025-10-05 posts */}
+      <NewContentPromoBanner 
+        className="border-b border-white/10" 
+        variant="premium" 
+        title="🆕 NEW TODAY (Oct 5): Enterprise Agents v2 + Cache Strata"
+        description="Fresh guides to ship safely and cut costs with agent scorecards and tiered caches."
+        ctaText="Read today's releases"
+        ctaLink="/blog"
+        featuredItems={[
+          { title: "Enterprise Agents v2: KPI Scorecards, Budgets, Instant Rollback", category: "AI Operations", link: "/blog/ai-2025-oct-05-enterprise-agents-scorecards-v2" },
+          { title: "Cache Strata Blueprint: Features → Chunks → Answers", category: "GenAI Engineering", link: "/blog/ai-2025-oct-05-cache-strata-blueprint" }
+        ]}
+      />
       
       {/* 🧠🧠🧠 BRAND NEW OCTOBER 2025 - JUST RELEASED: COGNITIVE COMPUTING REVOLUTION - TOP PRIORITY! 🧠🧠🧠 */}
       {/* Featured: Multi-Agent Orchestration (97.8% Automation, $847M Value), Cognitive AI Transformation (98.5% Accuracy, $1.2B Value), Fortune 20 Telecom Case Study ($4.7B Success, 3,602% ROI) */}
