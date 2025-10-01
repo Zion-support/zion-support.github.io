@@ -66,10 +66,12 @@ import RevolutionaryTechShowcase from '../components/RevolutionaryTechShowcase';
 import PerformanceComparison from '../components/PerformanceComparison';
 import December2026UltimateSingularityBanner from '../components/December2026UltimateSingularityBanner';
 import January2027UniversalConsciousnessBanner from '../components/January2027UniversalConsciousnessBanner';
-import October2026TranscendentAutomationBanner from '../components/October2026TranscendentAutomationBanner';
-import September2026MegaBreakthroughBanner from '../components/September2026MegaBreakthroughBanner';
-import December2025ContentShowcaseBanner from '../components/December2025ContentShowcaseBanner';
-import January2026RevolutionaryAutonomousBanner from '../components/January2026RevolutionaryAutonomousBanner';
+import February2027SyntheticConsciousnessBanner from '../components/February2027SyntheticConsciousnessBanner';
+import November2026QuantumConsciousnessSingularityBanner from '../components/November2026QuantumConsciousnessSingularityBanner';
+import December2026UltimateAutonomousRevolutionBanner from '../components/December2026UltimateAutonomousRevolutionBanner';
+import January2027UniversalIntelligenceRevolutionBanner from '../components/January2027UniversalIntelligenceRevolutionBanner';
+import January2026UltimateBreakthroughBanner from '../components/January2026UltimateBreakthroughBanner';
+import February2026TranscendentAutomationBanner from '../components/February2026TranscendentAutomationBanner';
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -155,8 +157,11 @@ export default function HomePage() {
         </div>
       </header>
 
-      {/* ⭐ NEWEST: January 2027 Revolutionary AI Breakthroughs - TOP PRIORITY ⭐ */}
-      <January2027RevolutionaryBreakthroughsBanner />
+      {/* 🚀🚀🚀 NEW JANUARY 2026 ULTIMATE BREAKTHROUGH - MOST RECENT 🚀🚀🚀 */}
+      <January2026UltimateBreakthroughBanner />
+      
+      {/* 🚀🚀🚀 NEW FEBRUARY 2026 TRANSCENDENT AUTOMATION - MOST RECENT 🚀🚀🚀 */}
+      <February2026TranscendentAutomationBanner />
 
       {/* ⭐ LATEST: January 2027 Universal Intelligence Revolution - TOP PRIORITY ⭐ */}
       <January2027UniversalIntelligenceRevolutionBanner />
@@ -217,13 +222,12 @@ export default function HomePage() {
       <section className="py-4 border-t border-b border-white/10 bg-white/5">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
-            <div className="text-white/90 font-semibold">🚀 NEW: January 2026 Revolutionary Autonomous Enterprise - $1 Trillion ROI & 99.9% Automation</div>
+            <div className="text-white/90 font-semibold">🚀 NEW: January 2026 Ultimate Breakthrough & February 2026 Transcendent Automation - Revolutionary AI Systems</div>
             <div className="flex flex-wrap gap-2">
-              <a href="/blog/ai-2026-january-revolutionary-autonomous-enterprise-transformation" className="inline-flex items-center gap-2 bg-indigo-500/20 text-indigo-200 border border-indigo-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-indigo-500/30 transition-colors">January 2026 Autonomous<span>→</span></a>
-              <a href="/case-studies/ai-2026-january-autonomous-enterprise-1-trillion-success" className="inline-flex items-center gap-2 bg-emerald-500/20 text-emerald-200 border border-emerald-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-emerald-500/30 transition-colors">$1T Success<span>→</span></a>
-              <a href="/blog/ai-2025-december-advanced-autonomous-systems" className="inline-flex items-center gap-2 bg-green-500/20 text-green-200 border border-green-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-green-500/30 transition-colors">December 2025 Autonomous<span>→</span></a>
-              <a href="/blog/ai-2025-december-quantum-computing-breakthrough" className="inline-flex items-center gap-2 bg-cyan-500/20 text-cyan-200 border border-cyan-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-cyan-500/30 transition-colors">December 2025 Quantum<span>→</span></a>
-              <a href="/case-studies/ai-2025-december-autonomous-systems-500-million-success" className="inline-flex items-center gap-2 bg-emerald-500/20 text-emerald-200 border border-emerald-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-emerald-500/30 transition-colors">$500M Success Story<span>→</span></a>
+              <a href="/blog/ai-2026-january-ultimate-breakthrough-revolution" className="inline-flex items-center gap-2 bg-purple-500/20 text-purple-200 border border-purple-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-purple-500/30 transition-colors">January 2026 Ultimate<span>→</span></a>
+              <a href="/case-studies/ai-2026-january-ultimate-breakthrough-500-billion-success" className="inline-flex items-center gap-2 bg-emerald-500/20 text-emerald-200 border border-emerald-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-emerald-500/30 transition-colors">$500B Success Story<span>→</span></a>
+              <a href="/blog/ai-2026-february-transcendent-automation-revolution" className="inline-flex items-center gap-2 bg-indigo-500/20 text-indigo-200 border border-indigo-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-indigo-500/30 transition-colors">February 2026 Transcendent<span>→</span></a>
+              <a href="/case-studies/ai-2026-february-transcendent-automation-300-billion-success" className="inline-flex items-center gap-2 bg-green-500/20 text-green-200 border border-green-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-green-500/30 transition-colors">$300B Success Story<span>→</span></a>
               <a href="/blog/ai-2026-october-transcendent-automation-revolution" className="inline-flex items-center gap-2 bg-purple-500/20 text-purple-200 border border-purple-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-purple-500/30 transition-colors">October 2026 Transcendent<span>→</span></a>
               <a href="/blog/ai-2026-september-mega-breakthrough-revolution" className="inline-flex items-center gap-2 bg-indigo-500/20 text-indigo-200 border border-indigo-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-indigo-500/30 transition-colors">September 2026 Mega<span>→</span></a>
               <a href="/case-studies/ai-2026-september-mega-breakthrough-2-trillion-success" className="inline-flex items-center gap-2 bg-green-500/20 text-green-200 border border-green-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-green-500/30 transition-colors">$2.5T Success Story<span>→</span></a>
