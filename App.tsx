@@ -7,6 +7,11 @@ import October2025NewContentLaunchBanner from "./components/October2025NewConten
 import October2025FreshContentHighlightBanner from "./components/October2025FreshContentHighlightBanner";
 import October2025BreakthroughContentBanner from "./components/October2025BreakthroughContentBanner";
 
+// 🎯🎯🎯 NEWEST: OCTOBER 2025 LATEST CONTENT - FEATURED NOW! 🎯🎯🎯
+import October2025SovereignAIBanner from "./components/October2025SovereignAIBanner";
+import October2025MultimodalAIBanner from "./components/October2025MultimodalAIBanner";
+import October2025TelecomSuccessBanner from "./components/October2025TelecomSuccessBanner";
+
 // 🔥🔥🔥 NEW OCTOBER 2025 TECHNICAL BREAKTHROUGHS - TOP PRIORITY! 🔥🔥🔥
 import October2025TechBreakthroughsBanner from "./components/October2025TechBreakthroughsBanner";
 import October2025AIInnovationSpotlight from "./components/October2025AIInnovationSpotlight";
@@ -89,6 +94,12 @@ import Fortune500SuccessAdvertisingBanner from "./components/Fortune500SuccessAd
 export default function App(): JSX.Element {
   return (
     <div className="min-h-screen bg-slate-950">
+      {/* 🎯🎯🎯 NEWEST: OCTOBER 2025 LATEST CONTENT - FEATURED AT TOP! 🎯🎯🎯 */}
+      {/* Featured: Sovereign AI ($180M), Multimodal AI (340% ROI), Telecom Success ($215M) */}
+      <October2025SovereignAIBanner />
+      <October2025MultimodalAIBanner />
+      <October2025TelecomSuccessBanner />
+      
       {/* 🎉🎉🎉 NEWEST: OCTOBER 1, 2025 - FRESH CONTENT JUST PUBLISHED - ABSOLUTE TOP PRIORITY! 🎉🎉🎉 */}
       {/* Featured: Edge AI Revolution, GenAI Cost Optimization, $86M Manufacturing Success */}
       <October1st2025NewContentBanner />
