@@ -587,7 +587,7 @@ const Home = () => {
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-2">
                     <div className="text-xs uppercase tracking-wider text-zion-cyan">{item.category}</div>
-                    {("featured" in item) && (item as any).featured && (
+                    {("featured" in item) && (item as { featured: boolean }).featured && (
                       <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs px-2 py-1 rounded-full font-medium">
                         FEATURED
                       </span>
@@ -628,7 +628,7 @@ const Home = () => {
                 <div key={insight.id} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105">
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-xs uppercase tracking-wider text-indigo-300">{insight.category}</span>
-                    {("featured" in insight) && (insight as any).featured && (
+                    {("featured" in insight) && (insight as { featured: boolean }).featured && (
                       <span className="bg-yellow-400 text-black text-xs px-2 py-1 rounded-full font-medium">
                         FEATURED
                       </span>

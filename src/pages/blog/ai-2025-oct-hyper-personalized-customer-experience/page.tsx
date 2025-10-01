@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Heart, Sparkles, TrendingUp, DollarSign, Users, Zap } from "lucide-react";
+import { ArrowLeft, Heart, Sparkles, TrendingUp, DollarSign, Users } from "lucide-react";
 
 export default function HyperPersonalizedCustomerExperience2025() {
   return (
