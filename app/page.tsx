@@ -74,6 +74,11 @@ import ProductionAgenticAIBanner, { AgenticAIShowcaseBanner } from '../component
 import AISecurityBanner, { AISecurityShowcaseBanner } from '../components/AISecurityBanner';
 import October2025NewPracticalContentBannerTop, { October2025PracticalContentShowcase } from '../components/October2025NewPracticalContentBanner';
 
+// NEW 2026 CONTENT SHOWCASE
+import NewContent2026Banner from '../components/NewContent2026Banner';
+import AI2026ContentShowcaseBanner from '../components/AI2026ContentShowcaseBanner';
+import InteractiveAI2026ROICalculator from '../components/InteractiveAI2026ROICalculator';
+
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
   description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Transform your business with cutting-edge technology and automation.',
@@ -83,6 +88,11 @@ export const metadata = {
 export default function HomePage() {
   return (
     <div className="animate-fade-in">
+      {/* 🚀 NEW 2026 CONTENT SHOWCASE - TOP PRIORITY */}
+      <NewContent2026Banner />
+      <AI2026ContentShowcaseBanner />
+      <InteractiveAI2026ROICalculator />
+      
       {/* 🚀 NEWEST OCTOBER 2025 - PRODUCTION AGENTIC AI & SECURITY */}
       <October2025NewPracticalContentBannerTop />
       <ProductionAgenticAIBanner />
