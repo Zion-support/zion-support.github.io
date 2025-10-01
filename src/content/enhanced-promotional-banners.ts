@@ -717,6 +717,34 @@ enhancedPromotionalBanners.unshift(
   }
 );
 
+// Oct 7, 2025 – Promote two new posts
+enhancedPromotionalBanners.unshift(
+  {
+    id: 'oct-07-autonomous-platforms-roi',
+    title: '🚀 NEW TODAY: Autonomous Platforms — 3–6x ROI in 90 Days',
+    description: 'Budgets, approvals, canary scorecards, and instant rollback. Ship autonomy safely with measurable value in weeks.',
+    ctaText: 'Read the ROI Playbook',
+    ctaLink: '/blog/ai-2025-oct-07-autonomous-platforms-roi',
+    variant: 'success',
+    icon: '🚀',
+    featured: true,
+    priority: 0,
+    startDate: '2025-10-07'
+  },
+  {
+    id: 'oct-07-evaluator-pipelines-blueprint',
+    title: '🛡️ NEW: Evaluator Pipelines — Predict Production, Gate Risk',
+    description: 'Golden tasks, calibrated metrics, and online canaries with rollback hooks. Correlate with KPIs and cut regressions.',
+    ctaText: 'Build Evaluator Pipelines',
+    ctaLink: '/blog/ai-2025-oct-07-evaluator-pipelines-blueprint',
+    variant: 'info',
+    icon: '🛡️',
+    featured: true,
+    priority: 1,
+    startDate: '2025-10-07'
+  }
+);
+
 // Sept 30, 2025 – Fresh homepage banner promoting the new content
 enhancedPromotionalBanners.push({
   id: 'oct-05-governed-autonomy-2025',
