@@ -69,6 +69,7 @@ import January2027UniversalConsciousnessBanner from '../components/January2027Un
 import October2026TranscendentAutomationBanner from '../components/October2026TranscendentAutomationBanner';
 import September2026MegaBreakthroughBanner from '../components/September2026MegaBreakthroughBanner';
 import December2025ContentShowcaseBanner from '../components/December2025ContentShowcaseBanner';
+import January2025AutonomousIntelligenceBanner from '../components/January2025AutonomousIntelligenceBanner';
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -79,7 +80,11 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-slate-950">
-      {/* 🚀🚀🚀 DECEMBER 2025 NEW BREAKTHROUGH CONTENT - MOST RECENT 🚀🚀🚀 */}
+      {/* 🚀🚀🚀 JANUARY 2025 AUTONOMOUS INTELLIGENCE REVOLUTION - MOST RECENT 🚀🚀🚀 */}
+      {/* Revolutionary breakthrough in autonomous AI intelligence - January 2025 */}
+      <January2025AutonomousIntelligenceBanner />
+      
+      {/* 🚀🚀🚀 DECEMBER 2025 NEW BREAKTHROUGH CONTENT 🚀🚀🚀 */}
       {/* Latest autonomous systems and quantum computing breakthroughs - December 2025 */}
       <December2025ContentShowcaseBanner />
       
