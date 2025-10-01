@@ -19,6 +19,7 @@ import Header from "../components/Header";
 import ModernFeatures from "../components/ModernFeatures";
 import LatestInsights from "../components/LatestInsights";
 import October2025SupplyChainRevolutionBanner from "../components/October2025SupplyChainRevolutionBanner";
+import October2025PredictiveMaintenanceBanner from "../components/October2025PredictiveMaintenanceBanner";
 import { latestInsights } from "../content/insights";
 
 const Home = () => {
@@ -191,6 +192,12 @@ const Home = () => {
               </Link>
             </div>
           </div>
+        </section>
+
+        {/* ⚡⚡⚡ ULTIMATE PRIORITY: OCTOBER 1, 2025 - AI PREDICTIVE MAINTENANCE REVOLUTION - #1 BREAKTHROUGH! ⚡⚡⚡ */}
+        {/* 🏭🏭🏭 LATEST INNOVATION: $4.3B Value Creation, 96% Downtime Elimination, 15.8x ROI, Zero Failures! 🏭🏭🏭 */}
+        <section className="container mx-auto px-6 relative z-10">
+          <October2025PredictiveMaintenanceBanner />
         </section>
 
         {/* 🚀🚀🚀 ABSOLUTE NEWEST: OCTOBER 1, 2025 - SUPPLY CHAIN REVOLUTION - #1 TOP PRIORITY! 🚀🚀🚀 */}
