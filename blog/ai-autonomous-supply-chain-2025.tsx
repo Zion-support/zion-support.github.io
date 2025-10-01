@@ -51,7 +51,7 @@ const AIAutonomousSupplyChain2025: React.FC = () => {
           </li>
           <li className="flex items-start gap-3">
             <span className="text-emerald-400 mt-1">✓</span>
-            <span><strong>Autonomous Rerouting:</strong> Automatically reroute shipments around disruptions in <5 minutes, reducing delay costs by 92%</span>
+            <span><strong>Autonomous Rerouting:</strong> Automatically reroute shipments around disruptions in &lt;5 minutes, reducing delay costs by 92%</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-emerald-400 mt-1">✓</span>
@@ -150,7 +150,7 @@ import { SupplyChainOrchestrator, AIAgent } from '@zion/supply-chain-ai';
 
 const supplyChain = new SupplyChainOrchestrator({
   mode: 'fully-autonomous',
-  decisionLatency: '<5min',
+  decisionLatency: '&lt;5min',
   confidenceThreshold: 0.92
 });
 

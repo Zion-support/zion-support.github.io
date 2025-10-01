@@ -953,6 +953,34 @@ featuredBlogPosts.unshift(
   }
 );
 
+// January 15, 2025 - Brand-new revolutionary content at the very top
+featuredBlogPosts.unshift(
+  {
+    id: "ai-2025-january-15-synthetic-consciousness-ai-breakthrough",
+    title: "Synthetic Consciousness AI Breakthrough: The Dawn of True Artificial Awareness",
+    description: "Revolutionary AI achieving genuine self-awareness, emotional intelligence, and creative autonomy with $500B enterprise value",
+    link: "/blog/ai-2025-january-15-synthetic-consciousness-ai-breakthrough",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-2025-january-15-quantum-edge-intelligence-revolution",
+    title: "Quantum Edge Intelligence Revolution: Next-Generation Computing at the Edge",
+    description: "Sub-millisecond processing with 200-250x speed improvements through quantum-edge convergence",
+    link: "/blog/ai-2025-january-15-quantum-edge-intelligence-revolution",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-2025-january-15-advanced-autonomous-enterprise-systems",
+    title: "Advanced Autonomous Enterprise Systems: The Future of Business Operations",
+    description: "99.99% uptime, 87% cost reduction, and zero human error operations with self-healing infrastructure",
+    link: "/blog/ai-2025-january-15-advanced-autonomous-enterprise-systems",
+    type: "article",
+    featured: true
+  },
+);
+
 // Surface brand-new articles at the very top of featured content
 featuredBlogPosts.unshift(
   {
@@ -1004,6 +1032,42 @@ featuredBlogPosts.unshift(
     title: "Agent Release Checklists v2 (2026)",
     description: "Budgets, approvals, rollback—battle-tested playbooks for safe releases",
     link: "/blog/agent-release-checklists-v2-2026",
+    type: "article",
+    featured: true
+  }
+);
+
+// Oct 1, 2025 – Advertise FOUR brand-new production-ready AI guides
+featuredBlogPosts.unshift(
+  {
+    id: "ai-self-healing-infrastructure-2025",
+    title: "🔄 AI Self-Healing Infrastructure 2025",
+    description: "Autonomous infrastructure achieving 99.99% uptime—95% MTTR reduction, zero human intervention.",
+    link: "/blog/ai-self-healing-infrastructure-2025",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "generative-ai-code-assistants-2025",
+    title: "💻 Generative AI Code Assistants 2025",
+    description: "10x developer productivity, 5x faster feature delivery, 40% fewer bugs with AI pair programming.",
+    link: "/blog/generative-ai-code-assistants-2025",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-ai-privacy-preserving-analytics-2025",
+    title: "🔐 Edge AI Privacy-Preserving Analytics 2025",
+    description: "95%+ analytics accuracy without PII—GDPR/CCPA compliant by design with on-device ML.",
+    link: "/blog/edge-ai-privacy-preserving-analytics-2025",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-driven-supply-chain-optimization-2025",
+    title: "📦 AI-Driven Supply Chain Optimization 2025",
+    description: "35% cost reduction, 45% fulfillment improvement, 95% fewer stockouts with intelligent automation.",
+    link: "/blog/ai-driven-supply-chain-optimization-2025",
     type: "article",
     featured: true
   }

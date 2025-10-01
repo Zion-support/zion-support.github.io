@@ -152,7 +152,7 @@ const AIPoweredInfrastructureAsCode2025: React.FC = () => {
               <strong>After AI-Powered IaC:</strong> AI agent implemented autonomous cost optimization over 90 days
             </p>
             <ul className="space-y-2 text-gray-800">
-              <li>• <strong>Rightsized 400+ EC2 instances:</strong> Saved $65K/month (CPU utilization was <25%)</li>
+              <li>• <strong>Rightsized 400+ EC2 instances:</strong> Saved $65K/month (CPU utilization was &lt;25%)</li>
               <li>• <strong>Migrated to Spot instances:</strong> Saved $85K/month (non-critical workloads)</li>
               <li>• <strong>Reserved Instance purchases:</strong> Saved $40K/month (predictable workloads)</li>
               <li>• <strong>Deleted zombie resources:</strong> Saved $25K/month (unused volumes, load balancers, IPs)</li>
