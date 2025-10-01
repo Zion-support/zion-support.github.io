@@ -34,8 +34,8 @@ import NewContentShowcase2025 from "../components/NewContentShowcase2025";
 import NewServicesShowcase from "../components/NewServicesShowcase";
 import SuccessStoriesShowcase from "../components/SuccessStoriesShowcase";
 import TrendingContentBanner from "../components/TrendingContentBanner";
-import Latest2026ContentBanner from "../components/Latest2026ContentBanner";
-import NewServices2026Banner from "../components/NewServices2026Banner";
+import { Latest2026ContentBanner } from "../components/NewContent2026Banners";
+import NewServicesPromoBanner2026 from "../components/NewServicesPromoBanner2026";
 import { enhancedPromotionalBanners, getActiveEnhancedBanners, getFeaturedBanners } from "../content/enhanced-promotional-banners";
 import { latestInsights } from "../content/insights";
 import { posts } from "../content/posts";
@@ -936,11 +936,8 @@ const Home = () => {
           </div>
         </section>
 
-        {/* New Services Showcase */}
-        <NewServices2026Banner 
-          variant="showcase"
-          showCount={6}
-        />
+        {/* New Services Promo 2026 */}
+        <NewServicesPromoBanner2026 />
         <NewServicesShowcase />
 
         {/* Latest Articles Promotional Section */}
