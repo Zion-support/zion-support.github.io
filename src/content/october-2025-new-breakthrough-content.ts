@@ -1,7 +1,7 @@
 // October 2025 New Breakthrough Content - Latest Releases
 // Published: October 1, 2025
 
-export const october2025NewBreakthroughContent = [
+export const octoberNewBreakthroughContent = [
   {
     id: "autonomous-ai-orchestration-platform-revolution",
     title: "Autonomous AI Orchestration Platform Revolution: 95% Efficiency Gain",
@@ -95,36 +95,37 @@ export const october2025NewBreakthroughContent = [
 ];
 
 export const getFeaturedOctoberNewContent = () => {
-  return october2025NewBreakthroughContent.filter(content => content.featured);
+  return octoberNewBreakthroughContent.filter(content => content.featured);
 };
 
 export const getUrgentOctoberContent = () => {
-  return october2025NewBreakthroughContent.filter(content => content.urgent);
+  return octoberNewBreakthroughContent.filter(content => content.urgent);
 };
 
 export const getAllOctoberNewContent = () => {
-  return october2025NewBreakthroughContent;
+  return octoberNewBreakthroughContent;
 };
 
 // Quick stats for homepage banner
 export const octoberContentStats = {
-  totalValueCreated: "$1.474B",
-  articlesPublished: 3,
-  averageROI: "2,800%",
-  implementationSuccess: "99%",
-  clientSatisfaction: "9.8/10"
+  totalMarketValue: "$1.47B",
+  avgCostReduction: "79%",
+  avgSpeedImprovement: "26x",
+  enterpriseAdoption: "89%",
+  customerSatisfaction: "96%",
+  paybackPeriod: "4.2mo"
 };
 
 export const getOctober2025BreakthroughStats = () => {
-  const totalValue = october2025NewBreakthroughContent.reduce((sum, item) => {
-    const value = parseFloat(item.metrics.valueCreated.replace(/[$M]/g, ''));
+  const totalValue = octoberNewBreakthroughContent.reduce((sum, item) => {
+    const value = parseFloat(item.metrics.valueCreated?.replace(/[$M]/g, '') || item.metrics.totalValue?.replace(/[$M]/g, '') || '0');
     return sum + value;
   }, 0);
 
   return {
-    totalArticles: october2025NewBreakthroughContent.length,
+    totalArticles: octoberNewBreakthroughContent.length,
     totalValue: `$${totalValue}M`,
-    averageValue: `$${(totalValue / october2025NewBreakthroughContent.length).toFixed(1)}M`,
-    categories: [...new Set(october2025NewBreakthroughContent.map(c => c.category))].length
+    averageValue: `$${(totalValue / octoberNewBreakthroughContent.length).toFixed(1)}M`,
+    categories: [...new Set(octoberNewBreakthroughContent.map(c => c.category))].length
   };
 };
