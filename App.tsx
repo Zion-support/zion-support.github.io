@@ -10,6 +10,8 @@ import January2025NextGenAIBreakthroughBanner from "./components/January2025Next
 import January2025QuantumComputingRevolutionBanner from "./components/January2025QuantumComputingRevolutionBanner";
 import January2025AutonomousSystemsMegaBanner from "./components/January2025AutonomousSystemsMegaBanner";
 import January2025NewContentAdvertisingMegaBanner from "./components/January2025NewContentAdvertisingMegaBanner";
+import January2025AdvancedAIInnovationBanner from "./components/January2025AdvancedAIInnovationBanner";
+import January2025FutureTechRevolutionBanner from "./components/January2025FutureTechRevolutionBanner";
 
 // 🚀🚀🚀 BREAKING: DECEMBER 2025 REVOLUTIONARY AUTONOMOUS ENTERPRISE - ABSOLUTE TOP PRIORITY 🚀🚀🚀
 import December2025RevolutionaryAutonomousEnterpriseBanner from "./components/December2025RevolutionaryAutonomousEnterpriseBanner";
@@ -375,6 +377,14 @@ export default function App(): JSX.Element {
       {/* 🤖🤖🤖 BREAKING: JANUARY 2025 AUTONOMOUS SYSTEMS REVOLUTION - ABSOLUTE #1 TOP PRIORITY! 🤖🤖🤖 */}
       {/* Featured: $4.7B Success Story, 99.8% Autonomy, 25x Productivity - AUTONOMOUS BREAKTHROUGH! */}
       <January2025AutonomousSystemsMegaBanner />
+      
+      {/* 🧠🧠🧠 BREAKING: JANUARY 2025 ADVANCED AI INNOVATION - ABSOLUTE #1 TOP PRIORITY! 🧠🧠🧠 */}
+      {/* Featured: $5.2B Success Story, 99.98% Accuracy, 20x Performance - REVOLUTIONARY INNOVATION! */}
+      <January2025AdvancedAIInnovationBanner />
+      
+      {/* 🚀🚀🚀 BREAKING: JANUARY 2025 FUTURE TECH REVOLUTION - ABSOLUTE #1 TOP PRIORITY! 🚀🚀🚀 */}
+      {/* Featured: $6.8B Success Story, 99.99% Accuracy, 50x Performance - FUTURE REVOLUTION! */}
+      <January2025FutureTechRevolutionBanner />
       
       {/* 🚀🚀🚀 BREAKING: JANUARY 2026 REVOLUTIONARY AI BREAKTHROUGH - ABSOLUTE HIGHEST PRIORITY! 🚀🚀🚀 */}
       {/* Featured: Universal Intelligence Revolution, $2.3B Fortune 500 Success, 95% Efficiency Gains, 8.5x ROI */}
