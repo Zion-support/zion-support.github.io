@@ -1,216 +1,114 @@
-import { ArrowRight, Zap, Brain, Shield, Lock, TrendingUp, Sparkles } from "lucide-react";
+import { ArrowRight, Brain, Sparkles, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
-import { octoberCuttingEdgeInnovations, octoberInnovationMetrics } from "../content/october-2025-cutting-edge-innovations";
 
 const October2025CuttingEdgeInnovationsBanner = () => {
   return (
-    <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 py-16 px-4 relative overflow-hidden">
-      {/* Animated background effects */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-pink-500 rounded-full filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-      </div>
-
-      {/* Floating particles */}
-      <div className="absolute inset-0 overflow-hidden">
-        {[...Array(20)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-2 h-2 bg-white rounded-full opacity-30 animate-float"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${5 + Math.random() * 10}s`
-            }}
-          />
-        ))}
-      </div>
-
-      <div className="max-w-7xl mx-auto relative z-10">
-        {/* Header Section */}
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full mb-6 border border-white/20">
-            <Sparkles className="w-5 h-5 text-yellow-400 animate-pulse" />
-            <span className="text-white font-bold text-sm tracking-wide">
-              🚀 JUST RELEASED · OCTOBER 2025 CUTTING-EDGE INNOVATIONS
-            </span>
-            <Sparkles className="w-5 h-5 text-yellow-400 animate-pulse" />
+    <div className="bg-gradient-to-r from-indigo-900/40 via-purple-900/40 to-pink-900/40 border-b border-indigo-500/30 backdrop-blur-sm">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div className="flex items-start gap-4">
+          <div className="hidden sm:flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex-shrink-0 shadow-lg shadow-indigo-500/50">
+            <Sparkles className="w-8 h-8 text-white" />
           </div>
           
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            The Future of Enterprise AI is Here
-          </h2>
-          <p className="text-xl md:text-2xl text-purple-200 max-w-4xl mx-auto leading-relaxed">
-            Discover how leading enterprises are deploying quantum-resistant security, brain-inspired computing, 
-            and autonomous agent governance to achieve unprecedented efficiency and resilience
-          </p>
-        </div>
-
-        {/* Global Impact Metrics */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-          <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 text-center">
-            <div className="text-3xl font-bold text-white mb-1">{octoberInnovationMetrics.totalMarket}</div>
-            <div className="text-sm text-purple-200">Combined Market Opportunity</div>
-          </div>
-          <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 text-center">
-            <div className="text-3xl font-bold text-white mb-1">{octoberInnovationMetrics.averageEfficiency}</div>
-            <div className="text-sm text-purple-200">Average Efficiency Gain</div>
-          </div>
-          <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 text-center">
-            <div className="text-3xl font-bold text-white mb-1">{octoberInnovationMetrics.combinedCompliance}</div>
-            <div className="text-sm text-purple-200">Compliance Rate</div>
-          </div>
-          <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 text-center">
-            <div className="text-3xl font-bold text-white mb-1">{octoberInnovationMetrics.enterpriseDeployments}</div>
-            <div className="text-sm text-purple-200">Enterprise Deployments</div>
-          </div>
-        </div>
-
-        {/* Content Cards */}
-        <div className="grid md:grid-cols-3 gap-6 mb-10">
-          {octoberCuttingEdgeInnovations.map((content, index) => {
-            const iconMap: { [key: string]: any } = {
-              '🔐': Shield,
-              '🧠': Brain,
-              '⚖️': Lock
-            };
-            const Icon = iconMap[content.icon] || Zap;
+          <div className="flex-1 min-w-0">
+            <div className="flex items-center gap-2 mb-2">
+              <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r from-indigo-500 to-purple-600 text-white shadow-lg">
+                🚀 JUST PUBLISHED OCTOBER 1, 2025
+              </span>
+              <span className="hidden sm:inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r from-pink-500 to-red-600 text-white shadow-lg animate-pulse">
+                🔥 BREAKTHROUGH INNOVATIONS
+              </span>
+            </div>
             
-            return (
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-200 via-purple-200 to-pink-200 mb-3 leading-tight">
+              3 Game-Changing AI Breakthroughs — Neuro-Symbolic Intelligence, Spatial Computing Revolution & Agentic Supply Chain
+            </h2>
+            
+            <p className="text-base sm:text-lg text-indigo-100/90 mb-4 leading-relaxed">
+              ⚡ <strong className="text-indigo-200">BRAND NEW TODAY:</strong> Deploy neuro-symbolic AI achieving{" "}
+              <span className="text-green-400 font-bold">99.7% reasoning accuracy</span> with{" "}
+              <span className="text-green-400 font-bold">89% fewer hallucinations</span>, implement spatial computing platforms delivering{" "}
+              <span className="text-green-400 font-bold">12x productivity gains</span> and{" "}
+              <span className="text-green-400 font-bold">97% training efficiency</span>, and unleash agentic supply chain AI with{" "}
+              <span className="text-green-400 font-bold">99.1% forecast accuracy</span> and{" "}
+              <span className="text-green-400 font-bold">82% cost reduction</span>. Revolutionary innovations transforming enterprises worldwide!
+            </p>
+
+            <div className="grid sm:grid-cols-3 gap-3 mb-4">
               <Link
-                key={content.id}
-                to={`/blog/${content.slug}`}
-                className="group bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 hover:bg-white/20 hover:scale-105 hover:border-white/40 transition-all duration-300 hover:shadow-2xl"
-                style={{
-                  animationDelay: `${index * 0.1}s`
-                }}
+                to="/blog/ai-2025-oct-neuro-symbolic-ai-enterprise-breakthrough"
+                className="group bg-gradient-to-br from-blue-600/20 to-purple-600/20 hover:from-blue-600/30 hover:to-purple-600/30 border border-blue-400/30 rounded-lg p-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25"
               >
-                <div className="flex items-start gap-4 mb-4">
-                  <div className={`bg-gradient-to-br ${content.gradient} p-4 rounded-xl shadow-lg group-hover:scale-110 transition-transform`}>
-                    <Icon className="w-7 h-7 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <div className="inline-block text-xs text-blue-300 bg-blue-900/30 px-3 py-1 rounded-full mb-2">
-                      {content.category}
-                    </div>
-                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">
-                      {content.title}
+                <div className="flex items-start gap-2 mb-2">
+                  <Brain className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
+                  <div className="flex-1 min-w-0">
+                    <h3 className="font-bold text-sm text-blue-200 mb-1 leading-snug group-hover:text-blue-100">
+                      Neuro-Symbolic AI Breakthrough
                     </h3>
+                    <p className="text-xs text-indigo-300/80 leading-snug">
+                      99.7% Reasoning + 96% Explainability + 89% Fewer Hallucinations
+                    </p>
                   </div>
                 </div>
-
-                <p className="text-sm text-purple-200 mb-5 leading-relaxed line-clamp-3">
-                  {content.description}
-                </p>
-
-                {/* Key Metrics */}
-                <div className="grid grid-cols-2 gap-2 mb-5">
-                  {Object.entries(content.metrics).slice(0, 4).map(([key, value]) => (
-                    <div key={key} className="bg-white/5 backdrop-blur-sm rounded-lg p-3 border border-white/10">
-                      <div className="text-2xl font-bold text-white">{value}</div>
-                      <div className="text-xs text-purple-300 capitalize">
-                        {key.replace(/([A-Z])/g, ' $1').trim()}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Highlights */}
-                <ul className="space-y-2 mb-5">
-                  {content.highlights.slice(0, 3).map((highlight, idx) => (
-                    <li key={idx} className="flex items-start gap-2 text-xs text-purple-200">
-                      <TrendingUp className="w-3 h-3 text-green-400 mt-0.5 flex-shrink-0" />
-                      <span className="line-clamp-1">{highlight}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <div className="flex items-center gap-2 text-sm text-blue-300 font-semibold group-hover:gap-4 transition-all pt-4 border-t border-white/10">
-                  <span>Read Complete Guide</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <div className="flex items-center justify-between text-xs">
+                  <span className="text-blue-400 font-semibold">Hybrid Intelligence</span>
+                  <ArrowRight className="w-4 h-4 text-blue-400 group-hover:translate-x-1 transition-transform" />
                 </div>
               </Link>
-            );
-          })}
-        </div>
 
-        {/* CTA Section */}
-        <div className="bg-gradient-to-r from-white/15 to-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 md:p-10 shadow-2xl">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div>
-              <h3 className="text-3xl font-bold text-white mb-4">
-                Ready to Lead the AI Revolution?
-              </h3>
-              <p className="text-purple-200 mb-6 text-lg leading-relaxed">
-                Our experts have helped Fortune 500 companies implement these breakthrough technologies. 
-                Get a free strategic consultation and custom implementation roadmap tailored to your organization.
-              </p>
-              <ul className="space-y-3 mb-6">
-                <li className="flex items-center gap-3 text-white">
-                  <div className="bg-green-500 rounded-full p-1">
-                    <TrendingUp className="w-4 h-4" />
-                  </div>
-                  <span>60-minute deep-dive with senior architects</span>
-                </li>
-                <li className="flex items-center gap-3 text-white">
-                  <div className="bg-green-500 rounded-full p-1">
-                    <TrendingUp className="w-4 h-4" />
-                  </div>
-                  <span>Custom ROI analysis and risk assessment</span>
-                </li>
-                <li className="flex items-center gap-3 text-white">
-                  <div className="bg-green-500 rounded-full p-1">
-                    <TrendingUp className="w-4 h-4" />
-                  </div>
-                  <span>12-month implementation roadmap</span>
-                </li>
-              </ul>
-            </div>
-            <div className="flex flex-col gap-4">
               <Link
-                to="/contact"
-                className="inline-flex items-center justify-center gap-3 bg-white text-indigo-900 px-8 py-5 rounded-xl font-bold text-lg hover:bg-blue-50 transition-all shadow-lg hover:shadow-xl hover:scale-105"
+                to="/blog/ai-2025-oct-spatial-computing-enterprise-revolution"
+                className="group bg-gradient-to-br from-cyan-600/20 to-blue-600/20 hover:from-cyan-600/30 hover:to-blue-600/30 border border-cyan-400/30 rounded-lg p-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
               >
-                <Sparkles className="w-6 h-6" />
-                Schedule Free Consultation
-                <ArrowRight className="w-6 h-6" />
+                <div className="flex items-start gap-2 mb-2">
+                  <Sparkles className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
+                  <div className="flex-1 min-w-0">
+                    <h3 className="font-bold text-sm text-cyan-200 mb-1 leading-snug group-hover:text-cyan-100">
+                      Spatial Computing + AI Revolution
+                    </h3>
+                    <p className="text-xs text-indigo-300/80 leading-snug">
+                      12x Productivity + 97% Training Efficiency + 85% Cost Cut
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-center justify-between text-xs">
+                  <span className="text-cyan-400 font-semibold">Immersive Intelligence</span>
+                  <ArrowRight className="w-4 h-4 text-cyan-400 group-hover:translate-x-1 transition-transform" />
+                </div>
               </Link>
+
               <Link
-                to="/blog"
-                className="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-5 rounded-xl font-bold text-lg hover:from-blue-700 hover:to-purple-700 transition-all shadow-lg border-2 border-white/20"
+                to="/blog/ai-2025-oct-agentic-procurement-supply-chain-revolution"
+                className="group bg-gradient-to-br from-orange-600/20 to-red-600/20 hover:from-orange-600/30 hover:to-red-600/30 border border-orange-400/30 rounded-lg p-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/25"
               >
-                Explore All Innovation Guides
-                <ArrowRight className="w-6 h-6" />
+                <div className="flex items-start gap-2 mb-2">
+                  <TrendingUp className="w-5 h-5 text-orange-400 flex-shrink-0 mt-0.5" />
+                  <div className="flex-1 min-w-0">
+                    <h3 className="font-bold text-sm text-orange-200 mb-1 leading-snug group-hover:text-orange-100">
+                      Agentic Supply Chain Revolution
+                    </h3>
+                    <p className="text-xs text-indigo-300/80 leading-snug">
+                      99.1% Forecast Accuracy + 82% Cost Cut + $1.37B+ Value
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-center justify-between text-xs">
+                  <span className="text-orange-400 font-semibold">Autonomous Operations</span>
+                  <ArrowRight className="w-4 h-4 text-orange-400 group-hover:translate-x-1 transition-transform" />
+                </div>
               </Link>
             </div>
-          </div>
-        </div>
 
-        {/* Trust Indicators */}
-        <div className="mt-10 text-center">
-          <p className="text-purple-300 text-sm mb-4">Trusted by leading enterprises worldwide</p>
-          <div className="flex flex-wrap justify-center gap-6 text-white/60 text-sm">
-            <span>🏦 JP Morgan Chase</span>
-            <span>🏥 Kaiser Permanente</span>
-            <span>🚗 BMW</span>
-            <span>🏭 Siemens</span>
-            <span>🚀 NASA</span>
-            <span>💼 Fortune 500</span>
+            <Link
+              to="/blog"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white font-bold rounded-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl hover:shadow-indigo-500/50"
+            >
+              <span>Explore Today's Breakthrough Innovations</span>
+              <ArrowRight className="w-5 h-5" />
+            </Link>
           </div>
         </div>
       </div>
-
-      <style>{`
-        @keyframes float {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-20px); }
-        }
-        .animate-float {
-          animation: float ease-in-out infinite;
-        }
-      `}</style>
     </div>
   );
 };

@@ -42,6 +42,7 @@ import LatestInsights from "../components/LatestInsights";
 import ModernFeatures from "../components/ModernFeatures";
 import AdvertisingBanner from "../components/AdvertisingBanner";
 import October2025NewBreakthroughBanner from "../components/October2025NewBreakthroughBanner";
+import October2025CuttingEdgeInnovationsBanner from "../components/October2025CuttingEdgeInnovationsBanner";
 import January2026RevolutionaryBanner from "../components/January2026RevolutionaryBanner";
 import NewServicesPromoBanner2026 from "../components/NewServicesPromoBanner2026";
 import { latestInsights } from "../content/insights";
@@ -84,6 +85,7 @@ const Home = () => {
       </Helmet>
       <AdvertisingBanner />
       <January2026RevolutionaryBanner />
+      <October2025CuttingEdgeInnovationsBanner />
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
         
