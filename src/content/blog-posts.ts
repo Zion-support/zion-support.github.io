@@ -14,6 +14,61 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "ai-2025-oct-02-cache-playbook-pro",
+    title: "Enterprise GenAI Cache Playbook PRO: 60–85% Cost ↓, P95 30–45% ↓",
+    description: "A pragmatic caching blueprint for LLM apps: prompt, embedding, feature and retrieval-layer caches that cut spend while tightening tail latency.",
+    content: `
+# Enterprise GenAI Cache Playbook PRO
+
+This playbook shows production patterns that consistently reduce LLM serving cost by 60–85% while tightening tail latency by 30–45%.
+
+## Core Layers
+- Prompt cache with request coalescing
+- Embedding cache with TTL + LFU
+- Retrieval cache (feature + result)
+- Ground truth negative cache to avoid hot-miss loops
+
+## Rollout Checklist
+- Ship dark, compare tokens/req and P95
+- Add circuit-breakers and cache quality SLOs
+- Gradually raise cache hit targets per route
+    `,
+    author: "Zion Tech Group Platform Team",
+    date: "2025-10-02",
+    category: "GenAI Engineering",
+    tags: ["LLM", "Caching", "Latency", "Cost Optimization", "RAG"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/genai-cache-playbook.jpg"
+  },
+  {
+    slug: "ai-2025-oct-02-operational-trust-scorecards",
+    title: "Operational Trust for AI Systems: Scorecards, SLOs, and Guardrails",
+    description: "A field guide to measurable AI reliability: eval scorecards, red-team funnels, and production SLOs that stick.",
+    content: `
+# Operational Trust for AI Systems
+
+Trust emerges from measurement. This guide ships a minimal stack: offline evals → staged red‑team → online scorecards tied to SLOs and error budgets.
+
+## What to Measure
+- Task success and calibration
+- Safety policy adherence
+- Latency, cost, and drift
+
+## Operate
+- Weekly scorecard review with owners
+- One fix per regression
+- Roll forward with canaries + kill switches
+    `,
+    author: "Zion Tech Group Reliability Lab",
+    date: "2025-10-02",
+    category: "AI Reliability",
+    tags: ["Reliability", "SLOs", "Evaluations", "Safety", "Production"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/operational-trust.jpg"
+  },
+  {
     slug: "ai-2025-october-enterprise-digital-twins-revolution",
     title: "Enterprise Digital Twins: The 2025 AI-Powered Revolution Transforming Business Operations",
     description: "Discover how AI-powered digital twins are revolutionizing enterprise operations in 2025, delivering unprecedented insights, predictive capabilities, and $47B in business value.",
