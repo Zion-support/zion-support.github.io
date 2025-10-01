@@ -147,94 +147,126 @@ export default function ContentHub() {
 
       {/* Featured Content */}
       <section className="mb-16">
-        <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white p-8 rounded-2xl mb-8">
+        <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white p-8 rounded-2xl mb-8">
           <div className="text-center">
             <div className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-bold mb-4 animate-pulse">
-              🚀 JUST PUBLISHED: OCTOBER 2025
+              🚀 JUST PUBLISHED: OCTOBER 1, 2025 - AI PRODUCTIVITY REVOLUTION
             </div>
             <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
-              Autonomous Reality Synthesis Revolution
+              AI-Powered Productivity: $50M+ in Proven Results
             </h2>
             <p className="text-xl mb-6 max-w-3xl mx-auto">
-              The newest breakthrough in enterprise AI: Self-evolving digital environments delivering $47.3B in proven value
+              New guides reveal how companies achieve 10x productivity with AI code assistants and 97.5% retention with AI customer success platforms
             </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <Link
-                href="/blog/ai-2025-october-autonomous-reality-synthesis"
-                className="bg-white text-cyan-600 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
-              >
-                Read Complete Guide →
-              </Link>
-              <Link
-                href="/case-studies/autonomous-reality-synthesis-47-billion-success"
-                className="border-2 border-white text-white font-bold py-3 px-6 rounded-lg hover:bg-white/10 transition-colors"
-              >
-                View $47.3B Success Story →
-              </Link>
+            <div className="grid md:grid-cols-2 gap-4 mb-6 max-w-4xl mx-auto">
+              <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg">
+                <h3 className="font-bold mb-2">👨‍💻 AI Code Assistants</h3>
+                <p className="text-sm mb-3">12x productivity • 68% faster delivery • $32M savings</p>
+                <div className="flex flex-col sm:flex-row gap-2">
+                  <Link
+                    href="/blog/ai-2025-oct-01-generative-ai-code-assistant-revolution"
+                    className="bg-white text-indigo-600 font-bold py-2 px-4 rounded-lg hover:bg-gray-100 transition-colors text-sm"
+                  >
+                    Read Guide →
+                  </Link>
+                  <Link
+                    href="/case-studies/ai-2025-oct-01-tech-startup-ai-code-assistant-32m-success"
+                    className="border-2 border-white text-white font-bold py-2 px-4 rounded-lg hover:bg-white/10 transition-colors text-sm"
+                  >
+                    $32M Case Study →
+                  </Link>
+                </div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg">
+                <h3 className="font-bold mb-2">🎯 AI Customer Success</h3>
+                <p className="text-sm mb-3">97.5% retention • 8x productivity • $18M saved</p>
+                <div className="flex flex-col sm:flex-row gap-2">
+                  <Link
+                    href="/blog/ai-2025-oct-01-ai-powered-customer-success-platform"
+                    className="bg-white text-purple-600 font-bold py-2 px-4 rounded-lg hover:bg-gray-100 transition-colors text-sm"
+                  >
+                    Read Guide →
+                  </Link>
+                  <Link
+                    href="/case-studies/ai-2025-oct-01-saas-company-ai-customer-success-18m-success"
+                    className="border-2 border-white text-white font-bold py-2 px-4 rounded-lg hover:bg-white/10 transition-colors text-sm"
+                  >
+                    $18M Case Study →
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mb-8">Featured Content</h2>
         <div className="grid md:grid-cols-3 gap-6">
-          <div className="bg-gradient-to-br from-cyan-50 to-blue-50 p-6 rounded-xl border-2 border-cyan-200">
+          <div className="bg-gradient-to-br from-indigo-50 to-purple-50 p-6 rounded-xl border-2 border-indigo-200">
             <div className="flex items-center gap-2 mb-4">
-              <span className="bg-cyan-100 text-cyan-800 px-2 py-1 rounded-full text-xs font-semibold">
-                🌟 NEW: October 2025
+              <span className="bg-indigo-100 text-indigo-800 px-2 py-1 rounded-full text-xs font-semibold">
+                🌟 NEW: Oct 1, 2025
               </span>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">
-              Autonomous Reality Synthesis
+              AI Code Assistants: Developer Revolution
             </h3>
             <p className="text-gray-600 mb-4">
-              Revolutionary AI combining quantum computing, spatial AI, and digital twins. 16,480% ROI proven across 847 facilities.
+              Achieve 10x productivity gains, 68% faster time-to-market, and $32M in savings with AI-powered development tools.
             </p>
             <Link
-              href="/blog/ai-2025-october-autonomous-reality-synthesis"
-              className="text-cyan-600 font-semibold hover:text-cyan-700"
+              href="/blog/ai-2025-oct-01-generative-ai-code-assistant-revolution"
+              className="text-indigo-600 font-semibold hover:text-indigo-700"
             >
-              Read Revolutionary Guide →
+              Read Complete Guide →
             </Link>
           </div>
 
-          <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl">
+          <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-xl border-2 border-purple-200">
             <div className="flex items-center gap-2 mb-4">
-              <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
-                Featured Article
+              <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
+                🌟 NEW: Oct 1, 2025
               </span>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">
-              AI Multimodal Enterprise Solutions 2026
+              AI Customer Success: Retention Revolution
             </h3>
             <p className="text-gray-600 mb-4">
-              Master multimodal AI for enterprise with vision, audio, and text processing. Achieve 300% ROI.
+              Transform churn prevention with 97.5% retention rates, 8x CS productivity, and $18M in prevented churn annually.
             </p>
             <Link
-              href="/blog/ai-multimodal-enterprise-2026"
-              className="text-blue-600 font-semibold hover:text-blue-700"
+              href="/blog/ai-2025-oct-01-ai-powered-customer-success-platform"
+              className="text-purple-600 font-semibold hover:text-purple-700"
             >
-              Read Article →
+              Read Complete Guide →
             </Link>
           </div>
 
           <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl">
             <div className="flex items-center gap-2 mb-4">
               <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
-                🔥 $47.3B Success
+                🔥 $50M+ Combined Value
               </span>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">
-              Autonomous Reality Synthesis Success
+              Real Success Stories: $50M Impact
             </h3>
             <p className="text-gray-600 mb-4">
-              Fortune 50 company achieves $47.3B in value with 99.98% accuracy across global operations.
+              See how TechFlow and CloudSync achieved $32M and $18M in annual value with AI productivity solutions.
             </p>
-            <Link
-              href="/case-studies/autonomous-reality-synthesis-47-billion-success"
-              className="text-green-600 font-semibold hover:text-green-700"
-            >
-              View Case Study →
-            </Link>
+            <div className="flex flex-col gap-2">
+              <Link
+                href="/case-studies/ai-2025-oct-01-tech-startup-ai-code-assistant-32m-success"
+                className="text-green-600 font-semibold hover:text-green-700 text-sm"
+              >
+                $32M Code Assistant Success →
+              </Link>
+              <Link
+                href="/case-studies/ai-2025-oct-01-saas-company-ai-customer-success-18m-success"
+                className="text-green-600 font-semibold hover:text-green-700 text-sm"
+              >
+                $18M CS Platform Success →
+              </Link>
+            </div>
           </div>
         </div>
       </section>

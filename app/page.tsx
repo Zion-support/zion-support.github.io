@@ -65,6 +65,9 @@ import October2025NewPracticalContentBanner from '../components/October2025NewPr
 import NewContentShowcaseOct2025 from '../components/NewContentShowcaseOct2025';
 import October2025NewContentBanner from '../components/October2025NewContentBanner';
 
+// NEW OCTOBER 1, 2025 - AI PRODUCTIVITY REVOLUTION
+import October2025AIProductivityBanner from '../components/October2025AIProductivityBanner';
+
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
   description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Transform your business with cutting-edge technology and automation.',
@@ -74,6 +77,9 @@ export const metadata = {
 export default function HomePage() {
   return (
     <div className="animate-fade-in">
+      {/* 🚀 BRAND NEW OCTOBER 1, 2025 - AI PRODUCTIVITY REVOLUTION */}
+      <October2025AIProductivityBanner />
+
       {/* 🔥 BRAND NEW OCTOBER 2025 NEUROMORPHIC & FEDERATED LEARNING */}
       <section className="w-full bg-gradient-to-r from-purple-600 via-blue-600 to-teal-600 text-white py-4">
         <div className="max-w-6xl mx-auto px-4">
