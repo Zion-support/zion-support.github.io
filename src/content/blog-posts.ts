@@ -1873,6 +1873,58 @@ Case studies and rollout steps across retail and manufacturing.
     readTime: "11 min read",
     image: "/images/quantum-supply-chain-2025.jpg"
   }
+  ,
+  {
+    slug: "ai-budgeted-routing-stable-ux-2025-10-04",
+    title: "AI Budgeted Routing: Stable UX Under Any Spend",
+    description: "Quality tiers, request coalescing, and semantic caches keep experience steady while costs flex.",
+    content: `
+# AI Budgeted Routing: Stable UX Under Any Spend
+
+Keep product KPIs stable regardless of budget. We cover tiered model routing with evaluator gates, request coalescing, and multi-layer caches (feature, embedding, retrieval). Includes rollout checklists, dashboards, and safe fallbacks that avoid user-visible regressions while cutting spend 30–70%.
+    `,
+    author: "Zion Tech Group Platform Team",
+    date: "2025-10-04",
+    category: "GenAI Engineering",
+    tags: ["Routing", "Caching", "Cost"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/ai-budgeted-routing.jpg"
+  },
+  {
+    slug: "agent-observability-tool-traces-slis-rollback-2025-10-04",
+    title: "Agent Observability: Tool Traces, SLIs, and Rollback Hooks",
+    description: "See, trust, and control agent actions with budgets, approvals, and instant rollback triggers.",
+    content: `
+# Agent Observability: Tool Traces, SLIs, and Rollback Hooks
+
+Production agents demand end-to-end visibility. We show tool-level traces, KPI-linked SLIs, action budgets, and approval workflows. Learn canary strategies and rollback-first operations to keep incidents rare while unlocking autonomy.
+    `,
+    author: "Zion Tech Group AI Operations",
+    date: "2025-10-04",
+    category: "AI Operations",
+    tags: ["Agents", "Observability", "SLIs", "Rollback"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/agent-observability-2025.jpg"
+  },
+  {
+    slug: "private-experimentation-edge-zero-pii-2025-10-04",
+    title: "Private Experimentation at the Edge: Zero‑PII A/B <100ms",
+    description: "Scoped identifiers, on-device aggregation, and DP noise enable fast, compliant experiments.",
+    content: `
+# Private Experimentation at the Edge: Zero‑PII A/B <100ms
+
+Run global experiments without centralizing PII. This guide details signed configs, cacheable variants, scoped rotating IDs, and differential privacy for cohort metrics—all under 100ms. Includes configs, rollout playbooks, and validation scorecards.
+    `,
+    author: "Zion Tech Group Privacy Lab",
+    date: "2025-10-04",
+    category: "Experimentation",
+    tags: ["Edge", "A/B", "Privacy", "DP"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/private-experimentation-edge-2025.jpg"
+  }
 ];
 
 export default blogPosts;

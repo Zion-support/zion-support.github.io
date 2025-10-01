@@ -27,6 +27,51 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: 5,
   },
   {
+    id: '206',
+    title: 'AI Budgeted Routing: Stable UX Under Any Spend',
+    slug: 'ai-budgeted-routing-stable-ux-2025-10-04',
+    excerpt:
+      'Quality tiers, request coalescing, and semantic caches keep experience steady while costs flex.',
+    content:
+      'Keep product KPIs stable regardless of budget. We cover tiered model routing with evaluator gates, request coalescing, and multi-layer caches (feature, embedding, retrieval). Includes rollout checklists, dashboards, and safe fallbacks that avoid user-visible regressions while cutting spend 30–70%.',
+    featuredImage: '/images/blog/ai-budgeted-routing.jpg',
+    category: 'AI',
+    tags: ['Routing', 'Caching', 'Cost'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-04',
+    readTime: 7,
+  },
+  {
+    id: '207',
+    title: 'Agent Observability: Tool Traces, SLIs, and Rollback Hooks',
+    slug: 'agent-observability-tool-traces-slis-rollback-2025-10-04',
+    excerpt:
+      'See, trust, and control agent actions with budgets, approvals, and instant rollback triggers.',
+    content:
+      'Production agents demand end-to-end visibility. We show tool-level traces, KPI-linked SLIs, action budgets, and approval workflows. Learn canary strategies and rollback-first operations to keep incidents rare while unlocking autonomy.',
+    featuredImage: '/images/blog/agent-observability-2025.jpg',
+    category: 'AI',
+    tags: ['Agents', 'Observability', 'SLIs', 'Rollback'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-04',
+    readTime: 8,
+  },
+  {
+    id: '208',
+    title: 'Private Experimentation at the Edge: Zero‑PII A/B <100ms',
+    slug: 'private-experimentation-edge-zero-pii-2025-10-04',
+    excerpt:
+      'Scoped identifiers, on-device aggregation, and DP noise enable fast, compliant experiments.',
+    content:
+      'Run global experiments without centralizing PII. This guide details signed configs, cacheable variants, scoped rotating IDs, and differential privacy for cohort metrics—all under 100ms. Includes configs, rollout playbooks, and validation scorecards.',
+    featuredImage: '/images/blog/private-experimentation-edge-2025.jpg',
+    category: 'Experimentation',
+    tags: ['Edge', 'A/B', 'Privacy', 'DP'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-04',
+    readTime: 7,
+  },
+  {
     id: '31',
     title: 'AI Platform Reliability Scorecards 2027: SLIs That Drive Outcomes',
     slug: 'ai-2025-oct-03-platform-reliability-scorecards-2027',
