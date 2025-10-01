@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 const https = require('https');
+const fs = require('fs');
 
 const options = {
   hostname: 'api.github.com',
@@ -40,7 +41,7 @@ const req = https.get(options, (res) => {
       }
       
       // Save to file for processing
-      require('fs').writeFileSync('open_prs_current.json', JSON.stringify(prs, null, 2));
+      fs.writeFileSync('open_prs_current.json', JSON.stringify(prs, null, 2));
       console.log('📁 Saved PR data to open_prs_current.json');
       
     } catch (error) {
