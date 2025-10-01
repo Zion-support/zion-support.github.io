@@ -1624,6 +1624,42 @@ Comes with reference architectures and an operations playbook that cuts turnarou
     featured: true,
     readTime: "10 min read",
     image: "/images/intelligent-document-automation-2025.jpg"
+  },
+  {
+    slug: "ai-2025-oct-03-autonomous-finops-scorecards-v2",
+    title: "Autonomous FinOps Scorecards v2: 30–70% GenAI Spend ↓, No Regressions",
+    description: "KPI-linked cost scorecards, quality tiers, semantic caches, and budget-aware routing that cut spend without hurting UX.",
+    content: `
+# Autonomous FinOps Scorecards v2
+
+Enterprise teams are standardizing on KPI-linked cost controls that make GenAI spend predictable without UX regressions.
+
+## What You Ship
+- Cost scorecards wired to product KPIs (not just tokens)
+- Quality tiers with eval gates and dark-ship experiments
+- Semantic caches with freshness windows and negative caches
+- Budget-aware routers with safe fallbacks and kill switches
+
+## Rollout Checklist
+- Start dark: compare cost/request and success KPIs
+- Gate tier promotions with online evals
+- Publish a weekly scorecard with 1 regression → 1 fix
+- Lock in wins via CI policy tests
+
+## Results We See
+- 30–70% cost reduction with steady task success
+- P95 improves 20–40% via cache hits and coalescing
+- Fewer incidents thanks to reversible, budgeted changes
+
+Need help landing this? We’ve shipped these controls across finance, retail, and media platforms.
+    `,
+    author: "Zion Tech Group FinOps Lab",
+    date: "2025-10-03",
+    category: "FinOps",
+    tags: ["FinOps", "Cost", "Quality Tiers", "Caching", "Budgets"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/autonomous-finops-scorecards-v2.jpg"
   }
   ,
   {
