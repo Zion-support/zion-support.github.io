@@ -2,6 +2,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
+import January2025QuantumNeuralRevolutionBanner from '../components/January2025QuantumNeuralRevolutionBanner';
 import UltraIntelligentAutonomousSystems2026Banner from '../components/UltraIntelligentAutonomousSystems2026Banner';
 import QuantumNeuralSuperintelligence2026Banner from '../components/QuantumNeuralSuperintelligence2026Banner';
 import AI2026RevolutionaryAutonomousSystemsBanner from '../components/AI2026RevolutionaryAutonomousSystemsBanner';
@@ -79,6 +80,10 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-slate-950">
+      {/* 🚀🚀🚀 NEWEST: JANUARY 2025 QUANTUM NEURAL REVOLUTION - ABSOLUTE TOP PRIORITY! 🚀🚀🚀 */}
+      {/* Featured: 10,000x Performance, 99.9% Consciousness Accuracy, $2.5B ROI Potential */}
+      <January2025QuantumNeuralRevolutionBanner />
+      
       {/* 🚀🚀🚀 DECEMBER 2025 NEW BREAKTHROUGH CONTENT - MOST RECENT 🚀🚀🚀 */}
       {/* Latest autonomous systems and quantum computing breakthroughs - December 2025 */}
       <December2025ContentShowcaseBanner />
