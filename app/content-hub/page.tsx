@@ -12,6 +12,8 @@ export default function ContentHub() {
     {
       title: 'AI Implementation',
       articles: [
+        { title: 'Digital Transformation Excellence 2025', slug: '/blog/ai-2025-october-digital-transformation-enterprise-excellence', readTime: '22 min', featured: true },
+        { title: 'Cloud-Native AI Platform Excellence 2025', slug: '/blog/ai-2025-october-cloud-native-ai-platform-excellence', readTime: '26 min', featured: true },
         { title: 'AI Agent Swarms Enterprise Orchestration 2026', slug: '/blog/ai-agent-swarms-enterprise-orchestration-2026', readTime: '28 min', featured: true },
         { title: 'Quantum-Enhanced AI Enterprise Breakthrough 2026', slug: '/blog/quantum-enhanced-ai-enterprise-breakthrough-2026', readTime: '32 min', featured: true },
         { title: 'Agentic Workflow Orchestration 2026', slug: '/blog/agentic-workflow-orchestration-2026', readTime: '16 min', featured: true },
@@ -58,6 +60,22 @@ export default function ContentHub() {
   ];
 
   const caseStudies = [
+    {
+      title: 'Global Retail Digital Transformation',
+      company: 'Global Retail Corporation',
+      industry: 'Retail & E-commerce',
+      results: '$12.4B Value & 98.7% Automation',
+      slug: '/case-studies/ai-2025-oct-global-retail-digital-transformation-12-4-billion-success',
+      featured: true
+    },
+    {
+      title: 'Fortune 50 Cloud-Native AI Platform',
+      company: 'Global Technology Corporation',
+      industry: 'Technology & SaaS',
+      results: '$8.7B Value & 99.99% Uptime',
+      slug: '/case-studies/ai-2025-oct-fortune-50-cloud-native-platform-8-7-billion-success',
+      featured: true
+    },
     {
       title: 'AI Agent Swarms Manufacturing Success 2026',
       company: 'Global Manufacturing Corp',
@@ -160,26 +178,26 @@ export default function ContentHub() {
         <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white p-8 rounded-2xl mb-8">
           <div className="text-center">
             <div className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-bold mb-4 animate-pulse">
-              🚀 JUST PUBLISHED: OCTOBER 2025
+              🚀 BRAND NEW: OCTOBER 2025
             </div>
             <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
-              Autonomous Reality Synthesis Revolution
+              Digital Transformation & Cloud-Native AI Excellence
             </h2>
             <p className="text-xl mb-6 max-w-3xl mx-auto">
-              The newest breakthrough in enterprise AI: Self-evolving digital environments delivering $47.3B in proven value
+              Latest breakthroughs: $21.1B in combined value from digital transformation and cloud-native AI platforms
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link
-                href="/blog/ai-2025-october-autonomous-reality-synthesis"
+                href="/blog/ai-2025-october-digital-transformation-enterprise-excellence"
                 className="bg-white text-cyan-600 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
               >
-                Read Complete Guide →
+                Read Digital Transformation Guide →
               </Link>
               <Link
-                href="/case-studies/autonomous-reality-synthesis-47-billion-success"
+                href="/case-studies/ai-2025-oct-global-retail-digital-transformation-12-4-billion-success"
                 className="border-2 border-white text-white font-bold py-3 px-6 rounded-lg hover:bg-white/10 transition-colors"
               >
-                View $47.3B Success Story →
+                View $12.4B Success Story →
               </Link>
             </div>
           </div>
@@ -194,53 +212,53 @@ export default function ContentHub() {
               </span>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">
-              Autonomous Reality Synthesis
+              Digital Transformation Excellence
             </h3>
             <p className="text-gray-600 mb-4">
-              Revolutionary AI combining quantum computing, spatial AI, and digital twins. 16,480% ROI proven across 847 facilities.
+              AI-powered enterprise revolution achieving $12.4B value, 98.7% automation, and transforming 1,200+ enterprises.
             </p>
             <Link
-              href="/blog/ai-2025-october-autonomous-reality-synthesis"
+              href="/blog/ai-2025-october-digital-transformation-enterprise-excellence"
               className="text-cyan-600 font-semibold hover:text-cyan-700"
             >
-              Read Revolutionary Guide →
+              Read Complete Guide →
             </Link>
           </div>
 
-          <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl">
+          <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl border-2 border-blue-200">
             <div className="flex items-center gap-2 mb-4">
               <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
-                Featured Article
+                🚀 NEW: October 2025
               </span>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">
-              AI Multimodal Enterprise Solutions 2026
+              Cloud-Native AI Platform Excellence
             </h3>
             <p className="text-gray-600 mb-4">
-              Master multimodal AI for enterprise with vision, audio, and text processing. Achieve 300% ROI.
+              Build scalable platforms achieving 99.99% uptime, 450% performance gains, $8.7B value across 2,500+ deployments.
             </p>
             <Link
-              href="/blog/ai-multimodal-enterprise-2026"
+              href="/blog/ai-2025-october-cloud-native-ai-platform-excellence"
               className="text-blue-600 font-semibold hover:text-blue-700"
             >
-              Read Article →
+              Read Platform Guide →
             </Link>
           </div>
 
-          <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl">
+          <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl border-2 border-green-200">
             <div className="flex items-center gap-2 mb-4">
               <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
-                🔥 $47.3B Success
+                🔥 $12.4B Success
               </span>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">
-              Autonomous Reality Synthesis Success
+              Retail Digital Transformation
             </h3>
             <p className="text-gray-600 mb-4">
-              Fortune 50 company achieves $47.3B in value with 99.98% accuracy across global operations.
+              Fortune 100 retailer achieves $12.4B value with 98.7% automation and revolutionary customer experiences.
             </p>
             <Link
-              href="/case-studies/autonomous-reality-synthesis-47-billion-success"
+              href="/case-studies/ai-2025-oct-global-retail-digital-transformation-12-4-billion-success"
               className="text-green-600 font-semibold hover:text-green-700"
             >
               View Case Study →
