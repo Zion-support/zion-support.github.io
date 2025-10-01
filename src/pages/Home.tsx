@@ -29,6 +29,7 @@ import October2025NewContentBanner from "../components/October2025NewContentBann
 import October2025NewContentBanner2 from "../components/October2025NewContentBanner2";
 import October2025CuttingEdgeContentBanner from "../components/October2025CuttingEdgeContentBanner";
 import October2025FreshContentBanner from "../components/October2025FreshContentBanner";
+import October2025LatestContentBanner from "../components/October2025LatestContentBanner";
 import LatestArticlesShowcase from "../components/LatestArticlesShowcase";
 import LatestContentBanner from "../components/LatestContentBanner";
 import LatestInsights from "../components/LatestInsights";
@@ -199,6 +200,9 @@ const Home = () => {
             { title: "Next-Gen Cloud Security with AI — 99.97% Threat Detection, Sub-Second Response, Zero Breaches", category: "AI Security", link: "/blog/next-gen-cloud-security-ai-2025" }
           ]}
         />
+        
+        {/* 🎯 NEW OCTOBER 1, 2025 - LATEST CONTENT: GenAI Orchestration, AI Security & Multimodal Processing */}
+        <October2025LatestContentBanner />
         
         {/* 🚀 OCTOBER 1, 2025 - FRESH CONTENT: DevSecOps, Multimodal CX, Network Automation & Prompt Engineering */}
         <div className="container mx-auto px-4 py-8">

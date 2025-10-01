@@ -26,6 +26,9 @@ import AIEnterpriseGovernanceComplianceAutomation2026 from '../blog/ai-2026-febr
 import AI2025OctoberAgentMeshNetworksEnterpriseCoordination from '../blog/ai-2025-october-agent-mesh-networks-enterprise-coordination';
 import AI2025OctoberNeuroSymbolicAIReasoningRevolution from '../blog/ai-2025-october-neuro-symbolic-ai-reasoning-revolution';
 import AI2025OctoberRealtimeMultimodalFusionSystems from '../blog/ai-2025-october-realtime-multimodal-fusion-systems';
+import AIAdvancedGenAIOrchestrationPlatform from '../blog/ai-2025-october-advanced-genai-orchestration-platform';
+import EnterpriseAISecurityZeroTrustFramework from '../blog/ai-2025-october-enterprise-ai-security-zero-trust-framework';
+import RealTimeMultimodalProcessingRevolution from '../blog/ai-2025-october-real-time-multimodal-processing-revolution';
 
 // NEW October 1, 2025 Blog Posts
 import AIEdgeComputing5GNetworks2025 from '../blog/ai-edge-computing-5g-networks-2025';
@@ -58,6 +61,9 @@ export const AppRouter: React.FC = () => {
       <Route path="/blog/ai-2025-october-agent-mesh-networks-enterprise-coordination" element={<AI2025OctoberAgentMeshNetworksEnterpriseCoordination />} />
       <Route path="/blog/ai-2025-october-neuro-symbolic-ai-reasoning-revolution" element={<AI2025OctoberNeuroSymbolicAIReasoningRevolution />} />
       <Route path="/blog/ai-2025-october-realtime-multimodal-fusion-systems" element={<AI2025OctoberRealtimeMultimodalFusionSystems />} />
+      <Route path="/blog/ai-2025-october-advanced-genai-orchestration-platform" element={<AIAdvancedGenAIOrchestrationPlatform />} />
+      <Route path="/blog/ai-2025-october-enterprise-ai-security-zero-trust-framework" element={<EnterpriseAISecurityZeroTrustFramework />} />
+      <Route path="/blog/ai-2025-october-real-time-multimodal-processing-revolution" element={<RealTimeMultimodalProcessingRevolution />} />
       {/* NEW October 1, 2025 Blog Posts */}
       <Route path="/blog/ai-edge-computing-5g-networks-2025" element={<AIEdgeComputing5GNetworks2025 />} />
       <Route path="/blog/quantum-safe-cryptography-implementation-2025" element={<QuantumSafeCryptographyImplementation2025 />} />
