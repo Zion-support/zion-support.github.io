@@ -1,46 +1,42 @@
 #!/bin/bash
 
-# List of branches to merge
-branches=(
-    "origin/chore/content-update-2025-09-30"
-    "origin/chore/merge-ci-fixes-into-main"
-    "origin/content-update-2025"
-    "origin/content/advertise-latest-2025"
-    "origin/feat/add-sept-content-and-home-promo"
-    "origin/cursor/check-fix-push-and-merge-to-main-653d"
-    "origin/cursor/check-fix-push-and-merge-to-main-d33b"
-)
+# Script to merge unmerged cursor branches into main
+set -e
 
-for branch in "${branches[@]}"; do
-    echo "Attempting to merge $branch..."
-    
-    # Fetch the branch
-    git fetch origin "$(basename $branch)"
-    
-    # Try to merge
-    if git merge "$branch" --no-commit --no-ff 2>/dev/null; then
-        echo "Successfully merged $branch"
-        git commit -m "Merge branch '$branch' into main
+echo "Starting branch merge process..."
 
-Automated merge of branch with resolved conflicts."
+# Get list of unmerged cursor branches
+UNMERGED_BRANCHES=$(git branch -r --no-merged main | grep 'cursor/' | head -3)
+
+echo "Found unmerged branches:"
+echo "$UNMERGED_BRANCHES"
+
+for branch in $UNMERGED_BRANCHES; do
+    echo "Processing branch: $branch"
+    
+    # Check if branch exists
+    if git show-ref --verify --quiet refs/remotes/$branch; then
+        echo "Merging $branch into main..."
+        
+        # Try to merge with automatic conflict resolution
+        if git merge --no-edit --no-ff $branch; then
+            echo "Successfully merged $branch"
+        else
+            echo "Merge conflict in $branch, resolving..."
+            
+            # Resolve conflicts by taking the branch version
+            git checkout --theirs .
+            git add .
+            git commit --no-edit
+            
+            echo "Resolved conflicts for $branch"
+        fi
     else
-        echo "Merge conflict detected in $branch, resolving..."
-        
-        # Resolve conflicts automatically
-        find . -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" | xargs sed -i '/<<<<<<< HEAD/d'
-        find . -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" | xargs sed -i '/=======/d'
-        find . -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" | xargs sed -i '/>>>>>>> origin\//d'
-        
-        # Add all resolved files
-        git add .
-        
-        # Commit the merge
-        git commit -m "Merge branch '$branch' into main
-
-Resolved merge conflicts automatically."
-        
-        echo "Resolved conflicts and merged $branch"
+        echo "Branch $branch does not exist, skipping..."
     fi
 done
 
-echo "All branches merged successfully!"
+echo "All branches processed. Pushing to remote..."
+git push origin main
+
+echo "Merge process completed!"
