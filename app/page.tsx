@@ -296,6 +296,10 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base flex-wrap">
             <span className="font-bold">🔥 JUST PUBLISHED OCT 1:</span>
+            <Link href="/blog/ai-2025-october-vector-database-optimization" className="underline hover:text-yellow-200 font-bold">Vector DB Optimization</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/blog/ai-2025-october-hyper-personalization-engines" className="underline hover:text-yellow-200 font-bold">Hyper-Personalization</Link>
+            <span className="hidden md:inline">•</span>
             <Link href="/blog/ai-2025-october-autonomous-analytics-breakthrough" className="underline hover:text-yellow-200 font-bold">Autonomous Analytics</Link>
             <span className="hidden md:inline">•</span>
             <Link href="/blog/ai-2025-october-sovereign-vector-knowledge-graph" className="underline hover:text-yellow-200 font-bold">Sovereign Vector KG</Link>
