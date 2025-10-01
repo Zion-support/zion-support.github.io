@@ -99,6 +99,19 @@ const Home = () => {
         <link rel="canonical" href="https://ziontechgroup.com" />
       </Helmet>
       <AdvertisingBanner />
+      {/* Promo: Brand new governance content set */}
+      <NewContentPromoBanner 
+        className="border-b border-white/10" 
+        variant="premium" 
+        title="✅ NEW: AI Budgets Blueprint + End-to-End Policy Tests"
+        description="Cut GenAI costs 40–70% with budget-aware routing and wire policy tests into CI/CD for safe velocity."
+        ctaText="Read the new guides"
+        ctaLink="/blog"
+        featuredItems={[
+          { title: "Enterprise AI Budgets 2025 — Guardrails + Scorecards", category: "AI Governance", link: "/blog/ai-2025-oct-03-ai-budgets-blueprint" },
+          { title: "End-to-End Policy Tests for AI — Ship Faster, Safely", category: "AI Reliability", link: "/blog/ai-2025-oct-03-policy-tests-end-to-end" }
+        ]}
+      />
       {/* Promo: New Enterprise AI Governance Blueprint */}
       <NewContentPromoBanner 
         className="border-b border-white/10" 
