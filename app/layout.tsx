@@ -5,13 +5,13 @@ import './globals.css';
 import { September30NewContentShowcase } from '../components/PromotionalBanner';
 
 export const metadata = {
-  title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
-  description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.',
-  keywords: 'AI services, micro SaaS, IT services, cloud migration, DevOps, SRE, enterprise software',
+  title: 'Zion Tech Group — January 2026 AI Revolution: Synthetic Consciousness, Multimodal AI, Autonomous Operations',
+  description: 'Leading the January 2026 AI Revolution with Synthetic Consciousness ($500B success), Multimodal AI Integration ($75B value), and Autonomous Enterprise Operations. Transform your business with cutting-edge AI solutions.',
+  keywords: 'synthetic consciousness, multimodal AI, autonomous operations, enterprise AI, January 2026 AI breakthrough, consciousness AI, unified intelligence, business automation, AI consulting, enterprise transformation',
   authors: [{ name: 'Zion Tech Group' }],
   openGraph: {
-    title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
-    description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.',
+    title: 'Zion Tech Group — January 2026 AI Revolution: Synthetic Consciousness, Multimodal AI, Autonomous Operations',
+    description: 'Leading the January 2026 AI Revolution with Synthetic Consciousness ($500B success), Multimodal AI Integration ($75B value), and Autonomous Enterprise Operations. Transform your business with cutting-edge AI solutions.',
     url: 'https://ziontechgroup.com',
     siteName: 'Zion Tech Group',
     locale: 'en_US',
@@ -19,8 +19,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
-    description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.',
+    title: 'Zion Tech Group — January 2026 AI Revolution: Synthetic Consciousness, Multimodal AI, Autonomous Operations',
+    description: 'Leading the January 2026 AI Revolution with Synthetic Consciousness ($500B success), Multimodal AI Integration ($75B value), and Autonomous Enterprise Operations. Transform your business with cutting-edge AI solutions.',
   },
   robots: {
     index: true,
