@@ -1,52 +1,53 @@
 #!/bin/bash
 
-echo "Starting PR merge process..."
+# Merge all open PRs automatically
+PR_BRANCHES=(
+  "cursor/create-and-deploy-new-content-4209"
+  "cursor/create-and-deploy-new-content-de63"
+  "cursor/create-and-deploy-new-content-b7e3"
+  "cursor/create-and-deploy-new-content-c909"
+  "cursor/create-and-deploy-new-content-b01b"
+  "cursor/create-and-deploy-new-content-7897"
+  "cursor/create-and-deploy-new-content-3561"
+  "cursor/create-and-deploy-new-content-7f50"
+)
 
-# Get all PR refs
-PR_REFS=$(git ls-remote origin | grep -E 'refs/pull/[0-9]+/head' | awk '{print $2}' | sort -V)
-
-# Counter for tracking
-SUCCESS_COUNT=0
-FAILED_COUNT=0
-FAILED_PRS=()
-
-for pr_ref in $PR_REFS; do
-    # Extract PR number
-    PR_NUM=$(echo $pr_ref | sed 's/refs\/pull\/\([0-9]*\)\/head/\1/')
+for branch in "${PR_BRANCHES[@]}"; do
+  echo "========================================="
+  echo "Processing: $branch"
+  echo "========================================="
+  
+  # Fetch the branch
+  git fetch origin "$branch" 2>&1 | head -3
+  
+  # Try to merge
+  if git merge "origin/$branch" --no-edit; then
+    echo "✓ Merged $branch successfully without conflicts"
+  else
+    echo "⚠ Conflicts detected in $branch, resolving automatically..."
     
-    echo "Processing PR #$PR_NUM..."
+    # Resolve conflicts by accepting incoming changes for key files
+    git checkout --theirs App.tsx 2>/dev/null || true
+    git checkout --theirs app/layout.tsx 2>/dev/null || true
+    git checkout --theirs app/page.tsx 2>/dev/null || true
+    git checkout --theirs src/pages/Home.tsx 2>/dev/null || true
     
-    # Fetch the PR
-    if git fetch origin $pr_ref:pr-$PR_NUM 2>/dev/null; then
-        echo "  ✓ Fetched PR #$PR_NUM"
-        
-        # Try to merge
-        if git merge pr-$PR_NUM --no-edit -X ours 2>/dev/null; then
-            echo "  ✓ Successfully merged PR #$PR_NUM"
-            ((SUCCESS_COUNT++))
-        else
-            echo "  ✗ Failed to merge PR #$PR_NUM (conflicts)"
-            git merge --abort 2>/dev/null
-            FAILED_PRS+=($PR_NUM)
-            ((FAILED_COUNT++))
-        fi
-        
-        # Clean up the branch
-        git branch -D pr-$PR_NUM 2>/dev/null
+    # Add all changes
+    git add -A
+    
+    # Commit the merge
+    if git commit -m "Merge PR: $branch"; then
+      echo "✓ Successfully merged $branch with conflict resolution"
     else
-        echo "  ✗ Failed to fetch PR #$PR_NUM"
-        FAILED_PRS+=($PR_NUM)
-        ((FAILED_COUNT++))
+      echo "✗ Failed to commit merge for $branch"
+      git merge --abort
     fi
+  fi
+  
+  echo ""
 done
 
-echo ""
-echo "=== MERGE SUMMARY ==="
-echo "Successfully merged: $SUCCESS_COUNT PRs"
-echo "Failed to merge: $FAILED_COUNT PRs"
-
-if [ ${#FAILED_PRS[@]} -gt 0 ]; then
-    echo "Failed PRs: ${FAILED_PRS[*]}"
-fi
-
-echo "Process completed."
+echo "========================================="
+echo "Merge process complete!"
+echo "========================================="
+git log --oneline -10
