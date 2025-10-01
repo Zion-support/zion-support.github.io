@@ -399,4 +399,49 @@ export const BLOG_POSTS: BlogPost[] = [
     publishedAt: '2025-10-01',
     readTime: 9,
   },
+  {
+    id: '27',
+    title: 'Policy-Driven AI: Guardrails as Code for Safer Autonomy',
+    slug: 'policy-driven-ai-guardrails-as-code-2025-10-02',
+    excerpt:
+      'Encode safety, cost, and latency constraints directly in code to scale reliable AI systems.',
+    content:
+      'We demonstrate how to operationalize AI guardrails as code: intent verification, reversible tool actions, approval tiers, and budget policies enforced at runtime. Includes reference policy packs, evaluation hooks, and rollout stages that let teams ship faster without sacrificing safety.',
+    featuredImage: '/images/blog/policy-driven-ai.jpg',
+    category: 'AI',
+    tags: ['Guardrails', 'Safety', 'Policy as Code'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-02',
+    readTime: 7,
+  },
+  {
+    id: '28',
+    title: 'Platform Observability 2025: From Signals to Automated Actions',
+    slug: 'platform-observability-automated-actions-2025-10-02',
+    excerpt:
+      'Tie telemetry to safe automations with SLO-aware runbooks, canaries, and rollback-first design.',
+    content:
+      'Modern platforms close the loop between detection and remediation. We cover actionability patterns: event normalization, intent-aware runbooks, progressive delivery gates, and human-in-the-loop automation. Learn how to reduce MTTR and improve reliability with measurable guardrails.',
+    featuredImage: '/images/blog/platform-observability-2025.jpg',
+    category: 'Observability',
+    tags: ['SRE', 'Automation', 'SLO'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-02',
+    readTime: 6,
+  },
+  {
+    id: '29',
+    title: 'Cloud Cost Playbooks 2025: LLM + Infra Savings Without Slowdowns',
+    slug: 'cloud-cost-playbooks-llm-infra-2025-10-02',
+    excerpt:
+      'Proven patterns to cut 30–50% across models and infra: caching tiers, routing, and rightsizing.',
+    content:
+      'A practical toolkit for sustainable cost control. Implement semantic and workflow caches, latency-aware model routing, and automated rightsizing. Includes dashboards, policies, and incident-ready rollback patterns used by high-velocity teams to shrink spend without hurting product speed.',
+    featuredImage: '/images/blog/cloud-cost-playbooks-2025.jpg',
+    category: 'Cloud',
+    tags: ['FinOps', 'LLM', 'Optimization'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-02',
+    readTime: 7,
+  },
 ];
