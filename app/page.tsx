@@ -69,6 +69,11 @@ import October2025NewPracticalContentBanner from '../components/October2025NewPr
 import NewContentShowcaseOct2025 from '../components/NewContentShowcaseOct2025';
 import October2025NewContentBanner from '../components/October2025NewContentBanner';
 
+// NEWEST OCTOBER 2025 CONTENT - PRODUCTION AI & SECURITY
+import ProductionAgenticAIBanner, { AgenticAIShowcaseBanner } from '../components/ProductionAgenticAIBanner';
+import AISecurityBanner, { AISecurityShowcaseBanner } from '../components/AISecurityBanner';
+import October2025NewPracticalContentBannerTop, { October2025PracticalContentShowcase } from '../components/October2025NewPracticalContentBanner';
+
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
   description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Transform your business with cutting-edge technology and automation.',
@@ -78,6 +83,11 @@ export const metadata = {
 export default function HomePage() {
   return (
     <div className="animate-fade-in">
+      {/* 🚀 NEWEST OCTOBER 2025 - PRODUCTION AGENTIC AI & SECURITY */}
+      <October2025NewPracticalContentBannerTop />
+      <ProductionAgenticAIBanner />
+      <AISecurityBanner />
+      
       {/* 🚀 BRAND NEW JANUARY 2026 NEUROMORPHIC COMPUTING REVOLUTION */}
       <NeuromorphicComputingRevolutionBanner />
       
@@ -131,7 +141,10 @@ export default function HomePage() {
       {/* NEW OCTOBER 2025 CONTENT - TOP BANNER */}
       <October2025NewContentBanner />
       
-      {/* OCTOBER 2025 PRACTICAL CONTENT */}
+      {/* OCTOBER 2025 PRACTICAL CONTENT - DETAILED SHOWCASES */}
+      <October2025PracticalContentShowcase />
+      <AgenticAIShowcaseBanner />
+      <AISecurityShowcaseBanner />
       <October2025NewPracticalContentBanner />
       <NewContentShowcaseOct2025 />
       
