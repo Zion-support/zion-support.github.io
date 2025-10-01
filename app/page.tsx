@@ -59,6 +59,10 @@ import October2025NewPracticalContentBanner from '../components/October2025NewPr
 import NewContentShowcaseOct2025 from '../components/NewContentShowcaseOct2025';
 import October2025NewContentBanner from '../components/October2025NewContentBanner';
 
+// NEW JANUARY 2026 ULTIMATE BREAKTHROUGH CONTENT
+import January2026UltimateBreakthroughBanner from '../components/January2026UltimateBreakthroughBanner';
+import January2026QuantumConsciousnessBanner from '../components/January2026QuantumConsciousnessBanner';
+
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
   description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Transform your business with cutting-edge technology and automation.',
@@ -68,6 +72,12 @@ export const metadata = {
 export default function HomePage() {
   return (
     <div className="animate-fade-in">
+      {/* JANUARY 2026 ULTIMATE BREAKTHROUGH - TOP BANNER */}
+      <January2026UltimateBreakthroughBanner />
+      
+      {/* JANUARY 2026 QUANTUM CONSCIOUSNESS */}
+      <January2026QuantumConsciousnessBanner />
+      
       {/* NEW OCTOBER 2025 CONTENT - TOP BANNER */}
       <October2025NewContentBanner />
       
@@ -76,23 +86,21 @@ export default function HomePage() {
       <NewContentShowcaseOct2025 />
       
       {/* New Content Promo Strip */}
-      <div className="w-full bg-gradient-to-r from-green-600 to-blue-600 text-white">
+      <div className="w-full bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white">
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
-            <span>🚀 NEW October 2025:</span>
-            <Link href="/blog/ai-2025-oct-01-edge-ai-healthcare-revolution" className="underline hover:text-yellow-200">Edge AI Healthcare</Link>
+            <span>🚀 NEW January 2026:</span>
+            <Link href="/blog/ai-2026-january-ultimate-autonomous-enterprise-breakthrough-revolution" className="underline hover:text-yellow-200">$847B Autonomous Revolution</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-2025-oct-01-financial-services-llm-automation" className="underline hover:text-yellow-200">Financial LLM Automation</Link>
+            <Link href="/blog/ai-2026-january-quantum-consciousness-enterprise-transformation" className="underline hover:text-yellow-200">$2.8T Quantum Consciousness</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-2025-oct-01-healthcare-edge-ai-transformation-42-million-success" className="underline hover:text-yellow-200">$42M Healthcare ROI</Link>
+            <Link href="/case-studies/ai-2026-january-goldman-sachs-847-billion-autonomous-trading-revolution" className="underline hover:text-yellow-200">Goldman Sachs $847B Success</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-2025-oct-01-financial-services-llm-automation-87-million-success" className="underline hover:text-yellow-200">$87M Banking ROI</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/services/october-2025-edge-ai-enterprise-transformation-services" className="underline hover:text-yellow-200">Edge AI Services</Link>
+            <Link href="/services/autonomous-enterprise-consciousness-implementation" className="underline hover:text-yellow-200">Autonomous Enterprise Services</Link>
           </div>
           <Link
             href="/blog"
-            className="bg-white text-green-700 hover:bg-gray-100 px-4 py-1.5 rounded-md text-sm font-semibold"
+            className="bg-white text-purple-700 hover:bg-gray-100 px-4 py-1.5 rounded-md text-sm font-semibold"
           >
             Explore Latest
           </Link>
