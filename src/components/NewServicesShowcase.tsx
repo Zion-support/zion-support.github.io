@@ -73,7 +73,7 @@ const NewServicesShowcase: React.FC = () => {
         {/* Services Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {newServices.map((service) => (
-            <Link key={service.id} href={`/services/${service.id}`} className="group block">
+            <Link key={service.id} to={`/services/${service.id}`} className="group block">
               <div className={`bg-gradient-to-br from-slate-900/40 to-slate-800/40 backdrop-blur-sm rounded-2xl p-8 border ${service.borderColor} ${service.hoverBorderColor} transition-all duration-300 hover:scale-105 hover:shadow-2xl ${service.shadowColor}`}>
                 {/* Service Header */}
                 <div className="flex items-center gap-4 mb-6">
@@ -169,19 +169,19 @@ const NewServicesShowcase: React.FC = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              href="/contact" 
+              to="/contact" 
               className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
             >
               Schedule Consultation
             </Link>
             <Link 
-              href="/services" 
+              to="/services" 
               className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
             >
               View All Services
             </Link>
             <Link 
-              href="/case-studies" 
+              to="/case-studies" 
               className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               See Success Stories
