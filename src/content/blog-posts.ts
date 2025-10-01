@@ -1320,6 +1320,65 @@ Comes with reference architectures and an operations playbook that cuts turnarou
     readTime: "10 min read",
     image: "/images/intelligent-document-automation-2025.jpg"
   }
+  ,
+  {
+    slug: "ai-2025-oct-03-enterprise-ai-platform-blueprint",
+    title: "Enterprise AI Platform Blueprint 2025: Ship Weekly With Guardrails",
+    description: "A pragmatic reference architecture to run AI as a product: scorecards, policy tests in CI, tiered routing, and rollback playbooks.",
+    content: `
+# Enterprise AI Platform Blueprint 2025
+
+This blueprint distills what works across Fortune 500 platforms to ship AI weekly without surprises.
+
+## Core Capabilities
+- KPI‑linked scorecards that predict outcomes
+- Policy tests in CI that gate risky changes
+- Quality‑tier routing + semantic caches to control cost
+- Canary rollouts with instant rollback hooks
+
+## Operating Model
+- Weekly scorecard review with owners
+- One regression → one owner → one fix
+- Clear SLOs for reliability, latency, and cost
+
+Ready to tailor this to your stack? Our team can help you land it quickly.
+    `,
+    author: "Zion Tech Group Platform Office",
+    date: "2025-10-03",
+    category: "Platform Engineering",
+    tags: ["Platform", "Governance", "Scorecards", "Routing", "Rollbacks"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/enterprise-ai-platform-blueprint-2025.jpg"
+  },
+  {
+    slug: "ai-2025-oct-03-private-experimentation-at-the-edge",
+    title: "Private Experimentation at the Edge: <100ms, Zero‑PII Metrics",
+    description: "Run global A/Bs with scoped IDs, on‑device aggregation, and DP noise—sub‑100ms decisions without data risk.",
+    content: `
+# Private Experimentation at the Edge
+
+Global experimentation without PII requires new primitives.
+
+## Ingredients
+- Scoped identifiers and field‑level redaction
+- On‑device aggregation with signed configs
+- Differential privacy for safe cohort reporting
+- Budgeted inference with deterministic fallbacks
+
+## Results
+- <100ms decisioning globally
+- 90%+ reduction in sensitive data flows
+- Trustworthy lift estimates with DP guarantees
+    `,
+    author: "Zion Tech Group Edge Lab",
+    date: "2025-10-03",
+    category: "Edge AI",
+    tags: ["Edge", "Experimentation", "Privacy", "DP", "A/B"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/private-experimentation-edge-2025.jpg"
+  }
 ];
 
 export default blogPosts;
