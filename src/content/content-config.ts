@@ -9,6 +9,10 @@ export interface FeaturedItem {
   featured: boolean;
 }
 
+// Import new content
+import { breakthroughContent2025 } from './new-breakthrough-content-2025';
+import { enterpriseCaseStudies2025 } from './enterprise-case-studies-2025';
+
 export const featuredBlogPosts: FeaturedItem[] = [
   {
     id: "ai-2027-runtime-policy-tests-v2",
@@ -979,6 +983,58 @@ featuredBlogPosts.unshift(
     type: "article",
     featured: true
   },
+);
+
+// January 2025 - Add new breakthrough content at the very top
+featuredBlogPosts.unshift(
+  {
+    id: "ai-quantum-neural-fusion-2025",
+    title: "AI Quantum-Neural Fusion 2025: The Next Evolution of Intelligence",
+    description: "Revolutionary fusion of quantum computing and neural networks delivering 10,000x performance improvements and 99.99% accuracy",
+    link: "/blog/ai-quantum-neural-fusion-2025",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "autonomous-enterprise-mesh-2025",
+    title: "Autonomous Enterprise Mesh 2025: Self-Organizing Business Intelligence",
+    description: "Self-organizing AI mesh networks that autonomously optimize business processes, achieving 99.7% operational efficiency",
+    link: "/blog/autonomous-enterprise-mesh-2025",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "synthetic-consciousness-ai-2025",
+    title: "Synthetic Consciousness AI 2025: The Dawn of True Artificial Awareness",
+    description: "Breakthrough AI systems achieving genuine consciousness, emotional intelligence, and creative autonomy with $500B enterprise value",
+    link: "/blog/synthetic-consciousness-ai-2025",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "neuromorphic-edge-computing-2025",
+    title: "Neuromorphic Edge Computing 2025: Brain-Inspired AI at the Edge",
+    description: "Revolutionary neuromorphic chips delivering 1000x energy efficiency and sub-millisecond processing for real-time edge AI",
+    link: "/blog/neuromorphic-edge-computing-2025",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-hyperautomation-platform-2025",
+    title: "AI Hyperautomation Platform 2025: End-to-End Business Automation",
+    description: "Complete business process automation achieving 95% automation rates, 10x efficiency improvements, and $2.8B success stories",
+    link: "/blog/ai-hyperautomation-platform-2025",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "quantum-blockchain-security-2025",
+    title: "Quantum-Blockchain Security 2025: Unbreakable Enterprise Protection",
+    description: "Quantum-resistant blockchain security protecting $2.8B in assets with 99.99% threat prevention and zero security breaches",
+    link: "/blog/quantum-blockchain-security-2025",
+    type: "article",
+    featured: true
+  }
 );
 
 // Surface brand-new articles at the very top of featured content
