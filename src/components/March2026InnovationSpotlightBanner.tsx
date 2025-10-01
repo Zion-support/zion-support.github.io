@@ -1,6 +1,5 @@
 import React from 'react';
 import { ArrowRight, Sparkles, Zap, Brain, Rocket } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 const March2026InnovationSpotlightBanner = () => {
   const innovations = [
