@@ -3,9 +3,14 @@ module.exports = {
   testEnvironment: 'jsdom',
   roots: ['<rootDir>/__tests__', '<rootDir>/src'],
   setupFilesAfterEnv: [ '@testing-library/jest-dom' ],
+  extensionsToTreatAsEsm: ['.ts', '.tsx'],
+  globals: {
+    'ts-jest': {
+      useESM: true
+    }
+  },
   moduleNameMapper: {
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
-    // Minimal mappers to avoid conflicts; project has no tests
     '\\.(gif|ttf|eot|svg|png|jpg|jpeg)$': '<rootDir>/tests/__mocks__/fileMock.js',
   },
   testMatch: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
@@ -36,9 +41,12 @@ module.exports = {
     '/apps.backup/',
   ],
   transform: {
-    '^.+\\.(ts|tsx)$': 'ts-jest',
+    '^.+\\.(ts|tsx)$': ['ts-jest', { useESM: true }],
     '^.+\\.(js|jsx)$': 'babel-jest'
   },
+  transformIgnorePatterns: [
+    'node_modules/(?!(.*\\.mjs$|react|react-dom|@testing-library))'
+  ],
   moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx', 'json'],
   coverageDirectory: 'coverage',
   collectCoverage: false,
