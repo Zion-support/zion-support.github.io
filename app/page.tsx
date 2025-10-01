@@ -59,6 +59,7 @@ import LatestContentPromotionalBanner from '../components/LatestContentPromotion
 import NewContentPromotionalBanner2026 from '../components/NewContentPromotionalBanner2026';
 import AIInnovationShowcaseBanner2026 from '../components/AIInnovationShowcaseBanner2026';
 import NextGenAutonomousBanner from '../components/NextGenAutonomousBanner';
+import AutonomousEnterpriseSystemsBanner from '../components/AutonomousEnterpriseSystemsBanner';
 
 // NEW JANUARY 2026 NEUROMORPHIC & FEDERATED LEARNING CONTENT
 import NeuromorphicComputingRevolutionBanner from '../components/NeuromorphicComputingRevolutionBanner';
@@ -91,6 +92,9 @@ export const metadata = {
 export default function HomePage() {
   return (
     <div className="animate-fade-in">
+      {/* 🚀 NEWEST JANUARY 2026 AUTONOMOUS ENTERPRISE SYSTEMS - TOP PRIORITY */}
+      <AutonomousEnterpriseSystemsBanner />
+      
       {/* 🚀 NEW 2026 CONTENT SHOWCASE - TOP PRIORITY */}
       <NewContent2026Banner />
       <AI2026ContentShowcaseBanner />
