@@ -60,6 +60,9 @@ import NewContentPromotionalBanner2026 from '../components/NewContentPromotional
 import AIInnovationShowcaseBanner2026 from '../components/AIInnovationShowcaseBanner2026';
 import NextGenAutonomousBanner from '../components/NextGenAutonomousBanner';
 
+// NEW JANUARY 2026 AUTONOMOUS BUSINESS PROCESSES CONTENT
+import AutonomousBusinessProcessesBanner from '../components/AutonomousBusinessProcessesBanner';
+
 // NEW JANUARY 2026 NEUROMORPHIC & FEDERATED LEARNING CONTENT
 import NeuromorphicComputingRevolutionBanner from '../components/NeuromorphicComputingRevolutionBanner';
 import FederatedLearningPrivacyBanner from '../components/FederatedLearningPrivacyBanner';
@@ -86,7 +89,10 @@ export const metadata = {
 export default function HomePage() {
   return (
     <div className="animate-fade-in">
-      {/* 🚀 BRAND NEW JANUARY 2026 QUANTUM BREAKTHROUGH - TOP PRIORITY */}
+      {/* 🚀 BRAND NEW JANUARY 2026 AUTONOMOUS BUSINESS PROCESSES - TOP PRIORITY */}
+      <AutonomousBusinessProcessesBanner />
+
+      {/* 🚀 BRAND NEW JANUARY 2026 QUANTUM BREAKTHROUGH */}
       <January2026QuantumBreakthroughBanner />
 
       {/* 🚀 NEWEST OCTOBER 2025 - PRODUCTION AGENTIC AI & SECURITY */}
