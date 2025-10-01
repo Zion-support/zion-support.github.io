@@ -33,6 +33,38 @@ export const latestArticles: LatestArticle[] = [
     trending: true
   },
   {
+    id: "ai-2025-oct-06-enterprise-evals-v4",
+    slug: "enterprise-evals-v4-scorecards-2025-10-06",
+    title: "Enterprise Evals v4: Scorecards That Predict Production",
+    description: "Design KPI‑linked scorecards, golden tasks, and online canaries that prevent regressions while speeding delivery.",
+    excerpt: "Evals that correlate with KPIs and gate risky changes—ship faster with fewer incidents.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-06",
+    category: "AI Reliability",
+    tags: ["Evaluations", "Scorecards", "Guardrails"],
+    featured: true,
+    readTime: "8 min",
+    image: "/images/enterprise-evals-v4-2025.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "ai-2025-oct-06-sub-1ms-decision-engines",
+    slug: "real-time-decision-engines-sub-1ms-2025-10-06",
+    title: "Real-Time Decision Engines: Sub‑1ms at 10M+ Events/sec",
+    description: "Streaming features, tiered caches, and budgeted routes for ultra‑low latency decisions at scale.",
+    excerpt: "Architect decisions with sub‑1ms latency using caches, SLAs, and rollback‑first ops.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-06",
+    category: "Real-Time AI",
+    tags: ["Streaming", "Latency", "Caching"],
+    featured: true,
+    readTime: "9 min",
+    image: "/images/real-time-decision-engines-2025.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "ai-2025-oct-03-agent-release-guardrails",
     slug: "ai-2025-oct-03-agent-release-guardrails",
     title: "Agent Release Guardrails 2026: Budgets, Approvals, Rollback",

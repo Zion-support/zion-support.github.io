@@ -11,9 +11,7 @@ import AI2028OmnipotentSuperintelligenceBreakthroughBanner from '../components/A
 <<<<<<< HEAD
 import AI2027TranscendentQuantumConsciousnessBreakthroughBanner from '../components/AI2027TranscendentQuantumConsciousnessBreakthroughBanner';
 import AI20262027RevolutionaryBreakthroughComprehensiveBanner from '../components/AI20262027RevolutionaryBreakthroughComprehensiveBanner';
-=======
 import December2025UltimateAutonomousRevolutionBanner from '../components/December2025UltimateAutonomousRevolutionBanner';
->>>>>>> origin/cursor/create-and-deploy-new-content-42d2
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
