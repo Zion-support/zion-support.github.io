@@ -109,7 +109,6 @@ export const newArticles2025: NewArticle[] = [
     link: "/blog/ai-2025-october-synthetic-data-generation-mastery",
     readTime: "22 min read",
     tags: ["Synthetic Data", "GANs", "Privacy-Preserving AI", "GDPR Compliance", "Data Augmentation"]
->>>>>>> origin/cursor/create-and-deploy-new-content-aba8
   },
   {
     id: "ai-agent-evaluations-2026",

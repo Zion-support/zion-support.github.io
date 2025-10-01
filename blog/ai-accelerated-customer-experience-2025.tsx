@@ -31,7 +31,7 @@ const sections: { heading: string; body: string }[] = [
   {
     heading: 'Outcomes & Benchmarks',
     body:
-      'Measured across Fortune 500 pilots: 35–45% cost reduction, 60–80% first-contact resolution, 25–35% AHT reduction, 6–12 pt CSAT lift, and 20–30% NPS increase. Maintain 99.9% uptime and <2s P95 across channels.'
+      'Measured across Fortune 500 pilots: 35–45% cost reduction, 60–80% first-contact resolution, 25–35% AHT reduction, 6–12 pt CSAT lift, and 20–30% NPS increase. Maintain 99.9% uptime and &lt;2s P95 across channels.'
   }
 ];
 

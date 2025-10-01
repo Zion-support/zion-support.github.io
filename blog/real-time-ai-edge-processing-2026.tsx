@@ -16,7 +16,7 @@ const RealTimeAIEdgeProcessing2026 = () => {
         </h1>
         
         <p className="text-xl text-gray-400 leading-relaxed">
-          Discover how edge AI is enabling real-time decision-making with <5ms latency, processing billions of data points locally without cloud connectivity, powering autonomous systems from manufacturing to healthcare to smart cities.
+          Discover how edge AI is enabling real-time decision-making with &lt;5ms latency, processing billions of data points locally without cloud connectivity, powering autonomous systems from manufacturing to healthcare to smart cities.
         </p>
       </header>
 
@@ -48,7 +48,7 @@ const RealTimeAIEdgeProcessing2026 = () => {
             </p>
             <div className="space-y-2 text-sm text-gray-300">
               <li>• 100x more efficient than CPU inference</li>
-              <li>• <1W power consumption for mobile devices</li>
+              <li>• &lt;1W power consumption for mobile devices</li>
               <li>• INT8/INT4 quantization for 4-8x speedup</li>
               <li>• On-device training for personalization</li>
             </div>
@@ -74,7 +74,7 @@ const RealTimeAIEdgeProcessing2026 = () => {
           <div className="bg-gradient-to-r from-purple-900/30 to-fuchsia-900/30 border border-fuchsia-500/30 rounded-xl p-6">
             <h4 className="text-xl font-bold text-white mb-3">🚗 Autonomous Vehicles</h4>
             <p className="text-gray-300 mb-4">
-              Self-driving cars process 40TB of sensor data daily from cameras, LiDAR, and radar. Edge AI enables real-time object detection, path planning, and collision avoidance with <10ms latency—critical for safety at highway speeds (100ms = 3 meters traveled at 65mph).
+              Self-driving cars process 40TB of sensor data daily from cameras, LiDAR, and radar. Edge AI enables real-time object detection, path planning, and collision avoidance with &lt;10ms latency—critical for safety at highway speeds (100ms = 3 meters traveled at 65mph).
             </p>
             <div className="grid grid-cols-4 gap-4 p-4 bg-black/30 rounded-lg text-center">
               <div>
@@ -181,7 +181,7 @@ const RealTimeAIEdgeProcessing2026 = () => {
             <div>
               <h4 className="text-lg font-bold text-cyan-400 mb-3">1. Quantization (INT8/INT4)</h4>
               <p className="text-gray-300 mb-2">
-                Convert 32-bit floating-point weights to 8-bit or 4-bit integers, reducing model size by 4-8x with minimal accuracy loss (<2%).
+                Convert 32-bit floating-point weights to 8-bit or 4-bit integers, reducing model size by 4-8x with minimal accuracy loss (&lt;2%).
               </p>
               <div className="grid grid-cols-3 gap-4 p-4 bg-black/30 rounded-lg text-sm">
                 <div>
@@ -264,7 +264,7 @@ const RealTimeAIEdgeProcessing2026 = () => {
               <li>• Pre-optimized models for mobile/edge</li>
               <li>• GPU/NPU acceleration support</li>
               <li>• Model size: 300KB to 50MB</li>
-              <li>• Inference: <10ms on mobile devices</li>
+              <li>• Inference: &lt;10ms on mobile devices</li>
             </ul>
           </div>
 
@@ -339,7 +339,7 @@ const RealTimeAIEdgeProcessing2026 = () => {
           <div className="flex gap-3 items-start">
             <span className="text-3xl">🧠</span>
             <div className="text-gray-300">
-              <strong className="text-white">Neuromorphic Edge Processors:</strong> Brain-inspired chips (Intel Loihi 3, IBM TrueNorth) delivering 1000x energy efficiency for always-on AI applications, enabling <1mW power consumption for continuous sensing.
+              <strong className="text-white">Neuromorphic Edge Processors:</strong> Brain-inspired chips (Intel Loihi 3, IBM TrueNorth) delivering 1000x energy efficiency for always-on AI applications, enabling &lt;1mW power consumption for continuous sensing.
             </div>
           </div>
 
@@ -368,7 +368,7 @@ const RealTimeAIEdgeProcessing2026 = () => {
         <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-xl p-8 my-12">
           <h3 className="text-2xl font-bold text-white mb-4">⚡ Deploy Real-Time Edge AI Solutions</h3>
           <p className="text-gray-300 mb-6">
-            Zion Tech Group specializes in edge AI architecture, model optimization, and deployment at scale. We've helped enterprises deploy 10M+ edge AI devices across automotive, manufacturing, healthcare, and smart city applications. Our team delivers production-ready edge solutions with <5ms latency and 99.99% uptime.
+            Zion Tech Group specializes in edge AI architecture, model optimization, and deployment at scale. We've helped enterprises deploy 10M+ edge AI devices across automotive, manufacturing, healthcare, and smart city applications. Our team delivers production-ready edge solutions with &lt;5ms latency and 99.99% uptime.
           </p>
           <div className="flex flex-wrap gap-4">
             <a href="/contact" className="inline-block px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-300">
