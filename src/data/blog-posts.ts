@@ -14,6 +14,96 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    id: '312',
+    title: 'Real-Time Decision Engines 2027: 10M/sec Under 1ms',
+    slug: 'real-time-decision-engines-2027-2025-10-02',
+    excerpt:
+      'Architect sub‑millisecond decision systems with quality tiers, caches, and intent routing.',
+    content:
+      'A practical blueprint for decision engines that process millions of events per second: intent-aware queues, evaluator-backed routing, tiered caches, and rollback-first operations. Includes SLI scorecards, latency budgets, and production runbooks that keep UX snappy under cost constraints.',
+    featuredImage: '/images/blog/real-time-decision-engines-2027.jpg',
+    category: 'Real-Time AI',
+    tags: ['Latency', 'Routing', 'Caching', 'SLIs'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-02',
+    readTime: 8,
+  },
+  {
+    id: '313',
+    title: 'Privacy‑First Insights 2026: Actionable Analytics Without PII',
+    slug: 'privacy-first-insights-2026-2025-10-02',
+    excerpt:
+      'Scoped IDs, on‑device aggregation, and DP noise for trustworthy insights under <100ms.',
+    content:
+      'Ship analytics teams love without collecting PII. We detail scoped identifiers, on‑device aggregation, DP noise, and consent-aware telemetry. Includes validation scorecards, rollout stages, and controls auditors accept—while keeping performance under 100ms.',
+    featuredImage: '/images/blog/privacy-first-insights-2026.jpg',
+    category: 'Analytics',
+    tags: ['Privacy', 'Analytics', 'Edge', 'DP'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-02',
+    readTime: 6,
+  },
+  {
+    id: '314',
+    title: 'Agent Safety Checklists 2026: Budgets, Sandboxes, Rollbacks',
+    slug: 'agent-safety-checklists-2026-2025-10-02',
+    excerpt:
+      'Practical checklists for safe agent releases with budgeted actions and instant rollback.',
+    content:
+      'Turn agent reliability into muscle memory with budgeted actions, sandboxed tools, KPI‑linked canaries, and one‑click rollback. We provide reference policies, approval tiers, and incident drills that keep autonomy safe without slowing teams.',
+    featuredImage: '/images/blog/agent-safety-checklists-2026.jpg',
+    category: 'AI Operations',
+    tags: ['Agents', 'Safety', 'Budgets', 'Rollback'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-02',
+    readTime: 7,
+  },
+  {
+    id: '309',
+    title: 'AI Reliability Blueprints 2027: Evaluators, Budgets, Instant Rollback',
+    slug: 'ai-reliability-blueprints-2027-2025-10-02',
+    excerpt:
+      'Design KPI‑linked evaluators, action budgets, and one‑click rollback to keep autonomy safe and fast.',
+    content:
+      'A field‑tested guide to reliable AI systems. Implement KPI‑linked evaluators, bounded tool actions with budgets, and rollback‑first automation. Includes dashboards, policy packs, and incident drills used by high‑velocity teams to ship safely week over week.',
+    featuredImage: '/images/blog/ai-reliability-blueprints-2027.jpg',
+    category: 'AI',
+    tags: ['Reliability', 'Evaluators', 'Rollback', 'Guardrails'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-02',
+    readTime: 7,
+  },
+  {
+    id: '310',
+    title: 'Edge Inference Playbook 2027: Sub‑100ms Globally, Predictable Costs',
+    slug: 'edge-inference-playbook-2027-2025-10-02',
+    excerpt:
+      'Warm pools, intent prefetching, and multi‑tier caches for fast, affordable inference worldwide.',
+    content:
+      'Blueprint for globally fast inference: predictive warm pools, SLA‑aware routing, tiered caches, and regional fallbacks. Includes SLIs, cost bands, and rollback playbooks that prevent regressions while controlling spend.',
+    featuredImage: '/images/blog/edge-inference-playbook-2027-v2.jpg',
+    category: 'Edge Computing',
+    tags: ['Latency', 'Caching', 'Global', 'SLA'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-02',
+    readTime: 6,
+  },
+  {
+    id: '311',
+    title: 'Governance That Ships: KPI‑Linked Guardrails for Enterprise AI',
+    slug: 'governance-that-ships-kpi-guardrails-2025-10-02',
+    excerpt:
+      'Turn compliance into speed: encode policies as code, wire online canaries, and gate by KPIs.',
+    content:
+      'Governance does not have to slow delivery. We show how to encode policies as code, integrate online canaries, and gate releases with KPI‑linked evaluators. Includes reference controls, review rituals, and evidence packs auditors love.',
+    featuredImage: '/images/blog/governance-that-ships-2025.jpg',
+    category: 'AI Governance',
+    tags: ['Policy Tests', 'Compliance', 'Evals'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-02',
+    readTime: 7,
+  },
+  {
     id: '301',
     title: 'AI Governance 2027: KPI‑Linked Guardrails That Speed Delivery',
     slug: 'ai-governance-2027-kpi-guardrails-2025-10-01',
