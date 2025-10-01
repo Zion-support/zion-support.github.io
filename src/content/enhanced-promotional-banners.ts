@@ -668,6 +668,98 @@ enhancedPromotionalBanners.push({
   startDate: '2025-09-30'
 });
 
+// October 1, 2025 – MEGA BREAKTHROUGH CONTENT DROP
+enhancedPromotionalBanners.push({
+  id: 'oct-01-2025-breakthrough-content-mega-launch',
+  title: '🎉 MEGA BREAKTHROUGH: 6 Revolutionary AI Solutions Just Released!',
+  description: 'Game-changing content drop! Digital Twins with 92% defect reduction, Hyper-Personalization achieving 8x conversions, Autonomous Networks with 99.999% uptime, Cognitive Process Mining saving 73%, Decision Intelligence 10x faster, and Intelligent Document AI. Transform your enterprise now!',
+  ctaText: 'Explore All Breakthroughs',
+  ctaLink: '/blog',
+  variant: 'success',
+  icon: '🎉',
+  featured: true,
+  priority: 0,
+  startDate: '2025-10-01'
+});
+
+enhancedPromotionalBanners.push({
+  id: 'digital-twin-manufacturing-oct-2025',
+  title: '🏭 NEW: AI-Powered Digital Twins - 92% Defect Reduction, $320M Savings',
+  description: 'Revolutionary digital twin systems transforming manufacturing with real-time simulation and predictive analytics. Achieve 87% faster time-to-market and unprecedented production optimization.',
+  ctaText: 'Discover Digital Twins',
+  ctaLink: '/blog/ai-powered-digital-twin-manufacturing-2025',
+  variant: 'success',
+  icon: '🏭',
+  featured: true,
+  priority: 1,
+  startDate: '2025-10-01'
+});
+
+enhancedPromotionalBanners.push({
+  id: 'hyper-personalization-oct-2025',
+  title: '🎯 NEW: Hyper-Personalization AI - 8x Conversion Rates, 94% Satisfaction',
+  description: 'Next-generation personalization engines delivering individualized experiences at microsecond scale. Drive $280M+ revenue lift through AI-powered customer engagement.',
+  ctaText: 'Master Personalization',
+  ctaLink: '/blog/hyper-personalization-real-time-ai-2025',
+  variant: 'info',
+  icon: '🎯',
+  featured: true,
+  priority: 2,
+  startDate: '2025-10-01'
+});
+
+enhancedPromotionalBanners.push({
+  id: 'autonomous-network-ops-oct-2025',
+  title: '🌐 NEW: Autonomous Network Operations - 99.999% Uptime Guaranteed',
+  description: 'Self-managing network systems that detect, diagnose, and resolve issues autonomously. Achieve 96% faster incident resolution and 82% cost reduction with zero human intervention.',
+  ctaText: 'Explore Autonomous Networks',
+  ctaLink: '/blog/autonomous-network-operations-2025',
+  variant: 'warning',
+  icon: '🌐',
+  featured: true,
+  priority: 3,
+  startDate: '2025-10-01'
+});
+
+enhancedPromotionalBanners.push({
+  id: 'cognitive-process-mining-oct-2025',
+  title: '🔍 NEW: Cognitive Process Mining - 73% Cost Savings, 6x Faster Execution',
+  description: 'AI-powered process discovery that automatically identifies bottlenecks and implements improvements. Achieve $195M+ annual savings through intelligent automation.',
+  ctaText: 'Optimize Your Processes',
+  ctaLink: '/blog/cognitive-process-mining-automation-2025',
+  variant: 'success',
+  icon: '🔍',
+  featured: true,
+  priority: 4,
+  startDate: '2025-10-01'
+});
+
+enhancedPromotionalBanners.push({
+  id: 'decision-intelligence-oct-2025',
+  title: '🧠 NEW: AI-Augmented Decision Intelligence - 10x Faster, 97% Accuracy',
+  description: 'Revolutionary platforms enabling executives to make complex decisions 10x faster with unprecedented accuracy. Create $450M+ value through intelligent decision support.',
+  ctaText: 'Transform Decision Making',
+  ctaLink: '/blog/ai-augmented-decision-intelligence-2025',
+  variant: 'info',
+  icon: '🧠',
+  featured: true,
+  priority: 5,
+  startDate: '2025-10-01'
+});
+
+enhancedPromotionalBanners.push({
+  id: 'intelligent-document-understanding-oct-2025',
+  title: '📄 NEW: Intelligent Document AI - Process 1M+ Documents Daily at 99.2% Accuracy',
+  description: 'Next-generation document understanding that comprehends context and automates workflows. Achieve 95% faster processing and $140M+ annual savings.',
+  ctaText: 'Revolutionize Document Processing',
+  ctaLink: '/blog/intelligent-document-understanding-2025',
+  variant: 'success',
+  icon: '📄',
+  featured: true,
+  priority: 6,
+  startDate: '2025-10-01'
+});
+
 export const getActiveEnhancedBanners = (): EnhancedPromotionalBanner[] => {
   const now = new Date();
   return enhancedPromotionalBanners
