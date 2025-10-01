@@ -45,25 +45,19 @@ import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
 import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
 import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
-<<<<<<< HEAD
 import InteractiveContentRecommendation from '../components/InteractiveContentRecommendation';
 import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
 import LatestContent2026Banner from '../components/LatestContent2026Banner';
-<<<<<<< HEAD
 import NewContent2026ShowcaseBanner from '../components/NewContent2026ShowcaseBanner';
 import LatestContentPromotionalBanner from '../components/LatestContentPromotionalBanner';
 import NewContentPromotionalBanner2026 from '../components/NewContentPromotionalBanner2026';
 import AIInnovationShowcaseBanner2026 from '../components/AIInnovationShowcaseBanner2026';
-=======
 import NextGenAutonomousBanner from '../components/NextGenAutonomousBanner';
->>>>>>> cursor/create-and-deploy-new-content-a364
-=======
-import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
->>>>>>> cursor/create-and-deploy-new-content-d513
 
 // NEW OCTOBER 2025 PRACTICAL CONTENT
 import October2025NewPracticalContentBanner from '../components/October2025NewPracticalContentBanner';
 import NewContentShowcaseOct2025 from '../components/NewContentShowcaseOct2025';
+import October2025NewContentBanner from '../components/October2025NewContentBanner';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -74,7 +68,10 @@ export const metadata = {
 export default function HomePage() {
   return (
     <div className="animate-fade-in">
-      {/* NEW OCTOBER 2025 PRACTICAL CONTENT - TOP PRIORITY */}
+      {/* NEW OCTOBER 2025 CONTENT - TOP BANNER */}
+      <October2025NewContentBanner />
+      
+      {/* OCTOBER 2025 PRACTICAL CONTENT */}
       <October2025NewPracticalContentBanner />
       <NewContentShowcaseOct2025 />
       
@@ -82,33 +79,19 @@ export default function HomePage() {
       <div className="w-full bg-gradient-to-r from-green-600 to-blue-600 text-white">
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
-            <span>🚀 NEW 2026 Content:</span>
-            <a to="/blog/ai-agent-orchestration-2026" className="underline hover:text-yellow-200">AI Agent Orchestration</a>
+            <span>🚀 NEW October 2025:</span>
+            <Link href="/blog/ai-2025-oct-01-edge-ai-healthcare-revolution" className="underline hover:text-yellow-200">Edge AI Healthcare</Link>
             <span className="hidden md:inline">•</span>
-            <a to="/blog/ai-sustainability-green-tech-2026" className="underline hover:text-yellow-200">AI Sustainability</a>
+            <Link href="/blog/ai-2025-oct-01-financial-services-llm-automation" className="underline hover:text-yellow-200">Financial LLM Automation</Link>
             <span className="hidden md:inline">•</span>
-            <a to="/blog/ai-quantum-computing-2026" className="underline hover:text-yellow-200">Quantum Computing</a>
+            <Link href="/case-studies/ai-2025-oct-01-healthcare-edge-ai-transformation-42-million-success" className="underline hover:text-yellow-200">$42M Healthcare ROI</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-sustainability-transformation-2026" className="underline hover:text-yellow-200">$10M ROI Case Study</Link>
+            <Link href="/case-studies/ai-2025-oct-01-financial-services-llm-automation-87-million-success" className="underline hover:text-yellow-200">$87M Banking ROI</Link>
             <span className="hidden md:inline">•</span>
-<<<<<<< HEAD
-            <a to="/case-studies/ai-quantum-optimization-2026" className="underline hover:text-yellow-200">1000x Speed Improvement</a>
-=======
-            <Link href="/blog/ai-cognitive-computing-breakthrough-2026" className="underline hover:text-yellow-200">Cognitive Computing</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-space-tech-revolution-2026" className="underline hover:text-yellow-200">Space Tech</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-next-generation-autonomous-systems-2026" className="underline hover:text-yellow-200">Next-Gen Autonomous</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-mega-transformation-2026" className="underline hover:text-yellow-200">$50M ROI Case Study</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-autonomous-enterprise-success-2026" className="underline hover:text-yellow-200">$25M ROI Case Study</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-next-generation-autonomous-success-2026" className="underline hover:text-yellow-200">$35M ROI Case Study</Link>
->>>>>>> cursor/create-and-deploy-new-content-a364
+            <Link href="/services/october-2025-edge-ai-enterprise-transformation-services" className="underline hover:text-yellow-200">Edge AI Services</Link>
           </div>
           <Link
-            to="/blog"
+            href="/blog"
             className="bg-white text-green-700 hover:bg-gray-100 px-4 py-1.5 rounded-md text-sm font-semibold"
           >
             Read the latest
@@ -155,12 +138,8 @@ export default function HomePage() {
       {/* New Content Promotional Banner 2026 */}
       <NewContentPromotionalBanner2026 />
       
-<<<<<<< HEAD
       {/* AI Innovation Showcase Banner 2026 */}
       <AIInnovationShowcaseBanner2026 />
-=======
-      {/* Revolutionary 2026 Content Banner */}
-      <Revolutionary2026ContentBanner />
       
       {/* Latest 2026 Content Banner */}
       <LatestContent2026Banner />
@@ -168,12 +147,11 @@ export default function HomePage() {
       {/* Next-Generation Autonomous Systems Banner */}
       <NextGenAutonomousBanner />
       
-      {/* New Content Promotional Banners */}
-      <NewContent2026PromotionalBanners />
-      
       {/* Interactive Content Recommendation */}
       <InteractiveContentRecommendation />
->>>>>>> cursor/create-and-deploy-new-content-a364
+      
+      {/* Enhanced Content Showcase */}
+      <EnhancedContentShowcase2026 />
       
       {/* Hero Section */}
       <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
