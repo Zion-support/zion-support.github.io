@@ -7,6 +7,11 @@ import December2025NewContentShowcaseBanner from "./components/December2025NewCo
 // 🔥🔥🔥 NEWEST: Autonomous Software Development Revolution - JUST PUBLISHED! 🔥🔥🔥
 import October2025AutonomousCodingBanner from "./components/October2025AutonomousCodingBanner";
 
+// 🚀🚀🚀 NEW: OCTOBER 2025 REVOLUTIONARY CONTENT - JUST LAUNCHED! 🚀🚀🚀
+import October2025CodeGenerationRevolutionBanner from "./components/October2025CodeGenerationRevolutionBanner";
+import October2025RealTimeIntelligenceBanner from "./components/October2025RealTimeIntelligenceBanner";
+import October2025ZeroTrustAISecurityBanner from "./components/October2025ZeroTrustAISecurityBanner";
+
 import October2025CuttingEdgeContentBanner from "./components/October2025CuttingEdgeContentBanner";
 import October1st2025NewContentBanner from "./components/October1st2025NewContentBanner";
 import October1st2025ContentSpotlight from "./components/October1st2025ContentSpotlight";
@@ -94,6 +99,18 @@ export default function App(): JSX.Element {
       {/* 🔥🔥🔥 BREAKING: OCTOBER 1, 2025 - AUTONOMOUS SOFTWARE DEVELOPMENT REVOLUTION - JUST PUBLISHED! 🔥🔥🔥 */}
       {/* Featured: AI Agents Writing Production Code, 87% Faster Development, 94% Bug Reduction, $127M Savings */}
       <October2025AutonomousCodingBanner />
+      
+      {/* 🚀🚀🚀 NEW: OCTOBER 2025 - NEXT-GEN AI CODE GENERATION REVOLUTION - JUST LAUNCHED! 🚀🚀🚀 */}
+      {/* Featured: 94% Code Accuracy, 10x Productivity, $4.2M Annual Savings, 87% Faster Delivery */}
+      <October2025CodeGenerationRevolutionBanner />
+      
+      {/* ⚡⚡⚡ NEW: OCTOBER 2025 - REAL-TIME ENTERPRISE INTELLIGENCE - BREAKTHROUGH TECHNOLOGY! ⚡⚡⚡ */}
+      {/* Featured: Sub-100ms Decisions, 96.7% Accuracy, 400%+ ROI, $47M+ Proven Savings */}
+      <October2025RealTimeIntelligenceBanner />
+      
+      {/* 🔒🔒🔒 NEW: OCTOBER 2025 - ZERO-TRUST AI SECURITY FRAMEWORK - ENTERPRISE PROTECTION! 🔒🔒🔒 */}
+      {/* Featured: 99.97% Threat Detection, <50ms Response, $180M Prevented Losses, Zero Breaches */}
+      <October2025ZeroTrustAISecurityBanner />
       
       {/* 🚀🚀🚀 NEWEST: JANUARY 2025 ENTERPRISE AUTOMATION BREAKTHROUGH - ABSOLUTE TOP PRIORITY! 🚀🚀🚀 */}
       {/* Featured: $2.3B Cost Savings, 95% Efficiency Gains, Fortune 500 Success */}
