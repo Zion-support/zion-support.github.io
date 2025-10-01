@@ -1117,6 +1117,15 @@ export const posts: BlogPost[] = [
     readTime: "13 min read"
   },
   {
+    slug: "ai-2025-oct-01-intelligent-document-automation-2025",
+    title: "Intelligent Document Automation 2025: 99.2% Accuracy, 94% Faster",
+    description: "Production blueprint: layout-aware models, weak labels, HITL QA, and rollback policies.",
+    category: "Document AI",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "10 min read"
+  },
+  {
     slug: "ai-customer-experience-hyper-personalization-2026",
     title: "AI Customer Experience 2026: Hyper-Personalization Achieving 400% Engagement",
     description: "Deploy AI-powered customer experiences that predict needs, personalize journeys, and increase engagement by 400%. Learn real-time personalization, behavioral prediction, and emotion detection.",
