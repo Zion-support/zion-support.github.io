@@ -714,4 +714,49 @@ export const BLOG_POSTS: BlogPost[] = [
     publishedAt: '2025-10-03',
     readTime: 10,
   },
+  {
+    id: '209',
+    title: 'Enterprise Evals v4: Scorecards That Predict Production',
+    slug: 'enterprise-evals-v4-scorecards-2025-10-06',
+    excerpt:
+      'Design eval pipelines that correlate with KPIs and reliably gate risky changes—fewer regressions, faster delivery.',
+    content:
+      'Most eval suites don\'t predict production. This guide shows how to build KPI-linked scorecards, golden tasks, calibrated metrics, and online canaries so you ship faster with confidence and fewer incidents.',
+    featuredImage: '/images/blog/enterprise-evals-v4-2025.jpg',
+    category: 'AI Reliability',
+    tags: ['Evaluations', 'Scorecards', 'Guardrails'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-06',
+    readTime: 8,
+  },
+  {
+    id: '210',
+    title: 'Real-Time Decision Engines: Sub-1ms at 10M+ Events/sec',
+    slug: 'real-time-decision-engines-sub-1ms-2025-10-06',
+    excerpt:
+      'Streaming features, tiered caches, and budgeted routes for ultra-low latency decisions at massive scale.',
+    content:
+      'We outline architectures for sub-1ms decisions: stateful stream processors, feature stores with freshness windows, micro-batched inference, and KPI-linked canary scorecards with instant rollback.',
+    featuredImage: '/images/blog/real-time-decision-engines-2025.jpg',
+    category: 'Real-Time AI',
+    tags: ['Streaming', 'Latency', 'Caching', 'KPIs'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-06',
+    readTime: 9,
+  },
+  {
+    id: '211',
+    title: 'Autonomous FinOps v3: 30–70% GenAI Spend Down, No Regressions',
+    slug: 'autonomous-finops-v3-2025-10-06',
+    excerpt:
+      'Quality tiers, semantic caches, and cost scorecards that shrink spend while keeping UX stable.',
+    content:
+      'A pragmatic playbook for predictable GenAI costs: KPI-linked cost scorecards, eval-gated quality tiers, semantic caches with freshness windows, and budget-aware routing with safe fallbacks.',
+    featuredImage: '/images/blog/autonomous-finops-v3-2025.jpg',
+    category: 'FinOps',
+    tags: ['Cost Optimization', 'Quality Tiers', 'Caching'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-06',
+    readTime: 7,
+  },
 ];

@@ -146,29 +146,29 @@ const HomePage: React.FC = () => {
                 icon="rocket"
                 badge="New"
                 date={new Date().toLocaleDateString()}
-                title="New on Oct 2: Decision Engines, Privacy‑First Insights, Agent Safety"
-                description="Fresh drops: sub‑ms decision engines, PII‑safe analytics, and agent safety checklists with rollback."
+                title="Fresh Content: Evals v4, Sub‑1ms Decisions, FinOps v3"
+                description="New deep-dives: KPI‑predictive evals, ultra‑low‑latency decision engines, and cost playbooks that cut spend 30–70% without UX regressions."
                 ctaText="Read the latest posts"
                 ctaLink="/blog"
                 showCount={3}
                 featuredItems={[
                   {
-                    title: 'Real-Time Decision Engines 2027: 10M/sec Under 1ms',
+                    title: 'Enterprise Evals v4: Scorecards That Predict Production',
+                    category: 'AI Reliability',
+                    link: '/blog',
+                    metrics: '8 min • 2025-10-06'
+                  },
+                  {
+                    title: 'Real-Time Decision Engines: Sub-1ms at 10M+ Events/sec',
                     category: 'Real-Time AI',
-                    link: '/blog/real-time-decision-engines-2027-2025-10-02',
-                    metrics: '8 min • 2025-10-02'
+                    link: '/blog',
+                    metrics: '9 min • 2025-10-06'
                   },
                   {
-                    title: 'Privacy‑First Insights 2026: Analytics Without PII',
-                    category: 'Analytics',
-                    link: '/blog/privacy-first-insights-2026-2025-10-02',
-                    metrics: '6 min • 2025-10-02'
-                  },
-                  {
-                    title: 'Agent Safety Checklists 2026: Budgets, Sandboxes, Rollbacks',
-                    category: 'AI Operations',
-                    link: '/blog/agent-safety-checklists-2026-2025-10-02',
-                    metrics: '7 min • 2025-10-02'
+                    title: 'Autonomous FinOps v3: 30–70% GenAI Spend Down, No Regressions',
+                    category: 'FinOps',
+                    link: '/blog',
+                    metrics: '7 min • 2025-10-06'
                   }
                 ]}
               />
