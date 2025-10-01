@@ -8,6 +8,8 @@ import {
   Sparkles,
   Star,
   Target,
+  Users,
+  Zap,
 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
@@ -17,11 +19,9 @@ import ModernFeatures from "../components/ModernFeatures";
 import LatestInsights from "../components/LatestInsights";
 import AdvertisingBanner from "../components/AdvertisingBanner";
 import October2025NewBreakthroughBanner from "../components/October2025NewBreakthroughBanner";
-import { latestInsights } from "../content/insights";
-import { Users, Zap } from "lucide-react";
-import AdvertisingBanner from "../components/AdvertisingBanner";
 import January2026RevolutionaryBanner from "../components/January2026RevolutionaryBanner";
 import NewServicesPromoBanner2026 from "../components/NewServicesPromoBanner2026";
+import { latestInsights } from "../content/insights";
 
 const Home = () => {
   return (
