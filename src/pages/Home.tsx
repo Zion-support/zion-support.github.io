@@ -122,6 +122,20 @@ const Home = () => {
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
         
+        {/* 🔥🔥🔥 JUST RELEASED TODAY - OCTOBER 1, 2025: 2 GAME-CHANGING BREAKTHROUGHS! 🔥🔥🔥 */}
+        <NewContentPromoBanner 
+          className="border-b border-white/10" 
+          variant="premium" 
+          title="🔥 JUST RELEASED OCTOBER 1, 2025: 2 REVOLUTIONARY BREAKTHROUGHS — Autonomous Mesh Architecture (99.999% Uptime, 85% Cost Cut, Zero-Touch Ops), Real-Time Fraud Detection (99.97% Accuracy, $8.3B Saved, &lt;100ms Response)!"
+          description="🚀 BREAKING TODAY: Deploy self-healing infrastructure with 99.999% uptime achieving 85% cost reduction through autonomous mesh architecture with infinite scalability and zero-touch operations, PLUS prevent $8.3B in fraud losses with 99.97% accurate real-time AI fraud detection delivering sub-100ms response and 95% fewer false positives. Must-read for CTOs, CISOs, and enterprise leaders!"
+          ctaText="Read Today's Breakthroughs"
+          ctaLink="/blog"
+          featuredItems={[
+            { title: "Autonomous Mesh Architecture Revolution — 99.999% Uptime, 85% Cost Reduction, Self-Healing Infrastructure at Infinite Scale", category: "AI Infrastructure", link: "/blog/ai-2025-october-autonomous-mesh-architecture-revolution" },
+            { title: "Real-Time AI Fraud Detection — 99.97% Accuracy, $8.3B Loss Prevention, Sub-100ms Response, 95% Fewer False Positives", category: "AI Security & FinTech", link: "/blog/ai-2025-october-real-time-fraud-detection-financial-security" }
+          ]}
+        />
+        
         {/* 🎯 OCTOBER 2025 - LATEST: Enterprise AI & Security Revolution */}
         <NewContentPromoBanner 
           className="border-b border-white/10" 
@@ -428,14 +442,52 @@ const Home = () => {
             </h1>
 
             <p className="text-xl md:text-2xl text-zion-slate-light mb-8 leading-relaxed max-w-3xl mx-auto animate-fade-in">
-              🔥 <strong>BREAKING OCTOBER 1, 2025:</strong> 3 REVOLUTIONARY AI SYSTEMS RELEASED TODAY — Real-Time Adaptive Systems (self-learning infrastructure with 99.99% uptime, 80% auto-remediation), 
+              🔥 <strong>JUST RELEASED OCTOBER 1, 2025:</strong> 2 REVOLUTIONARY BREAKTHROUGHS PUBLISHED TODAY — Autonomous Mesh Architecture (99.999% uptime with self-healing, 85% cost reduction, zero-touch operations at infinite scale), 
+              Real-Time AI Fraud Detection (99.97% accuracy, $8.3B fraud prevented annually, sub-100ms response, 95% fewer false positives)! 
+              🚀 <strong>PLUS:</strong> Real-Time Adaptive Systems (self-learning infrastructure with 99.99% uptime, 80% auto-remediation), 
               Intelligent Data Pipelines (10x faster processing with 90% auto-tuning, 75% cost reduction), and Autonomous Security Systems (99.8% threat detection with sub-second response)! 
-              🚀 <strong>PLUS DECEMBER 1:</strong> AI Retrieval Optimization (10x faster RAG, sub-50ms latency), Agentic Swarm Intelligence (500% productivity gains), 
+              ⚡ <strong>DECEMBER 1:</strong> AI Retrieval Optimization (10x faster RAG, sub-50ms latency), Agentic Swarm Intelligence (500% productivity gains), 
               and Quantum-Inspired Optimization (1000x speedup)! Plus November's Federated Learning (95% accuracy, 100% privacy), LLMOps Excellence (99.9% uptime, 70% cost cut), 
               and 20+ more breakthrough innovations! Transform your business with proven AI solutions delivering $50B+ in client results. 
               Join 500+ companies achieving 400-600% ROI with our expert guidance!
             </p>
 
+            {/* 🔥🔥🔥 OCTOBER 1, 2025 - JUST RELEASED TODAY: 2 REVOLUTIONARY BREAKTHROUGHS! 🔥🔥🔥 */}
+            <div className="bg-gradient-to-r from-red-500/20 to-orange-500/20 border border-red-400/30 rounded-xl p-6 mb-8 animate-fade-in shadow-2xl">
+              <div className="flex items-center justify-center gap-3 mb-3">
+                <Sparkles className="w-6 h-6 text-red-400 animate-pulse" />
+                <span className="text-lg font-bold text-red-400">🔥 JUST RELEASED OCTOBER 1, 2025: 2 REVOLUTIONARY BREAKTHROUGHS</span>
+                <Sparkles className="w-6 h-6 text-orange-400 animate-pulse" />
+              </div>
+              <p className="text-white text-lg font-semibold mb-2">
+                ⚡ PUBLISHED TODAY: Autonomous Mesh Architecture (99.999% uptime, 85% cost reduction, self-healing at infinite scale), Real-Time AI Fraud Detection (99.97% accuracy, $8.3B fraud prevented, sub-100ms response)!
+              </p>
+              <p className="text-zion-slate-light text-sm mb-4">
+                Deploy revolutionary self-healing infrastructure with autonomous mesh architecture achieving 99.999% uptime, zero-touch operations, and 85% cost savings through infinite scalability. PLUS protect your organization with AI-powered fraud detection delivering 99.97% accuracy, preventing $8.3B in losses annually while reducing false positives by 95%!
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <Link
+                  to="/blog/ai-2025-october-autonomous-mesh-architecture-revolution"
+                  className="bg-red-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-red-600 transition-colors text-center"
+                >
+                  Read Today's Breakthroughs
+                </Link>
+                <Link
+                  to="/blog"
+                  className="border border-red-400 text-red-400 px-6 py-2 rounded-lg font-semibold hover:bg-red-400 hover:text-white transition-colors text-center"
+                >
+                  Explore All Content
+                </Link>
+              </div>
+              <div className="mt-4 flex flex-wrap gap-2 justify-center">
+                <span className="bg-emerald-100/20 text-emerald-200 px-3 py-1 rounded-full text-xs font-medium border border-emerald-300/20">Autonomous Infrastructure</span>
+                <span className="bg-cyan-100/20 text-cyan-200 px-3 py-1 rounded-full text-xs font-medium border border-cyan-300/20">Self-Healing Systems</span>
+                <span className="bg-red-100/20 text-red-200 px-3 py-1 rounded-full text-xs font-medium border border-red-300/20">AI Fraud Detection</span>
+                <span className="bg-orange-100/20 text-orange-200 px-3 py-1 rounded-full text-xs font-medium border border-orange-300/20">Financial Security</span>
+                <span className="bg-yellow-100/20 text-yellow-200 px-3 py-1 rounded-full text-xs font-medium border border-yellow-300/20">Real-Time AI</span>
+              </div>
+            </div>
+            
             {/* October 2025 - LATEST: Enterprise AI & Security Revolution */}
             <div className="bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-400/30 rounded-xl p-6 mb-8 animate-fade-in shadow-2xl">
               <div className="flex items-center justify-center gap-3 mb-3">
