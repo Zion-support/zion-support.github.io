@@ -99,6 +99,20 @@ const Home = () => {
         <link rel="canonical" href="https://ziontechgroup.com" />
       </Helmet>
       <AdvertisingBanner />
+      {/* New: Promote 10/04 posts - Budgeted Routing, Agent Observability, Private Edge A/B */}
+      <NewContentPromoBanner 
+        className="border-b border-white/10" 
+        variant="premium" 
+        title="🆕 NEW TODAY (Oct 4): Budgeted Routing, Agent Observability, Private Edge A/B"
+        description="Keep UX stable under any budget, see and govern agent actions end-to-end, and run zero‑PII experiments under 100ms at the edge."
+        ctaText="Explore today's posts"
+        ctaLink="/blog"
+        featuredItems={[
+          { title: "AI Budgeted Routing: Stable UX Under Any Spend", category: "GenAI Engineering", link: "/blog/ai-budgeted-routing-stable-ux-2025-10-04" },
+          { title: "Agent Observability: Tool Traces, SLIs, and Rollback Hooks", category: "AI Operations", link: "/blog/agent-observability-tool-traces-slis-rollback-2025-10-04" },
+          { title: "Private Experimentation at the Edge: Zero‑PII A/B <100ms", category: "Experimentation", link: "/blog/private-experimentation-edge-zero-pii-2025-10-04" }
+        ]}
+      />
       {/* Promo: Brand new governance content set */}
       <NewContentPromoBanner 
         className="border-b border-white/10" 
