@@ -4,9 +4,11 @@ import React, { JSX } from "react";
 import December2025NewContentShowcaseBanner from "./components/December2025NewContentShowcaseBanner";
 
 // 🚀🚀🚀 BREAKING: OCTOBER 1, 2025 NEW CONTENT - ABSOLUTE HIGHEST PRIORITY 🚀🚀🚀
+import October2025CuttingEdgeAIContentBanner from "./components/October2025CuttingEdgeAIContentBanner";
+import October2025FreshAIInsightsBanner from "./components/October2025FreshAIInsightsBanner";
+import October2025AITransformationShowcase from "./components/October2025AITransformationShowcase";
 // 🔥🔥🔥 NEWEST: Autonomous Software Development Revolution - JUST PUBLISHED! 🔥🔥🔥
 import October2025AutonomousCodingBanner from "./components/October2025AutonomousCodingBanner";
-
 import October2025CuttingEdgeContentBanner from "./components/October2025CuttingEdgeContentBanner";
 import October1st2025NewContentBanner from "./components/October1st2025NewContentBanner";
 import October1st2025ContentSpotlight from "./components/October1st2025ContentSpotlight";
@@ -29,6 +31,7 @@ import December2025NewContentBanner from "./components/December2025NewContentBan
 import December2025ContentShowcaseBanner from "./components/December2025ContentShowcaseBanner";
 
 // OCTOBER 2025 NEW CONTENT - MOST RECENT & PROMINENT
+import October2025AgentMeshBanner from "./components/October2025AgentMeshBanner";
 import October2025TechnicalContentBanner from "./components/October2025TechnicalContentBanner";
 import October2025ProductionAIBanner from "./components/October2025ProductionAIBanner";
 import October2025ProductionAIEngineeringBanner from "./components/October2025ProductionAIEngineeringBanner";
@@ -110,6 +113,18 @@ export default function App(): JSX.Element {
       {/* Featured: $2.3B AI-Driven Cost Savings, Comprehensive Implementation Guide */}
       <January2025Fortune500SuccessBanner />
       
+      {/* 🔥🔥🔥 JUST PUBLISHED: OCTOBER 1, 2025 - LATEST AI BREAKTHROUGHS - ABSOLUTE TOP! 🔥🔥🔥 */}
+      {/* Featured: AI Fleet Orchestration (100K+ agents), Synthetic Data (99.8% accuracy), Multimodal AI ($200M ROI) */}
+      <October2025CuttingEdgeAIContentBanner />
+      
+      {/* 🌟🌟🌟 NEW: OCTOBER 2025 - AI TRANSFORMATION SHOWCASE - HIGHLY FEATURED! 🌟🌟🌟 */}
+      {/* Comprehensive showcase: Fleet Management, Privacy-Preserving AI, Vision-Language Systems */}
+      <October2025AITransformationShowcase />
+      
+      {/* ⚡⚡⚡ FRESH: OCTOBER 2025 - AI INSIGHTS BANNER - PROMINENT! ⚡⚡⚡ */}
+      {/* Quick access to latest enterprise AI content and case studies */}
+      <October2025FreshAIInsightsBanner />
+      
       {/* 🎉🎉🎉 NEWEST: OCTOBER 1, 2025 - FRESH CONTENT JUST PUBLISHED - ABSOLUTE TOP PRIORITY! 🎉🎉🎉 */}
       {/* Featured: Edge AI Revolution, GenAI Cost Optimization, $86M Manufacturing Success */}
       <October1st2025NewContentBanner />
@@ -155,6 +170,10 @@ export default function App(): JSX.Element {
       
       {/* 🌟 NEWEST: December 2025 Content Showcase - HIGHLY PROMINENT! 🌟 */}
       <December2025ContentShowcaseBanner />
+      
+      {/* 🚀🚀🚀 OCTOBER 1, 2025 - AGENT MESH NETWORKS LAUNCH - MOST PROMINENT 🚀🚀🚀 */}
+      {/* Revolutionary Agent Mesh Networks: $12.8B Success Story & Technical Deep Dive */}
+      <October2025AgentMeshBanner />
       
       {/* 🚀🚀🚀 OCTOBER 2025 NEW TECHNICAL CONTENT - MOST RECENT 🚀🚀🚀 */}
       {/* Latest production AI engineering guides - October 2025 */}
