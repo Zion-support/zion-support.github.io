@@ -490,7 +490,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: 7,
   },
   {
-    id: '34',
+    id: '30',
     title: 'Quantum-Safe Cryptography: Enterprise Migration Playbook (2025)',
     slug: 'quantum-safe-cryptography-enterprise-migration-2025',
     excerpt:
@@ -505,7 +505,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: 9,
   },
   {
-    id: '35',
+    id: '31',
     title: 'Neuromorphic Edge AI: Event-Driven Intelligence Under 10ms',
     slug: 'neuromorphic-edge-ai-event-driven-2025',
     excerpt:
@@ -520,7 +520,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: 8,
   },
   {
-    id: '36',
+    id: '32',
     title: 'Synthetic Data in Production: Privacy-Safe Accuracy Gains',
     slug: 'synthetic-data-production-privacy-2025',
     excerpt:
@@ -533,20 +533,5 @@ export const BLOG_POSTS: BlogPost[] = [
     author: 'Zion Tech Team',
     publishedAt: '2025-10-03',
     readTime: 10,
-  },
-  {
-    id: '37',
-    title: 'AI Ops Excellence: Live Scorecards, Canary Gates, Instant Rollback',
-    slug: 'ai-ops-excellence-2025-oct-03',
-    excerpt:
-      'Operate AI safely at scale with KPI-linked scorecards, canary gates, and rollback-first design.',
-    content:
-      'A concise field guide to operating AI systems at enterprise scale. Wire KPI-linked scorecards, budget-aware canary routes, and instant rollback hooks so teams can ship faster without incidents. Includes reference dashboards, CI policy tests, and rollout rituals used in production.',
-    featuredImage: '/images/blog/ai-ops-excellence.jpg',
-    category: 'Operations',
-    tags: ['SRE', 'Canary', 'Rollback', 'Scorecards'],
-    author: 'Zion Tech Team',
-    publishedAt: '2025-10-03',
-    readTime: 6,
   },
 ];
