@@ -4,6 +4,8 @@
   publish = "dist"
   command_timeout = "30m"
   functions = "netlify/functions"
+  # Explicitly ignore Next.js plugin
+  ignore_next = true
 
 [build.environment]
   NODE_VERSION = "20"
@@ -12,8 +14,9 @@
   PUPPETEER_SKIP_DOWNLOAD = "1"
   CYPRESS_INSTALL_BINARY = "0"
   ELECTRON_SKIP_DOWNLOAD = "1"
-  # Disable Next.js auto-detection
+  # Disable Next.js telemetry and detection
   NEXT_TELEMETRY_DISABLED = "1"
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
 
 # Disable Next.js plugin auto-detection since we're using Vite
 [build.processing]
