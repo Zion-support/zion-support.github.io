@@ -246,6 +246,14 @@ export const featuredBlogPosts: FeaturedItem[] = [
 // Oct 1, 2025 – Advertise three brand-new articles
 featuredBlogPosts.unshift(
   {
+    id: "ai-2025-oct-03-autonomous-finops-scorecards",
+    title: "Autonomous FinOps Scorecards 2025",
+    description: "KPI-linked scorecards, budget-aware routing, and rollback that prevent cost regressions.",
+    link: "/blog/ai-2025-oct-01-autonomous-finops-scorecards",
+    type: "article",
+    featured: true
+  },
+  {
     id: "ai-self-healing-infrastructure-2025",
     title: "AI Self-Healing Infrastructure 2025",
     description: "Autonomous infra: 95% MTTR reduction, 99.99% uptime with rollback gates.",

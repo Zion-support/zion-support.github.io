@@ -16,6 +16,7 @@ export const blogPosts: BlogPost[] = [
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     slug: "ai-2025-oct-01-governed-agent-platforms-v2",
     title: "Governed Agent Platforms v2: Budgets, Scorecards, Instant Rollback",
     description: "Ship enterprise agent platforms safely: KPI scorecards, budget-aware routing, CI policy tests, and one-click rollback.",
@@ -119,10 +120,29 @@ This playbook shows how to stabilize UX while reducing spend using:
 - Budget-aware fallbacks and rollback-first deployment rituals
 
 Results: 40–70% cost reduction with steady task success and tighter P95 tails.
+=======
+    slug: "ai-2025-oct-01-autonomous-finops-scorecards",
+    title: "Autonomous FinOps Scorecards 2025: Prevent Cost Regressions",
+    description: "KPI-linked scorecards, budget-aware routing, and rollback that keep spend predictable without hurting UX.",
+    content: `
+# Autonomous FinOps Scorecards 2025
+
+This guide shows how to wire budget visibility and guardrails into GenAI platforms so teams ship faster with steady spend.
+
+## Ship This
+- KPI-linked scorecards that teams actually review
+- Budget-aware routing with quality tiers and fallbacks
+- Canary gates and instant rollback on cost regressions
+
+## Outcomes
+- 30–70% cost reduction with tight p95
+- Fewer surprises and cleaner postmortems
+>>>>>>> origin/cursor/create-and-deploy-new-content-513e
     `,
     author: "Zion Tech Group FinOps Lab",
     date: "2025-10-03",
     category: "FinOps",
+<<<<<<< HEAD
     tags: ["Cost", "Quality Tiers", "Caching", "Budgets", "Rollback"],
     featured: true,
     readTime: "8 min read",
@@ -303,6 +323,53 @@ Keep experience KPIs stable while reducing spend.
     featured: false,
     readTime: "6 min read",
     image: "/images/cost-aware-routing.jpg"
+=======
+    tags: ["FinOps", "Budgets", "Scorecards", "Routing"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/autonomous-finops-scorecards-2025.jpg"
+  },
+  {
+    slug: "edge-2025-oct-03-consentless-experiments-v4",
+    title: "Consentless Experiments v4 (2025): Compliant <100ms A/B",
+    description: "Scoped IDs, on-device aggregation, and DP noise for fast, privacy-first experiments worldwide.",
+    content: `
+# Consentless Experiments v4 (2025)
+
+Blueprint to run global A/B without centralizing PII:
+- Signed configs and cacheable variants
+- Scoped, rotating identifiers
+- On-device aggregation + DP noise
+- KPI-linked canaries and rollback
+    `,
+    author: "Zion Tech Group Privacy Lab",
+    date: "2025-10-03",
+    category: "Experimentation",
+    tags: ["A/B", "Privacy", "Edge", "DP"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/consentless-experiments-v4-2025.jpg"
+  },
+  {
+    slug: "genai-2025-oct-03-cost-controllers-v4",
+    title: "GenAI Cost Controllers v4 (2025): Tiers + Caches at Scale",
+    description: "Stabilize UX under budget with tiered routing, semantic caches, and evaluator-backed policies.",
+    content: `
+# GenAI Cost Controllers v4 (2025)
+
+Cut spend 40–70% while improving tails using:
+- Tiered model routing by SLA bands
+- Prompt/embedding/retrieval caches
+- Online evals as deploy gates; rollback-first ops
+    `,
+    author: "Zion Tech Group Platform Team",
+    date: "2025-10-03",
+    category: "GenAI Engineering",
+    tags: ["Cost", "Quality Tiers", "Caching", "Evals"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/genai-cost-controllers-v4-2025.jpg"
+>>>>>>> origin/cursor/create-and-deploy-new-content-513e
   },
   {
     slug: "ai-2025-oct-01-enterprise-ai-governance-blueprint",
