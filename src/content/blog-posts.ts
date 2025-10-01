@@ -14,6 +14,7 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+<<<<<<< HEAD
     slug: "ai-2025-oct-01-governed-agent-platforms-v2",
     title: "Governed Agent Platforms v2: Budgets, Scorecards, Instant Rollback",
     description: "Ship enterprise agent platforms safely: KPI scorecards, budget-aware routing, CI policy tests, and one-click rollback.",
@@ -102,6 +103,54 @@ Need a playbook tailored to your platform? Our team can help you land this safel
     featured: true,
     readTime: "8 min read",
     image: "/images/risk-controlled-autonomy-2025.jpg"
+=======
+    slug: "ai-2025-oct-03-ai-budgets-blueprint",
+    title: "Enterprise AI Budgets Blueprint: Quality Tiers, Caches, Rollback",
+    description: "Cut GenAI costs 40–70% with tiered routing, semantic caches, and rollback-first ops—without UX regressions.",
+    content: `
+# Enterprise AI Budgets Blueprint
+
+This playbook shows how to stabilize UX while reducing spend using:
+
+- Quality-tier routing with evaluator gates
+- Prompt/embedding/retrieval caches with freshness windows
+- Request coalescing and negative caches
+- Budget-aware fallbacks and rollback-first deployment rituals
+
+Results: 40–70% cost reduction with steady task success and tighter P95 tails.
+    `,
+    author: "Zion Tech Group FinOps Lab",
+    date: "2025-10-03",
+    category: "FinOps",
+    tags: ["Cost", "Quality Tiers", "Caching", "Budgets", "Rollback"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/ai-budgets-blueprint.jpg"
+  },
+  {
+    slug: "ai-2025-oct-03-policy-tests-end-to-end",
+    title: "End-to-End Policy Tests for AI: Ship Faster, Safely",
+    description: "Gate risky changes with CI policy tests tied to KPIs; add online canaries and instant rollback.",
+    content: `
+# End-to-End Policy Tests for AI
+
+Bake safety into velocity with:
+
+- CI policy tests mapped to production KPIs
+- Golden tasks and calibrated metrics (task success, harmlessness, latency, cost)
+- Canary routes with online evals and pass/fail thresholds
+- One-click rollback hooks and weekly scorecards
+
+Outcome: Faster iteration with fewer incidents and measurable reliability.
+    `,
+    author: "Zion Tech Group Reliability Lab",
+    date: "2025-10-03",
+    category: "AI Reliability",
+    tags: ["Policy Tests", "Scorecards", "Evals", "Rollback"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/policy-tests-end-to-end.jpg"
+>>>>>>> origin/cursor/create-and-deploy-new-content-1d9d
   },
   {
     slug: "ai-2025-oct-02-private-experiments-blueprint",
