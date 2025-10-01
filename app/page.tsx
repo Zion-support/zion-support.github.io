@@ -64,6 +64,7 @@ import SuccessStory from '../components/SuccessStory';
 import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
 import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
 import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
+import Ultimate2025ContentShowcaseBanner from '../components/Ultimate2025ContentShowcaseBanner';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -74,6 +75,9 @@ export const metadata = {
 export default function HomePage() {
   return (
     <div className="animate-fade-in">
+      {/* Ultimate 2025 Content Showcase Banner */}
+      <Ultimate2025ContentShowcaseBanner />
+      
       {/* New Content Promo Strip */}
       <div className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
