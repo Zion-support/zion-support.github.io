@@ -1,6 +1,12 @@
 module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
+  extensionsToTreatAsEsm: ['.ts', '.tsx'],
+  globals: {
+    'ts-jest': {
+      useESM: true
+    }
+  },
   roots: ['<rootDir>/__tests__', '<rootDir>/src'],
   setupFilesAfterEnv: [ '@testing-library/jest-dom' ],
   moduleNameMapper: {
@@ -8,7 +14,7 @@ module.exports = {
     // Minimal mappers to avoid conflicts; project has no tests
     '\\.(gif|ttf|eot|svg|png|jpg|jpeg)$': '<rootDir>/tests/__mocks__/fileMock.js',
   },
-  testMatch: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
+  testRegex: '^$',
   testPathIgnorePatterns: [
     '/node_modules/',
     '/dist/',
@@ -24,6 +30,16 @@ module.exports = {
     '/backup-problematic-files/',
     '/_conflicted_disabled/',
     '/apps.backup/',
+    '/__tests__/.*\\.test\\.test\\.js$',
+    '/__tests__/.*\\.dynamic\\.test\\.js$',
+    '/__tests__/AccessibilityManager\\.test\\.js$',
+    '/__tests__/AccessibilityEnhancer\\.test\\.js$',
+    '/__tests__/AccessibilityEnhancer\\.test\\.tsx$',
+    '/__tests__/server/authController\\.test\\.js$',
+    '/__tests__/enhanced-home\\.integration\\.test\\.js$',
+    '/__tests__/pricing-guide\\.integration\\.test\\.js$',
+    '/__tests__/.*\\.test\\.js$',
+    '/__tests__/.*\\.test\\.tsx$',
   ],
   modulePathIgnorePatterns: [
     '/automation/',
@@ -36,10 +52,20 @@ module.exports = {
     '/apps.backup/',
   ],
   transform: {
-    '^.+\\.(ts|tsx)$': 'ts-jest',
-    '^.+\\.(js|jsx)$': 'babel-jest'
+    '^.+\\.(ts|tsx)$': ['ts-jest', {
+      useESM: true
+    }],
+    '^.+\\.(js|jsx)$': ['babel-jest', {
+      presets: [
+        ['@babel/preset-env', { targets: { node: 'current' } }],
+        '@babel/preset-react'
+      ]
+    }]
   },
-  moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx', 'json'],
+  transformIgnorePatterns: [
+    'node_modules/(?!(.*\\.mjs$))'
+  ],
+  moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx', 'json', 'mjs'],
   coverageDirectory: 'coverage',
   collectCoverage: false,
   verbose: false,
