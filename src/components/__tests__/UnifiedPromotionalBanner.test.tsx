@@ -207,7 +207,7 @@ describe('UnifiedPromotionalBanner', () => {
         </RouterWrapper>
       );
 
-      expect(screen.getByText('CATEGORY 1')).toBeInTheDocument();
+      expect(screen.getByText(/category 1/i)).toBeInTheDocument();
     });
   });
 

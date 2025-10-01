@@ -187,7 +187,7 @@ export function NewLatest2026ContentBanner() {
             Discover cutting-edge AI insights, case studies, and implementation guides that are transforming industries worldwide.
           </p>
           <div className="grid md:grid-cols-2 gap-6 mb-6">
-            <Link to="/blog/ai-autonomous-cloud-operations-2026" className="group">
+          <Link to="/blog/ai-autonomous-cloud-operations-2026" className="group">
               <div className="bg-white/10 rounded-lg p-4 hover:bg-white/20 transition-colors">
                 <h3 className="font-semibold mb-2 group-hover:text-yellow-200">AI Autonomous Cloud Operations</h3>
                 <p className="text-sm opacity-90">Self-healing infrastructure with 99.9% uptime</p>
@@ -342,7 +342,7 @@ export function AIRetailAutomationBanner() {
             </div>
           </div>
           <Link
-            to="/case-studies/ai-retail-automation-2026"
+            href="/case-studies/ai-retail-automation-2026"
             className="bg-white text-orange-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
           >
             View Case Study →
