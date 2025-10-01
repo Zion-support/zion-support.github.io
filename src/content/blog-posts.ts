@@ -14,7 +14,6 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
-<<<<<<< HEAD
     slug: "ai-2025-oct-03-risk-controlled-autonomy",
     title: "Risk‑Controlled Autonomy 2025: Ship Agentic Systems Without Surprises",
     description: "Blueprint for budgeted tools, policy‑gated actions, and instant rollback so teams move 10x faster with stable reliability and spend.",
@@ -43,7 +42,8 @@ Need a playbook tailored to your platform? Our team can help you land this safel
     featured: true,
     readTime: "8 min read",
     image: "/images/risk-controlled-autonomy-2025.jpg"
-=======
+  },
+  {
     slug: "ai-2025-oct-02-private-experiments-blueprint",
     title: "Private Experiments Blueprint: Zero‑PII Testing at the Edge",
     description: "Run compliant edge A/B with signed configs, scoped IDs, and DP noise—sub‑100ms globally.",
@@ -165,7 +165,6 @@ Keep experience KPIs stable while reducing spend.
     featured: false,
     readTime: "6 min read",
     image: "/images/cost-aware-routing.jpg"
->>>>>>> ca2386dd1427bba4fa2d44ebcf521d077ba8cbfc
   },
   {
     slug: "ai-2025-oct-01-enterprise-ai-governance-blueprint",
