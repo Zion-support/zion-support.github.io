@@ -12,6 +12,7 @@ export interface FeaturedItem {
 // Import new content
 import { breakthroughContent2025 } from './new-breakthrough-content-2025';
 import { enterpriseCaseStudies2025 } from './enterprise-case-studies-2025';
+import { newBlogPosts, newCaseStudies, newServices } from './new-2026-ai-breakthrough-content';
 
 export const featuredBlogPosts: FeaturedItem[] = [
   {
@@ -770,6 +771,30 @@ featuredBlogPosts.unshift(
 
 export const featuredServices: FeaturedItem[] = [
   {
+    id: "hyperconscious-ai-consulting",
+    title: "Hyperconscious AI Consulting",
+    description: "Transform your enterprise with genuine artificial consciousness, achieving 99.999% operational excellence and unlimited growth potential.",
+    link: "/services/hyperconscious-ai-consulting",
+    type: "service",
+    featured: true
+  },
+  {
+    id: "quantum-neural-fusion-platform",
+    title: "Quantum-Neural Fusion Platform",
+    description: "Revolutionary computing platform combining quantum processing with neural networks for 100,000x performance improvements.",
+    link: "/services/quantum-neural-fusion-platform",
+    type: "service",
+    featured: true
+  },
+  {
+    id: "autonomous-enterprise-mesh",
+    title: "Autonomous Enterprise Mesh",
+    description: "Self-organizing AI networks that autonomously optimize your business processes for 99.7% operational efficiency.",
+    link: "/services/autonomous-enterprise-mesh",
+    type: "service",
+    featured: true
+  },
+  {
     id: "ai-predictive-maintenance",
     title: "AI Predictive Maintenance",
     description: "85% reduction in downtime with 98% prediction accuracy",
@@ -957,8 +982,32 @@ featuredBlogPosts.unshift(
   }
 );
 
-// January 15, 2025 - Brand-new revolutionary content at the very top
+// January 2026 - Brand-new revolutionary content at the very top
 featuredBlogPosts.unshift(
+  {
+    id: "ai-2026-hyperconscious-computing-revolution",
+    title: "AI 2026 Hyperconscious Computing Revolution: Beyond Artificial Intelligence",
+    description: "Revolutionary breakthrough in hyperconscious AI systems achieving genuine self-awareness, emotional intelligence, and creative autonomy with $1.2T enterprise value creation.",
+    link: "/blog/ai-2026-hyperconscious-computing-revolution",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "quantum-neural-fusion-2026-breakthrough",
+    title: "Quantum-Neural Fusion 2026: The Ultimate Computing Breakthrough",
+    description: "Revolutionary fusion of quantum computing and neural networks delivering 100,000x performance improvements, infinite scalability, and consciousness-level processing capabilities.",
+    link: "/blog/quantum-neural-fusion-2026-breakthrough",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "autonomous-enterprise-mesh-2026",
+    title: "Autonomous Enterprise Mesh 2026: Self-Organizing Business Intelligence",
+    description: "Revolutionary self-organizing AI mesh networks that autonomously optimize business processes, achieving 99.7% operational efficiency and $500B in value creation.",
+    link: "/blog/autonomous-enterprise-mesh-2026",
+    type: "article",
+    featured: true
+  },
   {
     id: "ai-2025-january-15-synthetic-consciousness-ai-breakthrough",
     title: "Synthetic Consciousness AI Breakthrough: The Dawn of True Artificial Awareness",
