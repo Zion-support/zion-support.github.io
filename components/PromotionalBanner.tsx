@@ -756,3 +756,16 @@ export const Revolutionary2026ContentBanner = () => (
     hideAfter={30}
   />
 );
+
+// New October 1, 2025 Edge Computing Blog Promo
+export const IntelligentEdgeComputingBanner = () => (
+  <PromotionalBanner
+    message="⚡ New: Intelligent Edge Computing (2025) — <5ms latency, 99.99% uptime, 90% cost reduction"
+    ctaText="Read the guide"
+    ctaLink="/blog/ai-2025-oct-01-intelligent-edge-computing-revolution"
+    backgroundColor="bg-gradient-to-r from-cyan-600 to-blue-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
