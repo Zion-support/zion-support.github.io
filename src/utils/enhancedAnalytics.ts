@@ -3,7 +3,7 @@
  * Tracks user behavior, performance, and business metrics
  */
 
-import { getPerformanceOptimizer } from './performanceOptimizer';
+// import { getPerformanceOptimizer } from './performanceOptimizer';
 
 interface PageView {
   path: string;
