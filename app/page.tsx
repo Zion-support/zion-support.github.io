@@ -68,6 +68,9 @@ import October2025NewContentBanner from '../components/October2025NewContentBann
 // NEW OCTOBER 1, 2025 - AI PRODUCTIVITY REVOLUTION
 import October2025AIProductivityBanner from '../components/October2025AIProductivityBanner';
 
+// NEW JANUARY 2026 QUANTUM BREAKTHROUGH CONTENT
+import January2026QuantumBreakthroughBanner from '../components/January2026QuantumBreakthroughBanner';
+
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
   description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Transform your business with cutting-edge technology and automation.',
@@ -77,7 +80,10 @@ export const metadata = {
 export default function HomePage() {
   return (
     <div className="animate-fade-in">
-      {/* 🚀 BRAND NEW OCTOBER 1, 2025 - AI PRODUCTIVITY REVOLUTION */}
+      {/* 🚀 BRAND NEW JANUARY 2026 QUANTUM BREAKTHROUGH - TOP PRIORITY */}
+      <January2026QuantumBreakthroughBanner />
+
+      {/* 🔥 BRAND NEW OCTOBER 1, 2025 - AI PRODUCTIVITY REVOLUTION */}
       <October2025AIProductivityBanner />
 
       {/* 🔥 BRAND NEW OCTOBER 2025 NEUROMORPHIC & FEDERATED LEARNING */}
