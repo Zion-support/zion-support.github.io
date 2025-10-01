@@ -14,6 +14,9 @@ import February2026SuccessStoryBanner from '../components/February2026SuccessSto
 // 🚀🚀🚀 NEWEST: OCTOBER 2025 EDGE-NATIVE AUTONOMOUS INTELLIGENCE - JUST RELEASED! 🚀🚀🚀
 import October2025EdgeNativeIntelligenceBanner from '../components/October2025EdgeNativeIntelligenceBanner';
 
+// 🎓🎓🎓 OCTOBER 2025 - AI-POWERED ADAPTIVE LEARNING REVOLUTION - JUST RELEASED TODAY! 🎓🎓🎓
+import October2025AdaptiveLearningBanner from '../components/October2025AdaptiveLearningBanner';
+
 // 🌱🌱🌱 NEWEST: AI 2026 SUSTAINABLE REVOLUTION - ABSOLUTE #1 TOP PRIORITY! 🌱🌱🌱
 import AI2026SustainableRevolutionBanner from '../components/AI2026SustainableRevolutionBanner';
 
@@ -120,6 +123,10 @@ export default function HomePage() {
       {/* 🚀🚀🚀 OCTOBER 2025 - EDGE-NATIVE AUTONOMOUS INTELLIGENCE - JUST RELEASED TODAY! 🚀🚀🚀 */}
       {/* 💎💎💎 BRAND NEW: $12.7B Success Story, 99.97% Uptime, 50ms Latency, 85% Cost Reduction - REVOLUTIONARY BREAKTHROUGH! 💎💎💎 */}
       <October2025EdgeNativeIntelligenceBanner />
+
+      {/* 🎓🎓🎓 OCTOBER 2025 - AI-POWERED ADAPTIVE LEARNING REVOLUTION - JUST RELEASED TODAY! 🎓🎓🎓 */}
+      {/* 💎💎💎 BRAND NEW: 94% Knowledge Retention, $2.8B ROI, 78% Faster Training, 99.7% Completion Rate - WORKFORCE TRANSFORMATION! 💎💎💎 */}
+      <October2025AdaptiveLearningBanner />
 
       {/* 🌱🌱🌱 NEWEST: AI 2026 SUSTAINABLE REVOLUTION - ABSOLUTE #1 TOP PRIORITY! 🌱🌱🌱 */}
       {/* 💎💎💎 JUST PUBLISHED: $2.5B Success Story, 99.9% Energy Efficiency, 85% Carbon Reduction, Revolutionary Sustainable AI - ENVIRONMENTAL BREAKTHROUGH! 💎💎💎 */}
