@@ -4,7 +4,8 @@
  * Reduces initial page load time by 40%
  */
 
-import { lazy, ComponentType } from 'react';
+import React, { lazy, ComponentType } from 'react';
+import { ErrorBoundary } from '../components/ErrorBoundary';
 
 export interface LazyLoadConfig {
   componentPath: string;
@@ -22,11 +23,14 @@ export function createLazyComponent<T extends ComponentType<any>>(
   const LazyComponent = lazy(importFn);
   
   if (fallback) {
-    return (props: any) => (
-      <ErrorBoundary fallback={fallback}>
-        <LazyComponent {...props} />
-      </ErrorBoundary>
-    );
+    return (props: any) => {
+      const FallbackComponent = fallback;
+      return (
+        <ErrorBoundary fallback={<FallbackComponent />}>
+          <LazyComponent {...props} />
+        </ErrorBoundary>
+      );
+    };
   }
   
   return LazyComponent;
