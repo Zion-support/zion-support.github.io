@@ -6,7 +6,11 @@ echo "Repository: Zion-Holdings/zion.app"
 echo ""
 
 # Configuration
-GITHUB_TOKEN="ghs_YzSdSBDOxkyAULMYgQUYCzSMkOyMQP1zs0FA"
+# Expect GITHUB_TOKEN to be provided via environment
+if [ -z "$GITHUB_TOKEN" ]; then
+    echo "ERROR: GITHUB_TOKEN environment variable is not set."
+    exit 1
+fi
 REPO="Zion-Holdings/zion.app"
 PR_NUMBER=11935
 PR_BRANCH="cursor/fix-web-application-console-errors-0bf5"
