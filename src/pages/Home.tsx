@@ -122,9 +122,6 @@ const Home = () => {
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
         
-<<<<<<< HEAD
-        {/* 🎯 OCTOBER 1, 2025 - BREAKING NEWS: Latest Enterprise Solutions */}
-=======
         {/* 🎯 OCTOBER 2025 - LATEST: Enterprise AI & Security Revolution */}
         <NewContentPromoBanner 
           className="border-b border-white/10" 
@@ -140,8 +137,7 @@ const Home = () => {
           ]}
         />
         
-        {/* 🔥 FEBRUARY 2026 - BREAKING: Latest Revolutionary AI Breakthroughs */}
->>>>>>> pr-merges-backup
+        {/* 🎯 OCTOBER 1, 2025 - LATEST ENTERPRISE SOLUTIONS */}
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
