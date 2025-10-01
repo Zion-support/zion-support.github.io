@@ -18,10 +18,7 @@ import ContentPromotionBanner from "../components/ContentPromotionBanner";
 import ComprehensivePromoBanner from "../components/ComprehensivePromoBanner";
 import NewArticlesPromoBanner from "../components/NewArticlesPromoBanner";
 import NewServicesPromoBanner from "../components/NewServicesPromoBanner";
-// import ContentValueTestimonials from "../components/ContentValueTestimonials";
-// import EnhancedNewsletterSignup from "../components/EnhancedNewsletterSignup";
-// import EnhancedPromotionalBanner from "../components/EnhancedPromotionalBanner";
-// import EnhancedTestimonials from "../components/EnhancedTestimonials";
+import EnhancedPromotionalBanner from "../components/EnhancedPromotionalBanner";
 import Header from "../components/Header";
 import LatestArticlesShowcase from "../components/LatestArticlesShowcase";
 import LatestContentBanner from "../components/LatestContentBanner";
@@ -34,7 +31,7 @@ import NewContentShowcase2025 from "../components/NewContentShowcase2025";
 import NewServicesShowcase from "../components/NewServicesShowcase";
 import SuccessStoriesShowcase from "../components/SuccessStoriesShowcase";
 import TrendingContentBanner from "../components/TrendingContentBanner";
-import { Latest2026ContentBanner } from "../components/NewContent2026Banners";
+import NewContentPromotionalBanner2026 from "../components/NewContentPromotionalBanner2026";
 import NewServicesPromoBanner2026 from "../components/NewServicesPromoBanner2026";
 import { getFeaturedBanners } from "../content/enhanced-promotional-banners";
 import { latestInsights } from "../content/insights";
@@ -129,12 +126,7 @@ const Home = () => {
         ))}
         
         {/* New 2026 Content Banner */}
-        <Latest2026ContentBanner 
-          className="border-b border-white/10" 
-          variant="hero"
-          autoRotate
-          rotationInterval={8000}
-        />
+        <NewContentPromotionalBanner2026 />
         
         <NewContentAnnouncement />
         {/* New Promo for fresh article */}
@@ -936,7 +928,11 @@ const Home = () => {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* New Services Promo 2026 */}
+=======
+        {/* New Services Showcase */}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d987
         <NewServicesPromoBanner2026 />
         <NewServicesShowcase />
 
