@@ -26,6 +26,7 @@ import October2025EdgeAIQuantumCryptoBanner from "../components/October2025EdgeA
 import October2025BreakthroughContentBanner from "../components/October2025BreakthroughContentBanner";
 import October2025AIRevolutionBanner from "../components/October2025AIRevolutionBanner";
 import October2025NewContentBanner from "../components/October2025NewContentBanner";
+import October2025NewContentBanner2 from "../components/October2025NewContentBanner2";
 import LatestArticlesShowcase from "../components/LatestArticlesShowcase";
 import LatestContentBanner from "../components/LatestContentBanner";
 import LatestInsights from "../components/LatestInsights";
@@ -122,9 +123,6 @@ const Home = () => {
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
         
-<<<<<<< HEAD
-        {/* 🎯 OCTOBER 1, 2025 - BREAKING NEWS: Latest Enterprise Solutions */}
-=======
         {/* 🎯 OCTOBER 2025 - LATEST: Enterprise AI & Security Revolution */}
         <NewContentPromoBanner 
           className="border-b border-white/10" 
@@ -140,8 +138,7 @@ const Home = () => {
           ]}
         />
         
-        {/* 🔥 FEBRUARY 2026 - BREAKING: Latest Revolutionary AI Breakthroughs */}
->>>>>>> pr-merges-backup
+        {/* 🎯 OCTOBER 1, 2025 - BREAKING NEWS: Latest Enterprise Solutions */}
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
@@ -211,7 +208,7 @@ const Home = () => {
         <October2025AIRevolutionBanner className="border-b border-white/10" />
         
         {/* 🚀 OCTOBER 17, 2025 - LATEST: Next-Gen Autonomous Systems, AI Code Generation & Real-Time Personalization */}
-        <October2025TechBannerNew />
+        {/* <October2025TechBannerNew /> */}
         
         {/* 🎯 OCTOBER 3, 2025 - LATEST: AI Education, Neuromorphic Computing & Biotech Breakthroughs */}
         <NewContentPromoBanner 
@@ -259,6 +256,9 @@ const Home = () => {
             { title: "AI-Driven Cybersecurity Operations — 99.7% Detection Accuracy, Sub-60s Response, 85% Fewer False Positives", category: "AI Security", link: "/blog/ai-cybersecurity-threat-intelligence-2025" }
           ]}
         />
+        
+        {/* October 1, 2025 - 🚨 FRESH: Latest AI Breakthroughs & Innovations */}
+        <October2025NewContentBanner2 />
         
         {/* October 1, 2025 - 🚀 JUST RELEASED: Latest AI Platform & Testing Guides */}
         <NewContentPromoBanner 
