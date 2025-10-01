@@ -1,8 +1,13 @@
 #!/usr/bin/env node
 
 /**
- * Performance Optimization Script
- * Analyzes and optimizes the build for better performance
+ * Performance Optimization Script for Zion Tech Group Website
+ * 
+ * This script performs various performance optimizations including:
+ * - Bundle size analysis
+ * - Image optimization recommendations
+ * - Code splitting suggestions
+ * - SEO and accessibility improvements
  */
 
 import fs from 'fs';
@@ -12,111 +17,138 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-console.log('🚀 Starting performance optimization...');
-
-// 1. Analyze bundle size
-function analyzeBundleSize() {
-  const distPath = path.join(__dirname, '../dist');
-  if (!fs.existsSync(distPath)) {
-    console.log('❌ Dist folder not found. Run build first.');
-    return;
+class PerformanceOptimizer {
+  constructor() {
+    this.report = {
+      timestamp: new Date().toISOString(),
+      optimizations: [],
+      recommendations: [],
+      bundleAnalysis: {},
+      performanceMetrics: {}
+    };
   }
 
-  const files = fs.readdirSync(distPath, { recursive: true });
-  let totalSize = 0;
-  const fileSizes = [];
-
-  files.forEach(file => {
-    const filePath = path.join(distPath, file);
-    if (fs.statSync(filePath).isFile()) {
-      const size = fs.statSync(filePath).size;
-      totalSize += size;
-      fileSizes.push({ name: file, size });
+  async analyzeBundleSize() {
+    console.log('🔍 Analyzing bundle size...');
+    
+    const distPath = path.join(__dirname, '../dist');
+    if (!fs.existsSync(distPath)) {
+      console.log('⚠️  Dist folder not found. Run build first.');
+      return;
     }
-  });
 
-  // Sort by size
-  fileSizes.sort((a, b) => b.size - a.size);
+    const files = fs.readdirSync(distPath, { recursive: true });
+    let totalSize = 0;
+    const largeFiles = [];
 
-  console.log('\n📊 Bundle Analysis:');
-  console.log(`Total size: ${(totalSize / 1024 / 1024).toFixed(2)} MB`);
-  console.log('\nLargest files:');
-  fileSizes.slice(0, 10).forEach(file => {
-    console.log(`  ${file.name}: ${(file.size / 1024).toFixed(2)} KB`);
-  });
-}
+    files.forEach(file => {
+      const filePath = path.join(distPath, file);
+      if (fs.statSync(filePath).isFile()) {
+        const size = fs.statSync(filePath).size;
+        totalSize += size;
+        
+        if (size > 100000) { // Files larger than 100KB
+          largeFiles.push({
+            name: file,
+            size: size,
+            sizeKB: Math.round(size / 1024)
+          });
+        }
+      }
+    });
 
-// 2. Check for unused dependencies
-function checkUnusedDeps() {
-  console.log('\n🔍 Checking for potential optimizations...');
-  
-  const packageJson = JSON.parse(fs.readFileSync(path.join(__dirname, '../package.json'), 'utf8'));
-  const dependencies = Object.keys(packageJson.dependencies || {});
-  
-  console.log('Dependencies:', dependencies.length);
-  console.log('DevDependencies:', Object.keys(packageJson.devDependencies || {}).length);
-  
-  // Check for large dependencies
-  const largeDeps = ['framer-motion', 'recharts', 'axios'];
-  largeDeps.forEach(dep => {
-    if (dependencies.includes(dep)) {
-      console.log(`⚠️  Large dependency detected: ${dep}`);
+    this.report.bundleAnalysis = {
+      totalSize: totalSize,
+      totalSizeMB: Math.round(totalSize / (1024 * 1024) * 100) / 100,
+      largeFiles: largeFiles.sort((a, b) => b.size - a.size)
+    };
+
+    console.log(`📊 Total bundle size: ${this.report.bundleAnalysis.totalSizeMB}MB`);
+    console.log(`📦 Large files (>100KB): ${largeFiles.length}`);
+  }
+
+  generateOptimizationRecommendations() {
+    console.log('💡 Generating optimization recommendations...');
+
+    const recommendations = [
+      {
+        category: 'Bundle Optimization',
+        priority: 'High',
+        title: 'Implement Code Splitting',
+        description: 'Split large components into smaller chunks to reduce initial bundle size',
+        impact: 'High'
+      },
+      {
+        category: 'Image Optimization',
+        priority: 'Medium',
+        title: 'Optimize Images',
+        description: 'Convert images to WebP format and implement lazy loading',
+        impact: 'Medium'
+      },
+      {
+        category: 'Performance',
+        priority: 'High',
+        title: 'Implement Service Worker',
+        description: 'Add service worker for caching and offline functionality',
+        impact: 'High'
+      },
+      {
+        category: 'SEO',
+        priority: 'Medium',
+        title: 'Improve Meta Tags',
+        description: 'Add comprehensive meta tags and structured data',
+        impact: 'Medium'
+      },
+      {
+        category: 'Accessibility',
+        priority: 'High',
+        title: 'Enhance Accessibility',
+        description: 'Add ARIA labels and improve keyboard navigation',
+        impact: 'High'
+      }
+    ];
+
+    this.report.recommendations = recommendations;
+    console.log(`✅ Generated ${recommendations.length} optimization recommendations`);
+  }
+
+  generatePerformanceReport() {
+    console.log('📋 Generating performance report...');
+
+    const reportPath = path.join(__dirname, '../performance-optimization-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(this.report, null, 2));
+    
+    console.log(`📄 Performance report saved to: ${reportPath}`);
+    
+    // Generate summary
+    console.log('\n🎯 Optimization Summary:');
+    console.log('='.repeat(50));
+    
+    if (this.report.bundleAnalysis.totalSizeMB > 2) {
+      console.log('⚠️  Bundle size is large. Consider code splitting.');
+    } else {
+      console.log('✅ Bundle size is acceptable.');
     }
-  });
+
+    const highPriorityRecs = this.report.recommendations.filter(r => r.priority === 'High');
+    console.log(`🔴 High priority optimizations: ${highPriorityRecs.length}`);
+    
+    highPriorityRecs.forEach(rec => {
+      console.log(`   • ${rec.title}`);
+    });
+  }
+
+  async run() {
+    console.log('🚀 Starting performance optimization analysis...\n');
+    
+    await this.analyzeBundleSize();
+    this.generateOptimizationRecommendations();
+    this.generatePerformanceReport();
+    
+    console.log('\n✨ Performance optimization analysis complete!');
+  }
 }
 
-// 3. Generate performance report
-function generatePerformanceReport() {
-  const report = {
-    timestamp: new Date().toISOString(),
-    optimizations: [
-      'Terser minification with aggressive settings',
-      'Tree shaking enabled',
-      'Code splitting optimized',
-      'CSS code splitting enabled',
-      'Asset inlining for small files',
-      'ESBuild optimizations',
-      'Manual chunk splitting for better caching'
-    ],
-    recommendations: [
-      'Consider lazy loading for non-critical components',
-      'Implement service worker for caching',
-      'Optimize images with WebP format',
-      'Use CDN for static assets',
-      'Implement preloading for critical resources'
-    ]
-  };
-
-  fs.writeFileSync(
-    path.join(__dirname, '../performance-optimization-report.json'),
-    JSON.stringify(report, null, 2)
-  );
-
-  console.log('\n📈 Performance report generated: performance-optimization-report.json');
-}
-
-// 4. Optimize images (placeholder)
-function optimizeImages() {
-  console.log('\n🖼️  Image optimization recommendations:');
-  console.log('  - Convert images to WebP format');
-  console.log('  - Implement responsive images');
-  console.log('  - Use lazy loading for below-the-fold images');
-  console.log('  - Consider using a CDN for image delivery');
-}
-
-// Run all optimizations
-function runOptimizations() {
-  analyzeBundleSize();
-  checkUnusedDeps();
-  generatePerformanceReport();
-  optimizeImages();
-  
-  console.log('\n✅ Performance optimization complete!');
-  console.log('\nNext steps:');
-  console.log('1. Review the performance report');
-  console.log('2. Implement recommended optimizations');
-  console.log('3. Test the build performance');
-  console.log('4. Monitor Core Web Vitals');
-}
-
-runOptimizations();
+// Run the optimizer
+const optimizer = new PerformanceOptimizer();
+optimizer.run().catch(console.error);
