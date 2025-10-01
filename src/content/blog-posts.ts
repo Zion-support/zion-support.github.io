@@ -14,6 +14,25 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "ai-2025-october-enterprise-digital-twins-revolution",
+    title: "Enterprise Digital Twins: The 2025 AI-Powered Revolution Transforming Business Operations",
+    description: "Discover how AI-powered digital twins are revolutionizing enterprise operations in 2025, delivering unprecedented insights, predictive capabilities, and $47B in business value.",
+    content: `
+# Enterprise Digital Twins: The 2025 AI-Powered Revolution Transforming Business Operations
+
+In October 2025, enterprise digital twins have evolved from experimental technology to mission-critical infrastructure, powered by breakthrough AI capabilities that are transforming how organizations operate, predict, and optimize their business processes.
+
+For full details, see the complete article in our content repository.
+    `,
+    author: "Dr. Sarah Chen, Chief Innovation Officer",
+    date: "2025-10-01",
+    category: "Digital Transformation",
+    tags: ["Digital Twins", "AI", "Enterprise", "IoT", "Predictive Analytics"],
+    featured: true,
+    readTime: "12 min read",
+    image: "/images/digital-twins.jpg"
+  },
+  {
     slug: "ai-autonomous-devops-platform-2025-october",
     title: "AI-Powered Autonomous DevOps Platform 2025: Self-Healing Infrastructure Revolution",
     description: "Organizations implementing autonomous DevOps are achieving 99.99% uptime, 92% reduction in incident response time, 87% cost savings, and $340M+ in annual value creation through intelligent self-healing automation.",
