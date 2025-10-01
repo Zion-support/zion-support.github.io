@@ -14,6 +14,51 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    id: '301',
+    title: 'AI Governance 2027: KPI‑Linked Guardrails That Speed Delivery',
+    slug: 'ai-governance-2027-kpi-guardrails-2025-10-01',
+    excerpt:
+      'Wire CI policy tests and live canaries to product KPIs so teams ship weekly without regressions.',
+    content:
+      'A pragmatic blueprint for KPI‑linked policy tests, online canaries, and rollback‑first operations that keep teams fast and compliant. Includes reference policies, dashboards, and rollout trains proven in enterprise environments.',
+    featuredImage: '/images/blog/ai-governance-2027.jpg',
+    category: 'AI Governance',
+    tags: ['Policy Tests', 'Canaries', 'Rollback'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-01',
+    readTime: 7,
+  },
+  {
+    id: '302',
+    title: 'Edge Inference Blueprint 2027: Sub‑100ms at Global Scale',
+    slug: 'edge-inference-blueprint-2027-2025-10-01',
+    excerpt:
+      'Warm pools, intent prefetch, and tiered caches to keep UX fast and costs predictable worldwide.',
+    content:
+      'End‑to‑end patterns for globally fast inference: predictive warm pools, SLA‑aware routing, and tiered caches. We include configs, SLI scorecards, and rollback playbooks that prevent user‑visible regressions while controlling spend.',
+    featuredImage: '/images/blog/edge-inference-blueprint-2027.jpg',
+    category: 'Edge Computing',
+    tags: ['Latency', 'Caching', 'Global'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-01',
+    readTime: 6,
+  },
+  {
+    id: '303',
+    title: 'Agent Observability Runbooks 2027: Traces, SLIs, Rollback',
+    slug: 'agent-observability-runbooks-2027-2025-10-01',
+    excerpt:
+      'Production runbooks for agent tools with KPI‑linked SLIs, budgeted actions, and instant rollback.',
+    content:
+      'Make agent systems reliable with tool‑level traces, KPI‑linked SLIs, budgeted actions, and one‑click rollback. We share dashboards, incident drills, and approval workflows that keep autonomy safe at scale.',
+    featuredImage: '/images/blog/agent-observability-runbooks-2027.jpg',
+    category: 'AI Operations',
+    tags: ['Agents', 'Observability', 'SLIs', 'Rollback'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-01',
+    readTime: 8,
+  },
+  {
     id: '1',
     title: 'Welcome to Our Blog',
     slug: 'welcome-to-our-blog',
