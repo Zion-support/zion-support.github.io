@@ -60,6 +60,9 @@ importers:
       '@eslint/js':
         specifier: ^9.36.0
         version: 9.36.0
+      '@rollup/rollup-linux-x64-gnu':
+        specifier: 4.52.3
+        version: 4.52.3
       '@testing-library/dom':
         specifier: ^10.4.1
         version: 10.4.1
@@ -4368,8 +4371,7 @@ snapshots:
   '@rollup/rollup-linux-s390x-gnu@4.52.3':
     optional: true
 
-  '@rollup/rollup-linux-x64-gnu@4.52.3':
-    optional: true
+  '@rollup/rollup-linux-x64-gnu@4.52.3': {}
 
   '@rollup/rollup-linux-x64-musl@4.52.3':
     optional: true
