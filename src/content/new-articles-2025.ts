@@ -12,6 +12,39 @@ export interface NewArticle {
 
 export const newArticles2025: NewArticle[] = [
   {
+    id: "ai-2025-october-quantum-safe-cryptography-revolution",
+    title: "🔐 Quantum-Safe Cryptography Revolution 2025",
+    description: "Protect enterprise data against quantum threats with NIST-approved post-quantum cryptography. Complete migration roadmap, hybrid crypto strategies, and real-world implementation achieving 100% quantum resistance.",
+    category: "Security",
+    publishedDate: "2025-10-01",
+    featured: true,
+    link: "/blog/ai-2025-october-quantum-safe-cryptography-revolution",
+    readTime: "18 min read",
+    tags: ["Quantum Security", "Post-Quantum Cryptography", "NIST Standards", "Enterprise Security"]
+  },
+  {
+    id: "ai-2025-october-neuromorphic-computing-breakthrough",
+    title: "🧠 Neuromorphic Computing Breakthrough 2025",
+    description: "Brain-inspired chips achieve 1000x energy efficiency compared to GPUs. Master spiking neural networks, event-driven processing, and Intel Loihi 2 deployment for next-generation edge AI and robotics.",
+    category: "Hardware AI",
+    publishedDate: "2025-10-01",
+    featured: true,
+    link: "/blog/ai-2025-october-neuromorphic-computing-breakthrough",
+    readTime: "20 min read",
+    tags: ["Neuromorphic Computing", "SNNs", "Energy Efficiency", "Edge AI", "Intel Loihi"]
+  },
+  {
+    id: "ai-2025-october-synthetic-data-generation-mastery",
+    title: "🎲 Synthetic Data Generation Mastery 2025",
+    description: "Train world-class AI models without privacy risks using GANs, VAEs, and diffusion models. Achieve 95%+ model accuracy with zero GDPR violations and 100x cost savings vs real data collection.",
+    category: "AI Training",
+    publishedDate: "2025-10-01",
+    featured: true,
+    link: "/blog/ai-2025-october-synthetic-data-generation-mastery",
+    readTime: "22 min read",
+    tags: ["Synthetic Data", "GANs", "Privacy-Preserving AI", "GDPR Compliance", "Data Augmentation"]
+  },
+  {
     id: "ai-agent-evaluations-2026",
     title: "🧪 AI Agent Evaluations 2026: Reliable Metrics & Safe Deployments",
     description: "Blueprint for robust agent evals: task suites, rubric scoring, long-horizon reliability, safety budgets, and HIL governance.",
