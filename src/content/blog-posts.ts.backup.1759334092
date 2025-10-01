@@ -14,6 +14,41 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+<<<<<<< HEAD
+ 
+    slug: "enterprise-ai-value-realization-2025-10-08",
+    title: "Enterprise AI Value Realization: 90 Days to Outcomes",
+    description: "Blueprint to convert AI pilots into shipped outcomes in 90 days: KPI scorecards, evaluator gates, tiered routing + caches, rollback-first ops.",
+    content: `
+# Enterprise AI Value Realization: 90 Days to Outcomes
+
+Large AI programs often stall in pilot mode. This pragmatic guide shows how to deliver production outcomes in 90 days with:
+
+## Core Moves
+- KPI-linked scorecards that predict production outcomes
+- Evaluator-driven release gates wired to business metrics
+- Tiered routing and semantic caches for predictable cost and latency
+- Rollback-first operations with canary scorecards and blast-radius checks
+
+## 90-Day Plan
+- Weeks 1–2: Align on metrics, draft policy tests, and wire dashboards
+- Weeks 3–6: Dark-ship routes with caches + coalescing; validate scorecards
+- Weeks 7–10: Gradual exposure with canaries; tighten SLOs and budgets
+- Weeks 11–12: Lock-in wins in CI; publish weekly value scorecards
+
+Need help landing this quickly and safely? Our team can partner with yours.
+    `,
+    author: "Zion Tech Group Platform Office",
+    date: "2025-10-08",
+    category: "AI Operations",
+    tags: ["Execution", "Scorecards", "Guardrails", "Cost"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/enterprise-ai-value-realization-2025.jpg"
+  },
+  {
+ 
+=======
     slug: "ai-2025-oct-05-ai-reliability-scorecards-2026",
     title: "AI Reliability Scorecards 2026: SLIs, Error Budgets, Rollbacks",
     description: "Operationalize AI quality with SLIs, KPI-linked error budgets, and instant rollback triggers.",
@@ -85,6 +120,7 @@ Connect strategy to shipped value with guardrails and scorecards.
     image: "/images/executive-ai-playbook-2027.jpg"
   },
   {
+>>>>>>> origin/cursor/create-and-advertise-new-content-9c1c
     slug: "ai-2025-oct-01-governed-agent-platforms-v2",
     title: "Governed Agent Platforms v2: Budgets, Scorecards, Instant Rollback",
     description: "Ship enterprise agent platforms safely: KPI scorecards, budget-aware routing, CI policy tests, and one-click rollback.",
