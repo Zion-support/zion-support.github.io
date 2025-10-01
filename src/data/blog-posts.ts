@@ -14,49 +14,49 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
-    id: '301',
-    title: 'AI Governance 2027: KPI‑Linked Guardrails That Speed Delivery',
-    slug: 'ai-governance-2027-kpi-guardrails-2025-10-01',
+    id: '99',
+    title: 'Governed Agentic Automation: Safe Tools, Fast Outcomes',
+    slug: 'governed-agentic-automation-2025-10-03',
     excerpt:
-      'Wire CI policy tests and live canaries to product KPIs so teams ship weekly without regressions.',
+      'Design agent toolchains with budgets, approvals, and rollback to move 10x faster without incidents.',
     content:
-      'A pragmatic blueprint for KPI‑linked policy tests, online canaries, and rollback‑first operations that keep teams fast and compliant. Includes reference policies, dashboards, and rollout trains proven in enterprise environments.',
-    featuredImage: '/images/blog/ai-governance-2027.jpg',
-    category: 'AI Governance',
-    tags: ['Policy Tests', 'Canaries', 'Rollback'],
+      'Ship agent automations your SRE and compliance teams endorse: signed tools with scopes and quotas, action budgets and approvals, live traces with KPI‑linked SLIs, and rollback hooks. Policy templates and dashboards included.',
+    featuredImage: '/images/blog/governed-agentic-automation.jpg',
+    category: 'AI',
+    tags: ['Agents', 'Governance', 'Guardrails', 'Rollback'],
     author: 'Zion Tech Team',
-    publishedAt: '2025-10-01',
-    readTime: 7,
-  },
-  {
-    id: '302',
-    title: 'Edge Inference Blueprint 2027: Sub‑100ms at Global Scale',
-    slug: 'edge-inference-blueprint-2027-2025-10-01',
-    excerpt:
-      'Warm pools, intent prefetch, and tiered caches to keep UX fast and costs predictable worldwide.',
-    content:
-      'End‑to‑end patterns for globally fast inference: predictive warm pools, SLA‑aware routing, and tiered caches. We include configs, SLI scorecards, and rollback playbooks that prevent user‑visible regressions while controlling spend.',
-    featuredImage: '/images/blog/edge-inference-blueprint-2027.jpg',
-    category: 'Edge Computing',
-    tags: ['Latency', 'Caching', 'Global'],
-    author: 'Zion Tech Team',
-    publishedAt: '2025-10-01',
-    readTime: 6,
-  },
-  {
-    id: '303',
-    title: 'Agent Observability Runbooks 2027: Traces, SLIs, Rollback',
-    slug: 'agent-observability-runbooks-2027-2025-10-01',
-    excerpt:
-      'Production runbooks for agent tools with KPI‑linked SLIs, budgeted actions, and instant rollback.',
-    content:
-      'Make agent systems reliable with tool‑level traces, KPI‑linked SLIs, budgeted actions, and one‑click rollback. We share dashboards, incident drills, and approval workflows that keep autonomy safe at scale.',
-    featuredImage: '/images/blog/agent-observability-runbooks-2027.jpg',
-    category: 'AI Operations',
-    tags: ['Agents', 'Observability', 'SLIs', 'Rollback'],
-    author: 'Zion Tech Team',
-    publishedAt: '2025-10-01',
+    publishedAt: '2025-10-03',
     readTime: 8,
+  },
+  {
+    id: '98',
+    title: 'Enterprise RAG Blueprint v3: 45% Quality ↑, 62% Cost ↓',
+    slug: 'enterprise-rag-blueprint-v3-2025-10-03',
+    excerpt:
+      'Retrieval budgets, freshness windows, and cache tiers that raise answer quality while cutting spend.',
+    content:
+      'A pragmatic RAG playbook: strict source governance, retrieval budgets and freshness windows, and tiered caches across features/chunks/answers. Eval‑gated rollouts with kill switches. Includes reference architectures and KPI scorecards.',
+    featuredImage: '/images/blog/enterprise-rag-blueprint-v3.jpg',
+    category: 'RAG',
+    tags: ['RAG', 'Retrieval', 'Caching', 'Quality', 'Cost'],
+    author: 'Zion Tech Group Knowledge Systems',
+    publishedAt: '2025-10-03',
+    readTime: 9,
+  },
+  {
+    id: '97',
+    title: 'Cloud Cost Optimization v6: Quality Tiers, Coalesce, Distill',
+    slug: 'genai-cost-optimization-v6-2025-10-03',
+    excerpt:
+      'Cut inference spend 60–85% with tiered routing, request coalescing, and selective distillation.',
+    content:
+      'Control GenAI costs without UX regressions: quality‑tier routers, request coalescing, semantic caches, and selective distillation for hot paths. Includes rollout rituals, SLO templates, and dashboards used by platform teams.',
+    featuredImage: '/images/blog/genai-cost-optimization-v6.jpg',
+    category: 'Cloud',
+    tags: ['FinOps', 'LLM', 'Caching', 'Optimization'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-03',
+    readTime: 9,
   },
   {
     id: '1',
@@ -70,51 +70,6 @@ export const BLOG_POSTS: BlogPost[] = [
     author: 'Zion Tech Team',
     publishedAt: '2024-01-01',
     readTime: 5,
-  },
-  {
-    id: '206',
-    title: 'AI Budgeted Routing: Stable UX Under Any Spend',
-    slug: 'ai-budgeted-routing-stable-ux-2025-10-04',
-    excerpt:
-      'Quality tiers, request coalescing, and semantic caches keep experience steady while costs flex.',
-    content:
-      'Keep product KPIs stable regardless of budget. We cover tiered model routing with evaluator gates, request coalescing, and multi-layer caches (feature, embedding, retrieval). Includes rollout checklists, dashboards, and safe fallbacks that avoid user-visible regressions while cutting spend 30–70%.',
-    featuredImage: '/images/blog/ai-budgeted-routing.jpg',
-    category: 'AI',
-    tags: ['Routing', 'Caching', 'Cost'],
-    author: 'Zion Tech Team',
-    publishedAt: '2025-10-04',
-    readTime: 7,
-  },
-  {
-    id: '207',
-    title: 'Agent Observability: Tool Traces, SLIs, and Rollback Hooks',
-    slug: 'agent-observability-tool-traces-slis-rollback-2025-10-04',
-    excerpt:
-      'See, trust, and control agent actions with budgets, approvals, and instant rollback triggers.',
-    content:
-      'Production agents demand end-to-end visibility. We show tool-level traces, KPI-linked SLIs, action budgets, and approval workflows. Learn canary strategies and rollback-first operations to keep incidents rare while unlocking autonomy.',
-    featuredImage: '/images/blog/agent-observability-2025.jpg',
-    category: 'AI',
-    tags: ['Agents', 'Observability', 'SLIs', 'Rollback'],
-    author: 'Zion Tech Team',
-    publishedAt: '2025-10-04',
-    readTime: 8,
-  },
-  {
-    id: '208',
-    title: 'Private Experimentation at the Edge: Zero‑PII A/B <100ms',
-    slug: 'private-experimentation-edge-zero-pii-2025-10-04',
-    excerpt:
-      'Scoped identifiers, on-device aggregation, and DP noise enable fast, compliant experiments.',
-    content:
-      'Run global experiments without centralizing PII. This guide details signed configs, cacheable variants, scoped rotating IDs, and differential privacy for cohort metrics—all under 100ms. Includes configs, rollout playbooks, and validation scorecards.',
-    featuredImage: '/images/blog/private-experimentation-edge-2025.jpg',
-    category: 'Experimentation',
-    tags: ['Edge', 'A/B', 'Privacy', 'DP'],
-    author: 'Zion Tech Team',
-    publishedAt: '2025-10-04',
-    readTime: 7,
   },
   {
     id: '31',
@@ -535,7 +490,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: 9,
   },
   {
-    id: '200',
+    id: '27',
     title: 'Policy-Driven AI: Guardrails as Code for Safer Autonomy',
     slug: 'policy-driven-ai-guardrails-as-code-2025-10-02',
     excerpt:
@@ -550,7 +505,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: 7,
   },
   {
-    id: '201',
+    id: '28',
     title: 'Platform Observability 2025: From Signals to Automated Actions',
     slug: 'platform-observability-automated-actions-2025-10-02',
     excerpt:
@@ -565,7 +520,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: 6,
   },
   {
-    id: '202',
+    id: '29',
     title: 'Cloud Cost Playbooks 2025: LLM + Infra Savings Without Slowdowns',
     slug: 'cloud-cost-playbooks-llm-infra-2025-10-02',
     excerpt:
@@ -580,7 +535,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: 7,
   },
   {
-    id: '203',
+    id: '30',
     title: 'Quantum-Safe Cryptography: Enterprise Migration Playbook (2025)',
     slug: 'quantum-safe-cryptography-enterprise-migration-2025',
     excerpt:
@@ -595,7 +550,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: 9,
   },
   {
-    id: '204',
+    id: '31',
     title: 'Neuromorphic Edge AI: Event-Driven Intelligence Under 10ms',
     slug: 'neuromorphic-edge-ai-event-driven-2025',
     excerpt:
@@ -610,7 +565,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: 8,
   },
   {
-    id: '205',
+    id: '32',
     title: 'Synthetic Data in Production: Privacy-Safe Accuracy Gains',
     slug: 'synthetic-data-production-privacy-2025',
     excerpt:
