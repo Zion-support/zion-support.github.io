@@ -74,10 +74,8 @@ import ProductionAgenticAIBanner, { AgenticAIShowcaseBanner } from '../component
 import AISecurityBanner, { AISecurityShowcaseBanner } from '../components/AISecurityBanner';
 import October2025NewPracticalContentBannerTop, { October2025PracticalContentShowcase } from '../components/October2025NewPracticalContentBanner';
 
-// NEW JANUARY 2026 BREAKTHROUGH CONTENT
+// NEW JANUARY 2026 QUANTUM BREAKTHROUGH CONTENT
 import January2026QuantumBreakthroughBanner from '../components/January2026QuantumBreakthroughBanner';
-import LatestContent2026Banner from '../components/LatestContent2026Banner';
-import NewContentShowcase2026Banner from '../components/NewContentShowcase2026Banner';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -91,9 +89,6 @@ export default function HomePage() {
       {/* 🚀 BRAND NEW JANUARY 2026 QUANTUM BREAKTHROUGH - TOP PRIORITY */}
       <January2026QuantumBreakthroughBanner />
 
-      {/* 🚀 BRAND NEW JANUARY 2026 BREAKTHROUGH CONTENT */}
-      <LatestContent2026Banner />
-
       {/* 🚀 NEWEST OCTOBER 2025 - PRODUCTION AGENTIC AI & SECURITY */}
       <October2025NewPracticalContentBannerTop />
       <ProductionAgenticAIBanner />
@@ -105,6 +100,7 @@ export default function HomePage() {
       {/* 🔒 BRAND NEW JANUARY 2026 FEDERATED LEARNING PRIVACY REVOLUTION */}
       <FederatedLearningPrivacyBanner />
       
+      {/* 🚀 BREAKTHROUGH 2027/2028 UNIVERSAL CONSCIOUSNESS & QUANTUM SINGULARITY */}
       {/* 🚀 BREAKTHROUGH 2027/2028 UNIVERSAL CONSCIOUSNESS & QUANTUM SINGULARITY */}
       <section className="w-full bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-6">
         <div className="max-w-6xl mx-auto px-4">
@@ -136,7 +132,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      
+
       {/* 🔥 BRAND NEW OCTOBER 2025 NEUROMORPHIC & FEDERATED LEARNING */}
       <section className="w-full bg-gradient-to-r from-purple-600 via-blue-600 to-teal-600 text-white py-4">
         <div className="max-w-6xl mx-auto px-4">
@@ -177,9 +173,6 @@ export default function HomePage() {
       
       {/* NEW REVOLUTIONARY 2026 CONTENT - TOP BANNER */}
       <Revolutionary2026ContentBanner />
-      
-      {/* NEW JANUARY 2026 BREAKTHROUGH SHOWCASE */}
-      <NewContentShowcase2026Banner />
       
       {/* NEW CONTENT SHOWCASE */}
       <NewContentShowcaseBanner />

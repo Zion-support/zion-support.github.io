@@ -3,6 +3,7 @@ import React from 'react';
 import Link from 'next/link';
 import './globals.css';
 import { September30NewContentShowcase } from '../components/PromotionalBanner';
+import NewContentNavigation from '../components/NewContentNavigation';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -789,6 +790,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="min-h-screen bg-white text-gray-900">
         <September30NewContentShowcase />
         <Header />
+        <NewContentNavigation />
         <main className="max-w-6xl mx-auto px-4 py-6 min-h-screen">
           {children}
         </main>
