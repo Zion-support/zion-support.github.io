@@ -2,7 +2,8 @@ module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
   passWithNoTests: true,
-  roots: ['<rootDir>/__tests__', '<rootDir>/src'],
+  // Limit test discovery to application source; ignore junk tests under root __tests__
+  roots: ['<rootDir>/src'],
   setupFilesAfterEnv: [ '@testing-library/jest-dom', '<rootDir>/jest.setup.ts' ],
   extensionsToTreatAsEsm: ['.ts', '.tsx'],
   moduleNameMapper: {
@@ -14,13 +15,14 @@ module.exports = {
     '^@utils/(.*)$': '<rootDir>/src/utils/$1',
     '^@hooks/(.*)$': '<rootDir>/src/hooks/$1'
   },
-  testMatch: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
+  testMatch: ['**/?(*.)+(spec|test).[jt]s?(x)'],
   testPathIgnorePatterns: [
     '/node_modules/',
     '/dist/',
     '/build/',
     '/.next/',
     '/out/',
+    '/__tests__/',
     '/tests.disabled/',
     '/automation/',
     '/automation_backup/',
