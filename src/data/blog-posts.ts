@@ -14,6 +14,21 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    id: '206',
+    title: 'Production Evals Playbook: Scorecards That Predict Prod',
+    slug: 'ai-2025-oct-01-production-evals-playbook',
+    excerpt:
+      'Design eval pipelines that correlate with KPIs and gate risky changes. Ship faster with fewer regressions.',
+    content:
+      'Build eval pipelines that actually predict production outcomes: golden task sets mapped to journeys, calibrated metrics, budget-linked scorecards, and online canaries with instant rollback. Fewer regressions, faster iteration, and measurable trust in AI quality.',
+    featuredImage: '/images/blog/production-evals-playbook.jpg',
+    category: 'AI Reliability',
+    tags: ['Evaluations', 'Scorecards', 'Guardrails', 'E2E'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-01',
+    readTime: 8,
+  },
+  {
     id: '1',
     title: 'Welcome to Our Blog',
     slug: 'welcome-to-our-blog',

@@ -14,6 +14,34 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "ai-2025-oct-01-production-evals-playbook",
+    title: "Production Evals Playbook: Scorecards That Predict Prod",
+    description: "Design eval pipelines that correlate with KPIs and gate risky changes. Ship faster with fewer regressions.",
+    content: `
+# Production Evals Playbook: Scorecards That Predict Prod
+
+Most eval suites fail to predict production behavior. This playbook shows how to build eval pipelines that correlate with business KPIs and act as reliable change gates.
+
+## What You’ll Implement
+- Golden task sets mapped to critical user journeys
+- Calibrated metrics (task success, harmlessness, helpfulness)
+- Budget‑linked scorecards with pass/fail thresholds
+- Online canaries and instant rollback hooks
+
+## Outcomes
+- Fewer regressions and faster iteration
+- Measurable trust in AI quality
+- Clear ownership with a weekly review ritual
+    `,
+    author: "Zion Tech Group Reliability Lab",
+    date: "2025-10-01",
+    category: "AI Reliability",
+    tags: ["Evaluations", "Scorecards", "Guardrails", "E2E"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/production-evals-playbook.jpg"
+  },
+  {
     slug: "ai-2025-oct-04-enterprise-agents-in-production",
     title: "Enterprise Agents in Production: Budgets, Approvals, and Rollback",
     description: "Practical patterns to run AI agents safely in prod with KPI-linked SLIs, action budgets, and instant rollback.",
