@@ -42,6 +42,7 @@ import {
   MLPipelineOptimizationCaseStudyBanner
 } from '../components/PromotionalBanner';
 import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
+import NewContentShowcaseBanner from '../components/NewContentShowcaseBanner';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
@@ -73,6 +74,12 @@ export default function HomePage() {
       {/* NEW OCTOBER 2025 ML PIPELINE OPTIMIZATION - TOP PRIORITY */}
       <MLPipelineOptimizationBanner />
       <MLPipelineOptimizationCaseStudyBanner />
+      
+      {/* NEW REVOLUTIONARY 2026 CONTENT - TOP BANNER */}
+      <Revolutionary2026ContentBanner />
+      
+      {/* NEW CONTENT SHOWCASE */}
+      <NewContentShowcaseBanner />
       
       {/* NEW OCTOBER 2025 CONTENT - TOP BANNER */}
       <October2025NewContentBanner />
@@ -366,12 +373,6 @@ export default function HomePage() {
       
       {/* AI Innovation Showcase Banner 2026 */}
       <AIInnovationShowcaseBanner2026 />
-<<<<<<< HEAD
-=======
-      
-      {/* Revolutionary 2026 Content Banner */}
-      <Revolutionary2026ContentBanner />
->>>>>>> pr-24579
       
       {/* Latest 2026 Content Banner */}
       <LatestContent2026Banner />
