@@ -1,5 +1,27 @@
 import React, { JSX } from "react";
+
+// 🚀🚀🚀 LATEST OCTOBER 2025 NEW CONTENT - HIGHEST PRIORITY 🚀🚀🚀
+import October2025NewContentHighlightBanner from "./components/October2025NewContentHighlightBanner";
 import SyntheticConsciousnessRevolutionBanner from "./components/SyntheticConsciousnessRevolutionBanner";
+
+// OCTOBER 2025 NEW CONTENT - MOST RECENT & PROMINENT
+import October2025TechnicalContentBanner from "./components/October2025TechnicalContentBanner";
+import October2025ProductionAIBanner from "./components/October2025ProductionAIBanner";
+
+// NEW 2027 BREAKTHROUGH IMPORTS - HIGHEST PRIORITY
+import AI2027TranscendentRealityBanner from "./components/AI2027TranscendentRealityBanner";
+import AI2027UltimateBreakthroughBanner from "./components/AI2027UltimateBreakthroughBanner";
+import Fortune500AI2027InfiniteValueBanner from "./components/Fortune500AI2027InfiniteValueBanner";
+
+// EXISTING IMPORTS
+import AI2033UniversalConsciousnessBanner from "./components/AI2033UniversalConsciousnessBanner";
+
+// 🚀 LATEST: October 2025 Revolutionary Content - MOST PROMINENT
+import October2025NewContentBanner from "./components/October2025NewContentBanner";
+
+// NEWEST: January 2025 Content Banners - MOST PROMINENT
+import January2025NewContentBanner from "./components/January2025NewContentBanner";
+import January2025InnovationShowcaseBanner from "./components/January2025InnovationShowcaseBanner";
 import September30NewContentMegaBanner from "./components/September30NewContentMegaBanner";
 import LatestSeptember30ContentShowcase from "./components/LatestSeptember30ContentShowcase";
 import September30NewAIInnovationsBanner from "./components/September30NewAIInnovationsBanner";
@@ -46,9 +68,19 @@ import Fortune500SuccessAdvertisingBanner from "./components/Fortune500SuccessAd
 export default function App(): JSX.Element {
   return (
     <div className="min-h-screen bg-slate-950">
+      {/* 🚀🚀🚀 BREAKING: OCTOBER 2025 NEW CONTENT - HIGHEST PRIORITY 🚀🚀🚀 */}
+      {/* Latest RL Industrial Automation, LLM Security, and $24.5B Success Story */}
+      <October2025NewContentHighlightBanner />
+      
       {/* 🧠 BREAKING: Synthetic Consciousness Revolution - NEWEST & MOST PROMINENT 🧠 */}
       <SyntheticConsciousnessRevolutionBanner />
       
+      {/* 🚀🚀🚀 OCTOBER 2025 NEW TECHNICAL CONTENT - MOST RECENT 🚀🚀🚀 */}
+      {/* Latest production AI engineering guides - October 2025 */}
+      <October2025ProductionAIBanner />
+      <October2025TechnicalContentBanner />
+      
+      {/* 🚀🚀🚀 NEW 2027 BREAKTHROUGH CONTENT - HIGHEST PRIORITY 🚀🚀🚀 */}
       {/* 🔥 AI 2027: The Ultimate Transcendent Intelligence Breakthrough - MOST PROMINENT 🔥 */}
       <AI2027UltimateBreakthroughBanner />
       
