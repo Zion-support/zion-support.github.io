@@ -1,5 +1,9 @@
 import React, { JSX } from "react";
 
+// 🚀🚀🚀 BREAKING: JANUARY 2025 NEW CONTENT - ABSOLUTE HIGHEST PRIORITY 🚀🚀🚀
+import January2025EnterpriseAutomationBanner from "./components/January2025EnterpriseAutomationBanner";
+import January2025AutonomousCodingBanner from "./components/January2025AutonomousCodingBanner";
+
 // 🚀🚀🚀 BREAKING: DECEMBER 15, 2025 NEW CONTENT - ABSOLUTE HIGHEST PRIORITY 🚀🚀🚀
 import December2025NewContentShowcaseBanner from "./components/December2025NewContentShowcaseBanner";
 
@@ -90,6 +94,14 @@ import Fortune500SuccessAdvertisingBanner from "./components/Fortune500SuccessAd
 export default function App(): JSX.Element {
   return (
     <div className="min-h-screen bg-slate-950">
+      {/* 🚀🚀🚀 NEWEST: JANUARY 2025 - REVOLUTIONARY ENTERPRISE AUTOMATION - ABSOLUTE TOP PRIORITY! 🚀🚀🚀 */}
+      {/* Featured: $2.3B Cost Savings, 95% Efficiency Gains, Fortune 500 Success */}
+      <January2025EnterpriseAutomationBanner />
+      
+      {/* 🤖🤖🤖 BREAKING: JANUARY 2025 - AUTONOMOUS CODING REVOLUTION - MOST PROMINENT! 🤖🤖🤖 */}
+      {/* Featured: AI Agents Writing Production Code, 87% Faster Development, 94% Bug Reduction */}
+      <January2025AutonomousCodingBanner />
+      
       {/* 🚀🚀🚀 NEWEST: DECEMBER 15, 2025 - REVOLUTIONARY NEW CONTENT - ABSOLUTE TOP PRIORITY! 🚀🚀🚀 */}
       {/* Featured: Quantum AI Breakthrough, Advanced Autonomous Systems, Fortune 500 $5.2B Success */}
       <December2025NewContentShowcaseBanner />
