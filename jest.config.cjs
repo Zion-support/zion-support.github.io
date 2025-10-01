@@ -2,11 +2,11 @@ module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
   passWithNoTests: true,
-  roots: ['<rootDir>/src'],
+  roots: ['<rootDir>/__tests__', '<rootDir>/src'],
   setupFilesAfterEnv: [ '@testing-library/jest-dom', '<rootDir>/jest.setup.ts' ],
+  extensionsToTreatAsEsm: ['.ts', '.tsx'],
   moduleNameMapper: {
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
-    // Minimal mappers to avoid conflicts; project has no tests
     '\\.(gif|ttf|eot|svg|png|jpg|jpeg)$': '<rootDir>/tests/__mocks__/fileMock.js',
     '^@/(.*)$': '<rootDir>/src/$1',
     '^@components/(.*)$': '<rootDir>/src/components/$1',
@@ -14,7 +14,7 @@ module.exports = {
     '^@utils/(.*)$': '<rootDir>/src/utils/$1',
     '^@hooks/(.*)$': '<rootDir>/src/hooks/$1'
   },
-  testMatch: ['<rootDir>/src/**/*.(spec|test).(ts|tsx)'],
+  testMatch: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
   testPathIgnorePatterns: [
     '/node_modules/',
     '/dist/',
@@ -42,16 +42,12 @@ module.exports = {
     '/apps.backup/',
   ],
   transform: {
-    '^.+\\.(ts|tsx)$': 'ts-jest'
+    '^.+\\.(ts|tsx)$': ['ts-jest', { useESM: true }],
+    '^.+\\.(js|jsx)$': 'babel-jest'
   },
-  globals: {
-    'ts-jest': {
-      tsconfig: {
-        jsx: 'react-jsx'
-      },
-      isolatedModules: true,
-    }
-  },
+  transformIgnorePatterns: [
+    'node_modules/(?!(.*\\.mjs$|react|react-dom|@testing-library))'
+  ],
   moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx', 'json'],
   coverageDirectory: 'coverage',
   collectCoverage: false,
@@ -59,15 +55,13 @@ module.exports = {
   testEnvironmentOptions: {
     customExportConditions: ['node', 'node-addons']
   },
-  // Enable ES modules support
-  extensionsToTreatAsEsm: ['.ts', '.tsx'],
   globals: {
     'ts-jest': {
-      useESM: true
+      useESM: true,
+      tsconfig: {
+        jsx: 'react-jsx'
+      },
+      isolatedModules: true,
     }
-  },
-  // Transform ignore patterns for node_modules
-  transformIgnorePatterns: [
-    'node_modules/(?!(.*\\.mjs$|@testing-library|@babel/runtime))'
-  ]
+  }
 };
