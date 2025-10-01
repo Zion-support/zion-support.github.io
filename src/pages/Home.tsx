@@ -36,14 +36,17 @@ import October2025LatestBreakthroughBanner from "../components/October2025Latest
 import October2025InfrastructureExcellenceBanner from "../components/October2025InfrastructureExcellenceBanner";
 import October2025RevOpsBanner from "../components/October2025RevOpsBanner";
 import October2025DocumentAutomationBanner from "../components/October2025DocumentAutomationBanner";
+import October2025UltimateEnterpriseBanner from "../components/October2025UltimateEnterpriseBanner";
 import LatestArticlesShowcase from "../components/LatestArticlesShowcase";
 import LatestContentBanner from "../components/LatestContentBanner";
 import LatestInsights from "../components/LatestInsights";
 import ModernFeatures from "../components/ModernFeatures";
 import AdvertisingBanner from "../components/AdvertisingBanner";
 import October2025NewBreakthroughBanner from "../components/October2025NewBreakthroughBanner";
+import October2025CuttingEdgeInnovationsBanner from "../components/October2025CuttingEdgeInnovationsBanner";
 import January2026RevolutionaryBanner from "../components/January2026RevolutionaryBanner";
 import NewServicesPromoBanner2026 from "../components/NewServicesPromoBanner2026";
+import November2025GameChangersBanner from "../components/November2025GameChangersBanner";
 import { latestInsights } from "../content/insights";
 
 const Home = () => {
@@ -83,7 +86,10 @@ const Home = () => {
         <link rel="canonical" href="https://ziontechgroup.com" />
       </Helmet>
       <AdvertisingBanner />
+      <November2025GameChangersBanner />
       <January2026RevolutionaryBanner />
+      <October2025UltimateEnterpriseBanner />
+      <October2025CuttingEdgeInnovationsBanner />
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
         

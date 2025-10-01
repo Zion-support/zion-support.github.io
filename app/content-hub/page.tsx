@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import { ContentIntelligenceShowcaseBanner } from '../../components/ContentIntelligenceBanner';
 
 export const metadata = {
   title: 'AI Content Hub - Zion Tech Group',
@@ -11,18 +10,15 @@ export const metadata = {
 export default function ContentHub() {
   const blogCategories = [
     {
-      title: 'AI Computing Revolution 2026',
-      articles: [
-        { title: 'Neuromorphic Computing Revolution', slug: '/blog/ai-2026-neuromorphic-computing-revolution', readTime: '20 min', featured: true },
-        { title: 'Federated Learning Enterprise Privacy', slug: '/blog/ai-2026-federated-learning-enterprise-privacy', readTime: '18 min', featured: true },
-        { title: 'Agentic Workflow Orchestration 2026', slug: '/blog/agentic-workflow-orchestration-2026', readTime: '16 min', featured: false },
-        { title: 'AI Enterprise Agents Blueprint 2026', slug: '/blog/ai-enterprise-agents-blueprint-2026', readTime: '18 min', featured: false },
-        { title: 'AI Agent Observability 2026', slug: '/blog/ai-agent-observability-2026', readTime: '18 min', featured: false },
-      ]
-    },
-    {
       title: 'AI Implementation',
       articles: [
+        { title: 'Neural-Symbolic AI Enterprise Fusion Revolution 2025', slug: '/blog/ai-2025-oct-neural-symbolic-enterprise-fusion-revolution', readTime: '22 min', featured: true },
+        { title: 'Enterprise AI Orchestration Mesh Revolution 2025', slug: '/blog/ai-2025-oct-enterprise-ai-orchestration-mesh-revolution', readTime: '20 min', featured: true },
+        { title: 'AI Agent Swarms Enterprise Orchestration 2026', slug: '/blog/ai-agent-swarms-enterprise-orchestration-2026', readTime: '28 min', featured: true },
+        { title: 'Quantum-Enhanced AI Enterprise Breakthrough 2026', slug: '/blog/quantum-enhanced-ai-enterprise-breakthrough-2026', readTime: '32 min', featured: true },
+        { title: 'Agentic Workflow Orchestration 2026', slug: '/blog/agentic-workflow-orchestration-2026', readTime: '16 min', featured: true },
+        { title: 'AI Enterprise Agents Blueprint 2026', slug: '/blog/ai-enterprise-agents-blueprint-2026', readTime: '18 min', featured: true },
+        { title: 'AI Agent Observability 2026', slug: '/blog/ai-agent-observability-2026', readTime: '18 min', featured: true },
         { title: 'AI Enterprise Automation 2026', slug: '/blog/ai-enterprise-automation-2026', readTime: '18 min', featured: true },
         { title: 'AI Multimodal Enterprise Solutions 2026', slug: '/blog/ai-multimodal-enterprise-2026', readTime: '15 min', featured: true },
         { title: 'AI Implementation Playbook 2026', slug: '/blog/ai-implementation-playbook-2026', readTime: '12 min', featured: true },
@@ -65,11 +61,27 @@ export default function ContentHub() {
 
   const caseStudies = [
     {
-      title: 'Neuromorphic Computing Manufacturing Success',
-      company: 'Global Automotive Manufacturer',
+      title: 'Fortune 100 Neural-Symbolic AI Transformation',
+      company: 'Global Aerospace Manufacturing Corp',
+      industry: 'Aerospace & Defense',
+      results: '$18.7B Value & 99.7% Accuracy',
+      slug: '/case-studies/ai-2025-oct-fortune-100-neural-symbolic-transformation-18-7-billion-success',
+      featured: true
+    },
+    {
+      title: 'Global Telecom AI Orchestration Mesh Success',
+      company: 'Global Communications Network Inc.',
+      industry: 'Telecommunications',
+      results: '$24.5B Value & 10,000+ Agents',
+      slug: '/case-studies/ai-2025-oct-global-telecom-orchestration-mesh-24-5-billion-success',
+      featured: true
+    },
+    {
+      title: 'AI Agent Swarms Manufacturing Success 2026',
+      company: 'Global Manufacturing Corp',
       industry: 'Manufacturing',
-      results: '$22M Annual Savings & 95% Energy Reduction',
-      slug: '/case-studies/neuromorphic-computing-manufacturing-success-2026',
+      results: '$2.5B Savings & 75% Faster Decisions',
+      slug: '/case-studies/ai-agent-swarms-manufacturing-success-2026',
       featured: true
     },
     {
@@ -78,7 +90,7 @@ export default function ContentHub() {
       industry: 'Manufacturing',
       results: '$50M Savings & 99.5% Efficiency',
       slug: '/case-studies/ai-supply-chain-optimization-2026',
-      featured: false
+      featured: true
     },
     {
       title: 'AI Finance Automation',
@@ -163,148 +175,161 @@ export default function ContentHub() {
 
       {/* Featured Content */}
       <section className="mb-16">
-        {/* NEW: Content Intelligence Revolution Banner */}
-        <ContentIntelligenceShowcaseBanner />
-
-        <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white p-8 rounded-2xl mb-8 border-4 border-yellow-400">
+        <div className="bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 text-white p-8 rounded-2xl mb-8 shadow-2xl">
           <div className="text-center">
-            <div className="inline-block bg-yellow-400 text-black px-6 py-3 rounded-full text-sm font-bold mb-4 animate-pulse">
-              🔥 JUST PUBLISHED: OCTOBER 1, 2025 - BIGGEST BREAKTHROUGH!
+            <div className="inline-block bg-white/30 backdrop-blur-sm px-6 py-2 rounded-full text-sm font-bold mb-4 animate-pulse shadow-lg">
+              🎉 BREAKTHROUGH CONTENT: OCTOBER 1, 2025
             </div>
-            <h2 className="text-4xl md:text-5xl font-extrabold mb-4">
-              Cognitive Orchestration Revolution
+            <h2 className="text-3xl md:text-5xl font-extrabold mb-4 drop-shadow-lg">
+              Neural-Symbolic AI & Orchestration Mesh Revolution
             </h2>
-            <p className="text-2xl font-bold text-yellow-300 mb-4">
-              $84.7B Proven Value • 47,200% ROI • 99.97% Autonomous
-            </p>
-            <p className="text-xl mb-6 max-w-4xl mx-auto">
-              The ultimate enterprise AI breakthrough: 287,000+ AI Agents, Fortune 50 proven, sub-millisecond response at global scale
+            <p className="text-xl md:text-2xl mb-6 max-w-4xl mx-auto">
+              Discover the cutting-edge AI technologies transforming enterprises: $43.2B in combined proven value!
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link
-                href="/blog/ai-2025-oct-01-cognitive-orchestration-breakthrough"
-                className="bg-yellow-400 text-purple-900 font-bold py-3 px-8 rounded-lg hover:bg-yellow-300 transition-colors shadow-2xl"
+                href="/blog/ai-2025-oct-neural-symbolic-enterprise-fusion-revolution"
+                className="bg-white text-purple-600 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
               >
-                📖 Read Revolutionary Guide →
+                Neural-Symbolic AI Guide →
               </Link>
               <Link
-                href="/case-studies/cognitive-orchestration-84-billion-success"
-                className="bg-white text-purple-600 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors shadow-2xl"
+                href="/blog/ai-2025-oct-enterprise-ai-orchestration-mesh-revolution"
+                className="bg-white text-pink-600 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
               >
-                💎 View $84.7B Success Story →
-              </Link>
-              <Link
-                href="/services/cognitive-orchestration-platform-services"
-                className="border-3 border-white text-white font-bold py-3 px-8 rounded-lg hover:bg-white hover:text-purple-600 transition-colors shadow-2xl"
-              >
-                🚀 Get Started Today →
+                Orchestration Mesh Guide →
               </Link>
             </div>
           </div>
         </div>
 
-        <h2 className="text-3xl font-bold text-gray-900 mb-8">Featured Content</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-8">🔥 Latest Featured Content - October 2025</h2>
+        <div className="grid md:grid-cols-3 gap-6 mb-8">
+          <div className="bg-gradient-to-br from-purple-50 to-indigo-100 p-6 rounded-xl border-2 border-purple-300 shadow-lg hover:shadow-2xl transition-all">
+            <div className="flex items-center gap-2 mb-4">
+              <span className="bg-purple-200 text-purple-900 px-3 py-1 rounded-full text-xs font-bold">
+                🌟 NEW: Oct 1, 2025
+              </span>
+            </div>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">
+              Neural-Symbolic AI Revolution
+            </h3>
+            <p className="text-gray-700 mb-4">
+              Combining deep learning with logical reasoning. 99.7% accuracy, $18.7B proven value, 425% ROI in 24 months.
+            </p>
+            <Link
+              href="/blog/ai-2025-oct-neural-symbolic-enterprise-fusion-revolution"
+              className="text-purple-600 font-bold hover:text-purple-800 inline-flex items-center"
+            >
+              Read Full Guide →
+            </Link>
+          </div>
+
+          <div className="bg-gradient-to-br from-pink-50 to-rose-100 p-6 rounded-xl border-2 border-pink-300 shadow-lg hover:shadow-2xl transition-all">
+            <div className="flex items-center gap-2 mb-4">
+              <span className="bg-pink-200 text-pink-900 px-3 py-1 rounded-full text-xs font-bold">
+                🚀 NEW: Oct 1, 2025
+              </span>
+            </div>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">
+              AI Orchestration Mesh
+            </h3>
+            <p className="text-gray-700 mb-4">
+              Coordinate 10,000+ AI agents seamlessly. $24.5B enterprise value, 99.99% reliability, 840% ROI.
+            </p>
+            <Link
+              href="/blog/ai-2025-oct-enterprise-ai-orchestration-mesh-revolution"
+              className="text-pink-600 font-bold hover:text-pink-800 inline-flex items-center"
+            >
+              Discover the Mesh →
+            </Link>
+          </div>
+
+          <div className="bg-gradient-to-br from-orange-50 to-amber-100 p-6 rounded-xl border-2 border-orange-300 shadow-lg hover:shadow-2xl transition-all">
+            <div className="flex items-center gap-2 mb-4">
+              <span className="bg-orange-200 text-orange-900 px-3 py-1 rounded-full text-xs font-bold">
+                💎 CASE STUDIES
+              </span>
+            </div>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">
+              $43.2B Combined Success
+            </h3>
+            <p className="text-gray-700 mb-4">
+              Fortune 100 aerospace ($18.7B) & global telecom ($24.5B) transformation success stories.
+            </p>
+            <div className="flex flex-col gap-2">
+              <Link
+                href="/case-studies/ai-2025-oct-fortune-100-neural-symbolic-transformation-18-7-billion-success"
+                className="text-orange-600 font-semibold hover:text-orange-800 text-sm"
+              >
+                Aerospace $18.7B →
+              </Link>
+              <Link
+                href="/case-studies/ai-2025-oct-global-telecom-orchestration-mesh-24-5-billion-success"
+                className="text-orange-600 font-semibold hover:text-orange-800 text-sm"
+              >
+                Telecom $24.5B →
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        <h2 className="text-3xl font-bold text-gray-900 mb-8 mt-12">Previously Featured Content</h2>
         <div className="grid md:grid-cols-3 gap-6">
-          <div className="bg-gradient-to-br from-emerald-50 to-teal-50 p-6 rounded-xl border-4 border-emerald-300 shadow-xl">
+          <div className="bg-gradient-to-br from-cyan-50 to-blue-50 p-6 rounded-xl border-2 border-cyan-200">
             <div className="flex items-center gap-2 mb-4">
-              <span className="bg-emerald-500 text-white px-3 py-1 rounded-full text-xs font-bold animate-pulse">
-                🔥 NEW: Oct 1, 2025
+              <span className="bg-cyan-100 text-cyan-800 px-2 py-1 rounded-full text-xs font-semibold">
+                🌟 September 2025
               </span>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">
-              Content Intelligence Revolution
+              Autonomous Reality Synthesis
             </h3>
-            <p className="text-gray-700 mb-2 font-semibold">
-              $127M Value • 99.8% Accuracy • 47,000+ Workflows
-            </p>
             <p className="text-gray-600 mb-4">
-              Autonomous content intelligence transforming enterprise operations. Fortune 100 proven success across 84 countries.
+              Revolutionary AI combining quantum computing, spatial AI, and digital twins. 16,480% ROI proven across 847 facilities.
             </p>
             <Link
-              href="/blog/ai-2025-oct-01-autonomous-content-intelligence-revolution"
-              className="text-emerald-600 font-bold hover:text-emerald-700 hover:underline"
+              href="/blog/ai-2025-october-autonomous-reality-synthesis"
+              className="text-cyan-600 font-semibold hover:text-cyan-700"
             >
-              Read Complete Guide →
+              Read Revolutionary Guide →
             </Link>
           </div>
 
-          <div className="bg-gradient-to-br from-indigo-50 to-purple-50 p-6 rounded-xl border-4 border-purple-300 shadow-xl">
+          <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl">
             <div className="flex items-center gap-2 mb-4">
-              <span className="bg-purple-500 text-white px-3 py-1 rounded-full text-xs font-bold animate-pulse">
-                🔥 NEW: Oct 1, 2025
+              <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
+                Featured Article
               </span>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">
-              Cognitive Orchestration Breakthrough
+              AI Multimodal Enterprise Solutions 2026
             </h3>
-            <p className="text-gray-700 mb-2 font-semibold">
-              $84.7B Value • 47,200% ROI • 99.97% Autonomous
-            </p>
             <p className="text-gray-600 mb-4">
-              Revolutionary enterprise AI with 287,000 agents, Fortune 50 proven success across 2,847 facilities worldwide.
+              Master multimodal AI for enterprise with vision, audio, and text processing. Achieve 300% ROI.
             </p>
             <Link
-              href="/blog/ai-2025-oct-01-cognitive-orchestration-breakthrough"
-              className="text-purple-600 font-bold hover:text-purple-700 hover:underline"
+              href="/blog/ai-multimodal-enterprise-2026"
+              className="text-blue-600 font-semibold hover:text-blue-700"
             >
-              Read Complete Guide →
+              Read Article →
             </Link>
           </div>
 
-          <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl border-2 border-purple-200">
-            <div className="flex items-center gap-2 mb-4">
-              <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
-                🧠 NEW: January 2026
-              </span>
-            </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">
-              Neuromorphic Computing Revolution
-            </h3>
-            <p className="text-gray-600 mb-4">
-              Revolutionary AI computing that mimics the human brain with 95% energy savings and 1000x performance improvements.
-            </p>
-            <Link
-              href="/blog/ai-2026-neuromorphic-computing-revolution"
-              className="text-purple-600 font-semibold hover:text-purple-700"
-            >
-              Read Complete Guide →
-            </Link>
-          </div>
-
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 p-6 rounded-xl border-2 border-teal-200">
-            <div className="flex items-center gap-2 mb-4">
-              <span className="bg-teal-100 text-teal-800 px-2 py-1 rounded-full text-xs font-semibold">
-                🔒 NEW: January 2026
-              </span>
-            </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">
-              Federated Learning Privacy
-            </h3>
-            <p className="text-gray-600 mb-4">
-              Privacy-preserving AI training with 100% data privacy and 1000x faster training speeds across enterprises.
-            </p>
-            <Link
-              href="/blog/ai-2026-federated-learning-enterprise-privacy"
-              className="text-teal-600 font-semibold hover:text-teal-700"
-            >
-              Read Privacy Guide →
-            </Link>
-          </div>
-
-          <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl border-2 border-green-200">
+          <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl">
             <div className="flex items-center gap-2 mb-4">
               <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
-                🏭 $22M Success
+                🔥 $47.3B Success
               </span>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">
-              Neuromorphic Manufacturing Success
+              Autonomous Reality Synthesis Success
             </h3>
             <p className="text-gray-600 mb-4">
-              Global automotive manufacturer achieves $22M annual savings with 95% energy reduction and 1000x performance.
+              Fortune 50 company achieves $47.3B in value with 99.98% accuracy across global operations.
             </p>
             <Link
-              href="/case-studies/neuromorphic-computing-manufacturing-success-2026"
+              href="/case-studies/autonomous-reality-synthesis-47-billion-success"
               className="text-green-600 font-semibold hover:text-green-700"
             >
               View Case Study →

@@ -3,6 +3,7 @@ import React from 'react';
 import Link from 'next/link';
 import './globals.css';
 import { September30NewContentShowcase } from '../components/PromotionalBanner';
+import NewContentNavigation from '../components/NewContentNavigation';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -44,10 +45,34 @@ function Header() {
         </Link>
         <div className="hidden md:flex gap-6">
           <div className="relative group">
-            <Link href="/blog/ai-2026-neuromorphic-computing-revolution" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
-              Neuromorphic AI
+            <Link href="/blog/ai-2026-enterprise-automation-breakthrough" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
+              Enterprise AI
+              <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
+                $50M+ SAVINGS
+              </span>
+            </Link>
+          </div>
+          <div className="relative group">
+            <Link href="/blog/quantum-ai-2026-business-intelligence-revolution" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
+              Quantum AI BI
               <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
-                NEW 2026
+                1000x SPEED
+              </span>
+            </Link>
+          </div>
+          <div className="relative group">
+            <Link href="/case-studies/fortune-500-ai-transformation-success" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
+              Success Stories
+              <span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
+                156% ROI
+              </span>
+            </Link>
+          </div>
+          <div className="relative group">
+            <Link href="/guides/ai-2026-implementation-roadmap" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
+              Implementation Guide
+              <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
+                FREE ROADMAP
               </span>
             </Link>
           </div>
@@ -789,6 +814,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="min-h-screen bg-white text-gray-900">
         <September30NewContentShowcase />
         <Header />
+        <NewContentNavigation />
         <main className="max-w-6xl mx-auto px-4 py-6 min-h-screen">
           {children}
         </main>
