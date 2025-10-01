@@ -7,6 +7,7 @@ import NewContentNavigation from '../components/NewContentNavigation';
 import AI2027AdvancedNeuralSuperintelligenceBreakthroughBanner from '../components/AI2027AdvancedNeuralSuperintelligenceBreakthroughBanner';
 import AI2027TranscendentMetaIntelligenceBreakthroughBanner from '../components/AI2027TranscendentMetaIntelligenceBreakthroughBanner';
 import AI2028OmnipotentSuperintelligenceBreakthroughBanner from '../components/AI2028OmnipotentSuperintelligenceBreakthroughBanner';
+import December2025UltimateAutonomousRevolutionBanner from '../components/December2025UltimateAutonomousRevolutionBanner';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -48,6 +49,14 @@ function Header() {
         </Link>
         <div className="hidden md:flex gap-6">
           <div className="relative group">
+            <Link href="/blog/ai-2025-december-ultimate-autonomous-enterprise-revolution" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
+              December 2025 Revolution
+              <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
+                $2.8B SUCCESS
+              </span>
+            </Link>
+          </div>
+          <div className="relative group">
             <Link href="/blog/ai-2026-ultimate-autonomous-business-intelligence-revolution" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
               Ultimate Autonomous BI
               <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
@@ -68,6 +77,14 @@ function Header() {
               Quantum AI BI
               <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
                 1000x SPEED
+              </span>
+            </Link>
+          </div>
+          <div className="relative group">
+            <Link href="/case-studies/ai-2025-december-autonomous-revolution-2-8-billion-success" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
+              $2.8B Success Story
+              <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
+                DECEMBER 2025
               </span>
             </Link>
           </div>
@@ -565,8 +582,16 @@ function Footer() {
             </div>
           </div>
           <div>
-            <h3 className="font-semibold text-gray-900 mb-3">Latest 2026-2027 Revolutionary Content</h3>
+            <h3 className="font-semibold text-gray-900 mb-3">Latest 2025-2027 Revolutionary Content</h3>
             <div className="space-y-2">
+              <Link href="/blog/ai-2025-december-ultimate-autonomous-enterprise-revolution" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                🚀 AI 2025 December: Ultimate Autonomous Enterprise Revolution
+                <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">$2.8B SUCCESS</span>
+              </Link>
+              <Link href="/case-studies/ai-2025-december-autonomous-revolution-2-8-billion-success" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                💰 $2.8B December 2025 Success Story
+                <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">FORTUNE 100</span>
+              </Link>
               <Link href="/blog/ai-2027-quantum-neural-superintelligence-enterprise-breakthrough" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
                 🚀 AI 2027 Quantum Neural Superintelligence Breakthrough
                 <span className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">$1.2T REVOLUTION</span>
@@ -917,6 +942,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="min-h-screen bg-white text-gray-900">
         <NewContent2025PromotionalBanner />
         <September30NewContentShowcase />
+        <December2025UltimateAutonomousRevolutionBanner />
         <AI2027AdvancedNeuralSuperintelligenceBreakthroughBanner />
         <AI2027TranscendentMetaIntelligenceBreakthroughBanner />
         <AI2028OmnipotentSuperintelligenceBreakthroughBanner />
