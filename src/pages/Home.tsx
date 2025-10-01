@@ -96,31 +96,31 @@ const Home = () => {
             <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-xl p-6 mb-6 animate-fade-in">
               <div className="flex items-center justify-center gap-3 mb-3">
                 <Rocket className="w-6 h-6 text-purple-400 animate-bounce" />
-                <span className="text-lg font-bold text-purple-400">🔥 JUST RELEASED - OCTOBER 2025</span>
+                <span className="text-lg font-bold text-purple-400">🔥 JUST RELEASED - OCTOBER 1, 2025</span>
                 <Rocket className="w-6 h-6 text-purple-400 animate-bounce" />
               </div>
               <p className="text-white text-xl font-bold mb-3">
-                Enterprise AI Platform Revolution + Intelligent Automation Breakthrough
+                Complete Enterprise AI Transformation Guide + $450M Success Story
               </p>
               <div className="grid md:grid-cols-3 gap-4 text-sm text-zion-slate-light mb-4">
                 <div className="flex items-center gap-2">
                   <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>$500M Value Created in 90 Days</span>
+                  <span>$630M Value Created in 18 Months</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>40-60% Cost Reduction</span>
+                  <span>2,150% ROI Achieved</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>300-500% ROI in Year 1</span>
+                  <span>Production GenAI Blueprint Revealed</span>
                 </div>
               </div>
               <Link
-                to="/blog"
+                to="/blog/ai-2025-oct-01-enterprise-ai-transformation-roadmap"
                 className="inline-flex items-center gap-2 bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
               >
-                Read the Latest Breakthroughs
+                Read the Complete Transformation Guide
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
@@ -196,63 +196,63 @@ const Home = () => {
             </div>
             
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              New Cutting-Edge AI Resources Available Now
+              Just Released: Complete AI Transformation Blueprint
             </h2>
             
             <p className="text-xl text-emerald-100 mb-8 max-w-3xl">
-              Discover our latest insights, services, and success stories from the frontlines of AI innovation.
+              Your roadmap to $630M+ value creation. Real strategies, proven results, and production-ready implementations from 500+ enterprise transformations.
             </p>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-              {/* Blog Post 1 */}
+              {/* Blog Post 1 - NEW CONTENT */}
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30 hover:border-emerald-400/60 transition-all hover:scale-105 hover:shadow-xl">
-                <div className="text-emerald-400 text-sm font-semibold mb-2 uppercase">📝 New Guide</div>
-                <h3 className="text-lg font-bold text-white mb-3">Edge Inference Patterns</h3>
-                <p className="text-emerald-100 text-sm mb-4">Production-ready AI deployment guide with real-world patterns and 12-minute read</p>
+                <div className="text-emerald-400 text-sm font-semibold mb-2 uppercase">📝 NEW: Complete Guide</div>
+                <h3 className="text-lg font-bold text-white mb-3">Enterprise AI Transformation Roadmap</h3>
+                <p className="text-emerald-100 text-sm mb-4">Definitive guide to implementing enterprise AI. 300% ROI in 12 months—proven strategies from 500+ implementations</p>
                 <Link 
-                  to="/blog/ai-2025-oct-edge-inference-patterns-production-guide" 
+                  to="/blog/ai-2025-oct-01-enterprise-ai-transformation-roadmap" 
                   className="inline-flex items-center text-emerald-300 hover:text-white font-semibold text-sm"
                 >
-                  Read Now <ArrowRight className="w-4 h-4 ml-1" />
+                  Read Complete Guide <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
               </div>
 
-              {/* Blog Post 2 */}
+              {/* Blog Post 2 - NEW CONTENT */}
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 hover:border-cyan-400/60 transition-all hover:scale-105 hover:shadow-xl">
-                <div className="text-cyan-400 text-sm font-semibold mb-2 uppercase">📊 Strategy</div>
-                <h3 className="text-lg font-bold text-white mb-3">North Star Metrics Framework</h3>
-                <p className="text-cyan-100 text-sm mb-4">Measure AI product success with proven metrics used by leading companies</p>
+                <div className="text-cyan-400 text-sm font-semibold mb-2 uppercase">🤖 NEW: Production Guide</div>
+                <h3 className="text-lg font-bold text-white mb-3">GenAI in Production 2025</h3>
+                <p className="text-cyan-100 text-sm mb-4">Deploy production-ready LLM systems. 10x productivity gains with proven architecture patterns and cost optimization</p>
                 <Link 
-                  to="/blog/ai-2025-oct-northstar-metrics-ai-product-success" 
+                  to="/blog/ai-2025-oct-01-generative-ai-enterprise-production-guide" 
                   className="inline-flex items-center text-cyan-300 hover:text-white font-semibold text-sm"
                 >
-                  Learn More <ArrowRight className="w-4 h-4 ml-1" />
+                  Get Implementation Blueprint <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
               </div>
 
-              {/* New Service */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30 hover:border-blue-400/60 transition-all hover:scale-105 hover:shadow-xl">
-                <div className="text-blue-400 text-sm font-semibold mb-2 uppercase">🚀 Service Launch</div>
-                <h3 className="text-lg font-bold text-white mb-3">Edge AI Platform</h3>
-                <p className="text-blue-100 text-sm mb-4">Deploy intelligence at the edge with less than 10ms latency. Starting at $4,999/mo</p>
-                <Link 
-                  to="/services/ai-2025-october-edge-ai-platform" 
-                  className="inline-flex items-center text-blue-300 hover:text-white font-semibold text-sm"
-                >
-                  Explore Platform <ArrowRight className="w-4 h-4 ml-1" />
-                </Link>
-              </div>
-
-              {/* Case Study */}
+              {/* Case Study - NEW CONTENT */}
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:border-purple-400/60 transition-all hover:scale-105 hover:shadow-xl">
-                <div className="text-purple-400 text-sm font-semibold mb-2 uppercase">💼 Success Story</div>
-                <h3 className="text-lg font-bold text-white mb-3">$127M Manufacturing Win</h3>
-                <p className="text-purple-100 text-sm mb-4">How a Fortune 500 manufacturer transformed operations with edge AI</p>
+                <div className="text-purple-400 text-sm font-semibold mb-2 uppercase">💼 NEW: $450M Success Story</div>
+                <h3 className="text-lg font-bold text-white mb-3">Fortune 100 Retail Transformation</h3>
+                <p className="text-purple-100 text-sm mb-4">$630M value creation in 18 months. 2,150% ROI through enterprise-wide AI transformation</p>
                 <Link 
-                  to="/case-studies/ai-2025-oct-global-manufacturing-edge-ai-success-127m" 
+                  to="/case-studies/ai-2025-oct-fortune-100-retail-transformation-450m-success" 
                   className="inline-flex items-center text-purple-300 hover:text-white font-semibold text-sm"
                 >
-                  Read Case Study <ArrowRight className="w-4 h-4 ml-1" />
+                  View Full Case Study <ArrowRight className="w-4 h-4 ml-1" />
+                </Link>
+              </div>
+
+              {/* AI Services Highlight */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30 hover:border-blue-400/60 transition-all hover:scale-105 hover:shadow-xl">
+                <div className="text-blue-400 text-sm font-semibold mb-2 uppercase">🚀 Transform Your Business</div>
+                <h3 className="text-lg font-bold text-white mb-3">AI Transformation Services</h3>
+                <p className="text-blue-100 text-sm mb-4">End-to-end AI implementation. From strategy to production in 90 days. 500+ successful deployments</p>
+                <Link 
+                  to="/services" 
+                  className="inline-flex items-center text-blue-300 hover:text-white font-semibold text-sm"
+                >
+                  Explore Our Services <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
               </div>
             </div>
@@ -278,8 +278,8 @@ const Home = () => {
         <div className="container mx-auto px-6">
           <div className="mb-6 rounded-full bg-emerald-500/15 border border-emerald-400/30 px-6 py-3 text-emerald-200 text-sm inline-flex items-center gap-2">
             <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            New: Edge inference patterns and North‑Star metrics just dropped — read now
-            <Link to="/insights" className="text-emerald-300 underline underline-offset-4 hover:text-white">View</Link>
+            🔥 NEW: Complete Enterprise AI Transformation Guide + $450M Retail Success Story — Read Now!
+            <Link to="/blog" className="text-emerald-300 underline underline-offset-4 hover:text-white">View</Link>
           </div>
         </div>
         <LatestInsights />
@@ -287,8 +287,8 @@ const Home = () => {
           <div className="rounded-xl bg-indigo-600/15 border border-indigo-400/30 px-6 py-4 text-indigo-200 text-sm flex items-center justify-between">
             <div className="flex items-center gap-2">
               <span className="inline-flex h-2 w-2 rounded-full bg-indigo-400 animate-ping"></span>
-              <span className="font-medium">Fresh on the blog:</span>
-              <span className="hidden sm:inline">Edge Inference Patterns • North‑Star Metrics</span>
+              <span className="font-medium">Just Published (Oct 1):</span>
+              <span className="hidden sm:inline">Enterprise AI Roadmap • GenAI Production Guide • $450M Retail Case Study</span>
             </div>
             <Link to="/blog" className="text-indigo-200 underline underline-offset-4 hover:text-white">Read now</Link>
           </div>
