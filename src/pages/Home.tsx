@@ -61,6 +61,7 @@ import NewArticlesPromoBanner from "../components/NewArticlesPromoBanner";
 import NewServicesPromoBanner from "../components/NewServicesPromoBanner";
 import ContentPromotionBanner from "../components/ContentPromotionBanner";
 import { blogPosts } from "../content/blog-posts";
+import UnifiedPromotionalBanner from "../components/UnifiedPromotionalBanner";
 
 const Home = () => {
   return (
@@ -99,6 +100,25 @@ const Home = () => {
         <link rel="canonical" href="https://ziontechgroup.com" />
       </Helmet>
       <AdvertisingBanner />
+      {/* Oct 6, 2025 unified promo for newest content */}
+      <UnifiedPromotionalBanner
+        variant="hero"
+        theme="gradient"
+        icon="rocket"
+        badge="Just dropped"
+        date="Oct 6, 2025"
+        title="New Today: Feature Stores, Policy Tests v3, Evaluator Gates"
+        description="Millisecond features at 10M+ RPS, production‑predictive change gates, and evaluator‑driven releases."
+        ctaText="Read today’s posts"
+        ctaLink="/blog"
+        featuredItems={[
+          { title: "Real-Time Feature Stores 2025", category: "Real-Time AI", link: "/blog/ai-2025-oct-06-real-time-feature-stores" },
+          { title: "Policy Tests v3", category: "AI Reliability", link: "/blog/ai-2025-oct-06-policy-tests-v3" },
+          { title: "Evaluator‑Driven Release Gates", category: "Platform Engineering", link: "/blog/ai-2025-oct-06-evaluator-driven-release-gates" }
+        ]}
+        showCount={3}
+        className="border-b border-white/10 mb-4"
+      />
       {/* New: Promote 10/04 posts - Budgeted Routing, Agent Observability, Private Edge A/B */}
       <NewContentPromoBanner 
         className="border-b border-white/10" 
