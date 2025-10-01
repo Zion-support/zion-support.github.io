@@ -41,7 +41,7 @@ Need a playbook tailored to your platform? Our team can help you land this safel
     tags: ["Agents", "Governance", "Budgets", "Rollback", "SLIs"],
     featured: true,
     readTime: "8 min read",
-    image: "/images/risk-controlled-autonomy-2025.jpg"
+    image: "/images/risk-controlled-autonomy-2025.jpg",
     slug: "ai-2025-oct-01-autonomous-finops-scorecards",
     title: "Autonomous FinOps Scorecards 2025: Prevent Cost Regressions",
     description: "KPI-linked scorecards, budget-aware routing, and rollback that keep spend predictable without hurting UX.",
@@ -92,8 +92,6 @@ Outcome: Faster iteration with fewer incidents and measurable reliability.
     featured: true,
     readTime: "7 min read",
     image: "/images/policy-tests-end-to-end.jpg"
- 
-=======
   },
   {
     slug: "ai-2025-oct-02-private-experiments-blueprint",
@@ -139,8 +137,7 @@ Revert in seconds on breach while maintaining high deploy velocity.
     tags: ["Rollback", "Canary", "Guardrails", "Budgets"],
     featured: true,
     readTime: "9 min read",
-    image: "/images/rollback-guardrails-blueprint.jpg"
- 
+    image: "/images/rollback-guardrails-blueprint.jpg",
     slug: "ai-2025-oct-01-production-evals-playbook",
     title: "Production Evals Playbook: Scorecards That Predict Prod",
     description: "Design eval pipelines that correlate with KPIs and gate risky changes. Ship faster with fewer regressions.",
