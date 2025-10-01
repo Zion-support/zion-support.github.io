@@ -1,6 +1,5 @@
 import React from 'react';
-import { ArrowRight, Star, Users, Award, TrendingUp, Rocket, Globe } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { ArrowRight, Star, Users, TrendingUp, Rocket, Globe } from 'lucide-react';
 
 const NewContentPromotionalBanner2026 = () => {
   const newContent = [
