@@ -83,12 +83,13 @@ import October2025NewPracticalContentBannerTop, { October2025PracticalContentSho
 // NEW JANUARY 2026 QUANTUM BREAKTHROUGH CONTENT
 import January2026QuantumBreakthroughBanner from '../components/January2026QuantumBreakthroughBanner';
 
-// 🚀 LATEST OCTOBER 2025 ENTERPRISE AI CONTENT - TOP PRIORITY
-import October2025NewContentMegaBanner from '../components/October2025NewContentMegaBanner';
-import EnterprisePlatformModernizationBanner from '../components/EnterprisePlatformModernizationBanner';
-import ConversationalAIRevolutionBanner from '../components/ConversationalAIRevolutionBanner';
-import HealthcareAITransformationBanner from '../components/HealthcareAITransformationBanner';
-import ManufacturingEdgeAIBanner from '../components/ManufacturingEdgeAIBanner';
+// NEW OCTOBER 1, 2025 - CONTENT INTELLIGENCE REVOLUTION
+import ContentIntelligenceBanner from './components/ContentIntelligenceBanner';
+
+// NEW 2026 CONTENT SHOWCASE
+import NewContent2026Banner from '../components/NewContent2026Banner';
+import AI2026ContentShowcaseBanner from '../components/AI2026ContentShowcaseBanner';
+import InteractiveAI2026ROICalculator from '../components/InteractiveAI2026ROICalculator';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -99,9 +100,13 @@ export const metadata = {
 export default function HomePage() {
   return (
     <div className="animate-fade-in">
-      {/* 🚀 BRAND NEW 2026 BREAKTHROUGH CONTENT - TOP PRIORITY */}
-      <QuantumNeuralFusionBanner />
-      <AutonomousEnterpriseBreakthroughBanner />
+      {/* 🚀 BRAND NEW OCTOBER 1, 2025 - CONTENT INTELLIGENCE REVOLUTION - TOP PRIORITY! */}
+      <ContentIntelligenceBanner />
+      
+      {/* 🚀 NEW 2026 CONTENT SHOWCASE - TOP PRIORITY */}
+      <NewContent2026Banner />
+      <AI2026ContentShowcaseBanner />
+      <InteractiveAI2026ROICalculator />
       
       {/* 🔥 OCTOBER 2025 LATEST ENTERPRISE AI CONTENT - ABSOLUTE TOP PRIORITY */}
       <October2025NewContentMegaBanner />
