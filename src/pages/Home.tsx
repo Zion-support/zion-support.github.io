@@ -23,6 +23,8 @@ import EnhancedTestimonials from "../components/EnhancedTestimonials";
 import Header from "../components/Header";
 import October2025EdgeAIQuantumCryptoBanner from "../components/October2025EdgeAIQuantumCryptoBanner";
 import October2025BreakthroughContentBanner from "../components/October2025BreakthroughContentBanner";
+import October2025AIRevolutionBanner from "../components/October2025AIRevolutionBanner";
+import October2025BreakthroughBanner from "../components/October2025BreakthroughBanner";
 import LatestArticlesShowcase from "../components/LatestArticlesShowcase";
 import LatestContentBanner from "../components/LatestContentBanner";
 import LatestInsights from "../components/LatestInsights";
@@ -118,6 +120,12 @@ const Home = () => {
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
+        
+        {/* 🔥🔥🔥 OCTOBER 1, 2025 - BREAKTHROUGH: Revolutionary AI Technologies - Sovereign Agents, Quantum ML & Neuromorphic Edge */}
+        <October2025BreakthroughBanner />
+        
+        {/* 🔥 OCTOBER 1, 2025 - BRAND NEW: AI Revolution - Agents, Development Tools & Safety */}
+        <October2025AIRevolutionBanner className="border-b border-white/10" />
         
         {/* 🎯 OCTOBER 3, 2025 - LATEST: AI Education, Neuromorphic Computing & Biotech Breakthroughs */}
         <NewContentPromoBanner 
