@@ -69,13 +69,9 @@ import October2025NewPracticalContentBanner from '../components/October2025NewPr
 import NewContentShowcaseOct2025 from '../components/NewContentShowcaseOct2025';
 import October2025NewContentBanner from '../components/October2025NewContentBanner';
 
-// NEWEST OCTOBER 2025 CONTENT - PRODUCTION AI & SECURITY
-import ProductionAgenticAIBanner, { AgenticAIShowcaseBanner } from '../components/ProductionAgenticAIBanner';
-import AISecurityBanner, { AISecurityShowcaseBanner } from '../components/AISecurityBanner';
-import October2025NewPracticalContentBannerTop, { October2025PracticalContentShowcase } from '../components/October2025NewPracticalContentBanner';
-
-// NEW JANUARY 2026 QUANTUM BREAKTHROUGH CONTENT
-import January2026QuantumBreakthroughBanner from '../components/January2026QuantumBreakthroughBanner';
+// NEW JANUARY 2026 BREAKTHROUGH CONTENT
+import LatestContent2026Banner from '../components/LatestContent2026Banner';
+import NewContentShowcase2026Banner from '../components/NewContentShowcase2026Banner';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -86,53 +82,9 @@ export const metadata = {
 export default function HomePage() {
   return (
     <div className="animate-fade-in">
-      {/* 🚀 BRAND NEW JANUARY 2026 QUANTUM BREAKTHROUGH - TOP PRIORITY */}
-      <January2026QuantumBreakthroughBanner />
-
-      {/* 🚀 NEWEST OCTOBER 2025 - PRODUCTION AGENTIC AI & SECURITY */}
-      <October2025NewPracticalContentBannerTop />
-      <ProductionAgenticAIBanner />
-      <AISecurityBanner />
+      {/* 🚀 BRAND NEW JANUARY 2026 BREAKTHROUGH CONTENT */}
+      <LatestContent2026Banner />
       
-      {/* 🚀 BRAND NEW JANUARY 2026 NEUROMORPHIC COMPUTING REVOLUTION */}
-      <NeuromorphicComputingRevolutionBanner />
-      
-      {/* 🔒 BRAND NEW JANUARY 2026 FEDERATED LEARNING PRIVACY REVOLUTION */}
-      <FederatedLearningPrivacyBanner />
-      
-      {/* 🚀 BREAKTHROUGH 2027/2028 UNIVERSAL CONSCIOUSNESS & QUANTUM SINGULARITY */}
-      {/* 🚀 BREAKTHROUGH 2027/2028 UNIVERSAL CONSCIOUSNESS & QUANTUM SINGULARITY */}
-      <section className="w-full bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-6">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center gap-4 justify-between">
-            <div className="flex items-center gap-4 flex-wrap justify-center md:justify-start">
-              <span className="text-3xl animate-pulse">🌌</span>
-              <span className="font-bold text-xl">BREAKTHROUGH ANNOUNCEMENT:</span>
-              <div className="flex flex-wrap gap-4 items-center">
-                <Link href="/blog/ai-2027-transcendent-quantum-consciousness-breakthrough" className="underline hover:text-yellow-200 font-bold flex items-center gap-2">
-                  🧠 Transcendent Quantum Consciousness
-                  <span className="bg-yellow-400 text-black px-2 py-1 rounded-full text-xs font-bold animate-pulse">$847B SUCCESS</span>
-                </Link>
-                <Link href="/case-studies/ai-2027-transcendent-quantum-consciousness-847-billion-success" className="underline hover:text-yellow-200 font-bold flex items-center gap-2">
-                  💰 $847B Case Study
-                  <span className="bg-green-400 text-black px-2 py-1 rounded-full text-xs font-bold animate-pulse">FORTUNE 500</span>
-                </Link>
-                <Link href="/blog/ai-2028-universal-consciousness-singularity-breakthrough" className="underline hover:text-yellow-200 font-bold flex items-center gap-2">
-                  🌌 Universal Consciousness Singularity
-                  <span className="bg-red-400 text-white px-2 py-1 rounded-full text-xs font-bold animate-pulse">$2.8T SUCCESS</span>
-                </Link>
-              </div>
-            </div>
-            <Link
-              href="/services/ai-2027-transcendent-quantum-consciousness-solutions"
-              className="bg-white text-indigo-700 hover:bg-yellow-400 hover:text-indigo-900 px-6 py-3 rounded-full text-sm font-bold whitespace-nowrap transition-all"
-            >
-              Join the Revolution →
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* 🔥 BRAND NEW OCTOBER 2025 NEUROMORPHIC & FEDERATED LEARNING */}
       <section className="w-full bg-gradient-to-r from-purple-600 via-blue-600 to-teal-600 text-white py-4">
         <div className="max-w-6xl mx-auto px-4">
@@ -173,6 +125,9 @@ export default function HomePage() {
       
       {/* NEW REVOLUTIONARY 2026 CONTENT - TOP BANNER */}
       <Revolutionary2026ContentBanner />
+      
+      {/* NEW JANUARY 2026 BREAKTHROUGH SHOWCASE */}
+      <NewContentShowcase2026Banner />
       
       {/* NEW CONTENT SHOWCASE */}
       <NewContentShowcaseBanner />
