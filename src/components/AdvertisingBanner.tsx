@@ -13,16 +13,15 @@ const AdvertisingBanner: React.FC = () => {
           </div>
           <div className="hidden sm:block h-6 w-px bg-white/30"></div>
           <p className="text-sm font-medium">
-            <span className="font-bold">NEW:</span> Autonomous AI Orchestration Platform - 
-            <span className="font-bold text-yellow-300"> $847M Value Created</span> + 
-            Real-Time Business Intelligence Revolution
+            <span className="font-bold">BREAKTHROUGH:</span> Revolutionary Agentic Orchestration Platform - 
+            <span className="font-bold text-yellow-300"> 1000+ AI Agents, $847M Value, 85% Cost Reduction</span>
           </p>
           <Link 
-            to="/blog/ai-2025-oct-autonomous-ai-orchestration-platform-revolution" 
+            to="/blog/ai-2025-oct-01-revolutionary-agentic-orchestration-platform" 
             className="inline-flex items-center gap-1 bg-white text-teal-700 hover:bg-teal-50 px-4 py-1 rounded-full text-sm font-semibold transition-all duration-300 hover:scale-105 shadow-md"
           >
             <Zap className="w-4 h-4" />
-            Read Now
+            Learn More
           </Link>
         </div>
       </div>
