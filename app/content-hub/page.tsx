@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { ContentIntelligenceShowcaseBanner } from '../../components/ContentIntelligenceBanner';
 
 export const metadata = {
   title: 'AI Content Hub - Zion Tech Group',
@@ -162,6 +163,9 @@ export default function ContentHub() {
 
       {/* Featured Content */}
       <section className="mb-16">
+        {/* NEW: Content Intelligence Revolution Banner */}
+        <ContentIntelligenceShowcaseBanner />
+
         <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white p-8 rounded-2xl mb-8 border-4 border-yellow-400">
           <div className="text-center">
             <div className="inline-block bg-yellow-400 text-black px-6 py-3 rounded-full text-sm font-bold mb-4 animate-pulse">
@@ -201,6 +205,29 @@ export default function ContentHub() {
 
         <h2 className="text-3xl font-bold text-gray-900 mb-8">Featured Content</h2>
         <div className="grid md:grid-cols-3 gap-6">
+          <div className="bg-gradient-to-br from-emerald-50 to-teal-50 p-6 rounded-xl border-4 border-emerald-300 shadow-xl">
+            <div className="flex items-center gap-2 mb-4">
+              <span className="bg-emerald-500 text-white px-3 py-1 rounded-full text-xs font-bold animate-pulse">
+                🔥 NEW: Oct 1, 2025
+              </span>
+            </div>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">
+              Content Intelligence Revolution
+            </h3>
+            <p className="text-gray-700 mb-2 font-semibold">
+              $127M Value • 99.8% Accuracy • 47,000+ Workflows
+            </p>
+            <p className="text-gray-600 mb-4">
+              Autonomous content intelligence transforming enterprise operations. Fortune 100 proven success across 84 countries.
+            </p>
+            <Link
+              href="/blog/ai-2025-oct-01-autonomous-content-intelligence-revolution"
+              className="text-emerald-600 font-bold hover:text-emerald-700 hover:underline"
+            >
+              Read Complete Guide →
+            </Link>
+          </div>
+
           <div className="bg-gradient-to-br from-indigo-50 to-purple-50 p-6 rounded-xl border-4 border-purple-300 shadow-xl">
             <div className="flex items-center gap-2 mb-4">
               <span className="bg-purple-500 text-white px-3 py-1 rounded-full text-xs font-bold animate-pulse">
