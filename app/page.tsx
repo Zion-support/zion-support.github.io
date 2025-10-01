@@ -65,6 +65,7 @@ import LatestContentPromotionalBanner from '../components/LatestContentPromotion
 import NewContentPromotionalBanner2026 from '../components/NewContentPromotionalBanner2026';
 import AIInnovationShowcaseBanner2026 from '../components/AIInnovationShowcaseBanner2026';
 import NextGenAutonomousBanner from '../components/NextGenAutonomousBanner';
+import New2025ContentShowcase from '../components/New2025ContentShowcase';
 
 // NEW JANUARY 2026 NEUROMORPHIC & FEDERATED LEARNING CONTENT
 import NeuromorphicComputingRevolutionBanner from '../components/NeuromorphicComputingRevolutionBanner';
@@ -121,6 +122,14 @@ export default function HomePage() {
       {/* 🚀 LATEST FEBRUARY 2025 QUANTUM & AUTONOMOUS INTELLIGENCE BREAKTHROUGHS */}
       <February2025QuantumNeuralSuperintelligenceBreakthroughBanner />
       <February2025AutonomousBusinessIntelligenceRevolutionBanner />
+      
+      {/* 🚀 NEW 2026 CONTENT SHOWCASE - TOP PRIORITY */}
+      <NewContent2026Banner />
+      <AI2026ContentShowcaseBanner />
+      
+      {/* 🚀 NEW 2025 CONTENT SHOWCASE */}
+      <New2025ContentShowcase />
+      <InteractiveAI2026ROICalculator />
 
       {/* 🔥 OCTOBER 2025 LATEST ENTERPRISE AI CONTENT - ABSOLUTE TOP PRIORITY */}
       <October2025NewContentMegaBanner />
