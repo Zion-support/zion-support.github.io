@@ -2,112 +2,122 @@ import React from 'react';
 
 export default function October2025NewTechInsightsBanner() {
   return (
-    <section className="py-16 bg-gradient-to-r from-indigo-900/40 via-purple-900/40 to-pink-900/40 backdrop-blur-sm border-y border-indigo-500/30">
+    <section className="py-20 bg-gradient-to-r from-indigo-900/50 via-purple-900/50 to-pink-900/50 backdrop-blur-sm border-y-2 border-indigo-400/40">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-10">
-          <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-indigo-500/30 to-pink-500/30 border-2 border-indigo-400/50 mb-6 animate-pulse">
-            <span className="text-indigo-300 font-extrabold text-xl tracking-wider uppercase">
-              🚀 FRESH INSIGHTS - OCTOBER 1, 2025 - JUST PUBLISHED! 🚀
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center gap-4 px-10 py-5 rounded-full bg-gradient-to-r from-indigo-500/40 to-purple-500/40 border-2 border-indigo-400/60 mb-8 animate-pulse shadow-2xl shadow-indigo-500/30">
+            <span className="text-3xl">🚀</span>
+            <span className="text-indigo-200 font-extrabold text-2xl tracking-wider uppercase">
+              LATEST TECH INSIGHTS - OCTOBER 2025
+            </span>
+            <span className="text-3xl">🚀</span>
+          </div>
+          <h2 className="text-5xl md:text-6xl font-extrabold mb-8 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent leading-tight">
+            Transform Your Enterprise with AI-Powered Innovation
+          </h2>
+          <p className="text-2xl text-gray-100 max-w-5xl mx-auto mb-8 leading-relaxed">
+            Discover how leading enterprises are leveraging AI for observability, cloud cost optimization, 
+            and autonomous security—achieving unprecedented efficiency and savings.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            <span className="px-6 py-3 bg-indigo-500/30 text-indigo-200 text-lg rounded-full border border-indigo-400/50 font-semibold">
+              💰 $420M+ in Savings
+            </span>
+            <span className="px-6 py-3 bg-purple-500/30 text-purple-200 text-lg rounded-full border border-purple-400/50 font-semibold">
+              ⚡ 94% Faster Operations
+            </span>
+            <span className="px-6 py-3 bg-pink-500/30 text-pink-200 text-lg rounded-full border border-pink-400/50 font-semibold">
+              🔒 97% Threat Prevention
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-6 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Latest Enterprise AI Strategies & Technologies
-          </h2>
-          <p className="text-xl text-gray-200 max-w-4xl mx-auto mb-10">
-            Master zero trust security, intelligent Kubernetes auto-scaling, and strategic talent development. 
-            Learn from Fortune 500 success stories achieving $48M+ savings and 10x productivity gains.
-          </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {/* Zero Trust Security Article */}
-          <div className="bg-gradient-to-br from-red-500/10 to-orange-500/10 backdrop-blur-lg rounded-2xl p-8 border-2 border-red-400/40 hover:border-red-400/70 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-red-500/30">
-            <div className="text-5xl mb-4">🔒</div>
-            <h3 className="text-2xl font-bold text-white mb-3">Zero Trust Security AI</h3>
-            <p className="text-gray-300 text-sm mb-4 leading-relaxed">
-              Achieve 97% threat detection accuracy with AI-powered continuous verification, behavioral analytics, 
-              and autonomous incident response. $48M annual savings.
+        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          {/* AI-Driven Observability */}
+          <div className="group bg-gradient-to-br from-purple-500/15 to-indigo-500/15 backdrop-blur-xl rounded-3xl p-10 border-2 border-purple-400/50 hover:border-purple-400/90 transition-all duration-500 transform hover:-translate-y-3 hover:shadow-2xl hover:shadow-purple-500/40">
+            <div className="text-7xl mb-6 transform group-hover:scale-110 transition-transform duration-300">🔍</div>
+            <h3 className="text-3xl font-extrabold text-white mb-4 leading-tight">AI-Driven Observability Platform 2026</h3>
+            <p className="text-gray-200 text-base mb-6 leading-relaxed">
+              Autonomous monitoring that predicts incidents before they occur. Reduce MTTR by 94% and 
+              automate 89% of troubleshooting with intelligent AI agents.
             </p>
-            <div className="flex flex-wrap gap-2 mb-6">
-              <span className="px-3 py-1 bg-red-500/20 text-red-300 text-xs rounded-full">97% Accuracy</span>
-              <span className="px-3 py-1 bg-orange-500/20 text-orange-300 text-xs rounded-full">82% Faster Response</span>
-              <span className="px-3 py-1 bg-green-500/20 text-green-300 text-xs rounded-full">$48M Savings</span>
+            <div className="flex flex-wrap gap-2 mb-8">
+              <span className="px-4 py-2 bg-purple-500/30 text-purple-200 text-sm rounded-full font-semibold">94% MTTR Reduction</span>
+              <span className="px-4 py-2 bg-indigo-500/30 text-indigo-200 text-sm rounded-full font-semibold">89% Auto-Resolution</span>
+              <span className="px-4 py-2 bg-green-500/30 text-green-200 text-sm rounded-full font-semibold">$127M Savings</span>
             </div>
             <a 
-              href="/blog/ai-2025-october-zero-trust-security-architecture"
-              className="inline-block w-full bg-gradient-to-r from-red-500 to-orange-600 hover:from-red-400 hover:to-orange-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center shadow-lg hover:shadow-red-500/50"
+              href="/blog/ai-driven-observability-platform-2026"
+              className="inline-block w-full bg-gradient-to-r from-purple-600 to-indigo-700 hover:from-purple-500 hover:to-indigo-600 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 text-center shadow-xl hover:shadow-purple-500/60 text-lg transform hover:scale-105"
             >
-              Master Zero Trust →
+              Explore Autonomous Monitoring →
             </a>
           </div>
 
-          {/* Kubernetes Auto-Scaling Article */}
-          <div className="bg-gradient-to-br from-blue-500/10 to-indigo-500/10 backdrop-blur-lg rounded-2xl p-8 border-2 border-blue-400/40 hover:border-blue-400/70 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/30">
-            <div className="text-5xl mb-4">⚡</div>
-            <h3 className="text-2xl font-bold text-white mb-3">Kubernetes AI Auto-Scale</h3>
-            <p className="text-gray-300 text-sm mb-4 leading-relaxed">
-              Cut infrastructure costs by 73% with predictive auto-scaling. ML models forecast demand 30 minutes 
-              ahead, achieving 99.99% uptime and 10x traffic spike handling.
+          {/* Multi-Cloud Cost Optimization */}
+          <div className="group bg-gradient-to-br from-emerald-500/15 to-teal-500/15 backdrop-blur-xl rounded-3xl p-10 border-2 border-emerald-400/50 hover:border-emerald-400/90 transition-all duration-500 transform hover:-translate-y-3 hover:shadow-2xl hover:shadow-emerald-500/40">
+            <div className="text-7xl mb-6 transform group-hover:scale-110 transition-transform duration-300">💎</div>
+            <h3 className="text-3xl font-extrabold text-white mb-4 leading-tight">Multi-Cloud Cost Optimization with AI</h3>
+            <p className="text-gray-200 text-base mb-6 leading-relaxed">
+              AI-powered FinOps platform that reduces cloud spend by 67%. Intelligent workload placement, 
+              auto-scaling, and waste elimination across AWS, Azure, and GCP.
             </p>
-            <div className="flex flex-wrap gap-2 mb-6">
-              <span className="px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full">73% Cost Cut</span>
-              <span className="px-3 py-1 bg-indigo-500/20 text-indigo-300 text-xs rounded-full">99.99% Uptime</span>
-              <span className="px-3 py-1 bg-green-500/20 text-green-300 text-xs rounded-full">10x Spikes</span>
+            <div className="flex flex-wrap gap-2 mb-8">
+              <span className="px-4 py-2 bg-emerald-500/30 text-emerald-200 text-sm rounded-full font-semibold">67% Cost Reduction</span>
+              <span className="px-4 py-2 bg-teal-500/30 text-teal-200 text-sm rounded-full font-semibold">$293M Saved</span>
+              <span className="px-4 py-2 bg-cyan-500/30 text-cyan-200 text-sm rounded-full font-semibold">47:1 ROI</span>
             </div>
             <a 
-              href="/blog/ai-2025-october-kubernetes-intelligent-auto-scaling"
-              className="inline-block w-full bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-400 hover:to-indigo-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center shadow-lg hover:shadow-blue-500/50"
+              href="/blog/multi-cloud-cost-optimization-ai-2025"
+              className="inline-block w-full bg-gradient-to-r from-emerald-600 to-teal-700 hover:from-emerald-500 hover:to-teal-600 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 text-center shadow-xl hover:shadow-emerald-500/60 text-lg transform hover:scale-105"
             >
-              Optimize Infrastructure →
+              Discover Cost Optimization →
             </a>
           </div>
 
-          {/* AI Talent Development Article */}
-          <div className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 backdrop-blur-lg rounded-2xl p-8 border-2 border-purple-400/40 hover:border-purple-400/70 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-purple-500/30">
-            <div className="text-5xl mb-4">🎯</div>
-            <h3 className="text-2xl font-bold text-white mb-3">AI Talent Strategy</h3>
-            <p className="text-gray-300 text-sm mb-4 leading-relaxed">
-              Build world-class AI teams through strategic upskilling. Achieve 10x productivity gains, 65% 
-              hiring cost reduction, and 91% retention through internal development.
+          {/* Autonomous DevSecOps */}
+          <div className="group bg-gradient-to-br from-red-500/15 to-orange-500/15 backdrop-blur-xl rounded-3xl p-10 border-2 border-red-400/50 hover:border-red-400/90 transition-all duration-500 transform hover:-translate-y-3 hover:shadow-2xl hover:shadow-red-500/40">
+            <div className="text-7xl mb-6 transform group-hover:scale-110 transition-transform duration-300">🛡️</div>
+            <h3 className="text-3xl font-extrabold text-white mb-4 leading-tight">Autonomous DevSecOps Revolution 2025</h3>
+            <p className="text-gray-200 text-base mb-6 leading-relaxed">
+              AI agents that automatically detect vulnerabilities, generate security fixes, and prevent 
+              97% of threats—while accelerating delivery by 10x.
             </p>
-            <div className="flex flex-wrap gap-2 mb-6">
-              <span className="px-3 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full">10x Productivity</span>
-              <span className="px-3 py-1 bg-pink-500/20 text-pink-300 text-xs rounded-full">65% Cost Cut</span>
-              <span className="px-3 py-1 bg-green-500/20 text-green-300 text-xs rounded-full">91% Retention</span>
+            <div className="flex flex-wrap gap-2 mb-8">
+              <span className="px-4 py-2 bg-red-500/30 text-red-200 text-sm rounded-full font-semibold">97% Threat Prevention</span>
+              <span className="px-4 py-2 bg-orange-500/30 text-orange-200 text-sm rounded-full font-semibold">91% Work Automated</span>
+              <span className="px-4 py-2 bg-yellow-500/30 text-yellow-200 text-sm rounded-full font-semibold">10x Faster</span>
             </div>
             <a 
-              href="/blog/ai-2025-october-enterprise-talent-ai-transformation"
-              className="inline-block w-full bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center shadow-lg hover:shadow-purple-500/50"
+              href="/blog/autonomous-devsecops-revolution-2025"
+              className="inline-block w-full bg-gradient-to-r from-red-600 to-orange-700 hover:from-red-500 hover:to-orange-600 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 text-center shadow-xl hover:shadow-red-500/60 text-lg transform hover:scale-105"
             >
-              Develop Your Team →
+              Learn Security Automation →
             </a>
           </div>
         </div>
 
-        {/* Additional Context Section */}
-        <div className="mt-12 max-w-4xl mx-auto text-center">
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              🌟 Why These Insights Matter Now
-            </h3>
-            <p className="text-gray-300 leading-relaxed mb-6">
-              As enterprises accelerate AI adoption in late 2025, three critical challenges emerge: securing AI systems 
-              from sophisticated threats, managing explosive infrastructure costs, and building the talent needed to execute. 
-              These guides provide battle-tested strategies from Fortune 500 implementations.
+        {/* Call-to-Action Section */}
+        <div className="mt-16 text-center">
+          <div className="bg-gradient-to-r from-indigo-500/20 to-purple-500/20 backdrop-blur-lg rounded-3xl p-12 border border-indigo-400/40 max-w-4xl mx-auto">
+            <h3 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Operations?</h3>
+            <p className="text-xl text-gray-200 mb-8 leading-relaxed">
+              Join Fortune 500 companies achieving breakthrough results with AI-powered platforms. 
+              Get your free consultation and customized roadmap today.
             </p>
-            <div className="grid md:grid-cols-3 gap-4 text-sm">
-              <div className="bg-red-500/10 rounded-lg p-4">
-                <div className="text-red-400 font-bold mb-2">Security First</div>
-                <div className="text-gray-400">AI systems are prime targets. Zero trust protects your most valuable assets.</div>
-              </div>
-              <div className="bg-blue-500/10 rounded-lg p-4">
-                <div className="text-blue-400 font-bold mb-2">Cost Control</div>
-                <div className="text-gray-400">AI infrastructure costs spiral quickly. Intelligent automation delivers 73% savings.</div>
-              </div>
-              <div className="bg-purple-500/10 rounded-lg p-4">
-                <div className="text-purple-400 font-bold mb-2">Talent Gap</div>
-                <div className="text-gray-400">External hiring is expensive. Build internal capability for sustainable advantage.</div>
-              </div>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <a 
+                href="/contact" 
+                className="bg-gradient-to-r from-indigo-600 to-purple-700 hover:from-indigo-500 hover:to-purple-600 text-white font-bold py-5 px-10 rounded-xl transition-all duration-300 shadow-2xl hover:shadow-indigo-500/60 transform hover:-translate-y-1 text-lg"
+              >
+                Get Free Consultation
+              </a>
+              <a 
+                href="/blog" 
+                className="bg-white/10 hover:bg-white/20 text-white font-bold py-5 px-10 rounded-xl transition-all duration-300 border-2 border-white/30 hover:border-white/50 backdrop-blur-sm text-lg"
+              >
+                View All Insights
+              </a>
             </div>
           </div>
         </div>
