@@ -100,24 +100,19 @@ const Home = () => {
         <link rel="canonical" href="https://ziontechgroup.com" />
       </Helmet>
       <AdvertisingBanner />
-      {/* Oct 6, 2025 unified promo for newest content */}
-      <UnifiedPromotionalBanner
-        variant="hero"
-        theme="gradient"
-        icon="rocket"
-        badge="Just dropped"
-        date="Oct 6, 2025"
-        title="New Today: Feature Stores, Policy Tests v3, Evaluator Gates"
-        description="Millisecond features at 10M+ RPS, production‑predictive change gates, and evaluator‑driven releases."
-        ctaText="Read today’s posts"
+      {/* New promo for Oct 5 posts */}
+      <NewContentPromoBanner 
+        className="border-b border-white/10" 
+        variant="premium" 
+        title="🆕 NEW TODAY (Oct 5): Eval Scorecards, Semantic Caching, Agent Approvals"
+        description="Predict KPIs and gate risky changes, cut GenAI costs 40–70% with multilayer caches, and ship safe autonomy with approvals and budgets."
+        ctaText="Explore Oct 5 releases"
         ctaLink="/blog"
         featuredItems={[
-          { title: "Real-Time Feature Stores 2025", category: "Real-Time AI", link: "/blog/ai-2025-oct-06-real-time-feature-stores" },
-          { title: "Policy Tests v3", category: "AI Reliability", link: "/blog/ai-2025-oct-06-policy-tests-v3" },
-          { title: "Evaluator‑Driven Release Gates", category: "Platform Engineering", link: "/blog/ai-2025-oct-06-evaluator-driven-release-gates" }
+          { title: "Production Eval Scorecards", category: "AI Reliability", link: "/blog/ai-2025-oct-05-production-eval-scorecards" },
+          { title: "Multilayer Semantic Caching", category: "GenAI Engineering", link: "/blog/ai-2025-oct-05-multilayer-semantic-caching" },
+          { title: "Agent Approvals & Budgets", category: "AI Operations", link: "/blog/ai-2025-oct-05-agent-approvals-budgets" }
         ]}
-        showCount={3}
-        className="border-b border-white/10 mb-4"
       />
       {/* New: Promote 10/04 posts - Budgeted Routing, Agent Observability, Private Edge A/B */}
       <NewContentPromoBanner 
@@ -199,6 +194,21 @@ const Home = () => {
         featuredItems={[
           { title: "Enterprise Agents v2: KPI Scorecards, Budgets, Instant Rollback", category: "AI Operations", link: "/blog/ai-2025-oct-05-enterprise-agents-scorecards-v2" },
           { title: "Cache Strata Blueprint: Features → Chunks → Answers", category: "GenAI Engineering", link: "/blog/ai-2025-oct-05-cache-strata-blueprint" }
+        ]}
+      />
+
+      {/* Promo: Brand new 2025-10-06 posts */}
+      <NewContentPromoBanner 
+        className="border-b border-white/10" 
+        variant="premium" 
+        title="🆕 NEW TODAY (Oct 6): Safe Agent Releases + Cost‑Aware Routing v2 + Zero‑PII A/B"
+        description="Release agents safely with budgets and rollback, cut LLM spend 40–70% with tiered routing and coalescing, and run compliant edge A/B at <100ms."
+        ctaText="Explore today's posts"
+        ctaLink="/blog"
+        featuredItems={[
+          { title: "Safe Agent Releases: Checklists, Budgets, Instant Rollback", category: "AI Operations", link: "/blog/ai-2025-oct-06-safe-agent-release-checklists" },
+          { title: "Cost‑Aware LLM Routing v2: Tiering, Coalescing, Distillation", category: "GenAI Engineering", link: "/blog/ai-2025-oct-06-cost-aware-llm-routing-v2" },
+          { title: "Zero‑PII Experimentation v5: <100ms Global A/B at the Edge", category: "Experimentation", link: "/blog/ai-2025-oct-06-zero-pii-experimentation-v5" }
         ]}
       />
       

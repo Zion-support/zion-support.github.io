@@ -279,6 +279,34 @@ featuredBlogPosts.unshift(
   }
 );
 
+// Oct 6, 2025 – Advertise three brand-new guides site-wide
+featuredBlogPosts.unshift(
+  {
+    id: "ai-2025-oct-06-safe-agent-release-checklists",
+    title: "Safe Agent Releases: Checklists, Budgets, Instant Rollback",
+    description: "Production checklists for tools with budgets, approvals, canaries, and rollback.",
+    link: "/blog/ai-2025-oct-06-safe-agent-release-checklists",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-2025-oct-06-cost-aware-llm-routing-v2",
+    title: "Cost‑Aware LLM Routing v2",
+    description: "Tiered routing, coalescing, and distillation cut spend 40–70% without regressions.",
+    link: "/blog/ai-2025-oct-06-cost-aware-llm-routing-v2",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-2025-oct-06-zero-pii-experimentation-v5",
+    title: "Zero‑PII Experimentation v5 (<100ms)",
+    description: "Scoped IDs, signed configs, and on‑device aggregation with DP noise.",
+    link: "/blog/ai-2025-oct-06-zero-pii-experimentation-v5",
+    type: "article",
+    featured: true
+  }
+);
+
 // Jan 2027 – Feature three brand-new articles
 featuredBlogPosts.unshift(
   {
@@ -906,6 +934,14 @@ export const getLatestContent = (count: number = 5): FeaturedItem[] => {
 
 // Oct 2025 – Promote three brand-new guides site-wide
 featuredBlogPosts.unshift(
+  {
+    id: "ai-2025-enterprise-ai-roadmap-scorecards",
+    title: "Enterprise AI Roadmap 2025",
+    description: "KPI scorecards + guardrails‑as‑code + rollback‑first for reliable velocity",
+    link: "/blog/ai-2025-oct-04-enterprise-ai-roadmap-scorecards",
+    type: "article",
+    featured: true
+  },
   {
     id: "ai-2028-autonomous-ops-guardrails",
     title: "AI 2028: Autonomous Ops Guardrails",

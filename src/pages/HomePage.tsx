@@ -146,29 +146,29 @@ const HomePage: React.FC = () => {
                 icon="rocket"
                 badge="New"
                 date={new Date().toLocaleDateString()}
-                title="Fresh Content: Evals v4, Sub‑1ms Decisions, FinOps v3"
-                description="New deep-dives: KPI‑predictive evals, ultra‑low‑latency decision engines, and cost playbooks that cut spend 30–70% without UX regressions."
-                ctaText="Read the latest posts"
+                title="Just Published: Governed Agents, RAG v3, Cost v6"
+                description="New enterprise guides: safe agentic automation, pragmatic RAG that lifts quality while cutting cost, and GenAI cost optimization v6."
+                ctaText="Explore all posts"
                 ctaLink="/blog"
                 showCount={3}
                 featuredItems={[
                   {
-                    title: 'Enterprise Evals v4: Scorecards That Predict Production',
-                    category: 'AI Reliability',
-                    link: '/blog',
-                    metrics: '8 min • 2025-10-06'
+                    title: 'Governed Agentic Automation: Safe Tools, Fast Outcomes',
+                    category: 'AI',
+                    link: '/blog/governed-agentic-automation-2025-10-03',
+                    metrics: '8 min • 2025-10-03'
                   },
                   {
-                    title: 'Real-Time Decision Engines: Sub-1ms at 10M+ Events/sec',
-                    category: 'Real-Time AI',
-                    link: '/blog',
-                    metrics: '9 min • 2025-10-06'
+                    title: 'Enterprise RAG Blueprint v3: 45% Quality ↑, 62% Cost ↓',
+                    category: 'RAG',
+                    link: '/blog/enterprise-rag-blueprint-v3-2025-10-03',
+                    metrics: '9 min • 2025-10-03'
                   },
                   {
-                    title: 'Autonomous FinOps v3: 30–70% GenAI Spend Down, No Regressions',
-                    category: 'FinOps',
-                    link: '/blog',
-                    metrics: '7 min • 2025-10-06'
+                    title: 'GenAI Cost Optimization v6: Quality Tiers, Coalesce, Distill',
+                    category: 'Cloud',
+                    link: '/blog/genai-cost-optimization-v6-2025-10-03',
+                    metrics: '9 min • 2025-10-03'
                   }
                 ]}
               />
