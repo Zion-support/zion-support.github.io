@@ -1,9 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import './globals.css';
-import AI2027TranscendentMetaIntelligenceBreakthroughBanner from '../components/AI2027TranscendentMetaIntelligenceBreakthroughBanner';
-import AI2028OmnipotentSuperintelligenceBreakthroughBanner from '../components/AI2028OmnipotentSuperintelligenceBreakthroughBanner';
-=======
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
