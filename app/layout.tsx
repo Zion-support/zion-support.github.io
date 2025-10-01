@@ -279,6 +279,22 @@ function Header() {
             </Link>
           </div>
           <div className="relative group">
+            <Link href="/blog/ai-2026-revolutionary-edge-computing-breakthrough" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
+              Revolutionary Edge Computing
+              <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
+                $12.5B SUCCESS
+              </span>
+            </Link>
+          </div>
+          <div className="relative group">
+            <Link href="/blog/ai-2026-next-generation-automation-platform" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
+              Next-Gen Automation Platform
+              <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
+                $8.7B SUCCESS
+              </span>
+            </Link>
+          </div>
+          <div className="relative group">
             <Link href="/blog/ai-2026-autonomous-cloud-orchestration-breakthrough" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
               Autonomous Cloud 99.9%
               <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
@@ -751,6 +767,22 @@ function Footer() {
               <Link href="/blog/ai-2027-neuromorphic-computing-breakthrough" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
                 🧠 Neuromorphic AI
                 <span className="bg-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold">REVOLUTIONARY</span>
+              </Link>
+              <Link href="/blog/ai-2026-revolutionary-edge-computing-breakthrough" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                🚀 Revolutionary Edge Computing $12.5B Success
+                <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">BREAKTHROUGH</span>
+              </Link>
+              <Link href="/blog/ai-2026-next-generation-automation-platform" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                🤖 Next-Gen Automation Platform $8.7B Success
+                <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">99.8% AUTONOMOUS</span>
+              </Link>
+              <Link href="/case-studies/ai-2026-edge-computing-12-5-billion-success" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                💰 $12.5B Edge Computing Success Story
+                <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">FORTUNE 500</span>
+              </Link>
+              <Link href="/case-studies/ai-2026-automation-platform-8-7-billion-success" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                💰 $8.7B Automation Platform Success Story
+                <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">MEGA ROI</span>
               </Link>
               <Link href="/case-studies/ai-2027-quantum-consciousness-mega-success" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
                 💰 $2.5B Quantum Consciousness Success
