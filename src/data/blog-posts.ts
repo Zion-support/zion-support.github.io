@@ -14,6 +14,7 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+<<<<<<< HEAD
     id: '312',
     title: 'Real-Time Decision Engines 2027: 10M/sec Under 1ms',
     slug: 'real-time-decision-engines-2027-2025-10-02',
@@ -144,6 +145,18 @@ export const BLOG_POSTS: BlogPost[] = [
     featuredImage: '/images/blog/agent-observability-runbooks-2027.jpg',
     category: 'AI Operations',
     tags: ['Agents', 'Observability', 'SLIs', 'Rollback'],
+=======
+    id: '206',
+    title: 'Production Evals Playbook: Scorecards That Predict Prod',
+    slug: 'ai-2025-oct-01-production-evals-playbook',
+    excerpt:
+      'Design eval pipelines that correlate with KPIs and gate risky changes. Ship faster with fewer regressions.',
+    content:
+      'Build eval pipelines that actually predict production outcomes: golden task sets mapped to journeys, calibrated metrics, budget-linked scorecards, and online canaries with instant rollback. Fewer regressions, faster iteration, and measurable trust in AI quality.',
+    featuredImage: '/images/blog/production-evals-playbook.jpg',
+    category: 'AI Reliability',
+    tags: ['Evaluations', 'Scorecards', 'Guardrails', 'E2E'],
+>>>>>>> origin/cursor/create-and-deploy-new-content-268f
     author: 'Zion Tech Team',
     publishedAt: '2025-10-01',
     readTime: 8,

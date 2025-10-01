@@ -15,6 +15,7 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
     slug: "ai-2025-oct-01-governed-agent-platforms-v2",
     title: "Governed Agent Platforms v2: Budgets, Scorecards, Instant Rollback",
     description: "Ship enterprise agent platforms safely: KPI scorecards, budget-aware routing, CI policy tests, and one-click rollback.",
@@ -197,6 +198,34 @@ Revert in seconds on breach while maintaining high deploy velocity.
     featured: true,
     readTime: "9 min read",
     image: "/images/rollback-guardrails-blueprint.jpg"
+=======
+    slug: "ai-2025-oct-01-production-evals-playbook",
+    title: "Production Evals Playbook: Scorecards That Predict Prod",
+    description: "Design eval pipelines that correlate with KPIs and gate risky changes. Ship faster with fewer regressions.",
+    content: `
+# Production Evals Playbook: Scorecards That Predict Prod
+
+Most eval suites fail to predict production behavior. This playbook shows how to build eval pipelines that correlate with business KPIs and act as reliable change gates.
+
+## What You’ll Implement
+- Golden task sets mapped to critical user journeys
+- Calibrated metrics (task success, harmlessness, helpfulness)
+- Budget‑linked scorecards with pass/fail thresholds
+- Online canaries and instant rollback hooks
+
+## Outcomes
+- Fewer regressions and faster iteration
+- Measurable trust in AI quality
+- Clear ownership with a weekly review ritual
+    `,
+    author: "Zion Tech Group Reliability Lab",
+    date: "2025-10-01",
+    category: "AI Reliability",
+    tags: ["Evaluations", "Scorecards", "Guardrails", "E2E"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/production-evals-playbook.jpg"
+>>>>>>> origin/cursor/create-and-deploy-new-content-268f
   },
   {
     slug: "ai-2025-oct-04-enterprise-agents-in-production",

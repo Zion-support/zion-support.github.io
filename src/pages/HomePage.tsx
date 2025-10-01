@@ -146,17 +146,29 @@ const HomePage: React.FC = () => {
                 icon="rocket"
                 badge="New"
                 date={new Date().toLocaleDateString()}
+<<<<<<< HEAD
                 title="Fresh Content: Evals v4, Sub‑1ms Decisions, FinOps v3"
                 description="New deep-dives: KPI‑predictive evals, ultra‑low‑latency decision engines, and cost playbooks that cut spend 30–70% without UX regressions."
+=======
+                title="Fresh: Production Evals Playbook + Safer AI + Lower Costs"
+                description="New: Production Evals Playbook joins guardrails-as-code, actionable observability, and cost playbooks that cut spend without slowing teams."
+>>>>>>> origin/cursor/create-and-deploy-new-content-268f
                 ctaText="Read the latest posts"
                 ctaLink="/blog"
                 showCount={3}
                 featuredItems={[
                   {
+<<<<<<< HEAD
                     title: 'Enterprise Evals v4: Scorecards That Predict Production',
                     category: 'AI Reliability',
                     link: '/blog',
                     metrics: '8 min • 2025-10-06'
+=======
+                    title: 'Production Evals Playbook: Scorecards That Predict Prod',
+                    category: 'AI Reliability',
+                    link: '/blog',
+                    metrics: '8 min • 2025-10-01'
+>>>>>>> origin/cursor/create-and-deploy-new-content-268f
                   },
                   {
                     title: 'Real-Time Decision Engines: Sub-1ms at 10M+ Events/sec',
