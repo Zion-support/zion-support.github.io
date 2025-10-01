@@ -70,6 +70,8 @@ import {
   AITechnologyBreakthroughBanner,
   EnterpriseAITransformationBanner
 } from '../components/PromotionalBanner';
+import SyntheticConsciousnessRevolutionBanner from '../components/SyntheticConsciousnessRevolutionBanner';
+import AutonomousManufacturingRevolutionBanner from '../components/AutonomousManufacturingRevolutionBanner';
 import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
@@ -153,13 +155,13 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
             <span>🚀 NEW 2026 Content:</span>
-            <a to="/blog/ai-agent-orchestration-2026" className="underline hover:text-yellow-200">AI Agent Orchestration</a>
+            <Link href="/blog/ai-2026-synthetic-consciousness-revolution" className="underline hover:text-yellow-200">Synthetic Consciousness</Link>
             <span className="hidden md:inline">•</span>
-            <a to="/blog/ai-sustainability-green-tech-2026" className="underline hover:text-yellow-200">AI Sustainability</a>
+            <Link href="/blog/ai-2026-autonomous-enterprise-operations" className="underline hover:text-yellow-200">Autonomous Operations</Link>
             <span className="hidden md:inline">•</span>
-            <a to="/blog/ai-quantum-computing-2026" className="underline hover:text-yellow-200">Quantum Computing</a>
+            <Link href="/case-studies/ai-2026-synthetic-consciousness-enterprise-transformation-75-billion-success" className="underline hover:text-yellow-200">$75B Success</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-sustainability-transformation-2026" className="underline hover:text-yellow-200">$10M ROI Case Study</Link>
+            <Link href="/case-studies/ai-2026-autonomous-manufacturing-revolution-127-billion-success" className="underline hover:text-yellow-200">$127B Manufacturing</Link>
             <span className="hidden md:inline">•</span>
             <Link href="/blog/ai-2026-synthetic-consciousness-breakthrough" className="underline hover:text-yellow-200">Synthetic Consciousness</Link>
             <span className="hidden md:inline">•</span>
@@ -170,7 +172,7 @@ export default function HomePage() {
             <Link href="/case-studies/ai-2026-quantum-neural-superintelligence-25-billion-success" className="underline hover:text-yellow-200">$25B Success</Link>
           </div>
           <Link
-            to="/blog"
+            href="/blog"
             className="bg-white text-green-700 hover:bg-gray-100 px-4 py-1.5 rounded-md text-sm font-semibold"
           >
             Read the latest
@@ -181,6 +183,8 @@ export default function HomePage() {
       <Revolutionary2026ContentBanner />
       
       {/* Promotional Banners */}
+      <SyntheticConsciousnessRevolutionBanner />
+      <AutonomousManufacturingRevolutionBanner />
       <NewContent2026Banner />
       <AINeuralArchitectureBanner />
       <AISpaceTechBanner />
