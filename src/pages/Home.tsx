@@ -928,7 +928,7 @@ const Home = () => {
           </div>
         </section>
 
-        {/* New Services Showcase */}
+        {/* New Services Promo 2026 */}
         <NewServicesPromoBanner2026 />
         <NewServicesShowcase />
 
