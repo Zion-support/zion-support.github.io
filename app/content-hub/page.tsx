@@ -10,11 +10,18 @@ export const metadata = {
 export default function ContentHub() {
   const blogCategories = [
     {
+      title: 'AI Computing Revolution 2026',
+      articles: [
+        { title: 'Neuromorphic Computing Revolution', slug: '/blog/ai-2026-neuromorphic-computing-revolution', readTime: '20 min', featured: true },
+        { title: 'Federated Learning Enterprise Privacy', slug: '/blog/ai-2026-federated-learning-enterprise-privacy', readTime: '18 min', featured: true },
+        { title: 'Agentic Workflow Orchestration 2026', slug: '/blog/agentic-workflow-orchestration-2026', readTime: '16 min', featured: false },
+        { title: 'AI Enterprise Agents Blueprint 2026', slug: '/blog/ai-enterprise-agents-blueprint-2026', readTime: '18 min', featured: false },
+        { title: 'AI Agent Observability 2026', slug: '/blog/ai-agent-observability-2026', readTime: '18 min', featured: false },
+      ]
+    },
+    {
       title: 'AI Implementation',
       articles: [
-        { title: 'Agentic Workflow Orchestration 2026', slug: '/blog/agentic-workflow-orchestration-2026', readTime: '16 min', featured: true },
-        { title: 'AI Enterprise Agents Blueprint 2026', slug: '/blog/ai-enterprise-agents-blueprint-2026', readTime: '18 min', featured: true },
-        { title: 'AI Agent Observability 2026', slug: '/blog/ai-agent-observability-2026', readTime: '18 min', featured: true },
         { title: 'AI Enterprise Automation 2026', slug: '/blog/ai-enterprise-automation-2026', readTime: '18 min', featured: true },
         { title: 'AI Multimodal Enterprise Solutions 2026', slug: '/blog/ai-multimodal-enterprise-2026', readTime: '15 min', featured: true },
         { title: 'AI Implementation Playbook 2026', slug: '/blog/ai-implementation-playbook-2026', readTime: '12 min', featured: true },
@@ -57,12 +64,20 @@ export default function ContentHub() {
 
   const caseStudies = [
     {
+      title: 'Neuromorphic Computing Manufacturing Success',
+      company: 'Global Automotive Manufacturer',
+      industry: 'Manufacturing',
+      results: '$22M Annual Savings & 95% Energy Reduction',
+      slug: '/case-studies/neuromorphic-computing-manufacturing-success-2026',
+      featured: true
+    },
+    {
       title: 'AI Supply Chain Optimization 2026',
       company: 'Global Manufacturing Corp',
       industry: 'Manufacturing',
       results: '$50M Savings & 99.5% Efficiency',
       slug: '/case-studies/ai-supply-chain-optimization-2026',
-      featured: true
+      featured: false
     },
     {
       title: 'AI Finance Automation',
@@ -147,29 +162,35 @@ export default function ContentHub() {
 
       {/* Featured Content */}
       <section className="mb-16">
-        <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white p-8 rounded-2xl mb-8">
+        <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-teal-600 text-white p-8 rounded-2xl mb-8">
           <div className="text-center">
             <div className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-bold mb-4 animate-pulse">
-              🚀 JUST PUBLISHED: OCTOBER 2025
+              🚀 JUST PUBLISHED: JANUARY 2026
             </div>
             <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
-              Autonomous Reality Synthesis Revolution
+              Neuromorphic Computing & Federated Learning Revolution
             </h2>
             <p className="text-xl mb-6 max-w-3xl mx-auto">
-              The newest breakthrough in enterprise AI: Self-evolving digital environments delivering $47.3B in proven value
+              Revolutionary AI breakthroughs: 95% energy savings with neuromorphic computing and 100% privacy with federated learning
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link
-                href="/blog/ai-2025-october-autonomous-reality-synthesis"
-                className="bg-white text-cyan-600 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
+                href="/blog/ai-2026-neuromorphic-computing-revolution"
+                className="bg-white text-purple-600 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
               >
-                Read Complete Guide →
+                🧠 Neuromorphic Computing →
               </Link>
               <Link
-                href="/case-studies/autonomous-reality-synthesis-47-billion-success"
+                href="/blog/ai-2026-federated-learning-enterprise-privacy"
+                className="bg-white text-teal-600 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
+              >
+                🔒 Federated Learning →
+              </Link>
+              <Link
+                href="/case-studies/neuromorphic-computing-manufacturing-success-2026"
                 className="border-2 border-white text-white font-bold py-3 px-6 rounded-lg hover:bg-white/10 transition-colors"
               >
-                View $47.3B Success Story →
+                View $22M Success Story →
               </Link>
             </div>
           </div>
@@ -177,60 +198,60 @@ export default function ContentHub() {
 
         <h2 className="text-3xl font-bold text-gray-900 mb-8">Featured Content</h2>
         <div className="grid md:grid-cols-3 gap-6">
-          <div className="bg-gradient-to-br from-cyan-50 to-blue-50 p-6 rounded-xl border-2 border-cyan-200">
+          <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl border-2 border-purple-200">
             <div className="flex items-center gap-2 mb-4">
-              <span className="bg-cyan-100 text-cyan-800 px-2 py-1 rounded-full text-xs font-semibold">
-                🌟 NEW: October 2025
+              <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
+                🧠 NEW: January 2026
               </span>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">
-              Autonomous Reality Synthesis
+              Neuromorphic Computing Revolution
             </h3>
             <p className="text-gray-600 mb-4">
-              Revolutionary AI combining quantum computing, spatial AI, and digital twins. 16,480% ROI proven across 847 facilities.
+              Revolutionary AI computing that mimics the human brain with 95% energy savings and 1000x performance improvements.
             </p>
             <Link
-              href="/blog/ai-2025-october-autonomous-reality-synthesis"
-              className="text-cyan-600 font-semibold hover:text-cyan-700"
+              href="/blog/ai-2026-neuromorphic-computing-revolution"
+              className="text-purple-600 font-semibold hover:text-purple-700"
             >
               Read Revolutionary Guide →
             </Link>
           </div>
 
-          <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl">
+          <div className="bg-gradient-to-br from-teal-50 to-teal-100 p-6 rounded-xl border-2 border-teal-200">
             <div className="flex items-center gap-2 mb-4">
-              <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
-                Featured Article
+              <span className="bg-teal-100 text-teal-800 px-2 py-1 rounded-full text-xs font-semibold">
+                🔒 NEW: January 2026
               </span>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">
-              AI Multimodal Enterprise Solutions 2026
+              Federated Learning Privacy
             </h3>
             <p className="text-gray-600 mb-4">
-              Master multimodal AI for enterprise with vision, audio, and text processing. Achieve 300% ROI.
+              Privacy-preserving AI training with 100% data privacy and 1000x faster training speeds across enterprises.
             </p>
             <Link
-              href="/blog/ai-multimodal-enterprise-2026"
-              className="text-blue-600 font-semibold hover:text-blue-700"
+              href="/blog/ai-2026-federated-learning-enterprise-privacy"
+              className="text-teal-600 font-semibold hover:text-teal-700"
             >
-              Read Article →
+              Read Privacy Guide →
             </Link>
           </div>
 
-          <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl">
+          <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl border-2 border-green-200">
             <div className="flex items-center gap-2 mb-4">
               <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
-                🔥 $47.3B Success
+                🏭 $22M Success
               </span>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">
-              Autonomous Reality Synthesis Success
+              Neuromorphic Manufacturing Success
             </h3>
             <p className="text-gray-600 mb-4">
-              Fortune 50 company achieves $47.3B in value with 99.98% accuracy across global operations.
+              Global automotive manufacturer achieves $22M annual savings with 95% energy reduction and 1000x performance.
             </p>
             <Link
-              href="/case-studies/autonomous-reality-synthesis-47-billion-success"
+              href="/case-studies/neuromorphic-computing-manufacturing-success-2026"
               className="text-green-600 font-semibold hover:text-green-700"
             >
               View Case Study →
