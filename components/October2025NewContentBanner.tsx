@@ -2,148 +2,167 @@ import React from 'react';
 
 export default function October2025NewContentBanner() {
   return (
-    <section className="relative bg-gradient-to-br from-slate-900 via-indigo-950 to-purple-950 py-24 overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-0 -left-4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
-        <div className="absolute top-0 -right-4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute -bottom-8 left-20 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse delay-2000"></div>
-      </div>
-
-      <div className="container mx-auto px-6 relative z-10">
-        {/* Badge */}
-        <div className="flex justify-center mb-8">
-          <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border-2 border-cyan-400/50 backdrop-blur-sm animate-pulse">
-            <span className="relative flex h-3 w-3">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-3 w-3 bg-cyan-500"></span>
-            </span>
-            <span className="text-cyan-300 font-bold text-lg tracking-wider uppercase">
-              ⚡ JUST PUBLISHED • OCTOBER 2025
+    <section className="py-20 bg-gradient-to-br from-cyan-950 via-emerald-900 to-teal-900 border-t-4 border-cyan-400">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-3 px-10 py-5 rounded-full bg-gradient-to-r from-cyan-500/30 to-emerald-500/30 border-2 border-cyan-400/50 mb-8 animate-pulse shadow-2xl shadow-cyan-500/30">
+            <span className="text-cyan-300 font-extrabold text-2xl tracking-wider uppercase">
+              🚀 NEW: October 1, 2025 — Latest AI & DevOps Breakthroughs!
             </span>
           </div>
+          <h2 className="text-5xl md:text-7xl font-extrabold mb-8 bg-gradient-to-r from-cyan-300 via-emerald-300 to-amber-300 bg-clip-text text-transparent leading-tight">
+            Enterprise AI Security & Infrastructure Revolution
+          </h2>
+          <p className="text-2xl text-gray-200 max-w-5xl mx-auto leading-relaxed">
+            Explore cutting-edge AI-powered DevSecOps, autonomous infrastructure optimization, 
+            and comprehensive compliance frameworks for <span className="text-cyan-300 font-bold">2025 and beyond</span>!
+          </p>
         </div>
 
-        {/* Main Heading */}
-        <h2 className="text-6xl md:text-8xl font-extrabold text-center mb-8 leading-tight">
-          <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-gradient">
-            Revolutionary AI Content
-          </span>
-        </h2>
-
-        <p className="text-3xl text-center text-gray-300 mb-16 max-w-5xl mx-auto leading-relaxed">
-          Discover cutting-edge insights on <span className="text-cyan-400 font-bold">Platform Engineering</span>, 
-          <span className="text-purple-400 font-bold"> Autonomous Infrastructure</span>, and 
-          <span className="text-pink-400 font-bold"> Enterprise AI Operations</span>
-        </p>
-
-        {/* Featured Content Cards */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <a href="/blog/ai-2025-october-platform-engineering-revolution" 
-             className="group bg-gradient-to-br from-cyan-900/40 to-cyan-800/40 backdrop-blur-sm rounded-2xl p-8 border-2 border-cyan-500/30 hover:border-cyan-400 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/30">
-            <div className="text-5xl mb-4">🏗️</div>
-            <h3 className="text-3xl font-bold text-cyan-400 mb-4 group-hover:text-cyan-300">
-              Platform Engineering Revolution
+        <div className="grid md:grid-cols-3 gap-10 mb-16">
+          {/* Blog Post 1 - AI-Powered DevSecOps */}
+          <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-3xl p-10 border-2 border-cyan-500/30 hover:border-cyan-400/60 transition-all duration-300 transform hover:-translate-y-3 hover:shadow-2xl hover:shadow-cyan-500/30">
+            <div className="text-7xl mb-6">🛡️</div>
+            <div className="inline-block bg-cyan-500/30 px-4 py-2 rounded-full text-cyan-200 text-sm font-bold mb-5 border border-cyan-400/30">
+              DEVSECOPS REVOLUTION
+            </div>
+            <h3 className="text-3xl font-extrabold text-white mb-5 leading-tight">
+              AI-Powered DevSecOps Transformation
             </h3>
-            <p className="text-gray-300 text-lg mb-4">
-              Build AI-powered Internal Developer Platforms with 10x faster deployments and 90% less cognitive load
+            <p className="text-gray-200 mb-6 text-lg leading-relaxed">
+              Transform your security pipeline with AI-driven automation, intelligent threat detection, 
+              and autonomous vulnerability remediation that reduces incidents by 95%.
             </p>
-            <div className="flex flex-wrap gap-2 mb-4">
-              <span className="bg-cyan-500/20 px-3 py-1 rounded-full text-cyan-300 text-sm">10x Productivity</span>
-              <span className="bg-blue-500/20 px-3 py-1 rounded-full text-blue-300 text-sm">Self-Service</span>
-              <span className="bg-indigo-500/20 px-3 py-1 rounded-full text-indigo-300 text-sm">AI-Powered</span>
-            </div>
-            <div className="text-cyan-400 font-bold group-hover:translate-x-2 transition-transform">
-              Read Article →
-            </div>
-          </a>
+            <ul className="space-y-3 mb-8 text-gray-200">
+              <li className="flex items-start">
+                <span className="text-cyan-400 text-xl mr-3 font-bold">✓</span>
+                <span><strong className="text-cyan-300">95% faster detection</strong> — Real-time threat identification</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-cyan-400 text-xl mr-3 font-bold">✓</span>
+                <span><strong className="text-cyan-300">80% fewer vulnerabilities</strong> — Proactive security</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-cyan-400 text-xl mr-3 font-bold">✓</span>
+                <span><strong className="text-cyan-300">10x automation</strong> — Intelligent security ops</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-cyan-400 text-xl mr-3 font-bold">✓</span>
+                <span><strong className="text-cyan-300">24/7 protection</strong> — Continuous monitoring</span>
+              </li>
+            </ul>
+            <a
+              href="/blog/ai-powered-devsecops-transformation-october-2025"
+              className="block bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 text-center shadow-lg hover:shadow-cyan-500/50 transform hover:scale-105"
+            >
+              Explore DevSecOps Revolution →
+            </a>
+          </div>
 
-          <a href="/blog/ai-2025-october-autonomous-cloud-infrastructure"
-             className="group bg-gradient-to-br from-purple-900/40 to-purple-800/40 backdrop-blur-sm rounded-2xl p-8 border-2 border-purple-500/30 hover:border-purple-400 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/30">
-            <div className="text-5xl mb-4">🤖</div>
-            <h3 className="text-3xl font-bold text-purple-400 mb-4 group-hover:text-purple-300">
-              Autonomous Cloud Infrastructure
+          {/* Blog Post 2 - Autonomous Infrastructure */}
+          <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-3xl p-10 border-2 border-emerald-500/30 hover:border-emerald-400/60 transition-all duration-300 transform hover:-translate-y-3 hover:shadow-2xl hover:shadow-emerald-500/30">
+            <div className="text-7xl mb-6">🤖</div>
+            <div className="inline-block bg-emerald-500/30 px-4 py-2 rounded-full text-emerald-200 text-sm font-bold mb-5 border border-emerald-400/30">
+              INFRASTRUCTURE AI
+            </div>
+            <h3 className="text-3xl font-extrabold text-white mb-5 leading-tight">
+              Autonomous Infrastructure Optimization
             </h3>
-            <p className="text-gray-300 text-lg mb-4">
-              Self-healing, self-optimizing systems that achieve 99.99% uptime with 85% less operational work
+            <p className="text-gray-200 mb-6 text-lg leading-relaxed">
+              Deploy self-healing cloud systems that automatically scale, optimize costs, predict failures, 
+              and maintain 99.99% uptime with 70% cost reduction.
             </p>
-            <div className="flex flex-wrap gap-2 mb-4">
-              <span className="bg-purple-500/20 px-3 py-1 rounded-full text-purple-300 text-sm">Self-Healing</span>
-              <span className="bg-pink-500/20 px-3 py-1 rounded-full text-pink-300 text-sm">99.99% Uptime</span>
-              <span className="bg-fuchsia-500/20 px-3 py-1 rounded-full text-fuchsia-300 text-sm">60% Cost Cut</span>
-            </div>
-            <div className="text-purple-400 font-bold group-hover:translate-x-2 transition-transform">
-              Read Article →
-            </div>
-          </a>
+            <ul className="space-y-3 mb-8 text-gray-200">
+              <li className="flex items-start">
+                <span className="text-emerald-400 text-xl mr-3 font-bold">✓</span>
+                <span><strong className="text-emerald-300">70% cost reduction</strong> — Massive infrastructure savings</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-emerald-400 text-xl mr-3 font-bold">✓</span>
+                <span><strong className="text-emerald-300">99.99% uptime</strong> — Production excellence</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-emerald-400 text-xl mr-3 font-bold">✓</span>
+                <span><strong className="text-emerald-300">90% auto-remediation</strong> — Self-healing systems</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-emerald-400 text-xl mr-3 font-bold">✓</span>
+                <span><strong className="text-emerald-300">5min MTTR</strong> — Rapid incident response</span>
+              </li>
+            </ul>
+            <a
+              href="/blog/autonomous-infrastructure-optimization-october-2025"
+              className="block bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 text-center shadow-lg hover:shadow-emerald-500/50 transform hover:scale-105"
+            >
+              Discover Autonomous Infrastructure →
+            </a>
+          </div>
 
-          <a href="/blog/ai-2025-october-agent-governance-security"
-             className="group bg-gradient-to-br from-pink-900/40 to-pink-800/40 backdrop-blur-sm rounded-2xl p-8 border-2 border-pink-500/30 hover:border-pink-400 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-pink-500/30">
-            <div className="text-5xl mb-4">🛡️</div>
-            <h3 className="text-3xl font-bold text-pink-400 mb-4 group-hover:text-pink-300">
-              AI Agent Governance & Security
+          {/* Blog Post 3 - AI Compliance Framework */}
+          <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-3xl p-10 border-2 border-amber-500/30 hover:border-amber-400/60 transition-all duration-300 transform hover:-translate-y-3 hover:shadow-2xl hover:shadow-amber-500/30">
+            <div className="text-7xl mb-6">⚖️</div>
+            <div className="inline-block bg-amber-500/30 px-4 py-2 rounded-full text-amber-200 text-sm font-bold mb-5 border border-amber-400/30">
+              AI COMPLIANCE 2025
+            </div>
+            <h3 className="text-3xl font-extrabold text-white mb-5 leading-tight">
+              Enterprise AI Compliance Framework
             </h3>
-            <p className="text-gray-300 text-lg mb-4">
-              Enterprise framework for trustworthy AI with comprehensive governance, security, and compliance
+            <p className="text-gray-200 mb-6 text-lg leading-relaxed">
+              Navigate the 2025 regulatory landscape with comprehensive compliance frameworks 
+              covering EU AI Act, GDPR, and global standards with automated monitoring.
             </p>
-            <div className="flex flex-wrap gap-2 mb-4">
-              <span className="bg-pink-500/20 px-3 py-1 rounded-full text-pink-300 text-sm">Zero-Trust</span>
-              <span className="bg-rose-500/20 px-3 py-1 rounded-full text-rose-300 text-sm">Compliance</span>
-              <span className="bg-red-500/20 px-3 py-1 rounded-full text-red-300 text-sm">100% Audit</span>
-            </div>
-            <div className="text-pink-400 font-bold group-hover:translate-x-2 transition-transform">
-              Read Article →
-            </div>
-          </a>
+            <ul className="space-y-3 mb-8 text-gray-200">
+              <li className="flex items-start">
+                <span className="text-amber-400 text-xl mr-3 font-bold">✓</span>
+                <span><strong className="text-amber-300">100% compliance</strong> — Full regulatory coverage</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-amber-400 text-xl mr-3 font-bold">✓</span>
+                <span><strong className="text-amber-300">15+ standards</strong> — Global regulations</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-amber-400 text-xl mr-3 font-bold">✓</span>
+                <span><strong className="text-amber-300">90% audit automation</strong> — Continuous compliance</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-amber-400 text-xl mr-3 font-bold">✓</span>
+                <span><strong className="text-amber-300">Real-time monitoring</strong> — Risk management</span>
+              </li>
+            </ul>
+            <a
+              href="/blog/enterprise-ai-compliance-framework-october-2025"
+              className="block bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-400 hover:to-orange-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 text-center shadow-lg hover:shadow-amber-500/50 transform hover:scale-105"
+            >
+              Explore Compliance Framework →
+            </a>
+          </div>
         </div>
 
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-          <a 
-            href="/blog" 
-            className="bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 hover:from-cyan-400 hover:via-purple-400 hover:to-pink-400 text-white font-bold py-5 px-12 rounded-2xl transition-all duration-300 shadow-2xl hover:shadow-cyan-500/50 transform hover:-translate-y-1 text-xl"
-          >
-            Explore All Articles
-          </a>
-          <a 
-            href="/contact" 
-            className="border-3 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-5 px-12 rounded-2xl transition-all duration-300 text-xl"
-          >
-            Get Expert Consultation
-          </a>
-        </div>
-
-        {/* Stats */}
-        <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          <div>
-            <div className="text-5xl font-extrabold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-2">10x</div>
-            <div className="text-gray-400 text-lg">Faster Deployments</div>
-          </div>
-          <div>
-            <div className="text-5xl font-extrabold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">99.99%</div>
-            <div className="text-gray-400 text-lg">System Uptime</div>
-          </div>
-          <div>
-            <div className="text-5xl font-extrabold bg-gradient-to-r from-pink-400 to-rose-400 bg-clip-text text-transparent mb-2">85%</div>
-            <div className="text-gray-400 text-lg">Less Operations Work</div>
-          </div>
-          <div>
-            <div className="text-5xl font-extrabold bg-gradient-to-r from-indigo-400 to-violet-400 bg-clip-text text-transparent mb-2">60%</div>
-            <div className="text-gray-400 text-lg">Cost Reduction</div>
+        {/* Call to Action Section */}
+        <div className="text-center bg-gradient-to-r from-cyan-500/20 to-emerald-500/20 backdrop-blur-lg rounded-3xl p-12 border-2 border-cyan-400/40">
+          <h3 className="text-4xl font-extrabold text-white mb-6">
+            Ready to Secure & Optimize Your Enterprise?
+          </h3>
+          <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
+            Transform your organization with AI-powered security, autonomous infrastructure, and comprehensive 
+            compliance frameworks. Get your <span className="text-cyan-300 font-bold">free assessment</span> today.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <a
+              href="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-emerald-600 hover:from-cyan-400 hover:to-emerald-500 text-white font-bold py-5 px-10 rounded-xl transition-all duration-300 shadow-2xl hover:shadow-cyan-500/50 transform hover:scale-105 text-lg"
+            >
+              Get Free Assessment →
+            </a>
+            <a
+              href="/blog"
+              className="border-2 border-cyan-400 text-cyan-300 hover:bg-cyan-500/20 hover:border-cyan-300 font-bold py-5 px-10 rounded-xl transition-all duration-300 text-lg"
+            >
+              Explore All Content
+            </a>
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes gradient {
-          0%, 100% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-        }
-        .animate-gradient {
-          background-size: 200% 200%;
-          animation: gradient 3s ease infinite;
-        }
-      `}</style>
     </section>
   );
 }
