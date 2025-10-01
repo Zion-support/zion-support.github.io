@@ -44,6 +44,22 @@ function Header() {
         </Link>
         <div className="hidden md:flex gap-6">
           <div className="relative group">
+            <Link href="/blog/ai-2027-january-ultimate-breakthrough-revolution" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
+              January 2027 Ultimate Breakthrough
+              <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
+                $500B SUCCESS
+              </span>
+            </Link>
+          </div>
+          <div className="relative group">
+            <Link href="/blog/ai-2027-march-transcendent-automation-breakthrough" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
+              March 2027 Transcendent Automation
+              <span className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
+                $750B SUCCESS
+              </span>
+            </Link>
+          </div>
+          <div className="relative group">
             <Link href="/blog/ai-2027-february-synthetic-consciousness-revolution" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
               February 2027 Synthetic Consciousness
               <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
@@ -339,6 +355,22 @@ function Footer() {
           <div>
             <h3 className="font-semibold text-gray-900 mb-3">Latest 2027 Revolutionary Content</h3>
             <div className="space-y-2">
+              <Link href="/blog/ai-2027-january-ultimate-breakthrough-revolution" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                🧠 January 2027 Ultimate Breakthrough Revolution
+                <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">$500B SUCCESS</span>
+              </Link>
+              <Link href="/case-studies/ai-2027-january-ultimate-breakthrough-500-billion-success" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                💰 $500B Ultimate Breakthrough Success
+                <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">FORTUNE 100</span>
+              </Link>
+              <Link href="/blog/ai-2027-march-transcendent-automation-breakthrough" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                ♾️ March 2027 Transcendent Automation Revolution
+                <span className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">$750B SUCCESS</span>
+              </Link>
+              <Link href="/case-studies/ai-2027-march-transcendent-automation-750-billion-success" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                💰 $750B Transcendent Automation Success
+                <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">FORTUNE 100</span>
+              </Link>
               <Link href="/blog/ai-2027-february-synthetic-consciousness-revolution" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
                 🧠 February 2027 Synthetic Consciousness Revolution
                 <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">$75B SUCCESS</span>
