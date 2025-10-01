@@ -12,6 +12,7 @@ export default function ContentHub() {
     {
       title: 'AI Implementation',
       articles: [
+        { title: 'Digital Twin CX Revolution (Oct 2025)', slug: '/blog/ai-2025-october-digital-twin-cx-revolution', readTime: '14 min', featured: true },
         { title: 'Digital Transformation Excellence 2025', slug: '/blog/ai-2025-october-digital-transformation-enterprise-excellence', readTime: '22 min', featured: true },
         { title: 'Cloud-Native AI Platform Excellence 2025', slug: '/blog/ai-2025-october-cloud-native-ai-platform-excellence', readTime: '26 min', featured: true },
         { title: 'AI Agent Swarms Enterprise Orchestration 2026', slug: '/blog/ai-agent-swarms-enterprise-orchestration-2026', readTime: '28 min', featured: true },
@@ -66,6 +67,14 @@ export default function ContentHub() {
       industry: 'Retail & E-commerce',
       results: '$12.4B Value & 98.7% Automation',
       slug: '/case-studies/ai-2025-oct-global-retail-digital-transformation-12-4-billion-success',
+      featured: true
+    },
+    {
+      title: 'Omnichannel Personalization — $2.1B Impact',
+      company: 'Fortune 500 Retailer',
+      industry: 'Retail & E-commerce',
+      results: '$2.1B value, 18% margin uplift',
+      slug: '/case-studies/ai-2025-oct-02-fortune-500-omnichannel-personalization-2-1b-success',
       featured: true
     },
     {
