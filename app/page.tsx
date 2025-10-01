@@ -91,6 +91,10 @@ import NewContent2026Banner from '../components/NewContent2026Banner';
 import AI2026ContentShowcaseBanner from '../components/AI2026ContentShowcaseBanner';
 import InteractiveAI2026ROICalculator from '../components/InteractiveAI2026ROICalculator';
 
+// 🚀 LATEST FEBRUARY 2025 QUANTUM & AUTONOMOUS INTELLIGENCE BREAKTHROUGHS
+import February2025QuantumNeuralSuperintelligenceBreakthroughBanner from '../components/February2025QuantumNeuralSuperintelligenceBreakthroughBanner';
+import February2025AutonomousBusinessIntelligenceRevolutionBanner from '../components/February2025AutonomousBusinessIntelligenceRevolutionBanner';
+
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
   description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Transform your business with cutting-edge technology and automation.',
@@ -100,13 +104,9 @@ export const metadata = {
 export default function HomePage() {
   return (
     <div className="animate-fade-in">
-      {/* 🚀 NEW 2027 ADVANCED NEURAL SUPERINTELLIGENCE - TOP PRIORITY */}
-      <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-12 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl font-bold mb-4">
-            🧠 AI 2027 Advanced Neural Superintelligence Breakthrough
-          </h1>
-          <p className="text-2xl mb-8 text-purple-100">
+      {/* 🚀 LATEST FEBRUARY 2025 QUANTUM & AUTONOMOUS INTELLIGENCE BREAKTHROUGHS - TOP PRIORITY */}
+      <February2025QuantumNeuralSuperintelligenceBreakthroughBanner />
+      <February2025AutonomousBusinessIntelligenceRevolutionBanner />
             Revolutionary 1,000,000x Performance Gains with Self-Evolving Neural Networks
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -148,7 +148,7 @@ export default function HomePage() {
       <AI2026ContentShowcaseBanner />
       <InteractiveAI2026ROICalculator />
       
-      {/* 🔥 OCTOBER 2025 LATEST ENTERPRISE AI CONTENT - ABSOLUTE TOP PRIORITY */}
+      {/* 🔥 OCTOBER 2025 LATEST ENTERPRISE AI CONTENT */}
       <October2025NewContentMegaBanner />
       <EnterprisePlatformModernizationBanner />
       <ConversationalAIRevolutionBanner />
