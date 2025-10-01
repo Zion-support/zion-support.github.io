@@ -1317,6 +1317,39 @@ export const latestArticles: LatestArticle[] = [
   }
   ,
   {
+    id: "enterprise-ai-platform-blueprint-2025",
+    slug: "enterprise-ai-platform-blueprint-2025",
+    title: "Enterprise AI Platform Blueprint 2025: Ship Weekly With Guardrails",
+    description: "Reference architecture to run AI as a product—scorecards, CI policy tests, tier routing, and rollback.",
+    excerpt: "A pragmatic blueprint to ship AI weekly without surprises. Proven patterns used by Fortune 500 teams.",
+    author: "Zion Tech Group",
+    date: "2025-10-03",
+    category: "Platform Engineering",
+    tags: ["Platform", "Governance", "Routing", "Scorecards"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/enterprise-ai-platform-blueprint-2025.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "private-experimentation-edge-2025",
+    slug: "private-experimentation-edge-2025",
+    title: "Private Experimentation at the Edge: <100ms, Zero‑PII Metrics",
+    description: "Scoped IDs, on‑device aggregation, and DP noise for safe global A/Bs under 100ms.",
+    excerpt: "Run privacy‑preserving experiments globally without PII risk—fast, measurable, and compliant.",
+    author: "Zion Tech Group",
+    date: "2025-10-03",
+    category: "Edge AI",
+    tags: ["Edge", "Experimentation", "Privacy", "DP"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/private-experimentation-edge-2025.jpg",
+    newBadge: true,
+    trending: true
+  }
+  ,
+  {
     id: "ai-supply-chain-optimization-2025",
     slug: "ai-supply-chain-optimization-2025",
     title: "AI Supply Chain Optimization: 65% Faster Deliveries, 40% Lower Cost",
