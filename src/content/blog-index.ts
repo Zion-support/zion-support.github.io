@@ -80,7 +80,29 @@ export const october2025Breakthroughs: BlogPost[] = [
  */
 export const allBlogPosts: BlogPost[] = [
   ...october2025Breakthroughs,
-  // Additional posts can be added here
+  // Newly added October 2025 posts
+  {
+    slug: 'ai-2025-oct-01-private-feature-flags-zero-pii',
+    title: 'Private Feature Flags: Zero‑PII Experiments Under 100ms',
+    description: 'Run high‑velocity A/B tests without centralizing PII using signed configs, scoped IDs, and edge analytics.',
+    category: 'Experimentation',
+    date: '2025-10-01',
+    readTime: '8 min',
+    tags: ['Feature Flags', 'Privacy', 'Edge', 'A/B', 'DP'],
+    featured: true,
+    valueProposition: 'Zero PII, <100ms at edge'
+  },
+  {
+    slug: 'ai-2025-oct-01-runtime-rollback-guardrails',
+    title: 'Runtime Rollback Guardrails: Ship Faster With Reversible Changes',
+    description: 'Blueprint for instant rollbacks, canary scorecards, and budgeted routes—move fast without breakage.',
+    category: 'Reliability',
+    date: '2025-10-01',
+    readTime: '7 min',
+    tags: ['Rollback', 'Canary', 'Guardrails', 'Deploy', 'SRE'],
+    featured: true,
+    valueProposition: 'Faster deploys, safer rollbacks'
+  },
 ];
 
 /**

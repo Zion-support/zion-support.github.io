@@ -44,6 +44,66 @@ Ready to operationalize this in your stack? Our team can help you land it safely
     image: "/images/enterprise-ai-governance-2025.jpg"
   },
   {
+    slug: "ai-2025-oct-01-private-feature-flags-zero-pii",
+    title: "Private Feature Flags: Zero‑PII Experiments Under 100ms",
+    description: "Run high‑velocity A/B tests without centralizing PII using signed configs, scoped IDs, and edge analytics.",
+    content: `
+# Private Feature Flags: Zero‑PII Experiments Under 100ms
+
+Modern experimentation does not require centralized PII. This guide ships a privacy‑first experimentation stack using:
+
+## Core Patterns
+- Signed, cacheable configs delivered at the edge
+- Scoped, rotating identifiers with consent awareness
+- On‑device aggregation + DP noise for cohort metrics
+- Kill switches and guardrails for safe exploration
+
+## Outcomes
+- Sub‑100ms evaluation at the edge
+- Zero centralized PII with rich signal quality
+- Faster iteration velocity with lower compliance risk
+
+We include rollout checklists, config schemas, and CI policy tests to keep experiments safe by default.
+    `,
+    author: "Zion Tech Group Privacy Lab",
+    date: "2025-10-01",
+    category: "Experimentation",
+    tags: ["Feature Flags", "Privacy", "Edge", "A/B", "DP"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/private-feature-flags.jpg"
+  },
+  {
+    slug: "ai-2025-oct-01-runtime-rollback-guardrails",
+    title: "Runtime Rollback Guardrails: Ship Faster With Reversible Changes",
+    description: "Blueprint for instant rollbacks, canary scorecards, and budgeted routes—move fast without breakage.",
+    content: `
+# Runtime Rollback Guardrails: Ship Faster With Reversible Changes
+
+Speed and safety are not opposites when systems are designed to be reversible.
+
+## Ship Reversible by Default
+- Canary scorecards tied to KPIs and error budgets
+- Budget‑aware routing and kill switches
+- Signed configs with instant propagation
+- Backward‑compatible change windows
+
+## Operate With Confidence
+- Live evals on canary routes
+- One‑click rollback with automated blast‑radius checks
+- Weekly review ritual: 1 regression → 1 fix
+
+This guide includes reference dashboards, config examples, and incident drills to compress MTTR while increasing deploy frequency.
+    `,
+    author: "Zion Tech Group Reliability Lab",
+    date: "2025-10-01",
+    category: "Reliability",
+    tags: ["Rollback", "Canary", "Guardrails", "Deploy", "SRE"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/runtime-rollback-guardrails.jpg"
+  },
+  {
     slug: "ai-2025-oct-01-enterprise-agent-copilots",
     title: "Enterprise Agent Copilots 2025: 10x Velocity With Guardrails",
     description: "Deploy budgeted, policy‑gated AI copilots that boost delivery 10x while keeping reliability and spend under control.",
