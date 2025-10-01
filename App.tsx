@@ -19,6 +19,10 @@ import October2025NewTechContentBanner from "./components/October2025NewTechCont
 import December2025NewContentBanner from "./components/December2025NewContentBanner";
 import December2025ContentShowcaseBanner from "./components/December2025ContentShowcaseBanner";
 
+// 🚀🚀🚀 NEWEST: JANUARY 2025 ENTERPRISE AUTOMATION BREAKTHROUGH - HIGHEST PRIORITY! 🚀🚀🚀
+import January2025EnterpriseAutomationBanner from "./components/January2025EnterpriseAutomationBanner";
+import January2025Fortune500SuccessBanner from "./components/January2025Fortune500SuccessBanner";
+
 // 🚀🚀🚀 OCTOBER 1, 2025 - NEWEST REAL-TIME INTELLIGENCE REVOLUTION 🚀🚀🚀
 import October2025RealTimeIntelligenceBanner from "./components/October2025RealTimeIntelligenceBanner";
 
@@ -93,6 +97,14 @@ import Fortune500SuccessAdvertisingBanner from "./components/Fortune500SuccessAd
 export default function App(): JSX.Element {
   return (
     <div className="min-h-screen bg-slate-950">
+      {/* 🚀🚀🚀 NEWEST: JANUARY 2025 ENTERPRISE AUTOMATION BREAKTHROUGH - ABSOLUTE TOP PRIORITY! 🚀🚀🚀 */}
+      {/* Featured: $2.3B Cost Savings, 95% Efficiency Gains, Fortune 500 Success */}
+      <January2025EnterpriseAutomationBanner />
+      
+      {/* 💰💰💰 EXCLUSIVE: JANUARY 2025 FORTUNE 500 SUCCESS STORY - HIGHLY PROMINENT! 💰💰💰 */}
+      {/* Featured: $2.3B AI-Driven Cost Savings, Comprehensive Implementation Guide */}
+      <January2025Fortune500SuccessBanner />
+      
       {/* 🎉🎉🎉 NEWEST: OCTOBER 1, 2025 - FRESH CONTENT JUST PUBLISHED - ABSOLUTE TOP PRIORITY! 🎉🎉🎉 */}
       {/* Featured: Edge AI Revolution, GenAI Cost Optimization, $86M Manufacturing Success */}
       <October1st2025NewContentBanner />
