@@ -41,6 +41,7 @@ import October2025LatestAIBreakthroughsBanner from "../components/October2025Lat
 import October2025LatestBreakthroughBanner from "../components/October2025LatestBreakthroughBanner";
 import October2025FeaturedContentBanner from "../components/October2025FeaturedContentBanner";
 import October2025CuttingEdgeInnovationsBanner from "../components/October2025CuttingEdgeInnovationsBanner";
+import October2025NewAutonomousSystemsBanner from "../components/October2025NewAutonomousSystemsBanner";
 import LatestArticlesShowcase from "../components/LatestArticlesShowcase";
 import LatestContentBanner from "../components/LatestContentBanner";
 import LatestInsights from "../components/LatestInsights";
@@ -136,6 +137,10 @@ const Home = () => {
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
+        
+        {/* 🔥🔥🔥 BREAKING NEWS: OCTOBER 1, 2025 - NEW AUTONOMOUS SYSTEMS RELEASED! TOP PRIORITY! 🔥🔥🔥 */}
+        {/* Featured: Intelligent Autonomous Enterprise Mesh ($847M Value, 97.3% Automation, 89% Cost Cut), AI-Powered Predictive Maintenance ($127M Value, 99.2% Accuracy, 87% Downtime Cut) */}
+        <October2025NewAutonomousSystemsBanner />
         
         {/* 🌟🌟🌟 FEATURED: OCTOBER 1, 2025 - LATEST CONTENT RELEASES - MUST READ! 🌟🌟🌟 */}
         {/* Featured: Enterprise Neural Orchestration Platform ($12.4M Savings, 89% Faster, 94% Cost Cut), Cognitive Supply Chain Revolution ($18.7M Value, 76% Accuracy, 68% Cost Reduction) */}
