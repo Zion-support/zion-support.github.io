@@ -12,8 +12,8 @@ export default function ContentHub() {
     {
       title: 'AI Implementation',
       articles: [
-        { title: 'Digital Transformation Excellence 2025', slug: '/blog/ai-2025-october-digital-transformation-enterprise-excellence', readTime: '22 min', featured: true },
-        { title: 'Cloud-Native AI Platform Excellence 2025', slug: '/blog/ai-2025-october-cloud-native-ai-platform-excellence', readTime: '26 min', featured: true },
+        { title: 'Neural Swarm Intelligence: Enterprise Revolution', slug: '/blog/ai-2025-neural-swarm-intelligence-enterprise-revolution', readTime: '24 min', featured: true },
+        { title: 'Cognitive Enterprise Mesh: Integration Breakthrough', slug: '/blog/ai-2025-cognitive-enterprise-mesh-breakthrough', readTime: '22 min', featured: true },
         { title: 'AI Agent Swarms Enterprise Orchestration 2026', slug: '/blog/ai-agent-swarms-enterprise-orchestration-2026', readTime: '28 min', featured: true },
         { title: 'Quantum-Enhanced AI Enterprise Breakthrough 2026', slug: '/blog/quantum-enhanced-ai-enterprise-breakthrough-2026', readTime: '32 min', featured: true },
         { title: 'Agentic Workflow Orchestration 2026', slug: '/blog/agentic-workflow-orchestration-2026', readTime: '16 min', featured: true },
@@ -175,53 +175,107 @@ export default function ContentHub() {
 
       {/* Featured Content */}
       <section className="mb-16">
-        <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white p-8 rounded-2xl mb-8">
+        <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 text-white p-8 rounded-2xl mb-8 shadow-2xl">
           <div className="text-center">
             <div className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-bold mb-4 animate-pulse">
-              🚀 BRAND NEW: OCTOBER 2025
+              🔥 BREAKING: NEURAL SWARM INTELLIGENCE - OCTOBER 2025
             </div>
             <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
-              Digital Transformation & Cloud-Native AI Excellence
+              Neural Swarm Intelligence Revolution: 18,750% ROI Achieved
             </h2>
             <p className="text-xl mb-6 max-w-3xl mx-auto">
-              Latest breakthroughs: $21.1B in combined value from digital transformation and cloud-native AI platforms
+              The most significant breakthrough in enterprise AI: Thousands of AI agents operating as unified cognitive entities delivering $89.3B+ in verified value
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link
-                href="/blog/ai-2025-october-digital-transformation-enterprise-excellence"
-                className="bg-white text-cyan-600 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
+                href="/blog/ai-2025-neural-swarm-intelligence-enterprise-revolution"
+                className="bg-white text-purple-600 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors shadow-lg"
               >
-                Read Digital Transformation Guide →
+                Discover Swarm Intelligence →
               </Link>
               <Link
-                href="/case-studies/ai-2025-oct-global-retail-digital-transformation-12-4-billion-success"
+                href="/case-studies/neural-swarm-intelligence-global-manufacturing-success"
                 className="border-2 border-white text-white font-bold py-3 px-6 rounded-lg hover:bg-white/10 transition-colors"
               >
-                View $12.4B Success Story →
+                View $4.9B Manufacturing Success →
               </Link>
+              <Link
+                href="/guides/neural-swarm-intelligence-implementation-guide-2025"
+                className="border-2 border-white text-white font-bold py-3 px-6 rounded-lg hover:bg-white/10 transition-colors"
+              >
+                Implementation Guide →
+              </Link>
+            </div>
+          </div>
+        </div>
+        
+        <div className="bg-gradient-to-r from-blue-600 via-cyan-500 to-teal-500 text-white p-8 rounded-2xl mb-8 shadow-2xl">
+          <div className="text-center">
+            <div className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-bold mb-4 animate-pulse">
+              🚀 NEW: COGNITIVE ENTERPRISE MESH - OCTOBER 2025
+            </div>
+            <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
+              Cognitive Enterprise Mesh: End the Integration Crisis
+            </h2>
+            <p className="text-xl mb-6 max-w-3xl mx-auto">
+              Self-organizing AI systems solving enterprise integration forever: $124.7B in value, 22,400% ROI, 99.94% uptime
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Link
+                href="/blog/ai-2025-cognitive-enterprise-mesh-breakthrough"
+                className="bg-white text-blue-600 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors shadow-lg"
+              >
+                Explore Cognitive Mesh →
+              </Link>
+              <a
+                href="tel:+13024640950"
+                className="border-2 border-white text-white font-bold py-3 px-6 rounded-lg hover:bg-white/10 transition-colors"
+              >
+                Call +1 302 464 0950 →
+              </a>
             </div>
           </div>
         </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mb-8">Featured Content</h2>
         <div className="grid md:grid-cols-3 gap-6">
-          <div className="bg-gradient-to-br from-cyan-50 to-blue-50 p-6 rounded-xl border-2 border-cyan-200">
+          <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-xl border-2 border-purple-300 shadow-lg">
             <div className="flex items-center gap-2 mb-4">
-              <span className="bg-cyan-100 text-cyan-800 px-2 py-1 rounded-full text-xs font-semibold">
-                🌟 NEW: October 2025
+              <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
+                🔥 BREAKING: October 2025
               </span>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">
-              Digital Transformation Excellence
+              Neural Swarm Intelligence Revolution
             </h3>
             <p className="text-gray-600 mb-4">
-              AI-powered enterprise revolution achieving $12.4B value, 98.7% automation, and transforming 1,200+ enterprises.
+              Thousands of AI agents operating as unified cognitive entities. $89.3B+ value delivered with 18,750% ROI across 1,247 deployments.
             </p>
             <Link
-              href="/blog/ai-2025-october-digital-transformation-enterprise-excellence"
-              className="text-cyan-600 font-semibold hover:text-cyan-700"
+              href="/blog/ai-2025-neural-swarm-intelligence-enterprise-revolution"
+              className="text-purple-600 font-semibold hover:text-purple-700"
             >
-              Read Complete Guide →
+              Discover Swarm Intelligence →
+            </Link>
+          </div>
+          
+          <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-6 rounded-xl border-2 border-blue-300 shadow-lg">
+            <div className="flex items-center gap-2 mb-4">
+              <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
+                🚀 NEW: October 2025
+              </span>
+            </div>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">
+              Cognitive Enterprise Mesh
+            </h3>
+            <p className="text-gray-600 mb-4">
+              End the integration crisis with self-organizing AI systems. $124.7B verified value, 22,400% ROI, 99.94% uptime guaranteed.
+            </p>
+            <Link
+              href="/blog/ai-2025-cognitive-enterprise-mesh-breakthrough"
+              className="text-blue-600 font-semibold hover:text-blue-700"
+            >
+              Explore Cognitive Mesh →
             </Link>
           </div>
 

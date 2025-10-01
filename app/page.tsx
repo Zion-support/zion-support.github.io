@@ -116,6 +116,40 @@ export default function HomePage() {
       
       {/* 🚀 BREAKTHROUGH 2027/2028 UNIVERSAL CONSCIOUSNESS & QUANTUM SINGULARITY */}
       {/* 🚀 BREAKTHROUGH 2027/2028 UNIVERSAL CONSCIOUSNESS & QUANTUM SINGULARITY */}
+      {/* 🔥 NEW OCTOBER 2025 CONTENT: Neural Swarm Intelligence & Cognitive Mesh */}
+      <section className="w-full bg-gradient-to-r from-purple-700 via-pink-600 to-orange-500 text-white py-6">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="flex flex-col md:flex-row items-center gap-4 justify-between">
+            <div className="flex items-center gap-3 flex-wrap justify-center md:justify-start">
+              <span className="text-2xl">⚡</span>
+              <span className="font-bold text-xl">JUST PUBLISHED — October 2025</span>
+              <span className="hidden md:inline">•</span>
+              <Link href="/blog/ai-2025-neural-swarm-intelligence-enterprise-revolution" className="underline hover:text-yellow-200 font-bold">
+                Neural Swarm Intelligence (18,750% ROI)
+              </Link>
+              <span className="hidden md:inline">•</span>
+              <Link href="/blog/ai-2025-cognitive-enterprise-mesh-breakthrough" className="underline hover:text-yellow-200 font-bold">
+                Cognitive Enterprise Mesh (22,400% ROI)
+              </Link>
+              <span className="hidden md:inline">•</span>
+              <Link href="/guides/neural-swarm-intelligence-implementation-guide-2025" className="underline hover:text-yellow-200 font-bold">
+                Implementation Guide
+              </Link>
+              <span className="hidden md:inline">•</span>
+              <Link href="/case-studies/neural-swarm-intelligence-global-manufacturing-success" className="underline hover:text-yellow-200 font-bold">
+                $4.9B Manufacturing Case Study
+              </Link>
+            </div>
+            <Link
+              href="/content-hub"
+              className="bg-white text-purple-800 hover:bg-yellow-400 hover:text-purple-900 px-6 py-3 rounded-full text-sm font-bold whitespace-nowrap transition-all"
+            >
+              Explore the Content Hub →
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <section className="w-full bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-6">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center gap-4 justify-between">
