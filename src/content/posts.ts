@@ -53,6 +53,43 @@ export const posts: BlogPost[] = [
     slug: "ai-2025-sept-30-private-insights-blueprint",
     title: "Private Insights Blueprint — Zero‑PII Analytics at <100ms",
     description: "Scoped IDs, on‑device aggregation, and DP noise deliver trustworthy insights without collecting PII.",
+    category: "Privacy & Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "ai-2025-real-time-decision-engines",
+    title: "Real-Time Decision Engines 2025: 10M decisions/sec under 1ms",
+    description: "Blueprint for ultra‑low‑latency decision systems with streaming features, caches, and guards.",
+    category: "Real-Time AI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "10 min read"
+  },
+  {
+    slug: "ai-2025-neural-code-synthesis",
+    title: "Neural Code Synthesis 2025: 95% Accuracy, 90% Faster Delivery",
+    description: "Governed code generation with evals, safety rails, and CI policy tests tied to KPIs.",
+    category: "Engineering",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "11 min read"
+  },
+  {
+    slug: "ai-2025-multimodal-fusion-blueprint",
+    title: "Multimodal Fusion Blueprint 2025: 98% Cross‑Modal Accuracy",
+    description: "Unify text, image, and voice with hybrid retrieval, calibration, and on‑device adapters.",
+    category: "Multimodal AI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "12 min read"
+  },
+  {
+    slug: "edge-zero-pii-insights-2026",
+    title: "Edge Zero‑PII Insights 2026: Scoped IDs, On‑Device Aggregation",
+    description: "Scoped IDs, on‑device aggregation, and DP noise—zero PII at <100ms.",
+>>>>>>> origin/feature/new-content-2025
     category: "Analytics",
     publishedAt: "2025-09-30",
     featured: true,
@@ -278,6 +315,24 @@ export const posts: BlogPost[] = [
     slug: "autonomous-operations-case-study-2026",
     title: "Autonomous Operations Case Study 2026 — 98% automation",
     description: "Budgets, canaries, and rollback delivering near‑complete automation in production.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "ai-2027-edge-native-agents",
+    title: "Edge‑Native Agents 2027: Private Tools at <100ms",
+    description: "Design agents that run close to users with scoped permissions, on‑device tools, and instant rollback.",
+    category: "Edge Computing",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "ai-2027-operational-scorecards",
+    title: "Operational AI Scorecards 2027: KPIs, Budgets, Rollback",
+    description: "Live scorecards that link SLIs to product KPIs with budgeted actions and one‑click recovery.",
     category: "AI Operations",
     publishedAt: "2025-09-30",
     featured: true,

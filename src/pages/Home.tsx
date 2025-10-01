@@ -380,15 +380,15 @@ const Home = () => {
                 <div className="text-white font-semibold">Enterprise RAG Security 2027</div>
                 <div className="text-zion-slate-light text-sm mt-1">Auth‑aware retrieval, freshness windows, prompt firewalls, signed outputs.</div>
               </Link>
-              <Link to="/blog/edge-consentless-personalization-2027" className="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
-                <div className="text-cyan-300 text-xs mb-2">Edge Computing</div>
-                <div className="text-white font-semibold">Edge Personalization 2027</div>
-                <div className="text-zion-slate-light text-sm mt-1">Zero‑PII, sub‑100ms journeys with scoped IDs and on‑device models.</div>
+              <Link to="/blog/ai-2025-real-time-decision-engines" className="block rounded-lg border border-white/10 p-4 hover:border-emerald-400/40 transition-colors">
+                <div className="text-emerald-300 text-xs mb-2">Real-Time AI</div>
+                <div className="text-white font-semibold">Real-Time Decision Engines 2025</div>
+                <div className="text-zion-slate-light text-sm mt-1">10M decisions/sec under 1ms with streaming features and guardrails.</div>
               </Link>
-              <Link to="/blog/real-time-decision-engines-2026" className="block rounded-lg border border-white/10 p-4 hover:border-blue-400/40 transition-colors">
-                <div className="text-blue-300 text-xs mb-2">Platform Engineering</div>
-                <div className="text-white font-semibold">Real‑Time Decision Engines 2026</div>
-                <div className="text-zion-slate-light text-sm mt-1">10M/sec under 1ms using warm pools, intent prefetching, and caches.</div>
+              <Link to="/blog/ai-2025-neural-code-synthesis" className="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
+                <div className="text-cyan-300 text-xs mb-2">Engineering</div>
+                <div className="text-white font-semibold">Neural Code Synthesis 2025</div>
+                <div className="text-zion-slate-light text-sm mt-1">95% accuracy and 90% faster delivery with governed generation.</div>
               </Link>
             </div>
           </div>
