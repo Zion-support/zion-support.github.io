@@ -2,7 +2,6 @@ module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
   passWithNoTests: true,
-  // Limit test discovery to application source; ignore junk tests under root __tests__
   roots: ['<rootDir>/src'],
   setupFilesAfterEnv: [ '@testing-library/jest-dom', '<rootDir>/jest.setup.ts' ],
   extensionsToTreatAsEsm: ['.ts', '.tsx'],
@@ -15,7 +14,7 @@ module.exports = {
     '^@utils/(.*)$': '<rootDir>/src/utils/$1',
     '^@hooks/(.*)$': '<rootDir>/src/hooks/$1'
   },
-  testMatch: ['**/?(*.)+(spec|test).[jt]s?(x)'],
+  testMatch: ['<rootDir>/src/**/*(*.)+(spec|test).[jt]s?(x)'],
   testPathIgnorePatterns: [
     '/node_modules/',
     '/dist/',
@@ -32,6 +31,7 @@ module.exports = {
     '/backup-problematic-files/',
     '/_conflicted_disabled/',
     '/apps.backup/',
+    '^<rootDir>/__tests__/',
   ],
   modulePathIgnorePatterns: [
     '/automation/',
@@ -45,7 +45,7 @@ module.exports = {
   ],
   transform: {
     '^.+\\.(ts|tsx)$': ['ts-jest', { useESM: true }],
-    '^.+\\.(js|jsx)$': ['ts-jest', { useESM: true }]
+    '^.+\\.(js|jsx)$': 'babel-jest'
   },
   transformIgnorePatterns: [
     'node_modules/(?!(.*\\.mjs$|react|react-dom|@testing-library))'
