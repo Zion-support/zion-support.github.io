@@ -12,6 +12,7 @@ export default function ContentHub() {
     {
       title: 'AI Implementation',
       articles: [
+        { title: 'Neural Adaptive Systems: The $89B Enterprise AI Revolution', slug: '/blog/ai-2025-oct-neural-adaptive-systems-enterprise-revolution', readTime: '24 min', featured: true, isNew: true },
         { title: 'AI Agent Swarms Enterprise Orchestration 2026', slug: '/blog/ai-agent-swarms-enterprise-orchestration-2026', readTime: '28 min', featured: true },
         { title: 'Quantum-Enhanced AI Enterprise Breakthrough 2026', slug: '/blog/quantum-enhanced-ai-enterprise-breakthrough-2026', readTime: '32 min', featured: true },
         { title: 'Agentic Workflow Orchestration 2026', slug: '/blog/agentic-workflow-orchestration-2026', readTime: '16 min', featured: true },
@@ -28,6 +29,7 @@ export default function ContentHub() {
     {
       title: 'AI Security & Compliance',
       articles: [
+        { title: 'Sovereign AI Systems: The $127B Data Independence Revolution', slug: '/blog/ai-2025-oct-sovereign-ai-systems-enterprise-transformation', readTime: '28 min', featured: true, isNew: true },
         { title: 'AI Cybersecurity Automation 2026', slug: '/blog/ai-cybersecurity-automation-2026', readTime: '18 min', featured: true },
         { title: 'AI Security Compliance 2025', slug: '/blog/ai-security-compliance-2025', readTime: '12 min', featured: false },
         { title: 'Enterprise AI Security 2025', slug: '/blog/enterprise-ai-security-2025', readTime: '14 min', featured: false },
@@ -58,6 +60,24 @@ export default function ContentHub() {
   ];
 
   const caseStudies = [
+    {
+      title: 'Fortune 100 Neural Adaptive Systems Success',
+      company: 'Global Manufacturing Leader',
+      industry: 'Manufacturing',
+      results: '$4.2B Value & 89% Defect Reduction',
+      slug: '/case-studies/ai-2025-oct-fortune-100-neural-adaptive-4-2-billion-success',
+      featured: true,
+      isNew: true
+    },
+    {
+      title: 'Global Bank Sovereign AI Transformation',
+      company: 'Top 10 Global Bank',
+      industry: 'Financial Services',
+      results: '$8.7B Value & 100% Data Sovereignty',
+      slug: '/case-studies/ai-2025-oct-global-bank-sovereign-ai-8-7-billion-success',
+      featured: true,
+      isNew: true
+    },
     {
       title: 'AI Agent Swarms Manufacturing Success 2026',
       company: 'Global Manufacturing Corp',
@@ -160,26 +180,32 @@ export default function ContentHub() {
         <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white p-8 rounded-2xl mb-8">
           <div className="text-center">
             <div className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-bold mb-4 animate-pulse">
-              🚀 JUST PUBLISHED: OCTOBER 2025
+              🚀 JUST PUBLISHED: OCTOBER 2025 - NEW RELEASES
             </div>
             <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
-              Autonomous Reality Synthesis Revolution
+              Neural Adaptive Systems & Sovereign AI Revolution
             </h2>
             <p className="text-xl mb-6 max-w-3xl mx-auto">
-              The newest breakthrough in enterprise AI: Self-evolving digital environments delivering $47.3B in proven value
+              Two groundbreaking enterprise AI solutions: Self-optimizing neural systems delivering $89B+ and sovereign AI achieving $127B+ in proven value
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link
-                href="/blog/ai-2025-october-autonomous-reality-synthesis"
+                href="/blog/ai-2025-oct-neural-adaptive-systems-enterprise-revolution"
                 className="bg-white text-cyan-600 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
               >
-                Read Complete Guide →
+                Neural Adaptive Systems ($89B) →
               </Link>
               <Link
-                href="/case-studies/autonomous-reality-synthesis-47-billion-success"
+                href="/blog/ai-2025-oct-sovereign-ai-systems-enterprise-transformation"
+                className="bg-white text-purple-600 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
+              >
+                Sovereign AI ($127B) →
+              </Link>
+              <Link
+                href="/case-studies/ai-2025-oct-fortune-100-neural-adaptive-4-2-billion-success"
                 className="border-2 border-white text-white font-bold py-3 px-6 rounded-lg hover:bg-white/10 transition-colors"
               >
-                View $47.3B Success Story →
+                View $4.2B Success Story →
               </Link>
             </div>
           </div>
@@ -194,53 +220,53 @@ export default function ContentHub() {
               </span>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">
-              Autonomous Reality Synthesis
+              Neural Adaptive Systems
             </h3>
             <p className="text-gray-600 mb-4">
-              Revolutionary AI combining quantum computing, spatial AI, and digital twins. 16,480% ROI proven across 847 facilities.
+              Self-optimizing AI that evolves in real-time. 847% ROI with $89B in proven value across 1,247 implementations.
             </p>
             <Link
-              href="/blog/ai-2025-october-autonomous-reality-synthesis"
+              href="/blog/ai-2025-oct-neural-adaptive-systems-enterprise-revolution"
               className="text-cyan-600 font-semibold hover:text-cyan-700"
             >
-              Read Revolutionary Guide →
+              Read Complete Guide →
             </Link>
           </div>
 
-          <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl">
+          <div className="bg-gradient-to-br from-purple-50 to-indigo-50 p-6 rounded-xl border-2 border-purple-200">
             <div className="flex items-center gap-2 mb-4">
-              <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
-                Featured Article
+              <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
+                🌟 NEW: October 2025
               </span>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">
-              AI Multimodal Enterprise Solutions 2026
+              Sovereign AI Systems
             </h3>
             <p className="text-gray-600 mb-4">
-              Master multimodal AI for enterprise with vision, audio, and text processing. Achieve 300% ROI.
+              Complete data independence with zero external dependencies. $127B in value with 99.99% uptime and total sovereignty.
             </p>
             <Link
-              href="/blog/ai-multimodal-enterprise-2026"
-              className="text-blue-600 font-semibold hover:text-blue-700"
+              href="/blog/ai-2025-oct-sovereign-ai-systems-enterprise-transformation"
+              className="text-purple-600 font-semibold hover:text-purple-700"
             >
-              Read Article →
+              Read Sovereignty Guide →
             </Link>
           </div>
 
           <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl">
             <div className="flex items-center gap-2 mb-4">
               <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
-                🔥 $47.3B Success
+                🔥 $4.2B Success
               </span>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">
-              Autonomous Reality Synthesis Success
+              Fortune 100 Neural Adaptive Success
             </h3>
             <p className="text-gray-600 mb-4">
-              Fortune 50 company achieves $47.3B in value with 99.98% accuracy across global operations.
+              Global manufacturer achieves $4.2B in value with 89% defect reduction across 247 facilities worldwide.
             </p>
             <Link
-              href="/case-studies/autonomous-reality-synthesis-47-billion-success"
+              href="/case-studies/ai-2025-oct-fortune-100-neural-adaptive-4-2-billion-success"
               className="text-green-600 font-semibold hover:text-green-700"
             >
               View Case Study →
@@ -260,6 +286,11 @@ export default function ContentHub() {
                 {category.articles.map((article, articleIndex) => (
                   <div key={articleIndex} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
                     <div className="flex items-center gap-2 mb-3">
+                      {article.isNew && (
+                        <span className="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
+                          NEW
+                        </span>
+                      )}
                       {article.featured && (
                         <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
                           Featured
@@ -291,6 +322,11 @@ export default function ContentHub() {
           {caseStudies.map((study, index) => (
             <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
               <div className="flex items-center gap-2 mb-3">
+                {study.isNew && (
+                  <span className="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
+                    NEW
+                  </span>
+                )}
                 {study.featured && (
                   <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
                     Featured
