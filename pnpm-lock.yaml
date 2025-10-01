@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@esbuild/linux-x64':
+        specifier: ^0.25.10
+        version: 0.25.10
       '@tailwindcss/postcss':
         specifier: ^4.1.13
         version: 4.1.13
@@ -85,7 +88,7 @@ importers:
         specifier: ^24.5.2
         version: 24.5.2
       '@types/react':
-        specifier: ^18.3.5
+        specifier: ^18.3.11
         version: 18.3.25
       '@types/react-dom':
         specifier: ^18.3.0
@@ -5063,8 +5066,7 @@ snapshots:
   '@esbuild/linux-s390x@0.25.10':
     optional: true
 
-  '@esbuild/linux-x64@0.25.10':
-    optional: true
+  '@esbuild/linux-x64@0.25.10': {}
 
   '@esbuild/netbsd-arm64@0.25.10':
     optional: true
