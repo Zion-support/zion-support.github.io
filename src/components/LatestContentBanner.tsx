@@ -12,13 +12,13 @@ interface LatestContentBannerProps {
 const contentHighlights = [
   {
     id: 1,
-    title: "🛡️ NEW: AI Risk Register That Actually Drives Action",
-    description: "Turn AI risks into tracked mitigations with owners and policy tests",
-    ctaText: "Read Playbook",
-    ctaLink: "/blog/ai-platform-roi-2025",
+    title: "🧠 Agentic Workflows Blueprint 2026",
+    description: "Scoped tools, retries, and traces for reliable multi‑step agents",
+    ctaText: "Read Blueprint",
+    ctaLink: "/blog/agentic-workflows-blueprint-2026",
     badge: "New",
-    stats: "7 min read",
-    variant: "warning" as const
+    stats: "8 min read",
+    variant: "info" as const
   },
   {
     id: 2,
@@ -42,23 +42,23 @@ const contentHighlights = [
   },
   {
     id: 4,
-    title: "🧪 RAG Architectures That Work in Production",
-    description: "Freshness, hybrid search, and evals that scale",
-    ctaText: "Read Guide",
-    ctaLink: "/blog/edge-cdn-ml-personalization-2025",
-    badge: "Popular",
-    stats: "8 min read",
+    title: "💸 Serverless Inference Cost Playbook 2026",
+    description: "Adaptive batching, warm pools, and tiers without P95 pain",
+    ctaText: "Cut Spend",
+    ctaLink: "/blog/serverless-inference-cost-playbook-2026",
+    badge: "New",
+    stats: "9 min read",
     variant: "premium" as const
   },
   {
     id: 5,
-    title: "🧰 Serverless Inference Cost Playbook",
-    description: "Adaptive batching, warm pools, and quality tiers without P95 pain",
-    ctaText: "Optimize",
-    ctaLink: "/blog/serverless-inference-cost-playbook-2025",
-    badge: "Guide",
-    stats: "7 min read",
-    variant: "success" as const
+    title: "🧾 ML Supply Chain SBOMs",
+    description: "Provenance and attestations for datasets, models, and prompts",
+    ctaText: "Read Guide",
+    ctaLink: "/blog/ml-supply-chain-sbom-2026",
+    badge: "Security",
+    stats: "6 min read",
+    variant: "warning" as const
   }
   ,
   {
@@ -156,6 +156,16 @@ contentHighlights.push(
     badge: "Featured",
     stats: "6 min read",
     variant: "success" as const
+  },
+  {
+    id: 15,
+    title: "✅ LLM Policy Tests in CI",
+    description: "Policy tests on every PR keep you fast and safe.",
+    ctaText: "Read How",
+    ctaLink: "/blog/llm-policy-testing-2025",
+    badge: "New",
+    stats: "6 min read",
+    variant: "warning" as const
   },
   {
     id: 11,

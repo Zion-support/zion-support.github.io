@@ -116,6 +116,41 @@ export const caseStudies: CaseStudy[] = [
   }
   ,
   {
+    id: "retail-genai-assistants",
+    title: "GenAI Retail Assistants at Scale",
+    company: "RetailMax Corporation",
+    industry: "E-commerce",
+    challenge: "High support volume and slow product discovery led to churn and high OpEx.",
+    solution: "Deployed multilingual GenAI assistants with tools for search, recommendations, and order support across 22 regions.",
+    results: [
+      "Cut support tickets by 48%",
+      "Increased conversion rate by 32%",
+      "Reduced CAC payback from 9 to 5 months",
+      "$6.1M annual cost savings"
+    ],
+    technologies: ["LLM Tools", "Retrieval", "React", "Kubernetes", "ClickHouse"],
+    duration: "10 weeks",
+    imageUrl: "/images/case-studies/retail-genai-assistants.jpg"
+  },
+  {
+    id: "edge-vision-quality-inspection",
+    title: "Edge Vision Quality Inspection",
+    company: "Precision Manufacturing",
+    industry: "Manufacturing",
+    challenge: "Manual inspection missed defects and slowed throughput across 12 plants.",
+    solution: "Implemented on‑device vision models with active learning, latency budgets, and automated divert flows.",
+    results: [
+      "70% defect reduction",
+      "+22% line throughput",
+      "$3.4M annual scrap savings",
+      "P95 inference 38ms"
+    ],
+    technologies: ["Edge AI", "OpenVINO", "gRPC", "Rust", "Kafka"],
+    duration: "12 weeks",
+    imageUrl: "/images/case-studies/edge-vision-quality.jpg"
+  }
+  ,
+  {
     id: "telco-edge-observability",
     title: "Telco Edge Observability Overhaul",
     company: "GlobalTel Communications",
@@ -221,6 +256,96 @@ export const caseStudies: CaseStudy[] = [
     technologies: ["Quantum Computing", "IBM Qiskit", "Python", "Portfolio Optimization", "Risk Management"],
     duration: "20 weeks",
     imageUrl: "/images/case-studies/quantum-portfolio.jpg"
+  },
+  {
+    id: "ai-platform-modernization",
+    title: "Enterprise AI Platform Modernization",
+    company: "Global Manufacturing Corp",
+    industry: "Manufacturing",
+    challenge: "Legacy AI systems were unable to scale, causing 40% performance degradation during peak loads and limiting innovation capabilities.",
+    solution: "Modernized AI platform with microservices architecture, auto-scaling capabilities, and advanced MLOps pipelines for continuous deployment.",
+    results: [
+      "300% improvement in system scalability",
+      "90% reduction in deployment time",
+      "99.9% uptime during peak loads",
+      "50% reduction in operational costs",
+      "Enabled 15 new AI applications"
+    ],
+    technologies: ["Kubernetes", "Docker", "TensorFlow", "MLOps", "AWS", "Python"],
+    duration: "16 weeks",
+    imageUrl: "/images/case-studies/ai-platform-modernization.jpg"
+  },
+  {
+    id: "ai-ethics-compliance",
+    title: "AI Ethics and Compliance Implementation",
+    company: "Healthcare Solutions Inc",
+    industry: "Healthcare",
+    challenge: "AI systems needed to comply with strict healthcare regulations while maintaining high performance and ethical standards.",
+    solution: "Implemented comprehensive AI ethics framework with automated compliance monitoring, bias detection, and transparent decision-making processes.",
+    results: [
+      "100% compliance with healthcare regulations",
+      "95% reduction in bias-related issues",
+      "Complete audit trail for all AI decisions",
+      "Enhanced patient trust and satisfaction",
+      "Streamlined regulatory approval process"
+    ],
+    technologies: ["AI Ethics Framework", "Compliance Automation", "Bias Detection", "Audit Systems", "Healthcare APIs"],
+    duration: "12 weeks",
+    imageUrl: "/images/case-studies/ai-ethics-compliance.jpg"
+  },
+  {
+    id: "edge-ai-deployment",
+    title: "Edge AI Deployment at Scale",
+    company: "SmartCity Technologies",
+    industry: "Smart Cities",
+    challenge: "Need for real-time AI processing across 50+ edge locations with limited bandwidth and strict latency requirements.",
+    solution: "Deployed distributed edge AI system with optimized models, local processing capabilities, and intelligent data synchronization.",
+    results: [
+      "Sub-100ms response times achieved",
+      "80% reduction in bandwidth usage",
+      "99.5% uptime across all edge locations",
+      "Real-time processing of 1M+ events daily",
+      "40% reduction in infrastructure costs"
+    ],
+    technologies: ["Edge Computing", "TensorFlow Lite", "IoT Sensors", "5G Networks", "Edge AI Models"],
+    duration: "14 weeks",
+    imageUrl: "/images/case-studies/edge-ai-deployment.jpg"
+  },
+  {
+    id: "ai-content-generation",
+    title: "Enterprise AI Content Generation Platform",
+    company: "MediaCorp International",
+    industry: "Media & Entertainment",
+    challenge: "Manual content creation was limiting output to 100 pieces per month, with inconsistent quality and high production costs.",
+    solution: "Implemented AI-powered content generation platform with brand voice training, quality assurance, and automated publishing workflows.",
+    results: [
+      "1000% increase in content production",
+      "85% reduction in content creation costs",
+      "Consistent brand voice across all content",
+      "Real-time content optimization",
+      "50% improvement in engagement rates"
+    ],
+    technologies: ["GPT-4", "Content AI", "Brand Voice Training", "Automated Publishing", "Quality Assurance"],
+    duration: "10 weeks",
+    imageUrl: "/images/case-studies/ai-content-generation.jpg"
+  },
+  {
+    id: "ai-customer-insights",
+    title: "AI-Powered Customer Insights Platform",
+    company: "RetailMax Global",
+    industry: "Retail",
+    challenge: "Unable to understand customer behavior patterns, leading to poor personalization and declining customer satisfaction.",
+    solution: "Built comprehensive customer insights platform with predictive analytics, behavioral modeling, and real-time personalization engines.",
+    results: [
+      "75% improvement in customer satisfaction",
+      "60% increase in conversion rates",
+      "90% accuracy in behavior prediction",
+      "Real-time personalization capabilities",
+      "25% increase in average order value"
+    ],
+    technologies: ["Machine Learning", "Predictive Analytics", "Real-time Processing", "Personalization Engines", "Customer Data Platform"],
+    duration: "12 weeks",
+    imageUrl: "/images/case-studies/ai-customer-insights.jpg"
   }
 ];
 

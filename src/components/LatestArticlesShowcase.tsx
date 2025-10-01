@@ -37,10 +37,10 @@ const LatestArticlesShowcase: React.FC = () => {
               <TrendingUp className="w-5 h-5 text-purple-500" />
             </div>
             <p className="text-gray-700 font-semibold mb-2">
-              🚀 Just Published: 8 Revolutionary Articles on AI Platform Engineering, Enterprise RAG, and Quantum Computing
+              🚀 Just Published: AI Governance 2026, Edge Privacy‑Preserving Personalization, and Agent Releases 2026
             </p>
             <p className="text-gray-600 text-sm">
-              Discover cutting-edge insights on autonomous operations, edge AI implementation, and zero-trust security architectures.
+              Discover cutting-edge insights on golden paths and SLOs, autonomic incident response, and private real-time edge intelligence.
             </p>
           </div>
         </div>

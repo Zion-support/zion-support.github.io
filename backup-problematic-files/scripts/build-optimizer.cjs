@@ -6,8 +6,6 @@ const fs = require('fs')
         execSync('rm -rf .next', { "stdio"})
         execSync('rm -rf out', { "stdio"})
     execSync('npm run build', { "stdio"})
-<<<<<<< HEAD
+ HEAD
     console.error(' Build optimization "failed")
-=======
-    console.error(' Build optimization "failed")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+ 2218db61eeb0e5fed4774e6d867f5112c39ece45

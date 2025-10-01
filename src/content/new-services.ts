@@ -38,6 +38,135 @@ export interface NewService {
 
 export const newServices: NewService[] = [
   {
+    id: "ai-governance-scorecards-2026",
+    slug: "ai-governance-scorecards-2026",
+    title: "AI Governance Scorecards 2026",
+    description: "Scorecards, PR checks, and KPI‑linked canaries that prove AI program ROI while keeping teams fast.",
+    category: "AI Strategy",
+    pricing: {
+      starting: "$2,499/month",
+      popular: true,
+      features: ["Scorecard design", "CI policy tests", "Online canaries", "SLO playbooks"]
+    },
+    features: [
+      "Outcome‑linked scorecards",
+      "Lightweight PR checks",
+      "KPI‑linked online canaries",
+      "Guardrails that speed teams up",
+      "Executive dashboards",
+      "Adoption & Golden‑Path KPIs",
+      "Incident & Rollback Budgets",
+      "Compliance evidence automation"
+    ],
+    metrics: [
+      { value: "30–60%", label: "Time‑to‑Value Improvement" },
+      { value: "25–40%", label: "Cloud Waste Reduction" },
+      { value: "+15pts", label: "Developer Happiness" }
+    ],
+    testimonial: {
+      quote: "We finally have guardrails engineers adopt—and execs trust the scorecards.",
+      author: "Amira Patel",
+      company: "Northstar Platform"
+    },
+    cta: {
+      primary: "See Scorecards",
+      secondary: "Book Workshop"
+    },
+    icon: "📊",
+    featured: true,
+    tags: ["Governance", "Scorecards", "Policy", "Canaries"],
+    newBadge: true,
+    trending: true,
+    specialOffer: {
+      title: "Quarterly Pilot",
+      description: "Launch in 30 days with 3 scorecards and PR checks",
+      discount: "20%",
+      validUntil: "December 31, 2025"
+    }
+  },
+  {
+    id: "edge-llm-caching",
+    slug: "edge-llm-caching",
+    title: "Edge LLM Caching & On‑Device Inference",
+    description: "Sub‑100ms prompts with privacy by default. Ship on‑device agents, encrypted caches, and edge toolchains.",
+    category: "AI Engineering",
+    pricing: {
+      starting: "$1,999/month",
+      popular: true,
+      features: ["On‑device inference", "Encrypted caches", "Edge tool routing", "Fallback orchestration"]
+    },
+    features: [
+      "On‑device Model Execution",
+      "Encrypted Semantic Caches",
+      "Intent‑Aware Tool Routing",
+      "Offline‑First Orchestration",
+      "Latency Budgets & SLOs",
+      "Privacy‑Preserving Telemetry",
+      "Edge Rollouts & Canarying",
+      "Cross‑Vendor Model Fallbacks"
+    ],
+    metrics: [
+      { value: "<100ms", label: "Median Prompt" },
+      { value: "35%", label: "Cost Reduction" },
+      { value: "99.99%", label: "Offline Reliability" }
+    ],
+    testimonial: {
+      quote: "We hit 90ms median prompts and improved trust with on‑device execution.",
+      author: "Priya Desai",
+      company: "FinEdge"
+    },
+    cta: {
+      primary: "Enable Edge",
+      secondary: "See Architecture"
+    },
+    icon: "🚀",
+    featured: true,
+    tags: ["Edge", "LLM", "Caching", "Privacy", "Latency"],
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "ml-sbom-security",
+    slug: "ml-sbom-security",
+    title: "ML SBOMs & Secure Model Supply Chain",
+    description: "Prove and protect your AI supply chain with SBOMs, signed models, and policy‑as‑code.",
+    category: "Security",
+    pricing: {
+      starting: "$2,499/month",
+      popular: false,
+      features: ["Model SBOMs", "Signature verification", "Policy‑as‑code", "Vuln scanning"]
+    },
+    features: [
+      "Model & Dataset SBOMs",
+      "Signed Artifacts & Attestations",
+      "Policy‑as‑Code Enforcement",
+      "Dependency & Prompt Supply Scanning",
+      "Runtime Guardrails",
+      "Compliance Reporting",
+      "Key Management Integrations",
+      "CICD Gates & Release Controls"
+    ],
+    metrics: [
+      { value: "85%", label: "Risk Reduction" },
+      { value: "<1d", label: "Audit Prep" },
+      { value: "99.9%", label: "Signature Coverage" }
+    ],
+    testimonial: {
+      quote: "Security and compliance reviews now take hours instead of weeks.",
+      author: "Jon Ruiz",
+      company: "RegSecure"
+    },
+    cta: {
+      primary: "Secure Models",
+      secondary: "View Controls"
+    },
+    icon: "🔐",
+    featured: true,
+    tags: ["Security", "SBOM", "Compliance", "Policy", "Supply Chain"],
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "ai-autonomous-infrastructure-platform",
     slug: "ai-autonomous-infrastructure-platform",
     title: "AI Autonomous Infrastructure Platform",

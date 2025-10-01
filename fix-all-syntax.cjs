@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
+ HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 const { execSync } = require('child_process');
@@ -77,57 +77,15 @@ function fixFile(filePath) {
     
     if (fixed !== content) {
       fs.writeFileSync(filePath, fixed);
-=======
-=======
->>>>>>> merged-prs-20250907-203621
+ merged-prs-20250907-203621
 function fixApiFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     // Skip if file already looks good,
   if (content.includes('export default function handler') || content.includes('export default async function handler')) {
       return;
-<<<<<<< HEAD
-=======
-    }
-    // Common patterns to fix,
-  const patterns = [
-      // Empty files with just closing braces
-      /^[\s\n]*\}\s*$/,
-      // Files with just a closing brace and newline
-      /^[\s\n]*\}\n\s*$/,
-      // Files with merge conflict markers
-      /^[\s\n]*[\s\S]*?
-      // Files with incomplete syntax
-      /^[\s\n]*\}[\s\n]*res\.setHeader[\s\S]*$/,
-      // Files with just a return statement
-      /^[\s\n]*return;[\s\S]*$/,
-      // Files with incomplete function definitions
-      /^[\s\n]*if\s*\([^)]*\)\s*\{[\s\S]*\}\s*$/,
-      // Files with incomplete object definitions
-      /^[\s\n]*const\s+\w+\s*=\s*\{[\s\S]*\}\s*$/,
-    ];
-    let shouldReplace = false;
-    for (const pattern of patterns) {
-      if (pattern.test(content)) {
-        shouldReplace = true;
-        break;
-      }
-    }
-    if (shouldReplace || content.trim().length < 50) {
-      const newContent = `import { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
-    res.setHeader('Allow', ['GET']);
-    return res.status(405).end('Method Not Allowed');
-  }
-  res.status(200).json({ message: 'Endpoint working' });
-}`;
-      fs.writeFileSync(filePath, newContent);
-      console.log(`Fixed: ${filePath}`);
-      return true;
-<<<<<<< HEAD
-=======
->>>>>>> merged-prs-20250907-203621
+ HEAD
+ merged-prs-20250907-203621
     }
     // Common patterns to fix,
   const patterns = [
@@ -248,34 +206,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return false;
   }
 }
+ HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  return false;
-}
-
-function processDirectory(dir) {
-  let fixedCount = 0;
-  const files = fs.readdirSync(dir);
-
-  for (const file of files) {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-
-    if (stat.isDirectory()) {
-      fixedCount += processDirectory(filePath);
-    } else if (file.endsWith('.ts') && !file.endsWith('.d.ts')) {
-      if (fixFile(filePath)) {
-
-<<<<<<< HEAD
-  return fixedCount;
-}
-
-<<<<<<< HEAD
-main();
-=======
-=======
->>>>>>> merged-prs-20250907-203621
+ merged-prs-20250907-203621
 function walkDir(dir) {
   const files = fs.readdirSync(dir);
   for (const file of files) {
@@ -293,15 +226,9 @@ function walkDir(dir) {
 // Start from the API directory,
   walkDir('/workspace/pages/api');
 console.log('Syntax fixing complete!');
-<<<<<<< HEAD
+ HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
-=======
-console.log('Starting comprehensive syntax fixes...');
-const apiDir = '/workspace/pages/api';
-const fixedCount = processDirectory(apiDir);
-console.log(`Fixed ${fixedCount} files`);
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+ origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

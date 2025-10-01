@@ -5,9 +5,66 @@ export type InsightArticle = {
   category: string;
   date: string; // ISO date string
   readMinutes: number;
+  description?: string;
 };
 
 export const latestInsights: InsightArticle[] = [
+  {
+    id: "agent-blue-green-field-notes",
+    title: "Field Notes: Blue‑Green Releases for Agent Workflows",
+    summary: "Lessons from shipping agent updates with live traces, budgets, and fast rollbacks.",
+    category: "GenAI",
+    date: "2025-10-15",
+    readMinutes: 6,
+  },
+  {
+    id: "privacy-first-analytics-checklist-2026",
+    title: "Privacy‑First Analytics Checklist 2026",
+    summary: "Scoped IDs, field filters, and TTLs to keep insights high and risk low.",
+    category: "Observability",
+    date: "2025-10-15",
+    readMinutes: 5,
+  },
+  {
+    id: "privacy-first-flags-quickstart-2026",
+    title: "Privacy‑First Flags Quickstart 2026",
+    summary: "Roll out features globally with scoped IDs, edge filters, and health probes.",
+    category: "Architecture",
+    date: "2025-10-14",
+    readMinutes: 5,
+  },
+  {
+    id: "reliable-agent-actions-checklist-2026",
+    title: "Reliable Agent Actions: A Production Checklist",
+    summary: "Deterministic tools, sandboxing, and live traces for trustworthy automation.",
+    category: "GenAI",
+    date: "2025-10-14",
+    readMinutes: 6,
+  },
+  {
+    id: "agent-safety-budgets-2026",
+    title: "Agent Safety Budgets 2026: Ship Fast Without Surprises",
+    summary: "Budget risky actions, add PR checks, and wire rollbacks for reliable agent releases.",
+    category: "GenAI",
+    date: "2025-10-11",
+    readMinutes: 7,
+  },
+  {
+    id: "privacy-first-telemetry-2026",
+    title: "Privacy‑First Telemetry: Signal‑Rich, PII‑Safe",
+    summary: "Scoped IDs, field‑level filters, and retention policies that keep insights high and risk low.",
+    category: "Observability",
+    date: "2025-10-11",
+    readMinutes: 6,
+  },
+  {
+    id: "cost-aware-inference-routing-2026",
+    title: "Cost‑Aware Inference Routing: Quality Tiers Under Budget",
+    summary: "Dynamically route prompts across model tiers based on budgets, SLAs, and eval signals.",
+    category: "Architecture",
+    date: "2025-10-11",
+    readMinutes: 8,
+  },
   {
     id: "ai-risk-register-checklist",
     title: "AI Risk Register Checklist",
@@ -225,7 +282,7 @@ export const latestInsights: InsightArticle[] = [
     summary:
       "Instrumentation, cohorting, and experimentation tactics to consistently improve unit economics.",
     category: "Product Analytics",
-    description: "A look at on‑device models, streaming pipelines, and cost/perf trade‑offs from deployments.",
+    
     date: "2025-09-29",
     readMinutes: 7,
   },

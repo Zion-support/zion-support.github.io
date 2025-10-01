@@ -19,6 +19,125 @@ interface ContentItem {
 
 const contentItems: ContentItem[] = [
   {
+    id: 'ai-trustworthy-agents-2026',
+    title: 'Trustworthy AI Agents 2026: Safety, Compliance, and Observability',
+    excerpt: 'Deploy trustworthy AI agents with guardrails, approvals, and end-to-end observability.',
+    type: 'article',
+    readTime: '11 min read',
+    category: 'Autonomous AI',
+    href: '/blog/ai-trustworthy-agents-2026',
+    featured: true,
+    publishedDate: '2025-09-29',
+    metrics: [
+      { value: '0.3%', label: 'Policy Violations' },
+      { value: '99.7%', label: 'On-policy Actions' }
+    ]
+  },
+  {
+    id: 'genai-guardrails-2025',
+    title: 'GenAI Guardrails 2025: Practical Playbook for Reliable AI',
+    excerpt: 'Concrete patterns to ship safe, reliable, auditable GenAI systems in production.',
+    type: 'article',
+    readTime: '11 min read',
+    category: 'AI Reliability',
+    href: '/blog/genai-guardrails-2025',
+    featured: true,
+    publishedDate: '2025-09-29',
+    metrics: [
+      { value: '24x7', label: 'Monitoring' },
+      { value: '70%', label: 'Risk Reduction' }
+    ]
+  },
+  {
+    id: 'edge-llm-latency-patterns',
+    title: 'Edge LLM Latency Patterns: Sub-200ms Interactions',
+    excerpt: 'Streaming, prefetch, and edge compute patterns to deliver instant-feel AI UX.',
+    type: 'article',
+    readTime: '7 min read',
+    category: 'Performance',
+    href: '/blog/edge-llm-latency-patterns',
+    featured: true,
+    publishedDate: '2025-09-29',
+    metrics: [
+      { value: '<200ms', label: 'P95 Latency' },
+      { value: '99.9%', label: 'Uptime' }
+    ]
+  },
+  {
+    id: 'ai-autonomous-infrastructure-2025',
+    title: 'AI Autonomous Infrastructure 2025: Self-Healing Systems',
+    excerpt: 'Revolutionize enterprise IT with self-healing systems and predictive maintenance.',
+    type: 'article',
+    readTime: '15 min read',
+    category: 'Autonomous AI',
+    href: '/blog/ai-autonomous-infrastructure-2025',
+    featured: false,
+    publishedDate: '2025-01-20'
+  },
+  {
+    id: 'ai-value-stream-analytics-2026',
+    title: 'AI Value Stream Analytics 2026: Trace ROI from Token to Revenue',
+    excerpt: 'Tie AI cost, latency, and quality to business value with end-to-end tracing.',
+    type: 'article',
+    readTime: '9 min read',
+    category: 'Analytics',
+    href: '/blog/ai-value-stream-analytics-2026',
+    featured: true,
+    publishedDate: '2025-09-29',
+    metrics: [
+      { value: '$/win', label: 'Cost per Outcome' },
+      { value: '<200ms', label: 'P95 Latency' }
+    ]
+  },
+  {
+    id: 'ai-reliable-rag-2025',
+    title: 'Reliable RAG 2025: Production Patterns for Grounded Answers',
+    excerpt: 'Reduce hallucinations and latency with hardened RAG patterns: contracts, caching, routing, and evals.',
+    type: 'article',
+    readTime: '9 min read',
+    category: 'AI Platforms',
+    href: '/blog/ai-reliable-rag-2025',
+    featured: true,
+    publishedDate: '2025-09-29',
+    metrics: [
+      { value: '30–70%', label: 'Cost Reduction' },
+      { value: '<200ms', label: 'P95 Latency' }
+    ]
+  },
+  {
+    id: 'platform-engineering-scorecards-2026',
+    title: 'Platform Engineering Scorecards 2026: Measurable DevEx & Reliability',
+    excerpt: 'Define and track platform scorecards: golden paths, SLO coverage, lead time, and cost per unit.',
+    type: 'article',
+    readTime: '10 min read',
+    category: 'Strategy',
+    href: '/blog/platform-engineering-scorecards-2026',
+    featured: true,
+    publishedDate: '2025-09-29'
+  },
+  {
+    id: 'ai-roadmaps-2026',
+    title: 'AI Roadmaps 2026: What to Build Next and Why',
+    excerpt: 'A pragmatic roadmap for 2026 across CX, ops, and platforms with high-ROI bets.',
+    type: 'article',
+    readTime: '10 min read',
+    category: 'Strategy',
+    href: '/blog/ai-roadmaps-2026',
+    featured: true,
+    publishedDate: '2025-09-29'
+  },
+  {
+    id: 'ai-finops-scorecards-2025',
+    title: 'AI FinOps Scorecards 2025: Control LLM Spend',
+    excerpt: 'Cut LLM costs 30–70% with scorecards, routing, caching, and prompt budgets.',
+    type: 'article',
+    readTime: '8 min read',
+    category: 'FinOps',
+    href: '/blog/ai-finops-scorecards-2025',
+    featured: true,
+    publishedDate: '2025-09-29'
+  },
+  {
     id: 'ai-governance-framework-2025',
     title: 'AI Governance Framework 2025: Enterprise-Ready Implementation Guide',
     excerpt: 'Master AI governance with our comprehensive framework covering risk management, compliance, and ethical deployment strategies.',
@@ -27,7 +146,7 @@ const contentItems: ContentItem[] = [
     category: 'AI Governance',
     href: '/blog/ai-governance-framework-2025',
     featured: true,
-    publishedDate: '2025-01-20',
+    publishedDate: '2025-01-25',
     metrics: [
       { value: '70%', label: 'Risk Reduction' },
       { value: '12', label: 'Framework Areas' }
@@ -56,7 +175,7 @@ const contentItems: ContentItem[] = [
     category: 'FinTech',
     href: '/case-studies/fintech-ai-risk-compliance-2025',
     featured: true,
-    publishedDate: '2025-01-20',
+    publishedDate: '2025-01-25',
     metrics: [
       { value: '70%', label: 'Risk Reduction' },
       { value: '$2.5M', label: 'Cost Savings' }
@@ -193,6 +312,21 @@ const contentItems: ContentItem[] = [
     ]
   },
   {
+    id: 'ai-agents-in-the-enterprise-2025',
+    title: 'AI Agents in the Enterprise: 2025 Adoption Playbook',
+    excerpt: 'A practical playbook for deploying autonomous AI agents across revenue ops and IT with measurable ROI.',
+    type: 'article',
+    readTime: '10 min read',
+    category: 'Autonomous AI',
+    href: '/blog/ai-agents-in-the-enterprise-2025',
+    featured: true,
+    publishedDate: '2025-09-29',
+    metrics: [
+      { value: '3x', label: 'Pipeline Lift' },
+      { value: '60%', label: 'Ticket Deflection' }
+    ]
+  },
+  {
     id: 'ai-healthcare-transformation-2025',
     title: 'AI Healthcare Transformation Guide',
     excerpt: 'How AI is revolutionizing patient care with 40% better diagnostics and 60% improved outcomes.',
@@ -315,14 +449,15 @@ export default function ContentShowcase({
         {/* Content Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {displayedItems.map((item, index) => (
-            <ContentCard
-              key={item.id}
-              item={item}
-              isActive={index === currentIndex}
-              showMetrics={showMetrics}
-              getTypeColor={getTypeColor}
-              getTypeIcon={getTypeIcon}
-            />
+            <div key={item.id}>
+              <ContentCard
+                item={item}
+                isActive={index === currentIndex}
+                showMetrics={showMetrics}
+                getTypeColor={getTypeColor}
+                getTypeIcon={getTypeIcon}
+              />
+            </div>
           ))}
         </div>
 
@@ -350,6 +485,12 @@ export default function ContentShowcase({
               className="inline-block bg-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-700 transition-colors shadow-lg hover:shadow-xl"
             >
               View All Content
+            </Link>
+            <Link
+              href="/blog/ai-agents-in-the-enterprise-2025"
+              className="inline-block border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-600 hover:text-white transition-colors"
+            >
+              Read: AI Agents Playbook
             </Link>
             <Link
               href="/case-studies"

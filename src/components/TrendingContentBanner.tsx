@@ -18,43 +18,53 @@ const TrendingContentBanner: React.FC = () => {
 
   const trendingItems = [
     {
-      title: "AI Platform ROI Scorecards",
-      description: "Outcome metrics that drive investment decisions",
-      views: "9.1K",
-      readTime: "7 min",
-      category: "AI Strategy",
-      icon: TrendingUp,
-      link: "/blog/ai-platform-roi-scorecards-2025",
-      badge: "NEW"
-    },
-    {
-      title: "Secure ML Supply Chain",
-      description: "SBOMs, attestations, and policy gates",
-      views: "10.4K",
-      readTime: "8 min",
-      category: "Security",
-      icon: Shield,
-      link: "/blog/secure-ml-supply-chain-attestations-2025",
-      badge: "TRENDING"
-    },
-    {
-      title: "Enterprise RAG Blueprint v2",
-      description: "Freshness, hybrid search, and evals",
-      views: "7.9K",
+      title: "AI Autonomous Infrastructure 2026",
+      description: "Self‑healing, self‑optimizing, self‑scaling platforms with budgets.",
+      views: "12.4K",
       readTime: "9 min",
-      category: "GenAI",
-      icon: Brain,
-      link: "/blog/enterprise-rag-blueprint-v2-2025",
+      category: "Platform Engineering",
+      icon: TrendingUp,
+      link: "/blog/ai-autonomous-infrastructure-2026",
       badge: "HOT"
     },
     {
-      title: "Serverless Inference Cost Playbook",
-      description: "40–70% savings without P95 pain",
-      views: "12.1K",
+      title: "Zero‑Trust for GenAI 2026",
+      description: "Prompt firewalls, egress, signed outputs for safe GenAI.",
+      views: "11.8K",
+      readTime: "8 min",
+      category: "Security",
+      icon: Shield,
+      link: "/blog/zero-trust-for-genai-2026",
+      badge: "NEW"
+    },
+    {
+      title: "Zero‑Trust for GenAI 2026",
+      description: "Prompt firewalls, egress controls, and signed outputs at scale.",
+      views: "10.9K",
       readTime: "7 min",
-      category: "GenAI",
+      category: "Security",
+      icon: Shield,
+      link: "/blog/zero-trust-for-genai-2026",
+      badge: "TRENDING"
+    },
+    {
+      title: "Quantum‑AI Hybrid Blueprint 2026",
+      description: "Near‑term wins by combining QC libs with AI orchestration.",
+      views: "9.1K",
+      readTime: "8 min",
+      category: "Quantum",
+      icon: Brain,
+      link: "/blog/quantum-ai-hybrid-blueprint-2026",
+      badge: "NEW"
+    },
+    {
+      title: "Edge LLM Caching Blueprint 2026",
+      description: "Sub‑100ms prompts via tiered caches and freshness windows.",
+      views: "8.9K",
+      readTime: "6 min",
+      category: "Architecture",
       icon: Zap,
-      link: "/blog/serverless-inference-cost-playbook-2025",
+      link: "/blog/edge-llm-caching-blueprint-2026",
       badge: "POPULAR"
     }
   ];

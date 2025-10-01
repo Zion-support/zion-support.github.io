@@ -33,32 +33,53 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
 
   const featuredContent = [
     {
-      title: "AI Platform ROI Scorecards",
-      description: "Outcome metrics and adoption signals that drive decisions",
-      icon: TrendingUp,
-      link: "/blog/ai-platform-roi-scorecards-2025",
-      category: "AI Strategy"
+      title: "Cost‑Aware Inference 2026",
+      description: "Warm pools and quality tiers under SLAs",
+      icon: Zap,
+      link: "/blog/ai-cost-aware-inference-2026",
+      category: "GenAI"
     },
     {
-      title: "Secure ML Supply Chain",
-      description: "SBOMs, attestations, and policy gates that scale",
+      title: "Production RAG Ops 2026",
+      description: "Freshness windows and drift guards",
+      icon: Cloud,
+      link: "/blog/production-rag-ops-2026",
+      category: "GenAI"
+    },
+    {
+      title: "Secure ML Supply Chain 2026",
+      description: "SBOMs, lineage, and CI policy gates",
       icon: Shield,
-      link: "/blog/secure-ml-supply-chain-attestations-2025",
+      link: "/blog/ai-secure-ml-supply-chain-2026",
       category: "Security"
     },
     {
-      title: "Enterprise RAG Blueprint v2",
-      description: "Freshness, hybrid search, and evaluation at scale",
-      icon: Brain,
-      link: "/blog/enterprise-rag-blueprint-v2-2025",
-      category: "GenAI"
+      title: "Zero‑Trust for GenAI 2026",
+      description: "Prompt firewalls, egress, signed outputs",
+      icon: Shield,
+      link: "/blog/zero-trust-for-genai-2026",
+      category: "Security"
     },
     {
-      title: "Serverless Inference Cost Playbook",
-      description: "Cut 40–70% without P95 pain",
+      title: "GenAI Routing Under Budgets",
+      description: "Quality tiers without bill shock",
       icon: Zap,
-      link: "/blog/serverless-inference-cost-playbook-2025",
-      category: "GenAI"
+      link: "/blog/genai-routing-under-budgets-2026",
+      category: "AI Ops"
+    },
+    {
+      title: "Golden Paths that Move KPIs",
+      description: "Platform engineering that pays",
+      icon: TrendingUp,
+      link: "/blog/platform-golden-paths-kpis-2026",
+      category: "Platform"
+    },
+    {
+      title: "On‑Device Agents 2026",
+      description: "Private assistants with offline tools",
+      icon: Brain,
+      link: "/blog/on-device-agents-2026",
+      category: "Edge"
     }
   ];
 
@@ -83,12 +104,12 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
             </div>
             
             <h3 className="text-xl font-bold mb-2">
-              Just Published: Revolutionary AI & Technology Guides for 2025
+              Just Published: New Guides for 2026
             </h3>
             
             <p className="text-white/90 mb-4 text-sm">
-              Discover fresh insights on platform ROI, secure ML supply chains, updated RAG blueprints,
-              and cost‑efficient serverless inference.
+              Discover fresh insights on on‑device agents, GenAI cost controls, secure tool marketplaces,
+              and privacy‑first observability.
             </p>
 
             {/* Featured content grid */}
@@ -145,13 +166,13 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
             </div>
 
             {/* Stats */}
-              <div className="flex items-center gap-6 mt-4 text-sm text-white/80">
+            <div className="flex items-center gap-6 mt-4 text-sm text-white/80">
               <div className="flex items-center gap-1">
-                <span className="font-semibold">4</span>
+                <span className="font-semibold">13</span>
                 <span>New Articles</span>
               </div>
               <div className="flex items-center gap-1">
-                <span className="font-semibold">0</span>
+                <span className="font-semibold">3</span>
                 <span>New Case Studies</span>
               </div>
               <div className="flex items-center gap-1">

@@ -26,18 +26,26 @@ export default function BlogPage() {
                 Featured Article
               </span>
               <h2 className="text-3xl font-bold mb-4">
-                The Future of AI in Business: 2025 Trends and Predictions
+                AI Autonomous Infrastructure 2025: Self-Healing Systems for Enterprise IT
               </h2>
               <p className="text-lg opacity-90 mb-6">
-                Explore the latest AI trends shaping business operations, from autonomous workflows 
-                to predictive analytics, and discover how companies are gaining competitive advantages.
+                Discover how autonomous AI infrastructure is revolutionizing enterprise IT with self-healing systems, 
+                predictive maintenance, and intelligent automation that reduces downtime by 90%.
               </p>
               <div className="flex items-center gap-4 text-sm">
-                <span>January 17, 2025</span>
+                <span>January 20, 2025</span>
                 <span>•</span>
-                <span>8 min read</span>
+                <span>15 min read</span>
                 <span>•</span>
-                <span>AI Trends</span>
+                <span>Autonomous AI</span>
+              </div>
+              <div className="mt-6">
+                <a 
+                  href="/blog/ai-autonomous-infrastructure-2025" 
+                  className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block"
+                >
+                  Read Full Article →
+                </a>
               </div>
             </div>
           </div>
@@ -45,6 +53,123 @@ export default function BlogPage() {
 
         {/* Blog Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <BlogPost
+            title="AI Agent Observability 2026: Metrics, Traces, and Guardrails"
+            excerpt="Instrument agents with traces, evals, and policy guardrails to ship reliable autonomy."
+            date="September 29, 2025"
+            category="AI Reliability"
+            readTime="12 min"
+            image="🔎"
+            href="/blog/ai-agent-observability-2026"
+          />
+          <BlogPost
+            title="Customer Journey AI 2026: Real-Time Personalization with CDPs"
+            excerpt="Event-driven CDPs + agents for next-best-action that lifts conversion 20–35%."
+            date="September 29, 2025"
+            category="Personalization"
+            readTime="14 min"
+            image="🛒"
+            href="/blog/ai-customer-journey-ai-2026"
+          />
+          <BlogPost
+            title="Agentic Workflow Orchestration 2026: Reliable AI Workflows"
+            excerpt="Orchestrate multi-step agents with guardrails, approvals, and observability for measurable ROI."
+            date="October 9, 2025"
+            category="Architecture"
+            readTime="16 min"
+            image="🧩"
+            href="/blog/agentic-workflow-orchestration-2026"
+          />
+          <BlogPost
+            title="AI Operational Excellence 2026: From SLIs to Self‑Healing Ops"
+            excerpt="Reliability scorecards, policy tests, and automated runbooks for 99.9% uptime."
+            date="October 9, 2025"
+            category="Operations"
+            readTime="14 min"
+            image="🛠️"
+            href="/blog/ai-operational-excellence-2026"
+          />
+          <BlogPost
+            title="AI Customer Data Platforms 2026: Real‑Time Personalization"
+            excerpt="Consent‑aware ingestion, identity resolution, feature stores, and edge delivery."
+            date="October 9, 2025"
+            category="Analytics"
+            readTime="18 min"
+            image="🧬"
+            href="/blog/ai-customer-data-platforms-2026"
+          />
+          <BlogPost
+            title="Platform Engineering Scorecards 2026: From Golden Paths to Outcomes"
+            excerpt="Measure adoption, golden-path TTFX, SLOs, and shipped value—without slowing delivery."
+            date="October 9, 2025"
+            category="Platform Engineering"
+            readTime="8 min"
+            image="🧭"
+            href="/blog/platform-engineering-scorecards-2026"
+          />
+          <BlogPost
+            title="AI Cybersecurity Automation: From Detections to Autonomic Response"
+            excerpt="Behavioral detections and policy tests wired to runbooks that auto-contain incidents <60s."
+            date="October 9, 2025"
+            category="Security"
+            readTime="7 min"
+            image="🛡️"
+            href="/blog/ai-cybersecurity-automation-2025"
+          />
+          <BlogPost
+            title="Edge AI Blueprint 2026: Privacy‑Preserving Intelligence <100ms"
+            excerpt="Signed configs, tiny models, and geo budgets for private, real‑time decisions."
+            date="October 9, 2025"
+            category="Edge Computing"
+            readTime="9 min"
+            image="⚡"
+            href="/blog/edge-ai-blueprint-2026"
+          />
+          <BlogPost
+            title="AI Roadmaps 2026: What to Build Next and Why"
+            excerpt="A pragmatic roadmap for 2026 across CX, ops, and platforms. High-ROI bets with sequencing and metrics."
+            date="September 29, 2025"
+            category="Strategy"
+            readTime="10 min"
+            image="🗺️"
+            href="/blog/ai-roadmaps-2026"
+          />
+          <BlogPost
+            title="Reliable RAG 2025: Production Patterns for Grounded Answers"
+            excerpt="Reduce hallucinations and latency with hardened RAG patterns: contracts, caching, routing, and evals."
+            date="September 29, 2025"
+            category="AI Platforms"
+            readTime="9 min"
+            image="📚"
+            href="/blog/ai-reliable-rag-2025"
+          />
+          <BlogPost
+            title="AI Agent Safety Blueprint 2026: Guardrails for Reliable Autonomy"
+            excerpt="Blueprint for safe autonomous agents with policy gates, audits, and progressive autonomy."
+            date="September 29, 2025"
+            category="AI Reliability"
+            readTime="9 min"
+            image="🛡️"
+            href="/blog/ai-agent-safety-blueprint-2026"
+          />
+          <BlogPost
+            title="AI FinOps Scorecards 2025: Control LLM Spend Without Slowing Teams"
+            excerpt="Practical scorecards and controls to cut LLM costs 30–70% with team-friendly governance."
+            date="September 29, 2025"
+            category="FinOps"
+            readTime="8 min"
+            image="📉"
+            href="/blog/ai-finops-scorecards-2025"
+          />
+          <BlogPost
+            title="AI Go-To-Market 2025: Proven Plays for Fast Adoption"
+            excerpt="Practical GTM playbook for AI products: positioning, enterprise readiness, and repeatable pipeline plays."
+            date="September 29, 2025"
+            category="Growth"
+            readTime="8 min"
+            image="📣"
+            href="/blog/ai-go-to-market-2025"
+          />
           <BlogPost
             title="AI Risk Register: Practical Framework for Managing AI Risks"
             excerpt="Production-ready risk register across model, data, privacy, security, and ops with monitoring."
@@ -117,8 +242,17 @@ export default function BlogPage() {
             date="September 29, 2025"
             category="AI Reliability"
             readTime="11 min"
-            image="🛡️"
+            image="🧰"
             href="/blog/genai-guardrails-2025"
+          />
+          <BlogPost
+            title="GenAI Guardrails 2025: Practical Playbook for Reliable AI"
+            excerpt="Concrete patterns to make generative AI systems safe, reliable, and auditable in production."
+            date="September 29, 2025"
+            category="AI Reliability"
+            readTime="11 min"
+            image="🛡️"
+            href="/blog/ai-agents-in-the-enterprise-2025"
           />
           <BlogPost
             title="AI Agents in the Enterprise: 2025 Adoption Playbook"
@@ -202,6 +336,26 @@ export default function BlogPage() {
             readTime="5 min"
             image="💬"
             href="/blog/ai-virtual-assistants-customer-service"
+          />
+          <BlogPost
+            title="Enterprise AI Implementation 2025: Complete Guide"
+            excerpt="Master enterprise AI implementation with proven strategies, best practices, and real-world case studies. Transform your organization with AI that delivers measurable ROI."
+            date="January 20, 2025"
+            category="Featured"
+            readTime="18 min"
+            image="🏢"
+            featured={true}
+            href="/blog/ai-enterprise-implementation-2025"
+          />
+          <BlogPost
+            title="MLOps Best Practices 2025: Production-Ready ML Systems"
+            excerpt="Master MLOps with proven strategies for building, deploying, and maintaining production-ready ML systems. Learn from real-world implementations and industry best practices."
+            date="January 20, 2025"
+            category="MLOps"
+            readTime="16 min"
+            image="🔧"
+            featured={true}
+            href="/blog/ai-mlops-best-practices-2025"
           />
         </div>
 

@@ -1,7 +1,5 @@
-<<<<<<< HEAD
-// Mock test for profile page
-describe("Profile Page", () => {
-  it("should render without crashing", () => {
-    expect(true).toBe(true);
+describe('profile page placeholder', () => {
+  it('passes', () => {
+    expect(1 + 1).toBe(2);
   });
 });
