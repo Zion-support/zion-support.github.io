@@ -8,15 +8,17 @@ import {
   Sparkles,
   Star,
   Target,
+  Users,
+  Zap,
 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import AdvertisingBanner from "../components/AdvertisingBanner";
 import EnhancedTestimonials from "../components/EnhancedTestimonials";
 import Header from "../components/Header";
 import ModernFeatures from "../components/ModernFeatures";
 import LatestInsights from "../components/LatestInsights";
 import { latestInsights } from "../content/insights";
-import { Users, Zap } from "lucide-react";
 
 const Home = () => {
   return (
@@ -92,87 +94,50 @@ const Home = () => {
               and next-generation cloud infrastructure. Join 500+ companies already scaling with us!
             </p>
 
-            {/* NEWEST CONTENT - AUTONOMOUS AI TESTING - OCTOBER 2025 */}
-            <div className="bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-400/30 rounded-xl p-6 mb-6 animate-fade-in">
+            {/* NEW CONTENT ANNOUNCEMENT - OCTOBER 1, 2025 */}
+            <div className="bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border-2 border-emerald-400/50 rounded-xl p-6 mb-6 animate-fade-in shadow-2xl">
               <div className="flex items-center justify-center gap-3 mb-3">
                 <Rocket className="w-6 h-6 text-emerald-400 animate-bounce" />
-                <span className="text-lg font-bold text-emerald-400">🔥 BREAKING: AUTONOMOUS AI TESTING - OCTOBER 2025</span>
+                <span className="text-xl font-bold text-emerald-300">🚀 BREAKING: OCTOBER 1, 2025 - MAJOR RELEASE!</span>
                 <Rocket className="w-6 h-6 text-emerald-400 animate-bounce" />
               </div>
               <p className="text-white text-2xl font-bold mb-3">
-                Zero-Touch Quality Assurance: $850M Value Creation Proven!
+                Revolutionary New Content: Multimodal AI, Intelligent Automation & Real-World Success
               </p>
-              <p className="text-emerald-100 text-lg mb-4">
-                Fortune 100 company achieves 99.7% defect detection with autonomous AI testing agents. 
-                Transform your QA from weeks to hours with self-healing tests and cognitive defect detection.
-              </p>
-              <div className="grid md:grid-cols-4 gap-4 text-sm text-emerald-50 mb-4">
+              <div className="grid md:grid-cols-4 gap-3 text-sm text-emerald-100 mb-4">
                 <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-emerald-400" />
-                  <span className="font-semibold">$850M Annual Value</span>
+                  <CheckCircle className="w-5 h-5 text-emerald-400" />
+                  <span className="font-semibold">Multimodal AI Breakthrough</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-emerald-400" />
-                  <span className="font-semibold">99.7% Defect Detection</span>
+                  <CheckCircle className="w-5 h-5 text-emerald-400" />
+                  <span className="font-semibold">Intelligent Automation Platform</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-emerald-400" />
-                  <span className="font-semibold">95% Faster Testing</span>
+                  <CheckCircle className="w-5 h-5 text-emerald-400" />
+                  <span className="font-semibold">$89M Bank Success Story</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-emerald-400" />
-                  <span className="font-semibold">14,000%+ ROI</span>
+                  <CheckCircle className="w-5 h-5 text-emerald-400" />
+                  <span className="font-semibold">Enterprise Automation Suite</span>
                 </div>
               </div>
-              <div className="flex flex-wrap gap-3 justify-center">
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link
-                  to="/blog/ai-2025-oct-autonomous-testing-revolution"
+                  to="/blog/ai-2025-oct-01-multimodal-enterprise-breakthrough"
                   className="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
-                  Read Technical Deep-Dive
+                  Read Multimodal AI Guide
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link
-                  to="/case-studies/ai-2025-oct-fortune-100-autonomous-testing-850m-success"
+                  to="/case-studies/global-bank-automation-success-2025"
                   className="inline-flex items-center gap-2 bg-teal-500 hover:bg-teal-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
-                  View $850M Success Story
+                  View $89M Case Study
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
-            </div>
-
-            {/* NEW CONTENT ANNOUNCEMENT */}
-            <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-xl p-6 mb-6 animate-fade-in">
-              <div className="flex items-center justify-center gap-3 mb-3">
-                <Rocket className="w-6 h-6 text-purple-400 animate-bounce" />
-                <span className="text-lg font-bold text-purple-400">🔥 JUST RELEASED - OCTOBER 2025</span>
-                <Rocket className="w-6 h-6 text-purple-400 animate-bounce" />
-              </div>
-              <p className="text-white text-xl font-bold mb-3">
-                Enterprise AI Platform Revolution + Intelligent Automation Breakthrough
-              </p>
-              <div className="grid md:grid-cols-3 gap-4 text-sm text-zion-slate-light mb-4">
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>$500M Value Created in 90 Days</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>40-60% Cost Reduction</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>300-500% ROI in Year 1</span>
-                </div>
-              </div>
-              <Link
-                to="/blog"
-                className="inline-flex items-center gap-2 bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
-              >
-                Read the Latest Breakthroughs
-                <ArrowRight className="w-4 h-4" />
-              </Link>
             </div>
 
             {/* Special Promotion Banner */}
@@ -237,97 +202,113 @@ const Home = () => {
           </div>
         </section>
 
-        {/* NEW CONTENT HIGHLIGHT SECTION */}
+        {/* NEW CONTENT HIGHLIGHT SECTION - OCTOBER 1, 2025 */}
         <section className="container mx-auto px-6 py-16 relative z-10">
-          <div className="bg-gradient-to-br from-emerald-900/40 via-teal-900/30 to-cyan-900/40 rounded-2xl border-2 border-emerald-400/50 p-8 md:p-12 shadow-2xl">
+          <div className="bg-gradient-to-br from-emerald-900/50 via-teal-900/40 to-cyan-900/50 rounded-2xl border-2 border-emerald-300/60 p-8 md:p-12 shadow-2xl">
             <div className="flex items-center gap-3 mb-6">
-              <span className="inline-flex h-3 w-3 rounded-full bg-emerald-400 animate-pulse"></span>
-              <span className="text-emerald-400 font-bold text-lg uppercase tracking-wider">🔥 Just Published - October 2025</span>
+              <span className="inline-flex h-4 w-4 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span className="text-emerald-300 font-bold text-xl uppercase tracking-wider">🎉 OCTOBER 1, 2025 - REVOLUTIONARY NEW CONTENT!</span>
             </div>
             
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              New Cutting-Edge AI Resources Available Now
+              Transform Your Enterprise with Our Latest AI Breakthroughs
             </h2>
             
-            <p className="text-xl text-emerald-100 mb-8 max-w-3xl">
-              Discover our latest insights, services, and success stories from the frontlines of AI innovation.
+            <p className="text-xl text-emerald-50 mb-8 max-w-3xl">
+              From multimodal AI achieving 95%+ accuracy to intelligent automation delivering $89M savings - 
+              explore cutting-edge solutions and proven success stories.
             </p>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-              {/* FEATURED: Autonomous Testing Blog Post */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border-2 border-emerald-400/60 hover:border-emerald-400/80 transition-all hover:scale-105 hover:shadow-xl relative">
-                <div className="absolute -top-3 -right-3 bg-emerald-500 text-white text-xs font-bold px-3 py-1 rounded-full animate-pulse">
-                  HOT 🔥
-                </div>
-                <div className="text-emerald-400 text-sm font-semibold mb-2 uppercase">📝 Technical Guide</div>
-                <h3 className="text-lg font-bold text-white mb-3">Autonomous AI Testing Revolution</h3>
-                <p className="text-emerald-100 text-sm mb-4">Zero-touch QA with 99.7% defect detection. Complete implementation guide with Fortune 500 results</p>
+              {/* Multimodal AI Guide */}
+              <div className="bg-gradient-to-br from-emerald-500/20 to-teal-500/20 backdrop-blur-sm rounded-xl p-6 border-2 border-emerald-400/50 hover:border-emerald-300/80 transition-all hover:scale-105 hover:shadow-2xl">
+                <div className="text-emerald-300 text-sm font-bold mb-2 uppercase">🧠 NEW: Technical Guide</div>
+                <h3 className="text-xl font-bold text-white mb-3">Multimodal AI Breakthrough</h3>
+                <p className="text-emerald-50 text-sm mb-4 leading-relaxed">
+                  Vision + Language + Audio fusion achieving 95% accuracy. 300% productivity gains and $180M+ value creation.
+                </p>
                 <Link 
-                  to="/blog/ai-2025-oct-autonomous-testing-revolution" 
-                  className="inline-flex items-center text-emerald-300 hover:text-white font-semibold text-sm"
+                  to="/blog/ai-2025-oct-01-multimodal-enterprise-breakthrough" 
+                  className="inline-flex items-center text-emerald-200 hover:text-white font-bold text-sm bg-emerald-600/30 hover:bg-emerald-600/50 px-4 py-2 rounded-lg transition-all"
                 >
-                  Read Now <ArrowRight className="w-4 h-4 ml-1" />
+                  Read 14-Min Guide <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
               </div>
 
-              {/* FEATURED: $850M Case Study */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border-2 border-teal-400/60 hover:border-teal-400/80 transition-all hover:scale-105 hover:shadow-xl relative">
-                <div className="absolute -top-3 -right-3 bg-teal-500 text-white text-xs font-bold px-3 py-1 rounded-full animate-pulse">
-                  NEW 💎
-                </div>
-                <div className="text-teal-400 text-sm font-semibold mb-2 uppercase">💼 Success Story</div>
-                <h3 className="text-lg font-bold text-white mb-3">$850M Fortune 100 Testing Win</h3>
-                <p className="text-teal-100 text-sm mb-4">How autonomous AI testing delivered 14,000%+ ROI with 2.6-day payback period</p>
+              {/* Intelligent Automation Platform */}
+              <div className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 backdrop-blur-sm rounded-xl p-6 border-2 border-cyan-400/50 hover:border-cyan-300/80 transition-all hover:scale-105 hover:shadow-2xl">
+                <div className="text-cyan-300 text-sm font-bold mb-2 uppercase">⚙️ NEW: Platform Overview</div>
+                <h3 className="text-xl font-bold text-white mb-3">Intelligent Automation</h3>
+                <p className="text-cyan-50 text-sm mb-4 leading-relaxed">
+                  End-to-end automation achieving 90% reduction in manual tasks. $127M+ avg savings with 99.8% accuracy.
+                </p>
                 <Link 
-                  to="/case-studies/ai-2025-oct-fortune-100-autonomous-testing-850m-success" 
-                  className="inline-flex items-center text-teal-300 hover:text-white font-semibold text-sm"
+                  to="/blog/ai-2025-oct-01-intelligent-automation-platform" 
+                  className="inline-flex items-center text-cyan-200 hover:text-white font-bold text-sm bg-cyan-600/30 hover:bg-cyan-600/50 px-4 py-2 rounded-lg transition-all"
                 >
-                  View Results <ArrowRight className="w-4 h-4 ml-1" />
+                  Explore Platform <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
               </div>
 
-              {/* New Service: Autonomous Testing */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border-2 border-cyan-400/60 hover:border-cyan-400/80 transition-all hover:scale-105 hover:shadow-xl relative">
-                <div className="absolute -top-3 -right-3 bg-cyan-500 text-white text-xs font-bold px-3 py-1 rounded-full animate-pulse">
-                  LAUNCH 🚀
-                </div>
-                <div className="text-cyan-400 text-sm font-semibold mb-2 uppercase">🚀 Service Launch</div>
-                <h3 className="text-lg font-bold text-white mb-3">Autonomous Testing Services</h3>
-                <p className="text-cyan-100 text-sm mb-4">Enterprise AI testing platform. 30-day pilot with money-back guarantee. Starting $500K/year</p>
+              {/* Case Study */}
+              <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 backdrop-blur-sm rounded-xl p-6 border-2 border-purple-400/50 hover:border-purple-300/80 transition-all hover:scale-105 hover:shadow-2xl">
+                <div className="text-purple-300 text-sm font-bold mb-2 uppercase">💰 NEW: Success Story</div>
+                <h3 className="text-xl font-bold text-white mb-3">$89M Bank Transformation</h3>
+                <p className="text-purple-50 text-sm mb-4 leading-relaxed">
+                  Global bank achieves 87% automation, 99.7% accuracy, and ROI of 2,340% in just 6 months.
+                </p>
                 <Link 
-                  to="/services/autonomous-ai-testing-services" 
-                  className="inline-flex items-center text-cyan-300 hover:text-white font-semibold text-sm"
+                  to="/case-studies/global-bank-automation-success-2025" 
+                  className="inline-flex items-center text-purple-200 hover:text-white font-bold text-sm bg-purple-600/30 hover:bg-purple-600/50 px-4 py-2 rounded-lg transition-all"
                 >
-                  Explore Service <ArrowRight className="w-4 h-4 ml-1" />
+                  View Case Study <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
               </div>
 
-              {/* Blog Post 2 */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30 hover:border-blue-400/60 transition-all hover:scale-105 hover:shadow-xl">
-                <div className="text-blue-400 text-sm font-semibold mb-2 uppercase">📊 Strategy</div>
-                <h3 className="text-lg font-bold text-white mb-3">North Star Metrics Framework</h3>
-                <p className="text-blue-100 text-sm mb-4">Measure AI product success with proven metrics used by leading companies</p>
+              {/* Enterprise Service */}
+              <div className="bg-gradient-to-br from-blue-500/20 to-indigo-500/20 backdrop-blur-sm rounded-xl p-6 border-2 border-blue-400/50 hover:border-blue-300/80 transition-all hover:scale-105 hover:shadow-2xl">
+                <div className="text-blue-300 text-sm font-bold mb-2 uppercase">🚀 NEW: Service Launch</div>
+                <h3 className="text-xl font-bold text-white mb-3">Enterprise Automation Suite</h3>
+                <p className="text-blue-50 text-sm mb-4 leading-relaxed">
+                  Complete automation platform with process mining, workflow orchestration, and AI decision-making.
+                </p>
                 <Link 
-                  to="/blog/ai-2025-oct-northstar-metrics-ai-product-success" 
-                  className="inline-flex items-center text-blue-300 hover:text-white font-semibold text-sm"
+                  to="/services/enterprise-ai-automation-suite" 
+                  className="inline-flex items-center text-blue-200 hover:text-white font-bold text-sm bg-blue-600/30 hover:bg-blue-600/50 px-4 py-2 rounded-lg transition-all"
                 >
-                  Learn More <ArrowRight className="w-4 h-4 ml-1" />
+                  View Service <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 items-center">
+            <div className="bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-400/40 rounded-xl p-5 mb-6">
+              <div className="flex items-center gap-3 mb-2">
+                <Award className="w-6 h-6 text-yellow-400" />
+                <span className="text-yellow-300 font-bold text-lg">LIMITED TIME OFFER - OCTOBER 2025</span>
+              </div>
+              <p className="text-white text-base mb-2">
+                🎁 <strong>50% OFF</strong> implementation + <strong>FREE 90-day trial</strong> of Enterprise Automation Suite
+              </p>
+              <p className="text-yellow-100 text-sm">
+                First 20 enterprises only • Includes free ROI assessment & white-glove onboarding • Expires Oct 31, 2025
+              </p>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
               <Link 
                 to="/blog" 
-                className="btn-primary flex items-center gap-2"
+                className="btn-primary flex items-center gap-2 text-lg px-8 py-4"
               >
-                <Sparkles className="w-5 h-5" />
-                View All New Content
+                <Sparkles className="w-6 h-6" />
+                Explore All New Content
                 <ArrowRight className="w-5 h-5" />
               </Link>
-              <div className="text-emerald-200 text-sm">
-                <span className="font-bold">3 Months FREE</span> on Edge AI Platform ends Oct 31st
-              </div>
+              <Link 
+                to="/contact" 
+                className="bg-white hover:bg-gray-100 text-blue-900 px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 hover:scale-105 shadow-xl"
+              >
+                Get Free Consultation
+              </Link>
             </div>
           </div>
         </section>
