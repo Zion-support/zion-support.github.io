@@ -1,97 +1,185 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Rocket, TrendingUp, Award, Sparkles, BookOpen, Building2 } from 'lucide-react';
 
-export default function October2025NewContentMegaShowcaseBanner() {
+const October2025NewContentMegaShowcaseBanner = () => {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-blue-900 py-20">
-      <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:20px_20px]" />
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
-      
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 rounded-full text-yellow-300 text-sm font-bold mb-6 animate-pulse">
-            🎉 MEGA LAUNCH: OCTOBER 1, 2025 - THREE REVOLUTIONARY AI BREAKTHROUGHS 🎉
+    <div className="bg-gradient-to-r from-rose-900 via-pink-900 to-fuchsia-900 text-white py-20 px-6 rounded-2xl shadow-2xl mb-8 border-4 border-rose-500 animate-pulse-slow">
+      <div className="max-w-7xl mx-auto">
+        {/* Header Badge */}
+        <div className="flex justify-center mb-6">
+          <div className="bg-yellow-400 text-rose-900 px-8 py-3 rounded-full font-black text-lg uppercase tracking-wide shadow-lg animate-bounce">
+            🎉 NEW CONTENT JUST RELEASED! 🎉
           </div>
-          <h2 className="text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 mb-6">
-            The Future of Enterprise AI is Here
-          </h2>
-          <p className="text-2xl text-blue-200 mb-8 max-w-4xl mx-auto">
-            Three groundbreaking technologies delivering $27.3B in combined enterprise value • 
-            99.97%+ accuracy across all platforms • ROI of 2,840% to 4,200%
-          </p>
         </div>
 
+        {/* Main Headline */}
+        <h1 className="text-6xl md:text-8xl font-black text-center mb-6 leading-tight">
+          <span className="bg-gradient-to-r from-yellow-200 via-pink-200 to-purple-200 text-transparent bg-clip-text">
+            Revolutionary Content
+          </span>
+          <br />
+          <span className="text-white">Just Published!</span>
+        </h1>
+
+        {/* Subheadline */}
+        <p className="text-3xl md:text-4xl text-center mb-10 text-rose-200 font-bold">
+          Breakthrough Multi-Agent Orchestration • $27.9B Total Value
+        </p>
+
+        {/* Content Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-12">
-          {/* Card 1 */}
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105">
-            <div className="text-4xl mb-4">🧠</div>
-            <h3 className="text-2xl font-bold text-white mb-3">Autonomous Cognitive Intelligence</h3>
-            <div className="space-y-2 mb-6 text-gray-300">
-              <p>✓ 99.98% Accuracy</p>
-              <p>✓ $8.4B Value Created</p>
-              <p>✓ 2,840% ROI</p>
-              <p>✓ Zero-Downtime Operations</p>
+          {/* Blog Post */}
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border-3 border-yellow-400 transform hover:scale-105 transition-all">
+            <div className="flex justify-center mb-4">
+              <BookOpen className="w-16 h-16 text-yellow-300" />
             </div>
-            <Link
-              to="/blog/ai-2025-october-autonomous-cognitive-intelligence-platform"
-              className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold"
+            <h3 className="text-2xl font-black text-yellow-300 mb-3 text-center">
+              New Blog Post
+            </h3>
+            <h4 className="text-lg font-bold text-white mb-4 text-center">
+              Multi-Agent Orchestration Revolution
+            </h4>
+            <div className="space-y-2 mb-6">
+              <div className="flex items-center justify-center gap-2 text-rose-200">
+                <Sparkles className="w-4 h-4" />
+                <span className="text-sm">99.8% Automation Rate</span>
+              </div>
+              <div className="flex items-center justify-center gap-2 text-rose-200">
+                <TrendingUp className="w-4 h-4" />
+                <span className="text-sm">$24.7B Proven Value</span>
+              </div>
+              <div className="flex items-center justify-center gap-2 text-rose-200">
+                <Award className="w-4 h-4" />
+                <span className="text-sm">47 Fortune 500 Deployments</span>
+              </div>
+            </div>
+            <a
+              href="/blog/ai-2025-oct-01-breakthrough-multiagent-orchestration-revolution"
+              className="block w-full bg-yellow-400 text-rose-900 py-3 rounded-xl font-bold text-center hover:bg-yellow-300 transition-all"
             >
-              Learn More →
-            </Link>
+              Read Article →
+            </a>
           </div>
 
-          {/* Card 2 */}
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
-            <div className="text-4xl mb-4">⚛️</div>
-            <h3 className="text-2xl font-bold text-white mb-3">Quantum ML Acceleration</h3>
-            <div className="space-y-2 mb-6 text-gray-300">
-              <p>✓ 50,000x Faster Training</p>
-              <p>✓ 99.97% Accuracy</p>
-              <p>✓ 95% Cost Reduction</p>
-              <p>✓ $12.7B Market Impact</p>
+          {/* Case Study */}
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border-3 border-pink-400 transform hover:scale-105 transition-all">
+            <div className="flex justify-center mb-4">
+              <Award className="w-16 h-16 text-pink-300" />
             </div>
-            <Link
-              to="/blog/ai-2025-october-quantum-ml-acceleration-breakthrough"
-              className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold"
+            <h3 className="text-2xl font-black text-pink-300 mb-3 text-center">
+              New Case Study
+            </h3>
+            <h4 className="text-lg font-bold text-white mb-4 text-center">
+              Fortune 50 Insurance: $3.2B Success
+            </h4>
+            <div className="space-y-2 mb-6">
+              <div className="flex items-center justify-center gap-2 text-rose-200">
+                <Sparkles className="w-4 h-4" />
+                <span className="text-sm">6,780% ROI Achieved</span>
+              </div>
+              <div className="flex items-center justify-center gap-2 text-rose-200">
+                <TrendingUp className="w-4 h-4" />
+                <span className="text-sm">27,400 AI Agents</span>
+              </div>
+              <div className="flex items-center justify-center gap-2 text-rose-200">
+                <Award className="w-4 h-4" />
+                <span className="text-sm">147 Countries Transformed</span>
+              </div>
+            </div>
+            <a
+              href="/case-studies/ai-2025-oct-01-global-insurance-multi-agent-transformation-3-2-billion-success"
+              className="block w-full bg-pink-400 text-rose-900 py-3 rounded-xl font-bold text-center hover:bg-pink-300 transition-all"
             >
-              Explore Quantum ML →
-            </Link>
+              View Case Study →
+            </a>
           </div>
 
-          {/* Card 3 */}
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-orange-500/50 transition-all duration-300 hover:transform hover:scale-105">
-            <div className="text-4xl mb-4">🌐</div>
-            <h3 className="text-2xl font-bold text-white mb-3">Edge AI Mesh Networks</h3>
-            <div className="space-y-2 mb-6 text-gray-300">
-              <p>✓ &lt;1ms Latency</p>
-              <p>✓ 99.99% Uptime</p>
-              <p>✓ $6.2B Success Story</p>
-              <p>✓ 4,200% ROI</p>
+          {/* Service Offering */}
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border-3 border-purple-400 transform hover:scale-105 transition-all">
+            <div className="flex justify-center mb-4">
+              <Building2 className="w-16 h-16 text-purple-300" />
             </div>
-            <Link
-              to="/blog/ai-2025-october-edge-ai-mesh-networks-revolution"
-              className="inline-flex items-center text-orange-400 hover:text-orange-300 font-semibold"
+            <h3 className="text-2xl font-black text-purple-300 mb-3 text-center">
+              New Service
+            </h3>
+            <h4 className="text-lg font-bold text-white mb-4 text-center">
+              Multi-Agent Platform Services
+            </h4>
+            <div className="space-y-2 mb-6">
+              <div className="flex items-center justify-center gap-2 text-rose-200">
+                <Sparkles className="w-4 h-4" />
+                <span className="text-sm">Enterprise AI Platform</span>
+              </div>
+              <div className="flex items-center justify-center gap-2 text-rose-200">
+                <TrendingUp className="w-4 h-4" />
+                <span className="text-sm">4.7x Average ROI</span>
+              </div>
+              <div className="flex items-center justify-center gap-2 text-rose-200">
+                <Award className="w-4 h-4" />
+                <span className="text-sm">847+ Integrations</span>
+              </div>
+            </div>
+            <a
+              href="/services/ai-2025-october-multi-agent-orchestration-platform-services"
+              className="block w-full bg-purple-400 text-rose-900 py-3 rounded-xl font-bold text-center hover:bg-purple-300 transition-all"
             >
-              Discover Edge AI →
-            </Link>
+              Explore Services →
+            </a>
           </div>
         </div>
 
-        <div className="text-center">
-          <div className="inline-flex flex-col sm:flex-row gap-4 items-center">
-            <Link
-              to="/contact"
-              className="px-10 py-5 bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 text-white text-lg font-bold rounded-xl hover:from-purple-700 hover:via-blue-700 hover:to-cyan-700 transition-all duration-200 shadow-2xl hover:shadow-purple-500/50 transform hover:-translate-y-1"
-            >
-              Schedule Enterprise Demo
-            </Link>
-            <div className="text-sm text-gray-400">
-              <p>🎯 Fortune 500 proven • 💎 $27.3B combined value • 🚀 Transform your business today</p>
-            </div>
+        {/* Total Value Banner */}
+        <div className="bg-gradient-to-r from-yellow-500 to-pink-500 rounded-2xl p-8 mb-8">
+          <div className="text-center">
+            <p className="text-rose-900 text-2xl font-bold mb-2">COMBINED VALUE CREATION</p>
+            <p className="text-6xl font-black text-white mb-2">$27.9 BILLION</p>
+            <p className="text-rose-900 text-xl font-semibold">
+              Proven Results Across 47 Fortune 500 Companies
+            </p>
           </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="text-center">
+          <p className="text-2xl font-bold text-rose-200 mb-6">
+            🚀 Discover How Multi-Agent AI Can Transform Your Enterprise 🚀
+          </p>
+          <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
+            <a
+              href="/blog"
+              className="bg-white text-rose-900 px-8 py-4 rounded-xl font-bold text-lg hover:bg-rose-100 transition-all transform hover:scale-105 shadow-xl flex items-center gap-2"
+            >
+              <BookOpen className="w-6 h-6" />
+              Explore All Blog Posts
+            </a>
+            <a
+              href="/case-studies"
+              className="bg-rose-500 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-rose-400 transition-all transform hover:scale-105 shadow-xl flex items-center gap-2"
+            >
+              <Award className="w-6 h-6" />
+              View All Case Studies
+            </a>
+            <a
+              href="/services"
+              className="bg-fuchsia-500 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-fuchsia-400 transition-all transform hover:scale-105 shadow-xl flex items-center gap-2"
+            >
+              <Rocket className="w-6 h-6" />
+              See All Services
+            </a>
+          </div>
+        </div>
+
+        {/* Bottom Stats */}
+        <div className="mt-10 text-center">
+          <p className="text-rose-200 text-xl">
+            <span className="font-bold text-yellow-300">✨ Just Published Today</span> • 
+            <span className="font-bold text-pink-300"> 100% Fresh Content</span> • 
+            <span className="font-bold text-purple-300"> Proven Business Value</span>
+          </p>
         </div>
       </div>
     </div>
   );
-}
+};
+
+export default October2025NewContentMegaShowcaseBanner;
