@@ -93,6 +93,8 @@ export default defineConfig({
           if (id.includes('src/hooks/')) {
             return 'hooks';
           }
+          // Default chunk
+          return 'app';
         },
         chunkFileNames: (chunkInfo) => {
           const facadeModuleId = chunkInfo.facadeModuleId
