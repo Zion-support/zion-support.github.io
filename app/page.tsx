@@ -71,6 +71,35 @@ export const metadata = {
 export default function HomePage() {
   return (
     <div className="animate-fade-in">
+      {/* 🔥 BRAND NEW OCTOBER 2025 NEUROMORPHIC & FEDERATED LEARNING */}
+      <section className="w-full bg-gradient-to-r from-purple-600 via-blue-600 to-teal-600 text-white py-4">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="flex flex-col md:flex-row items-center gap-3 justify-between">
+            <div className="flex items-center gap-3 flex-wrap justify-center md:justify-start">
+              <span className="text-2xl animate-bounce">🧠</span>
+              <span className="font-bold text-lg">JUST PUBLISHED:</span>
+              <Link href="/blog/ai-neuromorphic-computing-enterprise-2026" className="underline hover:text-yellow-200 font-bold">
+                Neuromorphic Computing: 95% Energy Savings
+              </Link>
+              <span className="hidden md:inline">•</span>
+              <Link href="/blog/ai-federated-learning-enterprise-privacy-2026" className="underline hover:text-yellow-200 font-bold">
+                Federated Learning: 100% Privacy
+              </Link>
+              <span className="hidden md:inline">•</span>
+              <Link href="/case-studies/neuromorphic-computing-manufacturing-success-2026" className="underline hover:text-yellow-200">
+                $22M ROI Case Study
+              </Link>
+            </div>
+            <Link
+              href="/services/neuromorphic-computing-enterprise-services"
+              className="bg-white text-purple-700 hover:bg-yellow-400 hover:text-purple-900 px-6 py-2 rounded-full text-sm font-bold whitespace-nowrap transition-all"
+            >
+              Get Started →
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* NEW OCTOBER 2025 ML PIPELINE OPTIMIZATION - TOP PRIORITY */}
       <MLPipelineOptimizationBanner />
       <MLPipelineOptimizationCaseStudyBanner />
@@ -111,6 +140,229 @@ export default function HomePage() {
           </Link>
         </div>
       </div>
+      {/* 🧠 NEW: Neuromorphic & Federated Learning Showcase */}
+      <section className="py-20 bg-gradient-to-br from-purple-600 via-indigo-600 to-blue-600">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center px-6 py-3 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm font-bold mb-4 animate-pulse">
+              <span className="text-2xl mr-2">🧠</span>
+              BREAKTHROUGH TECHNOLOGY — October 2025
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Neuromorphic Computing & Federated Learning Revolution
+            </h2>
+            <p className="text-xl text-white/90 max-w-3xl mx-auto">
+              Brain-inspired AI delivering 95% energy savings, 100x performance, and 100% data privacy
+            </p>
+          </div>
+
+          {/* Main Feature Cards */}
+          <div className="grid lg:grid-cols-2 gap-8 mb-8">
+            {/* Neuromorphic Computing Article */}
+            <Link href="/blog/ai-neuromorphic-computing-enterprise-2026" className="group">
+              <div className="bg-white rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-500 overflow-hidden hover:scale-105">
+                <div className="relative h-56 bg-gradient-to-br from-purple-500 via-blue-500 to-teal-500">
+                  <div className="absolute inset-0 bg-black opacity-10"></div>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center text-white">
+                      <div className="w-24 h-24 mx-auto mb-4 bg-white bg-opacity-20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                        <span className="text-5xl">🧠</span>
+                      </div>
+                      <h3 className="text-2xl font-bold mb-2">Neuromorphic Computing</h3>
+                      <p className="text-purple-100 font-semibold">Brain-Inspired AI Systems</p>
+                    </div>
+                  </div>
+                  <div className="absolute top-4 right-4">
+                    <span className="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full text-sm font-bold shadow-lg animate-pulse">
+                      NEW 2026
+                    </span>
+                  </div>
+                </div>
+                <div className="p-8">
+                  <div className="flex items-center gap-4 mb-4">
+                    <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm font-bold">📝 Deep Dive</span>
+                    <span className="text-gray-500 text-sm font-medium">28 min read</span>
+                  </div>
+                  <h4 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors">
+                    95% Energy Savings, 100x Faster, $20M+ Annual ROI
+                  </h4>
+                  <p className="text-gray-600 mb-6 leading-relaxed">
+                    Revolutionary brain-inspired computing achieving massive energy efficiency and performance breakthroughs. Complete guide to neuromorphic AI implementation with real-world results.
+                  </p>
+                  <div className="grid grid-cols-3 gap-4 mb-6 pb-6 border-b border-gray-200">
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-purple-600">95%</div>
+                      <div className="text-xs text-gray-500 mt-1">Energy Savings</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-blue-600">100x</div>
+                      <div className="text-xs text-gray-500 mt-1">Faster</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-teal-600">$20M+</div>
+                      <div className="text-xs text-gray-500 mt-1">Annual Savings</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <div className="text-sm text-gray-500">
+                      <span className="font-semibold text-gray-700">Topics:</span> Neuromorphic AI, Energy Efficiency
+                    </div>
+                    <div className="flex items-center text-purple-600 font-bold text-lg group-hover:text-purple-700 transition-colors">
+                      Read Article →
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+            {/* Federated Learning Article */}
+            <Link href="/blog/ai-federated-learning-enterprise-privacy-2026" className="group">
+              <div className="bg-white rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-500 overflow-hidden hover:scale-105">
+                <div className="relative h-56 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500">
+                  <div className="absolute inset-0 bg-black opacity-10"></div>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center text-white">
+                      <div className="w-24 h-24 mx-auto mb-4 bg-white bg-opacity-20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                        <span className="text-5xl">🔒</span>
+                      </div>
+                      <h3 className="text-2xl font-bold mb-2">Federated Learning</h3>
+                      <p className="text-indigo-100 font-semibold">100% Privacy-Preserving AI</p>
+                    </div>
+                  </div>
+                  <div className="absolute top-4 right-4">
+                    <span className="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full text-sm font-bold shadow-lg animate-pulse">
+                      NEW 2026
+                    </span>
+                  </div>
+                </div>
+                <div className="p-8">
+                  <div className="flex items-center gap-4 mb-4">
+                    <span className="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-sm font-bold">📝 Security Guide</span>
+                    <span className="text-gray-500 text-sm font-medium">26 min read</span>
+                  </div>
+                  <h4 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-indigo-600 transition-colors">
+                    100% Data Privacy, 90% Accuracy, $12M+ Compliance Savings
+                  </h4>
+                  <p className="text-gray-600 mb-6 leading-relaxed">
+                    Master privacy-preserving collaborative AI that keeps data decentralized while achieving powerful model performance. Complete guide to federated learning implementation.
+                  </p>
+                  <div className="grid grid-cols-3 gap-4 mb-6 pb-6 border-b border-gray-200">
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-indigo-600">100%</div>
+                      <div className="text-xs text-gray-500 mt-1">Data Privacy</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-purple-600">90%</div>
+                      <div className="text-xs text-gray-500 mt-1">Accuracy</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-pink-600">$12M+</div>
+                      <div className="text-xs text-gray-500 mt-1">Savings</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <div className="text-sm text-gray-500">
+                      <span className="font-semibold text-gray-700">Topics:</span> Privacy AI, GDPR, Security
+                    </div>
+                    <div className="flex items-center text-indigo-600 font-bold text-lg group-hover:text-indigo-700 transition-colors">
+                      Read Article →
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </div>
+
+          {/* Case Study & Service Cards */}
+          <div className="grid lg:grid-cols-2 gap-8 mt-8">
+            {/* Neuromorphic Case Study */}
+            <Link href="/case-studies/neuromorphic-computing-manufacturing-success-2026" className="group">
+              <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 p-8 hover:scale-105">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-bold">
+                    📊 CASE STUDY
+                  </span>
+                  <span className="bg-yellow-400 text-gray-900 px-3 py-1 rounded-full text-xs font-bold">
+                    $22M ROI
+                  </span>
+                </div>
+                <h4 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
+                  Automotive Manufacturer: $22M Annual Savings
+                </h4>
+                <p className="text-gray-700 mb-4 leading-relaxed">
+                  Fortune 100 manufacturer achieves 99.9% defect detection, 95% energy reduction, and $22M annual savings with neuromorphic vision systems.
+                </p>
+                <div className="flex gap-6 mb-4">
+                  <div>
+                    <div className="text-2xl font-bold text-purple-600">99.9%</div>
+                    <div className="text-xs text-gray-500">Accuracy</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-blue-600">$22M</div>
+                    <div className="text-xs text-gray-500">Annual Savings</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-teal-600">0.3ms</div>
+                    <div className="text-xs text-gray-500">Latency</div>
+                  </div>
+                </div>
+                <div className="flex items-center text-purple-600 font-bold group-hover:text-purple-700 transition-colors">
+                  View Case Study →
+                </div>
+              </div>
+            </Link>
+
+            {/* Neuromorphic Service */}
+            <Link href="/services/neuromorphic-computing-enterprise-services" className="group">
+              <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 p-8 hover:scale-105 border-2 border-purple-200">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-bold">
+                    🚀 SERVICE
+                  </span>
+                  <span className="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold">
+                    AVAILABLE NOW
+                  </span>
+                </div>
+                <h4 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
+                  Neuromorphic Computing Enterprise Services
+                </h4>
+                <p className="text-gray-700 mb-4 leading-relaxed">
+                  Transform your AI infrastructure with brain-inspired computing. Starting at $25K/month for pilot projects. Full enterprise implementation available.
+                </p>
+                <div className="flex gap-6 mb-4">
+                  <div>
+                    <div className="text-2xl font-bold text-purple-600">95%</div>
+                    <div className="text-xs text-gray-500">Energy Savings</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-blue-600">100x</div>
+                    <div className="text-xs text-gray-500">Performance</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-teal-600">$20M+</div>
+                    <div className="text-xs text-gray-500">ROI Potential</div>
+                  </div>
+                </div>
+                <div className="flex items-center text-purple-600 font-bold group-hover:text-purple-700 transition-colors">
+                  Get Started →
+                </div>
+              </div>
+            </Link>
+          </div>
+
+          <div className="text-center mt-12">
+            <Link
+              href="/blog"
+              className="inline-flex items-center bg-white text-purple-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 shadow-2xl hover:scale-105"
+            >
+              <span className="text-2xl mr-3">🧠</span>
+              Explore All AI Innovations
+              <ArrowRight className="w-6 h-6 ml-3" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Featured New Content Section */}
       <section className="py-16 bg-gradient-to-br from-blue-600 via-purple-600 to-teal-600">
         <div className="max-w-6xl mx-auto px-4">
