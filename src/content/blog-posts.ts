@@ -14,7 +14,6 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
-<<<<<<< HEAD
     slug: "ai-2025-oct-03-risk-controlled-autonomy",
     title: "Risk‑Controlled Autonomy 2025: Ship Agentic Systems Without Surprises",
     description: "Blueprint for budgeted tools, policy‑gated actions, and instant rollback so teams move 10x faster with stable reliability and spend.",
@@ -43,7 +42,8 @@ Need a playbook tailored to your platform? Our team can help you land this safel
     featured: true,
     readTime: "8 min read",
     image: "/images/risk-controlled-autonomy-2025.jpg"
-=======
+  },
+  {
     slug: "ai-2025-oct-02-private-experiments-blueprint",
     title: "Private Experiments Blueprint: Zero‑PII Testing at the Edge",
     description: "Run compliant edge A/B with signed configs, scoped IDs, and DP noise—sub‑100ms globally.",
@@ -165,7 +165,6 @@ Keep experience KPIs stable while reducing spend.
     featured: false,
     readTime: "6 min read",
     image: "/images/cost-aware-routing.jpg"
->>>>>>> ca2386dd1427bba4fa2d44ebcf521d077ba8cbfc
   },
   {
     slug: "ai-2025-oct-01-enterprise-ai-governance-blueprint",
@@ -2053,6 +2052,76 @@ Run global experiments without centralizing PII. This guide details signed confi
     featured: true,
     readTime: "7 min read",
     image: "/images/private-experimentation-edge-2025.jpg"
+  }
+  ,
+  {
+    slug: "ai-2025-oct-03-governed-agent-rollbacks",
+    title: "Governed Agent Rollbacks: Move Fast Without Surprises",
+    description: "Approval tiers, reversible tools, and KPI‑linked rollbacks that keep incidents rare as autonomy expands.",
+    content: `
+# Governed Agent Rollbacks: Move Fast Without Surprises
+
+Production autonomy demands reversibility. This guide ships practical patterns:
+
+- Tool contracts with scopes, quotas, and human approvals
+- Canary routes with online evals tied to KPIs
+- Budget‑aware fallbacks and one‑click rollback hooks
+
+Outcomes: faster delivery, fewer regressions, predictable spend.
+    `,
+    author: "Zion Tech Group AI Operations",
+    date: "2025-10-03",
+    category: "AI Operations",
+    tags: ["Agents", "Rollback", "Approvals", "Guardrails"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/governed-agent-rollbacks.jpg"
+  },
+  {
+    slug: "genai-2025-oct-03-cache-quality-tiers-v2",
+    title: "GenAI Cache Quality Tiers v2: 60–85% Cost ↓, Stable UX",
+    description: "Prompt, embedding, and retrieval caches with freshness windows and request coalescing that cut cost without hurting KPIs.",
+    content: `
+# GenAI Cache Quality Tiers v2
+
+We detail multi‑layer caching that consistently reduces spend:
+
+- Prompt cache + coalescing to stop hot loops
+- Embedding cache with TTL + LFU
+- Retrieval cache across features → chunks → answers
+
+Includes rollout scorecards, SLO templates, and dark‑ship checks.
+    `,
+    author: "Zion Tech Group Platform Team",
+    date: "2025-10-03",
+    category: "GenAI Engineering",
+    tags: ["Caching", "Latency", "Cost", "Quality Tiers"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/genai-cache-quality-tiers-v2.jpg"
+  },
+  {
+    slug: "edge-2025-oct-03-consentless-journeys-blueprint",
+    title: "Consentless Journeys Blueprint: Personalization With Zero PII",
+    description: "Scoped IDs, on‑device aggregation, and DP noise enabling compliant personalization at sub‑100ms globally.",
+    content: `
+# Consentless Journeys Blueprint
+
+Ship privacy‑first personalization:
+
+- Signed configs with cacheable variants at the edge
+- Scoped, rotating identifiers per surface
+- On‑device aggregation with differential privacy
+
+Trusted by security, loved by product.
+    `,
+    author: "Zion Tech Group Privacy Lab",
+    date: "2025-10-03",
+    category: "Experimentation",
+    tags: ["Privacy", "Edge", "Personalization", "DP"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/consentless-journeys-blueprint.jpg"
   }
 ];
 
