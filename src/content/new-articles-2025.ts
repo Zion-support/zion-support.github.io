@@ -23,6 +23,28 @@ export const newArticles2025: NewArticle[] = [
     tags: ["Quantum-Safe Cryptography", "Post-Quantum Security", "Enterprise Protection", "NIST Standards"]
   },
   {
+    id: "ai-2025-oct-03-neuromorphic-edge-ai-breakthrough",
+    title: "🧠 Neuromorphic Edge AI 2025: 1000x Efficiency for Real-Time Intelligence",
+    description: "Deploy brain-inspired AI at the edge with event-driven compute delivering sub-10ms decisions at 1000x energy efficiency.",
+    category: "Neuromorphic AI",
+    publishedDate: "2025-10-03",
+    featured: true,
+    link: "/blog/ai-2025-oct-03-neuromorphic-edge-ai-breakthrough",
+    readTime: "11 min read",
+    tags: ["Neuromorphic", "Edge AI", "SNN", "Energy Efficiency"]
+  },
+  {
+    id: "ai-2025-oct-03-synthetic-data-production-playbook",
+    title: "🎭 Synthetic Data in Production: Privacy-Safe Accuracy Gains in 2025",
+    description: "Blueprint to train high-accuracy models with zero PII risk using diffusion/GAN pipelines and evaluators.",
+    category: "Data Platforms",
+    publishedDate: "2025-10-03",
+    featured: true,
+    link: "/blog/ai-2025-oct-03-synthetic-data-production-playbook",
+    readTime: "9 min read",
+    tags: ["Synthetic Data", "Privacy", "Diffusion", "GANs", "Compliance"]
+  },
+  {
     id: "ai-2025-october-neuromorphic-computing-breakthrough",
     title: "🧠 Neuromorphic Computing Breakthrough: Brain-Inspired AI Revolution",
     description: "Revolutionary neuromorphic computing achieving 1000x energy efficiency with brain-inspired architecture. Real-time learning, event-driven processing, and edge AI deployment for next-gen applications.",
