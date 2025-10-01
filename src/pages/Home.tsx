@@ -27,6 +27,7 @@ import October2025BreakthroughContentBanner from "../components/October2025Break
 import October2025AIRevolutionBanner from "../components/October2025AIRevolutionBanner";
 import October2025NewContentBanner from "../components/October2025NewContentBanner";
 import October2025NewContentBanner2 from "../components/October2025NewContentBanner2";
+import October2025CuttingEdgeContentBanner from "../components/October2025CuttingEdgeContentBanner";
 import LatestArticlesShowcase from "../components/LatestArticlesShowcase";
 import LatestContentBanner from "../components/LatestContentBanner";
 import LatestInsights from "../components/LatestInsights";
@@ -137,6 +138,9 @@ const Home = () => {
           ]}
         />
         
+        {/* 🔥🔥🔥 OCTOBER 1, 2025 - JUST PUBLISHED: Latest Cutting-Edge Content */}
+        <October2025CuttingEdgeContentBanner />
+        
         {/* 🎯 OCTOBER 2025 - LATEST: Enterprise AI & Security Revolution */}
         <NewContentPromoBanner 
           className="border-b border-white/10" 
@@ -152,7 +156,7 @@ const Home = () => {
           ]}
         />
         
-        {/* 🎯 OCTOBER 1, 2025 - BREAKING NEWS: Latest Enterprise Solutions */}
+        {/* 🔥 ENTERPRISE SOLUTIONS */}
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
