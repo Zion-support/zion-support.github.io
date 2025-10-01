@@ -141,7 +141,7 @@ class PerformanceMonitor {
     overall: 'good' | 'needs-improvement' | 'poor';
     details: { metric: string; value: number; grade: string }[];
   } {
-    const details = [];
+    const details: { metric: string; value: number; grade: string }[] = [];
     let goodCount = 0;
     let poorCount = 0;
     let totalMetrics = 0;

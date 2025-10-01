@@ -6,7 +6,7 @@ const EdgeRAGBlueprint2026 = () => {
   return (
     <>
       <Helmet>
-        <title>Edge RAG Blueprint 2026: Fresh, Private Answers in <100ms | Zion Tech Group</title>
+        <title>Edge RAG Blueprint 2026: Fresh, Private Answers in &lt;100ms | Zion Tech Group</title>
         <meta
           name="description"
           content="Signed configs, TTL freshness, hybrid retrieval, and on‑device caches for trustworthy sub‑100ms answers without PII exposure."
@@ -28,7 +28,7 @@ const EdgeRAGBlueprint2026 = () => {
               <time className="text-gray-600">October 30, 2025</time>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">Edge RAG Blueprint 2026</h1>
-            <p className="text-xl text-gray-700">Fresh, private answers in <100ms with hybrid retrieval and on‑device caches.</p>
+            <p className="text-xl text-gray-700">Fresh, private answers in &lt;100ms with hybrid retrieval and on‑device caches.</p>
           </header>
 
           <div className="grid md:grid-cols-3 gap-6 mb-10">
