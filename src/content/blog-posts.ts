@@ -44,6 +44,33 @@ Ready to operationalize this in your stack? Our team can help you land it safely
     image: "/images/enterprise-ai-governance-2025.jpg"
   },
   {
+    slug: "ai-ops-excellence-2025-oct-03",
+    title: "AI Ops Excellence: Live Scorecards, Canary Gates, Instant Rollback",
+    description: "Operate AI safely at scale with KPI-linked scorecards, canary gates, and rollback-first design.",
+    content: `
+# AI Ops Excellence: Live Scorecards, Canary Gates, Instant Rollback
+
+Operate AI systems safely at enterprise scale. Wire KPI-linked scorecards, budget-aware canary routes, and instant rollback hooks so teams can ship faster without incidents.
+
+## What You’ll Implement
+- KPI-linked scorecards and budgets
+- Canary routes with CI policy tests
+- One-click rollback with blast-radius checks
+
+## Outcomes
+- Faster delivery with fewer incidents
+- Stable latency/cost KPIs
+- Clear ownership and weekly review rituals
+    `,
+    author: "Zion Tech Group Reliability Lab",
+    date: "2025-10-03",
+    category: "Operations",
+    tags: ["SRE", "Canary", "Rollback", "Scorecards"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/ai-ops-excellence.jpg"
+  },
+  {
     slug: "ai-2025-oct-03-platform-reliability-scorecards-2027",
     title: "AI Platform Reliability Scorecards 2027: SLIs That Drive Outcomes",
     description: "Design platform scorecards engineers adopt—SLIs tied to KPIs, budgets, and rollback triggers.",
@@ -1520,6 +1547,65 @@ Comes with reference architectures and an operations playbook that cuts turnarou
     featured: true,
     readTime: "10 min read",
     image: "/images/intelligent-document-automation-2025.jpg"
+  }
+  ,
+  {
+    slug: "ai-2025-oct-03-enterprise-ai-platform-blueprint",
+    title: "Enterprise AI Platform Blueprint 2025: Ship Weekly With Guardrails",
+    description: "A pragmatic reference architecture to run AI as a product: scorecards, policy tests in CI, tiered routing, and rollback playbooks.",
+    content: `
+# Enterprise AI Platform Blueprint 2025
+
+This blueprint distills what works across Fortune 500 platforms to ship AI weekly without surprises.
+
+## Core Capabilities
+- KPI‑linked scorecards that predict outcomes
+- Policy tests in CI that gate risky changes
+- Quality‑tier routing + semantic caches to control cost
+- Canary rollouts with instant rollback hooks
+
+## Operating Model
+- Weekly scorecard review with owners
+- One regression → one owner → one fix
+- Clear SLOs for reliability, latency, and cost
+
+Ready to tailor this to your stack? Our team can help you land it quickly.
+    `,
+    author: "Zion Tech Group Platform Office",
+    date: "2025-10-03",
+    category: "Platform Engineering",
+    tags: ["Platform", "Governance", "Scorecards", "Routing", "Rollbacks"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/enterprise-ai-platform-blueprint-2025.jpg"
+  },
+  {
+    slug: "ai-2025-oct-03-private-experimentation-at-the-edge",
+    title: "Private Experimentation at the Edge: <100ms, Zero‑PII Metrics",
+    description: "Run global A/Bs with scoped IDs, on‑device aggregation, and DP noise—sub‑100ms decisions without data risk.",
+    content: `
+# Private Experimentation at the Edge
+
+Global experimentation without PII requires new primitives.
+
+## Ingredients
+- Scoped identifiers and field‑level redaction
+- On‑device aggregation with signed configs
+- Differential privacy for safe cohort reporting
+- Budgeted inference with deterministic fallbacks
+
+## Results
+- <100ms decisioning globally
+- 90%+ reduction in sensitive data flows
+- Trustworthy lift estimates with DP guarantees
+    `,
+    author: "Zion Tech Group Edge Lab",
+    date: "2025-10-03",
+    category: "Edge AI",
+    tags: ["Edge", "Experimentation", "Privacy", "DP", "A/B"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/private-experimentation-edge-2025.jpg"
   }
 ];
 
