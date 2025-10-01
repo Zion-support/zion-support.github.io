@@ -187,7 +187,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
 
                 {/* CTA Button */}
                 <a
-                  href={(content as any).link || '/blog'}
+                  href={content.link || '/blog'}
                   className={`group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r ${content.gradient} hover:opacity-90 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1`}
                 >
                   <span>Read Now</span>
