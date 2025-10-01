@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 
 export default function October2025NextGenEnterpriseAIBanner() {
@@ -192,9 +190,9 @@ export default function October2025NextGenEnterpriseAIBanner() {
               <div className="text-4xl font-bold text-yellow-400 mb-2">1,847%</div>
               <div className="text-gray-400">Average ROI</div>
               <div className="text-sm text-yellow-500 mt-2">3-Year Period</div>
->>>>>>> origin/cursor/create-and-deploy-new-content-08fb
             </div>
           </div>
+=======
 =======
 import React from "react";
 
@@ -248,7 +246,7 @@ export default function October2025NextGenEnterpriseAIBanner() {
               Process millions of data points per second with sub-millisecond decision making
             </p>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li>• <5ms response time</li>
+              <li>• &lt;5ms response time</li>
               <li>• 99.99% uptime guaranteed</li>
               <li>• Predictive analytics engine</li>
             </ul>
@@ -323,7 +321,6 @@ export default function October2025NextGenEnterpriseAIBanner() {
           <p className="text-gray-400 text-sm mt-2">
             Offer expires: October 31, 2025 | Limited to first 100 enterprises
           </p>
->>>>>>> origin/cursor/create-and-deploy-new-content-ffd8
         </div>
       </div>
     </div>

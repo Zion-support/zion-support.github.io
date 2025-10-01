@@ -27,6 +27,51 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: 5,
   },
   {
+    id: '206',
+    title: 'AI Budgeted Routing: Stable UX Under Any Spend',
+    slug: 'ai-budgeted-routing-stable-ux-2025-10-04',
+    excerpt:
+      'Quality tiers, request coalescing, and semantic caches keep experience steady while costs flex.',
+    content:
+      'Keep product KPIs stable regardless of budget. We cover tiered model routing with evaluator gates, request coalescing, and multi-layer caches (feature, embedding, retrieval). Includes rollout checklists, dashboards, and safe fallbacks that avoid user-visible regressions while cutting spend 30–70%.',
+    featuredImage: '/images/blog/ai-budgeted-routing.jpg',
+    category: 'AI',
+    tags: ['Routing', 'Caching', 'Cost'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-04',
+    readTime: 7,
+  },
+  {
+    id: '207',
+    title: 'Agent Observability: Tool Traces, SLIs, and Rollback Hooks',
+    slug: 'agent-observability-tool-traces-slis-rollback-2025-10-04',
+    excerpt:
+      'See, trust, and control agent actions with budgets, approvals, and instant rollback triggers.',
+    content:
+      'Production agents demand end-to-end visibility. We show tool-level traces, KPI-linked SLIs, action budgets, and approval workflows. Learn canary strategies and rollback-first operations to keep incidents rare while unlocking autonomy.',
+    featuredImage: '/images/blog/agent-observability-2025.jpg',
+    category: 'AI',
+    tags: ['Agents', 'Observability', 'SLIs', 'Rollback'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-04',
+    readTime: 8,
+  },
+  {
+    id: '208',
+    title: 'Private Experimentation at the Edge: Zero‑PII A/B <100ms',
+    slug: 'private-experimentation-edge-zero-pii-2025-10-04',
+    excerpt:
+      'Scoped identifiers, on-device aggregation, and DP noise enable fast, compliant experiments.',
+    content:
+      'Run global experiments without centralizing PII. This guide details signed configs, cacheable variants, scoped rotating IDs, and differential privacy for cohort metrics—all under 100ms. Includes configs, rollout playbooks, and validation scorecards.',
+    featuredImage: '/images/blog/private-experimentation-edge-2025.jpg',
+    category: 'Experimentation',
+    tags: ['Edge', 'A/B', 'Privacy', 'DP'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-04',
+    readTime: 7,
+  },
+  {
     id: '31',
     title: 'AI Platform Reliability Scorecards 2027: SLIs That Drive Outcomes',
     slug: 'ai-2025-oct-03-platform-reliability-scorecards-2027',
@@ -445,7 +490,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: 9,
   },
   {
-    id: '27',
+    id: '200',
     title: 'Policy-Driven AI: Guardrails as Code for Safer Autonomy',
     slug: 'policy-driven-ai-guardrails-as-code-2025-10-02',
     excerpt:
@@ -460,7 +505,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: 7,
   },
   {
-    id: '28',
+    id: '201',
     title: 'Platform Observability 2025: From Signals to Automated Actions',
     slug: 'platform-observability-automated-actions-2025-10-02',
     excerpt:
@@ -475,7 +520,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: 6,
   },
   {
-    id: '29',
+    id: '202',
     title: 'Cloud Cost Playbooks 2025: LLM + Infra Savings Without Slowdowns',
     slug: 'cloud-cost-playbooks-llm-infra-2025-10-02',
     excerpt:
@@ -490,7 +535,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: 7,
   },
   {
-    id: '34',
+    id: '203',
     title: 'Quantum-Safe Cryptography: Enterprise Migration Playbook (2025)',
     slug: 'quantum-safe-cryptography-enterprise-migration-2025',
     excerpt:
@@ -505,7 +550,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: 9,
   },
   {
-    id: '35',
+    id: '204',
     title: 'Neuromorphic Edge AI: Event-Driven Intelligence Under 10ms',
     slug: 'neuromorphic-edge-ai-event-driven-2025',
     excerpt:
@@ -520,7 +565,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: 8,
   },
   {
-    id: '36',
+    id: '205',
     title: 'Synthetic Data in Production: Privacy-Safe Accuracy Gains',
     slug: 'synthetic-data-production-privacy-2025',
     excerpt:
@@ -533,20 +578,5 @@ export const BLOG_POSTS: BlogPost[] = [
     author: 'Zion Tech Team',
     publishedAt: '2025-10-03',
     readTime: 10,
-  },
-  {
-    id: '37',
-    title: 'AI Ops Excellence: Live Scorecards, Canary Gates, Instant Rollback',
-    slug: 'ai-ops-excellence-2025-oct-03',
-    excerpt:
-      'Operate AI safely at scale with KPI-linked scorecards, canary gates, and rollback-first design.',
-    content:
-      'A concise field guide to operating AI systems at enterprise scale. Wire KPI-linked scorecards, budget-aware canary routes, and instant rollback hooks so teams can ship faster without incidents. Includes reference dashboards, CI policy tests, and rollout rituals used in production.',
-    featuredImage: '/images/blog/ai-ops-excellence.jpg',
-    category: 'Operations',
-    tags: ['SRE', 'Canary', 'Rollback', 'Scorecards'],
-    author: 'Zion Tech Team',
-    publishedAt: '2025-10-03',
-    readTime: 6,
   },
 ];

@@ -1731,6 +1731,14 @@ featuredBlogPosts.unshift(
 // Sept 30, 2025 – Surface three brand-new articles (newly added now)
 featuredBlogPosts.unshift(
   {
+    id: "ai-2025-oct-03-autonomous-finops-scorecards-v2",
+    title: "Autonomous FinOps Scorecards v2 (2025)",
+    description: "KPI‑linked cost scorecards, quality tiers, caches, budget‑aware routing.",
+    link: "/blog/ai-2025-oct-03-autonomous-finops-scorecards-v2",
+    type: "article",
+    featured: true
+  },
+  {
     id: "ai-2026-runtime-rollback-blueprint",
     title: "AI 2026: Runtime Rollback Blueprint",
     description: "Instant rollback with KPI‑linked canaries and budget gates.",

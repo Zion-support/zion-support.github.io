@@ -1117,6 +1117,15 @@ export const posts: BlogPost[] = [
     readTime: "13 min read"
   },
   {
+    slug: "ai-2025-oct-01-intelligent-document-automation-2025",
+    title: "Intelligent Document Automation 2025: 99.2% Accuracy, 94% Faster",
+    description: "Production blueprint: layout-aware models, weak labels, HITL QA, and rollback policies.",
+    category: "Document AI",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "10 min read"
+  },
+  {
     slug: "ai-customer-experience-hyper-personalization-2026",
     title: "AI Customer Experience 2026: Hyper-Personalization Achieving 400% Engagement",
     description: "Deploy AI-powered customer experiences that predict needs, personalize journeys, and increase engagement by 400%. Learn real-time personalization, behavioral prediction, and emotion detection.",
@@ -1172,6 +1181,13 @@ export const posts: BlogPost[] = [
     readTime: "7 min read"
   }
 ];
+
+// Oct 03, 2025 – New content to surface on Home
+posts.push(
+  { slug: "ai-2025-oct-03-continuous-intelligence-platforms", title: "Continuous Intelligence 2025: 100M Events/sec under 50ms", description: "Streams → actions with sub‑50ms latency, KPI scorecards, and rollback triggers.", category: "Real-Time AI", publishedAt: "2025-10-03", featured: true, readTime: "10 min read" },
+  { slug: "ai-2025-oct-03-autonomous-cloud-security", title: "Autonomous Cloud Security 2025: Neutralize Threats in <5s", description: "Self‑defending infrastructure with budgeted actions, live canaries, and instant rollback.", category: "Security", publishedAt: "2025-10-03", featured: true, readTime: "9 min read" },
+  { slug: "ai-2025-oct-03-quantum-supply-chain-optimization", title: "Quantum Supply Chain 2025: Solve in Minutes, Not Days", description: "Hybrid quantum + ML optimization delivering 10,000x faster plans and 35% cost reduction.", category: "Quantum Computing", publishedAt: "2025-10-03", featured: true, readTime: "11 min read" }
+);
 
 // Newly added content (auto-advertised on Home via latest sort)
 posts.push(
