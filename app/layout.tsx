@@ -48,6 +48,7 @@ function Header() {
               January 2025 Autonomous Intelligence
               <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
                 $500M SUCCESS
+<<<<<<< HEAD
               </span>
             </Link>
           </div>
@@ -64,6 +65,8 @@ function Header() {
               March 2027 Transcendent Automation
               <span className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
                 $750B SUCCESS
+=======
+>>>>>>> 3f53452969cd2fd4fdce9f84f15a3da9ca5d2f44
               </span>
             </Link>
           </div>
@@ -374,6 +377,7 @@ function Footer() {
               <Link href="/blog/ai-2025-january-quantum-neural-breakthrough" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
                 ⚛️ January 2025 Quantum Neural Breakthrough
                 <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">10,000x PERFORMANCE</span>
+<<<<<<< HEAD
               </Link>
               <Link href="/blog/ai-2027-january-ultimate-breakthrough-revolution" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
                 🧠 January 2027 Ultimate Breakthrough Revolution
@@ -390,6 +394,8 @@ function Footer() {
               <Link href="/case-studies/ai-2027-march-transcendent-automation-750-billion-success" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
                 💰 $750B Transcendent Automation Success
                 <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">FORTUNE 100</span>
+=======
+>>>>>>> 3f53452969cd2fd4fdce9f84f15a3da9ca5d2f44
               </Link>
               <Link href="/blog/ai-2027-february-synthetic-consciousness-revolution" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
                 🧠 February 2027 Synthetic Consciousness Revolution

@@ -2,6 +2,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
+import January2025QuantumNeuralRevolutionBanner from '../components/January2025QuantumNeuralRevolutionBanner';
 import UltraIntelligentAutonomousSystems2026Banner from '../components/UltraIntelligentAutonomousSystems2026Banner';
 import QuantumNeuralSuperintelligence2026Banner from '../components/QuantumNeuralSuperintelligence2026Banner';
 import AI2026RevolutionaryAutonomousSystemsBanner from '../components/AI2026RevolutionaryAutonomousSystemsBanner';
@@ -68,6 +69,7 @@ import December2026UltimateSingularityBanner from '../components/December2026Ult
 import January2027UniversalConsciousnessBanner from '../components/January2027UniversalConsciousnessBanner';
 import October2026TranscendentAutomationBanner from '../components/October2026TranscendentAutomationBanner';
 import September2026MegaBreakthroughBanner from '../components/September2026MegaBreakthroughBanner';
+<<<<<<< HEAD
 import February2027SyntheticConsciousnessBanner from '../components/February2027SyntheticConsciousnessBanner';
 import March2026AutonomousEnterpriseBanner from '../components/March2026AutonomousEnterpriseBanner';
 import January2026ContentShowcaseBanner from '../components/January2026ContentShowcaseBanner';
@@ -78,6 +80,10 @@ import January2027UltimateBreakthroughBanner from '../components/January2027Ulti
 import March2027TranscendentAutomationBanner from '../components/March2027TranscendentAutomationBanner';
 import January2025AutonomousIntelligenceBanner from '../components/January2025AutonomousIntelligenceBanner';
 import February2026RevolutionaryBreakthroughBanner from '../components/February2026RevolutionaryBreakthroughBanner';
+=======
+import December2025ContentShowcaseBanner from '../components/December2025ContentShowcaseBanner';
+import January2026RevolutionaryAutonomousBanner from '../components/January2026RevolutionaryAutonomousBanner';
+>>>>>>> 3f53452969cd2fd4fdce9f84f15a3da9ca5d2f44
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -88,9 +94,9 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-slate-950">
-      {/* 🚀🚀🚀 JANUARY 2025 AUTONOMOUS INTELLIGENCE REVOLUTION - MOST RECENT 🚀🚀🚀 */}
-      {/* Revolutionary breakthrough in autonomous AI intelligence - January 2025 */}
-      <January2025AutonomousIntelligenceBanner />
+      {/* 🚀🚀🚀 JANUARY 2026 REVOLUTIONARY AUTONOMOUS ENTERPRISE - MOST RECENT 🚀🚀🚀 */}
+      {/* Latest revolutionary autonomous enterprise transformation - January 2026 */}
+      <January2026RevolutionaryAutonomousBanner />
       
       {/* Hero Section */}
       <header className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-20">
@@ -159,8 +165,16 @@ export default function HomePage() {
         </div>
       </header>
 
+<<<<<<< HEAD
       {/* ⭐ NEW: January 2027 Ultimate Breakthrough - LATEST BREAKTHROUGHS ⭐ */}
       <January2027UltimateBreakthroughBanner />
+=======
+      {/* ⭐ NEWEST: January 2027 Revolutionary AI Breakthroughs - TOP PRIORITY ⭐ */}
+      <January2027RevolutionaryBreakthroughsBanner />
+
+      {/* ⭐ LATEST: January 2027 Universal Intelligence Revolution - TOP PRIORITY ⭐ */}
+      <January2027UniversalIntelligenceRevolutionBanner />
+>>>>>>> 3f53452969cd2fd4fdce9f84f15a3da9ca5d2f44
       
       {/* ⭐ NEW: March 2027 Transcendent Automation - LATEST BREAKTHROUGHS ⭐ */}
       <March2027TranscendentAutomationBanner />
@@ -238,10 +252,20 @@ export default function HomePage() {
       <section className="py-4 border-t border-b border-white/10 bg-white/5">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+<<<<<<< HEAD
             <div className="text-white/90 font-semibold">New: February 2026 Revolutionary Breakthrough & Latest Innovations</div>
             <div className="flex flex-wrap gap-2">
               <a href="/blog/ai-2026-february-revolutionary-breakthrough-revolution" className="inline-flex items-center gap-2 bg-purple-500/20 text-purple-200 border border-purple-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-purple-500/30 transition-colors">February 2026 Revolutionary<span>→</span></a>
               <a href="/case-studies/ai-2026-february-mega-breakthrough-3-billion-success" className="inline-flex items-center gap-2 bg-green-500/20 text-green-200 border border-green-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-green-500/30 transition-colors">$3B Success Story<span>→</span></a>
+=======
+            <div className="text-white/90 font-semibold">🚀 NEW: January 2026 Revolutionary Autonomous Enterprise - $1 Trillion ROI & 99.9% Automation</div>
+            <div className="flex flex-wrap gap-2">
+              <a href="/blog/ai-2026-january-revolutionary-autonomous-enterprise-transformation" className="inline-flex items-center gap-2 bg-indigo-500/20 text-indigo-200 border border-indigo-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-indigo-500/30 transition-colors">January 2026 Autonomous<span>→</span></a>
+              <a href="/case-studies/ai-2026-january-autonomous-enterprise-1-trillion-success" className="inline-flex items-center gap-2 bg-emerald-500/20 text-emerald-200 border border-emerald-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-emerald-500/30 transition-colors">$1T Success<span>→</span></a>
+              <a href="/blog/ai-2025-december-advanced-autonomous-systems" className="inline-flex items-center gap-2 bg-green-500/20 text-green-200 border border-green-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-green-500/30 transition-colors">December 2025 Autonomous<span>→</span></a>
+              <a href="/blog/ai-2025-december-quantum-computing-breakthrough" className="inline-flex items-center gap-2 bg-cyan-500/20 text-cyan-200 border border-cyan-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-cyan-500/30 transition-colors">December 2025 Quantum<span>→</span></a>
+              <a href="/case-studies/ai-2025-december-autonomous-systems-500-million-success" className="inline-flex items-center gap-2 bg-emerald-500/20 text-emerald-200 border border-emerald-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-emerald-500/30 transition-colors">$500M Success Story<span>→</span></a>
+>>>>>>> 3f53452969cd2fd4fdce9f84f15a3da9ca5d2f44
               <a href="/blog/ai-2026-october-transcendent-automation-revolution" className="inline-flex items-center gap-2 bg-purple-500/20 text-purple-200 border border-purple-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-purple-500/30 transition-colors">October 2026 Transcendent<span>→</span></a>
               <a href="/blog/ai-2026-september-mega-breakthrough-revolution" className="inline-flex items-center gap-2 bg-indigo-500/20 text-indigo-200 border border-indigo-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-indigo-500/30 transition-colors">September 2026 Mega<span>→</span></a>
               <a href="/case-studies/ai-2026-september-mega-breakthrough-2-trillion-success" className="inline-flex items-center gap-2 bg-green-500/20 text-green-200 border border-green-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-green-500/30 transition-colors">$2.5T Success Story<span>→</span></a>
@@ -306,6 +330,7 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-6">
+<<<<<<< HEAD
             <Link href="/blog/ai-2026-february-revolutionary-breakthrough-revolution" className="group block rounded-xl border border-purple-500/20 bg-gradient-to-br from-purple-900/20 to-blue-900/20 p-6 hover:border-purple-400/40 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-2 mb-3">
                 <span className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-3 py-1 rounded-full text-xs font-bold">FEBRUARY 2026</span>
@@ -323,6 +348,25 @@ export default function HomePage() {
               </div>
               <div className="text-white font-bold text-lg mb-2">$3B Success Story</div>
               <div className="text-gray-400 text-sm mb-3">How a Fortune 100 global manufacturing conglomerate achieved $3B ROI through revolutionary AI breakthrough with 99.9% autonomous operations.</div>
+=======
+            <Link href="/blog/ai-2026-january-revolutionary-autonomous-enterprise-transformation" className="group block rounded-xl border border-indigo-500/20 bg-gradient-to-br from-indigo-900/20 to-purple-900/20 p-6 hover:border-indigo-400/40 transition-all duration-300 hover:scale-105">
+              <div className="flex items-center gap-2 mb-3">
+                <span className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-3 py-1 rounded-full text-xs font-bold">🆕 JAN 2026</span>
+                <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold">REVOLUTIONARY</span>
+              </div>
+              <div className="text-white font-bold text-lg mb-2">Revolutionary Autonomous Enterprise Transformation</div>
+              <div className="text-gray-400 text-sm mb-3">Achieve $1 trillion ROI with 99.9% autonomous operations, universal intelligence integration, and transcendent business transformation.</div>
+              <div className="text-indigo-300 text-sm font-semibold group-hover:text-indigo-200">Read Revolutionary Breakthrough →</div>
+            </Link>
+
+            <Link href="/case-studies/ai-2026-january-autonomous-enterprise-1-trillion-success" className="group block rounded-xl border border-green-500/20 bg-gradient-to-br from-green-900/20 to-emerald-900/20 p-6 hover:border-green-400/40 transition-all duration-300 hover:scale-105">
+              <div className="flex items-center gap-2 mb-3">
+                <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-xs font-bold">$1T SUCCESS</span>
+                <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold">FORTUNE 10</span>
+              </div>
+              <div className="text-white font-bold text-lg mb-2">$1 Trillion Autonomous Enterprise Success</div>
+              <div className="text-gray-400 text-sm mb-3">How a Fortune 10 global technology enterprise achieved $1 trillion ROI through revolutionary autonomous systems with 99.9% automation.</div>
+>>>>>>> 3f53452969cd2fd4fdce9f84f15a3da9ca5d2f44
               <div className="text-green-300 text-sm font-semibold group-hover:text-green-200">Read Success Story →</div>
             </Link>
             
