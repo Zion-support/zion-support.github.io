@@ -12,7 +12,9 @@ export default function ContentHub() {
     {
       title: 'AI Implementation',
       articles: [
-        { title: 'Neural Adaptive Systems: The $89B Enterprise AI Revolution', slug: '/blog/ai-2025-oct-neural-adaptive-systems-enterprise-revolution', readTime: '24 min', featured: true, isNew: true },
+        { title: 'AI 2027 Transcendent Meta-Intelligence Breakthrough: $1.8T Success', slug: '/blog/ai-2027-transcendent-meta-intelligence-breakthrough', readTime: '32 min', featured: true, isNew: true },
+        { title: 'AI 2028 Omnipotent Superintelligence Breakthrough: $3.2T Success', slug: '/blog/ai-2028-omnipotent-superintelligence-breakthrough', readTime: '36 min', featured: true, isNew: true },
+        { title: 'Neural Adaptive Systems: The $89B Enterprise AI Revolution', slug: '/blog/ai-2025-oct-neural-adaptive-systems-enterprise-revolution', readTime: '24 min', featured: true, isNew: false },
         { title: 'AI Agent Swarms Enterprise Orchestration 2026', slug: '/blog/ai-agent-swarms-enterprise-orchestration-2026', readTime: '28 min', featured: true },
         { title: 'Quantum-Enhanced AI Enterprise Breakthrough 2026', slug: '/blog/quantum-enhanced-ai-enterprise-breakthrough-2026', readTime: '32 min', featured: true },
         { title: 'Agentic Workflow Orchestration 2026', slug: '/blog/agentic-workflow-orchestration-2026', readTime: '16 min', featured: true },
