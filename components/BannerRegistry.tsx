@@ -1,6 +1,7 @@
 import React from 'react';
 
 // Import all banner components
+import October2025DigitalTwinsBreakthroughBanner from './October2025DigitalTwinsBreakthroughBanner';
 import October2025CognitiveBusinessIntelligenceBanner from './October2025CognitiveBusinessIntelligenceBanner';
 import October2025NewContentShowcaseBanner from './October2025NewContentShowcaseBanner';
 import October2025BreakingContentBanner from './October2025BreakingContentBanner';
@@ -106,6 +107,14 @@ export const bannerRegistry: BannerConfig[] = [
   },
   
   // 2025 October Content - Most Recent Production Content
+  {
+    id: 'october-2025-digital-twins-breakthrough',
+    component: October2025DigitalTwinsBreakthroughBanner,
+    priority: 120,
+    datePublished: new Date('2025-10-01'),
+    category: 'breakthrough',
+    isActive: true,
+  },
   {
     id: 'october-2025-cognitive-bi',
     component: October2025CognitiveBusinessIntelligenceBanner,
