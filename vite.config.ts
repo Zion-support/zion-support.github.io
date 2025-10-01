@@ -25,15 +25,6 @@ export default defineConfig({
     minify: 'terser',
     cssMinify: true,
     rollupOptions: {
-      external: [
-        'next/link',
-        'next/router',
-        'next/image',
-        'next/head',
-        'next/script',
-        'next/dynamic',
-        'next/navigation'
-      ],
       input: {
         main: './index.html'
       },
