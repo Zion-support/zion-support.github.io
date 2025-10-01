@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { Clock, ArrowRight } from 'lucide-react';
+import RevolutionaryContentCarousel from '../components/RevolutionaryContentCarousel';
 import {
   NewBlogBanner,
   AnalyticsPlatformBanner,
@@ -115,6 +116,11 @@ export const metadata = {
 export default function HomePage() {
   return (
     <div className="animate-fade-in">
+      {/* 🚀 REVOLUTIONARY CONTENT CAROUSEL - NEW FEATURED CONTENT */}
+      <div className="max-w-6xl mx-auto px-4 py-8">
+        <RevolutionaryContentCarousel />
+      </div>
+      
       {/* 🔔 New October 1, 2025 Intelligent Edge Computing Promo */}
       <IntelligentEdgeComputingBanner />
       {/* 🚀 ULTIMATE 2026-2027 BREAKTHROUGH CONTENT - HIGHEST PRIORITY */}
