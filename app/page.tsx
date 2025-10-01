@@ -69,8 +69,15 @@ import October2025NewPracticalContentBanner from '../components/October2025NewPr
 import NewContentShowcaseOct2025 from '../components/NewContentShowcaseOct2025';
 import October2025NewContentBanner from '../components/October2025NewContentBanner';
 
+<<<<<<< HEAD
 // NEW OCTOBER 1, 2025 - AI PRODUCTIVITY REVOLUTION
 import October2025AIProductivityBanner from '../components/October2025AIProductivityBanner';
+=======
+// NEWEST OCTOBER 2025 CONTENT - PRODUCTION AI & SECURITY
+import ProductionAgenticAIBanner, { AgenticAIShowcaseBanner } from '../components/ProductionAgenticAIBanner';
+import AISecurityBanner, { AISecurityShowcaseBanner } from '../components/AISecurityBanner';
+import October2025NewPracticalContentBannerTop, { October2025PracticalContentShowcase } from '../components/October2025NewPracticalContentBanner';
+>>>>>>> origin/cursor/create-and-deploy-new-content-8e5c
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -81,6 +88,7 @@ export const metadata = {
 export default function HomePage() {
   return (
     <div className="animate-fade-in">
+<<<<<<< HEAD
 <<<<<<< HEAD
       {/* 🚀 BRAND NEW OCTOBER 1, 2025 - AI PRODUCTIVITY REVOLUTION */}
       <October2025AIProductivityBanner />
@@ -93,6 +101,13 @@ export default function HomePage() {
       <FederatedLearningPrivacyBanner />
       
 >>>>>>> origin/cursor/create-and-deploy-new-content-333b
+=======
+      {/* 🚀 NEWEST OCTOBER 2025 - PRODUCTION AGENTIC AI & SECURITY */}
+      <October2025NewPracticalContentBannerTop />
+      <ProductionAgenticAIBanner />
+      <AISecurityBanner />
+      
+>>>>>>> origin/cursor/create-and-deploy-new-content-8e5c
       {/* 🔥 BRAND NEW OCTOBER 2025 NEUROMORPHIC & FEDERATED LEARNING */}
       <section className="w-full bg-gradient-to-r from-purple-600 via-blue-600 to-teal-600 text-white py-4">
         <div className="max-w-6xl mx-auto px-4">
@@ -140,7 +155,10 @@ export default function HomePage() {
       {/* NEW OCTOBER 2025 CONTENT - TOP BANNER */}
       <October2025NewContentBanner />
       
-      {/* OCTOBER 2025 PRACTICAL CONTENT */}
+      {/* OCTOBER 2025 PRACTICAL CONTENT - DETAILED SHOWCASES */}
+      <October2025PracticalContentShowcase />
+      <AgenticAIShowcaseBanner />
+      <AISecurityShowcaseBanner />
       <October2025NewPracticalContentBanner />
       <NewContentShowcaseOct2025 />
       
