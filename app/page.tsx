@@ -42,7 +42,11 @@ import {
   MLPipelineOptimizationCaseStudyBanner,
   EnterpriseIntegrationBlogBanner,
   BankIntegrationCaseStudyBanner,
-  IntegrationPlatformServiceBanner
+  IntegrationPlatformServiceBanner,
+  NeuralQuantumConsciousnessBanner,
+  AutonomousEnterpriseTranscendenceBanner,
+  QuantumNeuralSuperintelligenceBanner,
+  Revolutionary2026ContentBanner
 } from '../components/PromotionalBanner';
 import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
 import NewContentShowcaseBanner from '../components/NewContentShowcaseBanner';
@@ -93,6 +97,12 @@ export const metadata = {
 export default function HomePage() {
   return (
     <div className="animate-fade-in">
+      {/* 🚀 NEW 2026 BREAKTHROUGH CONTENT - TOP PRIORITY */}
+      <Revolutionary2026ContentBanner />
+      <NeuralQuantumConsciousnessBanner />
+      <AutonomousEnterpriseTranscendenceBanner />
+      <QuantumNeuralSuperintelligenceBanner />
+      
       {/* 🔥 OCTOBER 2025 LATEST ENTERPRISE AI CONTENT - ABSOLUTE TOP PRIORITY */}
       <October2025NewContentMegaBanner />
       <EnterprisePlatformModernizationBanner />
