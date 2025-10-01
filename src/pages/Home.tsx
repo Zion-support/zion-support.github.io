@@ -929,11 +929,19 @@ const Home = () => {
         </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* New Services Promo 2026 */}
 =======
         {/* New Services Showcase */}
 >>>>>>> cursor/fix-errors-and-merge-to-main-d987
         <NewServicesPromoBanner2026 />
+=======
+        {/* New Services Showcase */}
+        <NewServicesPromoBanner 
+          variant="showcase"
+          showCount={6}
+        />
+>>>>>>> origin/main
         <NewServicesShowcase />
 
         {/* Latest Articles Promotional Section */}
