@@ -1,45 +1,37 @@
 #!/bin/bash
 
-# Script to merge multiple PRs efficiently
-# Usage: ./merge_prs.sh [number_of_prs_to_merge]
+# Script to merge open PRs into main branch
+echo "Starting PR merge process..."
 
-NUM_PR=${1:-10}  # Default to 10 PRs if no argument provided
-echo "Merging $NUM_PR PRs..."
+# PR numbers to merge
+PR_NUMBERS=(24633 24632)
 
-# Get list of unmerged PRs
-PRS=$(git branch -r --no-merged main | grep "cursor/" | head -$NUM_PR)
-
-for pr in $PRS; do
-    echo "Merging $pr..."
+for pr in "${PR_NUMBERS[@]}"; do
+    echo "Processing PR #$pr..."
+    
+    # Get PR details
+    PR_INFO=$(curl -s "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/$pr")
+    BRANCH_NAME=$(echo "$PR_INFO" | grep -o '"ref": "[^"]*"' | cut -d'"' -f4)
+    
+    if [ -z "$BRANCH_NAME" ]; then
+        echo "Could not get branch name for PR #$pr"
+        continue
+    fi
+    
+    echo "Branch: $BRANCH_NAME"
+    
+    # Fetch the branch
+    git fetch origin "$BRANCH_NAME"
     
     # Try to merge with conflict resolution
-    if git merge "$pr" --no-ff --allow-unrelated-histories -X theirs -m "Merge PR: $pr" 2>/dev/null; then
-        echo "✓ Successfully merged $pr"
+    echo "Attempting to merge $BRANCH_NAME..."
+    if git merge "origin/$BRANCH_NAME" --no-ff -m "Merge PR #$pr: $BRANCH_NAME" --strategy-option=ours; then
+        echo "Successfully merged PR #$pr"
     else
-        echo "⚠ Conflict in $pr, attempting to resolve..."
-        
-        # Check for common conflict patterns and resolve them
-        if git status --porcelain | grep -q "deleted by us"; then
-            # Handle modify/delete conflicts by adding the files
-            git status --porcelain | grep "deleted by us" | awk '{print $2}' | xargs -I {} git add {}
-        fi
-        
-        if git status --porcelain | grep -q "deleted by them"; then
-            # Handle files deleted by them
-            git status --porcelain | grep "deleted by them" | awk '{print $2}' | xargs -I {} git rm {}
-        fi
-        
-        # Add all remaining conflicts
+        echo "Merge conflict in PR #$pr, resolving with ours strategy..."
         git add .
-        
-        # Commit the merge
-        if git commit -m "Merge PR: $pr - Resolved conflicts"; then
-            echo "✓ Successfully merged $pr with conflict resolution"
-        else
-            echo "✗ Failed to merge $pr, aborting..."
-            git merge --abort
-        fi
+        git commit -m "Resolve conflicts for PR #$pr using ours strategy"
     fi
 done
 
-echo "Completed merging $NUM_PR PRs"
+echo "All PRs processed!"

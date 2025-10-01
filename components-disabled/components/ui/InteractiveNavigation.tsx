@@ -5,7 +5,6 @@ export default Component}
 ;
 export default Component}
 
->>>>>>>
 const "InteractiveNavigation": React."FC": = () => {";"
     <nav className="bg - white shadow - lg">";";"
       <"div": className="container mx - auto px - 4">";";"

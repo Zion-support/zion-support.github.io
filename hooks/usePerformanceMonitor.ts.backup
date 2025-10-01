@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-;
-interface PerformanceMetrics {
-=======
-
-
->>>>>>> main
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
 
   useEffect(() => {
@@ -177,7 +170,3 @@ if ( {) {
 ;
   return { metrics, is_supported }
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> main

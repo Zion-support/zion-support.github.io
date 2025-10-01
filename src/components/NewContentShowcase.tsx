@@ -1,270 +1,106 @@
 import React from 'react';
-import { ArrowRight, Sparkles, TrendingUp, Clock, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { newBlogPosts, featuredNewPosts, trendingNewPosts } from '../content/new-blog-posts';
-import { newCaseStudies, featuredNewCaseStudies } from '../content/new-case-studies';
-import { newServices, featuredNewServices } from '../content/new-services';
+import { ArrowRight, BookOpen, Rocket } from 'lucide-react';
+import { newArticles2025 } from '../content/new-articles-2025';
+import { newServices2026 } from '../content/new-services-2026';
 
 const NewContentShowcase: React.FC = () => {
-  const latestPosts = newBlogPosts.slice(0, 3);
-  const latestCaseStudies = newCaseStudies.slice(0, 3);
-  const latestServices = newServices.slice(0, 3);
+  const topArticles = newArticles2025.slice(0, 3);
+  const topServices = newServices2026.slice(0, 3);
 
   return (
-    <div className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-zion-cyan rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-zion-purple rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float" style={{ animationDelay: "2s" }}></div>
-        <div className="absolute top-40 left-1/2 w-60 h-60 bg-zion-blue-light rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float" style={{ animationDelay: "4s" }}></div>
-      </div>
-
-      <div className="container mx-auto px-6 relative z-10">
-        {/* Header */}
+    <section className="py-20 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
+      <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center px-6 py-3 rounded-full bg-zion-cyan/20 text-zion-cyan text-sm font-medium mb-8 animate-fade-in border border-zion-cyan/30 shadow-lg">
-            <Sparkles className="w-4 h-4 mr-2 animate-pulse" />
-            Fresh Content & Revolutionary Services
-            <Sparkles className="w-4 h-4 ml-2 animate-pulse" />
+          <div className="inline-flex items-center px-4 py-2 bg-purple-100 rounded-full text-purple-700 font-semibold mb-4">
+            🌟 JUST RELEASED
           </div>
-          
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 animate-slide-up">
-            <span className="bg-gradient-to-r from-zion-cyan to-zion-blue-light bg-clip-text text-transparent">
-              Latest Innovations
-            </span>
+          <h2 className="text-5xl font-bold text-gray-900 mb-4">
+            New Content & Services
           </h2>
-          
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto animate-fade-in">
-            Discover our newest AI solutions, breakthrough case studies, and cutting-edge content 
-            that's transforming businesses worldwide.
+          <p className="text-2xl text-gray-600 max-w-3xl mx-auto">
+            Explore our latest breakthrough articles and revolutionary services
           </p>
         </div>
 
-        {/* New Services Section */}
-        <section className="mb-20">
-          <div className="flex items-center justify-between mb-12">
-            <div>
-              <h3 className="text-3xl font-bold text-white mb-2">🚀 Revolutionary Services</h3>
-              <p className="text-zion-slate-light">Breakthrough AI solutions that are reshaping industries</p>
+        <div className="grid lg:grid-cols-2 gap-12 mb-12">
+          {/* Articles Section */}
+          <div>
+            <div className="flex items-center gap-3 mb-6">
+              <BookOpen className="w-8 h-8 text-indigo-600" />
+              <h3 className="text-3xl font-bold text-gray-900">Latest Articles</h3>
             </div>
-            <Link to="/services" className="text-zion-cyan hover:text-white transition-colors flex items-center gap-2">
-              View All Services
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {latestServices.map((service) => (
-              <div key={service.id} className="card group hover:scale-105 transition-all duration-300 hover:shadow-2xl">
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="text-4xl">{service.icon}</div>
-                    <div className="flex gap-2">
-                      {service.newBadge && (
-                        <span className="bg-green-500 text-white text-xs px-2 py-1 rounded-full font-bold">
-                          NEW
-                        </span>
-                      )}
-                      {service.trending && (
-                        <span className="bg-orange-500 text-white text-xs px-2 py-1 rounded-full font-bold flex items-center gap-1">
-                          <TrendingUp className="w-3 h-3" />
-                          TRENDING
-                        </span>
-                      )}
-                      {service.pricing.popular && (
-                        <span className="bg-purple-500 text-white text-xs px-2 py-1 rounded-full font-bold">
-                          POPULAR
-                        </span>
-                      )}
-                    </div>
-                  </div>
-                  
-                  <h4 className="text-xl font-bold text-white mb-3">{service.title}</h4>
-                  <p className="text-zion-slate-light mb-4 text-sm">{service.description}</p>
-                  
-                  <div className="grid grid-cols-3 gap-2 mb-4">
-                    {service.metrics.slice(0, 3).map((metric, index) => (
-                      <div key={index} className="text-center">
-                        <div className="text-lg font-bold text-zion-cyan">{metric.value}</div>
-                        <div className="text-xs text-zion-slate">{metric.label}</div>
-                      </div>
-                    ))}
-                  </div>
-                  
-                  <div className="flex gap-2">
-                    <Link
-                      to={service.ctaLink || `/services/${service.slug}`}
-                      className="flex-1 bg-zion-cyan text-zion-blue-dark hover:bg-zion-blue-light px-4 py-2 rounded-lg font-semibold text-center transition-colors text-sm"
-                    >
-                      {service.cta.primary}
-                    </Link>
-                    <Link
-                      to={`/services/${service.slug}`}
-                      className="border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark px-4 py-2 rounded-lg font-semibold text-center transition-colors text-sm"
-                    >
-                      Learn More
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* New Blog Posts Section */}
-        <section className="mb-20">
-          <div className="flex items-center justify-between mb-12">
-            <div>
-              <h3 className="text-3xl font-bold text-white mb-2">📚 Latest Articles</h3>
-              <p className="text-zion-slate-light">Fresh insights on AI, quantum computing, and cybersecurity</p>
-            </div>
-            <Link to="/blog" className="text-zion-cyan hover:text-white transition-colors flex items-center gap-2">
-              View All Articles
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {latestPosts.map((post) => (
-              <article key={post.id} className="card group hover:scale-105 transition-all duration-300 hover:shadow-2xl">
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-xs uppercase tracking-wider text-zion-cyan bg-zion-cyan/20 px-2 py-1 rounded">
-                      {post.category}
+            <div className="space-y-4">
+              {topArticles.map((article) => (
+                <Link
+                  key={article.id}
+                  to={article.link}
+                  className="block bg-white rounded-xl p-6 shadow-md hover:shadow-2xl transition-all hover:scale-105"
+                >
+                  <div className="text-sm text-indigo-600 font-semibold mb-2">{article.category}</div>
+                  <h4 className="text-xl font-bold text-gray-900 mb-2">{article.title}</h4>
+                  <p className="text-gray-600 text-sm mb-3 line-clamp-2">{article.description}</p>
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-gray-500">{article.readTime}</span>
+                    <span className="text-indigo-600 font-semibold flex items-center gap-1">
+                      Read More <ArrowRight className="w-4 h-4" />
                     </span>
-                    <div className="flex gap-1">
-                      {post.newBadge && (
-                        <span className="bg-green-500 text-white text-xs px-2 py-1 rounded-full font-bold">
-                          NEW
-                        </span>
-                      )}
-                      {post.trending && (
-                        <span className="bg-orange-500 text-white text-xs px-2 py-1 rounded-full font-bold flex items-center gap-1">
-                          <TrendingUp className="w-3 h-3" />
-                          HOT
-                        </span>
-                      )}
-                    </div>
                   </div>
-                  
-                  <h4 className="text-xl font-bold text-white mb-3">{post.title}</h4>
-                  <p className="text-zion-slate-light mb-4 text-sm">{post.excerpt}</p>
-                  
-                  <div className="flex items-center justify-between text-sm text-zion-slate mb-4">
-                    <div className="flex items-center gap-1">
-                      <Clock className="w-3 h-3" />
-                      {post.readTime}
-                    </div>
-                    <span>{new Date(post.date).toLocaleDateString()}</span>
-                  </div>
-                  
-                  <Link
-                    to={`/blog/${post.slug}`}
-                    className="text-zion-cyan hover:text-white font-semibold flex items-center gap-2 transition-colors"
-                  >
-                    Read Article
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        {/* New Case Studies Section */}
-        <section className="mb-20">
-          <div className="flex items-center justify-between mb-12">
-            <div>
-              <h3 className="text-3xl font-bold text-white mb-2">🏆 Success Stories</h3>
-              <p className="text-zion-slate-light">Real results from companies using our AI solutions</p>
+                </Link>
+              ))}
             </div>
-            <Link to="/case-studies" className="text-zion-cyan hover:text-white transition-colors flex items-center gap-2">
-              View All Case Studies
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {latestCaseStudies.map((study) => (
-              <div key={study.id} className="card group hover:scale-105 transition-all duration-300 hover:shadow-2xl">
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-xs uppercase tracking-wider text-zion-cyan bg-zion-cyan/20 px-2 py-1 rounded">
-                      {study.industry}
-                    </span>
-                    <div className="flex gap-1">
-                      {study.newBadge && (
-                        <span className="bg-green-500 text-white text-xs px-2 py-1 rounded-full font-bold">
-                          NEW
-                        </span>
-                      )}
-                      {study.trending && (
-                        <span className="bg-orange-500 text-white text-xs px-2 py-1 rounded-full font-bold flex items-center gap-1">
-                          <Star className="w-3 h-3" />
-                          FEATURED
-                        </span>
-                      )}
-                    </div>
-                  </div>
-                  
-                  <h4 className="text-xl font-bold text-white mb-3">{study.title}</h4>
-                  <p className="text-zion-slate-light mb-4 text-sm">{study.excerpt}</p>
-                  
-                  <div className="space-y-2 mb-4">
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-zion-cyan">{study.metrics.primary}</div>
-                      <div className="text-xs text-zion-slate">Primary Result</div>
-                    </div>
-                    {study.metrics.secondary && (
-                      <div className="text-center">
-                        <div className="text-lg font-semibold text-zion-blue-light">{study.metrics.secondary}</div>
-                        <div className="text-xs text-zion-slate">Secondary Result</div>
-                      </div>
-                    )}
-                  </div>
-                  
-                  <Link
-                    to={`/case-studies/${study.slug}`}
-                    className="text-zion-cyan hover:text-white font-semibold flex items-center gap-2 transition-colors"
-                  >
-                    View Case Study
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <div className="text-center">
-          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Ready to Transform Your Business?
-            </h3>
-            <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
-              Join the companies already achieving breakthrough results with our AI solutions. 
-              Start your transformation journey today.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="mt-6 text-center">
               <Link
-                to="/contact"
-                className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-blue-light px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2"
+                to="/blog"
+                className="inline-flex items-center gap-2 text-indigo-600 font-bold hover:text-indigo-800"
               >
-                <Sparkles className="w-5 h-5" />
-                Start Your Journey
+                View All Articles
+                <ArrowRight className="w-5 h-5" />
               </Link>
+            </div>
+          </div>
+
+          {/* Services Section */}
+          <div>
+            <div className="flex items-center gap-3 mb-6">
+              <Rocket className="w-8 h-8 text-purple-600" />
+              <h3 className="text-3xl font-bold text-gray-900">New Services</h3>
+            </div>
+            <div className="space-y-4">
+              {topServices.map((service) => (
+                <Link
+                  key={service.id}
+                  to={service.link}
+                  className="block bg-white rounded-xl p-6 shadow-md hover:shadow-2xl transition-all hover:scale-105"
+                >
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-2xl">{service.icon}</span>
+                    <span className="text-sm text-purple-600 font-semibold">{service.category}</span>
+                  </div>
+                  <h4 className="text-xl font-bold text-gray-900 mb-2">{service.name}</h4>
+                  <p className="text-gray-600 text-sm mb-3 line-clamp-2">{service.description}</p>
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-gray-700 font-semibold">{service.pricing}</span>
+                    <span className="text-purple-600 font-semibold flex items-center gap-1">
+                      Learn More <ArrowRight className="w-4 h-4" />
+                    </span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+            <div className="mt-6 text-center">
               <Link
                 to="/services"
-                className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
+                className="inline-flex items-center gap-2 text-purple-600 font-bold hover:text-purple-800"
               >
-                Explore Services
+                View All Services
+                <ArrowRight className="w-5 h-5" />
               </Link>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

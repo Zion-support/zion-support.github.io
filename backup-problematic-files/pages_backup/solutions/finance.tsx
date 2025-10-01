@@ -1,6 +1,6 @@
 import Layout from '../../components/Layout';
 import {DollarSign,, Shield,, TrendingUp,, Users,, Database} from 'lucide-react';
-import React from 'react';
+
 import Layout from '../../components/Layout';';
 import {DollarSign,, Shield,, TrendingUp,, Users,, Database,, CheckCircle,, ArrowRight} from 'lucide-react';
 const features = [;
@@ -29,7 +29,7 @@ const features = [;
     title: 'Fraud Detection,',;
     description: 'Real-time fraud detection and prevention systems using advanced analytics.'', import Layout from '../../components/Layout',;
 import { DollarSign, Shield, TrendingUp, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
-import React from 'react';
+
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';

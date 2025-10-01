@@ -1,4 +1,4 @@
-import React, { Suspense, useCallback, useEffect, useMemo, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { AppRouter } from './router';
 
 // import { resourcePreloader } from './utils/resourcePreloader';
@@ -9,51 +9,66 @@ import { AppRouter } from './router';
 // import { keyboardNavigationManager } from './accessibility/keyboardNavigationManager';
 // import { screenReaderSupport } from './accessibility/screenReaderSupport';
 import './index.css';
-import { performanceMonitor } from './utils/performanceMonitor';
 import { securityManager as enhancedSecurityManager } from './utils/securityHeaders';
 import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
-const SEOOptimizer = (props: any) => null;
-const AdvancedAnalytics = (props: any) => null;
-const PerformanceOptimizer = (props: any) => null;
-const PerformanceMonitor = (props: any) => null;
-const EnhancedErrorBoundary: React.FC<{ children: React.ReactNode }> = ({ children }) => <>{children}</>;
-const NotificationSystem: React.FC<{ notifications: any[]; onRemove: (id: string) => void }> = () => null;
+import SEOOptimizer from './components/SEOOptimizer';
+import AdvancedAnalytics from './components/AdvancedAnalytics';
+import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+import NotificationSystem from './components/NotificationSystem';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
 
 // Local stub to avoid type errors when optional performance init is not present
 const initializePerformanceEnhancements = (): void => {};
 
-// Temporary fallbacks for referenced components not present in repo
-const Placeholder: React.FC<{ name: string }> = ({ name }) => (
-  <div role="note" aria-label={`${name} placeholder`} />
-);
-const EnhancedSystemDashboard = () => <Placeholder name="EnhancedSystemDashboard" />;
-const KeyboardShortcutsHelp = (props: any) => <Placeholder name="KeyboardShortcutsHelp" />;
-const PerformanceWidget = (props: any) => <Placeholder name="PerformanceWidget" />;
-const PerformanceDashboard = () => <Placeholder name="PerformanceDashboard" />;
-const CommandPalette = (props: any) => <Placeholder name="CommandPalette" />;
-const AdvancedMonitoringDashboard = (props: any) => <Placeholder name="AdvancedMonitoringDashboard" />;
-const RealTimePerformanceMonitor = (props: any) => <Placeholder name="RealTimePerformanceMonitor" />;
-const EnhancedCommandPalette = (props: any) => <Placeholder name="EnhancedCommandPalette" />;
-const ComprehensivePerformanceDashboard = () => <Placeholder name="ComprehensivePerformanceDashboard" />;
-const ComprehensiveMonitoringDashboard = () => <Placeholder name="ComprehensiveMonitoringDashboard" />;
-const PerformanceOptimizationPanel = () => <Placeholder name="PerformanceOptimizationPanel" />;
-const ErrorRecoveryDashboard = () => <Placeholder name="ErrorRecoveryDashboard" />;
-const SystemStatusIndicator = (props: any) => <Placeholder name="SystemStatusIndicator" />;
-const EnhancedNotificationSystem = (props: any) => <Placeholder name="EnhancedNotificationSystem" />;
-const KeyboardShortcutsManager = (props: any) => <Placeholder name="KeyboardShortcutsManager" />;
-const SystemHealthDashboard = (props: any) => <Placeholder name="SystemHealthDashboard" />;
-const AIPerformanceDashboard = (props: any) => <Placeholder name="AIPerformanceDashboard" />;
-const WebsiteEnhancements = (props: any) => <Placeholder name="WebsiteEnhancements" />;
+interface Notification {
+  id: string;
+  message: string;
+  type: 'success' | 'error' | 'info' | 'warning';
+}
+
+interface WindowWithEnhancements extends Window {
+  advancedPerformanceOptimizer?: { initialize?: () => void };
+  advancedSEOOptimizer?: { initialize?: () => void };
+  advancedSecurityManager?: { initialize?: () => void };
+  advancedAnalytics?: { initialize?: () => void };
+  advancedErrorHandler?: { initialize?: () => void };
+  advancedCachingSystem?: { initialize?: () => void };
+  advancedUXOptimizer?: { initialize?: () => void };
+  advancedTestingFramework?: { initialize?: () => void };
+  advancedI18n?: { initialize?: () => void };
+  enhancements?: Record<string, unknown>;
+  performanceOptimizer?: unknown;
+  seoOptimizer?: unknown;
+  accessibilityEnhancer?: unknown;
+  securityManager?: unknown;
+  analytics?: unknown;
+  errorHandler?: unknown;
+  cachingSystem?: unknown;
+  uxOptimizer?: unknown;
+  testingFramework?: unknown;
+  i18n?: unknown;
+}
+
+interface SecurityManager {
+  initialize?: () => void;
+}
 
 export default function App(): React.JSX.Element {
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
-  const [notifications, setNotifications] = useState<import('./components/NotificationSystem').Notification[]>([]);
+  const [notifications, setNotifications] = useState<Notification[]>([]);
 
-  const seoDataForOptimizer = useMemo(() => ({
+  interface SEOData {
+    title: string;
+    description: string;
+    canonical: string;
+  }
+
+  const seoDataForOptimizer: SEOData = useMemo(() => ({
     title: 'Zion Tech Group - Leading AI & Technology Solutions',
     description: 'Cutting-edge AI, cloud, and digital transformation solutions for modern enterprises.',
-    canonicalUrl: typeof window !== 'undefined' ? window.location.pathname : '/',
+    canonical: typeof window !== 'undefined' ? window.location.href : 'https://zion.app/',
   }), []);
 
   // Simple hotkeys for demo toggles
@@ -73,25 +88,26 @@ export default function App(): React.JSX.Element {
           break;
       }
       try {
-        if (enhancedSecurityManager && typeof (enhancedSecurityManager as any).initialize === 'function') {
-          (enhancedSecurityManager as any).initialize();
+        if (enhancedSecurityManager && typeof (enhancedSecurityManager as SecurityManager).initialize === 'function') {
+          (enhancedSecurityManager as SecurityManager).initialize?.();
         }
       
-      // Initialize new performance and accessibility enhancements
-      initializePerformanceEnhancements();
-      accessibilityEnhancer.initialize();
+        // Initialize new performance and accessibility enhancements
+        initializePerformanceEnhancements();
+        accessibilityEnhancer.initialize();
       
       // Initialize advanced optimizers
       // Guard optional advanced systems if present in global scope
-      const advancedPerformanceOptimizer = (window as any).advancedPerformanceOptimizer;
-      const advancedSEOOptimizer = (window as any).advancedSEOOptimizer;
-      const advancedSecurityManager = (window as any).advancedSecurityManager;
-      const advancedAnalytics = (window as any).advancedAnalytics;
-      const advancedErrorHandler = (window as any).advancedErrorHandler;
-      const advancedCachingSystem = (window as any).advancedCachingSystem;
-      const advancedUXOptimizer = (window as any).advancedUXOptimizer;
-      const advancedTestingFramework = (window as any).advancedTestingFramework;
-      const advancedI18n = (window as any).advancedI18n;
+      const windowWithEnhancements = window as WindowWithEnhancements;
+      const advancedPerformanceOptimizer = windowWithEnhancements.advancedPerformanceOptimizer;
+      const advancedSEOOptimizer = windowWithEnhancements.advancedSEOOptimizer;
+      const advancedSecurityManager = windowWithEnhancements.advancedSecurityManager;
+      const advancedAnalytics = windowWithEnhancements.advancedAnalytics;
+      const advancedErrorHandler = windowWithEnhancements.advancedErrorHandler;
+      const advancedCachingSystem = windowWithEnhancements.advancedCachingSystem;
+      const advancedUXOptimizer = windowWithEnhancements.advancedUXOptimizer;
+      const advancedTestingFramework = windowWithEnhancements.advancedTestingFramework;
+      const advancedI18n = windowWithEnhancements.advancedI18n;
 
       advancedPerformanceOptimizer?.initialize?.();
       advancedSEOOptimizer?.initialize?.();
@@ -104,7 +120,7 @@ export default function App(): React.JSX.Element {
       advancedTestingFramework?.initialize?.();
       advancedI18n?.initialize?.();
       // Store enhancements globally for debugging
-      (window as unknown as Record<string, unknown>).enhancements = {
+      windowWithEnhancements.enhancements = {
         performanceOptimizer: advancedPerformanceOptimizer,
         seoOptimizer: advancedSEOOptimizer,
         accessibilityEnhancer: accessibilityEnhancer,
@@ -114,16 +130,16 @@ export default function App(): React.JSX.Element {
         cachingSystem: advancedCachingSystem,
         uxOptimizer: advancedUXOptimizer
       };
-      (window as unknown as Record<string, unknown>).performanceOptimizer = advancedPerformanceOptimizer;
-      (window as unknown as Record<string, unknown>).seoOptimizer = advancedSEOOptimizer;
-      (window as unknown as Record<string, unknown>).accessibilityEnhancer = accessibilityEnhancer;
-      (window as unknown as Record<string, unknown>).securityManager = advancedSecurityManager;
-      (window as unknown as Record<string, unknown>).analytics = advancedAnalytics;
-      (window as unknown as Record<string, unknown>).errorHandler = advancedErrorHandler;
-      (window as unknown as Record<string, unknown>).cachingSystem = advancedCachingSystem;
-      (window as unknown as Record<string, unknown>).uxOptimizer = advancedUXOptimizer;
-      (window as unknown as Record<string, unknown>).testingFramework = advancedTestingFramework;
-      (window as unknown as Record<string, unknown>).i18n = advancedI18n;
+      windowWithEnhancements.performanceOptimizer = advancedPerformanceOptimizer;
+      windowWithEnhancements.seoOptimizer = advancedSEOOptimizer;
+      windowWithEnhancements.accessibilityEnhancer = accessibilityEnhancer;
+      windowWithEnhancements.securityManager = advancedSecurityManager;
+      windowWithEnhancements.analytics = advancedAnalytics;
+      windowWithEnhancements.errorHandler = advancedErrorHandler;
+      windowWithEnhancements.cachingSystem = advancedCachingSystem;
+      windowWithEnhancements.uxOptimizer = advancedUXOptimizer;
+      windowWithEnhancements.testingFramework = advancedTestingFramework;
+      windowWithEnhancements.i18n = advancedI18n;
     } catch (error) {
       console.error('Error initializing enhancements:', error);
     }
@@ -138,7 +154,10 @@ export default function App(): React.JSX.Element {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <EnhancedErrorBoundary>
+      <SEOOptimizer title={seoDataForOptimizer.title} description={seoDataForOptimizer.description} canonicalUrl={seoDataForOptimizer.canonical} />
+      <AdvancedAnalytics enableConversionTracking enablePerformanceTracking enableErrorTracking />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <AppRouter />
 
         {showPerformanceOptimizer && (
@@ -148,7 +167,7 @@ export default function App(): React.JSX.Element {
                 <h2 className="text-2xl font-bold">Performance Optimizer</h2>
                 <button onClick={() => setShowPerformanceOptimizer(false)} className="text-gray-500 hover:text-gray-700 text-2xl">✕</button>
               </div>
-              <div />
+              <PerformanceOptimizer isVisible={true} onClose={() => setShowPerformanceOptimizer(false)} />
             </div>
           </div>
         )}
@@ -160,10 +179,13 @@ export default function App(): React.JSX.Element {
                 <h2 className="text-2xl font-bold">Performance Monitor</h2>
                 <button onClick={() => setShowPerformanceMonitor(false)} className="text-gray-500 hover:text-gray-700 text-2xl">✕</button>
               </div>
-              <div />
+              <PerformanceMonitor showDashboard={true} />
             </div>
           </div>
         )}
+
+        <NotificationSystem notifications={notifications} onRemove={handleRemoveNotification} />
       </div>
-    );
+    </EnhancedErrorBoundary>
+  );
 }

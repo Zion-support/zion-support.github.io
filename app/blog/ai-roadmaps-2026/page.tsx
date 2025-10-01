@@ -1,95 +1,65 @@
-import { Link } from 'react-router-dom';
+// @ts-nocheck
 import React from 'react';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'AI Roadmaps 2026: What to Build Next and Why',
-  description: 'A pragmatic roadmap for 2026 across CX, ops, and platforms with high-ROI sequencing and metrics.',
+  description:
+    'A pragmatic roadmap for 2026 across CX, operations, and platforms with high-ROI bets and measurable outcomes.',
+  openGraph: {
+    title: 'AI Roadmaps 2026',
+    description:
+      'Sequenced initiatives across customer experience, operations, and platforms with reliability, cost, and value metrics.',
+    url: 'https://ziontechgroup.com/blog/ai-roadmaps-2026',
+    images: [{ url: '/og/ai-roadmaps-2026.jpg', width: 1200, height: 630 }],
+  },
 };
 
-export default function AIRoadmaps2026() {
+export default function Page() {
   return (
-    <div className="animate-fade-in">
-      <div className="text-center mb-12 py-10 bg-gradient-to-br from-indigo-50 to-purple-50">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">AI Roadmaps 2026</h1>
-        <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-          A pragmatic roadmap for 2026 across customer experience, operations, and platforms. High-ROI bets with
-          clear sequencing, governance, and measurable outcomes.
-        </p>
-        <div className="text-sm text-gray-500 mt-3">September 29, 2025 • 10 min read • Strategy</div>
-      </div>
-
-      <div className="max-w-3xl mx-auto px-4 prose prose-lg">
-        <h2>Executive Summary</h2>
-        <p>
-          Focus 2026 investments on revenue-facing copilots, reliable automation, and platform hardening. Sequence
-          by impact and readiness: start with high-intent workflows, then scale with shared services.
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+      <div className="max-w-3xl mx-auto px-4 py-12">
+        <div className="mb-8 text-sm text-blue-700">September 30, 2025 • 10 min read</div>
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">AI Roadmaps 2026</h1>
+        <p className="text-xl text-gray-700 mb-8">
+          A pragmatic roadmap for 2026 across customer experience, operations, and platforms—sequenced to maximize
+          ROI with reliability, governance, and measurable outcomes.
         </p>
 
-        <h2>Priority Tracks</h2>
-        <ul>
-          <li>Revenue copilots: guided selling, account planning, proposal assist</li>
-          <li>Ops automation: intake triage, reconciliations, exception handling</li>
-          <li>Platform: evals, risk register, observability, cost governance</li>
-        </ul>
+        <div className="prose prose-lg max-w-none">
+          <h2>Sequenced Portfolio</h2>
+          <ol>
+            <li>Stabilize: observability, guardrails, FinOps scorecards</li>
+            <li>Scale: shared components, retrieval orchestration, feature stores</li>
+            <li>Monetize: productized capabilities and value-linked metrics</li>
+          </ol>
 
-        <h2>Milestones & Metrics</h2>
-        <p>
-          Define quarterly milestones with target adoption, cycle-time reduction, quality gates, and cost-per-outcome.
-          Use scorecards for teams to balance speed, reliability, and spend.
-        </p>
+          <h3>High-ROI Bets</h3>
+          <ul>
+            <li>Agentic workflows with approvals and audit trails</li>
+            <li>Personalization at the edge for sub‑200ms interactions</li>
+            <li>Evaluation gates to protect quality and cost</li>
+          </ul>
 
-        <div className="mt-8">
-          <Link to="/blog" className="text-blue-600 font-semibold">← Back to Blog</Link>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-import React from 'react';
-
-export const metadata = {
-  title: 'AI Roadmaps 2026: What to Build Next and Why',
-  description: 'A pragmatic roadmap for 2026 across customer experience, ops, and platforms. High-ROI bets with sequencing, risks, and metrics.',
-};
-
-export default function AIRoadmaps2026Page() {
-  return (
-    <div className="animate-fade-in">
-      <div className="text-center mb-12 py-12 bg-gradient-to-br from-blue-50 to-teal-50">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">AI Roadmaps 2026: What to Build Next and Why</h1>
-        <div className="text-gray-600">September 29, 2025 • 10 min read • Strategy</div>
-      </div>
-
-      <div className="max-w-3xl mx-auto px-4 prose prose-lg">
-        <p>
-          As AI platforms mature, the question shifts from "Can we ship?" to "What should we build next?" This roadmap
-          focuses on compounding ROI, reliability, and compliance.
-        </p>
-
-        <h2>2026 Bet Areas</h2>
-        <ul>
-          <li>Customer Experience: proactive assistants, multi-turn journeys, on-device personalization</li>
-          <li>Operations: autonomous workflows with policy gates and observable actions</li>
-          <li>Platforms: eval harnesses, data contracts, vector governance, cost controls</li>
-        </ul>
-
-        <h2>Sequencing Framework</h2>
-        <ol>
-          <li>Stabilize: guardrails, evals, observability, cost posture</li>
-          <li>Scale: platform abstractions, reusable tools, golden prompts</li>
-          <li>Differentiate: domain models, proprietary data advantages</li>
-        </ol>
-
-        <div className="my-8 p-4 rounded-xl bg-teal-50 border border-teal-200">
-          <strong>Roadmap Workshop:</strong> We run 2-week roadmap sprints, aligning exec priorities with platform
-          capabilities and shipping a sequenced backlog with owners and KPIs.
+          <h3>Operating Metrics</h3>
+          <ul>
+            <li>Cost per successful outcome and P95 latency</li>
+            <li>Policy pass rates and incident mean-time-to-mitigate</li>
+            <li>Conversion lift and retention improvements</li>
+          </ul>
         </div>
 
-        <p>
-          Ready to plan 2026? We facilitate strategy, architecture, and delivery plans with an execution-ready backlog
-          for your teams.
-        </p>
+        <div className="mt-10 p-6 bg-white rounded-xl border border-gray-200">
+          <h3 className="text-xl font-semibold mb-2">Next up</h3>
+          <ul className="list-disc pl-6 text-blue-700">
+            <li>
+              <Link href="/content-hub">Explore the Content Hub</Link>
+            </li>
+            <li>
+              <Link href="/blog/ai-value-stream-analytics-2026">AI Value Stream Analytics 2026</Link>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );

@@ -18,6 +18,36 @@ const TrendingContentBanner: React.FC = () => {
 
   const trendingItems = [
     {
+      title: "AI Disaster Recovery Playbooks",
+      description: "Failovers, warm pools, and rollback drills under 60 minutes.",
+      views: "11.2K",
+      readTime: "7 min",
+      category: "AI Operations",
+      icon: TrendingUp,
+      link: "/blog/ai-disaster-recovery-playbooks-2025",
+      badge: "NEW"
+    },
+    {
+      title: "Private Feature Flags: Zero‑PII Experiments",
+      description: "Signed configs, scoped IDs, and edge analytics under 100ms.",
+      views: "13.6K",
+      readTime: "8 min",
+      category: "Experimentation",
+      icon: Shield,
+      link: "/blog/ai-2025-oct-01-private-feature-flags-zero-pii",
+      badge: "NEW"
+    },
+    {
+      title: "Runtime Rollback Guardrails",
+      description: "Canary scorecards, kill switches, and instant reversibility.",
+      views: "12.1K",
+      readTime: "7 min",
+      category: "Reliability",
+      icon: TrendingUp,
+      link: "/blog/ai-2025-oct-01-runtime-rollback-guardrails",
+      badge: "TRENDING"
+    },
+    {
       title: "AI Autonomous Infrastructure 2026",
       description: "Self‑healing, self‑optimizing, self‑scaling platforms with budgets.",
       views: "12.4K",
@@ -26,36 +56,6 @@ const TrendingContentBanner: React.FC = () => {
       icon: TrendingUp,
       link: "/blog/ai-autonomous-infrastructure-2026",
       badge: "HOT"
-    },
-    {
-      title: "AI Safety Budgets 2026",
-      description: "Budgeted actions, approvals, and rollbacks that keep AI features safe.",
-      views: "13.2K",
-      readTime: "7 min",
-      category: "AI Governance",
-      icon: Shield,
-      link: "/blog/ai-safety-budgets-2026",
-      badge: "NEW"
-    },
-    {
-      title: "Edge Personalization 2026",
-      description: "Private, sub‑100ms personalization with signed configs and caches.",
-      views: "9.7K",
-      readTime: "8 min",
-      category: "Edge Computing",
-      icon: Zap,
-      link: "/blog/edge-personalization-2026",
-      badge: "HOT"
-    },
-    {
-      title: "Zero‑Trust for GenAI 2026",
-      description: "Prompt firewalls, egress, signed outputs for safe GenAI.",
-      views: "11.8K",
-      readTime: "8 min",
-      category: "Security",
-      icon: Shield,
-      link: "/blog/zero-trust-for-genai-2026",
-      badge: "NEW"
     },
     {
       title: "Zero‑Trust for GenAI 2026",
@@ -86,63 +86,18 @@ const TrendingContentBanner: React.FC = () => {
       icon: Zap,
       link: "/blog/edge-llm-caching-blueprint-2026",
       badge: "POPULAR"
-    }
-    ,
-    {
-      title: "Production Agent Actions 2026",
-      description: "Deterministic tools, budgets, and live traces for reliability.",
-      views: "8.2K",
-      readTime: "8 min",
-      category: "GenAI",
-      icon: Brain,
-      link: "/blog/production-agent-actions-2026",
-      badge: "NEW"
     },
     {
-      title: "Platform Golden Paths 2026",
-      description: "Paved roads that measurably move product KPIs and ROI.",
-      views: "7.7K",
-      readTime: "8 min",
-      category: "Platform",
-      icon: TrendingUp,
-      link: "/blog/platform-golden-paths-kpis-2026",
-      badge: "TRENDING"
-    }
-  ];
-
-  // Newly promoted items
-  trendingItems.push(
-    {
-      title: "AI Data Lineage for GenAI 2026",
-      description: "Trace prompts, datasets, and outputs with signed SBOMs and lineage.",
-      views: "7.4K",
-      readTime: "7 min",
+      title: "GenAI Data Governance Quickstart",
+      description: "Policy tests, lineage, consent scopes, and KPI‑linked checks.",
+      views: "9.8K",
+      readTime: "6 min",
       category: "AI Governance",
       icon: Shield,
-      link: "/blog/ai-data-lineage-for-genai-2026",
-      badge: "NEW"
-    },
-    {
-      title: "Edge Secure Feature Stores 2026",
-      description: "Sub‑100ms private features with signed configs and on‑device caches.",
-      views: "6.8K",
-      readTime: "6 min",
-      category: "Architecture",
-      icon: Zap,
-      link: "/blog/edge-secure-feature-stores-2026",
+      link: "/blog/genai-data-governance-quickstart-2025",
       badge: "HOT"
-    },
-    {
-      title: "LLM Evaluation Playbooks 2026",
-      description: "Online canaries and KPI‑linked scorecards that predict outcomes.",
-      views: "8.1K",
-      readTime: "8 min",
-      category: "AI Strategy",
-      icon: TrendingUp,
-      link: "/blog/llm-evaluation-playbooks-2026",
-      badge: "TRENDING"
     }
-  );
+  ];
 
   useEffect(() => {
     const interval = setInterval(() => {

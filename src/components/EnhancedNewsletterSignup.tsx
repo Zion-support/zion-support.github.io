@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 
 interface Props {
   title?: string;
@@ -5,8 +6,7 @@ interface Props {
   className?: string;
 }
 
-export default function EnhancedNewsletterSignup(props: Props = {}): React.JSX.Element {
-  const { title = 'Stay Updated', subtitle = 'Get the latest insights on AI and technology trends.', className = '' } = props;
+export default function EnhancedNewsletterSignup({ title = 'Stay Updated', subtitle = 'Get the latest insights on AI and technology trends.', className = '' }: Props): React.JSX.Element {
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
 
@@ -34,8 +34,8 @@ export default function EnhancedNewsletterSignup(props: Props = {}): React.JSX.E
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Enter your email"
-          aria-label="Email"
           className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          aria-label="Email"
           required
         />
         <button
