@@ -45,6 +45,9 @@ import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
 import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
 import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
+import NewContent2026BreakthroughBanner from '../components/NewContent2026BreakthroughBanner';
+import AutonomousIntelligenceRevolutionBanner from '../components/AutonomousIntelligenceRevolutionBanner';
+import CognitiveComputingBreakthroughBanner from '../components/CognitiveComputingBreakthroughBanner';
 <<<<<<< HEAD
 import InteractiveContentRecommendation from '../components/InteractiveContentRecommendation';
 import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
@@ -75,13 +78,13 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
             <span>🚀 NEW 2026 Content:</span>
-            <a to="/blog/ai-agent-orchestration-2026" className="underline hover:text-yellow-200">AI Agent Orchestration</a>
+            <Link href="/blog/ai-autonomous-enterprise-systems-2026" className="underline hover:text-yellow-200">Autonomous AI Systems</Link>
             <span className="hidden md:inline">•</span>
-            <a to="/blog/ai-sustainability-green-tech-2026" className="underline hover:text-yellow-200">AI Sustainability</a>
+            <Link href="/blog/ai-cognitive-computing-breakthrough-2026" className="underline hover:text-yellow-200">Cognitive Computing</Link>
             <span className="hidden md:inline">•</span>
-            <a to="/blog/ai-quantum-computing-2026" className="underline hover:text-yellow-200">Quantum Computing</a>
+            <Link href="/blog/ai-quantum-computing-2026" className="underline hover:text-yellow-200">Quantum Computing</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-sustainability-transformation-2026" className="underline hover:text-yellow-200">$10M ROI Case Study</Link>
+            <Link href="/case-studies/ai-cognitive-computing-success-2026" className="underline hover:text-yellow-200">$25M ROI Case Study</Link>
             <span className="hidden md:inline">•</span>
 <<<<<<< HEAD
             <a to="/case-studies/ai-quantum-optimization-2026" className="underline hover:text-yellow-200">1000x Speed Improvement</a>
@@ -100,7 +103,7 @@ export default function HomePage() {
 >>>>>>> cursor/create-and-deploy-new-content-a364
           </div>
           <Link
-            to="/blog"
+            href="/blog"
             className="bg-white text-green-700 hover:bg-gray-100 px-4 py-1.5 rounded-md text-sm font-semibold"
           >
             Read the latest
@@ -109,6 +112,15 @@ export default function HomePage() {
       </div>
       {/* Revolutionary 2026 Content Banner */}
       <Revolutionary2026ContentBanner />
+      
+      {/* New 2026 Breakthrough Content Banner */}
+      <NewContent2026BreakthroughBanner />
+      
+      {/* Autonomous Intelligence Revolution Banner */}
+      <AutonomousIntelligenceRevolutionBanner />
+      
+      {/* Cognitive Computing Breakthrough Banner */}
+      <CognitiveComputingBreakthroughBanner />
       
       {/* Promotional Banners */}
       <NewContent2026Banner />
