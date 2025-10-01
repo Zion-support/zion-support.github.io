@@ -14,6 +14,66 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "ai-2025-oct-01-governed-agent-platforms-v2",
+    title: "Governed Agent Platforms v2: Budgets, Scorecards, Instant Rollback",
+    description: "Ship enterprise agent platforms safely: KPI scorecards, budget-aware routing, CI policy tests, and one-click rollback.",
+    content: `
+# Governed Agent Platforms v2: Budgets, Scorecards, Instant Rollback
+
+Modern agent platforms move fast without surprises when governance is wired in by default.
+
+## What You'll Implement
+- KPI-linked scorecards that predict outcomes
+- Budget-aware routing with quality tiers and cache layers
+- CI policy tests and online eval canaries as deploy gates
+- One-click rollback with blast-radius checks
+
+## Outcomes
+- 10x delivery velocity with stable change-failure rate
+- 40–70% cost reduction on GenAI routes
+- 99.9% uptime protected by runtime policies
+
+Need help landing this in weeks, not quarters? Our team can partner with yours.
+    `,
+    author: "Zion Tech Group Platform Office",
+    date: "2025-10-01",
+    category: "AI Operations",
+    tags: ["Agents", "Governance", "Budgets", "Scorecards", "Rollback"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/governed-agent-platforms-v2.jpg"
+  },
+  {
+    slug: "ai-2025-oct-01-zero-pii-telemetry-v3",
+    title: "Zero‑PII Telemetry v3: Signal Without Risk at Global Scale",
+    description: "On-device aggregation, scoped IDs, and DP noise: rich analytics with zero centralized PII and <100ms decisions.",
+    content: `
+# Zero‑PII Telemetry v3: Signal Without Risk at Global Scale
+
+Unlock decision-grade analytics without centralizing PII.
+
+## Blueprint
+- Scoped, rotating identifiers with field-level redaction
+- On-device aggregation with signed configs
+- Differential privacy for cohort reporting
+- Signed experiment configs with cacheable variants
+
+## Results
+- <100ms edge decisions globally
+- 90%+ reduction in sensitive data flows
+- Trustworthy lift estimates with DP guarantees
+
+Includes reference schemas, rollout checklists, and compliance guardrails.
+    `,
+    author: "Zion Tech Group Privacy Lab",
+    date: "2025-10-01",
+    category: "Analytics",
+    tags: ["Privacy", "Telemetry", "Edge", "DP", "A/B"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/zero-pii-telemetry-v3.jpg"
+  },
+  {
     slug: "ai-2025-oct-01-enterprise-ai-governance-blueprint",
     title: "Enterprise AI Governance 2025: Scorecards, Guardrails, and Zero-Regret Rollouts",
     description: "Practical enterprise playbook to ship AI safely: policy tests in CI, KPI-linked scorecards, kill switches, and budget-aware routing.",
