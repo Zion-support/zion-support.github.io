@@ -68,13 +68,7 @@ import December2026UltimateSingularityBanner from '../components/December2026Ult
 import January2027UniversalConsciousnessBanner from '../components/January2027UniversalConsciousnessBanner';
 import October2026TranscendentAutomationBanner from '../components/October2026TranscendentAutomationBanner';
 import September2026MegaBreakthroughBanner from '../components/September2026MegaBreakthroughBanner';
-import February2027SyntheticConsciousnessBanner from '../components/February2027SyntheticConsciousnessBanner';
-import March2026AutonomousEnterpriseBanner from '../components/March2026AutonomousEnterpriseBanner';
-import October2025FreshContentBanner from '../components/October2025FreshContentBanner';
-import January2026ContentShowcaseBanner from '../components/January2026ContentShowcaseBanner';
-import January2026AutonomousOperationsBanner from '../components/January2026AutonomousOperationsBanner';
-import January2026QuantumNeuralBanner from '../components/January2026QuantumNeuralBanner';
-import January2026AutonomousBIBanner from '../components/January2026AutonomousBIBanner';
+import December2025ContentShowcaseBanner from '../components/December2025ContentShowcaseBanner';
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -85,6 +79,10 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-slate-950">
+      {/* 🚀🚀🚀 DECEMBER 2025 NEW BREAKTHROUGH CONTENT - MOST RECENT 🚀🚀🚀 */}
+      {/* Latest autonomous systems and quantum computing breakthroughs - December 2025 */}
+      <December2025ContentShowcaseBanner />
+      
       {/* Hero Section */}
       <header className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-20">
         <div className="absolute inset-0 overflow-hidden opacity-20">
@@ -225,8 +223,11 @@ export default function HomePage() {
       <section className="py-4 border-t border-b border-white/10 bg-white/5">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
-            <div className="text-white/90 font-semibold">New: September & October 2026 Revolutionary Breakthroughs</div>
+            <div className="text-white/90 font-semibold">🚀 NEW: December 2025 Revolutionary Breakthroughs - Autonomous Systems & Quantum Computing</div>
             <div className="flex flex-wrap gap-2">
+              <a href="/blog/ai-2025-december-advanced-autonomous-systems" className="inline-flex items-center gap-2 bg-green-500/20 text-green-200 border border-green-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-green-500/30 transition-colors">December 2025 Autonomous<span>→</span></a>
+              <a href="/blog/ai-2025-december-quantum-computing-breakthrough" className="inline-flex items-center gap-2 bg-cyan-500/20 text-cyan-200 border border-cyan-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-cyan-500/30 transition-colors">December 2025 Quantum<span>→</span></a>
+              <a href="/case-studies/ai-2025-december-autonomous-systems-500-million-success" className="inline-flex items-center gap-2 bg-emerald-500/20 text-emerald-200 border border-emerald-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-emerald-500/30 transition-colors">$500M Success Story<span>→</span></a>
               <a href="/blog/ai-2026-october-transcendent-automation-revolution" className="inline-flex items-center gap-2 bg-purple-500/20 text-purple-200 border border-purple-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-purple-500/30 transition-colors">October 2026 Transcendent<span>→</span></a>
               <a href="/blog/ai-2026-september-mega-breakthrough-revolution" className="inline-flex items-center gap-2 bg-indigo-500/20 text-indigo-200 border border-indigo-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-indigo-500/30 transition-colors">September 2026 Mega<span>→</span></a>
               <a href="/case-studies/ai-2026-september-mega-breakthrough-2-trillion-success" className="inline-flex items-center gap-2 bg-green-500/20 text-green-200 border border-green-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-green-500/30 transition-colors">$2.5T Success Story<span>→</span></a>
