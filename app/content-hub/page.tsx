@@ -12,8 +12,7 @@ export default function ContentHub() {
     {
       title: 'AI Implementation',
       articles: [
-        { title: 'Neural-Symbolic AI Enterprise Fusion Revolution 2025', slug: '/blog/ai-2025-oct-neural-symbolic-enterprise-fusion-revolution', readTime: '22 min', featured: true },
-        { title: 'Enterprise AI Orchestration Mesh Revolution 2025', slug: '/blog/ai-2025-oct-enterprise-ai-orchestration-mesh-revolution', readTime: '20 min', featured: true },
+        { title: 'Revolutionary Autonomous Enterprise Systems 2026', slug: '/blog/ai-2026-january-revolutionary-autonomous-enterprise-systems', readTime: '12 min', featured: true },
         { title: 'AI Agent Swarms Enterprise Orchestration 2026', slug: '/blog/ai-agent-swarms-enterprise-orchestration-2026', readTime: '28 min', featured: true },
         { title: 'Quantum-Enhanced AI Enterprise Breakthrough 2026', slug: '/blog/quantum-enhanced-ai-enterprise-breakthrough-2026', readTime: '32 min', featured: true },
         { title: 'Agentic Workflow Orchestration 2026', slug: '/blog/agentic-workflow-orchestration-2026', readTime: '16 min', featured: true },
@@ -61,19 +60,11 @@ export default function ContentHub() {
 
   const caseStudies = [
     {
-      title: 'Fortune 100 Neural-Symbolic AI Transformation',
-      company: 'Global Aerospace Manufacturing Corp',
-      industry: 'Aerospace & Defense',
-      results: '$18.7B Value & 99.7% Accuracy',
-      slug: '/case-studies/ai-2025-oct-fortune-100-neural-symbolic-transformation-18-7-billion-success',
-      featured: true
-    },
-    {
-      title: 'Global Telecom AI Orchestration Mesh Success',
-      company: 'Global Communications Network Inc.',
-      industry: 'Telecommunications',
-      results: '$24.5B Value & 10,000+ Agents',
-      slug: '/case-studies/ai-2025-oct-global-telecom-orchestration-mesh-24-5-billion-success',
+      title: 'Autonomous Enterprise $2.3B Success 2026',
+      company: 'Global Manufacturing Corp',
+      industry: 'Manufacturing',
+      results: '$2.3B Value Creation & 99.7% Efficiency',
+      slug: '/case-studies/autonomous-enterprise-2-billion-success',
       featured: true
     },
     {
@@ -175,122 +166,51 @@ export default function ContentHub() {
 
       {/* Featured Content */}
       <section className="mb-16">
-        <div className="bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 text-white p-8 rounded-2xl mb-8 shadow-2xl">
+        <div className="bg-gradient-to-r from-green-500 to-blue-600 text-white p-8 rounded-2xl mb-8">
           <div className="text-center">
-            <div className="inline-block bg-white/30 backdrop-blur-sm px-6 py-2 rounded-full text-sm font-bold mb-4 animate-pulse shadow-lg">
-              🎉 BREAKTHROUGH CONTENT: OCTOBER 1, 2025
+            <div className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-bold mb-4 animate-pulse">
+              🚀 JUST PUBLISHED: JANUARY 2026
             </div>
-            <h2 className="text-3xl md:text-5xl font-extrabold mb-4 drop-shadow-lg">
-              Neural-Symbolic AI & Orchestration Mesh Revolution
+            <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
+              Revolutionary Autonomous Enterprise Systems
             </h2>
-            <p className="text-xl md:text-2xl mb-6 max-w-4xl mx-auto">
-              Discover the cutting-edge AI technologies transforming enterprises: $43.2B in combined proven value!
+            <p className="text-xl mb-6 max-w-3xl mx-auto">
+              The newest breakthrough in enterprise AI: Self-managing business systems delivering $2.3B in proven value with 99.7% operational efficiency
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link
-                href="/blog/ai-2025-oct-neural-symbolic-enterprise-fusion-revolution"
-                className="bg-white text-purple-600 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
+                href="/blog/ai-2026-january-revolutionary-autonomous-enterprise-systems"
+                className="bg-white text-green-600 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
               >
-                Neural-Symbolic AI Guide →
+                Read Complete Guide →
               </Link>
               <Link
-                href="/blog/ai-2025-oct-enterprise-ai-orchestration-mesh-revolution"
-                className="bg-white text-pink-600 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
+                href="/case-studies/autonomous-enterprise-2-billion-success"
+                className="border-2 border-white text-white font-bold py-3 px-6 rounded-lg hover:bg-white/10 transition-colors"
               >
-                Orchestration Mesh Guide →
+                View $2.3B Success Story →
               </Link>
             </div>
           </div>
         </div>
 
-        <h2 className="text-3xl font-bold text-gray-900 mb-8">🔥 Latest Featured Content - October 2025</h2>
-        <div className="grid md:grid-cols-3 gap-6 mb-8">
-          <div className="bg-gradient-to-br from-purple-50 to-indigo-100 p-6 rounded-xl border-2 border-purple-300 shadow-lg hover:shadow-2xl transition-all">
-            <div className="flex items-center gap-2 mb-4">
-              <span className="bg-purple-200 text-purple-900 px-3 py-1 rounded-full text-xs font-bold">
-                🌟 NEW: Oct 1, 2025
-              </span>
-            </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">
-              Neural-Symbolic AI Revolution
-            </h3>
-            <p className="text-gray-700 mb-4">
-              Combining deep learning with logical reasoning. 99.7% accuracy, $18.7B proven value, 425% ROI in 24 months.
-            </p>
-            <Link
-              href="/blog/ai-2025-oct-neural-symbolic-enterprise-fusion-revolution"
-              className="text-purple-600 font-bold hover:text-purple-800 inline-flex items-center"
-            >
-              Read Full Guide →
-            </Link>
-          </div>
-
-          <div className="bg-gradient-to-br from-pink-50 to-rose-100 p-6 rounded-xl border-2 border-pink-300 shadow-lg hover:shadow-2xl transition-all">
-            <div className="flex items-center gap-2 mb-4">
-              <span className="bg-pink-200 text-pink-900 px-3 py-1 rounded-full text-xs font-bold">
-                🚀 NEW: Oct 1, 2025
-              </span>
-            </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">
-              AI Orchestration Mesh
-            </h3>
-            <p className="text-gray-700 mb-4">
-              Coordinate 10,000+ AI agents seamlessly. $24.5B enterprise value, 99.99% reliability, 840% ROI.
-            </p>
-            <Link
-              href="/blog/ai-2025-oct-enterprise-ai-orchestration-mesh-revolution"
-              className="text-pink-600 font-bold hover:text-pink-800 inline-flex items-center"
-            >
-              Discover the Mesh →
-            </Link>
-          </div>
-
-          <div className="bg-gradient-to-br from-orange-50 to-amber-100 p-6 rounded-xl border-2 border-orange-300 shadow-lg hover:shadow-2xl transition-all">
-            <div className="flex items-center gap-2 mb-4">
-              <span className="bg-orange-200 text-orange-900 px-3 py-1 rounded-full text-xs font-bold">
-                💎 CASE STUDIES
-              </span>
-            </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">
-              $43.2B Combined Success
-            </h3>
-            <p className="text-gray-700 mb-4">
-              Fortune 100 aerospace ($18.7B) & global telecom ($24.5B) transformation success stories.
-            </p>
-            <div className="flex flex-col gap-2">
-              <Link
-                href="/case-studies/ai-2025-oct-fortune-100-neural-symbolic-transformation-18-7-billion-success"
-                className="text-orange-600 font-semibold hover:text-orange-800 text-sm"
-              >
-                Aerospace $18.7B →
-              </Link>
-              <Link
-                href="/case-studies/ai-2025-oct-global-telecom-orchestration-mesh-24-5-billion-success"
-                className="text-orange-600 font-semibold hover:text-orange-800 text-sm"
-              >
-                Telecom $24.5B →
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        <h2 className="text-3xl font-bold text-gray-900 mb-8 mt-12">Previously Featured Content</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-8">Featured Content</h2>
         <div className="grid md:grid-cols-3 gap-6">
-          <div className="bg-gradient-to-br from-cyan-50 to-blue-50 p-6 rounded-xl border-2 border-cyan-200">
+          <div className="bg-gradient-to-br from-green-50 to-blue-50 p-6 rounded-xl border-2 border-green-200">
             <div className="flex items-center gap-2 mb-4">
-              <span className="bg-cyan-100 text-cyan-800 px-2 py-1 rounded-full text-xs font-semibold">
-                🌟 September 2025
+              <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
+                🌟 NEW: January 2026
               </span>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">
-              Autonomous Reality Synthesis
+              Revolutionary Autonomous Enterprise Systems
             </h3>
             <p className="text-gray-600 mb-4">
-              Revolutionary AI combining quantum computing, spatial AI, and digital twins. 16,480% ROI proven across 847 facilities.
+              Self-managing business systems achieving 99.7% operational efficiency with $2.3B proven value creation across global enterprises.
             </p>
             <Link
-              href="/blog/ai-2025-october-autonomous-reality-synthesis"
-              className="text-cyan-600 font-semibold hover:text-cyan-700"
+              href="/blog/ai-2026-january-revolutionary-autonomous-enterprise-systems"
+              className="text-green-600 font-semibold hover:text-green-700"
             >
               Read Revolutionary Guide →
             </Link>
@@ -319,17 +239,17 @@ export default function ContentHub() {
           <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl">
             <div className="flex items-center gap-2 mb-4">
               <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
-                🔥 $47.3B Success
+                🔥 $2.3B Success
               </span>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">
-              Autonomous Reality Synthesis Success
+              Global Manufacturing Corp Success
             </h3>
             <p className="text-gray-600 mb-4">
-              Fortune 50 company achieves $47.3B in value with 99.98% accuracy across global operations.
+              Fortune 100 manufacturing company achieves $2.3B value creation with 99.7% operational efficiency across 150+ facilities.
             </p>
             <Link
-              href="/case-studies/autonomous-reality-synthesis-47-billion-success"
+              href="/case-studies/autonomous-enterprise-2-billion-success"
               className="text-green-600 font-semibold hover:text-green-700"
             >
               View Case Study →
