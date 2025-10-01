@@ -14,6 +14,54 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "ai-2025-oct-01-vector-database-optimization-enterprise",
+    title: "Vector Database Optimization 2025: Sub-10ms Search at Billion Scale",
+    description: "Enterprise guide to blazing-fast vector search: HNSW tuning, PQ/IVF hybrid, tiered caches, and hardware-aware configs that deliver sub-10ms p99 at billion-scale.",
+    content: `
+# Vector Database Optimization 2025: Sub-10ms Search at Billion Scale
+
+This hands-on guide shows how leading teams achieve sub-10ms p99 vector search at billion-scale using:
+
+- HNSW parameters tuned by traffic profiles
+- Product quantization with IVF for balanced recall/cost
+- Tiered caching (feature, result, and negative caches)
+- Telemetry-driven warmups and quality budgets
+
+Includes rollout checklists, SLO templates, and cost/latency trade-off playbooks.
+    `,
+    author: "Zion Tech Group Data Platforms",
+    date: "2025-10-01",
+    category: "AI Infrastructure",
+    tags: ["Vector DB", "Embeddings", "RAG", "Performance", "HNSW"],
+    featured: true,
+    readTime: "11 min read",
+    image: "/images/vector-db-optimization-2025.jpg"
+  },
+  {
+    slug: "ai-2025-oct-01-hyper-personalization-engines-revolution",
+    title: "Hyper-Personalization Engines 2025: 12.4x Engagement, 8x Conversion",
+    description: "Deploy real-time personalization engines with event streams, vector user models, and bandit routing. Proven patterns yielding 12.4x engagement and 8x conversion uplifts.",
+    content: `
+# Hyper-Personalization Engines 2025
+
+Blueprint for production systems that learn per-user preferences in real time:
+
+- Streaming features + vector user profiles
+- Contextual bandits and guardrailed exploration
+- On-page inference budgets and fallbacks
+- Closed-loop metrics and weekly scorecards
+
+Comes with architecture diagrams, KPI scorecards, and rollout rituals.
+    `,
+    author: "Zion Tech Group CX Lab",
+    date: "2025-10-01",
+    category: "Customer Experience",
+    tags: ["Personalization", "Bandits", "Real-Time AI", "Streaming", "RAG"],
+    featured: true,
+    readTime: "10 min read",
+    image: "/images/hyper-personalization-engines-2025.jpg"
+  },
+  {
     slug: "ai-2025-oct-02-cache-playbook-pro",
     title: "Enterprise GenAI Cache Playbook PRO: 60–85% Cost ↓, P95 30–45% ↓",
     description: "A pragmatic caching blueprint for LLM apps: prompt, embedding, feature and retrieval-layer caches that cut spend while tightening tail latency.",
