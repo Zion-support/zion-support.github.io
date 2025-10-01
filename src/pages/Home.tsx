@@ -196,6 +196,21 @@ const Home = () => {
           { title: "Cache Strata Blueprint: Features → Chunks → Answers", category: "GenAI Engineering", link: "/blog/ai-2025-oct-05-cache-strata-blueprint" }
         ]}
       />
+
+      {/* Promo: Brand new 2025-10-06 posts */}
+      <NewContentPromoBanner 
+        className="border-b border-white/10" 
+        variant="premium" 
+        title="🆕 NEW TODAY (Oct 6): Safe Agent Releases + Cost‑Aware Routing v2 + Zero‑PII A/B"
+        description="Release agents safely with budgets and rollback, cut LLM spend 40–70% with tiered routing and coalescing, and run compliant edge A/B at <100ms."
+        ctaText="Explore today's posts"
+        ctaLink="/blog"
+        featuredItems={[
+          { title: "Safe Agent Releases: Checklists, Budgets, Instant Rollback", category: "AI Operations", link: "/blog/ai-2025-oct-06-safe-agent-release-checklists" },
+          { title: "Cost‑Aware LLM Routing v2: Tiering, Coalescing, Distillation", category: "GenAI Engineering", link: "/blog/ai-2025-oct-06-cost-aware-llm-routing-v2" },
+          { title: "Zero‑PII Experimentation v5: <100ms Global A/B at the Edge", category: "Experimentation", link: "/blog/ai-2025-oct-06-zero-pii-experimentation-v5" }
+        ]}
+      />
       
       {/* 🧠🧠🧠 BRAND NEW OCTOBER 2025 - JUST RELEASED: COGNITIVE COMPUTING REVOLUTION - TOP PRIORITY! 🧠🧠🧠 */}
       {/* Featured: Multi-Agent Orchestration (97.8% Automation, $847M Value), Cognitive AI Transformation (98.5% Accuracy, $1.2B Value), Fortune 20 Telecom Case Study ($4.7B Success, 3,602% ROI) */}
