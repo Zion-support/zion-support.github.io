@@ -93,6 +93,39 @@ const Home = () => {
               and next-generation cloud infrastructure. Join 500+ companies already scaling with us!
             </p>
 
+            {/* NEW CONTENT ANNOUNCEMENT */}
+            <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-xl p-6 mb-6 animate-fade-in">
+              <div className="flex items-center justify-center gap-3 mb-3">
+                <Rocket className="w-6 h-6 text-purple-400 animate-bounce" />
+                <span className="text-lg font-bold text-purple-400">🔥 JUST RELEASED - OCTOBER 2025</span>
+                <Rocket className="w-6 h-6 text-purple-400 animate-bounce" />
+              </div>
+              <p className="text-white text-xl font-bold mb-3">
+                Enterprise AI Platform Revolution + Intelligent Automation Breakthrough
+              </p>
+              <div className="grid md:grid-cols-3 gap-4 text-sm text-zion-slate-light mb-4">
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  <span>$500M Value Created in 90 Days</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  <span>40-60% Cost Reduction</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  <span>300-500% ROI in Year 1</span>
+                </div>
+              </div>
+              <Link
+                to="/blog"
+                className="inline-flex items-center gap-2 bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
+                Read the Latest Breakthroughs
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+
             {/* Special Promotion Banner */}
             <div className="bg-gradient-to-r from-green-500/20 to-blue-500/20 border border-green-400/30 rounded-xl p-6 mb-8 animate-fade-in">
               <div className="flex items-center justify-center gap-3 mb-3">
