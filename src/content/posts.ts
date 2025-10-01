@@ -354,6 +354,46 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-01-21",
     featured: false,
     readTime: "9 min read",
+  },
+  {
+    slug: "kubernetes-security-best-practices-2025",
+    title: "Kubernetes Security: Enterprise Best Practices for 2025",
+    description:
+      "Comprehensive security strategies for Kubernetes clusters, including RBAC, network policies, secrets management, and runtime protection.",
+    category: "Security",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "10 min read",
+  },
+  {
+    slug: "distributed-tracing-microservices-2025",
+    title: "Distributed Tracing for Microservices: A Complete Guide",
+    description:
+      "Master distributed tracing with OpenTelemetry, Jaeger, and practical patterns for debugging complex microservices architectures.",
+    category: "Observability",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read",
+  },
+  {
+    slug: "green-ai-sustainable-computing-2025",
+    title: "Green AI: Building Sustainable and Carbon-Neutral ML Systems",
+    description:
+      "Reduce your AI carbon footprint with energy-efficient models, optimized training, and sustainable infrastructure practices.",
+    category: "AI & Sustainability",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "realtime-decision-intelligence-2025",
+    title: "Real-Time Decision Intelligence: AI-Powered Business Agility",
+    description:
+      "Build intelligent decision systems that process streaming data and provide actionable insights in milliseconds.",
+    category: "AI Engineering",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "11 min read",
   }
 ];
 

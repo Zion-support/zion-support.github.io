@@ -62,5 +62,50 @@ export const latestInsights: InsightArticle[] = [
     date: "2025-07-18",
     readMinutes: 8,
   },
+  {
+    id: "kubernetes-runtime-security-essentials",
+    title: "Kubernetes Security: Runtime Protection Essentials",
+    summary:
+      "Secure your K8s clusters with RBAC, network policies, pod security standards, and real-time threat detection.",
+    category: "Security",
+    date: "2025-09-30",
+    readMinutes: 9,
+  },
+  {
+    id: "green-ml-carbon-optimization",
+    title: "Green ML: Optimizing AI Carbon Footprint in Production",
+    summary:
+      "Measure and reduce ML carbon emissions with efficient training, model compression, and renewable-powered inference.",
+    category: "AI & Sustainability",
+    date: "2025-09-30",
+    readMinutes: 7,
+  },
+  {
+    id: "distributed-tracing-microservices",
+    title: "Distributed Tracing: Debugging Microservices at Scale",
+    summary:
+      "Implement OpenTelemetry tracing with smart sampling, context propagation, and dashboards that reduce MTTR by 60%.",
+    category: "Observability",
+    date: "2025-09-30",
+    readMinutes: 8,
+  },
+  {
+    id: "realtime-ml-inference-patterns",
+    title: "Real-Time ML Inference: Sub-100ms Latency Patterns",
+    summary:
+      "Achieve ultra-low latency ML serving with model optimization, batching strategies, and edge deployment.",
+    category: "ML Engineering",
+    date: "2025-09-30",
+    readMinutes: 10,
+  },
+  {
+    id: "ai-cost-governance-framework",
+    title: "AI Cost Governance: FinOps Framework for ML Teams",
+    summary:
+      "Control AI spend with token budgets, model right-sizing, and automated cost alerts tied to business KPIs.",
+    category: "AI FinOps",
+    date: "2025-09-30",
+    readMinutes: 6,
+  },
 ];
 
