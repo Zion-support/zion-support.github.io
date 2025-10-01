@@ -21,6 +21,7 @@ import EnhancedNewsletterSignup from "../components/EnhancedNewsletterSignup";
 import EnhancedPromotionalBanner from "../components/EnhancedPromotionalBanner";
 import EnhancedTestimonials from "../components/EnhancedTestimonials";
 import Header from "../components/Header";
+import October2025NewTechBreakthroughsBanner from "../components/October2025NewTechBreakthroughsBanner";
 import October2025TechBreakthroughBanner from "../components/October2025TechBreakthroughBanner";
 import October2025NextGenAIBanner from "../components/October2025NextGenAIBanner";
 import October2025OperationalExcellenceBanner from "../components/October2025OperationalExcellenceBanner";
@@ -130,6 +131,10 @@ const Home = () => {
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
+        
+        {/* 🚀🚀🚀 OCTOBER 2, 2025 - JUST PUBLISHED: 3 REVOLUTIONARY TECH BREAKTHROUGHS - TOP PRIORITY! 🚀🚀🚀 */}
+        {/* Featured: AI-Powered DevOps ($47M Saved, 99.8% Success), Blockchain-AI Integration ($127M Saved, 99.9% Accuracy), Sustainable AI (89% Energy Reduction, $284M Saved) */}
+        <October2025NewTechBreakthroughsBanner />
         
         {/* 🌟🌟🌟 OCTOBER 1, 2025 - ABSOLUTE LATEST: 3 REVOLUTIONARY AI INNOVATIONS - #1 TOP PRIORITY! 🌟🌟🌟 */}
         {/* Featured: AI Governance (99.9% Compliance, $186M+ Protection), Quantum AI (10,000x Speedup, $234M+ Value), Enterprise Orchestration (97.8% Automation, $312M+ Value) */}
