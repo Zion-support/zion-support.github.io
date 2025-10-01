@@ -43,7 +43,7 @@ module.exports = {
   ],
   transform: {
     '^.+\\.(ts|tsx)$': ['ts-jest', { useESM: true }],
-    '^.+\\.(js|jsx)$': 'babel-jest'
+    '^.+\\.(js|jsx)$': ['ts-jest', { useESM: true }]
   },
   transformIgnorePatterns: [
     'node_modules/(?!(.*\\.mjs$|react|react-dom|@testing-library))'
