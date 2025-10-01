@@ -9,8 +9,24 @@ module.exports = {
       isolatedModules: true,
     },
   },
+<<<<<<< HEAD
+  moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/src/$1',
+    '\\.(css|less|scss|sass)$': 'identity-obj-proxy'
+  },
+  testMatch: [
+    '<rootDir>/src/**/__tests__/**/*.(test|spec).(js|jsx|ts|tsx)',
+    '<rootDir>/src/**/*.(test|spec).(js|jsx|ts|tsx)'
+  ],
+  transform: {
+    '^.+\\.(ts|tsx)$': 'ts-jest',
+    '^.+\\.(js|jsx)$': 'babel-jest'
+  },
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
+=======
   // Limit tests to src only; ignore legacy root __tests__
   testMatch: ['<rootDir>/src/**/*(*.)+(spec|test).[jt]s?(x)'],
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f200
   testPathIgnorePatterns: [
     '/node_modules/',
     '/dist/',
