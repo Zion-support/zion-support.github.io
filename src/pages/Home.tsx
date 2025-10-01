@@ -96,39 +96,46 @@ const Home = () => {
             <div className="bg-gradient-to-r from-emerald-500/20 via-teal-500/20 to-cyan-500/20 border-2 border-emerald-400/40 rounded-xl p-6 mb-6 animate-fade-in shadow-2xl">
               <div className="flex items-center justify-center gap-3 mb-3">
                 <Rocket className="w-6 h-6 text-emerald-400 animate-bounce" />
-                <span className="text-lg font-bold text-emerald-300">🔥 JUST RELEASED - OCTOBER 1, 2025</span>
+                <span className="text-lg font-bold text-emerald-300">🔥 BREAKTHROUGH RELEASE - OCTOBER 1, 2025</span>
                 <Rocket className="w-6 h-6 text-emerald-400 animate-bounce" />
               </div>
-              <p className="text-white text-xl font-bold mb-3 text-center">
-                Autonomous AI Orchestration Platform + Real-Time Intelligence Revolution
+              <p className="text-white text-2xl font-bold mb-3 text-center">
+                Revolutionary Agentic Orchestration Platform: 1000+ AI Agents Working in Harmony
               </p>
               <div className="grid md:grid-cols-3 gap-4 text-sm text-zion-slate-light mb-4">
                 <div className="flex items-center gap-2">
                   <CheckCircle className="w-4 h-4 text-emerald-400" />
-                  <span className="font-semibold">$847M Value Created (Fortune 500)</span>
+                  <span className="font-semibold">$847M Value Created (Fortune 100 Pharma)</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle className="w-4 h-4 text-emerald-400" />
-                  <span className="font-semibold">95% Efficiency Gain + 1000x Faster</span>
+                  <span className="font-semibold">85% Cost Reduction + 99.99% Reliability</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle className="w-4 h-4 text-emerald-400" />
-                  <span className="font-semibold">4,200% ROI in 18 Months</span>
+                  <span className="font-semibold">67% Faster Drug Discovery</span>
                 </div>
               </div>
-              <div className="flex justify-center gap-4">
+              <div className="flex justify-center gap-4 flex-wrap">
                 <Link
-                  to="/blog/ai-2025-oct-autonomous-ai-orchestration-platform-revolution"
+                  to="/blog/ai-2025-oct-01-revolutionary-agentic-orchestration-platform"
                   className="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
-                  Autonomous AI Platform
+                  Agentic AI Platform
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link
-                  to="/blog/ai-2025-oct-real-time-ai-powered-business-intelligence-transformation"
+                  to="/services/ai-2025-october-agentic-orchestration-platform-service"
                   className="inline-flex items-center gap-2 bg-teal-500 hover:bg-teal-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
-                  Real-Time Intelligence
+                  Platform Service
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link
+                  to="/case-studies/fortune-100-pharma-agentic-transformation-2025"
+                  className="inline-flex items-center gap-2 bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
+                >
+                  $847M Case Study
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -213,33 +220,46 @@ const Home = () => {
             </p>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-              {/* Blog Post 1 - NEW OCTOBER CONTENT */}
+              {/* Blog Post 1 - BREAKTHROUGH OCTOBER CONTENT */}
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30 hover:border-emerald-400/60 transition-all hover:scale-105 hover:shadow-xl">
-                <div className="text-emerald-400 text-sm font-semibold mb-2 uppercase">🔥 NEW - Oct 2025</div>
-                <h3 className="text-lg font-bold text-white mb-3">Autonomous AI Orchestration</h3>
-                <p className="text-emerald-100 text-sm mb-4">95% efficiency gain + $847M value creation. The platform revolution is here - 18 min read</p>
+                <div className="text-emerald-400 text-sm font-semibold mb-2 uppercase">🚀 BREAKTHROUGH - Oct 1, 2025</div>
+                <h3 className="text-lg font-bold text-white mb-3">Agentic Orchestration Platform</h3>
+                <p className="text-emerald-100 text-sm mb-4">1000+ coordinated AI agents achieving 85% cost reduction and $847M value - 16 min read</p>
                 <Link 
-                  to="/blog/ai-2025-oct-autonomous-ai-orchestration-platform-revolution" 
+                  to="/blog/ai-2025-oct-01-revolutionary-agentic-orchestration-platform" 
                   className="inline-flex items-center text-emerald-300 hover:text-white font-semibold text-sm"
                 >
                   Read Now <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
               </div>
 
-              {/* Blog Post 2 - NEW OCTOBER CONTENT */}
+              {/* New Service - AGENTIC PLATFORM */}
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 hover:border-cyan-400/60 transition-all hover:scale-105 hover:shadow-xl">
-                <div className="text-cyan-400 text-sm font-semibold mb-2 uppercase">🚀 NEW - Oct 2025</div>
-                <h3 className="text-lg font-bold text-white mb-3">Real-Time AI Intelligence</h3>
-                <p className="text-cyan-100 text-sm mb-4">From hours to milliseconds - 1000x faster insights with 94% accuracy - 16 min read</p>
+                <div className="text-cyan-400 text-sm font-semibold mb-2 uppercase">⭐ PREMIUM SERVICE</div>
+                <h3 className="text-lg font-bold text-white mb-3">Agentic Orchestration Service</h3>
+                <p className="text-cyan-100 text-sm mb-4">Deploy 1000+ coordinated agents with 99.99% reliability. Starting at $25K/month</p>
                 <Link 
-                  to="/blog/ai-2025-oct-real-time-ai-powered-business-intelligence-transformation" 
+                  to="/services/ai-2025-october-agentic-orchestration-platform-service" 
                   className="inline-flex items-center text-cyan-300 hover:text-white font-semibold text-sm"
                 >
-                  Learn More <ArrowRight className="w-4 h-4 ml-1" />
+                  Explore Service <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
               </div>
 
-              {/* New Service */}
+              {/* Case Study - PHARMA SUCCESS */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:border-purple-400/60 transition-all hover:scale-105 hover:shadow-xl">
+                <div className="text-purple-400 text-sm font-semibold mb-2 uppercase">💎 EPIC WIN - Oct 2025</div>
+                <h3 className="text-lg font-bold text-white mb-3">$847M Fortune 100 Pharma</h3>
+                <p className="text-purple-100 text-sm mb-4">1,247 AI agents transformed drug discovery: 67% faster, 92% cost reduction</p>
+                <Link 
+                  to="/case-studies/fortune-100-pharma-agentic-transformation-2025" 
+                  className="inline-flex items-center text-purple-300 hover:text-white font-semibold text-sm"
+                >
+                  Read Case Study <ArrowRight className="w-4 h-4 ml-1" />
+                </Link>
+              </div>
+
+              {/* Edge AI Platform */}
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30 hover:border-blue-400/60 transition-all hover:scale-105 hover:shadow-xl">
                 <div className="text-blue-400 text-sm font-semibold mb-2 uppercase">🚀 Service Launch</div>
                 <h3 className="text-lg font-bold text-white mb-3">Edge AI Platform</h3>
@@ -249,19 +269,6 @@ const Home = () => {
                   className="inline-flex items-center text-blue-300 hover:text-white font-semibold text-sm"
                 >
                   Explore Platform <ArrowRight className="w-4 h-4 ml-1" />
-                </Link>
-              </div>
-
-              {/* Case Study - NEW OCTOBER CONTENT */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:border-purple-400/60 transition-all hover:scale-105 hover:shadow-xl">
-                <div className="text-purple-400 text-sm font-semibold mb-2 uppercase">💼 NEW SUCCESS - Oct 2025</div>
-                <h3 className="text-lg font-bold text-white mb-3">$627M Fortune 100 Retailer</h3>
-                <p className="text-purple-100 text-sm mb-4">How real-time AI intelligence transformed decision-making and created massive value</p>
-                <Link 
-                  to="/case-studies/ai-2025-oct-fortune-100-retailer-real-time-intelligence-627m-success" 
-                  className="inline-flex items-center text-purple-300 hover:text-white font-semibold text-sm"
-                >
-                  Read Case Study <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
               </div>
             </div>
