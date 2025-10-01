@@ -146,29 +146,29 @@ const HomePage: React.FC = () => {
                 icon="rocket"
                 badge="New"
                 date={new Date().toLocaleDateString()}
-                title="New on Oct 1: Governance, Edge Speed, Agent Reliability"
-                description="Three fresh playbooks: KPI‑linked guardrails, sub‑100ms global inference, and agent observability runbooks with instant rollback."
+                title="Just dropped: AI Reliability, Edge Caching, Exec AI Playbook"
+                description="Fresh guidance on SLIs and rollback, sub‑100ms edge prompts, and an executive blueprint to plan, fund, and govern AI."
                 ctaText="Read the latest posts"
                 ctaLink="/blog"
                 showCount={3}
                 featuredItems={[
                   {
-                    title: 'AI Governance 2027: KPI‑Linked Guardrails That Speed Delivery',
-                    category: 'AI Governance',
-                    link: '/blog',
-                    metrics: '7 min • 2025-10-01'
-                  },
-                  {
-                    title: 'Edge Inference Blueprint 2027: Sub‑100ms at Global Scale',
-                    category: 'Edge Computing',
-                    link: '/blog',
-                    metrics: '6 min • 2025-10-01'
-                  },
-                  {
-                    title: 'Agent Observability Runbooks 2027: Traces, SLIs, Rollback',
+                    title: 'AI Reliability Scorecards 2026: SLIs, Error Budgets, Rollbacks',
                     category: 'AI Operations',
-                    link: '/blog',
-                    metrics: '8 min • 2025-10-01'
+                    link: '/blog/ai-2025-oct-05-ai-reliability-scorecards-2026',
+                    metrics: '8 min • 2025-10-05'
+                  },
+                  {
+                    title: 'Edge LLM Caching 2026: Sub-100ms at Global Scale',
+                    category: 'Architecture',
+                    link: '/blog/edge-llm-caching-2026-2025-10-05',
+                    metrics: '7 min • 2025-10-05'
+                  },
+                  {
+                    title: 'Executive AI Playbook 2027: Plan, Fund, Govern',
+                    category: 'Executive Strategy',
+                    link: '/blog/executive-ai-playbook-2027-2025-10-05',
+                    metrics: '6 min • 2025-10-05'
                   }
                 ]}
               />

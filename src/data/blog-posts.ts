@@ -29,6 +29,51 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: 7,
   },
   {
+    id: '304',
+    title: 'AI Reliability Scorecards 2026: SLIs, Error Budgets, Rollbacks',
+    slug: 'ai-2025-oct-05-ai-reliability-scorecards-2026',
+    excerpt:
+      'Operationalize AI quality with SLIs, KPI‑linked error budgets, and instant rollback triggers.',
+    content:
+      'Design reliability that engineers adopt and execs trust. Implement KPI‑linked SLIs, error budgets, and one‑click rollback to ship faster without regressions.',
+    featuredImage: '/images/blog/ai-reliability-scorecards-2026.jpg',
+    category: 'AI Operations',
+    tags: ['SLIs', 'Error Budgets', 'Rollback'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-05',
+    readTime: 8,
+  },
+  {
+    id: '305',
+    title: 'Edge LLM Caching 2026: Sub-100ms at Global Scale',
+    slug: 'edge-llm-caching-2026-2025-10-05',
+    excerpt:
+      'Tiered caches, signed configs, and freshness windows to deliver fast, affordable prompts worldwide.',
+    content:
+      'Deliver instant-feel UX with prompt/embedding/retrieval caches, warm pools, intent prefetch, and geo budgets enforced by signed configs.',
+    featuredImage: '/images/blog/edge-llm-caching-2026.jpg',
+    category: 'Architecture',
+    tags: ['Edge', 'Caching', 'Latency'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-05',
+    readTime: 7,
+  },
+  {
+    id: '306',
+    title: 'Executive AI Playbook 2027: Plan, Fund, Govern',
+    slug: 'executive-ai-playbook-2027-2025-10-05',
+    excerpt:
+      'A pragmatic roadmap to ship reliable, cost‑effective AI with measurable outcomes across the business.',
+    content:
+      'Connect strategy to shipped value with outcome‑led portfolios, KPI‑linked scorecards, policy tests, and budget‑aware routing with rollback playbooks.',
+    featuredImage: '/images/blog/executive-ai-playbook-2027.jpg',
+    category: 'Executive Strategy',
+    tags: ['Strategy', 'Governance', 'ROI'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-05',
+    readTime: 6,
+  },
+  {
     id: '302',
     title: 'Edge Inference Blueprint 2027: Sub‑100ms at Global Scale',
     slug: 'edge-inference-blueprint-2027-2025-10-01',

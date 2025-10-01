@@ -14,6 +14,77 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "ai-2025-oct-05-ai-reliability-scorecards-2026",
+    title: "AI Reliability Scorecards 2026: SLIs, Error Budgets, Rollbacks",
+    description: "Operationalize AI quality with SLIs, KPI-linked error budgets, and instant rollback triggers.",
+    content: `
+# AI Reliability Scorecards 2026: SLIs, Error Budgets, Rollbacks
+
+Design reliability that engineers adopt and execs trust.
+
+## What You'll Implement
+- KPI-linked SLIs that predict outcomes
+- Error/quality budgets wired to release gates
+- Canary routes and one-click rollback
+
+## Outcomes
+- Fewer regressions with faster delivery
+- Stable latency/cost KPIs under growth
+- Clear ownership and weekly review rituals
+    `,
+    author: "Zion Tech Group AI Operations",
+    date: "2025-10-05",
+    category: "AI Operations",
+    tags: ["SLIs", "Error Budgets", "Rollback"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/ai-reliability-scorecards-2026.jpg"
+  },
+  {
+    slug: "edge-llm-caching-2026-2025-10-05",
+    title: "Edge LLM Caching 2026: Sub-100ms at Global Scale",
+    description: "Tiered caches, signed configs, and freshness windows to deliver fast, affordable prompts worldwide.",
+    content: `
+# Edge LLM Caching 2026: Sub-100ms at Global Scale
+
+Deliver instant-feel UX with caches and deterministic fallbacks.
+
+## Patterns
+- Prompt/embedding/retrieval caches with TTL windows
+- Warm pools and intent prefetch
+- Signed configs and geo budgets
+    `,
+    author: "Zion Tech Group Edge Lab",
+    date: "2025-10-05",
+    category: "Architecture",
+    tags: ["Edge", "Caching", "Latency"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/edge-llm-caching-2026.jpg"
+  },
+  {
+    slug: "executive-ai-playbook-2027-2025-10-05",
+    title: "Executive AI Playbook 2027: Plan, Fund, Govern",
+    description: "A pragmatic roadmap to ship reliable, cost‑effective AI with measurable outcomes across the business.",
+    content: `
+# Executive AI Playbook 2027: Plan, Fund, Govern
+
+Connect strategy to shipped value with guardrails and scorecards.
+
+## What You'll Get
+- Outcome-led portfolios and release trains
+- KPI-linked scorecards and policy tests
+- Budget-aware routing and rollback playbooks
+    `,
+    author: "Zion Tech Group Executive Strategy",
+    date: "2025-10-05",
+    category: "Executive Strategy",
+    tags: ["Strategy", "Governance", "ROI"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/executive-ai-playbook-2027.jpg"
+  },
+  {
     slug: "ai-2025-oct-01-governed-agent-platforms-v2",
     title: "Governed Agent Platforms v2: Budgets, Scorecards, Instant Rollback",
     description: "Ship enterprise agent platforms safely: KPI scorecards, budget-aware routing, CI policy tests, and one-click rollback.",
