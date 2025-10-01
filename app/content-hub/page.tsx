@@ -22,6 +22,11 @@ export default function ContentHub() {
     {
       title: 'AI Implementation',
       articles: [
+        { title: 'AI Agent Swarms Enterprise Orchestration 2026', slug: '/blog/ai-agent-swarms-enterprise-orchestration-2026', readTime: '28 min', featured: true },
+        { title: 'Quantum-Enhanced AI Enterprise Breakthrough 2026', slug: '/blog/quantum-enhanced-ai-enterprise-breakthrough-2026', readTime: '32 min', featured: true },
+        { title: 'Agentic Workflow Orchestration 2026', slug: '/blog/agentic-workflow-orchestration-2026', readTime: '16 min', featured: true },
+        { title: 'AI Enterprise Agents Blueprint 2026', slug: '/blog/ai-enterprise-agents-blueprint-2026', readTime: '18 min', featured: true },
+        { title: 'AI Agent Observability 2026', slug: '/blog/ai-agent-observability-2026', readTime: '18 min', featured: true },
         { title: 'AI Enterprise Automation 2026', slug: '/blog/ai-enterprise-automation-2026', readTime: '18 min', featured: true },
         { title: 'AI Multimodal Enterprise Solutions 2026', slug: '/blog/ai-multimodal-enterprise-2026', readTime: '15 min', featured: true },
         { title: 'AI Implementation Playbook 2026', slug: '/blog/ai-implementation-playbook-2026', readTime: '12 min', featured: true },
@@ -64,11 +69,19 @@ export default function ContentHub() {
 
   const caseStudies = [
     {
+<<<<<<< HEAD
       title: 'Neuromorphic Computing Manufacturing Success',
       company: 'Global Automotive Manufacturer',
       industry: 'Manufacturing',
       results: '$22M Annual Savings & 95% Energy Reduction',
       slug: '/case-studies/neuromorphic-computing-manufacturing-success-2026',
+=======
+      title: 'AI Agent Swarms Manufacturing Success 2026',
+      company: 'Global Manufacturing Corp',
+      industry: 'Manufacturing',
+      results: '$2.5B Savings & 75% Faster Decisions',
+      slug: '/case-studies/ai-agent-swarms-manufacturing-success-2026',
+>>>>>>> origin/cursor/create-and-deploy-new-content-081c
       featured: true
     },
     {
