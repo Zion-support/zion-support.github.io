@@ -1,127 +1,138 @@
 import React from 'react';
+import Link from 'next/link';
 
 export default function October2025NewTechInsightsBanner() {
   return (
-    <section className="py-20 bg-gradient-to-r from-indigo-900/50 via-purple-900/50 to-pink-900/50 backdrop-blur-sm border-y-2 border-indigo-400/40">
-      <div className="container mx-auto px-6">
+    <div className="relative overflow-hidden bg-gradient-to-br from-purple-950 via-indigo-950 to-emerald-950 border-y border-purple-400/20">
+      <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
+      <div className="relative max-w-7xl mx-auto px-6 py-16">
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-4 px-10 py-5 rounded-full bg-gradient-to-r from-indigo-500/40 to-purple-500/40 border-2 border-indigo-400/60 mb-8 animate-pulse shadow-2xl shadow-indigo-500/30">
-            <span className="text-3xl">🚀</span>
-            <span className="text-indigo-200 font-extrabold text-2xl tracking-wider uppercase">
-              LATEST TECH INSIGHTS - OCTOBER 2025
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-500/20 to-emerald-500/20 rounded-full border border-purple-400/30 mb-6">
+            <span className="relative flex h-3 w-3">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-purple-500"></span>
             </span>
-            <span className="text-3xl">🚀</span>
+            <span className="text-purple-300 font-semibold text-sm">🚀 JUST PUBLISHED - OCTOBER 2025 NEW INSIGHTS</span>
           </div>
-          <h2 className="text-5xl md:text-6xl font-extrabold mb-8 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent leading-tight">
-            Transform Your Enterprise with AI-Powered Innovation
+          
+          <h2 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-emerald-400 bg-clip-text text-transparent">
+            Latest Enterprise AI & Data Intelligence Breakthroughs
           </h2>
-          <p className="text-2xl text-gray-100 max-w-5xl mx-auto mb-8 leading-relaxed">
-            Discover how leading enterprises are leveraging AI for observability, cloud cost optimization, 
-            and autonomous security—achieving unprecedented efficiency and savings.
+          
+          <p className="text-xl text-white/80 max-w-3xl mx-auto mb-8">
+            Discover cutting-edge insights on cognitive automation, neural search, and data mesh architectures 
+            that are transforming Fortune 500 operations in October 2025
           </p>
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            <span className="px-6 py-3 bg-indigo-500/30 text-indigo-200 text-lg rounded-full border border-indigo-400/50 font-semibold">
-              💰 $420M+ in Savings
-            </span>
-            <span className="px-6 py-3 bg-purple-500/30 text-purple-200 text-lg rounded-full border border-purple-400/50 font-semibold">
-              ⚡ 94% Faster Operations
-            </span>
-            <span className="px-6 py-3 bg-pink-500/30 text-pink-200 text-lg rounded-full border border-pink-400/50 font-semibold">
-              🔒 97% Threat Prevention
-            </span>
-          </div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          {/* AI-Driven Observability */}
-          <div className="group bg-gradient-to-br from-purple-500/15 to-indigo-500/15 backdrop-blur-xl rounded-3xl p-10 border-2 border-purple-400/50 hover:border-purple-400/90 transition-all duration-500 transform hover:-translate-y-3 hover:shadow-2xl hover:shadow-purple-500/40">
-            <div className="text-7xl mb-6 transform group-hover:scale-110 transition-transform duration-300">🔍</div>
-            <h3 className="text-3xl font-extrabold text-white mb-4 leading-tight">AI-Driven Observability Platform 2026</h3>
-            <p className="text-gray-200 text-base mb-6 leading-relaxed">
-              Autonomous monitoring that predicts incidents before they occur. Reduce MTTR by 94% and 
-              automate 89% of troubleshooting with intelligent AI agents.
-            </p>
-            <div className="flex flex-wrap gap-2 mb-8">
-              <span className="px-4 py-2 bg-purple-500/30 text-purple-200 text-sm rounded-full font-semibold">94% MTTR Reduction</span>
-              <span className="px-4 py-2 bg-indigo-500/30 text-indigo-200 text-sm rounded-full font-semibold">89% Auto-Resolution</span>
-              <span className="px-4 py-2 bg-green-500/30 text-green-200 text-sm rounded-full font-semibold">$127M Savings</span>
+        <div className="grid md:grid-cols-3 gap-6 mb-10">
+          {/* Article 1: Cognitive Automation */}
+          <Link href="/blog/ai-2025-october-cognitive-automation-orchestration" className="group">
+            <div className="h-full bg-gradient-to-br from-purple-900/50 to-purple-800/30 backdrop-blur-sm rounded-xl border border-purple-400/30 p-6 hover:border-purple-400/60 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-purple-500/50">
+              <div className="mb-4">
+                <span className="inline-block px-3 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full border border-purple-400/40 mb-3">
+                  Cognitive Automation
+                </span>
+                <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">
+                  Cognitive Automation Orchestration 2025
+                </h3>
+                <p className="text-white/70 text-sm mb-4">
+                  Discover how enterprises are automating 92% of workflows with AI-powered cognitive systems, 
+                  reducing costs by 78% and delivering $45M+ annual value.
+                </p>
+              </div>
+              <div className="flex items-center justify-between text-sm">
+                <span className="text-purple-300 font-semibold">22 min read</span>
+                <span className="text-white/50 group-hover:text-purple-300 transition-colors">
+                  Read More →
+                </span>
+              </div>
+              <div className="mt-4 pt-4 border-t border-purple-400/20">
+                <div className="flex flex-wrap gap-2">
+                  <span className="text-xs px-2 py-1 bg-purple-500/10 text-purple-300 rounded">78% Cost Reduction</span>
+                  <span className="text-xs px-2 py-1 bg-pink-500/10 text-pink-300 rounded">92% Automation</span>
+                  <span className="text-xs px-2 py-1 bg-blue-500/10 text-blue-300 rounded">$45M+ Value</span>
+                </div>
+              </div>
             </div>
-            <a 
-              href="/blog/ai-driven-observability-platform-2026"
-              className="inline-block w-full bg-gradient-to-r from-purple-600 to-indigo-700 hover:from-purple-500 hover:to-indigo-600 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 text-center shadow-xl hover:shadow-purple-500/60 text-lg transform hover:scale-105"
-            >
-              Explore Autonomous Monitoring →
-            </a>
-          </div>
+          </Link>
 
-          {/* Multi-Cloud Cost Optimization */}
-          <div className="group bg-gradient-to-br from-emerald-500/15 to-teal-500/15 backdrop-blur-xl rounded-3xl p-10 border-2 border-emerald-400/50 hover:border-emerald-400/90 transition-all duration-500 transform hover:-translate-y-3 hover:shadow-2xl hover:shadow-emerald-500/40">
-            <div className="text-7xl mb-6 transform group-hover:scale-110 transition-transform duration-300">💎</div>
-            <h3 className="text-3xl font-extrabold text-white mb-4 leading-tight">Multi-Cloud Cost Optimization with AI</h3>
-            <p className="text-gray-200 text-base mb-6 leading-relaxed">
-              AI-powered FinOps platform that reduces cloud spend by 67%. Intelligent workload placement, 
-              auto-scaling, and waste elimination across AWS, Azure, and GCP.
-            </p>
-            <div className="flex flex-wrap gap-2 mb-8">
-              <span className="px-4 py-2 bg-emerald-500/30 text-emerald-200 text-sm rounded-full font-semibold">67% Cost Reduction</span>
-              <span className="px-4 py-2 bg-teal-500/30 text-teal-200 text-sm rounded-full font-semibold">$293M Saved</span>
-              <span className="px-4 py-2 bg-cyan-500/30 text-cyan-200 text-sm rounded-full font-semibold">47:1 ROI</span>
+          {/* Article 2: Neural Search */}
+          <Link href="/blog/ai-2025-october-neural-search-revolution" className="group">
+            <div className="h-full bg-gradient-to-br from-indigo-900/50 to-indigo-800/30 backdrop-blur-sm rounded-xl border border-indigo-400/30 p-6 hover:border-indigo-400/60 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-indigo-500/50">
+              <div className="mb-4">
+                <span className="inline-block px-3 py-1 bg-indigo-500/20 text-indigo-300 text-xs rounded-full border border-indigo-400/40 mb-3">
+                  Neural Search
+                </span>
+                <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-indigo-300 transition-colors">
+                  Neural Search Revolution 2025
+                </h3>
+                <p className="text-white/70 text-sm mb-4">
+                  Learn how neural search systems achieve 96% accuracy across 100M+ daily queries, delivering 
+                  instant semantic insights across petabyte-scale data.
+                </p>
+              </div>
+              <div className="flex items-center justify-between text-sm">
+                <span className="text-indigo-300 font-semibold">20 min read</span>
+                <span className="text-white/50 group-hover:text-indigo-300 transition-colors">
+                  Read More →
+                </span>
+              </div>
+              <div className="mt-4 pt-4 border-t border-indigo-400/20">
+                <div className="flex flex-wrap gap-2">
+                  <span className="text-xs px-2 py-1 bg-indigo-500/10 text-indigo-300 rounded">96% Accuracy</span>
+                  <span className="text-xs px-2 py-1 bg-purple-500/10 text-purple-300 rounded">100M+ Queries</span>
+                  <span className="text-xs px-2 py-1 bg-pink-500/10 text-pink-300 rounded">$32M+ Value</span>
+                </div>
+              </div>
             </div>
-            <a 
-              href="/blog/multi-cloud-cost-optimization-ai-2025"
-              className="inline-block w-full bg-gradient-to-r from-emerald-600 to-teal-700 hover:from-emerald-500 hover:to-teal-600 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 text-center shadow-xl hover:shadow-emerald-500/60 text-lg transform hover:scale-105"
-            >
-              Discover Cost Optimization →
-            </a>
-          </div>
+          </Link>
 
-          {/* Autonomous DevSecOps */}
-          <div className="group bg-gradient-to-br from-red-500/15 to-orange-500/15 backdrop-blur-xl rounded-3xl p-10 border-2 border-red-400/50 hover:border-red-400/90 transition-all duration-500 transform hover:-translate-y-3 hover:shadow-2xl hover:shadow-red-500/40">
-            <div className="text-7xl mb-6 transform group-hover:scale-110 transition-transform duration-300">🛡️</div>
-            <h3 className="text-3xl font-extrabold text-white mb-4 leading-tight">Autonomous DevSecOps Revolution 2025</h3>
-            <p className="text-gray-200 text-base mb-6 leading-relaxed">
-              AI agents that automatically detect vulnerabilities, generate security fixes, and prevent 
-              97% of threats—while accelerating delivery by 10x.
-            </p>
-            <div className="flex flex-wrap gap-2 mb-8">
-              <span className="px-4 py-2 bg-red-500/30 text-red-200 text-sm rounded-full font-semibold">97% Threat Prevention</span>
-              <span className="px-4 py-2 bg-orange-500/30 text-orange-200 text-sm rounded-full font-semibold">91% Work Automated</span>
-              <span className="px-4 py-2 bg-yellow-500/30 text-yellow-200 text-sm rounded-full font-semibold">10x Faster</span>
+          {/* Article 3: Data Mesh */}
+          <Link href="/blog/ai-2025-october-intelligent-data-mesh-architecture" className="group">
+            <div className="h-full bg-gradient-to-br from-emerald-900/50 to-emerald-800/30 backdrop-blur-sm rounded-xl border border-emerald-400/30 p-6 hover:border-emerald-400/60 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-emerald-500/50">
+              <div className="mb-4">
+                <span className="inline-block px-3 py-1 bg-emerald-500/20 text-emerald-300 text-xs rounded-full border border-emerald-400/40 mb-3">
+                  Data Architecture
+                </span>
+                <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-emerald-300 transition-colors">
+                  Intelligent Data Mesh Architecture 2025
+                </h3>
+                <p className="text-white/70 text-sm mb-4">
+                  Explore how data mesh architectures deliver 10x faster insights with 94% data quality, 
+                  transforming enterprise data management for $67M+ annual value.
+                </p>
+              </div>
+              <div className="flex items-center justify-between text-sm">
+                <span className="text-emerald-300 font-semibold">24 min read</span>
+                <span className="text-white/50 group-hover:text-emerald-300 transition-colors">
+                  Read More →
+                </span>
+              </div>
+              <div className="mt-4 pt-4 border-t border-emerald-400/20">
+                <div className="flex flex-wrap gap-2">
+                  <span className="text-xs px-2 py-1 bg-emerald-500/10 text-emerald-300 rounded">10x Faster</span>
+                  <span className="text-xs px-2 py-1 bg-cyan-500/10 text-cyan-300 rounded">94% Quality</span>
+                  <span className="text-xs px-2 py-1 bg-blue-500/10 text-blue-300 rounded">$67M+ Value</span>
+                </div>
+              </div>
             </div>
-            <a 
-              href="/blog/autonomous-devsecops-revolution-2025"
-              className="inline-block w-full bg-gradient-to-r from-red-600 to-orange-700 hover:from-red-500 hover:to-orange-600 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 text-center shadow-xl hover:shadow-red-500/60 text-lg transform hover:scale-105"
-            >
-              Learn Security Automation →
-            </a>
-          </div>
+          </Link>
         </div>
 
-        {/* Call-to-Action Section */}
-        <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-indigo-500/20 to-purple-500/20 backdrop-blur-lg rounded-3xl p-12 border border-indigo-400/40 max-w-4xl mx-auto">
-            <h3 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Operations?</h3>
-            <p className="text-xl text-gray-200 mb-8 leading-relaxed">
-              Join Fortune 500 companies achieving breakthrough results with AI-powered platforms. 
-              Get your free consultation and customized roadmap today.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <a 
-                href="/contact" 
-                className="bg-gradient-to-r from-indigo-600 to-purple-700 hover:from-indigo-500 hover:to-purple-600 text-white font-bold py-5 px-10 rounded-xl transition-all duration-300 shadow-2xl hover:shadow-indigo-500/60 transform hover:-translate-y-1 text-lg"
-              >
-                Get Free Consultation
-              </a>
-              <a 
-                href="/blog" 
-                className="bg-white/10 hover:bg-white/20 text-white font-bold py-5 px-10 rounded-xl transition-all duration-300 border-2 border-white/30 hover:border-white/50 backdrop-blur-sm text-lg"
-              >
-                View All Insights
-              </a>
-            </div>
-          </div>
+        <div className="text-center">
+          <Link href="/blog" className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-emerald-600 hover:from-purple-500 hover:to-emerald-500 rounded-lg font-semibold text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+            <span>Explore All October 2025 Insights</span>
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </Link>
         </div>
       </div>
-    </section>
+
+      {/* Decorative elements */}
+      <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl"></div>
+    </div>
   );
 }
