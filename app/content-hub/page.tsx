@@ -15,6 +15,7 @@ export default function ContentHub() {
         { title: 'Agentic Workflow Orchestration 2026', slug: '/blog/agentic-workflow-orchestration-2026', readTime: '16 min', featured: true },
         { title: 'AI Enterprise Agents Blueprint 2026', slug: '/blog/ai-enterprise-agents-blueprint-2026', readTime: '18 min', featured: true },
         { title: 'AI Agent Observability 2026', slug: '/blog/ai-agent-observability-2026', readTime: '18 min', featured: true },
+        { title: 'AI Enterprise Automation 2026', slug: '/blog/ai-enterprise-automation-2026', readTime: '18 min', featured: true },
         { title: 'AI Multimodal Enterprise Solutions 2026', slug: '/blog/ai-multimodal-enterprise-2026', readTime: '15 min', featured: true },
         { title: 'AI Implementation Playbook 2026', slug: '/blog/ai-implementation-playbook-2026', readTime: '12 min', featured: true },
         { title: 'AI Governance Maturity Model 2026', slug: '/blog/ai-governance-maturity-model-2026', readTime: '14 min', featured: true },
@@ -43,6 +44,7 @@ export default function ContentHub() {
     {
       title: 'AI Analytics & Value',
       articles: [
+        { title: 'AI Operational Excellence 2026', slug: '/blog/ai-operational-excellence-2026', readTime: '12 min', featured: true },
         { title: 'AI Value Stream Analytics 2026', slug: '/blog/ai-value-stream-analytics-2026', readTime: '9 min', featured: true },
         { title: 'AI Customer Data Platforms 2026', slug: '/blog/ai-customer-data-platforms-2026', readTime: '18 min', featured: true },
         { title: 'AI Trustworthy Agents 2026', slug: '/blog/ai-trustworthy-agents-2026', readTime: '11 min', featured: true },
