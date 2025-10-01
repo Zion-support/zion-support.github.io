@@ -69,6 +69,9 @@ import October2025NewPracticalContentBanner from '../components/October2025NewPr
 import NewContentShowcaseOct2025 from '../components/NewContentShowcaseOct2025';
 import October2025NewContentBanner from '../components/October2025NewContentBanner';
 
+// BRAND NEW OCTOBER 2025 DIGITAL TRANSFORMATION & CLOUD-NATIVE CONTENT
+import NewOctoberContentBanner from '../components/NewOctoberContentBanner';
+
 // NEWEST OCTOBER 2025 CONTENT - PRODUCTION AI & SECURITY
 import ProductionAgenticAIBanner, { AgenticAIShowcaseBanner } from '../components/ProductionAgenticAIBanner';
 import AISecurityBanner, { AISecurityShowcaseBanner } from '../components/AISecurityBanner';
@@ -91,6 +94,9 @@ export const metadata = {
 export default function HomePage() {
   return (
     <div className="animate-fade-in">
+      {/* 🚀 BRAND NEW OCTOBER 2025 - DIGITAL TRANSFORMATION & CLOUD-NATIVE AI */}
+      <NewOctoberContentBanner />
+      
       {/* 🚀 NEW 2026 CONTENT SHOWCASE - TOP PRIORITY */}
       <NewContent2026Banner />
       <AI2026ContentShowcaseBanner />
