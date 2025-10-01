@@ -36,6 +36,7 @@ import October2025LatestContentBanner from "../components/October2025LatestConte
 import October2025LatestInnovationsBanner from "../components/October2025LatestInnovationsBanner";
 import October2025ProductionAIBanner from "../components/October2025ProductionAIBanner";
 import October2025AdvancedAIInnovationsBanner from "../components/October2025AdvancedAIInnovationsBanner";
+import October2025NewTechBreakthroughsBanner from "../components/October2025NewTechBreakthroughsBanner";
 import LatestArticlesShowcase from "../components/LatestArticlesShowcase";
 import LatestContentBanner from "../components/LatestContentBanner";
 import LatestInsights from "../components/LatestInsights";
