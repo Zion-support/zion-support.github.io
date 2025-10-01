@@ -59,7 +59,6 @@ import LatestContentPromotionalBanner from '../components/LatestContentPromotion
 import NewContentPromotionalBanner2026 from '../components/NewContentPromotionalBanner2026';
 import AIInnovationShowcaseBanner2026 from '../components/AIInnovationShowcaseBanner2026';
 import NextGenAutonomousBanner from '../components/NextGenAutonomousBanner';
-import AutonomousEnterpriseSystemsBanner from '../components/AutonomousEnterpriseSystemsBanner';
 
 // NEW JANUARY 2026 NEUROMORPHIC & FEDERATED LEARNING CONTENT
 import NeuromorphicComputingRevolutionBanner from '../components/NeuromorphicComputingRevolutionBanner';
@@ -69,6 +68,9 @@ import FederatedLearningPrivacyBanner from '../components/FederatedLearningPriva
 import October2025NewPracticalContentBanner from '../components/October2025NewPracticalContentBanner';
 import NewContentShowcaseOct2025 from '../components/NewContentShowcaseOct2025';
 import October2025NewContentBanner from '../components/October2025NewContentBanner';
+
+// BRAND NEW OCTOBER 2025 DIGITAL TRANSFORMATION & CLOUD-NATIVE CONTENT
+import NewOctoberContentBanner from '../components/NewOctoberContentBanner';
 
 // NEWEST OCTOBER 2025 CONTENT - PRODUCTION AI & SECURITY
 import ProductionAgenticAIBanner, { AgenticAIShowcaseBanner } from '../components/ProductionAgenticAIBanner';
@@ -92,8 +94,8 @@ export const metadata = {
 export default function HomePage() {
   return (
     <div className="animate-fade-in">
-      {/* 🚀 NEWEST JANUARY 2026 AUTONOMOUS ENTERPRISE SYSTEMS - TOP PRIORITY */}
-      <AutonomousEnterpriseSystemsBanner />
+      {/* 🚀 BRAND NEW OCTOBER 2025 - DIGITAL TRANSFORMATION & CLOUD-NATIVE AI */}
+      <NewOctoberContentBanner />
       
       {/* 🚀 NEW 2026 CONTENT SHOWCASE - TOP PRIORITY */}
       <NewContent2026Banner />
