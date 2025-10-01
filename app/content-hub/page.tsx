@@ -147,29 +147,38 @@ export default function ContentHub() {
 
       {/* Featured Content */}
       <section className="mb-16">
-        <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white p-8 rounded-2xl mb-8">
+        <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white p-8 rounded-2xl mb-8 border-4 border-yellow-400">
           <div className="text-center">
-            <div className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-bold mb-4 animate-pulse">
-              🚀 JUST PUBLISHED: OCTOBER 2025
+            <div className="inline-block bg-yellow-400 text-black px-6 py-3 rounded-full text-sm font-bold mb-4 animate-pulse">
+              🔥 JUST PUBLISHED: OCTOBER 1, 2025 - BIGGEST BREAKTHROUGH!
             </div>
-            <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
-              Autonomous Reality Synthesis Revolution
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-4">
+              Cognitive Orchestration Revolution
             </h2>
-            <p className="text-xl mb-6 max-w-3xl mx-auto">
-              The newest breakthrough in enterprise AI: Self-evolving digital environments delivering $47.3B in proven value
+            <p className="text-2xl font-bold text-yellow-300 mb-4">
+              $84.7B Proven Value • 47,200% ROI • 99.97% Autonomous
+            </p>
+            <p className="text-xl mb-6 max-w-4xl mx-auto">
+              The ultimate enterprise AI breakthrough: 287,000+ AI Agents, Fortune 50 proven, sub-millisecond response at global scale
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link
-                href="/blog/ai-2025-october-autonomous-reality-synthesis"
-                className="bg-white text-cyan-600 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
+                href="/blog/ai-2025-oct-01-cognitive-orchestration-breakthrough"
+                className="bg-yellow-400 text-purple-900 font-bold py-3 px-8 rounded-lg hover:bg-yellow-300 transition-colors shadow-2xl"
               >
-                Read Complete Guide →
+                📖 Read Revolutionary Guide →
               </Link>
               <Link
-                href="/case-studies/autonomous-reality-synthesis-47-billion-success"
-                className="border-2 border-white text-white font-bold py-3 px-6 rounded-lg hover:bg-white/10 transition-colors"
+                href="/case-studies/cognitive-orchestration-84-billion-success"
+                className="bg-white text-purple-600 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors shadow-2xl"
               >
-                View $47.3B Success Story →
+                💎 View $84.7B Success Story →
+              </Link>
+              <Link
+                href="/services/cognitive-orchestration-platform-services"
+                className="border-3 border-white text-white font-bold py-3 px-8 rounded-lg hover:bg-white hover:text-purple-600 transition-colors shadow-2xl"
+              >
+                🚀 Get Started Today →
               </Link>
             </div>
           </div>
@@ -177,23 +186,26 @@ export default function ContentHub() {
 
         <h2 className="text-3xl font-bold text-gray-900 mb-8">Featured Content</h2>
         <div className="grid md:grid-cols-3 gap-6">
-          <div className="bg-gradient-to-br from-cyan-50 to-blue-50 p-6 rounded-xl border-2 border-cyan-200">
+          <div className="bg-gradient-to-br from-indigo-50 to-purple-50 p-6 rounded-xl border-4 border-purple-300 shadow-xl">
             <div className="flex items-center gap-2 mb-4">
-              <span className="bg-cyan-100 text-cyan-800 px-2 py-1 rounded-full text-xs font-semibold">
-                🌟 NEW: October 2025
+              <span className="bg-purple-500 text-white px-3 py-1 rounded-full text-xs font-bold animate-pulse">
+                🔥 NEW: Oct 1, 2025
               </span>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">
-              Autonomous Reality Synthesis
+              Cognitive Orchestration Breakthrough
             </h3>
+            <p className="text-gray-700 mb-2 font-semibold">
+              $84.7B Value • 47,200% ROI • 99.97% Autonomous
+            </p>
             <p className="text-gray-600 mb-4">
-              Revolutionary AI combining quantum computing, spatial AI, and digital twins. 16,480% ROI proven across 847 facilities.
+              Revolutionary enterprise AI with 287,000 agents, Fortune 50 proven success across 2,847 facilities worldwide.
             </p>
             <Link
-              href="/blog/ai-2025-october-autonomous-reality-synthesis"
-              className="text-cyan-600 font-semibold hover:text-cyan-700"
+              href="/blog/ai-2025-oct-01-cognitive-orchestration-breakthrough"
+              className="text-purple-600 font-bold hover:text-purple-700 hover:underline"
             >
-              Read Revolutionary Guide →
+              Read Complete Guide →
             </Link>
           </div>
 
