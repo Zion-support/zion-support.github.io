@@ -1607,6 +1607,87 @@ Global experimentation without PII requires new primitives.
     readTime: "8 min read",
     image: "/images/private-experimentation-edge-2025.jpg"
   }
+  ,
+  {
+    slug: "ai-2025-oct-03-enterprise-evals-blueprint",
+    title: "Enterprise AI Evals Blueprint: Scorecards That Drive Outcomes",
+    description: "Design eval pipelines that predict production KPIs and gate risky changes with confidence.",
+    content: `
+# Enterprise AI Evals Blueprint
+
+Most eval suites fail to predict production. This guide shows how to build eval pipelines that correlate with business KPIs and act as reliable change gates.
+
+## What You’ll Implement
+- Golden task sets mapped to user journeys
+- Calibrated metrics (task success, harmlessness, helpfulness)
+- Budget-linked scorecards with pass/fail thresholds
+- Online canaries and rollback hooks
+
+## Outcomes
+- Fewer regressions and faster iteration
+- Measurable trust in AI quality
+- Clear ownership and weekly review rituals
+    `,
+    author: "Zion Tech Group Reliability Lab",
+    date: "2025-10-03",
+    category: "AI Reliability",
+    tags: ["Evaluations", "Scorecards", "Guardrails", "E2E"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/enterprise-ai-evals-blueprint.jpg"
+  }
+  ,
+  {
+    slug: "ai-2025-oct-03-rag-guardrails-at-scale",
+    title: "RAG Guardrails at Scale: Freshness Windows, Sources You Can Trust",
+    description: "Ship governed retrieval with freshness windows, source whitelists, and cache tiers that cut cost while lifting answer quality.",
+    content: `
+# RAG Guardrails at Scale
+
+Production RAG requires disciplined governance and budgets.
+
+## Core Patterns
+- Domain schemas and strict source governance
+- Freshness windows + retrieval budgets
+- Tiered caches (features, chunks, answers)
+- Eval-gated rollouts with kill switches
+
+We include reference dashboards, rollout checklists, and incident playbooks.
+    `,
+    author: "Zion Tech Group Knowledge Systems",
+    date: "2025-10-03",
+    category: "RAG Engineering",
+    tags: ["RAG", "Governance", "Caching", "Freshness"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/rag-guardrails-scale.jpg"
+  }
+  ,
+  {
+    slug: "ai-2025-oct-03-agent-governance-in-production",
+    title: "Agent Governance in Production: Budgets, Approvals, Rollback",
+    description: "Design agent toolchains with action budgets, approvals, and instant rollback so teams move 10x faster without incidents.",
+    content: `
+# Agent Governance in Production
+
+Agent systems unlock velocity when paired with strong guardrails.
+
+## Ship Safely
+- Signed tools with scopes and quotas
+- Per-action budgets and human-in-the-loop approvals
+- Tool traces with KPI-linked SLIs
+- Canary routes, kill switches, and rollback hooks
+
+Comes with policy templates and playbooks used in Fortune 500 stacks.
+    `,
+    author: "Zion Tech Group AI Operations",
+    date: "2025-10-03",
+    category: "AI Operations",
+    tags: ["Agents", "Governance", "Approvals", "Rollback"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/agent-governance-production.jpg"
+  }
 ];
 
 export default blogPosts;
