@@ -206,11 +206,11 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base flex-wrap">
             <span className="font-bold">🔥 JUST PUBLISHED OCT 1:</span>
-            <Link href="/blog/ai-2025-oct-01-enterprise-integration-orchestration-revolution" className="underline hover:text-yellow-200 font-bold">Integration Revolution</Link>
+            <Link href="/blog/ai-2025-oct-01-agentic-analytics-platform" className="underline hover:text-yellow-200 font-bold">Agentic Analytics</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-2025-oct-01-fortune-500-bank-integration-transformation-89m-success" className="underline hover:text-yellow-200 font-bold">Bank $89M ROI</Link>
+            <Link href="/blog/ai-2025-oct-01-enterprise-knowledge-graph-orchestration" className="underline hover:text-yellow-200 font-bold">Knowledge Graph Orchestration</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/services/ai-integration-orchestration-platform-2025" className="underline hover:text-yellow-200 font-bold">New Platform</Link>
+            <Link href="/blog/ai-2025-oct-01-trustworthy-ai-governance-updates" className="underline hover:text-yellow-200 font-bold">Governance Updates</Link>
             <span className="hidden md:inline">•</span>
             <Link href="/blog/ai-2025-oct-practical-ml-pipeline-optimization" className="underline hover:text-yellow-200">ML Pipeline 10x</Link>
             <span className="hidden md:inline">•</span>
