@@ -1,197 +1,153 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function October2025EnterpriseAITransformationBanner() {
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-950 via-purple-950/50 to-emerald-950/50 relative overflow-hidden">
-      {/* Animated Background Effect */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-emerald-500 rounded-full filter blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-      </div>
-
-      <div className="container mx-auto px-6 relative z-10">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-purple-500/20 to-emerald-500/20 border border-purple-400/50 mb-6">
+    <div className="relative bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 overflow-hidden">
+      {/* Animated background */}
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDE0YzMuMzEgMCA2LTIuNjkgNi02cy0yLjY5LTYtNi02LTYgMi42OS02IDYgMi42OSA2IDYgNnptLTEyIDRjMS42NiAwIDMtMS4zNCAzLTNzLTEuMzQtMy0zLTMtMyAxLjM0LTMgMyAxLjM0IDMgMyAzem0yNCAyNGMtMS42NiAwLTMgMS4zNC0zIDNzMS4zNCAzIDMgMyAzLTEuMzQgMy0zLTEuMzQtMy0zLTN6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-20"></div>
+      
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="text-center">
+          {/* Main badge */}
+          <div className="inline-flex items-center gap-3 bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 backdrop-blur-sm border border-emerald-400/30 rounded-full px-6 py-2 mb-8">
             <span className="relative flex h-3 w-3">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-3 w-3 bg-purple-500"></span>
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
             </span>
-            <span className="text-purple-300 font-bold text-sm tracking-wide uppercase">
-              October 2025 Enterprise AI Series
-            </span>
+            <span className="text-emerald-300 font-bold text-sm tracking-wider">🚀 JUST PUBLISHED: OCTOBER 1, 2025 🚀</span>
           </div>
-
-          <h2 className="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
-            <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-emerald-400 bg-clip-text text-transparent">
-              Production-Ready AI
-            </span>
-            <br />
-            <span className="text-white">That Delivers Results</span>
+          
+          {/* Main headline */}
+          <h2 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-emerald-100 to-cyan-200 mb-6 leading-tight">
+            3 Enterprise AI Transformations
           </h2>
-
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            Learn how Fortune 500 companies are achieving 99.9% AI compliance, 87% risk reduction, and 
-            $47M+ in cloud cost savings through proven enterprise frameworks.
+          
+          <p className="text-2xl md:text-3xl text-emerald-200 font-semibold mb-8 max-w-4xl mx-auto">
+            Revolutionary Platforms Delivering $45.9M Combined Annual Value
           </p>
-
-          {/* Key Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto mb-12">
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-purple-400/30">
-              <div className="text-3xl font-extrabold text-purple-400 mb-1">99.9%</div>
-              <div className="text-sm text-gray-400">Compliance Rate</div>
+          
+          {/* Value proposition */}
+          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
+              <div className="text-4xl font-black text-red-400 mb-2">99.8%</div>
+              <div className="text-lg text-white font-medium">Threat Prevention</div>
+              <div className="text-sm text-emerald-200 mt-2">Autonomous DevSecOps</div>
             </div>
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-emerald-400/30">
-              <div className="text-3xl font-extrabold text-emerald-400 mb-1">68%</div>
-              <div className="text-sm text-gray-400">Cost Reduction</div>
+            
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
+              <div className="text-4xl font-black text-cyan-400 mb-2">10x</div>
+              <div className="text-lg text-white font-medium">Dev Velocity</div>
+              <div className="text-sm text-emerald-200 mt-2">Neural Code Generation</div>
             </div>
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-pink-400/30">
-              <div className="text-3xl font-extrabold text-pink-400 mb-1">$47M+</div>
-              <div className="text-sm text-gray-400">Annual Savings</div>
-            </div>
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-cyan-400/30">
-              <div className="text-3xl font-extrabold text-cyan-400 mb-1">6mo</div>
-              <div className="text-sm text-gray-400">Faster Deploy</div>
+            
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
+              <div className="text-4xl font-black text-green-400 mb-2">$24.8M</div>
+              <div className="text-lg text-white font-medium">Annual Savings</div>
+              <div className="text-sm text-emerald-200 mt-2">Supply Chain Intelligence</div>
             </div>
           </div>
-        </div>
-
-        {/* Content Grid */}
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-12">
-          {/* AI Governance Card */}
-          <div className="group relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-2xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity"></div>
-            <div className="relative bg-gradient-to-br from-slate-900 to-purple-900/30 rounded-2xl p-8 border-2 border-purple-400/40 hover:border-purple-400/70 transition-all duration-300 transform hover:-translate-y-2">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="text-6xl">🛡️</div>
-                <div>
-                  <h3 className="text-2xl font-bold text-white">AI Governance</h3>
-                  <p className="text-purple-400 text-sm">Production Framework</p>
-                </div>
-              </div>
-
-              <p className="text-gray-300 mb-6 leading-relaxed">
-                Deploy AI systems with confidence through comprehensive governance. Achieve 99.9% compliance, 
-                87% risk reduction, and 6-month faster deployments.
+          
+          {/* Content cards */}
+          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-10">
+            <Link 
+              to="/blog/ai-2025-october-autonomous-devsecops-platform"
+              className="group bg-gradient-to-br from-red-800/50 to-pink-800/50 backdrop-blur-sm rounded-xl p-6 border border-red-400/30 hover:border-red-300 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/50"
+            >
+              <div className="text-3xl mb-3">🔒</div>
+              <h3 className="text-xl font-bold text-white mb-2 group-hover:text-red-200 transition-colors">
+                Autonomous DevSecOps
+              </h3>
+              <p className="text-emerald-200 text-sm mb-3">
+                99.8% threat prevention, 95% faster patching, $12.7M savings
               </p>
-
-              <div className="space-y-3 mb-8">
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-purple-500/20 flex items-center justify-center">
-                    <span className="text-purple-400 font-bold">✓</span>
-                  </div>
-                  <span className="text-gray-300 text-sm">Model lifecycle governance</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-purple-500/20 flex items-center justify-center">
-                    <span className="text-purple-400 font-bold">✓</span>
-                  </div>
-                  <span className="text-gray-300 text-sm">Automated policy enforcement</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-purple-500/20 flex items-center justify-center">
-                    <span className="text-purple-400 font-bold">✓</span>
-                  </div>
-                  <span className="text-gray-300 text-sm">EU AI Act & US compliance</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-purple-500/20 flex items-center justify-center">
-                    <span className="text-purple-400 font-bold">✓</span>
-                  </div>
-                  <span className="text-gray-300 text-sm">Bias & fairness testing</span>
-                </div>
+              <div className="flex flex-wrap gap-2 mb-3">
+                <span className="text-xs bg-red-500/20 text-red-300 px-2 py-1 rounded">Zero-Trust</span>
+                <span className="text-xs bg-red-500/20 text-red-300 px-2 py-1 rounded">AI Security</span>
               </div>
-
-              <a 
-                href="/blog/ai-2025-october-production-ai-governance-framework"
-                className="block w-full bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 text-center shadow-lg hover:shadow-purple-500/50 transform hover:scale-105"
-              >
+              <div className="flex items-center text-amber-400 text-sm font-semibold">
                 Read Full Guide →
-              </a>
-            </div>
-          </div>
-
-          {/* Cloud Cost Intelligence Card */}
-          <div className="group relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity"></div>
-            <div className="relative bg-gradient-to-br from-slate-900 to-emerald-900/30 rounded-2xl p-8 border-2 border-emerald-400/40 hover:border-emerald-400/70 transition-all duration-300 transform hover:-translate-y-2">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="text-6xl">💎</div>
-                <div>
-                  <h3 className="text-2xl font-bold text-white">Cost Intelligence</h3>
-                  <p className="text-emerald-400 text-sm">Autonomous FinOps</p>
-                </div>
               </div>
-
-              <p className="text-gray-300 mb-6 leading-relaxed">
-                Slash cloud costs by 68% with AI agents that optimize infrastructure 24/7. Save $47M+ annually 
-                through intelligent resource management.
+            </Link>
+            
+            <Link 
+              to="/blog/ai-2025-october-neural-code-generation-platform"
+              className="group bg-gradient-to-br from-cyan-800/50 to-blue-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 hover:border-cyan-300 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/50"
+            >
+              <div className="text-3xl mb-3">⚡</div>
+              <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-200 transition-colors">
+                Neural Code Generation
+              </h3>
+              <p className="text-emerald-200 text-sm mb-3">
+                10x dev velocity, 98.7% accuracy, $8.4M productivity gains
               </p>
-
-              <div className="space-y-3 mb-8">
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-emerald-500/20 flex items-center justify-center">
-                    <span className="text-emerald-400 font-bold">✓</span>
-                  </div>
-                  <span className="text-gray-300 text-sm">Real-time cost optimization</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-emerald-500/20 flex items-center justify-center">
-                    <span className="text-emerald-400 font-bold">✓</span>
-                  </div>
-                  <span className="text-gray-300 text-sm">Predictive cost forecasting</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-emerald-500/20 flex items-center justify-center">
-                    <span className="text-emerald-400 font-bold">✓</span>
-                  </div>
-                  <span className="text-gray-300 text-sm">Multi-cloud intelligence</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-emerald-500/20 flex items-center justify-center">
-                    <span className="text-emerald-400 font-bold">✓</span>
-                  </div>
-                  <span className="text-gray-300 text-sm">Automated remediation</span>
-                </div>
+              <div className="flex flex-wrap gap-2 mb-3">
+                <span className="text-xs bg-cyan-500/20 text-cyan-300 px-2 py-1 rounded">AI Coding</span>
+                <span className="text-xs bg-cyan-500/20 text-cyan-300 px-2 py-1 rounded">Auto Tests</span>
               </div>
-
-              <a 
-                href="/blog/ai-2025-october-autonomous-cloud-cost-intelligence"
-                className="block w-full bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 text-center shadow-lg hover:shadow-emerald-500/50 transform hover:scale-105"
-              >
-                Discover Savings →
-              </a>
+              <div className="flex items-center text-amber-400 text-sm font-semibold">
+                Read Full Guide →
+              </div>
+            </Link>
+            
+            <Link 
+              to="/blog/ai-2025-october-intelligent-supply-chain-revolution"
+              className="group bg-gradient-to-br from-green-800/50 to-emerald-800/50 backdrop-blur-sm rounded-xl p-6 border border-green-400/30 hover:border-green-300 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/50"
+            >
+              <div className="text-3xl mb-3">🚚</div>
+              <h3 className="text-xl font-bold text-white mb-2 group-hover:text-green-200 transition-colors">
+                Supply Chain Intelligence
+              </h3>
+              <p className="text-emerald-200 text-sm mb-3">
+                99.6% forecast accuracy, 94% cost reduction, $24.8M savings
+              </p>
+              <div className="flex flex-wrap gap-2 mb-3">
+                <span className="text-xs bg-green-500/20 text-green-300 px-2 py-1 rounded">AI Logistics</span>
+                <span className="text-xs bg-green-500/20 text-green-300 px-2 py-1 rounded">Predictive</span>
+              </div>
+              <div className="flex items-center text-amber-400 text-sm font-semibold">
+                Read Full Guide →
+              </div>
+            </Link>
+          </div>
+          
+          {/* Success metrics */}
+          <div className="bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 max-w-5xl mx-auto">
+            <h3 className="text-2xl font-bold text-white mb-6">Combined Enterprise Impact</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              <div>
+                <div className="text-3xl font-black text-emerald-400 mb-1">$45.9M</div>
+                <div className="text-sm text-white">Annual Savings</div>
+              </div>
+              <div>
+                <div className="text-3xl font-black text-cyan-400 mb-1">99.8%</div>
+                <div className="text-sm text-white">Avg Accuracy</div>
+              </div>
+              <div>
+                <div className="text-3xl font-black text-green-400 mb-1">10x</div>
+                <div className="text-sm text-white">Productivity Gain</div>
+              </div>
+              <div>
+                <div className="text-3xl font-black text-amber-400 mb-1">3,450%</div>
+                <div className="text-sm text-white">Average ROI</div>
+              </div>
             </div>
           </div>
-        </div>
-
-        {/* Bottom CTA */}
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-900/30 via-pink-900/30 to-emerald-900/30 backdrop-blur-lg rounded-2xl p-10 border-2 border-purple-400/30">
-            <h3 className="text-3xl font-bold text-white mb-4">
-              Ready to Transform Your Enterprise AI?
-            </h3>
-            <p className="text-lg text-gray-300 mb-8">
-              Join Fortune 500 companies achieving breakthrough results with proven AI governance and 
-              cloud cost optimization frameworks from Zion Tech Group.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="/contact" 
-                className="bg-gradient-to-r from-purple-500 via-pink-500 to-emerald-500 hover:from-purple-400 hover:via-pink-400 hover:to-emerald-400 text-white font-bold py-4 px-10 rounded-xl transition-all duration-300 shadow-xl hover:shadow-purple-500/50 transform hover:-translate-y-1"
-              >
-                Schedule Free Consultation
-              </a>
-              <a 
-                href="/blog" 
-                className="border-2 border-emerald-400 text-emerald-300 hover:bg-emerald-400/20 font-bold py-4 px-10 rounded-xl transition-all duration-300"
-              >
-                Explore All Insights
-              </a>
-            </div>
+          
+          {/* CTA */}
+          <div className="mt-12">
+            <Link 
+              to="/blog" 
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-400 hover:to-cyan-400 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/50"
+            >
+              <span>Explore All AI Breakthroughs</span>
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </Link>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
