@@ -4,6 +4,7 @@ import Link from 'next/link';
 import './globals.css';
 import { September30NewContentShowcase } from '../components/PromotionalBanner';
 import NewContentNavigation from '../components/NewContentNavigation';
+import AI2027AdvancedNeuralSuperintelligenceBreakthroughBanner from '../components/AI2027AdvancedNeuralSuperintelligenceBreakthroughBanner';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -813,6 +814,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className="min-h-screen bg-white text-gray-900">
         <September30NewContentShowcase />
+        <AI2027AdvancedNeuralSuperintelligenceBreakthroughBanner />
         <Header />
         <NewContentNavigation />
         <main className="max-w-6xl mx-auto px-4 py-6 min-h-screen">
