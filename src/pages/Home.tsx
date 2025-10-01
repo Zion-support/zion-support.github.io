@@ -94,41 +94,49 @@ const Home = () => {
               and next-generation cloud infrastructure. Join 500+ companies already scaling with us!
             </p>
 
-            {/* NEW CONTENT ANNOUNCEMENT */}
-            <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-xl p-6 mb-6 animate-fade-in">
+            {/* 🚨 BRAND NEW CONTENT - OCTOBER 1, 2025 🚨 */}
+            <div className="bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 border border-emerald-400/30 rounded-xl p-6 mb-6 animate-fade-in shadow-2xl">
               <div className="flex items-center justify-center gap-3 mb-3">
-                <Rocket className="w-6 h-6 text-purple-400 animate-bounce" />
-                <span className="text-lg font-bold text-purple-400">🔥 FRESH CONTENT - SEPTEMBER 30, 2025</span>
-                <Rocket className="w-6 h-6 text-purple-400 animate-bounce" />
+                <Sparkles className="w-6 h-6 text-emerald-400 animate-pulse" />
+                <span className="text-lg font-bold text-emerald-400">🚀 BREAKTHROUGH CONTENT - OCTOBER 1, 2025</span>
+                <Sparkles className="w-6 h-6 text-emerald-400 animate-pulse" />
               </div>
-              <p className="text-white text-xl font-bold mb-3">
-                9 New Articles: K8s Security, Green AI, Distributed Tracing & Real-Time ML
+              <p className="text-white text-2xl font-bold mb-4">
+                3 Revolutionary AI Breakthroughs: Neural Evolution, Quantum Optimization & Intelligent Automation!
               </p>
-              <div className="grid md:grid-cols-4 gap-3 text-sm text-zion-slate-light mb-4">
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>Kubernetes Security Guide</span>
+              <div className="grid md:grid-cols-3 gap-4 text-sm text-zion-slate-light mb-4">
+                <div className="bg-emerald-900/30 rounded-lg p-4 border border-emerald-500/30">
+                  <CheckCircle className="w-5 h-5 text-emerald-400 mb-2" />
+                  <span className="font-bold text-emerald-300 block mb-1">Neural Architecture Evolution</span>
+                  <span className="text-xs">10,000x faster model design • $25M savings</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>Green AI & Sustainability</span>
+                <div className="bg-purple-900/30 rounded-lg p-4 border border-purple-500/30">
+                  <CheckCircle className="w-5 h-5 text-purple-400 mb-2" />
+                  <span className="font-bold text-purple-300 block mb-1">Quantum-Inspired Optimization</span>
+                  <span className="text-xs">1000x faster solutions • $42M value</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>Distributed Tracing</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>Real-Time Decision Intelligence</span>
+                <div className="bg-cyan-900/30 rounded-lg p-4 border border-cyan-500/30">
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mb-2" />
+                  <span className="font-bold text-cyan-300 block mb-1">Intelligent Automation Platform</span>
+                  <span className="text-xs">98% process automation • $67M savings</span>
                 </div>
               </div>
-              <Link
-                to="/blog/ai-2025-oct-01-enterprise-ai-transformation-roadmap"
-                className="inline-flex items-center gap-2 bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
-              >
-                Explore New Content
-                <ArrowRight className="w-4 h-4" />
-              </Link>
+              <div className="flex gap-3 justify-center">
+                <Link
+                  to="/blog/ai-2025-oct-01-neural-architecture-evolution-breakthrough"
+                  className="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
+                >
+                  Neural Evolution Guide
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link
+                  to="/blog/ai-2025-oct-01-quantum-inspired-optimization-enterprise"
+                  className="inline-flex items-center gap-2 bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
+                >
+                  Quantum Optimization
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
             </div>
 
             {/* Special Promotion Banner */}
@@ -199,64 +207,100 @@ const Home = () => {
           <October2025SupplyChainRevolutionBanner />
         </section>
 
-        {/* NEW CONTENT HIGHLIGHT SECTION */}
+        {/* 🔥🔥🔥 BREAKTHROUGH CONTENT HIGHLIGHT SECTION - OCTOBER 1, 2025 🔥🔥🔥 */}
         <section className="container mx-auto px-6 py-16 relative z-10">
           <div className="bg-gradient-to-br from-emerald-900/40 via-teal-900/30 to-cyan-900/40 rounded-2xl border-2 border-emerald-400/50 p-8 md:p-12 shadow-2xl">
             <div className="flex items-center gap-3 mb-6">
               <span className="inline-flex h-3 w-3 rounded-full bg-emerald-400 animate-pulse"></span>
-              <span className="text-emerald-400 font-bold text-lg uppercase tracking-wider">🔥 Just Published - October 1, 2025</span>
+              <span className="text-emerald-400 font-bold text-lg uppercase tracking-wider">⚡ BREAKTHROUGH RELEASES - October 1, 2025</span>
             </div>
             
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              🆕 Fresh Enterprise AI Resources Just Dropped!
+              🚀 3 Game-Changing AI Technologies Released Today!
             </h2>
             
-            <p className="text-xl text-emerald-100 mb-8 max-w-3xl">
-              Three brand-new resources from the frontlines of enterprise AI transformation. 
-              Real results, proven strategies, actionable insights.
+            <p className="text-xl text-emerald-100 mb-8 max-w-4xl">
+              Revolutionary breakthroughs in neural architecture evolution, quantum-inspired optimization, 
+              and intelligent automation. Combined potential: <span className="font-bold text-yellow-300">$134M+ annual value creation</span> 
+              for enterprise deployments.
             </p>
 
             <div className="grid md:grid-cols-3 gap-6 mb-8">
-              {/* Blog Post 1 - Hybrid Cloud */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30 hover:border-blue-400/60 transition-all hover:scale-105 hover:shadow-xl">
-                <div className="text-blue-400 text-sm font-semibold mb-2 uppercase">🚀 Service Launch</div>
-                <h3 className="text-lg font-bold text-white mb-3">Edge AI Platform</h3>
-                <p className="text-blue-100 text-sm mb-4">Deploy intelligence at the edge with less than 10ms latency. Starting at $4,999/mo</p>
+              {/* NEW: Neural Architecture Evolution */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30 hover:border-emerald-400/60 transition-all hover:scale-105 hover:shadow-xl">
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-ping"></span>
+                  <div className="text-emerald-400 text-sm font-semibold uppercase">🧬 Revolutionary AI</div>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">Neural Architecture Evolution</h3>
+                <p className="text-emerald-100 text-sm mb-4">
+                  Self-designing AI models achieving 10,000x faster development, 97% accuracy improvement, 
+                  and $25M annual savings through autonomous model evolution.
+                </p>
+                <div className="bg-emerald-900/30 rounded-lg p-3 mb-4 border border-emerald-500/30">
+                  <div className="text-xs text-emerald-300 space-y-1">
+                    <div>⚡ 10,000x faster model design</div>
+                    <div>🎯 97% accuracy improvement</div>
+                    <div>💰 $25M annual savings</div>
+                  </div>
+                </div>
                 <Link 
-                  to="/blog/ai-2025-oct-hybrid-cloud-transformation-enterprise" 
-                  className="inline-flex items-center text-blue-300 hover:text-white font-semibold text-sm"
+                  to="/blog/ai-2025-oct-01-neural-architecture-evolution-breakthrough" 
+                  className="inline-flex items-center text-emerald-300 hover:text-white font-semibold text-sm"
                 >
-                  Read Guide (15 min) <ArrowRight className="w-4 h-4 ml-1" />
+                  Read Full Guide (25 min) <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
               </div>
 
-              {/* Blog Post 2 - Legal AI */}
+              {/* NEW: Quantum Optimization */}
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:border-purple-400/60 transition-all hover:scale-105 hover:shadow-xl">
-                <div className="text-purple-400 text-sm font-semibold mb-2 uppercase">⚖️ Legal Tech</div>
-                <h3 className="text-lg font-bold text-white mb-3">GenAI Legal Revolution</h3>
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="inline-flex h-2 w-2 rounded-full bg-purple-400 animate-ping"></span>
+                  <div className="text-purple-400 text-sm font-semibold uppercase">⚛️ Quantum Tech</div>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">Quantum-Inspired Optimization</h3>
                 <p className="text-purple-100 text-sm mb-4">
-                  90% faster contracts, $12M annual savings, 24/7 compliance. How Fortune 500 legal teams operate now.
+                  Solve impossible enterprise problems 1000x faster with 99.8% optimality. 
+                  Quantum algorithms on classical hardware delivering $42M annual value.
                 </p>
+                <div className="bg-purple-900/30 rounded-lg p-3 mb-4 border border-purple-500/30">
+                  <div className="text-xs text-purple-300 space-y-1">
+                    <div>⚡ 1000x faster than traditional methods</div>
+                    <div>🎯 99.8% solution optimality</div>
+                    <div>💰 $42M annual value creation</div>
+                  </div>
+                </div>
                 <Link 
-                  to="/blog/ai-2025-oct-generative-ai-legal-compliance-revolution" 
+                  to="/blog/ai-2025-oct-01-quantum-inspired-optimization-enterprise" 
                   className="inline-flex items-center text-purple-300 hover:text-white font-semibold text-sm"
                 >
-                  Learn More (18 min) <ArrowRight className="w-4 h-4 ml-1" />
+                  Learn More (22 min) <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
               </div>
 
-              {/* Case Study - Retail AI */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-green-400/30 hover:border-green-400/60 transition-all hover:scale-105 hover:shadow-xl">
-                <div className="text-green-400 text-sm font-semibold mb-2 uppercase">💰 $214M Success</div>
-                <h3 className="text-lg font-bold text-white mb-3">Retail AI Personalization</h3>
-                <p className="text-green-100 text-sm mb-4">
-                  Fortune 100 retailer: 47% conversion lift, 62% engagement boost in 9 months. Full implementation story.
+              {/* NEW: Intelligent Automation */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 hover:border-cyan-400/60 transition-all hover:scale-105 hover:shadow-xl">
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="inline-flex h-2 w-2 rounded-full bg-cyan-400 animate-ping"></span>
+                  <div className="text-cyan-400 text-sm font-semibold uppercase">🤖 Enterprise Automation</div>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">Intelligent Automation Platform</h3>
+                <p className="text-cyan-100 text-sm mb-4">
+                  Achieve 98% process automation with AI-powered orchestration. 
+                  Self-learning workflows delivering 85% cost reduction and $67M savings.
                 </p>
+                <div className="bg-cyan-900/30 rounded-lg p-3 mb-4 border border-cyan-500/30">
+                  <div className="text-xs text-cyan-300 space-y-1">
+                    <div>⚡ 98% process automation rate</div>
+                    <div>🎯 85% operational cost reduction</div>
+                    <div>💰 $67M annual savings</div>
+                  </div>
+                </div>
                 <Link 
-                  to="/case-studies/ai-2025-oct-retail-ai-personalization-success-story" 
-                  className="inline-flex items-center text-green-300 hover:text-white font-semibold text-sm"
+                  to="/blog/ai-2025-oct-01-intelligent-automation-orchestration-platform" 
+                  className="inline-flex items-center text-cyan-300 hover:text-white font-semibold text-sm"
                 >
-                  Read Case Study <ArrowRight className="w-4 h-4 ml-1" />
+                  Explore Platform (28 min) <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
               </div>
             </div>
@@ -267,12 +311,12 @@ const Home = () => {
                 className="btn-primary flex items-center gap-2"
               >
                 <Sparkles className="w-5 h-5" />
-                Explore All Content
+                View All Revolutionary Content
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <div className="text-emerald-200 text-sm flex items-center gap-2">
                 <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                <span><span className="font-bold">Limited Time:</span> Free AI strategy consultation with any service</span>
+                <span><span className="font-bold">🎁 Early Adopter Bonus:</span> 50% off + Free AI consultation (expires Oct 15)</span>
               </div>
             </div>
           </div>
