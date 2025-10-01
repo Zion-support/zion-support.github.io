@@ -162,110 +162,68 @@ export default function ContentHub() {
 
       {/* Featured Content */}
       <section className="mb-16">
-<<<<<<< HEAD
-        <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white p-8 rounded-2xl mb-8">
+        <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white p-8 rounded-2xl mb-8 border-4 border-yellow-400">
           <div className="text-center">
-            <div className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-bold mb-4 animate-pulse">
-              🚀 JUST PUBLISHED: OCTOBER 1, 2025 - AI PRODUCTIVITY REVOLUTION
+            <div className="inline-block bg-yellow-400 text-black px-6 py-3 rounded-full text-sm font-bold mb-4 animate-pulse">
+              🔥 JUST PUBLISHED: OCTOBER 1, 2025 - BIGGEST BREAKTHROUGH!
             </div>
-            <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
-              AI-Powered Productivity: $50M+ in Proven Results
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-4">
+              Cognitive Orchestration Revolution
             </h2>
-            <p className="text-xl mb-6 max-w-3xl mx-auto">
-              New guides reveal how companies achieve 10x productivity with AI code assistants and 97.5% retention with AI customer success platforms
+            <p className="text-2xl font-bold text-yellow-300 mb-4">
+              $84.7B Proven Value • 47,200% ROI • 99.97% Autonomous
             </p>
-            <div className="grid md:grid-cols-2 gap-4 mb-6 max-w-4xl mx-auto">
-              <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg">
-                <h3 className="font-bold mb-2">👨‍💻 AI Code Assistants</h3>
-                <p className="text-sm mb-3">12x productivity • 68% faster delivery • $32M savings</p>
-                <div className="flex flex-col sm:flex-row gap-2">
-                  <Link
-                    href="/blog/ai-2025-oct-01-generative-ai-code-assistant-revolution"
-                    className="bg-white text-indigo-600 font-bold py-2 px-4 rounded-lg hover:bg-gray-100 transition-colors text-sm"
-                  >
-                    Read Guide →
-                  </Link>
-                  <Link
-                    href="/case-studies/ai-2025-oct-01-tech-startup-ai-code-assistant-32m-success"
-                    className="border-2 border-white text-white font-bold py-2 px-4 rounded-lg hover:bg-white/10 transition-colors text-sm"
-                  >
-                    $32M Case Study →
-                  </Link>
-                </div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg">
-                <h3 className="font-bold mb-2">🎯 AI Customer Success</h3>
-                <p className="text-sm mb-3">97.5% retention • 8x productivity • $18M saved</p>
-                <div className="flex flex-col sm:flex-row gap-2">
-                  <Link
-                    href="/blog/ai-2025-oct-01-ai-powered-customer-success-platform"
-                    className="bg-white text-purple-600 font-bold py-2 px-4 rounded-lg hover:bg-gray-100 transition-colors text-sm"
-                  >
-                    Read Guide →
-                  </Link>
-                  <Link
-                    href="/case-studies/ai-2025-oct-01-saas-company-ai-customer-success-18m-success"
-                    className="border-2 border-white text-white font-bold py-2 px-4 rounded-lg hover:bg-white/10 transition-colors text-sm"
-                  >
-                    $18M Case Study →
-                  </Link>
-                </div>
-              </div>
-=======
-        <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-teal-600 text-white p-8 rounded-2xl mb-8">
-          <div className="text-center">
-            <div className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-bold mb-4 animate-pulse">
-              🚀 JUST PUBLISHED: JANUARY 2026
-            </div>
-            <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
-              Neuromorphic Computing & Federated Learning Revolution
-            </h2>
-            <p className="text-xl mb-6 max-w-3xl mx-auto">
-              Revolutionary AI breakthroughs: 95% energy savings with neuromorphic computing and 100% privacy with federated learning
+            <p className="text-xl mb-6 max-w-4xl mx-auto">
+              The ultimate enterprise AI breakthrough: 287,000+ AI Agents, Fortune 50 proven, sub-millisecond response at global scale
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link
-                href="/blog/ai-2026-neuromorphic-computing-revolution"
-                className="bg-white text-purple-600 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
+                href="/blog/ai-2025-oct-01-cognitive-orchestration-breakthrough"
+                className="bg-yellow-400 text-purple-900 font-bold py-3 px-8 rounded-lg hover:bg-yellow-300 transition-colors shadow-2xl"
               >
-                🧠 Neuromorphic Computing →
+                📖 Read Revolutionary Guide →
               </Link>
               <Link
-                href="/blog/ai-2026-federated-learning-enterprise-privacy"
-                className="bg-white text-teal-600 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
+                href="/case-studies/cognitive-orchestration-84-billion-success"
+                className="bg-white text-purple-600 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors shadow-2xl"
               >
-                🔒 Federated Learning →
+                💎 View $84.7B Success Story →
               </Link>
               <Link
-                href="/case-studies/neuromorphic-computing-manufacturing-success-2026"
-                className="border-2 border-white text-white font-bold py-3 px-6 rounded-lg hover:bg-white/10 transition-colors"
+                href="/services/cognitive-orchestration-platform-services"
+                className="border-3 border-white text-white font-bold py-3 px-8 rounded-lg hover:bg-white hover:text-purple-600 transition-colors shadow-2xl"
               >
-                View $22M Success Story →
+                🚀 Get Started Today →
               </Link>
->>>>>>> origin/cursor/create-and-deploy-new-content-333b
             </div>
           </div>
         </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mb-8">Featured Content</h2>
         <div className="grid md:grid-cols-3 gap-6">
-<<<<<<< HEAD
-          <div className="bg-gradient-to-br from-indigo-50 to-purple-50 p-6 rounded-xl border-2 border-indigo-200">
+          <div className="bg-gradient-to-br from-indigo-50 to-purple-50 p-6 rounded-xl border-4 border-purple-300 shadow-xl">
             <div className="flex items-center gap-2 mb-4">
-              <span className="bg-indigo-100 text-indigo-800 px-2 py-1 rounded-full text-xs font-semibold">
-                🌟 NEW: Oct 1, 2025
+              <span className="bg-purple-500 text-white px-3 py-1 rounded-full text-xs font-bold animate-pulse">
+                🔥 NEW: Oct 1, 2025
               </span>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">
-              AI Code Assistants: Developer Revolution
+              Cognitive Orchestration Breakthrough
             </h3>
+            <p className="text-gray-700 mb-2 font-semibold">
+              $84.7B Value • 47,200% ROI • 99.97% Autonomous
+            </p>
             <p className="text-gray-600 mb-4">
-              Achieve 10x productivity gains, 68% faster time-to-market, and $32M in savings with AI-powered development tools.
+              Revolutionary enterprise AI with 287,000 agents, Fortune 50 proven success across 2,847 facilities worldwide.
             </p>
             <Link
-              href="/blog/ai-2025-oct-01-generative-ai-code-assistant-revolution"
-              className="text-indigo-600 font-semibold hover:text-indigo-700"
-=======
+              href="/blog/ai-2025-oct-01-cognitive-orchestration-breakthrough"
+              className="text-purple-600 font-bold hover:text-purple-700 hover:underline"
+            >
+              Read Complete Guide →
+            </Link>
+          </div>
+
           <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl border-2 border-purple-200">
             <div className="flex items-center gap-2 mb-4">
               <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -281,31 +239,11 @@ export default function ContentHub() {
             <Link
               href="/blog/ai-2026-neuromorphic-computing-revolution"
               className="text-purple-600 font-semibold hover:text-purple-700"
->>>>>>> origin/cursor/create-and-deploy-new-content-333b
             >
               Read Complete Guide →
             </Link>
           </div>
 
-<<<<<<< HEAD
-          <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-xl border-2 border-purple-200">
-            <div className="flex items-center gap-2 mb-4">
-              <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
-                🌟 NEW: Oct 1, 2025
-              </span>
-            </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">
-              AI Customer Success: Retention Revolution
-            </h3>
-            <p className="text-gray-600 mb-4">
-              Transform churn prevention with 97.5% retention rates, 8x CS productivity, and $18M in prevented churn annually.
-            </p>
-            <Link
-              href="/blog/ai-2025-oct-01-ai-powered-customer-success-platform"
-              className="text-purple-600 font-semibold hover:text-purple-700"
-            >
-              Read Complete Guide →
-=======
           <div className="bg-gradient-to-br from-teal-50 to-teal-100 p-6 rounded-xl border-2 border-teal-200">
             <div className="flex items-center gap-2 mb-4">
               <span className="bg-teal-100 text-teal-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -323,38 +261,12 @@ export default function ContentHub() {
               className="text-teal-600 font-semibold hover:text-teal-700"
             >
               Read Privacy Guide →
->>>>>>> origin/cursor/create-and-deploy-new-content-333b
             </Link>
           </div>
 
           <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl border-2 border-green-200">
             <div className="flex items-center gap-2 mb-4">
               <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
-<<<<<<< HEAD
-                🔥 $50M+ Combined Value
-              </span>
-            </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">
-              Real Success Stories: $50M Impact
-            </h3>
-            <p className="text-gray-600 mb-4">
-              See how TechFlow and CloudSync achieved $32M and $18M in annual value with AI productivity solutions.
-            </p>
-            <div className="flex flex-col gap-2">
-              <Link
-                href="/case-studies/ai-2025-oct-01-tech-startup-ai-code-assistant-32m-success"
-                className="text-green-600 font-semibold hover:text-green-700 text-sm"
-              >
-                $32M Code Assistant Success →
-              </Link>
-              <Link
-                href="/case-studies/ai-2025-oct-01-saas-company-ai-customer-success-18m-success"
-                className="text-green-600 font-semibold hover:text-green-700 text-sm"
-              >
-                $18M CS Platform Success →
-              </Link>
-            </div>
-=======
                 🏭 $22M Success
               </span>
             </div>
@@ -370,7 +282,6 @@ export default function ContentHub() {
             >
               View Case Study →
             </Link>
->>>>>>> origin/cursor/create-and-deploy-new-content-333b
           </div>
         </div>
       </section>

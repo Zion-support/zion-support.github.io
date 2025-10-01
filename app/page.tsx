@@ -40,18 +40,9 @@ import {
   EnterpriseAITransformationBanner,
   MLPipelineOptimizationBanner,
   MLPipelineOptimizationCaseStudyBanner,
-<<<<<<< HEAD
   EnterpriseIntegrationBlogBanner,
   BankIntegrationCaseStudyBanner,
   IntegrationPlatformServiceBanner
-=======
-  AgenticReasoningBreakthroughBanner,
-  AutonomousFinOpsBanner,
-  VectorDatabaseOptimizationBanner,
-  Fortune100AgenticReasoningCaseStudyBanner,
-  GlobalBankVectorDBCaseStudyBanner,
-  EnterpriseAIOptimizationServicesBanner
->>>>>>> origin/cursor/create-and-deploy-new-content-bc5b
 } from '../components/PromotionalBanner';
 import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
 import NewContentShowcaseBanner from '../components/NewContentShowcaseBanner';
@@ -78,15 +69,13 @@ import October2025NewPracticalContentBanner from '../components/October2025NewPr
 import NewContentShowcaseOct2025 from '../components/NewContentShowcaseOct2025';
 import October2025NewContentBanner from '../components/October2025NewContentBanner';
 
-<<<<<<< HEAD
-// NEW OCTOBER 1, 2025 - AI PRODUCTIVITY REVOLUTION
-import October2025AIProductivityBanner from '../components/October2025AIProductivityBanner';
-=======
 // NEWEST OCTOBER 2025 CONTENT - PRODUCTION AI & SECURITY
 import ProductionAgenticAIBanner, { AgenticAIShowcaseBanner } from '../components/ProductionAgenticAIBanner';
 import AISecurityBanner, { AISecurityShowcaseBanner } from '../components/AISecurityBanner';
 import October2025NewPracticalContentBannerTop, { October2025PracticalContentShowcase } from '../components/October2025NewPracticalContentBanner';
->>>>>>> origin/cursor/create-and-deploy-new-content-8e5c
+
+// NEW JANUARY 2026 QUANTUM BREAKTHROUGH CONTENT
+import January2026QuantumBreakthroughBanner from '../components/January2026QuantumBreakthroughBanner';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -97,28 +86,21 @@ export const metadata = {
 export default function HomePage() {
   return (
     <div className="animate-fade-in">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      {/* 🚀 BRAND NEW OCTOBER 1, 2025 - AI PRODUCTIVITY REVOLUTION */}
-      <October2025AIProductivityBanner />
+      {/* 🚀 BRAND NEW JANUARY 2026 QUANTUM BREAKTHROUGH - TOP PRIORITY */}
+      <January2026QuantumBreakthroughBanner />
 
-=======
+      {/* 🚀 NEWEST OCTOBER 2025 - PRODUCTION AGENTIC AI & SECURITY */}
+      <October2025NewPracticalContentBannerTop />
+      <ProductionAgenticAIBanner />
+      <AISecurityBanner />
+      
       {/* 🚀 BRAND NEW JANUARY 2026 NEUROMORPHIC COMPUTING REVOLUTION */}
       <NeuromorphicComputingRevolutionBanner />
       
       {/* 🔒 BRAND NEW JANUARY 2026 FEDERATED LEARNING PRIVACY REVOLUTION */}
       <FederatedLearningPrivacyBanner />
       
->>>>>>> origin/cursor/create-and-deploy-new-content-333b
-=======
-      {/* 🚀 NEWEST OCTOBER 2025 - PRODUCTION AGENTIC AI & SECURITY */}
-      <October2025NewPracticalContentBannerTop />
-      <ProductionAgenticAIBanner />
-      <AISecurityBanner />
-      
->>>>>>> origin/cursor/create-and-deploy-new-content-8e5c
-=======
+      {/* 🚀 BREAKTHROUGH 2027/2028 UNIVERSAL CONSCIOUSNESS & QUANTUM SINGULARITY */}
       {/* 🚀 BREAKTHROUGH 2027/2028 UNIVERSAL CONSCIOUSNESS & QUANTUM SINGULARITY */}
       <section className="w-full bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-6">
         <div className="max-w-6xl mx-auto px-4">
@@ -151,7 +133,6 @@ export default function HomePage() {
         </div>
       </section>
 
->>>>>>> origin/cursor/create-and-deploy-new-content-8f0a
       {/* 🔥 BRAND NEW OCTOBER 2025 NEUROMORPHIC & FEDERATED LEARNING */}
       <section className="w-full bg-gradient-to-r from-purple-600 via-blue-600 to-teal-600 text-white py-4">
         <div className="max-w-6xl mx-auto px-4">
@@ -180,22 +161,11 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       
       {/* NEW OCTOBER 1, 2025 - ENTERPRISE INTEGRATION CONTENT - HIGHEST PRIORITY */}
       <EnterpriseIntegrationBlogBanner />
       <BankIntegrationCaseStudyBanner />
       <IntegrationPlatformServiceBanner />
-=======
-
-      {/* 🔥 NEW OCTOBER 2025 CONTENT - AGENTIC REASONING & AI OPTIMIZATION */}
-      <AgenticReasoningBreakthroughBanner />
-      <AutonomousFinOpsBanner />
-      <VectorDatabaseOptimizationBanner />
-      <Fortune100AgenticReasoningCaseStudyBanner />
-      <GlobalBankVectorDBCaseStudyBanner />
-      <EnterpriseAIOptimizationServicesBanner />
->>>>>>> origin/cursor/create-and-deploy-new-content-bc5b
       
       {/* NEW OCTOBER 2025 ML PIPELINE OPTIMIZATION - TOP PRIORITY */}
       <MLPipelineOptimizationBanner />
