@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Sparkles, TrendingUp, Zap, Brain, Atom, Target } from 'lucide-react';
+import { ArrowRight, Sparkles, Target } from 'lucide-react';
 
 const January2026RevolutionaryContentBanner: React.FC = () => {
   const revolutionaryContent = [

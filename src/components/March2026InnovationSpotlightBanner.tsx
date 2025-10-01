@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Sparkles, Zap, Brain, CheckCircle, Star, Users, Award, TrendingUp, Rocket } from 'lucide-react';
+import { ArrowRight, Sparkles, Zap, Brain, Rocket } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const March2026InnovationSpotlightBanner = () => {
