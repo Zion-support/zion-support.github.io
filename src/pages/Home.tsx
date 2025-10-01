@@ -15,6 +15,7 @@ import EnhancedTestimonials from "../components/EnhancedTestimonials";
 import Header from "../components/Header";
 import ModernFeatures from "../components/ModernFeatures";
 import LatestInsights from "../components/LatestInsights";
+import AdvertisingBanner from "../components/AdvertisingBanner";
 import { latestInsights } from "../content/insights";
 import { Users, Zap } from "lucide-react";
 
@@ -208,15 +209,15 @@ const Home = () => {
           <div className="bg-gradient-to-br from-emerald-900/40 via-teal-900/30 to-cyan-900/40 rounded-2xl border-2 border-emerald-400/50 p-8 md:p-12 shadow-2xl">
             <div className="flex items-center gap-3 mb-6">
               <span className="inline-flex h-3 w-3 rounded-full bg-emerald-400 animate-pulse"></span>
-              <span className="text-emerald-400 font-bold text-lg uppercase tracking-wider">🔥 Just Published - October 2025</span>
+              <span className="text-emerald-400 font-bold text-lg uppercase tracking-wider">🔥 Just Published - October 1, 2025</span>
             </div>
             
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              New Cutting-Edge AI Resources Available Now
+              Production-Ready AI Resources: Edge Inference, Metrics & Real ROI
             </h2>
             
             <p className="text-xl text-emerald-100 mb-8 max-w-3xl">
-              Discover our latest insights, services, and success stories from the frontlines of AI innovation.
+              Learn from real-world deployments: Edge AI patterns achieving sub-10ms latency, North Star metrics that predict success, and a $127M manufacturing transformation.
             </p>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
@@ -294,8 +295,8 @@ const Home = () => {
         <div className="container mx-auto px-6">
           <div className="mb-6 rounded-full bg-emerald-500/15 border border-emerald-400/30 px-6 py-3 text-emerald-200 text-sm inline-flex items-center gap-2">
             <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            New: Edge inference patterns and North‑Star metrics just dropped — read now
-            <Link to="/insights" className="text-emerald-300 underline underline-offset-4 hover:text-white">View</Link>
+            NEW TODAY: Production Edge AI Guide (12 min) + North‑Star Metrics Framework (10 min) + $127M Case Study
+            <Link to="/blog/ai-2025-oct-edge-inference-patterns-production-guide" className="text-emerald-300 underline underline-offset-4 hover:text-white">Read</Link>
           </div>
         </div>
         <LatestInsights />
@@ -304,7 +305,7 @@ const Home = () => {
             <div className="flex items-center gap-2">
               <span className="inline-flex h-2 w-2 rounded-full bg-indigo-400 animate-ping"></span>
               <span className="font-medium">Fresh on the blog:</span>
-              <span className="hidden sm:inline">Edge Inference Patterns • North‑Star Metrics</span>
+              <span className="hidden sm:inline">Edge AI Production Guide • North‑Star Metrics • $127M Manufacturing Case Study</span>
             </div>
             <Link to="/blog" className="text-indigo-200 underline underline-offset-4 hover:text-white">Read now</Link>
           </div>
