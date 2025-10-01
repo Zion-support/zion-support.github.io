@@ -48,6 +48,7 @@ import {
   QuantumNeuralSuperintelligenceBanner,
   Revolutionary2026ContentBanner
 } from '../components/PromotionalBanner';
+import { IntelligentEdgeComputingBanner } from '../components/PromotionalBanner';
 import NewContentShowcaseBanner from '../components/NewContentShowcaseBanner';
 import QuantumNeuralFusionBanner from '../components/QuantumNeuralFusionBanner';
 import AutonomousEnterpriseBreakthroughBanner from '../components/AutonomousEnterpriseBreakthroughBanner';
@@ -114,6 +115,8 @@ export const metadata = {
 export default function HomePage() {
   return (
     <div className="animate-fade-in">
+      {/* 🔔 New October 1, 2025 Intelligent Edge Computing Promo */}
+      <IntelligentEdgeComputingBanner />
       {/* 🚀 ULTIMATE 2026-2027 BREAKTHROUGH CONTENT - HIGHEST PRIORITY */}
       <UltimateAutonomousBI2026PromotionalBanner />
       <QuantumNeuralSuperintelligence2027Banner />
