@@ -3,6 +3,10 @@ import React, { JSX } from "react";
 // 🚀🚀🚀 BREAKING: DECEMBER 15, 2025 NEW CONTENT - ABSOLUTE HIGHEST PRIORITY 🚀🚀🚀
 import December2025NewContentShowcaseBanner from "./components/December2025NewContentShowcaseBanner";
 
+// 🎯🎯🎯 NEWEST: OCTOBER 1, 2025 FRESH CONTENT JUST PUBLISHED - TOP PRIORITY! 🎯🎯🎯
+import October2025FreshContentLaunchBanner from "./components/October2025FreshContentLaunchBanner";
+import October2025LatestContentHighlightBanner from "./components/October2025LatestContentHighlightBanner";
+
 // 🚀🚀🚀 BREAKING: OCTOBER 1, 2025 NEW CONTENT - ABSOLUTE HIGHEST PRIORITY 🚀🚀🚀
 import October2025CuttingEdgeAIContentBanner from "./components/October2025CuttingEdgeAIContentBanner";
 import October2025FreshAIInsightsBanner from "./components/October2025FreshAIInsightsBanner";
@@ -93,6 +97,14 @@ export default function App(): JSX.Element {
       {/* 🚀🚀🚀 NEWEST: DECEMBER 15, 2025 - REVOLUTIONARY NEW CONTENT - ABSOLUTE TOP PRIORITY! 🚀🚀🚀 */}
       {/* Featured: Quantum AI Breakthrough, Advanced Autonomous Systems, Fortune 500 $5.2B Success */}
       <December2025NewContentShowcaseBanner />
+      
+      {/* 🎯🎯🎯 BREAKING: OCTOBER 1, 2025 - FRESH PRODUCTION AI CONTENT JUST PUBLISHED! - TOP PRIORITY! 🎯🎯🎯 */}
+      {/* Featured: Production AI Agents Guide, $4.2B Healthcare Success, Expert Workshop */}
+      <October2025FreshContentLaunchBanner />
+      
+      {/* 🌟🌟🌟 NEW: OCTOBER 1, 2025 - LATEST CONTENT HIGHLIGHTS - HIGHLY PROMINENT! 🌟🌟🌟 */}
+      {/* In-depth showcase of latest technical content with success metrics */}
+      <October2025LatestContentHighlightBanner />
       
       {/* 🔥🔥🔥 BREAKING: OCTOBER 1, 2025 - AUTONOMOUS SOFTWARE DEVELOPMENT REVOLUTION - JUST PUBLISHED! 🔥🔥🔥 */}
       {/* Featured: AI Agents Writing Production Code, 87% Faster Development, 94% Bug Reduction, $127M Savings */}
