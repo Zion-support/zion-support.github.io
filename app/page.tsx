@@ -70,6 +70,10 @@ import October2026TranscendentAutomationBanner from '../components/October2026Tr
 import September2026MegaBreakthroughBanner from '../components/September2026MegaBreakthroughBanner';
 import February2027SyntheticConsciousnessBanner from '../components/February2027SyntheticConsciousnessBanner';
 import March2026AutonomousEnterpriseBanner from '../components/March2026AutonomousEnterpriseBanner';
+import January2026ContentShowcaseBanner from '../components/January2026ContentShowcaseBanner';
+import January2026AutonomousOperationsBanner from '../components/January2026AutonomousOperationsBanner';
+import January2026QuantumNeuralBanner from '../components/January2026QuantumNeuralBanner';
+import January2026AutonomousBIBanner from '../components/January2026AutonomousBIBanner';
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -147,6 +151,18 @@ export default function HomePage() {
         </div>
       </header>
 
+      {/* ⭐ NEW: January 2026 Content Showcase - LATEST BREAKTHROUGHS ⭐ */}
+      <January2026ContentShowcaseBanner />
+      
+      {/* ⭐ NEW: January 2026 Autonomous Operations Revolution ⭐ */}
+      <January2026AutonomousOperationsBanner />
+      
+      {/* ⭐ NEW: January 2026 Quantum Neural Optimization Breakthrough ⭐ */}
+      <January2026QuantumNeuralBanner />
+      
+      {/* ⭐ NEW: January 2026 Autonomous Business Intelligence Revolution ⭐ */}
+      <January2026AutonomousBIBanner />
+      
       {/* ⭐ LATEST: March 2026 Autonomous Enterprise Revolution - TOP PRIORITY ⭐ */}
       <March2026AutonomousEnterpriseBanner />
       
