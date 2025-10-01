@@ -130,6 +130,14 @@ const Home = () => {
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
         
+        {/* 🚀🚀🚀 OCTOBER 2, 2025 - JUST PUBLISHED: 3 REVOLUTIONARY TECH BREAKTHROUGHS - TOP PRIORITY! 🚀🚀🚀 */}
+        {/* Featured: AI-Powered DevOps ($47M Saved, 99.8% Success), Blockchain-AI Integration ($127M Saved, 99.9% Accuracy), Sustainable AI (89% Energy Reduction, $284M Saved) */}
+        <October2025NewTechBreakthroughsBanner />
+        
+        {/* 🌟🌟🌟 OCTOBER 1, 2025 - ABSOLUTE LATEST: 3 REVOLUTIONARY AI INNOVATIONS - #1 TOP PRIORITY! 🌟🌟🌟 */}
+        {/* Featured: AI Governance (99.9% Compliance, $186M+ Protection), Quantum AI (10,000x Speedup, $234M+ Value), Enterprise Orchestration (97.8% Automation, $312M+ Value) */}
+        <October2025LatestInnovationsBanner />
+        
         {/* 🔥🔥🔥 FEBRUARY 2026 - BREAKING: LATEST AI BREAKTHROUGHS - TOP PRIORITY! 🔥🔥🔥 */}
         <NewContentPromoBanner 
           className="border-b border-white/10" 
@@ -577,7 +585,7 @@ const Home = () => {
                 <span className="bg-orange-100/20 text-orange-200 px-3 py-1 rounded-full text-xs font-medium border border-orange-300/20">Edge AI</span>
                 <span className="bg-rose-100/20 text-rose-200 px-3 py-1 rounded-full text-xs font-medium border border-rose-300/20">Real-Time Intelligence</span>
               </div>
-              </div>
+            </div>
             {/* January 20, 2026 - LATEST: REVOLUTIONARY AI BREAKTHROUGHS */}
             <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-xl p-6 mb-8 animate-fade-in shadow-2xl">
               <div className="flex items-center justify-center gap-3 mb-3">
