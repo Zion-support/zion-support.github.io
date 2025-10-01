@@ -278,54 +278,57 @@ const Home = () => {
               </div>
             </div>
 
-            {/* LATEST CONTENT ANNOUNCEMENT - DIGITAL TWINS */}
-            <div className="bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-teal-600/20 border-2 border-blue-400/50 rounded-xl p-6 mb-6 animate-fade-in shadow-2xl">
+            {/* 🚀 LATEST CONTENT ANNOUNCEMENT - AUTONOMOUS BUSINESS OPERATIONS 🚀 */}
+            <div className="bg-gradient-to-r from-green-600/20 via-emerald-600/20 to-teal-600/20 border-2 border-green-400/50 rounded-xl p-6 mb-6 animate-fade-in shadow-2xl">
               <div className="flex items-center justify-center gap-3 mb-3">
-                <Sparkles className="w-6 h-6 text-blue-400 animate-pulse" />
-                <span className="text-lg font-bold text-blue-300">🔥 ALSO NEW TODAY - OCTOBER 1, 2025</span>
-                <Sparkles className="w-6 h-6 text-blue-400 animate-pulse" />
+                <Sparkles className="w-6 h-6 text-green-400 animate-pulse" />
+                <span className="text-lg font-bold text-green-300">🔥 JUST RELEASED - OCTOBER 1, 2025</span>
+                <Sparkles className="w-6 h-6 text-green-400 animate-pulse" />
               </div>
               <p className="text-white text-2xl font-bold mb-3 text-center">
-                AI-Powered Digital Twin Revolution: $14.2M ROI Case Study + Complete Implementation Guide
+                Autonomous Business Operations Platform: $650M Value Creation + 85% Cost Reduction in 90 Days!
               </p>
               <div className="grid md:grid-cols-4 gap-4 text-sm text-zion-slate-light mb-4">
                 <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-blue-400" />
-                  <span className="font-semibold">$14.2M ROI in 18 Months</span>
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  <span className="font-semibold">$650M Annual Value</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-purple-400" />
-                  <span className="font-semibold">87% Downtime Reduction</span>
+                  <CheckCircle className="w-4 h-4 text-emerald-400" />
+                  <span className="font-semibold">85% Cost Reduction</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle className="w-4 h-4 text-teal-400" />
-                  <span className="font-semibold">95% Predictive Accuracy</span>
+                  <span className="font-semibold">99.7% Accuracy</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle className="w-4 h-4 text-cyan-400" />
-                  <span className="font-semibold">62% Quality Improvement</span>
+                  <span className="font-semibold">90-Day Deployment</span>
                 </div>
               </div>
+              <p className="text-center text-emerald-200 mb-4 font-semibold">
+                Transform your enterprise with 40+ autonomous workflows. Self-managing AI systems that think, adapt, and optimize 24/7.
+              </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
-                  to="/blog/ai-2025-oct-digital-twin-enterprise-revolution"
-                  className="inline-flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
+                  to="/blog/ai-autonomous-business-operations-revolution-2025"
+                  className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
-                  📘 Digital Twin Guide (24 min)
+                  📖 Complete Guide (22 min)
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link
-                  to="/case-studies/manufacturing-digital-twin-transformation-2025"
-                  className="inline-flex items-center gap-2 bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
+                  to="/case-studies/fortune-100-autonomous-operations-transformation-2025"
+                  className="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
-                  💼 $14.2M Success Story
+                  💰 $650M Case Study
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link
-                  to="/services/ai-digital-twin-platform-2025"
+                  to="/services/autonomous-business-operations"
                   className="inline-flex items-center gap-2 bg-teal-500 hover:bg-teal-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
-                  🚀 Get Digital Twin Platform
+                  🚀 Get Started Now
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -573,29 +576,56 @@ const Home = () => {
                 </Link>
               </div>
 
-              {/* Blog Post 1 - DIGITAL TWIN GUIDE */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-blue-400/40 hover:border-blue-400/70 transition-all hover:scale-105 hover:shadow-xl">
-                <div className="text-blue-400 text-sm font-semibold mb-2 uppercase">📘 NEW TODAY</div>
-                <h3 className="text-lg font-bold text-white mb-3">Digital Twin Revolution Guide</h3>
-                <p className="text-blue-100 text-sm mb-4">95% accuracy, $8.5M ROI, 85% downtime reduction. Complete implementation guide - 24 min</p>
+              {/* Blog Post 1 - AUTONOMOUS BUSINESS OPS */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-green-400/40 hover:border-green-400/70 transition-all hover:scale-105 hover:shadow-xl">
+                <div className="text-green-400 text-sm font-semibold mb-2 uppercase">🔥 JUST PUBLISHED - Oct 1</div>
+                <h3 className="text-lg font-bold text-white mb-3">Autonomous Business Ops Guide</h3>
+                <p className="text-green-100 text-sm mb-4">$650M value, 85% cost reduction, 40+ workflows. Complete revolution guide - 22 min read</p>
                 <Link 
-                  to="/blog/ai-2025-oct-digital-twin-enterprise-revolution" 
-                  className="inline-flex items-center text-blue-300 hover:text-white font-semibold text-sm"
+                  to="/blog/ai-autonomous-business-operations-revolution-2025" 
+                  className="inline-flex items-center text-green-300 hover:text-white font-semibold text-sm"
                 >
                   Read Guide <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
               </div>
 
-              {/* Case Study 1 - DIGITAL TWIN SUCCESS */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-purple-400/40 hover:border-purple-400/70 transition-all hover:scale-105 hover:shadow-xl">
-                <div className="text-purple-400 text-sm font-semibold mb-2 uppercase">💼 BREAKTHROUGH</div>
-                <h3 className="text-lg font-bold text-white mb-3">$14.2M Digital Twin ROI</h3>
-                <p className="text-purple-100 text-sm mb-4">Fortune 500 manufacturer: 87% downtime cut, 62% quality gain - 18 min read</p>
+              {/* Case Study 1 - AUTONOMOUS OPS SUCCESS */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/40 hover:border-emerald-400/70 transition-all hover:scale-105 hover:shadow-xl">
+                <div className="text-emerald-400 text-sm font-semibold mb-2 uppercase">💰 BREAKTHROUGH - Oct 1</div>
+                <h3 className="text-lg font-bold text-white mb-3">$650M Transformation ROI</h3>
+                <p className="text-emerald-100 text-sm mb-4">Fortune 100 financial services: 85% cost cut, 10x faster, 99.7% accuracy - complete story</p>
                 <Link 
-                  to="/case-studies/manufacturing-digital-twin-transformation-2025" 
-                  className="inline-flex items-center text-purple-300 hover:text-white font-semibold text-sm"
+                  to="/case-studies/fortune-100-autonomous-operations-transformation-2025" 
+                  className="inline-flex items-center text-emerald-300 hover:text-white font-semibold text-sm"
                 >
-                  View Success <ArrowRight className="w-4 h-4 ml-1" />
+                  Read Case Study <ArrowRight className="w-4 h-4 ml-1" />
+                </Link>
+              </div>
+
+              {/* Case Study 2 */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30 hover:border-blue-400/60 transition-all hover:scale-105 hover:shadow-xl">
+                <div className="text-blue-400 text-sm font-semibold mb-2 uppercase">✅ PROVEN - Oct 2025</div>
+                <h3 className="text-lg font-bold text-white mb-3">$489M Retail Transformation</h3>
+                <p className="text-blue-100 text-sm mb-4">Fortune 100 retailer achieves 94% inventory optimization across 2,800+ stores</p>
+                <Link 
+                  to="/case-studies/global-retail-ai-transformation-2025" 
+                  className="inline-flex items-center text-blue-300 hover:text-white font-semibold text-sm"
+                >
+                  View Results <ArrowRight className="w-4 h-4 ml-1" />
+                </Link>
+              </div>
+
+              {/* New Service - AUTONOMOUS OPS PLATFORM */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-teal-400/40 hover:border-teal-400/70 transition-all hover:scale-105 hover:shadow-xl">
+                <div className="text-teal-400 text-sm font-semibold mb-2 uppercase">🚀 NEW SERVICE</div>
+                <h3 className="text-lg font-bold text-white mb-3">Autonomous Operations Platform</h3>
+                <p className="text-teal-100 text-sm mb-4">90-day deployment. 300-500% ROI guarantee. 50% OFF through December 2025!</p>
+                <Link 
+                  to="/services/autonomous-business-operations" 
+                  className="inline-flex items-center text-teal-300 hover:text-white font-semibold text-sm"
+                >
+                  Get Started <ArrowRight className="w-4 h-4 ml-1" />
+>>>>>>> pr-24587
                 </Link>
               </div>
             </div>
