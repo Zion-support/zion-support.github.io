@@ -71,6 +71,248 @@ export const metadata = {
 export default function HomePage() {
   return (
     <div className="animate-fade-in">
+      {/* BREAKING: OCTOBER 1, 2025 NEW CONTENT - ABSOLUTE TOP PRIORITY */}
+      <section className="w-full bg-gradient-to-r from-emerald-600 via-blue-600 to-purple-600 text-white py-4">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-3">
+            <div className="flex items-center gap-3 flex-wrap justify-center md:justify-start">
+              <span className="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full text-sm font-bold animate-pulse shadow-lg">
+                🚨 BREAKING NEWS - OCT 1, 2025
+              </span>
+              <span className="text-lg font-bold">4 NEW Enterprise AI Solutions Published!</span>
+            </div>
+            <Link
+              href="#latest-oct-2025-content"
+              className="bg-white text-blue-700 hover:bg-yellow-400 hover:text-gray-900 px-6 py-2.5 rounded-lg text-sm font-bold transition-all shadow-lg whitespace-nowrap"
+            >
+              View Now →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* FEATURED OCTOBER 1, 2025 CONTENT SHOWCASE */}
+      <section id="latest-oct-2025-content" className="py-20 bg-gradient-to-br from-blue-600 via-purple-600 to-emerald-600">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center px-6 py-3 rounded-full bg-yellow-400 text-gray-900 text-sm font-bold mb-4 shadow-xl">
+              <span className="text-2xl mr-2">🎯</span>
+              FRESH CONTENT — October 1, 2025
+            </div>
+            <h2 className="text-4xl md:text-6xl font-bold text-white mb-4">
+              Latest Enterprise AI Breakthroughs
+            </h2>
+            <p className="text-xl text-white/90 max-w-3xl mx-auto">
+              Real-world AI governance and financial planning solutions delivering $12M+ savings and 94% accuracy
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-8 mb-12">
+            {/* AI Governance Article */}
+            <Link href="/blog/ai-2025-oct-01-enterprise-ai-governance-transformation" className="group">
+              <div className="bg-white rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-500 overflow-hidden hover:scale-105">
+                <div className="relative h-48 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500">
+                  <div className="absolute inset-0 bg-black opacity-10"></div>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center text-white">
+                      <div className="w-20 h-20 mx-auto mb-4 bg-white bg-opacity-20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                        <span className="text-4xl">🛡️</span>
+                      </div>
+                      <h3 className="text-2xl font-bold mb-2">AI Governance Framework</h3>
+                      <p className="text-purple-100 font-semibold">99.8% Compliance Achievement</p>
+                    </div>
+                  </div>
+                  <div className="absolute top-4 right-4">
+                    <span className="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full text-sm font-bold shadow-lg">
+                      NEW TODAY
+                    </span>
+                  </div>
+                </div>
+                <div className="p-8">
+                  <div className="flex items-center gap-4 mb-4">
+                    <span className="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-sm font-bold">📝 Article</span>
+                    <span className="text-gray-500 text-sm font-medium">28 min read</span>
+                  </div>
+                  <h4 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors">
+                    Enterprise AI Governance & Compliance 2025
+                  </h4>
+                  <p className="text-gray-600 mb-6 leading-relaxed">
+                    Master enterprise AI governance with comprehensive frameworks achieving 99.8% regulatory compliance, 92% risk reduction, and $12M+ annual savings. Complete implementation guide.
+                  </p>
+                  <div className="grid grid-cols-3 gap-4 mb-6 pb-6 border-b border-gray-200">
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-indigo-600">99.8%</div>
+                      <div className="text-xs text-gray-500 mt-1">Compliance</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-purple-600">$12M+</div>
+                      <div className="text-xs text-gray-500 mt-1">Savings</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-pink-600">92%</div>
+                      <div className="text-xs text-gray-500 mt-1">Risk Reduction</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <div className="text-sm text-gray-500">
+                      <span className="font-semibold text-gray-700">Topics:</span> AI Governance, Compliance
+                    </div>
+                    <div className="flex items-center text-purple-600 font-bold text-lg group-hover:text-purple-700 transition-colors">
+                      Read Article →
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+            {/* Financial Planning Article */}
+            <Link href="/blog/ai-2025-oct-01-autonomous-financial-planning-ai-revolution" className="group">
+              <div className="bg-white rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-500 overflow-hidden hover:scale-105">
+                <div className="relative h-48 bg-gradient-to-br from-green-500 via-emerald-500 to-teal-500">
+                  <div className="absolute inset-0 bg-black opacity-10"></div>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center text-white">
+                      <div className="w-20 h-20 mx-auto mb-4 bg-white bg-opacity-20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                        <span className="text-4xl">💰</span>
+                      </div>
+                      <h3 className="text-2xl font-bold mb-2">Autonomous Financial Planning</h3>
+                      <p className="text-emerald-100 font-semibold">94% Forecast Accuracy</p>
+                    </div>
+                  </div>
+                  <div className="absolute top-4 right-4">
+                    <span className="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full text-sm font-bold shadow-lg">
+                      NEW TODAY
+                    </span>
+                  </div>
+                </div>
+                <div className="p-8">
+                  <div className="flex items-center gap-4 mb-4">
+                    <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-bold">📝 Article</span>
+                    <span className="text-gray-500 text-sm font-medium">32 min read</span>
+                  </div>
+                  <h4 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-emerald-600 transition-colors">
+                    Autonomous Financial Planning AI Revolution
+                  </h4>
+                  <p className="text-gray-600 mb-6 leading-relaxed">
+                    Discover how autonomous AI financial planning achieves 94% prediction accuracy, $8M+ client value creation, and 99% compliance through intelligent wealth management automation.
+                  </p>
+                  <div className="grid grid-cols-3 gap-4 mb-6 pb-6 border-b border-gray-200">
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-green-600">94%</div>
+                      <div className="text-xs text-gray-500 mt-1">Accuracy</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-emerald-600">$8M+</div>
+                      <div className="text-xs text-gray-500 mt-1">Client Value</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-teal-600">72%</div>
+                      <div className="text-xs text-gray-500 mt-1">Cost Reduction</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <div className="text-sm text-gray-500">
+                      <span className="font-semibold text-gray-700">Topics:</span> Financial AI, Wealth Tech
+                    </div>
+                    <div className="flex items-center text-emerald-600 font-bold text-lg group-hover:text-emerald-700 transition-colors">
+                      Read Article →
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </div>
+
+          {/* Case Studies Row */}
+          <div className="grid lg:grid-cols-2 gap-8">
+            {/* AI Governance Case Study */}
+            <Link href="/case-studies/ai-2025-oct-01-fortune-500-ai-governance-transformation-12m-success" className="group">
+              <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 p-8 hover:scale-105">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-bold">
+                    📊 CASE STUDY
+                  </span>
+                  <span className="bg-yellow-400 text-gray-900 px-3 py-1 rounded-full text-xs font-bold">
+                    $12.4M ROI
+                  </span>
+                </div>
+                <h4 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
+                  Fortune 500: $12.4M AI Governance Success
+                </h4>
+                <p className="text-gray-700 mb-4 leading-relaxed">
+                  How a $47B financial services company achieved 99.8% regulatory compliance, 92% risk reduction, and $12.4M annual savings through comprehensive AI governance transformation.
+                </p>
+                <div className="flex gap-6 mb-4">
+                  <div>
+                    <div className="text-2xl font-bold text-purple-600">99.8%</div>
+                    <div className="text-xs text-gray-500">Compliance</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-indigo-600">$12.4M</div>
+                    <div className="text-xs text-gray-500">Annual Savings</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-pink-600">92%</div>
+                    <div className="text-xs text-gray-500">Risk Cut</div>
+                  </div>
+                </div>
+                <div className="flex items-center text-purple-600 font-bold group-hover:text-purple-700 transition-colors">
+                  View Case Study →
+                </div>
+              </div>
+            </Link>
+
+            {/* Financial Planning Case Study */}
+            <Link href="/case-studies/ai-2025-oct-01-wealth-management-autonomous-planning-8m-success" className="group">
+              <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 p-8 hover:scale-105">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="bg-emerald-500 text-white px-4 py-2 rounded-full text-sm font-bold">
+                    📊 CASE STUDY
+                  </span>
+                  <span className="bg-yellow-400 text-gray-900 px-3 py-1 rounded-full text-xs font-bold">
+                    $8.2M VALUE
+                  </span>
+                </div>
+                <h4 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-emerald-600 transition-colors">
+                  $12B Wealth Firm: $8.2M Client Value Creation
+                </h4>
+                <p className="text-gray-700 mb-4 leading-relaxed">
+                  How a $12B wealth management firm achieved 94% forecast accuracy, 72% cost reduction, and $8.2M average client value increase through autonomous AI planning.
+                </p>
+                <div className="flex gap-6 mb-4">
+                  <div>
+                    <div className="text-2xl font-bold text-green-600">$8.2M</div>
+                    <div className="text-xs text-gray-500">Client Value</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-emerald-600">94%</div>
+                    <div className="text-xs text-gray-500">Accuracy</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-teal-600">98%</div>
+                    <div className="text-xs text-gray-500">Satisfaction</div>
+                  </div>
+                </div>
+                <div className="flex items-center text-emerald-600 font-bold group-hover:text-emerald-700 transition-colors">
+                  View Case Study →
+                </div>
+              </div>
+            </Link>
+          </div>
+
+          <div className="text-center mt-12">
+            <Link
+              href="/blog"
+              className="inline-flex items-center bg-white text-purple-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-yellow-400 hover:text-gray-900 transition-all duration-300 shadow-2xl hover:scale-105"
+            >
+              <span className="text-2xl mr-3">📚</span>
+              Explore All AI Content
+              <ArrowRight className="w-6 h-6 ml-3" />
+            </Link>
+          </div>
+        </div>
+      </section>
+      
       {/* NEW OCTOBER 2025 ML PIPELINE OPTIMIZATION - TOP PRIORITY */}
       <MLPipelineOptimizationBanner />
       <MLPipelineOptimizationCaseStudyBanner />
