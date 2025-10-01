@@ -14,7 +14,13 @@ import MultimodalEnterpriseIntelligence from './pages/blog/ai-2025-oct-multimoda
 import AdaptiveLearningPlatforms from './pages/blog/ai-2025-oct-adaptive-learning-platforms';
 import CognitiveAutomationEnterpriseRevolution from './pages/blog/ai-2025-oct-cognitive-automation-enterprise-revolution';
 import GlobalRetailAITransformation from './pages/case-studies/global-retail-ai-transformation-2025';
+<<<<<<< HEAD
+import AIAgentOrchestrationEnterprise2025 from './pages/blog/ai-agent-orchestration-enterprise-2025';
+import RealTimeAIInferenceOptimization2025 from './pages/blog/real-time-ai-inference-optimization-2025';
+import ZeroTrustAISecurityFramework2025 from './pages/blog/zero-trust-ai-security-framework-2025';
+=======
 import HealthcareAITransformation from './pages/case-studies/healthcare-ai-transformation-2025';
+>>>>>>> origin/cursor/create-and-deploy-new-content-87d1
 
 export const AppRouter: React.FC = () => {
   return (
@@ -33,7 +39,13 @@ export const AppRouter: React.FC = () => {
       <Route path="/blog" element={<Blog />} />
       <Route path="/blog/ai-2025-oct-multimodal-enterprise-intelligence" element={<MultimodalEnterpriseIntelligence />} />
       <Route path="/blog/ai-2025-oct-adaptive-learning-platforms" element={<AdaptiveLearningPlatforms />} />
+<<<<<<< HEAD
+      <Route path="/blog/ai-agent-orchestration-enterprise-2025" element={<AIAgentOrchestrationEnterprise2025 />} />
+      <Route path="/blog/real-time-ai-inference-optimization-2025" element={<RealTimeAIInferenceOptimization2025 />} />
+      <Route path="/blog/zero-trust-ai-security-framework-2025" element={<ZeroTrustAISecurityFramework2025 />} />
+=======
       <Route path="/blog/ai-2025-oct-cognitive-automation-enterprise-revolution" element={<CognitiveAutomationEnterpriseRevolution />} />
+>>>>>>> origin/cursor/create-and-deploy-new-content-87d1
     </Routes>
   );
 };
