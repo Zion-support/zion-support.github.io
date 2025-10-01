@@ -309,4 +309,34 @@ export const BLOG_POSTS: BlogPost[] = [
     publishedAt: '2025-10-01',
     readTime: 9,
   },
+  {
+    id: '21',
+    title: 'AI Procurement Copilots: Faster RFPs, Higher Win Rates',
+    slug: 'ai-procurement-copilots-rfp-acceleration-2025',
+    excerpt:
+      'How AI copilots compress RFP cycles by 60% while improving compliance and differentiation.',
+    content:
+      'Enterprise RFPs demand speed without sacrificing precision. This post details an AI procurement copilot that indexes your collateral, enforces compliance clauses, and drafts persuasive responses aligned to buyer priorities. We cover architecture, privacy controls, evaluation scorecards, and measurable impact on win rates and cycle times.',
+    featuredImage: '/images/blog/ai-procurement-copilot.jpg',
+    category: 'AI',
+    tags: ['RFP', 'Sales', 'Copilot', 'GenAI'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-02',
+    readTime: 7,
+  },
+  {
+    id: '22',
+    title: 'Edge Feature Stores: Personalization With Zero PII',
+    slug: 'edge-feature-stores-zero-pii-personalization-2025',
+    excerpt:
+      'Deliver on-device personalization powered by regional models and anonymous feedback loops.',
+    content:
+      'We show how to build edge-native feature stores that synchronize anonymously, enabling real-time personalization without centralizing PII. Includes reference topologies, rollout and telemetry patterns, and safeguards for regional compliance.',
+    featuredImage: '/images/blog/edge-feature-stores.jpg',
+    category: 'Product',
+    tags: ['Edge', 'Feature Stores', 'Privacy'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-02',
+    readTime: 6,
+  },
 ];
