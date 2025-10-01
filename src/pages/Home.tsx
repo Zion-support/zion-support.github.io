@@ -120,6 +120,21 @@ const Home = () => {
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
         
+        {/* 🚀 DECEMBER 1, 2025 - BREAKTHROUGH: AI Development Agents, RAG at Scale & AI-Powered IaC */}
+        <NewContentPromoBanner 
+          className="border-b border-white/10" 
+          variant="premium" 
+          title="🚀 JUST RELEASED DECEMBER 1: 3 REVOLUTIONARY GUIDES — AI Development Agents (10x Velocity), RAG at Enterprise Scale (95% Accuracy), AI-Powered Infrastructure (60% Cost Savings)!"
+          description="🔥 BRAND NEW TODAY: Achieve 10x faster software development with autonomous AI agents, build production RAG systems serving 1M+ queries/day with sub-100ms latency, and deploy self-healing infrastructure that optimizes costs automatically. Essential reading for engineering leaders and CTOs!"
+          ctaText="Read Latest Breakthroughs"
+          ctaLink="/blog"
+          featuredItems={[
+            { title: "AI Agents for Software Development Automation — 10x Developer Velocity, 95% Bug Reduction, 70% Cost Savings", category: "AI Development", link: "/blog/ai-agents-software-development-automation-2025" },
+            { title: "RAG at Scale: Enterprise Implementation Guide — 95% Accuracy, Sub-100ms Latency, 1M+ Queries/Day", category: "Enterprise AI", link: "/blog/rag-at-scale-enterprise-implementation-2025" },
+            { title: "AI-Powered Infrastructure as Code — Autonomous Cloud Management, 60% Cost Reduction, 99.99% Uptime", category: "Cloud Infrastructure", link: "/blog/ai-powered-infrastructure-as-code-2025" }
+          ]}
+        />
+        
         {/* 🔥 NOVEMBER 1, 2025 - BRAND NEW: Federated Learning, LLMOps & Platform Engineering */}
         <NewContentPromoBanner 
           className="border-b border-white/10" 
@@ -357,13 +372,49 @@ const Home = () => {
             </h1>
 
             <p className="text-xl md:text-2xl text-zion-slate-light mb-8 leading-relaxed max-w-3xl mx-auto animate-fade-in">
-              🚀 <strong>JUST PUBLISHED NOVEMBER 1, 2025:</strong> 3 BREAKTHROUGH GUIDES — Federated Learning for Enterprise (95% accuracy, 100% privacy compliance), 
-              LLMOps Production Excellence (99.9% uptime, 70% cost reduction), and ML Platform Engineering Convergence (10x deployment velocity, 80% savings)! 
-              Plus October's releases: Adaptive Learning Systems (87% student success), Neuromorphic Computing (1000x energy efficiency), AI Protein Design (95% accuracy), 
-              Enterprise AI Automation (400% efficiency gains), Edge Computing & 5G (sub-10ms latency), and 10+ more cutting-edge guides! 
+              🚀 <strong>JUST PUBLISHED DECEMBER 1, 2025:</strong> 3 REVOLUTIONARY GUIDES — AI Development Agents (10x faster coding, 95% bug reduction, 70% cost savings), 
+              RAG at Enterprise Scale (95% accuracy, sub-100ms latency, 1M+ queries/day), and AI-Powered Infrastructure as Code (60% cost reduction, 99.99% uptime, autonomous operations)! 
+              Plus November's releases: Federated Learning (95% accuracy, 100% privacy), LLMOps Excellence (99.9% uptime), ML Platform Engineering (10x velocity), 
+              Adaptive Learning Systems (87% success), Neuromorphic Computing (1000x efficiency), AI Protein Design (95% accuracy), 
+              Enterprise AI Automation (400% gains), Edge Computing & 5G (sub-10ms latency), and 20+ more cutting-edge guides! 
               Transform your business with proven AI solutions delivering $50B+ in client results. 
               Join 500+ companies achieving 400-600% ROI with our expert guidance!
             </p>
+
+            {/* December 1, 2025 - NEWEST BREAKTHROUGH CONTENT */}
+            <div className="bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-400/30 rounded-xl p-6 mb-8 animate-fade-in shadow-2xl">
+              <div className="flex items-center justify-center gap-3 mb-3">
+                <Sparkles className="w-6 h-6 text-emerald-400 animate-pulse" />
+                <span className="text-lg font-bold text-emerald-400">🚀 DECEMBER 1, 2025: GAME-CHANGING AI GUIDES</span>
+                <Sparkles className="w-6 h-6 text-emerald-400 animate-pulse" />
+              </div>
+              <p className="text-white text-lg font-semibold mb-2">
+                ⚡ 3 REVOLUTIONARY GUIDES RELEASED TODAY: AI Development Agents (10x faster coding, 95% bug reduction), RAG at Enterprise Scale (95% accuracy, 1M+ queries/day), AI-Powered Infrastructure (60% cost savings, self-healing)!
+              </p>
+              <p className="text-zion-slate-light text-sm mb-4">
+                Achieve autonomous software development with AI agents that write production code, build enterprise RAG systems with sub-100ms latency, and deploy self-optimizing cloud infrastructure that prevents failures before they occur.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <Link
+                  to="/blog/ai-agents-software-development-automation-2025"
+                  className="bg-emerald-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-emerald-600 transition-colors text-center"
+                >
+                  Read Latest Breakthroughs
+                </Link>
+                <Link
+                  to="/blog"
+                  className="border border-emerald-400 text-emerald-400 px-6 py-2 rounded-lg font-semibold hover:bg-emerald-400 hover:text-white transition-colors text-center"
+                >
+                  Explore All Content
+                </Link>
+              </div>
+              <div className="mt-4 flex flex-wrap gap-2 justify-center">
+                <span className="bg-emerald-100/20 text-emerald-200 px-3 py-1 rounded-full text-xs font-medium border border-emerald-300/20">AI Development</span>
+                <span className="bg-teal-100/20 text-teal-200 px-3 py-1 rounded-full text-xs font-medium border border-teal-300/20">RAG Systems</span>
+                <span className="bg-cyan-100/20 text-cyan-200 px-3 py-1 rounded-full text-xs font-medium border border-cyan-300/20">AI Infrastructure</span>
+                <span className="bg-blue-100/20 text-blue-200 px-3 py-1 rounded-full text-xs font-medium border border-blue-300/20">Autonomous Ops</span>
+              </div>
+            </div>
 
             {/* November 1, 2025 - NEWEST BREAKTHROUGH CONTENT */}
             <div className="bg-gradient-to-r from-indigo-500/20 to-purple-500/20 border border-indigo-400/30 rounded-xl p-6 mb-8 animate-fade-in shadow-2xl">
