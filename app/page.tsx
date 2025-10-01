@@ -37,7 +37,9 @@ import {
   AISpaceTechBanner,
   AISustainabilityCaseStudyBanner,
   AITechnologyBreakthroughBanner,
-  EnterpriseAITransformationBanner
+  EnterpriseAITransformationBanner,
+  MLPipelineOptimizationBanner,
+  MLPipelineOptimizationCaseStudyBanner
 } from '../components/PromotionalBanner';
 import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
 import ContentShowcase from '../components/ContentShowcase';
@@ -68,6 +70,10 @@ export const metadata = {
 export default function HomePage() {
   return (
     <div className="animate-fade-in">
+      {/* NEW OCTOBER 2025 ML PIPELINE OPTIMIZATION - TOP PRIORITY */}
+      <MLPipelineOptimizationBanner />
+      <MLPipelineOptimizationCaseStudyBanner />
+      
       {/* NEW OCTOBER 2025 CONTENT - TOP BANNER */}
       <October2025NewContentBanner />
       
@@ -88,7 +94,13 @@ export default function HomePage() {
             <span className="hidden md:inline">•</span>
             <Link href="/case-studies/ai-2025-oct-01-financial-services-llm-automation-87-million-success" className="underline hover:text-yellow-200">$87M Banking ROI</Link>
             <span className="hidden md:inline">•</span>
+<<<<<<< HEAD
             <Link href="/services/october-2025-edge-ai-enterprise-transformation-services" className="underline hover:text-yellow-200">Edge AI Services</Link>
+=======
+            <Link href="/blog/ai-2025-oct-practical-ml-pipeline-optimization" className="underline hover:text-yellow-200">ML Pipeline 10x Speedup</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/case-studies/ai-2025-oct-ml-pipeline-optimization-14m-roi-success" className="underline hover:text-yellow-200">$14.2M ROI ML Optimization</Link>
+>>>>>>> pr-24579
           </div>
           <Link
             href="/blog"
@@ -138,6 +150,12 @@ export default function HomePage() {
       
       {/* AI Innovation Showcase Banner 2026 */}
       <AIInnovationShowcaseBanner2026 />
+<<<<<<< HEAD
+=======
+      
+      {/* Revolutionary 2026 Content Banner */}
+      <Revolutionary2026ContentBanner />
+>>>>>>> pr-24579
       
       {/* Latest 2026 Content Banner */}
       <LatestContent2026Banner />
