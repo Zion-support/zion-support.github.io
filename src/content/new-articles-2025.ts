@@ -1,161 +1,179 @@
 export interface NewArticle {
   id: string;
-  slug: string;
   title: string;
   description: string;
-  excerpt: string;
-  author: string;
-  date: string;
   category: string;
-  tags: string[];
+  publishedDate: string;
   featured: boolean;
+  link: string;
   readTime: string;
-  image?: string;
-  newBadge?: boolean;
-  trending?: boolean;
-  featuredInHomepage?: boolean;
+  tags: string[];
 }
 
 export const newArticles2025: NewArticle[] = [
   {
-    id: "ai-autonomous-infrastructure-2025",
-    slug: "ai-autonomous-infrastructure-2025",
-    title: "AI Autonomous Infrastructure: The Future of Self-Managing Systems",
-    description: "Discover how AI-powered autonomous infrastructure is revolutionizing enterprise operations with self-healing, self-optimizing, and self-scaling capabilities.",
-    excerpt: "Transform your infrastructure management with AI that never sleeps, never makes mistakes, and continuously optimizes performance.",
-    author: "Zion Tech Group Team",
-    date: "2025-01-30",
-    category: "AI Operations",
-    tags: ["Autonomous Infrastructure", "AI", "Self-Healing", "Automation"],
+    id: "ai-agent-evaluations-2026",
+    title: "🧪 AI Agent Evaluations 2026: Reliable Metrics & Safe Deployments",
+    description: "Blueprint for robust agent evals: task suites, rubric scoring, long-horizon reliability, safety budgets, and HIL governance.",
+    category: "Agentic AI",
+    publishedDate: "2025-09-30",
     featured: true,
-    readTime: "12 min read",
-    image: "/images/ai-autonomous-infrastructure.jpg",
-    newBadge: true,
-    trending: true,
-    featuredInHomepage: true
+    link: "/blog/ai-agent-evaluations-2026",
+    readTime: "16 min read",
+    tags: ["Agent Evals", "Safety Budgets", "Reliability", "Governance"]
   },
   {
-    id: "quantum-ai-hybrid-computing-2025",
-    slug: "quantum-ai-hybrid-computing-2025",
-    title: "Quantum-AI Hybrid Computing: Breaking Computational Barriers",
-    description: "Explore the revolutionary combination of quantum computing and artificial intelligence, delivering unprecedented processing power for complex business problems.",
-    excerpt: "Unlock exponential computational power with quantum-AI hybrid systems that solve problems impossible for traditional computers.",
-    author: "Zion Tech Group Team",
-    date: "2025-01-29",
-    category: "Quantum Computing",
-    tags: ["Quantum Computing", "AI", "Hybrid Systems", "Computational Power"],
+    id: "ai-platform-cost-optimization-2026",
+    title: "💸 AI Platform Cost Optimization 2026: 50–80% Savings Playbook",
+    description: "Cut AI platform costs 50–80% with autoscaling, quantization, spot capacity, and FinOps governance. 12‑week roadmap.",
+    category: "FinOps",
+    publishedDate: "2025-09-30",
     featured: true,
-    readTime: "15 min read",
-    image: "/images/quantum-ai-hybrid.jpg",
-    newBadge: true,
-    trending: true,
-    featuredInHomepage: true
+    link: "/blog/ai-platform-cost-optimization-2026",
+    readTime: "14 min read",
+    tags: ["FinOps", "Autoscaling", "Quantization", "Spot Instances"]
   },
   {
-    id: "ai-cybersecurity-next-generation-2025",
-    slug: "ai-cybersecurity-next-generation-2025",
-    title: "Next-Generation AI Cybersecurity: Zero-Trust with Intelligence",
-    description: "Learn how advanced AI cybersecurity systems are creating impenetrable digital fortresses with zero-trust architecture and behavioral analytics.",
-    excerpt: "Build an unbreachable security perimeter with AI that learns, adapts, and evolves to counter emerging threats in real-time.",
-    author: "Zion Tech Group Team",
-    date: "2025-01-28",
-    category: "Cybersecurity",
-    tags: ["AI Security", "Zero Trust", "Behavioral Analytics", "Threat Detection"],
+    id: "realtime-ai-decision-engines-2025",
+    title: "⚡ Real-Time AI Decision Engines: 10M/sec Under 1ms Latency",
+    description: "Architect ultra-low-latency decision systems with tiered models, caches, and inline canaries delivering reliable sub‑1ms actions at scale.",
+    category: "Real-Time AI",
+    publishedDate: "2025-09-30",
     featured: true,
+    link: "/blog/real-time-ai-decision-engines-2025",
     readTime: "10 min read",
-    image: "/images/ai-cybersecurity-next-gen.jpg",
-    newBadge: true,
-    trending: true,
-    featuredInHomepage: true
+    tags: ["Low Latency", "Caching", "SLAs", "Tracing"]
   },
   {
-    id: "edge-ai-real-time-intelligence-2025",
-    slug: "edge-ai-real-time-intelligence-2025",
-    title: "Edge AI: Real-Time Intelligence at the Network Edge",
-    description: "Discover how Edge AI is bringing real-time intelligence to IoT devices, autonomous vehicles, and smart cities with sub-millisecond response times.",
-    excerpt: "Experience the power of AI processing at the edge, delivering instant decisions without cloud dependency.",
-    author: "Zion Tech Group Team",
-    date: "2025-01-27",
-    category: "Edge Computing",
-    tags: ["Edge AI", "Real-time Processing", "IoT", "Autonomous Systems"],
+    id: "privacy-first-telemetry-quickstart-2025",
+    title: "🔒 Privacy‑First Telemetry Quickstart: Signal‑Rich, PII‑Safe Analytics",
+    description: "Implement scoped identifiers, field‑level filters, and DP noise to keep insights high and risk low—no data leaks, no regressions.",
+    category: "Observability",
+    publishedDate: "2025-09-30",
     featured: true,
-    readTime: "11 min read",
-    image: "/images/edge-ai-real-time.jpg",
-    newBadge: true,
-    trending: true,
-    featuredInHomepage: false
-  },
-  {
-    id: "ai-content-generation-enterprise-2025",
-    slug: "ai-content-generation-enterprise-2025",
-    title: "Enterprise AI Content Generation: Scale Your Content Strategy",
-    description: "Master enterprise-grade AI content generation that maintains brand voice, ensures quality, and scales content production by 1000%.",
-    excerpt: "Transform your content strategy with AI that understands your brand, maintains consistency, and delivers quality at scale.",
-    author: "Zion Tech Group Team",
-    date: "2025-01-26",
-    category: "Content AI",
-    tags: ["Content Generation", "AI Writing", "Brand Voice", "Content Strategy"],
-    featured: true,
-    readTime: "9 min read",
-    image: "/images/ai-content-enterprise.jpg",
-    newBadge: true,
-    trending: true,
-    featuredInHomepage: false
-  },
-  {
-    id: "ai-customer-insights-advanced-2025",
-    slug: "ai-customer-insights-advanced-2025",
-    title: "Advanced AI Customer Insights: Predicting Behavior Before It Happens",
-    description: "Unlock the power of predictive customer analytics with AI that anticipates needs, predicts churn, and personalizes experiences at scale.",
-    excerpt: "Stay ahead of customer needs with AI that predicts behavior patterns and delivers personalized experiences before customers even ask.",
-    author: "Zion Tech Group Team",
-    date: "2025-01-25",
-    category: "Customer Analytics",
-    tags: ["Customer Insights", "Predictive Analytics", "Personalization", "Churn Prediction"],
-    featured: false,
-    readTime: "8 min read",
-    image: "/images/ai-customer-insights-advanced.jpg",
-    newBadge: true,
-    trending: true,
-    featuredInHomepage: false
-  },
-  {
-    id: "genai-evals-production-2025",
-    slug: "genai-evals-production-2025",
-    title: "GenAI Evals in Production: Quality Gates That Actually Work",
-    description: "Implement production-ready GenAI evaluation systems with automated quality gates, performance monitoring, and continuous improvement loops.",
-    excerpt: "Ensure your GenAI systems deliver consistent quality with automated evaluation pipelines that catch issues before users do.",
-    author: "Zion Tech Group Team",
-    date: "2025-01-24",
-    category: "GenAI Quality",
-    tags: ["GenAI", "Quality Gates", "Evaluation", "Production Monitoring"],
-    featured: true,
+    link: "/blog/privacy-first-telemetry-quickstart-2025",
     readTime: "7 min read",
-    image: "/images/genai-evals-production.jpg",
-    newBadge: true,
-    trending: true,
-    featuredInHomepage: false
+    tags: ["Telemetry", "Privacy", "DP", "Scoped IDs"]
   },
   {
-    id: "ai-platform-roi-measurement-2025",
-    slug: "ai-platform-roi-measurement-2025",
-    title: "AI Platform ROI Measurement: Quantifying Business Impact",
-    description: "Learn how to measure and maximize ROI from AI platform investments with proven frameworks and success metrics.",
-    excerpt: "Turn AI investments into measurable business outcomes with comprehensive ROI frameworks and success tracking.",
-    author: "Zion Tech Group Team",
-    date: "2025-01-23",
-    category: "AI Strategy",
-    tags: ["AI ROI", "Business Metrics", "Platform Investment", "Success Measurement"],
+    id: "agent-runbooks-2025",
+    title: "🤖 Agent Runbooks 2025: Budgeted Actions, Rollbacks, and Safety Gates",
+    description: "Design reliable agentic workflows with budgeted actions, approvals, and instant rollback—ship autonomy without surprises.",
+    category: "AI Operations",
+    publishedDate: "2025-09-30",
     featured: true,
-    readTime: "6 min read",
-    image: "/images/ai-platform-roi.jpg",
-    newBadge: true,
-    trending: true,
-    featuredInHomepage: false
+    link: "/blog/agent-runbooks-2025",
+    readTime: "8 min read",
+    tags: ["Agents", "Runbooks", "Budgets", "Safety"]
+  },
+  {
+    id: "multimodal-ai-revolution-2025",
+    title: "🎭 Multimodal AI Revolution: Unified Vision-Language-Audio Processing",
+    description: "Master cutting-edge multimodal AI achieving 98% accuracy across vision, language, and audio. Learn unified embeddings, cross-modal attention, and real-world applications transforming industries.",
+    category: "AI Innovation",
+    publishedDate: "2025-10-15",
+    featured: true,
+    link: "/blog/multimodal-ai-revolution-2025",
+    readTime: "18 min read",
+    tags: ["Multimodal AI", "Computer Vision", "NLP", "Audio Processing", "Deep Learning"]
+  },
+  {
+    id: "blockchain-ai-integration-2025",
+    title: "⛓️ Blockchain-AI Integration 2025: Trustless Intelligence at Scale",
+    description: "Combine blockchain immutability with AI intelligence for trustless, verifiable systems. Achieve decentralized AI governance, transparent model training, and secure data marketplaces.",
+    category: "Blockchain AI",
+    publishedDate: "2025-10-15",
+    featured: true,
+    link: "/blog/blockchain-ai-integration-2025",
+    readTime: "16 min read",
+    tags: ["Blockchain", "AI", "Web3", "Decentralized AI", "Smart Contracts"]
+  },
+  {
+    id: "green-ai-sustainability-2025",
+    title: "🌱 Green AI & Sustainability: Carbon-Neutral ML at Scale",
+    description: "Build sustainable AI systems achieving 90% carbon reduction. Master energy-efficient architectures, carbon-aware training, and environmental impact optimization.",
+    category: "Sustainable AI",
+    publishedDate: "2025-10-15",
+    featured: true,
+    link: "/blog/green-ai-sustainability-2025",
+    readTime: "14 min read",
+    tags: ["Green AI", "Sustainability", "Carbon Neutral", "Energy Efficiency", "Climate Tech"]
+  },
+  {
+    id: "ai-regulatory-compliance-2025",
+    title: "📋 AI Regulatory Compliance 2025: Global Standards & Implementation",
+    description: "Navigate EU AI Act, GDPR, CCPA, and emerging regulations. Implement comprehensive compliance frameworks ensuring 100% regulatory adherence with automated monitoring.",
+    category: "AI Governance",
+    publishedDate: "2025-10-15",
+    featured: true,
+    link: "/blog/ai-regulatory-compliance-2025",
+    readTime: "19 min read",
+    tags: ["Compliance", "Regulations", "GDPR", "EU AI Act", "Governance"]
+  },
+  {
+    id: "automated-ml-neural-architecture-search-2025",
+    title: "🤖 Automated ML & Neural Architecture Search: Self-Designing AI",
+    description: "Deploy AutoML systems that design optimal neural architectures 100x faster than humans. Achieve state-of-the-art performance with zero manual architecture engineering.",
+    category: "AutoML",
+    publishedDate: "2025-10-15",
+    featured: true,
+    link: "/blog/automated-ml-neural-architecture-search-2025",
+    readTime: "17 min read",
+    tags: ["AutoML", "Neural Architecture Search", "Optimization", "Hyperparameter Tuning"]
+  },
+  {
+    id: "ai-autonomous-infrastructure-2025",
+    title: "🏗️ AI Autonomous Infrastructure: Self-Healing, Self-Optimizing Systems",
+    description: "Build infrastructure that manages itself—self-healing failures, self-optimizing performance, and self-scaling resources. Achieve 99.99% uptime with zero manual intervention.",
+    category: "Infrastructure AI",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-autonomous-infrastructure-2025",
+    readTime: "20 min read",
+    tags: ["Infrastructure", "Autonomous Systems", "Self-Healing", "Cloud Native", "DevOps"]
+  },
+  {
+    id: "quantum-entanglement-ai-2025",
+    title: "⚛️ Quantum Entanglement for AI: Next-Generation Computing",
+    description: "Harness quantum entanglement for AI achieving computational breakthroughs. Solve NP-hard problems in polynomial time and unlock unprecedented AI capabilities.",
+    category: "Quantum Computing",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/quantum-entanglement-ai-2025",
+    readTime: "22 min read",
+    tags: ["Quantum Computing", "Quantum AI", "Entanglement", "Advanced Computing"]
+  },
+  {
+    id: "ai-memory-augmented-networks-2025",
+    title: "🧠 Memory-Augmented Neural Networks: Long-Term Context AI",
+    description: "Deploy neural networks with external memory achieving human-like long-term context retention. Transform AI capabilities with differentiable memory access.",
+    category: "Neural Architecture",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-memory-augmented-networks-2025",
+    readTime: "15 min read",
+    tags: ["Neural Networks", "Memory Systems", "Context Retention", "Architecture"]
+  },
+  {
+    id: "ai-federated-learning-enterprise-2025",
+    title: "🔐 Federated Learning for Enterprise: Privacy-First Distributed AI",
+    description: "Train powerful AI models across distributed data sources without centralizing sensitive data. Achieve 99% accuracy while maintaining perfect privacy compliance.",
+    category: "Privacy AI",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-federated-learning-enterprise-2025",
+    readTime: "16 min read",
+    tags: ["Federated Learning", "Privacy", "Distributed AI", "Secure ML"]
+  },
+  {
+    id: "ai-real-time-anomaly-detection-2025",
+    title: "🚨 Real-Time Anomaly Detection: Sub-Millisecond Threat Response",
+    description: "Deploy AI anomaly detection achieving sub-millisecond response times with 99.9% accuracy. Prevent incidents before they impact your systems.",
+    category: "AI Security",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-real-time-anomaly-detection-2025",
+    readTime: "13 min read",
+    tags: ["Anomaly Detection", "Real-Time AI", "Security", "Monitoring"]
   }
 ];
-
-export const featuredNewArticles = newArticles2025.filter(article => article.featured);
-export const trendingNewArticles = newArticles2025.filter(article => article.trending);
-export const homepageFeaturedArticles = newArticles2025.filter(article => article.featuredInHomepage);
-export const latestNewArticles = newArticles2025.slice(0, 6);

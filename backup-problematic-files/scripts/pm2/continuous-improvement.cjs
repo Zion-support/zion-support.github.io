@@ -138,8 +138,3 @@ process.on('SIGTERM', () => {}
 main().catch(error => {})
   log(`Continuous Improvement Process "failed": ${error.message}`);
   process.exit(1);
-<<<<<<< HEAD
-}
-=======
-}
-});});

@@ -25,49 +25,6 @@ class AccessibilityEnhancer {
   private metrics: AccessibilityMetric[] = [];
   private isInitialized = false;
   private focusTrapElements: HTMLElement[] = [];
-  private resizeObserver?: ResizeObserver;
-  private mutationObserver?: MutationObserver;
-  private performanceObserver?: PerformanceObserver;
-  
-  // Event handlers as class fields to ensure stable references for add/remove
-  private handleKeyDown = (event: KeyboardEvent): void => {
-    // Skip to main content
-    if (event.key === 'Tab' && (event as KeyboardEvent).shiftKey && document.activeElement === document.body) {
-      const skipLink = document.querySelector('[data-skip-link]');
-      if (skipLink) {
-        (skipLink as HTMLElement).focus();
-        event.preventDefault();
-      }
-    }
-
-    // Escape key handling
-    if (event.key === 'Escape') {
-      const modal = document.querySelector('[role="dialog"][aria-hidden="false"]');
-      if (modal) {
-        this.closeModal(modal as HTMLElement);
-      }
-    }
-
-    // Arrow key navigation for menus
-    if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
-      const menu = document.querySelector('[role="menu"]:focus-within') as HTMLElement | null;
-      if (menu) {
-        this.handleMenuNavigation(event as KeyboardEvent, menu);
-      }
-    }
-  };
-
-  private handleFocusIn = (event: FocusEvent): void => {
-    const target = event.target as HTMLElement;
-    if (target && target.tabIndex < 0 && target.hasAttribute('tabindex')) {
-      // Use console.warn as a non-fatal diagnostic; eslint flags remain warnings
-      console.warn('Element with negative tabindex received focus:', target);
-    }
-  };
-
-  private handleFocusOut = (_event: FocusEvent): void => {
-    // Reserved for future logic (e.g., clearing focus styles)
-  };
 
   constructor() {
     this.config = this.getDefaultConfig();
@@ -95,58 +52,37 @@ class AccessibilityEnhancer {
     this.setupColorContrast();
     this.setupReducedMotion();
     this.observeAccessibility();
-    this.setupPerformanceMonitoring();
   }
-
-  // Alias for compatibility with callers using `init()`
-  public init(): void {
-    this.initialize();
-  }
-
-  public destroy(): void {
-    if (!this.isInitialized) return;
-    
-    // Cleanup observers
-    this.resizeObserver?.disconnect();
-    this.mutationObserver?.disconnect();
-    this.performanceObserver?.disconnect();
-    
-    // Cleanup event listeners
-    document.removeEventListener('keydown', this.handleKeyDown);
-    document.removeEventListener('focusin', this.handleFocusIn);
-    document.removeEventListener('focusout', this.handleFocusOut);
-    
-    this.isInitialized = false;
-    this.focusTrapElements = [];
-  }
-
-  private setupPerformanceMonitoring(): void {
-    if (!this.config.screenReaderSupport) return;
-    
-    try {
-      this.performanceObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry) => {
-          if (entry.entryType === 'measure' && entry.name.includes('accessibility')) {
-            console.log(`Accessibility performance: ${entry.name} took ${entry.duration}ms`);
-          }
-        });
-      });
-      
-      this.performanceObserver.observe({ entryTypes: ['measure'] });
-    } catch (error) {
-      console.warn('PerformanceObserver not supported:', error);
-    }
-  }
-
-  /**
-   * Backward-compatible initialize alias handled via init() calling initialize()
-   */
 
   private setupKeyboardNavigation(): void {
     if (!this.config.keyboardNavigation) return;
 
-    document.addEventListener('keydown', this.handleKeyDown);
+    document.addEventListener('keydown', (event) => {
+      // Skip to main content
+      if (event.key === 'Tab' && event.shiftKey && document.activeElement === document.body) {
+        const skipLink = document.querySelector('[data-skip-link]');
+        if (skipLink) {
+          (skipLink as HTMLElement).focus();
+          event.preventDefault();
+        }
+      }
+
+      // Escape key handling
+      if (event.key === 'Escape') {
+        const modal = document.querySelector('[role="dialog"][aria-hidden="false"]');
+        if (modal) {
+          this.closeModal(modal as HTMLElement);
+        }
+      }
+
+      // Arrow key navigation for menus
+      if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+        const menu = document.querySelector('[role="menu"]:focus-within') as HTMLElement | null;
+        if (menu) {
+          this.handleMenuNavigation(event as KeyboardEvent, menu);
+        }
+      }
+    });
   }
 
   private setupFocusManagement(): void {
@@ -254,10 +190,15 @@ class AccessibilityEnhancer {
     if (typeof window === 'undefined') return;
 
     // Monitor focus changes
-    document.addEventListener('focusin', this.handleFocusIn);
+    document.addEventListener('focusin', (event) => {
+      const target = event.target as HTMLElement;
+      if (target.tabIndex < 0 && target.hasAttribute('tabindex')) {
+        console.warn('Element with negative tabindex received focus:', target);
+      }
+    });
 
     // Monitor aria-label changes
-    this.mutationObserver = new MutationObserver((mutations: MutationRecord[]) => {
+    const observer = new MutationObserver((mutations: MutationRecord[]) => {
       mutations.forEach((mutation) => {
         if (mutation.type === 'attributes' && mutation.attributeName === 'aria-label') {
           const element = mutation.target as Element;
@@ -269,7 +210,7 @@ class AccessibilityEnhancer {
       });
     });
 
-    this.mutationObserver.observe(document.body, {
+    observer.observe(document.body, {
       attributes: true,
       attributeFilter: ['aria-label', 'aria-labelledby', 'role']
     });

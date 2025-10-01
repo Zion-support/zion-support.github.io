@@ -74,7 +74,6 @@ const branchesOutput = execSync("git branch -r", { "encoding": "utf8"});
           line => line && !line.includes(HEAD") && !line.includes("main)
         .map(line => line.replace(origin/", ")
       return allBranches} catch (error) {  throw new Error(`Failed to get branches`})
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   async processBranch(branchName) {this.log(`� Processing "branch"`})
   this.log( Error processing branch ${branchName  }: ${error.message})
         
@@ -119,7 +118,6 @@ this.log(" Resolved conflicts "in")
 )
 this.log( Resolved conflicts "in")
         ERROR
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     // "Strategy"
       /([\s\S]*?)      $1
       /([\s\S]*?)      "$1"
@@ -134,7 +132,6 @@ this.log( Resolved conflicts "in")
       execSync("git push origin main", { "stdio": "inherit"})
       this.log(" Successfully pushed all merged changes to remote")
   this.log(` Failed to push "changes": ${error.message}`, "ERROR"`)
-=======
   this.log( Finalizing all merges...)
   execSync(git commit -m "Final merge of all remaining PRs and branches")
           { stdio: "pipe"}
@@ -146,7 +143,6 @@ this.log( Resolved conflicts "in")
       execSync("git push origin main", { stdio: "inherit"})
       this.log( Successfully pushed all merged changes to remote)
   this.log(` Failed to push "changes": ${error.message}`, ERROR`)
->>>>>>> merged-prs-20250907-203621:backup-problematic-files/scripts/automation/final-merge-all-prs.cjs
   this.log(" Generating final merge report...")
   timestamp
       "summary"
@@ -157,20 +153,8 @@ this.log( Resolved conflicts "in")
       "successRate"
  ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
       "successRate"
       "successRate"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> origin/chore/fix-lint-and-merge
-=======
       "successRate"
-=======
       "successRate"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621:backup-problematic-files/scripts/automation/final-merge-all-prs.cjs
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

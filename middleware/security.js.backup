@@ -1,22 +1,4 @@
 
-<<<<<<< HEAD
-=======
-ursor/fix-website-loading-errors-and-merge-6662
-
-
-
-
-
-
-// Security middleware
-import { NextResponse } from 'next/server';
-import { getSecurityHeaders } from '../utils/security-headers';
-
-
-origin/main
-
-
->>>>>>> main
 
 export function securityMiddleware(request) {;
 
@@ -62,54 +44,3 @@ export function securityHeaders(req, res, next) {
 }}
 
 }
-<<<<<<< HEAD
-  const response = NextResponse.next();
-  
-  // Add security headers
-
-// Security middleware;
-import { NextResponse } from 'next/server';
-import { getSecurityHeaders } from '../utils/security-headers';
-export function securityMiddleware(request) {
-  const response = NextResponse.next();
-  
-  // Add security headers;
-pr-12325
-  const headers = getSecurityHeaders();
-  headers.forEach(({ key, value }) => {
-    response.headers.set(key, value);
-  });
-  
-  // Add HSTS header for HTTPS
-  if (request.nextUrl.protocol === 'https:') {
-    response.headers.set(
-      'Strict-Transport-Security',
-      'max-age=31536000; includeSubDomains; preload'
-  // Add HSTS header for HTTPS;
-  if (request.nextUrl.protocol === 'https:') {
-    response.headers.set(
-      'Strict-Transport-Security',
-      'max-age=31536000; includeSubDomains; preload)
-pr-12325
-    );
-  }
-  
-  return response;
-}
-=======
-}
-}
-origin/main
-}
-
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-origin/automation-improvements-final
-}
-
-
-}
-
-
->>>>>>> main

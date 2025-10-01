@@ -2,25 +2,27 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Cybersecurity Automation: From Detections to Autonomic Response',
-  description:
-    'Behavioral detections, policy tests, and runbooks that auto-contain incidents under 60 seconds with zero-trust.',
+  title: 'AI Cybersecurity Automation 2025: Autonomous Defense for the Enterprise',
+  description: 'Production patterns for autonomous cyber defense: detection, response, and hardening with 99.7% precision.',
+  keywords: 'AI cybersecurity 2025, autonomous defense, SOAR, anomaly detection, zero trust',
 };
 
 export default function AICybersecurityAutomation2025Page() {
   return (
     <div className="min-h-screen bg-white">
-      <section className="bg-gradient-to-br from-gray-900 via-slate-900 to-indigo-900 text-white py-20">
+      <section className="bg-gradient-to-br from-red-900 via-gray-900 to-slate-900 text-white py-20">
         <div className="max-w-4xl mx-auto px-4">
-          <span className="bg-red-600 text-white px-3 py-1 rounded-full text-sm font-semibold">Security • 2025</span>
-          <h1 className="text-5xl font-bold mt-6 mb-6 leading-tight">AI Cybersecurity Automation</h1>
+          <div className="mb-6">
+            <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold">New Article</span>
+          </div>
+          <h1 className="text-5xl font-bold mb-6 leading-tight">AI Cybersecurity Automation 2025</h1>
           <p className="text-xl mb-8 opacity-90">
-            Next-gen detection and response with policy-backed runbooks, live canaries, and autonomous
-            containment under a minute.
+            Architect autonomous detection and response with AI-driven analytics, playbooks, and zero-trust controls.
+            Reduce MTTD/MTTR by an order of magnitude without adding headcount.
           </p>
-          <div className="flex items-center gap-6 text-sm opacity-75">
-            <span>📅 October 9, 2025</span>
-            <span>⏱️ 7 min read</span>
+          <div className="flex items-center gap-6 text-sm opacity-80">
+            <span>📅 September 29, 2025</span>
+            <span>⏱️ 11 min read</span>
             <span>👤 Zion Tech Group Team</span>
           </div>
         </div>
@@ -28,52 +30,48 @@ export default function AICybersecurityAutomation2025Page() {
 
       <article className="max-w-4xl mx-auto px-4 py-16">
         <div className="prose prose-lg max-w-none">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Behavioral Detections That Scale</h2>
-          <p className="text-lg text-gray-700 mb-6">
-            Move beyond IOC lists. Use behavior-based analytics with feature stores, asset context, and
-            streaming models. Tie detections to risk budgets and response playbooks.
-          </p>
-
-          <div className="bg-red-50 border-l-4 border-red-500 p-6 mb-8 rounded-md">
-            <h3 className="text-xl font-bold text-red-900 mb-3">Core Capabilities</h3>
-            <ul className="space-y-2 text-gray-800">
-              <li>• Live canary prompts for model abuse and jailbreak attempts</li>
-              <li>• Policy tests in CI to prevent misconfig and key leaks</li>
-              <li>• Automated isolation via identity-aware egress controls</li>
-            </ul>
+          <div className="bg-red-50 border-l-4 border-red-500 p-6 mb-8">
+            <p className="text-lg font-semibold text-red-900 mb-2">Executive Summary</p>
+            <p className="text-red-800">
+              AI augments SOC throughput and precision. Combining graph-based threat detection, LLM-assisted triage,
+              and automated SOAR playbooks yields faster containment and fewer false positives.
+            </p>
           </div>
 
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Zero-Trust, Automated Response</h2>
-          <p className="text-lg text-gray-700 mb-6">
-            Design runbooks as code. Encode steps, approvals, and rollbacks; trigger by risk level.
-            Start in advisory mode, then graduate to full automation.
-          </p>
-
-          <div className="grid md:grid-cols-2 gap-8 mb-8">
-            <div className="bg-gradient-to-br from-orange-50 to-amber-50 p-6 rounded-lg">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Runbooks as Code</h3>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Reference Architecture</h2>
+          <div className="grid md:grid-cols-2 gap-6 mb-8">
+            <div className="bg-white rounded-lg border p-6">
+              <h3 className="text-xl font-bold mb-2">Detection</h3>
               <ul className="text-gray-700 space-y-1">
-                <li>• Signed playbooks with attestations</li>
-                <li>• Dry-run and canary modes</li>
-                <li>• Audit-ready trails</li>
+                <li>• Behavior analytics with sliding windows</li>
+                <li>• Graph anomaly detection across identities and devices</li>
+                <li>• LLM-assisted enrichment and summarization</li>
               </ul>
             </div>
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-lg">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Telemetry</h3>
+            <div className="bg-white rounded-lg border p-6">
+              <h3 className="text-xl font-bold mb-2">Response</h3>
               <ul className="text-gray-700 space-y-1">
-                <li>• End-to-end traces for incidents</li>
-                <li>• Budget burn alerts</li>
-                <li>• Post-incident learning loops</li>
+                <li>• SOAR playbooks with guarded autonomy</li>
+                <li>• Just-in-time approvals for high-impact actions</li>
+                <li>• Post-incident learning loops and evals</li>
               </ul>
             </div>
           </div>
 
-          <div className="bg-gradient-to-r from-red-600 to-rose-600 text-white p-8 rounded-lg">
-            <h3 className="text-2xl font-bold mb-3">Harden Your AI Stack</h3>
-            <p className="mb-6 opacity-90">We design autonomous response with zero-trust controls and proofs.</p>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Key Metrics</h2>
+          <ul className="list-disc ml-6 text-gray-700 mb-8 space-y-2">
+            <li>MTTD/MTTR (p50/p90)</li>
+            <li>Precision/recall of high-severity alerts</li>
+            <li>Automated containment rate</li>
+            <li>False positive rate by source</li>
+          </ul>
+
+          <div className="bg-gradient-to-r from-red-600 to-pink-600 text-white p-8 rounded-lg">
+            <h3 className="text-2xl font-bold mb-4">Accelerate your SOC with autonomous defense</h3>
+            <p className="text-lg mb-6 opacity-90">We deploy battle-tested patterns with guardrails in weeks, not months.</p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="tel:+13024640950" className="bg-white text-red-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all">Call +1 302 464 0950</a>
-              <a href="mailto:kleber@ziontechgroup.com" className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-700 transition-all">Get Consultation</a>
+              <a href="tel:+13024640950" className="bg-white text-red-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100">Call +1 302 464 0950</a>
+              <a href="mailto:kleber@ziontechgroup.com" className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-700">Get Consultation</a>
             </div>
           </div>
         </div>
@@ -83,9 +81,9 @@ export default function AICybersecurityAutomation2025Page() {
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Related Articles</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <RelatedCard title="Secure ML Supply Chain" href="/blog/secure-ml-supply-chain-2025" />
-            <RelatedCard title="AI Governance Blueprint" href="/blog/ai-governance-blueprint-2025" />
-            <RelatedCard title="Secure Tools Marketplace" href="/blog/secure-tools-marketplace-2026" />
+            <RelatedArticleCard title="Enterprise AI Security 2025" description="Security best practices for AI systems." href="/blog/enterprise-ai-security-best-practices" />
+            <RelatedArticleCard title="GenAI Guardrails 2025" description="Operational safety for GenAI workloads." href="/blog/genai-guardrails-2025" />
+            <RelatedArticleCard title="AI Risk Register" description="Track and mitigate production AI risks." href="/blog/ai-risk-register" />
           </div>
         </div>
       </section>
@@ -93,11 +91,12 @@ export default function AICybersecurityAutomation2025Page() {
   );
 }
 
-function RelatedCard({ title, href }: { title: string; href: string }) {
+function RelatedArticleCard({ title, description, href }: { title: string; description: string; href: string }) {
   return (
     <Link href={href} className="block bg-white rounded-lg p-6 hover:shadow-lg transition-all duration-300">
-      <h3 className="text-xl font-bold text-gray-900 mb-2">{title}</h3>
-      <span className="text-red-600 font-semibold">Read More →</span>
+      <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
+      <p className="text-gray-600 mb-4">{description}</p>
+      <span className="text-red-700 font-semibold">Read More →</span>
     </Link>
   );
 }

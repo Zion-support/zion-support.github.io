@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 const improvements = [
   "Extracted common components to reduce duplication",
   "Added proper TypeScript types",

@@ -131,111 +131,23 @@ export const caseStudies: CaseStudy[] = [
     technologies: ["OpenTelemetry", "ClickHouse", "Edge Workers", "TypeScript", "Kubernetes"],
     duration: "18 weeks",
     imageUrl: "/images/case-studies/telco-edge.jpg"
-  },
+  }
+  ,
   {
-    id: "ai-autonomous-operations-success",
-    title: "AI Autonomous Operations Platform Implementation",
-    company: "GlobalTech Enterprises",
-    industry: "Technology",
-    challenge: "Manual infrastructure management was consuming 60% of IT resources, leading to high operational costs and frequent downtime incidents.",
-    solution: "Deployed comprehensive AI autonomous operations platform with self-healing systems, predictive maintenance, and automated scaling capabilities.",
+    id: "enterprise-rag-rollout",
+    title: "Enterprise RAG Rollout at Fortune 500",
+    company: "Global Consumer Goods Co.",
+    industry: "Consumer Goods",
+    challenge: "Fragmented knowledge base and inconsistent answers from traditional search led to low CSAT and high ticket volume.",
+    solution: "Implemented governed Retrieval-Augmented Generation with curated sources, retrieval policies, online eval canaries, and human-in-the-loop feedback loops.",
     results: [
-      "Achieved 99.99% uptime through predictive maintenance",
-      "Reduced operational costs by 65%",
-      "Eliminated 90% of manual interventions",
-      "Improved system performance by 45%",
-      "Generated $12M annual savings"
+      "Increased self-service deflection by 32%",
+      "Raised CSAT from 3.7 to 4.5",
+      "Cut average handle time by 28%",
+      "$3.1M/year support cost savings"
     ],
-    technologies: ["AI/ML", "Kubernetes", "Prometheus", "Grafana", "Python", "TensorFlow"],
-    duration: "16 weeks",
-    imageUrl: "/images/case-studies/ai-autonomous-ops.jpg"
-  },
-  {
-    id: "enterprise-ai-transformation",
-    title: "Enterprise AI Transformation Initiative",
-    company: "Fortune 500 Manufacturing",
-    industry: "Manufacturing",
-    challenge: "Legacy systems and manual processes were hindering growth, with AI adoption limited to pilot projects that never scaled.",
-    solution: "Implemented comprehensive enterprise AI roadmap with phased deployment, including AI strategy, infrastructure modernization, and cultural transformation.",
-    results: [
-      "Deployed 15 AI solutions across 8 departments",
-      "Increased operational efficiency by 55%",
-      "Reduced decision-making time by 70%",
-      "Generated $25M in additional revenue",
-      "Achieved 300% ROI within 18 months"
-    ],
-    technologies: ["Enterprise AI", "Cloud Platforms", "Data Analytics", "MLOps", "Change Management"],
-    duration: "24 weeks",
-    imageUrl: "/images/case-studies/enterprise-ai.jpg"
-  },
-  {
-    id: "cloud-native-ai-platform",
-    title: "Cloud-Native AI Platform Migration",
-    company: "FinTech Innovations Inc.",
-    industry: "Financial Services",
-    challenge: "On-premises AI infrastructure was limiting scalability and innovation, with deployment times taking months instead of weeks.",
-    solution: "Migrated to cloud-native AI platform with containerized AI workloads, automated scaling, and DevOps integration.",
-    results: [
-      "Reduced deployment time from 3 months to 2 weeks",
-      "Achieved 99.9% availability across all regions",
-      "Scaled AI workloads by 10x without infrastructure changes",
-      "Reduced AI infrastructure costs by 40%",
-      "Enabled rapid experimentation with new AI models"
-    ],
-    technologies: ["Kubernetes", "Docker", "AWS/Azure", "MLOps", "CI/CD", "Microservices"],
-    duration: "12 weeks",
-    imageUrl: "/images/case-studies/cloud-native-ai.jpg"
-  },
-  {
-    id: "ai-cybersecurity-automation",
-    title: "AI-Powered Cybersecurity Automation",
-    company: "SecureBank International",
-    industry: "Banking",
-    challenge: "Traditional security tools were generating 10,000+ false positives daily, overwhelming security teams and missing real threats.",
-    solution: "Implemented AI-powered security automation platform with advanced threat detection, automated response, and intelligent alert prioritization.",
-    results: [
-      "Reduced false positives by 95%",
-      "Improved threat detection accuracy to 99.2%",
-      "Reduced incident response time from 4 hours to 15 minutes",
-      "Prevented $8M in potential security breaches",
-      "Achieved 100% compliance with regulatory requirements"
-    ],
-    technologies: ["AI/ML", "SIEM", "SOAR", "Python", "TensorFlow", "Security Automation"],
-    duration: "14 weeks",
-    imageUrl: "/images/case-studies/ai-cybersecurity.jpg"
-  },
-  {
-    id: "quantum-computing-optimization",
-    title: "Quantum Computing for Portfolio Optimization",
-    company: "Quantum Capital Management",
-    industry: "Investment Management",
-    challenge: "Traditional portfolio optimization was computationally limited, preventing analysis of complex multi-factor models with thousands of assets.",
-    solution: "Implemented quantum computing solution for portfolio optimization, enabling analysis of exponentially more portfolio combinations.",
-    results: [
-      "Improved portfolio Sharpe ratios by 18%",
-      "Reduced optimization time from 24 hours to 4 hours",
-      "Enabled analysis of 10x more asset combinations",
-      "Generated $15M in additional returns",
-      "Achieved industry-leading risk-adjusted performance"
-    ],
-    technologies: ["Quantum Computing", "IBM Qiskit", "Python", "Portfolio Optimization", "Risk Management"],
-    duration: "20 weeks",
-    imageUrl: "/images/case-studies/quantum-portfolio.jpg"
+    technologies: ["RAG", "Vector DB", "TypeScript", "OpenAI", "ClickHouse"],
+    duration: "10 weeks",
+    imageUrl: "/images/case-studies/enterprise-rag.jpg"
   }
 ];
-
-// Export featured case studies (first 4 for homepage showcase)
-export const featuredCaseStudies = caseStudies.slice(0, 4).map(study => ({
-  ...study,
-  metrics: [
-    { value: study.results[0]?.split(' ')[0] || '95%', label: 'Improvement' },
-    { value: study.results[1]?.split(' ')[0] || '$2M+', label: 'Savings' },
-    { value: study.results[2]?.split(' ')[0] || '99%', label: 'Success Rate' },
-    { value: study.duration, label: 'Duration' }
-  ],
-  testimonial: {
-    quote: "This transformation exceeded our expectations and delivered measurable results from day one.",
-    author: "CTO",
-    title: study.company
-  }
-}));
