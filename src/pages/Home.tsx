@@ -130,6 +130,34 @@ const Home = () => {
             </div>
           </div>
         </div>
+
+        {/* Auto: Highlight the very latest featured article */}
+        <div className="container mx-auto px-4 py-6">
+          <div className="bg-white/5 border border-white/10 rounded-xl p-5">
+            <div className="flex items-center justify-between mb-3">
+              <h2 className="text-white text-xl font-semibold">Just Published</h2>
+              <Link to="/blog" className="text-zion-cyan hover:underline flex items-center gap-1">
+                View all
+                <ArrowRight size={16} />
+              </Link>
+            </div>
+            {(() => {
+              const latest = [...blogPosts]
+                .filter(p => p.featured)
+                .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())[0];
+              if (!latest) return null;
+              return (
+                <Link to={`/blog/${latest.slug}`} className="block group">
+                  <div className="bg-white/5 rounded-lg p-5 border border-white/10 group-hover:border-zion-cyan/40 transition-colors">
+                    <div className="text-xs uppercase tracking-wide text-zion-cyan mb-1">{latest.category}</div>
+                    <div className="text-white text-2xl font-semibold mb-1">{latest.title}</div>
+                    <div className="text-zion-slate-light text-sm">{latest.readTime} • {new Date(latest.date).toLocaleDateString()}</div>
+                  </div>
+                </Link>
+              );
+            })()}
+          </div>
+        </div>
         
         {/* 💰💰💰 BRAND NEW OCTOBER 1, 2025 - JUST PUBLISHED: AUTONOMOUS REVENUE OPERATIONS REVOLUTION - FEATURED! 💰💰💰 */}
         {/* Featured: 127% ROI, 89% Forecast Accuracy, 3.2x Pipeline Velocity, $127M Revenue Impact (Fortune 500 Case Study) */}
