@@ -120,6 +120,21 @@ const Home = () => {
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
         
+        {/* 🎉 OCTOBER 4, 2025 - JUST RELEASED: 3 CUTTING-EDGE AI BREAKTHROUGHS */}
+        <NewContentPromoBanner 
+          className="border-b border-white/10" 
+          variant="premium" 
+          title="🎉 JUST RELEASED OCTOBER 4: 3 CUTTING-EDGE AI BREAKTHROUGHS — Advanced Reasoning Models, Synthetic Data Mastery & Multi-Modal AI Integration!"
+          description="🔥 BRAND NEW TODAY: Master next-gen o1-style reasoning models achieving 95%+ accuracy (5x performance boost), generate unlimited training data with synthetic data (85% cost reduction, 10x faster development), and deploy multi-modal AI processing vision, language, audio & sensors simultaneously (92% better decisions). Transform your AI capabilities with these game-changing innovations!"
+          ctaText="Explore Latest AI Breakthroughs"
+          ctaLink="/blog"
+          featuredItems={[
+            { title: "Advanced AI Reasoning Models 2025 — Next-Gen o1-Style Systems Transform Enterprise (95%+ Accuracy, 5x Performance)", category: "AI Reasoning", link: "/blog/ai-2025-october-advanced-reasoning-models-breakthrough" },
+            { title: "Synthetic Data Generation Mastery 2025 — Train World-Class AI Without Real Data (85% Cost Cut, 10x Faster)", category: "AI Training Data", link: "/blog/ai-2025-october-synthetic-data-generation-mastery" },
+            { title: "Multi-Modal AI Integration 2025 — Unified Systems Processing Vision, Language, Audio & Sensors (92% Better Decisions)", category: "Multi-Modal AI", link: "/blog/ai-2025-october-multimodal-ai-integration-enterprise" }
+          ]}
+        />
+        
         {/* 🔥 OCTOBER 1, 2025 - BRAND NEW: AI Revolution - Agents, Development Tools & Safety */}
         <October2025AIRevolutionBanner className="border-b border-white/10" />
         
