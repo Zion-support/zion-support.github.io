@@ -44,10 +44,26 @@ function Header() {
         </Link>
         <div className="hidden md:flex gap-6">
           <div className="relative group">
-            <Link href="/blog/ai-2026-next-generation-autonomous-intelligence-revolution" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
-              Next-Gen Autonomous Intelligence
-              <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
-                $5.2B SUCCESS
+            <Link href="/blog/ai-2026-january-ultimate-autonomous-enterprise-breakthrough-revolution" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
+              January 2026 Ultimate Breakthrough
+              <span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
+                $847B SUCCESS
+              </span>
+            </Link>
+          </div>
+          <div className="relative group">
+            <Link href="/blog/ai-2026-january-quantum-consciousness-enterprise-transformation" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
+              Quantum Consciousness Fusion
+              <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
+                $2.8T SUCCESS
+              </span>
+            </Link>
+          </div>
+          <div className="relative group">
+            <Link href="/case-studies/ai-2026-january-goldman-sachs-847-billion-autonomous-trading-revolution" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
+              Goldman Sachs $847B Revolution
+              <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
+                CASE STUDY
               </span>
             </Link>
           </div>
