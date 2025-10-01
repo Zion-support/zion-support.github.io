@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function EnhancedContactForm(): React.JSX.Element React.JSX.Element {
+export default function EnhancedContactForm(): React.JSX.Element {
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
 	const [message, setMessage] = useState("");
