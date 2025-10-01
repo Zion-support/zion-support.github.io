@@ -119,6 +119,23 @@ const Home = () => {
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
         
+        {/* 🎉 JUST PUBLISHED OCTOBER 1, 2025: 5 NEW COMPREHENSIVE AI ENGINEERING GUIDES */}
+        <NewContentPromoBanner 
+          className="border-b border-white/10" 
+          variant="premium" 
+          title="🎉 BREAKING: 5 BRAND NEW AI ENGINEERING GUIDES RELEASED TODAY!"
+          description="🔥 JUST PUBLISHED: Master Fine-Tuning LLMs (95% accuracy, 10x cheaper inference), Build Production RAG Systems (sub-2s queries, 92% accuracy), Deploy AI Agents (60% task automation), Use LangChain at Scale (50 lines vs 500), and Monitor ML Models (detect issues 23 days faster). Complete guides with code, metrics, and real-world results!"
+          ctaText="Read New Engineering Guides"
+          ctaLink="/blog"
+          featuredItems={[
+            { title: "Fine-Tuning LLMs for Production — 95% Accuracy, 10x Cost Reduction", category: "AI Engineering", link: "/blog/ai-2025-oct-fine-tuning-llms-production-guide" },
+            { title: "RAG Systems for Enterprise — Sub-2s Queries at Scale with 92% Accuracy", category: "AI Architecture", link: "/blog/ai-2025-oct-retrieval-augmented-generation-enterprise" },
+            { title: "AI Agents for Enterprise Workflows — 60% Task Automation", category: "AI Automation", link: "/blog/ai-2025-oct-ai-agents-enterprise-workflows" },
+            { title: "LangChain for Production — Build in 50 Lines vs 500", category: "AI Development", link: "/blog/ai-2025-oct-langchain-production-applications" },
+            { title: "MLOps Model Monitoring — Detect Issues 23 Days Faster", category: "MLOps", link: "/blog/ai-2025-oct-mlops-model-monitoring-production" }
+          ]}
+        />
+        
         {/* 🚀 OCTOBER 3, 2025 - NEWEST BREAKTHROUGH CONTENT: Enterprise Automation + Quantum AI */}
         <October2025BreakthroughContentBanner />
         
@@ -323,34 +340,35 @@ const Home = () => {
             </h1>
 
             <p className="text-xl md:text-2xl text-zion-slate-light mb-8 leading-relaxed max-w-3xl mx-auto animate-fade-in">
-              🚀 <strong>JUST RELEASED OCTOBER 3, 2025:</strong> 2 BRAND NEW BREAKTHROUGH GUIDES — Enterprise AI Automation (400%+ efficiency gains, 70% cost reduction, 95% faster decisions) & 
-              Quantum-AI Hybrid Systems (1000x processing speed, 99.9% accuracy improvements)! Plus 10+ Revolutionary Guides including AI-Powered Edge Computing & 5G (sub-10ms latency, 90% bandwidth savings), 
-              Enterprise AI Adoption Framework (95% user adoption, 450% ROI), AI-Driven Cybersecurity (99.7% detection accuracy, sub-60s response), 
-              Unified AI Platform (85% faster dev), Autonomous Testing (92% bug detection), Real-Time Streaming (sub-50ms latency), 
-              Multimodal AI Systems (95% accuracy), Self-Optimizing Infrastructure (70% cost cut), Responsible AI Frameworks, and Hyper-Personalization (320% revenue growth)! 
-              Transform your business with proven AI solutions delivering $50B+ in client results. 
-              Join 500+ companies achieving 400-600% ROI with our expert guidance!
+              🎉 <strong>JUST PUBLISHED OCTOBER 1, 2025:</strong> 5 BRAND NEW COMPREHENSIVE AI ENGINEERING GUIDES — Fine-Tune LLMs (95% accuracy, 10x cheaper), 
+              Build RAG Systems (sub-2s queries, 92% accuracy), Deploy AI Agents (60% automation), Master LangChain (50 lines vs 500), 
+              and Monitor ML Models (detect issues 23 days faster)! PLUS 15+ Revolutionary Guides including Enterprise AI Automation (400%+ efficiency gains), 
+              Quantum-AI Hybrid Systems (1000x speed), Edge Computing & 5G (sub-10ms latency), Enterprise AI Adoption (95% adoption, 450% ROI), 
+              AI Cybersecurity (99.7% detection), Unified AI Platform (85% faster dev), Autonomous Testing (92% bug detection), 
+              Real-Time Streaming (sub-50ms), Multimodal AI (95% accuracy), Self-Optimizing Infrastructure (70% cost savings), 
+              and Hyper-Personalization (320% revenue growth)! Transform your business with proven solutions. 
+              Join 500+ companies achieving 400-600% ROI!
             </p>
 
-            {/* October 1, 2025 - NEWEST BREAKTHROUGH CONTENT */}
+            {/* October 1, 2025 - NEWEST AI ENGINEERING GUIDES */}
             <div className="bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-400/30 rounded-xl p-6 mb-8 animate-fade-in shadow-2xl">
               <div className="flex items-center justify-center gap-3 mb-3">
                 <Sparkles className="w-6 h-6 text-emerald-400 animate-pulse" />
-                <span className="text-lg font-bold text-emerald-400">🎉 OCTOBER 1, 2025: NEWEST AI BREAKTHROUGHS</span>
+                <span className="text-lg font-bold text-emerald-400">🎉 OCTOBER 1, 2025: 5 NEW AI ENGINEERING MASTERCLASSES</span>
                 <Sparkles className="w-6 h-6 text-emerald-400 animate-pulse" />
               </div>
               <p className="text-white text-lg font-semibold mb-2">
-                ⚡ 3 BRAND NEW GUIDES RELEASED TODAY: Edge AI & 5G Integration (sub-10ms latency, 90% bandwidth savings), Enterprise AI Adoption (95% user adoption, 450% ROI), AI Cybersecurity Operations (99.7% detection accuracy)!
+                🔥 JUST PUBLISHED: Complete production guides for Fine-Tuning LLMs (95% accuracy, 10x cheaper), Building RAG Systems (sub-2s queries), Deploying AI Agents (60% automation), Using LangChain at Scale, and Monitoring ML Models (detect issues 23 days faster)!
               </p>
               <p className="text-zion-slate-light text-sm mb-4">
-                Deploy real-time AI at the edge with 5G, lead successful enterprise AI transformation with proven frameworks, and revolutionize security operations with AI-powered threat intelligence.
+                Master the essential AI engineering skills for 2025. Complete with code examples, architecture patterns, cost analyses, and real-world case studies. Everything you need to build production-ready AI systems.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link
-                  to="/blog/ai-edge-computing-5g-integration-2025"
+                  to="/blog/ai-2025-oct-fine-tuning-llms-production-guide"
                   className="bg-emerald-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-emerald-600 transition-colors text-center"
                 >
-                  Read New Breakthroughs
+                  Read Engineering Guides
                 </Link>
                 <Link
                   to="/blog"
@@ -360,10 +378,11 @@ const Home = () => {
                 </Link>
               </div>
               <div className="mt-4 flex flex-wrap gap-2 justify-center">
-                <span className="bg-emerald-100/20 text-emerald-200 px-3 py-1 rounded-full text-xs font-medium border border-emerald-300/20">Edge AI & 5G</span>
-                <span className="bg-teal-100/20 text-teal-200 px-3 py-1 rounded-full text-xs font-medium border border-teal-300/20">Enterprise Transformation</span>
-                <span className="bg-cyan-100/20 text-cyan-200 px-3 py-1 rounded-full text-xs font-medium border border-cyan-300/20">AI Security</span>
-                <span className="bg-blue-100/20 text-blue-200 px-3 py-1 rounded-full text-xs font-medium border border-blue-300/20">Threat Intelligence</span>
+                <span className="bg-emerald-100/20 text-emerald-200 px-3 py-1 rounded-full text-xs font-medium border border-emerald-300/20">LLM Fine-Tuning</span>
+                <span className="bg-teal-100/20 text-teal-200 px-3 py-1 rounded-full text-xs font-medium border border-teal-300/20">RAG Systems</span>
+                <span className="bg-cyan-100/20 text-cyan-200 px-3 py-1 rounded-full text-xs font-medium border border-cyan-300/20">AI Agents</span>
+                <span className="bg-blue-100/20 text-blue-200 px-3 py-1 rounded-full text-xs font-medium border border-blue-300/20">LangChain</span>
+                <span className="bg-purple-100/20 text-purple-200 px-3 py-1 rounded-full text-xs font-medium border border-purple-300/20">MLOps Monitoring</span>
               </div>
             </div>
 
