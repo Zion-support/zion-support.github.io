@@ -71,6 +71,8 @@ import October2025EnterpriseAITransformationBanner from "./components/October202
 // 🔥🔥🔥 NEW OCTOBER 2025 TECHNICAL BREAKTHROUGHS - TOP PRIORITY! 🔥🔥🔥
 import October2025TechBreakthroughsBanner from "./components/October2025TechBreakthroughsBanner";
 import October2025AIInnovationSpotlight from "./components/October2025AIInnovationSpotlight";
+import October2025NewTechBreakthroughsBanner from "./components/October2025NewTechBreakthroughsBanner";
+import October2025NewBreakthroughContentBanner from "./components/October2025NewBreakthroughContentBanner";
 
 // 🎯🎯🎯 NEWEST OCT 2025 PRODUCTION AI CONTENT - FEATURED! 🎯🎯🎯
 import October2025NewTechContentBanner from "./components/October2025NewTechContentBanner";
@@ -95,6 +97,8 @@ import AI2033UniversalConsciousnessBanner from "./components/AI2033UniversalCons
 // NEWEST: January 2025 Content Banners - MOST PROMINENT
 import January2025NewContentBanner from "./components/January2025NewContentBanner";
 import January2025InnovationShowcaseBanner from "./components/January2025InnovationShowcaseBanner";
+import January2025EnterpriseAutomationBanner from "./components/January2025EnterpriseAutomationBanner";
+import January2025Fortune500SuccessBanner from "./components/January2025Fortune500SuccessBanner";
 import September30NewContentMegaBanner from "./components/September30NewContentMegaBanner";
 import LatestSeptember30ContentShowcase from "./components/LatestSeptember30ContentShowcase";
 import September30NewAIInnovationsBanner from "./components/September30NewAIInnovationsBanner";
@@ -102,6 +106,7 @@ import October2025RealTimeAutomationBanner from "./components/October2025RealTim
 import September2025ContentShowcaseBanner from "./components/September2025ContentShowcaseBanner";
 import October2025EnterpriseIntelligenceBanner from "./components/October2025EnterpriseIntelligenceBanner";
 import October2025NewContentShowcaseBanner from "./components/October2025NewContentShowcaseBanner";
+import October2025NewContentShowcase from "./components/October2025NewContentShowcase";
 import September2025NewContentMegaBanner from "./components/September2025NewContentMegaBanner";
 import LatestContentShowcase2025September from "./components/LatestContentShowcase2025September";
 import July2026RevolutionaryBreakthroughBanner from "./components/July2026RevolutionaryBreakthroughBanner";
