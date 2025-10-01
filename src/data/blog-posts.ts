@@ -14,6 +14,51 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    id: '312',
+    title: 'Real-Time Decision Engines 2027: 10M/sec Under 1ms',
+    slug: 'real-time-decision-engines-2027-2025-10-02',
+    excerpt:
+      'Architect sub‑millisecond decision systems with quality tiers, caches, and intent routing.',
+    content:
+      'A practical blueprint for decision engines that process millions of events per second: intent-aware queues, evaluator-backed routing, tiered caches, and rollback-first operations. Includes SLI scorecards, latency budgets, and production runbooks that keep UX snappy under cost constraints.',
+    featuredImage: '/images/blog/real-time-decision-engines-2027.jpg',
+    category: 'Real-Time AI',
+    tags: ['Latency', 'Routing', 'Caching', 'SLIs'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-02',
+    readTime: 8,
+  },
+  {
+    id: '313',
+    title: 'Privacy‑First Insights 2026: Actionable Analytics Without PII',
+    slug: 'privacy-first-insights-2026-2025-10-02',
+    excerpt:
+      'Scoped IDs, on‑device aggregation, and DP noise for trustworthy insights under <100ms.',
+    content:
+      'Ship analytics teams love without collecting PII. We detail scoped identifiers, on‑device aggregation, DP noise, and consent-aware telemetry. Includes validation scorecards, rollout stages, and controls auditors accept—while keeping performance under 100ms.',
+    featuredImage: '/images/blog/privacy-first-insights-2026.jpg',
+    category: 'Analytics',
+    tags: ['Privacy', 'Analytics', 'Edge', 'DP'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-02',
+    readTime: 6,
+  },
+  {
+    id: '314',
+    title: 'Agent Safety Checklists 2026: Budgets, Sandboxes, Rollbacks',
+    slug: 'agent-safety-checklists-2026-2025-10-02',
+    excerpt:
+      'Practical checklists for safe agent releases with budgeted actions and instant rollback.',
+    content:
+      'Turn agent reliability into muscle memory with budgeted actions, sandboxed tools, KPI‑linked canaries, and one‑click rollback. We provide reference policies, approval tiers, and incident drills that keep autonomy safe without slowing teams.',
+    featuredImage: '/images/blog/agent-safety-checklists-2026.jpg',
+    category: 'AI Operations',
+    tags: ['Agents', 'Safety', 'Budgets', 'Rollback'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-02',
+    readTime: 7,
+  },
+  {
     id: '309',
     title: 'AI Reliability Blueprints 2027: Evaluators, Budgets, Instant Rollback',
     slug: 'ai-reliability-blueprints-2027-2025-10-02',
