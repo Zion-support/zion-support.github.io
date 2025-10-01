@@ -21,6 +21,7 @@ import EnhancedNewsletterSignup from "../components/EnhancedNewsletterSignup";
 import EnhancedPromotionalBanner from "../components/EnhancedPromotionalBanner";
 import EnhancedTestimonials from "../components/EnhancedTestimonials";
 import Header from "../components/Header";
+import October2025NextGenAIBanner from "../components/October2025NextGenAIBanner";
 import October2025EdgeAIQuantumCryptoBanner from "../components/October2025EdgeAIQuantumCryptoBanner";
 import October2025BreakthroughContentBanner from "../components/October2025BreakthroughContentBanner";
 import October2025AIRevolutionBanner from "../components/October2025AIRevolutionBanner";
@@ -120,6 +121,12 @@ const Home = () => {
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
+        
+        {/* 🚀🚀🚀 OCTOBER 2025 - LATEST: Next-Gen AI Breakthroughs - #1 PRIORITY! 🚀🚀🚀 */}
+        {/* Featured: Collaborative Agent Teams (340% gains), Real-Time Adaptive AI (98.7% accuracy), Hybrid Intelligence (580% amplification) */}
+        <div className="container mx-auto px-4 py-8">
+          <October2025NextGenAIBanner />
+        </div>
         
         {/* 🎉 JANUARY 2026 - BREAKTHROUGH: Revolutionary AI Systems */}
         <NewContentPromoBanner 
