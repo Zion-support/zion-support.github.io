@@ -47,6 +47,7 @@ import {
 import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
 import NewContentShowcaseBanner from '../components/NewContentShowcaseBanner';
 import ContentShowcase from '../components/ContentShowcase';
+import January2025NewContentShowcaseBanner from '../components/January2025NewContentShowcaseBanner';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
 import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
@@ -84,8 +85,8 @@ export const metadata = {
 export default function HomePage() {
   return (
     <div className="animate-fade-in">
-      {/* 🚀 BRAND NEW JANUARY 2026 BREAKTHROUGH CONTENT */}
-      <LatestContent2026Banner />
+      {/* 🚀 JANUARY 2025 NEW CONTENT SHOWCASE */}
+      <January2025NewContentShowcaseBanner />
       
       {/* 🔥 BRAND NEW OCTOBER 2025 NEUROMORPHIC & FEDERATED LEARNING */}
       <section className="w-full bg-gradient-to-r from-purple-600 via-blue-600 to-teal-600 text-white py-4">
