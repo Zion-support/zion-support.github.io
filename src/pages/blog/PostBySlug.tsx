@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { posts as staticPosts } from "../../content/posts";
 import { latestArticles } from "../../content/latest-articles";
+import { blogPosts } from "../../content/blog-posts";
 import Header from "../../components/Header";
 import { ArrowLeft, Calendar, Clock } from "lucide-react";
 
@@ -21,6 +22,18 @@ export default function PostBySlug(): React.JSX.Element {
         publishedAt: fromLatest.date,
         readTime: fromLatest.readTime,
         author: fromLatest.author,
+      };
+    }
+    const fromBlogPosts = blogPosts.find((p) => p.slug === slug);
+    if (fromBlogPosts) {
+      return {
+        slug: fromBlogPosts.slug,
+        title: fromBlogPosts.title,
+        description: fromBlogPosts.description,
+        category: fromBlogPosts.category,
+        publishedAt: fromBlogPosts.date,
+        readTime: fromBlogPosts.readTime,
+        author: fromBlogPosts.author,
       };
     }
     const fromPosts = staticPosts.find((p) => p.slug === slug);
