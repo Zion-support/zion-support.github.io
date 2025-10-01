@@ -26,12 +26,15 @@ import October2025NextGenAIBanner from "../components/October2025NextGenAIBanner
 import October2025OperationalExcellenceBanner from "../components/October2025OperationalExcellenceBanner";
 import October2025EdgeAIQuantumCryptoBanner from "../components/October2025EdgeAIQuantumCryptoBanner";
 import October2025BreakthroughContentBanner from "../components/October2025BreakthroughContentBanner";
+import October2025AIOperationsBanner from "../components/October2025AIOperationsBanner";
 import October2025AIRevolutionBanner from "../components/October2025AIRevolutionBanner";
 import October2025NewContentBanner from "../components/October2025NewContentBanner";
 import October2025NewContentBanner2 from "../components/October2025NewContentBanner2";
 import October2025CuttingEdgeContentBanner from "../components/October2025CuttingEdgeContentBanner";
+import October2025CuttingEdgeAIBanner from "../components/October2025CuttingEdgeAIBanner";
 import October2025FreshContentBanner from "../components/October2025FreshContentBanner";
 import October2025LatestContentBanner from "../components/October2025LatestContentBanner";
+import October2025LatestInnovationsBanner from "../components/October2025LatestInnovationsBanner";
 import LatestArticlesShowcase from "../components/LatestArticlesShowcase";
 import LatestContentBanner from "../components/LatestContentBanner";
 import LatestInsights from "../components/LatestInsights";
@@ -128,6 +131,10 @@ const Home = () => {
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
         
+        {/* 🌟🌟🌟 OCTOBER 1, 2025 - ABSOLUTE LATEST: 3 REVOLUTIONARY AI INNOVATIONS - #1 TOP PRIORITY! 🌟🌟🌟 */}
+        {/* Featured: AI Governance (99.9% Compliance, $186M+ Protection), Quantum AI (10,000x Speedup, $234M+ Value), Enterprise Orchestration (97.8% Automation, $312M+ Value) */}
+        <October2025LatestInnovationsBanner />
+        
         {/* 🔥🔥🔥 FEBRUARY 2026 - BREAKING: LATEST AI BREAKTHROUGHS - TOP PRIORITY! 🔥🔥🔥 */}
         <NewContentPromoBanner 
           className="border-b border-white/10" 
@@ -146,6 +153,10 @@ const Home = () => {
         {/* 🌟🌟🌟 ABSOLUTE NEWEST: OCTOBER 1, 2025 - TECH BREAKTHROUGH BANNER - #1 PRIORITY! 🌟🌟🌟 */}
         {/* Featured: Quantum-Safe Cryptography ($78B Protected, 845x ROI), Autonomous Risk Management ($127B Saved, 2,836% ROI), AI Digital Twins ($23.7B Value, 5,575% ROI) */}
         <October2025TechBreakthroughBanner />
+        
+        {/* 🚀🚀🚀 NEW OCTOBER 1, 2025 - AI OPERATIONS REVOLUTION: DevSecOps, Cost Optimization & Observability! 🚀🚀🚀 */}
+        {/* Featured: AI DevSecOps (99.2% Detection, 7,747% ROI), Cloud Cost Optimization (67% Savings, 18,287% ROI), AI Observability (99.94% Uptime, 17,488% ROI) */}
+        <October2025AIOperationsBanner />
         
         {/* 🎯🚀💎 OCTOBER 1, 2025 - JUST RELEASED: 3 GAME-CHANGING AI INNOVATIONS! 🎯🚀💎 */}
         <NewContentPromoBanner 
@@ -246,6 +257,12 @@ const Home = () => {
         </div>
         
         {/* 🚀🚀🚀 OCTOBER 2025 - LATEST: Next-Gen AI Breakthroughs - #1 PRIORITY! 🚀🚀🚀 */}
+        {/* 🚀🚀🚀 OCTOBER 2025 - LATEST RELEASE: Cutting-Edge AI Technologies & Frameworks - BRAND NEW! 🚀🚀🚀 */}
+        {/* Featured: Agentic Governance (99.9% compliance), Neural-Symbolic Fusion (98% reasoning), Continuous Learning (94% improvement), Distributed Inference (10M+ inferences/sec) */}
+        <div className="container mx-auto px-4 py-8">
+          <October2025CuttingEdgeAIBanner />
+        </div>
+
         {/* Featured: Collaborative Agent Teams (340% gains), Real-Time Adaptive AI (98.7% accuracy), Hybrid Intelligence (580% amplification) */}
         <div className="container mx-auto px-4 py-8">
           <October2025NextGenAIBanner />
