@@ -94,43 +94,57 @@ const Home = () => {
               and next-generation cloud infrastructure. Join 500+ companies already scaling with us!
             </p>
 
-            {/* NEW CONTENT ANNOUNCEMENT */}
+            {/* NEW CONTENT ANNOUNCEMENT - UPDATED OCTOBER 2025 */}
             <div className="bg-gradient-to-r from-purple-500/20 via-pink-500/20 to-cyan-500/20 border-2 border-purple-400/40 rounded-xl p-6 mb-6 animate-fade-in shadow-2xl">
               <div className="flex items-center justify-center gap-3 mb-3">
                 <Rocket className="w-6 h-6 text-purple-400 animate-bounce" />
-                <span className="text-lg font-bold text-purple-300">🚀 BRAND NEW - OCTOBER 2025</span>
+                <span className="text-lg font-bold text-purple-300">🚀 JUST LAUNCHED - OCTOBER 2025</span>
                 <Rocket className="w-6 h-6 text-purple-400 animate-bounce" />
               </div>
               <p className="text-white text-xl font-bold mb-3 text-center">
-                Cognitive Automation Revolution + Healthcare AI Success Story
+                NEW Services, AI Transformation Playbook + FinTech $127M Success Story
               </p>
               <div className="grid md:grid-cols-3 gap-4 text-sm text-zion-slate-light mb-4">
                 <div className="flex items-center gap-2">
                   <CheckCircle className="w-4 h-4 text-purple-400" />
-                  <span className="font-semibold">$127M Combined Value Created</span>
+                  <span className="font-semibold">Real-Time Cognitive Automation Platform</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle className="w-4 h-4 text-pink-400" />
-                  <span className="font-semibold">92% Efficiency + 10x Productivity</span>
+                  <span className="font-semibold">Advanced Cybersecurity AI (99.92% Accuracy)</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle className="w-4 h-4 text-cyan-400" />
-                  <span className="font-semibold">96% Patient Satisfaction</span>
+                  <span className="font-semibold">Enterprise AI Transformation Guide</span>
                 </div>
               </div>
-              <div className="flex flex-wrap justify-center gap-4">
+              <div className="flex flex-wrap justify-center gap-3">
                 <Link
-                  to="/blog/ai-2025-oct-cognitive-automation-enterprise-revolution"
-                  className="inline-flex items-center gap-2 bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
+                  to="/services/real-time-cognitive-automation"
+                  className="inline-flex items-center gap-2 bg-purple-500 hover:bg-purple-600 text-white px-5 py-2.5 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl text-sm"
                 >
-                  Cognitive Automation Guide
+                  Cognitive Automation
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link
-                  to="/case-studies/healthcare-ai-transformation-2025"
-                  className="inline-flex items-center gap-2 bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
+                  to="/services/advanced-cybersecurity-ai"
+                  className="inline-flex items-center gap-2 bg-red-500 hover:bg-red-600 text-white px-5 py-2.5 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl text-sm"
                 >
-                  $124M Healthcare Success
+                  Cybersecurity AI
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link
+                  to="/blog/ai-2025-oct-enterprise-ai-transformation-success-strategies"
+                  className="inline-flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white px-5 py-2.5 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl text-sm"
+                >
+                  AI Transformation Playbook
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link
+                  to="/case-studies/global-fintech-ai-transformation-2025"
+                  className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-5 py-2.5 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl text-sm"
+                >
+                  $127M FinTech Success
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>

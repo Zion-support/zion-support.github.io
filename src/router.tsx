@@ -10,11 +10,16 @@ import AIWorkflowAutomation from './pages/services/AIWorkflowAutomation';
 import AIVirtualAssistant from './pages/services/AIVirtualAssistant';
 import AIDataAnalytics from './pages/services/AIDataAnalytics';
 import AIIntelligentDocumentProcessing from './pages/services/AIIntelligentDocumentProcessing';
+import RealTimeCognitiveAutomation from './pages/services/RealTimeCognitiveAutomation';
+import AdvancedCybersecurityAI from './pages/services/AdvancedCybersecurityAI';
 import MultimodalEnterpriseIntelligence from './pages/blog/ai-2025-oct-multimodal-enterprise-intelligence';
 import AdaptiveLearningPlatforms from './pages/blog/ai-2025-oct-adaptive-learning-platforms';
 import CognitiveAutomationEnterpriseRevolution from './pages/blog/ai-2025-oct-cognitive-automation-enterprise-revolution';
+import EnterpriseAITransformationSuccessStrategies from './pages/blog/ai-2025-oct-enterprise-ai-transformation-success-strategies';
+import NextGenIntelligentAutomationBreakthrough from './pages/blog/ai-2025-oct-next-gen-intelligent-automation-breakthrough';
 import GlobalRetailAITransformation from './pages/case-studies/global-retail-ai-transformation-2025';
 import HealthcareAITransformation from './pages/case-studies/healthcare-ai-transformation-2025';
+import GlobalFinTechAITransformation from './pages/case-studies/global-fintech-ai-transformation-2025';
 
 export const AppRouter: React.FC = () => {
   return (
@@ -26,14 +31,19 @@ export const AppRouter: React.FC = () => {
       <Route path="/services/ai-virtual-assistant" element={<AIVirtualAssistant />} />
       <Route path="/services/ai-data-analytics" element={<AIDataAnalytics />} />
       <Route path="/services/ai-intelligent-document-processing" element={<AIIntelligentDocumentProcessing />} />
+      <Route path="/services/real-time-cognitive-automation" element={<RealTimeCognitiveAutomation />} />
+      <Route path="/services/advanced-cybersecurity-ai" element={<AdvancedCybersecurityAI />} />
       <Route path="/case-studies" element={<CaseStudies />} />
       <Route path="/case-studies/global-retail-ai-transformation-2025" element={<GlobalRetailAITransformation />} />
       <Route path="/case-studies/healthcare-ai-transformation-2025" element={<HealthcareAITransformation />} />
+      <Route path="/case-studies/global-fintech-ai-transformation-2025" element={<GlobalFinTechAITransformation />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/blog" element={<Blog />} />
       <Route path="/blog/ai-2025-oct-multimodal-enterprise-intelligence" element={<MultimodalEnterpriseIntelligence />} />
       <Route path="/blog/ai-2025-oct-adaptive-learning-platforms" element={<AdaptiveLearningPlatforms />} />
       <Route path="/blog/ai-2025-oct-cognitive-automation-enterprise-revolution" element={<CognitiveAutomationEnterpriseRevolution />} />
+      <Route path="/blog/ai-2025-oct-enterprise-ai-transformation-success-strategies" element={<EnterpriseAITransformationSuccessStrategies />} />
+      <Route path="/blog/ai-2025-oct-next-gen-intelligent-automation-breakthrough" element={<NextGenIntelligentAutomationBreakthrough />} />
     </Routes>
   );
 };
