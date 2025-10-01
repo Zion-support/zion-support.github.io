@@ -6,7 +6,7 @@ export default function VectorDatabasesAIApplications2025() {
     <>
       <Head>
         <title>Vector Databases: Powering the Next Generation of AI Applications | Zion Tech Group</title>
-        <meta name="description" content="Master vector databases for AI: Learn how to build high-performance semantic search, RAG systems, and recommendation engines with 99.9% accuracy and <50ms query latency." />
+        <meta name="description" content="Master vector databases for AI: Learn how to build high-performance semantic search, RAG systems, and recommendation engines with 99.9% accuracy and &lt;50ms query latency." />
         <meta property="og:title" content="Vector Databases for AI Applications 2025" />
         <meta property="og:description" content="Build production-ready AI applications with vector databases delivering semantic search, RAG, and intelligent recommendations at scale." />
         <meta name="twitter:card" content="summary_large_image" />
@@ -132,7 +132,7 @@ export default function VectorDatabasesAIApplications2025() {
                     <div className="bg-white/5 rounded p-3 text-sm text-white/70 mt-3">
                       <strong className="text-rose-400">Example:</strong> Financial fraud detection system 
                       identifies suspicious transactions by finding embeddings far from normal patterns.
-                      <div className="mt-2 text-cyan-400">Result: 92% fraud detection rate, <0.1% false positives</div>
+                      <div className="mt-2 text-cyan-400">Result: 92% fraud detection rate, &lt;0.1% false positives</div>
                     </div>
                   </div>
                 </div>
@@ -240,7 +240,7 @@ export default function VectorDatabasesAIApplications2025() {
                       3. Upsert vectors in batches (every 5 minutes)<br/>
                       4. Maintain consistency with versioning
                     </code>
-                    <div className="text-white/60 text-xs mt-2">Keeps index fresh with <5min latency</div>
+                    <div className="text-white/60 text-xs mt-2">Keeps index fresh with &lt;5min latency</div>
                   </div>
 
                   <div className="border-l-4 border-blue-500 pl-6 py-3 bg-white/5 rounded-r">

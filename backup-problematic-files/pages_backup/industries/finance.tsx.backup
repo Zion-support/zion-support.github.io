@@ -16,58 +16,6 @@ import { motion } from 'framer-motion';
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import {
-  // TODO: Implement;
-}
-  DollarSign,
-  Brain,
-  Shield,
-  BarChart3,
-  CheckCircle,
-  ArrowRight,
-  TrendingUp,
-  Lock,
-  CreditCard,
-  Database,
-  FileText,
-  Users;
-} from 'lucide-react';
-import Layout from '../../components/Layout';';
-const services = [;
-  {}
-    title: 'Blockchain Solutions,',
-    description: 'Secure, transparent, and efficient blockchain implementations for financial services.',',
-import Layout from '../../components/Layout';
-const services = [
-  {
-    title: 'Blockchain Solutions',
-    description: 'Secure, transparent, and efficient blockchain implementations for financial services.',
-    icon: Shield,
-    features: [;
-      'Smart contract development,',
-      'Cryptocurrency integration',',
-      'Decentralized finance (DeFi)',',
-    title: 'Blockchain Solutions,',;
-    description: 'Secure, transparent, and efficient blockchain implementations for financial services.',',;
-import Layout from '../../components/Layout';
-const services = [;
-  {;
-    title: 'Blockchain Solutions',;
-    description: 'Secure, transparent, and efficient blockchain implementations for financial services.',;
-    icon: Shield,;
-    features: [,;
-      'Smart contract development,',;
-      'Cryptocurrency integration',',;
-      'Decentralized finance (DeFi)',',;
-      'Digital identity management'';
-=======
-
-
-
-
-
->>>>>>> main
     ];
   },;
   {}
@@ -195,13 +143,6 @@ export default function FinancePage() {;
                 </Link>;
                 <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">;
                   View Finance Case Studies;
-<<<<<<< HEAD
-=======
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">";, <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover: bg-gray-100 transition-all duration-300 font-semibold">";,;
-                  Get Fintech Consultation;
-                </Link>;
-                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-green-600 transition-all duration-300 font-semibold">";, View Finance Case Studies,;
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
                 </Link>;
               </div>;
@@ -261,31 +202,10 @@ export default function FinancePage() {
           <div className="container mx-auto px-4">";
             <motion&& motion.div
 
-<<<<<<< HEAD
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16""
-            >;
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
-                Financial Technology Services;
-
-<<<<<<< HEAD
-=======
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
->>>>>>> main
               transition={{ duration: 0 && 0.8 }}
               className="text-center mb-16"">;
               <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Financial Technology Services,;
 
-<<<<<<< HEAD
-=======
-              transition={{ duration: 0 && 0.8 ;}}
-              className="text-center mb-16"">;
-              <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">";, Financial Technology Services,;
->>>>>>> origin/cursor/delete-old-data-records-6bba
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Comprehensive fintech solutions designed for banks, financial institutions, ;
@@ -319,9 +239,6 @@ export default function FinancePage() {
                   <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>"
             </motion && motion.div>;
 
-<<<<<<< HEAD
-=======
->>>>>>> main
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",;
 
                   initial={{ opacity: 0, y: 20 }}
@@ -331,25 +248,10 @@ export default function FinancePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-              className="text-center mb-16""
-            >;
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
-                Why Choose Our Fintech Solutions?;
-
-<<<<<<< HEAD
-=======
->>>>>>> main
               transition={{ duration: 0 && 0.8 }}
               className="text-center mb-16"">;
               <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Why Choose Our Fintech Solutions?,;
 
-<<<<<<< HEAD
-=======
-              transition={{ duration: 0 && 0.8 ;}}
-              className="text-center mb-16"">;
-              <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">";, Why Choose Our Fintech Solutions?,;
->>>>>>> origin/cursor/delete-old-data-records-6bba
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Our financial technology solutions deliver enhanced security, improved efficiency, ;
@@ -375,9 +277,6 @@ export default function FinancePage() {
                   key={benefit.title}
             </motion && motion.div>;
 
-<<<<<<< HEAD
-=======
->>>>>>> main
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">",;
 
                   initial={{ opacity: 0, y: 20 }}
@@ -397,13 +296,6 @@ export default function FinancePage() {
                   Start Your Fintech Project;
                 </Link>;
                 <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-green-600 transition-all duration-300 font-semibold">", Learn About Our Expertise,;
-<<<<<<< HEAD
-=======
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">";, <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover: bg-gray-100 transition-all duration-300 font-semibold">";,;
-                  Start Your Fintech Project;
-                </Link>;
-                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-green-600 transition-all duration-300 font-semibold">";, Learn About Our Expertise,;
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
                 </Link>;
               </div>;
@@ -436,5 +328,3 @@ export default function FinancePage() {
     </Layout>
 
 export default Finance;
-=======
->>>>>>> main

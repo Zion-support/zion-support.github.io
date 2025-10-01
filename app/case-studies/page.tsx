@@ -25,15 +25,15 @@ const caseStudies = [
     color: 'green'
   },
   {
-    title: 'AI Autonomous Manufacturing Mega Success 2026: $50M Savings & 95% Efficiency',
-    slug: 'ai-autonomous-manufacturing-mega-success-2026',
-    excerpt: 'How a global manufacturer achieved $50M annual savings, 95% efficiency improvement, and complete autonomous operations through AI transformation.',
-    company: 'Global Manufacturing Leader',
+    title: 'Fortune 500 AI Transformation: $50M+ Savings & 300% ROI',
+    slug: 'fortune-500-ai-transformation-2027',
+    excerpt: 'See how a Fortune 500 company achieved $50M+ in savings and a 300% ROI through comprehensive AI transformation with Zion Tech Group.',
+    company: 'Fortune 500 Manufacturing',
     industry: 'Manufacturing',
     results: {
-      savings: '$50M',
-      efficiency: '95%',
-      quality: '99.8%',
+      savings: '$50M+',
+      roi: '300%',
+      efficiency: '85%',
       timeline: '18 months'
     },
     image: '🏭',

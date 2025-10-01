@@ -1,6 +1,6 @@
 import React from 'react';
-import Link from 'next/link';
-import { ArrowRight, Sparkles, TrendingUp, Zap, Target, CheckCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Sparkles, TrendingUp, Zap } from 'lucide-react';
 
 const RevolutionaryBreakthrough2026Banner: React.FC = () => {
   const breakthroughContent = [
@@ -176,7 +176,7 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {
 
                 {/* CTA Button */}
                 <Link
-                  href={`/${content.slug.includes('case-studies') ? 'case-studies' : 'blog'}/${content.slug}`}
+                  to={`/${content.slug.includes('case-studies') ? 'case-studies' : 'blog'}/${content.slug}`}
                   className="group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
                 >
                   <span>Read Full Article</span>

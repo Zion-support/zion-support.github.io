@@ -1,9 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 	reactStrictMode: true,
 	trailingSlash: true,
 	output: 'export',
@@ -36,7 +32,6 @@ const nextConfig = {
   },
 
   // Skip ESLint during build for faster deployment
-=======
   reactStrictMode: true,
   images: {
     domains: ["localhost"],
@@ -44,7 +39,6 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
->>>>>>> origin/cursor/website-audit-and-enhancement-145a
   eslint: {
     ignoreDuringBuilds: true,
   },

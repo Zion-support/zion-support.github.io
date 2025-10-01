@@ -167,11 +167,3 @@ const util = require('util')
       return stdout.trim().split('\n')
       await this.log(`Error finding conflicted "files"`)
       await this.log(`Encountered ${this.errors.length} "errors"`)
-<<<<<<< HEAD
-    console.log('You can now commit the changes "with": git add . && git commit -m "Resolve merge conflicts")
-=======
-    console.log('You can now commit the changes "with": git add . && git commit -m "Resolve merge conflicts")
-cursor/fix-lint-push-and-merge-to-main-f3c1;
-cursor/fix-lint-push-and-merge-to-main-f3c1;
-cursor/fix-lint-push-and-merge-to-main-f3c1;
-cursor/fix-lint-push-and-merge-to-main-f3c1;

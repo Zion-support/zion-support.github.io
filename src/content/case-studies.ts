@@ -13,6 +13,25 @@ export type CaseStudy = {
 
 export const caseStudies: CaseStudy[] = [
   {
+    id: "global-energy-digital-twin-850m",
+    title: "Global Energy Corporation: $850M Digital Twin Transformation Success",
+    company: "Global Energy Corporation (Fortune 100)",
+    industry: "Energy & Utilities",
+    challenge: "Critical infrastructure aging with $2.3B annual maintenance costs, 87 major outages in 2024, and declining customer satisfaction",
+    solution: "Enterprise AI-Powered Digital Twin Platform with real-time monitoring, predictive analytics, and autonomous optimization across 125,000 assets",
+    results: [
+      "$850 million in documented value creation",
+      "1,808% ROI over 3 years",
+      "99.4% equipment uptime (from 87.3%)",
+      "61% reduction in maintenance costs",
+      "87% reduction in unplanned outages",
+      "99.2% failure prediction accuracy"
+    ],
+    technologies: ["Azure IoT Hub", "TensorFlow", "Apache Kafka", "Azure ML", "Unity 3D", "Kubernetes"],
+    duration: "18 months",
+    imageUrl: "/images/case-studies/energy-digital-twin.jpg"
+  },
+  {
     id: "fintech-ai-platform",
     title: "AI-Powered Financial Analytics Platform",
     company: "FinTech Solutions Inc.",
