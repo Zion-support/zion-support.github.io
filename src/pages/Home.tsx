@@ -19,7 +19,7 @@ import ContentPromotionBanner from "../components/ContentPromotionBanner";
 import ContentValueTestimonials from "../components/ContentValueTestimonials";
 import EnhancedNewsletterSignup from "../components/EnhancedNewsletterSignup";
 import EnhancedTestimonials from "../components/EnhancedTestimonials";
-import FeaturedContentShowcase from "../components/FeaturedContentShowcase";
+// import FeaturedContentShowcase from "../components/FeaturedContentShowcase";
 import Header from "../components/Header";
 import ModernFeatures from "../components/ModernFeatures";
 import { latestInsights } from "../content/insights";
@@ -212,15 +212,15 @@ const Home = () => {
           </div>
         </section>
 
-        {/* Featured Content Showcase */}
-        <FeaturedContentShowcase 
+        {/* Featured Content Showcase - Commented out until component is restored */}
+        {/* <FeaturedContentShowcase 
           title="Latest Technology Insights & Trends"
           subtitle="Stay ahead with our cutting-edge research, expert analysis, and actionable insights from the world of AI, cybersecurity, and emerging technologies"
           maxItems={6}
           showInsights={true}
           showBlogPosts={true}
           className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900"
-        />
+        /> */}
 
         {/* New Services Showcase */}
         <section className="container mx-auto px-6 py-20 relative z-10">
