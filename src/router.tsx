@@ -18,6 +18,12 @@ import AIAutonomousOperations from './pages/services/AIAutonomousOperations';
 import AIPlatformArchitecture from './pages/services/AIPlatformArchitecture';
 import AIMLOpsAutomation from './pages/services/AIMLOpsAutomation';
 
+// 🚀🚀🚀 BREAKING: OCTOBER 1, 2025 - LATEST AI BREAKTHROUGHS - FEATURED TODAY! 🚀🚀🚀
+// 💎 Autonomous Infrastructure Healing ($67M+ Savings), Cognitive Search ($124M+ Value), Real-Time Personalization ($234M+ Revenue) 💎
+import AutonomousInfrastructureHealing2025 from './pages/blog/ai-2025-oct-autonomous-infrastructure-healing/page';
+import CognitiveSearchEnterprise2025 from './pages/blog/ai-2025-oct-cognitive-search-enterprise/page';
+import RealtimePersonalizationEngine2025 from './pages/blog/ai-2025-oct-realtime-personalization-engine/page';
+
 // 🚀🚀🚀 NEWEST: OCTOBER 1, 2025 - LATEST AI CONTENT - #1 TOP PRIORITY! 🚀🚀🚀
 // 💎 Enterprise AI Agents ($4.7B), LLM Security ($3.2B), Vector Databases ($5.8B) - $13.7B COMBINED! 💎
 import EnterpriseAIAgentsAutomationRevolution from '../blog/ai-2025-october-enterprise-ai-agents-automation-revolution';
@@ -71,6 +77,10 @@ export const AppRouter: React.FC = () => {
       <Route path="/case-studies" element={<CaseStudies />} />
       <Route path="/ai-micro-saas" element={<AIMicroSAAS />} />
       <Route path="/blog" element={<Blog />} />
+      {/* 🚀🚀🚀 BREAKING: OCTOBER 1, 2025 - LATEST AI BREAKTHROUGHS - FEATURED TODAY! 🚀🚀🚀 */}
+      <Route path="/blog/ai-2025-oct-autonomous-infrastructure-healing" element={<AutonomousInfrastructureHealing2025 />} />
+      <Route path="/blog/ai-2025-oct-cognitive-search-enterprise" element={<CognitiveSearchEnterprise2025 />} />
+      <Route path="/blog/ai-2025-oct-realtime-personalization-engine" element={<RealtimePersonalizationEngine2025 />} />
       {/* 🚀 NEWEST: OCTOBER 1, 2025 - LATEST AI CONTENT - #1 TOP PRIORITY! 🚀 */}
       <Route path="/blog/ai-2025-october-enterprise-ai-agents-automation-revolution" element={<EnterpriseAIAgentsAutomationRevolution />} />
       <Route path="/blog/ai-2025-october-llm-security-prompt-injection-defense" element={<LLMSecurityPromptInjectionDefense />} />
