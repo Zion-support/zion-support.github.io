@@ -148,9 +148,6 @@ const HomePage: React.FC = () => {
                 date={new Date().toLocaleDateString()}
                 title="Just dropped: AI Reliability, Edge Caching, Exec AI Playbook"
                 description="Fresh guidance on SLIs and rollback, sub‑100ms edge prompts, and an executive blueprint to plan, fund, and govern AI."
-=======
-                title="Fresh Content: Rollback-First Ops, Private Edge Flags, Clear LLM Costs"
-                description="Three new deep-dives: incident guardrails with instant rollback, private signed edge flags under 50ms, and LLM spend mapping tied to SLAs and teams."
                 ctaText="Read the latest posts"
                 ctaLink="/blog"
                 showCount={3}
