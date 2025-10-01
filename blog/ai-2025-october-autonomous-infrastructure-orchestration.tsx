@@ -106,7 +106,7 @@ const autonomousHealthSystem = {
   optimization: {
     costReduction: '94%',
     uptimeTarget: '99.999%',
-    responseTime: '<50ms'
+    responseTime: '&lt;50ms'
   }
 };`}
                   </pre>
