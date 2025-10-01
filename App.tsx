@@ -28,6 +28,7 @@ import December2025NewContentBanner from "./components/December2025NewContentBan
 import December2025ContentShowcaseBanner from "./components/December2025ContentShowcaseBanner";
 
 // OCTOBER 2025 NEW CONTENT - MOST RECENT & PROMINENT
+import October2025AgentMeshBanner from "./components/October2025AgentMeshBanner";
 import October2025TechnicalContentBanner from "./components/October2025TechnicalContentBanner";
 import October2025ProductionAIBanner from "./components/October2025ProductionAIBanner";
 import October2025ProductionAIEngineeringBanner from "./components/October2025ProductionAIEngineeringBanner";
@@ -162,6 +163,10 @@ export default function App(): JSX.Element {
       
       {/* 🌟 NEWEST: December 2025 Content Showcase - HIGHLY PROMINENT! 🌟 */}
       <December2025ContentShowcaseBanner />
+      
+      {/* 🚀🚀🚀 OCTOBER 1, 2025 - AGENT MESH NETWORKS LAUNCH - MOST PROMINENT 🚀🚀🚀 */}
+      {/* Revolutionary Agent Mesh Networks: $12.8B Success Story & Technical Deep Dive */}
+      <October2025AgentMeshBanner />
       
       {/* 🚀🚀🚀 OCTOBER 2025 NEW TECHNICAL CONTENT - MOST RECENT 🚀🚀🚀 */}
       {/* Latest production AI engineering guides - October 2025 */}
