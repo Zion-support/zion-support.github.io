@@ -22,6 +22,7 @@ import EnhancedPromotionalBanner from "../components/EnhancedPromotionalBanner";
 import EnhancedTestimonials from "../components/EnhancedTestimonials";
 import Header from "../components/Header";
 import October2025NextGenAIBanner from "../components/October2025NextGenAIBanner";
+import October2025OperationalExcellenceBanner from "../components/October2025OperationalExcellenceBanner";
 import October2025EdgeAIQuantumCryptoBanner from "../components/October2025EdgeAIQuantumCryptoBanner";
 import October2025BreakthroughContentBanner from "../components/October2025BreakthroughContentBanner";
 import October2025AIRevolutionBanner from "../components/October2025AIRevolutionBanner";
@@ -224,6 +225,12 @@ const Home = () => {
         {/* Featured: Collaborative Agent Teams (340% gains), Real-Time Adaptive AI (98.7% accuracy), Hybrid Intelligence (580% amplification) */}
         <div className="container mx-auto px-4 py-8">
           <October2025NextGenAIBanner />
+        </div>
+        
+        {/* 🔥🔥🔥 OCTOBER 2025 - NEW: Operational Excellence Revolution - JUST RELEASED! 🔥🔥🔥 */}
+        {/* Featured: Predictive Maintenance (99.6% accuracy), API Orchestration (99.8% uptime), Customer Intent (98.2% accuracy) */}
+        <div className="container mx-auto px-4 py-8">
+          <October2025OperationalExcellenceBanner />
         </div>
         
         {/* 🚀 DECEMBER 1, 2025 - BREAKTHROUGH: AI Development Agents, RAG at Scale & AI-Powered IaC */}
