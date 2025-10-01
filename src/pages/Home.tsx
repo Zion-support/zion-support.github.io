@@ -8,15 +8,17 @@ import {
   Sparkles,
   Star,
   Target,
+  Users,
+  Zap,
 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import AdvertisingBanner from "../components/AdvertisingBanner";
 import EnhancedTestimonials from "../components/EnhancedTestimonials";
 import Header from "../components/Header";
 import ModernFeatures from "../components/ModernFeatures";
 import LatestInsights from "../components/LatestInsights";
 import { latestInsights } from "../content/insights";
-import { Users, Zap } from "lucide-react";
 
 const Home = () => {
   return (
@@ -96,31 +98,35 @@ const Home = () => {
             <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-xl p-6 mb-6 animate-fade-in">
               <div className="flex items-center justify-center gap-3 mb-3">
                 <Rocket className="w-6 h-6 text-purple-400 animate-bounce" />
-                <span className="text-lg font-bold text-purple-400">🔥 JUST RELEASED - OCTOBER 2025</span>
+                <span className="text-lg font-bold text-purple-400">🔥 FRESH CONTENT - SEPTEMBER 30, 2025</span>
                 <Rocket className="w-6 h-6 text-purple-400 animate-bounce" />
               </div>
               <p className="text-white text-xl font-bold mb-3">
-                Enterprise AI Platform Revolution + Intelligent Automation Breakthrough
+                9 New Articles: K8s Security, Green AI, Distributed Tracing & Real-Time ML
               </p>
-              <div className="grid md:grid-cols-3 gap-4 text-sm text-zion-slate-light mb-4">
+              <div className="grid md:grid-cols-4 gap-3 text-sm text-zion-slate-light mb-4">
                 <div className="flex items-center gap-2">
                   <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>$500M Value Created in 90 Days</span>
+                  <span>Kubernetes Security Guide</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>40-60% Cost Reduction</span>
+                  <span>Green AI & Sustainability</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>300-500% ROI in Year 1</span>
+                  <span>Distributed Tracing</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  <span>Real-Time Decision Intelligence</span>
                 </div>
               </div>
               <Link
                 to="/blog"
                 className="inline-flex items-center gap-2 bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
               >
-                Read the Latest Breakthroughs
+                Explore New Content
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
