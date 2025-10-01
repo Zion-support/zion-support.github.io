@@ -1568,6 +1568,26 @@ featuredBlogPosts.unshift(
   }
 );
 
+// Oct 1, 2025 – Add two brand-new featured posts (enterprise platforms + automation)
+featuredBlogPosts.unshift(
+  {
+    id: "ai-2025-oct-enterprise-ai-platforms",
+    title: "Enterprise AI Platforms 2025: Architecture, SLAs, and ROI",
+    description: "Golden paths, guardrails, and cost controls that scale with measurable ROI.",
+    link: "/blog/ai-2025-oct-enterprise-ai-platforms",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-2025-oct-intelligent-automation-breakthrough",
+    title: "Intelligent Automation Breakthrough 2025",
+    description: "From tickets to outcomes with approvals, budgets, eval gates, and rollback.",
+    link: "/blog/ai-2025-oct-intelligent-automation-breakthrough",
+    type: "article",
+    featured: true
+  }
+);
+
 // Oct 1, 2025 – NEW BREAKTHROUGH ARTICLES: Autonomous Mesh, Real-Time Fraud Detection, Neural Code Synthesis
 featuredBlogPosts.unshift(
   {

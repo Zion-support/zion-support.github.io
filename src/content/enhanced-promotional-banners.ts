@@ -654,6 +654,33 @@ enhancedPromotionalBanners.push({
   startDate: '2025-09-30'
 });
 
+// Oct 1, 2025 – New homepage promos for the two brand-new posts
+enhancedPromotionalBanners.push({
+  id: 'oct-01-enterprise-platforms-2025',
+  title: '🏗️ NEW: Enterprise AI Platforms — SLAs, Guardrails, Proven ROI',
+  description: 'Golden paths, eval gates, and cost controls your teams adopt. Proven 30–70% savings.',
+  ctaText: 'Read Platform Blueprint',
+  ctaLink: '/blog/ai-2025-oct-enterprise-ai-platforms',
+  variant: 'success',
+  icon: '🏗️',
+  featured: true,
+  priority: 0,
+  startDate: '2025-10-01'
+});
+
+enhancedPromotionalBanners.push({
+  id: 'oct-01-intelligent-automation-2025',
+  title: '🤖 NEW: Intelligent Automation — From Tickets to Outcomes',
+  description: 'Approvals, budgets, eval‑gated actions, and instant rollback for safe autonomy.',
+  ctaText: 'Explore Automation Guide',
+  ctaLink: '/blog/ai-2025-oct-intelligent-automation-breakthrough',
+  variant: 'info',
+  icon: '🤖',
+  featured: true,
+  priority: 1,
+  startDate: '2025-10-01'
+});
+
 // Sept 30, 2025 – New homepage promo for latest content set
 enhancedPromotionalBanners.push({
   id: 'sept30-autonomous-euai-edge-2025',
