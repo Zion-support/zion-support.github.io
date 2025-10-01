@@ -99,6 +99,20 @@ const Home = () => {
         <link rel="canonical" href="https://ziontechgroup.com" />
       </Helmet>
       <AdvertisingBanner />
+      {/* New promo for Oct 5 posts */}
+      <NewContentPromoBanner 
+        className="border-b border-white/10" 
+        variant="premium" 
+        title="🆕 NEW TODAY (Oct 5): Eval Scorecards, Semantic Caching, Agent Approvals"
+        description="Predict KPIs and gate risky changes, cut GenAI costs 40–70% with multilayer caches, and ship safe autonomy with approvals and budgets."
+        ctaText="Explore Oct 5 releases"
+        ctaLink="/blog"
+        featuredItems={[
+          { title: "Production Eval Scorecards", category: "AI Reliability", link: "/blog/ai-2025-oct-05-production-eval-scorecards" },
+          { title: "Multilayer Semantic Caching", category: "GenAI Engineering", link: "/blog/ai-2025-oct-05-multilayer-semantic-caching" },
+          { title: "Agent Approvals & Budgets", category: "AI Operations", link: "/blog/ai-2025-oct-05-agent-approvals-budgets" }
+        ]}
+      />
       {/* New: Promote 10/04 posts - Budgeted Routing, Agent Observability, Private Edge A/B */}
       <NewContentPromoBanner 
         className="border-b border-white/10" 

@@ -1442,6 +1442,88 @@ The future of business software is here, and it's micro SAAS. Don't get left beh
   }
   ,
   {
+    slug: "ai-2025-oct-05-production-eval-scorecards",
+    title: "Production Eval Scorecards: Predict KPIs, Gate Risky Changes",
+    description: "Design evals that correlate with business KPIs and act as deploy gates—ship faster with fewer regressions.",
+    content: `
+# Production Eval Scorecards: Predict KPIs, Gate Risky Changes
+
+Most eval suites fail to predict production. This guide shows how to build eval pipelines that correlate with business KPIs and act as reliable change gates.
+
+## Ship What Matters
+- Golden tasks mapped to user journeys
+- Calibrated metrics (task success, harmlessness, helpfulness)
+- Budget-linked scorecards with pass/fail thresholds
+- Online canaries and rollback hooks
+
+## Outcomes
+- Fewer regressions and faster iteration
+- Measurable trust in AI quality
+- Clear ownership and weekly review rituals
+    `,
+    author: "Zion Tech Group Reliability Lab",
+    date: "2025-10-05",
+    category: "AI Reliability",
+    tags: ["Evaluations", "Scorecards", "KPIs", "Guardrails"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/production-eval-scorecards.jpg"
+  },
+  {
+    slug: "ai-2025-oct-05-multilayer-semantic-caching",
+    title: "Multilayer Semantic Caching: 40–70% Cost ↓ with Steady UX",
+    description: "Prompt, embedding, retrieval and answer caches with freshness windows and coalescing that cut spend without regressions.",
+    content: `
+# Multilayer Semantic Caching: 40–70% Cost ↓ with Steady UX
+
+Cut GenAI serving cost while keeping experience KPIs steady.
+
+## Layers
+- Prompt cache with request coalescing
+- Embedding cache (TTL + LFU) for trending topics
+- Retrieval cache (features → chunks → answers)
+- Negative cache to stop hot-miss loops
+
+## Rollout
+- Ship dark, compare tokens/req and task success
+- Eval gates for promotions, instant rollback hooks
+    `,
+    author: "Zion Tech Group Platform Team",
+    date: "2025-10-05",
+    category: "GenAI Engineering",
+    tags: ["Caching", "Latency", "Cost", "Quality"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/multilayer-semantic-caching.jpg"
+  },
+  {
+    slug: "ai-2025-oct-05-agent-approvals-budgets",
+    title: "Agent Approvals & Budgets: Safe Autonomy in Production",
+    description: "Scoped tools, action budgets, and human approvals that unlock 10x velocity without incidents.",
+    content: `
+# Agent Approvals & Budgets: Safe Autonomy in Production
+
+Agent systems move faster with strong guardrails.
+
+## Guardrails
+- Signed tools with scopes and quotas
+- Budget-aware routing and sandboxing
+- Approval workflows for sensitive actions
+- Tool traces with KPI-linked SLIs
+
+## Operations
+- Canary routes, kill switches, rollback-first drills
+- Weekly scorecards: 1 regression → 1 fix
+    `,
+    author: "Zion Tech Group AI Operations",
+    date: "2025-10-05",
+    category: "AI Operations",
+    tags: ["Agents", "Approvals", "Budgets", "Rollback"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/agent-approvals-budgets.jpg"
+  },
+  {
     slug: "ai-2025-oct-03-enterprise-rag-blueprint-v3",
     title: "Enterprise RAG Blueprint v3: 45% Quality ↑, 62% Cost ↓",
     description: "A pragmatic RAG playbook: retrieval budgets, freshness windows, and cache tiers that raise answer quality while cutting spend.",
