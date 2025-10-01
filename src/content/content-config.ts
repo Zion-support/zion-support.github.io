@@ -1009,6 +1009,42 @@ featuredBlogPosts.unshift(
   }
 );
 
+// Oct 1, 2025 – Advertise FOUR brand-new production-ready AI guides
+featuredBlogPosts.unshift(
+  {
+    id: "ai-self-healing-infrastructure-2025",
+    title: "🔄 AI Self-Healing Infrastructure 2025",
+    description: "Autonomous infrastructure achieving 99.99% uptime—95% MTTR reduction, zero human intervention.",
+    link: "/blog/ai-self-healing-infrastructure-2025",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "generative-ai-code-assistants-2025",
+    title: "💻 Generative AI Code Assistants 2025",
+    description: "10x developer productivity, 5x faster feature delivery, 40% fewer bugs with AI pair programming.",
+    link: "/blog/generative-ai-code-assistants-2025",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-ai-privacy-preserving-analytics-2025",
+    title: "🔐 Edge AI Privacy-Preserving Analytics 2025",
+    description: "95%+ analytics accuracy without PII—GDPR/CCPA compliant by design with on-device ML.",
+    link: "/blog/edge-ai-privacy-preserving-analytics-2025",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-driven-supply-chain-optimization-2025",
+    title: "📦 AI-Driven Supply Chain Optimization 2025",
+    description: "35% cost reduction, 45% fulfillment improvement, 95% fewer stockouts with intelligent automation.",
+    link: "/blog/ai-driven-supply-chain-optimization-2025",
+    type: "article",
+    featured: true
+  }
+);
+
 // Advertise new content on homepage showcases
 featuredBlogPosts.unshift(
   {
