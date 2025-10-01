@@ -146,29 +146,29 @@ const HomePage: React.FC = () => {
                 icon="rocket"
                 badge="New"
                 date={new Date().toLocaleDateString()}
-                title="Fresh Content: Safer AI, Actionable Observability, Lower Costs"
-                description="Three new deep-dives just dropped: guardrails as code, observability that triggers safe actions, and cost playbooks that cut spend without slowing teams."
+                title="Fresh Content: Rollback-First Ops, Private Edge Flags, Clear LLM Costs"
+                description="Three new deep-dives: incident guardrails with instant rollback, private signed edge flags under 50ms, and LLM spend mapping tied to SLAs and teams."
                 ctaText="Read the latest posts"
                 ctaLink="/blog"
                 showCount={3}
                 featuredItems={[
                   {
-                    title: 'Policy-Driven AI: Guardrails as Code for Safer Autonomy',
+                    title: 'AI Incident Guardrails: Rollback-First Operations That Scale',
                     category: 'AI',
-                    link: '/blog',
-                    metrics: '7 min • 2025-10-02'
+                    link: '/blog/ai-incident-guardrails-rollback-first-operations-2025-10-04',
+                    metrics: '7 min • 2025-10-04'
                   },
                   {
-                    title: 'Platform Observability 2025: From Signals to Automated Actions',
-                    category: 'Observability',
-                    link: '/blog',
-                    metrics: '6 min • 2025-10-02'
+                    title: 'Edge Feature Flags: Private, Signed, and Under 50ms',
+                    category: 'Experimentation',
+                    link: '/blog/edge-feature-flags-private-signed-2025-10-04',
+                    metrics: '6 min • 2025-10-04'
                   },
                   {
-                    title: 'Cloud Cost Playbooks 2025: LLM + Infra Savings Without Slowdowns',
+                    title: 'LLM Cost Mapping: Spend by Feature, Team, and SLA',
                     category: 'Cloud',
-                    link: '/blog',
-                    metrics: '7 min • 2025-10-02'
+                    link: '/blog/llm-cost-mapping-spend-by-feature-team-sla-2025-10-04',
+                    metrics: '7 min • 2025-10-04'
                   }
                 ]}
               />

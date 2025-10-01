@@ -14,6 +14,51 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    id: '209',
+    title: 'AI Incident Guardrails: Rollback-First Operations That Scale',
+    slug: 'ai-incident-guardrails-rollback-first-operations-2025-10-04',
+    excerpt:
+      'Bake rollback, approvals, and policy tests into every change. Ship faster with fewer incidents.',
+    content:
+      'Operational excellence for AI systems requires safety by design. This post outlines rollback-first workflows, approval tiers for risky actions, evaluator-backed deploy gates, and incident drill rituals. With reference configs and dashboards, teams reduce MTTR and avoid regressions while keeping velocity high.',
+    featuredImage: '/images/blog/ai-incident-guardrails.jpg',
+    category: 'AI',
+    tags: ['Reliability', 'Guardrails', 'Operations'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-04',
+    readTime: 7,
+  },
+  {
+    id: '210',
+    title: 'Edge Feature Flags: Private, Signed, and Under 50ms',
+    slug: 'edge-feature-flags-private-signed-2025-10-04',
+    excerpt:
+      'Ship features globally without centralizing PII. Signed configs, scoped IDs, and DP metrics.',
+    content:
+      'We present a design for privacy-first feature flags at the edge: signed and cacheable configurations, rotating scoped identifiers, and differential privacy for cohort metrics. Includes rollout patterns, validation scorecards, and latency budgets to keep flags under 50ms worldwide.',
+    featuredImage: '/images/blog/edge-feature-flags-2025.jpg',
+    category: 'Experimentation',
+    tags: ['Edge', 'Feature Flags', 'Privacy'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-04',
+    readTime: 6,
+  },
+  {
+    id: '211',
+    title: 'LLM Cost Mapping: Spend by Feature, Team, and SLA',
+    slug: 'llm-cost-mapping-spend-by-feature-team-sla-2025-10-04',
+    excerpt:
+      'Tie model spend to business units with budgets, alerts, and guardrails that guide choices.',
+    content:
+      'Cost clarity unlocks better decisions. Learn how to attribute LLM and infra spend to features and teams, set SLA-aware budgets, and enforce guardrails without blocking critical paths. Includes dashboards, policy packs, and an adoption plan used by high-growth orgs to cut 30–50% costs.',
+    featuredImage: '/images/blog/llm-cost-mapping.jpg',
+    category: 'Cloud',
+    tags: ['FinOps', 'LLM', 'Budgets'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-04',
+    readTime: 7,
+  },
+  {
     id: '1',
     title: 'Welcome to Our Blog',
     slug: 'welcome-to-our-blog',
