@@ -332,6 +332,11 @@ const Home = () => {
           <October2025NextGenAIBanner />
         </div>
         
+        {/* Latest research and articles */}
+        <div className="container mx-auto px-4 py-8">
+          <LatestArticlesShowcase />
+        </div>
+
         {/* 🔥🔥🔥 OCTOBER 2025 - NEW: Operational Excellence Revolution - JUST RELEASED! 🔥🔥🔥 */}
         {/* Featured: Predictive Maintenance (99.6% accuracy), API Orchestration (99.8% uptime), Customer Intent (98.2% accuracy) */}
         <div className="container mx-auto px-4 py-8">

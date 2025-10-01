@@ -17,6 +17,22 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
+    id: "autonomous-revops-2025",
+    slug: "ai-2025-oct-autonomous-revenue-operations",
+    title: "Autonomous Revenue Operations 2025: 3.2x Pipeline Velocity",
+    description: "Run RevOps as software with AI playbooks, guardrailed routing, and live scorecards. Proven 127% ROI.",
+    excerpt: "A practical blueprint to automate RevOps end-to-end with measurable impact on pipeline, win-rate, and CAC/LTV.",
+    author: "Zion Tech Group",
+    date: "2025-10-01",
+    category: "GTM AI",
+    tags: ["RevOps", "Automation", "Sales", "Marketing"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/autonomous-revops-2025.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "ai-agent-orchestration-enterprise-2025",
     slug: "ai-agent-orchestration-enterprise-2025",
     title: "Enterprise AI Agent Orchestration: The 2025 Implementation Blueprint",
