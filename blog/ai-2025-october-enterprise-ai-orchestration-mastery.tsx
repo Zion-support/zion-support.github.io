@@ -69,7 +69,7 @@ export default function AIEnterpriseOrchestrationMastery2025() {
               <h4 className="text-xl font-bold text-blue-400 mb-3">Core Components:</h4>
               <ul className="space-y-3 text-gray-300">
                 <li><strong className="text-white">Orchestration Layer:</strong> Central coordinator managing 500+ specialized AI agents</li>
-                <li><strong className="text-white">Communication Protocol:</strong> Real-time message passing with <1ms latency</li>
+                <li><strong className="text-white">Communication Protocol:</strong> Real-time message passing with &lt;1ms latency</li>
                 <li><strong className="text-white">State Management:</strong> Distributed consensus across agent networks</li>
                 <li><strong className="text-white">Monitoring & Observability:</strong> Full transparency into agent decision-making</li>
               </ul>
