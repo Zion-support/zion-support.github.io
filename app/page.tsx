@@ -60,6 +60,10 @@ import NewContentPromotionalBanner2026 from '../components/NewContentPromotional
 import AIInnovationShowcaseBanner2026 from '../components/AIInnovationShowcaseBanner2026';
 import NextGenAutonomousBanner from '../components/NextGenAutonomousBanner';
 
+// NEW JANUARY 2026 NEUROMORPHIC & FEDERATED LEARNING CONTENT
+import NeuromorphicComputingRevolutionBanner from '../components/NeuromorphicComputingRevolutionBanner';
+import FederatedLearningPrivacyBanner from '../components/FederatedLearningPrivacyBanner';
+
 // NEW OCTOBER 2025 PRACTICAL CONTENT
 import October2025NewPracticalContentBanner from '../components/October2025NewPracticalContentBanner';
 import NewContentShowcaseOct2025 from '../components/NewContentShowcaseOct2025';
@@ -77,9 +81,18 @@ export const metadata = {
 export default function HomePage() {
   return (
     <div className="animate-fade-in">
+<<<<<<< HEAD
       {/* 🚀 BRAND NEW OCTOBER 1, 2025 - AI PRODUCTIVITY REVOLUTION */}
       <October2025AIProductivityBanner />
 
+=======
+      {/* 🚀 BRAND NEW JANUARY 2026 NEUROMORPHIC COMPUTING REVOLUTION */}
+      <NeuromorphicComputingRevolutionBanner />
+      
+      {/* 🔒 BRAND NEW JANUARY 2026 FEDERATED LEARNING PRIVACY REVOLUTION */}
+      <FederatedLearningPrivacyBanner />
+      
+>>>>>>> origin/cursor/create-and-deploy-new-content-333b
       {/* 🔥 BRAND NEW OCTOBER 2025 NEUROMORPHIC & FEDERATED LEARNING */}
       <section className="w-full bg-gradient-to-r from-purple-600 via-blue-600 to-teal-600 text-white py-4">
         <div className="max-w-6xl mx-auto px-4">
@@ -87,11 +100,11 @@ export default function HomePage() {
             <div className="flex items-center gap-3 flex-wrap justify-center md:justify-start">
               <span className="text-2xl animate-bounce">🧠</span>
               <span className="font-bold text-lg">JUST PUBLISHED:</span>
-              <Link href="/blog/ai-neuromorphic-computing-enterprise-2026" className="underline hover:text-yellow-200 font-bold">
+              <Link href="/blog/ai-2026-neuromorphic-computing-revolution" className="underline hover:text-yellow-200 font-bold">
                 Neuromorphic Computing: 95% Energy Savings
               </Link>
               <span className="hidden md:inline">•</span>
-              <Link href="/blog/ai-federated-learning-enterprise-privacy-2026" className="underline hover:text-yellow-200 font-bold">
+              <Link href="/blog/ai-2026-federated-learning-enterprise-privacy" className="underline hover:text-yellow-200 font-bold">
                 Federated Learning: 100% Privacy
               </Link>
               <span className="hidden md:inline">•</span>
