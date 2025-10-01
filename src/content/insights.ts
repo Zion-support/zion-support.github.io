@@ -9,6 +9,24 @@ export type InsightArticle = {
 
 export const latestInsights: InsightArticle[] = [
   {
+    id: "ai-2025-oct-edge-inference-patterns-production-guide",
+    title: "Edge Inference Patterns: Production-Ready AI Deployment Guide 2025",
+    summary:
+      "Master production-ready edge inference with real-world deployment strategies, performance optimization, and cost-effective scaling for enterprise AI.",
+    category: "Edge AI",
+    date: "2025-10-01",
+    readMinutes: 12,
+  },
+  {
+    id: "ai-2025-oct-northstar-metrics-ai-product-success",
+    title: "North Star Metrics for AI Product Success: The Complete 2025 Framework",
+    summary:
+      "Learn the proven framework used by top AI companies to measure product success. Discover metrics that correlate with revenue and retention.",
+    category: "AI Strategy",
+    date: "2025-10-01",
+    readMinutes: 10,
+  },
+  {
     id: "observability-otel-traces-that-matter",
     title: "OpenTelemetry in Production: Traces That Engineers Actually Use",
     summary:
