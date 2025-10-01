@@ -1,9 +1,0 @@
-
-
-node_modules
-.DS_Store
-.env
-server/.env
-npm-debug.log*
-yarn-error.log
-yarn-error.log

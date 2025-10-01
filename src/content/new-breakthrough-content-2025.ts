@@ -2,6 +2,7 @@
 
 export interface BreakthroughContent {
   id: string;
+  slug?: string;
   title: string;
   description: string;
   excerpt: string;

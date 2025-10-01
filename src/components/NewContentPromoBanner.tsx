@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Sparkles, TrendingUp, Zap, Star, Rocket, Brain, Atom, Bot } from 'lucide-react';
+import { ArrowRight, Sparkles, TrendingUp, Star } from 'lucide-react';
 
 interface NewContentPromoBannerProps {
   className?: string;
@@ -12,13 +12,13 @@ interface NewContentPromoBannerProps {
 }
 
 const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({ 
-  className = "",
-  variant = "default",
-  title,
-  description,
-  ctaText,
-  ctaLink,
-  featuredItems
+  className: _className = "",
+  variant: _variant = "default",
+  title: _title,
+  description: _description,
+  ctaText: _ctaText,
+  ctaLink: _ctaLink,
+  featuredItems: _featuredItems
 }) => {
   const newContent = [
     {
@@ -96,7 +96,7 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
 
         {/* Content Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
-          {newContent.map((content, index) => (
+          {newContent.map((content, _index) => (
             <div
               key={content.slug}
               className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20"
