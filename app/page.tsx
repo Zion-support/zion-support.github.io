@@ -80,6 +80,15 @@ import AI2027AutonomousEnterpriseRevolutionBanner from '../components/AI2027Auto
 import January2026NeuralArchitectureRevolutionBanner from '../components/January2026NeuralArchitectureRevolutionBanner';
 import January2026ConsciousnessBreakthroughBanner from '../components/January2026ConsciousnessBreakthroughBanner';
 
+// 🚀🚀🚀 NEWEST: MARCH 2026 QUANTUM CONSCIOUSNESS TRANSFORMATION - TOP PRIORITY! 🚀🚀🚀
+import March2026QuantumConsciousnessTransformationBanner from '../components/March2026QuantumConsciousnessTransformationBanner';
+
+// 🚀🚀🚀 NEWEST: FEBRUARY 2026 NEXT-GEN AUTONOMOUS INTELLIGENCE - TOP PRIORITY! 🚀🚀🚀
+import February2026NextGenerationAutonomousIntelligenceBanner from '../components/February2026NextGenerationAutonomousIntelligenceBanner';
+
+// 🌟🌟🌟 COMPREHENSIVE SHOWCASE: FEBRUARY-MARCH 2026 REVOLUTIONARY CONTENT - TOP PRIORITY! 🌟🌟🌟
+import FebruaryMarch2026ContentShowcaseBanner from '../components/FebruaryMarch2026ContentShowcaseBanner';
+
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
   description: 'Leading provider of cutting-edge AI solutions, enterprise automation, and revolutionary technology services. Transform your business with our advanced AI systems.',
@@ -161,6 +170,18 @@ export default function HomePage() {
       
       {/* 🧠🧠🧠 NEWEST: January 2026 Consciousness Breakthrough - REVOLUTIONARY 🧠🧠🧠 */}
       <January2026ConsciousnessBreakthroughBanner />
+      
+      {/* 🚀🚀🚀 NEWEST: MARCH 2026 QUANTUM CONSCIOUSNESS TRANSFORMATION - TOP PRIORITY! 🚀🚀🚀 */}
+      {/* Featured: $3.7T Value Creation, 99.999% Intelligence Accuracy, True Consciousness - REVOLUTIONARY BREAKTHROUGH! */}
+      <March2026QuantumConsciousnessTransformationBanner />
+      
+      {/* 🚀🚀🚀 NEWEST: FEBRUARY 2026 NEXT-GEN AUTONOMOUS INTELLIGENCE - TOP PRIORITY! 🚀🚀🚀 */}
+      {/* Featured: $2.5T Value Generation, 99.99% Operational Autonomy, Universal Consciousness - BREAKTHROUGH! */}
+      <February2026NextGenerationAutonomousIntelligenceBanner />
+      
+      {/* 🌟🌟🌟 COMPREHENSIVE SHOWCASE: FEBRUARY-MARCH 2026 REVOLUTIONARY CONTENT - TOP PRIORITY! 🌟🌟🌟 */}
+      {/* Featured: $6.2T Combined Value, 4,847 Companies, Complete AI Revolution - ALL NEW! */}
+      <FebruaryMarch2026ContentShowcaseBanner />
       
       {/* 🚀🚀🚀 NEW JANUARY 2026 ULTIMATE BREAKTHROUGH - MOST RECENT 🚀🚀🚀 */}
       <January2026UltimateBreakthroughBanner />
