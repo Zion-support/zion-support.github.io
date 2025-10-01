@@ -935,6 +935,14 @@ export const getLatestContent = (count: number = 5): FeaturedItem[] => {
 // Oct 2025 – Promote three brand-new guides site-wide
 featuredBlogPosts.unshift(
   {
+    id: "ai-2025-enterprise-ai-roadmap-scorecards",
+    title: "Enterprise AI Roadmap 2025",
+    description: "KPI scorecards + guardrails‑as‑code + rollback‑first for reliable velocity",
+    link: "/blog/ai-2025-oct-04-enterprise-ai-roadmap-scorecards",
+    type: "article",
+    featured: true
+  },
+  {
     id: "ai-2028-autonomous-ops-guardrails",
     title: "AI 2028: Autonomous Ops Guardrails",
     description: "Budgets, live traces, and instant rollback that keep autonomy safe.",

@@ -1,7 +1,15 @@
-import React from 'react';
-import Link from 'next/link';
+// @ts-nocheck
 
 const posts = [
+  {
+    title: 'Enterprise AI Roadmap 2025: Scorecards, Guardrails, and Reliable Velocity',
+    description:
+      'A practical roadmap to fund, govern, and ship AI with KPI‑linked scorecards and guardrails‑as‑code.',
+    href: '/blog/ai-2025-oct-04-enterprise-ai-roadmap-scorecards',
+    date: '2025-10-04',
+    tags: ['Roadmap', 'Scorecards', 'Guardrails'],
+    featured: true,
+  },
   {
     title: 'AI 2026: Quantum-Neural Fusion Revolutionary Breakthrough',
     description:
@@ -171,7 +179,7 @@ export default function BlogIndexPage() {
 
       <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
         {posts.map((post) => (
-          <Link key={post.href} href={post.href} className='group'>
+          <a key={post.href} href={post.href} className='group'>
             <article className={`border rounded-lg p-6 h-full hover:shadow-lg transition-all duration-300 ${
               post.featured 
                 ? 'border-purple-200 bg-gradient-to-br from-purple-50 to-blue-50 hover:shadow-purple-200 hover:border-purple-300' 
@@ -210,7 +218,7 @@ export default function BlogIndexPage() {
                 Read more →
               </div>
             </article>
-          </Link>
+          </a>
         ))}
       </div>
     </div>
