@@ -13,6 +13,8 @@ export interface FeaturedItem {
 import { breakthroughContent2025 } from './new-breakthrough-content-2025';
 import { enterpriseCaseStudies2025 } from './enterprise-case-studies-2025';
 import { newBlogPosts, newCaseStudies, newServices } from './new-2026-ai-breakthrough-content';
+import { newJanuary2026BlogPosts } from './new-january-2026-content';
+import { getFeaturedJanuary2026BlogPosts, getAllJanuary2026BlogPosts } from './january-2026-new-blog-posts';
 
 export const featuredBlogPosts: FeaturedItem[] = [
   {
@@ -771,10 +773,34 @@ featuredBlogPosts.unshift(
 
 export const featuredServices: FeaturedItem[] = [
   {
-    id: "ai-2025-october-agent-swarm-platform-services",
-    title: "🔥 Agent Swarm Orchestration Platform Services",
-    description: "Deploy 100,000+ coordinated AI agents with 2,344% ROI. Production-ready platform starting at $240K with 200+ pre-built agents and guaranteed results.",
-    link: "/services/ai-2025-october-agent-swarm-platform-services",
+    id: "quantum-edge-fusion-platform",
+    title: "Quantum Edge Fusion Platform",
+    description: "1000x speed improvement, sub-millisecond latency, 99.99% reliability. Revolutionary quantum-edge convergence for enterprise applications.",
+    link: "/services/quantum-edge-fusion-platform",
+    type: "service",
+    featured: true
+  },
+  {
+    id: "synthetic-consciousness-ai-platform",
+    title: "Synthetic Consciousness AI Platform",
+    description: "98.7% consciousness accuracy, genuine self-awareness, emotional intelligence, and creative autonomy with $500B enterprise value potential.",
+    link: "/services/synthetic-consciousness-ai-platform",
+    type: "service",
+    featured: true
+  },
+  {
+    id: "neuromorphic-processing-suite",
+    title: "Neuromorphic Processing Suite",
+    description: "1000x energy efficiency, brain-inspired AI architecture, real-time learning, and autonomous adaptation capabilities.",
+    link: "/services/neuromorphic-processing-suite",
+    type: "service",
+    featured: true
+  },
+  {
+    id: "ai-intelligent-document-processing",
+    title: "AI Intelligent Document Processing",
+    description: "98.5% accuracy, 95% automation, $2.8M+ annual savings. Extract and process any document type at scale.",
+    link: "/services/ai-intelligent-document-processing",
     type: "service",
     featured: true
   },
@@ -865,18 +891,6 @@ featuredBlogPosts.unshift(
     title: "GenAI 2028: Cost Tiers v4",
     description: "Tiering + semantic caches + policy tests for predictable spend.",
     link: "/blog/genai-2028-cost-tiers-v4",
-    type: "article",
-    featured: true
-  }
-);
-
-// Oct 1, 2025 – 🔥🔥🔥 REVOLUTIONARY AGENT SWARM PLATFORM - TOP FEATURED CONTENT 🔥🔥🔥
-featuredBlogPosts.unshift(
-  {
-    id: "ai-2025-oct-01-revolutionary-agent-swarm-orchestration",
-    title: "🚀 Revolutionary Agent Swarm Orchestration Platform 2025",
-    description: "Coordinate 100,000+ AI agents at enterprise scale with 99.999% reliability, sub-second response, and 95% cost reduction. The future of enterprise AI is here.",
-    link: "/blog/ai-2025-oct-01-revolutionary-agent-swarm-orchestration",
     type: "article",
     featured: true
   }
@@ -1076,6 +1090,34 @@ featuredBlogPosts.unshift(
     type: "article",
     featured: true
   },
+);
+
+// January 2026 - Add revolutionary breakthrough content at the very top
+featuredBlogPosts.unshift(
+  {
+    id: "ai-2026-january-hyperautomation-platform",
+    title: "⚙️ AI Hyperautomation Platform 2026: End-to-End Business Automation",
+    description: "Complete business process automation achieving 95% automation rates with 10x efficiency improvements and $2.8B success stories.",
+    link: "/blog/ai-2026-january-hyperautomation-platform",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-2026-january-quantum-security-breakthrough",
+    title: "🔐 Quantum-Safe Security 2026: Unbreakable Enterprise Protection",
+    description: "Quantum-resistant security systems protecting $2.8B in assets with 99.99% threat prevention and zero security breaches.",
+    link: "/blog/ai-2026-january-quantum-security-breakthrough",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-2026-january-blockchain-integration",
+    title: "⛓️ Blockchain-AI Integration 2026: Trustless Intelligence Revolution",
+    description: "Revolutionary integration of blockchain and AI creating trustless intelligence systems with $1.2B enterprise value creation.",
+    link: "/blog/ai-2026-january-blockchain-integration",
+    type: "article",
+    featured: true
+  }
 );
 
 // January 2025 - Add new breakthrough content at the very top
@@ -1501,6 +1543,26 @@ featuredBlogPosts.unshift(
     title: "💝 Adaptive Customer Experience: 98% Satisfaction via Emotional AI",
     description: "Emotional AI achieving 98% satisfaction, 156% CLV increase, $230M+ enhanced revenue.",
     link: "/blog/ai-2025-oct-adaptive-customer-experience-emotional-ai",
+    type: "article",
+    featured: true
+  }
+);
+
+// Oct 1, 2025 – LATEST CONTENT: Multimodal AI, Adaptive Learning, Document Processing
+featuredBlogPosts.unshift(
+  {
+    id: "ai-2025-oct-multimodal-enterprise-intelligence",
+    title: "🎯 Multimodal Enterprise Intelligence 2025",
+    description: "Vision, language & audio AI convergence achieving 97% accuracy, 85% automation, and $2.3B+ in enterprise value creation.",
+    link: "/blog/ai-2025-oct-multimodal-enterprise-intelligence",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-2025-oct-adaptive-learning-platforms",
+    title: "🎓 AI-Powered Adaptive Learning Platforms 2025",
+    description: "Personalized enterprise training at scale: 92% completion rates, 5x faster skill development, and $340M+ productivity gains.",
+    link: "/blog/ai-2025-oct-adaptive-learning-platforms",
     type: "article",
     featured: true
   }

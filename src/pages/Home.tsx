@@ -8,18 +8,20 @@ import {
   Sparkles,
   Star,
   Target,
-  Users,
-  Zap,
 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import AdvertisingBanner from "../components/AdvertisingBanner";
 import EnhancedTestimonials from "../components/EnhancedTestimonials";
 import Header from "../components/Header";
 import ModernFeatures from "../components/ModernFeatures";
 import LatestInsights from "../components/LatestInsights";
-import October2025SupplyChainRevolutionBanner from "../components/October2025SupplyChainRevolutionBanner";
+import AdvertisingBanner from "../components/AdvertisingBanner";
+import October2025NewBreakthroughBanner from "../components/October2025NewBreakthroughBanner";
 import { latestInsights } from "../content/insights";
+import { Users, Zap } from "lucide-react";
+import AdvertisingBanner from "../components/AdvertisingBanner";
+import January2026RevolutionaryBanner from "../components/January2026RevolutionaryBanner";
+import NewServicesPromoBanner2026 from "../components/NewServicesPromoBanner2026";
 
 const Home = () => {
   return (
@@ -57,6 +59,8 @@ const Home = () => {
         />
         <link rel="canonical" href="https://ziontechgroup.com" />
       </Helmet>
+      <AdvertisingBanner />
+      <January2026RevolutionaryBanner />
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
         {/* Animated background elements */}
@@ -94,37 +98,57 @@ const Home = () => {
               and next-generation cloud infrastructure. Join 500+ companies already scaling with us!
             </p>
 
-            {/* NEW CONTENT ANNOUNCEMENT */}
-            <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-xl p-6 mb-6 animate-fade-in">
+            {/* LATEST CONTENT ANNOUNCEMENT - DIGITAL TWINS */}
+            <div className="bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-teal-600/20 border-2 border-blue-400/50 rounded-xl p-6 mb-6 animate-fade-in shadow-2xl">
               <div className="flex items-center justify-center gap-3 mb-3">
-                <Rocket className="w-6 h-6 text-purple-400 animate-bounce" />
-                <span className="text-lg font-bold text-purple-400">🔥 JUST RELEASED - OCTOBER 1, 2025</span>
-                <Rocket className="w-6 h-6 text-purple-400 animate-bounce" />
+                <Sparkles className="w-6 h-6 text-blue-400 animate-pulse" />
+                <span className="text-lg font-bold text-blue-300">🔥 JUST PUBLISHED - OCTOBER 1, 2025</span>
+                <Sparkles className="w-6 h-6 text-blue-400 animate-pulse" />
               </div>
-              <p className="text-white text-xl font-bold mb-3">
-                NEW: Edge AI Production Guide + North Star Metrics Framework + $127M Case Study
+              <p className="text-white text-2xl font-bold mb-3 text-center">
+                AI-Powered Digital Twin Revolution: $14.2M ROI Case Study + Complete Implementation Guide
               </p>
-              <div className="grid md:grid-cols-4 gap-3 text-sm text-zion-slate-light mb-4">
+              <div className="grid md:grid-cols-4 gap-4 text-sm text-zion-slate-light mb-4">
                 <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>Sub-10ms Edge Inference Patterns</span>
+                  <CheckCircle className="w-4 h-4 text-blue-400" />
+                  <span className="font-semibold">$14.2M ROI in 18 Months</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>Proven AI Product Success Metrics</span>
+                  <CheckCircle className="w-4 h-4 text-purple-400" />
+                  <span className="font-semibold">87% Downtime Reduction</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>$127M Manufacturing ROI Story</span>
+                  <CheckCircle className="w-4 h-4 text-teal-400" />
+                  <span className="font-semibold">95% Predictive Accuracy</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-cyan-400" />
+                  <span className="font-semibold">62% Quality Improvement</span>
                 </div>
               </div>
-              <Link
-                to="/blog/ai-2025-oct-01-enterprise-ai-transformation-roadmap"
-                className="inline-flex items-center gap-2 bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
-              >
-                Explore New Content
-                <ArrowRight className="w-4 h-4" />
-              </Link>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link
+                  to="/blog/ai-2025-oct-digital-twin-enterprise-revolution"
+                  className="inline-flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
+                >
+                  📘 Digital Twin Guide (24 min)
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link
+                  to="/case-studies/manufacturing-digital-twin-transformation-2025"
+                  className="inline-flex items-center gap-2 bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
+                >
+                  💼 $14.2M Success Story
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link
+                  to="/services/ai-digital-twin-platform-2025"
+                  className="inline-flex items-center gap-2 bg-teal-500 hover:bg-teal-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
+                >
+                  🚀 Get Digital Twin Platform
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
             </div>
 
             {/* Special Promotion Banner */}
@@ -189,139 +213,8 @@ const Home = () => {
           </div>
         </section>
 
-        {/* 🚀🚀🚀 BREAKTHROUGH: OCTOBER 1, 2025 - AGENT SWARM REVOLUTION - #1 PRIORITY! 🚀🚀🚀 */}
-        {/* 💎💎💎 JUST PUBLISHED: 100,000+ Agents, $890M Healthcare Success, 95% Cost Reduction! 💎💎💎 */}
-        <section className="container mx-auto px-6 py-16 relative z-10">
-          <div className="bg-gradient-to-br from-purple-900/50 via-blue-900/40 to-cyan-900/50 rounded-3xl border-2 border-purple-400/60 p-8 md:p-12 shadow-2xl hover:shadow-purple-500/20 transition-all duration-500">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="inline-flex h-4 w-4 rounded-full bg-purple-400 animate-pulse shadow-lg shadow-purple-400/50"></span>
-              <span className="text-purple-300 font-bold text-xl uppercase tracking-wider animate-pulse">🚨 BREAKTHROUGH ANNOUNCEMENT - October 1, 2025</span>
-              <span className="inline-flex h-4 w-4 rounded-full bg-purple-400 animate-pulse shadow-lg shadow-purple-400/50"></span>
-            </div>
-            
-            <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-              🤖 Revolutionary Agent Swarm Platform: <span className="bg-gradient-to-r from-purple-300 to-cyan-300 bg-clip-text text-transparent">100,000+ AI Agents Working in Perfect Harmony</span>
-            </h2>
-            
-            <p className="text-2xl text-purple-100 mb-8 max-w-4xl leading-relaxed">
-              We've just launched the most advanced multi-agent AI system in history. Deploy coordinated swarms of 100,000+ specialized agents achieving 99.999% reliability, sub-second response times, and 95% cost reduction.
-            </p>
-
-            <div className="grid md:grid-cols-3 gap-6 mb-10">
-              <div className="bg-purple-900/40 backdrop-blur-sm rounded-xl p-6 border border-purple-400/40 hover:border-purple-300/70 transition-all hover:scale-105">
-                <div className="text-purple-300 text-sm font-semibold mb-3 uppercase flex items-center gap-2">
-                  <Rocket className="w-5 h-5" />
-                  Revolutionary Platform
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">100,000+ Agents Coordinated</h3>
-                <p className="text-purple-100 text-base mb-4">
-                  Deploy massive swarms of specialized AI agents working autonomously. Sub-second latency, 99.999% uptime, and 95% cost reduction vs traditional systems.
-                </p>
-                <Link 
-                  to="/blog/ai-2025-oct-01-revolutionary-agent-swarm-orchestration" 
-                  className="inline-flex items-center text-purple-300 hover:text-white font-bold text-base group"
-                >
-                  Read Technical Deep-Dive (18 min) 
-                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </div>
-
-              <div className="bg-green-900/40 backdrop-blur-sm rounded-xl p-6 border border-green-400/40 hover:border-green-300/70 transition-all hover:scale-105">
-                <div className="text-green-300 text-sm font-semibold mb-3 uppercase flex items-center gap-2">
-                  <Award className="w-5 h-5" />
-                  $890M Success Story
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Global Healthcare Transformation</h3>
-                <p className="text-green-100 text-base mb-4">
-                  See how a 150M-patient healthcare network deployed 75,000 agents achieving 98.7% diagnostic accuracy, 89% faster diagnoses, and $890M annual value creation.
-                </p>
-                <Link 
-                  to="/case-studies/ai-2025-oct-01-global-healthcare-agent-swarm-890m-success" 
-                  className="inline-flex items-center text-green-300 hover:text-white font-bold text-base group"
-                >
-                  Read Full Case Study 
-                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </div>
-
-              <div className="bg-cyan-900/40 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/40 hover:border-cyan-300/70 transition-all hover:scale-105">
-                <div className="text-cyan-300 text-sm font-semibold mb-3 uppercase flex items-center gap-2">
-                  <Zap className="w-5 h-5" />
-                  Enterprise Service Launch
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Agent Swarm Platform Services</h3>
-                <p className="text-cyan-100 text-base mb-4">
-                  Production-ready platform starting at $240K. Deploy in 90 days with 2,344% ROI. Includes 200+ pre-built agents, 24/7 support, and guaranteed results.
-                </p>
-                <Link 
-                  to="/services/ai-2025-october-agent-swarm-platform-services" 
-                  className="inline-flex items-center text-cyan-300 hover:text-white font-bold text-base group"
-                >
-                  Explore Service Tiers 
-                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-r from-purple-800/30 to-cyan-800/30 rounded-xl p-6 border border-purple-400/30 mb-8">
-              <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-                <Star className="w-8 h-8 text-yellow-400" />
-                Why This Changes Everything
-              </h3>
-              <div className="grid md:grid-cols-2 gap-4 text-purple-100">
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
-                  <div>
-                    <span className="font-bold text-white">100,000+ Agent Coordination:</span> First platform to orchestrate massive agent swarms at enterprise scale
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
-                  <div>
-                    <span className="font-bold text-white">Sub-Second Response:</span> Agent-to-agent communication and task execution in under 1 second
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
-                  <div>
-                    <span className="font-bold text-white">95% Cost Reduction:</span> Slash infrastructure and operational costs by 95% vs traditional systems
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
-                  <div>
-                    <span className="font-bold text-white">Proven Results:</span> $890M value creation in healthcare, 50+ enterprise deployments
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
-              <Link 
-                to="/services/ai-2025-october-agent-swarm-platform-services" 
-                className="btn-primary flex items-center gap-3 text-lg px-8 py-4 shadow-xl hover:shadow-2xl"
-              >
-                <Rocket className="w-6 h-6" />
-                Start Your Agent Swarm
-                <ArrowRight className="w-6 h-6" />
-              </Link>
-              <Link 
-                to="/contact" 
-                className="btn-secondary text-lg px-8 py-4"
-              >
-                Schedule Strategy Session
-              </Link>
-            </div>
-
-            <div className="mt-8 text-center">
-              <div className="inline-flex items-center gap-3 bg-yellow-500/20 border border-yellow-400/40 rounded-full px-6 py-3">
-                <Sparkles className="w-5 h-5 text-yellow-400 animate-pulse" />
-                <span className="text-yellow-200 font-bold">LIMITED OFFER:</span>
-                <span className="text-white">First 10 enterprises get FREE $250K proof-of-concept + 25% off implementation</span>
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* 🚀 OCTOBER 2, 2025 - BREAKTHROUGH: NEXT-GEN ENTERPRISE AI SYSTEMS! 🚀 */}
+        <October2025NewBreakthroughBanner />
 
         {/* 🌟🌟🌟 NEWEST LAUNCH: OCTOBER 1, 2025 - SMART CITY DIGITAL TWIN REVOLUTION - FEATURED! 🌟🌟🌟 */}
         {/* 🏙️🏙️🏙️ JUST PUBLISHED: $1.8B Savings, Phoenix Success Story, 97% Prediction Accuracy! 🏙️🏙️🏙️ */}
@@ -457,12 +350,6 @@ const Home = () => {
           </div>
         </section>
 
-        {/* 🚀🚀🚀 ABSOLUTE NEWEST: OCTOBER 1, 2025 - SUPPLY CHAIN REVOLUTION - #1 TOP PRIORITY! 🚀🚀🚀 */}
-        {/* 💎💎💎 JUST PUBLISHED TODAY: $4.2B Value Creation, 2,847% ROI, 98.7% On-Time Delivery, Autonomous Intelligence! 💎💎💎 */}
-        <section className="container mx-auto px-6 relative z-10">
-          <October2025SupplyChainRevolutionBanner />
-        </section>
-
         {/* NEW CONTENT HIGHLIGHT SECTION */}
         <section className="container mx-auto px-6 py-16 relative z-10">
           <div className="bg-gradient-to-br from-emerald-900/40 via-teal-900/30 to-cyan-900/40 rounded-2xl border-2 border-emerald-400/50 p-8 md:p-12 shadow-2xl">
@@ -479,47 +366,56 @@ const Home = () => {
               Learn from real-world deployments: Edge AI patterns achieving sub-10ms latency, North Star metrics that predict success, and a $127M manufacturing transformation.
             </p>
 
-            <div className="grid md:grid-cols-3 gap-6 mb-8">
-              {/* Blog Post 1 - Hybrid Cloud */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30 hover:border-blue-400/60 transition-all hover:scale-105 hover:shadow-xl">
-                <div className="text-blue-400 text-sm font-semibold mb-2 uppercase">🚀 Service Launch</div>
-                <h3 className="text-lg font-bold text-white mb-3">Edge AI Platform</h3>
-                <p className="text-blue-100 text-sm mb-4">Deploy intelligence at the edge with less than 10ms latency. Starting at $4,999/mo</p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+              {/* Blog Post 1 - DIGITAL TWIN GUIDE */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-blue-400/40 hover:border-blue-400/70 transition-all hover:scale-105 hover:shadow-xl">
+                <div className="text-blue-400 text-sm font-semibold mb-2 uppercase">🔥 JUST PUBLISHED - Oct 1</div>
+                <h3 className="text-lg font-bold text-white mb-3">Digital Twin Revolution Guide</h3>
+                <p className="text-blue-100 text-sm mb-4">95% accuracy, $8.5M ROI, 85% downtime reduction. Complete implementation guide - 24 min read</p>
                 <Link 
-                  to="/blog/ai-2025-oct-hybrid-cloud-transformation-enterprise" 
+                  to="/blog/ai-2025-oct-digital-twin-enterprise-revolution" 
                   className="inline-flex items-center text-blue-300 hover:text-white font-semibold text-sm"
                 >
-                  Read Guide (15 min) <ArrowRight className="w-4 h-4 ml-1" />
+                  Read Guide <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
               </div>
 
-              {/* Blog Post 2 - Legal AI */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:border-purple-400/60 transition-all hover:scale-105 hover:shadow-xl">
-                <div className="text-purple-400 text-sm font-semibold mb-2 uppercase">⚖️ Legal Tech</div>
-                <h3 className="text-lg font-bold text-white mb-3">GenAI Legal Revolution</h3>
-                <p className="text-purple-100 text-sm mb-4">
-                  90% faster contracts, $12M annual savings, 24/7 compliance. How Fortune 500 legal teams operate now.
-                </p>
+              {/* Case Study 1 - DIGITAL TWIN SUCCESS */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-purple-400/40 hover:border-purple-400/70 transition-all hover:scale-105 hover:shadow-xl">
+                <div className="text-purple-400 text-sm font-semibold mb-2 uppercase">💼 BREAKTHROUGH - Oct 1</div>
+                <h3 className="text-lg font-bold text-white mb-3">$14.2M Digital Twin ROI</h3>
+                <p className="text-purple-100 text-sm mb-4">Fortune 500 manufacturer: 87% downtime cut, 62% quality gain. Real results - 18 min read</p>
                 <Link 
-                  to="/blog/ai-2025-oct-generative-ai-legal-compliance-revolution" 
+                  to="/case-studies/manufacturing-digital-twin-transformation-2025" 
                   className="inline-flex items-center text-purple-300 hover:text-white font-semibold text-sm"
                 >
-                  Learn More (18 min) <ArrowRight className="w-4 h-4 ml-1" />
+                  Read Case Study <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
               </div>
 
-              {/* Case Study - Retail AI */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-green-400/30 hover:border-green-400/60 transition-all hover:scale-105 hover:shadow-xl">
-                <div className="text-green-400 text-sm font-semibold mb-2 uppercase">💰 $214M Success</div>
-                <h3 className="text-lg font-bold text-white mb-3">Retail AI Personalization</h3>
-                <p className="text-green-100 text-sm mb-4">
-                  Fortune 100 retailer: 47% conversion lift, 62% engagement boost in 9 months. Full implementation story.
-                </p>
+              {/* Case Study 2 */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30 hover:border-emerald-400/60 transition-all hover:scale-105 hover:shadow-xl">
+                <div className="text-emerald-400 text-sm font-semibold mb-2 uppercase">✅ PROVEN - Oct 2025</div>
+                <h3 className="text-lg font-bold text-white mb-3">$489M Retail Transformation</h3>
+                <p className="text-emerald-100 text-sm mb-4">Fortune 100 retailer achieves 94% inventory optimization across 2,800+ stores</p>
                 <Link 
-                  to="/case-studies/ai-2025-oct-retail-ai-personalization-success-story" 
-                  className="inline-flex items-center text-green-300 hover:text-white font-semibold text-sm"
+                  to="/case-studies/global-retail-ai-transformation-2025" 
+                  className="inline-flex items-center text-emerald-300 hover:text-white font-semibold text-sm"
                 >
-                  Read Case Study <ArrowRight className="w-4 h-4 ml-1" />
+                  View Results <ArrowRight className="w-4 h-4 ml-1" />
+                </Link>
+              </div>
+
+              {/* New Service - DIGITAL TWIN PLATFORM */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-teal-400/40 hover:border-teal-400/70 transition-all hover:scale-105 hover:shadow-xl">
+                <div className="text-teal-400 text-sm font-semibold mb-2 uppercase">🚀 NEW PLATFORM</div>
+                <h3 className="text-lg font-bold text-white mb-3">AI Digital Twin Platform</h3>
+                <p className="text-teal-100 text-sm mb-4">95% accuracy, $8.5M ROI. Transform operations with intelligent virtual replicas</p>
+                <Link 
+                  to="/services/ai-digital-twin-platform-2025" 
+                  className="inline-flex items-center text-teal-300 hover:text-white font-semibold text-sm"
+                >
+                  Get Started <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
               </div>
             </div>
@@ -530,12 +426,11 @@ const Home = () => {
                 className="btn-primary flex items-center gap-2"
               >
                 <Sparkles className="w-5 h-5" />
-                Explore All Content
+                View All New Content
                 <ArrowRight className="w-5 h-5" />
               </Link>
-              <div className="text-emerald-200 text-sm flex items-center gap-2">
-                <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                <span><span className="font-bold">Limited Time:</span> Free AI strategy consultation with any service</span>
+              <div className="text-emerald-200 text-sm">
+                <span className="font-bold">3 Months FREE</span> on Edge AI Platform ends Oct 31st
               </div>
             </div>
           </div>
@@ -544,7 +439,7 @@ const Home = () => {
         {/* Latest Insights Section */}
         {/* Promo ribbon for new content */}
         <div className="container mx-auto px-6">
-          <div className="mb-6 rounded-full bg-gradient-to-r from-emerald-500/20 to-blue-500/20 border border-emerald-400/40 px-6 py-3 text-emerald-200 text-sm inline-flex items-center gap-2 animate-fade-in">
+          <div className="mb-6 rounded-full bg-emerald-500/15 border border-emerald-400/30 px-6 py-3 text-emerald-200 text-sm inline-flex items-center gap-2">
             <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
             NEW TODAY: Production Edge AI Guide (12 min) + North‑Star Metrics Framework (10 min) + $127M Case Study
             <Link to="/blog/ai-2025-oct-edge-inference-patterns-production-guide" className="text-emerald-300 underline underline-offset-4 hover:text-white">Read</Link>
@@ -552,15 +447,13 @@ const Home = () => {
         </div>
         <LatestInsights />
         <div className="container mx-auto px-6">
-          <div className="rounded-xl bg-gradient-to-r from-indigo-600/20 to-purple-600/20 border border-indigo-400/40 px-6 py-4 text-indigo-200 text-sm flex items-center justify-between shadow-lg">
-            <div className="flex items-center gap-3">
+          <div className="rounded-xl bg-indigo-600/15 border border-indigo-400/30 px-6 py-4 text-indigo-200 text-sm flex items-center justify-between">
+            <div className="flex items-center gap-2">
               <span className="inline-flex h-2 w-2 rounded-full bg-indigo-400 animate-ping"></span>
               <span className="font-medium">Fresh on the blog:</span>
               <span className="hidden sm:inline">Edge AI Production Guide • North‑Star Metrics • $127M Manufacturing Case Study</span>
             </div>
-            <Link to="/blog" className="text-indigo-300 hover:text-white font-semibold underline underline-offset-4 transition-colors">
-              Explore Now →
-            </Link>
+            <Link to="/blog" className="text-indigo-200 underline underline-offset-4 hover:text-white">Read now</Link>
           </div>
         </div>
 
@@ -641,6 +534,9 @@ const Home = () => {
             </div>
           </div>
         </section>
+
+        {/* New Services Promotional Banner */}
+        <NewServicesPromoBanner2026 />
 
         {/* Features Section */}
         <section className="container mx-auto px-6 py-20 relative z-10">
