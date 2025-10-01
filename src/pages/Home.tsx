@@ -20,7 +20,7 @@ import NewArticlesPromoBanner from "../components/NewArticlesPromoBanner";
 import NewServicesPromoBanner from "../components/NewServicesPromoBanner";
 // import ContentValueTestimonials from "../components/ContentValueTestimonials";
 // import EnhancedNewsletterSignup from "../components/EnhancedNewsletterSignup";
-// import EnhancedPromotionalBanner from "../components/EnhancedPromotionalBanner";
+import EnhancedPromotionalBanner from "../components/EnhancedPromotionalBanner";
 // import EnhancedTestimonials from "../components/EnhancedTestimonials";
 import Header from "../components/Header";
 import LatestArticlesShowcase from "../components/LatestArticlesShowcase";
@@ -35,7 +35,6 @@ import NewServicesShowcase from "../components/NewServicesShowcase";
 import SuccessStoriesShowcase from "../components/SuccessStoriesShowcase";
 import TrendingContentBanner from "../components/TrendingContentBanner";
 import { Latest2026ContentBanner } from "../components/NewContent2026Banners";
-import NewServicesPromoBanner2026 from "../components/NewServicesPromoBanner2026";
 import { getFeaturedBanners } from "../content/enhanced-promotional-banners";
 import { latestInsights } from "../content/insights";
 import { posts } from "../content/posts";
@@ -936,8 +935,11 @@ const Home = () => {
           </div>
         </section>
 
-        {/* New Services Promo 2026 */}
-        <NewServicesPromoBanner2026 />
+        {/* New Services Showcase */}
+        <NewServicesPromoBanner 
+          variant="showcase"
+          showCount={6}
+        />
         <NewServicesShowcase />
 
         {/* Latest Articles Promotional Section */}
