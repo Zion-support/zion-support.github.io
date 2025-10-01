@@ -79,6 +79,8 @@ import AI2027QuantumNeuralSuperintelligenceBanner from '../components/AI2027Quan
 import AI2027AutonomousEnterpriseRevolutionBanner from '../components/AI2027AutonomousEnterpriseRevolutionBanner';
 import AI2026UltimateAutonomousEnterpriseBanner from '../components/AI2026UltimateAutonomousEnterpriseBanner';
 import AI2026QuantumConsciousnessBIBanner from '../components/AI2026QuantumConsciousnessBIBanner';
+import February2026UltimateAutonomousRevolutionBanner from '../components/February2026UltimateAutonomousRevolutionBanner';
+import March2026QuantumConsciousnessBanner from '../components/March2026QuantumConsciousnessBanner';
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -156,10 +158,16 @@ export default function HomePage() {
         </div>
       </header>
 
-      {/* 🚀🚀🚀 NEW JANUARY 2026 ULTIMATE BREAKTHROUGH - MOST RECENT 🚀🚀🚀 */}
+      {/* 🚀🚀🚀 NEW FEBRUARY 2026 ULTIMATE AUTONOMOUS REVOLUTION - MOST RECENT 🚀🚀🚀 */}
+      <February2026UltimateAutonomousRevolutionBanner />
+      
+      {/* 🌌🌌🌌 NEW MARCH 2026 QUANTUM CONSCIOUSNESS - MOST RECENT 🌌🌌🌌 */}
+      <March2026QuantumConsciousnessBanner />
+      
+      {/* 🚀🚀🚀 JANUARY 2026 ULTIMATE BREAKTHROUGH 🚀🚀🚀 */}
       <AI2026UltimateAutonomousEnterpriseBanner />
       
-      {/* 🌌🌌🌌 NEW JANUARY 2026 QUANTUM CONSCIOUSNESS BI - MOST RECENT 🌌🌌🌌 */}
+      {/* 🌌🌌🌌 JANUARY 2026 QUANTUM CONSCIOUSNESS BI 🌌🌌🌌 */}
       <AI2026QuantumConsciousnessBIBanner />
       
       <January2026UltimateBreakthroughBanner />
@@ -255,16 +263,16 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
             <div className="text-white font-semibold flex items-center gap-2">
-              🚀 NEWEST JANUARY 2026 BREAKTHROUGHS
+              🚀 NEWEST FEBRUARY-MARCH 2026 BREAKTHROUGHS
               <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-3 py-1 rounded-full text-xs font-bold animate-pulse">
                 REVOLUTIONARY
               </span>
             </div>
             <div className="flex flex-wrap gap-2">
-              <Link href="/blog/ai-2026-ultimate-autonomous-enterprise-transformation" className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500/20 to-indigo-500/20 text-purple-200 border border-purple-400/30 px-3 py-2 rounded-lg font-semibold hover:from-purple-500/30 hover:to-indigo-500/30 transition-colors">Ultimate Autonomous Enterprise<span>→</span></Link>
-              <Link href="/case-studies/ai-2026-ultimate-autonomous-enterprise-1-trillion-success" className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 text-green-200 border border-green-400/30 px-3 py-2 rounded-lg font-semibold hover:from-green-500/30 hover:to-emerald-500/30 transition-colors">$1T Success Story<span>→</span></Link>
-              <Link href="/blog/ai-2026-quantum-consciousness-business-intelligence" className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 text-indigo-200 border border-indigo-400/30 px-3 py-2 rounded-lg font-semibold hover:from-indigo-500/30 hover:to-purple-500/30 transition-colors">Quantum Consciousness BI<span>→</span></Link>
-              <Link href="/case-studies/ai-2026-quantum-consciousness-bi-500-billion-success" className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 text-blue-200 border border-blue-400/30 px-3 py-2 rounded-lg font-semibold hover:from-blue-500/30 hover:to-cyan-500/30 transition-colors">$500B Success Story<span>→</span></Link>
+              <Link href="/blog/ai-2026-february-ultimate-autonomous-revolution-breakthrough" className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500/20 to-indigo-500/20 text-purple-200 border border-purple-400/30 px-3 py-2 rounded-lg font-semibold hover:from-purple-500/30 hover:to-indigo-500/30 transition-colors">Ultimate Autonomous Revolution<span>→</span></Link>
+              <Link href="/case-studies/ai-2026-february-ultimate-autonomous-revolution-500-billion-success" className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 text-green-200 border border-green-400/30 px-3 py-2 rounded-lg font-semibold hover:from-green-500/30 hover:to-emerald-500/30 transition-colors">$500B Success Story<span>→</span></Link>
+              <Link href="/blog/ai-2026-march-quantum-consciousness-enterprise-breakthrough" className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 text-indigo-200 border border-indigo-400/30 px-3 py-2 rounded-lg font-semibold hover:from-indigo-500/30 hover:to-purple-500/30 transition-colors">Quantum Consciousness<span>→</span></Link>
+              <Link href="/case-studies/ai-2026-march-quantum-consciousness-1-trillion-success" className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 text-blue-200 border border-blue-400/30 px-3 py-2 rounded-lg font-semibold hover:from-blue-500/30 hover:to-cyan-500/30 transition-colors">$1T Success Story<span>→</span></Link>
             </div>
           </div>
         </div>
