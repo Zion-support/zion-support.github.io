@@ -76,6 +76,133 @@ const Home = () => {
           ></div>
         </div>
 
+        {/* 🔥🔥🔥 BRAND NEW: October 1, 2025 - REAL-TIME PREDICTIVE ANALYTICS - JUST RELEASED! 🔥🔥🔥 */}
+        <section className="container mx-auto px-6 py-12 relative z-10">
+          <div className="bg-gradient-to-br from-red-900/60 via-orange-900/50 to-yellow-900/60 rounded-3xl border-2 border-red-400/70 p-8 md:p-10 shadow-2xl hover:shadow-red-500/30 transition-all duration-500 animate-fade-in">
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <span className="inline-flex h-4 w-4 rounded-full bg-red-400 animate-ping shadow-lg"></span>
+              <span className="text-red-300 font-extrabold text-2xl uppercase tracking-wider">🚨 JUST RELEASED - October 1, 2025</span>
+              <span className="inline-flex h-4 w-4 rounded-full bg-red-400 animate-ping shadow-lg"></span>
+            </div>
+            
+            <h2 className="text-4xl md:text-6xl font-bold text-white mb-4 text-center leading-tight">
+              ⚡ Real-Time Predictive Analytics Revolution: <span className="bg-gradient-to-r from-yellow-300 to-red-300 bg-clip-text text-transparent">Sub-100ms Insights, $50M+ Value Creation</span>
+            </h2>
+            
+            <p className="text-xl text-red-100 mb-6 text-center max-w-4xl mx-auto leading-relaxed">
+              Stop analyzing yesterday's data. Act on this-second insights with our breakthrough platform delivering 92% accuracy, 10x faster insights, and 8,300% average ROI. Transform data into decisions in milliseconds.
+            </p>
+
+            <div className="grid md:grid-cols-3 gap-4 mb-6">
+              <div className="bg-gradient-to-br from-red-800/50 to-orange-800/50 backdrop-blur rounded-xl p-5 border border-red-400/40 hover:border-red-300/70 transition-all hover:scale-105">
+                <div className="text-red-300 text-sm font-bold mb-2 uppercase flex items-center gap-2">
+                  <Zap className="w-4 h-4" />
+                  Technical Breakthrough
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">Sub-100ms Predictions at Scale</h3>
+                <p className="text-red-100 text-sm mb-3">
+                  Edge-first architecture achieving 92% accuracy with continuous model adaptation. 10x faster than traditional analytics.
+                </p>
+                <Link 
+                  to="/blog/ai-2025-oct-01-real-time-predictive-analytics-breakthrough" 
+                  className="inline-flex items-center text-yellow-300 hover:text-white font-bold text-sm group"
+                >
+                  Read Full Article (14 min)
+                  <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+
+              <div className="bg-gradient-to-br from-green-800/50 to-emerald-800/50 backdrop-blur rounded-xl p-5 border border-green-400/40 hover:border-green-300/70 transition-all hover:scale-105">
+                <div className="text-green-300 text-sm font-bold mb-2 uppercase flex items-center gap-2">
+                  <Award className="w-4 h-4" />
+                  $214M Proven Success
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">Fintech Fraud Prevention</h3>
+                <p className="text-green-100 text-sm mb-3">
+                  Fortune 500 fintech: 98.7% fraud detection, 0.3% false positives, 47ms decisions, $214M saved in first year. 1,780% ROI.
+                </p>
+                <Link 
+                  to="/case-studies/ai-2025-oct-01-fintech-real-time-fraud-prevention-214m-success" 
+                  className="inline-flex items-center text-green-300 hover:text-white font-bold text-sm group"
+                >
+                  Read Case Study
+                  <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+
+              <div className="bg-gradient-to-br from-cyan-800/50 to-blue-800/50 backdrop-blur rounded-xl p-5 border border-cyan-400/40 hover:border-cyan-300/70 transition-all hover:scale-105">
+                <div className="text-cyan-300 text-sm font-bold mb-2 uppercase flex items-center gap-2">
+                  <Rocket className="w-4 h-4" />
+                  Platform Service Launch
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">Deploy in 12 Weeks</h3>
+                <p className="text-cyan-100 text-sm mb-3">
+                  Three service tiers from $15K/month. Includes implementation, training, 24/7 support. 100% of clients achieve ROI within 6 months.
+                </p>
+                <Link 
+                  to="/services/ai-2025-october-real-time-predictive-analytics-platform" 
+                  className="inline-flex items-center text-cyan-300 hover:text-white font-bold text-sm group"
+                >
+                  Explore Service Tiers
+                  <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-r from-yellow-800/40 to-red-800/40 rounded-xl p-5 border border-yellow-400/40 mb-6">
+              <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
+                <Star className="w-6 h-6 text-yellow-400" />
+                Real-World Impact Across Industries
+              </h3>
+              <div className="grid md:grid-cols-2 gap-3 text-yellow-100 text-sm">
+                <div className="flex items-start gap-2">
+                  <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                  <div><span className="font-bold text-white">E-Commerce:</span> 43% conversion increase, $87M revenue lift</div>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                  <div><span className="font-bold text-white">Fraud Detection:</span> 98.7% accuracy, $214M fraud prevented</div>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                  <div><span className="font-bold text-white">Manufacturing:</span> 89% downtime reduction, $42M savings</div>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                  <div><span className="font-bold text-white">Dynamic Pricing:</span> $67M revenue increase, 12% margin boost</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
+              <Link 
+                to="/services/ai-2025-october-real-time-predictive-analytics-platform" 
+                className="btn-primary flex items-center gap-2 text-lg px-8 py-4 shadow-xl hover:shadow-2xl"
+              >
+                <Zap className="w-6 h-6" />
+                Start Free Assessment
+                <ArrowRight className="w-6 h-6" />
+              </Link>
+              <Link 
+                to="/contact" 
+                className="btn-secondary text-lg px-8 py-4"
+              >
+                Schedule Demo
+              </Link>
+            </div>
+
+            <div className="mt-6 text-center">
+              <div className="inline-flex flex-col sm:flex-row items-center gap-3 bg-yellow-500/20 border border-yellow-400/50 rounded-full px-6 py-3">
+                <div className="flex items-center gap-2">
+                  <Sparkles className="w-5 h-5 text-yellow-400 animate-pulse" />
+                  <span className="text-yellow-200 font-bold">OCTOBER LAUNCH SPECIAL:</span>
+                </div>
+                <span className="text-white font-semibold">Free $50K Proof-of-Concept + 25% Off First Year (10 spots left!)</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Hero Section */}
         <section className="container mx-auto px-6 py-20 relative z-10">
           <div className="text-center max-w-5xl mx-auto">
