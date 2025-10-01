@@ -18,14 +18,6 @@ import ContentPromotionBanner from "../components/ContentPromotionBanner";
 import ComprehensivePromoBanner from "../components/ComprehensivePromoBanner";
 import NewArticlesPromoBanner from "../components/NewArticlesPromoBanner";
 import NewServicesPromoBanner from "../components/NewServicesPromoBanner";
-<<<<<<< HEAD
-import EnhancedPromotionalBanner from "../components/EnhancedPromotionalBanner";
-=======
-// import ContentValueTestimonials from "../components/ContentValueTestimonials";
-// import EnhancedNewsletterSignup from "../components/EnhancedNewsletterSignup";
-// import EnhancedPromotionalBanner from "../components/EnhancedPromotionalBanner";
-// import EnhancedTestimonials from "../components/EnhancedTestimonials";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-879e
 import Header from "../components/Header";
 import LatestArticlesShowcase from "../components/LatestArticlesShowcase";
 import LatestContentBanner from "../components/LatestContentBanner";
