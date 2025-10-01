@@ -1,6 +1,9 @@
 import React, { JSX } from "react";
 
 // 🚀🚀🚀 BREAKING: OCTOBER 1, 2025 NEW CONTENT - ABSOLUTE HIGHEST PRIORITY 🚀🚀🚀
+import October2025CuttingEdgeAIContentBanner from "./components/October2025CuttingEdgeAIContentBanner";
+import October2025FreshAIInsightsBanner from "./components/October2025FreshAIInsightsBanner";
+import October2025AITransformationShowcase from "./components/October2025AITransformationShowcase";
 import October2025CuttingEdgeContentBanner from "./components/October2025CuttingEdgeContentBanner";
 import October1st2025NewContentBanner from "./components/October1st2025NewContentBanner";
 import October1st2025ContentSpotlight from "./components/October1st2025ContentSpotlight";
@@ -104,6 +107,18 @@ export default function App(): JSX.Element {
       {/* 💰💰💰 EXCLUSIVE: JANUARY 2025 FORTUNE 500 SUCCESS STORY - HIGHLY PROMINENT! 💰💰💰 */}
       {/* Featured: $2.3B AI-Driven Cost Savings, Comprehensive Implementation Guide */}
       <January2025Fortune500SuccessBanner />
+      
+      {/* 🔥🔥🔥 JUST PUBLISHED: OCTOBER 1, 2025 - LATEST AI BREAKTHROUGHS - ABSOLUTE TOP! 🔥🔥🔥 */}
+      {/* Featured: AI Fleet Orchestration (100K+ agents), Synthetic Data (99.8% accuracy), Multimodal AI ($200M ROI) */}
+      <October2025CuttingEdgeAIContentBanner />
+      
+      {/* 🌟🌟🌟 NEW: OCTOBER 2025 - AI TRANSFORMATION SHOWCASE - HIGHLY FEATURED! 🌟🌟🌟 */}
+      {/* Comprehensive showcase: Fleet Management, Privacy-Preserving AI, Vision-Language Systems */}
+      <October2025AITransformationShowcase />
+      
+      {/* ⚡⚡⚡ FRESH: OCTOBER 2025 - AI INSIGHTS BANNER - PROMINENT! ⚡⚡⚡ */}
+      {/* Quick access to latest enterprise AI content and case studies */}
+      <October2025FreshAIInsightsBanner />
       
       {/* 🎉🎉🎉 NEWEST: OCTOBER 1, 2025 - FRESH CONTENT JUST PUBLISHED - ABSOLUTE TOP PRIORITY! 🎉🎉🎉 */}
       {/* Featured: Edge AI Revolution, GenAI Cost Optimization, $86M Manufacturing Success */}
