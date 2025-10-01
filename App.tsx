@@ -1,6 +1,7 @@
 import React, { JSX } from "react";
 
 // OCTOBER 2025 NEW CONTENT - MOST RECENT & PROMINENT
+import October2025NewContentHighlightBanner from "./components/October2025NewContentHighlightBanner";
 import October2025TechnicalContentBanner from "./components/October2025TechnicalContentBanner";
 import October2025ProductionAIBanner from "./components/October2025ProductionAIBanner";
 
@@ -65,6 +66,10 @@ import Fortune500SuccessAdvertisingBanner from "./components/Fortune500SuccessAd
 export default function App(): JSX.Element {
   return (
     <div className="min-h-screen bg-slate-950">
+      {/* 🚀🚀🚀 OCTOBER 2025 NEW CONTENT HIGHLIGHT - MOST PROMINENT 🚀🚀🚀 */}
+      {/* Featured: Platform Engineering, Prompt Engineering, and $20B Insurance Case Study */}
+      <October2025NewContentHighlightBanner />
+      
       {/* 🚀🚀🚀 OCTOBER 2025 NEW TECHNICAL CONTENT - MOST RECENT 🚀🚀🚀 */}
       {/* Latest production AI engineering guides - October 2025 */}
       <October2025ProductionAIBanner />
@@ -207,7 +212,6 @@ export default function App(): JSX.Element {
       
       {/* 🚀🚀🚀 BREAKING: September 30, 2025 — NEW CONTENT JUST PUBLISHED! — HIGHEST PRIORITY 🚀🚀🚀 */}
       <September30NewContentMegaBanner />
->>>>>>> cursor/create-and-deploy-new-content-55c8
       
       {/* 🚀 NEWEST: January 2025 Revolutionary AI Content - MOST PROMINENT */}
       <January2025NewContentBanner />
@@ -249,7 +253,6 @@ export default function App(): JSX.Element {
       <AI2027TranscendentIntelligenceBanner />
       
       {/* NEW: September 2025 Practical AI Insights Banner - FEATURED */}
->>>>>>> cursor/create-and-deploy-new-content-60ec
       <September2025PracticalAIBanner />
       
       {/* LATEST BREAKTHROUGHS 2026 */}
