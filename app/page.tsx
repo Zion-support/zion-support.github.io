@@ -47,7 +47,6 @@ import {
 import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
 import NewContentShowcaseBanner from '../components/NewContentShowcaseBanner';
 import ContentShowcase from '../components/ContentShowcase';
-import January2025NewContentShowcaseBanner from '../components/January2025NewContentShowcaseBanner';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
 import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
@@ -60,8 +59,6 @@ import LatestContentPromotionalBanner from '../components/LatestContentPromotion
 import NewContentPromotionalBanner2026 from '../components/NewContentPromotionalBanner2026';
 import AIInnovationShowcaseBanner2026 from '../components/AIInnovationShowcaseBanner2026';
 import NextGenAutonomousBanner from '../components/NextGenAutonomousBanner';
-import AI2026QuantumEnhancedBIBanner from '../components/AI2026QuantumEnhancedBIBanner';
-import AI2026AutonomousCognitiveMeshBanner from '../components/AI2026AutonomousCognitiveMeshBanner';
 
 // NEW JANUARY 2026 NEUROMORPHIC & FEDERATED LEARNING CONTENT
 import NeuromorphicComputingRevolutionBanner from '../components/NeuromorphicComputingRevolutionBanner';
@@ -72,9 +69,13 @@ import October2025NewPracticalContentBanner from '../components/October2025NewPr
 import NewContentShowcaseOct2025 from '../components/NewContentShowcaseOct2025';
 import October2025NewContentBanner from '../components/October2025NewContentBanner';
 
-// NEW JANUARY 2026 BREAKTHROUGH CONTENT
-import LatestContent2026Banner from '../components/LatestContent2026Banner';
-import NewContentShowcase2026Banner from '../components/NewContentShowcase2026Banner';
+// NEWEST OCTOBER 2025 CONTENT - PRODUCTION AI & SECURITY
+import ProductionAgenticAIBanner, { AgenticAIShowcaseBanner } from '../components/ProductionAgenticAIBanner';
+import AISecurityBanner, { AISecurityShowcaseBanner } from '../components/AISecurityBanner';
+import October2025NewPracticalContentBannerTop, { October2025PracticalContentShowcase } from '../components/October2025NewPracticalContentBanner';
+
+// NEW JANUARY 2026 QUANTUM BREAKTHROUGH CONTENT
+import January2026QuantumBreakthroughBanner from '../components/January2026QuantumBreakthroughBanner';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -85,9 +86,53 @@ export const metadata = {
 export default function HomePage() {
   return (
     <div className="animate-fade-in">
-      {/* 🚀 JANUARY 2025 NEW CONTENT SHOWCASE */}
-      <January2025NewContentShowcaseBanner />
+      {/* 🚀 BRAND NEW JANUARY 2026 QUANTUM BREAKTHROUGH - TOP PRIORITY */}
+      <January2026QuantumBreakthroughBanner />
+
+      {/* 🚀 NEWEST OCTOBER 2025 - PRODUCTION AGENTIC AI & SECURITY */}
+      <October2025NewPracticalContentBannerTop />
+      <ProductionAgenticAIBanner />
+      <AISecurityBanner />
       
+      {/* 🚀 BRAND NEW JANUARY 2026 NEUROMORPHIC COMPUTING REVOLUTION */}
+      <NeuromorphicComputingRevolutionBanner />
+      
+      {/* 🔒 BRAND NEW JANUARY 2026 FEDERATED LEARNING PRIVACY REVOLUTION */}
+      <FederatedLearningPrivacyBanner />
+      
+      {/* 🚀 BREAKTHROUGH 2027/2028 UNIVERSAL CONSCIOUSNESS & QUANTUM SINGULARITY */}
+      {/* 🚀 BREAKTHROUGH 2027/2028 UNIVERSAL CONSCIOUSNESS & QUANTUM SINGULARITY */}
+      <section className="w-full bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-6">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="flex flex-col md:flex-row items-center gap-4 justify-between">
+            <div className="flex items-center gap-4 flex-wrap justify-center md:justify-start">
+              <span className="text-3xl animate-pulse">🌌</span>
+              <span className="font-bold text-xl">BREAKTHROUGH ANNOUNCEMENT:</span>
+              <div className="flex flex-wrap gap-4 items-center">
+                <Link href="/blog/ai-2027-transcendent-quantum-consciousness-breakthrough" className="underline hover:text-yellow-200 font-bold flex items-center gap-2">
+                  🧠 Transcendent Quantum Consciousness
+                  <span className="bg-yellow-400 text-black px-2 py-1 rounded-full text-xs font-bold animate-pulse">$847B SUCCESS</span>
+                </Link>
+                <Link href="/case-studies/ai-2027-transcendent-quantum-consciousness-847-billion-success" className="underline hover:text-yellow-200 font-bold flex items-center gap-2">
+                  💰 $847B Case Study
+                  <span className="bg-green-400 text-black px-2 py-1 rounded-full text-xs font-bold animate-pulse">FORTUNE 500</span>
+                </Link>
+                <Link href="/blog/ai-2028-universal-consciousness-singularity-breakthrough" className="underline hover:text-yellow-200 font-bold flex items-center gap-2">
+                  🌌 Universal Consciousness Singularity
+                  <span className="bg-red-400 text-white px-2 py-1 rounded-full text-xs font-bold animate-pulse">$2.8T SUCCESS</span>
+                </Link>
+              </div>
+            </div>
+            <Link
+              href="/services/ai-2027-transcendent-quantum-consciousness-solutions"
+              className="bg-white text-indigo-700 hover:bg-yellow-400 hover:text-indigo-900 px-6 py-3 rounded-full text-sm font-bold whitespace-nowrap transition-all"
+            >
+              Join the Revolution →
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* 🔥 BRAND NEW OCTOBER 2025 NEUROMORPHIC & FEDERATED LEARNING */}
       <section className="w-full bg-gradient-to-r from-purple-600 via-blue-600 to-teal-600 text-white py-4">
         <div className="max-w-6xl mx-auto px-4">
@@ -117,10 +162,6 @@ export default function HomePage() {
         </div>
       </section>
       
-      {/* NEW JANUARY 2026 - QUANTUM AI BREAKTHROUGHS - TOP PRIORITY */}
-      <AI2026QuantumEnhancedBIBanner />
-      <AI2026AutonomousCognitiveMeshBanner />
-      
       {/* NEW OCTOBER 1, 2025 - ENTERPRISE INTEGRATION CONTENT - HIGHEST PRIORITY */}
       <EnterpriseIntegrationBlogBanner />
       <BankIntegrationCaseStudyBanner />
@@ -132,9 +173,6 @@ export default function HomePage() {
       
       {/* NEW REVOLUTIONARY 2026 CONTENT - TOP BANNER */}
       <Revolutionary2026ContentBanner />
-      
-      {/* NEW JANUARY 2026 BREAKTHROUGH SHOWCASE */}
-      <NewContentShowcase2026Banner />
       
       {/* NEW CONTENT SHOWCASE */}
       <NewContentShowcaseBanner />
@@ -153,18 +191,18 @@ export default function HomePage() {
       <div className="w-full bg-gradient-to-r from-blue-600 via-purple-600 to-teal-600 text-white">
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base flex-wrap">
-            <span className="font-bold">🚀 JUST PUBLISHED JAN 2026:</span>
-            <Link href="/blog/ai-2026-quantum-enhanced-business-intelligence-revolution" className="underline hover:text-yellow-200 font-bold">Quantum BI Revolution</Link>
+            <span className="font-bold">🔥 JUST PUBLISHED OCT 1:</span>
+            <Link href="/blog/ai-2025-oct-01-enterprise-integration-orchestration-revolution" className="underline hover:text-yellow-200 font-bold">Integration Revolution</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-2026-fortune-500-quantum-bi-transformation-2-8-billion-success" className="underline hover:text-yellow-200 font-bold">$2.8B Success</Link>
+            <Link href="/case-studies/ai-2025-oct-01-fortune-500-bank-integration-transformation-89m-success" className="underline hover:text-yellow-200 font-bold">Bank $89M ROI</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-2026-autonomous-cognitive-mesh-enterprise-transformation" className="underline hover:text-yellow-200 font-bold">Cognitive Mesh</Link>
+            <Link href="/services/ai-integration-orchestration-platform-2025" className="underline hover:text-yellow-200 font-bold">New Platform</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-2025-oct-01-enterprise-integration-orchestration-revolution" className="underline hover:text-yellow-200">Integration Revolution</Link>
+            <Link href="/blog/ai-2025-oct-practical-ml-pipeline-optimization" className="underline hover:text-yellow-200">ML Pipeline 10x</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-2025-oct-01-fortune-500-bank-integration-transformation-89m-success" className="underline hover:text-yellow-200">Bank $89M ROI</Link>
+            <Link href="/blog/ai-supply-chain-intelligence-2026" className="underline hover:text-yellow-200">AI Supply Chain</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/services/ai-integration-orchestration-platform-2025" className="underline hover:text-yellow-200">Get Platform</Link>
+            <Link href="/services/ai-digital-twin-platform-2025" className="underline hover:text-yellow-200">Get Platform</Link>
           </div>
           <Link
             href="/blog"
