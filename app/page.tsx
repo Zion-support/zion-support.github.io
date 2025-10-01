@@ -75,24 +75,24 @@ export default function HomePage() {
       <October2025NewPracticalContentBanner />
       <NewContentShowcaseOct2025 />
       
-      {/* New Content Promo Strip */}
-      <div className="w-full bg-gradient-to-r from-green-600 to-blue-600 text-white">
+      {/* New Content Promo Strip - DIGITAL TWINS FEATURED */}
+      <div className="w-full bg-gradient-to-r from-blue-600 via-purple-600 to-teal-600 text-white">
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
-            <span>🚀 NEW October 2025:</span>
+            <span>🔥 JUST PUBLISHED - Oct 1:</span>
+            <Link href="/blog/ai-2025-oct-digital-twin-enterprise-revolution" className="underline hover:text-yellow-200 font-bold">Digital Twin Guide</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/case-studies/manufacturing-digital-twin-transformation-2025" className="underline hover:text-yellow-200 font-bold">$14.2M Success Story</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/services/ai-digital-twin-platform-2025" className="underline hover:text-yellow-200 font-bold">Get Platform</Link>
+            <span className="hidden md:inline">•</span>
             <Link href="/blog/ai-2025-oct-01-edge-ai-healthcare-revolution" className="underline hover:text-yellow-200">Edge AI Healthcare</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-2025-oct-01-financial-services-llm-automation" className="underline hover:text-yellow-200">Financial LLM Automation</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-2025-oct-01-healthcare-edge-ai-transformation-42-million-success" className="underline hover:text-yellow-200">$42M Healthcare ROI</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-2025-oct-01-financial-services-llm-automation-87-million-success" className="underline hover:text-yellow-200">$87M Banking ROI</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/services/october-2025-edge-ai-enterprise-transformation-services" className="underline hover:text-yellow-200">Edge AI Services</Link>
+            <Link href="/blog/ai-2025-oct-01-financial-services-llm-automation" className="underline hover:text-yellow-200">Financial LLM</Link>
           </div>
           <Link
             href="/blog"
-            className="bg-white text-green-700 hover:bg-gray-100 px-4 py-1.5 rounded-md text-sm font-semibold"
+            className="bg-white text-blue-700 hover:bg-gray-100 px-4 py-1.5 rounded-md text-sm font-semibold"
           >
             Explore Latest
           </Link>
