@@ -27,39 +27,24 @@ import {
   AIDataAnalyticsEnterpriseBanner,
   EnterpriseTransformationSuccessBanner,
   HealthcareTransformationBanner,
-  NewContent2026Banner,
-  AIAgentOrchestrationBanner,
-  AISustainabilityBanner,
-  QuantumComputingBanner,
-  SustainabilityCaseStudyBanner,
-  QuantumOptimizationBanner,
-  AINeuralArchitectureBanner,
-  AISpaceTechBanner,
-  AISustainabilityCaseStudyBanner,
-  AITechnologyBreakthroughBanner,
-  EnterpriseAITransformationBanner
+  NewContent2026Banner
 } from '../components/PromotionalBanner';
+import AIROICalculator from '../components/AIROICalculator';
 import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
-import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
-import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
-<<<<<<< HEAD
-import InteractiveContentRecommendation from '../components/InteractiveContentRecommendation';
-import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
-import LatestContent2026Banner from '../components/LatestContent2026Banner';
-<<<<<<< HEAD
-import NewContent2026ShowcaseBanner from '../components/NewContent2026ShowcaseBanner';
-import LatestContentPromotionalBanner from '../components/LatestContentPromotionalBanner';
-import NewContentPromotionalBanner2026 from '../components/NewContentPromotionalBanner2026';
-import AIInnovationShowcaseBanner2026 from '../components/AIInnovationShowcaseBanner2026';
-=======
-import NextGenAutonomousBanner from '../components/NextGenAutonomousBanner';
->>>>>>> cursor/create-and-deploy-new-content-a364
-=======
-import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
->>>>>>> cursor/create-and-deploy-new-content-d513
+// import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
+// Conditional imports - some components may not exist yet
+// import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
+// import InteractiveContentRecommendation from '../components/InteractiveContentRecommendation';
+// import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
+// import LatestContent2026Banner from '../components/LatestContent2026Banner';
+// import NewContent2026ShowcaseBanner from '../components/NewContent2026ShowcaseBanner';
+// import LatestContentPromotionalBanner from '../components/LatestContentPromotionalBanner';
+// import NewContentPromotionalBanner2026 from '../components/NewContentPromotionalBanner2026';
+// import AIInnovationShowcaseBanner2026 from '../components/AIInnovationShowcaseBanner2026';
+// import NextGenAutonomousBanner from '../components/NextGenAutonomousBanner';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -74,30 +59,14 @@ export default function HomePage() {
       <div className="w-full bg-gradient-to-r from-green-600 to-blue-600 text-white">
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
-            <span>🚀 NEW 2026 Content:</span>
-            <a to="/blog/ai-agent-orchestration-2026" className="underline hover:text-yellow-200">AI Agent Orchestration</a>
+            <span>🚀 LATEST 2026 Content:</span>
+            <Link href="/blog/ai-2026-autonomous-learning-systems-breakthrough" className="underline hover:text-yellow-200">Autonomous Learning</Link>
             <span className="hidden md:inline">•</span>
-            <a to="/blog/ai-sustainability-green-tech-2026" className="underline hover:text-yellow-200">AI Sustainability</a>
+            <Link href="/blog/ai-2026-edge-intelligence-revolution" className="underline hover:text-yellow-200">Edge Intelligence</Link>
             <span className="hidden md:inline">•</span>
-            <a to="/blog/ai-quantum-computing-2026" className="underline hover:text-yellow-200">Quantum Computing</a>
+            <Link href="/case-studies/ai-2026-autonomous-learning-systems-35m-success" className="underline hover:text-yellow-200">$35M Financial ROI</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-sustainability-transformation-2026" className="underline hover:text-yellow-200">$10M ROI Case Study</Link>
-            <span className="hidden md:inline">•</span>
-<<<<<<< HEAD
-            <a to="/case-studies/ai-quantum-optimization-2026" className="underline hover:text-yellow-200">1000x Speed Improvement</a>
-=======
-            <Link href="/blog/ai-cognitive-computing-breakthrough-2026" className="underline hover:text-yellow-200">Cognitive Computing</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-space-tech-revolution-2026" className="underline hover:text-yellow-200">Space Tech</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-next-generation-autonomous-systems-2026" className="underline hover:text-yellow-200">Next-Gen Autonomous</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-mega-transformation-2026" className="underline hover:text-yellow-200">$50M ROI Case Study</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-autonomous-enterprise-success-2026" className="underline hover:text-yellow-200">$25M ROI Case Study</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-next-generation-autonomous-success-2026" className="underline hover:text-yellow-200">$35M ROI Case Study</Link>
->>>>>>> cursor/create-and-deploy-new-content-a364
+            <Link href="/case-studies/ai-2026-edge-intelligence-manufacturing-18m-success" className="underline hover:text-yellow-200">$18M Manufacturing ROI</Link>
           </div>
           <Link
             to="/blog"
@@ -112,24 +81,12 @@ export default function HomePage() {
       
       {/* Promotional Banners */}
       <NewContent2026Banner />
-      <AINeuralArchitectureBanner />
-      <AISpaceTechBanner />
-      <AISustainabilityCaseStudyBanner />
-      <AITechnologyBreakthroughBanner />
-      <EnterpriseAITransformationBanner />
-      <AIAgentOrchestrationBanner />
-      <AISustainabilityBanner />
-      <QuantumComputingBanner />
-      <SustainabilityCaseStudyBanner />
-      <QuantumOptimizationBanner />
       <AIMultimodalEnterpriseBanner />
       <AIEnterpriseAutomationBanner />
       <AIDataAnalyticsEnterpriseBanner />
       <EnterpriseTransformationSuccessBanner />
       <HealthcareTransformationBanner />
       <NewContentShowcaseBanner />
-      <AITrends2025Banner />
-      <NewServicesShowcaseBanner />
       <AIRoadmapsBanner />
       <AIFinOpsBanner />
       <AutonomousAgentsBanner />
@@ -144,28 +101,207 @@ export default function HomePage() {
       <WorkflowAutomationBanner />
       <AIAnalyticsBanner />
       
-      {/* New Content Promotional Banner 2026 */}
-      <NewContentPromotionalBanner2026 />
+      {/* Additional promotional banners can be added here */}
       
-<<<<<<< HEAD
-      {/* AI Innovation Showcase Banner 2026 */}
-      <AIInnovationShowcaseBanner2026 />
-=======
-      {/* Revolutionary 2026 Content Banner */}
-      <Revolutionary2026ContentBanner />
-      
-      {/* Latest 2026 Content Banner */}
-      <LatestContent2026Banner />
-      
-      {/* Next-Generation Autonomous Systems Banner */}
-      <NextGenAutonomousBanner />
-      
-      {/* New Content Promotional Banners */}
-      <NewContent2026PromotionalBanners />
-      
-      {/* Interactive Content Recommendation */}
-      <InteractiveContentRecommendation />
->>>>>>> cursor/create-and-deploy-new-content-a364
+      {/* Latest Breakthrough Content - January 2026 */}
+      <section className="py-16 bg-gradient-to-br from-purple-600 via-blue-600 to-teal-600 text-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm font-medium mb-6">
+              <span className="w-4 h-4 mr-2">⚡</span>
+              JUST PUBLISHED - JANUARY 2026
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Revolutionary AI Breakthroughs That Transform Industries
+            </h2>
+            <p className="text-xl opacity-90 max-w-3xl mx-auto">
+              Explore cutting-edge autonomous learning systems and edge intelligence that deliver unprecedented ROI
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Autonomous Learning Systems */}
+            <Link href="/blog/ai-2026-autonomous-learning-systems-breakthrough" className="group">
+              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:bg-white/20 hover:scale-105 transition-all duration-300">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-xl flex items-center justify-center">
+                    <span className="text-3xl">🧠</span>
+                  </div>
+                  <div>
+                    <div className="flex items-center gap-2 mb-1">
+                      <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-3 py-1 rounded-full text-xs font-bold">
+                        NEW BLOG
+                      </span>
+                      <span className="text-sm opacity-75">28 min read</span>
+                    </div>
+                    <h3 className="text-2xl font-bold group-hover:text-yellow-300 transition-colors">
+                      Autonomous Learning Systems
+                    </h3>
+                  </div>
+                </div>
+                <p className="text-white/90 text-lg mb-6">
+                  Self-evolving AI that learns and improves without human intervention. Achieve 98% accuracy and $20M+ value creation.
+                </p>
+                <div className="grid grid-cols-3 gap-4 mb-6">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-yellow-300">98%</div>
+                    <div className="text-sm opacity-75">Accuracy</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-yellow-300">$20M+</div>
+                    <div className="text-sm opacity-75">Value</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-yellow-300">10x</div>
+                    <div className="text-sm opacity-75">Faster</div>
+                  </div>
+                </div>
+                <div className="flex items-center text-yellow-300 font-semibold text-lg group-hover:translate-x-2 transition-transform">
+                  Read Full Article →
+                </div>
+              </div>
+            </Link>
+
+            {/* Edge Intelligence Revolution */}
+            <Link href="/blog/ai-2026-edge-intelligence-revolution" className="group">
+              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:bg-white/20 hover:scale-105 transition-all duration-300">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-blue-500 rounded-xl flex items-center justify-center">
+                    <span className="text-3xl">⚡</span>
+                  </div>
+                  <div>
+                    <div className="flex items-center gap-2 mb-1">
+                      <span className="bg-gradient-to-r from-green-400 to-blue-500 text-white px-3 py-1 rounded-full text-xs font-bold">
+                        NEW BLOG
+                      </span>
+                      <span className="text-sm opacity-75">26 min read</span>
+                    </div>
+                    <h3 className="text-2xl font-bold group-hover:text-green-300 transition-colors">
+                      Edge Intelligence Revolution
+                    </h3>
+                  </div>
+                </div>
+                <p className="text-white/90 text-lg mb-6">
+                  Real-time AI decision making at the network edge with sub-10ms latency, 99.99% uptime, and $18M savings.
+                </p>
+                <div className="grid grid-cols-3 gap-4 mb-6">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-green-300">&lt;10ms</div>
+                    <div className="text-sm opacity-75">Latency</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-green-300">$18M</div>
+                    <div className="text-sm opacity-75">Savings</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-green-300">99.99%</div>
+                    <div className="text-sm opacity-75">Uptime</div>
+                  </div>
+                </div>
+                <div className="flex items-center text-green-300 font-semibold text-lg group-hover:translate-x-2 transition-transform">
+                  Read Full Article →
+                </div>
+              </div>
+            </Link>
+          </div>
+
+          {/* Case Studies */}
+          <div className="mt-12 grid md:grid-cols-2 gap-8">
+            {/* Financial Services Success */}
+            <Link href="/case-studies/ai-2026-autonomous-learning-systems-35m-success" className="group">
+              <div className="bg-gradient-to-br from-yellow-500/20 to-orange-500/20 backdrop-blur-md rounded-2xl p-8 border border-yellow-300/30 hover:border-yellow-300/60 hover:scale-105 transition-all duration-300">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-3 py-1 rounded-full text-xs font-bold">
+                    NEW CASE STUDY
+                  </span>
+                  <span className="bg-white/20 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                    Fortune 100
+                  </span>
+                </div>
+                <h3 className="text-2xl font-bold mb-3 group-hover:text-yellow-300 transition-colors">
+                  Financial Services: $35M ROI with Autonomous Learning
+                </h3>
+                <p className="text-white/90 mb-6">
+                  Fortune 100 bank transforms ML operations with self-evolving AI achieving 98.5% accuracy and $35M annual value.
+                </p>
+                <div className="grid grid-cols-4 gap-4">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-yellow-300">$35M</div>
+                    <div className="text-xs opacity-75">Annual ROI</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-yellow-300">98.5%</div>
+                    <div className="text-xs opacity-75">Accuracy</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-yellow-300">90%</div>
+                    <div className="text-xs opacity-75">Cost Cut</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-yellow-300">60x</div>
+                    <div className="text-xs opacity-75">Faster</div>
+                  </div>
+                </div>
+                <div className="mt-6 flex items-center text-yellow-300 font-semibold group-hover:translate-x-2 transition-transform">
+                  View Case Study →
+                </div>
+              </div>
+            </Link>
+
+            {/* Manufacturing Success */}
+            <Link href="/case-studies/ai-2026-edge-intelligence-manufacturing-18m-success" className="group">
+              <div className="bg-gradient-to-br from-green-500/20 to-blue-500/20 backdrop-blur-md rounded-2xl p-8 border border-green-300/30 hover:border-green-300/60 hover:scale-105 transition-all duration-300">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-gradient-to-r from-green-400 to-blue-500 text-white px-3 py-1 rounded-full text-xs font-bold">
+                    NEW CASE STUDY
+                  </span>
+                  <span className="bg-white/20 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                    Fortune 500
+                  </span>
+                </div>
+                <h3 className="text-2xl font-bold mb-3 group-hover:text-green-300 transition-colors">
+                  Manufacturing: $18M ROI with Edge Intelligence
+                </h3>
+                <p className="text-white/90 mb-6">
+                  Fortune 500 manufacturer transforms operations with real-time edge AI achieving sub-10ms latency and massive savings.
+                </p>
+                <div className="grid grid-cols-4 gap-4">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-green-300">$18M</div>
+                    <div className="text-xs opacity-75">Annual ROI</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-green-300">&lt;10ms</div>
+                    <div className="text-xs opacity-75">Latency</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-green-300">95%</div>
+                    <div className="text-xs opacity-75">Defect ↓</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-green-300">99.99%</div>
+                    <div className="text-xs opacity-75">Uptime</div>
+                  </div>
+                </div>
+                <div className="mt-6 flex items-center text-green-300 font-semibold group-hover:translate-x-2 transition-transform">
+                  View Case Study →
+                </div>
+              </div>
+            </Link>
+          </div>
+
+          <div className="text-center mt-12">
+            <Link
+              href="/blog"
+              className="inline-flex items-center bg-white text-purple-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-300 shadow-2xl hover:shadow-3xl hover:scale-105"
+            >
+              <span className="w-5 h-5 mr-2">📚</span>
+              Explore All 2026 Content
+              <span className="w-5 h-5 ml-2">→</span>
+            </Link>
+          </div>
+        </div>
+      </section>
       
       {/* Hero Section */}
       <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
@@ -313,14 +449,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Enhanced 2026 Content Showcase */}
-      <EnhancedContentShowcase2026 />
-      
       {/* Dynamic Content Showcase */}
       <ContentShowcase />
-      
-      {/* Interactive Content Hub */}
-      <InteractiveContentShowcase />
       
       {/* Interactive Content Recommendations */}
       <section className="py-20 bg-gradient-to-br from-blue-50 to-purple-50">
