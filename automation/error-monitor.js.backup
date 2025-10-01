@@ -1,0 +1,5 @@
+}
+
+// Main execution
+if (require.main === module) {
+  const monitor = new ErrorMonitor();
