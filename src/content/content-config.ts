@@ -243,6 +243,34 @@ export const featuredBlogPosts: FeaturedItem[] = [
   }
 ];
 
+// Oct 1, 2025 – Advertise three brand-new articles
+featuredBlogPosts.unshift(
+  {
+    id: "ai-self-healing-infrastructure-2025",
+    title: "AI Self-Healing Infrastructure 2025",
+    description: "Autonomous infra: 95% MTTR reduction, 99.99% uptime with rollback gates.",
+    link: "/blog/ai-self-healing-infrastructure-2025",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "generative-ai-code-assistants-2025",
+    title: "Generative AI Code Assistants 2025",
+    description: "10x productivity with evaluator-backed gates, safe refactors, instant rollback.",
+    link: "/blog/generative-ai-code-assistants-2025",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-ai-privacy-preserving-analytics-2025",
+    title: "Edge AI Privacy-Preserving Analytics 2025",
+    description: "Zero‑PII insights in <100ms via scoped IDs, on‑device aggregation, DP noise.",
+    link: "/blog/edge-ai-privacy-preserving-analytics-2025",
+    type: "article",
+    featured: true
+  }
+);
+
 // Jan 2027 – Feature three brand-new articles
 featuredBlogPosts.unshift(
   {
