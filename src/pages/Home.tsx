@@ -93,42 +93,42 @@ const Home = () => {
             </p>
 
             {/* NEW CONTENT ANNOUNCEMENT */}
-            <div className="bg-gradient-to-r from-emerald-500/20 via-teal-500/20 to-cyan-500/20 border-2 border-emerald-400/40 rounded-xl p-6 mb-6 animate-fade-in shadow-2xl">
+            <div className="bg-gradient-to-r from-purple-500/20 via-pink-500/20 to-cyan-500/20 border-2 border-purple-400/40 rounded-xl p-6 mb-6 animate-fade-in shadow-2xl">
               <div className="flex items-center justify-center gap-3 mb-3">
-                <Rocket className="w-6 h-6 text-emerald-400 animate-bounce" />
-                <span className="text-lg font-bold text-emerald-300">🔥 JUST RELEASED - OCTOBER 1, 2025</span>
-                <Rocket className="w-6 h-6 text-emerald-400 animate-bounce" />
+                <Rocket className="w-6 h-6 text-purple-400 animate-bounce" />
+                <span className="text-lg font-bold text-purple-300">🚀 BRAND NEW - OCTOBER 2025</span>
+                <Rocket className="w-6 h-6 text-purple-400 animate-bounce" />
               </div>
               <p className="text-white text-xl font-bold mb-3 text-center">
-                Autonomous AI Orchestration Platform + Real-Time Intelligence Revolution
+                Cognitive Automation Revolution + Healthcare AI Success Story
               </p>
               <div className="grid md:grid-cols-3 gap-4 text-sm text-zion-slate-light mb-4">
                 <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-emerald-400" />
-                  <span className="font-semibold">$847M Value Created (Fortune 500)</span>
+                  <CheckCircle className="w-4 h-4 text-purple-400" />
+                  <span className="font-semibold">$127M Combined Value Created</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-emerald-400" />
-                  <span className="font-semibold">95% Efficiency Gain + 1000x Faster</span>
+                  <CheckCircle className="w-4 h-4 text-pink-400" />
+                  <span className="font-semibold">92% Efficiency + 10x Productivity</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-emerald-400" />
-                  <span className="font-semibold">4,200% ROI in 18 Months</span>
+                  <CheckCircle className="w-4 h-4 text-cyan-400" />
+                  <span className="font-semibold">96% Patient Satisfaction</span>
                 </div>
               </div>
-              <div className="flex justify-center gap-4">
+              <div className="flex flex-wrap justify-center gap-4">
                 <Link
-                  to="/blog/ai-2025-oct-autonomous-ai-orchestration-platform-revolution"
-                  className="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
+                  to="/blog/ai-2025-oct-cognitive-automation-enterprise-revolution"
+                  className="inline-flex items-center gap-2 bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
-                  Autonomous AI Platform
+                  Cognitive Automation Guide
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link
-                  to="/blog/ai-2025-oct-real-time-ai-powered-business-intelligence-transformation"
-                  className="inline-flex items-center gap-2 bg-teal-500 hover:bg-teal-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
+                  to="/case-studies/healthcare-ai-transformation-2025"
+                  className="inline-flex items-center gap-2 bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
-                  Real-Time Intelligence
+                  $124M Healthcare Success
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -214,54 +214,54 @@ const Home = () => {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
               {/* Blog Post 1 - NEW OCTOBER CONTENT */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30 hover:border-emerald-400/60 transition-all hover:scale-105 hover:shadow-xl">
-                <div className="text-emerald-400 text-sm font-semibold mb-2 uppercase">🔥 NEW - Oct 2025</div>
-                <h3 className="text-lg font-bold text-white mb-3">Autonomous AI Orchestration</h3>
-                <p className="text-emerald-100 text-sm mb-4">95% efficiency gain + $847M value creation. The platform revolution is here - 18 min read</p>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:border-purple-400/60 transition-all hover:scale-105 hover:shadow-xl">
+                <div className="text-purple-400 text-sm font-semibold mb-2 uppercase">🔥 HOT - Oct 2025</div>
+                <h3 className="text-lg font-bold text-white mb-3">Cognitive Automation Revolution</h3>
+                <p className="text-purple-100 text-sm mb-4">92% efficiency gains + $3.2M savings. Enterprise transformation guide - 22 min read</p>
                 <Link 
-                  to="/blog/ai-2025-oct-autonomous-ai-orchestration-platform-revolution" 
-                  className="inline-flex items-center text-emerald-300 hover:text-white font-semibold text-sm"
+                  to="/blog/ai-2025-oct-cognitive-automation-enterprise-revolution" 
+                  className="inline-flex items-center text-purple-300 hover:text-white font-semibold text-sm"
                 >
                   Read Now <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
               </div>
 
-              {/* Blog Post 2 - NEW OCTOBER CONTENT */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 hover:border-cyan-400/60 transition-all hover:scale-105 hover:shadow-xl">
-                <div className="text-cyan-400 text-sm font-semibold mb-2 uppercase">🚀 NEW - Oct 2025</div>
-                <h3 className="text-lg font-bold text-white mb-3">Real-Time AI Intelligence</h3>
-                <p className="text-cyan-100 text-sm mb-4">From hours to milliseconds - 1000x faster insights with 94% accuracy - 16 min read</p>
+              {/* Case Study 1 - NEW OCTOBER CONTENT */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-pink-400/30 hover:border-pink-400/60 transition-all hover:scale-105 hover:shadow-xl">
+                <div className="text-pink-400 text-sm font-semibold mb-2 uppercase">💼 NEW SUCCESS - Oct 2025</div>
+                <h3 className="text-lg font-bold text-white mb-3">$124M Healthcare AI Win</h3>
+                <p className="text-pink-100 text-sm mb-4">3.8M patients, 450 facilities, 96% satisfaction. Transformational healthcare AI success</p>
                 <Link 
-                  to="/blog/ai-2025-oct-real-time-ai-powered-business-intelligence-transformation" 
-                  className="inline-flex items-center text-cyan-300 hover:text-white font-semibold text-sm"
+                  to="/case-studies/healthcare-ai-transformation-2025" 
+                  className="inline-flex items-center text-pink-300 hover:text-white font-semibold text-sm"
                 >
-                  Learn More <ArrowRight className="w-4 h-4 ml-1" />
+                  Read Case Study <ArrowRight className="w-4 h-4 ml-1" />
+                </Link>
+              </div>
+
+              {/* Case Study 2 */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30 hover:border-emerald-400/60 transition-all hover:scale-105 hover:shadow-xl">
+                <div className="text-emerald-400 text-sm font-semibold mb-2 uppercase">✅ PROVEN - Oct 2025</div>
+                <h3 className="text-lg font-bold text-white mb-3">$489M Retail Transformation</h3>
+                <p className="text-emerald-100 text-sm mb-4">Fortune 100 retailer achieves 94% inventory optimization across 2,800+ stores</p>
+                <Link 
+                  to="/case-studies/global-retail-ai-transformation-2025" 
+                  className="inline-flex items-center text-emerald-300 hover:text-white font-semibold text-sm"
+                >
+                  View Results <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
               </div>
 
               {/* New Service */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30 hover:border-blue-400/60 transition-all hover:scale-105 hover:shadow-xl">
-                <div className="text-blue-400 text-sm font-semibold mb-2 uppercase">🚀 Service Launch</div>
-                <h3 className="text-lg font-bold text-white mb-3">Edge AI Platform</h3>
-                <p className="text-blue-100 text-sm mb-4">Deploy intelligence at the edge with less than 10ms latency. Starting at $4,999/mo</p>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 hover:border-cyan-400/60 transition-all hover:scale-105 hover:shadow-xl">
+                <div className="text-cyan-400 text-sm font-semibold mb-2 uppercase">🚀 AVAILABLE NOW</div>
+                <h3 className="text-lg font-bold text-white mb-3">AI Workflow Automation</h3>
+                <p className="text-cyan-100 text-sm mb-4">Reduce manual tasks by 80%. Starting at $99/month with 30-day free trial</p>
                 <Link 
-                  to="/services/ai-2025-october-edge-ai-platform" 
-                  className="inline-flex items-center text-blue-300 hover:text-white font-semibold text-sm"
+                  to="/services/ai-workflow-automation" 
+                  className="inline-flex items-center text-cyan-300 hover:text-white font-semibold text-sm"
                 >
-                  Explore Platform <ArrowRight className="w-4 h-4 ml-1" />
-                </Link>
-              </div>
-
-              {/* Case Study - NEW OCTOBER CONTENT */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:border-purple-400/60 transition-all hover:scale-105 hover:shadow-xl">
-                <div className="text-purple-400 text-sm font-semibold mb-2 uppercase">💼 NEW SUCCESS - Oct 2025</div>
-                <h3 className="text-lg font-bold text-white mb-3">$627M Fortune 100 Retailer</h3>
-                <p className="text-purple-100 text-sm mb-4">How real-time AI intelligence transformed decision-making and created massive value</p>
-                <Link 
-                  to="/case-studies/ai-2025-oct-fortune-100-retailer-real-time-intelligence-627m-success" 
-                  className="inline-flex items-center text-purple-300 hover:text-white font-semibold text-sm"
-                >
-                  Read Case Study <ArrowRight className="w-4 h-4 ml-1" />
+                  Start Free Trial <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
               </div>
             </div>
