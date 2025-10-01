@@ -24,6 +24,7 @@ import Header from "../components/Header";
 import October2025EdgeAIQuantumCryptoBanner from "../components/October2025EdgeAIQuantumCryptoBanner";
 import October2025BreakthroughContentBanner from "../components/October2025BreakthroughContentBanner";
 import October2025AIRevolutionBanner from "../components/October2025AIRevolutionBanner";
+import October2025NewContentBanner from "../components/October2025NewContentBanner";
 import LatestArticlesShowcase from "../components/LatestArticlesShowcase";
 import LatestContentBanner from "../components/LatestContentBanner";
 import LatestInsights from "../components/LatestInsights";
@@ -119,6 +120,11 @@ const Home = () => {
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
+        
+        {/* 🌟 OCTOBER 1, 2025 - BRAND NEW CONTENT: Multimodal AI, Security Mesh & RAG 2.0 */}
+        <div className="container mx-auto px-4 py-8">
+          <October2025NewContentBanner />
+        </div>
         
         {/* 🔥 NOVEMBER 1, 2025 - BRAND NEW: Federated Learning, LLMOps & Platform Engineering */}
         <NewContentPromoBanner 
