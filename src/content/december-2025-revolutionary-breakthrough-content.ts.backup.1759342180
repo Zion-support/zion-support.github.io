@@ -2,7 +2,11 @@
 
 export interface RevolutionaryBreakthroughContent {
   id: string;
+<<<<<<< HEAD
+  slug: string;
+=======
   slug?: string;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ab1
   title: string;
   description: string;
   excerpt: string;
