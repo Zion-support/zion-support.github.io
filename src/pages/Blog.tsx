@@ -12,11 +12,11 @@ import {
   Zap
 } from "lucide-react";
 import React, { useMemo, useState } from "react";
-import { latestArticles, featuredArticles } from "../content/latest-articles";
+import { latestArticles } from "../content/latest-articles";
 import { Helmet } from "react-helmet-async";
 import BlogPromotionBanner from "../components/BlogPromotionBanner";
-const Footer: React.FC = () => null;
-import Header from "../components/Header";
+// const Footer: React.FC = () => null;
+// import Header from "../components/Header";
 
 interface BlogPost {
   id: number;
