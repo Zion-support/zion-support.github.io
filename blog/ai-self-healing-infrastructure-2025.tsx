@@ -25,7 +25,7 @@ export default function AISelfHealingInfrastructure2025() {
 					<ul className="list-disc pl-6 space-y-2 text-white/90">
 						<li>Dynamic resource allocation optimizing cost by 40-60%</li>
 						<li>Auto-scaling with workload prediction reducing waste by 50%</li>
-						<li>Traffic rerouting during incidents maintaining <10ms latency</li>
+                                            <li>Traffic rerouting during incidents maintaining &lt;10ms latency</li>
 						<li>Cross-region failover in under 5 seconds with zero data loss</li>
 					</ul>
 				</section>
