@@ -12,6 +12,9 @@ export default function ContentHub() {
     {
       title: 'AI Implementation',
       articles: [
+        { title: 'Autonomous Analytics Breakthrough — 620% ROI', slug: '/blog/ai-2025-october-autonomous-analytics-breakthrough', readTime: '14 min', featured: true, isNew: true },
+        { title: 'Sovereign Vector Knowledge Graph — 99.99% SLO', slug: '/blog/ai-2025-october-sovereign-vector-knowledge-graph', readTime: '16 min', featured: true, isNew: true },
+        { title: 'Neural Adaptive FinOps — 52% Cost Reduction', slug: '/blog/ai-2025-october-neural-adaptive-finops', readTime: '12 min', featured: true, isNew: true },
         { title: 'Neural Adaptive Systems: The $89B Enterprise AI Revolution', slug: '/blog/ai-2025-oct-neural-adaptive-systems-enterprise-revolution', readTime: '24 min', featured: true, isNew: true },
         { title: 'AI Agent Swarms Enterprise Orchestration 2026', slug: '/blog/ai-agent-swarms-enterprise-orchestration-2026', readTime: '28 min', featured: true },
         { title: 'Quantum-Enhanced AI Enterprise Breakthrough 2026', slug: '/blog/quantum-enhanced-ai-enterprise-breakthrough-2026', readTime: '32 min', featured: true },

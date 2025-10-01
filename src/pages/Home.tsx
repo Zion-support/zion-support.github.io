@@ -51,7 +51,6 @@ import NewServicesPromoBanner2026 from "../components/NewServicesPromoBanner2026
 import November2025GameChangersBanner from "../components/November2025GameChangersBanner";
 import October2025CognitiveRevolutionBanner from "../components/October2025CognitiveRevolutionBanner";
 import { latestInsights } from "../content/insights";
-<<<<<<< HEAD
 import NewContentPromoBanner from "../components/NewContentPromoBanner";
 import EnhancedPromotionalBanner from "../components/EnhancedPromotionalBanner";
 import { getFeaturedBanners } from "../content/enhanced-promotional-banners";
@@ -61,9 +60,7 @@ import ComprehensivePromoBanner from "../components/ComprehensivePromoBanner";
 import NewArticlesPromoBanner from "../components/NewArticlesPromoBanner";
 import NewServicesPromoBanner from "../components/NewServicesPromoBanner";
 import ContentPromotionBanner from "../components/ContentPromotionBanner";
-=======
 import { blogPosts } from "../content/blog-posts";
->>>>>>> origin/main
 
 const Home = () => {
   return (

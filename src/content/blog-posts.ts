@@ -1135,8 +1135,7 @@ The future of business software is here, and it's micro SAAS. Don't get left beh
   {
     slug: "ai-2025-oct-03-autonomous-supply-chain-revolution",
     title: "Autonomous Supply Chain 2025: 99.2% Forecast Accuracy, 78% Cost ↓",
-    description: "Deploy AI-driven planning, routing, and fulfillment with closed-loop telemetry and guardrails. Real-world playbooks for 99.2% forecast accuracy and 78% cost reduction.
-    ",
+    description: "Deploy AI-driven planning, routing, and fulfillment with closed-loop telemetry and guardrails. Real-world playbooks for 99.2% forecast accuracy and 78% cost reduction.",
     content: `
 # Autonomous Supply Chain 2025
 
