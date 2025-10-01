@@ -175,8 +175,8 @@ const ProductionAIAgentDeploymentExcellenceArticle = () => {
               <h3 className="text-xl font-bold text-blue-600 dark:text-blue-400 mb-3">Reliability</h3>
               <ul className="space-y-2">
                 <li>• 99.5-99.9% uptime SLA</li>
-                <li>• <5% error rates</li>
-                <li>• <2s P95 latency</li>
+                <li>• &lt;5% error rates</li>
+                <li>• &lt;2s P95 latency</li>
                 <li>• 95%+ task completion</li>
               </ul>
             </div>
@@ -184,7 +184,7 @@ const ProductionAIAgentDeploymentExcellenceArticle = () => {
               <h3 className="text-xl font-bold text-green-600 dark:text-green-400 mb-3">Quality</h3>
               <ul className="space-y-2">
                 <li>• 90-95% accuracy rates</li>
-                <li>• <5% hallucination rate</li>
+                  <li>• &lt;5% hallucination rate</li>
                 <li>• 95%+ user satisfaction</li>
                 <li>• 99%+ policy compliance</li>
               </ul>
