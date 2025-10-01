@@ -39,6 +39,7 @@ import October2025AdvancedAIInnovationsBanner from "../components/October2025Adv
 import October2025NewTechBreakthroughsBanner from "../components/October2025NewTechBreakthroughsBanner";
 import October2025LatestAIBreakthroughsBanner from "../components/October2025LatestAIBreakthroughsBanner";
 import October2025LatestBreakthroughBanner from "../components/October2025LatestBreakthroughBanner";
+import October2025InfrastructureExcellenceBanner from "../components/October2025InfrastructureExcellenceBanner";
 import LatestArticlesShowcase from "../components/LatestArticlesShowcase";
 import LatestContentBanner from "../components/LatestContentBanner";
 import LatestInsights from "../components/LatestInsights";
@@ -352,6 +353,9 @@ const Home = () => {
             { title: "MLOps & Platform Engineering Convergence 2025 — Unified AI Infrastructure (10x Deployment Velocity)", category: "ML Platform", link: "/blog/ai-2025-november-mlops-platform-engineering-convergence" }
           ]}
         />
+        
+        {/* 🔥 OCTOBER 1, 2025 - INFRASTRUCTURE EXCELLENCE: Distributed Tracing, Kubernetes Security & Real-Time Streaming */}
+        <October2025InfrastructureExcellenceBanner />
         
         {/* 🔥 OCTOBER 1, 2025 - BRAND NEW: AI Revolution - Agents, Development Tools & Safety */}
         <October2025AIRevolutionBanner className="border-b border-white/10" />
