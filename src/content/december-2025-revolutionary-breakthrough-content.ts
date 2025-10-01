@@ -2,6 +2,7 @@
 
 export interface RevolutionaryBreakthroughContent {
   id: string;
+  slug?: string;
   title: string;
   description: string;
   excerpt: string;
