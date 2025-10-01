@@ -14,6 +14,24 @@ const LatestContentBanner2025: React.FC = () => {
       impact: "$50M+ Savings"
     },
     {
+      title: "Zero‑PII Telemetry v2",
+      description: "Decision‑grade signals without centralized IDs — privacy‑first analytics",
+      slug: "edge-2025-oct-01-zero-pii-telemetry-v2",
+      category: "Observability",
+      emoji: "🛡️",
+      highlight: "NEW",
+      impact: "Zero PII"
+    },
+    {
+      title: "Live Evals & Scorecards",
+      description: "Ship GenAI fast without regressions — KPI‑wired canaries",
+      slug: "genai-2025-oct-01-eval-scorecards-live-canaries",
+      category: "GenAI",
+      emoji: "📈",
+      highlight: "NEW",
+      impact: "No regressions"
+    },
+    {
       title: "AI 2026: Future Predictions & Mega Trends",
       description: "Comprehensive analysis of revolutionary AI trends and transformative predictions through 2030",
       slug: "ai-2026-future-predictions-mega-trends",
