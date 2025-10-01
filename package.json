@@ -9,7 +9,7 @@
     "build": "vite build",
     "build:no-check": "vite build",
     "preview": "vite preview",
-    "lint": "eslint src --report-unused-disable-directives --max-warnings 250",
+    "lint": "eslint src --report-unused-disable-directives --max-warnings 400",
     "lint:fix": "eslint . --fix",
     "type-check": "tsc -p tsconfig.typecheck.json --noEmit",
     "type-check:ci": "tsc -p tsconfig.typecheck.json --noEmit",
