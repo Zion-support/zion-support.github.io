@@ -10,7 +10,6 @@
       run: |
         echo "📢 Sending team notifications..."
         # Add notification logic here (Slack, email, etc.)
-=======
 name: Dependencies
 on:
   schedule:

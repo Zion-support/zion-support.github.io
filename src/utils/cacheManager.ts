@@ -1,394 +1,279 @@
 /**
- * Advanced Caching and Data Management System
- * Provides intelligent caching, data persistence, and state management
+ * Cache Manager
+ * Implements intelligent caching strategies for better performance
  */
 
-export interface CacheConfig {
-  maxSize: number;
-  ttl: number; // Time to live in milliseconds
-  strategy: 'lru' | 'fifo' | 'lfu';
-  persistence: 'memory' | 'localStorage' | 'sessionStorage' | 'indexedDB';
-  compression: boolean;
+export interface CacheOptions {
+  ttl?: number; // Time to live in milliseconds
+  strategy?: 'memory' | 'localStorage' | 'sessionStorage';
+  maxSize?: number; // Maximum number of entries
 }
 
-export interface CacheEntry<T = any> {
-  key: string;
-  value: T;
+export interface CacheEntry<T> {
+  data: T;
   timestamp: number;
   ttl: number;
-  accessCount: number;
-  lastAccessed: number;
-  size: number;
-}
-
-export interface CacheStats {
-  hitRate: number;
-  missRate: number;
-  totalHits: number;
-  totalMisses: number;
-  currentSize: number;
-  maxSize: number;
-  entries: number;
 }
 
 class CacheManager {
-  private cache: Map<string, CacheEntry> = new Map();
-  private config: CacheConfig;
-  private stats = {
-    hits: 0,
-    misses: 0,
-    totalRequests: 0,
-  };
-  private cleanupInterval?: number;
+  private memoryCache: Map<string, CacheEntry<any>> = new Map();
+  private readonly DEFAULT_TTL = 5 * 60 * 1000; // 5 minutes
+  private readonly DEFAULT_MAX_SIZE = 100;
 
-  constructor(config?: Partial<CacheConfig>) {
-    this.config = {
-      maxSize: 1000,
-      ttl: 5 * 60 * 1000, // 5 minutes
-      strategy: 'lru',
-      persistence: 'memory',
-      compression: false,
-      ...config,
-    };
+  /**
+   * Set a value in cache
+   */
+  set<T>(
+    key: string,
+    value: T,
+    options: CacheOptions = {}
+  ): void {
+    const {
+      ttl = this.DEFAULT_TTL,
+      strategy = 'memory',
+      maxSize = this.DEFAULT_MAX_SIZE,
+    } = options;
 
-    this.initializeCache();
-    this.startCleanup();
-  }
-
-  private async initializeCache(): Promise<void> {
-    await this.loadFromPersistence();
-  }
-
-  public set<T>(key: string, value: T, ttl?: number): void {
     const entry: CacheEntry<T> = {
-      key,
-      value,
+      data: value,
       timestamp: Date.now(),
-      ttl: ttl || this.config.ttl,
-      accessCount: 0,
-      lastAccessed: Date.now(),
-      size: this.calculateSize(value),
+      ttl,
     };
 
-    // Check if we need to evict entries
-    if (this.cache.size >= this.config.maxSize) {
-      this.evictEntry();
+    switch (strategy) {
+      case 'memory':
+        this.setInMemory(key, entry, maxSize);
+        break;
+      case 'localStorage':
+        this.setInStorage(key, entry, 'localStorage');
+        break;
+      case 'sessionStorage':
+        this.setInStorage(key, entry, 'sessionStorage');
+        break;
     }
-
-    this.cache.set(key, entry);
-    this.saveToPersistence();
   }
 
-  public get<T>(key: string): T | null {
-    const entry = this.cache.get(key);
-    
-    if (!entry) {
-      this.stats.misses++;
-      this.stats.totalRequests++;
-      return null;
+  /**
+   * Get a value from cache
+   */
+  get<T>(
+    key: string,
+    strategy: 'memory' | 'localStorage' | 'sessionStorage' = 'memory'
+  ): T | null {
+    let entry: CacheEntry<T> | null = null;
+
+    switch (strategy) {
+      case 'memory':
+        entry = this.memoryCache.get(key) || null;
+        break;
+      case 'localStorage':
+        entry = this.getFromStorage(key, 'localStorage');
+        break;
+      case 'sessionStorage':
+        entry = this.getFromStorage(key, 'sessionStorage');
+        break;
     }
+
+    if (!entry) return null;
 
     // Check if entry has expired
     if (this.isExpired(entry)) {
-      this.cache.delete(key);
-      this.stats.misses++;
-      this.stats.totalRequests++;
+      this.delete(key, strategy);
       return null;
     }
 
-    // Update access statistics
-    entry.accessCount++;
-    entry.lastAccessed = Date.now();
-    this.stats.hits++;
-    this.stats.totalRequests++;
-
-    // Reorder based on strategy
-    this.updateAccessOrder(key, entry);
-
-    return entry.value as T;
+    return entry.data;
   }
 
-  public has(key: string): boolean {
-    const entry = this.cache.get(key);
-    return entry ? !this.isExpired(entry) : false;
-  }
-
-  public delete(key: string): boolean {
-    const deleted = this.cache.delete(key);
-    if (deleted) {
-      this.saveToPersistence();
+  /**
+   * Delete a value from cache
+   */
+  delete(
+    key: string,
+    strategy: 'memory' | 'localStorage' | 'sessionStorage' = 'memory'
+  ): void {
+    switch (strategy) {
+      case 'memory':
+        this.memoryCache.delete(key);
+        break;
+      case 'localStorage':
+        localStorage.removeItem(key);
+        break;
+      case 'sessionStorage':
+        sessionStorage.removeItem(key);
+        break;
     }
-    return deleted;
   }
 
-  public clear(): void {
-    this.cache.clear();
-    this.saveToPersistence();
+  /**
+   * Clear all cache
+   */
+  clear(strategy?: 'memory' | 'localStorage' | 'sessionStorage'): void {
+    if (!strategy || strategy === 'memory') {
+      this.memoryCache.clear();
+    }
+    if (!strategy || strategy === 'localStorage') {
+      localStorage.clear();
+    }
+    if (!strategy || strategy === 'sessionStorage') {
+      sessionStorage.clear();
+    }
   }
 
-  public getStats(): CacheStats {
-    const totalRequests = this.stats.totalRequests;
-    const hitRate = totalRequests > 0 ? this.stats.hits / totalRequests : 0;
-    const missRate = totalRequests > 0 ? this.stats.misses / totalRequests : 0;
+  /**
+   * Check if a key exists and is not expired
+   */
+  has(
+    key: string,
+    strategy: 'memory' | 'localStorage' | 'sessionStorage' = 'memory'
+  ): boolean {
+    const value = this.get(key, strategy);
+    return value !== null;
+  }
 
+  /**
+   * Get or set pattern - fetch from cache or compute if missing
+   */
+  async getOrSet<T>(
+    key: string,
+    factory: () => Promise<T> | T,
+    options: CacheOptions = {}
+  ): Promise<T> {
+    const strategy = options.strategy || 'memory';
+    const cached = this.get<T>(key, strategy);
+
+    if (cached !== null) {
+      return cached;
+    }
+
+    const value = await factory();
+    this.set(key, value, options);
+    return value;
+  }
+
+  /**
+   * Invalidate cache entries matching a pattern
+   */
+  invalidatePattern(pattern: RegExp, strategy: 'memory' | 'localStorage' | 'sessionStorage' = 'memory'): void {
+    switch (strategy) {
+      case 'memory':
+        Array.from(this.memoryCache.keys())
+          .filter(key => pattern.test(key))
+          .forEach(key => this.memoryCache.delete(key));
+        break;
+      case 'localStorage':
+        Object.keys(localStorage)
+          .filter(key => pattern.test(key))
+          .forEach(key => localStorage.removeItem(key));
+        break;
+      case 'sessionStorage':
+        Object.keys(sessionStorage)
+          .filter(key => pattern.test(key))
+          .forEach(key => sessionStorage.removeItem(key));
+        break;
+    }
+  }
+
+  /**
+   * Get cache statistics
+   */
+  getStats(): {
+    memorySize: number;
+    localStorageSize: number;
+    sessionStorageSize: number;
+  } {
     return {
-      hitRate,
-      missRate,
-      totalHits: this.stats.hits,
-      totalMisses: this.stats.misses,
-      currentSize: this.cache.size,
-      maxSize: this.config.maxSize,
-      entries: this.cache.size,
+      memorySize: this.memoryCache.size,
+      localStorageSize: localStorage.length,
+      sessionStorageSize: sessionStorage.length,
     };
   }
 
-  public getKeys(): string[] {
-    return Array.from(this.cache.keys());
+  // Private helper methods
+
+  private setInMemory<T>(key: string, entry: CacheEntry<T>, maxSize: number): void {
+    // Implement LRU eviction if cache is full
+    if (this.memoryCache.size >= maxSize) {
+      const firstKey = this.memoryCache.keys().next().value;
+      this.memoryCache.delete(firstKey);
+    }
+    this.memoryCache.set(key, entry);
   }
 
-  public getEntries(): CacheEntry[] {
-    return Array.from(this.cache.values());
+  private setInStorage<T>(
+    key: string,
+    entry: CacheEntry<T>,
+    storage: 'localStorage' | 'sessionStorage'
+  ): void {
+    try {
+      const storageObj = storage === 'localStorage' ? localStorage : sessionStorage;
+      storageObj.setItem(key, JSON.stringify(entry));
+    } catch (error) {
+      console.warn(`Failed to set ${storage}:`, error);
+    }
   }
 
-  private isExpired(entry: CacheEntry): boolean {
+  private getFromStorage<T>(
+    key: string,
+    storage: 'localStorage' | 'sessionStorage'
+  ): CacheEntry<T> | null {
+    try {
+      const storageObj = storage === 'localStorage' ? localStorage : sessionStorage;
+      const item = storageObj.getItem(key);
+      return item ? JSON.parse(item) : null;
+    } catch (error) {
+      console.warn(`Failed to get from ${storage}:`, error);
+      return null;
+    }
+  }
+
+  private isExpired<T>(entry: CacheEntry<T>): boolean {
     return Date.now() - entry.timestamp > entry.ttl;
   }
 
-  private calculateSize(value: any): number {
-    try {
-      const serialized = JSON.stringify(value);
-      return new Blob([serialized]).size;
-    } catch {
-      return 0;
-    }
-  }
-
-  private evictEntry(): void {
-    if (this.cache.size === 0) return;
-
-    let keyToEvict: string | null = null;
-
-    switch (this.config.strategy) {
-      case 'lru':
-        keyToEvict = this.findLRUKey();
-        break;
-      case 'fifo':
-        keyToEvict = this.findFIFOKey();
-        break;
-      case 'lfu':
-        keyToEvict = this.findLFUKey();
-        break;
-    }
-
-    if (keyToEvict) {
-      this.cache.delete(keyToEvict);
-    }
-  }
-
-  private findLRUKey(): string | null {
-    let oldestKey: string | null = null;
-    let oldestTime = Date.now();
-
-    for (const [key, entry] of this.cache.entries()) {
-      if (entry.lastAccessed < oldestTime) {
-        oldestTime = entry.lastAccessed;
-        oldestKey = key;
-      }
-    }
-
-    return oldestKey;
-  }
-
-  private findFIFOKey(): string | null {
-    let oldestKey: string | null = null;
-    let oldestTime = Date.now();
-
-    for (const [key, entry] of this.cache.entries()) {
-      if (entry.timestamp < oldestTime) {
-        oldestTime = entry.timestamp;
-        oldestKey = key;
-      }
-    }
-
-    return oldestKey;
-  }
-
-  private findLFUKey(): string | null {
-    let leastFrequentKey: string | null = null;
-    let minAccessCount = Infinity;
-
-    for (const [key, entry] of this.cache.entries()) {
-      if (entry.accessCount < minAccessCount) {
-        minAccessCount = entry.accessCount;
-        leastFrequentKey = key;
-      }
-    }
-
-    return leastFrequentKey;
-  }
-
-  private updateAccessOrder(key: string, entry: CacheEntry): void {
-    // For LRU strategy, we need to update the access time
-    // The entry is already updated in the get method
-    if (this.config.strategy === 'lru') {
-      // Remove and re-add to update position in Map
-      this.cache.delete(key);
-      this.cache.set(key, entry);
-    }
-  }
-
-  private startCleanup(): void {
-    this.cleanupInterval = window.setInterval(() => {
-      this.cleanup();
-    }, 60000); // Clean up every minute
-  }
-
-  private cleanup(): void {
-    const now = Date.now();
-    const keysToDelete: string[] = [];
-
-    for (const [key, entry] of this.cache.entries()) {
+  /**
+   * Clean up expired entries (run periodically)
+   */
+  cleanup(): void {
+    // Clean memory cache
+    for (const [key, entry] of this.memoryCache.entries()) {
       if (this.isExpired(entry)) {
-        keysToDelete.push(key);
+        this.memoryCache.delete(key);
       }
     }
 
-    keysToDelete.forEach(key => this.cache.delete(key));
-
-    if (keysToDelete.length > 0) {
-      this.saveToPersistence();
-      console.log(`Cleaned up ${keysToDelete.length} expired cache entries`);
-    }
-  }
-
-  private saveToPersistence(): void {
-    if (this.config.persistence === 'memory') return;
-
-    try {
-      const data = JSON.stringify(Array.from(this.cache.entries()));
-      
-      switch (this.config.persistence) {
-        case 'localStorage':
-          localStorage.setItem('cache_data', data);
-          break;
-        case 'sessionStorage':
-          sessionStorage.setItem('cache_data', data);
-          break;
-        case 'indexedDB':
-          this.saveToIndexedDB(data);
-          break;
+    // Clean localStorage
+    for (let i = 0; i < localStorage.length; i++) {
+      const key = localStorage.key(i);
+      if (key) {
+        const entry = this.getFromStorage(key, 'localStorage');
+        if (entry && this.isExpired(entry)) {
+          localStorage.removeItem(key);
+        }
       }
-    } catch (error) {
-      console.warn('Failed to save cache to persistence:', error);
     }
-  }
 
-  private async loadFromPersistence(): Promise<void> {
-    if (this.config.persistence === 'memory') return;
-
-    try {
-      let data: string | null = null;
-      
-      switch (this.config.persistence) {
-        case 'localStorage':
-          data = localStorage.getItem('cache_data');
-          break;
-        case 'sessionStorage':
-          data = sessionStorage.getItem('cache_data');
-          break;
-        case 'indexedDB':
-          data = await this.loadFromIndexedDB();
-          break;
+    // Clean sessionStorage
+    for (let i = 0; i < sessionStorage.length; i++) {
+      const key = sessionStorage.key(i);
+      if (key) {
+        const entry = this.getFromStorage(key, 'sessionStorage');
+        if (entry && this.isExpired(entry)) {
+          sessionStorage.removeItem(key);
+        }
       }
-
-      if (data) {
-        const entries = JSON.parse(data) as [string, CacheEntry][];
-        this.cache = new Map(entries);
-      }
-    } catch (error) {
-      console.warn('Failed to load cache from persistence:', error);
     }
-  }
-
-  private async saveToIndexedDB(data: string): Promise<void> {
-    // Simplified IndexedDB implementation
-    // In a real application, you would use a proper IndexedDB wrapper
-    console.log('Saving to IndexedDB:', data.length, 'characters');
-  }
-
-  private async loadFromIndexedDB(): Promise<string | null> {
-    // Simplified IndexedDB implementation
-    // In a real application, you would use a proper IndexedDB wrapper
-    return null;
-  }
-
-  public destroy(): void {
-    if (this.cleanupInterval) {
-      window.clearInterval(this.cleanupInterval);
-    }
-    this.clear();
   }
 }
 
-// Create singleton instances for different use cases
-export const memoryCache = new CacheManager({
-  maxSize: 500,
-  ttl: 5 * 60 * 1000, // 5 minutes
-  strategy: 'lru',
-  persistence: 'memory',
-});
+// Export singleton instance
+export const cacheManager = new CacheManager();
 
-export const localStorageCache = new CacheManager({
-  maxSize: 100,
-  ttl: 60 * 60 * 1000, // 1 hour
-  strategy: 'lru',
-  persistence: 'localStorage',
-});
+// Run cleanup every 5 minutes
+if (typeof window !== 'undefined') {
+  setInterval(() => {
+    cacheManager.cleanup();
+  }, 5 * 60 * 1000);
+}
 
-export const sessionCache = new CacheManager({
-  maxSize: 200,
-  ttl: 30 * 60 * 1000, // 30 minutes
-  strategy: 'lru',
-  persistence: 'sessionStorage',
-});
-
-// Utility functions for common caching patterns
-export const cacheWithRetry = async <T>(
-  key: string,
-  fetcher: () => Promise<T>,
-  cache: CacheManager = memoryCache,
-  retries = 3
-): Promise<T> => {
-  // Try to get from cache first
-  const cached = cache.get<T>(key);
-  if (cached !== null) {
-    return cached;
-  }
-
-  // Fetch with retry logic
-  let lastError: Error | null = null;
-  
-  for (let i = 0; i < retries; i++) {
-    try {
-      const result = await fetcher();
-      cache.set(key, result);
-      return result;
-    } catch (error) {
-      lastError = error as Error;
-      if (i < retries - 1) {
-        await new Promise(resolve => setTimeout(resolve, Math.pow(2, i) * 1000));
-      }
-    }
-  }
-
-  throw lastError || new Error('Failed to fetch data after retries');
-};
-
-export const cacheWithTTL = <T>(
-  key: string,
-  value: T,
-  ttl: number,
-  cache: CacheManager = memoryCache
-): void => {
-  cache.set(key, value, ttl);
-};
+export default cacheManager;

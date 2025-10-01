@@ -8,10 +8,6 @@
   </head>
   <body>
     <div id="root"></div>
-<<<<<<< HEAD
-=======
-    <div id="notification-root"></div>
->>>>>>> origin/cursor/create-and-deploy-new-content-2cf4
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

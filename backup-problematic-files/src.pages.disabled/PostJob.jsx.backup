@@ -22,11 +22,6 @@ const PostJob = ({ className }) => {
   return (
     <div className={className || ''}>
 
-<<<<<<< HEAD
-=======
-return (
-    <div>
->>>>>>> origin/cursor/delete-old-data-records-6bba
       <h1>PostJob</h1>
       <p>This component is currently under development.</p>
     </div>
@@ -35,5 +30,3 @@ return (
 }
 }
 }
-=======
->>>>>>> main

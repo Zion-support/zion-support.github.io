@@ -1,29 +1,4 @@
 
 
 
-<<<<<<< HEAD
-=======
-module.exports = {};
-
-
-
-
-
-
-
-// Mock test for signup auto login
-describe('Signup Auto Login', () => {'
-
-  it('should render without crashing', () => {
-    expect(true).toBe(true);
-
-
-
-
-
-
-
-
-
->>>>>>> main
 

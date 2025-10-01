@@ -1,28 +1,35 @@
 #!/bin/bash
 
-echo "Fixing merge conflicts in source files..."
+echo "🔧 Fixing merge conflicts in the codebase..."
 
-# Find all TypeScript/JavaScript files with merge conflicts
-find src -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" | while read file; do
-    if grep -q "^<<<<<<< HEAD" "$file"; then
-        echo "Processing $file..."
-        
-        # Create a backup
-        cp "$file" "$file.merge-backup"
-        
-        # Remove merge conflict markers and keep HEAD version
-        # This removes everything between <<<<<<< HEAD and =======
-        # and everything between ======= and >>>>>>> branch-name
-        awk '
-        /^<<<<<<< HEAD/ { in_head = 1; next }
-        /^=======/ { in_head = 0; in_other = 1; next }
-        /^>>>>>>> / { in_other = 0; next }
-        in_head { print }
-        !in_head && !in_other { print }
-        ' "$file" > "$file.tmp" && mv "$file.tmp" "$file"
-        
-        echo "Fixed conflicts in $file"
-    fi
+# Find all files with merge conflict markers
+CONFLICT_FILES=$(grep -l "^[<>=]\{7\}" $(find . -type f \( -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" -o -name "*.md" \) -not -path "./node_modules/*" -not -path "./.git/*" -not -path "./dist/*") 2>/dev/null || echo "")
+
+if [ -z "$CONFLICT_FILES" ]; then
+    echo "✅ No merge conflicts found!"
+    exit 0
+fi
+
+echo "📋 Found merge conflicts in:"
+echo "$CONFLICT_FILES"
+
+FIXED_COUNT=0
+
+for file in $CONFLICT_FILES; do
+    echo "🔧 Fixing conflicts in $file..."
+    
+    # Create backup
+    cp "$file" "$file.backup.$(date +%s)"
+    
+    # Remove merge conflict markers and keep the first version (HEAD)
+    sed -i '/^<<<<<<< HEAD/,/^=======/d' "$file"
+    sed -i '/^>>>>>>> /d' "$file"
+    
+    echo "✅ Fixed conflicts in $file"
+    FIXED_COUNT=$((FIXED_COUNT + 1))
 done
 
-echo "Merge conflict resolution complete!"
+echo ""
+echo "🎉 Merge conflict resolution complete!"
+echo "📊 Fixed $FIXED_COUNT files"
+echo "💾 Backups created with .backup.timestamp suffix"

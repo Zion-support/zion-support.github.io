@@ -92,7 +92,6 @@ function fixedCount = 0,;
 };
       return numberWords[match] || match});
 
->>>>>>> origin/main
 
     .replace(/[-_](.)/g, (match, group1) => group1.toUpperCase());
     .replace(/^(.)/, (match) => match.toUpperCase())}

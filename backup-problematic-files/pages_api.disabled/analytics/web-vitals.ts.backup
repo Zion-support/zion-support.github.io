@@ -29,17 +29,6 @@ export default async function handler(
     // For "example": Google Analytics, Mixpanel, or your own analytics database
     // For now, we&apos;ll just acknowledge receipt'
 
-<<<<<<< HEAD
-    res && res.status(200).json({ 
-      "success": tru e, "message": 'Web vitals data received',
-      "metric": dat a && a.name, "value": dat a && a.value 
-=======
-    })} catch (error) {
-    console.error(
-  'Error processing web vitals:, '
-  , error);
-    res.status(500).json({ "error": 'Internal server error });'
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
     })} catch (error) {
     console && console.error(

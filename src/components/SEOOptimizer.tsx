@@ -13,34 +13,17 @@ interface SEOOptimizerProps {
   noindex?: boolean;
 }
 
-type SEOData = {
-  title: string;
-  description: string;
-  canonical?: string;
-};
-
-// Support both explicit props and a combined seoData prop for convenience
-const SEOOptimizer: React.FC<SEOOptimizerProps & { seoData?: SEOData }> = ({
-  title,
-  description,
+const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
+  title = 'Zion Tech Group - Leading AI & Technology Solutions',
+  description = 'Cutting-edge AI, cloud, and digital transformation solutions for modern enterprises.',
   keywords,
   canonicalUrl,
   ogImage = '/api/placeholder/1200/630',
   ogType = 'website',
   twitterCard = 'summary_large_image',
   structuredData,
-  noindex = false,
-  seoData
+  noindex = false
 }) => {
-  if (seoData) {
-    title = seoData.title;
-    description = seoData.description;
-    canonicalUrl = seoData.canonical;
-  }
-
-  // Fallbacks if minimal props were provided
-  title = title ?? 'Zion Tech Group';
-  description = description ?? 'Advanced AI and IT solutions.';
   const siteName = 'Zion Tech Group';
   const siteUrl = 'https://ziontechgroup.com';
   const fullCanonicalUrl = canonicalUrl ? `${siteUrl}${canonicalUrl}` : siteUrl;

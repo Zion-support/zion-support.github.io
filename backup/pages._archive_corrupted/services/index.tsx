@@ -21,7 +21,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 
-import React from 'react';
+
 import Head from 'next/head';
 import Link from 'next/link';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3, Cpu, Headphones, Calendar, Send, Layers } from 'lucide-react';
