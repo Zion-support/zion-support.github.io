@@ -445,51 +445,6 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: 9,
   },
   {
-<<<<<<< HEAD
-    id: '28',
-    title: 'Quantum-Safe Cryptography: Enterprise Migration Playbook (2025)',
-    slug: 'quantum-safe-cryptography-enterprise-migration-2025',
-    excerpt:
-      'Practical roadmap to adopt NIST PQC (Kyber, Dilithium) with hybrid rollouts, performance tuning, and zero-downtime cutovers.',
-    content:
-      'Quantum threats demand action now. This playbook details discovery of cryptographic assets, risk triage, hybrid TLS handshakes, staged migration patterns, compatibility fallbacks, and observability for crypto agility. Includes example configs, rollout checklists, and benchmarks to de-risk PQC adoption across fleets.',
-    featuredImage: '/images/blog/quantum-safe-enterprise.jpg',
-    category: 'Security',
-    tags: ['Post-Quantum', 'Cryptography', 'NIST', 'Migration'],
-    author: 'Zion Tech Team',
-    publishedAt: '2025-10-03',
-    readTime: 9,
-  },
-  {
-    id: '29',
-    title: 'Neuromorphic Edge AI: Event-Driven Intelligence Under 10ms',
-    slug: 'neuromorphic-edge-ai-event-driven-2025',
-    excerpt:
-      'Brain-inspired SNNs for ultra-low power, sub-10ms decisions at the edge. Architectures, toolchains, and deployment patterns.',
-    content:
-      'We break down spiking neural networks, event cameras, and neuromorphic chips for on-device intelligence. Learn encoding strategies, training pipelines, and production deployment on constrained hardware for robotics, manufacturing, and IoT—achieving 1000x energy efficiency over GPU baselines.',
-    featuredImage: '/images/blog/neuromorphic-edge-ai.jpg',
-    category: 'AI',
-    tags: ['Neuromorphic', 'Edge AI', 'SNN', 'Efficiency'],
-    author: 'Zion Tech Team',
-    publishedAt: '2025-10-03',
-    readTime: 8,
-  },
-  {
-    id: '30',
-    title: 'Synthetic Data in Production: Privacy-Safe Accuracy Gains',
-    slug: 'synthetic-data-production-privacy-2025',
-    excerpt:
-      'Blueprint to generate, validate, and govern synthetic datasets that boost accuracy while eliminating PII risk.',
-    content:
-      'From diffusion to GAN pipelines, we show how to build production-grade synthetic data systems: coverage targets, bias checks, privacy guarantees, and evaluator loops that prove quality uplift. Includes templates, governance controls, and ROI models for platform teams.',
-    featuredImage: '/images/blog/synthetic-data-production.jpg',
-    category: 'Data',
-    tags: ['Synthetic Data', 'Privacy', 'Quality', 'MLOps'],
-    author: 'Zion Tech Team',
-    publishedAt: '2025-10-03',
-    readTime: 10,
-=======
     id: '27',
     title: 'Policy-Driven AI: Guardrails as Code for Safer Autonomy',
     slug: 'policy-driven-ai-guardrails-as-code-2025-10-02',
@@ -533,6 +488,65 @@ export const BLOG_POSTS: BlogPost[] = [
     author: 'Zion Tech Team',
     publishedAt: '2025-10-02',
     readTime: 7,
->>>>>>> chore/add-oct-2025-content-and-banner
+  },
+  {
+    id: '34',
+    title: 'Quantum-Safe Cryptography: Enterprise Migration Playbook (2025)',
+    slug: 'quantum-safe-cryptography-enterprise-migration-2025',
+    excerpt:
+      'Practical roadmap to adopt NIST PQC (Kyber, Dilithium) with hybrid rollouts, performance tuning, and zero-downtime cutovers.',
+    content:
+      'Quantum threats demand action now. This playbook details discovery of cryptographic assets, risk triage, hybrid TLS handshakes, staged migration patterns, compatibility fallbacks, and observability for crypto agility. Includes example configs, rollout checklists, and benchmarks to de-risk PQC adoption across fleets.',
+    featuredImage: '/images/blog/quantum-safe-enterprise.jpg',
+    category: 'Security',
+    tags: ['Post-Quantum', 'Cryptography', 'NIST', 'Migration'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-03',
+    readTime: 9,
+  },
+  {
+    id: '35',
+    title: 'Neuromorphic Edge AI: Event-Driven Intelligence Under 10ms',
+    slug: 'neuromorphic-edge-ai-event-driven-2025',
+    excerpt:
+      'Brain-inspired SNNs for ultra-low power, sub-10ms decisions at the edge. Architectures, toolchains, and deployment patterns.',
+    content:
+      'We break down spiking neural networks, event cameras, and neuromorphic chips for on-device intelligence. Learn encoding strategies, training pipelines, and production deployment on constrained hardware for robotics, manufacturing, and IoT—achieving 1000x energy efficiency over GPU baselines.',
+    featuredImage: '/images/blog/neuromorphic-edge-ai.jpg',
+    category: 'AI',
+    tags: ['Neuromorphic', 'Edge AI', 'SNN', 'Efficiency'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-03',
+    readTime: 8,
+  },
+  {
+    id: '36',
+    title: 'Synthetic Data in Production: Privacy-Safe Accuracy Gains',
+    slug: 'synthetic-data-production-privacy-2025',
+    excerpt:
+      'Blueprint to generate, validate, and govern synthetic datasets that boost accuracy while eliminating PII risk.',
+    content:
+      'From diffusion to GAN pipelines, we show how to build production-grade synthetic data systems: coverage targets, bias checks, privacy guarantees, and evaluator loops that prove quality uplift. Includes templates, governance controls, and ROI models for platform teams.',
+    featuredImage: '/images/blog/synthetic-data-production.jpg',
+    category: 'Data',
+    tags: ['Synthetic Data', 'Privacy', 'Quality', 'MLOps'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-03',
+    readTime: 10,
+  },
+  {
+    id: '37',
+    title: 'AI Ops Excellence: Live Scorecards, Canary Gates, Instant Rollback',
+    slug: 'ai-ops-excellence-2025-oct-03',
+    excerpt:
+      'Operate AI safely at scale with KPI-linked scorecards, canary gates, and rollback-first design.',
+    content:
+      'A concise field guide to operating AI systems at enterprise scale. Wire KPI-linked scorecards, budget-aware canary routes, and instant rollback hooks so teams can ship faster without incidents. Includes reference dashboards, CI policy tests, and rollout rituals used in production.',
+    featuredImage: '/images/blog/ai-ops-excellence.jpg',
+    category: 'Operations',
+    tags: ['SRE', 'Canary', 'Rollback', 'Scorecards'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-03',
+    readTime: 6,
   },
 ];

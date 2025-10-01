@@ -44,6 +44,33 @@ Ready to operationalize this in your stack? Our team can help you land it safely
     image: "/images/enterprise-ai-governance-2025.jpg"
   },
   {
+    slug: "ai-ops-excellence-2025-oct-03",
+    title: "AI Ops Excellence: Live Scorecards, Canary Gates, Instant Rollback",
+    description: "Operate AI safely at scale with KPI-linked scorecards, canary gates, and rollback-first design.",
+    content: `
+# AI Ops Excellence: Live Scorecards, Canary Gates, Instant Rollback
+
+Operate AI systems safely at enterprise scale. Wire KPI-linked scorecards, budget-aware canary routes, and instant rollback hooks so teams can ship faster without incidents.
+
+## What You’ll Implement
+- KPI-linked scorecards and budgets
+- Canary routes with CI policy tests
+- One-click rollback with blast-radius checks
+
+## Outcomes
+- Faster delivery with fewer incidents
+- Stable latency/cost KPIs
+- Clear ownership and weekly review rituals
+    `,
+    author: "Zion Tech Group Reliability Lab",
+    date: "2025-10-03",
+    category: "Operations",
+    tags: ["SRE", "Canary", "Rollback", "Scorecards"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/ai-ops-excellence.jpg"
+  },
+  {
     slug: "ai-2025-oct-03-platform-reliability-scorecards-2027",
     title: "AI Platform Reliability Scorecards 2027: SLIs That Drive Outcomes",
     description: "Design platform scorecards engineers adopt—SLIs tied to KPIs, budgets, and rollback triggers.",
