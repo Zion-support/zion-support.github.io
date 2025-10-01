@@ -638,6 +638,43 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     priority: 6,
     startDate: '2025-10-01'
   }
+  ,
+  {
+    id: 'oct-03-continuous-intelligence-2025',
+    title: '⚡ NEW: Continuous Intelligence — 100M Events/sec under 50ms',
+    description: 'Turn streams into actions with sub‑50ms decisions, KPIs, and safe rollback.',
+    ctaText: 'Build Continuous Intelligence',
+    ctaLink: '/blog/ai-2025-oct-03-continuous-intelligence-platforms',
+    variant: 'success',
+    icon: '⚡',
+    featured: true,
+    priority: 0,
+    startDate: '2025-10-03'
+  },
+  {
+    id: 'oct-03-autonomous-cloud-security-2025',
+    title: '🛡️ NEW: Autonomous Cloud Security — Neutralize Threats in <5s',
+    description: 'Self‑defending infra with budgeted actions, canaries, and instant rollback.',
+    ctaText: 'Explore Autonomous Security',
+    ctaLink: '/blog/ai-2025-oct-03-autonomous-cloud-security',
+    variant: 'warning',
+    icon: '🛡️',
+    featured: true,
+    priority: 1,
+    startDate: '2025-10-03'
+  },
+  {
+    id: 'oct-03-quantum-supply-chain-2025',
+    title: '🧮 NEW: Quantum Supply Chain — Solve in Minutes, Not Days',
+    description: 'Hybrid quantum + ML optimization with 35% cost reduction and 94% SLA adherence.',
+    ctaText: 'Optimize Supply Chains',
+    ctaLink: '/blog/ai-2025-oct-03-quantum-supply-chain-optimization',
+    variant: 'info',
+    icon: '🧮',
+    featured: true,
+    priority: 2,
+    startDate: '2025-10-03'
+  }
 ];
 
 // Oct 1, 2025 – Promote three new articles across the site
