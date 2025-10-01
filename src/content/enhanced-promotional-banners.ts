@@ -640,6 +640,46 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
   }
 ];
 
+// Oct 1, 2025 – Promote three new articles across the site
+enhancedPromotionalBanners.unshift(
+  {
+    id: 'ai-self-healing-infra-banner-2025',
+    title: '🔄 NEW: AI Self-Healing Infrastructure — 99.99% Uptime',
+    description: 'Autonomous infra detects and fixes issues in real time. 95% MTTR reduction with KPI‑linked canaries and instant rollback.',
+    ctaText: 'Explore Self-Healing AI',
+    ctaLink: '/blog/ai-self-healing-infrastructure-2025',
+    variant: 'success',
+    icon: '🔄',
+    featured: true,
+    priority: 0,
+    startDate: '2025-10-01'
+  },
+  {
+    id: 'genai-code-assistants-banner-2025',
+    title: '💻 NEW: Generative AI Code Assistants — 10x Productivity',
+    description: 'Copilot patterns with evaluator gates, safe refactors, and instant rollback. Ship 5x faster with fewer bugs.',
+    ctaText: 'Read the Engineering Guide',
+    ctaLink: '/blog/generative-ai-code-assistants-2025',
+    variant: 'info',
+    icon: '💻',
+    featured: true,
+    priority: 1,
+    startDate: '2025-10-01'
+  },
+  {
+    id: 'edge-privacy-analytics-banner-2025',
+    title: '🔐 NEW: Edge Privacy‑Preserving Analytics — Zero PII',
+    description: 'Scoped IDs, on‑device aggregation, and DP noise deliver insights in <100ms—fully compliant by design.',
+    ctaText: 'Learn Privacy‑First Analytics',
+    ctaLink: '/blog/edge-ai-privacy-preserving-analytics-2025',
+    variant: 'warning',
+    icon: '🔐',
+    featured: true,
+    priority: 2,
+    startDate: '2025-10-01'
+  }
+);
+
 // Sept 30, 2025 – Fresh homepage banner promoting the new content
 enhancedPromotionalBanners.push({
   id: 'sept30-fresh-content-2025',
@@ -652,6 +692,33 @@ enhancedPromotionalBanners.push({
   featured: true,
   priority: 0,
   startDate: '2025-09-30'
+});
+
+// Oct 1, 2025 – New homepage promos for the two brand-new posts
+enhancedPromotionalBanners.push({
+  id: 'oct-01-enterprise-platforms-2025',
+  title: '🏗️ NEW: Enterprise AI Platforms — SLAs, Guardrails, Proven ROI',
+  description: 'Golden paths, eval gates, and cost controls your teams adopt. Proven 30–70% savings.',
+  ctaText: 'Read Platform Blueprint',
+  ctaLink: '/blog/ai-2025-oct-enterprise-ai-platforms',
+  variant: 'success',
+  icon: '🏗️',
+  featured: true,
+  priority: 0,
+  startDate: '2025-10-01'
+});
+
+enhancedPromotionalBanners.push({
+  id: 'oct-01-intelligent-automation-2025',
+  title: '🤖 NEW: Intelligent Automation — From Tickets to Outcomes',
+  description: 'Approvals, budgets, eval‑gated actions, and instant rollback for safe autonomy.',
+  ctaText: 'Explore Automation Guide',
+  ctaLink: '/blog/ai-2025-oct-intelligent-automation-breakthrough',
+  variant: 'info',
+  icon: '🤖',
+  featured: true,
+  priority: 1,
+  startDate: '2025-10-01'
 });
 
 // Sept 30, 2025 – New homepage promo for latest content set

@@ -48,7 +48,6 @@ import {
   QuantumNeuralSuperintelligenceBanner,
   Revolutionary2026ContentBanner
 } from '../components/PromotionalBanner';
-import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
 import NewContentShowcaseBanner from '../components/NewContentShowcaseBanner';
 import QuantumNeuralFusionBanner from '../components/QuantumNeuralFusionBanner';
 import AutonomousEnterpriseBreakthroughBanner from '../components/AutonomousEnterpriseBreakthroughBanner';
@@ -88,7 +87,6 @@ import January2026QuantumBreakthroughBanner from '../components/January2026Quant
 import ContentIntelligenceBanner from './components/ContentIntelligenceBanner';
 
 // NEW 2026 CONTENT SHOWCASE
-import NewContent2026Banner from '../components/NewContent2026Banner';
 import AI2026ContentShowcaseBanner from '../components/AI2026ContentShowcaseBanner';
 import InteractiveAI2026ROICalculator from '../components/InteractiveAI2026ROICalculator';
 
@@ -116,7 +114,7 @@ export default function HomePage() {
       <January2025NewContentBanner />
       <Fortune100SuccessStoryBanner />
       
-      {/* 🚀 REVOLUTIONARY 2026 CONTENT */}
+      {/* 🚀 REVOLUTIONARY 2026 CONTENT - TOP PRIORITY */}
       <Revolutionary2026ContentBanner />
       
       {/* 🚀 LATEST FEBRUARY 2025 QUANTUM & AUTONOMOUS INTELLIGENCE BREAKTHROUGHS */}

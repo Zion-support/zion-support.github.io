@@ -4,6 +4,7 @@ import AnimatedSection from '../components/AnimatedSection';
 import './HomePage.css';
 import { BLOG_POSTS } from '../data/blog-posts';
 import October2025FeaturedContentBanner from '../components/October2025FeaturedContentBanner';
+import UnifiedPromotionalBanner from '../components/UnifiedPromotionalBanner';
 
 const HomePage: React.FC = () => {
   return (
@@ -131,6 +132,46 @@ const HomePage: React.FC = () => {
                 </div>
                 <a href="/blog" className="btn btn-primary">Explore the latest posts →</a>
               </div>
+            </div>
+          </section>
+        </AnimatedSection>
+
+        {/* Unified banner advertising newly added content */}
+        <AnimatedSection animation="slideUp" delay={200}>
+          <section className="promo-section">
+            <div className="container">
+              <UnifiedPromotionalBanner
+                variant="premium"
+                theme="purple"
+                icon="rocket"
+                badge="New"
+                date={new Date().toLocaleDateString()}
+                title="Fresh Content: Safer AI, Actionable Observability, Lower Costs"
+                description="Three new deep-dives just dropped: guardrails as code, observability that triggers safe actions, and cost playbooks that cut spend without slowing teams."
+                ctaText="Read the latest posts"
+                ctaLink="/blog"
+                showCount={3}
+                featuredItems={[
+                  {
+                    title: 'Policy-Driven AI: Guardrails as Code for Safer Autonomy',
+                    category: 'AI',
+                    link: '/blog',
+                    metrics: '7 min • 2025-10-02'
+                  },
+                  {
+                    title: 'Platform Observability 2025: From Signals to Automated Actions',
+                    category: 'Observability',
+                    link: '/blog',
+                    metrics: '6 min • 2025-10-02'
+                  },
+                  {
+                    title: 'Cloud Cost Playbooks 2025: LLM + Infra Savings Without Slowdowns',
+                    category: 'Cloud',
+                    link: '/blog',
+                    metrics: '7 min • 2025-10-02'
+                  }
+                ]}
+              />
             </div>
           </section>
         </AnimatedSection>

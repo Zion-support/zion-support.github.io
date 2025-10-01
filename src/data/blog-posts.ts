@@ -27,6 +27,51 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: 5,
   },
   {
+    id: '31',
+    title: 'AI Platform Reliability Scorecards 2027: SLIs That Drive Outcomes',
+    slug: 'ai-2025-oct-03-platform-reliability-scorecards-2027',
+    excerpt:
+      'Design scorecards engineers adopt—SLIs tied to KPIs, policy tests, canaries, and rollback.',
+    content:
+      'A practical system for platform reliability: pick leading indicator SLIs mapped to KPIs, wire policy tests in CI, run online canaries, and make changes reversible by default with one-click rollback. Includes dashboards and weekly review rituals.',
+    featuredImage: '/images/blog/platform-reliability-scorecards-2027.jpg',
+    category: 'Platform',
+    tags: ['Scorecards', 'SLIs', 'Budgets', 'Rollback'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-03',
+    readTime: 8,
+  },
+  {
+    id: '32',
+    title: 'Edge Experiments v4 (2026): Zero‑PII A/B Under 100ms',
+    slug: 'edge-2026-oct-03-consentless-experiments-v4',
+    excerpt:
+      'Scoped IDs, on-device aggregation, and DP noise for compliant, global experiments at <100ms.',
+    content:
+      'Blueprint for privacy-first A/B: signed configs, cacheable variants at the edge, scoped rotating IDs, and DP aggregation. Canary scorecards + instant rollback keep teams fast and safe.',
+    featuredImage: '/images/blog/edge-experiments-v4-2026.jpg',
+    category: 'Experimentation',
+    tags: ['Edge', 'A/B', 'Privacy', 'DP'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-03',
+    readTime: 7,
+  },
+  {
+    id: '33',
+    title: 'GenAI Cost Controllers v4 (2027): Quality Tiers + Caches at Scale',
+    slug: 'genai-2027-oct-03-cost-controllers-v4',
+    excerpt:
+      'Stabilize UX under budget with tiered routing, semantic caches, and evaluator-backed policies.',
+    content:
+      'Cut spend 40–70% without regressions: tiered model routing by SLA, prompt/embedding/retrieval caches with freshness windows, and online evals as deploy gates. Rollback-first operations included.',
+    featuredImage: '/images/blog/genai-cost-controllers-v4-2027.jpg',
+    category: 'GenAI',
+    tags: ['Cost', 'Quality Tiers', 'Caching', 'Evals'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-03',
+    readTime: 9,
+  },
+  {
     id: '23',
     title: 'Autonomous Cost Control: Real-Time FinOps with AI Guardrails',
     slug: 'autonomous-cost-control-real-time-finops-2025',
@@ -368,5 +413,126 @@ export const BLOG_POSTS: BlogPost[] = [
     author: 'Zion Tech Team',
     publishedAt: '2025-10-02',
     readTime: 6,
+  },
+  {
+    id: '25',
+    title: 'Autonomous FinOps Playbook: Real-Time Guardrails That Cut Spend 40%',
+    slug: 'autonomous-finops-playbook-2025-oct',
+    excerpt:
+      'Implement policy-driven budgets, adaptive model routing, and multi-tier caching to shrink LLM and cloud costs—without slowing teams.',
+    content:
+      'This playbook operationalizes Autonomous FinOps across AI and cloud. You will implement budget policies as code, latency-aware cache tiers (semantic, workflow, response), and dynamic model routing based on quality/cost bands. Includes reference policies, Grafana dashboards, rollout stages, and incident-ready rollback patterns. Proven to cut GenAI and cloud spend by 30–50% while improving reliability.',
+    featuredImage: '/images/blog/autonomous-finops-playbook.jpg',
+    category: 'Cloud',
+    tags: ['FinOps', 'Guardrails', 'LLM', 'Cost Optimization'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-01',
+    readTime: 8,
+  },
+  {
+    id: '26',
+    title: 'Production Agents: Evals, Rollbacks, and Approval Gates That Scale',
+    slug: 'production-agents-evals-rollbacks-approval-gates-2025-oct',
+    excerpt:
+      'A pragmatic blueprint for agentic systems that act safely: tool permissions, reversible actions, human-in-the-loop, and continuous evals.',
+    content:
+      'Move from assistant demos to production agents. We detail capability scoping, intent verification, deterministic tool contracts, sandboxed execution, and rollback-first design. Learn to wire evals into deploy gates, add approval workflows for risky actions, and measure task completion with business-grounded metrics. Includes architecture diagrams and a phased rollout plan.',
+    featuredImage: '/images/blog/production-agents-evals-rollbacks.jpg',
+    category: 'AI',
+    tags: ['Agents', 'Reliability', 'Safety', 'Evals'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-01',
+    readTime: 9,
+  },
+  {
+<<<<<<< HEAD
+    id: '28',
+    title: 'Quantum-Safe Cryptography: Enterprise Migration Playbook (2025)',
+    slug: 'quantum-safe-cryptography-enterprise-migration-2025',
+    excerpt:
+      'Practical roadmap to adopt NIST PQC (Kyber, Dilithium) with hybrid rollouts, performance tuning, and zero-downtime cutovers.',
+    content:
+      'Quantum threats demand action now. This playbook details discovery of cryptographic assets, risk triage, hybrid TLS handshakes, staged migration patterns, compatibility fallbacks, and observability for crypto agility. Includes example configs, rollout checklists, and benchmarks to de-risk PQC adoption across fleets.',
+    featuredImage: '/images/blog/quantum-safe-enterprise.jpg',
+    category: 'Security',
+    tags: ['Post-Quantum', 'Cryptography', 'NIST', 'Migration'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-03',
+    readTime: 9,
+  },
+  {
+    id: '29',
+    title: 'Neuromorphic Edge AI: Event-Driven Intelligence Under 10ms',
+    slug: 'neuromorphic-edge-ai-event-driven-2025',
+    excerpt:
+      'Brain-inspired SNNs for ultra-low power, sub-10ms decisions at the edge. Architectures, toolchains, and deployment patterns.',
+    content:
+      'We break down spiking neural networks, event cameras, and neuromorphic chips for on-device intelligence. Learn encoding strategies, training pipelines, and production deployment on constrained hardware for robotics, manufacturing, and IoT—achieving 1000x energy efficiency over GPU baselines.',
+    featuredImage: '/images/blog/neuromorphic-edge-ai.jpg',
+    category: 'AI',
+    tags: ['Neuromorphic', 'Edge AI', 'SNN', 'Efficiency'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-03',
+    readTime: 8,
+  },
+  {
+    id: '30',
+    title: 'Synthetic Data in Production: Privacy-Safe Accuracy Gains',
+    slug: 'synthetic-data-production-privacy-2025',
+    excerpt:
+      'Blueprint to generate, validate, and govern synthetic datasets that boost accuracy while eliminating PII risk.',
+    content:
+      'From diffusion to GAN pipelines, we show how to build production-grade synthetic data systems: coverage targets, bias checks, privacy guarantees, and evaluator loops that prove quality uplift. Includes templates, governance controls, and ROI models for platform teams.',
+    featuredImage: '/images/blog/synthetic-data-production.jpg',
+    category: 'Data',
+    tags: ['Synthetic Data', 'Privacy', 'Quality', 'MLOps'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-03',
+    readTime: 10,
+=======
+    id: '27',
+    title: 'Policy-Driven AI: Guardrails as Code for Safer Autonomy',
+    slug: 'policy-driven-ai-guardrails-as-code-2025-10-02',
+    excerpt:
+      'Encode safety, cost, and latency constraints directly in code to scale reliable AI systems.',
+    content:
+      'We demonstrate how to operationalize AI guardrails as code: intent verification, reversible tool actions, approval tiers, and budget policies enforced at runtime. Includes reference policy packs, evaluation hooks, and rollout stages that let teams ship faster without sacrificing safety.',
+    featuredImage: '/images/blog/policy-driven-ai.jpg',
+    category: 'AI',
+    tags: ['Guardrails', 'Safety', 'Policy as Code'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-02',
+    readTime: 7,
+  },
+  {
+    id: '28',
+    title: 'Platform Observability 2025: From Signals to Automated Actions',
+    slug: 'platform-observability-automated-actions-2025-10-02',
+    excerpt:
+      'Tie telemetry to safe automations with SLO-aware runbooks, canaries, and rollback-first design.',
+    content:
+      'Modern platforms close the loop between detection and remediation. We cover actionability patterns: event normalization, intent-aware runbooks, progressive delivery gates, and human-in-the-loop automation. Learn how to reduce MTTR and improve reliability with measurable guardrails.',
+    featuredImage: '/images/blog/platform-observability-2025.jpg',
+    category: 'Observability',
+    tags: ['SRE', 'Automation', 'SLO'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-02',
+    readTime: 6,
+  },
+  {
+    id: '29',
+    title: 'Cloud Cost Playbooks 2025: LLM + Infra Savings Without Slowdowns',
+    slug: 'cloud-cost-playbooks-llm-infra-2025-10-02',
+    excerpt:
+      'Proven patterns to cut 30–50% across models and infra: caching tiers, routing, and rightsizing.',
+    content:
+      'A practical toolkit for sustainable cost control. Implement semantic and workflow caches, latency-aware model routing, and automated rightsizing. Includes dashboards, policies, and incident-ready rollback patterns used by high-velocity teams to shrink spend without hurting product speed.',
+    featuredImage: '/images/blog/cloud-cost-playbooks-2025.jpg',
+    category: 'Cloud',
+    tags: ['FinOps', 'LLM', 'Optimization'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-02',
+    readTime: 7,
+>>>>>>> chore/add-oct-2025-content-and-banner
   },
 ];
