@@ -120,18 +120,25 @@ const Home = () => {
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
         
-        {/* 🔥 NOVEMBER 1, 2025 - BRAND NEW: Federated Learning, LLMOps & Platform Engineering */}
-        <NewContentPromoBanner 
-          className="border-b border-white/10" 
-          variant="premium" 
-          title="🔥 BREAKING NOVEMBER 1: 3 GAME-CHANGING GUIDES — Federated Learning, LLMOps Excellence & ML Platform Engineering!"
-          description="🎯 JUST RELEASED TODAY: Master privacy-preserving AI with federated learning (95% accuracy, 100% compliance), run production LLMs at scale (99.9% uptime, 70% cost cut), and build unified ML platforms (10x deployment velocity, 80% savings). Essential reading for AI leaders!"
-          ctaText="Explore Latest Breakthroughs"
-          ctaLink="/blog"
-          featuredItems={[
-            { title: "Federated Learning for Enterprise AI 2025 — Privacy-Preserving ML at Scale (95% Accuracy, Zero Data Centralization)", category: "Privacy AI", link: "/blog/ai-2025-november-federated-learning-enterprise" },
-            { title: "LLMOps Production Excellence 2025 — Deploy, Monitor & Scale GenAI (99.9% Uptime, 70% Cost Reduction)", category: "LLMOps", link: "/blog/ai-2025-november-llm-ops-production-excellence" },
-            { title: "MLOps & Platform Engineering Convergence 2025 — Unified AI Infrastructure (10x Deployment Velocity)", category: "ML Platform", link: "/blog/ai-2025-november-mlops-platform-engineering-convergence" }
+{/* 🔥 NOVEMBER 1, 2025 - BRAND NEW: Federated Learning, LLMOps & Platform Engineering */}
+<NewContentPromoBanner
+className="border-b border-white/10"
+variant="premium"
+title="🔥 BREAKING NOVEMBER 1: 3 GAME-CHANGING GUIDES — Federated Learning, LLMOps Excellence & ML Platform Engineering!"
+description="🎯 JUST RELEASED TODAY: Master privacy-preserving AI with federated learning (95% accuracy, 100% compliance), run production LLMs at scale (99.9% uptime, 70% cost cut), and build unified ML platforms (10x deployment velocity, 80% savings). Essential reading for AI leaders!"
+ctaText="Explore Latest Breakthroughs"
+ctaLink="/blog"
+featuredItems={[
+{ title: "Federated Learning for Enterprise AI 2025 — Privacy-Preserving ML at Scale (95% Accuracy, Zero Data Centralization)", category: "Privacy AI", link: "/blog/ai-2025-november-federated-learning-enterprise" },
+{ title: "LLMOps Production Excellence 2025 — Deploy, Monitor & Scale GenAI (99.9% Uptime, 70% Cost Reduction)", category: "LLMOps", link: "/blog/ai-2025-november-llm-ops-production-excellence" },
+{ title: "MLOps & Platform Engineering Convergence 2025 — Unified AI Infrastructure (10x Deployment Velocity)", category: "ML Platform", link: "/blog/ai-2025-november-mlops-platform-engineering-convergence" }
+{/* 🎉 OCTOBER 4, 2025 - JUST RELEASED: 3 CUTTING-EDGE AI BREAKTHROUGHS */}
+title="🎉 JUST RELEASED OCTOBER 4: 3 CUTTING-EDGE AI BREAKTHROUGHS — Advanced Reasoning Models, Synthetic Data Mastery & Multi-Modal AI Integration!"
+description="🔥 BRAND NEW TODAY: Master next-gen o1-style reasoning models achieving 95%+ accuracy (5x performance boost), generate unlimited training data with synthetic data (85% cost reduction, 10x faster development), and deploy multi-modal AI processing vision, language, audio & sensors simultaneously (92% better decisions). Transform your AI capabilities with these game-changing innovations!"
+ctaText="Explore Latest AI Breakthroughs"
+{ title: "Advanced AI Reasoning Models 2025 — Next-Gen o1-Style Systems Transform Enterprise (95%+ Accuracy, 5x Performance)", category: "AI Reasoning", link: "/blog/ai-2025-october-advanced-reasoning-models-breakthrough" },
+{ title: "Synthetic Data Generation Mastery 2025 — Train World-Class AI Without Real Data (85% Cost Cut, 10x Faster)", category: "AI Training Data", link: "/blog/ai-2025-october-synthetic-data-generation-mastery" },
+{ title: "Multi-Modal AI Integration 2025 — Unified Systems Processing Vision, Language, Audio & Sensors (92% Better Decisions)", category: "Multi-Modal AI", link: "/blog/ai-2025-october-multimodal-ai-integration-enterprise" }
           ]}
         />
         
