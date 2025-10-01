@@ -68,7 +68,7 @@ class ContentRecommendationEngine {
     } = options;
 
     // Get or create user profile
-    const userProfile = this.getUserProfile(userId);
+    const userProfile = this.createUserProfile(userId);
 
     // Filter content
     let candidates = this.contentCatalog;
@@ -181,7 +181,7 @@ class ContentRecommendationEngine {
   /**
    * Get or create user profile
    */
-  private getUserProfile(userId: string): UserProfile {
+  private createUserProfile(userId: string): UserProfile {
     if (!this.userProfiles.has(userId)) {
       this.userProfiles.set(userId, {
         interests: [],
@@ -206,7 +206,7 @@ class ContentRecommendationEngine {
       engagement?: number;
     }
   ): void {
-    const profile = this.getUserProfile(userId);
+    const profile = this.createUserProfile(userId);
 
     if (update.viewedContent) {
       if (!profile.viewedContent.includes(update.viewedContent)) {
