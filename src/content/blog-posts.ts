@@ -14,6 +14,83 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "ai-2025-oct-04-enterprise-agents-in-production",
+    title: "Enterprise Agents in Production: Budgets, Approvals, and Rollback",
+    description: "Practical patterns to run AI agents safely in prod with KPI-linked SLIs, action budgets, and instant rollback.",
+    content: `
+# Enterprise Agents in Production: Budgets, Approvals, and Rollback
+
+This guide shows how to ship agentic systems that operate within explicit budgets and guardrails while driving measurable outcomes.
+
+## Ship Safely
+- Signed tools with scopes and quotas
+- Budget-aware action routing with KPI-linked SLIs
+- Canary routes and one-click rollback hooks
+
+## Outcomes
+- Incident rate stable as automation expands
+- Faster delivery without runaway spend
+- Clear accountability via weekly scorecards
+    `,
+    author: "Zion Tech Group AI Operations",
+    date: "2025-10-04",
+    category: "AI Operations",
+    tags: ["Agents", "Guardrails", "Budgets", "Rollback"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/enterprise-agents-in-production.jpg"
+  },
+  {
+    slug: "ai-2025-oct-04-retrieval-quality-budgets",
+    title: "Retrieval Quality Budgets: Better Answers for Less",
+    description: "Balance answer quality and cost with freshness windows, recall tiers, and cache strata that raise correctness while cutting spend.",
+    content: `
+# Retrieval Quality Budgets: Better Answers for Less
+
+A pragmatic blueprint for RAG systems that enforce quality while controlling cost.
+
+## Core Moves
+- Domain schemas and strict source governance
+- Freshness windows per intent
+- Tiered caches: features → chunks → answers
+
+## Results
+- 45% quality lift, 38–62% cost reduction in production workloads.
+    `,
+    author: "Zion Tech Group Knowledge Systems",
+    date: "2025-10-04",
+    category: "RAG Engineering",
+    tags: ["RAG", "Retrieval", "Caching", "Quality"],
+    featured: false,
+    readTime: "7 min read",
+    image: "/images/retrieval-quality-budgets.jpg"
+  },
+  {
+    slug: "ai-2025-oct-04-cost-aware-routing-patterns",
+    title: "Cost‑Aware Routing Patterns: Stable UX Under Any Budget",
+    description: "Quality tiers, request coalescing, and semantic caches that keep UX steady as budgets flex.",
+    content: `
+# Cost‑Aware Routing Patterns: Stable UX Under Any Budget
+
+Keep experience KPIs stable while reducing spend.
+
+## Patterns
+- Quality-tier routers with eval gates
+- Request coalescing; negative/feature/result caches
+- Distillation for hot paths; safe fallbacks
+
+## What You’ll Get
+- 30–70% cost down with steady p95 and task success.
+    `,
+    author: "Zion Tech Group Platform Team",
+    date: "2025-10-04",
+    category: "GenAI Engineering",
+    tags: ["Routing", "Caching", "Cost", "Quality"],
+    featured: false,
+    readTime: "6 min read",
+    image: "/images/cost-aware-routing.jpg"
+  },
+  {
     slug: "ai-2025-oct-01-enterprise-ai-governance-blueprint",
     title: "Enterprise AI Governance 2025: Scorecards, Guardrails, and Zero-Regret Rollouts",
     description: "Practical enterprise playbook to ship AI safely: policy tests in CI, KPI-linked scorecards, kill switches, and budget-aware routing.",
