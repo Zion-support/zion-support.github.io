@@ -1,20 +1,21 @@
+/**
+ * Jest configuration optimized for CI stability and comprehensive coverage
+ */
 module.exports = {
   testEnvironment: 'jsdom',
-  roots: ['<rootDir>/src'],
-  setupFilesAfterEnv: [ '@testing-library/jest-dom' ],
+  roots: ['<rootDir>/src', '<rootDir>/__tests__'],
+  setupFilesAfterEnv: ['@testing-library/jest-dom'],
   moduleNameMapper: {
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
-    // Minimal mappers to avoid conflicts; project has no tests
     '\\.(gif|ttf|eot|svg|png|jpg|jpeg)$': '<rootDir>/tests/__mocks__/fileMock.js',
   },
-  testMatch: ['**/src/**/*.test.ts?(x)', '**/src/**/*.(spec|test).ts?(x)'],
+  testMatch: ['**/src/**/*.test.ts?(x)', '**/src/**/*.(spec|test).ts?(x)', '**/__tests__/**/*.test.ts?(x)'],
   testPathIgnorePatterns: [
     '/node_modules/',
     '/dist/',
     '/build/',
     '/.next/',
     '/out/',
-    '/__tests__/',
     '/tests.disabled/',
     '/automation/',
     '/backup/',
@@ -26,13 +27,13 @@ module.exports = {
     '/_pages_api_disabled/'
   ],
   modulePathIgnorePatterns: [
-    '<rootDir>/automation/',
-    '<rootDir>/backup/',
-    '<rootDir>/backup-problematic-files/'
+    '^<rootDir>\/(automation|automation_backup|automation-reports|automation_logs|backup|backup-merge-conflicts|backup-pages|backup-problematic-files|ai-optimization-backups|apps\\.backup)(\/|$)'
   ],
   watchPathIgnorePatterns: [
     '<rootDir>/automation/',
     '<rootDir>/backup/',
     '<rootDir>/backup-problematic-files/'
-  ]
+  ],
+  transform: {},
+  cache: false,
 };
