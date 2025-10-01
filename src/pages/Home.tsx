@@ -220,6 +220,35 @@ const Home = () => {
           </div>
         </div>
 
+        {/* New Promo: Featured — Governed Agent Platforms v2 & Zero‑PII Telemetry v3 */}
+        <div className="container mx-auto px-4 py-6">
+          <div className="bg-white/10 border border-white/15 rounded-xl p-5">
+            <div className="flex items-center justify-between mb-3">
+              <h2 className="text-white text-xl font-semibold">Featured This Week</h2>
+              <Link to="/blog" className="text-zion-cyan hover:underline flex items-center gap-1">
+                View all
+                <ArrowRight size={16} />
+              </Link>
+            </div>
+            <div className="grid md:grid-cols-2 gap-4">
+              <Link to="/blog/ai-2025-oct-01-governed-agent-platforms-v2" className="block group">
+                <div className="bg-white/5 rounded-lg p-4 border border-white/10 group-hover:border-zion-cyan/40 transition-colors">
+                  <div className="text-xs uppercase tracking-wide text-zion-cyan mb-1">AI Operations</div>
+                  <div className="text-white font-medium mb-1">Governed Agent Platforms v2: Budgets, Scorecards, Instant Rollback</div>
+                  <div className="text-zion-slate-light text-sm">8 min read • {new Date('2025-10-01').toLocaleDateString()}</div>
+                </div>
+              </Link>
+              <Link to="/blog/ai-2025-oct-01-zero-pii-telemetry-v3" className="block group">
+                <div className="bg-white/5 rounded-lg p-4 border border-white/10 group-hover:border-zion-cyan/40 transition-colors">
+                  <div className="text-xs uppercase tracking-wide text-zion-cyan mb-1">Analytics</div>
+                  <div className="text-white font-medium mb-1">Zero‑PII Telemetry v3: Signal Without Risk at Global Scale</div>
+                  <div className="text-zion-slate-light text-sm">7 min read • {new Date('2025-10-01').toLocaleDateString()}</div>
+                </div>
+              </Link>
+            </div>
+          </div>
+        </div>
+
         {/* Auto: Highlight the very latest featured article */}
         <div className="container mx-auto px-4 py-6">
           <div className="bg-white/5 border border-white/10 rounded-xl p-5">
