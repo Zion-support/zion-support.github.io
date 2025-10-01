@@ -125,6 +125,21 @@ const Home = () => {
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
         
+        {/* 🌟🌟🌟 OCTOBER 1, 2025 - BREAKING: NEW AI INSIGHTS - JUST PUBLISHED! 🌟🌟🌟 */}
+        <NewContentPromoBanner 
+          className="border-b border-white/10" 
+          variant="premium" 
+          title="🌟 JUST PUBLISHED OCTOBER 1, 2025: 3 CRITICAL AI INNOVATIONS — Sustainable AI (87% Energy Cut, $45M Savings), Adaptive Learning Systems (96% Personalization, 8x Engagement), Explainable AI (99.2% Transparency, 100% Compliance)!"
+          description="🚀 BRAND NEW TODAY: Deploy sustainable AI systems that reduce energy consumption by 87% and cut carbon emissions by 92% while saving $45M+ annually, implement adaptive learning AI achieving 96% personalization accuracy with 8x engagement increases and $78M+ revenue growth, and build explainable AI systems with 99.2% transparency meeting all regulatory requirements. Essential insights for forward-thinking AI leaders!"
+          ctaText="Read Latest AI Innovations"
+          ctaLink="/blog"
+          featuredItems={[
+            { title: "Sustainable AI & Green Computing Revolution 2025 — Reduce Energy by 87%, Cut Carbon 92%, Save $45M+ Annually", category: "Sustainable AI", link: "/blog/ai-2025-october-sustainable-ai-green-computing-revolution" },
+            { title: "Adaptive Learning AI Systems 2025 — 96% Personalization Success, 8x Engagement, $78M+ Revenue Growth", category: "Adaptive AI", link: "/blog/ai-2025-october-adaptive-learning-systems-personalization" },
+            { title: "Explainable AI & Transparency Revolution 2025 — 99.2% Transparency, 84% Risk Reduction, 100% Compliance", category: "Explainable AI", link: "/blog/ai-2025-october-explainable-ai-transparency-revolution" }
+          ]}
+        />
+        
         {/* 🔥🔥🔥 FEBRUARY 2026 - BREAKING: LATEST AI BREAKTHROUGHS - TOP PRIORITY! 🔥🔥🔥 */}
         <NewContentPromoBanner 
           className="border-b border-white/10" 
