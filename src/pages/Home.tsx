@@ -17,6 +17,8 @@ import ModernFeatures from "../components/ModernFeatures";
 import LatestInsights from "../components/LatestInsights";
 import { latestInsights } from "../content/insights";
 import { Users, Zap } from "lucide-react";
+import AdvertisingBanner from "../components/AdvertisingBanner";
+import October2025CognitiveMeshLaunchBanner from "../components/October2025CognitiveMeshLaunchBanner";
 
 const Home = () => {
   return (
@@ -55,6 +57,7 @@ const Home = () => {
         <link rel="canonical" href="https://ziontechgroup.com" />
       </Helmet>
       <AdvertisingBanner />
+      <October2025CognitiveMeshLaunchBanner />
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
         {/* Animated background elements */}
