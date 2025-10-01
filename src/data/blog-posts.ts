@@ -27,6 +27,51 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: 5,
   },
   {
+    id: '300',
+    title: 'Safe Agent Releases: Checklists, Budgets, Instant Rollback (2025)',
+    slug: 'ai-2025-oct-06-safe-agent-release-checklists',
+    excerpt:
+      'Production checklists for agent tools with budgets, approvals, canaries, and one‑click rollback.',
+    content:
+      'Ship autonomy without surprises using signed tools, budgeted actions, approval workflows, KPI‑linked canaries, and one‑click rollback.',
+    featuredImage: '/images/safe-agent-releases-2025.jpg',
+    category: 'AI Operations',
+    tags: ['Agents', 'Guardrails', 'Budgets', 'Rollback'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-06',
+    readTime: 8,
+  },
+  {
+    id: '301',
+    title: 'Cost‑Aware LLM Routing v2: Tiering, Coalescing, Distillation',
+    slug: 'ai-2025-oct-06-cost-aware-llm-routing-v2',
+    excerpt:
+      'Tiered routing, request coalescing, and selective distillation cut spend 40–70% without UX regressions.',
+    content:
+      'Keep experience steady while reducing spend: evaluator‑gated tiers, semantic caches, coalescing, and selective distillation on hot paths.',
+    featuredImage: '/images/cost-aware-llm-routing-v2.jpg',
+    category: 'GenAI Engineering',
+    tags: ['Routing', 'Caching', 'Cost', 'Distillation'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-06',
+    readTime: 9,
+  },
+  {
+    id: '302',
+    title: 'Zero‑PII Experimentation v5: <100ms Global A/B at the Edge',
+    slug: 'ai-2025-oct-06-zero-pii-experimentation-v5',
+    excerpt:
+      'Scoped IDs, signed configs, on‑device aggregation, and DP noise for compliant, fast experiments.',
+    content:
+      'Run A/B without centralizing PII using signed configs, scoped IDs, on‑device aggregation with DP, plus canary scorecards and rollback.',
+    featuredImage: '/images/zero-pii-experimentation-v5.jpg',
+    category: 'Experimentation',
+    tags: ['Privacy', 'Edge', 'DP', 'A/B'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-06',
+    readTime: 7,
+  },
+  {
     id: '206',
     title: 'AI Budgeted Routing: Stable UX Under Any Spend',
     slug: 'ai-budgeted-routing-stable-ux-2025-10-04',

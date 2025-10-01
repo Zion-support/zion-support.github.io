@@ -14,6 +14,84 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "ai-2025-oct-06-safe-agent-release-checklists",
+    title: "Safe Agent Releases: Checklists, Budgets, Instant Rollback (2025)",
+    description: "Production checklists for agent tools with budgets, approvals, canaries, and one‑click rollback.",
+    content: `
+# Safe Agent Releases: Checklists, Budgets, Instant Rollback (2025)
+
+Ship autonomy without surprises using a rigorous release discipline:
+
+## What You’ll Implement
+- Signed tools with scopes and quotas
+- Budgeted actions and approval workflows
+- Canary routes with KPI‑linked scorecards
+- One‑click rollback with blast‑radius checks
+
+## Outcomes
+- 10x delivery velocity with fewer incidents
+- Stable latency/cost KPIs as automation grows
+- Clear ownership via weekly scorecards
+    `,
+    author: "Zion Tech Group AI Operations",
+    date: "2025-10-06",
+    category: "AI Operations",
+    tags: ["Agents", "Guardrails", "Budgets", "Rollback"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/safe-agent-releases-2025.jpg"
+  },
+  {
+    slug: "ai-2025-oct-06-cost-aware-llm-routing-v2",
+    title: "Cost‑Aware LLM Routing v2: Tiering, Coalescing, Distillation",
+    description: "Quality‑tier routing, request coalescing, and selective distillation to cut spend 40–70% without UX regressions.",
+    content: `
+# Cost‑Aware LLM Routing v2
+
+Keep experience steady while reducing spend:
+
+## Patterns
+- Quality‑tier routers with evaluator gates
+- Request coalescing + semantic caches
+- Selective distillation on hot paths
+- Dark‑ship experiments with safe fallbacks
+
+## Results
+- 40–70% cost down, tighter tails, steady task success
+    `,
+    author: "Zion Tech Group Platform Team",
+    date: "2025-10-06",
+    category: "GenAI Engineering",
+    tags: ["Routing", "Caching", "Cost", "Distillation"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/cost-aware-llm-routing-v2.jpg"
+  },
+  {
+    slug: "ai-2025-oct-06-zero-pii-experimentation-v5",
+    title: "Zero‑PII Experimentation v5: <100ms Global A/B at the Edge",
+    description: "Scoped IDs, signed configs, on‑device aggregation, and DP noise for compliant, fast experiments.",
+    content: `
+# Zero‑PII Experimentation v5
+
+Run compliant A/B testing without centralizing PII:
+
+- Signed, cacheable configs
+- Scoped, rotating identifiers per surface
+- On‑device aggregation with DP noise
+- Canary scorecards and rollback hooks
+
+Includes schemas, rollout playbooks, and validation scorecards.
+    `,
+    author: "Zion Tech Group Privacy Lab",
+    date: "2025-10-06",
+    category: "Experimentation",
+    tags: ["Privacy", "Edge", "DP", "A/B"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/zero-pii-experimentation-v5.jpg"
+  },
+  {
     slug: "ai-2025-oct-03-risk-controlled-autonomy",
     title: "Risk‑Controlled Autonomy 2025: Ship Agentic Systems Without Surprises",
     description: "Blueprint for budgeted tools, policy‑gated actions, and instant rollback so teams move 10x faster with stable reliability and spend.",
