@@ -25,11 +25,14 @@ module.exports = {
   testPathIgnorePatterns: [
     '/node_modules/',
     '/dist/',
+<<<<<<< HEAD
+=======
     '/build/',
     '/.next/',
     '/out/',
     '/__tests__/',
     '/tests.disabled/',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-58c1
     '/automation/',
     '/backup/',
     '/backup-problematic-files/',
