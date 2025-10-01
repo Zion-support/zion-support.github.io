@@ -25,10 +25,10 @@ export function createLazyComponent<T extends ComponentType<any>>(
   if (fallback) {
     return (props: any) => {
       const FallbackComponent = fallback;
-      return (
-        <ErrorBoundary fallback={<FallbackComponent />}>
-          <LazyComponent {...props} />
-        </ErrorBoundary>
+      return React.createElement(
+        ErrorBoundary,
+        { fallback: React.createElement(FallbackComponent) },
+        React.createElement(LazyComponent, props)
       );
     };
   }
@@ -130,7 +130,7 @@ class ErrorBoundary extends React.Component<
   render() {
     if (this.state.hasError) {
       const Fallback = this.props.fallback;
-      return Fallback ? <Fallback /> : null;
+      return Fallback ? React.createElement(Fallback) : null;
     }
 
     return this.props.children;
