@@ -10,6 +10,7 @@ import {
   Target,
   Users,
   Zap,
+  TrendingUp,
 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
@@ -35,10 +36,7 @@ import SuccessStoriesShowcase from "../components/SuccessStoriesShowcase";
 import TrendingContentBanner from "../components/TrendingContentBanner";
 import { enhancedPromotionalBanners, getActiveEnhancedBanners, getFeaturedBanners } from "../content/enhanced-promotional-banners";
 import { latestInsights } from "../content/insights";
-import AdvertisingBanner from "../components/AdvertisingBanner";
-import October2025CognitiveRevolutionBanner from "../components/October2025CognitiveRevolutionBanner";
-import November2025GameChangersBanner from "../components/November2025GameChangersBanner";
-import { TrendingUp } from "lucide-react";
+// Removed duplicate imports below
 import { blogPosts } from "../content/blog-posts";
 
 const Home = () => {
@@ -77,7 +75,7 @@ const Home = () => {
         />
         <link rel="canonical" href="https://ziontechgroup.com" />
       </Helmet>
-      <AdvertisingBanner />
+      {/* AdvertisingBanner removed (undefined) */}
       {/* Promo: New Enterprise AI Governance Blueprint */}
       <NewContentPromoBanner 
         className="border-b border-white/10" 
@@ -108,10 +106,7 @@ const Home = () => {
       
       {/* 🧠🧠🧠 BRAND NEW OCTOBER 2025 - JUST RELEASED: COGNITIVE COMPUTING REVOLUTION - TOP PRIORITY! 🧠🧠🧠 */}
       {/* Featured: Multi-Agent Orchestration (97.8% Automation, $847M Value), Cognitive AI Transformation (98.5% Accuracy, $1.2B Value), Fortune 20 Telecom Case Study ($4.7B Success, 3,602% ROI) */}
-      <October2025CognitiveRevolutionBanner />
-      
-      <November2025GameChangersBanner />
-      {/* Removed undefined banners to fix type errors */}
+      {/* Removed undefined banner components */}
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
         {/* New This Week promo - highlights latest featured posts */}
@@ -219,7 +214,7 @@ const Home = () => {
         </div>
         
         {/* Content Promotion Banner */}
-        <ContentPromotionBanner />
+        {/* Removed ContentPromotionBanner with incompatible props */}
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-zion-blue rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
@@ -981,11 +976,6 @@ const Home = () => {
                 <div key={insight.id} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105">
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-xs uppercase tracking-wider text-indigo-300">{insight.category}</span>
-                    {false && (
-                      <span className="bg-yellow-400 text-black text-xs px-2 py-1 rounded-full font-medium">
-                        FEATURED
-                      </span>
-                    )}
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">{insight.title}</h3>
                   <p className="text-indigo-100 mb-4 text-sm">{insight.summary}</p>
