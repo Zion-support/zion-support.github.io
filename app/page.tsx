@@ -96,6 +96,11 @@ import February2025AutonomousBusinessIntelligenceRevolutionBanner from '../compo
 // NEW BREAKTHROUGH INNOVATIONS CONTENT
 import AI2026BreakthroughInnovationsMegaSuccessBanner from '../components/AI2026BreakthroughInnovationsMegaSuccessBanner';
 
+// NEW JANUARY 2026 AUTONOMOUS SYSTEMS CONTENT
+import AI2026NextGenerationAutonomousSystemsBanner from '../components/AI2026NextGenerationAutonomousSystemsBanner';
+import AI2026QuantumNeuralSuperintelligenceBanner from '../components/AI2026QuantumNeuralSuperintelligenceBanner';
+import AI2026AutonomousEnterpriseEcosystemBanner from '../components/AI2026AutonomousEnterpriseEcosystemBanner';
+
 // NEW JANUARY 2025 CONTENT BANNERS
 import January2025NewContentBanner from '../components/January2025NewContentBanner';
 import Fortune100SuccessStoryBanner from '../components/Fortune100SuccessStoryBanner';
@@ -109,6 +114,11 @@ export const metadata = {
 export default function HomePage() {
   return (
     <div className="animate-fade-in">
+      {/* 🚀 NEW JANUARY 2026 AUTONOMOUS SYSTEMS CONTENT - TOP PRIORITY */}
+      <AI2026NextGenerationAutonomousSystemsBanner />
+      <AI2026QuantumNeuralSuperintelligenceBanner />
+      <AI2026AutonomousEnterpriseEcosystemBanner />
+      
       {/* 🚀 NEW JANUARY 2025 CONTENT - TOP PRIORITY */}
       <January2025NewContentBanner />
       <Fortune100SuccessStoryBanner />
