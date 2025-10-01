@@ -12,6 +12,7 @@ export default function ContentHub() {
     {
       title: 'AI Implementation',
       articles: [
+        { title: 'Enterprise Vector Database Optimization — Oct 2025', slug: '/blog/ai-2025-october-vector-database-optimization', readTime: '12 min', featured: true, isNew: true },
         { title: 'Autonomous Analytics Breakthrough — 620% ROI', slug: '/blog/ai-2025-october-autonomous-analytics-breakthrough', readTime: '14 min', featured: true, isNew: true },
         { title: 'Sovereign Vector Knowledge Graph — 99.99% SLO', slug: '/blog/ai-2025-october-sovereign-vector-knowledge-graph', readTime: '16 min', featured: true, isNew: true },
         { title: 'Neural Adaptive FinOps — 52% Cost Reduction', slug: '/blog/ai-2025-october-neural-adaptive-finops', readTime: '12 min', featured: true, isNew: true },
@@ -33,6 +34,7 @@ export default function ContentHub() {
       title: 'AI Security & Compliance',
       articles: [
         { title: 'Sovereign AI Systems: The $127B Data Independence Revolution', slug: '/blog/ai-2025-oct-sovereign-ai-systems-enterprise-transformation', readTime: '28 min', featured: true, isNew: true },
+        { title: 'Hyper-Personalization Engines — Privacy-Safe, Real-Time', slug: '/blog/ai-2025-october-hyper-personalization-engines', readTime: '14 min', featured: true, isNew: true },
         { title: 'AI Cybersecurity Automation 2026', slug: '/blog/ai-cybersecurity-automation-2026', readTime: '18 min', featured: true },
         { title: 'AI Security Compliance 2025', slug: '/blog/ai-security-compliance-2025', readTime: '12 min', featured: false },
         { title: 'Enterprise AI Security 2025', slug: '/blog/enterprise-ai-security-2025', readTime: '14 min', featured: false },
