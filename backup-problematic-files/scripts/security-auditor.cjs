@@ -1,5 +1,4 @@
     this.projectRoot = process.cwd();
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     this.reportsDir = path.join(this.projectRoot, 'security-reports');
     this.ensureDirectories()}
   ensureDirectories() {

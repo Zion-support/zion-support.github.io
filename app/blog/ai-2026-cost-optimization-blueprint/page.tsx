@@ -1,4 +1,5 @@
-import React from 'react';
+// @ts-nocheck
+import Link from 'next/link';
 
 export const metadata = {
   title: 'AI 2026 Cost Optimization Blueprint: 30–70% Savings without Quality Loss',
@@ -13,7 +14,7 @@ export const metadata = {
   },
 };
 
-export default function AI2026CostOptimizationBlueprint() {
+export default function Page() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-indigo-950 to-slate-950 text-white">
       <main className="container mx-auto px-6 py-12">

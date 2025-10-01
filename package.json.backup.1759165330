@@ -11,13 +11,6 @@
     "preview": "vite preview",
     "lint": "eslint -c eslint.config.cjs 'src/**/*.{js,jsx}' --report-unused-disable-directives --max-warnings 250",
     "lint:fix": "eslint . --fix",
-<<<<<<< HEAD
-    "type-check": "tsc -p tsconfig.json --noEmit",
-    "type-check:ci": "tsc -p tsconfig.json --noEmit",
-=======
-    "type-check": "tsc -p tsconfig.typecheck.json --noEmit",
-    "type-check:ci": "tsc -p tsconfig.typecheck.json --noEmit",
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-94f6
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",

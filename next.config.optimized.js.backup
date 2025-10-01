@@ -1,10 +1,6 @@
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 });
-<<<<<<< HEAD
-
-=======
->>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
 module.exports = withBundleAnalyzer({
 >const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',

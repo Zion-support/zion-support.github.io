@@ -30,77 +30,8 @@ function fixHoverSyntax(filePath) {
     }
 });
     
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     if (modified) {
       fs.writeFileSync(filePath, content);
       console.log(`✅ Fixed syntax errors in ${filePath}`);
       return true;
     }
-<<<<<<< HEAD
-=======
-    
-    return false;
-  } catch (error) {
-    console.log(`❌ Error fixing ${filePath}: ${error.message}`);
-    return false;
-  }
-}
-
-// Function to find and fix all TypeScript/JSX files
-function fixAllFiles() {
-  const filesToCheck = [
-    'components/Footer.tsx',
-    'components/Header.tsx',
-    'components/layout/MainLayout.tsx',
-    'pages/about.tsx',
-    'pages/ai-services.tsx',
-    'pages/blog.tsx',
-    'pages/contact.tsx',
-    'pages/index.tsx',
-    'pages/privacy.tsx',
-    'pages/terms.tsx',
-    'pages/services.tsx',
-    'pages/pricing.tsx'
-  ];
-  
-  let totalFixed = 0;
-<<<<<<< HEAD
-=======
-  
-  filesToCheck.forEach(file => {
-    const filePath = path.join(process.cwd(), file);
-    if (fs.existsSync(filePath)) {
-      if (fixHoverSyntax(filePath)) {
-        totalFixed++;
-      }
-    }
-  }
-});
-  
-  return totalFixed;
-}
-// Main execution
-try {
-  console.log('🔍 Scanning for syntax errors...');
-  const fixedCount = fixAllFiles();
-  
-  if (fixedCount > 0) {
-    console.log(`✅ Fixed syntax errors in ${fixedCount} files`);
-    
-    // Try to build after fixes
-    console.log('🔨 Attempting build after fixes...');
-    try {
-      execSync('npm run build', { stdio: 'inherit' }
-});
-      console.log('✅ Build successful!');
-    } catch (error) {
-      console.log('⚠️ Build still has issues, but syntax errors were fixed');
-    }
-  } else {
-    console.log('✨ No syntax errors found to fix');
-  }
-  
-} catch (error) {
-  console.error('❌ Error:', error.message);
-  process.exit(1);
-}}

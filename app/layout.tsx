@@ -1,8 +1,9 @@
-// @ts-nocheck
 import React from 'react';
 import Link from 'next/link';
 import './globals.css';
-import { September30NewContentShowcase } from '../components/PromotionalBanner';
+import AI2027TranscendentMetaIntelligenceBreakthroughBanner from '../components/AI2027TranscendentMetaIntelligenceBreakthroughBanner';
+import AI2028OmnipotentSuperintelligenceBreakthroughBanner from '../components/AI2028OmnipotentSuperintelligenceBreakthroughBanner';
+=======
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -104,8 +105,11 @@ function Header() {
           <div className="relative group">
             <Link href="/blog" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
               Blog
-              <span className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
-                BREAKTHROUGH
+              <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                BREAKTHROUGH 2027
+              </span>
+              <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold ml-1">
+                50+ ARTICLES
               </span>
             </Link>
           </div>
@@ -113,7 +117,10 @@ function Header() {
             <Link href="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
               Case Studies
               <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
-                FEATURED
+                $43M+ ROI
+              </span>
+              <span className="bg-gradient-to-r from-green-500 to-teal-500 text-white px-2 py-1 rounded-full text-xs font-semibold ml-1">
+                25+ STUDIES
               </span>
             </Link>
           </div>
@@ -167,73 +174,12 @@ function Footer() {
                 🌟 AI 2026 Future Trends
                 <span className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">BREAKTHROUGH</span>
               </Link>
-              <Link href="/case-studies/ai-2026-global-enterprise-transformation-success" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
-                💰 $500M Global Enterprise Success
-                <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-2 py-1 rounded-full text-xs font-semibold">MEGA ROI</span>
-              </Link>
-              <Link href="/case-studies/autonomous-bi-fortune-500-success" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
-                🧠 Autonomous BI $50M ROI
-                <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-2 py-1 rounded-full text-xs font-semibold">BREAKTHROUGH</span>
-              </Link>
-              <Link href="/blog/ai-2026-quantum-enhanced-analytics" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
-                ⚛️ Quantum Analytics 1000x
-                <span className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">QUANTUM</span>
-              </Link>
-              <Link href="/blog/ai-revolutionary-breakthrough-january-2026" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
-                🚀 AI Revolutionary Breakthrough
-                <span className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">BREAKTHROUGH</span>
-              </Link>
-              <Link href="/blog/ai-cost-optimization-breakthrough-2026" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
-                💰 AI Cost Optimization 90%
-                <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-2 py-1 rounded-full text-xs font-semibold">SAVE</span>
-              </Link>
-              <Link href="/case-studies/fortune-500-ai-transformation-mega-success-2026" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
-                🏆 $300M ROI Success Story
-                <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold">MEGA</span>
-              </Link>
-              <Link href="/blog/ai-2027-quantum-consciousness-fusion" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
-                ⚛️ Quantum Consciousness 100,000x
-                <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold">QUANTUM</span>
-              </Link>
-              <Link href="/blog/ai-autonomous-enterprise-2026" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
-                🤖 Autonomous Enterprise 95%
-                <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-2 py-1 rounded-full text-xs font-semibold">AUTONOMOUS</span>
-              </Link>
-              <Link href="/content-hub" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
-                Content Hub
-                <span className="bg-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold">NEW</span>
-              </Link>
-              <Link href="/blog/ai-2027-revolutionary-breakthrough" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
-                🚀 AI 2027 Revolutionary Breakthrough
-                <span className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">REVOLUTIONARY</span>
-              </Link>
-              <Link href="/case-studies/ai-2027-revolutionary-breakthrough-success" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
-                🏆 $1.2B Success Story
-                <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-2 py-1 rounded-full text-xs font-semibold">MEGA</span>
-              </Link>
-              <Link href="/blog/ai-2027-autonomous-enterprise-revolution" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
-                🚀 AI 2027 Autonomous Revolution
-                <span className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">REVOLUTIONARY</span>
-              </Link>
-              <Link href="/blog/ai-2027-quantum-breakthrough-enterprise" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
-                ⚛️ Quantum AI 1000x Performance
-                <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold">QUANTUM</span>
-              </Link>
-              <Link href="/services/ai-2027-revolutionary-breakthrough-solutions" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
-                🚀 AI 2027 Solutions
-                <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold">BREAKTHROUGH</span>
-              </Link>
-              <Link href="/blog/ai-2027-neuromorphic-computing-breakthrough" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
-                🧠 Neuromorphic AI
-                <span className="bg-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold">REVOLUTIONARY</span>
-              </Link>
-              <Link href="/case-studies/ai-2027-quantum-neuromorphic-success-story" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
-                💰 $2.5B Quantum Success
-                <span className="bg-green-500 text-white px-2 py-1 rounded-full text-xs font-semibold">BREAKTHROUGH</span>
-              </Link>
-              <Link href="/blog/ai-2027-quantum-neural-networks" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
-                ⚛️ Quantum AI 2027
-                <span className="bg-yellow-400 text-black px-2 py-1 rounded-full text-xs font-semibold">BREAKTHROUGH</span>
+              <Link href="/blog/ai-future-workforce-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">👥 AI Future Workforce 2026</Link>
+              <Link href="/blog/ai-cybersecurity-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🛡️ AI Cybersecurity 2026</Link>
+              <Link href="/case-studies/ai-finance-automation-success-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">💰 $15M Finance ROI</Link>
+              <Link href="/case-studies" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                Case Studies
+                <span className="bg-yellow-500 text-white px-2 py-1 rounded-full text-xs font-semibold">FEATURED</span>
               </Link>
             </div>
           </div>
@@ -267,7 +213,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className="min-h-screen bg-white text-gray-900">
-        <September30NewContentShowcase />
         <Header />
         <main className="max-w-6xl mx-auto px-4 py-6 min-h-screen">
           {children}

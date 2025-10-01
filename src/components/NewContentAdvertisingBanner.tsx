@@ -1,43 +1,117 @@
 import React from 'react';
 import { ArrowRight, Sparkles, TrendingUp, Zap, Star, Users, Award, Target } from 'lucide-react';
 
+interface FeaturedContent {
+  id: number;
+  title: string;
+  category: string;
+  readTime: string;
+  rating: number;
+  readers: string;
+  badge: string;
+  gradient: string;
+  icon: React.ReactNode;
+  link: string;
+}
+
 const NewContentAdvertisingBanner: React.FC = () => {
-  const featuredContent = [
+  const featuredContent: FeaturedContent[] = [
+    {
+      id: 0,
+      title: 'Governed Agent Rollbacks',
+      category: 'AI Operations',
+      readTime: '7 min',
+      rating: 5.0,
+      readers: '25K+',
+      badge: 'NEW',
+      gradient: 'from-pink-500 to-red-500',
+      icon: <Sparkles className="w-6 h-6" />,
+      link: '/blog/ai-2025-oct-03-governed-agent-rollbacks'
+    },
+    {
+      id: 7,
+      title: 'Consentless Personalization (Edge)',
+      category: 'Edge Computing',
+      readTime: '6 min',
+      rating: 4.9,
+      readers: '19K+',
+      badge: 'FEATURED',
+      gradient: 'from-teal-500 to-cyan-500',
+      icon: <TrendingUp className="w-6 h-6" />,
+      link: '/blog/edge-2025-oct-02-consentless-personalization-blueprint'
+    },
     {
       id: 1,
-      title: 'AI 2027: Operational Trust Blueprint',
-      category: 'AI Strategy',
+      title: 'GenAI Cache Quality Tiers v2',
+      category: 'GenAI Engineering',
       readTime: '8 min',
-      rating: 4.9,
-      readers: '58K+',
+      rating: 5.0,
+      readers: '120K+',
       badge: 'NEW',
       gradient: 'from-blue-500 to-purple-500',
       icon: <Star className="w-6 h-6" />,
-      link: '/blog/ai-2027-operational-trust-blueprint'
+      link: '/blog/genai-2025-oct-03-cache-quality-tiers-v2'
     },
     {
       id: 2,
-      title: 'Edge 2026: Private Feature Flags',
-      category: 'Architecture',
+      title: 'Edge 2026: Attested Analytics',
+      category: 'Analytics',
       readTime: '7 min',
-      rating: 4.8,
-      readers: '41K+',
-      badge: 'TRENDING',
+      rating: 4.9,
+      readers: '87K+',
+      badge: 'FEATURED',
       gradient: 'from-cyan-500 to-blue-500',
       icon: <TrendingUp className="w-6 h-6" />,
-      link: '/blog/edge-2026-private-feature-flags'
+      link: '/blog/edge-2026-attested-analytics'
     },
     {
       id: 3,
-      title: 'GenAI Quality Tiers v2 (2026)',
-      category: 'GenAI',
-      readTime: '8 min',
-      rating: 4.9,
-      readers: '47K+',
-      badge: 'FEATURED',
+      title: 'Consentless Journeys Blueprint',
+      category: 'Experimentation',
+      readTime: '7 min',
+      rating: 5.0,
+      readers: '65K+',
+      badge: 'NEW',
       gradient: 'from-green-500 to-emerald-500',
       icon: <Award className="w-6 h-6" />,
-      link: '/blog/genai-quality-tiers-v2-2026'
+      link: '/blog/edge-2025-oct-03-consentless-journeys-blueprint'
+    },
+    {
+      id: 4,
+      title: 'Consentless Analytics v4 (2027)',
+      category: 'Analytics',
+      readTime: '6 min',
+      rating: 4.9,
+      readers: '52K+',
+      badge: 'FEATURED',
+      gradient: 'from-emerald-500 to-cyan-500',
+      icon: <TrendingUp className="w-6 h-6" />,
+      link: '/blog/edge-2027-consentless-analytics-v4'
+    }
+    ,
+    {
+      id: 5,
+      title: 'Operational Trust Scorecards v3',
+      category: 'AI Operations',
+      readTime: '9 min',
+      rating: 5.0,
+      readers: '41K+',
+      badge: 'NEW',
+      gradient: 'from-purple-500 to-pink-500',
+      icon: <Sparkles className="w-6 h-6" />,
+      link: '/blog/ai-2025-oct-01-operational-trust-v3'
+    },
+    {
+      id: 6,
+      title: 'Consentless Experiments v3 (<100ms)',
+      category: 'Analytics',
+      readTime: '7 min',
+      rating: 4.9,
+      readers: '33K+',
+      badge: 'NEW',
+      gradient: 'from-teal-500 to-emerald-500',
+      icon: <TrendingUp className="w-6 h-6" />,
+      link: '/blog/edge-2025-oct-01-private-consentless-experiments'
     }
   ];
 
@@ -63,7 +137,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
           <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-indigo-500/20 to-pink-500/20 border border-indigo-500/30 mb-8 animate-fade-in">
             <Sparkles className="w-5 h-5 text-indigo-400 animate-pulse" />
             <span className="text-indigo-400 font-bold text-sm tracking-wider uppercase">
-              🚀 NEW CONTENT LAUNCH • January 2026
+              🚀 NEW CONTENT LAUNCH • Sept 30, 2025
             </span>
             <Sparkles className="w-5 h-5 text-pink-400 animate-pulse" />
           </div>
@@ -151,7 +225,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
 
                 {/* CTA Button */}
                 <a
-                  href={(content as any).link || '/blog'}
+                  href={content.link || '/blog'}
                   className={`group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r ${content.gradient} hover:opacity-90 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1`}
                 >
                   <span>Read Now</span>

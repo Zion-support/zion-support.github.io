@@ -97,39 +97,6 @@ function Footer() {
           <div>
             <h3 className="font-semibold text-gray-900 mb-3">Latest 2027 Content</h3>
             <div className="space-y-2">
-<<<<<<< HEAD
-              <Link href="/content-hub" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
-                Content Hub
-                <span className="bg-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold">NEW</span>
-              </Link>
-              <Link href="/blog/ai-2026-revolutionary-breakthroughs" className="block text-gray-600 hover:text-blue-600 transition-colors">🚀 AI 2026 Revolutionary Breakthroughs</Link>
-              <Link href="/case-studies/ai-mega-transformation-success-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">📊 $150M ROI Mega Success Story</Link>
-              <Link href="/blog/ai-autonomous-enterprise-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🤖 Autonomous Enterprise 2026</Link>
-              <Link href="/blog/ai-quantum-optimization-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">⚡ Quantum AI (1000x Faster)</Link>
-              <Link href="/case-studies" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
-                Case Studies
-                <span className="bg-yellow-500 text-white px-2 py-1 rounded-full text-xs font-semibold">FEATURED</span>
-=======
-              <Link href="/blog/ai-2027-breakthrough-technologies" className="block text-gray-600 hover:text-blue-600 transition-colors">🧠 AI 2027 Breakthrough Technologies</Link>
-              <Link href="/blog/ai-autonomous-enterprise-operations-2027" className="block text-gray-600 hover:text-blue-600 transition-colors">🏢 Autonomous Enterprise Operations</Link>
-              <Link href="/blog/ai-quantum-neural-networks-2027" className="block text-gray-600 hover:text-blue-600 transition-colors">⚛️ Quantum Neural Networks</Link>
-              <Link href="/case-studies/ai-2027-transformation-mega-success" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
-                $500M Success Story
-                <span className="bg-green-500 text-white px-2 py-1 rounded-full text-xs font-semibold">MEGA SUCCESS</span>
-              </Link>
-              <Link href="/case-studies/ai-cognitive-computing-success-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">📊 $25M Cognitive AI Success</Link>
-              <Link href="/case-studies/ai-autonomous-enterprise-success-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">📈 $20M Autonomous Success</Link>
-              <Link href="/case-studies/ai-sustainability-transformation-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🌱 $10M Sustainability ROI</Link>
-=======
-              <Link href="/case-studies/ai-neural-interface-success-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">💰 $12M ROI Neural Interface</Link>
-=======
-              <Link href="/blog" className="block text-gray-600 hover:text-blue-600 transition-colors">Blog</Link>
-              <Link href="/blog/ai-autonomous-infrastructure-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Autonomous Infrastructure</Link>
-              <Link href="/blog/ai-quantum-hybrid-computing-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">Quantum AI Computing</Link>
-              <Link href="/blog/ai-zero-trust-security-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">Zero Trust Security</Link>
-              <Link href="/blog/ai-foundation-models-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">Foundation Models</Link>
-              <Link href="/case-studies" className="block text-gray-600 hover:text-blue-600 transition-colors">All Case Studies</Link>
->>>>>>> origin/cursor/create-and-deploy-new-content-9d1b
             </div>
           </div>
           <div>

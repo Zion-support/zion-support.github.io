@@ -85,18 +85,6 @@ function Footer() {
           <div>
             <h3 className="font-semibold text-gray-900 mb-3">Content</h3>
             <div className="space-y-2">
-<<<<<<< HEAD
-              <Link href="/blog" className="block text-gray-600 hover:text-blue-600 transition-colors">Blog</Link>
-              <Link href="/case-studies" className="block text-gray-600 hover:text-blue-600 transition-colors">Case Studies</Link>
-              <Link href="/blog/ai-metaverse-enterprise-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">Metaverse Enterprise</Link>
-              <Link href="/blog/ai-neural-interfaces-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">Neural Interfaces</Link>
-              <Link href="/blog/ai-space-tech-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">Space Technology</Link>
-=======
-              <Link href="/" className="block text-gray-600 hover:text-blue-600 transition-colors">Home</Link>
-              <Link href="/about" className="block text-gray-600 hover:text-blue-600 transition-colors">About</Link>
-              <Link href="/contact" className="block text-gray-600 hover:text-blue-600 transition-colors">Contact</Link>
-              <a href="https://ziontechgroup.com" className="block text-gray-600 hover:text-blue-600 transition-colors">Main Website</a>
->>>>>>> origin/cursor/create-and-deploy-new-content-cbbd
             </div>
           </div>
           <div>

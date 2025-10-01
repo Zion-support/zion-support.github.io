@@ -18,6 +18,104 @@ interface ContentItem {
 
 const featuredContent: ContentItem[] = [
   {
+    id: 'o3-0',
+    title: 'AI Observability 2026: Complete Guide',
+    description: 'Comprehensive observability strategies for AI systems with real-time monitoring and alerting.',
+    link: '/blog/ai-observability-2026',
+    badge: 'New',
+    badgeColor: 'bg-gradient-to-r from-cyan-600 to-sky-600',
+    icon: '📊',
+    publishedDate: 'September 30, 2025',
+    readTime: '6 min read',
+    category: 'Observability'
+  },
+  // Sept 30, 2025 — highlight newest content
+  // Oct 03, 2025 — newest highlights
+  {
+    id: 'o3-1',
+    title: 'Governed Autonomy Scorecards: From SLIs to KPIs',
+    description: 'Operational scorecards with budgets, canaries, and rollback that accelerate delivery without regressions.',
+    link: '/blog/ai-2025-oct-03-governed-autonomy-scorecards',
+    badge: 'New',
+    badgeColor: 'bg-gradient-to-r from-emerald-600 to-teal-600',
+    icon: '🧭',
+    publishedDate: 'October 03, 2025',
+    readTime: '8 min read',
+    category: 'AI Operations'
+  },
+  {
+    id: 'o3-2',
+    title: 'Private Telemetry at the Edge: Useful Signals, Zero PII',
+    description: 'Scoped IDs, on-device redaction, and DP noise for actionable analytics under 100ms with attestations.',
+    link: '/blog/edge-2025-oct-03-private-telemetry-blueprint',
+    badge: 'Fresh',
+    badgeColor: 'bg-gradient-to-r from-cyan-600 to-sky-600',
+    icon: '📈',
+    publishedDate: 'October 03, 2025',
+    readTime: '7 min read',
+    category: 'Observability'
+  },
+  {
+    id: 'o3-3',
+    title: 'GenAI Quality Tiers v4: Save Up To 70% With Stable UX',
+    description: 'Tiered routing, semantic caches, and eval gates that reduce spend while preserving UX.',
+    link: '/blog/genai-2025-oct-03-quality-tiers-blueprint-v4',
+    badge: 'New',
+    badgeColor: 'bg-gradient-to-r from-purple-600 to-pink-600',
+    icon: '🧪',
+    publishedDate: 'October 03, 2025',
+    readTime: '9 min read',
+    category: 'GenAI'
+  },
+  {
+    id: 'n1',
+    title: 'AI Operational Trust Q4 2025: Scorecards That Prevent Regressions',
+    description: 'Wire SLIs to KPIs with budgets, canaries, and attested rollbacks to ship faster and safer.',
+    link: '/blog/ai-operational-trust-q4-2025',
+    badge: 'Fresh',
+    badgeColor: 'bg-gradient-to-r from-emerald-600 to-teal-600',
+    icon: '🧭',
+    publishedDate: 'September 30, 2025',
+    readTime: '8 min read',
+    category: 'AI Operations'
+  },
+  {
+    id: 'n2',
+    title: 'AI Cost Optimization Breakthrough 2026: 40–70% Savings With Stability',
+    description: 'Quality tiers, semantic caches, and policy tests that cut spend without hurting UX.',
+    link: '/blog/ai-cost-optimization-breakthrough-2026',
+    badge: 'New',
+    badgeColor: 'bg-gradient-to-r from-cyan-600 to-sky-600',
+    icon: '💸',
+    publishedDate: 'September 30, 2025',
+    readTime: '9 min read',
+    category: 'FinOps'
+  },
+  {
+    id: 'n3a',
+    title: 'Governed Autonomy Blueprint (2025): Safe, Reliable, Cost-Aware AI',
+    description: 'Budgets, scorecards, guardrails, and live traces that connect SLIs to business KPIs.',
+    link: '/blog/ai-2025-sept-30-governed-autonomy-blueprint',
+    badge: 'New',
+    badgeColor: 'bg-gradient-to-r from-indigo-600 to-blue-600',
+    icon: '🛡️',
+    publishedDate: 'September 30, 2025',
+    readTime: '12 min read',
+    category: 'Governed Autonomy'
+  },
+  {
+    id: 'n3',
+    title: 'Autonomous Enterprise Operations 2025: From Pilots to Production',
+    description: 'Guardrails, live traces, and budgeted actions that convert pilots into durable ROI.',
+    link: '/blog/ai-autonomous-enterprise-operations-2025',
+    badge: 'Featured',
+    badgeColor: 'bg-gradient-to-r from-yellow-600 to-orange-600',
+    icon: '🚀',
+    publishedDate: 'September 30, 2025',
+    readTime: '10 min read',
+    category: 'Enterprise AI'
+  },
+  {
     id: '1',
     title: 'AI 2027: Quantum Consciousness Fusion',
     description: 'Revolutionary breakthrough combining quantum computing with consciousness simulation, achieving 100,000x processing speed and genuine artificial awareness capabilities.',
@@ -28,6 +126,18 @@ const featuredContent: ContentItem[] = [
     publishedDate: 'February 15, 2027',
     readTime: '15 min read',
     category: 'Quantum AI'
+  },
+  {
+    id: '10',
+    title: 'E2E AI Tracing 2026: From Prompts to Outcomes',
+    description: 'Instrument prompts, tools, calls, budgets, and outcomes. Wire traces to KPI‑linked scorecards for reliable autonomy.',
+    link: '/blog/ai-2026-e2e-ai-tracing',
+    badge: 'New',
+    badgeColor: 'bg-gradient-to-r from-cyan-600 to-sky-600',
+    icon: '🧭',
+    publishedDate: 'January 30, 2026',
+    readTime: '12 min read',
+    category: 'AI Operations'
   },
   {
     id: '9',
@@ -124,6 +234,45 @@ const featuredContent: ContentItem[] = [
     publishedDate: 'September 30, 2025',
     readTime: '16 min read',
     category: 'Data Governance'
+  }
+  ,
+  {
+    id: '11',
+    title: 'AI 2026 Agentic Workflow Orchestration',
+    description: 'Guardrails, reviews, and online evals for reliable multi-agent workflows that achieve measurable ROI.',
+    link: '/blog/ai-2026-agentic-workflow-orchestration',
+    badge: 'New',
+    badgeColor: 'bg-gradient-to-r from-fuchsia-600 to-purple-600',
+    icon: '🧩',
+    publishedDate: 'October 1, 2025',
+    readTime: '16 min read',
+    category: 'Implementation Guide'
+  }
+  ,
+  {
+    id: '12',
+    title: 'AI Insights: New Content Highlights — Sept 30, 2025',
+    description: 'Today’s newest additions across workflows, data fabric, and resilience—what changed and why it matters.',
+    link: '/blog/ai-september-30-2025-new-content-highlights',
+    badge: 'Fresh',
+    badgeColor: 'bg-gradient-to-r from-sky-600 to-indigo-600',
+    icon: '🆕',
+    publishedDate: 'September 30, 2025',
+    readTime: '8 min read',
+    category: 'Featured Article'
+  }
+  ,
+  {
+    id: '13',
+    title: 'AI Strategic Roadmaps — October 2025',
+    description: 'Quarterly plan for governed autonomy, cost-aware routing, and data fabric foundations with milestones and risks.',
+    link: '/blog/ai-october-2025-strategic-roadmaps',
+    badge: 'Roadmap',
+    badgeColor: 'bg-gradient-to-r from-emerald-600 to-green-600',
+    icon: '🗺️',
+    publishedDate: 'October 1, 2025',
+    readTime: '10 min read',
+    category: 'Implementation Guide'
   }
 ];
 

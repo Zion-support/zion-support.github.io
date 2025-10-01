@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-export {};
-=======
->>>>>>> main
 
 interface PerformanceData {
   url: string;
@@ -20,27 +16,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 module.exports = {};
 module.exports = {};
-<<<<<<< HEAD
-ursor/add-new-services-and-deploy-updates-0462
-module.exports = {};
-ursor/add-new-services-and-deploy-updates-0462
-module.exports = {};
-module.exports = {};
-module.exports = {};
-module.exports = {};
-
-    // Validate the data
-    if (!data.url || !data.timestamp || !data.metrics) {
-      return res.status(400).json({ error: 'Invalid data format' })}
-
-    // Log performance metrics (in production, you might want to send to a database or analytics service)
-    console.log('Performance Metrics:' {
-      url: data.url,
-      timestamp: new Date(data.timestamp).toISOString(),
-      metrics: data.metrics
-    });
-=======
->>>>>>> main
 
     // Here you could send the data to:
     // - A database (MongoDB, PostgreSQL, etc.)
@@ -48,22 +23,3 @@ module.exports = {};
     // - A monitoring service (DataDog, New Relic, etc.)
     // - Google Analytics 4 Measurement Protocol
 
-<<<<<<< HEAD
-    // For now, we'll just acknowledge receipt
-    res.status(200).json({ 
-      success: true, 
-      message: 'Performance metrics recorded',
-      timestamp: Date.now()
-    })} catch (error) {
-    console.error('Error processing performance data:', error);
-    res.status(500).json({ error: 'Internal server error' })}
-}
-=======
-
-module.exports = {};
-
-
-module.exports = {};
-
-
->>>>>>> main

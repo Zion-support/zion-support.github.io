@@ -1,6 +1,6 @@
 import Layout from '../../components/Layout';
 import {ShoppingCart,, Users,, BarChart,, Smartphone,, Package} from 'lucide-react';
-import React from 'react';
+
 import Layout from '../../components/Layout';';
 import {ShoppingCart,, Users,, BarChart,, Smartphone,, Package,, CheckCircle,, ArrowRight} from 'lucide-react';
 import Layout from '../../components/Layout';
@@ -30,7 +30,7 @@ const features = [;
     icon: Package,;
     title: 'Supply Chain Optimization,',;
     description: 'End-to-end supply chain visibility and optimization using AI and machine learning.'';
-import React from 'react';
+
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
