@@ -12,6 +12,39 @@ export interface NewArticle {
 
 export const newArticles2025: NewArticle[] = [
   {
+    id: "ai-adaptive-learning-systems-2025",
+    title: "🎓 AI-Powered Adaptive Learning Systems: Next-Gen Personalized Education",
+    description: "Revolutionary adaptive learning systems with real-time curriculum adjustment, personalized pathways, and cognitive load optimization achieving 87% student success rates and 3.2x faster mastery.",
+    category: "AI Education Tech",
+    publishedDate: "2025-10-03",
+    featured: true,
+    link: "/blog/ai-adaptive-learning-systems-personalized-education-2025",
+    readTime: "24 min read",
+    tags: ["Adaptive Learning", "Personalized Education", "AI EdTech", "Student Success"]
+  },
+  {
+    id: "neuromorphic-computing-2025",
+    title: "🧠 Neuromorphic Computing Revolution: Brain-Inspired AI Architecture",
+    description: "Next-generation neuromorphic computing mimicking biological neural networks. Achieve 1000x energy efficiency, real-time learning, and event-driven processing for edge AI and robotics.",
+    category: "Neuromorphic AI",
+    publishedDate: "2025-10-03",
+    featured: true,
+    link: "/blog/neuromorphic-computing-brain-inspired-ai-2025",
+    readTime: "22 min read",
+    tags: ["Neuromorphic Computing", "Brain-Inspired AI", "Edge AI", "Energy Efficiency"]
+  },
+  {
+    id: "ai-protein-design-drug-discovery-2025",
+    title: "🧬 AI-Driven Protein Design: Revolutionary Breakthrough in Drug Discovery",
+    description: "Transform pharmaceutical R&D with AI-powered protein design. Design novel proteins in days (not years), achieve 95% prediction accuracy, and accelerate drug discovery by 10x.",
+    category: "AI BioTech",
+    publishedDate: "2025-10-03",
+    featured: true,
+    link: "/blog/ai-protein-design-drug-discovery-breakthrough-2025",
+    readTime: "26 min read",
+    tags: ["Protein Design", "Drug Discovery", "Biotech AI", "Pharmaceutical AI"]
+  },
+  {
     id: "ai-agent-evaluations-2026",
     title: "🧪 AI Agent Evaluations 2026: Reliable Metrics & Safe Deployments",
     description: "Blueprint for robust agent evals: task suites, rubric scoring, long-horizon reliability, safety budgets, and HIL governance.",
