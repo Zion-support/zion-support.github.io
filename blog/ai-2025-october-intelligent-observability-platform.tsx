@@ -118,8 +118,8 @@ const observabilityPlatform = {
     anomalyDetection: {
       algorithm: 'ensemble_ml',
       sensitivity: 'adaptive',
-      falsePositiveRate: '<0.01%',
-      detectionLatency: '<5_seconds'
+      falsePositiveRate: '&lt;0.01%',
+      detectionLatency: '&lt;5_seconds'
     },
     predictiveAnalysis: {
       forecastWindow: '7_days',
@@ -128,7 +128,7 @@ const observabilityPlatform = {
     },
     rootCauseAnalysis: {
       correlationEngine: 'graph_neural_network',
-      analysisTime: '<30_seconds',
+      analysisTime: '&lt;30_seconds',
       accuracyRate: '94%'
     }
   },
