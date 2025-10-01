@@ -168,7 +168,7 @@ class AdvancedCacheManager<T = any> {
         keyToEvict = this.findLFUKey();
         break;
       case 'FIFO': // First In First Out
-        keyToEvict = this.cache.keys().next().value;
+        keyToEvict = this.cache.keys().next().value || null;
         break;
     }
 
