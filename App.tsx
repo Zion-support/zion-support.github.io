@@ -1,5 +1,10 @@
 import React, { JSX } from "react";
 
+// 🚀🚀🚀 BREAKING NEWS: OCTOBER 1, 2025 - SUPPLY CHAIN RESILIENCE REVOLUTION - ABSOLUTE #1 NEWEST PRIORITY! 🚀🚀🚀
+// 💰💰💰 JUST PUBLISHED TODAY: $3.2B Value Creation, 11.4x ROI, 92% Prediction Accuracy, Complete Implementation Guide! 💰💰💰
+import October2025SupplyChainResilienceBanner from "./components/October2025SupplyChainResilienceBanner";
+import October2025NewContentHighlight from "./components/October2025NewContentHighlight";
+
 // 🔥🔥🔥 BREAKING: OCTOBER 1, 2025 - BRAND NEW AUTONOMOUS INTELLIGENCE REVOLUTION - ABSOLUTE #1 PRIORITY! 🔥🔥🔥
 // 💎💎💎 JUST PUBLISHED TODAY: $547M Success Story, 99.7% Accuracy, 847% ROI, Complete Transformation Guide! 💎💎💎
 import October2025AutonomousIntelligenceMegaBanner from "./components/October2025AutonomousIntelligenceMegaBanner";
@@ -284,6 +289,14 @@ import Fortune500SuccessAdvertisingBanner from "./components/Fortune500SuccessAd
 export default function App(): JSX.Element {
   return (
     <div className="min-h-screen bg-slate-950">
+      {/* 🚀🚀🚀 BREAKING NEWS: OCTOBER 1, 2025 - SUPPLY CHAIN RESILIENCE REVOLUTION - ABSOLUTE #1 NEWEST! 🚀🚀🚀 */}
+      {/* 💰💰💰 JUST PUBLISHED TODAY: $3.2B Value Creation, 11.4x ROI, 92% Accuracy, Self-Healing Networks, Complete Guide! 💰💰💰 */}
+      <October2025SupplyChainResilienceBanner />
+      
+      {/* 🆕🆕🆕 NEW CONTENT HIGHLIGHT: OCTOBER 1, 2025 - SUPPLY CHAIN AI TRANSFORMATION - TOP PRIORITY! 🆕🆕🆕 */}
+      {/* Quick access to latest supply chain resilience content with $3.2B success story and implementation guide */}
+      <October2025NewContentHighlight />
+      
       {/* 🔥🔥🔥 BREAKING NEWS: OCTOBER 1, 2025 - BRAND NEW AUTONOMOUS INTELLIGENCE CONTENT - ABSOLUTE #1 TOP PRIORITY! 🔥🔥🔥 */}
       {/* 💎💎💎 JUST PUBLISHED TODAY: $547M Fortune 500 Success, 99.7% Accuracy, 847% ROI, Complete Implementation Guide! 💎💎💎 */}
       <October2025AutonomousIntelligenceMegaBanner />
