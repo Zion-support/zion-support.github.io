@@ -1,17 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { Clock, ArrowRight } from 'lucide-react';
-
-// 🚀🚀🚀 OCTOBER 2026: HYPERAUTONOMOUS ENTERPRISE MESH - $18.4B BREAKTHROUGH! 🚀🚀🚀
-// 💎💎💎 BRAND NEW: Self-Organizing AI Networks, 94.7% Coordination Reduction, 364% ROI! 💎💎💎
-import October2026HAEMBanner from '../components/October2026HAEMBanner';
-
-// 🚀🚀🚀 ABSOLUTE NEWEST: JANUARY 2026 - REVOLUTIONARY AI BREAKTHROUGHS - ABSOLUTE #1 TOP PRIORITY! 🚀🚀🚀
-// 💎💎💎 JUST PUBLISHED: Ultra-Autonomous Enterprise, Quantum Consciousness BI, Neural-Quantum Fusion - $36.8B Combined Value! 💎💎💎
-import January2026RevolutionaryBreakthroughsMegaBanner from '../components/January2026RevolutionaryBreakthroughsMegaBanner';
-import January2026UltraAutonomousEnterpriseBanner from '../components/January2026UltraAutonomousEnterpriseBanner';
-import January2026QuantumConsciousnessBIBanner from '../components/January2026QuantumConsciousnessBIBanner';
-import January2026NeuralQuantumFusionBanner from '../components/January2026NeuralQuantumFusionBanner';
 import {
   NewBlogBanner,
   AnalyticsPlatformBanner,
@@ -56,14 +45,21 @@ import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
 import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
 import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
+<<<<<<< HEAD
 import InteractiveContentRecommendation from '../components/InteractiveContentRecommendation';
 import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
 import LatestContent2026Banner from '../components/LatestContent2026Banner';
+<<<<<<< HEAD
 import NewContent2026ShowcaseBanner from '../components/NewContent2026ShowcaseBanner';
 import LatestContentPromotionalBanner from '../components/LatestContentPromotionalBanner';
 import NewContentPromotionalBanner2026 from '../components/NewContentPromotionalBanner2026';
 import AIInnovationShowcaseBanner2026 from '../components/AIInnovationShowcaseBanner2026';
+=======
 import NextGenAutonomousBanner from '../components/NextGenAutonomousBanner';
+>>>>>>> cursor/create-and-deploy-new-content-a364
+=======
+import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
+>>>>>>> cursor/create-and-deploy-new-content-d513
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -74,48 +70,249 @@ export const metadata = {
 export default function HomePage() {
   return (
     <div className="animate-fade-in">
-      {/* 🚀🚀🚀 OCTOBER 2026: HYPERAUTONOMOUS ENTERPRISE MESH - $18.4B BREAKTHROUGH! 🚀🚀🚀 */}
-      {/* 💎💎💎 BRAND NEW: Self-Organizing AI Networks, 94.7% Coordination Reduction, 364% ROI! 💎💎💎 */}
-      <October2026HAEMBanner />
-
-      {/* 🚀🚀🚀 ABSOLUTE NEWEST: JANUARY 2026 - REVOLUTIONARY AI BREAKTHROUGHS - ABSOLUTE #1 TOP PRIORITY! 🚀🚀🚀 */}
-      {/* 💎💎💎 JUST PUBLISHED: Ultra-Autonomous Enterprise, Quantum Consciousness BI, Neural-Quantum Fusion - $36.8B Combined Value! 💎💎💎 */}
-      <January2026RevolutionaryBreakthroughsMegaBanner />
-      
-      {/* Ultra-Autonomous Enterprise Revolution */}
-      <January2026UltraAutonomousEnterpriseBanner />
-      
-      {/* Quantum Consciousness BI Breakthrough */}
-      <January2026QuantumConsciousnessBIBanner />
-      
-      {/* Neural-Quantum Fusion Breakthrough */}
-      <January2026NeuralQuantumFusionBanner />
-
       {/* New Content Promo Strip */}
-      <div className="w-full bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white">
+      <div className="w-full bg-gradient-to-r from-green-600 to-blue-600 text-white">
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
-          <div className="flex items-center gap-2 text-sm md:text-base">
-            <span className="font-bold">🔥 OCTOBER 2026:</span>
-            <Link href="/blog/ai-2026-october-hyperautonomous-enterprise-mesh-revolution" className="underline hover:text-yellow-200 font-semibold">Hyperautonomous Enterprise Mesh</Link>
+          <div className="flex items-center gap-2 text-sm md:text-base flex-wrap">
+            <span className="font-bold">🚀 JUST PUBLISHED:</span>
+            <Link href="/blog/ai-supply-chain-intelligence-2026" className="underline hover:text-yellow-200">AI Supply Chain ($8M Savings)</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-2026-october-telecom-hyperautonomous-mesh-18-4-billion-success" className="underline hover:text-yellow-200">$18.4B Telecom Success</Link>
+            <Link href="/blog/ai-healthcare-diagnostics-revolution-2026" className="underline hover:text-yellow-200">Healthcare AI (99% Accuracy)</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-agent-orchestration-2026" className="underline hover:text-yellow-200">AI Agent Orchestration</Link>
+            <Link href="/case-studies/supply-chain-transformation-2026" className="underline hover:text-yellow-200">$8.2M Supply Chain ROI</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-sustainability-green-tech-2026" className="underline hover:text-yellow-200">AI Sustainability</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-quantum-computing-2026" className="underline hover:text-yellow-200">Quantum Computing</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-mega-transformation-2026" className="underline hover:text-yellow-200">$50M ROI Case Study</Link>
+            <Link href="/case-studies/healthcare-ai-transformation-2026" className="underline hover:text-yellow-200">$5.2M Healthcare Savings</Link>
           </div>
           <Link
             href="/blog"
-            className="bg-white text-purple-700 hover:bg-gray-100 px-4 py-1.5 rounded-md text-sm font-semibold"
+            className="bg-white text-green-700 hover:bg-gray-100 px-4 py-1.5 rounded-md text-sm font-semibold whitespace-nowrap"
           >
-            Read the latest
+            Read Now →
           </Link>
         </div>
       </div>
+      {/* Featured New Content Section */}
+      <section className="py-16 bg-gradient-to-br from-blue-600 via-purple-600 to-teal-600">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center px-6 py-3 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm font-bold mb-4">
+              <span className="text-2xl mr-2">✨</span>
+              JUST PUBLISHED — October 2025
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Latest AI Transformation Success Stories
+            </h2>
+            <p className="text-xl text-white/90 max-w-3xl mx-auto">
+              Real-world implementations delivering millions in savings and unprecedented accuracy
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-8">
+            {/* Supply Chain Intelligence Feature */}
+            <Link href="/blog/ai-supply-chain-intelligence-2026" className="group">
+              <div className="bg-white rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-500 overflow-hidden hover:scale-105">
+                <div className="relative h-48 bg-gradient-to-br from-green-500 via-blue-500 to-teal-500">
+                  <div className="absolute inset-0 bg-black opacity-10"></div>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center text-white">
+                      <div className="w-20 h-20 mx-auto mb-4 bg-white bg-opacity-20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                        <span className="text-4xl">🚚</span>
+                      </div>
+                      <h3 className="text-2xl font-bold mb-2">AI Supply Chain Intelligence</h3>
+                      <p className="text-blue-100 font-semibold">End-to-End Autonomous Operations</p>
+                    </div>
+                  </div>
+                  <div className="absolute top-4 right-4">
+                    <span className="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full text-sm font-bold shadow-lg">
+                      NEW 2026
+                    </span>
+                  </div>
+                </div>
+                <div className="p-8">
+                  <div className="flex items-center gap-4 mb-4">
+                    <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-bold">📝 Article</span>
+                    <span className="text-gray-500 text-sm font-medium">24 min read</span>
+                  </div>
+                  <h4 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
+                    $8M+ Annual Savings with 92% Forecast Accuracy
+                  </h4>
+                  <p className="text-gray-600 mb-6 leading-relaxed">
+                    Discover how leading enterprises achieve $8M+ savings, 85% stockout reduction, and 99.5% on-time delivery through AI-powered supply chain transformation. Complete implementation guide with real ROI data.
+                  </p>
+                  <div className="grid grid-cols-3 gap-4 mb-6 pb-6 border-b border-gray-200">
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-green-600">92%</div>
+                      <div className="text-xs text-gray-500 mt-1">Forecast Accuracy</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-blue-600">$8M+</div>
+                      <div className="text-xs text-gray-500 mt-1">Annual Savings</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-purple-600">85%</div>
+                      <div className="text-xs text-gray-500 mt-1">Stockout Reduction</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <div className="text-sm text-gray-500">
+                      <span className="font-semibold text-gray-700">Topics:</span> AI, Supply Chain, Predictive Analytics
+                    </div>
+                    <div className="flex items-center text-blue-600 font-bold text-lg group-hover:text-blue-700 transition-colors">
+                      Read Article →
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+            {/* Healthcare Diagnostics Feature */}
+            <Link href="/blog/ai-healthcare-diagnostics-revolution-2026" className="group">
+              <div className="bg-white rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-500 overflow-hidden hover:scale-105">
+                <div className="relative h-48 bg-gradient-to-br from-red-500 via-pink-500 to-purple-500">
+                  <div className="absolute inset-0 bg-black opacity-10"></div>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center text-white">
+                      <div className="w-20 h-20 mx-auto mb-4 bg-white bg-opacity-20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                        <span className="text-4xl">🏥</span>
+                      </div>
+                      <h3 className="text-2xl font-bold mb-2">AI Healthcare Diagnostics</h3>
+                      <p className="text-red-100 font-semibold">99% Accuracy Clinical Decision Support</p>
+                    </div>
+                  </div>
+                  <div className="absolute top-4 right-4">
+                    <span className="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full text-sm font-bold shadow-lg">
+                      NEW 2026
+                    </span>
+                  </div>
+                </div>
+                <div className="p-8">
+                  <div className="flex items-center gap-4 mb-4">
+                    <span className="bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm font-bold">📝 Article</span>
+                    <span className="text-gray-500 text-sm font-medium">26 min read</span>
+                  </div>
+                  <h4 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-red-600 transition-colors">
+                    99% Diagnostic Accuracy & 75% Faster Diagnosis
+                  </h4>
+                  <p className="text-gray-600 mb-6 leading-relaxed">
+                    Revolutionary AI healthcare diagnostics achieving 99% accuracy, 75% faster diagnosis, and $5M+ annual savings. Complete guide to medical AI implementation with clinical validation results.
+                  </p>
+                  <div className="grid grid-cols-3 gap-4 mb-6 pb-6 border-b border-gray-200">
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-red-600">99%</div>
+                      <div className="text-xs text-gray-500 mt-1">Accuracy</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-pink-600">75%</div>
+                      <div className="text-xs text-gray-500 mt-1">Faster Diagnosis</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-purple-600">$5M+</div>
+                      <div className="text-xs text-gray-500 mt-1">Savings</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <div className="text-sm text-gray-500">
+                      <span className="font-semibold text-gray-700">Topics:</span> Healthcare AI, Medical Diagnostics
+                    </div>
+                    <div className="flex items-center text-red-600 font-bold text-lg group-hover:text-red-700 transition-colors">
+                      Read Article →
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </div>
+
+          {/* Case Studies Row */}
+          <div className="grid lg:grid-cols-2 gap-8 mt-8">
+            {/* Supply Chain Case Study */}
+            <Link href="/case-studies/supply-chain-transformation-2026" className="group">
+              <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 p-8 hover:scale-105">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-bold">
+                    📊 CASE STUDY
+                  </span>
+                  <span className="bg-yellow-400 text-gray-900 px-3 py-1 rounded-full text-xs font-bold">
+                    $8.2M ROI
+                  </span>
+                </div>
+                <h4 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-green-600 transition-colors">
+                  Global Manufacturer: $8.2M Annual Savings
+                </h4>
+                <p className="text-gray-700 mb-4 leading-relaxed">
+                  $850M manufacturer achieves 92% forecast accuracy, 85% stockout reduction, and 99.5% on-time delivery. Complete transformation case study with financial breakdown.
+                </p>
+                <div className="flex gap-6 mb-4">
+                  <div>
+                    <div className="text-2xl font-bold text-green-600">$8.2M</div>
+                    <div className="text-xs text-gray-500">Annual Savings</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-blue-600">1,074%</div>
+                    <div className="text-xs text-gray-500">Year 1 ROI</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-purple-600">12 mo</div>
+                    <div className="text-xs text-gray-500">Implementation</div>
+                  </div>
+                </div>
+                <div className="flex items-center text-green-600 font-bold group-hover:text-green-700 transition-colors">
+                  View Case Study →
+                </div>
+              </div>
+            </Link>
+
+            {/* Healthcare Case Study */}
+            <Link href="/case-studies/healthcare-ai-transformation-2026" className="group">
+              <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 p-8 hover:scale-105">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="bg-red-500 text-white px-4 py-2 rounded-full text-sm font-bold">
+                    📊 CASE STUDY
+                  </span>
+                  <span className="bg-yellow-400 text-gray-900 px-3 py-1 rounded-full text-xs font-bold">
+                    $5.2M ROI
+                  </span>
+                </div>
+                <h4 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-red-600 transition-colors">
+                  Academic Medical Center: $5.2M Savings
+                </h4>
+                <p className="text-gray-700 mb-4 leading-relaxed">
+                  950-bed hospital achieves 99.2% diagnostic accuracy, 75% faster diagnosis, and 87% error reduction. Complete healthcare AI implementation with clinical validation.
+                </p>
+                <div className="flex gap-6 mb-4">
+                  <div>
+                    <div className="text-2xl font-bold text-red-600">99.2%</div>
+                    <div className="text-xs text-gray-500">Accuracy</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-pink-600">87%</div>
+                    <div className="text-xs text-gray-500">Error Reduction</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-purple-600">18 mo</div>
+                    <div className="text-xs text-gray-500">Implementation</div>
+                  </div>
+                </div>
+                <div className="flex items-center text-red-600 font-bold group-hover:text-red-700 transition-colors">
+                  View Case Study →
+                </div>
+              </div>
+            </Link>
+          </div>
+
+          <div className="text-center mt-12">
+            <Link
+              href="/blog"
+              className="inline-flex items-center bg-white text-blue-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 shadow-2xl hover:scale-105"
+            >
+              <span className="text-2xl mr-3">📚</span>
+              Explore All Content
+              <ArrowRight className="w-6 h-6 ml-3" />
+            </Link>
+          </div>
+        </div>
+      </section>
+      
       {/* Revolutionary 2026 Content Banner */}
       <Revolutionary2026ContentBanner />
       
