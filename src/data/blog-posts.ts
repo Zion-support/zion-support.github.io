@@ -14,48 +14,18 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
-    id: '312',
-    title: 'Real-Time Decision Engines 2027: 10M/sec Under 1ms',
-    slug: 'real-time-decision-engines-2027-2025-10-02',
+    id: '401',
+    title: 'Enterprise AI Value Realization: 90 Days to Outcomes',
+    slug: 'enterprise-ai-value-realization-2025-10-08',
     excerpt:
-      'Architect sub‑millisecond decision systems with quality tiers, caches, and intent routing.',
+      'A pragmatic blueprint to turn AI initiatives into shipped outcomes in 90 days—governed, measurable, and cost-aware.',
     content:
-      'A practical blueprint for decision engines that process millions of events per second: intent-aware queues, evaluator-backed routing, tiered caches, and rollback-first operations. Includes SLI scorecards, latency budgets, and production runbooks that keep UX snappy under cost constraints.',
-    featuredImage: '/images/blog/real-time-decision-engines-2027.jpg',
-    category: 'Real-Time AI',
-    tags: ['Latency', 'Routing', 'Caching', 'SLIs'],
+      'Most AI programs stall on pilots. This guide shows how to ship outcomes in 90 days with KPI-linked scorecards, evaluator-driven release gates, tiered routing + caches for predictable cost, and rollback-first operations. Includes rollout plan, org rituals, and dashboards that align product, platform, and security.',
+    featuredImage: '/images/blog/enterprise-ai-value-realization-2025.jpg',
+    category: 'AI',
+    tags: ['Execution', 'Scorecards', 'Guardrails', 'Cost'],
     author: 'Zion Tech Team',
-    publishedAt: '2025-10-02',
-    readTime: 8,
-  },
-  {
-    id: '313',
-    title: 'Privacy‑First Insights 2026: Actionable Analytics Without PII',
-    slug: 'privacy-first-insights-2026-2025-10-02',
-    excerpt:
-      'Scoped IDs, on‑device aggregation, and DP noise for trustworthy insights under <100ms.',
-    content:
-      'Ship analytics teams love without collecting PII. We detail scoped identifiers, on‑device aggregation, DP noise, and consent-aware telemetry. Includes validation scorecards, rollout stages, and controls auditors accept—while keeping performance under 100ms.',
-    featuredImage: '/images/blog/privacy-first-insights-2026.jpg',
-    category: 'Analytics',
-    tags: ['Privacy', 'Analytics', 'Edge', 'DP'],
-    author: 'Zion Tech Team',
-    publishedAt: '2025-10-02',
-    readTime: 6,
-  },
-  {
-    id: '314',
-    title: 'Agent Safety Checklists 2026: Budgets, Sandboxes, Rollbacks',
-    slug: 'agent-safety-checklists-2026-2025-10-02',
-    excerpt:
-      'Practical checklists for safe agent releases with budgeted actions and instant rollback.',
-    content:
-      'Turn agent reliability into muscle memory with budgeted actions, sandboxed tools, KPI‑linked canaries, and one‑click rollback. We provide reference policies, approval tiers, and incident drills that keep autonomy safe without slowing teams.',
-    featuredImage: '/images/blog/agent-safety-checklists-2026.jpg',
-    category: 'AI Operations',
-    tags: ['Agents', 'Safety', 'Budgets', 'Rollback'],
-    author: 'Zion Tech Team',
-    publishedAt: '2025-10-02',
+    publishedAt: '2025-10-08',
     readTime: 7,
   },
   {
@@ -713,50 +683,5 @@ export const BLOG_POSTS: BlogPost[] = [
     author: 'Zion Tech Team',
     publishedAt: '2025-10-03',
     readTime: 10,
-  },
-  {
-    id: '209',
-    title: 'Enterprise Evals v4: Scorecards That Predict Production',
-    slug: 'enterprise-evals-v4-scorecards-2025-10-06',
-    excerpt:
-      'Design eval pipelines that correlate with KPIs and reliably gate risky changes—fewer regressions, faster delivery.',
-    content:
-      'Most eval suites don\'t predict production. This guide shows how to build KPI-linked scorecards, golden tasks, calibrated metrics, and online canaries so you ship faster with confidence and fewer incidents.',
-    featuredImage: '/images/blog/enterprise-evals-v4-2025.jpg',
-    category: 'AI Reliability',
-    tags: ['Evaluations', 'Scorecards', 'Guardrails'],
-    author: 'Zion Tech Team',
-    publishedAt: '2025-10-06',
-    readTime: 8,
-  },
-  {
-    id: '210',
-    title: 'Real-Time Decision Engines: Sub-1ms at 10M+ Events/sec',
-    slug: 'real-time-decision-engines-sub-1ms-2025-10-06',
-    excerpt:
-      'Streaming features, tiered caches, and budgeted routes for ultra-low latency decisions at massive scale.',
-    content:
-      'We outline architectures for sub-1ms decisions: stateful stream processors, feature stores with freshness windows, micro-batched inference, and KPI-linked canary scorecards with instant rollback.',
-    featuredImage: '/images/blog/real-time-decision-engines-2025.jpg',
-    category: 'Real-Time AI',
-    tags: ['Streaming', 'Latency', 'Caching', 'KPIs'],
-    author: 'Zion Tech Team',
-    publishedAt: '2025-10-06',
-    readTime: 9,
-  },
-  {
-    id: '211',
-    title: 'Autonomous FinOps v3: 30–70% GenAI Spend Down, No Regressions',
-    slug: 'autonomous-finops-v3-2025-10-06',
-    excerpt:
-      'Quality tiers, semantic caches, and cost scorecards that shrink spend while keeping UX stable.',
-    content:
-      'A pragmatic playbook for predictable GenAI costs: KPI-linked cost scorecards, eval-gated quality tiers, semantic caches with freshness windows, and budget-aware routing with safe fallbacks.',
-    featuredImage: '/images/blog/autonomous-finops-v3-2025.jpg',
-    category: 'FinOps',
-    tags: ['Cost Optimization', 'Quality Tiers', 'Caching'],
-    author: 'Zion Tech Team',
-    publishedAt: '2025-10-06',
-    readTime: 7,
   },
 ];
