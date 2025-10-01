@@ -14,18 +14,27 @@ export interface EnhancedPromotionalBanner {
 
 export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
   {
-    id: 'oct-1-latest-breakthrough-2025',
-    title: '🔥 JUST RELEASED: Agentic Swarm Intelligence, Quantum Supply Chain, Neural Architecture Search',
-    description: '3 REVOLUTIONARY breakthroughs published TODAY! Coordinate 10,000+ AI agents (87% cost cut), optimize supply chains in seconds (10,000x faster), design state-of-the-art models in hours (1000x faster). Transform your enterprise NOW!',
-    ctaText: 'Read Latest Breakthroughs',
+    id: 'oct-01-quantum-mesh-edge-2025',
+    title: '🌟 JUST RELEASED: Quantum Neural Networks, Autonomous AI Mesh, <50ms Edge GenAI',
+    description: '3 revolutionary articles just dropped! 500x faster training, self-organizing intelligence, and ultra-low latency at global scale. The future of enterprise AI is here.',
+    ctaText: 'Explore the Breakthroughs',
     ctaLink: '/blog',
     variant: 'success',
-    icon: '🔥',
+    icon: '🌟',
     featured: true,
     priority: 0,
     startDate: '2025-10-01',
   },
   {
+<<<<<<< HEAD
+    id: 'quantum-neural-networks-oct-2025',
+    title: '⚡ NEW: Quantum Neural Networks — 500x Faster AI Training',
+    description: 'Breakthrough quantum-classical hybrid systems solving previously intractable problems. Train enterprise models in hours, not weeks.',
+    ctaText: 'Discover Quantum AI',
+    ctaLink: '/blog/quantum-neural-networks-enterprise-2025',
+    variant: 'success',
+    icon: '⚡',
+=======
     id: 'agentic-swarm-intelligence-oct-2025',
     title: '🤖 NEW TODAY: Agentic Swarm Intelligence — Coordinate 10,000+ AI Agents',
     description: 'Deploy distributed AI agent swarms with 99.99% reliability and 87% cost reduction. Autonomous coordination at enterprise scale with sub-second latency.',
@@ -33,11 +42,21 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     ctaLink: '/blog/agentic-swarm-intelligence-enterprise-2025',
     variant: 'success',
     icon: '🤖',
+>>>>>>> cursor/create-and-deploy-new-content-fe45
     featured: true,
     priority: 1,
     startDate: '2025-10-01',
   },
   {
+<<<<<<< HEAD
+    id: 'autonomous-mesh-oct-2025',
+    title: '🔮 NEW: Autonomous AI Mesh — Self-Organizing Intelligence',
+    description: 'Revolutionary mesh architecture that self-coordinates and self-heals across global infrastructure. Zero manual intervention required.',
+    ctaText: 'Explore AI Mesh',
+    ctaLink: '/blog/autonomous-ai-mesh-architecture-2026',
+    variant: 'info',
+    icon: '🔮',
+=======
     id: 'quantum-supply-chain-oct-2025',
     title: '⚡ NEW TODAY: Quantum-Inspired Supply Chain — Solve in Seconds, Not Days',
     description: 'Optimize 50,000+ variables in under 60 seconds with 10,000x faster performance. $127M annual savings and 94% cost reduction for global supply chains.',
@@ -45,11 +64,21 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     ctaLink: '/blog/quantum-inspired-supply-chain-optimization-2025',
     variant: 'info',
     icon: '⚡',
+>>>>>>> cursor/create-and-deploy-new-content-fe45
     featured: true,
     priority: 2,
     startDate: '2025-10-01',
   },
   {
+<<<<<<< HEAD
+    id: 'edge-genai-optimization-oct-2025',
+    title: '⚡ NEW: <50ms GenAI at Global Scale',
+    description: 'Ultra-low latency GenAI deployment with intelligent edge caching and adaptive routing. Instant user experiences worldwide.',
+    ctaText: 'See Edge AI in Action',
+    ctaLink: '/blog/real-time-genai-edge-optimization-2025',
+    variant: 'success',
+    icon: '⚡',
+=======
     id: 'neural-architecture-search-oct-2025',
     title: '🧠 NEW TODAY: Neural Architecture Search — Design AI Models in Hours',
     description: 'Automate model discovery with 1000x faster design and 97% accuracy improvements. Build state-of-the-art models without ML PhDs.',
@@ -57,6 +86,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     ctaLink: '/blog/neural-architecture-search-automation-2025',
     variant: 'info',
     icon: '🧠',
+>>>>>>> cursor/create-and-deploy-new-content-fe45
     featured: true,
     priority: 3,
     startDate: '2025-10-01',
