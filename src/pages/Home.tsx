@@ -43,6 +43,8 @@ import LatestInsights from "../components/LatestInsights";
 import ModernFeatures from "../components/ModernFeatures";
 import AdvertisingBanner from "../components/AdvertisingBanner";
 import October2025NewBreakthroughBanner from "../components/October2025NewBreakthroughBanner";
+import October2025NewPremiumContentBanner from "../components/October2025NewPremiumContentBanner";
+import October2025LatestPremiumContentBanner from "../components/October2025LatestPremiumContentBanner";
 import October2025CuttingEdgeInnovationsBanner from "../components/October2025CuttingEdgeInnovationsBanner";
 import January2026RevolutionaryBanner from "../components/January2026RevolutionaryBanner";
 import NewServicesPromoBanner2026 from "../components/NewServicesPromoBanner2026";
@@ -86,6 +88,14 @@ const Home = () => {
         <link rel="canonical" href="https://ziontechgroup.com" />
       </Helmet>
       <AdvertisingBanner />
+      
+      {/* 🔥🔥🔥 BRAND NEW OCTOBER 1, 2025 - LATEST PREMIUM RELEASES: 3 GAME-CHANGING AI BREAKTHROUGHS - TOP PRIORITY! 🔥🔥🔥 */}
+      {/* Featured: Autonomous Data Governance (99.98% Compliance, $4.2B Risk Mitigation), Neural Fraud Detection (99.96% Accuracy, $8.7B Prevented), Cognitive Workflow Orchestration (98.7% Automation, $6.3B Value) */}
+      <October2025LatestPremiumContentBanner />
+      
+      {/* 🔥🔥🔥 BRAND NEW OCTOBER 1, 2025 - LATEST PREMIUM RELEASES: 3 GAME-CHANGING AI BREAKTHROUGHS - TOP PRIORITY! 🔥🔥🔥 */}
+      {/* Featured: Autonomous Data Governance (99.98% Compliance, $4.2B Risk Mitigation), Neural Fraud Detection (99.96% Accuracy, $8.7B Prevented), Cognitive Workflow Orchestration (98.7% Automation, $6.3B Value) */}
+      <October2025LatestPremiumContentBanner />
       <November2025GameChangersBanner />
       <January2026RevolutionaryBanner />
       <October2025UltimateEnterpriseBanner />
