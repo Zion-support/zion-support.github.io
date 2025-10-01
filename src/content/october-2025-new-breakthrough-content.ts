@@ -1,7 +1,7 @@
 // October 2025 New Breakthrough Content - Latest Releases
 // Published: October 1, 2025
 
-export const octoberNewBreakthroughContent = [
+export const october2025NewBreakthroughContent = [
   {
     id: "autonomous-ai-orchestration-platform-revolution",
     title: "Autonomous AI Orchestration Platform Revolution: 95% Efficiency Gain",
@@ -95,15 +95,15 @@ export const octoberNewBreakthroughContent = [
 ];
 
 export const getFeaturedOctoberNewContent = () => {
-  return octoberNewBreakthroughContent.filter(content => content.featured);
+  return october2025NewBreakthroughContent.filter(content => content.featured);
 };
 
 export const getUrgentOctoberContent = () => {
-  return octoberNewBreakthroughContent.filter(content => content.urgent);
+  return october2025NewBreakthroughContent.filter(content => content.urgent);
 };
 
 export const getAllOctoberNewContent = () => {
-  return octoberNewBreakthroughContent;
+  return october2025NewBreakthroughContent;
 };
 
 // Quick stats for homepage banner
@@ -113,4 +113,18 @@ export const octoberContentStats = {
   averageROI: "2,800%",
   implementationSuccess: "99%",
   clientSatisfaction: "9.8/10"
+};
+
+export const getOctober2025BreakthroughStats = () => {
+  const totalValue = october2025NewBreakthroughContent.reduce((sum, item) => {
+    const value = parseFloat(item.metrics.valueCreated.replace(/[$M]/g, ''));
+    return sum + value;
+  }, 0);
+
+  return {
+    totalArticles: october2025NewBreakthroughContent.length,
+    totalValue: `$${totalValue}M`,
+    averageValue: `$${(totalValue / october2025NewBreakthroughContent.length).toFixed(1)}M`,
+    categories: [...new Set(october2025NewBreakthroughContent.map(c => c.category))].length
+  };
 };
