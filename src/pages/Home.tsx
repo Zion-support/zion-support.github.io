@@ -21,6 +21,7 @@ import EnhancedNewsletterSignup from "../components/EnhancedNewsletterSignup";
 import EnhancedPromotionalBanner from "../components/EnhancedPromotionalBanner";
 import EnhancedTestimonials from "../components/EnhancedTestimonials";
 import Header from "../components/Header";
+import October2025EdgeAIQuantumCryptoBanner from "../components/October2025EdgeAIQuantumCryptoBanner";
 import LatestArticlesShowcase from "../components/LatestArticlesShowcase";
 import LatestContentBanner from "../components/LatestContentBanner";
 import LatestInsights from "../components/LatestInsights";
@@ -116,6 +117,9 @@ const Home = () => {
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
+        
+        {/* 🚀 OCTOBER 1, 2025 - LATEST BREAKTHROUGH CONTENT: Edge AI + Quantum Crypto */}
+        <October2025EdgeAIQuantumCryptoBanner />
         
         {/* Enhanced Promotional Banners */}
         {getFeaturedBanners().slice(0, 3).map((banner) => (

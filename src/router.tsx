@@ -17,6 +17,10 @@ const AIDataAnalytics = React.lazy(() => Promise.resolve({ default: () => null }
 import AIAutonomousOperations from './pages/services/AIAutonomousOperations';
 import AIPlatformArchitecture from './pages/services/AIPlatformArchitecture';
 
+// NEW October 1, 2025 Blog Posts
+import AIEdgeComputing5GNetworks2025 from '../blog/ai-edge-computing-5g-networks-2025';
+import QuantumSafeCryptographyImplementation2025 from '../blog/quantum-safe-cryptography-implementation-2025';
+
 export const AppRouter: React.FC = () => {
   return (
     <Routes>
@@ -32,6 +36,9 @@ export const AppRouter: React.FC = () => {
       <Route path="/case-studies" element={<CaseStudies />} />
       <Route path="/ai-micro-saas" element={<AIMicroSAAS />} />
       <Route path="/blog" element={<Blog />} />
+      {/* NEW October 1, 2025 Blog Posts */}
+      <Route path="/blog/ai-edge-computing-5g-networks-2025" element={<AIEdgeComputing5GNetworks2025 />} />
+      <Route path="/blog/quantum-safe-cryptography-implementation-2025" element={<QuantumSafeCryptographyImplementation2025 />} />
       <Route path="/blog/:slug" element={<Post />} />
       <Route path="/resources" element={<Resources />} />
       <Route path="/tools" element={<Tools />} />
