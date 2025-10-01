@@ -237,13 +237,80 @@ const Home = () => {
         </section>
 
         {/* Latest Insights Section */}
+        {/* Additional featured content banner */}
+        <section className="container mx-auto px-6 py-16 relative z-10">
+          <div className="bg-gradient-to-br from-blue-900/40 via-purple-900/30 to-pink-900/40 rounded-2xl border-2 border-blue-400/50 p-8 md:p-12 shadow-2xl">
+            <div className="flex items-center gap-3 mb-6">
+              <span className="inline-flex h-3 w-3 rounded-full bg-blue-400 animate-pulse"></span>
+              <span className="text-blue-400 font-bold text-lg uppercase tracking-wider">⚡ Technical Deep Dives & Success Stories</span>
+            </div>
+            
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              More Enterprise AI Excellence
+            </h2>
+            
+            <p className="text-xl text-blue-100 mb-8 max-w-3xl">
+              Advanced technical guides and proven success stories from companies achieving 
+              transformational results with AI.
+            </p>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              {/* LLM Infrastructure */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 hover:border-cyan-400/60 transition-all hover:scale-105 hover:shadow-xl">
+                <div className="text-cyan-400 text-sm font-semibold mb-2 uppercase">🔧 Technical Guide</div>
+                <h3 className="text-lg font-bold text-white mb-3">LLM Production Infrastructure</h3>
+                <p className="text-cyan-100 text-sm mb-4">
+                  Cut costs 70% while scaling 10x. Battle-tested strategies for serving 1B+ requests/day. 
+                  Complete technical playbook.
+                </p>
+                <Link 
+                  to="/blog/ai-2025-oct-llm-production-infrastructure-optimization" 
+                  className="inline-flex items-center text-cyan-300 hover:text-white font-semibold text-sm"
+                >
+                  Read Technical Guide (22 min) <ArrowRight className="w-4 h-4 ml-1" />
+                </Link>
+              </div>
+
+              {/* Fintech Fraud Detection */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-red-400/30 hover:border-red-400/60 transition-all hover:scale-105 hover:shadow-xl">
+                <div className="text-red-400 text-sm font-semibold mb-2 uppercase">🛡️ $180M Success</div>
+                <h3 className="text-lg font-bold text-white mb-3">Fraud Detection Revolution</h3>
+                <p className="text-red-100 text-sm mb-4">
+                  Global bank: 92% accuracy, 83% false positive reduction, real-time protection for 500M transactions/day.
+                </p>
+                <Link 
+                  to="/case-studies/ai-2025-oct-fintech-fraud-detection-180m-success" 
+                  className="inline-flex items-center text-red-300 hover:text-white font-semibold text-sm"
+                >
+                  Read Success Story <ArrowRight className="w-4 h-4 ml-1" />
+                </Link>
+              </div>
+            </div>
+
+            <div className="mt-8 flex flex-col sm:flex-row gap-4 items-center">
+              <Link 
+                to="/case-studies" 
+                className="btn-primary flex items-center gap-2"
+              >
+                <Target className="w-5 h-5" />
+                View All Case Studies
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+              <div className="text-blue-200 text-sm flex items-center gap-2">
+                <span className="inline-flex h-2 w-2 rounded-full bg-blue-400 animate-pulse"></span>
+                <span><span className="font-bold">6 New Resources</span> published today - October 1, 2025</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Promo ribbon for new content */}
         <div className="container mx-auto px-6">
           <div className="mb-6 rounded-full bg-gradient-to-r from-emerald-500/20 to-blue-500/20 border border-emerald-400/40 px-6 py-3 text-emerald-200 text-sm inline-flex items-center gap-2 animate-fade-in">
             <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
             <span className="font-semibold">🎯 NEW TODAY:</span>
-            Hybrid Cloud • Legal AI • $214M Retail Success
-            <Link to="/blog" className="text-emerald-300 underline underline-offset-4 hover:text-white font-semibold">Read →</Link>
+            6 Premium Resources: Cloud • Legal AI • Retail • LLM Infrastructure • Fraud Detection • AI Roadmap
+            <Link to="/blog" className="text-emerald-300 underline underline-offset-4 hover:text-white font-semibold">Explore →</Link>
           </div>
         </div>
         <LatestInsights />
