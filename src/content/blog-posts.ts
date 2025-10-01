@@ -14,6 +14,36 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "ai-2025-oct-01-enterprise-ai-governance-blueprint",
+    title: "Enterprise AI Governance 2025: Scorecards, Guardrails, and Zero-Regret Rollouts",
+    description: "Practical enterprise playbook to ship AI safely: policy tests in CI, KPI-linked scorecards, kill switches, and budget-aware routing.",
+    content: `
+# Enterprise AI Governance 2025: Scorecards, Guardrails, and Zero-Regret Rollouts
+
+Modern enterprises need shipping speed without surprise risk. This field guide shows how to wire governance into the product lifecycle so teams move faster with fewer incidents and lower costs.
+
+## What You’ll Ship
+- Policy tests in CI that gate risky changes
+- KPI-linked scorecards across reliability, latency, and cost
+- Budget-aware routing and circuit breakers
+- Canary playbooks with instant rollback hooks
+
+## Outcomes
+- 8–12x deployment velocity with lower change-failure rate
+- 30–70% GenAI cost reduction via quality tiers and caches
+- 99.9% uptime protected by runtime policy checks
+
+Ready to operationalize this in your stack? Our team can help you land it safely in weeks.
+    `,
+    author: "Zion Tech Group Reliability Lab",
+    date: "2025-10-01",
+    category: "AI Governance",
+    tags: ["Governance", "Policy Tests", "Scorecards", "Guardrails", "Budgets"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/enterprise-ai-governance-2025.jpg"
+  },
+  {
     slug: "ai-2025-oct-01-enterprise-agent-copilots",
     title: "Enterprise Agent Copilots 2025: 10x Velocity With Guardrails",
     description: "Deploy budgeted, policy‑gated AI copilots that boost delivery 10x while keeping reliability and spend under control.",
@@ -1135,8 +1165,7 @@ The future of business software is here, and it's micro SAAS. Don't get left beh
   {
     slug: "ai-2025-oct-03-autonomous-supply-chain-revolution",
     title: "Autonomous Supply Chain 2025: 99.2% Forecast Accuracy, 78% Cost ↓",
-    description: "Deploy AI-driven planning, routing, and fulfillment with closed-loop telemetry and guardrails. Real-world playbooks for 99.2% forecast accuracy and 78% cost reduction.
-    ",
+    description: "Deploy AI-driven planning, routing, and fulfillment with closed-loop telemetry and guardrails. Real-world playbooks for 99.2% forecast accuracy and 78% cost reduction.",
     content: `
 # Autonomous Supply Chain 2025
 
