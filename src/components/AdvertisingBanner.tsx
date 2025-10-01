@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Sparkles, TrendingUp, Zap, Shield } from 'lucide-react';
+import { Sparkles, Zap, Shield } from 'lucide-react';
 
 const AdvertisingBanner: React.FC = () => {
   return (
@@ -13,16 +13,21 @@ const AdvertisingBanner: React.FC = () => {
           </div>
           <div className="hidden sm:block h-6 w-px bg-white/30"></div>
           <p className="text-sm font-medium">
-            <span className="font-bold">BREAKING:</span> Enterprise AI Agent Orchestration + 
-            <span className="font-bold text-yellow-300"> 85% Latency Reduction</span> + 
-            Zero-Trust Security Framework
+            <span className="font-bold">NEW THIS WEEK:</span> Vector DB Optimization at 100B+ scale & Enterprise Agent Uptime 99.9%
           </p>
           <Link 
-            to="/blog/ai-agent-orchestration-enterprise-2025" 
+            to="/blog/ai-2025-oct-01-vector-database-optimization-enterprise" 
+            className="inline-flex items-center gap-1 bg-white text-purple-700 hover:bg-purple-50 px-4 py-1 rounded-full text-sm font-semibold transition-all duration-300 hover:scale-105 shadow-md"
+          >
+            <Zap className="w-4 h-4" />
+            Vector DB Guide
+          </Link>
+          <Link 
+            to="/blog/ai-2025-oct-02-enterprise-agent-systems-uptime-999" 
             className="inline-flex items-center gap-1 bg-white text-purple-700 hover:bg-purple-50 px-4 py-1 rounded-full text-sm font-semibold transition-all duration-300 hover:scale-105 shadow-md"
           >
             <Shield className="w-4 h-4" />
-            Explore Now
+            Agent Uptime
           </Link>
         </div>
       </div>
