@@ -111,7 +111,7 @@ export default function HomePage() {
             to="/blog"
             className="bg-white text-green-700 hover:bg-gray-100 px-4 py-1.5 rounded-md text-sm font-semibold"
           >
-            Read the latest
+            Explore Latest
           </Link>
         </div>
       </div>
@@ -136,8 +136,6 @@ export default function HomePage() {
       <EnterpriseTransformationSuccessBanner />
       <HealthcareTransformationBanner />
       <NewContentShowcaseBanner />
-      <AITrends2025Banner />
-      <NewServicesShowcaseBanner />
       <AIRoadmapsBanner />
       <AIFinOpsBanner />
       <AutonomousAgentsBanner />
@@ -168,12 +166,8 @@ export default function HomePage() {
       {/* Next-Generation Autonomous Systems Banner */}
       <NextGenAutonomousBanner />
       
-      {/* New Content Promotional Banners */}
-      <NewContent2026PromotionalBanners />
-      
       {/* Interactive Content Recommendation */}
       <InteractiveContentRecommendation />
->>>>>>> cursor/create-and-deploy-new-content-a364
       
       {/* Hero Section */}
       <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
@@ -299,6 +293,22 @@ export default function HomePage() {
               features={['95% Automation', 'Fraud Detection', 'Real-time Reporting']}
               to="/services/ai-finance-automation"
               popular={false}
+            />
+            <FeaturedServiceCard
+              title="AI Infrastructure Orchestration"
+              description="Achieve 99.99% uptime and 85% cost reduction with intelligent automation"
+              price="$15,000/month"
+              features={['99.99% Uptime', 'Self-Healing', '85% Cost Reduction']}
+              to="/services/ai-infrastructure-orchestration-platform-2026"
+              popular={true}
+            />
+            <FeaturedServiceCard
+              title="AI DevSecOps Automation"
+              description="Reduce security vulnerabilities by 95% with automated security operations"
+              price="$12,500/month"
+              features={['95% Vuln Reduction', 'Automated Compliance', '$18M+ ROI']}
+              to="/services/ai-devsecops-automation"
+              popular={true}
             />
           </div>
         </div>
@@ -872,22 +882,62 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <Link to="/blog/ai-agent-orchestration-2026" className="group">
+            <Link to="/blog/ai-2026-devsecops-automation-revolution" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    New 2026
+                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    NEW 2026
+                  </span>
+                  <span className="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    HOT
+                  </span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  AI DevSecOps Automation 2026: Security-First Revolution
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Reduce security vulnerabilities by 95%, accelerate deployments by 80%, and achieve $18M+ ROI with AI-powered DevSecOps.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  Read Article →
+                </div>
+              </div>
+            </Link>
+            <Link to="/blog/ai-2026-real-time-infrastructure-management" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    NEW 2026
                   </span>
                   <span className="text-sm text-gray-500">22 min read</span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Agent Orchestration 2026: Multi-Agent System Architecture
+                  Real-Time AI Infrastructure Management: Self-Healing Systems
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Master multi-agent systems with 95% automation efficiency and $5M+ ROI through advanced orchestration patterns.
+                  Achieve 99.99% uptime, 85% cost reduction, and autonomous self-healing with AI-powered infrastructure management.
                 </p>
                 <div className="flex items-center text-blue-600 font-semibold">
                   Read Article →
+                </div>
+              </div>
+            </Link>
+            <Link to="/case-studies/ai-2026-devsecops-transformation-18m-roi-success" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    NEW Case Study
+                  </span>
+                  <span className="text-sm text-gray-500">Fortune 500</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  $18.5M ROI DevSecOps Transformation Case Study
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  See how a Fortune 500 financial services company achieved $18.5M annual ROI with 95% vulnerability reduction.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  View Case Study →
                 </div>
               </div>
             </Link>
