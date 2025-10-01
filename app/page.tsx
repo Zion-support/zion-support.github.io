@@ -46,6 +46,8 @@ import {
 } from '../components/PromotionalBanner';
 import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
 import NewContentShowcaseBanner from '../components/NewContentShowcaseBanner';
+import QuantumNeuralFusionBanner from '../components/QuantumNeuralFusionBanner';
+import AutonomousEnterpriseBreakthroughBanner from '../components/AutonomousEnterpriseBreakthroughBanner';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
@@ -93,6 +95,10 @@ export const metadata = {
 export default function HomePage() {
   return (
     <div className="animate-fade-in">
+      {/* 🚀 BRAND NEW 2026 BREAKTHROUGH CONTENT - TOP PRIORITY */}
+      <QuantumNeuralFusionBanner />
+      <AutonomousEnterpriseBreakthroughBanner />
+      
       {/* 🔥 OCTOBER 2025 LATEST ENTERPRISE AI CONTENT - ABSOLUTE TOP PRIORITY */}
       <October2025NewContentMegaBanner />
       <EnterprisePlatformModernizationBanner />
