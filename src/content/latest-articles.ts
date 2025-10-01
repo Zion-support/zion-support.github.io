@@ -34,6 +34,38 @@ export const latestArticles: LatestArticle[] = [
     trending: true
   },
   {
+    id: "edge-2025-oct-01-zero-pii-telemetry-v2",
+    slug: "edge-2025-oct-01-zero-pii-telemetry-v2",
+    title: "Zero‑PII Telemetry v2: Decision‑Grade Signals Without Centralized IDs",
+    description: "Scoped identifiers, on‑device redaction, and DP noise deliver rich insights without PII risk.",
+    excerpt: "Blueprint for privacy‑first analytics that keeps signals rich and safe.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-01",
+    category: "Observability",
+    tags: ["Privacy", "Telemetry", "Edge", "DP"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/zero-pii-telemetry-v2.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "genai-2025-oct-01-eval-scorecards-live-canaries",
+    slug: "genai-2025-oct-01-eval-scorecards-live-canaries",
+    title: "Live Evals & Scorecards: Ship GenAI Fast Without Regressions",
+    description: "Online evals tied to KPIs with canary gates and rollback when quality dips.",
+    excerpt: "Protect velocity with evals that predict outcomes and prevent regressions.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-01",
+    category: "GenAI",
+    tags: ["Evals", "Scorecards", "Canaries", "Guardrails"],
+    featured: true,
+    readTime: "10 min read",
+    image: "/images/live-evals-scorecards-2025.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "ai-2025-oct-03-private-feature-flags",
     slug: "ai-2025-oct-03-private-feature-flags",
     title: "Private Feature Flags: <100ms Global Releases with Zero PII",
