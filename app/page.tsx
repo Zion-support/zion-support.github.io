@@ -1,102 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
-import {
-  NewBlogBanner,
-  AnalyticsPlatformBanner,
-  TechCorpSuccessBanner,
-  WorkflowAutomationBanner,
-  AIAnalyticsBanner,
-  HealthTechSuccessBanner,
-  ComprehensiveAIBanner,
-  EnterpriseAIBanner,
-  NewContentBanner,
-  CustomerServiceAIBanner,
-  HealthcareAIBanner,
-  RetailSuccessBanner,
-  AIContentShowcaseBanner,
-  AIRevolutionBanner,
-  AutonomousAgentsBanner,
-  AIGovernanceBanner,
-  FinTechSuccessBanner,
-  NewContentShowcaseBanner,
-  AIRoadmapsBanner,
-  AIFinOpsBanner,
-  AIMultimodalEnterpriseBanner,
-  AIEnterpriseAutomationBanner,
-  AIDataAnalyticsEnterpriseBanner,
-  EnterpriseTransformationSuccessBanner,
-  HealthcareTransformationBanner,
-  NewContent2026Banner,
-  AIAgentOrchestrationBanner,
-  AISustainabilityBanner,
-  QuantumComputingBanner,
-  SustainabilityCaseStudyBanner,
-  QuantumOptimizationBanner,
-  AIOperationalExcellenceBanner,
-  AIAgentObservabilityBanner,
-  ManufacturingTransformationBanner,
-  Latest2026ContentBanner,
-  AISecurityEnterprise2026Banner,
-  AIMultimodalEnterprise2026Banner,
-  AISustainabilityTransformationBanner,
-  LatestContent2026Banner
-} from '../components/PromotionalBanner';
-import {
-  NewContent2026Banner as NewContent2026BannerComponent,
-  AutonomousOperationsBanner,
-  FinOpsAdvancedBanner,
-  PlatformArchitectureBanner,
-  AutonomousOperationsSuccessBanner,
-  NewContentShowcaseBanner2026,
-  LatestContent2026Banner,
-  AISecurityEnterprise2026Banner,
-  AIMultimodalEnterprise2026Banner,
-  AISustainabilityTransformationBanner,
-  NewLatest2026ContentBanner,
-  AIAutonomousCloudOpsBanner,
-  AIFinTechTransformationBanner,
-  AIRetailAutomationBanner,
-  Latest2026ContentBanner
-} from '../components/NewContent2026Banners';
+import { ArrowRight } from 'lucide-react';
+import { NewContent2026MegaBanner } from '../components/NewContent2026Banners';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
-import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
-import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
-import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
-import LatestContent2026Banner from '../components/LatestContent2026Banner';
-import NewContent2026ShowcaseBanner from '../components/NewContent2026ShowcaseBanner';
-import LatestContentPromotionalBanner from '../components/LatestContentPromotionalBanner';
-import NewContentPromotionalBanner2026 from '../components/NewContentPromotionalBanner2026';
-import AIInnovationShowcaseBanner2026 from '../components/AIInnovationShowcaseBanner2026';
-import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
-import UltimateContent2026Showcase from '../components/UltimateContent2026Showcase';
-import Revolutionary2027ContentBanner from '../components/Revolutionary2027ContentBanner';
-import UltimateContent2027Showcase from '../components/UltimateContent2027Showcase';
-import NewContentShowcase2026 from '../src/components/NewContentShowcase2026';
-import September30NewAIBreakthroughsBanner from '../components/September30NewAIBreakthroughsBanner';
-import September30BreakthroughContentBanner from '../components/September30BreakthroughContentBanner';
-import Revolutionary2026ContentShowcaseBanner from '../components/Revolutionary2026ContentShowcaseBanner';
-import Latest2026ContentMegaBanner from '../components/Latest2026ContentMegaBanner';
-import Ultimate2026ContentShowcaseBanner from '../components/Ultimate2026ContentShowcaseBanner';
-import RevolutionaryQuantumAIBreakthroughBanner from '../components/RevolutionaryQuantumAIBreakthroughBanner';
-import AutonomousBusinessSystemsMegaBanner from '../components/AutonomousBusinessSystemsMegaBanner';
-import QuantumAI2027BreakthroughBanner from '../components/QuantumAI2027BreakthroughBanner';
-import AutonomousBusinessIntelligence2026Banner from '../components/AutonomousBusinessIntelligence2026Banner';
-import NewContent2027ShowcaseBanner from '../components/NewContent2027ShowcaseBanner';
-import RevolutionaryBreakthrough2026Banner from '../src/components/RevolutionaryBreakthrough2026Banner';
-import AICostOptimizationBanner from '../src/components/AICostOptimizationBanner';
-import AutonomyBlueprint2026Banner from '../components/AutonomyBlueprint2026Banner';
-import September30ContentPromo2025 from '../components/September30ContentPromo2025';
-import NewContent2026BreakthroughBanner from '../components/NewContent2026BreakthroughBanner';
-import InteractiveAI2026BreakthroughCalculator from '../components/InteractiveAI2026BreakthroughCalculator';
-import FreshContent2027ShowcaseBanner from '../components/FreshContent2027ShowcaseBanner';
-import RevolutionaryAI2027Banner from '../components/RevolutionaryAI2027Banner';
-import AI2028RevolutionaryBreakthroughBanner from '../components/AI2028RevolutionaryBreakthroughBanner';
-import AI2028ContentShowcaseBanner from '../components/AI2028ContentShowcaseBanner';
-=======
-import Ultimate2025ContentShowcaseBanner from '../components/Ultimate2025ContentShowcaseBanner';
->>>>>>> 26ea0a85693b787f9706919cc707f6dddbfcbb4a
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -108,12 +16,7 @@ export default function HomePage() {
   return (
     <>
       <div className="animate-fade-in">
-      {/* 🌟 AI 2028 REVOLUTIONARY BREAKTHROUGH BANNER */}
-      <AI2028RevolutionaryBreakthroughBanner />
-      
-      {/* 🌟 AI 2028 CONTENT SHOWCASE */}
-      <AI2028ContentShowcaseBanner />
-      <Ultimate2025ContentShowcaseBanner />
+      {/* AI Content Banners */}
       
       {/* New Content Promo Strip */}
       <div className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
@@ -133,7 +36,6 @@ export default function HomePage() {
             <a href="/blog/ai-agent-observability-2026" className="underline hover:text-yellow-200">Agent Observability</a>
             <span className="hidden md:inline">•</span>
             <a href="/blog/ai-customer-journey-ai-2026" className="underline hover:text-yellow-200">Customer Journey AI</a>
->>>>>>> 26ea0a85693b787f9706919cc707f6dddbfcbb4a
           </div>
           <Link
             href="/blog"
@@ -142,16 +44,10 @@ export default function HomePage() {
             Read the latest
           </Link>
         </div>
-      </section>
-      {/* 🚀🚀🚀 FRESH CONTENT 2027 - Revolutionary AI Breakthroughs! 🚀🚀🚀 */}
-      <RevolutionaryAI2027Banner />
-      
-      {/* 🌟 Fresh Content 2027 Showcase */}
-      <FreshContent2027ShowcaseBanner />
-      
-      {/* 🚀 NEWEST BREAKTHROUGH CONTENT - JANUARY 30, 2026 - REVOLUTIONARY AI TECHNOLOGIES! */}
-      <NewContent2026BreakthroughBanner />
-
+      </div>
+      {/* Revolutionary Content */}
+      <section className="py-16 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white">
+        <div className="max-w-6xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             <Link href="/blog/ai-2027-quantum-revolution" className="group">
               <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 backdrop-blur-lg rounded-2xl p-8 border border-purple-500/30 hover:border-purple-400/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/30">
@@ -263,19 +159,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      {/* 🚀 NEWEST 2027 CONTENT - BREAKTHROUGH QUANTUM AI & AUTONOMOUS INTELLIGENCE! */}
-      <NewContent2027ShowcaseBanner />
-
-      {/* 🚀 REVOLUTIONARY AI ENTERPRISE AUTOMATION 2026 */}
-      <RevolutionaryAIEnterpriseAutomationBanner />
-
-      {/* ⚛️ QUANTUM AI BREAKTHROUGH 2026 */}
-      <QuantumAIBreakthroughBanner />
-
-      {/* 🏆 ENTERPRISE AUTOMATION SUCCESS CASE STUDY */}
-      <EnterpriseAutomationSuccessBanner />
-
-      {/* 📣 Featured: New — Autonomous Governance & Agent Ops Observability */}
+      {/* Featured: New — Autonomous Governance & Agent Ops Observability */}
       <div className="bg-gradient-to-r from-purple-700/20 to-fuchsia-700/20 border border-white/10 rounded-2xl p-6 mb-8">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <div>
@@ -286,9 +170,9 @@ export default function HomePage() {
           <div className="flex gap-3">
             <Link href="/blog/ai-2027-autonomous-governance-blueprint" className="inline-flex items-center gap-2 bg-white text-purple-700 px-4 py-2 rounded-lg font-semibold hover:bg-purple-50 transition-colors">Read Governance</Link>
             <Link href="/blog/ai-2026-agent-ops-observability" className="inline-flex items-center gap-2 bg-fuchsia-500 text-white px-4 py-2 rounded-lg font-semibold hover:bg-fuchsia-400 transition-colors">Read Observability</Link>
-                  </div>
-                </div>
-              </div>
+          </div>
+        </div>
+      </div>
       {/* 🔔 New Promotions: Governance + Agent Ops */}
       <section className="py-6 bg-gradient-to-r from-blue-700 via-indigo-700 to-fuchsia-700 text-white">
         <div className="max-w-6xl mx-auto px-4">
@@ -301,9 +185,11 @@ export default function HomePage() {
               <h3 className="text-xl font-bold">AI 2027 Autonomous Governance Blueprint</h3>
               <p className="text-white/80 mt-2 text-sm">Policy → controls → telemetry → review. Ship autonomy safely with measurable guardrails.</p>
             </Link>
+          </div>
+        </div>
+      </section>
 
-      {/* 🔔 New: Enterprise Autonomy Blueprint 2026 */}
-      <AutonomyBlueprint2026Banner />
+      {/* Enterprise Autonomy Blueprint 2026 */}
 
       {/* NEW: Fresh today – promote brand-new guides */}
       <section className="py-8 bg-gradient-to-r from-emerald-600/20 to-cyan-600/20 border-y border-white/10">
@@ -334,130 +220,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-=======
-      {/* 🚀🚀🚀 FRESH CONTENT 2027 - Revolutionary AI Breakthroughs! 🚀🚀🚀 */}
-      <RevolutionaryAI2027Banner />
       
-      {/* 🌟 Fresh Content 2027 Showcase */}
-      <FreshContent2027ShowcaseBanner />
-      
-      {/* 🚀🚀🚀 BREAKTHROUGH CONTENT - September 30, 2025 - 3 REVOLUTIONARY INNOVATIONS! 🚀🚀🚀 */}
-      <September30BreakthroughContentBanner />
-      
-      {/* 🚀 REVOLUTIONARY NEW CONTENT 2026 - FEATURED PROMINENTLY */}
-      <NewContent2026RevolutionaryBanner />
-      
-      {/* 🚀 REVOLUTIONARY AI 2027 CONTENT - BREAKTHROUGH TECHNOLOGIES! */}
-      <NewContent2027RevolutionaryBanner />
-      <AI2027RevolutionaryBreakthroughBanner />
-      
-      {/* 🆕 ULTIMATE 2026 CONTENT SHOWCASE - NEW BREAKTHROUGH CONTENT */}
-      <Ultimate2026ContentShowcaseBanner />
-      
-      {/* 🌟 Latest 2026 Content Mega Showcase */}
-      <Latest2026ContentMegaBanner />
-      
-      {/* 🚀 Revolutionary 2026 Content Showcase */}
-      <Revolutionary2026ContentShowcaseBanner />
-      
-      {/* 🚀 MEGA CONTENT UPDATE - September 30, 2025 - 116+ NEW RESOURCES! */}
-      <NewContentShowcase2026 />
-      
-      {/* 🚀 NEWEST CONTENT - September 30, 2025 - 3 Breakthrough AI Technologies! */}
-      <September30NewAIBreakthroughsBanner />
-      
-      <September30FreshContentBanner />
-      
-      {/* 🎉 NEW BLOG POSTS - September 30, 2025 - Revolutionary AI Breakthroughs! */}
-      <September30NewBlogsBanner />
-      
-      {/* New Content 2025 Banner */}
-      <NewContent2025Banner />
-      
-      {/* Latest AI 2025 Insights Banner */}
-      <LatestAI2025InsightsBanner />
-      
-      {/* Revolutionary AI 2025 Banner */}
-      <RevolutionaryAI2025Banner />
-      
-      {/* Latest Content 2025 Banner */}
-      <LatestContent2025Banner />
-      
-      {/* 🔥🔥🔥 NEWEST BREAKTHROUGH CONTENT - JANUARY 30, 2027 - 3 REVOLUTIONARY PUBLICATIONS! 🔥🔥🔥 */}
-      <AI2027RevolutionaryBreakthroughBanner />
-      
-      {/* Revolutionary Content 2026 Banner */}
-      <RevolutionaryContent2026Banner />
-      
-      {/* Latest 2026 Mega Content Banners */}
-      <Revolutionary2026ContentBanner />
-      <AI2026ContentShowcaseBanner />
-      <AIEnterpriseAutomationRevolutionBanner />
-      <AIQuantumComputingBreakthroughBanner />
-      <AIMegaTransformationSuccessBanner />
-      <AI2026InnovationShowcaseBanner />
-      {/* Revolutionary 2026 Content Banners */}
-      <RevolutionaryContent2026Banner />
-      <LatestAI2026ContentBanner />
-      {/* New 2026 Mega Content Banner */}
+      {/* Content Banners */}
       <NewContent2026MegaBanner />
-      {/* Latest 2026 Revolutionary Content Banners */}
-      <AINeuralSuperintelligenceBanner />
-      <AIQuantumComputingBanner />
-      <NewAIAutonomousSystemsBanner />
-      <NeuralSuperintelligenceCaseStudyBanner />
-      <InteractiveAIToolsBanner />
-      <NewLatestContentShowcaseBanner />
-      
-      {/* Latest Content Banner 2025 - September 30 */}
-      <LatestContentBanner2025 />
-      
-      {/* Latest 2026 Content Banner */}
-=======
-      </div>
-      {/* Promotional Banners */}
-      <AIEnterpriseTransformationBanner />
-      <AIEnterpriseSuccessBanner />
-      <LatestEnterpriseContentBanner />
-      <NewContentShowcase2026Banner />
-      <AIEthicalFrameworkBanner />
-      <AIEthicsSuccessBanner />
-      <LatestContent2026Banner />
-      <AISecurityEnterprise2026Banner />
-      <AIMultimodalEnterprise2026Banner />
-      <AISustainabilityTransformationBanner />
-      <NewLatest2026ContentBanner />
-      <AINeuralArchitectureOptimizationBanner />
-      <AIFederatedLearningBanner />
-      <FederatedLearningSuccessBanner />
-      <AIAutonomousCloudOpsBanner />
-      <AIFinTechTransformationBanner />
-      <AIRetailAutomationBanner />
->>>>>>> 26ea0a85693b787f9706919cc707f6dddbfcbb4a
-      <Latest2026ContentBanner />
-      <AIOperationalExcellenceBanner />
-      <AIAgentObservabilityBanner />
-      <ManufacturingTransformationBanner />
-      <NewContent2026Banner />
-      <AIMultimodalEnterpriseBanner />
-      <AIEnterpriseAutomationBanner />
-      <AIDataAnalyticsEnterpriseBanner />
-      <EnterpriseTransformationSuccessBanner />
-      <HealthcareTransformationBanner />
-      <NewContentShowcaseBanner />
-      <AIRoadmapsBanner />
-      <AIFinOpsBanner />
-      <AutonomousAgentsBanner />
-      <AIGovernanceBanner />
-      <FinTechSuccessBanner />
-      <AIContentShowcaseBanner />
-      <CustomerServiceAIBanner />
-      <HealthcareAIBanner />
-      <RetailSuccessBanner />
-      <AIRevolutionBanner />
-      <NewBlogBanner />
-      <WorkflowAutomationBanner />
-      <AIAnalyticsBanner />
       
       {/* Hero Section */}
       <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
@@ -729,106 +494,7 @@ export default function HomePage() {
         </div>
       </section>
       
-      {/* Revolutionary 2026 Content Banner */}
-      <Revolutionary2026ContentBanner />
-      
-      {/* Promotional Banners */}
-      <NewContent2026Banner />
-      <AINeuralArchitectureBanner />
-      <AISpaceTechBanner />
-      <AISustainabilityCaseStudyBanner />
-      <AITechnologyBreakthroughBanner />
-      <EnterpriseAITransformationBanner />
-      <AIAgentOrchestrationBanner />
-      <AISustainabilityBanner />
-      <QuantumComputingBanner />
-      <SustainabilityCaseStudyBanner />
-      <QuantumOptimizationBanner />
-      <AIMultimodalEnterpriseBanner />
-      <AIEnterpriseAutomationBanner />
-      <AIDataAnalyticsEnterpriseBanner />
-      <EnterpriseTransformationSuccessBanner />
-      <HealthcareTransformationBanner />
-      <NewContentShowcaseBanner />
-      <AIRoadmapsBanner />
-      <AIFinOpsBanner />
-      <AutonomousAgentsBanner />
-      <AIGovernanceBanner />
-      <FinTechSuccessBanner />
-      <AIContentShowcaseBanner />
-      <CustomerServiceAIBanner />
-      <HealthcareAIBanner />
-      <RetailSuccessBanner />
-      <AIRevolutionBanner />
-      <NewBlogBanner />
-      <WorkflowAutomationBanner />
-      <AIAnalyticsBanner />
-      
-      {/* New Content Promotional Banner 2026 */}
-      <NewContentPromotionalBanner2026 />
-      
-      {/* AI Innovation Showcase Banner 2026 */}
-      <AIInnovationShowcaseBanner2026 />
-      
-      {/* Latest 2026 Content Banner */}
-      <LatestContent2026Banner />
-      
-      {/* Next-Generation Autonomous Systems Banner */}
-      <NextGenAutonomousBanner />
-      
-      {/* Interactive Content Recommendation */}
-      <InteractiveContentRecommendation />
-      
-      {/* Enhanced Content Showcase */}
-      <EnhancedContentShowcase2026 />
-      
-      {/* Hero Section */}
-      <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
-        <div className="max-w-4xl mx-auto px-4">
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            Transform Your Business with
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-600">
-              {' '}AI-Powered Solutions
-            </span>
-          </h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Zion Tech Group delivers cutting-edge AI micro SaaS services, cloud automation, 
-            and enterprise IT solutions that drive growth, efficiency, and innovation.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Link
-              to="/services"
-              className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
-            >
-              Explore Our Services
-            </Link>
-            <a
-              to="tel:+13024640950"
-              className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors"
-            >
-              Call +1 302 464 0950
-            </a>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-3xl font-bold text-blue-600">500+</div>
-              <div className="text-gray-600">Projects Delivered</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-blue-600">99.9%</div>
-              <div className="text-gray-600">Uptime Guarantee</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-blue-600">24/7</div>
-              <div className="text-gray-600">Expert Support</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-blue-600">$2M+</div>
-              <div className="text-gray-600">Cost Savings</div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Additional Content */}
 
       {/* Featured Services */}
       <section className="py-20 bg-white">
@@ -848,7 +514,7 @@ export default function HomePage() {
               description="Transform data into actionable insights with predictive modeling and real-time dashboards"
               price="$199/month"
               features={['Predictive Analytics', 'Real-time Dashboards', 'Data Integration']}
-              href="/services/ai-data-analytics"
+              to="/services/ai-data-analytics"
               popular={true}
             />
             <FeaturedServiceCard
@@ -856,7 +522,7 @@ export default function HomePage() {
               description="Automate business processes with intelligent workflow design and smart triggers"
               price="$149/month"
               features={['Process Automation', 'Smart Triggers', 'Performance Monitoring']}
-              href="/services/ai-workflow-automation"
+              to="/services/ai-workflow-automation"
               popular={false}
             />
             <FeaturedServiceCard
@@ -864,7 +530,7 @@ export default function HomePage() {
               description="24/7 intelligent customer support with natural language processing"
               price="$99/month"
               features={['24/7 Support', 'Multi-channel', 'Personalized Responses']}
-              href="/services/ai-virtual-assistant"
+              to="/services/ai-virtual-assistant"
               popular={false}
             />
             <FeaturedServiceCard
@@ -872,7 +538,7 @@ export default function HomePage() {
               description="Seamless migration to cloud infrastructure with zero downtime"
               price="$2,999"
               features={['Zero Downtime', 'Security Compliance', 'Cost Optimization']}
-              href="/services/cloud-migration"
+              to="/services/cloud-migration"
               popular={false}
             />
             <FeaturedServiceCard
@@ -880,7 +546,7 @@ export default function HomePage() {
               description="Automate CI/CD pipelines and infrastructure management"
               price="$399/month"
               features={['CI/CD Pipelines', 'Infrastructure as Code', 'Auto-scaling']}
-              href="/services/devops-automation"
+              to="/services/devops-automation"
               popular={false}
             />
             <FeaturedServiceCard
@@ -888,7 +554,7 @@ export default function HomePage() {
               description="Advanced threat detection and zero-trust security architecture"
               price="$599/month"
               features={['Threat Detection', 'Zero-trust Architecture', 'Compliance']}
-              href="/services/cybersecurity-consulting"
+              to="/services/cybersecurity-consulting"
               popular={false}
             />
             <FeaturedServiceCard
@@ -896,7 +562,7 @@ export default function HomePage() {
               description="Real-time AI processing at the edge with sub-50ms response times"
               price="$799/month"
               features={['Sub-50ms Latency', 'Edge Intelligence', 'Offline Capability']}
-              href="/services/ai-edge-computing"
+              to="/services/ai-edge-computing"
               popular={false}
             />
             <FeaturedServiceCard
@@ -904,7 +570,7 @@ export default function HomePage() {
               description="Automate financial processes with 95% accuracy and $3M+ savings"
               price="$1,299/month"
               features={['95% Automation', 'Fraud Detection', 'Real-time Reporting']}
-              href="/services/ai-finance-automation"
+              to="/services/ai-finance-automation"
               popular={false}
             />
             <FeaturedServiceCard
@@ -944,16 +610,8 @@ export default function HomePage() {
       </section>
 
       {/* Enhanced Content Showcase 2026 */}
-      <EnhancedContentShowcase2026 />
-      
       {/* Dynamic Content Showcase */}
       <ContentShowcase />
-      
-      {/* Interactive Content Hub */}
-      <InteractiveContentShowcase />
-      
-      {/* Personalized Content Recommendations */}
-      <ContentRecommendationSystem />
 
       {/* Latest Innovations Section */}
       <section className="py-20 bg-gradient-to-br from-indigo-50 via-white to-purple-50">
@@ -1763,9 +1421,6 @@ export default function HomePage() {
       </section>
 
       {/* Additional Promotional Banners */}
-      <AnalyticsPlatformBanner />
-      <HealthTechSuccessBanner />
-      <ComprehensiveAIBanner />
 
       {/* CTA Section */}
       <section className="py-20 bg-white">
@@ -1796,6 +1451,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 }
