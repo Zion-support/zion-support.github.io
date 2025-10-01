@@ -421,6 +421,7 @@ import October2025InfrastructureIntelligenceBanner from "./components/October202
 import October2025SecurityDataFabricBanner from "./components/October2025SecurityDataFabricBanner";
 import October2025QuantumEdgeAIBanner from "./components/October2025QuantumEdgeAIBanner";
 import October2025KubernetesCostOptimizationBanner from "./components/October2025KubernetesCostOptimizationBanner";
+import October2025QuantumEdgeRevolutionBanner from "./components/October2025QuantumEdgeRevolutionBanner";
 
 export default function App(): JSX.Element {
   return (
