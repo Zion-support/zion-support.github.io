@@ -17,6 +17,7 @@ const AIDataAnalytics = React.lazy(() => Promise.resolve({ default: () => null }
 import AIAutonomousOperations from './pages/services/AIAutonomousOperations';
 import AIPlatformArchitecture from './pages/services/AIPlatformArchitecture';
 import AIMLOpsAutomation from './pages/services/AIMLOpsAutomation';
+import PostBySlug from './pages/blog/PostBySlug';
 
 // 🚀🚀🚀 BREAKING: OCTOBER 1, 2025 - LATEST AI BREAKTHROUGHS - FEATURED TODAY! 🚀🚀🚀
 // 💎 Autonomous Infrastructure Healing ($67M+ Savings), Cognitive Search ($124M+ Value), Real-Time Personalization ($234M+ Revenue) 💎
@@ -112,7 +113,7 @@ export const AppRouter: React.FC = () => {
       <Route path="/blog/generative-ai-code-assistants-2025" element={<GenerativeAICodeAssistants2025 />} />
       <Route path="/blog/edge-ai-privacy-preserving-analytics-2025" element={<EdgeAIPrivacyPreservingAnalytics2025 />} />
       <Route path="/blog/ai-driven-supply-chain-optimization-2025" element={<AIDrivenSupplyChainOptimization2025 />} />
-      <Route path="/blog/:slug" element={<Post />} />
+      <Route path="/blog/:slug" element={<PostBySlug />} />
       <Route path="/resources" element={<Resources />} />
       <Route path="/tools" element={<Tools />} />
       <Route path="/enterprise-ai-solutions" element={<EnterpriseAISolutions />} />
