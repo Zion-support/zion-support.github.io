@@ -21,6 +21,7 @@ import EnhancedNewsletterSignup from "../components/EnhancedNewsletterSignup";
 import EnhancedPromotionalBanner from "../components/EnhancedPromotionalBanner";
 import EnhancedTestimonials from "../components/EnhancedTestimonials";
 import Header from "../components/Header";
+import October2025AutonomousInfrastructureBanner from "../components/October2025AutonomousInfrastructureBanner";
 import October2025EdgeAIQuantumCryptoBanner from "../components/October2025EdgeAIQuantumCryptoBanner";
 import October2025BreakthroughContentBanner from "../components/October2025BreakthroughContentBanner";
 import October2025AIRevolutionBanner from "../components/October2025AIRevolutionBanner";
@@ -119,6 +120,10 @@ const Home = () => {
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
+        
+        {/* 🚀🚀🚀 OCTOBER 1, 2025 - ABSOLUTE NEWEST: AUTONOMOUS INFRASTRUCTURE ORCHESTRATION - #1 PRIORITY! 🚀🚀🚀 */}
+        {/* Featured: $3.2B Value Created, $410M Fortune 100 Success, 99.99% Uptime, 87% Cost Reduction, 42x ROI */}
+        <October2025AutonomousInfrastructureBanner />
         
         {/* 🎉 JANUARY 2026 - LATEST: AI Agent Swarms, Quantum ML & Autonomous Governance */}
         <NewContentPromoBanner 
