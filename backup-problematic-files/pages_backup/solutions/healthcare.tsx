@@ -1,6 +1,6 @@
 import Layout from '../../components/Layout';
 import {Heart,, Shield,, Database,, Users,, Activity} from 'lucide-react';
-import React from 'react';
+
 import Layout from '../../components/Layout';';
 import {Heart,, Shield,, Database,, Users,, Activity,, CheckCircle,, ArrowRight} from 'lucide-react';
 const features = [;
@@ -29,7 +29,7 @@ const features = [;
     title: 'Health Analytics,',;
     description: 'AI-powered analytics for population health management and predictive insights.'', import Layout from '../../components/Layout',;
 import { Heart, Shield, Activity, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
-import React from 'react';
+
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';

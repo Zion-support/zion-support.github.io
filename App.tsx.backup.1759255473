@@ -20,15 +20,6 @@ import EnterpriseSolutionsShowcase2026 from "./components/EnterpriseSolutionsSho
 import AITrendsInsightsBanner2026 from "./components/AITrendsInsightsBanner2026";
 import NewBlogContentShowcase2026 from "./components/NewBlogContentShowcase2026";
 import UltimateContentAdvertisingBanner from "./components/UltimateContentAdvertisingBanner";
-<<<<<<< HEAD
-import RevolutionaryAI2026MegaBreakthroughBanner from "./components/RevolutionaryAI2026MegaBreakthroughBanner";
-import NewContent2026AdvertisingMegaBanner from "./components/NewContent2026AdvertisingMegaBanner";
-import InteractiveContentShowcase2026 from "./components/InteractiveContentShowcase2026";
-import Revolutionary2026ContentMegaBanner from "./components/Revolutionary2026ContentMegaBanner";
-import January2026RevolutionaryContentBanner from "./components/January2026RevolutionaryContentBanner";
-=======
-import Revolutionary2026MegaBreakthroughBanner from "./components/Revolutionary2026MegaBreakthroughBanner";
->>>>>>> origin/cursor/create-and-deploy-new-content-fea4
 
 export default function App(): JSX.Element {
   return (

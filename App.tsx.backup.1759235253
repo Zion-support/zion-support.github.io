@@ -2,13 +2,6 @@ import React, { JSX } from "react";
 import LatestContentBanner2025 from "./src/components/LatestContentBanner2025";
 import FeaturedContentBanner2025 from "./src/components/FeaturedContentBanner2025";
 import NewContentPromoBanner from "./src/components/NewContentPromoBanner";
-<<<<<<< HEAD
-import January2026RevolutionaryContentBanner from "./src/components/January2026RevolutionaryContentBanner";
-=======
-import Revolutionary2026ContentMegaBanner from "./src/components/Revolutionary2026ContentMegaBanner";
-import Ultimate2026ContentShowcase from "./src/components/Ultimate2026ContentShowcase";
-import UltimateContentAdvertisingBanner from "./src/components/UltimateContentAdvertisingBanner";
->>>>>>> origin/cursor/create-and-deploy-new-content-3f10
 
 export default function App(): JSX.Element {
   return (
@@ -68,23 +61,6 @@ export default function App(): JSX.Element {
             </h1>
             
             <p className="text-2xl md:text-3xl text-gray-300 mb-8 font-semibold">
-<<<<<<< HEAD
-              Revolutionary AI Breakthroughs 2025: Meta-Cognitive, Quantum-Neural & Autonomous Operations
-            </p>
-            
-            <p className="text-xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
-              Experience the future of AI with our <span className="font-bold text-yellow-300">3 breakthrough technologies</span>: 
-              <span className="block mt-2 text-lg text-cyan-300">
-                Meta-Cognitive AI (95% decision accuracy) • Quantum-Neural Networks (1000x speed) • Autonomous Operations (98% automation)
-              </span>
-=======
-              🚀 Revolutionary AI Breakthroughs: Meta-Cognitive, Quantum-Neural & Autonomous Operations
-            </p>
-            
-            <p className="text-xl text-gray-400 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Experience the future of AI with our breakthrough technologies: Meta-Cognitive AI that thinks about thinking, 
-              Quantum-Neural Networks with 1000x processing speed, and Autonomous Operations achieving 98% automation rates.
->>>>>>> origin/cursor/create-and-deploy-new-content-3f10
             </p>
 
             {/* Advertising Banner */}

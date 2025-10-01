@@ -375,21 +375,6 @@ export default function DataAnalyticsServices() {;
       description="Transform your data into actionable insights with our comprehensive data analytics services. Business intelligence, predictive analytics, and AI-powered insights."
       keywords="data analytics, business intelligence, data warehousing, predictive analytics, data visualization, AI insights">;
       <div className="min-h-screen bg-white">;
-<<<<<<< HEAD
-=======
-
-
-export default function DataAnalyticsPage() {
-  return (
-    <>
-      <Head>
-        <title>Data Analytics Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive data analytics services including business intelligence, predictive analytics, data management, and AI-powered insights." />
-      </Head>
-
-      <div className="min-h-screen bg-gray-50">
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
@@ -532,9 +517,7 @@ export default function DataAnalyticsPage() {
 };
 
 export default Data-analytics;
-=======
 
 export default Data-analytics;
 
 
->>>>>>> main

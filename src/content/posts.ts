@@ -9,12 +9,207 @@ export interface BlogPost {
 }
 
 export const posts: BlogPost[] = [
+  // October 1, 2025 — 🔥 LATEST BREAKTHROUGH: Revolutionary AI Content
+  {
+    slug: "ai-sovereign-agents-enterprise-2025",
+    title: "AI Sovereign Agents: Enterprise Autonomous Decision-Making Revolution 2025 — 94% Accuracy, $45M+ Savings",
+    description: "Discover how Fortune 500 companies deploy AI Sovereign Agents with autonomous decision-making capabilities, achieving 94% accuracy, $45M+ annual savings, and 10x operational efficiency gains across complex operations.",
+    category: "AI Sovereign Agents",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "28 min read"
+  },
+  {
+    slug: "ai-quantum-machine-learning-2025",
+    title: "Quantum Machine Learning: 1000x Speed Breakthrough in Enterprise AI 2025 — $89M Savings",
+    description: "Explore how quantum machine learning revolutionizes enterprise AI with 1000x computational speedup, solving previously impossible optimization problems in finance, drug discovery, and supply chain optimization.",
+    category: "Quantum Machine Learning",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "32 min read"
+  },
+  {
+    slug: "ai-neuromorphic-edge-computing-2025",
+    title: "Neuromorphic Edge Computing: Brain-Inspired AI at 0.001W Power — 10,000x Energy Efficiency",
+    description: "Discover how neuromorphic edge computing delivers brain-inspired AI with 10,000x energy efficiency, real-time learning, and ultra-low latency for IoT, robotics, and autonomous systems across 100M+ devices.",
+    category: "Neuromorphic Edge Computing",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "30 min read"
+  },
+  // October 3, 2025 — 🎯 NEWEST: Latest Breakthrough AI Content
+  {
+    slug: "ai-adaptive-learning-systems-personalized-education-2025",
+    title: "AI-Powered Adaptive Learning Systems: Next-Gen Personalized Education — 87% Student Success Rate",
+    description: "Revolutionary adaptive learning systems powered by AI. Real-time curriculum adjustment, personalized pathways, and cognitive load optimization achieving 87% student success rates and 3.2x faster mastery.",
+    category: "AI Education Tech",
+    publishedAt: "2025-10-03",
+    featured: true,
+    readTime: "24 min read"
+  },
+  {
+    slug: "neuromorphic-computing-brain-inspired-ai-2025",
+    title: "Neuromorphic Computing Revolution: Brain-Inspired AI Architecture — 1000x Energy Efficiency",
+    description: "Next-generation neuromorphic computing mimicking biological neural networks. Achieve 1000x energy efficiency, real-time learning, and event-driven processing for edge AI and robotics applications.",
+    category: "Neuromorphic AI",
+    publishedAt: "2025-10-03",
+    featured: true,
+    readTime: "22 min read"
+  },
+  {
+    slug: "ai-protein-design-drug-discovery-breakthrough-2025",
+    title: "AI-Driven Protein Design: Revolutionary Breakthrough in Drug Discovery — 95% Success Rate",
+    description: "Transform pharmaceutical R&D with AI-powered protein design. Design novel proteins in days (not years), achieve 95% prediction accuracy, and accelerate drug discovery by 10x with generative AI.",
+    category: "AI BioTech",
+    publishedAt: "2025-10-03",
+    featured: true,
+    readTime: "26 min read"
+  },
+  // October 1, 2025 — 🚀 NEW: Latest AI Revolution Content
+  {
+    slug: "ai-edge-computing-5g-integration-2025",
+    title: "AI-Powered Edge Computing & 5G Integration: Sub-10ms Latency, 90% Bandwidth Savings",
+    description: "Master edge AI architecture with 5G integration. Achieve sub-10ms response times, 90% bandwidth savings, and real-time intelligence at scale for IoT, autonomous systems, and distributed applications.",
+    category: "Edge AI & 5G",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "26 min read"
+  },
+  {
+    slug: "enterprise-ai-adoption-change-management-2025",
+    title: "Enterprise AI Adoption Framework: 95% User Adoption, 4x Faster Implementation, 450% ROI",
+    description: "Complete guide to successful AI transformation and change management. Proven frameworks for stakeholder alignment, cultural adoption, and sustainable enterprise-wide AI deployment.",
+    category: "Enterprise Strategy",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "28 min read"
+  },
+  {
+    slug: "ai-cybersecurity-threat-intelligence-2025",
+    title: "AI-Driven Cybersecurity Operations: 99.7% Detection Accuracy, Sub-60s Response Time",
+    description: "Transform security operations with AI-powered threat detection and automated response. Achieve 99.7% accuracy, sub-minute response times, and 85% reduction in false positives.",
+    category: "AI Security & Threat Intelligence",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "25 min read"
+  },
+  // October 1, 2025 — 🔥 BREAKTHROUGH: Next-Gen AI Revolution
+  {
+    slug: "multimodal-ai-systems-complete-guide-2025",
+    title: "Multimodal AI Systems 2025: Vision + Language + Audio Integration — 95% Accuracy Across Modalities",
+    description: "Build production-ready multimodal AI systems that seamlessly process vision, language, and audio. Master cross-modal learning, unified embeddings, and real-world applications achieving 95%+ accuracy.",
+    category: "AI Innovation",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "24 min read"
+  },
+  {
+    slug: "self-optimizing-ai-infrastructure-guide-2025",
+    title: "Self-Optimizing AI Infrastructure: Autonomous Systems That Tune Themselves — 70% Cost Reduction",
+    description: "Deploy self-healing, self-scaling AI infrastructure that automatically optimizes for cost and performance. Achieve 70% cost reduction while maintaining 99.99% uptime with zero manual intervention.",
+    category: "AI Infrastructure",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "20 min read"
+  },
+  {
+    slug: "responsible-ai-development-framework-2025",
+    title: "Responsible AI Development Framework 2025: Build Ethical AI Systems from Day One",
+    description: "Complete framework for responsible AI development: fairness testing, bias detection, explainability tools, and ethical guidelines. Build AI systems your users and regulators trust.",
+    category: "AI Ethics & Governance",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "19 min read"
+  },
+  {
+    slug: "ai-powered-hyper-personalization-guide-2025",
+    title: "AI-Powered Hyper-Personalization: Transform Customer Experience — 4.5x Engagement, 320% Revenue Growth",
+    description: "Master AI-driven personalization at scale. Real-time recommendations, predictive customer journeys, and dynamic content that drives 320% revenue growth and 4.5x engagement rates.",
+    category: "AI Customer Experience",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "22 min read"
+  },
+  // Sept 30, 2025 — LATEST: AI Infrastructure & Security Breakthroughs
+  {
+    slug: "ai-2025-september-30-observability-monitoring-revolution",
+    title: "AI Observability 2.0: The Complete Monitoring Revolution — 99.9% Uptime, 85% Faster Detection",
+    description: "Transform AI operations with next-gen observability: deep model insights, hallucination detection, real-time cost tracking, and anomaly detection. Achieve production excellence.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "18 min read"
+  },
+  {
+    slug: "vector-databases-real-time-ai-applications-2025",
+    title: "Vector Databases at Scale: Building Real-Time AI Applications — Sub-100ms Query Latency",
+    description: "Master vector databases for production AI. Build semantic search, RAG systems, and recommendations processing millions of queries per second. Complete architecture guide.",
+    category: "AI Infrastructure",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "22 min read"
+  },
+  {
+    slug: "ai-powered-code-security-scanning-2025",
+    title: "AI-Powered Code Review & Security Scanning Revolution — 90% Fewer False Positives, 95% Detection",
+    description: "Transform security with AI code analysis. Detect vulnerabilities, enforce best practices, and ship secure code faster with intelligent automation developers trust.",
+    category: "Security & DevSecOps",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "20 min read"
+  },
+  // Sept 30, 2025 — BREAKING: New Enterprise Guides
+  {
+    slug: "ai-powered-devsecops-complete-guide-2025",
+    title: "AI-Powered DevSecOps Complete Guide 2025: Security at DevOps Speed",
+    description: "Integrate AI-driven security testing, achieve 95% faster vulnerability detection, 80% fewer false positives, and continuous compliance without sacrificing velocity.",
+    category: "DevSecOps & AI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "14 min read"
+  },
+  {
+    slug: "quantum-ready-cloud-infrastructure-2025",
+    title: "Quantum-Ready Cloud Infrastructure 2025: Post-Quantum Cryptography Migration",
+    description: "Complete migration guide to protect against quantum threats. Implement hybrid cryptography, deploy PQC algorithms, and future-proof your systems before Q-Day.",
+    category: "Quantum Computing",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "16 min read"
+  },
+  {
+    slug: "enterprise-ai-model-governance-framework-2025",
+    title: "Enterprise AI Model Governance Framework 2025: The Complete Guide",
+    description: "Build enterprise-grade AI governance with model registries, bias monitoring, compliance automation, and lifecycle management. Navigate regulatory requirements with confidence.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "18 min read"
+  },
   // Sept 30, 2025 — Newly added content (featured)
+  {
+    slug: "ai-2025-sept-30-llm-supply-chains",
+    title: "AI 2025: AI Supply Chains — 99.5% Forecasts, 85% Inventory Cut",
+    description: "Blueprint with freshness windows, quality budgets, signed attestations, and rollback.",
+    category: "Enterprise AI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
   {
     slug: "ai-2025-sept-30-operational-trust-scorecards-v2",
     title: "Operational Trust Scorecards v2 — From SLIs to Business KPIs",
     description:
       "Update your scorecards with live canaries, budgeted actions, and rollback hooks that prevent regressions.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "ai-2026-governed-agent-runbooks",
+    title: "AI 2026: Governed Agent Runbooks — Budgets, Canaries, Rollback",
+    description: "Production checklists for safe autonomy: budgeted actions, KPI‑linked canaries, instant rollback.",
     category: "AI Operations",
     publishedAt: "2025-09-30",
     featured: true,
@@ -53,43 +248,6 @@ export const posts: BlogPost[] = [
     slug: "ai-2025-sept-30-private-insights-blueprint",
     title: "Private Insights Blueprint — Zero‑PII Analytics at <100ms",
     description: "Scoped IDs, on‑device aggregation, and DP noise deliver trustworthy insights without collecting PII.",
-    category: "Privacy & Analytics",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "8 min read"
-  },
-  {
-    slug: "ai-2025-real-time-decision-engines",
-    title: "Real-Time Decision Engines 2025: 10M decisions/sec under 1ms",
-    description: "Blueprint for ultra‑low‑latency decision systems with streaming features, caches, and guards.",
-    category: "Real-Time AI",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "10 min read"
-  },
-  {
-    slug: "ai-2025-neural-code-synthesis",
-    title: "Neural Code Synthesis 2025: 95% Accuracy, 90% Faster Delivery",
-    description: "Governed code generation with evals, safety rails, and CI policy tests tied to KPIs.",
-    category: "Engineering",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "11 min read"
-  },
-  {
-    slug: "ai-2025-multimodal-fusion-blueprint",
-    title: "Multimodal Fusion Blueprint 2025: 98% Cross‑Modal Accuracy",
-    description: "Unify text, image, and voice with hybrid retrieval, calibration, and on‑device adapters.",
-    category: "Multimodal AI",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "12 min read"
-  },
-  {
-    slug: "edge-zero-pii-insights-2026",
-    title: "Edge Zero‑PII Insights 2026: Scoped IDs, On‑Device Aggregation",
-    description: "Scoped IDs, on‑device aggregation, and DP noise—zero PII at <100ms.",
->>>>>>> origin/feature/new-content-2025
     category: "Analytics",
     publishedAt: "2025-09-30",
     featured: true,
@@ -175,6 +333,33 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "9 min read"
+  },
+  {
+    slug: "ai-2025-oct-01-enterprise-rag-security-v2",
+    title: "Enterprise RAG Security v2 — Auth-Aware, Fresh, Signed",
+    description: "Auth-scoped retrieval, freshness windows, prompt firewalls, and signed outputs that keep answers correct and compliant.",
+    category: "AI Security",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "genai-2025-oct-01-cost-optimization-blueprint",
+    title: "GenAI Cost Optimization Blueprint — Tiers, Caches, Budgets",
+    description: "Quality tiers, semantic caches, and budget-aware routing delivering 40–70% savings with stable UX.",
+    category: "GenAI",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "edge-2025-oct-01-zero-pii-telemetry-v2",
+    title: "Zero‑PII Telemetry v2 — Sub‑100ms, Signed, Differentially Private",
+    description: "Scoped IDs, on‑device aggregation, DP noise, and attestations for privacy‑preserving metrics at the edge.",
+    category: "Analytics",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "7 min read"
   },
   {
     slug: "ai-2025-sept-30-cognitive-assistants-blueprint",
@@ -315,24 +500,6 @@ export const posts: BlogPost[] = [
     slug: "autonomous-operations-case-study-2026",
     title: "Autonomous Operations Case Study 2026 — 98% automation",
     description: "Budgets, canaries, and rollback delivering near‑complete automation in production.",
-    category: "AI Operations",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "9 min read"
-  },
-  {
-    slug: "ai-2027-edge-native-agents",
-    title: "Edge‑Native Agents 2027: Private Tools at <100ms",
-    description: "Design agents that run close to users with scoped permissions, on‑device tools, and instant rollback.",
-    category: "Edge Computing",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "9 min read"
-  },
-  {
-    slug: "ai-2027-operational-scorecards",
-    title: "Operational AI Scorecards 2027: KPIs, Budgets, Rollback",
-    description: "Live scorecards that link SLIs to product KPIs with budgeted actions and one‑click recovery.",
     category: "AI Operations",
     publishedAt: "2025-09-30",
     featured: true,
@@ -1004,6 +1171,25 @@ export const posts: BlogPost[] = [
     readTime: "8 min read"
   },
   {
+    slug: "ai-governance-scorecards-2026",
+    title: "AI Governance 2026: Scorecards Engineers Actually Use",
+    description: "Guardrails wired to product KPIs with PR checks and online canaries that speed teams up.",
+    category: "AI Strategy",
+    publishedAt: "2025-10-07",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "freshness-aware-rag-v2",
+    title: "Freshness‑Aware RAG v2: TTL Budgets and Versioned Corpora",
+    description: "Keep answers accurate with freshness windows, async warmups, and KPI‑aligned evaluation.",
+    category: "GenAI",
+    publishedAt: "2025-10-07",
+    featured: true,
+    readTime: "8 min read"
+  }
+  ,
+  {
     slug: "ai-platform-roadmaps-2026",
     title: "AI Product Roadmaps 2026: From Bet to Business Impact",
     description: "Outcome-led roadmaps that connect bets to scorecards, trains, and shipped value.",
@@ -1535,6 +1721,58 @@ export const posts: BlogPost[] = [
   }
 ];
 
+// Oct 03, 2025 – New posts to surface on homepage and promos
+posts.unshift(
+  {
+    slug: "ai-2025-october-breakthrough-enterprise-automation",
+    title: "AI-Powered Enterprise Automation 2025: Complete Implementation Guide",
+    description: "Transform your enterprise with cutting-edge AI automation. Learn proven strategies for 400%+ efficiency gains, implementation frameworks, and real-world case studies from Fortune 500 companies.",
+    category: "Enterprise Strategy",
+    publishedAt: "2025-10-03",
+    featured: true,
+    readTime: "18 min read"
+  },
+  {
+    slug: "ai-2025-october-quantum-ai-hybrid-systems",
+    title: "Quantum-AI Hybrid Systems 2025: Practical Near-Term Implementation",
+    description: "Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies, real-world applications, and ROI optimization for 1000x processing speed gains.",
+    category: "Quantum Computing",
+    publishedAt: "2025-10-03",
+    featured: true,
+    readTime: "15 min read"
+  },
+  {
+    slug: "ai-2025-oct-03-governed-autonomy-scorecards",
+    title: "Governed Autonomy Scorecards: From SLIs to KPIs",
+    description:
+      "Operational scorecards with budgets, canaries, and rollback that accelerate delivery without regressions.",
+    category: "AI Operations",
+    publishedAt: "2025-10-03",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "edge-2025-oct-03-private-telemetry-blueprint",
+    title: "Private Telemetry at the Edge: Useful Signals, Zero PII",
+    description:
+      "Scoped IDs, on-device redaction, and DP noise for actionable analytics under 100ms with audit-ready attestations.",
+    category: "Observability",
+    publishedAt: "2025-10-03",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "genai-2025-oct-03-quality-tiers-blueprint-v4",
+    title: "GenAI Quality Tiers v4: Save Up To 70% With Stable UX",
+    description:
+      "Tiered routing, semantic caches, and eval gates that reduce spend while preserving user experience.",
+    category: "GenAI",
+    publishedAt: "2025-10-03",
+    featured: true,
+    readTime: "9 min read",
+  }
+);
+
 // Sept 30, 2025 – Add three brand-new posts to advertise across the site
 posts.unshift(
   {
@@ -1594,6 +1832,84 @@ posts.unshift(
       "Stand up KPI‑linked evals and budget‑aware routing that gate traffic and trigger instant rollback without slowing teams.",
     category: "GenAI",
     publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read",
+  }
+);
+
+// Sept 30, 2025 – Add three more posts and promote across the site
+posts.unshift(
+  {
+    slug: "ai-2025-sept-30-operational-trust-scorecards-v3",
+    title: "Operational Trust Scorecards v3 — KPIs, Budgets, Instant Rollback",
+    description:
+      "Wire SLIs to KPIs with budgeted actions, live canaries, and deterministic rollback that prevents regressions.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read",
+  },
+  {
+    slug: "ai-2025-sept-30-autonomic-runbooks",
+    title: "Autonomic Runbooks — Contain Incidents in Under 60 Seconds",
+    description:
+      "Policy‑tested actions, guardrails, and live traces that auto‑contain incidents without sacrificing velocity.",
+    category: "AI Reliability",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "edge-2025-sept-30-consentless-telemetry-v2",
+    title: "Consentless Telemetry v2 — Useful Insights, Zero‑PII, <100ms",
+    description:
+      "Scoped IDs, on‑device redaction, and DP noise to keep analytics rich and privacy‑first worldwide.",
+    category: "Observability",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read",
+  },
+  {
+    slug: "genai-2025-sept-30-quality-tiers-quickstart",
+    title: "GenAI Quality Tiers Quickstart: Stable UX at 40–70% Lower Cost",
+    description:
+      "Introduce tiered routing, semantic caches, and KPI‑linked budgets to reduce spend without regressions.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read",
+  }
+);
+
+// Oct 01-02, 2025 – Add three new posts and surface them site-wide
+posts.unshift(
+  {
+    slug: "ai-2025-oct-01-operational-trust-v4",
+    title: "Operational Trust Scorecards v4 — SLIs → KPIs with Budgets",
+    description:
+      "Next-gen scorecards: live canaries, budgeted actions, and attested rollback wired to product KPIs.",
+    category: "AI Operations",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "edge-2025-oct-01-consentless-journeys-v3",
+    title: "Consentless Journeys v3 — Private Personalization <100ms",
+    description:
+      "Scoped IDs, signed configs, and on-device models for zero‑PII journeys worldwide under 100ms.",
+    category: "Edge Computing",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "genai-2025-oct-02-cache-playbook-v3",
+    title: "GenAI Cache Playbook v3 — Semantic + Tiered Caches",
+    description:
+      "Blend semantic + tiered caches with eval‑gated fallbacks to cut spend 60–80% while preserving UX KPIs.",
+    category: "GenAI",
+    publishedAt: "2025-10-02",
     featured: true,
     readTime: "8 min read",
   }

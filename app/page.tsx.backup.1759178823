@@ -60,25 +60,6 @@ export default function HomePage() {
       <div className="w-full bg-gradient-to-r from-green-600 to-blue-600 text-white">
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
-<<<<<<< HEAD
-            <span>✨ Latest 2026 content:</span>
-            <a href="/blog/ai-agent-safety-blueprint-2026" className="underline hover:text-yellow-200">Agent Safety Blueprint</a>
-            <span className="hidden md:inline">•</span>
-            <a href="/blog/ai-operational-excellence-2026" className="underline hover:text-yellow-200">Operational Excellence</a>
-            <span className="hidden md:inline">•</span>
-            <a href="/blog/ai-platform-architecture-2026" className="underline hover:text-yellow-200">Platform Architecture</a>
-            <span className="hidden md:inline">•</span>
-            <a href="/case-studies/ai-autonomous-operations-success-2026" className="underline hover:text-yellow-200">$15M ROI Case Study</a>
-            <span className="hidden md:inline">•</span>
-            <a href="/blog/ai-agent-orchestration-2026" className="underline hover:text-yellow-200">AI Agent Orchestration</a>
-=======
-            <span>✨ New on the blog:</span>
-            <Link href="/blog/ai-governance-scorecards-quickstart-2026" className="underline hover:text-yellow-200">Governance Scorecards Quickstart</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-operational-excellence-blueprint-2026" className="underline hover:text-yellow-200">Operational Excellence Blueprint</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-enterprise-automation-blueprint-2026" className="underline hover:text-yellow-200">Enterprise Automation Blueprint</Link>
->>>>>>> origin/cursor/create-and-deploy-new-content-4388
           </div>
           <Link
             href="/blog"
@@ -89,22 +70,6 @@ export default function HomePage() {
         </div>
       </div>
       {/* Promotional Banners */}
-<<<<<<< HEAD
-      <NewContent2026BannerComponent />
-      <NewContentShowcaseBanner2026 />
-      <AutonomousOperationsBanner />
-      <AutonomousOperationsSuccessBanner />
-      <FinOpsAdvancedBanner />
-      <PlatformArchitectureBanner />
-=======
-      <AIAgentReliabilityBanner />
-      <AIMultimodalIntegrationBanner />
-      <AIEnterpriseAutomationBlueprintBanner />
-      <Latest2026ContentBanner />
-      <AIOperationalExcellenceBanner />
-      <AIAgentObservabilityBanner />
-      <ManufacturingTransformationBanner />
->>>>>>> origin/cursor/create-and-deploy-new-content-4388
       <NewContent2026Banner />
       <AIAgentOrchestrationBanner />
       <AISustainabilityBanner />
@@ -958,33 +923,6 @@ export default function HomePage() {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">Stay ahead with our latest content, case studies, and AI innovations</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-<<<<<<< HEAD
-            <Link href="/blog/agentic-workflow-orchestration-2026" className="group">
-=======
-=======
-            <Link href="/blog/ai-governance-scorecards-quickstart-2026" className="group">
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    NEW 2026
-                  </span>
-                  <span className="text-sm text-gray-500">6 min read</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Governance Scorecards Quickstart 2026
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Start with outcome‑linked scorecards and CI policy tests teams actually adopt.
-                </p>
-                <div className="flex items-center text-blue-600 font-semibold">
-                  Read Guide →
-                </div>
-              </div>
-            </Link>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/create-and-deploy-new-content-4388
             <Link href="/blog/ai-autonomous-operations-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
@@ -1058,11 +996,6 @@ export default function HomePage() {
                 </p>
                 <div className="flex items-center text-blue-600 font-semibold">
                   Read Architecture Guide →
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/main
             <Link href="/blog/ai-operational-excellence-blueprint-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
@@ -1076,7 +1009,6 @@ export default function HomePage() {
                 </h3>
                 <p className="text-gray-600 mb-4">
                   From policy to practice: playbooks that correlate with outcomes and speed teams up.
->>>>>>> origin/cursor/create-and-deploy-new-content-4388
                 </div>
               </div>
             </Link>

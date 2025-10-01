@@ -21,29 +21,18 @@ export default defineConfig({
     },
   },
   build: {
-    target: 'esnext',
-    minify: 'terser',
     sourcemap: false,
-    cssCodeSplit: true,
-    reportCompressedSize: true,
-    assetsInlineLimit: 4096,
+    minify: 'terser',
+    cssMinify: true,
     rollupOptions: {
-      external: [
-        'next/link',
-        'next/router',
-        'next/image',
-        'next/head',
-        'next/script',
-        'next/dynamic',
-        'next/navigation'
-      ],
       input: {
         main: './index.html'
       },
       treeshake: {
         moduleSideEffects: false,
         propertyReadSideEffects: false,
-        tryCatchDeoptimization: false
+        tryCatchDeoptimization: false,
+        preset: 'smallest'
       },
       output: {
         // Manual chunk splitting for better caching

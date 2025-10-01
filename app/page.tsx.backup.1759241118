@@ -113,21 +113,6 @@ import September30BreakthroughContentBanner from '../components/September30Break
 import Revolutionary2026ContentShowcaseBanner from '../components/Revolutionary2026ContentShowcaseBanner';
 import Latest2026ContentMegaBanner from '../components/Latest2026ContentMegaBanner';
 import Ultimate2026ContentShowcaseBanner from '../components/Ultimate2026ContentShowcaseBanner';
-<<<<<<< HEAD
-=======
-import RevolutionaryQuantumAIBreakthroughBanner from '../components/RevolutionaryQuantumAIBreakthroughBanner';
-import AutonomousBusinessSystemsMegaBanner from '../components/AutonomousBusinessSystemsMegaBanner';
-import QuantumAI2027BreakthroughBanner from '../components/QuantumAI2027BreakthroughBanner';
-import AutonomousBusinessIntelligence2026Banner from '../components/AutonomousBusinessIntelligence2026Banner';
-import NewContent2027ShowcaseBanner from '../components/NewContent2027ShowcaseBanner';
-import RevolutionaryBreakthrough2026Banner from '../src/components/RevolutionaryBreakthrough2026Banner';
-import AICostOptimizationBanner from '../src/components/AICostOptimizationBanner';
-import AutonomyBlueprint2026Banner from '../components/AutonomyBlueprint2026Banner';
-import September30ContentPromo2025 from '../components/September30ContentPromo2025';
-import AI2026QuantumConsciousnessRevolutionBanner from '../components/AI2026QuantumConsciousnessRevolutionBanner';
-import Revolutionary2026BreakthroughBanner from '../components/Revolutionary2026BreakthroughBanner';
-import NewContent2026RevolutionaryBanner from '../components/NewContent2026RevolutionaryBanner';
->>>>>>> origin/cursor/create-and-deploy-new-content-fc21
 
 export const metadata = {
   title: 'Zion Tech Group — Revolutionary AI Breakthroughs 2026 | 1000x Performance Gains',
@@ -173,18 +158,6 @@ export default function HomePage() {
       {/* 🚀🚀🚀 BREAKTHROUGH CONTENT - September 30, 2025 - 3 REVOLUTIONARY INNOVATIONS! 🚀🚀🚀 */}
       <September30BreakthroughContentBanner />
       
-<<<<<<< HEAD
-      {/* 🚀 NEW 2026 CONTENT SHOWCASE - Revolutionary AI Technologies! */}
-=======
-      {/* 🚀 REVOLUTIONARY NEW CONTENT 2026 - FEATURED PROMINENTLY */}
-      <NewContent2026RevolutionaryBanner />
-      
-      {/* 🚀 REVOLUTIONARY AI 2027 CONTENT - BREAKTHROUGH TECHNOLOGIES! */}
-      <NewContent2027RevolutionaryBanner />
-      <AI2027RevolutionaryBreakthroughBanner />
-      
-      {/* 🆕 ULTIMATE 2026 CONTENT SHOWCASE - NEW BREAKTHROUGH CONTENT */}
->>>>>>> origin/cursor/create-and-deploy-new-content-fc21
       <Ultimate2026ContentShowcaseBanner />
       
       {/* 🌟 Latest 2026 Content Mega Showcase */}

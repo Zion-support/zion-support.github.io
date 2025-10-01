@@ -48,43 +48,15 @@ import {
   AutonomousOperationsSuccessBanner,
   NewContentShowcaseBanner2026
 } from '../components/NewContent2026Banners';
-<<<<<<< HEAD
-import { 
-  NewContent2026PromotionalBanner,
-  AIInnovation2026Banner,
-  SuccessStory2026Banner,
-  AIRevolution2026Banner
-} from '../components/NewContent2026PromotionalBanners';
-import {
-  AISustainabilityTransformationBanner,
-  AIAutonomousEnterpriseBanner,
-  AIInnovation2026ShowcaseBanner,
-  LatestAIInnovations2026Banner
-} from '../components/NewContent2026SustainabilityBanners';
-=======
-import {
-  AIEnterpriseAutomation2026Banner,
-  AIQuantumComputing2026Banner,
-  AIAutonomousEnterpriseSuccessBanner,
-  RevolutionaryContent2026Banner,
-  NextGenAIServicesBanner
-} from '../components/LatestContent2026Banners';
-import AITrends2025Banner from '../src/components/AITrends2025Banner';
-import NewServicesShowcaseBanner from '../src/components/NewServicesShowcaseBanner';
-import AIROICalculator from '../src/components/AIROICalculator';
->>>>>>> origin/cursor/create-and-deploy-new-content-95ea
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
 import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
 import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
 import Latest2026ContentMegaBanner from '../components/Latest2026ContentMegaBanner';
-=======
 import AIROICalculator from '../src/components/AIROICalculator';
 import AITrends2025Banner from '../src/components/AITrends2025Banner';
 import NewServicesShowcaseBanner from '../src/components/NewServicesShowcaseBanner';
-=======
-=======
 import InteractiveContentRecommendation from '../components/InteractiveContentRecommendation';
 import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
 import LatestContent2026Banner from '../components/LatestContent2026Banner';
@@ -130,49 +102,15 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
             <span>✨ NEW 2026:</span>
-<<<<<<< HEAD
-            <span>🚀 BREAKING 2026:</span>
-            <Link href="/blog/ai-quantum-computing-breakthrough-2026" className="underline hover:text-yellow-200">Quantum AI Breakthrough</Link>
-=======
-            <Link href="/blog/ai-enterprise-automation-2026" className="underline hover:text-yellow-200">Enterprise Automation</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-quantum-computing-2026" className="underline hover:text-yellow-200">Quantum AI Computing</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-autonomous-enterprise-success-2026" className="underline hover:text-yellow-200">$25M ROI Case Study</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-agent-evals-2026" className="underline hover:text-yellow-200">Agent Evals</Link>
->>>>>>> origin/cursor/create-and-deploy-new-content-95ea
             <span className="hidden md:inline">•</span>
             <Link href="/blog/ai-autonomous-enterprise-2026" className="underline hover:text-yellow-200">Autonomous Enterprise</Link>
             <span className="hidden md:inline">•</span>
             <Link href="/case-studies/ai-sustainability-transformation-2026" className="underline hover:text-yellow-200">$10M ROI Case Study</Link>
             <span className="hidden md:inline">•</span>
             <Link href="/services/ai-synthetic-data-generation" className="underline hover:text-yellow-200">Quantum AI Services</Link>
-=======
             <span>🚀 REVOLUTIONARY 2026:</span>
             <Link href="/blog/ai-neural-interfaces-2026" className="underline hover:text-yellow-200">🧠 Neural Interfaces</Link>
             <span className="hidden md:inline">•</span>
-<<<<<<< HEAD
-            <Link href="/blog/ai-space-tech-2026" className="underline hover:text-yellow-200">🚀 Space AI Tech</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-synthetic-data-2026" className="underline hover:text-yellow-200">$15M Synthetic Data ROI</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-quantum-computing-2026" className="underline hover:text-yellow-200">Quantum AI</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-innovation-enterprise-success-2026" className="underline hover:text-yellow-200">$50M Success Story</Link>
-=======
-            <Link href="/blog/ai-innovation-2026-comprehensive-guide" className="underline hover:text-yellow-200">AI Innovation Guide</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-retail-transformation-2026-mega-success" className="underline hover:text-yellow-200">$1.2B Retail Success</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-brain-computer-interfaces-2026" className="underline hover:text-yellow-200">Neural Interfaces</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-quantum-finance-transformation-2026" className="underline hover:text-yellow-200">$500M Finance Success</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-space-mission-automation-2026" className="underline hover:text-yellow-200">$2B Space Success</Link>
-=======
-            <Link href="/blog/ai-autonomous-cloud-ops-2026" className="underline hover:text-yellow-200">Autonomous Cloud Ops</Link>
->>>>>>> origin/cursor/create-and-deploy-new-content-95ea
           </div>
           <Link
             href="/blog"
@@ -182,64 +120,9 @@ export default function HomePage() {
           </Link>
         </div>
       </div>
-<<<<<<< HEAD
-
-      {/* New Content 2026 Mega Banner */}
-      <NewContent2026MegaBanner />
-      {/* Revolutionary 2026 Content Banner */}
-      <Revolutionary2026ContentBanner />
-=======
-      {/* Promotional Banners */}
-      <RevolutionaryContent2026Banner />
-      <AIEnterpriseAutomation2026Banner />
-      <AIQuantumComputing2026Banner />
-      <AIAutonomousEnterpriseSuccessBanner />
-      <NextGenAIServicesBanner />
-      <Latest2026ContentBanner />
-      <NewContentShowcase2026Banner />
-      <AIEthicalFrameworkBanner />
-      <AIEthicsSuccessBanner />
-      <AISecurityEnterprise2026Banner />
-      <AIMultimodalEnterprise2026Banner />
-      <AISustainabilityTransformationBanner />
-      <AINeuralArchitectureOptimizationBanner />
-      <AIFederatedLearningBanner />
-      <FederatedLearningSuccessBanner />
-      <AIAutonomousCloudOpsBanner />
-      <AIFinTechTransformationBanner />
-      <AIRetailAutomationBanner />
-      <AutonomousOperationsBanner />
-      <FinOpsAdvancedBanner />
-      <PlatformArchitectureBanner />
-      <AutonomousOperationsSuccessBanner />
-      <NewContentShowcaseBanner2026 />
-      <NewContent2026Banner />
-      <AIMultimodalEnterpriseBanner />
-      <AIEnterpriseAutomationGuideBanner />
-      <AIDataAnalyticsEnterpriseBanner />
-      <EnterpriseTransformationSuccessBanner />
-      <HealthcareTransformationBanner />
-      <NewContentShowcaseBanner />
-      <AITrends2025Banner />
-      <NewServicesShowcaseBanner />
-      <AIRoadmapsBanner />
-      <AIFinOpsBanner />
-      <AutonomousAgentsBanner />
-      <AIGovernanceBanner />
-      <FinTechSuccessBanner />
-      <AIContentShowcaseBanner />
-      <CustomerServiceAIBanner />
-      <HealthcareAIBanner />
-      <RetailSuccessBanner />
-      <AIRevolutionBanner />
-      <NewBlogBanner />
-      <WorkflowAutomationBanner />
-      <AIAnalyticsBanner />
->>>>>>> origin/cursor/create-and-deploy-new-content-95ea
       
       {/* Latest 2026 Content Banner */}
       <LatestContent2026Banner />
-=======
       {/* New 2026 Content Promotional Banners */}
       <AISustainabilityTransformationBanner />
       <AIAutonomousEnterpriseBanner />
@@ -255,8 +138,6 @@ export default function HomePage() {
       {/* New Content 2026 Showcase */}
       <NewContent2026Showcase />
       
-=======
-=======
       {/* Hero Section */}
       <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
         <div className="max-w-4xl mx-auto px-4">
@@ -282,7 +163,6 @@ export default function HomePage() {
               className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-green-700 hover:to-blue-700 transition-all shadow-lg hover:shadow-xl"
             >
               📈 View $25M ROI Case Study
-=======
               href="/blog/ai-quantum-computing-breakthrough-2026"
               className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-pink-700 transition-all shadow-lg hover:shadow-xl"
             >
@@ -299,7 +179,6 @@ export default function HomePage() {
               className="bg-gradient-to-r from-green-600 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-green-700 hover:to-teal-700 transition-all shadow-lg hover:shadow-xl"
             >
               📊 $50M ROI Success
-=======
               href="/blog/ai-brain-computer-interfaces-2026"
               className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-pink-700 transition-all shadow-lg hover:shadow-xl"
             >
@@ -351,7 +230,6 @@ export default function HomePage() {
         </div>
       </section>
 
-=======
       {/* Enhanced Content Promotion */}
       <EnhancedContentPromotion2026 />
       
@@ -1230,60 +1108,6 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-<<<<<<< HEAD
-=======
-            <Link href="/blog/ai-enterprise-automation-2026" className="group">
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    New 2026
-                  </span>
-                  <span className="text-sm text-gray-500">18 min read</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Enterprise Automation 2026: Complete Business Process Transformation
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Transform your enterprise with AI automation. 95% process efficiency, $5M+ savings, and zero-touch operations.
-                </p>
-                <div className="flex items-center text-blue-600 font-semibold">Read Article →</div>
-              </div>
-            </Link>
-            <Link href="/blog/ai-quantum-computing-2026" className="group">
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    New 2026
-                  </span>
-                  <span className="text-sm text-gray-500">25 min read</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Quantum Computing 2026: Next-Generation Intelligence
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Harness quantum computing for AI breakthroughs with 1000x faster optimization and revolutionary capabilities.
-                </p>
-                <div className="flex items-center text-blue-600 font-semibold">Read Article →</div>
-              </div>
-            </Link>
-            <Link href="/case-studies/ai-autonomous-enterprise-success-2026" className="group">
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-orange-100 text-orange-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    NEW Case Study
-                  </span>
-                  <span className="text-sm text-gray-500">Fortune 500</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Autonomous Enterprise Success 2026: $25M ROI Case Study
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  See how a Fortune 500 company achieved $25M ROI with AI autonomous enterprise systems. 99.9% uptime, 90% cost reduction.
-                </p>
-                <div className="flex items-center text-blue-600 font-semibold">View Case Study →</div>
-              </div>
-            </Link>
->>>>>>> origin/cursor/create-and-deploy-new-content-95ea
             <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-200">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center">

@@ -1,82 +1,14 @@
 import React from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
-import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
-import { NewContent2026PromotionalBanners } from '../components/NewContent2026PromotionalBanners';
-=======
-import {
-  NewBlogBanner,
-  AnalyticsPlatformBanner,
-  TechCorpSuccessBanner,
-  WorkflowAutomationBanner,
-  AIAnalyticsBanner,
-  HealthTechSuccessBanner,
-  ComprehensiveAIBanner,
-  EnterpriseAIBanner,
-  NewContentBanner,
-  CustomerServiceAIBanner,
-  HealthcareAIBanner,
-  RetailSuccessBanner,
-  AIContentShowcaseBanner,
-  AIRevolutionBanner,
-  AutonomousAgentsBanner,
-  AIGovernanceBanner,
-  FinTechSuccessBanner,
-  NewContentShowcaseBanner,
-  AIRoadmapsBanner,
-  AIFinOpsBanner,
-  AIMultimodalEnterpriseBanner,
-  AIEnterpriseAutomationGuideBanner,
-  AIDataAnalyticsEnterpriseBanner,
-  EnterpriseTransformationSuccessBanner,
-  HealthcareTransformationBanner,
-  NewContent2026Banner,
-  AIOperationalExcellenceBanner,
-  AIOperationalScorecardsBanner,
-  EdgeAIBlueprintBanner,
-  PlatformEngineeringScorecardsBanner,
-  AIAgentObservabilityBanner,
-  AIAgentSafetyBlueprintBanner,
-  AISustainabilityGreenTechBanner,
-  ManufacturingIOTAutomationBanner,
-  SupplyChainOptimizationBanner,
-  AI2026TrendsBanner
-} from '../components/PromotionalBanner';
-import { 
-  AIAutonomousCloudOpsBanner,
-  AIFinTechTransformationBanner,
-  AIRetailAutomationBanner,
-  AutonomousOperationsBanner,
-  FinOpsAdvancedBanner,
-  PlatformArchitectureBanner,
-  AutonomousOperationsSuccessBanner,
-  NewContentShowcaseBanner2026
-} from '../components/NewContent2026Banners';
-import { 
-  NewContent2026PromotionalBanner,
-  AIInnovation2026Banner,
-  SuccessStory2026Banner,
-  AIRevolution2026Banner
-} from '../components/NewContent2026PromotionalBanners';
-import {
-  AISustainabilityTransformationBanner,
-  AIAutonomousEnterpriseBanner,
-  AIInnovation2026ShowcaseBanner,
-  LatestAIInnovations2026Banner
-} from '../components/NewContent2026SustainabilityBanners';
->>>>>>> origin/cursor/create-and-deploy-new-content-befc
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
 import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
 import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
 import Latest2026ContentMegaBanner from '../components/Latest2026ContentMegaBanner';
-=======
 import AIROICalculator from '../src/components/AIROICalculator';
 import AITrends2025Banner from '../src/components/AITrends2025Banner';
 import NewServicesShowcaseBanner from '../src/components/NewServicesShowcaseBanner';
-=======
-=======
 import InteractiveContentRecommendation from '../components/InteractiveContentRecommendation';
 import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
 import LatestContent2026Banner from '../components/LatestContent2026Banner';
@@ -130,7 +62,6 @@ export default function HomePage() {
             <Link href="/case-studies/ai-sustainability-transformation-2026" className="underline hover:text-yellow-200">$10M ROI Case Study</Link>
             <span className="hidden md:inline">•</span>
             <Link href="/services/ai-synthetic-data-generation" className="underline hover:text-yellow-200">Quantum AI Services</Link>
-=======
             <span>🚀 REVOLUTIONARY 2026:</span>
             <Link href="/blog/ai-neural-interfaces-2026" className="underline hover:text-yellow-200">🧠 Neural Interfaces</Link>
             <span className="hidden md:inline">•</span>
@@ -141,7 +72,6 @@ export default function HomePage() {
             <Link href="/blog/ai-quantum-computing-2026" className="underline hover:text-yellow-200">Quantum AI</Link>
             <span className="hidden md:inline">•</span>
             <Link href="/case-studies/ai-innovation-enterprise-success-2026" className="underline hover:text-yellow-200">$50M Success Story</Link>
-=======
             <Link href="/blog/ai-innovation-2026-comprehensive-guide" className="underline hover:text-yellow-200">AI Innovation Guide</Link>
             <span className="hidden md:inline">•</span>
             <Link href="/case-studies/ai-retail-transformation-2026-mega-success" className="underline hover:text-yellow-200">$1.2B Retail Success</Link>
@@ -160,24 +90,6 @@ export default function HomePage() {
           </Link>
         </div>
       </div>
-<<<<<<< HEAD
-      
-=======
-
-      {/* New Content 2026 Mega Banner */}
-      <NewContent2026MegaBanner />
-      {/* Revolutionary 2026 Content Banner */}
-      <Revolutionary2026ContentBanner />
-      
-      {/* Latest 2026 Content Banner */}
-      <LatestContent2026Banner />
-=======
-      {/* New 2026 Content Promotional Banners */}
-      <AISustainabilityTransformationBanner />
-      <AIAutonomousEnterpriseBanner />
-      <AIInnovation2026ShowcaseBanner />
-      <LatestAIInnovations2026Banner />
->>>>>>> origin/cursor/create-and-deploy-new-content-befc
       
       {/* Next-Generation Autonomous Systems Banner */}
       <NextGenAutonomousBanner />
@@ -188,8 +100,6 @@ export default function HomePage() {
       {/* New Content 2026 Showcase */}
       <NewContent2026Showcase />
       
-=======
-=======
       {/* Hero Section */}
       <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
         <div className="max-w-4xl mx-auto px-4">
@@ -215,7 +125,6 @@ export default function HomePage() {
               className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-green-700 hover:to-blue-700 transition-all shadow-lg hover:shadow-xl"
             >
               📈 View $25M ROI Case Study
-=======
               href="/blog/ai-quantum-computing-breakthrough-2026"
               className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-pink-700 transition-all shadow-lg hover:shadow-xl"
             >
@@ -232,7 +141,6 @@ export default function HomePage() {
               className="bg-gradient-to-r from-green-600 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-green-700 hover:to-teal-700 transition-all shadow-lg hover:shadow-xl"
             >
               📊 $50M ROI Success
-=======
               href="/blog/ai-brain-computer-interfaces-2026"
               className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-pink-700 transition-all shadow-lg hover:shadow-xl"
             >
@@ -284,7 +192,6 @@ export default function HomePage() {
         </div>
       </section>
 
-=======
       {/* Enhanced Content Promotion */}
       <EnhancedContentPromotion2026 />
       

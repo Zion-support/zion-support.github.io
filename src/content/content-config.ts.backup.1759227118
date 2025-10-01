@@ -200,53 +200,14 @@ featuredBlogPosts.unshift(
   }
 );
 
-<<<<<<< HEAD
-// Highlight newly created articles
-featuredBlogPosts.unshift(
-  {
-    id: "ai-autonomous-ops-blueprint-2026",
-    title: "AI Autonomous Ops Blueprint 2026",
-    description: "Budgets, live traces, and one‑click rollback for safe autonomy",
-    link: "/blog/ai-autonomous-ops-blueprint-2026",
-=======
-// Promote brand-new content on homepage showcases (added Sept 30, 2025)
-featuredBlogPosts.unshift(
-  {
-    id: "ai-operational-resilience-2026",
-    title: "AI Operational Resilience 2026",
-    description: "Error budgets, blast radius limits, rollback playbooks for 99.99% uptime",
-    link: "/blog/ai-operational-resilience-2026",
->>>>>>> origin/cursor/create-and-deploy-new-content-4a99
     type: "article",
     featured: true
   },
   {
-<<<<<<< HEAD
-    id: "edge-private-analytics-2026",
-    title: "Edge Private Analytics 2026",
-    description: "Scoped IDs, on‑device metrics, and DP noise without PII",
-    link: "/blog/edge-private-analytics-2026",
-=======
-    id: "privacy-first-experimentation-2026",
-    title: "Privacy‑First Experimentation 2026",
-    description: "Scoped IDs, edge aggregation, DP noise for compliant A/B tests",
-    link: "/blog/privacy-first-experimentation-2026",
->>>>>>> origin/cursor/create-and-deploy-new-content-4a99
     type: "article",
     featured: true
   },
   {
-<<<<<<< HEAD
-    id: "agent-safety-runbooks-2026",
-    title: "Agent Safety Runbooks 2026",
-    description: "Approvals, budgets, and KPI‑linked canary evals",
-    link: "/blog/agent-safety-runbooks-2026",
-=======
-    id: "genai-routing-blueprints-2026",
-    title: "GenAI Routing Blueprints 2026",
-    description: "Quality tiers, caches, and eval signals under budget",
-    link: "/blog/genai-routing-blueprints-2026",
->>>>>>> origin/cursor/create-and-deploy-new-content-4a99
     type: "article",
     featured: true
   }
