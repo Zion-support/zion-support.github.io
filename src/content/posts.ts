@@ -1173,6 +1173,13 @@ export const posts: BlogPost[] = [
   }
 ];
 
+// Oct 03, 2025 – New content to surface on Home
+posts.push(
+  { slug: "ai-2025-oct-03-continuous-intelligence-platforms", title: "Continuous Intelligence 2025: 100M Events/sec under 50ms", description: "Streams → actions with sub‑50ms latency, KPI scorecards, and rollback triggers.", category: "Real-Time AI", publishedAt: "2025-10-03", featured: true, readTime: "10 min read" },
+  { slug: "ai-2025-oct-03-autonomous-cloud-security", title: "Autonomous Cloud Security 2025: Neutralize Threats in <5s", description: "Self‑defending infrastructure with budgeted actions, live canaries, and instant rollback.", category: "Security", publishedAt: "2025-10-03", featured: true, readTime: "9 min read" },
+  { slug: "ai-2025-oct-03-quantum-supply-chain-optimization", title: "Quantum Supply Chain 2025: Solve in Minutes, Not Days", description: "Hybrid quantum + ML optimization delivering 10,000x faster plans and 35% cost reduction.", category: "Quantum Computing", publishedAt: "2025-10-03", featured: true, readTime: "11 min read" }
+);
+
 // Newly added content (auto-advertised on Home via latest sort)
 posts.push(
   { slug: "ai-operational-trust-scorecards-2026", title: "AI Operational Trust Scorecards 2026: SLIs That Matter", description: "Define SLIs tied to product KPIs, wire budgets and rollback for trustworthy automation.", category: "AI Operations", publishedAt: "2025-09-30", featured: true, readTime: "7 min read" },
