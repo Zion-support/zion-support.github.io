@@ -670,3 +670,40 @@ export const MLPipelineOptimizationCaseStudyBanner = () => (
     hideAfter={22}
   />
 );
+
+// NEW OCTOBER 1, 2025 - ENTERPRISE INTEGRATION CONTENT
+export const EnterpriseIntegrationBlogBanner = () => (
+  <PromotionalBanner
+    message="🔥 JUST PUBLISHED: Enterprise Integration Orchestration Revolution - 85% Faster Integration, Real-Time Data Sync, $47M ROI"
+    ctaText="Read Blog Post"
+    ctaLink="/blog/ai-2025-oct-01-enterprise-integration-orchestration-revolution"
+    backgroundColor="bg-gradient-to-r from-purple-700 via-indigo-600 to-blue-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const BankIntegrationCaseStudyBanner = () => (
+  <PromotionalBanner
+    message="💰 BREAKTHROUGH: Fortune 500 Bank $89M ROI - 247 Systems Integrated in 6 Months, 99.97% Uptime, Zero Breaches"
+    ctaText="View Success Story"
+    ctaLink="/case-studies/ai-2025-oct-01-fortune-500-bank-integration-transformation-89m-success"
+    backgroundColor="bg-gradient-to-r from-emerald-700 via-green-600 to-teal-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={22}
+  />
+);
+
+export const IntegrationPlatformServiceBanner = () => (
+  <PromotionalBanner
+    message="⚡ NEW SERVICE: AI-Powered Integration Orchestration Platform - Connect 500+ Systems, Real-Time Sync, Enterprise-Grade Security"
+    ctaText="Explore Platform"
+    ctaLink="/services/ai-integration-orchestration-platform-2025"
+    backgroundColor="bg-gradient-to-r from-orange-600 via-red-600 to-pink-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
