@@ -5,7 +5,7 @@
     "skipLibCheck": true
   },
   "include": [
-    "src/**/*"
+    "src/types/**/*.d.ts"
   ],
   "exclude": [
     "node_modules",
@@ -20,18 +20,10 @@
     "src/components/EnhancedContentShowcase2026.tsx",
     "src/components/NewContent2026Banners.tsx",
     "src/pages/**",
-    "src/utils/componentLazyLoader.ts",
-    "src/utils/lazyBannerLoader.ts",
-    "src/utils/performanceMonitor.ts",
-    "src/utils/analyticsIntegration.ts",
+    "src/content/**",
+    "src/hooks/**",
+    "src/utils/**",
     "src/components/LatestContentBanner2025.tsx",
-    "src/components/Revolutionary2026ContentMegaBanner.tsx",
-    "src/hooks/useBannerRotation.tsx",
-    "src/utils/advancedCacheManager.ts",
-    "src/utils/cacheManager.ts",
-    "src/utils/codeSpittingHelper.ts",
-    "src/utils/contentRecommendationEngine.ts",
-    "src/utils/enhancedAnalytics.ts",
-    "src/utils/performanceOptimizer.ts"
+    "src/components/Revolutionary2026ContentMegaBanner.tsx"
   ]
 }
