@@ -12,7 +12,6 @@ import December2025NewContentShowcaseBanner from "./components/December2025NewCo
 import December2025RevolutionaryAutonomousEnterpriseBanner from "./components/December2025RevolutionaryAutonomousEnterpriseBanner";
 import December2026SingularityAchievementBanner from "./components/December2026SingularityAchievementBanner";
 import February2026ContentShowcaseBanner from "./components/February2026ContentShowcaseBanner";
-import February2026TranscendentAutomationBanner from "./components/February2026TranscendentAutomationBanner";
 import Fortune500AI2027InfiniteValueBanner from "./components/Fortune500AI2027InfiniteValueBanner";
 import Fortune500SuccessAdvertisingBanner from "./components/Fortune500SuccessAdvertisingBanner";
 import InteractiveAI2026Showcase from "./components/InteractiveAI2026Showcase";
@@ -23,13 +22,10 @@ import January2025Fortune500SuccessBanner from "./components/January2025Fortune5
 import January2025InnovationShowcaseBanner from "./components/January2025InnovationShowcaseBanner";
 import January2025NewContentBanner from "./components/January2025NewContentBanner";
 import January2026AutonomousEnterpriseBanner from "./components/January2026AutonomousEnterpriseBanner";
-import January2026FreshContentShowcaseBanner from "./components/January2026FreshContentShowcaseBanner";
-import January2026HomepageContentSpotlight from "./components/January2026HomepageContentSpotlight";
+import January2026QuantumNeuralFusionBanner from "./components/January2026QuantumNeuralFusionBanner";
 import January2026RevolutionaryAIBanner from "./components/January2026RevolutionaryAIBanner";
-import January2026RevolutionaryAIContentBanner from "./components/January2026RevolutionaryAIContentBanner";
 import January2026RevolutionaryBreakthroughBanner from "./components/January2026RevolutionaryBreakthroughBanner";
 import January2026SyntheticConsciousnessBanner from "./components/January2026SyntheticConsciousnessBanner";
-import January2026UltimateNeuralRevolutionBanner from "./components/January2026UltimateNeuralRevolutionBanner";
 import July2026AutonomousIntelligenceBanner from "./components/July2026AutonomousIntelligenceBanner";
 import July2026ContentShowcaseBanner from "./components/July2026ContentShowcaseBanner";
 import July2026RevolutionaryBreakthroughBanner from "./components/July2026RevolutionaryBreakthroughBanner";
@@ -50,6 +46,7 @@ import October2025CodeGenerationRevolutionBanner from "./components/October2025C
 import October2025CognitiveAIHighlightBanner from "./components/October2025CognitiveAIHighlightBanner";
 import October2025CognitiveAIRevolutionBanner from "./components/October2025CognitiveAIRevolutionBanner";
 import October2025CuttingEdgeContentBanner from "./components/October2025CuttingEdgeContentBanner";
+import October2025DevOpsRevolutionBanner from "./components/October2025DevOpsRevolutionBanner";
 import October2025EnterpriseAITransformationBanner from "./components/October2025EnterpriseAITransformationBanner";
 import October2025EnterpriseIntelligenceBanner from "./components/October2025EnterpriseIntelligenceBanner";
 import October2025FreshContentHighlightBanner from "./components/October2025FreshContentHighlightBanner";
