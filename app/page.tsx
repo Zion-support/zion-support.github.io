@@ -68,6 +68,8 @@ import December2026UltimateSingularityBanner from '../components/December2026Ult
 import January2027UniversalConsciousnessBanner from '../components/January2027UniversalConsciousnessBanner';
 import October2026TranscendentAutomationBanner from '../components/October2026TranscendentAutomationBanner';
 import September2026MegaBreakthroughBanner from '../components/September2026MegaBreakthroughBanner';
+import AI2027QuantumNeuralSuperintelligenceBanner from '../components/AI2027QuantumNeuralSuperintelligenceBanner';
+import AI2027AutonomousEnterpriseRevolutionBanner from '../components/AI2027AutonomousEnterpriseRevolutionBanner';
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -144,6 +146,12 @@ export default function HomePage() {
           </div>
         </div>
       </header>
+
+      {/* 🚀 NEWEST: AI 2027 Quantum Neural Superintelligence - TOP PRIORITY ⭐ */}
+      <AI2027QuantumNeuralSuperintelligenceBanner />
+      
+      {/* 🤖 NEWEST: AI 2027 Autonomous Enterprise Revolution - HIGHLY FEATURED ⭐ */}
+      <AI2027AutonomousEnterpriseRevolutionBanner />
 
       {/* ⭐ LATEST: January 2027 Universal Consciousness Revolution - TOP PRIORITY ⭐ */}
       <January2027UniversalConsciousnessBanner />
@@ -226,6 +234,26 @@ export default function HomePage() {
       
       {/* Neural Architecture Search Banner - Featured prominently */}
       <NeuralArchitectureSearchBanner />
+
+      {/* NEWEST 2027 CONTENT - FEATURED PROMINENTLY */}
+      <section className="py-6 border-t border-b border-purple-500/20 bg-gradient-to-r from-purple-500/5 to-indigo-500/5">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+            <div className="text-white font-semibold flex items-center gap-2">
+              🚀 NEWEST 2027 BREAKTHROUGHS
+              <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-3 py-1 rounded-full text-xs font-bold animate-pulse">
+                REVOLUTIONARY
+              </span>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              <Link href="/blog/ai-2027-quantum-neural-superintelligence-breakthrough" className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500/20 to-indigo-500/20 text-purple-200 border border-purple-400/30 px-3 py-2 rounded-lg font-semibold hover:from-purple-500/30 hover:to-indigo-500/30 transition-colors">Quantum Neural Superintelligence<span>→</span></Link>
+              <Link href="/case-studies/ai-2027-quantum-neural-superintelligence-500-billion-success" className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 text-green-200 border border-green-400/30 px-3 py-2 rounded-lg font-semibold hover:from-green-500/30 hover:to-emerald-500/30 transition-colors">$500B Success Story<span>→</span></Link>
+              <Link href="/blog/ai-2027-autonomous-enterprise-revolution" className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 text-blue-200 border border-blue-400/30 px-3 py-2 rounded-lg font-semibold hover:from-blue-500/30 hover:to-cyan-500/30 transition-colors">Autonomous Enterprise<span>→</span></Link>
+              <Link href="/case-studies" className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500/20 to-red-500/20 text-orange-200 border border-orange-400/30 px-3 py-2 rounded-lg font-semibold hover:from-orange-500/30 hover:to-red-500/30 transition-colors">All Success Stories<span>→</span></Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* New this week — promote fresh content */}
       <section className="py-6 border-t border-b border-white/10 bg-white/5">
