@@ -1288,6 +1288,37 @@ posts.push(
   }
 );
 
+// Oct 1, 2025 – New featured content to advertise on homepage
+posts.push(
+  {
+    slug: "ai-governance-2027-kpi-guardrails",
+    title: "AI Governance 2027: KPI‑Linked Guardrails That Speed Delivery",
+    description: "Wire CI policy tests and live canaries to product KPIs so teams ship weekly without regressions.",
+    category: "AI Governance",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-inference-blueprint-2027",
+    title: "Edge Inference Blueprint 2027: Sub‑100ms at Global Scale",
+    description: "Warm pools, intent prefetch, and tiered caches to keep UX fast and costs predictable worldwide.",
+    category: "Edge Computing",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "agent-observability-runbooks-2027",
+    title: "Agent Observability Runbooks 2027: Traces, SLIs, Rollback",
+    description: "Production runbooks for agent tools with KPI‑linked SLIs, budgeted actions, and instant rollback.",
+    category: "AI Operations",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "8 min read"
+  }
+);
+
 // Sept 30, 2025 – New articles to expand catalog and promote on homepage
 posts.push(
   {

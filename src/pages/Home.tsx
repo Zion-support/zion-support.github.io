@@ -50,6 +50,7 @@ import January2026RevolutionaryBanner from "../components/January2026Revolutiona
 import NewServicesPromoBanner2026 from "../components/NewServicesPromoBanner2026";
 import November2025GameChangersBanner from "../components/November2025GameChangersBanner";
 import { latestInsights } from "../content/insights";
+<<<<<<< HEAD
 import NewContentPromoBanner from "../components/NewContentPromoBanner";
 import EnhancedPromotionalBanner from "../components/EnhancedPromotionalBanner";
 import { getFeaturedBanners } from "../content/enhanced-promotional-banners";
@@ -59,6 +60,9 @@ import ComprehensivePromoBanner from "../components/ComprehensivePromoBanner";
 import NewArticlesPromoBanner from "../components/NewArticlesPromoBanner";
 import NewServicesPromoBanner from "../components/NewServicesPromoBanner";
 import ContentPromotionBanner from "../components/ContentPromotionBanner";
+=======
+import { blogPosts } from "../content/blog-posts";
+>>>>>>> origin/main
 
 const Home = () => {
   return (
@@ -124,6 +128,33 @@ const Home = () => {
       <October2025CuttingEdgeInnovationsBanner />
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
+        {/* New This Week promo - highlights latest featured posts */}
+        <div className="container mx-auto px-4 py-6">
+          <div className="bg-white/10 border border-white/15 rounded-xl p-5">
+            <div className="flex items-center justify-between mb-3">
+              <h2 className="text-white text-xl font-semibold">New This Week</h2>
+              <Link to="/blog" className="text-zion-cyan hover:underline flex items-center gap-1">
+                View all
+                <ArrowRight size={16} />
+              </Link>
+            </div>
+            <div className="grid md:grid-cols-2 gap-4">
+              {blogPosts
+                .filter((p) => p.featured)
+                .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+                .slice(0, 2)
+                .map((post) => (
+                  <Link key={post.slug} to={`/blog/${post.slug}`} className="block group">
+                    <div className="bg-white/5 rounded-lg p-4 border border-white/10 group-hover:border-zion-cyan/40 transition-colors">
+                      <div className="text-xs uppercase tracking-wide text-zion-cyan mb-1">{post.category}</div>
+                      <div className="text-white font-medium mb-1">{post.title}</div>
+                      <div className="text-zion-slate-light text-sm">{post.readTime} • {new Date(post.date).toLocaleDateString()}</div>
+                    </div>
+                  </Link>
+                ))}
+            </div>
+          </div>
+        </div>
         
         {/* 💰💰💰 BRAND NEW OCTOBER 1, 2025 - JUST PUBLISHED: AUTONOMOUS REVENUE OPERATIONS REVOLUTION - FEATURED! 💰💰💰 */}
         {/* Featured: 127% ROI, 89% Forecast Accuracy, 3.2x Pipeline Velocity, $127M Revenue Impact (Fortune 500 Case Study) */}
