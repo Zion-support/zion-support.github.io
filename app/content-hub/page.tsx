@@ -12,7 +12,9 @@ export default function ContentHub() {
     {
       title: 'AI Implementation',
       articles: [
-        { title: 'Neural Adaptive Systems: The $89B Enterprise AI Revolution', slug: '/blog/ai-2025-oct-neural-adaptive-systems-enterprise-revolution', readTime: '24 min', featured: true, isNew: true },
+        { title: 'AI 2027 Quantum AI Breakthrough: The $500B Enterprise Transformation Revolution', slug: '/blog/ai-2027-quantum-ai-breakthrough-enterprise-transformation', readTime: '35 min', featured: true, isNew: true },
+        { title: 'AI 2027 Autonomous Enterprise Operations: The 99.9% Automation Revolution', slug: '/blog/ai-2027-autonomous-enterprise-operations-revolution', readTime: '32 min', featured: true, isNew: true },
+        { title: 'Neural Adaptive Systems: The $89B Enterprise AI Revolution', slug: '/blog/ai-2025-oct-neural-adaptive-systems-enterprise-revolution', readTime: '24 min', featured: true },
         { title: 'AI Agent Swarms Enterprise Orchestration 2026', slug: '/blog/ai-agent-swarms-enterprise-orchestration-2026', readTime: '28 min', featured: true },
         { title: 'Quantum-Enhanced AI Enterprise Breakthrough 2026', slug: '/blog/quantum-enhanced-ai-enterprise-breakthrough-2026', readTime: '32 min', featured: true },
         { title: 'Agentic Workflow Orchestration 2026', slug: '/blog/agentic-workflow-orchestration-2026', readTime: '16 min', featured: true },
@@ -61,13 +63,21 @@ export default function ContentHub() {
 
   const caseStudies = [
     {
+      title: 'AI 2027 Quantum AI Success Story: $500 Billion Enterprise Transformation',
+      company: 'Fortune 50 Manufacturing Giant',
+      industry: 'Automotive Manufacturing',
+      results: '$500B Value Creation & 1000x Performance',
+      slug: '/case-studies/ai-2027-quantum-ai-500-billion-success-story',
+      featured: true,
+      isNew: true
+    },
+    {
       title: 'Fortune 100 Neural Adaptive Systems Success',
       company: 'Global Manufacturing Leader',
       industry: 'Manufacturing',
       results: '$4.2B Value & 89% Defect Reduction',
       slug: '/case-studies/ai-2025-oct-fortune-100-neural-adaptive-4-2-billion-success',
       featured: true,
-      isNew: true
     },
     {
       title: 'Global Bank Sovereign AI Transformation',
