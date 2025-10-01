@@ -18,6 +18,7 @@ import EnhancedTestimonials from "../components/EnhancedTestimonials";
 import Header from "../components/Header";
 import ModernFeatures from "../components/ModernFeatures";
 import LatestInsights from "../components/LatestInsights";
+import October2025SupplyChainRevolutionBanner from "../components/October2025SupplyChainRevolutionBanner";
 import { latestInsights } from "../content/insights";
 
 const Home = () => {
@@ -56,7 +57,6 @@ const Home = () => {
         />
         <link rel="canonical" href="https://ziontechgroup.com" />
       </Helmet>
-      <AdvertisingBanner />
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
         {/* Animated background elements */}
@@ -191,6 +191,12 @@ const Home = () => {
               </Link>
             </div>
           </div>
+        </section>
+
+        {/* 🚀🚀🚀 ABSOLUTE NEWEST: OCTOBER 1, 2025 - SUPPLY CHAIN REVOLUTION - #1 TOP PRIORITY! 🚀🚀🚀 */}
+        {/* 💎💎💎 JUST PUBLISHED TODAY: $4.2B Value Creation, 2,847% ROI, 98.7% On-Time Delivery, Autonomous Intelligence! 💎💎💎 */}
+        <section className="container mx-auto px-6 relative z-10">
+          <October2025SupplyChainRevolutionBanner />
         </section>
 
         {/* NEW CONTENT HIGHLIGHT SECTION */}
