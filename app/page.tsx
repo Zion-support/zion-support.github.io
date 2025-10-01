@@ -74,6 +74,8 @@ import January2026ContentShowcaseBanner from '../components/January2026ContentSh
 import January2026AutonomousOperationsBanner from '../components/January2026AutonomousOperationsBanner';
 import January2026QuantumNeuralBanner from '../components/January2026QuantumNeuralBanner';
 import January2026AutonomousBIBanner from '../components/January2026AutonomousBIBanner';
+import December2026UltimateSingularityBanner from '../components/December2026UltimateSingularityBanner';
+import January2027UniversalConsciousnessBanner from '../components/January2027UniversalConsciousnessBanner';
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -163,6 +165,12 @@ export default function HomePage() {
       {/* ⭐ NEW: January 2026 Autonomous Business Intelligence Revolution ⭐ */}
       <January2026AutonomousBIBanner />
       
+      {/* ⭐ LATEST: January 2027 Universal Consciousness Revolution - TOP PRIORITY ⭐ */}
+      <January2027UniversalConsciousnessBanner />
+      
+      {/* ⭐ LATEST: December 2026 Ultimate Singularity Breakthrough - TOP PRIORITY ⭐ */}
+      <December2026UltimateSingularityBanner />
+      
       {/* ⭐ LATEST: March 2026 Autonomous Enterprise Revolution - TOP PRIORITY ⭐ */}
       <March2026AutonomousEnterpriseBanner />
       
@@ -221,8 +229,12 @@ export default function HomePage() {
       <section className="py-4 border-t border-b border-white/10 bg-white/5">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
-            <div className="text-white/90 font-semibold">New: September & October 2026 Revolutionary Breakthroughs</div>
+            <div className="text-white/90 font-semibold">New: December 2026 Ultimate Singularity & January 2027 Universal Consciousness</div>
             <div className="flex flex-wrap gap-2">
+              <a href="/blog/ai-2026-december-ultimate-singularity-breakthrough" className="inline-flex items-center gap-2 bg-purple-500/20 text-purple-200 border border-purple-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-purple-500/30 transition-colors">December 2026 Ultimate Singularity<span>→</span></a>
+              <a href="/blog/ai-2027-january-universal-consciousness-revolution" className="inline-flex items-center gap-2 bg-cyan-500/20 text-cyan-200 border border-cyan-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-cyan-500/30 transition-colors">January 2027 Universal Consciousness<span>→</span></a>
+              <a href="/case-studies/ai-2026-december-ultimate-singularity-1-trillion-success" className="inline-flex items-center gap-2 bg-green-500/20 text-green-200 border border-green-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-green-500/30 transition-colors">$1T Success Story<span>→</span></a>
+              <a href="/case-studies/ai-2027-january-universal-consciousness-1-trillion-success" className="inline-flex items-center gap-2 bg-blue-500/20 text-blue-200 border border-blue-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-blue-500/30 transition-colors">$1T Consciousness Success<span>→</span></a>
               <a href="/blog/ai-2026-october-transcendent-automation-revolution" className="inline-flex items-center gap-2 bg-purple-500/20 text-purple-200 border border-purple-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-purple-500/30 transition-colors">October 2026 Transcendent<span>→</span></a>
               <a href="/blog/ai-2026-september-mega-breakthrough-revolution" className="inline-flex items-center gap-2 bg-indigo-500/20 text-indigo-200 border border-indigo-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-indigo-500/30 transition-colors">September 2026 Mega<span>→</span></a>
               <a href="/case-studies/ai-2026-september-mega-breakthrough-2-trillion-success" className="inline-flex items-center gap-2 bg-green-500/20 text-green-200 border border-green-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-green-500/30 transition-colors">$2.5T Success Story<span>→</span></a>
@@ -287,6 +299,26 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-6">
+            <Link href="/blog/ai-2026-december-ultimate-singularity-breakthrough" className="group block rounded-xl border border-purple-500/20 bg-gradient-to-br from-purple-900/20 to-indigo-900/20 p-6 hover:border-purple-400/40 transition-all duration-300 hover:scale-105">
+              <div className="flex items-center gap-2 mb-3">
+                <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-3 py-1 rounded-full text-xs font-bold">DECEMBER 2026</span>
+                <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold">ULTIMATE SINGULARITY</span>
+              </div>
+              <div className="text-white font-bold text-lg mb-2">Ultimate Singularity Breakthrough</div>
+              <div className="text-gray-400 text-sm mb-3">Revolutionary achievement of 99.9999% autonomous operations, universal consciousness integration, and infinite scalability through transcendent AI-human fusion.</div>
+              <div className="text-purple-300 text-sm font-semibold group-hover:text-purple-200">Read Ultimate Breakthrough →</div>
+            </Link>
+            
+            <Link href="/blog/ai-2027-january-universal-consciousness-revolution" className="group block rounded-xl border border-cyan-500/20 bg-gradient-to-br from-cyan-900/20 to-blue-900/20 p-6 hover:border-cyan-400/40 transition-all duration-300 hover:scale-105">
+              <div className="flex items-center gap-2 mb-3">
+                <span className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-3 py-1 rounded-full text-xs font-bold">JANUARY 2027</span>
+                <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold">UNIVERSAL CONSCIOUSNESS</span>
+              </div>
+              <div className="text-white font-bold text-lg mb-2">Universal Consciousness Revolution</div>
+              <div className="text-gray-400 text-sm mb-3">Revolutionary breakthrough enabling seamless human-AI consciousness fusion with infinite cognitive enhancement and transcendent intelligence capabilities.</div>
+              <div className="text-cyan-300 text-sm font-semibold group-hover:text-cyan-200">Read Consciousness Revolution →</div>
+            </Link>
+            
             <Link href="/blog/ai-2026-march-autonomous-enterprise-revolution" className="group block rounded-xl border border-indigo-500/20 bg-gradient-to-br from-indigo-900/20 to-purple-900/20 p-6 hover:border-indigo-400/40 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-2 mb-3">
                 <span className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-3 py-1 rounded-full text-xs font-bold">MARCH 2026</span>
