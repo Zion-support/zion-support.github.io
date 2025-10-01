@@ -68,17 +68,6 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
       category: "Platform"
     },
     {
-      title: "Golden Paths that Move KPIs",
-      description: "Platform engineering that pays",
-      icon: TrendingUp,
-      link: "/blog/platform-golden-paths-kpis-2026",
-      category: "Platform"
-    },
-    {
-<<<<<<< HEAD
-      title: "Edge Feature Flags 2026",
-      description: "<100ms global releases with budgets",
-=======
       title: "Quality‑Tiered GenAI Routing 2026",
       description: "Control cost with tiers, caches, and eval signals",
       icon: Zap,
@@ -95,7 +84,6 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
     {
       title: "Zero‑Trust Observability 2026",
       description: "Signed traces and least‑privilege telemetry",
->>>>>>> cursor/create-and-deploy-new-content-6a55
       icon: Shield,
       link: "/blog/zero-trust-observability-2026",
       category: "Security"
@@ -106,13 +94,27 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
       icon: TrendingUp,
       link: "/blog/ai-incident-response-playbooks-2025",
       category: "Security"
-=======
-      title: "Edge Privacy Telemetry 2026",
-      description: "Scoped IDs and on‑device redaction",
+    },
+    {
+      title: "Agentic Workflows Blueprint 2026",
+      description: "Compose multi‑tool agents with safe tools and policy tests in CI",
+      icon: TrendingUp,
+      link: "/blog/agentic-workflows-blueprint-2026",
+      category: "GenAI"
+    },
+    {
+      title: "Edge LLM Caching",
+      description: "Sub‑100ms prompts via tiered KV, signed configs, freshness windows",
+      icon: Zap,
+      link: "/blog/edge-llm-caching-blueprint-2025",
+      category: "Architecture"
+    },
+    {
+      title: "AI Operational Scorecards 2026",
+      description: "Guardrails wired to KPIs with PR checks, canaries, and SLOs",
       icon: Brain,
-      link: "/blog/edge-privacy-telemetry-2026",
-      category: "Observability"
->>>>>>> origin/main
+      link: "/blog/ai-operational-scorecards-2026",
+      category: "AI Strategy"
     }
   ];
 

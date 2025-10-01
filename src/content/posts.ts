@@ -729,11 +729,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-29",
     featured: false,
     readTime: "7 min read"
-  }
-];
-
-// Newly added content (auto-advertised on Home via latest sort)
-posts.push(
+  },
   {
     slug: "ai-threat-hunting-with-llms-2026",
     title: "AI Threat Hunting with LLMs 2026: Signals, Sandboxes, and Speed",
@@ -760,11 +756,7 @@ posts.push(
     publishedAt: "2025-10-13",
     featured: true,
     readTime: "7 min read"
-  }
-);
-
-// Additional November 2025 posts
-posts.push(
+  },
   {
     slug: "genai-routing-under-budgets-2026",
     title: "Quality‑Tiered GenAI Routing 2026: SLAs Without Surprise Bills",
@@ -791,5 +783,23 @@ posts.push(
     publishedAt: "2025-11-01",
     featured: false,
     readTime: "6 min read"
+  },
+  {
+    slug: "edge-llm-caching-blueprint-2025",
+    title: "Edge LLM Caching: Latency Budgets, KV Patterns, and Cost Control",
+    description: "Sub‑100ms prompts with tiered caches, signed configs, and freshness windows.",
+    category: "Architecture",
+    publishedAt: "2025-10-09",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "ai-operational-scorecards-2026",
+    title: "AI Operational Scorecards 2026: Guardrails That Drive Outcomes",
+    description: "Guardrails wired to KPIs with PR checks, canaries, and SLOs engineers adopt.",
+    category: "AI Strategy",
+    publishedAt: "2025-10-09",
+    featured: true,
+    readTime: "7 min read"
   }
-);
+];
