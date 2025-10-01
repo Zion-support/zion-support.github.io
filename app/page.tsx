@@ -77,11 +77,10 @@ import October2025NewPracticalContentBannerTop, { October2025PracticalContentSho
 // NEW JANUARY 2026 QUANTUM BREAKTHROUGH CONTENT
 import January2026QuantumBreakthroughBanner from '../components/January2026QuantumBreakthroughBanner';
 
-// NEW 2026 CONTENT SHOWCASE
-import NewContent2026Banner from '../components/NewContent2026Banner';
-import AI2026ContentShowcaseBanner from '../components/AI2026ContentShowcaseBanner';
-import InteractiveAI2026ROICalculator from '../components/InteractiveAI2026ROICalculator';
-import NewRevolutionaryContent2026Banner from '../components/NewRevolutionaryContent2026Banner';
+// NEW OCTOBER 2, 2025 MLOPS & PERSONALIZATION CONTENT
+import MLOpsTransformationBanner from '../components/MLOpsTransformationBanner';
+import PersonalizationTransformationBanner from '../components/PersonalizationTransformationBanner';
+import October2025NewContentBannerV2 from '../components/October2025NewContentBanner';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -92,17 +91,14 @@ export const metadata = {
 export default function HomePage() {
   return (
     <div className="animate-fade-in">
-      {/* 🚀 NEW REVOLUTIONARY CONTENT 2026 - TOP PRIORITY */}
-      <NewRevolutionaryContent2026Banner />
-      
-      {/* 🚀 NEW 2026 CONTENT SHOWCASE - TOP PRIORITY */}
-      <NewContent2026Banner />
-      <AI2026ContentShowcaseBanner />
-      <InteractiveAI2026ROICalculator />
-      
-      {/* 🚀 BRAND NEW JANUARY 2026 QUANTUM BREAKTHROUGH */}
+      {/* 🚀 BRAND NEW OCTOBER 2, 2025 - MLOPS & PERSONALIZATION TRANSFORMATIONS */}
+      <October2025NewContentBannerV2 />
+      <MLOpsTransformationBanner />
+      <PersonalizationTransformationBanner />
+
+      {/* 🚀 BRAND NEW JANUARY 2026 QUANTUM BREAKTHROUGH - TOP PRIORITY */}
       <January2026QuantumBreakthroughBanner />
-      
+
       {/* 🚀 NEWEST OCTOBER 2025 - PRODUCTION AGENTIC AI & SECURITY */}
       <October2025NewPracticalContentBannerTop />
       <ProductionAgenticAIBanner />
