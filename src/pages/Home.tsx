@@ -413,6 +413,33 @@ const Home = () => {
           </div>
         </div>
 
+        {/* New Promo: Freshly Added Guides (auto from content list) */}
+        <div className="container mx-auto px-4 py-6">
+          <div className="bg-white/10 border border-white/15 rounded-xl p-5">
+            <div className="flex items-center justify-between mb-3">
+              <h2 className="text-white text-xl font-semibold">Freshly Added Guides</h2>
+              <Link to="/blog" className="text-zion-cyan hover:underline flex items-center gap-1">
+                View all
+                <ArrowRight size={16} />
+              </Link>
+            </div>
+            <div className="grid md:grid-cols-2 gap-4">
+              {([...blogPosts]
+                .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+                .slice(0, 2)
+              ).map((post) => (
+                <Link key={post.slug} to={`/blog/${post.slug}`} className="block group">
+                  <div className="bg-white/5 rounded-lg p-4 border border-white/10 group-hover:border-zion-cyan/40 transition-colors">
+                    <div className="text-xs uppercase tracking-wide text-zion-cyan mb-1">{post.category}</div>
+                    <div className="text-white font-medium mb-1">{post.title}</div>
+                    <div className="text-zion-slate-light text-sm">{post.readTime} • {new Date(post.date).toLocaleDateString()}</div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+
         {/* 🔥🔥🔥 OCTOBER 2025 - NEW: Operational Excellence Revolution - JUST RELEASED! 🔥🔥🔥 */}
         {/* Featured: Predictive Maintenance (99.6% accuracy), API Orchestration (99.8% uptime), Customer Intent (98.2% accuracy) */}
         <div className="container mx-auto px-4 py-8">

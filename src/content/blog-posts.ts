@@ -14,6 +14,58 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "ai-2025-oct-04-operational-ai-scorecards-v2",
+    title: "Operational AI Scorecards v2: Gate Risk, Ship Faster",
+    description: "KPI‑linked SLIs, online canaries, and rollback‑first ops that raise velocity while reducing incidents.",
+    content: `
+# Operational AI Scorecards v2
+
+Ship AI features weekly without surprises by wiring measurement to decisions.
+
+## What You’ll Implement
+- KPI‑linked SLIs that predict outcomes
+- Online canaries as deploy gates
+- Budget‑aware routing with safe fallbacks
+- One‑click rollback with blast‑radius checks
+
+## Results
+- Fewer regressions, faster iteration, clearer ownership
+    `,
+    author: "Zion Tech Group Reliability Lab",
+    date: "2025-10-04",
+    category: "AI Reliability",
+    tags: ["Scorecards", "SLIs", "Canaries", "Rollback"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/operational-ai-scorecards-v2.jpg"
+  },
+  {
+    slug: "ai-2025-oct-04-enterprise-rag-quality-budgets",
+    title: "Enterprise RAG Quality Budgets: Lift Correctness, Cut Spend",
+    description: "Freshness windows, retrieval tiers, and semantic caches that raise answer quality while reducing cost.",
+    content: `
+# Enterprise RAG Quality Budgets
+
+Production RAG needs governance and budgets.
+
+## Core Patterns
+- Domain schemas and strict source governance
+- Freshness windows per intent
+- Tiered caches: features → chunks → answers
+- Eval‑gated rollouts with kill switches
+
+## Impact
+- 45% quality lift with 38–62% cost reduction in the field
+    `,
+    author: "Zion Tech Group Knowledge Systems",
+    date: "2025-10-04",
+    category: "RAG Engineering",
+    tags: ["RAG", "Retrieval", "Caching", "Quality"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/enterprise-rag-quality-budgets.jpg"
+  },
+  {
     slug: "ai-2025-oct-04-enterprise-agents-in-production",
     title: "Enterprise Agents in Production: Budgets, Approvals, and Rollback",
     description: "Practical patterns to run AI agents safely in prod with KPI-linked SLIs, action budgets, and instant rollback.",
