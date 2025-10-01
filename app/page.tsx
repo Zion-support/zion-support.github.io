@@ -69,9 +69,6 @@ import October2025NewPracticalContentBanner from '../components/October2025NewPr
 import NewContentShowcaseOct2025 from '../components/NewContentShowcaseOct2025';
 import October2025NewContentBanner from '../components/October2025NewContentBanner';
 
-// BRAND NEW OCTOBER 2025 DIGITAL TRANSFORMATION & CLOUD-NATIVE CONTENT
-import NewOctoberContentBanner from '../components/NewOctoberContentBanner';
-
 // NEWEST OCTOBER 2025 CONTENT - PRODUCTION AI & SECURITY
 import ProductionAgenticAIBanner, { AgenticAIShowcaseBanner } from '../components/ProductionAgenticAIBanner';
 import AISecurityBanner, { AISecurityShowcaseBanner } from '../components/AISecurityBanner';
@@ -80,10 +77,12 @@ import October2025NewPracticalContentBannerTop, { October2025PracticalContentSho
 // NEW JANUARY 2026 QUANTUM BREAKTHROUGH CONTENT
 import January2026QuantumBreakthroughBanner from '../components/January2026QuantumBreakthroughBanner';
 
-// NEW 2026 CONTENT SHOWCASE
-import NewContent2026Banner from '../components/NewContent2026Banner';
-import AI2026ContentShowcaseBanner from '../components/AI2026ContentShowcaseBanner';
-import InteractiveAI2026ROICalculator from '../components/InteractiveAI2026ROICalculator';
+// 🚀 LATEST OCTOBER 2025 ENTERPRISE AI CONTENT - TOP PRIORITY
+import October2025NewContentMegaBanner from '../components/October2025NewContentMegaBanner';
+import EnterprisePlatformModernizationBanner from '../components/EnterprisePlatformModernizationBanner';
+import ConversationalAIRevolutionBanner from '../components/ConversationalAIRevolutionBanner';
+import HealthcareAITransformationBanner from '../components/HealthcareAITransformationBanner';
+import ManufacturingEdgeAIBanner from '../components/ManufacturingEdgeAIBanner';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -94,17 +93,16 @@ export const metadata = {
 export default function HomePage() {
   return (
     <div className="animate-fade-in">
-      {/* 🚀 BRAND NEW OCTOBER 2025 - DIGITAL TRANSFORMATION & CLOUD-NATIVE AI */}
-      <NewOctoberContentBanner />
-      
-      {/* 🚀 NEW 2026 CONTENT SHOWCASE - TOP PRIORITY */}
-      <NewContent2026Banner />
-      <AI2026ContentShowcaseBanner />
-      <InteractiveAI2026ROICalculator />
-      
-      {/* 🚀 BRAND NEW JANUARY 2026 QUANTUM BREAKTHROUGH */}
+      {/* 🔥 OCTOBER 2025 LATEST ENTERPRISE AI CONTENT - ABSOLUTE TOP PRIORITY */}
+      <October2025NewContentMegaBanner />
+      <EnterprisePlatformModernizationBanner />
+      <ConversationalAIRevolutionBanner />
+      <HealthcareAITransformationBanner />
+      <ManufacturingEdgeAIBanner />
+
+      {/* 🚀 BRAND NEW JANUARY 2026 QUANTUM BREAKTHROUGH - TOP PRIORITY */}
       <January2026QuantumBreakthroughBanner />
-      
+
       {/* 🚀 NEWEST OCTOBER 2025 - PRODUCTION AGENTIC AI & SECURITY */}
       <October2025NewPracticalContentBannerTop />
       <ProductionAgenticAIBanner />
