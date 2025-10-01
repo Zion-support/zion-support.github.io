@@ -146,29 +146,29 @@ const HomePage: React.FC = () => {
                 icon="rocket"
                 badge="New"
                 date={new Date().toLocaleDateString()}
-                title="New on Oct 1: Governance, Edge Speed, Agent Reliability"
-                description="Three fresh playbooks: KPI‑linked guardrails, sub‑100ms global inference, and agent observability runbooks with instant rollback."
+                title="New on Oct 2: Governance, Edge Speed, AI Reliability"
+                description="Latest playbooks: KPI‑linked guardrails, sub‑100ms global inference, and reliability blueprints with instant rollback."
                 ctaText="Read the latest posts"
                 ctaLink="/blog"
                 showCount={3}
                 featuredItems={[
                   {
-                    title: 'AI Governance 2027: KPI‑Linked Guardrails That Speed Delivery',
+                    title: 'Governance That Ships: KPI‑Linked Guardrails',
                     category: 'AI Governance',
-                    link: '/blog',
-                    metrics: '7 min • 2025-10-01'
+                    link: '/blog/governance-that-ships-kpi-guardrails-2025-10-02',
+                    metrics: '7 min • 2025-10-02'
                   },
                   {
-                    title: 'Edge Inference Blueprint 2027: Sub‑100ms at Global Scale',
+                    title: 'Edge Inference Playbook 2027: Sub‑100ms Global',
                     category: 'Edge Computing',
-                    link: '/blog',
-                    metrics: '6 min • 2025-10-01'
+                    link: '/blog/edge-inference-playbook-2027-2025-10-02',
+                    metrics: '6 min • 2025-10-02'
                   },
                   {
-                    title: 'Agent Observability Runbooks 2027: Traces, SLIs, Rollback',
+                    title: 'AI Reliability Blueprints 2027: Evals + Rollback',
                     category: 'AI Operations',
-                    link: '/blog',
-                    metrics: '8 min • 2025-10-01'
+                    link: '/blog/ai-reliability-blueprints-2027-2025-10-02',
+                    metrics: '7 min • 2025-10-02'
                   }
                 ]}
               />
