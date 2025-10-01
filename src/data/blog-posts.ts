@@ -14,49 +14,49 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
-    id: '209',
-    title: 'AI Incident Guardrails: Rollback-First Operations That Scale',
-    slug: 'ai-incident-guardrails-rollback-first-operations-2025-10-04',
+    id: '99',
+    title: 'Governed Agentic Automation: Safe Tools, Fast Outcomes',
+    slug: 'governed-agentic-automation-2025-10-03',
     excerpt:
-      'Bake rollback, approvals, and policy tests into every change. Ship faster with fewer incidents.',
+      'Design agent toolchains with budgets, approvals, and rollback to move 10x faster without incidents.',
     content:
-      'Operational excellence for AI systems requires safety by design. This post outlines rollback-first workflows, approval tiers for risky actions, evaluator-backed deploy gates, and incident drill rituals. With reference configs and dashboards, teams reduce MTTR and avoid regressions while keeping velocity high.',
-    featuredImage: '/images/blog/ai-incident-guardrails.jpg',
+      'Ship agent automations your SRE and compliance teams endorse: signed tools with scopes and quotas, action budgets and approvals, live traces with KPI‑linked SLIs, and rollback hooks. Policy templates and dashboards included.',
+    featuredImage: '/images/blog/governed-agentic-automation.jpg',
     category: 'AI',
-    tags: ['Reliability', 'Guardrails', 'Operations'],
+    tags: ['Agents', 'Governance', 'Guardrails', 'Rollback'],
     author: 'Zion Tech Team',
-    publishedAt: '2025-10-04',
-    readTime: 7,
+    publishedAt: '2025-10-03',
+    readTime: 8,
   },
   {
-    id: '210',
-    title: 'Edge Feature Flags: Private, Signed, and Under 50ms',
-    slug: 'edge-feature-flags-private-signed-2025-10-04',
+    id: '98',
+    title: 'Enterprise RAG Blueprint v3: 45% Quality ↑, 62% Cost ↓',
+    slug: 'enterprise-rag-blueprint-v3-2025-10-03',
     excerpt:
-      'Ship features globally without centralizing PII. Signed configs, scoped IDs, and DP metrics.',
+      'Retrieval budgets, freshness windows, and cache tiers that raise answer quality while cutting spend.',
     content:
-      'We present a design for privacy-first feature flags at the edge: signed and cacheable configurations, rotating scoped identifiers, and differential privacy for cohort metrics. Includes rollout patterns, validation scorecards, and latency budgets to keep flags under 50ms worldwide.',
-    featuredImage: '/images/blog/edge-feature-flags-2025.jpg',
-    category: 'Experimentation',
-    tags: ['Edge', 'Feature Flags', 'Privacy'],
-    author: 'Zion Tech Team',
-    publishedAt: '2025-10-04',
-    readTime: 6,
+      'A pragmatic RAG playbook: strict source governance, retrieval budgets and freshness windows, and tiered caches across features/chunks/answers. Eval‑gated rollouts with kill switches. Includes reference architectures and KPI scorecards.',
+    featuredImage: '/images/blog/enterprise-rag-blueprint-v3.jpg',
+    category: 'RAG',
+    tags: ['RAG', 'Retrieval', 'Caching', 'Quality', 'Cost'],
+    author: 'Zion Tech Group Knowledge Systems',
+    publishedAt: '2025-10-03',
+    readTime: 9,
   },
   {
-    id: '211',
-    title: 'LLM Cost Mapping: Spend by Feature, Team, and SLA',
-    slug: 'llm-cost-mapping-spend-by-feature-team-sla-2025-10-04',
+    id: '97',
+    title: 'Cloud Cost Optimization v6: Quality Tiers, Coalesce, Distill',
+    slug: 'genai-cost-optimization-v6-2025-10-03',
     excerpt:
-      'Tie model spend to business units with budgets, alerts, and guardrails that guide choices.',
+      'Cut inference spend 60–85% with tiered routing, request coalescing, and selective distillation.',
     content:
-      'Cost clarity unlocks better decisions. Learn how to attribute LLM and infra spend to features and teams, set SLA-aware budgets, and enforce guardrails without blocking critical paths. Includes dashboards, policy packs, and an adoption plan used by high-growth orgs to cut 30–50% costs.',
-    featuredImage: '/images/blog/llm-cost-mapping.jpg',
+      'Control GenAI costs without UX regressions: quality‑tier routers, request coalescing, semantic caches, and selective distillation for hot paths. Includes rollout rituals, SLO templates, and dashboards used by platform teams.',
+    featuredImage: '/images/blog/genai-cost-optimization-v6.jpg',
     category: 'Cloud',
-    tags: ['FinOps', 'LLM', 'Budgets'],
+    tags: ['FinOps', 'LLM', 'Caching', 'Optimization'],
     author: 'Zion Tech Team',
-    publishedAt: '2025-10-04',
-    readTime: 7,
+    publishedAt: '2025-10-03',
+    readTime: 9,
   },
   {
     id: '1',
@@ -70,21 +70,6 @@ export const BLOG_POSTS: BlogPost[] = [
     author: 'Zion Tech Team',
     publishedAt: '2024-01-01',
     readTime: 5,
-  },
-  {
-    id: '34',
-    title: 'Enterprise AI Roadmap 2025: Scorecards, Guardrails, and Reliable Velocity',
-    slug: 'ai-2025-oct-04-enterprise-ai-roadmap-scorecards',
-    excerpt:
-      'Fund outcomes with KPI‑linked scorecards, ship safely with guardrails‑as‑code, and keep velocity high with rollback‑first ops.',
-    content:
-      'This roadmap shows how to move from pilots to reliable production AI. You will implement live KPI scorecards, guardrails as code in CI and runtime, evaluator‑backed deploy gates, and rollback‑first operations. Includes budget‑aware routing, caching tiers, and weekly rituals that sustain reliability and cost control.',
-    featuredImage: '/images/blog/enterprise-ai-roadmap-2025.jpg',
-    category: 'AI',
-    tags: ['Roadmap', 'Scorecards', 'Guardrails', 'GenAI', 'Platform'],
-    author: 'Zion Tech Team',
-    publishedAt: '2025-10-04',
-    readTime: 9,
   },
   {
     id: '31',
@@ -505,7 +490,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: 9,
   },
   {
-    id: '200',
+    id: '27',
     title: 'Policy-Driven AI: Guardrails as Code for Safer Autonomy',
     slug: 'policy-driven-ai-guardrails-as-code-2025-10-02',
     excerpt:
@@ -520,7 +505,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: 7,
   },
   {
-    id: '201',
+    id: '28',
     title: 'Platform Observability 2025: From Signals to Automated Actions',
     slug: 'platform-observability-automated-actions-2025-10-02',
     excerpt:
@@ -535,7 +520,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: 6,
   },
   {
-    id: '202',
+    id: '29',
     title: 'Cloud Cost Playbooks 2025: LLM + Infra Savings Without Slowdowns',
     slug: 'cloud-cost-playbooks-llm-infra-2025-10-02',
     excerpt:
@@ -550,7 +535,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: 7,
   },
   {
-    id: '203',
+    id: '30',
     title: 'Quantum-Safe Cryptography: Enterprise Migration Playbook (2025)',
     slug: 'quantum-safe-cryptography-enterprise-migration-2025',
     excerpt:
@@ -565,7 +550,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: 9,
   },
   {
-    id: '204',
+    id: '31',
     title: 'Neuromorphic Edge AI: Event-Driven Intelligence Under 10ms',
     slug: 'neuromorphic-edge-ai-event-driven-2025',
     excerpt:
@@ -580,7 +565,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: 8,
   },
   {
-    id: '205',
+    id: '32',
     title: 'Synthetic Data in Production: Privacy-Safe Accuracy Gains',
     slug: 'synthetic-data-production-privacy-2025',
     excerpt:

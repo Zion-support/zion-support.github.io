@@ -146,46 +146,29 @@ const HomePage: React.FC = () => {
                 icon="rocket"
                 badge="New"
                 date={new Date().toLocaleDateString()}
-                title="Just dropped: AI Reliability, Edge Caching, Exec AI Playbook"
-                description="Fresh guidance on SLIs and rollback, sub‑100ms edge prompts, and an executive blueprint to plan, fund, and govern AI."
-                ctaText="Read the latest posts"
+                title="Just Published: Governed Agents, RAG v3, Cost v6"
+                description="New enterprise guides: safe agentic automation, pragmatic RAG that lifts quality while cutting cost, and GenAI cost optimization v6."
+                ctaText="Explore all posts"
                 ctaLink="/blog"
                 showCount={3}
                 featuredItems={[
                   {
-                    title: 'AI Reliability Scorecards 2026: SLIs, Error Budgets, Rollbacks',
-                    category: 'AI Operations',
-                    link: '/blog/ai-2025-oct-05-ai-reliability-scorecards-2026',
-                    metrics: '8 min • 2025-10-05'
-                  },
-                  {
-                    title: 'Edge LLM Caching 2026: Sub-100ms at Global Scale',
-                    category: 'Architecture',
-                    link: '/blog/edge-llm-caching-2026-2025-10-05',
-                    metrics: '7 min • 2025-10-05'
-                  },
-                  {
-                    title: 'Executive AI Playbook 2027: Plan, Fund, Govern',
-                    category: 'Executive Strategy',
-                    link: '/blog/executive-ai-playbook-2027-2025-10-05',
-                    metrics: '6 min • 2025-10-05'
-=======
-                    title: 'AI Incident Guardrails: Rollback-First Operations That Scale',
+                    title: 'Governed Agentic Automation: Safe Tools, Fast Outcomes',
                     category: 'AI',
-                    link: '/blog/ai-incident-guardrails-rollback-first-operations-2025-10-04',
-                    metrics: '7 min • 2025-10-04'
+                    link: '/blog/governed-agentic-automation-2025-10-03',
+                    metrics: '8 min • 2025-10-03'
                   },
                   {
-                    title: 'Edge Feature Flags: Private, Signed, and Under 50ms',
-                    category: 'Experimentation',
-                    link: '/blog/edge-feature-flags-private-signed-2025-10-04',
-                    metrics: '6 min • 2025-10-04'
+                    title: 'Enterprise RAG Blueprint v3: 45% Quality ↑, 62% Cost ↓',
+                    category: 'RAG',
+                    link: '/blog/enterprise-rag-blueprint-v3-2025-10-03',
+                    metrics: '9 min • 2025-10-03'
                   },
                   {
-                    title: 'LLM Cost Mapping: Spend by Feature, Team, and SLA',
+                    title: 'GenAI Cost Optimization v6: Quality Tiers, Coalesce, Distill',
                     category: 'Cloud',
-                    link: '/blog/llm-cost-mapping-spend-by-feature-team-sla-2025-10-04',
-                    metrics: '7 min • 2025-10-04'
+                    link: '/blog/genai-cost-optimization-v6-2025-10-03',
+                    metrics: '9 min • 2025-10-03'
                   }
                 ]}
               />
