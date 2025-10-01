@@ -190,6 +190,15 @@ export default function HomePage() {
       {/* Revolutionary 2026 Content Banner */}
       <Revolutionary2026ContentBanner />
       
+      {/* New 2026 Breakthrough Content Banner */}
+      <NewContent2026BreakthroughBanner />
+      
+      {/* Autonomous Intelligence Revolution Banner */}
+      <AutonomousIntelligenceRevolutionBanner />
+      
+      {/* Cognitive Computing Breakthrough Banner */}
+      <CognitiveComputingBreakthroughBanner />
+      
       {/* Promotional Banners */}
       <SyntheticConsciousnessRevolutionBanner />
       <AutonomousManufacturingRevolutionBanner />
