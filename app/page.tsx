@@ -76,6 +76,7 @@ import January2026QuantumNeuralBanner from '../components/January2026QuantumNeur
 import January2026AutonomousBIBanner from '../components/January2026AutonomousBIBanner';
 import January2027UltimateBreakthroughBanner from '../components/January2027UltimateBreakthroughBanner';
 import March2027TranscendentAutomationBanner from '../components/March2027TranscendentAutomationBanner';
+import January2025AutonomousIntelligenceBanner from '../components/January2025AutonomousIntelligenceBanner';
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -86,6 +87,10 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-slate-950">
+      {/* 🚀🚀🚀 JANUARY 2025 AUTONOMOUS INTELLIGENCE REVOLUTION - MOST RECENT 🚀🚀🚀 */}
+      {/* Revolutionary breakthrough in autonomous AI intelligence - January 2025 */}
+      <January2025AutonomousIntelligenceBanner />
+      
       {/* Hero Section */}
       <header className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-20">
         <div className="absolute inset-0 overflow-hidden opacity-20">
