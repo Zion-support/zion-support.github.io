@@ -26,6 +26,7 @@ import October2025NextGenAIBanner from "../components/October2025NextGenAIBanner
 import October2025OperationalExcellenceBanner from "../components/October2025OperationalExcellenceBanner";
 import October2025EdgeAIQuantumCryptoBanner from "../components/October2025EdgeAIQuantumCryptoBanner";
 import October2025BreakthroughContentBanner from "../components/October2025BreakthroughContentBanner";
+import October2025AIOperationsBanner from "../components/October2025AIOperationsBanner";
 import October2025AIRevolutionBanner from "../components/October2025AIRevolutionBanner";
 import October2025NewContentBanner from "../components/October2025NewContentBanner";
 import October2025NewContentBanner2 from "../components/October2025NewContentBanner2";
@@ -146,6 +147,10 @@ const Home = () => {
         {/* 🌟🌟🌟 ABSOLUTE NEWEST: OCTOBER 1, 2025 - TECH BREAKTHROUGH BANNER - #1 PRIORITY! 🌟🌟🌟 */}
         {/* Featured: Quantum-Safe Cryptography ($78B Protected, 845x ROI), Autonomous Risk Management ($127B Saved, 2,836% ROI), AI Digital Twins ($23.7B Value, 5,575% ROI) */}
         <October2025TechBreakthroughBanner />
+        
+        {/* 🚀🚀🚀 NEW OCTOBER 1, 2025 - AI OPERATIONS REVOLUTION: DevSecOps, Cost Optimization & Observability! 🚀🚀🚀 */}
+        {/* Featured: AI DevSecOps (99.2% Detection, 7,747% ROI), Cloud Cost Optimization (67% Savings, 18,287% ROI), AI Observability (99.94% Uptime, 17,488% ROI) */}
+        <October2025AIOperationsBanner />
         
         {/* 🎯🚀💎 OCTOBER 1, 2025 - JUST RELEASED: 3 GAME-CHANGING AI INNOVATIONS! 🎯🚀💎 */}
         <NewContentPromoBanner 
