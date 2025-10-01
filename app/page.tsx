@@ -310,7 +310,6 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-6">
-<<<<<<< HEAD
             <Link href="/blog/ai-2025-october-multi-agent-collaboration-systems" className="group block rounded-xl border border-blue-500/20 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 p-6 hover:border-blue-400/40 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-2 mb-3">
                 <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-3 py-1 rounded-full text-xs font-bold">🆕 OCT 2025</span>
@@ -331,17 +330,6 @@ export default function HomePage() {
               <div className="text-green-300 text-sm font-semibold group-hover:text-green-200">Read Complete Guide →</div>
             </Link>
 
-            <Link href="/blog/ai-2025-october-real-time-operations" className="group block rounded-xl border border-purple-500/20 bg-gradient-to-br from-purple-900/20 to-pink-900/20 p-6 hover:border-purple-400/40 transition-all duration-300 hover:scale-105">
-              <div className="flex items-center gap-2 mb-3">
-                <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1 rounded-full text-xs font-bold">🆕 OCT 2025</span>
-                <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-white px-3 py-1 rounded-full text-xs font-bold">AIOPS</span>
-              </div>
-              <div className="text-white font-bold text-lg mb-2">Real-Time AI Operations & Observability</div>
-              <div className="text-gray-400 text-sm mb-3">Transform AI operations with microsecond monitoring, predictive alerting, and 95% autonomous remediation for enterprise AI systems.</div>
-              <div className="text-purple-300 text-sm font-semibold group-hover:text-purple-200">Read Complete Guide →</div>
-            </Link>
-
-=======
             <Link href="/blog/ai-2026-december-ultimate-consciousness-revolution" className="group block rounded-xl border border-indigo-500/20 bg-gradient-to-br from-indigo-900/20 to-purple-900/20 p-6 hover:border-indigo-400/40 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-2 mb-3">
                 <span className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-3 py-1 rounded-full text-xs font-bold">DECEMBER 2026</span>
@@ -362,7 +350,6 @@ export default function HomePage() {
               <div className="text-purple-300 text-sm font-semibold group-hover:text-purple-200">Read Revolutionary Breakthrough →</div>
             </Link>
             
->>>>>>> cursor/create-and-deploy-new-content-ca4b
             <Link href="/blog/ai-2026-march-autonomous-enterprise-revolution" className="group block rounded-xl border border-indigo-500/20 bg-gradient-to-br from-indigo-900/20 to-purple-900/20 p-6 hover:border-indigo-400/40 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-2 mb-3">
                 <span className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-3 py-1 rounded-full text-xs font-bold">MARCH 2026</span>
@@ -501,7 +488,6 @@ export default function HomePage() {
               <div className="text-white font-bold text-lg mb-2">AI 2026 Future Trends</div>
               <div className="text-gray-400 text-sm mb-3">Discover the revolutionary AI trends and breakthroughs that will reshape everything in 2026, from consciousness to quantum AI.</div>
               <div className="text-blue-300 text-sm font-semibold group-hover:text-blue-200">Explore Future Trends →</div>
->>>>>>> cursor/create-and-deploy-new-content-4eb2
             </Link>
           </div>
         </div>
