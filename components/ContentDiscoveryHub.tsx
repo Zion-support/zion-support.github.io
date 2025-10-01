@@ -15,6 +15,90 @@ const ContentDiscoveryHub: React.FC = () => {
     {
       id: 1,
       type: 'blog',
+      title: 'AI 2026: Quantum Neural Superintelligence Breakthrough',
+      description: 'Discover the revolutionary quantum neural superintelligence architecture achieving 99.97% accuracy with $2.1B in enterprise value creation',
+      metrics: { accuracy: '99.97%', value: '$2.1B', speed: '1000x' },
+      readTime: '18 min read',
+      date: '2026-01-15',
+      featured: true,
+      tags: ['Quantum Computing', 'Neural Networks', 'Superintelligence', 'Breakthrough'],
+      link: '/blog/ai-2026-january-quantum-neural-superintelligence-breakthrough',
+      category: 'Quantum AI',
+      image: '🧠'
+    },
+    {
+      id: 2,
+      type: 'case-studies',
+      title: 'AI 2026: Quantum Neural Enterprise - $2.1B Success Story',
+      description: 'How a Fortune 500 technology company achieved $2.1B in enterprise value through quantum neural superintelligence systems',
+      metrics: { value: '$2.1B', accuracy: '99.97%', speed: '1000x' },
+      readTime: '12 min read',
+      date: '2026-01-15',
+      featured: true,
+      tags: ['Fortune 500', 'Technology', 'Quantum Neural', 'Success Story'],
+      link: '/case-studies/ai-2026-january-quantum-neural-2-1-billion-success',
+      category: 'Quantum AI',
+      image: '💰'
+    },
+    {
+      id: 3,
+      type: 'blog',
+      title: 'AI 2026: Synthetic Consciousness & Emotional AI Revolution',
+      description: 'Discover the breakthrough in synthetic consciousness achieving 98.4% emotional intelligence and $3.7B in human-AI collaboration value',
+      metrics: { consciousness: '99.1%', emotional: '98.4%', value: '$3.7B' },
+      readTime: '20 min read',
+      date: '2026-02-15',
+      featured: true,
+      tags: ['Consciousness', 'Emotional AI', 'Human-AI', 'Collaboration'],
+      link: '/blog/ai-2026-february-synthetic-consciousness-emotional-ai-revolution',
+      category: 'Consciousness AI',
+      image: '❤️'
+    },
+    {
+      id: 4,
+      type: 'case-studies',
+      title: 'AI 2026: Synthetic Consciousness Healthcare - $3.7B Success',
+      description: 'How a Fortune 500 healthcare company achieved $3.7B in human-AI collaboration value through synthetic consciousness systems',
+      metrics: { value: '$3.7B', consciousness: '99.1%', emotional: '98.4%' },
+      readTime: '14 min read',
+      date: '2026-02-15',
+      featured: true,
+      tags: ['Healthcare', 'Consciousness', 'Human-AI', 'Success Story'],
+      link: '/case-studies/ai-2026-february-synthetic-consciousness-3-7-billion-success',
+      category: 'Consciousness AI',
+      image: '🏥'
+    },
+    {
+      id: 5,
+      type: 'blog',
+      title: 'AI 2026: Autonomous Business Intelligence & Cognitive Analytics',
+      description: 'Discover revolutionary autonomous BI systems achieving 99.8% predictive accuracy with $4.2B in autonomous decision value',
+      metrics: { accuracy: '99.8%', value: '$4.2B', speed: '2.1s' },
+      readTime: '16 min read',
+      date: '2026-03-15',
+      featured: true,
+      tags: ['Business Intelligence', 'Cognitive Analytics', 'Autonomous Systems', 'Predictive AI'],
+      link: '/blog/ai-2026-march-autonomous-business-intelligence-cognitive-analytics-revolution',
+      category: 'Business Intelligence',
+      image: '📊'
+    },
+    {
+      id: 6,
+      type: 'case-studies',
+      title: 'AI 2026: Autonomous BI Retail - $4.2B Success Story',
+      description: 'How a Fortune 500 retail company achieved $4.2B in autonomous decision value through cognitive business intelligence systems',
+      metrics: { value: '$4.2B', accuracy: '99.8%', autonomy: '97.3%' },
+      readTime: '13 min read',
+      date: '2026-03-15',
+      featured: true,
+      tags: ['Retail', 'Business Intelligence', 'Autonomous Systems', 'Success Story'],
+      link: '/case-studies/ai-2026-march-autonomous-business-intelligence-4-2-billion-success',
+      category: 'Business Intelligence',
+      image: '🛒'
+    },
+    {
+      id: 7,
+      type: 'blog',
       title: 'AI 2025: Revolutionary Autonomous Enterprise Breakthrough',
       description: 'Discover the breakthrough in autonomous enterprise systems achieving 98.7% operational autonomy with $127M in proven savings',
       metrics: { autonomy: '98.7%', savings: '$127M', roi: '270%' },
@@ -22,43 +106,23 @@ const ContentDiscoveryHub: React.FC = () => {
       date: '2025-12-15',
       featured: true,
       tags: ['Autonomous Systems', 'Enterprise AI', 'Cost Savings', 'Breakthrough'],
-      link: '/blog/ai-2025-december-revolutionary-autonomous-enterprise-breakthrough'
+      link: '/blog/ai-2025-december-revolutionary-autonomous-enterprise-breakthrough',
+      category: 'Enterprise AI',
+      image: '🚀'
     },
     {
-      id: 2,
+      id: 8,
       type: 'case-studies',
-      title: 'AI 2025: Autonomous Enterprise Transformation - $127M Success Story',
+      title: 'AI 2025: Autonomous Enterprise Manufacturing - $127M Success',
       description: 'How a Fortune 500 manufacturing company achieved $127M in savings through revolutionary autonomous enterprise systems',
       metrics: { savings: '$127M', roi: '270%', payback: '4.4 months' },
       readTime: '10 min read',
       date: '2025-12-15',
       featured: true,
-      tags: ['Fortune 500', 'Manufacturing', 'Autonomous Systems', 'Success Story'],
-      link: '/case-studies/ai-2025-december-autonomous-enterprise-127-million-success'
-    },
-    {
-      id: 3,
-      type: 'blog',
-      title: 'AI 2025: Quantum Business Intelligence Revolution',
-      description: 'Discover how quantum-enhanced business intelligence is transforming enterprise decision-making with 99.4% accuracy and $89M in proven value creation',
-      metrics: { accuracy: '99.4%', value: '$89M', speed: '10,000x' },
-      readTime: '18 min read',
-      date: '2025-12-15',
-      featured: true,
-      tags: ['Quantum Computing', 'Business Intelligence', 'Enterprise AI', 'Decision Making'],
-      link: '/blog/ai-2025-december-quantum-business-intelligence-revolution'
-    },
-    {
-      id: 4,
-      type: 'case-studies',
-      title: 'AI 2025: Quantum Business Intelligence Transformation - $89M Success Story',
-      description: 'How a Fortune 500 financial services company achieved $89M in value creation through revolutionary quantum business intelligence',
-      metrics: { value: '$89M', accuracy: '99.4%', roi: '233%' },
-      readTime: '12 min read',
-      date: '2025-12-15',
-      featured: true,
-      tags: ['Financial Services', 'Quantum Computing', 'Business Intelligence', 'Success Story'],
-      link: '/case-studies/ai-2025-december-quantum-business-intelligence-89-million-success'
+      tags: ['Manufacturing', 'Autonomous Systems', 'Enterprise AI', 'Success Story'],
+      link: '/case-studies/ai-2025-december-autonomous-enterprise-127-million-success',
+      category: 'Enterprise AI',
+      image: '🏭'
     }
   ];
 
@@ -140,13 +204,16 @@ const ContentDiscoveryHub: React.FC = () => {
               <div className="flex items-start justify-between mb-4">
                 <div className="flex items-center gap-3">
                   <div className="text-3xl">
-                    {content.type === 'blog' ? '📝' : '💰'}
+                    {content.image || (content.type === 'blog' ? '📝' : '💰')}
                   </div>
                   <div>
                     <div className={`font-bold text-sm uppercase tracking-wider ${
                       content.type === 'blog' ? 'text-blue-400' : 'text-green-400'
                     }`}>
                       {content.type === 'blog' ? 'BLOG POST' : 'CASE STUDY'}
+                    </div>
+                    <div className="text-xs text-gray-400 mb-1">
+                      {content.category}
                     </div>
                     {content.featured && (
                       <div className="text-purple-400 font-bold text-xs uppercase tracking-wider">
