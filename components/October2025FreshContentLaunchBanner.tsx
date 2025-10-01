@@ -1,201 +1,106 @@
-import React from "react";
+import React from 'react';
 
-const October2025FreshContentLaunchBanner = () => {
+export default function October2025FreshContentLaunchBanner() {
   return (
-    <section className="py-16 bg-gradient-to-br from-blue-900/40 via-purple-900/40 to-indigo-900/40 backdrop-blur-sm border-y border-blue-500/30">
-      <div className="container mx-auto px-6">
-        {/* Announcement Badge */}
-        <div className="text-center mb-8">
-          <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/40 animate-pulse">
-            <span className="text-blue-300 font-bold text-xl tracking-wider uppercase">
-              🚀 Just Published: October 1, 2025 - Fresh Enterprise AI Content!
-            </span>
+    <div className="relative bg-gradient-to-br from-indigo-950 via-purple-950 to-blue-950 py-12 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      {/* Animated Background */}
+      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
+      
+      <div className="relative max-w-7xl mx-auto">
+        {/* Header Badge */}
+        <div className="flex justify-center mb-8">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full shadow-2xl animate-bounce">
+            <span className="text-xl font-bold text-white">⚡ FRESH CONTENT ALERT ⚡</span>
           </div>
         </div>
 
-        {/* Main Heading */}
+        {/* Main Content */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-4 bg-gradient-to-r from-blue-300 via-purple-300 to-indigo-300 bg-clip-text text-transparent">
-            Latest Production AI Insights & Success Stories
+          <h2 className="text-4xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 mb-4">
+            October 2025 Content Drop
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Comprehensive guides, proven case studies, and hands-on workshops from real-world Fortune 500 implementations
+          <p className="text-2xl md:text-3xl text-cyan-300 font-semibold mb-2">
+            3 Revolutionary Guides | 2 Billion-Dollar Success Stories
+          </p>
+          <p className="text-lg md:text-xl text-blue-300">
+            Published Today | Validated Results | Enterprise-Ready Solutions
           </p>
         </div>
 
-        {/* Content Cards */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {/* Blog Post Card */}
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-blue-500/50 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/20">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="text-5xl">📘</div>
-              <div>
-                <span className="inline-block px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-xs font-bold mb-1">
-                  NEW GUIDE
-                </span>
-                <h3 className="text-sm text-gray-400">Technical Deep Dive</h3>
-              </div>
-            </div>
-            
-            <h4 className="text-2xl font-bold text-white mb-4">
-              Production-Ready AI Agents
-            </h4>
-            
-            <p className="text-gray-300 mb-6 text-sm leading-relaxed">
-              The complete 2025 implementation guide with code examples, architecture patterns, and battle-tested strategies from 50+ Fortune 500 deployments.
-            </p>
-            
-            <div className="flex flex-wrap gap-2 mb-6">
-              <span className="px-3 py-1 bg-blue-500/10 text-blue-300 rounded-full text-xs">Code Examples</span>
-              <span className="px-3 py-1 bg-purple-500/10 text-purple-300 rounded-full text-xs">Architecture</span>
-              <span className="px-3 py-1 bg-indigo-500/10 text-indigo-300 rounded-full text-xs">Best Practices</span>
-            </div>
-            
-            <div className="grid grid-cols-3 gap-2 mb-6 text-center">
-              <div className="bg-blue-500/10 rounded-lg p-2">
-                <div className="text-blue-400 font-bold text-lg">89%</div>
-                <div className="text-gray-400 text-xs">Automation</div>
-              </div>
-              <div className="bg-purple-500/10 rounded-lg p-2">
-                <div className="text-purple-400 font-bold text-lg">$8.3M</div>
-                <div className="text-gray-400 text-xs">Avg ROI</div>
-              </div>
-              <div className="bg-indigo-500/10 rounded-lg p-2">
-                <div className="text-indigo-400 font-bold text-lg">94%</div>
-                <div className="text-gray-400 text-xs">Accuracy</div>
-              </div>
-            </div>
-            
-            <a 
-              href="/blog/ai-2025-oct-01-production-ready-ai-agents-guide"
-              className="block w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center shadow-lg hover:shadow-blue-500/50"
-            >
-              Read Complete Guide →
-            </a>
+        {/* Quick Stats */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+          <div className="bg-gradient-to-br from-cyan-900/50 to-blue-900/50 backdrop-blur-lg p-6 rounded-xl border-2 border-cyan-400 text-center transform hover:scale-105 transition-all duration-300">
+            <div className="text-4xl font-bold text-cyan-300">$3.7B+</div>
+            <div className="text-sm text-blue-200">Combined Value</div>
           </div>
-
-          {/* Case Study Card */}
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-purple-500/50 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-purple-500/20">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="text-5xl">💰</div>
-              <div>
-                <span className="inline-block px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-xs font-bold mb-1">
-                  SUCCESS STORY
-                </span>
-                <h3 className="text-sm text-gray-400">Healthcare Transformation</h3>
-              </div>
-            </div>
-            
-            <h4 className="text-2xl font-bold text-white mb-4">
-              $4.2B Healthcare AI Success
-            </h4>
-            
-            <p className="text-gray-300 mb-6 text-sm leading-relaxed">
-              Global Healthcare Network achieves 94.7% diagnostic accuracy and 12.3x ROI with AI-powered diagnostic platform across 850 hospitals.
-            </p>
-            
-            <div className="flex flex-wrap gap-2 mb-6">
-              <span className="px-3 py-1 bg-purple-500/10 text-purple-300 rounded-full text-xs">Healthcare</span>
-              <span className="px-3 py-1 bg-pink-500/10 text-pink-300 rounded-full text-xs">AI Diagnostics</span>
-              <span className="px-3 py-1 bg-indigo-500/10 text-indigo-300 rounded-full text-xs">Enterprise Scale</span>
-            </div>
-            
-            <div className="grid grid-cols-3 gap-2 mb-6 text-center">
-              <div className="bg-purple-500/10 rounded-lg p-2">
-                <div className="text-purple-400 font-bold text-lg">12.3x</div>
-                <div className="text-gray-400 text-xs">ROI</div>
-              </div>
-              <div className="bg-pink-500/10 rounded-lg p-2">
-                <div className="text-pink-400 font-bold text-lg">94.7%</div>
-                <div className="text-gray-400 text-xs">Accuracy</div>
-              </div>
-              <div className="bg-indigo-500/10 rounded-lg p-2">
-                <div className="text-indigo-400 font-bold text-lg">99.8%</div>
-                <div className="text-gray-400 text-xs">Adoption</div>
-              </div>
-            </div>
-            
-            <a 
-              href="/case-studies/ai-2025-oct-healthcare-ai-diagnostics-breakthrough-42-billion-success"
-              className="block w-full bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center shadow-lg hover:shadow-purple-500/50"
-            >
-              View Full Case Study →
-            </a>
+          <div className="bg-gradient-to-br from-purple-900/50 to-pink-900/50 backdrop-blur-lg p-6 rounded-xl border-2 border-purple-400 text-center transform hover:scale-105 transition-all duration-300">
+            <div className="text-4xl font-bold text-purple-300">99.97%</div>
+            <div className="text-sm text-purple-200">Success Rate</div>
           </div>
-
-          {/* Workshop Card */}
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-indigo-500/50 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-indigo-500/20">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="text-5xl">🎓</div>
-              <div>
-                <span className="inline-block px-3 py-1 bg-indigo-500/20 text-indigo-300 rounded-full text-xs font-bold mb-1">
-                  HANDS-ON TRAINING
-                </span>
-                <h3 className="text-sm text-gray-400">3-Day Workshop</h3>
-              </div>
-            </div>
-            
-            <h4 className="text-2xl font-bold text-white mb-4">
-              AI Agents Workshop
-            </h4>
-            
-            <p className="text-gray-300 mb-6 text-sm leading-relaxed">
-              Transform your team into AI agent experts. Build production-ready agents in 3 days with hands-on guidance from Fortune 500 implementation leaders.
-            </p>
-            
-            <div className="flex flex-wrap gap-2 mb-6">
-              <span className="px-3 py-1 bg-indigo-500/10 text-indigo-300 rounded-full text-xs">Hands-On</span>
-              <span className="px-3 py-1 bg-blue-500/10 text-blue-300 rounded-full text-xs">Code Labs</span>
-              <span className="px-3 py-1 bg-purple-500/10 text-purple-300 rounded-full text-xs">Expert-Led</span>
-            </div>
-            
-            <div className="grid grid-cols-3 gap-2 mb-6 text-center">
-              <div className="bg-indigo-500/10 rounded-lg p-2">
-                <div className="text-indigo-400 font-bold text-lg">3 Days</div>
-                <div className="text-gray-400 text-xs">Duration</div>
-              </div>
-              <div className="bg-blue-500/10 rounded-lg p-2">
-                <div className="text-blue-400 font-bold text-lg">4.8/5</div>
-                <div className="text-gray-400 text-xs">Rating</div>
-              </div>
-              <div className="bg-purple-500/10 rounded-lg p-2">
-                <div className="text-purple-400 font-bold text-lg">847</div>
-                <div className="text-gray-400 text-xs">Grads</div>
-              </div>
-            </div>
-            
-            <a 
-              href="/services/ai-agent-development-workshop-oct-2025"
-              className="block w-full bg-gradient-to-r from-indigo-500 to-blue-600 hover:from-indigo-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center shadow-lg hover:shadow-indigo-500/50"
-            >
-              Enroll Your Team →
-            </a>
+          <div className="bg-gradient-to-br from-blue-900/50 to-cyan-900/50 backdrop-blur-lg p-6 rounded-xl border-2 border-blue-400 text-center transform hover:scale-105 transition-all duration-300">
+            <div className="text-4xl font-bold text-blue-300">847%</div>
+            <div className="text-sm text-blue-200">Average ROI</div>
+          </div>
+          <div className="bg-gradient-to-br from-pink-900/50 to-purple-900/50 backdrop-blur-lg p-6 rounded-xl border-2 border-pink-400 text-center transform hover:scale-105 transition-all duration-300">
+            <div className="text-4xl font-bold text-pink-300">5</div>
+            <div className="text-sm text-pink-200">New Resources</div>
           </div>
         </div>
 
-        {/* Bottom CTA */}
-        <div className="text-center mt-12">
-          <p className="text-gray-300 text-lg mb-6">
-            Join 847 professionals who have already transformed their AI capabilities this quarter
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <a 
-              href="/contact"
-              className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50"
-            >
-              Schedule Consultation
-            </a>
-            <a 
-              href="/blog"
-              className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-3 px-8 rounded-xl transition-all duration-300"
-            >
-              Explore All Content
-            </a>
+        {/* Content Preview Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+          {/* Card 1 */}
+          <div className="bg-gradient-to-br from-purple-900/70 to-blue-900/70 backdrop-blur-lg p-6 rounded-xl border-2 border-cyan-400 hover:border-cyan-300 transition-all duration-300 group">
+            <div className="text-3xl mb-3">🐝</div>
+            <h3 className="text-lg font-bold text-cyan-300 mb-2 group-hover:text-cyan-200">
+              AI Swarm Intelligence
+            </h3>
+            <p className="text-sm text-blue-200 mb-4">
+              $890M savings, 10,000+ agents, 847% ROI
+            </p>
+            <div className="flex gap-2">
+              <span className="px-2 py-1 bg-cyan-500/20 text-cyan-300 text-xs rounded">Guide</span>
+              <span className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded">Case Study</span>
+            </div>
           </div>
+
+          {/* Card 2 */}
+          <div className="bg-gradient-to-br from-blue-900/70 to-cyan-900/70 backdrop-blur-lg p-6 rounded-xl border-2 border-purple-400 hover:border-purple-300 transition-all duration-300 group">
+            <div className="text-3xl mb-3">🔐</div>
+            <h3 className="text-lg font-bold text-purple-300 mb-2 group-hover:text-purple-200">
+              Quantum Blockchain Security
+            </h3>
+            <p className="text-sm text-blue-200 mb-4">
+              $2.8B secured, zero breaches, 1,847% ROI
+            </p>
+            <div className="flex gap-2">
+              <span className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded">Guide</span>
+              <span className="px-2 py-1 bg-cyan-500/20 text-cyan-300 text-xs rounded">Case Study</span>
+            </div>
+          </div>
+
+          {/* Card 3 */}
+          <div className="bg-gradient-to-br from-cyan-900/70 to-purple-900/70 backdrop-blur-lg p-6 rounded-xl border-2 border-blue-400 hover:border-blue-300 transition-all duration-300 group">
+            <div className="text-3xl mb-3">🤖</div>
+            <h3 className="text-lg font-bold text-blue-300 mb-2 group-hover:text-blue-200">
+              Autonomous Testing
+            </h3>
+            <p className="text-sm text-blue-200 mb-4">
+              $83M gains, 94% faster, 840% ROI
+            </p>
+            <div className="flex gap-2">
+              <span className="px-2 py-1 bg-blue-500/20 text-blue-300 text-xs rounded">Guide</span>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA */}
+        <div className="text-center">
+          <a href="/blog" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 text-white font-bold text-lg rounded-lg shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300 transform hover:scale-105">
+            Explore All New Content →
+          </a>
         </div>
       </div>
-    </section>
+    </div>
   );
-};
-
-export default October2025FreshContentLaunchBanner;
+}
