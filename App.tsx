@@ -9,6 +9,10 @@ import AI2027TranscendentRealityBanner from "./components/AI2027TranscendentReal
 import AI2027UltimateBreakthroughBanner from "./components/AI2027UltimateBreakthroughBanner";
 import Fortune500AI2027InfiniteValueBanner from "./components/Fortune500AI2027InfiniteValueBanner";
 
+// NEW DECEMBER 2025 & JANUARY 2026 CONTENT - MOST PROMINENT
+import December2025RevolutionaryContentBanner from "./components/December2025RevolutionaryContentBanner";
+import January2026QuantumConsciousnessBanner from "./components/January2026QuantumConsciousnessBanner";
+
 // EXISTING IMPORTS
 import AI2033UniversalConsciousnessBanner from "./components/AI2033UniversalConsciousnessBanner";
 
@@ -80,6 +84,13 @@ export default function App(): JSX.Element {
       
       {/* 💰 Fortune 500: $∞ Infinite Value Achievement - MOST PROMINENT 💰 */}
       <Fortune500AI2027InfiniteValueBanner />
+      
+      {/* 🚀🚀🚀 NEW DECEMBER 2025 & JANUARY 2026 CONTENT - MOST PROMINENT 🚀🚀🚀 */}
+      {/* 🚀 December 2025: Revolutionary Autonomous Enterprise Content - HIGHLY PROMINENT 🚀 */}
+      <December2025RevolutionaryContentBanner />
+      
+      {/* 🌟 January 2026: Quantum Consciousness Breakthrough Content - HIGHLY PROMINENT 🌟 */}
+      <January2026QuantumConsciousnessBanner />
       
       {/* 🚀 NEW 2027 CONTENT ADVERTISING SECTION - HIGHLY PROMINENT 🚀 */}
       <section className="py-12 bg-gradient-to-r from-purple-900/30 via-indigo-900/30 to-blue-900/30 backdrop-blur-sm border-b border-purple-500/20">
