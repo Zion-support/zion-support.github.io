@@ -155,6 +155,80 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-slate-950">
+      {/* 🎯🎯🎯 BRAND NEW OCTOBER 1, 2025 - LATEST CONTENT JUST PUBLISHED! 🎯🎯🎯 */}
+      <section className="py-8 bg-gradient-to-r from-emerald-900/40 via-blue-900/40 to-purple-900/40 border-y border-emerald-500/30">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-6">
+            <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-emerald-500/20 to-blue-500/20 border border-emerald-500/40 mb-4">
+              <span className="text-emerald-400 font-bold text-2xl">🚀 NEW CONTENT JUST PUBLISHED - OCTOBER 1, 2025</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-4 bg-gradient-to-r from-emerald-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+              Latest AI Insights & Real-World Success Stories
+            </h2>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+              Practical, actionable content to help you reduce costs, improve governance, and achieve measurable results
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* AI Governance Blog */}
+            <Link href="/blog/ai-2025-oct-01-enterprise-ai-governance-framework" className="group block rounded-xl border-2 border-emerald-500/40 bg-gradient-to-br from-emerald-900/30 to-blue-900/30 p-6 hover:border-emerald-400/60 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-emerald-500/20">
+              <div className="flex items-center gap-2 mb-4">
+                <span className="text-3xl">📋</span>
+                <span className="bg-gradient-to-r from-emerald-500 to-blue-500 text-white px-3 py-1 rounded-full text-xs font-bold animate-pulse">NEW TODAY</span>
+              </div>
+              <h3 className="text-white font-bold text-lg mb-2">AI Governance Framework 2025</h3>
+              <p className="text-gray-300 text-sm mb-4">Build trust and compliance in your AI systems with our comprehensive governance framework</p>
+              <div className="text-emerald-400 text-sm font-semibold group-hover:text-emerald-300">Read Full Guide →</div>
+            </Link>
+
+            {/* Cost Optimization Blog */}
+            <Link href="/blog/ai-2025-oct-01-practical-llm-cost-optimization" className="group block rounded-xl border-2 border-blue-500/40 bg-gradient-to-br from-blue-900/30 to-purple-900/30 p-6 hover:border-blue-400/60 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-blue-500/20">
+              <div className="flex items-center gap-2 mb-4">
+                <span className="text-3xl">💰</span>
+                <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-3 py-1 rounded-full text-xs font-bold animate-pulse">NEW TODAY</span>
+              </div>
+              <h3 className="text-white font-bold text-lg mb-2">Reduce LLM Costs by 60%</h3>
+              <p className="text-gray-300 text-sm mb-4">Proven strategies to dramatically cut AI spending without sacrificing quality</p>
+              <div className="text-blue-400 text-sm font-semibold group-hover:text-blue-300">Read Optimization Guide →</div>
+            </Link>
+
+            {/* Case Study */}
+            <Link href="/case-studies/ai-2025-oct-01-retail-chain-llm-optimization-12-million-savings" className="group block rounded-xl border-2 border-green-500/40 bg-gradient-to-br from-green-900/30 to-emerald-900/30 p-6 hover:border-green-400/60 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-green-500/20">
+              <div className="flex items-center gap-2 mb-4">
+                <span className="text-3xl">🏆</span>
+                <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-xs font-bold animate-pulse">NEW TODAY</span>
+              </div>
+              <h3 className="text-white font-bold text-lg mb-2">$12.5M Annual Savings</h3>
+              <p className="text-gray-300 text-sm mb-4">How a retail chain cut LLM costs 68% while improving performance</p>
+              <div className="text-green-400 text-sm font-semibold group-hover:text-green-300">Read Success Story →</div>
+            </Link>
+
+            {/* New Service */}
+            <Link href="/services/ai-cost-optimization-services-2025" className="group block rounded-xl border-2 border-purple-500/40 bg-gradient-to-br from-purple-900/30 to-pink-900/30 p-6 hover:border-purple-400/60 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20">
+              <div className="flex items-center gap-2 mb-4">
+                <span className="text-3xl">⚡</span>
+                <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1 rounded-full text-xs font-bold animate-pulse">NEW SERVICE</span>
+              </div>
+              <h3 className="text-white font-bold text-lg mb-2">AI Cost Optimization</h3>
+              <p className="text-gray-300 text-sm mb-4">Expert services to reduce your AI costs by 50-70% with guaranteed ROI</p>
+              <div className="text-purple-400 text-sm font-semibold group-hover:text-purple-300">Explore Services →</div>
+            </Link>
+          </div>
+
+          <div className="text-center mt-8">
+            <div className="inline-flex items-center gap-4">
+              <Link href="/blog" className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-400 hover:to-blue-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50">
+                Explore All Blog Posts
+              </Link>
+              <Link href="/case-studies" className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50">
+                View Success Stories
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 🚀🚀🚀 OCTOBER 2025 - EDGE-NATIVE AUTONOMOUS INTELLIGENCE - JUST RELEASED TODAY! 🚀🚀🚀 */}
       {/* 💎💎💎 BRAND NEW: $12.7B Success Story, 99.97% Uptime, 50ms Latency, 85% Cost Reduction - REVOLUTIONARY BREAKTHROUGH! 💎💎💎 */}
       <October2025EdgeNativeIntelligenceBanner />
