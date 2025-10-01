@@ -2,7 +2,7 @@ import React from 'react';
 
 export const metadata = {
 	title: 'Edge AI Blueprint 2026',
-	description: 'Private <100ms personalization and analytics with scoped IDs, on-device models, and DP.'
+	description: 'Private &lt;100ms personalization and analytics with scoped IDs, on-device models, and DP.'
 };
 
 export default function ArticlePage() {
@@ -10,7 +10,7 @@ export default function ArticlePage() {
 		<div className="prose prose-invert max-w-3xl mx-auto px-6 py-16">
 			<h1>Edge AI Blueprint 2026</h1>
 			<p>
-				Deliver private, real-time AI at the edge. Achieve <100ms interactions with scoped identifiers,
+				Deliver private, real-time AI at the edge. Achieve &lt;100ms interactions with scoped identifiers,
 				on-device models, semantic caches, and differential privacy.
 			</p>
 			<h2>Architecture</h2>

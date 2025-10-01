@@ -1,159 +1,161 @@
 import React from 'react';
+import Link from 'next/link';
+import { ArrowRight, TrendingUp, Users, DollarSign, Clock } from 'lucide-react';
 
 const January2025NewContentBanner: React.FC = () => {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 py-16">
-      <div className="absolute inset-0 bg-black/20"></div>
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 w-64 h-64 bg-blue-500/30 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-purple-500/30 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-      </div>
-      
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center max-w-6xl mx-auto">
-          <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-blue-500/30 to-purple-500/30 border border-blue-400/50 mb-8">
-            <span className="text-blue-300 font-bold text-lg tracking-wider uppercase">
-              🚀 NEW: January 2025 Content Release
-            </span>
-          </div>
-          
-          <h2 className="text-4xl md:text-6xl font-extrabold mb-8 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent leading-tight">
-            Revolutionary AI Solutions & Success Stories
-          </h2>
-          
-          <p className="text-xl md:text-2xl text-gray-300 mb-12 font-semibold max-w-4xl mx-auto">
-            Discover our latest insights on AI testing, cloud-native architecture, cybersecurity, and real-world transformation stories
-          </p>
-          
-          {/* New Content Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            {/* AI Testing Blog */}
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-blue-500/50 transition-all duration-300 group">
-              <div className="text-4xl mb-4">🧪</div>
-              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
-                AI Testing Revolution
-              </h3>
-              <p className="text-gray-300 mb-4 text-sm">
-                Automated quality assurance reducing defects by 85% while accelerating release cycles by 300%
-              </p>
-              <a 
-                href="/blog/ai-2025-automated-testing-revolution-enterprise-quality-assurance"
-                className="inline-block bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 text-sm"
-              >
-                Read More →
-              </a>
+    <div className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 text-white">
+      <div className="absolute inset-0 bg-black opacity-20"></div>
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left Column - Content */}
+          <div className="space-y-8">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-600 text-sm font-medium">
+              <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
+              NEW JANUARY 2025 CONTENT
             </div>
-
-            {/* Cloud Native Blog */}
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-purple-500/50 transition-all duration-300 group">
-              <div className="text-4xl mb-4">☁️</div>
-              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
-                Cloud-Native Architecture
-              </h3>
-              <p className="text-gray-300 mb-4 text-sm">
-                Enterprise transformation delivering 400% faster deployment cycles and 60% cost reduction
-              </p>
-              <a 
-                href="/blog/ai-2025-cloud-native-architecture-enterprise-transformation"
-                className="inline-block bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 text-sm"
-              >
-                Explore →
-              </a>
+            
+            <h2 className="text-4xl lg:text-5xl font-bold leading-tight">
+              Master AI Implementation with Our
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-indigo-300">
+                {" "}Complete Roadmap
+              </span>
+            </h2>
+            
+            <p className="text-xl text-blue-100 leading-relaxed">
+              Discover the proven framework that has delivered <strong>$2.3 billion</strong> in enterprise value. 
+              Learn from real Fortune 100 success stories and avoid common pitfalls that cause 73% of AI projects to fail.
+            </p>
+            
+            <div className="grid grid-cols-2 gap-6">
+              <div className="flex items-center space-x-3">
+                <div className="flex-shrink-0 w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+                  <TrendingUp className="w-5 h-5" />
+                </div>
+                <div>
+                  <p className="font-semibold">2,300% ROI</p>
+                  <p className="text-sm text-blue-200">Proven Results</p>
+                </div>
+              </div>
+              
+              <div className="flex items-center space-x-3">
+                <div className="flex-shrink-0 w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+                  <Users className="w-5 h-5" />
+                </div>
+                <div>
+                  <p className="font-semibold">500+ Enterprises</p>
+                  <p className="text-sm text-blue-200">Successfully Transformed</p>
+                </div>
+              </div>
+              
+              <div className="flex items-center space-x-3">
+                <div className="flex-shrink-0 w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+                  <DollarSign className="w-5 h-5" />
+                </div>
+                <div>
+                  <p className="font-semibold">$2.3B Value</p>
+                  <p className="text-sm text-blue-200">Created for Clients</p>
+                </div>
+              </div>
+              
+              <div className="flex items-center space-x-3">
+                <div className="flex-shrink-0 w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+                  <Clock className="w-5 h-5" />
+                </div>
+                <div>
+                  <p className="font-semibold">18 Months</p>
+                  <p className="text-sm text-blue-200">Average Timeline</p>
+                </div>
+              </div>
             </div>
-
-            {/* Cybersecurity Blog */}
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-green-500/50 transition-all duration-300 group">
-              <div className="text-4xl mb-4">🛡️</div>
-              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-green-400 transition-colors">
-                AI Cybersecurity Defense
-              </h3>
-              <p className="text-gray-300 mb-4 text-sm">
-                Next-generation defense reducing breach response time by 95% while preventing 99.7% of threats
-              </p>
-              <a 
-                href="/blog/ai-2025-cybersecurity-ai-defense-enterprise-protection"
-                className="inline-block bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 text-sm"
+            
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link 
+                href="/blog/ai-2025-january-15-practical-ai-implementation-roadmap"
+                className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white font-semibold rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
-                Learn More →
-              </a>
-            </div>
-
-            {/* Automotive Case Study */}
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-orange-500/50 transition-all duration-300 group">
-              <div className="text-4xl mb-4">🚗</div>
-              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-orange-400 transition-colors">
-                $15B Automotive Transformation
-              </h3>
-              <p className="text-gray-300 mb-4 text-sm">
-                Global manufacturer achieves 40% efficiency gains with AI-powered smart factory solutions
-              </p>
-              <a 
-                href="/case-studies/ai-2025-automotive-manufacturing-ai-transformation-15-billion-success"
-                className="inline-block bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-400 hover:to-red-500 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 text-sm"
+                Read Complete Roadmap
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+              
+              <Link 
+                href="/case-studies/fortune-100-ai-transformation-2025-2-3-billion-success"
+                className="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white hover:bg-white hover:text-blue-900 text-white font-semibold rounded-lg transition-all duration-200"
               >
-                View Case Study →
-              </a>
-            </div>
-
-            {/* Retail Case Study */}
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-cyan-500/50 transition-all duration-300 group">
-              <div className="text-4xl mb-4">🛒</div>
-              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                $12B E-Commerce Success
-              </h3>
-              <p className="text-gray-300 mb-4 text-sm">
-                Global retailer achieves 180% conversion increase with AI-powered personalization
-              </p>
-              <a 
-                href="/case-studies/ai-2025-retail-ecommerce-personalization-12-billion-success"
-                className="inline-block bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 text-sm"
-              >
-                Read Success Story →
-              </a>
-            </div>
-
-            {/* Financial Case Study */}
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-yellow-500/50 transition-all duration-300 group">
-              <div className="text-4xl mb-4">💰</div>
-              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-yellow-400 transition-colors">
-                $8B Fraud Prevention
-              </h3>
-              <p className="text-gray-300 mb-4 text-sm">
-                Global bank saves $8B with 99.9% accuracy AI fraud detection across 500M accounts
-              </p>
-              <a 
-                href="/case-studies/ai-2025-financial-services-ai-fraud-detection-8-billion-savings"
-                className="inline-block bg-gradient-to-r from-yellow-500 to-orange-600 hover:from-yellow-400 hover:to-orange-500 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 text-sm"
-              >
-                See Results →
-              </a>
+                View Success Story
+              </Link>
             </div>
           </div>
-
-          {/* Call to Action */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="/blog" 
-              className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
-            >
-              Explore All Insights
-            </a>
-            <a 
-              href="/case-studies" 
-              className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
-            >
-              View Success Stories
-            </a>
-            <a 
-              href="/contact" 
-              className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
-            >
-              Start Your Transformation
-            </a>
+          
+          {/* Right Column - Visual Elements */}
+          <div className="relative">
+            <div className="relative z-10 bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+              <div className="space-y-6">
+                <div className="flex items-center justify-between">
+                  <h3 className="text-2xl font-bold">Implementation Phases</h3>
+                  <div className="text-sm text-blue-200">18 Month Journey</div>
+                </div>
+                
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-4">
+                    <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-sm font-bold">1</div>
+                    <div>
+                      <p className="font-semibold">Strategic Foundation</p>
+                      <p className="text-sm text-blue-200">Weeks 1-4: Planning & Assessment</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center space-x-4">
+                    <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-sm font-bold">2</div>
+                    <div>
+                      <p className="font-semibold">Technical Architecture</p>
+                      <p className="text-sm text-blue-200">Weeks 5-8: Platform Selection</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center space-x-4">
+                    <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center text-sm font-bold">3</div>
+                    <div>
+                      <p className="font-semibold">Pilot Implementation</p>
+                      <p className="text-sm text-blue-200">Weeks 9-16: Proof of Concept</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center space-x-4">
+                    <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center text-sm font-bold">4</div>
+                    <div>
+                      <p className="font-semibold">Full-Scale Deployment</p>
+                      <p className="text-sm text-blue-200">Weeks 17-24: Rollout</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center space-x-4">
+                    <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center text-sm font-bold">5</div>
+                    <div>
+                      <p className="font-semibold">Scale & Innovation</p>
+                      <p className="text-sm text-blue-200">Weeks 25+: Optimization</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Floating Elements */}
+            <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-blue-400 to-indigo-400 rounded-full opacity-20 animate-pulse"></div>
+            <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full opacity-20 animate-pulse delay-1000"></div>
           </div>
         </div>
       </div>
-    </section>
+      
+      {/* Bottom Wave */}
+      <div className="absolute bottom-0 left-0 right-0">
+        <svg className="w-full h-12 text-white" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="currentColor"></path>
+          <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" fill="currentColor"></path>
+          <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="currentColor"></path>
+        </svg>
+      </div>
+    </div>
   );
 };
 

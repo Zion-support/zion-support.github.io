@@ -23,6 +23,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/blog/ai-2026-quantum-enterprise-automation-breakthrough`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/blog/ai-2026-neural-consciousness-enterprise-transformation`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/case-studies/fortune-500-quantum-ai-transformation-success-story`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/guides/quantum-ai-implementation-roadmap-2026`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/blog/ai-2027-hyper-automation-blueprint`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
@@ -123,6 +147,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/blog/ai-2026-february-quantum-consciousness-enterprise-breakthrough`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 1.0,
+    },
+    {
+      url: `${baseUrl}/blog/ai-2026-march-autonomous-enterprise-singularity`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 1.0,
+    },
+    {
+      url: `${baseUrl}/blog/ai-2026-april-quantum-neural-superintelligence`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 1.0,
     },
   ]
 }

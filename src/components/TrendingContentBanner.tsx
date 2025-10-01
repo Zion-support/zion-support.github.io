@@ -28,6 +28,26 @@ const TrendingContentBanner: React.FC = () => {
       badge: "NEW"
     },
     {
+      title: "Private Feature Flags: Zero‑PII Experiments",
+      description: "Signed configs, scoped IDs, and edge analytics under 100ms.",
+      views: "13.6K",
+      readTime: "8 min",
+      category: "Experimentation",
+      icon: Shield,
+      link: "/blog/ai-2025-oct-01-private-feature-flags-zero-pii",
+      badge: "NEW"
+    },
+    {
+      title: "Runtime Rollback Guardrails",
+      description: "Canary scorecards, kill switches, and instant reversibility.",
+      views: "12.1K",
+      readTime: "7 min",
+      category: "Reliability",
+      icon: TrendingUp,
+      link: "/blog/ai-2025-oct-01-runtime-rollback-guardrails",
+      badge: "TRENDING"
+    },
+    {
       title: "AI Autonomous Infrastructure 2026",
       description: "Self‑healing, self‑optimizing, self‑scaling platforms with budgets.",
       views: "12.4K",

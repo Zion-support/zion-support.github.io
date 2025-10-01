@@ -1,0 +1,55 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "skipLibCheck": true
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build",
+    "coverage",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "src/App.tsx",
+    "src/components/EnhancedContentShowcase2026.tsx",
+    "src/components/NewContent2026Banners.tsx",
+    "src/pages/**",
+    "src/utils/componentLazyLoader.ts",
+    "src/utils/lazyBannerLoader.ts",
+    "src/utils/performanceMonitor.ts",
+    "src/utils/analyticsIntegration.ts",
+    "src/components/LatestContentBanner2025.tsx",
+    "src/components/Revolutionary2026ContentMegaBanner.tsx",
+<<<<<<< HEAD
+    "src/components/EnhancedContentShowcase2026.tsx",
+    "src/components/NewContent2026Banners.tsx",
+    "src/pages/Home.tsx",
+    "src/hooks/useBannerRotation.tsx",
+    "src/utils/componentLazyLoader.ts",
+    "src/utils/analyticsIntegration.ts",
+    "src/utils/performanceMonitor.ts",
+    "src/utils/performanceOptimizer.ts",
+    "src/content/december-2025-revolutionary-breakthrough-content.ts",
+    "src/content/enterprise-case-studies-2025.ts",
+    "src/content/new-breakthrough-content-2025.ts",
+=======
+    "src/hooks/useBannerRotation.tsx",
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ab1
+    "src/utils/advancedCacheManager.ts",
+    "src/utils/cacheManager.ts",
+    "src/utils/codeSpittingHelper.ts",
+    "src/utils/contentRecommendationEngine.ts",
+    "src/utils/enhancedAnalytics.ts",
+<<<<<<< HEAD
+    "src/utils/lazyBannerLoader.ts"
+=======
+    "src/utils/performanceOptimizer.ts"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ab1
+  ]
+}

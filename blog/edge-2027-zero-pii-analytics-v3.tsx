@@ -6,7 +6,7 @@ export default function EdgeZeroPIIAnalyticsV3() {
 			<main className="max-w-3xl mx-auto px-6 py-16">
 				<h1 className="text-4xl font-extrabold mb-4">Zero‑PII Edge Analytics v3 (2027)</h1>
 				<p className="text-white/70 mb-8">
-					Scoped IDs, on‑device aggregation, and differential privacy for <100ms, audit‑ready insights.
+					Scoped IDs, on‑device aggregation, and differential privacy for &lt;100ms, audit‑ready insights.
 				</p>
 				<section className="space-y-6">
 					<h2 className="text-2xl font-bold">Key capabilities</h2>
