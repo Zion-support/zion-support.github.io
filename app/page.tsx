@@ -79,6 +79,8 @@ import AI2027QuantumNeuralSuperintelligenceBanner from '../components/AI2027Quan
 import AI2027AutonomousEnterpriseRevolutionBanner from '../components/AI2027AutonomousEnterpriseRevolutionBanner';
 import AI2026UltimateAutonomousEnterpriseBanner from '../components/AI2026UltimateAutonomousEnterpriseBanner';
 import AI2026QuantumConsciousnessBIBanner from '../components/AI2026QuantumConsciousnessBIBanner';
+import December2025NewContentShowcase from '../components/December2025NewContentShowcase';
+import AdvancedContentDiscoveryHub from '../components/AdvancedContentDiscoveryHub';
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -156,6 +158,12 @@ export default function HomePage() {
         </div>
       </header>
 
+      {/* 🚀🚀🚀 DECEMBER 2025 NEW CONTENT SHOWCASE - LATEST 🚀🚀🚀 */}
+      <December2025NewContentShowcase />
+      
+      {/* 🚀🚀🚀 ADVANCED CONTENT DISCOVERY HUB - NEW 🚀🚀🚀 */}
+      <AdvancedContentDiscoveryHub />
+      
       {/* 🚀🚀🚀 NEW JANUARY 2026 ULTIMATE BREAKTHROUGH - MOST RECENT 🚀🚀🚀 */}
       <AI2026UltimateAutonomousEnterpriseBanner />
       
