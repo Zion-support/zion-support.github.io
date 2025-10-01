@@ -14,9 +14,39 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+ 
+    slug: "enterprise-ai-value-realization-2025-10-08",
+    title: "Enterprise AI Value Realization: 90 Days to Outcomes",
+    description: "Blueprint to convert AI pilots into shipped outcomes in 90 days: KPI scorecards, evaluator gates, tiered routing + caches, rollback-first ops.",
+    content: `
+# Enterprise AI Value Realization: 90 Days to Outcomes
+
+Large AI programs often stall in pilot mode. This pragmatic guide shows how to deliver production outcomes in 90 days with:
+
+## Core Moves
+- KPI-linked scorecards that predict production outcomes
+- Evaluator-driven release gates wired to business metrics
+- Tiered routing and semantic caches for predictable cost and latency
+- Rollback-first operations with canary scorecards and blast-radius checks
+
+## 90-Day Plan
+- Weeks 1–2: Align on metrics, draft policy tests, and wire dashboards
+- Weeks 3–6: Dark-ship routes with caches + coalescing; validate scorecards
+- Weeks 7–10: Gradual exposure with canaries; tighten SLOs and budgets
+- Weeks 11–12: Lock-in wins in CI; publish weekly value scorecards
+
+Need help landing this quickly and safely? Our team can partner with yours.
+    `,
+    author: "Zion Tech Group Platform Office",
+    date: "2025-10-08",
+    category: "AI Operations",
+    tags: ["Execution", "Scorecards", "Guardrails", "Cost"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/enterprise-ai-value-realization-2025.jpg"
+  },
+  {
+ 
     slug: "ai-2025-oct-01-governed-agent-platforms-v2",
     title: "Governed Agent Platforms v2: Budgets, Scorecards, Instant Rollback",
     description: "Ship enterprise agent platforms safely: KPI scorecards, budget-aware routing, CI policy tests, and one-click rollback.",
@@ -105,7 +135,7 @@ Need a playbook tailored to your platform? Our team can help you land this safel
     featured: true,
     readTime: "8 min read",
     image: "/images/risk-controlled-autonomy-2025.jpg"
-=======
+ 
     slug: "ai-2025-oct-03-ai-budgets-blueprint",
     title: "Enterprise AI Budgets Blueprint: Quality Tiers, Caches, Rollback",
     description: "Cut GenAI costs 40–70% with tiered routing, semantic caches, and rollback-first ops—without UX regressions.",
@@ -137,12 +167,12 @@ This guide shows how to wire budget visibility and guardrails into GenAI platfor
 ## Outcomes
 - 30–70% cost reduction with tight p95
 - Fewer surprises and cleaner postmortems
->>>>>>> origin/cursor/create-and-deploy-new-content-513e
+ 
     `,
     author: "Zion Tech Group FinOps Lab",
     date: "2025-10-03",
     category: "FinOps",
-<<<<<<< HEAD
+ 
     tags: ["Cost", "Quality Tiers", "Caching", "Budgets", "Rollback"],
     featured: true,
     readTime: "8 min read",
@@ -171,7 +201,7 @@ Outcome: Faster iteration with fewer incidents and measurable reliability.
     featured: true,
     readTime: "7 min read",
     image: "/images/policy-tests-end-to-end.jpg"
->>>>>>> origin/cursor/create-and-deploy-new-content-1d9d
+ 
   },
   {
     slug: "ai-2025-oct-02-private-experiments-blueprint",
@@ -218,7 +248,7 @@ Revert in seconds on breach while maintaining high deploy velocity.
     featured: true,
     readTime: "9 min read",
     image: "/images/rollback-guardrails-blueprint.jpg"
-=======
+ 
     slug: "ai-2025-oct-01-production-evals-playbook",
     title: "Production Evals Playbook: Scorecards That Predict Prod",
     description: "Design eval pipelines that correlate with KPIs and gate risky changes. Ship faster with fewer regressions.",
@@ -245,7 +275,7 @@ Most eval suites fail to predict production behavior. This playbook shows how to
     featured: true,
     readTime: "8 min read",
     image: "/images/production-evals-playbook.jpg"
->>>>>>> origin/cursor/create-and-deploy-new-content-268f
+ 
   },
   {
     slug: "ai-2025-oct-04-enterprise-agents-in-production",
@@ -323,7 +353,7 @@ Keep experience KPIs stable while reducing spend.
     featured: false,
     readTime: "6 min read",
     image: "/images/cost-aware-routing.jpg"
-=======
+ 
     tags: ["FinOps", "Budgets", "Scorecards", "Routing"],
     featured: true,
     readTime: "8 min read",
@@ -369,7 +399,7 @@ Cut spend 40–70% while improving tails using:
     featured: true,
     readTime: "9 min read",
     image: "/images/genai-cost-controllers-v4-2025.jpg"
->>>>>>> origin/cursor/create-and-deploy-new-content-513e
+ 
   },
   {
     slug: "ai-2025-oct-01-enterprise-ai-governance-blueprint",
