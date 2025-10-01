@@ -10,13 +10,4 @@ core
 
 # TypeScript build info
 *.tsbuildinfo
-<<<<<<< HEAD
-
-# Ignore coverage reports
-coverage/
-coverage
-coverage/
->>>>>>> origin/main
-=======
 /.pnpm-home
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-94f6

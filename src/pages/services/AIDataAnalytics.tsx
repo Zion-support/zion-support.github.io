@@ -1,8 +1,10 @@
-import React from 'react';
+import React from "react";
 
-const AIDataAnalytics: React.FC = () => {
-  return <div className="container mx-auto px-6 py-16 text-white">AI Data Analytics</div>;
-};
-
-export default AIDataAnalytics;
+export default function AIDataAnalytics(): React.JSX.Element {
+  return (
+    <main style={{ padding: "2rem" }}>
+      <h1>AI Data Analytics</h1>
+    </main>
+  );
+}
 

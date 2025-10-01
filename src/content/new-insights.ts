@@ -1,47 +1,5 @@
 export const newInsights = [
   {
-    id: "agent-safety-budgets-2026",
-    title: "Agent Safety Budgets 2026: Ship Fast Without Surprises",
-    summary: "Budget risky actions, add PR checks, and wire rollbacks for reliable agent releases.",
-    category: "GenAI",
-    date: "2025-10-11",
-    readMinutes: 7,
-    featured: true,
-    tags: ["Agents", "Risk Budgets", "Guardrails"],
-    content: `
-      <h2>Budget Risk To Move Fast</h2>
-      <p>Define risk budgets per route, wire PR checks for risky changes, and enable instant rollback with live traces.</p>
-    `
-  },
-  {
-    id: "privacy-first-telemetry-2026",
-    title: "Privacy‑First Telemetry: Signal‑Rich, PII‑Safe",
-    summary: "Scoped IDs, field‑level filters, and retention policies that keep insights high and risk low.",
-    category: "Observability",
-    date: "2025-10-11",
-    readMinutes: 6,
-    featured: true,
-    tags: ["Privacy", "Telemetry", "Compliance"],
-    content: `
-      <h2>Protect Users And Insight</h2>
-      <p>Use scoped identifiers, filter sensitive fields, and set retention policies that balance learning with compliance.</p>
-    `
-  },
-  {
-    id: "cost-aware-inference-routing-2026",
-    title: "Cost‑Aware Inference Routing: Quality Tiers Under Budget",
-    summary: "Dynamically route prompts across model tiers based on budgets, SLAs, and eval signals.",
-    category: "Architecture",
-    date: "2025-10-11",
-    readMinutes: 8,
-    featured: false,
-    tags: ["FinOps", "Routing", "Models"],
-    content: `
-      <h2>Tier For Predictable Spend</h2>
-      <p>Adopt tiered model routes with budget caps and fallback policies to keep spend predictable while preserving UX.</p>
-    `
-  },
-  {
     id: "ai-platform-roi-scorecards",
     title: "AI Platform ROI: Simple Scorecards That Drive Adoption",
     summary: "Connect platform capabilities to adoption, golden paths, and SLO outcomes. Make quarterly cut/scale decisions with evidence.",
@@ -58,6 +16,46 @@ export const newInsights = [
         <li>Monthly reviews with owners</li>
         <li>Red/amber flags with remediation</li>
         <li>Cut/scale based on evidence deltas</li>
+      </ul>
+    `
+  },
+  {
+    id: "ai-ops-slo-controllers",
+    title: "AI Ops SLO Controllers: Self‑Healing at Scale",
+    summary: "Controllers that watch SLOs and trigger safe rollbacks, warm pools, and canaries.",
+    category: "AI Operations",
+    date: "2025-10-06",
+    readMinutes: 7,
+    featured: true,
+    tags: ["SLOs", "Autonomous Ops", "Controllers"],
+    content: `
+      <h2>Operate by SLOs</h2>
+      <p>Encode SLOs as controllers that take action automatically: rollback, scale, shed load, or switch tiers.</p>
+      <h3>Playbook</h3>
+      <ul>
+        <li>Golden signals with budget tracking</li>
+        <li>Pre‑approved remediation flows</li>
+        <li>Guardrail checks and audit trails</li>
+      </ul>
+    `
+  },
+  {
+    id: "cost-aware-rag",
+    title: "Cost‑Aware RAG: Freshness Budgets and Hybrid Retrieval",
+    summary: "Balance freshness, quality, and cost with TTL windows and tiered retrieval.",
+    category: "GenAI",
+    date: "2025-10-06",
+    readMinutes: 8,
+    featured: true,
+    tags: ["RAG", "Freshness", "Hybrid"],
+    content: `
+      <h2>Freshness Windows</h2>
+      <p>Apply TTL budgets by corpus and route requests by intent to control cost while keeping answers fresh.</p>
+      <h3>Hybrid Stack</h3>
+      <ul>
+        <li>BM25 + vectors with recency boost</li>
+        <li>Async warm caches and versioned corpora</li>
+        <li>Online canaries tied to KPI deltas</li>
       </ul>
     `
   },
@@ -323,65 +321,7 @@ export const newInsights = [
         <li>Continuous right-sizing</li>
       </ul>
     `
-  },
-  {
-  id: "platform-engineering-scorecards-2026",
-  title: "Platform Engineering Scorecards 2026: Golden Paths that Drive Outcomes",
-  summary: "Make progress measurable with adoption, golden‑path TTFX, and reliability SLOs.",
-  category: "Platform Engineering",
-  date: "2025-10-09",
-  readMinutes: 8,
-  featured: true,
-  tags: ["Scorecards", "Golden Paths", "SLOs"],
-  content: `
-    <h2>Evidence Over Opinions</h2>
-    <p>Scorecards that engineers actually use—tied to day‑to‑day work and shipped value.</p>
-    <ul>
-      <li>Golden‑path time‑to‑first‑success</li>
-      <li>Reliability SLOs on core workflows</li>
-      <li>Adoption by team and product</li>
-    </ul>
-  `
-  },
-  {
-    id: "ai-cybersecurity-automation-2025",
-    title: "AI Cybersecurity Automation: From Detections to Autonomic Response",
-    summary: "Close the loop with safe, policy‑backed automation and incident SLAs under 60s.",
-    category: "Cybersecurity",
-    date: "2025-10-09",
-    readMinutes: 7,
-    featured: true,
-    tags: ["Security", "Automation", "Response"],
-    content: `
-    <h2>Operate Safely</h2>
-    <p>Behavioral detections feed runbooks with guardrails: approvals, budgets, and rollbacks.</p>
-    <ul>
-      <li>Policy tests in CI for risky changes</li>
-      <li>Auto‑containment with human‑in‑the‑loop</li>
-      <li>Measurable MTTR and resilience</li>
-    </ul>
-  `
-  },
-  {
-    id: "ai-governance-scorecards-2026",
-    title: "AI Governance 2026: Scorecards Engineers Actually Use",
-    summary: "Outcome‑linked guardrails with PR checks and online canaries that accelerate delivery.",
-    category: "AI Strategy",
-    date: "2025-10-07",
-    readMinutes: 7,
-    featured: true,
-    tags: ["Governance", "Policy", "Scorecards"],
-    content: `
-    <h2>Guardrails That Ship</h2>
-    <p>Adopt scorecards tied to KPIs, small PR checks for risky changes, and budgeted online canaries.</p>
-    <h3>What to Implement</h3>
-    <ul>
-      <li>Scorecards with owners and review cadence</li>
-      <li>Policy tests in CI for high‑risk areas</li>
-      <li>Live canaries with rollback triggers</li>
-    </ul>
-  `
-  },
+  }
 ];
 
 export const featuredInsights = newInsights.filter(insight => insight.featured);

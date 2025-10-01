@@ -54,17 +54,6 @@ function resolveMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
-<<<<<<< HEAD
-
- origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
-=======
- HEAD
- origin/chore/fix-lint-and-merge
-      return false;
-=======
-  // TODO: Implement
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }
  HEAD
     
@@ -75,36 +64,22 @@ function resolveMergeConflicts(filePath) {
  origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       // For version conflicts, prefer the newer version
       if (headContent.includes("') && newContent.includes('")) {
-=======
     )
     console.log(`📝 Fixing merge conflicts in: ${filePath});
 
 
       if (headContent.includes('"') && newContent.includes('"')) {
 
->>>>>>> origin/chore/fix-lint-and-merge
         return newContent.trim();
     });
  HEAD
     
     // Clean up any remaining conflict markers
-<<<<<<< HEAD
-
- origin/cursor/expand-services-advertise-and-build-project-961d
-=======
-    content = content.replace(/
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
-=======
     content = content.replace(/
  HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
  aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> origin/chore/fix-lint-and-merge
     
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     fs.writeFileSync(filePath, content);
     return true;
   } catch (error) {`;
@@ -127,20 +102,6 @@ function findConflictedFiles(dir) {
         } else if (stat.isFile()) {
           // Check for merge conflict markers
           try {
-<<<<<<< HEAD
-            const content = fs.readFileSync(fullPath, utf8');
-
- origin/chore/fix-lint-and-merge
-=======
-            if (content.includes('
-              conflictedFiles.push(fullPath);
-=======
-  // TODO: Implement
-
-          // Check for merge conflict markers;
-  // TODO: Implement
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             }
           } catch (err) {
  HEAD
@@ -194,10 +155,5 @@ try {
   console.error('❌ Error during cleanup:', error);
   process.exit(1);
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
  aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

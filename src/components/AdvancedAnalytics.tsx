@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 
 interface AdvancedAnalyticsProps {
   enableConversionTracking?: boolean;
@@ -6,12 +6,10 @@ interface AdvancedAnalyticsProps {
   enableErrorTracking?: boolean;
 }
 
-const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = () => {
+export default function AdvancedAnalytics(props: AdvancedAnalyticsProps): React.JSX.Element {
   useEffect(() => {
-    // no-op stub to satisfy imports in App during build
-  }, []);
-  return null;
-};
-
-export default AdvancedAnalytics;
+    void props;
+  }, [props]);
+  return <></>;
+}
 

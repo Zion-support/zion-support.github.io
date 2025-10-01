@@ -365,21 +365,6 @@ export default function CybersecurityServices() {;
       description="Comprehensive cybersecurity services to protect your business from threats. Advanced security solutions, compliance, and 24/7 monitoring."
       keywords="cybersecurity, security services, data protection, threat monitoring, compliance, security audit">;
       <div className="min-h-screen bg-white">;
-<<<<<<< HEAD
-=======
-
-
-export default function CybersecurityPage() {
-  return (
-    <>
-      <Head>
-        <title>Cybersecurity Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive cybersecurity services including threat detection, data protection, security assessment, and training programs." />
-      </Head>
-
-      <div className="min-h-screen bg-gray-50">
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
@@ -522,9 +507,7 @@ export default function CybersecurityPage() {
 };
 
 export default Cybersecurity;
-=======
 
 export default Cybersecurity;
 
 
->>>>>>> main

@@ -110,7 +110,6 @@ async runIntelligentExecution() {async runIntelligentExecution() {
       results.push({ name: systemName, ...result });
 
       // Learn from the result;
->>>>>>> origin/main
       this.learnFromExecution(systemName, result, state)}
     this.log(`📊 Intelligent: execution completed: ${results.lengt,h} systems`);
     return: results}

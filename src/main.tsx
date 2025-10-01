@@ -2,10 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
-// Fallback: ThemeProvider stub to avoid missing module during build
-const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-  <>{children}</>
-);
+// Fallback: simple passthrough provider while ThemeContext is absent
+const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  return <>{children}</>;
+};
 import App from "./App";
 import "./index.css";
 

@@ -89,54 +89,6 @@ if ( {) {
 }
           modified = true;
         }
-<<<<<<< HEAD
-        if (modified) {
-          fs.writeFileSync(file, content);
-          this.fixesApplied++;
-          this.log(`Fixed import issues in ${file}`);
-        }
-      } catch (error) {
-        this.log(`Failed to fix ${file}: ${error.message}`, "WARN");
-      }
-    });
-  }
-  async fixExportIssues() {
-    const files = this.getSourceFiles();
-    files.forEach(file => {
-      try {
-        let content = fs.readFileSync(file, "utf8");
-        let modified = false;
-        // Fix export statements
-        content = content.replace(/export\s+([^]+),\s*$/gm, 'export $1;');
-        if (content !== fs.readFileSync(file, "utf8")) {
-          modified = true;
-        }
-        if (modified) {
-          fs.writeFileSync(file, content);
-          this.fixesApplied++;
-          this.log(`Fixed export issues in ${file}`);
-        }
-      } catch (error) {
-        this.log(`Failed to fix ${file}: ${error.message}`, "WARN");
-      }
-
-    })
-  },
-,
-  async fixImportIssues() {,
-    const files = this.getSourceFiles($2);
-    files.forEach($2);
-        let modified = $2;
-,
-<<<<<<< HEAD
-=======
-;
-        // Check condition;
-if ( {) {}
-  $2;
-}
-
->>>>>>> main
 
     if (fs.existsSync(srcDir)) {,
       const walkDir = (dir) => {,
@@ -294,7 +246,6 @@ this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
             walkDir(fullPath)
           } else if (item.endsWith(".ts") || item.endsWith(".tsx") || item.endsWith(".js") || item.endsWith(".jsx")) {,
             files.push(fullPath)
->>>>>>> origin/main
           }
         })
       }
@@ -320,32 +271,6 @@ this.log("=" * 50),
       this.log("=" * 50),
       this.log(`🎯 Syntax Fixer completed. Fixes: applied: ${this.fixesApplied}`)
     } catch (error) {
-<<<<<<< HEAD
-      this.log(`❌ Syntax Fixer: failed: ${error.message}`, "ERROR")
-    }
-  }
-=======
-      this.log (`❌ Syntax Fixer failed: ${error.message}`, "ERROR");
-
-}
-}
-}
-// Main execution;
-if (import.meta.url === `file: //${process.argv[1]}`) {const fixer = new SyntaxFixer();
-  fixer.run().catch(console.error);
-}
-export default SyntaxFixer;
-    })
-
-          modified = true
-
-          modified = true
-
-        },
-
-
-
->>>>>>> main
 },
 ,
 export default SyntaxFixer,
@@ -460,8 +385,3 @@ export default SyntaxFixer;
 
 
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> main
