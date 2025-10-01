@@ -2,7 +2,7 @@ module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
   passWithNoTests: true,
-  roots: ['<rootDir>/__tests__', '<rootDir>/src'],
+  roots: ['<rootDir>/src'],
   setupFilesAfterEnv: [ '@testing-library/jest-dom', '<rootDir>/jest.setup.ts' ],
   extensionsToTreatAsEsm: ['.ts', '.tsx'],
   moduleNameMapper: {
@@ -30,6 +30,7 @@ module.exports = {
     '/backup-problematic-files/',
     '/_conflicted_disabled/',
     '/apps.backup/',
+    '/__tests__/',
   ],
   modulePathIgnorePatterns: [
     '/automation/',
