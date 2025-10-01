@@ -14,6 +14,45 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "governed-agentic-automation-2025-10-03",
+    title: "Governed Agentic Automation: Safe Tools, Fast Outcomes",
+    description: "Design agent toolchains with budgets, approvals, and rollback to move 10x faster without incidents.",
+    content: `# Governed Agentic Automation\n\nShip agent automations that your SRE and compliance teams endorse: signed tools with scopes and quotas, action budgets and approvals, live traces with KPI-linked SLIs, and rollback hooks. Policy templates and dashboards included.`,
+    author: "Zion Tech Group AI Operations",
+    date: "2025-10-03",
+    category: "AI Operations",
+    tags: ["Agents", "Governance", "Guardrails", "Rollback"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/governed-agentic-automation.jpg"
+  },
+  {
+    slug: "enterprise-rag-blueprint-v3-2025-10-03",
+    title: "Enterprise RAG Blueprint v3: 45% Quality ↑, 62% Cost ↓",
+    description: "Retrieval budgets, freshness windows, and cache tiers that raise answer quality while cutting spend.",
+    content: `# Enterprise RAG Blueprint v3\n\nA pragmatic RAG playbook: strict source governance, retrieval budgets and freshness windows, and tiered caches across features/chunks/answers. Eval-gated rollouts with kill switches. Includes reference architectures and KPI scorecards.`,
+    author: "Zion Tech Group Knowledge Systems",
+    date: "2025-10-03",
+    category: "RAG Engineering",
+    tags: ["RAG", "Retrieval", "Caching", "Quality", "Cost"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/enterprise-rag-blueprint-v3.jpg"
+  },
+  {
+    slug: "genai-cost-optimization-v6-2025-10-03",
+    title: "GenAI Cost Optimization v6: Quality Tiers, Coalesce, Distill",
+    description: "Cut inference spend 60–85% with tiered routing, request coalescing, and selective distillation.",
+    content: `# GenAI Cost Optimization v6\n\nControl GenAI costs without UX regressions: quality-tier routers, request coalescing, semantic caches, and selective distillation for hot paths. Includes rollout rituals, SLO templates, and dashboards used by platform teams.`,
+    author: "Zion Tech Group Platform Team",
+    date: "2025-10-03",
+    category: "GenAI Engineering",
+    tags: ["Cost", "Caching", "Distillation", "Routing", "SLO"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/genai-cost-optimization-v6.jpg"
+  },
+  {
     slug: "ai-2025-oct-01-enterprise-ai-governance-blueprint",
     title: "Enterprise AI Governance 2025: Scorecards, Guardrails, and Zero-Regret Rollouts",
     description: "Practical enterprise playbook to ship AI safely: policy tests in CI, KPI-linked scorecards, kill switches, and budget-aware routing.",
@@ -1606,6 +1645,87 @@ Global experimentation without PII requires new primitives.
     featured: true,
     readTime: "8 min read",
     image: "/images/private-experimentation-edge-2025.jpg"
+  }
+  ,
+  {
+    slug: "ai-2025-oct-03-enterprise-evals-blueprint",
+    title: "Enterprise AI Evals Blueprint: Scorecards That Drive Outcomes",
+    description: "Design eval pipelines that predict production KPIs and gate risky changes with confidence.",
+    content: `
+# Enterprise AI Evals Blueprint
+
+Most eval suites fail to predict production. This guide shows how to build eval pipelines that correlate with business KPIs and act as reliable change gates.
+
+## What You’ll Implement
+- Golden task sets mapped to user journeys
+- Calibrated metrics (task success, harmlessness, helpfulness)
+- Budget-linked scorecards with pass/fail thresholds
+- Online canaries and rollback hooks
+
+## Outcomes
+- Fewer regressions and faster iteration
+- Measurable trust in AI quality
+- Clear ownership and weekly review rituals
+    `,
+    author: "Zion Tech Group Reliability Lab",
+    date: "2025-10-03",
+    category: "AI Reliability",
+    tags: ["Evaluations", "Scorecards", "Guardrails", "E2E"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/enterprise-ai-evals-blueprint.jpg"
+  }
+  ,
+  {
+    slug: "ai-2025-oct-03-rag-guardrails-at-scale",
+    title: "RAG Guardrails at Scale: Freshness Windows, Sources You Can Trust",
+    description: "Ship governed retrieval with freshness windows, source whitelists, and cache tiers that cut cost while lifting answer quality.",
+    content: `
+# RAG Guardrails at Scale
+
+Production RAG requires disciplined governance and budgets.
+
+## Core Patterns
+- Domain schemas and strict source governance
+- Freshness windows + retrieval budgets
+- Tiered caches (features, chunks, answers)
+- Eval-gated rollouts with kill switches
+
+We include reference dashboards, rollout checklists, and incident playbooks.
+    `,
+    author: "Zion Tech Group Knowledge Systems",
+    date: "2025-10-03",
+    category: "RAG Engineering",
+    tags: ["RAG", "Governance", "Caching", "Freshness"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/rag-guardrails-scale.jpg"
+  }
+  ,
+  {
+    slug: "ai-2025-oct-03-agent-governance-in-production",
+    title: "Agent Governance in Production: Budgets, Approvals, Rollback",
+    description: "Design agent toolchains with action budgets, approvals, and instant rollback so teams move 10x faster without incidents.",
+    content: `
+# Agent Governance in Production
+
+Agent systems unlock velocity when paired with strong guardrails.
+
+## Ship Safely
+- Signed tools with scopes and quotas
+- Per-action budgets and human-in-the-loop approvals
+- Tool traces with KPI-linked SLIs
+- Canary routes, kill switches, and rollback hooks
+
+Comes with policy templates and playbooks used in Fortune 500 stacks.
+    `,
+    author: "Zion Tech Group AI Operations",
+    date: "2025-10-03",
+    category: "AI Operations",
+    tags: ["Agents", "Governance", "Approvals", "Rollback"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/agent-governance-production.jpg"
   }
 ];
 

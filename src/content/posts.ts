@@ -388,6 +388,25 @@ export const posts: BlogPost[] = [
     readTime: "8 min read"
   },
   {
+    slug: "ai-governance-scorecards-2026",
+    title: "AI Governance 2026: Scorecards Engineers Actually Use",
+    description: "Guardrails wired to product KPIs with PR checks and online canaries that speed teams up.",
+    category: "AI Strategy",
+    publishedAt: "2025-10-07",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "freshness-aware-rag-v2",
+    title: "Freshness‑Aware RAG v2: TTL Budgets and Versioned Corpora",
+    description: "Keep answers accurate with freshness windows, async warmups, and KPI‑aligned evaluation.",
+    category: "GenAI",
+    publishedAt: "2025-10-07",
+    featured: true,
+    readTime: "8 min read"
+  }
+  ,
+  {
     slug: "ai-platform-roadmaps-2026",
     title: "AI Product Roadmaps 2026: From Bet to Business Impact",
     description: "Outcome-led roadmaps that connect bets to scorecards, trains, and shipped value.",
@@ -1117,6 +1136,15 @@ export const posts: BlogPost[] = [
     readTime: "13 min read"
   },
   {
+    slug: "ai-2025-oct-01-intelligent-document-automation-2025",
+    title: "Intelligent Document Automation 2025: 99.2% Accuracy, 94% Faster",
+    description: "Production blueprint: layout-aware models, weak labels, HITL QA, and rollback policies.",
+    category: "Document AI",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "10 min read"
+  },
+  {
     slug: "ai-customer-experience-hyper-personalization-2026",
     title: "AI Customer Experience 2026: Hyper-Personalization Achieving 400% Engagement",
     description: "Deploy AI-powered customer experiences that predict needs, personalize journeys, and increase engagement by 400%. Learn real-time personalization, behavioral prediction, and emotion detection.",
@@ -1172,6 +1200,13 @@ export const posts: BlogPost[] = [
     readTime: "7 min read"
   }
 ];
+
+// Oct 03, 2025 – New content to surface on Home
+posts.push(
+  { slug: "ai-2025-oct-03-continuous-intelligence-platforms", title: "Continuous Intelligence 2025: 100M Events/sec under 50ms", description: "Streams → actions with sub‑50ms latency, KPI scorecards, and rollback triggers.", category: "Real-Time AI", publishedAt: "2025-10-03", featured: true, readTime: "10 min read" },
+  { slug: "ai-2025-oct-03-autonomous-cloud-security", title: "Autonomous Cloud Security 2025: Neutralize Threats in <5s", description: "Self‑defending infrastructure with budgeted actions, live canaries, and instant rollback.", category: "Security", publishedAt: "2025-10-03", featured: true, readTime: "9 min read" },
+  { slug: "ai-2025-oct-03-quantum-supply-chain-optimization", title: "Quantum Supply Chain 2025: Solve in Minutes, Not Days", description: "Hybrid quantum + ML optimization delivering 10,000x faster plans and 35% cost reduction.", category: "Quantum Computing", publishedAt: "2025-10-03", featured: true, readTime: "11 min read" }
+);
 
 // Newly added content (auto-advertised on Home via latest sort)
 posts.push(
