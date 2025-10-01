@@ -98,43 +98,54 @@ const Home = () => {
               and next-generation cloud infrastructure. Join 500+ companies already scaling with us!
             </p>
 
-            {/* NEW CONTENT ANNOUNCEMENT */}
-            <div className="bg-gradient-to-r from-purple-500/20 via-pink-500/20 to-cyan-500/20 border-2 border-purple-400/40 rounded-xl p-6 mb-6 animate-fade-in shadow-2xl">
+            {/* LATEST CONTENT ANNOUNCEMENT - DIGITAL TWINS */}
+            <div className="bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-teal-600/20 border-2 border-blue-400/50 rounded-xl p-6 mb-6 animate-fade-in shadow-2xl">
               <div className="flex items-center justify-center gap-3 mb-3">
-                <Rocket className="w-6 h-6 text-purple-400 animate-bounce" />
-                <span className="text-lg font-bold text-purple-300">🚀 BRAND NEW - OCTOBER 2025</span>
-                <Rocket className="w-6 h-6 text-purple-400 animate-bounce" />
+                <Sparkles className="w-6 h-6 text-blue-400 animate-pulse" />
+                <span className="text-lg font-bold text-blue-300">🔥 JUST PUBLISHED - OCTOBER 1, 2025</span>
+                <Sparkles className="w-6 h-6 text-blue-400 animate-pulse" />
               </div>
-              <p className="text-white text-xl font-bold mb-3 text-center">
-                Cognitive Automation Revolution + Healthcare AI Success Story
+              <p className="text-white text-2xl font-bold mb-3 text-center">
+                AI-Powered Digital Twin Revolution: $14.2M ROI Case Study + Complete Implementation Guide
               </p>
-              <div className="grid md:grid-cols-3 gap-4 text-sm text-zion-slate-light mb-4">
+              <div className="grid md:grid-cols-4 gap-4 text-sm text-zion-slate-light mb-4">
                 <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-purple-400" />
-                  <span className="font-semibold">$127M Combined Value Created</span>
+                  <CheckCircle className="w-4 h-4 text-blue-400" />
+                  <span className="font-semibold">$14.2M ROI in 18 Months</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-pink-400" />
-                  <span className="font-semibold">92% Efficiency + 10x Productivity</span>
+                  <CheckCircle className="w-4 h-4 text-purple-400" />
+                  <span className="font-semibold">87% Downtime Reduction</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-teal-400" />
+                  <span className="font-semibold">95% Predictive Accuracy</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle className="w-4 h-4 text-cyan-400" />
-                  <span className="font-semibold">96% Patient Satisfaction</span>
+                  <span className="font-semibold">62% Quality Improvement</span>
                 </div>
               </div>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
-                  to="/blog/ai-2025-oct-cognitive-automation-enterprise-revolution"
-                  className="inline-flex items-center gap-2 bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
+                  to="/blog/ai-2025-oct-digital-twin-enterprise-revolution"
+                  className="inline-flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
-                  Cognitive Automation Guide
+                  📘 Digital Twin Guide (24 min)
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link
-                  to="/case-studies/healthcare-ai-transformation-2025"
-                  className="inline-flex items-center gap-2 bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
+                  to="/case-studies/manufacturing-digital-twin-transformation-2025"
+                  className="inline-flex items-center gap-2 bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
-                  $124M Healthcare Success
+                  💼 $14.2M Success Story
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link
+                  to="/services/ai-digital-twin-platform-2025"
+                  className="inline-flex items-center gap-2 bg-teal-500 hover:bg-teal-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
+                >
+                  🚀 Get Digital Twin Platform
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -222,27 +233,27 @@ const Home = () => {
             </p>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-              {/* Blog Post 1 - NEW OCTOBER CONTENT */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:border-purple-400/60 transition-all hover:scale-105 hover:shadow-xl">
-                <div className="text-purple-400 text-sm font-semibold mb-2 uppercase">🔥 HOT - Oct 2025</div>
-                <h3 className="text-lg font-bold text-white mb-3">Cognitive Automation Revolution</h3>
-                <p className="text-purple-100 text-sm mb-4">92% efficiency gains + $3.2M savings. Enterprise transformation guide - 22 min read</p>
+              {/* Blog Post 1 - DIGITAL TWIN GUIDE */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-blue-400/40 hover:border-blue-400/70 transition-all hover:scale-105 hover:shadow-xl">
+                <div className="text-blue-400 text-sm font-semibold mb-2 uppercase">🔥 JUST PUBLISHED - Oct 1</div>
+                <h3 className="text-lg font-bold text-white mb-3">Digital Twin Revolution Guide</h3>
+                <p className="text-blue-100 text-sm mb-4">95% accuracy, $8.5M ROI, 85% downtime reduction. Complete implementation guide - 24 min read</p>
                 <Link 
-                  to="/blog/ai-2025-oct-cognitive-automation-enterprise-revolution" 
-                  className="inline-flex items-center text-purple-300 hover:text-white font-semibold text-sm"
+                  to="/blog/ai-2025-oct-digital-twin-enterprise-revolution" 
+                  className="inline-flex items-center text-blue-300 hover:text-white font-semibold text-sm"
                 >
-                  Read Now <ArrowRight className="w-4 h-4 ml-1" />
+                  Read Guide <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
               </div>
 
-              {/* Case Study 1 - NEW OCTOBER CONTENT */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-pink-400/30 hover:border-pink-400/60 transition-all hover:scale-105 hover:shadow-xl">
-                <div className="text-pink-400 text-sm font-semibold mb-2 uppercase">💼 NEW SUCCESS - Oct 2025</div>
-                <h3 className="text-lg font-bold text-white mb-3">$124M Healthcare AI Win</h3>
-                <p className="text-pink-100 text-sm mb-4">3.8M patients, 450 facilities, 96% satisfaction. Transformational healthcare AI success</p>
+              {/* Case Study 1 - DIGITAL TWIN SUCCESS */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-purple-400/40 hover:border-purple-400/70 transition-all hover:scale-105 hover:shadow-xl">
+                <div className="text-purple-400 text-sm font-semibold mb-2 uppercase">💼 BREAKTHROUGH - Oct 1</div>
+                <h3 className="text-lg font-bold text-white mb-3">$14.2M Digital Twin ROI</h3>
+                <p className="text-purple-100 text-sm mb-4">Fortune 500 manufacturer: 87% downtime cut, 62% quality gain. Real results - 18 min read</p>
                 <Link 
-                  to="/case-studies/healthcare-ai-transformation-2025" 
-                  className="inline-flex items-center text-pink-300 hover:text-white font-semibold text-sm"
+                  to="/case-studies/manufacturing-digital-twin-transformation-2025" 
+                  className="inline-flex items-center text-purple-300 hover:text-white font-semibold text-sm"
                 >
                   Read Case Study <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
@@ -261,16 +272,16 @@ const Home = () => {
                 </Link>
               </div>
 
-              {/* New Service */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 hover:border-cyan-400/60 transition-all hover:scale-105 hover:shadow-xl">
-                <div className="text-cyan-400 text-sm font-semibold mb-2 uppercase">🚀 AVAILABLE NOW</div>
-                <h3 className="text-lg font-bold text-white mb-3">AI Workflow Automation</h3>
-                <p className="text-cyan-100 text-sm mb-4">Reduce manual tasks by 80%. Starting at $99/month with 30-day free trial</p>
+              {/* New Service - DIGITAL TWIN PLATFORM */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-teal-400/40 hover:border-teal-400/70 transition-all hover:scale-105 hover:shadow-xl">
+                <div className="text-teal-400 text-sm font-semibold mb-2 uppercase">🚀 NEW PLATFORM</div>
+                <h3 className="text-lg font-bold text-white mb-3">AI Digital Twin Platform</h3>
+                <p className="text-teal-100 text-sm mb-4">95% accuracy, $8.5M ROI. Transform operations with intelligent virtual replicas</p>
                 <Link 
-                  to="/services/ai-workflow-automation" 
-                  className="inline-flex items-center text-cyan-300 hover:text-white font-semibold text-sm"
+                  to="/services/ai-digital-twin-platform-2025" 
+                  className="inline-flex items-center text-teal-300 hover:text-white font-semibold text-sm"
                 >
-                  Start Free Trial <ArrowRight className="w-4 h-4 ml-1" />
+                  Get Started <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
               </div>
             </div>

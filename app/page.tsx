@@ -88,24 +88,24 @@ export default function HomePage() {
       <October2025NewPracticalContentBanner />
       <NewContentShowcaseOct2025 />
       
-      {/* New Content Promo Strip */}
-      <div className="w-full bg-gradient-to-r from-green-600 to-blue-600 text-white">
+      {/* New Content Promo Strip - LATEST FEATURED */}
+      <div className="w-full bg-gradient-to-r from-blue-600 via-purple-600 to-teal-600 text-white">
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base flex-wrap">
-            <span className="font-bold">🚀 JUST PUBLISHED:</span>
-            <Link href="/blog/ai-supply-chain-intelligence-2026" className="underline hover:text-yellow-200">AI Supply Chain ($8M)</Link>
+            <span className="font-bold">🔥 JUST PUBLISHED:</span>
+            <Link href="/blog/ai-2025-oct-digital-twin-enterprise-revolution" className="underline hover:text-yellow-200 font-bold">Digital Twin ($14M)</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-healthcare-diagnostics-revolution-2026" className="underline hover:text-yellow-200">Healthcare AI (99%)</Link>
+            <Link href="/blog/ai-2025-oct-practical-ml-pipeline-optimization" className="underline hover:text-yellow-200 font-bold">ML Pipeline 10x</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-2025-oct-practical-ml-pipeline-optimization" className="underline hover:text-yellow-200">ML Pipeline 10x</Link>
+            <Link href="/case-studies/manufacturing-digital-twin-transformation-2025" className="underline hover:text-yellow-200">$14.2M Twin ROI</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/supply-chain-transformation-2026" className="underline hover:text-yellow-200">$8.2M ROI</Link>
+            <Link href="/blog/ai-supply-chain-intelligence-2026" className="underline hover:text-yellow-200">AI Supply Chain</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-2025-oct-ml-pipeline-optimization-14m-roi-success" className="underline hover:text-yellow-200">$14.2M ML ROI</Link>
+            <Link href="/services/ai-digital-twin-platform-2025" className="underline hover:text-yellow-200">Get Platform</Link>
           </div>
           <Link
             href="/blog"
-            className="bg-white text-green-700 hover:bg-gray-100 px-4 py-1.5 rounded-md text-sm font-semibold whitespace-nowrap"
+            className="bg-white text-blue-700 hover:bg-gray-100 px-4 py-1.5 rounded-md text-sm font-semibold whitespace-nowrap"
           >
             Read Now →
           </Link>
