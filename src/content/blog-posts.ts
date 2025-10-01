@@ -1242,6 +1242,54 @@ Includes rollout plan, governance guardrails, and real-world case studies across
     featured: true,
     readTime: "9 min read",
     image: "/images/synthetic-data.jpg"
+  },
+  {
+    slug: "ai-2025-oct-01-autonomous-revenue-operations-2025",
+    title: "Autonomous Revenue Operations 2025: 3.2x Pipeline Velocity, 127% ROI",
+    description: "End-to-end RevOps automation with AI playbooks, guardrailed routing, and live scorecards. Proven 3.2x pipeline velocity and 127% ROI in Fortune 500 deployments.",
+    content: `
+# Autonomous Revenue Operations 2025
+
+This field guide shows how to run RevOps as software: intent signals → qualification → routing → sequencing → close → expansion. Ship budgeted automations with:
+
+- Lead scoring with feature stores and real-time enrichment
+- Guardrailed routing across geo, segment, product, and SLA
+- Sequence policies with safe exploration and automatic pausing
+- Weekly scorecards tied to pipeline, win-rate, and CAC/LTV
+
+Includes rollout checklist, KPIs, and dashboards that sales, marketing, and finance actually adopt.
+    `,
+    author: "Zion Tech Group GTM Systems",
+    date: "2025-10-01",
+    category: "Go-To-Market AI",
+    tags: ["RevOps", "Automation", "Scoring", "Routing", "Playbooks"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/autonomous-revops-2025.jpg"
+  },
+  {
+    slug: "ai-2025-oct-01-intelligent-document-automation-2025",
+    title: "Intelligent Document Automation 2025: 99.2% Accuracy, 94% Faster Processing",
+    description: "Production blueprint for document AI: layout-aware models, weak labels, and human-in-the-loop QA delivering 99.2% accuracy and 94% faster processing.",
+    content: `
+# Intelligent Document Automation 2025
+
+Operate document AI at enterprise scale with:
+
+- Layout-aware models + retrieval-guided parsing
+- Weak-label bootstraps and disagreement mining
+- Human-in-the-loop QA with eval gates in CI
+- Drift monitors, freshness windows, and rollback policies
+
+Comes with reference architectures and an operations playbook that cuts turnaround times by 94%.
+    `,
+    author: "Zion Tech Group Document AI",
+    date: "2025-10-01",
+    category: "Document AI",
+    tags: ["Document AI", "OCR", "HITL", "Governance"],
+    featured: true,
+    readTime: "10 min read",
+    image: "/images/intelligent-document-automation-2025.jpg"
   }
 ];
 
