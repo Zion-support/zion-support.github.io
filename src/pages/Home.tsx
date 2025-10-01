@@ -24,6 +24,7 @@ import Header from "../components/Header";
 import October2025EdgeAIQuantumCryptoBanner from "../components/October2025EdgeAIQuantumCryptoBanner";
 import October2025BreakthroughContentBanner from "../components/October2025BreakthroughContentBanner";
 import October2025AIRevolutionBanner from "../components/October2025AIRevolutionBanner";
+import October2025FraudDetectionBanner from "../components/October2025FraudDetectionBanner";
 import LatestArticlesShowcase from "../components/LatestArticlesShowcase";
 import LatestContentBanner from "../components/LatestContentBanner";
 import LatestInsights from "../components/LatestInsights";
@@ -119,6 +120,10 @@ const Home = () => {
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
+        
+        {/* 🚨🚨🚨 ABSOLUTE NEWEST: OCTOBER 1, 2025 - AI FRAUD DETECTION REVOLUTION - #1 PRIORITY! 🚨🚨🚨 */}
+        {/* Featured: $847B Assets Protected, 99.7% Accuracy, 96% Fraud Reduction, 43x ROI, Sub-50ms Detection */}
+        <October2025FraudDetectionBanner />
         
         {/* 🚀 DECEMBER 1, 2025 - BREAKTHROUGH: AI Development Agents, RAG at Scale & AI-Powered IaC */}
         <NewContentPromoBanner 
