@@ -140,7 +140,7 @@ export default function AICloudCostOptimization2025() {
   );
 }
 
-import React from 'react';
+
 
 export const metadata = {
   title: 'AI Cloud Cost Optimization: Reduce Spending by 80% | Zion Tech Group',

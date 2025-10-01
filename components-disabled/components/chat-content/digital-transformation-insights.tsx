@@ -14,7 +14,7 @@
 
   );
 
-import React from 'react';
+
 
 export default function DigitalTransformationInsightsPage() {
   return (
@@ -50,7 +50,7 @@ return (
     </div>;
 
   );
-import React from 'react';
+
 
   );
 export default function DigitalTransformationInsightsPage() {

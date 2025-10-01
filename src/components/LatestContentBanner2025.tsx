@@ -1,6 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles, TrendingUp, Zap } from 'lucide-react';
 
 const LatestContentBanner2025: React.FC = () => {
   const latestArticles = [
@@ -12,6 +10,24 @@ const LatestContentBanner2025: React.FC = () => {
       emoji: "🚀",
       highlight: "BREAKTHROUGH",
       impact: "$50M+ Savings"
+    },
+    {
+      title: "Zero‑PII Telemetry v2",
+      description: "Decision‑grade signals without centralized IDs — privacy‑first analytics",
+      slug: "edge-2025-oct-01-zero-pii-telemetry-v2",
+      category: "Observability",
+      emoji: "🛡️",
+      highlight: "NEW",
+      impact: "Zero PII"
+    },
+    {
+      title: "Live Evals & Scorecards",
+      description: "Ship GenAI fast without regressions — KPI‑wired canaries",
+      slug: "genai-2025-oct-01-eval-scorecards-live-canaries",
+      category: "GenAI",
+      emoji: "📈",
+      highlight: "NEW",
+      impact: "No regressions"
     },
     {
       title: "AI 2026: Future Predictions & Mega Trends",
@@ -221,7 +237,7 @@ const LatestContentBanner2025: React.FC = () => {
                     <Zap className="w-4 h-4 text-cyan-400" />
                     {article.readTime}
                   </span>
-                  <span>{new Date(article.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
+                  <span>{article.date ? new Date(article.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : 'Recent'}</span>
                 </div>
 
                 {/* CTA Button */}

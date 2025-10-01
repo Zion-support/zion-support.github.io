@@ -17,82 +17,18 @@ interface ContentItem {
 }
 
 const featuredContent: ContentItem[] = [
-<<<<<<< HEAD
-  // Sept 30, 2025 — newly added items to advertise
   {
-    id: 'n0a',
-    title: 'Autonomous Runbooks Quickstart: Budgeted Actions and Instant Rollback',
-    description: 'Design incident playbooks that close the loop from detection to safe action in <60s.',
-    link: '/blog/ai-2025-sept-30-autonomous-runbooks-quickstart',
-    badge: 'New',
-    badgeColor: 'bg-gradient-to-r from-emerald-600 to-teal-600',
-    icon: '✅',
-    publishedDate: 'September 30, 2025',
-    readTime: '7 min read',
-    category: 'AI Operations'
-  },
-  {
-    id: 'n0b',
-    title: 'Privacy‑Preserving Telemetry: Scoped IDs, On‑Device Redaction, DP Noise',
-    description: 'Actionable analytics without PII using edge aggregation and differential privacy.',
-    link: '/blog/edge-2025-sept-30-privacy-preserving-telemetry',
-    badge: 'Fresh',
-    badgeColor: 'bg-gradient-to-r from-cyan-600 to-sky-600',
-    icon: '🔒',
-=======
-  // Sept 30, 2025 — newly added highlights
-  {
-    id: 'nX1',
-    title: 'Operational Trust Scorecards v3 — KPIs, Budgets, Instant Rollback',
-    description: 'Wire SLIs to KPIs with budgeted actions, live canaries, and deterministic rollback that prevents regressions.',
-    link: '/blog/ai-2025-sept-30-operational-trust-scorecards-v3',
-    badge: 'New',
-    badgeColor: 'bg-gradient-to-r from-emerald-600 to-teal-600',
-    icon: '🧭',
-    publishedDate: 'September 30, 2025',
-    readTime: '9 min read',
-    category: 'AI Operations'
-  },
-  {
-    id: 'nX2',
-    title: 'Autonomic Runbooks — Contain Incidents in Under 60 Seconds',
-    description: 'Policy‑tested actions, guardrails, and live traces that auto‑contain incidents without sacrificing velocity.',
-    link: '/blog/ai-2025-sept-30-autonomic-runbooks',
-    badge: 'Fresh',
-    badgeColor: 'bg-gradient-to-r from-yellow-600 to-orange-600',
-    icon: '⚙️',
-    publishedDate: 'September 30, 2025',
-    readTime: '8 min read',
-    category: 'AI Reliability'
-  },
-  {
-    id: 'nX3',
-    title: 'Consentless Telemetry v2 — Useful Insights, Zero‑PII, <100ms',
-    description: 'Scoped IDs, on‑device redaction, and DP noise to keep analytics rich and privacy‑first worldwide.',
-    link: '/blog/edge-2025-sept-30-consentless-telemetry-v2',
+    id: 'o3-0',
+    title: 'AI Observability 2026: Complete Guide',
+    description: 'Comprehensive observability strategies for AI systems with real-time monitoring and alerting.',
+    link: '/blog/ai-observability-2026',
     badge: 'New',
     badgeColor: 'bg-gradient-to-r from-cyan-600 to-sky-600',
-    icon: '📈',
->>>>>>> feat/content-sept30-ads
+    icon: '📊',
     publishedDate: 'September 30, 2025',
     readTime: '6 min read',
     category: 'Observability'
   },
-<<<<<<< HEAD
-  {
-    id: 'n0c',
-    title: 'GenAI Quality Tiers Quickstart: Stable UX at 40–70% Lower Cost',
-    description: 'Tiered routing and semantic caches with KPI‑linked budgets.',
-    link: '/blog/genai-2025-sept-30-quality-tiers-quickstart',
-    badge: 'Featured',
-    badgeColor: 'bg-gradient-to-r from-indigo-600 to-blue-600',
-    icon: '💸',
-    publishedDate: 'September 30, 2025',
-    readTime: '8 min read',
-    category: 'GenAI'
-  },
-=======
->>>>>>> feat/content-sept30-ads
   // Sept 30, 2025 — highlight newest content
   // Oct 03, 2025 — newest highlights
   {

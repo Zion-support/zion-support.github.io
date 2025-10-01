@@ -1,6 +1,3 @@
-import { ArrowRight, BookOpen, Brain, Lightbulb, Rocket, Sparkles, Star, Target, TrendingUp, Zap } from "lucide-react";
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 
 const October2025MegaLaunchBanner = () => {
   const topNewArticles = [

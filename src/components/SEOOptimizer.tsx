@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
 interface SEOOptimizerProps {
   title?: string;
@@ -9,7 +8,7 @@ interface SEOOptimizerProps {
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
-  structuredData?: any;
+  structuredData?: Record<string, unknown>;
   noindex?: boolean;
 }
 
@@ -111,7 +110,7 @@ export const generateStructuredData = {
     ]
   }),
 
-  service: (serviceData: any) => ({
+  service: (serviceData: { name: string; description: string }) => ({
     "@context": "https://schema.org",
     "@type": "Service",
     "name": serviceData.name,
@@ -129,7 +128,7 @@ export const generateStructuredData = {
     }
   }),
 
-  article: (articleData: any) => ({
+  article: (articleData: { title: string; description: string; author: string }) => ({
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": articleData.title,

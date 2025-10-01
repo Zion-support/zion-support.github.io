@@ -1,6 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles, TrendingUp, Zap, Star, Rocket, Brain, Shield, Target, Award, Users, DollarSign } from 'lucide-react';
 
 const Ultimate2026ContentShowcase: React.FC = () => {
   const showcaseContent = [
