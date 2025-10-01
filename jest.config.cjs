@@ -1,75 +1,47 @@
 module.exports = {
-  preset: 'ts-jest',
   testEnvironment: 'jsdom',
-  extensionsToTreatAsEsm: ['.ts', '.tsx'],
+  roots: ['<rootDir>/src', '<rootDir>/__tests__'],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   globals: {
     'ts-jest': {
-      useESM: true
-    }
+      tsconfig: '<rootDir>/__tests__/tsconfig.json',
+      diagnostics: false,
+      isolatedModules: true,
+    },
   },
-  roots: ['<rootDir>/__tests__', '<rootDir>/src'],
-  setupFilesAfterEnv: [ '@testing-library/jest-dom' ],
   moduleNameMapper: {
-    '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
-    // Minimal mappers to avoid conflicts; project has no tests
-    '\\.(gif|ttf|eot|svg|png|jpg|jpeg)$': '<rootDir>/tests/__mocks__/fileMock.js',
+    '^@/(.*)$': '<rootDir>/src/$1',
+    '\\.(css|less|scss|sass)$': 'identity-obj-proxy'
   },
-  testRegex: '^$',
+  testMatch: [
+    '<rootDir>/src/**/__tests__/**/*.(test|spec).(js|jsx|ts|tsx)',
+    '<rootDir>/src/**/*.(test|spec).(js|jsx|ts|tsx)'
+  ],
+  transform: {
+    '^.+\\.(ts|tsx)$': 'ts-jest',
+    '^.+\\.(js|jsx)$': 'babel-jest'
+  },
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   testPathIgnorePatterns: [
     '/node_modules/',
     '/dist/',
-    '/build/',
-    '/.next/',
-    '/out/',
-    '/tests.disabled/',
     '/automation/',
-    '/automation_backup/',
     '/backup/',
-    '/backup-pages/',
-    '/backup-merge-conflicts/',
     '/backup-problematic-files/',
-    '/_conflicted_disabled/',
     '/apps.backup/',
-    '/__tests__/.*\\.test\\.test\\.js$',
-    '/__tests__/.*\\.dynamic\\.test\\.js$',
-    '/__tests__/AccessibilityManager\\.test\\.js$',
-    '/__tests__/AccessibilityEnhancer\\.test\\.js$',
-    '/__tests__/AccessibilityEnhancer\\.test\\.tsx$',
-    '/__tests__/server/authController\\.test\\.js$',
-    '/__tests__/enhanced-home\\.integration\\.test\\.js$',
-    '/__tests__/pricing-guide\\.integration\\.test\\.js$',
-    '/__tests__/.*\\.test\\.js$',
-    '/__tests__/.*\\.test\\.tsx$',
+    '/apps/',
+    '/_app_disabled/',
+    '/_pages_disabled/',
+    '/_pages_api_disabled/'
   ],
   modulePathIgnorePatterns: [
-    '/automation/',
-    '/automation_backup/',
-    '/backup/',
-    '/backup-pages/',
-    '/backup-merge-conflicts/',
-    '/backup-problematic-files/',
-    '/_conflicted_disabled/',
-    '/apps.backup/',
+    '<rootDir>/automation/',
+    '<rootDir>/backup/',
+    '<rootDir>/backup-problematic-files/'
   ],
-  transform: {
-    '^.+\\.(ts|tsx)$': ['ts-jest', {
-      useESM: true
-    }],
-    '^.+\\.(js|jsx)$': ['babel-jest', {
-      presets: [
-        ['@babel/preset-env', { targets: { node: 'current' } }],
-        '@babel/preset-react'
-      ]
-    }]
-  },
-  transformIgnorePatterns: [
-    'node_modules/(?!(.*\\.mjs$))'
-  ],
-  moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx', 'json', 'mjs'],
-  coverageDirectory: 'coverage',
-  collectCoverage: false,
-  verbose: false,
-  testEnvironmentOptions: {
-    customExportConditions: ['node', 'node-addons']
-  }
+  watchPathIgnorePatterns: [
+    '<rootDir>/automation/',
+    '<rootDir>/backup/',
+    '<rootDir>/backup-problematic-files/'
+  ]
 };
