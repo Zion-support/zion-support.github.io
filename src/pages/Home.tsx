@@ -120,6 +120,21 @@ const Home = () => {
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
         
+        {/* 🚀 OCTOBER 1, 2025 - JUST RELEASED: Sovereign AI, Reasoning Engines & Real-Time Personalization */}
+        <NewContentPromoBanner 
+          className="border-b border-white/10" 
+          variant="premium" 
+          title="🔥 BREAKING TODAY - OCTOBER 1: 3 GAME-CHANGING GUIDES — Sovereign AI (100% Data Control, Zero Lock-In), Reasoning Engines (97% Accuracy with Explanations), Real-Time Personalization (5x Engagement, 400% Revenue)!"
+          description="🎯 BRAND NEW BREAKTHROUGH CONTENT: Build AI systems you truly own with sovereign deployment (85% cost cut, 99.99% uptime), deploy reasoning engines that think and explain (90% fewer errors), and deliver hyper-personalized experiences in sub-50ms (98% accuracy). Essential reading for forward-thinking tech leaders!"
+          ctaText="Explore Latest Breakthroughs"
+          ctaLink="/blog"
+          featuredItems={[
+            { title: "Sovereign AI Intelligence Systems 2025 — 100% Data Sovereignty, Zero Vendor Lock-In, 99.99% Uptime", category: "Sovereign AI", link: "/blog/ai-sovereign-intelligence-enterprise-2025" },
+            { title: "AI Reasoning Engines 2025 — Systems That Think and Explain (97% Accuracy, Full Auditability)", category: "Reasoning AI", link: "/blog/ai-reasoning-engines-enterprise-2025" },
+            { title: "Real-Time AI Personalization 2025 — Sub-50ms Hyper-Personalization (5x Engagement, 400% Revenue)", category: "AI Personalization", link: "/blog/ai-real-time-personalization-2025" }
+          ]}
+        />
+        
         {/* 🚀 DECEMBER 1, 2025 - BREAKTHROUGH: AI Development Agents, RAG at Scale & AI-Powered IaC */}
         <NewContentPromoBanner 
           className="border-b border-white/10" 
@@ -372,14 +387,49 @@ const Home = () => {
             </h1>
 
             <p className="text-xl md:text-2xl text-zion-slate-light mb-8 leading-relaxed max-w-3xl mx-auto animate-fade-in">
-              🚀 <strong>JUST PUBLISHED DECEMBER 1, 2025:</strong> 3 REVOLUTIONARY GUIDES — AI Development Agents (10x faster coding, 95% bug reduction, 70% cost savings), 
-              RAG at Enterprise Scale (95% accuracy, sub-100ms latency, 1M+ queries/day), and AI-Powered Infrastructure as Code (60% cost reduction, 99.99% uptime, autonomous operations)! 
-              Plus November's releases: Federated Learning (95% accuracy, 100% privacy), LLMOps Excellence (99.9% uptime), ML Platform Engineering (10x velocity), 
-              Adaptive Learning Systems (87% success), Neuromorphic Computing (1000x efficiency), AI Protein Design (95% accuracy), 
-              Enterprise AI Automation (400% gains), Edge Computing & 5G (sub-10ms latency), and 20+ more cutting-edge guides! 
+              🎯 <strong>BREAKING TODAY - OCTOBER 1, 2025:</strong> 3 GAME-CHANGING GUIDES JUST RELEASED — Sovereign AI Intelligence Systems (100% data control, zero vendor lock-in, 85% cost savings), 
+              AI Reasoning Engines (97% accuracy with full explanations, 90% fewer errors), and Real-Time AI Personalization (sub-50ms hyper-personalization, 5x engagement, 400% revenue growth)! 
+              Plus: AI Development Agents (10x faster coding), RAG at Enterprise Scale (95% accuracy), AI-Powered IaC (60% cost cut), 
+              Federated Learning (100% privacy), LLMOps Excellence (99.9% uptime), ML Platform Engineering (10x velocity), 
+              Adaptive Learning Systems (87% success), Neuromorphic Computing (1000x efficiency), and 30+ more cutting-edge guides! 
               Transform your business with proven AI solutions delivering $50B+ in client results. 
               Join 500+ companies achieving 400-600% ROI with our expert guidance!
             </p>
+
+            {/* October 1, 2025 - NEWEST BREAKTHROUGH CONTENT */}
+            <div className="bg-gradient-to-r from-amber-500/20 to-rose-500/20 border border-amber-400/30 rounded-xl p-6 mb-8 animate-fade-in shadow-2xl">
+              <div className="flex items-center justify-center gap-3 mb-3">
+                <Sparkles className="w-6 h-6 text-amber-400 animate-pulse" />
+                <span className="text-lg font-bold text-amber-400">🔥 OCTOBER 1, 2025: BREAKTHROUGH AI GUIDES RELEASED TODAY</span>
+                <Sparkles className="w-6 h-6 text-amber-400 animate-pulse" />
+              </div>
+              <p className="text-white text-lg font-semibold mb-2">
+                ⚡ 3 GAME-CHANGING GUIDES JUST RELEASED: Sovereign AI Systems (100% data sovereignty, zero lock-in, 85% cost reduction), Reasoning Engines (97% accuracy with explanations, 90% fewer errors), Real-Time Personalization (sub-50ms, 5x engagement, 400% revenue)!
+              </p>
+              <p className="text-zion-slate-light text-sm mb-4">
+                Build AI you truly own with sovereign deployment strategies, deploy reasoning engines that think and explain their decisions, and deliver hyper-personalized experiences that drive massive engagement and revenue growth.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <Link
+                  to="/blog/ai-sovereign-intelligence-enterprise-2025"
+                  className="bg-amber-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-amber-600 transition-colors text-center"
+                >
+                  Read Latest Breakthroughs
+                </Link>
+                <Link
+                  to="/blog"
+                  className="border border-amber-400 text-amber-400 px-6 py-2 rounded-lg font-semibold hover:bg-amber-400 hover:text-white transition-colors text-center"
+                >
+                  Explore All Guides
+                </Link>
+              </div>
+              <div className="mt-4 flex flex-wrap gap-2 justify-center">
+                <span className="bg-cyan-100/20 text-cyan-200 px-3 py-1 rounded-full text-xs font-medium border border-cyan-300/20">Sovereign AI</span>
+                <span className="bg-violet-100/20 text-violet-200 px-3 py-1 rounded-full text-xs font-medium border border-violet-300/20">Reasoning Engines</span>
+                <span className="bg-rose-100/20 text-rose-200 px-3 py-1 rounded-full text-xs font-medium border border-rose-300/20">Real-Time AI</span>
+                <span className="bg-orange-100/20 text-orange-200 px-3 py-1 rounded-full text-xs font-medium border border-orange-300/20">Personalization</span>
+              </div>
+            </div>
 
             {/* December 1, 2025 - NEWEST BREAKTHROUGH CONTENT */}
             <div className="bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-400/30 rounded-xl p-6 mb-8 animate-fade-in shadow-2xl">
