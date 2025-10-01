@@ -1,18 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { Clock, ArrowRight } from 'lucide-react';
-
-// 🚀🚀🚀 ABSOLUTE NEWEST: JANUARY 2026 - REVOLUTIONARY AI BREAKTHROUGHS - ABSOLUTE #1 TOP PRIORITY! 🚀🚀🚀
-// 💎💎💎 JUST PUBLISHED: Ultra-Autonomous Enterprise, Quantum Consciousness BI, Neural-Quantum Fusion - $36.8B Combined Value! 💎💎💎
-import January2026RevolutionaryBreakthroughsMegaBanner from '../components/January2026RevolutionaryBreakthroughsMegaBanner';
-import January2026UltraAutonomousEnterpriseBanner from '../components/January2026UltraAutonomousEnterpriseBanner';
-import January2026QuantumConsciousnessBIBanner from '../components/January2026QuantumConsciousnessBIBanner';
-import January2026NeuralQuantumFusionBanner from '../components/January2026NeuralQuantumFusionBanner';
-
-// 🔥🔥🔥 BRAND NEW: JANUARY 2026 - QUANTUM CONSCIOUSNESS & AUTONOMOUS ENTERPRISE BREAKTHROUGHS - ABSOLUTE #1 TOP PRIORITY! 🔥🔥🔥
-// 💎💎💎 JUST PUBLISHED TODAY: Quantum Consciousness Breakthrough ($500B), Autonomous Enterprise Revolution ($127B) - $627B COMBINED VALUE! 💎💎💎
-import AI2026QuantumConsciousnessRevolutionaryBanner from '../components/AI2026QuantumConsciousnessRevolutionaryBanner';
-import AI2026FutureAutonomousEnterpriseRevolutionBanner from '../components/AI2026FutureAutonomousEnterpriseRevolutionBanner';
 import {
   NewBlogBanner,
   AnalyticsPlatformBanner,
@@ -49,11 +37,7 @@ import {
   AISpaceTechBanner,
   AISustainabilityCaseStudyBanner,
   AITechnologyBreakthroughBanner,
-  EnterpriseAITransformationBanner,
-  CognitiveMeshBanner,
-  IntelligentAutomationBanner,
-  CognitiveMeshCaseStudyBanner,
-  ManufacturingAutomationBanner
+  EnterpriseAITransformationBanner
 } from '../components/PromotionalBanner';
 import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
 import ContentShowcase from '../components/ContentShowcase';
@@ -61,14 +45,25 @@ import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
 import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
 import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
+<<<<<<< HEAD
 import InteractiveContentRecommendation from '../components/InteractiveContentRecommendation';
 import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
 import LatestContent2026Banner from '../components/LatestContent2026Banner';
+<<<<<<< HEAD
 import NewContent2026ShowcaseBanner from '../components/NewContent2026ShowcaseBanner';
 import LatestContentPromotionalBanner from '../components/LatestContentPromotionalBanner';
 import NewContentPromotionalBanner2026 from '../components/NewContentPromotionalBanner2026';
 import AIInnovationShowcaseBanner2026 from '../components/AIInnovationShowcaseBanner2026';
+=======
 import NextGenAutonomousBanner from '../components/NextGenAutonomousBanner';
+>>>>>>> cursor/create-and-deploy-new-content-a364
+=======
+import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
+>>>>>>> cursor/create-and-deploy-new-content-d513
+
+// NEW OCTOBER 2025 PRACTICAL CONTENT
+import October2025NewPracticalContentBanner from '../components/October2025NewPracticalContentBanner';
+import NewContentShowcaseOct2025 from '../components/NewContentShowcaseOct2025';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -79,37 +74,15 @@ export const metadata = {
 export default function HomePage() {
   return (
     <div className="animate-fade-in">
-      {/* 🔥🔥🔥 BRAND NEW: JANUARY 2026 - QUANTUM CONSCIOUSNESS & AUTONOMOUS ENTERPRISE BREAKTHROUGHS - ABSOLUTE #1 TOP PRIORITY! 🔥🔥🔥 */}
-      {/* 💎💎💎 JUST PUBLISHED TODAY: Quantum Consciousness Breakthrough ($500B), Autonomous Enterprise Revolution ($127B) - $627B COMBINED VALUE! 💎💎💎 */}
-      <AI2026QuantumConsciousnessRevolutionaryBanner />
+      {/* NEW OCTOBER 2025 PRACTICAL CONTENT - TOP PRIORITY */}
+      <October2025NewPracticalContentBanner />
+      <NewContentShowcaseOct2025 />
       
-      {/* Future Autonomous Enterprise Revolution */}
-      <AI2026FutureAutonomousEnterpriseRevolutionBanner />
-      
-      {/* 🚀🚀🚀 ABSOLUTE NEWEST: JANUARY 2026 - REVOLUTIONARY AI BREAKTHROUGHS - ABSOLUTE #1 TOP PRIORITY! 🚀🚀🚀 */}
-      {/* 💎💎💎 JUST PUBLISHED: Ultra-Autonomous Enterprise, Quantum Consciousness BI, Neural-Quantum Fusion - $36.8B Combined Value! 💎💎💎 */}
-      <January2026RevolutionaryBreakthroughsMegaBanner />
-      
-      {/* Ultra-Autonomous Enterprise Revolution */}
-      <January2026UltraAutonomousEnterpriseBanner />
-      
-      {/* Quantum Consciousness BI Breakthrough */}
-      <January2026QuantumConsciousnessBIBanner />
-      
-      {/* Neural-Quantum Fusion Breakthrough */}
-      <January2026NeuralQuantumFusionBanner />
-
       {/* New Content Promo Strip */}
-      <div className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
+      <div className="w-full bg-gradient-to-r from-green-600 to-blue-600 text-white">
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
-            <span>🔥 BRAND NEW 2026 Content:</span>
-            <Link href="/blog/ai-2026-quantum-consciousness-breakthrough" className="underline hover:text-yellow-200">Quantum Consciousness</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-2026-future-autonomous-enterprise-revolution" className="underline hover:text-yellow-200">Autonomous Enterprise</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-2026-global-enterprise-quantum-consciousness-transformation-500-billion-success" className="underline hover:text-yellow-200">$500B Success Story</Link>
-            <span className="hidden md:inline">•</span>
+            <span>🚀 NEW 2026 Content:</span>
             <a to="/blog/ai-agent-orchestration-2026" className="underline hover:text-yellow-200">AI Agent Orchestration</a>
             <span className="hidden md:inline">•</span>
             <a to="/blog/ai-sustainability-green-tech-2026" className="underline hover:text-yellow-200">AI Sustainability</a>
@@ -118,11 +91,21 @@ export default function HomePage() {
             <span className="hidden md:inline">•</span>
             <Link href="/case-studies/ai-sustainability-transformation-2026" className="underline hover:text-yellow-200">$10M ROI Case Study</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-2025-oct-cognitive-mesh-enterprise-revolution" className="underline hover:text-yellow-200">Cognitive Mesh</Link>
+<<<<<<< HEAD
+            <a to="/case-studies/ai-quantum-optimization-2026" className="underline hover:text-yellow-200">1000x Speed Improvement</a>
+=======
+            <Link href="/blog/ai-cognitive-computing-breakthrough-2026" className="underline hover:text-yellow-200">Cognitive Computing</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-2025-oct-global-enterprise-cognitive-mesh-65-billion-success" className="underline hover:text-yellow-200">$6.5B Success</Link>
+            <Link href="/blog/ai-space-tech-revolution-2026" className="underline hover:text-yellow-200">Space Tech</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-2025-oct-manufacturing-intelligent-automation-platform-3-2-billion-success" className="underline hover:text-yellow-200">$3.2B Automation</Link>
+            <Link href="/blog/ai-next-generation-autonomous-systems-2026" className="underline hover:text-yellow-200">Next-Gen Autonomous</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/case-studies/ai-mega-transformation-2026" className="underline hover:text-yellow-200">$50M ROI Case Study</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/case-studies/ai-autonomous-enterprise-success-2026" className="underline hover:text-yellow-200">$25M ROI Case Study</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/case-studies/ai-next-generation-autonomous-success-2026" className="underline hover:text-yellow-200">$35M ROI Case Study</Link>
+>>>>>>> cursor/create-and-deploy-new-content-a364
           </div>
           <Link
             to="/blog"
@@ -172,17 +155,12 @@ export default function HomePage() {
       {/* New Content Promotional Banner 2026 */}
       <NewContentPromotionalBanner2026 />
       
+<<<<<<< HEAD
       {/* AI Innovation Showcase Banner 2026 */}
       <AIInnovationShowcaseBanner2026 />
-      
+=======
       {/* Revolutionary 2026 Content Banner */}
       <Revolutionary2026ContentBanner />
-      
-      {/* NEW October 2025 Content Banners */}
-      <CognitiveMeshBanner />
-      <IntelligentAutomationBanner />
-      <CognitiveMeshCaseStudyBanner />
-      <ManufacturingAutomationBanner />
       
       {/* Latest 2026 Content Banner */}
       <LatestContent2026Banner />
@@ -190,8 +168,12 @@ export default function HomePage() {
       {/* Next-Generation Autonomous Systems Banner */}
       <NextGenAutonomousBanner />
       
+      {/* New Content Promotional Banners */}
+      <NewContent2026PromotionalBanners />
+      
       {/* Interactive Content Recommendation */}
       <InteractiveContentRecommendation />
+>>>>>>> cursor/create-and-deploy-new-content-a364
       
       {/* Hero Section */}
       <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
