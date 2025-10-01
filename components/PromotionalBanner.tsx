@@ -1,4 +1,6 @@
-import Link from 'next/link';
+"use client";
+
+import { Link } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
 
 interface PromotionalBannerProps {
@@ -56,7 +58,7 @@ export default function PromotionalBanner({
           
           <div className="flex items-center space-x-3">
             <Link
-              href={ctaLink}
+              to={ctaLink}
               className="bg-white/20 hover:bg-white/30 px-4 py-1.5 rounded-full text-sm font-semibold transition-colors duration-200 border border-white/30"
             >
               {ctaText}
@@ -83,9 +85,9 @@ export default function PromotionalBanner({
 // Pre-configured banner variants
 export const NewContentBanner = () => (
   <PromotionalBanner
-    message="🎉 New: AI Roadmaps 2026, GenAI Guardrails Blueprints, FinOps Scorecards"
-    ctaText="Read the latest"
-    ctaLink="/blog"
+    message="🎉 New: AI Autonomous Cloud Ops 2026 — 99.9% uptime with zero‑touch ops"
+    ctaText="Read the article"
+    ctaLink="/blog/ai-autonomous-cloud-ops-2026"
     backgroundColor="bg-gradient-to-r from-indigo-600 to-purple-600"
     autoHide={true}
     hideAfter={18}
@@ -343,7 +345,7 @@ export const AIMultimodalEnterpriseBanner = () => (
   />
 );
 
-export const AIEnterpriseAutomationBanner = () => (
+export const AIEnterpriseAutomation2026Banner = () => (
   <PromotionalBanner
     message="⚙️ NEW: AI Enterprise Automation 2026 - 95% Process Automation & $5M+ Savings with Zero-Touch Operations"
     ctaText="Read Guide"
@@ -521,5 +523,78 @@ export const AIEnterpriseAutomationBanner = () => (
     textColor="text-white"
     autoHide={true}
     hideAfter={15}
+  />
+);
+
+// New 2026 Breakthrough Banners
+export const AIAdvancedNeuralInterfacesBanner = () => (
+  <PromotionalBanner
+    message="🧠 BREAKTHROUGH: Advanced Neural Interfaces 2026 - 10x Productivity, 95% Accuracy, $15B Success Story"
+    ctaText="Read the Breakthrough"
+    ctaLink="/blog/ai-2026-advanced-neural-interfaces-breakthrough"
+    backgroundColor="bg-gradient-to-r from-purple-700 to-indigo-700"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const AIQuantumOptimizationBanner = () => (
+  <PromotionalBanner
+    message="⚡ REVOLUTION: Quantum AI Optimization 2026 - 1000x Faster, 95% Accuracy, $12B Financial Success"
+    ctaText="Discover Quantum AI"
+    ctaLink="/blog/ai-2026-quantum-ai-optimization-revolution"
+    backgroundColor="bg-gradient-to-r from-cyan-600 to-blue-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const NeuralInterfacesSuccessBanner = () => (
+  <PromotionalBanner
+    message="💰 SUCCESS STORY: Neural Interfaces Enterprise Transformation - $15B Value Creation, 10x Productivity"
+    ctaText="View Case Study"
+    ctaLink="/case-studies/ai-2026-neural-interfaces-enterprise-transformation-15-billion-success"
+    backgroundColor="bg-gradient-to-r from-green-600 to-teal-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={22}
+  />
+);
+
+export const QuantumAIFinanceBanner = () => (
+  <PromotionalBanner
+    message="💎 FINANCIAL BREAKTHROUGH: Quantum AI Financial Optimization - $12B Additional Returns, 1000x Speed"
+    ctaText="See Financial Success"
+    ctaLink="/case-studies/ai-2026-quantum-ai-financial-optimization-12-billion-success"
+    backgroundColor="bg-gradient-to-r from-yellow-600 to-orange-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={22}
+  />
+);
+
+export const AITrends2025Banner = () => (
+  <PromotionalBanner
+    message="📈 NEW: AI Trends 2025 - Complete Industry Analysis with 15 Key Predictions and Implementation Strategies"
+    ctaText="Read Trends"
+    ctaLink="/blog/ai-trends-2025"
+    backgroundColor="bg-gradient-to-r from-indigo-600 to-purple-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={18}
+  />
+);
+
+export const NewServicesShowcaseBanner = () => (
+  <PromotionalBanner
+    message="🚀 NEW SERVICES: Neural Interfaces, Quantum AI, Enterprise Automation - Revolutionary 2026 Solutions"
+    ctaText="Explore Services"
+    ctaLink="/services"
+    backgroundColor="bg-gradient-to-r from-teal-600 to-cyan-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={20}
   />
 );

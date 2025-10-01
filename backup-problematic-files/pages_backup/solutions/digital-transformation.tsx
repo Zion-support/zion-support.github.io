@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { RefreshCw, Target, Rocket, TrendingUp } from 'lucide-react';
-import React from 'react';
+
 :pages/solutions/digital-transformation.tsx
 import Head from 'next/head';
 import Link from 'next/link';
@@ -97,8 +97,8 @@ const industries = [
   { name: 'Government', icon: Building, description: 'Citizen services and administrative efficiency' }
 ];
 export default function DigitalTransformation() {
-import React from 'react';
-import React from 'react';
+
+
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
 import { Rocket, RefreshCw, Target, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';

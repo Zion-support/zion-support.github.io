@@ -3,20 +3,9 @@ const nextConfig = {
 	reactStrictMode: true,
 	trailingSlash: true,
 	output: 'export',
-<<<<<<< HEAD
-=======
-	assetPrefix: process.env.NEXT_PUBLIC_ASSET_PREFIX || '',
->>>>>>> origin/cursor/expand-services-and-deploy-updates-52b1
 	images: {
 		unoptimized: true
 	},
-<<<<<<< HEAD
-=======
-	pageExtensions: ['page.tsx','page.ts','page.jsx','page.js'],
-	typescript: {
-		ignoreBuildErrors: true
-	},
->>>>>>> origin/cursor/expand-services-and-deploy-updates-52b1
 	eslint: {
 		ignoreDuringBuilds: true
 	},

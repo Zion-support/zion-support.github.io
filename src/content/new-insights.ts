@@ -1,47 +1,5 @@
 export const newInsights = [
   {
-    id: "agent-safety-budgets-2026",
-    title: "Agent Safety Budgets 2026: Ship Fast Without Surprises",
-    summary: "Budget risky actions, add PR checks, and wire rollbacks for reliable agent releases.",
-    category: "GenAI",
-    date: "2025-10-11",
-    readMinutes: 7,
-    featured: true,
-    tags: ["Agents", "Risk Budgets", "Guardrails"],
-    content: `
-      <h2>Budget Risk To Move Fast</h2>
-      <p>Define risk budgets per route, wire PR checks for risky changes, and enable instant rollback with live traces.</p>
-    `
-  },
-  {
-    id: "privacy-first-telemetry-2026",
-    title: "Privacy‑First Telemetry: Signal‑Rich, PII‑Safe",
-    summary: "Scoped IDs, field‑level filters, and retention policies that keep insights high and risk low.",
-    category: "Observability",
-    date: "2025-10-11",
-    readMinutes: 6,
-    featured: true,
-    tags: ["Privacy", "Telemetry", "Compliance"],
-    content: `
-      <h2>Protect Users And Insight</h2>
-      <p>Use scoped identifiers, filter sensitive fields, and set retention policies that balance learning with compliance.</p>
-    `
-  },
-  {
-    id: "cost-aware-inference-routing-2026",
-    title: "Cost‑Aware Inference Routing: Quality Tiers Under Budget",
-    summary: "Dynamically route prompts across model tiers based on budgets, SLAs, and eval signals.",
-    category: "Architecture",
-    date: "2025-10-11",
-    readMinutes: 8,
-    featured: false,
-    tags: ["FinOps", "Routing", "Models"],
-    content: `
-      <h2>Tier For Predictable Spend</h2>
-      <p>Adopt tiered model routes with budget caps and fallback policies to keep spend predictable while preserving UX.</p>
-    `
-  },
-  {
     id: "ai-platform-roi-scorecards",
     title: "AI Platform ROI: Simple Scorecards That Drive Adoption",
     summary: "Connect platform capabilities to adoption, golden paths, and SLO outcomes. Make quarterly cut/scale decisions with evidence.",
@@ -327,45 +285,6 @@ export const newInsights = [
 ];
 
 // Added: October 7, 2025
-newInsights.unshift({
-  id: "platform-engineering-scorecards-2026",
-  title: "Platform Engineering Scorecards 2026: Golden Paths that Drive Outcomes",
-  summary: "Make progress measurable with adoption, golden‑path TTFX, and reliability SLOs.",
-  category: "Platform Engineering",
-  date: "2025-10-09",
-  readMinutes: 8,
-  featured: true,
-  tags: ["Scorecards", "Golden Paths", "SLOs"],
-  content: `
-    <h2>Evidence Over Opinions</h2>
-    <p>Scorecards that engineers actually use—tied to day‑to‑day work and shipped value.</p>
-    <ul>
-      <li>Golden‑path time‑to‑first‑success</li>
-      <li>Reliability SLOs on core workflows</li>
-      <li>Adoption by team and product</li>
-    </ul>
-  `
-});
-
-newInsights.unshift({
-  id: "ai-cybersecurity-automation-2025",
-  title: "AI Cybersecurity Automation: From Detections to Autonomic Response",
-  summary: "Close the loop with safe, policy‑backed automation and incident SLAs under 60s.",
-  category: "Cybersecurity",
-  date: "2025-10-09",
-  readMinutes: 7,
-  featured: true,
-  tags: ["Security", "Automation", "Response"],
-  content: `
-    <h2>Operate Safely</h2>
-    <p>Behavioral detections feed runbooks with guardrails: approvals, budgets, and rollbacks.</p>
-    <ul>
-      <li>Policy tests in CI for risky changes</li>
-      <li>Auto‑containment with human‑in‑the‑loop</li>
-      <li>Measurable MTTR and resilience</li>
-    </ul>
-  `
-});
 newInsights.unshift({
   id: "ai-governance-scorecards-2026",
   title: "AI Governance 2026: Scorecards Engineers Actually Use",

@@ -5,67 +5,43 @@ export type InsightArticle = {
   category: string;
   date: string; // ISO date string
   readMinutes: number;
-  description?: string;
 };
 
 export const latestInsights: InsightArticle[] = [
-  {
-    id: "agent-safety-budgets-2026",
-    title: "Agent Safety Budgets 2026: Ship Fast Without Surprises",
-    summary: "Budget risky actions, add PR checks, and wire rollbacks for reliable agent releases.",
-    category: "GenAI",
-    date: "2025-10-11",
-    readMinutes: 7,
-  },
-  {
-    id: "privacy-first-telemetry-2026",
-    title: "Privacy‑First Telemetry: Signal‑Rich, PII‑Safe",
-    summary: "Scoped IDs, field‑level filters, and retention policies that keep insights high and risk low.",
-    category: "Observability",
-    date: "2025-10-11",
-    readMinutes: 6,
-  },
-  {
-    id: "cost-aware-inference-routing-2026",
-    title: "Cost‑Aware Inference Routing: Quality Tiers Under Budget",
-    summary: "Dynamically route prompts across model tiers based on budgets, SLAs, and eval signals.",
-    category: "Architecture",
-    date: "2025-10-11",
-    readMinutes: 8,
-  },
-  {
-    id: "ai-risk-register-checklist",
-    title: "AI Risk Register Checklist",
-    summary: "Owners, policy tests, and dashboards that make risk programs real.",
-    category: "GenAI",
-    date: "2025-09-30",
-    readMinutes: 6,
-  },
-  {
-    id: "eval-systems-online-canaries",
-    title: "Eval Systems That Scale: Online Canaries and Policy Gates",
-    summary:
-      "Move from ad-hoc checks to layered evals with CI gates and production canaries tied to KPIs.",
-    category: "GenAI",
-    date: "2025-09-30",
-    readMinutes: 6,
-  },
-  {
-    id: "edge-flags-validation-blueprints",
-    title: "Blueprints: Validating Edge Flags Before They Break Prod",
-    summary:
-      "Versioned keys, negative caching, and health probes that prevent bad flag rolls globally.",
-    category: "Architecture",
-    date: "2025-09-30",
-    readMinutes: 5,
-  },
   {
     id: "genai-policy-tests-canaries",
     title: "GenAI Policy Tests: From Offline Suites to Online Canaries",
     summary:
       "How to combine offline evals with live canaries to catch regressions before customers do.",
     category: "GenAI",
-    date: "2025-09-29",
+    date: "2025-09-30",
+    readMinutes: 6,
+  },
+  {
+    id: "ai-cost-quick-wins",
+    title: "AI Cost Quick Wins: Cut 25% Without Slowing Teams",
+    summary:
+      "Target redundant workflows, compress context, and cache prompts to reduce spend fast.",
+    category: "AI Strategy",
+    date: "2025-09-30",
+    readMinutes: 5,
+  },
+  {
+    id: "model-policy-tests-playbook",
+    title: "A Playbook for Model Policy Tests",
+    summary:
+      "Define disallowed patterns, add detectors, and wire policy checks into CI and runtime.",
+    category: "AI Governance",
+    date: "2025-09-30",
+    readMinutes: 6,
+  },
+  {
+    id: "edge-cache-stale-while-revalidate",
+    title: "Stale‑While‑Revalidate in Practice",
+    summary:
+      "Deliver instant responses while safely refreshing data in the background at the edge.",
+    category: "Architecture",
+    date: "2025-09-30",
     readMinutes: 6,
   },
   {
@@ -74,7 +50,7 @@ export const latestInsights: InsightArticle[] = [
     summary:
       "Design health checks, signed payloads, and roll-forward playbooks to keep flags safe.",
     category: "Architecture",
-    date: "2025-09-29",
+    date: "2025-09-30",
     readMinutes: 5,
   },
   {
@@ -83,7 +59,7 @@ export const latestInsights: InsightArticle[] = [
     summary:
       "Replace vanity KPIs with leading indicators and consistent instrumentation.",
     category: "Product Analytics",
-    date: "2025-09-29",
+    date: "2025-09-30",
     readMinutes: 5,
   },
   {
@@ -92,93 +68,16 @@ export const latestInsights: InsightArticle[] = [
     summary:
       "When to require human‑in‑the‑loop, what to log, and how to audit outputs across teams.",
     category: "AI Governance",
-    date: "2025-10-04",
-    readMinutes: 4,
-  },
-  {
-    id: "platform-blueprints-golden-paths",
-    title: "Golden Paths That Actually Get Used",
-    summary:
-      "When to require human‑in‑the‑loop, what to log, and how to audit outputs across teams.",
-    category: "AI Governance",
-    date: "2025-10-04",
-    readMinutes: 4,
-  },
-  {
-    id: "ai-platform-roi-scorecards",
-    title: "AI Platform ROI Scorecards: Ship Value Every Quarter",
-    summary: "Tie platform work to adoption, golden paths, and business KPIs with simple scorecards.",
-    category: "AI Strategy",
-    date: "2025-10-06",
+    date: "2025-09-29",
     readMinutes: 5,
   },
   {
-    id: "secure-ml-supply-chain",
-    title: "Secure ML Supply Chain: SBOMs, Lineage, Egress Controls",
-    summary: "Proven controls for datasets, models, and inference—track provenance and lock egress.",
-    category: "Security",
-    date: "2025-10-06",
-    readMinutes: 6,
-  },
-  {
-    id: "enterprise-rag-blueprint-v2",
-    title: "Enterprise RAG v2: Freshness, Hybrid Search, Reliable Evals",
-    summary: "Blueprint for stable quality: versioned chunks, hybrid retrievers, KPI‑linked evals.",
-    category: "GenAI",
-    date: "2025-10-06",
-    readMinutes: 7,
-  },
-  {
-    id: "rag-freshness-strategies",
-    title: "RAG Freshness Strategies",
-    summary: "Invalidate staleness with versioned chunks, TTLs, and async warmups.",
-    category: "Risk & Compliance",
-    date: "2025-09-29",
-    readMinutes: 6,
-  },
-  {
-    id: "ai-governance-rubric",
-    title: "A Lightweight Rubric for AI Governance Decisions",
+    id: "edge-cache-invalidation",
+    title: "Edge Cache Invalidation Strategies That Won't Wake You Up",
     summary:
-      "Decision criteria for when to add controls, how to validate, and who owns risk.",
-    category: "Risk & Compliance",
-    date: "2025-09-29",
-    readMinutes: 6,
-  },
-  {
-    id: "reliable-real-time-pipelines",
-    title: "Building Reliable Real‑Time Data Pipelines",
-    summary:
-      "Exactly‑once semantics, schema evolution, and backpressure handling in streaming systems.",
-    category: "Data Engineering",
-    date: "2025-09-29",
-    readMinutes: 7,
-  },
-  {
-    id: "llm-guardrails-prod",
-    title: "Shipping LLM Guardrails Without Killing Velocity",
-    summary:
-      "Policy-as-code, prompt hygiene, and eval gates that scale from POC to prod.",
-    category: "GenAI",
-    date: "2025-10-04",
-    readMinutes: 5,
-  },
-  {
-    id: "serverless-warm-pools-playbook",
-    title: "Serverless Warm Pools: Cut Cold Starts, Not Corners",
-    summary:
-      "Adaptive warmers, concurrency hints, and budgets to keep P95 low without overspend.",
+      "Versioned keys, background warming, and circuit breakers for resilient edge experiences.",
     category: "Architecture",
-    date: "2025-09-30",
-    readMinutes: 4,
-  },
-  {
-    id: "crm-grounded-prompts",
-    title: "Grounded Prompts with CRM Context: Sales Copilots That Convert",
-    summary:
-      "Reference opportunities, stakeholders, and last touches to improve reply quality and close rates.",
-    category: "Sales AI",
-    date: "2025-09-30",
+    date: "2025-09-28",
     readMinutes: 6,
   },
   {
@@ -219,7 +118,7 @@ export const latestInsights: InsightArticle[] = [
   },
   {
     id: "kubernetes-cost-guardrails",
-    title: "Kubernetes Cost Guardrails That Engineers Don’t Hate",
+    title: "Kubernetes Cost Guardrails That Engineers Don't Hate",
     summary:
       "Limit waste with sensible defaults: requests/limits, QoS, autoscaling, and cost-aware CI policies.",
     category: "Cloud",
@@ -228,7 +127,7 @@ export const latestInsights: InsightArticle[] = [
   },
   {
     id: "ciso-zero-trust-scorecard",
-    title: "A CISO’s Zero‑Trust Scorecard",
+    title: "A CISO's Zero‑Trust Scorecard",
     summary:
       "Measure progress with identity controls, least privilege, continuous verification, and blast‑radius limits.",
     category: "Security",
@@ -246,22 +145,12 @@ export const latestInsights: InsightArticle[] = [
   },
   {
     id: "analytics-ltv-playbook",
-    title: "An Operator’s Playbook for LTV:CPA Ratio",
+    title: "An Operator's Playbook for LTV:CPA Ratio",
     summary:
       "Instrumentation, cohorting, and experimentation tactics to consistently improve unit economics.",
     category: "Product Analytics",
-    
     date: "2025-09-29",
-    readMinutes: 7,
-  },
-  {
-    id: "data-contracts-in-practice",
-    title: "Data Contracts in Practice: Stop Breaking Your Dashboards",
-    summary:
-      "Contract-first schemas, change management, and lineage that make analytics reliable again.",
-    category: "Data Engineering",
-    date: "2025-09-28",
-    readMinutes: 7,
+    readMinutes: 6,
   },
   {
     id: "secure-ml-pipelines",
@@ -276,7 +165,7 @@ export const latestInsights: InsightArticle[] = [
     id: "cloud-cost-optimization",
     title: "Cloud Cost Optimization: 9 Wins in 90 Days",
     summary:
-      "How we helped teams reduce cloud spend by 32% on average without hurting performance.",
+      "How we helped three clients reduce cloud spend by 32% on average without sacrificing performance.",
     category: "Cloud",
     date: "2025-08-05",
     readMinutes: 5,
@@ -285,145 +174,136 @@ export const latestInsights: InsightArticle[] = [
     id: "data-governance-starter",
     title: "Data Governance Starter Guide for Mid‑Market Teams",
     summary:
-      "A no‑nonsense playbook for data quality, lineage, and access controls.",
+      "A no‑nonsense playbook for data quality, lineage, and access controls you can adopt this quarter.",
     category: "Data",
     date: "2025-07-18",
     readMinutes: 8,
   },
   {
-    id: "ai-workflow-automation-2025-trends",
-    title: "AI Workflow Automation: 2025 Trends That Will Transform Business",
+    id: "ai-automation-roi-breakdown",
+    title: "AI Automation ROI: Real Numbers from 50+ Implementations",
     summary:
-      "Discover the latest trends in AI workflow automation that are reshaping how businesses operate and compete in 2025.",
-    category: "AI & Automation",
-    date: "2025-01-17",
+      "Detailed breakdown of cost savings, efficiency gains, and revenue increases from AI workflow automation across industries.",
+    category: "ROI Analysis",
+    date: "2025-01-25",
     readMinutes: 6,
   },
   {
-    id: "quantum-computing-business-ready",
-    title: "Quantum Computing: When Will It Be Business-Ready?",
+    id: "micro-saas-market-opportunity",
+    title: "The $50B Micro SAAS Market: Where to Invest in 2025",
     summary:
-      "An honest assessment of quantum computing's current capabilities and realistic timeline for business applications.",
-    category: "Quantum Computing",
-    date: "2025-01-17",
+      "Market analysis revealing the fastest-growing micro SAAS segments and investment opportunities for businesses.",
+    category: "Market Research",
+    date: "2025-01-24",
     readMinutes: 7,
   },
   {
-    id: "edge-ai-real-world-deployments",
-    title: "Edge AI: Real-World Deployments That Are Working Today",
+    id: "ai-virtual-assistant-adoption",
+    title: "AI Virtual Assistant Adoption: 95% Customer Satisfaction Rates",
     summary:
-      "Case studies from manufacturing, healthcare, and retail showing how edge AI is delivering measurable results.",
-    category: "Edge Computing",
-    date: "2025-01-16",
-    readMinutes: 8,
-  },
-  {
-    id: "zero-trust-implementation-guide",
-    title: "Zero Trust Implementation: A Practical Guide for 2025",
-    summary:
-      "Step-by-step guide to implementing Zero Trust security architecture without breaking your existing workflows.",
-    category: "Security",
-    date: "2025-01-15",
-    readMinutes: 9,
-  },
-  {
-    id: "ai-virtual-assistant-roi",
-    title: "AI Virtual Assistants: Measuring ROI and Business Impact",
-    summary:
-      "How to quantify the business value of AI virtual assistants and ensure your investment delivers real results.",
-    category: "AI & Automation",
-    date: "2025-01-14",
+      "Case studies showing how companies achieved 95% customer satisfaction and 40% cost reduction with AI assistants.",
+    category: "Customer Experience",
+    date: "2025-01-23",
     readMinutes: 5,
   },
   {
-    id: "micro-saas-platform-selection",
-    title: "Choosing the Right Micro SAAS Platforms for Your Business",
+    id: "data-analytics-transformation",
+    title: "Data Analytics Transformation: From Insights to Action",
     summary:
-      "A framework for evaluating and selecting micro SAAS platforms that align with your business goals and budget.",
-    category: "Technology",
-    date: "2025-01-13",
-    readMinutes: 6,
-  },
-  {
-    id: "data-analytics-ai-transformation",
-    title: "Data Analytics Transformation: From Static Reports to AI Insights",
-    summary:
-      "How AI is transforming traditional data analytics into dynamic, predictive, and actionable business intelligence.",
+      "How AI-powered analytics platforms are helping businesses make 60% better decisions and reduce risks by 70%.",
     category: "Data Analytics",
-    date: "2025-01-12",
+    date: "2025-01-22",
+    readMinutes: 8,
+  },
+  {
+    id: "ai-implementation-timeline",
+    title: "AI Implementation Timeline: From Zero to ROI in 90 Days",
+    summary:
+      "Step-by-step roadmap for implementing AI solutions with realistic timelines and milestone expectations.",
+    category: "Implementation",
+    date: "2025-01-21",
+    readMinutes: 6,
+  },
+  {
+    id: "automation-cost-savings-report",
+    title: "Automation Cost Savings Report: $2.3M Annual Waste Eliminated",
+    summary:
+      "Comprehensive analysis of how AI automation eliminates manual process waste and delivers measurable ROI.",
+    category: "Cost Optimization",
+    date: "2025-01-20",
     readMinutes: 7,
   },
   {
-    id: "cybersecurity-threat-landscape-2025",
-    title: "2025 Cybersecurity Threat Landscape: What Businesses Need to Know",
+    id: "ai-security-framework-2025",
+    title: "AI Security Framework 2025: Protecting Intelligent Systems",
     summary:
-      "The evolving threat landscape and emerging security challenges that businesses must prepare for in 2025.",
+      "Essential security measures and compliance requirements for AI systems in enterprise environments.",
     category: "Security",
-    date: "2025-01-11",
+    date: "2025-01-19",
+    readMinutes: 9,
+  },
+  {
+    id: "competitive-advantage-ai-strategies",
+    title: "Competitive Advantage Through AI: Strategic Implementation",
+    summary:
+      "How market leaders are using AI to gain competitive advantage and capture market share in 2025.",
+    category: "Strategy",
+    date: "2025-01-18",
     readMinutes: 8,
   },
   {
-    id: "cloud-edge-hybrid-architecture",
-    title: "Cloud-Edge Hybrid Architecture: Best Practices for 2025",
+    id: "ai-roi-success-stories",
+    title: "AI ROI Success Stories: 200-500% Returns Achieved",
     summary:
-      "Designing and implementing hybrid cloud-edge architectures that optimize performance, cost, and security.",
-    category: "Cloud Computing",
-    date: "2025-01-10",
+      "Real-world examples of companies achieving exceptional ROI through strategic AI implementation.",
+    category: "Success Stories",
+    date: "2025-01-17",
+    readMinutes: 10,
+  },
+  {
+    id: "micro-saas-growth-metrics",
+    title: "Micro SAAS Growth Metrics: Scaling Strategies That Work",
+    summary:
+      "Key performance indicators and growth strategies for scaling micro SAAS platforms successfully.",
+    category: "Growth Strategy",
+    date: "2025-01-16",
     readMinutes: 6,
   },
   {
-    id: "ai-ethics-business-implementation",
-    title: "AI Ethics in Business: Practical Implementation Guidelines",
+    id: "ai-workflow-automation-benefits",
+    title: "AI Workflow Automation: 80% Task Reduction Achieved",
     summary:
-      "How to implement ethical AI practices in your business operations while maintaining competitive advantage.",
-    category: "AI Ethics",
-    date: "2025-01-09",
+      "Quantified benefits of AI workflow automation including time savings, cost reduction, and efficiency gains.",
+    category: "Automation",
+    date: "2025-01-15",
+    readMinutes: 5,
+  },
+  {
+    id: "future-of-work-ai-impact",
+    title: "The Future of Work: AI's Impact on Industry Transformation",
+    summary:
+      "Analysis of how AI is reshaping work across industries and the opportunities it creates for businesses.",
+    category: "Future of Work",
+    date: "2025-01-14",
     readMinutes: 7,
   },
   {
-    id: "iot-security-best-practices",
-    title: "IoT Security: Best Practices for Connected Device Protection",
+    id: "predictive-analytics-business-value",
+    title: "Predictive Analytics: Turning Data into Business Value",
     summary:
-      "Comprehensive security strategies for protecting IoT devices and networks from emerging threats.",
-    category: "IoT Security",
-    date: "2025-01-08",
-    readMinutes: 6,
-  },
-  {
-    id: "blockchain-business-applications",
-    title: "Blockchain Beyond Cryptocurrency: Real Business Applications",
-    summary:
-      "Exploring practical blockchain applications in supply chain, finance, and digital identity management.",
-    category: "Blockchain",
-    date: "2025-01-07",
+      "How predictive analytics and AI are helping businesses forecast trends and optimize operations for maximum profit.",
+    category: "Predictive Analytics",
+    date: "2025-01-13",
     readMinutes: 8,
   },
   {
-    id: "5g-business-transformation",
-    title: "5G and Business Transformation: Opportunities and Challenges",
+    id: "ai-implementation-best-practices",
+    title: "AI Implementation Best Practices: From Planning to Production",
     summary:
-      "How 5G technology is enabling new business models and transforming industries across the globe.",
-    category: "5G Technology",
-    date: "2025-01-06",
-    readMinutes: 7,
-  },
-  {
-    id: "digital-transformation-2025",
-    title: "Digital Transformation in 2025: Trends and Strategies",
-    summary:
-      "The latest trends in digital transformation and how businesses can adapt to stay competitive.",
-    category: "Digital Transformation",
-    date: "2025-01-05",
-    readMinutes: 6,
-  },
-  {
-    id: "genai-guardrails-in-production",
-    title: "GenAI Guardrails in Production: Policy Tests That Scale",
-    summary:
-      "From offline eval suites to online canaries: patterns that keep quality and safety high as usage grows.",
-    category: "GenAI",
-    date: "2025-09-29",
-    readMinutes: 8,
+      "Comprehensive guide to successfully implementing AI solutions with practical checklists and proven methodologies.",
+    category: "Implementation",
+    date: "2025-01-12",
+    readMinutes: 9,
   },
   {
     id: "ai-automation-roi-calculator",
@@ -432,68 +312,160 @@ export const latestInsights: InsightArticle[] = [
       "A practical framework for calculating the return on investment from AI automation initiatives, with real-world case studies and templates.",
     category: "AI Strategy",
     date: "2025-09-30",
-    readMinutes: 5,
+    readMinutes: 8,
   },
   {
-    id: "zero-downtime-cutover-checklist",
-    title: "Zero‑Downtime Cutover Checklist",
+    id: "cloud-native-microservices-2025",
+    title: "Cloud-Native Microservices: Patterns for 2025",
     summary:
-      "Dual‑write, read‑shadowing, backfills, and safe cutovers with rollback checkpoints.",
-    category: "Platform Engineering",
+      "Essential patterns and practices for building scalable, resilient microservices architectures in modern cloud environments.",
+    category: "Architecture",
     date: "2025-09-30",
-    readMinutes: 4,
+    readMinutes: 10,
   },
   {
-    id: "ai-sales-copilot-insights",
-    title: "AI Sales Copilot: Grounded Prompts, CRM Context, Reliable Evals",
+    id: "enterprise-ai-governance-framework",
+    title: "Enterprise AI Governance: From Policy to Practice",
     summary:
-      "How to wire CRMs, build prompt libraries, and add evals that boost win‑rates without risk.",
-    category: "AI Strategy",
-    date: "2025-09-30",
-    readMinutes: 5,
-  },
-  {
-    id: "ai-governance-at-scale-2025",
-    title: "AI Governance at Scale: Policies That Enable Speed",
-    summary:
-      "A pragmatic model for approvals, policy tests, and observability that unlocks faster AI delivery.",
+      "A pragmatic governance framework that balances speed, safety, and accountability for AI at scale.",
     category: "AI Governance",
     date: "2025-09-30",
-    readMinutes: 6,
+    readMinutes: 9,
   },
   {
-    id: "ai-scorecards-that-ship",
-    title: "AI Scorecards That Ship",
-    summary: "Tie initiatives to KPIs with lightweight scorecards and weekly operating rhythms.",
-    category: "AI Strategy",
-    date: "2025-10-05",
-    readMinutes: 4,
-  },
-  {
-    id: "edge-feature-flags",
-    title: "Edge Feature Flags: Zero‑Regret Rollouts",
-    summary: "Canary by segment and geography with instant rollback and budget caps at the edge.",
-    category: "Architecture",
-    date: "2025-10-05",
-    readMinutes: 5,
-  },
-  {
-    id: "cloud-governance-scorecards",
-    title: "Cloud Governance with Scorecards",
-    summary: "Turn policies into dashboards and PR checks—spend less time arguing, more shipping.",
-    category: "Platform Engineering",
-    date: "2025-10-05",
-    readMinutes: 4,
-  },
-  {
-    id: "ai-security-essentials",
-    title: "AI Security Essentials",
-    summary: "Essential security practices for AI systems, covering model protection, data privacy, and adversarial defense strategies.",
+    id: "ai-security-best-practices",
+    title: "AI Security Best Practices: Protecting Your AI Systems",
+    summary:
+      "Essential security practices for AI systems, covering model protection, data privacy, and adversarial defense strategies.",
     category: "Security",
     date: "2025-01-21",
     readMinutes: 11,
   },
+  {
+    id: "real-time-data-pipelines-blueprint",
+    title: "Real-Time Data Pipelines: Blueprint for Production Success",
+    summary:
+      "Architecture patterns, monitoring strategies, and reliability patterns for streaming data at enterprise scale.",
+    category: "Data Engineering",
+    date: "2025-01-21",
+    readMinutes: 7,
+  },
+  {
+    id: "platform-scorecards-adoption",
+    title: "Platform Scorecards: Metrics That Actually Drive Team Adoption",
+    summary:
+      "Designing scorecards that align platform work with business outcomes and accelerate developer productivity.",
+    category: "Platform Engineering",
+    date: "2025-01-21",
+    readMinutes: 6,
+  },
+  {
+    id: "genai-production-deployment",
+    title: "GenAI in Production: Deployment Patterns That Scale",
+    summary:
+      "From model serving to monitoring: practical patterns for deploying generative AI applications in production.",
+    category: "GenAI",
+    date: "2025-01-21",
+    readMinutes: 8,
+  },
+  {
+    id: "microservices-observability-real-world",
+    title: "Microservices Observability: Real-World Implementation Patterns",
+    summary:
+      "Distributed tracing, metrics, and logging strategies that actually work in complex microservices environments.",
+    category: "Observability",
+    date: "2025-01-20",
+    readMinutes: 7,
+  },
+  {
+    id: "cloud-native-security-patterns",
+    title: "Cloud-Native Security: Protecting Modern Applications",
+    summary:
+      "Security strategies for containerized applications, serverless functions, and cloud-native infrastructure.",
+    category: "Security",
+    date: "2025-01-20",
+    readMinutes: 6,
+  },
+  {
+    id: "ai-automation-roi-metrics",
+    title: "AI Automation ROI: Measuring What Actually Matters",
+    summary:
+      "Key metrics and frameworks for quantifying the business impact of AI workflow automation investments.",
+    category: "AI & Automation",
+    date: "2025-01-19",
+    readMinutes: 5,
+  },
+  {
+    id: "edge-computing-use-cases",
+    title: "Edge Computing: Real-World Use Cases That Drive Value",
+    summary:
+      "Practical applications of edge computing across industries, from IoT to real-time analytics.",
+    category: "Edge Computing",
+    date: "2025-01-19",
+    readMinutes: 6,
+  },
+  {
+    id: "data-governance-implementation",
+    title: "Data Governance: Practical Implementation Strategies",
+    summary:
+      "Step-by-step approach to implementing data governance that balances compliance with business agility.",
+    category: "Data Governance",
+    date: "2025-01-18",
+    readMinutes: 8,
+  },
+  {
+    id: "fintech-ai-innovations",
+    title: "FinTech AI Innovations: Transforming Financial Services",
+    summary:
+      "How AI is revolutionizing financial services through intelligent automation and personalized experiences.",
+    category: "FinTech",
+    date: "2025-01-18",
+    readMinutes: 7,
+  },
+  {
+    id: "sustainable-tech-trends",
+    title: "Sustainable Technology: Green IT Trends for 2025",
+    summary:
+      "Emerging trends in sustainable technology practices that reduce environmental impact while maintaining performance.",
+    category: "Sustainability",
+    date: "2025-01-17",
+    readMinutes: 5,
+  },
+  {
+    id: "ai-chatbot-best-practices",
+    title: "AI Chatbots: Best Practices for Enterprise Implementation",
+    summary:
+      "Design patterns, training strategies, and deployment approaches for enterprise-grade AI chatbots.",
+    category: "AI & Automation",
+    date: "2025-01-17",
+    readMinutes: 6,
+  },
+  {
+    id: "quantum-computing-business-applications",
+    title: "Quantum Computing: Business Applications Beyond Hype",
+    summary:
+      "Realistic assessment of quantum computing applications that are ready for business implementation today.",
+    category: "Quantum Computing",
+    date: "2025-01-16",
+    readMinutes: 7,
+  },
+  {
+    id: "cybersecurity-ai-defense",
+    title: "AI-Powered Cybersecurity: Next-Generation Defense Strategies",
+    summary:
+      "How AI is enhancing cybersecurity through intelligent threat detection, automated response, and predictive analytics.",
+    category: "Cybersecurity",
+    date: "2025-01-16",
+    readMinutes: 8,
+  },
+  {
+    id: "devops-automation-trends",
+    title: "DevOps Automation: Trends Shaping the Future of Software Delivery",
+    summary:
+      "Latest trends in DevOps automation, from AI-powered CI/CD to intelligent infrastructure management.",
+    category: "DevOps",
+    date: "2025-01-15",
+    readMinutes: 6,
+  },
 ];
-
-export default latestInsights;
 

@@ -1,29 +1,17 @@
 import React, { useState } from 'react';
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 import {;
   Brain, Building, Target, Cpu, Shield,;
   Check, Phone, Mail, MapPin,;
   TrendingUp, Zap, Globe;
 } from 'lucide-react',;
 // Import our new service data;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 import { advancedAIMLServices } from '../data/2025-advanced-ai-ml-services';
 import { advancedCybersecurityServices } from '../data/2025-advanced-cybersecurity-services';
 import { advancedCloudDevOpsServices2025 } from '../data/2025-advanced-cloud-devops-services';
 import { industrySpecificSolutions } from '../data/2025-industry-specific-solutions';
 import { emergingTechnologyServices } from '../data/2025-emerging-technology-services';
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 const ComprehensiveServicesShowcase2025 = () => {;
   const [activeTab, setActiveTab] = useState('all'),;
 // Helper function to get service pricing;
@@ -200,15 +188,6 @@ const allServices = [;
 </li>"
                               <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />;"
 
-<<<<<<< HEAD
-
-                            </li>;
-                        </ul>;
-
-=======
-                            </li>;
-                        </ul>;
->>>>>>> origin/cursor/delete-old-data-records-6bba
 </div>`;
                         <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service.category)} text-white`}>;
 </span>"
@@ -253,14 +232,6 @@ const allServices = [;
             </h2>;"
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">;"
             </p>;
-<<<<<<< HEAD
-=======
-              whileInView={{ opacity: 1;, y: 0 ;}}
-              transition={{ duration: 0.5 ;}}"
-              className="text-center p-6";"
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">;"
-                <Brain className="w-8 h-8 text-blue-600" />;"
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
               <h3 className="text-xl font-semibold text-gray-900 mb-2">AI-Powered Innovation</h3>;""
@@ -270,9 +241,3 @@ const allServices = [;
                 <Shield className="w-8 h-8 text-green-600" />;"
 
 
-<<<<<<< HEAD
-
-
-=======
-    </div>;"`;
->>>>>>> origin/cursor/delete-old-data-records-6bba

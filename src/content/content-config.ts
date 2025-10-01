@@ -72,54 +72,6 @@ export interface PromotionalBanner {
 // Blog Posts Configuration
 export const blogPosts: BlogPost[] = [
   {
-    id: 'ai-platform-engineering-2025',
-    title: 'AI Platform Engineering 2025: Scorecards, Trains, and Golden Paths',
-    excerpt: 'Practical platform patterns that link capabilities to adoption, SLOs, and ROI.',
-    date: 'October 8, 2025',
-    category: 'Platform Engineering',
-    readTime: '9 min',
-    image: '🛤️',
-    featured: true,
-    slug: '/blog/ai-platform-engineering-2025',
-    tags: ['Platform', 'ROI', 'Golden Paths']
-  },
-  {
-    id: 'serverless-inference-cost-playbook-2025',
-    title: 'Serverless Inference Cost Playbook: Latency Budgets Without Bill Shock',
-    excerpt: 'Concurrency shaping, tiered models, and result caching to cut spend 35–60%.',
-    date: 'October 8, 2025',
-    category: 'GenAI',
-    readTime: '8 min',
-    image: '🧰',
-    featured: true,
-    slug: '/blog/serverless-inference-cost-playbook-2025',
-    tags: ['GenAI', 'Cost', 'Serverless']
-  },
-  {
-    id: 'cloud-finops-guardrails-2025',
-    title: 'Cloud FinOps Guardrails Engineers Actually Use',
-    excerpt: 'PR checks, budgets, and alerts that reduce waste while keeping teams fast.',
-    date: 'October 8, 2025',
-    category: 'Cloud',
-    readTime: '7 min',
-    image: '💸',
-    featured: true,
-    slug: '/blog/cloud-finops-guardrails-2025',
-    tags: ['Cloud', 'FinOps', 'Guardrails']
-  },
-  {
-    id: 'enterprise-rag-v2-2025',
-    title: 'Enterprise RAG v2: Freshness Windows, Guardrails, and KPIs',
-    excerpt: 'Design RAG that stays accurate with freshness TTLs, evals, and safe tools.',
-    date: 'October 8, 2025',
-    category: 'GenAI',
-    readTime: '9 min',
-    image: '🏢',
-    featured: true,
-    slug: '/blog/enterprise-rag-v2-2025',
-    tags: ['GenAI', 'RAG', 'Evaluation']
-  },
-  {
     id: 'ai-revolution-2025',
     title: 'AI Revolution 2025: The Complete Business Transformation Guide',
     excerpt: 'Discover how AI is reshaping industries and creating unprecedented opportunities for growth in 2025.',
@@ -202,80 +154,6 @@ export const blogPosts: BlogPost[] = [
     featured: false,
     slug: '/blog/ai-virtual-assistants-customer-service',
     tags: ['AI', 'Virtual Assistant', 'Customer Service', 'NLP']
-  }
-  ,
-  {
-    id: 'serverless-inference-costs-2025',
-    title: 'Serverless Inference Cost Playbook 2025',
-    excerpt: 'Cut inference spend 40–70% with adaptive batching, warm pools, and tiered quality without hurting P95.',
-    date: 'October 05, 2025',
-    category: 'AI Infrastructure',
-    readTime: '9 min',
-    image: '🧰',
-    featured: true,
-    slug: '/blog/serverless-inference-cost-playbook-2025',
-    tags: ['Serverless', 'Inference', 'Cost', 'AI Infra']
-  },
-  {
-    id: 'production-rag-architectures-2025',
-    title: 'RAG Architectures That Actually Work in Production',
-    excerpt: 'Proven patterns for chunking, freshness, hybrid search, and evals that keep quality high.',
-    date: 'October 04, 2025',
-    category: 'GenAI',
-    readTime: '12 min',
-    image: '📚',
-    featured: true,
-    slug: '/blog/production-rag-architectures-2025',
-    tags: ['RAG', 'Vector Search', 'Evals', 'GenAI']
-  },
-  {
-    id: 'secure-genai-guardrails-2025',
-    title: 'Secure GenAI: Policy‑First Guardrails That Scale',
-    excerpt: 'Prompt isolation, PII redaction, and network egress controls—ship safely without slowing teams.',
-    date: 'October 03, 2025',
-    category: 'Security',
-    readTime: '8 min',
-    image: '🛡️',
-    featured: false,
-    slug: '/blog/secure-genai-guardrails-2025',
-    tags: ['GenAI', 'Security', 'Compliance']
-  }
-  ,
-  {
-    id: 'secure-ml-supply-chain-2026',
-    title: 'Secure ML Supply Chain 2026: SBOMs, Attestations, and Drift Guards',
-    excerpt: 'Continuously track models, datasets, and prompts with signed SBOMs and policy checks.',
-    date: 'October 13, 2025',
-    category: 'Security',
-    readTime: '7 min',
-    image: '🔐',
-    featured: true,
-    slug: '/blog/secure-ml-supply-chain-2026',
-    tags: ['ML', 'Supply Chain', 'SBOM', 'Security']
-  },
-  {
-    id: 'genai-routing-blueprint-2026',
-    title: 'GenAI Routing Blueprint 2026: Quality Tiers, Caches, and Budgets',
-    excerpt: 'Route traffic by SLA with tiered models, edge caches, and KPI‑linked budgets.',
-    date: 'October 13, 2025',
-    category: 'GenAI',
-    readTime: '8 min',
-    image: '🧭',
-    featured: true,
-    slug: '/blog/genai-routing-blueprint-2026',
-    tags: ['Routing', 'Quality Tiers', 'Budgets', 'Caching']
-  },
-  {
-    id: 'golden-paths-roi-2026',
-    title: 'Golden Paths ROI 2026: Scorecards that Prove Platform Value',
-    excerpt: 'Link developer journeys to SLOs, adoption, and revenue with actionable scorecards.',
-    date: 'October 13, 2025',
-    category: 'Platform Engineering',
-    readTime: '7 min',
-    image: '🛤️',
-    featured: true,
-    slug: '/blog/golden-paths-roi-2026',
-    tags: ['Golden Paths', 'Scorecards', 'ROI']
   }
 ];
 
@@ -503,32 +381,6 @@ export const services: Service[] = [
 // Promotional Banners Configuration
 export const promotionalBanners: PromotionalBanner[] = [
   {
-    id: 'fresh-oct-8-2025',
-    message: '✨ New: AI Platform Engineering, Serverless Cost Playbook, Cloud FinOps Guardrails',
-    ctaText: 'Read now',
-    ctaLink: '/blog',
-    backgroundColor: 'bg-gradient-to-r from-indigo-700 to-purple-700',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: true,
-    hideAfter: 20,
-    active: true,
-    priority: 0
-  },
-  {
-    id: 'fresh-oct-12-2025',
-    message: '🚀 New: AI Platform SLOs, RAG Evals in the Loop, Edge Flags 2026',
-    ctaText: 'Explore new content',
-    ctaLink: '/blog',
-    backgroundColor: 'bg-gradient-to-r from-indigo-700 to-purple-700',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: true,
-    hideAfter: 18,
-    active: true,
-    priority: 0
-  },
-  {
     id: 'fresh-content-oct-2025',
     message: '✨ New: Governance Scorecards 2026, Freshness‑Aware RAG v2, Edge Flags 2026',
     ctaText: 'Read the latest',
@@ -540,45 +392,6 @@ export const promotionalBanners: PromotionalBanner[] = [
     hideAfter: 15,
     active: true,
     priority: 0
-  },
-  {
-    id: 'agentic-workflows-2026-banner',
-    message: '🧩 Agentic Workflows Blueprint 2026: Tools, Traces, Policy Tests',
-    ctaText: 'Read Blueprint',
-    ctaLink: '/blog/agentic-workflows-blueprint-2026',
-    backgroundColor: 'bg-gradient-to-r from-sky-600 to-indigo-600',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: true,
-    hideAfter: 16,
-    active: true,
-    priority: 0
-  },
-  {
-    id: 'edge-llm-caching-2025-banner',
-    message: '⚡ Edge LLM Caching: Sub‑100ms Prompts with Tiered KV',
-    ctaText: 'Explore Guide',
-    ctaLink: '/blog/edge-llm-caching-blueprint-2025',
-    backgroundColor: 'bg-gradient-to-r from-orange-600 to-amber-600',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: true,
-    hideAfter: 15,
-    active: true,
-    priority: 1
-  },
-  {
-    id: 'ai-operational-scorecards-2026-banner',
-    message: '📈 AI Operational Scorecards 2026: Guardrails That Drive Outcomes',
-    ctaText: 'See Scorecards',
-    ctaLink: '/blog/ai-operational-scorecards-2026',
-    backgroundColor: 'bg-gradient-to-r from-emerald-600 to-teal-600',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: true,
-    hideAfter: 18,
-    active: true,
-    priority: 1
   },
   {
     id: 'governance-scorecards-2026',
@@ -736,137 +549,6 @@ export const promotionalBanners: PromotionalBanner[] = [
     active: true,
     priority: 3
   }
-  ,
-  {
-    id: 'fresh-oct-13-2025-new',
-    message: '🚀 New: Secure ML Supply Chain, GenAI Routing, Golden Paths ROI',
-    ctaText: 'Explore the latest',
-    ctaLink: '/blog',
-    backgroundColor: 'bg-gradient-to-r from-indigo-700 to-purple-700',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: true,
-    hideAfter: 18,
-    active: true,
-    priority: 0
-  },
-  {
-    id: 'fresh-oct-13-2025',
-    message: '🚀 New: Secure ML Supply Chain, GenAI Routing, Golden Paths ROI',
-    ctaText: 'Explore the latest',
-    ctaLink: '/blog',
-    backgroundColor: 'bg-gradient-to-r from-indigo-700 to-purple-700',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: true,
-    hideAfter: 18,
-    active: true,
-    priority: 0
-  },
-  {
-    id: 'fresh-content-oct-2025',
-    message: '🚀 Fresh: Serverless Inference, Production RAG, Secure GenAI',
-    ctaText: 'Read the latest',
-    ctaLink: '/blog',
-    backgroundColor: 'bg-gradient-to-r from-cyan-600 to-blue-600',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: true,
-    hideAfter: 20,
-    active: true,
-    priority: 0
-  },
-  {
-    id: 'ai-incident-response-playbooks-2025',
-    message: '🛡️ NEW: AI Incident Response Playbooks 2025 - Budgeted Actions & Approvals',
-    ctaText: 'Read Playbooks',
-    ctaLink: '/blog/ai-incident-response-playbooks-2025',
-    backgroundColor: 'bg-gradient-to-r from-red-600 to-orange-600',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: true,
-    hideAfter: 20,
-    active: true,
-    priority: 0
-  },
-  {
-    id: 'privacy-preserving-analytics-2025',
-    message: '🔒 NEW: Privacy-Preserving Analytics - DP-Backed Telemetry You Can Ship Today',
-    ctaText: 'Explore Guide',
-    ctaLink: '/blog/privacy-preserving-analytics-2025',
-    backgroundColor: 'bg-gradient-to-r from-indigo-600 to-purple-600',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: true,
-    hideAfter: 18,
-    active: true,
-    priority: 1
-  },
-  {
-    id: 'edge-llm-caching-2026',
-    message: '⚡ NEW: Edge LLM Caching Blueprint 2026 - Sub-100ms Prompts at Scale',
-    ctaText: 'Read Blueprint',
-    ctaLink: '/blog/edge-llm-caching-blueprint-2026',
-    backgroundColor: 'bg-gradient-to-r from-green-600 to-emerald-600',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: true,
-    hideAfter: 18,
-    active: true,
-    priority: 1
-  },
-  {
-    id: 'ai-autonomous-infrastructure-service',
-    message: '🤖 NEW SERVICE: AI Autonomous Infrastructure Platform - Self-Healing Systems',
-    ctaText: 'Explore Service',
-    ctaLink: '/services/ai-autonomous-infrastructure-platform',
-    backgroundColor: 'bg-gradient-to-r from-blue-600 to-cyan-600',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: true,
-    hideAfter: 22,
-    active: true,
-    priority: 1
-  },
-  {
-    id: 'quantum-ai-hybrid-computing-service',
-    message: '⚛️ NEW SERVICE: Quantum-AI Hybrid Computing - 1000x Faster Problem Solving',
-    ctaText: 'Learn More',
-    ctaLink: '/services/quantum-ai-hybrid-computing',
-    backgroundColor: 'bg-gradient-to-r from-purple-600 to-pink-600',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: true,
-    hideAfter: 22,
-    active: true,
-    priority: 2
-  },
-  {
-    id: 'zero-trust-security-ai-service',
-    message: '🔐 NEW SERVICE: Zero Trust Security with AI - 90% Incident Reduction',
-    ctaText: 'Get Protected',
-    ctaLink: '/services/zero-trust-security-ai',
-    backgroundColor: 'bg-gradient-to-r from-gray-700 to-gray-900',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: true,
-    hideAfter: 22,
-    active: true,
-    priority: 2
-  },
-  {
-    id: 'ai-governance-scorecards-service',
-    message: '📊 NEW SERVICE: AI Governance Scorecards - 100% Compliance Automation',
-    ctaText: 'Start Governance',
-    ctaLink: '/services/ai-governance-scorecards',
-    backgroundColor: 'bg-gradient-to-r from-teal-600 to-cyan-600',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: true,
-    hideAfter: 22,
-    active: true,
-    priority: 3
-  }
 ];
 
 // Utility functions for content management
@@ -892,17 +574,11 @@ export const getContentByTag = (tag: string) => {
   };
 };
 
-// Import new content
-import { newBlogPosts2025, featuredBlogPosts, trendingBlogPosts } from './new-blog-posts-2025';
-import { newServices2025, featuredServices, trendingServices } from './new-services-2025';
-
 export const getRecentContent = (limit: number = 3) => {
   const allContent = [
     ...blogPosts.map(post => ({ ...post, type: 'blog' as const })),
-    ...newBlogPosts2025.map(post => ({ ...post, type: 'blog' as const, date: post.publishedAt })),
     ...caseStudies.map(study => ({ ...study, type: 'case-study' as const })),
-    ...services.map(service => ({ ...service, type: 'service' as const })),
-    ...newServices2025.map(service => ({ ...service, type: 'service' as const, date: '2025-01-30' }))
+    ...services.map(service => ({ ...service, type: 'service' as const }))
   ];
   
   return allContent
@@ -913,6 +589,3 @@ export const getRecentContent = (limit: number = 3) => {
     })
     .slice(0, limit);
 };
-
-// Export new content for use in components
-export { newBlogPosts2025, featuredBlogPosts, trendingBlogPosts, newServices2025, featuredServices, trendingServices };

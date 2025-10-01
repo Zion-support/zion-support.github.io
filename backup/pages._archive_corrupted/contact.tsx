@@ -7,7 +7,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 
-import React from 'react';
+
 
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
@@ -35,7 +35,7 @@ pr-12325
   MessageCircle,
   Globe
 } from 'lucide-react';
-import React, { useState } from 'react';
+
 import { Helmet } from 'react-helmet-async';
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
 const SEO = dynamic(() => import('../src/components/SEO'), { "ssr": false })
