@@ -680,6 +680,18 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
 // Oct 1, 2025 – Promote three new articles across the site
 enhancedPromotionalBanners.unshift(
   {
+    id: 'oct-08-value-realization-2025',
+    title: '🚀 NEW TODAY: Enterprise AI Value Realization — 90 Days to Outcomes',
+    description: 'KPI scorecards, evaluator gates, tiered routing + caches, and rollback-first ops.',
+    ctaText: 'Read the 90-Day Blueprint',
+    ctaLink: '/blog/enterprise-ai-value-realization-2025-10-08',
+    variant: 'success',
+    icon: '🚀',
+    featured: true,
+    priority: 0,
+    startDate: '2025-10-08'
+  },
+  {
     id: 'ai-self-healing-infra-banner-2025',
     title: '🔄 NEW: AI Self-Healing Infrastructure — 99.99% Uptime',
     description: 'Autonomous infra detects and fixes issues in real time. 95% MTTR reduction with KPI‑linked canaries and instant rollback.',

@@ -14,6 +14,21 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    id: '401',
+    title: 'Enterprise AI Value Realization: 90 Days to Outcomes',
+    slug: 'enterprise-ai-value-realization-2025-10-08',
+    excerpt:
+      'A pragmatic blueprint to turn AI initiatives into shipped outcomes in 90 days—governed, measurable, and cost-aware.',
+    content:
+      'Most AI programs stall on pilots. This guide shows how to ship outcomes in 90 days with KPI-linked scorecards, evaluator-driven release gates, tiered routing + caches for predictable cost, and rollback-first operations. Includes rollout plan, org rituals, and dashboards that align product, platform, and security.',
+    featuredImage: '/images/blog/enterprise-ai-value-realization-2025.jpg',
+    category: 'AI',
+    tags: ['Execution', 'Scorecards', 'Guardrails', 'Cost'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-08',
+    readTime: 7,
+  },
+  {
     id: '309',
     title: 'AI Reliability Blueprints 2027: Evaluators, Budgets, Instant Rollback',
     slug: 'ai-reliability-blueprints-2027-2025-10-02',

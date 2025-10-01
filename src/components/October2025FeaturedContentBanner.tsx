@@ -5,6 +5,20 @@ import { Sparkles, ArrowRight, TrendingUp, Package, Brain } from 'lucide-react';
 const October2025FeaturedContentBanner = () => {
   const featuredContent = [
     {
+      title: "Enterprise AI Value Realization",
+      description: "90 days to shipped outcomes: scorecards, evaluator gates, tiered routing",
+      link: "/blog/enterprise-ai-value-realization-2025-10-08",
+      icon: Brain,
+      gradient: "from-indigo-600 to-blue-600",
+      bgGradient: "from-indigo-900/40 to-blue-900/40",
+      borderColor: "border-indigo-500/30",
+      stats: [
+        { value: "90d", label: "To Outcomes" },
+        { value: "KPI", label: "Linked Gates" },
+        { value: "$$", label: "Predictable Cost" }
+      ]
+    },
+    {
       title: "Enterprise Neural Orchestration Platform",
       description: "89% faster AI deployment, 94% cost reduction, $12.4M annual savings",
       link: "/blog/ai-2025-october-enterprise-neural-orchestration-platform",
