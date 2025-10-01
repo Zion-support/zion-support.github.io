@@ -202,7 +202,7 @@ const Home = () => {
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30 hover:border-blue-400/60 transition-all hover:scale-105 hover:shadow-xl">
                 <div className="text-blue-400 text-sm font-semibold mb-2 uppercase">🚀 Service Launch</div>
                 <h3 className="text-lg font-bold text-white mb-3">Edge AI Platform</h3>
-                <p className="text-blue-100 text-sm mb-4">Deploy intelligence at the edge with <10ms latency. Starting at $4,999/mo</p>
+                <p className="text-blue-100 text-sm mb-4">Deploy intelligence at the edge with &lt;10ms latency. Starting at $4,999/mo</p>
                 <Link 
                   to="/services/ai-2025-october-edge-ai-platform" 
                   className="inline-flex items-center text-blue-300 hover:text-white font-semibold text-sm"
