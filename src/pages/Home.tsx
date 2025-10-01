@@ -263,70 +263,71 @@ const Home = () => {
           </div>
         </section>
 
-        {/* NEW CONTENT HIGHLIGHT SECTION */}
+        {/* NEW CONTENT HIGHLIGHT SECTION - OCTOBER 2025 */}
         <section className="container mx-auto px-6 py-16 relative z-10">
-          <div className="bg-gradient-to-br from-emerald-900/40 via-teal-900/30 to-cyan-900/40 rounded-2xl border-2 border-emerald-400/50 p-8 md:p-12 shadow-2xl">
+          <div className="bg-gradient-to-br from-purple-900/50 via-pink-900/40 to-blue-900/50 rounded-2xl border-2 border-purple-400/50 p-8 md:p-12 shadow-2xl">
             <div className="flex items-center gap-3 mb-6">
-              <span className="inline-flex h-3 w-3 rounded-full bg-emerald-400 animate-pulse"></span>
-              <span className="text-emerald-400 font-bold text-lg uppercase tracking-wider">🔥 Just Published - October 2025</span>
+              <span className="inline-flex h-3 w-3 rounded-full bg-purple-400 animate-pulse"></span>
+              <span className="text-purple-400 font-bold text-lg uppercase tracking-wider">🎉 JUST RELEASED - October 2025</span>
             </div>
             
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              New Cutting-Edge AI Resources Available Now
+              Revolutionary New AI Content & Services
             </h2>
             
-            <p className="text-xl text-emerald-100 mb-8 max-w-3xl">
-              Discover our latest insights, services, and success stories from the frontlines of AI innovation.
+            <p className="text-xl text-purple-100 mb-8 max-w-3xl">
+              Explore our latest breakthrough AI innovations: Multimodal Intelligence, Adaptive Learning, and 
+              Intelligent Document Processing delivering $489M+ in proven enterprise value.
             </p>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-              {/* Blog Post 1 */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30 hover:border-emerald-400/60 transition-all hover:scale-105 hover:shadow-xl">
-                <div className="text-emerald-400 text-sm font-semibold mb-2 uppercase">📝 New Guide</div>
-                <h3 className="text-lg font-bold text-white mb-3">Edge Inference Patterns</h3>
-                <p className="text-emerald-100 text-sm mb-4">Production-ready AI deployment guide with real-world patterns and 12-minute read</p>
+              {/* New Blog Post 1 */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:border-purple-400/60 transition-all hover:scale-105 hover:shadow-xl">
+                <div className="text-purple-400 text-sm font-semibold mb-2 uppercase">📝 NEW GUIDE</div>
+                <h3 className="text-lg font-bold text-white mb-3">Multimodal AI Intelligence</h3>
+                <p className="text-purple-100 text-sm mb-4">Vision, language & audio convergence achieving 97% accuracy and $2.3B+ ROI</p>
                 <Link 
-                  to="/blog/ai-2025-oct-edge-inference-patterns-production-guide" 
-                  className="inline-flex items-center text-emerald-300 hover:text-white font-semibold text-sm"
+                  to="/blog/ai-2025-oct-multimodal-enterprise-intelligence" 
+                  className="inline-flex items-center text-purple-300 hover:text-white font-semibold text-sm"
                 >
                   Read Now <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
               </div>
 
-              {/* Blog Post 2 */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 hover:border-cyan-400/60 transition-all hover:scale-105 hover:shadow-xl">
-                <div className="text-cyan-400 text-sm font-semibold mb-2 uppercase">📊 Strategy</div>
-                <h3 className="text-lg font-bold text-white mb-3">North Star Metrics Framework</h3>
-                <p className="text-cyan-100 text-sm mb-4">Measure AI product success with proven metrics used by leading companies</p>
+              {/* New Blog Post 2 */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30 hover:border-blue-400/60 transition-all hover:scale-105 hover:shadow-xl">
+                <div className="text-blue-400 text-sm font-semibold mb-2 uppercase">🎓 ENTERPRISE LEARNING</div>
+                <h3 className="text-lg font-bold text-white mb-3">Adaptive Learning Platforms</h3>
+                <p className="text-blue-100 text-sm mb-4">Personalized training at scale: 92% completion rates, 5x faster skill development</p>
                 <Link 
-                  to="/blog/ai-2025-oct-northstar-metrics-ai-product-success" 
-                  className="inline-flex items-center text-cyan-300 hover:text-white font-semibold text-sm"
+                  to="/blog/ai-2025-oct-adaptive-learning-platforms" 
+                  className="inline-flex items-center text-blue-300 hover:text-white font-semibold text-sm"
                 >
                   Learn More <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
               </div>
 
               {/* New Service */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30 hover:border-blue-400/60 transition-all hover:scale-105 hover:shadow-xl">
-                <div className="text-blue-400 text-sm font-semibold mb-2 uppercase">🚀 Service Launch</div>
-                <h3 className="text-lg font-bold text-white mb-3">Edge AI Platform</h3>
-                <p className="text-blue-100 text-sm mb-4">Deploy intelligence at the edge with less than 10ms latency. Starting at $4,999/mo</p>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 hover:border-cyan-400/60 transition-all hover:scale-105 hover:shadow-xl">
+                <div className="text-cyan-400 text-sm font-semibold mb-2 uppercase">🚀 NEW SERVICE</div>
+                <h3 className="text-lg font-bold text-white mb-3">Document Processing AI</h3>
+                <p className="text-cyan-100 text-sm mb-4">98.5% accuracy, 95% automation, $2.8M+ savings. Starting at $1,999/mo</p>
                 <Link 
-                  to="/services/ai-2025-october-edge-ai-platform" 
-                  className="inline-flex items-center text-blue-300 hover:text-white font-semibold text-sm"
+                  to="/services/ai-intelligent-document-processing" 
+                  className="inline-flex items-center text-cyan-300 hover:text-white font-semibold text-sm"
                 >
-                  Explore Platform <ArrowRight className="w-4 h-4 ml-1" />
+                  Explore Service <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
               </div>
 
-              {/* Case Study */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:border-purple-400/60 transition-all hover:scale-105 hover:shadow-xl">
-                <div className="text-purple-400 text-sm font-semibold mb-2 uppercase">💼 Success Story</div>
-                <h3 className="text-lg font-bold text-white mb-3">$127M Manufacturing Win</h3>
-                <p className="text-purple-100 text-sm mb-4">How a Fortune 500 manufacturer transformed operations with edge AI</p>
+              {/* New Case Study */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-green-400/30 hover:border-green-400/60 transition-all hover:scale-105 hover:shadow-xl">
+                <div className="text-green-400 text-sm font-semibold mb-2 uppercase">💼 SUCCESS STORY</div>
+                <h3 className="text-lg font-bold text-white mb-3">$489M Retail Transformation</h3>
+                <p className="text-green-100 text-sm mb-4">Fortune 100 retailer achieves 823% ROI through comprehensive AI deployment</p>
                 <Link 
-                  to="/case-studies/ai-2025-oct-global-manufacturing-edge-ai-success-127m" 
-                  className="inline-flex items-center text-purple-300 hover:text-white font-semibold text-sm"
+                  to="/case-studies/global-retail-ai-transformation-2025" 
+                  className="inline-flex items-center text-green-300 hover:text-white font-semibold text-sm"
                 >
                   Read Case Study <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
@@ -342,8 +343,8 @@ const Home = () => {
                 View All New Content
                 <ArrowRight className="w-5 h-5" />
               </Link>
-              <div className="text-emerald-200 text-sm">
-                <span className="font-bold">3 Months FREE</span> on Edge AI Platform ends Oct 31st
+              <div className="text-purple-200 text-sm">
+                <span className="font-bold">🎁 LIMITED TIME:</span> 50% OFF first 3 months + FREE consultation
               </div>
             </div>
           </div>

@@ -9,7 +9,10 @@ import CaseStudies from './pages/CaseStudies';
 import AIWorkflowAutomation from './pages/services/AIWorkflowAutomation';
 import AIVirtualAssistant from './pages/services/AIVirtualAssistant';
 import AIDataAnalytics from './pages/services/AIDataAnalytics';
-import AutonomousDevOpsService from './pages/services/AutonomousDevOpsService';
+import AIIntelligentDocumentProcessing from './pages/services/AIIntelligentDocumentProcessing';
+import MultimodalEnterpriseIntelligence from './pages/blog/ai-2025-oct-multimodal-enterprise-intelligence';
+import AdaptiveLearningPlatforms from './pages/blog/ai-2025-oct-adaptive-learning-platforms';
+import GlobalRetailAITransformation from './pages/case-studies/global-retail-ai-transformation-2025';
 
 export const AppRouter: React.FC = () => {
   return (
@@ -20,10 +23,13 @@ export const AppRouter: React.FC = () => {
       <Route path="/services/ai-workflow-automation" element={<AIWorkflowAutomation />} />
       <Route path="/services/ai-virtual-assistant" element={<AIVirtualAssistant />} />
       <Route path="/services/ai-data-analytics" element={<AIDataAnalytics />} />
-      <Route path="/services/autonomous-devops" element={<AutonomousDevOpsService />} />
+      <Route path="/services/ai-intelligent-document-processing" element={<AIIntelligentDocumentProcessing />} />
       <Route path="/case-studies" element={<CaseStudies />} />
+      <Route path="/case-studies/global-retail-ai-transformation-2025" element={<GlobalRetailAITransformation />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/blog" element={<Blog />} />
+      <Route path="/blog/ai-2025-oct-multimodal-enterprise-intelligence" element={<MultimodalEnterpriseIntelligence />} />
+      <Route path="/blog/ai-2025-oct-adaptive-learning-platforms" element={<AdaptiveLearningPlatforms />} />
     </Routes>
   );
 };

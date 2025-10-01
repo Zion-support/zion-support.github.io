@@ -771,6 +771,14 @@ featuredBlogPosts.unshift(
 
 export const featuredServices: FeaturedItem[] = [
   {
+    id: "ai-intelligent-document-processing",
+    title: "AI Intelligent Document Processing",
+    description: "98.5% accuracy, 95% automation, $2.8M+ annual savings. Extract and process any document type at scale.",
+    link: "/services/ai-intelligent-document-processing",
+    type: "service",
+    featured: true
+  },
+  {
     id: "hyperconscious-ai-consulting",
     title: "Hyperconscious AI Consulting",
     description: "Transform your enterprise with genuine artificial consciousness, achieving 99.999% operational excellence and unlimited growth potential.",
@@ -1481,6 +1489,26 @@ featuredBlogPosts.unshift(
     title: "💝 Adaptive Customer Experience: 98% Satisfaction via Emotional AI",
     description: "Emotional AI achieving 98% satisfaction, 156% CLV increase, $230M+ enhanced revenue.",
     link: "/blog/ai-2025-oct-adaptive-customer-experience-emotional-ai",
+    type: "article",
+    featured: true
+  }
+);
+
+// Oct 1, 2025 – LATEST CONTENT: Multimodal AI, Adaptive Learning, Document Processing
+featuredBlogPosts.unshift(
+  {
+    id: "ai-2025-oct-multimodal-enterprise-intelligence",
+    title: "🎯 Multimodal Enterprise Intelligence 2025",
+    description: "Vision, language & audio AI convergence achieving 97% accuracy, 85% automation, and $2.3B+ in enterprise value creation.",
+    link: "/blog/ai-2025-oct-multimodal-enterprise-intelligence",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-2025-oct-adaptive-learning-platforms",
+    title: "🎓 AI-Powered Adaptive Learning Platforms 2025",
+    description: "Personalized enterprise training at scale: 92% completion rates, 5x faster skill development, and $340M+ productivity gains.",
+    link: "/blog/ai-2025-oct-adaptive-learning-platforms",
     type: "article",
     featured: true
   }
