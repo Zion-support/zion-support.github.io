@@ -193,6 +193,7 @@ export default function October2025NextGenEnterpriseAIBanner() {
             </div>
           </div>
 =======
+=======
 import React from "react";
 
 export default function October2025NextGenEnterpriseAIBanner() {
@@ -245,7 +246,7 @@ export default function October2025NextGenEnterpriseAIBanner() {
               Process millions of data points per second with sub-millisecond decision making
             </p>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li>• <5ms response time</li>
+              <li>• &lt;5ms response time</li>
               <li>• 99.99% uptime guaranteed</li>
               <li>• Predictive analytics engine</li>
             </ul>
