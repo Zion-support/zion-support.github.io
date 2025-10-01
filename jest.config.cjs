@@ -14,7 +14,7 @@ module.exports = {
     '^@utils/(.*)$': '<rootDir>/src/utils/$1',
     '^@hooks/(.*)$': '<rootDir>/src/hooks/$1'
   },
-  testMatch: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
+  testMatch: ['<rootDir>/src/**/*(*.)+(spec|test).[jt]s?(x)'],
   testPathIgnorePatterns: [
     '/node_modules/',
     '/dist/',
@@ -30,7 +30,7 @@ module.exports = {
     '/backup-problematic-files/',
     '/_conflicted_disabled/',
     '/apps.backup/',
-    '/__tests__/',
+    '^<rootDir>/__tests__/',
   ],
   modulePathIgnorePatterns: [
     '/automation/',
@@ -44,7 +44,7 @@ module.exports = {
   ],
   transform: {
     '^.+\\.(ts|tsx)$': ['ts-jest', { useESM: true }],
-    '^.+\\.(js|jsx)$': ['ts-jest', { useESM: true }]
+    '^.+\\.(js|jsx)$': 'babel-jest'
   },
   transformIgnorePatterns: [
     'node_modules/(?!(.*\\.mjs$|react|react-dom|@testing-library))'
