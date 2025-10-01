@@ -42,6 +42,7 @@ import LatestInsights from "../components/LatestInsights";
 import ModernFeatures from "../components/ModernFeatures";
 import AdvertisingBanner from "../components/AdvertisingBanner";
 import October2025NewBreakthroughBanner from "../components/October2025NewBreakthroughBanner";
+import October2025NewPremiumContentBanner from "../components/October2025NewPremiumContentBanner";
 import January2026RevolutionaryBanner from "../components/January2026RevolutionaryBanner";
 import NewServicesPromoBanner2026 from "../components/NewServicesPromoBanner2026";
 import { latestInsights } from "../content/insights";
@@ -84,6 +85,11 @@ const Home = () => {
       </Helmet>
       <AdvertisingBanner />
       <January2026RevolutionaryBanner />
+      
+      {/* 🚀🚀🚀 PREMIUM OCTOBER 2025 CONTENT - JUST PUBLISHED: THREE REVOLUTIONARY AI PLATFORMS 🚀🚀🚀 */}
+      {/* Featured: Autonomous DevOps (99.99% uptime), Quantum-Safe Security ($247M savings), Cognitive BI (340% ROI) */}
+      <October2025NewPremiumContentBanner />
+      
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
         
