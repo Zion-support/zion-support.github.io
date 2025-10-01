@@ -1,7 +1,5 @@
-import { ArrowRight, BookOpen, TrendingUp, Zap } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
-export default function ContentPromotionBanner() {
+export default function ContentPromotionBanner(): void {
   const featuredContent = [
     {
       title: "Edge Inference Patterns That Actually Reduce Latency",

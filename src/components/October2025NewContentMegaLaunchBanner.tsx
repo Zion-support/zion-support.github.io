@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const October2025NewContentMegaLaunchBanner: React.FC = () => {
   return (

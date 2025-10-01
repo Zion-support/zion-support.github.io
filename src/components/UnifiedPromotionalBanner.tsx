@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Sparkles, Zap, Rocket, Star } from 'lucide-react';
 
 export interface FeaturedItem {
   title: string;

@@ -1,8 +1,7 @@
 // @ts-nocheck
 import React from "react";
-import { Helmet } from "react-helmet-async";
 
-export default function MetaCognitiveAIDeepDive2026(): React.JSX.Element {
+export default function MetaCognitiveAIDeepDive2026(): React.JSX.Element React.JSX.Element {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
       <Helmet>

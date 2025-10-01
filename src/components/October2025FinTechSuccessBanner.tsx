@@ -1,8 +1,5 @@
-import React from 'react';
-import { Building2, DollarSign, Shield, Sparkles, TrendingUp, Users } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
-export default function October2025FinTechSuccessBanner() {
+export default function October2025FinTechSuccessBanner(): void {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 border-4 border-blue-500 rounded-2xl shadow-2xl mb-8">
       {/* Animated Background */}

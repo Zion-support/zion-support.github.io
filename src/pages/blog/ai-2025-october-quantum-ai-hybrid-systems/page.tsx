@@ -1,6 +1,3 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRight, CheckCircle, Clock, Users, Brain, Shield } from "lucide-react";
 
 const QuantumAIHybrid2025 = () => {
   return (

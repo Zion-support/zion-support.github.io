@@ -5,7 +5,6 @@
  * It provides helper functions to convert existing banner props to the new unified format.
  */
 
-import { UnifiedPromotionalBannerProps, FeaturedItem } from '../components/UnifiedPromotionalBanner';
 
 /**
  * Converts legacy NewContentPromoBanner props to UnifiedPromotionalBanner props

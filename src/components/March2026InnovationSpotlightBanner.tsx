@@ -1,5 +1,3 @@
-import React from 'react';
-import { ArrowRight, Sparkles, Zap, Brain, Rocket } from 'lucide-react';
 
 const March2026InnovationSpotlightBanner = () => {
   const innovations = [

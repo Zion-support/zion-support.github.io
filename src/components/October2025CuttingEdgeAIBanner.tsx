@@ -1,6 +1,3 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Scale, Brain, Repeat, Zap, Sparkles } from 'lucide-react';
 
 const October2025CuttingEdgeAIBanner = () => {
   return (

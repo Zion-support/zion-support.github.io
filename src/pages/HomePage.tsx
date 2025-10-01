@@ -1,8 +1,6 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import AnimatedSection from '../components/AnimatedSection';
 import './HomePage.css';
-import { BLOG_POSTS } from '../data/blog-posts';
+import AnimatedSection from '../components/AnimatedSection';
 import October2025FeaturedContentBanner from '../components/October2025FeaturedContentBanner';
 import UnifiedPromotionalBanner from '../components/UnifiedPromotionalBanner';
 

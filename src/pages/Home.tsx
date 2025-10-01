@@ -12,8 +12,6 @@ import {
   Users,
   Zap
 } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
 import ContentPromotionBanner from "../components/ContentPromotionBanner";
 import ComprehensivePromoBanner from "../components/ComprehensivePromoBanner";
 import NewArticlesPromoBanner from "../components/NewArticlesPromoBanner";
@@ -32,9 +30,6 @@ import SuccessStoriesShowcase from "../components/SuccessStoriesShowcase";
 import TrendingContentBanner from "../components/TrendingContentBanner";
 import NewContentPromotionalBanner2026 from "../components/NewContentPromotionalBanner2026";
 import NewServicesPromoBanner2026 from "../components/NewServicesPromoBanner2026";
-import { getFeaturedBanners } from "../content/enhanced-promotional-banners";
-import { latestInsights } from "../content/insights";
-import { posts } from "../content/posts";
 // import { newArticles2025 } from "../content/new-articles-2025";
 // import { featuredBlogPosts, featuredServices } from "../content/content-config";
 

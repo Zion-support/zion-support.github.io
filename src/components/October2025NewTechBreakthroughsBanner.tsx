@@ -1,7 +1,5 @@
-import { ArrowRight, Sparkles, TrendingUp, Zap } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
-export default function October2025NewTechBreakthroughsBanner() {
+export default function October2025NewTechBreakthroughsBanner(): void {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 border-y border-purple-500/30">
       {/* Animated background */}

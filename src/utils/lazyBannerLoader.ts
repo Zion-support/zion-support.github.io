@@ -3,7 +3,6 @@
  * Optimizes banner loading by implementing lazy loading and code splitting
  */
 
-import { lazy, ComponentType } from 'react';
 
 interface BannerComponent {
   default: ComponentType<any>;

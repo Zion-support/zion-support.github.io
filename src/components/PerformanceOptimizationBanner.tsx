@@ -1,5 +1,3 @@
-import React from 'react';
-import { Zap, TrendingUp, Clock, Shield, CheckCircle, Star } from 'lucide-react';
 
 const PerformanceOptimizationBanner = () => {
   const optimizations = [

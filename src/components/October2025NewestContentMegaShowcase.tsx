@@ -1,7 +1,5 @@
-import { Sparkles, Network, Atom, Brain, ArrowRight, TrendingUp } from "lucide-react";
-import { Link } from "react-router-dom";
 
-export default function October2025NewestContentMegaShowcase() {
+export default function October2025NewestContentMegaShowcase(): void {
   const newContent = [
     {
       icon: <Network className="w-8 h-8" />,

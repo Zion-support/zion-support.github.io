@@ -12,8 +12,6 @@ import {
   Zap
 } from "lucide-react";
 import React, { useMemo, useState } from "react";
-import { latestArticles } from "../content/latest-articles";
-import { Helmet } from "react-helmet-async";
 import BlogPromotionBanner from "../components/BlogPromotionBanner";
 // const Footer: React.FC = () => null;
 // import Header from "../components/Header";
@@ -33,7 +31,7 @@ interface BlogPost {
   views: number;
 }
 
-export default function Blog(): React.JSX.Element {
+export default function Blog(): React.JSX.Element React.JSX.Element {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [searchTerm, setSearchTerm] = useState("");
 

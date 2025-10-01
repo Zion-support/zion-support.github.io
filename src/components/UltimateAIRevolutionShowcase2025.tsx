@@ -1,6 +1,3 @@
-import React from 'react';
-import { ArrowRight, Sparkles, Star, Award, TrendingUp, Rocket, Globe } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 const UltimateAIRevolutionShowcase2025 = () => {
   const revolutionaryFeatures = [

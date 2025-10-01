@@ -1,5 +1,3 @@
-import { Sparkles, Zap, Brain, CheckCircle } from "lucide-react";
-import { Link } from "react-router-dom";
 
 const October2025BreakthroughContentBanner = () => {
   return (

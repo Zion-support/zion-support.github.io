@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 const October2025CognitiveAutomationPlatformBanner: React.FC = () => {
   return (

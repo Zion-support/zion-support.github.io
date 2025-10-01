@@ -1,8 +1,5 @@
-import React from 'react';
-import { Brain, Sparkles, TrendingUp, Zap } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
-export default function October2025CognitiveHyperautomationBanner() {
+export default function October2025CognitiveHyperautomationBanner(): void {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-purple-900 via-purple-800 to-pink-900 border-4 border-purple-500 rounded-2xl shadow-2xl mb-8 animate-pulse-slow">
       {/* Animated Background Elements */}

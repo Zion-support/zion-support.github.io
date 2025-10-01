@@ -1,7 +1,4 @@
-import { ArrowRight } from "lucide-react";
 import React from "react";
-import { Link } from "react-router-dom";
-import { latestInsights } from "../content/insights";
 
 function isNew(dateIso: string): boolean {
   const daysSince = (Date.now() - new Date(dateIso).getTime()) / (1000 * 60 * 60 * 24);

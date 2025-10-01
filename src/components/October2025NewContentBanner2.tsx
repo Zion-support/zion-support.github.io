@@ -1,4 +1,3 @@
-import { ArrowRight, Bot, Brain, DollarSign, Leaf, Mic } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const October2025NewContentBanner2 = () => {

@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Sparkles, TrendingUp } from 'lucide-react';
 
 interface LatestContentBannerProps {
   variant?: 'info' | 'success' | 'warning';

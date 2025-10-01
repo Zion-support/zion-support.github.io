@@ -14,7 +14,6 @@ import {
   loadBannerStats,
   getRefreshInterval,
 } from '../utils/bannerRotation';
-import { trackBannerInteraction } from '../utils/analyticsTracker';
 
 interface UseBannerRotationOptions {
   banners: BannerConfig[];

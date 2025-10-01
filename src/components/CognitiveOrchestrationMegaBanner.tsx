@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Brain, TrendingUp, Zap, Globe } from 'lucide-react';
 
 const CognitiveOrchestrationMegaBanner: React.FC = () => {
   return (

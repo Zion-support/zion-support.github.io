@@ -1,5 +1,4 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
-import { AppRouter } from './router';
 
 // import { resourcePreloader } from './utils/resourcePreloader';
 // import { criticalCSSManager } from './utils/criticalCSSManager';
@@ -9,8 +8,6 @@ import { AppRouter } from './router';
 // import { keyboardNavigationManager } from './accessibility/keyboardNavigationManager';
 // import { screenReaderSupport } from './accessibility/screenReaderSupport';
 import './index.css';
-import { securityManager as enhancedSecurityManager } from './utils/securityHeaders';
-import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
 import SEOOptimizer from './components/SEOOptimizer';
 import AdvancedAnalytics from './components/AdvancedAnalytics';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
@@ -54,7 +51,7 @@ interface SecurityManager {
   initialize?: () => void;
 }
 
-export default function App(): React.JSX.Element {
+export default function App(): React.JSX.Element React.JSX.Element {
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
   const [notifications, setNotifications] = useState<Notification[]>([]);

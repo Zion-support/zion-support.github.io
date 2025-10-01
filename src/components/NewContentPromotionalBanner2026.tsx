@@ -1,5 +1,4 @@
 import React from 'react';
-import { ArrowRight, Star, Users, TrendingUp, Rocket, Globe } from 'lucide-react';
 
 const NewContentPromotionalBanner2026 = () => {
   const newContent = [

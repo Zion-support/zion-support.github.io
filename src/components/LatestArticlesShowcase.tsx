@@ -1,7 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Clock } from 'lucide-react';
-import { newArticles2025 } from '../content/new-articles-2025';
 
 const LatestArticlesShowcase: React.FC = () => {
   const latestArticles = newArticles2025.filter(a => a.featured).slice(0, 6);

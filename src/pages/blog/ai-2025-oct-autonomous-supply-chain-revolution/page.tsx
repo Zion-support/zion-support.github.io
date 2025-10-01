@@ -1,8 +1,5 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowLeft, TrendingUp, Zap, DollarSign, Package, Globe } from "lucide-react";
 
-export default function AutonomousSupplyChainRevolution2025() {
+export default function AutonomousSupplyChainRevolution2025(): void {
   return (
     <>
       <Helmet>

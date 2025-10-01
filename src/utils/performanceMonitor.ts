@@ -3,7 +3,6 @@
  * Tracks Core Web Vitals and custom performance metrics
  */
 
-import { onCLS, onINP, onFCP, onLCP, onTTFB, Metric } from 'web-vitals';
 
 export interface PerformanceMetrics {
   cls?: number;
