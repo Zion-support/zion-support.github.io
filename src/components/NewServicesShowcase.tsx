@@ -1,178 +1,191 @@
 import React from 'react';
-import { ArrowRight, CheckCircle, Star, Zap, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { newServices } from '../content/new-services';
 
 const NewServicesShowcase: React.FC = () => {
-  const featuredServices = newServices.filter(service => service.featured);
+  const newServices = [
+    {
+      id: "hyperconscious-ai-consulting",
+      title: "Hyperconscious AI Consulting",
+      description: "Transform your enterprise with genuine artificial consciousness, achieving 99.999% operational excellence and unlimited growth potential.",
+      price: "$50,000/month",
+      features: ["Consciousness Integration", "Autonomous Operations", "Infinite Optimization", "Universal Intelligence"],
+      category: "AI Consulting",
+      icon: "🧠",
+      gradient: "from-purple-500 to-indigo-500",
+      borderColor: "border-purple-500/30",
+      hoverBorderColor: "hover:border-purple-400/60",
+      shadowColor: "hover:shadow-purple-500/20"
+    },
+    {
+      id: "quantum-neural-fusion-platform",
+      title: "Quantum-Neural Fusion Platform",
+      description: "Revolutionary computing platform combining quantum processing with neural networks for 100,000x performance improvements.",
+      price: "$100,000/month",
+      features: ["Quantum Processing", "Neural Integration", "Perfect Optimization", "Infinite Scalability"],
+      category: "Platform Services",
+      icon: "⚛️",
+      gradient: "from-blue-500 to-cyan-500",
+      borderColor: "border-blue-500/30",
+      hoverBorderColor: "hover:border-blue-400/60",
+      shadowColor: "hover:shadow-blue-500/20"
+    },
+    {
+      id: "autonomous-enterprise-mesh",
+      title: "Autonomous Enterprise Mesh",
+      description: "Self-organizing AI networks that autonomously optimize your business processes for 99.7% operational efficiency.",
+      price: "$75,000/month",
+      features: ["Self-Organization", "Autonomous Optimization", "Collective Intelligence", "Continuous Evolution"],
+      category: "Enterprise Solutions",
+      icon: "🌐",
+      gradient: "from-indigo-500 to-purple-500",
+      borderColor: "border-indigo-500/30",
+      hoverBorderColor: "hover:border-indigo-400/60",
+      shadowColor: "hover:shadow-indigo-500/20"
+    }
+  ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-br from-slate-950 via-purple-950 to-indigo-950 relative overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float" style={{ animationDelay: "2s" }}></div>
-        <div className="absolute top-40 left-1/2 w-60 h-60 bg-cyan-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float" style={{ animationDelay: "4s" }}></div>
+      <div className="absolute inset-0 overflow-hidden opacity-10">
+        <div className="absolute top-0 left-1/3 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
-        {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-green-500/20 to-blue-500/20 text-green-400 text-sm font-medium mb-8 border border-green-400/30">
-            <Sparkles className="w-4 h-4 mr-2 animate-pulse" />
-            🚀 NEW SERVICES AVAILABLE
-            <Sparkles className="w-4 h-4 ml-2 animate-pulse" />
+          <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-500/30 mb-8 animate-pulse">
+            <span className="text-purple-400 font-bold text-xl tracking-wider uppercase">
+              🚀 NEW 2026 SERVICES
+            </span>
           </div>
           
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Revolutionary AI Solutions
-            <span className="block bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
-              Now Available
-            </span>
+          <h2 className="text-4xl md:text-6xl font-extrabold mb-8 bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent leading-tight">
+            Revolutionary AI Services
           </h2>
           
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Discover our latest AI-powered services that are transforming industries worldwide. 
-            From autonomous operations to quantum computing, we're pushing the boundaries of what's possible.
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 font-semibold max-w-4xl mx-auto">
+            Experience the future of business with our cutting-edge AI services delivering unprecedented results and transformation
           </p>
-
-          {/* Special Offer Banner */}
-          <div className="bg-gradient-to-r from-green-500/20 to-blue-500/20 border border-green-400/30 rounded-xl p-6 mb-8 max-w-4xl mx-auto">
-            <div className="flex items-center justify-center gap-3 mb-3">
-              <Zap className="w-6 h-6 text-green-400 animate-pulse" />
-              <span className="text-lg font-bold text-green-400">🔥 LIMITED TIME OFFER</span>
-              <Zap className="w-6 h-6 text-green-400 animate-pulse" />
-            </div>
-            <p className="text-white text-lg font-semibold mb-2">
-              Get 50% OFF Your First 3 Months + FREE AI Strategy Consultation
-            </p>
-            <p className="text-gray-300 text-sm">
-              Valid until March 31, 2025 • No setup fees • Cancel anytime
-            </p>
-          </div>
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {featuredServices.map((service) => (
-            <div
-              key={service.id}
-              className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl border border-white/20"
-            >
-              {/* Badge */}
-              <div className="flex items-center justify-between mb-6">
-                <div className="flex items-center gap-2">
-                  <span className="text-3xl">{service.icon}</span>
-                  <div>
-                    <div className="text-xs uppercase tracking-wider text-blue-300">{service.category}</div>
-                    {service.newBadge && (
-                      <span className="bg-green-500 text-white text-xs px-2 py-1 rounded-full font-medium">
-                        NEW
-                      </span>
-                    )}
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
+          {newServices.map((service) => (
+            <Link key={service.id} to={`/services/${service.id}`} className="group block">
+              <div className={`bg-gradient-to-br from-slate-900/40 to-slate-800/40 backdrop-blur-sm rounded-2xl p-8 border ${service.borderColor} ${service.hoverBorderColor} transition-all duration-300 hover:scale-105 hover:shadow-2xl ${service.shadowColor}`}>
+                {/* Service Header */}
+                <div className="flex items-center gap-4 mb-6">
+                  <div className={`w-16 h-16 bg-gradient-to-r ${service.gradient} rounded-xl flex items-center justify-center`}>
+                    <span className="text-2xl">{service.icon}</span>
+                  </div>
+                  <div className="flex-1">
+                    <div className={`bg-gradient-to-r ${service.gradient} text-white px-4 py-2 rounded-full text-sm font-bold mb-2`}>
+                      {service.category}
+                    </div>
+                    <div className="text-2xl font-bold text-white">
+                      {service.price}
+                    </div>
                   </div>
                 </div>
-                {service.pricing.popular && (
-                  <div className="flex items-center gap-1 bg-yellow-500/20 text-yellow-400 px-2 py-1 rounded-full text-xs">
-                    <Star className="w-3 h-3 fill-current" />
-                    POPULAR
-                  </div>
-                )}
-              </div>
 
-              {/* Title and Description */}
-              <h3 className="text-xl font-bold text-white mb-4">{service.title}</h3>
-              <p className="text-gray-300 mb-6 text-sm leading-relaxed">{service.description}</p>
+                {/* Service Title */}
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-300 transition-colors">
+                  {service.title}
+                </h3>
 
-              {/* Pricing */}
-              <div className="mb-6">
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="text-2xl font-bold text-green-400">${service.pricing.starting}</span>
-                  <span className="text-sm text-gray-400">/month</span>
+                {/* Service Description */}
+                <p className="text-gray-300 mb-6 leading-relaxed">
+                  {service.description}
+                </p>
+
+                {/* Features List */}
+                <div className="mb-6">
+                  <h4 className="text-white font-semibold mb-3">Key Features:</h4>
+                  <ul className="space-y-2">
+                    {service.features.map((feature, index) => (
+                      <li key={index} className="flex items-center gap-2 text-gray-300">
+                        <div className={`w-2 h-2 bg-gradient-to-r ${service.gradient} rounded-full`}></div>
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                {service.pricing.discount && (
-                  <div className="text-sm text-green-400 font-medium">{service.pricing.discount}</div>
-                )}
-              </div>
 
-              {/* Key Benefits */}
-              <div className="space-y-2 mb-6">
-                {service.benefits.slice(0, 3).map((benefit, index) => (
-                  <div key={index} className="flex items-center text-gray-300 text-sm">
-                    <CheckCircle className="w-4 h-4 mr-3 text-green-400 flex-shrink-0" />
-                    <span>{benefit}</span>
+                {/* CTA */}
+                <div className="flex items-center justify-between">
+                  <div className="text-sm text-gray-400">Learn More</div>
+                  <div className={`text-purple-400 font-semibold group-hover:text-purple-300 transition-colors`}>
+                    Explore Service →
                   </div>
-                ))}
+                </div>
               </div>
-
-              {/* Metrics */}
-              <div className="grid grid-cols-3 gap-4 mb-6">
-                {service.metrics.slice(0, 3).map((metric, index) => (
-                  <div key={index} className="text-center">
-                    <div className="text-lg font-bold text-white">{metric.value}</div>
-                    <div className="text-xs text-gray-400">{metric.label}</div>
-                  </div>
-                ))}
-              </div>
-
-              {/* CTA */}
-              <div className="flex gap-3">
-                <Link
-                  to={`/services/${service.id}`}
-                  className="flex-1 bg-gradient-to-r from-green-500 to-blue-500 text-white px-4 py-2 rounded-lg font-semibold text-center hover:from-green-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center gap-2"
-                >
-                  {service.cta.primary}
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-            </div>
+            </Link>
           ))}
         </div>
 
-        {/* Bottom CTA */}
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-xl p-8 mb-8">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Ready to Transform Your Business?
+        {/* Performance Metrics */}
+        <div className="bg-gradient-to-r from-purple-900/20 to-blue-900/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/30 mb-16">
+          <div className="text-center mb-8">
+            <h3 className="text-3xl font-bold text-white mb-4">
+              Unprecedented Performance Results
             </h3>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Join 500+ companies already using our AI solutions to drive growth, reduce costs, and achieve unprecedented efficiency.
+            <p className="text-gray-300 text-lg">
+              Our revolutionary AI services deliver measurable results that transform businesses
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/services"
-                className="bg-white text-purple-600 hover:bg-purple-50 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2"
-              >
-                Explore All Services
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-              <Link
-                to="/contact"
-                className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
-              >
-                Get Free Consultation
-              </Link>
+          </div>
+          
+          <div className="grid md:grid-cols-4 gap-6">
+            <div className="text-center">
+              <div className="text-4xl font-extrabold text-purple-400 mb-2">99.999%</div>
+              <div className="text-gray-300 text-sm">Operational Accuracy</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-extrabold text-blue-400 mb-2">100,000x</div>
+              <div className="text-gray-300 text-sm">Performance Improvement</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-extrabold text-green-400 mb-2">$2.8T</div>
+              <div className="text-gray-300 text-sm">Value Creation</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-extrabold text-orange-400 mb-2">Zero</div>
+              <div className="text-gray-300 text-sm">Human Intervention</div>
             </div>
           </div>
+        </div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-2xl mx-auto">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-green-400">500+</div>
-              <div className="text-sm text-gray-400">Happy Clients</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-400">99.9%</div>
-              <div className="text-sm text-gray-400">Uptime SLA</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-purple-400">24/7</div>
-              <div className="text-sm text-gray-400">Support</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-cyan-400">5★</div>
-              <div className="text-sm text-gray-400">Client Rating</div>
-            </div>
+        {/* Call to Action */}
+        <div className="text-center">
+          <div className="mb-8">
+            <h3 className="text-3xl font-bold text-white mb-4">
+              Ready to Transform Your Business?
+            </h3>
+            <p className="text-xl text-gray-300 mb-8">
+              Join the AI revolution and experience unprecedented business transformation
+            </p>
+          </div>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              to="/contact" 
+              className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
+            >
+              Schedule Consultation
+            </Link>
+            <Link 
+              to="/services" 
+              className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
+            >
+              View All Services
+            </Link>
+            <Link 
+              to="/case-studies" 
+              className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+            >
+              See Success Stories
+            </Link>
           </div>
         </div>
       </div>

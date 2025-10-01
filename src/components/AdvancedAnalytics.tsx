@@ -1,11 +1,15 @@
-
-import React from "react";
+import React, { useEffect } from "react";
 
 interface AdvancedAnalyticsProps {
-	enableConversionTracking?: boolean;
-	enablePerformanceTracking?: boolean;
-	enableErrorTracking?: boolean;
+  enableConversionTracking?: boolean;
+  enablePerformanceTracking?: boolean;
+  enableErrorTracking?: boolean;
 }
 
-export default function AdvancedAnalytics(_props: AdvancedAnalyticsProps): React.JSX.Element | null {
-	return null;
+export default function AdvancedAnalytics(props: AdvancedAnalyticsProps): React.JSX.Element {
+  useEffect(() => {
+    void props;
+  }, [props]);
+  return <></>;
+}
+

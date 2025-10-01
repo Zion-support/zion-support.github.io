@@ -44,4 +44,3 @@ import { defineConfig } from 'cypress'; export default defineConfig({ e2e: { bas
     }
   }
 }),
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
