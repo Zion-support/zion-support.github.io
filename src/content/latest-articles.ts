@@ -17,6 +17,38 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
+    id: "enterprise-ai-platform-revolution-2025",
+    slug: "ai-2025-oct-enterprise-ai-platform-revolution",
+    title: "Enterprise AI Platform Revolution: Building the Future of Intelligent Business",
+    description: "Discover how next-generation AI platforms are transforming enterprise operations, enabling unprecedented automation, intelligence, and business value across all industries.",
+    excerpt: "The enterprise landscape is experiencing a seismic shift as organizations deploy comprehensive AI platforms. Leading enterprises see 40-60% cost reduction and $50M+ annual value.",
+    author: "Zion Tech Group",
+    date: "2025-10-01",
+    category: "Enterprise AI",
+    tags: ["AI Platforms", "Enterprise Architecture", "Digital Transformation", "2025"],
+    featured: true,
+    readTime: "18 min read",
+    image: "/images/enterprise-ai-platform-2025.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "intelligent-automation-breakthrough-2025",
+    slug: "ai-2025-oct-intelligent-automation-breakthrough",
+    title: "Intelligent Automation Breakthrough: The End of Manual Enterprise Operations",
+    description: "Explore how intelligent automation is eliminating manual work and transforming enterprise operations through advanced AI, robotics, and autonomous systems.",
+    excerpt: "Intelligent automation powered by AI is ending manual operations. Organizations achieve 40-60% reduction in processing time, 90%+ accuracy, and 300-500% ROI in first year.",
+    author: "Dr. Sarah Chen, Chief AI Officer",
+    date: "2025-10-01",
+    category: "Automation",
+    tags: ["Intelligent Automation", "RPA", "AI Agents", "Business Process", "2025"],
+    featured: true,
+    readTime: "16 min read",
+    image: "/images/intelligent-automation-2025.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "multicloud-orchestration-revolution-2025",
     slug: "ai-2025-oct-30-multicloud-orchestration-revolution",
     title: "Multi-Cloud Orchestration Revolution 2025: Unified Control Across AWS, Azure, GCP",
