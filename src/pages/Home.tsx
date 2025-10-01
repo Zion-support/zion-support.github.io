@@ -128,6 +128,21 @@ const Home = () => {
         
         <NewContentAnnouncement />
         
+        {/* October 1, 2025 - 🎉 NEWEST: Latest AI Breakthrough Content */}
+        <NewContentPromoBanner 
+          className="border-b border-white/10" 
+          variant="premium" 
+          title="🎉 JUST PUBLISHED OCTOBER 1: 3 BREAKTHROUGH AI GUIDES — Edge Computing + 5G, Enterprise AI Adoption & Cybersecurity Revolution!"
+          description="🚀 BRAND NEW TODAY: Deploy AI at the edge with 5G integration (sub-10ms latency, 90% bandwidth savings), master enterprise AI transformation (95% adoption, 450% ROI), and revolutionize security operations (99.7% threat detection, sub-60s response). Essential reading for forward-thinking organizations!"
+          ctaText="Explore New Breakthroughs"
+          ctaLink="/blog"
+          featuredItems={[
+            { title: "AI-Powered Edge Computing & 5G Integration — Sub-10ms Latency, 90% Bandwidth Savings, 1M+ Devices", category: "Edge AI & 5G", link: "/blog/ai-edge-computing-5g-integration-2025" },
+            { title: "Enterprise AI Adoption Framework — 95% User Adoption, 4x Faster Implementation, 450% ROI", category: "Enterprise Strategy", link: "/blog/enterprise-ai-adoption-change-management-2025" },
+            { title: "AI-Driven Cybersecurity Operations — 99.7% Detection Accuracy, Sub-60s Response, 85% Fewer False Positives", category: "AI Security", link: "/blog/ai-cybersecurity-threat-intelligence-2025" }
+          ]}
+        />
+        
         {/* October 1, 2025 - 🚀 JUST RELEASED: Latest AI Platform & Testing Guides */}
         <NewContentPromoBanner 
           className="border-b border-white/10" 
@@ -300,12 +315,49 @@ const Home = () => {
             </h1>
 
             <p className="text-xl md:text-2xl text-zion-slate-light mb-8 leading-relaxed max-w-3xl mx-auto animate-fade-in">
-              🚀 <strong>JUST RELEASED OCTOBER 1, 2025:</strong> 7 Revolutionary Guides — Unified AI Platform (85% faster dev), Autonomous Testing (92% bug detection), Real-Time Streaming (sub-50ms latency), 
+              🚀 <strong>JUST RELEASED OCTOBER 1, 2025:</strong> 10 Revolutionary Guides — NEW: AI-Powered Edge Computing & 5G (sub-10ms latency, 90% bandwidth savings), 
+              Enterprise AI Adoption Framework (95% user adoption, 450% ROI), AI-Driven Cybersecurity (99.7% detection accuracy, sub-60s response), 
+              plus Unified AI Platform (85% faster dev), Autonomous Testing (92% bug detection), Real-Time Streaming (sub-50ms latency), 
               Multimodal AI Systems (95% accuracy), Self-Optimizing Infrastructure (70% cost cut), Responsible AI Frameworks, and Hyper-Personalization (320% revenue growth)! 
               Plus essential guides on AI Observability, Vector Databases, Security Scanning, DevSecOps, Quantum-Ready Infrastructure, and Enterprise AI Governance. 
               Transform your business with proven AI solutions delivering $50B+ in client results. 
               Join 500+ companies achieving 400-600% ROI with our expert guidance!
             </p>
+
+            {/* October 1, 2025 - NEWEST BREAKTHROUGH CONTENT */}
+            <div className="bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-400/30 rounded-xl p-6 mb-8 animate-fade-in shadow-2xl">
+              <div className="flex items-center justify-center gap-3 mb-3">
+                <Sparkles className="w-6 h-6 text-emerald-400 animate-pulse" />
+                <span className="text-lg font-bold text-emerald-400">🎉 OCTOBER 1, 2025: NEWEST AI BREAKTHROUGHS</span>
+                <Sparkles className="w-6 h-6 text-emerald-400 animate-pulse" />
+              </div>
+              <p className="text-white text-lg font-semibold mb-2">
+                ⚡ 3 BRAND NEW GUIDES RELEASED TODAY: Edge AI & 5G Integration (sub-10ms latency, 90% bandwidth savings), Enterprise AI Adoption (95% user adoption, 450% ROI), AI Cybersecurity Operations (99.7% detection accuracy)!
+              </p>
+              <p className="text-zion-slate-light text-sm mb-4">
+                Deploy real-time AI at the edge with 5G, lead successful enterprise AI transformation with proven frameworks, and revolutionize security operations with AI-powered threat intelligence.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <Link
+                  to="/blog/ai-edge-computing-5g-integration-2025"
+                  className="bg-emerald-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-emerald-600 transition-colors text-center"
+                >
+                  Read New Breakthroughs
+                </Link>
+                <Link
+                  to="/blog"
+                  className="border border-emerald-400 text-emerald-400 px-6 py-2 rounded-lg font-semibold hover:bg-emerald-400 hover:text-white transition-colors text-center"
+                >
+                  Explore All Content
+                </Link>
+              </div>
+              <div className="mt-4 flex flex-wrap gap-2 justify-center">
+                <span className="bg-emerald-100/20 text-emerald-200 px-3 py-1 rounded-full text-xs font-medium border border-emerald-300/20">Edge AI & 5G</span>
+                <span className="bg-teal-100/20 text-teal-200 px-3 py-1 rounded-full text-xs font-medium border border-teal-300/20">Enterprise Transformation</span>
+                <span className="bg-cyan-100/20 text-cyan-200 px-3 py-1 rounded-full text-xs font-medium border border-cyan-300/20">AI Security</span>
+                <span className="bg-blue-100/20 text-blue-200 px-3 py-1 rounded-full text-xs font-medium border border-blue-300/20">Threat Intelligence</span>
+              </div>
+            </div>
 
             {/* October 1, 2025 - NEW BREAKTHROUGH CONTENT */}
             <div className="bg-gradient-to-r from-violet-500/20 to-fuchsia-500/20 border border-violet-400/30 rounded-xl p-6 mb-8 animate-fade-in shadow-2xl">
