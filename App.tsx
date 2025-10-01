@@ -14,6 +14,7 @@ import AI2033UniversalConsciousnessBanner from "./components/AI2033UniversalCons
 
 // 🚀 LATEST: October 2025 Revolutionary Content - MOST PROMINENT
 import October2025NewContentBanner from "./components/October2025NewContentBanner";
+import October2025NewContentShowcase from "./components/October2025NewContentShowcase";
 
 // NEWEST: January 2025 Content Banners - MOST PROMINENT
 import January2025NewContentBanner from "./components/January2025NewContentBanner";
@@ -141,6 +142,9 @@ export default function App(): JSX.Element {
       {/* 🚀 NEWEST: October 2025 Revolutionary Content - FEATURED PROMINENTLY */}
       <October2025NewContentBanner />
       
+      {/* 🔥 NEW: October 1, 2025 Latest Content Showcase - MOST PROMINENT 🔥 */}
+      <October2025NewContentShowcase />
+      
       {/* 🚀 NEWEST: Revolutionary AI 2026 Breakthrough Advertising - HIGHLY PROMINENT */}
       <AI2026RevolutionaryBreakthroughAdvertisingBanner />
       
@@ -205,51 +209,16 @@ export default function App(): JSX.Element {
       
       {/* 🚀🚀🚀 EXISTING CONTENT - FEATURED BELOW 🚀🚀🚀 */}
       
-      {/* 🚀🚀🚀 BREAKING: September 30, 2025 — NEW CONTENT JUST PUBLISHED! — HIGHEST PRIORITY 🚀🚀🚀 */}
-      <September30NewContentMegaBanner />
->>>>>>> cursor/create-and-deploy-new-content-55c8
-      
       {/* 🚀 NEWEST: January 2025 Revolutionary AI Content - MOST PROMINENT */}
       <January2025NewContentBanner />
       
       {/* 🌟 BREAKTHROUGH: January 2025 Innovation Showcase - HIGHLY PROMINENT */}
       <January2025InnovationShowcaseBanner />
       
-      {/* NEWEST: January 2032 Transcendent Content Banner - MOST PROMINENT */}
-      <January2032TranscendentContentBanner />
-      
-      {/* NEWEST: Transcendent Intelligence Advertising Banner - HIGHLY PROMINENT */}
-      <TranscendentIntelligenceAdvertisingBanner />
-      
-      {/* 🚀 BREAKING NEWS: September 30, 2025 - Latest AI Insights - MOST PROMINENT */}
-      <September2025NewContentBanner />
-      
-      {/* NEWEST: December 2026 Universal Consciousness Banner - MOST PROMINENT */}
-      <December2026UniversalConsciousnessBanner />
-      
-      {/* NEWEST: November 2026 Quantum Superintelligence Banner - MOST PROMINENT */}
-      <November2026QuantumSuperintelligenceBanner />
-      
-      {/* NEWEST: July 2026 Autonomous Intelligence Banner - MOST PROMINENT */}
-      <July2026AutonomousIntelligenceBanner />
-      
-      {/* NEWEST: July 2026 Content Showcase Banner - FEATURED */}
-      <July2026ContentShowcaseBanner />
-      
-      {/* NEWEST: Comprehensive Content Integration Banner - MOST PROMINENT */}
-      <ComprehensiveContentIntegrationBanner />
-      
-      {/* NEWEST: October 2026 New Content Banner - MOST PROMINENT */}
-      <October2026NewContentBanner />
-      
-      {/* NEWEST: October 2026 Breakthrough Showcase Banner - HIGHLY PROMINENT */}
-      <October2026BreakthroughShowcaseBanner />
-      
-      {/* NEW: AI 2027 Transcendent Intelligence Banner - Most Prominent */}
-      <AI2027TranscendentIntelligenceBanner />
+      {/* 🚀 BREAKING: September 30, 2025 — NEW CONTENT JUST PUBLISHED! — HIGHEST PRIORITY */}
+      <September30NewContentMegaBanner />
       
       {/* NEW: September 2025 Practical AI Insights Banner - FEATURED */}
->>>>>>> cursor/create-and-deploy-new-content-60ec
       <September2025PracticalAIBanner />
       
       {/* LATEST BREAKTHROUGHS 2026 */}
