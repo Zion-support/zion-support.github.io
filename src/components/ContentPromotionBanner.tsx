@@ -1,68 +1,117 @@
-import React, { useState } from 'react';
+import { ArrowRight, BookOpen, TrendingUp, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-interface ContentPromotionBannerProps {
-	variant?: "info" | "success" | "warning" | "danger";
-	title?: string;
-	description?: string;
-	ctaText?: string;
-	ctaLink?: string;
-	dismissible?: boolean;
-}
-
-const variantStyles: Record<string, string> = {
-  info: 'from-indigo-500/15 to-blue-500/15 border-indigo-400/30 text-indigo-100',
-  success: 'from-emerald-500/15 to-teal-500/15 border-emerald-400/30 text-emerald-100',
-  warning: 'from-amber-500/15 to-orange-500/15 border-amber-400/30 text-amber-100',
-  danger: 'from-rose-500/15 to-red-500/15 border-rose-400/30 text-rose-100'
-};
-
-export default function ContentPromotionBanner(props: ContentPromotionBannerProps): React.JSX.Element {
-  const {
-    variant = 'info',
-    title = 'New content just landed',
-    description = 'Explore our latest articles, guides, and success stories.',
-    ctaText = 'Read now',
-    ctaLink = '/blog',
-    dismissible = false,
-    className = ''
-  } = props;
-
-  const [visible, setVisible] = useState(true);
-
-  if (!visible) {
-    return <></>;
-  }
+export default function ContentPromotionBanner() {
+  const featuredContent = [
+    {
+      title: "Edge Inference Patterns That Actually Reduce Latency",
+      category: "AI Infrastructure",
+      readTime: "7 min read",
+      isNew: true,
+    },
+    {
+      title: "North‑Star Engineering Metrics: Fewer KPIs, Better Outcomes",
+      category: "Leadership", 
+      readTime: "5 min read",
+      isNew: true,
+    },
+    {
+      title: "OpenTelemetry in Production: Traces That Engineers Use",
+      category: "Observability",
+      readTime: "6 min read",
+      isNew: true,
+    },
+  ];
 
   return (
-    <div className={`w-full`}>
-      <div
-        className={`mx-auto px-6 py-4 bg-gradient-to-r ${variantStyles[variant]} border rounded-none ${className}`}
-        role="region"
-        aria-label="Content Promotion Banner"
-      >
-        <div className="container mx-auto flex flex-col md:flex-row md:items-center gap-3 justify-between">
-          <div className="flex-1">
-            <div className="text-sm uppercase tracking-wide opacity-80">Latest</div>
-            <div className="text-white font-semibold text-lg">{title}</div>
-            <div className="text-white/80 text-sm">{description}</div>
+    <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-2xl p-8 md:p-12 text-white relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/20 to-transparent"></div>
+      </div>
+      
+      <div className="relative z-10">
+        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+          <div className="max-w-2xl">
+            <div className="flex items-center gap-2 mb-4">
+              <TrendingUp className="w-5 h-5 text-yellow-300" />
+              <span className="text-sm font-medium text-yellow-300 uppercase tracking-wide">
+                Fresh Content
+              </span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Latest from Zion Insights
+            </h2>
+            <p className="text-white/90 text-lg leading-relaxed">
+              Fresh articles on AI automation, cloud security, and developer productivity. 
+              Stay ahead with expert analysis and practical guides.
+            </p>
           </div>
-          <div className="flex items-center gap-3">
-            <Link
-              to={ctaLink}
-              className="bg-white text-gray-900 hover:bg-gray-100 px-4 py-2 rounded-lg font-semibold text-sm"
+          
+          <div className="flex flex-col gap-4">
+            <Link 
+              to="/blog" 
+              className="bg-white text-indigo-700 hover:bg-indigo-50 px-8 py-4 rounded-lg font-semibold inline-flex items-center justify-center gap-2 transition-all duration-300 hover:scale-105 hover:shadow-lg"
             >
-              {ctaText}
+              <BookOpen className="w-5 h-5" />
+              Explore All Articles
+              <ArrowRight className="w-5 h-5" />
             </Link>
-            {dismissible && (
-              <button
-                aria-label="Dismiss promotion"
-                className="text-white/70 hover:text-white text-sm"
-                onClick={() => setVisible(false)}
-              >
-                Dismiss
-              </button>
-            )}
+            
+            <Link 
+              to="/case-studies" 
+              className="border-2 border-white text-white hover:bg-white hover:text-indigo-700 px-8 py-4 rounded-lg font-semibold inline-flex items-center justify-center gap-2 transition-all duration-300 hover:scale-105"
+            >
+              <Zap className="w-5 h-5" />
+              View Case Studies
+            </Link>
+          </div>
+        </div>
+
+        {/* Featured Content Cards */}
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
+          {featuredContent.map((item, index) => (
+            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
+              <div className="flex items-center justify-between mb-3">
+                <span className="text-xs uppercase tracking-wider text-blue-200 bg-blue-500/20 px-3 py-1 rounded-full">
+                  {item.category}
+                </span>
+                {item.isNew && (
+                  <span className="bg-red-500 text-white text-xs px-2 py-1 rounded-full font-medium">
+                    NEW
+                  </span>
+                )}
+              </div>
+              <h3 className="font-bold text-white mb-2 line-clamp-2">
+                {item.title}
+              </h3>
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-white/70">
+                  {item.readTime}
+                </span>
+                <ArrowRight className="w-4 h-4 text-white/70" />
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Stats */}
+        <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-white/20">
+          <div className="text-center">
+            <div className="text-2xl font-bold text-white">50+</div>
+            <div className="text-sm text-white/80">Articles Published</div>
+          </div>
+          <div className="text-center">
+            <div className="text-2xl font-bold text-white">10K+</div>
+            <div className="text-sm text-white/80">Monthly Readers</div>
+          </div>
+          <div className="text-center">
+            <div className="text-2xl font-bold text-white">15</div>
+            <div className="text-sm text-white/80">Expert Authors</div>
+          </div>
+          <div className="text-center">
+            <div className="text-2xl font-bold text-white">4.9★</div>
+            <div className="text-sm text-white/80">Reader Rating</div>
           </div>
         </div>
       </div>

@@ -113,10 +113,6 @@ temperature: 0.3
 }as any;
 const resp = await fetch ("https://api.openai.com/v1/chat/completions", {
   method: "POST", headers: {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
   "Content-Type": "application/json", Authorization: `Bearer $ {
   OPENAI API KEY 
 }` 
@@ -125,9 +121,3 @@ body: JSON.stringify (body)
 }return milestones 
 }
 }
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/delete-old-data-records-6bba

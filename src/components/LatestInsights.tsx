@@ -1,76 +1,81 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Calendar, User } from 'lucide-react';
-import { latestInsights } from '../content/insights';
+import { ArrowRight } from "lucide-react";
+import React from "react";
+import { Link } from "react-router-dom";
+import { latestInsights } from "../content/insights";
 
-export default function LatestInsights(): React.JSX.Element {
+function isNew(dateIso: string): boolean {
+  const daysSince = (Date.now() - new Date(dateIso).getTime()) / (1000 * 60 * 60 * 24);
+  return daysSince <= 7;
+}
+
+const LatestInsights: React.FC = () => {
   return (
-    <section aria-label="Latest Insights" className="py-16 bg-white">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Latest Insights</h2>
-          <p className="text-xl text-gray-600">Stay ahead with our expert analysis and industry insights</p>
+    <section className="py-20 bg-white/5">
+      <div className="container mx-auto px-6">
+        <div className="flex items-end justify-between mb-8">
+          <div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">Latest Insights</h2>
+            <p className="text-zion-slate-light">Research, guides, and playbooks from our team.</p>
+          </div>
+            <Link
+            to="/insights"
+            className="hidden sm:inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors"
+          >
+            View all
+            <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {[{
-            id: 'ai-agent-observability-2026',
-            title: 'AI Agent Observability 2026: End-to-End Monitoring & Reliability',
-            slug: '/blog/ai-agent-observability-2026',
-            category: 'Architecture',
-            readTime: '18 min',
-            date: 'Sep 29, 2026'
-          }, {
-            id: 'ai-autonomous-cloud-ops-2026',
-            title: 'AI Autonomous Cloud Operations 2026',
-            slug: '/blog/ai-autonomous-cloud-ops-2026',
-            category: 'Operations',
-            readTime: '18 min',
-            date: 'Aug 12, 2026'
-          }, {
-            id: 'genai-guardrails-2025',
-            title: 'GenAI Guardrails 2025: Practical Playbook',
-            slug: '/blog/genai-guardrails-2025',
-            category: 'Governance',
-            readTime: '11 min',
-            date: 'Jan 22, 2025'
-          }].map((insight) => (
-            <article key={insight.id} className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-shadow">
-              <div className="p-6">
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">
-                    {insight.category}
-                  </span>
-                  <span className="text-gray-500 text-sm">{insight.readTime}</span>
+        <div className="grid gap-6 md:grid-cols-3">
+          {latestInsights.slice(0, 3).map((item) => (
+            <div
+              key={item.id}
+              className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl"
+            >
+              <div className="flex items-center justify-between mb-4">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zion-cyan/20 text-zion-cyan text-xs font-medium">
+                  <span>{item.category}</span>
+                  {isNew(item.date) && (
+                    <span className="ml-2 inline-flex items-center px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">New</span>
+                  )}
                 </div>
-
-                <h3 className="text-xl font-bold text-gray-900 mb-3 hover:text-blue-600 transition-colors">
-                  <Link href={insight.slug}>{insight.title}</Link>
-                </h3>
-
-                <div className="flex items-center justify-between text-sm text-gray-500">
-                  <span>{insight.date}</span>
-                  <Link 
-                    href={insight.slug}
-                    className="text-blue-600 hover:text-blue-800 transition-colors font-semibold"
-                  >
-                    Read more →
-                  </Link>
+                <div className="flex items-center gap-2">
+                  {isNew(item.date) && (
+                    <span className="inline-flex items-center gap-1 text-[10px] uppercase tracking-wide px-2 py-0.5 rounded-full bg-green-400/20 text-green-200 border border-green-300/30">
+                      New
+                    </span>
+                  )}
+                  <span className="text-xs text-zion-slate-light">{new Date(item.date).toLocaleDateString()}</span>
                 </div>
               </div>
-            </article>
+
+              <h3 className="text-xl font-semibold text-white mb-2">{item.title}</h3>
+              <p className="text-zion-slate-light mb-6 leading-relaxed">{item.summary}</p>
+
+              <Link
+                to="/insights"
+                className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors"
+              >
+                Read more
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <Link 
-            href="/blog"
-            className="inline-flex items-center justify-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+        <div className="mt-8 sm:hidden">
+          <Link
+            to="/insights"
+            className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors"
           >
-            View All Insights
+            View all
+            <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default LatestInsights;
+

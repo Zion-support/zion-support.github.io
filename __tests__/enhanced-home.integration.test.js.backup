@@ -7,8 +7,3 @@
     // Test data loading and display})});
 
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> main

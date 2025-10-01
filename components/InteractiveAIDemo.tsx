@@ -1,235 +1,136 @@
-import React, { useState } from 'react';
+"use client";
+import React, { useState, useEffect } from 'react';
 
 export default function InteractiveAIDemo() {
-  const [selectedDemo, setSelectedDemo] = useState('predictive');
   const [isRunning, setIsRunning] = useState(false);
-  const [results, setResults] = useState(null);
+  const [progress, setProgress] = useState(0);
+  const [currentTask, setCurrentTask] = useState('');
 
-  const demos = {
-    predictive: {
-      title: 'Predictive Analytics Demo',
-      description: 'See how AI predicts business outcomes in real-time',
-      icon: '🔮',
-      color: 'from-blue-500 to-purple-600'
-    },
-    automation: {
-      title: 'Process Automation Demo',
-      description: 'Watch AI automate complex business processes',
-      icon: '⚡',
-      color: 'from-green-500 to-teal-600'
-    },
-    insights: {
-      title: 'AI Insights Demo',
-      description: 'Discover actionable insights from your data',
-      icon: '💡',
-      color: 'from-orange-500 to-red-600'
-    }
-  };
+  const tasks = [
+    'Initializing Neural Networks...',
+    'Loading Quantum Consciousness Matrix...',
+    'Optimizing Performance Algorithms...',
+    'Integrating Meta-Cognitive Systems...',
+    'Calibrating Universal Intelligence...',
+    'Achieving 500,000x Performance Boost...',
+    'Ultimate Neural Fusion Complete!'
+  ];
 
-  const runDemo = () => {
-    setIsRunning(true);
-    setResults(null);
-    
-    // Simulate AI processing
-    setTimeout(() => {
-      const mockResults = {
-        predictive: {
-          accuracy: '94.7%',
-          prediction: 'Revenue will increase by 23% next quarter',
-          confidence: 'High',
-          factors: ['Customer growth', 'Market trends', 'Seasonal patterns']
-        },
-        automation: {
-          efficiency: '87%',
-          timeSaved: '340 hours/month',
-          processes: '15 automated',
-          costReduction: '$45,000/month'
-        },
-        insights: {
-          opportunities: 12,
-          risks: 3,
-          recommendations: 8,
-          impact: '$2.3M potential value'
-        }
+  useEffect(() => {
+    if (isRunning) {
+      const interval = setInterval(() => {
+        setProgress(prev => {
+          if (prev >= 100) {
+            setIsRunning(false);
+            return 100;
+          }
+          return prev + Math.random() * 15;
+        });
+      }, 200);
+
+      const taskInterval = setInterval(() => {
+        setCurrentTask(prev => {
+          const currentIndex = tasks.findIndex(task => task === prev);
+          const nextIndex = (currentIndex + 1) % tasks.length;
+          return tasks[nextIndex];
+        });
+      }, 1000);
+
+      return () => {
+        clearInterval(interval);
+        clearInterval(taskInterval);
       };
-      
-      setResults(mockResults[selectedDemo]);
-      setIsRunning(false);
-    }, 3000);
+    }
+  }, [isRunning]);
+
+  const startDemo = () => {
+    setIsRunning(true);
+    setProgress(0);
+    setCurrentTask(tasks[0]);
   };
 
   return (
-    <div className="w-full bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white py-20">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Interactive AI Demo
-          </h2>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-            Experience the power of AI firsthand. Try our interactive demos to see how 
-            artificial intelligence can transform your business operations.
-          </p>
+    <div className="bg-gradient-to-br from-purple-900 via-indigo-900 to-slate-900 rounded-2xl p-8 border border-purple-500/20">
+      <div className="text-center mb-8">
+        <h3 className="text-3xl font-bold text-white mb-4">
+          🧠 Interactive AI Demo
+        </h3>
+        <p className="text-gray-300 text-lg">
+          Experience the Ultimate Neural Fusion Technology in Real-Time
+        </p>
+      </div>
+
+      <div className="bg-black/30 rounded-xl p-6 mb-6">
+        <div className="flex items-center justify-between mb-4">
+          <span className="text-green-400 font-semibold">AI Status:</span>
+          <span className={`px-3 py-1 rounded-full text-sm font-bold ${
+            isRunning ? 'bg-green-500/20 text-green-400' : 'bg-gray-500/20 text-gray-400'
+          }`}>
+            {isRunning ? 'ACTIVE' : 'STANDBY'}
+          </span>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
-          {Object.entries(demos).map(([key, demo]) => (
-            <button
-              key={key}
-              onClick={() => setSelectedDemo(key)}
-              className={`p-6 rounded-xl border-2 transition-all duration-300 ${
-                selectedDemo === key
-                  ? 'border-white bg-white/20'
-                  : 'border-white/30 bg-white/5 hover:bg-white/10'
-              }`}
-            >
-              <div className="text-center">
-                <div className="text-4xl mb-4">{demo.icon}</div>
-                <h3 className="text-xl font-bold mb-2">{demo.title}</h3>
-                <p className="text-blue-100 text-sm">{demo.description}</p>
-              </div>
-            </button>
-          ))}
-        </div>
-
-        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-8">
-          <div className="text-center mb-8">
-            <div className={`inline-flex items-center gap-3 bg-gradient-to-r ${demos[selectedDemo].color} text-white px-6 py-3 rounded-full mb-4`}>
-              <span className="text-2xl">{demos[selectedDemo].icon}</span>
-              <span className="font-semibold">{demos[selectedDemo].title}</span>
+        {currentTask && (
+          <div className="mb-4">
+            <div className="text-blue-400 font-medium mb-2">Current Task:</div>
+            <div className="text-white font-mono text-sm bg-blue-900/20 p-3 rounded border border-blue-500/30">
+              {currentTask}
             </div>
-            <p className="text-blue-100 text-lg">
-              {demos[selectedDemo].description}
-            </p>
           </div>
+        )}
 
-          <div className="text-center mb-8">
-            <button
-              onClick={runDemo}
-              disabled={isRunning}
-              className={`px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 ${
-                isRunning
-                  ? 'bg-gray-500 cursor-not-allowed'
-                  : 'bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 hover:shadow-xl'
-              }`}
-            >
-              {isRunning ? (
-                <div className="flex items-center gap-3">
-                  <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                  <span>Running AI Demo...</span>
-                </div>
-              ) : (
-                'Run AI Demo'
-              )}
-            </button>
+        <div className="mb-4">
+          <div className="flex justify-between text-sm text-gray-300 mb-2">
+            <span>Neural Fusion Progress</span>
+            <span>{Math.round(progress)}%</span>
           </div>
+          <div className="w-full bg-gray-700 rounded-full h-3">
+            <div 
+              className="bg-gradient-to-r from-purple-500 to-cyan-500 h-3 rounded-full transition-all duration-300 ease-out"
+              style={{ width: `${progress}%` }}
+            ></div>
+          </div>
+        </div>
 
-          {results && (
-            <div className="bg-white/5 rounded-xl p-6">
-              <h3 className="text-2xl font-bold mb-6 text-center">Demo Results</h3>
-              
-              {selectedDemo === 'predictive' && (
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="space-y-4">
-                    <div className="bg-white/10 p-4 rounded-lg">
-                      <div className="text-sm text-blue-200 mb-1">Prediction Accuracy</div>
-                      <div className="text-3xl font-bold text-green-400">{results.accuracy}</div>
-                    </div>
-                    <div className="bg-white/10 p-4 rounded-lg">
-                      <div className="text-sm text-blue-200 mb-1">Confidence Level</div>
-                      <div className="text-2xl font-bold text-yellow-400">{results.confidence}</div>
-                    </div>
-                  </div>
-                  <div className="space-y-4">
-                    <div className="bg-white/10 p-4 rounded-lg">
-                      <div className="text-sm text-blue-200 mb-2">Key Prediction</div>
-                      <div className="text-lg font-semibold text-white">{results.prediction}</div>
-                    </div>
-                    <div className="bg-white/10 p-4 rounded-lg">
-                      <div className="text-sm text-blue-200 mb-2">Key Factors</div>
-                      <ul className="space-y-1">
-                        {results.factors.map((factor, index) => (
-                          <li key={index} className="text-white text-sm">• {factor}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {selectedDemo === 'automation' && (
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="space-y-4">
-                    <div className="bg-white/10 p-4 rounded-lg">
-                      <div className="text-sm text-blue-200 mb-1">Efficiency Gain</div>
-                      <div className="text-3xl font-bold text-green-400">{results.efficiency}</div>
-                    </div>
-                    <div className="bg-white/10 p-4 rounded-lg">
-                      <div className="text-sm text-blue-200 mb-1">Time Saved</div>
-                      <div className="text-2xl font-bold text-blue-400">{results.timeSaved}</div>
-                    </div>
-                  </div>
-                  <div className="space-y-4">
-                    <div className="bg-white/10 p-4 rounded-lg">
-                      <div className="text-sm text-blue-200 mb-1">Processes Automated</div>
-                      <div className="text-3xl font-bold text-purple-400">{results.processes}</div>
-                    </div>
-                    <div className="bg-white/10 p-4 rounded-lg">
-                      <div className="text-sm text-blue-200 mb-1">Monthly Savings</div>
-                      <div className="text-2xl font-bold text-green-400">{results.costReduction}</div>
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {selectedDemo === 'insights' && (
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="space-y-4">
-                    <div className="bg-white/10 p-4 rounded-lg">
-                      <div className="text-sm text-blue-200 mb-1">Opportunities Found</div>
-                      <div className="text-3xl font-bold text-green-400">{results.opportunities}</div>
-                    </div>
-                    <div className="bg-white/10 p-4 rounded-lg">
-                      <div className="text-sm text-blue-200 mb-1">Risks Identified</div>
-                      <div className="text-3xl font-bold text-red-400">{results.risks}</div>
-                    </div>
-                  </div>
-                  <div className="space-y-4">
-                    <div className="bg-white/10 p-4 rounded-lg">
-                      <div className="text-sm text-blue-200 mb-1">Recommendations</div>
-                      <div className="text-3xl font-bold text-blue-400">{results.recommendations}</div>
-                    </div>
-                    <div className="bg-white/10 p-4 rounded-lg">
-                      <div className="text-sm text-blue-200 mb-1">Potential Value</div>
-                      <div className="text-2xl font-bold text-yellow-400">{results.impact}</div>
-                    </div>
-                  </div>
-                </div>
-              )}
+        {progress >= 100 && (
+          <div className="text-center">
+            <div className="text-4xl mb-2">🎉</div>
+            <div className="text-green-400 font-bold text-xl mb-2">
+              ULTIMATE NEURAL FUSION ACHIEVED!
             </div>
-          )}
-        </div>
-
-        <div className="text-center">
-          <div className="inline-flex items-center gap-4">
-            <a
-              href="/contact"
-              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl"
-            >
-              Get Your AI Demo
-            </a>
-            <a
-              href="/services"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"
-            >
-              Explore AI Services
-            </a>
+            <div className="text-white text-sm">
+              Performance Boost: <span className="text-yellow-400 font-bold">500,000x</span>
+            </div>
           </div>
-        </div>
+        )}
+      </div>
 
-        <div className="mt-8 text-center">
-          <p className="text-blue-200 text-sm">
-            Experience the future of business with AI-powered solutions
-          </p>
+      <div className="text-center">
+        <button
+          onClick={startDemo}
+          disabled={isRunning}
+          className={`px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 ${
+            isRunning
+              ? 'bg-gray-600 text-gray-400 cursor-not-allowed'
+              : 'bg-gradient-to-r from-purple-500 to-cyan-500 text-white hover:from-purple-600 hover:to-cyan-600 hover:scale-105 shadow-lg hover:shadow-purple-500/25'
+          }`}
+        >
+          {isRunning ? 'Neural Fusion in Progress...' : 'Start AI Demo'}
+        </button>
+      </div>
+
+      <div className="mt-6 grid grid-cols-3 gap-4 text-center">
+        <div className="bg-purple-900/30 rounded-lg p-4">
+          <div className="text-2xl font-bold text-purple-400">500Kx</div>
+          <div className="text-gray-300 text-sm">Performance</div>
+        </div>
+        <div className="bg-cyan-900/30 rounded-lg p-4">
+          <div className="text-2xl font-bold text-cyan-400">0.0001s</div>
+          <div className="text-gray-300 text-sm">Response Time</div>
+        </div>
+        <div className="bg-green-900/30 rounded-lg p-4">
+          <div className="text-2xl font-bold text-green-400">99.99%</div>
+          <div className="text-gray-300 text-sm">Autonomous</div>
         </div>
       </div>
     </div>

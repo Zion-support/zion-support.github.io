@@ -1,14 +1,16 @@
-import React from 'react';
+import React from "react";
 
 export type Notification = { id: string; message: string };
 
-type NotificationSystemProps = {
+interface NotificationSystemProps {
   notifications: Notification[];
   onRemove: (id: string) => void;
-};
+}
 
 export default function NotificationSystem({ notifications, onRemove }: NotificationSystemProps): React.JSX.Element | null {
-  if (!notifications?.length) return null;
+  if (!notifications || notifications.length === 0) {
+    return null;
+  }
   return (
     <div aria-live="polite" aria-atomic="true">
       {notifications.map((n) => (

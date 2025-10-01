@@ -1,444 +1,429 @@
-export interface Service {
+export interface NewService {
   id: string;
+  name: string;
   title: string;
   description: string;
-  excerpt: string;
-  category: string;
-  tags: string[];
-  featured: boolean;
-  newBadge: boolean;
-  trending: boolean;
-  pricing: {
-    startingPrice: string;
-    currency: string;
-    billingPeriod: string;
-  };
   benefits: string[];
-  technologies: string[];
-  metrics: {
-    label: string;
-    value: string;
-    description: string;
-  }[];
-  url: string;
-  image: string;
-  publishedDate: string;
-  author: string;
+  features: string[];
+  category: string;
+  pricing: string;
+  link: string;
+  icon: string;
+  featured: boolean;
+  launchDate: string;
 }
 
-export const newServices2026: Service[] = [
+export const newServices2026: NewService[] = [
   {
-    id: "ai-autonomous-infrastructure-platform",
-    title: "AI Autonomous Infrastructure Platform",
-    description: "Revolutionary AI-powered infrastructure platform that self-heals, self-optimizes, and self-scales automatically. Achieve 99.9% uptime with zero manual intervention.",
-    excerpt: "Transform your infrastructure with AI that thinks, learns, and adapts. Zero-touch operations are no longer a dream—they're here.",
-    category: "AI Infrastructure",
-    tags: ["Autonomous Systems", "Self-Healing", "Infrastructure", "AI Operations", "Automation"],
+    id: "ai-predictive-maintenance",
+    name: "AI Predictive Maintenance Platform",
+    title: "⚙️ AI Predictive Maintenance: Zero Unplanned Downtime",
+    description: "AI-powered predictive maintenance reducing equipment downtime by 85% and maintenance costs by 40%. Predict failures before they happen with 98% accuracy.",
+    benefits: [
+      "85% reduction in unplanned downtime",
+      "40% lower maintenance costs",
+      "98% failure prediction accuracy",
+      "ROI in 6 months"
+    ],
+    features: [
+      "Real-time equipment monitoring",
+      "Predictive failure analysis",
+      "Automated maintenance scheduling",
+      "Asset performance optimization",
+      "IoT sensor integration"
+    ],
+    category: "Industrial AI",
+    pricing: "Starting at $5,000/month",
+    link: "/services/ai-predictive-maintenance",
+    icon: "⚙️",
     featured: true,
-    newBadge: true,
-    trending: true,
-    pricing: {
-      startingPrice: "$2,500",
-      currency: "USD",
-      billingPeriod: "per month"
-    },
-    benefits: [
-      "99.9% system uptime guaranteed",
-      "90% reduction in operational costs",
-      "Automatic scaling and optimization",
-      "Zero manual intervention required",
-      "Predictive maintenance and healing",
-      "Real-time performance monitoring"
-    ],
-    technologies: ["AI/ML", "Cloud Infrastructure", "Kubernetes", "Monitoring", "Automation"],
-    metrics: [
-      {
-        label: "Uptime",
-        value: "99.9%",
-        description: "Guaranteed system availability"
-      },
-      {
-        label: "Cost Reduction",
-        value: "90%",
-        description: "Operational cost savings"
-      },
-      {
-        label: "Automation",
-        value: "95%",
-        description: "Self-managing operations"
-      },
-      {
-        label: "Response Time",
-        value: "< 15s",
-        description: "Issue detection and resolution"
-      }
-    ],
-    url: "/services/ai-autonomous-infrastructure-platform",
-    image: "/images/ai-autonomous-infrastructure-platform.jpg",
-    publishedDate: "2026-01-25",
-    author: "Zion Tech Group"
+    launchDate: "2025-10-15"
   },
   {
-    id: "multimodal-ai-intelligence-suite",
-    title: "Multimodal AI Intelligence Suite",
-    description: "Comprehensive AI suite that processes text, images, audio, and video simultaneously. Unlock insights from all your data types with unified intelligence.",
-    excerpt: "Next-generation multimodal AI that understands and processes multiple data types for comprehensive business intelligence.",
-    category: "Multimodal AI",
-    tags: ["Multimodal AI", "Computer Vision", "NLP", "Audio Processing", "Video Analysis"],
+    id: "ai-talent-acquisition",
+    name: "AI Talent Acquisition Suite",
+    title: "👥 AI Talent Acquisition: 10x Faster Hiring",
+    description: "Revolutionize recruiting with AI matching candidates 10x faster with 95% accuracy. Reduce time-to-hire from weeks to days while improving candidate quality.",
+    benefits: [
+      "10x faster candidate matching",
+      "95% match accuracy",
+      "60% reduction in time-to-hire",
+      "50% cost savings"
+    ],
+    features: [
+      "AI-powered candidate screening",
+      "Automated interview scheduling",
+      "Skills assessment automation",
+      "Bias-free candidate evaluation",
+      "Predictive candidate success scoring"
+    ],
+    category: "HR Tech",
+    pricing: "Starting at $3,000/month",
+    link: "/services/ai-talent-acquisition",
+    icon: "👥",
     featured: true,
-    newBadge: true,
-    trending: true,
-    pricing: {
-      startingPrice: "$1,800",
-      currency: "USD",
-      billingPeriod: "per month"
-    },
-    benefits: [
-      "90% accuracy across all modalities",
-      "Unified processing pipeline",
-      "Real-time multimodal analysis",
-      "Custom model training",
-      "API integration ready",
-      "Scalable cloud infrastructure"
-    ],
-    technologies: ["Multimodal AI", "Deep Learning", "Computer Vision", "NLP", "Audio Processing"],
-    metrics: [
-      {
-        label: "Accuracy",
-        value: "90%",
-        description: "Cross-modal intelligence"
-      },
-      {
-        label: "Processing Speed",
-        value: "5x",
-        description: "Faster than single-modal"
-      },
-      {
-        label: "Integration Time",
-        value: "50%",
-        description: "Faster system integration"
-      },
-      {
-        label: "Business Value",
-        value: "300%",
-        description: "Increase in insights"
-      }
-    ],
-    url: "/services/multimodal-ai-intelligence-suite",
-    image: "/images/multimodal-ai-intelligence-suite.jpg",
-    publishedDate: "2026-01-24",
-    author: "Zion Tech Group"
+    launchDate: "2025-10-15"
   },
   {
-    id: "ai-ethics-compliance-framework",
-    title: "AI Ethics & Compliance Framework",
-    description: "Comprehensive framework for developing and deploying AI systems responsibly. Ensure compliance with regulations and build trust with stakeholders.",
-    excerpt: "Essential framework for responsible AI development, deployment, and governance with built-in compliance monitoring.",
-    category: "AI Ethics",
-    tags: ["AI Ethics", "Responsible AI", "Compliance", "Governance", "Transparency"],
+    id: "ai-fraud-prevention",
+    name: "AI Fraud Prevention System",
+    title: "🛡️ AI Fraud Prevention: 99.95% Detection Accuracy",
+    description: "Next-generation fraud detection with AI achieving 99.95% accuracy and real-time prevention. Stop fraud before it happens with sub-100ms detection.",
+    benefits: [
+      "99.95% fraud detection accuracy",
+      "Sub-100ms detection time",
+      "95% reduction in false positives",
+      "$5M+ annual savings"
+    ],
+    features: [
+      "Real-time transaction monitoring",
+      "Behavioral anomaly detection",
+      "Multi-layer authentication",
+      "Automated fraud blocking",
+      "Continuous learning AI models"
+    ],
+    category: "FinTech Security",
+    pricing: "Starting at $8,000/month",
+    link: "/services/ai-fraud-prevention",
+    icon: "🛡️",
     featured: true,
-    newBadge: true,
-    trending: false,
-    pricing: {
-      startingPrice: "$1,200",
-      currency: "USD",
-      billingPeriod: "per month"
-    },
-    benefits: [
-      "100% regulatory compliance",
-      "Automated ethics monitoring",
-      "Transparency reporting",
-      "Risk assessment tools",
-      "Stakeholder trust building",
-      "Continuous compliance updates"
-    ],
-    technologies: ["AI Ethics", "Compliance Monitoring", "Risk Assessment", "Reporting", "Governance"],
-    metrics: [
-      {
-        label: "Compliance Rate",
-        value: "100%",
-        description: "Regulatory compliance"
-      },
-      {
-        label: "Trust Score",
-        value: "95%",
-        description: "Stakeholder trust"
-      },
-      {
-        label: "Risk Reduction",
-        value: "80%",
-        description: "AI-related risks"
-      },
-      {
-        label: "Transparency",
-        value: "90%",
-        description: "System transparency"
-      }
-    ],
-    url: "/services/ai-ethics-compliance-framework",
-    image: "/images/ai-ethics-compliance-framework.jpg",
-    publishedDate: "2026-01-23",
-    author: "Zion Tech Group"
+    launchDate: "2025-10-15"
   },
   {
-    id: "real-time-ai-performance-monitoring",
-    title: "Real-Time AI Performance Monitoring",
-    description: "Advanced AI performance monitoring with real-time observability, automated alerting, and predictive analytics for optimal system performance.",
-    excerpt: "Comprehensive AI performance monitoring solution that provides real-time insights and predictive analytics for optimal system performance.",
-    category: "AI Operations",
-    tags: ["Performance Monitoring", "Observability", "AI Operations", "Alerting", "Analytics"],
+    id: "ai-creative-studio",
+    name: "AI Creative Studio",
+    title: "🎨 AI Creative Studio: 100x Faster Content Creation",
+    description: "Transform creative workflows with AI generating high-quality content 100x faster. Create videos, images, copy, and designs at unprecedented scale.",
+    benefits: [
+      "100x faster content creation",
+      "90% cost reduction",
+      "Professional quality output",
+      "Unlimited creative variations"
+    ],
+    features: [
+      "AI video generation",
+      "Automated image creation",
+      "Smart copywriting assistant",
+      "Design automation",
+      "Brand consistency enforcement"
+    ],
+    category: "Creative AI",
+    pricing: "Starting at $2,500/month",
+    link: "/services/ai-creative-studio",
+    icon: "🎨",
     featured: true,
-    newBadge: true,
-    trending: false,
-    pricing: {
-      startingPrice: "$950",
-      currency: "USD",
-      billingPeriod: "per month"
-    },
-    benefits: [
-      "99.9% system reliability",
-      "Real-time performance insights",
-      "Automated alerting system",
-      "Predictive analytics",
-      "Custom dashboards",
-      "Historical trend analysis"
-    ],
-    technologies: ["Performance Monitoring", "Observability", "Analytics", "Alerting", "Dashboards"],
-    metrics: [
-      {
-        label: "System Reliability",
-        value: "99.9%",
-        description: "Overall uptime"
-      },
-      {
-        label: "Detection Time",
-        value: "< 30s",
-        description: "Issue detection"
-      },
-      {
-        label: "False Positives",
-        value: "85%",
-        description: "Reduction in false alerts"
-      },
-      {
-        label: "Cost Savings",
-        value: "70%",
-        description: "Monitoring optimization"
-      }
-    ],
-    url: "/services/real-time-ai-performance-monitoring",
-    image: "/images/real-time-ai-performance-monitoring.jpg",
-    publishedDate: "2026-01-22",
-    author: "Zion Tech Group"
+    launchDate: "2025-10-15"
   },
   {
-    id: "edge-ai-deployment-platform",
-    title: "Edge AI Deployment Platform",
-    description: "Production-ready edge AI platform with real-time inference, offline capabilities, and seamless cloud synchronization for distributed intelligence.",
-    excerpt: "Deploy AI models at the edge with production-ready solutions that deliver real-time intelligence while maintaining cloud connectivity.",
-    category: "Edge AI",
-    tags: ["Edge AI", "Real-time Inference", "Edge Computing", "AI Deployment", "Offline AI"],
-    featured: false,
-    newBadge: true,
-    trending: false,
-    pricing: {
-      startingPrice: "$1,500",
-      currency: "USD",
-      billingPeriod: "per month"
-    },
+    id: "ai-legal-research",
+    name: "AI Legal Research Assistant",
+    title: "⚖️ AI Legal Research: 1000x Faster Case Analysis",
+    description: "Accelerate legal research 1000x with AI analyzing millions of cases instantly. Achieve comprehensive legal insights in minutes instead of weeks.",
     benefits: [
-      "Sub-50ms inference speed",
-      "100% offline capability",
-      "Seamless cloud sync",
-      "Edge-to-cloud orchestration",
-      "Automatic model updates",
-      "Distributed deployment"
+      "1000x faster research",
+      "99% accuracy in case matching",
+      "85% reduction in research costs",
+      "Comprehensive precedent analysis"
     ],
-    technologies: ["Edge AI", "Real-time Inference", "Edge Computing", "Cloud Sync", "Orchestration"],
-    metrics: [
-      {
-        label: "Inference Speed",
-        value: "< 50ms",
-        description: "Real-time edge inference"
-      },
-      {
-        label: "Offline Capability",
-        value: "100%",
-        description: "Full offline functionality"
-      },
-      {
-        label: "Cost Reduction",
-        value: "80%",
-        description: "Edge vs cloud costs"
-      },
-      {
-        label: "Latency Reduction",
-        value: "90%",
-        description: "Reduced inference latency"
-      }
+    features: [
+      "Instant case law search",
+      "Automated legal document analysis",
+      "Precedent recommendation engine",
+      "Regulatory compliance checking",
+      "Contract risk assessment"
     ],
-    url: "/services/edge-ai-deployment-platform",
-    image: "/images/edge-ai-deployment-platform.jpg",
-    publishedDate: "2026-01-20",
-    author: "Zion Tech Group"
+    category: "Legal Tech",
+    pricing: "Starting at $4,500/month",
+    link: "/services/ai-legal-research",
+    icon: "⚖️",
+    featured: true,
+    launchDate: "2025-10-15"
   },
   {
-    id: "ai-data-pipeline-optimizer",
-    title: "AI Data Pipeline Optimizer",
-    description: "High-performance AI data pipeline optimization with advanced caching, parallel processing, and intelligent data routing for maximum throughput.",
-    excerpt: "Optimize your AI data pipelines for maximum performance with advanced caching and parallel processing strategies.",
-    category: "Data Engineering",
-    tags: ["Data Pipelines", "Performance Optimization", "Data Processing", "Caching", "Parallel Processing"],
-    featured: false,
-    newBadge: true,
-    trending: false,
-    pricing: {
-      startingPrice: "$1,100",
-      currency: "USD",
-      billingPeriod: "per month"
-    },
+    id: "ai-customer-sentiment-analysis",
+    name: "AI Customer Sentiment Analysis",
+    title: "💬 AI Sentiment Analysis: Real-Time Customer Intelligence",
+    description: "Understand customer emotions in real-time with AI achieving 97% sentiment accuracy. Transform customer feedback into actionable insights instantly.",
     benefits: [
-      "10x pipeline performance",
-      "1TB/hour data throughput",
-      "Intelligent caching system",
-      "Parallel processing optimization",
-      "Real-time monitoring",
-      "Cost-effective scaling"
+      "97% sentiment accuracy",
+      "Real-time feedback analysis",
+      "300% improvement in customer satisfaction",
+      "Actionable insights dashboard"
     ],
-    technologies: ["Data Pipelines", "Performance Optimization", "Caching", "Parallel Processing", "Monitoring"],
-    metrics: [
-      {
-        label: "Processing Speed",
-        value: "10x",
-        description: "Performance improvement"
-      },
-      {
-        label: "Data Throughput",
-        value: "1TB/hour",
-        description: "High-volume processing"
-      },
-      {
-        label: "Cost Efficiency",
-        value: "70%",
-        description: "Processing cost reduction"
-      },
-      {
-        label: "Reliability",
-        value: "99.9%",
-        description: "Pipeline uptime"
-      }
+    features: [
+      "Multi-channel sentiment tracking",
+      "Emotion detection AI",
+      "Automated response recommendations",
+      "Trend analysis and forecasting",
+      "Customer churn prediction"
     ],
-    url: "/services/ai-data-pipeline-optimizer",
-    image: "/images/ai-data-pipeline-optimizer.jpg",
-    publishedDate: "2026-01-19",
-    author: "Zion Tech Group"
+    category: "Customer Intelligence",
+    pricing: "Starting at $3,500/month",
+    link: "/services/ai-customer-sentiment-analysis",
+    icon: "💬",
+    featured: true,
+    launchDate: "2025-09-30"
   },
   {
-    id: "enterprise-ai-model-governance",
-    title: "Enterprise AI Model Governance",
-    description: "Comprehensive AI model governance platform for enterprise model lifecycle management, version control, and compliance monitoring.",
-    excerpt: "Enterprise-grade AI model governance solution that ensures model quality, compliance, and lifecycle management across your organization.",
-    category: "AI Governance",
-    tags: ["Model Governance", "MLOps", "Model Lifecycle", "Version Control", "Compliance"],
-    featured: false,
-    newBadge: true,
-    trending: false,
-    pricing: {
-      startingPrice: "$1,400",
-      currency: "USD",
-      billingPeriod: "per month"
-    },
+    id: "ai-supply-chain-visibility",
+    name: "AI Supply Chain Visibility Platform",
+    title: "📦 AI Supply Chain: End-to-End Visibility & Optimization",
+    description: "Complete supply chain visibility with AI optimizing logistics, inventory, and delivery. Achieve 99.9% on-time delivery and 35% cost reduction.",
     benefits: [
-      "95% model quality improvement",
-      "100% compliance monitoring",
-      "5x faster deployment",
-      "Automated version control",
-      "Risk assessment tools",
-      "Enterprise-grade security"
+      "99.9% on-time delivery",
+      "35% cost reduction",
+      "Real-time tracking",
+      "Predictive inventory management"
     ],
-    technologies: ["Model Governance", "MLOps", "Version Control", "Compliance", "Security"],
-    metrics: [
-      {
-        label: "Model Quality",
-        value: "95%",
-        description: "Quality improvement"
-      },
-      {
-        label: "Compliance Rate",
-        value: "100%",
-        description: "Regulatory compliance"
-      },
-      {
-        label: "Deployment Speed",
-        value: "5x",
-        description: "Faster deployment"
-      },
-      {
-        label: "Risk Reduction",
-        value: "80%",
-        description: "Model-related risks"
-      }
+    features: [
+      "Real-time supply chain monitoring",
+      "Demand forecasting AI",
+      "Route optimization",
+      "Inventory optimization",
+      "Supplier risk assessment"
     ],
-    url: "/services/enterprise-ai-model-governance",
-    image: "/images/enterprise-ai-model-governance.jpg",
-    publishedDate: "2026-01-18",
-    author: "Zion Tech Group"
+    category: "Supply Chain AI",
+    pricing: "Starting at $6,000/month",
+    link: "/services/ai-supply-chain-visibility",
+    icon: "📦",
+    featured: true,
+    launchDate: "2025-09-30"
   },
   {
-    id: "quantum-ai-hybrid-computing",
-    title: "Quantum-AI Hybrid Computing",
-    description: "Revolutionary quantum-AI hybrid computing platform that combines quantum computing power with AI algorithms for unprecedented problem-solving capabilities.",
-    excerpt: "Breakthrough quantum-AI hybrid computing that delivers 1000x faster optimization and revolutionary capabilities in machine learning.",
-    category: "Quantum Computing",
-    tags: ["Quantum Computing", "AI", "Machine Learning", "Optimization", "Hybrid Computing"],
-    featured: false,
-    newBadge: true,
-    trending: true,
-    pricing: {
-      startingPrice: "$5,000",
-      currency: "USD",
-      billingPeriod: "per month"
-    },
+    id: "ai-code-quality-assistant",
+    name: "AI Code Quality Assistant",
+    title: "💻 AI Code Quality: Automated Reviews & Optimization",
+    description: "Elevate code quality with AI reviewing code, detecting bugs, and suggesting optimizations. Reduce bugs by 80% and improve performance by 40%.",
     benefits: [
-      "1000x faster optimization",
-      "Quantum-enhanced AI algorithms",
-      "Exponential problem-solving power",
-      "Real-time quantum processing",
-      "Advanced machine learning",
-      "Research-grade capabilities"
+      "80% fewer bugs in production",
+      "40% performance improvement",
+      "50% faster code reviews",
+      "Automated technical debt reduction"
     ],
-    technologies: ["Quantum Computing", "AI", "Machine Learning", "Optimization", "Quantum Algorithms"],
-    metrics: [
-      {
-        label: "Speed Improvement",
-        value: "1000x",
-        description: "Faster than classical"
-      },
-      {
-        label: "Problem Complexity",
-        value: "Exponential",
-        description: "Handle NP-hard problems"
-      },
-      {
-        label: "Accuracy Gain",
-        value: "40%",
-        description: "Better optimization"
-      },
-      {
-        label: "Energy Efficiency",
-        value: "90%",
-        description: "Reduced energy usage"
-      }
+    features: [
+      "Automated code reviews",
+      "Bug prediction and prevention",
+      "Performance optimization suggestions",
+      "Security vulnerability detection",
+      "Code style enforcement"
     ],
-    url: "/services/quantum-ai-hybrid-computing",
-    image: "/images/quantum-ai-hybrid-computing.jpg",
-    publishedDate: "2026-01-17",
-    author: "Zion Tech Group"
+    category: "Developer Tools",
+    pricing: "Starting at $2,000/month",
+    link: "/services/ai-code-quality-assistant",
+    icon: "💻",
+    featured: true,
+    launchDate: "2025-09-30"
   }
 ];
 
-export const featuredServices2026 = newServices2026.filter(service => service.featured);
-export const trendingServices2026 = newServices2026.filter(service => service.trending);
-export const latestServices2026 = newServices2026
-  .sort((a, b) => new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime())
-  .slice(0, 6);
+// October 3, 2025 – New services to advertise prominently on homepage
+newServices2026.unshift(
+  {
+    id: "ai-guarded-agent-operations",
+    name: "AI Guarded Agent Operations",
+    title: "🛡️ AI Guarded Agent Ops: Safe Autonomy at Scale",
+    description: "Deploy agentic systems with budgeted tools, HIL approvals, live evals, and instant rollback. Ship 10x faster with zero incidents.",
+    benefits: [
+      "10x faster feature delivery",
+      "Zero Sev‑1 incidents",
+      "Budgeted, auditable actions",
+      "Automated rollback on regressions"
+    ],
+    features: [
+      "Per‑tool and per‑task budgets",
+      "Risk‑tiered approval workflows",
+      "Live policy tests on each PR",
+      "Action journals and tamper‑proof audit logs",
+      "One‑click rollback"
+    ],
+    category: "AI Operations",
+    pricing: "Custom — starts at $7,500/month",
+    link: "/services/ai-guarded-agent-operations",
+    icon: "🛡️",
+    featured: true,
+    launchDate: "2025-10-03"
+  },
+  {
+    id: "risk-controlled-autonomy-implementation",
+    name: "Risk‑Controlled Autonomy Implementation",
+    title: "🤖 Risk‑Controlled Autonomy: Budgets, Approvals, Live Evals",
+    description: "End‑to‑end implementation of safe autonomy: budgets, approvals, live evals, and rollback integrated into your SDLC and production ops.",
+    benefits: [
+      "92% reduction in risky changes reaching prod",
+      "78% cycle time reduction",
+      "Measurable reliability with eval KPIs",
+      "Compliance‑ready audit trails"
+    ],
+    features: [
+      "Budget enforcer and policy engine",
+      "Approval SLAs and escalation",
+      "PR policy tests and shadow runs",
+      "Progressive delivery with canaries",
+      "Automated rollback triggers"
+    ],
+    category: "Professional Services",
+    pricing: "Engagements from $65,000",
+    link: "/services/risk-controlled-autonomy-implementation",
+    icon: "🤖",
+    featured: true,
+    launchDate: "2025-10-03"
+  }
+);
+
+// Sept 30, 2025 – New service to advertise on the homepage
+newServices2026.push(
+  {
+    id: "edge-experimentation-suite",
+    name: "Edge Experimentation Suite",
+    title: "🧪 Edge Experimentation Suite: Privacy‑First A/B at <100ms",
+    description: "Run compliant, sub‑100ms experiments with scoped IDs, on‑device metrics, and DP noise—no PII required.",
+    benefits: [
+      "Compliant A/B testing without PII",
+      "Sub‑100ms global latency",
+      "Reliable insights with DP noise",
+      "Geo/account targeting with budgets"
+    ],
+    features: [
+      "Scoped identifier framework",
+      "On‑device metrics aggregation",
+      "Edge flags and geo budgets",
+      "Signed configs and audit trails",
+      "Automated rollback triggers"
+    ],
+    category: "Analytics",
+    pricing: "Starting at $4,000/month",
+    link: "/services/edge-experimentation-suite",
+    icon: "🧪",
+    featured: true,
+    launchDate: "2025-09-30"
+  }
+);
+
+// January 2026 – Fresh new services to advertise prominently
+newServices2026.push(
+  {
+    id: "ai-autonomous-infrastructure-platform",
+    name: "AI Autonomous Infrastructure Platform",
+    title: "🏗️ AI Autonomous Infrastructure: Self-Healing, Self-Optimizing Systems",
+    description: "Revolutionary infrastructure that manages itself—self-healing failures, self-optimizing performance, and self-scaling resources. Achieve 99.99% uptime with zero manual intervention.",
+    benefits: [
+      "99.99% uptime with zero downtime",
+      "60% reduction in operational costs",
+      "Self-healing infrastructure failures",
+      "Automated scaling and optimization"
+    ],
+    features: [
+      "Predictive failure detection",
+      "Automated incident response",
+      "Self-optimizing resource allocation",
+      "Intelligent capacity planning",
+      "Zero-touch deployment pipelines"
+    ],
+    category: "Infrastructure AI",
+    pricing: "Starting at $12,000/month",
+    link: "/services/ai-autonomous-infrastructure-platform",
+    icon: "🏗️",
+    featured: true,
+    launchDate: "2026-01-15"
+  },
+  {
+    id: "quantum-ai-acceleration-service",
+    name: "Quantum AI Acceleration Service",
+    title: "⚛️ Quantum AI Acceleration: 1000x Performance Boost",
+    description: "Harness quantum computing power to accelerate AI training and inference by 1000x. Solve complex optimization problems in seconds instead of hours.",
+    benefits: [
+      "1000x faster AI training",
+      "Quantum-enhanced optimization",
+      "Exponential performance gains",
+      "Breakthrough computational capabilities"
+    ],
+    features: [
+      "Quantum neural network training",
+      "Quantum optimization algorithms",
+      "Hybrid quantum-classical computing",
+      "Real-time quantum simulation",
+      "Quantum machine learning models"
+    ],
+    category: "Quantum Computing",
+    pricing: "Starting at $25,000/month",
+    link: "/services/quantum-ai-acceleration-service",
+    icon: "⚛️",
+    featured: true,
+    launchDate: "2026-01-15"
+  },
+  {
+    id: "ai-multimodal-content-studio",
+    name: "AI Multimodal Content Studio",
+    title: "🎭 AI Multimodal Content Studio: Vision + Language + Audio",
+    description: "Revolutionary content creation platform that combines vision, language, and audio AI to generate immersive multimedia experiences with 98% accuracy across all modalities.",
+    benefits: [
+      "98% accuracy across all modalities",
+      "10x faster content production",
+      "Unified vision-language-audio processing",
+      "Immersive multimedia experiences"
+    ],
+    features: [
+      "Cross-modal content generation",
+      "Real-time audio-visual synthesis",
+      "Intelligent content adaptation",
+      "Multi-language support",
+      "Advanced content personalization"
+    ],
+    category: "Creative AI",
+    pricing: "Starting at $7,500/month",
+    link: "/services/ai-multimodal-content-studio",
+    icon: "🎭",
+    featured: true,
+    launchDate: "2026-01-15"
+  },
+  {
+    id: "ai-autonomous-business-intelligence",
+    name: "AI Autonomous Business Intelligence",
+    title: "📊 AI Autonomous BI: Self-Driving Analytics & Insights",
+    description: "Revolutionary business intelligence that automatically discovers insights, generates reports, and makes data-driven recommendations without human intervention. Achieve 95% accuracy in predictive analytics.",
+    benefits: [
+      "95% accuracy in predictive analytics",
+      "Automatic insight discovery",
+      "Real-time business recommendations",
+      "Zero-touch report generation"
+    ],
+    features: [
+      "Autonomous data analysis",
+      "Predictive business modeling",
+      "Intelligent report generation",
+      "Natural language queries",
+      "Automated anomaly detection"
+    ],
+    category: "Business Intelligence",
+    pricing: "Starting at $6,500/month",
+    link: "/services/ai-autonomous-business-intelligence",
+    icon: "📊",
+    featured: true,
+    launchDate: "2026-01-15"
+  },
+  {
+    id: "ai-neural-architecture-optimization",
+    name: "AI Neural Architecture Optimization",
+    title: "🧠 AI Neural Architecture Optimization: Auto-Designing Networks",
+    description: "Revolutionary service that automatically designs optimal neural architectures 1000x faster than humans, achieving state-of-the-art performance with minimal computational resources.",
+    benefits: [
+      "1000x faster architecture design",
+      "State-of-the-art performance",
+      "Minimal computational resources",
+      "Automated optimization pipelines"
+    ],
+    features: [
+      "Automated neural architecture search",
+      "Multi-objective optimization",
+      "Hardware-aware design",
+      "Continuous learning algorithms",
+      "Performance benchmarking"
+    ],
+    category: "AI Engineering",
+    pricing: "Starting at $9,000/month",
+    link: "/services/ai-neural-architecture-optimization",
+    icon: "🧠",
+    featured: true,
+    launchDate: "2026-01-15"
+  }
+);

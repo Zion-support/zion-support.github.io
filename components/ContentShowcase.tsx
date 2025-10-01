@@ -1,114 +1,137 @@
 import React from 'react';
 import Link from 'next/link';
 
-const ContentShowcase = () => {
-  const featuredContent = [
+interface ContentItem {
+  id: string;
+  title: string;
+  excerpt: string;
+  category: string;
+  readTime: string;
+  image: string;
+  color: string;
+  href: string;
+}
+
+export default function ContentShowcase() {
+  const featuredContent: ContentItem[] = [
     {
-      id: 'ai-autonomous-enterprise-transformation-2026',
-      title: 'AI Autonomous Enterprise Transformation 2026: Complete Self-Managing Operations Guide',
-      excerpt: 'Master autonomous AI enterprise operations with zero-touch business management, predictive analytics, and self-optimizing systems. Achieve 99.9% uptime and 90% cost reduction.',
-      type: 'article',
-      readTime: '30 min read',
-      category: 'Enterprise AI',
-      featured: true,
-      publishedDate: '2026-01-20',
-      metrics: [
-        { value: '99.9%', label: 'Uptime' },
-        { value: '90%', label: 'Cost Reduction' }
-      ]
-    },
-    {
-      id: 'ai-quantum-hybrid-computing-2026',
-      title: 'AI Quantum Hybrid Computing 2026: Next-Generation Intelligence Revolution',
-      excerpt: 'Harness quantum computing for AI breakthroughs with 1000x faster optimization, revolutionary capabilities, and 95% accuracy. Explore the future of hybrid quantum-classical AI.',
-      type: 'article',
+      id: 'ai-revolution-2026',
+      title: 'AI Revolution 2026: The Next Frontier of Enterprise Intelligence',
+      excerpt: 'Discover autonomous AI agents, neural interfaces, and predictive intelligence systems achieving 300% productivity gains.',
+      category: 'Featured Article',
       readTime: '25 min read',
-      category: 'Quantum AI',
-      featured: true,
-      publishedDate: '2026-01-20',
-      metrics: [
-        { value: '1000x', label: 'Faster Optimization' },
-        { value: '95%', label: 'Accuracy Improvement' }
-      ]
+      image: '🚀',
+      color: 'red',
+      href: '/blog/ai-revolution-2026-next-frontier'
     },
     {
-      id: 'ai-transformation-mega-success-2026',
-      title: 'AI Transformation Mega Success 2026: $25M ROI Case Study',
-      excerpt: 'See how a Fortune 500 company achieved $25M ROI with comprehensive AI transformation. 99% automation, 90% cost reduction, and complete business revolution.',
-      type: 'case-study',
-      readTime: '30 min read',
-      category: 'Case Study',
-      featured: true,
-      publishedDate: '2026-01-20',
-      metrics: [
-        { value: '$25M', label: 'Annual ROI' },
-        { value: '99%', label: 'Automation' }
-      ]
+      id: 'quantum-ai-breakthrough',
+      title: 'Quantum AI Breakthrough 2026: Solving Impossible Problems in Seconds',
+      excerpt: 'Explore quantum-enhanced AI delivering 500x faster results and revolutionizing computational capabilities.',
+      category: 'Breakthrough',
+      readTime: '25 min read',
+      image: '⚛️',
+      color: 'purple',
+      href: '/blog/quantum-ai-breakthrough-2026'
+    },
+    {
+      id: 'manufacturing-success',
+      title: 'Global Manufacturing AI Transformation: $50M Savings & 95% Efficiency',
+      excerpt: 'See how a Fortune 500 manufacturer achieved $50M annual savings and 95% efficiency improvements.',
+      category: 'Success Story',
+      readTime: '15 min read',
+      image: '🏭',
+      color: 'green',
+      href: '/case-studies/global-manufacturing-ai-transformation'
+    },
+    {
+      id: 'ai-value-stream-analytics-2026',
+      title: 'AI Value Stream Analytics 2026: Trace ROI from Token to Revenue',
+      excerpt: 'Tie AI cost, latency, and quality to business value with end-to-end tracing.',
+      category: 'Analytics',
+      readTime: '9 min read',
+      image: '📈',
+      color: 'red',
+      href: '/blog/ai-value-stream-analytics-2026'
+    },
+    {
+      id: 'ai-trustworthy-agents-2026',
+      title: 'Trustworthy AI Agents 2026: Safety, Compliance, and Observability',
+      excerpt: 'Deploy trustworthy AI agents with guardrails, approvals, and end-to-end observability.',
+      category: 'Autonomous AI',
+      readTime: '11 min read',
+      image: '🛡️',
+      color: 'green',
+      href: '/blog/ai-trustworthy-agents-2026'
     }
   ];
 
-  const getCategoryColor = (category: string) => {
-    const colors: { [key: string]: string } = {
-      "Enterprise AI": "bg-purple-100 text-purple-800",
-      "Quantum AI": "bg-indigo-100 text-indigo-800",
-      "Case Study": "bg-green-100 text-green-800"
-    };
-    return colors[category] || "bg-gray-100 text-gray-800";
-  };
+interface ContentShowcaseProps {
+  title?: string;
+  subtitle?: string;
+  maxItems?: number;
+  showMetrics?: boolean;
+  autoRotate?: boolean;
+  rotationInterval?: number;
+}
+
+  
 
   return (
-    <section className="py-16 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Featured AI Content 2026
+    <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-gray-900 mb-6">
+            Featured Content
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover our latest insights on autonomous enterprises, quantum computing, and real-world AI success stories.
+            Explore our latest AI insights, breakthrough technologies, and success stories
           </p>
         </div>
-
+        
         <div className="grid md:grid-cols-3 gap-8">
           {featuredContent.map((item) => (
-            <Link
-              key={item.id}
-              href={`/${item.type === 'case-study' ? 'case-studies' : 'blog'}/${item.id}`}
-              className="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 hover:scale-105"
-            >
-              <div className="flex items-center gap-2 mb-4">
-                <span className={`px-3 py-1 rounded-full text-sm font-semibold ${getCategoryColor(item.category)}`}>
-                  {item.category}
-                </span>
-                <span className="text-sm text-gray-500">{item.readTime}</span>
-              </div>
-              
-              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                {item.title}
-              </h3>
-              
-              <p className="text-gray-600 mb-4 line-clamp-3">
-                {item.excerpt}
-              </p>
-              
-              <div className="flex justify-between items-center mb-4">
-                <div className="flex gap-4">
-                  {item.metrics.map((metric, index) => (
-                    <div key={index} className="text-center">
-                      <div className="text-lg font-bold text-blue-600">{metric.value}</div>
-                      <div className="text-xs text-gray-500">{metric.label}</div>
-                    </div>
-                  ))}
+            <Link key={item.id} href={item.href} className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 hover:border-blue-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className={`px-2 py-1 rounded-full text-xs font-semibold ${
+                    item.color === 'red' ? 'bg-red-100 text-red-800' :
+                    item.color === 'purple' ? 'bg-purple-100 text-purple-800' :
+                    item.color === 'green' ? 'bg-green-100 text-green-800' :
+                    'bg-gray-100 text-gray-800'
+                  }`}>
+                    {item.category}
+                  </span>
+                  <span className="text-sm text-gray-500">{item.readTime}</span>
                 </div>
-                <span className="text-blue-600 font-semibold group-hover:text-blue-700 transition-colors">
-                  {item.type === 'case-study' ? 'View Case Study' : 'Read Article'} →
-                </span>
+                
+                <div className="text-4xl mb-4">{item.image}</div>
+                
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  {item.title}
+                </h3>
+                
+                <p className="text-gray-600 mb-4 text-sm leading-relaxed">
+                  {item.excerpt}
+                </p>
+                
+                <div className="text-blue-600 font-semibold group-hover:text-blue-700 transition-colors">
+                  Read More →
+                </div>
               </div>
             </Link>
           ))}
         </div>
+        
+        <div className="text-center mt-12">
+          <Link
+            href="/content-hub"
+            className="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
+          >
+            Explore All Content
+          </Link>
+        </div>
       </div>
     </section>
   );
-};
-
-export default ContentShowcase;
+}

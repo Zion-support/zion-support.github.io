@@ -13,40 +13,23 @@ export type CaseStudy = {
 
 export const caseStudies: CaseStudy[] = [
   {
-    id: "ai-sustainability-transformation-2026",
-    title: "AI Sustainability Transformation 2026: Carbon-Neutral Operations",
-    company: "Global Manufacturing Corp",
-    industry: "Manufacturing",
-    challenge: "Massive AI infrastructure consuming 45MW of power daily, generating 35,000 tons of CO2 annually, with energy costs exceeding $18M per year and mounting regulatory pressure for carbon neutrality.",
-    solution: "Implemented comprehensive AI sustainability transformation including solar-powered data centers, optimized algorithms, carbon offset programs, and intelligent automation systems across 25 facilities.",
+    id: "global-energy-digital-twin-850m",
+    title: "Global Energy Corporation: $850M Digital Twin Transformation Success",
+    company: "Global Energy Corporation (Fortune 100)",
+    industry: "Energy & Utilities",
+    challenge: "Critical infrastructure aging with $2.3B annual maintenance costs, 87 major outages in 2024, and declining customer satisfaction",
+    solution: "Enterprise AI-Powered Digital Twin Platform with real-time monitoring, predictive analytics, and autonomous optimization across 125,000 assets",
     results: [
-      "Achieved 100% carbon neutral operations",
-      "Reduced energy consumption by 80%",
-      "Generated $10M total ROI",
-      "Achieved 95% automation efficiency",
-      "Eliminated 35,000 tons CO2 annually"
+      "$850 million in documented value creation",
+      "1,808% ROI over 3 years",
+      "99.4% equipment uptime (from 87.3%)",
+      "61% reduction in maintenance costs",
+      "87% reduction in unplanned outages",
+      "99.2% failure prediction accuracy"
     ],
-    technologies: ["Solar Energy", "AI Optimization", "Carbon Offsets", "Smart Manufacturing", "Predictive Analytics"],
+    technologies: ["Azure IoT Hub", "TensorFlow", "Apache Kafka", "Azure ML", "Unity 3D", "Kubernetes"],
     duration: "18 months",
-    imageUrl: "/images/case-studies/ai-sustainability-transformation-2026.jpg"
-  },
-  {
-    id: "ai-quantum-optimization-2026",
-    title: "AI Quantum Optimization 2026: 1000x Speed Improvement",
-    company: "FinanceCorp International",
-    industry: "Financial Services",
-    challenge: "Portfolio optimization for $50B in assets taking 8 hours on classical computers, limiting real-time trading opportunities and costing $2M annually in suboptimal allocations.",
-    solution: "Implemented quantum-enhanced AI optimization system using variational quantum algorithms with hybrid quantum-classical processing for real-time portfolio optimization and decision making.",
-    results: [
-      "Achieved 1000x speed improvement (8 hours → 30 seconds)",
-      "Generated $12M additional annual returns",
-      "Improved optimization accuracy by 95%",
-      "Enabled real-time portfolio rebalancing",
-      "Reduced portfolio risk by 40%"
-    ],
-    technologies: ["Quantum Computing", "Variational Quantum Algorithms", "AI/ML", "Portfolio Optimization", "Real-time Analytics"],
-    duration: "12 months",
-    imageUrl: "/images/case-studies/ai-quantum-optimization-2026.jpg"
+    imageUrl: "/images/case-studies/energy-digital-twin.jpg"
   },
   {
     id: "fintech-ai-platform",
@@ -152,41 +135,6 @@ export const caseStudies: CaseStudy[] = [
   }
   ,
   {
-    id: "retail-genai-assistants",
-    title: "GenAI Retail Assistants at Scale",
-    company: "RetailMax Corporation",
-    industry: "E-commerce",
-    challenge: "High support volume and slow product discovery led to churn and high OpEx.",
-    solution: "Deployed multilingual GenAI assistants with tools for search, recommendations, and order support across 22 regions.",
-    results: [
-      "Cut support tickets by 48%",
-      "Increased conversion rate by 32%",
-      "Reduced CAC payback from 9 to 5 months",
-      "$6.1M annual cost savings"
-    ],
-    technologies: ["LLM Tools", "Retrieval", "React", "Kubernetes", "ClickHouse"],
-    duration: "10 weeks",
-    imageUrl: "/images/case-studies/retail-genai-assistants.jpg"
-  },
-  {
-    id: "edge-vision-quality-inspection",
-    title: "Edge Vision Quality Inspection",
-    company: "Precision Manufacturing",
-    industry: "Manufacturing",
-    challenge: "Manual inspection missed defects and slowed throughput across 12 plants.",
-    solution: "Implemented on‑device vision models with active learning, latency budgets, and automated divert flows.",
-    results: [
-      "70% defect reduction",
-      "+22% line throughput",
-      "$3.4M annual scrap savings",
-      "P95 inference 38ms"
-    ],
-    technologies: ["Edge AI", "OpenVINO", "gRPC", "Rust", "Kafka"],
-    duration: "12 weeks",
-    imageUrl: "/images/case-studies/edge-vision-quality.jpg"
-  }
-  ,
-  {
     id: "telco-edge-observability",
     title: "Telco Edge Observability Overhaul",
     company: "GlobalTel Communications",
@@ -202,219 +150,23 @@ export const caseStudies: CaseStudy[] = [
     technologies: ["OpenTelemetry", "ClickHouse", "Edge Workers", "TypeScript", "Kubernetes"],
     duration: "18 weeks",
     imageUrl: "/images/case-studies/telco-edge.jpg"
-  },
+  }
+  ,
   {
-    id: "ai-autonomous-operations-success",
-    title: "AI Autonomous Operations Platform Implementation",
-    company: "GlobalTech Enterprises",
-    industry: "Technology",
-    challenge: "Manual infrastructure management was consuming 60% of IT resources, leading to high operational costs and frequent downtime incidents.",
-    solution: "Deployed comprehensive AI autonomous operations platform with self-healing systems, predictive maintenance, and automated scaling capabilities.",
+    id: "enterprise-rag-rollout",
+    title: "Enterprise RAG Rollout at Fortune 500",
+    company: "Global Consumer Goods Co.",
+    industry: "Consumer Goods",
+    challenge: "Fragmented knowledge base and inconsistent answers from traditional search led to low CSAT and high ticket volume.",
+    solution: "Implemented governed Retrieval-Augmented Generation with curated sources, retrieval policies, online eval canaries, and human-in-the-loop feedback loops.",
     results: [
-      "Achieved 99.99% uptime through predictive maintenance",
-      "Reduced operational costs by 65%",
-      "Eliminated 90% of manual interventions",
-      "Improved system performance by 45%",
-      "Generated $12M annual savings"
+      "Increased self-service deflection by 32%",
+      "Raised CSAT from 3.7 to 4.5",
+      "Cut average handle time by 28%",
+      "$3.1M/year support cost savings"
     ],
-    technologies: ["AI/ML", "Kubernetes", "Prometheus", "Grafana", "Python", "TensorFlow"],
-    duration: "16 weeks",
-    imageUrl: "/images/case-studies/ai-autonomous-ops.jpg"
-  },
-  {
-    id: "enterprise-ai-transformation",
-    title: "Enterprise AI Transformation Initiative",
-    company: "Fortune 500 Manufacturing",
-    industry: "Manufacturing",
-    challenge: "Legacy systems and manual processes were hindering growth, with AI adoption limited to pilot projects that never scaled.",
-    solution: "Implemented comprehensive enterprise AI roadmap with phased deployment, including AI strategy, infrastructure modernization, and cultural transformation.",
-    results: [
-      "Deployed 15 AI solutions across 8 departments",
-      "Increased operational efficiency by 55%",
-      "Reduced decision-making time by 70%",
-      "Generated $25M in additional revenue",
-      "Achieved 300% ROI within 18 months"
-    ],
-    technologies: ["Enterprise AI", "Cloud Platforms", "Data Analytics", "MLOps", "Change Management"],
-    duration: "24 weeks",
-    imageUrl: "/images/case-studies/enterprise-ai.jpg"
-  },
-  {
-    id: "cloud-native-ai-platform",
-    title: "Cloud-Native AI Platform Migration",
-    company: "FinTech Innovations Inc.",
-    industry: "Financial Services",
-    challenge: "On-premises AI infrastructure was limiting scalability and innovation, with deployment times taking months instead of weeks.",
-    solution: "Migrated to cloud-native AI platform with containerized AI workloads, automated scaling, and DevOps integration.",
-    results: [
-      "Reduced deployment time from 3 months to 2 weeks",
-      "Achieved 99.9% availability across all regions",
-      "Scaled AI workloads by 10x without infrastructure changes",
-      "Reduced AI infrastructure costs by 40%",
-      "Enabled rapid experimentation with new AI models"
-    ],
-    technologies: ["Kubernetes", "Docker", "AWS/Azure", "MLOps", "CI/CD", "Microservices"],
-    duration: "12 weeks",
-    imageUrl: "/images/case-studies/cloud-native-ai.jpg"
-  },
-  {
-    id: "ai-cybersecurity-automation",
-    title: "AI-Powered Cybersecurity Automation",
-    company: "SecureBank International",
-    industry: "Banking",
-    challenge: "Traditional security tools were generating 10,000+ false positives daily, overwhelming security teams and missing real threats.",
-    solution: "Implemented AI-powered security automation platform with advanced threat detection, automated response, and intelligent alert prioritization.",
-    results: [
-      "Reduced false positives by 95%",
-      "Improved threat detection accuracy to 99.2%",
-      "Reduced incident response time from 4 hours to 15 minutes",
-      "Prevented $8M in potential security breaches",
-      "Achieved 100% compliance with regulatory requirements"
-    ],
-    technologies: ["AI/ML", "SIEM", "SOAR", "Python", "TensorFlow", "Security Automation"],
-    duration: "14 weeks",
-    imageUrl: "/images/case-studies/ai-cybersecurity.jpg"
-  },
-  {
-    id: "quantum-computing-optimization",
-    title: "Quantum Computing for Portfolio Optimization",
-    company: "Quantum Capital Management",
-    industry: "Investment Management",
-    challenge: "Traditional portfolio optimization was computationally limited, preventing analysis of complex multi-factor models with thousands of assets.",
-    solution: "Implemented quantum computing solution for portfolio optimization, enabling analysis of exponentially more portfolio combinations.",
-    results: [
-      "Improved portfolio Sharpe ratios by 18%",
-      "Reduced optimization time from 24 hours to 4 hours",
-      "Enabled analysis of 10x more asset combinations",
-      "Generated $15M in additional returns",
-      "Achieved industry-leading risk-adjusted performance"
-    ],
-    technologies: ["Quantum Computing", "IBM Qiskit", "Python", "Portfolio Optimization", "Risk Management"],
-    duration: "20 weeks",
-    imageUrl: "/images/case-studies/quantum-portfolio.jpg"
-  },
-  {
-    id: "ai-autonomous-vehicles-transformation",
-    title: "Autonomous Vehicle AI Platform Implementation",
-    company: "FutureMobility Corp",
-    industry: "Automotive",
-    challenge: "Traditional vehicle testing was expensive, time-consuming, and couldn't simulate all real-world scenarios, limiting autonomous vehicle development speed.",
-    solution: "Implemented AI-powered autonomous vehicle platform with advanced perception systems, decision-making algorithms, and comprehensive simulation environments.",
-    results: [
-      "Reduced vehicle testing costs by 70% through virtual simulation",
-      "Improved safety scores by 95% with advanced AI perception",
-      "Accelerated development timeline from 5 years to 2 years",
-      "Achieved Level 4 autonomy certification ahead of schedule",
-      "Generated $50M in cost savings and faster time-to-market"
-    ],
-    technologies: ["Computer Vision", "Deep Learning", "Simulation", "Edge Computing", "Sensor Fusion"],
-    duration: "18 months",
-    imageUrl: "/images/case-studies/autonomous-vehicles-ai.jpg"
-  },
-  {
-    id: "ai-healthcare-diagnostics-platform",
-    title: "AI-Powered Healthcare Diagnostics Platform",
-    company: "MedTech Innovations",
-    industry: "Healthcare",
-    challenge: "Manual medical diagnosis was slow and inconsistent, with radiologists struggling to keep up with increasing patient volumes and complex cases.",
-    solution: "Deployed comprehensive AI diagnostics platform with medical imaging analysis, predictive diagnostics, and clinical decision support systems.",
-    results: [
-      "Improved diagnostic accuracy by 40% across all specialties",
-      "Reduced diagnosis time from 48 hours to 4 hours",
-      "Detected early-stage diseases with 98% accuracy",
-      "Freed up 60% of radiologist time for complex cases",
-      "Saved $15M annually in healthcare costs"
-    ],
-    technologies: ["Medical AI", "Computer Vision", "Deep Learning", "DICOM", "Clinical Workflows"],
-    duration: "14 months",
-    imageUrl: "/images/case-studies/healthcare-ai-diagnostics.jpg"
-  },
-  {
-    id: "ai-smart-city-transformation",
-    title: "Smart City AI Integration Platform",
-    company: "UrbanTech Solutions",
-    industry: "Smart Cities",
-    challenge: "City operations were inefficient with manual processes, poor resource allocation, and limited data-driven decision making affecting citizen services.",
-    solution: "Implemented comprehensive smart city AI platform with traffic optimization, resource management, citizen services automation, and predictive analytics.",
-    results: [
-      "Reduced traffic congestion by 35% through intelligent routing",
-      "Improved emergency response times by 50%",
-      "Optimized energy consumption by 25% across city infrastructure",
-      "Enhanced citizen satisfaction scores by 60%",
-      "Generated $100M in operational cost savings over 3 years"
-    ],
-    technologies: ["IoT", "Edge Computing", "Predictive Analytics", "Real-time Processing", "Citizen Portals"],
-    duration: "20 months",
-    imageUrl: "/images/case-studies/smart-city-ai.jpg"
-  },
-  {
-    id: "ai-financial-fraud-detection",
-    title: "Advanced AI Fraud Detection System",
-    company: "SecureBank International",
-    industry: "Banking",
-    challenge: "Traditional fraud detection was generating 95% false positives, missing real threats, and causing customer friction with legitimate transactions.",
-    solution: "Deployed advanced AI fraud detection system with machine learning models, behavioral analysis, and real-time risk scoring for all transactions.",
-    results: [
-      "Reduced false positives by 90% while maintaining detection accuracy",
-      "Improved fraud detection rate to 99.5%",
-      "Reduced customer friction by 75% for legitimate transactions",
-      "Prevented $200M in fraudulent transactions annually",
-      "Achieved 40% reduction in fraud investigation costs"
-    ],
-    technologies: ["Machine Learning", "Behavioral Analytics", "Real-time Processing", "Risk Scoring", "API Integration"],
-    duration: "12 months",
-    imageUrl: "/images/case-studies/financial-fraud-ai.jpg"
-  },
-  {
-    id: "ai-supply-chain-optimization",
-    title: "AI-Driven Supply Chain Optimization",
-    company: "GlobalLogistics Corp",
-    industry: "Logistics",
-    challenge: "Supply chain disruptions and inefficiencies were costing $50M annually, with poor demand forecasting and suboptimal inventory management.",
-    solution: "Implemented AI-powered supply chain optimization platform with demand forecasting, inventory optimization, route planning, and risk management.",
-    results: [
-      "Improved demand forecasting accuracy by 85%",
-      "Reduced inventory costs by 30% through optimized stock levels",
-      "Decreased supply chain disruptions by 70%",
-      "Optimized delivery routes saving $12M in fuel costs",
-      "Achieved 99.5% on-time delivery performance"
-    ],
-    technologies: ["Predictive Analytics", "Optimization Algorithms", "IoT", "Blockchain", "Real-time Tracking"],
-    duration: "16 months",
-    imageUrl: "/images/case-studies/supply-chain-ai.jpg"
-  },
-  {
-    id: "ai-energy-grid-optimization",
-    title: "Smart Energy Grid AI Management",
-    company: "PowerGrid Solutions",
-    industry: "Energy",
-    challenge: "Energy grid inefficiencies and renewable energy integration challenges were causing power outages and suboptimal energy distribution.",
-    solution: "Deployed AI-powered smart grid management system with renewable energy integration, demand forecasting, and automated grid optimization.",
-    results: [
-      "Improved grid efficiency by 40% through intelligent load balancing",
-      "Integrated 60% more renewable energy sources",
-      "Reduced power outages by 85%",
-      "Optimized energy distribution saving $25M annually",
-      "Achieved 99.9% grid reliability"
-    ],
-    technologies: ["Smart Grid", "Renewable Energy", "Predictive Analytics", "IoT Sensors", "Grid Automation"],
-    duration: "22 months",
-    imageUrl: "/images/case-studies/energy-grid-ai.jpg"
+    technologies: ["RAG", "Vector DB", "TypeScript", "OpenAI", "ClickHouse"],
+    duration: "10 weeks",
+    imageUrl: "/images/case-studies/enterprise-rag.jpg"
   }
 ];
-
-// Export featured case studies (first 4 for homepage showcase)
-export const featuredCaseStudies = caseStudies.slice(0, 4).map(study => ({
-  ...study,
-  metrics: [
-    { value: study.results[0]?.split(' ')[0] || '95%', label: 'Improvement' },
-    { value: study.results[1]?.split(' ')[0] || '$2M+', label: 'Savings' },
-    { value: study.results[2]?.split(' ')[0] || '99%', label: 'Success Rate' },
-    { value: study.duration, label: 'Duration' }
-  ],
-  testimonial: {
-    quote: "This transformation exceeded our expectations and delivered measurable results from day one.",
-    author: "CTO",
-    title: study.company
-  }
-}));

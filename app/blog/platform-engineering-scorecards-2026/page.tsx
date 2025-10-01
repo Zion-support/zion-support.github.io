@@ -1,300 +1,172 @@
 import React from 'react';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Platform Engineering Scorecards 2026: Measure What Matters',
-  description: 'Build effective platform engineering scorecards that measure developer productivity, system reliability, and business impact. Drive 40% faster delivery and 60% cost reduction.',
+  description: 'A practical, executive-ready scorecard framework for Platform Engineering in 2026: reliability, velocity, cost, and developer experience.',
+  keywords: 'platform engineering, scorecards 2026, DORA, reliability, developer experience, platform KPIs',
 };
 
-export default function PlatformEngineeringScorecards2026() {
+export default function PlatformEngineeringScorecards2026Page() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-20">
+      {/* Hero */}
+      <section className="bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900 text-white py-20">
         <div className="max-w-4xl mx-auto px-4">
-          <div className="flex items-center gap-2 mb-6">
-            <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-semibold">
-              NEW 2026
-            </span>
-            <span className="text-gray-500 text-sm">12 min read</span>
+          <div className="mb-6">
+            <span className="bg-white/20 text-white px-3 py-1 rounded-full text-sm font-semibold">New Article</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-            Platform Engineering Scorecards 2026: 
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-blue-300">
-              {' '}Measure What Matters
-            </span>
+          <h1 className="text-5xl font-bold mb-6 leading-tight">
+            Platform Engineering Scorecards 2026: Measure What Matters
           </h1>
-          <p className="text-xl text-purple-100 mb-8 leading-relaxed">
-            Build effective platform engineering scorecards that measure developer productivity, 
-            system reliability, and business impact. Drive 40% faster delivery and 60% cost reduction.
+          <p className="text-xl mb-8 opacity-90">
+            A pragmatic, executive-friendly framework to track platform outcomes across reliability, velocity,
+            cost efficiency, and developer experience. Drive the right conversations and investments.
           </p>
-          <div className="flex flex-wrap gap-4 text-sm text-purple-200">
-            <span className="flex items-center gap-1">
-              <span className="w-2 h-2 bg-green-400 rounded-full"></span>
-              Published Jan 20, 2026
-            </span>
-            <span className="flex items-center gap-1">
-              <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
-              By Zion Tech Group
-            </span>
-            <span className="flex items-center gap-1">
-              <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-              Platform Engineering
-            </span>
+          <div className="flex items-center gap-6 text-sm opacity-80">
+            <span>📅 September 29, 2025</span>
+            <span>⏱️ 10 min read</span>
+            <span>👤 Zion Tech Group Team</span>
           </div>
         </div>
       </section>
 
-      {/* Key Metrics */}
-      <section className="py-16 bg-gray-50">
+      {/* Article */}
+      <article className="max-w-4xl mx-auto px-4 py-16">
+        <div className="prose prose-lg max-w-none">
+          <div className="bg-indigo-50 border-l-4 border-indigo-500 p-6 mb-8">
+            <p className="text-lg font-semibold text-indigo-900 mb-2">Executive Summary</p>
+            <p className="text-indigo-800">
+              Platform scorecards translate engineering work into business outcomes. This guide provides a
+              compact, measurable set of indicators that leaders can review weekly to align platform work with
+              product velocity, cost, and reliability goals.
+            </p>
+          </div>
+
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">The Four Pillars</h2>
+          <div className="grid md:grid-cols-2 gap-6 mb-8">
+            <div className="bg-white rounded-lg border p-6">
+              <h3 className="text-xl font-bold mb-2">Reliability</h3>
+              <ul className="text-gray-700 space-y-1">
+                <li>• SLO attainment (% by service tier)</li>
+                <li>• Incident MTTR (p50/p90)</li>
+                <li>• Change failure rate</li>
+              </ul>
+            </div>
+            <div className="bg-white rounded-lg border p-6">
+              <h3 className="text-xl font-bold mb-2">Velocity</h3>
+              <ul className="text-gray-700 space-y-1">
+                <li>• Lead time for changes (p50/p90)</li>
+                <li>• Deployment frequency</li>
+                <li>• Time to first byte for new services</li>
+              </ul>
+            </div>
+            <div className="bg-white rounded-lg border p-6">
+              <h3 className="text-xl font-bold mb-2">Cost Efficiency</h3>
+              <ul className="text-gray-700 space-y-1">
+                <li>• Unit economics (cost per request/job)</li>
+                <li>• Idle-to-peak ratio by workload</li>
+                <li>• Reserved vs on-demand coverage</li>
+              </ul>
+            </div>
+            <div className="bg-white rounded-lg border p-6">
+              <h3 className="text-xl font-bold mb-2">Developer Experience</h3>
+              <ul className="text-gray-700 space-y-1">
+                <li>• Golden path adoption (%)</li>
+                <li>• CI success rate and duration</li>
+                <li>• Time-to-onboard (first merged PR)</li>
+              </ul>
+            </div>
+          </div>
+
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Scorecard Template</h2>
+          <div className="overflow-x-auto mb-8">
+            <table className="w-full text-left border-collapse">
+              <thead>
+                <tr className="bg-gray-50">
+                  <th className="p-3 border">Pillar</th>
+                  <th className="p-3 border">Metric</th>
+                  <th className="p-3 border">Target</th>
+                  <th className="p-3 border">Current</th>
+                  <th className="p-3 border">Trend</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="p-3 border">Reliability</td>
+                  <td className="p-3 border">SLO attainment (Tier 1)</td>
+                  <td className="p-3 border">≥ 99.9%</td>
+                  <td className="p-3 border">99.92%</td>
+                  <td className="p-3 border">↗ steady</td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="p-3 border">Velocity</td>
+                  <td className="p-3 border">Lead time for changes (p50)</td>
+                  <td className="p-3 border">≤ 24h</td>
+                  <td className="p-3 border">22h</td>
+                  <td className="p-3 border">↗ improving</td>
+                </tr>
+                <tr>
+                  <td className="p-3 border">Cost</td>
+                  <td className="p-3 border">Cost per 1K requests</td>
+                  <td className="p-3 border">≤ $0.45</td>
+                  <td className="p-3 border">$0.41</td>
+                  <td className="p-3 border">↘ decreasing</td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="p-3 border">DevEx</td>
+                  <td className="p-3 border">Time-to-onboard</td>
+                  <td className="p-3 border">≤ 2 days</td>
+                  <td className="p-3 border">1.6 days</td>
+                  <td className="p-3 border">↗ improving</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Operating Rhythm</h2>
+          <ul className="list-disc ml-6 text-gray-700 mb-8 space-y-2">
+            <li>Weekly: scorecard review with platform + product leads</li>
+            <li>Monthly: deep-dive on worst metric; commit improvement plan</li>
+            <li>Quarterly: refresh targets; align to business goals</li>
+          </ul>
+
+          <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-8 rounded-lg">
+            <h3 className="text-2xl font-bold mb-4">Need a scorecard you can ship in 2 weeks?</h3>
+            <p className="text-lg mb-6 opacity-90">
+              We help enterprises stand up measurable platform scorecards with automated collection and C-suite
+              dashboards. Get a pilot in under 14 days.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a href="tel:+13024640950" className="bg-white text-indigo-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100">Call +1 302 464 0950</a>
+              <a href="mailto:kleber@ziontechgroup.com" className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-700">Get Consultation</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      {/* Related */}
+      <section className="bg-gray-50 py-16">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            Proven Results with Platform Engineering Scorecards
-          </h2>
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-green-600 mb-2">40%</div>
-              <div className="text-gray-600 font-semibold">Faster Delivery</div>
-              <div className="text-sm text-gray-500 mt-1">Developer productivity</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-blue-600 mb-2">60%</div>
-              <div className="text-gray-600 font-semibold">Cost Reduction</div>
-              <div className="text-sm text-gray-500 mt-1">Infrastructure optimization</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-purple-600 mb-2">99.9%</div>
-              <div className="text-gray-600 font-semibold">Reliability</div>
-              <div className="text-sm text-gray-500 mt-1">System uptime</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-orange-600 mb-2">85%</div>
-              <div className="text-gray-600 font-semibold">Developer Satisfaction</div>
-              <div className="text-sm text-gray-500 mt-1">Platform adoption</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Main Content */}
-      <section className="py-16">
-        <div className="max-w-4xl mx-auto px-4">
-          <div className="prose prose-lg max-w-none">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">
-              The Foundation of Effective Platform Engineering
-            </h2>
-            
-            <p className="text-xl text-gray-700 mb-8">
-              Platform engineering scorecards are essential for measuring the success of your 
-              platform initiatives. They provide visibility into developer productivity, system 
-              reliability, and business impact, enabling data-driven decisions and continuous improvement.
-            </p>
-
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">What are Platform Engineering Scorecards?</h3>
-            
-            <p className="text-gray-700 mb-6">
-              Platform engineering scorecards are comprehensive measurement frameworks that track 
-              key metrics across developer experience, system reliability, and business outcomes. 
-              They provide a clear view of platform performance and its impact on the organization.
-            </p>
-
-            <div className="bg-purple-50 border-l-4 border-purple-500 p-6 mb-8">
-              <h4 className="text-lg font-bold text-purple-900 mb-2">💡 Real-World Impact</h4>
-              <p className="text-purple-800">
-                A leading technology company achieved 40% faster delivery and 60% cost reduction 
-                with comprehensive platform engineering scorecards, improving developer satisfaction 
-                by 85% and system reliability to 99.9%.
-              </p>
-            </div>
-
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Key Scorecard Categories</h3>
-
-            <div className="grid md:grid-cols-2 gap-6 mb-8">
-              <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
-                <h4 className="text-xl font-bold text-gray-900 mb-3">👨‍💻 Developer Experience</h4>
-                <p className="text-gray-700 mb-4">
-                  Measure how effectively your platform enables developers to build, 
-                  deploy, and maintain applications.
-                </p>
-                <ul className="text-sm text-gray-600 space-y-1">
-                  <li>• Time to first successful deploy</li>
-                  <li>• Developer satisfaction scores</li>
-                  <li>• Platform adoption rates</li>
-                </ul>
-              </div>
-
-              <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
-                <h4 className="text-xl font-bold text-gray-900 mb-3">🔧 System Reliability</h4>
-                <p className="text-gray-700 mb-4">
-                  Track the stability and performance of your platform infrastructure 
-                  and services.
-                </p>
-                <ul className="text-sm text-gray-600 space-y-1">
-                  <li>• Uptime and availability</li>
-                  <li>• Error rates and incidents</li>
-                  <li>• Performance metrics</li>
-                </ul>
-              </div>
-
-              <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
-                <h4 className="text-xl font-bold text-gray-900 mb-3">📊 Business Impact</h4>
-                <p className="text-gray-700 mb-4">
-                  Measure the business value delivered through platform improvements 
-                  and optimizations.
-                </p>
-                <ul className="text-sm text-gray-600 space-y-1">
-                  <li>• Cost reduction and optimization</li>
-                  <li>• Time to market improvements</li>
-                  <li>• Resource utilization</li>
-                </ul>
-              </div>
-
-              <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
-                <h4 className="text-xl font-bold text-gray-900 mb-3">🚀 Innovation Metrics</h4>
-                <p className="text-gray-700 mb-4">
-                  Track how well your platform enables innovation and new capabilities 
-                  across the organization.
-                </p>
-                <ul className="text-sm text-gray-600 space-y-1">
-                  <li>• New feature adoption</li>
-                  <li>• Experimentation velocity</li>
-                  <li>• Technology adoption</li>
-                </ul>
-              </div>
-            </div>
-
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Implementation Strategy</h3>
-
-            <div className="space-y-6 mb-8">
-              <div className="flex gap-4">
-                <div className="flex-shrink-0 w-8 h-8 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold">1</div>
-                <div>
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">Define Metrics (Weeks 1-2)</h4>
-                  <p className="text-gray-700">
-                    Identify key metrics that align with your business objectives and 
-                    platform goals. Focus on actionable, measurable indicators.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-4">
-                <div className="flex-shrink-0 w-8 h-8 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold">2</div>
-                <div>
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">Implement Tracking (Weeks 3-4)</h4>
-                  <p className="text-gray-700">
-                    Set up data collection systems, dashboards, and reporting mechanisms 
-                    to track and visualize your metrics.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-4">
-                <div className="flex-shrink-0 w-8 h-8 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold">3</div>
-                <div>
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">Optimize & Scale (Weeks 5-8)</h4>
-                  <p className="text-gray-700">
-                    Use scorecard insights to optimize your platform, scale successful 
-                    initiatives, and continuously improve your metrics.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Technology Stack</h3>
-
-            <div className="bg-gray-50 rounded-lg p-6 mb-8">
-              <h4 className="text-lg font-bold text-gray-900 mb-4">Recommended Tools</h4>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <h5 className="font-semibold text-gray-900 mb-2">Metrics & Monitoring</h5>
-                  <ul className="text-sm text-gray-600 space-y-1">
-                    <li>• Prometheus + Grafana</li>
-                    <li>• DataDog</li>
-                    <li>• New Relic</li>
-                    <li>• CloudWatch</li>
-                  </ul>
-                </div>
-                <div>
-                  <h5 className="font-semibold text-gray-900 mb-2">Analytics & Reporting</h5>
-                  <ul className="text-sm text-gray-600 space-y-1">
-                    <li>• Tableau</li>
-                    <li>• Power BI</li>
-                    <li>• Looker</li>
-                    <li>• Custom dashboards</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Success Metrics</h3>
-
-            <div className="bg-green-50 border border-green-200 rounded-lg p-6 mb-8">
-              <h4 className="text-lg font-bold text-green-900 mb-4">Typical Results After 8 Weeks</h4>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-green-600">40%</div>
-                  <div className="text-sm text-green-700">Faster Delivery</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-green-600">60%</div>
-                  <div className="text-sm text-green-700">Cost Reduction</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-green-600">99.9%</div>
-                  <div className="text-sm text-green-700">Reliability</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-green-600">85%</div>
-                  <div className="text-sm text-green-700">Developer Satisfaction</div>
-                </div>
-              </div>
-            </div>
-
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Getting Started</h3>
-
-            <p className="text-gray-700 mb-6">
-              Ready to implement platform engineering scorecards in your organization? Our 
-              comprehensive Platform Engineering service provides everything you need to 
-              achieve 40% faster delivery and 60% cost reduction.
-            </p>
-
-            <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg p-6 mb-8">
-              <h4 className="text-xl font-bold mb-4">🚀 Start Your Platform Engineering Journey</h4>
-              <p className="mb-4">
-                Get a free consultation and discover how platform engineering scorecards can 
-                deliver 40% faster delivery and 60% cost reduction for your organization.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <a
-                  href="tel:+13024640950"
-                  className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold text-center hover:bg-gray-100 transition-colors"
-                >
-                  Call +1 302 464 0950
-                </a>
-                <a
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold text-center hover:bg-white hover:text-purple-600 transition-colors"
-                >
-                  Get Free Consultation
-                </a>
-              </div>
-            </div>
-
-            <div className="border-t border-gray-200 pt-8">
-              <h4 className="text-lg font-bold text-gray-900 mb-4">Related Articles</h4>
-              <div className="grid md:grid-cols-2 gap-4">
-                <a href="/blog/ai-platform-architecture-2026" className="block p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow">
-                  <h5 className="font-semibold text-gray-900 mb-2">AI Platform Architecture 2026</h5>
-                  <p className="text-sm text-gray-600">Enterprise-scale AI infrastructure design and implementation.</p>
-                </a>
-                <a href="/blog/ai-roadmaps-2026" className="block p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow">
-                  <h5 className="font-semibold text-gray-900 mb-2">AI Roadmaps 2026</h5>
-                  <p className="text-sm text-gray-600">Strategic AI roadmap for 2026: prioritize what matters most.</p>
-                </a>
-              </div>
-            </div>
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Related Articles</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <RelatedArticleCard title="AI Value Stream Analytics 2026" description="Trace ROI from token to revenue." href="/blog/ai-value-stream-analytics-2026" />
+            <RelatedArticleCard title="LLM Cost Optimization 2025" description="Cut LLM spend 30–70% with routing and caching." href="/blog/llm-cost-optimization-2025" />
+            <RelatedArticleCard title="GenAI Guardrails 2025" description="Ship reliable and auditable GenAI systems." href="/blog/genai-guardrails-2025" />
           </div>
         </div>
       </section>
     </div>
   );
 }
+
+function RelatedArticleCard({ title, description, href }: { title: string; description: string; href: string }) {
+  return (
+    <Link href={href} className="block bg-white rounded-lg p-6 hover:shadow-lg transition-all duration-300">
+      <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
+      <p className="text-gray-600 mb-4">{description}</p>
+      <span className="text-indigo-700 font-semibold">Read More →</span>
+    </Link>
+  );
+}
+

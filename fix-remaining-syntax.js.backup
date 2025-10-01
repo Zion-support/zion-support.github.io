@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-
-
-origin/main
-=======
->>>>>>> main
 }});
   }
 });
@@ -44,17 +38,6 @@ console.log(`Fixed ${fixedCount} files`);
 
 
 ;
-<<<<<<< HEAD
-  };
-}),
-console.log(`Fixed ${fixedCount} files`),
-,
-=======
-ursor/integrate-build-improve-and-re-verify-8f7d
-ursor/fix-syntax-push-and-merge-to-main-40de
-
-
->>>>>>> main
 #!/usr/bin/env node import fs from 'fs' import path from 'path' function listFiles(dir,exts) { const out = [] for (const entry of fs.readdirSync(dir)) { const full = path.join(dir,entry) const st = fs.statSync(full) if (st.isDirectory()) { if (entry === 'node_modules' || entry.startsWith('.')) continue out.push(...listFiles(full,exts)) } else if (exts.some(ext => full.endsWith(ext))) { out.push(full) } } return out } function fixFile(filePath) { try { const before = fs.readFileSync(filePath,'utf8') let after = before after = after.replace(/,\s*;/g,',') after = after.replace(/;\s*,/g,',') after = after.replace(/;\s*\]/g,']') after = after.replace(/;\s*\}/g,'}') if (after !== before) { fs.writeFileSync(filePath,after,'utf8') return true } return false } catch (e) { console.error(`Error fixing ${filePath}:`,e.message) return false } } const files = listFiles('.',['.js','.jsx','.ts','.tsx']) let fixed = 0 for (const f of files) if (fixFile(f)) fixed++ }
 ,#!/usr/bin/env node import fs from 'fs' import path from 'path' function listFiles(dir,exts) { const out = [] for (const entry of fs.readdirSync(dir)) { const full = path.join(dir,entry) const st = fs.statSync(full) if (st.isDirectory()) { if (entry === 'node_modules' || entry.startsWith('.')) continue out.push(...listFiles(full,exts)) } else if (exts.some(ext => full.endsWith(ext))) { out.push(full) } } return out } function fixFile(filePath) { try { const before = fs.readFileSync(filePath,'utf8') let after = before after = after.replace(/,\s*;/g,',') after = after.replace(/;\s*,/g,',') after = after.replace(/;\s*\]/g,']') after = after.replace(/;\s*\}/g,'}') if (after !== before) { fs.writeFileSync(filePath,after,'utf8') return true } return false } catch (e) { console.error(`Error fixing ${filePath}:`,e.message) return false } } const files = listFiles('.',['.js','.jsx','.ts','.tsx']) let fixed = 0 for (const f of files) if (fixFile(f)) fixed++ }
 ursor/fix-lint-push-and-merge-to-main-ae4e
@@ -220,97 +203,3 @@ main().catch(console.error);
 
 
 
-<<<<<<< HEAD
-
-
-  
-
-main().catch(console.error);
-
-
-
-}
-// Run the main function
-  console.log(`\nProcessed ${totalFiles} files, fixed ${fixedFiles} files`);
-}
-// Run the main function
-
-main().catch(console.error);
-
-main().catch(console.error);
-main().catch(console && console.error);
-    console.error (`Error processing ${file_path}:`, error.message);
-    return false;
-  }
-}
-// Process the specific files that have errors;
-const error_files = [;
-  'pages / about.tsx',
-  'pages / accessibility.tsx',
-  'pages / ai - services.tsx',
-  'pages / api.tsx',
-  'pages / blog.tsx';
-];
-console.log (`Processing ${error_files.length} files with errors`);
-let fixed_count = 0;
-error_files.for_each (file => {
-  if () {) {
-  $2
-}
-    fixed_count++;
-  }
-  console.log (`\n_processed ${total_files} files, fixed ${fixed_files} files`);
-}
-// Run the main function;
-main ().catch (console.error);
-}});
-
-;
-  };
-}),;
-console.log(`Fixed ${fixedCount} files`),;
-,;
-;};
-});
-console.log(`Fixed ${fixedCount} files`);
-;
-  };
-}),
-console.log(`Fixed ${fixedCount} files`),
-,
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
-}
-];
-console.log(`Processing ${errorFiles.length} files with errors`);
-let fixedCount = 0;
-errorFiles.forEach(file => {
-  if (processFile(file)) {
-    fixedCount++;
-  }
-});
-  
-  console.log(`\nProcessed ${totalFiles} files, fixed ${fixedFiles} files`);
-}
-// Run the main function
-main().catch(console.error);
-main().catch(console.error);
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-  console.log(`\nProcessed ${totalFiles} files, fixed ${fixedFiles} files`);
-}
-// Run the main function
-main().catch(console.error);
-origin/main
-  console.log(`\nProcessed ${totalFiles} files, fixed ${fixedFiles} files`);
-}
-// Run the main function
-main().catch(console.error);
-main().catch(console.error);
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-origin/automation-improvements-final
-main().catch(console.error);
-main
-=======
->>>>>>> main

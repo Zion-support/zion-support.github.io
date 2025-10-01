@@ -64,6 +64,8 @@
   "include": [
     "index.html",
     "src/**/*",
+    // Exclude Next.js `app` dir from type-check for Vite build context
+    // "app/**/*",
     ".next/types/**/*.ts"
   ],
   "exclude": [
@@ -71,7 +73,6 @@
     "dist",
     "build",
     "coverage",
-    "app/**/*",
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",

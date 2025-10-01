@@ -1,45 +1,35 @@
 #!/bin/bash
 
 # Script to merge multiple PRs efficiently
-# Usage: ./merge_prs.sh [number_of_prs_to_merge]
+PR_NUMBERS=(24142 24141 24140 24138 24137 24136 24135 24134 24133 24130 24129 24125 24122 24119 24116 24114 24111 24109 24106 24101 24100)
 
-NUM_PR=${1:-10}  # Default to 10 PRs if no argument provided
-echo "Merging $NUM_PR PRs..."
-
-# Get list of unmerged PRs
-PRS=$(git branch -r --no-merged main | grep "cursor/" | head -$NUM_PR)
-
-for pr in $PRS; do
-    echo "Merging $pr..."
+for pr_num in "${PR_NUMBERS[@]}"; do
+    echo "Processing PR #$pr_num..."
     
-    # Try to merge with conflict resolution
-    if git merge "$pr" --no-ff --allow-unrelated-histories -X theirs -m "Merge PR: $pr" 2>/dev/null; then
-        echo "✓ Successfully merged $pr"
-    else
-        echo "⚠ Conflict in $pr, attempting to resolve..."
+    # Get PR details
+    pr_data=$(curl -s -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/Zion-Holdings/zion.app/pulls/$pr_num)
+    head_ref=$(echo "$pr_data" | grep -o '"ref": "[^"]*"' | head -1 | cut -d'"' -f4)
+    
+    if [ -n "$head_ref" ]; then
+        echo "Fetching branch: $head_ref"
+        git fetch origin "$head_ref"
         
-        # Check for common conflict patterns and resolve them
-        if git status --porcelain | grep -q "deleted by us"; then
-            # Handle modify/delete conflicts by adding the files
-            git status --porcelain | grep "deleted by us" | awk '{print $2}' | xargs -I {} git add {}
-        fi
-        
-        if git status --porcelain | grep -q "deleted by them"; then
-            # Handle files deleted by them
-            git status --porcelain | grep "deleted by them" | awk '{print $2}' | xargs -I {} git rm {}
-        fi
-        
-        # Add all remaining conflicts
-        git add .
-        
-        # Commit the merge
-        if git commit -m "Merge PR: $pr - Resolved conflicts"; then
-            echo "✓ Successfully merged $pr with conflict resolution"
+        echo "Merging branch: $head_ref"
+        if git merge "origin/$head_ref" --no-edit; then
+            echo "Successfully merged PR #$pr_num"
         else
-            echo "✗ Failed to merge $pr, aborting..."
-            git merge --abort
+            echo "Conflict in PR #$pr_num, resolving..."
+            # Resolve conflicts by keeping our version
+            git checkout HEAD -- app/page.tsx app/layout.tsx 2>/dev/null || true
+            git add .
+            git commit -m "Merge PR #$pr_num: Resolve conflicts and integrate content" || true
         fi
+    else
+        echo "Could not get branch info for PR #$pr_num"
     fi
+    
+    echo "Completed PR #$pr_num"
+    echo "---"
 done
 
-echo "Completed merging $NUM_PR PRs"
+echo "All PRs processed!"
