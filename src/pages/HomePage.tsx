@@ -146,29 +146,29 @@ const HomePage: React.FC = () => {
                 icon="rocket"
                 badge="New"
                 date={new Date().toLocaleDateString()}
-                title="Fresh Content: Safer AI, Actionable Observability, Lower Costs"
-                description="Three new deep-dives just dropped: guardrails as code, observability that triggers safe actions, and cost playbooks that cut spend without slowing teams."
+                title="Fresh Content: Evals v4, Sub‑1ms Decisions, FinOps v3"
+                description="New deep-dives: KPI‑predictive evals, ultra‑low‑latency decision engines, and cost playbooks that cut spend 30–70% without UX regressions."
                 ctaText="Read the latest posts"
                 ctaLink="/blog"
                 showCount={3}
                 featuredItems={[
                   {
-                    title: 'Policy-Driven AI: Guardrails as Code for Safer Autonomy',
-                    category: 'AI',
+                    title: 'Enterprise Evals v4: Scorecards That Predict Production',
+                    category: 'AI Reliability',
                     link: '/blog',
-                    metrics: '7 min • 2025-10-02'
+                    metrics: '8 min • 2025-10-06'
                   },
                   {
-                    title: 'Platform Observability 2025: From Signals to Automated Actions',
-                    category: 'Observability',
+                    title: 'Real-Time Decision Engines: Sub-1ms at 10M+ Events/sec',
+                    category: 'Real-Time AI',
                     link: '/blog',
-                    metrics: '6 min • 2025-10-02'
+                    metrics: '9 min • 2025-10-06'
                   },
                   {
-                    title: 'Cloud Cost Playbooks 2025: LLM + Infra Savings Without Slowdowns',
-                    category: 'Cloud',
+                    title: 'Autonomous FinOps v3: 30–70% GenAI Spend Down, No Regressions',
+                    category: 'FinOps',
                     link: '/blog',
-                    metrics: '7 min • 2025-10-02'
+                    metrics: '7 min • 2025-10-06'
                   }
                 ]}
               />
