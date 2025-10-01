@@ -24,6 +24,15 @@ export const bannerRegistry: BannerMetadata[] = [
     featured: true,
   },
   {
+    id: 'oct2025-governed-agent-platforms-v2',
+    name: 'Governed Agent Platforms v2 — Budgets, Scorecards, Instant Rollback',
+    priority: 97,
+    value: '$1.1B',
+    publishDate: new Date('2025-10-01'),
+    category: 'ai',
+    featured: true,
+  },
+  {
     id: 'jan2026-quantum',
     name: 'January 2026 Quantum AI Consciousness Revolution',
     priority: 99,

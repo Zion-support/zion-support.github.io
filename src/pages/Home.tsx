@@ -61,6 +61,7 @@ import NewArticlesPromoBanner from "../components/NewArticlesPromoBanner";
 import NewServicesPromoBanner from "../components/NewServicesPromoBanner";
 import ContentPromotionBanner from "../components/ContentPromotionBanner";
 import { blogPosts } from "../content/blog-posts";
+import UnifiedPromotionalBanner from "../components/UnifiedPromotionalBanner";
 
 const Home = () => {
   return (
@@ -99,6 +100,25 @@ const Home = () => {
         <link rel="canonical" href="https://ziontechgroup.com" />
       </Helmet>
       <AdvertisingBanner />
+      {/* Oct 6, 2025 unified promo for newest content */}
+      <UnifiedPromotionalBanner
+        variant="hero"
+        theme="gradient"
+        icon="rocket"
+        badge="Just dropped"
+        date="Oct 6, 2025"
+        title="New Today: Feature Stores, Policy Tests v3, Evaluator Gates"
+        description="Millisecond features at 10M+ RPS, production‑predictive change gates, and evaluator‑driven releases."
+        ctaText="Read today’s posts"
+        ctaLink="/blog"
+        featuredItems={[
+          { title: "Real-Time Feature Stores 2025", category: "Real-Time AI", link: "/blog/ai-2025-oct-06-real-time-feature-stores" },
+          { title: "Policy Tests v3", category: "AI Reliability", link: "/blog/ai-2025-oct-06-policy-tests-v3" },
+          { title: "Evaluator‑Driven Release Gates", category: "Platform Engineering", link: "/blog/ai-2025-oct-06-evaluator-driven-release-gates" }
+        ]}
+        showCount={3}
+        className="border-b border-white/10 mb-4"
+      />
       {/* New: Promote 10/04 posts - Budgeted Routing, Agent Observability, Private Edge A/B */}
       <NewContentPromoBanner 
         className="border-b border-white/10" 
@@ -216,6 +236,35 @@ const Home = () => {
                     </div>
                   </Link>
                 ))}
+            </div>
+          </div>
+        </div>
+
+        {/* New Promo: Featured — Governed Agent Platforms v2 & Zero‑PII Telemetry v3 */}
+        <div className="container mx-auto px-4 py-6">
+          <div className="bg-white/10 border border-white/15 rounded-xl p-5">
+            <div className="flex items-center justify-between mb-3">
+              <h2 className="text-white text-xl font-semibold">Featured This Week</h2>
+              <Link to="/blog" className="text-zion-cyan hover:underline flex items-center gap-1">
+                View all
+                <ArrowRight size={16} />
+              </Link>
+            </div>
+            <div className="grid md:grid-cols-2 gap-4">
+              <Link to="/blog/ai-2025-oct-01-governed-agent-platforms-v2" className="block group">
+                <div className="bg-white/5 rounded-lg p-4 border border-white/10 group-hover:border-zion-cyan/40 transition-colors">
+                  <div className="text-xs uppercase tracking-wide text-zion-cyan mb-1">AI Operations</div>
+                  <div className="text-white font-medium mb-1">Governed Agent Platforms v2: Budgets, Scorecards, Instant Rollback</div>
+                  <div className="text-zion-slate-light text-sm">8 min read • {new Date('2025-10-01').toLocaleDateString()}</div>
+                </div>
+              </Link>
+              <Link to="/blog/ai-2025-oct-01-zero-pii-telemetry-v3" className="block group">
+                <div className="bg-white/5 rounded-lg p-4 border border-white/10 group-hover:border-zion-cyan/40 transition-colors">
+                  <div className="text-xs uppercase tracking-wide text-zion-cyan mb-1">Analytics</div>
+                  <div className="text-white font-medium mb-1">Zero‑PII Telemetry v3: Signal Without Risk at Global Scale</div>
+                  <div className="text-zion-slate-light text-sm">7 min read • {new Date('2025-10-01').toLocaleDateString()}</div>
+                </div>
+              </Link>
             </div>
           </div>
         </div>

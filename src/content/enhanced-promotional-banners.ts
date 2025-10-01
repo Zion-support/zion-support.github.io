@@ -717,18 +717,124 @@ enhancedPromotionalBanners.unshift(
   }
 );
 
+// Oct 8, 2025 – Promote three new posts
+enhancedPromotionalBanners.unshift(
+  {
+    id: 'oct-08-2025-new-content-drop',
+    title: '🚀 NEW TODAY (Oct 8): Governed Agents, Edge Private Analytics, Cache Strata v5',
+    description: 'Budgets + SLIs for 10k+ agents, zero‑PII analytics under 100ms, and cache tiers that cut cost 60–85%.',
+    ctaText: 'Explore today\'s posts',
+    ctaLink: '/blog',
+    variant: 'success',
+    icon: '🚀',
+    featured: true,
+    priority: 0,
+    startDate: '2025-10-08'
+  },
+  {
+    id: 'oct-08-governed-multiagent-platforms',
+    title: '🛡️ Governed Multi‑Agent Platforms — Budgets, SLIs, Rollback',
+    description: 'Run 10k+ agents safely with budgeted tools, KPI‑linked SLIs, and instant rollback.',
+    ctaText: 'Read the playbook',
+    ctaLink: '/blog/ai-2025-oct-08-governed-multiagent-platforms',
+    variant: 'success',
+    icon: '🛡️',
+    featured: true,
+    priority: 1,
+    startDate: '2025-10-08'
+  },
+  {
+    id: 'oct-08-edge-private-analytics-v4',
+    title: '🔐 Edge Private Analytics v4 — Zero‑PII, <100ms',
+    description: 'Scoped IDs, on‑device aggregation, and DP noise for compliant insights without data risk.',
+    ctaText: 'Learn the blueprint',
+    ctaLink: '/blog/ai-2025-oct-08-edge-private-analytics-v4',
+    variant: 'info',
+    icon: '🔐',
+    featured: true,
+    priority: 2,
+    startDate: '2025-10-08'
+  },
+  {
+    id: 'oct-08-cache-strata-v5',
+    title: '⚡ Cache Strata v5 — Features → Chunks → Answers',
+    description: 'Tiered caches with freshness windows and coalescing. 45% quality ↑, 60–85% cost ↓.',
+    ctaText: 'Read the cache guide',
+    ctaLink: '/blog/ai-2025-oct-08-cache-strata-v5',
+    variant: 'success',
+    icon: '⚡',
+    featured: true,
+    priority: 3,
+    startDate: '2025-10-08'
+  }
+);
+
+// Oct 7, 2025 – Promote two new posts
+enhancedPromotionalBanners.unshift(
+  {
+    id: 'oct-07-autonomous-platforms-roi',
+    title: '🚀 NEW TODAY: Autonomous Platforms — 3–6x ROI in 90 Days',
+    description: 'Budgets, approvals, canary scorecards, and instant rollback. Ship autonomy safely with measurable value in weeks.',
+    ctaText: 'Read the ROI Playbook',
+    ctaLink: '/blog/ai-2025-oct-07-autonomous-platforms-roi',
+    variant: 'success',
+    icon: '🚀',
+    featured: true,
+    priority: 0,
+    startDate: '2025-10-07'
+  },
+  {
+    id: 'oct-07-evaluator-pipelines-blueprint',
+    title: '🛡️ NEW: Evaluator Pipelines — Predict Production, Gate Risk',
+    description: 'Golden tasks, calibrated metrics, and online canaries with rollback hooks. Correlate with KPIs and cut regressions.',
+    ctaText: 'Build Evaluator Pipelines',
+    ctaLink: '/blog/ai-2025-oct-07-evaluator-pipelines-blueprint',
+    variant: 'info',
+    icon: '🛡️',
+    featured: true,
+    priority: 1,
+    startDate: '2025-10-07'
+  }
+);
+
 // Sept 30, 2025 – Fresh homepage banner promoting the new content
 enhancedPromotionalBanners.push({
-  id: 'oct-03-risk-controlled-autonomy-2025',
-  title: '🛡️ NEW: Risk‑Controlled Autonomy — 10x Velocity, Zero Surprise Incidents',
-  description: 'Budgeted tools, approvals, and live evaluators with instant rollback. Ship autonomy safely at scale.',
-  ctaText: 'Read the Operations Playbook',
-  ctaLink: '/blog/ai-2025-oct-03-risk-controlled-autonomy',
+  id: 'oct-05-governed-autonomy-2025',
+  title: '🛡️ NEW: Governed Autonomy — KPI Scorecards, Budgets, Instant Rollback',
+  description: 'Ship agents that move fast without incidents. KPI-linked SLIs, approvals, and one-click rollback.',
+  ctaText: 'Read the Playbook',
+  ctaLink: '/blog/ai-2025-oct-05-enterprise-agents-scorecards-v2',
   variant: 'success',
   icon: '🛡️',
   featured: true,
   priority: 0,
-  startDate: '2025-10-03'
+  startDate: '2025-10-05'
+});
+
+enhancedPromotionalBanners.push({
+  id: 'oct-05-edge-experiments-v5',
+  title: '⚡ NEW: Edge Private Experiments v5 — Zero‑PII A/B <100ms',
+  description: 'Signed configs, scoped IDs, DP noise. Global experiments without data risk.',
+  ctaText: 'Explore the Guide',
+  ctaLink: '/blog/ai-2025-oct-05-edge-private-experiments-v5',
+  variant: 'info',
+  icon: '⚡',
+  featured: true,
+  priority: 1,
+  startDate: '2025-10-05'
+});
+
+enhancedPromotionalBanners.push({
+  id: 'oct-05-cache-strata-v4',
+  title: '🧠 NEW: Cache Strata v4 — 60–85% Cost ↓, Tighter P95',
+  description: 'Feature → chunk → answer caches with freshness windows and coalescing.',
+  ctaText: 'Read the Cache Blueprint',
+  ctaLink: '/blog/ai-2025-oct-05-cache-strata-v4',
+  variant: 'success',
+  icon: '🧠',
+  featured: true,
+  priority: 2,
+  startDate: '2025-10-05'
 });
 
 enhancedPromotionalBanners.push({
@@ -891,3 +997,55 @@ export const getActiveEnhancedBanners = (): EnhancedPromotionalBanner[] => {
 export const getFeaturedBanners = (): EnhancedPromotionalBanner[] => {
   return getActiveEnhancedBanners().filter(banner => banner.featured);
 };
+
+// Oct 6, 2025 – New content promo for three fresh posts
+enhancedPromotionalBanners.unshift(
+  {
+    id: 'oct-06-2025-new-content-drop',
+    title: '🚀 NEW TODAY (Oct 6): Feature Stores, Policy Tests v3, Evaluator Gates',
+    description: 'Millisecond features at 10M+ RPS, production-predictive policy tests, and evaluator-driven releases.',
+    ctaText: 'Explore today\'s posts',
+    ctaLink: '/blog',
+    variant: 'success',
+    icon: '🚀',
+    featured: true,
+    priority: 0,
+    startDate: '2025-10-06'
+  },
+  {
+    id: 'oct-06-feature-stores-2025',
+    title: '⚡ Real-Time Feature Stores — Sub-10ms Reads at 10M+ RPS',
+    description: 'Freshness windows, idempotent upserts, and online/offline parity with scorecards.',
+    ctaText: 'Build Feature Stores',
+    ctaLink: '/blog/ai-2025-oct-06-real-time-feature-stores',
+    variant: 'success',
+    icon: '⚡',
+    featured: true,
+    priority: 1,
+    startDate: '2025-10-06'
+  },
+  {
+    id: 'oct-06-policy-tests-v3-2025',
+    title: '🛡️ Policy Tests v3 — Change Gates That Predict Production',
+    description: 'Golden tasks, calibrated metrics, and online canaries wired as deploy gates.',
+    ctaText: 'Read Policy Tests v3',
+    ctaLink: '/blog/ai-2025-oct-06-policy-tests-v3',
+    variant: 'info',
+    icon: '🛡️',
+    featured: true,
+    priority: 2,
+    startDate: '2025-10-06'
+  },
+  {
+    id: 'oct-06-evaluator-gates-2025',
+    title: '✅ Evaluator-Driven Release Gates — Ship Faster, Fewer Regressions',
+    description: 'Live evaluators, KPI‑linked SLIs, and instant rollback for safe velocity.',
+    ctaText: 'Adopt Evaluator Gates',
+    ctaLink: '/blog/ai-2025-oct-06-evaluator-driven-release-gates',
+    variant: 'success',
+    icon: '✅',
+    featured: true,
+    priority: 3,
+    startDate: '2025-10-06'
+  }
+);

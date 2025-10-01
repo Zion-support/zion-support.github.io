@@ -14,6 +14,66 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "ai-2025-oct-01-governed-agent-platforms-v2",
+    title: "Governed Agent Platforms v2: Budgets, Scorecards, Instant Rollback",
+    description: "Ship enterprise agent platforms safely: KPI scorecards, budget-aware routing, CI policy tests, and one-click rollback.",
+    content: `
+# Governed Agent Platforms v2: Budgets, Scorecards, Instant Rollback
+
+Modern agent platforms move fast without surprises when governance is wired in by default.
+
+## What You'll Implement
+- KPI-linked scorecards that predict outcomes
+- Budget-aware routing with quality tiers and cache layers
+- CI policy tests and online eval canaries as deploy gates
+- One-click rollback with blast-radius checks
+
+## Outcomes
+- 10x delivery velocity with stable change-failure rate
+- 40–70% cost reduction on GenAI routes
+- 99.9% uptime protected by runtime policies
+
+Need help landing this in weeks, not quarters? Our team can partner with yours.
+    `,
+    author: "Zion Tech Group Platform Office",
+    date: "2025-10-01",
+    category: "AI Operations",
+    tags: ["Agents", "Governance", "Budgets", "Scorecards", "Rollback"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/governed-agent-platforms-v2.jpg"
+  },
+  {
+    slug: "ai-2025-oct-01-zero-pii-telemetry-v3",
+    title: "Zero‑PII Telemetry v3: Signal Without Risk at Global Scale",
+    description: "On-device aggregation, scoped IDs, and DP noise: rich analytics with zero centralized PII and <100ms decisions.",
+    content: `
+# Zero‑PII Telemetry v3: Signal Without Risk at Global Scale
+
+Unlock decision-grade analytics without centralizing PII.
+
+## Blueprint
+- Scoped, rotating identifiers with field-level redaction
+- On-device aggregation with signed configs
+- Differential privacy for cohort reporting
+- Signed experiment configs with cacheable variants
+
+## Results
+- <100ms edge decisions globally
+- 90%+ reduction in sensitive data flows
+- Trustworthy lift estimates with DP guarantees
+
+Includes reference schemas, rollout checklists, and compliance guardrails.
+    `,
+    author: "Zion Tech Group Privacy Lab",
+    date: "2025-10-01",
+    category: "Analytics",
+    tags: ["Privacy", "Telemetry", "Edge", "DP", "A/B"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/zero-pii-telemetry-v3.jpg"
+  },
+  {
     slug: "ai-2025-oct-03-risk-controlled-autonomy",
     title: "Risk‑Controlled Autonomy 2025: Ship Agentic Systems Without Surprises",
     description: "Blueprint for budgeted tools, policy‑gated actions, and instant rollback so teams move 10x faster with stable reliability and spend.",
@@ -1469,6 +1529,230 @@ The future of business software is here, and it's micro SAAS. Don't get left beh
     featured: false,
     readTime: "9 min read",
     image: "/images/micro-saas-platform.jpg"
+  }
+  ,
+  {
+    slug: "ai-2025-oct-08-governed-multiagent-platforms",
+    title: "Governed Multi‑Agent Platforms: Budgets, SLIs, and Instant Rollback",
+    description: "Production blueprint to run 10k+ agents safely with budgeted tools, KPI‑linked SLIs, evaluator gates, and one‑click rollback.",
+    content: `
+# Governed Multi‑Agent Platforms: Budgets, SLIs, and Instant Rollback
+
+Modern agent platforms can move 10x faster when autonomy is paired with strong guardrails.
+
+## What You'll Implement
+- Budgeted tools with scopes and quotas
+- KPI‑linked SLIs wired to canary scorecards
+- Evaluator‑driven change gates that predict production
+- One‑click rollback with immutable artifacts
+
+## Outcomes
+- Fewer incidents with faster iteration
+- 30–70% GenAI cost reduction via quality‑tier routing and caches
+- Clear ownership through weekly scorecards
+
+Need help landing this safely in weeks, not quarters? Our team can partner with yours.
+    `,
+    author: "Zion Tech Group Platform Office",
+    date: "2025-10-08",
+    category: "AI Operations",
+    tags: ["Agents", "Governance", "Budgets", "SLIs", "Rollback"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/governed-multiagent-platforms-2025.jpg"
+  }
+  ,
+  {
+    slug: "ai-2025-oct-08-edge-private-analytics-v4",
+    title: "Edge Private Analytics v4: Zero‑PII Insights in <100ms",
+    description: "Scoped IDs, on‑device aggregation, and DP noise deliver decision‑grade analytics with zero centralized PII.",
+    content: `
+# Edge Private Analytics v4: Zero‑PII Insights in <100ms
+
+Unlock rich analytics without centralizing PII.
+
+## Blueprint
+- Scoped, rotating identifiers with field‑level redaction
+- On‑device aggregation powered by signed configs
+- Differential privacy for cohort metrics
+- Budgeted routes with deterministic fallbacks
+
+## Results
+- Sub‑100ms decisioning globally
+- 90%+ reduction in sensitive data flows
+- Trusted lift estimates with DP guarantees
+    `,
+    author: "Zion Tech Group Privacy Lab",
+    date: "2025-10-08",
+    category: "Analytics",
+    tags: ["Privacy", "Edge", "DP", "Telemetry"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/edge-private-analytics-v4.jpg"
+  }
+  ,
+  {
+    slug: "ai-2025-oct-08-cache-strata-v5",
+    title: "Cache Strata v5: Features → Chunks → Answers, Cost ↓ 60–85%",
+    description: "Tiered caches and freshness windows that raise answer quality 45% while cutting GenAI cost by 60–85%.",
+    content: `
+# Cache Strata v5: Features → Chunks → Answers
+
+Production‑proven caching layers for LLM and RAG systems.
+
+## Layers
+- Feature cache for hot signals
+- Chunk cache with freshness windows and quality budgets
+- Answer cache with request coalescing and negative entries
+
+## Rollout
+- Start dark; compare cost/request and task success
+- Gate tier promotions with online evaluators
+- Weekly scorecards; one regression → one fix
+    `,
+    author: "Zion Tech Group Platform Team",
+    date: "2025-10-08",
+    category: "GenAI Engineering",
+    tags: ["Caching", "RAG", "Latency", "Cost"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/cache-strata-v5.jpg"
+  }
+  ,
+  {
+    slug: "ai-2025-oct-07-autonomous-platforms-roi",
+    title: "Autonomous Platforms 2025: 3–6x ROI in 90 Days",
+    description: "Blueprint to stand up governed autonomous platforms that deliver quick, measurable ROI with budgets, approvals, and rollback-first design.",
+    content: `
+# Autonomous Platforms 2025: 3–6x ROI in 90 Days
+
+Modern enterprises are standardizing on platform primitives that make autonomy safe by default.
+
+## What You’ll Implement
+- Budgeted actions with scopes and approvals
+- Canary routes with KPI-linked scorecards
+- Tiered routing and caches that stabilize UX under cost targets
+- Instant rollback with immutable artifacts
+
+## Results
+- 3–6x ROI within the first 90 days
+- 30–70% reduction in GenAI serving cost
+- Faster delivery with fewer incidents
+
+Need a proven playbook tailored to your stack? Our team can help you land this safely—fast.
+    `,
+    author: "Zion Tech Group Platform Office",
+    date: "2025-10-07",
+    category: "Platform Engineering",
+    tags: ["Autonomy", "Budgets", "Rollback", "Scorecards"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/autonomous-platforms-roi-2025.jpg"
+  }
+  ,
+  {
+    slug: "ai-2025-oct-07-evaluator-pipelines-blueprint",
+    title: "Evaluator Pipelines Blueprint: Predict Production, Gate Risk",
+    description: "Design offline→online evaluator pipelines with calibrated metrics and canary scorecards that correlate with business KPIs.",
+    content: `
+# Evaluator Pipelines Blueprint: Predict Production, Gate Risk
+
+Most eval suites don’t predict user outcomes. This guide ships a pipeline that does.
+
+## You’ll Build
+- Golden task sets mapped to top journeys
+- Calibrated metrics with budget thresholds
+- Online canaries with rollback hooks
+- Weekly ownership ritual (1 regression → 1 fix)
+
+## Outcomes
+- Fewer regressions and faster iteration
+- Trusted signals that correlate with KPIs
+- Safer velocity with reversible changes
+    `,
+    author: "Zion Tech Group Reliability Lab",
+    date: "2025-10-07",
+    category: "AI Reliability",
+    tags: ["Evaluators", "Canaries", "KPIs", "Rollback"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/evaluator-pipelines-blueprint-2025.jpg"
+  }
+  ,
+  {
+    slug: "ai-2025-oct-06-real-time-feature-stores",
+    title: "Real-Time Feature Stores 2025: Millisecond Features, Massive Scale",
+    description: "Design streaming feature stores with freshness windows, idempotent updates, and zero-downtime backfills—sub-10ms reads at 10M+ RPS.",
+    content: `
+# Real-Time Feature Stores 2025: Millisecond Features, Massive Scale
+
+Feature freshness drives outcomes. This guide ships pragmatic patterns for streaming feature stores that serve low-latency features at global scale.
+
+## What You'll Build
+- Freshness windows and SLA bands per feature
+- Idempotent upserts with time-travel replay
+- Exactly-once stream processors and CDC bridges
+- Online/offline parity with validation scorecards
+
+## Results
+- Sub-10ms p99 reads at 10M+ RPS
+- Fewer regressions with parity checks and rollbacks
+
+Need help landing this safely? Our team can help you stand this up in weeks.
+    `,
+    author: "Zion Tech Group Real-Time AI Team",
+    date: "2025-10-06",
+    category: "Real-Time AI",
+    tags: ["Feature Store", "Streaming", "Low Latency", "CDC"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/real-time-feature-stores-2025.jpg"
+  },
+  {
+    slug: "ai-2025-oct-06-policy-tests-v3",
+    title: "Policy Tests v3: E2E Change Gates That Predict Production",
+    description: "Golden tasks, calibrated metrics, and online canaries wired as deploy gates—ship faster with fewer incidents.",
+    content: `
+# Policy Tests v3: E2E Change Gates That Predict Production
+
+Most evals fail to correlate with user outcomes. This blueprint aligns offline tests, red-team funnels, and online canaries with business KPIs.
+
+## You’ll Implement
+- Golden task sets mapped to journeys
+- Calibrated metrics and budget thresholds
+- Canary routes with blast-radius checks and rollback hooks
+- Weekly scorecards with 1 regression → 1 fix
+    `,
+    author: "Zion Tech Group Reliability Lab",
+    date: "2025-10-06",
+    category: "AI Reliability",
+    tags: ["Policy Tests", "Evals", "Canary", "Rollback"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/policy-tests-v3.jpg"
+  },
+  {
+    slug: "ai-2025-oct-06-evaluator-driven-release-gates",
+    title: "Evaluator‑Driven Release Gates: Faster Shipping, Fewer Regressions",
+    description: "Wire online evaluators and KPI‑linked SLIs into delivery so risky changes auto‑halt and safe ones fly.",
+    content: `
+# Evaluator‑Driven Release Gates: Faster Shipping, Fewer Regressions
+
+Release with confidence using evaluator hooks and KPI‑linked SLIs.
+
+## Patterns
+- Live evals on canary routes
+- Budget‑aware routing with deterministic fallbacks
+- Instant rollback with immutable artifacts
+- Weekly review ritual and ownership
+    `,
+    author: "Zion Tech Group Platform Office",
+    date: "2025-10-06",
+    category: "Platform Engineering",
+    tags: ["Evaluators", "SLIs", "Release Gates", "Rollback"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/evaluator-driven-release-gates.jpg"
   }
   ,
   {
