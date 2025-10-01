@@ -226,6 +226,26 @@ contentHighlights.push(
     badge: "New Service",
     stats: "Production Ready",
     variant: "premium" as const
+  },
+  {
+    id: 17,
+    title: "🛠️ AI SRE Blueprints 2026",
+    description: "Error budgets, rollback triggers, and live traces for reliable AI",
+    ctaText: "Read Blueprint",
+    ctaLink: "/blog/ai-sre-blueprints-2026",
+    badge: "New",
+    stats: "8 min read",
+    variant: "info" as const
+  },
+  {
+    id: 18,
+    title: "🔒 Privacy‑First A/B Testing",
+    description: "Insights without PII using scoped IDs and DP noise",
+    ctaText: "Learn How",
+    ctaLink: "/blog/privacy-first-ab-testing-2026",
+    badge: "New",
+    stats: "7 min read",
+    variant: "success" as const
   }
 );
 

@@ -10,6 +10,78 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "agent-blue-green-releases-2026",
+    title: "Agent Blue‑Green Releases 2026: Safe, Reversible Automation",
+    description: "Ship agent changes with policy tests, budgeted actions, and instant rollback toggles.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-llm-safety-caching-2026",
+    title: "Edge LLM Safety Caching 2026: Sub‑100ms Prompts with Guardrails",
+    description: "Tiered KV, signed configs, and inline filters that keep prompts fast and safe at the edge.",
+    category: "Architecture",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "platform-slo-guardrails-2026",
+    title: "Platform SLO Guardrails 2026: Scorecards that Prevent Regressions",
+    description: "Wire golden paths to SLOs with pre‑merge policy tests and live canaries that keep teams fast.",
+    category: "Platform Engineering",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "ai-breach-drills-2026",
+    title: "AI Breach Drills 2026: Practicing Safe Autonomy Under Budget",
+    description: "Run realistic breach simulations with budgeted actions, approval gates, and instant rollback.",
+    category: "Security",
+    publishedAt: "2025-10-29",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "ai-governance-scorecards-quickstart-2026",
+    title: "AI Governance Scorecards Quickstart 2026: Ship Fast, Stay Safe",
+    description: "Lightweight scorecards, PR checks, and canaries that predict outcomes without slowing teams.",
+    category: "AI Strategy",
+    publishedAt: "2025-10-16",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "edge-agent-observability-2026",
+    title: "Edge Agent Observability 2026: Live Traces, Budgets, and Fallbacks",
+    description: "Observe multi‑tool agents with user‑centric traces, budgeted actions, and deterministic fallbacks at the edge.",
+    category: "Edge Computing",
+    publishedAt: "2025-10-16",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "privacy-preserving-feature-flags-2026",
+    title: "Privacy‑Preserving Feature Flags 2026: Geo Budgets and On‑Device Filters",
+    description: "Sub‑100ms, zero‑regret rollouts using scoped IDs, local filters, and telemetry‑driven rollback.",
+    category: "Architecture",
+    publishedAt: "2025-10-16",
+    featured: false,
+    readTime: "7 min read"
+  },
+  {
+    slug: "privacy-first-insights-telemetry-2026",
+    title: "Privacy‑First Insights 2026: Signal‑Rich Telemetry Without PII",
+    description: "Scoped IDs, field‑level filters, and edge redaction for high‑quality analytics at low risk.",
+    category: "Observability",
+    publishedAt: "2025-10-29",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
     slug: "ai-governance-routing-blueprint-2026",
     title: "AI Governance Routing Blueprint 2026: Policy Tests, Canaries, SLAs",
     description: "A practical system to keep AI features fast and safe with policy tests in CI, KPI-linked canaries, and service-level objectives.",
@@ -675,6 +747,25 @@ export const posts: BlogPost[] = [
     featured: false,
     readTime: "6 min read"
   }
+  ,
+  {
+    slug: "ai-sre-blueprints-2026",
+    title: "AI SRE Blueprints 2026: Error Budgets, Rollbacks, and Live Traces",
+    description: "Design SRE guardrails for AI systems: quality/error budgets, rollback triggers, and trace-driven remediation.",
+    category: "AI Operations",
+    publishedAt: "2025-10-29",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "privacy-first-ab-testing-2026",
+    title: "Privacy‑First A/B Testing 2026: Insights Without PII",
+    description: "Scoped IDs, on‑device metrics, and DP noise for compliant experiments that still drive decisions.",
+    category: "Analytics",
+    publishedAt: "2025-10-29",
+    featured: false,
+    readTime: "7 min read"
+  }
 ];
 
 // Newly added content (auto-advertised on Home via latest sort)
@@ -696,5 +787,67 @@ posts.push(
     publishedAt: "2025-10-13",
     featured: true,
     readTime: "8 min read"
+  }
+);
+
+// Additional fresh content (conflict resolved)
+posts.push(
+  {
+    slug: "privacy-first-insights-telemetry-2026",
+    title: "Privacy‑First Insights 2026: DP Telemetry Without PII Risk",
+    description: "Scoped IDs, field‑level redaction, and aggregation windows for signal‑rich product analytics.",
+    category: "Observability",
+    publishedAt: "2025-10-16",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "agent-blue-green-releases-2026",
+    title: "Blue‑Green Agent Releases 2026: Safe Rollouts with Live Traces",
+    description: "Deploy agent updates with canaries, budgeted tool actions, and trace‑driven rollbacks.",
+    category: "GenAI",
+    publishedAt: "2025-10-15",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "ai-platform-scorecards-roi-2026",
+    title: "AI Platform Scorecards 2026: Proving ROI with Leading Indicators",
+    description: "Link platform telemetry to adoption, retention, and revenue with actionable scorecards.",
+    category: "AI Strategy",
+    publishedAt: "2025-10-10",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "production-rag-quality-budgets-2026",
+    title: "Production RAG: Quality Budgets, Freshness Windows, and SLAs",
+    description: "Keep answers accurate and on‑budget with freshness windows, async warmups, and layered evals.",
+    category: "GenAI",
+    publishedAt: "2025-10-10",
+    featured: true,
+    readTime: "9 min read"
+  }
+);
+
+// New content (today) to surface on homepage
+posts.push(
+  {
+    slug: "ai-platform-blueprints-2026",
+    title: "AI Platform Blueprints 2026: From Trains to Guardrails",
+    description: "Reference patterns for weekly shipping with trains, scorecards, and policy‑tested guardrails.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "edge-personalization-2026",
+    title: "Edge Personalization 2026: Private <100ms Experiences",
+    description: "Scoped IDs, on‑device models, and regional KV for fast, privacy‑first personalization.",
+    category: "Edge Computing",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
   }
 );

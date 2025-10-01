@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 export default function CaseStudies(): React.JSX.Element {
@@ -7,11 +6,5 @@ export default function CaseStudies(): React.JSX.Element {
 			<h1>Case Studies</h1>
 		</main>
 	);
-=======
-import React from "react";
-
-export default function CaseStudies(): React.JSX.Element {
-  return <div>Case Studies</div>;
->>>>>>> origin/main
 }
 

@@ -14,7 +14,6 @@ export default [
       'node_modules/**',
       '**/*.config.js',
       '**/*.config.ts',
->>>>>>> origin/main
       'public/**',
       'backup/**',
       'backup-pages/**',
@@ -35,7 +34,6 @@ export default [
       '**/backup-pages/**',
       '**/backup-merge-conflicts/**',
       '**/cypress_backup/**',
-<<<<<<< HEAD
       '**/components.disabled/**',
       '**/components.disabled_full/**',
       '**/contracts.disabled/**',
@@ -44,8 +42,6 @@ export default [
       '**/broken_files_backup/**',
       '**/vite.config-backup.*',
       '**/test-simple.*',
-=======
->>>>>>> origin/main
       '**/*.disabled.*',
       '**/*.backup.*',
       '**/*.broken.*',
@@ -223,12 +219,6 @@ export default [
 
   // Cypress Global Configuration (Plugin for JS and TS files)
   // This spread should bring in necessary plugins, rules, and languageOptions (globals)
-=======
-    languageOptions: {
-      globals: { ...nodeGlobals },
-    },
-  },
->>>>>>> origin/main
   {
     files: ["cypress/**/*.ts", "cypress/**/*.tsx"],
     languageOptions: {
