@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, DollarSign, TrendingDown, Zap, Target, CheckCircle } from 'lucide-react';
+import { ArrowRight, DollarSign, TrendingDown, Zap } from 'lucide-react';
 
 const AICostOptimizationBanner: React.FC = () => {
   const costOptimizationContent = [
