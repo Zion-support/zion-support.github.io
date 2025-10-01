@@ -1305,6 +1305,34 @@ featuredBlogPosts.unshift(
   }
 );
 
+// Oct 1, 2025 – NEW BREAKTHROUGH ARTICLES: Autonomous Mesh, Real-Time Fraud Detection, Neural Code Synthesis
+featuredBlogPosts.unshift(
+  {
+    id: "ai-2025-october-1-autonomous-mesh-orchestration",
+    title: "🌐 Autonomous Mesh Orchestration 2025",
+    description: "Self-organizing AI systems achieving 99.7% coordination, 89% cost reduction, and 1000x scalability with zero human intervention.",
+    link: "/blog/ai-2025-october-1-autonomous-mesh-orchestration",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-2025-october-1-real-time-fraud-detection-revolution",
+    title: "🔒 Real-Time Fraud Detection Revolution 2025",
+    description: "99.97% accuracy in under 1ms with $127M+ annual savings. Advanced behavioral analysis preventing fraud before it happens.",
+    link: "/blog/ai-2025-october-1-real-time-fraud-detection-revolution",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-2025-october-1-neural-code-synthesis-revolution",
+    title: "💻 Neural Code Synthesis Revolution 2025",
+    description: "98.5% production-ready code in seconds with 25x developer velocity and $89M+ savings. Natural language to enterprise software.",
+    link: "/blog/ai-2025-october-1-neural-code-synthesis-revolution",
+    type: "article",
+    featured: true
+  }
+);
+
 // Oct 1, 2025 – Feature three brand-new cutting-edge articles
 featuredBlogPosts.unshift(
   {
