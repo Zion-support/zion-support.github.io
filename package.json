@@ -89,10 +89,12 @@
     "optimize:assets": "node scripts/asset-optimizer.js"
   },
   "dependencies": {
+    "@esbuild/linux-x64": "^0.23.1",
     "@tailwindcss/postcss": "^4.1.13",
     "@types/recharts": "^2.0.1",
     "axios": "^1.12.2",
     "clsx": "^2.1.1",
+    "esbuild": "^0.23.1",
     "framer-motion": "^12.23.22",
     "gray-matter": "^4.0.3",
     "lucide-react": "^0.544.0",
