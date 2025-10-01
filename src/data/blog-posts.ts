@@ -14,6 +14,51 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    id: '209',
+    title: 'Governed Autonomy: KPI Scorecards, Budgets, Instant Rollback',
+    slug: 'ai-2025-oct-05-governed-autonomy-scorecards',
+    excerpt:
+      'Ship agent systems that move fast safely with KPI-linked SLIs, approvals, and one-click rollback.',
+    content:
+      'Teams unlock 10x velocity when autonomy is paired with strong guardrails. Implement KPI-linked SLIs, budgeted tool actions with approvals, canary routes, and rollback-first design to ship faster with fewer incidents.',
+    featuredImage: '/images/governed-autonomy-scorecards.jpg',
+    category: 'AI',
+    tags: ['Agents', 'Scorecards', 'Budgets', 'Rollback'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-05',
+    readTime: 8,
+  },
+  {
+    id: '210',
+    title: 'Edge Private Experiments v5: Zero‑PII A/B <100ms',
+    slug: 'ai-2025-oct-05-edge-private-experiments-v5',
+    excerpt:
+      'Signed configs, scoped IDs, and DP noise enable global, compliant experiments under 100ms.',
+    content:
+      'Blueprint for privacy-first experimentation: signed, cacheable configs at the edge, scoped rotating identifiers, on-device aggregation with differential privacy, plus canary scorecards and instant rollback.',
+    featuredImage: '/images/edge-private-experiments-v5.jpg',
+    category: 'Experimentation',
+    tags: ['Edge', 'A/B', 'Privacy', 'DP'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-05',
+    readTime: 7,
+  },
+  {
+    id: '211',
+    title: 'Cache Strata v4: Features → Chunks → Answers',
+    slug: 'ai-2025-oct-05-cache-strata-v4',
+    excerpt:
+      'Tiered caches and freshness windows lift answer quality 45% and cut GenAI cost 60–85%.',
+    content:
+      'Production-proven caching layers: feature cache for hot signals, chunk cache with freshness windows, answer cache with coalescing, and a negative cache to avoid hot-miss loops. Includes rollout checklist and SLO templates.',
+    featuredImage: '/images/cache-strata-v4.jpg',
+    category: 'GenAI',
+    tags: ['Caching', 'Latency', 'Cost', 'RAG'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-05',
+    readTime: 9,
+  },
+  {
     id: '1',
     title: 'Welcome to Our Blog',
     slug: 'welcome-to-our-blog',

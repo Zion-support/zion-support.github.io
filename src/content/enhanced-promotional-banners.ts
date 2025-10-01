@@ -719,16 +719,42 @@ enhancedPromotionalBanners.unshift(
 
 // Sept 30, 2025 – Fresh homepage banner promoting the new content
 enhancedPromotionalBanners.push({
-  id: 'oct-03-risk-controlled-autonomy-2025',
-  title: '🛡️ NEW: Risk‑Controlled Autonomy — 10x Velocity, Zero Surprise Incidents',
-  description: 'Budgeted tools, approvals, and live evaluators with instant rollback. Ship autonomy safely at scale.',
-  ctaText: 'Read the Operations Playbook',
-  ctaLink: '/blog/ai-2025-oct-03-risk-controlled-autonomy',
+  id: 'oct-05-governed-autonomy-2025',
+  title: '🛡️ NEW: Governed Autonomy — KPI Scorecards, Budgets, Instant Rollback',
+  description: 'Ship agents that move fast without incidents. KPI-linked SLIs, approvals, and one-click rollback.',
+  ctaText: 'Read the Playbook',
+  ctaLink: '/blog/ai-2025-oct-05-enterprise-agents-scorecards-v2',
   variant: 'success',
   icon: '🛡️',
   featured: true,
   priority: 0,
-  startDate: '2025-10-03'
+  startDate: '2025-10-05'
+});
+
+enhancedPromotionalBanners.push({
+  id: 'oct-05-edge-experiments-v5',
+  title: '⚡ NEW: Edge Private Experiments v5 — Zero‑PII A/B <100ms',
+  description: 'Signed configs, scoped IDs, DP noise. Global experiments without data risk.',
+  ctaText: 'Explore the Guide',
+  ctaLink: '/blog/ai-2025-oct-05-edge-private-experiments-v5',
+  variant: 'info',
+  icon: '⚡',
+  featured: true,
+  priority: 1,
+  startDate: '2025-10-05'
+});
+
+enhancedPromotionalBanners.push({
+  id: 'oct-05-cache-strata-v4',
+  title: '🧠 NEW: Cache Strata v4 — 60–85% Cost ↓, Tighter P95',
+  description: 'Feature → chunk → answer caches with freshness windows and coalescing.',
+  ctaText: 'Read the Cache Blueprint',
+  ctaLink: '/blog/ai-2025-oct-05-cache-strata-v4',
+  variant: 'success',
+  icon: '🧠',
+  featured: true,
+  priority: 2,
+  startDate: '2025-10-05'
 });
 
 enhancedPromotionalBanners.push({

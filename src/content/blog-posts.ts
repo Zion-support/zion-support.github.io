@@ -14,6 +14,80 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "ai-2025-oct-05-governed-autonomy-scorecards",
+    title: "Governed Autonomy: KPI Scorecards, Budgets, Instant Rollback",
+    description: "Ship agent systems that move fast safely: KPI-linked SLIs, action budgets, approvals, and one-click rollback.",
+    content: `
+# Governed Autonomy: KPI Scorecards, Budgets, Instant Rollback
+
+Teams unlock 10x velocity when autonomy is paired with strong guardrails.
+
+## What You’ll Implement
+- KPI-linked SLIs and weekly scorecards
+- Budgeted tool actions with approvals
+- Canary routes and one-click rollback
+- Signed tools with scopes and quotas
+
+## Outcomes
+- Faster delivery with fewer regressions
+- Stable latency/cost KPIs under growth
+- Clear accountability and rapid learning loops
+    `,
+    author: "Zion Tech Group AI Operations",
+    date: "2025-10-05",
+    category: "AI Operations",
+    tags: ["Agents", "Scorecards", "Budgets", "Rollback"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/governed-autonomy-scorecards.jpg"
+  },
+  {
+    slug: "ai-2025-oct-05-edge-private-experiments-v5",
+    title: "Edge Private Experiments v5: Zero‑PII A/B in <100ms",
+    description: "Run compliant global experiments using signed configs, scoped IDs, and DP noise—sub‑100ms decisions without data risk.",
+    content: `
+# Edge Private Experiments v5
+
+Blueprint for compliant, fast experimentation:
+
+- Signed, cacheable configs at the edge
+- Scoped, rotating identifiers
+- On-device aggregation with DP noise
+- Canary scorecards and instant rollback
+    `,
+    author: "Zion Tech Group Privacy Lab",
+    date: "2025-10-05",
+    category: "Experimentation",
+    tags: ["Edge", "A/B", "Privacy", "DP"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/edge-private-experiments-v5.jpg"
+  },
+  {
+    slug: "ai-2025-oct-05-cache-strata-v4",
+    title: "Cache Strata v4: Features → Chunks → Answers",
+    description: "Tiered caches and freshness windows that lift answer quality 45% while cutting GenAI cost 60–85%.",
+    content: `
+# Cache Strata v4: Features → Chunks → Answers
+
+Production-proven caching layers:
+
+- Feature cache for hot signals
+- Chunk cache with freshness windows
+- Answer cache with request coalescing
+- Negative cache to avoid hot-miss loops
+
+Includes rollout checklist, SLO templates, and dashboards.
+    `,
+    author: "Zion Tech Group Platform Team",
+    date: "2025-10-05",
+    category: "GenAI Engineering",
+    tags: ["Caching", "Latency", "Cost", "RAG"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/cache-strata-v4.jpg"
+  },
+  {
     slug: "ai-2025-oct-03-risk-controlled-autonomy",
     title: "Risk‑Controlled Autonomy 2025: Ship Agentic Systems Without Surprises",
     description: "Blueprint for budgeted tools, policy‑gated actions, and instant rollback so teams move 10x faster with stable reliability and spend.",
