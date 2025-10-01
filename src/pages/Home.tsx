@@ -211,7 +211,7 @@ const Home = () => {
         <October2025AIRevolutionBanner className="border-b border-white/10" />
         
         {/* 🚀 OCTOBER 17, 2025 - LATEST: Next-Gen Autonomous Systems, AI Code Generation & Real-Time Personalization */}
-        <October2025TechBannerNew />
+        {/* <October2025TechBannerNew /> */}
         
         {/* 🎯 OCTOBER 3, 2025 - LATEST: AI Education, Neuromorphic Computing & Biotech Breakthroughs */}
         <NewContentPromoBanner 
