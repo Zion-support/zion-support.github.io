@@ -2,8 +2,10 @@ module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
   passWithNoTests: true,
+  // Limit Jest to project source to avoid executing broken legacy tests in the repo root
   roots: ['<rootDir>/src'],
-  setupFilesAfterEnv: [ '@testing-library/jest-dom', '<rootDir>/jest.setup.ts' ],
+  // Use the correct setup file location
+  setupFilesAfterEnv: [ '@testing-library/jest-dom', '<rootDir>/tests/jest.setup.ts' ],
   extensionsToTreatAsEsm: ['.ts', '.tsx'],
   moduleNameMapper: {
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
@@ -14,7 +16,8 @@ module.exports = {
     '^@utils/(.*)$': '<rootDir>/src/utils/$1',
     '^@hooks/(.*)$': '<rootDir>/src/hooks/$1'
   },
-  testMatch: ['<rootDir>/src/**/*(*.)+(spec|test).[jt]s?(x)'],
+  // Standard test globs under src only
+  testMatch: ['<rootDir>/src/**/*.(spec|test).[jt]s?(x)'],
   testPathIgnorePatterns: [
     '/node_modules/',
     '/dist/',
