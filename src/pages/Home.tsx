@@ -26,6 +26,7 @@ import October2025EdgeAIQuantumCryptoBanner from "../components/October2025EdgeA
 import October2025BreakthroughContentBanner from "../components/October2025BreakthroughContentBanner";
 import October2025AIRevolutionBanner from "../components/October2025AIRevolutionBanner";
 import October2025NewContentBanner from "../components/October2025NewContentBanner";
+import October2025TechBannerNew from "../components/October2025TechBannerNew";
 import LatestArticlesShowcase from "../components/LatestArticlesShowcase";
 import LatestContentBanner from "../components/LatestContentBanner";
 import LatestInsights from "../components/LatestInsights";
