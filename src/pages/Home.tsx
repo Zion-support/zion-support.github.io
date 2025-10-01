@@ -344,7 +344,6 @@ const Home = () => {
             <p className="text-xl text-emerald-100 mb-8 max-w-3xl">
               Learn from real-world deployments: Edge AI patterns achieving sub-10ms latency, North Star metrics that predict success, and a $127M manufacturing transformation.
             </p>
-            </p>
 
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               {/* Blog Post 1 - Hybrid Cloud */}
