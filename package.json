@@ -89,6 +89,7 @@
     "optimize:assets": "node scripts/asset-optimizer.js"
   },
   "dependencies": {
+    "@esbuild/linux-x64": "^0.25.10",
     "@tailwindcss/postcss": "^4.1.13",
     "@types/recharts": "^2.0.1",
     "axios": "^1.12.2",
