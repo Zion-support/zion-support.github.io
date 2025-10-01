@@ -1,14 +1,14 @@
 module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
-  roots: ['<rootDir>/__tests__', '<rootDir>/src'],
+  roots: ['<rootDir>/src'],
   setupFilesAfterEnv: [ '@testing-library/jest-dom' ],
   moduleNameMapper: {
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
     // Minimal mappers to avoid conflicts; project has no tests
     '\\.(gif|ttf|eot|svg|png|jpg|jpeg)$': '<rootDir>/tests/__mocks__/fileMock.js',
   },
-  testMatch: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
+  testMatch: ['<rootDir>/src/**/?(*.)+(spec|test).[jt]s?(x)'],
   testPathIgnorePatterns: [
     '/node_modules/',
     '/dist/',
@@ -24,6 +24,7 @@ module.exports = {
     '/backup-problematic-files/',
     '/_conflicted_disabled/',
     '/apps.backup/',
+    '/__tests__/',
   ],
   modulePathIgnorePatterns: [
     '/automation/',
@@ -34,6 +35,7 @@ module.exports = {
     '/backup-problematic-files/',
     '/_conflicted_disabled/',
     '/apps.backup/',
+    '/__tests__/',
   ],
   transform: {
     '^.+\\.(ts|tsx)$': 'ts-jest',

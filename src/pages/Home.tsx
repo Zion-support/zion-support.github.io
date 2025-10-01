@@ -10,6 +10,7 @@ import {
   Target,
   Users,
   Zap,
+  TrendingUp,
 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
@@ -35,15 +36,7 @@ import SuccessStoriesShowcase from "../components/SuccessStoriesShowcase";
 import TrendingContentBanner from "../components/TrendingContentBanner";
 import { enhancedPromotionalBanners, getActiveEnhancedBanners, getFeaturedBanners } from "../content/enhanced-promotional-banners";
 import { latestInsights } from "../content/insights";
-import NewContentPromoBanner from "../components/NewContentPromoBanner";
-import EnhancedPromotionalBanner from "../components/EnhancedPromotionalBanner";
-import { getFeaturedBanners } from "../content/enhanced-promotional-banners";
-import NewContentAnnouncement from "../components/NewContentAnnouncement";
-import TrendingContentBanner from "../components/TrendingContentBanner";
-import ComprehensivePromoBanner from "../components/ComprehensivePromoBanner";
-import NewArticlesPromoBanner from "../components/NewArticlesPromoBanner";
-import NewServicesPromoBanner from "../components/NewServicesPromoBanner";
-import ContentPromotionBanner from "../components/ContentPromotionBanner";
+// Removed duplicate imports below
 import { blogPosts } from "../content/blog-posts";
 
 const Home = () => {
@@ -82,7 +75,7 @@ const Home = () => {
         />
         <link rel="canonical" href="https://ziontechgroup.com" />
       </Helmet>
-      <AdvertisingBanner />
+      {/* AdvertisingBanner removed (undefined) */}
       {/* Promo: New Enterprise AI Governance Blueprint */}
       <NewContentPromoBanner 
         className="border-b border-white/10" 
@@ -113,12 +106,7 @@ const Home = () => {
       
       {/* 🧠🧠🧠 BRAND NEW OCTOBER 2025 - JUST RELEASED: COGNITIVE COMPUTING REVOLUTION - TOP PRIORITY! 🧠🧠🧠 */}
       {/* Featured: Multi-Agent Orchestration (97.8% Automation, $847M Value), Cognitive AI Transformation (98.5% Accuracy, $1.2B Value), Fortune 20 Telecom Case Study ($4.7B Success, 3,602% ROI) */}
-      <October2025CognitiveRevolutionBanner />
-      
-      <November2025GameChangersBanner />
-      <January2026RevolutionaryBanner />
-      <October2025UltimateEnterpriseBanner />
-      <October2025CuttingEdgeInnovationsBanner />
+      {/* Removed undefined banner components */}
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
         {/* New This Week promo - highlights latest featured posts */}
@@ -226,14 +214,7 @@ const Home = () => {
         </div>
         
         {/* Content Promotion Banner */}
-        <ContentPromotionBanner
-          variant="info"
-          title="🚀 Revolutionary: AI Autonomous Infrastructure + Quantum-AI Hybrid Computing"
-          description="Breakthrough AI services: Self-healing infrastructure, quantum-AI hybrid computing, and next-gen cybersecurity solutions."
-          ctaText="Explore New Services"
-          ctaLink="/services"
-          dismissible={true}
-        />
+        {/* Removed ContentPromotionBanner with incompatible props */}
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-zion-blue rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
@@ -605,7 +586,7 @@ const Home = () => {
         </section>
 
         {/* 🚀 OCTOBER 2, 2025 - BREAKTHROUGH: NEXT-GEN ENTERPRISE AI SYSTEMS! 🚀 */}
-        <October2025NewBreakthroughBanner />
+        {/* Removed undefined October2025NewBreakthroughBanner */}
 
         {/* 🌟🌟🌟 NEWEST LAUNCH: OCTOBER 1, 2025 - SMART CITY DIGITAL TWIN REVOLUTION - FEATURED! 🌟🌟🌟 */}
         {/* 🏙️🏙️🏙️ JUST PUBLISHED: $1.8B Savings, Phoenix Success Story, 97% Prediction Accuracy! 🏙️🏙️🏙️ */}
@@ -826,7 +807,7 @@ const Home = () => {
         </section>
 
         {/* New Services Promotional Banner */}
-        <NewServicesPromoBanner2026 />
+        {/* Removed undefined NewServicesPromoBanner2026 */}
 
         {/* Features Section */}
         <section className="container mx-auto px-6 py-20 relative z-10">
@@ -995,11 +976,6 @@ const Home = () => {
                 <div key={insight.id} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105">
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-xs uppercase tracking-wider text-indigo-300">{insight.category}</span>
-                    {insight.featured && (
-                      <span className="bg-yellow-400 text-black text-xs px-2 py-1 rounded-full font-medium">
-                        FEATURED
-                      </span>
-                    )}
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">{insight.title}</h3>
                   <p className="text-indigo-100 mb-4 text-sm">{insight.summary}</p>
@@ -1151,8 +1127,8 @@ const Home = () => {
               <Link to="/blog" className="text-indigo-700 font-semibold hover:text-indigo-800">View all →</Link>
             </div>
             <div className="grid gap-8 md:grid-cols-3">
-              {[...posts]
-                .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
+              {[...blogPosts]
+                .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
                 .slice(0, 3)
                 .map((post) => (
                 <article key={post.slug} className="bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
