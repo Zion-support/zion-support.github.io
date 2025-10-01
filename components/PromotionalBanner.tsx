@@ -646,3 +646,27 @@ export const ManufacturingAutomationBanner = () => (
     hideAfter={22}
   />
 );
+
+export const MLPipelineOptimizationBanner = () => (
+  <PromotionalBanner
+    message="🚀 NEW OCT 2025: Practical ML Pipeline Optimization - 10x Faster Training, 60% Cost Reduction, Production-Ready Systems"
+    ctaText="Read Article"
+    ctaLink="/blog/ai-2025-oct-practical-ml-pipeline-optimization"
+    backgroundColor="bg-gradient-to-r from-blue-700 to-cyan-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const MLPipelineOptimizationCaseStudyBanner = () => (
+  <PromotionalBanner
+    message="💎 SUCCESS STORY: Global Tech Company ML Pipeline Optimization - $14.2M Annual ROI, 12x Faster Training, 68% Cost Savings"
+    ctaText="View Case Study"
+    ctaLink="/case-studies/ai-2025-oct-ml-pipeline-optimization-14m-roi-success"
+    backgroundColor="bg-gradient-to-r from-green-700 to-teal-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={22}
+  />
+);
