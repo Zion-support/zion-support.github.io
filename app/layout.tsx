@@ -5,7 +5,12 @@ import './globals.css';
 import { September30NewContentShowcase } from '../components/PromotionalBanner';
 import NewContentNavigation from '../components/NewContentNavigation';
 import AI2027AdvancedNeuralSuperintelligenceBreakthroughBanner from '../components/AI2027AdvancedNeuralSuperintelligenceBreakthroughBanner';
+<<<<<<< HEAD
 import NewContent2025PromotionalBanner from '../components/NewContent2025PromotionalBanner';
+=======
+import AI2027TranscendentMetaIntelligenceBreakthroughBanner from '../components/AI2027TranscendentMetaIntelligenceBreakthroughBanner';
+import AI2028OmnipotentSuperintelligenceBreakthroughBanner from '../components/AI2028OmnipotentSuperintelligenceBreakthroughBanner';
+>>>>>>> origin/cursor/create-and-deploy-new-content-4faa
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -179,6 +184,22 @@ function Header() {
               AI 2027 Quantum Neural Superintelligence
               <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
                 $500B SUCCESS
+              </span>
+            </Link>
+          </div>
+          <div className="relative group">
+            <Link href="/blog/ai-2027-transcendent-meta-intelligence-breakthrough" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
+              AI 2027 Transcendent Meta-Intelligence
+              <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
+                $1.8T SUCCESS
+              </span>
+            </Link>
+          </div>
+          <div className="relative group">
+            <Link href="/blog/ai-2028-omnipotent-superintelligence-breakthrough" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
+              AI 2028 Omnipotent Superintelligence
+              <span className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
+                $3.2T SUCCESS
               </span>
             </Link>
           </div>
@@ -516,8 +537,20 @@ function Footer() {
             </div>
           </div>
           <div>
-            <h3 className="font-semibold text-gray-900 mb-3">Latest 2026 Revolutionary Content</h3>
+            <h3 className="font-semibold text-gray-900 mb-3">Latest 2027-2028 Revolutionary Content</h3>
             <div className="space-y-2">
+              <Link href="/blog/ai-2027-transcendent-meta-intelligence-breakthrough" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                🧠 AI 2027 Transcendent Meta-Intelligence Breakthrough
+                <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">$1.8T SUCCESS</span>
+              </Link>
+              <Link href="/case-studies/ai-2027-transcendent-meta-intelligence-1-8-trillion-success" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                💰 $1.8T Transcendent Meta-Intelligence Success Story
+                <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">FORTUNE 500</span>
+              </Link>
+              <Link href="/blog/ai-2028-omnipotent-superintelligence-breakthrough" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                🌌 AI 2028 Omnipotent Superintelligence Breakthrough
+                <span className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">$3.2T SUCCESS</span>
+              </Link>
               <Link href="/blog/ai-2027-transcendent-quantum-consciousness-breakthrough" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
                 🧠 AI 2027 Transcendent Quantum Consciousness Breakthrough
                 <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">$847B SUCCESS</span>
@@ -857,6 +890,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <NewContent2025PromotionalBanner />
         <September30NewContentShowcase />
         <AI2027AdvancedNeuralSuperintelligenceBreakthroughBanner />
+        <AI2027TranscendentMetaIntelligenceBreakthroughBanner />
+        <AI2028OmnipotentSuperintelligenceBreakthroughBanner />
         <Header />
         <NewContentNavigation />
         <main className="max-w-6xl mx-auto px-4 py-6 min-h-screen">
