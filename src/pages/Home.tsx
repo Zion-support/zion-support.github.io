@@ -23,6 +23,8 @@ import EnhancedTestimonials from "../components/EnhancedTestimonials";
 import Header from "../components/Header";
 import October2025EdgeAIQuantumCryptoBanner from "../components/October2025EdgeAIQuantumCryptoBanner";
 import October2025BreakthroughContentBanner from "../components/October2025BreakthroughContentBanner";
+import October2025AIRevolutionBanner from "../components/October2025AIRevolutionBanner";
+import October2025BreakthroughBanner from "../components/October2025BreakthroughBanner";
 import LatestArticlesShowcase from "../components/LatestArticlesShowcase";
 import LatestContentBanner from "../components/LatestContentBanner";
 import LatestInsights from "../components/LatestInsights";
@@ -119,20 +121,11 @@ const Home = () => {
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
         
-        {/* 🚀 OCTOBER 18, 2025 - BREAKING: 3 ENTERPRISE AI GAME-CHANGERS JUST RELEASED! */}
-        <NewContentPromoBanner 
-          className="border-b border-white/10" 
-          variant="premium" 
-          title="🚀 BREAKING OCTOBER 18, 2025: 3 ENTERPRISE AI GAME-CHANGERS — Agentic AI (600% ROI), Sub-10ms Inference & Complete Compliance Framework!"
-          description="🔥 BRAND NEW TODAY: Deploy autonomous AI agents achieving 600% ROI and $25M+ annual savings, optimize inference to sub-10ms latency (78% cost cut), and implement bulletproof security & compliance (zero violations). Complete enterprise guides with real-world case studies and implementation roadmaps!"
-          ctaText="Read Latest Enterprise Guides"
-          ctaLink="/blog"
-          featuredItems={[
-            { title: "Agentic AI Enterprise Transformation 2025 — Deploy Autonomous Agents That Deliver 600% ROI ($25M+ Annual Savings)", category: "Agentic AI", link: "/blog/ai-2025-oct-18-agentic-ai-enterprise-transformation-guide" },
-            { title: "Real-Time AI Inference Optimization 2025 — Achieve Sub-10ms Latency at Scale (78% Cost Reduction, 10B+ Daily Inferences)", category: "AI Infrastructure", link: "/blog/ai-2025-oct-18-realtime-ai-inference-optimization-breakthrough" },
-            { title: "AI Security & Compliance Framework 2025 — Enterprise Deployment Guide (SOC 2, GDPR, HIPAA, Zero Violations)", category: "AI Governance", link: "/blog/ai-2025-oct-18-ai-security-compliance-framework-enterprise" }
-          ]}
-        />
+        {/* 🔥🔥🔥 OCTOBER 1, 2025 - BREAKTHROUGH: Revolutionary AI Technologies - Sovereign Agents, Quantum ML & Neuromorphic Edge */}
+        <October2025BreakthroughBanner />
+        
+        {/* 🔥 OCTOBER 1, 2025 - BRAND NEW: AI Revolution - Agents, Development Tools & Safety */}
+        <October2025AIRevolutionBanner className="border-b border-white/10" />
         
         {/* 🎯 OCTOBER 3, 2025 - LATEST: AI Education, Neuromorphic Computing & Biotech Breakthroughs */}
         <NewContentPromoBanner 
