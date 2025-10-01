@@ -183,30 +183,11 @@ describe('${fileName}', () => {
 function walkDir(dir) {
   const files = fs.readdirSync(dir);
   let fixedCount = 0;
->>>>>>> origin/main
   
   for (const file of files) {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
     
     if (stat.isDirectory()) {
-<<<<<<< HEAD
-      findAndFixTestFiles(filePath);
-    } else if (file.endsWith('.test.tsx') || file.endsWith('.test.ts')) {
-      fixTestFile(filePath);
- pr/11282
-    }
-
-if (fixedFiles.length > 0) {
-  console.log('Fixed files:');
-  fixedFiles.forEach(file => console.log(`  - ${file}`))}
-
-console.log('Starting to fix test files...');
-const fixedCount = walkDir(testDir);
-console.log(`Fixed ${fixedCount} test files.`);
->>>>>>> origin/main
  HEAD
  pr/11282
-=======
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

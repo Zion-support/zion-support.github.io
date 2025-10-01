@@ -394,8 +394,3 @@ module.exports = {
       'pre-setup': '';
     }
   }
-<<<<<<< HEAD
-};
-=======
-};
-;

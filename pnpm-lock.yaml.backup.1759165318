@@ -94,13 +94,6 @@ importers:
         specifier: ^9.15.0
         version: 9.36.0(jiti@2.6.0)
       eslint-plugin-cypress:
-<<<<<<< HEAD
-        specifier: 3.5.0
-        version: 3.5.0(eslint@9.36.0(jiti@2.6.0))
-=======
-        specifier: ^3.6.0
-        version: 3.6.0(eslint@9.36.0(jiti@2.6.0))
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-549e
       eslint-plugin-react:
         specifier: ^7.37.2
         version: 7.37.5(eslint@9.36.0(jiti@2.6.0))
@@ -109,17 +102,6 @@ importers:
         version: 5.2.0(eslint@9.36.0(jiti@2.6.0))
       eslint-plugin-react-refresh:
         specifier: ^0.4.14
-<<<<<<< HEAD
-        version: 0.4.14(eslint@9.36.0(jiti@2.6.0))
-      globals:
-        specifier: 13.24.0
-        version: 13.24.0
-=======
-        version: 0.4.22(eslint@9.36.0(jiti@2.6.0))
-      globals:
-        specifier: ^15.15.0
-        version: 15.15.0
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-549e
       identity-obj-proxy:
         specifier: ^3.0.0
         version: 3.0.0
@@ -154,13 +136,6 @@ importers:
         specifier: ^5.7.2
         version: 5.9.2
       typescript-eslint:
-<<<<<<< HEAD
-        specifier: 8.15.0
-        version: 8.15.0(eslint@9.36.0(jiti@2.6.0))(typescript@5.9.2)
-=======
-        specifier: ^8.44.1
-        version: 8.44.1(eslint@9.36.0(jiti@2.6.0))(typescript@5.9.2)
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-549e
       vite:
         specifier: ^6.0.1
         version: 6.3.6(@types/node@24.5.2)(jiti@2.6.0)(lightningcss@1.30.1)(terser@5.44.0)
@@ -1847,13 +1822,6 @@ packages:
     engines: {node: '>=6.0'}
     hasBin: true
 
-<<<<<<< HEAD
-  eslint-plugin-cypress@3.5.0:
-    resolution: {integrity: sha512-JZQ6XnBTNI8h1B9M7wJSFzc48SYbh7VMMKaNTQOFa3BQlnmXPrVc4PKen8R+fpv6VleiPeej6VxloGb42zdRvw==}
-=======
-  eslint-plugin-cypress@3.6.0:
-    resolution: {integrity: sha512-7IAMcBbTVu5LpWeZRn5a9mQ30y4hKp3AfTz+6nSD/x/7YyLMoBI6X7XjDLYI6zFvuy4Q4QVGl563AGEXGW/aSA==}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-549e
     peerDependencies:
       eslint: '>=7'
 
@@ -2095,13 +2063,6 @@ packages:
     resolution: {integrity: sha512-oahGvuMGQlPw/ivIYBjVSrWAfWLBeku5tpPE2fOPLi+WHffIWbuh2tCjhyQhTBPMf5E9jDEH4FOmTYgYwbKwtQ==}
     engines: {node: '>=18'}
 
-<<<<<<< HEAD
-  globals@16.4.0:
-    resolution: {integrity: sha512-ob/2LcVVaVGCYN+r14cnwnoDPUufjiYgSqRhiFD0Q1iI4Odora5RE8Iv1D24hAz5oMophRGkGz+yuvQmmUMnMw==}
-=======
-  globals@15.15.0:
-    resolution: {integrity: sha512-7ACyT3wmyp3I61S4fG682L0VA2RGD9otkqGJIwNUMF1SWUombIIk+af1unuDYgMm082aHYwD+mzJvv9Iu8dsgg==}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-549e
     engines: {node: '>=18'}
 
   globalthis@1.0.4:
@@ -3481,24 +3442,6 @@ packages:
     resolution: {integrity: sha512-3KS2b+kL7fsuk/eJZ7EQdnEmQoaho/r6KUef7hxvltNA5DR8NAUM+8wJMbJyZ4G9/7i3v5zPBIMN5aybAh2/Jg==}
     engines: {node: '>= 0.4'}
 
-<<<<<<< HEAD
-  typescript-eslint@8.15.0:
-    resolution: {integrity: sha512-wY4FRGl0ZI+ZU4Jo/yjdBu0lVTSML58pu6PgGtJmCufvzfV565pUF6iACQt092uFOd49iLOTX/sEVmHtbSrS+w==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-    peerDependencies:
-      eslint: ^8.57.0 || ^9.0.0
-      typescript: '*'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
-=======
-  typescript-eslint@8.44.1:
-    resolution: {integrity: sha512-0ws8uWGrUVTjEeN2OM4K1pLKHK/4NiNP/vz6ns+LjT/6sqpaYzIVFajZb1fj/IDwpsrrHb3Jy0Qm5u9CPcKaeg==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-    peerDependencies:
-      eslint: ^8.57.0 || ^9.0.0
-      typescript: '>=4.8.4 <6.0.0'
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-549e
 
   typescript@5.9.2:
     resolution: {integrity: sha512-CWBzXQrc/qOkhidw1OzBTQuYRbfyxDXJMVJ1XNwUHGROVmuaeiEm3OslpZ1RV96d7SKKjZKrSJu3+t/xlw3R9A==}
@@ -5550,11 +5493,6 @@ snapshots:
     optionalDependencies:
       source-map: 0.6.1
 
-<<<<<<< HEAD
-  eslint-plugin-cypress@3.5.0(eslint@9.36.0(jiti@2.6.0)):
-=======
-  eslint-plugin-cypress@3.6.0(eslint@9.36.0(jiti@2.6.0)):
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-549e
     dependencies:
       eslint: 9.36.0(jiti@2.6.0)
       globals: 13.24.0
@@ -5848,11 +5786,6 @@ snapshots:
 
   globals@14.0.0: {}
 
-<<<<<<< HEAD
-  globals@16.4.0: {}
-=======
-  globals@15.15.0: {}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-549e
 
   globalthis@1.0.4:
     dependencies:
@@ -7467,23 +7400,6 @@ snapshots:
       possible-typed-array-names: 1.1.0
       reflect.getprototypeof: 1.0.10
 
-<<<<<<< HEAD
-  typescript-eslint@8.15.0(eslint@9.36.0(jiti@2.6.0))(typescript@5.9.2):
-    dependencies:
-      '@typescript-eslint/eslint-plugin': 8.15.0(@typescript-eslint/parser@8.15.0(eslint@9.36.0(jiti@2.6.0))(typescript@5.9.2))(eslint@9.36.0(jiti@2.6.0))(typescript@5.9.2)
-      '@typescript-eslint/parser': 8.15.0(eslint@9.36.0(jiti@2.6.0))(typescript@5.9.2)
-      '@typescript-eslint/utils': 8.15.0(eslint@9.36.0(jiti@2.6.0))(typescript@5.9.2)
-      eslint: 9.36.0(jiti@2.6.0)
-    optionalDependencies:
-=======
-  typescript-eslint@8.44.1(eslint@9.36.0(jiti@2.6.0))(typescript@5.9.2):
-    dependencies:
-      '@typescript-eslint/eslint-plugin': 8.44.1(@typescript-eslint/parser@8.44.1(eslint@9.36.0(jiti@2.6.0))(typescript@5.9.2))(eslint@9.36.0(jiti@2.6.0))(typescript@5.9.2)
-      '@typescript-eslint/parser': 8.44.1(eslint@9.36.0(jiti@2.6.0))(typescript@5.9.2)
-      '@typescript-eslint/typescript-estree': 8.44.1(typescript@5.9.2)
-      '@typescript-eslint/utils': 8.44.1(eslint@9.36.0(jiti@2.6.0))(typescript@5.9.2)
-      eslint: 9.36.0(jiti@2.6.0)
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-549e
       typescript: 5.9.2
     transitivePeerDependencies:
       - supports-color

@@ -1,6 +1,6 @@
 
-import React, { useState, useEffect, useRef, useMemo } from "react";
-import React, { useState, useEffect, useRef, useMemo } from "react";
+
+
 import { useTranslation } from "react-i18next";
 import { Search, X } from 'lucide-react'
 import { Input } from "@/components/ui/input";

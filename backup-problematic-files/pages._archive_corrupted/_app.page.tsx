@@ -9,7 +9,7 @@ import type { AppProps } from 'next/app'; import Head from 'next/head'; import R
 
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
-import React from 'react';
+
 interface _app.pageProps {
   // TODO: Implement;
 }

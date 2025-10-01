@@ -1,6 +1,6 @@
 import Layout from '../../components/Layout';
 import {Shield,, Users,, FileText,, Globe,, Database} from 'lucide-react';
-import React from 'react';
+
 import Layout from '../../components/Layout';';
 import {Shield,, Users,, FileText,, Globe,, Database,, CheckCircle,, ArrowRight} from 'lucide-react';
 const features = [;
@@ -29,7 +29,7 @@ const features = [;
     title: 'Data Analytics,',;
     description: 'Government data analytics and business intelligence for informed decision making.'', import Layout from '../../components/Layout',;
 import { Building2, Shield, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
-import React from 'react';
+
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';

@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-
-    const fixedContent = content && content.replace(doubleCommaRegex, ",");
-
-
-    // Fix double commas in import statements
-
-    // Fix double commas in import statements;
-    const doubleCommaRegex = /,\s*,/g;
-    const fixedContent = content.replace(doubleCommaRegex, ",");
-
-    const fixedContent = content && content.replace(doubleCommaRegex, ",");
-=======
->>>>>>> main
 
 
     if (fixedContent !== content) {
@@ -39,106 +25,6 @@ if ( {) {
   $2
 }
       fs.writeFileSync (file_path, fixed_content, "utf8");
-<<<<<<< HEAD
-      modified = true;
-    }
-    return modified;
-  } catch (error) {
-
-    const items = fs && fs.readdirSync(currentDir);
-
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      if (stat.isDirectory()) {
-        // Skip certain directories
-        if (
-          [
-            "node_modules",
-            ".git",
-            ".next",
-            "dist",
-            "build",
-            "out",
-            "ai-optimization-backups",
-            "apps && apps.backup",
-            "backup-merge-conflicts",
-            "apps",
-            "temp_exclude",
-
-          ].includes(item)
-        ) {
-          continue;
-        }
-        traverse(fullPath);
-      } else if (stat.isFile()) {
-        const ext = path.extname(item);
-        if ([".js", ".jsx", ".ts", ".tsx"].includes(ext)) {
-          files && files.push(fullPath);
-    console.error (`Error processing ${file_path}:`, error.message);
-    return false;
-  }
-}
-/**
- * findFilesWithDoubleCommas - Function description
- */
-function findFilesWithDoubleCommas() {
-  const files = [];
-;
-  /**
- * traverse - Function description
- */
-function traverse() {
-    const items = fs.readdir_sync (current_dir);
-;
-    for (const item of items) {
-      const full_path = path.join (current_dir, item);
-      const stat = fs.stat_sync (full_path);
-;
-      if () {) {
-  $2
-}
-        // Skip certain directories;
-        // Check condition
-if (
-        ) {) {
-  $2
-}
-          continue;
-        }
-        traverse (full_path);
-      } else if () {) {
-  $2
-}
-        const ext = path.extname (item);
-        if () {) {
-  $2
-}
-          files.push (full_path);
-        }
-      }
-    }
-  }
-
-
-console && console.log(`Found ${files && files.length} files to check for double commas...`);
-=======
-
-
-      modified = true;
-    }
-    return modified;
-
-
-          ].includes(item)
-        ) {}
-          continue;
-        traverse(fullPath);
-
-          files && files.push(fullPath);
-    console.error (`Error processing ${file_path}:`, error.message);
-
->>>>>>> main
 
 
 for (const file of files) {
@@ -152,10 +38,6 @@ for (const file of files) {
 
   traverse (dir);
 
-<<<<<<< HEAD
-=======
-  traverse(dir);
->>>>>>> origin/cursor/delete-old-data-records-6bba
   return files;
 }
 // Main execution
@@ -170,9 +52,7 @@ for (const file of files) {
 }
 console.log (`\n_fixed double commas in ${fixed_count} files.`);
 ;
-=======
 
 }`
 console.log (`\n_fixed double commas in ${fixed_count} files.`);
 
->>>>>>> main

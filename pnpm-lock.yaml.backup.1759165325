@@ -94,13 +94,6 @@ importers:
         specifier: ^9.15.0
         version: 9.36.0(jiti@2.6.0)
       eslint-plugin-cypress:
-<<<<<<< HEAD
-        specifier: ^2.15.2
-        version: 2.15.2(eslint@9.36.0(jiti@2.6.0))
-=======
-        specifier: ^5.1.1
-        version: 5.1.1(eslint@9.36.0(jiti@2.6.0))
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-31e1
       eslint-plugin-react:
         specifier: ^7.37.2
         version: 7.37.5(eslint@9.36.0(jiti@2.6.0))
@@ -111,13 +104,6 @@ importers:
         specifier: ^0.4.14
         version: 0.4.22(eslint@9.36.0(jiti@2.6.0))
       globals:
-<<<<<<< HEAD
-        specifier: 13.24.0
-        version: 13.24.0
-=======
-        specifier: ^16.4.0
-        version: 16.4.0
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-31e1
       identity-obj-proxy:
         specifier: ^3.0.0
         version: 3.0.0
@@ -1840,17 +1826,6 @@ packages:
     engines: {node: '>=6.0'}
     hasBin: true
 
-<<<<<<< HEAD
-  eslint-plugin-cypress@2.15.2:
-    resolution: {integrity: sha512-CtcFEQTDKyftpI22FVGpx8bkpKyYXBlNge6zSo0pl5/qJvBAnzaD76Vu2AsP16d6mTj478Ldn2mhgrWV+Xr0vQ==}
-    peerDependencies:
-      eslint: '>= 3.2.1'
-=======
-  eslint-plugin-cypress@5.1.1:
-    resolution: {integrity: sha512-LxTmZf1LLh9EklZBVvKNEZj71X9tCJnlYDviAJGsOgEVc6jz+tBODSpm02CS/9eJOfRqGsmVyvIw7LHXQ13RaA==}
-    peerDependencies:
-      eslint: '>=9'
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-31e1
 
   eslint-plugin-react-hooks@5.2.0:
     resolution: {integrity: sha512-+f15FfK64YQwZdJNELETdn5ibXEUQmW1DZL6KXhNnc2heoy/sg9VJJeT7n8TlMWouzWqSWavFkIhHyIbIAEapg==}
@@ -2090,13 +2065,6 @@ packages:
     resolution: {integrity: sha512-oahGvuMGQlPw/ivIYBjVSrWAfWLBeku5tpPE2fOPLi+WHffIWbuh2tCjhyQhTBPMf5E9jDEH4FOmTYgYwbKwtQ==}
     engines: {node: '>=18'}
 
-<<<<<<< HEAD
-  globals@15.15.0:
-    resolution: {integrity: sha512-7ACyT3wmyp3I61S4fG682L0VA2RGD9otkqGJIwNUMF1SWUombIIk+af1unuDYgMm082aHYwD+mzJvv9Iu8dsgg==}
-=======
-  globals@16.4.0:
-    resolution: {integrity: sha512-ob/2LcVVaVGCYN+r14cnwnoDPUufjiYgSqRhiFD0Q1iI4Odora5RE8Iv1D24hAz5oMophRGkGz+yuvQmmUMnMw==}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-31e1
     engines: {node: '>=18'}
 
   globalthis@1.0.4:
@@ -5533,17 +5501,6 @@ snapshots:
     optionalDependencies:
       source-map: 0.6.1
 
-<<<<<<< HEAD
-  eslint-plugin-cypress@2.15.2(eslint@9.36.0(jiti@2.6.0)):
-    dependencies:
-      eslint: 9.36.0(jiti@2.6.0)
-      globals: 13.24.0
-=======
-  eslint-plugin-cypress@5.1.1(eslint@9.36.0(jiti@2.6.0)):
-    dependencies:
-      eslint: 9.36.0(jiti@2.6.0)
-      globals: 16.4.0
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-31e1
 
   eslint-plugin-react-hooks@5.2.0(eslint@9.36.0(jiti@2.6.0)):
     dependencies:
@@ -5834,11 +5791,6 @@ snapshots:
 
   globals@14.0.0: {}
 
-<<<<<<< HEAD
-  globals@15.15.0: {}
-=======
-  globals@16.4.0: {}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-31e1
 
   globalthis@1.0.4:
     dependencies:

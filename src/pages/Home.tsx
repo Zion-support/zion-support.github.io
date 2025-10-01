@@ -168,10 +168,10 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 Fresh: Autonomous Runbooks + Privacy‑First Flags"
-          description="Budgeted actions, approvals, and zero‑regret rollouts you can ship today."
-          ctaText="Read the latest"
-          ctaLink="/blog/ai-autonomous-incident-runbooks-2025"
+          title="🚀 Revolutionary: AI Autonomous Infrastructure + Quantum-AI Hybrid Computing"
+          description="Breakthrough AI services: Self-healing infrastructure, quantum-AI hybrid computing, and next-gen cybersecurity solutions."
+          ctaText="Explore New Services"
+          ctaLink="/services"
           dismissible={true}
         />
         {/* Animated background elements */}

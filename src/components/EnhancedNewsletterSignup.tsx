@@ -1,28 +1,17 @@
 import React, { useState } from 'react';
 
-<<<<<<< HEAD
-export default function EnhancedNewsletterSignup(): React.JSX.Element {
-	return (
-		<form onSubmit={(e) => e.preventDefault()} aria-label="Newsletter signup">
-			<input placeholder="Email" aria-label="Email" />
-			<button type="submit">Subscribe</button>
-		</form>
-	);
-=======
 interface Props {
   title?: string;
   subtitle?: string;
-  showContentPreview?: boolean;
+  className?: string;
 }
 
-export default function EnhancedNewsletterSignup(_props: Props): React.JSX.Element {
-  return <section />;
->>>>>>> origin/main
-}
+export default function EnhancedNewsletterSignup({ title = 'Stay Updated', subtitle = 'Get the latest insights on AI and technology trends.', className = '' }: Props): React.JSX.Element {
+  const [email, setEmail] = useState('');
+  const [isSubscribed, setIsSubscribed] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle newsletter subscription
     setIsSubscribed(true);
     setEmail('');
   };
@@ -36,9 +25,9 @@ export default function EnhancedNewsletterSignup(_props: Props): React.JSX.Eleme
   }
 
   return (
-    <form onSubmit={handleSubmit} className={`bg-gray-100 p-6 rounded-lg ${className}`}>
-      <h3 className="text-lg font-semibold mb-4">Stay Updated</h3>
-      <p className="text-gray-600 mb-4">Get the latest insights on AI and technology trends.</p>
+    <form onSubmit={handleSubmit} className={`bg-gray-100 p-6 rounded-lg ${className}`} aria-label="Newsletter signup">
+      <h3 className="text-lg font-semibold mb-2">{title}</h3>
+      <p className="text-gray-600 mb-4">{subtitle}</p>
       <div className="flex gap-2">
         <input
           type="email"
@@ -46,6 +35,7 @@ export default function EnhancedNewsletterSignup(_props: Props): React.JSX.Eleme
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Enter your email"
           className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          aria-label="Email"
           required
         />
         <button
@@ -57,6 +47,4 @@ export default function EnhancedNewsletterSignup(_props: Props): React.JSX.Eleme
       </div>
     </form>
   );
-};
-
-export default EnhancedNewsletterSignup;
+}

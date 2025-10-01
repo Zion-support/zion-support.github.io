@@ -18,6 +18,16 @@ const TrendingContentBanner: React.FC = () => {
 
   const trendingItems = [
     {
+      title: "AI Disaster Recovery Playbooks",
+      description: "Failovers, warm pools, and rollback drills under 60 minutes.",
+      views: "11.2K",
+      readTime: "7 min",
+      category: "AI Operations",
+      icon: TrendingUp,
+      link: "/blog/ai-disaster-recovery-playbooks-2025",
+      badge: "NEW"
+    },
+    {
       title: "AI Autonomous Infrastructure 2026",
       description: "Self‑healing, self‑optimizing, self‑scaling platforms with budgets.",
       views: "12.4K",
@@ -26,36 +36,6 @@ const TrendingContentBanner: React.FC = () => {
       icon: TrendingUp,
       link: "/blog/ai-autonomous-infrastructure-2026",
       badge: "HOT"
-    },
-    {
-      title: "AI Safety Budgets 2026",
-      description: "Budgeted actions, approvals, and rollbacks that keep AI features safe.",
-      views: "13.2K",
-      readTime: "7 min",
-      category: "AI Governance",
-      icon: Shield,
-      link: "/blog/ai-safety-budgets-2026",
-      badge: "NEW"
-    },
-    {
-      title: "Edge Personalization 2026",
-      description: "Private, sub‑100ms personalization with signed configs and caches.",
-      views: "9.7K",
-      readTime: "8 min",
-      category: "Edge Computing",
-      icon: Zap,
-      link: "/blog/edge-personalization-2026",
-      badge: "HOT"
-    },
-    {
-      title: "Zero‑Trust for GenAI 2026",
-      description: "Prompt firewalls, egress, signed outputs for safe GenAI.",
-      views: "11.8K",
-      readTime: "8 min",
-      category: "Security",
-      icon: Shield,
-      link: "/blog/zero-trust-for-genai-2026",
-      badge: "NEW"
     },
     {
       title: "Zero‑Trust for GenAI 2026",
@@ -86,6 +66,16 @@ const TrendingContentBanner: React.FC = () => {
       icon: Zap,
       link: "/blog/edge-llm-caching-blueprint-2026",
       badge: "POPULAR"
+    },
+    {
+      title: "GenAI Data Governance Quickstart",
+      description: "Policy tests, lineage, consent scopes, and KPI‑linked checks.",
+      views: "9.8K",
+      readTime: "6 min",
+      category: "AI Governance",
+      icon: Shield,
+      link: "/blog/genai-data-governance-quickstart-2025",
+      badge: "HOT"
     }
   ];
 

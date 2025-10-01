@@ -1,8 +1,8 @@
-<<<<<<< HEAD
+
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
-<<<<<<< HEAD
+
 console.log("Starting aggressive fix...");
 const fixedCount = processDirectory(path.join(__dirname, "src"));
 console.log(`Fixed ${fixedCount} files`);

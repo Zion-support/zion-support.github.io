@@ -1,4 +1,4 @@
-import React, { Suspense, useCallback, useEffect, useMemo, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { AppRouter } from './router';
 
 // import { resourcePreloader } from './utils/resourcePreloader';
@@ -12,12 +12,13 @@ import './index.css';
 import { performanceMonitor } from './utils/performanceMonitor';
 import { securityManager as enhancedSecurityManager } from './utils/securityHeaders';
 import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
-const SEOOptimizer = (props: any) => null;
-const AdvancedAnalytics = (props: any) => null;
-const PerformanceOptimizer = (props: any) => null;
-const PerformanceMonitor = (props: any) => null;
-const EnhancedErrorBoundary: React.FC<{ children: React.ReactNode }> = ({ children }) => <>{children}</>;
-const NotificationSystem: React.FC<{ notifications: any[]; onRemove: (id: string) => void }> = () => null;
+import SEOOptimizer from './components/SEOOptimizer';
+import type { Notification as UILibraryNotification } from './components/NotificationSystem';
+import AdvancedAnalytics from './components/AdvancedAnalytics';
+import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+import NotificationSystem, { Notification as UINotification } from './components/NotificationSystem';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
 
 // Local stub to avoid type errors when optional performance init is not present
 const initializePerformanceEnhancements = (): void => {};
@@ -48,12 +49,18 @@ const WebsiteEnhancements = (props: any) => <Placeholder name="WebsiteEnhancemen
 export default function App(): React.JSX.Element {
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
-  const [notifications, setNotifications] = useState<import('./components/NotificationSystem').Notification[]>([]);
+  const [notifications, setNotifications] = useState<UILibraryNotification[]>([]);
 
-  const seoDataForOptimizer = useMemo(() => ({
+  interface SEOData {
+    title: string;
+    description: string;
+    canonical: string;
+  }
+
+  const seoDataForOptimizer: SEOData = useMemo(() => ({
     title: 'Zion Tech Group - Leading AI & Technology Solutions',
     description: 'Cutting-edge AI, cloud, and digital transformation solutions for modern enterprises.',
-    canonicalUrl: typeof window !== 'undefined' ? window.location.pathname : '/',
+    canonical: typeof window !== 'undefined' ? window.location.href : 'https://zion.app/',
   }), []);
 
   // Simple hotkeys for demo toggles
@@ -77,9 +84,9 @@ export default function App(): React.JSX.Element {
           (enhancedSecurityManager as any).initialize();
         }
       
-      // Initialize new performance and accessibility enhancements
-      initializePerformanceEnhancements();
-      accessibilityEnhancer.initialize();
+        // Initialize new performance and accessibility enhancements
+        initializePerformanceEnhancements();
+        accessibilityEnhancer.initialize();
       
       // Initialize advanced optimizers
       // Guard optional advanced systems if present in global scope
@@ -138,7 +145,10 @@ export default function App(): React.JSX.Element {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <EnhancedErrorBoundary>
+      <SEOOptimizer title={seoDataForOptimizer.title} description={seoDataForOptimizer.description} canonicalUrl={seoDataForOptimizer.canonical} />
+      <AdvancedAnalytics enableConversionTracking enablePerformanceTracking enableErrorTracking />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <AppRouter />
 
         {showPerformanceOptimizer && (
@@ -148,7 +158,7 @@ export default function App(): React.JSX.Element {
                 <h2 className="text-2xl font-bold">Performance Optimizer</h2>
                 <button onClick={() => setShowPerformanceOptimizer(false)} className="text-gray-500 hover:text-gray-700 text-2xl">✕</button>
               </div>
-              <div />
+              <PerformanceOptimizer isVisible={true} onClose={() => setShowPerformanceOptimizer(false)} />
             </div>
           </div>
         )}
@@ -160,10 +170,13 @@ export default function App(): React.JSX.Element {
                 <h2 className="text-2xl font-bold">Performance Monitor</h2>
                 <button onClick={() => setShowPerformanceMonitor(false)} className="text-gray-500 hover:text-gray-700 text-2xl">✕</button>
               </div>
-              <div />
+              <PerformanceMonitor showDashboard={true} />
             </div>
           </div>
         )}
+
+        <NotificationSystem notifications={notifications} onRemove={handleRemoveNotification} />
       </div>
-    );
+    </EnhancedErrorBoundary>
+  );
 }

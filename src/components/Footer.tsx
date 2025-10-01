@@ -1,10 +1,14 @@
-import React from "react";
+import React from 'react';
 
-export default function Footer(): React.JSX.Element {
+const Footer: React.FC = () => {
   return (
-    <footer style={{ padding: '1rem' }}>
-      <small>© {new Date().getFullYear()} Zion Tech Group</small>
+    <footer style={{ padding: '24px 16px', background: '#0b1020', color: '#cbd5e1' }}>
+      <div style={{ maxWidth: 1200, margin: '0 auto', fontSize: 12 }}>
+        © {new Date().getFullYear()} Zion Tech Group — All rights reserved.
+      </div>
     </footer>
   );
-}
+};
+
+export default Footer;
 
