@@ -6,6 +6,15 @@ import Link from 'next/link';
 // 🌱🌱🌱 NEWEST: AI 2026 SUSTAINABLE REVOLUTION - ABSOLUTE #1 TOP PRIORITY! 🌱🌱🌱
 import AI2026SustainableRevolutionBanner from '../components/AI2026SustainableRevolutionBanner';
 
+// 🚀🚀🚀 NEWEST: JANUARY 2026 NEW CONTENT SHOWCASE - ABSOLUTE #1 TOP PRIORITY! 🚀🚀🚀
+import January2026NewContentShowcaseBanner from '../components/January2026NewContentShowcaseBanner';
+
+// 🚀🚀🚀 NEWEST: JANUARY 2026 EDGE COMPUTING REVOLUTION - ABSOLUTE #1 TOP PRIORITY! 🚀🚀🚀
+import January2026EdgeComputingRevolutionBanner from '../components/January2026EdgeComputingRevolutionBanner';
+
+// 🚀🚀🚀 NEWEST: JANUARY 2026 AUTONOMOUS PROCESSES REVOLUTION - ABSOLUTE #1 TOP PRIORITY! 🚀🚀🚀
+import January2026AutonomousProcessesRevolutionBanner from '../components/January2026AutonomousProcessesRevolutionBanner';
+
 // 🚀🚀🚀 NEWEST: MARCH 2026 MEGA BREAKTHROUGH - ABSOLUTE #1 TOP PRIORITY! 🚀🚀🚀
 import March2026MegaBreakthroughBanner from '../components/March2026MegaBreakthroughBanner';
 
@@ -152,6 +161,18 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-slate-950">
+      {/* 🚀🚀🚀 NEWEST: JANUARY 2026 NEW CONTENT SHOWCASE - ABSOLUTE #1 TOP PRIORITY! 🚀🚀🚀 */}
+      {/* 💎💎💎 JUST PUBLISHED: Revolutionary AI Content, $125M Combined ROI, Edge Computing & Autonomous Processes - COMPREHENSIVE SHOWCASE! 💎💎💎 */}
+      <January2026NewContentShowcaseBanner />
+
+      {/* 🚀🚀🚀 NEWEST: JANUARY 2026 EDGE COMPUTING REVOLUTION - ABSOLUTE #1 TOP PRIORITY! 🚀🚀🚀 */}
+      {/* 💎💎💎 JUST PUBLISHED: $50M Manufacturing ROI, 99.7% Predictive Maintenance, 85% Downtime Reduction - EDGE AI BREAKTHROUGH! 💎💎💎 */}
+      <January2026EdgeComputingRevolutionBanner />
+
+      {/* 🚀🚀🚀 NEWEST: JANUARY 2026 AUTONOMOUS PROCESSES REVOLUTION - ABSOLUTE #1 TOP PRIORITY! 🚀🚀🚀 */}
+      {/* 💎💎💎 JUST PUBLISHED: $75M Financial ROI, 99.9% Process Automation, 95% Time Reduction - AUTONOMOUS BREAKTHROUGH! 💎💎💎 */}
+      <January2026AutonomousProcessesRevolutionBanner />
+
       {/* 🌱🌱🌱 NEWEST: AI 2026 SUSTAINABLE REVOLUTION - ABSOLUTE #1 TOP PRIORITY! 🌱🌱🌱 */}
       {/* 💎💎💎 JUST PUBLISHED: $2.5B Success Story, 99.9% Energy Efficiency, 85% Carbon Reduction, Revolutionary Sustainable AI - ENVIRONMENTAL BREAKTHROUGH! 💎💎💎 */}
       <AI2026SustainableRevolutionBanner />
