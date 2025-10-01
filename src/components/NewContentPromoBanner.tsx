@@ -11,15 +11,14 @@ interface NewContentPromoBannerProps {
   featuredItems?: Array<{ title: string; category: string; link: string; }>;
 }
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({ 
-  className = "",
-  variant = "default",
-  title,
-  description,
-  ctaText,
-  ctaLink,
-  featuredItems
+  className: _className = "",
+  variant: _variant = "default",
+  title: _title,
+  description: _description,
+  ctaText: _ctaText,
+  ctaLink: _ctaLink,
+  featuredItems: _featuredItems
 }) => {
   const newContent = [
     {
