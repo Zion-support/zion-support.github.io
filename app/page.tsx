@@ -59,6 +59,8 @@ import LatestContentPromotionalBanner from '../components/LatestContentPromotion
 import NewContentPromotionalBanner2026 from '../components/NewContentPromotionalBanner2026';
 import AIInnovationShowcaseBanner2026 from '../components/AIInnovationShowcaseBanner2026';
 import NextGenAutonomousBanner from '../components/NextGenAutonomousBanner';
+import AI2026QuantumEnhancedBIBanner from '../components/AI2026QuantumEnhancedBIBanner';
+import AI2026AutonomousCognitiveMeshBanner from '../components/AI2026AutonomousCognitiveMeshBanner';
 
 // NEW OCTOBER 2025 PRACTICAL CONTENT
 import October2025NewPracticalContentBanner from '../components/October2025NewPracticalContentBanner';
@@ -103,6 +105,10 @@ export default function HomePage() {
         </div>
       </section>
       
+      {/* NEW JANUARY 2026 - QUANTUM AI BREAKTHROUGHS - TOP PRIORITY */}
+      <AI2026QuantumEnhancedBIBanner />
+      <AI2026AutonomousCognitiveMeshBanner />
+      
       {/* NEW OCTOBER 1, 2025 - ENTERPRISE INTEGRATION CONTENT - HIGHEST PRIORITY */}
       <EnterpriseIntegrationBlogBanner />
       <BankIntegrationCaseStudyBanner />
@@ -129,18 +135,18 @@ export default function HomePage() {
       <div className="w-full bg-gradient-to-r from-blue-600 via-purple-600 to-teal-600 text-white">
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base flex-wrap">
-            <span className="font-bold">🔥 JUST PUBLISHED OCT 1:</span>
-            <Link href="/blog/ai-2025-oct-01-enterprise-integration-orchestration-revolution" className="underline hover:text-yellow-200 font-bold">Integration Revolution</Link>
+            <span className="font-bold">🚀 JUST PUBLISHED JAN 2026:</span>
+            <Link href="/blog/ai-2026-quantum-enhanced-business-intelligence-revolution" className="underline hover:text-yellow-200 font-bold">Quantum BI Revolution</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-2025-oct-01-fortune-500-bank-integration-transformation-89m-success" className="underline hover:text-yellow-200 font-bold">Bank $89M ROI</Link>
+            <Link href="/case-studies/ai-2026-fortune-500-quantum-bi-transformation-2-8-billion-success" className="underline hover:text-yellow-200 font-bold">$2.8B Success</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/services/ai-integration-orchestration-platform-2025" className="underline hover:text-yellow-200 font-bold">New Platform</Link>
+            <Link href="/blog/ai-2026-autonomous-cognitive-mesh-enterprise-transformation" className="underline hover:text-yellow-200 font-bold">Cognitive Mesh</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-2025-oct-practical-ml-pipeline-optimization" className="underline hover:text-yellow-200">ML Pipeline 10x</Link>
+            <Link href="/blog/ai-2025-oct-01-enterprise-integration-orchestration-revolution" className="underline hover:text-yellow-200">Integration Revolution</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-supply-chain-intelligence-2026" className="underline hover:text-yellow-200">AI Supply Chain</Link>
+            <Link href="/case-studies/ai-2025-oct-01-fortune-500-bank-integration-transformation-89m-success" className="underline hover:text-yellow-200">Bank $89M ROI</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/services/ai-digital-twin-platform-2025" className="underline hover:text-yellow-200">Get Platform</Link>
+            <Link href="/services/ai-integration-orchestration-platform-2025" className="underline hover:text-yellow-200">Get Platform</Link>
           </div>
           <Link
             href="/blog"
