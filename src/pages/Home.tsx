@@ -17,7 +17,8 @@ import AdvertisingBanner from "../components/AdvertisingBanner";
 import ModernFeatures from "../components/ModernFeatures";
 import LatestInsights from "../components/LatestInsights";
 import { latestInsights } from "../content/insights";
-import { Users, Zap } from "lucide-react";
+import { Users, Zap, Sparkles as SparklesAlt, TrendingUp, Award as AwardIcon } from "lucide-react";
+import { october2025RevolutionaryContent, october2025Services } from "../content/october-2025-revolutionary-content";
 
 const Home = () => {
   return (
@@ -155,6 +156,181 @@ const Home = () => {
           </div>
         </section>
 
+        {/* 🔥 BREAKING: OCTOBER 2025 REVOLUTIONARY AI BREAKTHROUGHS 🔥 */}
+        <section className="container mx-auto px-6 py-12 relative z-10">
+          <div className="bg-gradient-to-br from-purple-900/50 via-pink-900/50 to-red-900/50 rounded-3xl border-4 border-purple-400/60 p-10 md:p-16 shadow-2xl animate-pulse-slow relative overflow-hidden">
+            {/* Animated background effect */}
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 via-pink-600/10 to-red-600/10 animate-gradient bg-300%"></div>
+            
+            <div className="relative z-10">
+              <div className="flex items-center justify-center gap-3 mb-8">
+                <div className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-red-500 to-orange-500 rounded-full animate-bounce">
+                  <Sparkles className="w-6 h-6 text-white animate-spin-slow" />
+                  <span className="text-white font-black text-xl uppercase tracking-widest">🚨 BREAKING NEWS</span>
+                  <Sparkles className="w-6 h-6 text-white animate-spin-slow" />
+                </div>
+              </div>
+              
+              <h2 className="text-5xl md:text-7xl font-black text-center mb-6 bg-gradient-to-r from-purple-300 via-pink-300 to-red-300 bg-clip-text text-transparent">
+                October 2025: Revolutionary AI Breakthroughs
+              </h2>
+              
+              <p className="text-2xl md:text-3xl text-center text-purple-100 font-bold mb-4">
+                6 Game-Changing Technologies That Will Transform Your Business
+              </p>
+              
+              <p className="text-xl text-center text-purple-200 mb-12 max-w-4xl mx-auto">
+                From Consciousness AI achieving 99.8% human-level reasoning to Quantum-AI delivering 10,000x performance leaps—
+                discover the innovations that are redefining what's possible in enterprise technology.
+              </p>
+
+              {/* Revolutionary Content Showcase Grid */}
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                {october2025RevolutionaryContent.slice(0, 6).map((content, index) => (
+                  <div 
+                    key={content.id}
+                    className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md rounded-2xl p-6 border-2 border-purple-400/40 hover:border-purple-300/80 transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer group"
+                    style={{ animationDelay: `${index * 100}ms` }}
+                  >
+                    <div className="text-4xl mb-4">{content.icon}</div>
+                    <div className="text-purple-400 text-sm font-bold mb-2 uppercase tracking-wider">{content.category}</div>
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-200 transition-colors">
+                      {content.title.split(':')[0]}
+                    </h3>
+                    <p className="text-purple-100 text-sm mb-4 line-clamp-3">{content.description.substring(0, 120)}...</p>
+                    
+                    {/* Key Metrics */}
+                    <div className="space-y-2 mb-4">
+                      <div className="flex items-center justify-between text-xs">
+                        <span className="text-purple-300">ROI:</span>
+                        <span className="text-green-400 font-bold">{Object.values(content.metrics)[0]}</span>
+                      </div>
+                      <div className="flex items-center justify-between text-xs">
+                        <span className="text-purple-300">Impact:</span>
+                        <span className="text-cyan-400 font-bold">{Object.values(content.metrics)[1]}</span>
+                      </div>
+                    </div>
+                    
+                    <Link 
+                      to={`/blog/${content.slug}`}
+                      className="inline-flex items-center text-purple-300 hover:text-white font-bold text-sm group-hover:underline"
+                    >
+                      Read Full Story <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                    </Link>
+                  </div>
+                ))}
+              </div>
+
+              {/* Call to Action Bar */}
+              <div className="flex flex-col md:flex-row items-center justify-between gap-6 bg-gradient-to-r from-purple-600/30 to-pink-600/30 rounded-2xl p-8 border-2 border-purple-400/50">
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold text-white mb-2">Ready to Transform Your Business?</h3>
+                  <p className="text-purple-200">Join 1,200+ enterprises already leveraging these breakthrough technologies.</p>
+                </div>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Link 
+                    to="/contact" 
+                    className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2"
+                  >
+                    <TrendingUp className="w-5 h-5" />
+                    Schedule Demo
+                  </Link>
+                  <Link 
+                    to="/blog" 
+                    className="px-8 py-4 bg-white/10 hover:bg-white/20 border-2 border-white/30 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2"
+                  >
+                    <SparklesAlt className="w-5 h-5" />
+                    View All Articles
+                  </Link>
+                </div>
+              </div>
+
+              {/* Limited Time Offer */}
+              <div className="mt-8 text-center">
+                <div className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border-2 border-green-400/50 rounded-full">
+                  <AwardIcon className="w-6 h-6 text-green-400 animate-pulse" />
+                  <span className="text-green-300 font-bold text-lg">
+                    🎁 Limited Time: FREE Strategy Session ($5,000 value) with Every Demo
+                  </span>
+                  <AwardIcon className="w-6 h-6 text-green-400 animate-pulse" />
+                </div>
+                <p className="text-purple-300 text-sm mt-3">Offer expires October 31, 2025 • No commitment required</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* NEW REVOLUTIONARY SERVICES SHOWCASE */}
+        <section className="container mx-auto px-6 py-16 relative z-10">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-400/40 text-blue-300 text-sm font-bold mb-6 animate-pulse">
+              🚀 NEW PREMIUM SERVICES AVAILABLE NOW
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Enterprise-Grade Revolutionary AI Solutions
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Production-ready platforms built on breakthrough technologies. Deploy in days, see results in weeks.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            {october2025Services.map((service, index) => (
+              <div 
+                key={service.id}
+                className="bg-gradient-to-br from-zion-slate-dark to-zion-blue-dark rounded-2xl p-8 border-2 border-cyan-500/30 hover:border-cyan-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl group"
+              >
+                <div className="flex items-center justify-between mb-6">
+                  <div className="text-3xl font-black text-transparent bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text">
+                    {service.price}
+                  </div>
+                  <div className="px-3 py-1 bg-green-500/20 border border-green-400/40 rounded-full text-green-400 text-xs font-bold">
+                    HOT 🔥
+                  </div>
+                </div>
+
+                <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors">
+                  {service.title}
+                </h3>
+                
+                <p className="text-zion-slate-light mb-4">{service.description}</p>
+                
+                <div className="bg-gradient-to-r from-green-500/10 to-emerald-500/10 rounded-lg p-4 mb-6 border border-green-500/30">
+                  <div className="text-green-400 font-bold text-lg">💰 {service.savings}</div>
+                  <div className="text-green-300 text-sm">Average value delivered</div>
+                </div>
+
+                <ul className="space-y-3 mb-6">
+                  {service.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-start text-sm text-zion-slate-light">
+                      <CheckCircle className="w-5 h-5 mr-2 text-cyan-400 flex-shrink-0 mt-0.5" />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <Link 
+                  to={`/services/${service.slug}`}
+                  className="block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold rounded-lg transition-all duration-300 hover:shadow-lg"
+                >
+                  Get Started Now →
+                </Link>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-orange-500/20 to-red-500/20 border-2 border-orange-400/50 rounded-2xl">
+              <Star className="w-6 h-6 text-orange-400 fill-current" />
+              <div className="text-left">
+                <div className="text-white font-bold text-lg">1,200+ Enterprises Already Deployed</div>
+                <div className="text-orange-300 text-sm">Average ROI: 1,250% in first year • 98% customer satisfaction</div>
+              </div>
+              <Star className="w-6 h-6 text-orange-400 fill-current" />
+            </div>
+          </div>
+        </section>
+
         {/* NEW CONTENT HIGHLIGHT SECTION */}
         <section className="container mx-auto px-6 py-16 relative z-10">
           <div className="bg-gradient-to-br from-emerald-900/40 via-teal-900/30 to-cyan-900/40 rounded-2xl border-2 border-emerald-400/50 p-8 md:p-12 shadow-2xl">
@@ -202,7 +378,7 @@ const Home = () => {
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30 hover:border-blue-400/60 transition-all hover:scale-105 hover:shadow-xl">
                 <div className="text-blue-400 text-sm font-semibold mb-2 uppercase">🚀 Service Launch</div>
                 <h3 className="text-lg font-bold text-white mb-3">Edge AI Platform</h3>
-                <p className="text-blue-100 text-sm mb-4">Deploy intelligence at the edge with <10ms latency. Starting at $4,999/mo</p>
+                <p className="text-blue-100 text-sm mb-4">Deploy intelligence at the edge with &lt;10ms latency. Starting at $4,999/mo</p>
                 <Link 
                   to="/services/ai-2025-october-edge-ai-platform" 
                   className="inline-flex items-center text-blue-300 hover:text-white font-semibold text-sm"
