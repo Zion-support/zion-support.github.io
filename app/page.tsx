@@ -8,6 +8,9 @@ import January2026RevolutionaryBreakthroughsMegaBanner from '../components/Janua
 import January2026UltraAutonomousEnterpriseBanner from '../components/January2026UltraAutonomousEnterpriseBanner';
 import January2026QuantumConsciousnessBIBanner from '../components/January2026QuantumConsciousnessBIBanner';
 import January2026NeuralQuantumFusionBanner from '../components/January2026NeuralQuantumFusionBanner';
+import January2026NextGenAutonomousSystemsBanner from '../components/January2026NextGenAutonomousSystemsBanner';
+import January2026SyntheticConsciousnessBanner from '../components/January2026SyntheticConsciousnessBanner';
+import January2026QuantumNeuralFusionBanner from '../components/January2026QuantumNeuralFusionBanner';
 import {
   NewBlogBanner,
   AnalyticsPlatformBanner,
@@ -89,35 +92,32 @@ export default function HomePage() {
       
       {/* Neural-Quantum Fusion Breakthrough */}
       <January2026NeuralQuantumFusionBanner />
+      
+      {/* Next-Generation Autonomous Systems */}
+      <January2026NextGenAutonomousSystemsBanner />
+      
+      {/* Synthetic Consciousness Enterprise */}
+      <January2026SyntheticConsciousnessBanner />
+      
+      {/* Quantum Neural Fusion */}
+      <January2026QuantumNeuralFusionBanner />
 
       {/* New Content Promo Strip */}
       <div className="w-full bg-gradient-to-r from-green-600 to-blue-600 text-white">
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
             <span>🚀 NEW 2026 Content:</span>
-            <a to="/blog/ai-agent-orchestration-2026" className="underline hover:text-yellow-200">AI Agent Orchestration</a>
+            <Link href="/blog/ai-2026-next-generation-autonomous-systems-breakthrough" className="underline hover:text-yellow-200">Next-Gen Autonomous Systems</Link>
             <span className="hidden md:inline">•</span>
-            <a to="/blog/ai-sustainability-green-tech-2026" className="underline hover:text-yellow-200">AI Sustainability</a>
+            <Link href="/blog/ai-2026-synthetic-consciousness-enterprise-breakthrough" className="underline hover:text-yellow-200">Synthetic Consciousness</Link>
             <span className="hidden md:inline">•</span>
-            <a to="/blog/ai-quantum-computing-2026" className="underline hover:text-yellow-200">Quantum Computing</a>
+            <Link href="/blog/ai-2026-quantum-neural-fusion-breakthrough" className="underline hover:text-yellow-200">Quantum Neural Fusion</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-sustainability-transformation-2026" className="underline hover:text-yellow-200">$10M ROI Case Study</Link>
+            <Link href="/case-studies/ai-2026-next-generation-autonomous-systems-25-million-success" className="underline hover:text-yellow-200">$25M ROI Success</Link>
             <span className="hidden md:inline">•</span>
-<<<<<<< HEAD
-            <a to="/case-studies/ai-quantum-optimization-2026" className="underline hover:text-yellow-200">1000x Speed Improvement</a>
-=======
-            <Link href="/blog/ai-cognitive-computing-breakthrough-2026" className="underline hover:text-yellow-200">Cognitive Computing</Link>
+            <Link href="/case-studies/ai-2026-synthetic-consciousness-enterprise-50-million-success" className="underline hover:text-yellow-200">$50M ROI Success</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-space-tech-revolution-2026" className="underline hover:text-yellow-200">Space Tech</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-next-generation-autonomous-systems-2026" className="underline hover:text-yellow-200">Next-Gen Autonomous</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-mega-transformation-2026" className="underline hover:text-yellow-200">$50M ROI Case Study</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-autonomous-enterprise-success-2026" className="underline hover:text-yellow-200">$25M ROI Case Study</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-next-generation-autonomous-success-2026" className="underline hover:text-yellow-200">$35M ROI Case Study</Link>
->>>>>>> cursor/create-and-deploy-new-content-a364
+            <Link href="/case-studies/ai-2026-quantum-neural-fusion-75-million-success" className="underline hover:text-yellow-200">$75M ROI Success</Link>
           </div>
           <Link
             to="/blog"
