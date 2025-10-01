@@ -16,6 +16,7 @@ const AIVirtualAssistant = React.lazy(() => Promise.resolve({ default: () => nul
 const AIDataAnalytics = React.lazy(() => Promise.resolve({ default: () => null }));
 import AIAutonomousOperations from './pages/services/AIAutonomousOperations';
 import AIPlatformArchitecture from './pages/services/AIPlatformArchitecture';
+import AIMLOpsAutomation from './pages/services/AIMLOpsAutomation';
 
 // 🚀🚀🚀 NEWEST: OCTOBER 1, 2025 - LATEST AI CONTENT - #1 TOP PRIORITY! 🚀🚀🚀
 // 💎 Enterprise AI Agents ($4.7B), LLM Security ($3.2B), Vector Databases ($5.8B) - $13.7B COMBINED! 💎
@@ -65,6 +66,7 @@ export const AppRouter: React.FC = () => {
       <Route path="/services/ai-data-analytics" element={<AIDataAnalytics />} />
       <Route path="/services/ai-autonomous-operations" element={<AIAutonomousOperations />} />
       <Route path="/services/ai-platform-architecture" element={<AIPlatformArchitecture />} />
+      <Route path="/services/ai-mlops-automation" element={<AIMLOpsAutomation />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/case-studies" element={<CaseStudies />} />
       <Route path="/ai-micro-saas" element={<AIMicroSAAS />} />
