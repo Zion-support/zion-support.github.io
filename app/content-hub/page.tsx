@@ -10,6 +10,13 @@ export const metadata = {
 export default function ContentHub() {
   const blogCategories = [
     {
+      title: '🔥 NEW: October 2025 AI Breakthroughs',
+      articles: [
+        { title: 'Explainable AI: Enterprise Transparency Revolution', slug: '/blog/ai-2025-oct-explainable-ai-enterprise-transparency-revolution', readTime: '16 min', featured: true },
+        { title: 'Edge AI + 5G Convergence: Real-Time Intelligence Revolution', slug: '/blog/ai-2025-oct-edge-ai-5g-convergence-revolution', readTime: '19 min', featured: true },
+      ]
+    },
+    {
       title: 'AI Computing Revolution 2026',
       articles: [
         { title: 'Neuromorphic Computing Revolution', slug: '/blog/ai-2026-neuromorphic-computing-revolution', readTime: '20 min', featured: true },
@@ -63,6 +70,22 @@ export default function ContentHub() {
   ];
 
   const caseStudies = [
+    {
+      title: '💰 NEW: Global Bank XAI Compliance Success',
+      company: 'Fortune 100 Global Bank',
+      industry: 'Financial Services',
+      results: '$420M Value & 100% AI Compliance',
+      slug: '/case-studies/ai-2025-oct-global-bank-xai-compliance-success',
+      featured: true
+    },
+    {
+      title: '💰 NEW: Manufacturing Edge AI + 5G Success',
+      company: 'Fortune 500 Global Manufacturer',
+      industry: 'Manufacturing',
+      results: '$780M Value & 99.8% Production Efficiency',
+      slug: '/case-studies/ai-2025-oct-manufacturing-edge-5g-success',
+      featured: true
+    },
     {
       title: 'Neuromorphic Computing Manufacturing Success',
       company: 'Global Automotive Manufacturer',
@@ -162,35 +185,41 @@ export default function ContentHub() {
 
       {/* Featured Content */}
       <section className="mb-16">
-        <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-teal-600 text-white p-8 rounded-2xl mb-8">
+        <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white p-8 rounded-2xl mb-8">
           <div className="text-center">
             <div className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-bold mb-4 animate-pulse">
-              🚀 JUST PUBLISHED: JANUARY 2026
+              🔥 BRAND NEW: OCTOBER 2025
             </div>
             <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
-              Neuromorphic Computing & Federated Learning Revolution
+              Explainable AI & Edge AI + 5G Revolution
             </h2>
             <p className="text-xl mb-6 max-w-3xl mx-auto">
-              Revolutionary AI breakthroughs: 95% energy savings with neuromorphic computing and 100% privacy with federated learning
+              Latest breakthroughs: 100% AI compliance with XAI and {'<1ms'} latency with Edge AI + 5G convergence
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link
-                href="/blog/ai-2026-neuromorphic-computing-revolution"
-                className="bg-white text-purple-600 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
+                href="/blog/ai-2025-oct-explainable-ai-enterprise-transparency-revolution"
+                className="bg-white text-indigo-600 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
               >
-                🧠 Neuromorphic Computing →
+                🔍 Explainable AI Guide →
               </Link>
               <Link
-                href="/blog/ai-2026-federated-learning-enterprise-privacy"
+                href="/blog/ai-2025-oct-edge-ai-5g-convergence-revolution"
                 className="bg-white text-teal-600 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
               >
-                🔒 Federated Learning →
+                ⚡ Edge AI + 5G Guide →
               </Link>
               <Link
-                href="/case-studies/neuromorphic-computing-manufacturing-success-2026"
+                href="/case-studies/ai-2025-oct-global-bank-xai-compliance-success"
                 className="border-2 border-white text-white font-bold py-3 px-6 rounded-lg hover:bg-white/10 transition-colors"
               >
-                View $22M Success Story →
+                View $420M Bank Success →
+              </Link>
+              <Link
+                href="/case-studies/ai-2025-oct-manufacturing-edge-5g-success"
+                className="border-2 border-white text-white font-bold py-3 px-6 rounded-lg hover:bg-white/10 transition-colors"
+              >
+                View $780M Mfg Success →
               </Link>
             </div>
           </div>
@@ -198,63 +227,63 @@ export default function ContentHub() {
 
         <h2 className="text-3xl font-bold text-gray-900 mb-8">Featured Content</h2>
         <div className="grid md:grid-cols-3 gap-6">
-          <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl border-2 border-purple-200">
+          <div className="bg-gradient-to-br from-indigo-50 to-purple-50 p-6 rounded-xl border-2 border-indigo-200">
             <div className="flex items-center gap-2 mb-4">
-              <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
-                🧠 NEW: January 2026
+              <span className="bg-indigo-100 text-indigo-800 px-2 py-1 rounded-full text-xs font-semibold">
+                🔍 NEW: October 2025
               </span>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">
-              Neuromorphic Computing Revolution
+              Explainable AI Revolution
             </h3>
             <p className="text-gray-600 mb-4">
-              Revolutionary AI computing that mimics the human brain with 95% energy savings and 1000x performance improvements.
+              Complete guide to building transparent, compliant AI systems with SHAP, LIME, and counterfactuals. Achieve 95%+ compliance.
             </p>
             <Link
-              href="/blog/ai-2026-neuromorphic-computing-revolution"
-              className="text-purple-600 font-semibold hover:text-purple-700"
+              href="/blog/ai-2025-oct-explainable-ai-enterprise-transparency-revolution"
+              className="text-indigo-600 font-semibold hover:text-indigo-700"
             >
-              Read Revolutionary Guide →
+              Read Complete Guide →
             </Link>
           </div>
 
-          <div className="bg-gradient-to-br from-teal-50 to-teal-100 p-6 rounded-xl border-2 border-teal-200">
+          <div className="bg-gradient-to-br from-teal-50 to-blue-50 p-6 rounded-xl border-2 border-teal-200">
             <div className="flex items-center gap-2 mb-4">
               <span className="bg-teal-100 text-teal-800 px-2 py-1 rounded-full text-xs font-semibold">
-                🔒 NEW: January 2026
+                ⚡ NEW: October 2025
               </span>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">
-              Federated Learning Privacy
+              Edge AI + 5G Convergence
             </h3>
             <p className="text-gray-600 mb-4">
-              Privacy-preserving AI training with 100% data privacy and 1000x faster training speeds across enterprises.
+              Real-time intelligence with {'<1ms'} latency. Complete implementation guide for autonomous vehicles, manufacturing, and smart cities.
             </p>
             <Link
-              href="/blog/ai-2026-federated-learning-enterprise-privacy"
+              href="/blog/ai-2025-oct-edge-ai-5g-convergence-revolution"
               className="text-teal-600 font-semibold hover:text-teal-700"
             >
-              Read Privacy Guide →
+              Read Implementation Guide →
             </Link>
           </div>
 
           <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl border-2 border-green-200">
             <div className="flex items-center gap-2 mb-4">
               <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
-                🏭 $22M Success
+                💰 $420M Bank Success
               </span>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">
-              Neuromorphic Manufacturing Success
+              Global Bank: 100% AI Compliance
             </h3>
             <p className="text-gray-600 mb-4">
-              Global automotive manufacturer achieves $22M annual savings with 95% energy reduction and 1000x performance.
+              Fortune 100 bank achieves perfect compliance with comprehensive XAI platform. $420M value, zero audit findings.
             </p>
             <Link
-              href="/case-studies/neuromorphic-computing-manufacturing-success-2026"
+              href="/case-studies/ai-2025-oct-global-bank-xai-compliance-success"
               className="text-green-600 font-semibold hover:text-green-700"
             >
-              View Case Study →
+              View Success Story →
             </Link>
           </div>
         </div>
