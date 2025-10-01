@@ -68,6 +68,15 @@ export const bannerRegistry: BannerMetadata[] = [
     category: 'green',
     featured: true,
   },
+  {
+    id: 'oct2025-edge-feature-stores',
+    name: 'Edge Feature Stores: Zero‑PII Personalization',
+    priority: 96,
+    value: '$1.2B',
+    publishDate: new Date('2025-10-02'),
+    category: 'ai',
+    featured: true,
+  },
 ];
 
 /**
