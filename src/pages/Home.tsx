@@ -122,13 +122,28 @@ const Home = () => {
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
         
+        {/* 🎯 OCTOBER 1, 2025 - BREAKING NEWS: Latest Enterprise Solutions */}
+        <NewContentPromoBanner 
+          className="border-b border-white/10" 
+          variant="premium" 
+          title="🎯 JUST PUBLISHED TODAY: 3 GAME-CHANGING ENTERPRISE SOLUTIONS — AI DevOps (10x Faster), Blockchain at Scale (10K+ TPS), Next-Gen Security (99.97% Protection)!"
+          description="🔥 BRAND NEW RELEASE: Transform your operations with AI-powered DevOps automation achieving 10x deployment velocity, enterprise blockchain delivering 10,000+ transactions per second with complete trust, and AI security preventing threats with 99.97% accuracy. Essential reading for CTOs and technology leaders!"
+          ctaText="Explore Latest Solutions"
+          ctaLink="/blog"
+          featuredItems={[
+            { title: "AI-Powered DevOps Automation Revolution — 10x Faster Deployments, 98% Fewer Incidents, 85% Cost Savings", category: "DevOps AI", link: "/blog/ai-devops-automation-revolution-2025" },
+            { title: "Enterprise Blockchain Integration — 10,000+ TPS, Complete Traceability, $156M Annual Savings", category: "Blockchain", link: "/blog/enterprise-blockchain-integration-2025" },
+            { title: "Next-Gen Cloud Security with AI — 99.97% Threat Detection, Sub-Second Response, Zero Breaches", category: "AI Security", link: "/blog/next-gen-cloud-security-ai-2025" }
+          ]}
+        />
+        
         {/* 🚀🚀🚀 OCTOBER 2025 - LATEST: Next-Gen AI Breakthroughs - #1 PRIORITY! 🚀🚀🚀 */}
         {/* Featured: Collaborative Agent Teams (340% gains), Real-Time Adaptive AI (98.7% accuracy), Hybrid Intelligence (580% amplification) */}
         <div className="container mx-auto px-4 py-8">
           <October2025NextGenAIBanner />
         </div>
         
-        {/* 🎉 JANUARY 2026 - BREAKTHROUGH: Revolutionary AI Systems */}
+        {/* 🚀 DECEMBER 1, 2025 - BREAKTHROUGH: AI Development Agents, RAG at Scale & AI-Powered IaC */}
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
