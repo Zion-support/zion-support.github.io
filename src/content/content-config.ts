@@ -1241,6 +1241,34 @@ featuredBlogPosts.unshift(
   }
 );
 
+// Oct 1, 2025 – Feature three brand-new cutting-edge articles
+featuredBlogPosts.unshift(
+  {
+    id: "ai-2025-october-quantum-safe-cryptography-revolution",
+    title: "🔐 Quantum-Safe Cryptography Revolution 2025",
+    description: "Protect enterprise data against quantum threats with NIST-approved PQC algorithms. Hybrid crypto, migration strategies, and 1000x security improvement.",
+    link: "/blog/ai-2025-october-quantum-safe-cryptography-revolution",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-2025-october-neuromorphic-computing-breakthrough",
+    title: "🧠 Neuromorphic Computing Breakthrough 2025",
+    description: "Brain-inspired chips achieve 1000x energy efficiency. SNNs, event-driven processing, and Intel Loihi 2 revolutionizing edge AI.",
+    link: "/blog/ai-2025-october-neuromorphic-computing-breakthrough",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-2025-october-synthetic-data-generation-mastery",
+    title: "🎲 Synthetic Data Generation Mastery 2025",
+    description: "Train world-class AI without privacy risks. GANs, VAEs, diffusion models achieving 95%+ accuracy with zero GDPR violations.",
+    link: "/blog/ai-2025-october-synthetic-data-generation-mastery",
+    type: "article",
+    featured: true
+  }
+);
+
 // Sept 30, 2025 – Surface three brand-new articles (newly added now)
 featuredBlogPosts.unshift(
   {
