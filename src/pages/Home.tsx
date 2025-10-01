@@ -47,6 +47,7 @@ import October2025CuttingEdgeInnovationsBanner from "../components/October2025Cu
 import January2026RevolutionaryBanner from "../components/January2026RevolutionaryBanner";
 import NewServicesPromoBanner2026 from "../components/NewServicesPromoBanner2026";
 import November2025GameChangersBanner from "../components/November2025GameChangersBanner";
+import October2025CognitiveRevolutionBanner from "../components/October2025CognitiveRevolutionBanner";
 import { latestInsights } from "../content/insights";
 
 const Home = () => {
@@ -86,6 +87,11 @@ const Home = () => {
         <link rel="canonical" href="https://ziontechgroup.com" />
       </Helmet>
       <AdvertisingBanner />
+      
+      {/* 🧠🧠🧠 BRAND NEW OCTOBER 2025 - JUST RELEASED: COGNITIVE COMPUTING REVOLUTION - TOP PRIORITY! 🧠🧠🧠 */}
+      {/* Featured: Multi-Agent Orchestration (97.8% Automation, $847M Value), Cognitive AI Transformation (98.5% Accuracy, $1.2B Value), Fortune 20 Telecom Case Study ($4.7B Success, 3,602% ROI) */}
+      <October2025CognitiveRevolutionBanner />
+      
       <November2025GameChangersBanner />
       <January2026RevolutionaryBanner />
       <October2025UltimateEnterpriseBanner />
