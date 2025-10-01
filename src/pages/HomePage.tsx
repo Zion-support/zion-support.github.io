@@ -146,29 +146,29 @@ const HomePage: React.FC = () => {
                 icon="rocket"
                 badge="New"
                 date={new Date().toLocaleDateString()}
-                title="Fresh Content: Safer AI, Actionable Observability, Lower Costs"
-                description="Three new deep-dives just dropped: guardrails as code, observability that triggers safe actions, and cost playbooks that cut spend without slowing teams."
-                ctaText="Read the latest posts"
+                title="Just Published: Governed Agents, RAG v3, Cost v6"
+                description="New enterprise guides: safe agentic automation, pragmatic RAG that lifts quality while cutting cost, and GenAI cost optimization v6."
+                ctaText="Explore all posts"
                 ctaLink="/blog"
                 showCount={3}
                 featuredItems={[
                   {
-                    title: 'Policy-Driven AI: Guardrails as Code for Safer Autonomy',
+                    title: 'Governed Agentic Automation: Safe Tools, Fast Outcomes',
                     category: 'AI',
-                    link: '/blog',
-                    metrics: '7 min • 2025-10-02'
+                    link: '/blog/governed-agentic-automation-2025-10-03',
+                    metrics: '8 min • 2025-10-03'
                   },
                   {
-                    title: 'Platform Observability 2025: From Signals to Automated Actions',
-                    category: 'Observability',
-                    link: '/blog',
-                    metrics: '6 min • 2025-10-02'
+                    title: 'Enterprise RAG Blueprint v3: 45% Quality ↑, 62% Cost ↓',
+                    category: 'RAG',
+                    link: '/blog/enterprise-rag-blueprint-v3-2025-10-03',
+                    metrics: '9 min • 2025-10-03'
                   },
                   {
-                    title: 'Cloud Cost Playbooks 2025: LLM + Infra Savings Without Slowdowns',
+                    title: 'GenAI Cost Optimization v6: Quality Tiers, Coalesce, Distill',
                     category: 'Cloud',
-                    link: '/blog',
-                    metrics: '7 min • 2025-10-02'
+                    link: '/blog/genai-cost-optimization-v6-2025-10-03',
+                    metrics: '9 min • 2025-10-03'
                   }
                 ]}
               />
