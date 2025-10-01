@@ -136,6 +136,29 @@ export const allBlogPosts: BlogPost[] = [
     featured: true,
     valueProposition: 'Faster deploys, safer rollbacks'
   },
+  // October 2, 2025 additions
+  {
+    slug: 'ai-2025-oct-02-private-experiments-blueprint',
+    title: 'Private Experiments Blueprint: Zero‑PII Testing at the Edge',
+    description: 'Run A/B tests without PII using signed configs, scoped IDs, and edge analytics under 100ms.',
+    category: 'Experimentation',
+    date: '2025-10-02',
+    readTime: '10 min',
+    tags: ['Privacy', 'Edge', 'Experiments', 'Feature Flags'],
+    featured: true,
+    valueProposition: 'Zero‑PII experiments at the edge'
+  },
+  {
+    slug: 'ai-2025-oct-02-rollback-guardrails-blueprint',
+    title: 'Runtime Rollback Guardrails Blueprint',
+    description: 'Implement instant rollbacks, canary scorecards, and objective quality budgets.',
+    category: 'Reliability',
+    date: '2025-10-02',
+    readTime: '9 min',
+    tags: ['Rollback', 'Canary', 'Guardrails', 'Budgets'],
+    featured: true,
+    valueProposition: 'Instant reversibility, resilient releases'
+  },
 ];
 
 /**

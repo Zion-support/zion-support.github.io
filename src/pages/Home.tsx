@@ -139,6 +139,20 @@ const Home = () => {
           { title: "Edge A/B <100ms — Consentless Metrics", category: "Edge", link: "/blog/edge-private-experimentation-v2-2026" }
         ]}
       />
+      {/* Promo: Zero‑PII Experiments + Instant Rollbacks (New 2025‑10‑02) */}
+      <NewContentPromoBanner 
+        className="border-b border-white/10" 
+        variant="premium" 
+        title="✨ New: Zero‑PII Experiments + Instant Rollbacks"
+        description="Blueprints to test faster at the edge and revert safely in seconds."
+        ctaText="Explore new posts"
+        ctaLink="/blog"
+        featuredItems={[
+          { title: "Private Experiments Blueprint", category: "Experimentation", link: "/blog/ai-2025-oct-02-private-experiments-blueprint" },
+          { title: "Rollback Guardrails Blueprint", category: "Reliability", link: "/blog/ai-2025-oct-02-rollback-guardrails-blueprint" },
+          { title: "Runtime Rollback Guardrails", category: "Reliability", link: "/blog/ai-2025-oct-01-runtime-rollback-guardrails" }
+        ]}
+      />
       
       {/* 🧠🧠🧠 BRAND NEW OCTOBER 2025 - JUST RELEASED: COGNITIVE COMPUTING REVOLUTION - TOP PRIORITY! 🧠🧠🧠 */}
       {/* Featured: Multi-Agent Orchestration (97.8% Automation, $847M Value), Cognitive AI Transformation (98.5% Accuracy, $1.2B Value), Fortune 20 Telecom Case Study ($4.7B Success, 3,602% ROI) */}
