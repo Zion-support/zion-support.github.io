@@ -1,11 +1,6 @@
 import React from 'react';
 
 export const metadata = {
-<<<<<<< HEAD
-  title: 'AI Operational Excellence 2026: From SLIs to Self‑Healing Ops',
-  description:
-    'Practical blueprint to reach operational excellence with AI: reliability scorecards, SLO automation, policy tests, and self-healing runbooks.',
-=======
   title: 'AI Operational Excellence 2026: From Pilots to Scaled Impact | Zion Tech Group',
   description: 'Blueprint to scale AI reliably with governance, quality, cost controls, and value tracking across the enterprise.',
   keywords: 'AI operational excellence 2026, AI governance, AI quality, AI cost controls, AI value tracking, scale AI',
@@ -122,9 +117,6 @@ import React from 'react';
 
 export const metadata = {
 	title: 'AI Operational Excellence 2026: From Pilots to Scaled Impact',
-	description:
-		'Practical blueprint to scale AI operations: governance, reliability, cost, and value tracking.'
->>>>>>> b694fbf4b178 (feat(content): add AI Operational Excellence 2026 and AI Enterprise Automation 2026; advertise across blog, content hub, and homepage; resolve promo strip conflict)
 };
 
 export default function AIOperationalExcellence2026() {
