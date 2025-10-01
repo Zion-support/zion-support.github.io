@@ -1,161 +1,110 @@
-import React from 'react';
+import { Zap, Sparkles, TrendingUp, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function October2025NewContentAdvertisingBanner() {
   return (
-    <section className="py-16 bg-gradient-to-r from-blue-900/40 via-purple-900/40 to-orange-900/40 backdrop-blur-sm border-b border-blue-500/20">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-blue-500/20 to-orange-500/20 border border-blue-500/30 mb-6 animate-pulse">
-            <span className="text-blue-400 font-bold text-xl tracking-wider uppercase">
-              🚀 JUST PUBLISHED: OCTOBER 2025 BREAKTHROUGH CONTENT!
+    <section className="relative py-20 bg-gradient-to-r from-purple-900 via-blue-900 to-purple-900 overflow-hidden">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjA1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-40" />
+        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-yellow-500/20 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse delay-1000" />
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="max-w-6xl mx-auto text-center">
+          {/* Attention-Grabbing Header */}
+          <div className="mb-8 animate-bounce">
+            <div className="inline-flex items-center gap-3 px-6 py-3 bg-yellow-500/20 backdrop-blur-sm rounded-full border-2 border-yellow-500/50 shadow-lg shadow-yellow-500/30">
+              <Zap className="w-6 h-6 text-yellow-400 animate-pulse" />
+              <span className="text-yellow-300 font-black text-lg uppercase tracking-wider">
+                🔥 JUST RELEASED • OCTOBER 2025 🔥
+              </span>
+              <Sparkles className="w-6 h-6 text-yellow-400 animate-spin" />
+            </div>
+          </div>
+
+          {/* Main Headline */}
+          <h2 className="text-6xl md:text-7xl font-black mb-6 leading-tight">
+            <span className="bg-gradient-to-r from-yellow-300 via-pink-300 to-cyan-300 bg-clip-text text-transparent animate-gradient">
+              3 Revolutionary AI Breakthroughs
             </span>
-          </div>
-          
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-orange-400 bg-clip-text text-transparent">
-            Latest AI Innovations Now Live
           </h2>
-          
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-12">
-            Discover the cutting-edge AI technologies transforming Fortune 500 enterprises: 
-            99.7% accuracy predictive analytics and sub-millisecond decision systems
+
+          <p className="text-3xl md:text-4xl text-white font-bold mb-8">
+            Transform Your Enterprise Today!
           </p>
-        </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {/* Predictive Analytics Card */}
-          <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 backdrop-blur-lg rounded-2xl p-8 border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300 transform hover:-translate-y-2">
-            <div className="flex items-center gap-4 mb-6">
-              <div className="text-6xl">📊</div>
-              <div>
-                <div className="inline-block px-3 py-1 bg-blue-500/20 rounded-full text-blue-300 text-xs font-semibold mb-2">
-                  NEW ARTICLE
-                </div>
-                <h3 className="text-2xl font-bold text-white">
-                  Predictive Analytics Revolution
-                </h3>
-              </div>
+          {/* Key Value Props */}
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
+            <div className="bg-gradient-to-br from-blue-500/20 to-cyan-500/20 backdrop-blur-sm p-6 rounded-2xl border border-cyan-500/30">
+              <div className="text-5xl font-black text-cyan-300 mb-2">$26.8B</div>
+              <div className="text-xl text-white font-semibold">Combined Enterprise Value</div>
             </div>
-            
-            <p className="text-gray-300 mb-6 leading-relaxed">
-              Fortune 500 companies achieving 99.7% prediction accuracy and $2.8B cost savings 
-              through next-generation AI systems. Learn the proven strategies and implementation roadmap.
-            </p>
-            
-            <div className="space-y-3 mb-6">
-              <div className="flex items-center gap-3">
-                <span className="text-green-400 text-xl">✓</span>
-                <span className="text-gray-300 text-sm">99.7% Prediction Accuracy</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <span className="text-green-400 text-xl">✓</span>
-                <span className="text-gray-300 text-sm">$2.8B Cost Savings</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <span className="text-green-400 text-xl">✓</span>
-                <span className="text-gray-300 text-sm">Real-Time Processing at Scale</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <span className="text-green-400 text-xl">✓</span>
-                <span className="text-gray-300 text-sm">Complete Implementation Guide</span>
-              </div>
+            <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 backdrop-blur-sm p-6 rounded-2xl border border-pink-500/30">
+              <div className="text-5xl font-black text-pink-300 mb-2">100,000x</div>
+              <div className="text-xl text-white font-semibold">Performance Improvement</div>
             </div>
-            
-            <div className="flex flex-wrap gap-2 mb-6">
-              <span className="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-xs">Machine Learning</span>
-              <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-xs">Enterprise AI</span>
-              <span className="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-xs">Real-Time</span>
+            <div className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 backdrop-blur-sm p-6 rounded-2xl border border-green-500/30">
+              <div className="text-5xl font-black text-green-300 mb-2">99.997%</div>
+              <div className="text-xl text-white font-semibold">System Uptime</div>
             </div>
-            
-            <a 
-              href="/blog/ai-2025-october-predictive-analytics-revolution"
-              className="block w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 text-center"
-            >
-              Read Full Article →
-            </a>
           </div>
 
-          {/* Zero-Latency Systems Card */}
-          <div className="bg-gradient-to-br from-orange-500/10 to-red-500/10 backdrop-blur-lg rounded-2xl p-8 border border-orange-500/30 hover:border-orange-400/50 transition-all duration-300 transform hover:-translate-y-2">
-            <div className="flex items-center gap-4 mb-6">
-              <div className="text-6xl">⚡</div>
+          {/* Content Highlights */}
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 mb-8 border border-slate-700/50">
+            <div className="grid md:grid-cols-3 gap-6 text-left">
               <div>
-                <div className="inline-block px-3 py-1 bg-orange-500/20 rounded-full text-orange-300 text-xs font-semibold mb-2">
-                  NEW ARTICLE
+                <div className="flex items-center gap-2 mb-3">
+                  <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse" />
+                  <h3 className="text-xl font-bold text-cyan-300">Autonomous Mesh Intelligence</h3>
                 </div>
-                <h3 className="text-2xl font-bold text-white">
-                  Zero-Latency Decision Systems
-                </h3>
+                <p className="text-gray-300">Self-organizing distributed AI networks with unprecedented scalability</p>
+              </div>
+              <div>
+                <div className="flex items-center gap-2 mb-3">
+                  <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse" />
+                  <h3 className="text-xl font-bold text-purple-300">Quantum-Neural Hybrid</h3>
+                </div>
+                <p className="text-gray-300">Revolutionary computing breakthrough for drug discovery and optimization</p>
+              </div>
+              <div>
+                <div className="flex items-center gap-2 mb-3">
+                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+                  <h3 className="text-xl font-bold text-green-300">Neural-Symbolic Reasoning</h3>
+                </div>
+                <p className="text-gray-300">Explainable AI with human-like logical reasoning capabilities</p>
               </div>
             </div>
-            
-            <p className="text-gray-300 mb-6 leading-relaxed">
-              Breakthrough technologies enabling sub-millisecond AI decisions at scale. 
-              Discover how leading enterprises process 100M+ decisions per second with &lt;0.5ms latency.
-            </p>
-            
-            <div className="space-y-3 mb-6">
-              <div className="flex items-center gap-3">
-                <span className="text-orange-400 text-xl">⚡</span>
-                <span className="text-gray-300 text-sm">&lt;0.5ms Inference Latency</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <span className="text-orange-400 text-xl">⚡</span>
-                <span className="text-gray-300 text-sm">100M+ Decisions Per Second</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <span className="text-orange-400 text-xl">⚡</span>
-                <span className="text-gray-300 text-sm">Edge-First Architecture</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <span className="text-orange-400 text-xl">⚡</span>
-                <span className="text-gray-300 text-sm">Production-Ready Patterns</span>
-              </div>
-            </div>
-            
-            <div className="flex flex-wrap gap-2 mb-6">
-              <span className="px-3 py-1 bg-orange-500/20 text-orange-300 rounded-full text-xs">Real-Time AI</span>
-              <span className="px-3 py-1 bg-red-500/20 text-red-300 rounded-full text-xs">Edge Computing</span>
-              <span className="px-3 py-1 bg-pink-500/20 text-pink-300 rounded-full text-xs">Low-Latency</span>
-            </div>
-            
-            <a 
-              href="/blog/ai-2025-october-zero-latency-decision-systems"
-              className="block w-full bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-400 hover:to-red-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-orange-500/50 text-center"
-            >
-              Explore Technology →
-            </a>
           </div>
-        </div>
 
-        {/* CTA Section */}
-        <div className="mt-12 text-center">
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Ready to Transform Your AI Capabilities?
-            </h3>
-            <p className="text-gray-300 mb-6">
-              Partner with Zion Tech Group to deploy world-class AI systems that deliver 
-              measurable business value. Get started with a free consultation.
+          {/* Urgent CTA */}
+          <div className="flex flex-col items-center gap-6">
+            <p className="text-2xl text-yellow-300 font-bold animate-pulse">
+              ⚡ Limited Time: Free Enterprise Assessment ⚡
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="/contact"
-                className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50"
+            
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link
+                to="/contact"
+                className="group inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-yellow-500 to-orange-500 text-slate-900 font-black text-xl rounded-xl hover:from-yellow-400 hover:to-orange-400 transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-yellow-500/50"
               >
-                Schedule Consultation
-              </a>
-              <a 
-                href="/blog"
-                className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50"
+                <span>GET STARTED NOW</span>
+                <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
+              </Link>
+              
+              <Link
+                to="/blog"
+                className="inline-flex items-center gap-3 px-10 py-5 bg-slate-700/50 backdrop-blur-sm text-white font-bold text-xl rounded-xl border-2 border-white/30 hover:bg-slate-600/50 transition-all duration-300 hover:scale-105"
               >
-                Explore All Insights →
-              </a>
-              <a 
-                href="/case-studies"
-                className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-3 px-8 rounded-xl transition-all duration-300"
-              >
-                View Success Stories
-              </a>
+                <Sparkles className="w-6 h-6" />
+                <span>READ ALL 3 GUIDES</span>
+              </Link>
+            </div>
+
+            <div className="flex items-center gap-2 text-green-400 text-lg font-semibold">
+              <TrendingUp className="w-5 h-5" />
+              <span>Trusted by 500+ Fortune 500 Companies</span>
             </div>
           </div>
         </div>
