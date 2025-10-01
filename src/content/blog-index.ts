@@ -73,6 +73,39 @@ export const october2025Breakthroughs: BlogPost[] = [
     featured: true,
     valueProposition: '$67M annual savings',
   },
+  {
+    slug: 'ai-2025-oct-03-continuous-intelligence-platforms',
+    title: 'Continuous Intelligence 2025',
+    description: '100M+ events/sec with sub-50ms decisions, KPI scorecards, and safe rollback.',
+    category: 'Real-Time AI',
+    date: '2025-10-03',
+    readTime: '10 min',
+    tags: ['streaming', 'decisioning', 'feature store', 'KPIs'],
+    featured: true,
+    valueProposition: '$215M annual value'
+  },
+  {
+    slug: 'ai-2025-oct-03-autonomous-cloud-security',
+    title: 'Autonomous Cloud Security 2025',
+    description: '99.98% threat neutralization under 5 seconds with policy-backed automations.',
+    category: 'Security',
+    date: '2025-10-03',
+    readTime: '9 min',
+    tags: ['security', 'zero trust', 'automation', 'rollback'],
+    featured: true,
+    valueProposition: '$42M annual savings'
+  },
+  {
+    slug: 'ai-2025-oct-03-quantum-supply-chain-optimization',
+    title: 'Quantum Supply Chain 2025',
+    description: '10,000x faster plans with hybrid quantum-inspired optimization and ML heuristics.',
+    category: 'Quantum Computing',
+    date: '2025-10-03',
+    readTime: '11 min',
+    tags: ['quantum', 'optimization', 'supply chain'],
+    featured: true,
+    valueProposition: '$127M annual savings'
+  },
 ];
 
 /**
