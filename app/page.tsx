@@ -11,6 +11,9 @@ import February2026NeuralConsciousnessBanner from '../components/February2026Neu
 // 🏆🏆🏆 LATEST: FEBRUARY 2026 SUCCESS STORY - $12.4B ROI FORTUNE 500 TRANSFORMATION! 🏆🏆🏆
 import February2026SuccessStoryBanner from '../components/February2026SuccessStoryBanner';
 
+// 🌟🌟🌟 NEWEST: OCTOBER 2025 AUTONOMOUS REALITY SYNTHESIS - JUST PUBLISHED! 🌟🌟🌟
+import October2025AutonomousRealitySynthesisBanner from '../components/October2025AutonomousRealitySynthesisBanner';
+
 // 🚀🚀🚀 NEWEST: OCTOBER 2025 EDGE-NATIVE AUTONOMOUS INTELLIGENCE - JUST RELEASED! 🚀🚀🚀
 import October2025EdgeNativeIntelligenceBanner from '../components/October2025EdgeNativeIntelligenceBanner';
 
