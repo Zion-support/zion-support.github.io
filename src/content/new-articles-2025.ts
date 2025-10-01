@@ -23,6 +23,39 @@ export const newArticles2025: NewArticle[] = [
     tags: ["Quantum-Safe Cryptography", "Post-Quantum Security", "Enterprise Protection", "NIST Standards"]
   },
   {
+    id: "ai-2025-oct-03-quantum-safe-enterprise-playbook",
+    title: "🔐 Quantum-Safe Enterprise Playbook (2025)",
+    description: "Adopt NIST PQC with hybrid cutovers, crypto agility, and zero downtime.",
+    category: "Security",
+    publishedDate: "2025-10-03",
+    featured: true,
+    link: "/blog/quantum-safe-cryptography-enterprise-migration-2025",
+    readTime: "9 min read",
+    tags: ["Post-Quantum", "PQC", "NIST", "Migration"]
+  },
+  {
+    id: "ai-2025-oct-03-neuromorphic-edge-intelligence",
+    title: "🧠 Neuromorphic Edge Intelligence: Sub‑10ms Decisions",
+    description: "Spiking neural networks on event hardware for 1000x energy efficiency.",
+    category: "Edge AI",
+    publishedDate: "2025-10-03",
+    featured: true,
+    link: "/blog/neuromorphic-edge-ai-event-driven-2025",
+    readTime: "8 min read",
+    tags: ["Neuromorphic", "SNN", "Edge", "Efficiency"]
+  },
+  {
+    id: "ai-2025-oct-03-synthetic-data-production",
+    title: "🎭 Synthetic Data in Production: Privacy‑Safe Accuracy",
+    description: "Generate, validate, and govern synthetic datasets that lift model accuracy.",
+    category: "Data Platforms",
+    publishedDate: "2025-10-03",
+    featured: true,
+    link: "/blog/synthetic-data-production-privacy-2025",
+    readTime: "10 min read",
+    tags: ["Synthetic Data", "Privacy", "MLOps", "Quality"]
+  },
+  {
     id: "ai-2025-oct-03-neuromorphic-edge-ai-breakthrough",
     title: "🧠 Neuromorphic Edge AI 2025: 1000x Efficiency for Real-Time Intelligence",
     description: "Deploy brain-inspired AI at the edge with event-driven compute delivering sub-10ms decisions at 1000x energy efficiency.",

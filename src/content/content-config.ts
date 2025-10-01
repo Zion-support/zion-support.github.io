@@ -1624,6 +1624,34 @@ featuredBlogPosts.unshift(
   }
 );
 
+// Oct 3, 2025 – Advertise three brand-new guides site-wide (newly created)
+featuredBlogPosts.unshift(
+  {
+    id: "quantum-safe-cryptography-enterprise-migration-2025",
+    title: "Quantum‑Safe Enterprise Migration (2025)",
+    description: "NIST PQC rollout with hybrid handshakes, crypto agility, zero downtime.",
+    link: "/blog/quantum-safe-cryptography-enterprise-migration-2025",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "neuromorphic-edge-ai-event-driven-2025",
+    title: "Neuromorphic Edge AI (Sub‑10ms)",
+    description: "Event‑driven SNNs for 1000x efficiency on edge hardware.",
+    link: "/blog/neuromorphic-edge-ai-event-driven-2025",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "synthetic-data-production-privacy-2025",
+    title: "Synthetic Data in Production",
+    description: "Privacy‑safe datasets that lift accuracy with evaluator‑backed quality.",
+    link: "/blog/synthetic-data-production-privacy-2025",
+    type: "article",
+    featured: true
+  }
+);
+
 // Sept 30, 2025 – Surface three brand-new articles (newly added now)
 featuredBlogPosts.unshift(
   {
