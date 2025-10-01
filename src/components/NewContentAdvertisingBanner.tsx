@@ -1,8 +1,21 @@
 import React from 'react';
 import { ArrowRight, Sparkles, TrendingUp, Zap, Star, Users, Award, Target } from 'lucide-react';
 
+interface FeaturedContent {
+  id: number;
+  title: string;
+  category: string;
+  readTime: string;
+  rating: number;
+  readers: string;
+  badge: string;
+  gradient: string;
+  icon: React.ReactNode;
+  link: string;
+}
+
 const NewContentAdvertisingBanner: React.FC = () => {
-  const featuredContent = [
+  const featuredContent: FeaturedContent[] = [
     {
       id: 0,
       title: 'Autonomous Customer Service 2025',
@@ -212,7 +225,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
 
                 {/* CTA Button */}
                 <a
-                  href={(content as any).link || '/blog'}
+                  href={content.link || '/blog'}
                   className={`group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r ${content.gradient} hover:opacity-90 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1`}
                 >
                   <span>Read Now</span>

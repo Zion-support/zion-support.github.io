@@ -12,6 +12,138 @@ export interface NewArticle {
 
 export const newArticles2025: NewArticle[] = [
   {
+    id: "ai-2025-oct-03-risk-controlled-autonomy",
+    title: "🛡️ Risk‑Controlled Autonomy 2025",
+    description: "Govern agent tools with budgets, approvals, and live evals. Move 10x faster without incidents.",
+    category: "AI Operations",
+    publishedDate: "2025-10-03",
+    featured: true,
+    link: "/blog/ai-2025-oct-03-risk-controlled-autonomy",
+    readTime: "8 min read",
+    tags: ["Agents", "Governance", "Budgets", "Rollback"]
+  },
+  {
+    id: "ai-2025-oct-03-reliable-agent-ops",
+    title: "🤖 Reliable Agent Ops: Budgets, Approvals, and Live Evals",
+    description: "Ship agentic systems with budgeted tools, PR policy tests, and instant rollback—safely and fast.",
+    category: "GenAI",
+    publishedDate: "2025-10-03",
+    featured: true,
+    link: "/blog/ai-2025-oct-03-reliable-agent-ops",
+    readTime: "9 min read",
+    tags: ["Agents", "Evals", "Guardrails", "Budgets"]
+  },
+  {
+    id: "ai-2025-oct-03-private-feature-flags",
+    title: "🚀 Private Feature Flags: <100ms Global Releases with Zero PII",
+    description: "Edge‑native feature flags with scoped IDs, geo budgets, and instant rollback—privacy without compromise.",
+    category: "Architecture",
+    publishedDate: "2025-10-03",
+    featured: true,
+    link: "/blog/ai-2025-oct-03-private-feature-flags",
+    readTime: "7 min read",
+    tags: ["Edge", "Feature Flags", "Privacy", "Delivery"]
+  },
+  {
+    id: "ai-2025-oct-03-synthetic-data-blueprint",
+    title: "🎭 Synthetic Data Blueprint: Accuracy Without PII Risk",
+    description: "Diffusion + GAN pipelines with 98%+ fidelity and governance patterns for regulated industries.",
+    category: "AI Training",
+    publishedDate: "2025-10-03",
+    featured: true,
+    link: "/blog/ai-2025-oct-03-synthetic-data-blueprint",
+    readTime: "12 min read",
+    tags: ["Synthetic Data", "Privacy", "Diffusion", "GANs"]
+  },
+  {
+    id: "ai-2025-october-quantum-safe-cryptography-revolution",
+    title: "🔐 Quantum-Safe Cryptography Revolution 2025",
+    description: "Protect enterprise data against quantum threats with NIST-approved post-quantum cryptography. Complete migration roadmap, hybrid crypto strategies, and real-world implementation achieving 100% quantum resistance.",
+    category: "Quantum Security",
+    publishedDate: "2025-10-03",
+    featured: true,
+    link: "/blog/ai-2025-october-quantum-safe-cryptography-revolution",
+    readTime: "18 min read",
+    tags: ["Quantum-Safe Cryptography", "Post-Quantum Security", "Enterprise Protection", "NIST Standards"]
+  },
+  {
+    id: "ai-2025-oct-03-quantum-safe-enterprise-playbook",
+    title: "🔐 Quantum-Safe Enterprise Playbook (2025)",
+    description: "Adopt NIST PQC with hybrid cutovers, crypto agility, and zero downtime.",
+    category: "Security",
+    publishedDate: "2025-10-03",
+    featured: true,
+    link: "/blog/quantum-safe-cryptography-enterprise-migration-2025",
+    readTime: "9 min read",
+    tags: ["Post-Quantum", "PQC", "NIST", "Migration"]
+  },
+  {
+    id: "ai-2025-oct-03-neuromorphic-edge-intelligence",
+    title: "🧠 Neuromorphic Edge Intelligence: Sub‑10ms Decisions",
+    description: "Spiking neural networks on event hardware for 1000x energy efficiency.",
+    category: "Edge AI",
+    publishedDate: "2025-10-03",
+    featured: true,
+    link: "/blog/neuromorphic-edge-ai-event-driven-2025",
+    readTime: "8 min read",
+    tags: ["Neuromorphic", "SNN", "Edge", "Efficiency"]
+  },
+  {
+    id: "ai-2025-oct-03-synthetic-data-production",
+    title: "🎭 Synthetic Data in Production: Privacy‑Safe Accuracy",
+    description: "Generate, validate, and govern synthetic datasets that lift model accuracy.",
+    category: "Data Platforms",
+    publishedDate: "2025-10-03",
+    featured: true,
+    link: "/blog/synthetic-data-production-privacy-2025",
+    readTime: "10 min read",
+    tags: ["Synthetic Data", "Privacy", "MLOps", "Quality"]
+  },
+  {
+    id: "ai-2025-oct-03-neuromorphic-edge-ai-breakthrough",
+    title: "🧠 Neuromorphic Edge AI 2025: 1000x Efficiency for Real-Time Intelligence",
+    description: "Deploy brain-inspired AI at the edge with event-driven compute delivering sub-10ms decisions at 1000x energy efficiency.",
+    category: "Neuromorphic AI",
+    publishedDate: "2025-10-03",
+    featured: true,
+    link: "/blog/ai-2025-oct-03-neuromorphic-edge-ai-breakthrough",
+    readTime: "11 min read",
+    tags: ["Neuromorphic", "Edge AI", "SNN", "Energy Efficiency"]
+  },
+  {
+    id: "ai-2025-oct-03-synthetic-data-production-playbook",
+    title: "🎭 Synthetic Data in Production: Privacy-Safe Accuracy Gains in 2025",
+    description: "Blueprint to train high-accuracy models with zero PII risk using diffusion/GAN pipelines and evaluators.",
+    category: "Data Platforms",
+    publishedDate: "2025-10-03",
+    featured: true,
+    link: "/blog/ai-2025-oct-03-synthetic-data-production-playbook",
+    readTime: "9 min read",
+    tags: ["Synthetic Data", "Privacy", "Diffusion", "GANs", "Compliance"]
+  },
+  {
+    id: "ai-2025-october-neuromorphic-computing-breakthrough",
+    title: "🧠 Neuromorphic Computing Breakthrough: Brain-Inspired AI Revolution",
+    description: "Revolutionary neuromorphic computing achieving 1000x energy efficiency with brain-inspired architecture. Real-time learning, event-driven processing, and edge AI deployment for next-gen applications.",
+    category: "Neuromorphic AI",
+    publishedDate: "2025-10-03",
+    featured: true,
+    link: "/blog/ai-2025-october-neuromorphic-computing-breakthrough",
+    readTime: "22 min read",
+    tags: ["Neuromorphic Computing", "Brain-Inspired AI", "Energy Efficiency", "Edge AI"]
+  },
+  {
+    id: "ai-2025-october-synthetic-data-generation-mastery",
+    title: "🎭 Synthetic Data Generation Mastery: AI-Powered Data Creation Revolution",
+    description: "Master synthetic data generation for training AI models. Achieve 99.7% data quality, 10x faster model training, and privacy-preserving datasets for enterprise AI applications.",
+    category: "Synthetic Data AI",
+    publishedDate: "2025-10-03",
+    featured: true,
+    link: "/blog/ai-2025-october-synthetic-data-generation-mastery",
+    readTime: "20 min read",
+    tags: ["Synthetic Data", "AI Training", "Data Privacy", "Model Performance"]
+  },
+  {
     id: "ai-adaptive-learning-systems-2025",
     title: "🎓 AI-Powered Adaptive Learning Systems: Next-Gen Personalized Education",
     description: "Revolutionary adaptive learning systems with real-time curriculum adjustment, personalized pathways, and cognitive load optimization achieving 87% student success rates and 3.2x faster mastery.",
@@ -43,6 +175,39 @@ export const newArticles2025: NewArticle[] = [
     link: "/blog/ai-protein-design-drug-discovery-breakthrough-2025",
     readTime: "26 min read",
     tags: ["Protein Design", "Drug Discovery", "Biotech AI", "Pharmaceutical AI"]
+  },
+  {
+    id: "ai-2025-october-quantum-safe-cryptography-revolution",
+    title: "🔐 Quantum-Safe Cryptography Revolution 2025",
+    description: "Protect enterprise data against quantum threats with NIST-approved post-quantum cryptography. Complete migration roadmap, hybrid crypto strategies, and real-world implementation achieving 100% quantum resistance.",
+    category: "Security",
+    publishedDate: "2025-10-01",
+    featured: true,
+    link: "/blog/ai-2025-october-quantum-safe-cryptography-revolution",
+    readTime: "18 min read",
+    tags: ["Quantum Security", "Post-Quantum Cryptography", "NIST Standards", "Enterprise Security"]
+  },
+  {
+    id: "ai-2025-october-neuromorphic-computing-breakthrough",
+    title: "🧠 Neuromorphic Computing Breakthrough 2025",
+    description: "Brain-inspired chips achieve 1000x energy efficiency compared to GPUs. Master spiking neural networks, event-driven processing, and Intel Loihi 2 deployment for next-generation edge AI and robotics.",
+    category: "Hardware AI",
+    publishedDate: "2025-10-01",
+    featured: true,
+    link: "/blog/ai-2025-october-neuromorphic-computing-breakthrough",
+    readTime: "20 min read",
+    tags: ["Neuromorphic Computing", "SNNs", "Energy Efficiency", "Edge AI", "Intel Loihi"]
+  },
+  {
+    id: "ai-2025-october-synthetic-data-generation-mastery",
+    title: "🎲 Synthetic Data Generation Mastery 2025",
+    description: "Train world-class AI models without privacy risks using GANs, VAEs, and diffusion models. Achieve 95%+ model accuracy with zero GDPR violations and 100x cost savings vs real data collection.",
+    category: "AI Training",
+    publishedDate: "2025-10-01",
+    featured: true,
+    link: "/blog/ai-2025-october-synthetic-data-generation-mastery",
+    readTime: "22 min read",
+    tags: ["Synthetic Data", "GANs", "Privacy-Preserving AI", "GDPR Compliance", "Data Augmentation"]
   },
   {
     id: "ai-agent-evaluations-2026",

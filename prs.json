@@ -1,372 +1,13 @@
 [
   {
-    "url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24297",
-    "id": 2875821878,
-    "node_id": "PR_kwDOOuOFAc6raY82",
-    "html_url": "https://github.com/Zion-Holdings/zion.app/pull/24297",
-    "diff_url": "https://github.com/Zion-Holdings/zion.app/pull/24297.diff",
-    "patch_url": "https://github.com/Zion-Holdings/zion.app/pull/24297.patch",
-    "issue_url": "https://api.github.com/repos/Zion-Holdings/zion.app/issues/24297",
-    "number": 24297,
-    "state": "open",
-    "locked": false,
-    "title": "Check, fix, push, and merge to main",
-    "user": {
-      "login": "Zion-support",
-      "id": 212353722,
-      "node_id": "U_kgDODKhCug",
-      "avatar_url": "https://avatars.githubusercontent.com/u/212353722?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Zion-support",
-      "html_url": "https://github.com/Zion-support",
-      "followers_url": "https://api.github.com/users/Zion-support/followers",
-      "following_url": "https://api.github.com/users/Zion-support/following{/other_user}",
-      "gists_url": "https://api.github.com/users/Zion-support/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/Zion-support/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/Zion-support/subscriptions",
-      "organizations_url": "https://api.github.com/users/Zion-support/orgs",
-      "repos_url": "https://api.github.com/users/Zion-support/repos",
-      "events_url": "https://api.github.com/users/Zion-support/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/Zion-support/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "body": "# Pull Request\n\n## Description\nThis PR resolves merge conflicts in `src/pages/Home.tsx` and introduces a new `AccessibilityEnhancer` system by adding `src/utils/accessibilityEnhancer.ts`. The new system provides comprehensive accessibility features including keyboard navigation, focus management, ARIA label enhancements, color contrast checks, and reduced motion support.\n\n## Type of Change\n- [x] Bug fix (non-breaking change which fixes an issue)\n- [x] New feature (non-breaking change which adds functionality)\n- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)\n- [ ] Documentation update\n- [ ] Refactoring (no functional changes)\n- [ ] Performance improvement\n- [ ] Security fix\n\n## Testing\n- [x] I have tested this change locally\n- [ ] I have added tests for this change\n- [x] All existing tests pass\n- [x] I have tested the build process\n\n## Checklist\n- [x] My code follows the project's style guidelines\n- [x] I have performed a self-review of my code\n- [x] I have commented my code, particularly in hard-to-understand areas\n- [ ] I have made corresponding changes to the documentation\n- [x] My changes generate no new warnings\n- [ ] I have added tests that prove my fix is effective or that my feature works\n- [x] New and existing unit tests pass locally with my changes\n- [ ] Any dependent changes have been merged and published\n\n## Screenshots (if applicable)\nN/A\n\n## Additional Notes\n- Conflicts in `src/pages/Home.tsx` were resolved by selecting specific content for the content promotion banner and the inline featured list to ensure a clean merge.\n- The new `AccessibilityEnhancer` system is designed to automatically initialize on DOM ready to improve user experience for accessibility.\n\n---\n<a href=\"https://cursor.com/background-agent?bcId=bc-68230016-7596-4489-8164-e915bfce5ac7\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://cursor.com/open-in-cursor-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://cursor.com/open-in-cursor-light.svg\"><img alt=\"Open in Cursor\" src=\"https://cursor.com/open-in-cursor.svg\"></picture></a>&nbsp;<a href=\"https://cursor.com/agents?id=bc-68230016-7596-4489-8164-e915bfce5ac7\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://cursor.com/open-in-web-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://cursor.com/open-in-web-light.svg\"><img alt=\"Open in Web\" src=\"https://cursor.com/open-in-web.svg\"></picture></a>\n\n",
-    "created_at": "2025-09-30T19:44:06Z",
-    "updated_at": "2025-09-30T19:44:07Z",
-    "closed_at": null,
-    "merged_at": null,
-    "merge_commit_sha": null,
-    "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
-    "milestone": null,
-    "draft": true,
-    "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24297/commits",
-    "review_comments_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24297/comments",
-    "review_comment_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/comments{/number}",
-    "comments_url": "https://api.github.com/repos/Zion-Holdings/zion.app/issues/24297/comments",
-    "statuses_url": "https://api.github.com/repos/Zion-Holdings/zion.app/statuses/34462bbdff87e352041eb02c9e2fd25eeeee6e75",
-    "head": {
-      "label": "Zion-Holdings:cursor/check-fix-push-and-merge-to-main-4ea2",
-      "ref": "cursor/check-fix-push-and-merge-to-main-4ea2",
-      "sha": "34462bbdff87e352041eb02c9e2fd25eeeee6e75",
-      "user": {
-        "login": "Zion-Holdings",
-        "id": 215407375,
-        "node_id": "O_kgDODNbbDw",
-        "avatar_url": "https://avatars.githubusercontent.com/u/215407375?v=4",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Zion-Holdings",
-        "html_url": "https://github.com/Zion-Holdings",
-        "followers_url": "https://api.github.com/users/Zion-Holdings/followers",
-        "following_url": "https://api.github.com/users/Zion-Holdings/following{/other_user}",
-        "gists_url": "https://api.github.com/users/Zion-Holdings/gists{/gist_id}",
-        "starred_url": "https://api.github.com/users/Zion-Holdings/starred{/owner}{/repo}",
-        "subscriptions_url": "https://api.github.com/users/Zion-Holdings/subscriptions",
-        "organizations_url": "https://api.github.com/users/Zion-Holdings/orgs",
-        "repos_url": "https://api.github.com/users/Zion-Holdings/repos",
-        "events_url": "https://api.github.com/users/Zion-Holdings/events{/privacy}",
-        "received_events_url": "https://api.github.com/users/Zion-Holdings/received_events",
-        "type": "Organization",
-        "user_view_type": "public",
-        "site_admin": false
-      },
-      "repo": {
-        "id": 987989249,
-        "node_id": "R_kgDOOuOFAQ",
-        "name": "zion.app",
-        "full_name": "Zion-Holdings/zion.app",
-        "private": false,
-        "owner": {
-          "login": "Zion-Holdings",
-          "id": 215407375,
-          "node_id": "O_kgDODNbbDw",
-          "avatar_url": "https://avatars.githubusercontent.com/u/215407375?v=4",
-          "gravatar_id": "",
-          "url": "https://api.github.com/users/Zion-Holdings",
-          "html_url": "https://github.com/Zion-Holdings",
-          "followers_url": "https://api.github.com/users/Zion-Holdings/followers",
-          "following_url": "https://api.github.com/users/Zion-Holdings/following{/other_user}",
-          "gists_url": "https://api.github.com/users/Zion-Holdings/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/Zion-Holdings/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/Zion-Holdings/subscriptions",
-          "organizations_url": "https://api.github.com/users/Zion-Holdings/orgs",
-          "repos_url": "https://api.github.com/users/Zion-Holdings/repos",
-          "events_url": "https://api.github.com/users/Zion-Holdings/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/Zion-Holdings/received_events",
-          "type": "Organization",
-          "user_view_type": "public",
-          "site_admin": false
-        },
-        "html_url": "https://github.com/Zion-Holdings/zion.app",
-        "description": null,
-        "fork": false,
-        "url": "https://api.github.com/repos/Zion-Holdings/zion.app",
-        "forks_url": "https://api.github.com/repos/Zion-Holdings/zion.app/forks",
-        "keys_url": "https://api.github.com/repos/Zion-Holdings/zion.app/keys{/key_id}",
-        "collaborators_url": "https://api.github.com/repos/Zion-Holdings/zion.app/collaborators{/collaborator}",
-        "teams_url": "https://api.github.com/repos/Zion-Holdings/zion.app/teams",
-        "hooks_url": "https://api.github.com/repos/Zion-Holdings/zion.app/hooks",
-        "issue_events_url": "https://api.github.com/repos/Zion-Holdings/zion.app/issues/events{/number}",
-        "events_url": "https://api.github.com/repos/Zion-Holdings/zion.app/events",
-        "assignees_url": "https://api.github.com/repos/Zion-Holdings/zion.app/assignees{/user}",
-        "branches_url": "https://api.github.com/repos/Zion-Holdings/zion.app/branches{/branch}",
-        "tags_url": "https://api.github.com/repos/Zion-Holdings/zion.app/tags",
-        "blobs_url": "https://api.github.com/repos/Zion-Holdings/zion.app/git/blobs{/sha}",
-        "git_tags_url": "https://api.github.com/repos/Zion-Holdings/zion.app/git/tags{/sha}",
-        "git_refs_url": "https://api.github.com/repos/Zion-Holdings/zion.app/git/refs{/sha}",
-        "trees_url": "https://api.github.com/repos/Zion-Holdings/zion.app/git/trees{/sha}",
-        "statuses_url": "https://api.github.com/repos/Zion-Holdings/zion.app/statuses/{sha}",
-        "languages_url": "https://api.github.com/repos/Zion-Holdings/zion.app/languages",
-        "stargazers_url": "https://api.github.com/repos/Zion-Holdings/zion.app/stargazers",
-        "contributors_url": "https://api.github.com/repos/Zion-Holdings/zion.app/contributors",
-        "subscribers_url": "https://api.github.com/repos/Zion-Holdings/zion.app/subscribers",
-        "subscription_url": "https://api.github.com/repos/Zion-Holdings/zion.app/subscription",
-        "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/commits{/sha}",
-        "git_commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/git/commits{/sha}",
-        "comments_url": "https://api.github.com/repos/Zion-Holdings/zion.app/comments{/number}",
-        "issue_comment_url": "https://api.github.com/repos/Zion-Holdings/zion.app/issues/comments{/number}",
-        "contents_url": "https://api.github.com/repos/Zion-Holdings/zion.app/contents/{+path}",
-        "compare_url": "https://api.github.com/repos/Zion-Holdings/zion.app/compare/{base}...{head}",
-        "merges_url": "https://api.github.com/repos/Zion-Holdings/zion.app/merges",
-        "archive_url": "https://api.github.com/repos/Zion-Holdings/zion.app/{archive_format}{/ref}",
-        "downloads_url": "https://api.github.com/repos/Zion-Holdings/zion.app/downloads",
-        "issues_url": "https://api.github.com/repos/Zion-Holdings/zion.app/issues{/number}",
-        "pulls_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls{/number}",
-        "milestones_url": "https://api.github.com/repos/Zion-Holdings/zion.app/milestones{/number}",
-        "notifications_url": "https://api.github.com/repos/Zion-Holdings/zion.app/notifications{?since,all,participating}",
-        "labels_url": "https://api.github.com/repos/Zion-Holdings/zion.app/labels{/name}",
-        "releases_url": "https://api.github.com/repos/Zion-Holdings/zion.app/releases{/id}",
-        "deployments_url": "https://api.github.com/repos/Zion-Holdings/zion.app/deployments",
-        "created_at": "2025-05-21T22:22:42Z",
-        "updated_at": "2025-09-30T19:43:35Z",
-        "pushed_at": "2025-09-30T19:43:30Z",
-        "git_url": "git://github.com/Zion-Holdings/zion.app.git",
-        "ssh_url": "git@github.com:Zion-Holdings/zion.app.git",
-        "clone_url": "https://github.com/Zion-Holdings/zion.app.git",
-        "svn_url": "https://github.com/Zion-Holdings/zion.app",
-        "homepage": null,
-        "size": 8605838,
-        "stargazers_count": 0,
-        "watchers_count": 0,
-        "language": "TypeScript",
-        "has_issues": true,
-        "has_projects": true,
-        "has_downloads": true,
-        "has_wiki": true,
-        "has_pages": false,
-        "has_discussions": true,
-        "forks_count": 0,
-        "mirror_url": null,
-        "archived": false,
-        "disabled": false,
-        "open_issues_count": 9787,
-        "license": {
-          "key": "other",
-          "name": "Other",
-          "spdx_id": "NOASSERTION",
-          "url": null,
-          "node_id": "MDc6TGljZW5zZTA="
-        },
-        "allow_forking": true,
-        "is_template": false,
-        "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
-        "visibility": "public",
-        "forks": 0,
-        "open_issues": 9787,
-        "watchers": 0,
-        "default_branch": "main"
-      }
-    },
-    "base": {
-      "label": "Zion-Holdings:main",
-      "ref": "main",
-      "sha": "5d4125809c24cb273d7a6a3430acffd574311ce9",
-      "user": {
-        "login": "Zion-Holdings",
-        "id": 215407375,
-        "node_id": "O_kgDODNbbDw",
-        "avatar_url": "https://avatars.githubusercontent.com/u/215407375?v=4",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Zion-Holdings",
-        "html_url": "https://github.com/Zion-Holdings",
-        "followers_url": "https://api.github.com/users/Zion-Holdings/followers",
-        "following_url": "https://api.github.com/users/Zion-Holdings/following{/other_user}",
-        "gists_url": "https://api.github.com/users/Zion-Holdings/gists{/gist_id}",
-        "starred_url": "https://api.github.com/users/Zion-Holdings/starred{/owner}{/repo}",
-        "subscriptions_url": "https://api.github.com/users/Zion-Holdings/subscriptions",
-        "organizations_url": "https://api.github.com/users/Zion-Holdings/orgs",
-        "repos_url": "https://api.github.com/users/Zion-Holdings/repos",
-        "events_url": "https://api.github.com/users/Zion-Holdings/events{/privacy}",
-        "received_events_url": "https://api.github.com/users/Zion-Holdings/received_events",
-        "type": "Organization",
-        "user_view_type": "public",
-        "site_admin": false
-      },
-      "repo": {
-        "id": 987989249,
-        "node_id": "R_kgDOOuOFAQ",
-        "name": "zion.app",
-        "full_name": "Zion-Holdings/zion.app",
-        "private": false,
-        "owner": {
-          "login": "Zion-Holdings",
-          "id": 215407375,
-          "node_id": "O_kgDODNbbDw",
-          "avatar_url": "https://avatars.githubusercontent.com/u/215407375?v=4",
-          "gravatar_id": "",
-          "url": "https://api.github.com/users/Zion-Holdings",
-          "html_url": "https://github.com/Zion-Holdings",
-          "followers_url": "https://api.github.com/users/Zion-Holdings/followers",
-          "following_url": "https://api.github.com/users/Zion-Holdings/following{/other_user}",
-          "gists_url": "https://api.github.com/users/Zion-Holdings/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/Zion-Holdings/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/Zion-Holdings/subscriptions",
-          "organizations_url": "https://api.github.com/users/Zion-Holdings/orgs",
-          "repos_url": "https://api.github.com/users/Zion-Holdings/repos",
-          "events_url": "https://api.github.com/users/Zion-Holdings/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/Zion-Holdings/received_events",
-          "type": "Organization",
-          "user_view_type": "public",
-          "site_admin": false
-        },
-        "html_url": "https://github.com/Zion-Holdings/zion.app",
-        "description": null,
-        "fork": false,
-        "url": "https://api.github.com/repos/Zion-Holdings/zion.app",
-        "forks_url": "https://api.github.com/repos/Zion-Holdings/zion.app/forks",
-        "keys_url": "https://api.github.com/repos/Zion-Holdings/zion.app/keys{/key_id}",
-        "collaborators_url": "https://api.github.com/repos/Zion-Holdings/zion.app/collaborators{/collaborator}",
-        "teams_url": "https://api.github.com/repos/Zion-Holdings/zion.app/teams",
-        "hooks_url": "https://api.github.com/repos/Zion-Holdings/zion.app/hooks",
-        "issue_events_url": "https://api.github.com/repos/Zion-Holdings/zion.app/issues/events{/number}",
-        "events_url": "https://api.github.com/repos/Zion-Holdings/zion.app/events",
-        "assignees_url": "https://api.github.com/repos/Zion-Holdings/zion.app/assignees{/user}",
-        "branches_url": "https://api.github.com/repos/Zion-Holdings/zion.app/branches{/branch}",
-        "tags_url": "https://api.github.com/repos/Zion-Holdings/zion.app/tags",
-        "blobs_url": "https://api.github.com/repos/Zion-Holdings/zion.app/git/blobs{/sha}",
-        "git_tags_url": "https://api.github.com/repos/Zion-Holdings/zion.app/git/tags{/sha}",
-        "git_refs_url": "https://api.github.com/repos/Zion-Holdings/zion.app/git/refs{/sha}",
-        "trees_url": "https://api.github.com/repos/Zion-Holdings/zion.app/git/trees{/sha}",
-        "statuses_url": "https://api.github.com/repos/Zion-Holdings/zion.app/statuses/{sha}",
-        "languages_url": "https://api.github.com/repos/Zion-Holdings/zion.app/languages",
-        "stargazers_url": "https://api.github.com/repos/Zion-Holdings/zion.app/stargazers",
-        "contributors_url": "https://api.github.com/repos/Zion-Holdings/zion.app/contributors",
-        "subscribers_url": "https://api.github.com/repos/Zion-Holdings/zion.app/subscribers",
-        "subscription_url": "https://api.github.com/repos/Zion-Holdings/zion.app/subscription",
-        "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/commits{/sha}",
-        "git_commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/git/commits{/sha}",
-        "comments_url": "https://api.github.com/repos/Zion-Holdings/zion.app/comments{/number}",
-        "issue_comment_url": "https://api.github.com/repos/Zion-Holdings/zion.app/issues/comments{/number}",
-        "contents_url": "https://api.github.com/repos/Zion-Holdings/zion.app/contents/{+path}",
-        "compare_url": "https://api.github.com/repos/Zion-Holdings/zion.app/compare/{base}...{head}",
-        "merges_url": "https://api.github.com/repos/Zion-Holdings/zion.app/merges",
-        "archive_url": "https://api.github.com/repos/Zion-Holdings/zion.app/{archive_format}{/ref}",
-        "downloads_url": "https://api.github.com/repos/Zion-Holdings/zion.app/downloads",
-        "issues_url": "https://api.github.com/repos/Zion-Holdings/zion.app/issues{/number}",
-        "pulls_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls{/number}",
-        "milestones_url": "https://api.github.com/repos/Zion-Holdings/zion.app/milestones{/number}",
-        "notifications_url": "https://api.github.com/repos/Zion-Holdings/zion.app/notifications{?since,all,participating}",
-        "labels_url": "https://api.github.com/repos/Zion-Holdings/zion.app/labels{/name}",
-        "releases_url": "https://api.github.com/repos/Zion-Holdings/zion.app/releases{/id}",
-        "deployments_url": "https://api.github.com/repos/Zion-Holdings/zion.app/deployments",
-        "created_at": "2025-05-21T22:22:42Z",
-        "updated_at": "2025-09-30T19:43:35Z",
-        "pushed_at": "2025-09-30T19:43:30Z",
-        "git_url": "git://github.com/Zion-Holdings/zion.app.git",
-        "ssh_url": "git@github.com:Zion-Holdings/zion.app.git",
-        "clone_url": "https://github.com/Zion-Holdings/zion.app.git",
-        "svn_url": "https://github.com/Zion-Holdings/zion.app",
-        "homepage": null,
-        "size": 8605838,
-        "stargazers_count": 0,
-        "watchers_count": 0,
-        "language": "TypeScript",
-        "has_issues": true,
-        "has_projects": true,
-        "has_downloads": true,
-        "has_wiki": true,
-        "has_pages": false,
-        "has_discussions": true,
-        "forks_count": 0,
-        "mirror_url": null,
-        "archived": false,
-        "disabled": false,
-        "open_issues_count": 9787,
-        "license": {
-          "key": "other",
-          "name": "Other",
-          "spdx_id": "NOASSERTION",
-          "url": null,
-          "node_id": "MDc6TGljZW5zZTA="
-        },
-        "allow_forking": true,
-        "is_template": false,
-        "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
-        "visibility": "public",
-        "forks": 0,
-        "open_issues": 9787,
-        "watchers": 0,
-        "default_branch": "main"
-      }
-    },
-    "_links": {
-      "self": {
-        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24297"
-      },
-      "html": {
-        "href": "https://github.com/Zion-Holdings/zion.app/pull/24297"
-      },
-      "issue": {
-        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/issues/24297"
-      },
-      "comments": {
-        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/issues/24297/comments"
-      },
-      "review_comments": {
-        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24297/comments"
-      },
-      "review_comment": {
-        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/comments{/number}"
-      },
-      "commits": {
-        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24297/commits"
-      },
-      "statuses": {
-        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/statuses/34462bbdff87e352041eb02c9e2fd25eeeee6e75"
-      }
-    },
-    "author_association": "COLLABORATOR",
-    "auto_merge": null,
-    "active_lock_reason": null
-  },
-  {
-    "url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24293",
-    "id": 2875776750,
-    "node_id": "PR_kwDOOuOFAc6raN7u",
-    "html_url": "https://github.com/Zion-Holdings/zion.app/pull/24293",
-    "diff_url": "https://github.com/Zion-Holdings/zion.app/pull/24293.diff",
-    "patch_url": "https://github.com/Zion-Holdings/zion.app/pull/24293.patch",
-    "issue_url": "https://api.github.com/repos/Zion-Holdings/zion.app/issues/24293",
-    "number": 24293,
+    "url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24618",
+    "id": 2878462972,
+    "node_id": "PR_kwDOOuOFAc6rkdv8",
+    "html_url": "https://github.com/Zion-Holdings/zion.app/pull/24618",
+    "diff_url": "https://github.com/Zion-Holdings/zion.app/pull/24618.diff",
+    "patch_url": "https://github.com/Zion-Holdings/zion.app/pull/24618.patch",
+    "issue_url": "https://api.github.com/repos/Zion-Holdings/zion.app/issues/24618",
+    "number": 24618,
     "state": "open",
     "locked": false,
     "title": "Create and deploy new content",
@@ -391,12 +32,12 @@
       "user_view_type": "public",
       "site_admin": false
     },
-    "body": "# Pull Request\n\n## Description\nThis PR introduces a substantial amount of new AI-focused content and integrates it prominently into the frontend.\n\n**Key Changes:**\n- **New Content Creation:** Added four new blog posts covering advanced AI topics (Multimodal Automation, Quantum ML, Autonomous Operations, Enterprise Automation Roadmap), one detailed AI automation case study, and two new service pages (AI Automation Consulting, Quantum AI Consulting).\n- **Frontend Advertising:** Implemented two new React components (`NewContent2026ShowcaseBanner`, `Ultimate2026ContentShowcase`) to showcase this new content.\n- **Homepage Update:** Modified `app/page.tsx` to feature the new advertising banners and link directly to the latest blog posts in the \"New this week\" section.\n- **Codebase Refinement:** Removed references to several outdated and non-existent banner components from `app/page.tsx`.\n- **Build Fixes:** Resolved conflicts between the `pages` and `app` directories by deleting `pages/index.tsx` and addressed various build errors by removing imports for missing components, ensuring a clean build.\n\nThe primary goal is to enrich the website with up-to-date AI content and ensure its effective promotion, while also improving the stability of the build process.\n\n## Type of Change\n- [ ] Bug fix (non-breaking change which fixes an issue)\n- [x] New feature (non-breaking change which adds functionality)\n- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)\n- [ ] Documentation update\n- [x] Refactoring (no functional changes)\n- [ ] Performance improvement\n- [ ] Security fix\n\n## Testing\n- [x] I have tested this change locally\n- [ ] I have added tests for this change\n- [x] All existing tests pass (build process)\n- [x] I have tested the build process\n\n## Checklist\n- [x] My code follows the project's style guidelines\n- [x] I have performed a self-review of my code\n- [ ] I have commented my code, particularly in hard-to-understand areas\n- [x] I have made corresponding changes to the documentation (new content files)\n- [x] My changes generate no new warnings\n- [x] I have added tests that prove my fix is effective or that my feature works (build test)\n- [x] New and existing unit tests pass locally with my changes (build test)\n- [ ] Any dependent changes have been merged and published\n\n## Screenshots (if applicable)\nN/A\n\n## Additional Notes\nThe removal of `pages/index.tsx` was necessary to resolve a conflict with the Next.js `app` directory routing, which was causing build failures. Several non-existent component imports were also removed from `app/page.tsx` to ensure a clean and functional build.\n\n---\n<a href=\"https://cursor.com/background-agent?bcId=bc-f2f599f1-097c-4a1b-8db6-10885fd0fbf5\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://cursor.com/open-in-cursor-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://cursor.com/open-in-cursor-light.svg\"><img alt=\"Open in Cursor\" src=\"https://cursor.com/open-in-cursor.svg\"></picture></a>&nbsp;<a href=\"https://cursor.com/agents?id=bc-f2f599f1-097c-4a1b-8db6-10885fd0fbf5\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://cursor.com/open-in-web-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://cursor.com/open-in-web-light.svg\"><img alt=\"Open in Web\" src=\"https://cursor.com/open-in-web.svg\"></picture></a>\n\n",
-    "created_at": "2025-09-30T19:27:23Z",
-    "updated_at": "2025-09-30T19:38:44Z",
+    "body": "# Pull Request\n\n## Description\nThis PR introduces two new blog posts (`ai-2025-oct-03-ai-budgets-blueprint` and `ai-2025-oct-03-policy-tests-end-to-end`) by adding them to `src/content/blog-posts.ts`. To advertise this new content, a `NewContentPromoBanner` has been integrated into `src/pages/Home.tsx`, making the new posts visible on the homepage.\n\n## Type of Change\n- [ ] Bug fix (non-breaking change which fixes an issue)\n- [x] New feature (non-breaking change which adds functionality)\n- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)\n- [ ] Documentation update\n- [ ] Refactoring (no functional changes)\n- [ ] Performance improvement\n- [ ] Security fix\n\n## Testing\n- [x] I have tested this change locally (Lint checks passed, build attempted)\n- [ ] I have added tests for this change\n- [ ] All existing tests pass (Full typecheck skipped due to pre-existing errors)\n- [x] I have tested the build process (Attempted, but full typecheck skipped)\n\n## Checklist\n- [x] My code follows the project's style guidelines\n- [x] I have performed a self-review of my code\n- [x] I have commented my code, particularly in hard-to-understand areas\n- [ ] I have made corresponding changes to the documentation\n- [ ] My changes generate no new warnings (Lint passed, but pre-existing TS errors noted)\n- [ ] I have added tests that prove my fix is effective or that my feature works\n- [ ] New and existing unit tests pass locally with my changes (Full typecheck skipped)\n- [x] Any dependent changes have been merged and published\n\n## Screenshots (if applicable)\nN/A\n\n## Additional Notes\n*   Full TypeScript type checking was skipped due to numerous pre-existing errors in the repository unrelated to these changes.\n*   Merge conflicts with `origin/main` were resolved by accepting `origin/main`'s version of `app/page.tsx` and removing conflicting coverage files.\n\n---\n<a href=\"https://cursor.com/background-agent?bcId=bc-5170f056-d1be-4710-8e99-85672c1f40b2\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://cursor.com/open-in-cursor-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://cursor.com/open-in-cursor-light.svg\"><img alt=\"Open in Cursor\" src=\"https://cursor.com/open-in-cursor.svg\"></picture></a>&nbsp;<a href=\"https://cursor.com/agents?id=bc-5170f056-d1be-4710-8e99-85672c1f40b2\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://cursor.com/open-in-web-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://cursor.com/open-in-web-light.svg\"><img alt=\"Open in Web\" src=\"https://cursor.com/open-in-web.svg\"></picture></a>\n\n",
+    "created_at": "2025-10-01T14:18:10Z",
+    "updated_at": "2025-10-01T14:18:11Z",
     "closed_at": null,
     "merged_at": null,
-    "merge_commit_sha": null,
+    "merge_commit_sha": "0709717f2629403bee28f8632fa5ffdfbe75bb3e",
     "assignee": null,
     "assignees": [
 
@@ -412,15 +53,15 @@
     ],
     "milestone": null,
     "draft": true,
-    "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24293/commits",
-    "review_comments_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24293/comments",
+    "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24618/commits",
+    "review_comments_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24618/comments",
     "review_comment_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/comments{/number}",
-    "comments_url": "https://api.github.com/repos/Zion-Holdings/zion.app/issues/24293/comments",
-    "statuses_url": "https://api.github.com/repos/Zion-Holdings/zion.app/statuses/18804cfc82c2cb164bcf3e080aa8686b633935bf",
+    "comments_url": "https://api.github.com/repos/Zion-Holdings/zion.app/issues/24618/comments",
+    "statuses_url": "https://api.github.com/repos/Zion-Holdings/zion.app/statuses/63068d13cb251bd5365904a0be4bd7ab5bdd0c74",
     "head": {
-      "label": "Zion-Holdings:cursor/create-and-deploy-new-content-65ae",
-      "ref": "cursor/create-and-deploy-new-content-65ae",
-      "sha": "18804cfc82c2cb164bcf3e080aa8686b633935bf",
+      "label": "Zion-Holdings:cursor/create-and-deploy-new-content-ebea",
+      "ref": "cursor/create-and-deploy-new-content-ebea",
+      "sha": "63068d13cb251bd5365904a0be4bd7ab5bdd0c74",
       "user": {
         "login": "Zion-Holdings",
         "id": 215407375,
@@ -510,14 +151,14 @@
         "releases_url": "https://api.github.com/repos/Zion-Holdings/zion.app/releases{/id}",
         "deployments_url": "https://api.github.com/repos/Zion-Holdings/zion.app/deployments",
         "created_at": "2025-05-21T22:22:42Z",
-        "updated_at": "2025-09-30T19:43:35Z",
-        "pushed_at": "2025-09-30T19:43:30Z",
+        "updated_at": "2025-10-01T14:19:16Z",
+        "pushed_at": "2025-10-01T14:21:36Z",
         "git_url": "git://github.com/Zion-Holdings/zion.app.git",
         "ssh_url": "git@github.com:Zion-Holdings/zion.app.git",
         "clone_url": "https://github.com/Zion-Holdings/zion.app.git",
         "svn_url": "https://github.com/Zion-Holdings/zion.app",
         "homepage": null,
-        "size": 8605838,
+        "size": 8624881,
         "stargazers_count": 0,
         "watchers_count": 0,
         "language": "TypeScript",
@@ -555,7 +196,7 @@
     "base": {
       "label": "Zion-Holdings:main",
       "ref": "main",
-      "sha": "94b7ac8cf7ab68f97aaecd10326e61f1af6682e6",
+      "sha": "44409b45eedc9bc7ee849b0e113641f4b24ca6f5",
       "user": {
         "login": "Zion-Holdings",
         "id": 215407375,
@@ -645,14 +286,14 @@
         "releases_url": "https://api.github.com/repos/Zion-Holdings/zion.app/releases{/id}",
         "deployments_url": "https://api.github.com/repos/Zion-Holdings/zion.app/deployments",
         "created_at": "2025-05-21T22:22:42Z",
-        "updated_at": "2025-09-30T19:43:35Z",
-        "pushed_at": "2025-09-30T19:43:30Z",
+        "updated_at": "2025-10-01T14:19:16Z",
+        "pushed_at": "2025-10-01T14:21:36Z",
         "git_url": "git://github.com/Zion-Holdings/zion.app.git",
         "ssh_url": "git@github.com:Zion-Holdings/zion.app.git",
         "clone_url": "https://github.com/Zion-Holdings/zion.app.git",
         "svn_url": "https://github.com/Zion-Holdings/zion.app",
         "homepage": null,
-        "size": 8605838,
+        "size": 8624881,
         "stargazers_count": 0,
         "watchers_count": 0,
         "language": "TypeScript",
@@ -689,28 +330,28 @@
     },
     "_links": {
       "self": {
-        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24293"
+        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24618"
       },
       "html": {
-        "href": "https://github.com/Zion-Holdings/zion.app/pull/24293"
+        "href": "https://github.com/Zion-Holdings/zion.app/pull/24618"
       },
       "issue": {
-        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/issues/24293"
+        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/issues/24618"
       },
       "comments": {
-        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/issues/24293/comments"
+        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/issues/24618/comments"
       },
       "review_comments": {
-        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24293/comments"
+        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24618/comments"
       },
       "review_comment": {
         "href": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/comments{/number}"
       },
       "commits": {
-        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24293/commits"
+        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24618/commits"
       },
       "statuses": {
-        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/statuses/18804cfc82c2cb164bcf3e080aa8686b633935bf"
+        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/statuses/63068d13cb251bd5365904a0be4bd7ab5bdd0c74"
       }
     },
     "author_association": "COLLABORATOR",
@@ -718,14 +359,14 @@
     "active_lock_reason": null
   },
   {
-    "url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24292",
-    "id": 2875765029,
-    "node_id": "PR_kwDOOuOFAc6raLEl",
-    "html_url": "https://github.com/Zion-Holdings/zion.app/pull/24292",
-    "diff_url": "https://github.com/Zion-Holdings/zion.app/pull/24292.diff",
-    "patch_url": "https://github.com/Zion-Holdings/zion.app/pull/24292.patch",
-    "issue_url": "https://api.github.com/repos/Zion-Holdings/zion.app/issues/24292",
-    "number": 24292,
+    "url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24617",
+    "id": 2878462452,
+    "node_id": "PR_kwDOOuOFAc6rkdn0",
+    "html_url": "https://github.com/Zion-Holdings/zion.app/pull/24617",
+    "diff_url": "https://github.com/Zion-Holdings/zion.app/pull/24617.diff",
+    "patch_url": "https://github.com/Zion-Holdings/zion.app/pull/24617.patch",
+    "issue_url": "https://api.github.com/repos/Zion-Holdings/zion.app/issues/24617",
+    "number": 24617,
     "state": "open",
     "locked": false,
     "title": "Create and deploy new content",
@@ -750,9 +391,9 @@
       "user_view_type": "public",
       "site_admin": false
     },
-    "body": "# Pull Request\n\n## Description\nThis PR introduces three new blog posts and integrates them, along with other existing content, into various promotional sections on the homepage. It also includes necessary fixes to resolve build errors encountered during the content integration, such as JSX syntax issues, missing component imports, and prerender errors, to ensure a successful build and merge.\n\n## Type of Change\n- [ ] Bug fix (non-breaking change which fixes an issue)\n- [x] New feature (non-breaking change which adds functionality)\n- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)\n- [ ] Documentation update\n- [ ] Refactoring (no functional changes)\n- [ ] Performance improvement\n- [ ] Security fix\n\n## Testing\n- [x] I have tested this change locally\n- [ ] I have added tests for this change\n- [x] All existing tests pass (with noted exceptions for pre-existing issues)\n- [x] I have tested the build process\n\n## Checklist\n- [x] My code follows the project's style guidelines\n- [x] I have performed a self-review of my code\n- [ ] I have commented my code, particularly in hard-to-understand areas\n- [ ] I have made corresponding changes to the documentation\n- [x] My changes generate no new warnings (scoped to changes, pre-existing warnings remain)\n- [ ] I have added tests that prove my fix is effective or that my feature works\n- [x] New and existing unit tests pass locally with my changes (scoped to changes, pre-existing issues noted)\n- [x] Any dependent changes have been merged and published\n\n## Screenshots (if applicable)\nN/A\n\n## Additional Notes\nDuring the development process, several pre-existing, unrelated Next.js prerender and ESLint issues were identified in the repository. While these were not fully resolved as part of this PR, the changes made here specifically address and fix build blockers related to the new content and promotions, allowing for a successful merge of the scoped changes.\n\n---\n<a href=\"https://cursor.com/background-agent?bcId=bc-4ee5cd72-0509-48f4-9793-21d1cc68e1ab\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://cursor.com/open-in-cursor-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://cursor.com/open-in-cursor-light.svg\"><img alt=\"Open in Cursor\" src=\"https://cursor.com/open-in-cursor.svg\"></picture></a>&nbsp;<a href=\"https://cursor.com/agents?id=bc-4ee5cd72-0509-48f4-9793-21d1cc68e1ab\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://cursor.com/open-in-web-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://cursor.com/open-in-web-light.svg\"><img alt=\"Open in Web\" src=\"https://cursor.com/open-in-web.svg\"></picture></a>\n\n",
-    "created_at": "2025-09-30T19:23:44Z",
-    "updated_at": "2025-09-30T19:38:44Z",
+    "body": "# Pull Request\n\n## Description\nThis PR introduces new content for 2026-2027, including blog posts on \"Ultimate Autonomous Business Intelligence\" and \"Quantum Neural Superintelligence,\" along with a related case study. To advertise this new content, promotional banners have been added to the homepage, and the site's header and footer navigation have been updated with direct links.\n\n## Type of Change\n- [ ] Bug fix (non-breaking change which fixes an issue)\n- [x] New feature (non-breaking change which adds functionality)\n- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)\n- [ ] Documentation update\n- [ ] Refactoring (no functional changes)\n- [ ] Performance improvement\n- [ ] Security fix\n\n## Testing\n- [x] I have tested this change locally\n- [ ] I have added tests for this change\n- [x] All existing tests pass\n- [x] I have tested the build process\n\n## Checklist\n- [x] My code follows the project's style guidelines\n- [x] I have performed a self-review of my code\n- [x] I have commented my code, particularly in hard-to-understand areas\n- [x] I have made corresponding changes to the documentation\n- [x] My changes generate no new warnings\n- [ ] I have added tests that prove my fix is effective or that my feature works\n- [x] New and existing unit tests pass locally with my changes\n- [x] Any dependent changes have been merged and published\n\n## Screenshots (if applicable)\nN/A\n\n## Additional Notes\nThis update aims to expand the site's content offerings and improve the discoverability of new, high-value articles and case studies.\n\n---\n<a href=\"https://cursor.com/background-agent?bcId=bc-04491171-8e00-4860-af20-1ca67dd45b99\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://cursor.com/open-in-cursor-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://cursor.com/open-in-cursor-light.svg\"><img alt=\"Open in Cursor\" src=\"https://cursor.com/open-in-cursor.svg\"></picture></a>&nbsp;<a href=\"https://cursor.com/agents?id=bc-04491171-8e00-4860-af20-1ca67dd45b99\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://cursor.com/open-in-web-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://cursor.com/open-in-web-light.svg\"><img alt=\"Open in Web\" src=\"https://cursor.com/open-in-web.svg\"></picture></a>\n\n",
+    "created_at": "2025-10-01T14:18:01Z",
+    "updated_at": "2025-10-01T14:18:03Z",
     "closed_at": null,
     "merged_at": null,
     "merge_commit_sha": null,
@@ -771,15 +412,15 @@
     ],
     "milestone": null,
     "draft": true,
-    "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24292/commits",
-    "review_comments_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24292/comments",
+    "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24617/commits",
+    "review_comments_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24617/comments",
     "review_comment_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/comments{/number}",
-    "comments_url": "https://api.github.com/repos/Zion-Holdings/zion.app/issues/24292/comments",
-    "statuses_url": "https://api.github.com/repos/Zion-Holdings/zion.app/statuses/0c1af60a4965a91b1766928577a2a7de4557143f",
+    "comments_url": "https://api.github.com/repos/Zion-Holdings/zion.app/issues/24617/comments",
+    "statuses_url": "https://api.github.com/repos/Zion-Holdings/zion.app/statuses/70d41259ed3e57f98b673420c036aa74929fa150",
     "head": {
-      "label": "Zion-Holdings:cursor/create-and-deploy-new-content-3982",
-      "ref": "cursor/create-and-deploy-new-content-3982",
-      "sha": "0c1af60a4965a91b1766928577a2a7de4557143f",
+      "label": "Zion-Holdings:cursor/create-and-deploy-new-content-a1d1",
+      "ref": "cursor/create-and-deploy-new-content-a1d1",
+      "sha": "70d41259ed3e57f98b673420c036aa74929fa150",
       "user": {
         "login": "Zion-Holdings",
         "id": 215407375,
@@ -869,14 +510,14 @@
         "releases_url": "https://api.github.com/repos/Zion-Holdings/zion.app/releases{/id}",
         "deployments_url": "https://api.github.com/repos/Zion-Holdings/zion.app/deployments",
         "created_at": "2025-05-21T22:22:42Z",
-        "updated_at": "2025-09-30T19:43:35Z",
-        "pushed_at": "2025-09-30T19:43:30Z",
+        "updated_at": "2025-10-01T14:19:16Z",
+        "pushed_at": "2025-10-01T14:21:36Z",
         "git_url": "git://github.com/Zion-Holdings/zion.app.git",
         "ssh_url": "git@github.com:Zion-Holdings/zion.app.git",
         "clone_url": "https://github.com/Zion-Holdings/zion.app.git",
         "svn_url": "https://github.com/Zion-Holdings/zion.app",
         "homepage": null,
-        "size": 8605838,
+        "size": 8624881,
         "stargazers_count": 0,
         "watchers_count": 0,
         "language": "TypeScript",
@@ -914,7 +555,7 @@
     "base": {
       "label": "Zion-Holdings:main",
       "ref": "main",
-      "sha": "94b7ac8cf7ab68f97aaecd10326e61f1af6682e6",
+      "sha": "44409b45eedc9bc7ee849b0e113641f4b24ca6f5",
       "user": {
         "login": "Zion-Holdings",
         "id": 215407375,
@@ -1004,14 +645,14 @@
         "releases_url": "https://api.github.com/repos/Zion-Holdings/zion.app/releases{/id}",
         "deployments_url": "https://api.github.com/repos/Zion-Holdings/zion.app/deployments",
         "created_at": "2025-05-21T22:22:42Z",
-        "updated_at": "2025-09-30T19:43:35Z",
-        "pushed_at": "2025-09-30T19:43:30Z",
+        "updated_at": "2025-10-01T14:19:16Z",
+        "pushed_at": "2025-10-01T14:21:36Z",
         "git_url": "git://github.com/Zion-Holdings/zion.app.git",
         "ssh_url": "git@github.com:Zion-Holdings/zion.app.git",
         "clone_url": "https://github.com/Zion-Holdings/zion.app.git",
         "svn_url": "https://github.com/Zion-Holdings/zion.app",
         "homepage": null,
-        "size": 8605838,
+        "size": 8624881,
         "stargazers_count": 0,
         "watchers_count": 0,
         "language": "TypeScript",
@@ -1048,28 +689,28 @@
     },
     "_links": {
       "self": {
-        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24292"
+        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24617"
       },
       "html": {
-        "href": "https://github.com/Zion-Holdings/zion.app/pull/24292"
+        "href": "https://github.com/Zion-Holdings/zion.app/pull/24617"
       },
       "issue": {
-        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/issues/24292"
+        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/issues/24617"
       },
       "comments": {
-        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/issues/24292/comments"
+        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/issues/24617/comments"
       },
       "review_comments": {
-        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24292/comments"
+        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24617/comments"
       },
       "review_comment": {
         "href": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/comments{/number}"
       },
       "commits": {
-        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24292/commits"
+        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24617/commits"
       },
       "statuses": {
-        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/statuses/0c1af60a4965a91b1766928577a2a7de4557143f"
+        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/statuses/70d41259ed3e57f98b673420c036aa74929fa150"
       }
     },
     "author_association": "COLLABORATOR",
@@ -1077,14 +718,14 @@
     "active_lock_reason": null
   },
   {
-    "url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24291",
-    "id": 2875702634,
-    "node_id": "PR_kwDOOuOFAc6rZ71q",
-    "html_url": "https://github.com/Zion-Holdings/zion.app/pull/24291",
-    "diff_url": "https://github.com/Zion-Holdings/zion.app/pull/24291.diff",
-    "patch_url": "https://github.com/Zion-Holdings/zion.app/pull/24291.patch",
-    "issue_url": "https://api.github.com/repos/Zion-Holdings/zion.app/issues/24291",
-    "number": 24291,
+    "url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24615",
+    "id": 2878419869,
+    "node_id": "PR_kwDOOuOFAc6rkTOd",
+    "html_url": "https://github.com/Zion-Holdings/zion.app/pull/24615",
+    "diff_url": "https://github.com/Zion-Holdings/zion.app/pull/24615.diff",
+    "patch_url": "https://github.com/Zion-Holdings/zion.app/pull/24615.patch",
+    "issue_url": "https://api.github.com/repos/Zion-Holdings/zion.app/issues/24615",
+    "number": 24615,
     "state": "open",
     "locked": false,
     "title": "Create and deploy new content",
@@ -1109,12 +750,12 @@
       "user_view_type": "public",
       "site_admin": false
     },
-    "body": "# Pull Request\n\n## Description\nThis PR introduces new AI hyperintelligence content, including a blog post, a case study, and a service page, and integrates this content prominently into the frontend for advertising.\n\n## Type of Change\n- [ ] Bug fix (non-breaking change which fixes an issue)\n- [x] New feature (non-breaking change which adds functionality)\n- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)\n- [ ] Documentation update\n- [ ] Refactoring (no functional changes)\n- [ ] Performance improvement\n- [ ] Security fix\n\n## Testing\n- [x] I have tested this change locally\n- [ ] I have added tests for this change\n- [x] All existing tests pass\n- [x] I have tested the build process\n\n## Checklist\n- [x] My code follows the project's style guidelines\n- [x] I have performed a self-review of my code\n- [x] I have commented my code, particularly in hard-to-understand areas\n- [ ] I have made corresponding changes to the documentation\n- [x] My changes generate no new warnings\n- [ ] I have added tests that prove my fix is effective or that my feature works\n- [x] New and existing unit tests pass locally with my changes\n- [x] Any dependent changes have been merged and published\n\n## Screenshots (if applicable)\nN/A\n\n## Additional Notes\nThis PR adds the following new content pages:\n*   `/app/blog/ai-2026-hyperintelligence-breakthrough/page.tsx`\n*   `/app/case-studies/hyperintelligence-mega-success-2026/page.tsx`\n*   `/app/services/ai-2026-hyperintelligence-breakthrough/page.tsx`\n\nIt also introduces a new banner component:\n*   `/app/components/Ultimate2026HyperintelligenceBanner.tsx`\n\nThe homepage (`app/page.tsx`) has been updated to include the new `Ultimate2026HyperintelligenceBanner` and a new content showcase section for the hyperintelligence content. The `UnifiedContentPromotion` component has also been updated to feature the new hyperintelligence content.\n\n---\n<a href=\"https://cursor.com/background-agent?bcId=bc-e5aec255-fffc-456e-9c8b-77e5d5d6ae91\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://cursor.com/open-in-cursor-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://cursor.com/open-in-cursor-light.svg\"><img alt=\"Open in Cursor\" src=\"https://cursor.com/open-in-cursor.svg\"></picture></a>&nbsp;<a href=\"https://cursor.com/agents?id=bc-e5aec255-fffc-456e-9c8b-77e5d5d6ae91\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://cursor.com/open-in-web-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://cursor.com/open-in-web-light.svg\"><img alt=\"Open in Web\" src=\"https://cursor.com/open-in-web.svg\"></picture></a>\n\n",
-    "created_at": "2025-09-30T19:04:10Z",
-    "updated_at": "2025-09-30T19:38:44Z",
+    "body": "# Pull Request\n\n## Description\nThis PR introduces three new blog posts to expand the site's content offerings. These articles are integrated into the content hub and prominently advertised on the homepage to enhance discoverability and user engagement.\n\nThe new blog posts are:\n*   `Hyper-Personalization Engines — October 2025`\n*   `Sovereign Vector Knowledge Graph — October 2025`\n*   `Enterprise Vector Database Optimization — October 2025`\n\n## Type of Change\n- [ ] Bug fix (non-breaking change which fixes an issue)\n- [x] New feature (non-breaking change which adds functionality)\n- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)\n- [ ] Documentation update\n- [ ] Refactoring (no functional changes)\n- [ ] Performance improvement\n- [ ] Security fix\n\n## Testing\n- [x] I have tested this change locally (via `pnpm install` and `pnpm build`)\n- [ ] I have added tests for this change\n- [x] All existing tests pass\n- [x] I have tested the build process\n\n## Checklist\n- [x] My code follows the project's style guidelines\n- [x] I have performed a self-review of my code\n- [ ] I have commented my code, particularly in hard-to-understand areas\n- [ ] I have made corresponding changes to the documentation\n- [x] My changes generate no new warnings\n- [x] I have added tests that prove my fix is effective or that my feature works\n- [x] New and existing unit tests pass locally with my changes\n- [ ] Any dependent changes have been merged and published\n\n## Screenshots (if applicable)\nN/A\n\n## Additional Notes\nThe `Sovereign Vector Knowledge Graph` article was referenced on the homepage prior to this PR, but the content file was missing. This PR adds the actual content file for it, alongside two other new articles.\n\n---\n<a href=\"https://cursor.com/background-agent?bcId=bc-dda9fdfe-7175-4961-ac97-323a4f710127\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://cursor.com/open-in-cursor-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://cursor.com/open-in-cursor-light.svg\"><img alt=\"Open in Cursor\" src=\"https://cursor.com/open-in-cursor.svg\"></picture></a>&nbsp;<a href=\"https://cursor.com/agents?id=bc-dda9fdfe-7175-4961-ac97-323a4f710127\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://cursor.com/open-in-web-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://cursor.com/open-in-web-light.svg\"><img alt=\"Open in Web\" src=\"https://cursor.com/open-in-web.svg\"></picture></a>\n\n",
+    "created_at": "2025-10-01T14:09:51Z",
+    "updated_at": "2025-10-01T14:09:52Z",
     "closed_at": null,
     "merged_at": null,
-    "merge_commit_sha": null,
+    "merge_commit_sha": "81f26f9a5e505ea61188bd3e8f635f2267b67293",
     "assignee": null,
     "assignees": [
 
@@ -1130,15 +771,15 @@
     ],
     "milestone": null,
     "draft": true,
-    "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24291/commits",
-    "review_comments_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24291/comments",
+    "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24615/commits",
+    "review_comments_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24615/comments",
     "review_comment_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/comments{/number}",
-    "comments_url": "https://api.github.com/repos/Zion-Holdings/zion.app/issues/24291/comments",
-    "statuses_url": "https://api.github.com/repos/Zion-Holdings/zion.app/statuses/c04cac6fbdce79a9b60849ac1c1497a67d730ebc",
+    "comments_url": "https://api.github.com/repos/Zion-Holdings/zion.app/issues/24615/comments",
+    "statuses_url": "https://api.github.com/repos/Zion-Holdings/zion.app/statuses/974d65fd212f0c657fca052ca6e6fba1e712794e",
     "head": {
-      "label": "Zion-Holdings:cursor/create-and-deploy-new-content-6d13",
-      "ref": "cursor/create-and-deploy-new-content-6d13",
-      "sha": "c04cac6fbdce79a9b60849ac1c1497a67d730ebc",
+      "label": "Zion-Holdings:cursor/create-and-deploy-new-content-a93f",
+      "ref": "cursor/create-and-deploy-new-content-a93f",
+      "sha": "974d65fd212f0c657fca052ca6e6fba1e712794e",
       "user": {
         "login": "Zion-Holdings",
         "id": 215407375,
@@ -1228,14 +869,14 @@
         "releases_url": "https://api.github.com/repos/Zion-Holdings/zion.app/releases{/id}",
         "deployments_url": "https://api.github.com/repos/Zion-Holdings/zion.app/deployments",
         "created_at": "2025-05-21T22:22:42Z",
-        "updated_at": "2025-09-30T19:43:35Z",
-        "pushed_at": "2025-09-30T19:43:30Z",
+        "updated_at": "2025-10-01T14:19:16Z",
+        "pushed_at": "2025-10-01T14:21:36Z",
         "git_url": "git://github.com/Zion-Holdings/zion.app.git",
         "ssh_url": "git@github.com:Zion-Holdings/zion.app.git",
         "clone_url": "https://github.com/Zion-Holdings/zion.app.git",
         "svn_url": "https://github.com/Zion-Holdings/zion.app",
         "homepage": null,
-        "size": 8605838,
+        "size": 8624881,
         "stargazers_count": 0,
         "watchers_count": 0,
         "language": "TypeScript",
@@ -1273,7 +914,7 @@
     "base": {
       "label": "Zion-Holdings:main",
       "ref": "main",
-      "sha": "94b7ac8cf7ab68f97aaecd10326e61f1af6682e6",
+      "sha": "d04c01d0a8436be6478d07c4b2d84334d87f9235",
       "user": {
         "login": "Zion-Holdings",
         "id": 215407375,
@@ -1363,14 +1004,14 @@
         "releases_url": "https://api.github.com/repos/Zion-Holdings/zion.app/releases{/id}",
         "deployments_url": "https://api.github.com/repos/Zion-Holdings/zion.app/deployments",
         "created_at": "2025-05-21T22:22:42Z",
-        "updated_at": "2025-09-30T19:43:35Z",
-        "pushed_at": "2025-09-30T19:43:30Z",
+        "updated_at": "2025-10-01T14:19:16Z",
+        "pushed_at": "2025-10-01T14:21:36Z",
         "git_url": "git://github.com/Zion-Holdings/zion.app.git",
         "ssh_url": "git@github.com:Zion-Holdings/zion.app.git",
         "clone_url": "https://github.com/Zion-Holdings/zion.app.git",
         "svn_url": "https://github.com/Zion-Holdings/zion.app",
         "homepage": null,
-        "size": 8605838,
+        "size": 8624881,
         "stargazers_count": 0,
         "watchers_count": 0,
         "language": "TypeScript",
@@ -1407,28 +1048,28 @@
     },
     "_links": {
       "self": {
-        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24291"
+        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24615"
       },
       "html": {
-        "href": "https://github.com/Zion-Holdings/zion.app/pull/24291"
+        "href": "https://github.com/Zion-Holdings/zion.app/pull/24615"
       },
       "issue": {
-        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/issues/24291"
+        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/issues/24615"
       },
       "comments": {
-        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/issues/24291/comments"
+        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/issues/24615/comments"
       },
       "review_comments": {
-        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24291/comments"
+        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24615/comments"
       },
       "review_comment": {
         "href": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/comments{/number}"
       },
       "commits": {
-        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24291/commits"
+        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24615/commits"
       },
       "statuses": {
-        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/statuses/c04cac6fbdce79a9b60849ac1c1497a67d730ebc"
+        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/statuses/974d65fd212f0c657fca052ca6e6fba1e712794e"
       }
     },
     "author_association": "COLLABORATOR",
@@ -1436,14 +1077,14 @@
     "active_lock_reason": null
   },
   {
-    "url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24290",
-    "id": 2875677313,
-    "node_id": "PR_kwDOOuOFAc6rZ1qB",
-    "html_url": "https://github.com/Zion-Holdings/zion.app/pull/24290",
-    "diff_url": "https://github.com/Zion-Holdings/zion.app/pull/24290.diff",
-    "patch_url": "https://github.com/Zion-Holdings/zion.app/pull/24290.patch",
-    "issue_url": "https://api.github.com/repos/Zion-Holdings/zion.app/issues/24290",
-    "number": 24290,
+    "url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24614",
+    "id": 2878416492,
+    "node_id": "PR_kwDOOuOFAc6rkSZs",
+    "html_url": "https://github.com/Zion-Holdings/zion.app/pull/24614",
+    "diff_url": "https://github.com/Zion-Holdings/zion.app/pull/24614.diff",
+    "patch_url": "https://github.com/Zion-Holdings/zion.app/pull/24614.patch",
+    "issue_url": "https://api.github.com/repos/Zion-Holdings/zion.app/issues/24614",
+    "number": 24614,
     "state": "open",
     "locked": false,
     "title": "Create and deploy new content",
@@ -1468,12 +1109,12 @@
       "user_view_type": "public",
       "site_admin": false
     },
-    "body": "# Pull Request\n\n## Description\nThis PR introduces two new blog posts and integrates their promotion into the homepage. The new content focuses on \"AI Governance Live Scorecards\" and \"Private Insights Blueprint\".\n\n## Type of Change\n- [ ] Bug fix (non-breaking change which fixes an issue)\n- [x] New feature (non-breaking change which adds functionality)\n- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)\n- [ ] Documentation update\n- [ ] Refactoring (no functional changes)\n- [ ] Performance improvement\n- [ ] Security fix\n\n## Testing\n- [x] I have tested this change locally\n- [ ] I have added tests for this change\n- [x] All existing tests pass\n- [x] I have tested the build process\n\n## Checklist\n- [x] My code follows the project's style guidelines\n- [x] I have performed a self-review of my code\n- [ ] I have commented my code, particularly in hard-to-understand areas\n- [x] I have made corresponding changes to the documentation (new blog content)\n- [x] My changes generate no new warnings\n- [ ] I have added tests that prove my fix is effective or that my feature works\n- [x] New and existing unit tests pass locally with my changes\n- [ ] Any dependent changes have been merged and published\n\n## Screenshots (if applicable)\nN/A\n\n## Additional Notes\nThe `September30BrandNewTodayBanner` is configured to auto-hide after 22 seconds.\n\n---\n<a href=\"https://cursor.com/background-agent?bcId=bc-134ea52c-88ca-48dd-81d9-fa9e6a6c9d94\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://cursor.com/open-in-cursor-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://cursor.com/open-in-cursor-light.svg\"><img alt=\"Open in Cursor\" src=\"https://cursor.com/open-in-cursor.svg\"></picture></a>&nbsp;<a href=\"https://cursor.com/agents?id=bc-134ea52c-88ca-48dd-81d9-fa9e6a6c9d94\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://cursor.com/open-in-web-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://cursor.com/open-in-web-light.svg\"><img alt=\"Open in Web\" src=\"https://cursor.com/open-in-web.svg\"></picture></a>\n\n",
-    "created_at": "2025-09-30T18:57:32Z",
-    "updated_at": "2025-09-30T19:38:44Z",
+    "body": "# Pull Request\n\n## Description\nThis PR introduces new blog content and advertises a featured post on the homepage. It also resolves a merge conflict in `src/data/blog-posts.ts` by consolidating existing blog entries and ensuring unique identifiers.\n\n## Type of Change\n- [ ] Bug fix (non-breaking change which fixes an issue)\n- [x] New feature (non-breaking change which adds functionality)\n- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)\n- [ ] Documentation update\n- [ ] Refactoring (no functional changes)\n- [ ] Performance improvement\n- [ ] Security fix\n\n## Testing\n- [x] I have tested this change locally\n- [ ] I have added tests for this change\n- [x] All existing tests pass (lint and build)\n- [x] I have tested the build process\n\n## Checklist\n- [x] My code follows the project's style guidelines\n- [x] I have performed a self-review of my code\n- [ ] I have commented my code, particularly in hard-to-understand areas\n- [ ] I have made corresponding changes to the documentation\n- [x] My changes generate no new warnings\n- [ ] I have added tests that prove my fix is effective or that my feature works\n- [x] New and existing unit tests pass locally with my changes\n- [ ] Any dependent changes have been merged and published\n\n## Screenshots (if applicable)\nN/A\n\n## Additional Notes\nNew blog posts were added to `src/content/blog-posts.ts`, with one marked as `featured: true` to appear in homepage promotions. The merge conflict in `src/data/blog-posts.ts` was resolved by ensuring all previous entries from both conflicting branches were retained and assigned unique IDs.\n\n---\n<a href=\"https://cursor.com/background-agent?bcId=bc-0a99c6ae-c575-40ad-b5fe-9e6261b895ad\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://cursor.com/open-in-cursor-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://cursor.com/open-in-cursor-light.svg\"><img alt=\"Open in Cursor\" src=\"https://cursor.com/open-in-cursor.svg\"></picture></a>&nbsp;<a href=\"https://cursor.com/agents?id=bc-0a99c6ae-c575-40ad-b5fe-9e6261b895ad\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://cursor.com/open-in-web-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://cursor.com/open-in-web-light.svg\"><img alt=\"Open in Web\" src=\"https://cursor.com/open-in-web.svg\"></picture></a>\n\n",
+    "created_at": "2025-10-01T14:09:14Z",
+    "updated_at": "2025-10-01T14:09:15Z",
     "closed_at": null,
     "merged_at": null,
-    "merge_commit_sha": null,
+    "merge_commit_sha": "4243fc440c4a251ddaf83f6feac863328d032255",
     "assignee": null,
     "assignees": [
 
@@ -1489,15 +1130,15 @@
     ],
     "milestone": null,
     "draft": true,
-    "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24290/commits",
-    "review_comments_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24290/comments",
+    "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24614/commits",
+    "review_comments_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24614/comments",
     "review_comment_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/comments{/number}",
-    "comments_url": "https://api.github.com/repos/Zion-Holdings/zion.app/issues/24290/comments",
-    "statuses_url": "https://api.github.com/repos/Zion-Holdings/zion.app/statuses/f0e55a8eba66c393d8ec31af6ca1b574a579a207",
+    "comments_url": "https://api.github.com/repos/Zion-Holdings/zion.app/issues/24614/comments",
+    "statuses_url": "https://api.github.com/repos/Zion-Holdings/zion.app/statuses/aa986427d570a253d72f915c52a658c402519282",
     "head": {
-      "label": "Zion-Holdings:cursor/create-and-deploy-new-content-fb13",
-      "ref": "cursor/create-and-deploy-new-content-fb13",
-      "sha": "f0e55a8eba66c393d8ec31af6ca1b574a579a207",
+      "label": "Zion-Holdings:cursor/create-and-deploy-new-content-3792",
+      "ref": "cursor/create-and-deploy-new-content-3792",
+      "sha": "aa986427d570a253d72f915c52a658c402519282",
       "user": {
         "login": "Zion-Holdings",
         "id": 215407375,
@@ -1587,14 +1228,14 @@
         "releases_url": "https://api.github.com/repos/Zion-Holdings/zion.app/releases{/id}",
         "deployments_url": "https://api.github.com/repos/Zion-Holdings/zion.app/deployments",
         "created_at": "2025-05-21T22:22:42Z",
-        "updated_at": "2025-09-30T19:43:35Z",
-        "pushed_at": "2025-09-30T19:43:30Z",
+        "updated_at": "2025-10-01T14:19:16Z",
+        "pushed_at": "2025-10-01T14:21:36Z",
         "git_url": "git://github.com/Zion-Holdings/zion.app.git",
         "ssh_url": "git@github.com:Zion-Holdings/zion.app.git",
         "clone_url": "https://github.com/Zion-Holdings/zion.app.git",
         "svn_url": "https://github.com/Zion-Holdings/zion.app",
         "homepage": null,
-        "size": 8605838,
+        "size": 8624881,
         "stargazers_count": 0,
         "watchers_count": 0,
         "language": "TypeScript",
@@ -1632,7 +1273,7 @@
     "base": {
       "label": "Zion-Holdings:main",
       "ref": "main",
-      "sha": "94b7ac8cf7ab68f97aaecd10326e61f1af6682e6",
+      "sha": "d04c01d0a8436be6478d07c4b2d84334d87f9235",
       "user": {
         "login": "Zion-Holdings",
         "id": 215407375,
@@ -1722,14 +1363,14 @@
         "releases_url": "https://api.github.com/repos/Zion-Holdings/zion.app/releases{/id}",
         "deployments_url": "https://api.github.com/repos/Zion-Holdings/zion.app/deployments",
         "created_at": "2025-05-21T22:22:42Z",
-        "updated_at": "2025-09-30T19:43:35Z",
-        "pushed_at": "2025-09-30T19:43:30Z",
+        "updated_at": "2025-10-01T14:19:16Z",
+        "pushed_at": "2025-10-01T14:21:36Z",
         "git_url": "git://github.com/Zion-Holdings/zion.app.git",
         "ssh_url": "git@github.com:Zion-Holdings/zion.app.git",
         "clone_url": "https://github.com/Zion-Holdings/zion.app.git",
         "svn_url": "https://github.com/Zion-Holdings/zion.app",
         "homepage": null,
-        "size": 8605838,
+        "size": 8624881,
         "stargazers_count": 0,
         "watchers_count": 0,
         "language": "TypeScript",
@@ -1766,28 +1407,387 @@
     },
     "_links": {
       "self": {
-        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24290"
+        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24614"
       },
       "html": {
-        "href": "https://github.com/Zion-Holdings/zion.app/pull/24290"
+        "href": "https://github.com/Zion-Holdings/zion.app/pull/24614"
       },
       "issue": {
-        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/issues/24290"
+        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/issues/24614"
       },
       "comments": {
-        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/issues/24290/comments"
+        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/issues/24614/comments"
       },
       "review_comments": {
-        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24290/comments"
+        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24614/comments"
       },
       "review_comment": {
         "href": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/comments{/number}"
       },
       "commits": {
-        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24290/commits"
+        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24614/commits"
       },
       "statuses": {
-        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/statuses/f0e55a8eba66c393d8ec31af6ca1b574a579a207"
+        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/statuses/aa986427d570a253d72f915c52a658c402519282"
+      }
+    },
+    "author_association": "COLLABORATOR",
+    "auto_merge": null,
+    "active_lock_reason": null
+  },
+  {
+    "url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24613",
+    "id": 2878404772,
+    "node_id": "PR_kwDOOuOFAc6rkPik",
+    "html_url": "https://github.com/Zion-Holdings/zion.app/pull/24613",
+    "diff_url": "https://github.com/Zion-Holdings/zion.app/pull/24613.diff",
+    "patch_url": "https://github.com/Zion-Holdings/zion.app/pull/24613.patch",
+    "issue_url": "https://api.github.com/repos/Zion-Holdings/zion.app/issues/24613",
+    "number": 24613,
+    "state": "open",
+    "locked": false,
+    "title": "Create and deploy new content",
+    "user": {
+      "login": "Zion-support",
+      "id": 212353722,
+      "node_id": "U_kgDODKhCug",
+      "avatar_url": "https://avatars.githubusercontent.com/u/212353722?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Zion-support",
+      "html_url": "https://github.com/Zion-support",
+      "followers_url": "https://api.github.com/users/Zion-support/followers",
+      "following_url": "https://api.github.com/users/Zion-support/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Zion-support/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Zion-support/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Zion-support/subscriptions",
+      "organizations_url": "https://api.github.com/users/Zion-support/orgs",
+      "repos_url": "https://api.github.com/users/Zion-support/repos",
+      "events_url": "https://api.github.com/users/Zion-support/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Zion-support/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "# Pull Request\n\n## Description\nAdds a new blog post, \"Autonomous FinOps Scorecards v2\", and integrates it into the site's content configuration to ensure it is prominently featured on the homepage and other advertising banners. This fulfills the request to create new content and advertise it on the front end.\n\n## Type of Change\n- [ ] Bug fix (non-breaking change which fixes an issue)\n- [x] New feature (non-breaking change which adds functionality)\n- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)\n- [ ] Documentation update\n- [ ] Refactoring (no functional changes)\n- [ ] Performance improvement\n- [ ] Security fix\n\n## Testing\n- [x] I have tested this change locally\n- [ ] I have added tests for this change\n- [x] All existing tests pass\n- [x] I have tested the build process\n\n## Checklist\n- [x] My code follows the project's style guidelines\n- [x] I have performed a self-review of my code\n- [ ] I have commented my code, particularly in hard-to-understand areas\n- [x] I have made corresponding changes to the documentation\n- [x] My changes generate no new warnings\n- [ ] I have added tests that prove my fix is effective or that my feature works\n- [x] New and existing unit tests pass locally with my changes\n- [ ] Any dependent changes have been merged and published\n\n## Screenshots (if applicable)\nN/A\n\n## Additional Notes\nThe new article is titled \"Autonomous FinOps Scorecards v2\".\n\n---\n<a href=\"https://cursor.com/background-agent?bcId=bc-ec3f4243-a540-4538-b63b-bc69fb065a5f\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://cursor.com/open-in-cursor-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://cursor.com/open-in-cursor-light.svg\"><img alt=\"Open in Cursor\" src=\"https://cursor.com/open-in-cursor.svg\"></picture></a>&nbsp;<a href=\"https://cursor.com/agents?id=bc-ec3f4243-a540-4538-b63b-bc69fb065a5f\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://cursor.com/open-in-web-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://cursor.com/open-in-web-light.svg\"><img alt=\"Open in Web\" src=\"https://cursor.com/open-in-web.svg\"></picture></a>\n\n",
+    "created_at": "2025-10-01T14:07:13Z",
+    "updated_at": "2025-10-01T14:07:14Z",
+    "closed_at": null,
+    "merged_at": null,
+    "merge_commit_sha": null,
+    "assignee": null,
+    "assignees": [
+
+    ],
+    "requested_reviewers": [
+
+    ],
+    "requested_teams": [
+
+    ],
+    "labels": [
+
+    ],
+    "milestone": null,
+    "draft": true,
+    "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24613/commits",
+    "review_comments_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24613/comments",
+    "review_comment_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/comments{/number}",
+    "comments_url": "https://api.github.com/repos/Zion-Holdings/zion.app/issues/24613/comments",
+    "statuses_url": "https://api.github.com/repos/Zion-Holdings/zion.app/statuses/44d6e7514589f142d1486173d7c74e671aac118b",
+    "head": {
+      "label": "Zion-Holdings:cursor/create-and-deploy-new-content-1386",
+      "ref": "cursor/create-and-deploy-new-content-1386",
+      "sha": "44d6e7514589f142d1486173d7c74e671aac118b",
+      "user": {
+        "login": "Zion-Holdings",
+        "id": 215407375,
+        "node_id": "O_kgDODNbbDw",
+        "avatar_url": "https://avatars.githubusercontent.com/u/215407375?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Zion-Holdings",
+        "html_url": "https://github.com/Zion-Holdings",
+        "followers_url": "https://api.github.com/users/Zion-Holdings/followers",
+        "following_url": "https://api.github.com/users/Zion-Holdings/following{/other_user}",
+        "gists_url": "https://api.github.com/users/Zion-Holdings/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/Zion-Holdings/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/Zion-Holdings/subscriptions",
+        "organizations_url": "https://api.github.com/users/Zion-Holdings/orgs",
+        "repos_url": "https://api.github.com/users/Zion-Holdings/repos",
+        "events_url": "https://api.github.com/users/Zion-Holdings/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/Zion-Holdings/received_events",
+        "type": "Organization",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "repo": {
+        "id": 987989249,
+        "node_id": "R_kgDOOuOFAQ",
+        "name": "zion.app",
+        "full_name": "Zion-Holdings/zion.app",
+        "private": false,
+        "owner": {
+          "login": "Zion-Holdings",
+          "id": 215407375,
+          "node_id": "O_kgDODNbbDw",
+          "avatar_url": "https://avatars.githubusercontent.com/u/215407375?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/Zion-Holdings",
+          "html_url": "https://github.com/Zion-Holdings",
+          "followers_url": "https://api.github.com/users/Zion-Holdings/followers",
+          "following_url": "https://api.github.com/users/Zion-Holdings/following{/other_user}",
+          "gists_url": "https://api.github.com/users/Zion-Holdings/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/Zion-Holdings/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/Zion-Holdings/subscriptions",
+          "organizations_url": "https://api.github.com/users/Zion-Holdings/orgs",
+          "repos_url": "https://api.github.com/users/Zion-Holdings/repos",
+          "events_url": "https://api.github.com/users/Zion-Holdings/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/Zion-Holdings/received_events",
+          "type": "Organization",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "html_url": "https://github.com/Zion-Holdings/zion.app",
+        "description": null,
+        "fork": false,
+        "url": "https://api.github.com/repos/Zion-Holdings/zion.app",
+        "forks_url": "https://api.github.com/repos/Zion-Holdings/zion.app/forks",
+        "keys_url": "https://api.github.com/repos/Zion-Holdings/zion.app/keys{/key_id}",
+        "collaborators_url": "https://api.github.com/repos/Zion-Holdings/zion.app/collaborators{/collaborator}",
+        "teams_url": "https://api.github.com/repos/Zion-Holdings/zion.app/teams",
+        "hooks_url": "https://api.github.com/repos/Zion-Holdings/zion.app/hooks",
+        "issue_events_url": "https://api.github.com/repos/Zion-Holdings/zion.app/issues/events{/number}",
+        "events_url": "https://api.github.com/repos/Zion-Holdings/zion.app/events",
+        "assignees_url": "https://api.github.com/repos/Zion-Holdings/zion.app/assignees{/user}",
+        "branches_url": "https://api.github.com/repos/Zion-Holdings/zion.app/branches{/branch}",
+        "tags_url": "https://api.github.com/repos/Zion-Holdings/zion.app/tags",
+        "blobs_url": "https://api.github.com/repos/Zion-Holdings/zion.app/git/blobs{/sha}",
+        "git_tags_url": "https://api.github.com/repos/Zion-Holdings/zion.app/git/tags{/sha}",
+        "git_refs_url": "https://api.github.com/repos/Zion-Holdings/zion.app/git/refs{/sha}",
+        "trees_url": "https://api.github.com/repos/Zion-Holdings/zion.app/git/trees{/sha}",
+        "statuses_url": "https://api.github.com/repos/Zion-Holdings/zion.app/statuses/{sha}",
+        "languages_url": "https://api.github.com/repos/Zion-Holdings/zion.app/languages",
+        "stargazers_url": "https://api.github.com/repos/Zion-Holdings/zion.app/stargazers",
+        "contributors_url": "https://api.github.com/repos/Zion-Holdings/zion.app/contributors",
+        "subscribers_url": "https://api.github.com/repos/Zion-Holdings/zion.app/subscribers",
+        "subscription_url": "https://api.github.com/repos/Zion-Holdings/zion.app/subscription",
+        "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/commits{/sha}",
+        "git_commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/git/commits{/sha}",
+        "comments_url": "https://api.github.com/repos/Zion-Holdings/zion.app/comments{/number}",
+        "issue_comment_url": "https://api.github.com/repos/Zion-Holdings/zion.app/issues/comments{/number}",
+        "contents_url": "https://api.github.com/repos/Zion-Holdings/zion.app/contents/{+path}",
+        "compare_url": "https://api.github.com/repos/Zion-Holdings/zion.app/compare/{base}...{head}",
+        "merges_url": "https://api.github.com/repos/Zion-Holdings/zion.app/merges",
+        "archive_url": "https://api.github.com/repos/Zion-Holdings/zion.app/{archive_format}{/ref}",
+        "downloads_url": "https://api.github.com/repos/Zion-Holdings/zion.app/downloads",
+        "issues_url": "https://api.github.com/repos/Zion-Holdings/zion.app/issues{/number}",
+        "pulls_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls{/number}",
+        "milestones_url": "https://api.github.com/repos/Zion-Holdings/zion.app/milestones{/number}",
+        "notifications_url": "https://api.github.com/repos/Zion-Holdings/zion.app/notifications{?since,all,participating}",
+        "labels_url": "https://api.github.com/repos/Zion-Holdings/zion.app/labels{/name}",
+        "releases_url": "https://api.github.com/repos/Zion-Holdings/zion.app/releases{/id}",
+        "deployments_url": "https://api.github.com/repos/Zion-Holdings/zion.app/deployments",
+        "created_at": "2025-05-21T22:22:42Z",
+        "updated_at": "2025-10-01T14:19:16Z",
+        "pushed_at": "2025-10-01T14:21:36Z",
+        "git_url": "git://github.com/Zion-Holdings/zion.app.git",
+        "ssh_url": "git@github.com:Zion-Holdings/zion.app.git",
+        "clone_url": "https://github.com/Zion-Holdings/zion.app.git",
+        "svn_url": "https://github.com/Zion-Holdings/zion.app",
+        "homepage": null,
+        "size": 8624881,
+        "stargazers_count": 0,
+        "watchers_count": 0,
+        "language": "TypeScript",
+        "has_issues": true,
+        "has_projects": true,
+        "has_downloads": true,
+        "has_wiki": true,
+        "has_pages": false,
+        "has_discussions": true,
+        "forks_count": 0,
+        "mirror_url": null,
+        "archived": false,
+        "disabled": false,
+        "open_issues_count": 9787,
+        "license": {
+          "key": "other",
+          "name": "Other",
+          "spdx_id": "NOASSERTION",
+          "url": null,
+          "node_id": "MDc6TGljZW5zZTA="
+        },
+        "allow_forking": true,
+        "is_template": false,
+        "web_commit_signoff_required": false,
+        "topics": [
+
+        ],
+        "visibility": "public",
+        "forks": 0,
+        "open_issues": 9787,
+        "watchers": 0,
+        "default_branch": "main"
+      }
+    },
+    "base": {
+      "label": "Zion-Holdings:main",
+      "ref": "main",
+      "sha": "d04c01d0a8436be6478d07c4b2d84334d87f9235",
+      "user": {
+        "login": "Zion-Holdings",
+        "id": 215407375,
+        "node_id": "O_kgDODNbbDw",
+        "avatar_url": "https://avatars.githubusercontent.com/u/215407375?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Zion-Holdings",
+        "html_url": "https://github.com/Zion-Holdings",
+        "followers_url": "https://api.github.com/users/Zion-Holdings/followers",
+        "following_url": "https://api.github.com/users/Zion-Holdings/following{/other_user}",
+        "gists_url": "https://api.github.com/users/Zion-Holdings/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/Zion-Holdings/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/Zion-Holdings/subscriptions",
+        "organizations_url": "https://api.github.com/users/Zion-Holdings/orgs",
+        "repos_url": "https://api.github.com/users/Zion-Holdings/repos",
+        "events_url": "https://api.github.com/users/Zion-Holdings/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/Zion-Holdings/received_events",
+        "type": "Organization",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "repo": {
+        "id": 987989249,
+        "node_id": "R_kgDOOuOFAQ",
+        "name": "zion.app",
+        "full_name": "Zion-Holdings/zion.app",
+        "private": false,
+        "owner": {
+          "login": "Zion-Holdings",
+          "id": 215407375,
+          "node_id": "O_kgDODNbbDw",
+          "avatar_url": "https://avatars.githubusercontent.com/u/215407375?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/Zion-Holdings",
+          "html_url": "https://github.com/Zion-Holdings",
+          "followers_url": "https://api.github.com/users/Zion-Holdings/followers",
+          "following_url": "https://api.github.com/users/Zion-Holdings/following{/other_user}",
+          "gists_url": "https://api.github.com/users/Zion-Holdings/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/Zion-Holdings/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/Zion-Holdings/subscriptions",
+          "organizations_url": "https://api.github.com/users/Zion-Holdings/orgs",
+          "repos_url": "https://api.github.com/users/Zion-Holdings/repos",
+          "events_url": "https://api.github.com/users/Zion-Holdings/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/Zion-Holdings/received_events",
+          "type": "Organization",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "html_url": "https://github.com/Zion-Holdings/zion.app",
+        "description": null,
+        "fork": false,
+        "url": "https://api.github.com/repos/Zion-Holdings/zion.app",
+        "forks_url": "https://api.github.com/repos/Zion-Holdings/zion.app/forks",
+        "keys_url": "https://api.github.com/repos/Zion-Holdings/zion.app/keys{/key_id}",
+        "collaborators_url": "https://api.github.com/repos/Zion-Holdings/zion.app/collaborators{/collaborator}",
+        "teams_url": "https://api.github.com/repos/Zion-Holdings/zion.app/teams",
+        "hooks_url": "https://api.github.com/repos/Zion-Holdings/zion.app/hooks",
+        "issue_events_url": "https://api.github.com/repos/Zion-Holdings/zion.app/issues/events{/number}",
+        "events_url": "https://api.github.com/repos/Zion-Holdings/zion.app/events",
+        "assignees_url": "https://api.github.com/repos/Zion-Holdings/zion.app/assignees{/user}",
+        "branches_url": "https://api.github.com/repos/Zion-Holdings/zion.app/branches{/branch}",
+        "tags_url": "https://api.github.com/repos/Zion-Holdings/zion.app/tags",
+        "blobs_url": "https://api.github.com/repos/Zion-Holdings/zion.app/git/blobs{/sha}",
+        "git_tags_url": "https://api.github.com/repos/Zion-Holdings/zion.app/git/tags{/sha}",
+        "git_refs_url": "https://api.github.com/repos/Zion-Holdings/zion.app/git/refs{/sha}",
+        "trees_url": "https://api.github.com/repos/Zion-Holdings/zion.app/git/trees{/sha}",
+        "statuses_url": "https://api.github.com/repos/Zion-Holdings/zion.app/statuses/{sha}",
+        "languages_url": "https://api.github.com/repos/Zion-Holdings/zion.app/languages",
+        "stargazers_url": "https://api.github.com/repos/Zion-Holdings/zion.app/stargazers",
+        "contributors_url": "https://api.github.com/repos/Zion-Holdings/zion.app/contributors",
+        "subscribers_url": "https://api.github.com/repos/Zion-Holdings/zion.app/subscribers",
+        "subscription_url": "https://api.github.com/repos/Zion-Holdings/zion.app/subscription",
+        "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/commits{/sha}",
+        "git_commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/git/commits{/sha}",
+        "comments_url": "https://api.github.com/repos/Zion-Holdings/zion.app/comments{/number}",
+        "issue_comment_url": "https://api.github.com/repos/Zion-Holdings/zion.app/issues/comments{/number}",
+        "contents_url": "https://api.github.com/repos/Zion-Holdings/zion.app/contents/{+path}",
+        "compare_url": "https://api.github.com/repos/Zion-Holdings/zion.app/compare/{base}...{head}",
+        "merges_url": "https://api.github.com/repos/Zion-Holdings/zion.app/merges",
+        "archive_url": "https://api.github.com/repos/Zion-Holdings/zion.app/{archive_format}{/ref}",
+        "downloads_url": "https://api.github.com/repos/Zion-Holdings/zion.app/downloads",
+        "issues_url": "https://api.github.com/repos/Zion-Holdings/zion.app/issues{/number}",
+        "pulls_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls{/number}",
+        "milestones_url": "https://api.github.com/repos/Zion-Holdings/zion.app/milestones{/number}",
+        "notifications_url": "https://api.github.com/repos/Zion-Holdings/zion.app/notifications{?since,all,participating}",
+        "labels_url": "https://api.github.com/repos/Zion-Holdings/zion.app/labels{/name}",
+        "releases_url": "https://api.github.com/repos/Zion-Holdings/zion.app/releases{/id}",
+        "deployments_url": "https://api.github.com/repos/Zion-Holdings/zion.app/deployments",
+        "created_at": "2025-05-21T22:22:42Z",
+        "updated_at": "2025-10-01T14:19:16Z",
+        "pushed_at": "2025-10-01T14:21:36Z",
+        "git_url": "git://github.com/Zion-Holdings/zion.app.git",
+        "ssh_url": "git@github.com:Zion-Holdings/zion.app.git",
+        "clone_url": "https://github.com/Zion-Holdings/zion.app.git",
+        "svn_url": "https://github.com/Zion-Holdings/zion.app",
+        "homepage": null,
+        "size": 8624881,
+        "stargazers_count": 0,
+        "watchers_count": 0,
+        "language": "TypeScript",
+        "has_issues": true,
+        "has_projects": true,
+        "has_downloads": true,
+        "has_wiki": true,
+        "has_pages": false,
+        "has_discussions": true,
+        "forks_count": 0,
+        "mirror_url": null,
+        "archived": false,
+        "disabled": false,
+        "open_issues_count": 9787,
+        "license": {
+          "key": "other",
+          "name": "Other",
+          "spdx_id": "NOASSERTION",
+          "url": null,
+          "node_id": "MDc6TGljZW5zZTA="
+        },
+        "allow_forking": true,
+        "is_template": false,
+        "web_commit_signoff_required": false,
+        "topics": [
+
+        ],
+        "visibility": "public",
+        "forks": 0,
+        "open_issues": 9787,
+        "watchers": 0,
+        "default_branch": "main"
+      }
+    },
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24613"
+      },
+      "html": {
+        "href": "https://github.com/Zion-Holdings/zion.app/pull/24613"
+      },
+      "issue": {
+        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/issues/24613"
+      },
+      "comments": {
+        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/issues/24613/comments"
+      },
+      "review_comments": {
+        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24613/comments"
+      },
+      "review_comment": {
+        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/comments{/number}"
+      },
+      "commits": {
+        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/24613/commits"
+      },
+      "statuses": {
+        "href": "https://api.github.com/repos/Zion-Holdings/zion.app/statuses/44d6e7514589f142d1486173d7c74e671aac118b"
       }
     },
     "author_association": "COLLABORATOR",

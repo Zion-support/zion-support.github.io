@@ -6,7 +6,7 @@ export default function AIEdgeComputingRevolution2025() {
     <>
       <Head>
         <title>AI at the Edge: Real-Time Intelligence with 5ms Latency | Zion Tech Group</title>
-        <meta name="description" content="Discover how edge AI delivers real-time decision-making with <5ms latency, 80% bandwidth reduction, and 100% offline capability for mission-critical applications." />
+        <meta name="description" content="Discover how edge AI delivers real-time decision-making with &lt;5ms latency, 80% bandwidth reduction, and 100% offline capability for mission-critical applications." />
         <meta property="og:title" content="AI Edge Computing Revolution 2025" />
         <meta property="og:description" content="Transform your applications with edge AI delivering real-time intelligence at unprecedented speed and efficiency." />
         <meta name="twitter:card" content="summary_large_image" />
@@ -70,7 +70,7 @@ export default function AIEdgeComputingRevolution2025() {
                     <div>
                       <h4 className="text-lg font-bold text-emerald-400 mb-3">Edge AI</h4>
                       <ul className="space-y-2 text-white/70 text-sm">
-                        <li>• <5ms latency (100x faster)</li>
+                        <li>• &lt;5ms latency (100x faster)</li>
                         <li>• Works offline</li>
                         <li>• 80-95% bandwidth reduction</li>
                         <li>• Data stays local</li>
@@ -105,7 +105,7 @@ export default function AIEdgeComputingRevolution2025() {
                       and radar data in real-time, making split-second decisions for navigation and safety.
                     </p>
                     <div className="text-white/70 text-sm bg-white/5 rounded p-3 mt-3">
-                      <strong className="text-emerald-400">Impact:</strong> <5ms decision latency, 
+                      <strong className="text-emerald-400">Impact:</strong> &lt;5ms decision latency, 
                       99.999% reliability, 100% offline operation capability.
                     </div>
                   </div>

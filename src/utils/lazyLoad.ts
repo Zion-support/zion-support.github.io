@@ -1,26 +1,30 @@
 import { lazy, ComponentType } from 'react';
 
 /**
- * Enhanced lazy loading utility with retry logic and better error handling
+ * Enhanced lazy loading with retry logic for failed chunk loads
+ * Helps recover from network issues during code splitting
  */
-export function lazyLoadWithRetry<T extends ComponentType<any>>(
-  importFunc: () => Promise<{ default: T }>,
+export function lazyRetry<T extends ComponentType<any>>(
+  componentImport: () => Promise<{ default: T }>,
   retries = 3,
-  interval = 1000
-): ReturnType<typeof lazy> {
+  delay = 1000
+): React.LazyExoticComponent<T> {
   return lazy(() => {
     return new Promise<{ default: T }>((resolve, reject) => {
       const attemptLoad = (attemptsLeft: number) => {
-        importFunc()
+        componentImport()
           .then(resolve)
           .catch((error) => {
-            if (attemptsLeft === 0) {
+            if (attemptsLeft === 1) {
               reject(error);
               return;
             }
             
-            console.warn(`Failed to load component, retrying... (${attemptsLeft} attempts left)`);
-            setTimeout(() => attemptLoad(attemptsLeft - 1), interval);
+            // Wait before retrying
+            setTimeout(() => {
+              console.log(`Retrying component load... (${attemptsLeft - 1} attempts left)`);
+              attemptLoad(attemptsLeft - 1);
+            }, delay);
           });
       };
       
@@ -30,25 +34,23 @@ export function lazyLoadWithRetry<T extends ComponentType<any>>(
 }
 
 /**
- * Preload a component for faster subsequent loads
+ * Preload a component for better perceived performance
  */
-export function preloadComponent<T extends ComponentType<any>>(
-  importFunc: () => Promise<{ default: T }>
-): Promise<{ default: T }> {
-  return importFunc();
+export function preloadComponent(
+  componentImport: () => Promise<{ default: ComponentType<any> }>
+): void {
+  componentImport().catch((error) => {
+    console.warn('Failed to preload component:', error);
+  });
 }
 
 /**
- * Create a lazy-loaded component with prefetch on hover
+ * Create a lazy-loaded component with automatic retry
  */
-export function createLazyWithPrefetch<T extends ComponentType<any>>(
-  importFunc: () => Promise<{ default: T }>
-) {
-  const LazyComponent = lazyLoadWithRetry(importFunc);
-  
-  const prefetch = () => {
-    preloadComponent(importFunc);
-  };
-  
-  return { LazyComponent, prefetch };
-}
+export const createLazyComponent = <T extends ComponentType<any>>(
+  importFn: () => Promise<{ default: T }>
+) => {
+  return lazyRetry(importFn, 3, 1000);
+};
+
+export default lazyRetry;
