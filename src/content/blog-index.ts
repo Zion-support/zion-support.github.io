@@ -73,6 +73,39 @@ export const october2025Breakthroughs: BlogPost[] = [
     featured: true,
     valueProposition: '$67M annual savings',
   },
+  {
+    slug: 'ai-2025-oct-03-continuous-intelligence-platforms',
+    title: 'Continuous Intelligence 2025',
+    description: '100M+ events/sec with sub-50ms decisions, KPI scorecards, and safe rollback.',
+    category: 'Real-Time AI',
+    date: '2025-10-03',
+    readTime: '10 min',
+    tags: ['streaming', 'decisioning', 'feature store', 'KPIs'],
+    featured: true,
+    valueProposition: '$215M annual value'
+  },
+  {
+    slug: 'ai-2025-oct-03-autonomous-cloud-security',
+    title: 'Autonomous Cloud Security 2025',
+    description: '99.98% threat neutralization under 5 seconds with policy-backed automations.',
+    category: 'Security',
+    date: '2025-10-03',
+    readTime: '9 min',
+    tags: ['security', 'zero trust', 'automation', 'rollback'],
+    featured: true,
+    valueProposition: '$42M annual savings'
+  },
+  {
+    slug: 'ai-2025-oct-03-quantum-supply-chain-optimization',
+    title: 'Quantum Supply Chain 2025',
+    description: '10,000x faster plans with hybrid quantum-inspired optimization and ML heuristics.',
+    category: 'Quantum Computing',
+    date: '2025-10-03',
+    readTime: '11 min',
+    tags: ['quantum', 'optimization', 'supply chain'],
+    featured: true,
+    valueProposition: '$127M annual savings'
+  },
 ];
 
 /**
@@ -103,6 +136,7 @@ export const allBlogPosts: BlogPost[] = [
     featured: true,
     valueProposition: 'Faster deploys, safer rollbacks'
   },
+  // October 1, 2025 additions (this branch)
   {
     slug: 'edge-2025-oct-01-zero-pii-telemetry-v2',
     title: 'Zero‑PII Telemetry v2: Decision‑Grade Signals Without Centralized IDs',
@@ -124,6 +158,29 @@ export const allBlogPosts: BlogPost[] = [
     tags: ['Evals', 'Scorecards', 'Canaries', 'Guardrails'],
     featured: true,
     valueProposition: 'Protect velocity, prevent regressions'
+  },
+  // October 2, 2025 additions (from main)
+  {
+    slug: 'ai-2025-oct-02-private-experiments-blueprint',
+    title: 'Private Experiments Blueprint: Zero‑PII Testing at the Edge',
+    description: 'Run A/B tests without PII using signed configs, scoped IDs, and edge analytics under 100ms.',
+    category: 'Experimentation',
+    date: '2025-10-02',
+    readTime: '10 min',
+    tags: ['Privacy', 'Edge', 'Experiments', 'Feature Flags'],
+    featured: true,
+    valueProposition: 'Zero‑PII experiments at the edge'
+  },
+  {
+    slug: 'ai-2025-oct-02-rollback-guardrails-blueprint',
+    title: 'Runtime Rollback Guardrails Blueprint',
+    description: 'Implement instant rollbacks, canary scorecards, and objective quality budgets.',
+    category: 'Reliability',
+    date: '2025-10-02',
+    readTime: '9 min',
+    tags: ['Rollback', 'Canary', 'Guardrails', 'Budgets'],
+    featured: true,
+    valueProposition: 'Instant reversibility, resilient releases'
   },
 ];
 

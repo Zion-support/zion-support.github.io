@@ -445,7 +445,11 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: 9,
   },
   {
+<<<<<<< HEAD
+    id: '27',
+=======
     id: '200',
+>>>>>>> origin/cursor/create-and-deploy-new-content-3792
     title: 'Policy-Driven AI: Guardrails as Code for Safer Autonomy',
     slug: 'policy-driven-ai-guardrails-as-code-2025-10-02',
     excerpt:
@@ -490,7 +494,11 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: 7,
   },
   {
+<<<<<<< HEAD
+    id: '30',
+=======
     id: '203',
+>>>>>>> origin/cursor/create-and-deploy-new-content-3792
     title: 'Quantum-Safe Cryptography: Enterprise Migration Playbook (2025)',
     slug: 'quantum-safe-cryptography-enterprise-migration-2025',
     excerpt:
@@ -505,7 +513,11 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: 9,
   },
   {
+<<<<<<< HEAD
+    id: '31',
+=======
     id: '204',
+>>>>>>> origin/cursor/create-and-deploy-new-content-3792
     title: 'Neuromorphic Edge AI: Event-Driven Intelligence Under 10ms',
     slug: 'neuromorphic-edge-ai-event-driven-2025',
     excerpt:
@@ -520,7 +532,11 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: 8,
   },
   {
+<<<<<<< HEAD
+    id: '32',
+=======
     id: '205',
+>>>>>>> origin/cursor/create-and-deploy-new-content-3792
     title: 'Synthetic Data in Production: Privacy-Safe Accuracy Gains',
     slug: 'synthetic-data-production-privacy-2025',
     excerpt:

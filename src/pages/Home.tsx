@@ -99,6 +99,19 @@ const Home = () => {
         <link rel="canonical" href="https://ziontechgroup.com" />
       </Helmet>
       <AdvertisingBanner />
+      {/* Promo: Brand new governance content set */}
+      <NewContentPromoBanner 
+        className="border-b border-white/10" 
+        variant="premium" 
+        title="✅ NEW: AI Budgets Blueprint + End-to-End Policy Tests"
+        description="Cut GenAI costs 40–70% with budget-aware routing and wire policy tests into CI/CD for safe velocity."
+        ctaText="Read the new guides"
+        ctaLink="/blog"
+        featuredItems={[
+          { title: "Enterprise AI Budgets 2025 — Guardrails + Scorecards", category: "AI Governance", link: "/blog/ai-2025-oct-03-ai-budgets-blueprint" },
+          { title: "End-to-End Policy Tests for AI — Ship Faster, Safely", category: "AI Reliability", link: "/blog/ai-2025-oct-03-policy-tests-end-to-end" }
+        ]}
+      />
       {/* Promo: New Enterprise AI Governance Blueprint */}
       <NewContentPromoBanner 
         className="border-b border-white/10" 
@@ -124,6 +137,20 @@ const Home = () => {
           { title: "Enterprise Agent Copilots — Guardrails That Scale", category: "AI Agents", link: "/blog/ai-2025-oct-01-enterprise-agent-copilots" },
           { title: "Runtime Scorecards v2 — SLIs → KPIs With Budgets", category: "Ops", link: "/blog/ai-governance-runtime-scorecards-v2-2026" },
           { title: "Edge A/B <100ms — Consentless Metrics", category: "Edge", link: "/blog/edge-private-experimentation-v2-2026" }
+        ]}
+      />
+      {/* Promo: Zero‑PII Experiments + Instant Rollbacks (New 2025‑10‑02) */}
+      <NewContentPromoBanner 
+        className="border-b border-white/10" 
+        variant="premium" 
+        title="✨ New: Zero‑PII Experiments + Instant Rollbacks"
+        description="Blueprints to test faster at the edge and revert safely in seconds."
+        ctaText="Explore new posts"
+        ctaLink="/blog"
+        featuredItems={[
+          { title: "Private Experiments Blueprint", category: "Experimentation", link: "/blog/ai-2025-oct-02-private-experiments-blueprint" },
+          { title: "Rollback Guardrails Blueprint", category: "Reliability", link: "/blog/ai-2025-oct-02-rollback-guardrails-blueprint" },
+          { title: "Runtime Rollback Guardrails", category: "Reliability", link: "/blog/ai-2025-oct-01-runtime-rollback-guardrails" }
         ]}
       />
       
