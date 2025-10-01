@@ -1,151 +1,233 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { Sparkles, Cpu, TrendingUp, FileText, ArrowRight, Award } from 'lucide-react';
 
-export default function October2025NewContentShowcaseBanner() {
+const October2025NewContentShowcaseBanner: React.FC = () => {
   return (
-    <section className="py-16 bg-gradient-to-r from-indigo-900/50 via-purple-900/50 to-pink-900/50 border-y border-indigo-500/30">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-10">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-indigo-500/20 to-pink-500/20 border border-indigo-500/30 mb-6">
-            <span className="text-indigo-400 font-bold text-xl tracking-wider uppercase">
-              🎯 NEW OCTOBER 2025 CONTENT RELEASED
+    <div className="relative overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
+      {/* Animated Background Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,.05)_25%,rgba(255,255,255,.05)_50%,transparent_50%,transparent_75%,rgba(255,255,255,.05)_75%,rgba(255,255,255,.05))] bg-[length:60px_60px] animate-[drift_20s_linear_infinite]"></div>
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-6 py-12 lg:px-8 lg:py-16">
+        {/* Header Section */}
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 backdrop-blur-sm rounded-full px-6 py-3 border border-purple-400/30 mb-6">
+            <Sparkles className="w-5 h-5 text-yellow-400 animate-pulse" />
+            <span className="font-bold text-lg">
+              🎉 NEW CONTENT ALERT - October 1, 2025
             </span>
+            <Sparkles className="w-5 h-5 text-yellow-400 animate-pulse" />
           </div>
 
-          {/* Heading */}
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-6 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Latest AI Breakthroughs & Success Stories
+          <h2 className="text-4xl lg:text-5xl font-bold mb-4">
+            Latest AI Breakthroughs
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-orange-400 mt-2">
+              Just Published Today!
+            </span>
           </h2>
-
-          {/* Description */}
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-10">
-            Discover our newest content featuring revolutionary enterprise intelligence solutions, 
-            $4.2 billion success stories, and comprehensive implementation guides
+          <p className="text-xl text-purple-100 max-w-3xl mx-auto">
+            Discover our newest blog posts, case studies, and service offerings featuring cutting-edge 
+            intelligent edge computing solutions
           </p>
+        </div>
 
-          {/* Content Cards */}
-          <div className="grid md:grid-cols-3 gap-8 mb-10">
-            {/* Blog Post Card */}
-            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-indigo-500/50 transition-all duration-300 transform hover:scale-105">
-              <div className="text-6xl mb-6">📖</div>
-              <h3 className="text-2xl font-bold text-white mb-4">Enterprise Intelligence Revolution</h3>
-              <p className="text-gray-300 mb-6">
-                Complete guide to the October 2025 breakthroughs: 97% efficiency gains, 
-                cognitive automation, and real-time intelligence across all industries.
-              </p>
-              <div className="space-y-2 mb-6 text-left">
-                <div className="flex items-center gap-2 text-indigo-300">
-                  <span className="text-xl">✓</span>
-                  <span>Cognitive Process Automation</span>
-                </div>
-                <div className="flex items-center gap-2 text-purple-300">
-                  <span className="text-xl">✓</span>
-                  <span>Real-Time Predictive Intelligence</span>
-                </div>
-                <div className="flex items-center gap-2 text-pink-300">
-                  <span className="text-xl">✓</span>
-                  <span>Autonomous Enterprise Orchestration</span>
-                </div>
+        {/* Content Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          {/* Blog Post Card */}
+          <div className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
+            <div className="flex items-center justify-between mb-4">
+              <div className="p-3 bg-purple-500/30 rounded-lg group-hover:bg-purple-500/50 transition-colors duration-300">
+                <FileText className="w-6 h-6 text-purple-300" />
               </div>
-              <a 
-                href="/blog/ai-2025-october-enterprise-intelligence-revolution"
-                className="inline-block bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300"
-              >
-                Read Article →
-              </a>
+              <span className="px-3 py-1 bg-green-500/20 text-green-300 text-xs font-semibold rounded-full border border-green-400/30">
+                NEW BLOG
+              </span>
             </div>
 
-            {/* Case Study Card */}
-            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-purple-500/50 transition-all duration-300 transform hover:scale-105">
-              <div className="text-6xl mb-6">💎</div>
-              <h3 className="text-2xl font-bold text-white mb-4">$4.2B Fortune 500 Success</h3>
-              <p className="text-gray-300 mb-6">
-                Detailed case study of the most successful enterprise AI deployment in history. 
-                4-month implementation, 2,800% ROI, industry leadership achieved.
-              </p>
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className="bg-emerald-500/20 rounded-lg p-3">
-                  <div className="text-2xl font-bold text-emerald-300">$4.2B</div>
-                  <div className="text-xs text-emerald-200">Value Generated</div>
-                </div>
-                <div className="bg-cyan-500/20 rounded-lg p-3">
-                  <div className="text-2xl font-bold text-cyan-300">2,800%</div>
-                  <div className="text-xs text-cyan-200">ROI Achieved</div>
-                </div>
-                <div className="bg-purple-500/20 rounded-lg p-3">
-                  <div className="text-2xl font-bold text-purple-300">97%</div>
-                  <div className="text-xs text-purple-200">Efficiency Gain</div>
-                </div>
-                <div className="bg-blue-500/20 rounded-lg p-3">
-                  <div className="text-2xl font-bold text-blue-300">4 Months</div>
-                  <div className="text-xs text-blue-200">Implementation</div>
-                </div>
+            <h3 className="text-xl font-bold mb-3 group-hover:text-purple-300 transition-colors duration-300">
+              Intelligent Edge Computing Revolution
+            </h3>
+
+            <p className="text-purple-200 text-sm mb-4 line-clamp-3">
+              Discover how edge AI is transforming real-time processing with 95% latency reduction, 
+              10,000x faster processing, and $18.7B in value creation.
+            </p>
+
+            <div className="space-y-2 mb-4">
+              <div className="flex items-center text-sm text-purple-300">
+                <span className="font-semibold mr-2">⚡</span>
+                <span>95% Latency Reduction</span>
               </div>
-              <a 
-                href="/case-studies/fortune-500-october-2025-enterprise-intelligence-4-2-billion-success"
-                className="inline-block bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300"
-              >
-                View Case Study →
-              </a>
+              <div className="flex items-center text-sm text-purple-300">
+                <span className="font-semibold mr-2">🚀</span>
+                <span>2.8B Events/Second</span>
+              </div>
+              <div className="flex items-center text-sm text-purple-300">
+                <span className="font-semibold mr-2">💰</span>
+                <span>Sub-5ms Inference Times</span>
+              </div>
             </div>
 
-            {/* Service Card */}
-            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-pink-500/50 transition-all duration-300 transform hover:scale-105">
-              <div className="text-6xl mb-6">🚀</div>
-              <h3 className="text-2xl font-bold text-white mb-4">Enterprise Intelligence Platform</h3>
-              <p className="text-gray-300 mb-6">
-                Comprehensive platform overview with pricing, capabilities, and implementation 
-                approach. Start your transformation journey today.
-              </p>
-              <div className="space-y-2 mb-6 text-left">
-                <div className="flex items-center gap-2 text-emerald-300">
-                  <span className="text-xl">✓</span>
-                  <span>Cognitive Automation Engine</span>
-                </div>
-                <div className="flex items-center gap-2 text-teal-300">
-                  <span className="text-xl">✓</span>
-                  <span>Real-Time Intelligence Hub</span>
-                </div>
-                <div className="flex items-center gap-2 text-cyan-300">
-                  <span className="text-xl">✓</span>
-                  <span>Autonomous Operations Center</span>
-                </div>
-              </div>
-              <a 
-                href="/services/ai-2025-october-enterprise-intelligence-platform"
-                className="inline-block bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-400 hover:to-rose-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300"
-              >
-                Explore Platform →
-              </a>
-            </div>
+            <Link
+              to="/blog/ai-2025-oct-01-intelligent-edge-computing-revolution"
+              className="inline-flex items-center text-purple-300 hover:text-white font-semibold transition-colors duration-300"
+            >
+              Read Article
+              <ArrowRight className="ml-2 w-4 h-4" />
+            </Link>
           </div>
 
-          {/* Bottom CTA */}
-          <div className="bg-gradient-to-r from-indigo-500/20 to-pink-500/20 backdrop-blur-sm rounded-2xl p-8 border border-indigo-500/30">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              🎉 Ready to Transform Your Business?
+          {/* Case Study Card */}
+          <div className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
+            <div className="flex items-center justify-between mb-4">
+              <div className="p-3 bg-pink-500/30 rounded-lg group-hover:bg-pink-500/50 transition-colors duration-300">
+                <TrendingUp className="w-6 h-6 text-pink-300" />
+              </div>
+              <span className="px-3 py-1 bg-blue-500/20 text-blue-300 text-xs font-semibold rounded-full border border-blue-400/30">
+                CASE STUDY
+              </span>
+            </div>
+
+            <h3 className="text-xl font-bold mb-3 group-hover:text-pink-300 transition-colors duration-300">
+              $18.4B Manufacturing Success
             </h3>
-            <p className="text-lg text-gray-300 mb-6 max-w-3xl mx-auto">
-              Schedule your free AI readiness assessment and discover how our October 2025 
-              Enterprise Intelligence Platform can deliver unprecedented results for your organization
+
+            <p className="text-purple-200 text-sm mb-4 line-clamp-3">
+              How a Fortune 50 manufacturer deployed edge AI across 847 facilities, achieving 
+              847% ROI and processing 2.8 billion IoT events per second.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <a 
-                href="/contact"
-                className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
-              >
-                Get Free Assessment →
-              </a>
-              <a 
-                href="/services/ai-2025-october-enterprise-intelligence-platform"
-                className="border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
-              >
-                View Full Platform Details
-              </a>
+
+            <div className="space-y-2 mb-4">
+              <div className="flex items-center text-sm text-pink-300">
+                <span className="font-semibold mr-2">💎</span>
+                <span>$18.4B Value Creation</span>
+              </div>
+              <div className="flex items-center text-sm text-pink-300">
+                <span className="font-semibold mr-2">📈</span>
+                <span>847% ROI in 18 Months</span>
+              </div>
+              <div className="flex items-center text-sm text-pink-300">
+                <span className="font-semibold mr-2">🏭</span>
+                <span>847 Facilities Transformed</span>
+              </div>
+            </div>
+
+            <Link
+              to="/case-studies/ai-2025-oct-01-global-manufacturing-edge-computing-18-billion-success"
+              className="inline-flex items-center text-pink-300 hover:text-white font-semibold transition-colors duration-300"
+            >
+              View Case Study
+              <ArrowRight className="ml-2 w-4 h-4" />
+            </Link>
+          </div>
+
+          {/* Service Card */}
+          <div className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
+            <div className="flex items-center justify-between mb-4">
+              <div className="p-3 bg-blue-500/30 rounded-lg group-hover:bg-blue-500/50 transition-colors duration-300">
+                <Cpu className="w-6 h-6 text-blue-300" />
+              </div>
+              <span className="px-3 py-1 bg-purple-500/20 text-purple-300 text-xs font-semibold rounded-full border border-purple-400/30">
+                SERVICE
+              </span>
+            </div>
+
+            <h3 className="text-xl font-bold mb-3 group-hover:text-blue-300 transition-colors duration-300">
+              Edge Computing Services
+            </h3>
+
+            <p className="text-purple-200 text-sm mb-4 line-clamp-3">
+              Deploy AI at the network edge for real-time decision-making with sub-5ms latency, 
+              95% cost reduction, and 99.99% uptime.
+            </p>
+
+            <div className="space-y-2 mb-4">
+              <div className="flex items-center text-sm text-blue-300">
+                <span className="font-semibold mr-2">⚙️</span>
+                <span>Edge AI Architecture Design</span>
+              </div>
+              <div className="flex items-center text-sm text-blue-300">
+                <span className="font-semibold mr-2">🔧</span>
+                <span>Federated Learning Services</span>
+              </div>
+              <div className="flex items-center text-sm text-blue-300">
+                <span className="font-semibold mr-2">🛡️</span>
+                <span>Zero-Trust Edge Security</span>
+              </div>
+            </div>
+
+            <Link
+              to="/services/ai-2025-october-intelligent-edge-computing-services"
+              className="inline-flex items-center text-blue-300 hover:text-white font-semibold transition-colors duration-300"
+            >
+              Explore Services
+              <ArrowRight className="ml-2 w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+
+        {/* Stats Bar */}
+        <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
+            <div>
+              <div className="text-3xl font-bold text-purple-300 mb-1">95%</div>
+              <div className="text-sm text-purple-100">Latency Reduction</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-pink-300 mb-1">$18.4B</div>
+              <div className="text-sm text-purple-100">Value Created</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-blue-300 mb-1">2.8B</div>
+              <div className="text-sm text-purple-100">Events/Second</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-cyan-300 mb-1">847%</div>
+              <div className="text-sm text-purple-100">ROI Achieved</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-orange-300 mb-1">99.99%</div>
+              <div className="text-sm text-purple-100">Uptime SLA</div>
             </div>
           </div>
         </div>
+
+        {/* CTA Section */}
+        <div className="mt-12 text-center">
+          <div className="inline-flex items-center space-x-2 mb-4">
+            <Award className="w-6 h-6 text-yellow-400" />
+            <span className="text-lg font-semibold text-purple-100">
+              Ready to Transform Your Operations with Edge AI?
+            </span>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            >
+              <span>Schedule Consultation</span>
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Link>
+            <Link
+              to="/services"
+              className="inline-flex items-center justify-center px-8 py-4 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white font-bold rounded-lg transition-all duration-300 border border-white/30"
+            >
+              <span>View All Services</span>
+            </Link>
+          </div>
+        </div>
       </div>
-    </section>
+
+      <style>{`
+        @keyframes drift {
+          from { transform: translateX(0); }
+          to { transform: translateX(60px); }
+        }
+      `}</style>
+    </div>
   );
-}
+};
+
+export default October2025NewContentShowcaseBanner;
