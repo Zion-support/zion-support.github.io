@@ -1,9 +1,6 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
-import { BrowserRouter } from 'react-router-dom';
 import '@testing-library/jest-dom';
 import UnifiedPromotionalBanner from '../UnifiedPromotionalBanner';
-import type { UnifiedPromotionalBannerProps } from '../UnifiedPromotionalBanner';
 
 // Wrapper component for Router context
 const RouterWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => (

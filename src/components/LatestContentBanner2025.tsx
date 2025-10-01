@@ -1,6 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles, TrendingUp, Zap } from 'lucide-react';
 
 const LatestContentBanner2025: React.FC = () => {
   const latestArticles = [

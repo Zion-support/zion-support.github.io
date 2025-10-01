@@ -1,5 +1,4 @@
 import React from 'react';
-import { ArrowRight, Sparkles, TrendingUp, Zap, Brain, Atom, Bot, Shield, Rocket, Target } from 'lucide-react';
 
 const FutureTechShowcase2026: React.FC = () => {
   const futureTechArticles = [

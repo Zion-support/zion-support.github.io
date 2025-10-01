@@ -1,6 +1,3 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Users, Zap, Brain, Sparkles, TrendingUp, Award } from 'lucide-react';
 
 const October2025NextGenAIBanner = () => {
   return (

@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Zap, Brain, Cpu, ArrowRight, CheckCircle, TrendingUp, Star, Shield } from 'lucide-react';
 
 const NewServicesPromoBanner2026: React.FC = () => {
   return (

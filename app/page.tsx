@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+import Ultimate2025ContentShowcaseBanner from '../components/Ultimate2025ContentShowcaseBanner';
+
+=======
 import React from 'react';
 import Link from 'next/link';
 import March2027QuantumSingularityBanner from '../components/March2027QuantumSingularityBanner';
@@ -95,9 +99,8 @@ import FreshContent2027ShowcaseBanner from '../components/FreshContent2027Showca
 import RevolutionaryAI2027Banner from '../components/RevolutionaryAI2027Banner';
 import AI2028RevolutionaryBreakthroughBanner from '../components/AI2028RevolutionaryBreakthroughBanner';
 import AI2028ContentShowcaseBanner from '../components/AI2028ContentShowcaseBanner';
-=======
 import Ultimate2025ContentShowcaseBanner from '../components/Ultimate2025ContentShowcaseBanner';
-
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-263e
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
   description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Transform your business with cutting-edge technology and automation.',
@@ -106,10 +109,28 @@ export const metadata = {
 
 export default function HomePage() {
   return (
+<<<<<<< HEAD
+    <div className="max-w-5xl mx-auto px-4 py-12">
+      <h1 className="text-4xl font-bold mb-4">Zion Tech Group</h1>
+      <p className="text-lg text-gray-600 mb-6">
+        Enterprise-grade AI, micro SaaS, and IT solutions.
+      </p>
+      <a href="/blog" className="text-blue-600 underline">
+        Read the latest
+      </a>
+    </div>
+=======
     <>
       <div className="animate-fade-in">
       {/* ⭐ LATEST: March 2027 Quantum Singularity Breakthrough - TOP PRIORITY ⭐ */}
       <March2027QuantumSingularityBanner />
+      
+      {/* 🌟 AI 2028 REVOLUTIONARY BREAKTHROUGH BANNER */}
+      <AI2028RevolutionaryBreakthroughBanner />
+      
+      {/* 🌟 AI 2028 CONTENT SHOWCASE */}
+      <AI2028ContentShowcaseBanner />
+      <Ultimate2025ContentShowcaseBanner />
       
       {/* 🌟 AI 2028 REVOLUTIONARY BREAKTHROUGH BANNER */}
       <AI2028RevolutionaryBreakthroughBanner />
@@ -336,7 +357,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-=======
+      
       {/* 🚀🚀🚀 FRESH CONTENT 2027 - Revolutionary AI Breakthroughs! 🚀🚀🚀 */}
       <RevolutionaryAI2027Banner />
       
@@ -415,8 +436,7 @@ export default function HomePage() {
       <LatestContentBanner2025 />
       
       {/* Latest 2026 Content Banner */}
-=======
-      </div>
+      
       {/* Promotional Banners */}
       <AIEnterpriseTransformationBanner />
       <AIEnterpriseSuccessBanner />
@@ -1797,6 +1817,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-263e
   );
 }

@@ -89,11 +89,12 @@
     "optimize:assets": "node scripts/asset-optimizer.js"
   },
   "dependencies": {
+    "@esbuild/linux-x64": "^0.25.10",
     "@tailwindcss/postcss": "^4.1.13",
-    
     "@types/recharts": "^2.0.1",
     "axios": "^1.12.2",
     "clsx": "^2.1.1",
+    "esbuild": "^0.23.1",
     "framer-motion": "^12.23.22",
     "gray-matter": "^4.0.3",
     "lucide-react": "^0.544.0",
@@ -117,7 +118,7 @@
     "@testing-library/react": "^16.1.0",
     "@types/jest": "^30.0.0",
     "@types/node": "^24.5.2",
-    "@types/react": "^18.3.5",
+    "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.0",
     "@types/react-helmet": "^6.1.11",
     "@typescript-eslint/eslint-plugin": "^8.15.0",

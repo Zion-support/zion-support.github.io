@@ -1,8 +1,5 @@
-import { motion } from "framer-motion";
-import { ArrowRight, Brain, Database, Shield, Sparkles, TrendingUp, Zap } from "lucide-react";
-import { Link } from "react-router-dom";
 
-export default function October2025NewAdvancedAIContentBanner() {
+export default function October2025NewAdvancedAIContentBanner(): void {
   return (
     <div className="relative bg-gradient-to-br from-purple-900 via-indigo-800 to-blue-900 border-b border-white/10 overflow-hidden">
       {/* Animated background elements */}

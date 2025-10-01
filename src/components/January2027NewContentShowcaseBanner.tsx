@@ -1,6 +1,5 @@
-import React from 'react';
 
-export default function January2027NewContentShowcaseBanner() {
+export default function January2027NewContentShowcaseBanner(): void {
   return (
     <section className="py-16 bg-gradient-to-r from-purple-900/30 via-indigo-900/30 to-blue-900/30 backdrop-blur-sm border-b border-purple-500/20">
       <div className="container mx-auto px-6">

@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Sparkles, TrendingUp, Zap, Target, CheckCircle } from 'lucide-react';
 
 const RevolutionaryBreakthrough2026Banner: React.FC = () => {
   const breakthroughContent = [

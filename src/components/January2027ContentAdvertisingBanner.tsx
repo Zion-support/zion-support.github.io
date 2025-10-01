@@ -1,6 +1,5 @@
-import React from 'react';
 
-export default function January2027ContentAdvertisingBanner() {
+export default function January2027ContentAdvertisingBanner(): void {
   return (
     <div className="bg-gradient-to-r from-violet-500/20 to-purple-500/20 backdrop-blur-sm rounded-2xl p-8 border border-violet-500/30 mb-12">
       <div className="text-center">

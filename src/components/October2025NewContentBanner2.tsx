@@ -1,4 +1,3 @@
-import { ArrowRight, Bot, Brain, DollarSign, Leaf, Mic } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const October2025NewContentBanner2 = () => {
@@ -63,7 +62,7 @@ const October2025NewContentBanner2 = () => {
 
         {/* Articles Grid */}
         <div className="grid md:grid-cols-2 gap-6 mb-12">
-          {newArticles.map((article, index) => {
+          {newArticles.map((article) => {
             const Icon = article.icon;
             return (
               <Link

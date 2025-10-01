@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 
 interface ContentItem {
   id: string;
@@ -118,7 +116,7 @@ const contentItems: ContentItem[] = [
 
 const categories = ['All', 'Cloud Operations', 'FinTech', 'Retail', 'Sustainability', 'Architecture', 'FinOps'];
 
-export default function EnhancedContentShowcase2026() {
+export default function EnhancedContentShowcase2026(): void {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [sortBy, setSortBy] = useState('featured');
 

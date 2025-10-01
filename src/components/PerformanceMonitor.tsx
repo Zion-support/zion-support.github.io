@@ -1,10 +1,6 @@
 import React from "react";
 
-interface PerformanceMonitorProps {
-  showDashboard?: boolean;
-}
-
-export default function PerformanceMonitor(_props: PerformanceMonitorProps): React.JSX.Element {
+export default function PerformanceMonitor(): React.JSX.Element React.JSX.Element {
   return <div aria-label="Performance Monitor" />;
 }
 

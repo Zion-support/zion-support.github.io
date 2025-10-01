@@ -14,7 +14,6 @@ import {
   loadBannerStats,
   getRefreshInterval,
 } from '../utils/bannerRotation';
-import { trackBannerInteraction } from '../utils/analyticsTracker';
 
 interface UseBannerRotationOptions {
   banners: BannerConfig[];
@@ -42,7 +41,7 @@ export const useBannerRotation = ({
 }: UseBannerRotationOptions): UseBannerRotationReturn => {
   const [displayedBanners, setDisplayedBanners] = useState<BannerConfig[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [lastRotation, setLastRotation] = useState(Date.now());
+  const [, setLastRotation] = useState(Date.now());
   
   // Load banner statistics from storage
   const bannersWithStats = useMemo(() => {

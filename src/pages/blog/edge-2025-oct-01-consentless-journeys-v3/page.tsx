@@ -1,8 +1,6 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
 
-export default function ConsentlessJourneysV3(): React.JSX.Element {
+export default function ConsentlessJourneysV3(): React.JSX.Element React.JSX.Element {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
       <Helmet>

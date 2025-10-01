@@ -1,6 +1,5 @@
-import React from 'react';
 
-export default function OctoberNovember2025ContentBanner() {
+export default function OctoberNovember2025ContentBanner(): void {
   return (
     <section className="bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 text-white py-20 px-6">
       <div className="max-w-7xl mx-auto">

@@ -1,5 +1,3 @@
-import React from 'react';
-import { ArrowRight, Sparkles, Zap, Brain, Star, Users, Award, TrendingUp } from 'lucide-react';
 
 const February2026ContentShowcaseBanner = () => {
   const featuredContent = [

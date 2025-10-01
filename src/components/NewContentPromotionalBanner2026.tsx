@@ -1,6 +1,4 @@
 import React from 'react';
-import { ArrowRight, Star, Users, Award, TrendingUp, Rocket, Globe } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 const NewContentPromotionalBanner2026 = () => {
   const newContent = [
@@ -185,4 +183,4 @@ const NewContentPromotionalBanner2026 = () => {
   );
 };
 
-export default NewContentPromotionalBanner2026;
+export default React.memo(NewContentPromotionalBanner2026);

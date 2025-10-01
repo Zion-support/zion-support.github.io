@@ -1,5 +1,3 @@
-import { Sparkles, TrendingUp, Zap, Target, AlertCircle, CheckCircle, ArrowRight, Brain, Users, Eye, Heart, MessageCircle } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 const October2025MultimodalCXRevolutionBanner = () => {
   return (

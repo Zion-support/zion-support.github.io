@@ -5,7 +5,6 @@
  */
 
 import React, { lazy, ComponentType } from 'react';
-import ErrorBoundaryComponent from '../components/ErrorBoundary';
 
 export interface LazyLoadConfig {
   componentPath: string;

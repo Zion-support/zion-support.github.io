@@ -1,6 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Brain, Zap, Network, Shield, ArrowRight, Sparkles } from 'lucide-react';
 
 const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {
   const breakthroughs = [

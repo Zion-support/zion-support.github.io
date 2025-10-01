@@ -1,11 +1,9 @@
-import { ArrowRight, Bot, Code2, Shield, Sparkles } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 interface October2025AIRevolutionBannerProps {
   className?: string;
 }
 
-export default function October2025AIRevolutionBanner({ className = '' }: October2025AIRevolutionBannerProps) {
+export default function October2025AIRevolutionBanner({ className = '' }: October2025AIRevolutionBannerProps): void {
   return (
     <div className={`bg-gradient-to-r from-purple-900/40 via-indigo-900/40 to-cyan-900/40 border-y border-purple-500/30 ${className}`}>
       <div className="container mx-auto px-6 py-12">

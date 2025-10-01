@@ -1,7 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
 
-export default function October2025CuttingEdgeInnovationBanner() {
+export default function October2025CuttingEdgeInnovationBanner(): void {
   return (
     <section className="relative overflow-hidden bg-gradient-to-r from-slate-950 via-purple-950 to-slate-950 py-20">
       {/* Animated Grid Background */}

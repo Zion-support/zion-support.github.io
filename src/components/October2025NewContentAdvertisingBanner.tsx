@@ -1,7 +1,5 @@
-import { Zap, Sparkles, TrendingUp, ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
 
-export default function October2025NewContentAdvertisingBanner() {
+export default function October2025NewContentAdvertisingBanner(): void {
   return (
     <section className="relative py-20 bg-gradient-to-r from-purple-900 via-blue-900 to-purple-900 overflow-hidden">
       {/* Animated Background Elements */}

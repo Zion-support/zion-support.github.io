@@ -1,5 +1,3 @@
-import { ArrowRight, Zap, TrendingUp, Shield, Sparkles } from "lucide-react";
-import { Link } from "react-router-dom";
 
 const November2025GameChangersBanner = () => {
   return (

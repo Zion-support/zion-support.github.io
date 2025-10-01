@@ -1,5 +1,3 @@
-import { ArrowRight, Shield, Zap, Building2 } from "lucide-react";
-import { Link } from "react-router-dom";
 
 const October2025LatestInnovationsBanner = () => {
   return (

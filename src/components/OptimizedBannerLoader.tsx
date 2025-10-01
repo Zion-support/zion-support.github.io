@@ -5,11 +5,10 @@
  */
 
 import React, { Suspense, useEffect, useState } from 'react';
-import { bannerManager } from '../utils/bannerOptimizer';
 
 interface OptimizedBannerLoaderProps {
   bannerId: string;
-  importFn: () => Promise<{ default: React.ComponentType<any> }>;
+  importFn: () => Promise<{ default: React.ComponentType<Record<string, unknown>> }>;
   priority?: number;
   fallback?: React.ReactNode;
   preload?: boolean;
@@ -25,8 +24,8 @@ export default function OptimizedBannerLoader({
   priority = 1,
   fallback = <BannerSkeleton />,
   preload = false,
-}: OptimizedBannerLoaderProps) {
-  const [Component, setComponent] = useState<React.ComponentType<any> | null>(null);
+}: OptimizedBannerLoaderProps): void {
+  const [Component, setComponent] = useState<React.ComponentType<Record<string, unknown>> | null>(null);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -95,7 +94,7 @@ export default function OptimizedBannerLoader({
 /**
  * Banner skeleton for loading state
  */
-function BannerSkeleton() {
+function BannerSkeleton(): void {
   return (
     <div className="bg-gradient-to-r from-gray-800 to-gray-900 py-16 px-4 animate-pulse">
       <div className="max-w-7xl mx-auto">

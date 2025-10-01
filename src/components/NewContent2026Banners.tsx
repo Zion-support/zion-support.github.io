@@ -1,8 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
 
 // Latest Content 2026 Banner
-export function LatestContent2026Banner() {
+export function LatestContent2026Banner(): void {
   return (
     <div className="w-full bg-gradient-to-r from-purple-600 via-blue-600 to-teal-600 text-white py-4">
       <div className="max-w-6xl mx-auto px-4">
@@ -37,7 +35,7 @@ export function LatestContent2026Banner() {
 }
 
 // AI Security Enterprise 2026 Banner
-export function AISecurityEnterprise2026Banner() {
+export function AISecurityEnterprise2026Banner(): void {
   return (
     <div className="w-full bg-gradient-to-r from-red-600 to-orange-600 text-white py-6">
       <div className="max-w-6xl mx-auto px-4">
@@ -75,7 +73,7 @@ export function AISecurityEnterprise2026Banner() {
 }
 
 // AI Multimodal Enterprise 2026 Banner
-export function AIMultimodalEnterprise2026Banner() {
+export function AIMultimodalEnterprise2026Banner(): void {
   return (
     <div className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-6">
       <div className="max-w-6xl mx-auto px-4">
@@ -122,7 +120,7 @@ export function AIMultimodalEnterprise2026Banner() {
 }
 
 // AI Sustainability Transformation Banner
-export function AISustainabilityTransformationBanner() {
+export function AISustainabilityTransformationBanner(): void {
   return (
     <div className="w-full bg-gradient-to-r from-green-600 to-teal-600 text-white py-6">
       <div className="max-w-6xl mx-auto px-4">
@@ -169,7 +167,7 @@ export function AISustainabilityTransformationBanner() {
 }
 
 // New Latest 2026 Content Banner
-export function NewLatest2026ContentBanner() {
+export function NewLatest2026ContentBanner(): void {
   return (
     <div className="w-full bg-gradient-to-r from-pink-600 via-purple-600 to-indigo-600 text-white py-6">
       <div className="max-w-6xl mx-auto px-4">
@@ -213,7 +211,7 @@ export function NewLatest2026ContentBanner() {
 }
 
 // AI Autonomous Cloud Ops Banner
-export function AIAutonomousCloudOpsBanner() {
+export function AIAutonomousCloudOpsBanner(): void {
   return (
     <div className="w-full bg-gradient-to-r from-cyan-600 to-blue-600 text-white py-6">
       <div className="max-w-6xl mx-auto px-4">
@@ -260,7 +258,7 @@ export function AIAutonomousCloudOpsBanner() {
 }
 
 // AI FinTech Transformation Banner
-export function AIFinTechTransformationBanner() {
+export function AIFinTechTransformationBanner(): void {
   return (
     <div className="w-full bg-gradient-to-r from-emerald-600 to-green-600 text-white py-6">
       <div className="max-w-6xl mx-auto px-4">
@@ -307,7 +305,7 @@ export function AIFinTechTransformationBanner() {
 }
 
 // AI Retail Automation Banner
-export function AIRetailAutomationBanner() {
+export function AIRetailAutomationBanner(): void {
   return (
     <div className="w-full bg-gradient-to-r from-orange-600 to-red-600 text-white py-6">
       <div className="max-w-6xl mx-auto px-4">
@@ -354,7 +352,7 @@ export function AIRetailAutomationBanner() {
 }
 
 // Latest 2026 Content Banner
-export function Latest2026ContentBanner() {
+export function Latest2026ContentBanner(): void {
   return (
     <div className="w-full bg-gradient-to-r from-violet-600 via-purple-600 to-fuchsia-600 text-white py-6">
       <div className="max-w-6xl mx-auto px-4">

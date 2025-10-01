@@ -1,4 +1,3 @@
-import { lazy } from 'react';
 
 /**
  * Lazy load components with better error handling and retry logic

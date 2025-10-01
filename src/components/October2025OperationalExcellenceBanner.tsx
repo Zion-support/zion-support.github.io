@@ -1,6 +1,3 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Wrench, Network, Target, Sparkles, TrendingUp, Award, Zap } from 'lucide-react';
 
 const October2025OperationalExcellenceBanner = () => {
   return (
