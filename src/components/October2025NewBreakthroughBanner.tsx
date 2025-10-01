@@ -1,9 +1,9 @@
 import { ArrowRight, Zap, Brain, DollarSign, Eye, TrendingUp, Target } from "lucide-react";
 import { Link } from "react-router-dom";
-import { october2025NewBreakthroughContent, getOctober2025BreakthroughStats } from "../content/october-2025-new-breakthrough-content";
+import { octoberNewBreakthroughContent, octoberContentStats } from "../content/october-2025-new-breakthrough-content";
 
 const October2025NewBreakthroughBanner = () => {
-  const stats = getOctober2025BreakthroughStats();
+  const stats = octoberContentStats;
 
   const iconMap: Record<string, React.ComponentType<any>> = {
     '🧠': Brain,
@@ -47,7 +47,7 @@ const October2025NewBreakthroughBanner = () => {
 
         {/* Content Cards */}
         <div className="grid md:grid-cols-3 gap-8 mb-12">
-          {october2025NewBreakthroughContent.map((content) => {
+          {octoberNewBreakthroughContent.map((content) => {
             const Icon = iconMap[content.icon] || Brain;
             
             return (

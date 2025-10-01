@@ -2,9 +2,9 @@ import React, { JSX } from "react";
 
 // 🌟🌟🌟 ABSOLUTE NEWEST TODAY: OCTOBER 1, 2025 - COGNITIVE HYPERAUTOMATION & FINTECH AI REVOLUTION - ABSOLUTE #1 TOP PRIORITY! 🌟🌟🌟
 // 💎💎💎 JUST PUBLISHED TODAY: Cognitive Hyperautomation Platform ($38.5B, 15,200% ROI, 98.9% Automation) + Fortune 100 FinTech Success ($22.8B, 18,400% ROI, 47M Customers) = $61.3B COMBINED VALUE! 💎💎💎
-import October2025CognitiveHyperautomationBanner from "./src/components/October2025CognitiveHyperautomationBanner";
-import October2025FinTechSuccessBanner from "./src/components/October2025FinTechSuccessBanner";
-import October2025NewContentMasterBannerV2 from "./src/components/October2025NewContentMasterBannerV2";
+import October2025CognitiveHyperautomationBanner from "./components/October2025CognitiveHyperautomationBanner";
+import October2025FinTechSuccessBanner from "./components/October2025FinTechSuccessBanner";
+import October2025NewContentMasterBannerV2 from "./components/October2025NewContentMasterBannerV2";
 
 // 🔥🔥🔥 ABSOLUTE NEWEST TODAY: OCTOBER 1, 2025 - REAL-TIME INTELLIGENCE MESH REVOLUTION - HIGHEST PRIORITY! 🔥🔥🔥
 // 💎💎💎 JUST PUBLISHED: Real-Time Intelligence Mesh ($24.2B), Sub-2ms Latency, 26,667% ROI, Fortune 50 Logistics Success ($12B) - GAME CHANGER! 💎💎💎
@@ -137,8 +137,8 @@ import October2025NewContentMegaBannerACM from "./components/October2025NewConte
 
 // 🚀🚀🚀 ABSOLUTE NEWEST: OCTOBER 2025 - REVOLUTIONARY NEW CONTENT JUST PUBLISHED - #1 TOP PRIORITY! 🚀🚀🚀
 // 💎💎💎 BRAND NEW: Autonomous Mesh Intelligence ($8.4B), Quantum-Neural Hybrid ($12.7B), Neural-Symbolic Reasoning ($5.7B) - $26.8B TOTAL VALUE! 💎💎💎
-import October2025NewestContentMegaShowcase from "./src/components/October2025NewestContentMegaShowcase";
-import October2025NewContentAdvertisingBanner from "./src/components/October2025NewContentAdvertisingBanner";
+// import October2025NewestContentMegaShowcase from "./src/components/October2025NewestContentMegaShowcase";
+// import October2025NewContentAdvertisingBanner from "./src/components/October2025NewContentAdvertisingBanner";
 
 // 🤖🤖🤖 ABSOLUTE NEWEST: FEBRUARY 2026 - NEXT-GENERATION AUTONOMOUS SYSTEMS REVOLUTION - #1 TOP PRIORITY! 🤖🤖🤖
 // 💎💎💎 JUST PUBLISHED: 99.99% Uptime, Zero Human Intervention, $2.7B Proven Savings - REVOLUTIONARY BREAKTHROUGH! 💎💎💎
@@ -170,7 +170,7 @@ import October2025MeshIntelligenceBreakthroughBanner from "./components/October2
 
 // 🎉🎉🎉 NEWEST OF THE NEWEST: OCTOBER 2025 - REVOLUTIONARY TECH STACK - ABSOLUTE #1 TOP PRIORITY! 🎉🎉🎉
 // 💎💎💎 JUST PUBLISHED: Neuromorphic Computing ($6.8B), Synthetic Data ($4.3B), AI Security Mesh ($8.2B) - $19.3B COMBINED VALUE! 💎💎💎
-import October2025LatestTechAdvancementsBanner from "./src/components/October2025LatestTechAdvancementsBanner";
+import October2025LatestTechAdvancementsBanner from "./components/October2025LatestTechAdvancementsBanner";
 
 // 🎯🎯🎯 ABSOLUTE NEWEST: OCTOBER 1, 2025 - NEW AI CONTENT RELEASE - #1 TOP PRIORITY! 🎯🎯🎯
 // 💎💎💎 JUST PUBLISHED: Multi-Agent Orchestration, Real-Time Vector Search, Autonomous Data Pipelines 💎💎💎
@@ -182,7 +182,7 @@ import April2026AutonomousEnterpriseOperationsBanner from "./components/April202
 
 // 🔥🔥🔥 ABSOLUTE NEWEST: OCTOBER 1, 2025 - CUTTING-EDGE AI REVOLUTION - #1 TOP PRIORITY! 🔥🔥🔥
 // 💎💎💎 JUST PUBLISHED TODAY: Security Mesh ($2.8B), Hyper-Personalization ($3.6B), Autonomous FinOps ($1.9B) - $8.3B COMBINED VALUE! 💎💎💎
-import October2025CuttingEdgeRevolutionBanner from "./src/components/October2025CuttingEdgeRevolutionBanner";
+import October2025CuttingEdgeRevolutionBanner from "./components/October2025CuttingEdgeRevolutionBanner";
 
 // 🚀🚀🚀 ABSOLUTE NEWEST: JANUARY 2026 - ULTRA-INTELLIGENT AUTONOMOUS SYSTEMS REVOLUTION - #1 TOP PRIORITY! 🚀🚀🚀
 // 💎💎💎 JUST PUBLISHED: $3.2B Success Story, 99.97% Operational Autonomy, Zero Human Intervention - REVOLUTIONARY BREAKTHROUGH! 💎💎💎
@@ -230,7 +230,7 @@ import March2026AutonomousAIEcosystemRevolutionBanner from "./components/March20
 
 // 🚀🚀🚀 ABSOLUTE NEWEST: OCTOBER 1, 2025 - MULTIMODAL AI CUSTOMER EXPERIENCE REVOLUTION - #1 TOP PRIORITY! 🚀🚀🚀
 // 💎💎💎 JUST PUBLISHED TODAY: $340M Value Created, 287% ROI, 94% CSAT, 85% Automation - REVOLUTIONARY CX BREAKTHROUGH! 💎💎💎
-import October2025MultimodalCXRevolutionBanner from "./src/components/October2025MultimodalCXRevolutionBanner";
+import October2025MultimodalCXRevolutionBanner from "./components/October2025MultimodalCXRevolutionBanner";
 
 // 🔥🔥🔥 ABSOLUTE NEWEST: OCTOBER 1, 2025 - 5 REVOLUTIONARY AI GUIDES - #1 TOP PRIORITY! 🔥🔥🔥
 // 💎💎💎 JUST PUBLISHED TODAY: $23.5B Combined Value - Agent Orchestration, LLM Security, Real-Time Analytics, Zero Trust, Multimodal AI! 💎💎💎
