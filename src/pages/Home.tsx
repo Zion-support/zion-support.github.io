@@ -155,6 +155,92 @@ const Home = () => {
           </div>
         </section>
 
+        {/* NEW CONTENT HIGHLIGHT SECTION */}
+        <section className="container mx-auto px-6 py-16 relative z-10">
+          <div className="bg-gradient-to-br from-emerald-900/40 via-teal-900/30 to-cyan-900/40 rounded-2xl border-2 border-emerald-400/50 p-8 md:p-12 shadow-2xl">
+            <div className="flex items-center gap-3 mb-6">
+              <span className="inline-flex h-3 w-3 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span className="text-emerald-400 font-bold text-lg uppercase tracking-wider">🔥 Just Published - October 2025</span>
+            </div>
+            
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              New Cutting-Edge AI Resources Available Now
+            </h2>
+            
+            <p className="text-xl text-emerald-100 mb-8 max-w-3xl">
+              Discover our latest insights, services, and success stories from the frontlines of AI innovation.
+            </p>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+              {/* Blog Post 1 */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30 hover:border-emerald-400/60 transition-all hover:scale-105 hover:shadow-xl">
+                <div className="text-emerald-400 text-sm font-semibold mb-2 uppercase">📝 New Guide</div>
+                <h3 className="text-lg font-bold text-white mb-3">Edge Inference Patterns</h3>
+                <p className="text-emerald-100 text-sm mb-4">Production-ready AI deployment guide with real-world patterns and 12-minute read</p>
+                <Link 
+                  to="/blog/ai-2025-oct-edge-inference-patterns-production-guide" 
+                  className="inline-flex items-center text-emerald-300 hover:text-white font-semibold text-sm"
+                >
+                  Read Now <ArrowRight className="w-4 h-4 ml-1" />
+                </Link>
+              </div>
+
+              {/* Blog Post 2 */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 hover:border-cyan-400/60 transition-all hover:scale-105 hover:shadow-xl">
+                <div className="text-cyan-400 text-sm font-semibold mb-2 uppercase">📊 Strategy</div>
+                <h3 className="text-lg font-bold text-white mb-3">North Star Metrics Framework</h3>
+                <p className="text-cyan-100 text-sm mb-4">Measure AI product success with proven metrics used by leading companies</p>
+                <Link 
+                  to="/blog/ai-2025-oct-northstar-metrics-ai-product-success" 
+                  className="inline-flex items-center text-cyan-300 hover:text-white font-semibold text-sm"
+                >
+                  Learn More <ArrowRight className="w-4 h-4 ml-1" />
+                </Link>
+              </div>
+
+              {/* New Service */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30 hover:border-blue-400/60 transition-all hover:scale-105 hover:shadow-xl">
+                <div className="text-blue-400 text-sm font-semibold mb-2 uppercase">🚀 Service Launch</div>
+                <h3 className="text-lg font-bold text-white mb-3">Edge AI Platform</h3>
+                <p className="text-blue-100 text-sm mb-4">Deploy intelligence at the edge with <10ms latency. Starting at $4,999/mo</p>
+                <Link 
+                  to="/services/ai-2025-october-edge-ai-platform" 
+                  className="inline-flex items-center text-blue-300 hover:text-white font-semibold text-sm"
+                >
+                  Explore Platform <ArrowRight className="w-4 h-4 ml-1" />
+                </Link>
+              </div>
+
+              {/* Case Study */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:border-purple-400/60 transition-all hover:scale-105 hover:shadow-xl">
+                <div className="text-purple-400 text-sm font-semibold mb-2 uppercase">💼 Success Story</div>
+                <h3 className="text-lg font-bold text-white mb-3">$127M Manufacturing Win</h3>
+                <p className="text-purple-100 text-sm mb-4">How a Fortune 500 manufacturer transformed operations with edge AI</p>
+                <Link 
+                  to="/case-studies/ai-2025-oct-global-manufacturing-edge-ai-success-127m" 
+                  className="inline-flex items-center text-purple-300 hover:text-white font-semibold text-sm"
+                >
+                  Read Case Study <ArrowRight className="w-4 h-4 ml-1" />
+                </Link>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 items-center">
+              <Link 
+                to="/blog" 
+                className="btn-primary flex items-center gap-2"
+              >
+                <Sparkles className="w-5 h-5" />
+                View All New Content
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+              <div className="text-emerald-200 text-sm">
+                <span className="font-bold">3 Months FREE</span> on Edge AI Platform ends Oct 31st
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Latest Insights Section */}
         {/* Promo ribbon for new content */}
         <div className="container mx-auto px-6">
