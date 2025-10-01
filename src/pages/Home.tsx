@@ -51,7 +51,6 @@ import NewServicesPromoBanner2026 from "../components/NewServicesPromoBanner2026
 import November2025GameChangersBanner from "../components/November2025GameChangersBanner";
 import October2025CognitiveRevolutionBanner from "../components/October2025CognitiveRevolutionBanner";
 import { latestInsights } from "../content/insights";
-<<<<<<< HEAD
 import NewContentPromoBanner from "../components/NewContentPromoBanner";
 import EnhancedPromotionalBanner from "../components/EnhancedPromotionalBanner";
 import { getFeaturedBanners } from "../content/enhanced-promotional-banners";
@@ -61,9 +60,7 @@ import ComprehensivePromoBanner from "../components/ComprehensivePromoBanner";
 import NewArticlesPromoBanner from "../components/NewArticlesPromoBanner";
 import NewServicesPromoBanner from "../components/NewServicesPromoBanner";
 import ContentPromotionBanner from "../components/ContentPromotionBanner";
-=======
 import { blogPosts } from "../content/blog-posts";
->>>>>>> origin/main
 
 const Home = () => {
   return (
@@ -102,6 +99,20 @@ const Home = () => {
         <link rel="canonical" href="https://ziontechgroup.com" />
       </Helmet>
       <AdvertisingBanner />
+      {/* Promo: New Enterprise AI Governance Blueprint */}
+      <NewContentPromoBanner 
+        className="border-b border-white/10" 
+        variant="premium" 
+        title="🛡️ NEW: Enterprise AI Governance 2025 — Scorecards & Guardrails"
+        description="Ship AI safely with policy tests in CI, KPI-linked scorecards, budget-aware routing, and instant rollback."
+        ctaText="Read Governance Blueprint"
+        ctaLink="/blog/ai-2025-oct-01-enterprise-ai-governance-blueprint"
+        featuredItems={[
+          { title: "Enterprise AI Governance — Zero‑Regret Rollouts", category: "AI Governance", link: "/blog/ai-2025-oct-01-enterprise-ai-governance-blueprint" },
+          { title: "Agent Copilots — Guardrails That Scale", category: "AI Agents", link: "/blog/ai-2025-oct-01-enterprise-agent-copilots" },
+          { title: "Cache Playbook PRO — 60–85% Cost ↓", category: "GenAI Engineering", link: "/blog/ai-2025-oct-02-cache-playbook-pro" }
+        ]}
+      />
       <NewContentPromoBanner 
         className="border-b border-white/10" 
         variant="premium" 
@@ -360,6 +371,33 @@ const Home = () => {
         {/* Latest research and articles */}
         <div className="container mx-auto px-4 py-8">
           <LatestArticlesShowcase />
+        </div>
+
+        {/* New: Highlight today's three freshest articles */}
+        <div className="container mx-auto px-4 py-6">
+          <div className="bg-white/10 border border-white/15 rounded-xl p-5">
+            <div className="flex items-center justify-between mb-3">
+              <h2 className="text-white text-xl font-semibold">Fresh Today</h2>
+              <Link to="/blog" className="text-zion-cyan hover:underline flex items-center gap-1">
+                View all
+                <ArrowRight size={16} />
+              </Link>
+            </div>
+            <div className="grid md:grid-cols-3 gap-4">
+              {([...blogPosts]
+                .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+                .slice(0, 3))
+                .map((post) => (
+                  <Link key={post.slug} to={`/blog/${post.slug}`} className="block group">
+                    <div className="bg-white/5 rounded-lg p-4 border border-white/10 group-hover:border-zion-cyan/40 transition-colors">
+                      <div className="text-xs uppercase tracking-wide text-zion-cyan mb-1">{post.category}</div>
+                      <div className="text-white font-medium mb-1">{post.title}</div>
+                      <div className="text-zion-slate-light text-sm">{post.readTime} • {new Date(post.date).toLocaleDateString()}</div>
+                    </div>
+                  </Link>
+                ))}
+            </div>
+          </div>
         </div>
 
         {/* 🔥🔥🔥 OCTOBER 2025 - NEW: Operational Excellence Revolution - JUST RELEASED! 🔥🔥🔥 */}

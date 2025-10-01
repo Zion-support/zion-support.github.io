@@ -369,4 +369,79 @@ export const BLOG_POSTS: BlogPost[] = [
     publishedAt: '2025-10-02',
     readTime: 6,
   },
+  {
+    id: '25',
+    title: 'Autonomous FinOps Playbook: Real-Time Guardrails That Cut Spend 40%',
+    slug: 'autonomous-finops-playbook-2025-oct',
+    excerpt:
+      'Implement policy-driven budgets, adaptive model routing, and multi-tier caching to shrink LLM and cloud costs—without slowing teams.',
+    content:
+      'This playbook operationalizes Autonomous FinOps across AI and cloud. You will implement budget policies as code, latency-aware cache tiers (semantic, workflow, response), and dynamic model routing based on quality/cost bands. Includes reference policies, Grafana dashboards, rollout stages, and incident-ready rollback patterns. Proven to cut GenAI and cloud spend by 30–50% while improving reliability.',
+    featuredImage: '/images/blog/autonomous-finops-playbook.jpg',
+    category: 'Cloud',
+    tags: ['FinOps', 'Guardrails', 'LLM', 'Cost Optimization'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-01',
+    readTime: 8,
+  },
+  {
+    id: '26',
+    title: 'Production Agents: Evals, Rollbacks, and Approval Gates That Scale',
+    slug: 'production-agents-evals-rollbacks-approval-gates-2025-oct',
+    excerpt:
+      'A pragmatic blueprint for agentic systems that act safely: tool permissions, reversible actions, human-in-the-loop, and continuous evals.',
+    content:
+      'Move from assistant demos to production agents. We detail capability scoping, intent verification, deterministic tool contracts, sandboxed execution, and rollback-first design. Learn to wire evals into deploy gates, add approval workflows for risky actions, and measure task completion with business-grounded metrics. Includes architecture diagrams and a phased rollout plan.',
+    featuredImage: '/images/blog/production-agents-evals-rollbacks.jpg',
+    category: 'AI',
+    tags: ['Agents', 'Reliability', 'Safety', 'Evals'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-01',
+    readTime: 9,
+  },
+  {
+    id: '28',
+    title: 'Quantum-Safe Cryptography: Enterprise Migration Playbook (2025)',
+    slug: 'quantum-safe-cryptography-enterprise-migration-2025',
+    excerpt:
+      'Practical roadmap to adopt NIST PQC (Kyber, Dilithium) with hybrid rollouts, performance tuning, and zero-downtime cutovers.',
+    content:
+      'Quantum threats demand action now. This playbook details discovery of cryptographic assets, risk triage, hybrid TLS handshakes, staged migration patterns, compatibility fallbacks, and observability for crypto agility. Includes example configs, rollout checklists, and benchmarks to de-risk PQC adoption across fleets.',
+    featuredImage: '/images/blog/quantum-safe-enterprise.jpg',
+    category: 'Security',
+    tags: ['Post-Quantum', 'Cryptography', 'NIST', 'Migration'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-03',
+    readTime: 9,
+  },
+  {
+    id: '29',
+    title: 'Neuromorphic Edge AI: Event-Driven Intelligence Under 10ms',
+    slug: 'neuromorphic-edge-ai-event-driven-2025',
+    excerpt:
+      'Brain-inspired SNNs for ultra-low power, sub-10ms decisions at the edge. Architectures, toolchains, and deployment patterns.',
+    content:
+      'We break down spiking neural networks, event cameras, and neuromorphic chips for on-device intelligence. Learn encoding strategies, training pipelines, and production deployment on constrained hardware for robotics, manufacturing, and IoT—achieving 1000x energy efficiency over GPU baselines.',
+    featuredImage: '/images/blog/neuromorphic-edge-ai.jpg',
+    category: 'AI',
+    tags: ['Neuromorphic', 'Edge AI', 'SNN', 'Efficiency'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-03',
+    readTime: 8,
+  },
+  {
+    id: '30',
+    title: 'Synthetic Data in Production: Privacy-Safe Accuracy Gains',
+    slug: 'synthetic-data-production-privacy-2025',
+    excerpt:
+      'Blueprint to generate, validate, and govern synthetic datasets that boost accuracy while eliminating PII risk.',
+    content:
+      'From diffusion to GAN pipelines, we show how to build production-grade synthetic data systems: coverage targets, bias checks, privacy guarantees, and evaluator loops that prove quality uplift. Includes templates, governance controls, and ROI models for platform teams.',
+    featuredImage: '/images/blog/synthetic-data-production.jpg',
+    category: 'Data',
+    tags: ['Synthetic Data', 'Privacy', 'Quality', 'MLOps'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-03',
+    readTime: 10,
+  },
 ];

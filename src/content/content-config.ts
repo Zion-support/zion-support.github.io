@@ -243,6 +243,34 @@ export const featuredBlogPosts: FeaturedItem[] = [
   }
 ];
 
+// Oct 1, 2025 – Advertise three brand-new articles
+featuredBlogPosts.unshift(
+  {
+    id: "ai-self-healing-infrastructure-2025",
+    title: "AI Self-Healing Infrastructure 2025",
+    description: "Autonomous infra: 95% MTTR reduction, 99.99% uptime with rollback gates.",
+    link: "/blog/ai-self-healing-infrastructure-2025",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "generative-ai-code-assistants-2025",
+    title: "Generative AI Code Assistants 2025",
+    description: "10x productivity with evaluator-backed gates, safe refactors, instant rollback.",
+    link: "/blog/generative-ai-code-assistants-2025",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-ai-privacy-preserving-analytics-2025",
+    title: "Edge AI Privacy-Preserving Analytics 2025",
+    description: "Zero‑PII insights in <100ms via scoped IDs, on‑device aggregation, DP noise.",
+    link: "/blog/edge-ai-privacy-preserving-analytics-2025",
+    type: "article",
+    featured: true
+  }
+);
+
 // Jan 2027 – Feature three brand-new articles
 featuredBlogPosts.unshift(
   {
@@ -1568,6 +1596,26 @@ featuredBlogPosts.unshift(
   }
 );
 
+// Oct 1, 2025 – Add two brand-new featured posts (enterprise platforms + automation)
+featuredBlogPosts.unshift(
+  {
+    id: "ai-2025-oct-enterprise-ai-platforms",
+    title: "Enterprise AI Platforms 2025: Architecture, SLAs, and ROI",
+    description: "Golden paths, guardrails, and cost controls that scale with measurable ROI.",
+    link: "/blog/ai-2025-oct-enterprise-ai-platforms",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-2025-oct-intelligent-automation-breakthrough",
+    title: "Intelligent Automation Breakthrough 2025",
+    description: "From tickets to outcomes with approvals, budgets, eval gates, and rollback.",
+    link: "/blog/ai-2025-oct-intelligent-automation-breakthrough",
+    type: "article",
+    featured: true
+  }
+);
+
 // Oct 1, 2025 – NEW BREAKTHROUGH ARTICLES: Autonomous Mesh, Real-Time Fraud Detection, Neural Code Synthesis
 featuredBlogPosts.unshift(
   {
@@ -1619,6 +1667,34 @@ featuredBlogPosts.unshift(
     title: "🎲 Synthetic Data Generation Mastery 2025",
     description: "Train world-class AI without privacy risks. GANs, VAEs, diffusion models achieving 95%+ accuracy with zero GDPR violations.",
     link: "/blog/ai-2025-october-synthetic-data-generation-mastery",
+    type: "article",
+    featured: true
+  }
+);
+
+// Oct 3, 2025 – Advertise three brand-new guides site-wide (newly created)
+featuredBlogPosts.unshift(
+  {
+    id: "quantum-safe-cryptography-enterprise-migration-2025",
+    title: "Quantum‑Safe Enterprise Migration (2025)",
+    description: "NIST PQC rollout with hybrid handshakes, crypto agility, zero downtime.",
+    link: "/blog/quantum-safe-cryptography-enterprise-migration-2025",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "neuromorphic-edge-ai-event-driven-2025",
+    title: "Neuromorphic Edge AI (Sub‑10ms)",
+    description: "Event‑driven SNNs for 1000x efficiency on edge hardware.",
+    link: "/blog/neuromorphic-edge-ai-event-driven-2025",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "synthetic-data-production-privacy-2025",
+    title: "Synthetic Data in Production",
+    description: "Privacy‑safe datasets that lift accuracy with evaluator‑backed quality.",
+    link: "/blog/synthetic-data-production-privacy-2025",
     type: "article",
     featured: true
   }
