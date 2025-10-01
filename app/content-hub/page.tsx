@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { ContentIntelligenceShowcaseBanner } from '../components/ContentIntelligenceBanner';
 
 export const metadata = {
   title: 'AI Content Hub - Zion Tech Group',
@@ -175,6 +176,9 @@ export default function ContentHub() {
 
       {/* Featured Content */}
       <section className="mb-16">
+        {/* NEW: Content Intelligence Revolution Banner */}
+        <ContentIntelligenceShowcaseBanner />
+        
         <div className="bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 text-white p-8 rounded-2xl mb-8 shadow-2xl">
           <div className="text-center">
             <div className="inline-block bg-white/30 backdrop-blur-sm px-6 py-2 rounded-full text-sm font-bold mb-4 animate-pulse shadow-lg">

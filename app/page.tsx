@@ -77,6 +77,9 @@ import October2025NewPracticalContentBannerTop, { October2025PracticalContentSho
 // NEW JANUARY 2026 QUANTUM BREAKTHROUGH CONTENT
 import January2026QuantumBreakthroughBanner from '../components/January2026QuantumBreakthroughBanner';
 
+// NEW OCTOBER 1, 2025 - CONTENT INTELLIGENCE REVOLUTION
+import ContentIntelligenceBanner from './components/ContentIntelligenceBanner';
+
 // NEW 2026 CONTENT SHOWCASE
 import NewContent2026Banner from '../components/NewContent2026Banner';
 import AI2026ContentShowcaseBanner from '../components/AI2026ContentShowcaseBanner';
@@ -91,6 +94,9 @@ export const metadata = {
 export default function HomePage() {
   return (
     <div className="animate-fade-in">
+      {/* 🚀 BRAND NEW OCTOBER 1, 2025 - CONTENT INTELLIGENCE REVOLUTION - TOP PRIORITY! */}
+      <ContentIntelligenceBanner />
+      
       {/* 🚀 NEW 2026 CONTENT SHOWCASE - TOP PRIORITY */}
       <NewContent2026Banner />
       <AI2026ContentShowcaseBanner />
