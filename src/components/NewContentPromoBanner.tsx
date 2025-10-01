@@ -231,4 +231,4 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
   );
 };
 
-export default NewContentPromoBanner;
+export default React.memo(NewContentPromoBanner);

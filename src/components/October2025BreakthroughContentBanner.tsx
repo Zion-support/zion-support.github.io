@@ -101,4 +101,4 @@ const October2025BreakthroughContentBanner = () => {
   );
 };
 
-export default October2025BreakthroughContentBanner;
+export default React.memo(October2025BreakthroughContentBanner);

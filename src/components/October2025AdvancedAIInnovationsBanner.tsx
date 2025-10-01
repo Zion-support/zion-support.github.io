@@ -180,4 +180,4 @@ const October2025AdvancedAIInnovationsBanner = () => {
   );
 };
 
-export default October2025AdvancedAIInnovationsBanner;
+export default React.memo(October2025AdvancedAIInnovationsBanner);

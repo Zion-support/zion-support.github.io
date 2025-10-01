@@ -184,4 +184,4 @@ const NewContentPromotionalBanner2026 = () => {
   );
 };
 
-export default NewContentPromotionalBanner2026;
+export default React.memo(NewContentPromotionalBanner2026);
