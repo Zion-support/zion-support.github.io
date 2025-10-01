@@ -1,7 +1,25 @@
 import React from 'react';
 import { ArrowRight, Sparkles, TrendingUp, Zap, Star, Rocket, Brain, Atom, Bot } from 'lucide-react';
 
-const NewContentPromoBanner: React.FC = () => {
+interface NewContentPromoBannerProps {
+  className?: string;
+  variant?: string;
+  title?: string;
+  description?: string;
+  ctaText?: string;
+  ctaLink?: string;
+  featuredItems?: Array<{ title: string; category: string; link: string; }>;
+}
+
+const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({ 
+  className = "",
+  variant = "default",
+  title,
+  description,
+  ctaText,
+  ctaLink,
+  featuredItems
+}) => {
   const newContent = [
     {
       title: "Real‑Time Decision Engines 2026",
