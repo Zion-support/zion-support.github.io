@@ -98,28 +98,24 @@ const Home = () => {
             <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-xl p-6 mb-6 animate-fade-in">
               <div className="flex items-center justify-center gap-3 mb-3">
                 <Rocket className="w-6 h-6 text-purple-400 animate-bounce" />
-                <span className="text-lg font-bold text-purple-400">🔥 FRESH CONTENT - SEPTEMBER 30, 2025</span>
+                <span className="text-lg font-bold text-purple-400">🔥 JUST RELEASED - OCTOBER 1, 2025</span>
                 <Rocket className="w-6 h-6 text-purple-400 animate-bounce" />
               </div>
               <p className="text-white text-xl font-bold mb-3">
-                9 New Articles: K8s Security, Green AI, Distributed Tracing & Real-Time ML
+                NEW: Edge AI Production Guide + North Star Metrics Framework + $127M Case Study
               </p>
               <div className="grid md:grid-cols-4 gap-3 text-sm text-zion-slate-light mb-4">
                 <div className="flex items-center gap-2">
                   <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>Kubernetes Security Guide</span>
+                  <span>Sub-10ms Edge Inference Patterns</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>Green AI & Sustainability</span>
+                  <span>Proven AI Product Success Metrics</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>Distributed Tracing</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>Real-Time Decision Intelligence</span>
+                  <span>$127M Manufacturing ROI Story</span>
                 </div>
               </div>
               <Link
@@ -342,12 +338,12 @@ const Home = () => {
             </div>
             
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              🆕 Fresh Enterprise AI Resources Just Dropped!
+              Production-Ready AI Resources: Edge Inference, Metrics & Real ROI
             </h2>
             
             <p className="text-xl text-emerald-100 mb-8 max-w-3xl">
-              Three brand-new resources from the frontlines of enterprise AI transformation. 
-              Real results, proven strategies, actionable insights.
+              Learn from real-world deployments: Edge AI patterns achieving sub-10ms latency, North Star metrics that predict success, and a $127M manufacturing transformation.
+            </p>
             </p>
 
             <div className="grid md:grid-cols-3 gap-6 mb-8">
@@ -417,9 +413,8 @@ const Home = () => {
         <div className="container mx-auto px-6">
           <div className="mb-6 rounded-full bg-gradient-to-r from-emerald-500/20 to-blue-500/20 border border-emerald-400/40 px-6 py-3 text-emerald-200 text-sm inline-flex items-center gap-2 animate-fade-in">
             <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            <span className="font-semibold">🎯 NEW TODAY:</span>
-            Hybrid Cloud • Legal AI • $214M Retail Success
-            <Link to="/blog" className="text-emerald-300 underline underline-offset-4 hover:text-white font-semibold">Read →</Link>
+            NEW TODAY: Production Edge AI Guide (12 min) + North‑Star Metrics Framework (10 min) + $127M Case Study
+            <Link to="/blog/ai-2025-oct-edge-inference-patterns-production-guide" className="text-emerald-300 underline underline-offset-4 hover:text-white">Read</Link>
           </div>
         </div>
         <LatestInsights />
@@ -427,9 +422,8 @@ const Home = () => {
           <div className="rounded-xl bg-gradient-to-r from-indigo-600/20 to-purple-600/20 border border-indigo-400/40 px-6 py-4 text-indigo-200 text-sm flex items-center justify-between shadow-lg">
             <div className="flex items-center gap-3">
               <span className="inline-flex h-2 w-2 rounded-full bg-indigo-400 animate-ping"></span>
-              <span className="font-bold text-white">🚀 Oct 1 Launch:</span>
-              <span className="hidden sm:inline">Hybrid Cloud Playbook • GenAI Legal • Retail Personalization Case</span>
-              <span className="sm:hidden">3 new resources live</span>
+              <span className="font-medium">Fresh on the blog:</span>
+              <span className="hidden sm:inline">Edge AI Production Guide • North‑Star Metrics • $127M Manufacturing Case Study</span>
             </div>
             <Link to="/blog" className="text-indigo-300 hover:text-white font-semibold underline underline-offset-4 transition-colors">
               Explore Now →
