@@ -45,21 +45,15 @@ import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
 import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
 import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
-<<<<<<< HEAD
 import InteractiveContentRecommendation from '../components/InteractiveContentRecommendation';
 import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
 import LatestContent2026Banner from '../components/LatestContent2026Banner';
-<<<<<<< HEAD
 import NewContent2026ShowcaseBanner from '../components/NewContent2026ShowcaseBanner';
 import LatestContentPromotionalBanner from '../components/LatestContentPromotionalBanner';
 import NewContentPromotionalBanner2026 from '../components/NewContentPromotionalBanner2026';
 import AIInnovationShowcaseBanner2026 from '../components/AIInnovationShowcaseBanner2026';
-=======
 import NextGenAutonomousBanner from '../components/NextGenAutonomousBanner';
->>>>>>> cursor/create-and-deploy-new-content-a364
-=======
-import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
->>>>>>> cursor/create-and-deploy-new-content-d513
+import NewContent2026RevolutionaryBanner from '../components/NewContent2026RevolutionaryBanner';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -83,21 +77,13 @@ export default function HomePage() {
             <span className="hidden md:inline">•</span>
             <Link href="/case-studies/ai-sustainability-transformation-2026" className="underline hover:text-yellow-200">$10M ROI Case Study</Link>
             <span className="hidden md:inline">•</span>
-<<<<<<< HEAD
-            <a to="/case-studies/ai-quantum-optimization-2026" className="underline hover:text-yellow-200">1000x Speed Improvement</a>
-=======
-            <Link href="/blog/ai-cognitive-computing-breakthrough-2026" className="underline hover:text-yellow-200">Cognitive Computing</Link>
+            <Link href="/blog/ai-2026-synthetic-consciousness-breakthrough" className="underline hover:text-yellow-200">Synthetic Consciousness</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-space-tech-revolution-2026" className="underline hover:text-yellow-200">Space Tech</Link>
+            <Link href="/blog/ai-2026-quantum-neural-superintelligence" className="underline hover:text-yellow-200">Quantum Superintelligence</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-next-generation-autonomous-systems-2026" className="underline hover:text-yellow-200">Next-Gen Autonomous</Link>
+            <Link href="/case-studies/ai-2026-synthetic-consciousness-10-billion-success" className="underline hover:text-yellow-200">$10B Success</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-mega-transformation-2026" className="underline hover:text-yellow-200">$50M ROI Case Study</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-autonomous-enterprise-success-2026" className="underline hover:text-yellow-200">$25M ROI Case Study</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-next-generation-autonomous-success-2026" className="underline hover:text-yellow-200">$35M ROI Case Study</Link>
->>>>>>> cursor/create-and-deploy-new-content-a364
+            <Link href="/case-studies/ai-2026-quantum-neural-superintelligence-25-billion-success" className="underline hover:text-yellow-200">$25B Success</Link>
           </div>
           <Link
             to="/blog"
@@ -147,10 +133,11 @@ export default function HomePage() {
       {/* New Content Promotional Banner 2026 */}
       <NewContentPromotionalBanner2026 />
       
-<<<<<<< HEAD
+      {/* Revolutionary 2026 Content Banner */}
+      <NewContent2026RevolutionaryBanner />
+      
       {/* AI Innovation Showcase Banner 2026 */}
       <AIInnovationShowcaseBanner2026 />
-=======
       {/* Revolutionary 2026 Content Banner */}
       <Revolutionary2026ContentBanner />
       
