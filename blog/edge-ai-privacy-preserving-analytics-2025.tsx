@@ -23,7 +23,7 @@ export default function EdgeAIPrivacyPreservingAnalytics2025() {
 				<section className="space-y-6 mt-8">
 					<h2 className="text-2xl font-bold">Edge Intelligence</h2>
 					<ul className="list-disc pl-6 space-y-2 text-white/90">
-						<li>Real-time inference at <50ms latency at the edge</li>
+						<li>Real-time inference at &lt;50ms latency at the edge</li>
 						<li>Adaptive models optimizing for device constraints</li>
 						<li>Offline-first analytics working without connectivity</li>
 						<li>Progressive enhancement as network conditions improve</li>
