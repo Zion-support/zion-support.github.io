@@ -93,17 +93,10 @@ function Footer() {
                 Blog
                 <span className="bg-green-500 text-white px-2 py-1 rounded-full text-xs font-semibold">NEW</span>
               </Link>
-<<<<<<< HEAD
-              <Link href="/blog/ai-2026-mega-trends" className="block text-gray-600 hover:text-blue-600 transition-colors">🔥 AI Mega Trends 2026</Link>
-              <Link href="/blog/ai-space-tech-revolution-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🚀 Space AI Revolution</Link>
-              <Link href="/case-studies/ai-space-mission-success-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">📊 $100M Mission Success</Link>
-              <Link href="/case-studies/ai-autonomous-enterprise-transformation-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🏢 $15M Enterprise ROI</Link>
-=======
               <Link href="/blog/ai-autonomous-ai-systems-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🤖 Autonomous AI Systems 2026</Link>
               <Link href="/blog/ai-cognitive-computing-breakthrough-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🧠 Cognitive Computing Breakthrough</Link>
               <Link href="/blog/ai-autonomous-enterprise-transformation-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🚀 Autonomous Enterprise 2026</Link>
               <Link href="/blog/ai-quantum-hybrid-computing-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">⚡ Quantum AI Computing</Link>
->>>>>>> cursor/create-and-deploy-new-content-d513
               <Link href="/case-studies" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
                 Case Studies
                 <span className="bg-yellow-500 text-white px-2 py-1 rounded-full text-xs font-semibold">FEATURED</span>
