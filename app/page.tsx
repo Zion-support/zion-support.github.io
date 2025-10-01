@@ -40,6 +40,7 @@ import {
   EnterpriseAITransformationBanner
 } from '../components/PromotionalBanner';
 import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
+import NewContentShowcaseBanner from '../components/NewContentShowcaseBanner';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
@@ -68,6 +69,12 @@ export const metadata = {
 export default function HomePage() {
   return (
     <div className="animate-fade-in">
+      {/* NEW REVOLUTIONARY 2026 CONTENT - TOP BANNER */}
+      <Revolutionary2026ContentBanner />
+      
+      {/* NEW CONTENT SHOWCASE */}
+      <NewContentShowcaseBanner />
+      
       {/* NEW OCTOBER 2025 CONTENT - TOP BANNER */}
       <October2025NewContentBanner />
       
