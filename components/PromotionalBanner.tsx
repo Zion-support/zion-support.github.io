@@ -670,3 +670,70 @@ export const MLPipelineOptimizationCaseStudyBanner = () => (
     hideAfter={22}
   />
 );
+
+// October 2025 NEW CONTENT - Agentic Reasoning, FinOps, Vector DB
+export const AgenticReasoningBreakthroughBanner = () => (
+  <PromotionalBanner
+    message="🧠 BREAKTHROUGH: Agentic Reasoning Systems — 97% Decision Accuracy, $8.4B Value Creation"
+    ctaText="Discover How"
+    ctaLink="/blog/ai-2025-oct-01-agentic-reasoning-breakthrough"
+    backgroundColor="bg-gradient-to-r from-purple-700 via-indigo-600 to-blue-700"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const AutonomousFinOpsBanner = () => (
+  <PromotionalBanner
+    message="💰 NEW: Autonomous FinOps Platform — 45-65% Cloud Cost Savings, $12.7B Value Creation"
+    ctaText="Learn More"
+    ctaLink="/blog/ai-2025-oct-01-autonomous-finops-platform-revolution"
+    backgroundColor="bg-gradient-to-r from-green-600 via-emerald-600 to-teal-700"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const VectorDatabaseOptimizationBanner = () => (
+  <PromotionalBanner
+    message="⚡ TECHNICAL: Vector Database Optimization — Scale to 100B+ Embeddings, Sub-10ms Latency"
+    ctaText="Read Guide"
+    ctaLink="/blog/ai-2025-oct-01-vector-database-optimization-enterprise"
+    backgroundColor="bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-700"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const Fortune100AgenticReasoningCaseStudyBanner = () => (
+  <PromotionalBanner
+    message="🏆 CASE STUDY: Fortune 100 Retailer — $12B Value Creation with Agentic Reasoning, 28x ROI"
+    ctaText="View Case Study"
+    ctaLink="/case-studies/ai-2025-oct-01-fortune-100-agentic-reasoning-12-billion-success"
+    backgroundColor="bg-gradient-to-r from-yellow-600 via-orange-600 to-red-700"
+    autoHide={true}
+    hideAfter={22}
+  />
+);
+
+export const GlobalBankVectorDBCaseStudyBanner = () => (
+  <PromotionalBanner
+    message="🏦 CASE STUDY: Top-10 Global Bank — $4.7B Value Through Vector DB Optimization, 34x ROI"
+    ctaText="Read Success Story"
+    ctaLink="/case-studies/ai-2025-oct-01-global-bank-vector-database-success"
+    backgroundColor="bg-gradient-to-r from-blue-700 via-indigo-700 to-purple-800"
+    autoHide={true}
+    hideAfter={22}
+  />
+);
+
+export const EnterpriseAIOptimizationServicesBanner = () => (
+  <PromotionalBanner
+    message="🚀 NEW SERVICE: Enterprise AI Optimization — 50-70% Cost Reduction, 10x Performance"
+    ctaText="Get Started"
+    ctaLink="/services/ai-2025-october-enterprise-ai-optimization-services"
+    backgroundColor="bg-gradient-to-r from-rose-600 via-pink-600 to-fuchsia-700"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
