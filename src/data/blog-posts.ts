@@ -27,6 +27,36 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: 5,
   },
   {
+    id: '23',
+    title: 'Autonomous Cost Control: Real-Time FinOps with AI Guardrails',
+    slug: 'autonomous-cost-control-real-time-finops-2025',
+    excerpt:
+      'Cut cloud and LLM spend by 35–60% with policy-driven budgets, adaptive caching, and safe-ops automations.',
+    content:
+      'Enterprises are moving from dashboards to decisions. This guide shows how to implement real-time FinOps using AI guardrails: adaptive request shaping, semantic and workflow caches, tiered model routing, and budget enforcement that never blocks business-critical paths. Includes architectural diagrams, policy examples, and rollout playbooks proven to reduce spend 35–60% while improving reliability.',
+    featuredImage: '/images/blog/autonomous-cost-control.jpg',
+    category: 'Cloud',
+    tags: ['FinOps', 'LLM', 'Cost Optimization', 'Automation'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-02',
+    readTime: 7,
+  },
+  {
+    id: '24',
+    title: 'Enterprise Agent Reliability: Safe Autonomy in Production',
+    slug: 'enterprise-agent-reliability-safe-autonomy-2025',
+    excerpt:
+      'Blueprint for agentic systems that plan, execute, and recover—backed by evals, rollbacks, and approvals.',
+    content:
+      'Agentic systems amplify teams when they are reliable. We cover production patterns: tool permissioning, reversible actions, intent verification, structured outputs, hierarchical planning with retries, and continuous evals as deploy gates. Learn to ship agents that handle errors gracefully, escalate when needed, and deliver measurable business outcomes.',
+    featuredImage: '/images/blog/enterprise-agent-reliability.jpg',
+    category: 'AI',
+    tags: ['Agents', 'Reliability', 'Production', 'Evals'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-02',
+    readTime: 8,
+  },
+  {
     id: '11',
     title: 'GenAI in Production: SLAs, Costs, and Control in 2025',
     slug: 'genai-in-production-slas-costs-control-2025',

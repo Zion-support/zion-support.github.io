@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import AnimatedSection from '../components/AnimatedSection';
 import './HomePage.css';
 import { BLOG_POSTS } from '../data/blog-posts';
+import October2025FeaturedContentBanner from '../components/October2025FeaturedContentBanner';
 
 const HomePage: React.FC = () => {
   return (
@@ -112,6 +113,13 @@ const HomePage: React.FC = () => {
             </div>
           </section>
         </AnimatedSection>
+
+      {/* Featured Content Advertising Banner */}
+      <AnimatedSection animation="slideUp" delay={200}>
+        <section className="featured-banner-section">
+          <October2025FeaturedContentBanner />
+        </section>
+      </AnimatedSection>
 
         <AnimatedSection animation="slideUp" delay={200}>
           <section className="promo-section">
