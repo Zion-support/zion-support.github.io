@@ -21,6 +21,9 @@ export default defineConfig({
     },
   },
   build: {
+    sourcemap: false,
+    minify: 'terser',
+    cssMinify: true,
     rollupOptions: {
       external: [
         'next/link',
@@ -37,7 +40,8 @@ export default defineConfig({
       treeshake: {
         moduleSideEffects: false,
         propertyReadSideEffects: false,
-        tryCatchDeoptimization: false
+        tryCatchDeoptimization: false,
+        preset: 'smallest'
       },
       output: {
         // Manual chunk splitting for better caching
