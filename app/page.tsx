@@ -66,11 +66,10 @@ import RevolutionaryTechShowcase from '../components/RevolutionaryTechShowcase';
 import PerformanceComparison from '../components/PerformanceComparison';
 import December2026UltimateSingularityBanner from '../components/December2026UltimateSingularityBanner';
 import January2027UniversalConsciousnessBanner from '../components/January2027UniversalConsciousnessBanner';
-import February2027SyntheticConsciousnessBanner from '../components/February2027SyntheticConsciousnessBanner';
-import November2026QuantumConsciousnessSingularityBanner from '../components/November2026QuantumConsciousnessSingularityBanner';
-import December2026UltimateAutonomousRevolutionBanner from '../components/December2026UltimateAutonomousRevolutionBanner';
-import January2027UniversalIntelligenceRevolutionBanner from '../components/January2027UniversalIntelligenceRevolutionBanner';
-import January2027RevolutionaryBreakthroughsBanner from '../components/January2027RevolutionaryBreakthroughsBanner';
+import October2026TranscendentAutomationBanner from '../components/October2026TranscendentAutomationBanner';
+import September2026MegaBreakthroughBanner from '../components/September2026MegaBreakthroughBanner';
+import December2025ContentShowcaseBanner from '../components/December2025ContentShowcaseBanner';
+import January2025AutonomousIntelligenceBanner from '../components/January2025AutonomousIntelligenceBanner';
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -81,11 +80,11 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-slate-950">
-      {/* 🚀🚀🚀 NEWEST: JANUARY 2025 QUANTUM NEURAL REVOLUTION - ABSOLUTE TOP PRIORITY! 🚀🚀🚀 */}
-      {/* Featured: 10,000x Performance, 99.9% Consciousness Accuracy, $2.5B ROI Potential */}
-      <January2025QuantumNeuralRevolutionBanner />
+      {/* 🚀🚀🚀 JANUARY 2025 AUTONOMOUS INTELLIGENCE REVOLUTION - MOST RECENT 🚀🚀🚀 */}
+      {/* Revolutionary breakthrough in autonomous AI intelligence - January 2025 */}
+      <January2025AutonomousIntelligenceBanner />
       
-      {/* 🚀🚀🚀 DECEMBER 2025 NEW BREAKTHROUGH CONTENT - MOST RECENT 🚀🚀🚀 */}
+      {/* 🚀🚀🚀 DECEMBER 2025 NEW BREAKTHROUGH CONTENT 🚀🚀🚀 */}
       {/* Latest autonomous systems and quantum computing breakthroughs - December 2025 */}
       <December2025ContentShowcaseBanner />
       

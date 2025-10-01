@@ -44,26 +44,10 @@ function Header() {
         </Link>
         <div className="hidden md:flex gap-6">
           <div className="relative group">
-            <Link href="/blog/ai-2025-december-autonomous-cloud-operations" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
-              December 2025 Autonomous Cloud
-              <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
-                NEW
-              </span>
-            </Link>
-          </div>
-          <div className="relative group">
-            <Link href="/blog/ai-2025-december-edge-intelligence-revolution" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
-              December 2025 Edge Intelligence
-              <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
-                50x PERFORMANCE
-              </span>
-            </Link>
-          </div>
-          <div className="relative group">
-            <Link href="/case-studies/ai-2025-december-autonomous-systems-500-million-success" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
-              December 2025 $500M Success
-              <span className="bg-gradient-to-r from-emerald-500 to-green-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
-                FORTUNE 100
+            <Link href="/blog/ai-2025-january-autonomous-intelligence-revolution" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
+              January 2025 Autonomous Intelligence
+              <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
+                $500M SUCCESS
               </span>
             </Link>
           </div>
@@ -361,19 +345,19 @@ function Footer() {
             </div>
           </div>
           <div>
-            <h3 className="font-semibold text-gray-900 mb-3">Latest December 2025 Revolutionary Content</h3>
+            <h3 className="font-semibold text-gray-900 mb-3">Latest 2025 Revolutionary Content</h3>
             <div className="space-y-2">
-              <Link href="/blog/ai-2025-december-autonomous-cloud-operations" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
-                ☁️ December 2025 Autonomous Cloud Operations
-                <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">NEW</span>
+              <Link href="/blog/ai-2025-january-autonomous-intelligence-revolution" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                🚀 January 2025 Autonomous Intelligence Revolution
+                <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">$500M SUCCESS</span>
               </Link>
-              <Link href="/blog/ai-2025-december-edge-intelligence-revolution" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
-                ⚡ December 2025 Edge Intelligence Revolution
-                <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">50x PERFORMANCE</span>
+              <Link href="/case-studies/ai-2025-january-autonomous-intelligence-500-million-success" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                💰 $500M Success Story - Fortune 100
+                <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">ROI BREAKTHROUGH</span>
               </Link>
-              <Link href="/case-studies/ai-2025-december-autonomous-systems-500-million-success" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
-                💰 December 2025 $500M Success Story
-                <span className="bg-gradient-to-r from-emerald-500 to-green-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">FORTUNE 100</span>
+              <Link href="/blog/ai-2025-january-quantum-neural-breakthrough" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                ⚛️ January 2025 Quantum Neural Breakthrough
+                <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">10,000x PERFORMANCE</span>
               </Link>
               <Link href="/blog/ai-2027-february-synthetic-consciousness-revolution" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
                 🧠 February 2027 Synthetic Consciousness Revolution
