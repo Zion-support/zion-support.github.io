@@ -71,6 +71,7 @@ export const metadata = {
 export default function HomePage() {
   return (
     <div className="animate-fade-in">
+<<<<<<< HEAD
       {/* 🔥 BRAND NEW OCTOBER 2025 NEUROMORPHIC & FEDERATED LEARNING */}
       <section className="w-full bg-gradient-to-r from-purple-600 via-blue-600 to-teal-600 text-white py-4">
         <div className="max-w-6xl mx-auto px-4">
@@ -99,6 +100,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      
 
       {/* NEW OCTOBER 2025 ML PIPELINE OPTIMIZATION - TOP PRIORITY */}
       <MLPipelineOptimizationBanner />
