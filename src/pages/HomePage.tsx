@@ -146,28 +146,28 @@ const HomePage: React.FC = () => {
                 icon="rocket"
                 badge="New"
                 date={new Date().toLocaleDateString()}
-                title="New on Oct 2: Governance, Edge Speed, AI Reliability"
-                description="Latest playbooks: KPI‑linked guardrails, sub‑100ms global inference, and reliability blueprints with instant rollback."
+                title="New on Oct 2: Decision Engines, Privacy‑First Insights, Agent Safety"
+                description="Fresh drops: sub‑ms decision engines, PII‑safe analytics, and agent safety checklists with rollback."
                 ctaText="Read the latest posts"
                 ctaLink="/blog"
                 showCount={3}
                 featuredItems={[
                   {
-                    title: 'Governance That Ships: KPI‑Linked Guardrails',
-                    category: 'AI Governance',
-                    link: '/blog/governance-that-ships-kpi-guardrails-2025-10-02',
-                    metrics: '7 min • 2025-10-02'
+                    title: 'Real-Time Decision Engines 2027: 10M/sec Under 1ms',
+                    category: 'Real-Time AI',
+                    link: '/blog/real-time-decision-engines-2027-2025-10-02',
+                    metrics: '8 min • 2025-10-02'
                   },
                   {
-                    title: 'Edge Inference Playbook 2027: Sub‑100ms Global',
-                    category: 'Edge Computing',
-                    link: '/blog/edge-inference-playbook-2027-2025-10-02',
+                    title: 'Privacy‑First Insights 2026: Analytics Without PII',
+                    category: 'Analytics',
+                    link: '/blog/privacy-first-insights-2026-2025-10-02',
                     metrics: '6 min • 2025-10-02'
                   },
                   {
-                    title: 'AI Reliability Blueprints 2027: Evals + Rollback',
+                    title: 'Agent Safety Checklists 2026: Budgets, Sandboxes, Rollbacks',
                     category: 'AI Operations',
-                    link: '/blog/ai-reliability-blueprints-2027-2025-10-02',
+                    link: '/blog/agent-safety-checklists-2026-2025-10-02',
                     metrics: '7 min • 2025-10-02'
                   }
                 ]}
