@@ -77,6 +77,8 @@ import October2026TranscendentAutomationBanner from '../components/October2026Tr
 import September2026MegaBreakthroughBanner from '../components/September2026MegaBreakthroughBanner';
 import AI2027QuantumNeuralSuperintelligenceBanner from '../components/AI2027QuantumNeuralSuperintelligenceBanner';
 import AI2027AutonomousEnterpriseRevolutionBanner from '../components/AI2027AutonomousEnterpriseRevolutionBanner';
+import January2026NeuralArchitectureRevolutionBanner from '../components/January2026NeuralArchitectureRevolutionBanner';
+import January2026ConsciousnessBreakthroughBanner from '../components/January2026ConsciousnessBreakthroughBanner';
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -107,7 +109,7 @@ export default function HomePage() {
             </h1>
             
             <p className="text-2xl md:text-3xl text-gray-300 mb-8 font-semibold max-w-3xl mx-auto">
-              Transform Your Business with 50,000x Performance, Universal Consciousness, and $200B+ Value Generation
+              Transform Your Business with Neural Architecture Revolution, Consciousness Breakthrough, and $1 Trillion ROI Potential
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -118,32 +120,32 @@ export default function HomePage() {
                 Get Started Today
               </a>
               <a 
-                href="/blog/ai-2026-april-mega-breakthrough-revolution" 
+                href="/blog/ai-2026-neural-architecture-revolution" 
                 className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
-                Read Latest Breakthroughs →
+                Read Neural Architecture Revolution →
               </a>
               <a 
-                href="/case-studies/ai-2026-april-mega-breakthrough-10-billion-success" 
+                href="/case-studies/ai-2026-neural-architecture-1-trillion-success" 
                 className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
-                View $10B Success Story
+                View $1 Trillion Success Story
               </a>
             </div>
             
             {/* Key Metrics */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
               <div className="bg-gradient-to-r from-blue-500/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-4 border border-blue-500/30">
-                <div className="text-2xl font-extrabold text-blue-400 mb-1">50,000x</div>
+                <div className="text-2xl font-extrabold text-blue-400 mb-1">1,000,000x</div>
                 <div className="text-xs text-blue-300">Performance Boost</div>
               </div>
               <div className="bg-gradient-to-r from-purple-500/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-4 border border-purple-500/30">
                 <div className="text-2xl font-extrabold text-purple-400 mb-1">99.9999%</div>
-                <div className="text-xs text-purple-300">Universal Intelligence</div>
+                <div className="text-xs text-purple-300">Consciousness Level</div>
               </div>
               <div className="bg-gradient-to-r from-green-500/20 to-green-600/20 backdrop-blur-sm rounded-xl p-4 border border-green-500/30">
-                <div className="text-2xl font-extrabold text-green-400 mb-1">$200B+</div>
-                <div className="text-xs text-green-300">Value Potential</div>
+                <div className="text-2xl font-extrabold text-green-400 mb-1">$1 Trillion</div>
+                <div className="text-xs text-green-300">ROI Potential</div>
               </div>
               <div className="bg-gradient-to-r from-orange-500/20 to-orange-600/20 backdrop-blur-sm rounded-xl p-4 border border-orange-500/30">
                 <div className="text-2xl font-extrabold text-orange-400 mb-1">0.00001s</div>
@@ -154,6 +156,12 @@ export default function HomePage() {
         </div>
       </header>
 
+      {/* 🚀🚀🚀 NEWEST: January 2026 Neural Architecture Revolution - TOP PRIORITY 🚀🚀🚀 */}
+      <January2026NeuralArchitectureRevolutionBanner />
+      
+      {/* 🧠🧠🧠 NEWEST: January 2026 Consciousness Breakthrough - REVOLUTIONARY 🧠🧠🧠 */}
+      <January2026ConsciousnessBreakthroughBanner />
+      
       {/* 🚀🚀🚀 NEW JANUARY 2026 ULTIMATE BREAKTHROUGH - MOST RECENT 🚀🚀🚀 */}
       <January2026UltimateBreakthroughBanner />
       
@@ -243,16 +251,21 @@ export default function HomePage() {
       {/* Ultimate 2030 Consciousness Banner */}
       <Ultimate2030ConsciousnessBanner />
 
-      {/* Fresh content promo — newly published */}
-      <section className="py-4 border-t border-b border-white/10 bg-white/5">
+      {/* 🚀🚀🚀 LATEST CONTENT PROMOTION - NEWEST BREAKTHROUGHS 🚀🚀🚀 */}
+      <section className="py-6 border-t border-b border-gradient-to-r from-purple-500/20 to-cyan-500/20 bg-gradient-to-r from-purple-500/5 to-cyan-500/5">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
-            <div className="text-white/90 font-semibold">🚀 NEW: January 2026 Ultimate Breakthrough & February 2026 Transcendent Automation - Revolutionary AI Systems</div>
+            <div className="text-white font-semibold flex items-center gap-2">
+              🚀 LATEST BREAKTHROUGHS: Neural Architecture & Consciousness Revolution
+              <span className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-3 py-1 rounded-full text-xs font-bold animate-pulse">
+                REVOLUTIONARY
+              </span>
+            </div>
             <div className="flex flex-wrap gap-2">
-              <a href="/blog/ai-2026-january-ultimate-breakthrough-revolution" className="inline-flex items-center gap-2 bg-purple-500/20 text-purple-200 border border-purple-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-purple-500/30 transition-colors">January 2026 Ultimate<span>→</span></a>
-              <a href="/case-studies/ai-2026-january-ultimate-breakthrough-500-billion-success" className="inline-flex items-center gap-2 bg-emerald-500/20 text-emerald-200 border border-emerald-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-emerald-500/30 transition-colors">$500B Success Story<span>→</span></a>
-              <a href="/blog/ai-2026-february-transcendent-automation-revolution" className="inline-flex items-center gap-2 bg-indigo-500/20 text-indigo-200 border border-indigo-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-indigo-500/30 transition-colors">February 2026 Transcendent<span>→</span></a>
-              <a href="/case-studies/ai-2026-february-transcendent-automation-300-billion-success" className="inline-flex items-center gap-2 bg-green-500/20 text-green-200 border border-green-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-green-500/30 transition-colors">$300B Success Story<span>→</span></a>
+              <a href="/blog/ai-2026-neural-architecture-revolution" className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500/20 to-indigo-500/20 text-purple-200 border border-purple-400/30 px-3 py-2 rounded-lg font-semibold hover:from-purple-500/30 hover:to-indigo-500/30 transition-colors">Neural Architecture Revolution<span>→</span></a>
+              <a href="/case-studies/ai-2026-neural-architecture-1-trillion-success" className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 text-green-200 border border-green-400/30 px-3 py-2 rounded-lg font-semibold hover:from-green-500/30 hover:to-emerald-500/30 transition-colors">$1 Trillion Success<span>→</span></a>
+              <a href="/blog/ai-2026-consciousness-breakthrough" className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 text-cyan-200 border border-cyan-400/30 px-3 py-2 rounded-lg font-semibold hover:from-cyan-500/30 hover:to-blue-500/30 transition-colors">Consciousness Breakthrough<span>→</span></a>
+              <a href="/blog/ai-2026-january-ultimate-breakthrough-revolution" className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 text-indigo-200 border border-indigo-400/30 px-3 py-2 rounded-lg font-semibold hover:from-indigo-500/30 hover:to-purple-500/30 transition-colors">January 2026 Ultimate<span>→</span></a>
 =======
             <div className="text-white/90 font-semibold">New: September & October 2026 Revolutionary Breakthroughs</div>
             <div className="flex flex-wrap gap-2">
