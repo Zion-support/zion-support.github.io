@@ -1649,6 +1649,24 @@ export const posts: BlogPost[] = [
 // Oct 03, 2025 – New posts to surface on homepage and promos
 posts.unshift(
   {
+    slug: "ai-2025-october-breakthrough-enterprise-automation",
+    title: "AI-Powered Enterprise Automation 2025: Complete Implementation Guide",
+    description: "Transform your enterprise with cutting-edge AI automation. Learn proven strategies for 400%+ efficiency gains, implementation frameworks, and real-world case studies from Fortune 500 companies.",
+    category: "Enterprise Strategy",
+    publishedAt: "2025-10-03",
+    featured: true,
+    readTime: "18 min read"
+  },
+  {
+    slug: "ai-2025-october-quantum-ai-hybrid-systems",
+    title: "Quantum-AI Hybrid Systems 2025: Practical Near-Term Implementation",
+    description: "Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies, real-world applications, and ROI optimization for 1000x processing speed gains.",
+    category: "Quantum Computing",
+    publishedAt: "2025-10-03",
+    featured: true,
+    readTime: "15 min read"
+  },
+  {
     slug: "ai-2025-oct-03-governed-autonomy-scorecards",
     title: "Governed Autonomy Scorecards: From SLIs to KPIs",
     description:
