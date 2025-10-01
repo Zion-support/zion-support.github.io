@@ -14,6 +14,66 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+<<<<<<< HEAD
+    slug: "ai-2025-oct-03-ai-budgets-blueprint",
+    title: "Enterprise AI Budgets 2025: Guardrails, Scorecards, and Safe Velocity",
+    description: "Design budget-aware AI with quality tiers, cache-first routes, and KPI-linked scorecards for 10x velocity and 40–70% cost reduction.",
+    content: `
+# Enterprise AI Budgets 2025: Guardrails, Scorecards, and Safe Velocity
+
+Shipping AI fast without budget surprises requires explicit spend guardrails and feedback loops wired to business outcomes.
+
+## Core Patterns
+- Quality tier routing with intent classifiers and hard budgets
+- Semantic caches and freshness windows before model calls
+- KPI-linked eval scorecards gating risky changes
+- Rollback hooks and dark launches with policy tests
+
+## Outcomes We See
+- 10x delivery velocity with stable change-failure rate
+- 40–70% GenAI cost reduction and tighter P95 tails
+- 99.9% uptime protected by runtime policies
+
+Contact us to land this blueprint in production safely within weeks.
+    `,
+    author: "Zion Tech Group Reliability Lab",
+    date: "2025-10-03",
+    category: "AI Governance",
+    tags: ["Budgets", "Guardrails", "Scorecards", "Caching", "Quality Tiers"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/ai-budgets-blueprint-2025.jpg"
+  },
+  {
+    slug: "ai-2025-oct-03-policy-tests-end-to-end",
+    title: "End-to-End Policy Tests for AI: Ship Faster Without Surprises",
+    description: "Wire policy tests into CI/CD, gate risky routes, and couple canaries to KPIs so changes ship fast and safely.",
+    content: `
+# End-to-End Policy Tests for AI: Ship Faster Without Surprises
+
+Move governance left: encode safety, cost, and reliability policies as tests that run pre-merge and pre-release.
+
+## Test Suite
+- Red-team funnels with synthetic adversarial prompts
+- Budget tests that fail when token cost deltas exceed thresholds
+- Guardrail tests for tool access and data boundaries
+- Canary scorecards tied to SLIs/SLOs and business KPIs
+
+## Rollout
+- Start dark, compare cost/latency/quality deltas
+- Kill switches and instant rollback hooks
+- One fix per regression ritual
+
+This playbook keeps velocity high while preventing expensive incidents.
+    `,
+    author: "Zion Tech Group Reliability Lab",
+    date: "2025-10-03",
+    category: "AI Reliability",
+    tags: ["Policy Tests", "Governance", "Reliability", "Budgets", "KPIs"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/policy-tests-ai-2025.jpg"
+=======
     slug: "ai-2025-oct-04-enterprise-agents-in-production",
     title: "Enterprise Agents in Production: Budgets, Approvals, and Rollback",
     description: "Practical patterns to run AI agents safely in prod with KPI-linked SLIs, action budgets, and instant rollback.",
@@ -89,6 +149,7 @@ Keep experience KPIs stable while reducing spend.
     featured: false,
     readTime: "6 min read",
     image: "/images/cost-aware-routing.jpg"
+>>>>>>> origin/cursor/create-and-deploy-new-content-3792
   },
   {
     slug: "ai-2025-oct-01-enterprise-ai-governance-blueprint",
