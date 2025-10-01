@@ -41,6 +41,7 @@ import October2025LatestAIBreakthroughsBanner from "../components/October2025Lat
 import October2025LatestBreakthroughBanner from "../components/October2025LatestBreakthroughBanner";
 import October2025InfrastructureExcellenceBanner from "../components/October2025InfrastructureExcellenceBanner";
 import October2025RevOpsBanner from "../components/October2025RevOpsBanner";
+import October2025DocumentAutomationBanner from "../components/October2025DocumentAutomationBanner";
 import LatestArticlesShowcase from "../components/LatestArticlesShowcase";
 import LatestContentBanner from "../components/LatestContentBanner";
 import LatestInsights from "../components/LatestInsights";
@@ -140,6 +141,10 @@ const Home = () => {
         {/* 💰💰💰 BRAND NEW OCTOBER 1, 2025 - JUST PUBLISHED: AUTONOMOUS REVENUE OPERATIONS REVOLUTION - FEATURED! 💰💰💰 */}
         {/* Featured: 127% ROI, 89% Forecast Accuracy, 3.2x Pipeline Velocity, $127M Revenue Impact (Fortune 500 Case Study) */}
         <October2025RevOpsBanner />
+        
+        {/* 📄📄📄 NEW RELEASE OCTOBER 1, 2025 - JUST PUBLISHED: INTELLIGENT DOCUMENT AUTOMATION REVOLUTION - FEATURED! 📄📄📄 */}
+        {/* Featured: 94% Faster Processing, 99.2% Accuracy, $47M Annual Savings, 340% ROI (Insurance Case Study) */}
+        <October2025DocumentAutomationBanner />
         
         {/* ⚡⚡⚡ NEW OCTOBER 2025 - LATEST BREAKTHROUGH CONTENT: AI INFRASTRUCTURE MASTERY - FEATURED! ⚡⚡⚡ */}
         {/* Featured: Autonomous LLM Orchestration (60% Cost Cut, 10x Performance), Vector DB Optimization (100x Faster, Sub-10ms), Production AI Agents (99.9% Uptime, 85% Savings) */}
