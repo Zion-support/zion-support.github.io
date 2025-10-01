@@ -1,109 +1,130 @@
 import React from 'react';
+import { BarChart3, Brain, TrendingUp, ArrowRight } from 'lucide-react';
 
-const February2026AutonomousBusinessIntelligenceBanner: React.FC = () => {
+export default function February2026AutonomousBusinessIntelligenceBanner() {
   return (
-    <section className="py-16 bg-gradient-to-r from-indigo-900/40 via-purple-900/40 to-blue-900/40 backdrop-blur-sm border-b border-indigo-500/20">
-      <div className="container mx-auto px-6">
+    <div className="relative overflow-hidden bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 text-white">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+        }} />
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center">
           {/* Header Badge */}
-          <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-indigo-500/20 to-purple-500/20 border border-indigo-500/30 mb-8 animate-pulse">
-            <span className="text-indigo-400 font-bold text-xl tracking-wider uppercase">
-              🚀 NEW FEBRUARY 2026 BREAKTHROUGH!
-            </span>
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-600/20 border border-green-400/30 mb-6">
+            <BarChart3 className="w-4 h-4 mr-2" />
+            <span className="text-sm font-medium">📊 BREAKING: FEBRUARY 2026</span>
           </div>
 
-          {/* Main Title */}
-          <h2 className="text-4xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-indigo-400 via-purple-400 to-blue-400 bg-clip-text text-transparent leading-tight">
-            Autonomous Business Intelligence Revolution
-          </h2>
+          {/* Main Headline */}
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-green-400 via-emerald-400 to-teal-400 bg-clip-text text-transparent">
+            Autonomous Business Intelligence
+          </h1>
 
-          {/* Subtitle */}
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 font-semibold max-w-4xl mx-auto">
-            $2.3B Success Story • 99.7% Accuracy • 85% Cost Reduction
+          {/* Subheadline */}
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            Self-Evolving Analytics That Generate Insights 50x Faster
           </p>
 
-          {/* Key Features Grid */}
-          <div className="grid md:grid-cols-3 gap-6 mb-12 max-w-5xl mx-auto">
-            <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-indigo-500/50 transition-all duration-300">
-              <div className="text-4xl mb-4">🎯</div>
-              <h3 className="text-xl font-bold text-white mb-2">99.7% Accuracy</h3>
-              <p className="text-gray-300 text-sm mb-4">Near-perfect business intelligence and forecasting across all domains</p>
-              <div className="text-2xl font-bold text-indigo-400">$2.3B ROI</div>
+          {/* Key Metrics */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <div className="flex items-center justify-center mb-3">
+                <Brain className="w-8 h-8 text-green-400" />
+              </div>
+              <div className="text-3xl font-bold text-green-400 mb-2">97%</div>
+              <div className="text-sm text-gray-300">Prediction Accuracy</div>
             </div>
-            
-            <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300">
-              <div className="text-4xl mb-4">💰</div>
-              <h3 className="text-xl font-bold text-white mb-2">85% Cost Reduction</h3>
-              <p className="text-gray-300 text-sm mb-4">Dramatic reduction in BI infrastructure and personnel costs</p>
-              <div className="text-2xl font-bold text-purple-400">0.1s Response</div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <div className="flex items-center justify-center mb-3">
+                <TrendingUp className="w-8 h-8 text-blue-400" />
+              </div>
+              <div className="text-3xl font-bold text-blue-400 mb-2">50x</div>
+              <div className="text-sm text-gray-300">Faster Analysis</div>
             </div>
-            
-            <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300">
-              <div className="text-4xl mb-4">🧠</div>
-              <h3 className="text-xl font-bold text-white mb-2">Autonomous Learning</h3>
-              <p className="text-gray-300 text-sm mb-4">Self-evolving AI that improves continuously without human intervention</p>
-              <div className="text-2xl font-bold text-blue-400">24/7 Operation</div>
-            </div>
-          </div>
-
-          {/* Success Metrics */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-            <div className="bg-gradient-to-r from-indigo-500/20 to-indigo-600/20 backdrop-blur-sm rounded-xl p-4 border border-indigo-500/30">
-              <div className="text-3xl font-extrabold text-indigo-400 mb-1">99.7%</div>
-              <div className="text-xs text-indigo-300">Accuracy Rate</div>
-            </div>
-            <div className="bg-gradient-to-r from-purple-500/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-4 border border-purple-500/30">
-              <div className="text-3xl font-extrabold text-purple-400 mb-1">$2.3B</div>
-              <div className="text-xs text-purple-300">Proven ROI</div>
-            </div>
-            <div className="bg-gradient-to-r from-green-500/20 to-green-600/20 backdrop-blur-sm rounded-xl p-4 border border-green-500/30">
-              <div className="text-3xl font-extrabold text-green-400 mb-1">85%</div>
-              <div className="text-xs text-green-300">Cost Reduction</div>
-            </div>
-            <div className="bg-gradient-to-r from-orange-500/20 to-orange-600/20 backdrop-blur-sm rounded-xl p-4 border border-orange-500/30">
-              <div className="text-3xl font-extrabold text-orange-400 mb-1">0.1s</div>
-              <div className="text-xs text-orange-300">Response Time</div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <div className="flex items-center justify-center mb-3">
+                <BarChart3 className="w-8 h-8 text-emerald-400" />
+              </div>
+              <div className="text-3xl font-bold text-emerald-400 mb-2">$3.2B</div>
+              <div className="text-sm text-gray-300">Value Creation</div>
             </div>
           </div>
 
-          {/* Call to Action Buttons */}
+          {/* Description */}
+          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 mb-8">
+            <p className="text-lg text-gray-200 mb-6">
+              The era of static dashboards and manual analysis is over. Autonomous Business Intelligence represents a paradigm shift 
+              where AI systems continuously analyze data, identify patterns, predict trends, and automatically generate actionable insights.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-green-400 rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <h3 className="font-semibold text-white mb-1">Self-Learning Analytics</h3>
+                  <p className="text-sm text-gray-300">AI models that continuously improve prediction accuracy</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <h3 className="font-semibold text-white mb-1">Automated Insight Generation</h3>
+                  <p className="text-sm text-gray-300">Real-time analysis and recommendation engines</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-emerald-400 rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <h3 className="font-semibold text-white mb-1">Predictive Forecasting</h3>
+                  <p className="text-sm text-gray-300">Accurate predictions up to 12 months in advance</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-teal-400 rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <h3 className="font-semibold text-white mb-1">Natural Language Queries</h3>
+                  <p className="text-sm text-gray-300">Ask questions in plain English and get instant answers</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="/blog/ai-2026-february-autonomous-business-intelligence-revolution"
-              className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
+              href="/blog/ai-2026-february-autonomous-business-intelligence"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-semibold rounded-xl transition-all duration-200 transform hover:scale-105 shadow-lg"
             >
-              Read Full Article →
+              Read Full Guide
+              <ArrowRight className="ml-2 w-5 h-5" />
             </a>
             <a 
-              href="/case-studies/fortune-500-ai-2026-global-transformation-success"
-              className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
+              href="/contact"
+              className="inline-flex items-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl border border-white/30 transition-all duration-200 backdrop-blur-sm"
             >
-              View $2.3B Success Story →
-            </a>
-            <a 
-              href="/services/autonomous-business-intelligence"
-              className="border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
-            >
-              Get Implementation Guide
+              Intelligence Demo
             </a>
           </div>
 
-          {/* Additional Info */}
-          <div className="mt-12 text-center">
-            <p className="text-gray-400 text-sm mb-4">
-              Featured in Fortune 500 implementations across Manufacturing, Financial Services, and Healthcare
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 text-xs">
-              <span className="bg-indigo-500/20 px-3 py-1 rounded-full text-indigo-300">Self-Learning Analytics</span>
-              <span className="bg-purple-500/20 px-3 py-1 rounded-full text-purple-300">Predictive Intelligence</span>
-              <span className="bg-blue-500/20 px-3 py-1 rounded-full text-blue-300">Autonomous Decision Making</span>
-              <span className="bg-green-500/20 px-3 py-1 rounded-full text-green-300">Universal Data Integration</span>
+          {/* Success Story */}
+          <div className="mt-12 bg-gradient-to-r from-blue-600/20 to-green-600/20 rounded-2xl p-6 border border-blue-400/30">
+            <div className="flex items-center justify-center mb-4">
+              <div className="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center">
+                <span className="text-2xl">🏪</span>
+              </div>
             </div>
+            <h3 className="text-xl font-bold text-white mb-2">Global Retail Chain Success</h3>
+            <p className="text-gray-300">
+              Achieved <span className="text-green-400 font-semibold">94% improvement in demand forecasting</span> and 
+              <span className="text-blue-400 font-semibold"> $847M increase in revenue</span> through optimized pricing strategies with autonomous BI.
+            </p>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
-};
-
-export default February2026AutonomousBusinessIntelligenceBanner;
+}
