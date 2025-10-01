@@ -118,8 +118,8 @@ const HomePage: React.FC = () => {
             <div className="container">
               <div className="promo-card">
                 <div className="promo-content">
-                  <h2 className="section-title">What’s New</h2>
-                  <p className="promo-text">New on the blog: GenAI in production, privacy-first Edge AI personalization, and incident-ready CI/CD playbooks.</p>
+                  <h2 className="section-title">🚀 October 2025 Updates</h2>
+                  <p className="promo-text">Fresh insights on Multi-Agent AI Systems, Zero-Trust Architecture 2.0, Quantum-Safe Cryptography, Real-Time AI Training, Sustainable AI practices, Kubernetes Service Mesh comparisons, and Agentic Workflows. Plus: GenAI in production, privacy-first Edge AI, and incident-ready CI/CD playbooks.</p>
                 </div>
                 <a href="/blog" className="btn btn-primary">Explore the latest posts →</a>
               </div>
