@@ -96,48 +96,124 @@ const Home = () => {
             <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-xl p-6 mb-6 animate-fade-in">
               <div className="flex items-center justify-center gap-3 mb-3">
                 <Rocket className="w-6 h-6 text-purple-400 animate-bounce" />
-                <span className="text-lg font-bold text-purple-400">🔥 JUST RELEASED - OCTOBER 2025</span>
+                <span className="text-lg font-bold text-purple-400">🔥 JUST RELEASED - OCTOBER 1, 2025</span>
                 <Rocket className="w-6 h-6 text-purple-400 animate-bounce" />
               </div>
               <p className="text-white text-xl font-bold mb-3">
-                Enterprise AI Platform Revolution + Intelligent Automation Breakthrough
+                🚀 Generative AI Revolution + Next-Gen Security + $340M Manufacturing Success Story
               </p>
               <div className="grid md:grid-cols-3 gap-4 text-sm text-zion-slate-light mb-4">
                 <div className="flex items-center gap-2">
                   <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>$500M Value Created in 90 Days</span>
+                  <span>400% Productivity Gains with Generative AI</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>40-60% Cost Reduction</span>
+                  <span>99.9% Threat Detection Accuracy</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>300-500% ROI in Year 1</span>
+                  <span>$340M Value in Manufacturing</span>
                 </div>
               </div>
-              <Link
-                to="/blog"
-                className="inline-flex items-center gap-2 bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
-              >
-                Read the Latest Breakthroughs
-                <ArrowRight className="w-4 h-4" />
-              </Link>
+              <div className="flex flex-wrap gap-3 justify-center">
+                <Link
+                  to="/blog"
+                  className="inline-flex items-center gap-2 bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
+                >
+                  Read Latest Articles
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link
+                  to="/case-studies"
+                  className="inline-flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
+                >
+                  View Success Stories
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+
+            {/* NEW FEATURED CONTENT CARDS */}
+            <div className="grid md:grid-cols-3 gap-6 mb-8">
+              <div className="bg-gradient-to-br from-indigo-500/20 to-purple-500/20 border border-indigo-400/30 rounded-xl p-6 hover:scale-105 transition-all duration-300">
+                <div className="flex items-center gap-3 mb-4">
+                  <Sparkles className="w-8 h-8 text-indigo-400" />
+                  <h3 className="text-lg font-bold text-white">Generative AI</h3>
+                </div>
+                <p className="text-zion-slate-light mb-4 text-sm">
+                  Transform your workforce with AI that generates code, content, and insights automatically. Achieve 400% productivity gains and 60% cost reduction.
+                </p>
+                <Link
+                  to="/blog/ai-2025-oct-01-generative-ai-enterprise-productivity-revolution"
+                  className="text-indigo-400 hover:text-indigo-300 font-semibold text-sm flex items-center gap-2"
+                >
+                  Learn More <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+
+              <div className="bg-gradient-to-br from-red-500/20 to-orange-500/20 border border-red-400/30 rounded-xl p-6 hover:scale-105 transition-all duration-300">
+                <div className="flex items-center gap-3 mb-4">
+                  <Shield className="w-8 h-8 text-red-400" />
+                  <h3 className="text-lg font-bold text-white">AI Security</h3>
+                </div>
+                <p className="text-zion-slate-light mb-4 text-sm">
+                  Protect your enterprise with AI-powered threat detection that's 1000x faster than traditional methods. 99.9% accuracy, real-time response.
+                </p>
+                <Link
+                  to="/blog/ai-2025-oct-01-ai-security-enterprise-threat-detection"
+                  className="text-red-400 hover:text-red-300 font-semibold text-sm flex items-center gap-2"
+                >
+                  Secure Your Business <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+
+              <div className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 border border-green-400/30 rounded-xl p-6 hover:scale-105 transition-all duration-300">
+                <div className="flex items-center gap-3 mb-4">
+                  <Target className="w-8 h-8 text-green-400" />
+                  <h3 className="text-lg font-bold text-white">$340M Success</h3>
+                </div>
+                <p className="text-zion-slate-light mb-4 text-sm">
+                  See how a global manufacturer achieved $340M in value through AI transformation. 85% defect reduction, 60% efficiency gain in 18 months.
+                </p>
+                <Link
+                  to="/case-studies/ai-2025-oct-01-manufacturing-ai-transformation-340m-success"
+                  className="text-green-400 hover:text-green-300 font-semibold text-sm flex items-center gap-2"
+                >
+                  Read Case Study <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
             </div>
 
             {/* Special Promotion Banner */}
             <div className="bg-gradient-to-r from-green-500/20 to-blue-500/20 border border-green-400/30 rounded-xl p-6 mb-8 animate-fade-in">
               <div className="flex items-center justify-center gap-3 mb-3">
                 <Sparkles className="w-6 h-6 text-green-400 animate-pulse" />
-                <span className="text-lg font-bold text-green-400">LIMITED TIME OFFER</span>
+                <span className="text-lg font-bold text-green-400">⚡ LIMITED TIME OFFER - OCTOBER 2025</span>
                 <Sparkles className="w-6 h-6 text-green-400 animate-pulse" />
               </div>
               <p className="text-white text-lg font-semibold mb-2">
-                🎯 Get 50% OFF Your First 3 Months + FREE AI Strategy Consultation
+                🎯 Get 50% OFF Generative AI Transformation + FREE Strategy Consultation ($25K Value)
               </p>
-              <p className="text-zion-slate-light text-sm">
-                Valid until March 31, 2025 • No setup fees • Cancel anytime
+              <p className="text-zion-slate-light text-sm mb-3">
+                Valid until October 31, 2025 • First 10 customers only • 100% satisfaction guarantee
               </p>
+              <div className="flex flex-wrap gap-3 justify-center">
+                <Link
+                  to="/services"
+                  className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 text-sm"
+                >
+                  View Services
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 text-sm"
+                >
+                  Schedule Consultation
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
             </div>
 
             {/* Stats */}
