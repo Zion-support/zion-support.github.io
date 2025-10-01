@@ -1292,6 +1292,78 @@ The future of business software is here, and it's micro SAAS. Don't get left beh
   }
   ,
   {
+    slug: "ai-2025-oct-03-enterprise-rag-blueprint-v3",
+    title: "Enterprise RAG Blueprint v3: 45% Quality ↑, 62% Cost ↓",
+    description: "A pragmatic RAG playbook: retrieval budgets, freshness windows, and cache tiers that raise answer quality while cutting spend.",
+    content: `
+# Enterprise RAG Blueprint v3
+
+This field guide distills production patterns that consistently lift answer quality while lowering cost:
+
+- Domain schemas with strict source governance
+- Retrieval budgets and freshness windows
+- Tiered caches (features, chunks, answers)
+- Eval-gated rollouts with kill switches
+
+Includes reference architectures, rollout checklists, and KPI scorecards used in Fortune 500 deployments.
+    `,
+    author: "Zion Tech Group Knowledge Systems",
+    date: "2025-10-03",
+    category: "RAG Engineering",
+    tags: ["RAG", "Retrieval", "Caching", "Quality", "Cost"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/enterprise-rag-blueprint-v3.jpg"
+  },
+  {
+    slug: "ai-2025-oct-03-governed-agentic-automation",
+    title: "Governed Agentic Automation: Safe Tools, Fast Outcomes",
+    description: "Design agent toolchains with budgets, approvals, and rollback to move 10x faster without incidents.",
+    content: `
+# Governed Agentic Automation
+
+Ship agent automations that your SRE and compliance teams endorse:
+
+- Signed tools with scopes and quotas
+- Action budgets, approvals, and sandboxing
+- Live traces with KPI-linked SLIs
+- Canary routes, kill switches, and rollback hooks
+
+Comes with policy templates, dashboards, and incident playbooks.
+    `,
+    author: "Zion Tech Group AI Operations",
+    date: "2025-10-03",
+    category: "AI Operations",
+    tags: ["Agents", "Governance", "Guardrails", "SLIs", "Rollback"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/governed-agentic-automation.jpg"
+  },
+  {
+    slug: "ai-2025-oct-03-genai-cost-optimization-v6",
+    title: "GenAI Cost Optimization v6: Quality Tiers, Coalesce, and Distill",
+    description: "Latest cost playbook with tiered routing, request coalescing, and selective distillation—60–85% cost down with steady UX KPIs.",
+    content: `
+# GenAI Cost Optimization v6
+
+Cut inference spend without user-visible regressions:
+
+- Quality-tier routers with eval gates
+- Request coalescing and semantic caches
+- Selective distillation for hot paths
+- Budget-aware fallbacks and dark-ship experiments
+
+Includes rollout rituals, SLO templates, and dashboards.
+    `,
+    author: "Zion Tech Group Platform Team",
+    date: "2025-10-03",
+    category: "GenAI Engineering",
+    tags: ["Cost", "Caching", "Distillation", "Routing", "SLO"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/genai-cost-optimization-v6.jpg"
+  },
+  {
     slug: "ai-2025-oct-03-autonomous-supply-chain-revolution",
     title: "Autonomous Supply Chain 2025: 99.2% Forecast Accuracy, 78% Cost ↓",
     description: "Deploy AI-driven planning, routing, and fulfillment with closed-loop telemetry and guardrails. Real-world playbooks for 99.2% forecast accuracy and 78% cost reduction.",
