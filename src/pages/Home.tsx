@@ -76,6 +76,152 @@ const Home = () => {
           ></div>
         </div>
 
+        {/* 🔥🔥🔥 BRAND NEW: October 1, 2025 - NEXT-GEN AGENTIC AI - REVOLUTIONARY BREAKTHROUGH! 🔥🔥🔥 */}
+        <section className="container mx-auto px-6 py-12 relative z-10">
+          <div className="bg-gradient-to-br from-purple-900/70 via-indigo-900/60 to-blue-900/70 rounded-3xl border-4 border-purple-400/80 p-8 md:p-12 shadow-2xl hover:shadow-purple-500/50 transition-all duration-500 animate-pulse-slow mb-12">
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <span className="inline-flex h-5 w-5 rounded-full bg-purple-400 animate-ping shadow-xl"></span>
+              <span className="text-purple-200 font-extrabold text-3xl uppercase tracking-wider drop-shadow-lg">🚀 BREAKTHROUGH LAUNCH - October 1, 2025 🚀</span>
+              <span className="inline-flex h-5 w-5 rounded-full bg-purple-400 animate-ping shadow-xl"></span>
+            </div>
+            
+            <h2 className="text-5xl md:text-7xl font-black text-white mb-6 text-center leading-tight drop-shadow-2xl">
+              🤖 Next-Gen Agentic AI: <span className="bg-gradient-to-r from-purple-300 via-pink-300 to-blue-300 bg-clip-text text-transparent animate-gradient">$890M Value, 94% Efficiency, Revolutionary Results</span>
+            </h2>
+            
+            <p className="text-2xl text-purple-100 mb-8 text-center max-w-5xl mx-auto leading-relaxed font-semibold">
+              The AI revolution isn't coming—it's here. Deploy 150+ autonomous AI agents that think, learn, collaborate, and execute. Transform your entire enterprise with $127M average savings, 94% efficiency gains, and 18-month competitive advantage.
+            </p>
+
+            <div className="grid md:grid-cols-3 gap-6 mb-8">
+              <div className="bg-gradient-to-br from-purple-800/60 to-indigo-800/60 backdrop-blur-lg rounded-2xl p-6 border-2 border-purple-400/50 hover:border-purple-300/80 transition-all hover:scale-105 hover:shadow-2xl">
+                <div className="text-purple-300 text-sm font-bold mb-3 uppercase flex items-center gap-2">
+                  <Sparkles className="w-5 h-5" />
+                  Revolutionary Technology
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-3">Autonomous AI Agents</h3>
+                <p className="text-purple-100 text-base mb-4 leading-relaxed">
+                  150+ specialized AI agents working 24/7 with 98.7% decision accuracy, continuous learning, and zero downtime. Handles complexity that would overwhelm human teams.
+                </p>
+                <Link 
+                  to="/blog/ai-2025-oct-01-next-gen-agentic-ai-enterprise-breakthrough" 
+                  className="inline-flex items-center text-purple-300 hover:text-white font-bold text-base group"
+                >
+                  Read Full Article (16 min) →
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" />
+                </Link>
+              </div>
+
+              <div className="bg-gradient-to-br from-green-800/60 to-emerald-800/60 backdrop-blur-lg rounded-2xl p-6 border-2 border-green-400/50 hover:border-green-300/80 transition-all hover:scale-105 hover:shadow-2xl">
+                <div className="text-green-300 text-sm font-bold mb-3 uppercase flex items-center gap-2">
+                  <Award className="w-5 h-5" />
+                  Proven $890M Success
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-3">Fortune 50 Transformation</h3>
+                <p className="text-green-100 text-base mb-4 leading-relaxed">
+                  $890M value creation in 12 months. 94% operational efficiency, 97% employee satisfaction, 18-month competitive advantage. Real results, real transformation.
+                </p>
+                <Link 
+                  to="/case-studies/ai-2025-oct-01-fortune-50-agentic-ai-transformation-890m-success" 
+                  className="inline-flex items-center text-green-300 hover:text-white font-bold text-base group"
+                >
+                  Read Case Study →
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" />
+                </Link>
+              </div>
+
+              <div className="bg-gradient-to-br from-blue-800/60 to-cyan-800/60 backdrop-blur-lg rounded-2xl p-6 border-2 border-blue-400/50 hover:border-blue-300/80 transition-all hover:scale-105 hover:shadow-2xl">
+                <div className="text-blue-300 text-sm font-bold mb-3 uppercase flex items-center gap-2">
+                  <Rocket className="w-5 h-5" />
+                  Enterprise Platform Ready
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-3">Deploy in 4-6 Weeks</h3>
+                <p className="text-blue-100 text-base mb-4 leading-relaxed">
+                  From $25K/month with 340% ROI in year one. Includes 150+ pre-built agents, 24/7 support, and full training. Start transforming today.
+                </p>
+                <Link 
+                  to="/services/october-2025-next-gen-agentic-ai-platform" 
+                  className="inline-flex items-center text-blue-300 hover:text-white font-bold text-base group"
+                >
+                  Explore Platform & Pricing →
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" />
+                </Link>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-r from-purple-800/50 to-indigo-800/50 rounded-2xl p-6 border-2 border-purple-400/50 mb-8">
+              <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+                <Star className="w-7 h-7 text-yellow-400" />
+                Enterprise Impact Across All Functions
+              </h3>
+              <div className="grid md:grid-cols-2 gap-4 text-purple-100 text-base">
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
+                  <div><span className="font-bold text-white">Operations:</span> 94% efficiency gain, $340M cost savings annually</div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
+                  <div><span className="font-bold text-white">Customer Service:</span> 97% satisfaction, 24/7 multilingual support</div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
+                  <div><span className="font-bold text-white">Innovation:</span> 5 new products launched, 83% faster time-to-market</div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
+                  <div><span className="font-bold text-white">Revenue Growth:</span> $550M new revenue from AI-enabled services</div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
+                  <div><span className="font-bold text-white">Employee Experience:</span> 97% satisfaction, 3,200 hours saved/year</div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
+                  <div><span className="font-bold text-white">Market Position:</span> 18-month competitive advantage established</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-5 items-center justify-center">
+              <Link 
+                to="/services/october-2025-next-gen-agentic-ai-platform" 
+                className="btn-primary flex items-center gap-3 text-xl px-10 py-5 shadow-2xl hover:shadow-purple-500/50 transform hover:scale-105 transition-all"
+              >
+                <Sparkles className="w-7 h-7" />
+                Start Your Transformation
+                <ArrowRight className="w-7 h-7" />
+              </Link>
+              <Link 
+                to="/contact" 
+                className="btn-secondary text-xl px-10 py-5 transform hover:scale-105 transition-all"
+              >
+                Schedule Strategic Assessment
+              </Link>
+            </div>
+
+            <div className="mt-8 text-center">
+              <div className="inline-flex flex-col sm:flex-row items-center gap-4 bg-yellow-500/30 border-2 border-yellow-400/70 rounded-full px-8 py-4 shadow-xl">
+                <div className="flex items-center gap-3">
+                  <Sparkles className="w-6 h-6 text-yellow-400 animate-pulse" />
+                  <span className="text-yellow-200 font-bold text-lg">🎁 OCTOBER LAUNCH OFFER:</span>
+                </div>
+                <span className="text-white font-bold text-lg">50% Off First 3 Months + Free $250K Custom Development (Limited Time!)</span>
+              </div>
+            </div>
+
+            <div className="mt-6 text-center text-purple-200 text-sm">
+              <p className="flex items-center justify-center gap-2">
+                <Users className="w-5 h-5" />
+                <span className="font-semibold">Trusted by 89 Fortune 500 Companies</span>
+                <span className="mx-2">•</span>
+                <span className="font-semibold">$4.2B Total Value Created</span>
+                <span className="mx-2">•</span>
+                <span className="font-semibold">98.7% Client Satisfaction</span>
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* 🔥🔥🔥 BRAND NEW: October 1, 2025 - REAL-TIME PREDICTIVE ANALYTICS - JUST RELEASED! 🔥🔥🔥 */}
         <section className="container mx-auto px-6 py-12 relative z-10">
           <div className="bg-gradient-to-br from-red-900/60 via-orange-900/50 to-yellow-900/60 rounded-3xl border-2 border-red-400/70 p-8 md:p-10 shadow-2xl hover:shadow-red-500/30 transition-all duration-500 animate-fade-in">
