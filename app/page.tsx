@@ -61,6 +61,10 @@ import NextGenAutonomousBanner from '../components/NextGenAutonomousBanner';
 import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
 >>>>>>> cursor/create-and-deploy-new-content-d513
 
+// NEW OCTOBER 2025 PRACTICAL CONTENT
+import October2025NewPracticalContentBanner from '../components/October2025NewPracticalContentBanner';
+import NewContentShowcaseOct2025 from '../components/NewContentShowcaseOct2025';
+
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
   description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Transform your business with cutting-edge technology and automation.',
@@ -70,6 +74,10 @@ export const metadata = {
 export default function HomePage() {
   return (
     <div className="animate-fade-in">
+      {/* NEW OCTOBER 2025 PRACTICAL CONTENT - TOP PRIORITY */}
+      <October2025NewPracticalContentBanner />
+      <NewContentShowcaseOct2025 />
+      
       {/* New Content Promo Strip */}
       <div className="w-full bg-gradient-to-r from-green-600 to-blue-600 text-white">
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
