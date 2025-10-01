@@ -1,5 +1,127 @@
 export const newInsights = [
   {
+    id: "ai-platform-roi-scorecards",
+    title: "AI Platform ROI: Simple Scorecards That Drive Adoption",
+    summary: "Connect platform capabilities to adoption, golden paths, and SLO outcomes. Make quarterly cut/scale decisions with evidence.",
+    category: "AI Strategy",
+    date: "2025-10-03",
+    readMinutes: 7,
+    featured: true,
+    tags: ["Platform", "ROI", "Scorecards"],
+    content: `
+      <h2>Why Scorecards Win</h2>
+      <p>Adoption, TTFX on golden paths, and reliability SLOs are the leading signals that predict platform ROI.</p>
+      <h3>Operating Rhythm</h3>
+      <ul>
+        <li>Monthly reviews with owners</li>
+        <li>Red/amber flags with remediation</li>
+        <li>Cut/scale based on evidence deltas</li>
+      </ul>
+    `
+  },
+  {
+    id: "ai-ops-slo-controllers",
+    title: "AI Ops SLO Controllers: Self‑Healing at Scale",
+    summary: "Controllers that watch SLOs and trigger safe rollbacks, warm pools, and canaries.",
+    category: "AI Operations",
+    date: "2025-10-06",
+    readMinutes: 7,
+    featured: true,
+    tags: ["SLOs", "Autonomous Ops", "Controllers"],
+    content: `
+      <h2>Operate by SLOs</h2>
+      <p>Encode SLOs as controllers that take action automatically: rollback, scale, shed load, or switch tiers.</p>
+      <h3>Playbook</h3>
+      <ul>
+        <li>Golden signals with budget tracking</li>
+        <li>Pre‑approved remediation flows</li>
+        <li>Guardrail checks and audit trails</li>
+      </ul>
+    `
+  },
+  {
+    id: "cost-aware-rag",
+    title: "Cost‑Aware RAG: Freshness Budgets and Hybrid Retrieval",
+    summary: "Balance freshness, quality, and cost with TTL windows and tiered retrieval.",
+    category: "GenAI",
+    date: "2025-10-06",
+    readMinutes: 8,
+    featured: true,
+    tags: ["RAG", "Freshness", "Hybrid"],
+    content: `
+      <h2>Freshness Windows</h2>
+      <p>Apply TTL budgets by corpus and route requests by intent to control cost while keeping answers fresh.</p>
+      <h3>Hybrid Stack</h3>
+      <ul>
+        <li>BM25 + vectors with recency boost</li>
+        <li>Async warm caches and versioned corpora</li>
+        <li>Online canaries tied to KPI deltas</li>
+      </ul>
+    `
+  },
+  {
+    id: "guardrails-scorecards-evals-2025",
+    title: "Guardrails Engineers Adopt: Scorecards, PR Gates, Online Canaries",
+    summary: "Lightweight, outcome‑linked guardrails that speed delivery while managing risk.",
+    category: "AI Strategy",
+    date: "2025-09-29",
+    readMinutes: 7,
+    featured: true,
+    tags: ["Guardrails", "Scorecards", "Evals"],
+    content: `
+      <h2>Ship Faster, Safer</h2>
+      <p>Connect scorecards to product KPIs. Use PR gates for risky changes and run online canaries tied to outcomes.</p>
+      <h3>Playbook</h3>
+      <ul>
+        <li>Adoption‑friendly scorecards</li>
+        <li>Small, meaningful PR checks</li>
+        <li>Budgeted online evals</li>
+      </ul>
+    `
+  },
+  {
+    id: "edge-flags-blueprint-2025",
+    title: "Edge Flags Blueprint: Zero‑Regret Rollouts",
+    summary: "<100ms global flags with segmented canaries, budgets, and instant rollback.",
+    category: "Architecture",
+    date: "2025-09-29",
+    readMinutes: 6,
+    featured: false,
+    tags: ["Edge", "Flags", "Delivery"],
+    content: `
+      <h2>Progressive Delivery</h2>
+      <p>Segment by geo and account, cap risk with budgets, and stream telemetry for evidence‑based releases.</p>
+    `
+  },
+  {
+    id: "rag-freshness-ttl-2025",
+    title: "RAG Freshness: TTL Budgets and Versioned Corpora",
+    summary: "Prevent stale answers with freshness windows and warm caches.",
+    category: "GenAI",
+    date: "2025-09-29",
+    readMinutes: 8,
+    featured: true,
+    tags: ["RAG", "Freshness", "Search"],
+    content: `
+      <h2>Operate with Freshness</h2>
+      <p>Use TTL windows, async warmups, and versioned corpora to keep retrieval accurate at scale.</p>
+    `
+  },
+  {
+    id: "secure-ml-supply-chain",
+    title: "Secure ML Supply Chain: Lineage, SBOMs, and Egress Controls",
+    summary: "Lock down datasets, models, and inference routes with provenance, signed artifacts, and policy checks in CI/CD.",
+    category: "Security",
+    date: "2025-10-03",
+    readMinutes: 6,
+    featured: true,
+    tags: ["Security", "ML", "Supply Chain"],
+    content: `
+      <h2>End-to-End Controls</h2>
+      <p>Track lineage from datasets to deployed models. Enforce policy tests and signed artifacts across the pipeline.</p>
+    `
+  },
+  {
     id: "ai-automation-2025",
     title: "The Future of AI Automation in Enterprise",
     summary: "Discover how AI automation is transforming enterprise operations in 2025, with real-world case studies and implementation strategies.",
@@ -158,6 +280,46 @@ export const newInsights = [
       
       <h3>Building Your Micro-SaaS</h3>
       <p>Start with customer discovery, validate your problem-solution fit, and iterate rapidly based on user feedback.</p>
+    `
+  },
+  {
+    id: "enterprise-rag-blueprint-2025",
+    title: "Enterprise RAG Blueprint v2: Freshness, Security, and Evals",
+    summary: "Production-ready RAG patterns: hybrid search, auth-aware retrieval, freshness controls, and layered evaluation.",
+    category: "GenAI",
+    date: "2025-10-04",
+    readMinutes: 9,
+    featured: true,
+    tags: ["RAG", "GenAI", "Search", "Security"],
+    content: `
+      <h2>Why RAG v2</h2>
+      <p>Move beyond naive vector search with hybrid retrieval, freshness windows, and authorization-aware filters.</p>
+      <h3>Operate with Confidence</h3>
+      <ul>
+        <li>Offline evals aligned to business KPIs</li>
+        <li>Online canaries with rollback triggers</li>
+        <li>Prompt firewalls and red-teaming</li>
+      </ul>
+    `
+  },
+  {
+    id: "finops-scorecards-2025",
+    title: "Cloud FinOps Scorecards Engineers Actually Use",
+    summary: "Guardrails, PR checks, and budgets that cut waste 25–40% while preserving delivery speed.",
+    category: "Cloud",
+    date: "2025-10-04",
+    readMinutes: 6,
+    featured: true,
+    tags: ["FinOps", "Cloud", "Governance"],
+    content: `
+      <h2>Scorecards That Matter</h2>
+      <p>Connect spend to product goals, set guardrails engineers respect, and automate waste prevention.</p>
+      <h3>Playbook</h3>
+      <ul>
+        <li>PR gates for risky resources</li>
+        <li>Budgets + alerts by environment</li>
+        <li>Continuous right-sizing</li>
+      </ul>
     `
   }
 ];

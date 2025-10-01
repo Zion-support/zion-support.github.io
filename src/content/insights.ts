@@ -9,85 +9,6 @@ export type InsightArticle = {
 
 export const latestInsights: InsightArticle[] = [
   {
-    id: "autonomous-ops-slo-controllers",
-    title: "Autonomous Ops: SLO‑Driven Controllers That Keep You Green",
-    summary:
-      "Design controllers that watch SLOs and take safe corrective action automatically, with auditability.",
-    category: "AI & Automation",
-    date: "2025-09-30",
-    readMinutes: 6,
-  },
-  {
-    id: "ai-roadmap-evidence-reviews",
-    title: "Monthly Evidence Reviews for AI Roadmaps",
-    summary:
-      "Turn AI bets into measurable learning with eval deltas, usage telemetry, and decision gates.",
-    category: "Strategy",
-    date: "2025-09-29",
-    readMinutes: 5,
-  },
-  {
-    id: "slsa-supply-chain-minimums",
-    title: "SLSA‑Aligned Minimums for 90‑Day Supply‑Chain Uplift",
-    summary:
-      "SBOMs, signed provenance, and policy gates you can roll out this quarter.",
-    category: "Security",
-    date: "2025-09-28",
-    readMinutes: 6,
-  },
-  {
-    id: "genai-online-evals",
-    title: "Online Evals for GenAI: From Shadow to Guardrails",
-    summary:
-      "Move from pilots to production with canary cohorts, eval budgets, and rollback triggers.",
-    category: "MLOps",
-    date: "2025-09-28",
-    readMinutes: 7,
-  },
-  {
-    id: "governance-policy-testing",
-    title: "Governance for AI: Policy Testing That Scales",
-    summary:
-      "Pair signals, context windows, and human feedback to harden detections and accelerate triage.",
-    category: "Security",
-    id: "edge-observability-blueprint",
-    title: "Edge Observability Blueprint: Sub‑100ms Reliability",
-    summary:
-      "Latency budgets, client ↔ edge traces, and error budgets that keep UX snappy.",
-    category: "Observability",
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-9d64
-    date: "2025-09-30",
-    readMinutes: 5,
-  },
-  {
-    id: "cloud-scorecards-review-rituals",
-    title: "Cloud Scorecards: Review Rituals that Scale Decision Quality",
-    summary:
-      "Lightweight, repeatable scorecards that guide capacity, resilience, and cost decisions across teams.",
-    category: "Architecture",
-    date: "2025-09-30",
-    readMinutes: 5,
-  },
-  {
-    id: "genai-evals-live-canaries",
-    title: "GenAI Evals: Shipping with Live Canaries and Policy Tests",
-    summary:
-      "A practical path from notebooks to continuous evaluation with rollback triggers and budgets.",
-    category: "GenAI",
-    date: "2025-09-30",
-    readMinutes: 7,
-  },
-  {
-    id: "edge-flags-health-circuits",
-    title: "Edge Flags: Health Circuits for Instant, Safe Rollouts",
-    summary:
-      "Validation, signing, and caching strategies that make rollouts boring—even on Friday.",
-    category: "Architecture",
-    date: "2025-09-30",
-    readMinutes: 6,
-  },
-  {
     id: "genai-policy-tests-canaries",
     title: "GenAI Policy Tests: From Offline Suites to Online Canaries",
     summary:
@@ -115,8 +36,8 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 5,
   },
   {
-    id: "cloud-finops-qa-gates",
-    title: "Cloud FinOps QA Gates That Engineers Actually Use",
+    id: "ai-governance-rubric",
+    title: "A Lightweight Rubric for AI Governance Decisions",
     summary:
       "When to require human‑in‑the‑loop, what to log, and how to audit outputs across teams.",
     category: "AI Governance",
@@ -127,15 +48,14 @@ export const latestInsights: InsightArticle[] = [
     id: "edge-cache-invalidation",
     title: "Edge Cache Invalidation Strategies That Won't Wake You Up",
     summary:
-      "Dashboards, alerts, and review cadences that reduce AI spend without surprises.",
-    category: "AI Operations",
-    date: "2025-10-01",
+      "Versioned keys, background warming, and circuit breakers for resilient edge experiences.",
+    category: "Architecture",
+    date: "2025-09-28",
     readMinutes: 6,
   },
-<<<<<<< HEAD
   {
-    id: "platform-golden-paths-insight",
-    title: "Golden Paths That Teams Actually Use",
+    id: "genai-telemetry-metrics",
+    title: "GenAI Telemetry: The 8 Metrics That Predict Drift",
     summary:
       "Capture inputs, policies, and human feedback signals to detect regressions before users do.",
     category: "GenAI",
@@ -232,7 +152,132 @@ export const latestInsights: InsightArticle[] = [
     date: "2025-07-18",
     readMinutes: 8,
   },
-  // New insights added
+  {
+    id: "ai-workflow-automation-2025-trends",
+    title: "AI Workflow Automation: 2025 Trends That Will Transform Business",
+    summary:
+      "Discover the latest trends in AI workflow automation that are reshaping how businesses operate and compete in 2025.",
+    category: "AI & Automation",
+    date: "2025-01-17",
+    readMinutes: 6,
+  },
+  {
+    id: "quantum-computing-business-ready",
+    title: "Quantum Computing: When Will It Be Business-Ready?",
+    summary:
+      "An honest assessment of quantum computing's current capabilities and realistic timeline for business applications.",
+    category: "Quantum Computing",
+    date: "2025-01-17",
+    readMinutes: 7,
+  },
+  {
+    id: "edge-ai-real-world-deployments",
+    title: "Edge AI: Real-World Deployments That Are Working Today",
+    summary:
+      "Case studies from manufacturing, healthcare, and retail showing how edge AI is delivering measurable results.",
+    category: "Edge Computing",
+    date: "2025-01-16",
+    readMinutes: 8,
+  },
+  {
+    id: "zero-trust-implementation-guide",
+    title: "Zero Trust Implementation: A Practical Guide for 2025",
+    summary:
+      "Step-by-step guide to implementing Zero Trust security architecture without breaking your existing workflows.",
+    category: "Security",
+    date: "2025-01-15",
+    readMinutes: 9,
+  },
+  {
+    id: "ai-virtual-assistant-roi",
+    title: "AI Virtual Assistants: Measuring ROI and Business Impact",
+    summary:
+      "How to quantify the business value of AI virtual assistants and ensure your investment delivers real results.",
+    category: "AI & Automation",
+    date: "2025-01-14",
+    readMinutes: 5,
+  },
+  {
+    id: "micro-saas-platform-selection",
+    title: "Choosing the Right Micro SAAS Platforms for Your Business",
+    summary:
+      "A framework for evaluating and selecting micro SAAS platforms that align with your business goals and budget.",
+    category: "Technology",
+    date: "2025-01-13",
+    readMinutes: 6,
+  },
+  {
+    id: "data-analytics-ai-transformation",
+    title: "Data Analytics Transformation: From Static Reports to AI Insights",
+    summary:
+      "How AI is transforming traditional data analytics into dynamic, predictive, and actionable business intelligence.",
+    category: "Data Analytics",
+    date: "2025-01-12",
+    readMinutes: 7,
+  },
+  {
+    id: "cybersecurity-threat-landscape-2025",
+    title: "2025 Cybersecurity Threat Landscape: What Businesses Need to Know",
+    summary:
+      "The evolving threat landscape and emerging security challenges that businesses must prepare for in 2025.",
+    category: "Security",
+    date: "2025-01-11",
+    readMinutes: 8,
+  },
+  {
+    id: "cloud-edge-hybrid-architecture",
+    title: "Cloud-Edge Hybrid Architecture: Best Practices for 2025",
+    summary:
+      "Designing and implementing hybrid cloud-edge architectures that optimize performance, cost, and security.",
+    category: "Cloud Computing",
+    date: "2025-01-10",
+    readMinutes: 6,
+  },
+  {
+    id: "ai-ethics-business-implementation",
+    title: "AI Ethics in Business: Practical Implementation Guidelines",
+    summary:
+      "How to implement ethical AI practices in your business operations while maintaining competitive advantage.",
+    category: "AI Ethics",
+    date: "2025-01-09",
+    readMinutes: 7,
+  },
+  {
+    id: "iot-security-best-practices",
+    title: "IoT Security: Best Practices for Connected Device Protection",
+    summary:
+      "Comprehensive security strategies for protecting IoT devices and networks from emerging threats.",
+    category: "IoT Security",
+    date: "2025-01-08",
+    readMinutes: 6,
+  },
+  {
+    id: "blockchain-business-applications",
+    title: "Blockchain Beyond Cryptocurrency: Real Business Applications",
+    summary:
+      "Exploring practical blockchain applications in supply chain, finance, and digital identity management.",
+    category: "Blockchain",
+    date: "2025-01-07",
+    readMinutes: 8,
+  },
+  {
+    id: "5g-business-transformation",
+    title: "5G and Business Transformation: Opportunities and Challenges",
+    summary:
+      "How 5G technology is enabling new business models and transforming industries across the globe.",
+    category: "5G Technology",
+    date: "2025-01-06",
+    readMinutes: 7,
+  },
+  {
+    id: "digital-transformation-2025",
+    title: "Digital Transformation in 2025: Trends and Strategies",
+    summary:
+      "The latest trends in digital transformation and how businesses can adapt to stay competitive.",
+    category: "Digital Transformation",
+    date: "2025-01-05",
+    readMinutes: 6,
+  },
   {
     id: "genai-guardrails-in-production",
     title: "GenAI Guardrails in Production: Policy Tests That Scale",
@@ -242,26 +287,50 @@ export const latestInsights: InsightArticle[] = [
     date: "2025-09-29",
     readMinutes: 8,
   },
-=======
-  // Fresh insights
   {
-    id: "secure-ml-supply-chain",
-    title: "Secure ML Supply Chain: SBOMs, Data Provenance, and Guardrails",
+    id: "ai-automation-roi-calculator",
+    title: "AI Automation ROI Calculator: Measure Your Business Impact",
     summary:
-      "How to secure models, datasets, and dependencies with practical controls that scale.",
-    category: "Security",
-    date: "2025-10-01",
-    readMinutes: 6,
-  },
-  {
-    id: "ai-platform-roi-scorecards",
-    title: "AI Platform ROI Scorecards That Finance Will Love",
-    summary:
-      "Align investment to measurable outcomes with adoption, DX, and reliability metrics.",
+      "A practical framework for calculating the return on investment from AI automation initiatives, with real-world case studies and templates.",
     category: "AI Strategy",
-    date: "2025-10-01",
-    readMinutes: 5,
+    date: "2025-01-21",
+    readMinutes: 8,
   },
->>>>>>> cursor/create-and-deploy-new-content-a3e4
+  {
+    id: "cloud-native-microservices-2025",
+    title: "Cloud-Native Microservices: Patterns for 2025",
+    summary:
+      "Essential patterns and practices for building scalable, resilient microservices architectures in modern cloud environments.",
+    category: "Architecture",
+    date: "2025-01-21",
+    readMinutes: 10,
+  },
+  {
+    id: "enterprise-ai-governance-framework",
+    title: "Enterprise AI Governance Framework: From Strategy to Implementation",
+    summary:
+      "Comprehensive governance framework for enterprise AI adoption, covering policy, risk management, and operational excellence.",
+    category: "AI Governance",
+    date: "2025-01-21",
+    readMinutes: 12,
+  },
+  {
+    id: "saas-platform-scaling-strategies",
+    title: "SAAS Platform Scaling Strategies: From Startup to Enterprise",
+    summary:
+      "Proven strategies for scaling SAAS platforms from early-stage to enterprise, covering technical and business considerations.",
+    category: "Platform Engineering",
+    date: "2025-01-21",
+    readMinutes: 9,
+  },
+  {
+    id: "ai-security-best-practices",
+    title: "AI Security Best Practices: Protecting Your AI Systems",
+    summary:
+      "Essential security practices for AI systems, covering model protection, data privacy, and adversarial defense strategies.",
+    category: "Security",
+    date: "2025-01-21",
+    readMinutes: 11,
+  },
 ];
 
