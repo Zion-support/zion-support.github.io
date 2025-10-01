@@ -27,6 +27,21 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: 5,
   },
   {
+    id: '34',
+    title: 'Enterprise AI Roadmap 2025: Scorecards, Guardrails, and Reliable Velocity',
+    slug: 'ai-2025-oct-04-enterprise-ai-roadmap-scorecards',
+    excerpt:
+      'Fund outcomes with KPI‑linked scorecards, ship safely with guardrails‑as‑code, and keep velocity high with rollback‑first ops.',
+    content:
+      'This roadmap shows how to move from pilots to reliable production AI. You will implement live KPI scorecards, guardrails as code in CI and runtime, evaluator‑backed deploy gates, and rollback‑first operations. Includes budget‑aware routing, caching tiers, and weekly rituals that sustain reliability and cost control.',
+    featuredImage: '/images/blog/enterprise-ai-roadmap-2025.jpg',
+    category: 'AI',
+    tags: ['Roadmap', 'Scorecards', 'Guardrails', 'GenAI', 'Platform'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-04',
+    readTime: 9,
+  },
+  {
     id: '31',
     title: 'AI Platform Reliability Scorecards 2027: SLIs That Drive Outcomes',
     slug: 'ai-2025-oct-03-platform-reliability-scorecards-2027',
