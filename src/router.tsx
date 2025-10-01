@@ -62,6 +62,10 @@ import GenerativeAICodeAssistants2025 from '../blog/generative-ai-code-assistant
 import EdgeAIPrivacyPreservingAnalytics2025 from '../blog/edge-ai-privacy-preserving-analytics-2025';
 import AIDrivenSupplyChainOptimization2025 from '../blog/ai-driven-supply-chain-optimization-2025';
 
+// 🌟 FEATURED: October 1, 2025 - Latest Content Releases! 🌟
+import EnterpriseNeuralOrchestrationPlatform2025 from '../blog/ai-2025-october-enterprise-neural-orchestration-platform';
+import CognitiveSupplyChainRevolution2025 from '../blog/ai-2025-october-cognitive-supply-chain-revolution';
+
 export const AppRouter: React.FC = () => {
   return (
     <Routes>
@@ -113,6 +117,9 @@ export const AppRouter: React.FC = () => {
       <Route path="/blog/generative-ai-code-assistants-2025" element={<GenerativeAICodeAssistants2025 />} />
       <Route path="/blog/edge-ai-privacy-preserving-analytics-2025" element={<EdgeAIPrivacyPreservingAnalytics2025 />} />
       <Route path="/blog/ai-driven-supply-chain-optimization-2025" element={<AIDrivenSupplyChainOptimization2025 />} />
+      {/* 🌟 FEATURED: October 1, 2025 - Latest Content Releases! 🌟 */}
+      <Route path="/blog/ai-2025-october-enterprise-neural-orchestration-platform" element={<EnterpriseNeuralOrchestrationPlatform2025 />} />
+      <Route path="/blog/ai-2025-october-cognitive-supply-chain-revolution" element={<CognitiveSupplyChainRevolution2025 />} />
       <Route path="/blog/:slug" element={<PostBySlug />} />
       <Route path="/resources" element={<Resources />} />
       <Route path="/tools" element={<Tools />} />
