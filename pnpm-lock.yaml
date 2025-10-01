@@ -32,6 +32,9 @@ importers:
       lucide-react:
         specifier: ^0.544.0
         version: 0.544.0(react@18.3.1)
+      never:
+        specifier: ^1.1.0
+        version: 1.1.0
       optional:
         specifier: ^0.1.4
         version: 0.1.4
@@ -2747,6 +2750,10 @@ packages:
   netlify-plugin-cloudinary@1.17.0:
     resolution: {integrity: sha512-PddOtwF5cMo6sa4nfEo60JPAIf2lfmg8eloHESLEF2zCaZia6GeYV9HtzYRzvFV1H2Z52YKnzrKgp3HsFiaJ0w==}
     engines: {node: '>=16'}
+
+  never@1.1.0:
+    resolution: {integrity: sha512-K0xfZVKUX7hrmbZKmyD1KB+PT8I9b9Ffxvmht8FhRjMIoe7/XyTfgyQko7G6RKvfnT9oxCrq0CARm1De5uXEbQ==}
+    engines: {node: '>=10.18.0 <11 || >=12.14.0 <13 || >=13.5.0'}
 
   node-fetch@2.7.0:
     resolution: {integrity: sha512-c4FRfUm/dbcWZ7U+1Wq0AwCyFL+3nt2bEw05wfxSz+DWpWsitgmSgYmy2dQdWyKC1694ELPqMs/YzUSNozLt8A==}
@@ -6623,6 +6630,8 @@ snapshots:
       - encoding
       - supports-color
       - utf-8-validate
+
+  never@1.1.0: {}
 
   node-fetch@2.7.0:
     dependencies:
