@@ -9,6 +9,24 @@ export type InsightArticle = {
 
 export const latestInsights: InsightArticle[] = [
   {
+    id: "ai-2025-oct-enterprise-rag-architecture-blueprint",
+    title: "Enterprise RAG Architecture Blueprint: 99.9% Precision at Scale",
+    summary:
+      "Reference architectures for multimodal RAG with cost-aware routing, hybrid search, and governance that scales across business units.",
+    category: "RAG Architecture",
+    date: "2025-10-01",
+    readMinutes: 11,
+  },
+  {
+    id: "ai-2025-oct-agent-observability-guide",
+    title: "Agent Observability: Production Guide for Safe, Reliable Autonomous Systems",
+    summary:
+      "Implement structured traces, safety scores, and action audits for agent systems to reach enterprise SLOs and compliance.",
+    category: "AI Agents",
+    date: "2025-10-01",
+    readMinutes: 9,
+  },
+  {
     id: "ai-2025-oct-edge-inference-patterns-production-guide",
     title: "Edge Inference Patterns: Production-Ready AI Deployment Guide 2025",
     summary:
