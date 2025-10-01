@@ -1,0 +1,10 @@
+
+
+  ],
+  reporter: [;
+    ['list'],
+    ['html', { output_folder: 'playwright - logs / html - report', open: 'never' }];
+];
+
+
+

@@ -1,0 +1,9 @@
+
+
+
+;
+// Start the service;
+const build_optimizer = new BuildOptimizer ();
+build_optimizer.start ().catch (console.error);
+;
+
