@@ -1,169 +1,122 @@
-import { ArrowRight, Sparkles, Zap, Shield, Cpu } from "lucide-react";
-import { Link } from "react-router-dom";
+import React from 'react';
 
 export default function October2025LatestContentBanner() {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-purple-950 via-slate-950 to-emerald-950 border-y border-purple-500/30">
-      {/* Animated background effects */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-1/2 -left-1/2 w-full h-full bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute -bottom-1/2 -right-1/2 w-full h-full bg-emerald-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-      </div>
-
-      <div className="relative container mx-auto px-6 py-16">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/20 rounded-full border border-purple-400/30 mb-4">
-            <Sparkles className="w-5 h-5 text-purple-400 animate-pulse" />
-            <span className="text-purple-300 font-semibold text-sm uppercase tracking-wider">
-              🚀 Latest October 2025 Content
-            </span>
+    <section className="py-12 bg-gradient-to-r from-emerald-900/30 via-teal-900/30 to-cyan-900/30 backdrop-blur-sm border-b border-emerald-500/20">
+      <div className="container mx-auto px-6">
+        <div className="max-w-5xl mx-auto">
+          {/* Header */}
+          <div className="text-center mb-8">
+            <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-400/30 mb-4">
+              <span className="text-emerald-300 font-bold text-lg tracking-wider uppercase">
+                ✨ JUST PUBLISHED - OCTOBER 2025 BREAKTHROUGH CONTENT
+              </span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-extrabold mb-4 bg-gradient-to-r from-emerald-300 via-teal-300 to-cyan-300 bg-clip-text text-transparent">
+              Latest Enterprise Intelligence Insights
+            </h2>
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+              Discover how leading enterprises are achieving unprecedented results with quantum-enhanced AI, 
+              neuromorphic computing, and autonomous intelligence systems.
+            </p>
           </div>
-          
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-4 bg-gradient-to-r from-purple-400 via-pink-400 to-emerald-400 bg-clip-text text-transparent">
-            Breakthrough AI Innovations Just Published
-          </h2>
-          
-          <p className="text-xl text-white/70 max-w-3xl mx-auto">
-            Discover the latest enterprise AI breakthroughs transforming industries in October 2025
-          </p>
-        </div>
 
-        {/* Content Grid */}
-        <div className="grid md:grid-cols-3 gap-6 mb-8">
-          {/* Quantum AI */}
-          <Link 
-            to="/blog/ai-2025-october-quantum-ai-enterprise-breakthrough" 
-            className="group relative p-8 bg-gradient-to-br from-purple-950/50 to-purple-900/30 rounded-2xl border border-purple-400/30 hover:border-purple-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20"
-          >
-            <div className="absolute top-4 right-4">
-              <Cpu className="w-8 h-8 text-purple-400 group-hover:animate-spin" />
-            </div>
-            
-            <div className="mb-4">
-              <span className="px-3 py-1 bg-purple-400/20 text-purple-300 text-xs rounded-full font-semibold">
-                NEW
-              </span>
-            </div>
-            
-            <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">
-              Quantum AI Enterprise Breakthrough
-            </h3>
-            
-            <p className="text-white/70 mb-4 leading-relaxed">
-              Solving optimization problems 10,000x faster with hybrid quantum-classical AI systems. 
-              Fortune 500 case studies with unprecedented ROI.
-            </p>
-            
-            <div className="flex items-center gap-2 text-purple-400 font-semibold group-hover:gap-4 transition-all">
-              Read Full Article
-              <ArrowRight className="w-5 h-5" />
-            </div>
-
-            <div className="mt-4 pt-4 border-t border-purple-400/20">
-              <div className="flex items-center gap-4 text-sm text-white/60">
-                <span>✓ 92% Efficiency Gain</span>
-                <span>✓ $2.8B Savings</span>
+          {/* Content Cards */}
+          <div className="grid md:grid-cols-3 gap-6">
+            {/* Blog Post Card */}
+            <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-emerald-400/50 transition-all duration-300 transform hover:scale-105">
+              <div className="flex items-center gap-2 mb-3">
+                <span className="text-2xl">📘</span>
+                <span className="text-xs font-semibold text-emerald-400 uppercase tracking-wider">Blog Post</span>
               </div>
-            </div>
-          </Link>
-
-          {/* Autonomous Orchestration */}
-          <Link 
-            to="/blog/ai-2025-october-autonomous-enterprise-orchestration" 
-            className="group relative p-8 bg-gradient-to-br from-emerald-950/50 to-emerald-900/30 rounded-2xl border border-emerald-400/30 hover:border-emerald-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/20"
-          >
-            <div className="absolute top-4 right-4">
-              <Zap className="w-8 h-8 text-emerald-400 group-hover:animate-pulse" />
-            </div>
-            
-            <div className="mb-4">
-              <span className="px-3 py-1 bg-emerald-400/20 text-emerald-300 text-xs rounded-full font-semibold">
-                NEW
-              </span>
-            </div>
-            
-            <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-emerald-300 transition-colors">
-              Autonomous Enterprise Orchestration
-            </h3>
-            
-            <p className="text-white/70 mb-4 leading-relaxed">
-              Self-managing digital operations with 99.99% reliability and 85% cost reduction. 
-              Zero human intervention required.
-            </p>
-            
-            <div className="flex items-center gap-2 text-emerald-400 font-semibold group-hover:gap-4 transition-all">
-              Read Full Article
-              <ArrowRight className="w-5 h-5" />
-            </div>
-
-            <div className="mt-4 pt-4 border-t border-emerald-400/20">
-              <div className="flex items-center gap-4 text-sm text-white/60">
-                <span>✓ 99.99% Uptime</span>
-                <span>✓ 85% Cost Cut</span>
+              <h3 className="text-lg font-bold text-white mb-2">
+                Enterprise Intelligence Revolution Guide
+              </h3>
+              <p className="text-sm text-gray-400 mb-4">
+                Complete implementation guide covering quantum analytics, cognitive automation, and autonomous 
+                intelligence systems. Learn how to achieve 300% efficiency gains.
+              </p>
+              <div className="flex items-center gap-3 text-xs text-gray-500 mb-4">
+                <span>⏱️ 12 min read</span>
+                <span>•</span>
+                <span>📅 Oct 1, 2025</span>
               </div>
-            </div>
-          </Link>
-
-          {/* Neural Security */}
-          <Link 
-            to="/blog/ai-2025-october-neural-security-zero-trust-evolution" 
-            className="group relative p-8 bg-gradient-to-br from-red-950/50 to-orange-900/30 rounded-2xl border border-red-400/30 hover:border-red-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/20"
-          >
-            <div className="absolute top-4 right-4">
-              <Shield className="w-8 h-8 text-red-400 group-hover:animate-bounce" />
-            </div>
-            
-            <div className="mb-4">
-              <span className="px-3 py-1 bg-red-400/20 text-red-300 text-xs rounded-full font-semibold">
-                NEW
-              </span>
-            </div>
-            
-            <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-red-300 transition-colors">
-              Neural Security & Zero Trust
-            </h3>
-            
-            <p className="text-white/70 mb-4 leading-relaxed">
-              AI-powered cyber defense that predicts and prevents threats before they occur. 
-              99.7% threat prevention achieved.
-            </p>
-            
-            <div className="flex items-center gap-2 text-red-400 font-semibold group-hover:gap-4 transition-all">
-              Read Full Article
-              <ArrowRight className="w-5 h-5" />
+              <a
+                href="/content/blog/ai-2025-october-enterprise-intelligence-revolution-guide.md"
+                className="inline-block w-full text-center bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 text-sm"
+              >
+                Read Full Article →
+              </a>
             </div>
 
-            <div className="mt-4 pt-4 border-t border-red-400/20">
-              <div className="flex items-center gap-4 text-sm text-white/60">
-                <span>✓ 99.7% Prevention</span>
-                <span>✓ Zero Breaches</span>
+            {/* Case Study Card */}
+            <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-teal-400/50 transition-all duration-300 transform hover:scale-105">
+              <div className="flex items-center gap-2 mb-3">
+                <span className="text-2xl">💰</span>
+                <span className="text-xs font-semibold text-teal-400 uppercase tracking-wider">Case Study</span>
               </div>
+              <h3 className="text-lg font-bold text-white mb-2">
+                Fortune 100 $50B Success Story
+              </h3>
+              <p className="text-sm text-gray-400 mb-4">
+                How a Fortune 100 enterprise achieved $50 billion in value creation through enterprise intelligence 
+                transformation. 2000% ROI in year one.
+              </p>
+              <div className="flex items-center gap-3 text-xs text-gray-500 mb-4">
+                <span>💎 Fortune 100</span>
+                <span>•</span>
+                <span>📈 2000% ROI</span>
+              </div>
+              <a
+                href="/content/case-studies/ai-2025-october-fortune-100-enterprise-intelligence-transformation-50-billion-success.md"
+                className="inline-block w-full text-center bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-400 hover:to-cyan-500 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 text-sm"
+              >
+                View Case Study →
+              </a>
             </div>
-          </Link>
-        </div>
 
-        {/* CTA Section */}
-        <div className="text-center">
-          <p className="text-white/60 mb-4">
-            Want to implement these breakthrough technologies in your enterprise?
-          </p>
-          <div className="flex gap-4 justify-center">
-            <Link 
-              to="/contact" 
-              className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 rounded-xl font-semibold text-white transition-all duration-300 shadow-lg hover:shadow-purple-500/50"
+            {/* Service Card */}
+            <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105">
+              <div className="flex items-center gap-2 mb-3">
+                <span className="text-2xl">🚀</span>
+                <span className="text-xs font-semibold text-cyan-400 uppercase tracking-wider">Service</span>
+              </div>
+              <h3 className="text-lg font-bold text-white mb-2">
+                Enterprise Intelligence Platform
+              </h3>
+              <p className="text-sm text-gray-400 mb-4">
+                Transform your enterprise with our flagship platform featuring quantum analytics, autonomous 
+                intelligence, and neuromorphic computing. Starting at $500K.
+              </p>
+              <div className="flex items-center gap-3 text-xs text-gray-500 mb-4">
+                <span>⚡ 90-day deployment</span>
+                <span>•</span>
+                <span>🎯 98% success</span>
+              </div>
+              <a
+                href="/content/services/enterprise-intelligence-revolution-platform-2025.md"
+                className="inline-block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 text-sm"
+              >
+                Explore Platform →
+              </a>
+            </div>
+          </div>
+
+          {/* Bottom CTA */}
+          <div className="mt-8 text-center">
+            <p className="text-sm text-gray-400 mb-4">
+              Ready to transform your enterprise with revolutionary AI technologies?
+            </p>
+            <a
+              href="/contact"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-cyan-600 hover:from-emerald-400 hover:to-cyan-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50"
             >
-              Schedule Consultation
-            </Link>
-            <Link 
-              to="/blog" 
-              className="px-8 py-4 bg-white/10 hover:bg-white/20 rounded-xl font-semibold text-white transition-all duration-300 border border-white/30"
-            >
-              View All Articles
-            </Link>
+              <span>Schedule Free Assessment</span>
+              <span className="text-lg">→</span>
+            </a>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

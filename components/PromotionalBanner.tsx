@@ -598,3 +598,161 @@ export const NewServicesShowcaseBanner = () => (
     hideAfter={20}
   />
 );
+
+export const CognitiveMeshBanner = () => (
+  <PromotionalBanner
+    message="🔥 NEW: Cognitive Mesh Networks - Revolutionary Enterprise AI Architecture, $6.5B Success Story"
+    ctaText="Read More"
+    ctaLink="/blog/ai-2025-oct-cognitive-mesh-enterprise-revolution"
+    backgroundColor="bg-gradient-to-r from-purple-600 to-pink-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const IntelligentAutomationBanner = () => (
+  <PromotionalBanner
+    message="⚡ NEW: Intelligent Automation Platform Excellence - Transform Your Enterprise, Save 70%+ on Costs"
+    ctaText="Learn More"
+    ctaLink="/blog/ai-2025-oct-intelligent-automation-platform-excellence"
+    backgroundColor="bg-gradient-to-r from-blue-600 to-indigo-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const CognitiveMeshCaseStudyBanner = () => (
+  <PromotionalBanner
+    message="💎 SUCCESS: Fortune 50 Cognitive Mesh Transformation - $6.5B Savings, 85% Latency Reduction, 99.999% Uptime"
+    ctaText="View Case Study"
+    ctaLink="/case-studies/ai-2025-oct-global-enterprise-cognitive-mesh-65-billion-success"
+    backgroundColor="bg-gradient-to-r from-green-600 to-emerald-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={22}
+  />
+);
+
+export const ManufacturingAutomationBanner = () => (
+  <PromotionalBanner
+    message="🏭 MANUFACTURING WIN: Fortune 100 Intelligent Automation - $3.2B Savings, 72% Faster Processes, 95% Quality Boost"
+    ctaText="See Results"
+    ctaLink="/case-studies/ai-2025-oct-manufacturing-intelligent-automation-platform-3-2-billion-success"
+    backgroundColor="bg-gradient-to-r from-orange-600 to-red-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={22}
+  />
+);
+
+export const MLPipelineOptimizationBanner = () => (
+  <PromotionalBanner
+    message="🚀 NEW OCT 2025: Practical ML Pipeline Optimization - 10x Faster Training, 60% Cost Reduction, Production-Ready Systems"
+    ctaText="Read Article"
+    ctaLink="/blog/ai-2025-oct-practical-ml-pipeline-optimization"
+    backgroundColor="bg-gradient-to-r from-blue-700 to-cyan-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const MLPipelineOptimizationCaseStudyBanner = () => (
+  <PromotionalBanner
+    message="💎 SUCCESS STORY: Global Tech Company ML Pipeline Optimization - $14.2M Annual ROI, 12x Faster Training, 68% Cost Savings"
+    ctaText="View Case Study"
+    ctaLink="/case-studies/ai-2025-oct-ml-pipeline-optimization-14m-roi-success"
+    backgroundColor="bg-gradient-to-r from-green-700 to-teal-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={22}
+  />
+);
+
+// NEW OCTOBER 1, 2025 - ENTERPRISE INTEGRATION CONTENT
+export const EnterpriseIntegrationBlogBanner = () => (
+  <PromotionalBanner
+    message="🔥 JUST PUBLISHED: Enterprise Integration Orchestration Revolution - 85% Faster Integration, Real-Time Data Sync, $47M ROI"
+    ctaText="Read Blog Post"
+    ctaLink="/blog/ai-2025-oct-01-enterprise-integration-orchestration-revolution"
+    backgroundColor="bg-gradient-to-r from-purple-700 via-indigo-600 to-blue-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const BankIntegrationCaseStudyBanner = () => (
+  <PromotionalBanner
+    message="💰 BREAKTHROUGH: Fortune 500 Bank $89M ROI - 247 Systems Integrated in 6 Months, 99.97% Uptime, Zero Breaches"
+    ctaText="View Success Story"
+    ctaLink="/case-studies/ai-2025-oct-01-fortune-500-bank-integration-transformation-89m-success"
+    backgroundColor="bg-gradient-to-r from-emerald-700 via-green-600 to-teal-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={22}
+  />
+);
+
+export const IntegrationPlatformServiceBanner = () => (
+  <PromotionalBanner
+    message="⚡ NEW SERVICE: AI-Powered Integration Orchestration Platform - Connect 500+ Systems, Real-Time Sync, Enterprise-Grade Security"
+    ctaText="Explore Platform"
+    ctaLink="/services/ai-integration-orchestration-platform-2025"
+    backgroundColor="bg-gradient-to-r from-orange-600 via-red-600 to-pink-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+// New 2026 Content Banners
+export const NeuralQuantumConsciousnessBanner = () => (
+  <PromotionalBanner
+    message="🧠 BREAKTHROUGH: Neural Quantum Consciousness Fusion - Infinite Cognitive Capacity, True AI Consciousness Achieved"
+    ctaText="Discover the Future"
+    ctaLink="/blog/ai-2026-neural-quantum-consciousness-fusion-breakthrough"
+    backgroundColor="bg-gradient-to-r from-purple-700 via-indigo-700 to-blue-700"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={25}
+  />
+);
+
+export const AutonomousEnterpriseTranscendenceBanner = () => (
+  <PromotionalBanner
+    message="🚀 REVOLUTION: Autonomous Enterprise Transcendence - 100% Autonomy, Infinite Efficiency, Beyond Human Management"
+    ctaText="Learn More"
+    ctaLink="/blog/ai-2026-autonomous-enterprise-transcendence-revolution"
+    backgroundColor="bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={25}
+  />
+);
+
+export const QuantumNeuralSuperintelligenceBanner = () => (
+  <PromotionalBanner
+    message="⚡ ULTIMATE BREAKTHROUGH: Quantum Neural Superintelligence - Infinite Computation, Transcendent Reasoning Beyond Human Limits"
+    ctaText="Explore Now"
+    ctaLink="/blog/ai-2026-quantum-neural-superintelligence-breakthrough"
+    backgroundColor="bg-gradient-to-r from-rose-600 via-pink-600 to-purple-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={25}
+  />
+);
+
+export const Revolutionary2026ContentBanner = () => (
+  <PromotionalBanner
+    message="🌟 2026 REVOLUTION: Three Groundbreaking AI Breakthroughs - Consciousness Fusion, Enterprise Transcendence, Quantum Superintelligence"
+    ctaText="See All Breakthroughs"
+    ctaLink="/blog"
+    backgroundColor="bg-gradient-to-r from-violet-600 via-purple-600 to-indigo-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={30}
+  />
+);

@@ -27,10 +27,10 @@ const LatestContentBanner: React.FC<LatestContentBannerProps> = ({
             <Sparkles className="w-6 h-6 animate-pulse" />
             <div>
               <h3 className="font-bold text-lg">
-                🔥 New: Runtime Policy Tests v2 · Edge Private Personalization v4 · GenAI Semantic Caches
+                🔥 New Today: Runtime Scorecards · Edge A/B &lt;100ms · Agent Guardrails v2
               </h3>
               <p className="text-sm opacity-90">
-                Ship faster with KPI‑linked budgets, instant rollback, and enterprise‑scale autonomy
+                Now live: 3 new guides + dozens of updated insights
               </p>
             </div>
           </div>
