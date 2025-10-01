@@ -128,6 +128,21 @@ const Home = () => {
         
         <NewContentAnnouncement />
         
+        {/* October 1, 2025 - 🚀 JUST RELEASED: Latest AI Platform & Testing Guides */}
+        <NewContentPromoBanner 
+          className="border-b border-white/10" 
+          variant="premium" 
+          title="🚀 JUST RELEASED OCTOBER 1: 3 Revolutionary Guides — Unified AI Platform, Autonomous Testing & Real-Time Streaming!"
+          description="🔥 NEW TODAY: Master unified intelligence platforms (85% faster dev, 70% cost cut), autonomous testing revolution (92% bug detection), and sub-50ms real-time data streaming (10B+ events/sec). Transform your AI operations with battle-tested strategies!"
+          ctaText="Read Latest Guides"
+          ctaLink="/blog"
+          featuredItems={[
+            { title: "Unified Intelligence Platform — Build Next-Gen AI Ecosystems (85% Faster Development)", category: "AI Platform", link: "/blog/ai-2025-october-unified-intelligence-platform" },
+            { title: "Autonomous Testing Revolution — AI-Powered QA at Scale (92% Bug Detection, 80% Faster)", category: "Quality Engineering", link: "/blog/ai-2025-october-autonomous-testing-revolution" },
+            { title: "Real-Time AI Data Streaming — Sub-50ms Intelligence Pipelines (10B+ Events/Second)", category: "Data Engineering", link: "/blog/ai-2025-october-realtime-data-streaming" }
+          ]}
+        />
+        
         {/* October 1, 2025 - 🔥 BREAKTHROUGH: Next-Gen AI Revolution */}
         <NewContentPromoBanner 
           className="border-b border-white/10" 
@@ -285,13 +300,49 @@ const Home = () => {
             </h1>
 
             <p className="text-xl md:text-2xl text-zion-slate-light mb-8 leading-relaxed max-w-3xl mx-auto animate-fade-in">
-              🚀 <strong>JUST LAUNCHED OCTOBER 1, 2025:</strong> 4 Breakthrough Guides — Multimodal AI Systems (95% accuracy), Self-Optimizing Infrastructure (70% cost cut), Responsible AI Frameworks, and Hyper-Personalization (320% revenue growth)! 
+              🚀 <strong>JUST RELEASED OCTOBER 1, 2025:</strong> 7 Revolutionary Guides — Unified AI Platform (85% faster dev), Autonomous Testing (92% bug detection), Real-Time Streaming (sub-50ms latency), 
+              Multimodal AI Systems (95% accuracy), Self-Optimizing Infrastructure (70% cost cut), Responsible AI Frameworks, and Hyper-Personalization (320% revenue growth)! 
               Plus essential guides on AI Observability, Vector Databases, Security Scanning, DevSecOps, Quantum-Ready Infrastructure, and Enterprise AI Governance. 
               Transform your business with proven AI solutions delivering $50B+ in client results. 
               Join 500+ companies achieving 400-600% ROI with our expert guidance!
             </p>
 
             {/* October 1, 2025 - NEW BREAKTHROUGH CONTENT */}
+            <div className="bg-gradient-to-r from-violet-500/20 to-fuchsia-500/20 border border-violet-400/30 rounded-xl p-6 mb-8 animate-fade-in shadow-2xl">
+              <div className="flex items-center justify-center gap-3 mb-3">
+                <Sparkles className="w-6 h-6 text-violet-400 animate-pulse" />
+                <span className="text-lg font-bold text-violet-400">🚀 OCTOBER 1, 2025: LATEST AI PLATFORM GUIDES</span>
+                <Sparkles className="w-6 h-6 text-violet-400 animate-pulse" />
+              </div>
+              <p className="text-white text-lg font-semibold mb-2">
+                ⚡ 3 NEW GUIDES RELEASED TODAY: Unified AI Platform (85% faster dev, 70% cost reduction), Autonomous Testing (92% bug detection, 80% faster), Real-Time Streaming (sub-50ms, 10B+ events/sec)!
+              </p>
+              <p className="text-zion-slate-light text-sm mb-4">
+                Build next-generation AI ecosystems with unified intelligence platforms, revolutionize QA with autonomous testing, and process billions of events with ultra-low latency streaming.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <Link
+                  to="/blog/ai-2025-october-unified-intelligence-platform"
+                  className="bg-violet-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-violet-600 transition-colors text-center"
+                >
+                  Read Latest Guides
+                </Link>
+                <Link
+                  to="/blog"
+                  className="border border-violet-400 text-violet-400 px-6 py-2 rounded-lg font-semibold hover:bg-violet-400 hover:text-white transition-colors text-center"
+                >
+                  Explore All Content
+                </Link>
+              </div>
+              <div className="mt-4 flex flex-wrap gap-2 justify-center">
+                <span className="bg-violet-100/20 text-violet-200 px-3 py-1 rounded-full text-xs font-medium border border-violet-300/20">Unified AI Platform</span>
+                <span className="bg-emerald-100/20 text-emerald-200 px-3 py-1 rounded-full text-xs font-medium border border-emerald-300/20">Autonomous Testing</span>
+                <span className="bg-blue-100/20 text-blue-200 px-3 py-1 rounded-full text-xs font-medium border border-blue-300/20">Real-Time Streaming</span>
+                <span className="bg-indigo-100/20 text-indigo-200 px-3 py-1 rounded-full text-xs font-medium border border-indigo-300/20">Sub-50ms Latency</span>
+              </div>
+            </div>
+
+            {/* October 1, 2025 - PREVIOUS BREAKTHROUGH CONTENT */}
             <div className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 rounded-xl p-6 mb-8 animate-fade-in shadow-2xl">
               <div className="flex items-center justify-center gap-3 mb-3">
                 <Sparkles className="w-6 h-6 text-cyan-400 animate-pulse" />
