@@ -14,6 +14,36 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "ai-2025-oct-03-risk-controlled-autonomy",
+    title: "Risk‑Controlled Autonomy 2025: Ship Agentic Systems Without Surprises",
+    description: "Blueprint for budgeted tools, policy‑gated actions, and instant rollback so teams move 10x faster with stable reliability and spend.",
+    content: `
+# Risk‑Controlled Autonomy 2025: Ship Agentic Systems Without Surprises
+
+Agentic automation can drive step‑change outcomes when it is governed by hard budgets, approvals, and live evaluators.
+
+## What You’ll Implement
+- Budgeted tools with scopes and quotas
+- CI policy tests + online canaries as deploy gates
+- Live SLIs tied to KPIs with rollback triggers
+- Request coalescing and cache tiers to control cost
+
+## Outcomes
+- 10x delivery velocity with steady change‑failure rate
+- 40–70% cost reduction via quality tiers and caches
+- Sub‑1h MTTR with one‑click rollbacks
+
+Need a playbook tailored to your platform? Our team can help you land this safely in weeks.
+    `,
+    author: "Zion Tech Group AI Operations",
+    date: "2025-10-03",
+    category: "AI Operations",
+    tags: ["Agents", "Governance", "Budgets", "Rollback", "SLIs"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/risk-controlled-autonomy-2025.jpg"
+  },
+  {
     slug: "ai-2025-oct-01-enterprise-ai-governance-blueprint",
     title: "Enterprise AI Governance 2025: Scorecards, Guardrails, and Zero-Regret Rollouts",
     description: "Practical enterprise playbook to ship AI safely: policy tests in CI, KPI-linked scorecards, kill switches, and budget-aware routing.",

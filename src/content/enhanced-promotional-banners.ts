@@ -682,6 +682,19 @@ enhancedPromotionalBanners.unshift(
 
 // Sept 30, 2025 – Fresh homepage banner promoting the new content
 enhancedPromotionalBanners.push({
+  id: 'oct-03-risk-controlled-autonomy-2025',
+  title: '🛡️ NEW: Risk‑Controlled Autonomy — 10x Velocity, Zero Surprise Incidents',
+  description: 'Budgeted tools, approvals, and live evaluators with instant rollback. Ship autonomy safely at scale.',
+  ctaText: 'Read the Operations Playbook',
+  ctaLink: '/blog/ai-2025-oct-03-risk-controlled-autonomy',
+  variant: 'success',
+  icon: '🛡️',
+  featured: true,
+  priority: 0,
+  startDate: '2025-10-03'
+});
+
+enhancedPromotionalBanners.push({
   id: 'sept30-fresh-content-2025',
   title: '🚀 Fresh Drop: Governance Guardrails, Edge Inference, Agent Observability',
   description: 'Three new deep-dives just landed. Ship fast with policy checks, deliver <100ms at the edge, and get live traces for agents.',
