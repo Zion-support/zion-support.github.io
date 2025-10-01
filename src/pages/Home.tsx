@@ -24,6 +24,7 @@ import Header from "../components/Header";
 import October2025EdgeAIQuantumCryptoBanner from "../components/October2025EdgeAIQuantumCryptoBanner";
 import October2025BreakthroughContentBanner from "../components/October2025BreakthroughContentBanner";
 import October2025AIRevolutionBanner from "../components/October2025AIRevolutionBanner";
+import October2025TechBannerNew from "../components/October2025TechBannerNew";
 import LatestArticlesShowcase from "../components/LatestArticlesShowcase";
 import LatestContentBanner from "../components/LatestContentBanner";
 import LatestInsights from "../components/LatestInsights";
@@ -182,6 +183,9 @@ const Home = () => {
         
         {/* 🔥 OCTOBER 1, 2025 - BRAND NEW: AI Revolution - Agents, Development Tools & Safety */}
         <October2025AIRevolutionBanner className="border-b border-white/10" />
+        
+        {/* 🚀 OCTOBER 17, 2025 - LATEST: Next-Gen Autonomous Systems, AI Code Generation & Real-Time Personalization */}
+        <October2025TechBannerNew />
         
         {/* 🎯 OCTOBER 3, 2025 - LATEST: AI Education, Neuromorphic Computing & Biotech Breakthroughs */}
         <NewContentPromoBanner 
