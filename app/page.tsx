@@ -98,6 +98,10 @@ import February2025AutonomousBusinessIntelligenceRevolutionBanner from '../compo
 // NEW BREAKTHROUGH INNOVATIONS CONTENT
 import AI2026BreakthroughInnovationsMegaSuccessBanner from '../components/AI2026BreakthroughInnovationsMegaSuccessBanner';
 
+// NEW JANUARY 2025 CONTENT BANNERS
+import January2025NewContentBanner from '../components/January2025NewContentBanner';
+import Fortune100SuccessStoryBanner from '../components/Fortune100SuccessStoryBanner';
+
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
   description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Transform your business with cutting-edge technology and automation.',
@@ -107,7 +111,11 @@ export const metadata = {
 export default function HomePage() {
   return (
     <div className="animate-fade-in">
-      {/* 🚀 LATEST FEBRUARY 2025 QUANTUM & AUTONOMOUS INTELLIGENCE BREAKTHROUGHS - TOP PRIORITY */}
+      {/* 🚀 NEW JANUARY 2025 CONTENT - TOP PRIORITY */}
+      <January2025NewContentBanner />
+      <Fortune100SuccessStoryBanner />
+      
+      {/* 🚀 LATEST FEBRUARY 2025 QUANTUM & AUTONOMOUS INTELLIGENCE BREAKTHROUGHS */}
       <February2025QuantumNeuralSuperintelligenceBreakthroughBanner />
       <February2025AutonomousBusinessIntelligenceRevolutionBanner />
             Revolutionary 1,000,000x Performance Gains with Self-Evolving Neural Networks
