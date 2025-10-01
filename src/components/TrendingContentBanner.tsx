@@ -9,7 +9,6 @@ import {
   BookOpen,
   Zap,
   Brain,
-  Cloud,
   Shield
 } from 'lucide-react';
 

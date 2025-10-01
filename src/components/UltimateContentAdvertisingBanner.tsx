@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles, TrendingUp, Zap, Star, Rocket, Brain, Shield, Target, Award, Users, DollarSign, Clock, CheckCircle } from 'lucide-react';
+import { ArrowRight, Sparkles, Zap, Star, Rocket, Shield, Target, Users, DollarSign, Clock, CheckCircle } from 'lucide-react';
 
 const UltimateContentAdvertisingBanner: React.FC = () => {
   const advertisingFeatures = [

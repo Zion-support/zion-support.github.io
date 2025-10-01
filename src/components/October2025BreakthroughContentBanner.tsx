@@ -1,4 +1,4 @@
-import { ArrowRight, Sparkles, Zap, Brain, CheckCircle } from "lucide-react";
+import { Sparkles, Zap, Brain, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const October2025BreakthroughContentBanner = () => {
@@ -101,4 +101,4 @@ const October2025BreakthroughContentBanner = () => {
   );
 };
 
-export default October2025BreakthroughContentBanner;
+export default React.memo(October2025BreakthroughContentBanner);
