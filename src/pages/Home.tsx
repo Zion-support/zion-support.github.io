@@ -8,6 +8,7 @@ import {
   Sparkles,
   Star,
   Target,
+  TrendingUp,
   Users,
   Zap,
   TrendingUp,
@@ -18,10 +19,7 @@ import ContentPromotionBanner from "../components/ContentPromotionBanner";
 import ComprehensivePromoBanner from "../components/ComprehensivePromoBanner";
 import NewArticlesPromoBanner from "../components/NewArticlesPromoBanner";
 import NewServicesPromoBanner from "../components/NewServicesPromoBanner";
-import ContentValueTestimonials from "../components/ContentValueTestimonials";
-import EnhancedNewsletterSignup from "../components/EnhancedNewsletterSignup";
 import EnhancedPromotionalBanner from "../components/EnhancedPromotionalBanner";
-import EnhancedTestimonials from "../components/EnhancedTestimonials";
 import Header from "../components/Header";
 import LatestArticlesShowcase from "../components/LatestArticlesShowcase";
 import LatestContentBanner from "../components/LatestContentBanner";
@@ -29,14 +27,11 @@ import LatestInsights from "../components/LatestInsights";
 import ModernFeatures from "../components/ModernFeatures";
 import NewContentAnnouncement from "../components/NewContentAnnouncement";
 import NewContentPromoBanner from "../components/NewContentPromoBanner";
-import NewContentShowcase from "../components/NewContentShowcase";
-import NewContentShowcase2025 from "../components/NewContentShowcase2025";
 import NewServicesShowcase from "../components/NewServicesShowcase";
 import SuccessStoriesShowcase from "../components/SuccessStoriesShowcase";
 import TrendingContentBanner from "../components/TrendingContentBanner";
-import { enhancedPromotionalBanners, getActiveEnhancedBanners, getFeaturedBanners } from "../content/enhanced-promotional-banners";
+import { getFeaturedBanners } from "../content/enhanced-promotional-banners";
 import { latestInsights } from "../content/insights";
-// Removed duplicate imports below
 import { blogPosts } from "../content/blog-posts";
 
 const Home = () => {
@@ -75,7 +70,7 @@ const Home = () => {
         />
         <link rel="canonical" href="https://ziontechgroup.com" />
       </Helmet>
-      {/* AdvertisingBanner removed (undefined) */}
+      {/* <AdvertisingBanner /> */}
       {/* Promo: New Enterprise AI Governance Blueprint */}
       <NewContentPromoBanner 
         className="border-b border-white/10" 
@@ -106,7 +101,12 @@ const Home = () => {
       
       {/* 🧠🧠🧠 BRAND NEW OCTOBER 2025 - JUST RELEASED: COGNITIVE COMPUTING REVOLUTION - TOP PRIORITY! 🧠🧠🧠 */}
       {/* Featured: Multi-Agent Orchestration (97.8% Automation, $847M Value), Cognitive AI Transformation (98.5% Accuracy, $1.2B Value), Fortune 20 Telecom Case Study ($4.7B Success, 3,602% ROI) */}
-      {/* Removed undefined banner components */}
+      {/* <October2025CognitiveRevolutionBanner /> */}
+      
+      {/* <November2025GameChangersBanner /> */}
+      {/* <January2026RevolutionaryBanner /> */}
+      {/* <October2025UltimateEnterpriseBanner /> */}
+      {/* <October2025CuttingEdgeInnovationsBanner /> */}
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
         {/* New This Week promo - highlights latest featured posts */}
@@ -214,7 +214,7 @@ const Home = () => {
         </div>
         
         {/* Content Promotion Banner */}
-        {/* Removed ContentPromotionBanner with incompatible props */}
+        <ContentPromotionBanner />
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-zion-blue rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
@@ -586,7 +586,7 @@ const Home = () => {
         </section>
 
         {/* 🚀 OCTOBER 2, 2025 - BREAKTHROUGH: NEXT-GEN ENTERPRISE AI SYSTEMS! 🚀 */}
-        {/* Removed undefined October2025NewBreakthroughBanner */}
+        {/* <October2025NewBreakthroughBanner /> */}
 
         {/* 🌟🌟🌟 NEWEST LAUNCH: OCTOBER 1, 2025 - SMART CITY DIGITAL TWIN REVOLUTION - FEATURED! 🌟🌟🌟 */}
         {/* 🏙️🏙️🏙️ JUST PUBLISHED: $1.8B Savings, Phoenix Success Story, 97% Prediction Accuracy! 🏙️🏙️🏙️ */}
@@ -807,7 +807,7 @@ const Home = () => {
         </section>
 
         {/* New Services Promotional Banner */}
-        {/* Removed undefined NewServicesPromoBanner2026 */}
+        {/* <NewServicesPromoBanner2026 /> */}
 
         {/* Features Section */}
         <section className="container mx-auto px-6 py-20 relative z-10">
