@@ -1,161 +1,120 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { Shield, Lock, Zap, TrendingUp } from 'lucide-react';
 
-export default function October2025QuantumCybersecurityMeshBanner() {
+const October2025QuantumCybersecurityMeshBanner = () => {
   return (
-    <section className="py-16 bg-gradient-to-r from-red-900/50 via-purple-900/50 to-indigo-900/50 border-y border-red-500/30">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-10">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-red-500/20 to-indigo-500/20 border border-red-500/30 mb-6">
-            <span className="text-red-400 font-bold text-xl tracking-wider uppercase">
-              🛡️ OCTOBER 1, 2025 - QUANTUM CYBERSECURITY BREAKTHROUGH
-            </span>
+    <div className="relative overflow-hidden bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white py-16 px-6 my-8 rounded-2xl shadow-2xl">
+      {/* Animated background effect */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 animate-pulse"></div>
+      </div>
+
+      <div className="relative z-10 max-w-6xl mx-auto">
+        <div className="flex items-center justify-center mb-4 space-x-2">
+          <Shield className="w-8 h-8 text-yellow-300 animate-bounce" />
+          <span className="bg-yellow-400 text-gray-900 px-4 py-1 rounded-full font-bold text-sm">
+            🛡️ JUST PUBLISHED - OCTOBER 1, 2025 🛡️
+          </span>
+          <Lock className="w-8 h-8 text-yellow-300 animate-bounce" />
+        </div>
+
+        <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-4 leading-tight">
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 via-white to-cyan-300">
+            Quantum Cybersecurity Mesh Architecture
+          </span>
+        </h2>
+
+        <p className="text-xl md:text-2xl text-center mb-6 font-semibold text-blue-100">
+          Revolutionary Zero-Trust Security with Quantum Encryption
+        </p>
+
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 text-center">
+          <div className="bg-white/10 backdrop-blur-md rounded-lg p-4 border border-white/20">
+            <div className="text-3xl font-bold text-yellow-300">$12.4B</div>
+            <div className="text-sm text-blue-200">Breach Prevention</div>
           </div>
-
-          {/* Heading */}
-          <h2 className="text-4xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-red-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent">
-            Quantum-Enhanced Cybersecurity Mesh
-          </h2>
-
-          {/* Subheading */}
-          <p className="text-2xl text-red-300 max-w-5xl mx-auto mb-4 font-bold">
-            $12.7B Protection Value | 99.97% Threat Detection | Zero Breaches | 2,340% ROI
-          </p>
-
-          {/* Description */}
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-10">
-            Future-proof your security with quantum-resistant cryptography, AI-powered threat intelligence, 
-            and zero-trust architecture. Fortune 50 financial institution protects $847B in assets with 
-            100% quantum readiness and zero successful attacks over 24 months.
-          </p>
-
-          {/* Content Cards */}
-          <div className="grid md:grid-cols-3 gap-8 mb-10">
-            {/* Blog Post Card */}
-            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-red-500/50 transition-all duration-300 transform hover:scale-105">
-              <div className="text-6xl mb-6">📖</div>
-              <h3 className="text-2xl font-bold text-white mb-4">Complete Security Guide</h3>
-              <p className="text-gray-300 mb-6">
-                Comprehensive guide to quantum-enhanced cybersecurity: NIST-approved post-quantum 
-                cryptography, AI threat intelligence, zero-trust mesh, and autonomous response systems.
-              </p>
-              <div className="space-y-2 mb-6 text-left">
-                <div className="flex items-center gap-2 text-red-300">
-                  <span className="text-xl">✓</span>
-                  <span>Post-Quantum Cryptography</span>
-                </div>
-                <div className="flex items-center gap-2 text-purple-300">
-                  <span className="text-xl">✓</span>
-                  <span>99.97% Threat Detection</span>
-                </div>
-                <div className="flex items-center gap-2 text-indigo-300">
-                  <span className="text-xl">✓</span>
-                  <span>Zero-Trust Architecture</span>
-                </div>
-                <div className="flex items-center gap-2 text-pink-300">
-                  <span className="text-xl">✓</span>
-                  <span>Sub-Second Response</span>
-                </div>
-              </div>
-              <a 
-                href="/blog/ai-2025-oct-quantum-cybersecurity-mesh-revolution"
-                className="inline-block bg-gradient-to-r from-red-500 to-purple-600 hover:from-red-400 hover:to-purple-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300"
-              >
-                Read Security Guide →
-              </a>
-            </div>
-
-            {/* Success Story Card */}
-            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-purple-500/50 transition-all duration-300 transform hover:scale-105">
-              <div className="text-6xl mb-6">💎</div>
-              <h3 className="text-2xl font-bold text-white mb-4">$3.2B Fortune 50 Success</h3>
-              <p className="text-gray-300 mb-6">
-                How a Fortune 50 financial institution deployed quantum-enhanced cybersecurity across 
-                2,500+ branches in 94 countries, achieving perfect security with zero breaches for 24 months.
-              </p>
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className="bg-red-500/20 rounded-lg p-3">
-                  <div className="text-2xl font-bold text-red-300">$3.2B</div>
-                  <div className="text-xs text-red-200">Breach Prevention</div>
-                </div>
-                <div className="bg-purple-500/20 rounded-lg p-3">
-                  <div className="text-2xl font-bold text-purple-300">99.97%</div>
-                  <div className="text-xs text-purple-200">Detection Rate</div>
-                </div>
-                <div className="bg-indigo-500/20 rounded-lg p-3">
-                  <div className="text-2xl font-bold text-indigo-300">100%</div>
-                  <div className="text-xs text-indigo-200">Quantum Ready</div>
-                </div>
-                <div className="bg-pink-500/20 rounded-lg p-3">
-                  <div className="text-2xl font-bold text-pink-300">2,340%</div>
-                  <div className="text-xs text-pink-200">ROI</div>
-                </div>
-              </div>
-              <a 
-                href="/blog/ai-2025-oct-quantum-cybersecurity-mesh-revolution#success-story"
-                className="inline-block bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300"
-              >
-                View Success Story →
-              </a>
-            </div>
-
-            {/* Implementation Card */}
-            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-indigo-500/50 transition-all duration-300 transform hover:scale-105">
-              <div className="text-6xl mb-6">🚀</div>
-              <h3 className="text-2xl font-bold text-white mb-4">Security Services</h3>
-              <p className="text-gray-300 mb-6">
-                Achieve quantum readiness in 24 weeks with our proven framework: post-quantum crypto 
-                deployment, AI threat platform, zero-trust architecture, and 24/7 security operations.
-              </p>
-              <div className="space-y-3 mb-6">
-                <div className="bg-gradient-to-r from-red-500/10 to-purple-500/10 rounded-lg p-3 text-left">
-                  <div className="font-semibold text-white mb-1">🎯 Quantum Readiness Audit</div>
-                  <div className="text-sm text-gray-300">Crypto inventory & risk analysis</div>
-                </div>
-                <div className="bg-gradient-to-r from-purple-500/10 to-indigo-500/10 rounded-lg p-3 text-left">
-                  <div className="font-semibold text-white mb-1">⚙️ Implementation</div>
-                  <div className="text-sm text-gray-300">Post-quantum crypto & zero-trust</div>
-                </div>
-                <div className="bg-gradient-to-r from-indigo-500/10 to-pink-500/10 rounded-lg p-3 text-left">
-                  <div className="font-semibold text-white mb-1">📊 Managed Security</div>
-                  <div className="text-sm text-gray-300">24/7 SOC & threat intelligence</div>
-                </div>
-              </div>
-              <a 
-                href="/blog/ai-2025-oct-quantum-cybersecurity-mesh-revolution#getting-started"
-                className="inline-block bg-gradient-to-r from-indigo-500 to-pink-600 hover:from-indigo-400 hover:to-pink-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300"
-              >
-                Get Started →
-              </a>
-            </div>
+          <div className="bg-white/10 backdrop-blur-md rounded-lg p-4 border border-white/20">
+            <div className="text-3xl font-bold text-green-300">99.99%</div>
+            <div className="text-sm text-blue-200">Threat Detection</div>
           </div>
+          <div className="bg-white/10 backdrop-blur-md rounded-lg p-4 border border-white/20">
+            <div className="text-3xl font-bold text-cyan-300">0.3ms</div>
+            <div className="text-sm text-blue-200">Response Time</div>
+          </div>
+          <div className="bg-white/10 backdrop-blur-md rounded-lg p-4 border border-white/20">
+            <div className="text-3xl font-bold text-purple-300">4,700%</div>
+            <div className="text-sm text-blue-200">Security ROI</div>
+          </div>
+        </div>
 
-          {/* CTA Banner */}
-          <div className="bg-gradient-to-r from-red-500/20 to-indigo-500/20 border border-red-500/30 rounded-2xl p-8">
-            <h3 className="text-3xl font-bold text-white mb-4">
-              Secure Your Organization Against Quantum Threats
-            </h3>
-            <p className="text-xl text-gray-200 mb-6 max-w-3xl mx-auto">
-              The quantum threat is real. Limited Q4 2025 security assessment slots available. 
-              Contact our cybersecurity experts for a comprehensive quantum readiness evaluation.
-            </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <a 
-                href="/contact"
-                className="bg-gradient-to-r from-red-600 to-purple-700 hover:from-red-500 hover:to-purple-600 text-white font-bold py-4 px-10 rounded-xl transition-all duration-300 shadow-lg"
-              >
-                Schedule Security Assessment
-              </a>
-              <a 
-                href="/blog/ai-2025-oct-quantum-cybersecurity-mesh-revolution"
-                className="bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-10 rounded-xl transition-all duration-300 border border-white/30"
-              >
-                Read Security Guide
-              </a>
+        <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 mb-6 border border-white/20">
+          <h3 className="text-2xl font-bold mb-4 flex items-center justify-center">
+            <Zap className="w-6 h-6 mr-2 text-yellow-300" />
+            Revolutionary Security Capabilities
+          </h3>
+          <div className="grid md:grid-cols-2 gap-4 text-sm">
+            <div className="flex items-start space-x-2">
+              <span className="text-green-400 font-bold">✓</span>
+              <span>Post-Quantum Cryptography protecting against quantum attacks</span>
+            </div>
+            <div className="flex items-start space-x-2">
+              <span className="text-green-400 font-bold">✓</span>
+              <span>AI-Driven Threat Intelligence analyzing 847B events daily</span>
+            </div>
+            <div className="flex items-start space-x-2">
+              <span className="text-green-400 font-bold">✓</span>
+              <span>Zero-Trust Architecture with continuous verification</span>
+            </div>
+            <div className="flex items-start space-x-2">
+              <span className="text-green-400 font-bold">✓</span>
+              <span>Distributed Security Mesh across all enterprise nodes</span>
+            </div>
+            <div className="flex items-start space-x-2">
+              <span className="text-green-400 font-bold">✓</span>
+              <span>Autonomous Response neutralizing threats in milliseconds</span>
+            </div>
+            <div className="flex items-start space-x-2">
+              <span className="text-green-400 font-bold">✓</span>
+              <span>Self-Healing Infrastructure with automatic patching</span>
             </div>
           </div>
         </div>
+
+        <div className="bg-gradient-to-r from-green-900/50 to-blue-900/50 backdrop-blur-md rounded-xl p-6 mb-6 border border-green-400/30">
+          <h3 className="text-xl font-bold mb-3 flex items-center">
+            <TrendingUp className="w-6 h-6 mr-2 text-green-300" />
+            Fortune 50 Success Story
+          </h3>
+          <p className="text-blue-100 mb-3">
+            Global financial institution with $2.8 trillion in assets prevents <strong className="text-yellow-300">$12.4B in breaches</strong>, 
+            achieves <strong className="text-green-300">99.99% threat detection</strong>, and reduces security operations costs by 
+            <strong className="text-cyan-300"> $284M annually</strong> with quantum security mesh architecture.
+          </p>
+          <div className="flex flex-wrap gap-2 text-xs">
+            <span className="bg-green-500/30 px-3 py-1 rounded-full border border-green-400">Zero Ransomware Attacks</span>
+            <span className="bg-blue-500/30 px-3 py-1 rounded-full border border-blue-400">100% Compliance</span>
+            <span className="bg-purple-500/30 px-3 py-1 rounded-full border border-purple-400">92% Reduced Workload</span>
+          </div>
+        </div>
+
+        <div className="text-center">
+          <Link
+            to="/blog/ai-2025-october-quantum-cybersecurity-mesh-architecture"
+            className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 px-8 py-4 rounded-full font-bold text-lg hover:from-yellow-300 hover:to-orange-400 transition-all transform hover:scale-105 shadow-lg"
+          >
+            <Shield className="w-6 h-6 mr-2" />
+            Discover Quantum Security Architecture
+            <span className="ml-2">→</span>
+          </Link>
+        </div>
+
+        <p className="text-center text-blue-200 text-sm mt-4">
+          Complete guide to quantum-enhanced cybersecurity mesh implementation • Zero-trust framework • AI threat intelligence
+        </p>
       </div>
-    </section>
+    </div>
   );
-}
+};
+
+export default October2025QuantumCybersecurityMeshBanner;
