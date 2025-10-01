@@ -50,7 +50,19 @@ import January2026RevolutionaryBanner from "../components/January2026Revolutiona
 import NewServicesPromoBanner2026 from "../components/NewServicesPromoBanner2026";
 import November2025GameChangersBanner from "../components/November2025GameChangersBanner";
 import { latestInsights } from "../content/insights";
+<<<<<<< HEAD
+import NewContentPromoBanner from "../components/NewContentPromoBanner";
+import EnhancedPromotionalBanner from "../components/EnhancedPromotionalBanner";
+import { getFeaturedBanners } from "../content/enhanced-promotional-banners";
+import NewContentAnnouncement from "../components/NewContentAnnouncement";
+import TrendingContentBanner from "../components/TrendingContentBanner";
+import ComprehensivePromoBanner from "../components/ComprehensivePromoBanner";
+import NewArticlesPromoBanner from "../components/NewArticlesPromoBanner";
+import NewServicesPromoBanner from "../components/NewServicesPromoBanner";
+import ContentPromotionBanner from "../components/ContentPromotionBanner";
+=======
 import { blogPosts } from "../content/blog-posts";
+>>>>>>> origin/main
 
 const Home = () => {
   return (
@@ -89,6 +101,19 @@ const Home = () => {
         <link rel="canonical" href="https://ziontechgroup.com" />
       </Helmet>
       <AdvertisingBanner />
+      <NewContentPromoBanner 
+        className="border-b border-white/10" 
+        variant="premium" 
+        title="🚀 NEW TODAY: Enterprise Agent Copilots — 10x Velocity, Safe by Design"
+        description="Ship AI copilots with budgets, policy gates, and instant rollback. 10x speed, 40–70% cost cuts, 99.9% uptime."
+        ctaText="Read the Guide"
+        ctaLink="/blog/ai-2025-oct-01-enterprise-agent-copilots"
+        featuredItems={[
+          { title: "Enterprise Agent Copilots — Guardrails That Scale", category: "AI Agents", link: "/blog/ai-2025-oct-01-enterprise-agent-copilots" },
+          { title: "Runtime Scorecards v2 — SLIs → KPIs With Budgets", category: "Ops", link: "/blog/ai-governance-runtime-scorecards-v2-2026" },
+          { title: "Edge A/B <100ms — Consentless Metrics", category: "Edge", link: "/blog/edge-private-experimentation-v2-2026" }
+        ]}
+      />
       
       {/* 🔥🔥🔥 BRAND NEW OCTOBER 1, 2025 - LATEST PREMIUM RELEASES: 3 GAME-CHANGING AI BREAKTHROUGHS - TOP PRIORITY! 🔥🔥🔥 */}
       {/* Featured: Autonomous Data Governance (99.98% Compliance, $4.2B Risk Mitigation), Neural Fraud Detection (99.96% Accuracy, $8.7B Prevented), Cognitive Workflow Orchestration (98.7% Automation, $6.3B Value) */}
@@ -578,14 +603,7 @@ const Home = () => {
         </div>
         
         {/* Content Promotion Banner */}
-        <ContentPromotionBanner
-          variant="success"
-          title="🎯 October 2025 Update: GenAI Cost Optimization + Real-Time AI"
-          description="New articles on cutting LLM costs 70%, achieving sub-100ms AI, trustworthy governance frameworks, and 10x developer velocity."
-          ctaText="Explore Latest Insights"
-          ctaLink="/blog"
-          dismissible={true}
-        />
+        <ContentPromotionBanner />
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-zion-blue rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
