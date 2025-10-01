@@ -12,8 +12,8 @@ export default function ContentHub() {
     {
       title: 'AI Implementation',
       articles: [
-        { title: 'Neural-Symbolic AI Enterprise Fusion Revolution 2025', slug: '/blog/ai-2025-oct-neural-symbolic-enterprise-fusion-revolution', readTime: '22 min', featured: true },
-        { title: 'Enterprise AI Orchestration Mesh Revolution 2025', slug: '/blog/ai-2025-oct-enterprise-ai-orchestration-mesh-revolution', readTime: '20 min', featured: true },
+        { title: 'Digital Transformation Excellence 2025', slug: '/blog/ai-2025-october-digital-transformation-enterprise-excellence', readTime: '22 min', featured: true },
+        { title: 'Cloud-Native AI Platform Excellence 2025', slug: '/blog/ai-2025-october-cloud-native-ai-platform-excellence', readTime: '26 min', featured: true },
         { title: 'AI Agent Swarms Enterprise Orchestration 2026', slug: '/blog/ai-agent-swarms-enterprise-orchestration-2026', readTime: '28 min', featured: true },
         { title: 'Quantum-Enhanced AI Enterprise Breakthrough 2026', slug: '/blog/quantum-enhanced-ai-enterprise-breakthrough-2026', readTime: '32 min', featured: true },
         { title: 'Agentic Workflow Orchestration 2026', slug: '/blog/agentic-workflow-orchestration-2026', readTime: '16 min', featured: true },
@@ -61,19 +61,19 @@ export default function ContentHub() {
 
   const caseStudies = [
     {
-      title: 'Fortune 100 Neural-Symbolic AI Transformation',
-      company: 'Global Aerospace Manufacturing Corp',
-      industry: 'Aerospace & Defense',
-      results: '$18.7B Value & 99.7% Accuracy',
-      slug: '/case-studies/ai-2025-oct-fortune-100-neural-symbolic-transformation-18-7-billion-success',
+      title: 'Global Retail Digital Transformation',
+      company: 'Global Retail Corporation',
+      industry: 'Retail & E-commerce',
+      results: '$12.4B Value & 98.7% Automation',
+      slug: '/case-studies/ai-2025-oct-global-retail-digital-transformation-12-4-billion-success',
       featured: true
     },
     {
-      title: 'Global Telecom AI Orchestration Mesh Success',
-      company: 'Global Communications Network Inc.',
-      industry: 'Telecommunications',
-      results: '$24.5B Value & 10,000+ Agents',
-      slug: '/case-studies/ai-2025-oct-global-telecom-orchestration-mesh-24-5-billion-success',
+      title: 'Fortune 50 Cloud-Native AI Platform',
+      company: 'Global Technology Corporation',
+      industry: 'Technology & SaaS',
+      results: '$8.7B Value & 99.99% Uptime',
+      slug: '/case-studies/ai-2025-oct-fortune-50-cloud-native-platform-8-7-billion-success',
       featured: true
     },
     {
@@ -175,161 +175,90 @@ export default function ContentHub() {
 
       {/* Featured Content */}
       <section className="mb-16">
-        <div className="bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 text-white p-8 rounded-2xl mb-8 shadow-2xl">
+        <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white p-8 rounded-2xl mb-8">
           <div className="text-center">
-            <div className="inline-block bg-white/30 backdrop-blur-sm px-6 py-2 rounded-full text-sm font-bold mb-4 animate-pulse shadow-lg">
-              🎉 BREAKTHROUGH CONTENT: OCTOBER 1, 2025
+            <div className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-bold mb-4 animate-pulse">
+              🚀 BRAND NEW: OCTOBER 2025
             </div>
-            <h2 className="text-3xl md:text-5xl font-extrabold mb-4 drop-shadow-lg">
-              Neural-Symbolic AI & Orchestration Mesh Revolution
+            <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
+              Digital Transformation & Cloud-Native AI Excellence
             </h2>
-            <p className="text-xl md:text-2xl mb-6 max-w-4xl mx-auto">
-              Discover the cutting-edge AI technologies transforming enterprises: $43.2B in combined proven value!
+            <p className="text-xl mb-6 max-w-3xl mx-auto">
+              Latest breakthroughs: $21.1B in combined value from digital transformation and cloud-native AI platforms
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link
-                href="/blog/ai-2025-oct-neural-symbolic-enterprise-fusion-revolution"
-                className="bg-white text-purple-600 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
+                href="/blog/ai-2025-october-digital-transformation-enterprise-excellence"
+                className="bg-white text-cyan-600 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
               >
-                Neural-Symbolic AI Guide →
+                Read Digital Transformation Guide →
               </Link>
               <Link
-                href="/blog/ai-2025-oct-enterprise-ai-orchestration-mesh-revolution"
-                className="bg-white text-pink-600 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
+                href="/case-studies/ai-2025-oct-global-retail-digital-transformation-12-4-billion-success"
+                className="border-2 border-white text-white font-bold py-3 px-6 rounded-lg hover:bg-white/10 transition-colors"
               >
-                Orchestration Mesh Guide →
+                View $12.4B Success Story →
               </Link>
             </div>
           </div>
         </div>
 
-        <h2 className="text-3xl font-bold text-gray-900 mb-8">🔥 Latest Featured Content - October 2025</h2>
-        <div className="grid md:grid-cols-3 gap-6 mb-8">
-          <div className="bg-gradient-to-br from-purple-50 to-indigo-100 p-6 rounded-xl border-2 border-purple-300 shadow-lg hover:shadow-2xl transition-all">
-            <div className="flex items-center gap-2 mb-4">
-              <span className="bg-purple-200 text-purple-900 px-3 py-1 rounded-full text-xs font-bold">
-                🌟 NEW: Oct 1, 2025
-              </span>
-            </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">
-              Neural-Symbolic AI Revolution
-            </h3>
-            <p className="text-gray-700 mb-4">
-              Combining deep learning with logical reasoning. 99.7% accuracy, $18.7B proven value, 425% ROI in 24 months.
-            </p>
-            <Link
-              href="/blog/ai-2025-oct-neural-symbolic-enterprise-fusion-revolution"
-              className="text-purple-600 font-bold hover:text-purple-800 inline-flex items-center"
-            >
-              Read Full Guide →
-            </Link>
-          </div>
-
-          <div className="bg-gradient-to-br from-pink-50 to-rose-100 p-6 rounded-xl border-2 border-pink-300 shadow-lg hover:shadow-2xl transition-all">
-            <div className="flex items-center gap-2 mb-4">
-              <span className="bg-pink-200 text-pink-900 px-3 py-1 rounded-full text-xs font-bold">
-                🚀 NEW: Oct 1, 2025
-              </span>
-            </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">
-              AI Orchestration Mesh
-            </h3>
-            <p className="text-gray-700 mb-4">
-              Coordinate 10,000+ AI agents seamlessly. $24.5B enterprise value, 99.99% reliability, 840% ROI.
-            </p>
-            <Link
-              href="/blog/ai-2025-oct-enterprise-ai-orchestration-mesh-revolution"
-              className="text-pink-600 font-bold hover:text-pink-800 inline-flex items-center"
-            >
-              Discover the Mesh →
-            </Link>
-          </div>
-
-          <div className="bg-gradient-to-br from-orange-50 to-amber-100 p-6 rounded-xl border-2 border-orange-300 shadow-lg hover:shadow-2xl transition-all">
-            <div className="flex items-center gap-2 mb-4">
-              <span className="bg-orange-200 text-orange-900 px-3 py-1 rounded-full text-xs font-bold">
-                💎 CASE STUDIES
-              </span>
-            </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">
-              $43.2B Combined Success
-            </h3>
-            <p className="text-gray-700 mb-4">
-              Fortune 100 aerospace ($18.7B) & global telecom ($24.5B) transformation success stories.
-            </p>
-            <div className="flex flex-col gap-2">
-              <Link
-                href="/case-studies/ai-2025-oct-fortune-100-neural-symbolic-transformation-18-7-billion-success"
-                className="text-orange-600 font-semibold hover:text-orange-800 text-sm"
-              >
-                Aerospace $18.7B →
-              </Link>
-              <Link
-                href="/case-studies/ai-2025-oct-global-telecom-orchestration-mesh-24-5-billion-success"
-                className="text-orange-600 font-semibold hover:text-orange-800 text-sm"
-              >
-                Telecom $24.5B →
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        <h2 className="text-3xl font-bold text-gray-900 mb-8 mt-12">Previously Featured Content</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-8">Featured Content</h2>
         <div className="grid md:grid-cols-3 gap-6">
           <div className="bg-gradient-to-br from-cyan-50 to-blue-50 p-6 rounded-xl border-2 border-cyan-200">
             <div className="flex items-center gap-2 mb-4">
               <span className="bg-cyan-100 text-cyan-800 px-2 py-1 rounded-full text-xs font-semibold">
-                🌟 September 2025
+                🌟 NEW: October 2025
               </span>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">
-              Autonomous Reality Synthesis
+              Digital Transformation Excellence
             </h3>
             <p className="text-gray-600 mb-4">
-              Revolutionary AI combining quantum computing, spatial AI, and digital twins. 16,480% ROI proven across 847 facilities.
+              AI-powered enterprise revolution achieving $12.4B value, 98.7% automation, and transforming 1,200+ enterprises.
             </p>
             <Link
-              href="/blog/ai-2025-october-autonomous-reality-synthesis"
+              href="/blog/ai-2025-october-digital-transformation-enterprise-excellence"
               className="text-cyan-600 font-semibold hover:text-cyan-700"
             >
-              Read Revolutionary Guide →
+              Read Complete Guide →
             </Link>
           </div>
 
-          <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl">
+          <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl border-2 border-blue-200">
             <div className="flex items-center gap-2 mb-4">
               <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
-                Featured Article
+                🚀 NEW: October 2025
               </span>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">
-              AI Multimodal Enterprise Solutions 2026
+              Cloud-Native AI Platform Excellence
             </h3>
             <p className="text-gray-600 mb-4">
-              Master multimodal AI for enterprise with vision, audio, and text processing. Achieve 300% ROI.
+              Build scalable platforms achieving 99.99% uptime, 450% performance gains, $8.7B value across 2,500+ deployments.
             </p>
             <Link
-              href="/blog/ai-multimodal-enterprise-2026"
+              href="/blog/ai-2025-october-cloud-native-ai-platform-excellence"
               className="text-blue-600 font-semibold hover:text-blue-700"
             >
-              Read Article →
+              Read Platform Guide →
             </Link>
           </div>
 
-          <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl">
+          <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl border-2 border-green-200">
             <div className="flex items-center gap-2 mb-4">
               <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
-                🔥 $47.3B Success
+                🔥 $12.4B Success
               </span>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">
-              Autonomous Reality Synthesis Success
+              Retail Digital Transformation
             </h3>
             <p className="text-gray-600 mb-4">
-              Fortune 50 company achieves $47.3B in value with 99.98% accuracy across global operations.
+              Fortune 100 retailer achieves $12.4B value with 98.7% automation and revolutionary customer experiences.
             </p>
             <Link
-              href="/case-studies/autonomous-reality-synthesis-47-billion-success"
+              href="/case-studies/ai-2025-oct-global-retail-digital-transformation-12-4-billion-success"
               className="text-green-600 font-semibold hover:text-green-700"
             >
               View Case Study →
