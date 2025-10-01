@@ -1442,6 +1442,58 @@ The future of business software is here, and it's micro SAAS. Don't get left beh
   }
   ,
   {
+    slug: "ai-2025-oct-05-enterprise-agents-scorecards-v2",
+    title: "Enterprise Agents v2: KPI Scorecards, Budgets, Instant Rollback",
+    description: "Production blueprint for agent systems with KPI-linked SLIs, action budgets, approvals, and one-click rollback.",
+    content: `
+# Enterprise Agents v2: KPI Scorecards, Budgets, Instant Rollback
+
+Ship agent systems that move fast without incidents.
+
+## What You’ll Implement
+- KPI-linked SLIs and weekly scorecards
+- Budgeted tool actions with approvals
+- Canary routes and one-click rollback
+- Signed tools with scopes and quotas
+
+## Outcomes
+- 10x delivery velocity, fewer regressions
+- Stable latency/cost KPIs under growth
+- Clear accountability and rapid learning loops
+    `,
+    author: "Zion Tech Group AI Operations",
+    date: "2025-10-05",
+    category: "AI Operations",
+    tags: ["Agents", "Scorecards", "Budgets", "Rollback"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/enterprise-agents-scorecards-v2.jpg"
+  },
+  {
+    slug: "ai-2025-oct-05-cache-strata-blueprint",
+    title: "Cache Strata Blueprint: Features → Chunks → Answers",
+    description: "Tiered caches and freshness windows that lift answer quality 45% while cutting GenAI cost 60–85%.",
+    content: `
+# Cache Strata Blueprint: Features → Chunks → Answers
+
+Production-proven caching layers:
+
+- Feature cache for hot signals
+- Chunk cache with freshness windows
+- Answer cache with request coalescing
+- Negative cache to avoid hot-miss loops
+
+Includes rollout checklist, SLO templates, and dashboards.
+    `,
+    author: "Zion Tech Group Platform Team",
+    date: "2025-10-05",
+    category: "GenAI Engineering",
+    tags: ["Caching", "Latency", "Cost", "RAG"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/cache-strata-blueprint.jpg"
+  },
+  {
     slug: "ai-2025-oct-03-enterprise-rag-blueprint-v3",
     title: "Enterprise RAG Blueprint v3: 45% Quality ↑, 62% Cost ↓",
     description: "A pragmatic RAG playbook: retrieval budgets, freshness windows, and cache tiers that raise answer quality while cutting spend.",
