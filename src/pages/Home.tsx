@@ -92,6 +92,56 @@ const Home = () => {
               and next-generation cloud infrastructure. Join 500+ companies already scaling with us!
             </p>
 
+            {/* NEWEST CONTENT - AUTONOMOUS AI TESTING - OCTOBER 2025 */}
+            <div className="bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-400/30 rounded-xl p-6 mb-6 animate-fade-in">
+              <div className="flex items-center justify-center gap-3 mb-3">
+                <Rocket className="w-6 h-6 text-emerald-400 animate-bounce" />
+                <span className="text-lg font-bold text-emerald-400">🔥 BREAKING: AUTONOMOUS AI TESTING - OCTOBER 2025</span>
+                <Rocket className="w-6 h-6 text-emerald-400 animate-bounce" />
+              </div>
+              <p className="text-white text-2xl font-bold mb-3">
+                Zero-Touch Quality Assurance: $850M Value Creation Proven!
+              </p>
+              <p className="text-emerald-100 text-lg mb-4">
+                Fortune 100 company achieves 99.7% defect detection with autonomous AI testing agents. 
+                Transform your QA from weeks to hours with self-healing tests and cognitive defect detection.
+              </p>
+              <div className="grid md:grid-cols-4 gap-4 text-sm text-emerald-50 mb-4">
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-emerald-400" />
+                  <span className="font-semibold">$850M Annual Value</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-emerald-400" />
+                  <span className="font-semibold">99.7% Defect Detection</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-emerald-400" />
+                  <span className="font-semibold">95% Faster Testing</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-emerald-400" />
+                  <span className="font-semibold">14,000%+ ROI</span>
+                </div>
+              </div>
+              <div className="flex flex-wrap gap-3 justify-center">
+                <Link
+                  to="/blog/ai-2025-oct-autonomous-testing-revolution"
+                  className="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
+                >
+                  Read Technical Deep-Dive
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link
+                  to="/case-studies/ai-2025-oct-fortune-100-autonomous-testing-850m-success"
+                  className="inline-flex items-center gap-2 bg-teal-500 hover:bg-teal-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
+                >
+                  View $850M Success Story
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+
             {/* NEW CONTENT ANNOUNCEMENT */}
             <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-xl p-6 mb-6 animate-fade-in">
               <div className="flex items-center justify-center gap-3 mb-3">
@@ -204,55 +254,64 @@ const Home = () => {
             </p>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-              {/* Blog Post 1 */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30 hover:border-emerald-400/60 transition-all hover:scale-105 hover:shadow-xl">
-                <div className="text-emerald-400 text-sm font-semibold mb-2 uppercase">📝 New Guide</div>
-                <h3 className="text-lg font-bold text-white mb-3">Edge Inference Patterns</h3>
-                <p className="text-emerald-100 text-sm mb-4">Production-ready AI deployment guide with real-world patterns and 12-minute read</p>
+              {/* FEATURED: Autonomous Testing Blog Post */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border-2 border-emerald-400/60 hover:border-emerald-400/80 transition-all hover:scale-105 hover:shadow-xl relative">
+                <div className="absolute -top-3 -right-3 bg-emerald-500 text-white text-xs font-bold px-3 py-1 rounded-full animate-pulse">
+                  HOT 🔥
+                </div>
+                <div className="text-emerald-400 text-sm font-semibold mb-2 uppercase">📝 Technical Guide</div>
+                <h3 className="text-lg font-bold text-white mb-3">Autonomous AI Testing Revolution</h3>
+                <p className="text-emerald-100 text-sm mb-4">Zero-touch QA with 99.7% defect detection. Complete implementation guide with Fortune 500 results</p>
                 <Link 
-                  to="/blog/ai-2025-oct-edge-inference-patterns-production-guide" 
+                  to="/blog/ai-2025-oct-autonomous-testing-revolution" 
                   className="inline-flex items-center text-emerald-300 hover:text-white font-semibold text-sm"
                 >
                   Read Now <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
               </div>
 
-              {/* Blog Post 2 */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 hover:border-cyan-400/60 transition-all hover:scale-105 hover:shadow-xl">
-                <div className="text-cyan-400 text-sm font-semibold mb-2 uppercase">📊 Strategy</div>
-                <h3 className="text-lg font-bold text-white mb-3">North Star Metrics Framework</h3>
-                <p className="text-cyan-100 text-sm mb-4">Measure AI product success with proven metrics used by leading companies</p>
+              {/* FEATURED: $850M Case Study */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border-2 border-teal-400/60 hover:border-teal-400/80 transition-all hover:scale-105 hover:shadow-xl relative">
+                <div className="absolute -top-3 -right-3 bg-teal-500 text-white text-xs font-bold px-3 py-1 rounded-full animate-pulse">
+                  NEW 💎
+                </div>
+                <div className="text-teal-400 text-sm font-semibold mb-2 uppercase">💼 Success Story</div>
+                <h3 className="text-lg font-bold text-white mb-3">$850M Fortune 100 Testing Win</h3>
+                <p className="text-teal-100 text-sm mb-4">How autonomous AI testing delivered 14,000%+ ROI with 2.6-day payback period</p>
                 <Link 
-                  to="/blog/ai-2025-oct-northstar-metrics-ai-product-success" 
+                  to="/case-studies/ai-2025-oct-fortune-100-autonomous-testing-850m-success" 
+                  className="inline-flex items-center text-teal-300 hover:text-white font-semibold text-sm"
+                >
+                  View Results <ArrowRight className="w-4 h-4 ml-1" />
+                </Link>
+              </div>
+
+              {/* New Service: Autonomous Testing */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border-2 border-cyan-400/60 hover:border-cyan-400/80 transition-all hover:scale-105 hover:shadow-xl relative">
+                <div className="absolute -top-3 -right-3 bg-cyan-500 text-white text-xs font-bold px-3 py-1 rounded-full animate-pulse">
+                  LAUNCH 🚀
+                </div>
+                <div className="text-cyan-400 text-sm font-semibold mb-2 uppercase">🚀 Service Launch</div>
+                <h3 className="text-lg font-bold text-white mb-3">Autonomous Testing Services</h3>
+                <p className="text-cyan-100 text-sm mb-4">Enterprise AI testing platform. 30-day pilot with money-back guarantee. Starting $500K/year</p>
+                <Link 
+                  to="/services/autonomous-ai-testing-services" 
                   className="inline-flex items-center text-cyan-300 hover:text-white font-semibold text-sm"
                 >
-                  Learn More <ArrowRight className="w-4 h-4 ml-1" />
+                  Explore Service <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
               </div>
 
-              {/* New Service */}
+              {/* Blog Post 2 */}
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30 hover:border-blue-400/60 transition-all hover:scale-105 hover:shadow-xl">
-                <div className="text-blue-400 text-sm font-semibold mb-2 uppercase">🚀 Service Launch</div>
-                <h3 className="text-lg font-bold text-white mb-3">Edge AI Platform</h3>
-                <p className="text-blue-100 text-sm mb-4">Deploy intelligence at the edge with less than 10ms latency. Starting at $4,999/mo</p>
+                <div className="text-blue-400 text-sm font-semibold mb-2 uppercase">📊 Strategy</div>
+                <h3 className="text-lg font-bold text-white mb-3">North Star Metrics Framework</h3>
+                <p className="text-blue-100 text-sm mb-4">Measure AI product success with proven metrics used by leading companies</p>
                 <Link 
-                  to="/services/ai-2025-october-edge-ai-platform" 
+                  to="/blog/ai-2025-oct-northstar-metrics-ai-product-success" 
                   className="inline-flex items-center text-blue-300 hover:text-white font-semibold text-sm"
                 >
-                  Explore Platform <ArrowRight className="w-4 h-4 ml-1" />
-                </Link>
-              </div>
-
-              {/* Case Study */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:border-purple-400/60 transition-all hover:scale-105 hover:shadow-xl">
-                <div className="text-purple-400 text-sm font-semibold mb-2 uppercase">💼 Success Story</div>
-                <h3 className="text-lg font-bold text-white mb-3">$127M Manufacturing Win</h3>
-                <p className="text-purple-100 text-sm mb-4">How a Fortune 500 manufacturer transformed operations with edge AI</p>
-                <Link 
-                  to="/case-studies/ai-2025-oct-global-manufacturing-edge-ai-success-127m" 
-                  className="inline-flex items-center text-purple-300 hover:text-white font-semibold text-sm"
-                >
-                  Read Case Study <ArrowRight className="w-4 h-4 ml-1" />
+                  Learn More <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
               </div>
             </div>
