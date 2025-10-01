@@ -14,6 +14,52 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "ai-2025-oct-02-private-experiments-blueprint",
+    title: "Private Experiments Blueprint: Zero‑PII Testing at the Edge",
+    description: "Run compliant edge A/B with signed configs, scoped IDs, and DP noise—sub‑100ms globally.",
+    content: `
+# Private Experiments Blueprint: Zero‑PII Testing at the Edge
+
+Operate experimentation without centralized PII using:
+
+- Signed, cacheable configs validated at the edge
+- Scoped, rotating identifiers per surface
+- On‑device aggregation with DP noise for cohort metrics
+
+Ship guardrails, kill switches, and budgeted routes for safe, rapid learning loops.
+    `,
+    author: "Zion Tech Group Privacy Lab",
+    date: "2025-10-02",
+    category: "Experimentation",
+    tags: ["Privacy", "Edge", "Experiments", "Feature Flags"],
+    featured: true,
+    readTime: "10 min read",
+    image: "/images/private-experiments-blueprint.jpg"
+  },
+  {
+    slug: "ai-2025-oct-02-rollback-guardrails-blueprint",
+    title: "Runtime Rollback Guardrails Blueprint",
+    description: "Instant rollbacks, canary scorecards, and objective budgets that let teams ship faster with confidence.",
+    content: `
+# Runtime Rollback Guardrails Blueprint
+
+Design for reversibility:
+
+- Immutable artifact promotion with automatic fallbacks
+- Canary scorecards tied to KPIs and error budgets
+- Policy checks in CI; progressive delivery with auto‑halt
+
+Revert in seconds on breach while maintaining high deploy velocity.
+    `,
+    author: "Zion Tech Group Reliability Lab",
+    date: "2025-10-02",
+    category: "Reliability",
+    tags: ["Rollback", "Canary", "Guardrails", "Budgets"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/rollback-guardrails-blueprint.jpg"
+  },
+  {
     slug: "ai-2025-oct-04-enterprise-agents-in-production",
     title: "Enterprise Agents in Production: Budgets, Approvals, and Rollback",
     description: "Practical patterns to run AI agents safely in prod with KPI-linked SLIs, action budgets, and instant rollback.",
