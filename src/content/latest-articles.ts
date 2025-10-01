@@ -17,6 +17,57 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
+    id: "ai-2025-oct-03-reliable-agent-ops",
+    slug: "ai-2025-oct-03-reliable-agent-ops",
+    title: "Reliable Agent Ops: Budgets, Approvals, and Live Evals",
+    description: "Ship agentic systems with policy tests, budgeted tools, and instant rollback."
+      + " Patterns used in production to keep autonomy safe and predictable.",
+    excerpt: "A production guide to keep agent workflows reliable without slowing teams.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-03",
+    category: "GenAI",
+    tags: ["Agents", "Evals", "Guardrails", "Budgets"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/reliable-agent-ops-2025.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "ai-2025-oct-03-private-feature-flags",
+    slug: "ai-2025-oct-03-private-feature-flags",
+    title: "Private Feature Flags: <100ms Global Releases with Zero PII",
+    description: "Edge‑native flags with scoped IDs, geo budgets, and instant rollback."
+      + " Achieve safe global rollouts under 100ms without centralizing PII.",
+    excerpt: "Blueprint for privacy‑first feature delivery at the edge.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-03",
+    category: "Architecture",
+    tags: ["Edge", "Feature Flags", "Privacy", "Delivery"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/private-feature-flags-2025.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "ai-2025-oct-03-synthetic-data-blueprint",
+    slug: "ai-2025-oct-03-synthetic-data-blueprint",
+    title: "Synthetic Data Blueprint: Accuracy Without PII Risk",
+    description: "Diffusion + GAN pipelines that deliver 98%+ fidelity and unlock training at scale."
+      + " Governance patterns for regulated industries.",
+    excerpt: "Train safely with high‑fidelity synthetic datasets and measurable quality gates.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-03",
+    category: "AI Training",
+    tags: ["Synthetic Data", "Privacy", "Diffusion", "GANs"],
+    featured: true,
+    readTime: "12 min read",
+    image: "/images/synthetic-data-blueprint-2025.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "autonomous-revops-2025",
     slug: "ai-2025-oct-autonomous-revenue-operations",
     title: "Autonomous Revenue Operations 2025: 3.2x Pipeline Velocity",
