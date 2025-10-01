@@ -19,6 +19,9 @@ import AdvertisingBanner from "../components/AdvertisingBanner";
 import October2025NewBreakthroughBanner from "../components/October2025NewBreakthroughBanner";
 import { latestInsights } from "../content/insights";
 import { Users, Zap } from "lucide-react";
+import AdvertisingBanner from "../components/AdvertisingBanner";
+import January2026RevolutionaryBanner from "../components/January2026RevolutionaryBanner";
+import NewServicesPromoBanner2026 from "../components/NewServicesPromoBanner2026";
 
 const Home = () => {
   return (
@@ -57,6 +60,7 @@ const Home = () => {
         <link rel="canonical" href="https://ziontechgroup.com" />
       </Helmet>
       <AdvertisingBanner />
+      <January2026RevolutionaryBanner />
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
         {/* Animated background elements */}
@@ -385,6 +389,9 @@ const Home = () => {
             </div>
           </div>
         </section>
+
+        {/* New Services Promotional Banner */}
+        <NewServicesPromoBanner2026 />
 
         {/* Features Section */}
         <section className="container mx-auto px-6 py-20 relative z-10">

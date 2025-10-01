@@ -13,6 +13,8 @@ export interface FeaturedItem {
 import { breakthroughContent2025 } from './new-breakthrough-content-2025';
 import { enterpriseCaseStudies2025 } from './enterprise-case-studies-2025';
 import { newBlogPosts, newCaseStudies, newServices } from './new-2026-ai-breakthrough-content';
+import { newJanuary2026BlogPosts } from './new-january-2026-content';
+import { getFeaturedJanuary2026BlogPosts, getAllJanuary2026BlogPosts } from './january-2026-new-blog-posts';
 
 export const featuredBlogPosts: FeaturedItem[] = [
   {
@@ -771,6 +773,30 @@ featuredBlogPosts.unshift(
 
 export const featuredServices: FeaturedItem[] = [
   {
+    id: "quantum-edge-fusion-platform",
+    title: "Quantum Edge Fusion Platform",
+    description: "1000x speed improvement, sub-millisecond latency, 99.99% reliability. Revolutionary quantum-edge convergence for enterprise applications.",
+    link: "/services/quantum-edge-fusion-platform",
+    type: "service",
+    featured: true
+  },
+  {
+    id: "synthetic-consciousness-ai-platform",
+    title: "Synthetic Consciousness AI Platform",
+    description: "98.7% consciousness accuracy, genuine self-awareness, emotional intelligence, and creative autonomy with $500B enterprise value potential.",
+    link: "/services/synthetic-consciousness-ai-platform",
+    type: "service",
+    featured: true
+  },
+  {
+    id: "neuromorphic-processing-suite",
+    title: "Neuromorphic Processing Suite",
+    description: "1000x energy efficiency, brain-inspired AI architecture, real-time learning, and autonomous adaptation capabilities.",
+    link: "/services/neuromorphic-processing-suite",
+    type: "service",
+    featured: true
+  },
+  {
     id: "ai-intelligent-document-processing",
     title: "AI Intelligent Document Processing",
     description: "98.5% accuracy, 95% automation, $2.8M+ annual savings. Extract and process any document type at scale.",
@@ -1064,6 +1090,34 @@ featuredBlogPosts.unshift(
     type: "article",
     featured: true
   },
+);
+
+// January 2026 - Add revolutionary breakthrough content at the very top
+featuredBlogPosts.unshift(
+  {
+    id: "ai-2026-january-hyperautomation-platform",
+    title: "⚙️ AI Hyperautomation Platform 2026: End-to-End Business Automation",
+    description: "Complete business process automation achieving 95% automation rates with 10x efficiency improvements and $2.8B success stories.",
+    link: "/blog/ai-2026-january-hyperautomation-platform",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-2026-january-quantum-security-breakthrough",
+    title: "🔐 Quantum-Safe Security 2026: Unbreakable Enterprise Protection",
+    description: "Quantum-resistant security systems protecting $2.8B in assets with 99.99% threat prevention and zero security breaches.",
+    link: "/blog/ai-2026-january-quantum-security-breakthrough",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-2026-january-blockchain-integration",
+    title: "⛓️ Blockchain-AI Integration 2026: Trustless Intelligence Revolution",
+    description: "Revolutionary integration of blockchain and AI creating trustless intelligence systems with $1.2B enterprise value creation.",
+    link: "/blog/ai-2026-january-blockchain-integration",
+    type: "article",
+    featured: true
+  }
 );
 
 // January 2025 - Add new breakthrough content at the very top
