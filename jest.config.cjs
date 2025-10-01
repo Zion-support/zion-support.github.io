@@ -3,6 +3,7 @@ module.exports = {
   testEnvironment: 'jsdom',
   roots: ['<rootDir>/__tests__', '<rootDir>/src'],
   setupFilesAfterEnv: [ '@testing-library/jest-dom' ],
+  extensionsToTreatAsEsm: ['.ts', '.tsx'],
   moduleNameMapper: {
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
     // Minimal mappers to avoid conflicts; project has no tests
@@ -36,8 +37,12 @@ module.exports = {
     '/apps.backup/',
   ],
   transform: {
-    '^.+\\.(ts|tsx)$': 'ts-jest',
-    '^.+\\.(js|jsx)$': 'babel-jest'
+    '^.+\\.(ts|tsx)$': ['ts-jest', {
+      useESM: true
+    }],
+    '^.+\\.(js|jsx)$': ['ts-jest', {
+      useESM: true
+    }]
   },
   moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx', 'json'],
   coverageDirectory: 'coverage',
