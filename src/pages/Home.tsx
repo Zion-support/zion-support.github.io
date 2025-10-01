@@ -11,6 +11,10 @@ import {
   TrendingUp,
   Users,
   Zap,
+<<<<<<< HEAD
+=======
+  
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0e98
 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
