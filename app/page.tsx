@@ -40,9 +40,18 @@ import {
   EnterpriseAITransformationBanner,
   MLPipelineOptimizationBanner,
   MLPipelineOptimizationCaseStudyBanner,
+<<<<<<< HEAD
   EnterpriseIntegrationBlogBanner,
   BankIntegrationCaseStudyBanner,
   IntegrationPlatformServiceBanner
+=======
+  AgenticReasoningBreakthroughBanner,
+  AutonomousFinOpsBanner,
+  VectorDatabaseOptimizationBanner,
+  Fortune100AgenticReasoningCaseStudyBanner,
+  GlobalBankVectorDBCaseStudyBanner,
+  EnterpriseAIOptimizationServicesBanner
+>>>>>>> origin/cursor/create-and-deploy-new-content-bc5b
 } from '../components/PromotionalBanner';
 import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
 import NewContentShowcaseBanner from '../components/NewContentShowcaseBanner';
@@ -171,11 +180,22 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
       
       {/* NEW OCTOBER 1, 2025 - ENTERPRISE INTEGRATION CONTENT - HIGHEST PRIORITY */}
       <EnterpriseIntegrationBlogBanner />
       <BankIntegrationCaseStudyBanner />
       <IntegrationPlatformServiceBanner />
+=======
+
+      {/* 🔥 NEW OCTOBER 2025 CONTENT - AGENTIC REASONING & AI OPTIMIZATION */}
+      <AgenticReasoningBreakthroughBanner />
+      <AutonomousFinOpsBanner />
+      <VectorDatabaseOptimizationBanner />
+      <Fortune100AgenticReasoningCaseStudyBanner />
+      <GlobalBankVectorDBCaseStudyBanner />
+      <EnterpriseAIOptimizationServicesBanner />
+>>>>>>> origin/cursor/create-and-deploy-new-content-bc5b
       
       {/* NEW OCTOBER 2025 ML PIPELINE OPTIMIZATION - TOP PRIORITY */}
       <MLPipelineOptimizationBanner />
