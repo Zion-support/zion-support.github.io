@@ -51,7 +51,7 @@ function Header() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </button>
-            <div className="absolute top-full left-0 mt-2 w-72 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
               <div className="py-3">
                 <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">Core Services</div>
                 <Link href="/services/ai-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
@@ -74,6 +74,12 @@ function Header() {
                 <Link href="/services/ai-cybersecurity-2025" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
                   Cybersecurity
                 </Link>
+                <Link href="/services/ai-cloud-infrastructure-2025" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  Cloud Infrastructure
+                </Link>
+                <Link href="/services/ai-quantum-computing-2026" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  Quantum Computing
+                </Link>
                 <div className="border-t border-gray-100 my-2"></div>
                 <Link href="/services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 font-medium">
                   View All Services →
@@ -95,8 +101,15 @@ function Header() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </button>
-            <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <div className="absolute top-full left-0 mt-2 w-72 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
               <div className="py-3">
+                <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">Learning Resources</div>
+                <Link href="/guides" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 flex items-center gap-2">
+                  <span>Implementation Guides</span>
+                  <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                    NEW
+                  </span>
+                </Link>
                 <Link href="/case-studies" className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600 flex items-center gap-2">
                   <span>Case Studies</span>
                   <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
@@ -109,13 +122,11 @@ function Header() {
                     50+ Articles
                   </span>
                 </Link>
-                <Link href="/guides" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  Implementation Guides
-                </Link>
                 <Link href="/content-hub" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
                   Content Hub
                 </Link>
                 <div className="border-t border-gray-100 my-2"></div>
+                <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">Enterprise</div>
                 <Link href="/enterprise" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
                   Enterprise Solutions
                 </Link>
@@ -135,12 +146,76 @@ function Header() {
         </div>
 
         {/* Mobile Menu Button */}
-        <button className="lg:hidden p-2" aria-label="Toggle menu">
+        <button className="lg:hidden p-2" aria-label="Toggle menu" onClick={() => {
+          const menu = document.getElementById('mobile-menu');
+          if (menu) {
+            menu.classList.toggle('hidden');
+          }
+        }}>
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
       </nav>
+      
+      {/* Mobile Menu */}
+      <div id="mobile-menu" className="lg:hidden hidden bg-white border-t border-gray-200 shadow-lg">
+        <div className="px-4 py-4 space-y-4">
+          {/* Services Section */}
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">Services</h3>
+            <div className="space-y-2 pl-4">
+              <Link href="/services/ai-services" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                AI Services & Solutions
+              </Link>
+              <Link href="/services/micro-saas" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                Micro SaaS Solutions
+              </Link>
+              <Link href="/services/it-services" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                IT Services & Solutions
+              </Link>
+              <Link href="/services/ai-autonomous-operations" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                Autonomous Operations
+              </Link>
+              <Link href="/services" className="block text-gray-600 hover:text-blue-600 transition-colors font-medium">
+                View All Services →
+              </Link>
+            </div>
+          </div>
+          
+          {/* Resources Section */}
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">Resources</h3>
+            <div className="space-y-2 pl-4">
+              <Link href="/guides" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                Implementation Guides
+              </Link>
+              <Link href="/case-studies" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                Case Studies
+              </Link>
+              <Link href="/blog" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                Blog & Insights
+              </Link>
+              <Link href="/content-hub" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                Content Hub
+              </Link>
+            </div>
+          </div>
+          
+          {/* Main Navigation */}
+          <div className="space-y-2">
+            <Link href="/solutions" className="block text-gray-700 hover:text-blue-600 transition-colors font-medium">
+              Solutions
+            </Link>
+            <Link href="/about" className="block text-gray-700 hover:text-blue-600 transition-colors font-medium">
+              About
+            </Link>
+            <Link href="/contact" className="block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium text-center">
+              Contact Us
+            </Link>
+          </div>
+        </div>
+      </div>
     </header>
   )
 }
@@ -201,14 +276,14 @@ function Footer() {
           <div>
             <h3 className="font-semibold text-gray-900 mb-4 text-lg">Resources</h3>
             <div className="space-y-3">
+              <Link href="/guides" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                Implementation Guides
+              </Link>
               <Link href="/case-studies" className="block text-gray-600 hover:text-blue-600 transition-colors">
                 Case Studies
               </Link>
               <Link href="/blog" className="block text-gray-600 hover:text-blue-600 transition-colors">
                 Blog & Insights
-              </Link>
-              <Link href="/guides" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                Implementation Guides
               </Link>
               <Link href="/content-hub" className="block text-gray-600 hover:text-blue-600 transition-colors">
                 Content Hub

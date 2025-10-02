@@ -495,7 +495,7 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link href="/case-studies/manufacturing-ai-transformation-2026" className="group">
+            <Link href="/case-studies/ai-2025-january-autonomous-enterprise-1-8-billion-success" className="group">
               <div className="bg-white text-gray-900 rounded-xl p-6 shadow-2xl hover:shadow-3xl transition-all transform hover:-translate-y-1">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-500 rounded-lg flex items-center justify-center">
@@ -555,7 +555,7 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link href="/case-studies/ai-supply-chain-optimization-mega-success-2025" className="group">
+            <Link href="/case-studies/ai-2025-december-autonomous-revolution-2-8-billion-success" className="group">
               <div className="bg-white text-gray-900 rounded-xl p-6 shadow-2xl hover:shadow-3xl transition-all transform hover:-translate-y-1">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center">
@@ -645,7 +645,7 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link href="/case-studies/ai-autonomous-cloud-enterprise-2026" className="group">
+            <Link href="/case-studies/ai-2026-april-mega-breakthrough-10-billion-success" className="group">
               <div className="bg-white text-gray-900 rounded-xl p-6 shadow-2xl hover:shadow-3xl transition-all transform hover:-translate-y-1">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
