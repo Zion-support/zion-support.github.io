@@ -79,71 +79,6 @@ export default function HomePage() {
         </div>
       </header>
 
-<<<<<<< HEAD
-      {/* Featured Services */}
-      <section className="py-12 md:py-20 px-4 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Revolutionary AI Services</h2>
-            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4">
-              Transform your organization with cutting-edge AI innovations and enterprise-grade solutions
-            </p>
-          </div>
-
-          {/* New Innovative Services Highlight */}
-          <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl p-8 mb-12 border border-green-200">
-            <div className="text-center mb-8">
-              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">🚀 NEW: 2026 Innovative Micro SaaS Solutions</h3>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Discover our latest AI-powered micro SaaS solutions that deliver immediate ROI and transform business operations
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-green-100">
-                <div className="text-4xl mb-4">💬</div>
-                <h4 className="text-lg font-semibold mb-2">AI Customer Feedback Analyzer</h4>
-                <p className="text-gray-600 text-sm mb-3">92% sentiment accuracy across all channels</p>
-                <div className="text-green-600 font-bold">$149/month</div>
-              </div>
-              
-              <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-blue-100">
-                <div className="text-4xl mb-4">💳</div>
-                <h4 className="text-lg font-semibold mb-2">AI Expense Management SaaS</h4>
-                <p className="text-gray-600 text-sm mb-3">95% accuracy in automatic categorization</p>
-                <div className="text-blue-600 font-bold">$99/month</div>
-              </div>
-              
-              <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-purple-100">
-                <div className="text-4xl mb-4">⏱️</div>
-                <h4 className="text-lg font-semibold mb-2">AI Time Tracking Suite</h4>
-                <p className="text-gray-600 text-sm mb-3">30% productivity improvement guaranteed</p>
-                <div className="text-purple-600 font-bold">$79/month</div>
-              </div>
-            </div>
-            
-            <div className="text-center mt-8">
-              <Link 
-                href="/services" 
-                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300"
-              >
-                Explore All 50+ Solutions
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
-            </div>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            <div className="bg-white p-6 md:p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-10 md:w-12 h-10 md:h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-3 md:mb-4">
-                <Brain className="w-5 md:w-6 h-5 md:h-6 text-blue-600" />
-              </div>
-              <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-3">Quantum AI Computing</h3>
-              <p className="text-sm md:text-base text-gray-600 mb-3 md:mb-4">
-                Leverage quantum-enhanced AI for unprecedented computational power and breakthrough performance.
-              </p>
-              <Link href="/services/ai-quantum-computing-2026" className="text-blue-600 font-semibold hover:text-blue-700 text-sm md:text-base">
-=======
       {/* AI Innovation Showcase */}
       <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         <div className="container mx-auto px-6">
@@ -175,75 +110,10 @@ export default function HomePage() {
                 href="/blog/ai-2026-june-mega-breakthrough-revolution"
                 className="inline-block bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
               >
->>>>>>> cursor/analyze-improve-and-deploy-application-04be
                 Learn More →
               </Link>
             </div>
 
-<<<<<<< HEAD
-            <div className="bg-white p-6 md:p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-10 md:w-12 h-10 md:h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-3 md:mb-4">
-                <Zap className="w-5 md:w-6 h-5 md:h-6 text-purple-600" />
-              </div>
-              <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-3">Autonomous Enterprise</h3>
-              <p className="text-sm md:text-base text-gray-600 mb-3 md:mb-4">
-                Achieve 95% automation across your enterprise with self-managing AI systems.
-              </p>
-              <Link href="/services/ai-autonomous-operations-2026" className="text-purple-600 font-semibold hover:text-purple-700 text-sm md:text-base">
-                Learn More →
-              </Link>
-            </div>
-
-            <div className="bg-white p-6 md:p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-10 md:w-12 h-10 md:h-12 bg-green-100 rounded-lg flex items-center justify-center mb-3 md:mb-4">
-                <TrendingUp className="w-5 md:w-6 h-5 md:h-6 text-green-600" />
-              </div>
-              <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-3">AI ROI Optimization</h3>
-              <p className="text-sm md:text-base text-gray-600 mb-3 md:mb-4">
-                Proven strategies to achieve $150M+ ROI through strategic AI implementation.
-              </p>
-              <Link href="/services/ai-business-intelligence-platform" className="text-green-600 font-semibold hover:text-green-700 text-sm md:text-base">
-                Learn More →
-              </Link>
-            </div>
-
-            <div className="bg-white p-6 md:p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-10 md:w-12 h-10 md:h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-3 md:mb-4">
-                <Shield className="w-5 md:w-6 h-5 md:h-6 text-orange-600" />
-              </div>
-              <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-3">AI Security & Governance</h3>
-              <p className="text-sm md:text-base text-gray-600 mb-3 md:mb-4">
-                Enterprise-grade AI security frameworks and governance models.
-              </p>
-              <Link href="/services/ai-cybersecurity-automation-suite" className="text-orange-600 font-semibold hover:text-orange-700 text-sm md:text-base">
-                Learn More →
-              </Link>
-            </div>
-
-            <div className="bg-white p-6 md:p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-10 md:w-12 h-10 md:h-12 bg-red-100 rounded-lg flex items-center justify-center mb-3 md:mb-4">
-                <Cloud className="w-5 md:w-6 h-5 md:h-6 text-red-600" />
-              </div>
-              <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-3">Cloud AI Infrastructure</h3>
-              <p className="text-sm md:text-base text-gray-600 mb-3 md:mb-4">
-                Scalable, secure cloud infrastructure optimized for AI workloads.
-              </p>
-              <Link href="/services/cloud-native-devops-platform" className="text-red-600 font-semibold hover:text-red-700 text-sm md:text-base">
-                Learn More →
-              </Link>
-            </div>
-
-            <div className="bg-white p-6 md:p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-10 md:w-12 h-10 md:h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-3 md:mb-4">
-                <BarChart3 className="w-5 md:w-6 h-5 md:h-6 text-indigo-600" />
-              </div>
-              <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-3">AI Analytics & Insights</h3>
-              <p className="text-sm md:text-base text-gray-600 mb-3 md:mb-4">
-                Advanced analytics platforms powered by next-generation AI.
-              </p>
-              <Link href="/services/ai-business-intelligence-platform" className="text-indigo-600 font-semibold hover:text-indigo-700 text-sm md:text-base">
-                Learn More →
-=======
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-purple-500/50 transition-all duration-300">
               <div className="text-6xl mb-6">🤖</div>
               <h3 className="text-2xl font-bold text-white mb-4">Enterprise Automation</h3>
@@ -283,43 +153,12 @@ export default function HomePage() {
                 className="inline-block bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
               >
                 View Case Study →
->>>>>>> cursor/analyze-improve-and-deploy-application-04be
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Success Stories */}
-      <section className="py-12 md:py-20 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Success Stories</h2>
-            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4">
-              Real results from Fortune 500 companies and enterprise clients
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
-            <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-6 md:p-8 rounded-xl">
-              <div className="flex items-center mb-4">
-                <Target className="w-6 md:w-8 h-6 md:h-8 text-blue-600 mr-3" />
-                <h3 className="text-xl md:text-2xl font-semibold">Fortune 500 Transformation</h3>
-              </div>
-              <p className="text-sm md:text-base text-gray-600 mb-4 md:mb-6">
-                "Zion Tech Group's AI solutions delivered a 1000x performance improvement 
-                and $150M ROI within the first year of implementation."
-              </p>
-              <div className="flex items-center">
-                <div className="w-10 md:w-12 h-10 md:h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-                  <Users className="w-5 md:w-6 h-5 md:h-6 text-blue-600" />
-                </div>
-                <div>
-                  <div className="font-semibold text-sm md:text-base">Sarah Chen</div>
-                  <div className="text-gray-600 text-sm md:text-base">CTO, Global Tech Corp</div>
-                </div>
-=======
       {/* Services Showcase */}
       <section className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
@@ -334,29 +173,12 @@ export default function HomePage() {
             <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl border border-blue-200">
               <div className="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center mb-4">
                 <Database className="w-5 h-5 text-white" />
->>>>>>> cursor/analyze-improve-and-deploy-application-04be
               </div>
+              <h3 className="text-lg font-semibold mb-2">AI Data Analytics</h3>
+              <p className="text-gray-600 text-sm mb-3">95% accuracy in insights</p>
+              <div className="text-xs text-blue-600 font-semibold">Starting at $99/month</div>
             </div>
 
-<<<<<<< HEAD
-            <div className="bg-gradient-to-br from-green-50 to-blue-50 p-6 md:p-8 rounded-xl">
-              <div className="flex items-center mb-4">
-                <Zap className="w-6 md:w-8 h-6 md:h-8 text-green-600 mr-3" />
-                <h3 className="text-xl md:text-2xl font-semibold">95% Automation Achievement</h3>
-              </div>
-              <p className="text-sm md:text-base text-gray-600 mb-4 md:mb-6">
-                "Our autonomous enterprise system now handles 95% of routine operations, 
-                freeing our team to focus on strategic initiatives."
-              </p>
-              <div className="flex items-center">
-                <div className="w-10 md:w-12 h-10 md:h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
-                  <Rocket className="w-5 md:w-6 h-5 md:h-6 text-green-600" />
-                </div>
-                <div>
-                  <div className="font-semibold text-sm md:text-base">Michael Rodriguez</div>
-                  <div className="text-gray-600 text-sm md:text-base">CEO, InnovateCorp</div>
-                </div>
-=======
             <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl border border-green-200">
               <div className="w-10 h-10 bg-green-500 rounded-lg flex items-center justify-center mb-4">
                 <Users className="w-5 h-5 text-white" />
@@ -369,8 +191,19 @@ export default function HomePage() {
             <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl border border-purple-200">
               <div className="w-10 h-10 bg-purple-500 rounded-lg flex items-center justify-center mb-4">
                 <Target className="w-5 h-5 text-white" />
->>>>>>> cursor/analyze-improve-and-deploy-application-04be
               </div>
+              <h3 className="text-lg font-semibold mb-2">AI Performance Tracking</h3>
+              <p className="text-gray-600 text-sm mb-3">40% productivity boost</p>
+              <div className="text-xs text-purple-600 font-semibold">Starting at $149/month</div>
+            </div>
+
+            <div className="bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-xl border border-orange-200">
+              <div className="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center mb-4">
+                <Shield className="w-5 h-5 text-white" />
+              </div>
+              <h3 className="text-lg font-semibold mb-2">AI Security Suite</h3>
+              <p className="text-gray-600 text-sm mb-3">99.9% threat detection</p>
+              <div className="text-xs text-orange-600 font-semibold">Starting at $199/month</div>
             </div>
           </div>
 
@@ -557,7 +390,6 @@ export default function HomePage() {
                 href="tel:+13024640950" 
                 className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
-<<<<<<< HEAD
                 Call: +1 302 464 0950
               </a>
             </div>
@@ -583,10 +415,6 @@ export default function HomePage() {
                 <p>🌐 Website: <a href="https://ziontechgroup.com" className="text-blue-400 hover:underline">https://ziontechgroup.com</a></p>
                 <p className="text-xs text-gray-400">Available 24/7 for enterprise clients • Free consultation for projects over $10K</p>
               </div>
-=======
-                View $5.2B Success Story
-              </Link>
->>>>>>> cursor/analyze-improve-and-deploy-application-04be
             </div>
           </div>
         </div>
