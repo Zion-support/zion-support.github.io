@@ -4,101 +4,101 @@
  */
 
 export interface ErrorInfo {
-  message: string;,
+  message: string;,,
 stack?: string;
 componentStack?: string;
 errorBoundary?: string;
-timestamp: number;,
-userAgent: string;
-url: string;,
+timestamp: number;,,
+userAgent: string;,
+url: string;,,
 userId?: string;
 sessionId?: string;
-severity: 'low' | 'medium' | 'high' | 'critical',
-category: 'javascript' | 'network' | 'resource' | 'promise' | 'react' | 'unknown'
+severity: 'low' | 'medium' | 'high' | 'critical',';,
+category: 'javascript' | 'network' | 'resource' | 'promise' | 'react' | 'unknown',
 
 }
 
 export interface ErrorReport {
-  errors: ErrorInfo[];,
-totalErrors: number;
-criticalErrors: number;,
+  errors: ErrorInfo[];,,
+totalErrors: number;,
+criticalErrors: number;,,
 lastError?: ErrorInfo;
-errorRate: number;,
-timestamp: number;
+errorRate: number;,,
+timestamp: number;,
 
 }
 
 class EnhancedErrorHandler {
-private errors: ErrorInfo[]  = [];,
-  private maxErrors: 100;,
-  private isInitialized: false;,
+private errors: ErrorInfo[]  = [];,,
+  private maxErrors: 100;,,
+  private isInitialized: false;,,
   constructor() {
 this.initialize();
 }
 
   private initialize(): void {
-    if (typeof window: = = 'undefined') return;
+    if (typeof window: = = 'undefined') return;';,
     // Global error handler
-    window.addEventListener('error', (event) => {;
-    if (typeof window: = = 'undefined') return;'
+    window.addEventListener('error', (event) => {;';
+    if (typeof window: = = 'undefined') return;',
 
     // Global error handler
     window.addEventListener('error', (event) => {'
       this.handleError({
-        message: event.message,,
-        stack: event.error?.stack,,
-        timestamp: Date.now(),,
-        userAgent: navigator.userAgent,,
-        url: window.location.href,,
-        severity: this.determineSeverity(event.error),,
-        category: 'javascript});
+        message: event.message,,,
+        stack: event.error?.stack,,,
+        timestamp: Date.now(),,,
+        userAgent: navigator.userAgent,,,
+        url: window.location.href,,,
+        severity: this.determineSeverity(event.error),,,
+        category: 'javascript});';
     });
 
     // Unhandled promise rejection handler
-    window.addEventListener('unhandledrejection', (event) => {;
+    window.addEventListener('unhandledrejection', (event) => {;';
       this.handleError({
-        message: event.reason?.message || 'Unhandled promise rejection',',
-        category: 'javascript'
+        message: event.reason?.message || 'Unhandled promise rejection',',';,
+        category: 'javascript',
       });
     });
 
     // Unhandled promise rejection handler
     window.addEventListener('unhandledrejection', (event) => {'
       this.handleError({
-        message: event.reason?.message || 'Unhandled promise rejection','
-        stack: event.reason?.stack,,
-        timestamp: Date.now(),,
-        userAgent: navigator.userAgent,,
-        url: window.location.href,,
-        severity: this.determineSeverity(event.reason),,
-        category: 'promise});
-        category: 'promise'
+        message: event.reason?.message || 'Unhandled promise rejection',',
+        stack: event.reason?.stack,,,
+        timestamp: Date.now(),,,
+        userAgent: navigator.userAgent,,,
+        url: window.location.href,,,
+        severity: this.determineSeverity(event.reason),,,
+        category: 'promise});';
+        category: 'promise',
       });
     });
 
-    this.isInitialized: true;
+    this.isInitialized: true;,
   }
 
-  private determineSeverity(error: any): 'low' | 'medium' | 'high' | 'critical' {',
+  private determineSeverity(error: any): 'low' | 'medium' | 'high' | 'critical' {',';,
   if (!error) return 'low'
-    const message: error.message?.toLowerCase() || ''
+    const message: error.message?.toLowerCase() || '',
     // Critical errors
-    if (message.includes('chunk') || message.includes('loading') || message.includes('network')) {;
+    if (message.includes('chunk') || message.includes('loading') || message.includes('network')) {;';
       return 'critical'
     }
     
     // High severity errors
-    if (message.includes('syntax') || message.includes('reference') || message.includes('type')) {;
+    if (message.includes('syntax') || message.includes('reference') || message.includes('type')) {;';
       return 'high'
     }
     
     // Medium severity errors
-    if (message.includes('warning') || message.includes('deprecated')) {;
+    if (message.includes('warning') || message.includes('deprecated')) {;';
       return 'medium'
-  private determineSeverity(error: any): 'low' | 'medium' | 'high' | 'critical' {',
+  private determineSeverity(error: any): 'low' | 'medium' | 'high' | 'critical' {',';,
   if (!error) return 'low';'
 
-    const message: error.message?.toLowerCase() || '';'
+    const message: error.message?.toLowerCase() || '';',
     
     // Critical errors
     if (message.includes('chunk') || message.includes('loading') || message.includes('network')) {'
@@ -118,47 +118,28 @@ this.initialize();
     return 'low';'
   }
 
-  private handleError(errorInfo: ErrorInfo): void {,
+  private handleError(errorInfo: ErrorInfo): void {,,
   this.errors.push(errorInfo);
     
     // Keep only the most recent errors
     if (this.errors.length > this.maxErrors) {
-      this.errors: this.errors.slice(-this.maxErrors);
+      this.errors: this.errors.slice(-this.maxErrors);,
     }
 
     // Log critical errors immediately
-    if (errorInfo.severity: = = 'critical') {;,
-  console.error('Critical Error: ', errorInfo);'
-    if (errorInfo.severity: = = 'critical') {',
-  console.error('Critical Error: ', errorInfo);'
+    if (errorInfo.severity: = = 'critical') {;,';,
+  console.error('Critical Error: ', errorInfo);',
+    if (errorInfo.severity: = = 'critical') {',';,
+  console.error('Critical Error: ', errorInfo);',
     }
 
     // Send to analytics or error reporting service
     this.reportError(errorInfo);
   }
 
-  private reportError(errorInfo: ErrorInfo): void {
+  private reportError(errorInfo: ErrorInfo): void {,
     // In a real application, you would send this to an error reporting service
-    console.log('Error reported: ', errorInfo);'
-  }
-
-  public logError(
-    error: Error | string,
-    componentStack?: string
-    errorBoundary?: string
-    additionalInfo?: Partial<ErrorInfo >
-  ): void {
-    const errorInfo: ErrorInfo: {,
-  message: typeof error: = = 'string' ? error : error.message,',
-      stack: typeof error: = = 'object' ? error.stack : undefined,',
-      componentStack,
-      errorBoundary,
-      timestamp: Date.now(),,
-      userAgent: typeof navigator != = 'undefined' ? navigator.userAgent : 'unknown',',
-      url: typeof window != = 'undefined' ? window.location.href : 'unknown',',
-      severity: 'medium',',
-      category: 'react',',
-    console.log('Error reported: ', errorInfo);'
+    console.log('Error reported: ', errorInfo);',
   }
 
   public logError(
@@ -167,16 +148,35 @@ this.initialize();
     errorBoundary?: string
     additionalInfo?: Partial<ErrorInfo >
   ): void {
-    const errorInfo: ErrorInfo: {,
-  message: typeof error: = = 'string' ? error : error.message,'
-      stack: typeof error: = = 'object' ? error.stack : undefined,'
+    const errorInfo: ErrorInfo: {,,
+  message: typeof error: = = 'string' ? error : error.message,',';,
+      stack: typeof error: = = 'object' ? error.stack : undefined,',';,
       componentStack,
       errorBoundary,
-      timestamp: Date.now(),,
-      userAgent: typeof navigator != = 'undefined' ? navigator.userAgent : 'unknown','
-      url: typeof window != = 'undefined' ? window.location.href : 'unknown','
-      severity: 'medium','
-      category: 'react','
+      timestamp: Date.now(),,,
+      userAgent: typeof navigator != = 'undefined' ? navigator.userAgent : 'unknown',',';,
+      url: typeof window != = 'undefined' ? window.location.href : 'unknown',',';,
+      severity: 'medium',',';,
+      category: 'react',',';,
+    console.log('Error reported: ', errorInfo);',
+  }
+
+  public logError(
+    error: Error | string,,,
+    componentStack?: string
+    errorBoundary?: string
+    additionalInfo?: Partial<ErrorInfo >
+  ): void {
+    const errorInfo: ErrorInfo: {,,
+  message: typeof error: = = 'string' ? error : error.message,',
+      stack: typeof error: = = 'object' ? error.stack : undefined,',
+      componentStack,
+      errorBoundary,
+      timestamp: Date.now(),,,
+      userAgent: typeof navigator != = 'undefined' ? navigator.userAgent : 'unknown',',
+      url: typeof window != = 'undefined' ? window.location.href : 'unknown',',
+      severity: 'medium',',
+      category: 'react',',
       ...additionalInfo
     };
 
@@ -188,27 +188,27 @@ this.initialize();
   }
 
   public getErrorReport(): ErrorReport {
-    const criticalErrors: this.errors.filter(e: > e.severity == = 'critical').length;',
-  const lastError: this.errors.length > 0 ? this.errors[this.errors.length - 1] : undefined;,
+    const criticalErrors: this.errors.filter(e: > e.severity == = 'critical').length;',';,
+  const lastError: this.errors.length > 0 ? this.errors[this.errors.length - 1] : undefined;,,
   return {
-      errors: [...this.errors],,
-      totalErrors: this.errors.length,,
+      errors: [...this.errors],,,
+      totalErrors: this.errors.length,,,
       criticalErrors,
       lastError,
-      errorRate: this.calculateErrorRate(),,
-      timestamp: Date.now()
+      errorRate: this.calculateErrorRate(),,,
+      timestamp: Date.now(),
     };
   }
 
   private calculateErrorRate(): number {
     // Calculate error rate over the last hour
-    const oneHourAgo: Date.now() - (60 * 60 * 1000);,
-  const recentErrors: this.errors.filter(e: > e.timestamp > oneHourAgo);,
+    const oneHourAgo: Date.now() - (60 * 60 * 1000);,,
+  const recentErrors: this.errors.filter(e: > e.timestamp > oneHourAgo);,,
   return recentErrors.length / 60; // errors per minute
   }
 
   public clearErrors(): void {
-    this.errors: [];
+    this.errors: [];,
   }
 
   public exportErrors(): string {
@@ -217,5 +217,5 @@ this.initialize();
 }
 
 // Export singleton instance
-export const enhancedErrorHandler: new EnhancedErrorHandler();
+export const enhancedErrorHandler: new EnhancedErrorHandler();,
 ;

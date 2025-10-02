@@ -4,7 +4,7 @@
  * Comprehensive error tracking system for production monitoring
  * error reporting, and debugging assistance.
  * 
- * Features: * - Centralized error logging
+ * Features: * - Centralized error logging,
  * - Error categorization and severity levels
  * - Stack trace analysis
  * - Error metrics and analytics
@@ -12,38 +12,38 @@
  */
 
 export enum ErrorSeverity {
-  LOW: 'low',
-MEDIUM: 'medium',
-HIGH: 'high',
-CRITICAL: 'critical'  = "critical: 'critical'",
+  LOW: 'low',';,
+MEDIUM: 'medium',';,
+HIGH: 'high',';,
+CRITICAL: 'critical'  = "critical: 'critical'",";,
 
 
 }
 
 export enum ErrorCategory {
-  NETWORK: 'network',
-RENDERING: 'rendering',
-STATE: 'state',
-THIRD_PARTY: 'third_party',
-USER_INPUT: 'user_input',
-PERMISSION: 'permission',
-UNKNOWN: 'unknown',
-LOW: 'low','
-MEDIUM: 'medium','
-HIGH: 'high','
-CRITICAL: 'critical','
+  NETWORK: 'network',';,
+RENDERING: 'rendering',';,
+STATE: 'state',';,
+THIRD_PARTY: 'third_party',';,
+USER_INPUT: 'user_input',';,
+PERMISSION: 'permission',';,
+UNKNOWN: 'unknown',';,
+LOW: 'low',',
+MEDIUM: 'medium',',
+HIGH: 'high',',
+CRITICAL: 'critical',',
 
 
 }
 
 export enum ErrorCategory {
-  NETWORK: 'network','
-RENDERING: 'rendering','
-STATE: 'state','
-THIRD_PARTY: 'third_party','
-USER_INPUT: 'user_input','
-PERMISSION: 'permission','
-UNKNOWN: 'unknown','
+  NETWORK: 'network',',
+RENDERING: 'rendering',',
+STATE: 'state',',
+THIRD_PARTY: 'third_party',',
+USER_INPUT: 'user_input',',
+PERMISSION: 'permission',',
+UNKNOWN: 'unknown',',
 
 
 }
@@ -59,76 +59,76 @@ metadata?: Record<string , any>;
 }
 
 export interface TrackedError {
-  id: string;,
-message: string;
+  id: string;,,
+message: string;,
 stack?: string;
-severity: ErrorSeverity;,
-category: ErrorCategory;
-timestamp: Date;,
-context: ErrorContext;
-userAgent: string;,
-resolved: boolean;
+severity: ErrorSeverity;,,
+category: ErrorCategory;,
+timestamp: Date;,,
+context: ErrorContext;,
+userAgent: string;,,
+resolved: boolean;,
 
 }
 
 class ErrorTracker {
-  private errors: TrackedError[]  = [],
-  private maxErrors: 100;,
-  private listeners: ((error: TrackedError) => void)[]  = [],
-  private errors: TrackedError[]  = [];,
-  private maxErrors: 100;,
-  private listeners: ((error: TrackedError) => void)[]  = [];
+  private errors: TrackedError[]  = [],,
+  private maxErrors: 100;,,
+  private listeners: ((error: TrackedError) => void)[]  = [],,
+  private errors: TrackedError[]  = [];,,
+  private maxErrors: 100;,,
+  private listeners: ((error: TrackedError) => void)[]  = [];,
   /**
    * Track an error
    */
   trackError(
-    error: Error | string,,
-    severity: ErrorSeverity: ErrorSeverity.MEDIUM,,
-    category: ErrorCategory: ErrorCategory.UNKNOWN,,
+    error: Error | string,,,
+    severity: ErrorSeverity: ErrorSeverity.MEDIUM,,,
+    category: ErrorCategory: ErrorCategory.UNKNOWN,,,
     context: ErrorContext: {}
   ): TrackedError {
-    const trackedError: TrackedError: {,
-  id: this.generateErrorId(),,
-      message: typeof error: = = 'string' ? error : error.message,',
-      stack: typeof error: = = 'string' ? undefined : error.stack,',
-      severity,
-      category,
-      timestamp: new Date(),
-      context: this.enrichContext(context),
-      userAgent: navigator.userAgent,
-      resolved: false,
-      message: typeof error: = = 'string' ? error : error.message,'
-      stack: typeof error: = = 'string' ? undefined : error.stack,'
+    const trackedError: TrackedError: {,,
+  id: this.generateErrorId(),,,
+      message: typeof error: = = 'string' ? error : error.message,',';,
+      stack: typeof error: = = 'string' ? undefined : error.stack,',';,
       severity,
       category,
       timestamp: new Date(),,
       context: this.enrichContext(context),,
       userAgent: navigator.userAgent,,
+      resolved: false,,
+      message: typeof error: = = 'string' ? error : error.message,',
+      stack: typeof error: = = 'string' ? undefined : error.stack,',
+      severity,
+      category,
+      timestamp: new Date(),,,
+      context: this.enrichContext(context),,,
+      userAgent: navigator.userAgent,,,
       resolved: false,};
 
     this.errors.push(trackedError);
     
     // Keep only recent errors
     if (this.errors.length > this.maxErrors) {
-      this.errors: this.errors.slice(-this.maxErrors);
+      this.errors: this.errors.slice(-this.maxErrors);,
     }
 
     // Notify listeners
     this.notifyListeners(trackedError);
 
     // Log to console in development
-    if (process.env.NODE_ENV: = = 'development') {;,
-  console.error('[ErrorTracker]', trackedError);
+    if (process.env.NODE_ENV: = = 'development') {;,';,
+  console.error('[ErrorTracker]', trackedError);';
     }
 
     // Send to external service in production
-    if (process.env.NODE_ENV: = = 'production') {;,
-  if (process.env.NODE_ENV: = = 'development') {',
+    if (process.env.NODE_ENV: = = 'production') {;,';,
+  if (process.env.NODE_ENV: = = 'development') {',';,
   console.error('[ErrorTracker]', trackedError);'
     }
 
     // Send to external service in production
-    if (process.env.NODE_ENV: = = 'production') {',
+    if (process.env.NODE_ENV: = = 'production') {',';,
   this.sendToExternalService(trackedError);
     }
 
@@ -139,13 +139,13 @@ class ErrorTracker {
    * Track network errors
    */
   trackNetworkError(
-    error: Error,
-    url: string,
-    method: string,
-    status?: number
     error: Error,,
     url: string,,
     method: string,,
+    status?: number
+    error: Error,,,
+    url: string,,,
+    method: string,,,
     status?: number
     context: ErrorContext: {}
   ): TrackedError {
@@ -155,10 +155,10 @@ class ErrorTracker {
       ErrorCategory.NETWORK
       {
         ...context
-        metadata: {,
+        metadata: {,,
           ...context.metadata
         ...context
-        metadata: {,
+        metadata: {,,
           ...context.metadata
           url,
           method,
@@ -172,11 +172,11 @@ class ErrorTracker {
    * Track rendering errors
    */
   trackRenderError(
-    error: Error,
-    componentName: string,
-    props?: Record<string , any>
     error: Error,,
     componentName: string,,
+    props?: Record<string , any>
+    error: Error,,,
+    componentName: string,,,
     props?: Record<string , any>
     context: ErrorContext: {}
   ): TrackedError {
@@ -186,14 +186,14 @@ class ErrorTracker {
       ErrorCategory.RENDERING
       {
         ...context
-        component: componentName,
-        metadata: {,
+        component: componentName,,
+        metadata: {,,
           ...context.metadata
           props
         }
         ...context
-        component: componentName,,
-        metadata: {,
+        component: componentName,,,
+        metadata: {,,
           ...context.metadata
           props
         }
@@ -211,31 +211,31 @@ class ErrorTracker {
   /**
    * Get errors by severity
    */
-  getErrorsBySeverity(severity: ErrorSeverity): TrackedError[] {,
-  return this.errors.filter(error: > error.severity == = severity);
+  getErrorsBySeverity(severity: ErrorSeverity): TrackedError[] {,,
+  return this.errors.filter(error: > error.severity == = severity);,
   }
 
   /**
    * Get errors by category
    */
-  getErrorsByCategory(category: ErrorCategory): TrackedError[] {,
-  return this.errors.filter(error: > error.category == = category);
+  getErrorsByCategory(category: ErrorCategory): TrackedError[] {,,
+  return this.errors.filter(error: > error.category == = category);,
   }
 
   /**
    * Get unresolved errors
    */
   getUnresolvedErrors(): TrackedError[] {
-    return this.errors.filter(error: > !error.resolved);
+    return this.errors.filter(error: > !error.resolved);,
   }
 
   /**
    * Mark error as resolved
    */
-  resolveError(errorId: string): void {,
-  const error: this.errors.find(e: > e.id == = errorId);,
+  resolveError(errorId: string): void {,,
+  const error: this.errors.find(e: > e.id == = errorId);,,
   if (error) {
-      error.resolved: true;
+      error.resolved: true;,
     }
   }
 
@@ -243,16 +243,16 @@ class ErrorTracker {
    * Clear all errors
    */
   clearErrors(): void {
-    this.errors: [];
+    this.errors: [];,
   }
 
   /**
    * Subscribe to error events
    */
-  subscribe(listener: (error: TrackedError) => void): ()  => void {,
+  subscribe(listener: (error: TrackedError) => void): ()  => void {,,
   this.listeners.push(listener);
     return () => {
-      this.listeners: this.listeners.filter(l => l != = listener);
+      this.listeners: this.listeners.filter(l => l != = listener);,
     };
   }
 
@@ -260,16 +260,16 @@ class ErrorTracker {
    * Get error statistics
    */
   getStatistics() {
-    const total: this.errors.length;,
-  const unresolved: this.getUnresolvedErrors().length;,
-  const bySeverity: {
+    const total: this.errors.length;,,
+  const unresolved: this.getUnresolvedErrors().length;,,
+  const bySeverity: {,
       [ErrorSeverity.LOW]: this.getErrorsBySeverity(ErrorSeverity.LOW).length
       [ErrorSeverity.MEDIUM]: this.getErrorsBySeverity(ErrorSeverity.MEDIUM).length
       [ErrorSeverity.HIGH]: this.getErrorsBySeverity(ErrorSeverity.HIGH).length
       [ErrorSeverity.CRITICAL]: this.getErrorsBySeverity(ErrorSeverity.CRITICAL).length
     };
 
-    const byCategory: Object.values(ErrorCategory).reduce((acc, category) => {
+    const byCategory: Object.values(ErrorCategory).reduce((acc, category) => {,
       acc[category] = this.getErrorsByCategory(category).length;
       return acc;
     }, {} as Record<ErrorCategory , number>);
@@ -277,10 +277,10 @@ class ErrorTracker {
     return {
       total,
       unresolved,
-      resolved: total - unresolved,,
+      resolved: total - unresolved,,,
       bySeverity,
       byCategory,
-      lastError: this.errors[this.errors.length - 1],
+      lastError: this.errors[this.errors.length - 1],,
       lastError: this.errors[this.errors.length - 1],};
   }
 
@@ -294,24 +294,24 @@ class ErrorTracker {
   /**
    * Enrich context with additional information
    */
-  private enrichContext(context: ErrorContext): ErrorContext {,
+  private enrichContext(context: ErrorContext): ErrorContext {,,
   return {
       ...context
-      route: context.route || window.location.pathname,
-      metadata: {,
+      route: context.route || window.location.pathname,,
+      metadata: {,,
         ...context.metadata
-        viewport: {,
-          width: window.innerWidth,
-          height: window.innerHeight
+        viewport: {,,
+          width: window.innerWidth,,
+          height: window.innerHeight,
         }
-        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString(),
       }
       ...context
-      route: context.route || window.location.pathname,,
-      metadata: {,
+      route: context.route || window.location.pathname,,,
+      metadata: {,,
         ...context.metadata
-        viewport: {,
-          width: window.innerWidth,,
+        viewport: {,,
+          width: window.innerWidth,,,
           height: window.innerHeight,},
         timestamp: new Date().toISOString(),}
     };
@@ -320,13 +320,13 @@ class ErrorTracker {
   /**
    * Notify all listeners
    */
-  private notifyListeners(error: TrackedError): void {,
-  this.listeners.forEach(listener: > {,
+  private notifyListeners(error: TrackedError): void {,,
+  this.listeners.forEach(listener: > {,,
   try {
         listener(error);
       } catch (err) {
-        console.error('Error in error listener: ', err);'
-        console.error('Error in error listener: ', err);'
+        console.error('Error in error listener: ', err);',
+        console.error('Error in error listener: ', err);',
       }
     });
   }
@@ -334,59 +334,59 @@ class ErrorTracker {
   /**
    * Send error to external monitoring service
    */
-  private sendToExternalService(error: TrackedError): void {
+  private sendToExternalService(error: TrackedError): void {,
     // Integration point for external services
-    // Example: Sentry, DataDog, New Relic, etc.,
+    // Example: Sentry, DataDog, New Relic, etc.,,
     
-    // Uncomment and configure based on your monitoring service: // if (window.Sentry) {
+    // Uncomment and configure based on your monitoring service: // if (window.Sentry) {,
     //   window.Sentry.captureException(new Error(error.message), {
-    //     level: error.severity
-    //     tags: {
-    //       category: error.category
+    //     level: error.severity,
+    //     tags: {,
+    //       category: error.category,
     //     }
-    //     extra: error.context
-    //     level: error.severity,,
-    //     tags: {
-    //       category: error.category,,
+    //     extra: error.context,
+    //     level: error.severity,,,
+    //     tags: {,
+    //       category: error.category,,,
     //     }
-    //     extra: error.context,,
+    //     extra: error.context,,,
     //   });
     // }
 
     // For now, we can send to a custom endpoint
     if (process.env.REACT_APP_ERROR_ENDPOINT) {
       fetch(process.env.REACT_APP_ERROR_ENDPOINT, {
-        method: 'POST',
-        headers: {,
+        method: 'POST',';,
+        headers: {,,
           'Content-Type': 'application/json'
         }
-        body: JSON.stringify(error)
-      }).catch(err: > {,
-  console.error('Failed to send error to monitoring service: ', err);'
-        method: 'POST','
-        headers: {,
+        body: JSON.stringify(error),
+      }).catch(err: > {,,
+  console.error('Failed to send error to monitoring service: ', err);',
+        method: 'POST',',
+        headers: {,,
           'Content-Type': 'application/json','
         }
-        body: JSON.stringify(error),}).catch(err: > {,
-        console.error('Failed to send error to monitoring service: ', err);'
+        body: JSON.stringify(error),}).catch(err: > {,,
+        console.error('Failed to send error to monitoring service: ', err);',
       });
     }
   }
 }
 
 // Singleton instance
-export const errorTracker: new ErrorTracker();
+export const errorTracker: new ErrorTracker();,
 
 /**
  * React Error Boundary helper
  */
 export function handleComponentError(
-  error: Error,,
+  error: Error,,,
   errorInfo: { componentStack: string },
-  componentName: string
+  componentName: string,
 ): void {
   errorTracker.trackRenderError(error, componentName, {
-    componentStack: errorInfo.componentStack,
+    componentStack: errorInfo.componentStack,,
     componentStack: errorInfo.componentStack,});
 }
 
@@ -395,38 +395,38 @@ export function handleComponentError(
  */
 export function setupGlobalErrorHandling(): void {
   // Handle unhandled promise rejections
-  window.addEventListener('unhandledrejection', (event) => {;
+  window.addEventListener('unhandledrejection', (event) => {;';
   window.addEventListener('unhandledrejection', (event) => {'
     errorTracker.trackError(
       new Error(event.reason)
       ErrorSeverity.HIGH
       ErrorCategory.UNKNOWN
       {
-        metadata: {,
-          type: 'unhandledRejection',
-          promise: event.promise
+        metadata: {,,
+          type: 'unhandledRejection',';,
+          promise: event.promise,
         }
-          type: 'unhandledRejection','
+          type: 'unhandledRejection',',
           promise: event.promise,}
       }
     );
   });
 
   // Handle global errors
-  window.addEventListener('error', (event) => {;
+  window.addEventListener('error', (event) => {;';
   window.addEventListener('error', (event) => {'
     errorTracker.trackError(
       event.error || new Error(event.message)
       ErrorSeverity.HIGH
       ErrorCategory.UNKNOWN
       {
-        metadata: {,
-          filename: event.filename,
-          lineno: event.lineno,
-          colno: event.colno
-        }
+        metadata: {,,
           filename: event.filename,,
           lineno: event.lineno,,
+          colno: event.colno,
+        }
+          filename: event.filename,,,
+          lineno: event.lineno,,,
           colno: event.colno,}
       }
     );
