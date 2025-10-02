@@ -1,74 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { Zap, Mail, Phone, MapPin, Twitter, Linkedin, Github, Globe } from 'lucide-react';
-
-const ModernFooter: React.FC = () => {
-  const currentYear = new Date().getFullYear();
-
-  const footerSections = [
-    {
-      title: 'Solutions',
-      links: [
-        { label: 'Enterprise Solutions', path: '/solutions/enterprise' },
-        { label: 'SMB Solutions', path: '/solutions/smb' },
-        { label: 'Startup Solutions', path: '/solutions/startup' },
-        { label: 'Government Solutions', path: '/solutions/government' },
-        { label: 'Healthcare Solutions', path: '/solutions/healthcare' },
-        { label: 'Financial Solutions', path: '/solutions/financial' },
-      ]
-    },
-    {
-      title: 'Services',
-      links: [
-        { label: 'AI Workflow Automation', path: '/services/ai-workflow-automation' },
-        { label: 'AI Virtual Assistant', path: '/services/ai-virtual-assistant' },
-        { label: 'AI Data Analytics', path: '/services/ai-data-analytics' },
-        { label: 'Intelligent Document Processing', path: '/services/ai-intelligent-document-processing' },
-        { label: 'Real-Time Cognitive Automation', path: '/services/real-time-cognitive-automation' },
-        { label: 'Advanced Cybersecurity AI', path: '/services/advanced-cybersecurity-ai' },
-        { label: 'Cloud & DevOps', path: '/cloud-devops' },
-      ]
-    },
-    {
-      title: 'Resources',
-      links: [
-        { label: 'Case Studies', path: '/case-studies' },
-        { label: 'Resources Hub', path: '/resources' },
-        { label: 'Blog', path: '/blog' },
-      ]
-    },
-    {
-      title: 'Company',
-      links: [
-        { label: 'About Us', path: '/about' },
-        { label: 'Our Team', path: '/team' },
-        { label: 'Partners', path: '/partners' },
-      ]
-    }
-  ];
-
-  const quickActions = [
-    { label: 'View Pricing', path: '/pricing' },
-    { label: 'Schedule Demo', path: '/demo' },
-    { label: 'Get Support', path: '/support' },
-    { label: 'Request Quote', path: '/request-quote' },
-  ];
-
-  const legalLinks = [
-    { label: 'Privacy Policy', path: '/privacy' },
-    { label: 'Terms of Service', path: '/terms' },
-    { label: 'Cookie Policy', path: '/cookies' },
-  ];
-
-  const socialLinks = [
-    { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
-    { icon: Linkedin, href: 'https://linkedin.com/company/zion-tech-group', label: 'LinkedIn' },
-    { icon: Github, href: 'https://github.com/ZionClouds', label: 'GitHub' },
-    { icon: Globe, href: 'https://ziontechgroup.com', label: 'Website' },
-  ];
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-3e47
 
 const Footer: React.FC = () => {
   return (
@@ -85,13 +16,13 @@ const Footer: React.FC = () => {
               Enterprise-grade AI, micro SaaS, and IT solutions. Transform your business with cutting-edge technology.
             </p>
             <div className="flex space-x-4">
-              <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
                 Twitter
               </a>
-              <a href="https://linkedin.com/company/zion-tech-group" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://linkedin.com/company/zion-tech-group" className="text-gray-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
                 LinkedIn
               </a>
-              <a href="https://github.com/ZionClouds" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://github.com/ZionClouds" className="text-gray-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
                 GitHub
               </a>
             </div>
