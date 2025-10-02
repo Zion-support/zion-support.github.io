@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-export {};
-=======
->>>>>>> main
 
 interface CSPReport {
   'csp-report': {
@@ -24,20 +20,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 module.exports = {};
 module.exports = {};
-<<<<<<< HEAD
-ursor/add-new-services-and-deploy-updates-0462
-module.exports = {};
-ursor/add-new-services-and-deploy-updates-0462
-module.exports = {};
-module.exports = {};
-module.exports = {};
-module.exports = {};
-
-    // Validate the CSP report
-    if (!report['csp-report']) {
-      return res.status(400).json({ error: 'Invalid CSP report format' })}
-=======
->>>>>>> main
 
 
     // Log the CSP violation (in production, you might want to send to a monitoring service)
@@ -56,15 +38,3 @@ module.exports = {};
     // - A security monitoring system
     // - A database for analysis
 
-<<<<<<< HEAD
-    // Return a 204 No Content response as per CSP reporting spec
-    res.status(204).end()} catch (error) {
-    console.error('Error processing CSP report:', error);
-    res.status(500).json({ error: 'Internal server error' })}
-}
-=======
-
-module.exports = {};
-
-
->>>>>>> main

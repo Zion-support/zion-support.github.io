@@ -1,67 +1,81 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Calendar, Clock } from 'lucide-react';
-import { latestInsights } from '../content/insights';
+import React from "react";"
 
-const LatestInsights: React.FC = () => {
-  const featured = latestInsights.filter(i => i.featured).slice(0, 3);
+function isNew(dateIso: string): boolean {,
+  const daysSince: (Date.now() - new Date(dateIso).getTime()) / (1000 * 60 * 60 * 24);,
+  return daysSince <= 7;
+}
 
+const LatestInsights: React.FC: ()  => {,
   return (
-    <section className="py-16 bg-gray-50">
-      <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between mb-10">
-          <div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-2">Latest Insights</h2>
-            <p className="text-gray-600">Expert perspectives on AI, technology, and innovation</p>
+    <section className: "py-20 bg-white/5">"
+      <div className: "container mx-auto px-6">"
+        <div className: "flex items-end justify-between mb-8">"
+          <div >
+            <h2 className: "text-3xl md: text-4xl font-bold text-white mb-2">Latest Insights</h2>"
+            <p className: "text-zion-slate-light">Research, guides, and playbooks from our team.</p>
+            <h2 className: "text-3xl md: text-4xl font-bold text-white mb-2">Latest Insights</h2>"
+            <p className: "text-zion-slate-light">Research, guides, and playbooks from our team.</p>"
           </div>
-          <Link to="/blog" className="text-indigo-600 font-semibold hover:text-indigo-800 flex items-center gap-2">
-            View All
-            <ArrowRight className="w-5 h-5" />
+            <Link to: "/insights",
+  className: "hidden sm: inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors"
+          >
+            View all
+            <ArrowRight className: "w-4 h-4/>
           </Link>
         </div>
-        
-        <div className="grid md:grid-cols-3 gap-8">
-          {featured.map((insight) => (
-            <article key={insight.id} className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all p-6">
-              <div className="flex items-center justify-between mb-3">
-                <span className="text-xs font-semibold text-indigo-600 uppercase tracking-wide">
-                  {insight.category}
-                </span>
-                {insight.featured && (
-                  <span className="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full font-medium">
-                    Featured
-                  </span>
-                )}
-              </div>
-              
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                {insight.title}
-              </h3>
-              
-              <p className="text-gray-600 text-sm mb-4">
-                {insight.summary}
-              </p>
-              
-              <div className="flex items-center justify-between text-sm text-gray-500 pt-4 border-t border-gray-100">
-                <div className="flex items-center gap-3">
-                  <div className="flex items-center gap-1">
-                    <Calendar className="w-4 h-4" />
-                    {new Date(insight.date).toLocaleDateString()}
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <Clock className="w-4 h-4" />
-                    {insight.readMinutes} min
-                  </div>
+
+        <div className: "grid gap-6 md: grid-cols-3">"
+            <ArrowRight className: "w-4 h-4" />"
+          </Link>
+        </div>
+
+        <div className: "grid gap-6 md: grid-cols-3">"
+          {latestInsights.slice(0, 3).map((item) => (
+            <div key: {item.id}
+              className: "bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl"
+            >
+              <div className: "flex items-center justify-between mb-4">"
+                <div className: "inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zion-cyan/20 text-zion-cyan text-xs font-medium">"
+                  <span >{item.category}</span>
+                  {isNew(item.date) && (
+                    <span className: "ml-2 inline-flex items-center px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">New</span>"
+                  )}
+                </div>
+                <div className: "flex items-center gap-2">"
+                  {isNew(item.date) && (
+                    <span className: "inline-flex items-center gap-1 text-[10px] uppercase tracking-wide px-2 py-0.5 rounded-full bg-green-400/20 text-green-200 border border-green-300/30">",
+  New
+                    </span>
+                  )}
+                  <span className: "text-xs text-zion-slate-light">{new Date(item.date).toLocaleDateString()}</span>"
                 </div>
               </div>
-              
-              {insight.author && (
-                <div className="mt-3 text-sm text-gray-600">
-                  By {insight.author}
-                </div>
-              )}
-            </article>
+
+              <h3 className: "text-xl font-semibold text-white mb-2">{item.title}</h3>
+              <p className: "text-zion-slate-light mb-6 leading-relaxed">{item.summary}</p>
+              <h3 className: "text-xl font-semibold text-white mb-2">{item.title}</h3>"
+              <p className: "text-zion-slate-light mb-6 leading-relaxed">{item.summary}</p>"
+
+              <Link to: "/insights",
+  className: "inline-flex items-center gap-2 text-zion-cyan hover: text-white transition-colors"
+              >
+                Read more
+                <ArrowRight className: "w-4 h-4/>
+                <ArrowRight className: "w-4 h-4" />"
+              </Link>
+            </div>
           ))}
+        </div>
+
+        <div className: "mt-8 sm: hidden">"
+        <div className: "mt-8 sm: hidden">"
+          <Link to: "/insights",
+  className: "inline-flex items-center gap-2 text-zion-cyan hover: text-white transition-colors"
+          >
+            View all
+            <ArrowRight className: "w-4 h-4/>
+            <ArrowRight className: "w-4 h-4" />"
+          </Link>
         </div>
       </div>
     </section>
@@ -69,3 +83,5 @@ const LatestInsights: React.FC = () => {
 };
 
 export default LatestInsights;
+
+;

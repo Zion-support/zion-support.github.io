@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const metadata = {
   title: 'Real-Time AI Analytics 2026: Instant Insights from Streaming Data',
-  description: 'Discover how real-time AI analytics processes 1B+ events per second with <100ms latency and 99.99% accuracy for enterprise decision-making.',
+  description: 'Discover how real-time AI analytics processes 1B+ events per second with &lt;100ms latency and 99.99% accuracy for enterprise decision-making.',
   keywords: 'real-time analytics, AI analytics, streaming data, real-time AI, data analytics 2026',
 };
 

@@ -1,55 +1,3 @@
-<<<<<<< HEAD
-import Layout from '../../components/Layout';
-import {ShoppingCart,, Users,, BarChart,, Smartphone,, Package} from 'lucide-react';
-import React from 'react';
-import Layout from '../../components/Layout';';
-import {ShoppingCart,, Users,, BarChart,, Smartphone,, Package,, CheckCircle,, ArrowRight} from 'lucide-react';
-import Layout from '../../components/Layout';
-import {ShoppingCart,, Users,, BarChart3,, Smartphone,, CheckCircle,, ArrowRight} from 'lucide-react';
-const features = [;
-  {}
-    icon: ShoppingCart,;
-    title: 'E-commerce Platforms,',;
-    description: 'Custom e-commerce solutions that provide seamless shopping experiences across all devices.'',;
-  },;
-  {}
-    icon: Users,;
-    title: 'Customer Analytics,',;
-    description: 'Advanced customer behavior analytics to optimize marketing and improve conversion rates.'',;
-  },;
-  {}
-    icon: BarChart,;
-    title: 'Inventory Management,',;
-    description: 'Real-time inventory tracking and management systems to optimize stock levels and reduce costs.'',;
-  },;
-  {}
-    icon: Smartphone,;
-    title: 'Mobile Commerce,',;
-    description: 'Mobile-first shopping experiences with native apps and progressive web applications.'',;
-  },;
-  {}
-    icon: Package,;
-    title: 'Supply Chain Optimization,',;
-    description: 'End-to-end supply chain visibility and optimization using AI and machine learning.'';
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  ShoppingCart, 
-  Users, 
-  BarChart3, 
-  Smartphone, 
-  CheckCircle, 
-  ArrowRight 
-} from 'lucide-react';
-
-const features = [
-  {
-    icon: ShoppingCart,
-    title: 'E-commerce Platform',
-    description: 'Complete online store solution with payment processing'
->>>>>>> origin/cursor/delete-old-data-records-6bba
   },
   {
     icon: Users,
@@ -191,11 +139,6 @@ const benefits = [;
   description: 'Seamless integration across all sales channels';
   }
 ;];
-<<<<<<< HEAD
-=======
-
-
->>>>>>> main
 
 const solutions = [;
   'E-commerce Platform Development',',;
@@ -423,35 +366,6 @@ export default function RetailSolutions() {;
         {/* Hero Section */}
     >
       <div className="min-h-screen bg-white">
-<<<<<<< HEAD
-=======
-  'Increased online sales and revenue','
-  'Improved customer experience','
-  'Better inventory management','
-  'Enhanced data-driven decision making','
-  'Streamlined operations','
-  'Mobile-first customer engagement''
-];
-export default function RetailSolutions() {
-
-
-    icon: Smartphone,
-    title: 'Mobile Commerce',
-    description: 'Mobile-optimized shopping experience'
-  }
-];
-
-export default function RetailSolutionsPage() {
-
-  return (
-    <>
-      <Head>
-        <title>Retail Solutions - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive retail technology solutions for modern commerce." />
-      </Head>
-
-      <div className="min-h-screen bg-gray-50">
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-green-600 to-blue-600 text-white py-20">
@@ -594,8 +508,6 @@ export default function RetailSolutionsPage() {
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-medium">";
                   Download Retail Guide;
                 </ul>;
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
               </div>;
             </div>;
@@ -690,8 +602,6 @@ export default function RetailSolutionsPage() {
 };
 
 export default Retail;
-=======
                 </ul>;
     </>
 
->>>>>>> main

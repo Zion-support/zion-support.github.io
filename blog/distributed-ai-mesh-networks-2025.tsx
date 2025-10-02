@@ -88,9 +88,9 @@ const meshNetwork = new MeshNetwork({
 
 // Define regional coordinators
 const regions = [
-  { id: 'us-west', capacity: '10TB', latency: '<5ms' },
-  { id: 'eu-central', capacity: '8TB', latency: '<3ms' },
-  { id: 'asia-pacific', capacity: '12TB', latency: '<8ms' }
+  { id: 'us-west', capacity: '10TB', latency: '&lt;5ms' },
+  { id: 'eu-central', capacity: '8TB', latency: '&lt;3ms' },
+  { id: 'asia-pacific', capacity: '12TB', latency: '&lt;8ms' }
 ];
 
 // Initialize self-organizing mesh
@@ -119,7 +119,7 @@ await meshNetwork.deployModel('gpt-5-enterprise', {
         <h3 className="text-2xl font-bold mt-10 mb-4 text-purple-400">Pattern 3: Hybrid Cloud-Edge Mesh</h3>
         <p className="text-gray-300 leading-relaxed mb-6">
           Combine cloud GPU clusters with edge devices for optimal performance and cost. Cloud nodes handle training and 
-          heavy computation while edge nodes perform real-time inference with <10ms latency.
+          heavy computation while edge nodes perform real-time inference with &lt;10ms latency.
         </p>
 
         <h2 className="text-3xl font-bold mt-12 mb-6 text-white">Real-World Success Stories</h2>

@@ -1,20 +1,6 @@
-<<<<<<< HEAD
-export interface ContactInfo {
-export interface ContactInfo {;
-export interface ContactInfo {
-  phone: string, email: string,
-  address: string, site: string,
-export interface Service {;
-}
-=======
->>>>>>> main
 
   delivery_time: string;
 
-<<<<<<< HEAD
-=======
-  deliveryTime: string;,
->>>>>>> origin/cursor/delete-old-data-records-6bba
   support: string;
   image?: string;
   popular?: boolean;
@@ -209,11 +195,6 @@ export interface Notification {
   expires?: Date;
 }
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> main
 
 // Project management
 export interface Project {
@@ -271,39 +252,3 @@ export interface Project {
 
 // Component props
 export interface BaseComponentProps {
-<<<<<<< HEAD
-  class_name?: string;
-  children?: React.ReactNode;
-  id?: string;
-  disabled?: boolean;
-  loading?: boolean;
-  on_click?: () => void;
-  type?: 'button' | 'submit' | 'reset';
-}
-export interface InputProps {
-  class_name?: string;
-  children?: React.ReactNode;
-  id?: string;
-  disabled?: boolean;
-  loading?: boolean;
-  on_click?: () => void;
-  type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number';
-  placeholder?: string;
-  value?: string;
-  on_change?: (value: string) => void;
-  error?: string;
-  required?: boolean;
-}
-
-export interface Environment {
-  NODE_ENV: 'development' | 'production' | 'test';
-  NEXT_PUBLIC_API_URL?: string;
-  NEXT_PUBLIC_APP_URL?: string;
-  NEXT_PUBLIC_GA_ID?: string;
-
-  NEXT_PUBLIC_SENTRY_DSN?: string;
-}
-=======
-
-
->>>>>>> main

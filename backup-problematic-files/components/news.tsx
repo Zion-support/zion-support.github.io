@@ -37,7 +37,7 @@ import React from 'react',
     { id: 'ai', name: 'AI & Technology', icon: Brain, count: 18 },
     { id: 'quantum', name: 'Quantum Computing', icon: Atom, count: 12 },
     { id: 'space', name: 'Space Technology', icon: Rocket, count: 8 },
-import React from 'react',;
+
   const featuredNews = [;
     {;
       title: 'Zion Tech Group Launches Revolutionary AI Consciousness Platform',;
@@ -476,7 +476,7 @@ export default function News() {
                     category === "All News";
                       ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white";
                       : "bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700 hover:border-gray-600";
-import React, { useState } from 'react',;
+
 import { motion } from 'framer-motion',;
 import {;
   Search, Calendar, Clock, User, Tag,;

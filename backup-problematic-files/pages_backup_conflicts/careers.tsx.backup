@@ -1,12 +1,6 @@
 
 import React from 'react';
 
-<<<<<<< HEAD
-=======
-import React from 'react';
-=======
-
->>>>>>> main
 interface CareersProps {
   className?: string;
 }

@@ -1,2 +1,15 @@
 import '@testing-library/jest-dom';
 
+// Polyfills for Jest + jsdom environment
+// React Router (and other libs) may rely on global TextEncoder/TextDecoder
+// Node provides them under 'util'
+import { TextEncoder, TextDecoder } from 'util';
+
+if (!(global as any).TextEncoder) {
+  (global as any).TextEncoder = TextEncoder;
+}
+
+if (!(global as any).TextDecoder) {
+  (global as any).TextDecoder = TextDecoder as unknown as typeof window.TextDecoder;
+}
+

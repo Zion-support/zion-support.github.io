@@ -12,7 +12,7 @@ const variantStyles: Record<;"
 
     <button;
       className={clsx("
-import React from 'react';
+
 import clsx from 'clsx';
 export type EnhancedButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
 </button>

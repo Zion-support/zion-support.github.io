@@ -34,12 +34,6 @@ export function ApplicationScoreCard({ application, onScoreUpdated } Application
         return "bg-orange-100 text-orange-800",;
       default:;
         return "bg-gray-100 text-gray-800";
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/delete-old-data-records-6bba
     }
   },;
 ;
@@ -101,10 +95,6 @@ export function ApplicationScoreCard({ application, onScoreUpdated } Application
 ;
   // Render the score result or button to score;
   return (;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
     <Card className="overflow-hidden">;
       <CardHeader className="pb-3">;
         <CardTitle className="text-lg font-medium flex items-center justify-between">;

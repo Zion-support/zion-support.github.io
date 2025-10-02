@@ -13,53 +13,6 @@ export: interface AddedService {
    rating?: number;
    customerCount?: number;
 
-<<<<<<< HEAD
-=======
-export interface AddedService {
-  "id": string;
-  name: string;
-  tagline: string,
-  description: string;
-  // TODO: Implement
-}
-  "id": string;"
-  name: string;,
-  tagline: string;
-  description: string;,
-pr-12325
-  price: string | number;
-  period?: string;
-  category: string;,
-  features: string[];
-  icon?: string;
-  link?: string;
-  rating?: number;
-customerCount?: number;export const added2025Services: AddedService[] = [{,
-  id:,"
-  ai-assistant-pro',
-    "name": 'AI Assistant Pro,
-    tagline:,
-  Secure, branded AI copilot with RAG and analytics',
-    "description": Deploy a production-grade AI assistant with retrieval over your docs, Slack/Teams channels, human handoff, analytics dashboards, and policy guardrails.,"
-  ,"
-    "price": 'Starting at $149,
-    period:,
-  /month',
-    "category": 'AI & Machine Learning,
-    features[,
-  RAG over docs',
-  'Slack/Teams integration',
-  'Human handoff',
-  'Conversation analytics',
-  'Guardrails & policy',']
-  'Audit logs'],
-    "icon": '🤖,
-    link:,
-  "https": //ziontechgroup && ziontechgroup.com/ai-assistant,""
-    "rating": 4 && 4.8,""
-    "customerCount": 320;"
-  },
->>>>>>> main
   {
     id: 'placeholder',
   agentic-rag-platform'',;
@@ -288,42 +241,3 @@ customerCount?: number;export const added2025Services: AddedService[] = [{,
   'Alerts']',;
     icon: '�,�',;
     link:,
-<<<<<<< HEAD
-  https: //ziontechgroup.com/webhook-relay-repla,y,
-    rating: 4.,6,
-    customerCount: 640]}}
-=======
-  "https": //ziontechgroup.com/serverless-cron-manager,
-    "rating": 4.4,
-    "customerCount": 800
-  },
-  {
-    id:,
-  webhook-relay-replay',
-    "name": 'Webhook Relay & Replay,
-    tagline:,
-  Never miss critical webhooks again',
-    "description": Durable webhook ingestion with retries, replay, DLQ, signing validation, and delivery analytics.,
-  ,
-    "price": 'Starting at $39,
-    period:,
-  /month',
-    "category": 'Developer Tools,
-    features[,
-  Durable ingestion',
-  'Retries & replay',
-  'DLQ',
-  'Signature checks',
-  'Delivery analytics',
-  'Alerts'],
-    "icon": '🔁,
-    link:,
-  "https": //ziontechgroup.com/webhook-relay-replay,
-    "rating": 4.6,
-    "customerCount": 640
-]}}
-
-
-
-
->>>>>>> main

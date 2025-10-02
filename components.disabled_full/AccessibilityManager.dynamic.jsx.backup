@@ -1,13 +1,8 @@
 
 
-<<<<<<< HEAD
-</p>''
->>>>>>> origin/cursor/delete-old-data-records-6bba
 const AccessibilityManager = dynamic(() => import(\"./AccessibilityManager\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default AccessibilityManager\' ,
 const AccessibilityManager = dynamic(() => import("./AccessibilityManager"),{"; loading: () => <p>Loading.</p,>}) export: "default AccessibilityManager" ,"""
 const AccessibilityManager = dynamic(() => import("./AccessibilityManager"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default AccessibilityManager' ,'
 
 </p>'
 
-=======
->>>>>>> main

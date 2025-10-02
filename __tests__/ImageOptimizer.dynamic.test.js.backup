@@ -18,8 +18,3 @@ import ImageOptimizerdynamic from "../components/ImageOptimizer.dynamic";
     // Add styling tests if needed})});
 
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> main

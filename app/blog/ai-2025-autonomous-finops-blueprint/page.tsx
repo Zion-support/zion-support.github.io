@@ -1,4 +1,3 @@
-// @ts-nocheck
 import React from 'react';
 
 export const metadata = {
@@ -48,34 +47,16 @@ export default function AutonomousFinOpsBlueprint2025Page() {
           <h2>Reference Architecture</h2>
           <p>
             A policy‑driven router evaluates intent, cost, and risk. It consults a semantic cache, then
-            selects a model tier. Responses and costs are traced with request IDs. Evals run continuously and
-            trigger budgeted actions and rollbacks.
+            routes to the most cost‑effective model that meets quality thresholds. All decisions are
+            logged, traced, and subject to budget enforcement with automatic rollback.
           </p>
 
-          <h2>Outcomes</h2>
-          <div className="grid md:grid-cols-3 gap-4 not-prose">
-            <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-4">
-              <div className="text-3xl font-extrabold text-emerald-700">85%</div>
-              <div className="text-sm text-emerald-800">Max cost reduction</div>
-            </div>
-            <div className="bg-cyan-50 border border-cyan-200 rounded-xl p-4">
-              <div className="text-3xl font-extrabold text-cyan-700">+12%</div>
-              <div className="text-sm text-cyan-800">Quality uplift (evals)</div>
-            </div>
-            <div className="bg-indigo-50 border border-indigo-200 rounded-xl p-4">
-              <div className="text-3xl font-extrabold text-indigo-700">8 wks</div>
-              <div className="text-sm text-indigo-800">Time to ROI</div>
-            </div>
-          </div>
-
-          <h2>Implementation Checklist</h2>
-          <ul>
-            <li>Define KPIs, SLAs, and budget thresholds per product surface.</li>
-            <li>Stand up embedding + response caches with adaptive TTL and invalidation.</li>
-            <li>Implement intent classification → route to tiered models.</li>
-            <li>Wire traces and cost tags to dashboards and alerts.</li>
-            <li>Automate evals and rollback on quality or budget breach.</li>
-          </ul>
+          <h2>Implementation Guide</h2>
+          <p>
+            Start with tiered routing and semantic caching as your foundation. Add quality gates and
+            budgets incrementally. Monitor cost per transaction, cache hit rates, and quality metrics
+            to ensure consistent savings without regression.
+          </p>
 
           <h2>Conclusion</h2>
           <p>
@@ -96,4 +77,3 @@ export default function AutonomousFinOpsBlueprint2025Page() {
     </div>
   );
 }
-

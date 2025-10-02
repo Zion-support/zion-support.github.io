@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-=======
-#!/usr/bin/env node
-import fs from 'fs';
-import path from 'path';
->>>>>>> origin/main
 import { execSync } from 'child_process';
 
 // Function to fix specific syntax patterns

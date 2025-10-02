@@ -1,1219 +1,1448 @@
 export interface LatestArticle {
-  id: string;
-  slug: string;
-  title: string;
-  description: string;
-  excerpt: string;
-  author: string;
-  date: string;
-  category: string;
-  tags: string[];
-  featured: boolean;
-  readTime: string;
-  image?: string;
-  newBadge?: boolean;
-  trending?: boolean;
+  id: string;,
+slug: string;
+title: string;,
+description: string;
+excerpt: string;,
+author: string;
+date: string;,
+category: string;
+tags: string[];,
+featured: boolean;
+readTime: string;,
+image?: string;
+newBadge?: boolean;
+trending?: boolean;
+
 }
 
-export const latestArticles: LatestArticle[] = [
+export const latestArticles: LatestArticle[]  = [,
   {
-    id: "ai-governance-risk-budgets-2026",
-    slug: "ai-governance-risk-budgets-2026",
-    title: "AI Governance Risk Budgets 2026: Owners, SLAs, Rollbacks",
-    description: "Budget risky actions with owners, SLAs, and rollback triggers that keep teams fast and safe.",
-    excerpt: "Risk budgets wired to CI policy checks and incident rollback in <60s.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-15",
-    category: "AI Governance",
-    tags: ["Risk", "Budgets", "SLAs"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/ai-governance-risk-budgets-2026.jpg",
-    newBadge: true,
+    id: "ai-safety-budgets-2026",",
+    slug: "ai-safety-budgets-2026",",
+    title: "AI Safety Budgets 2026: Guardrails That Don't Slow Teams",",
+    description: "Set explicit risk budgets, approvals, and rollback triggers that keep delivery fast and safe.",",
+    excerpt: "Ship faster with measurable safety budgets wired to KPIs and release trains.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-10-17",",
+    category: "AI Strategy",",
+    tags: ["Guardrails", "Budgets", "Delivery"],",
+    featured: true,,
+    readTime: "7 min read",",
+    image: "/images/ai-safety-budgets-2026.jpg",",
+    id: "ai-safety-budgets-2026","
+    slug: "ai-safety-budgets-2026","
+    title: "AI Safety Budgets 2026: Guardrails That Don't Slow Teams","
+    description: "Set explicit risk budgets, approvals, and rollback triggers that keep delivery fast and safe.","
+    excerpt: "Ship faster with measurable safety budgets wired to KPIs and release trains.","
+    author: "Zion Tech Group Team","
+    date: "2025-10-17","
+    category: "AI Strategy","
+    tags: ["Guardrails", "Budgets", "Delivery"],"
+    featured: true,,
+    readTime: "7 min read","
+    image: "/images/ai-safety-budgets-2026.jpg","
+    newBadge: true,,
     trending: true
   },
   {
-    id: "privacy-first-feature-flags-2026",
-    slug: "privacy-first-feature-flags-2026",
-    title: "Privacy‑First Feature Flags 2026: Geo Budgets and Instant Rollback",
-    description: "Progressive delivery with scoped IDs, geo budgets, and rollback in under 60 seconds.",
-    excerpt: "Zero‑regret rollouts with privacy by design and budgeted actions.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-15",
-    category: "Architecture",
-    tags: ["Feature Flags", "Privacy", "Progressive Delivery"],
-    featured: true,
-    readTime: "6 min read",
-    image: "/images/privacy-first-feature-flags-2026.jpg",
-    newBadge: true,
+    id: "ai-e2e-tracing-2025",",
+    slug: "ai-e2e-tracing-2025",",
+    title: "E2E AI Tracing: From Prompt to Outcome KPIs",",
+    description: "Design traces that connect prompts, tools, and user outcomes to prove ROI and prevent regressions.",",
+    excerpt: "Wire traces across prompts, tools, and UX so you can debug and improve what matters: outcomes.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-09-29",",
+    category: "Observability",",
+    tags: ["Tracing", "KPIs", "Guardrails", "Evals"],",
+    featured: true,,
+    readTime: "7 min read",",
+    image: "/images/ai-e2e-tracing-2025.jpg",",
+    id: "ai-e2e-tracing-2025","
+    slug: "ai-e2e-tracing-2025","
+    title: "E2E AI Tracing: From Prompt to Outcome KPIs","
+    description: "Design traces that connect prompts, tools, and user outcomes to prove ROI and prevent regressions.","
+    excerpt: "Wire traces across prompts, tools, and UX so you can debug and improve what matters: outcomes.","
+    author: "Zion Tech Group Team","
+    date: "2025-09-29","
+    category: "Observability","
+    tags: ["Tracing", "KPIs", "Guardrails", "Evals"],"
+    featured: true,,
+    readTime: "7 min read","
+    image: "/images/ai-e2e-tracing-2025.jpg","
+    newBadge: true,,
     trending: true
   },
   {
-    id: "reliable-agent-actions-2026",
-    slug: "reliable-agent-actions-2026",
-    title: "Reliable Agent Actions 2026: Deterministic Tools and Live Traces",
-    description: "Design agent actions with deterministic tools, safety budgets, and observable traces.",
-    excerpt: "Make multi‑tool agents reliable with traces, budgets, and guardrails.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-15",
-    category: "GenAI",
-    tags: ["Agents", "Tracing", "Safety"],
-    featured: true,
-    readTime: "8 min read",
-    image: "/images/reliable-agent-actions-2026.jpg",
-    newBadge: true,
+    id: "edge-privacy-ml-2026",",
+    slug: "edge-privacy-ml-2026",",
+    title: "Edge Privacy for ML 2026: On‑Device Filters and Scoped IDs",",
+    description: "Design telemetry and inference with local filters, signed configs, and retention windows.",",
+    excerpt: "Keep insights rich without PII using on‑device redaction and scoped identifiers.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-10-17",",
+    category: "Edge Computing",",
+    tags: ["Privacy", "Edge", "Telemetry"],",
+    featured: true,,
+    readTime: "8 min read",",
+    image: "/images/edge-privacy-ml-2026.jpg",",
+    id: "edge-privacy-ml-2026","
+    slug: "edge-privacy-ml-2026","
+    title: "Edge Privacy for ML 2026: On‑Device Filters and Scoped IDs","
+    description: "Design telemetry and inference with local filters, signed configs, and retention windows.","
+    excerpt: "Keep insights rich without PII using on‑device redaction and scoped identifiers.","
+    author: "Zion Tech Group Team","
+    date: "2025-10-17","
+    category: "Edge Computing","
+    tags: ["Privacy", "Edge", "Telemetry"],"
+    featured: true,,
+    readTime: "8 min read","
+    image: "/images/edge-privacy-ml-2026.jpg","
+    newBadge: true,,
     trending: true
   },
   {
-    id: "ai-security-data-leak-prevention-2026",
-    slug: "ai-security-data-leak-prevention-2026",
-    title: "AI Security 2026: Data‑Leak Prevention with Scoped IDs and Egress Guards",
-    description: "Practical playbooks to prevent prompt and data leaks with scoped identifiers, redaction, and egress controls.",
-    excerpt: "Stop data leaks before they happen with scoped IDs, field‑level filters, and egress guards.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-30",
-    category: "AI Operations",
-    tags: ["Guardrails", "Budgets", "Rollback"],
-    featured: true,
-    readTime: "8 min read",
-    image: "/images/ai-2026-autonomous-ops-guardrails.jpg",
-    newBadge: true,
+    id: "agent-evals-in-prod-2026",",
+    slug: "agent-evals-in-prod-2026",",
+    title: "Agent Evals in Production 2026: Online Checks That Predict Outcomes",",
+    description: "Wire agent evals to KPIs with lightweight canaries, scorecards, and rollback‑ready signals.",",
+    excerpt: "Prevent regressions while shipping weekly with online evals tied to outcomes.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-10-17",",
+    category: "GenAI",",
+    tags: ["Agents", "Evals", "Scorecards"],",
+    featured: true,,
+    readTime: "7 min read",",
+    image: "/images/agent-evals-in-prod-2026.jpg",",
+    id: "agent-evals-in-prod-2026","
+    slug: "agent-evals-in-prod-2026","
+    title: "Agent Evals in Production 2026: Online Checks That Predict Outcomes","
+    description: "Wire agent evals to KPIs with lightweight canaries, scorecards, and rollback‑ready signals.","
+    excerpt: "Prevent regressions while shipping weekly with online evals tied to outcomes.","
+    author: "Zion Tech Group Team","
+    date: "2025-10-17","
+    category: "GenAI","
+    tags: ["Agents", "Evals", "Scorecards"],"
+    featured: true,,
+    readTime: "7 min read","
+    image: "/images/agent-evals-in-prod-2026.jpg","
+    newBadge: true,,
     trending: true
   },
   {
-    id: "edge-2026-private-rate-limiter-blueprint",
-    slug: "edge-2026-private-rate-limiter-blueprint",
-    title: "Edge 2026: Private Rate Limiter Blueprint",
-    description: "Scoped IDs, signed configs, and on-device metrics for zero‑PII limits at <100ms.",
-    excerpt: "Design privacy-preserving rate limits with edge compute, KV, and attested configs.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-30",
-    category: "Architecture",
-    tags: ["Edge", "Privacy", "Rate Limiting"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/edge-2026-private-rate-limiter.jpg",
-    newBadge: true,
+    id: "ai-breach-drills-2026",",
+    slug: "ai-breach-drills-2026",",
+    title: "AI Breach Drills 2026: Practice Safe Autonomy Under Pressure",",
+    description: "Runbook drills for AI systems: budgeted actions, approvals, and instant rollback paths.",",
+    excerpt: "Turn incidents into rehearsals—budgeted actions, approvals, and rollback checkpoints.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-10-13",",
+    category: "AI Security",",
+    tags: ["SBOM", "Supply Chain", "Security"],",
+    featured: true,,
+    readTime: "7 min read",",
+    image: "/images/secure-ml-supply-chain-2026.jpg",",
+    id: "ai-breach-drills-2026","
+    slug: "ai-breach-drills-2026","
+    title: "AI Breach Drills 2026: Practice Safe Autonomy Under Pressure","
+    description: "Runbook drills for AI systems: budgeted actions, approvals, and instant rollback paths.","
+    excerpt: "Turn incidents into rehearsals—budgeted actions, approvals, and rollback checkpoints.","
+    author: "Zion Tech Group Team","
+    date: "2025-10-13","
+    category: "AI Security","
+    tags: ["SBOM", "Supply Chain", "Security"],"
+    featured: true,,
+    readTime: "7 min read","
+    image: "/images/secure-ml-supply-chain-2026.jpg","
+    newBadge: true,,
     trending: true
   },
   {
-    id: "genai-2026-budget-aware-evals",
-    slug: "genai-2026-budget-aware-evals",
-    title: "GenAI 2026: Budget‑Aware Evals",
-    description: "KPI‑linked scorecards and budget-aware evals that prevent regressions without slowing teams.",
-    excerpt: "Wire evals to KPIs and cost budgets so quality stays high and spend predictable.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-30",
-    category: "GenAI",
-    tags: ["Evals", "Scorecards", "Budgets"],
-    featured: true,
-    readTime: "8 min read",
-    image: "/images/genai-2026-budget-aware-evals.jpg",
-    newBadge: true,
+    id: "genai-routing-under-budgets-2026",",
+    slug: "genai-routing-under-budgets-2026",",
+    title: "Quality‑Tiered GenAI Routing: SLAs Without Bill Shock",",
+    description: "Route prompts across model tiers with budgets, caches, and eval signals to control cost.",",
+    excerpt: "Keep experience high under tight budgets with deterministic routing and caches.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-10-13",",
+    category: "AI Operations",",
+    tags: ["Budgets", "Quality Tiers", "Routing"],",
+    featured: true,,
+    readTime: "6 min read",",
+    image: "/images/genai-routing-2026.jpg",",
+    id: "genai-routing-under-budgets-2026","
+    slug: "genai-routing-under-budgets-2026","
+    title: "Quality‑Tiered GenAI Routing: SLAs Without Bill Shock","
+    description: "Route prompts across model tiers with budgets, caches, and eval signals to control cost.","
+    excerpt: "Keep experience high under tight budgets with deterministic routing and caches.","
+    author: "Zion Tech Group Team","
+    date: "2025-10-13","
+    category: "AI Operations","
+    tags: ["Budgets", "Quality Tiers", "Routing"],"
+    featured: true,,
+    readTime: "6 min read","
+    image: "/images/genai-routing-2026.jpg","
+    newBadge: true,,
     trending: true
   },
   {
-    id: "ai-2029-autonomous-infra-blueprint",
-    slug: "ai-2029-autonomous-infra-blueprint",
-    title: "AI 2029: Autonomous Infrastructure Blueprint",
-    description: "Self‑healing, self‑optimizing, and self‑scaling platforms with budgeted actions and instant rollback.",
-    excerpt: "Operate autonomic infrastructure with KPIs, budgets, and deterministic rollback for 99.99% uptime.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-30",
-    category: "AI Operations",
-    tags: ["Autonomous Infra", "Rollback", "Scorecards"],
-    featured: true,
-    readTime: "9 min read",
-    image: "/images/ai-2029-autonomous-infra-blueprint.jpg",
-    newBadge: true,
+    id: "edge-personalization-2025",",
+    slug: "edge-personalization-2025",",
+    title: "Edge Personalization: Privacy‑First, Sub‑100ms Experiences",",
+    description: "Use on‑device signals, signed configs, and micro‑models to personalize without PII risk.",",
+    excerpt: "Blueprint for private, fast personalization using edge KV, tiny models, and freshness windows.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-09-29",",
+    category: "Edge Computing",",
+    tags: ["Edge", "Personalization", "Privacy", "Latency"],",
+    featured: true,,
+    readTime: "6 min read",",
+    image: "/images/edge-personalization-2025.jpg",",
+    id: "edge-personalization-2025","
+    slug: "edge-personalization-2025","
+    title: "Edge Personalization: Privacy‑First, Sub‑100ms Experiences","
+    description: "Use on‑device signals, signed configs, and micro‑models to personalize without PII risk.","
+    excerpt: "Blueprint for private, fast personalization using edge KV, tiny models, and freshness windows.","
+    author: "Zion Tech Group Team","
+    date: "2025-09-29","
+    category: "Edge Computing","
+    tags: ["Edge", "Personalization", "Privacy", "Latency"],"
+    featured: true,,
+    readTime: "6 min read","
+    image: "/images/edge-personalization-2025.jpg","
+    newBadge: true,,
     trending: true
   },
   {
-    id: "ai-2026-e2e-ai-tracing",
-    slug: "ai-2026-e2e-ai-tracing",
-    title: "E2E AI Tracing 2026: From Prompts to Outcomes",
-    description: "Instrument prompts, tools, calls, budgets, and KPIs with end‑to‑end traces.",
-    excerpt: "Trace‑driven reliability and cost control with rollback playbooks wired to spans.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-30",
-    category: "Observability",
-    tags: ["Tracing", "Observability", "Guardrails"],
-    featured: true,
-    readTime: "8 min read",
-    image: "/images/e2e-ai-tracing-2026.jpg",
-    newBadge: true,
+    id: "platform-golden-paths-kpis-2026",",
+    slug: "platform-golden-paths-kpis-2026",",
+    title: "Golden Paths That Move KPIs: Platform Engineering That Pays",",
+    description: "Adoption metrics, TTFX, and SLOs as leading indicators of platform ROI in 2026.",",
+    excerpt: "A scorecard system that links platform investments to shipped business outcomes.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-10-13",",
+    category: "Platform Engineering",",
+    tags: ["Golden Paths", "ROI", "Scorecards"],",
+    featured: true,,
+    readTime: "7 min read",",
+    image: "/images/platform-golden-paths-kpis-2026.jpg",",
+    id: "platform-golden-paths-kpis-2026","
+    slug: "platform-golden-paths-kpis-2026","
+    title: "Golden Paths That Move KPIs: Platform Engineering That Pays","
+    description: "Adoption metrics, TTFX, and SLOs as leading indicators of platform ROI in 2026.","
+    excerpt: "A scorecard system that links platform investments to shipped business outcomes.","
+    author: "Zion Tech Group Team","
+    date: "2025-10-13","
+    category: "Platform Engineering","
+    tags: ["Golden Paths", "ROI", "Scorecards"],"
+    featured: true,,
+    readTime: "7 min read","
+    image: "/images/platform-golden-paths-kpis-2026.jpg","
+    newBadge: true,,
     trending: true
   },
   {
-    id: "ai-2025-sept-30-enterprise-ai-safety-blueprint",
-    slug: "ai-2025-sept-30-enterprise-ai-safety-blueprint",
-    title: "AI 2025: Enterprise AI Safety Blueprint",
-    description: "KPI-linked scorecards, CI policy tests, canaries, and instant rollback to ship fast without regressions.",
-    excerpt: "Practical, adoption-friendly guardrails: scorecards wired to KPIs, CI policy tests, live canaries, instant rollback.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-30",
-    category: "AI Governance",
-    tags: ["Scorecards", "Policy Tests", "Rollback"],
-    featured: true,
-    readTime: "8 min read",
-    image: "/images/ai-2025-enterprise-ai-safety-blueprint.jpg",
-    newBadge: true,
+    id: "ai-platform-slos-2026",",
+    slug: "ai-platform-slos-2026",",
+    title: "AI Platform SLOs 2026: Budgets, Rollbacks, Live Canaries",",
+    description: "Design SLOs and risk budgets for AI with instant rollbacks and KPI‑linked canaries.",",
+    excerpt: "Ship faster with SLOs that budget risk and wire safe rollbacks.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-10-13",",
+    category: "AI Strategy",",
+    tags: ["Scorecards", "Governance", "Evals"],",
+    featured: true,,
+    readTime: "6 min read",",
+    image: "/images/ai-governance-scorecards-quickstart-2026.jpg",",
+    id: "ai-platform-slos-2026","
+    slug: "ai-platform-slos-2026","
+    title: "AI Platform SLOs 2026: Budgets, Rollbacks, Live Canaries","
+    description: "Design SLOs and risk budgets for AI with instant rollbacks and KPI‑linked canaries.","
+    excerpt: "Ship faster with SLOs that budget risk and wire safe rollbacks.","
+    author: "Zion Tech Group Team","
+    date: "2025-10-13","
+    category: "AI Strategy","
+    tags: ["Scorecards", "Governance", "Evals"],"
+    featured: true,,
+    readTime: "6 min read","
+    image: "/images/ai-governance-scorecards-quickstart-2026.jpg","
+    newBadge: true,,
     trending: true
   },
   {
-    id: "ai-2025-sept-30-autonomous-control-planes",
-    slug: "ai-2025-sept-30-autonomous-control-planes",
-    title: "AI 2025: Autonomous Control Planes — Budgets, Gates, Rollback",
-    description: "Design budget-aware, policy-gated AI platforms with instant rollback and KPI-linked guardrails.",
-    excerpt: "Operate AI safely at speed with budgets, canaries, policy tests, and instant rollback.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-30",
-    category: "AI Operations",
-    tags: ["Budgets", "Policy Tests", "Rollback"],
-    featured: true,
-    readTime: "9 min read",
-    image: "/images/ai-autonomous-control-planes-2025.jpg",
-    newBadge: true,
+    id: "ai-operational-excellence-blueprint-2026",",
+    slug: "ai-operational-excellence-blueprint-2026",",
+    title: "AI Operational Excellence Blueprint 2026",",
+    description: "Guardrails wired to KPIs with PR checks, canaries, and SLOs engineers adopt.",",
+    excerpt: "From policy to practice: playbooks that correlate with outcomes and speed teams up.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-10-13",",
+    category: "AI Strategy",",
+    tags: ["Guardrails", "KPIs", "SLOs"],",
+    featured: true,,
+    readTime: "8 min read",",
+    image: "/images/ai-operational-excellence-blueprint-2026.jpg",",
+    id: "ai-operational-excellence-blueprint-2026","
+    slug: "ai-operational-excellence-blueprint-2026","
+    title: "AI Operational Excellence Blueprint 2026","
+    description: "Guardrails wired to KPIs with PR checks, canaries, and SLOs engineers adopt.","
+    excerpt: "From policy to practice: playbooks that correlate with outcomes and speed teams up.","
+    author: "Zion Tech Group Team","
+    date: "2025-10-13","
+    category: "AI Strategy","
+    tags: ["Guardrails", "KPIs", "SLOs"],"
+    featured: true,,
+    readTime: "8 min read","
+    image: "/images/ai-operational-excellence-blueprint-2026.jpg","
+    newBadge: true,,
     trending: true
   },
   {
-    id: "ai-2026-runtime-rollback-blueprint",
-    slug: "ai-2026-runtime-rollback-blueprint",
-    title: "AI 2026: Runtime Rollback Blueprint",
-    description: "Instant rollback with KPI‑linked canaries and budgets—safe velocity under pressure.",
-    excerpt: "Wire budgets and KPI canaries to enable deterministic rollback in seconds without slowing teams.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-30",
-    category: "AI Operations",
-    tags: ["Rollback", "Budgets", "Canaries"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/ai-2026-runtime-rollback.jpg",
-    newBadge: true,
+    id: "policy-tests-quickstart-2025",",
+    slug: "policy-tests-quickstart-2025",",
+    title: "Policy Tests Quickstart: Ship Fast, Stay Safe",",
+    description: "Add lightweight policy tests to PRs and release trains to prevent regressions without slowing teams.",",
+    excerpt: "A practical starter for CI policy tests that catch risks while preserving velocity.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-09-29",",
+    category: "AI Governance",",
+    tags: ["Policy", "CI", "Guardrails", "Compliance"],",
+    featured: true,,
+    readTime: "6 min read",",
+    image: "/images/policy-tests-quickstart-2025.jpg",",
+    id: "policy-tests-quickstart-2025","
+    slug: "policy-tests-quickstart-2025","
+    title: "Policy Tests Quickstart: Ship Fast, Stay Safe","
+    description: "Add lightweight policy tests to PRs and release trains to prevent regressions without slowing teams.","
+    excerpt: "A practical starter for CI policy tests that catch risks while preserving velocity.","
+    author: "Zion Tech Group Team","
+    date: "2025-09-29","
+    category: "AI Governance","
+    tags: ["Policy", "CI", "Guardrails", "Compliance"],"
+    featured: true,,
+    readTime: "6 min read","
+    image: "/images/policy-tests-quickstart-2025.jpg","
+    newBadge: true,,
     trending: true
   },
   {
-    id: "edge-2026-attested-analytics",
-    slug: "edge-2026-attested-analytics",
-    title: "Edge 2026: Attested Analytics",
-    description: "Zero‑PII insights at <100ms with scoped IDs, DP noise, and signed attestations.",
-    excerpt: "Build verifiable, privacy‑first analytics pipelines with device aggregation and signed proofs.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-30",
-    category: "Analytics",
-    tags: ["Edge", "Privacy", "Attestations"],
-    featured: true,
-    readTime: "6 min read",
-    image: "/images/edge-2026-attested-analytics.jpg",
-    newBadge: true,
+    id: "ai-enterprise-security-2026",",
+    slug: "ai-enterprise-security-2026",",
+    title: "AI Enterprise Security 2026: Zero-Trust Architecture for AI Systems",",
+    description: "Comprehensive guide to implementing zero-trust security architecture for enterprise AI systems. Learn about AI-specific security challenges, best practices, and implementation strategies.",",
+    excerpt: "Implement AI-specific zero-trust principles with model validation and data lineage tracking for 99.9% security compliance.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-10-14",",
+    category: "AI Operations",",
+    tags: ["Autonomous", "Infra", "Runbooks"],",
+    featured: true,,
+    readTime: "9 min read",",
+    image: "/images/autonomous-infra-2026.jpg",",
+    id: "ai-enterprise-security-2026","
+    slug: "ai-enterprise-security-2026","
+    title: "AI Enterprise Security 2026: Zero-Trust Architecture for AI Systems","
+    description: "Comprehensive guide to implementing zero-trust security architecture for enterprise AI systems. Learn about AI-specific security challenges, best practices, and implementation strategies.","
+    excerpt: "Implement AI-specific zero-trust principles with model validation and data lineage tracking for 99.9% security compliance.","
+    author: "Zion Tech Group Team","
+    date: "2025-10-14","
+    category: "AI Operations","
+    tags: ["Autonomous", "Infra", "Runbooks"],"
+    featured: true,,
+    readTime: "9 min read","
+    image: "/images/autonomous-infra-2026.jpg","
+    newBadge: true,,
     trending: true
   },
   {
-    id: "genai-2027-economy-modes",
-    slug: "genai-2027-economy-modes",
-    title: "GenAI 2027: Economy Modes",
-    description: "Quality tiers, semantic caches, and token budgets for 40–70% savings.",
-    excerpt: "Cut spend while preserving UX using tiered routing, semantic caching, and eval gates.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-30",
-    category: "GenAI",
-    tags: ["FinOps", "Quality Tiers", "Caching"],
-    featured: true,
-    readTime: "8 min read",
-    image: "/images/genai-2027-economy-modes.jpg",
-    newBadge: true,
+    id: "quantum-ai-hybrid-2026",",
+    slug: "quantum-ai-hybrid-2026",",
+    title: "Quantum‑AI Hybrid 2026: When and How It Beats Classical",",
+    description: "Decision guide, reference patterns, and ROI scorecards for hybrid quantum + AI.",",
+    excerpt: "A practical field guide to hybrid quantum/AI workloads that matter in 2026.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-10-14",",
+    category: "Quantum Computing",",
+    tags: ["Quantum", "Hybrid", "Optimization"],",
+    featured: true,,
+    readTime: "8 min read",",
+    image: "/images/quantum-ai-hybrid-2026.jpg",",
+    id: "quantum-ai-hybrid-2026","
+    slug: "quantum-ai-hybrid-2026","
+    title: "Quantum‑AI Hybrid 2026: When and How It Beats Classical","
+    description: "Decision guide, reference patterns, and ROI scorecards for hybrid quantum + AI.","
+    excerpt: "A practical field guide to hybrid quantum/AI workloads that matter in 2026.","
+    author: "Zion Tech Group Team","
+    date: "2025-10-14","
+    category: "Quantum Computing","
+    tags: ["Quantum", "Hybrid", "Optimization"],"
+    featured: true,,
+    readTime: "8 min read","
+    image: "/images/quantum-ai-hybrid-2026.jpg","
+    newBadge: true,,
     trending: true
   },
   {
-    id: "ai-2028-autonomous-risk-budgets",
-    slug: "ai-2028-autonomous-risk-budgets",
-    title: "AI 2028: Autonomous Risk Budgets — Faster, Safer Releases",
-    description: "Live KPI‑linked budgets that automate guardrails across environments with instant rollback.",
-    excerpt: "Design autonomous risk budgets that keep teams fast while containing incidents in seconds.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-30",
-    category: "AI Operations",
-    tags: ["Risk Budgets", "Automation", "Rollback"],
-    featured: true,
-    readTime: "9 min read",
-    image: "/images/ai-2028-autonomous-risk-budgets.jpg",
-    newBadge: true,
+    id: "privacy-first-flags-2026",",
+    slug: "privacy-first-flags-2026",",
+    title: "Privacy‑First Feature Flags 2026: Scoped IDs, On‑Device Filters, KV",",
+    description: "Blueprint for progressive delivery under privacy and latency budgets.",",
+    excerpt: "Roll out globally with privacy by design using scoped IDs and local filters.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-10-14",",
+    category: "Architecture",",
+    tags: ["Feature Flags", "Privacy", "Edge"],",
+    featured: true,,
+    readTime: "7 min read",",
+    image: "/images/privacy-first-flags-2026.jpg",",
+    id: "privacy-first-flags-2026","
+    slug: "privacy-first-flags-2026","
+    title: "Privacy‑First Feature Flags 2026: Scoped IDs, On‑Device Filters, KV","
+    description: "Blueprint for progressive delivery under privacy and latency budgets.","
+    excerpt: "Roll out globally with privacy by design using scoped IDs and local filters.","
+    author: "Zion Tech Group Team","
+    date: "2025-10-14","
+    category: "Architecture","
+    tags: ["Feature Flags", "Privacy", "Edge"],"
+    featured: true,,
+    readTime: "7 min read","
+    image: "/images/privacy-first-flags-2026.jpg","
+    newBadge: true,,
     trending: true
   },
   {
-    id: "ai-2028-autonomous-enterprise-revolution",
-    slug: "ai-2028-autonomous-enterprise-revolution",
-    title: "AI 2028: Autonomous Enterprise Revolution",
-    description: "From pilots to production: self‑healing systems, budget‑aware routing, and verifiable outcomes.",
-    excerpt: "A field guide to scaling autonomy across the enterprise with measurable ROI and safety.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-01",
-    category: "AI Strategy",
-    tags: ["Autonomy", "Scaling", "Scorecards"],
-    featured: true,
-    readTime: "10 min read",
-    image: "/images/ai-2028-autonomous-enterprise.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "ai-2027-operational-risk-budgets",
-    slug: "ai-2027-operational-risk-budgets",
-    title: "AI 2027: Operational Risk Budgets — Ship Faster, Stay Safe",
-    description: "Budget‑aware routing, KPI‑linked canaries, and instant rollback to prevent incidents while increasing velocity.",
-    excerpt: "Design operational risk budgets that keep teams fast and incidents contained.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-30",
-    category: "AI Operations",
-    tags: ["Risk Budgets", "Canaries", "Rollback"],
-    featured: true,
-    readTime: "11 min read",
-    image: "/images/ai-operational-risk-budgets-2027.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "edge-2026-private-feature-flags",
-    slug: "edge-2026-private-feature-flags",
-    title: "Edge 2026: Private Feature Flags at <100ms",
-    description: "Signed configs, scoped IDs, and on‑device telemetry for zero‑PII rollouts worldwide under 100ms.",
-    excerpt: "Blueprint for privacy‑preserving progressive delivery using edge compute and KV.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-01",
-    category: "Architecture",
-    tags: ["Edge", "Feature Flags", "Privacy"],
-    featured: true,
-    readTime: "8 min read",
-    image: "/images/edge-flags-blueprint-2026.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "ai-executive-playbook-2027",
-    slug: "ai-executive-playbook-2027",
-    title: "AI Executive Playbook 2027: Fund, Govern, and Scale with KPIs",
-    description: "Executive‑ready roadmap: KPI‑linked scorecards, budgeted actions, and governance that accelerates delivery.",
-    excerpt: "Plan, fund, and govern reliable AI with measurable outcomes across the enterprise.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-03",
-    category: "AI Strategy",
-    tags: ["Strategy", "Scorecards", "Governance"],
-    featured: true,
-    readTime: "12 min read",
-    image: "/images/ai-executive-playbook-2027.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "ai-2026-e2e-ai-tracing",
-    slug: "ai-2026-e2e-ai-tracing",
-    title: "E2E AI Tracing 2026: From Prompts to Outcomes",
-    description: "Instrument prompts, tools, calls, budgets, and KPIs with end‑to‑end traces.",
-    excerpt: "A practical blueprint for trace‑driven reliability, cost control, and faster incident triage.",
-    author: "Zion Tech Group Team",
-    date: "2026-01-30",
-    category: "AI Operations",
-    tags: ["Tracing", "Observability", "Guardrails"],
-    featured: true,
-    readTime: "12 min read",
-    image: "/images/e2e-ai-tracing-2026.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "ai-2026-reliability-runbooks-v4",
-    slug: "ai-2026-reliability-runbooks-v4",
-    title: "AI 2026: Reliability Runbooks v4",
-    description: "Budgeted actions, KPI‑linked canaries, and instant rollback—now with v4 playbooks.",
-    excerpt: "Production‑ready runbooks that keep autonomy safe without slowing teams.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-30",
-    category: "AI Operations",
-    tags: ["Runbooks", "Guardrails", "Rollback"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/ai-2026-reliability-runbooks-v4.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "edge-2026-consentless-metrics-v2",
-    slug: "edge-2026-consentless-metrics-v2",
-    title: "Edge 2026: Consentless Metrics v2",
-    description: "Scoped IDs, on‑device aggregation, and DP noise for actionable signals—v2 patterns.",
-    excerpt: "Ship zero‑PII metrics at <100ms with audit‑ready pipelines.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-30",
-    category: "Analytics",
-    tags: ["Edge", "Privacy", "Analytics"],
-    featured: true,
-    readTime: "6 min read",
-    image: "/images/edge-2026-consentless-metrics-v2.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "ai-2027-operational-risk-budgets",
-    slug: "ai-2027-operational-risk-budgets",
-    title: "AI 2027: Operational Risk Budgets",
-    description: "KPI‑linked canaries, budgeted actions, and instant rollback for safe autonomy.",
-    excerpt: "Design operational risk budgets that keep teams fast and incidents contained.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-30",
-    category: "AI Strategy",
-    tags: ["Risk Budgets", "Canaries", "Rollback"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/ai-operational-risk-budgets-2027.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "edge-2027-consentless-analytics-v4",
-    slug: "edge-2027-consentless-analytics-v4",
-    title: "Edge 2027: Consentless Analytics v4",
-    description: "Zero‑PII analytics with scoped IDs, on‑device aggregation, and DP under 100ms.",
-    excerpt: "Actionable, compliant analytics at the edge without PII risk.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-30",
-    category: "Analytics",
-    tags: ["Edge", "Privacy", "DP"],
-    featured: true,
-    readTime: "6 min read",
-    image: "/images/edge-consentless-analytics-v4-2027.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "verifiable-edge-analytics-2026",
-    slug: "verifiable-edge-analytics-2026",
-    title: "Verifiable Edge Analytics 2026: Zero‑PII Insights with Attestations",
-    description: "Scoped IDs, on‑device aggregation, DP noise, and signed attestations for trustworthy insights under 100ms.",
-    excerpt: "Ship audit‑ready, privacy‑first analytics at the edge with verifiable pipelines and stable SLAs.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-31",
-    category: "Analytics",
-    tags: ["Edge", "Analytics", "Privacy", "Attestations"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/verifiable-edge-analytics-2026.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "ai-trust-scorecards-v5-2027",
-    slug: "ai-trust-scorecards-v5-2027",
-    title: "AI Trust Scorecards v5 (2027): KPIs, Budgets, Rollback",
-    description: "KPI‑linked scorecards with budgeted actions, live canaries, and instant rollback.",
-    excerpt: "Keep AI reliable and affordable with measurable guardrails wired to KPIs.",
-    author: "Zion Tech Group Team",
-    date: "2027-02-10",
-    category: "AI Governance",
-    tags: ["Scorecards", "Budgets", "Canaries"],
-    featured: true,
-    readTime: "8 min read",
-    image: "/images/ai-trust-scorecards-v5-2027.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "edge-private-evals-2026",
-    slug: "edge-private-evals-2026",
-    title: "Private Evals at the Edge (2026): Zero‑PII, <100ms",
-    description: "Scoped IDs, on‑device aggregation, and DP noise for compliant, actionable eval signals.",
-    excerpt: "Measure quality without collecting PII—evals that run where users are.",
-    author: "Zion Tech Group Team",
-    date: "2026-10-20",
-    category: "Analytics",
-    tags: ["Edge", "DP", "Privacy"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/edge-private-evals-2026.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "agentops-runbooks-v3-2026",
-    slug: "agentops-runbooks-v3-2026",
-    title: "AgentOps Runbooks v3 (2026): Budgeted Actions and Rollback",
-    description: "Approvals, KPI‑linked canaries, and one‑click rollback for safe autonomy.",
-    excerpt: "Operational playbooks that keep velocity high while containing risk.",
-    author: "Zion Tech Group Team",
-    date: "2026-10-18",
-    category: "AI Operations",
-    tags: ["Runbooks", "Automation", "Guardrails"],
-    featured: true,
-    readTime: "9 min read",
-    image: "/images/agentops-runbooks-v3-2026.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "genai-reliability-scorecards-2027",
-    slug: "genai-reliability-scorecards-2027",
-    title: "GenAI Reliability Scorecards 2027: KPIs, Budgets, Rollback",
-    description: "Live KPIs wired to budgets and instant rollback for reliable GenAI at scale.",
-    excerpt: "Keep GenAI reliable and affordable with scorecards that prevent regressions.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-30",
-    category: "AI Strategy",
-    tags: ["Scorecards", "Reliability", "GenAI"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/genai-reliability-scorecards-2027.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "edge-private-analytics-2027",
-    slug: "edge-private-analytics-2027",
-    title: "Edge Private Analytics 2027: Zero‑PII Insights <100ms",
-    description: "Scoped IDs, on‑device aggregation, and DP noise for actionable insights without PII.",
-    excerpt: "Ship consent‑safe analytics at the edge with privacy‑by‑design patterns.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-30",
-    category: "Observability",
-    tags: ["Edge", "Analytics", "Privacy"],
-    featured: true,
-    readTime: "6 min read",
-    image: "/images/edge-private-analytics-2027.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "genai-cache-playbook-2026",
-    slug: "genai-cache-playbook-2026",
-    title: "GenAI Cache Playbook 2026: Cut Cost 50% with Semantic Caches",
-    description: "Deploy tiered and semantic caches to slash GenAI spend while keeping UX stable.",
-    excerpt: "A practical caching playbook for predictable GenAI costs and performance.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-30",
-    category: "AI Operations",
-    tags: ["Caching", "Cost", "Performance"],
-    featured: true,
-    readTime: "8 min read",
-    image: "/images/genai-cache-playbook-2026.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "zero-trust-for-genai-2026",
-    slug: "zero-trust-for-genai-2026",
-    title: "Zero‑Trust for GenAI 2026: Prompt Firewalls and Signed Outputs",
-    description: "Production patterns: egress control, prompt firewalls, and signed outputs at scale.",
-    excerpt: "Ship GenAI safely with layered controls: prompt firewalls, egress policies, signing.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "Security",
-    tags: ["GenAI", "Security", "Zero‑Trust"],
-    featured: true,
-    readTime: "8 min read",
-    image: "/images/zero-trust-for-genai-2026.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "ai-safety-scorecards-2026",
-    slug: "ai-safety-scorecards-2026",
-    title: "AI Safety Scorecards 2026: PR Gates, Canaries, and SLAs",
-    description: "Practical scorecards that wire policy tests and online canaries to business KPIs.",
-    excerpt: "Ship fast with measurable guardrails: PR checks, live canaries, and outcome-linked SLAs.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "AI Strategy",
-    tags: ["Governance", "Evals", "Scorecards"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/ai-safety-scorecards-2026.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "edge-private-agents-2026",
-    slug: "edge-private-agents-2026",
-    title: "Edge Private Agents: Sub‑100ms Tools with On‑Device Privacy",
-    description: "Design assistant workflows with on‑device tools, signed configs, and geo budgets.",
-    excerpt: "Blueprint for private, reliable assistants that keep working offline and under budget.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "Edge Computing",
-    tags: ["Agents", "Edge", "Privacy"],
-    featured: false,
-    readTime: "8 min read",
-    image: "/images/edge-private-agents-2026.jpg",
-    newBadge: true,
+    id: "privacy-preserving-agents-2026",",
+    slug: "privacy-preserving-agents-2026",",
+    title: "Privacy‑Preserving Agents: Scoped IDs, Redaction, and Audits",",
+    description: "Keep telemetry rich and PII‑safe with field‑level filters and scoped identifiers.",",
+    excerpt: "A privacy blueprint for agent systems that satisfies legal and product needs.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-10-13",",
+    category: "AI Security",",
+    tags: ["Privacy", "Agents", "Compliance"],",
+    featured: false,,
+    readTime: "6 min read",",
+    image: "/images/privacy-preserving-agents-2026.jpg",",
+    id: "privacy-preserving-agents-2026","
+    slug: "privacy-preserving-agents-2026","
+    title: "Privacy‑Preserving Agents: Scoped IDs, Redaction, and Audits","
+    description: "Keep telemetry rich and PII‑safe with field‑level filters and scoped identifiers.","
+    excerpt: "A privacy blueprint for agent systems that satisfies legal and product needs.","
+    author: "Zion Tech Group Team","
+    date: "2025-10-13","
+    category: "AI Security","
+    tags: ["Privacy", "Agents", "Compliance"],"
+    featured: false,,
+    readTime: "6 min read","
+    image: "/images/privacy-preserving-agents-2026.jpg","
+    newBadge: true,,
     trending: false
   },
   {
-    id: "quantum-ai-hybrid-blueprint-2026",
-    slug: "quantum-ai-hybrid-blueprint-2026",
-    title: "Quantum‑AI Hybrid Blueprint 2026: Practical Near‑Term Wins",
-    description: "Blend quantum libraries with AI orchestration to unlock optimization wins today.",
-    excerpt: "Near‑term value from QC + AI: routing patterns and orchestration tips.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "Quantum",
-    tags: ["Quantum", "AI", "Optimization"],
-    featured: false,
-    readTime: "9 min read",
-    image: "/images/quantum-ai-hybrid-blueprint-2026.jpg",
-    newBadge: true,
+    id: "reliable-rag-ops-2026",",
+    slug: "reliable-rag-ops-2026",",
+    title: "Reliable RAG Ops 2026: Freshness, Drift, and Quality Budgets",",
+    description: "Operate RAG at scale with TTL freshness windows, drift monitors, and KPI‑tied budgets.",",
+    excerpt: "A production playbook to keep RAG answers accurate without blowing budgets.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-10-12",",
+    category: "GenAI",",
+    tags: ["RAG", "Freshness", "Quality"],",
+    featured: true,,
+    readTime: "8 min read",",
+    image: "/images/reliable-rag-ops-2026.jpg",",
+    id: "reliable-rag-ops-2026","
+    slug: "reliable-rag-ops-2026","
+    title: "Reliable RAG Ops 2026: Freshness, Drift, and Quality Budgets","
+    description: "Operate RAG at scale with TTL freshness windows, drift monitors, and KPI‑tied budgets.","
+    excerpt: "A production playbook to keep RAG answers accurate without blowing budgets.","
+    author: "Zion Tech Group Team","
+    date: "2025-10-12","
+    category: "GenAI","
+    tags: ["RAG", "Freshness", "Quality"],"
+    featured: true,,
+    readTime: "8 min read","
+    image: "/images/reliable-rag-ops-2026.jpg","
+    newBadge: true,,
     trending: true
   },
   {
-    id: "secure-ml-supply-chain-2026",
-    slug: "secure-ml-supply-chain-2026",
-    title: "Secure ML Supply Chain 2026: SBOMs, Attestations, and Drift Guards",
-    description: "Continuously track models, datasets, and prompts with signed SBOMs and policy checks.",
-    excerpt: "Stop ML supply‑chain drift with automated SBOMs, attestations, and CI policy gates.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-13",
-    category: "Security",
-    tags: ["ML", "Supply Chain", "SBOM", "Security"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/secure-ml-supply-chain-2026.jpg",
-    newBadge: true,
+    id: "privacy-first-feature-flags-2026",",
+    slug: "privacy-first-feature-flags-2026",",
+    title: "Privacy‑First Feature Flags: Geo, Account, and Scope Budgets",",
+    description: "Privacy‑aware flags with scoped IDs, DP noise, and instant rollback at the edge.",",
+    excerpt: "Blueprint for compliant, sub‑100ms progressive delivery with budgets and telemetry.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-10-13",",
+    category: "Architecture",",
+    tags: ["Feature Flags", "Privacy", "Edge"],",
+    featured: false,,
+    readTime: "6 min read",",
+    image: "/images/privacy-first-flags-2026.jpg",",
+    id: "privacy-first-feature-flags-2026","
+    slug: "privacy-first-feature-flags-2026","
+    title: "Privacy‑First Feature Flags: Geo, Account, and Scope Budgets","
+    description: "Privacy‑aware flags with scoped IDs, DP noise, and instant rollback at the edge.","
+    excerpt: "Blueprint for compliant, sub‑100ms progressive delivery with budgets and telemetry.","
+    author: "Zion Tech Group Team","
+    date: "2025-10-13","
+    category: "Architecture","
+    tags: ["Feature Flags", "Privacy", "Edge"],"
+    featured: false,,
+    readTime: "6 min read","
+    image: "/images/privacy-first-flags-2026.jpg","
+    newBadge: true,,
     trending: true
   },
   {
-    id: "ai-risk-mitigation-scorecards-2026",
-    slug: "ai-risk-mitigation-scorecards-2026",
-    title: "AI Risk Mitigation Scorecards 2026: From Policy to Practice",
-    description: "Scorecards with owners, SLAs, and CI policy checks that drive action and outcomes.",
-    excerpt: "Make risk programs actionable with owned mitigations, policy tests, and measurable SLAs.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-14",
-    category: "AI Governance",
-    tags: ["Risk", "Scorecards", "Policy"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/ai-risk-mitigation-scorecards-2026.jpg",
-    newBadge: true,
+    id: "cost-aware-agents-2026",",
+    slug: "cost-aware-agents-2026",",
+    title: "Cost‑Aware Agent Workflows: Tiered Quality Without UX Regressions",",
+    description: "Budget‑aware routing with traces, fallback behaviors, and user‑safe tools.",",
+    excerpt: "Keep cost predictable with tiered models and UX‑safe fallbacks tied to SLAs.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-10-13",",
+    category: "AI Operations",",
+    tags: ["Agents", "Budgets", "SLAs"],",
+    featured: true,,
+    readTime: "7 min read",",
+    image: "/images/cost-aware-agents-2026.jpg",",
+    id: "cost-aware-agents-2026","
+    slug: "cost-aware-agents-2026","
+    title: "Cost‑Aware Agent Workflows: Tiered Quality Without UX Regressions","
+    description: "Budget‑aware routing with traces, fallback behaviors, and user‑safe tools.","
+    excerpt: "Keep cost predictable with tiered models and UX‑safe fallbacks tied to SLAs.","
+    author: "Zion Tech Group Team","
+    date: "2025-10-13","
+    category: "AI Operations","
+    tags: ["Agents", "Budgets", "SLAs"],"
+    featured: true,,
+    readTime: "7 min read","
+    image: "/images/cost-aware-agents-2026.jpg","
+    newBadge: true,,
     trending: true
   },
   {
-    id: "edge-privacy-telemetry-2026",
-    slug: "edge-privacy-telemetry-2026",
-    title: "Edge Privacy Telemetry 2026: Scoped IDs, Local Caches, DP Noise",
-    description: "Keep insights rich and PII risk low with privacy‑first telemetry patterns at the edge.",
-    excerpt: "Privacy‑preserving analytics at the edge with scoped identifiers and on‑device redaction.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-14",
-    category: "Observability",
-    tags: ["Privacy", "Edge", "Telemetry"],
-    featured: false,
-    readTime: "6 min read",
-    image: "/images/edge-privacy-telemetry-2026.jpg",
-    newBadge: true,
+    id: "platform-kpis-2026",",
+    slug: "platform-kpis-2026",",
+    title: "Platform KPIs 2026: Adoption, Golden Paths, and SLOs",",
+    description: "Scorecards engineers adopt—link platform telemetry to shipped business outcomes.",",
+    excerpt: "From costs to value: KPIs that prove platform ROI quarter by quarter.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-10-12",",
+    category: "Platform Engineering",",
+    tags: ["KPIs", "Scorecards", "Platform"],",
+    featured: true,,
+    readTime: "7 min read",",
+    image: "/images/platform-kpis-2026.jpg",",
+    id: "platform-kpis-2026","
+    slug: "platform-kpis-2026","
+    title: "Platform KPIs 2026: Adoption, Golden Paths, and SLOs","
+    description: "Scorecards engineers adopt—link platform telemetry to shipped business outcomes.","
+    excerpt: "From costs to value: KPIs that prove platform ROI quarter by quarter.","
+    author: "Zion Tech Group Team","
+    date: "2025-10-12","
+    category: "Platform Engineering","
+    tags: ["KPIs", "Scorecards", "Platform"],"
+    featured: true,,
+    readTime: "7 min read","
+    image: "/images/platform-kpis-2026.jpg","
+    newBadge: true,,
     trending: true
   },
   {
-    id: "genai-routing-blueprint-2026",
-    slug: "genai-routing-blueprint-2026",
-    title: "GenAI Routing Blueprint 2026: Quality Tiers, Caches, and Budgets",
-    description: "Route traffic by SLA with tiered models, edge caches, and KPI‑linked budgets.",
-    excerpt: "A practical guide to keep costs predictable without hurting UX or outcomes.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-13",
-    category: "GenAI",
-    tags: ["Routing", "Quality Tiers", "Budgets", "Caching"],
-    featured: true,
-    readTime: "8 min read",
-    image: "/images/genai-routing-blueprint-2026.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "golden-paths-roi-2026",
-    slug: "golden-paths-roi-2026",
-    title: "Golden Paths ROI 2026: Scorecards that Prove Platform Value",
-    description: "Link developer journeys to SLOs, adoption, and revenue with actionable scorecards.",
-    excerpt: "Shift platform conversations from infra spend to shipped outcomes and ROI.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-13",
-    category: "Platform Engineering",
-    tags: ["Golden Paths", "Scorecards", "ROI"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/golden-paths-roi-2026.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "reliable-rag-ops-2026",
-    slug: "reliable-rag-ops-2026",
-    title: "Reliable RAG Ops 2026: Freshness, Drift, and Quality Budgets",
-    description: "Operate RAG at scale with TTL freshness windows, drift monitors, and KPI‑tied budgets.",
-    excerpt: "A production playbook to keep RAG answers accurate without blowing budgets.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-12",
-    category: "GenAI",
-    tags: ["RAG", "Freshness", "Quality"],
-    featured: true,
-    readTime: "8 min read",
-    image: "/images/reliable-rag-ops-2026.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "agent-evals-scorecards-2026",
-    slug: "agent-evals-scorecards-2026",
-    title: "Agent Evals 2026: Scorecards That Predict Outcomes",
-    description: "Online evals wired to KPIs—scorecards that correlate with revenue, CSAT, and retention.",
-    excerpt: "A practical playbook for evals that protect velocity and predict business outcomes.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-13",
-    category: "GenAI",
-    tags: ["Evals", "Scorecards", "KPIs"],
-    featured: true,
-    readTime: "8 min read",
-    image: "/images/agent-evals-scorecards-2026.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "privacy-preserving-agents-2026",
-    slug: "privacy-preserving-agents-2026",
-    title: "Privacy‑Preserving Agents: Scoped IDs, Redaction, and On‑Device Caches",
-    description: "Build assistants that keep insights high and PII risk low with scoped identifiers and local caches.",
-    excerpt: "Implement privacy by design for agent workflows without losing observability.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-13",
-    category: "AI Security",
-    tags: ["Privacy", "Agents", "Security"],
-    featured: false,
-    readTime: "7 min read",
-    image: "/images/privacy-preserving-agents-2026.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "platform-kpis-2026",
-    slug: "platform-kpis-2026",
-    title: "Platform KPIs 2026: Adoption, Golden Paths, and SLOs",
-    description: "Scorecards engineers adopt—link platform telemetry to shipped business outcomes.",
-    excerpt: "From costs to value: KPIs that prove platform ROI quarter by quarter.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-12",
-    category: "Platform Engineering",
-    tags: ["KPIs", "Scorecards", "Platform"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/platform-kpis-2026.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "ai-incident-budgets-2026",
-    slug: "ai-incident-budgets-2026",
-    title: "AI Incident Budgets: Playbooks That Contain in <60s",
-    description: "Budgeted actions, approvals, and rollback triggers for safe automation under pressure.",
-    excerpt: "Close the loop from detections to actions with KPI‑wired incident budgets.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-12",
-    category: "Security",
-    tags: ["Incident Response", "Automation", "Guardrails"],
-    featured: false,
-    readTime: "6 min read",
-    image: "/images/ai-incident-budgets-2026.jpg",
-    newBadge: true,
+    id: "ai-incident-budgets-2026",",
+    slug: "ai-incident-budgets-2026",",
+    title: "AI Incident Budgets: Playbooks That Contain in <60s ",",
+    description: "Budgeted actions, approvals, and rollback triggers for safe automation under pressure.",",
+    excerpt: "Close the loop from detections to actions with KPI‑wired incident budgets.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-10-12",",
+    category: "Security",",
+    tags: ["Incident Response", "Automation", "Guardrails"],",
+    featured: false,,
+    readTime: "6 min read",",
+    image: "/images/ai-incident-budgets-2026.jpg",",
+    id: "ai-incident-budgets-2026","
+    slug: "ai-incident-budgets-2026","
+    title: "AI Incident Budgets: Playbooks That Contain in <60s","
+    description: "Budgeted actions, approvals, and rollback triggers for safe automation under pressure.","
+    excerpt: "Close the loop from detections to actions with KPI‑wired incident budgets.","
+    author: "Zion Tech Group Team","
+    date: "2025-10-12","
+    category: "Security","
+    tags: ["Incident Response", "Automation", "Guardrails"],"
+    featured: false,,
+    readTime: "6 min read","
+    image: "/images/ai-incident-budgets-2026.jpg","
+    newBadge: true,,
     trending: false
   },
   {
-    id: "ai-incident-response-playbooks-2025",
-    slug: "ai-incident-response-playbooks-2025",
-    title: "AI Incident Response Playbooks: Contain in <60s with Confidence",
-    description: "From detections to safe actions: policy-tested playbooks and rollback-ready automations.",
-    excerpt: "Design incident playbooks with budgeted actions, approvals, and telemetry that close the loop fast.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "Cybersecurity",
-    tags: ["IR", "Automation", "Guardrails"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/ai-incident-response-playbooks-2025.jpg",
-    newBadge: true,
+    id: "ai-incident-response-playbooks-2025",",
+    slug: "ai-incident-response-playbooks-2025",",
+    title: "AI Incident Response Playbooks: Contain in <60s with Confidence",",
+    description: "From detections to safe actions: policy-tested playbooks and rollback-ready automations.",",
+    excerpt: "Design incident playbooks with budgeted actions, approvals, and telemetry that close the loop fast.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-09-29",",
+    category: "Cybersecurity",",
+    tags: ["IR", "Automation", "Guardrails"],",
+    featured: true,,
+    readTime: "7 min read",",
+    image: "/images/ai-incident-response-playbooks-2025.jpg",",
+    id: "ai-incident-response-playbooks-2025","
+    slug: "ai-incident-response-playbooks-2025","
+    title: "AI Incident Response Playbooks: Contain in <60s with Confidence","
+    description: "From detections to safe actions: policy-tested playbooks and rollback-ready automations.","
+    excerpt: "Design incident playbooks with budgeted actions, approvals, and telemetry that close the loop fast.","
+    author: "Zion Tech Group Team","
+    date: "2025-09-29","
+    category: "Cybersecurity","
+    tags: ["IR", "Automation", "Guardrails"],"
+    featured: true,,
+    readTime: "7 min read","
+    image: "/images/ai-incident-response-playbooks-2025.jpg","
+    newBadge: true,,
     trending: true
   },
   {
-    id: "privacy-preserving-analytics-2025",
-    slug: "privacy-preserving-analytics-2025",
-    title: "Privacy‑Preserving Analytics: Ship Insights Without PII Risk",
-    description: "On-device redaction, scoped IDs, and DP noise for compliant, decision-grade telemetry.",
-    excerpt: "A practical blueprint for analytics that respect privacy while keeping signals rich.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "Observability",
-    tags: ["Privacy", "Telemetry", "Compliance"],
-    featured: true,
-    readTime: "8 min read",
-    image: "/images/privacy-preserving-analytics-2025.jpg",
-    newBadge: true,
+    id: "privacy-preserving-analytics-2025",",
+    slug: "privacy-preserving-analytics-2025",",
+    title: "Privacy‑Preserving Analytics: Ship Insights Without PII Risk",",
+    description: "On-device redaction, scoped IDs, and DP noise for compliant, decision-grade telemetry.",",
+    excerpt: "A practical blueprint for analytics that respect privacy while keeping signals rich.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-09-29",",
+    category: "Observability",",
+    tags: ["Privacy", "Telemetry", "Compliance"],",
+    featured: true,,
+    readTime: "8 min read",",
+    image: "/images/privacy-preserving-analytics-2025.jpg",",
+    id: "privacy-preserving-analytics-2025","
+    slug: "privacy-preserving-analytics-2025","
+    title: "Privacy‑Preserving Analytics: Ship Insights Without PII Risk","
+    description: "On-device redaction, scoped IDs, and DP noise for compliant, decision-grade telemetry.","
+    excerpt: "A practical blueprint for analytics that respect privacy while keeping signals rich.","
+    author: "Zion Tech Group Team","
+    date: "2025-09-29","
+    category: "Observability","
+    tags: ["Privacy", "Telemetry", "Compliance"],"
+    featured: true,,
+    readTime: "8 min read","
+    image: "/images/privacy-preserving-analytics-2025.jpg","
+    newBadge: true,,
     trending: true
   },
   {
-    id: "platform-engineering-scorecards-2026",
-    slug: "platform-engineering-scorecards-2026",
-    title: "Platform Engineering Scorecards 2026: Golden Paths that Drive Outcomes",
-    description: "Adoption, golden-path TTFX, and SLOs as leading indicators of platform ROI.",
-    excerpt: "A pragmatic scorecard system engineers actually use—wired to shipped value.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-09",
-    category: "Platform Engineering",
-    tags: ["Scorecards", "Golden Paths", "ROI", "Platform"],
-    featured: true,
-    readTime: "8 min read",
-    image: "/images/platform-engineering-scorecards-2026.jpg",
-    newBadge: true,
+    id: "platform-engineering-scorecards-2026",",
+    slug: "platform-engineering-scorecards-2026",",
+    title: "Platform Engineering Scorecards 2026: Golden Paths that Drive Outcomes",",
+    description: "Adoption, golden-path TTFX, and SLOs as leading indicators of platform ROI.",",
+    excerpt: "A pragmatic scorecard system engineers actually use—wired to shipped value.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-10-09",",
+    category: "Platform Engineering",",
+    tags: ["Scorecards", "Golden Paths", "ROI", "Platform"],",
+    featured: true,,
+    readTime: "8 min read",",
+    image: "/images/platform-engineering-scorecards-2026.jpg",",
+    id: "platform-engineering-scorecards-2026","
+    slug: "platform-engineering-scorecards-2026","
+    title: "Platform Engineering Scorecards 2026: Golden Paths that Drive Outcomes","
+    description: "Adoption, golden-path TTFX, and SLOs as leading indicators of platform ROI.","
+    excerpt: "A pragmatic scorecard system engineers actually use—wired to shipped value.","
+    author: "Zion Tech Group Team","
+    date: "2025-10-09","
+    category: "Platform Engineering","
+    tags: ["Scorecards", "Golden Paths", "ROI", "Platform"],"
+    featured: true,,
+    readTime: "8 min read","
+    image: "/images/platform-engineering-scorecards-2026.jpg","
+    newBadge: true,,
     trending: true
   },
   {
-    id: "ai-cybersecurity-automation-2025",
-    slug: "ai-cybersecurity-automation-2025",
-    title: "AI Cybersecurity Automation: Autonomic Response Under 60s",
-    description: "Behavioral detections, policy tests, and playbooks that auto-contain incidents fast.",
-    excerpt: "From detections to actions: close the loop with safe automation and SLAs.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-09",
-    category: "Cybersecurity",
-    tags: ["Security", "Automation", "Detection", "Response"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/ai-cybersecurity-automation.jpg",
-    newBadge: true,
+    id: "ai-cybersecurity-automation-2025",",
+    slug: "ai-cybersecurity-automation-2025",",
+    title: "AI Cybersecurity Automation: Autonomic Response Under 60s",",
+    description: "Behavioral detections, policy tests, and playbooks that auto-contain incidents fast.",",
+    excerpt: "From detections to actions: close the loop with safe automation and SLAs.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-10-09",",
+    category: "Cybersecurity",",
+    tags: ["Security", "Automation", "Detection", "Response"],",
+    featured: true,,
+    readTime: "7 min read",",
+    image: "/images/ai-cybersecurity-automation.jpg",",
+    id: "ai-cybersecurity-automation-2025","
+    slug: "ai-cybersecurity-automation-2025","
+    title: "AI Cybersecurity Automation: Autonomic Response Under 60s","
+    description: "Behavioral detections, policy tests, and playbooks that auto-contain incidents fast.","
+    excerpt: "From detections to actions: close the loop with safe automation and SLAs.","
+    author: "Zion Tech Group Team","
+    date: "2025-10-09","
+    category: "Cybersecurity","
+    tags: ["Security", "Automation", "Detection", "Response"],"
+    featured: true,,
+    readTime: "7 min read","
+    image: "/images/ai-cybersecurity-automation.jpg","
+    newBadge: true,,
     trending: true
   },
   {
-    id: "edge-ai-blueprint-2026",
-    slug: "edge-ai-blueprint-2026",
-    title: "Edge AI Blueprint 2026: Privacy‑Preserving Intelligence <100ms",
-    description: "Signed configs, geo budgets, and tiny models for reliable edge decisions.",
-    excerpt: "A field guide to building private, low‑latency edge AI systems at scale.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-09",
-    category: "Edge Computing",
-    tags: ["Edge AI", "Latency", "Privacy", "On‑device"],
-    featured: true,
-    readTime: "9 min read",
-    image: "/images/edge-ai-blueprint-2026.jpg",
-    newBadge: true,
+    id: "edge-ai-blueprint-2026",",
+    slug: "edge-ai-blueprint-2026",",
+    title: "Edge AI Blueprint 2026: Privacy‑Preserving Intelligence <100ms",",
+    description: "Signed configs, geo budgets, and tiny models for reliable edge decisions.",",
+    excerpt: "A field guide to building private, low‑latency edge AI systems at scale.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-10-09",",
+    category: "Edge Computing",",
+    tags: ["Edge AI", "Latency", "Privacy", "On‑device"],",
+    featured: true,,
+    readTime: "9 min read",",
+    image: "/images/edge-ai-blueprint-2026.jpg",",
+    id: "edge-ai-blueprint-2026","
+    slug: "edge-ai-blueprint-2026","
+    title: "Edge AI Blueprint 2026: Privacy‑Preserving Intelligence <100ms","
+    description: "Signed configs, geo budgets, and tiny models for reliable edge decisions.","
+    excerpt: "A field guide to building private, low‑latency edge AI systems at scale.","
+    author: "Zion Tech Group Team","
+    date: "2025-10-09","
+    category: "Edge Computing","
+    tags: ["Edge AI", "Latency", "Privacy", "On‑device"],"
+    featured: true,,
+    readTime: "9 min read","
+    image: "/images/edge-ai-blueprint-2026.jpg","
+    newBadge: true,,
     trending: true
   },
   {
-    id: "llm-policy-testing-2025",
-    slug: "llm-policy-testing-2025",
-    title: "LLM Policy Testing in CI: Ship Fast, Stay Safe",
-    description: "Automate governance with lightweight policy tests on every PR and release train.",
-    excerpt: "Policy tests wired to CI keep AI features safe without slowing delivery.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-08",
-    category: "AI Governance",
-    tags: ["Policy", "CI", "Governance", "Evals"],
-    featured: true,
-    readTime: "6 min read",
-    image: "/images/ai-governance-blueprint.jpg",
-    newBadge: true,
+    id: "llm-policy-testing-2025",",
+    slug: "llm-policy-testing-2025",",
+    title: "LLM Policy Testing in CI: Ship Fast, Stay Safe",",
+    description: "Automate governance with lightweight policy tests on every PR and release train.",",
+    excerpt: "Policy tests wired to CI keep AI features safe without slowing delivery.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-10-08",",
+    category: "AI Governance",",
+    tags: ["Policy", "CI", "Governance", "Evals"],",
+    featured: true,,
+    readTime: "6 min read",",
+    image: "/images/ai-governance-blueprint.jpg",",
+    id: "llm-policy-testing-2025","
+    slug: "llm-policy-testing-2025","
+    title: "LLM Policy Testing in CI: Ship Fast, Stay Safe","
+    description: "Automate governance with lightweight policy tests on every PR and release train.","
+    excerpt: "Policy tests wired to CI keep AI features safe without slowing delivery.","
+    author: "Zion Tech Group Team","
+    date: "2025-10-08","
+    category: "AI Governance","
+    tags: ["Policy", "CI", "Governance", "Evals"],"
+    featured: true,,
+    readTime: "6 min read","
+    image: "/images/ai-governance-blueprint.jpg","
+    newBadge: true,,
     trending: true
   },
   {
-    id: "ai-operational-scorecards-2026",
-    slug: "ai-operational-scorecards-2026",
-    title: "AI Operational Scorecards 2026: Guardrails That Drive Outcomes",
-    description: "Guardrails wired to KPIs with PR checks, canaries, and SLOs engineers adopt",
-    excerpt: "From policy to practice: scorecards that correlate with outcomes and speed teams up.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-09",
-    category: "AI Strategy",
-    tags: ["Governance", "Scorecards", "Evals"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/ai-operational-scorecards.jpg",
-    newBadge: true,
+    id: "ai-operational-scorecards-2026",",
+    slug: "ai-operational-scorecards-2026",",
+    title: "AI Operational Scorecards 2026: Guardrails That Drive Outcomes",",
+    description: "Guardrails wired to KPIs with PR checks, canaries, and SLOs engineers adopt",",
+    excerpt: "From policy to practice: scorecards that correlate with outcomes and speed teams up.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-10-09",",
+    category: "AI Strategy",",
+    tags: ["Governance", "Scorecards", "Evals"],",
+    featured: true,,
+    readTime: "7 min read",",
+    image: "/images/ai-operational-scorecards.jpg",",
+    id: "ai-operational-scorecards-2026","
+    slug: "ai-operational-scorecards-2026","
+    title: "AI Operational Scorecards 2026: Guardrails That Drive Outcomes","
+    description: "Guardrails wired to KPIs with PR checks, canaries, and SLOs engineers adopt","
+    excerpt: "From policy to practice: scorecards that correlate with outcomes and speed teams up.","
+    author: "Zion Tech Group Team","
+    date: "2025-10-09","
+    category: "AI Strategy","
+    tags: ["Governance", "Scorecards", "Evals"],"
+    featured: true,,
+    readTime: "7 min read","
+    image: "/images/ai-operational-scorecards.jpg","
+    newBadge: true,,
     trending: true
   },
   {
-    id: "edge-llm-caching-blueprint-2025",
-    slug: "edge-llm-caching-blueprint-2025",
-    title: "Edge LLM Caching: Latency Budgets, KV Patterns, and Cost Control",
-    description: "Sub-100ms prompts with tiered caches, signed configs, and freshness windows.",
-    excerpt: "Cut latency and cost with edge caches and deterministic fallbacks.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-09",
-    category: "Architecture",
-    tags: ["Edge", "Caching", "LLM"],
-    featured: true,
-    readTime: "6 min read",
-    image: "/images/edge-llm-caching.jpg",
-    newBadge: true,
+    id: "edge-llm-caching-blueprint-2025",",
+    slug: "edge-llm-caching-blueprint-2025",",
+    title: "Edge LLM Caching: Latency Budgets, KV Patterns, and Cost Control",",
+    description: "Sub-100ms prompts with tiered caches, signed configs, and freshness windows.",",
+    excerpt: "Cut latency and cost with edge caches and deterministic fallbacks.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-10-09",",
+    category: "Architecture",",
+    tags: ["Edge", "Caching", "LLM"],",
+    featured: true,,
+    readTime: "6 min read",",
+    image: "/images/edge-llm-caching.jpg",",
+    id: "edge-llm-caching-blueprint-2025","
+    slug: "edge-llm-caching-blueprint-2025","
+    title: "Edge LLM Caching: Latency Budgets, KV Patterns, and Cost Control","
+    description: "Sub-100ms prompts with tiered caches, signed configs, and freshness windows.","
+    excerpt: "Cut latency and cost with edge caches and deterministic fallbacks.","
+    author: "Zion Tech Group Team","
+    date: "2025-10-09","
+    category: "Architecture","
+    tags: ["Edge", "Caching", "LLM"],"
+    featured: true,,
+    readTime: "6 min read","
+    image: "/images/edge-llm-caching.jpg","
+    newBadge: true,,
     trending: true
   },
   {
-    id: "finops-scorecards-2025",
-    slug: "finops-scorecards-2025",
-    title: "FinOps Scorecards: Guardrails Engineers Actually Use",
-    description: "Budgets, PR checks, and alerts that cut cloud waste 25–40% without slowing teams.",
-    excerpt: "A practical FinOps playbook with scorecards tied to product goals.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-08",
-    category: "Cloud",
-    tags: ["FinOps", "Cloud", "Budgets", "Governance"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/cloud-finops-guardrails.jpg",
-    newBadge: true,
+    id: "finops-scorecards-2025",",
+    slug: "finops-scorecards-2025",",
+    title: "FinOps Scorecards: Guardrails Engineers Actually Use",",
+    description: "Budgets, PR checks, and alerts that cut cloud waste 25–40% without slowing teams.",",
+    excerpt: "A practical FinOps playbook with scorecards tied to product goals.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-10-08",",
+    category: "Cloud",",
+    tags: ["FinOps", "Cloud", "Budgets", "Governance"],",
+    featured: true,,
+    readTime: "7 min read",",
+    image: "/images/cloud-finops-guardrails.jpg",",
+    id: "finops-scorecards-2025","
+    slug: "finops-scorecards-2025","
+    title: "FinOps Scorecards: Guardrails Engineers Actually Use","
+    description: "Budgets, PR checks, and alerts that cut cloud waste 25–40% without slowing teams.","
+    excerpt: "A practical FinOps playbook with scorecards tied to product goals.","
+    author: "Zion Tech Group Team","
+    date: "2025-10-08","
+    category: "Cloud","
+    tags: ["FinOps", "Cloud", "Budgets", "Governance"],"
+    featured: true,,
+    readTime: "7 min read","
+    image: "/images/cloud-finops-guardrails.jpg","
+    newBadge: true,,
     trending: true
   },
   {
-    id: "enterprise-rag-blueprint-2025",
-    slug: "enterprise-rag-blueprint-2025",
-    title: "Enterprise RAG Blueprint v2: Freshness, Hybrid Search, Auth",
-    description: "A pragmatic blueprint for RAG at scale with freshness windows and layered evals.",
-    excerpt: "Keep answers accurate with freshness windows and hybrid retrieval patterns.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-08",
-    category: "GenAI",
-    tags: ["RAG", "Freshness", "Hybrid Search", "Auth"],
-    featured: true,
-    readTime: "9 min read",
-    image: "/images/enterprise-rag-v2.jpg",
-    newBadge: true,
+    id: "enterprise-rag-blueprint-2025",",
+    slug: "enterprise-rag-blueprint-2025",",
+    title: "Enterprise RAG Blueprint v2: Freshness, Hybrid Search, Auth",",
+    description: "A pragmatic blueprint for RAG at scale with freshness windows and layered evals.",",
+    excerpt: "Keep answers accurate with freshness windows and hybrid retrieval patterns.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-10-08",",
+    category: "GenAI",",
+    tags: ["RAG", "Freshness", "Hybrid Search", "Auth"],",
+    featured: true,,
+    readTime: "9 min read",",
+    image: "/images/enterprise-rag-v2.jpg",",
+    id: "enterprise-rag-blueprint-2025","
+    slug: "enterprise-rag-blueprint-2025","
+    title: "Enterprise RAG Blueprint v2: Freshness, Hybrid Search, Auth","
+    description: "A pragmatic blueprint for RAG at scale with freshness windows and layered evals.","
+    excerpt: "Keep answers accurate with freshness windows and hybrid retrieval patterns.","
+    author: "Zion Tech Group Team","
+    date: "2025-10-08","
+    category: "GenAI","
+    tags: ["RAG", "Freshness", "Hybrid Search", "Auth"],"
+    featured: true,,
+    readTime: "9 min read","
+    image: "/images/enterprise-rag-v2.jpg","
+    newBadge: true,,
     trending: true
   },
   {
-    id: "ai-governance-scorecards-2026",
-    slug: "ai-governance-scorecards-2026",
-    title: "AI Governance 2026: Scorecards Engineers Actually Use",
-    description: "Practical guardrails wired to KPIs, PR checks, and online canaries that teams adopt.",
-    excerpt: "Move beyond heavy process. Ship fast with measurable guardrails, policy tests, and rollback‑ready canaries.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-07",
-    category: "AI Strategy",
-    tags: ["Governance", "Policy", "Scorecards", "Evals"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/ai-governance-scorecards-2026.jpg",
-    newBadge: true,
+    id: "ai-governance-scorecards-2026",",
+    slug: "ai-governance-scorecards-2026",",
+    title: "AI Governance 2026: Scorecards Engineers Actually Use",",
+    description: "Practical guardrails wired to KPIs, PR checks, and online canaries that teams adopt.",",
+    excerpt: "Move beyond heavy process. Ship fast with measurable guardrails, policy tests, and rollback‑ready canaries.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-10-07",",
+    category: "AI Strategy",",
+    tags: ["Governance", "Policy", "Scorecards", "Evals"],",
+    featured: true,,
+    readTime: "7 min read",",
+    image: "/images/ai-governance-scorecards-2026.jpg",",
+    id: "ai-governance-scorecards-2026","
+    slug: "ai-governance-scorecards-2026","
+    title: "AI Governance 2026: Scorecards Engineers Actually Use","
+    description: "Practical guardrails wired to KPIs, PR checks, and online canaries that teams adopt.","
+    excerpt: "Move beyond heavy process. Ship fast with measurable guardrails, policy tests, and rollback‑ready canaries.","
+    author: "Zion Tech Group Team","
+    date: "2025-10-07","
+    category: "AI Strategy","
+    tags: ["Governance", "Policy", "Scorecards", "Evals"],"
+    featured: true,,
+    readTime: "7 min read","
+    image: "/images/ai-governance-scorecards-2026.jpg","
+    newBadge: true,,
     trending: true
   },
   {
-    id: "freshness-aware-rag-v2",
-    slug: "freshness-aware-rag-v2",
-    title: "Freshness‑Aware RAG v2: TTL Budgets, Async Warmups, and SLAs",
-    description: "A production playbook for freshness with hybrid search, versioned corpora, and policy‑backed SLAs.",
-    excerpt: "Keep answers accurate with freshness windows, budgeted warmups, and KPI‑aligned evaluation.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-07",
-    category: "GenAI",
-    tags: ["RAG", "Freshness", "Hybrid Search", "SLAs"],
-    featured: true,
-    readTime: "8 min read",
-    image: "/images/freshness-aware-rag-v2.jpg",
-    newBadge: true,
+    id: "freshness-aware-rag-v2",",
+    slug: "freshness-aware-rag-v2",",
+    title: "Freshness‑Aware RAG v2: TTL Budgets, Async Warmups, and SLAs",",
+    description: "A production playbook for freshness with hybrid search, versioned corpora, and policy‑backed SLAs.",",
+    excerpt: "Keep answers accurate with freshness windows, budgeted warmups, and KPI‑aligned evaluation.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-10-07",",
+    category: "GenAI",",
+    tags: ["RAG", "Freshness", "Hybrid Search", "SLAs"],",
+    featured: true,,
+    readTime: "8 min read",",
+    image: "/images/freshness-aware-rag-v2.jpg",",
+    id: "freshness-aware-rag-v2","
+    slug: "freshness-aware-rag-v2","
+    title: "Freshness‑Aware RAG v2: TTL Budgets, Async Warmups, and SLAs","
+    description: "A production playbook for freshness with hybrid search, versioned corpora, and policy‑backed SLAs.","
+    excerpt: "Keep answers accurate with freshness windows, budgeted warmups, and KPI‑aligned evaluation.","
+    author: "Zion Tech Group Team","
+    date: "2025-10-07","
+    category: "GenAI","
+    tags: ["RAG", "Freshness", "Hybrid Search", "SLAs"],"
+    featured: true,,
+    readTime: "8 min read","
+    image: "/images/freshness-aware-rag-v2.jpg","
+    newBadge: true,,
     trending: true
   },
   {
-    id: "edge-flags-blueprint-2026",
-    slug: "edge-flags-blueprint-2026",
-    title: "Edge Flags Blueprint 2026: <100ms Global Releases with Budgets",
-    description: "Segmented rollouts, risk budgets, and instant rollback powered by edge compute and KV.",
-    excerpt: "Blueprint for zero‑regret rollouts: geo/account targeting, budgets, and telemetry‑driven decisions.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-07",
-    category: "Architecture",
-    tags: ["Edge", "Feature Flags", "Progressive Delivery"],
-    featured: false,
-    readTime: "6 min read",
-    image: "/images/edge-flags-blueprint-2026.jpg",
-    newBadge: true,
+    id: "edge-flags-blueprint-2026",",
+    slug: "edge-flags-blueprint-2026",",
+    title: "Edge Flags Blueprint 2026: <100ms Global Releases with Budgets",",
+    description: "Segmented rollouts, risk budgets, and instant rollback powered by edge compute and KV.",",
+    excerpt: "Blueprint for zero‑regret rollouts: geo/account targeting, budgets, and telemetry‑driven decisions.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-10-07",",
+    category: "Architecture",",
+    tags: ["Edge", "Feature Flags", "Progressive Delivery"],",
+    featured: false,,
+    readTime: "6 min read",",
+    image: "/images/edge-flags-blueprint-2026.jpg",",
+    id: "edge-flags-blueprint-2026","
+    slug: "edge-flags-blueprint-2026","
+    title: "Edge Flags Blueprint 2026: <100ms Global Releases with Budgets","
+    description: "Segmented rollouts, risk budgets, and instant rollback powered by edge compute and KV.","
+    excerpt: "Blueprint for zero‑regret rollouts: geo/account targeting, budgets, and telemetry‑driven decisions.","
+    author: "Zion Tech Group Team","
+    date: "2025-10-07","
+    category: "Architecture","
+    tags: ["Edge", "Feature Flags", "Progressive Delivery"],"
+    featured: false,,
+    readTime: "6 min read","
+    image: "/images/edge-flags-blueprint-2026.jpg","
+    newBadge: true,,
     trending: true
   },
   {
-    id: "ai-platform-roadmaps-2026",
-    slug: "ai-platform-roadmaps-2026",
-    title: "AI Product Roadmaps 2026: From Bet to Business Impact",
-    description: "Outcome-led roadmaps that connect bets to scorecards, release trains, and shipped value.",
-    excerpt: "A practical system for roadmapping AI that ties every bet to measurable business outcomes and reliable delivery.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-06",
-    category: "AI Strategy",
-    tags: ["Roadmaps", "Delivery", "Scorecards", "AI"],
-    featured: true,
-    readTime: "9 min read",
-    image: "/images/ai-product-roadmaps-2026.jpg",
-    newBadge: true,
+    id: "ai-platform-roadmaps-2026",",
+    slug: "ai-platform-roadmaps-2026",",
+    title: "AI Product Roadmaps 2026: From Bet to Business Impact",",
+    description: "Outcome-led roadmaps that connect bets to scorecards, release trains, and shipped value.",",
+    excerpt: "A practical system for roadmapping AI that ties every bet to measurable business outcomes and reliable delivery.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-10-06",",
+    category: "AI Strategy",",
+    tags: ["Roadmaps", "Delivery", "Scorecards", "AI"],",
+    featured: true,,
+    readTime: "9 min read",",
+    image: "/images/ai-product-roadmaps-2026.jpg",",
+    id: "ai-platform-roadmaps-2026","
+    slug: "ai-platform-roadmaps-2026","
+    title: "AI Product Roadmaps 2026: From Bet to Business Impact","
+    description: "Outcome-led roadmaps that connect bets to scorecards, release trains, and shipped value.","
+    excerpt: "A practical system for roadmapping AI that ties every bet to measurable business outcomes and reliable delivery.","
+    author: "Zion Tech Group Team","
+    date: "2025-10-06","
+    category: "AI Strategy","
+    tags: ["Roadmaps", "Delivery", "Scorecards", "AI"],"
+    featured: true,,
+    readTime: "9 min read","
+    image: "/images/ai-product-roadmaps-2026.jpg","
+    newBadge: true,,
     trending: true
   },
   {
-    id: "genai-guardrails-blueprints-2026",
-    slug: "genai-guardrails-blueprints-2026",
-    title: "GenAI Guardrails Blueprints 2026: Policy Tests, Canaries, and SLAs",
-    description: "Composable guardrail patterns that scale without slowing teams or blocking delivery.",
-    excerpt: "Blueprints for ship-fast, stay-safe guardrails: inline filters, policy tests in CI, KPI-linked canaries, and SLOs.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-06",
-    category: "GenAI",
-    tags: ["Guardrails", "Policy", "Evals", "Canaries"],
-    featured: true,
-    readTime: "8 min read",
-    image: "/images/genai-guardrails-blueprints-2026.jpg",
-    newBadge: true,
+    id: "genai-guardrails-blueprints-2026",",
+    slug: "genai-guardrails-blueprints-2026",",
+    title: "GenAI Guardrails Blueprints 2026: Policy Tests, Canaries, and SLAs",",
+    description: "Composable guardrail patterns that scale without slowing teams or blocking delivery.",",
+    excerpt: "Blueprints for ship-fast, stay-safe guardrails: inline filters, policy tests in CI, KPI-linked canaries, and SLOs.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-10-06",",
+    category: "GenAI",",
+    tags: ["Guardrails", "Policy", "Evals", "Canaries"],",
+    featured: true,,
+    readTime: "8 min read",",
+    image: "/images/genai-guardrails-blueprints-2026.jpg",",
+    id: "genai-guardrails-blueprints-2026","
+    slug: "genai-guardrails-blueprints-2026","
+    title: "GenAI Guardrails Blueprints 2026: Policy Tests, Canaries, and SLAs","
+    description: "Composable guardrail patterns that scale without slowing teams or blocking delivery.","
+    excerpt: "Blueprints for ship-fast, stay-safe guardrails: inline filters, policy tests in CI, KPI-linked canaries, and SLOs.","
+    author: "Zion Tech Group Team","
+    date: "2025-10-06","
+    category: "GenAI","
+    tags: ["Guardrails", "Policy", "Evals", "Canaries"],"
+    featured: true,,
+    readTime: "8 min read","
+    image: "/images/genai-guardrails-blueprints-2026.jpg","
+    newBadge: true,,
     trending: true
   },
   {
-    id: "cloud-finops-scorecards-2026",
-    slug: "cloud-finops-scorecards-2026",
-    title: "Cloud FinOps Scorecards 2026: Guardrails Engineers Actually Use",
-    description: "PR gates, alerts, and budgets that cut waste 25–40% while keeping velocity high.",
-    excerpt: "A modern FinOps playbook with scorecards wired to product goals and automated waste prevention.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-06",
-    category: "Cloud",
-    tags: ["FinOps", "Cloud", "Optimization", "Governance"],
-    featured: false,
-    readTime: "6 min read",
-    image: "/images/cloud-finops-scorecards-2026.jpg",
-    newBadge: true,
+    id: "cloud-finops-scorecards-2026",",
+    slug: "cloud-finops-scorecards-2026",",
+    title: "Cloud FinOps Scorecards 2026: Guardrails Engineers Actually Use",",
+    description: "PR gates, alerts, and budgets that cut waste 25–40% while keeping velocity high.",",
+    excerpt: "A modern FinOps playbook with scorecards wired to product goals and automated waste prevention.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-10-06",",
+    category: "Cloud",",
+    tags: ["FinOps", "Cloud", "Optimization", "Governance"],",
+    featured: false,,
+    readTime: "6 min read",",
+    image: "/images/cloud-finops-scorecards-2026.jpg",",
+    id: "cloud-finops-scorecards-2026","
+    slug: "cloud-finops-scorecards-2026","
+    title: "Cloud FinOps Scorecards 2026: Guardrails Engineers Actually Use","
+    description: "PR gates, alerts, and budgets that cut waste 25–40% while keeping velocity high.","
+    excerpt: "A modern FinOps playbook with scorecards wired to product goals and automated waste prevention.","
+    author: "Zion Tech Group Team","
+    date: "2025-10-06","
+    category: "Cloud","
+    tags: ["FinOps", "Cloud", "Optimization", "Governance"],"
+    featured: false,,
+    readTime: "6 min read","
+    image: "/images/cloud-finops-scorecards-2026.jpg","
+    newBadge: true,,
     trending: true
   },
   {
-    id: "ai-risk-register-2025",
-    slug: "ai-risk-register-2025",
-    title: "AI Risk Register That Drives Action",
-    description: "From static lists to owned mitigations with policy tests and SLAs.",
-    excerpt: "Make your AI risk program measurable and actionable with owners, timelines, and CI policy tests.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-04",
-    category: "AI Governance",
-    tags: ["Risk", "Governance", "Policy", "Compliance"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/ai-risk-register.jpg",
-    newBadge: true,
+    id: "ai-risk-register-2025",",
+    slug: "ai-risk-register-2025",",
+    title: "AI Risk Register That Drives Action",",
+    description: "From static lists to owned mitigations with policy tests and SLAs.",",
+    excerpt: "Make your AI risk program measurable and actionable with owners, timelines, and CI policy tests.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-10-04",",
+    category: "AI Governance",",
+    tags: ["Risk", "Governance", "Policy", "Compliance"],",
+    featured: true,,
+    readTime: "7 min read",",
+    image: "/images/ai-risk-register.jpg",",
+    id: "ai-risk-register-2025","
+    slug: "ai-risk-register-2025","
+    title: "AI Risk Register That Drives Action","
+    description: "From static lists to owned mitigations with policy tests and SLAs.","
+    excerpt: "Make your AI risk program measurable and actionable with owners, timelines, and CI policy tests.","
+    author: "Zion Tech Group Team","
+    date: "2025-10-04","
+    category: "AI Governance","
+    tags: ["Risk", "Governance", "Policy", "Compliance"],"
+    featured: true,,
+    readTime: "7 min read","
+    image: "/images/ai-risk-register.jpg","
+    newBadge: true,,
     trending: true
   },
   {
-    id: "ai-guardrails-scorecards-2025",
-    slug: "ai-guardrails-scorecards-2025",
-    title: "AI Guardrails That Engineers Adopt: Scorecards, PR Gates, Evals",
-    description: "Practical guardrails wired to your SDLC: measurable, fast, and adoption‑friendly.",
-    excerpt: "Guardrails that actually get used: scorecards tied to KPIs, lightweight PR checks, and online canaries.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "AI Strategy",
-    tags: ["Guardrails", "Scorecards", "Evals"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/ai-guardrails-scorecards.jpg",
-    newBadge: true,
+    id: "ai-guardrails-scorecards-2025",",
+    slug: "ai-guardrails-scorecards-2025",",
+    title: "AI Guardrails That Engineers Adopt: Scorecards, PR Gates, Evals",",
+    description: "Practical guardrails wired to your SDLC: measurable, fast, and adoption‑friendly.",",
+    excerpt: "Guardrails that actually get used: scorecards tied to KPIs, lightweight PR checks, and online canaries.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-09-29",",
+    category: "AI Strategy",",
+    tags: ["Guardrails", "Scorecards", "Evals"],",
+    featured: true,,
+    readTime: "7 min read",",
+    image: "/images/ai-guardrails-scorecards.jpg",",
+    id: "ai-guardrails-scorecards-2025","
+    slug: "ai-guardrails-scorecards-2025","
+    title: "AI Guardrails That Engineers Adopt: Scorecards, PR Gates, Evals","
+    description: "Practical guardrails wired to your SDLC: measurable, fast, and adoption‑friendly.","
+    excerpt: "Guardrails that actually get used: scorecards tied to KPIs, lightweight PR checks, and online canaries.","
+    author: "Zion Tech Group Team","
+    date: "2025-09-29","
+    category: "AI Strategy","
+    tags: ["Guardrails", "Scorecards", "Evals"],"
+    featured: true,,
+    readTime: "7 min read","
+    image: "/images/ai-guardrails-scorecards.jpg","
+    newBadge: true,,
     trending: true
   },
   {
-    id: "edge-flags-zero-regret-2025",
-    slug: "edge-flags-zero-regret-2025",
-    title: "Zero‑Regret Rollouts with Edge Flags",
-    description: "Global progressive delivery with geo/account segmentation, budgets, and instant rollback.",
-    excerpt: "Blueprint for <100ms feature flags at the edge with safety budgets and telemetry.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "Architecture",
-    tags: ["Edge", "Feature Flags", "Delivery"],
-    featured: false,
-    readTime: "6 min read",
-    image: "/images/edge-flags-zero-regret.jpg",
-    newBadge: true,
+    id: "edge-flags-zero-regret-2025",",
+    slug: "edge-flags-zero-regret-2025",",
+    title: "Zero‑Regret Rollouts with Edge Flags",",
+    description: "Global progressive delivery with geo/account segmentation, budgets, and instant rollback.",",
+    excerpt: "Blueprint for <100ms feature flags at the edge with safety budgets and telemetry.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-09-29",",
+    category: "Architecture",",
+    tags: ["Edge", "Feature Flags", "Delivery"],",
+    featured: false,,
+    readTime: "6 min read",",
+    image: "/images/edge-flags-zero-regret.jpg",",
+    id: "edge-flags-zero-regret-2025","
+    slug: "edge-flags-zero-regret-2025","
+    title: "Zero‑Regret Rollouts with Edge Flags","
+    description: "Global progressive delivery with geo/account segmentation, budgets, and instant rollback.","
+    excerpt: "Blueprint for <100ms feature flags at the edge with safety budgets and telemetry.","
+    author: "Zion Tech Group Team","
+    date: "2025-09-29","
+    category: "Architecture","
+    tags: ["Edge", "Feature Flags", "Delivery"],"
+    featured: false,,
+    readTime: "6 min read","
+    image: "/images/edge-flags-zero-regret.jpg","
+    newBadge: true,,
     trending: false
   },
   {
-    id: "freshness-aware-rag-2025",
-    slug: "freshness-aware-rag-2025",
-    title: "Freshness‑Aware RAG: TTL Windows and Versioned Corpora",
-    description: "Keep retrieval accurate with TTL budgets, async warmups, and audit trails.",
-    excerpt: "A practical guide to freshness controls in enterprise RAG.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "GenAI",
-    tags: ["RAG", "Freshness", "Search"],
-    featured: true,
-    readTime: "8 min read",
-    image: "/images/freshness-aware-rag.jpg",
-    newBadge: true,
+    id: "freshness-aware-rag-2025",",
+    slug: "freshness-aware-rag-2025",",
+    title: "Freshness‑Aware RAG: TTL Windows and Versioned Corpora",",
+    description: "Keep retrieval accurate with TTL budgets, async warmups, and audit trails.",",
+    excerpt: "A practical guide to freshness controls in enterprise RAG.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-09-29",",
+    category: "GenAI",",
+    tags: ["RAG", "Freshness", "Search"],",
+    featured: true,,
+    readTime: "8 min read",",
+    image: "/images/freshness-aware-rag.jpg",",
+    id: "freshness-aware-rag-2025","
+    slug: "freshness-aware-rag-2025","
+    title: "Freshness‑Aware RAG: TTL Windows and Versioned Corpora","
+    description: "Keep retrieval accurate with TTL budgets, async warmups, and audit trails.","
+    excerpt: "A practical guide to freshness controls in enterprise RAG.","
+    author: "Zion Tech Group Team","
+    date: "2025-09-29","
+    category: "GenAI","
+    tags: ["RAG", "Freshness", "Search"],"
+    featured: true,,
+    readTime: "8 min read","
+    image: "/images/freshness-aware-rag.jpg","
+    newBadge: true,,
     trending: true
   },
   {
-    id: "ai-product-roadmaps-2025",
-    slug: "ai-product-roadmaps-2025",
-    title: "AI Product Roadmaps 2025: From Vision to Velocity",
-    description: "Outcome-driven roadmaps with scorecards, release trains, and guardrails that ship.",
-    excerpt: "A pragmatic playbook for building AI product roadmaps that actually deliver—linking strategy to shipped value.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-05",
-    category: "AI Strategy",
-    tags: ["Roadmaps", "Scorecards", "Delivery", "AI"],
-    featured: true,
-    readTime: "9 min read",
-    image: "/images/ai-product-roadmaps.jpg",
-    newBadge: true,
+    id: "ai-product-roadmaps-2025",",
+    slug: "ai-product-roadmaps-2025",",
+    title: "AI Product Roadmaps 2025: From Vision to Velocity",",
+    description: "Outcome-driven roadmaps with scorecards, release trains, and guardrails that ship.",",
+    excerpt: "A pragmatic playbook for building AI product roadmaps that actually deliver—linking strategy to shipped value.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-10-05",",
+    category: "AI Strategy",",
+    tags: ["Roadmaps", "Scorecards", "Delivery", "AI"],",
+    featured: true,,
+    readTime: "9 min read",",
+    image: "/images/ai-product-roadmaps.jpg",",
+    id: "ai-product-roadmaps-2025","
+    slug: "ai-product-roadmaps-2025","
+    title: "AI Product Roadmaps 2025: From Vision to Velocity","
+    description: "Outcome-driven roadmaps with scorecards, release trains, and guardrails that ship.","
+    excerpt: "A pragmatic playbook for building AI product roadmaps that actually deliver—linking strategy to shipped value.","
+    author: "Zion Tech Group Team","
+    date: "2025-10-05","
+    category: "AI Strategy","
+    tags: ["Roadmaps", "Scorecards", "Delivery", "AI"],"
+    featured: true,,
+    readTime: "9 min read","
+    image: "/images/ai-product-roadmaps.jpg","
+    newBadge: true,,
     trending: true
   },
   {
-    id: "sbom-automation-ml-supply-chain",
-    slug: "sbom-automation-ml-supply-chain",
-    title: "Automating SBOM for the ML Supply Chain",
-    description: "From models to datasets to prompts—continuous SBOMs with policy gates and attestations.",
-    excerpt: "How to build living SBOMs for ML assets, wire policy checks, and stop supply‑chain drift.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-05",
-    category: "Security",
-    tags: ["SBOM", "Supply Chain", "ML", "Security"],
-    featured: false,
-    readTime: "7 min read",
-    image: "/images/sbom-ml-supply-chain.jpg",
-    newBadge: true,
+    id: "sbom-automation-ml-supply-chain",",
+    slug: "sbom-automation-ml-supply-chain",",
+    title: "Automating SBOM for the ML Supply Chain",",
+    description: "From models to datasets to prompts—continuous SBOMs with policy gates and attestations.",",
+    excerpt: "How to build living SBOMs for ML assets, wire policy checks, and stop supply‑chain drift.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-10-05",",
+    category: "Security",",
+    tags: ["SBOM", "Supply Chain", "ML", "Security"],",
+    featured: false,,
+    readTime: "7 min read",",
+    image: "/images/sbom-ml-supply-chain.jpg",",
+    id: "sbom-automation-ml-supply-chain","
+    slug: "sbom-automation-ml-supply-chain","
+    title: "Automating SBOM for the ML Supply Chain","
+    description: "From models to datasets to prompts—continuous SBOMs with policy gates and attestations.","
+    excerpt: "How to build living SBOMs for ML assets, wire policy checks, and stop supply‑chain drift.","
+    author: "Zion Tech Group Team","
+    date: "2025-10-05","
+    category: "Security","
+    tags: ["SBOM", "Supply Chain", "ML", "Security"],"
+    featured: false,,
+    readTime: "7 min read","
+    image: "/images/sbom-ml-supply-chain.jpg","
+    newBadge: true,,
     trending: false
   },
   {
-    id: "online-genai-evals-2025",
-    slug: "online-genai-evals-2025",
-    title: "Online GenAI Evals: Canary Checks That Keep You Fast",
-    description: "Lightweight online evals tied to KPIs to prevent regressions while shipping weekly.",
-    excerpt: "Stand up live canaries, budgeted evals, and dashboards that protect velocity without red tape.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-05",
-    category: "GenAI",
-    tags: ["Evals", "Canaries", "Guardrails", "Observability"],
-    featured: true,
-    readTime: "6 min read",
-    image: "/images/online-genai-evals.jpg",
-    newBadge: true,
+    id: "online-genai-evals-2025",",
+    slug: "online-genai-evals-2025",",
+    title: "Online GenAI Evals: Canary Checks That Keep You Fast",",
+    description: "Lightweight online evals tied to KPIs to prevent regressions while shipping weekly.",",
+    excerpt: "Stand up live canaries, budgeted evals, and dashboards that protect velocity without red tape.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-10-05",",
+    category: "GenAI",",
+    tags: ["Evals", "Canaries", "Guardrails", "Observability"],",
+    featured: true,,
+    readTime: "6 min read",",
+    image: "/images/online-genai-evals.jpg",",
+    id: "online-genai-evals-2025","
+    slug: "online-genai-evals-2025","
+    title: "Online GenAI Evals: Canary Checks That Keep You Fast","
+    description: "Lightweight online evals tied to KPIs to prevent regressions while shipping weekly.","
+    excerpt: "Stand up live canaries, budgeted evals, and dashboards that protect velocity without red tape.","
+    author: "Zion Tech Group Team","
+    date: "2025-10-05","
+    category: "GenAI","
+    tags: ["Evals", "Canaries", "Guardrails", "Observability"],"
+    featured: true,,
+    readTime: "6 min read","
+    image: "/images/online-genai-evals.jpg","
+    newBadge: true,,
     trending: true
   },
   {
-    id: "practical-rag-in-production-2025",
-    slug: "practical-rag-in-production-2025",
-    title: "Practical RAG in Production",
-    description: "Freshness, hybrid search, and evals that scale beyond the demo.",
-    excerpt: "A production-ready approach to RAG with freshness guarantees and layered evaluation.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-04",
-    category: "GenAI",
-    tags: ["RAG", "Search", "Evals"],
-    featured: true,
-    readTime: "8 min read",
-    image: "/images/practical-rag-2025.jpg",
-    newBadge: true,
+    id: "practical-rag-in-production-2025",",
+    slug: "practical-rag-in-production-2025",",
+    title: "Practical RAG in Production",",
+    description: "Freshness, hybrid search, and evals that scale beyond the demo.",",
+    excerpt: "A production-ready approach to RAG with freshness guarantees and layered evaluation.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-10-04",",
+    category: "GenAI",",
+    tags: ["RAG", "Search", "Evals"],",
+    featured: true,,
+    readTime: "8 min read",",
+    image: "/images/practical-rag-2025.jpg",",
+    id: "practical-rag-in-production-2025","
+    slug: "practical-rag-in-production-2025","
+    title: "Practical RAG in Production","
+    description: "Freshness, hybrid search, and evals that scale beyond the demo.","
+    excerpt: "A production-ready approach to RAG with freshness guarantees and layered evaluation.","
+    author: "Zion Tech Group Team","
+    date: "2025-10-04","
+    category: "GenAI","
+    tags: ["RAG", "Search", "Evals"],"
+    featured: true,,
+    readTime: "8 min read","
+    image: "/images/practical-rag-2025.jpg","
+    newBadge: true,,
     trending: true
   },
   {
-    id: "ai-platform-engineering-2025",
-    slug: "ai-platform-engineering-2025",
-    title: "AI Platform Engineering 2025: The Complete Guide to Building Scalable AI Infrastructure",
-    description: "Comprehensive guide to building enterprise-grade AI platforms that scale. Learn about MLOps, model governance, and infrastructure best practices.",
-    excerpt: "Building AI platforms that can handle enterprise-scale workloads requires careful planning, robust infrastructure, and proven engineering practices. This guide covers everything from initial architecture to production deployment.",
-    author: "Zion Tech Group Team",
-    date: "2025-01-17",
-    category: "Platform Engineering",
-    tags: ["AI", "Platform Engineering", "MLOps", "Infrastructure", "Scalability"],
-    featured: true,
-    readTime: "15 min read",
-    image: "/images/ai-platform-engineering.jpg",
-    newBadge: true,
+    id: "ai-platform-engineering-2025",",
+    slug: "ai-platform-engineering-2025",",
+    title: "AI Platform Engineering 2025: The Complete Guide to Building Scalable AI Infrastructure",",
+    description: "Comprehensive guide to building enterprise-grade AI platforms that scale. Learn about MLOps, model governance, and infrastructure best practices.",",
+    excerpt: "Building AI platforms that can handle enterprise-scale workloads requires careful planning, robust infrastructure, and proven engineering practices. This guide covers everything from initial architecture to production deployment.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-01-17",",
+    category: "Platform Engineering",",
+    tags: ["AI", "Platform Engineering", "MLOps", "Infrastructure", "Scalability"],",
+    featured: true,,
+    readTime: "15 min read",",
+    image: "/images/ai-platform-engineering.jpg",",
+    id: "ai-platform-engineering-2025","
+    slug: "ai-platform-engineering-2025","
+    title: "AI Platform Engineering 2025: The Complete Guide to Building Scalable AI Infrastructure","
+    description: "Comprehensive guide to building enterprise-grade AI platforms that scale. Learn about MLOps, model governance, and infrastructure best practices.","
+    excerpt: "Building AI platforms that can handle enterprise-scale workloads requires careful planning, robust infrastructure, and proven engineering practices. This guide covers everything from initial architecture to production deployment.","
+    author: "Zion Tech Group Team","
+    date: "2025-01-17","
+    category: "Platform Engineering","
+    tags: ["AI", "Platform Engineering", "MLOps", "Infrastructure", "Scalability"],"
+    featured: true,,
+    readTime: "15 min read","
+    image: "/images/ai-platform-engineering.jpg","
+    newBadge: true,,
     trending: true
   },
   {
-    id: "enterprise-rag-blueprint-v2",
-    slug: "enterprise-rag-blueprint-v2",
-    title: "Enterprise RAG Blueprint v2: Advanced Retrieval-Augmented Generation for Business",
-    description: "Next-generation RAG implementation strategies for enterprise applications. Learn advanced techniques for document retrieval, context management, and response generation.",
-    excerpt: "Retrieval-Augmented Generation (RAG) has evolved significantly. This blueprint covers advanced techniques for enterprise-scale RAG implementations with improved accuracy and performance.",
-    author: "Zion Tech Group Team",
-    date: "2025-01-16",
-    category: "AI Strategy",
-    tags: ["RAG", "Enterprise AI", "Document Processing", "NLP", "Knowledge Management"],
-    featured: true,
-    readTime: "12 min read",
-    image: "/images/enterprise-rag-v2.jpg",
-    newBadge: true,
+    id: "enterprise-rag-blueprint-v2",",
+    slug: "enterprise-rag-blueprint-v2",",
+    title: "Enterprise RAG Blueprint v2: Advanced Retrieval-Augmented Generation for Business",",
+    description: "Next-generation RAG implementation strategies for enterprise applications. Learn advanced techniques for document retrieval, context management, and response generation.",",
+    excerpt: "Retrieval-Augmented Generation (RAG) has evolved significantly. This blueprint covers advanced techniques for enterprise-scale RAG implementations with improved accuracy and performance.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-01-16",",
+    category: "AI Strategy",",
+    tags: ["RAG", "Enterprise AI", "Document Processing", "NLP", "Knowledge Management"],",
+    featured: true,,
+    readTime: "12 min read",",
+    image: "/images/enterprise-rag-v2.jpg",",
+    id: "enterprise-rag-blueprint-v2","
+    slug: "enterprise-rag-blueprint-v2","
+    title: "Enterprise RAG Blueprint v2: Advanced Retrieval-Augmented Generation for Business","
+    description: "Next-generation RAG implementation strategies for enterprise applications. Learn advanced techniques for document retrieval, context management, and response generation.","
+    excerpt: "Retrieval-Augmented Generation (RAG) has evolved significantly. This blueprint covers advanced techniques for enterprise-scale RAG implementations with improved accuracy and performance.","
+    author: "Zion Tech Group Team","
+    date: "2025-01-16","
+    category: "AI Strategy","
+    tags: ["RAG", "Enterprise AI", "Document Processing", "NLP", "Knowledge Management"],"
+    featured: true,,
+    readTime: "12 min read","
+    image: "/images/enterprise-rag-v2.jpg","
+    newBadge: true,,
     trending: true
   },
   {
-    id: "ai-autonomous-operations-guide",
-    slug: "ai-autonomous-operations-guide",
-    title: "AI Autonomous Operations: Building Self-Healing Infrastructure Systems",
-    description: "Learn how to implement AI-driven autonomous operations that can self-heal, self-optimize, and self-scale without human intervention.",
-    excerpt: "Autonomous operations represent the future of infrastructure management. This guide shows you how to build systems that can manage themselves with minimal human oversight.",
-    author: "Zion Tech Group Team",
-    date: "2025-01-15",
-    category: "AI Operations",
-    tags: ["Autonomous Operations", "Infrastructure", "AI", "Self-Healing", "Automation"],
-    featured: true,
-    readTime: "10 min read",
-    image: "/images/ai-autonomous-ops.jpg",
-    newBadge: true,
+    id: "ai-autonomous-operations-guide",",
+    slug: "ai-autonomous-operations-guide",",
+    title: "AI Autonomous Operations: Building Self-Healing Infrastructure Systems",",
+    description: "Learn how to implement AI-driven autonomous operations that can self-heal, self-optimize, and self-scale without human intervention.",",
+    excerpt: "Autonomous operations represent the future of infrastructure management. This guide shows you how to build systems that can manage themselves with minimal human oversight.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-01-15",",
+    category: "AI Operations",",
+    tags: ["Autonomous Operations", "Infrastructure", "AI", "Self-Healing", "Automation"],",
+    featured: true,,
+    readTime: "10 min read",",
+    image: "/images/ai-autonomous-ops.jpg",",
+    id: "ai-autonomous-operations-guide","
+    slug: "ai-autonomous-operations-guide","
+    title: "AI Autonomous Operations: Building Self-Healing Infrastructure Systems","
+    description: "Learn how to implement AI-driven autonomous operations that can self-heal, self-optimize, and self-scale without human intervention.","
+    excerpt: "Autonomous operations represent the future of infrastructure management. This guide shows you how to build systems that can manage themselves with minimal human oversight.","
+    author: "Zion Tech Group Team","
+    date: "2025-01-15","
+    category: "AI Operations","
+    tags: ["Autonomous Operations", "Infrastructure", "AI", "Self-Healing", "Automation"],"
+    featured: true,,
+    readTime: "10 min read","
+    image: "/images/ai-autonomous-ops.jpg","
+    newBadge: true,,
     trending: false
   },
   {
-    id: "quantum-computing-business-guide",
-    slug: "quantum-computing-business-guide",
-    title: "Quantum Computing for Business: Practical Applications and ROI Analysis",
-    description: "Explore real-world quantum computing applications for business. Learn about quantum advantage, implementation strategies, and measurable ROI.",
-    excerpt: "Quantum computing is moving from research to practical business applications. Discover how forward-thinking companies are already using quantum solutions to solve complex problems.",
-    author: "Zion Tech Group Team",
-    date: "2025-01-14",
-    category: "Quantum Computing",
-    tags: ["Quantum Computing", "Business Applications", "ROI", "Optimization", "Technology"],
-    featured: false,
-    readTime: "11 min read",
-    image: "/images/quantum-business.jpg",
-    newBadge: true,
+    id: "quantum-computing-business-guide",",
+    slug: "quantum-computing-business-guide",",
+    title: "Quantum Computing for Business: Practical Applications and ROI Analysis",",
+    description: "Explore real-world quantum computing applications for business. Learn about quantum advantage, implementation strategies, and measurable ROI.",",
+    excerpt: "Quantum computing is moving from research to practical business applications. Discover how forward-thinking companies are already using quantum solutions to solve complex problems.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-01-14",",
+    category: "Quantum Computing",",
+    tags: ["Quantum Computing", "Business Applications", "ROI", "Optimization", "Technology"],",
+    featured: false,,
+    readTime: "11 min read",",
+    image: "/images/quantum-business.jpg",",
+    id: "quantum-computing-business-guide","
+    slug: "quantum-computing-business-guide","
+    title: "Quantum Computing for Business: Practical Applications and ROI Analysis","
+    description: "Explore real-world quantum computing applications for business. Learn about quantum advantage, implementation strategies, and measurable ROI.","
+    excerpt: "Quantum computing is moving from research to practical business applications. Discover how forward-thinking companies are already using quantum solutions to solve complex problems.","
+    author: "Zion Tech Group Team","
+    date: "2025-01-14","
+    category: "Quantum Computing","
+    tags: ["Quantum Computing", "Business Applications", "ROI", "Optimization", "Technology"],"
+    featured: false,,
+    readTime: "11 min read","
+    image: "/images/quantum-business.jpg","
+    newBadge: true,,
     trending: true
   },
   {
-    id: "edge-ai-implementation-guide",
-    slug: "edge-ai-implementation-guide",
-    title: "Edge AI Implementation Guide: Bringing Intelligence to the Edge",
-    description: "Complete guide to implementing AI at the edge for real-time processing, reduced latency, and enhanced privacy.",
-    excerpt: "Edge AI is revolutionizing how we deploy artificial intelligence. Learn the strategies, tools, and best practices for successful edge AI implementation.",
-    author: "Zion Tech Group Team",
-    date: "2025-01-13",
-    category: "Edge Computing",
-    tags: ["Edge AI", "Real-time Processing", "IoT", "Latency", "Privacy"],
-    featured: false,
-    readTime: "13 min read",
-    image: "/images/edge-ai-guide.jpg",
-    newBadge: true,
+    id: "edge-ai-implementation-guide",",
+    slug: "edge-ai-implementation-guide",",
+    title: "Edge AI Implementation Guide: Bringing Intelligence to the Edge",",
+    description: "Complete guide to implementing AI at the edge for real-time processing, reduced latency, and enhanced privacy.",",
+    excerpt: "Edge AI is revolutionizing how we deploy artificial intelligence. Learn the strategies, tools, and best practices for successful edge AI implementation.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-01-13",",
+    category: "Edge Computing",",
+    tags: ["Edge AI", "Real-time Processing", "IoT", "Latency", "Privacy"],",
+    featured: false,,
+    readTime: "13 min read",",
+    image: "/images/edge-ai-guide.jpg",",
+    id: "edge-ai-implementation-guide","
+    slug: "edge-ai-implementation-guide","
+    title: "Edge AI Implementation Guide: Bringing Intelligence to the Edge","
+    description: "Complete guide to implementing AI at the edge for real-time processing, reduced latency, and enhanced privacy.","
+    excerpt: "Edge AI is revolutionizing how we deploy artificial intelligence. Learn the strategies, tools, and best practices for successful edge AI implementation.","
+    author: "Zion Tech Group Team","
+    date: "2025-01-13","
+    category: "Edge Computing","
+    tags: ["Edge AI", "Real-time Processing", "IoT", "Latency", "Privacy"],"
+    featured: false,,
+    readTime: "13 min read","
+    image: "/images/edge-ai-guide.jpg","
+    newBadge: true,,
     trending: false
   },
   {
-    id: "zero-trust-security-implementation",
-    slug: "zero-trust-security-implementation",
-    title: "Zero Trust Security Implementation: A Complete Enterprise Guide",
-    description: "Comprehensive guide to implementing Zero Trust security architecture in enterprise environments. Learn best practices and implementation strategies.",
-    excerpt: "Zero Trust is no longer optional for enterprise security. This guide provides a complete roadmap for implementing Zero Trust architecture in your organization.",
-    author: "Zion Tech Group Team",
-    date: "2025-01-12",
-    category: "Cybersecurity",
-    tags: ["Zero Trust", "Security", "Enterprise", "Architecture", "Implementation"],
-    featured: false,
-    readTime: "14 min read",
-    image: "/images/zero-trust-guide.jpg",
-    newBadge: false,
+    id: "zero-trust-security-implementation",",
+    slug: "zero-trust-security-implementation",",
+    title: "Zero Trust Security Implementation: A Complete Enterprise Guide",",
+    description: "Comprehensive guide to implementing Zero Trust security architecture in enterprise environments. Learn best practices and implementation strategies.",",
+    excerpt: "Zero Trust is no longer optional for enterprise security. This guide provides a complete roadmap for implementing Zero Trust architecture in your organization.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-01-12",",
+    category: "Cybersecurity",",
+    tags: ["Zero Trust", "Security", "Enterprise", "Architecture", "Implementation"],",
+    featured: false,,
+    readTime: "14 min read",",
+    image: "/images/zero-trust-guide.jpg",",
+    id: "zero-trust-security-implementation","
+    slug: "zero-trust-security-implementation","
+    title: "Zero Trust Security Implementation: A Complete Enterprise Guide","
+    description: "Comprehensive guide to implementing Zero Trust security architecture in enterprise environments. Learn best practices and implementation strategies.","
+    excerpt: "Zero Trust is no longer optional for enterprise security. This guide provides a complete roadmap for implementing Zero Trust architecture in your organization.","
+    author: "Zion Tech Group Team","
+    date: "2025-01-12","
+    category: "Cybersecurity","
+    tags: ["Zero Trust", "Security", "Enterprise", "Architecture", "Implementation"],"
+    featured: false,,
+    readTime: "14 min read","
+    image: "/images/zero-trust-guide.jpg","
+    newBadge: false,,
     trending: true
   },
   {
-    id: "ai-content-generation-best-practices",
-    slug: "ai-content-generation-best-practices",
-    title: "AI Content Generation: Best Practices for Quality and Brand Consistency",
-    description: "Learn how to use AI for content generation while maintaining quality, brand voice, and SEO optimization.",
-    excerpt: "AI content generation can transform your content strategy, but success requires careful planning and execution. Discover the best practices for AI-generated content.",
-    author: "Zion Tech Group Team",
-    date: "2025-01-11",
-    category: "Content AI",
-    tags: ["Content Generation", "AI", "SEO", "Brand Consistency", "Marketing"],
-    featured: false,
-    readTime: "8 min read",
-    image: "/images/ai-content-generation.jpg",
-    newBadge: true,
+    id: "ai-content-generation-best-practices",",
+    slug: "ai-content-generation-best-practices",",
+    title: "AI Content Generation: Best Practices for Quality and Brand Consistency",",
+    description: "Learn how to use AI for content generation while maintaining quality, brand voice, and SEO optimization.",",
+    excerpt: "AI content generation can transform your content strategy, but success requires careful planning and execution. Discover the best practices for AI-generated content.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-01-11",",
+    category: "Content AI",",
+    tags: ["Content Generation", "AI", "SEO", "Brand Consistency", "Marketing"],",
+    featured: false,,
+    readTime: "8 min read",",
+    image: "/images/ai-content-generation.jpg",",
+    id: "ai-content-generation-best-practices","
+    slug: "ai-content-generation-best-practices","
+    title: "AI Content Generation: Best Practices for Quality and Brand Consistency","
+    description: "Learn how to use AI for content generation while maintaining quality, brand voice, and SEO optimization.","
+    excerpt: "AI content generation can transform your content strategy, but success requires careful planning and execution. Discover the best practices for AI-generated content.","
+    author: "Zion Tech Group Team","
+    date: "2025-01-11","
+    category: "Content AI","
+    tags: ["Content Generation", "AI", "SEO", "Brand Consistency", "Marketing"],"
+    featured: false,,
+    readTime: "8 min read","
+    image: "/images/ai-content-generation.jpg","
+    newBadge: true,,
     trending: false
   },
   {
@@ -1231,199 +1460,373 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/mlops-reliability.jpg",
     newBadge: false,
     trending: true
-  }
-  ,
+  },
   {
-    id: "ai-2025-sept-30-neural-code-synthesis",
-    slug: "ai-2025-sept-30-neural-code-synthesis",
-    title: "Neural Code Synthesis 2025: 95% Accuracy, 90% Faster Delivery",
-    description: "Production blueprint for neural code assistants with CI policy tests and instant rollback.",
-    excerpt: "Ship reliable code assistants with scorecards, CI policy tests, and rollback playbooks.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-30",
-    category: "AI Engineering",
-    tags: ["Neural Code", "Policy Tests", "Rollback"],
-    featured: true,
-    readTime: "9 min read",
-    image: "/images/ai-2025-neural-code-synthesis.jpg",
-    newBadge: true,
+    id: "secure-ml-supply-chain-2026",",
+    slug: "secure-ml-supply-chain-2026",",
+    title: "Secure ML Supply Chain 2026: SBOMs, Lineage, and Policy Gates",",
+    description: "Continuous SBOMs for models, datasets, and prompts with attestations and CI policy checks.",",
+    excerpt: "A practical guide to securing the ML supply chain with provenance and guardrails.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-10-13",",
+    category: "AI Security",",
+    tags: ["SBOM", "Supply Chain", "Security"],",
+    featured: true,,
+    readTime: "7 min read",",
+    image: "/images/secure-ml-supply-chain-2026.jpg",",
+    id: "mlops-reliability-patterns","
+    slug: "mlops-reliability-patterns","
+    title: "MLOps Reliability Patterns: Building Robust Machine Learning Systems","
+    description: "Essential patterns and practices for building reliable, production-ready machine learning systems with proper monitoring and governance.","
+    excerpt: "MLOps reliability requires more than just deploying models. Learn the essential patterns for building robust, production-ready ML systems.","
+    author: "Zion Tech Group Team","
+    date: "2025-01-10","
+    category: "MLOps","
+    tags: ["MLOps", "Reliability", "Machine Learning", "Production", "Monitoring"],"
+    featured: false,,
+    readTime: "9 min read","
+    image: "/images/mlops-reliability.jpg","
+    newBadge: false,,
     trending: true
   },
   {
-    id: "edge-2025-sept-30-consentless-metrics-v3",
-    slug: "edge-2025-sept-30-consentless-metrics-v3",
-    title: "Consentless Metrics v3: Zero‑PII Signals under 100ms",
-    description: "Scoped IDs, on‑device aggregation, DP noise, and signed attestations for privacy‑first telemetry.",
-    excerpt: "Blueprint for actionable analytics without PII using edge aggregation and attestations.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-30",
-    category: "Analytics",
-    tags: ["Edge", "Privacy", "DP"],
-    featured: true,
-    readTime: "9 min read",
-    image: "/images/edge-2025-consentless-metrics-v3.jpg",
-    newBadge: true,
+    id: "secure-ml-supply-chain-2026","
+    slug: "secure-ml-supply-chain-2026","
+    title: "Secure ML Supply Chain 2026: SBOMs, Lineage, and Policy Gates","
+    description: "Continuous SBOMs for models, datasets, and prompts with attestations and CI policy checks.","
+    excerpt: "A practical guide to securing the ML supply chain with provenance and guardrails.","
+    author: "Zion Tech Group Team","
+    date: "2025-10-13","
+    category: "AI Security","
+    tags: ["SBOM", "Supply Chain", "Security"],"
+    featured: true,,
+    readTime: "7 min read","
+    image: "/images/secure-ml-supply-chain-2026.jpg","
+    newBadge: true,,
     trending: true
   },
   {
-    id: "ai-2025-sept-30-platform-roi-scorecards-v2",
-    slug: "ai-2025-sept-30-platform-roi-scorecards-v2",
-    title: "Platform ROI Scorecards v2: Prove Value in Weeks",
-    description: "KPI‑linked developer scorecards and golden paths that quantify platform ROI in 4–8 weeks.",
-    excerpt: "Move from infra spend to shipped outcomes with adoption and SLO‑linked scorecards.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-30",
-    category: "Platform Engineering",
-    tags: ["Scorecards", "Golden Paths", "ROI"],
-    featured: true,
-    readTime: "10 min read",
-    image: "/images/platform-roi-scorecards-v2.jpg",
-    newBadge: true,
-    trending: true
-  }
-  ,
-  {
-    id: "ai-platform-scorecards-roi-2026",
-    slug: "ai-platform-scorecards-roi-2026",
-    title: "AI Platform Scorecards 2026: Proving ROI with Leading Indicators",
-    description: "A practical system to link platform telemetry to adoption, retention, and revenue using scorecards engineers actually adopt.",
-    excerpt: "Design scorecards that shift conversations from infra spend to shipped business outcomes.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-10",
-    category: "AI Strategy",
-    tags: ["Scorecards", "ROI", "Platform Engineering"],
-    featured: true,
-    readTime: "8 min read",
-    image: "/images/ai-platform-scorecards-roi-2026.jpg",
-    newBadge: true,
+    id: "genai-routing-under-budgets-2026","
+    slug: "genai-routing-under-budgets-2026","
+    title: "Quality‑Tiered GenAI Routing: SLAs Without Bill Shock","
+    description: "Route prompts across model tiers with budgets, caches, and eval signals to control cost.","
+    excerpt: "Keep experience high under tight budgets with deterministic routing and caches.","
+    author: "Zion Tech Group Team","
+    date: "2025-10-13","
+    category: "AI Operations","
+    tags: ["Budgets", "Quality Tiers", "Routing"],"
+    featured: true,,
+    readTime: "6 min read","
+    image: "/images/genai-routing-2026.jpg","
+    newBadge: true,,
     trending: true
   },
   {
-    id: "production-rag-quality-budgets-2026",
-    slug: "production-rag-quality-budgets-2026",
-    title: "Production RAG: Quality Budgets, Freshness Windows, and SLAs",
-    description: "Run RAG at scale with explicit quality budgets, freshness controls, and KPI-aligned SLAs that avoid regressions.",
-    excerpt: "Keep answers accurate and on‑budget with freshness windows, async warmups, and layered evals.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-10",
-    category: "GenAI",
-    tags: ["RAG", "Freshness", "Evals", "SLAs"],
-    featured: true,
-    readTime: "9 min read",
-    image: "/images/production-rag-quality-budgets-2026.jpg",
-    newBadge: true,
+    id: "genai-routing-under-budgets-2026",",
+    slug: "genai-routing-under-budgets-2026",",
+    title: "Quality‑Tiered GenAI Routing: SLAs Without Bill Shock",",
+    description: "Route prompts across model tiers with budgets, caches, and eval signals to control cost.",",
+    excerpt: "Keep experience high under tight budgets with deterministic routing and caches.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-10-13",",
+    category: "AI Operations",",
+    tags: ["Budgets", "Quality Tiers", "Routing"],",
+    featured: true,,
+    readTime: "6 min read",",
+    image: "/images/genai-routing-2026.jpg",",
+    id: "platform-golden-paths-kpis-2026","
+    slug: "platform-golden-paths-kpis-2026","
+    title: "Golden Paths That Move KPIs: Platform Engineering That Pays","
+    description: "Adoption metrics, TTFX, and SLOs as leading indicators of platform ROI in 2026.","
+    excerpt: "A scorecard system that links platform investments to shipped business outcomes.","
+    author: "Zion Tech Group Team","
+    date: "2025-10-13","
+    category: "Platform Engineering","
+    tags: ["Golden Paths", "ROI", "Scorecards"],"
+    featured: true,,
+    readTime: "7 min read","
+    image: "/images/platform-golden-paths-kpis-2026.jpg","
+    newBadge: true,,
     trending: true
   },
   {
-    id: "ai-governance-blueprint-2025",
-    slug: "ai-governance-blueprint-2025",
-    title: "AI Governance Blueprint 2025: Practical Guardrails That Ship",
-    description: "Scorecards, policy tests, and change-control that keep AI initiatives fast and compliant.",
-    excerpt: "Move beyond slideware: adopt scorecards, policy tests, and measurable guardrails that accelerate delivery while satisfying risk.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "AI Strategy",
-    tags: ["AI Governance", "Policy", "Risk", "Compliance", "Scorecards"],
-    featured: true,
-    readTime: "9 min read",
-    image: "/images/ai-governance-blueprint.jpg",
-    newBadge: true,
+    id: "platform-golden-paths-kpis-2026",",
+    slug: "platform-golden-paths-kpis-2026",",
+    title: "Golden Paths That Move KPIs: Platform Engineering That Pays",",
+    description: "Adoption metrics, TTFX, and SLOs as leading indicators of platform ROI in 2026.",",
+    excerpt: "A scorecard system that links platform investments to shipped business outcomes.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-10-13",",
+    category: "Platform Engineering",",
+    tags: ["Golden Paths", "ROI", "Scorecards"],",
+    featured: true,,
+    readTime: "7 min read",",
+    image: "/images/platform-golden-paths-kpis-2026.jpg",",
+    id: "ai-platform-scorecards-roi-2026","
+    slug: "ai-platform-scorecards-roi-2026","
+    title: "AI Platform Scorecards 2026: Proving ROI with Leading Indicators","
+    description: "A practical system to link platform telemetry to adoption, retention, and revenue using scorecards engineers actually adopt.","
+    excerpt: "Design scorecards that shift conversations from infra spend to shipped business outcomes.","
+    author: "Zion Tech Group Team","
+    date: "2025-10-10","
+    category: "AI Strategy","
+    tags: ["Scorecards", "ROI", "Platform Engineering"],"
+    featured: true,,
+    readTime: "8 min read","
+    image: "/images/ai-platform-scorecards-roi-2026.jpg","
+    newBadge: true,,
     trending: true
   },
   {
-    id: "genai-guardrails-realtime-2025",
-    slug: "genai-guardrails-realtime-2025",
-    title: "Real‑Time GenAI Guardrails: Inline Filters, Canaries, and Evals",
-    description: "Run fast with live canaries, inline moderation, and KPI‑linked evals that prevent regressions.",
-    excerpt: "A field guide to guardrails that actually work in production without blocking velocity.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "GenAI",
-    tags: ["Guardrails", "Evals", "Safety", "Observability", "GenAI"],
-    featured: false,
-    readTime: "8 min read",
-    image: "/images/genai-guardrails.jpg",
-    newBadge: true,
+    id: "ai-platform-scorecards-roi-2026",",
+    slug: "ai-platform-scorecards-roi-2026",",
+    title: "AI Platform Scorecards 2026: Proving ROI with Leading Indicators",",
+    description: "A practical system to link platform telemetry to adoption, retention, and revenue using scorecards engineers actually adopt.",",
+    excerpt: "Design scorecards that shift conversations from infra spend to shipped business outcomes.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-10-10",",
+    category: "AI Strategy",",
+    tags: ["Scorecards", "ROI", "Platform Engineering"],",
+    featured: true,,
+    readTime: "8 min read",",
+    image: "/images/ai-platform-scorecards-roi-2026.jpg",",
+    id: "production-rag-quality-budgets-2026","
+    slug: "production-rag-quality-budgets-2026","
+    title: "Production RAG: Quality Budgets, Freshness Windows, and SLAs","
+    description: "Run RAG at scale with explicit quality budgets, freshness controls, and KPI-aligned SLAs that avoid regressions.","
+    excerpt: "Keep answers accurate and on‑budget with freshness windows, async warmups, and layered evals.","
+    author: "Zion Tech Group Team","
+    date: "2025-10-10","
+    category: "GenAI","
+    tags: ["RAG", "Freshness", "Evals", "SLAs"],"
+    featured: true,,
+    readTime: "9 min read","
+    image: "/images/production-rag-quality-budgets-2026.jpg","
+    newBadge: true,,
+    trending: true
+  },
+  {
+    id: "production-rag-quality-budgets-2026",",
+    slug: "production-rag-quality-budgets-2026",",
+    title: "Production RAG: Quality Budgets, Freshness Windows, and SLAs",",
+    description: "Run RAG at scale with explicit quality budgets, freshness controls, and KPI-aligned SLAs that avoid regressions.",",
+    excerpt: "Keep answers accurate and on‑budget with freshness windows, async warmups, and layered evals.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-10-10",",
+    category: "GenAI",",
+    tags: ["RAG", "Freshness", "Evals", "SLAs"],",
+    featured: true,,
+    readTime: "9 min read",",
+    image: "/images/production-rag-quality-budgets-2026.jpg",",
+    id: "ai-governance-blueprint-2025","
+    slug: "ai-governance-blueprint-2025","
+    title: "AI Governance Blueprint 2025: Practical Guardrails That Ship","
+    description: "Scorecards, policy tests, and change-control that keep AI initiatives fast and compliant.","
+    excerpt: "Move beyond slideware: adopt scorecards, policy tests, and measurable guardrails that accelerate delivery while satisfying risk.","
+    author: "Zion Tech Group Team","
+    date: "2025-09-29","
+    category: "AI Strategy","
+    tags: ["AI Governance", "Policy", "Risk", "Compliance", "Scorecards"],"
+    featured: true,,
+    readTime: "9 min read","
+    image: "/images/ai-governance-blueprint.jpg","
+    newBadge: true,,
+    trending: true
+  },
+  {
+    id: "ai-governance-blueprint-2025",",
+    slug: "ai-governance-blueprint-2025",",
+    title: "AI Governance Blueprint 2025: Practical Guardrails That Ship",",
+    description: "Scorecards, policy tests, and change-control that keep AI initiatives fast and compliant.",",
+    excerpt: "Move beyond slideware: adopt scorecards, policy tests, and measurable guardrails that accelerate delivery while satisfying risk.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-09-29",",
+    category: "AI Strategy",",
+    tags: ["AI Governance", "Policy", "Risk", "Compliance", "Scorecards"],",
+    featured: true,,
+    readTime: "9 min read",",
+    image: "/images/ai-governance-blueprint.jpg",",
+    newBadge: true,,
+    trending: true
+  },
+  {
+    id: "genai-guardrails-realtime-2025",",
+    slug: "genai-guardrails-realtime-2025",",
+    title: "Real‑Time GenAI Guardrails: Inline Filters, Canaries, and Evals",",
+    description: "Run fast with live canaries, inline moderation, and KPI‑linked evals that prevent regressions.",",
+    excerpt: "A field guide to guardrails that actually work in production without blocking velocity.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-09-29",",
+    category: "GenAI",",
+    tags: ["Guardrails", "Evals", "Safety", "Observability", "GenAI"],",
+    featured: false,,
+    readTime: "8 min read",",
+    image: "/images/genai-guardrails.jpg",",
+    newBadge: true,,
     trending: false
   },
   {
-    id: "cloud-finops-guardrails-2025",
-    slug: "cloud-finops-guardrails-2025",
-    title: "Cloud FinOps Guardrails Engineers Actually Use",
-    description: "Budgets, alerts, and PR gates that cut waste 25–40% while preserving delivery speed.",
-    excerpt: "A practical FinOps playbook: actionable guardrails, scorecards tied to product goals, and automated waste prevention.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "Cloud",
-    tags: ["FinOps", "Cloud", "Governance"],
-    featured: true,
-    readTime: "6 min read",
-    image: "/images/cloud-finops-guardrails.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "practical-evals-scorecards-2025",
-    slug: "practical-evals-scorecards-2025",
-    title: "Practical AI Evals That Predict Business Outcomes",
-    description: "Design scorecards that correlate with revenue, CSAT, and retention.",
-    excerpt: "Move beyond BLEU: build evals that predict outcomes and prevent regressions in production.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "GenAI",
-    tags: ["Evals", "Scorecards", "GenAI"],
-    featured: true,
-    readTime: "6 min read",
-    image: "/images/practical-evals-2025.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "ai-agent-observability-2025",
-    slug: "ai-agent-observability-2025",
-    title: "AI Agent Observability: Traces, Policy Tests, and Feedback Loops",
-    description: "Keep quality high with traces, inline policy tests, and human-in-the-loop signals.",
-    excerpt: "A field guide to observing multi-step AI agents without slowing them down.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "GenAI",
-    tags: ["Observability", "Agents", "Safety"],
-    featured: false,
-    readTime: "7 min read",
-    image: "/images/ai-agent-observability.jpg",
-    newBadge: true,
+    id: "cloud-finops-guardrails-2025",",
+    slug: "cloud-finops-guardrails-2025",",
+    title: "Cloud FinOps Guardrails Engineers Actually Use",",
+    description: "Budgets, alerts, and PR gates that cut waste 25–40% while preserving delivery speed.",",
+    excerpt: "A practical FinOps playbook: actionable guardrails, scorecards tied to product goals, and automated waste prevention.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-09-29",",
+    category: "Cloud",",
+    tags: ["FinOps", "Cloud", "Governance"],",
+    featured: true,,
+    readTime: "6 min read",",
+    image: "/images/cloud-finops-guardrails.jpg",",
+    id: "genai-guardrails-realtime-2025","
+    slug: "genai-guardrails-realtime-2025","
+    title: "Real‑Time GenAI Guardrails: Inline Filters, Canaries, and Evals","
+    description: "Run fast with live canaries, inline moderation, and KPI‑linked evals that prevent regressions.","
+    excerpt: "A field guide to guardrails that actually work in production without blocking velocity.","
+    author: "Zion Tech Group Team","
+    date: "2025-09-29","
+    category: "GenAI","
+    tags: ["Guardrails", "Evals", "Safety", "Observability", "GenAI"],"
+    featured: false,,
+    readTime: "8 min read","
+    image: "/images/genai-guardrails.jpg","
+    newBadge: true,,
     trending: false
   },
   {
-    id: "serverless-inference-cost-playbook-2025",
-    slug: "serverless-inference-cost-playbook-2025",
-    title: "Serverless Inference Cost Playbook",
-    description: "Adaptive batching, warm pools, and quality tiers without P95 pain.",
-    excerpt: "Cut GenAI inference costs while preserving latency and quality with proven patterns.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "GenAI",
-    tags: ["Inference", "Cost", "Optimization"],
-    featured: false,
-    readTime: "7 min read",
-    image: "/images/serverless-inference-costs.jpg",
-    newBadge: true,
+    id: "cloud-finops-guardrails-2025","
+    slug: "cloud-finops-guardrails-2025","
+    title: "Cloud FinOps Guardrails Engineers Actually Use","
+    description: "Budgets, alerts, and PR gates that cut waste 25–40% while preserving delivery speed.","
+    excerpt: "A practical FinOps playbook: actionable guardrails, scorecards tied to product goals, and automated waste prevention.","
+    author: "Zion Tech Group Team","
+    date: "2025-09-29","
+    category: "Cloud","
+    tags: ["FinOps", "Cloud", "Governance"],"
+    featured: true,,
+    readTime: "6 min read","
+    image: "/images/cloud-finops-guardrails.jpg","
+    newBadge: true,,
+    trending: true
+  },
+  {
+    id: "practical-evals-scorecards-2025","
+    slug: "practical-evals-scorecards-2025","
+    title: "Practical AI Evals That Predict Business Outcomes","
+    description: "Design scorecards that correlate with revenue, CSAT, and retention.","
+    excerpt: "Move beyond BLEU: build evals that predict outcomes and prevent regressions in production.","
+    author: "Zion Tech Group Team","
+    date: "2025-09-29","
+    category: "GenAI","
+    tags: ["Evals", "Scorecards", "GenAI"],"
+    featured: true,,
+    readTime: "6 min read","
+    image: "/images/practical-evals-2025.jpg","
+    newBadge: true,,
+    trending: true
+  },
+  {
+    id: "practical-evals-scorecards-2025",",
+    slug: "practical-evals-scorecards-2025",",
+    title: "Practical AI Evals That Predict Business Outcomes",",
+    description: "Design scorecards that correlate with revenue, CSAT, and retention.",",
+    excerpt: "Move beyond BLEU: build evals that predict outcomes and prevent regressions in production.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-09-29",",
+    category: "GenAI",",
+    tags: ["Evals", "Scorecards", "GenAI"],",
+    featured: true,,
+    readTime: "6 min read",",
+    image: "/images/practical-evals-2025.jpg",",
+    newBadge: true,,
+    trending: true
+  },
+  {
+    id: "ai-agent-observability-2025",",
+    slug: "ai-agent-observability-2025",",
+    title: "AI Agent Observability: Traces, Policy Tests, and Feedback Loops",",
+    description: "Keep quality high with traces, inline policy tests, and human-in-the-loop signals.",",
+    excerpt: "A field guide to observing multi-step AI agents without slowing them down.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-09-29",",
+    category: "GenAI",",
+    tags: ["Observability", "Agents", "Safety"],",
+    featured: false,,
+    readTime: "7 min read",",
+    image: "/images/ai-agent-observability.jpg",",
+    id: "ai-agent-observability-2025","
+    slug: "ai-agent-observability-2025","
+    title: "AI Agent Observability: Traces, Policy Tests, and Feedback Loops","
+    description: "Keep quality high with traces, inline policy tests, and human-in-the-loop signals.","
+    excerpt: "A field guide to observing multi-step AI agents without slowing them down.","
+    author: "Zion Tech Group Team","
+    date: "2025-09-29","
+    category: "GenAI","
+    tags: ["Observability", "Agents", "Safety"],"
+    featured: false,,
+    readTime: "7 min read","
+    image: "/images/ai-agent-observability.jpg","
+    newBadge: true,,
     trending: false
   },
   {
-    id: "ai-sales-copilot-playbook-2025",
-    slug: "ai-sales-copilot-playbook-2025",
-    title: "AI Sales Copilot: A 90‑Day Plan",
-    description: "Workflows, guardrails, and KPIs to lift win‑rates with an AI copilot.",
-    excerpt: "A pragmatic plan to deploy a sales copilot that sellers actually use.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "Applied AI",
-    tags: ["Sales", "Copilot", "Playbook"],
-    featured: false,
-    readTime: "8 min read",
-    image: "/images/ai-sales-copilot.jpg",
-    newBadge: true,
+    id: "serverless-inference-cost-playbook-2025","
+    slug: "serverless-inference-cost-playbook-2025","
+    title: "Serverless Inference Cost Playbook","
+    description: "Adaptive batching, warm pools, and quality tiers without P95 pain.","
+    excerpt: "Cut GenAI inference costs while preserving latency and quality with proven patterns.","
+    author: "Zion Tech Group Team","
+    date: "2025-09-29","
+    category: "GenAI","
+    tags: ["Inference", "Cost", "Optimization"],"
+    featured: false,,
+    readTime: "7 min read","
+    image: "/images/serverless-inference-costs.jpg","
+    newBadge: true,,
+    trending: false
+  },
+  {
+    id: "serverless-inference-cost-playbook-2025",",
+    slug: "serverless-inference-cost-playbook-2025",",
+    title: "Serverless Inference Cost Playbook",",
+    description: "Adaptive batching, warm pools, and quality tiers without P95 pain.",",
+    excerpt: "Cut GenAI inference costs while preserving latency and quality with proven patterns.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-09-29",",
+    category: "GenAI",",
+    tags: ["Inference", "Cost", "Optimization"],",
+    featured: false,,
+    readTime: "7 min read",",
+    image: "/images/serverless-inference-costs.jpg",",
+    newBadge: true,,
+    trending: false
+  },
+  {
+    id: "ai-sales-copilot-playbook-2025",",
+    slug: "ai-sales-copilot-playbook-2025",",
+    title: "AI Sales Copilot: A 90‑Day Plan",",
+    description: "Workflows, guardrails, and KPIs to lift win‑rates with an AI copilot.",",
+    excerpt: "A pragmatic plan to deploy a sales copilot that sellers actually use.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-09-29",",
+    category: "Applied AI",",
+    tags: ["Sales", "Copilot", "Playbook"],",
+    featured: false,,
+    readTime: "8 min read",",
+    image: "/images/ai-sales-copilot.jpg",",
+    id: "ai-sales-copilot-playbook-2025","
+    slug: "ai-sales-copilot-playbook-2025","
+    title: "AI Sales Copilot: A 90‑Day Plan","
+    description: "Workflows, guardrails, and KPIs to lift win‑rates with an AI copilot.","
+    excerpt: "A pragmatic plan to deploy a sales copilot that sellers actually use.","
+    author: "Zion Tech Group Team","
+    date: "2025-09-29","
+    category: "Applied AI","
+    tags: ["Sales", "Copilot", "Playbook"],"
+    featured: false,,
+    readTime: "8 min read","
+    image: "/images/ai-sales-copilot.jpg","
+    newBadge: true,,
     trending: true
   },
   {
@@ -1441,652 +1844,554 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/secure-rag-2025.jpg",
     newBadge: true,
     trending: false
-  }
-  ,
-  {
-    id: "agentic-workflows-blueprint-2026",
-    slug: "agentic-workflows-blueprint-2026",
-    title: "Agentic Workflows Blueprint 2026: Tools, Traces, and Safety Budgets",
-    description: "Design reliable multi‑tool agents with deterministic tools, live traces, and risk budgets.",
-    excerpt: "A production playbook for building agent workflows that teams can trust.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-10",
-    category: "GenAI",
-    tags: ["Agents", "Tracing", "Guardrails"],
-    featured: true,
-    readTime: "9 min read",
-    image: "/images/agentic-workflows-2026.jpg",
-    newBadge: true,
-    trending: true
   },
   {
-    id: "privacy-first-observability-2026",
-    slug: "privacy-first-observability-2026",
-    title: "Privacy‑First Observability: User‑Centric Traces Without PII Leaks",
-    description: "Implement privacy filters, scoped IDs, and retention policies that keep signals rich and safe.",
-    excerpt: "Observability patterns that balance insight with compliance across stacks.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-10",
-    category: "Observability",
-    tags: ["Privacy", "Tracing", "Compliance"],
-    featured: false,
-    readTime: "7 min read",
-    image: "/images/privacy-first-observability.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "on-device-agents-2026",
-    slug: "on-device-agents-2026",
-    title: "On‑Device Agents 2026: Private Tools That Work Offline",
-    description: "Ship fast, privacy‑first assistants with on‑device tools, local caches, and fallback routes.",
-    excerpt: "Design assistants that keep working with limited connectivity and strict privacy.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-11",
-    category: "Edge Computing",
-    tags: ["Agents", "Edge", "Privacy"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/on-device-agents-2026.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "genai-budgets-and-quality-tiers-2026",
-    slug: "genai-budgets-and-quality-tiers-2026",
-    title: "GenAI Budgets and Quality Tiers: Control Cost Without Hurting UX",
-    description: "Tier models, cache prompts, and budget traffic by SLA to cut spend 30–60%.",
-    excerpt: "Practical controls to keep GenAI bills predictable while preserving experience.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-11",
-    category: "AI Operations",
-    tags: ["FinOps", "Quality Tiers", "Budgets"],
-    featured: true,
-    readTime: "6 min read",
-    image: "/images/genai-budgets-quality-tiers.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "secure-tools-marketplace-2026",
-    slug: "secure-tools-marketplace-2026",
-    title: "Secure Tools Marketplace: Vetting, Sandboxes, and Attestations",
-    description: "Bring third‑party tools safely with policy checks, sandboxes, and signed attestations.",
-    excerpt: "A safe path to ecosystem extensibility without compromising security or velocity.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-11",
-    category: "Security",
-    tags: ["Security", "Supply Chain", "Sandboxing"],
-    featured: false,
-    readTime: "8 min read",
-    image: "/images/secure-tools-marketplace.jpg",
-    newBadge: true,
+    id: "agentic-workflows-blueprint-2026",",
+    slug: "agentic-workflows-blueprint-2026",",
+    title: "Agentic Workflows Blueprint 2026: Tools, Traces, and Safety Budgets",",
+    description: "Design reliable multi‑tool agents with deterministic tools, live traces, and risk budgets.",",
+    excerpt: "A production playbook for building agent workflows that teams can trust.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-10-10",",
+    category: "GenAI",",
+    tags: ["Agents", "Tracing", "Guardrails"],",
+    featured: true,,
+    readTime: "9 min read",",
+    image: "/images/agentic-workflows-2026.jpg",",
+    id: "secure-rag-2025","
+    slug: "secure-rag-2025","
+    title: "Secure RAG 2025: Authorization‑Aware Retrieval and Prompt Firewalls","
+    description: "Enterprise patterns for safe, compliant retrieval‑augmented generation.","
+    excerpt: "Implement auth-aware retrieval, freshness windows, and prompt firewalls without blocking teams.","
+    author: "Zion Tech Group Team","
+    date: "2025-09-29","
+    category: "AI Security","
+    tags: ["RAG", "Security", "Governance"],"
+    featured: false,,
+    readTime: "8 min read","
+    image: "/images/secure-rag-2025.jpg","
+    newBadge: true,,
     trending: false
-  }
-  ,
+  },
   {
-    id: "ai-autonomous-incident-runbooks-2025",
-    slug: "ai-autonomous-incident-runbooks-2025",
-    title: "AI Autonomous Incident Runbooks: Budgeted Actions and Instant Rollback",
-    description: "Design incident playbooks with explicit budgets, approvals, and safe automated rollback.",
-    excerpt: "Close the loop from detection to safe action using budgets, approvals, and telemetry.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "AI Operations",
-    tags: ["Runbooks", "Automation", "Risk Budgets"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/ai-autonomous-incident-runbooks-2025.jpg",
-    newBadge: true,
+    id: "agentic-workflows-blueprint-2026","
+    slug: "agentic-workflows-blueprint-2026","
+    title: "Agentic Workflows Blueprint 2026: Tools, Traces, and Safety Budgets","
+    description: "Design reliable multi‑tool agents with deterministic tools, live traces, and risk budgets.","
+    excerpt: "A production playbook for building agent workflows that teams can trust.","
+    author: "Zion Tech Group Team","
+    date: "2025-10-10","
+    category: "GenAI","
+    tags: ["Agents", "Tracing", "Guardrails"],"
+    featured: true,,
+    readTime: "9 min read","
+    image: "/images/agentic-workflows-2026.jpg","
+    newBadge: true,,
     trending: true
   },
   {
-    id: "privacy-first-feature-flags-2025",
-    slug: "privacy-first-feature-flags-2025",
-    title: "Privacy‑First Feature Flags: Zero‑Regret Rollouts at the Edge",
-    description: "Scoped IDs, on‑device filters, and geo budgets for safe global releases under 100ms.",
-    excerpt: "Blueprint for privacy‑preserving progressive delivery using edge compute and KV.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "Architecture",
-    tags: ["Feature Flags", "Edge", "Privacy"],
-    featured: true,
-    readTime: "6 min read",
-    image: "/images/privacy-first-feature-flags-2025.jpg",
-    newBadge: true,
+    id: "privacy-first-observability-2026","
+    slug: "privacy-first-observability-2026","
+    title: "Privacy‑First Observability: User‑Centric Traces Without PII Leaks","
+    description: "Implement privacy filters, scoped IDs, and retention policies that keep signals rich and safe.","
+    excerpt: "Observability patterns that balance insight with compliance across stacks.","
+    author: "Zion Tech Group Team","
+    date: "2025-10-10","
+    category: "Observability","
+    tags: ["Privacy", "Tracing", "Compliance"],"
+    featured: false,,
+    readTime: "7 min read","
+    image: "/images/privacy-first-observability.jpg","
+    newBadge: true,,
     trending: true
   },
   {
-    id: "platform-roi-scorecards-quickstart-2025",
-    slug: "platform-roi-scorecards-quickstart-2025",
-    title: "Platform ROI Scorecards: A Practical Quickstart",
-    description: "Link platform telemetry to adoption and revenue with scorecards engineers actually use.",
-    excerpt: "Adoption, golden‑path TTFX, and SLOs as leading indicators of ROI.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "AI Strategy",
-    tags: ["Scorecards", "Platform", "ROI"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/platform-roi-scorecards-quickstart-2025.jpg",
-    newBadge: true,
-    trending: true
-  }
-  ,
-  {
-    id: "ai-2029-self-healing-platforms",
-    slug: "ai-2029-self-healing-platforms",
-    title: "AI 2029: Self‑Healing Platforms — Autonomic Recovery in Seconds",
-    description: "Policy‑tested playbooks, budgeted actions, and live canaries that auto‑contain incidents in under 60s.",
-    excerpt: "Design self‑healing platforms that roll back safely and deterministically under pressure.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-30",
-    category: "AI Operations",
-    tags: ["Self‑Healing", "Runbooks", "Rollback"],
-    featured: true,
-    readTime: "8 min read",
-    image: "/images/ai-2029-self-healing-platforms.jpg",
-    newBadge: true,
+    id: "privacy-first-observability-2026",",
+    slug: "privacy-first-observability-2026",",
+    title: "Privacy‑First Observability: User‑Centric Traces Without PII Leaks",",
+    description: "Implement privacy filters, scoped IDs, and retention policies that keep signals rich and safe.",",
+    excerpt: "Observability patterns that balance insight with compliance across stacks.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-10-10",",
+    category: "Observability",",
+    tags: ["Privacy", "Tracing", "Compliance"],",
+    featured: false,,
+    readTime: "7 min read",",
+    image: "/images/privacy-first-observability.jpg",",
+    id: "on-device-agents-2026","
+    slug: "on-device-agents-2026","
+    title: "On‑Device Agents 2026: Private Tools That Work Offline","
+    description: "Ship fast, privacy‑first assistants with on‑device tools, local caches, and fallback routes.","
+    excerpt: "Design assistants that keep working with limited connectivity and strict privacy.","
+    author: "Zion Tech Group Team","
+    date: "2025-10-11","
+    category: "Edge Computing","
+    tags: ["Agents", "Edge", "Privacy"],"
+    featured: true,,
+    readTime: "7 min read","
+    image: "/images/on-device-agents-2026.jpg","
+    newBadge: true,,
     trending: true
   },
   {
-    id: "edge-2028-private-personalization",
-    slug: "edge-2028-private-personalization",
-    title: "Edge 2028: Private Personalization at <100ms",
-    description: "Scoped IDs, signed configs, and on‑device models for zero‑PII personalization worldwide.",
-    excerpt: "Blueprints for real‑time, privacy‑first personalization with stable SLAs.",
+    id: "on-device-agents-2026",",
+    slug: "on-device-agents-2026",",
+    title: "On‑Device Agents 2026: Private Tools That Work Offline",",
+    description: "Ship fast, privacy‑first assistants with on‑device tools, local caches, and fallback routes.",",
+    excerpt: "Design assistants that keep working with limited connectivity and strict privacy.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-10-11",",
+    category: "Edge Computing",",
+    tags: ["Agents", "Edge", "Privacy"],",
+    featured: true,,
+    readTime: "7 min read",",
+    image: "/images/on-device-agents-2026.jpg",",
+    id: "genai-budgets-and-quality-tiers-2026","
+    slug: "genai-budgets-and-quality-tiers-2026","
+    title: "GenAI Budgets and Quality Tiers: Control Cost Without Hurting UX","
+    description: "Tier models, cache prompts, and budget traffic by SLA to cut spend 30–60%.","
+    excerpt: "Practical controls to keep GenAI bills predictable while preserving experience.","
+    author: "Zion Tech Group Team","
+    date: "2025-10-11","
+    category: "AI Operations","
+    tags: ["FinOps", "Quality Tiers", "Budgets"],"
+    featured: true,,
+    readTime: "6 min read","
+    image: "/images/genai-budgets-quality-tiers.jpg","
+    newBadge: true,,
+    trending: true
+  },
+  {
+    id: "genai-budgets-and-quality-tiers-2026",",
+    slug: "genai-budgets-and-quality-tiers-2026",",
+    title: "GenAI Budgets and Quality Tiers: Control Cost Without Hurting UX",",
+    description: "Tier models, cache prompts, and budget traffic by SLA to cut spend 30–60%.",",
+    excerpt: "Practical controls to keep GenAI bills predictable while preserving experience.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-10-11",",
+    category: "AI Operations",",
+    tags: ["FinOps", "Quality Tiers", "Budgets"],",
+    featured: true,,
+    readTime: "6 min read",",
+    image: "/images/genai-budgets-quality-tiers.jpg",",
+    newBadge: true,,
+    trending: true
+  },
+  {
+    id: "secure-tools-marketplace-2026",",
+    slug: "secure-tools-marketplace-2026",",
+    title: "Secure Tools Marketplace: Vetting, Sandboxes, and Attestations",",
+    description: "Bring third‑party tools safely with policy checks, sandboxes, and signed attestations.",",
+    excerpt: "A safe path to ecosystem extensibility without compromising security or velocity.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-10-11",",
+    category: "Security",",
+    tags: ["Security", "Supply Chain", "Sandboxing"],",
+    featured: false,,
+    readTime: "8 min read",",
+    image: "/images/secure-tools-marketplace.jpg",",
+    newBadge: true,,
+    trending: false
+  },
+  {
+    id: "ai-governance-in-practice-2026",",
+    slug: "ai-governance-in-practice-2026",",
+    title: "AI Governance in Practice 2026: Scorecards, PR Gates, Online Evals",",
+    description: "Lightweight guardrails wired to KPIs: scorecards, PR checks, and live canaries that keep teams fast.",",
+    excerpt: "Adopt governance engineers actually use—measurable, automated, and velocity‑friendly.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-10-13",",
+    category: "AI Strategy",",
+    tags: ["Governance", "Scorecards", "Evals"],",
+    featured: true,,
+    readTime: "7 min read",",
+    image: "/images/ai-governance-in-practice-2026.jpg",",
+    id: "secure-tools-marketplace-2026","
+    slug: "secure-tools-marketplace-2026","
+    title: "Secure Tools Marketplace: Vetting, Sandboxes, and Attestations","
+    description: "Bring third‑party tools safely with policy checks, sandboxes, and signed attestations.","
+    excerpt: "A safe path to ecosystem extensibility without compromising security or velocity.","
+    author: "Zion Tech Group Team","
+    date: "2025-10-11","
+    category: "Security","
+    tags: ["Security", "Supply Chain", "Sandboxing"],"
+    featured: false,,
+    readTime: "8 min read","
+    image: "/images/secure-tools-marketplace.jpg","
+    newBadge: true,,
+    trending: false
+  },
+  {
+    id: "ai-governance-in-practice-2026","
+    slug: "ai-governance-in-practice-2026","
+    title: "AI Governance in Practice 2026: Scorecards, PR Gates, Online Evals","
+    description: "Lightweight guardrails wired to KPIs: scorecards, PR checks, and live canaries that keep teams fast.","
+    excerpt: "Adopt governance engineers actually use—measurable, automated, and velocity‑friendly.","
+    author: "Zion Tech Group Team","
+    date: "2025-10-13","
+    category: "AI Strategy","
+    tags: ["Governance", "Scorecards", "Evals"],"
+    featured: true,,
+    readTime: "7 min read","
+    image: "/images/ai-governance-in-practice-2026.jpg","
+    newBadge: true,,
+    trending: true
+  },
+  {
+    id: "edge-privacy-by-design-2026",
+    slug: "edge-privacy-by-design-2026",
+    title: "Edge Privacy by Design 2026: On‑Device Filters, Scoped IDs, <100ms",
+    description: "Ship privacy‑first intelligence with on‑device redaction, signed configs, and geo budgets.",
+    excerpt: "Blueprint for private, low‑latency edge decisions without PII exposure.",
     author: "Zion Tech Group Team",
-    date: "2025-09-30",
+    date: "2025-10-13",
     category: "Edge Computing",
-    tags: ["Edge", "Privacy", "Personalization"],
+    tags: ["Edge", "Privacy", "On‑device"],
     featured: true,
-    readTime: "7 min read",
-    image: "/images/edge-2028-private-personalization.jpg",
+    readTime: "8 min read",
+    image: "/images/edge-privacy-by-design-2026.jpg",
     newBadge: true,
     trending: true
   },
   {
-    id: "genai-2028-eval-scorecards",
-    slug: "genai-2028-eval-scorecards",
-    title: "GenAI 2028: Eval Scorecards — KPIs, Budgets, Rollback",
-    description: "KPI‑linked evals and budget‑aware routing that keep quality high without regressions.",
-    excerpt: "Ship safe GenAI with scorecards that gate traffic and trigger instant rollback.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-30",
-    category: "GenAI",
-    tags: ["Evals", "Scorecards", "Budgets"],
-    featured: true,
-    readTime: "8 min read",
-    image: "/images/genai-2028-eval-scorecards.jpg",
-    newBadge: true,
+    id: "ai-autonomous-incident-runbooks-2025",",
+    slug: "ai-autonomous-incident-runbooks-2025",",
+    title: "AI Autonomous Incident Runbooks: Budgeted Actions and Instant Rollback",",
+    description: "Design incident playbooks with explicit budgets, approvals, and safe automated rollback.",",
+    excerpt: "Close the loop from detection to safe action using budgets, approvals, and telemetry.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-09-29",",
+    category: "AI Operations",",
+    tags: ["Runbooks", "Automation", "Risk Budgets"],",
+    featured: true,,
+    readTime: "7 min read",",
+    image: "/images/ai-autonomous-incident-runbooks-2025.jpg",",
+    id: "edge-privacy-by-design-2026","
+    slug: "edge-privacy-by-design-2026","
+    title: "Edge Privacy by Design 2026: On‑Device Filters, Scoped IDs, <100ms","
+    description: "Ship privacy‑first intelligence with on‑device redaction, signed configs, and geo budgets.","
+    excerpt: "Blueprint for private, low‑latency edge decisions without PII exposure.","
+    author: "Zion Tech Group Team","
+    date: "2025-10-13","
+    category: "Edge Computing","
+    tags: ["Edge", "Privacy", "On‑device"],"
+    featured: true,,
+    readTime: "8 min read","
+    image: "/images/edge-privacy-by-design-2026.jpg","
+    newBadge: true,,
+    trending: true
+  },
+  {
+    id: "ai-autonomous-incident-runbooks-2025","
+    slug: "ai-autonomous-incident-runbooks-2025","
+    title: "AI Autonomous Incident Runbooks: Budgeted Actions and Instant Rollback","
+    description: "Design incident playbooks with explicit budgets, approvals, and safe automated rollback.","
+    excerpt: "Close the loop from detection to safe action using budgets, approvals, and telemetry.","
+    author: "Zion Tech Group Team","
+    date: "2025-09-29","
+    category: "AI Operations","
+    tags: ["Runbooks", "Automation", "Risk Budgets"],"
+    featured: true,,
+    readTime: "7 min read","
+    image: "/images/ai-autonomous-incident-runbooks-2025.jpg","
+    newBadge: true,,
+    trending: true
+  },
+  {
+    id: "privacy-first-feature-flags-2025","
+    slug: "privacy-first-feature-flags-2025","
+    title: "Privacy‑First Feature Flags: Zero‑Regret Rollouts at the Edge","
+    description: "Scoped IDs, on‑device filters, and geo budgets for safe global releases under 100ms.","
+    excerpt: "Blueprint for privacy‑preserving progressive delivery using edge compute and KV.","
+    author: "Zion Tech Group Team","
+    date: "2025-09-29","
+    category: "Architecture","
+    tags: ["Feature Flags", "Edge", "Privacy"],"
+    featured: true,,
+    readTime: "6 min read","
+    image: "/images/privacy-first-feature-flags-2025.jpg","
+    newBadge: true,,
+    trending: true
+  },
+  {
+    id: "privacy-first-feature-flags-2025",",
+    slug: "privacy-first-feature-flags-2025",",
+    title: "Privacy‑First Feature Flags: Zero‑Regret Rollouts at the Edge",",
+    description: "Scoped IDs, on‑device filters, and geo budgets for safe global releases under 100ms.",",
+    excerpt: "Blueprint for privacy‑preserving progressive delivery using edge compute and KV.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-09-29",",
+    category: "Architecture",",
+    tags: ["Feature Flags", "Edge", "Privacy"],",
+    featured: true,,
+    readTime: "6 min read",",
+    image: "/images/privacy-first-feature-flags-2025.jpg",",
+    newBadge: true,,
+    trending: true
+  },
+  {
+    id: "platform-roi-scorecards-quickstart-2025",",
+    slug: "platform-roi-scorecards-quickstart-2025",",
+    title: "Platform ROI Scorecards: A Practical Quickstart",",
+    description: "Link platform telemetry to adoption and revenue with scorecards engineers actually use.",",
+    excerpt: "Adoption, golden‑path TTFX, and SLOs as leading indicators of ROI.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-09-29",",
+    category: "AI Strategy",",
+    tags: ["Scorecards", "Platform", "ROI"],",
+    featured: true,,
+    readTime: "7 min read",",
+    image: "/images/platform-roi-scorecards-quickstart-2025.jpg",",
+    id: "platform-roi-scorecards-quickstart-2025","
+    slug: "platform-roi-scorecards-quickstart-2025","
+    title: "Platform ROI Scorecards: A Practical Quickstart","
+    description: "Link platform telemetry to adoption and revenue with scorecards engineers actually use.","
+    excerpt: "Adoption, golden‑path TTFX, and SLOs as leading indicators of ROI.","
+    author: "Zion Tech Group Team","
+    date: "2025-09-29","
+    category: "AI Strategy","
+    tags: ["Scorecards", "Platform", "ROI"],"
+    featured: true,,
+    readTime: "7 min read","
+    image: "/images/platform-roi-scorecards-quickstart-2025.jpg","
+    newBadge: true,,
     trending: true
   }
 ];
 
-// Sept 30, 2025 – Add three brand-new articles (advertised site-wide)
+// Newly added featured articles (auto used by showcases and banners)
 latestArticles.unshift(
   {
-    id: "ai-2025-sept-30-go-to-market-ai-scorecards",
-    slug: "ai-2025-sept-30-go-to-market-ai-scorecards",
-    title: "Go-To-Market AI Scorecards — Align Bets to Revenue",
-    description: "Tie AI features to pipeline, win‑rates, adoption; guardrails with rollback.",
-    excerpt: "Practical GTM scorecards wired to KPIs for AI features.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-30",
-    category: "AI Strategy",
-    tags: ["GTM", "Scorecards", "ROI"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/ai-2025-go-to-market-scorecards.jpg",
-    newBadge: true,
+    id: "agent-blue-green-canary-2026",",
+    slug: "agent-blue-green-canary-2026",",
+    title: "Agent Blue‑Green + Canary Evals: Safe Releases at Speed",",
+    description: "Combine blue‑green, budgeted tools, and canary evals to ship agent changes safely.",",
+    excerpt: "A practical release system for agents: canaries, rollbacks, and KPI‑linked guardrails.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-10-16",",
+    category: "GenAI",",
+    tags: ["Agents", "Releases", "Evals"],",
+    featured: true,,
+    readTime: "7 min read",",
+    image: "/images/agent-blue-green-canary-2026.jpg",",
+    id: "agent-blue-green-canary-2026","
+    slug: "agent-blue-green-canary-2026","
+    title: "Agent Blue‑Green + Canary Evals: Safe Releases at Speed","
+    description: "Combine blue‑green, budgeted tools, and canary evals to ship agent changes safely.","
+    excerpt: "A practical release system for agents: canaries, rollbacks, and KPI‑linked guardrails.","
+    author: "Zion Tech Group Team","
+    date: "2025-10-16","
+    category: "GenAI","
+    tags: ["Agents", "Releases", "Evals"],"
+    featured: true,,
+    readTime: "7 min read","
+    image: "/images/agent-blue-green-canary-2026.jpg","
+    newBadge: true,,
     trending: true
   },
   {
-    id: "edge-2025-sept-30-private-telemetry-blueprint-v2",
-    slug: "edge-2025-sept-30-private-telemetry-blueprint-v2",
-    title: "Private Telemetry Blueprint v2 — Zero‑PII, Sub‑100ms",
-    description: "Scoped IDs, on‑device redaction, and DP noise for actionable analytics.",
-    excerpt: "Useful signals without PII risk using edge patterns.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-30",
-    category: "Observability",
-    tags: ["Privacy", "Telemetry", "DP"],
-    featured: true,
-    readTime: "6 min read",
-    image: "/images/edge-2025-private-telemetry-v2.jpg",
-    newBadge: true,
+    id: "edge-llm-safety-caching-2026",",
+    slug: "edge-llm-safety-caching-2026",",
+    title: "Edge LLM Safety Caching: Sub‑100ms Prompts Without Regressions",",
+    description: "Signed configs, tiered caches, and fallback routes that keep latency low and quality high.",",
+    excerpt: "Keep prompts fast and safe with deterministic caching and rollbacks at the edge.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-10-16",",
+    category: "Architecture",",
+    tags: ["Edge", "Caching", "Safety"],",
+    featured: true,,
+    readTime: "6 min read",",
+    image: "/images/edge-llm-safety-caching-2026.jpg",",
+    id: "edge-llm-safety-caching-2026","
+    slug: "edge-llm-safety-caching-2026","
+    title: "Edge LLM Safety Caching: Sub‑100ms Prompts Without Regressions","
+    description: "Signed configs, tiered caches, and fallback routes that keep latency low and quality high.","
+    excerpt: "Keep prompts fast and safe with deterministic caching and rollbacks at the edge.","
+    author: "Zion Tech Group Team","
+    date: "2025-10-16","
+    category: "Architecture","
+    tags: ["Edge", "Caching", "Safety"],"
+    featured: true,,
+    readTime: "6 min read","
+    image: "/images/edge-llm-safety-caching-2026.jpg","
+    newBadge: true,,
     trending: true
   },
   {
-    id: "genai-2025-sept-30-eval-budgeting-blueprint-v3",
-    slug: "genai-2025-sept-30-eval-budgeting-blueprint-v3",
-    title: "Eval Budgeting Blueprint v3 — 60–85% Savings, Stable UX",
-    description: "Right‑size suites, cache golden answers, enforce online policies.",
-    excerpt: "Budget‑aware evals tied to KPIs for reliable savings.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-30",
-    category: "GenAI",
-    tags: ["Evals", "Budgets", "Quality"],
-    featured: true,
-    readTime: "8 min read",
-    image: "/images/genai-2025-eval-budgeting-v3.jpg",
-    newBadge: true,
+    id: "platform-slo-guardrails-2026",",
+    slug: "platform-slo-guardrails-2026",",
+    title: "Platform SLO Guardrails 2026: Scorecards that Prevent Regressions",",
+    description: "Adoption, golden‑path TTFX, and SLOs wired to PR checks and rollbacks.",",
+    excerpt: "Guardrails engineers adopt—measure, alert, and auto‑rollback when SLOs drift.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-10-16",",
+    category: "Platform Engineering",",
+    tags: ["SLOs", "Scorecards", "Guardrails"],",
+    featured: true,,
+    readTime: "7 min read",",
+    image: "/images/platform-slo-guardrails-2026.jpg",",
+    id: "platform-slo-guardrails-2026","
+    slug: "platform-slo-guardrails-2026","
+    title: "Platform SLO Guardrails 2026: Scorecards that Prevent Regressions","
+    description: "Adoption, golden‑path TTFX, and SLOs wired to PR checks and rollbacks.","
+    excerpt: "Guardrails engineers adopt—measure, alert, and auto‑rollback when SLOs drift.","
+    author: "Zion Tech Group Team","
+    date: "2025-10-16","
+    category: "Platform Engineering","
+    tags: ["SLOs", "Scorecards", "Guardrails"],"
+    featured: true,,
+    readTime: "7 min read","
+    image: "/images/platform-slo-guardrails-2026.jpg","
+    newBadge: true,,
     trending: true
   },
   {
-    id: "ai-2027-quantum-enhanced-machine-learning",
-    slug: "ai-2027-quantum-enhanced-machine-learning",
-    title: "AI 2027: Quantum‑Enhanced Machine Learning",
-    description: "Quantum‑accelerated training and inference delivering 1000x speedups for complex optimization.",
-    excerpt: "Fuse quantum solvers with ML to unlock orders‑of‑magnitude gains without sacrificing reliability.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-30",
-    category: "Quantum",
-    tags: ["Quantum", "Optimization", "ML"],
-    featured: true,
-    readTime: "14 min read",
-    image: "/images/ai-2027-quantum-enhanced-ml.jpg",
-    newBadge: true,
+    id: "ai-threat-hunting-with-llms-2026",",
+    slug: "ai-threat-hunting-with-llms-2026",",
+    title: "AI Threat Hunting with LLMs 2026: Signals, Sandboxes, and Speed",",
+    description: "Augment analysts with safe LLM tooling, live traces, and budgeted actions for faster hunts.",",
+    excerpt: "Operational playbooks to make LLMs an accelerator for your SOC—without extra risk.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-10-13",",
+    category: "Security",",
+    tags: ["Threat Hunting", "LLMs", "Security"],",
+    featured: true,,
+    readTime: "7 min read",",
+    image: "/images/ai-threat-hunting-llms-2026.jpg",",
+    id: "ai-threat-hunting-with-llms-2026","
+    slug: "ai-threat-hunting-with-llms-2026","
+    title: "AI Threat Hunting with LLMs 2026: Signals, Sandboxes, and Speed","
+    description: "Augment analysts with safe LLM tooling, live traces, and budgeted actions for faster hunts.","
+    excerpt: "Operational playbooks to make LLMs an accelerator for your SOC—without extra risk.","
+    author: "Zion Tech Group Team","
+    date: "2025-10-13","
+    category: "Security","
+    tags: ["Threat Hunting", "LLMs", "Security"],"
+    featured: true,,
+    readTime: "7 min read","
+    image: "/images/ai-threat-hunting-llms-2026.jpg","
+    newBadge: true,,
     trending: true
   },
   {
-    id: "ai-2027-neuromorphic-computing-enterprise",
-    slug: "ai-2027-neuromorphic-computing-enterprise",
-    title: "AI 2027: Neuromorphic Computing for the Enterprise",
-    description: "Brain‑inspired architectures enabling 1000x energy efficiency and real‑time adaptation.",
-    excerpt: "Deploy neuromorphic stacks with guardrails, policy tests, and KPI‑linked scorecards.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-30",
-    category: "AI Strategy",
-    tags: ["Neuromorphic", "Efficiency", "Edge"],
-    featured: true,
-    readTime: "12 min read",
-    image: "/images/ai-2027-neuromorphic-enterprise.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "ai-2028-autonomous-governance-blueprint",
-    slug: "ai-2028-autonomous-governance-blueprint",
-    title: "AI 2028: Autonomous Governance Blueprint",
-    description: "KPI‑linked scorecards, PR policy tests, and rollback for safe autonomy at scale.",
-    excerpt: "A pragmatic playbook to fund, govern, and scale enterprise autonomy without regressions.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-30",
-    category: "AI Governance",
-    tags: ["Governance", "Scorecards", "Rollback"],
-    featured: true,
-    readTime: "11 min read",
-    image: "/images/ai-2028-autonomous-governance.jpg",
-    newBadge: true,
+    id: "llm-production-runbooks-2026",",
+    slug: "llm-production-runbooks-2026",",
+    title: "LLM Production Runbooks 2026: Rollbacks, Budgets, and Canary Evals",",
+    description: "Battle‑tested runbooks for safe LLM releases—risk budgets, rollback triggers, and KPI‑linked canaries.",",
+    excerpt: "Release LLM changes confidently with measurable guardrails and fast rollbacks.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-10-13",",
+    category: "AI Operations",",
+    tags: ["Runbooks", "Evals", "Budgets"],",
+    featured: true,,
+    readTime: "8 min read",",
+    image: "/images/llm-production-runbooks-2026.jpg",",
+    id: "llm-production-runbooks-2026","
+    slug: "llm-production-runbooks-2026","
+    title: "LLM Production Runbooks 2026: Rollbacks, Budgets, and Canary Evals","
+    description: "Battle‑tested runbooks for safe LLM releases—risk budgets, rollback triggers, and KPI‑linked canaries.","
+    excerpt: "Release LLM changes confidently with measurable guardrails and fast rollbacks.","
+    author: "Zion Tech Group Team","
+    date: "2025-10-13","
+    category: "AI Operations","
+    tags: ["Runbooks", "Evals", "Budgets"],"
+    featured: true,,
+    readTime: "8 min read","
+    image: "/images/llm-production-runbooks-2026.jpg","
+    newBadge: true,,
     trending: true
   }
 );
 
-// Oct 03, 2025 – Add three brand-new articles (site-wide promotion)
+export const featuredArticles: latestArticles.filter(article: > article.featured);,
+  export const trendingArticles: latestArticles.filter(article: > article.trending);,
+  export const newArticles: latestArticles.filter(article  => article.newBadge);
+
+// September 29, 2025 additions
 latestArticles.unshift(
   {
-    id: "ai-2025-oct-03-governed-autonomy-scorecards",
-    slug: "ai-2025-oct-03-governed-autonomy-scorecards",
-    title: "AI 2025: Governed Autonomy Scorecards — From SLIs to KPIs",
-    description: "Operational scorecards with budgets, canaries, and rollback that accelerate delivery without regressions.",
-    excerpt: "Make autonomy measurable with KPI‑linked scorecards and instant rollback playbooks.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-03",
-    category: "AI Operations",
-    tags: ["Scorecards", "Budgets", "Rollback"],
-    featured: true,
-    readTime: "8 min read",
-    image: "/images/ai-2025-governed-autonomy-scorecards.jpg",
-    newBadge: true,
+    id: "agentic-observability-scorecards-2026",",
+    slug: "agentic-observability-scorecards-2026",",
+    title: "Agentic Observability Scorecards 2026: Traces that Predict Outcomes",",
+    description: "Correlate agent traces with KPIs using lightweight scorecards that prevent regressions without slowing delivery.",",
+    excerpt: "Link traces to outcomes—scorecards that keep agents fast and reliable.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-09-29",",
+    category: "GenAI",",
+    tags: ["Agents", "Observability", "Scorecards"],",
+    featured: true,,
+    readTime: "7 min read",",
+    image: "/images/agentic-observability-scorecards-2026.jpg",",
+    id: "agentic-observability-scorecards-2026","
+    slug: "agentic-observability-scorecards-2026","
+    title: "Agentic Observability Scorecards 2026: Traces that Predict Outcomes","
+    description: "Correlate agent traces with KPIs using lightweight scorecards that prevent regressions without slowing delivery.","
+    excerpt: "Link traces to outcomes—scorecards that keep agents fast and reliable.","
+    author: "Zion Tech Group Team","
+    date: "2025-09-29","
+    category: "GenAI","
+    tags: ["Agents", "Observability", "Scorecards"],"
+    featured: true,,
+    readTime: "7 min read","
+    image: "/images/agentic-observability-scorecards-2026.jpg","
+    newBadge: true,,
     trending: true
   },
   {
-    id: "edge-2025-oct-03-private-telemetry-blueprint",
-    slug: "edge-2025-oct-03-private-telemetry-blueprint",
-    title: "Edge 2025: Private Telemetry Blueprint (<100ms)",
-    description: "Scoped IDs, on‑device redaction, and DP noise for actionable analytics without PII.",
-    excerpt: "Stand up privacy‑first telemetry with edge aggregation and signed attestations.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-03",
-    category: "Analytics",
-    tags: ["Edge", "Privacy", "Telemetry"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/edge-2025-private-telemetry-blueprint.jpg",
-    newBadge: true,
+    id: "edge-privacy-cdn-2026",",
+    slug: "edge-privacy-cdn-2026",",
+    title: "Edge Privacy CDN 2026: Scoped IDs, Local Filters, Zero PII",",
+    description: "Deliver privacy-first, sub-100ms experiences with scoped identifiers, on-device filters, and DP-friendly telemetry.",",
+    excerpt: "Private by design at the edge—fast experiences without PII risk.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-09-29",",
+    category: "Architecture",",
+    tags: ["Edge", "Privacy", "Telemetry"],",
+    featured: true,,
+    readTime: "6 min read",",
+    image: "/images/edge-privacy-cdn-2026.jpg",",
+    id: "edge-privacy-cdn-2026","
+    slug: "edge-privacy-cdn-2026","
+    title: "Edge Privacy CDN 2026: Scoped IDs, Local Filters, Zero PII","
+    description: "Deliver privacy-first, sub-100ms experiences with scoped identifiers, on-device filters, and DP-friendly telemetry.","
+    excerpt: "Private by design at the edge—fast experiences without PII risk.","
+    author: "Zion Tech Group Team","
+    date: "2025-09-29","
+    category: "Architecture","
+    tags: ["Edge", "Privacy", "Telemetry"],"
+    featured: true,,
+    readTime: "6 min read","
+    image: "/images/edge-privacy-cdn-2026.jpg","
+    newBadge: true,,
     trending: true
   },
   {
-    id: "genai-2025-oct-03-quality-tiers-blueprint",
-    slug: "genai-2025-oct-03-quality-tiers-blueprint",
-    title: "GenAI 2025: Quality Tiers Blueprint v4",
-    description: "Predictable cost and stable UX using tiered routing, semantic caches, and eval gates—v4 updates.",
-    excerpt: "Cut spend up to 70% with quality tiers, caches, and KPI‑linked scorecards.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-03",
-    category: "GenAI",
-    tags: ["Quality Tiers", "Caching", "Budgets"],
-    featured: true,
-    readTime: "9 min read",
-    image: "/images/genai-2025-quality-tiers-blueprint-v4.jpg",
-    newBadge: true,
+    id: "platform-golden-paths-slos-2026",",
+    slug: "platform-golden-paths-slos-2026",",
+    title: "Platform Golden Paths + SLOs 2026: Adoption that Drives ROI",",
+    description: "Design golden paths wired to SLOs and adoption metrics that link platform work to revenue.",",
+    excerpt: "From infra costs to shipped value—scorecards that change the conversation.",",
+    author: "Zion Tech Group Team",",
+    date: "2025-09-29",",
+    category: "Platform Engineering",",
+    tags: ["Golden Paths", "SLOs", "ROI"],",
+    featured: true,,
+    readTime: "8 min read",",
+    image: "/images/platform-golden-paths-slos-2026.jpg",",
+    id: "platform-golden-paths-slos-2026","
+    slug: "platform-golden-paths-slos-2026","
+    title: "Platform Golden Paths + SLOs 2026: Adoption that Drives ROI","
+    description: "Design golden paths wired to SLOs and adoption metrics that link platform work to revenue.","
+    excerpt: "From infra costs to shipped value—scorecards that change the conversation.","
+    author: "Zion Tech Group Team","
+    date: "2025-09-29","
+    category: "Platform Engineering","
+    tags: ["Golden Paths", "SLOs", "ROI"],"
+    featured: true,,
+    readTime: "8 min read","
+    image: "/images/platform-golden-paths-slos-2026.jpg","
+    newBadge: true,,
     trending: true
   }
 );
-
-// Oct 01, 2025 – Add three brand-new articles (to advertise and surface)
-latestArticles.unshift(
-  {
-    id: "ai-2025-oct-01-operational-trust-v3",
-    slug: "ai-2025-oct-01-operational-trust-v3",
-    title: "AI 2025: Operational Trust Scorecards v3",
-    description: "SLIs → KPIs with budgets, canaries, and instant rollback — updated v3 playbook.",
-    excerpt: "Guardrails engineers adopt: PR policy checks, live canaries, KPI‑linked rollback.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-01",
-    category: "AI Operations",
-    tags: ["Scorecards", "Budgets", "Rollback"],
-    featured: true,
-    readTime: "9 min read",
-    image: "/images/ai-operational-trust-v3-2025.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "edge-2025-oct-01-private-consentless-experiments",
-    slug: "edge-2025-oct-01-private-consentless-experiments",
-    title: "Edge 2025: Consentless Experiments v3 (<100ms)",
-    description: "Scoped IDs, on‑device metrics, and DP noise enabling compliant A/B at <100ms.",
-    excerpt: "Stand up privacy‑first experiments with edge aggregation and budgeted rollouts.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-01",
-    category: "Analytics",
-    tags: ["Edge", "Privacy", "Experiments"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/edge-2025-consentless-experiments-v3.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "genai-2025-oct-01-quality-tiers-v3",
-    slug: "genai-2025-oct-01-quality-tiers-v3",
-    title: "GenAI 2025: Quality Tiers v3",
-    description: "Predictable cost and stable UX using tiered routing, semantic caches, and eval gates.",
-    excerpt: "Cut spend 40–70% with quality tiers, caches, and KPI‑linked scorecards.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-01",
-    category: "GenAI",
-    tags: ["Quality Tiers", "Caching", "Budgets"],
-    featured: true,
-    readTime: "8 min read",
-    image: "/images/genai-2025-quality-tiers-v3.jpg",
-    newBadge: true,
-    trending: true
-  }
-);
-
-// Sept 30, 2025 – Add three new articles to surface across homepage showcases
-latestArticles.unshift(
-  {
-    id: "ai-2025-sept-30-breaking-enterprise-ai-breakthroughs",
-    slug: "ai-2025-sept-30-breaking-enterprise-ai-breakthroughs",
-    title: "Sept 30, 2025: Breaking Enterprise AI Breakthroughs",
-    description: "8 production‑ready patterns: rollback, scorecards, consentless analytics, and more.",
-    excerpt: "From real‑time engines to policy tests in CI—what you can ship today without regressions.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-30",
-    category: "AI Strategy",
-    tags: ["Breakthroughs", "Governance", "Edge"],
-    featured: true,
-    readTime: "10 min read",
-    image: "/images/ai-2025-breaking-enterprise-ai-breakthroughs.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "edge-2025-sept-30-zero-pii-experiments-v2",
-    slug: "edge-2025-sept-30-zero-pii-experiments-v2",
-    title: "Edge 2025: Zero‑PII Experiments v2 (<100ms)",
-    description: "Scoped IDs, on‑device metrics, and DP noise enabling compliant A/B worldwide.",
-    excerpt: "Stand up privacy‑first experiments with edge aggregation and budgeted rollouts.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-30",
-    category: "Analytics",
-    tags: ["Edge", "Privacy", "Experiments"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/edge-2025-zero-pii-experiments-v2.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "genai-2025-sept-30-policy-tests-quickstart",
-    slug: "genai-2025-sept-30-policy-tests-quickstart",
-    title: "GenAI 2025: Policy Tests Quickstart",
-    description: "Lightweight CI policy tests wired to KPIs to ship faster without regressions.",
-    excerpt: "A practical quickstart to add PR policy checks that teams actually adopt.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-30",
-    category: "AI Governance",
-    tags: ["Policy", "CI", "Scorecards"],
-    featured: true,
-    readTime: "6 min read",
-    image: "/images/genai-2025-policy-tests-quickstart.jpg",
-    newBadge: true,
-    trending: true
-  }
-);
-
-// Oct 01, 2025 – Fresh additions to advertise across the front end
-latestArticles.unshift(
-  {
-    id: "ai-2025-oct-01-e2e-eval-pipelines",
-    slug: "genai-2025-oct-01-e2e-eval-pipelines",
-    title: "GenAI 2025: End‑to‑End Eval Pipelines",
-    description: "Online evals wired to KPIs with budget‑aware routing and instant rollback.",
-    excerpt: "Stand up E2E eval pipelines that gate traffic and prevent regressions without slowing teams.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-01",
-    category: "GenAI",
-    tags: ["Evals", "Scorecards", "Budgets"],
-    featured: true,
-    readTime: "9 min read",
-    image: "/images/genai-2025-e2e-eval-pipelines.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "ai-2025-oct-01-cost-optimization-v5",
-    slug: "genai-2025-oct-01-cost-optimization-v5",
-    title: "GenAI 2025: Cost Optimization v5",
-    description: "60–85% savings with tier routing, caches, and KPI‑linked scorecards.",
-    excerpt: "A practical, production‑ready playbook for predictable GenAI costs and stable UX.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-01",
-    category: "AI Operations",
-    tags: ["FinOps", "Quality Tiers", "Caching"],
-    featured: true,
-    readTime: "10 min read",
-    image: "/images/genai-2025-cost-optimization-v5.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "observability-2025-sept-30-e2e-ai-tracing-v2",
-    slug: "observability-2025-sept-30-e2e-ai-tracing-v2",
-    title: "Observability 2025: E2E AI Tracing v2",
-    description: "Span budgets, cost telemetry, and KPI‑linked rollback for AI systems.",
-    excerpt: "Trace‑driven reliability and cost control with rollback playbooks wired to spans.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-30",
-    category: "Observability",
-    tags: ["Tracing", "Budgets", "KPIs"],
-    featured: true,
-    readTime: "8 min read",
-    image: "/images/observability-2025-e2e-tracing-v2.jpg",
-    newBadge: true,
-    trending: true
-  }
-);
-
-// Sept 30, 2025 – New items to promote across homepage and feeds
-latestArticles.unshift(
-  {
-    id: "ai-2025-sept-30-autonomous-runbooks-quickstart",
-    slug: "ai-2025-sept-30-autonomous-runbooks-quickstart",
-    title: "Autonomous Runbooks Quickstart: Budgeted Actions and Instant Rollback",
-    description: "Design incident playbooks that close the loop from detection to safe action in <60s.",
-    excerpt: "Budgets, approvals, and rollback triggers for safe automation at speed.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-30",
-    category: "AI Operations",
-    tags: ["Runbooks", "Automation", "Rollback"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/autonomous-runbooks-quickstart-2025.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "edge-2025-sept-30-privacy-preserving-telemetry",
-    slug: "edge-2025-sept-30-privacy-preserving-telemetry",
-    title: "Privacy‑Preserving Telemetry: Scoped IDs, On‑Device Redaction, DP Noise",
-    description: "Actionable analytics without PII using edge aggregation and differential privacy.",
-    excerpt: "Stand up privacy‑first telemetry with scoped identifiers and local redaction.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-30",
-    category: "Observability",
-    tags: ["Privacy", "Telemetry", "Edge"],
-    featured: true,
-    readTime: "6 min read",
-    image: "/images/privacy-preserving-telemetry-2025.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "genai-2025-sept-30-quality-tiers-quickstart",
-    slug: "genai-2025-sept-30-quality-tiers-quickstart",
-    title: "GenAI Quality Tiers Quickstart: Stable UX at 40–70% Lower Cost",
-    description: "Tiered routing and semantic caches with KPI‑linked budgets.",
-    excerpt: "Predictable costs without regressions using quality tiers and caches.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-30",
-    category: "GenAI",
-    tags: ["Quality Tiers", "Caching", "Budgets"],
-    featured: true,
-    readTime: "8 min read",
-    image: "/images/genai-quality-tiers-quickstart-2025.jpg",
-    newBadge: true,
-    trending: true
-  }
-);
-
-// Oct 02, 2025 – Add three brand-new articles (to advertise and surface)
-latestArticles.unshift(
-  {
-    id: "ai-2025-oct-02-agent-safety-scorecards",
-    slug: "ai-2025-oct-02-agent-safety-scorecards",
-    title: "AI 2025: Agent Safety Scorecards",
-    description: "KPIs, budgets, and rollback triggers that keep autonomous agents safe at speed.",
-    excerpt: "Design scorecards for agents with KPI-linked budgets, canaries, and deterministic rollback.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-02",
-    category: "AI Operations",
-    tags: ["Agents", "Scorecards", "Rollback"],
-    featured: true,
-    readTime: "8 min read",
-    image: "/images/ai-2025-agent-safety-scorecards.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "edge-2025-oct-02-private-experiments-v4",
-    slug: "edge-2025-oct-02-private-experiments-v4",
-    title: "Edge 2025: Private Experiments v4 (<100ms)",
-    description: "Scoped IDs, on-device metrics, and DP noise for compliant A/B testing worldwide.",
-    excerpt: "Stand up privacy-first experiments with edge aggregation, signed configs, and budgets.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-02",
-    category: "Analytics",
-    tags: ["Edge", "Privacy", "Experiments"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/edge-2025-private-experiments-v4.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "genai-2025-oct-02-cache-playbook-v2",
-    slug: "genai-2025-oct-02-cache-playbook-v2",
-    title: "GenAI 2025: Cache Playbook v2",
-    description: "Tiered + semantic caches with eval gates for 50–70% savings and stable UX.",
-    excerpt: "A practical guide to semantic caching with KPI-linked scorecards and rollback.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-02",
-    category: "GenAI",
-    tags: ["Caching", "Quality Tiers", "Budgets"],
-    featured: true,
-    readTime: "9 min read",
-    image: "/images/genai-2025-cache-playbook-v2.jpg",
-    newBadge: true,
-    trending: true
-  }
-);
-
-export const featuredArticles = latestArticles.filter(article => article.featured);
-export const trendingArticles = latestArticles.filter(article => article.trending);
-export const newArticles = latestArticles.filter(article => article.newBadge);
-
-// Sept 30, 2025 – Surface three brand-new items in Latest Articles
-latestArticles.unshift(
-  {
-    id: "autonomic-decision-engines-2025",
-    slug: "ai-2025-sept-30-autonomic-decision-engines",
-    title: "Autonomic Decision Engines: Sub‑100ms, KPI‑Linked Actions",
-    description: "Budgeted actions, live canaries, and instant rollback for safe automation.",
-    excerpt: "Design decision engines that act fast and safely with rollback on KPIs.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-30",
-    category: "AI Operations",
-    tags: ["Automation", "Budgets", "Rollback"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/autonomic-decision-engines-2025.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "edge-private-personalization-v2-2025",
-    slug: "edge-2025-sept-30-private-personalization-v2",
-    title: "Edge Private Personalization v2: Zero‑PII, Global <100ms",
-    description: "Scoped IDs, signed configs, and on‑device models for private personalization.",
-    excerpt: "Deliver personalization worldwide without PII using edge patterns.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-30",
-    category: "Edge Computing",
-    tags: ["Edge", "Privacy", "Personalization"],
-    featured: true,
-    readTime: "6 min read",
-    image: "/images/edge-private-personalization-v2.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "genai-eval-scorecards-quickstart-2025",
-    slug: "genai-2025-sept-30-eval-scorecards-quickstart",
-    title: "GenAI Eval Scorecards Quickstart: KPIs, Budgets, Rollback",
-    description: "KPI‑linked evals and budget‑aware routing that gate traffic safely.",
-    excerpt: "Stand up eval scorecards fast without slowing teams.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-30",
-    category: "GenAI",
-    tags: ["Evals", "Scorecards", "Budgets"],
-    featured: true,
-    readTime: "8 min read",
-    image: "/images/genai-eval-scorecards-quickstart-2025.jpg",
-    newBadge: true,
-    trending: true
-  }
-);
+;

@@ -4,9 +4,7 @@ const fs = require('fs');
 const path = require(path');
 const { execSync } = require('child_process');
 
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 class FinalAutomationOrchestrator {
   constructor() {
     this.projectRoot = process.cwd();
@@ -164,5 +162,3 @@ if (require.main === module) {
 }
 
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -1,12 +1,42 @@
 {
-  "timestamp": "2025-09-30T01:30:08.943Z",
-  "bundleSize": "Analyzed",
-  "coreWebVitals": "Monitored",
-  "recommendations": [
-    "Implement lazy loading for images",
-    "Use code splitting for large components",
-    "Optimize third-party libraries",
-    "Enable gzip compression",
-    "Use CDN for static assets"
-  ]
+  "timestamp": "2025-10-02T04:20:34.167Z",
+  "buildMetrics": {
+    "bundleSize": {
+      "totalSize": 0.5574169158935547,
+      "fileCount": 30,
+      "fileSizes": {
+        "_headers": 674,
+        "_redirects": 23,
+        "grid.svg": 368,
+        "index.html": 833,
+        "manifest.json": 394,
+        "offline.html": 1846,
+        "performance-monitor.js": 2079,
+        "robots.txt": 323,
+        "site.webmanifest": 1902,
+        "sitemap-blog.xml": 150789,
+        "sitemap-case-studies.xml": 97294,
+        "sitemap-index.xml": 224,
+        "sitemap-main.xml": 1521,
+        "sitemap-new-posts.xml": 773,
+        "sitemap-services.xml": 32607,
+        "sitemap.xml": 16654,
+        "structured-data.json": 1119,
+        "sw-enhanced.js": 7084,
+        "sw-performance.js": 3736,
+        "sw.js": 902,
+        "images/abstract-pattern.svg": 498,
+        "images/bio-pattern.svg": 556,
+        "images/grid-pattern.svg": 388,
+        "images/neural-network-bg.svg": 801,
+        "images/space-pattern.svg": 640,
+        "assets/css/main-BsaHA88z.css": 64498,
+        "assets/js/components-PocpM0N0.js": 14990,
+        "assets/js/main-DaSTzYl_.js": 5699,
+        "assets/js/vendor-C6ic3rlc.js": 3806,
+        "assets/js/vendor-react-DtyR1bJj.js": 171473
+      }
+    }
+  },
+  "recommendations": []
 }

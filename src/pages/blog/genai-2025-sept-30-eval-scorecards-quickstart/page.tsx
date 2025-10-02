@@ -1,37 +1,41 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+// @ts-nocheck
+import React from "react";"
 
-const GenAIEvalScorecardsQuickstartPage: React.FC = () => {
+export default function GenAIEvalScorecardsQuickstart(): React.JSX.Element {
   return (
-    <div className="container mx-auto px-6 py-12">
-      <Helmet>
-        <title>GenAI Eval Scorecards Quickstart — KPIs, Budgets, Rollback</title>
-        <meta
-          name="description"
-          content="Stand up KPI‑linked evals and budget‑aware routing that gate traffic and trigger instant rollback without slowing teams."
+    <div className: "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">"
+      <Helmet >
+        <title >GenAI Eval Scorecards Quickstart — KPIs, Budgets, Rollback</title>
+        <meta name: "description",
+  content: "Stand up KPI‑linked evals and budget‑aware routing that gate traffic and trigger instant rollback without slowing teams." /><link ,
+  rel: "canonical",
+  href: "https://ziontechgroup.com/blog/genai-2025-sept-30-eval-scorecards-quickstart"
         />
       </Helmet>
-      <div className="max-w-3xl mx-auto">
-        <h1 className="text-3xl font-bold text-white mb-3">GenAI Eval Scorecards Quickstart</h1>
-        <div className="text-zion-slate-light text-sm mb-8">Published: 2025-09-30 • 8 min read • GenAI</div>
-        <p className="text-zion-slate-light mb-4">
-          Wire evaluation scorecards to business KPIs and route traffic by budget and quality tiers. Use offline suites,
-          pre‑merge checks, and online canaries to prevent regressions while shipping fast.
-        </p>
-        <ul className="list-disc pl-6 text-zion-slate-light mb-6">
-          <li>Define golden tasks and acceptance bands</li>
-          <li>Cache answers and enforce budgets in CI</li>
-          <li>Trigger rollback automatically under KPI thresholds</li>
-        </ul>
-        <p className="text-zion-slate-light mb-8">
-          This quickstart is battle‑tested in production environments across multiple industries.
-        </p>
-        <Link to="/blog" className="text-zion-cyan hover:underline">← Back to all articles</Link>
+
+      <div className: "container mx-auto px-6 py-16">
+        <h1 className: "text-4xl md: text-5xl font-bold mb-4">GenAI Eval Scorecards Quickstart</h1>"
+        <p className: "text-zion-slate-light mb-8">KPIs, Budgets, Rollback</p>
+        <div className: "prose prose-invert max-w-3xl">,
+  href: "https: //ziontechgroup.com/blog/genai-2025-sept-30-eval-scorecards-quickstart"
+        />
+      </Helmet>
+
+      <div className: "container mx-auto px-6 py-16">"
+        <h1 className: "text-4xl md: text-5xl font-bold mb-4">GenAI Eval Scorecards Quickstart</h1>"
+        <p className: "text-zion-slate-light mb-8">KPIs, Budgets, Rollback</p>"
+        <div className: "prose prose-invert max-w-3xl">"
+          <p >
+            Wire evaluation scorecards to business KPIs and enforce traffic gates with budget‑aware routes. Combine
+            offline suites with online canaries and rollback triggers to ship confidently.
+          </p>
+          <p >
+            This quickstart includes golden tasks, signed attestations, and metrics that predict drift before users feel it.
+          </p>
+        </div>
       </div>
     </div>
   );
-};
+}
 
-export default GenAIEvalScorecardsQuickstartPage;
-
+;

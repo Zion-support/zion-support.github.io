@@ -1,212 +1,201 @@
 #!/bin/bash
 
-# Comprehensive script to merge all open PRs from GitHub
+# Script to merge all open PRs into main branch
+# This script will:
+# 1. Fetch all open PRs from GitHub API
+# 2. Check for merge conflicts
+# 3. Resolve conflicts if any
+# 4. Merge each PR into main
+
 set -e
 
-echo "🚀 Starting comprehensive merge of all open PRs..."
-echo "⏰ Started at: $(date)"
-echo "---"
+echo "🚀 Starting comprehensive PR merge process..."
 
-# Create a backup branch
-BACKUP_BRANCH="backup-main-$(date +%Y%m%d-%H%M%S)"
-echo "🔒 Creating backup branch: $BACKUP_BRANCH"
-git checkout -b "$BACKUP_BRANCH"
-git push origin "$BACKUP_BRANCH"
-git checkout main
+# Repository information
+REPO_OWNER="Zion-Holdings"
+REPO_NAME="zion.app"
+BASE_BRANCH="main"
 
-# Initialize counters
-SUCCESSFUL_MERGES=0
-FAILED_MERGES=0
-CONFLICT_RESOLUTIONS=0
-SKIPPED_DRAFTS=0
+# Colors for output
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+BLUE='\033[0;34m'
+NC='\033[0m' # No Color
 
-# Function to log messages with timestamps
-log_message() {
-    local message="$1"
-    echo "$(date '+%Y-%m-%d %H:%M:%S') - $message"
+# Function to print colored output
+print_status() {
+    echo -e "${BLUE}[INFO]${NC} $1" 1>&2
 }
 
-# Function to resolve conflicts in a file with enhanced logic
-resolve_conflicts() {
-    local file="$1"
-    local branch="$2"
-    
-    log_message "🔧 Resolving conflicts in $file for branch $branch..."
-    
-    # Check if file has merge conflicts
-    if grep -q "<<<<<<< HEAD" "$file"; then
-        log_message "⚠️  Found conflicts in $file, resolving..."
-        
-        # Create a backup of the conflicted file
-        cp "$file" "${file}.backup.$(date +%s)"
-        
-        # Enhanced conflict resolution strategy
-        if [[ "$file" == "package.json" || "$file" == "package-lock.json" ]]; then
-            log_message "📦 Critical file detected, keeping main version and merging dependencies..."
-            # For package files, we'll need special handling
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
-        elif [[ "$file" == "next.config.js" || "$file" == "tsconfig.json" || "$file" == "tailwind.config.js" ]]; then
-            log_message "⚙️  Config file detected, keeping main version..."
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
-        elif [[ "$file" == "README.md" || "$file" == "LICENSE" ]]; then
-            log_message "📚 Documentation file, keeping both versions where possible..."
-            # Remove conflict markers but try to preserve content
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
-        elif [[ "$file" == *".tsx" || "$file" == *".ts" ]]; then
-            log_message "📱 TypeScript file detected, keeping incoming version..."
-            # For TypeScript files, prefer the incoming version (feature branch)
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
+print_success() {
+    echo -e "${GREEN}[SUCCESS]${NC} $1" 1>&2
+}
+
+print_warning() {
+    echo -e "${YELLOW}[WARNING]${NC} $1" 1>&2
+}
+
+print_error() {
+    echo -e "${RED}[ERROR]${NC} $1" 1>&2
+}
+
+# Function to check if we have GitHub CLI
+check_github_cli() {
+    if command -v gh &> /dev/null; then
+        # ensure authenticated, otherwise treat as unavailable
+        if gh auth status &>/dev/null; then
+            return 0
         else
-            log_message "📝 Regular file, attempting to merge both versions..."
-            # Remove conflict markers and try to keep both versions
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
+            return 1
         fi
-        
-        log_message "✅ Resolved conflicts in $file"
-        CONFLICT_RESOLUTIONS=$((CONFLICT_RESOLUTIONS + 1))
-    fi
-}
-
-# Function to merge a single branch with enhanced error handling
-merge_branch() {
-    local branch="$1"
-    
-    log_message "🔄 Attempting to merge $branch..."
-    
-    # Fetch the latest version of the branch
-    git fetch origin "$branch"
-    
-    # Check if branch exists
-    if ! git show-ref --verify --quiet "refs/remotes/origin/$branch"; then
-        log_message "❌ Branch $branch does not exist on remote, skipping..."
+    else
         return 1
     fi
+}
+
+# Function to get open PRs using GitHub CLI
+get_open_prs_cli() {
+    print_status "Fetching open PRs using GitHub CLI..."
+    gh pr list --state open --json number,headRefName,title --limit 100 | jq -r '.[] | "\(.number)|\(.headRefName)|\(.title)"'
+}
+
+# Function to get open PRs using curl
+get_open_prs_api() {
+    print_status "Fetching open PRs using GitHub API..."
+    curl -s -H "Accept: application/vnd.github.v3+json" \
+         "https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/pulls?state=open&per_page=100" | \
+    jq -r '.[] | "\(.number)|\(.head.ref)|\(.title)"'
+}
+
+# Function to merge a PR
+merge_pr() {
+    local pr_number=$1
+    local branch_name=$2
+    local pr_title=$3
     
-    # Try to merge
-    if git merge --no-commit --no-ff "origin/$branch" 2>/dev/null; then
-        log_message "✅ Successfully merged $branch"
-        git commit -m "Merge $branch into main - $(date)"
-        SUCCESSFUL_MERGES=$((SUCCESSFUL_MERGES + 1))
+    print_status "Processing PR #${pr_number}: ${pr_title}"
+    print_status "Branch: ${branch_name}"
+    
+    # Ensure we can fetch the PR head even if it's from a fork
+    local merge_ref="refs/remotes/origin/${branch_name}"
+    if ! git show-ref --verify --quiet "$merge_ref"; then
+        print_warning "Branch origin/${branch_name} not found. Attempting to fetch PR ref..."
+        # Fetch PR head into a local branch name pr-${pr_number}
+        if git fetch origin pull/${pr_number}/head:pr-${pr_number} 1>&2; then
+            merge_ref="pr-${pr_number}"
+            print_success "Fetched PR #${pr_number} head into ${merge_ref}"
+        else
+            print_error "Unable to fetch PR #${pr_number} head. Skipping."
+            return 1
+        fi
+    fi
+    
+    # Fetch the latest changes
+    print_status "Fetching latest changes..."
+    git fetch origin
+    
+    # Try to merge the branch
+    print_status "Attempting to merge ${merge_ref} into main..."
+    
+    if git merge ${merge_ref} --no-ff -m "Merge PR #${pr_number}: ${pr_title}"; then
+        print_success "Successfully merged PR #${pr_number}"
         return 0
     else
-        log_message "⚠️  Merge conflicts detected in $branch, resolving..."
+        print_warning "Merge conflict detected in PR #${pr_number}"
         
-        # Get list of conflicted files
-        CONFLICTED_FILES=$(git diff --name-only --diff-filter=U 2>/dev/null || echo "")
-        
-        if [ -n "$CONFLICTED_FILES" ]; then
-            log_message "📋 Conflicted files: $CONFLICTED_FILES"
+        # Check for conflict markers
+        if git diff --name-only --diff-filter=U | grep -q .; then
+            print_status "Resolving merge conflicts..."
             
-            for file in $CONFLICTED_FILES; do
-                if [ -f "$file" ]; then
-                    resolve_conflicts "$file" "$branch"
+            # List conflicted files
+            conflicted_files=$(git diff --name-only --diff-filter=U)
+            print_status "Conflicted files: ${conflicted_files}"
+            
+            # Try to resolve conflicts automatically
+            for file in $conflicted_files; do
+                print_status "Resolving conflicts in ${file}..."
+                
+                # Check if it's a package.json or similar file
+                if [[ "$file" == *"package.json"* ]] || [[ "$file" == *"package-lock.json"* ]] || [[ "$file" == *"pnpm-lock.yaml"* ]]; then
+                    print_status "Detected dependency file, using main version..."
+                    git checkout --ours "$file"
+                    git add "$file"
+                elif [[ "$file" == *".backup"* ]] || [[ "$file" == *"backup"* ]]; then
+                    print_status "Detected backup file, removing..."
+                    git rm "$file" 2>/dev/null || rm -f "$file"
+                    git add "$file" 2>/dev/null || true
+                else
+                    # Try to use main version for other files
+                    print_status "Using main version for ${file}..."
+                    git checkout --ours "$file" 2>/dev/null || true
+                    git add "$file" 2>/dev/null || true
                 fi
             done
             
-            # Add resolved files
-            git add .
-            
-            # Commit the merge
-            git commit -m "Resolve merge conflicts for $branch - $(date)"
-            
-            log_message "✅ Successfully resolved conflicts and merged $branch"
-            SUCCESSFUL_MERGES=$((SUCCESSFUL_MERGES + 1))
-            return 0
+            # Complete the merge
+            if git commit --no-edit; then
+                print_success "Successfully resolved conflicts and merged PR #${pr_number}"
+                return 0
+            else
+                print_error "Failed to resolve conflicts for PR #${pr_number}"
+                git merge --abort 2>/dev/null || true
+                return 1
+            fi
         else
-            log_message "❌ No conflicted files found, but merge failed. Aborting..."
-            git merge --abort
-            FAILED_MERGES=$((FAILED_MERGES + 1))
+            print_error "Failed to merge PR #${pr_number}"
+            git merge --abort 2>/dev/null || true
             return 1
         fi
     fi
 }
 
-# Get the list of open PRs and extract branch information
-log_message "📋 Fetching open PRs from GitHub..."
-curl -s "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100" > prs.json
-
-# Extract PR information and process each one
-log_message "🔄 Processing open PRs..."
-awk '
-/"number":/ {
-    number = $2
-    gsub(/,/, "", number)
-    pr_number = number
-}
-/"draft":/ {
-    draft = $2
-    gsub(/,/, "", draft)
-    gsub(/"/, "", draft)
-}
-/"head":/ {
-    in_head = 1
-}
-/"ref":/ && in_head {
-    ref = substr($0, index($0, ":") + 3)
-    gsub(/,$/, "", ref)
-    gsub(/"/, "", ref)
-    if (ref != "ref" && ref != "href" && ref != "archive_url" && ref != "git_refs_url") {
-        printf "%s|%s|%s\n", pr_number, ref, draft
-        in_head = 0
-    }
-}
-' prs.json | while IFS='|' read -r pr_number branch_name is_draft; do
-    if [ -n "$pr_number" ] && [ -n "$branch_name" ]; then
-        echo ""
-        echo "=========================================="
-        echo "🔄 Processing PR #$pr_number from branch: $branch_name"
-        echo "=========================================="
-        
-        # Proceed even if PR is a draft (merge branch directly into main)
-        
-        if merge_branch "$branch_name"; then
-            log_message "✅ PR #$pr_number processed successfully"
-        else
-            log_message "❌ PR #$pr_number processing failed"
-        fi
-        
-        echo "=========================================="
-        echo ""
-        
-        # Push changes every 3 successful merges to avoid losing work
-        if [ $((SUCCESSFUL_MERGES % 3)) -eq 0 ] && [ $SUCCESSFUL_MERGES -gt 0 ]; then
-            log_message "💾 Pushing progress to remote..."
-            git push origin main
-        fi
-        
-        # Small delay to avoid overwhelming the system
-        sleep 2
+# Main execution
+main() {
+    print_status "Starting comprehensive PR merge process for ${REPO_OWNER}/${REPO_NAME}"
+    
+    # Ensure we're on main branch
+    print_status "Switching to main branch..."
+    git checkout main
+    git pull origin main || true
+    
+    # Get list of open PRs
+    if check_github_cli; then
+        prs=$(get_open_prs_cli)
+    else
+        prs=$(get_open_prs_api)
     fi
-done
+    
+    if [ -z "$prs" ]; then
+        print_warning "No open PRs found"
+        return 0
+    fi
+    
+    print_status "Found open PRs:"
+    echo "$prs" | while IFS='|' read -r pr_number branch_name pr_title; do
+        echo "  PR #${pr_number}: ${pr_title} (${branch_name})"
+    done
+    
+    # Merge each PR
+    successful_merges=0
+    failed_merges=0
+    
+    echo "$prs" | while IFS='|' read -r pr_number branch_name pr_title; do
+        if merge_pr "$pr_number" "$branch_name" "$pr_title"; then
+            ((successful_merges++))
+        else
+            ((failed_merges++))
+        fi
+    done
+    
+    # Push all changes
+    print_status "Pushing all merged changes to origin..."
+    git push origin main --force-with-lease
+    
+    print_success "PR merge process completed!"
+    print_status "Successful merges: ${successful_merges}"
+    print_status "Failed merges: ${failed_merges}"
+}
 
-# Final push
-log_message "💾 Pushing final changes to remote..."
-git push origin main
-
-# Summary
-echo ""
-echo "🎉 Open PR merge process completed!"
-echo "📊 Final Summary:"
-echo "   ✅ Successful merges: $SUCCESSFUL_MERGES"
-echo "   ❌ Failed merges: $FAILED_MERGES"
-echo "   🔧 Conflicts resolved: $CONFLICT_RESOLUTIONS"
-echo "   ⏭️  Draft PRs skipped: $SKIPPED_DRAFTS"
-echo "   🔒 Backup branch: $BACKUP_BRANCH"
-echo "⏰ Completed at: $(date)"
-
-# Cleanup recommendations
-echo ""
-echo "🧹 Cleanup recommendations:"
-echo "   1. Review the merged changes: git log --oneline -20"
-echo "   2. Test the application thoroughly"
-echo "   3. Delete the backup branch when satisfied: git push origin --delete $BACKUP_BRANCH"
-echo "   4. Consider cleaning up old feature branches"
-echo "   5. Run tests to ensure everything works correctly"
-
-# Cleanup temporary files
-rm -f prs.json
+# Run the main function
+main "$@"
