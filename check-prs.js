@@ -1,7 +1,7 @@
 #!/usr/bin/env node;
 
 const https = require('https';'
-  const options = {"hostname": 'api.github.com',"path": '/repos/Zion-Holdings/zion.app/pulls?state=open',"headers": {'Authorization': 'token ghs_g7Ribzcy3sJGR7qj8KILEG5nEY0aYC1Jg1cH','User-Agent': 'Node.js';'
+  const options = {"hostname": 'api.github.com',"path": '/repos/Zion-Holdings/zion.app/pulls?state=open',"headers": {'Authorization': 'token ' + process.env.GITHUB_TOKEN,'User-Agent': 'Node.js';'
   }
 }console.log('🔍 Checking for open pull requests...')const req = https.get(options, (res) => {let data  = '';res.on('data', (chunk) => {data += chunk;'
   })res.on('end', () => {try {const prs = JSON.parse(data)console.log(`Found ${prs.length} open pull "requests":`)prs.forEach((pr, index) => {console.log(`${index + 1}. PR #${pr.number}: ${pr.title}`)console.log(`   "Branch": ${pr.head.ref} -> ${pr.base.ref}`)console.log(`   "State": ${pr.state}`)console.log(`   "Mergeable": ${pr.mergeable}`)console.log(`   "URL": ${pr.html_url}`)console.log('')})if (prs.length === 0) {console.log('✅ No open pull requests found')}'

@@ -71,7 +71,6 @@ const categories = [
     count: "3+ Services"
   },
   {
-=======
     title: "Services",
     description: "On-demand IT support, consulting, development, and more",
     icon: <Briefcase className="w-10 h-10" />,
@@ -84,7 +83,6 @@ const categories = [
     description: "Connect with AI experts, developers, and tech specialists",
     icon: <Users className="w-10 h-10" />,
     link: "/talent",
-=======
     color: "from-cyan-500 to-blue-600",
     gradient: "from-zion-cyan to-zion-blue",
   },
@@ -95,7 +93,6 @@ const categories = [
     link: "/all-services",
     color: "from-amber-500 to-orange-600",
     count: "50+ Items"
-=======
     gradient: "from-zion-cyan-light to-zion-cyan",
   },
   {
@@ -103,7 +100,6 @@ const categories = [
     description: "Discover cutting-edge solutions and tech breakthroughs",
     icon: <Lightbulb className="w-10 h-10" />,
     link: "/category/innovation",
-=======
     color: "from-emerald-500 to-green-600",
     gradient: "from-zion-purple-light to-zion-purple",
   },
@@ -164,7 +160,6 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-0 left-1/4 w-72 h-72 bg-zion-purple/10 rounded-full filter blur-3xl animate-pulse"></div>
         <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-zion-cyan/10 rounded-full filter blur-3xl animate-pulse delay-1000"></div>
-=======
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
@@ -183,7 +178,6 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             <GradientHeading>Explore Our Ecosystem</GradientHeading>
             <p className="text-zion-slate-light text-lg mt-4 max-w-3xl mx-auto">
               Discover our comprehensive ecosystem of tech services, talent, equipment, and innovative solutions
-=======
             </p>
           </motion.div>
         )}
@@ -233,7 +227,6 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
         <div className="mb-12">
           <h3 className="text-center text-2xl font-bold text-white mb-8">Featured Solutions</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-=======
             {specialServices.map((service) => (
               <motion.div
                 key={service.title}
@@ -254,7 +247,6 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
                 </h4>
                 <div className="text-zion-cyan font-bold">{item.price}</div>
               </Link>
-=======
             ))}
           </div>
         </motion.div>
@@ -267,13 +259,11 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           transition={{ duration: 0.6, delay: 0.6 }}
         >
         <div className="text-center">
-=======
           <Link 
             href="/categories" 
             className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors"
           >
             Explore All Services →
-=======
             View All Categories
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
           </Link>

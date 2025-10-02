@@ -2,57 +2,6 @@
 const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
 
 
-<<<<<<< HEAD
-:hooks/usePerformanceMetrics.ts
-import { useEffect, useState } from "react";
-import { PerformanceMetrics } from "../types";
-
-export function usePerformanceMetrics() {;
-:backup-problematic-files/hooks/usePerformanceMetrics.ts
-import { useEffect, useState } from 'react';
-import { PerformanceMetrics } from '../types';
-export function usePerformanceMetrics() {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [isSupported, setIsSupported] = useState(false);
-  useEffect(() => {
-    if (typeof window === 'undefined' || !('performance' in window)) {
-      return;
-    }
-    setIsSupported(true);
-    const measurePerformance = () => {
-      const navigation = performance.getEntriesByType(
-        'navigation'
-      )[0] as PerformanceNavigationTiming;
-      const paintEntries = performance.getEntriesByType('paint');
-      const fcp = paintEntries.find(
-        entry => entry.name === 'first-contentful-paint'
-      );
-      const lcp = performance.getEntriesByType(
-        'largest-contentful-paint'
-      )[0] as PerformanceNavigationTiming;
-      const cls = performance
-        .getEntriesByType('layout-shift')
-        .reduce((acc, entry) => {
-          return acc + (entry as any).value;
-        }, 0);
-      const fid = performance.getEntriesByType(
-        'first-input'
-      )[0] as PerformanceEventTiming;
-import { useEffect, useState } from "react";
-import { PerformanceMetrics } from "../types";
-
-:backup-problematic-files/hooks/usePerformanceMetrics.ts
-export function usePerformanceMetrics() {
-:backup-problematic-files/hooks/usePerformanceMetrics.ts
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [isSupported, setIsSupported] = useState(false);
-  useEffect(() => {
-    if (typeof window === "undefined" |!("performance" in window)) {
-      return;
-    }
-    setIsSupported(true);
-    const measurePerformance = () => {
->>>>>>> origin/cursor/delete-old-data-records-6bba
       const navigationEntries =
         window.performance.getEntriesByType("navigation");
       const navigation = navigationEntries[0] as PerformanceNavigationTiming;
@@ -108,7 +57,6 @@ export function usePerformanceMetrics() {;
   return { metrics, isSupported }
 :hooks/usePerformanceMetrics.ts
 }
-=======
 
 
 
@@ -119,17 +67,7 @@ export function usePerformanceMetrics() {;
 
 
 
->>>>>>> main
 
   return { metrics, isSupported }
 
 
-<<<<<<< HEAD
-  return { metrics, isSupported };
-}
-main:hooks/usePerformanceMetrics.ts
-}
-:backup-problematic-files/hooks/usePerformanceMetrics.ts
-:backup-problematic-files/hooks/usePerformanceMetrics.ts
-=======
->>>>>>> main

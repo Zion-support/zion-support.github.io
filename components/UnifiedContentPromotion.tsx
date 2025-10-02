@@ -17,44 +17,56 @@ interface ContentItem {
 }
 
 const featuredContent: ContentItem[] = [
-  // Sept 30, 2025 — newly added items to advertise
   {
-    id: 'n0a',
-    title: 'Autonomous Runbooks Quickstart: Budgeted Actions and Instant Rollback',
-    description: 'Design incident playbooks that close the loop from detection to safe action in <60s.',
-    link: '/blog/ai-2025-sept-30-autonomous-runbooks-quickstart',
+    id: 'o3-0',
+    title: 'AI Observability 2026: Complete Guide',
+    description: 'Comprehensive observability strategies for AI systems with real-time monitoring and alerting.',
+    link: '/blog/ai-observability-2026',
     badge: 'New',
-    badgeColor: 'bg-gradient-to-r from-emerald-600 to-teal-600',
-    icon: '✅',
-    publishedDate: 'September 30, 2025',
-    readTime: '7 min read',
-    category: 'AI Operations'
-  },
-  {
-    id: 'n0b',
-    title: 'Privacy‑Preserving Telemetry: Scoped IDs, On‑Device Redaction, DP Noise',
-    description: 'Actionable analytics without PII using edge aggregation and differential privacy.',
-    link: '/blog/edge-2025-sept-30-privacy-preserving-telemetry',
-    badge: 'Fresh',
     badgeColor: 'bg-gradient-to-r from-cyan-600 to-sky-600',
-    icon: '🔒',
+    icon: '📊',
     publishedDate: 'September 30, 2025',
     readTime: '6 min read',
     category: 'Observability'
   },
+  // Sept 30, 2025 — highlight newest content
+  // Oct 03, 2025 — newest highlights
   {
-    id: 'n0c',
-    title: 'GenAI Quality Tiers Quickstart: Stable UX at 40–70% Lower Cost',
-    description: 'Tiered routing and semantic caches with KPI‑linked budgets.',
-    link: '/blog/genai-2025-sept-30-quality-tiers-quickstart',
-    badge: 'Featured',
-    badgeColor: 'bg-gradient-to-r from-indigo-600 to-blue-600',
-    icon: '💸',
-    publishedDate: 'September 30, 2025',
+    id: 'o3-1',
+    title: 'Governed Autonomy Scorecards: From SLIs to KPIs',
+    description: 'Operational scorecards with budgets, canaries, and rollback that accelerate delivery without regressions.',
+    link: '/blog/ai-2025-oct-03-governed-autonomy-scorecards',
+    badge: 'New',
+    badgeColor: 'bg-gradient-to-r from-emerald-600 to-teal-600',
+    icon: '🧭',
+    publishedDate: 'October 03, 2025',
     readTime: '8 min read',
+    category: 'AI Operations'
+  },
+  {
+    id: 'o3-2',
+    title: 'Private Telemetry at the Edge: Useful Signals, Zero PII',
+    description: 'Scoped IDs, on-device redaction, and DP noise for actionable analytics under 100ms with attestations.',
+    link: '/blog/edge-2025-oct-03-private-telemetry-blueprint',
+    badge: 'Fresh',
+    badgeColor: 'bg-gradient-to-r from-cyan-600 to-sky-600',
+    icon: '📈',
+    publishedDate: 'October 03, 2025',
+    readTime: '7 min read',
+    category: 'Observability'
+  },
+  {
+    id: 'o3-3',
+    title: 'GenAI Quality Tiers v4: Save Up To 70% With Stable UX',
+    description: 'Tiered routing, semantic caches, and eval gates that reduce spend while preserving UX.',
+    link: '/blog/genai-2025-oct-03-quality-tiers-blueprint-v4',
+    badge: 'New',
+    badgeColor: 'bg-gradient-to-r from-purple-600 to-pink-600',
+    icon: '🧪',
+    publishedDate: 'October 03, 2025',
+    readTime: '9 min read',
     category: 'GenAI'
   },
-  // Sept 30, 2025 — highlight newest content
   {
     id: 'n1',
     title: 'AI Operational Trust Q4 2025: Scorecards That Prevent Regressions',
