@@ -1,15 +1,14 @@
 import React from 'react';
-import {
-Helmet
-} from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 
 interface SEOHeadProps {
-title?: string;
-description?: string;
-keywords?: string;
-canonical?: string;
-ogImage?: string;
-structuredData?: object;
+  title?: string;
+  description?: string;
+  keywords?: string | string[];
+  canonical?: string;
+  ogImage?: string;
+  structuredData?: object;
+  author?: string;
 }
 
 const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
@@ -18,7 +17,8 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
   keywords = "AI solutions, IT consulting, cybersecurity, machine learning, cloud infrastructure, digital transformation, AI workflow automation, quantum computing, edge AI, zero trust security, micro SAAS platforms, AI virtual assistant, data analytics",
   canonical = "https://ziontechgroup.com",
   ogImage = "https://ziontechgroup.com/og-image.jpg",
-  structuredData
+  structuredData,
+  author
 }) => {
   const defaultStructuredData = {
     "@context": "https://schema.org",
@@ -113,8 +113,8 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <meta name="author" content="Zion Tech Group" />
+      <meta name="keywords" content={Array.isArray(keywords) ? keywords.join(', ') : keywords} />
+      <meta name="author" content={author || 'Zion Tech Group'} />
       <meta name="publisher" content="Zion Tech Group" />
       <meta name="copyright" content="Zion Tech Group" />
       <meta name="language" content="en-US" />

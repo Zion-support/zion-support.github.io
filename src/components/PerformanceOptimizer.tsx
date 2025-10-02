@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {
-
-} from 'web-vitals';
+import { onCLS, onFCP, onLCP, onTTFB } from 'web-vitals';
 
 interface PerformanceMetrics {
 cls: number | null;
@@ -12,7 +10,7 @@ ttfb: number | null;
 score: number;
 }
 
-const PerformanceOptimizer: React.FC = () => {
+const PerformanceOptimizer: React.FC<{ isVisible?: boolean; onClose?: () => void }> = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     cls: null,
     fid: null,
@@ -23,30 +21,29 @@ const PerformanceOptimizer: React.FC = () => {
   });
 
   useEffect(() => {
-const sendToAnalytics = (metric: any) => {,
-// Send to your analytics service
-console.log(`Performance metric ${metric.name
-}:`, metric.value);
+    const sendToAnalytics = (metric: any) => {
+      // Send to your analytics service
+      console.log(`Performance metric ${metric.name}:`, metric.value);
       
       setMetrics(prev => {
         const newMetrics = { ...prev };
         switch (metric.name) {
-case 'CLS':,
-newMetrics.cls = metric.value;
-break;
-case 'FID':,
-newMetrics.fid = metric.value;
-break;
-case 'FCP':,
-newMetrics.fcp = metric.value;
-break;
-case 'LCP':,
-newMetrics.lcp = metric.value;
-break;
-case 'TTFB':,
-newMetrics.ttfb = metric.value;
-break;
-}
+          case 'CLS':
+            newMetrics.cls = metric.value;
+            break;
+          case 'FID':
+            newMetrics.fid = metric.value;
+            break;
+          case 'FCP':
+            newMetrics.fcp = metric.value;
+            break;
+          case 'LCP':
+            newMetrics.lcp = metric.value;
+            break;
+          case 'TTFB':
+            newMetrics.ttfb = metric.value;
+            break;
+        }
         
         // Calculate performance score
         let score = 100;
@@ -74,7 +71,6 @@ break;
 
     // Measure Core Web Vitals
     onCLS(sendToAnalytics);
-    onFID(sendToAnalytics);
     onFCP(sendToAnalytics);
     onLCP(sendToAnalytics);
     onTTFB(sendToAnalytics);

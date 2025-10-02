@@ -1,101 +1,230 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import FeaturedServiceCard from '../components/FeaturedServiceCard';
+import { Link, useLocation } from 'react-router-dom';
+import SEO from '../components/SEO';
 
-const ServicesPage: React.FC = () => {
-  const services = [
-    {
-      title: "AI & Machine Learning",
-      description: "Advanced AI solutions including machine learning, deep learning, and neural networks for enterprise applications.",
-      icon: "🤖",
-      features: ["Machine Learning Models", "Deep Learning Networks", "AI Automation", "Predictive Analytics"]
+type ServicesPageProps = {
+  category?:
+    | 'ai-solutions'
+    | 'cloud'
+    | 'analytics'
+    | 'security'
+    | 'automation'
+    | 'quantum-computing'
+    | 'cloud-devops';
+  service?: string;
+};
+
+const offerings = {
+  categories: {
+    'ai-solutions': {
+      title: 'AI Services',
+      items: [
+        {
+          name: 'RAG Chatbot for Docs',
+          priceHint: '$2,000–$8,000 setup + $99–$499/mo',
+          features: ['PDF/Docs ingestion', 'Embeddings store', 'Enterprise auth', 'Analytics'],
+          path: '/services/ai-virtual-assistant'
+        },
+        {
+          name: 'Predictive Analytics',
+          priceHint: '$3,000–$12,000 project',
+          features: ['Forecasting', 'Churn/CLV models', 'Dashboards'],
+          path: '/services/ai-data-analytics'
+        },
+        {
+          name: 'Document AI (IDP)',
+          priceHint: '$4,000–$15,000 project',
+          features: ['OCR', 'Entity extraction', 'Human-in-the-loop'],
+          path: '/services/ai-intelligent-document-processing'
+        },
+        {
+          name: 'AI Email Subject Optimizer',
+          priceHint: '$49–$299/mo',
+          features: ['A/B testing', 'ESP integrations', 'Compliance'],
+          path: '/services/ai-email-marketing'
+        }
+      ]
     },
-    {
-      title: "Cloud Computing",
-      description: "Comprehensive cloud solutions including migration, infrastructure, and optimization services.",
-      icon: "☁️",
-      features: ["Cloud Migration", "Infrastructure Setup", "Cost Optimization", "Security Implementation"]
+    cloud: {
+      title: 'Cloud Solutions',
+      items: [
+        {
+          name: 'Cloud Cost Optimization',
+          priceHint: '$1,500–$8,000 project',
+          features: ['Rightsizing', 'FinOps KPIs', 'Savings plan strategy'],
+          path: '/services/cloud'
+        },
+        {
+          name: 'Landing Zone + IaC',
+          priceHint: '$5,000–$20,000 project',
+          features: ['Terraform', 'SSO', 'Guardrails'],
+          path: '/services/cloud'
+        }
+      ]
     },
-    {
-      title: "Digital Transformation",
-      description: "Complete digital modernization strategies to transform your business operations.",
-      icon: "🚀",
-      features: ["Process Automation", "System Integration", "Workflow Optimization", "Change Management"]
+    analytics: {
+      title: 'Data & Analytics',
+      items: [
+        {
+          name: 'Modern Data Stack',
+          priceHint: '$6,000–$25,000 project',
+          features: ['Ingestion', 'dbt models', 'BI dashboards'],
+          path: '/services/analytics'
+        }
+      ]
     },
-    {
-      title: "Cybersecurity",
-      description: "Advanced security solutions to protect your digital assets and ensure compliance.",
-      icon: "🛡️",
-      features: ["Security Audits", "Threat Detection", "Compliance Management", "Incident Response"]
+    security: {
+      title: 'Cybersecurity',
+      items: [
+        {
+          name: 'Security Assessment',
+          priceHint: '$2,000–$10,000 project',
+          features: ['CIS/NIST baseline', 'Cloud posture', 'Action plan'],
+          path: '/services/security'
+        },
+        {
+          name: 'SOC-lite (24/5)',
+          priceHint: '$999–$3,999/mo',
+          features: ['SIEM setup', 'Alert triage', 'Playbooks'],
+          path: '/services/security'
+        }
+      ]
     },
-    {
-      title: "Data Analytics",
-      description: "Transform your data into actionable insights with advanced analytics and visualization.",
-      icon: "📊",
-      features: ["Data Visualization", "Business Intelligence", "Real-time Analytics", "Reporting Systems"]
-    },
-    {
-      title: "DevOps & Automation",
-      description: "Streamline your development and deployment processes with modern DevOps practices.",
-      icon: "⚙️",
-      features: ["CI/CD Pipelines", "Infrastructure as Code", "Monitoring & Logging", "Performance Optimization"]
+    automation: {
+      title: 'Automation',
+      items: [
+        {
+          name: 'Workflow Automation',
+          priceHint: '$1,500–$8,000 project',
+          features: ['Zapier/Make', 'API orchestration', 'Audit trails'],
+          path: '/services/ai-workflow-automation'
+        },
+        {
+          name: 'Appointment Scheduler (Healthcare)',
+          priceHint: '$99–$499/mo',
+          features: ['HIPAA-ready', 'Reminders', 'Insurance fields'],
+          path: '/services/smart-appointment-scheduler'
+        }
+      ]
     }
-  ];
+  }
+} as const;
+
+const Card: React.FC<{ title: string; emoji: string; children: React.ReactNode }> = ({ title, emoji, children }) => (
+  <div className="bg-white p-6 rounded-lg shadow-lg border">
+    <div className="text-4xl mb-4">{emoji}</div>
+    <h2 className="text-2xl font-bold mb-4">{title}</h2>
+    {children}
+  </div>
+);
+
+const ServicesGrid: React.FC = () => (
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <Card title="AI Services" emoji="🧠">
+      <p className="text-gray-600 mb-4">Leverage AI to automate, gain insights, and innovate.</p>
+      <ul className="text-sm text-gray-600 space-y-1">
+        <li>• Machine Learning, NLP, Vision</li>
+        <li>• RAG Chatbots for documents</li>
+        <li>• Predictive Analytics</li>
+      </ul>
+      <div className="mt-4">
+        <Link className="text-blue-600 hover:underline" to="/services/ai-services">Explore AI Services →</Link>
+      </div>
+    </Card>
+    <Card title="Micro SaaS" emoji="🚀">
+      <p className="text-gray-600 mb-4">Targeted apps that solve specific business workflows.</p>
+      <ul className="text-sm text-gray-600 space-y-1">
+        <li>• Custom web apps and APIs</li>
+        <li>• Payment & auth integrations</li>
+        <li>• Analytics & billing</li>
+      </ul>
+      <div className="mt-4">
+        <Link className="text-blue-600 hover:underline" to="/services/micro-saas">Explore Micro SaaS →</Link>
+      </div>
+    </Card>
+    <Card title="IT Services" emoji="💻">
+      <p className="text-gray-600 mb-4">Modernize infrastructure, improve security, and ship faster.</p>
+      <ul className="text-sm text-gray-600 space-y-1">
+        <li>• Cloud migration & DevOps</li>
+        <li>• Cybersecurity assessments</li>
+        <li>• SRE & reliability</li>
+      </ul>
+      <div className="mt-4">
+        <Link className="text-blue-600 hover:underline" to="/services/it-services">Explore IT Services →</Link>
+      </div>
+    </Card>
+  </div>
+);
+
+const CategorySection: React.FC<{ slug: keyof typeof offerings.categories }> = ({ slug }) => {
+  const category = offerings.categories[slug];
+  return (
+    <div className="space-y-6">
+      <h2 className="text-3xl font-bold">{category.title}</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {category.items.map((item) => (
+          <div key={item.name} className="bg-white rounded-lg border shadow-sm p-6 flex flex-col">
+            <h3 className="text-xl font-semibold mb-2">{item.name}</h3>
+            <p className="text-gray-600 text-sm mb-3">{item.priceHint}</p>
+            <ul className="text-gray-600 text-sm space-y-1 mb-4">
+              {item.features.map((f) => (
+                <li key={f}>• {f}</li>
+              ))}
+            </ul>
+            <div className="mt-auto flex gap-3">
+              <Link to={item.path} className="px-4 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700">Learn more</Link>
+              <a href="/contact" className="px-4 py-2 rounded-md border border-blue-600 text-blue-600 hover:bg-blue-50">Get a quote</a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const ServicesPage: React.FC<ServicesPageProps> = ({ category }) => {
+  const location = useLocation();
+  const selectedCategory = (category as keyof typeof offerings.categories) || ((): keyof typeof offerings.categories | undefined => {
+    const path = location.pathname;
+    if (path.includes('/services/ai')) return 'ai-solutions';
+    if (path.includes('/services/cloud')) return 'cloud';
+    if (path.includes('/services/analytics')) return 'analytics';
+    if (path.includes('/services/security')) return 'security';
+    if (path.includes('/services/automation')) return 'automation';
+    return undefined;
+  })();
 
   return (
     <>
-      <Helmet>
-        <title>Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive IT services including AI solutions, cloud computing, digital transformation, and cybersecurity." />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-8">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Our Services
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive IT solutions designed to accelerate your digital transformation 
-            and drive business growth.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
-              <div className="text-4xl mb-4">{service.icon}</div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
-              <p className="text-gray-600 mb-6">{service.description}</p>
-              
-              <ul className="space-y-2">
-                {service.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center text-gray-700">
-                    <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-              
-              <button className="w-full mt-6 bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors">
-                Learn More
-              </button>
+      <SEO 
+        title="Services - Zion Tech Group"
+        description="Comprehensive AI services, micro SaaS solutions, and IT services with transparent pricing and fast delivery."
+        keywords="AI services, micro SaaS, IT services, cloud migration, DevOps, cybersecurity, RAG chatbot"
+      />
+      <main className="py-12 sm:py-16">
+        <div className="container mx-auto px-6">
+          <div className="max-w-7xl mx-auto">
+            <div className="flex items-center justify-between mb-8">
+              <h1 className="text-3xl sm:text-4xl font-bold">Our Services</h1>
+              <a href="/services/catalog" className="text-blue-600 hover:underline">View Services Catalog →</a>
             </div>
-          ))}
+            {!selectedCategory && <ServicesGrid />}
+            {selectedCategory && <CategorySection slug={selectedCategory} />}
+            <div className="mt-12">
+              <div className="bg-blue-50 border border-blue-100 rounded-lg p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                <div>
+                  <p className="text-lg font-semibold text-blue-900">Ready to accelerate your roadmap?</p>
+                  <p className="text-blue-800">Contact us at +1 302 464 0950 • kleber@ziontechgroup.com • 364 E Main St STE 1008 Middletown DE 19709</p>
+                </div>
+                <div className="flex gap-3">
+                  <a href="/contact" className="px-5 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700">Contact Sales</a>
+                  <a href="/demo" className="px-5 py-2 rounded-md border border-blue-600 text-blue-600 hover:bg-blue-50">Book a Demo</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-
-        {/* CTA Section */}
-        <section className="text-center mt-16 bg-gray-50 rounded-lg p-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-gray-600 mb-6">
-            Contact our experts to discuss your specific needs and get a customized solution.
-          </p>
-          <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-            Get Started Today
-          </button>
-        </section>
-      </div>
+      </main>
     </>
   );
 };
