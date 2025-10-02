@@ -124,8 +124,8 @@ import AutonomyBlueprint2026Banner from '../components/AutonomyBlueprint2026Bann
 import September30ContentPromo2025 from '../components/September30ContentPromo2025';
 import NewContent2026BreakthroughBanner from '../components/NewContent2026BreakthroughBanner';
 import InteractiveAI2026BreakthroughCalculator from '../components/InteractiveAI2026BreakthroughCalculator';
-import FreshContent2027ShowcaseBanner from '../components/FreshContent2027ShowcaseBanner';
-import RevolutionaryAI2027Banner from '../components/RevolutionaryAI2027Banner';
+import FreshContent2027ShowcaseBanner from './components/FreshContent2027ShowcaseBanner';
+import RevolutionaryAI2027Banner from './components/RevolutionaryAI2027Banner';
 
 export const metadata = {
   title: 'Zion Tech Group — Revolutionary AI Breakthroughs 2026 | 1000x Performance Gains',
@@ -340,10 +340,9 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-        </div>
       </section>
       {/* 🚀 NEWEST 2027 CONTENT - BREAKTHROUGH QUANTUM AI & AUTONOMOUS INTELLIGENCE! */}
-      <NewContent2027ShowcaseBanner />
+      {/* <NewContent2027ShowcaseBanner /> */}
 
       {/* 🚀 REVOLUTIONARY AI ENTERPRISE AUTOMATION 2026 */}
       <RevolutionaryAIEnterpriseAutomationBanner />
@@ -416,7 +415,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-=======
+
       {/* 🚀🚀🚀 FRESH CONTENT 2027 - Revolutionary AI Breakthroughs! 🚀🚀🚀 */}
       <RevolutionaryAI2027Banner />
       
@@ -1239,7 +1238,8 @@ export default function HomePage() {
               popular={false}
             />
           </div>
-        </section>
+        </div>
+      </section>
 
       {/* Interactive AI Calculator 2025 */}
       <InteractiveAICalculator2025 />
@@ -1390,7 +1390,9 @@ export default function HomePage() {
                       </div>
                     </div>
                   </div>
-          </div>
+                </div>
+              </div>
+            </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <Link href="/blog/ai-operational-resilience-2026" className="group">
