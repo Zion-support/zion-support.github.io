@@ -62,27 +62,7 @@ interface Notification {
   type: 'success' | 'error' | 'warning' | 'info';
 }
 
-interface WindowWithEnhancements extends Window {
-  advancedPerformanceOptimizer?: { initialize?: () => void };
-  advancedSEOOptimizer?: { initialize?: () => void };
-  advancedSecurityManager?: { initialize?: () => void };
-  advancedAnalytics?: { initialize?: () => void };
-  advancedErrorHandler?: { initialize?: () => void };
-  advancedCachingSystem?: { initialize?: () => void };
-  advancedUXOptimizer?: { initialize?: () => void };
-  advancedTestingFramework?: { initialize?: () => void };
-  advancedI18n?: { initialize?: () => void };
-  enhancements?: Record<string, unknown>;
-  performanceOptimizer?: Record<string, unknown>;
-  seoOptimizer?: Record<string, unknown>;
-  securityManager?: Record<string, unknown>;
-  analytics?: Record<string, unknown>;
-  errorHandler?: Record<string, unknown>;
-  cachingSystem?: Record<string, unknown>;
-  uxOptimizer?: Record<string, unknown>;
-  testingFramework?: Record<string, unknown>;
-  i18n?: Record<string, unknown>;
-}
+// Removed unused WindowWithEnhancements interface
 
 // Initialize performance enhancements function
 const initializePerformanceEnhancements = () => {
