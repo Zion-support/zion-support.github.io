@@ -22,6 +22,7 @@ import NewBlogContentShowcase2026 from "./components/NewBlogContentShowcase2026"
 import UltimateContentAdvertisingBanner from "./components/UltimateContentAdvertisingBanner";
 import January2026RevolutionaryContentBanner from "./components/January2026RevolutionaryContentBanner";
 import January2026LatestTrendsBanner from "./components/January2026LatestTrendsBanner";
+import AutonomousOperationsRevolutionBanner from "./components/AutonomousOperationsRevolutionBanner";
 
 export default function App(): JSX.Element {
   return (
@@ -217,6 +218,11 @@ export default function App(): JSX.Element {
       {/* January 2026 Latest Trends Banner */}
       <section>
         <January2026LatestTrendsBanner />
+      </section>
+
+      {/* Autonomous Operations Revolution Banner */}
+      <section>
+        <AutonomousOperationsRevolutionBanner />
       </section>
 
       {/* New Services Promotional Banner */}
