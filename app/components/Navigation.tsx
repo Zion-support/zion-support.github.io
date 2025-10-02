@@ -111,6 +111,24 @@ export function Header() {
                 <Link to="/services/ai-customer-insights-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600">
                   AI Customer Insights Platform
                 </Link>
+                <Link to="/services/ai-powered-content-tools" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  AI-Powered Content Tools
+                </Link>
+                <Link to="/services/appointment-scheduling-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600">
+                  Appointment Scheduling Solutions
+                </Link>
+                <Link to="/services/remote-collaboration-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600">
+                  Remote Collaboration Platform
+                </Link>
+                <Link to="/services/api-integration-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600">
+                  API Integration Services
+                </Link>
+                <Link to="/services/ai-fraud-detection-system" className="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600">
+                  AI Fraud Detection System
+                </Link>
+                <Link to="/services/cloud-cost-optimization" className="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600">
+                  Cloud Cost Optimization
+                </Link>
                 <Link to="/services/ai-financial-analysis-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600">
                   AI Financial Analysis Platform
                 </Link>

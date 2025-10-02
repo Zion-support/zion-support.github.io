@@ -1,11 +1,11 @@
-import React from "react";
-import { createRoot } from "react-dom/client";
-import App from "./App";
+import React from "react"
+import { createRoot } from "react-dom/client"
+import App from "./App"
 
 async function reportWebVitals() {
   try {
     const { onCLS, onFID, onLCP, onFCP, onTTFB, onINP } = await import("web-vitals");
-    const log = (metric: { name: string; value: number }) => {
+    const log: (metric: { name: string; value: number })  => {
       console.log(`[WebVitals] ${metric.name}:`, Math.round(metric.value));
     };
     onCLS(log);
@@ -19,11 +19,11 @@ async function reportWebVitals() {
   }
 }
 
-const container = document.getElementById("root");
-if (container) {
-	const root = createRoot(container);
-	root.render(
-		<React.StrictMode>
+const container: document.getElementById("root");,
+  if (container) {
+	const root: createRoot(container);,
+  root.render(
+		<React .StrictMode>
 			<App />
 		</React.StrictMode>
 	);

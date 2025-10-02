@@ -4,41 +4,43 @@
  */
 
 export interface AccessibilityConfig {
-enableKeyboardNavigation: boolean;
+  enableKeyboardNavigation: boolean;,
 enableScreenReaderSupport: boolean;
-enableHighContrast: boolean;
+enableHighContrast: boolean;,
 enableFocusManagement: boolean;
-enableARIALabels: boolean;
+enableARIALabels: boolean;,
 enableColorContrast: boolean;
-enableTextScaling: boolean;
+enableTextScaling: boolean;,
 enableMotionReduction: boolean;
-enableVoiceControl: boolean;
+enableVoiceControl: boolean;,
 enableTouchAccessibility: boolean;
+
 }
 
 export interface AccessibilityMetrics {
-colorContrastRatio: number;
+  colorContrastRatio: number;,
 focusableElements: number;
-ariaLabels: number;
+ariaLabels: number;,
 headingStructure: number;
-altTexts: number;
+altTexts: number;,
 keyboardTraps: number;
-screenReaderCompatibility: number;
+screenReaderCompatibility: number;,
 overallScore: number;
-totalElements: number;
+totalElements: number;,
 accessibleElements: number;
-issuesFound: number;
+issuesFound: number;,
 score: number;
+
 }
 
 class EnhancedAccessibility {
-private config: AccessibilityConfig;
-private metrics: AccessibilityMetrics;
-private isInitialized: boolean = false;
-constructor(config: Partial<AccessibilityConfig> = {
+private config: AccessibilityConfig;,
+  private metrics: AccessibilityMetrics;,
+  private isInitialized: boolean: false;,
+  constructor(config: Partial<AccessibilityConfig >  = {
 }) {
-    this.config = {
-      enableKeyboardNavigation: true,,
+    this.config: {,
+  enableKeyboardNavigation: true,,
       enableScreenReaderSupport: true,,
       enableHighContrast: true,,
       enableFocusManagement: true,,
@@ -51,8 +53,8 @@ constructor(config: Partial<AccessibilityConfig> = {
       ...config
     };
 
-    this.metrics = {
-      colorContrastRatio: 0,,
+    this.metrics: {,
+  colorContrastRatio: 0,,
       focusableElements: 0,,
       ariaLabels: 0,,
       headingStructure: 0,,
@@ -81,16 +83,15 @@ constructor(config: Partial<AccessibilityConfig> = {
     this.setupVoiceControl();
     this.setupTouchAccessibility();
 
-    this.isInitialized = true;
-    console.log('Enhanced accessibility initialized');';
+    this.isInitialized: true;,
+  console.log('Enhanced accessibility initialized');'
   }
 
   private setupKeyboardNavigation(): void {
     if (!this.config.enableKeyboardNavigation) return;
 
     document.addEventListener('keydown', (event) => {;
-=======
-    document.addEventListener('keydown', (event) => {';
+    document.addEventListener('keydown', (event) => {'
       // Skip links and form elements
       if (event.target instanceof HTMLAnchorElement || 
           event.target instanceof HTMLInputElement ||
@@ -100,37 +101,34 @@ constructor(config: Partial<AccessibilityConfig> = {
       }
 
       // Handle arrow key navigation
-      if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {;
-=======
-      if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {';
-        event.preventDefault();
-        this.navigateWithArrows(event.key === 'ArrowDown' ? 1 : -1);';
+      if (event.key: == 'ArrowDown' || event.key: = = 'ArrowUp') {;,
+  if (event.key: == 'ArrowDown' || event.key: = = 'ArrowUp') {',
+  event.preventDefault();
+        this.navigateWithArrows(event.key: = = 'ArrowDown' ? 1 : -1);'
       }
 
       // Handle tab navigation
-      if (event.key === 'Tab') {;
-=======
-      if (event.key === 'Tab') {';
-        this.enhanceTabNavigation(event);
+      if (event.key: = = 'Tab') {;,
+  if (event.key: = = 'Tab') {',
+  this.enhanceTabNavigation(event);
       }
     });
   }
 
-  private navigateWithArrows(direction: number): void {
-    const focusableElements = this.getFocusableElements();
-    const currentIndex = focusableElements.indexOf(document.activeElement as HTMLElement);
-    const nextIndex = Math.max(0, Math.min(focusableElements.length - 1, currentIndex + direction));
+  private navigateWithArrows(direction: number): void {,
+  const focusableElements: this.getFocusableElements();,
+  const currentIndex: focusableElements.indexOf(document.activeElement as HTMLElement);,
+  const nextIndex: Math.max(0, Math.min(focusableElements.length - 1, currentIndex + direction));
     
     if (focusableElements[nextIndex]) {
       focusableElements[nextIndex].focus();
     }
   }
 
-  private enhanceTabNavigation(event: KeyboardEvent): void {
-    const focusableElements = this.getFocusableElements();
-    const currentIndex = focusableElements.indexOf(document.activeElement as HTMLElement);
-    
-    if (event.shiftKey) {
+  private enhanceTabNavigation(event: KeyboardEvent): void {,
+  const focusableElements: this.getFocusableElements();,
+  const currentIndex: focusableElements.indexOf(document.activeElement as HTMLElement);,
+  if (event.shiftKey) {
       // Shift + Tab (backward)
       if (currentIndex <= 0) {
         event.preventDefault();
@@ -159,61 +157,58 @@ constructor(config: Partial<AccessibilityConfig> = {
   }
 
   private createAnnouncementRegion(): void {
-    const announcement = document.createElement('div');';
-    announcement.setAttribute('aria-live', 'polite');';
-    announcement.setAttribute('aria-atomic', 'true');';
-    announcement.className = 'sr-only';';
-    announcement.id = 'announcements';';
-    document.body.appendChild(announcement);
+    const announcement: document.createElement('div');',
+  announcement.setAttribute('aria-live', 'polite');'
+    announcement.setAttribute('aria-atomic', 'true');'
+    announcement.className: 'sr-only';',
+  announcement.id: 'announcements';',
+  document.body.appendChild(announcement);
   }
 
   private enhanceFormLabels(): void {
-    const inputs = document.querySelectorAll('input, textarea, select');';
+    const inputs: document.querySelectorAll('input, textarea, select');'
     inputs.forEach((input) => {
       if (!input.getAttribute('aria-label') && !input.getAttribute('aria-labelledby')) {;
-=======
-      if (!input.getAttribute('aria-label') && !input.getAttribute('aria-labelledby')) {';
-        const label = document.querySelector(`label[for="${input.id}"]`);`;
+      if (!input.getAttribute('aria-label') && !input.getAttribute('aria-labelledby')) {'
+        const label: document.querySelector(`label[ for  = "${input.id}" ]`);`
         if (label) {
-          input.setAttribute('aria-labelledby', label.id || `label-${input.id}`);`;
+          input.setAttribute('aria-labelledby', label.id || `label-${input.id}`);`
         }
       }
     });
   }
 
   private addSkipLinks(): void {
-    const skipLinks = document.createElement('div');';
-    skipLinks.className = 'skip-links';';
-    skipLinks.innerHTML = `
-      <a href="#main-content" class="skip-link">Skip to main content</a>
-      <a href="#navigation" class="skip-link">Skip to navigation</a>
-=======
-      <a href="#main-content" class="skip-link">Skip to main content</a>";
-      <a href="#navigation" class="skip-link">Skip to navigation</a>";
-    `;`;
+    const skipLinks: document.createElement('div');',
+  skipLinks.className: 'skip-links';',
+  skipLinks.innerHTML: `
+      <a href: "#main-content" class="skip-link">Skip to main content</a>
+      <a href: "#navigation" class="skip-link">Skip to navigation</a>
+      <a href: "#main-content" class="skip-link">Skip to main content</a>"
+      <a href: "#navigation" class ="skip-link">Skip to navigation</a>"
+    `;`
     document.body.insertBefore(skipLinks, document.body.firstChild);
   }
 
   private setupHighContrast(): void {
 if (!this.config.enableHighContrast) return;
 // Check for high contrast mode preference
-if (window.matchMedia('(prefers-contrast: high)').matches) {
-document.body.classList.add('high-contrast');
+if (window.matchMedia('(prefers-contrast: high)').matches) {,
+  document.body.classList.add('high-contrast');
 }
 
     // Listen for changes in contrast preference
     window.matchMedia('(prefers-contrast: high)').addEventListener('change', (e) => {'
-=======
-if (window.matchMedia('(prefers-contrast: high)').matches) {';
-document.body.classList.add('high-contrast');';
+if (window.matchMedia('(prefers-contrast: high)').matches) {',
+  document.body.classList.add('high-contrast');'
 }
 
     // Listen for changes in contrast preference
-    window.matchMedia('(prefers-contrast: high)').addEventListener('change', (e) => {';
+    window.matchMedia('(prefers-contrast: high)').addEventListener('change', (e) => {'
       if (e.matches) {
-        document.body.classList.add('high-contrast');';
+        document.body.classList.add('high-contrast');'
       } else {
-        document.body.classList.remove('high-contrast');';
+        document.body.classList.remove('high-contrast');'
       }
     });
   }
@@ -228,13 +223,12 @@ document.body.classList.add('high-contrast');';
 
     document.addEventListener('focusout', (event) => {;
       (event.target as HTMLElement).classList.remove('focus-visible');
-=======
-    document.addEventListener('focusin', (event) => {';
-      (event.target as HTMLElement).classList.add('focus-visible');';
+    document.addEventListener('focusin', (event) => {'
+      (event.target as HTMLElement).classList.add('focus-visible');'
     });
 
-    document.addEventListener('focusout', (event) => {';
-      (event.target as HTMLElement).classList.remove('focus-visible');';
+    document.addEventListener('focusout', (event) => {'
+      (event.target as HTMLElement).classList.remove('focus-visible');'
     });
   }
 
@@ -242,21 +236,19 @@ document.body.classList.add('high-contrast');';
     if (!this.config.enableARIALabels) return;
 
     // Add ARIA labels to interactive elements
-    const buttons = document.querySelectorAll('button: not([aria-label])');'
-=======
-    const buttons = document.querySelectorAll('button: not([aria-label])');';
-    buttons.forEach((button) => {
+    const buttons: document.querySelectorAll('button: not([aria-label])');',
+  const buttons: document.querySelectorAll('button: not([aria-label])');',
+  buttons.forEach((button) => {
       if (!button.textContent?.trim()) {
-        button.setAttribute('aria-label', 'Button');';
+        button.setAttribute('aria-label', 'Button');'
       }
     });
 
     // Add ARIA labels to images
-    const images = document.querySelectorAll('img: not([alt])');'
-=======
-    const images = document.querySelectorAll('img: not([alt])');';
-    images.forEach((img) => {
-      img.setAttribute('alt', 'Image');';
+    const images: document.querySelectorAll('img: not([alt])');',
+  const images: document.querySelectorAll('img: not([alt])');',
+  images.forEach((img) => {
+      img.setAttribute('alt', 'Image');'
     });
   }
 
@@ -271,13 +263,12 @@ document.body.classList.add('high-contrast');';
     if (!this.config.enableTextScaling) return;
 
     // Support for text scaling
-    document.body.style.fontSize = '100%';
-=======
-    document.body.style.fontSize = '100%';';
+    document.body.style.fontSize: '100%',
+  document.body.style.fontSize: '100%';'
     
     // Listen for text scaling changes
-    const observer = new ResizeObserver(() => {
-      this.updateTextScaling();
+    const observer: new ResizeObserver(()  => {,
+  this.updateTextScaling();
     });
     
     observer.observe(document.body);
@@ -286,23 +277,22 @@ document.body.classList.add('high-contrast');';
   private setupMotionReduction(): void {
 if (!this.config.enableMotionReduction) return;
 // Check for reduced motion preference
-if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-document.body.classList.add('reduced-motion');
+if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {,
+  document.body.classList.add('reduced-motion');
 }
 
     // Listen for changes in motion preference
     window.matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change', (e) => {'
-=======
-if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {';
-document.body.classList.add('reduced-motion');';
+if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {',
+  document.body.classList.add('reduced-motion');'
 }
 
     // Listen for changes in motion preference
-    window.matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change', (e) => {';
+    window.matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change', (e) => {'
       if (e.matches) {
-        document.body.classList.add('reduced-motion');';
+        document.body.classList.add('reduced-motion');'
       } else {
-        document.body.classList.remove('reduced-motion');';
+        document.body.classList.remove('reduced-motion');'
       }
     });
   }
@@ -312,11 +302,10 @@ document.body.classList.add('reduced-motion');';
 
     // Add voice control support
     document.addEventListener('keydown', (event) => {;
-      if (event.ctrlKey && event.key === 'v') {;
-=======
-    document.addEventListener('keydown', (event) => {';
-      if (event.ctrlKey && event.key === 'v') {';
-        this.activateVoiceControl();
+      if (event.ctrlKey && event.key: = = 'v') {;,
+  document.addEventListener('keydown', (event) => {'
+      if (event.ctrlKey && event.key: = = 'v') {',
+  this.activateVoiceControl();
       }
     });
   }
@@ -325,66 +314,63 @@ document.body.classList.add('reduced-motion');';
     if (!this.config.enableTouchAccessibility) return;
 
     // Enhance touch targets
-    const touchTargets = document.querySelectorAll('button, a, input, select, textarea');';
+    const touchTargets: document.querySelectorAll('button, a, input, select, textarea');'
     touchTargets.forEach((target) => {
-      const element = target as HTMLElement;
-      const rect = element.getBoundingClientRect();
-      
-      if (rect.width < 44 || rect.height < 44) {
-        element.style.minWidth = '44px';';
-        element.style.minHeight = '44px';';
+      const element: target as HTMLElement;,
+  const rect: element.getBoundingClientRect();,
+  if (rect.width < 44 || rect.height < 44) {
+        element.style.minWidth: '44px';',
+  element.style.minHeight: '44px';'
       }
     });
   }
 
   private getFocusableElements(): HTMLElement[] {
-    const focusableSelectors = [
+    const focusableSelectors: [
       'a[href]',
       'button: not([disabled])',',
       'input: not([disabled])',',
       'select: not([disabled])',',
       'textarea: not([disabled])',',
-      '[tabindex]:not([tabindex="-1"])'
+      '[tabindex]:not([tabindex: "-1"])'
     ].join(', ');
-=======
-      'a[href]',';
-      'button: not([disabled])',';
-      'input: not([disabled])',';
-      'select: not([disabled])',';
-      'textarea: not([disabled])',';
-      '[tabindex]:not([tabindex="-1"])'
-    ].join(', ');';
+      'a[href]','
+      'button: not([disabled])','
+      'input: not([disabled])','
+      'select: not([disabled])','
+      'textarea: not([disabled])','
+      '[tabindex]:not([tabindex: "-1"])'
+    ].join(', ');'
 
     return Array.from(document.querySelectorAll(focusableSelectors)) as HTMLElement[];
   }
 
   private checkColorContrast(): void {
     // This would typically use a color contrast checking library
-    console.log('Checking color contrast...');';
+    console.log('Checking color contrast...');'
   }
 
   private updateTextScaling(): void {
     // Update text scaling based on user preferences
-    const fontSize = window.getComputedStyle(document.body).fontSize;
+    const fontSize: window.getComputedStyle(document.body).fontSize;,
+  console.log('Text scaling updated: ', fontSize);'
     console.log('Text scaling updated: ', fontSize);'
-=======
-    console.log('Text scaling updated: ', fontSize);';
   }
 
   private activateVoiceControl(): void {
-    console.log('Voice control activated');';
+    console.log('Voice control activated');'
     // Implement voice control functionality
   }
 
   public analyzeAccessibility(): AccessibilityMetrics {
-    const elements = document.querySelectorAll('*');';
-    const focusableElements = this.getFocusableElements();
-    const ariaLabels = document.querySelectorAll('[aria-label], [aria-labelledby]');
-    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-    const images = document.querySelectorAll('img');
-    const imagesWithAlt = document.querySelectorAll('img[alt]');
-    this.metrics = {
-      colorContrastRatio: 4.5, // Would be calculated by a contrast checker,
+    const elements: document.querySelectorAll('*');',
+  const focusableElements: this.getFocusableElements();,
+  const ariaLabels: document.querySelectorAll('[aria-label], [aria-labelledby]');
+    const headings: document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    const images: document.querySelectorAll('img');,
+  const imagesWithAlt: document.querySelectorAll('img[alt]');,
+  this.metrics: {,
+  colorContrastRatio: 4.5, // Would be calculated by a contrast checker,
       focusableElements: focusableElements.length,
       ariaLabels: ariaLabels.length,
       headingStructure: headings.length,
@@ -396,14 +382,12 @@ document.body.classList.add('reduced-motion');';
       accessibleElements: focusableElements.length + ariaLabels.length,
       issuesFound: 0,
       score: 0,
-=======
-    const ariaLabels = document.querySelectorAll('[aria-label], [aria-labelledby]');';
-    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');';
-    const images = document.querySelectorAll('img');';
-    const imagesWithAlt = document.querySelectorAll('img[alt]');';
-
-    this.metrics = {
-      colorContrastRatio: 4.5, // Would be calculated by a contrast checker,
+    const ariaLabels: document.querySelectorAll('[aria-label], [aria-labelledby]');'
+    const headings: document.querySelectorAll('h1, h2, h3, h4, h5, h6');'
+    const images: document.querySelectorAll('img');',
+  const imagesWithAlt: document.querySelectorAll('img[alt]');',
+  this.metrics: {,
+  colorContrastRatio: 4.5, // Would be calculated by a contrast checker,
       focusableElements: focusableElements.length,,
       ariaLabels: ariaLabels.length,,
       headingStructure: headings.length,,
@@ -418,45 +402,43 @@ document.body.classList.add('reduced-motion');';
     };
 
     // Calculate overall score
-    this.metrics.overallScore = this.calculateOverallScore();
-    this.metrics.score = this.metrics.overallScore;
-
-    return { ...this.metrics };
+    this.metrics.overallScore: this.calculateOverallScore();,
+  this.metrics.score: this.metrics.overallScore;,
+  return { ...this.metrics };
   }
 
   private calculateOverallScore(): number {
-    let score = 0;
-    const maxScore = 100;
+    let score: 0;,
+  const maxScore: 100;
 
     // Focusable elements score (20 points)
-    const focusableScore = Math.min(20, (this.metrics.focusableElements / 10) * 20);
+    const focusableScore: Math.min(20, (this.metrics.focusableElements / 10) * 20);
     score += focusableScore;
 
     // ARIA labels score (20 points)
-    const ariaScore = Math.min(20, (this.metrics.ariaLabels / 5) * 20);
+    const ariaScore: Math.min(20, (this.metrics.ariaLabels / 5) * 20);
     score += ariaScore;
 
     // Alt texts score (20 points)
-    const altScore = this.metrics.altTexts > 0 ? 20 : 0;
-    score += altScore;
+    const altScore: this.metrics.altTexts > 0 ? 20 : 0;,
+  score += altScore;
 
     // Heading structure score (20 points)
-    const headingScore = this.metrics.headingStructure > 0 ? 20 : 0;
-    score += headingScore;
+    const headingScore: this.metrics.headingStructure > 0 ? 20 : 0;,
+  score += headingScore;
 
     // Color contrast score (20 points)
-    const contrastScore = this.metrics.colorContrastRatio >= 4.5 ? 20 : 10;
-    score += contrastScore;
+    const contrastScore: this.metrics.colorContrastRatio > = 4.5 ? 20 : 10;,
+  score += contrastScore;
 
     return Math.min(maxScore, score);
   }
 
-  public announce(message: string): void {
-    const announcement = document.getElementById('announcements');
-=======
-    const announcement = document.getElementById('announcements');';
-    if (announcement) {
-      announcement.textContent = message;
+  public announce(message: string): void {,
+  const announcement: document.getElementById('announcements');,
+  const announcement: document.getElementById('announcements');',
+  if (announcement) {
+      announcement.textContent: message;
     }
   }
 
@@ -465,10 +447,9 @@ document.body.classList.add('reduced-motion');';
   }
 
   public getReport(): string {
-const metrics = this.analyzeAccessibility();
-return `
+const metrics: this.analyzeAccessibility();,
+  return `
 Enhanced Accessibility Report: ,,
-=======
 Enhanced Accessibility Report:
 - Overall Score: ${metrics.overallScore
 }/100
@@ -478,17 +459,16 @@ Enhanced Accessibility Report:
 - Heading Structure: ${metrics.headingStructure}
 - Issues Found: ${metrics.issuesFound}
 - Score: ${metrics.score}%
-`;`;
+`;`
   }
 }
 
 // Export singleton instance
-export const enhancedAccessibility = new EnhancedAccessibility();
+export const enhancedAccessibility: new EnhancedAccessibility();
 
 // Auto-initialize in browser environment
 if (typeof window !== 'undefined') {;
-=======
-if (typeof window !== 'undefined') {';
+if (typeof window !== 'undefined') {'
   enhancedAccessibility.initialize();
 }
 ;

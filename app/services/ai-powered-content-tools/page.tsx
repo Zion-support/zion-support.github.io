@@ -1,232 +1,234 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Helmet } from 'react-helmet-async';
 
-export const metadata: Metadata = {
-  title: 'AI-Powered Content Tools | Zion Tech Group - Content Optimization Suite',
-  description: 'Advanced AI content optimization tools for headlines, email subject lines, and marketing copy. Boost engagement with intelligent content generation and A/B testing.',
-  keywords: 'AI content tools, content optimization, email subject lines, headline generator, marketing copy AI, content A/B testing',
-};
-
-export default function AIPoweredContentToolsPage() {
-  const tools = [
-    {
-      name: "HeadlineMaster AI",
-      description: "AI-powered headline generator that creates compelling, SEO-optimized headlines for B2B marketing campaigns",
-      features: [
-        "Industry-specific optimization",
-        "A/B testing capabilities",
-        "Performance analytics",
-        "SEO score analysis",
-        "Multi-language support"
-      ],
-      pricing: "Starting from $29/month",
-      useCases: ["Blog posts", "Social media", "Email campaigns", "Ad copy"]
-    },
-    {
-      name: "EmailSubjectAI",
-      description: "Intelligent email subject line generator with open rate prediction and performance optimization",
-      features: [
-        "Open rate prediction",
-        "A/B testing framework",
-        "Industry benchmarks",
-        "Personalization engine",
-        "Spam filter optimization"
-      ],
-      pricing: "Starting from $49/month",
-      useCases: ["Newsletter campaigns", "Sales emails", "Marketing automation", "Transactional emails"]
-    },
-    {
-      name: "ContentAnalyzer Pro",
-      description: "AI-powered content analysis tool that evaluates readability, engagement potential, and SEO performance",
-      features: [
-        "Readability scoring",
-        "Engagement prediction",
-        "SEO optimization suggestions",
-        "Sentiment analysis",
-        "Competitor analysis"
-      ],
-      pricing: "Starting from $39/month",
-      useCases: ["Blog optimization", "Social media content", "Website copy", "Marketing materials"]
-    },
-    {
-      name: "PodcastTranscriber AI",
-      description: "Advanced podcast transcription service with speaker identification and content optimization suggestions",
-      features: [
-        "Speaker identification",
-        "Content summarization",
-        "Keyword extraction",
-        "Chapter generation",
-        "Multi-language support"
-      ],
-      pricing: "Starting from $19/month",
-      useCases: ["Podcast production", "Content repurposing", "SEO optimization", "Accessibility compliance"]
-    }
-  ];
-
-  const benefits = [
-    {
-      title: "Increased Engagement",
-      description: "Average 40% improvement in click-through rates with AI-optimized content",
-      icon: "📈"
-    },
-    {
-      title: "Time Savings",
-      description: "Reduce content creation time by 60% with automated optimization",
-      icon: "⏰"
-    },
-    {
-      title: "SEO Performance",
-      description: "Boost organic traffic by 35% with SEO-optimized content",
-      icon: "🔍"
-    },
-    {
-      title: "A/B Testing",
-      description: "Data-driven content optimization with built-in testing capabilities",
-      icon: "🧪"
-    }
-  ];
-
+const AIPoweredContentToolsPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-            AI-Powered Content Tools
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Transform your content strategy with our suite of AI-powered tools designed to optimize headlines, 
-            email subject lines, and marketing copy for maximum engagement and performance.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
-              className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-            >
-              Get Started - Free Trial
-            </Link>
-            <Link 
-              href="/pricing" 
-              className="border border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
-            >
-              View Pricing
-            </Link>
-          </div>
-        </div>
+    <>
+      <Helmet>
+        <title>AI-Powered Content Tools | Zion Tech Group</title>
+        <meta name="description" content="Revolutionary AI content generation and optimization tools. Create engaging content, headlines, and marketing materials with our advanced AI platform." />
+        <meta name="keywords" content="AI content tools, content generation, marketing automation, AI writing, content optimization" />
+        <link rel="canonical" href="https://ziontechgroup.com/services/ai-powered-content-tools" />
+      </Helmet>
 
-        {/* Tools Grid */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
-          {tools.map((tool, index) => (
-            <div key={index} className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
-              <div className="flex items-start justify-between mb-6">
-                <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{tool.name}</h3>
-                  <p className="text-gray-600 mb-4">{tool.description}</p>
-                </div>
-                <div className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">
-                  {tool.pricing}
-                </div>
-              </div>
-              
-              <div className="mb-6">
-                <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
-                <ul className="space-y-2">
-                  {tool.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-gray-600">
-                      <span className="text-green-500 mr-2">✓</span>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              
-              <div className="mb-6">
-                <h4 className="font-semibold text-gray-900 mb-3">Use Cases:</h4>
-                <div className="flex flex-wrap gap-2">
-                  {tool.useCases.map((useCase, idx) => (
-                    <span key={idx} className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">
-                      {useCase}
-                    </span>
-                  ))}
-                </div>
-              </div>
-              
-              <Link 
-                href="/contact"
-                className="inline-block w-full text-center bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50">
+        {/* Hero Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl font-bold text-gray-900 mb-6">
+              AI-Powered Content Tools
+            </h1>
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              Transform your content creation with our revolutionary AI platform. Generate engaging headlines, 
+              optimize marketing materials, and create compelling content at scale.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="tel:+13024640950" 
+                className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
               >
-                Start Free Trial
-              </Link>
+                📞 Call +1 302 464 0950
+              </a>
+              <a 
+                href="mailto:kleber@ziontechgroup.com" 
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold border-2 border-blue-600 hover:bg-blue-50 transition-colors"
+              >
+                ✉️ Get Quote
+              </a>
             </div>
-          ))}
-        </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+              Powerful AI Content Features
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white p-6 rounded-xl shadow-lg">
+                <div className="text-4xl mb-4">🤖</div>
+                <h3 className="text-xl font-semibold mb-3">AI Content Generation</h3>
+                <p className="text-gray-600">
+                  Generate high-quality blog posts, articles, and marketing copy using advanced language models.
+                </p>
+              </div>
+              <div className="bg-white p-6 rounded-xl shadow-lg">
+                <div className="text-4xl mb-4">📝</div>
+                <h3 className="text-xl font-semibold mb-3">Headline Optimizer</h3>
+                <p className="text-gray-600">
+                  Create compelling headlines that increase click-through rates and engagement.
+                </p>
+              </div>
+              <div className="bg-white p-6 rounded-xl shadow-lg">
+                <div className="text-4xl mb-4">🎯</div>
+                <h3 className="text-xl font-semibold mb-3">Content Analysis</h3>
+                <p className="text-gray-600">
+                  Analyze content performance and optimize for SEO, readability, and engagement.
+                </p>
+              </div>
+              <div className="bg-white p-6 rounded-xl shadow-lg">
+                <div className="text-4xl mb-4">📊</div>
+                <h3 className="text-xl font-semibold mb-3">Performance Tracking</h3>
+                <p className="text-gray-600">
+                  Track content performance across platforms with detailed analytics and insights.
+                </p>
+              </div>
+              <div className="bg-white p-6 rounded-xl shadow-lg">
+                <div className="text-4xl mb-4">🔄</div>
+                <h3 className="text-xl font-semibold mb-3">Multi-Platform</h3>
+                <p className="text-gray-600">
+                  Create content optimized for social media, blogs, emails, and marketing campaigns.
+                </p>
+              </div>
+              <div className="bg-white p-6 rounded-xl shadow-lg">
+                <div className="text-4xl mb-4">⚡</div>
+                <h3 className="text-xl font-semibold mb-3">Real-time Processing</h3>
+                <p className="text-gray-600">
+                  Generate and optimize content in real-time with lightning-fast AI processing.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section className="py-16 px-4 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+              Transparent Pricing
+            </h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="bg-gray-50 p-8 rounded-xl">
+                <h3 className="text-2xl font-semibold mb-4">Starter</h3>
+                <div className="text-4xl font-bold text-blue-600 mb-6">$99<span className="text-lg text-gray-500">/month</span></div>
+                <ul className="space-y-3 mb-8">
+                  <li>✓ 1,000 AI-generated content pieces</li>
+                  <li>✓ Basic headline optimization</li>
+                  <li>✓ Content analysis tools</li>
+                  <li>✓ Email support</li>
+                </ul>
+                <a href="mailto:kleber@ziontechgroup.com" className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold text-center block hover:bg-blue-700 transition-colors">
+                  Get Started
+                </a>
+              </div>
+              <div className="bg-blue-600 p-8 rounded-xl text-white relative">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-yellow-400 text-black px-4 py-1 rounded-full text-sm font-semibold">
+                  Most Popular
+                </div>
+                <h3 className="text-2xl font-semibold mb-4">Professional</h3>
+                <div className="text-4xl font-bold mb-6">$299<span className="text-lg opacity-80">/month</span></div>
+                <ul className="space-y-3 mb-8">
+                  <li>✓ 5,000 AI-generated content pieces</li>
+                  <li>✓ Advanced headline optimization</li>
+                  <li>✓ Full content analysis suite</li>
+                  <li>✓ Performance tracking</li>
+                  <li>✓ Priority support</li>
+                </ul>
+                <a href="mailto:kleber@ziontechgroup.com" className="w-full bg-white text-blue-600 py-3 rounded-lg font-semibold text-center block hover:bg-gray-100 transition-colors">
+                  Get Started
+                </a>
+              </div>
+              <div className="bg-gray-50 p-8 rounded-xl">
+                <h3 className="text-2xl font-semibold mb-4">Enterprise</h3>
+                <div className="text-4xl font-bold text-blue-600 mb-6">Custom</div>
+                <ul className="space-y-3 mb-8">
+                  <li>✓ Unlimited AI-generated content</li>
+                  <li>✓ Custom AI model training</li>
+                  <li>✓ White-label solution</li>
+                  <li>✓ Dedicated support</li>
+                  <li>✓ Custom integrations</li>
+                </ul>
+                <a href="tel:+13024640950" className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold text-center block hover:bg-blue-700 transition-colors">
+                  Contact Sales
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Benefits Section */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 mb-16">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            Why Choose Our AI Content Tools?
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="text-center">
-                <div className="text-4xl mb-4">{benefit.icon}</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{benefit.title}</h3>
-                <p className="text-gray-600">{benefit.description}</p>
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+              Why Choose Our AI Content Tools?
+            </h2>
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <h3 className="text-2xl font-semibold mb-6">Transform Your Content Strategy</h3>
+                <ul className="space-y-4">
+                  <li className="flex items-start">
+                    <span className="text-green-500 mr-3">✓</span>
+                    <span>Increase content production by 10x while maintaining quality</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-green-500 mr-3">✓</span>
+                    <span>Reduce content creation costs by up to 80%</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-green-500 mr-3">✓</span>
+                    <span>Improve engagement rates with AI-optimized headlines</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-green-500 mr-3">✓</span>
+                    <span>Scale content across multiple platforms effortlessly</span>
+                  </li>
+                </ul>
               </div>
-            ))}
+              <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-8 rounded-xl text-white">
+                <h4 className="text-xl font-semibold mb-4">Average Results</h4>
+                <div className="space-y-4">
+                  <div>
+                    <div className="text-3xl font-bold">300%</div>
+                    <div className="text-sm opacity-80">Increase in content output</div>
+                  </div>
+                  <div>
+                    <div className="text-3xl font-bold">85%</div>
+                    <div className="text-sm opacity-80">Reduction in creation time</div>
+                  </div>
+                  <div>
+                    <div className="text-3xl font-bold">250%</div>
+                    <div className="text-sm opacity-80">Improvement in engagement</div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
 
-        {/* Market Comparison */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white mb-16">
-          <h2 className="text-3xl font-bold text-center mb-8">
-            Market-Leading Performance
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold mb-2">40%</div>
-              <p className="text-blue-100">Higher engagement rates than traditional content</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold mb-2">60%</div>
-              <p className="text-blue-100">Reduction in content creation time</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold mb-2">35%</div>
-              <p className="text-blue-100">Increase in organic traffic</p>
+        {/* Contact Section */}
+        <section className="py-16 px-4 bg-gray-900 text-white">
+          <div className="max-w-7xl mx-auto text-center">
+            <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Content?</h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn how our AI-powered content tools can revolutionize your marketing strategy.
+            </p>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div>
+                <h3 className="text-lg font-semibold mb-2">📞 Phone</h3>
+                <a href="tel:+13024640950" className="text-blue-400 hover:text-blue-300">
+                  +1 302 464 0950
+                </a>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold mb-2">✉️ Email</h3>
+                <a href="mailto:kleber@ziontechgroup.com" className="text-blue-400 hover:text-blue-300">
+                  kleber@ziontechgroup.com
+                </a>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold mb-2">📍 Address</h3>
+                <div className="text-gray-300">
+                  364 E Main St STE 1008<br />
+                  Middletown DE 19709
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-
-        {/* Contact Information */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
-            Ready to Transform Your Content Strategy?
-          </h2>
-          <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-            Join thousands of businesses already using our AI-powered content tools to boost engagement, 
-            save time, and drive better results.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <a 
-              href="tel:+13024640950" 
-              className="flex items-center justify-center bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors"
-            >
-              📞 Call: +1 302 464 0950
-            </a>
-            <a 
-              href="mailto:kleber@ziontechgroup.com" 
-              className="flex items-center justify-center bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
-            >
-              ✉️ Email: kleber@ziontechgroup.com
-            </a>
-          </div>
-          <p className="text-gray-500">
-            📍 364 E Main St STE 1008, Middletown, DE 19709
-          </p>
-        </div>
+        </section>
       </div>
-    </div>
+    </>
   );
-}
+};
+
+export default AIPoweredContentToolsPage;
