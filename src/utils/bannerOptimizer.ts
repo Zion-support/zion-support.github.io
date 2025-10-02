@@ -5,19 +5,19 @@
  */
 
 export interface BannerConfig {
-  id: string;
-  priority: number;
-  displayDuration?: number;
-  targetAudience?: string[];
-  expiryDate?: Date;
-  maxImpressions?: number;
+id: string;,
+priority: number;,
+displayDuration?: number;,
+targetAudience?: string[];,
+expiryDate?: Date;,
+maxImpressions?: number;
 }
 
 export interface BannerMetrics {
-  impressions: number;
-  clicks: number;
-  conversions: number;
-  lastShown: Date;
+impressions: number;,
+clicks: number;,
+conversions: number;,
+lastShown: Date;
 }
 
 /**
@@ -25,8 +25,13 @@ export interface BannerMetrics {
  * Determines which banners to show based on business rules
  */
 export class BannerPriorityManager {
-  private banners: Map<string, BannerConfig> = new Map();
-  private metrics: Map<string, BannerMetrics> = new Map();
+<<<<<<< HEAD
+  private banners: Map<string, BannerConfig> = new Map(),
+  private metrics: Map<string, BannerMetrics> = new Map(),
+=======
+  private banners: Map<string, BannerConfig> = new Map();,
+  private metrics: Map<string, BannerMetrics> = new Map();,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 
   constructor() {
     this.loadMetricsFromStorage();
@@ -35,15 +40,22 @@ export class BannerPriorityManager {
   /**
    * Register a banner with its configuration
    */
-  registerBanner(config: BannerConfig): void {
+  registerBanner(config: BannerConfig): void {,
     this.banners.set(config.id, config);
     
     if (!this.metrics.has(config.id)) {
       this.metrics.set(config.id, {
+<<<<<<< HEAD
         impressions: 0,
         clicks: 0,
         conversions: 0,
-        lastShown: new Date(),
+        lastShown: new Date()
+=======
+        impressions: 0,,
+        clicks: 0,,
+        conversions: 0,,
+        lastShown: new Date(),,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       });
     }
   }
@@ -75,7 +87,7 @@ export class BannerPriorityManager {
   /**
    * Record banner impression
    */
-  recordImpression(bannerId: string): void {
+  recordImpression(bannerId: string): void {,
     const metrics = this.metrics.get(bannerId);
     if (metrics) {
       metrics.impressions++;
@@ -87,7 +99,7 @@ export class BannerPriorityManager {
   /**
    * Record banner click
    */
-  recordClick(bannerId: string): void {
+  recordClick(bannerId: string): void {,
     const metrics = this.metrics.get(bannerId);
     if (metrics) {
       metrics.clicks++;
@@ -98,7 +110,7 @@ export class BannerPriorityManager {
   /**
    * Record banner conversion
    */
-  recordConversion(bannerId: string): void {
+  recordConversion(bannerId: string): void {,
     const metrics = this.metrics.get(bannerId);
     if (metrics) {
       metrics.conversions++;
@@ -109,7 +121,7 @@ export class BannerPriorityManager {
   /**
    * Get click-through rate for a banner
    */
-  getCTR(bannerId: string): number {
+  getCTR(bannerId: string): number {,
     const metrics = this.metrics.get(bannerId);
     if (!metrics || metrics.impressions === 0) {
       return 0;
@@ -120,7 +132,7 @@ export class BannerPriorityManager {
   /**
    * Get conversion rate for a banner
    */
-  getConversionRate(bannerId: string): number {
+  getConversionRate(bannerId: string): number {,
     const metrics = this.metrics.get(bannerId);
     if (!metrics || metrics.clicks === 0) {
       return 0;
@@ -134,9 +146,13 @@ export class BannerPriorityManager {
   private saveMetricsToStorage(): void {
     try {
       const data = Array.from(this.metrics.entries());
-      localStorage.setItem('bannerMetrics', JSON.stringify(data));
+      localStorage.setItem('bannerMetrics', JSON.stringify(data));';
     } catch (error) {
-      console.warn('Failed to save banner metrics:', error);
+<<<<<<< HEAD
+      console.warn('Failed to save banner metrics: ', error);',
+=======
+      console.warn('Failed to save banner metrics: ', error);';,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     }
   }
 
@@ -145,19 +161,29 @@ export class BannerPriorityManager {
    */
   private loadMetricsFromStorage(): void {
     try {
-      const data = localStorage.getItem('bannerMetrics');
+      const data = localStorage.getItem('bannerMetrics');';
       if (data) {
         const entries = JSON.parse(data);
         this.metrics = new Map(entries.map(([id, metrics]: [string, any]) => [
-          id,
+          id
           {
+<<<<<<< HEAD
+            ...metrics
+            lastShown: new Date(metrics.lastShown)
+          }
+        ]));
+      }
+    } catch (error) {
+      console.warn('Failed to load banner metrics: ', error);',
+=======
             ...metrics,
-            lastShown: new Date(metrics.lastShown),
+            lastShown: new Date(metrics.lastShown),,
           },
         ]));
       }
     } catch (error) {
-      console.warn('Failed to load banner metrics:', error);
+      console.warn('Failed to load banner metrics: ', error);';,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     }
   }
 
@@ -166,7 +192,7 @@ export class BannerPriorityManager {
    */
   clearMetrics(): void {
     this.metrics.clear();
-    localStorage.removeItem('bannerMetrics');
+    localStorage.removeItem('bannerMetrics');';
   }
 }
 
@@ -178,7 +204,7 @@ export const bannerManager = new BannerPriorityManager();
 /**
  * React hook for banner optimization
  */
-export function useBannerOptimization(bannerId: string) {
+export function useBannerOptimization(bannerId: string) {,
   const recordImpression = () => bannerManager.recordImpression(bannerId);
   const recordClick = () => bannerManager.recordClick(bannerId);
   const recordConversion = () => bannerManager.recordConversion(bannerId);
@@ -187,7 +213,13 @@ export function useBannerOptimization(bannerId: string) {
     recordImpression,
     recordClick,
     recordConversion,
+<<<<<<< HEAD
     ctr: bannerManager.getCTR(bannerId),
-    conversionRate: bannerManager.getConversionRate(bannerId),
+    conversionRate: bannerManager.getConversionRate(bannerId)
+=======
+    ctr: bannerManager.getCTR(bannerId),,
+    conversionRate: bannerManager.getConversionRate(bannerId),,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   };
 }
+;

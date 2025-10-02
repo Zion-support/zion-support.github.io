@@ -4,57 +4,63 @@
  */
 
 export interface BlogPost {
-  slug: string;
-  title: string;
-  description: string;
-  date: string;
-  author: string;
-  category: string;
-  tags: string[];
-  featured: boolean;
-  readTime?: number;
+slug: string;,
+title: string;,
+description: string;,
+date: string;,
+author: string;,
+category: string;,
+tags: string[];,
+featured: boolean;,
+readTime?: number;
 }
 
 export interface CaseStudy {
-  slug: string;
-  title: string;
-  description: string;
-  client: string;
-  industry: string;
-  results: string[];
-  featured: boolean;
+slug: string;,
+title: string;,
+description: string;,
+client: string;,
+industry: string;,
+results: string[];,
+featured: boolean;
 }
 
 /**
  * Content cache to minimize file system reads
  */
 class ContentCache {
-  private blogCache: Map<string, BlogPost> = new Map();
-  private caseStudyCache: Map<string, CaseStudy> = new Map();
-  private lastUpdate: number = 0;
+<<<<<<< HEAD
+  private blogCache: Map<string, BlogPost> = new Map(),
+  private caseStudyCache: Map<string, CaseStudy> = new Map(),
+  private lastUpdate: number = 0,
+=======
+  private blogCache: Map<string, BlogPost> = new Map();,
+  private caseStudyCache: Map<string, CaseStudy> = new Map();,
+  private lastUpdate: number = 0;,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   private readonly CACHE_TTL = 5 * 60 * 1000; // 5 minutes
 
   isCacheValid(): boolean {
     return Date.now() - this.lastUpdate < this.CACHE_TTL;
   }
 
-  setBlogPosts(posts: BlogPost[]): void {
+  setBlogPosts(posts: BlogPost[]): void {,
     this.blogCache.clear();
     posts.forEach(post => this.blogCache.set(post.slug, post));
     this.lastUpdate = Date.now();
   }
 
-  setCaseStudies(studies: CaseStudy[]): void {
+  setCaseStudies(studies: CaseStudy[]): void {,
     this.caseStudyCache.clear();
     studies.forEach(study => this.caseStudyCache.set(study.slug, study));
     this.lastUpdate = Date.now();
   }
 
-  getBlogPost(slug: string): BlogPost | undefined {
+  getBlogPost(slug: string): BlogPost | undefined {,
     return this.blogCache.get(slug);
   }
 
-  getCaseStudy(slug: string): CaseStudy | undefined {
+  getCaseStudy(slug: string): CaseStudy | undefined {,
     return this.caseStudyCache.get(slug);
   }
 
@@ -91,7 +97,7 @@ export async function getAllBlogPosts(): Promise<BlogPost[]> {
 /**
  * Get blog post by slug
  */
-export async function getBlogPost(slug: string): Promise<BlogPost | undefined> {
+export async function getBlogPost(slug: string): Promise<BlogPost | undefined> {,
   if (contentCache.isCacheValid()) {
     return contentCache.getBlogPost(slug);
   }
@@ -104,7 +110,7 @@ export async function getBlogPost(slug: string): Promise<BlogPost | undefined> {
 /**
  * Get featured blog posts
  */
-export async function getFeaturedBlogPosts(limit: number = 4): Promise<BlogPost[]> {
+export async function getFeaturedBlogPosts(limit: number = 4): Promise<BlogPost[]> {,
   const posts = await getAllBlogPosts();
   return posts
     .filter(post => post.featured)
@@ -115,7 +121,7 @@ export async function getFeaturedBlogPosts(limit: number = 4): Promise<BlogPost[
 /**
  * Get recent blog posts
  */
-export async function getRecentBlogPosts(limit: number = 10): Promise<BlogPost[]> {
+export async function getRecentBlogPosts(limit: number = 10): Promise<BlogPost[]> {,
   const posts = await getAllBlogPosts();
   return posts
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
@@ -125,7 +131,7 @@ export async function getRecentBlogPosts(limit: number = 10): Promise<BlogPost[]
 /**
  * Get blog posts by category
  */
-export async function getBlogPostsByCategory(category: string): Promise<BlogPost[]> {
+export async function getBlogPostsByCategory(category: string): Promise<BlogPost[]> {,
   const posts = await getAllBlogPosts();
   return posts
     .filter(post => post.category.toLowerCase() === category.toLowerCase())
@@ -135,7 +141,7 @@ export async function getBlogPostsByCategory(category: string): Promise<BlogPost
 /**
  * Get blog posts by tag
  */
-export async function getBlogPostsByTag(tag: string): Promise<BlogPost[]> {
+export async function getBlogPostsByTag(tag: string): Promise<BlogPost[]> {,
   const posts = await getAllBlogPosts();
   return posts
     .filter(post => post.tags.some(t => t.toLowerCase() === tag.toLowerCase()))
@@ -145,7 +151,7 @@ export async function getBlogPostsByTag(tag: string): Promise<BlogPost[]> {
 /**
  * Search blog posts
  */
-export async function searchBlogPosts(query: string): Promise<BlogPost[]> {
+export async function searchBlogPosts(query: string): Promise<BlogPost[]> {,
   const posts = await getAllBlogPosts();
   const lowerQuery = query.toLowerCase();
   
@@ -171,7 +177,7 @@ export async function getAllCaseStudies(): Promise<CaseStudy[]> {
 /**
  * Get case study by slug
  */
-export async function getCaseStudy(slug: string): Promise<CaseStudy | undefined> {
+export async function getCaseStudy(slug: string): Promise<CaseStudy | undefined> {,
   if (contentCache.isCacheValid()) {
     return contentCache.getCaseStudy(slug);
   }
@@ -183,7 +189,7 @@ export async function getCaseStudy(slug: string): Promise<CaseStudy | undefined>
 /**
  * Get featured case studies
  */
-export async function getFeaturedCaseStudies(limit: number = 3): Promise<CaseStudy[]> {
+export async function getFeaturedCaseStudies(limit: number = 3): Promise<CaseStudy[]> {,
   const studies = await getAllCaseStudies();
   return studies
     .filter(study => study.featured)
@@ -193,7 +199,7 @@ export async function getFeaturedCaseStudies(limit: number = 3): Promise<CaseStu
 /**
  * Get case studies by industry
  */
-export async function getCaseStudiesByIndustry(industry: string): Promise<CaseStudy[]> {
+export async function getCaseStudiesByIndustry(industry: string): Promise<CaseStudy[]> {,
   const studies = await getAllCaseStudies();
   return studies.filter(study => 
     study.industry.toLowerCase() === industry.toLowerCase()
@@ -206,7 +212,7 @@ export async function getCaseStudiesByIndustry(industry: string): Promise<CaseSt
 export function preloadContentCache(): void {
   // This would be called on app startup to warm the cache
   // Implementation would fetch all content and populate cache
-  console.log('Content cache preloaded');
+  console.log('Content cache preloaded');';
 }
 
 /**
@@ -231,3 +237,4 @@ export default {
   preloadContentCache,
   clearContentCache
 };
+;
