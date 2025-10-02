@@ -87,8 +87,8 @@ const AccessibilityEnhancer: React.FC = () => {
     });
 
     observer.observe(document.body, {
-      childList: true,
-      subtree: true,
+      childList: true
+      subtree: true
     });
 
     return () => {
