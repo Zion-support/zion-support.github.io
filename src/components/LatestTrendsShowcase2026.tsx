@@ -1,5 +1,9 @@
+<<<<<<< HEAD
+import React from 'react';
+=======
 import React from 'react';';
 
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 const LatestTrendsShowcase2026: React.FC = () => {,
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900/20 to-purple-900/20">";
@@ -20,42 +24,72 @@ const LatestTrendsShowcase2026: React.FC = () => {,
         </div>
 
         {/* Trending Technologies Grid */}
+<<<<<<< HEAD
+        <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-6 mb-16">",
+          {/* Quantum Computing */}
+          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover: border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105 group">",
+            <div className="text-5xl mb-4 group-hover: animate-spin">⚛️</div>",
+            <h3 className="text-xl font-bold text-white mb-3">Quantum Computing</h3>
+            <p className="text-gray-400 text-sm mb-4">
+=======
         <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-6 mb-16">";,
           {/* Quantum Computing */}
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover: border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105 group">";,
             <div className="text-5xl mb-4 group-hover: animate-spin">⚛️</div>";,
             <h3 className="text-xl font-bold text-white mb-3">Quantum Computing</h3>";
             <p className="text-gray-400 text-sm mb-4">";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               Revolutionary quantum processors delivering 1000x speed improvements for complex AI computations.
             </p>
             <div className="text-cyan-400 text-sm font-semibold">+1200% Growth</div>";
           </div>
 
           {/* Neural Architecture Search */}
+<<<<<<< HEAD
+          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover: border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105 group">",
+            <div className="text-5xl mb-4 group-hover: animate-pulse">🔍</div>",
+            <h3 className="text-xl font-bold text-white mb-3">AutoML Evolution</h3>
+            <p className="text-gray-400 text-sm mb-4">
+=======
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover: border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105 group">";,
             <div className="text-5xl mb-4 group-hover: animate-pulse">🔍</div>";,
             <h3 className="text-xl font-bold text-white mb-3">AutoML Evolution</h3>";
             <p className="text-gray-400 text-sm mb-4">";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               Self-designing neural networks that automatically optimize architecture for maximum performance.
             </p>
             <div className="text-blue-400 text-sm font-semibold">+850% Efficiency</div>";
           </div>
 
           {/* Edge AI */}
+<<<<<<< HEAD
+          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover: border-green-500/50 transition-all duration-300 hover:transform hover:scale-105 group">",
+            <div className="text-5xl mb-4 group-hover: animate-bounce">📱</div>",
+            <h3 className="text-xl font-bold text-white mb-3">Edge AI Revolution</h3>
+            <p className="text-gray-400 text-sm mb-4">
+=======
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover: border-green-500/50 transition-all duration-300 hover:transform hover:scale-105 group">";,
             <div className="text-5xl mb-4 group-hover: animate-bounce">📱</div>";,
             <h3 className="text-xl font-bold text-white mb-3">Edge AI Revolution</h3>";
             <p className="text-gray-400 text-sm mb-4">";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               Ultra-fast AI processing at the edge with 99.9% accuracy and sub-millisecond response times.
             </p>
             <div className="text-green-400 text-sm font-semibold">+2000% Speed</div>";
           </div>
 
           {/* Explainable AI */}
+<<<<<<< HEAD
+          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover: border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105 group">",
+            <div className="text-5xl mb-4 group-hover: animate-pulse">🔮</div>",
+            <h3 className="text-xl font-bold text-white mb-3">Explainable AI</h3>
+            <p className="text-gray-400 text-sm mb-4">
+=======
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover: border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105 group">";,
             <div className="text-5xl mb-4 group-hover: animate-pulse">🔮</div>";,
             <h3 className="text-xl font-bold text-white mb-3">Explainable AI</h3>";
             <p className="text-gray-400 text-sm mb-4">";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               Transparent AI systems that explain their decisions with human-readable reasoning.
             </p>
             <div className="text-purple-400 text-sm font-semibold">+95% Trust</div>";
@@ -63,8 +97,13 @@ const LatestTrendsShowcase2026: React.FC = () => {,
         </div>
 
         {/* Featured Innovation */}
+<<<<<<< HEAD
+        <div className="bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-2xl p-8 border border-blue-500/20 mb-16">
+          <div className="grid md: grid-cols-2 gap-8 items-center">",
+=======
         <div className="bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-2xl p-8 border border-blue-500/20 mb-16">";
           <div className="grid md: grid-cols-2 gap-8 items-center">";,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             <div>
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-500/30 mb-4">";
                 <span className="text-yellow-400 font-bold text-sm">🏆 FEATURED INNOVATION</span>";
@@ -72,8 +111,13 @@ const LatestTrendsShowcase2026: React.FC = () => {,
               <h3 className="text-4xl font-extrabold mb-4 bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">";
                 Meta-Cognitive AI Framework
               </h3>
+<<<<<<< HEAD
+              <p className="text-xl text-gray-300 mb-6 leading-relaxed">
+                The world's first AI system that thinks about thinking. Our Meta-Cognitive AI can reason about its own reasoning processes
+=======
               <p className="text-xl text-gray-300 mb-6 leading-relaxed">";
                 The world's first AI system that thinks about thinking. Our Meta-Cognitive AI can reason about its own reasoning processes, ';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 identify knowledge gaps, and autonomously improve its decision-making capabilities.
               </p>
               <div className="space-y-3 mb-6">";
@@ -110,11 +154,19 @@ const LatestTrendsShowcase2026: React.FC = () => {,
         </div>
 
         {/* Industry Impact */}
+<<<<<<< HEAD
+        <div className="grid md: grid-cols-3 gap-8 mb-16">",
+          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 text-center">
+            <div className="text-5xl mb-4">🏭</div>
+            <h3 className="text-2xl font-bold text-white mb-4">Manufacturing</h3>
+            <div className="text-4xl font-extrabold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-2">
+=======
         <div className="grid md: grid-cols-3 gap-8 mb-16">";,
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 text-center">";
             <div className="text-5xl mb-4">🏭</div>";
             <h3 className="text-2xl font-bold text-white mb-4">Manufacturing</h3>";
             <div className="text-4xl font-extrabold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-2">";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               78%
             </div>
             <div className="text-gray-400 mb-4">Efficiency Increase</div>";
@@ -156,7 +208,11 @@ const LatestTrendsShowcase2026: React.FC = () => {,
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">";
             Join the elite group of enterprises already transforming their operations with our breakthrough AI technologies.
           </p>
+<<<<<<< HEAD
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+=======
           <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             <a title="Internal link" 
               href="/contact" 
               className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1",

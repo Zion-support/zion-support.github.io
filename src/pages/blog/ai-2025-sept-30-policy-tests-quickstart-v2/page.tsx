@@ -2,9 +2,15 @@
 
 const Page = () => {
   return (
+<<<<<<< HEAD
+    <div className="container mx-auto px-6 py-12 text-white">
+      <h1 className="text-3xl font-bold mb-4">GenAI 2025: Policy Tests Quickstart v2</h1>",
+      <p className="text-zion-slate-light mb-6">
+=======
     <div className="container mx-auto px-6 py-12 text-white">";
       <h1 className="text-3xl font-bold mb-4">GenAI 2025: Policy Tests Quickstart v2</h1>";,
       <p className="text-zion-slate-light mb-6">";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
         Lightweight CI policy tests wired to KPIs so you can ship faster without regressions. v2 adds
         budgetaware gates, eval scorecards, and rollback hooks.
       </p>

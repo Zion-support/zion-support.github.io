@@ -15,11 +15,19 @@ imageUrl?: string;
 
 export const newJanuary2026BlogPosts: BlogPost[] = [,
   {
+<<<<<<< HEAD
+    id: "ai-2026-january-hyperautomation-platform",
+    title: "⚙️ AI Hyperautomation Platform 2026: End-to-End Business Automation",
+    excerpt: "Complete business process automation achieving 95% automation rates with 10x efficiency improvements and $2.8B success stories.",
+    content: `,
+# AI Hyperautomation Platform 2026: End-to-End Business Automation
+=======
     id: "ai-2026-january-hyperautomation-platform",";,
     title: "⚙️ AI Hyperautomation Platform 2026: End-to-End Business Automation",";,
     excerpt: "Complete business process automation achieving 95% automation rates with 10x efficiency improvements and $2.8B success stories.",";,
     content: `,`;
 # AI Hyperautomation Platform 2026: End-to-End Business Automation,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 
 The future of business operations is here. Our AI Hyperautomation Platform represents the most comprehensive automation solution ever developed, achieving unprecedented levels of business process automation across every industry vertical.
 
@@ -134,6 +142,16 @@ Ready to revolutionize your business operations? Our hyperautomation specialists
 3. **Full Deployment**: Enterprise-wide automation rollout
 4. **Continuous Optimization**: Ongoing improvement and enhancement
 
+<<<<<<< HEAD
+The age of hyperautomation has begun. The question isn't whether to automate - it's how quickly you can transform your business.;
+*"We're not just automating tasks; we're transforming entire business ecosystems."* - Sarah Johnson, Chief Automation Officer";
+    `,`;
+    author: "Sarah Johnson, Chief Automation Officer",",
+    publishedAt: "2026-01-30",",
+    readTime: 14,,
+    category: "Business Automation",",
+    tags: ["hyperautomation", "AI", "business process", "efficiency", "transformation"],",
+=======
 The age of hyperautomation has begun. The question isn't whether to automate - it's how quickly you can transform your business.';
 
 *"We're not just automating tasks; we're transforming entire business ecosystems."* - Sarah Johnson, Chief Automation Officer";
@@ -143,24 +161,39 @@ The age of hyperautomation has begun. The question isn't whether to automate - i
     readTime: 14,,
     category: "Business Automation",";,
     tags: ["hyperautomation", "AI", "business process", "efficiency", "transformation"],";,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     featured: true,,
     imageUrl: "/images/hyperautomation-platform-2026.jpg",
   },
   {
+<<<<<<< HEAD
+    id: "ai-2026-january-quantum-security-breakthrough",
+    title: "🔐 Quantum-Safe Security 2026: Unbreakable Enterprise Protection",
+    excerpt: "Quantum-resistant security systems protecting $2.8B in assets with 99.99% threat prevention and zero security breaches across enterprise networks.",
+    content: `,
+# Quantum-Safe Security 2026: Unbreakable Enterprise Protection
+=======
     id: "ai-2026-january-quantum-security-breakthrough",";,
     title: "🔐 Quantum-Safe Security 2026: Unbreakable Enterprise Protection",";,
     excerpt: "Quantum-resistant security systems protecting $2.8B in assets with 99.99% threat prevention and zero security breaches across enterprise networks.",";,
     content: `,`;
 # Quantum-Safe Security 2026: Unbreakable Enterprise Protection,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 
 As quantum computing advances, traditional encryption methods become vulnerable. Our Quantum-Safe Security platform provides the ultimate protection against both current and future threats, ensuring your enterprise remains secure in the quantum era.
 
 ## The Quantum Threat
 
 Quantum computers will eventually break current encryption standards: ### Current Vulnerabilities,
+<<<<<<< HEAD
+- **RSA Encryption**: Vulnerable to Shor's algorithm;
+- **Elliptic Curve Cryptography**: Quantum attack susceptible
+- **Symmetric Key Systems**: Grover's algorithm reduces security;
+=======
 - **RSA Encryption**: Vulnerable to Shor's algorithm';
 - **Elliptic Curve Cryptography**: Quantum attack susceptible
 - **Symmetric Key Systems**: Grover's algorithm reduces security';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 - **Digital Signatures**: Quantum forgeable signatures
 
 ### Our Quantum-Safe Solution
@@ -283,6 +316,16 @@ Ready to secure your enterprise for the quantum future? Our quantum security spe
 3. **Custom Security Design**: Tailored protection strategy
 4. **Implementation Planning**: Phased deployment roadmap
 
+<<<<<<< HEAD
+The quantum era is coming. The question isn't whether your security will be compromised - it's whether you'll be ready.;
+*"In the quantum era, security isn't just about protecting today's data; it's about securing tomorrow's secrets."* - Dr. Michael Chen, Chief Security Officer";
+    `,`;
+    author: "Dr. Michael Chen, Chief Security Officer",",
+    publishedAt: "2026-01-28",",
+    readTime: 16,,
+    category: "Cybersecurity",",
+    tags: ["quantum security", "encryption", "cybersecurity", "protection", "compliance"],",
+=======
 The quantum era is coming. The question isn't whether your security will be compromised - it's whether you'll be ready.';
 
 *"In the quantum era, security isn't just about protecting today's data; it's about securing tomorrow's secrets."* - Dr. Michael Chen, Chief Security Officer";
@@ -292,15 +335,24 @@ The quantum era is coming. The question isn't whether your security will be comp
     readTime: 16,,
     category: "Cybersecurity",";,
     tags: ["quantum security", "encryption", "cybersecurity", "protection", "compliance"],";,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     featured: true,,
     imageUrl: "/images/quantum-security-2026.jpg",
   },
   {
+<<<<<<< HEAD
+    id: "ai-2026-january-blockchain-integration",
+    title: "⛓️ Blockchain-AI Integration 2026: Trustless Intelligence Revolution",
+    excerpt: "Revolutionary integration of blockchain and AI creating trustless intelligence systems with decentralized governance and $1.2B enterprise value creation.",
+    content: `,
+# Blockchain-AI Integration 2026: Trustless Intelligence Revolution
+=======
     id: "ai-2026-january-blockchain-integration",";,
     title: "⛓️ Blockchain-AI Integration 2026: Trustless Intelligence Revolution",";,
     excerpt: "Revolutionary integration of blockchain and AI creating trustless intelligence systems with decentralized governance and $1.2B enterprise value creation.",";,
     content: `,`;
 # Blockchain-AI Integration 2026: Trustless Intelligence Revolution,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 
 The convergence of blockchain and artificial intelligence represents the most significant technological advancement since the internet. Our Blockchain-AI Integration platform creates trustless intelligence systems that operate with complete transparency, security, and decentralized governance.
 
@@ -457,11 +509,19 @@ The future is decentralized. The future is intelligent. The future is trustless.
 
 *"We're not just integrating blockchain and AI; we're creating a new paradigm of trustless intelligence."* - Dr. Sarah Rodriguez, Chief Blockchain Architect";
     `,`;
+<<<<<<< HEAD
+    author: "Dr. Sarah Rodriguez, Chief Blockchain Architect",",
+    publishedAt: "2026-01-26",",
+    readTime: 17,,
+    category: "Blockchain Technology",",
+    tags: ["blockchain", "AI integration", "decentralized", "trustless", "innovation"],",
+=======
     author: "Dr. Sarah Rodriguez, Chief Blockchain Architect",";,
     publishedAt: "2026-01-26",";,
     readTime: 17,,
     category: "Blockchain Technology",";,
     tags: ["blockchain", "AI integration", "decentralized", "trustless", "innovation"],";,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     featured: true,,
     imageUrl: "/images/blockchain-ai-integration-2026.jpg",
   }

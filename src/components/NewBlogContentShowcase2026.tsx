@@ -1,9 +1,120 @@
+<<<<<<< HEAD
+import React from 'react';
+=======
 import React from 'react';';
 
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 const NewBlogContentShowcase2026: React.FC = () => {,
   const blogPosts = [
     {
       id: 1,,
+<<<<<<< HEAD
+      title: 'The Complete Guide to AI Revolution 2026: From Concept to Implementation',',
+      slug: 'complete-guide-ai-revolution-2026',',
+      excerpt: 'Comprehensive guide covering all aspects of the AI revolution in 2026. Learn about meta-cognitive AI, quantum-neural networks, and autonomous operations that are transforming enterprises worldwide.',',
+      category: 'AI Revolution',',
+      date: '2026-01-20',',
+      readTime: '25 min',',
+      author: 'Dr. Sarah Chen',',
+      views: '125K',',
+      rating: 4.9,,
+      trending: true,,
+      featured: true,,
+      icon: <Brain className="w-6 h-6/>,",
+      gradient: 'from-blue-500 to-purple-500',',
+      badge: 'FEATURED',',
+      tags: ['AI', 'Revolution', 'Enterprise', 'Guide']',
+    },
+    {
+      id: 2,,
+      title: 'Quantum Computing Breakthroughs: The Future of AI Processing',',
+      slug: 'quantum-computing-breakthroughs-ai-processing',',
+      excerpt: 'Explore the latest quantum computing breakthroughs that are revolutionizing AI processing. Discover how quantum-enhanced neural networks achieve 10,000x processing speed improvements.',',
+      category: 'Quantum Computing',',
+      date: '2026-01-19',',
+      readTime: '18 min',',
+      author: 'Prof. Michael Rodriguez',',
+      views: '98K',',
+      rating: 4.8,,
+      trending: true,,
+      featured: false,,
+      icon: <Zap className="w-6 h-6/>,",
+      gradient: 'from-cyan-500 to-blue-500',',
+      badge: 'TRENDING',',
+      tags: ['Quantum', 'Computing', 'AI', 'Breakthrough']',
+    },
+    {
+      id: 3,,
+      title: 'Enterprise AI Implementation: A Step-by-Step Success Guide',',
+      slug: 'enterprise-ai-implementation-success-guide',',
+      excerpt: 'Learn how to successfully implement AI in your enterprise. This comprehensive guide covers strategy, planning, execution, and optimization for maximum ROI.',',
+      category: 'Enterprise AI',',
+      date: '2026-01-18',',
+      readTime: '22 min',',
+      author: 'Jennifer Liu',',
+      views: '87K',',
+      rating: 4.9,,
+      trending: true,,
+      featured: true,,
+      icon: <Award className="w-6 h-6/>,",
+      gradient: 'from-green-500 to-emerald-500',',
+      badge: 'POPULAR',',
+      tags: ['Enterprise', 'Implementation', 'AI', 'Success']',
+    },
+    {
+      id: 4,,
+      title: 'Self-Evolving AI Systems: The Next Frontier of Artificial Intelligence',',
+      slug: 'self-evolving-ai-systems-next-frontier',',
+      excerpt: 'Discover how self-evolving AI systems are reshaping the landscape of artificial intelligence. Learn about autonomous learning, self-modification, and continuous improvement.',',
+      category: 'AI Innovation',',
+      date: '2026-01-17',',
+      readTime: '20 min',',
+      author: 'Dr. Alex Thompson',',
+      views: '76K',',
+      rating: 4.7,,
+      trending: false,,
+      featured: false,,
+      icon: <Sparkles className="w-6 h-6/>,",
+      gradient: 'from-purple-500 to-pink-500',',
+      badge: 'INNOVATION',',
+      tags: ['Self-Evolving', 'AI', 'Innovation', 'Future']',
+    },
+    {
+      id: 5,,
+      title: 'Predictive Analytics Revolution: Forecasting the Future with 99.9% Accuracy',',
+      slug: 'predictive-analytics-revolution-forecasting-future',',
+      excerpt: 'Explore the revolutionary advances in predictive analytics. Learn how AI-powered forecasting achieves 99.9% accuracy in predicting business trends and market dynamics.',',
+      category: 'Predictive Analytics',',
+      date: '2026-01-16',',
+      readTime: '16 min',',
+      author: 'Dr. Maria Santos',',
+      views: '92K',',
+      rating: 4.8,,
+      trending: true,,
+      featured: false,,
+      icon: <TrendingUp className="w-6 h-6/>,",
+      gradient: 'from-orange-500 to-red-500',',
+      badge: 'ANALYTICS',',
+      tags: ['Predictive', 'Analytics', 'Forecasting', 'AI']',
+    },
+    {
+      id: 6,,
+      title: 'AI Ethics and Governance: Building Responsible AI Systems',',
+      slug: 'ai-ethics-governance-responsible-ai-systems',',
+      excerpt: 'Learn about the critical importance of AI ethics and governance in building responsible AI systems. Discover frameworks for ethical AI deployment and compliance.',',
+      category: 'AI Ethics',',
+      date: '2026-01-15',',
+      readTime: '19 min',',
+      author: 'Prof. David Kim',',
+      views: '68K',',
+      rating: 4.9,,
+      trending: false,,
+      featured: true,,
+      icon: <Award className="w-6 h-6/>,",
+      gradient: 'from-indigo-500 to-purple-500',',
+      badge: 'ETHICS',',
+      tags: ['AI Ethics', 'Governance', 'Responsible AI', 'Compliance']',
+=======
       title: 'The Complete Guide to AI Revolution 2026: From Concept to Implementation',';,
       slug: 'complete-guide-ai-revolution-2026',';,
       excerpt: 'Comprehensive guide covering all aspects of the AI revolution in 2026. Learn about meta-cognitive AI, quantum-neural networks, and autonomous operations that are transforming enterprises worldwide.',';,
@@ -109,27 +220,54 @@ const NewBlogContentShowcase2026: React.FC = () => {,
       gradient: 'from-indigo-500 to-purple-500',';,
       badge: 'ETHICS',';,
       tags: ['AI Ethics', 'Governance', 'Responsible AI', 'Compliance']';,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     }
   ];
 
   const blogStats = [
+<<<<<<< HEAD
+    { value: '500+', label: 'Published Articles', icon: <Award className="w-6 h-6" /> }
+    { value: '2M+', label: 'Monthly Readers', icon: <Users className="w-6 h-6" /> }
+    { value: '4.8', label: 'Average Rating', icon: <Star className="w-6 h-6" /> }
+    { value: '150+', label: 'Expert Authors', icon: <Brain className="w-6 h-6" /> }
+=======
     { value: '500+', label: 'Published Articles', icon: <Award className="w-6 h-6" /> },";
     { value: '2M+', label: 'Monthly Readers', icon: <Users className="w-6 h-6" /> },";
     { value: '4.8', label: 'Average Rating', icon: <Star className="w-6 h-6" /> },";
     { value: '150+', label: 'Expert Authors', icon: <Brain className="w-6 h-6" /> }";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   ];
 
   return (
     <div className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 relative overflow-hidden">";
       {/* Animated background effects */}
+<<<<<<< HEAD
+      <div className="absolute inset-0 overflow-hidden opacity-20">
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>;
+        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>;
+=======
       <div className="absolute inset-0 overflow-hidden opacity-20">";
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>";
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>';
         <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       </div>
 
       <div className="container mx-auto px-6 relative z-10">";
         {/* Header Section */}
+<<<<<<< HEAD
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-8 animate-fade-in">
+            <Sparkles className="w-5 h-5 text-blue-400 animate-pulse/>
+            <span className="text-blue-400 font-bold text-sm tracking-wider uppercase">
+              📚 NEW BLOG CONTENT • January 2026
+            </span>
+            <Sparkles className="w-5 h-5 text-purple-400 animate-pulse/>
+          </div>
+
+          <h2 className="text-5xl md: text-6xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent animate-fade-in">",
+=======
         <div className="text-center mb-16">";
           <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-8 animate-fade-in">";
             <Sparkles className="w-5 h-5 text-blue-400 animate-pulse" />";
@@ -140,6 +278,7 @@ const NewBlogContentShowcase2026: React.FC = () => {,
           </div>
 
           <h2 className="text-5xl md: text-6xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent animate-fade-in">";,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             New Blog Content Showcase 2026
           </h2>
           
@@ -149,7 +288,11 @@ const NewBlogContentShowcase2026: React.FC = () => {,
           </p>
 
           {/* Blog Stats */}
+<<<<<<< HEAD
+          <div className="grid grid-cols-2 md: grid-cols-4 gap-6 max-w-4xl mx-auto">",
+=======
           <div className="grid grid-cols-2 md: grid-cols-4 gap-6 max-w-4xl mx-auto">";,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             {blogStats.map((stat, index) => (
               <div key={index} className="text-center">";
                 <div className="text-blue-400 mb-2 flex justify-center">";
@@ -167,7 +310,11 @@ const NewBlogContentShowcase2026: React.FC = () => {,
         </div>
 
         {/* Featured Blog Posts */}
+<<<<<<< HEAD
+        <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">",
+=======
         <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">";,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           {blogPosts.map((post, index) => (
             <div 
               key={post.id}
@@ -185,8 +332,13 @@ const NewBlogContentShowcase2026: React.FC = () => {,
                   </div>
                   <div className="flex flex-col gap-2">";
                     {post.trending && (
+<<<<<<< HEAD
+                      <div className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold shadow-lg">
+                        <TrendingUp className="w-3 h-3/>
+=======
                       <div className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold shadow-lg">";
                         <TrendingUp className="w-3 h-3" />";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                         <span>TRENDING</span>
                       </div>
                     )}
@@ -204,7 +356,11 @@ const NewBlogContentShowcase2026: React.FC = () => {,
                 </div>
 
                 {/* Title */}
+<<<<<<< HEAD
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-blue-400 transition-colors duration-300 leading-tight">",
+=======
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-blue-400 transition-colors duration-300 leading-tight">";,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   {post.title}
                 </h3>
 
@@ -225,6 +381,15 @@ const NewBlogContentShowcase2026: React.FC = () => {,
                 </div>
 
                 {/* Meta Info */}
+<<<<<<< HEAD
+                <div className="flex items-center justify-between text-sm text-gray-500 mb-6 pb-6 border-b border-white/10">
+                  <span className="flex items-center gap-2">
+                    <Clock className="w-4 h-4 text-blue-400/>
+                    {post.readTime}
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <Eye className="w-4 h-4 text-blue-400/>
+=======
                 <div className="flex items-center justify-between text-sm text-gray-500 mb-6 pb-6 border-b border-white/10">";
                   <span className="flex items-center gap-2">";
                     <Clock className="w-4 h-4 text-blue-400" />";
@@ -232,6 +397,7 @@ const NewBlogContentShowcase2026: React.FC = () => {,
                   </span>
                   <span className="flex items-center gap-1">";
                     <Eye className="w-4 h-4 text-blue-400" />";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     {post.views}
                   </span>
                 </div>
@@ -241,9 +407,15 @@ const NewBlogContentShowcase2026: React.FC = () => {,
                   <div className="text-gray-400 text-sm">";
                     By {post.author}
                   </div>
+<<<<<<< HEAD
+                  <div className="flex items-center gap-1">
+                    <Star className="w-4 h-4 text-yellow-400 fill-current/>
+                    <span className="text-yellow-400 font-bold text-sm">{post.rating}</span>
+=======
                   <div className="flex items-center gap-1">";
                     <Star className="w-4 h-4 text-yellow-400 fill-current" />";
                     <span className="text-yellow-400 font-bold text-sm">{post.rating}</span>";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   </div>
                 </div>
 
@@ -253,7 +425,11 @@ const NewBlogContentShowcase2026: React.FC = () => {,
                   className={`group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r ${post.gradient} hover:opacity-90 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1`}`;
                 >
                   <span>Read Article</span>
+<<<<<<< HEAD
+                  <ArrowRight className="w-4 h-4 group-hover/btn: translate-x-1 transition-transform duration-300/>",
+=======
                   <ArrowRight className="w-4 h-4 group-hover/btn: translate-x-1 transition-transform duration-300" />";,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </a>
               </div>
             </div>
@@ -261,11 +437,19 @@ const NewBlogContentShowcase2026: React.FC = () => {,
         </div>
 
         {/* Newsletter Signup */}
+<<<<<<< HEAD
+        <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-3xl p-8 md: p-12 border border-blue-500/20 mb-16">",
+          <div className="text-center">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-500/30 mb-6">
+              <Star className="w-5 h-5 text-yellow-400 fill-current/>
+              <span className="text-yellow-400 font-bold text-sm tracking-wider uppercase">
+=======
         <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-3xl p-8 md: p-12 border border-blue-500/20 mb-16">";,
           <div className="text-center">";
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-500/30 mb-6">";
               <Star className="w-5 h-5 text-yellow-400 fill-current" />";
               <span className="text-yellow-400 font-bold text-sm tracking-wider uppercase">";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 PREMIUM CONTENT
               </span>
             </div>
@@ -273,20 +457,35 @@ const NewBlogContentShowcase2026: React.FC = () => {,
             <h3 className="text-4xl font-extrabold text-white mb-4">";
               Get Exclusive Blog Updates
             </h3>
+<<<<<<< HEAD
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Subscribe to our newsletter and get early access to new articles, exclusive insights
+              and premium content from industry experts. Join 100K+ subscribers.
+            </p>
+            
+            <div className="flex flex-col sm: flex-row gap-4 justify-center max-w-md mx-auto">",
+=======
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">";
               Subscribe to our newsletter and get early access to new articles, exclusive insights, 
               and premium content from industry experts. Join 100K+ subscribers.
             </p>
             
             <div className="flex flex-col sm: flex-row gap-4 justify-center max-w-md mx-auto">";,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               <input
                 type="email"
                 placeholder="Enter your email"
                 className="flex-1 px-6 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus: outline-none focus:border-blue-500 focus:bg-white/20 transition-all duration-300",
               />
+<<<<<<< HEAD
+              <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover: from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 flex items-center justify-center gap-2">",
+                <span>Subscribe</span>
+                <ArrowRight className="w-5 h-5/>
+=======
               <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover: from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 flex items-center justify-center gap-2">";,
                 <span>Subscribe</span>
                 <ArrowRight className="w-5 h-5" />";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </button>
             </div>
             <p className="text-xs text-gray-500 mt-4">";
@@ -306,12 +505,20 @@ const NewBlogContentShowcase2026: React.FC = () => {,
                 Discover 500+ articles covering AI, machine learning, quantum computing, and enterprise technology. 
                 Find insights that matter to your business and stay ahead of the competition.
               </p>
+<<<<<<< HEAD
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+=======
               <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 <a title="Internal link"
                   href="/blog"
                   className="bg-gradient-to-r from-blue-500 to-purple-600 hover: from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 flex items-center justify-center gap-2",
                 >
+<<<<<<< HEAD
+                  <Sparkles className="w-5 h-5/>
+=======
                   <Sparkles className="w-5 h-5" />";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   <span>Browse All Articles</span>
                 </a>
                 <a title="Internal link"
@@ -319,7 +526,11 @@ const NewBlogContentShowcase2026: React.FC = () => {,
                   className="border-2 border-blue-500 text-blue-400 hover: bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2",
                 >
                   <span>Request Custom Content</span>
+<<<<<<< HEAD
+                  <ArrowRight className="w-5 h-5/>
+=======
                   <ArrowRight className="w-5 h-5" />";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </a>
               </div>
             </div>

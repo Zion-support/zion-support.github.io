@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useCallback } from 'react';';
 import {
 
-} from 'framer-motion';';
-
+<<<<<<< HEAD
+} from 'framer-motion';
 interface PerformanceMetrics {
 fcp: number;,
 lcp: number;,
@@ -16,7 +16,7 @@ loadTime: number;
 
 interface PerformanceAlert {
 id: string;,
-type: 'warning' | 'error' | 'info';';,
+type: 'warning' | 'error' | 'info';,
 message: string;,
 timestamp: number;,
 metric: string;,
@@ -26,6 +26,16 @@ threshold: number;
 
 const AdvancedPerformanceMonitor: React.FC = () => {,
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
+<<<<<<< HEAD
+    fcp: 0,
+    lcp: 0,
+    fid: 0,
+    cls: 0,
+    ttfb: 0,
+    inp: 0,
+    bundleSize: 0,
+    loadTime: 0
+=======
     fcp: 0,,
     lcp: 0,,
     fid: 0,,
@@ -34,6 +44,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {,
     inp: 0,,
     bundleSize: 0,,
     loadTime: 0,,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   });
 
   const [alerts, setAlerts] = useState<PerformanceAlert[]>([]);
@@ -54,19 +65,33 @@ const AdvancedPerformanceMonitor: React.FC = () => {,
 
   const getMetricStatus = useCallback((metric: string, value: number) => {,
     const threshold = thresholds[metric as keyof typeof thresholds];
+<<<<<<< HEAD
+    if (!threshold) return 'unknown';
+    if (value <= threshold.good) return 'good';
+    if (value <= threshold.poor) return 'needs-improvement';
+    return 'poor';
+=======
     if (!threshold) return 'unknown';';
     
     if (value <= threshold.good) return 'good';';
     if (value <= threshold.poor) return 'needs-improvement';';
     return 'poor';';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   }, []);
 
   const getMetricColor = (status: string) => {,
 switch (status) {
+<<<<<<< HEAD
+case 'good': return 'text-green-600 bg-green-100';
+case 'needs-improvement': return 'text-yellow-600 bg-yellow-100';
+case 'poor': return 'text-red-600 bg-red-100';
+default: return 'text-gray-600 bg-gray-100';
+=======
 case 'good': return 'text-green-600 bg-green-100';';
 case 'needs-improvement': return 'text-yellow-600 bg-yellow-100';';
 case 'poor': return 'text-red-600 bg-red-100';';
 default: return 'text-gray-600 bg-gray-100';';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 };
   };
 
@@ -98,8 +123,12 @@ default: return 'text-gray-600 bg-gray-100';';
       const loadTime = navigation ? navigation.loadEventEnd - navigation.fetchStart : 0;
       
       // Estimate bundle size (simulated)
+<<<<<<< HEAD
+      const bundleSize = document.querySelectorAll('script').length * 50000;
+=======
       const bundleSize = document.querySelectorAll('script').length * 50000;';
 
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       const newMetrics: PerformanceMetrics = {,
         fcp: vitals.fcp || 0,,
         lcp: vitals.lcp || 0,,
@@ -115,6 +144,15 @@ default: return 'text-gray-600 bg-gray-100';';
       setHistory(prev => [...prev.slice(-9), newMetrics]);
 
       // Check for alerts
+<<<<<<< HEAD
+      const newAlerts: PerformanceAlert[] = [],
+      Object.entries(newMetrics).forEach(([key, value]) => {
+        const status = getMetricStatus(key, value);
+        if (status === 'poor') {;
+          newAlerts.push({
+            id: `${key}-${Date.now()}`,`;
+            type: 'error',',
+=======
       const newAlerts: PerformanceAlert[] = [];,
       Object.entries(newMetrics).forEach(([key, value]) => {
         const status = getMetricStatus(key, value);
@@ -122,21 +160,35 @@ default: return 'text-gray-600 bg-gray-100';';
           newAlerts.push({
             id: `${key}-${Date.now()}`,`;
             type: 'error',';,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             message: `${key.toUpperCase()} is ${status}: ${value}`,`;
             timestamp: Date.now(),,
             metric: key,,
             value,
+<<<<<<< HEAD
+            threshold: thresholds[key as keyof typeof thresholds].poor
+          });
+        } else if (status === 'needs-improvement') {;
+          newAlerts.push({
+            id: `${key}-${Date.now()}`,`;
+            type: 'warning',',
+=======
             threshold: thresholds[key as keyof typeof thresholds].poor,,
           });
         } else if (status === 'needs-improvement') {';
           newAlerts.push({
             id: `${key}-${Date.now()}`,`;
             type: 'warning',';,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             message: `${key.toUpperCase()} needs improvement: ${value}`,`;
             timestamp: Date.now(),,
             metric: key,,
             value,
+<<<<<<< HEAD
+            threshold: thresholds[key as keyof typeof thresholds].poor
+=======
             threshold: thresholds[key as keyof typeof thresholds].poor,,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           });
         }
       });
@@ -146,7 +198,11 @@ default: return 'text-gray-600 bg-gray-100';';
       }
 
     } catch (error) {
+<<<<<<< HEAD
+      console.error('Error collecting performance metrics: ', error);',
+=======
       console.error('Error collecting performance metrics: ', error);';,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     }
   }, [getMetricStatus]);
 
@@ -160,6 +216,22 @@ default: return 'text-gray-600 bg-gray-100';';
 
   const formatValue = (metric: string, value: number) => {,
 switch (metric) {
+<<<<<<< HEAD
+case 'cls':
+return value.toFixed(3);
+case 'bundleSize':
+return `${(value / 1024).toFixed(1)
+} KB`;
+      case 'loadTime':
+      case 'fcp':
+      case 'lcp':
+      case 'fid':
+      case 'ttfb':
+      case 'inp':
+        return `${value}ms`;
+      default:
+        return value.toString();
+=======
 case 'cls':';
 return value.toFixed(3);
 case 'bundleSize':';
@@ -173,6 +245,7 @@ return `${(value / 1024).toFixed(1)`;
       case 'inp':';
         return `${value}ms`;`;
       default: return value.toString();,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     }
   };
 
@@ -185,7 +258,11 @@ return `${(value / 1024).toFixed(1)`;
       metrics,
       history,
       alerts,
+<<<<<<< HEAD
+      timestamp: new Date().toISOString()
+=======
       timestamp: new Date().toISOString(),,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     };
     
     const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });';
@@ -207,11 +284,19 @@ return `${(value / 1024).toFixed(1)`;
             className={
 `px-4 py-2 rounded-lg font-medium transition-colors ${`;
 isMonitoring
+<<<<<<< HEAD
+? 'bg-red-600 text-white hover:bg-red-700'
+: 'bg-green-600 text-white hover:bg-green-700'
+}`}`;
+          >
+            {isMonitoring ? 'Stop Monitoring' : 'Start Monitoring'};
+=======
 ? 'bg-red-600 text-white hover: bg-red-700',';,
 : 'bg-green-600 text-white hover:bg-green-700'
 }`}`;
           >
             {isMonitoring ? 'Stop Monitoring' : 'Start Monitoring'}';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           </button>
           <button
             onClick={collectMetrics}
@@ -252,7 +337,11 @@ isMonitoring
 `p-3 rounded-lg border-l-4 ${`;
 alert.type === 'error'
 ? 'bg-red-50 border-red-400 text-red-800'
+<<<<<<< HEAD
+: alert.type === 'warning'
+=======
 : alert.type === 'warning',';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 ? 'bg-yellow-50 border-yellow-400 text-yellow-800'
 : 'bg-blue-50 border-blue-400 text-blue-800'
 }`}`;
@@ -279,6 +368,17 @@ alert.type === 'error'
       )}
 
       {/* Metrics Grid */}
+<<<<<<< HEAD
+      <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-4 mb-6">",
+        {Object.entries(metrics).map(([key, value]) => {
+          const status = getMetricStatus(key, value);
+          return (
+            <div key={key} className="bg-gray-50 rounded-lg p-4">
+              <div className="flex justify-between items-center mb-2">
+                <h4 className="font-semibold text-gray-900 uppercase text-sm">{key}</h4>
+                <span className={`px-2 py-1 rounded-full text-xs font-medium ${getMetricColor(status)}`}>`;
+                  {status.replace('-', ' ')};
+=======
       <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-4 mb-6">";,
         {Object.entries(metrics).map(([key, value]) => {
           const status = getMetricStatus(key, value);
@@ -288,6 +388,7 @@ alert.type === 'error'
                 <h4 className="font-semibold text-gray-900 uppercase text-sm">{key}</h4>";
                 <span className={`px-2 py-1 rounded-full text-xs font-medium ${getMetricColor(status)}`}>`;
                   {status.replace('-', ' ')}';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </span>
               </div>
               <p className="text-2xl font-bold text-gray-900">";
@@ -300,16 +401,27 @@ alert.type === 'error'
 `h-2 rounded-full transition-all duration-300 ${`;
 status === 'good'
 ? 'bg-green-500'
+<<<<<<< HEAD
+: status === 'needs-improvement'
+=======
 : status === 'needs-improvement',';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 ? 'bg-yellow-500'
 : 'bg-red-500'
 }`}`;
                     style={{
+<<<<<<< HEAD
+                      width: `${Math.min(,
+                        (value / (thresholds[key as keyof typeof thresholds]?.poor || 1)) * 100
+                        100
+                      )}%`}}
+=======
                       width: `${Math.min(,`;
                         (value / (thresholds[key as keyof typeof thresholds]?.poor || 1)) * 100,
                         100
                       )}%`,`;
                     }}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   />
                 </div>
               </div>
@@ -328,8 +440,13 @@ status === 'good'
                 <div
                   className="bg-blue-500 w-full rounded-t"
                   style={{
+<<<<<<< HEAD
+                    height: `${(entry.lcp / 4000) * 200}px`,
+                    minHeight: '4px'
+=======
                     height: `${(entry.lcp / 4000) * 200}px`,`;
                     minHeight: '4px',';,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   }}
                   title={`LCP: ${entry.lcp}ms`}`;
                 />
@@ -349,22 +466,38 @@ status === 'good'
         <ul className="space-y-1 text-sm text-blue-800">";
           {
 metrics.lcp > thresholds.lcp.poor && (
+<<<<<<< HEAD
+<li>• Optimize Largest Contentful Paint: Consider image optimization and critical CSS</li>
+=======
 <li>• Optimize Largest Contentful Paint: Consider image optimization and critical CSS</li>,,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 )
 },
           {
 metrics.fcp > thresholds.fcp.poor && (
+<<<<<<< HEAD
+<li>• Improve First Contentful Paint: Reduce render-blocking resources</li>
+=======
 <li>• Improve First Contentful Paint: Reduce render-blocking resources</li>,,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 )
 },
           {
 metrics.cls > thresholds.cls.poor && (
+<<<<<<< HEAD
+<li>• Reduce Cumulative Layout Shift: Add dimensions to images and ads</li>
+=======
 <li>• Reduce Cumulative Layout Shift: Add dimensions to images and ads</li>,,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 )
 },
           {
 metrics.bundleSize > thresholds.bundleSize.poor && (
+<<<<<<< HEAD
+<li>• Reduce bundle size: Implement code splitting and tree shaking</li>
+=======
 <li>• Reduce bundle size: Implement code splitting and tree shaking</li>,,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 )
 },
           {metrics.fcp <= thresholds.fcp.good && metrics.lcp <= thresholds.lcp.good && metrics.cls <= thresholds.cls.good && (

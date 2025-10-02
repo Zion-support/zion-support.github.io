@@ -1,22 +1,63 @@
 {
-  "timestamp": "2025-10-02T07:39:52.769Z",
-  "baseUrl": "http://localhost:3000",
-  "summary": {
-    "totalPagesChecked": 1,
-    "brokenLinksFound": 0,
-    "missingPagesFound": 1,
-    "totalLinksFound": 0
-  },
+  "totalPages": 1,
   "brokenLinks": [],
-  "missingPages": [
+  "missingPages": [],
+  "navigationIssues": [
     {
-      "url": "http://localhost:3000/case-studies",
-      "pathname": "/case-studies",
-      "status": 500
+      "type": "missing_navigation_link",
+      "page": "/about",
+      "severity": "medium",
+      "recommendation": "Add navigation link to /about"
+    },
+    {
+      "type": "missing_navigation_link",
+      "page": "/contact",
+      "severity": "medium",
+      "recommendation": "Add navigation link to /contact"
+    },
+    {
+      "type": "missing_navigation_link",
+      "page": "/services",
+      "severity": "medium",
+      "recommendation": "Add navigation link to /services"
+    },
+    {
+      "type": "missing_navigation_link",
+      "page": "/portfolio",
+      "severity": "medium",
+      "recommendation": "Add navigation link to /portfolio"
+    },
+    {
+      "type": "missing_navigation_link",
+      "page": "/blog",
+      "severity": "medium",
+      "recommendation": "Add navigation link to /blog"
+    },
+    {
+      "type": "missing_navigation_link",
+      "page": "/privacy",
+      "severity": "medium",
+      "recommendation": "Add navigation link to /privacy"
+    },
+    {
+      "type": "missing_navigation_link",
+      "page": "/terms",
+      "severity": "medium",
+      "recommendation": "Add navigation link to /terms"
+    },
+    {
+      "type": "missing_navigation_link",
+      "page": "/sitemap",
+      "severity": "medium",
+      "recommendation": "Add navigation link to /sitemap"
     }
   ],
-  "visitedUrls": [
-    "http://localhost:3000"
-  ],
-  "allLinks": []
+  "recommendations": [
+    {
+      "category": "navigation",
+      "priority": "medium",
+      "description": "Found 8 navigation issues",
+      "action": "Improve navigation structure and fix broken navigation links"
+    }
+  ]
 }
