@@ -65,14 +65,17 @@ function Header() {
                 </Link>
                 <div className="border-t border-gray-100 my-2"></div>
                 <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">Specialized Solutions</div>
-                <Link href="/services/ai-autonomous-operations" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                <Link href="/services/ai-autonomous-business-operations" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
                   Autonomous Operations
                 </Link>
-                <Link href="/services/ai-business-intelligence-2025" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  Business Intelligence
+                <Link href="/services/ai-quantum-computing-2026" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  Quantum Computing AI
                 </Link>
-                <Link href="/services/ai-cybersecurity-2025" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  Cybersecurity
+                <Link href="/services/ai-services/ai-fraud-detection-advanced" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  Advanced Fraud Detection
+                </Link>
+                <Link href="/services/micro-saas/ai-predictive-maintenance" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  Predictive Maintenance
                 </Link>
                 <div className="border-t border-gray-100 my-2"></div>
                 <Link href="/services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 font-medium">
@@ -163,11 +166,17 @@ function Footer() {
               <Link href="/services/it-services" className="block text-gray-600 hover:text-blue-600 transition-colors">
                 IT Services & Solutions
               </Link>
-              <Link href="/services/ai-autonomous-operations" className="block text-gray-600 hover:text-blue-600 transition-colors">
+              <Link href="/services/ai-autonomous-business-operations" className="block text-gray-600 hover:text-blue-600 transition-colors">
                 Autonomous Operations
               </Link>
-              <Link href="/services/ai-business-intelligence-2025" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                Business Intelligence
+              <Link href="/services/ai-quantum-computing-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                Quantum Computing AI
+              </Link>
+              <Link href="/services/ai-services/ai-fraud-detection-advanced" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                Advanced Fraud Detection
+              </Link>
+              <Link href="/services/micro-saas/ai-predictive-maintenance" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                Predictive Maintenance
               </Link>
               <Link href="/services" className="block text-gray-600 hover:text-blue-600 transition-colors font-medium">
                 All Services →
@@ -185,14 +194,14 @@ function Footer() {
               <Link href="/enterprise" className="block text-gray-600 hover:text-blue-600 transition-colors">
                 Enterprise Solutions
               </Link>
-              <Link href="/services/ai-cybersecurity-2025" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                Cybersecurity
-              </Link>
-              <Link href="/services/ai-cloud-infrastructure-2025" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                Cloud Infrastructure
+              <Link href="/services/ai-services/ai-fraud-detection-advanced" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                Cybersecurity & Fraud Detection
               </Link>
               <Link href="/services/ai-quantum-computing-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                Quantum Computing
+                Quantum Computing Solutions
+              </Link>
+              <Link href="/services/ai-autonomous-business-operations" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                Autonomous Business Systems
               </Link>
             </div>
           </div>

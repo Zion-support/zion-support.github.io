@@ -139,7 +139,7 @@ export default function HomePage() {
                 Get Started Today
               </a>
               <a 
-                href="/comprehensive-services" 
+                href="/services-advertising" 
                 className="bg-gradient-to-r from-green-500 to-teal-600 hover:from-green-400 hover:to-teal-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
               >
                 View All Services →
@@ -405,11 +405,27 @@ export default function HomePage() {
               popular={false}
             />
             <FeaturedServiceCard
-              title="AI Infrastructure Orchestration"
-              description="Achieve 99.99% uptime and 85% cost reduction with intelligent automation, self-healing infrastructure, and predictive scaling."
+              title="AI Quantum Computing Solutions"
+              description="Revolutionary quantum AI for optimization, cryptography, and scientific computing with 1000x speedup."
+              price="$25,000/month"
+              features={['Quantum ML', 'Cryptography', '1000x Speedup', 'Drug Discovery', 'Financial Modeling']}
+              to="/services/ai-quantum-computing-2026"
+              popular={true}
+            />
+            <FeaturedServiceCard
+              title="Autonomous Business Operations"
+              description="AI-powered systems that run your business operations autonomously with 85% efficiency improvement."
               price="$15,000/month"
-              features={['99.99% Uptime', 'Self-Healing', '85% Cost Reduction', 'Predictive Scaling', 'Multi-cloud Management']}
-              to="/services/ai-infrastructure-orchestration-platform-2026"
+              features={['85% Efficiency', '95% Automation', 'Self-Healing', 'Process Optimization', 'Intelligent Adaptation']}
+              to="/services/ai-autonomous-business-operations"
+              popular={true}
+            />
+            <FeaturedServiceCard
+              title="Advanced AI Fraud Detection"
+              description="Next-generation fraud detection with 99.9% accuracy and 90% fraud reduction using advanced AI."
+              price="$5,000/month"
+              features={['99.9% Accuracy', 'Real-time Monitoring', 'Behavioral Analytics', 'Threat Intelligence', 'Multi-channel Protection']}
+              to="/services/ai-services/ai-fraud-detection-advanced"
               popular={true}
             />
             <FeaturedServiceCard
@@ -748,7 +764,7 @@ export default function HomePage() {
               Start Your Project
             </a>
             <a 
-              href="/services" 
+              href="/services-advertising" 
               className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Explore Services
