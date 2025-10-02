@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -595,7 +594,6 @@ export default function SolutionsPage() {
           </div>
         </div>
       </section>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f3e7
     </div>
   );
 }

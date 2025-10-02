@@ -1,42 +1,40 @@
-import React, { useState, useEffect } from 'react';
-import { Activity, Zap, Clock, Database, Wifi } from 'lucide-react';
+import React, { useEffect } from 'react';
+import { measurePerformance } from '../utils/performance';
 
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
-    const collectMetrics = () => {
-      if (typeof window === 'undefined' || !window.performance) return;
-
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paintEntries = performance.getEntriesByType('paint');
-      
-      const firstPaint = paintEntries.find(entry => entry.name === 'first-paint')?.startTime || 0;
-      const firstContentfulPaint = paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
-
-      // Get Web Vitals if available
-      const vitals = {
-        loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-        firstPaint,
-        firstContentfulPaint,
-        largestContentfulPaint: 0, // Would need web-vitals library
-        cumulativeLayoutShift: 0, // Would need web-vitals library
-        firstInputDelay: 0, // Would need web-vitals library
-        timeToInteractive: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-        memoryUsage: (performance as any).memory?.usedJSHeapSize,
-        networkSpeed: navigator.connection?.effectiveType || 'unknown'
-      };
-
-      setMetrics(vitals);
+    const logPerformanceMetrics = () => {
+      const metrics = measurePerformance();
+      if (metrics) {
+        console.log('Performance Metrics:', metrics);
+        
+        // Send to analytics service in production
+        if (process.env.NODE_ENV === 'production') {
+          // Example: sendToAnalytics('performance', metrics);
+        }
+      }
     };
 
-    // Collect metrics after page load
+    // Log performance after page load
     if (document.readyState === 'complete') {
-      collectMetrics();
+      logPerformanceMetrics();
     } else {
-      window.addEventListener('load', collectMetrics);
+      window.addEventListener('load', logPerformanceMetrics);
+    }
+
+    // Monitor Core Web Vitals
+    if ('web-vitals' in window) {
+      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+        getCLS(console.log);
+        getFID(console.log);
+        getFCP(console.log);
+        getLCP(console.log);
+        getTTFB(console.log);
+      });
     }
 
     return () => {
-      window.removeEventListener('load', collectMetrics);
+      window.removeEventListener('load', logPerformanceMetrics);
     };
   }, []);
 
