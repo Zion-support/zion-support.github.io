@@ -10,7 +10,8 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [];
 
-posts.push(
+// NOTE: Temporarily disabled due to syntax conflict in previous merge. Restore after review.
+/* posts.push(
   {
     slug: "ai-2027-operational-trust-blueprint",
     title: "AI 2027: Operational Trust Blueprint",
@@ -1559,7 +1560,7 @@ posts.push(
     featured: true,
     readTime: "8 min read"
   }
-);
+); */
 
 // Sept 30, 2025 – Fresh articles to add and advertise on homepage
 posts.push({
@@ -1573,7 +1574,7 @@ posts.push({
 });
 
 // Sept 30, 2025 – Fresh articles to add and advertise on homepage
-posts.push(
+/* posts.push(
   {
     slug: "edge-governed-flags-2026",
     title: "Edge‑Governed Flags 2026: Policies at <100ms",
@@ -1592,10 +1593,10 @@ posts.push(
     featured: true,
     readTime: "8 min read"
   }
-]);
+]); */
 
 // Sept 30, 2025 – New articles to expand catalog and promote on homepage
-posts.push(
+/* posts.push(
   {
     slug: "ai-governance-action-scorecards-2026",
     title: "AI Governance Action Scorecards 2026: Guardrails That Ship",
@@ -1651,7 +1652,7 @@ posts.push(
     readTime: "8 min read"
   },
 
-// Sept 30, 2025 – New posts for homepage promotion and advertising (added)
+  // Sept 30, 2025 – New posts for homepage promotion and advertising (added)
   {
     slug: "ai-governance-scorecards-q1-2026",
     title: "AI Governance Scorecards Q1 2026: Guardrails Wired to KPIs",
@@ -1680,7 +1681,7 @@ posts.push(
     readTime: "8 min read"
   },
 
-// Sept 30, 2025 – Brand-new trio for immediate homepage promotion
+  // Sept 30, 2025 – Brand-new trio for immediate homepage promotion
   {
     slug: "ai-change-management-2026",
     title: "AI Change Management 2026: From Pilot to Org-Wide Adoption",
@@ -1709,7 +1710,7 @@ posts.push(
     readTime: "8 min read"
   },
 
-// New: Sept 30, 2025 – Fresh trio to advertise on homepage
+  // New: Sept 30, 2025 – Fresh trio to advertise on homepage
   {
     slug: "real-time-decision-engines-2027",
     title: "Real-Time Decision Engines 2027: 10M Decisions/sec under <1ms",
@@ -1738,7 +1739,7 @@ posts.push(
     readTime: "9 min read"
   },
 
-// Sept 30, 2025 – New promotional articles to surface on homepage
+  // Sept 30, 2025 – New promotional articles to surface on homepage
   {
     slug: "ai-governance-live-scorecards-2026",
     title: "AI Governance Live Scorecards 2026: Guardrails Wired to KPIs",
@@ -1976,4 +1977,4 @@ posts.push(
     featured: true,
     readTime: "7 min read"
   }
-);
+); */

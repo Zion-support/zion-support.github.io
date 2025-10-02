@@ -104,6 +104,14 @@ const Support: React.FC = () => {
     { title: 'View Status Page', description: 'Check system status and uptime', link: '/status', icon: '📊' }
   ];
 
+  const filteredFaqs = faqs.filter((faq) => {
+    const matchesCategory = selectedCategory === 'all' || faq.category === selectedCategory;
+    const matchesSearch = !searchQuery ||
+      faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      faq.answer.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
@@ -135,57 +143,55 @@ const Support: React.FC = () => {
         </div>
       </section>
 
-            {/* Category Filter */}
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            <button
+              onClick={() => setSelectedCategory('all')}
+              className={`px-6 py-3 rounded-lg font-semibold transition-colors ${
+                selectedCategory === 'all'
+                  ? 'bg-blue-600 text-white'
+                  : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+              }`}
+            >
+              All Categories
+            </button>
+            {faqCategories.map((category) => (
               <button
-                onClick={() => setSelectedCategory('all')}
-                className={`px-6 py-3 rounded-lg font-semibold transition-colors ${
-                  selectedCategory === 'all'
+                key={category.id}
+                onClick={() => setSelectedCategory(category.id)}
+                className={`px-6 py-3 rounded-lg font-semibold transition-colors flex items-center ${
+                  selectedCategory === category.id
                     ? 'bg-blue-600 text-white'
                     : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
                 }`}
               >
-                All Categories
+                <category.icon className="h-4 w-4 mr-2" />
+                {category.title}
               </button>
-              {faqCategories.map((category) => (
-                <button
-                  key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
-                  className={`px-6 py-3 rounded-lg font-semibold transition-colors flex items-center ${
-                    selectedCategory === category.id
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                  }`}
-                >
-                  <category.icon className="h-4 w-4 mr-2" />
-                  {category.title}
-                </button>
-              ))}
-            </div>
-
-            {/* FAQ Items */}
-            <div className="space-y-6">
-              {filteredFaqs.map((faq, index) => (
-                <div key={index} className="bg-gray-50 rounded-lg p-6">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                    {faq.question}
-                  </h3>
-                  <p className="text-gray-600">
-                    {faq.answer}
-                  </p>
-                </div>
-              ))}
-            </div>
-
-            {filteredFaqs.length === 0 && (
-              <div className="text-center py-12">
-                <p className="text-gray-500 text-lg">
-                  No FAQs found matching your search criteria.
-                </p>
-              </div>
-            )}
+            ))}
           </div>
-        </section>
+
+          <div className="space-y-6">
+            {filteredFaqs.map((faq, index) => (
+              <div key={index} className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                  {faq.question}
+                </h3>
+                <p className="text-gray-600">{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+
+          {filteredFaqs.length === 0 && (
+            <div className="text-center py-12">
+              <p className="text-gray-500 text-lg">
+                No FAQs found matching your search criteria.
+              </p>
+            </div>
+          )}
+        </div>
+      </section>
 
         {/* Contact CTA */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600">
@@ -213,7 +219,6 @@ const Support: React.FC = () => {
               </Link>
             </div>
           </div>
-        </div>
       </section>
     </div>
   );
