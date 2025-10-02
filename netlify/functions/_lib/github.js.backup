@@ -1,7 +1,0 @@
-  });
-  if (resp && resp.status === 404) return null;`
-
-  if (!resp && resp.ok) throw new Error(`GitHub getFile HTTP ${resp && resp.status}`);
-  return resp && resp.json();
-
-
