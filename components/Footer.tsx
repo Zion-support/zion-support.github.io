@@ -1,20 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   const footerLinks = {
     services: [
-      { name: 'AI Services', href: '/services/ai-services' },
-      { name: 'AI Customer Insights', href: '/services/ai-powered-customer-insights-platform' },
-      { name: 'AI Financial Intelligence', href: '/services/ai-powered-financial-intelligence-platform' },
-      { name: 'AI Autonomous DevOps', href: '/services/ai-autonomous-devops-platform' },
-      { name: 'Quantum Computing', href: '/services/quantum-computing-solutions' },
-      { name: 'Micro SaaS Solutions', href: '/services/micro-saas' },
-      { name: 'Healthcare Scheduling', href: '/services/healthcare-scheduling-platform' },
-      { name: 'IT Services', href: '/services/it-services' },
-      { name: 'Cybersecurity', href: '/services/ai-cybersecurity-automation' },
+      { name: 'Micro SaaS', href: '/services/micro-saas' },
+      { name: 'IT Services (Comprehensive)', href: '/services/it-services-comprehensive' },
+      { name: 'Blockchain Solutions', href: '/services/blockchain-solutions' },
+      { name: 'AI Quantum Computing', href: '/services/ai-quantum-computing-2026' },
     ],
     company: [
       { name: 'About Us', href: '/about' },
@@ -24,8 +19,7 @@ const Footer: React.FC = () => {
       { name: 'Contact', href: '/contact' },
     ],
     resources: [
-      { name: 'AI Implementation Guide', href: '/guides/ai-2026-implementation-roadmap' },
-      { name: 'Autonomous Business Guide', href: '/guides/autonomous-business-processes-implementation-guide-2026' },
+      { name: 'Guides', href: '/guides' },
       { name: 'Privacy Policy', href: '/privacy' },
       { name: 'Terms of Service', href: '/terms' },
       { name: 'Security', href: '/security' },
@@ -180,9 +174,7 @@ const Footer: React.FC = () => {
             <Link href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
               Privacy Policy
             </Link>
-            <Link href="/cookies" className="text-gray-400 hover:text-white text-sm transition-colors">
-              Cookie Policy
-            </Link>
+            <Link href="/sitemap" className="text-gray-400 hover:text-white text-sm transition-colors">Sitemap</Link>
           </div>
         </div>
       </div>
