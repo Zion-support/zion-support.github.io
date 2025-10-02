@@ -14,7 +14,8 @@ import {
   Clock,
   Star,
   TrendingUp,
-  Smartphone
+  Smartphone,
+  Network
 } from 'lucide-react';
 
 export default function AIServices() {

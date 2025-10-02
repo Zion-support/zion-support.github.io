@@ -149,8 +149,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
       <meta name="theme-color" content="#2563eb" />";
       
       {/* Performance hints */}
-      <link rel="preconnect" href="https: //fonts.googleapis.com" />";,
-      <link rel="preconnect" href="https: //fonts.gstatic.com" crossOrigin="anonymous" />";,
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link rel="dns-prefetch" href="//www.google-analytics.com" />";
       
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208

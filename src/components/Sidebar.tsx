@@ -58,7 +58,6 @@ const Sidebar: React.FC = () => {
     <aside className="w-full xl:w-72 bg-gray-50 border-r border-gray-200 h-full overflow-y-auto">
       <div className="p-6">
         <h2 className="text-lg font-semibold text-gray-900 mb-6">Navigation</h2>
-
         {sections.map((section, index) => (
           <div key={index} className="mb-8">
             <h3 className="text-sm font-medium text-gray-700 uppercase tracking-wider mb-3">
@@ -68,10 +67,6 @@ const Sidebar: React.FC = () => {
               {section.links.map((link, linkIndex) => (
                 <Link
                   key={linkIndex}
-<<<<<<< HEAD
-                  href={link.path}
-                  className={`block px-3 py-2 rounded-md text-sm transition-colors ${
-=======
                   to={link.path}
                   className={`block px-3 py-2 rounded-md text-sm transition-colors ${
                     isActive(link.path)
