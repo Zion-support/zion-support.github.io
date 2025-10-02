@@ -141,30 +141,6 @@ const StartupSolutionsPage: React.FC = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <div className="bg-white p-8 rounded-xl shadow-sm text-center">
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <div className="text-4xl mb-4">💡</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Ideation</h3>
-                <p className="text-gray-600">Validate your concept and define your MVP requirements</p>
-              </div>
-              
-              <div className="bg-white p-8 rounded-xl shadow-sm text-center">
-                <div className="text-4xl mb-4">🚀</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Development</h3>
-                <p className="text-gray-600">Build and launch your product with agile development</p>
-              </div>
-              
-              <div className="bg-white p-8 rounded-xl shadow-sm text-center">
-                <div className="text-4xl mb-4">📈</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Growth</h3>
-                <p className="text-gray-600">Scale your product and optimize for user acquisition</p>
-              </div>
-              
-              <div className="bg-white p-8 rounded-xl shadow-sm text-center">
-                <div className="text-4xl mb-4">🏆</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Scale</h3>
-                <p className="text-gray-600">Expand globally and prepare for enterprise growth</p>
-=======
                 <div className="text-3xl mb-4">💡</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Ideation</h3>
                 <p className="text-gray-600">Validate your idea and create a technical roadmap</p>
@@ -186,117 +162,13 @@ const StartupSolutionsPage: React.FC = () => {
                 <div className="text-3xl mb-4">🏢</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Scale</h3>
                 <p className="text-gray-600">Build enterprise-grade solutions for scale</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-6b6c
-=======
-                <div className="text-3xl mb-4">💡</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Ideation</h3>
-                <p className="text-gray-600">Validate your idea and create a technical roadmap</p>
-              </div>
-              
-              <div className="bg-white p-8 rounded-xl shadow-sm text-center">
-                <div className="text-3xl mb-4">🚀</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">MVP Development</h3>
-                <p className="text-gray-600">Build and launch your minimum viable product</p>
-              </div>
-              
-              <div className="bg-white p-8 rounded-xl shadow-sm text-center">
-                <div className="text-3xl mb-4">📈</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Growth</h3>
-                <p className="text-gray-600">Scale your product and optimize for growth</p>
-              </div>
-              
-              <div className="bg-white p-8 rounded-xl shadow-sm text-center">
-                <div className="text-3xl mb-4">🏢</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Scale</h3>
-                <p className="text-gray-600">Build enterprise-grade solutions for scale</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-0d92
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Technology Stack */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Startup Technology Stack</h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Modern technologies perfect for startup development
-              </p>
-            </div>
-            
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="text-4xl mb-4">⚛️</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Frontend</h3>
-                <p className="text-gray-600">React, Next.js, TypeScript</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="text-4xl mb-4">🔧</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Backend</h3>
-                <p className="text-gray-600">Node.js, Python, Go</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="text-4xl mb-4">☁️</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Cloud</h3>
-                <p className="text-gray-600">AWS, Azure, GCP</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="text-4xl mb-4">🤖</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">AI/ML</h3>
-=======
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              <div className="bg-gradient-to-br from-orange-50 to-red-50 p-6 rounded-xl text-center">
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Frontend</h3>
-                <p className="text-gray-600">React, Vue.js, Next.js</p>
-              </div>
-              
-              <div className="bg-gradient-to-br from-blue-50 to-orange-50 p-6 rounded-xl text-center">
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Backend</h3>
-                <p className="text-gray-600">Node.js, Python, Go</p>
-              </div>
-              
-              <div className="bg-gradient-to-br from-green-50 to-blue-50 p-6 rounded-xl text-center">
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Cloud</h3>
-                <p className="text-gray-600">AWS, Vercel, Netlify</p>
-              </div>
-              
-              <div className="bg-gradient-to-br from-purple-50 to-green-50 p-6 rounded-xl text-center">
-                <h3 className="text-lg font-bold text-gray-900 mb-2">AI/ML</h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-6b6c
-=======
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              <div className="bg-gradient-to-br from-orange-50 to-red-50 p-6 rounded-xl text-center">
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Frontend</h3>
-                <p className="text-gray-600">React, Vue.js, Next.js</p>
-              </div>
-              
-              <div className="bg-gradient-to-br from-blue-50 to-orange-50 p-6 rounded-xl text-center">
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Backend</h3>
-                <p className="text-gray-600">Node.js, Python, Go</p>
-              </div>
-              
-              <div className="bg-gradient-to-br from-green-50 to-blue-50 p-6 rounded-xl text-center">
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Cloud</h3>
-                <p className="text-gray-600">AWS, Vercel, Netlify</p>
-              </div>
-              
-              <div className="bg-gradient-to-br from-purple-50 to-green-50 p-6 rounded-xl text-center">
-                <h3 className="text-lg font-bold text-gray-900 mb-2">AI/ML</h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-0d92
-                <p className="text-gray-600">OpenAI, TensorFlow, PyTorch</p>
               </div>
             </div>
           </div>
         </section>
 
         {/* Success Metrics */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-20 bg-white">
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Startup Success Metrics</h2>
@@ -306,59 +178,34 @@ const StartupSolutionsPage: React.FC = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <div className="bg-white p-8 rounded-xl shadow-sm text-center">
-                <div className="text-4xl font-bold text-orange-600 mb-2">90%</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Faster Time to Market</h3>
-                <p className="text-gray-600">Average reduction in development time</p>
+              <div className="text-center">
+                <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">📈</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">90% Success Rate</h3>
+                <p className="text-gray-600 text-sm">
+                  Startups that successfully raise funding after using our technical co-founder services.
+                </p>
               </div>
               
-              <div className="bg-white p-8 rounded-xl shadow-sm text-center">
-                <div className="text-4xl font-bold text-orange-600 mb-2">300%</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">User Growth</h3>
-                <p className="text-gray-600">Average increase in user acquisition</p>
+              <div className="text-center">
+                <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">⚡</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">50% Faster Launch</h3>
+                <p className="text-gray-600 text-sm">
+                  Average reduction in time-to-market for startups using our MVP development services.
+                </p>
               </div>
               
-              <div className="bg-white p-8 rounded-xl shadow-sm text-center">
-                <div className="text-4xl font-bold text-orange-600 mb-2">$2M+</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Funding Raised</h3>
-                <p className="text-gray-600">Average funding raised by our clients</p>
-=======
-              <div className="bg-gradient-to-br from-orange-50 to-red-50 p-8 rounded-xl text-center">
-                <div className="text-4xl font-bold text-orange-600 mb-2">3x</div>
-                <div className="text-lg font-semibold text-gray-900 mb-2">Faster Development</div>
-                <p className="text-gray-600">Average speed improvement in product development</p>
-              </div>
-              
-              <div className="bg-gradient-to-br from-blue-50 to-orange-50 p-8 rounded-xl text-center">
-                <div className="text-4xl font-bold text-blue-600 mb-2">50%</div>
-                <div className="text-lg font-semibold text-gray-900 mb-2">Cost Reduction</div>
-                <p className="text-gray-600">Average reduction in development costs</p>
-              </div>
-              
-=======
-              <div className="bg-gradient-to-br from-orange-50 to-red-50 p-8 rounded-xl text-center">
-                <div className="text-4xl font-bold text-orange-600 mb-2">3x</div>
-                <div className="text-lg font-semibold text-gray-900 mb-2">Faster Development</div>
-                <p className="text-gray-600">Average speed improvement in product development</p>
-              </div>
-              
-              <div className="bg-gradient-to-br from-blue-50 to-orange-50 p-8 rounded-xl text-center">
-                <div className="text-4xl font-bold text-blue-600 mb-2">50%</div>
-                <div className="text-lg font-semibold text-gray-900 mb-2">Cost Reduction</div>
-                <p className="text-gray-600">Average reduction in development costs</p>
-              </div>
-              
->>>>>>> cursor/fix-errors-and-merge-to-main-0d92
-              <div className="bg-gradient-to-br from-green-50 to-blue-50 p-8 rounded-xl text-center">
-                <div className="text-4xl font-bold text-green-600 mb-2">90%</div>
-                <div className="text-lg font-semibold text-gray-900 mb-2">Success Rate</div>
-                <p className="text-gray-600">Startups that successfully raise funding</p>
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-6b6c
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-0d92
+              <div className="text-center">
+                <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">🎯</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">300% Growth</h3>
+                <p className="text-gray-600 text-sm">
+                  Average user growth rate for startups implementing our growth analytics solutions.
+                </p>
               </div>
             </div>
           </div>
@@ -367,22 +214,22 @@ const StartupSolutionsPage: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20 bg-orange-600 text-white">
           <div className="container mx-auto px-6 text-center">
-            <h2 className="text-4xl font-bold mb-4">Ready to Build Your Startup?</h2>
+            <h2 className="text-4xl font-bold mb-4">Ready to Launch Your Startup?</h2>
             <p className="text-xl mb-8 text-orange-100 max-w-2xl mx-auto">
-              Let's discuss how our startup solutions can help you build, launch, and scale your product.
+              Let's discuss how our startup solutions can help you build, launch, and scale your innovative product.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className="bg-white text-orange-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
-                Get Started Today
+                Start Your Journey
               </Link>
-              <Link 
-                to="/services" 
+              <Link
+                to="/pricing"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition-colors"
               >
-                Explore Services
+                View Pricing
               </Link>
             </div>
           </div>
