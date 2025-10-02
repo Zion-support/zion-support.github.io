@@ -6,9 +6,9 @@
   "preinstall": "pnpm approve-builds --unsafe-perm || true",
   "scripts": {
     "dev": "vite --host --open",
-    "build": "vite build --mode production",
+    "build": "vite build --mode production --minify terser",
     "build:no-check": "vite build --mode production",
-    "build:fast": "vite build --mode development",
+    "build:fast": "vite build --mode development --minify false",
     "build:analyze": "vite build --mode analyze && npx vite-bundle-analyzer dist/stats.html",
     "preview": "vite preview --host --open",
     "lint": "eslint src --report-unused-disable-directives --max-warnings 400",

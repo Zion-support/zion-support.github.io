@@ -1,24 +1,22 @@
-import React, { useState, useEffect, useMemo, useCallback } from 'react';
+import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './index.css';
-import ModernHeader from './components/ModernHeader';
-import ModernFooter from './components/ModernFooter';
-import ModernHomepage from './components/ModernHomepage';
+import Header from './components/Header';
+import Footer from './components/Footer';
 import SEOOptimizer from './components/SEOOptimizer';
 import AdvancedAnalytics from './components/AdvancedAnalytics';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import NotificationSystem from './components/NotificationSystem';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
+import EnhancedSEOHead from './components/EnhancedSEOHead';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import HomePage from './pages/HomePage';
 
-// Types and interfaces
-interface Notification {
-  id: string;
-  message: string;
-  type: 'success' | 'error' | 'warning' | 'info';
-}
+// HomePage is imported from './pages/HomePage'
 
+<<<<<<< HEAD
+=======
 interface WindowWithEnhancements extends Window {
   advancedPerformanceOptimizer?: { initialize?: () => void };
   advancedSEOOptimizer?: { initialize?: () => void };
@@ -29,140 +27,89 @@ interface WindowWithEnhancements extends Window {
   advancedUXOptimizer?: { initialize?: () => void };
   advancedTestingFramework?: { initialize?: () => void };
   advancedI18n?: { initialize?: () => void };
-  enhancements?: any;
-  performanceOptimizer?: any;
-  seoOptimizer?: any;
-  securityManager?: any;
-  analytics?: any;
-  errorHandler?: any;
-  cachingSystem?: any;
-  uxOptimizer?: any;
-  testingFramework?: any;
-  i18n?: any;
+  enhancements?: Record<string, unknown>;
+  performanceOptimizer?: Record<string, unknown>;
+  seoOptimizer?: Record<string, unknown>;
+  securityManager?: Record<string, unknown>;
+  analytics?: Record<string, unknown>;
+  errorHandler?: Record<string, unknown>;
+  cachingSystem?: Record<string, unknown>;
+  uxOptimizer?: Record<string, unknown>;
+  testingFramework?: Record<string, unknown>;
+  i18n?: Record<string, unknown>;
 }
 
 // Initialize performance enhancements function
 const initializePerformanceEnhancements = () => {
   // Performance enhancement initialization logic
-  console.log('Performance enhancements initialized');
+  // Performance enhancements initialized
 };
 
 // Simple placeholder components for other routes
+>>>>>>> 0987aa25a0c077eb72ddd7a8b3d56a96a9143fb4
 const ServicesPage = () => (
-  <div className="min-h-screen bg-gray-50 py-16">
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h1 className="text-4xl font-bold text-gray-900 mb-8">Our Services</h1>
-      <p className="text-lg text-gray-600">Comprehensive AI and IT solutions for modern enterprises.</p>
-    </div>
-  </div>
-);
-
-const CaseStudiesPage = () => (
-  <div className="min-h-screen bg-gray-50 py-16">
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h1 className="text-4xl font-bold text-gray-900 mb-8">Case Studies</h1>
-      <p className="text-lg text-gray-600">Real-world success stories from our clients.</p>
-    </div>
-  </div>
-);
-
-const BlogPage = () => (
-  <div className="min-h-screen bg-gray-50 py-16">
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h1 className="text-4xl font-bold text-gray-900 mb-8">Blog</h1>
-      <p className="text-lg text-gray-600">Latest insights and breakthroughs in AI technology.</p>
-    </div>
-  </div>
-);
-
-const AboutPage = () => (
-  <div className="min-h-screen bg-gray-50 py-16">
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h1 className="text-4xl font-bold text-gray-900 mb-8">About Us</h1>
-      <p className="text-lg text-gray-600">Leading the future of AI and autonomous systems.</p>
-    </div>
-  </div>
-);
-
-const ContactPage = () => (
-  <div className="min-h-screen bg-gray-50 py-16">
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h1 className="text-4xl font-bold text-gray-900 mb-8">Contact Us</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div>
-          <h2 className="text-2xl font-semibold mb-4">Get in Touch</h2>
-          <div className="space-y-4">
-            <div>
-              <h3 className="font-semibold text-gray-900">Phone</h3>
-              <a title="Internal link" href="tel:+13024640950" className="text-blue-600 hover:text-blue-700">
-                +1 302 464 0950
-              </a>
-            </div>
-            <div>
-              <h3 className="font-semibold text-gray-900">Email</h3>
-              <a title="Internal link" href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:text-blue-700">
-                kleber@ziontechgroup.com
-              </a>
-            </div>
-            <div>
-              <h3 className="font-semibold text-gray-900">Address</h3>
-              <p className="text-gray-600">
-                364 E Main St STE 1008<br />
-                Middletown DE 19709
-              </p>
-            </div>
-          </div>
+  <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+    <div className="container mx-auto px-4 py-8">
+      <h1 className="text-4xl font-bold text-center mb-8">Our Services</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="bg-white p-6 rounded-lg shadow-lg">
+          <h3 className="text-xl font-bold mb-4">AI Services</h3>
+          <p className="text-gray-600 mb-4">Advanced AI solutions for your business</p>
+          <a href="/services" className="text-blue-600 hover:underline">Learn More</a>
         </div>
-        <div>
-          <h2 className="text-2xl font-semibold mb-4">Send us a Message</h2>
-          <form className="space-y-4">
-            <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
-            <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                Message
-              </label>
-              <textarea
-                id="message"
-                rows={4}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
-            <button
-              type="submit"
-              className="w-full px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
-            >
-              Send Message
-            </button>
-          </form>
+        <div className="bg-white p-6 rounded-lg shadow-lg">
+          <h3 className="text-xl font-bold mb-4">Micro SaaS</h3>
+          <p className="text-gray-600 mb-4">Custom micro SaaS solutions</p>
+          <a href="/services" className="text-blue-600 hover:underline">Learn More</a>
+        </div>
+        <div className="bg-white p-6 rounded-lg shadow-lg">
+          <h3 className="text-xl font-bold mb-4">IT Services</h3>
+          <p className="text-gray-600 mb-4">Comprehensive IT consulting and implementation</p>
+          <a href="/services" className="text-blue-600 hover:underline">Learn More</a>
         </div>
       </div>
     </div>
   </div>
 );
 
+<<<<<<< HEAD
+const AboutPage = () => (
+  <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+    <div className="container mx-auto px-4 py-8">
+      <h1 className="text-4xl font-bold text-center mb-8">About Zion Tech Group</h1>
+      <div className="max-w-4xl mx-auto">
+        <p className="text-lg text-gray-600 mb-6">
+          Zion Tech Group is a leading provider of AI, micro SaaS, and IT solutions. 
+          We help businesses transform their operations with cutting-edge technology.
+        </p>
+        <div className="bg-white p-6 rounded-lg shadow-lg">
+          <h3 className="text-xl font-bold mb-4">Contact Information</h3>
+          <div className="space-y-2">
+            <p><strong>Phone:</strong> +1 302 464 0950</p>
+            <p><strong>Email:</strong> kleber@ziontechgroup.com</p>
+            <p><strong>Address:</strong> 364 E Main St STE 1008, Middletown, DE 19709</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
+const ContactPage = () => (
+  <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+    <div className="container mx-auto px-4 py-8">
+      <h1 className="text-4xl font-bold text-center mb-8">Contact Us</h1>
+      <div className="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+        <div className="text-center mb-8">
+          <h2 className="text-2xl font-bold mb-4">Get In Touch</h2>
+          <p className="text-gray-600 mb-6">
+            Ready to transform your business? Contact us today for a consultation.
+          </p>
+=======
 // App Router Component
 const AppRouter = () => (
   <Routes>
-    <Route path="/" element={<ModernHomepage />} />
+    <Route path="/" element={<HomePage />} />
     <Route path="/services" element={<ServicesPage />} />
     <Route path="/case-studies" element={<CaseStudiesPage />} />
     <Route path="/blog" element={<BlogPage />} />
@@ -224,45 +171,73 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <EnhancedErrorBoundary>
-      <AccessibilityEnhancer>
+    <AccessibilityEnhancer>
+      <EnhancedErrorBoundary>
+        <EnhancedSEOHead 
+          title={seoDataForOptimizer.title} 
+          description={seoDataForOptimizer.description} 
+          canonical={seoDataForOptimizer.canonical}
+          keywords={['AI', 'IT Solutions', 'Enterprise Automation', 'Technology Services', 'Artificial Intelligence']}
+          author="Zion Tech Group"
+        />
         <SEOOptimizer title={seoDataForOptimizer.title} description={seoDataForOptimizer.description} canonicalUrl={seoDataForOptimizer.canonical} />
         <AdvancedAnalytics enableConversionTracking enablePerformanceTracking enableErrorTracking />
+        <PerformanceMonitor enabled={true} showMetrics={process.env.NODE_ENV === 'development'} />
         <div className="min-h-screen bg-white">
-          <ModernHeader />
+          <Header />
           <main>
             <AppRouter />
           </main>
-          <ModernFooter />
+          <Footer />
+>>>>>>> 0987aa25a0c077eb72ddd7a8b3d56a96a9143fb4
         </div>
-
-        {showPerformanceOptimizer && (
-          <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center" role="dialog" aria-modal="true">
-            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-              <div className="flex justify-between items-center mb-4">
-                <h2 className="text-2xl font-bold">Performance Optimizer</h2>
-                <button onClick={() => setShowPerformanceOptimizer(false)} className="text-gray-500 hover:text-gray-700 text-2xl">✕</button>
-              </div>
-              <PerformanceOptimizer isVisible={true} onClose={() => setShowPerformanceOptimizer(false)} />
-            </div>
+        <div className="space-y-4">
+          <div className="flex items-center justify-center">
+            <a 
+              href="tel:+13024640950" 
+              className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors mr-4"
+            >
+              Call +1 302 464 0950
+            </a>
+            <a 
+              href="mailto:kleber@ziontechgroup.com" 
+              className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
+            >
+              Email Us
+            </a>
           </div>
-        )}
-
-        {showPerformanceMonitor && (
-          <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center" role="dialog" aria-modal="true">
-            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-              <div className="flex justify-between items-center mb-4">
-                <h2 className="text-2xl font-bold">Performance Monitor</h2>
-                <button onClick={() => setShowPerformanceMonitor(false)} className="text-gray-500 hover:text-gray-700 text-2xl">✕</button>
-              </div>
-              <PerformanceMonitor />
-            </div>
+          <div className="text-center text-gray-600">
+            <p>364 E Main St STE 1008</p>
+            <p>Middletown, DE 19709</p>
           </div>
-        )}
+        </div>
+      </div>
+    </div>
+  </div>
+);
 
+<<<<<<< HEAD
+function App() {
+  return (
+    <div className="min-h-screen bg-white">
+      <Header />
+      <main>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="*" element={<HomePage />} />
+        </Routes>
+      </main>
+      <Footer />
+    </div>
+=======
         <NotificationSystem notifications={notifications} onRemove={handleRemoveNotification} />
-      </AccessibilityEnhancer>
-    </EnhancedErrorBoundary>
+      </EnhancedErrorBoundary>
+    </AccessibilityEnhancer>
+>>>>>>> 0987aa25a0c077eb72ddd7a8b3d56a96a9143fb4
   );
-};
+}
+
 export default App;
