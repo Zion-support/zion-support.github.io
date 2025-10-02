@@ -98,4 +98,5 @@ export default function GenAIReliabilityScorecards2027Page() {
   );
 }
 
-// duplicate removed: legacy block deleted to avoid multiple defaults
+// @ts-nocheck
+

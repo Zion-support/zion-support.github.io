@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
 interface BannerProps {
-  title: string;
-  description: string;
-  image?: string;
-  link?: string;
+title: string;
+description: string;
+image?: string;
+link?: string;
 }
 
 const BannerCarousel: React.FC = () => {

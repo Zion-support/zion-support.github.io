@@ -1,25 +1,27 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import {
+
+} from 'framer-motion';
 
 interface PerformanceMetrics {
-  fcp: number;
-  lcp: number;
-  fid: number;
-  cls: number;
-  ttfb: number;
-  inp: number;
-  bundleSize: number;
-  loadTime: number;
+fcp: number;
+lcp: number;
+fid: number;
+cls: number;
+ttfb: number;
+inp: number;
+bundleSize: number;
+loadTime: number;
 }
 
 interface PerformanceAlert {
-  id: string;
-  type: 'warning' | 'error' | 'info';
-  message: string;
-  timestamp: number;
-  metric: string;
-  value: number;
-  threshold: number;
+id: string;
+type: 'warning' | 'error' | 'info';
+message: string;
+timestamp: number;
+metric: string;
+value: number;
+threshold: number;
 }
 
 const AdvancedPerformanceMonitor: React.FC = () => {
@@ -60,12 +62,12 @@ const AdvancedPerformanceMonitor: React.FC = () => {
   }, []);
 
   const getMetricColor = (status: string) => {
-    switch (status) {
-      case 'good': return 'text-green-600 bg-green-100';
-      case 'needs-improvement': return 'text-yellow-600 bg-yellow-100';
-      case 'poor': return 'text-red-600 bg-red-100';
-      default: return 'text-gray-600 bg-gray-100';
-    }
+switch (status) {
+case 'good': return 'text-green-600 bg-green-100';,
+case 'needs-improvement': return 'text-yellow-600 bg-yellow-100';,
+case 'poor': return 'text-red-600 bg-red-100';,
+default: return 'text-gray-600 bg-gray-100';
+}
   };
 
   const collectMetrics = useCallback(async () => {
@@ -157,11 +159,12 @@ const AdvancedPerformanceMonitor: React.FC = () => {
   }, [isMonitoring, collectMetrics]);
 
   const formatValue = (metric: string, value: number) => {
-    switch (metric) {
-      case 'cls':
-        return value.toFixed(3);
-      case 'bundleSize':
-        return `${(value / 1024).toFixed(1)} KB`;
+switch (metric) {
+case 'cls':,
+return value.toFixed(3);
+case 'bundleSize':,
+return `${(value / 1024).toFixed(1)
+} KB`;
       case 'loadTime':
       case 'fcp':
       case 'lcp':
@@ -202,11 +205,12 @@ const AdvancedPerformanceMonitor: React.FC = () => {
         <div className="flex gap-2">
           <button
             onClick={() => setIsMonitoring(!isMonitoring)}
-            className={`px-4 py-2 rounded-lg font-medium transition-colors ${
-              isMonitoring
-                ? 'bg-red-600 text-white hover:bg-red-700'
-                : 'bg-green-600 text-white hover:bg-green-700'
-            }`}
+            className={
+`px-4 py-2 rounded-lg font-medium transition-colors ${
+isMonitoring
+? 'bg-red-600 text-white hover:bg-red-700',
+: 'bg-green-600 text-white hover:bg-green-700'
+}`}
           >
             {isMonitoring ? 'Stop Monitoring' : 'Start Monitoring'}
           </button>
@@ -245,13 +249,14 @@ const AdvancedPerformanceMonitor: React.FC = () => {
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
-                  className={`p-3 rounded-lg border-l-4 ${
-                    alert.type === 'error'
-                      ? 'bg-red-50 border-red-400 text-red-800'
-                      : alert.type === 'warning'
-                      ? 'bg-yellow-50 border-yellow-400 text-yellow-800'
-                      : 'bg-blue-50 border-blue-400 text-blue-800'
-                  }`}
+                  className={
+`p-3 rounded-lg border-l-4 ${
+alert.type === 'error'
+? 'bg-red-50 border-red-400 text-red-800'
+: alert.type === 'warning',
+? 'bg-yellow-50 border-yellow-400 text-yellow-800'
+: 'bg-blue-50 border-blue-400 text-blue-800'
+}`}
                 >
                   <div className="flex justify-between items-start">
                     <div>
@@ -292,13 +297,14 @@ const AdvancedPerformanceMonitor: React.FC = () => {
               <div className="mt-2">
                 <div className="w-full bg-gray-200 rounded-full h-2">
                   <div
-                    className={`h-2 rounded-full transition-all duration-300 ${
-                      status === 'good'
-                        ? 'bg-green-500'
-                        : status === 'needs-improvement'
-                        ? 'bg-yellow-500'
-                        : 'bg-red-500'
-                    }`}
+                    className={
+`h-2 rounded-full transition-all duration-300 ${
+status === 'good'
+? 'bg-green-500'
+: status === 'needs-improvement',
+? 'bg-yellow-500'
+: 'bg-red-500'
+}`}
                     style={{
                       width: `${Math.min(
                         (value / (thresholds[key as keyof typeof thresholds]?.poor || 1)) * 100,
@@ -342,18 +348,26 @@ const AdvancedPerformanceMonitor: React.FC = () => {
       <div className="mt-6 bg-blue-50 rounded-lg p-4">
         <h3 className="text-lg font-semibold text-blue-900 mb-2">Performance Recommendations</h3>
         <ul className="space-y-1 text-sm text-blue-800">
-          {metrics.lcp > thresholds.lcp.poor && (
-            <li>• Optimize Largest Contentful Paint: Consider image optimization and critical CSS</li>
-          )}
-          {metrics.fcp > thresholds.fcp.poor && (
-            <li>• Improve First Contentful Paint: Reduce render-blocking resources</li>
-          )}
-          {metrics.cls > thresholds.cls.poor && (
-            <li>• Reduce Cumulative Layout Shift: Add dimensions to images and ads</li>
-          )}
-          {metrics.bundleSize > thresholds.bundleSize.poor && (
-            <li>• Reduce bundle size: Implement code splitting and tree shaking</li>
-          )}
+          {
+metrics.lcp > thresholds.lcp.poor && (
+<li>• Optimize Largest Contentful Paint: Consider image optimization and critical CSS</li>,
+)
+}
+          {
+metrics.fcp > thresholds.fcp.poor && (
+<li>• Improve First Contentful Paint: Reduce render-blocking resources</li>,
+)
+}
+          {
+metrics.cls > thresholds.cls.poor && (
+<li>• Reduce Cumulative Layout Shift: Add dimensions to images and ads</li>,
+)
+}
+          {
+metrics.bundleSize > thresholds.bundleSize.poor && (
+<li>• Reduce bundle size: Implement code splitting and tree shaking</li>,
+)
+}
           {metrics.fcp <= thresholds.fcp.good && metrics.lcp <= thresholds.lcp.good && metrics.cls <= thresholds.cls.good && (
             <li>• Great job! Your performance metrics are in the green zone.</li>
           )}

@@ -1,15 +1,15 @@
 export interface BlogPost {
-  id: string;
-  title: string;
-  slug: string;
-  excerpt: string;
-  content: string;
-  featuredImage: string;
-  category: string;
-  tags: string[];
-  author: string;
-  publishedAt: string;
-  readTime: number;
+id: string;
+title: string;
+slug: string;
+excerpt: string;
+content: string;
+featuredImage: string;
+category: string;
+tags: string[];
+author: string;
+publishedAt: string;
+readTime: number;
 }
 
 export const BLOG_POSTS: BlogPost[] = [

@@ -16,11 +16,11 @@ export const lazyWithRetry = <T extends ComponentType<any>>(
 ): React.LazyExoticComponent<T> => {
   return lazy(() =>
     new Promise<{ default: T }>((resolve, reject) => {
-      const attemptImport = async (retriesLeft: number) => {
-        try {
-          const module = await importFunc();
-          resolve(module);
-        } catch (error) {
+const attemptImport = async (retriesLeft: number) => {,
+try {
+const module = await importFunc();
+resolve(module);
+} catch (error) {
           if (retriesLeft > 0) {
             console.warn(
               `Failed to load component, retrying... (${retriesLeft} attempts left)`
@@ -122,18 +122,15 @@ export const logBundleSize = (componentName: string): void => {
  * Preloads components based on user behavior and connection speed
  */
 export const createSmartPreloader = () => {
-  const preloadQueue: Array<() => Promise<any>> = [];
-  let isPreloading = false;
-
-  const getConnectionSpeed = (): 'slow' | 'fast' | 'unknown' => {
-    if (typeof navigator === 'undefined') return 'unknown';
-    
-    const connection = (navigator as any).connection;
-    if (!connection) return 'unknown';
-
-    const effectiveType = connection.effectiveType;
-    return effectiveType === '4g' || effectiveType === '5g' ? 'fast' : 'slow';
-  };
+const preloadQueue: Array<() => Promise<any>> = [];,
+let isPreloading = false;
+const getConnectionSpeed = (): 'slow' | 'fast' | 'unknown' => {,
+if (typeof navigator === 'undefined') return 'unknown';
+const connection = (navigator as any).connection;
+if (!connection) return 'unknown';
+const effectiveType = connection.effectiveType;
+return effectiveType === '4g' || effectiveType === '5g' ? 'fast' : 'slow';
+};
 
   const shouldPreload = (): boolean => {
     const speed = getConnectionSpeed();
@@ -163,12 +160,12 @@ export const createSmartPreloader = () => {
   };
 
   return {
-    add: (importFunc: () => Promise<any>) => {
-      preloadQueue.push(importFunc);
-      // Start processing after idle
-      if (typeof requestIdleCallback !== 'undefined') {
-        requestIdleCallback(() => processQueue());
-      } else {
+add: (importFunc: () => Promise<any>) => {,
+preloadQueue.push(importFunc);
+// Start processing after idle
+if (typeof requestIdleCallback !== 'undefined') {
+requestIdleCallback(() => processQueue());
+} else {
         setTimeout(() => processQueue(), 0);
       }
     },

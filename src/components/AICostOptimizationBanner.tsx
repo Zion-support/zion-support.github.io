@@ -1,5 +1,7 @@
 import React from 'react';
-import { DollarSign, TrendingDown, Zap, Link, ArrowRight } from 'lucide-react';
+import {
+
+} from 'lucide-react';
 
 const AICostOptimizationBanner: React.FC = () => {
   const costOptimizationContent = [

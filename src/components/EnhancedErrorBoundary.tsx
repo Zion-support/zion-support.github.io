@@ -1,5 +1,7 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
+import {
+
+} from 'lucide-react';
 
 interface Props {
   children: ReactNode;
@@ -8,10 +10,10 @@ interface Props {
 }
 
 interface State {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorId: string;
+hasError: boolean;
+error: Error | null;
+errorInfo: ErrorInfo | null;
+errorId: string;
 }
 
 class EnhancedErrorBoundary extends Component<Props, State> {
@@ -208,13 +210,15 @@ ${this.state.error?.stack}
               </button>
             </div>
 
-            {process.env.NODE_ENV === 'development' && this.state.errorInfo && (
-              <details className="mt-6 text-left">
-                <summary className="cursor-pointer text-sm font-medium text-gray-700 hover:text-gray-900">
-                  Development Details
-                </summary>
-                <pre className="mt-2 text-xs text-gray-600 bg-gray-100 p-3 rounded overflow-auto max-h-64">
-                  {this.state.error?.stack}
+            {
+process.env.NODE_ENV === 'development' && this.state.errorInfo && (
+<details className="mt-6 text-left">
+<summary className="cursor-pointer text-sm font-medium text-gray-700 hover:text-gray-900">,
+Development Details
+</summary>
+<pre className="mt-2 text-xs text-gray-600 bg-gray-100 p-3 rounded overflow-auto max-h-64">
+{this.state.error?.stack
+}
                   {this.state.errorInfo.componentStack}
                 </pre>
               </details>

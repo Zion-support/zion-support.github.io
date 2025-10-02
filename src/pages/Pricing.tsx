@@ -1,6 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Check, Star, Zap, Shield, Crown } from 'lucide-react';
+import {
+Link
+} from 'react-router-dom';
+import {
+
+} from 'lucide-react';
 
 const Pricing: React.FC = () => {
   const pricingPlans = [
@@ -210,11 +214,12 @@ const Pricing: React.FC = () => {
 
                   <Link
                     to={plan.name === 'Enterprise' ? '/contact' : '/demo'}
-                    className={`block w-full text-center px-6 py-3 rounded-lg font-semibold transition-colors ${
-                      plan.popular
-                        ? 'bg-blue-600 text-white hover:bg-blue-700'
-                        : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-                    }`}
+                    className={
+`block w-full text-center px-6 py-3 rounded-lg font-semibold transition-colors ${
+plan.popular
+? 'bg-blue-600 text-white hover:bg-blue-700',
+: 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+}`}
                   >
                     {plan.cta}
                   </Link>

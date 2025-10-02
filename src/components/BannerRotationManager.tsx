@@ -19,14 +19,14 @@ const bannerComponents = {
 export type BannerKey = keyof typeof bannerComponents;
 
 interface BannerRotationManagerProps {
-  /** Array of banner keys to display in rotation */
-  banners?: BannerKey[];
-  /** Rotation interval in milliseconds (default: 8000) */
-  interval?: number;
-  /** Whether to auto-rotate banners (default: true) */
-  autoRotate?: boolean;
-  /** Maximum number of banners to show (default: 3) */
-  maxBanners?: number;
+/** Array of banner keys to display in rotation */
+banners?: BannerKey[];
+/** Rotation interval in milliseconds (default: 8000) */,
+interval?: number;
+/** Whether to auto-rotate banners (default: true) */,
+autoRotate?: boolean;
+/** Maximum number of banners to show (default: 3) */,
+maxBanners?: number;
 }
 
 const LoadingFallback = () => (

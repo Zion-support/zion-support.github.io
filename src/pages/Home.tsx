@@ -1,7 +1,13 @@
 import React from 'react';
-import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
-// Icon imports removed for compatibility
+import {
+Link
+} from "react-router-dom";
+import {
+Helmet
+} from "react-helmet-async";
+import {
+
+} from "lucide-react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import NewServicesPromoBanner2026 from "../components/NewServicesPromoBanner2026";
@@ -22,46 +28,46 @@ const Home = () => {
       featured: true
     },
     {
-      id: '2',
-      title: 'Quantum AI Breakthrough: Solving Impossible Problems in Seconds',
-      summary: 'Explore quantum-enhanced AI delivering 500x faster results and revolutionizing computational capabilities.',
-      category: 'Quantum Computing',
-      date: '2025-01-10',
-      readMinutes: 20,
-      featured: false
-    },
+id: '2',
+title: 'Quantum AI Breakthrough: Solving Impossible Problems in Seconds',
+summary: 'Explore quantum-enhanced AI delivering 500x faster results and revolutionizing computational capabilities.',
+category: 'Quantum Computing',
+date: '2025-01-10',
+readMinutes: 20,
+featured: false
+}
     {
-      id: '3',
-      title: 'Manufacturing AI Transformation: $50M Savings & 95% Efficiency',
-      summary: 'See how a Fortune 500 manufacturer achieved $50M annual savings and 95% efficiency improvements.',
-      category: 'Success Story',
-      date: '2025-01-05',
-      readMinutes: 15,
-      featured: true
-    }
+id: '3',
+title: 'Manufacturing AI Transformation: $50M Savings & 95% Efficiency',
+summary: 'See how a Fortune 500 manufacturer achieved $50M annual savings and 95% efficiency improvements.',
+category: 'Success Story',
+date: '2025-01-05',
+readMinutes: 15,
+featured: true
+}
   ];
-  const highlightedPosts = [
+
     {
-      slug: 'ai-revolution-2026',
-      title: 'AI Revolution 2026: The Next Frontier of Enterprise Intelligence',
-      description: 'Discover autonomous AI agents, neural interfaces, and predictive intelligence systems achieving 300% productivity gains.',
-      category: 'AI Innovation',
+      slug: 'ai-revolution-2026'
+      title: 'AI Revolution 2026: The Next Frontier of Enterprise Intelligence'
+      description: 'Discover autonomous AI agents, neural interfaces, and predictive intelligence systems achieving 300% productivity gains.'
+      category: 'AI Innovation'
       publishedAt: '2025-01-15'
-    },
-    {
-      slug: 'quantum-ai-breakthrough',
-      title: 'Quantum AI Breakthrough: Solving Impossible Problems in Seconds',
-      description: 'Explore quantum-enhanced AI delivering 500x faster results and revolutionizing computational capabilities.',
-      category: 'Quantum Computing',
-      publishedAt: '2025-01-10'
-    },
-    {
-      slug: 'manufacturing-success',
-      title: 'Manufacturing AI Transformation: $50M Savings & 95% Efficiency',
-      description: 'See how a Fortune 500 manufacturer achieved $50M annual savings and 95% efficiency improvements.',
-      category: 'Success Story',
-      publishedAt: '2025-01-05'
     }
+    {
+slug: 'quantum-ai-breakthrough',
+title: 'Quantum AI Breakthrough: Solving Impossible Problems in Seconds',
+description: 'Explore quantum-enhanced AI delivering 500x faster results and revolutionizing computational capabilities.',
+category: 'Quantum Computing',
+publishedAt: '2025-01-10'
+}
+    {
+slug: 'manufacturing-success',
+title: 'Manufacturing AI Transformation: $50M Savings & 95% Efficiency',
+description: 'See how a Fortune 500 manufacturer achieved $50M annual savings and 95% efficiency improvements.',
+category: 'Success Story',
+publishedAt: '2025-01-05'
+}
   ];
 
   return (
@@ -108,13 +114,13 @@ const Home = () => {
             },
             "image": "https://ziontechgroup.com/og-image.jpg",
             "contactPoint": {
-              "@type": "ContactPoint",
-              "telephone": "+1-302-464-0950",
-              "contactType": "customer service",
-              "availableLanguage": "English",
-              "areaServed": "US",
-              "email": "kleber@ziontechgroup.com"
-            },
+"@type": "ContactPoint",
+"telephone": "+1-302-464-0950",
+"contactType": "customer service",
+"availableLanguage": "English",
+"areaServed": "US",
+"email": "kleber@ziontechgroup.com"
+}
             "sameAs": [
               "https://linkedin.com/company/zion-tech-group",
               "https://twitter.com/ziontechgroup",
@@ -123,62 +129,62 @@ const Home = () => {
             "foundingDate": "2020",
             "numberOfEmployees": "50-100",
             "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "364 E Main St STE 1008",
-              "addressLocality": "Middletown",
-              "addressRegion": "DE",
-              "postalCode": "19709",
-              "addressCountry": "US"
-            },
+"@type": "PostalAddress",
+"streetAddress": "364 E Main St STE 1008",
+"addressLocality": "Middletown",
+"addressRegion": "DE",
+"postalCode": "19709",
+"addressCountry": "US"
+}
             "serviceArea": {
-              "@type": "Country",
-              "name": "United States"
-            },
+"@type": "Country",
+"name": "United States"
+}
             "hasOfferCatalog": {
-              "@type": "OfferCatalog",
-              "name": "AI and IT Solutions",
-              "itemListElement": [
+"@type": "OfferCatalog",
+"name": "AI and IT Solutions",
+"itemListElement": [,
+{
+"@type": "Offer",
+"itemOffered": {,
+"@type": "Service",
+"name": "AI Workflow Automation",
+"description": "Automate complex business processes with AI-powered workflows"
+}
+                }
                 {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "AI Workflow Automation",
-                    "description": "Automate complex business processes with AI-powered workflows"
-                  }
-                },
+"@type": "Offer",
+"itemOffered": {,
+"@type": "Service",
+"name": "AI Virtual Assistant",
+"description": "Intelligent virtual assistants for customer service and support"
+}
+                }
                 {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "AI Virtual Assistant",
-                    "description": "Intelligent virtual assistants for customer service and support"
-                  }
-                },
+"@type": "Offer",
+"itemOffered": {,
+"@type": "Service",
+"name": "AI Data Analytics",
+"description": "Advanced data analytics and insights powered by AI"
+}
+                }
                 {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "AI Data Analytics",
-                    "description": "Advanced data analytics and insights powered by AI"
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Quantum Computing Consulting",
-                    "description": "Expert consulting on quantum computing solutions"
-                  }
+"@type": "Offer",
+"itemOffered": {,
+"@type": "Service",
+"name": "Quantum Computing Consulting",
+"description": "Expert consulting on quantum computing solutions"
+}
                 }
               ]
             },
             "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.8",
-              "reviewCount": "150",
-              "bestRating": "5",
-              "worstRating": "1"
-            }
+"@type": "AggregateRating",
+"ratingValue": "4.8",
+"reviewCount": "150",
+"bestRating": "5",
+"worstRating": "1"
+}
           })}
         </script>
         
@@ -235,6 +241,151 @@ const Home = () => {
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-teal-50">
         <Header />
         
+        {/* 🚀 SEPTEMBER 30, 2025 - MEGA BREAKTHROUGH ANNOUNCEMENT */}
+        <div className="container mx-auto px-6 pt-8">
+          <September30MegaBanner2025 />
+        </div>
+        
+        {/* Enhanced Promotional Banners */}
+        {getFeaturedBanners().slice(0, 4).map((banner) => (
+          <EnhancedPromotionalBanner
+            key={banner.id}
+            banner={banner}
+          />
+        ))}
+        
+        <NewContentAnnouncement />
+        <LatestContentBanner 
+          variant="info"
+          autoRotate
+          rotationInterval={7000}
+        />
+        <NewContentPromoBanner 
+        />
+        {/* Fresh content banner promoting brand-new articles */}
+        <div className="container mx-auto px-6 mt-6">
+          <NewContentAdvertisingBanner />
+          {/* Inline promo for new service */}
+          <div className="mt-4">
+            <ContentPromotionBanner
+              variant="info"
+              title="🧪 New Service: Edge Experimentation Suite"
+              description="Privacy‑first A/B testing at <100ms with scoped IDs and on‑device metrics."
+              ctaText="Learn more"
+              ctaLink="/services/edge-experimentation-suite"
+              dismissible={true}
+            />
+          </div>
+        </div>
+        <div className="container mx-auto px-6 mt-6">
+          <TrendingContentBanner />
+          {/* Inline promotion for brand-new content */}
+          <div className="mt-6 rounded-xl border border-white/10 bg-white/5 p-6">
+            <div className="text-white text-sm mb-4">New this week</div>
+            <div className="grid md:grid-cols-2 gap-4">
+              <Link to="/blog/ai-enterprise-transformation-2027" className="block rounded-lg border border-white/10 p-4 hover:border-indigo-400/40 transition-colors">
+                <div className="text-indigo-300 text-xs mb-2">Enterprise AI</div>
+                <div className="text-white font-semibold">AI Enterprise Transformation 2027</div>
+                <div className="text-zion-slate-light text-sm mt-1">Executive playbook to plan, fund, and scale AI with measurable ROI.</div>
+              </Link>
+              <Link to="/blog/agentic-workflow-orchestration-2026" className="block rounded-lg border border-white/10 p-4 hover:border-emerald-400/40 transition-colors">
+                <div className="text-emerald-300 text-xs mb-2">AI Operations</div>
+                <div className="text-white font-semibold">Agentic Workflow Orchestration 2026</div>
+                <div className="text-zion-slate-light text-sm mt-1">Budgets, KPI‑linked canaries, and rollback for safe velocity.</div>
+              </Link>
+            </div>
+            {/* Freshly added posts */}
+            <div className="grid md:grid-cols-2 gap-4 mt-4">
+              <Link to="/blog/ai-2026-reliability-runbooks-v4" className="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
+                <div className="text-cyan-300 text-xs mb-2">AI Operations</div>
+                <div className="text-white font-semibold">AI 2026: Reliability Runbooks v4</div>
+                <div className="text-zion-slate-light text-sm mt-1">Budgeted actions, KPI canaries, and instant rollback—v4 playbooks.</div>
+              </Link>
+              <Link to="/blog/edge-2026-consentless-metrics-v2" className="block rounded-lg border border-white/10 p-4 hover:border-rose-400/40 transition-colors">
+                <div className="text-rose-300 text-xs mb-2">Analytics</div>
+                <div className="text-white font-semibold">Edge 2026: Consentless Metrics v2</div>
+                <div className="text-zion-slate-light text-sm mt-1">Zero‑PII signals at &lt;100ms with scoped IDs, edge aggregation, DP.</div>
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Newly added content promo */}
+        <div className="container mx-auto px-6 mt-6">
+          <div className="rounded-xl border border-white/10 bg-white/5 p-6">
+            <div className="text-white text-sm mb-4">Just added</div>
+            <div className="grid md:grid-cols-3 gap-4">
+              <Link to="/blog/real-time-decision-engines-2026" className="block rounded-lg border border-white/10 p-4 hover:border-blue-400/40 transition-colors">
+                <div className="text-blue-300 text-xs mb-2">Platform Engineering</div>
+                <div className="text-white font-semibold">Real‑Time Decision Engines 2026</div>
+                <div className="text-zion-slate-light text-sm mt-1">10M/sec under 1ms using warm pools, intent prefetching, and caches.</div>
+              </Link>
+              <Link to="/blog/federated-learning-enterprise-2026" className="block rounded-lg border border-white/10 p-4 hover:border-rose-400/40 transition-colors">
+                <div className="text-rose-300 text-xs mb-2">Machine Learning</div>
+                <div className="text-white font-semibold">Federated Learning 2026</div>
+                <div className="text-zion-slate-light text-sm mt-1">Train across regions with secure aggregation and DP noise—no centralization.</div>
+              </Link>
+              <Link to="/blog/cognitive-financial-modeling-2027" className="block rounded-lg border border-white/10 p-4 hover:border-emerald-400/40 transition-colors">
+                <div className="text-emerald-300 text-xs mb-2">FinTech AI</div>
+                <div className="text-white font-semibold">AI Financial Modeling 2027</div>
+                <div className="text-zion-slate-light text-sm mt-1">95%+ accuracy with KPI‑linked scorecards, evals, and rollback.</div>
+              </Link>
+            </div>
+          </div>
+        </div>
+        
+        {/* OCTOBER 2025 MEGA LAUNCH - 7 Revolutionary Articles */}
+        <div className="container mx-auto px-6 mt-6">
+          <October2025MegaLaunchBanner />
+        </div>
+        
+        {/* SEPTEMBER 30, 2025 - 5 Revolutionary AI Breakthroughs */}
+        <div className="container mx-auto px-6 mt-6 mb-6">
+          <September30NewContentMegaBanner />
+        </div>
+        
+        {/* BREAKTHROUGH CONTENT 2026 - September 30, 2025 */}
+        <div className="container mx-auto px-6 mt-6">
+          <Revolutionary2026ContentMegaBanner />
+        </div>
+        
+        {/* New Comprehensive Promotional Banner */}
+        <div className="container mx-auto px-6 mt-6">
+          <ComprehensivePromoBanner variant="hero" showCount={4} />
+        </div>
+        
+        {/* New Articles Promotional Banner */}
+        <div className="container mx-auto px-6 mt-6">
+          <NewArticlesPromoBanner variant="premium" showCount={3} />
+        </div>
+        
+        {/* New Services Promotional Banner */}
+        <div className="container mx-auto px-6 mt-6">
+          <NewServicesPromoBanner variant="showcase" showCount={3} featuredOnly={true} />
+        </div>
+        
+        {/* Content Promotion Banner */}
+        <ContentPromotionBanner
+          variant="info"
+          title="🚀 Fresh: Incident Playbooks + Privacy‑Preserving Analytics"
+          description="Budgeted actions, approvals, and DP‑backed telemetry you can ship today."
+          ctaText="Read the latest"
+          ctaLink="/blog/ai-incident-response-playbooks-2025"
+          dismissible={true}
+        />
+        {/* Animated background elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-zion-blue rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
+          <div
+            className="absolute -bottom-40 -left-40 w-80 h-80 bg-zion-purple rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"
+            style={{ animationDelay: "2s" }}
+          ></div>
+          <div
+            className="absolute top-40 left-1/2 w-60 h-60 bg-zion-cyan rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"
+            style={{ animationDelay: "4s" }}
+          ></div>
+        </div>
+
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

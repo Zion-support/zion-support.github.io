@@ -1,20 +1,9 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { 
-  Shield, 
-  Search, 
-  AlertTriangle, 
-  CheckCircle, 
-  Clock, 
-  Users, 
-  Lock, 
-  ArrowRight,
-  Phone,
-  Star,
-  Code,
-  Database,
-  Zap,
-  Globe
+import {
+Helmet
+} from 'react-helmet-async';
+import {
+Globe
 } from 'lucide-react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
@@ -433,11 +422,12 @@ const SmartContractAudit: React.FC = () => {
                   </ul>
                   <a
                     href="/contact"
-                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
-                      plan.popular
-                        ? 'bg-red-600 text-white hover:bg-red-700'
-                        : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-                    }`}
+                    className={
+`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
+plan.popular
+? 'bg-red-600 text-white hover:bg-red-700',
+: 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+}`}
                   >
                     Request Quote
                   </a>

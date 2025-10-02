@@ -4,36 +4,35 @@
  */
 
 export interface ErrorInfo {
-  message: string;
-  stack?: string;
-  componentStack?: string;
-  errorBoundary?: string;
-  timestamp: number;
-  userAgent: string;
-  url: string;
-  userId?: string;
-  sessionId?: string;
-  severity: 'low' | 'medium' | 'high' | 'critical';
-  category: 'javascript' | 'network' | 'resource' | 'promise' | 'react' | 'unknown';
+message: string;
+stack?: string;
+componentStack?: string;
+errorBoundary?: string;
+timestamp: number;
+userAgent: string;
+url: string;
+userId?: string;
+sessionId?: string;
+severity: 'low' | 'medium' | 'high' | 'critical';
+category: 'javascript' | 'network' | 'resource' | 'promise' | 'react' | 'unknown';
 }
 
 export interface ErrorReport {
-  errors: ErrorInfo[];
-  totalErrors: number;
-  criticalErrors: number;
-  lastError?: ErrorInfo;
-  errorRate: number;
-  timestamp: number;
+errors: ErrorInfo[];
+totalErrors: number;
+criticalErrors: number;
+lastError?: ErrorInfo;
+errorRate: number;
+timestamp: number;
 }
 
 class EnhancedErrorHandler {
-  private errors: ErrorInfo[] = [];
-  private maxErrors = 100;
-  private isInitialized = false;
-
-  constructor() {
-    this.initialize();
-  }
+private errors: ErrorInfo[] = [];,
+private maxErrors = 100;
+private isInitialized = false;
+constructor() {
+this.initialize();
+}
 
   private initialize(): void {
     if (typeof window === 'undefined') return;

@@ -1,5 +1,7 @@
 import React from 'react';
-import { Sparkles, ArrowRight, TrendingUp, Zap } from 'lucide-react';
+import {
+
+} from 'lucide-react';
 
 const LatestContentBanner2025: React.FC = () => {
   const latestArticles = [
@@ -205,7 +207,7 @@ const LatestContentBanner2025: React.FC = () => {
                     <Zap className="w-4 h-4 text-cyan-400" />
                     {article.readTime || '5 min'}
                   </span>
-                  <span>{article.date ? new Date(article.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : 'Recent'}</span>
+                  <span>{article.date ? new Date(article.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : ''}</span>
                 </div>
 
                 {/* CTA Button */}

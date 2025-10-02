@@ -7,9 +7,9 @@
 import React, { lazy, ComponentType } from 'react';
 
 export interface LazyLoadConfig {
-  componentPath: string;
-  preload?: boolean;
-  timeout?: number;
+componentPath: string;
+preload?: boolean;
+timeout?: number;
 }
 
 /**
@@ -85,9 +85,9 @@ export function createVisibilityLazyComponent<T extends ComponentType<any>>(
         // This will be triggered when component mounts
         setTimeout(() => importFn().then(resolve), 100);
       } else {
-        // Fallback: load immediately
-        importFn().then(resolve);
-      }
+// Fallback: load immediately,
+importFn().then(resolve);
+}
     });
   });
 }
@@ -113,9 +113,10 @@ class ErrorBoundary extends React.Component<
   { children: React.ReactNode; fallback?: ComponentType<any> },
   { hasError: boolean }
 > {
-  constructor(props: any) {
-    super(props);
-    this.state = { hasError: false };
+constructor(props: any) {,
+super(props);
+this.state = { hasError: false
+};
   }
 
   static getDerivedStateFromError() {

@@ -1,31 +1,23 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  BarChart3, 
-  Users, 
-  Eye, 
-  MousePointer, 
-  TrendingUp, 
-  TrendingDown,
-  Globe,
-  Smartphone,
-  Monitor,
-  Clock,
-  Target,
-  Activity
+import {
+motion
+} from 'framer-motion';
+import {
+Activity
 } from 'lucide-react';
 
 interface AnalyticsData {
-  visitors: {
-    total: number;
-    unique: number;
-    returning: number;
-    new: number;
-  };
+visitors: {,
+total: number;
+unique: number;
+returning: number;
+new: number;
+};
   pageViews: {
-    total: number;
-    average: number;
-    topPages: Array<{ page: string; views: number; bounceRate: number }>;
+total: number;,
+average: number;,
+topPages: Array<{ page: string; views: number; bounceRate: number
+}>;
   };
   traffic: {
     sources: Array<{ source: string; visitors: number; percentage: number }>;
@@ -33,18 +25,19 @@ interface AnalyticsData {
     devices: Array<{ device: string; visitors: number; percentage: number }>;
   };
   performance: {
-    averageLoadTime: number;
-    bounceRate: number;
-    conversionRate: number;
-    engagementScore: number;
-  };
+averageLoadTime: number;,
+bounceRate: number;,
+conversionRate: number;,
+engagementScore: number;
+};
   trends: {
     daily: Array<{ date: string; visitors: number; pageViews: number }>;
     weekly: Array<{ week: string; visitors: number; pageViews: number }>;
   };
   realTime: {
-    activeUsers: number;
-    currentPages: Array<{ page: string; users: number }>;
+activeUsers: number;,
+currentPages: Array<{ page: string; users: number
+}>;
     referrers: Array<{ source: string; users: number }>;
   };
 }

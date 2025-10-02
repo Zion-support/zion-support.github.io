@@ -1,12 +1,14 @@
-import { onCLS, onFCP, onLCP, onTTFB, onINP, Metric } from 'web-vitals';
+import {
+
+} from 'web-vitals';
 
 interface PerformanceMetrics {
-  cls: number | null;
-  inp: number | null;
-  fcp: number | null;
-  lcp: number | null;
-  ttfb: number | null;
-  timestamp: string;
+cls: number | null;
+inp: number | null;
+fcp: number | null;
+lcp: number | null;
+ttfb: number | null;
+timestamp: string;
 }
 
 class PerformanceMonitor {

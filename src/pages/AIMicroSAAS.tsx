@@ -1,6 +1,28 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-// Icon imports removed for compatibility
+import { 
+  Brain,
+  Zap,
+  Shield,
+  BarChart3,
+  MessageSquare,
+  FileText,
+  Users
+  CheckCircle
+  ArrowRight
+  DollarSign
+  Clock
+  Star
+  TrendingUp
+  
+  Lock
+  Smartphone
+  Cloud
+  Database
+  Cpu
+  Target
+  Rocket
+} from "lucide-react";
 
 export default function AIMicroSAAS(): React.JSX.Element {
   const microSaaSServices = [
@@ -11,7 +33,7 @@ export default function AIMicroSAAS(): React.JSX.Element {
       price: "$299 - $1,499/month",
       eta: "1-2 weeks",
       category: "Content AI",
-      icon: undefined,
+      icon: FileText,
       features: [
         "AI-generated blog posts, social media content, and email campaigns",
         "SEO optimization with real-time keyword analysis",
@@ -28,7 +50,7 @@ export default function AIMicroSAAS(): React.JSX.Element {
       ],
       useCases: ["Marketing agencies", "E-commerce brands", "SaaS companies", "Content creators"],
       marketSize: "$8.2B content marketing market",
-      link: "/contact"
+      link: "/contact",
     },
     {
       id: "smart-automation-hub",
@@ -37,7 +59,7 @@ export default function AIMicroSAAS(): React.JSX.Element {
       price: "$199 - $999/month",
       eta: "1-2 weeks",
       category: "Process Automation",
-      icon: undefined,
+      icon: Zap,
       features: [
         "Visual workflow builder with drag-and-drop interface",
         "500+ pre-built integrations (Slack, Salesforce, HubSpot, etc.)",
@@ -54,7 +76,7 @@ export default function AIMicroSAAS(): React.JSX.Element {
       ],
       useCases: ["HR departments", "Sales teams", "Customer support", "Operations"],
       marketSize: "$13.8B automation market",
-      link: "/contact"
+      link: "/contact",
     },
     {
       id: "ai-analytics-dashboard",
@@ -63,7 +85,7 @@ export default function AIMicroSAAS(): React.JSX.Element {
       price: "$399 - $1,999/month",
       eta: "2-3 weeks",
       category: "Business Intelligence",
-      icon: undefined,
+      icon: BarChart3,
       features: [
         "Real-time data visualization and custom dashboards",
         "AI-powered insights and anomaly detection",
@@ -80,7 +102,7 @@ export default function AIMicroSAAS(): React.JSX.Element {
       ],
       useCases: ["C-level executives", "Marketing managers", "Sales directors", "Operations teams"],
       marketSize: "$33.3B business intelligence market",
-      link: "/contact"
+      link: "/contact",
     },
     {
       id: "customer-intelligence-platform",
@@ -89,7 +111,7 @@ export default function AIMicroSAAS(): React.JSX.Element {
       price: "$599 - $2,499/month",
       eta: "2-4 weeks",
       category: "Customer Analytics",
-      icon: undefined,
+      icon: Users,
       features: [
         "Real-time customer journey mapping",
         "AI-powered segmentation and targeting",
@@ -106,7 +128,7 @@ export default function AIMicroSAAS(): React.JSX.Element {
       ],
       useCases: ["E-commerce platforms", "SaaS companies", "Retail chains", "Financial services"],
       marketSize: "$15.8B customer analytics market",
-      link: "/contact"
+      link: "/contact",
     },
     {
       id: "ai-security-monitor",
@@ -115,7 +137,7 @@ export default function AIMicroSAAS(): React.JSX.Element {
       price: "$799 - $3,999/month",
       eta: "2-3 weeks",
       category: "Cybersecurity",
-      icon: undefined,
+      icon: Shield,
       features: [
         "AI-powered threat detection and response",
         "Automated incident response workflows",
@@ -132,7 +154,7 @@ export default function AIMicroSAAS(): React.JSX.Element {
       ],
       useCases: ["Healthcare organizations", "Financial institutions", "Government agencies", "Enterprise companies"],
       marketSize: "$366.1B cybersecurity market",
-      link: "/contact"
+      link: "/contact",
     },
     {
       id: "voice-ai-assistant",
@@ -141,7 +163,7 @@ export default function AIMicroSAAS(): React.JSX.Element {
       price: "$1,299 - $4,999/month",
       eta: "3-4 weeks",
       category: "Voice AI",
-      icon: undefined,
+      icon: MessageSquare,
       features: [
         "Natural language processing with 95% accuracy",
         "Multi-language support with accent adaptation",
@@ -158,8 +180,8 @@ export default function AIMicroSAAS(): React.JSX.Element {
       ],
       useCases: ["Call centers", "Healthcare providers", "Financial services", "E-commerce support"],
       marketSize: "$45.2B conversational AI market",
-      link: "/contact"
-    }
+      link: "/contact",
+    },
   ];
 
   const additionalServices = [
@@ -167,26 +189,26 @@ export default function AIMicroSAAS(): React.JSX.Element {
       name: "AI Document Processor",
       description: "Intelligent document analysis and data extraction",
       price: "$199 - $899/month",
-      features: ["OCR with 99.5% accuracy", "Automated form processing", "Contract analysis", "Compliance checking"]
+      features: ["OCR with 99.5% accuracy", "Automated form processing", "Contract analysis", "Compliance checking"],
     },
     {
       name: "Smart Inventory Manager",
       description: "AI-powered inventory optimization and demand forecasting",
       price: "$299 - $1,299/month",
-      features: ["Demand forecasting", "Automated reordering", "Waste reduction", "Cost optimization"]
+      features: ["Demand forecasting", "Automated reordering", "Waste reduction", "Cost optimization"],
     },
     {
       name: "AI Recruitment Suite",
       description: "Intelligent candidate screening and matching platform",
       price: "$399 - $1,599/month",
-      features: ["Resume parsing", "Skill matching", "Interview scheduling", "Candidate ranking"]
+      features: ["Resume parsing", "Skill matching", "Interview scheduling", "Candidate ranking"],
     },
     {
       name: "Predictive Maintenance AI",
       description: "Equipment monitoring and maintenance prediction",
       price: "$599 - $2,299/month",
-      features: ["IoT sensor integration", "Failure prediction", "Maintenance scheduling", "Cost optimization"]
-    }
+      features: ["IoT sensor integration", "Failure prediction", "Maintenance scheduling", "Cost optimization"],
+    },
   ];
 
   return (

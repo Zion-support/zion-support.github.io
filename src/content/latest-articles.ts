@@ -1,18 +1,18 @@
 export interface LatestArticle {
-  id: string;
-  slug: string;
-  title: string;
-  description: string;
-  excerpt: string;
-  author: string;
-  date: string;
-  category: string;
-  tags: string[];
-  featured: boolean;
-  readTime: string;
-  image?: string;
-  newBadge?: boolean;
-  trending?: boolean;
+id: string;
+slug: string;
+title: string;
+description: string;
+excerpt: string;
+author: string;
+date: string;
+category: string;
+tags: string[];
+featured: boolean;
+readTime: string;
+image?: string;
+newBadge?: boolean;
+trending?: boolean;
 }
 
 export const latestArticles: LatestArticle[] = [

@@ -1,4 +1,6 @@
-import { useEffect, useRef, useState } from 'react';
+import {
+
+} from 'react';
 
 // Simple web vitals reporter
 const reportWebVitals = (metric: { name: string; value: number; delta: number }) => {

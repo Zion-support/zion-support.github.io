@@ -1,4 +1,6 @@
-import { BannerConfig } from '../components/UnifiedBannerSystem';
+import {
+BannerConfig
+} from '../components/UnifiedBannerSystem';
 
 // Centralized banner configuration management
 export const bannerConfigurations: BannerConfig[] = [

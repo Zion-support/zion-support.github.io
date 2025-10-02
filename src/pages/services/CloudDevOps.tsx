@@ -1,19 +1,9 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { 
-  Cloud, 
-  Server, 
-  GitBranch, 
-  Shield, 
-  Zap, 
-  BarChart3, 
-  CheckCircle, 
-  ArrowRight,
-  Phone,
-  Star,
-  TrendingUp,
-  Globe,
-  Monitor
+import {
+Helmet
+} from 'react-helmet-async';
+import {
+Monitor
 } from 'lucide-react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
@@ -370,11 +360,12 @@ const CloudDevOps: React.FC = () => {
                   </ul>
                   <a
                     href="/contact"
-                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
-                      plan.popular
-                        ? 'bg-green-600 text-white hover:bg-green-700'
-                        : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-                    }`}
+                    className={
+`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
+plan.popular
+? 'bg-green-600 text-white hover:bg-green-700',
+: 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+}`}
                   >
                     Get Started
                   </a>

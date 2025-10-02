@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { onCLS, onFID, onFCP, onLCP, onTTFB } from 'web-vitals';
+import {
+
+} from 'web-vitals';
 
 interface PerformanceMetrics {
-  cls: number | null;
-  fid: number | null;
-  fcp: number | null;
-  lcp: number | null;
-  ttfb: number | null;
-  score: number;
+cls: number | null;
+fid: number | null;
+fcp: number | null;
+lcp: number | null;
+ttfb: number | null;
+score: number;
 }
 
 const PerformanceOptimizer: React.FC = () => {
@@ -21,29 +23,30 @@ const PerformanceOptimizer: React.FC = () => {
   });
 
   useEffect(() => {
-    const sendToAnalytics = (metric: any) => {
-      // Send to your analytics service
-      console.log(`Performance metric ${metric.name}:`, metric.value);
+const sendToAnalytics = (metric: any) => {,
+// Send to your analytics service
+console.log(`Performance metric ${metric.name
+}:`, metric.value);
       
       setMetrics(prev => {
         const newMetrics = { ...prev };
         switch (metric.name) {
-          case 'CLS':
-            newMetrics.cls = metric.value;
-            break;
-          case 'FID':
-            newMetrics.fid = metric.value;
-            break;
-          case 'FCP':
-            newMetrics.fcp = metric.value;
-            break;
-          case 'LCP':
-            newMetrics.lcp = metric.value;
-            break;
-          case 'TTFB':
-            newMetrics.ttfb = metric.value;
-            break;
-        }
+case 'CLS':,
+newMetrics.cls = metric.value;
+break;
+case 'FID':,
+newMetrics.fid = metric.value;
+break;
+case 'FCP':,
+newMetrics.fcp = metric.value;
+break;
+case 'LCP':,
+newMetrics.lcp = metric.value;
+break;
+case 'TTFB':,
+newMetrics.ttfb = metric.value;
+break;
+}
         
         // Calculate performance score
         let score = 100;
@@ -111,12 +114,12 @@ const PerformanceOptimizer: React.FC = () => {
           justify-content: center;
         }
         .hero-title {
-          font-size: 3rem;
-          font-weight: 700;
-          color: white;
-          text-align: center;
-          margin-bottom: 1rem;
-        }
+font-size: 3rem;,
+font-weight: 700;,
+color: white;,
+text-align: center;,
+margin-bottom: 1rem;
+}
         @media (max-width: 768px) {
           .hero-title { font-size: 2rem; }
         }

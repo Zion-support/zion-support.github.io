@@ -1,6 +1,34 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-// Icon imports removed for compatibility
+import { 
+  Cloud,
+  Shield,
+  Server,
+  Database,
+  Network,
+  Lock,
+  CheckCircle
+  ArrowRight
+  DollarSign
+  Clock
+  Star
+  TrendingUp
+  Globe
+  Smartphone
+  MessageSquare
+  Zap
+  
+  Settings
+  Monitor
+  Cpu
+  HardDrive
+  Wifi
+  Eye
+  Key
+  AlertTriangle
+  Users
+  Building
+} from "lucide-react";
 
 export default function ITServices(): React.JSX.Element {
   const itServices = [
@@ -19,13 +47,13 @@ export default function ITServices(): React.JSX.Element {
         "Security hardening and compliance setup",
         "Performance monitoring and optimization",
         "Disaster recovery and backup solutions",
-        "24/7 cloud operations support",
+        "24/7 cloud operations support"
       ],
       benefits: [
         "50% reduction in infrastructure costs",
         "99.99% uptime guarantee",
         "3x faster application deployment",
-        "Complete security compliance",
+        "Complete security compliance"
       ],
       useCases: ["Enterprise companies", "SaaS providers", "E-commerce platforms", "Healthcare systems"],
       marketSize: "$623.3B cloud computing market",
@@ -46,13 +74,13 @@ export default function ITServices(): React.JSX.Element {
         "Security information and event management (SIEM)",
         "Multi-factor authentication (MFA) implementation",
         "Continuous security monitoring",
-        "Incident response automation",
+        "Incident response automation"
       ],
       benefits: [
         "95% reduction in security incidents",
         "100% compliance with industry standards",
         "Real-time threat detection and response",
-        "Automated security policy enforcement",
+        "Automated security policy enforcement"
       ],
       useCases: ["Financial institutions", "Government agencies", "Healthcare organizations", "Large enterprises"],
       marketSize: "$366.1B cybersecurity market",
@@ -73,18 +101,18 @@ export default function ITServices(): React.JSX.Element {
         "Automated deployment and rollback",
         "Performance monitoring and alerting",
         "Security scanning and compliance checks",
-        "Developer productivity tools integration",
+        "Developer productivity tools integration"
       ],
       benefits: [
         "10x faster deployment cycles",
         "80% reduction in deployment failures",
         "50% improvement in developer productivity",
-        "Automated quality assurance",
+        "Automated quality assurance"
       ],
       useCases: ["Software companies", "Tech startups", "E-commerce platforms", "Financial services"],
       marketSize: "$10.3B DevOps market",
       link: "/contact"
-    },
+    }
     {
       id: "data-engineering-platform",
       name: "Data Engineering Platform",
@@ -100,17 +128,17 @@ export default function ITServices(): React.JSX.Element {
         "Data quality monitoring and governance",
         "Machine learning pipeline integration",
         "Business intelligence dashboard creation",
-        "Data security and privacy compliance",
+        "Data security and privacy compliance"
       ],
       benefits: [
         "5x faster data processing",
         "Real-time business insights",
         "90% reduction in data errors",
-        "Automated data governance",
+        "Automated data governance"
       ],
       useCases: ["Analytics companies", "E-commerce platforms", "Financial services", "Healthcare systems"],
       marketSize: "$274.3B data analytics market",
-      link: "/contact"
+      link: "/contact",
     },
     {
       id: "network-infrastructure",
@@ -127,17 +155,17 @@ export default function ITServices(): React.JSX.Element {
         "Network monitoring and performance analytics",
         "Wireless infrastructure setup",
         "VPN and remote access solutions",
-        "Disaster recovery network planning",
+        "Disaster recovery network planning"
       ],
       benefits: [
         "60% improvement in network performance",
         "99.9% network uptime guarantee",
         "40% reduction in network costs",
-        "Enhanced security and compliance",
+        "Enhanced security and compliance"
       ],
       useCases: ["Multi-location businesses", "Remote work environments", "Healthcare networks", "Educational institutions"],
       marketSize: "$45.2B SD-WAN market",
-      link: "/contact"
+      link: "/contact",
     },
     {
       id: "compliance-automation",
@@ -154,45 +182,45 @@ export default function ITServices(): React.JSX.Element {
         "Audit trail and evidence collection",
         "Employee training and awareness programs",
         "Incident response and breach notification",
-        "Regulatory change management",
+        "Regulatory change management"
       ],
       benefits: [
         "90% reduction in compliance costs",
         "100% audit readiness",
         "Automated risk management",
-        "Continuous compliance monitoring",
+        "Continuous compliance monitoring"
       ],
       useCases: ["Healthcare providers", "Financial services", "SaaS companies", "Government contractors"],
       marketSize: "$56.9B compliance management market",
-      link: "/contact"
-    }
+      link: "/contact",
+    },
   ];
 
   const additionalITServices = [
     {
       name: "IT Infrastructure Assessment",
-      description: "Comprehensive infrastructure audit and optimization recommendations",
+      description: "Comprehensive infrastructure audit and optimization recommendations"
       price: "$1,500 - $5,000/month",
-      features: ["Performance analysis", "Security assessment", "Cost optimization", "Modernization roadmap"]
+      features: ["Performance analysis", "Security assessment", "Cost optimization", "Modernization roadmap"],
     },
     {
       name: "24/7 IT Support & Monitoring",
-      description: "Round-the-clock IT support with proactive monitoring",
+      description: "Round-the-clock IT support with proactive monitoring"
       price: "$800 - $3,000/month",
-      features: ["24/7 helpdesk", "Proactive monitoring", "Remote support", "SLA guarantees"]
+      features: ["24/7 helpdesk", "Proactive monitoring", "Remote support", "SLA guarantees"],
     },
     {
       name: "Backup & Disaster Recovery",
-      description: "Automated backup solutions with disaster recovery planning",
+      description: "Automated backup solutions with disaster recovery planning"
       price: "$500 - $2,500/month",
-      features: ["Automated backups", "Disaster recovery", "Business continuity", "Data protection"]
+      features: ["Automated backups", "Disaster recovery", "Business continuity", "Data protection"],
     },
     {
       name: "IT Consulting & Strategy",
-      description: "Strategic IT planning and digital transformation consulting",
+      description: "Strategic IT planning and digital transformation consulting"
       price: "$200 - $500/hour",
-      features: ["Strategic planning", "Technology roadmap", "Vendor selection", "Implementation guidance"]
-    }
+      features: ["Strategic planning", "Technology roadmap", "Vendor selection", "Implementation guidance"],
+    },
   ];
 
   const industrySolutions = [
@@ -200,26 +228,26 @@ export default function ITServices(): React.JSX.Element {
       industry: "Healthcare",
       solutions: ["HIPAA compliance", "Patient data security", "Telemedicine infrastructure", "Medical device integration"],
       icon: Building,
-      color: "from-green-500 to-teal-500"
+      color: "from-green-500 to-teal-500",
     },
     {
       industry: "Financial Services",
       solutions: ["PCI DSS compliance", "Fraud detection systems", "Risk management", "Regulatory reporting"],
       icon: DollarSign,
-      color: "from-blue-500 to-indigo-500"
+      color: "from-blue-500 to-indigo-500",
     },
     {
       industry: "E-commerce",
       solutions: ["Scalable infrastructure", "Payment security", "Inventory management", "Customer analytics"],
       icon: Globe,
-      color: "from-purple-500 to-pink-500"
+      color: "from-purple-500 to-pink-500",
     },
     {
       industry: "Manufacturing",
       solutions: ["IoT integration", "Predictive maintenance", "Supply chain optimization", "Quality control systems"],
       icon: Cpu,
-      color: "from-orange-500 to-red-500"
-    }
+      color: "from-orange-500 to-red-500",
+    },
   ];
 
   return (

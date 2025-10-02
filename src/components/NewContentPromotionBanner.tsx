@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 
 interface NewContentPromotionBannerProps {
-  variant?: 'info' | 'success' | 'warning' | 'error' | 'default' | 'premium';
-  title?: string;
-  description?: string;
-  ctaText?: string;
-  ctaLink?: string;
-  dismissible?: boolean;
-  className?: string;
+variant?: 'info' | 'success' | 'warning' | 'error' | 'default' | 'premium';
+title?: string;
+description?: string;
+ctaText?: string;
+ctaLink?: string;
+dismissible?: boolean;
+className?: string;
 }
 
 const NewContentPromotionBanner: React.FC<NewContentPromotionBannerProps> = ({
