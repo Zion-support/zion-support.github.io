@@ -17,7 +17,7 @@ errorId: string;
 }
 
 class EnhancedErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {,
+  constructor(props: Props) {
     super(props);
     this.state = {
       hasError: false,,
@@ -27,15 +27,15 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     };
   }
 
-  static getDerivedStateFromError(error: Error): Partial<State> {,
+  static getDerivedStateFromError(error: Error): Partial<State> {
     return {
-      hasError: true,,
+      hasError: true,
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
       errorInfo
@@ -55,18 +55,18 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     }
   }
 
-  reportError = (error: Error, errorInfo: ErrorInfo) => {,
+  reportError = (error: Error, errorInfo: ErrorInfo) => {
     // In a real application, you would send this to an error reporting service
     // like Sentry, LogRocket, or Bugsnag
     const errorReport = {
-      errorId: this.state.errorId,,
-      message: error.message,,
-      stack: error.stack,,
-      componentStack: errorInfo.componentStack,,
-      timestamp: new Date().toISOString(),,
-      userAgent: navigator.userAgent,,
-      url: window.location.href,,
-      userId: this.getUserId(),,
+      errorId: this.state.errorId,
+      message: error.message,
+      stack: error.stack,
+      componentStack: errorInfo.componentStack,
+      timestamp: new Date().toISOString(),
+      userAgent: navigator.userAgent,
+      url: window.location.href,
+      userId: this.getUserId(),
       sessionId: this.getSessionId(),
     };
 
@@ -113,15 +113,15 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
   handleReportError = () => {
     const errorReport = {
-      errorId: this.state.errorId,,
-      message: this.state.error?.message,,
-      stack: this.state.error?.stack,,
-      url: window.location.href,,
+      errorId: this.state.errorId,
+      message: this.state.error?.message,
+      stack: this.state.error?.stack,
+      url: window.location.href,
       timestamp: new Date().toISOString(),
     };
 
     // Open email client with error details
-    const subject = encodeURIComponent(`Error Report - ${this.state.errorId}`);`;
+    const subject = encodeURIComponent(`Error Report - ${this.state.errorId}`);
     const body = encodeURIComponent(`
 Error ID: ${this.state.errorId}
 Error Message: ${this.state.error?.message}
@@ -132,9 +132,9 @@ Please describe what you were doing when this error occurred: [Your description 
 
 Stack Trace:
 ${this.state.error?.stack}
-    `);`;
+    `);
 
-    window.open(`mailto:kleber@ziontechgroup.com?subject=${subject}&body=${body}`);`;
+    window.open(`mailto:kleber@ziontechgroup.com?subject=${subject}&body=${body}`);
   };
 
   render() {
@@ -172,7 +172,7 @@ ${this.state.error?.stack}
             <div className="flex flex-col sm: flex-row gap-3 justify-center">";,
               <button
                 onClick={this.handleRetry}
-                className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors",
+                className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
               >
                 <RefreshCw className="w-4 h-4 mr-2" />";
                 Try Again
@@ -180,7 +180,7 @@ ${this.state.error?.stack}
               
               <button
                 onClick={this.handleGoHome}
-                className="inline-flex items-center px-4 py-2 bg-gray-600 text-white rounded-lg hover: bg-gray-700 transition-colors",
+                className="inline-flex items-center px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
               >
                 <Home className="w-4 h-4 mr-2" />";
                 Go Home
@@ -188,7 +188,7 @@ ${this.state.error?.stack}
               
               <button
                 onClick={this.handleReload}
-                className="inline-flex items-center px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover: bg-gray-50 transition-colors",
+                className="inline-flex items-center px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
               >
                 <RefreshCw className="w-4 h-4 mr-2" />";
                 Reload Page
@@ -201,7 +201,7 @@ ${this.state.error?.stack}
               </p>
               <button
                 onClick={this.handleReportError}
-                className="inline-flex items-center px-4 py-2 text-blue-600 hover: text-blue-700 transition-colors",
+                className="inline-flex items-center px-4 py-2 text-blue-600 hover:text-blue-700 transition-colors"
               >
                 <Mail className="w-4 h-4 mr-2" />";
                 Report Error

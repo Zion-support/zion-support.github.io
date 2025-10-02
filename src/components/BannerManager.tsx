@@ -13,11 +13,11 @@ interface Banner {
   icon?: string;
 }
 
-const BannerManager: React.FC = () => {,
+const BannerManager: React.FC = () => {
   const [currentBannerIndex, setCurrentBannerIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
 
-  const banners: Banner[] = [,
+  const banners: Banner[] = [
     {
       id: 'ai-solutions',';,
       title: '🚀 Revolutionary AI Solutions',';,
@@ -79,7 +79,7 @@ const BannerManager: React.FC = () => {,
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 50 }}
           transition={{ duration: 0.5 }}
-          className={`${getBannerStyles(currentBanner.type)} py-4 px-6`}`;
+          className={`${getBannerStyles(currentBanner.type)} py-4 px-6`}
         >
           <div className="container mx-auto flex items-center justify-between">";
             <div className="flex items-center space-x-4">";
@@ -99,14 +99,15 @@ const BannerManager: React.FC = () => {,
               
               <button
                 onClick={() => setIsVisible(false)}
-                className="text-white hover: text-gray-200 transition-colors",
+                className="text-white hover:text-gray-200 transition-colors"
               >
                 ✕
               </button>
             </div>
           </div>
         </motion.div>
-      </AnimatePresence>
+        </AnimatePresence>
+      )}
 
       {/* Banner Indicators */}
       <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2">";
@@ -114,9 +115,9 @@ const BannerManager: React.FC = () => {,
           <button
             key={index}
             onClick={() => setCurrentBannerIndex(index)}
-            className={`w-2 h-2 rounded-full transition-colors ${`;
+            className={`w-2 h-2 rounded-full transition-colors ${
               index === currentBannerIndex ? 'bg-white' : 'bg-white bg-opacity-50'
-            }`}`;
+            }`}
           />
         ))}
       </div>
