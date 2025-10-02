@@ -169,6 +169,15 @@ export const posts: BlogPost[] = [
     category: "Edge Computing",
     publishedAt: "2025-09-30",
     featured: true,
+    readTime: "10 min read"
+  },
+  {
+    slug: "ai-governance-pr-policy-tests-2027-q4",
+    title: "AI Governance: PR Policy Tests Q4 2027 — Ship Fast, Stay Safe",
+    description: "CI policy tests wired to KPIs to prevent regressions while preserving velocity.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
     readTime: "7 min read"
   },
   {
@@ -204,6 +213,33 @@ export const posts: BlogPost[] = [
     description: "Battle‑tested operational runbooks for agents with KPI‑linked canaries and instant rollback.",
     category: "AI Operations",
     publishedAt: "2026-12-01",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "edge-consentless-analytics-2027",
+    title: "Edge Consentless Analytics 2027: Zero‑PII Insights at <100ms",
+    description: "Scoped IDs, on‑device aggregation, and DP noise for global analytics without PII.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "genai-cache-playbook-2026",
+    title: "GenAI Cache Playbook 2026: Semantic, Programmatic, and Tiered Caches",
+    description: "Stabilize UX and cut costs 30–70% with semantic caches and budget‑aware routing.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "ai-enterprise-cost-guardrails-2026",
+    title: "AI Enterprise Cost Guardrails 2026: Budgets, Tiers, Approvals",
+    description: "Cost SLOs, quality tiers, and approvals that keep spend predictable without hurting quality.",
+    category: "FinOps",
+    publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
   },
@@ -731,7 +767,7 @@ export const posts: BlogPost[] = [
   },
   {
     slug: "ai-incident-response-playbooks-2025",
-    title: "AI Incident Response Playbooks: Contain in <60s with Confidence",
+    title: "AI Incident Response Playbooks 2025: Contain in <60s with Confidence",
     description: "From detections to safe actions: policy-tested playbooks and rollback-ready automations.",
     category: "Cybersecurity",
     publishedAt: "2025-10-12",
