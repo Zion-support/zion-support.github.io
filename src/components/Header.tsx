@@ -35,7 +35,7 @@ const Header: React.FC = () => {,
             </Link>
             <a 
               href="/contact" 
-              className="bg-blue-600 text-white px-6 py-2 rounded-lg hover: bg-blue-700 transition-colors",
+              className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
             >
               Get Started
             </a>
@@ -43,7 +43,7 @@ const Header: React.FC = () => {,
 
           {/* Mobile Menu Button */}
           <button
-            className="md: hidden p-2",
+            className="md:hidden p-2"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle mobile menu"
           >
@@ -68,35 +68,35 @@ onClick={() => setIsMobileMenuOpen(false)
               </Link>
               <Link 
                 to="/services/catalog" 
-                className="text-gray-600 hover: text-blue-600 transition-colors",
+                className="text-gray-600 hover:text-blue-600 transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Services Catalog
               </Link>
               <Link 
                 to="/solutions" 
-                className="text-gray-600 hover: text-blue-600 transition-colors",
+                className="text-gray-600 hover:text-blue-600 transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Solutions
               </Link>
               <Link 
                 to="/about" 
-                className="text-gray-600 hover: text-blue-600 transition-colors",
+                className="text-gray-600 hover:text-blue-600 transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 About
               </Link>
               <Link 
                 to="/contact" 
-                className="text-gray-600 hover: text-blue-600 transition-colors",
+                className="text-gray-600 hover:text-blue-600 transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Contact
               </Link>
               <a 
                 href="/contact" 
-                className="bg-blue-600 text-white px-6 py-2 rounded-lg hover: bg-blue-700 transition-colors text-center",
+                className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors text-center"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Get Started

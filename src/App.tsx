@@ -34,7 +34,28 @@ import SitemapPage from "./pages/Sitemap";
 // Data
 import { bannerData } from "./data/bannerData";
 
-// Loading component
+// Optional UI components (guarded usage)
+// import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+// import PerformanceOptimizer from './components/PerformanceOptimizer';
+// import PerformanceMonitor from './components/EnhancedPerformanceMonitor';
+// import NotificationSystem from './components/NotificationSystem';
+
+// Lazy loaded pages (fallback to minimal if not present)
+const HomePage = React.lazy(() => import('./pages/Home').catch(() => import('./pages/Home')));
+const AboutPage = React.lazy(() => import('./pages/About').catch(() => import('./pages/About')));
+const ContactPage = React.lazy(() => import('./pages/Contact').catch(() => import('./pages/Contact')));
+const ServicesPage = React.lazy(() => import('./pages/ComprehensiveServices').catch(() => import('./pages/ComprehensiveServices')));
+const SolutionsPage = React.lazy(() => import('./pages/AISolutions').catch(() => import('./pages/AISolutions')));
+const BlogPage = React.lazy(() => import('./pages/BlogPage').catch(() => import('./pages/BlogPage')));
+const CaseStudiesPage = React.lazy(() => import('./pages/CaseStudiesPage').catch(() => import('./pages/CaseStudiesPage')));
+const Resources = React.lazy(() => import('./pages/Resources').catch(() => import('./pages/Resources')));
+const Privacy = React.lazy(() => import('./pages/Privacy').catch(() => import('./pages/Privacy')));
+const Terms = React.lazy(() => import('./pages/Terms').catch(() => import('./pages/Terms')));
+const Team = React.lazy(() => import('./pages/Team').catch(() => import('./pages/Team')));
+const SupportPage = React.lazy(() => import('./pages/Support').catch(() => import('./pages/Support')));
+const SitemapPage = React.lazy(() => import('./pages/Sitemap').catch(() => import('./pages/Sitemap')));
+const CookiesPage = React.lazy(() => import('./pages/Cookies').catch(() => import('./pages/Cookies')));
+
 const LoadingSpinner = () => (
   <div className="flex items-center justify-center min-h-screen">
     <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
@@ -44,7 +65,7 @@ const LoadingSpinner = () => (
 const pageVariants = {
   initial: { opacity: 0, y: 20 },
   in: { opacity: 1, y: 0 },
-  out: { opacity: 0, y: -20 }
+  out: { opacity: 0, y: -20 },
 };
 
 const pageTransition = {
@@ -218,10 +239,10 @@ const App: React.FC = () => {
                               </a>
                             </div>
                           </div>
-                        } />
-                      </Routes>
-                    </React.Suspense>
-                  </div>
+                        }
+                      />
+                    </Routes>
+                  </React.Suspense>
                 </div>
               </motion.main>
 
@@ -242,10 +263,7 @@ const App: React.FC = () => {
                   ✕
                 </button>
               </div>
-              <PerformanceOptimizer isVisible={true} onClose={() => setShowPerformanceOptimizer(false)} />
-            </div>
-          </div>
-        )}
+            </motion.main>
 
         {showPerformanceMonitor && (
           <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center" role="dialog" aria-modal="true">
