@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
 =======
 import { Link } from 'react-router-dom';
 import { Calendar, Clock, User, Mail, Phone, CheckCircle, Star, Play } from 'lucide-react';
@@ -450,8 +449,6 @@ const Demo: React.FC = () => {
 
 export default Demo;
 import React, { useState } from 'react';
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3272
 import { Link } from 'react-router-dom';
 import { Calendar, Clock, User, Mail, Phone, CheckCircle, Star, Play } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';

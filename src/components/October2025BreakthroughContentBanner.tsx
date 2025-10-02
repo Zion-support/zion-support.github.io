@@ -1,7 +1,6 @@
 
 const October2025BreakthroughContentBanner = () => {
   return (
-<<<<<<< HEAD
     <div className="bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 border border-emerald-400/30 rounded-xl p-6 mb-8 animate-fade-in shadow-2xl">
       <div className="flex items-center justify-center gap-3 mb-4">
         <Sparkles className="w-6 h-6 text-emerald-400 animate-pulse/>
@@ -19,7 +18,6 @@ const October2025BreakthroughContentBanner = () => {
       </div>
       
       <p className="text-white text-lg font-semibold mb-4 text-center">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
         ⚡ 2 BRAND NEW GUIDES RELEASED TODAY: Enterprise AI Automation (400%+ efficiency gains, 70% cost reduction) & ,
         Quantum-AI Hybrid Systems (1000x processing speed, 99.9% accuracy)!
       </p>
@@ -29,36 +27,29 @@ const October2025BreakthroughContentBanner = () => {
         Get battle-tested strategies, implementation roadmaps, and real-world case studies.
       </p>
       
-<<<<<<< HEAD
       <div className="flex flex-col sm: flex-row gap-4 justify-center mb-6">",
 =======
       <div className="flex flex-col sm: flex-row gap-4 justify-center mb-6">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
         <Link
           to="/blog/ai-2025-october-breakthrough-enterprise-automation"
           className="bg-emerald-500 text-white px-6 py-3 rounded-lg font-semibold hover: bg-emerald-600 transition-colors inline-flex items-center justify-center gap-2",
         >
-<<<<<<< HEAD
           <Zap className="w-5 h-5/>
 =======
           <Zap className="w-5 h-5" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           Read Enterprise Automation Guide
         </Link>
         <Link
           to="/blog/ai-2025-october-quantum-ai-hybrid-systems"
           className="bg-cyan-500 text-white px-6 py-3 rounded-lg font-semibold hover: bg-cyan-600 transition-colors inline-flex items-center justify-center gap-2",
         >
-<<<<<<< HEAD
           <Brain className="w-5 h-5/>
 =======
           <Brain className="w-5 h-5" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           Explore Quantum-AI Systems
         </Link>
       </div>
       
-<<<<<<< HEAD
       <div className="grid md: grid-cols-2 gap-6 mb-6">",
         <div className="bg-white/10 rounded-xl p-4">
           <h3 className="text-white font-semibold mb-2 flex items-center">
@@ -102,13 +93,11 @@ const October2025BreakthroughContentBanner = () => {
             </li>
             <li className="flex items-center">";
               <CheckCircle className="w-4 h-4 mr-2 text-emerald-400" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               <span>Complete implementation framework</span>
             </li>
           </ul>
         </div>
         
-<<<<<<< HEAD
         <div className="bg-white/10 rounded-xl p-4">
           <h3 className="text-white font-semibold mb-2 flex items-center">
             <Brain className="w-5 h-5 mr-2 text-cyan-400/>
@@ -150,7 +139,6 @@ const October2025BreakthroughContentBanner = () => {
             </li>
             <li className="flex items-center">";
               <CheckCircle className="w-4 h-4 mr-2 text-cyan-400" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               <span>Real-world applications</span>
             </li>
           </ul>

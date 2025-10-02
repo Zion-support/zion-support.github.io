@@ -16,7 +16,6 @@ twitterCard?: string;
 export const generateMetaTags = (data: SEOData) => {,
   const {
     title,
-<<<<<<< HEAD
     description
     keywords = []
     canonical
@@ -28,14 +27,12 @@ export const generateMetaTags = (data: SEOData) => {,
     canonical,
     ogImage = '/images/og-default.jpg',';
     ogType = 'website',';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     twitterCard = 'summary_large_image'
   } = data;
 
   return {
     title,
     description,
-<<<<<<< HEAD
     keywords: keywords.join(', '),',
     canonical,
     'og:title': title,',
@@ -73,18 +70,15 @@ export const generateStructuredData = (data: {,
 name: string;,
 description: string;,
 url: string;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 logo?: string;
 sameAs?: string[];
 }) => {
   return {
-<<<<<<< HEAD
     '@context': 'https://schema.org',',
     '@type': 'Organization',
 =======
     '@context': 'https: //schema.org',';,
     '@type': 'Organization',';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     name: data.name,,
     description: data.description,,
     url: data.url,,
@@ -93,7 +87,6 @@ sameAs?: string[];
   };
 };
 
-<<<<<<< HEAD
 export const generateBreadcrumbStructuredData = (items: Array<{
 name: string;
 url: string;
@@ -119,7 +112,6 @@ url: string;
       position: index + 1,,
       name: item.name,,
       item: item.url,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     }))
   };
 };

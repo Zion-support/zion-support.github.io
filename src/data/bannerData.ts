@@ -15,7 +15,6 @@ endDate?: string;
 
 export const bannerData: BannerData[] = [,
   {
-<<<<<<< HEAD
     id: 'january-2026-ai-breakthroughs',',
     title: 'Revolutionary AI Breakthroughs - January 2026',',
     subtitle: 'Ultra-Autonomous Enterprise + Quantum Consciousness BI',',
@@ -215,7 +214,6 @@ export const bannerData: BannerData[] = [,
     startDate: '2025-10-01',';,
     endDate: '2026-10-31',
   }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 ];
 
 export const getBannersByCategory = (category: string): BannerData[] => {,

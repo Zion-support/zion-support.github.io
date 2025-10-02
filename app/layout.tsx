@@ -1,6 +1,11 @@
 import React from 'react';
+=======
+import { BrowserRouter as Router } from 'react-router-dom';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 import './globals.css';
 import { Header, Footer } from './components/Navigation';
+import Sidebar from '../components/Sidebar';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -37,12 +42,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 text-gray-900">
+=======
+    <Router>
+      <div className="min-h-screen bg-white text-gray-900">
         <Header />
         <main className="min-h-screen">
           {children}
         </main>
         <Footer />
-      </body>
-    </html>
+      </div>
+    </Router>
   );
 }

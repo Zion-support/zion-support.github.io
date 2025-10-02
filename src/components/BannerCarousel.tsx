@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 interface BannerProps {
 title: string;,
@@ -12,7 +11,6 @@ const BannerCarousel: React.FC = () => {,
 
   const banners: BannerProps[] = [,
     {
-<<<<<<< HEAD
       title: "AI-Powered Business Solutions",",
       description: "Transform your business with cutting-edge AI technology",",
       link: "/services/ai-services",
@@ -38,7 +36,6 @@ const BannerCarousel: React.FC = () => {,
     {
       title: "Enterprise IT Services",";,
       description: "Comprehensive IT solutions for enterprise needs",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       link: "/services/it-services",
     }
   ];

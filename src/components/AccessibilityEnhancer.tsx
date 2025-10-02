@@ -1,6 +1,5 @@
 import React, { useEffect, PropsWithChildren } from 'react';
 
-<<<<<<< HEAD
 const AccessibilityEnhancer: React.FC<PropsWithChildren> = ({ children }) => {
   useEffect(() => {
     // Skip link functionality
@@ -16,7 +15,6 @@ const handleKeyDown = (event: KeyboardEvent) => {,
 if (event.key === 'Tab') {
 document.body.classList.add('keyboard-navigation');
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a267
     };
 
     const handleMouseDown = () => {

@@ -1,15 +1,12 @@
-<<<<<<< HEAD
 import { Link } from "react-router-dom";
 =======
 import {
 Link
 } from "react-router-dom";";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 
 const October2025TechBannerNew = () => {
   const newArticles = [
     {
-<<<<<<< HEAD
       title: "Next-Gen Autonomous Systems",",
       description: "The 2025 Enterprise Revolution",",
       slug: "ai-2025-oct-17-next-gen-autonomous-systems",",
@@ -53,7 +50,6 @@ const October2025TechBannerNew = () => {
       slug: "ai-2025-oct-17-real-time-personalization-engines",";,
       icon: Zap,,
       color: "from-orange-500 to-red-500",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       highlight: "TRENDING",
     }
   ];
@@ -66,7 +62,6 @@ const October2025TechBannerNew = () => {
       className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-8 md: p-12 shadow-2xl my-12",
     >
       {/* Animated background effect */}
-<<<<<<< HEAD
       <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-blue-500/10 animate-pulse"></div>
       {/* Decorative elements */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-purple-500/20 rounded-full blur-3xl"></div>
@@ -80,14 +75,12 @@ const October2025TechBannerNew = () => {
       <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl"></div>";
 
       <div className="relative z-10">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
         {/* Header */}
         <div className="flex items-center justify-center gap-3 mb-6">";
           <motion.div
             animate={{ rotate: 360 }}
             transition={{ duration: 20, repeat: Infinity, ease: "linear" }}";
           >
-<<<<<<< HEAD
             <Sparkles className="w-8 h-8 text-yellow-400/>
           </motion.div>
           <h2 className="text-3xl md: text-4xl font-bold text-white text-center">",
@@ -95,14 +88,12 @@ const October2025TechBannerNew = () => {
             <Sparkles className="w-8 h-8 text-yellow-400" />";
           </motion.div>
           <h2 className="text-3xl md: text-4xl font-bold text-white text-center">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             Fresh AI Insights for October 2025
           </h2>
           <motion.div
             animate={{ rotate: -360 }}
             transition={{ duration: 20, repeat: Infinity, ease: "linear" }}";
           >
-<<<<<<< HEAD
             <Sparkles className="w-8 h-8 text-yellow-400/>
           </motion.div>
         </div>
@@ -114,17 +105,14 @@ const October2025TechBannerNew = () => {
         </div>
 
         <p className="text-lg md: text-xl text-purple-200 text-center mb-10 max-w-3xl mx-auto">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           Explore the latest breakthrough technologies transforming industries worldwide. 
           Our expert team shares cutting-edge insights you can implement today.
         </p>
 
         {/* Articles Grid */}
-<<<<<<< HEAD
         <div className="grid md: grid-cols-3 gap-6 mb-8">",
 =======
         <div className="grid md: grid-cols-3 gap-6 mb-8">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           {newArticles.map((article, index) => (
             <motion.div
               key={article.slug}
@@ -135,11 +123,9 @@ const October2025TechBannerNew = () => {
               className="relative group"
             >
               <Link to={`/blog/${article.slug}`}>`;
-<<<<<<< HEAD
                 <div className="relative bg-white/10 backdrop-blur-lg rounded-xl p-6 h-full border border-white/20 hover: border-white/40 transition-all duration-300">",
 =======
                 <div className="relative bg-white/10 backdrop-blur-lg rounded-xl p-6 h-full border border-white/20 hover: border-white/40 transition-all duration-300">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   {/* Highlight Badge */}
                   <div className={`absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-bold text-white bg-gradient-to-r ${article.color}`}>`;
                     {article.highlight}
@@ -147,7 +133,6 @@ const October2025TechBannerNew = () => {
 
                   {/* Icon */}
                   <div className={`w-14 h-14 rounded-lg bg-gradient-to-br ${article.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>`;
-<<<<<<< HEAD
                     <article.icon className="w-7 h-7 text-white/>
                   </div>
 
@@ -159,7 +144,6 @@ const October2025TechBannerNew = () => {
 
                   {/* Content */}
                   <h3 className="text-xl font-bold text-white mb-2 group-hover: text-purple-300 transition-colors">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     {article.title}
                   </h3>
                   <p className="text-purple-200 text-sm mb-4">";
@@ -167,7 +151,6 @@ const October2025TechBannerNew = () => {
                   </p>
 
                   {/* Read More Link */}
-<<<<<<< HEAD
                   <div className="flex items-center text-purple-300 group-hover: text-purple-100 transition-colors">",
                     <span className="text-sm font-semibold">Read Article</span>
                     <ArrowRight className="w-4 h-4 ml-2 group-hover: translate-x-2 transition-transform/>",
@@ -175,7 +158,6 @@ const October2025TechBannerNew = () => {
                   <div className="flex items-center text-purple-300 group-hover: text-purple-100 transition-colors">";,
                     <span className="text-sm font-semibold">Read Article</span>";
                     <ArrowRight className="w-4 h-4 ml-2 group-hover: translate-x-2 transition-transform" />";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   </div>
                 </div>
               </Link>
@@ -184,23 +166,19 @@ const October2025TechBannerNew = () => {
         </div>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <div className="text-center">
           <div className="inline-flex flex-col sm: flex-row gap-4 items-center justify-center">",
 =======
         <div className="text-center">";
           <div className="inline-flex flex-col sm: flex-row gap-4 items-center justify-center">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             <Link
               to="/blog"
               className="group px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover: from-purple-700 hover:to-pink-700 text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2",
             >
               <span>Explore All Articles</span>
-<<<<<<< HEAD
               <ArrowRight className="w-5 h-5 group-hover: translate-x-1 transition-transform/>",
 =======
               <ArrowRight className="w-5 h-5 group-hover: translate-x-1 transition-transform" />";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </Link>
             <Link
               to="/contact"
@@ -223,7 +201,6 @@ const October2025TechBannerNew = () => {
             key={i}
             className="absolute w-2 h-2 bg-purple-400/30 rounded-full"
             style={{
-<<<<<<< HEAD
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`}},
             animate={{
@@ -246,7 +223,6 @@ const October2025TechBannerNew = () => {
               duration: 3 + Math.random() * 2,,
               repeat: Infinity,,
               delay: Math.random() * 2,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             }}
           />
         ))}

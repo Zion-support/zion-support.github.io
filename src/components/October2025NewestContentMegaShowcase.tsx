@@ -2,7 +2,6 @@
 export default function October2025NewestContentMegaShowcase(): void {
   const newContent = [
     {
-<<<<<<< HEAD
       icon: <Network className="w-8 h-8/>,",
       title: "Autonomous Mesh Intelligence Platform",",
       description: "Self-organizing distributed AI networks with 99.997% uptime",",
@@ -52,7 +51,6 @@ export default function October2025NewestContentMegaShowcase(): void {
       value: "$5.7B",";,
       metric: "58,360% ROI",";,
       link: "/blog/ai-2025-october-neural-symbolic-reasoning-systems",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       gradient: "from-green-500 to-emerald-500",
     }
   ];
@@ -60,7 +58,6 @@ export default function October2025NewestContentMegaShowcase(): void {
   return (
     <section className="relative py-24 bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900 overflow-hidden">";
       {/* Animated Background */}
-<<<<<<< HEAD
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size: 64px_64px]/>",
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse/>
@@ -70,12 +67,10 @@ export default function October2025NewestContentMegaShowcase(): void {
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size: 64px_64px]" />";,
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse" />";
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       </div>
 
       <div className="container mx-auto px-4 relative z-10">";
         {/* Header */}
-<<<<<<< HEAD
         <div className="text-center mb-16 animate-fade-in">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-full border border-purple-500/30 mb-6">
             <Sparkles className="w-5 h-5 text-purple-400/>
@@ -91,7 +86,6 @@ export default function October2025NewestContentMegaShowcase(): void {
           </div>
           
           <h2 className="text-5xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             🚀 Revolutionary New Content 🚀
           </h2>
           
@@ -99,7 +93,6 @@ export default function October2025NewestContentMegaShowcase(): void {
             3 Breakthrough AI Technologies
           </p>
           
-<<<<<<< HEAD
           <div className="flex flex-wrap justify-center gap-6 text-lg">
             <div className="flex items-center gap-2">
               <TrendingUp className="w-5 h-5 text-green-400/>
@@ -109,7 +102,6 @@ export default function October2025NewestContentMegaShowcase(): void {
             <div className="flex items-center gap-2">";
               <TrendingUp className="w-5 h-5 text-green-400" />";
               <span className="text-green-400 font-bold">$26.8B Combined Value</span>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </div>
             <div className="flex items-center gap-2">";
               <span className="text-purple-400 font-bold">3 Fortune 500 Success Stories</span>";
@@ -121,11 +113,9 @@ export default function October2025NewestContentMegaShowcase(): void {
         </div>
 
         {/* Content Grid */}
-<<<<<<< HEAD
         <div className="grid md: grid-cols-3 gap-8 mb-12">",
 =======
         <div className="grid md: grid-cols-3 gap-8 mb-12">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           {newContent.map((item, index) => (
             <Link
               key={index}
@@ -134,21 +124,17 @@ export default function October2025NewestContentMegaShowcase(): void {
             >
               {/* Icon */}
               <div className={`inline-flex p-4 rounded-xl bg-gradient-to-br ${item.gradient} mb-6 group-hover:scale-110 transition-transform duration-300`}>`;
-<<<<<<< HEAD
                 <div className="text-white">
 =======
                 <div className="text-white">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   {item.icon}
                 </div>
               </div>
 
               {/* Title */}
-<<<<<<< HEAD
               <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-purple-300 transition-colors">",
 =======
               <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-purple-300 transition-colors">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 {item.title}
               </h3>
 
@@ -170,7 +156,6 @@ export default function October2025NewestContentMegaShowcase(): void {
               </div>
 
               {/* CTA */}
-<<<<<<< HEAD
               <div className="flex items-center gap-2 text-purple-400 font-semibold group-hover: gap-4 transition-all">",
                 <span>Read Complete Guide</span>
                 <ArrowRight className="w-5 h-5 group-hover: translate-x-2 transition-transform/>",
@@ -178,7 +163,6 @@ export default function October2025NewestContentMegaShowcase(): void {
               <div className="flex items-center gap-2 text-purple-400 font-semibold group-hover: gap-4 transition-all">";,
                 <span>Read Complete Guide</span>
                 <ArrowRight className="w-5 h-5 group-hover: translate-x-2 transition-transform" />";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
 
               {/* Hover Glow Effect */}

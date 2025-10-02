@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 =======
@@ -6,7 +5,6 @@ import React from 'react';';
 import {
 Helmet
 } from 'react-helmet-async';';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 
 interface SEOHeadProps {
 title?: string;,
@@ -19,7 +17,6 @@ twitterCard?: string;,
 structuredData?: object;
 }
 
-<<<<<<< HEAD
 const SEOHead: React.FC<SEOHeadProps> = ({
   title = 'Zion Tech Group — AI, Micro SaaS, and IT Services'
   description = 'Enterprise-grade AI, micro SaaS, and IT solutions. Transform your business with cutting-edge technology and automation.'
@@ -39,13 +36,11 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
   ogType = 'website',';
   twitterCard = 'summary_large_image',';
   structuredData,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;`;
   const fullCanonicalUrl = canonicalUrl || window.location.href;
 
   const defaultStructuredData = {
-<<<<<<< HEAD
     '@context': 'https://schema.org',',
     '@type': 'Organization',
     name: 'Zion Tech Group',
@@ -95,13 +90,11 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
       'https: //linkedin.com/company/zion-tech-group',';,
       'https: //twitter.com/ziontechgroup',';,
     ],
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   };
 
   return (
     <Helmet>
       <title>{fullTitle}</title>
-<<<<<<< HEAD
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <link rel="canonical" href={fullCanonicalUrl} />
@@ -153,7 +146,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link rel="dns-prefetch" href="//www.google-analytics.com" />";
       
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       {/* Structured Data */}
       <script type="application/ld+json">";
         {JSON.stringify(structuredData || defaultStructuredData)}

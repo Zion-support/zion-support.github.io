@@ -4,13 +4,11 @@
  */
 
 export interface CacheOptions {
-<<<<<<< HEAD
 ttl?: number; // Time to live in milliseconds
 strategy?: 'memory' | 'localStorage' | 'sessionStorage';
 =======
 ttl?: number; // Time to live in milliseconds,
 strategy?: 'memory' | 'localStorage' | 'sessionStorage';';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 maxSize?: number; // Maximum number of entries
 }
 
@@ -21,11 +19,9 @@ ttl: number;
 }
 
 class CacheManager {
-<<<<<<< HEAD
   private memoryCache: Map<string, CacheEntry<unknown>> = new Map(),
 =======
   private memoryCache: Map<string, CacheEntry<unknown>> = new Map();,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   private readonly DEFAULT_TTL = 5 * 60 * 1000; // 5 minutes
   private readonly DEFAULT_MAX_SIZE = 100;
 
@@ -38,7 +34,6 @@ class CacheManager {
     options: CacheOptions = {}
   ): void {
     const {
-<<<<<<< HEAD
       ttl = this.DEFAULT_TTL
       strategy = 'memory'
       maxSize = this.DEFAULT_MAX_SIZE
@@ -80,7 +75,6 @@ class CacheManager {
         break;
       case 'sessionStorage':';
         this.setInStorage(key, entry, 'sessionStorage');';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
         break;
     }
   }
@@ -90,7 +84,6 @@ class CacheManager {
    */
   get<T>(
     key: string,,
-<<<<<<< HEAD
     strategy: 'memory' | 'localStorage' | 'sessionStorage' = 'memory): T | null {
     let entry: CacheEntry<T> | null = null,
 
@@ -117,7 +110,6 @@ class CacheManager {
         break;
       case 'sessionStorage':';
         entry = this.getFromStorage(key, 'sessionStorage');';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
         break;
     }
 
@@ -137,7 +129,6 @@ class CacheManager {
    */
   delete(
     key: string,,
-<<<<<<< HEAD
     strategy: 'memory' | 'localStorage' | 'sessionStorage' = 'memory): void {
 switch (strategy) {
 case 'memory':
@@ -158,7 +149,6 @@ case 'localStorage':';
 localStorage.removeItem(key);
 break;
 case 'sessionStorage':';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 sessionStorage.removeItem(key);
 break;
 }
@@ -167,7 +157,6 @@ break;
   /**
    * Clear all cache
    */
-<<<<<<< HEAD
   clear(strategy?: 'memory' | 'localStorage' | 'sessionStorage'): void {;
     if (!strategy || strategy === 'memory') {;
       this.memoryCache.clear();
@@ -185,7 +174,6 @@ break;
       localStorage.clear();
     }
     if (!strategy || strategy === 'sessionStorage') {';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       sessionStorage.clear();
     }
   }
@@ -195,12 +183,10 @@ break;
    */
   has(
     key: string,,
-<<<<<<< HEAD
     strategy: 'memory' | 'localStorage' | 'sessionStorage' = 'memory): boolean {
 =======
     strategy: 'memory' | 'localStorage' | 'sessionStorage' = 'memory',
   ): boolean {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     const value = this.get(key, strategy);
     return value !== null;
   }
@@ -228,7 +214,6 @@ break;
   /**
    * Invalidate cache entries matching a pattern
    */
-<<<<<<< HEAD
   invalidatePattern(pattern: RegExp, strategy: 'memory' | 'localStorage' | 'sessionStorage' = 'memory'): void {',
 switch (strategy) {
 case 'memory':
@@ -236,25 +221,20 @@ case 'memory':
   invalidatePattern(pattern: RegExp, strategy: 'memory' | 'localStorage' | 'sessionStorage' = 'memory'): void {';,
 switch (strategy) {
 case 'memory':';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 Array.from(this.memoryCache.keys())
 .filter(key => pattern.test(key))
 .forEach(key => this.memoryCache.delete(key));
 break;
-<<<<<<< HEAD
 case 'localStorage':
 =======
 case 'localStorage':';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 Object.keys(localStorage)
 .filter(key => pattern.test(key))
 .forEach(key => localStorage.removeItem(key));
 break;
-<<<<<<< HEAD
 case 'sessionStorage':
 =======
 case 'sessionStorage':';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 Object.keys(sessionStorage)
 .filter(key => pattern.test(key))
 .forEach(key => sessionStorage.removeItem(key));
@@ -271,7 +251,6 @@ localStorageSize: number;
 sessionStorageSize: number;
 } {
     return {
-<<<<<<< HEAD
       memorySize: this.memoryCache.size,
       localStorageSize: localStorage.length,
       sessionStorageSize: sessionStorage.length
@@ -279,7 +258,6 @@ sessionStorageSize: number;
       memorySize: this.memoryCache.size,,
       localStorageSize: localStorage.length,,
       sessionStorageSize: sessionStorage.length,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     };
   }
 
@@ -299,12 +277,10 @@ sessionStorageSize: number;
   private setInStorage<T>(
     key: string,,
     entry: CacheEntry<T>,,
-<<<<<<< HEAD
     storage: 'localStorage' | 'sessionStorage): void {
 =======
     storage: 'localStorage' | 'sessionStorage',
   ): void {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     try {
       const storageObj = storage === 'localStorage' ? localStorage : sessionStorage;';
       storageObj.setItem(key, JSON.stringify(entry));
@@ -315,7 +291,6 @@ sessionStorageSize: number;
 
   private getFromStorage<T>(
     key: string,,
-<<<<<<< HEAD
     storage: 'localStorage' | 'sessionStorage): CacheEntry<T> | null {
 try {
 const storageObj = storage === 'localStorage' ? localStorage : sessionStorage;
@@ -324,7 +299,6 @@ const storageObj = storage === 'localStorage' ? localStorage : sessionStorage;
   ): CacheEntry<T> | null {
 try {
 const storageObj = storage === 'localStorage' ? localStorage : sessionStorage;';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 const item = storageObj.getItem(key);
 return item ? JSON.parse(item) : null;
 } catch (error) {
@@ -376,11 +350,9 @@ return item ? JSON.parse(item) : null;
 export const cacheManager = new CacheManager();
 
 // Run cleanup every 5 minutes
-<<<<<<< HEAD
 if (typeof window !== 'undefined') {;
 =======
 if (typeof window !== 'undefined') {';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   setInterval(() => {
     cacheManager.cleanup();
   }, 5 * 60 * 1000);

@@ -29,11 +29,9 @@ export const generateSrcSet = (
 ): string => {
   return breakpoints
     .map(width => `${getOptimizedUrl(baseSrc, { width })} ${width}w`)`;
-<<<<<<< HEAD
     .join(', ');
 =======
     .join(', ');';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 };
 
 /**
@@ -43,7 +41,6 @@ export const generateSizes = (
   config?: { mobile?: string; tablet?: string; desktop?: string }
 ): string => {
   const defaults = {
-<<<<<<< HEAD
     mobile: '100vw',
     tablet: '50vw',
     desktop: '33vw'
@@ -51,13 +48,11 @@ export const generateSizes = (
     mobile: '100vw',';,
     tablet: '50vw',';,
     desktop: '33vw',';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   };
   
   const sizes = { ...defaults, ...config };
   
   return [
-<<<<<<< HEAD
     `(max-width: 640px) ${sizes.mobile}`,
     `(max-width: 1024px) ${sizes.tablet}`,
     sizes.desktop
@@ -67,33 +62,27 @@ export const generateSizes = (
     `(max-width: 1024px) ${sizes.tablet}`,`;
     sizes.desktop,
   ].join(', ');';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 };
 
 /**
  * Get optimized image URL (for CDN or image optimization service)
  */
 export const getOptimizedUrl = (
-<<<<<<< HEAD
   src: string,
 =======
   src: string,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   options: {,
 width?: number;
 height?: number;
 quality?: number;
-<<<<<<< HEAD
 format?: 'webp' | 'avif' | 'jpg' | 'png';
 =======
 format?: 'webp' | 'avif' | 'jpg' | 'png';';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 } = {}
 ): string => {
   // If using a CDN with query parameters
   const params = new URLSearchParams();
   
-<<<<<<< HEAD
   if (options.width) params.append('w', options.width.toString());
   if (options.height) params.append('h', options.height.toString());
   if (options.quality) params.append('q', options.quality.toString());
@@ -104,7 +93,6 @@ format?: 'webp' | 'avif' | 'jpg' | 'png';';
   if (options.quality) params.append('q', options.quality.toString());';
   if (options.format) params.append('fm', options.format);';
   
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   const queryString = params.toString();
   return queryString ? `${src}?${queryString}` : src;`;
 };
@@ -113,11 +101,9 @@ format?: 'webp' | 'avif' | 'jpg' | 'png';';
  * Lazy load images with Intersection Observer
  */
 export const lazyLoadImage = (img: HTMLImageElement): void => {,
-<<<<<<< HEAD
   if ('IntersectionObserver' in window) {;
 =======
   if ('IntersectionObserver' in window) {';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach(entry => {
@@ -138,11 +124,9 @@ export const lazyLoadImage = (img: HTMLImageElement): void => {,
         });
       },
       {
-<<<<<<< HEAD
         rootMargin: '50px', // Start loading 50px before entering viewport',
 =======
         rootMargin: '50px', // Start loading 50px before entering viewport';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       }
     );
     
@@ -161,7 +145,6 @@ export const lazyLoadImage = (img: HTMLImageElement): void => {,
 /**
  * Preload critical images
  */
-<<<<<<< HEAD
 export const preloadImage = (src: string, type: 'image' | 'fetch' = 'image'): void => {',
   const link = document.createElement('link');
   link.rel = 'preload';
@@ -177,7 +160,6 @@ export const preloadImage = (src: string, type: 'image' | 'fetch' = 'image'): vo
   link.href = src;
   
   if (type === 'image') {';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     // Add responsive image hints
     const img = new Image();
     img.src = src;
@@ -210,13 +192,11 @@ export const getImageDimensions = (src: string): Promise<{ width: number; height
     const img = new Image();
     img.onload = () => {
       resolve({
-<<<<<<< HEAD
         width: img.naturalWidth,
         height: img.naturalHeight
 =======
         width: img.naturalWidth,,
         height: img.naturalHeight,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       });
     };
     img.onerror = reject;
@@ -227,7 +207,6 @@ export const getImageDimensions = (src: string): Promise<{ width: number; height
 /**
  * Check if image format is supported
  */
-<<<<<<< HEAD
 export const isFormatSupported = async (format: 'webp' | 'avif'): Promise<boolean> => {',
   if (typeof window === 'undefined') return false;
   const testImages = {
@@ -240,7 +219,6 @@ export const isFormatSupported = async (format: 'webp' | 'avif'): Promise<boolea
   const testImages = {
     webp: 'data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=',';,
     avif: 'data:image/avif;base64,AAAAIGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZk1BMUIAAADybWV0YQAAAAAAAAAoaGRscgAAAAAAAAAAcGljdAAAAAAAAAAAAAAAAGxpYmF2aWYAAAAADnBpdG0AAAAAAAEAAAAeaWxvYwAAAABEAAABAAEAAAABAAABGgAAAB0AAAAoaWluZgAAAAAAAQAAABppbmZlAgAAAAABAABhdjAxQ29sb3IAAAAAamlwcnAAAABLaXBjbwAAABRpc3BlAAAAAAAAAAIAAAACAAAAEHBpeGkAAAAAAwgICAAAAAxhdjFDgQ0MAAAAABNjb2xybmNseAACAAIAAYAAAAAXaXBtYQAAAAAAAAABAAEEAQKDBAAAACVtZGF0EgAKCBgANogQEAwgMg8f8D///8WfhwB8+ErK42A=',';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   };
   
   return new Promise((resolve) => {
@@ -254,7 +232,6 @@ export const isFormatSupported = async (format: 'webp' | 'avif'): Promise<boolea
 /**
  * Get best supported format for the browser
  */
-<<<<<<< HEAD
 export const getBestFormat = async (): Promise<'avif' | 'webp' | 'jpg'> => {;
   if (await isFormatSupported('avif')) return 'avif';
   if (await isFormatSupported('webp')) return 'webp';
@@ -264,27 +241,22 @@ export const getBestFormat = async (): Promise<'avif' | 'webp' | 'jpg'> => {';
   if (await isFormatSupported('avif')) return 'avif';';
   if (await isFormatSupported('webp')) return 'webp';';
   return 'jpg';';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 };
 
 /**
  * Create picture element with multiple formats
  */
 export const createPictureElement = (config: ResponsiveImageConfig): HTMLPictureElement => {,
-<<<<<<< HEAD
   const picture = document.createElement('picture');
 =======
   const picture = document.createElement('picture');';
   
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   // Add source elements for different formats
   const formats = config.formats || ['avif', 'webp'];';
   formats.forEach(format => {
-<<<<<<< HEAD
     const source = document.createElement('source');
 =======
     const source = document.createElement('source');';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     source.type = `image/${format}`;`;
     source.srcset = generateSrcSet(config.src.replace(/\.[^.]+$/, `.${format}`));`;
     if (config.sizes) source.sizes = config.sizes;
@@ -310,7 +282,6 @@ export const createPictureElement = (config: ResponsiveImageConfig): HTMLPicture
  * Progressive image loading with blur-up effect
  */
 export const loadProgressiveImage = (
-<<<<<<< HEAD
   container: HTMLElement,
   config: {,
     placeholder: string; // Low-res placeholder (e.g., 20x20),
@@ -322,7 +293,6 @@ export const loadProgressiveImage = (
     placeholder: string; // Low-res placeholder (e.g., 20x20),
     src: string; // Full resolution image,
     alt: string;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   }
 ): void => {
   // Create placeholder image
@@ -343,14 +313,12 @@ export const loadProgressiveImage = (
     
     // Fade in full image
     requestAnimationFrame(() => {
-<<<<<<< HEAD
       fullImage.style.opacity = '1';
       placeholder.style.opacity = '0';
 =======
       fullImage.style.opacity = '1';';
       placeholder.style.opacity = '0';';
       
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       // Remove placeholder after transition
       setTimeout(() => {
         if (placeholder.parentNode) {
@@ -366,11 +334,9 @@ export const loadProgressiveImage = (
  * Calculate optimal image quality based on network speed
  */
 export const getOptimalQuality = (): number => {
-<<<<<<< HEAD
   if (typeof navigator === 'undefined' || !('connection' in navigator)) {;
 =======
   if (typeof navigator === 'undefined' || !('connection' in navigator)) {';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     return 80; // Default quality
   }
   
@@ -378,7 +344,6 @@ export const getOptimalQuality = (): number => {
   const effectiveType = connection?.effectiveType;
   
   switch (effectiveType) {
-<<<<<<< HEAD
 case '4g':
 return 85;
 case '3g':
@@ -394,7 +359,6 @@ return 70;
 case '2g':';
 return 50;
 case 'slow-2g':';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 return 40;
 default:
 return 80;
@@ -407,7 +371,6 @@ return 80;
 export const estimateDataUsage = (
   width: number,,
   height: number,,
-<<<<<<< HEAD
   format: 'jpg' | 'png' | 'webp' | 'avif' = 'jpg): number => {
   const pixels = width * height;
   const bytesPerPixel = {
@@ -424,7 +387,6 @@ export const estimateDataUsage = (
     webp: 0.3,,
     avif: 0.2,,
     png: 3,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   };
   
   return Math.round(pixels * bytesPerPixel[format]);
@@ -443,11 +405,9 @@ export class ImageLoader {
       this.queue.push({
         src,
         priority,
-<<<<<<< HEAD
         callback: resolve
 =======
         callback: resolve,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       });
       
       this.queue.sort((a, b) => b.priority - a.priority);

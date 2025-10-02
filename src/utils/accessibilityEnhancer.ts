@@ -13,7 +13,6 @@ enableAriaLabels: boolean;
 }
 
 class AccessibilityEnhancer {
-<<<<<<< HEAD
   private config: AccessibilityConfig,
   private observers: MutationObserver[] = [],
   private keyboardListeners: Map<string, (event: KeyboardEvent) => void> = new Map(),
@@ -37,7 +36,6 @@ class AccessibilityEnhancer {
     enableReducedMotion: true,,
     enableFocusIndicators: true,,
     enableAriaLabels: true,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   }) {
     this.config = config;
     this.initializeAccessibility();
@@ -79,7 +77,6 @@ class AccessibilityEnhancer {
    */
   private setupKeyboardNavigation(): void {
     // Skip links for keyboard navigation
-<<<<<<< HEAD
     const skipLink = document.createElement('a');
     skipLink.href = '#main-content';
     skipLink.textContent = 'Skip to main content';
@@ -89,18 +86,15 @@ class AccessibilityEnhancer {
     skipLink.href = '#main-content';';
     skipLink.textContent = 'Skip to main content';';
     skipLink.className = 'sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     document.body.insertBefore(skipLink, document.body.firstChild);
 
     // Tab navigation improvements
     const handleTabNavigation = (event: KeyboardEvent) => {,
-<<<<<<< HEAD
       if (event.key === 'Tab') {;
         document.body.classList.add('keyboard-navigation');
 =======
       if (event.key === 'Tab') {';
         document.body.classList.add('keyboard-navigation');';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       };
     };
 
@@ -108,7 +102,6 @@ class AccessibilityEnhancer {
       document.body.classList.remove('keyboard-navigation');';
     };
 
-<<<<<<< HEAD
     document.addEventListener('keydown', handleTabNavigation);
     document.addEventListener('mousedown', handleMouseNavigation);
     this.keyboardListeners.set('tab-navigation', handleTabNavigation);
@@ -119,7 +112,6 @@ class AccessibilityEnhancer {
 
     this.keyboardListeners.set('tab-navigation', handleTabNavigation);';
     this.keyboardListeners.set('mouse-navigation', handleMouseNavigation);';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   }
 
   /**
@@ -127,7 +119,6 @@ class AccessibilityEnhancer {
    */
   private setupScreenReaderSupport(): void {
     // Add screen reader only text for visual elements
-<<<<<<< HEAD
     this.addScreenReaderText('banner-section', 'Main content banners and announcements');
     this.addScreenReaderText('navigation', 'Main navigation menu');
     this.addScreenReaderText('footer', 'Footer with contact information and links');
@@ -136,7 +127,6 @@ class AccessibilityEnhancer {
     this.addScreenReaderText('navigation', 'Main navigation menu');';
     this.addScreenReaderText('footer', 'Footer with contact information and links');';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     // Setup ARIA landmarks
     this.setupAriaLandmarks();
 
@@ -148,7 +138,6 @@ class AccessibilityEnhancer {
    * Setup high contrast support
    */
   private setupHighContrastSupport(): void {
-<<<<<<< HEAD
 // Detect user's high contrast preference
 const mediaQuery = window.matchMedia('(prefers-contrast: high)');
 const handleContrastChange = (e: MediaQueryListEvent) => {
@@ -156,7 +145,6 @@ const handleContrastChange = (e: MediaQueryListEvent) => {
 // Detect user's high contrast preference';
 const mediaQuery = window.matchMedia('(prefers-contrast: high)');';,
 const handleContrastChange = (e: MediaQueryListEvent) => {,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 if (e.matches) {
 document.documentElement.classList.add('high-contrast');';
 } else {
@@ -164,12 +152,10 @@ document.documentElement.classList.add('high-contrast');';
       }
     };
 
-<<<<<<< HEAD
     mediaQuery.addEventListener('change', handleContrastChange);
 =======
     mediaQuery.addEventListener('change', handleContrastChange);';
     
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     // Apply initial state
     if (mediaQuery.matches) {
       document.documentElement.classList.add('high-contrast');';
@@ -180,13 +166,11 @@ document.documentElement.classList.add('high-contrast');';
    * Setup reduced motion support
    */
   private setupReducedMotionSupport(): void {
-<<<<<<< HEAD
 const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
 const handleMotionChange = (e: MediaQueryListEvent) => {
 =======
 const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');';,
 const handleMotionChange = (e: MediaQueryListEvent) => {,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 if (e.matches) {
 document.documentElement.classList.add('reduce-motion');';
 } else {
@@ -194,12 +178,10 @@ document.documentElement.classList.add('reduce-motion');';
       }
     };
 
-<<<<<<< HEAD
     mediaQuery.addEventListener('change', handleMotionChange);
 =======
     mediaQuery.addEventListener('change', handleMotionChange);';
     
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     // Apply initial state
     if (mediaQuery.matches) {
       document.documentElement.classList.add('reduce-motion');';
@@ -246,13 +228,11 @@ transition-duration: 0.01ms !important;
     });
 
     observer.observe(document.body, {
-<<<<<<< HEAD
       childList: true,
       subtree: true
 =======
       childList: true,,
       subtree: true,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     });
 
     this.observers.push(observer);
@@ -266,11 +246,9 @@ transition-duration: 0.01ms !important;
    */
   private addAriaLabels(element: Element): void {,
     // Add ARIA labels to buttons without text
-<<<<<<< HEAD
     const buttons = element.querySelectorAll('button: not([aria-label]):not([aria-labelledby])');',
 =======
     const buttons = element.querySelectorAll('button: not([aria-label]):not([aria-labelledby])');';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     buttons.forEach((button) => {
       const icon = button.querySelector('svg, i, [class*="icon"]');';
       if (icon && !button.textContent?.trim()) {
@@ -279,11 +257,9 @@ transition-duration: 0.01ms !important;
     });
 
     // Add ARIA labels to links without descriptive text
-<<<<<<< HEAD
     const links = element.querySelectorAll('a: not([aria-label]):not([aria-labelledby])');',
 =======
     const links = element.querySelectorAll('a: not([aria-label]):not([aria-labelledby])');';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     links.forEach((link) => {
       if (!link.textContent?.trim() || link.textContent.trim().length < 3) {
         link.setAttribute('aria-label', this.generateLinkLabel(link));';
@@ -291,11 +267,9 @@ transition-duration: 0.01ms !important;
     });
 
     // Add ARIA labels to images without alt text
-<<<<<<< HEAD
     const images = element.querySelectorAll('img: not([alt])');',
 =======
     const images = element.querySelectorAll('img: not([alt])');';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     images.forEach((img) => {
       img.setAttribute('alt', this.generateImageAlt(img));';
     });
@@ -305,7 +279,6 @@ transition-duration: 0.01ms !important;
    * Setup ARIA landmarks
    */
   private setupAriaLandmarks(): void {
-<<<<<<< HEAD
     const main = document.querySelector('main');
     if (main && !main.getAttribute('role')) {;
       main.setAttribute('role', 'main');
@@ -333,7 +306,6 @@ transition-duration: 0.01ms !important;
     const footer = document.querySelector('footer');';
     if (footer && !footer.getAttribute('role')) {';
       footer.setAttribute('role', 'contentinfo');';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     }
   }
 
@@ -363,11 +335,9 @@ transition-duration: 0.01ms !important;
    * Announce message to screen readers
    */
   announce(message: string): void {,
-<<<<<<< HEAD
     const liveRegion = document.getElementById('live-region');
 =======
     const liveRegion = document.getElementById('live-region');';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     if (liveRegion) {
       liveRegion.textContent = message;
       
@@ -396,7 +366,6 @@ transition-duration: 0.01ms !important;
    */
   private generateButtonLabel(button: Element): string {,
     const className = button.className;
-<<<<<<< HEAD
     const context = button.closest('[class*="banner"], [class*="card"], [class*="section"]');
     if (className.includes('close')) return 'Close';
     if (className.includes('menu')) return 'Menu';
@@ -414,14 +383,12 @@ transition-duration: 0.01ms !important;
     if (className.includes('prev')) return 'Previous';';
     
     return 'Button';';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   }
 
   /**
    * Generate link label
    */
   private generateLinkLabel(link: Element): string {,
-<<<<<<< HEAD
     const href = link.getAttribute('href');
     if (href?.startsWith('#')) return `Go to ${href.substring(1)}`;`;
     if (href?.startsWith('http')) return 'External link';
@@ -432,14 +399,12 @@ transition-duration: 0.01ms !important;
     if (href?.startsWith('http')) return 'External link';';
     
     return 'Link';';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   }
 
   /**
    * Generate image alt text
    */
   private generateImageAlt(img: Element): string {,
-<<<<<<< HEAD
     const src = img.getAttribute('src') || '';
     const className = img.className;
     
@@ -458,7 +423,6 @@ transition-duration: 0.01ms !important;
     if (className.includes('decoration')) return 'Decorative image';';
     
     return 'Image';';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   }
 
   /**
@@ -469,7 +433,6 @@ transition-duration: 0.01ms !important;
     this.observers = [];
     
     this.keyboardListeners.forEach((listener, type) => {
-<<<<<<< HEAD
       if (type === 'tab-navigation') {;
         document.removeEventListener('keydown', listener);
       } else if (type === 'mouse-navigation') {;
@@ -479,7 +442,6 @@ transition-duration: 0.01ms !important;
         document.removeEventListener('keydown', listener);';
       } else if (type === 'mouse-navigation') {';
         document.removeEventListener('mousedown', listener);';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       }
     });
     

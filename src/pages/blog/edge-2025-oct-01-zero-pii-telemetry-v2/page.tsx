@@ -9,7 +9,6 @@ export default function ZeroPIITelemetryV2(): React.JSX.Element {
           name="description"
           content="Scoped IDs, on‑device aggregation, DP noise, and attestations for privacy‑preserving metrics at the edge." /><link
           rel="canonical"
-<<<<<<< HEAD
           href="https://ziontechgroup.com/blog/edge-2025-oct-01-zero-pii-telemetry-v2",
         />
       </Helmet>
@@ -27,7 +26,6 @@ export default function ZeroPIITelemetryV2(): React.JSX.Element {
         <h1 className="text-4xl md: text-5xl font-bold mb-4">Zero‑PII Telemetry v2</h1>";,
         <p className="text-zion-slate-light mb-8">Sub‑100ms, Signed, Differentially Private</p>";
         <div className="prose prose-invert max-w-3xl">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           <p>
             Ship privacy-preserving telemetry in under 100ms using scoped IDs
             on-device aggregation, and differential privacy. Use signed

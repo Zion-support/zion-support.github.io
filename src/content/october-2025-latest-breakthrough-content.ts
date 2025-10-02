@@ -3,7 +3,6 @@
 
 export const octoberLatestBreakthroughContent = [
   {
-<<<<<<< HEAD
     id: "enterprise-digital-twins-revolution",
     title: "Enterprise Digital Twins: AI-Powered Revolution Delivering $850M Success",
     slug: "ai-2025-october-enterprise-digital-twins-revolution",
@@ -199,7 +198,6 @@ export const octoberLatestBreakthroughContent = [
       costSavings: "85%",";,
       productivity: "10x",";,
       market: "$340B",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     }
   }
 ];

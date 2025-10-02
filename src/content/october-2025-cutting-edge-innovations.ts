@@ -1,6 +1,5 @@
 export const octoberCuttingEdgeInnovations = [
   {
-<<<<<<< HEAD
     id: 'quantum-security-networks',
     slug: 'ai-2025-october-quantum-security-networks-enterprise',
     title: 'AI-Powered Quantum Security Networks',
@@ -38,12 +37,10 @@ export const octoberCuttingEdgeInnovations = [
       'Quantum key distribution (QKD) for unhackable communication',';
       'AI-powered threat detection with real-time anomaly analysis',';
       'Zero-trust architecture with microsegmentation',';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       'Proven in Fortune 500 financial institutions'
     ]
   },
   {
-<<<<<<< HEAD
     id: 'neuromorphic-computing',
     slug: 'ai-2025-october-neuromorphic-enterprise-revolution',
     title: 'Neuromorphic Computing Revolution',
@@ -81,12 +78,10 @@ export const octoberCuttingEdgeInnovations = [
       'Intel Loihi 2 and BrainChip Akida deployment guides',';
       'Event-driven sensors for ultra-low power consumption',';
       'Real-time edge AI for autonomous systems',';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       'Proven in BMW autonomous driving and NASA rovers'
     ]
   },
   {
-<<<<<<< HEAD
     id: 'multi-agent-governance',
     slug: 'ai-2025-october-autonomous-multi-agent-governance',
     title: 'Multi-Agent Governance Framework',
@@ -124,14 +119,12 @@ export const octoberCuttingEdgeInnovations = [
       'Multi-layered safety guardrails and circuit breakers',';
       'Human-in-the-loop (HITL) intelligent escalation',';
       'GDPR, HIPAA, SOC 2 compliance automation',';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       'Deployed in JP Morgan Chase and Kaiser Permanente'
     ]
   }
 ];
 
 export const octoberInnovationMetrics = {
-<<<<<<< HEAD
   totalMarket: '$1.009T',',
   averageEfficiency: '98x',',
   combinedCompliance: '99.9%',',
@@ -139,7 +132,6 @@ export const octoberInnovationMetrics = {
   totalMarket: '$1.009T',';,
   averageEfficiency: '98x',';,
   combinedCompliance: '99.9%',';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   enterpriseDeployments: '500+'
 };
 ;

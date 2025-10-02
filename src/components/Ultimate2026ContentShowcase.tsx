@@ -1,14 +1,11 @@
-<<<<<<< HEAD
 import React from 'react';
 =======
 import React from 'react';';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 const Ultimate2026ContentShowcase: React.FC = () => {,
   const showcaseContent = [
     {
       id: 1,,
-<<<<<<< HEAD
       title: "Enterprise AI Transformation Playbook 2026",",
       description: "Complete guide to achieving 95% automation with Fortune 500 case studies and $100M+ savings strategies",",
       slug: "enterprise-ai-transformation-playbook-2026",",
@@ -28,13 +25,11 @@ const Ultimate2026ContentShowcase: React.FC = () => {,
       trending: true,,
       icon: "📊",";,
       impact: "$100M+ Savings",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       featured: true,,
       stats: { savings: "$100M+", automation: "95%", roi: "300%" }";
     },
     {
       id: 2,,
-<<<<<<< HEAD
       title: "AI Security & Compliance Masterclass",",
       description: "Military-grade security protocols, GDPR compliance, and zero-trust architecture for enterprise AI systems",",
       slug: "ai-security-compliance-masterclass-2026",",
@@ -54,13 +49,11 @@ const Ultimate2026ContentShowcase: React.FC = () => {,
       trending: true,,
       icon: "🔒",";,
       impact: "99.99% Security",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       featured: true,,
       stats: { security: "99.99%", compliance: "100%", threats: "0" }";
     },
     {
       id: 3,,
-<<<<<<< HEAD
       title: "Quantum-Neural Computing Implementation",",
       description: "Step-by-step guide to implementing quantum-neural networks with 1000x performance improvements",",
       slug: "quantum-neural-computing-implementation-2026",",
@@ -80,13 +73,11 @@ const Ultimate2026ContentShowcase: React.FC = () => {,
       trending: true,,
       icon: "⚛️",";,
       impact: "1000x Performance",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       featured: true,,
       stats: { performance: "1000x", efficiency: "95%", speed: "Lightning" }";
     },
     {
       id: 4,,
-<<<<<<< HEAD
       title: "Autonomous Operations Framework",",
       description: "Build self-healing systems with 98% automation rates and predictive maintenance capabilities",",
       slug: "autonomous-operations-framework-2026",",
@@ -106,13 +97,11 @@ const Ultimate2026ContentShowcase: React.FC = () => {,
       trending: true,,
       icon: "🤖",";,
       impact: "98% Automation",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       featured: false,,
       stats: { automation: "98%", uptime: "99.9%", efficiency: "85%" }";
     },
     {
       id: 5,,
-<<<<<<< HEAD
       title: "Edge AI Deployment at Enterprise Scale",",
       description: "Distributed AI processing across 10,000+ nodes with real-time decision making and local autonomy",",
       slug: "edge-ai-deployment-enterprise-scale-2026",",
@@ -132,13 +121,11 @@ const Ultimate2026ContentShowcase: React.FC = () => {,
       trending: true,,
       icon: "📡",";,
       impact: "10,000+ Nodes",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       featured: false,,
       stats: { nodes: "10,000+", latency: "<1ms", reliability: "99.9%" }";
     },
     {
       id: 6,,
-<<<<<<< HEAD
       title: "Meta-Cognitive AI Development Guide",",
       description: "Create AI systems that think about thinking with advanced reasoning and self-improvement capabilities",",
       slug: "meta-cognitive-ai-development-guide-2026",",
@@ -158,7 +145,6 @@ const Ultimate2026ContentShowcase: React.FC = () => {,
       trending: true,,
       icon: "🧠",";,
       impact: "Meta-Thinking",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       featured: false,,
       stats: { reasoning: "Advanced", learning: "Self-Improving", accuracy: "98%" }";
     }
@@ -167,7 +153,6 @@ const Ultimate2026ContentShowcase: React.FC = () => {,
   return (
     <div className="py-24 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden">";
       {/* Animated background effects */}
-<<<<<<< HEAD
       <div className="absolute inset-0 overflow-hidden opacity-15">
         <div className="absolute top-0 left-1/3 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
         <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>;
@@ -177,7 +162,6 @@ const Ultimate2026ContentShowcase: React.FC = () => {,
         <div className="absolute top-0 left-1/3 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>";
         <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>';
         <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       </div>
 
       <div className="container mx-auto px-6 relative z-10">";
@@ -188,7 +172,6 @@ const Ultimate2026ContentShowcase: React.FC = () => {,
               animate={{ rotate: [0, 360] }}
               transition={{ duration: 5, repeat: Infinity, ease: "linear" }}";
             >
-<<<<<<< HEAD
               <Sparkles className="w-10 h-10 text-yellow-400/>
             </motion.div>
             <div className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-sm rounded-full border border-blue-500/30">
@@ -222,7 +205,6 @@ const Ultimate2026ContentShowcase: React.FC = () => {,
             Ultimate 2026
           </h2>
           <h3 className="text-5xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             Content Showcase
           </h3>
           
@@ -231,7 +213,6 @@ const Ultimate2026ContentShowcase: React.FC = () => {,
             From quantum-neural computing to autonomous operations - everything you need to lead the AI revolution.
           </p>
 
-<<<<<<< HEAD
           <div className="flex items-center justify-center gap-12 text-center flex-wrap">
             <div className="flex items-center gap-3">
               <Brain className="w-8 h-8 text-purple-400/>
@@ -265,17 +246,14 @@ const Ultimate2026ContentShowcase: React.FC = () => {,
             <div className="flex items-center gap-3">";
               <Users className="w-8 h-8 text-green-400" />";
               <span className="text-xl font-bold text-white">Enterprise Scale</span>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </div>
           </div>
         </div>
 
         {/* Showcase Grid */}
-<<<<<<< HEAD
         <div className="grid grid-cols-1 lg: grid-cols-2 xl:grid-cols-3 gap-8 mb-20">",
 =======
         <div className="grid grid-cols-1 lg: grid-cols-2 xl:grid-cols-3 gap-8 mb-20">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           {showcaseContent.map((content, index) => (
             <motion.div
               key={content.id}
@@ -287,7 +265,6 @@ const Ultimate2026ContentShowcase: React.FC = () => {,
             >
               {/* Featured badge */}
               {content.featured && (
-<<<<<<< HEAD
                 <div className="absolute -top-4 -right-4 z-20">
                   <div className="flex items-center gap-1 px-4 py-2 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-sm font-bold shadow-xl">
                     <Star className="w-4 h-4 fill-current/>
@@ -295,14 +272,12 @@ const Ultimate2026ContentShowcase: React.FC = () => {,
                 <div className="absolute -top-4 -right-4 z-20">";
                   <div className="flex items-center gap-1 px-4 py-2 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-sm font-bold shadow-xl">";
                     <Star className="w-4 h-4 fill-current" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     <span>FEATURED</span>
                   </div>
                 </div>
               )}
 
               {/* Card glow effect */}
-<<<<<<< HEAD
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 via-purple-500/0 to-cyan-500/0 group-hover: from-blue-500/15 group-hover:via-purple-500/15 group-hover:to-cyan-500/15 transition-all duration-700 rounded-3xl"></div>",
               
               <div className="relative bg-white/8 backdrop-blur-xl rounded-3xl p-10 border border-white/15 hover: border-blue-500/50 transition-all duration-500 h-full">",
@@ -316,18 +291,15 @@ const Ultimate2026ContentShowcase: React.FC = () => {,
                 {/* Icon & Badges */}
                 <div className="flex items-start justify-between mb-8">";
                   <div className="text-8xl group-hover: scale-110 transition-transform duration-500">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     {content.icon}
                   </div>
                   <div className="flex flex-col gap-3">";
                     {content.trending && (
-<<<<<<< HEAD
                       <div className="flex items-center gap-1 px-4 py-2 rounded-full bg-gradient-to-r from-red-500 to-pink-500 text-white text-xs font-bold shadow-lg">
                         <TrendingUp className="w-3 h-3/>
 =======
                       <div className="flex items-center gap-1 px-4 py-2 rounded-full bg-gradient-to-r from-red-500 to-pink-500 text-white text-xs font-bold shadow-lg">";
                         <TrendingUp className="w-3 h-3" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                         <span>TRENDING</span>
                       </div>
                     )}
@@ -345,11 +317,9 @@ const Ultimate2026ContentShowcase: React.FC = () => {,
                 </div>
 
                 {/* Title */}
-<<<<<<< HEAD
                 <h3 className="text-3xl font-bold text-white mb-6 group-hover: text-blue-400 transition-colors duration-300 leading-tight">",
 =======
                 <h3 className="text-3xl font-bold text-white mb-6 group-hover: text-blue-400 transition-colors duration-300 leading-tight">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   {content.title}
                 </h3>
 
@@ -376,7 +346,6 @@ const Ultimate2026ContentShowcase: React.FC = () => {,
                 </div>
 
                 {/* Meta Info */}
-<<<<<<< HEAD
                 <div className="flex items-center justify-between text-sm text-gray-400 mb-8 pb-6 border-b border-white/15">
                   <span className="flex items-center gap-2">
                     <Zap className="w-4 h-4 text-blue-400/>
@@ -390,7 +359,6 @@ const Ultimate2026ContentShowcase: React.FC = () => {,
                     {content.readTime}
                   </span>
                   <span>{new Date(content.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </div>
 
                 {/* CTA Button */}
@@ -399,11 +367,9 @@ const Ultimate2026ContentShowcase: React.FC = () => {,
                   className="group/btn flex items-center justify-center gap-3 w-full bg-gradient-to-r from-blue-500 to-purple-600 hover: from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-xl hover:shadow-blue-500/50 transform hover:-translate-y-2",
                 >
                   <span>Access Masterclass</span>
-<<<<<<< HEAD
                   <ArrowRight className="w-5 h-5 group-hover/btn: translate-x-1 transition-transform duration-300/>",
 =======
                   <ArrowRight className="w-5 h-5 group-hover/btn: translate-x-1 transition-transform duration-300" />";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </a>
               </div>
             </motion.div>
@@ -411,7 +377,6 @@ const Ultimate2026ContentShowcase: React.FC = () => {,
         </div>
 
         {/* Ultimate Stats */}
-<<<<<<< HEAD
         <div className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-20">",
           <div className="text-center p-8 bg-white/8 backdrop-blur-xl rounded-2xl border border-white/15">
             <div className="text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-3">
@@ -419,7 +384,6 @@ const Ultimate2026ContentShowcase: React.FC = () => {,
         <div className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-20">";,
           <div className="text-center p-8 bg-white/8 backdrop-blur-xl rounded-2xl border border-white/15">";
             <div className="text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-3">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               1000x
             </div>
             <div className="text-gray-300 text-lg">Performance Boost</div>";
@@ -456,7 +420,6 @@ const Ultimate2026ContentShowcase: React.FC = () => {,
                 Get exclusive access to implementation guides, expert consultations, and Fortune 500 case studies.
               </p>
               
-<<<<<<< HEAD
               <div className="flex flex-col sm: flex-row gap-6 justify-center mb-12">",
                 <div className="flex items-center gap-3 text-blue-300">
                   <DollarSign className="w-6 h-6/>
@@ -490,16 +453,13 @@ const Ultimate2026ContentShowcase: React.FC = () => {,
               </div>
 
               <div className="flex flex-col sm: flex-row gap-6 justify-center">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 <a title="Internal link"
                   href="/contact"
                   className="bg-gradient-to-r from-blue-500 to-purple-600 hover: from-blue-400 hover:to-purple-500 text-white font-bold py-6 px-12 rounded-xl transition-all duration-300 shadow-xl hover:shadow-blue-500/50 flex items-center justify-center gap-3 text-lg",
                 >
-<<<<<<< HEAD
                   <Rocket className="w-6 h-6/>
 =======
                   <Rocket className="w-6 h-6" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   <span>Start Your Transformation</span>
                 </a>
                 <a title="Internal link"
@@ -507,11 +467,9 @@ const Ultimate2026ContentShowcase: React.FC = () => {,
                   className="border-2 border-blue-500 text-blue-400 hover: bg-blue-500 hover:text-white font-bold py-6 px-12 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 text-lg",
                 >
                   <span>Explore All Masterclasses</span>
-<<<<<<< HEAD
                   <ArrowRight className="w-6 h-6/>
 =======
                   <ArrowRight className="w-6 h-6" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </a>
               </div>
             </div>

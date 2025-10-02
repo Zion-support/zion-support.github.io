@@ -4,7 +4,6 @@
  */
 
 export interface AnalyticsEvent {
-<<<<<<< HEAD
   category: string,
   action: string,
   label?: string;
@@ -16,7 +15,6 @@ export interface AnalyticsEvent {
   label?: string;
   value?: number;
   timestamp: string;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   sessionId?: string;
   userId?: string;
   metadata?: Record<string, string | number | boolean>;
@@ -56,7 +54,6 @@ export const initAnalytics = (): void => {
 /**
  * Track custom event
  */
-<<<<<<< HEAD
 export const trackEvent = (event: Partial<AnalyticsEvent>): void => {
   const fullEvent: AnalyticsEvent = {
     category: event.category || 'general',
@@ -96,7 +93,6 @@ export const trackEvent = (event: Partial<AnalyticsEvent>): void => {,
       event_label: fullEvent.label,,
       value: fullEvent.value,,
       ...fullEvent.metadata,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     });
   }
   
@@ -113,7 +109,6 @@ export const trackEvent = (event: Partial<AnalyticsEvent>): void => {,
 export const trackPageView = (path: string, title?: string): void => {,
   const event: PageViewEvent = {,
     path,
-<<<<<<< HEAD
     title: title || document.title,
     referrer: document.referrer,
     timestamp: new Date().toISOString()
@@ -135,13 +130,11 @@ export const trackPageView = (path: string, title?: string): void => {,
     (window as any).gtag('config', 'GA_MEASUREMENT_ID', {';
       page_path: path,,
       page_title: event.title,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     });
   }
   
   // Custom tracking
   trackEvent({
-<<<<<<< HEAD
     category: 'page_view',
     action: 'view',
     label: path,
@@ -151,7 +144,6 @@ export const trackPageView = (path: string, title?: string): void => {,
     action: 'view',';,
     label: path,,
     metadata: event,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   });
 };
 
@@ -160,7 +152,6 @@ export const trackPageView = (path: string, title?: string): void => {,
  */
 export const trackBannerInteraction = (
   bannerId: string,,
-<<<<<<< HEAD
   action: 'impression' | 'click' | 'close',',
   metadata?: Record<string, any>
 ): void => {
@@ -184,7 +175,6 @@ export const trackBannerInteraction = (
       bannerId,
       ...metadata,
     },
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   });
 };
 
@@ -193,7 +183,6 @@ export const trackBannerInteraction = (
  */
 export const trackConversion = (conversion: ConversionEvent): void => {,
   trackEvent({
-<<<<<<< HEAD
     category: 'conversion',
     action: conversion.type,
     value: conversion.value,
@@ -227,7 +216,6 @@ export const trackConversion = (conversion: ConversionEvent): void => {,
       value: conversion.value,,
       currency: 'USD',';,
       transaction_id: generateTransactionId(),,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     });
   }
 };
@@ -236,20 +224,16 @@ export const trackConversion = (conversion: ConversionEvent): void => {,
  * Track user engagement metrics
  */
 export const trackEngagement = (
-<<<<<<< HEAD
   type: 'scroll' | 'time' | 'interaction',',
 =======
   type: 'scroll' | 'time' | 'interaction',';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   value: number,,
   metadata?: Record<string, any>
 ): void => {
   trackEvent({
-<<<<<<< HEAD
     category: 'engagement',',
 =======
     category: 'engagement',';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     action: type,,
     value,
     metadata
@@ -260,7 +244,6 @@ export const trackEngagement = (
  * Track error
  */
 export const trackError = (
-<<<<<<< HEAD
   error: Error,
   context?: string
   severity: 'low' | 'medium' | 'high' | 'critical' = 'medium'
@@ -298,7 +281,6 @@ export const trackError = (
   
   // Send to error tracking service
   if (typeof window !== 'undefined' && (window as any).Sentry) {';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     (window as any).Sentry.captureException(error, {
       contexts: { custom: { context, severity } }
     });
@@ -314,7 +296,6 @@ export const trackFormSubmission = (
   errorMessage?: string
 ): void => {
   trackEvent({
-<<<<<<< HEAD
     category: 'form',
     action: success ? 'submit_success' : 'submit_error',
     label: formName,
@@ -322,7 +303,6 @@ export const trackFormSubmission = (
     category: 'form',';,
     action: success ? 'submit_success' : 'submit_error',';,
     label: formName,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     metadata: {,
       formName,
       errorMessage
@@ -335,7 +315,6 @@ export const trackFormSubmission = (
  */
 export const trackSearch = (query: string, results: number): void => {,
   trackEvent({
-<<<<<<< HEAD
     category: 'search',
     action: 'query',
     label: query,
@@ -353,7 +332,6 @@ export const trackSearch = (query: string, results: number): void => {,
       query,
       resultsCount: results,,
     },
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   });
 };
 
@@ -362,7 +340,6 @@ export const trackSearch = (query: string, results: number): void => {,
  */
 export const trackSocialShare = (platform: string, url: string): void => {,
   trackEvent({
-<<<<<<< HEAD
     category: 'social',
     action: 'share',
     label: platform,
@@ -370,7 +347,6 @@ export const trackSocialShare = (platform: string, url: string): void => {,
     category: 'social',';,
     action: 'share',';,
     label: platform,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     metadata: {,
       platform,
       url
@@ -383,7 +359,6 @@ export const trackSocialShare = (platform: string, url: string): void => {,
  */
 export const trackDownload = (fileName: string, fileType: string): void => {,
   trackEvent({
-<<<<<<< HEAD
     category: 'download',
     action: 'file',
     label: fileName,
@@ -391,7 +366,6 @@ export const trackDownload = (fileName: string, fileType: string): void => {,
     category: 'download',';,
     action: 'file',';,
     label: fileName,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     metadata: {,
       fileName,
       fileType
@@ -403,16 +377,13 @@ export const trackDownload = (fileName: string, fileType: string): void => {,
  * Track video interaction
  */
 export const trackVideo = (
-<<<<<<< HEAD
   action: 'play' | 'pause' | 'complete',',
 =======
   action: 'play' | 'pause' | 'complete',';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   videoId: string,,
   progress?: number
 ): void => {
   trackEvent({
-<<<<<<< HEAD
     category: 'video',',
     action,
     label: videoId,
@@ -422,7 +393,6 @@ export const trackVideo = (
     action,
     label: videoId,,
     value: progress,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     metadata: {,
       videoId,
       progress
@@ -436,11 +406,9 @@ export const trackVideo = (
 const setupAutoTracking = (): void => {
   // Track scroll depth
   let maxScroll = 0;
-<<<<<<< HEAD
   window.addEventListener('scroll', () => {;
 =======
   window.addEventListener('scroll', () => {';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
     if (scrollPercent > maxScroll) {
       maxScroll = scrollPercent;
@@ -460,17 +428,14 @@ const setupAutoTracking = (): void => {
   
   // Track time on page
   const startTime = Date.now();
-<<<<<<< HEAD
   window.addEventListener('beforeunload', () => {;
 =======
   window.addEventListener('beforeunload', () => {';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     const timeOnPage = (Date.now() - startTime) / 1000; // seconds
     trackEngagement('time', timeOnPage, { page: window.location.pathname });';
   });
   
   // Track outbound links
-<<<<<<< HEAD
   document.addEventListener('click', (e) => {;
     const target = e.target as HTMLElement;
     const link = target.closest('a');
@@ -497,7 +462,6 @@ const setupAutoTracking = (): void => {
           text: link.textContent,,
           url: link.href,,
         },
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       });
     }
   });
@@ -509,7 +473,6 @@ const setupAutoTracking = (): void => {
 const sendToAnalytics = async (event: AnalyticsEvent): Promise<void> => {,
   try {
     // Only send in production
-<<<<<<< HEAD
     if (process.env.NODE_ENV !== 'production') return;
     await fetch('/api/analytics', {;
       method: 'POST',',
@@ -528,7 +491,6 @@ const sendToAnalytics = async (event: AnalyticsEvent): Promise<void> => {,
     });
   } catch (error) {
     console.warn('Failed to send analytics: ', error);';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   }
 };
 
@@ -548,11 +510,9 @@ events.shift();
     
     localStorage.setItem(key, JSON.stringify(events));
   } catch (error) {
-<<<<<<< HEAD
     console.warn('Failed to store event locally: ', error);',
 =======
     console.warn('Failed to store event locally: ', error);';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   }
 };
 
@@ -615,7 +575,6 @@ events: AnalyticsEvent[];
 sessionId: string;
 userId: string;
 } => {
-<<<<<<< HEAD
   const stored = localStorage.getItem('analytics_events');
   const events: AnalyticsEvent[] = stored ? JSON.parse(stored) : [],
   
@@ -631,7 +590,6 @@ userId: string;
     events,
     sessionId: getSessionId(),,
     userId: getUserId() || '',';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   };
 };
 

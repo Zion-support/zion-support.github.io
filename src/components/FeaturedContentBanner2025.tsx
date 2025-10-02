@@ -2,7 +2,6 @@
 export default function FeaturedContentBanner2025(): void {
   const featuredContent = [
     {
-<<<<<<< HEAD
       type: 'blog',',
       title: 'AI Autonomous Enterprise Operations: Complete 2025 Guide',',
       excerpt: 'Master autonomous AI operations with proven frameworks achieving 95% automation rates, $2M+ annual savings, and 99.99% uptime through comprehensive implementation strategies.',',
@@ -59,7 +58,6 @@ export default function FeaturedContentBanner2025(): void {
       readTime: '40 min read',';,
       publishDate: 'Jan 25, 2025',
     }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   ];
 
   return (
@@ -79,24 +77,20 @@ export default function FeaturedContentBanner2025(): void {
           </p>
         </div>
 
-<<<<<<< HEAD
         <div className="grid md: grid-cols-3 gap-8 mb-12">",
 =======
         <div className="grid md: grid-cols-3 gap-8 mb-12">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           {featuredContent.map((content, index) => (
             <a
               key={index}
               href={content.href}
               className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20",
             >
-<<<<<<< HEAD
               <div className="flex items-start gap-4 mb-6">
                 <div className="text-4xl flex-shrink-0 group-hover: scale-110 transition-transform duration-300">",
 =======
               <div className="flex items-start gap-4 mb-6">";
                 <div className="text-4xl flex-shrink-0 group-hover: scale-110 transition-transform duration-300">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   {content.image}
                 </div>
                 <div className="flex-1">";
@@ -105,11 +99,9 @@ export default function FeaturedContentBanner2025(): void {
                       {content.category}
                     </span>
                   </div>
-<<<<<<< HEAD
                   <h3 className="text-xl font-bold text-white mb-3 group-hover: text-blue-400 transition-colors duration-300">",
 =======
                   <h3 className="text-xl font-bold text-white mb-3 group-hover: text-blue-400 transition-colors duration-300">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     {content.title}
                   </h3>
                   <p className="text-gray-400 text-sm leading-relaxed mb-4">";
@@ -121,7 +113,6 @@ export default function FeaturedContentBanner2025(): void {
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
               <div className="flex items-center justify-between">
                 <span className="text-blue-400 font-semibold text-sm group-hover: text-blue-300 transition-colors duration-300">",
                   Read More →
@@ -135,7 +126,6 @@ export default function FeaturedContentBanner2025(): void {
                 </span>
                 <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center group-hover: scale-110 transition-transform duration-300">";,
                   <span className="text-white text-sm">→</span>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </div>
               </div>
             </a>
@@ -143,7 +133,6 @@ export default function FeaturedContentBanner2025(): void {
         </div>
 
         {/* Additional Promotional Content */}
-<<<<<<< HEAD
         <div className="grid md: grid-cols-2 gap-8">",
           <div className="bg-gradient-to-r from-green-500/10 to-blue-500/10 border border-green-500/30 rounded-2xl p-8">
             <h3 className="text-2xl font-bold mb-4 text-green-400">🎯 Free AI Assessment</h3>
@@ -161,7 +150,6 @@ export default function FeaturedContentBanner2025(): void {
               Get personalized recommendations and ROI projections in just 30 minutes.
             </p>
             <div className="flex flex-col sm: flex-row gap-4">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               <a title="Internal link" 
                 href="/contact" 
                 className="bg-gradient-to-r from-green-500 to-blue-600 hover: from-green-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center",
@@ -177,7 +165,6 @@ export default function FeaturedContentBanner2025(): void {
             </div>
           </div>
 
-<<<<<<< HEAD
           <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/30 rounded-2xl p-8">
             <h3 className="text-2xl font-bold mb-4 text-purple-400">🚀 AI Innovation Lab</h3>
             <p className="text-gray-300 mb-6 leading-relaxed">
@@ -193,7 +180,6 @@ export default function FeaturedContentBanner2025(): void {
               pilot programs, and direct access to our AI experts.
             </p>
             <div className="flex flex-col sm: flex-row gap-4">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               <a title="Internal link" 
                 href="/contact" 
                 className="bg-gradient-to-r from-purple-500 to-pink-600 hover: from-purple-400 hover:to-pink-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center",
@@ -217,21 +203,17 @@ export default function FeaturedContentBanner2025(): void {
             Get exclusive insights, latest AI trends, and breakthrough technologies delivered to your inbox. 
             Join 10,000+ enterprise leaders already subscribed.
           </p>
-<<<<<<< HEAD
           <div className="flex flex-col sm: flex-row gap-4 max-w-md mx-auto">",
 =======
           <div className="flex flex-col sm: flex-row gap-4 max-w-md mx-auto">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             <input 
               type="email" 
               placeholder="Enter your email address"
               className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: border-blue-500 focus:outline-none",
             />
-<<<<<<< HEAD
             <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover: from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300">",
 =======
             <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover: from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               Subscribe
             </button>
           </div>

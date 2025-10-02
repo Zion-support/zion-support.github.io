@@ -1,17 +1,14 @@
 import React from 'react';';
 import {
 
-<<<<<<< HEAD
 } from 'lucide-react';
 =======
 } from 'lucide-react';';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 const AICostOptimizationBanner: React.FC = () => {,
   const costOptimizationContent = [
     {
       id: 1,,
-<<<<<<< HEAD
       title: 'AI Cost Optimization Breakthrough: Cut Spending by 90%',',
       slug: 'ai-cost-optimization-breakthrough-2026',',
       excerpt: 'Revolutionary AI cost optimization strategies delivering 90% cost reduction, $200M+ savings, and 10x efficiency gains for Fortune 500 companies.',',
@@ -103,14 +100,12 @@ const AICostOptimizationBanner: React.FC = () => {,
       trending: true,,
       icon: '📊',';,
       metrics: { value: '$500M+', label: 'Total Savings' }';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     }
   ];
 
   return (
     <div className="py-20 bg-gradient-to-br from-slate-900 via-green-900 to-slate-900 relative overflow-hidden">";
       {/* Animated background effects */}
-<<<<<<< HEAD
       <div className="absolute inset-0 overflow-hidden opacity-30">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-green-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-emerald-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>;
@@ -120,12 +115,10 @@ const AICostOptimizationBanner: React.FC = () => {,
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-green-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>";
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-emerald-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>';
         <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-teal-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       </div>
 
       <div className="container mx-auto px-6 relative z-10">";
         {/* Header Section */}
-<<<<<<< HEAD
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 mb-8 animate-fade-in">
             <DollarSign className="w-6 h-6 text-green-400 animate-pulse/>
@@ -147,7 +140,6 @@ const AICostOptimizationBanner: React.FC = () => {,
           </div>
 
           <h2 className="text-6xl md: text-7xl font-extrabold mb-6 bg-gradient-to-r from-green-400 via-emerald-400 to-teal-400 bg-clip-text text-transparent animate-fade-in">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             AI Cost Optimization Revolution
           </h2>
           
@@ -157,7 +149,6 @@ const AICostOptimizationBanner: React.FC = () => {,
           </p>
 
           {/* Key Stats */}
-<<<<<<< HEAD
           <div className="grid md: grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">",
             {[
               { value: '90%', label: 'Cost Reduction', icon: '💰' }
@@ -179,7 +170,6 @@ const AICostOptimizationBanner: React.FC = () => {,
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover: border-green-500/50 transition-all duration-300">";,
                 <div className="text-4xl mb-3">{stat.icon}</div>";
                 <div className="text-3xl font-extrabold bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent mb-2">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   {stat.value}
                 </div>
                 <div className="text-gray-300 text-sm font-medium">";
@@ -191,11 +181,9 @@ const AICostOptimizationBanner: React.FC = () => {,
         </div>
 
         {/* Featured Content Grid */}
-<<<<<<< HEAD
         <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8 mb-16 max-w-[1600px] mx-auto">",
 =======
         <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8 mb-16 max-w-[1600px] mx-auto">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           {costOptimizationContent.map((content, index) => (
             <div 
               key={content.id}
@@ -203,32 +191,26 @@ const AICostOptimizationBanner: React.FC = () => {,
               style={{ animationDelay: `${index * 150}ms` }}`;
             >
               {/* Card glow effect */}
-<<<<<<< HEAD
               <div className="absolute inset-0 bg-gradient-to-br from-green-500/0 via-emerald-500/0 to-teal-500/0 group-hover: from-green-500/10 group-hover:via-emerald-500/10 group-hover:to-teal-500/10 transition-all duration-500"></div>",
 =======
               <div className="absolute inset-0 bg-gradient-to-br from-green-500/0 via-emerald-500/0 to-teal-500/0 group-hover: from-green-500/10 group-hover:via-emerald-500/10 group-hover:to-teal-500/10 transition-all duration-500"></div>";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               
               <div className="relative p-8">";
                 {/* Icon & Badges */}
-<<<<<<< HEAD
                 <div className="flex items-start justify-between mb-6">
                   <div className="text-6xl group-hover: scale-110 transition-transform duration-300">",
 =======
                 <div className="flex items-start justify-between mb-6">";
                   <div className="text-6xl group-hover: scale-110 transition-transform duration-300">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     {content.icon}
                   </div>
                   <div className="flex flex-col gap-2">";
                     {content.trending && (
-<<<<<<< HEAD
                       <div className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xs font-bold shadow-lg">
                         <TrendingDown className="w-3 h-3/>
 =======
                       <div className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xs font-bold shadow-lg">";
                         <TrendingDown className="w-3 h-3" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                         <span>SAVE</span>
                       </div>
                     )}
@@ -246,11 +228,9 @@ const AICostOptimizationBanner: React.FC = () => {,
                 </div>
 
                 {/* Title */}
-<<<<<<< HEAD
                 <h3 className="text-xl font-bold text-white mb-4 group-hover: text-green-400 transition-colors duration-300 leading-tight">",
 =======
                 <h3 className="text-xl font-bold text-white mb-4 group-hover: text-green-400 transition-colors duration-300 leading-tight">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   {content.title}
                 </h3>
 
@@ -274,7 +254,6 @@ const AICostOptimizationBanner: React.FC = () => {,
                 </div>
 
                 {/* Meta Info */}
-<<<<<<< HEAD
                 <div className="flex items-center justify-between text-sm text-gray-500 mb-6 pb-6 border-b border-white/10">
                   <span className="flex items-center gap-2">
                     <Zap className="w-4 h-4 text-green-400/>
@@ -288,7 +267,6 @@ const AICostOptimizationBanner: React.FC = () => {,
                     {content.readTime}
                   </span>
                   <span>{new Date(content.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</span>';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </div>
 
                 {/* CTA Button */}
@@ -297,11 +275,9 @@ const AICostOptimizationBanner: React.FC = () => {,
                   className="group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r from-green-500 to-emerald-600 hover: from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1",
                 >
                   <span>Read Optimization Guide</span>
-<<<<<<< HEAD
                   <ArrowRight className="w-4 h-4 group-hover/btn: translate-x-1 transition-transform duration-300/>",
 =======
                   <ArrowRight className="w-4 h-4 group-hover/btn: translate-x-1 transition-transform duration-300" />";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </Link>
               </div>
             </div>
@@ -319,20 +295,16 @@ const AICostOptimizationBanner: React.FC = () => {,
                 Join Fortune 500 companies achieving $500M+ in AI cost savings with our proven 
                 optimization strategies. Get your free cost optimization audit today.
               </p>
-<<<<<<< HEAD
               <div className="flex flex-col sm: flex-row gap-4 justify-center">",
 =======
               <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 <a title="Internal link"
                   href="/contact"
                   className="bg-gradient-to-r from-green-500 to-emerald-600 hover: from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 flex items-center justify-center gap-2",
                 >
-<<<<<<< HEAD
                   <DollarSign className="w-5 h-5/>
 =======
                   <DollarSign className="w-5 h-5" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   <span>Get Free Cost Audit</span>
                 </a>
                 <a title="Internal link"
@@ -340,11 +312,9 @@ const AICostOptimizationBanner: React.FC = () => {,
                   className="border-2 border-green-500 text-green-400 hover: bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2",
                 >
                   <span>Call +1 302 464 0950</span>
-<<<<<<< HEAD
                   <ArrowRight className="w-5 h-5/>
 =======
                   <ArrowRight className="w-5 h-5" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </a>
               </div>
             </div>
@@ -352,7 +322,6 @@ const AICostOptimizationBanner: React.FC = () => {,
         </div>
 
         {/* Success Indicators */}
-<<<<<<< HEAD
         <div className="grid md: grid-cols-4 gap-8 mt-20">",
           {[
             { value: '$2B+', label: 'Total Client Savings' }
@@ -366,7 +335,6 @@ const AICostOptimizationBanner: React.FC = () => {,
             { value: '500+', label: 'Companies Optimized' },';
             { value: '90%', label: 'Average Cost Reduction' },';
             { value: '99.9%', label: 'Accuracy Maintained' }';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           ].map((stat, index) => (
             <div key={index} className="text-center">";
               <div className="text-4xl font-extrabold bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent mb-2">";

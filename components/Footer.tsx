@@ -61,11 +61,14 @@ const Footer: React.FC = () => {
     { name: 'GitHub', href: '#', icon: '🐙' },
     { name: 'YouTube', href: '#', icon: '📺' },
   ];
+=======
+import { Globe, Mail, Phone, MapPin } from 'lucide-react';
 
+export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center space-x-2 mb-6">
@@ -78,27 +81,76 @@ const Footer: React.FC = () => {
             <p className="text-gray-400 mb-6 leading-relaxed">
               Leading technology solutions provider helping businesses transform their digital presence 
               with cutting-edge AI, cloud architecture, and innovative development services.
+=======
+          <div className="col-span-1 md:col-span-2">
+            <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              Zion Tech Group
+            </h3>
+            <p className="text-gray-300 mb-6 max-w-md">
+              Revolutionary AI breakthroughs delivering 1000x performance gains, 95% automation, 
+              and $150M+ ROI for Fortune 500 companies worldwide.
             </p>
-            
-            {/* Contact Information */}
-            <div className="space-y-3 mb-6">
-              <div className="flex items-center text-gray-400">
-                <span className="mr-3">📞</span>
-                <a href="tel:+13024640950" className="hover:text-white transition-colors">
-                  +1 302 464 0950
-                </a>
+            <div className="flex space-x-4">
+              <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
+                LinkedIn
+              </a>
+              <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
+                Twitter
+              </a>
+              <a href="https://github.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
+                GitHub
+              </a>
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
+                  AI Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/case-studies" className="text-gray-300 hover:text-white transition-colors">
+                  Success Stories
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact Info */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
+            <div className="space-y-3">
+              <div className="flex items-center">
+                <Globe className="w-5 h-5 mr-3 text-blue-400" />
+                <span className="text-gray-300">ziontechgroup.com</span>
               </div>
-              <div className="flex items-center text-gray-400">
-                <span className="mr-3">✉️</span>
-                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white transition-colors">
-                  kleber@ziontechgroup.com
-                </a>
+              <div className="flex items-center">
+                <Mail className="w-5 h-5 mr-3 text-blue-400" />
+                <span className="text-gray-300">kleber@ziontechgroup.com</span>
               </div>
-              <div className="flex items-start text-gray-400">
-                <span className="mr-3 mt-1">📍</span>
-                <span>
+              <div className="flex items-center">
+                <Phone className="w-5 h-5 mr-3 text-blue-400" />
+                <span className="text-gray-300">+1 302 464 0950</span>
+              </div>
+              <div className="flex items-start">
+                <MapPin className="w-5 h-5 mr-3 text-blue-400 mt-0.5" />
+                <span className="text-gray-300">
                   364 E Main St STE 1008<br />
-                  Middletown, DE 19709
+                  Middletown DE 19709
                 </span>
               </div>
             </div>
@@ -188,13 +240,14 @@ const Footer: React.FC = () => {
                 Subscribe
               </button>
             </div>
+=======
           </div>
         </div>
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            © {currentYear} Zion Tech Solutions. All rights reserved.
+            © 2026 Zion Tech Group. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link to="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
@@ -204,11 +257,16 @@ const Footer: React.FC = () => {
               Privacy Policy
             </Link>
             <Link to="/sitemap" className="text-gray-400 hover:text-white text-sm transition-colors">Sitemap</Link>
+=======
+            <Link to="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
+              Privacy Policy
+            </Link>
+            <Link to="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
+              Terms of Service
+            </Link>
           </div>
         </div>
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}

@@ -9,7 +9,6 @@ export default function OperationalTrustV4(): React.JSX.Element {
           name="description"
           content="Live canaries, budgeted actions, and attested rollback wired to product KPIs." /><link
           rel="canonical"
-<<<<<<< HEAD
           href="https://ziontechgroup.com/blog/ai-2025-oct-01-operational-trust-v4",
         />
       </Helmet>
@@ -27,7 +26,6 @@ export default function OperationalTrustV4(): React.JSX.Element {
         <h1 className="text-4xl md: text-5xl font-bold mb-4">Operational Trust Scorecards v4</h1>";,
         <p className="text-zion-slate-light mb-8">SLIs → KPIs with Budgets</p>";
         <div className="prose prose-invert max-w-3xl">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           <p>
             Upgrade operational scorecards with KPI alignment, budgeted actions, and
             rollback hooks that prevent regressions without slowing delivery.
@@ -38,13 +36,11 @@ export default function OperationalTrustV4(): React.JSX.Element {
             threatened.
           </p>
         </div>
-<<<<<<< HEAD
         <div className="mt-8">
           <Link to="/blog" className="text-cyan-300 hover: underline">← Back to Blog</Link>",
 =======
         <div className="mt-8">";
           <Link to="/blog" className="text-cyan-300 hover: underline">← Back to Blog</Link>";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
         </div>
       </div>
     </div>

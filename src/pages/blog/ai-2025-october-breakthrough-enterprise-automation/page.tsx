@@ -4,7 +4,6 @@ const EnterpriseAutomation2025 = () => {
     <>
       <Helmet>
         <title>AI-Powered Enterprise Automation 2025: Complete Implementation Guide | Zion Tech Group</title>,
-<<<<<<< HEAD
         <meta name="description" content="Transform your enterprise with AI automation in 2025. Complete guide covering implementation strategies, ROI optimization, and real-world case studies for 400%+ efficiency gains." /><meta property="og:title" content="AI-Powered Enterprise Automation 2025: Complete Implementation Guide" />,
         <meta property="og:description" content="Transform your enterprise with AI automation in 2025. Complete guide covering implementation strategies, ROI optimization, and real-world case studies for 400%+ efficiency gains." />,
         <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2025-october-breakthrough-enterprise-automation/>",
@@ -49,12 +48,10 @@ const EnterpriseAutomation2025 = () => {
             
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 leading-tight">";,
               AI-Powered Enterprise Automation 2025: <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 Complete Implementation Guide
               </span>
             </h1>
             
-<<<<<<< HEAD
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
               Transform your enterprise with cutting-edge AI automation. Learn proven strategies for 400%+ efficiency gains
               implementation frameworks, and real-world case studies from Fortune 500 companies.
@@ -98,12 +95,10 @@ const EnterpriseAutomation2025 = () => {
                   <p className="text-white text-lg leading-relaxed">";
                     Enterprise AI automation is no longer a future aspiration—it's a present necessity. Companies implementing ';
                     comprehensive AI automation strategies are seeing <strong>400-600% efficiency gains</strong>, 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     <strong>70% cost reduction</strong>, and <strong>95% faster decision-making</strong>.
                   </p>
                 </div>
                 
-<<<<<<< HEAD
                 <div className="grid md: grid-cols-3 gap-6 mb-8">",
                   <div className="bg-white/10 rounded-xl p-6 text-center">
                     <div className="text-3xl font-bold text-emerald-400 mb-2">400%+</div>
@@ -113,7 +108,6 @@ const EnterpriseAutomation2025 = () => {
                   <div className="bg-white/10 rounded-xl p-6 text-center">";
                     <div className="text-3xl font-bold text-emerald-400 mb-2">400%+</div>";
                     <div className="text-white text-sm">Efficiency Gains</div>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   </div>
                   <div className="bg-white/10 rounded-xl p-6 text-center">";
                     <div className="text-3xl font-bold text-cyan-400 mb-2">70%</div>";
@@ -126,7 +120,6 @@ const EnterpriseAutomation2025 = () => {
                 </div>
               </section>
 
-<<<<<<< HEAD
               <section className="mb-12">
                 <h2 className="text-3xl font-bold text-white mb-6">The AI Automation Revolution: Why 2025 Changes Everything</h2>",
                 <p className="text-zion-slate-light mb-6 leading-relaxed">
@@ -182,7 +175,6 @@ const EnterpriseAutomation2025 = () => {
                     <li className="flex items-start">";
                       <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 mt-0.5 flex-shrink-0" />";
                       <span className="text-white">Cost Optimization: 70% reduction in AI infrastructure costs</span>";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     </li>
                   </ul>
                 </div>
@@ -197,21 +189,17 @@ const EnterpriseAutomation2025 = () => {
                     Join 200+ companies that have achieved 400%+ efficiency gains with our proven AI automation framework. 
                     Get a free consultation and custom implementation roadmap.
                   </p>
-<<<<<<< HEAD
                   <div className="flex flex-col sm: flex-row gap-4 justify-center">",
 =======
                   <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     <Link
                       to="/contact"
                       className="bg-emerald-500 text-white px-8 py-4 rounded-lg font-semibold hover: bg-emerald-600 transition-colors inline-flex items-center justify-center gap-2",
                     >
                       Start Your Transformation
-<<<<<<< HEAD
                       <ArrowRight className="w-5 h-5/>
 =======
                       <ArrowRight className="w-5 h-5" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     </Link>
                     <Link
                       to="/case-studies"

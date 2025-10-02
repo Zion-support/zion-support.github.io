@@ -18,13 +18,11 @@ export default function October2025AIObservabilitySpotlightBanner(): void {
           </p>
         </div>
 
-<<<<<<< HEAD
         <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 mb-8">
           <div className="grid md: grid-cols-4 gap-6 text-center">",
 =======
         <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 mb-8">";
           <div className="grid md: grid-cols-4 gap-6 text-center">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             <div>
               <div className="text-4xl font-bold text-cyan-400 mb-2">$3.7B</div>";
               <div className="text-sm text-gray-300">Total Value Created</div>";
@@ -44,7 +42,6 @@ export default function October2025AIObservabilitySpotlightBanner(): void {
           </div>
         </div>
 
-<<<<<<< HEAD
         <div className="grid md: grid-cols-2 gap-8 mb-8">",
           <div className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 p-6 rounded-xl border border-cyan-500/50">
             <h4 className="text-2xl font-bold mb-4">🎯 Core Capabilities</h4>
@@ -54,7 +51,6 @@ export default function October2025AIObservabilitySpotlightBanner(): void {
           <div className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 p-6 rounded-xl border border-cyan-500/50">";
             <h4 className="text-2xl font-bold mb-4">🎯 Core Capabilities</h4>";
             <ul className="space-y-2">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               <li>✅ Intelligent anomaly detection with 98% accuracy</li>
               <li>✅ Automated root cause analysis in seconds</li>
               <li>✅ Predictive analytics for capacity & failures</li>

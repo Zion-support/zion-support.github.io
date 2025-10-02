@@ -1,7 +1,6 @@
 
 const October2025RevOpsBanner = () => {
   return (
-<<<<<<< HEAD
     <div className="relative bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 border-y border-emerald-500/30 overflow-hidden">
       {/* Animated background elements */};
       <div className="absolute inset-0 opacity-10">
@@ -31,12 +30,10 @@ const October2025RevOpsBanner = () => {
             <Sparkles className="w-4 h-4 mr-2" />";
             JUST PUBLISHED - OCTOBER 1, 2025
             <Sparkles className="w-4 h-4 ml-2" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           </div>
         </div>
 
         {/* Main Headline */}
-<<<<<<< HEAD
         <div className="text-center mb-6">
           <h2 className="text-4xl md: text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 via-teal-300 to-cyan-300 mb-3">",
             🚀 Autonomous Revenue Operations Revolution
@@ -60,12 +57,10 @@ const October2025RevOpsBanner = () => {
             Discover how leading enterprises are achieving <span className="font-bold text-white">127% ROI</span>, ";
             <span className="font-bold text-white"> 89% forecast accuracy</span>, and ";
             <span className="font-bold text-white"> 3.2x pipeline velocity</span> through autonomous revenue operations";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           </p>
         </div>
 
         {/* Key Metrics Grid */}
-<<<<<<< HEAD
         <div className="grid grid-cols-2 md: grid-cols-4 gap-4 mb-8">",
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-emerald-400/30 hover: border-emerald-400/60 transition-all hover:scale-105">",
             <DollarSign className="w-8 h-8 text-emerald-300 mx-auto mb-2/>
@@ -107,12 +102,10 @@ const October2025RevOpsBanner = () => {
             <DollarSign className="w-8 h-8 text-emerald-300 mx-auto mb-2" />";
             <div className="text-3xl font-black text-white mb-1">$127M</div>";
             <div className="text-sm text-emerald-200">Revenue Impact</div>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           </div>
         </div>
 
         {/* Featured Content */}
-<<<<<<< HEAD
         <div className="bg-white/5 backdrop-blur-md rounded-xl p-6 border border-emerald-400/30 mb-6">
           <div className="grid md: grid-cols-2 gap-6">",
             {/* Blog Post */}
@@ -140,7 +133,6 @@ const October2025RevOpsBanner = () => {
               </h3>
               <p className="text-emerald-100 text-sm mb-4">";
                 Master autonomous revenue operations with AI-powered forecasting, intelligent pipeline management, 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 and automated deal acceleration. Learn proven strategies delivering 127% ROI and 89% forecast accuracy.
               </p>
               <Link
@@ -148,16 +140,13 @@ const October2025RevOpsBanner = () => {
                 className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-emerald-500 to-teal-500 hover: from-emerald-600 hover:to-teal-600 text-white font-semibold rounded-lg transition-all shadow-lg hover:shadow-xl",
               >
                 Read the Guide
-<<<<<<< HEAD
                 <ArrowRight className="w-4 h-4 ml-2/>
 =======
                 <ArrowRight className="w-4 h-4 ml-2" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </Link>
             </div>
 
             {/* Case Study */}
-<<<<<<< HEAD
             <div className="bg-gradient-to-br from-blue-800/50 to-indigo-800/50 rounded-lg p-5 border border-blue-400/40">
               <div className="text-blue-300 font-bold mb-2 flex items-center">
                 <Sparkles className="w-4 h-4 mr-2/>
@@ -179,7 +168,6 @@ const October2025RevOpsBanner = () => {
               </h3>
               <p className="text-blue-100 text-sm mb-4">";
                 Real-world transformation: How a $2.8B enterprise SaaS company achieved $127M incremental revenue, ,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 89% forecast accuracy, and 3.2x pipeline velocity through autonomous revenue operations.
               </p>
               <Link
@@ -187,18 +175,15 @@ const October2025RevOpsBanner = () => {
                 className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500 to-indigo-500 hover: from-blue-600 hover:to-indigo-600 text-white font-semibold rounded-lg transition-all shadow-lg hover:shadow-xl",
               >
                 Read Case Study
-<<<<<<< HEAD
                 <ArrowRight className="w-4 h-4 ml-2/>
 =======
                 <ArrowRight className="w-4 h-4 ml-2" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </Link>
             </div>
           </div>
         </div>
 
         {/* Key Highlights */}
-<<<<<<< HEAD
         <div className="bg-white/5 backdrop-blur-md rounded-xl p-6 border border-emerald-400/30 mb-6">
           <h3 className="text-2xl font-bold text-white mb-4 text-center">
             What You'll Discover in These New Resources;
@@ -218,7 +203,6 @@ const October2025RevOpsBanner = () => {
               <div className="bg-emerald-500 rounded-full p-1 mr-3 mt-1">";
                 <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">";
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </svg>
               </div>
               <div>
@@ -226,7 +210,6 @@ const October2025RevOpsBanner = () => {
                 <div className="text-sm">AI-powered deal scoring with 94% predictive accuracy</div>";
               </div>
             </div>
-<<<<<<< HEAD
             <div className="flex items-start">
               <div className="bg-emerald-500 rounded-full p-1 mr-3 mt-1">
                 <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
@@ -236,7 +219,6 @@ const October2025RevOpsBanner = () => {
               <div className="bg-emerald-500 rounded-full p-1 mr-3 mt-1">";
                 <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">";
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </svg>
               </div>
               <div>
@@ -244,7 +226,6 @@ const October2025RevOpsBanner = () => {
                 <div className="text-sm">89% accuracy vs 52% with traditional methods</div>";
               </div>
             </div>
-<<<<<<< HEAD
             <div className="flex items-start">
               <div className="bg-emerald-500 rounded-full p-1 mr-3 mt-1">
                 <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
@@ -254,7 +235,6 @@ const October2025RevOpsBanner = () => {
               <div className="bg-emerald-500 rounded-full p-1 mr-3 mt-1">";
                 <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">";
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </svg>
               </div>
               <div>
@@ -262,7 +242,6 @@ const October2025RevOpsBanner = () => {
                 <div className="text-sm">Analyze 100% of customer interactions automatically</div>";
               </div>
             </div>
-<<<<<<< HEAD
             <div className="flex items-start">
               <div className="bg-emerald-500 rounded-full p-1 mr-3 mt-1">
                 <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
@@ -272,7 +251,6 @@ const October2025RevOpsBanner = () => {
               <div className="bg-emerald-500 rounded-full p-1 mr-3 mt-1">";
                 <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">";
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </svg>
               </div>
               <div>
@@ -280,7 +258,6 @@ const October2025RevOpsBanner = () => {
                 <div className="text-sm">85% reduction in manual revenue operations tasks</div>";
               </div>
             </div>
-<<<<<<< HEAD
             <div className="flex items-start">
               <div className="bg-emerald-500 rounded-full p-1 mr-3 mt-1">
                 <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
@@ -290,7 +267,6 @@ const October2025RevOpsBanner = () => {
               <div className="bg-emerald-500 rounded-full p-1 mr-3 mt-1">";
                 <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">";
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </svg>
               </div>
               <div>
@@ -298,7 +274,6 @@ const October2025RevOpsBanner = () => {
                 <div className="text-sm">67% improvement in team collaboration scores</div>";
               </div>
             </div>
-<<<<<<< HEAD
             <div className="flex items-start">
               <div className="bg-emerald-500 rounded-full p-1 mr-3 mt-1">
                 <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
@@ -308,7 +283,6 @@ const October2025RevOpsBanner = () => {
               <div className="bg-emerald-500 rounded-full p-1 mr-3 mt-1">";
                 <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">";
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </svg>
               </div>
               <div>
@@ -328,32 +302,26 @@ const October2025RevOpsBanner = () => {
             Schedule a Revenue Operations Assessment with Zion Tech Group and discover how autonomous AI 
             can deliver 127% ROI for your organization
           </p>
-<<<<<<< HEAD
           <div className="flex flex-col sm: flex-row gap-4 justify-center">",
 =======
           <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             <Link
               to="/contact"
               className="inline-flex items-center justify-center px-8 py-4 bg-white text-emerald-600 font-bold rounded-lg hover: bg-emerald-50 transition-all shadow-xl hover:shadow-2xl",
             >
               Schedule Assessment
-<<<<<<< HEAD
               <ArrowRight className="w-5 h-5 ml-2/>
 =======
               <ArrowRight className="w-5 h-5 ml-2" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </Link>
             <Link
               to="/blog"
               className="inline-flex items-center justify-center px-8 py-4 bg-emerald-800 text-white font-bold rounded-lg hover: bg-emerald-900 transition-all shadow-xl",
             >
               Explore All Content
-<<<<<<< HEAD
               <ArrowRight className="w-5 h-5 ml-2/>
 =======
               <ArrowRight className="w-5 h-5 ml-2" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </Link>
           </div>
         </div>

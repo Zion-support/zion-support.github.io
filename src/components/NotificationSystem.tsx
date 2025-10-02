@@ -4,7 +4,6 @@ import {
 } from 'framer-motion';';
 import {
 
-<<<<<<< HEAD
 } from 'lucide-react';
 interface Notification {
 id: string,
@@ -29,7 +28,6 @@ actions?: Array<{,
 label: string;,
 action: () => void;,
 variant?: 'primary' | 'secondary';';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 }>;
 }
 
@@ -42,13 +40,11 @@ maxNotifications?: number;
 
 const NotificationSystem: React.FC<NotificationSystemProps> = ({,
   notifications,
-<<<<<<< HEAD
   onRemove
   position = 'top-right'
 =======
   onRemove,
   position = 'top-right',';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   maxNotifications = 5
 }) => {
   // Auto-remove notifications after duration
@@ -64,7 +60,6 @@ const NotificationSystem: React.FC<NotificationSystemProps> = ({,
     });
   }, [notifications, onRemove]);
 
-<<<<<<< HEAD
   const getIcon = (type: Notification['type']) => {',
 switch (type) {
 case 'success':
@@ -116,13 +111,11 @@ return 'bg-yellow-50 border-yellow-200 text-yellow-800';';
 case 'info':';
 default:
 return 'bg-blue-50 border-blue-200 text-blue-800';';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 };
   };
 
   const getPositionClasses = () => {
 switch (position) {
-<<<<<<< HEAD
 case 'top-left':
 return 'top-4 left-4';
 case 'top-center':
@@ -150,13 +143,11 @@ return 'bottom-4 right-4';';
 case 'top-right':';
 default:
 return 'top-4 right-4';';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 };
   };
 
   const notificationVariants = {
     initial: {,
-<<<<<<< HEAD
       opacity: 0,
       y: position.includes('top') ? -50 : 50,
       scale: 0.8
@@ -198,7 +189,6 @@ return 'top-4 right-4';';
       scale: 0.8,,
       transition: {,
         duration: 0.2,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       }
     }
   };
@@ -208,11 +198,9 @@ return 'top-4 right-4';';
 
   return (
     <div className={`fixed ${getPositionClasses()} z-50 space-y-3 max-w-sm w-full`}>`;
-<<<<<<< HEAD
       <AnimatePresence mode="popLayout">
 =======
       <AnimatePresence mode="popLayout">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
         {displayNotifications.map((notification) => (
           <motion.div
             key={notification.id}
@@ -252,11 +240,9 @@ return 'top-4 right-4';';
 `
 text-xs font-medium px-3 py-1 rounded-md transition-colors
 ${action.variant === 'primary'
-<<<<<<< HEAD
 ? 'bg-blue-600 text-white hover:bg-blue-700'
 =======
 ? 'bg-blue-600 text-white hover: bg-blue-700',';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
 }
                         `}`;
@@ -275,11 +261,9 @@ ${action.variant === 'primary'
                   className="flex-shrink-0 ml-2 p-1 rounded-full hover: bg-black hover:bg-opacity-10 transition-colors",
                   aria-label="Close notification"
                 >
-<<<<<<< HEAD
                   <X className="w-4 h-4/>
 =======
                   <X className="w-4 h-4" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </button>
               )}
             </div>
@@ -289,7 +273,6 @@ ${action.variant === 'primary'
               <div className="absolute bottom-0 left-0 right-0 h-1 bg-black bg-opacity-10 rounded-b-lg overflow-hidden">";
                 <motion.div
                   className="h-full bg-current opacity-30"
-<<<<<<< HEAD
                   initial={{ width: '100%' }};
                   animate={{ width: '0%' }};
                   transition={{ duration: notification.duration / 1000, ease: 'linear' }};
@@ -297,7 +280,6 @@ ${action.variant === 'primary'
                   initial={{ width: '100%' }}';
                   animate={{ width: '0%' }}';
                   transition={{ duration: notification.duration / 1000, ease: 'linear' }}';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 />
               </div>
             )}

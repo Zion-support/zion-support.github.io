@@ -10,7 +10,6 @@ export default function January2027NewContentShowcaseBanner(): void {
             </span>
           </div>
           
-<<<<<<< HEAD
           <h2 className="text-4xl md: text-5xl font-extrabold mb-6 bg-gradient-to-r from-purple-400 via-indigo-400 to-blue-400 bg-clip-text text-transparent">",
             Revolutionary AI Breakthroughs Now Live
           </h2>
@@ -24,12 +23,10 @@ export default function January2027NewContentShowcaseBanner(): void {
           
           <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">";
             Discover the most advanced AI technologies reshaping the future: Neuromorphic Edge Computing with 1000x efficiency, ,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             Quantum AI Security protecting $847B assets, and Fortune 500 success stories with $2.3B+ savings.
           </p>
         </div>
 
-<<<<<<< HEAD
         <div className="grid md: grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">",
           {/* Neuromorphic Edge Computing */}
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-green-500/50 transition-all duration-300 group">",
@@ -45,7 +42,6 @@ export default function January2027NewContentShowcaseBanner(): void {
               <div className="text-6xl mb-4 group-hover: scale-110 transition-transform duration-300">🧠</div>";,
               <h3 className="text-2xl font-bold text-white mb-3">Neuromorphic Edge Computing</h3>";
               <p className="text-gray-300 text-sm mb-4">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 1000x Energy Efficiency • Sub-Microsecond Latency • $2.3B Enterprise Savings
               </p>
             </div>
@@ -86,7 +82,6 @@ export default function January2027NewContentShowcaseBanner(): void {
           </div>
 
           {/* Quantum AI Security */}
-<<<<<<< HEAD
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-purple-500/50 transition-all duration-300 group">",
             <div className="text-center mb-6">
               <div className="text-6xl mb-4 group-hover: scale-110 transition-transform duration-300">🔐</div>",
@@ -98,7 +93,6 @@ export default function January2027NewContentShowcaseBanner(): void {
               <div className="text-6xl mb-4 group-hover: scale-110 transition-transform duration-300">🔐</div>";,
               <h3 className="text-2xl font-bold text-white mb-3">Quantum AI Security</h3>";
               <p className="text-gray-300 text-sm mb-4">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 Quantum-Resistant AI • $847B Assets Protected • NIST-Approved • 99.97% Prevention
               </p>
             </div>
@@ -139,7 +133,6 @@ export default function January2027NewContentShowcaseBanner(): void {
           </div>
 
           {/* Fortune 500 Success */}
-<<<<<<< HEAD
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-blue-500/50 transition-all duration-300 group">",
             <div className="text-center mb-6">
               <div className="text-6xl mb-4 group-hover: scale-110 transition-transform duration-300">💰</div>",
@@ -151,7 +144,6 @@ export default function January2027NewContentShowcaseBanner(): void {
               <div className="text-6xl mb-4 group-hover: scale-110 transition-transform duration-300">💰</div>";,
               <h3 className="text-2xl font-bold text-white mb-3">Fortune 500 Success</h3>";
               <p className="text-gray-300 text-sm mb-4">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 320 Facilities • 78% Downtime Reduction • 99.8% Quality • $2.3B Annual Savings
               </p>
             </div>
@@ -201,16 +193,13 @@ export default function January2027NewContentShowcaseBanner(): void {
             </p>
           </div>
           
-<<<<<<< HEAD
           <div className="grid md: grid-cols-4 gap-4">",
 =======
           <div className="grid md: grid-cols-4 gap-4">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             <a title="Internal link" 
               href="/blog"
               className="bg-gradient-to-r from-indigo-500/20 to-purple-500/20 hover: from-indigo-500/30 hover:to-purple-500/30 rounded-xl p-4 border border-indigo-500/30 hover:border-indigo-500/50 transition-all duration-300 text-center group",
             >
-<<<<<<< HEAD
               <div className="text-3xl mb-2 group-hover: scale-110 transition-transform duration-300">📚</div>",
               <div className="font-bold text-white">All Articles</div>
               <div className="text-xs text-gray-300">200+ AI Breakthroughs</div>
@@ -218,14 +207,12 @@ export default function January2027NewContentShowcaseBanner(): void {
               <div className="text-3xl mb-2 group-hover: scale-110 transition-transform duration-300">📚</div>";,
               <div className="font-bold text-white">All Articles</div>";
               <div className="text-xs text-gray-300">200+ AI Breakthroughs</div>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </a>
             
             <a title="Internal link" 
               href="/case-studies"
               className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 hover: from-purple-500/30 hover:to-pink-500/30 rounded-xl p-4 border border-purple-500/30 hover:border-purple-500/50 transition-all duration-300 text-center group",
             >
-<<<<<<< HEAD
               <div className="text-3xl mb-2 group-hover: scale-110 transition-transform duration-300">💼</div>",
               <div className="font-bold text-white">Case Studies</div>
               <div className="text-xs text-gray-300">$50B+ Success Stories</div>
@@ -233,14 +220,12 @@ export default function January2027NewContentShowcaseBanner(): void {
               <div className="text-3xl mb-2 group-hover: scale-110 transition-transform duration-300">💼</div>";,
               <div className="font-bold text-white">Case Studies</div>";
               <div className="text-xs text-gray-300">$50B+ Success Stories</div>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </a>
             
             <a title="Internal link" 
               href="/services"
               className="bg-gradient-to-r from-pink-500/20 to-red-500/20 hover: from-pink-500/30 hover:to-red-500/30 rounded-xl p-4 border border-pink-500/30 hover:border-pink-500/50 transition-all duration-300 text-center group",
             >
-<<<<<<< HEAD
               <div className="text-3xl mb-2 group-hover: scale-110 transition-transform duration-300">🚀</div>",
               <div className="font-bold text-white">AI Services</div>
               <div className="text-xs text-gray-300">Implementation Ready</div>
@@ -248,14 +233,12 @@ export default function January2027NewContentShowcaseBanner(): void {
               <div className="text-3xl mb-2 group-hover: scale-110 transition-transform duration-300">🚀</div>";,
               <div className="font-bold text-white">AI Services</div>";
               <div className="text-xs text-gray-300">Implementation Ready</div>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </a>
             
             <a title="Internal link" 
               href="/contact"
               className="bg-gradient-to-r from-red-500/20 to-orange-500/20 hover: from-red-500/30 hover:to-orange-500/30 rounded-xl p-4 border border-red-500/30 hover:border-red-500/50 transition-all duration-300 text-center group",
             >
-<<<<<<< HEAD
               <div className="text-3xl mb-2 group-hover: scale-110 transition-transform duration-300">💬</div>",
               <div className="font-bold text-white">Consultation</div>
               <div className="text-xs text-gray-300">Free Assessment</div>
@@ -263,7 +246,6 @@ export default function January2027NewContentShowcaseBanner(): void {
               <div className="text-3xl mb-2 group-hover: scale-110 transition-transform duration-300">💬</div>";,
               <div className="font-bold text-white">Consultation</div>";
               <div className="text-xs text-gray-300">Free Assessment</div>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </a>
           </div>
         </div>

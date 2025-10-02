@@ -2,7 +2,6 @@
 // Premium content showcasing cutting-edge AI innovations
 
 export interface RevolutionaryContent {
-<<<<<<< HEAD
 id: string,
 title: string,
 slug: string,
@@ -28,7 +27,6 @@ gradient: string;,
 featured: boolean;,
 tags: string[];,
 highlights: string[];,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 metrics: {,,
 [key: string]: string;
 };
@@ -36,7 +34,6 @@ metrics: {,,
 
 export const october2025RevolutionaryContent: RevolutionaryContent[] = [,
   {
-<<<<<<< HEAD
     id: "ai-consciousness-integration-2025",
     title: "AI Consciousness Integration: The Next Frontier of Enterprise Intelligence",
     slug: "ai-2025-oct-consciousness-integration-enterprise",
@@ -332,7 +329,6 @@ export const october2025RevolutionaryContent: RevolutionaryContent[] = [,
       clv: "+156%",";,
       retention: "94%",";,
       revenue: "$230M+",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     }
   }
 ];
@@ -348,7 +344,6 @@ export const getAllOctober2025Content = () => {
 // Service offerings based on the new content
 export const october2025Services = [
   {
-<<<<<<< HEAD
     id: "consciousness-ai-platform",
     title: "Consciousness AI Platform",
     description: "Enterprise-grade AI with human-level reasoning and contextual awareness",
@@ -430,14 +425,12 @@ export const october2025Services = [
       "24/7 autonomous protection"
     ],
     slug: "autonomous-security-mesh",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   }
 ];
 
 // Case studies demonstrating revolutionary results
 export const october2025CaseStudies = [
   {
-<<<<<<< HEAD
     id: "fortune-100-consciousness-ai",
     title: "Fortune 100 Transforms Operations with Consciousness AI",
     company: "Global Financial Services Leader",
@@ -519,7 +512,6 @@ export const october2025CaseStudies = [
       responseTime: "<1ms",
     },
     slug: "healthcare-autonomous-security-success",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   }
 ];
 

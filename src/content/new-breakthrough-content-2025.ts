@@ -1,7 +1,6 @@
 // New breakthrough content for 2025 - Latest AI innovations and enterprise solutions
 
 export interface BreakthroughContent {
-<<<<<<< HEAD
 id: string,
 slug?: string;
 title: string,
@@ -41,14 +40,12 @@ metrics: {,,
 performance: string;,
 savings: string;,
 accuracy: string;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 roi: string;
 };
 }
 
 export const breakthroughContent2025: BreakthroughContent[] = [,
   {
-<<<<<<< HEAD
     id: "ai-quantum-neural-fusion-2025",
     slug: "ai-quantum-neural-fusion-2025",
     title: "AI Quantum-Neural Fusion 2025: The Next Evolution of Intelligence",
@@ -320,7 +317,6 @@ export const breakthroughContent2025: BreakthroughContent[] = [,
       savings: "$2.8B protected",";,
       accuracy: "Zero breaches",";,
       roi: "1,847%",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     }
   }
 ];

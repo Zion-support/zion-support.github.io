@@ -1,14 +1,11 @@
-<<<<<<< HEAD
 import React from 'react';
 =======
 import React from 'react';';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 const EnterpriseSolutionsShowcase2026: React.FC = () => {,
   const enterpriseSolutions = [
     {
       id: 1,,
-<<<<<<< HEAD
       title: 'AI-Powered Enterprise Automation',',
       slug: 'ai-enterprise-automation-2026',',
       excerpt: 'Transform your enterprise with comprehensive AI automation achieving 95% process efficiency. From workflow optimization to intelligent decision-making systems.',',
@@ -172,12 +169,10 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {,
       gradient: 'from-pink-500 to-purple-500',';,
       badge: 'GOVERNANCE',';,
       features: ['Ethical AI', 'Compliance Management', 'Risk Assessment']';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     }
   ];
 
   const successMetrics = [
-<<<<<<< HEAD
     { value: '500+', label: 'Enterprise Clients', icon: <Building className="w-8 h-8" /> }
     { value: '$2B+', label: 'Cost Savings Generated', icon: <DollarSign className="w-8 h-8" /> }
     { value: '98%', label: 'Client Satisfaction', icon: <Award className="w-8 h-8" /> }
@@ -187,13 +182,11 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {,
     { value: '$2B+', label: 'Cost Savings Generated', icon: <DollarSign className="w-8 h-8" /> },";
     { value: '98%', label: 'Client Satisfaction', icon: <Award className="w-8 h-8" /> },";
     { value: '24/7', label: 'Enterprise Support', icon: <Users className="w-8 h-8" /> }";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   ];
 
   return (
     <div className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 relative overflow-hidden">";
       {/* Animated background effects */}
-<<<<<<< HEAD
       <div className="absolute inset-0 overflow-hidden opacity-20">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>;
@@ -203,12 +196,10 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {,
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>";
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>';
         <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       </div>
 
       <div className="container mx-auto px-6 relative z-10">";
         {/* Header Section */}
-<<<<<<< HEAD
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-blue-500/20 to-indigo-500/20 border border-blue-500/30 mb-8 animate-fade-in">
             <Sparkles className="w-5 h-5 text-blue-400 animate-pulse/>
@@ -240,16 +231,13 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {,
           
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">";
             Transform your enterprise with our comprehensive suite of AI-powered solutions. From automation to security, 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             we deliver measurable results that drive business growth and operational excellence.
           </p>
 
           {/* Success Metrics */}
-<<<<<<< HEAD
           <div className="grid grid-cols-2 md: grid-cols-4 gap-6 max-w-4xl mx-auto">",
 =======
           <div className="grid grid-cols-2 md: grid-cols-4 gap-6 max-w-4xl mx-auto">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             {successMetrics.map((metric, index) => (
               <div key={index} className="text-center">";
                 <div className="text-blue-400 mb-2 flex justify-center">";
@@ -267,11 +255,9 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {,
         </div>
 
         {/* Enterprise Solutions Grid */}
-<<<<<<< HEAD
         <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">",
 =======
         <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           {enterpriseSolutions.map((solution, index) => (
             <div 
               key={solution.id}
@@ -283,13 +269,11 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {,
               
               <div className="relative p-8">";
                 {/* Icon & Badge */}
-<<<<<<< HEAD
                 <div className="flex items-start justify-between mb-6">
                   <div className="text-blue-400 group-hover: scale-110 transition-transform duration-300">",
 =======
                 <div className="flex items-start justify-between mb-6">";
                   <div className="text-blue-400 group-hover: scale-110 transition-transform duration-300">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     {solution.icon}
                   </div>
                   <div className={`px-3 py-1.5 rounded-full bg-gradient-to-r ${solution.gradient} text-white text-xs font-bold border border-white/30`}>`;
@@ -302,22 +286,18 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {,
                   <span className="inline-block px-3 py-1 rounded-full bg-gradient-to-r from-blue-500/20 to-indigo-500/20 text-blue-400 text-xs font-semibold border border-blue-500/30">";
                     {solution.category}
                   </span>
-<<<<<<< HEAD
                   <div className="text-xs text-gray-500">
                     Industries: {solution.industry},
 =======
                   <div className="text-xs text-gray-500">";
                     Industries: {solution.industry}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   </div>
                 </div>
 
                 {/* Title */}
-<<<<<<< HEAD
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-blue-400 transition-colors duration-300 leading-tight">",
 =======
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-blue-400 transition-colors duration-300 leading-tight">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   {solution.title}
                 </h3>
 
@@ -339,7 +319,6 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {,
                 </div>
 
                 {/* Features */}
-<<<<<<< HEAD
                 <div className="mb-6">
                   <div className="text-gray-400 text-xs mb-2">Key Features: </div>",
                   <div className="flex flex-wrap gap-1">
@@ -347,7 +326,6 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {,
                 <div className="mb-6">";
                   <div className="text-gray-400 text-xs mb-2">Key Features: </div>";,
                   <div className="flex flex-wrap gap-1">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     {solution.features.map((feature, idx) => (
                       <span key={idx} className="px-2 py-1 rounded bg-white/10 text-gray-300 text-xs">";
                         {feature}
@@ -362,11 +340,9 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {,
                   className={`group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r ${solution.gradient} hover:opacity-90 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1`}`;
                 >
                   <span>Explore Solution</span>
-<<<<<<< HEAD
                   <ArrowRight className="w-4 h-4 group-hover/btn: translate-x-1 transition-transform duration-300/>",
 =======
                   <ArrowRight className="w-4 h-4 group-hover/btn: translate-x-1 transition-transform duration-300" />";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </a>
               </div>
             </div>
@@ -380,7 +356,6 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {,
               <h3 className="text-3xl font-bold text-white mb-4">";
                 Ready to Transform Your Enterprise?
               </h3>
-<<<<<<< HEAD
               <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
                 Join 500+ leading organizations that trust our enterprise solutions to drive innovation
                 reduce costs, and achieve unprecedented operational efficiency.
@@ -392,16 +367,13 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {,
                 reduce costs, and achieve unprecedented operational efficiency.
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 <a title="Internal link"
                   href="/contact"
                   className="bg-gradient-to-r from-blue-500 to-indigo-600 hover: from-blue-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 flex items-center justify-center gap-2",
                 >
-<<<<<<< HEAD
                   <Building className="w-5 h-5/>
 =======
                   <Building className="w-5 h-5" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   <span>Schedule Enterprise Demo</span>
                 </a>
                 <a title="Internal link"
@@ -409,11 +381,9 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {,
                   className="border-2 border-blue-500 text-blue-400 hover: bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2",
                 >
                   <span>View Success Stories</span>
-<<<<<<< HEAD
                   <ArrowRight className="w-5 h-5/>
 =======
                   <ArrowRight className="w-5 h-5" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </a>
               </div>
             </div>
