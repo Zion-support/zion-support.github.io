@@ -1,1 +1,1 @@
-export type Placeholder = Record<string, unknown>;
+export type Placeholder: Record<string , unknown>;

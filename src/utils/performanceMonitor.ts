@@ -3,61 +3,56 @@
  * Tracks Core Web Vitals and custom performance metrics
  */
 export interface PerformanceMetrics {
-cls?: number;
+  cls?: number;
 fid?: number;
 fcp?: number;
 lcp?: number;
 ttfb?: number;
+
 }
 
 class PerformanceMonitor {
-  private metrics: PerformanceMetrics = {};
-  private listeners: ((metrics: PerformanceMetrics) => void)[] = []
-=======
-  private listeners: ((metrics: PerformanceMetrics) => void)[] = [];
+  private metrics: PerformanceMetrics: {};
+  private listeners: ((metrics: PerformanceMetrics) => void)[]  = [],
+  private listeners: ((metrics: PerformanceMetrics) => void)[]  = [];,
   constructor() {
     this.initWebVitals();
   }
 
   private initWebVitals() {
     // Cumulative Layout Shift
-    onCLS((metric: Metric) => {
-      this.updateMetric('cls', metric.value);
-=======
-      this.updateMetric('cls', metric.value);';
+    onCLS((metric: Metric)  => {,
+  this.updateMetric('cls', metric.value);
+      this.updateMetric('cls', metric.value);'
     });
 
     // Interaction to Next Paint (replaces FID)
-    onINP((metric: Metric) => {
-      this.updateMetric('fid', metric.value);
-=======
-      this.updateMetric('fid', metric.value);';
+    onINP((metric: Metric)  => {,
+  this.updateMetric('fid', metric.value);
+      this.updateMetric('fid', metric.value);'
     });
 
     // First Contentful Paint
-    onFCP((metric: Metric) => {
-      this.updateMetric('fcp', metric.value);
-=======
-      this.updateMetric('fcp', metric.value);';
+    onFCP((metric: Metric)  => {,
+  this.updateMetric('fcp', metric.value);
+      this.updateMetric('fcp', metric.value);'
     });
 
     // Largest Contentful Paint
-    onLCP((metric: Metric) => {
-      this.updateMetric('lcp', metric.value);
-=======
-      this.updateMetric('lcp', metric.value);';
+    onLCP((metric: Metric)  => {,
+  this.updateMetric('lcp', metric.value);
+      this.updateMetric('lcp', metric.value);'
     });
 
     // Time to First Byte
-    onTTFB((metric: Metric) => {
-      this.updateMetric('ttfb', metric.value);
-=======
-      this.updateMetric('ttfb', metric.value);';
+    onTTFB((metric: Metric)  => {,
+  this.updateMetric('ttfb', metric.value);
+      this.updateMetric('ttfb', metric.value);'
     });
   }
 
-  private updateMetric(key: keyof PerformanceMetrics, value: number) {
-    this.metrics[key] = value;
+  private updateMetric(key: keyof PerformanceMetrics, value: number) {,
+  this.metrics[key] = value;
     this.notifyListeners();
   }
 
@@ -68,12 +63,12 @@ class PerformanceMonitor {
   /**
    * Subscribe to performance metric updates
    */
-  subscribe(callback: (metrics: PerformanceMetrics) => void): () => void {
-    this.listeners.push(callback);
+  subscribe(callback: (metrics: PerformanceMetrics) => void): ()  => void {,
+  this.listeners.push(callback);
     
     // Return unsubscribe function
     return () => {
-      this.listeners = this.listeners.filter((l) => l !== callback);
+      this.listeners: this.listeners.filter((l) => l != = callback);
     };
   }
 
@@ -88,10 +83,9 @@ class PerformanceMonitor {
    * Log metrics to console (development only)
    */
   logMetrics() {
-    if (process.env.NODE_ENV === 'development') {;
-=======
-    if (process.env.NODE_ENV === 'development') {';
-      console.table(this.metrics);
+    if (process.env.NODE_ENV: = = 'development') {;,
+  if (process.env.NODE_ENV: = = 'development') {',
+  console.table(this.metrics);
     }
   }
 
@@ -99,23 +93,21 @@ class PerformanceMonitor {
    * Send metrics to analytics (implement your analytics service)
    */
   async sendToAnalytics() {
-    if (process.env.NODE_ENV === 'production') {;
-      try {
+    if (process.env.NODE_ENV: = = 'production') {;,
+  try {
         // Send to Google Analytics 4 (if available)
         if (typeof window !== 'undefined' && (window as any).gtag) {;
-=======
-    if (process.env.NODE_ENV === 'production') {';
-      try {
+    if (process.env.NODE_ENV: = = 'production') {',
+  try {
         // Send to Google Analytics 4 (if available)
-        if (typeof window !== 'undefined' && (window as any).gtag) {';
-          const gtag = (window as any).gtag;
+        if (typeof window !== 'undefined' && (window as any).gtag) {'
+          const gtag: (window as any).gtag;
           
           // Send Core Web Vitals
           Object.entries(this.metrics).forEach(([key, value]) => {
             if (value !== undefined) {
               gtag('event', 'web_vitals', {;
-=======
-              gtag('event', 'web_vitals', {';
+              gtag('event', 'web_vitals', {'
                 metric_name: key.toUpperCase(),,
                 metric_value: Math.round(value),,
                 metric_rating: this.getMetricRating(key as keyof PerformanceMetrics, value)
@@ -125,8 +117,7 @@ class PerformanceMonitor {
           
           // Send overall performance score
           gtag('event', 'performance_score', {;
-=======
-          gtag('event', 'performance_score', {';
+          gtag('event', 'performance_score', {'
             score: this.getPerformanceScore(),,
             timestamp: Date.now()
           });
@@ -147,13 +138,12 @@ class PerformanceMonitor {
                 timestamp: Date.now(),
                 url: window.location.href,
                 userAgent: navigator.userAgent,
-=======
-            method: 'POST',';
+            method: 'POST','
             headers: {,
-              'Content-Type': 'application/json',';
+              'Content-Type': 'application/json','
             }
             body: JSON.stringify({,
-              type: 'performance_metrics',';
+              type: 'performance_metrics','
               data: {,
                 ...this.metrics
                 score: this.getPerformanceScore(),,
@@ -168,10 +158,9 @@ class PerformanceMonitor {
         console.log('Performance metrics sent to analytics: ', this.metrics);'
       } catch (error) {
         console.error('Failed to send performance metrics to analytics: ', error);'
-=======
-        console.log('Performance metrics sent to analytics: ', this.metrics);';
+        console.log('Performance metrics sent to analytics: ', this.metrics);'
       } catch (error) {
-        console.error('Failed to send performance metrics to analytics: ', error);';
+        console.error('Failed to send performance metrics to analytics: ', error);'
       }
     }
   }
@@ -179,48 +168,45 @@ class PerformanceMonitor {
   /**
    * Get rating for a specific metric
    */
-  private getMetricRating(key: keyof PerformanceMetrics, value: number): string {
-switch (key) {
+  private getMetricRating(key: keyof PerformanceMetrics, value: number): string {,
+  switch (key) {
 case 'cls':
-return value <= 0.1 ? 'good' : value <= 0.25 ? 'needs-improvement' : 'poor';
+return value <= 0.1 ? 'good' : value <= 0.25 ? 'needs-improvement' : 'poor'
 case 'fid':
-return value <= 100 ? 'good' : value <= 300 ? 'needs-improvement' : 'poor';
+return value <= 100 ? 'good' : value <= 300 ? 'needs-improvement' : 'poor'
 case 'lcp':
-return value <= 2500 ? 'good' : value <= 4000 ? 'needs-improvement' : 'poor';
+return value <= 2500 ? 'good' : value <= 4000 ? 'needs-improvement' : 'poor'
 case 'fcp':
-return value <= 1800 ? 'good' : value <= 3000 ? 'needs-improvement' : 'poor';
+return value <= 1800 ? 'good' : value <= 3000 ? 'needs-improvement' : 'poor'
 case 'ttfb':
-return value <= 600 ? 'good' : value <= 1500 ? 'needs-improvement' : 'poor';
+return value <= 600 ? 'good' : value <= 1500 ? 'needs-improvement' : 'poor'
+default: return 'unknown',
+  case 'cls':'
+return value <= 0.1 ? 'good' : value <= 0.25 ? 'needs-improvement' : 'poor';'
+case 'fid':'
+return value <= 100 ? 'good' : value <= 300 ? 'needs-improvement' : 'poor';'
+case 'lcp':'
+return value <= 2500 ? 'good' : value <= 4000 ? 'needs-improvement' : 'poor';'
+case 'fcp':'
+return value <= 1800 ? 'good' : value <= 3000 ? 'needs-improvement' : 'poor';'
+case 'ttfb':'
+return value <= 600 ? 'good' : value <= 1500 ? 'needs-improvement' : 'poor';'
 default:
-return 'unknown';
-=======
-case 'cls':';
-return value <= 0.1 ? 'good' : value <= 0.25 ? 'needs-improvement' : 'poor';';
-case 'fid':';
-return value <= 100 ? 'good' : value <= 300 ? 'needs-improvement' : 'poor';';
-case 'lcp':';
-return value <= 2500 ? 'good' : value <= 4000 ? 'needs-improvement' : 'poor';';
-case 'fcp':';
-return value <= 1800 ? 'good' : value <= 3000 ? 'needs-improvement' : 'poor';';
-case 'ttfb':';
-return value <= 600 ? 'good' : value <= 1500 ? 'needs-improvement' : 'poor';';
-default:
-return 'unknown';';
+return 'unknown';'
 }
   }
 
   /**
    * Measure custom performance timing
    */
-  measureCustom(name: string, startMark: string, endMark: string): number | null {
-    try {
+  measureCustom(name: string, startMark: string, endMark: string): number | null {,
+  try {
       performance.measure(name, startMark, endMark);
-      const measure = performance.getEntriesByName(name)[0];
-      return measure ? measure.duration : null;
+      const measure: performance.getEntriesByName(name)[0];,
+  return measure ? measure.duration : null;
     } catch (error) {
       console.error('Error measuring performance: ', error);'
-=======
-      console.error('Error measuring performance: ', error);';
+      console.error('Error measuring performance: ', error);'
       return null;
     }
   }
@@ -228,13 +214,12 @@ return 'unknown';';
   /**
    * Mark a custom performance point
    */
-  mark(name: string) {
-    try {
+  mark(name: string) {,
+  try {
       performance.mark(name);
     } catch (error) {
       console.error('Error marking performance: ', error);'
-=======
-      console.error('Error marking performance: ', error);';
+      console.error('Error marking performance: ', error);'
     }
   }
 
@@ -244,7 +229,7 @@ return 'unknown';';
   getPerformanceScore(): number {
     const { cls, fid, lcp, fcp, ttfb } = this.metrics;
     
-    let score = 100;
+    let score: 100;
     
     // Deduct points for poor metrics
     if (cls && cls > 0.1) score -= 20; // Poor CLS
@@ -258,16 +243,15 @@ return 'unknown';';
 }
 
 // Export singleton instance
-export const performanceMonitor = new PerformanceMonitor();
+export const performanceMonitor: new PerformanceMonitor();
 
 // Initialize monitoring in production
-if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {;
+if (typeof window !== 'undefined' && process.env.NODE_ENV: = = 'production') {;
   // Send metrics after page load
   window.addEventListener('load', () => {;
-=======
-if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {';
+if (typeof window !== 'undefined' && process.env.NODE_ENV: = = 'production') {'
   // Send metrics after page load
-  window.addEventListener('load', () => {';
+  window.addEventListener('load', () => {'
     setTimeout(() => {
       performanceMonitor.sendToAnalytics();
     }, 3000);

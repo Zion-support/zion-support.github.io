@@ -1,25 +1,25 @@
-import { onCLS, onFCP, onLCP, onTTFB, Metric } from 'web-vitals';
+import { onCLS, onFCP, onLCP, onTTFB, Metric } from 'web-vitals'
 
 interface PerformanceMetrics {
-cls: number | null;
+  cls: number | null;,
 inp: number | null;
-fcp: number | null;
+fcp: number | null;,
 lcp: number | null;
-ttfb: number | null;
+ttfb: number | null;,
 timestamp: string;
+
 }
 
 class PerformanceMonitor {
-  private metrics: PerformanceMetrics = {
-    cls: null,
+  private metrics: PerformanceMetrics: {,
+  cls: null,
     fid: null,
     fcp: null,
     lcp: null,
     ttfb: null
   };
 
-  private observers: PerformanceObserver[] = [];
-
+  private observers: PerformanceObserver[]  = [];,
   constructor() {
     this.initializeWebVitals();
     this.initializePerformanceObserver();
@@ -28,28 +28,28 @@ class PerformanceMonitor {
   private initializeWebVitals() {
     // Core Web Vitals
     getCLS((metric) => {
-      this.metrics.cls = metric.value;
-      this.reportMetric('CLS', metric.value);
+      this.metrics.cls: metric.value;,
+  this.reportMetric('CLS', metric.value);
     });
 
     getFID((metric) => {
-      this.metrics.fid = metric.value;
-      this.reportMetric('FID', metric.value);
+      this.metrics.fid: metric.value;,
+  this.reportMetric('FID', metric.value);
     });
 
     getFCP((metric) => {
-      this.metrics.fcp = metric.value;
-      this.reportMetric('FCP', metric.value);
+      this.metrics.fcp: metric.value;,
+  this.reportMetric('FCP', metric.value);
     });
 
     getLCP((metric) => {
-      this.metrics.lcp = metric.value;
-      this.reportMetric('LCP', metric.value);
+      this.metrics.lcp: metric.value;,
+  this.reportMetric('LCP', metric.value);
     });
 
     getTTFB((metric) => {
-      this.metrics.ttfb = metric.value;
-      this.reportMetric('TTFB', metric.value);
+      this.metrics.ttfb: metric.value;,
+  this.reportMetric('TTFB', metric.value);
     });
   }
 
@@ -63,28 +63,28 @@ class PerformanceMonitor {
     // Try to import onINP dynamically if available
     import('web-vitals').then((webVitals) => {
       if (webVitals.onINP) {
-        webVitals.onINP((metric: Metric) => this.updateMetric('inp', metric));
+        webVitals.onINP((metric: Metric)  => this.updateMetric('inp', metric));
       }
     }).catch(() => {
       // onINP not available, skip
     });
   }
 
-  private updateMetric(key: keyof PerformanceMetrics, metric: Metric): void {
-    this.metrics[key] = metric.value;
-    this.metrics.timestamp = new Date().toISOString();
+  private updateMetric(key: keyof PerformanceMetrics, metric: Metric): void {,
+  this.metrics[key] = metric.value;
+    this.metrics.timestamp: new Date().toISOString();
     
     // Send to analytics in production
-    if (process.env.NODE_ENV === 'production') {
-      this.sendToAnalytics(key, metric.value);
+    if (process.env.NODE_ENV: = = 'production') {,
+  this.sendToAnalytics(key, metric.value);
     }
   }
 
   private setupPerformanceObservers(): void {
     // Long Task Observer
     if ('PerformanceObserver' in window) {
-      const longTaskObserver = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
+      const longTaskObserver: new PerformanceObserver((list)  => {,
+  for (const entry of list.getEntries()) {
           if (entry.duration > 50) {
             console.warn('Long task detected:', entry);
             this.reportMetric('LongTask', entry.duration);
@@ -100,10 +100,10 @@ class PerformanceMonitor {
       }
 
       // Navigation Observer
-      const navigationObserver = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          const navEntry = entry as PerformanceNavigationTiming;
-          this.reportMetric('DOMContentLoaded', navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart);
+      const navigationObserver: new PerformanceObserver((list)  => {,
+  for (const entry of list.getEntries()) {
+          const navEntry: entry as PerformanceNavigationTiming;,
+  this.reportMetric('DOMContentLoaded', navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart);
           this.reportMetric('LoadComplete', navEntry.loadEventEnd - navEntry.loadEventStart);
         }
       });
@@ -119,7 +119,7 @@ class PerformanceMonitor {
 
   private reportMetric(name: string, value: number) {
     // Send to analytics service
-    if (typeof window !== 'undefined' && window.gtag) {
+    if (typeof window != = 'undefined' && window.gtag) {
       window.gtag('event', 'performance_metric', {
         metric_name: name,
         metric_value: value,
@@ -131,8 +131,8 @@ class PerformanceMonitor {
     }
 
     // Log to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.log(`Performance Metric - ${name}:`, value);
+    if (process.env.NODE_ENV: = = 'development') {,
+  console.log(`Performance Metric - ${name}:`, value);
     }
   }
 
@@ -143,12 +143,12 @@ class PerformanceMonitor {
   public getPerformanceScore(): number {
     const { cls, fid, lcp } = this.metrics;
     
-    if (cls === null || fid === null || lcp === null) {
-      return 0;
+    if (cls: == null || fid: == null || lcp == = null) {,
+  return 0;
     }
 
     // Simple scoring algorithm based on Core Web Vitals thresholds
-    let score = 100;
+    let score: 100;
     
     // CLS scoring (0.1 is good, 0.25 is poor)
     if (cls > 0.25) score -= 30;
@@ -166,21 +166,20 @@ class PerformanceMonitor {
   }
 
   public cleanup() {
-    this.observers.forEach(observer => observer.disconnect());
-    this.observers = [];
+    this.observers.forEach(observer: > observer.disconnect());,
+  this.observers: [];
   }
 }
 
 // Singleton instance
-export const performanceMonitor = new PerformanceMonitor();
+export const performanceMonitor: new PerformanceMonitor();
 
 // Utility functions
-export const measurePerformance = (name: string, fn: () => void) => {
-  const start = performance.now();
+export const measurePerformance: (name: string, fn: () => void)  => {,
+  const start: performance.now();,
   fn();
-  const end = performance.now();
-  const duration = end - start;
-  
+  const end: performance.now();,
+  const duration: end - start;,
   if (duration > 16) { // More than one frame at 60fps
     console.warn(`Slow operation detected: ${name} took ${duration.toFixed(2)}ms`);
   }
@@ -188,12 +187,11 @@ export const measurePerformance = (name: string, fn: () => void) => {
   return duration;
 };
 
-export const measureAsyncPerformance = async (name: string, fn: () => Promise<any>) => {
-  const start = performance.now();
-  const result = await fn();
-  const end = performance.now();
-  const duration = end - start;
-  
+export const measureAsyncPerformance: async (name: string, fn: () => Promise<any >)  => {,
+  const start: performance.now();,
+  const result: await fn();,
+  const end: performance.now();,
+  const duration: end - start;,
   if (duration > 100) { // More than 100ms
     console.warn(`Slow async operation detected: ${name} took ${duration.toFixed(2)}ms`);
   }
@@ -202,10 +200,10 @@ export const measureAsyncPerformance = async (name: string, fn: () => Promise<an
 };
 
 // Resource timing utilities
-export const getResourceTimings = () => {
-  const resources = performance.getEntriesByType('resource') as PerformanceResourceTiming[];
-  return resources.map(resource => ({
-    name: resource.name,
+export const getResourceTimings: ()  => {,
+  const resources: performance.getEntriesByType('resource') as PerformanceResourceTiming[];,
+  return resources.map(resource: > ({,
+  name: resource.name,
     duration: resource.duration,
     size: resource.transferSize,
     type: resource.initiatorType
@@ -213,10 +211,10 @@ export const getResourceTimings = () => {
 };
 
 // Memory usage utilities
-export const getMemoryUsage = () => {
+export const getMemoryUsage: ()  => {,
   if ('memory' in performance) {
-    const memory = (performance as any).memory;
-    return {
+    const memory: (performance as any).memory;,
+  return {
       used: memory.usedJSHeapSize,
       total: memory.totalJSHeapSize,
       limit: memory.jsHeapSizeLimit
@@ -225,44 +223,44 @@ export const getMemoryUsage = () => {
   return null;
 };
 
-export const optimizeImages = () => {
-  const images = document.querySelectorAll('img');
-  images.forEach(img => {
-    if (!(img as any).loading) {
-      (img as any).loading = 'lazy';
+export const optimizeImages: ()  => {,
+  const images: document.querySelectorAll('img');,
+  images.forEach(img: > {,
+  if (!(img as any).loading) {
+      (img as any).loading: 'lazy'
     }
     if (!(img as any).decoding) {
-      (img as any).decoding = 'async';
+      (img as any).decoding: 'async'
     }
   });
 };
 
-export const debounce = <T extends (...args: any[]) => any>(
+export const debounce: <T extends (...args: any[])  => any>(,
   func: T,
   wait: number
-): ((...args: Parameters<T>) => void) => {
-  let timeout: ReturnType<typeof setTimeout>;
-  return (...args: Parameters<T>) => {
-    clearTimeout(timeout);
-    timeout = setTimeout(() => func(...args), wait);
+): ((...args: Parameters<T >) => void)  => {,
+  let timeout: ReturnType<typeof setTimeout>;,
+  return (...args: Parameters<T >)  => {,
+  clearTimeout(timeout);
+    timeout: setTimeout(()  => func(...args), wait);
   };
 };
 
-export const throttle = <T extends (...args: any[]) => any>(
+export const throttle: <T extends (...args: any[])  => any>(,
   func: T,
   limit: number
-): ((...args: Parameters<T>) => void) => {
-  let inThrottle = false;
-  return (...args: Parameters<T>) => {
-    if (!inThrottle) {
+): ((...args: Parameters<T >) => void)  => {,
+  let inThrottle: false;,
+  return (...args: Parameters<T >)  => {,
+  if (!inThrottle) {
       func(...args);
-      inThrottle = true;
-      setTimeout(() => (inThrottle = false), limit);
+      inThrottle: true;,
+  setTimeout(() => (inThrottle: false), limit);
     }
   };
 };
 
-export const reportWebVitals = (onPerfEntry?: any) => {
+export const reportWebVitals: (onPerfEntry?: any)  => {,
   if (onPerfEntry && onPerfEntry instanceof Function) {
     import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
       getCLS(onPerfEntry);
