@@ -543,6 +543,41 @@ export default function AdditionalServices() {
           marketSize: '$7.5B email marketing market',
           roi: '40% improvement in email deliverability rates'
         }
+        ,
+        {
+          name: 'AI Privacy Policy & Terms Generator',
+          blurb: 'Generate compliant Privacy Policies, Terms, and DPA addendums with continuous updates.',
+          price: '$39 - $199/month',
+          eta: '1 week',
+          bullets: [
+            'Jurisdiction-aware policies (US, EU, UK, CA, AU)',
+            'Auto-updates for regulatory changes',
+            'Cookie banner and consent logs',
+            'Data Processing Addendum (DPA) templates',
+            'Multi-language export and CMS embed',
+            'Legal review workflow'
+          ],
+          link: '/contact',
+          marketSize: '$10.5B privacy tech market',
+          roi: '90% faster policy updates'
+        },
+        {
+          name: 'AI Proposal & SOW Writer',
+          blurb: 'Draft client proposals and statements of work with scope, milestones, and pricing.',
+          price: '$29 - $149/month',
+          eta: '1 week',
+          bullets: [
+            'Client requirements intake forms',
+            'Auto-scoped deliverables and timelines',
+            'Profitability guardrails and price suggestions',
+            'E-signature and PDF export',
+            'CRM integration (HubSpot, Salesforce)',
+            'Versioning and redline compare'
+          ],
+          link: '/contact',
+          marketSize: '$6.2B proposal software market',
+          roi: '3x faster sales cycles'
+        }
       ]
     },
     {
@@ -974,6 +1009,41 @@ export default function AdditionalServices() {
           marketSize: '$45.2B healthcare AI market',
           roi: '30% improvement in diagnostic accuracy'
         }
+        ,
+        {
+          name: 'AI Sales Playbook Copilot',
+          blurb: 'On-call AI coach for SDRs/AEs with live call guidance, objection handling, and next actions.',
+          price: '$59 - $199/user/month',
+          eta: '2-4 weeks',
+          bullets: [
+            'Live call cueing and notes',
+            'ICP-tailored objection handling',
+            'Auto-generated follow-ups and summaries',
+            'CRM updates and pipeline hygiene',
+            'Compliance redaction and recording',
+            'Playbook A/B testing'
+          ],
+          link: '/contact',
+          marketSize: '$30B sales tech market',
+          roi: '25% lift in win rates'
+        },
+        {
+          name: 'Responsible AI Governance Suite',
+          blurb: 'EU AI Act/NIST-aligned risk, evals, incidents, and model inventory for enterprise AI.',
+          price: '$799 - $4,999/month',
+          eta: '4-8 weeks',
+          bullets: [
+            'Model registry and lineage',
+            'Bias, safety and robustness evals',
+            'Risk scoring and controls mapping',
+            'Policy templates and approvals',
+            'Evidence and audit packs',
+            'Incident response and RCA'
+          ],
+          link: '/contact',
+          marketSize: '$4.3B AI governance market',
+          roi: 'Audit time reduced by 70%'
+        }
       ]
     },
     {
@@ -1383,6 +1453,41 @@ export default function AdditionalServices() {
           link: '/contact',
           marketSize: '$58.8B CRM market',
           roi: '45% improvement in sales productivity'
+        }
+        ,
+        {
+          name: 'Data Platform Modernization (Lakehouse)',
+          blurb: 'Migrate legacy warehouses to a modern lakehouse with streaming and governance.',
+          price: '$25,000 - $180,000/project',
+          eta: '8-20 weeks',
+          bullets: [
+            'Medallion architecture (bronze/silver/gold)',
+            'Streaming ingestion and CDC pipelines',
+            'dbt transformation and quality tests',
+            'Cost/performance optimization',
+            'Row/column-level security and masking',
+            'Self-serve BI and semantic layer'
+          ],
+          link: '/contact',
+          marketSize: '$87B analytics market',
+          roi: '50% faster analytics delivery'
+        },
+        {
+          name: 'Platform Engineering (Internal Developer Platform)',
+          blurb: 'Golden paths, paved roads, and self-service infra to accelerate developer velocity.',
+          price: '$12,000 - $65,000/month',
+          eta: '6-16 weeks',
+          bullets: [
+            'Backstage developer portal',
+            'Templates and scorecards',
+            'Secure paved roads (CI/CD/IaC)',
+            'Env provisioning and preview apps',
+            'Cost and SLO guardrails',
+            'Platform SRE and runtime standards'
+          ],
+          link: '/contact',
+          marketSize: '$24B platform engineering market',
+          roi: '40% cycle time reduction'
         }
       ]
     },

@@ -2,6 +2,29 @@
 export default function ContentPromotionBanner(): void {
   const featuredContent = [
     {
+<<<<<<< HEAD
+      title: "Edge Inference Patterns That Actually Reduce Latency",
+      category: "AI Infrastructure",
+      readTime: "7 min read",
+      isNew: true
+    },
+    {
+      title: "North‑Star Engineering Metrics: Fewer KPIs, Better Outcomes",
+      category: "Leadership",
+      readTime: "5 min read",
+      isNew: true
+    },
+    {
+      title: "OpenTelemetry in Production: Traces That Engineers Use",
+      category: "Observability",
+      readTime: "6 min read",
+      isNew: true
+    }
+  ];
+
+  return (
+    <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-2xl p-8 md: p-12 text-white relative overflow-hidden">",
+=======
       title: "Edge Inference Patterns That Actually Reduce Latency",";,
       category: "AI Infrastructure",";,
       readTime: "7 min read",";,
@@ -23,11 +46,24 @@ export default function ContentPromotionBanner(): void {
 
   return (
     <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-2xl p-8 md: p-12 text-white relative overflow-hidden">";,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">";
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/20 to-transparent"></div>";
       </div>
       
+<<<<<<< HEAD
+      <div className="relative z-10">
+        <div className="flex flex-col lg: flex-row lg:items-center lg:justify-between gap-8">",
+          <div className="max-w-2xl">
+            <div className="flex items-center gap-2 mb-4">
+              <TrendingUp className="w-5 h-5 text-yellow-300/>
+              <span className="text-sm font-medium text-yellow-300 uppercase tracking-wide">
+                Fresh Content
+              </span>
+            </div>
+            <h2 className="text-3xl md: text-4xl font-bold mb-4">",
+=======
       <div className="relative z-10">";
         <div className="flex flex-col lg: flex-row lg:items-center lg:justify-between gap-8">";,
           <div className="max-w-2xl">";
@@ -38,6 +74,7 @@ export default function ContentPromotionBanner(): void {
               </span>
             </div>
             <h2 className="text-3xl md: text-4xl font-bold mb-4">";,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               Latest from Zion Insights
             </h2>
             <p className="text-white/90 text-lg leading-relaxed">";
@@ -51,27 +88,45 @@ export default function ContentPromotionBanner(): void {
               to="/blog" 
               className="bg-white text-indigo-700 hover: bg-indigo-50 px-8 py-4 rounded-lg font-semibold inline-flex items-center justify-center gap-2 transition-all duration-300 hover:scale-105 hover:shadow-lg",
             >
+<<<<<<< HEAD
+              <BookOpen className="w-5 h-5/>
+              Explore All Articles
+              <ArrowRight className="w-5 h-5/>
+=======
               <BookOpen className="w-5 h-5" />";
               Explore All Articles
               <ArrowRight className="w-5 h-5" />";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </Link>
             
             <Link 
               to="/case-studies" 
               className="border-2 border-white text-white hover: bg-white hover:text-indigo-700 px-8 py-4 rounded-lg font-semibold inline-flex items-center justify-center gap-2 transition-all duration-300 hover:scale-105",
             >
+<<<<<<< HEAD
+              <Zap className="w-5 h-5/>
+=======
               <Zap className="w-5 h-5" />";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               View Case Studies
             </Link>
           </div>
         </div>
 
         {/* Featured Content Cards */}
+<<<<<<< HEAD
+        <div className="mt-10 grid gap-6 md: grid-cols-3">",
+          {featuredContent.map((item, index) => (
+            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300 hover:scale-105">",
+              <div className="flex items-center justify-between mb-3">
+                <span className="text-xs uppercase tracking-wider text-blue-200 bg-blue-500/20 px-3 py-1 rounded-full">
+=======
         <div className="mt-10 grid gap-6 md: grid-cols-3">";,
           {featuredContent.map((item, index) => (
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300 hover:scale-105">";,
               <div className="flex items-center justify-between mb-3">";
                 <span className="text-xs uppercase tracking-wider text-blue-200 bg-blue-500/20 px-3 py-1 rounded-full">";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   {item.category}
                 </span>
                 {item.isNew && (
@@ -87,17 +142,28 @@ export default function ContentPromotionBanner(): void {
                 <span className="text-sm text-white/70">";
                   {item.readTime}
                 </span>
+<<<<<<< HEAD
+                <ArrowRight className="w-4 h-4 text-white/70/>
+=======
                 <ArrowRight className="w-4 h-4 text-white/70" />";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
             </div>
           ))}
         </div>
 
         {/* Stats */}
+<<<<<<< HEAD
+        <div className="mt-8 grid grid-cols-2 md: grid-cols-4 gap-6 pt-8 border-t border-white/20">",
+          <div className="text-center">
+            <div className="text-2xl font-bold text-white">50+</div>
+            <div className="text-sm text-white/80">Articles Published</div>
+=======
         <div className="mt-8 grid grid-cols-2 md: grid-cols-4 gap-6 pt-8 border-t border-white/20">";,
           <div className="text-center">";
             <div className="text-2xl font-bold text-white">50+</div>";
             <div className="text-sm text-white/80">Articles Published</div>";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           </div>
           <div className="text-center">";
             <div className="text-2xl font-bold text-white">10K+</div>";

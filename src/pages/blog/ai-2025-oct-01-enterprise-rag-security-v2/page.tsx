@@ -9,6 +9,16 @@ export default function EnterpriseRAGSecurityV2(): React.JSX.Element {
           name="description"
           content="Auth-scoped retrieval, freshness windows, prompt firewalls, and signed outputs that keep answers correct and compliant." /><link
           rel="canonical"
+<<<<<<< HEAD
+          href="https://ziontechgroup.com/blog/ai-2025-oct-01-enterprise-rag-security-v2",
+        />
+      </Helmet>
+
+      <div className="container mx-auto px-6 py-16">
+        <h1 className="text-4xl md: text-5xl font-bold mb-4">Enterprise RAG Security v2</h1>",
+        <p className="text-zion-slate-light mb-8">Auth-Aware, Fresh, Signed</p>
+        <div className="prose prose-invert max-w-3xl">
+=======
           href="https: //ziontechgroup.com/blog/ai-2025-oct-01-enterprise-rag-security-v2",
         />
       </Helmet>
@@ -17,6 +27,7 @@ export default function EnterpriseRAGSecurityV2(): React.JSX.Element {
         <h1 className="text-4xl md: text-5xl font-bold mb-4">Enterprise RAG Security v2</h1>";,
         <p className="text-zion-slate-light mb-8">Auth-Aware, Fresh, Signed</p>";
         <div className="prose prose-invert max-w-3xl">";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           <p>
             Upgrade enterprise RAG safety with auth-aware retrieval, freshness windows
             prompt firewalls, and signed outputs. Prevent data leaks and stale answers

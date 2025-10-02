@@ -4,11 +4,11 @@
  * Reduces initial page load time by 40%
  */
 
-import React, { lazy, ComponentType } from 'react';';
-
+<<<<<<< HEAD
+import React, { lazy, ComponentType } from 'react';
 export interface LazyLoadConfig {
 componentPath: string;,
-preload?: boolean;
+preload?: boolean;,
 timeout?: number;
 }
 
@@ -43,7 +43,11 @@ export function preloadComponent(importFn: () => Promise<any>): void {,
   const promise = importFn();
   
   // Store in cache for faster subsequent loads
+<<<<<<< HEAD
+  if ('requestIdleCallback' in window) {;
+=======
   if ('requestIdleCallback' in window) {';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     requestIdleCallback(() => {
       promise.catch(() => {
         // Silently handle preload errors
@@ -68,7 +72,11 @@ export function createVisibilityLazyComponent<T extends ComponentType<any>>(
   return lazy(() => {
     return new Promise((resolve) => {
       // Check if IntersectionObserver is supported
+<<<<<<< HEAD
+      if ('IntersectionObserver' in window) {;
+=======
       if ('IntersectionObserver' in window) {';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
         const observer = new IntersectionObserver(
           (entries) => {
             entries.forEach((entry) => {
@@ -85,7 +93,11 @@ export function createVisibilityLazyComponent<T extends ComponentType<any>>(
         // This will be triggered when component mounts
         setTimeout(() => importFn().then(resolve), 100);
       } else {
+<<<<<<< HEAD
+// Fallback: load immediately
+=======
 // Fallback: load immediately,,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 importFn().then(resolve);
 }
     });
@@ -113,7 +125,11 @@ class ErrorBoundary extends React.Component<
   { children: React.ReactNode; fallback?: ComponentType<any> }
   { hasError: boolean }
 > {
+<<<<<<< HEAD
+constructor(props: any) {
+=======
 constructor(props: any) {,,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 super(props);
 this.state = { hasError: false
 };
@@ -124,7 +140,11 @@ this.state = { hasError: false
   }
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {,
+<<<<<<< HEAD
+    console.error('Lazy loading error: ', error, errorInfo);',
+=======
     console.error('Lazy loading error: ', error, errorInfo);';,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   }
 
   render() {

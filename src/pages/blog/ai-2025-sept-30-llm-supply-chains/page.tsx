@@ -10,6 +10,17 @@ export default function LLMSupplyChains2025(): React.JSX.Element {
           name="description"
           content="Blueprint for AI-driven supply chains with KPI-linked scorecards, freshness windows, and budget-aware actions." /><link
           rel="canonical"
+<<<<<<< HEAD
+          href="https://ziontechgroup.com/blog/ai-2025-sept-30-llm-supply-chains",
+        />
+      </Helmet>
+
+      <div className="container mx-auto px-6 py-16">
+        <h1 className="text-4xl md: text-5xl font-bold mb-4">",
+          AI Supply Chains: 99.5% Forecasts, 85% Inventory Reduction,
+        </h1>
+        <p className="text-zion-slate-light mb-8">
+=======
           href="https: //ziontechgroup.com/blog/ai-2025-sept-30-llm-supply-chains",
         />
       </Helmet>
@@ -19,6 +30,7 @@ export default function LLMSupplyChains2025(): React.JSX.Element {
           AI Supply Chains: 99.5% Forecasts, 85% Inventory Reduction,
         </h1>
         <p className="text-zion-slate-light mb-8">";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           Outcome-led architecture: live freshness windows, quality budgets, and rollback,
           to avoid downstream regressions while accelerating cycle time.
         </p>

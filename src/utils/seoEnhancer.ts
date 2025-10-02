@@ -4,6 +4,17 @@
  */
 
 export interface SEOConfig {
+title: string;,
+description: string;,
+keywords?: string[];,
+author?: string;,
+ogImage?: string;,
+canonical?: string;,
+publishDate?: string;,
+modifiedDate?: string;,
+type?: 'website' | 'article' | 'product';,
+locale?: string;
+=======
   title: string;
   description: string;
   keywords?: string[];
@@ -14,6 +25,7 @@ export interface SEOConfig {
   modifiedDate?: string;
   type?: 'website' | 'article' | 'product';
   locale?: string;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 }
 
 /**
@@ -24,13 +36,19 @@ export function generateMetaTags(config: SEOConfig): Record<string, string> {,
     // Basic meta
     title: config.title,
     description: config.description,
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     // Open Graph
     'og:title': config.title,
     'og:description': config.description,
     'og:type': config.type || 'website',
     'og:locale': config.locale || 'en_US',
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     // Twitter Card
     'twitter:card': 'summary_large_image',
     'twitter:title': config.title,
@@ -47,9 +65,15 @@ export function generateMetaTags(config: SEOConfig): Record<string, string> {,
   }
 
   if (config.ogImage) {
+<<<<<<< HEAD
+meta['og:image'] = config.ogImage;
+meta['twitter:image'] = config.ogImage;
+}
+=======
     meta['og:image'] = config.ogImage;
     meta['twitter:image'] = config.ogImage;
   }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 
   if (config.canonical) {
     meta.canonical = config.canonical;
@@ -114,10 +138,16 @@ export function calculateReadingTime(content: string, wordsPerMinute: number = 2
  * Generate sitemap entry
  */
 export interface SitemapEntry {
+url: string;,
+lastmod?: string;,
+changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';,
+priority?: number;
+=======
   url: string;
   lastmod?: string;
   changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority?: number;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 }
 
 export function generateSitemapEntry(entry: SitemapEntry): string {,
@@ -184,4 +214,9 @@ export function optimizeDescription(description: string, maxLength: number = 160
   // Truncate at last word
   const lastSpace = truncated.lastIndexOf(' ');
   return truncated.substring(0, lastSpace) + '...';
+<<<<<<< HEAD
 }
+;
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208

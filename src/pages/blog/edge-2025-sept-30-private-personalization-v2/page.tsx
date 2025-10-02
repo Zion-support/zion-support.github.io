@@ -10,6 +10,16 @@ export default function EdgePrivatePersonalizationV2(): React.JSX.Element {
           name="description"
           content="Scoped IDs, signed configs, and on‑device models for privacy‑first personalization with stable SLAs." /><link
           rel="canonical"
+<<<<<<< HEAD
+          href="https://ziontechgroup.com/blog/edge-2025-sept-30-private-personalization-v2",
+        />
+      </Helmet>
+
+      <div className="container mx-auto px-6 py-16">
+        <h1 className="text-4xl md: text-5xl font-bold mb-4">Edge Private Personalization v2</h1>",
+        <p className="text-zion-slate-light mb-8">Zero‑PII, Global &lt;100ms</p>
+        <div className="prose prose-invert max-w-3xl">
+=======
           href="https: //ziontechgroup.com/blog/edge-2025-sept-30-private-personalization-v2",
         />
       </Helmet>
@@ -18,6 +28,7 @@ export default function EdgePrivatePersonalizationV2(): React.JSX.Element {
         <h1 className="text-4xl md: text-5xl font-bold mb-4">Edge Private Personalization v2</h1>";,
         <p className="text-zion-slate-light mb-8">Zero‑PII, Global &lt;100ms</p>";
         <div className="prose prose-invert max-w-3xl">";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           <p>
             Deliver privacy‑first personalization with scoped IDs, signed configurations, and on‑device models. Achieve
             sub‑100ms global latency with deterministic cache strategies and geo‑aware budgets.

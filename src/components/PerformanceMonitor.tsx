@@ -1,147 +1,93 @@
-import React, { useEffect, useState } from 'react';';
-// import {
-useWebVitals
-} from "../hooks/usePerformance";";
+import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
-lcp?: number;
-fid?: number;
-cls?: number;
-fcp?: number;
+lcp?: number;,
+fid?: number;,
+cls?: number;,
+fcp?: number;,
 ttfb?: number;
 }
 
-export const PerformanceMonitor: React.FC = () => {,
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
-  const [isVisible, setIsVisible] = useState(false);
-
-  // useWebVitals();
+const PerformanceMonitor: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    cls: null,
+    inp: null,
+    fcp: null,
+    lcp: null,
+    ttfb: null,
+  });
 
   useEffect(() => {
-    // Only show in development or when performance issues are detected
-    if (process.env.NODE_ENV === 'development') {';
-      setIsVisible(true);
-    }
+    // Dynamically import web-vitals to avoid build issues
+    import('web-vitals').then((webVitals) => {
+      const { onCLS, onFCP, onLCP, onTTFB } = webVitals;
+      
+      // Measure Core Web Vitals
+      onCLS((metric: any) => {
+        setMetrics((prev: PerformanceMetrics) => ({ ...prev, cls: metric.value }));
+      });
 
-    // Listen for performance metrics
-    const handleMetric = (metric: any) => {,
-      setMetrics(prev => ({
-        ...prev
-        [metric.name.toLowerCase()]: metric.value
-      }));
+      onFCP((metric: any) => {
+        setMetrics((prev: PerformanceMetrics) => ({ ...prev, fcp: metric.value }));
+      });
 
-      // Show monitor if poor performance is detected
-      if (metric.name === 'LCP' && metric.value > 4000) {';
-        setIsVisible(true);
+      onLCP((metric: any) => {
+        setMetrics((prev: PerformanceMetrics) => ({ ...prev, lcp: metric.value }));
+      });
+
+      onTTFB((metric: any) => {
+        setMetrics((prev: PerformanceMetrics) => ({ ...prev, ttfb: metric.value }));
+      });
+
+      // Try to use onINP if available (for newer versions)
+      if (webVitals.onINP) {
+        webVitals.onINP((metric: any) => {
+          setMetrics((prev: PerformanceMetrics) => ({ ...prev, inp: metric.value }));
+        });
       }
-      if (metric.name === 'CLS' && metric.value > 0.25) {';
-        setIsVisible(true);
-      }
-    };
-
-    // Import and set up web vitals
-    import('web-vitals').then(({ onCLS, onFID, onFCP, onLCP, onTTFB }) => {';
-      onCLS(handleMetric);
-      onFID(handleMetric);
-      onFCP(handleMetric);
-      onLCP(handleMetric);
-      onTTFB(handleMetric);
+    }).catch((error) => {
+      console.warn('Failed to load web-vitals:', error);
     });
-
-    return () => {
-      setIsVisible(false);
-    };
   }, []);
 
-  if (!isVisible) return null;
-
-  const getMetricColor = (name: string, value: number) => {,
-switch (name) {
-case 'lcp':';
-return value <= 2500 ? 'text-green-400' : value <= 4000 ? 'text-yellow-400' : 'text-red-400';';
-case 'fid':';
-return value <= 100 ? 'text-green-400' : value <= 300 ? 'text-yellow-400' : 'text-red-400';';
-case 'cls':';
-return value <= 0.1 ? 'text-green-400' : value <= 0.25 ? 'text-yellow-400' : 'text-red-400';';
-case 'fcp':';
-return value <= 1800 ? 'text-green-400' : value <= 3000 ? 'text-yellow-400' : 'text-red-400';';
-case 'ttfb':';
-return value <= 800 ? 'text-green-400' : value <= 1800 ? 'text-yellow-400' : 'text-red-400';';
-default:
-return 'text-gray-400';';
-};
+  const getPerformanceGrade = (metric: number, thresholds: { good: number; poor: number }) => {
+    if (metric <= thresholds.good) return 'good';
+    if (metric <= thresholds.poor) return 'needs-improvement';
+    return 'poor';
   };
 
-  const getMetricLabel = (name: string) => {,
-    const labels: Record<string, string> = {,
-      lcp: 'Largest Contentful Paint',';,
-      fid: 'First Input Delay',';,
-      cls: 'Cumulative Layout Shift',';,
-      fcp: 'First Contentful Paint',';,
-      ttfb: 'Time to First Byte',';,
-    };
-    return labels[name] || name.toUpperCase();
+  const getGradeColor = (grade: string) => {
+    switch (grade) {
+      case 'good': return 'text-green-600 bg-green-100';
+      case 'needs-improvement': return 'text-yellow-600 bg-yellow-100';
+      case 'poor': return 'text-red-600 bg-red-100';
+      default: return 'text-gray-600 bg-gray-100';
+    }
   };
 
-  const formatMetricValue = (name: string, value: number) => {,
-    if (name === 'cls') {';
-      return value.toFixed(3);
-    };
-    return Math.round(value).toLocaleString();
-  };
-
-  const formatMetricUnit = (name: string) => {,
-    return name === 'cls' ? '' : 'ms';';
-  };
+  if (!isVisible) {
+    return (
+      <button
+        onClick={() => setIsVisible(true)}
+        className="fixed bottom-4 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors z-50"
+        title="Open Performance Monitor"
+      >
+        <Activity className="h-5 w-5" />
+      </button>
+    );
+  }
 
   return (
-    <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-sm border border-slate-700 rounded-lg p-4 text-white text-sm z-50 max-w-xs">";
-      <div className="flex items-center justify-between mb-2">";
-        <h3 className="font-semibold text-blue-400">Performance</h3>";
-        <button
-          onClick={() => setIsVisible(false)}
-          className="text-gray-400 hover: text-white text-xs",
-        >
-          ✕
-        </button>
-      </div>
-      
-      <div className="space-y-1">";
-        {Object.entries(metrics).map(([name, value]) => (
-          <div key={name} className="flex justify-between items-center">";
-            <span className="text-gray-300 text-xs">";
-              {getMetricLabel(name)}:
-            </span>
-            <span className={`font-mono text-xs ${getMetricColor(name, value)}`}>`;
-              {formatMetricValue(name, value)}{formatMetricUnit(name)}
-            </span>
-          </div>
-        ))}
-      </div>
-      
-      {Object.keys(metrics).length === 0 && (
-        <div className="text-gray-400 text-xs">";
-          Loading metrics...
-        </div>
-      )}
-      
-      <div className="mt-2 pt-2 border-t border-slate-700">";
-        <div className="text-xs text-gray-400">";
-          <div className="flex items-center space-x-1">";
-            <div className="w-2 h-2 bg-green-400 rounded-full"></div>";
-            <span>Good</span>
-          </div>
-          <div className="flex items-center space-x-1 mt-1">";
-            <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>";
-            <span>Needs Improvement</span>
-          </div>
-          <div className="flex items-center space-x-1 mt-1">";
-            <div className="w-2 h-2 bg-red-400 rounded-full"></div>";
-            <span>Poor</span>
-          </div>
-        </div>
-      </div>
+    <div className="fixed bottom-4 right-4 bg-black bg-opacity-80 text-white p-4 rounded-lg text-xs font-mono z-50">
+      <div className="font-bold mb-2">Performance Metrics</div>
+      <div>CLS: {metrics.cls?.toFixed(3) || 'N/A'}</div>
+      <div>INP: {metrics.inp?.toFixed(2) || 'N/A'}ms</div>
+      <div>FCP: {metrics.fcp?.toFixed(2) || 'N/A'}ms</div>
+      <div>LCP: {metrics.lcp?.toFixed(2) || 'N/A'}ms</div>
+      <div>TTFB: {metrics.ttfb?.toFixed(2) || 'N/A'}ms</div>
     </div>
   );
-};export default PerformanceMonitor;
-;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-bd1a
+};
+
+export default PerformanceMonitor;

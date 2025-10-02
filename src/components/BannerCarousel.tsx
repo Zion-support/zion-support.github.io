@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';';
-
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
 interface BannerProps {
 title: string;,
 description: string;,
-image?: string;
+image?: string;,
 link?: string;
 }
 
@@ -12,6 +12,20 @@ const BannerCarousel: React.FC = () => {,
 
   const banners: BannerProps[] = [,
     {
+<<<<<<< HEAD
+      title: "AI-Powered Business Solutions",",
+      description: "Transform your business with cutting-edge AI technology",",
+      link: "/services/ai-services",
+    },
+    {
+      title: "Micro SaaS Solutions",",
+      description: "Scalable software solutions for modern businesses",",
+      link: "/services/micro-saas",
+    },
+    {
+      title: "Enterprise IT Services",",
+      description: "Comprehensive IT solutions for enterprise needs",",
+=======
       title: "AI-Powered Business Solutions",";,
       description: "Transform your business with cutting-edge AI technology",";,
       link: "/services/ai-services",
@@ -24,6 +38,7 @@ const BannerCarousel: React.FC = () => {,
     {
       title: "Enterprise IT Services",";,
       description: "Comprehensive IT solutions for enterprise needs",";,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       link: "/services/it-services",
     }
   ];

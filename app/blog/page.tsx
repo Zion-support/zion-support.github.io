@@ -1,8 +1,17 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import { Metadata } from 'next';
+import Link from 'next/link';
 
-const BlogPage: React.FC = () => {
+export const metadata: Metadata = {
+  title: 'Blog - Zion Tech Group',
+  description: 'Latest insights on AI, micro SaaS, IT services, and technology trends from Zion Tech Group experts.',
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+export default function BlogPage() {
   const blogPosts = [
     {
       title: "AI Implementation Roadmap 2026: A Complete Guide",
@@ -63,13 +72,7 @@ const BlogPage: React.FC = () => {
   const categories = ["All", "AI", "Automation", "SaaS", "Cloud", "Security", "Blockchain"];
 
   return (
-    <>
-      <Helmet>
-        <title>Blog - Zion Tech Group</title>
-        <meta name="description" content="Latest insights on AI, micro SaaS, IT services, and technology trends from Zion Tech Group experts." />
-      </Helmet>
-      
-      <div className="min-h-screen py-20">
+    <div className="min-h-screen py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -112,7 +115,7 @@ const BlogPage: React.FC = () => {
                     </div>
                     
                     <h3 className="text-xl font-bold text-gray-900 mb-3">
-                      <Link to={post.href} className="hover:text-blue-600 transition-colors">
+                      <Link href={post.href} className="hover:text-blue-600 transition-colors">
                         {post.title}
                       </Link>
                     </h3>
@@ -122,7 +125,7 @@ const BlogPage: React.FC = () => {
                     <div className="flex items-center justify-between">
                       <span className="text-sm text-gray-500">{post.date}</span>
                       <Link
-                        to={post.href}
+                        href={post.href}
                         className="text-blue-600 hover:text-blue-700 font-semibold flex items-center"
                       >
                         Read More
@@ -152,7 +155,7 @@ const BlogPage: React.FC = () => {
                     </div>
                     
                     <h3 className="text-lg font-bold text-gray-900 mb-3">
-                      <Link to={post.href} className="hover:text-blue-600 transition-colors">
+                      <Link href={post.href} className="hover:text-blue-600 transition-colors">
                         {post.title}
                       </Link>
                     </h3>
@@ -162,7 +165,7 @@ const BlogPage: React.FC = () => {
                     <div className="flex items-center justify-between">
                       <span className="text-xs text-gray-500">{post.date}</span>
                       <Link
-                        to={post.href}
+                        href={post.href}
                         className="text-blue-600 hover:text-blue-700 text-sm font-semibold"
                       >
                         Read →
@@ -193,8 +196,5 @@ const BlogPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
   );
-};
-
-export default BlogPage;
+}

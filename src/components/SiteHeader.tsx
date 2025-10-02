@@ -15,7 +15,7 @@ const SiteHeader: React.FC = () => {
 						<span className="text-2xl">🚀</span>
 						<span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
 					</Link>
-					<nav className="hidden md:flex items-center gap-6">
+					<nav className="hidden md:flex items-center gap-6" aria-label="Main navigation">
 						<NavLink to="/services" className={navLinkClass}>
 							Services
 						</NavLink>

@@ -29,9 +29,15 @@ featured: boolean;
  * Content cache to minimize file system reads
  */
 class ContentCache {
+<<<<<<< HEAD
+  private blogCache: Map<string, BlogPost> = new Map(),
+  private caseStudyCache: Map<string, CaseStudy> = new Map(),
+  private lastUpdate: number = 0,
+=======
   private blogCache: Map<string, BlogPost> = new Map();,
   private caseStudyCache: Map<string, CaseStudy> = new Map();,
   private lastUpdate: number = 0;,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   private readonly CACHE_TTL = 5 * 60 * 1000; // 5 minutes
 
   isCacheValid(): boolean {
