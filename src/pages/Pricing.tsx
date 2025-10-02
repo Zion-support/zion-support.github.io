@@ -9,12 +9,9 @@ import {
   ArrowRight,
   Star,
   Zap,
-  Users,
   Building2,
   Rocket,
-  Shield,
   Phone,
-  Mail,
   MessageCircle
 } from 'lucide-react';
 

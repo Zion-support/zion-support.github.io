@@ -3,14 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import {
-  Calendar,
-  Clock,
-  User,
-  Mail,
-  Phone,
-  Building2,
   Users,
-  MessageSquare,
   Video,
   ArrowRight,
   CheckCircle,

@@ -18,7 +18,6 @@ import {
   Rocket,
   BarChart3,
   Cog,
-  Database
 } from 'lucide-react';
 
 const AISolutions: React.FC = () => {
@@ -160,7 +159,7 @@ const AISolutions: React.FC = () => {
 
             {/* AI Services Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-              {aiServices.map((service, index) => (
+              {aiServices.map((service) => (
                 <div
                   key={service.path}
                   className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300 hover:scale-105 group"

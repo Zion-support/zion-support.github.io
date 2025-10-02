@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 // import { resourcePreloader } from './utils/resourcePreloader';
 // import { criticalCSSManager } from './utils/criticalCSSManager';
