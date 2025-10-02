@@ -1530,11 +1530,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2026-01-05",
     featured: true,
     readTime: "8 min read"
-  }
-);
-
-// Sept 30, 2025 – Newly added trio to expand content and surface on Home
-posts.push(
+  },
   {
     slug: "ai-slo-scorecards-2026",
     title: "AI SLO Scorecards 2026: Prove Reliability Week by Week",
