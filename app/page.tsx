@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Ultimate2025ContentShowcaseBanner from '../components/Ultimate2025ContentShowcaseBanner';
 import March2027QuantumSingularityBanner from '../components/March2027QuantumSingularityBanner';
+import NewServicesHero from '../components/NewServicesHero';
 import {
   NewBlogBanner,
   AnalyticsPlatformBanner,
@@ -1366,6 +1367,9 @@ export default function HomePage() {
       </section>
 
       {/* Featured Services */}
+      {/* New Services Hero Section */}
+      <NewServicesHero />
+
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
