@@ -163,6 +163,96 @@ export default function ServicesPage() {
 
   const services = [
     {
+      title: 'AI Document Automation Platform',
+      description: 'Automate document processing, data extraction, and workflow management with 99.5% accuracy',
+      icon: '📄',
+      features: [
+        'Intelligent Data Extraction',
+        'Smart Document Classification',
+        'Automated Workflow Processing',
+        'Compliance & Security Controls',
+        'Real-time Analytics & Reporting'
+      ],
+      href: '/services/ai-document-automation',
+      pricing: '$299 - $799/month',
+      category: 'AI Automation'
+    },
+    {
+      title: 'AI Customer Insights Platform',
+      description: 'Transform customer data into actionable insights with AI-powered analytics and predictive modeling',
+      icon: '👥',
+      features: [
+        'Predictive Customer Analytics',
+        'Behavioral Segmentation',
+        'Journey Mapping & Analysis',
+        'Sentiment Analysis',
+        'Revenue Optimization'
+      ],
+      href: '/services/ai-customer-insights-platform',
+      pricing: '$499 - $1,299/month',
+      category: 'Business Intelligence'
+    },
+    {
+      title: 'AI Workflow Automation Platform',
+      description: 'Streamline business operations with intelligent workflow automation and process optimization',
+      icon: '⚡',
+      features: [
+        'Visual Workflow Builder',
+        'AI-Powered Decision Making',
+        'System Integrations',
+        'Process Monitoring',
+        'Exception Handling'
+      ],
+      href: '/services/ai-workflow-automation-platform',
+      pricing: '$399 - $999/month',
+      category: 'Process Automation'
+    },
+    {
+      title: 'Healthcare AI Diagnostics Platform',
+      description: 'Revolutionary AI-powered diagnostic platform for healthcare providers with 95% accuracy',
+      icon: '🏥',
+      features: [
+        'Medical Imaging AI',
+        'Clinical Decision Support',
+        'Predictive Analytics',
+        'Early Disease Detection',
+        'HIPAA Compliance'
+      ],
+      href: '/services/healthcare-ai-diagnostics-platform',
+      pricing: '$2,999 - $7,999/month',
+      category: 'Healthcare AI'
+    },
+    {
+      title: 'FinTech AI Risk Management Platform',
+      description: 'Advanced AI-powered risk management for financial institutions with 99.8% fraud detection accuracy',
+      icon: '💰',
+      features: [
+        'Real-time Fraud Detection',
+        'Credit Risk Assessment',
+        'Regulatory Compliance',
+        'Market Risk Analysis',
+        'Predictive Analytics'
+      ],
+      href: '/services/fintech-ai-risk-management',
+      pricing: '$1,999 - $4,999/month',
+      category: 'FinTech AI'
+    },
+    {
+      title: 'AI Inventory Optimization Platform',
+      description: 'Optimize inventory management with AI-powered demand forecasting and automated reordering',
+      icon: '📦',
+      features: [
+        'Demand Forecasting',
+        'Automated Reordering',
+        'Stock Optimization',
+        'Supplier Management',
+        'Risk Management'
+      ],
+      href: '/services/ai-inventory-optimization-platform',
+      pricing: '$599 - $1,999/month',
+      category: 'Supply Chain AI'
+    },
+    {
       title: 'AI Content Generation Tool',
       description: 'Revolutionary AI-powered content creation platform for blogs, social media, and marketing materials',
       icon: '✍️',
