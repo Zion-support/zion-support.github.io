@@ -160,14 +160,14 @@ const NewContentPromotionalBanner2026 = () => {
                 and transformative technologies that are reshaping our world.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
+                <a title="Internal link"
                   href="/blog"
                   className="bg-gradient-to-r from-violet-500 to-purple-600 hover:from-violet-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-violet-500/50 flex items-center justify-center gap-2"
                 >
                   <Rocket className="w-5 h-5" />
                   <span>Explore All Content</span>
                 </a>
-                <a
+                <a title="Internal link"
                   href="/newsletter"
                   className="border-2 border-violet-500 text-violet-400 hover:bg-violet-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
                 >

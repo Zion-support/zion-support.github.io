@@ -111,7 +111,7 @@ class SEOAuditor {
         this.addIssue('warning', 'metadata', 'Title is too long', 'title', 'Keep title under 60 characters to avoid truncation', 'medium');
       }
     } else {
-      this.addIssue('error', 'metadata', 'Title tag is missing', 'head', 'Add a <title> tag to the <head>', 'high');
+      this.addIssue('error', 'metadata', 'Title tag is missing', 'head', 'Add a <title> tag to the <head> section', 'high');
     }
 
     // Meta description
@@ -317,7 +317,7 @@ class SEOAuditor {
       try {
         const data = JSON.parse(script.textContent || '');
         structuredData.push(data);
-      } catch (e) {
+      } catch {
         this.addIssue('error', 'structured-data', 'Invalid JSON-LD structured data', 'script[type="application/ld+json"]', 'Fix JSON syntax in structured data', 'high');
       }
     });

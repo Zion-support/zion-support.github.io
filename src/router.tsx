@@ -1,4 +1,5 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import AIDataAnalytics from './pages/services/AIDataAnalytics';
 import AIIntelligentDocumentProcessing from './pages/services/AIIntelligentDocumentProcessing';
 import AIVirtualAssistant from './pages/services/AIVirtualAssistant';
@@ -23,6 +24,12 @@ import NextGenIntelligentAutomationBreakthrough from './pages/blog/ai-2025-oct-n
 import PostBySlug from './pages/blog/PostBySlug';
 import RealTimeCognitiveAutomation from './pages/services/RealTimeCognitiveAutomation';
 import Services from './pages/Services';
+import Solutions from './pages/Solutions';
+import Resources from './pages/Resources';
+import AISolutions from './pages/AISolutions';
+import Pricing from './pages/Pricing';
+import Demo from './pages/Demo';
+import Support from './pages/Support';
 
 export const AppRouter: React.FC = () => {
   return (
@@ -30,6 +37,12 @@ export const AppRouter: React.FC = () => {
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/services" element={<Services />} />
+      <Route path="/solutions" element={<Solutions />} />
+      <Route path="/resources" element={<Resources />} />
+      <Route path="/ai-solutions" element={<AISolutions />} />
+      <Route path="/pricing" element={<Pricing />} />
+      <Route path="/demo" element={<Demo />} />
+      <Route path="/support" element={<Support />} />
       <Route path="/services/ai-workflow-automation" element={<AIWorkflowAutomation />} />
       <Route path="/services/ai-virtual-assistant" element={<AIVirtualAssistant />} />
       <Route path="/services/ai-data-analytics" element={<AIDataAnalytics />} />

@@ -12,19 +12,19 @@ import {
   Users,
   Zap
 } from "lucide-react";
-import ContentPromotionBanner from "../components/ContentPromotionBanner";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import ComprehensivePromoBanner from "../components/ComprehensivePromoBanner";
 import NewArticlesPromoBanner from "../components/NewArticlesPromoBanner";
 import NewServicesPromoBanner from "../components/NewServicesPromoBanner";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import LatestArticlesShowcase from "../components/LatestArticlesShowcase";
 import LatestContentBanner from "../components/LatestContentBanner";
 // import LatestInsights from "../components/LatestInsights";
 import ModernFeatures from "../components/ModernFeatures";
 import NewContentAnnouncement from "../components/NewContentAnnouncement";
 import NewContentPromoBanner from "../components/NewContentPromoBanner";
-import NewContentShowcase from "../components/NewContentShowcase";
-import NewContentShowcase2025 from "../components/NewContentShowcase2025";
 import NewServicesShowcase from "../components/NewServicesShowcase";
 import SuccessStoriesShowcase from "../components/SuccessStoriesShowcase";
 import TrendingContentBanner from "../components/TrendingContentBanner";
@@ -149,27 +149,95 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="New: Governance Quickstart, Privacy‑First Agents, E2E Tracing"
-          description="Ship fast with KPI‑linked scorecards, private assistants, and comprehensive tracing."
+          title="New: Scorecards v4 + Zero‑PII Insights + Quality Tiers v2"
+          description="Ship faster with KPI‑linked scorecards, private <100ms analytics, and predictable GenAI costs."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "AI Governance Scorecards Quickstart 2026", category: "AI Strategy", link: "/blog/ai-governance-scorecards-quickstart-2026" },
-            { title: "Privacy‑First Agents 2026", category: "AI Security", link: "/blog/privacy-first-agents-2026" },
-            { title: "E2E AI Tracing", category: "Observability", link: "/blog/ai-e2e-tracing-2025" },
-            { title: "Edge Personalization", category: "Edge Computing", link: "/blog/edge-personalization-2025" },
-            { title: "Policy Tests Quickstart", category: "AI Governance", link: "/blog/policy-tests-quickstart-2025" },
-            { title: "Serverless Inference Cost Playbook 2026", category: "GenAI", link: "/blog/serverless-inference-cost-playbook-2026" }
+            { title: "AI Operational Scorecards v4 (2026)", category: "AI Operations", link: "/blog/ai-operational-scorecards-v4-2026" },
+            { title: "Edge Zero‑PII Insights 2026", category: "Analytics", link: "/blog/edge-zero-pii-insights-2026" },
+            { title: "GenAI Quality Tiers v2 (2026)", category: "GenAI", link: "/blog/genai-quality-tiers-v2-2026" },
+            { title: "Edge RAG 2026", category: "GenAI", link: "/blog/edge-rag-privacy-preserving-2026" },
+            { title: "PR Policy Tests 2026", category: "AI Governance", link: "/blog/ai-governance-pr-policy-tests-2026" }
           ]}
         />
         <div className="container mx-auto px-6 mt-6">
           <TrendingContentBanner />
+        </div>
+
+        {/* Newly added content promo */}
+        <div className="container mx-auto px-6 mt-6">
+          <div className="rounded-xl border border-white/10 bg-white/5 p-6">
+            <div className="text-white text-sm mb-4">Just added</div>
+            <div className="grid md:grid-cols-3 gap-4">
+              <Link to="/blog/ai-operational-scorecards-v4-2026" className="block rounded-lg border border-white/10 p-4 hover:border-emerald-400/40 transition-colors">
+                <div className="text-emerald-300 text-xs mb-2">AI Operations</div>
+                <div className="text-white font-semibold">AI Operational Scorecards v4 (2026)</div>
+                <div className="text-zion-slate-light text-sm mt-1">SLIs mapped to KPIs, budgeted actions, instant rollback teams adopt fast.</div>
+              </Link>
+              <Link to="/blog/edge-zero-pii-insights-2026" className="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
+                <div className="text-cyan-300 text-xs mb-2">Analytics</div>
+                <div className="text-white font-semibold">Edge Zero‑PII Insights 2026</div>
+                <div className="text-zion-slate-light text-sm mt-1">Scoped IDs, on‑device aggregation, and DP noise—zero PII.</div>
+              </Link>
+              <Link to="/blog/genai-quality-tiers-v2-2026" className="block rounded-lg border border-white/10 p-4 hover:border-fuchsia-400/40 transition-colors">
+                <div className="text-fuchsia-300 text-xs mb-2">GenAI</div>
+                <div className="text-white font-semibold">GenAI Quality Tiers v2 (2026)</div>
+                <div className="text-zion-slate-light text-sm mt-1">Quality tiers and caches for predictable cost and stable UX.</div>
+              </Link>
+            </div>
+          </div>
+        </div>
+        
+        {/* OCTOBER 2025 MEGA LAUNCH - 7 Revolutionary Articles */}
+        <div className="container mx-auto px-6 mt-6">
+          <October2025MegaLaunchBanner />
+        </div>
+        
+        {/* SEPTEMBER 30, 2025 - 5 Revolutionary AI Breakthroughs */}
+        <div className="container mx-auto px-6 mt-6 mb-6">
+          <September30NewContentMegaBanner />
+        </div>
+        
+        {/* BREAKTHROUGH CONTENT 2026 - September 30, 2025 */}
+        <div className="container mx-auto px-6 mt-6">
+          <Revolutionary2026ContentMegaBanner />
         </div>
         
         {/* New Comprehensive Promotional Banner */}
         <div className="container mx-auto px-6 mt-6">
           <ComprehensivePromoBanner variant="hero" showCount={4} />
         </div>
+
+        {/* Latest AI Breakthroughs Promo */}
+        <NewContentPromoBanner 
+          className="border-b border-white/10" 
+          variant="premium" 
+          title="🚀 JUST RELEASED: Latest AI Breakthroughs — Autonomous DevOps, Multimodal AI, and Advanced Scorecards"
+          description="Discover cutting-edge AI innovations: self-healing infrastructure achieving 99.9% uptime, unified multimodal AI processing vision and language, and operational scorecards that gate risk while shipping faster."
+          ctaText="Explore Latest Breakthroughs"
+          ctaLink="/blog"
+          featuredItems={[
+            { title: "Autonomous DevOps Platforms — Self-Healing Infrastructure (99.9% Uptime, 85% MTTR Reduction)", category: "DevOps & Infrastructure", link: "/blog/ai-2025-oct-04-autonomous-devops-platforms" },
+            { title: "Multimodal AI Integration — Vision, Language & Decision Making (Cross-Modal Understanding)", category: "AI Research", link: "/blog/ai-2025-oct-04-multimodal-ai-integration" },
+            { title: "Operational AI Scorecards v2 — Gate Risk, Ship Faster (KPI-Linked SLIs, Rollback-First)", category: "AI Reliability", link: "/blog/ai-2025-oct-04-operational-ai-scorecards-v2" }
+          ]}
+        />
+
+        {/* Enterprise Solutions Showcase */}
+        <NewContentPromoBanner 
+          className="border-b border-white/10" 
+          variant="premium" 
+          title="🛡️ ENTERPRISE SOLUTIONS: AI Governance, Edge Computing, and Production-Ready Systems"
+          description="Scale your AI initiatives with enterprise-grade solutions: comprehensive governance achieving 95% compliance reduction, edge computing with sub-millisecond latency, and production-ready systems with automated monitoring."
+          ctaText="Explore Enterprise Solutions"
+          ctaLink="/blog"
+          featuredItems={[
+            { title: "Enterprise AI Governance — Risk Management & Compliance at Scale (95% Violation Reduction)", category: "AI Governance", link: "/blog/ai-2025-oct-04-enterprise-ai-governance" },
+            { title: "Edge Computing Optimization — Deploy AI at Network Edge (Sub-millisecond Latency)", category: "Edge Computing", link: "/blog/ai-2025-oct-04-edge-computing-optimization" },
+            { title: "Enterprise RAG Quality Budgets — Lift Correctness, Cut Spend (45% Quality + 38-62% Cost Reduction)", category: "RAG Engineering", link: "/blog/ai-2025-oct-04-enterprise-rag-quality-budgets" }
+          ]}
+        />
         
         {/* New Articles Promotional Banner */}
         <div className="container mx-auto px-6 mt-6">
@@ -973,7 +1041,7 @@ const Home = () => {
             </div>
           </div>
         </section>
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </>
   );

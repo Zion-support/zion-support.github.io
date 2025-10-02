@@ -31,7 +31,7 @@ const AIMLOpsAutomation = () => {
                   Get Started
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
-                <a
+                <a title="Internal link"
                   href="#features"
                   className="inline-flex items-center px-8 py-3 bg-transparent border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
                 >

@@ -100,13 +100,13 @@ export default function FeaturedContentBanner2025(): void {
               Get personalized recommendations and ROI projections in just 30 minutes.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a 
+              <a title="Internal link" 
                 href="/contact" 
                 className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center"
               >
                 Get Free Assessment
               </a>
-              <a 
+              <a title="Internal link" 
                 href="/case-studies" 
                 className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center"
               >
@@ -122,13 +122,13 @@ export default function FeaturedContentBanner2025(): void {
               pilot programs, and direct access to our AI experts.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a 
+              <a title="Internal link" 
                 href="/contact" 
                 className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center"
               >
                 Join Innovation Lab
               </a>
-              <a 
+              <a title="Internal link" 
                 href="/services" 
                 className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center"
               >
