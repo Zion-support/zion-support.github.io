@@ -18,7 +18,6 @@ interface ContentItem {
 
 const featuredContent: ContentItem[] = [
   {
-<<<<<<< HEAD
     id: 'o3-0',
     title: 'AI Observability 2026: Complete Guide',
     description: 'Comprehensive observability strategies for AI systems with real-time monitoring and alerting.',
