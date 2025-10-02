@@ -1,28 +1,29 @@
-import React from 'react';';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';';
-import { HelmetProvider } from 'react-helmet-async';';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 
 // Pages
-import HomePage from './pages/HomePage';';
-import ServicesPage from './pages/ServicesPage';';
-import AboutPage from './pages/AboutPage';';
-import ContactPage from './pages/ContactPage';';
-import BlogPage from './pages/BlogPage';';
-import CaseStudiesPage from './pages/CaseStudiesPage';';
+import HomePage from './pages/HomePage';
+import ServicesPage from './pages/ServicesPage';
+import ServicesCatalog from './pages/ServicesCatalog';
+import AboutPage from './pages/AboutPage';
+import ContactPage from './pages/ContactPage';
+import BlogPage from './pages/BlogPage';
+import CaseStudiesPage from './pages/CaseStudiesPage';
 
 // Layout Components
-import Header from './components/Header';';
-import Footer from './components/Footer';';
-import Sidebar from './components/Sidebar';';
-import BannerManager from './components/BannerManager';';
-import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';';
-import NotificationSystem from './components/NotificationSystem';';
-import PerformanceMonitor from './components/PerformanceMonitor';';
-import EnhancedSEOHead from './components/EnhancedSEOHead';';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';';
-import PerformanceOptimizer from './components/PerformanceOptimizer';';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Sidebar from './components/Sidebar';
+import BannerManager from './components/BannerManager';
+import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+import NotificationSystem from './components/NotificationSystem';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import EnhancedSEOHead from './components/EnhancedSEOHead';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
 
-const AppRouter: React.FC = () => {,
+const AppRouter: React.FC = () => {
   return (
     <HelmetProvider>
       <Router>
@@ -30,34 +31,32 @@ const AppRouter: React.FC = () => {,
           <AccessibilityEnhancer>
             <EnhancedSEOHead />
             <PerformanceOptimizer />
-            
-            <div className="min-h-screen bg-white">";
+
+            <div className="min-h-screen bg-white">
               <Header />
-              
-              <div className="flex">";
+
+              <div className="flex">
                 <Sidebar />
-                
-                <main className="flex-1 ml-64">";
+
+                <main className="flex-1 xl:ml-64">
                   <BannerManager />
-                  
+
                   <Routes>
-                    <Route path="/" element={<HomePage />} />";
-                    <Route path="/services" element={<ServicesPage />} />";
-                    <Route path="/about" element={<AboutPage />} />";
-                    <Route path="/contact" element={<ContactPage />} />";
-                    <Route path="/blog" element={<BlogPage />} />";
-                    <Route path="/case-studies" element={<CaseStudiesPage />} />";
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/services" element={<ServicesPage />} />
+                    <Route path="/services/catalog" element={<ServicesCatalog />} />
+                    <Route path="/about" element={<AboutPage />} />
+                    <Route path="/contact" element={<ContactPage />} />
+                    <Route path="/blog" element={<BlogPage />} />
+                    <Route path="/case-studies" element={<CaseStudiesPage />} />
                   </Routes>
                 </main>
               </div>
-              
+
               <Footer />
             </div>
-            
-            <NotificationSystem 
-              notifications={[]} 
-              onRemove={() => {}} 
-            />
+
+            <NotificationSystem notifications={[]} onRemove={() => {}} />
             <PerformanceMonitor />
           </AccessibilityEnhancer>
         </EnhancedErrorBoundary>
