@@ -76,6 +76,101 @@ export default function EnhancedServicesCatalog() {
       link: '/services/micro-saas/ai-customer-support'
     },
     {
+      name: 'AI-Powered Code Review & Security Scanner',
+      description: 'Automated code analysis, vulnerability detection, and security compliance checking',
+      icon: Shield,
+      features: [
+        'Real-time vulnerability scanning across 50+ languages',
+        'AI-powered code quality analysis and suggestions',
+        'Automated security compliance checking (SOC2, GDPR, HIPAA)',
+        'Integration with GitHub, GitLab, and Bitbucket',
+        'Custom security rules and policy enforcement',
+        'Detailed remediation recommendations'
+      ],
+      pricing: '$499 - $3,500/month',
+      delivery: '1-2 weeks',
+      category: 'DevSecOps',
+      benefits: 'Reduce security vulnerabilities by 85%, accelerate compliance by 70%',
+      marketPrice: '$800 - $6,000/month',
+      link: '/services/micro-saas/ai-code-security'
+    },
+    {
+      name: 'AI-Driven Predictive Maintenance Platform',
+      description: 'IoT sensor data analysis for predictive equipment maintenance and failure prevention',
+      icon: Activity,
+      features: [
+        'Real-time IoT sensor data processing',
+        'Machine learning failure prediction models',
+        'Automated maintenance scheduling and alerts',
+        'Integration with existing ERP and CMMS systems',
+        'Cost optimization and resource planning',
+        'Custom dashboard and reporting'
+      ],
+      pricing: '$899 - $5,500/month',
+      delivery: '3-5 weeks',
+      category: 'Industrial IoT',
+      benefits: 'Reduce unplanned downtime by 60%, lower maintenance costs by 40%',
+      marketPrice: '$1,500 - $10,000/month',
+      link: '/services/micro-saas/predictive-maintenance'
+    },
+    {
+      name: 'AI-Powered Fraud Detection & Risk Management',
+      description: 'Real-time fraud detection, risk scoring, and compliance monitoring for financial services',
+      icon: AlertTriangle,
+      features: [
+        'Real-time transaction monitoring and analysis',
+        'Advanced fraud pattern recognition',
+        'Risk scoring and customer profiling',
+        'Regulatory compliance monitoring (AML, KYC)',
+        'Custom rule engine and machine learning models',
+        'Integration with banking and payment systems'
+      ],
+      pricing: '$1,500 - $8,000/month',
+      delivery: '4-6 weeks',
+      category: 'FinTech',
+      benefits: 'Reduce fraud losses by 75%, improve compliance efficiency by 80%',
+      marketPrice: '$2,500 - $15,000/month',
+      link: '/services/micro-saas/fraud-detection'
+    },
+    {
+      name: 'AI-Enhanced Supply Chain Optimization',
+      description: 'Demand forecasting, inventory optimization, and supply chain risk management',
+      icon: Network,
+      features: [
+        'AI-powered demand forecasting with 90%+ accuracy',
+        'Dynamic inventory optimization algorithms',
+        'Supply chain risk assessment and mitigation',
+        'Real-time supplier performance monitoring',
+        'Integration with ERP and WMS systems',
+        'Cost optimization and sustainability tracking'
+      ],
+      pricing: '$1,200 - $7,500/month',
+      delivery: '3-4 weeks',
+      category: 'Supply Chain',
+      benefits: 'Reduce inventory costs by 30%, improve forecast accuracy by 85%',
+      marketPrice: '$2,000 - $12,000/month',
+      link: '/services/micro-saas/supply-chain-ai'
+    },
+    {
+      name: 'AI-Powered Document Intelligence Platform',
+      description: 'Automated document processing, data extraction, and intelligent document management',
+      icon: FileText,
+      features: [
+        'OCR and intelligent data extraction from any document type',
+        'Natural language processing for document understanding',
+        'Automated workflow and approval processes',
+        'Integration with existing document management systems',
+        'Custom document classification and routing',
+        'Compliance and audit trail management'
+      ],
+      pricing: '$699 - $4,500/month',
+      delivery: '2-3 weeks',
+      category: 'Document Management',
+      benefits: 'Reduce document processing time by 80%, improve accuracy by 95%',
+      marketPrice: '$1,200 - $8,000/month',
+      link: '/services/micro-saas/document-intelligence'
+    },
+    {
       name: 'Cloud Cost Optimization Platform',
       description: 'Automated cloud cost monitoring, rightsizing, and savings recommendations',
       icon: TrendingUp,
@@ -286,6 +381,101 @@ export default function EnhancedServicesCatalog() {
       benefits: 'Process documents 10x faster, reduce errors by 95%',
       marketPrice: '$4,000 - $35,000/month',
       link: '/services/ai-services/document-processing'
+    },
+    {
+      name: 'Generative AI & Content Creation Platform',
+      description: 'AI-powered content generation, copywriting, and creative asset production',
+      icon: Rocket,
+      features: [
+        'Automated blog posts, articles, and marketing copy',
+        'AI-generated images, videos, and multimedia content',
+        'Personalized content for different audiences and channels',
+        'Brand voice consistency and tone management',
+        'SEO optimization and content performance tracking',
+        'Integration with CMS and marketing automation tools'
+      ],
+      pricing: '$899 - $6,500/month',
+      delivery: '2-3 weeks',
+      category: 'Content Marketing',
+      benefits: 'Increase content production by 500%, reduce content costs by 60%',
+      marketPrice: '$1,500 - $12,000/month',
+      link: '/services/ai-services/generative-content'
+    },
+    {
+      name: 'AI-Powered Sales Intelligence & CRM Enhancement',
+      description: 'Intelligent lead scoring, sales forecasting, and customer relationship optimization',
+      icon: TrendingUp,
+      features: [
+        'AI-powered lead scoring and qualification',
+        'Sales forecasting with 90%+ accuracy',
+        'Customer behavior analysis and churn prediction',
+        'Automated follow-up and nurturing sequences',
+        'Integration with Salesforce, HubSpot, and Pipedrive',
+        'Real-time sales performance analytics and insights'
+      ],
+      pricing: '$1,200 - $8,000/month',
+      delivery: '3-4 weeks',
+      category: 'Sales Automation',
+      benefits: 'Increase conversion rates by 45%, improve sales forecasting accuracy by 90%',
+      marketPrice: '$2,000 - $15,000/month',
+      link: '/services/ai-services/sales-intelligence'
+    },
+    {
+      name: 'AI-Driven Healthcare Diagnostics & Treatment Planning',
+      description: 'Medical AI for diagnosis assistance, treatment recommendations, and patient monitoring',
+      icon: Heart,
+      features: [
+        'Medical image analysis (X-rays, MRIs, CT scans)',
+        'Symptom analysis and preliminary diagnosis',
+        'Drug interaction checking and treatment optimization',
+        'Patient risk assessment and monitoring',
+        'HIPAA-compliant data processing and storage',
+        'Integration with EHR and healthcare management systems'
+      ],
+      pricing: '$3,500 - $20,000/month',
+      delivery: '6-10 weeks',
+      category: 'Healthcare AI',
+      benefits: 'Improve diagnostic accuracy by 85%, reduce misdiagnosis by 60%',
+      marketPrice: '$5,000 - $35,000/month',
+      link: '/services/ai-services/healthcare-diagnostics'
+    },
+    {
+      name: 'AI-Enhanced E-commerce Personalization Engine',
+      description: 'Personalized shopping experiences, product recommendations, and dynamic pricing',
+      icon: ShoppingCart,
+      features: [
+        'AI-powered product recommendations with 95% accuracy',
+        'Dynamic pricing optimization and A/B testing',
+        'Personalized search and filtering',
+        'Customer journey optimization and conversion tracking',
+        'Integration with Shopify, WooCommerce, and Magento',
+        'Real-time personalization and performance analytics'
+      ],
+      pricing: '$1,500 - $9,500/month',
+      delivery: '3-5 weeks',
+      category: 'E-commerce',
+      benefits: 'Increase conversion rates by 65%, boost average order value by 40%',
+      marketPrice: '$2,500 - $18,000/month',
+      link: '/services/ai-services/ecommerce-personalization'
+    },
+    {
+      name: 'AI-Powered Cybersecurity & Threat Detection',
+      description: 'Advanced threat detection, incident response, and security automation',
+      icon: Shield,
+      features: [
+        'Real-time threat detection and analysis',
+        'Behavioral anomaly detection and user monitoring',
+        'Automated incident response and remediation',
+        'Security compliance monitoring and reporting',
+        'Integration with SIEM and security tools',
+        'Custom threat intelligence and model training'
+      ],
+      pricing: '$2,000 - $12,000/month',
+      delivery: '4-6 weeks',
+      category: 'Cybersecurity',
+      benefits: 'Reduce security incidents by 80%, improve response time by 90%',
+      marketPrice: '$3,500 - $20,000/month',
+      link: '/services/ai-services/cybersecurity-ai'
     }
   ];
 
@@ -403,6 +593,101 @@ export default function EnhancedServicesCatalog() {
       benefits: 'Reduce MTTR by 70%, improve system reliability',
       marketPrice: '$4,000 - $50,000/project',
       link: '/services/it-services/observability'
+    },
+    {
+      name: 'Blockchain & Web3 Development',
+      description: 'Smart contracts, DeFi protocols, and Web3 application development',
+      icon: Network,
+      features: [
+        'Smart contract development and auditing',
+        'DeFi protocol design and implementation',
+        'NFT marketplace and token development',
+        'Cross-chain integration and bridges',
+        'Web3 frontend and wallet integration',
+        'Security auditing and testing'
+      ],
+      pricing: '$8,000 - $80,000/project',
+      delivery: '6-20 weeks',
+      category: 'Blockchain',
+      benefits: 'Launch Web3 products faster, ensure security compliance',
+      marketPrice: '$15,000 - $150,000/project',
+      link: '/services/it-services/blockchain-development'
+    },
+    {
+      name: 'IoT & Edge Computing Solutions',
+      description: 'Internet of Things device integration, edge computing, and real-time data processing',
+      icon: Cpu,
+      features: [
+        'IoT device integration and management',
+        'Edge computing architecture design',
+        'Real-time data processing and analytics',
+        'Device security and firmware updates',
+        'Cloud connectivity and data synchronization',
+        'Custom IoT dashboard and monitoring'
+      ],
+      pricing: '$5,000 - $40,000/project',
+      delivery: '4-12 weeks',
+      category: 'IoT',
+      benefits: 'Connect devices seamlessly, process data at the edge',
+      marketPrice: '$10,000 - $80,000/project',
+      link: '/services/it-services/iot-solutions'
+    },
+    {
+      name: 'API Development & Integration',
+      description: 'RESTful APIs, GraphQL, and third-party integrations with comprehensive documentation',
+      icon: Code,
+      features: [
+        'RESTful API design and development',
+        'GraphQL schema design and implementation',
+        'Third-party API integrations',
+        'API documentation and testing',
+        'Rate limiting and security implementation',
+        'API versioning and lifecycle management'
+      ],
+      pricing: '$3,000 - $25,000/project',
+      delivery: '2-8 weeks',
+      category: 'API Development',
+      benefits: 'Accelerate integrations, improve developer experience',
+      marketPrice: '$6,000 - $50,000/project',
+      link: '/services/it-services/api-development'
+    },
+    {
+      name: 'Mobile App Development',
+      description: 'Native and cross-platform mobile applications with modern architecture',
+      icon: Smartphone,
+      features: [
+        'Native iOS and Android development',
+        'Cross-platform development (React Native, Flutter)',
+        'Progressive Web App (PWA) development',
+        'App store optimization and deployment',
+        'Push notifications and offline capabilities',
+        'Performance optimization and testing'
+      ],
+      pricing: '$5,000 - $60,000/project',
+      delivery: '6-16 weeks',
+      category: 'Mobile Development',
+      benefits: 'Launch mobile apps faster, reach wider audience',
+      marketPrice: '$10,000 - $120,000/project',
+      link: '/services/it-services/mobile-development'
+    },
+    {
+      name: 'Legacy System Modernization',
+      description: 'Modernize legacy applications with microservices, cloud migration, and API integration',
+      icon: Wrench,
+      features: [
+        'Legacy application assessment and planning',
+        'Microservices architecture migration',
+        'Database modernization and optimization',
+        'API-first integration approach',
+        'Cloud migration and containerization',
+        'Performance optimization and monitoring'
+      ],
+      pricing: '$10,000 - $100,000/project',
+      delivery: '8-24 weeks',
+      category: 'Modernization',
+      benefits: 'Extend system lifespan, improve performance and scalability',
+      marketPrice: '$20,000 - $200,000/project',
+      link: '/services/it-services/legacy-modernization'
     }
   ];
 
