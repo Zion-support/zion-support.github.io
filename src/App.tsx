@@ -14,6 +14,7 @@ import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import NotificationSystem from './components/NotificationSystem';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
 // Local stub to avoid type errors when optional performance init is not present
 const initializePerformanceEnhancements = (): void => {};
@@ -47,9 +48,9 @@ interface WindowWithEnhancements extends Window {
   i18n?: unknown;
 }
 
-interface SecurityManager {
-  initialize?: () => void;
-}
+// interface SecurityManager {
+//   initialize?: () => void;
+// }
 
 export default function App(): React.JSX.Element {
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
@@ -85,61 +86,54 @@ export default function App(): React.JSX.Element {
           break;
       }
       try {
-        if (enhancedSecurityManager && typeof (enhancedSecurityManager as SecurityManager).initialize === 'function') {
-          (enhancedSecurityManager as SecurityManager).initialize?.();
-        }
-      
+        // Initialize advanced optimizers
+        // Guard optional advanced systems if present in global scope
+        const windowWithEnhancements = window as WindowWithEnhancements;
+        const advancedPerformanceOptimizer = windowWithEnhancements.advancedPerformanceOptimizer;
+        const advancedSEOOptimizer = windowWithEnhancements.advancedSEOOptimizer;
+        const advancedSecurityManager = windowWithEnhancements.advancedSecurityManager;
+        const advancedAnalytics = windowWithEnhancements.advancedAnalytics;
+        const advancedErrorHandler = windowWithEnhancements.advancedErrorHandler;
+        const advancedCachingSystem = windowWithEnhancements.advancedCachingSystem;
+        const advancedUXOptimizer = windowWithEnhancements.advancedUXOptimizer;
+        const advancedTestingFramework = windowWithEnhancements.advancedTestingFramework;
+        const advancedI18n = windowWithEnhancements.advancedI18n;
+
         // Initialize new performance and accessibility enhancements
         initializePerformanceEnhancements();
-        accessibilityEnhancer.initialize();
-      
-      // Initialize advanced optimizers
-      // Guard optional advanced systems if present in global scope
-      const windowWithEnhancements = window as WindowWithEnhancements;
-      const advancedPerformanceOptimizer = windowWithEnhancements.advancedPerformanceOptimizer;
-      const advancedSEOOptimizer = windowWithEnhancements.advancedSEOOptimizer;
-      const advancedSecurityManager = windowWithEnhancements.advancedSecurityManager;
-      const advancedAnalytics = windowWithEnhancements.advancedAnalytics;
-      const advancedErrorHandler = windowWithEnhancements.advancedErrorHandler;
-      const advancedCachingSystem = windowWithEnhancements.advancedCachingSystem;
-      const advancedUXOptimizer = windowWithEnhancements.advancedUXOptimizer;
-      const advancedTestingFramework = windowWithEnhancements.advancedTestingFramework;
-      const advancedI18n = windowWithEnhancements.advancedI18n;
-
-      advancedPerformanceOptimizer?.initialize?.();
-      advancedSEOOptimizer?.initialize?.();
-      accessibilityEnhancer.initialize();
-      advancedSecurityManager?.initialize?.();
-      advancedAnalytics?.initialize?.();
-      // advancedErrorHandler is initialized in constructor
-      advancedCachingSystem?.initialize?.();
-      advancedUXOptimizer?.initialize?.();
-      advancedTestingFramework?.initialize?.();
-      advancedI18n?.initialize?.();
-      // Store enhancements globally for debugging
-      windowWithEnhancements.enhancements = {
-        performanceOptimizer: advancedPerformanceOptimizer,
-        seoOptimizer: advancedSEOOptimizer,
-        accessibilityEnhancer: accessibilityEnhancer,
-        securityManager: advancedSecurityManager,
-        analytics: advancedAnalytics,
-        errorHandler: advancedErrorHandler,
-        cachingSystem: advancedCachingSystem,
-        uxOptimizer: advancedUXOptimizer
-      };
-      windowWithEnhancements.performanceOptimizer = advancedPerformanceOptimizer;
-      windowWithEnhancements.seoOptimizer = advancedSEOOptimizer;
-      windowWithEnhancements.accessibilityEnhancer = accessibilityEnhancer;
-      windowWithEnhancements.securityManager = advancedSecurityManager;
-      windowWithEnhancements.analytics = advancedAnalytics;
-      windowWithEnhancements.errorHandler = advancedErrorHandler;
-      windowWithEnhancements.cachingSystem = advancedCachingSystem;
-      windowWithEnhancements.uxOptimizer = advancedUXOptimizer;
-      windowWithEnhancements.testingFramework = advancedTestingFramework;
-      windowWithEnhancements.i18n = advancedI18n;
-    } catch (error) {
-      console.error('Error initializing enhancements:', error);
-    }
+        
+        advancedPerformanceOptimizer?.initialize?.();
+        advancedSEOOptimizer?.initialize?.();
+        advancedSecurityManager?.initialize?.();
+        advancedAnalytics?.initialize?.();
+        // advancedErrorHandler is initialized in constructor
+        advancedCachingSystem?.initialize?.();
+        advancedUXOptimizer?.initialize?.();
+        advancedTestingFramework?.initialize?.();
+        advancedI18n?.initialize?.();
+        
+        // Store enhancements globally for debugging
+        windowWithEnhancements.enhancements = {
+          performanceOptimizer: advancedPerformanceOptimizer,
+          seoOptimizer: advancedSEOOptimizer,
+          securityManager: advancedSecurityManager,
+          analytics: advancedAnalytics,
+          errorHandler: advancedErrorHandler,
+          cachingSystem: advancedCachingSystem,
+          uxOptimizer: advancedUXOptimizer
+        };
+        windowWithEnhancements.performanceOptimizer = advancedPerformanceOptimizer;
+        windowWithEnhancements.seoOptimizer = advancedSEOOptimizer;
+        windowWithEnhancements.securityManager = advancedSecurityManager;
+        windowWithEnhancements.analytics = advancedAnalytics;
+        windowWithEnhancements.errorHandler = advancedErrorHandler;
+        windowWithEnhancements.cachingSystem = advancedCachingSystem;
+        windowWithEnhancements.uxOptimizer = advancedUXOptimizer;
+        windowWithEnhancements.testingFramework = advancedTestingFramework;
+        windowWithEnhancements.i18n = advancedI18n;
+      } catch (error) {
+        console.error('Error initializing enhancements:', error);
+      }
     };
 
     window.addEventListener('keydown', onKeyDown);
@@ -152,10 +146,11 @@ export default function App(): React.JSX.Element {
 
   return (
     <EnhancedErrorBoundary>
-      <SEOOptimizer title={seoDataForOptimizer.title} description={seoDataForOptimizer.description} canonicalUrl={seoDataForOptimizer.canonical} />
-      <AdvancedAnalytics enableConversionTracking enablePerformanceTracking enableErrorTracking />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <AppRouter />
+      <AccessibilityEnhancer>
+        <SEOOptimizer title={seoDataForOptimizer.title} description={seoDataForOptimizer.description} canonicalUrl={seoDataForOptimizer.canonical} />
+        <AdvancedAnalytics enableConversionTracking enablePerformanceTracking enableErrorTracking />
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+          <AppRouter />
 
         {showPerformanceOptimizer && (
           <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center" role="dialog" aria-modal="true">
@@ -181,8 +176,9 @@ export default function App(): React.JSX.Element {
           </div>
         )}
 
-        <NotificationSystem notifications={notifications} onRemove={handleRemoveNotification} />
-      </div>
+          <NotificationSystem notifications={notifications} onRemove={handleRemoveNotification} />
+        </div>
+      </AccessibilityEnhancer>
     </EnhancedErrorBoundary>
   );
 }

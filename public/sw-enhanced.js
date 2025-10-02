@@ -1,27 +1,25 @@
-// Enhanced Service Worker for Zion Tech Group Website
-// Version: 2.0.0
-
-const CACHE_NAME = 'zion-website-v2.0.0';
-const STATIC_CACHE = 'zion-static-v2.0.0';
-const DYNAMIC_CACHE = 'zion-dynamic-v2.0.0';
+// Enhanced Service Worker for Zion Tech Group
+const CACHE_NAME = 'zion-tech-group-v1';
+const STATIC_CACHE = 'zion-static-v1';
+const DYNAMIC_CACHE = 'zion-dynamic-v1';
 
 // Assets to cache immediately
 const STATIC_ASSETS = [
   '/',
   '/index.html',
+  '/src/main.tsx',
+  '/src/App.tsx',
   '/manifest.json',
-  '/offline.html',
-  // Add critical CSS and JS files here
+  '/favicon.ico'
 ];
 
 // Install event - cache static assets
 self.addEventListener('install', (event) => {
-  console.log('🔧 Service Worker installing...');
-  
+  console.log('🚀 Service Worker installing...');
   event.waitUntil(
     caches.open(STATIC_CACHE)
       .then((cache) => {
-        console.log('📦 Caching static assets...');
+        console.log('📦 Caching static assets');
         return cache.addAll(STATIC_ASSETS);
       })
       .then(() => {
@@ -36,8 +34,7 @@ self.addEventListener('install', (event) => {
 
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
-  console.log('🚀 Service Worker activating...');
-  
+  console.log('🔄 Service Worker activating...');
   event.waitUntil(
     caches.keys()
       .then((cacheNames) => {
@@ -57,7 +54,7 @@ self.addEventListener('activate', (event) => {
   );
 });
 
-// Fetch event - serve from cache or network
+// Fetch event - serve from cache with network fallback
 self.addEventListener('fetch', (event) => {
   const { request } = event;
   const url = new URL(request.url);
@@ -81,175 +78,97 @@ self.addEventListener('fetch', (event) => {
           return cachedResponse;
         }
 
-        // Otherwise, fetch from network
+        // Otherwise fetch from network
         return fetch(request)
-          .then((response) => {
-            // Don't cache non-successful responses
-            if (!response || response.status !== 200 || response.type !== 'basic') {
-              return response;
+          .then((networkResponse) => {
+            // Check if response is valid
+            if (!networkResponse || networkResponse.status !== 200 || networkResponse.type !== 'basic') {
+              return networkResponse;
             }
 
-            // Clone the response for caching
-            const responseToCache = response.clone();
+            // Clone the response
+            const responseToCache = networkResponse.clone();
 
-            // Determine cache strategy based on request type
-            if (isStaticAsset(request.url)) {
-              // Cache static assets in STATIC_CACHE
-              caches.open(STATIC_CACHE)
-                .then((cache) => {
-                  cache.put(request, responseToCache);
-                });
-            } else if (isAPIRequest(request.url)) {
-              // Cache API responses in DYNAMIC_CACHE with TTL
-              caches.open(DYNAMIC_CACHE)
-                .then((cache) => {
-                  cache.put(request, responseToCache);
-                  
-                  // Set expiration time (1 hour for API responses)
-                  setTimeout(() => {
-                    cache.delete(request);
-                  }, 60 * 60 * 1000);
-                });
-            } else {
-              // Cache other resources in DYNAMIC_CACHE
+            // Cache dynamic content
+            if (url.pathname.startsWith('/api/') || url.pathname.startsWith('/blog/')) {
               caches.open(DYNAMIC_CACHE)
                 .then((cache) => {
                   cache.put(request, responseToCache);
                 });
             }
 
-            return response;
+            return networkResponse;
           })
           .catch(() => {
-            // If network fails and it's a page request, show offline page
-            if (request.destination === 'document') {
-              return caches.match('/offline.html');
+            // Return offline page for navigation requests
+            if (request.mode === 'navigate') {
+              return caches.match('/index.html');
             }
-            
-            // For other requests, return a basic error response
-            return new Response('Network error', {
-              status: 408,
-              statusText: 'Request Timeout'
-            });
           });
       })
   );
 });
 
-// Helper functions
-function isStaticAsset(url) {
-  return url.includes('/assets/') || 
-         url.includes('.css') || 
-         url.includes('.js') || 
-         url.includes('.png') || 
-         url.includes('.jpg') || 
-         url.includes('.jpeg') || 
-         url.includes('.gif') || 
-         url.includes('.svg') || 
-         url.includes('.woff') || 
-         url.includes('.woff2');
-}
-
-function isAPIRequest(url) {
-  return url.includes('/api/') || url.includes('/graphql');
-}
-
-// Background sync for offline actions
+// Background sync for form submissions
 self.addEventListener('sync', (event) => {
-  console.log('🔄 Background sync triggered:', event.tag);
-  
-  if (event.tag === 'background-sync') {
+  if (event.tag === 'contact-form') {
     event.waitUntil(
-      // Handle background sync tasks here
-      handleBackgroundSync()
+      // Handle offline form submissions
+      console.log('📝 Processing offline contact form submission')
     );
   }
 });
 
 // Push notifications
 self.addEventListener('push', (event) => {
-  console.log('📱 Push notification received');
-  
-  const options = {
-    body: event.data ? event.data.text() : 'New update available',
-    icon: '/icon-192x192.png',
-    badge: '/badge-72x72.png',
-    vibrate: [100, 50, 100],
-    data: {
-      dateOfArrival: Date.now(),
-      primaryKey: 1
-    },
-    actions: [
-      {
-        action: 'explore',
-        title: 'View Details',
-        icon: '/icon-192x192.png'
+  if (event.data) {
+    const data = event.data.json();
+    const options = {
+      body: data.body,
+      icon: '/favicon.ico',
+      badge: '/favicon.ico',
+      vibrate: [100, 50, 100],
+      data: {
+        dateOfArrival: Date.now(),
+        primaryKey: data.primaryKey
       },
-      {
-        action: 'close',
-        title: 'Close',
-        icon: '/icon-192x192.png'
-      }
-    ]
-  };
+      actions: [
+        {
+          action: 'explore',
+          title: 'Learn More',
+          icon: '/favicon.ico'
+        },
+        {
+          action: 'close',
+          title: 'Close',
+          icon: '/favicon.ico'
+        }
+      ]
+    };
 
-  event.waitUntil(
-    self.registration.showNotification('Zion Tech Group', options)
-  );
-});
-
-// Notification click handler
-self.addEventListener('notificationclick', (event) => {
-  console.log('🔔 Notification clicked:', event.action);
-  
-  event.notification.close();
-
-  if (event.action === 'explore') {
     event.waitUntil(
-      clients.openWindow('/')
+      self.registration.showNotification(data.title, options)
     );
   }
 });
 
-// Handle background sync
-async function handleBackgroundSync() {
-  try {
-    // Implement background sync logic here
-    console.log('🔄 Processing background sync...');
-    
-    // Example: Sync offline form submissions
-    // const offlineData = await getOfflineData();
-    // await syncOfflineData(offlineData);
-    
-    console.log('✅ Background sync completed');
-  } catch (error) {
-    console.error('❌ Background sync failed:', error);
+// Handle notification clicks
+self.addEventListener('notificationclick', (event) => {
+  event.notification.close();
+
+  if (event.action === 'explore') {
+    event.waitUntil(
+      clients.openWindow('/contact')
+    );
   }
-}
+});
 
 // Performance monitoring
 self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'PERFORMANCE_METRICS') {
-    console.log('📊 Performance metrics received:', event.data.metrics);
-    
-    // Send metrics to analytics service
-    sendMetricsToAnalytics(event.data.metrics);
+    // Log performance metrics
+    console.log('📊 Performance metrics:', event.data.metrics);
   }
 });
 
-async function sendMetricsToAnalytics(metrics) {
-  try {
-    // Send metrics to your analytics service
-    await fetch('/api/analytics/performance', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(metrics)
-    });
-  } catch (error) {
-    console.error('❌ Failed to send metrics:', error);
-  }
-}
-
-console.log('🎉 Enhanced Service Worker loaded successfully!');
+console.log('🎯 Enhanced Service Worker loaded successfully');
