@@ -3,7 +3,6 @@
 
 export const octoberBreakthroughContent = [
   {
-<<<<<<< HEAD
     id: "neuro-symbolic-ai-production-2025",
     title: "Neuro-Symbolic AI in Production: The Next Evolution",
     slug: "neuro-symbolic-ai-production-2025",
@@ -335,7 +334,6 @@ export const octoberBreakthroughContent = [
       satisfaction: "95%",";,
       languages: "50+",";,
       accuracy: "92%",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     }
   }
 ];

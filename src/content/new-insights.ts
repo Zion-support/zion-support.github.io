@@ -1,6 +1,5 @@
 export const newInsights = [
   {
-<<<<<<< HEAD
     id: "ai-platform-roi-scorecards",
     title: "AI Platform ROI: Simple Scorecards That Drive Adoption",
     summary: "Connect platform capabilities to adoption, golden paths, and SLO outcomes. Make quarterly cut/scale decisions with evidence.",
@@ -20,7 +19,6 @@ export const newInsights = [
     featured: true,,
     tags: ["Platform", "ROI", "Scorecards"],";,
     content: `,`;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       <h2>Why Scorecards Win</h2>
       <p>Adoption, TTFX on golden paths, and reliability SLOs are the leading signals that predict platform ROI.</p>
       <h3>Operating Rhythm</h3>
@@ -32,7 +30,6 @@ export const newInsights = [
     `
   },
   {
-<<<<<<< HEAD
     id: "guardrails-scorecards-evals-2025",
     title: "Guardrails Engineers Adopt: Scorecards, PR Gates, Online Canaries",
     summary: "Lightweight, outcome‑linked guardrails that speed delivery while managing risk.",
@@ -52,7 +49,6 @@ export const newInsights = [
     featured: true,,
     tags: ["Guardrails", "Scorecards", "Evals"],";,
     content: `,`;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       <h2>Ship Faster, Safer</h2>
       <p>Connect scorecards to product KPIs. Use PR gates for risky changes and run online canaries tied to outcomes.</p>
       <h3>Playbook</h3>
@@ -64,7 +60,6 @@ export const newInsights = [
     `
   },
   {
-<<<<<<< HEAD
     id: "edge-flags-blueprint-2025",
     title: "Edge Flags Blueprint: Zero‑Regret Rollouts",
     summary: "<100ms global flags with segmented canaries, budgets, and instant rollback.",
@@ -84,13 +79,11 @@ export const newInsights = [
     featured: false,,
     tags: ["Edge", "Flags", "Delivery"],";,
     content: `,`;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       <h2>Progressive Delivery</h2>
       <p>Segment by geo and account, cap risk with budgets, and stream telemetry for evidence‑based releases.</p>
     `
   },
   {
-<<<<<<< HEAD
     id: "rag-freshness-ttl-2025",
     title: "RAG Freshness: TTL Budgets and Versioned Corpora",
     summary: "Prevent stale answers with freshness windows and warm caches.",
@@ -110,13 +103,11 @@ export const newInsights = [
     featured: true,,
     tags: ["RAG", "Freshness", "Search"],";,
     content: `,`;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       <h2>Operate with Freshness</h2>
       <p>Use TTL windows, async warmups, and versioned corpora to keep retrieval accurate at scale.</p>
     `
   },
   {
-<<<<<<< HEAD
     id: "secure-ml-supply-chain",
     title: "Secure ML Supply Chain: Lineage, SBOMs, and Egress Controls",
     summary: "Lock down datasets, models, and inference routes with provenance, signed artifacts, and policy checks in CI/CD.",
@@ -136,13 +127,11 @@ export const newInsights = [
     featured: true,,
     tags: ["Security", "ML", "Supply Chain"],";,
     content: `,`;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       <h2>End-to-End Controls</h2>
       <p>Track lineage from datasets to deployed models. Enforce policy tests and signed artifacts across the pipeline.</p>
     `
   },
   {
-<<<<<<< HEAD
     id: "ai-automation-2025",
     title: "The Future of AI Automation in Enterprise",
     summary: "Discover how AI automation is transforming enterprise operations in 2025, with real-world case studies and implementation strategies.",
@@ -167,7 +156,6 @@ export const newInsights = [
       <h2>Revolutionizing Enterprise Operations</h2>
       <p>Artificial Intelligence automation is no longer a future concept—it's the present reality for forward-thinking enterprises. In 2025, we're seeing unprecedented adoption rates and ROI from AI automation initiatives.</p>';
       
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       <h3>Key Trends Driving Adoption</h3>
       <ul>
         <li><strong>Process Mining Integration: </strong> AI now automatically identifies optimization opportunities</li>,
@@ -189,7 +177,6 @@ export const newInsights = [
     `
   },
   {
-<<<<<<< HEAD
     id: "cybersecurity-ai-2025",
     title: "AI-Powered Cybersecurity: The Next Generation of Protection",
     summary: "Explore how AI is revolutionizing cybersecurity with advanced threat detection, automated response, and predictive security analytics.",
@@ -209,7 +196,6 @@ export const newInsights = [
     featured: true,,
     tags: ["Cybersecurity", "AI", "Threat Detection", "Security"],";,
     content: `,`;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       <h2>The Evolution of Cyber Threats</h2>
       <p>As cyber threats become more sophisticated, traditional security measures are no longer sufficient. AI-powered cybersecurity represents the next frontier in digital protection.</p>
       
@@ -229,7 +215,6 @@ export const newInsights = [
     `
   },
   {
-<<<<<<< HEAD
     id: "cloud-native-2025",
     title: "Building Resilient Cloud-Native Applications",
     summary: "Learn the latest strategies for developing and deploying cloud-native applications that scale automatically and handle failures gracefully.",
@@ -249,7 +234,6 @@ export const newInsights = [
     featured: false,,
     tags: ["Cloud", "Microservices", "DevOps", "Scalability"],";,
     content: `,`;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       <h2>The Cloud-Native Advantage</h2>
       <p>Cloud-native applications are designed from the ground up to leverage cloud infrastructure, providing unprecedented scalability and resilience.</p>
       
@@ -266,7 +250,6 @@ export const newInsights = [
     `
   },
   {
-<<<<<<< HEAD
     id: "data-analytics-ai",
     title: "AI-Driven Data Analytics: From Insights to Action",
     summary: "Transform your data into actionable business intelligence with advanced AI analytics, machine learning models, and real-time dashboards.",
@@ -286,7 +269,6 @@ export const newInsights = [
     featured: true,,
     tags: ["Data Analytics", "AI", "Machine Learning", "Business Intelligence"],";,
     content: `,`;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       <h2>The Data-Driven Transformation</h2>
       <p>Modern businesses generate vast amounts of data, but the real value lies in extracting meaningful insights and taking action based on those insights.</p>
       
@@ -303,7 +285,6 @@ export const newInsights = [
     `
   },
   {
-<<<<<<< HEAD
     id: "devops-automation-2025",
     title: "DevOps Automation: Accelerating Software Delivery",
     summary: "Master the art of DevOps automation with CI/CD pipelines, infrastructure as code, and automated testing strategies that reduce deployment times by 80%.",
@@ -323,7 +304,6 @@ export const newInsights = [
     featured: false,,
     tags: ["DevOps", "CI/CD", "Automation", "Infrastructure"],";,
     content: `,`;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       <h2>Accelerating Software Delivery</h2>
       <p>DevOps automation is essential for modern software development, enabling teams to deliver features faster while maintaining quality and reliability.</p>
       
@@ -340,7 +320,6 @@ export const newInsights = [
     `
   },
   {
-<<<<<<< HEAD
     id: "micro-saas-trends",
     title: "The Rise of Micro-SaaS: Building Profitable Niche Solutions",
     summary: "Discover how micro-SaaS businesses are disrupting traditional software markets with focused, profitable solutions for specific niches.",
@@ -365,7 +344,6 @@ export const newInsights = [
       <h2>The Micro-SaaS Revolution</h2>
       <p>Micro-SaaS businesses are proving that you don't need massive scale to build profitable software companies. Focus and specialization are the keys to success.</p>';
       
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       <h3>Characteristics of Successful Micro-SaaS</h3>
       <ul>
         <li><strong>Niche Focus: </strong> Solving specific problems for specific audiences</li>,
@@ -379,7 +357,6 @@ export const newInsights = [
     `
   },
   {
-<<<<<<< HEAD
     id: "enterprise-rag-blueprint-2025",
     title: "Enterprise RAG Blueprint v2: Freshness, Security, and Evals",
     summary: "Production-ready RAG patterns: hybrid search, auth-aware retrieval, freshness controls, and layered evaluation.",
@@ -399,7 +376,6 @@ export const newInsights = [
     featured: true,,
     tags: ["RAG", "GenAI", "Search", "Security"],";,
     content: `,`;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       <h2>Why RAG v2</h2>
       <p>Move beyond naive vector search with hybrid retrieval, freshness windows, and authorization-aware filters.</p>
       <h3>Operate with Confidence</h3>
@@ -411,7 +387,6 @@ export const newInsights = [
     `
   },
   {
-<<<<<<< HEAD
     id: "finops-scorecards-2025",
     title: "Cloud FinOps Scorecards Engineers Actually Use",
     summary: "Guardrails, PR checks, and budgets that cut waste 25–40% while preserving delivery speed.",
@@ -431,7 +406,6 @@ export const newInsights = [
     featured: true,,
     tags: ["FinOps", "Cloud", "Governance"],";,
     content: `,`;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       <h2>Scorecards That Matter</h2>
       <p>Connect spend to product goals, set guardrails engineers respect, and automate waste prevention.</p>
       <h3>Playbook</h3>
@@ -446,7 +420,6 @@ export const newInsights = [
 
 // Added: October 7, 2025,
 newInsights.unshift({
-<<<<<<< HEAD
   id: "ai-governance-scorecards-2026",
   title: "AI Governance 2026: Scorecards Engineers Actually Use",
   summary: "Outcome‑linked guardrails with PR checks and online canaries that accelerate delivery.",
@@ -466,7 +439,6 @@ newInsights.unshift({
   featured: true,,
   tags: ["Governance", "Policy", "Scorecards"],";,
   content: `,`;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     <h2>Guardrails That Ship</h2>
     <p>Adopt scorecards tied to KPIs, small PR checks for risky changes, and budgeted online canaries.</p>
     <h3>What to Implement</h3>

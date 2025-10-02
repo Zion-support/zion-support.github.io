@@ -12,7 +12,6 @@ wcagCriterion: string;
 }
 
 interface AccessibilityReport {
-<<<<<<< HEAD
 score: number,
 issues: AccessibilityIssue[],
 compliantAreas: string[],
@@ -28,14 +27,12 @@ summary: {,,
 critical: number;,
 serious: number;,
 moderate: number;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 minor: number;
 };
 }
 
 export class AccessibilityAuditor {
   private wcagGuidelines = {
-<<<<<<< HEAD
     perceivable: ['1.1.1', '1.2.1', '1.3.1', '1.4.1', '1.4.3'],',
     operable: ['2.1.1', '2.1.2', '2.4.1', '2.4.3', '2.4.7'],',
     understandable: ['3.1.1', '3.2.1', '3.3.1'],',
@@ -45,19 +42,16 @@ export class AccessibilityAuditor {
     operable: ['2.1.1', '2.1.2', '2.4.1', '2.4.3', '2.4.7'],';,
     understandable: ['3.1.1', '3.2.1', '3.3.1'],';,
     robust: ['4.1.1', '4.1.2']';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   };
 
   /**
    * Perform comprehensive accessibility audit
    */
   auditWebsite(): AccessibilityReport {
-<<<<<<< HEAD
     console.log('Starting accessibility audit...');
 =======
     console.log('Starting accessibility audit...');';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     const issues = this.detectIssues();
     const compliantAreas = this.identifyCompliantAreas();
     const score = this.calculateScore(issues);
@@ -67,7 +61,6 @@ export class AccessibilityAuditor {
       issues,
       compliantAreas,
       summary: {,
-<<<<<<< HEAD
         critical: issues.filter(i => i.severity === 'critical').length,
         serious: issues.filter(i => i.severity === 'serious').length,
         moderate: issues.filter(i => i.severity === 'moderate').length,
@@ -77,7 +70,6 @@ export class AccessibilityAuditor {
         serious: issues.filter(i => i.severity === 'serious').length,';,
         moderate: issues.filter(i => i.severity === 'moderate').length,';,
         minor: issues.filter(i => i.severity === 'minor').length';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       }
     };
   }
@@ -86,7 +78,6 @@ export class AccessibilityAuditor {
    * Detect accessibility issues
    */
   private detectIssues(): AccessibilityIssue[] {
-<<<<<<< HEAD
     const issues: AccessibilityIssue[] = [],
 
     // Check for images without alt text
@@ -226,7 +217,6 @@ export class AccessibilityAuditor {
       recommendation: 'Use <nav>, <main>, <article>, <aside> appropriately',';,
       wcagCriterion: '1.3.1 (Level A)',
     });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 
     return issues;
   }
@@ -349,12 +339,10 @@ ${audit.issues.map((issue, index) => `
 ${audit.compliantAreas.map(area => `- ${area}`).join('\n')}';`;
 
 ## Recommendations
-<<<<<<< HEAD
 ${recommendations.map(rec => rec).join('\n')};
 =======
 ${recommendations.map(rec => rec).join('\n')}';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 ## Quick Fixes Applied ✅
 ${fixes.applied.map(fix => `- ${fix}`).join('\n')}';`;
 

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { TrendingUp } from 'lucide-react';
@@ -15,80 +14,66 @@ TrendingUp
 import Header from '../../components/Header';';
 import Footer from '../../components/Footer';';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 const AIEmailMarketing: React.FC = () => {,
   const features = [
     {
       icon: Brain,,
-<<<<<<< HEAD
       title: "AI Content Generation",",
       description: "Automatically generate personalized email content based on customer behavior, preferences, and engagement history.",",
 =======
       title: "AI Content Generation",";,
       description: "Automatically generate personalized email content based on customer behavior, preferences, and engagement history.",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       benefit: "300% increase in open rates",
     },
     {
       icon: Target,,
-<<<<<<< HEAD
       title: "Smart Segmentation",",
       description: "AI-powered audience segmentation that identifies high-value customers and predicts optimal send times.",",
 =======
       title: "Smart Segmentation",";,
       description: "AI-powered audience segmentation that identifies high-value customers and predicts optimal send times.",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       benefit: "85% improvement in click-through rates",
     },
     {
       icon: BarChart3,,
-<<<<<<< HEAD
       title: "Predictive Analytics",",
       description: "Advanced analytics that predict campaign performance and optimize subject lines, content, and timing.",",
 =======
       title: "Predictive Analytics",";,
       description: "Advanced analytics that predict campaign performance and optimize subject lines, content, and timing.",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       benefit: "250% ROI improvement",
     },
     {
       icon: Zap,,
-<<<<<<< HEAD
       title: "Automated Campaigns",",
       description: "Intelligent automation that triggers personalized campaigns based on customer actions and lifecycle stages.",",
 =======
       title: "Automated Campaigns",";,
       description: "Intelligent automation that triggers personalized campaigns based on customer actions and lifecycle stages.",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       benefit: "70% reduction in manual work",
     },
     {
       icon: Clock,,
-<<<<<<< HEAD
       title: "Optimal Timing",",
       description: "AI determines the best time to send emails to each individual recipient for maximum engagement.",",
 =======
       title: "Optimal Timing",";,
       description: "AI determines the best time to send emails to each individual recipient for maximum engagement.",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       benefit: "45% increase in engagement",
     },
     {
       icon: Shield,,
-<<<<<<< HEAD
       title: "Deliverability Optimization",",
       description: "Advanced algorithms ensure maximum inbox placement and compliance with email regulations.",",
 =======
       title: "Deliverability Optimization",";,
       description: "Advanced algorithms ensure maximum inbox placement and compliance with email regulations.",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       benefit: "98% deliverability rate",
     }
   ];
 
   const pricing = [
     {
-<<<<<<< HEAD
       name: "Starter",
       price: "$79",
       period: "/month",
@@ -200,13 +185,11 @@ const AIEmailMarketing: React.FC = () => {,
         "Training & consultation"
       ],
       popular: false,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     }
   ];
 
   const testimonials = [
     {
-<<<<<<< HEAD
       name: "Jennifer Martinez",",
       role: "Marketing Director, E-Commerce Platform",",
       content: "AI email marketing increased our revenue by 180% in just 3 months. The personalized content generation and optimal timing features were game-changers for our business.",",
@@ -214,12 +197,10 @@ const AIEmailMarketing: React.FC = () => {,
       name: "Jennifer Martinez",";,
       role: "Marketing Director, E-Commerce Platform",";,
       content: "AI email marketing increased our revenue by 180% in just 3 months. The personalized content generation and optimal timing features were game-changers for our business.",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       rating: 5,,
       company: "E-Commerce Platform",
     },
     {
-<<<<<<< HEAD
       name: "David Chen",",
       role: "VP Marketing, SaaS Startup",",
       content: "The automated segmentation and predictive analytics helped us achieve a 15% conversion rate improvement. ROI increased by 250% within the first quarter.",",
@@ -227,12 +208,10 @@ const AIEmailMarketing: React.FC = () => {,
       name: "David Chen",";,
       role: "VP Marketing, SaaS Startup",";,
       content: "The automated segmentation and predictive analytics helped us achieve a 15% conversion rate improvement. ROI increased by 250% within the first quarter.",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       rating: 5,,
       company: "SaaS Startup",
     },
     {
-<<<<<<< HEAD
       name: "Sarah Johnson",",
       role: "Head of Growth, FinTech",",
       content: "Deliverability optimization and AI content generation reduced our unsubscribe rate by 60% while increasing engagement by 85%. The platform is incredibly intuitive.",",
@@ -240,7 +219,6 @@ const AIEmailMarketing: React.FC = () => {,
       name: "Sarah Johnson",";,
       role: "Head of Growth, FinTech",";,
       content: "Deliverability optimization and AI content generation reduced our unsubscribe rate by 60% while increasing engagement by 85%. The platform is incredibly intuitive.",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       rating: 5,,
       company: "FinTech",
     }
@@ -248,7 +226,6 @@ const AIEmailMarketing: React.FC = () => {,
 
   const useCases = [
     {
-<<<<<<< HEAD
       title: "E-Commerce",",
       icon: Globe,,
       description: "Personalized product recommendations, abandoned cart recovery, and post-purchase follow-ups.",",
@@ -294,13 +271,11 @@ const AIEmailMarketing: React.FC = () => {,
       icon: Brain,,
       description: "Student engagement, course updates, enrollment campaigns, and alumni communication.",";,
       benefits: ["55% enrollment increase", "60% course completion", "80% student satisfaction"]";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     }
   ];
 
   const capabilities = [
     {
-<<<<<<< HEAD
       title: "Content Personalization",",
       description: "AI generates unique email content for each recipient based on their behavior, preferences, and engagement history.",
     },
@@ -344,7 +319,6 @@ const AIEmailMarketing: React.FC = () => {,
     },
     {
       title: "Performance Prediction",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       description: "Predict campaign performance before sending and optimize for maximum ROI.",
     }
   ];
@@ -355,21 +329,18 @@ const AIEmailMarketing: React.FC = () => {,
         <title>AI Email Marketing - Zion Tech Group | Intelligent Email Automation</title>
         <meta
           name="description"
-<<<<<<< HEAD
           content="Transform your email marketing with AI-powered personalization, automation, and analytics. 300% increase in open rates, 85% improvement in CTR, and 250% ROI improvement." /><meta name="keywords" content="AI email marketing, email automation, personalized emails, email analytics, marketing automation, email campaigns, AI content generation" /><link rel="canonical" href="https://ziontechgroup.com/services/ai-email-marketing/>",
 =======
           content="Transform your email marketing with AI-powered personalization, automation, and analytics. 300% increase in open rates, 85% improvement in CTR, and 250% ROI improvement."
         />
         <meta name="keywords" content="AI email marketing, email automation, personalized emails, email analytics, marketing automation, email campaigns, AI content generation" />";
         <link rel="canonical" href="https: //ziontechgroup.com/services/ai-email-marketing" />";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       </Helmet>
 
       <Header />
       
       <main className="min-h-screen bg-white">";
         {/* Hero Section */}
-<<<<<<< HEAD
         <section className="bg-gradient-to-br from-emerald-900 via-green-800 to-teal-900 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
             <div className="text-center">
@@ -393,16 +364,13 @@ const AIEmailMarketing: React.FC = () => {,
                 300% increase in open rates, 85% improvement in CTR, and 250% ROI improvement.
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 <a
                   href="/contact"
                   className="inline-flex items-center px-8 py-4 bg-emerald-600 hover: bg-emerald-700 text-white font-semibold rounded-lg transition-colors",
                 >
-<<<<<<< HEAD
                   <Phone className="w-5 h-5 mr-2/>
 =======
                   <Phone className="w-5 h-5 mr-2" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   Schedule Demo
                 </a>
                 <a
@@ -410,11 +378,9 @@ const AIEmailMarketing: React.FC = () => {,
                   className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover: bg-white hover:text-emerald-900 font-semibold rounded-lg transition-colors",
                 >
                   View Pricing
-<<<<<<< HEAD
                   <ArrowRight className="w-5 h-5 ml-2/>
 =======
                   <ArrowRight className="w-5 h-5 ml-2" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </a>
               </div>
             </div>
@@ -422,7 +388,6 @@ const AIEmailMarketing: React.FC = () => {,
         </section>
 
         {/* Key Benefits */}
-<<<<<<< HEAD
         <section className="py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
             <div className="text-center mb-12">
@@ -432,7 +397,6 @@ const AIEmailMarketing: React.FC = () => {,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
             <div className="text-center mb-12">";
               <h2 className="text-4xl font-bold text-gray-900 mb-4">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 Why Choose AI Email Marketing?
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
@@ -440,7 +404,6 @@ const AIEmailMarketing: React.FC = () => {,
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-4 gap-8">",
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-emerald-100 rounded-full mb-4">
@@ -450,12 +413,10 @@ const AIEmailMarketing: React.FC = () => {,
               <div className="text-center">";
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-emerald-100 rounded-full mb-4">";
                   <Target className="w-8 h-8 text-emerald-600" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">300% Open Rate Boost</h3>";
                 <p className="text-gray-600">AI-optimized content and timing</p>";
               </div>
-<<<<<<< HEAD
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
                   <BarChart3 className="w-8 h-8 text-green-600/>
@@ -463,12 +424,10 @@ const AIEmailMarketing: React.FC = () => {,
               <div className="text-center">";
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">";
                   <BarChart3 className="w-8 h-8 text-green-600" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">250% ROI Improvement</h3>";
                 <p className="text-gray-600">Predictive analytics and optimization</p>";
               </div>
-<<<<<<< HEAD
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-teal-100 rounded-full mb-4">
                   <Zap className="w-8 h-8 text-teal-600/>
@@ -476,12 +435,10 @@ const AIEmailMarketing: React.FC = () => {,
               <div className="text-center">";
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-teal-100 rounded-full mb-4">";
                   <Zap className="w-8 h-8 text-teal-600" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">70% Less Manual Work</h3>";
                 <p className="text-gray-600">Intelligent automation workflows</p>";
               </div>
-<<<<<<< HEAD
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
                   <Shield className="w-8 h-8 text-blue-600/>
@@ -489,7 +446,6 @@ const AIEmailMarketing: React.FC = () => {,
               <div className="text-center">";
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">";
                   <Shield className="w-8 h-8 text-blue-600" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">98% Deliverability</h3>";
                 <p className="text-gray-600">Advanced inbox placement optimization</p>";
@@ -499,7 +455,6 @@ const AIEmailMarketing: React.FC = () => {,
         </section>
 
         {/* Use Cases */}
-<<<<<<< HEAD
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
             <div className="text-center mb-16">
@@ -509,7 +464,6 @@ const AIEmailMarketing: React.FC = () => {,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
             <div className="text-center mb-16">";
               <h2 className="text-4xl font-bold text-gray-900 mb-4">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 Industry Applications
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
@@ -517,7 +471,6 @@ const AIEmailMarketing: React.FC = () => {,
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">",
               {useCases.map((useCase, index) => {
                 const Icon = useCase.icon;
@@ -533,13 +486,11 @@ const AIEmailMarketing: React.FC = () => {,
                   <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">";,
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-emerald-100 rounded-full mb-6">";
                       <Icon className="w-8 h-8 text-emerald-600" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-4">{useCase.title}</h3>";
                     <p className="text-gray-600 mb-6">{useCase.description}</p>";
                     <ul className="space-y-2">";
                       {useCase.benefits.map((benefit, benefitIndex) => (
-<<<<<<< HEAD
                         <li key={benefitIndex} className="flex items-center text-sm">
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0/>
                           <span className="text-gray-700">{benefit}</span>
@@ -547,7 +498,6 @@ const AIEmailMarketing: React.FC = () => {,
                         <li key={benefitIndex} className="flex items-center text-sm">";
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />";
                           <span className="text-gray-700">{benefit}</span>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                         </li>
                       ))}
                     </ul>
@@ -559,7 +509,6 @@ const AIEmailMarketing: React.FC = () => {,
         </section>
 
         {/* Capabilities */}
-<<<<<<< HEAD
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
             <div className="text-center mb-16">
@@ -569,7 +518,6 @@ const AIEmailMarketing: React.FC = () => {,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
             <div className="text-center mb-16">";
               <h2 className="text-4xl font-bold text-gray-900 mb-4">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 AI-Powered Capabilities
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
@@ -577,11 +525,9 @@ const AIEmailMarketing: React.FC = () => {,
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
 =======
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               {capabilities.map((capability, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">";
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{capability.title}</h3>";
@@ -593,7 +539,6 @@ const AIEmailMarketing: React.FC = () => {,
         </section>
 
         {/* Features */}
-<<<<<<< HEAD
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
             <div className="text-center mb-16">
@@ -603,7 +548,6 @@ const AIEmailMarketing: React.FC = () => {,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
             <div className="text-center mb-16">";
               <h2 className="text-4xl font-bold text-gray-900 mb-4">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 Comprehensive Email Marketing Features
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
@@ -611,7 +555,6 @@ const AIEmailMarketing: React.FC = () => {,
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
               {features.map((feature, index) => {
                 const Icon = feature.icon;
@@ -637,7 +580,6 @@ const AIEmailMarketing: React.FC = () => {,
                     <p className="text-gray-600 mb-4">{feature.description}</p>";
                     <div className="inline-flex items-center text-green-600 font-semibold text-sm">";
                       <CheckCircle className="w-4 h-4 mr-1" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                       {feature.benefit}
                     </div>
                   </div>
@@ -648,7 +590,6 @@ const AIEmailMarketing: React.FC = () => {,
         </section>
 
         {/* Pricing */}
-<<<<<<< HEAD
         <section id="pricing" className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
             <div className="text-center mb-16">
@@ -658,7 +599,6 @@ const AIEmailMarketing: React.FC = () => {,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
             <div className="text-center mb-16">";
               <h2 className="text-4xl font-bold text-gray-900 mb-4">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 Affordable Pricing for Every Business
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
@@ -666,11 +606,9 @@ const AIEmailMarketing: React.FC = () => {,
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-3 gap-8">",
 =======
             <div className="grid md: grid-cols-3 gap-8">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               {pricing.map((plan, index) => (
                 <div key={index} className={`bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? 'ring-2 ring-emerald-500 relative' : ''}`}>`;
                   {plan.popular && (
@@ -690,7 +628,6 @@ const AIEmailMarketing: React.FC = () => {,
                   </div>
                   <ul className="space-y-4 mb-8">";
                     {plan.features.map((feature, featureIndex) => (
-<<<<<<< HEAD
                       <li key={featureIndex} className="flex items-center">
                         <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0/>
                         <span className="text-gray-700">{feature}</span>
@@ -698,7 +635,6 @@ const AIEmailMarketing: React.FC = () => {,
                       <li key={featureIndex} className="flex items-center">";
                         <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />";
                         <span className="text-gray-700">{feature}</span>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                       </li>
                     ))}
                   </ul>
@@ -707,11 +643,9 @@ const AIEmailMarketing: React.FC = () => {,
                     className={
 `w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${`;
 plan.popular
-<<<<<<< HEAD
 ? 'bg-emerald-600 text-white hover:bg-emerald-700'
 =======
 ? 'bg-emerald-600 text-white hover: bg-emerald-700',';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
 }`}`;
                   >
@@ -728,18 +662,15 @@ plan.popular
                 className="inline-flex items-center text-emerald-600 hover: text-emerald-700 font-semibold",
               >
                 Contact our Marketing Team
-<<<<<<< HEAD
                 <ArrowRight className="w-4 h-4 ml-1/>
 =======
                 <ArrowRight className="w-4 h-4 ml-1" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </a>
             </div>
           </div>
         </section>
 
         {/* Testimonials */}
-<<<<<<< HEAD
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
             <div className="text-center mb-16">
@@ -749,7 +680,6 @@ plan.popular
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
             <div className="text-center mb-16">";
               <h2 className="text-4xl font-bold text-gray-900 mb-4">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 What Our Clients Say
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
@@ -757,20 +687,16 @@ plan.popular
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-3 gap-8">",
 =======
             <div className="grid md: grid-cols-3 gap-8">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">";
                   <div className="flex items-center mb-4">";
                     {[...Array(testimonial.rating)].map((_, i) => (
-<<<<<<< HEAD
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current/>
 =======
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     ))}
                   </div>
                   <blockquote className="text-gray-700 mb-6 italic">";
@@ -788,7 +714,6 @@ plan.popular
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 bg-gradient-to-br from-emerald-900 via-green-800 to-teal-900 text-white">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">",
             <h2 className="text-4xl font-bold mb-6">
@@ -796,26 +721,21 @@ plan.popular
         <section className="py-20 bg-gradient-to-br from-emerald-900 via-green-800 to-teal-900 text-white">";
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">";,
             <h2 className="text-4xl font-bold mb-6">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               Ready to Transform Your Email Marketing?
             </h2>
             <p className="text-xl text-emerald-100 max-w-3xl mx-auto mb-8">";
               Start using AI-powered email marketing to achieve 300% higher open rates and 250% better ROI.
             </p>
-<<<<<<< HEAD
             <div className="flex flex-col sm: flex-row gap-4 justify-center">",
 =======
             <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               <a
                 href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-emerald-600 hover: bg-emerald-700 text-white font-semibold rounded-lg transition-colors",
               >
-<<<<<<< HEAD
                 <Phone className="w-5 h-5 mr-2/>
 =======
                 <Phone className="w-5 h-5 mr-2" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 Schedule Demo
               </a>
               <a
@@ -823,11 +743,9 @@ plan.popular
                 className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover: bg-white hover:text-emerald-900 font-semibold rounded-lg transition-colors",
               >
                 View Success Stories
-<<<<<<< HEAD
                 <ArrowRight className="w-5 h-5 ml-2/>
 =======
                 <ArrowRight className="w-5 h-5 ml-2" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </a>
             </div>
           </div>

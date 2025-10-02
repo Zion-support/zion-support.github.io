@@ -2,7 +2,6 @@
 const October2025LatestContentBanner = () => {
   const articles = [
     {
-<<<<<<< HEAD
       title: "Advanced GenAI Orchestration Platform",",
       description: "Master multi-model coordination and intelligent workflow automation at enterprise scale",",
       icon: Brain,,
@@ -40,7 +39,6 @@ const October2025LatestContentBanner = () => {
       description: "Revolutionary techniques for simultaneous text, vision, and audio processing in production",";,
       icon: Zap,,
       link: "/blog/ai-2025-october-real-time-multimodal-processing-revolution",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       gradient: "from-purple-600 to-pink-600",
     }
   ];
@@ -55,7 +53,6 @@ const October2025LatestContentBanner = () => {
 
       <div className="container mx-auto px-4 relative z-10">";
         {/* Header */}
-<<<<<<< HEAD
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-violet-600/20 to-cyan-600/20 border border-violet-500/30 rounded-full px-6 py-2 mb-6">
             <Sparkles className="w-5 h-5 text-violet-400 animate-pulse/>
@@ -71,7 +68,6 @@ const October2025LatestContentBanner = () => {
           </div>
           
           <h2 className="text-4xl md: text-5xl font-bold mb-4 bg-gradient-to-r from-violet-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             Latest AI Breakthroughs & Enterprise Strategies
           </h2>
           
@@ -81,11 +77,9 @@ const October2025LatestContentBanner = () => {
         </div>
 
         {/* Articles Grid */}
-<<<<<<< HEAD
         <div className="grid md: grid-cols-3 gap-6 mb-12">",
 =======
         <div className="grid md: grid-cols-3 gap-6 mb-12">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           {articles.map((article, idx) => {
             const IconComponent = article.icon;
             return (
@@ -95,7 +89,6 @@ const October2025LatestContentBanner = () => {
                 className="group bg-slate-800/50 backdrop-blur-sm border border-slate-700 hover: border-violet-500/50 rounded-xl p-6 transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-violet-500/20",
               >
                 <div className={`w-12 h-12 bg-gradient-to-r ${article.gradient} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>`;
-<<<<<<< HEAD
                   <IconComponent className="w-6 h-6 text-white/>
                 </div>
                 
@@ -105,7 +98,6 @@ const October2025LatestContentBanner = () => {
                 </div>
                 
                 <h3 className="text-xl font-bold text-white mb-3 group-hover: text-violet-300 transition-colors">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   {article.title}
                 </h3>
                 
@@ -113,7 +105,6 @@ const October2025LatestContentBanner = () => {
                   {article.description}
                 </p>
                 
-<<<<<<< HEAD
                 <div className="flex items-center gap-2 text-violet-400 font-semibold group-hover: gap-4 transition-all">",
                   <span>Read More</span>
                   <ArrowRight className="w-4 h-4/>
@@ -121,7 +112,6 @@ const October2025LatestContentBanner = () => {
                 <div className="flex items-center gap-2 text-violet-400 font-semibold group-hover: gap-4 transition-all">";,
                   <span>Read More</span>
                   <ArrowRight className="w-4 h-4" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </div>
               </Link>
             );
@@ -129,7 +119,6 @@ const October2025LatestContentBanner = () => {
         </div>
 
         {/* Stats Bar */}
-<<<<<<< HEAD
         <div className="grid grid-cols-2 md: grid-cols-4 gap-6 bg-slate-800/30 backdrop-blur-sm border border-slate-700 rounded-xl p-8">",
           <div className="text-center">
             <div className="text-3xl font-bold bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent mb-2">
@@ -137,7 +126,6 @@ const October2025LatestContentBanner = () => {
         <div className="grid grid-cols-2 md: grid-cols-4 gap-6 bg-slate-800/30 backdrop-blur-sm border border-slate-700 rounded-xl p-8">";,
           <div className="text-center">";
             <div className="text-3xl font-bold bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent mb-2">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               3
             </div>
             <div className="text-sm text-slate-400">New Articles</div>";
@@ -169,11 +157,9 @@ const October2025LatestContentBanner = () => {
             className="inline-flex items-center gap-2 bg-gradient-to-r from-violet-600 to-purple-600 hover: from-violet-500 hover:to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all hover:shadow-lg hover:shadow-violet-500/50",
           >
             Explore All Articles
-<<<<<<< HEAD
             <ArrowRight className="w-5 h-5/>
 =======
             <ArrowRight className="w-5 h-5" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           </Link>
         </div>
       </div>

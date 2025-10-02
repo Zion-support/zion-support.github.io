@@ -1,14 +1,11 @@
-<<<<<<< HEAD
 import React from 'react';
 =======
 import React from 'react';';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 const AITrendsInsightsBanner2026: React.FC = () => {,
   const trendingTopics = [
     {
       id: 1,,
-<<<<<<< HEAD
       title: 'Generative AI Enterprise Adoption',',
       category: 'Enterprise AI',',
       trend: '+450%',',
@@ -148,12 +145,10 @@ const AITrendsInsightsBanner2026: React.FC = () => {,
       gradient: 'from-teal-500 to-cyan-500',';,
       badge: 'GOVERNANCE',';,
       insights: ['380% compliance growth', 'Ethical frameworks', 'Regulatory alignment']';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     }
   ];
 
   const marketInsights = [
-<<<<<<< HEAD
     { value: '$2.5T', label: 'Global AI Market Size', icon: <TrendingUp className="w-6 h-6" /> }
     { value: '85%', label: 'Enterprise AI Adoption', icon: <Users className="w-6 h-6" /> }
     { value: '500M+', label: 'AI-Powered Devices', icon: <Globe className="w-6 h-6" /> }
@@ -163,13 +158,11 @@ const AITrendsInsightsBanner2026: React.FC = () => {,
     { value: '85%', label: 'Enterprise AI Adoption', icon: <Users className="w-6 h-6" /> },";
     { value: '500M+', label: 'AI-Powered Devices', icon: <Globe className="w-6 h-6" /> },";
     { value: '2.3M', label: 'AI Job Openings', icon: <Award className="w-6 h-6" /> }";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   ];
 
   return (
     <div className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-cyan-900 relative overflow-hidden">";
       {/* Animated background effects */}
-<<<<<<< HEAD
       <div className="absolute inset-0 overflow-hidden opacity-20">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>;
@@ -179,12 +172,10 @@ const AITrendsInsightsBanner2026: React.FC = () => {,
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>";
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>';
         <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       </div>
 
       <div className="container mx-auto px-6 relative z-10">";
         {/* Header Section */}
-<<<<<<< HEAD
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 mb-8 animate-fade-in">
             <Sparkles className="w-5 h-5 text-purple-400 animate-pulse/>
@@ -206,13 +197,11 @@ const AITrendsInsightsBanner2026: React.FC = () => {,
           </div>
 
           <h2 className="text-5xl md: text-6xl font-extrabold mb-6 bg-gradient-to-r from-purple-400 via-cyan-400 to-pink-400 bg-clip-text text-transparent animate-fade-in">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             AI Trends & Insights 2026
           </h2>
           
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">";
             Stay ahead of the curve with the latest AI trends, market insights, and breakthrough technologies. 
-<<<<<<< HEAD
             Discover what's shaping the future of artificial intelligence and how it impacts your business.;
           </p>
 
@@ -224,7 +213,6 @@ const AITrendsInsightsBanner2026: React.FC = () => {,
 
           {/* Market Insights */}
           <div className="grid grid-cols-2 md: grid-cols-4 gap-6 max-w-4xl mx-auto">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             {marketInsights.map((insight, index) => (
               <div key={index} className="text-center">";
                 <div className="text-purple-400 mb-2 flex justify-center">";
@@ -242,11 +230,9 @@ const AITrendsInsightsBanner2026: React.FC = () => {,
         </div>
 
         {/* Trending Topics Grid */}
-<<<<<<< HEAD
         <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">",
 =======
         <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           {trendingTopics.map((topic, index) => (
             <div 
               key={topic.id}
@@ -258,7 +244,6 @@ const AITrendsInsightsBanner2026: React.FC = () => {,
               
               <div className="relative p-8">";
                 {/* Icon & Badge */}
-<<<<<<< HEAD
                 <div className="flex items-start justify-between mb-6">
                   <div className="text-purple-400 group-hover: scale-110 transition-transform duration-300">",
                     {topic.icon}
@@ -270,7 +255,6 @@ const AITrendsInsightsBanner2026: React.FC = () => {,
                     {topic.icon}
                   </div>
                   <div className="flex flex-col gap-2">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     <div className={`px-3 py-1.5 rounded-full bg-gradient-to-r ${topic.gradient} text-white text-xs font-bold border border-white/30`}>`;
                       {topic.badge}
                     </div>
@@ -289,11 +273,9 @@ const AITrendsInsightsBanner2026: React.FC = () => {,
                 </div>
 
                 {/* Title */}
-<<<<<<< HEAD
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-purple-400 transition-colors duration-300 leading-tight">",
 =======
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-purple-400 transition-colors duration-300 leading-tight">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   {topic.title}
                 </h3>
 
@@ -303,7 +285,6 @@ const AITrendsInsightsBanner2026: React.FC = () => {,
                 </p>
 
                 {/* Key Insights */}
-<<<<<<< HEAD
                 <div className="mb-6">
                   <div className="text-gray-400 text-xs mb-3 font-semibold">Key Insights: </div>",
                   <div className="space-y-1">
@@ -311,7 +292,6 @@ const AITrendsInsightsBanner2026: React.FC = () => {,
                 <div className="mb-6">";
                   <div className="text-gray-400 text-xs mb-3 font-semibold">Key Insights: </div>";,
                   <div className="space-y-1">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     {topic.insights.map((insight, idx) => (
                       <div key={idx} className="flex items-center gap-2 text-gray-300 text-xs">";
                         <div className="w-1.5 h-1.5 rounded-full bg-purple-400"></div>";
@@ -327,11 +307,9 @@ const AITrendsInsightsBanner2026: React.FC = () => {,
                   className={`group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r ${topic.gradient} hover:opacity-90 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1`}`;
                 >
                   <span>Explore Trend</span>
-<<<<<<< HEAD
                   <ArrowRight className="w-4 h-4 group-hover/btn: translate-x-1 transition-transform duration-300/>",
 =======
                   <ArrowRight className="w-4 h-4 group-hover/btn: translate-x-1 transition-transform duration-300" />";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </a>
               </div>
             </div>
@@ -339,7 +317,6 @@ const AITrendsInsightsBanner2026: React.FC = () => {,
         </div>
 
         {/* Newsletter & Updates Section */}
-<<<<<<< HEAD
         <div className="bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-3xl p-8 md: p-12 border border-purple-500/20 mb-16">",
           <div className="text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-500/30 mb-6">
@@ -351,7 +328,6 @@ const AITrendsInsightsBanner2026: React.FC = () => {,
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-500/30 mb-6">";
               <Clock className="w-5 h-5 text-yellow-400" />";
               <span className="text-yellow-400 font-bold text-sm tracking-wider uppercase">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 REAL-TIME UPDATES
               </span>
             </div>
@@ -359,7 +335,6 @@ const AITrendsInsightsBanner2026: React.FC = () => {,
             <h3 className="text-4xl font-extrabold text-white mb-4">";
               Get Weekly AI Trends & Insights
             </h3>
-<<<<<<< HEAD
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Stay informed with our weekly AI trends newsletter. Get exclusive insights, market analysis
               and early access to breakthrough technologies.
@@ -373,13 +348,11 @@ const AITrendsInsightsBanner2026: React.FC = () => {,
             </p>
             
             <div className="flex flex-col sm: flex-row gap-4 justify-center max-w-md mx-auto">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               <input
                 type="email"
                 placeholder="Enter your email"
                 className="flex-1 px-6 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus: outline-none focus:border-purple-500 focus:bg-white/20 transition-all duration-300",
               />
-<<<<<<< HEAD
               <button className="bg-gradient-to-r from-purple-500 to-cyan-600 hover: from-purple-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 flex items-center justify-center gap-2">",
                 <span>Subscribe</span>
                 <ArrowRight className="w-5 h-5/>
@@ -387,7 +360,6 @@ const AITrendsInsightsBanner2026: React.FC = () => {,
               <button className="bg-gradient-to-r from-purple-500 to-cyan-600 hover: from-purple-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 flex items-center justify-center gap-2">";,
                 <span>Subscribe</span>
                 <ArrowRight className="w-5 h-5" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </button>
             </div>
             <p className="text-xs text-gray-500 mt-4">";
@@ -403,7 +375,6 @@ const AITrendsInsightsBanner2026: React.FC = () => {,
               <h3 className="text-3xl font-bold text-white mb-4">";
                 Lead the AI Revolution
               </h3>
-<<<<<<< HEAD
               <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
                 Don't just follow trends – create them. Get exclusive access to our AI insights
                 early technology previews, and strategic guidance for your organization.
@@ -415,16 +386,13 @@ const AITrendsInsightsBanner2026: React.FC = () => {,
                 early technology previews, and strategic guidance for your organization.
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 <a title="Internal link"
                   href="/insights"
                   className="bg-gradient-to-r from-purple-500 to-cyan-600 hover: from-purple-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 flex items-center justify-center gap-2",
                 >
-<<<<<<< HEAD
                   <Sparkles className="w-5 h-5/>
 =======
                   <Sparkles className="w-5 h-5" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   <span>Explore All Insights</span>
                 </a>
                 <a title="Internal link"
@@ -432,11 +400,9 @@ const AITrendsInsightsBanner2026: React.FC = () => {,
                   className="border-2 border-purple-500 text-purple-400 hover: bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2",
                 >
                   <span>Get Expert Consultation</span>
-<<<<<<< HEAD
                   <ArrowRight className="w-5 h-5/>
 =======
                   <ArrowRight className="w-5 h-5" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </a>
               </div>
             </div>

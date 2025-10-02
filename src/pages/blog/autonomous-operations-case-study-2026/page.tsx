@@ -10,7 +10,6 @@ export default function AutonomousOperationsCaseStudy2026(): React.JSX.Element {
           name="description"
           content="Real‑world case study achieving 98% automation with budgets, KPI‑linked canaries, and instant rollback across critical workflows." /><link
           rel="canonical"
-<<<<<<< HEAD
           href="https://ziontechgroup.com/blog/autonomous-operations-case-study-2026",
         />
       </Helmet>
@@ -28,7 +27,6 @@ export default function AutonomousOperationsCaseStudy2026(): React.JSX.Element {
         <h1 className="text-4xl md: text-5xl font-bold mb-4">Autonomous Operations Case Study 2026</h1>";,
         <p className="text-zion-slate-light mb-8">98% automation rates realized</p>";
         <div className="prose prose-invert max-w-3xl">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           <p>
             This case study details how a global enterprise deployed agentic workflows with budgeted actions
             KPI‑linked canaries, and one‑click rollback to safely reach 98% automation.

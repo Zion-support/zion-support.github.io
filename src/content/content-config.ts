@@ -27,7 +27,6 @@ tags: string[];
 }
 
 export interface Service {
-<<<<<<< HEAD
 id: string,
 title: string,
 description: string,
@@ -47,7 +46,6 @@ starting: string;,
 popular?: boolean;
 };
   features: string[];,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   metrics?: Array<{
 value: string;
 label: string;
@@ -58,7 +56,6 @@ author: string;
 company: string;
 };
   cta: {,
-<<<<<<< HEAD
 primary: string;
 secondary: string;
 };
@@ -72,7 +69,6 @@ secondary: string;
   icon: string;,
   featured?: boolean;
   slug: string;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   tags: string[];
 }
 
@@ -93,7 +89,6 @@ priority: number;
 // Blog Posts Configuration
 export const blogPosts: BlogPost[] = [,
   {
-<<<<<<< HEAD
     id: 'ai-revolution-2025',',
     title: 'AI Revolution 2025: The Complete Business Transformation Guide',',
     excerpt: 'Discover how AI is reshaping industries and creating unprecedented opportunities for growth in 2025.',',
@@ -259,14 +254,12 @@ export const blogPosts: BlogPost[] = [,
     featured: false,,
     slug: '/blog/ai-virtual-assistants-customer-service',';,
     tags: ['AI', 'Virtual Assistant', 'Customer Service', 'NLP']';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   }
 ];
 
 // Case Studies Configuration
 export const caseStudies: CaseStudy[] = [,
   {
-<<<<<<< HEAD
     id: 'techcorp-ai-transformation',',
     title: 'TechCorp AI Transformation: 90% Efficiency Gain',',
     excerpt: 'How a leading e-commerce company transformed their operations with AI-powered automation, achieving unprecedented efficiency gains and cost savings.',',
@@ -348,14 +341,12 @@ export const caseStudies: CaseStudy[] = [,
     featured: true,,
     slug: '/case-studies/financeflow-automation',';,
     tags: ['Fintech', 'Workflow Automation', 'ROI', 'Process Efficiency']';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   }
 ];
 
 // Services Configuration
 export const services: Service[] = [,
   {
-<<<<<<< HEAD
     id: 'ai-analytics-platform',
     title: 'AI Analytics Platform',
     description: 'Transform data into actionable insights with predictive modeling and real-time dashboards',
@@ -695,14 +686,12 @@ export const services: Service[] = [,
     featured: false,,
     slug: '/services/cybersecurity-consulting',';,
     tags: ['Cybersecurity', 'Zero Trust', 'Compliance', 'Threat Detection']';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   }
 ];
 
 // Promotional Banners Configuration
 export const promotionalBanners: PromotionalBanner[] = [,
   {
-<<<<<<< HEAD
     id: 'fresh-content-oct-2025',',
     message: '✨ New: Governance Scorecards 2026, Freshness‑Aware RAG v2, Edge Flags 2026',',
     ctaText: 'Read the latest',',
@@ -716,7 +705,6 @@ export const promotionalBanners: PromotionalBanner[] = [,
     ctaLink: '/blog',';,
     backgroundColor: 'bg-gradient-to-r from-indigo-600 to-purple-600',';,
     textColor: 'text-white',';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     showClose: true,,
     autoHide: true,,
     hideAfter: 15,,
@@ -724,7 +712,6 @@ export const promotionalBanners: PromotionalBanner[] = [,
     priority: 0,
   },
   {
-<<<<<<< HEAD
     id: 'governance-scorecards-2026',',
     message: '📚 AI Governance 2026: Scorecards Engineers Actually Use',',
     ctaText: 'Read Article',',
@@ -738,7 +725,6 @@ export const promotionalBanners: PromotionalBanner[] = [,
     ctaLink: '/blog/ai-governance-scorecards-2026',';,
     backgroundColor: 'bg-gradient-to-r from-emerald-600 to-teal-600',';,
     textColor: 'text-white',';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     showClose: true,,
     autoHide: true,,
     hideAfter: 18,,
@@ -746,7 +732,6 @@ export const promotionalBanners: PromotionalBanner[] = [,
     priority: 1,
   },
   {
-<<<<<<< HEAD
     id: 'freshness-aware-rag-v2',',
     message: '🧭 Freshness‑Aware RAG v2: TTL Budgets and SLAs',',
     ctaText: 'Explore',',
@@ -760,7 +745,6 @@ export const promotionalBanners: PromotionalBanner[] = [,
     ctaLink: '/blog/freshness-aware-rag-v2',';,
     backgroundColor: 'bg-gradient-to-r from-cyan-600 to-blue-600',';,
     textColor: 'text-white',';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     showClose: true,,
     autoHide: true,,
     hideAfter: 16,,
@@ -768,7 +752,6 @@ export const promotionalBanners: PromotionalBanner[] = [,
     priority: 2,
   },
   {
-<<<<<<< HEAD
     id: 'edge-flags-blueprint-2026',',
     message: '⚡ Edge Flags Blueprint 2026: <100ms Global Releases',',
     ctaText: 'Read Blueprint',',
@@ -782,7 +765,6 @@ export const promotionalBanners: PromotionalBanner[] = [,
     ctaLink: '/blog/edge-flags-blueprint-2026',';,
     backgroundColor: 'bg-gradient-to-r from-purple-600 to-pink-600',';,
     textColor: 'text-white',';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     showClose: true,,
     autoHide: true,,
     hideAfter: 16,,
@@ -790,7 +772,6 @@ export const promotionalBanners: PromotionalBanner[] = [,
     priority: 2,
   },
   {
-<<<<<<< HEAD
     id: 'new-blog-banner',',
     message: '🔥 New: AI Platform Engineering 2025 + Secure ML Supply Chain',',
     ctaText: 'Read Now',',
@@ -804,7 +785,6 @@ export const promotionalBanners: PromotionalBanner[] = [,
     ctaLink: '/blog/ai-platform-engineering-2025',';,
     backgroundColor: 'bg-gradient-to-r from-orange-600 to-red-600',';,
     textColor: 'text-white',';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     showClose: true,,
     autoHide: true,,
     hideAfter: 15,,
@@ -812,7 +792,6 @@ export const promotionalBanners: PromotionalBanner[] = [,
     priority: 1,
   },
   {
-<<<<<<< HEAD
     id: 'ai-risk-register-banner',',
     message: '🛡️ New: AI Risk Register That Drives Action',',
     ctaText: 'Read Playbook',',
@@ -826,7 +805,6 @@ export const promotionalBanners: PromotionalBanner[] = [,
     ctaLink: '/blog/ai-risk-register-2025',';,
     backgroundColor: 'bg-gradient-to-r from-red-600 to-rose-600',';,
     textColor: 'text-white',';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     showClose: true,,
     autoHide: true,,
     hideAfter: 16,,
@@ -834,7 +812,6 @@ export const promotionalBanners: PromotionalBanner[] = [,
     priority: 1,
   },
   {
-<<<<<<< HEAD
     id: 'practical-evals-banner',',
     message: '📈 Practical AI Evals That Predict Outcomes',',
     ctaText: 'See Scorecards',',
@@ -848,7 +825,6 @@ export const promotionalBanners: PromotionalBanner[] = [,
     ctaLink: '/blog/practical-evals-scorecards-2025',';,
     backgroundColor: 'bg-gradient-to-r from-emerald-600 to-teal-600',';,
     textColor: 'text-white',';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     showClose: true,,
     autoHide: true,,
     hideAfter: 18,,
@@ -856,7 +832,6 @@ export const promotionalBanners: PromotionalBanner[] = [,
     priority: 2,
   },
   {
-<<<<<<< HEAD
     id: 'analytics-platform-banner',',
     message: '🚀 Launch: AI Analytics Platform - Transform Data into Actionable Insights',',
     ctaText: 'Explore Platform',',
@@ -870,7 +845,6 @@ export const promotionalBanners: PromotionalBanner[] = [,
     ctaLink: '/services/ai-analytics-platform',';,
     backgroundColor: 'bg-gradient-to-r from-teal-600 to-cyan-600',';,
     textColor: 'text-white',';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     showClose: true,,
     autoHide: true,,
     hideAfter: 18,,
@@ -878,7 +852,6 @@ export const promotionalBanners: PromotionalBanner[] = [,
     priority: 2,
   },
   {
-<<<<<<< HEAD
     id: 'techcorp-success-banner',',
     message: '🏆 Success Story: TechCorp Achieved 90% Efficiency Gain with AI Transformation',',
     ctaText: 'View Case Study',',
@@ -892,7 +865,6 @@ export const promotionalBanners: PromotionalBanner[] = [,
     ctaLink: '/case-studies/techcorp-ai-transformation',';,
     backgroundColor: 'bg-gradient-to-r from-green-600 to-emerald-600',';,
     textColor: 'text-white',';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     showClose: true,,
     autoHide: true,,
     hideAfter: 20,,
@@ -900,7 +872,6 @@ export const promotionalBanners: PromotionalBanner[] = [,
     priority: 3,
   },
   {
-<<<<<<< HEAD
     id: 'free-trial-banner',',
     message: '🎯 Limited Time: 30-Day Free Trial for AI Analytics Platform - No Credit Card Required',',
     ctaText: 'Start Free Trial',',
@@ -914,7 +885,6 @@ export const promotionalBanners: PromotionalBanner[] = [,
     ctaLink: '/services/ai-analytics-platform#pricing',';,
     backgroundColor: 'bg-gradient-to-r from-yellow-600 to-orange-600',';,
     textColor: 'text-white',';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     showClose: true,,
     autoHide: false,,
     hideAfter: 0,,
@@ -922,7 +892,6 @@ export const promotionalBanners: PromotionalBanner[] = [,
     priority: 4,
   },
   {
-<<<<<<< HEAD
     id: 'cloud-finops-guardrails-banner',',
     message: '💸 Cloud FinOps Guardrails Engineers Actually Use',',
     ctaText: 'Cut Spend',',
@@ -936,7 +905,6 @@ export const promotionalBanners: PromotionalBanner[] = [,
     ctaLink: '/blog/cloud-finops-guardrails-2025',';,
     backgroundColor: 'bg-gradient-to-r from-sky-600 to-blue-600',';,
     textColor: 'text-white',';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     showClose: true,,
     autoHide: true,,
     hideAfter: 16,,
@@ -944,7 +912,6 @@ export const promotionalBanners: PromotionalBanner[] = [,
     priority: 2,
   },
   {
-<<<<<<< HEAD
     id: 'practical-evals-2025-banner',',
     message: '📈 Practical AI Evals That Predict Business Outcomes',',
     ctaText: 'See Scorecards',',
@@ -958,7 +925,6 @@ export const promotionalBanners: PromotionalBanner[] = [,
     ctaLink: '/blog/practical-evals-scorecards-2025',';,
     backgroundColor: 'bg-gradient-to-r from-indigo-600 to-purple-600',';,
     textColor: 'text-white',';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     showClose: true,,
     autoHide: true,,
     hideAfter: 16,,
@@ -966,7 +932,6 @@ export const promotionalBanners: PromotionalBanner[] = [,
     priority: 2,
   },
   {
-<<<<<<< HEAD
     id: 'serverless-inference-costs-banner',',
     message: '🧰 Serverless Inference Cost Playbook',',
     ctaText: 'Optimize',',
@@ -980,7 +945,6 @@ export const promotionalBanners: PromotionalBanner[] = [,
     ctaLink: '/blog/serverless-inference-cost-playbook-2025',';,
     backgroundColor: 'bg-gradient-to-r from-emerald-600 to-teal-600',';,
     textColor: 'text-white',';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     showClose: true,,
     autoHide: true,,
     hideAfter: 16,,
@@ -1014,7 +978,6 @@ export const getContentByTag = (tag: string) => {,
 
 export const getRecentContent = (limit: number = 3) => {,
   const allContent = [
-<<<<<<< HEAD
     ...blogPosts.map(post => ({ ...post, type: 'blog' as const }))
     ...caseStudies.map(study => ({ ...study, type: 'case-study' as const }))
     ...services.map(service => ({ ...service, type: 'service' as const }))
@@ -1022,7 +985,6 @@ export const getRecentContent = (limit: number = 3) => {,
     ...blogPosts.map(post => ({ ...post, type: 'blog' as const })),';
     ...caseStudies.map(study => ({ ...study, type: 'case-study' as const })),';
     ...services.map(service => ({ ...service, type: 'service' as const }))';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   ];
   
   return allContent

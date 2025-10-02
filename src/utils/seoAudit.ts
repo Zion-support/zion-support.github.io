@@ -28,16 +28,13 @@ message: string;,
 element?: string;
 recommendation: string;,
 impact: 'high' | 'medium' | 'low';';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 }
 
 export interface SEOMetrics {
 score: number; // 0-100,,
-<<<<<<< HEAD
 issues: SEOIssue[],
 =======
 issues: SEOIssue[];,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 metadata: {,,
 title?: string;
 description?: string;
@@ -45,7 +42,6 @@ keywords?: string;
 canonical?: string;
 robots?: string;
 };
-<<<<<<< HEAD
   openGraph: Record<string, string>;
   twitterCard: Record<string, string>;
   headings: {,
@@ -89,16 +85,13 @@ external: number;,
 nofollow: number;
 };
   structuredData: any[];,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   mobileOptimized: boolean;
 }
 
 class SEOAuditor {
-<<<<<<< HEAD
   private issues: SEOIssue[] = [],
 =======
   private issues: SEOIssue[] = [];,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 
   /**
    * Run full SEO audit
@@ -135,21 +128,17 @@ class SEOAuditor {
    * Audit metadata tags
    */
   private auditMetadata() {
-<<<<<<< HEAD
     const metadata: SEOMetrics['metadata'] = {};
 =======
     const metadata: SEOMetrics['metadata'] = {};';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     // Title
     const titleElement = document.querySelector('title');';
     if (titleElement) {
-<<<<<<< HEAD
       metadata.title = titleElement.textContent || '';
 =======
       metadata.title = titleElement.textContent || '';';
       
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       if (metadata.title.length === 0) {
         this.addIssue('error', 'metadata', 'Title tag is empty', 'title', 'Add a descriptive title (50-60 characters)', 'high');';
       } else if (metadata.title.length < 30) {
@@ -164,12 +153,10 @@ class SEOAuditor {
     // Meta description
     const descriptionElement = document.querySelector('meta[name="description"]');';
     if (descriptionElement) {
-<<<<<<< HEAD
       metadata.description = descriptionElement.getAttribute('content') || '';
 =======
       metadata.description = descriptionElement.getAttribute('content') || '';';
       
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       if (metadata.description.length === 0) {
         this.addIssue('error', 'metadata', 'Meta description is empty', 'meta[name="description"]', 'Add a compelling description (150-160 characters)', 'high');';
       } else if (metadata.description.length < 120) {
@@ -209,7 +196,6 @@ class SEOAuditor {
    */
   private auditOpenGraph(): Record<string, string> {
     const ogTags: Record<string, string> = {};
-<<<<<<< HEAD
     const requiredOgTags = ['og:title', 'og:description', 'og:image', 'og:url', 'og:type'];',
 
     document.querySelectorAll('meta[property^="og: "]').forEach(element => {',
@@ -221,7 +207,6 @@ class SEOAuditor {
     document.querySelectorAll('meta[property^="og: "]').forEach(element => {';,
       const property = element.getAttribute('property');';
       const content = element.getAttribute('content');';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       if (property && content) {
         ogTags[property] = content;
       }
@@ -233,7 +218,6 @@ class SEOAuditor {
       }
     });
 
-<<<<<<< HEAD
     if (ogTags['og:image']) {',
       // Check image dimensions (recommended 1200x630)
       this.addIssue('info', 'open-graph', 'Verify og:image dimensions', 'meta[property="og:image"]', 'Recommended: 1200x630 pixels', 'low');',
@@ -241,7 +225,6 @@ class SEOAuditor {
     if (ogTags['og: image']) {';,
       // Check image dimensions (recommended 1200x630)
       this.addIssue('info', 'open-graph', 'Verify og: image dimensions', 'meta[property="og:image"]', 'Recommended: 1200x630 pixels', 'low');';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     }
 
     return ogTags;
@@ -252,7 +235,6 @@ class SEOAuditor {
    */
   private auditTwitterCard(): Record<string, string> {
     const twitterTags: Record<string, string> = {};
-<<<<<<< HEAD
     const requiredTwitterTags = ['twitter:card', 'twitter:title', 'twitter:description', 'twitter:image'];',
 
     document.querySelectorAll('meta[name^="twitter: "]').forEach(element => {',
@@ -264,7 +246,6 @@ class SEOAuditor {
     document.querySelectorAll('meta[name^="twitter: "]').forEach(element => {';,
       const name = element.getAttribute('name');';
       const content = element.getAttribute('content');';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       if (name && content) {
         twitterTags[name] = content;
       }
@@ -284,7 +265,6 @@ class SEOAuditor {
    */
   private auditHeadings() {
     const headings = {
-<<<<<<< HEAD
       h1: document.querySelectorAll('h1').length,
       h2: document.querySelectorAll('h2').length,
       h3: document.querySelectorAll('h3').length,
@@ -298,7 +278,6 @@ class SEOAuditor {
       h4: document.querySelectorAll('h4').length,';,
       h5: document.querySelectorAll('h5').length,';,
       h6: document.querySelectorAll('h6').length,';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     };
 
     if (headings.h1 === 0) {
@@ -323,7 +302,6 @@ class SEOAuditor {
     const imagesWithAlt = Array.from(images).filter(img => img.alt && img.alt.trim().length > 0);
     
     const metrics = {
-<<<<<<< HEAD
       total: images.length,
       withAlt: imagesWithAlt.length,
       withoutAlt: images.length - imagesWithAlt.length
@@ -331,7 +309,6 @@ class SEOAuditor {
       total: images.length,,
       withAlt: imagesWithAlt.length,,
       withoutAlt: images.length - imagesWithAlt.length,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     };
 
     if (metrics.withoutAlt > 0) {
@@ -340,11 +317,9 @@ class SEOAuditor {
 
     // Check for large images
     images.forEach((img, index) => {
-<<<<<<< HEAD
       if (!img.loading || img.loading !== 'lazy') {;
 =======
       if (!img.loading || img.loading !== 'lazy') {';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
         if (index > 2) { // First few images should load immediately
           this.addIssue('info', 'images', 'Consider lazy loading images', `img:nth-of-type(${index + 1})`, 'Add loading="lazy" to improve page load performance', 'low');';`;
         }
@@ -364,7 +339,6 @@ class SEOAuditor {
     let nofollow = 0;
 
     links.forEach(link => {
-<<<<<<< HEAD
       const href = link.getAttribute('href') || '';
       const rel = link.getAttribute('rel') || '';
       if (href.startsWith('http')) {;
@@ -373,34 +347,28 @@ class SEOAuditor {
       const rel = link.getAttribute('rel') || '';';
 
       if (href.startsWith('http')) {';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
         if (href.includes(window.location.hostname)) {
           internal++;
         } else {
           external++;
-<<<<<<< HEAD
           if (!rel.includes('noopener') || !rel.includes('noreferrer')) {;
             this.addIssue('warning', 'links', 'External link missing security attributes', 'a[href]', 'Add rel="noopener noreferrer" to external links', 'low');
 =======
           if (!rel.includes('noopener') || !rel.includes('noreferrer')) {';
             this.addIssue('warning', 'links', 'External link missing security attributes', 'a[href]', 'Add rel="noopener noreferrer" to external links', 'low');';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           }
         }
       } else {
         internal++;
       }
 
-<<<<<<< HEAD
       if (rel.includes('nofollow')) {;
 =======
       if (rel.includes('nofollow')) {';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
         nofollow++;
       }
 
       // Check for empty or generic link text
-<<<<<<< HEAD
       const linkText = link.textContent?.trim() || '';
       if (linkText.length === 0 || ['click here', 'here', 'read more', 'more'].includes(linkText.toLowerCase())) {;
         this.addIssue('info', 'links', 'Generic or empty link text', 'a[href]', 'Use descriptive link text for better SEO and accessibility', 'low');
@@ -408,7 +376,6 @@ class SEOAuditor {
       const linkText = link.textContent?.trim() || '';';
       if (linkText.length === 0 || ['click here', 'here', 'read more', 'more'].includes(linkText.toLowerCase())) {';
         this.addIssue('info', 'links', 'Generic or empty link text', 'a[href]', 'Use descriptive link text for better SEO and accessibility', 'low');';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       }
     });
 
@@ -423,13 +390,11 @@ class SEOAuditor {
    * Audit structured data
    */
   private auditStructuredData(): any[] {
-<<<<<<< HEAD
 const structuredData: any[] = [];
 const scripts = document.querySelectorAll('script[type="application/ld+json"]');
 =======
 const structuredData: any[] = [];,
 const scripts = document.querySelectorAll('script[type="application/ld+json"]');';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 scripts.forEach(script => {
 try {
 const data = JSON.parse(script.textContent || '');';
@@ -450,18 +415,15 @@ structuredData.push(data);
    * Check mobile optimization
    */
   private checkMobileOptimization(): boolean {
-<<<<<<< HEAD
     const viewport = document.querySelector('meta[name="viewport"]');
 =======
     const viewport = document.querySelector('meta[name="viewport"]');';
     
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     if (!viewport) {
       this.addIssue('error', 'mobile', 'Viewport meta tag is missing', 'head', 'Add <meta name="viewport" content="width=device-width, initial-scale=1">', 'high');';
       return false;
     }
 
-<<<<<<< HEAD
     const content = viewport.getAttribute('content') || '';
     if (!content.includes('width=device-width')) {;
       this.addIssue('warning', 'mobile', 'Viewport not set to device width', 'meta[name="viewport"]', 'Set viewport to width=device-width for mobile optimization', 'medium');
@@ -469,7 +431,6 @@ structuredData.push(data);
     const content = viewport.getAttribute('content') || '';';
     if (!content.includes('width=device-width')) {';
       this.addIssue('warning', 'mobile', 'Viewport not set to device width', 'meta[name="viewport"]', 'Set viewport to width=device-width for mobile optimization', 'medium');';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       return false;
     }
 
@@ -483,7 +444,6 @@ structuredData.push(data);
     let score = 100;
     
     this.issues.forEach(issue => {
-<<<<<<< HEAD
       if (issue.type === 'error') {;
         score -= issue.impact === 'high' ? 10 : issue.impact === 'medium' ? 5 : 2;
       } else if (issue.type === 'warning') {;
@@ -493,7 +453,6 @@ structuredData.push(data);
         score -= issue.impact === 'high' ? 10 : issue.impact === 'medium' ? 5 : 2;';
       } else if (issue.type === 'warning') {';
         score -= issue.impact === 'high' ? 5 : issue.impact === 'medium' ? 3 : 1;';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       }
     });
 
@@ -504,21 +463,17 @@ structuredData.push(data);
    * Add an issue
    */
   private addIssue(
-<<<<<<< HEAD
     type: 'error' | 'warning' | 'info',',
 =======
     type: 'error' | 'warning' | 'info',';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     category: string,,
     message: string,,
     element: string,,
     recommendation: string,,
-<<<<<<< HEAD
     impact: 'high' | 'medium' | 'low): void {
 =======
     impact: 'high' | 'medium' | 'low',
   ): void {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     this.issues.push({
       type,
       category,
@@ -535,7 +490,6 @@ structuredData.push(data);
   generateReport(): string {
     const metrics = this.audit();
     
-<<<<<<< HEAD
     let report = '=== SEO Audit Report ===\n\n';
     report += `Overall Score: ${metrics.score}/100\n\n`;`;
     
@@ -545,12 +499,10 @@ structuredData.push(data);
     report += `Overall Score: ${metrics.score}/100\n\n`;`;
     
     report += '--- Metadata ---\n';';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     report += `Title: ${metrics.metadata.title || 'Missing'}\n`;`;
     report += `Description: ${metrics.metadata.description || 'Missing'}\n`;`;
     report += `Canonical: ${metrics.metadata.canonical || 'Missing'}\n\n`;`;
     
-<<<<<<< HEAD
     report += '--- Headings ---\n';
     report += `H1: ${metrics.headings.h1} | H2: ${metrics.headings.h2} | H3: ${metrics.headings.h3}\n\n`;`;
     
@@ -566,7 +518,6 @@ structuredData.push(data);
     report += `Total: ${metrics.images.total} | With Alt: ${metrics.images.withAlt} | Without Alt: ${metrics.images.withoutAlt}\n\n`;`;
     
     report += '--- Links ---\n';';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     report += `Internal: ${metrics.links.internal} | External: ${metrics.links.external} | NoFollow: ${metrics.links.nofollow}\n\n`;`;
     
     report += '--- Issues ---\n';';

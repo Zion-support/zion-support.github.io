@@ -9,7 +9,6 @@ export default function AICausalEvalsBlueprint2025(): React.JSX.Element {
           name="description"
           content="Design causal evaluation scorecards wired to KPIs with budgeted actions, live canaries, and instant rollback." /><link
           rel="canonical"
-<<<<<<< HEAD
           href="https://ziontechgroup.com/blog/ai-2025-sept-30-causal-evals-blueprint",
         />
       </Helmet>
@@ -23,7 +22,6 @@ export default function AICausalEvalsBlueprint2025(): React.JSX.Element {
 
       <div className="container mx-auto px-6 py-16">";
         <h1 className="text-4xl md: text-5xl font-bold mb-4">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           AI 2025: Causal Evals Blueprint — KPIs, Budgets, Rollback,
         </h1>
         <p className="text-zion-slate-light mb-8">";
@@ -37,11 +35,9 @@ export default function AICausalEvalsBlueprint2025(): React.JSX.Element {
             trigger rollbacks when risk budgets are exceeded.
           </p>
           <p>
-<<<<<<< HEAD
             You will learn how to: (1) map SLIs to KPIs with explicit budgets
 =======
             You will learn how to: (1) map SLIs to KPIs with explicit budgets,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             (2) run policy tests in CI with signed attestations, and (3) deploy
             live canaries that guard production with measurable impact.
           </p>

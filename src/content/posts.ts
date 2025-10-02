@@ -1588,14 +1588,12 @@ posts.push([
     featured: true,
     readTime: "8 min read"
   },
-<<<<<<< HEAD
 );
 
 // Sept 30, 2025 – New articles to expand catalog and promote on homepage
 posts.push(
 =======
   // Sept 30, 2025 – New articles to expand catalog and promote on homepage
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-09af
   {
     slug: "ai-governance-action-scorecards-2026",
     title: "AI Governance Action Scorecards 2026: Guardrails That Ship",

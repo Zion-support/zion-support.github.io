@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 const AIPlatformArchitecture: React.FC = () => {,
   return (
@@ -15,7 +14,6 @@ const AIPlatformArchitecture: React.FC = () => {,
       <div className="container mx-auto px-6 py-20">";
         <div className="text-center mb-16">";
           <h1 className="text-4xl md: text-5xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             AI Platform Architecture
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">";
@@ -24,7 +22,6 @@ const AIPlatformArchitecture: React.FC = () => {,
           </p>
         </div>
 
-<<<<<<< HEAD
         <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">",
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-blue-500/50 transition-all duration-300">",
             <div className="text-6xl mb-6">🏗️</div>
@@ -36,12 +33,10 @@ const AIPlatformArchitecture: React.FC = () => {,
             <div className="text-6xl mb-6">🏗️</div>";
             <h3 className="text-2xl font-bold text-white mb-4">Scalable Infrastructure</h3>";
             <p className="text-gray-300 mb-6">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               Cloud-native architecture designed for massive scale and high availability.
             </p>
           </div>
 
-<<<<<<< HEAD
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-purple-500/50 transition-all duration-300">",
             <div className="text-6xl mb-6">🔧</div>
             <h3 className="text-2xl font-bold text-white mb-4">Microservices Design</h3>
@@ -51,12 +46,10 @@ const AIPlatformArchitecture: React.FC = () => {,
             <div className="text-6xl mb-6">🔧</div>";
             <h3 className="text-2xl font-bold text-white mb-4">Microservices Design</h3>";
             <p className="text-gray-300 mb-6">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               Modular, containerized services that enable rapid development and deployment.
             </p>
           </div>
 
-<<<<<<< HEAD
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-green-500/50 transition-all duration-300">",
             <div className="text-6xl mb-6">🔒</div>
             <h3 className="text-2xl font-bold text-white mb-4">Enterprise Security</h3>
@@ -66,7 +59,6 @@ const AIPlatformArchitecture: React.FC = () => {,
             <div className="text-6xl mb-6">🔒</div>";
             <h3 className="text-2xl font-bold text-white mb-4">Enterprise Security</h3>";
             <p className="text-gray-300 mb-6">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               End-to-end security with encryption, access controls, and compliance frameworks.
             </p>
           </div>

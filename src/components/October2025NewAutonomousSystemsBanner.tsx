@@ -1,7 +1,6 @@
 
 const October2025NewAutonomousSystemsBanner = () => {
   return (
-<<<<<<< HEAD
     <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 border-b border-purple-500/30 relative overflow-hidden">
       {/* Animated background effects */};
       <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size: 60px_60px]/>",
@@ -37,35 +36,29 @@ const October2025NewAutonomousSystemsBanner = () => {
               🚀 BREAKING: October 1, 2025,
             </span>
             <Sparkles className="w-5 h-5 text-yellow-400 animate-pulse" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           </div>
         </div>
         
         {/* Main headline */}
-<<<<<<< HEAD
         <h2 className="text-4xl md: text-5xl font-black text-center mb-4 leading-tight">",
           <span className="bg-gradient-to-r from-yellow-300 via-orange-300 to-pink-300 text-transparent bg-clip-text drop-shadow-lg">
 =======
         <h2 className="text-4xl md: text-5xl font-black text-center mb-4 leading-tight">";,
           <span className="bg-gradient-to-r from-yellow-300 via-orange-300 to-pink-300 text-transparent bg-clip-text drop-shadow-lg">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             🔥 REVOLUTIONARY: 2 Game-Changing Autonomous Systems!,
           </span>
         </h2>
         
         {/* Sub-headline */}
-<<<<<<< HEAD
         <p className="text-xl md: text-2xl text-center text-blue-100 mb-8 max-w-5xl mx-auto font-semibold">",
           ⚡ Just Released: <span className="text-yellow-300 font-black">$974M Combined Annual Value</span> — ",
 =======
         <p className="text-xl md: text-2xl text-center text-blue-100 mb-8 max-w-5xl mx-auto font-semibold">";,
           ⚡ Just Released: <span className="text-yellow-300 font-black">$974M Combined Annual Value</span> — ";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           Intelligent Enterprise Mesh + AI-Powered Predictive Maintenance
         </p>
         
         {/* Featured content cards */}
-<<<<<<< HEAD
         <div className="grid md: grid-cols-2 gap-6 mb-8">",
           {/* Card 1: Enterprise Mesh */}
           <div className="bg-gradient-to-br from-purple-900/80 to-indigo-900/80 backdrop-blur-sm border border-purple-400/30 rounded-xl p-6 hover: scale-105 hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 group">",
@@ -125,7 +118,6 @@ const October2025NewAutonomousSystemsBanner = () => {
                   <div className="flex items-center gap-2">";
                     <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse" />";
                     <span className="text-yellow-300 font-bold">99.997% Availability Achieved</span>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   </div>
                 </div>
                 <p className="text-blue-200 text-sm mb-4">";
@@ -138,22 +130,18 @@ const October2025NewAutonomousSystemsBanner = () => {
                     className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 hover: from-purple-500 hover:to-pink-500 text-white px-4 py-2 rounded-lg font-bold transition-all group-hover:shadow-lg",
                   >
                     Read Blog Post
-<<<<<<< HEAD
                     <ArrowRight className="w-4 h-4/>
 =======
                     <ArrowRight className="w-4 h-4" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   </Link>
                   <Link
                     to="/case-studies/ai-2025-oct-01-global-manufacturing-enterprise-mesh-847m-success"
                     className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover: from-blue-500 hover:to-indigo-500 text-white px-4 py-2 rounded-lg font-bold transition-all group-hover:shadow-lg",
                   >
                     View Case Study
-<<<<<<< HEAD
                     <TrendingUp className="w-4 h-4/>
 =======
                     <TrendingUp className="w-4 h-4" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   </Link>
                 </div>
               </div>
@@ -161,7 +149,6 @@ const October2025NewAutonomousSystemsBanner = () => {
           </div>
           
           {/* Card 2: Predictive Maintenance */}
-<<<<<<< HEAD
           <div className="bg-gradient-to-br from-blue-900/80 to-cyan-900/80 backdrop-blur-sm border border-cyan-400/30 rounded-xl p-6 hover: scale-105 hover:shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300 group">",
             <div className="flex items-start gap-4">
               <div className="flex-shrink-0">
@@ -217,7 +204,6 @@ const October2025NewAutonomousSystemsBanner = () => {
                   <div className="flex items-center gap-2">";
                     <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse" />";
                     <span className="text-yellow-300 font-bold">30-Day Advance Warning</span>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   </div>
                 </div>
                 <p className="text-blue-200 text-sm mb-4">";
@@ -230,22 +216,18 @@ const October2025NewAutonomousSystemsBanner = () => {
                     className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-600 to-blue-600 hover: from-cyan-500 hover:to-blue-500 text-white px-4 py-2 rounded-lg font-bold transition-all group-hover:shadow-lg",
                   >
                     Read Blog Post
-<<<<<<< HEAD
                     <ArrowRight className="w-4 h-4/>
 =======
                     <ArrowRight className="w-4 h-4" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   </Link>
                   <Link
                     to="/case-studies/ai-2025-oct-01-automotive-manufacturer-predictive-maintenance-127m-success"
                     className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover: from-blue-500 hover:to-indigo-500 text-white px-4 py-2 rounded-lg font-bold transition-all group-hover:shadow-lg",
                   >
                     View Case Study
-<<<<<<< HEAD
                     <TrendingUp className="w-4 h-4/>
 =======
                     <TrendingUp className="w-4 h-4" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   </Link>
                 </div>
               </div>
@@ -259,7 +241,6 @@ const October2025NewAutonomousSystemsBanner = () => {
             to="/blog"
             className="inline-flex items-center gap-3 bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 hover: from-yellow-400 hover:via-orange-400 hover:to-red-400 text-white px-8 py-4 rounded-xl font-black text-lg shadow-2xl shadow-orange-500/50 hover:shadow-orange-400/70 transform hover:scale-105 transition-all duration-300",
           >
-<<<<<<< HEAD
             <Sparkles className="w-6 h-6/>
             Explore All Revolutionary Content
             <ArrowRight className="w-6 h-6/>
@@ -267,12 +248,10 @@ const October2025NewAutonomousSystemsBanner = () => {
             <Sparkles className="w-6 h-6" />";
             Explore All Revolutionary Content
             <ArrowRight className="w-6 h-6" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           </Link>
         </div>
         
         {/* Stats banner */}
-<<<<<<< HEAD
         <div className="mt-8 grid grid-cols-2 md: grid-cols-4 gap-4 text-center">",
           <div className="bg-black/30 backdrop-blur-sm rounded-lg p-4 border border-white/10">
             <div className="text-3xl font-black text-yellow-300 mb-1">$974M</div>
@@ -282,7 +261,6 @@ const October2025NewAutonomousSystemsBanner = () => {
           <div className="bg-black/30 backdrop-blur-sm rounded-lg p-4 border border-white/10">";
             <div className="text-3xl font-black text-yellow-300 mb-1">$974M</div>";
             <div className="text-sm text-blue-200">Combined Annual Value</div>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           </div>
           <div className="bg-black/30 backdrop-blur-sm rounded-lg p-4 border border-white/10">";
             <div className="text-3xl font-black text-green-300 mb-1">97.3%</div>";

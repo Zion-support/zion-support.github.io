@@ -8,7 +8,6 @@ const AutonomousBusinessOperations = () => {
           name="description"
           content="Transform your enterprise with AI-powered autonomous operations. Deploy 40+ self-managing workflows in 90 days. $500M+ value creation. 300-500% ROI. Get started with a free consultation." /><meta
           name="keywords"
-<<<<<<< HEAD
           content="autonomous business operations, AI automation platform, enterprise automation, business process automation, operational efficiency, AI transformation, ROI guarantee" /><link rel="canonical" href="https://ziontechgroup.com/services/autonomous-business-operations/>",
       </Helmet>
       
@@ -27,7 +26,6 @@ const AutonomousBusinessOperations = () => {
         <section className="relative py-24 overflow-hidden">";
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>";
           
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           {/* Animated background elements */}
           <div className="absolute inset-0 overflow-hidden opacity-30">";
             <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl animate-float"></div>";
@@ -36,7 +34,6 @@ const AutonomousBusinessOperations = () => {
 
           <div className="container mx-auto px-6 relative z-10">";
             {/* Limited Time Banner */}
-<<<<<<< HEAD
             <div className="flex justify-center mb-8">
               <div className="inline-flex items-center px-6 py-3 rounded-full bg-green-500/20 border-2 border-green-400/50 text-green-300 text-sm font-bold uppercase tracking-wider animate-pulse">
                 <Rocket className="w-5 h-5 mr-2/>
@@ -44,12 +41,10 @@ const AutonomousBusinessOperations = () => {
             <div className="flex justify-center mb-8">";
               <div className="inline-flex items-center px-6 py-3 rounded-full bg-green-500/20 border-2 border-green-400/50 text-green-300 text-sm font-bold uppercase tracking-wider animate-pulse">";
                 <Rocket className="w-5 h-5 mr-2" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 🔥 LIMITED OFFER: 50% OFF THROUGH DECEMBER 2025,
               </div>
             </div>
 
-<<<<<<< HEAD
             <div className="max-w-5xl mx-auto text-center">
               <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">",
                 Autonomous Business Operations Platform
@@ -61,7 +56,6 @@ const AutonomousBusinessOperations = () => {
                 Autonomous Business Operations Platform
               </h1>
               <p className="text-2xl md: text-3xl text-blue-200 mb-8 font-semibold">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 Transform Your Enterprise in 90 Days with Self-Managing AI Systems
               </p>
               <p className="text-xl text-blue-100 mb-12 max-w-3xl mx-auto leading-relaxed">";
@@ -69,7 +63,6 @@ const AutonomousBusinessOperations = () => {
               </p>
 
               {/* Key Metrics */}
-<<<<<<< HEAD
               <div className="grid grid-cols-2 md: grid-cols-4 gap-6 mb-12">",
                 <div className="bg-gradient-to-br from-green-600/30 to-emerald-600/30 backdrop-blur-sm rounded-xl p-6 border-2 border-green-400/50">
                   <div className="text-5xl font-bold text-green-300 mb-2">85%</div>
@@ -79,7 +72,6 @@ const AutonomousBusinessOperations = () => {
                 <div className="bg-gradient-to-br from-green-600/30 to-emerald-600/30 backdrop-blur-sm rounded-xl p-6 border-2 border-green-400/50">";
                   <div className="text-5xl font-bold text-green-300 mb-2">85%</div>";
                   <div className="text-green-100 font-semibold">Cost Reduction</div>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </div>
                 <div className="bg-gradient-to-br from-blue-600/30 to-cyan-600/30 backdrop-blur-sm rounded-xl p-6 border-2 border-blue-400/50">";
                   <div className="text-5xl font-bold text-blue-300 mb-2">90</div>";
@@ -96,16 +88,13 @@ const AutonomousBusinessOperations = () => {
               </div>
 
               {/* CTA Buttons */}
-<<<<<<< HEAD
               <div className="flex flex-col sm: flex-row gap-4 justify-center">",
 =======
               <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 <Link
                   to="/contact"
                   className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-green-500 to-emerald-500 hover: from-green-600 hover:to-emerald-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-2xl hover:shadow-green-500/50 hover:scale-105",
                 >
-<<<<<<< HEAD
                   <Rocket className="w-6 h-6/>
                   Start Free Consultation
                   <ArrowRight className="w-5 h-5/>
@@ -113,7 +102,6 @@ const AutonomousBusinessOperations = () => {
                   <Rocket className="w-6 h-6" />";
                   Start Free Consultation
                   <ArrowRight className="w-5 h-5" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </Link>
                 <Link
                   to="/case-studies/fortune-100-autonomous-operations-transformation-2025"
@@ -127,7 +115,6 @@ const AutonomousBusinessOperations = () => {
         </section>
 
         {/* Trust Indicators */}
-<<<<<<< HEAD
         <section className="py-12 bg-black/20">
           <div className="container mx-auto px-6">
             <div className="flex flex-wrap justify-center items-center gap-8 text-blue-200">
@@ -165,14 +152,12 @@ const AutonomousBusinessOperations = () => {
               <div className="flex items-center gap-2">";
                 <CheckCircle className="w-5 h-5 text-green-400" />";
                 <span className="font-semibold">99.97% Uptime SLA</span>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
             </div>
           </div>
         </section>
 
         {/* What You Get */}
-<<<<<<< HEAD
         <section className="container mx-auto px-6 py-20 max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-4">",
@@ -182,14 +167,12 @@ const AutonomousBusinessOperations = () => {
           <div className="text-center mb-16">";
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-4">";,
               What's Included in Your Platform';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </h2>
             <p className="text-xl text-blue-200 max-w-3xl mx-auto">";
               A complete enterprise-grade autonomous operations solution, deployed and optimized for your business
             </p>
           </div>
 
-<<<<<<< HEAD
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
             {/* Feature 1 */}
             <div className="bg-gradient-to-br from-blue-900/60 to-cyan-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-blue-400/50 hover: border-blue-400/80 transition-all hover:scale-105">",
@@ -201,7 +184,6 @@ const AutonomousBusinessOperations = () => {
             <div className="bg-gradient-to-br from-blue-900/60 to-cyan-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-blue-400/50 hover: border-blue-400/80 transition-all hover:scale-105">";,
               <div className="bg-blue-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-blue-400/30">";
                 <Zap className="w-8 h-8 text-blue-300" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">";
                 40+ Autonomous Workflows
@@ -209,7 +191,6 @@ const AutonomousBusinessOperations = () => {
               <p className="text-blue-100 mb-4">";
                 Pre-built workflows for finance, HR, operations, sales, support, and compliance. Fully customizable to your needs.
               </p>
-<<<<<<< HEAD
               <ul className="space-y-2 text-blue-200 text-sm">
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0/>
@@ -241,14 +222,12 @@ const AutonomousBusinessOperations = () => {
                 </li>
                 <li className="flex items-start gap-2">";
                   <CheckCircle className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   <span>Sales lead qualification & nurturing</span>
                 </li>
               </ul>
             </div>
 
             {/* Feature 2 */}
-<<<<<<< HEAD
             <div className="bg-gradient-to-br from-purple-900/60 to-pink-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-purple-400/50 hover: border-purple-400/80 transition-all hover:scale-105">",
               <div className="bg-purple-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-purple-400/30">
                 <TrendingUp className="w-8 h-8 text-purple-300/>
@@ -256,7 +235,6 @@ const AutonomousBusinessOperations = () => {
             <div className="bg-gradient-to-br from-purple-900/60 to-pink-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-purple-400/50 hover: border-purple-400/80 transition-all hover:scale-105">";,
               <div className="bg-purple-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-purple-400/30">";
                 <TrendingUp className="w-8 h-8 text-purple-300" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">";
                 AI Decision Engine
@@ -264,7 +242,6 @@ const AutonomousBusinessOperations = () => {
               <p className="text-purple-100 mb-4">";
                 Real-time decision-making with 99.7% accuracy. Learns from every interaction and continuously improves.
               </p>
-<<<<<<< HEAD
               <ul className="space-y-2 text-purple-200 text-sm">
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-4 h-4 text-purple-400 mt-1 flex-shrink-0/>
@@ -296,14 +273,12 @@ const AutonomousBusinessOperations = () => {
                 </li>
                 <li className="flex items-start gap-2">";
                   <CheckCircle className="w-4 h-4 text-purple-400 mt-1 flex-shrink-0" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   <span>Automatic model retraining</span>
                 </li>
               </ul>
             </div>
 
             {/* Feature 3 */}
-<<<<<<< HEAD
             <div className="bg-gradient-to-br from-green-900/60 to-emerald-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-green-400/50 hover: border-green-400/80 transition-all hover:scale-105">",
               <div className="bg-green-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-green-400/30">
                 <Shield className="w-8 h-8 text-green-300/>
@@ -311,7 +286,6 @@ const AutonomousBusinessOperations = () => {
             <div className="bg-gradient-to-br from-green-900/60 to-emerald-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-green-400/50 hover: border-green-400/80 transition-all hover:scale-105">";,
               <div className="bg-green-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-green-400/30">";
                 <Shield className="w-8 h-8 text-green-300" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">";
                 Enterprise Security
@@ -319,7 +293,6 @@ const AutonomousBusinessOperations = () => {
               <p className="text-green-100 mb-4">";
                 Zero Trust architecture with SOC 2 Type II compliance. Your data stays secure and compliant.
               </p>
-<<<<<<< HEAD
               <ul className="space-y-2 text-green-200 text-sm">
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-4 h-4 text-green-400 mt-1 flex-shrink-0/>
@@ -351,14 +324,12 @@ const AutonomousBusinessOperations = () => {
                 </li>
                 <li className="flex items-start gap-2">";
                   <CheckCircle className="w-4 h-4 text-green-400 mt-1 flex-shrink-0" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   <span>Full audit trail & compliance reporting</span>
                 </li>
               </ul>
             </div>
 
             {/* Feature 4 */}
-<<<<<<< HEAD
             <div className="bg-gradient-to-br from-orange-900/60 to-red-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-orange-400/50 hover: border-orange-400/80 transition-all hover:scale-105">",
               <div className="bg-orange-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-orange-400/30">
                 <Users className="w-8 h-8 text-orange-300/>
@@ -366,7 +337,6 @@ const AutonomousBusinessOperations = () => {
             <div className="bg-gradient-to-br from-orange-900/60 to-red-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-orange-400/50 hover: border-orange-400/80 transition-all hover:scale-105">";,
               <div className="bg-orange-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-orange-400/30">";
                 <Users className="w-8 h-8 text-orange-300" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">";
                 Expert Implementation Team
@@ -374,7 +344,6 @@ const AutonomousBusinessOperations = () => {
               <p className="text-orange-100 mb-4">";
                 Dedicated team of AI engineers, data scientists, and consultants to ensure successful deployment.
               </p>
-<<<<<<< HEAD
               <ul className="space-y-2 text-orange-200 text-sm">
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-4 h-4 text-orange-400 mt-1 flex-shrink-0/>
@@ -406,14 +375,12 @@ const AutonomousBusinessOperations = () => {
                 </li>
                 <li className="flex items-start gap-2">";
                   <CheckCircle className="w-4 h-4 text-orange-400 mt-1 flex-shrink-0" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   <span>24/7 dedicated support</span>
                 </li>
               </ul>
             </div>
 
             {/* Feature 5 */}
-<<<<<<< HEAD
             <div className="bg-gradient-to-br from-cyan-900/60 to-blue-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-cyan-400/50 hover: border-cyan-400/80 transition-all hover:scale-105">",
               <div className="bg-cyan-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-cyan-400/30">
                 <Clock className="w-8 h-8 text-cyan-300/>
@@ -421,7 +388,6 @@ const AutonomousBusinessOperations = () => {
             <div className="bg-gradient-to-br from-cyan-900/60 to-blue-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-cyan-400/50 hover: border-cyan-400/80 transition-all hover:scale-105">";,
               <div className="bg-cyan-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-cyan-400/30">";
                 <Clock className="w-8 h-8 text-cyan-300" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">";
                 Real-Time Observability
@@ -429,7 +395,6 @@ const AutonomousBusinessOperations = () => {
               <p className="text-cyan-100 mb-4">";
                 Complete visibility into all operations with real-time dashboards, alerts, and analytics.
               </p>
-<<<<<<< HEAD
               <ul className="space-y-2 text-cyan-200 text-sm">
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-4 h-4 text-cyan-400 mt-1 flex-shrink-0/>
@@ -461,14 +426,12 @@ const AutonomousBusinessOperations = () => {
                 </li>
                 <li className="flex items-start gap-2">";
                   <CheckCircle className="w-4 h-4 text-cyan-400 mt-1 flex-shrink-0" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   <span>ROI tracking & reporting</span>
                 </li>
               </ul>
             </div>
 
             {/* Feature 6 */}
-<<<<<<< HEAD
             <div className="bg-gradient-to-br from-indigo-900/60 to-purple-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-indigo-400/50 hover: border-indigo-400/80 transition-all hover:scale-105">",
               <div className="bg-indigo-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-indigo-400/30">
                 <DollarSign className="w-8 h-8 text-indigo-300/>
@@ -476,12 +439,10 @@ const AutonomousBusinessOperations = () => {
             <div className="bg-gradient-to-br from-indigo-900/60 to-purple-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-indigo-400/50 hover: border-indigo-400/80 transition-all hover:scale-105">";,
               <div className="bg-indigo-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-indigo-400/30">";
                 <DollarSign className="w-8 h-8 text-indigo-300" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">";
                 ROI Guarantee
               </h3>
-<<<<<<< HEAD
               <p className="text-indigo-100 mb-4">
                 We're so confident in our platform that we guarantee 300% ROI within 18 months, or your money back.;
               </p>
@@ -519,7 +480,6 @@ const AutonomousBusinessOperations = () => {
                 </li>
                 <li className="flex items-start gap-2">";
                   <CheckCircle className="w-4 h-4 text-indigo-400 mt-1 flex-shrink-0" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   <span>Money-back guarantee</span>
                 </li>
               </ul>
@@ -528,7 +488,6 @@ const AutonomousBusinessOperations = () => {
         </section>
 
         {/* Implementation Timeline */}
-<<<<<<< HEAD
         <section className="container mx-auto px-6 py-20 max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-4">",
@@ -536,7 +495,6 @@ const AutonomousBusinessOperations = () => {
         <section className="container mx-auto px-6 py-20 max-w-6xl">";
           <div className="text-center mb-16">";
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-4">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               90-Day Implementation Timeline
             </h2>
             <p className="text-xl text-blue-200">";
@@ -556,7 +514,6 @@ const AutonomousBusinessOperations = () => {
                   <p className="text-blue-100 mb-4">";
                     Process mapping, data assessment, and ROI modeling with your team
                   </p>
-<<<<<<< HEAD
                   <div className="grid md: grid-cols-3 gap-4 text-sm">",
                     <div className="flex items-center gap-2 text-blue-200">
                       <CheckCircle className="w-4 h-4 text-blue-400/>
@@ -580,7 +537,6 @@ const AutonomousBusinessOperations = () => {
                     </div>
                     <div className="flex items-center gap-2 text-blue-200">";
                       <CheckCircle className="w-4 h-4 text-blue-400" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                       <span>Custom ROI model</span>
                     </div>
                   </div>
@@ -599,7 +555,6 @@ const AutonomousBusinessOperations = () => {
                   <p className="text-purple-100 mb-4">";
                     Infrastructure deployment, model training, and system integration
                   </p>
-<<<<<<< HEAD
                   <div className="grid md: grid-cols-3 gap-4 text-sm">",
                     <div className="flex items-center gap-2 text-purple-200">
                       <CheckCircle className="w-4 h-4 text-purple-400/>
@@ -623,7 +578,6 @@ const AutonomousBusinessOperations = () => {
                     </div>
                     <div className="flex items-center gap-2 text-purple-200">";
                       <CheckCircle className="w-4 h-4 text-purple-400" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                       <span>API integrations</span>
                     </div>
                   </div>
@@ -642,7 +596,6 @@ const AutonomousBusinessOperations = () => {
                   <p className="text-green-100 mb-4">";
                     Pilot deployment, validation, and full-scale rollout
                   </p>
-<<<<<<< HEAD
                   <div className="grid md: grid-cols-3 gap-4 text-sm">",
                     <div className="flex items-center gap-2 text-green-200">
                       <CheckCircle className="w-4 h-4 text-green-400/>
@@ -666,7 +619,6 @@ const AutonomousBusinessOperations = () => {
                     </div>
                     <div className="flex items-center gap-2 text-green-200">";
                       <CheckCircle className="w-4 h-4 text-green-400" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                       <span>Full production launch</span>
                     </div>
                   </div>
@@ -677,7 +629,6 @@ const AutonomousBusinessOperations = () => {
         </section>
 
         {/* Pricing Section */}
-<<<<<<< HEAD
         <section className="container mx-auto px-6 py-20 max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-4">",
@@ -685,7 +636,6 @@ const AutonomousBusinessOperations = () => {
         <section className="container mx-auto px-6 py-20 max-w-6xl">";
           <div className="text-center mb-16">";
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-4">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               Investment & ROI
             </h2>
             <p className="text-xl text-blue-200">";
@@ -693,11 +643,9 @@ const AutonomousBusinessOperations = () => {
             </p>
           </div>
 
-<<<<<<< HEAD
           <div className="grid md: grid-cols-2 gap-8 max-w-4xl mx-auto">",
 =======
           <div className="grid md: grid-cols-2 gap-8 max-w-4xl mx-auto">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             {/* Investment */}
             <div className="bg-gradient-to-br from-blue-900/60 to-purple-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-blue-400/50">";
               <h3 className="text-2xl font-bold text-white mb-6 text-center">Total Investment</h3>";
@@ -705,7 +653,6 @@ const AutonomousBusinessOperations = () => {
                 <div className="text-5xl font-bold text-white mb-2">$10-25M</div>";
                 <div className="text-blue-200">3-Year Total Cost</div>";
               </div>
-<<<<<<< HEAD
               <ul className="space-y-3 text-blue-100">
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0/>
@@ -737,7 +684,6 @@ const AutonomousBusinessOperations = () => {
                 </li>
                 <li className="flex items-start gap-2">";
                   <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   <span>Ongoing support & optimization</span>
                 </li>
               </ul>
@@ -750,7 +696,6 @@ const AutonomousBusinessOperations = () => {
                 <div className="text-5xl font-bold text-white mb-2">$90-330M</div>";
                 <div className="text-green-200">3-Year Value Creation</div>";
               </div>
-<<<<<<< HEAD
               <ul className="space-y-3 text-green-100">
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0/>
@@ -782,7 +727,6 @@ const AutonomousBusinessOperations = () => {
                 </li>
                 <li className="flex items-start gap-2">";
                   <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   <span>Customer retention & satisfaction</span>
                 </li>
               </ul>
@@ -798,7 +742,6 @@ const AutonomousBusinessOperations = () => {
         </section>
 
         {/* Success Story CTA */}
-<<<<<<< HEAD
         <section className="container mx-auto px-6 py-20 max-w-6xl">
           <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-12 text-center">
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -806,7 +749,6 @@ const AutonomousBusinessOperations = () => {
         <section className="container mx-auto px-6 py-20 max-w-6xl">";
           <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-12 text-center">";
             <h2 className="text-4xl font-bold text-white mb-4">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               See It In Action: $650M Success Story,
             </h2>
             <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">";
@@ -817,17 +759,14 @@ const AutonomousBusinessOperations = () => {
               className="inline-flex items-center gap-2 bg-white text-green-600 hover: bg-green-50 px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-xl hover:shadow-2xl",
             >
               Read Complete Case Study
-<<<<<<< HEAD
               <ArrowRight className="w-5 h-5/>
 =======
               <ArrowRight className="w-5 h-5" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </Link>
           </div>
         </section>
 
         {/* Final CTA */}
-<<<<<<< HEAD
         <section className="container mx-auto px-6 py-20 max-w-6xl">
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-center">
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">",
@@ -835,23 +774,19 @@ const AutonomousBusinessOperations = () => {
         <section className="container mx-auto px-6 py-20 max-w-6xl">";
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-center">";
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">";
               Get started with a free 90-minute strategy consultation and custom ROI analysis.
             </p>
             
-<<<<<<< HEAD
             <div className="flex flex-col sm: flex-row gap-4 justify-center mb-8">",
 =======
             <div className="flex flex-col sm: flex-row gap-4 justify-center mb-8">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               <Link
                 to="/contact"
                 className="inline-flex items-center justify-center gap-2 bg-white text-blue-600 hover: bg-blue-50 px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-xl hover:shadow-2xl",
               >
-<<<<<<< HEAD
                 <Rocket className="w-5 h-5/>
                 Schedule Free Consultation
                 <ArrowRight className="w-5 h-5/>
@@ -859,7 +794,6 @@ const AutonomousBusinessOperations = () => {
                 <Rocket className="w-5 h-5" />";
                 Schedule Free Consultation
                 <ArrowRight className="w-5 h-5" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </Link>
               <Link
                 to="/blog/ai-autonomous-business-operations-revolution-2025"

@@ -9,19 +9,16 @@ const AutonomousDevOpsService = () => {
           name="description"
           content="Transform your DevOps with autonomous self-optimizing CI/CD pipelines. Achieve 99.99% uptime, 80% faster releases, and eliminate manual intervention with AI-driven automation." /><meta
           name="keywords"
-<<<<<<< HEAD
           content="autonomous devops, self-healing ci/cd, automated pipelines, devops automation, zero downtime deployment, AI devops, intelligent automation" /><link rel="canonical" href="https://ziontechgroup.com/services/autonomous-devops/>",
 =======
           content="autonomous devops, self-healing ci/cd, automated pipelines, devops automation, zero downtime deployment, AI devops, intelligent automation"
         />
         <link rel="canonical" href="https: //ziontechgroup.com/services/autonomous-devops" />";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       </Helmet>
       <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-black text-white">";
         <Header />
         
         {/* Hero Section */};
-<<<<<<< HEAD
         <section className="relative pt-32 pb-20 px-4">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 blur-3xl"></div>
           <div className="relative max-w-7xl mx-auto">
@@ -47,7 +44,6 @@ const AutonomousDevOpsService = () => {
                 Autonomous DevOps Services
               </h1>
               <p className="text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 Self-Optimizing CI/CD Pipelines with 80% Faster Releases and Zero Downtime
               </p>
               <div className="flex flex-wrap justify-center gap-4">";
@@ -56,11 +52,9 @@ const AutonomousDevOpsService = () => {
                   className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg font-semibold hover: shadow-lg hover:shadow-blue-500/50 transition-all duration-300 flex items-center gap-2",
                 >
                   Get Started Today
-<<<<<<< HEAD
                   <ArrowRight className="w-5 h-5/>
 =======
                   <ArrowRight className="w-5 h-5" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </Link>
                 <Link
                   to="/blog/autonomous-devops-revolution-2025"
@@ -74,7 +68,6 @@ const AutonomousDevOpsService = () => {
         </section>
 
         {/* Key Benefits */}
-<<<<<<< HEAD
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-4xl font-bold text-center mb-16">Transform Your DevOps Operations</h2>
@@ -122,14 +115,12 @@ const AutonomousDevOpsService = () => {
                 <Target className="w-12 h-12 text-orange-400 mb-4" />";
                 <h3 className="text-2xl font-bold mb-3">Zero Manual Work</h3>";
                 <p className="text-gray-300">Eliminate manual configuration and intervention completely</p>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
             </div>
           </div>
         </section>
 
         {/* Core Features */}
-<<<<<<< HEAD
         <section className="py-20 px-4 bg-black/30">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-4xl font-bold text-center mb-16">Autonomous DevOps Capabilities</h2>
@@ -151,7 +142,6 @@ const AutonomousDevOpsService = () => {
                 <ul className="space-y-3 text-gray-300">";
                   <li className="flex items-start gap-3">";
                     <span className="text-blue-400 mt-1">•</span>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     <span>AI-driven build and test optimization reducing pipeline time by 75%</span>
                   </li>
                   <li className="flex items-start gap-3">";
@@ -169,7 +159,6 @@ const AutonomousDevOpsService = () => {
                 </ul>
               </div>
 
-<<<<<<< HEAD
               <div className="bg-gradient-to-br from-green-900/30 to-teal-900/30 p-8 rounded-2xl backdrop-blur-sm border border-white/10">
                 <Shield className="w-10 h-10 text-green-400 mb-4/>
                 <h3 className="text-2xl font-bold mb-4">Intelligent Self-Healing</h3>
@@ -183,7 +172,6 @@ const AutonomousDevOpsService = () => {
                 <ul className="space-y-3 text-gray-300">";
                   <li className="flex items-start gap-3">";
                     <span className="text-green-400 mt-1">•</span>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     <span>Automatic rollback on anomaly detection with &lt;5 second response</span>
                   </li>
                   <li className="flex items-start gap-3">";
@@ -201,7 +189,6 @@ const AutonomousDevOpsService = () => {
                 </ul>
               </div>
 
-<<<<<<< HEAD
               <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 p-8 rounded-2xl backdrop-blur-sm border border-white/10">
                 <Rocket className="w-10 h-10 text-purple-400 mb-4/>
                 <h3 className="text-2xl font-bold mb-4">Zero-Downtime Deployment</h3>
@@ -215,7 +202,6 @@ const AutonomousDevOpsService = () => {
                 <ul className="space-y-3 text-gray-300">";
                   <li className="flex items-start gap-3">";
                     <span className="text-purple-400 mt-1">•</span>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     <span>Blue-green and canary deployment strategies with AI monitoring</span>
                   </li>
                   <li className="flex items-start gap-3">";
@@ -233,7 +219,6 @@ const AutonomousDevOpsService = () => {
                 </ul>
               </div>
 
-<<<<<<< HEAD
               <div className="bg-gradient-to-br from-orange-900/30 to-red-900/30 p-8 rounded-2xl backdrop-blur-sm border border-white/10">
                 <TrendingUp className="w-10 h-10 text-orange-400 mb-4/>
                 <h3 className="text-2xl font-bold mb-4">Continuous Optimization</h3>
@@ -247,7 +232,6 @@ const AutonomousDevOpsService = () => {
                 <ul className="space-y-3 text-gray-300">";
                   <li className="flex items-start gap-3">";
                     <span className="text-orange-400 mt-1">•</span>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     <span>Real-time cost optimization reducing cloud spend by 40-60%</span>
                   </li>
                   <li className="flex items-start gap-3">";
@@ -269,7 +253,6 @@ const AutonomousDevOpsService = () => {
         </section>
 
         {/* Implementation Timeline */}
-<<<<<<< HEAD
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-4xl font-bold text-center mb-16">90-Day Implementation Roadmap</h2>
@@ -289,7 +272,6 @@ const AutonomousDevOpsService = () => {
                   <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mb-4 text-xl font-bold">1</div>";
                   <h3 className="text-2xl font-bold mb-4">Days 1-30: Foundation</h3>";,
                   <ul className="space-y-2 text-gray-300">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     <li>• Current state assessment</li>
                     <li>• Architecture design</li>
                     <li>• Pipeline automation setup</li>
@@ -298,7 +280,6 @@ const AutonomousDevOpsService = () => {
                   </ul>
                 </div>
               </div>
-<<<<<<< HEAD
               <div className="relative">
                 <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 p-8 rounded-2xl backdrop-blur-sm border border-white/10">
                   <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mb-4 text-xl font-bold">2</div>
@@ -310,7 +291,6 @@ const AutonomousDevOpsService = () => {
                   <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mb-4 text-xl font-bold">2</div>";
                   <h3 className="text-2xl font-bold mb-4">Days 31-60: Integration</h3>";,
                   <ul className="space-y-2 text-gray-300">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     <li>• AI model deployment</li>
                     <li>• Self-healing implementation</li>
                     <li>• Monitoring and alerting</li>
@@ -319,7 +299,6 @@ const AutonomousDevOpsService = () => {
                   </ul>
                 </div>
               </div>
-<<<<<<< HEAD
               <div className="relative">
                 <div className="bg-gradient-to-br from-green-600/20 to-teal-600/20 p-8 rounded-2xl backdrop-blur-sm border border-white/10">
                   <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center mb-4 text-xl font-bold">3</div>
@@ -331,7 +310,6 @@ const AutonomousDevOpsService = () => {
                   <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center mb-4 text-xl font-bold">3</div>";
                   <h3 className="text-2xl font-bold mb-4">Days 61-90: Optimization</h3>";,
                   <ul className="space-y-2 text-gray-300">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     <li>• Full production deployment</li>
                     <li>• Performance optimization</li>
                     <li>• Cost reduction implementation</li>
@@ -357,7 +335,6 @@ const AutonomousDevOpsService = () => {
                   </div>
                   <p className="text-xl text-gray-300">Based on your infrastructure scale and requirements</p>";
                 </div>
-<<<<<<< HEAD
                 <div className="grid md: grid-cols-2 gap-6 mb-8">",
                   <div>
                     <h4 className="font-bold text-lg mb-3">Package Includes: </h4>",
@@ -395,13 +372,11 @@ const AutonomousDevOpsService = () => {
                       </li>
                       <li className="flex items-start gap-2">";
                         <CheckCircle className="w-5 h-5 text-green-400 mt-1" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                         <span>24/7 monitoring and support</span>
                       </li>
                     </ul>
                   </div>
                   <div>
-<<<<<<< HEAD
                     <h4 className="font-bold text-lg mb-3">Expected ROI: </h4>",
                     <ul className="space-y-2 text-gray-300">
                       <li className="flex items-start gap-2">
@@ -435,7 +410,6 @@ const AutonomousDevOpsService = () => {
                       </li>
                       <li className="flex items-start gap-2">";
                         <Zap className="w-5 h-5 text-blue-400 mt-1" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                         <span>300-500% productivity increase</span>
                       </li>
                     </ul>
@@ -447,11 +421,9 @@ const AutonomousDevOpsService = () => {
                     className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg font-semibold hover: shadow-lg hover:shadow-blue-500/50 transition-all duration-300",
                   >
                     Schedule Consultation
-<<<<<<< HEAD
                     <ArrowRight className="w-5 h-5/>
 =======
                     <ArrowRight className="w-5 h-5" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   </Link>
                 </div>
               </div>
@@ -460,7 +432,6 @@ const AutonomousDevOpsService = () => {
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md: text-5xl font-bold mb-6">",
@@ -468,7 +439,6 @@ const AutonomousDevOpsService = () => {
         <section className="py-20 px-4">";
           <div className="max-w-4xl mx-auto text-center">";
             <h2 className="text-4xl md: text-5xl font-bold mb-6">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               Ready to Transform Your DevOps?
             </h2>
             <p className="text-xl text-gray-300 mb-8">";
@@ -480,11 +450,9 @@ const AutonomousDevOpsService = () => {
                 className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg font-semibold hover: shadow-lg hover:shadow-blue-500/50 transition-all duration-300 flex items-center gap-2",
               >
                 Get Started Today
-<<<<<<< HEAD
                 <ArrowRight className="w-5 h-5/>
 =======
                 <ArrowRight className="w-5 h-5" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </Link>
               <Link
                 to="/case-studies"

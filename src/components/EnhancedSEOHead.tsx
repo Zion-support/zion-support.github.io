@@ -104,7 +104,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       "Cybersecurity AI",
       "Quantum Computing",
       "AI Consulting"
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-8387
     ]
   };
 
@@ -113,7 +112,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta name="description" content={description} />
-<<<<<<< HEAD
       <meta name="keywords" content={keywords.join(', ')} />
       <meta name="author" content={author} />
       <link rel="canonical" href={canonical} />
@@ -144,7 +142,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta property="og:locale" content="en_US" />
       
       {/* Twitter Card Meta Tags */}
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-8387
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
@@ -152,7 +149,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
       
-<<<<<<< HEAD
       {/* Article-specific tags */}
       {publishedTime && <meta property="article:published_time" content={publishedTime} />}
       {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
@@ -178,7 +174,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-8387
       
       {/* Canonical URL */}
       <link rel="canonical" href={url} />
@@ -198,7 +193,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       
-<<<<<<< HEAD
       {/* Favicon and Icons */}
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -215,7 +209,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       
       {/* Performance Hints */}
       <meta httpEquiv="x-dns-prefetch-control" content="on" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-8387
     </Helmet>
   );
 };

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 =======
@@ -6,7 +5,6 @@ import React from 'react';';
 import {
 Helmet
 } from 'react-helmet-async';';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 
 interface SEOProps {
 title?: string;,
@@ -19,7 +17,6 @@ twitterCard?: string;,
 noIndex?: boolean;
 }
 
-<<<<<<< HEAD
 const SEO: React.FC<SEOProps> = ({
   title = 'Zion Tech Group — AI, Micro SaaS, and IT Services'
   description = 'Enterprise-grade AI, micro SaaS, and IT solutions. Transform your business with cutting-edge technology and automation.'
@@ -39,7 +36,6 @@ const SEO: React.FC<SEOProps> = ({,
   ogType = 'website',';
   twitterCard = 'summary_large_image',';
   noIndex = false,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;`;
   const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '');';
@@ -79,7 +75,6 @@ const SEO: React.FC<SEOProps> = ({,
       {/* Structured Data */}
       <script type="application/ld+json">";
         {JSON.stringify({
-<<<<<<< HEAD
           "@context": "https://schema.org",
           "@type": "Organization",
           "name": "Zion Tech Group",
@@ -129,7 +124,6 @@ const SEO: React.FC<SEOProps> = ({,
             "https: //twitter.com/ziontechgroup",";,
             "https: //linkedin.com/company/zion-tech-group",";,
             "https: //github.com/ZionClouds",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           ]
         })}
       </script>

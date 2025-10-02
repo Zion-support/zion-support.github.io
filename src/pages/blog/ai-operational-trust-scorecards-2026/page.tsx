@@ -6,7 +6,6 @@ export default function AIOperationalTrustScorecards2026(): React.JSX.Element {
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">";
       <Helmet>
         <title>AI Operational Trust Scorecards 2026</title>
-<<<<<<< HEAD
         <meta name="description" content="SLIs wired to KPIs with budgeted actions, live canaries, and instant rollback for safe autonomy." /><link rel="canonical" href="https://ziontechgroup.com/blog/ai-operational-trust-scorecards-2026/>",
       </Helmet>
 
@@ -27,7 +26,6 @@ export default function AIOperationalTrustScorecards2026(): React.JSX.Element {
         <div className="prose prose-invert max-w-3xl">";
           <p>
             Design operational scorecards that teams adopt: wire service level indicators (SLIs) to product KPIs,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             attach budgeted actions, and use live canaries to prevent regressions before they ship.
           </p>
           <p>

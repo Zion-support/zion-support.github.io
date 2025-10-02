@@ -17,7 +17,6 @@ trending?: boolean;
 
 export const latestArticles: LatestArticle[] = [,
   {
-<<<<<<< HEAD
     id: "ai-safety-budgets-2026",",
     slug: "ai-safety-budgets-2026",",
     title: "AI Safety Budgets 2026: Guardrails That Don't Slow Teams",",
@@ -43,12 +42,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: true,,
     readTime: "7 min read",";,
     image: "/images/ai-safety-budgets-2026.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "ai-e2e-tracing-2025",",
     slug: "ai-e2e-tracing-2025",",
     title: "E2E AI Tracing: From Prompt to Outcome KPIs",",
@@ -74,12 +71,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: true,,
     readTime: "7 min read",";,
     image: "/images/ai-e2e-tracing-2025.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "edge-privacy-ml-2026",",
     slug: "edge-privacy-ml-2026",",
     title: "Edge Privacy for ML 2026: On‑Device Filters and Scoped IDs",",
@@ -105,12 +100,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: true,,
     readTime: "8 min read",";,
     image: "/images/edge-privacy-ml-2026.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "agent-evals-in-prod-2026",",
     slug: "agent-evals-in-prod-2026",",
     title: "Agent Evals in Production 2026: Online Checks That Predict Outcomes",",
@@ -136,12 +129,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: true,,
     readTime: "7 min read",";,
     image: "/images/agent-evals-in-prod-2026.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "ai-breach-drills-2026",",
     slug: "ai-breach-drills-2026",",
     title: "AI Breach Drills 2026: Practice Safe Autonomy Under Pressure",",
@@ -167,12 +158,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: true,,
     readTime: "7 min read",";,
     image: "/images/secure-ml-supply-chain-2026.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "genai-routing-under-budgets-2026",",
     slug: "genai-routing-under-budgets-2026",",
     title: "Quality‑Tiered GenAI Routing: SLAs Without Bill Shock",",
@@ -198,12 +187,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: true,,
     readTime: "6 min read",";,
     image: "/images/genai-routing-2026.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "edge-personalization-2025",",
     slug: "edge-personalization-2025",",
     title: "Edge Personalization: Privacy‑First, Sub‑100ms Experiences",",
@@ -229,12 +216,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: true,,
     readTime: "6 min read",";,
     image: "/images/edge-personalization-2025.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "platform-golden-paths-kpis-2026",",
     slug: "platform-golden-paths-kpis-2026",",
     title: "Golden Paths That Move KPIs: Platform Engineering That Pays",",
@@ -260,12 +245,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: true,,
     readTime: "7 min read",";,
     image: "/images/platform-golden-paths-kpis-2026.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "ai-platform-slos-2026",",
     slug: "ai-platform-slos-2026",",
     title: "AI Platform SLOs 2026: Budgets, Rollbacks, Live Canaries",",
@@ -291,12 +274,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: true,,
     readTime: "6 min read",";,
     image: "/images/ai-governance-scorecards-quickstart-2026.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "ai-operational-excellence-blueprint-2026",",
     slug: "ai-operational-excellence-blueprint-2026",",
     title: "AI Operational Excellence Blueprint 2026",",
@@ -322,12 +303,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: true,,
     readTime: "8 min read",";,
     image: "/images/ai-operational-excellence-blueprint-2026.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "policy-tests-quickstart-2025",",
     slug: "policy-tests-quickstart-2025",",
     title: "Policy Tests Quickstart: Ship Fast, Stay Safe",",
@@ -353,12 +332,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: true,,
     readTime: "6 min read",";,
     image: "/images/policy-tests-quickstart-2025.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "ai-enterprise-security-2026",",
     slug: "ai-enterprise-security-2026",",
     title: "AI Enterprise Security 2026: Zero-Trust Architecture for AI Systems",",
@@ -384,12 +361,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: true,,
     readTime: "9 min read",";,
     image: "/images/autonomous-infra-2026.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "quantum-ai-hybrid-2026",",
     slug: "quantum-ai-hybrid-2026",",
     title: "Quantum‑AI Hybrid 2026: When and How It Beats Classical",",
@@ -415,12 +390,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: true,,
     readTime: "8 min read",";,
     image: "/images/quantum-ai-hybrid-2026.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "privacy-first-flags-2026",",
     slug: "privacy-first-flags-2026",",
     title: "Privacy‑First Feature Flags 2026: Scoped IDs, On‑Device Filters, KV",",
@@ -446,12 +419,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: true,,
     readTime: "7 min read",";,
     image: "/images/privacy-first-flags-2026.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "privacy-preserving-agents-2026",",
     slug: "privacy-preserving-agents-2026",",
     title: "Privacy‑Preserving Agents: Scoped IDs, Redaction, and Audits",",
@@ -477,12 +448,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: false,,
     readTime: "6 min read",";,
     image: "/images/privacy-preserving-agents-2026.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: false,
   },
   {
-<<<<<<< HEAD
     id: "reliable-rag-ops-2026",",
     slug: "reliable-rag-ops-2026",",
     title: "Reliable RAG Ops 2026: Freshness, Drift, and Quality Budgets",",
@@ -508,12 +477,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: true,,
     readTime: "8 min read",";,
     image: "/images/reliable-rag-ops-2026.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "privacy-first-feature-flags-2026",",
     slug: "privacy-first-feature-flags-2026",",
     title: "Privacy‑First Feature Flags: Geo, Account, and Scope Budgets",",
@@ -539,12 +506,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: false,,
     readTime: "6 min read",";,
     image: "/images/privacy-first-flags-2026.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "cost-aware-agents-2026",",
     slug: "cost-aware-agents-2026",",
     title: "Cost‑Aware Agent Workflows: Tiered Quality Without UX Regressions",",
@@ -570,12 +535,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: true,,
     readTime: "7 min read",";,
     image: "/images/cost-aware-agents-2026.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "platform-kpis-2026",",
     slug: "platform-kpis-2026",",
     title: "Platform KPIs 2026: Adoption, Golden Paths, and SLOs",",
@@ -601,12 +564,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: true,,
     readTime: "7 min read",";,
     image: "/images/platform-kpis-2026.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "ai-incident-budgets-2026",",
     slug: "ai-incident-budgets-2026",",
     title: "AI Incident Budgets: Playbooks That Contain in <60s",",
@@ -632,12 +593,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: false,,
     readTime: "6 min read",";,
     image: "/images/ai-incident-budgets-2026.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: false,
   },
   {
-<<<<<<< HEAD
     id: "ai-incident-response-playbooks-2025",",
     slug: "ai-incident-response-playbooks-2025",",
     title: "AI Incident Response Playbooks: Contain in <60s with Confidence",",
@@ -663,12 +622,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: true,,
     readTime: "7 min read",";,
     image: "/images/ai-incident-response-playbooks-2025.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "privacy-preserving-analytics-2025",",
     slug: "privacy-preserving-analytics-2025",",
     title: "Privacy‑Preserving Analytics: Ship Insights Without PII Risk",",
@@ -694,12 +651,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: true,,
     readTime: "8 min read",";,
     image: "/images/privacy-preserving-analytics-2025.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "platform-engineering-scorecards-2026",",
     slug: "platform-engineering-scorecards-2026",",
     title: "Platform Engineering Scorecards 2026: Golden Paths that Drive Outcomes",",
@@ -725,12 +680,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: true,,
     readTime: "8 min read",";,
     image: "/images/platform-engineering-scorecards-2026.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "ai-cybersecurity-automation-2025",",
     slug: "ai-cybersecurity-automation-2025",",
     title: "AI Cybersecurity Automation: Autonomic Response Under 60s",",
@@ -756,12 +709,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: true,,
     readTime: "7 min read",";,
     image: "/images/ai-cybersecurity-automation.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "edge-ai-blueprint-2026",",
     slug: "edge-ai-blueprint-2026",",
     title: "Edge AI Blueprint 2026: Privacy‑Preserving Intelligence <100ms",",
@@ -787,12 +738,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: true,,
     readTime: "9 min read",";,
     image: "/images/edge-ai-blueprint-2026.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "llm-policy-testing-2025",",
     slug: "llm-policy-testing-2025",",
     title: "LLM Policy Testing in CI: Ship Fast, Stay Safe",",
@@ -818,12 +767,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: true,,
     readTime: "6 min read",";,
     image: "/images/ai-governance-blueprint.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "ai-operational-scorecards-2026",",
     slug: "ai-operational-scorecards-2026",",
     title: "AI Operational Scorecards 2026: Guardrails That Drive Outcomes",",
@@ -849,12 +796,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: true,,
     readTime: "7 min read",";,
     image: "/images/ai-operational-scorecards.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "edge-llm-caching-blueprint-2025",",
     slug: "edge-llm-caching-blueprint-2025",",
     title: "Edge LLM Caching: Latency Budgets, KV Patterns, and Cost Control",",
@@ -880,12 +825,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: true,,
     readTime: "6 min read",";,
     image: "/images/edge-llm-caching.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "finops-scorecards-2025",",
     slug: "finops-scorecards-2025",",
     title: "FinOps Scorecards: Guardrails Engineers Actually Use",",
@@ -911,12 +854,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: true,,
     readTime: "7 min read",";,
     image: "/images/cloud-finops-guardrails.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "enterprise-rag-blueprint-2025",",
     slug: "enterprise-rag-blueprint-2025",",
     title: "Enterprise RAG Blueprint v2: Freshness, Hybrid Search, Auth",",
@@ -942,12 +883,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: true,,
     readTime: "9 min read",";,
     image: "/images/enterprise-rag-v2.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "ai-governance-scorecards-2026",",
     slug: "ai-governance-scorecards-2026",",
     title: "AI Governance 2026: Scorecards Engineers Actually Use",",
@@ -973,12 +912,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: true,,
     readTime: "7 min read",";,
     image: "/images/ai-governance-scorecards-2026.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "freshness-aware-rag-v2",",
     slug: "freshness-aware-rag-v2",",
     title: "Freshness‑Aware RAG v2: TTL Budgets, Async Warmups, and SLAs",",
@@ -1004,12 +941,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: true,,
     readTime: "8 min read",";,
     image: "/images/freshness-aware-rag-v2.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "edge-flags-blueprint-2026",",
     slug: "edge-flags-blueprint-2026",",
     title: "Edge Flags Blueprint 2026: <100ms Global Releases with Budgets",",
@@ -1035,12 +970,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: false,,
     readTime: "6 min read",";,
     image: "/images/edge-flags-blueprint-2026.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "ai-platform-roadmaps-2026",",
     slug: "ai-platform-roadmaps-2026",",
     title: "AI Product Roadmaps 2026: From Bet to Business Impact",",
@@ -1066,12 +999,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: true,,
     readTime: "9 min read",";,
     image: "/images/ai-product-roadmaps-2026.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "genai-guardrails-blueprints-2026",",
     slug: "genai-guardrails-blueprints-2026",",
     title: "GenAI Guardrails Blueprints 2026: Policy Tests, Canaries, and SLAs",",
@@ -1097,12 +1028,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: true,,
     readTime: "8 min read",";,
     image: "/images/genai-guardrails-blueprints-2026.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "cloud-finops-scorecards-2026",",
     slug: "cloud-finops-scorecards-2026",",
     title: "Cloud FinOps Scorecards 2026: Guardrails Engineers Actually Use",",
@@ -1128,12 +1057,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: false,,
     readTime: "6 min read",";,
     image: "/images/cloud-finops-scorecards-2026.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "ai-risk-register-2025",",
     slug: "ai-risk-register-2025",",
     title: "AI Risk Register That Drives Action",",
@@ -1159,12 +1086,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: true,,
     readTime: "7 min read",";,
     image: "/images/ai-risk-register.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "ai-guardrails-scorecards-2025",",
     slug: "ai-guardrails-scorecards-2025",",
     title: "AI Guardrails That Engineers Adopt: Scorecards, PR Gates, Evals",",
@@ -1190,12 +1115,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: true,,
     readTime: "7 min read",";,
     image: "/images/ai-guardrails-scorecards.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "edge-flags-zero-regret-2025",",
     slug: "edge-flags-zero-regret-2025",",
     title: "Zero‑Regret Rollouts with Edge Flags",",
@@ -1221,12 +1144,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: false,,
     readTime: "6 min read",";,
     image: "/images/edge-flags-zero-regret.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: false,
   },
   {
-<<<<<<< HEAD
     id: "freshness-aware-rag-2025",",
     slug: "freshness-aware-rag-2025",",
     title: "Freshness‑Aware RAG: TTL Windows and Versioned Corpora",",
@@ -1252,12 +1173,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: true,,
     readTime: "8 min read",";,
     image: "/images/freshness-aware-rag.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "ai-product-roadmaps-2025",",
     slug: "ai-product-roadmaps-2025",",
     title: "AI Product Roadmaps 2025: From Vision to Velocity",",
@@ -1283,12 +1202,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: true,,
     readTime: "9 min read",";,
     image: "/images/ai-product-roadmaps.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "sbom-automation-ml-supply-chain",",
     slug: "sbom-automation-ml-supply-chain",",
     title: "Automating SBOM for the ML Supply Chain",",
@@ -1314,12 +1231,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: false,,
     readTime: "7 min read",";,
     image: "/images/sbom-ml-supply-chain.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: false,
   },
   {
-<<<<<<< HEAD
     id: "online-genai-evals-2025",",
     slug: "online-genai-evals-2025",",
     title: "Online GenAI Evals: Canary Checks That Keep You Fast",",
@@ -1345,12 +1260,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: true,,
     readTime: "6 min read",";,
     image: "/images/online-genai-evals.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "practical-rag-in-production-2025",",
     slug: "practical-rag-in-production-2025",",
     title: "Practical RAG in Production",",
@@ -1376,12 +1289,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: true,,
     readTime: "8 min read",";,
     image: "/images/practical-rag-2025.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "ai-platform-engineering-2025",",
     slug: "ai-platform-engineering-2025",",
     title: "AI Platform Engineering 2025: The Complete Guide to Building Scalable AI Infrastructure",",
@@ -1407,12 +1318,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: true,,
     readTime: "15 min read",";,
     image: "/images/ai-platform-engineering.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "enterprise-rag-blueprint-v2",",
     slug: "enterprise-rag-blueprint-v2",",
     title: "Enterprise RAG Blueprint v2: Advanced Retrieval-Augmented Generation for Business",",
@@ -1438,12 +1347,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: true,,
     readTime: "12 min read",";,
     image: "/images/enterprise-rag-v2.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "ai-autonomous-operations-guide",",
     slug: "ai-autonomous-operations-guide",",
     title: "AI Autonomous Operations: Building Self-Healing Infrastructure Systems",",
@@ -1469,12 +1376,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: true,,
     readTime: "10 min read",";,
     image: "/images/ai-autonomous-ops.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: false,
   },
   {
-<<<<<<< HEAD
     id: "quantum-computing-business-guide",",
     slug: "quantum-computing-business-guide",",
     title: "Quantum Computing for Business: Practical Applications and ROI Analysis",",
@@ -1500,12 +1405,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: false,,
     readTime: "11 min read",";,
     image: "/images/quantum-business.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "edge-ai-implementation-guide",",
     slug: "edge-ai-implementation-guide",",
     title: "Edge AI Implementation Guide: Bringing Intelligence to the Edge",",
@@ -1531,12 +1434,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: false,,
     readTime: "13 min read",";,
     image: "/images/edge-ai-guide.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: false,
   },
   {
-<<<<<<< HEAD
     id: "zero-trust-security-implementation",",
     slug: "zero-trust-security-implementation",",
     title: "Zero Trust Security Implementation: A Complete Enterprise Guide",",
@@ -1562,12 +1463,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: false,,
     readTime: "14 min read",";,
     image: "/images/zero-trust-guide.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: false,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "ai-content-generation-best-practices",",
     slug: "ai-content-generation-best-practices",",
     title: "AI Content Generation: Best Practices for Quality and Brand Consistency",",
@@ -1593,12 +1492,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: false,,
     readTime: "8 min read",";,
     image: "/images/ai-content-generation.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: false,
   },
   {
-<<<<<<< HEAD
     id: "mlops-reliability-patterns",
     slug: "mlops-reliability-patterns",
     title: "MLOps Reliability Patterns: Building Robust Machine Learning Systems",
@@ -1673,12 +1570,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: true,,
     readTime: "6 min read",";,
     image: "/images/genai-routing-2026.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "genai-routing-under-budgets-2026",",
     slug: "genai-routing-under-budgets-2026",",
     title: "Quality‑Tiered GenAI Routing: SLAs Without Bill Shock",",
@@ -1704,12 +1599,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: true,,
     readTime: "7 min read",";,
     image: "/images/platform-golden-paths-kpis-2026.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "platform-golden-paths-kpis-2026",",
     slug: "platform-golden-paths-kpis-2026",",
     title: "Golden Paths That Move KPIs: Platform Engineering That Pays",",
@@ -1735,12 +1628,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: true,,
     readTime: "8 min read",";,
     image: "/images/ai-platform-scorecards-roi-2026.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "ai-platform-scorecards-roi-2026",",
     slug: "ai-platform-scorecards-roi-2026",",
     title: "AI Platform Scorecards 2026: Proving ROI with Leading Indicators",",
@@ -1766,12 +1657,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: true,,
     readTime: "9 min read",";,
     image: "/images/production-rag-quality-budgets-2026.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "production-rag-quality-budgets-2026",",
     slug: "production-rag-quality-budgets-2026",",
     title: "Production RAG: Quality Budgets, Freshness Windows, and SLAs",",
@@ -1797,12 +1686,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: true,,
     readTime: "9 min read",";,
     image: "/images/ai-governance-blueprint.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "ai-governance-blueprint-2025",",
     slug: "ai-governance-blueprint-2025",",
     title: "AI Governance Blueprint 2025: Practical Guardrails That Ship",",
@@ -1892,12 +1779,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: true,,
     readTime: "6 min read",";,
     image: "/images/practical-evals-2025.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "practical-evals-scorecards-2025",",
     slug: "practical-evals-scorecards-2025",",
     title: "Practical AI Evals That Predict Business Outcomes",",
@@ -1955,12 +1840,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: false,,
     readTime: "7 min read",";,
     image: "/images/serverless-inference-costs.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: false,
   },
   {
-<<<<<<< HEAD
     id: "serverless-inference-cost-playbook-2025",",
     slug: "serverless-inference-cost-playbook-2025",",
     title: "Serverless Inference Cost Playbook",",
@@ -2002,12 +1885,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: false,,
     readTime: "8 min read",";,
     image: "/images/ai-sales-copilot.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "secure-rag-2025",
     slug: "secure-rag-2025",
     title: "Secure RAG 2025: Authorization‑Aware Retrieval and Prompt Firewalls",
@@ -2082,12 +1963,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: false,,
     readTime: "7 min read",";,
     image: "/images/privacy-first-observability.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "privacy-first-observability-2026",",
     slug: "privacy-first-observability-2026",",
     title: "Privacy‑First Observability: User‑Centric Traces Without PII Leaks",",
@@ -2113,12 +1992,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: true,,
     readTime: "7 min read",";,
     image: "/images/on-device-agents-2026.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "on-device-agents-2026",",
     slug: "on-device-agents-2026",",
     title: "On‑Device Agents 2026: Private Tools That Work Offline",",
@@ -2144,12 +2021,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: true,,
     readTime: "6 min read",";,
     image: "/images/genai-budgets-quality-tiers.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "genai-budgets-and-quality-tiers-2026",",
     slug: "genai-budgets-and-quality-tiers-2026",",
     title: "GenAI Budgets and Quality Tiers: Control Cost Without Hurting UX",",
@@ -2223,12 +2098,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: true,,
     readTime: "7 min read",";,
     image: "/images/ai-governance-in-practice-2026.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "edge-privacy-by-design-2026",
     slug: "edge-privacy-by-design-2026",
     title: "Edge Privacy by Design 2026: On‑Device Filters, Scoped IDs, <100ms",
@@ -2303,12 +2176,10 @@ export const latestArticles: LatestArticle[] = [,
     featured: true,,
     readTime: "6 min read",";,
     image: "/images/privacy-first-feature-flags-2025.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "privacy-first-feature-flags-2025",",
     slug: "privacy-first-feature-flags-2025",",
     title: "Privacy‑First Feature Flags: Zero‑Regret Rollouts at the Edge",",
@@ -2350,7 +2221,6 @@ export const latestArticles: LatestArticle[] = [,
     featured: true,,
     readTime: "7 min read",";,
     image: "/images/platform-roi-scorecards-quickstart-2025.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   }
@@ -2359,7 +2229,6 @@ export const latestArticles: LatestArticle[] = [,
 // Newly added featured articles (auto used by showcases and banners)
 latestArticles.unshift(
   {
-<<<<<<< HEAD
     id: "agent-blue-green-canary-2026",",
     slug: "agent-blue-green-canary-2026",",
     title: "Agent Blue‑Green + Canary Evals: Safe Releases at Speed",",
@@ -2385,12 +2254,10 @@ latestArticles.unshift(
     featured: true,,
     readTime: "7 min read",";,
     image: "/images/agent-blue-green-canary-2026.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "edge-llm-safety-caching-2026",",
     slug: "edge-llm-safety-caching-2026",",
     title: "Edge LLM Safety Caching: Sub‑100ms Prompts Without Regressions",",
@@ -2416,12 +2283,10 @@ latestArticles.unshift(
     featured: true,,
     readTime: "6 min read",";,
     image: "/images/edge-llm-safety-caching-2026.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "platform-slo-guardrails-2026",",
     slug: "platform-slo-guardrails-2026",",
     title: "Platform SLO Guardrails 2026: Scorecards that Prevent Regressions",",
@@ -2447,12 +2312,10 @@ latestArticles.unshift(
     featured: true,,
     readTime: "7 min read",";,
     image: "/images/platform-slo-guardrails-2026.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "ai-threat-hunting-with-llms-2026",",
     slug: "ai-threat-hunting-with-llms-2026",",
     title: "AI Threat Hunting with LLMs 2026: Signals, Sandboxes, and Speed",",
@@ -2478,12 +2341,10 @@ latestArticles.unshift(
     featured: true,,
     readTime: "7 min read",";,
     image: "/images/ai-threat-hunting-llms-2026.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "llm-production-runbooks-2026",",
     slug: "llm-production-runbooks-2026",",
     title: "LLM Production Runbooks 2026: Rollbacks, Budgets, and Canary Evals",",
@@ -2509,7 +2370,6 @@ latestArticles.unshift(
     featured: true,,
     readTime: "8 min read",";,
     image: "/images/llm-production-runbooks-2026.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   }
@@ -2522,7 +2382,6 @@ export const newArticles = latestArticles.filter(article => article.newBadge);
 // September 29, 2025 additions
 latestArticles.unshift(
   {
-<<<<<<< HEAD
     id: "agentic-observability-scorecards-2026",",
     slug: "agentic-observability-scorecards-2026",",
     title: "Agentic Observability Scorecards 2026: Traces that Predict Outcomes",",
@@ -2548,12 +2407,10 @@ latestArticles.unshift(
     featured: true,,
     readTime: "7 min read",";,
     image: "/images/agentic-observability-scorecards-2026.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "edge-privacy-cdn-2026",",
     slug: "edge-privacy-cdn-2026",",
     title: "Edge Privacy CDN 2026: Scoped IDs, Local Filters, Zero PII",",
@@ -2579,12 +2436,10 @@ latestArticles.unshift(
     featured: true,,
     readTime: "6 min read",";,
     image: "/images/edge-privacy-cdn-2026.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   },
   {
-<<<<<<< HEAD
     id: "platform-golden-paths-slos-2026",",
     slug: "platform-golden-paths-slos-2026",",
     title: "Platform Golden Paths + SLOs 2026: Adoption that Drives ROI",",
@@ -2610,7 +2465,6 @@ latestArticles.unshift(
     featured: true,,
     readTime: "8 min read",";,
     image: "/images/platform-golden-paths-slos-2026.jpg",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     newBadge: true,,
     trending: true,
   }

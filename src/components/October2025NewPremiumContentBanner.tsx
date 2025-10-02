@@ -1,14 +1,11 @@
-<<<<<<< HEAD
 import React from 'react';
 =======
 import React from 'react';';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 const October2025NewPremiumContentBanner: React.FC = () => {,
   return (
     <div className="relative bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900 py-16 overflow-hidden">";
       {/* Animated Background Elements */}
-<<<<<<< HEAD
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500 rounded-full filter blur-3xl animate-pulse"></div>
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>;
@@ -16,12 +13,10 @@ const October2025NewPremiumContentBanner: React.FC = () => {,
       <div className="absolute inset-0 opacity-20">";
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500 rounded-full filter blur-3xl animate-pulse"></div>";
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       </div>
 
       <div className="relative container mx-auto px-6">";
         {/* Header Section */}
-<<<<<<< HEAD
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-6 py-2 rounded-full text-sm font-bold mb-4 animate-pulse">
             <Sparkles className="w-4 h-4/>
@@ -33,7 +28,6 @@ const October2025NewPremiumContentBanner: React.FC = () => {,
             <Sparkles className="w-4 h-4" />";
             <span>🚀 JUST PUBLISHED - OCTOBER 2025 PREMIUM CONTENT 🚀</span>
             <Sparkles className="w-4 h-4" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           </div>
           <h2 className="text-5xl font-extrabold text-white mb-4 leading-tight">";
             Revolutionary AI Platforms
@@ -47,7 +41,6 @@ const October2025NewPremiumContentBanner: React.FC = () => {,
         </div>
 
         {/* Content Cards Grid */}
-<<<<<<< HEAD
         <div className="grid md: grid-cols-3 gap-8 mb-12">",
           
           {/* Card 1: Autonomous DevOps */}
@@ -63,18 +56,15 @@ const October2025NewPremiumContentBanner: React.FC = () => {,
             <div className="flex items-center gap-3 mb-6">";
               <div className="p-3 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl group-hover: rotate-12 transition-transform duration-300">";,
                 <Activity className="w-8 h-8 text-white" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
               <div className="px-3 py-1 bg-green-500/20 border border-green-400 rounded-full">";
                 <span className="text-green-300 text-xs font-bold">NEW</span>";
               </div>
             </div>
             
-<<<<<<< HEAD
             <h3 className="text-2xl font-bold text-white mb-3 group-hover: text-cyan-300 transition-colors">",
 =======
             <h3 className="text-2xl font-bold text-white mb-3 group-hover: text-cyan-300 transition-colors">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               Autonomous DevOps Platform
             </h3>
             
@@ -82,7 +72,6 @@ const October2025NewPremiumContentBanner: React.FC = () => {,
               Self-healing infrastructure with AI-powered automation
             </p>
             
-<<<<<<< HEAD
             <div className="space-y-3 mb-6">
               <div className="flex items-start gap-2">
                 <Zap className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5/>
@@ -116,7 +105,6 @@ const October2025NewPremiumContentBanner: React.FC = () => {,
               <div className="flex items-start gap-2">";
                 <Zap className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />";
                 <span className="text-white text-sm"><strong className="text-cyan-300">87% cost savings</strong> in operations</span>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
             </div>
             
@@ -124,16 +112,13 @@ const October2025NewPremiumContentBanner: React.FC = () => {,
               to="/blog/ai-autonomous-devops-platform-2025-october"
               className="flex items-center gap-2 text-cyan-300 hover: text-white font-semibold group-hover:gap-3 transition-all",
             >
-<<<<<<< HEAD
               Read Full Article <ArrowRight className="w-5 h-5/>
 =======
               Read Full Article <ArrowRight className="w-5 h-5" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </Link>
           </div>
 
           {/* Card 2: Quantum-Safe Security */}
-<<<<<<< HEAD
           <div className="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 border-2 border-purple-500/30 hover: border-purple-400 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50">",
             <div className="flex items-center gap-3 mb-6">
               <div className="p-3 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl group-hover: rotate-12 transition-transform duration-300">",
@@ -143,18 +128,15 @@ const October2025NewPremiumContentBanner: React.FC = () => {,
             <div className="flex items-center gap-3 mb-6">";
               <div className="p-3 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl group-hover: rotate-12 transition-transform duration-300">";,
                 <Lock className="w-8 h-8 text-white" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
               <div className="px-3 py-1 bg-green-500/20 border border-green-400 rounded-full">";
                 <span className="text-green-300 text-xs font-bold">NEW</span>";
               </div>
             </div>
             
-<<<<<<< HEAD
             <h3 className="text-2xl font-bold text-white mb-3 group-hover: text-purple-300 transition-colors">",
 =======
             <h3 className="text-2xl font-bold text-white mb-3 group-hover: text-purple-300 transition-colors">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               Quantum-Safe AI Security
             </h3>
             
@@ -162,7 +144,6 @@ const October2025NewPremiumContentBanner: React.FC = () => {,
               Future-proof enterprise protection with post-quantum cryptography
             </p>
             
-<<<<<<< HEAD
             <div className="space-y-3 mb-6">
               <div className="flex items-start gap-2">
                 <Shield className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5/>
@@ -196,7 +177,6 @@ const October2025NewPremiumContentBanner: React.FC = () => {,
               <div className="flex items-start gap-2">";
                 <Shield className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />";
                 <span className="text-white text-sm"><strong className="text-purple-300">94% faster</strong> threat response</span>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
             </div>
             
@@ -204,16 +184,13 @@ const October2025NewPremiumContentBanner: React.FC = () => {,
               to="/blog/quantum-safe-ai-security-framework-2025-october"
               className="flex items-center gap-2 text-purple-300 hover: text-white font-semibold group-hover:gap-3 transition-all",
             >
-<<<<<<< HEAD
               Read Full Article <ArrowRight className="w-5 h-5/>
 =======
               Read Full Article <ArrowRight className="w-5 h-5" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </Link>
           </div>
 
           {/* Card 3: Cognitive Business Intelligence */}
-<<<<<<< HEAD
           <div className="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 border-2 border-green-500/30 hover: border-green-400 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/50">",
             <div className="flex items-center gap-3 mb-6">
               <div className="p-3 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl group-hover: rotate-12 transition-transform duration-300">",
@@ -223,18 +200,15 @@ const October2025NewPremiumContentBanner: React.FC = () => {,
             <div className="flex items-center gap-3 mb-6">";
               <div className="p-3 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl group-hover: rotate-12 transition-transform duration-300">";,
                 <BarChart3 className="w-8 h-8 text-white" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
               <div className="px-3 py-1 bg-green-500/20 border border-green-400 rounded-full">";
                 <span className="text-green-300 text-xs font-bold">NEW</span>";
               </div>
             </div>
             
-<<<<<<< HEAD
             <h3 className="text-2xl font-bold text-white mb-3 group-hover: text-green-300 transition-colors">",
 =======
             <h3 className="text-2xl font-bold text-white mb-3 group-hover: text-green-300 transition-colors">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               Cognitive Business Intelligence
             </h3>
             
@@ -242,7 +216,6 @@ const October2025NewPremiumContentBanner: React.FC = () => {,
               Real-time AI-driven decisions with predictive insights
             </p>
             
-<<<<<<< HEAD
             <div className="space-y-3 mb-6">
               <div className="flex items-start gap-2">
                 <TrendingUp className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5/>
@@ -276,7 +249,6 @@ const October2025NewPremiumContentBanner: React.FC = () => {,
               <div className="flex items-start gap-2">";
                 <TrendingUp className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />";
                 <span className="text-white text-sm"><strong className="text-green-300">95%+</strong> prediction accuracy</span>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
             </div>
             
@@ -284,11 +256,9 @@ const October2025NewPremiumContentBanner: React.FC = () => {,
               to="/blog/real-time-cognitive-business-intelligence-2025-october"
               className="flex items-center gap-2 text-green-300 hover: text-white font-semibold group-hover:gap-3 transition-all",
             >
-<<<<<<< HEAD
               Read Full Article <ArrowRight className="w-5 h-5/>
 =======
               Read Full Article <ArrowRight className="w-5 h-5" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </Link>
           </div>
         </div>
@@ -306,21 +276,17 @@ const October2025NewPremiumContentBanner: React.FC = () => {,
               to="/contact"
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-400 hover:to-blue-500 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-xl inline-flex items-center gap-2",
             >
-<<<<<<< HEAD
               Schedule Free Consultation <ArrowRight className="w-5 h-5/>
 =======
               Schedule Free Consultation <ArrowRight className="w-5 h-5" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </Link>
             <Link 
               to="/blog"
               className="px-8 py-4 bg-white/10 hover: bg-white/20 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 border-2 border-cyan-400/50 hover:border-cyan-400 inline-flex items-center gap-2",
             >
-<<<<<<< HEAD
               Explore All Articles <ArrowRight className="w-5 h-5/>
 =======
               Explore All Articles <ArrowRight className="w-5 h-5" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </Link>
           </div>
         </div>

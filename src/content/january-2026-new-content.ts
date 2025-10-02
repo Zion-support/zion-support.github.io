@@ -4,7 +4,6 @@
 export const january2026NewContent = {
   featuredArticles: [,
     {
-<<<<<<< HEAD
       id: "ai-2026-january-autonomous-enterprise-mesh",",
       title: "🚀 Autonomous Enterprise Mesh 2026: Self-Organizing Business Intelligence",",
       description: "Revolutionary self-organizing AI mesh networks achieving 99.7% operational efficiency with zero human intervention",",
@@ -274,7 +273,6 @@ export const january2026NewContent = {
       featured: true,,
       industry: "Financial Services",";,
       results: ["200x speed improvement", "Sub-millisecond latency", "99.99% uptime", "$127M savings"],";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       duration: "4 months",
     }
   ]

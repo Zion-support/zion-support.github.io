@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 import React from 'react';
 =======
 import React from 'react';';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 const October2025QuantumEdgeFusionBanner: React.FC = () => {,
   return (
     <motion.div
@@ -13,13 +11,11 @@ const October2025QuantumEdgeFusionBanner: React.FC = () => {,
       className="relative overflow-hidden bg-gradient-to-r from-cyan-900 via-blue-900 to-indigo-900 rounded-2xl p-8 my-8 shadow-2xl"
     >
       {/* Animated Background */}
-<<<<<<< HEAD
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(6,182,212,0.3),rgba(255,255,255,0))]/>
 =======
       <div className="absolute inset-0 opacity-20">";
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(6,182,212,0.3),rgba(255,255,255,0))]" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       </div>
 
       <div className="relative z-10">";
@@ -30,7 +26,6 @@ const October2025QuantumEdgeFusionBanner: React.FC = () => {,
           transition={{ delay: 0.2 }}
           className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 backdrop-blur-sm rounded-full border border-cyan-400/30 mb-6"
         >
-<<<<<<< HEAD
           <span className="text-2xl">⚛️⚡</span>
           <span className="text-cyan-200 font-semibold text-sm">QUANTUM BREAKTHROUGH: OCTOBER 1, 2025</span>",
           <span className="text-2xl">🔬💎</span>
@@ -50,18 +45,15 @@ const October2025QuantumEdgeFusionBanner: React.FC = () => {,
         <div className="grid lg: grid-cols-2 gap-8 items-center">";,
           <div>
             <h2 className="text-4xl lg: text-5xl font-bold text-white mb-4 leading-tight">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               Quantum-Edge Fusion Architecture
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 mt-2">";
                 Sub-Microsecond AI Decisions
               </span>
             </h2>
             
-<<<<<<< HEAD
             <p className="text-cyan-100 text-lg mb-6 leading-relaxed">
 =======
             <p className="text-cyan-100 text-lg mb-6 leading-relaxed">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               Revolutionary quantum-enhanced edge computing delivers <strong className="text-white">sub-microsecond intelligence</strong> with ";
               <strong className="text-white"> $12.4B in enterprise value</strong> across <strong className="text-white">50,000+ edge nodes</strong> operating ";
               at <strong className="text-white">99.97% accuracy</strong>.";
@@ -109,7 +101,6 @@ const October2025QuantumEdgeFusionBanner: React.FC = () => {,
           </div>
 
           {/* Visual Element */}
-<<<<<<< HEAD
           <div className="hidden lg: block">",
             <div className="relative">
               <motion.div
@@ -123,7 +114,6 @@ const October2025QuantumEdgeFusionBanner: React.FC = () => {,
                 animate={{
                   scale: [1, 1.05, 1],,
                   rotate: [0, -5, 0],,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 }}
                 transition={{
                   duration: 6,,
@@ -132,7 +122,6 @@ const October2025QuantumEdgeFusionBanner: React.FC = () => {,
                 }}
                 className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 backdrop-blur-lg rounded-2xl p-8 border border-cyan-400/30"
               >
-<<<<<<< HEAD
                 <h3 className="text-2xl font-bold text-white mb-4">Quantum Advantages: </h3>",
                 <ul className="space-y-3 text-cyan-100">
                   <li className="flex items-start gap-3">
@@ -166,7 +155,6 @@ const October2025QuantumEdgeFusionBanner: React.FC = () => {,
                   </li>
                   <li className="flex items-start gap-3">";
                     <span className="text-2xl">💰</span>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     <span><strong>Massive ROI: </strong> $8.2B additional revenue</span>,
                   </li>
                 </ul>
@@ -182,13 +170,11 @@ const October2025QuantumEdgeFusionBanner: React.FC = () => {,
           transition={{ delay: 0.8 }}
           className="mt-8 pt-6 border-t border-cyan-400/30 text-center"
         >
-<<<<<<< HEAD
           <p className="text-cyan-200 text-sm">
             🏆 <strong className="text-white">QUANTUM COMPUTING BREAKTHROUGH: </strong> 127-Qubit Processors at Edge | Fortune 100 Success Story",
 =======
           <p className="text-cyan-200 text-sm">";
             🏆 <strong className="text-white">QUANTUM COMPUTING BREAKTHROUGH: </strong> 127-Qubit Processors at Edge | Fortune 100 Success Story";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           </p>
         </motion.div>
       </div>

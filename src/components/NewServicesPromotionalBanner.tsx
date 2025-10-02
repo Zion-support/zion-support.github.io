@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 import React from 'react';
 =======
 import React from 'react';';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 const NewServicesPromotionalBanner: React.FC = () => {,
   return (
     <section className="py-16 bg-gradient-to-r from-emerald-900/40 via-teal-900/40 to-cyan-900/40 border-y border-emerald-500/20">";
@@ -24,7 +22,6 @@ const NewServicesPromotionalBanner: React.FC = () => {,
         </div>
 
         {/* Services Grid */}
-<<<<<<< HEAD
         <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-12">",
           {/* Quantum AI Consulting */}
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-emerald-500/50 transition-all duration-300 hover:transform hover:scale-105 group">",
@@ -38,7 +35,6 @@ const NewServicesPromotionalBanner: React.FC = () => {,
             <div className="text-6xl mb-4 group-hover: animate-spin">⚛️</div>";,
             <h3 className="text-2xl font-bold text-white mb-4">Quantum AI Consulting</h3>";
             <p className="text-gray-400 mb-6 leading-relaxed">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               Expert guidance on implementing quantum-enhanced AI solutions for maximum performance and competitive advantage.
             </p>
             <div className="space-y-3 mb-6">";
@@ -65,7 +61,6 @@ const NewServicesPromotionalBanner: React.FC = () => {,
           </div>
 
           {/* AI Security Operations Center */}
-<<<<<<< HEAD
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105 group">",
             <div className="text-6xl mb-4 group-hover: animate-pulse">🛡️</div>",
             <h3 className="text-2xl font-bold text-white mb-4">AI Security Operations Center</h3>
@@ -75,7 +70,6 @@ const NewServicesPromotionalBanner: React.FC = () => {,
             <div className="text-6xl mb-4 group-hover: animate-pulse">🛡️</div>";,
             <h3 className="text-2xl font-bold text-white mb-4">AI Security Operations Center</h3>";
             <p className="text-gray-400 mb-6 leading-relaxed">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               24/7 monitoring and protection for your AI systems with advanced threat detection and automated response.
             </p>
             <div className="space-y-3 mb-6">";
@@ -102,7 +96,6 @@ const NewServicesPromotionalBanner: React.FC = () => {,
           </div>
 
           {/* Autonomous Operations Platform */}
-<<<<<<< HEAD
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105 group">",
             <div className="text-6xl mb-4 group-hover: animate-bounce">🤖</div>",
             <h3 className="text-2xl font-bold text-white mb-4">Autonomous Operations Platform</h3>
@@ -112,7 +105,6 @@ const NewServicesPromotionalBanner: React.FC = () => {,
             <div className="text-6xl mb-4 group-hover: animate-bounce">🤖</div>";,
             <h3 className="text-2xl font-bold text-white mb-4">Autonomous Operations Platform</h3>";
             <p className="text-gray-400 mb-6 leading-relaxed">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               Complete automation platform with self-healing, self-optimizing, and self-scaling capabilities for enterprise operations.
             </p>
             <div className="space-y-3 mb-6">";
@@ -140,13 +132,11 @@ const NewServicesPromotionalBanner: React.FC = () => {,
         </div>
 
         {/* Special Offer Banner */}
-<<<<<<< HEAD
         <div className="bg-gradient-to-r from-emerald-900/30 to-teal-900/30 rounded-2xl p-8 border border-emerald-500/20 mb-12">
           <div className="grid md: grid-cols-2 gap-8 items-center">",
 =======
         <div className="bg-gradient-to-r from-emerald-900/30 to-teal-900/30 rounded-2xl p-8 border border-emerald-500/20 mb-12">";
           <div className="grid md: grid-cols-2 gap-8 items-center">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             <div>
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-red-500/20 to-orange-500/20 border border-red-500/30 mb-4">";
                 <span className="text-red-400 font-bold text-sm">🔥 LIMITED TIME OFFER</span>";
@@ -202,7 +192,6 @@ const NewServicesPromotionalBanner: React.FC = () => {,
             <p className="text-gray-400">Real results from enterprises using our new AI services</p>";
           </div>
           
-<<<<<<< HEAD
           <div className="grid md: grid-cols-2 gap-8">",
             <div className="bg-white/5 rounded-xl p-6 border border-white/10">
               <div className="text-yellow-400 text-2xl mb-4">★★★★★</div>
@@ -212,7 +201,6 @@ const NewServicesPromotionalBanner: React.FC = () => {,
             <div className="bg-white/5 rounded-xl p-6 border border-white/10">";
               <div className="text-yellow-400 text-2xl mb-4">★★★★★</div>";
               <p className="text-gray-300 mb-4 italic">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 "The Quantum AI Consulting transformed our computational capabilities. We're seeing 300% performance improvements in our AI models."
               </p>
               <div className="text-emerald-400 font-semibold">CTO, Fortune 100 Tech Company</div>";

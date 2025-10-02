@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle } from 'lucide-react';
 =======
@@ -6,7 +5,6 @@ import React, { Component, ErrorInfo, ReactNode } from 'react';';
 import {
 AlertTriangle
 } from 'lucide-react';';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 
 interface Props {
   children: ReactNode;
@@ -18,11 +16,9 @@ error?: Error;
 }
 
 class ErrorBoundary extends Component<Props, State> {
-<<<<<<< HEAD
 public state: State = {
 =======
 public state: State = {,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 hasError: false
 };
 
@@ -31,17 +27,14 @@ hasError: false
   }
 
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
-<<<<<<< HEAD
     console.error('Uncaught error: ', error, errorInfo);',
 =======
     console.error('Uncaught error: ', error, errorInfo);';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   }
 
   public render() {
     if (this.state.hasError) {
       return (
-<<<<<<< HEAD
         <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-orange-50">
           <div className="max-w-md w-full mx-4">
             <div className="bg-white rounded-2xl shadow-xl p-8 text-center">
@@ -53,18 +46,15 @@ hasError: false
             <div className="bg-white rounded-2xl shadow-xl p-8 text-center">";
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-100 mb-4">";
                 <AlertTriangle className="w-8 h-8 text-red-600" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
               <h1 className="text-2xl font-bold text-gray-900 mb-2">";
                 Oops! Something went wrong
               </h1>
-<<<<<<< HEAD
               <p className="text-gray-600 mb-6">
                 We're sorry for the inconvenience. Please try refreshing the page.;
 =======
               <p className="text-gray-600 mb-6">";
                 We're sorry for the inconvenience. Please try refreshing the page.';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </p>
               <div className="space-y-3">";
                 <button

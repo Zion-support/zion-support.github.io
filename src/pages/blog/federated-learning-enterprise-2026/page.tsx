@@ -9,7 +9,6 @@ export default function FederatedLearningEnterprise2026(): React.JSX.Element {
           name="description"
           content="Enterprise FL with secure aggregation and differential privacy—train across regions without centralizing data." /><link
           rel="canonical"
-<<<<<<< HEAD
           href="https://ziontechgroup.com/blog/federated-learning-enterprise-2026",
         />
       </Helmet>
@@ -23,7 +22,6 @@ export default function FederatedLearningEnterprise2026(): React.JSX.Element {
 
       <div className="container mx-auto px-6 py-16">";
         <h1 className="text-4xl md: text-5xl font-bold mb-4">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           Federated Learning 2026 — Enterprise Pattern
         </h1>
         <p className="text-zion-slate-light mb-8">";

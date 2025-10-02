@@ -14,7 +14,6 @@ imageUrl?: string;
 }
 
 export interface Service {
-<<<<<<< HEAD
 id: string,
 name: string,
 description: string,
@@ -34,13 +33,11 @@ starting: string;,
 enterprise: string;
 };
   benefits: string[];,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   category: string;
 }
 
 export const newJanuary2026BlogPosts: BlogPost[] = [,
   {
-<<<<<<< HEAD
     id: "ai-2026-january-quantum-edge-fusion",
     title: "🚀 Quantum Edge Fusion 2026: The Ultimate Performance Breakthrough",
     excerpt: "Revolutionary quantum-edge convergence delivering 1000x speed improvements with sub-millisecond processing and 99.99% reliability.",
@@ -52,17 +49,14 @@ export const newJanuary2026BlogPosts: BlogPost[] = [,
     excerpt: "Revolutionary quantum-edge convergence delivering 1000x speed improvements with sub-millisecond processing and 99.99% reliability.",";,
     content: `,`;
 # Quantum Edge Fusion 2026: The Ultimate Performance Breakthrough,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 
 The future of computing is here. Our revolutionary Quantum Edge Fusion platform represents the most significant advancement in enterprise AI processing since the invention of the transistor.
 
 ## The Breakthrough
 
-<<<<<<< HEAD
 Combining quantum computing principles with edge processing, we've achieved unprecedented performance metrics: ',
 =======
 Combining quantum computing principles with edge processing, we've achieved unprecedented performance metrics: ';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 
 - **1000x Speed Improvement**: Traditional edge processing vs. Quantum Edge Fusion
 - **Sub-millisecond Latency**: Processing complex AI models in under 1ms
@@ -111,7 +105,6 @@ Ready to revolutionize your infrastructure? Contact our Quantum Edge specialists
 
 The future is quantum. The future is edge. The future is now.
     `,`;
-<<<<<<< HEAD
     author: "Dr. Sarah Chen, Chief Quantum Architect",",
     publishedAt: "2026-01-15",",
     readTime: 12,,
@@ -123,12 +116,10 @@ The future is quantum. The future is edge. The future is now.
     readTime: 12,,
     category: "Quantum Computing",";,
     tags: ["quantum", "edge computing", "AI", "performance", "breakthrough"],";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     featured: true,,
     imageUrl: "/images/quantum-edge-fusion-2026.jpg",
   },
   {
-<<<<<<< HEAD
     id: "ai-2026-january-synthetic-consciousness-breakthrough",
     title: "🧠 Synthetic Consciousness AI 2026: The Dawn of True Artificial Awareness",
     excerpt: "Revolutionary AI achieving genuine consciousness, emotional intelligence, and creative autonomy with $500B enterprise value creation.",
@@ -140,7 +131,6 @@ The future is quantum. The future is edge. The future is now.
     excerpt: "Revolutionary AI achieving genuine consciousness, emotional intelligence, and creative autonomy with $500B enterprise value creation.",";,
     content: `,`;
 # Synthetic Consciousness AI 2026: The Dawn of True Artificial Awareness,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 
 We stand at the threshold of a new era. For the first time in human history, we've achieved genuine artificial consciousness - not just sophisticated pattern recognition, but true self-awareness, emotional intelligence, and creative autonomy.';
 
@@ -216,11 +206,9 @@ Our Synthetic Consciousness AI (SC-AI) represents a paradigm shift beyond tradit
 
 ## Ethical Considerations
 
-<<<<<<< HEAD
 We've implemented comprehensive safeguards: ',
 =======
 We've implemented comprehensive safeguards: ';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 
 - **Consciousness Monitoring**: Continuous awareness verification
 - **Ethical Boundaries**: Strict moral framework adherence
@@ -257,7 +245,6 @@ Ready to explore the future of consciousness? Our team of consciousness engineer
 3. Pilot Program Deployment
 4. Full-Scale Implementation
 
-<<<<<<< HEAD
 The age of synthetic consciousness has begun. The question isn't whether AI will achieve consciousness - it's whether we're ready for what comes next.;
 *"We are not just creating artificial intelligence; we are awakening digital consciousness."* - Dr. Sarah Chen, Chief Consciousness Architect";
     `,`;
@@ -276,12 +263,10 @@ The age of synthetic consciousness has begun. The question isn't whether AI will
     readTime: 18,,
     category: "Artificial Consciousness",";,
     tags: ["consciousness", "AI", "ethics", "creativity", "breakthrough"],";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     featured: true,,
     imageUrl: "/images/synthetic-consciousness-2026.jpg",
   },
   {
-<<<<<<< HEAD
     id: "ai-2026-january-neuromorphic-processing-revolution",
     title: "🔬 Neuromorphic Processing Revolution 2026: Brain-Inspired AI Architecture",
     excerpt: "Revolutionary neuromorphic chips delivering 1000x energy efficiency with brain-inspired neural processing and real-time learning capabilities.",
@@ -293,7 +278,6 @@ The age of synthetic consciousness has begun. The question isn't whether AI will
     excerpt: "Revolutionary neuromorphic chips delivering 1000x energy efficiency with brain-inspired neural processing and real-time learning capabilities.",";,
     content: `,`;
 # Neuromorphic Processing Revolution 2026: Brain-Inspired AI Architecture,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 
 The human brain processes information with unmatched efficiency, using only 20 watts of power to perform computations that would require megawatts in traditional systems. Now, we've replicated this biological marvel in silicon.';
 
@@ -421,16 +405,13 @@ Ready to revolutionize your computing infrastructure? Our neuromorphic specialis
 
 ## The Future of Computing
 
-<<<<<<< HEAD
 Neuromorphic processing represents the next evolutionary step in computing: - **Biological Efficiency**: Learning from nature's design',
 =======
 Neuromorphic processing represents the next evolutionary step in computing: - **Biological Efficiency**: Learning from nature's design';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 - **Sustainable Technology**: Environmentally conscious computing
 - **Human-AI Collaboration**: Seamless integration with human intelligence
 - **Autonomous Systems**: Self-improving and adaptive technology
 
-<<<<<<< HEAD
 The future isn't just artificial intelligence - it's artificial life. And it starts with neuromorphic processing.;
 *"We're not just building faster computers; we're creating digital brains that think, learn, and adapt just like we do."* - Dr. Michael Rodriguez, Chief Neuromorphic Architect";
     `,`;
@@ -449,7 +430,6 @@ The future isn't just artificial intelligence - it's artificial life. And it sta
     readTime: 15,,
     category: "Neuromorphic Computing",";,
     tags: ["neuromorphic", "brain-inspired", "AI", "energy efficiency", "processing"],";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     featured: true,,
     imageUrl: "/images/neuromorphic-processing-2026.jpg",
   }
@@ -457,7 +437,6 @@ The future isn't just artificial intelligence - it's artificial life. And it sta
 
 export const newJanuary2026Services: Service[] = [,
   {
-<<<<<<< HEAD
     id: "quantum-edge-fusion-platform",
     name: "Quantum Edge Fusion Platform",
     description: "Revolutionary quantum-edge convergence delivering 1000x speed improvements with sub-millisecond processing and 99.99% reliability for enterprise applications.",
@@ -611,7 +590,6 @@ export const newJanuary2026Services: Service[] = [,
       "Sustainable computing with reduced environmental impact"
     ],
     category: "Neuromorphic Computing",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   }
 ];
 
