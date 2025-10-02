@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Zap, Mail, Phone, MapPin, Twitter, Linkedin, Github, Globe } from 'lucide-react';
 
-const Footer: React.FC = () => {
+const ModernFooter: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   const footerSections = [
@@ -190,5 +190,5 @@ const Footer: React.FC = () => {
   );
 };
 
-export default Footer;
+export default ModernFooter;
 
