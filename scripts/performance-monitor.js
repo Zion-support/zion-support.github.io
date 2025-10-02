@@ -1,10 +1,5 @@
 #!/usr/bin/env node
 
-/**
- * Performance Monitoring Script
- * Monitors and reports on application performance metrics
- */
-
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -12,83 +7,130 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-console.log('🚀 Starting performance monitoring...');
+/**
+ * Performance monitoring script for Zion Tech Group website
+ * Monitors build performance and generates reports
+ */
 
-// Monitor bundle size
-function monitorBundleSize() {
-  const distPath = path.join(__dirname, '../dist');
+const performanceReport = {
+  timestamp: new Date().toISOString(),
+  buildMetrics: {},
+  recommendations: []
+};
+
+function measureBuildTime() {
+  const startTime = process.hrtime.bigint();
+  
+  return {
+    end: () => {
+      const endTime = process.hrtime.bigint();
+      const duration = Number(endTime - startTime) / 1000000; // Convert to milliseconds
+      return duration;
+    }
+  };
+}
+
+function analyzeBundleSize() {
+  const distPath = path.join(process.cwd(), 'dist');
+  
   if (!fs.existsSync(distPath)) {
-    console.log('❌ Dist folder not found. Run build first.');
-    return;
+    return { error: 'Dist directory not found' };
   }
 
   const files = fs.readdirSync(distPath, { recursive: true });
   let totalSize = 0;
-  const fileSizes = [];
+  const fileSizes = {};
 
   files.forEach(file => {
     const filePath = path.join(distPath, file);
-    if (fs.statSync(filePath).isFile()) {
-      const size = fs.statSync(filePath).size;
-      totalSize += size;
-      fileSizes.push({ name: file, size });
+    const stats = fs.statSync(filePath);
+    
+    if (stats.isFile()) {
+      fileSizes[file] = stats.size;
+      totalSize += stats.size;
     }
   });
 
-  // Sort by size
-  fileSizes.sort((a, b) => b.size - a.size);
-
-  console.log('\n📊 Bundle Size Analysis:');
-  console.log(`Total size: ${(totalSize / 1024 / 1024).toFixed(2)} MB`);
-  console.log('\nTop 10 largest files:');
-  fileSizes.slice(0, 10).forEach((file, index) => {
-    console.log(`${index + 1}. ${file.name}: ${(file.size / 1024).toFixed(2)} KB`);
-  });
-
-  // Performance recommendations
-  console.log('\n💡 Performance Recommendations:');
-  if (totalSize > 2 * 1024 * 1024) { // 2MB
-    console.log('⚠️  Bundle size is large. Consider code splitting.');
-  }
-  if (fileSizes[0]?.size > 500 * 1024) { // 500KB
-    console.log('⚠️  Largest file is over 500KB. Consider optimization.');
-  }
-  console.log('✅ Bundle analysis complete');
-}
-
-// Monitor Core Web Vitals
-function monitorCoreWebVitals() {
-  console.log('\n📈 Core Web Vitals Monitoring:');
-  console.log('• First Contentful Paint (FCP): < 1.8s (Good)');
-  console.log('• Largest Contentful Paint (LCP): < 2.5s (Good)');
-  console.log('• First Input Delay (FID): < 100ms (Good)');
-  console.log('• Cumulative Layout Shift (CLS): < 0.1 (Good)');
-  console.log('• Time to First Byte (TTFB): < 600ms (Good)');
-}
-
-// Generate performance report
-function generatePerformanceReport() {
-  const report = {
-    timestamp: new Date().toISOString(),
-    bundleSize: 'Analyzed',
-    coreWebVitals: 'Monitored',
-    recommendations: [
-      'Implement lazy loading for images',
-      'Use code splitting for large components',
-      'Optimize third-party libraries',
-      'Enable gzip compression',
-      'Use CDN for static assets'
-    ]
+  return {
+    totalSize: totalSize / 1024 / 1024, // Convert to MB
+    fileCount: Object.keys(fileSizes).length,
+    fileSizes
   };
-
-  const reportPath = path.join(__dirname, '../performance-report.json');
-  fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-  console.log(`\n📄 Performance report saved to: ${reportPath}`);
 }
 
-// Run all monitoring functions
-monitorBundleSize();
-monitorCoreWebVitals();
-generatePerformanceReport();
+function generateRecommendations(metrics) {
+  const recommendations = [];
 
-console.log('\n✅ Performance monitoring complete!');
+  // Bundle size recommendations
+  if (metrics.bundleSize && metrics.bundleSize.totalSize > 2) {
+    recommendations.push({
+      type: 'performance',
+      priority: 'high',
+      message: 'Bundle size is large (>2MB). Consider code splitting and tree shaking.',
+      action: 'Implement dynamic imports and remove unused dependencies'
+    });
+  }
+
+  // Build time recommendations
+  if (metrics.buildTime && metrics.buildTime > 30000) {
+    recommendations.push({
+      type: 'performance',
+      priority: 'medium',
+      message: 'Build time is slow (>30s). Consider optimizing build configuration.',
+      action: 'Review webpack/vite configuration and dependencies'
+    });
+  }
+
+  // File count recommendations
+  if (metrics.bundleSize && metrics.bundleSize.fileCount > 100) {
+    recommendations.push({
+      type: 'performance',
+      priority: 'medium',
+      message: 'High number of files in bundle. Consider consolidation.',
+      action: 'Review file structure and imports'
+    });
+  }
+
+  return recommendations;
+}
+
+function generateReport() {
+  console.log('🔍 Analyzing performance metrics...');
+  
+  // Measure bundle size
+  const bundleAnalysis = analyzeBundleSize();
+  performanceReport.buildMetrics.bundleSize = bundleAnalysis;
+
+  // Generate recommendations
+  performanceReport.recommendations = generateRecommendations(performanceReport.buildMetrics);
+
+  // Save report
+  const reportPath = path.join(process.cwd(), 'performance-report.json');
+  fs.writeFileSync(reportPath, JSON.stringify(performanceReport, null, 2));
+
+  console.log('📊 Performance Report Generated:');
+  console.log(`   Bundle Size: ${bundleAnalysis.totalSize?.toFixed(2) || 'N/A'} MB`);
+  console.log(`   File Count: ${bundleAnalysis.fileCount || 'N/A'}`);
+  console.log(`   Recommendations: ${performanceReport.recommendations.length}`);
+  
+  if (performanceReport.recommendations.length > 0) {
+    console.log('\n🚨 Recommendations:');
+    performanceReport.recommendations.forEach((rec, index) => {
+      console.log(`   ${index + 1}. [${rec.priority.toUpperCase()}] ${rec.message}`);
+      console.log(`      Action: ${rec.action}`);
+    });
+  }
+
+  console.log(`\n📄 Full report saved to: ${reportPath}`);
+}
+
+// Run if called directly
+if (import.meta.url === `file://${process.argv[1]}`) {
+  generateReport();
+}
+
+export {
+  measureBuildTime,
+  analyzeBundleSize,
+  generateReport
+};

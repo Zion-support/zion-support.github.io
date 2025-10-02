@@ -4,6 +4,7 @@ import './index.css';
 import ModernHeader from './components/ModernHeader';
 import ModernFooter from './components/ModernFooter';
 import ModernHomepage from './components/ModernHomepage';
+import ErrorBoundary from './components/ErrorBoundary';
 
 // Simple placeholder components for other routes
 const ServicesPage = () => (
@@ -119,20 +120,22 @@ const ContactPage = () => (
 
 const App: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white">
-      <ModernHeader />
-      <main>
-        <Routes>
-          <Route path="/" element={<ModernHomepage />} />
-          <Route path="/services" element={<ServicesPage />} />
-          <Route path="/case-studies" element={<CaseStudiesPage />} />
-          <Route path="/blog" element={<BlogPage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-        </Routes>
-      </main>
-      <ModernFooter />
-    </div>
+    <ErrorBoundary>
+      <div className="min-h-screen bg-white">
+        <ModernHeader />
+        <main>
+          <Routes>
+            <Route path="/" element={<ModernHomepage />} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/case-studies" element={<CaseStudiesPage />} />
+            <Route path="/blog" element={<BlogPage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+          </Routes>
+        </main>
+        <ModernFooter />
+      </div>
+    </ErrorBoundary>
   );
 };
 
