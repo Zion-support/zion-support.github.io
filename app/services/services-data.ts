@@ -603,6 +603,8 @@ export const services: Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008, Middletown DE 19709'
     }
+<<<<<<< HEAD
+=======
   },
 
   // NEW: Innovative Micro SaaS Solutions
@@ -1708,6 +1710,7 @@ export const services: Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008, Middletown DE 19709'
     }
+>>>>>>> 572650b18e28707a236d90e4fccb862489985cdf
   }
 ];
 

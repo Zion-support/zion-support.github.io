@@ -1,45 +1,19 @@
 import React from 'react';
 
-interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg';
-  message?: string;
-}
-
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
-  size = 'md', 
-  message = 'Loading...' 
-}) => {
-  const sizeClasses = {
-    sm: 'w-8 h-8',
-    md: 'w-12 h-12',
-    lg: 'w-16 h-16',
-  };
-
+export function LoadingSpinner() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-[200px]">
-      <div className={`${sizeClasses[size]} animate-spin`}>
-        <svg className="w-full h-full" viewBox="0 0 24 24">
-          <circle
-            className="opacity-25"
-            cx="12"
-            cy="12"
-            r="10"
-            stroke="currentColor"
-            strokeWidth="4"
-            fill="none"
-          />
-          <path
-            className="opacity-75"
-            fill="currentColor"
-            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-          />
-        </svg>
-      </div>
-      {message && (
-        <p className="mt-4 text-gray-600 text-sm font-medium">{message}</p>
-      )}
+    <div className="flex items-center justify-center h-full p-8">
+      <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+      <p className="ml-4 text-lg text-gray-600">Loading...</p>
     </div>
   );
-};
+}
 
-export default LoadingSpinner;
+export function PageLoader() {
+  return (
+    <div className="flex flex-col items-center justify-center min-h-screen bg-slate-950 text-white">
+      <div className="w-16 h-16 border-8 border-blue-500 border-t-transparent rounded-full animate-spin mb-4"></div>
+      <p className="text-xl font-semibold">Loading content...</p>
+    </div>
+  );
+}
