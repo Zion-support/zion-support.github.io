@@ -5,10 +5,10 @@ import SEO from './components/SEO';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Sidebar from './components/Sidebar';
 import BannerManager from './components/BannerManager';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import SEOHead from './components/EnhancedSEOHead';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import NotificationSystem from './components/NotificationSystem';
 import PerformanceMonitor from './components/PerformanceMonitor';
@@ -112,7 +112,10 @@ const App: React.FC = () => {
               transition={pageTransition}
               className="relative z-10"
             >
-              <Routes>
+              <div className="flex gap-6 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <Sidebar />
+                <div id="main-content" className="flex-1">
+                <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/contact" element={<ContactPage />} />
@@ -140,8 +143,8 @@ const App: React.FC = () => {
                         </a>
                       </div>
                     </div>
-                  }
-                />
+                  </div>
+                } />
               </Routes>
             </React.Suspense>
 
