@@ -6,12 +6,25 @@ const ModernFooter: React.FC = () => {
 
   const footerSections = [
     {
+      title: 'Solutions',
+      links: [
+        { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
+        { name: 'SMB Solutions', href: '/solutions/smb' },
+        { name: 'Startup Solutions', href: '/solutions/startup' },
+        { name: 'Healthcare Solutions', href: '/solutions/healthcare' },
+        { name: 'Financial Solutions', href: '/solutions/financial' },
+        { name: 'Government Solutions', href: '/solutions/government' },
+      ]
+    },
+    {
       title: 'Services',
       links: [
-        { name: 'AI Autonomous Cloud Ops', href: '/services/ai-autonomous-cloud-ops' },
-        { name: 'AI FinTech Transformation', href: '/services/ai-fintech-transformation' },
-        { name: 'AI Retail Automation', href: '/services/ai-retail-automation' },
-        { name: 'Micro SaaS Solutions', href: '/services/micro-saas' },
+        { name: 'AI Solutions', href: '/services/ai-solutions' },
+        { name: 'Cloud & DevOps', href: '/services/cloud-devops' },
+        { name: 'Cybersecurity', href: '/services/cybersecurity' },
+        { name: 'Quantum Computing', href: '/services/quantum-computing' },
+        { name: 'IoT & Edge Computing', href: '/services/iot-edge' },
+        { name: 'Blockchain & Web3', href: '/services/blockchain' },
       ]
     },
     {
@@ -19,17 +32,21 @@ const ModernFooter: React.FC = () => {
       links: [
         { name: 'Case Studies', href: '/case-studies' },
         { name: 'Blog', href: '/blog' },
-        { name: 'AI ROI Calculator', href: '/tools/roi-calculator' },
         { name: 'Documentation', href: '/docs' },
+        { name: 'Developer Tools', href: '/developer-tools' },
+        { name: 'Training', href: '/training' },
+        { name: 'Community', href: '/community' },
       ]
     },
     {
       title: 'Company',
       links: [
         { name: 'About Us', href: '/about' },
-        { name: 'Contact', href: '/contact' },
-        { name: 'Privacy Policy', href: '/privacy' },
-        { name: 'Terms of Service', href: '/terms' },
+        { name: 'Our Team', href: '/team' },
+        { name: 'Partners', href: '/partners' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'News', href: '/news' },
+        { name: 'Press', href: '/press' },
       ]
     }
   ];
@@ -76,37 +93,100 @@ const ModernFooter: React.FC = () => {
           ))}
         </div>
 
-        {/* Bottom Section */}
+        {/* Quick Actions */}
         <div className="border-t border-gray-800 mt-8 pt-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Quick Actions</h4>
+              <div className="space-y-2">
+                <Link to="/pricing" className="block text-gray-400 hover:text-white transition-colors">
+                  View Pricing
+                </Link>
+                <Link to="/demo" className="block text-gray-400 hover:text-white transition-colors">
+                  Schedule Demo
+                </Link>
+                <Link to="/support" className="block text-gray-400 hover:text-white transition-colors">
+                  Get Support
+                </Link>
+                <Link to="/contact" className="block text-gray-400 hover:text-white transition-colors">
+                  Contact Sales
+                </Link>
+              </div>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Legal</h4>
+              <div className="space-y-2">
+                <Link to="/privacy" className="block text-gray-400 hover:text-white transition-colors">
+                  Privacy Policy
+                </Link>
+                <Link to="/terms" className="block text-gray-400 hover:text-white transition-colors">
+                  Terms of Service
+                </Link>
+                <Link to="/cookies" className="block text-gray-400 hover:text-white transition-colors">
+                  Cookie Policy
+                </Link>
+                <Link to="/security" className="block text-gray-400 hover:text-white transition-colors">
+                  Security
+                </Link>
+              </div>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Connect</h4>
+              <div className="space-y-2">
+                <a
+                  href="https://linkedin.com/company/ziontechgroup"
+                  className="block text-gray-400 hover:text-white transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  LinkedIn
+                </a>
+                <a
+                  href="https://twitter.com/ziontechgroup"
+                  className="block text-gray-400 hover:text-white transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Twitter
+                </a>
+                <a
+                  href="https://github.com/ziontechgroup"
+                  className="block text-gray-400 hover:text-white transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub
+                </a>
+                <a
+                  href="https://youtube.com/@ziontechgroup"
+                  className="block text-gray-400 hover:text-white transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  YouTube
+                </a>
+              </div>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
+              <div className="space-y-2 text-gray-400">
+                <div>📞 +1 302 464 0950</div>
+                <div>✉️ kleber@ziontechgroup.com</div>
+                <div>📍 Middletown, DE 19709</div>
+                <div>🌐 ziontechgroup.com</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Section */}
+        <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
-            <div className="flex space-x-6">
-              <a
-                href="https://linkedin.com/company/ziontechgroup"
-                className="text-gray-400 hover:text-white transition-colors"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                LinkedIn
-              </a>
-              <a
-                href="https://twitter.com/ziontechgroup"
-                className="text-gray-400 hover:text-white transition-colors"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Twitter
-              </a>
-              <a
-                href="https://github.com/ziontechgroup"
-                className="text-gray-400 hover:text-white transition-colors"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                GitHub
-              </a>
+            <div className="text-gray-400 text-sm">
+              Built with ❤️ using React, TypeScript, and Tailwind CSS
             </div>
           </div>
         </div>

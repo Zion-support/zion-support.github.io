@@ -1,480 +1,247 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import {
-  Users,
-  Video,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Zap,
-  Shield,
-  Target
-} from 'lucide-react';
 
 const Demo: React.FC = () => {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
+    name: '',
     email: '',
-    phone: '',
     company: '',
-    jobTitle: '',
-    companySize: '',
-    interests: [] as string[],
+    phone: '',
     message: '',
-    preferredTime: '',
-    preferredDate: ''
+    demoType: 'ai-solutions'
   });
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const companySizes = [
-    '1-10 employees',
-    '11-50 employees',
-    '51-200 employees',
-    '201-1000 employees',
-    '1000+ employees'
-  ];
-
-  const interests = [
-    'AI Workflow Automation',
-    'AI Virtual Assistant',
-    'AI Data Analytics',
-    'Intelligent Document Processing',
-    'Real-Time Cognitive Automation',
-    'Advanced Cybersecurity AI',
-    'Quantum Computing',
-    'Cloud & DevOps',
-    'IoT & Edge Computing',
-    'Digital Twin Solutions',
-    'Blockchain & Web3',
-    'Space Technology'
-  ];
-
-  const demoFeatures = [
-    {
-      icon: Zap,
-      title: 'Live AI Demo',
-      description: 'See our AI solutions in action with real-time demonstrations'
-    },
-    {
-      icon: Target,
-      title: 'Customized Use Cases',
-      description: 'Explore solutions tailored to your specific industry and needs'
-    },
-    {
-      icon: Shield,
-      title: 'Security Overview',
-      description: 'Learn about our enterprise-grade security and compliance features'
-    },
-    {
-      icon: Users,
-      title: 'Expert Consultation',
-      description: 'Get insights from our AI experts and technical specialists'
-    }
-  ];
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleInterestChange = (interest: string) => {
-    setFormData(prev => ({
-      ...prev,
-      interests: prev.interests.includes(interest)
-        ? prev.interests.filter(i => i !== interest)
-        : [...prev.interests, interest]
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+    // Handle form submission
+    console.log('Demo request submitted:', formData);
   };
 
-  if (isSubmitted) {
-    return (
-      <>
-        <Helmet>
-          <title>Demo Request Submitted - Zion Tech Group</title>
-          <meta name="description" content="Thank you for requesting a demo. We'll contact you soon to schedule your personalized AI solutions demonstration." />
-        </Helmet>
-        
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-          <Header />
-          
-          <section className="pt-20 pb-16 px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-12">
-                <div className="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <CheckCircle className="h-10 w-10 text-green-400" />
-                </div>
-                <h1 className="text-4xl font-bold text-white mb-6">
-                  Demo Request Submitted Successfully!
-                </h1>
-                <p className="text-xl text-slate-300 mb-8">
-                  Thank you for your interest in our AI solutions. Our team will contact you within 24 hours 
-                  to schedule your personalized demonstration.
-                </p>
-                <div className="bg-slate-700/50 rounded-lg p-6 mb-8">
-                  <h3 className="text-lg font-semibold text-white mb-4">What happens next?</h3>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
-                    <div className="flex items-start">
-                      <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                        <span className="text-white font-bold text-sm">1</span>
-                      </div>
-                      <div>
-                        <h4 className="text-white font-medium mb-1">Initial Contact</h4>
-                        <p className="text-slate-400 text-sm">We'll reach out within 24 hours to discuss your needs</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start">
-                      <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                        <span className="text-white font-bold text-sm">2</span>
-                      </div>
-                      <div>
-                        <h4 className="text-white font-medium mb-1">Schedule Demo</h4>
-                        <p className="text-slate-400 text-sm">We'll schedule a convenient time for your personalized demo</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start">
-                      <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                        <span className="text-white font-bold text-sm">3</span>
-                      </div>
-                      <div>
-                        <h4 className="text-white font-medium mb-1">Live Demonstration</h4>
-                        <p className="text-slate-400 text-sm">See our AI solutions in action tailored to your use case</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a
-                    href="/contact"
-                    className="inline-flex items-center px-8 py-4 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-lg transition-colors"
-                  >
-                    Contact Us
-                  </a>
-                  <a
-                    href="/"
-                    className="inline-flex items-center px-8 py-4 border border-slate-600 text-white hover:bg-slate-800 font-semibold rounded-lg transition-colors"
-                  >
-                    Return Home
-                  </a>
-                </div>
-              </div>
-            </div>
-          </section>
-          
-          <Footer />
-        </div>
-      </>
-    );
-  }
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const demoTypes = [
+    { value: 'ai-solutions', label: 'AI Solutions' },
+    { value: 'cloud-devops', label: 'Cloud & DevOps' },
+    { value: 'cybersecurity', label: 'Cybersecurity' },
+    { value: 'quantum-computing', label: 'Quantum Computing' },
+    { value: 'iot-edge', label: 'IoT & Edge Computing' },
+    { value: 'blockchain', label: 'Blockchain & Web3' }
+  ];
 
   return (
     <>
       <Helmet>
-        <title>Schedule a Demo - Zion Tech Group | AI Solutions Demonstration</title>
-        <meta
-          name="description"
-          content="Schedule a personalized demo of our AI solutions. See how our cutting-edge technology can transform your business operations and drive results."
-        />
-        <meta
-          name="keywords"
-          content="AI demo, AI solutions demonstration, schedule demo, AI consultation, AI technology showcase"
-        />
+        <title>Schedule a Demo - Zion Tech Group</title>
+        <meta name="description" content="Schedule a personalized demo of our AI and IT solutions. See how Zion Tech Group can transform your business." />
         <link rel="canonical" href="https://ziontechgroup.com/demo" />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Header />
-        
-        {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h1 className="text-5xl font-bold text-white mb-6">
-                Schedule Your AI Solutions Demo
+      <div className="min-h-screen bg-gray-50">
+        {/* Header */}
+        <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-5xl font-bold mb-4">
+                Schedule a Demo
               </h1>
-              <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
-                See our cutting-edge AI solutions in action. Get a personalized demonstration 
-                tailored to your industry and business needs.
+              <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+                See our AI and IT solutions in action. Get a personalized demonstration 
+                tailored to your business needs.
               </p>
-              <div className="flex flex-wrap justify-center gap-6 text-slate-400">
-                <div className="flex items-center gap-2">
-                  <Video className="h-5 w-5 text-blue-400" />
-                  <span>Live Demonstration</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Demo Form */}
+            <div className="bg-white rounded-xl shadow-lg p-8">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                Request Your Demo
+              </h2>
+              
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                    Full Name *
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    value={formData.name}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  />
                 </div>
-                <div className="flex items-center gap-2">
-                  <Users className="h-5 w-5 text-green-400" />
-                  <span>Expert Consultation</span>
+
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                    Email Address *
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  />
                 </div>
-                <div className="flex items-center gap-2">
-                  <Target className="h-5 w-5 text-purple-400" />
-                  <span>Customized Use Cases</span>
+
+                <div>
+                  <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+                    Company *
+                  </label>
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    required
+                    value={formData.company}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  />
                 </div>
-              </div>
+
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                    Phone Number
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="demoType" className="block text-sm font-medium text-gray-700 mb-2">
+                    Demo Type *
+                  </label>
+                  <select
+                    id="demoType"
+                    name="demoType"
+                    required
+                    value={formData.demoType}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  >
+                    {demoTypes.map((type) => (
+                      <option key={type.value} value={type.value}>
+                        {type.label}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                    Additional Information
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows={4}
+                    value={formData.message}
+                    onChange={handleChange}
+                    placeholder="Tell us about your specific needs and challenges..."
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors font-medium"
+                >
+                  Schedule Demo
+                </button>
+              </form>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              {/* Demo Features */}
+            {/* Demo Benefits */}
+            <div className="space-y-8">
               <div>
-                <h2 className="text-3xl font-bold text-white mb-8">
-                  What to Expect in Your Demo
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                  What to Expect
                 </h2>
-                <div className="space-y-6">
-                  {demoFeatures.map((feature, index) => (
-                    <div key={index} className="flex items-start">
-                      <div className="p-3 bg-blue-500/20 rounded-lg mr-4 flex-shrink-0">
-                        <feature.icon className="h-6 w-6 text-blue-400" />
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                        <p className="text-slate-300">{feature.description}</p>
-                      </div>
+                <div className="space-y-4">
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                      <svg className="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
                     </div>
-                  ))}
-                </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-900">Personalized Demo</h3>
+                      <p className="text-gray-600">Tailored to your specific industry and use cases</p>
+                    </div>
+                  </div>
 
-                <div className="mt-8 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6">
-                  <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
-                    <Star className="h-5 w-5 text-yellow-400 mr-2" />
-                    Why Choose Our Demo?
-                  </h3>
-                  <ul className="space-y-2 text-slate-300">
-                    <li className="flex items-center">
-                      <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
-                      No sales pressure - just valuable insights
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
-                      Tailored to your specific industry and needs
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
-                      Interactive Q&A with our AI experts
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
-                      Real-world use cases and success stories
-                    </li>
-                  </ul>
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                      <svg className="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-900">Expert Consultation</h3>
+                      <p className="text-gray-600">Direct access to our AI and technology experts</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                      <svg className="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-900">Live Q&A</h3>
+                      <p className="text-gray-600">Ask questions and get immediate answers</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                      <svg className="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-900">Custom Solution</h3>
+                      <p className="text-gray-600">See how our solutions can be customized for your needs</p>
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              {/* Demo Request Form */}
-              <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8">
-                <h2 className="text-2xl font-bold text-white mb-6">
-                  Request Your Demo
-                </h2>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-sm font-medium text-slate-300 mb-2">
-                        First Name *
-                      </label>
-                      <input
-                        type="text"
-                        name="firstName"
-                        value={formData.firstName}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        placeholder="John"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-slate-300 mb-2">
-                        Last Name *
-                      </label>
-                      <input
-                        type="text"
-                        name="lastName"
-                        value={formData.lastName}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        placeholder="Doe"
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-slate-300 mb-2">
-                      Email Address *
-                    </label>
-                    <input
-                      type="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="john@company.com"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-slate-300 mb-2">
-                      Phone Number
-                    </label>
-                    <input
-                      type="tel"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="+1 (555) 123-4567"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-slate-300 mb-2">
-                      Company *
-                    </label>
-                    <input
-                      type="text"
-                      name="company"
-                      value={formData.company}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="Your Company Name"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-slate-300 mb-2">
-                      Job Title
-                    </label>
-                    <input
-                      type="text"
-                      name="jobTitle"
-                      value={formData.jobTitle}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="CTO, IT Director, etc."
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-slate-300 mb-2">
-                      Company Size
-                    </label>
-                    <select
-                      name="companySize"
-                      value={formData.companySize}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    >
-                      <option value="">Select company size</option>
-                      {companySizes.map((size) => (
-                        <option key={size} value={size}>{size}</option>
-                      ))}
-                    </select>
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-slate-300 mb-2">
-                      Areas of Interest
-                    </label>
-                    <div className="grid grid-cols-2 gap-2">
-                      {interests.map((interest) => (
-                        <label key={interest} className="flex items-center">
-                          <input
-                            type="checkbox"
-                            checked={formData.interests.includes(interest)}
-                            onChange={() => handleInterestChange(interest)}
-                            className="mr-2 text-blue-500 focus:ring-blue-500"
-                          />
-                          <span className="text-sm text-slate-300">{interest}</span>
-                        </label>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-slate-300 mb-2">
-                      Preferred Date
-                    </label>
-                    <input
-                      type="date"
-                      name="preferredDate"
-                      value={formData.preferredDate}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-slate-300 mb-2">
-                      Preferred Time
-                    </label>
-                    <select
-                      name="preferredTime"
-                      value={formData.preferredTime}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    >
-                      <option value="">Select preferred time</option>
-                      <option value="morning">Morning (9 AM - 12 PM)</option>
-                      <option value="afternoon">Afternoon (12 PM - 5 PM)</option>
-                      <option value="evening">Evening (5 PM - 8 PM)</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-slate-300 mb-2">
-                      Additional Information
-                    </label>
-                    <textarea
-                      name="message"
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      rows={4}
-                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="Tell us about your specific needs, challenges, or questions..."
-                    />
-                  </div>
-
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full bg-blue-500 hover:bg-blue-600 disabled:bg-blue-500/50 text-white font-semibold py-4 px-6 rounded-lg transition-colors flex items-center justify-center"
-                  >
-                    {isSubmitting ? (
-                      <>
-                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                        Submitting Request...
-                      </>
-                    ) : (
-                      <>
-                        Schedule My Demo
-                        <ArrowRight className="h-5 w-5 ml-2" />
-                      </>
-                    )}
-                  </button>
-                </form>
+              <div className="bg-blue-50 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                  Ready to Get Started?
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Schedule your demo today and discover how Zion Tech Group can transform your business.
+                </p>
+                <div className="space-y-2 text-sm text-gray-600">
+                  <div>📅 Available Monday - Friday, 9 AM - 6 PM EST</div>
+                  <div>⏱️ 30-45 minute sessions</div>
+                  <div>💻 Online or in-person options</div>
+                </div>
               </div>
             </div>
           </div>
-        </section>
-
-        <Footer />
+        </div>
       </div>
     </>
   );

@@ -5,6 +5,13 @@ import ModernHeader from './components/ModernHeader';
 import ModernFooter from './components/ModernFooter';
 import ModernHomepage from './components/ModernHomepage';
 
+// Import page components
+import Solutions from './pages/Solutions';
+import Resources from './pages/Resources';
+import Team from './pages/Team';
+import Partners from './pages/Partners';
+import Pricing from './pages/Pricing';
+
 // Simple placeholder components for other routes
 const ServicesPage = () => (
   <div className="min-h-screen bg-gray-50 py-16">
@@ -125,9 +132,14 @@ const App: React.FC = () => {
         <Routes>
           <Route path="/" element={<ModernHomepage />} />
           <Route path="/services" element={<ServicesPage />} />
+          <Route path="/solutions" element={<Solutions />} />
+          <Route path="/resources" element={<Resources />} />
           <Route path="/case-studies" element={<CaseStudiesPage />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/team" element={<Team />} />
+          <Route path="/partners" element={<Partners />} />
+          <Route path="/pricing" element={<Pricing />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </main>
