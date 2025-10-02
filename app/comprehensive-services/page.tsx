@@ -77,6 +77,78 @@ export default function ComprehensiveServices() {
           features: ['Appointment optimization', 'Patient matching', 'Telehealth integration', 'HIPAA compliance'],
           popular: true,
           link: '/services/innovative-solutions-2025'
+        },
+        {
+          name: 'Financial Technology Solutions',
+          description: 'Comprehensive fintech micro SaaS solutions including payment processing, invoicing, and financial analytics',
+          price: '$199 - $4,999/month',
+          features: ['AI-Powered Payment Processing', 'Smart Invoice Management', 'Expense Tracking & Analytics', 'Cryptocurrency Trading Platform'],
+          popular: true,
+          link: '/services/financial-technology-solutions'
+        },
+        {
+          name: 'Healthcare Technology Solutions',
+          description: 'HIPAA-compliant healthcare micro SaaS solutions including telemedicine, patient management, and medical billing',
+          price: '$199 - $4,999/month',
+          features: ['AI-Powered Telemedicine Platform', 'Smart Patient Management System', 'Medical Billing & Revenue Cycle', 'Healthcare Analytics Dashboard'],
+          popular: true,
+          link: '/services/healthcare-technology-solutions'
+        },
+        {
+          name: 'Education Technology Solutions',
+          description: 'FERPA-compliant EdTech micro SaaS solutions including LMS, student analytics, and virtual classrooms',
+          price: '$99 - $3,499/month',
+          features: ['AI-Powered Learning Management System', 'Student Analytics & Performance Platform', 'Virtual Classroom & Video Platform', 'AI Course Creation & Content Generator'],
+          popular: true,
+          link: '/services/education-technology-solutions'
+        },
+        {
+          name: 'E-commerce Technology Solutions',
+          description: 'Comprehensive e-commerce micro SaaS solutions including inventory management, customer service, and analytics',
+          price: '$99 - $2,999/month',
+          features: ['AI-Powered Inventory Management', 'Smart Customer Service Automation', 'E-commerce Analytics & Insights', 'Multi-Channel E-commerce Platform'],
+          popular: true,
+          link: '/services/ecommerce-technology-solutions'
+        },
+        {
+          name: 'Human Resources Solutions',
+          description: 'Comprehensive HR micro SaaS solutions including recruitment, performance management, and payroll',
+          price: '$99 - $2,999/month',
+          features: ['AI-Powered Recruitment Platform', 'Performance Management Suite', 'Automated Payroll Processing', 'Employee Analytics & Insights'],
+          popular: true,
+          link: '/services/human-resources-solutions'
+        },
+        {
+          name: 'Real Estate Technology Solutions',
+          description: 'Comprehensive real estate micro SaaS solutions including property management, lead generation, and virtual tours',
+          price: '$99 - $2,999/month',
+          features: ['AI-Powered Property Management', 'Smart Lead Generation & CRM', 'Virtual Property Tours & 3D Visualization', 'Real Estate Analytics & Market Intelligence'],
+          popular: true,
+          link: '/services/real-estate-technology-solutions'
+        },
+        {
+          name: 'Logistics & Supply Chain Solutions',
+          description: 'Comprehensive logistics micro SaaS solutions including route optimization, tracking, and warehouse management',
+          price: '$149 - $3,499/month',
+          features: ['AI-Powered Route Optimization', 'Real-Time Tracking & Visibility', 'Smart Warehouse Management', 'Supply Chain Analytics & Intelligence'],
+          popular: true,
+          link: '/services/logistics-supply-chain-solutions'
+        },
+        {
+          name: 'Marketing Automation Solutions',
+          description: 'Comprehensive marketing automation micro SaaS solutions including email campaigns, social media, and lead nurturing',
+          price: '$99 - $3,499/month',
+          features: ['AI-Powered Email Marketing', 'Social Media Automation Suite', 'Lead Nurturing & Scoring Platform', 'Marketing Analytics & Attribution'],
+          popular: true,
+          link: '/services/marketing-automation-solutions'
+        },
+        {
+          name: 'Cybersecurity Solutions',
+          description: 'Comprehensive cybersecurity micro SaaS solutions including threat detection, vulnerability scanning, and compliance',
+          price: '$99 - $9,999/month',
+          features: ['AI-Powered Threat Detection', 'Vulnerability Assessment & Management', 'Security Compliance & Audit Platform', 'Security Analytics & SIEM Platform'],
+          popular: true,
+          link: '/services/cybersecurity-solutions'
         }
       ]
     },

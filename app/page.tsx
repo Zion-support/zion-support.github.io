@@ -146,6 +146,78 @@ export default function HomePage() {
               popular={false}
             />
             <FeaturedServiceCard
+              title="Financial Technology Solutions"
+              description="Comprehensive fintech micro SaaS solutions including AI-powered payment processing, smart invoicing, expense tracking, and financial analytics."
+              price="$199/month"
+              features={['Payment Processing', 'Smart Invoicing', 'Expense Tracking', 'Financial Analytics', 'Cryptocurrency Trading']}
+              to="/services/financial-technology-solutions"
+              popular={true}
+            />
+            <FeaturedServiceCard
+              title="Healthcare Technology Solutions"
+              description="HIPAA-compliant healthcare micro SaaS solutions including AI-powered telemedicine, patient management, medical billing, and health analytics."
+              price="$299/month"
+              features={['Telemedicine Platform', 'Patient Management', 'Medical Billing', 'Health Analytics', 'AI Diagnostics']}
+              to="/services/healthcare-technology-solutions"
+              popular={true}
+            />
+            <FeaturedServiceCard
+              title="Education Technology Solutions"
+              description="FERPA-compliant EdTech micro SaaS solutions including AI-powered LMS, student analytics, virtual classrooms, and course creation."
+              price="$199/month"
+              features={['Learning Management', 'Student Analytics', 'Virtual Classrooms', 'Course Creation', 'Assessment Tools']}
+              to="/services/education-technology-solutions"
+              popular={true}
+            />
+            <FeaturedServiceCard
+              title="E-commerce Technology Solutions"
+              description="Comprehensive e-commerce micro SaaS solutions including AI-powered inventory management, customer service automation, and analytics."
+              price="$249/month"
+              features={['Inventory Management', 'Customer Service', 'E-commerce Analytics', 'Multi-Channel Platform', 'Product Recommendations']}
+              to="/services/ecommerce-technology-solutions"
+              popular={true}
+            />
+            <FeaturedServiceCard
+              title="Human Resources Solutions"
+              description="Comprehensive HR micro SaaS solutions including AI-powered recruitment, performance management, payroll processing, and employee analytics."
+              price="$199/month"
+              features={['Recruitment Platform', 'Performance Management', 'Payroll Processing', 'Employee Analytics', 'Learning & Development']}
+              to="/services/human-resources-solutions"
+              popular={true}
+            />
+            <FeaturedServiceCard
+              title="Real Estate Technology Solutions"
+              description="Comprehensive real estate micro SaaS solutions including AI-powered property management, lead generation, virtual tours, and market analytics."
+              price="$299/month"
+              features={['Property Management', 'Lead Generation', 'Virtual Tours', 'Market Analytics', 'Listing Management']}
+              to="/services/real-estate-technology-solutions"
+              popular={true}
+            />
+            <FeaturedServiceCard
+              title="Logistics & Supply Chain Solutions"
+              description="Comprehensive logistics micro SaaS solutions including AI-powered route optimization, real-time tracking, warehouse management, and analytics."
+              price="$399/month"
+              features={['Route Optimization', 'Real-Time Tracking', 'Warehouse Management', 'Supply Chain Analytics', 'Fleet Management']}
+              to="/services/logistics-supply-chain-solutions"
+              popular={true}
+            />
+            <FeaturedServiceCard
+              title="Marketing Automation Solutions"
+              description="Comprehensive marketing automation micro SaaS solutions including AI-powered email marketing, social media automation, and lead nurturing."
+              price="$199/month"
+              features={['Email Marketing', 'Social Media Automation', 'Lead Nurturing', 'Marketing Analytics', 'Content Automation']}
+              to="/services/marketing-automation-solutions"
+              popular={true}
+            />
+            <FeaturedServiceCard
+              title="Cybersecurity Solutions"
+              description="Comprehensive cybersecurity micro SaaS solutions including AI-powered threat detection, vulnerability scanning, compliance, and security monitoring."
+              price="$499/month"
+              features={['Threat Detection', 'Vulnerability Scanning', 'Security Compliance', 'Security Analytics', 'Identity Management']}
+              to="/services/cybersecurity-solutions"
+              popular={true}
+            />
+            <FeaturedServiceCard
               title="AI Social Media Manager"
               description="Automated social media management with content creation, posting schedules, engagement tracking, and influencer identification."
               price="$159/month"

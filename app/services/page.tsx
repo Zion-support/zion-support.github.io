@@ -90,6 +90,110 @@ export default function ServicesPage() {
       href: '/services/cloud-migration'
     },
     {
+      title: 'Financial Technology Solutions',
+      description: 'Comprehensive fintech micro SaaS solutions including payment processing, invoicing, and financial analytics',
+      icon: '💰',
+      features: [
+        'AI-Powered Payment Processing',
+        'Smart Invoice Management',
+        'Expense Tracking & Analytics',
+        'Cryptocurrency Trading Platform',
+        'Lending & Credit Assessment'
+      ],
+      href: '/services/financial-technology-solutions'
+    },
+    {
+      title: 'Healthcare Technology Solutions',
+      description: 'HIPAA-compliant healthcare micro SaaS solutions including telemedicine, patient management, and medical billing',
+      icon: '🏥',
+      features: [
+        'AI-Powered Telemedicine Platform',
+        'Smart Patient Management System',
+        'Medical Billing & Revenue Cycle',
+        'Healthcare Analytics Dashboard',
+        'AI Diagnostic Assistant Platform'
+      ],
+      href: '/services/healthcare-technology-solutions'
+    },
+    {
+      title: 'Education Technology Solutions',
+      description: 'FERPA-compliant EdTech micro SaaS solutions including LMS, student analytics, and virtual classrooms',
+      icon: '🎓',
+      features: [
+        'AI-Powered Learning Management System',
+        'Student Analytics & Performance Platform',
+        'Virtual Classroom & Video Platform',
+        'AI Course Creation & Content Generator',
+        'Student Assessment & Testing Platform'
+      ],
+      href: '/services/education-technology-solutions'
+    },
+    {
+      title: 'E-commerce Technology Solutions',
+      description: 'Comprehensive e-commerce micro SaaS solutions including inventory management, customer service, and analytics',
+      icon: '🛒',
+      features: [
+        'AI-Powered Inventory Management',
+        'Smart Customer Service Automation',
+        'E-commerce Analytics & Insights',
+        'Multi-Channel E-commerce Platform',
+        'AI-Powered Product Recommendations'
+      ],
+      href: '/services/ecommerce-technology-solutions'
+    },
+    {
+      title: 'Human Resources Solutions',
+      description: 'Comprehensive HR micro SaaS solutions including recruitment, performance management, and payroll',
+      icon: '👥',
+      features: [
+        'AI-Powered Recruitment Platform',
+        'Performance Management Suite',
+        'Automated Payroll Processing',
+        'Employee Analytics & Insights',
+        'Learning & Development Platform'
+      ],
+      href: '/services/human-resources-solutions'
+    },
+    {
+      title: 'Real Estate Technology Solutions',
+      description: 'Comprehensive real estate micro SaaS solutions including property management, lead generation, and virtual tours',
+      icon: '🏠',
+      features: [
+        'AI-Powered Property Management',
+        'Smart Lead Generation & CRM',
+        'Virtual Property Tours & 3D Visualization',
+        'Real Estate Analytics & Market Intelligence',
+        'Automated Listing Management'
+      ],
+      href: '/services/real-estate-technology-solutions'
+    },
+    {
+      title: 'Logistics & Supply Chain Solutions',
+      description: 'Comprehensive logistics micro SaaS solutions including route optimization, tracking, and warehouse management',
+      icon: '🚚',
+      features: [
+        'AI-Powered Route Optimization',
+        'Real-Time Tracking & Visibility',
+        'Smart Warehouse Management',
+        'Supply Chain Analytics & Intelligence',
+        'Fleet Management & Maintenance'
+      ],
+      href: '/services/logistics-supply-chain-solutions'
+    },
+    {
+      title: 'Marketing Automation Solutions',
+      description: 'Comprehensive marketing automation micro SaaS solutions including email campaigns, social media, and lead nurturing',
+      icon: '📈',
+      features: [
+        'AI-Powered Email Marketing',
+        'Social Media Automation Suite',
+        'Lead Nurturing & Scoring Platform',
+        'Marketing Analytics & Attribution',
+        'Content Marketing Automation'
+      ],
+      href: '/services/marketing-automation-solutions'
+    },
+    {
       title: 'Micro SaaS Development',
       description: 'Custom micro SaaS solutions designed for specific business needs and rapid deployment',
       icon: '🔧',
