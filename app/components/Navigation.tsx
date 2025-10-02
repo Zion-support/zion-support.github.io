@@ -37,7 +37,7 @@ export function Header() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </button>
-            <div className={`absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-lg border border-gray-200 transition-all duration-200 z-50 ${
+            <div className={`absolute top-full left-0 mt-2 w-[500px] bg-white rounded-lg shadow-lg border border-gray-200 transition-all duration-200 z-50 ${
               openDropdown === 'services' ? 'opacity-100 visible' : 'opacity-0 invisible'
             }`}>
               <div className="py-3">
@@ -109,6 +109,21 @@ export function Header() {
                 <Link href="/services/ai-marketing-studio" className="block px-4 py-2 text-sm text-gray-700 hover:bg-rose-50 hover:text-rose-600">
                   AI Marketing Studio
                 </Link>
+                <Link href="/services/ai-project-management-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  AI Project Management Platform
+                </Link>
+                <Link href="/services/smart-invoice-processing" className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600">
+                  Smart Invoice Processing System
+                </Link>
+                <Link href="/services/ai-customer-onboarding" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600">
+                  AI Customer Onboarding Platform
+                </Link>
+                <Link href="/services/intelligent-expense-management" className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600">
+                  Intelligent Expense Management
+                </Link>
+                <Link href="/services/ai-lead-generation-engine" className="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600">
+                  AI Lead Generation Engine
+                </Link>
                 <div className="border-t border-gray-100 my-2"></div>
                 <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">Specialized Solutions</div>
                 <Link href="/services/ai-business-intelligence-2025" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
@@ -124,6 +139,37 @@ export function Header() {
                 </Link>
                 <Link href="/services/it-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600">
                   IT Services & Solutions
+                </Link>
+                <div className="border-t border-gray-100 my-2"></div>
+                <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">New AI Solutions</div>
+                <Link href="/services/ai-project-management-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  AI Project Management Platform
+                </Link>
+                <Link href="/services/smart-invoice-processing" className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600">
+                  Smart Invoice Processing System
+                </Link>
+                <Link href="/services/ai-customer-onboarding" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600">
+                  AI Customer Onboarding Platform
+                </Link>
+                <Link href="/services/intelligent-expense-management" className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600">
+                  Intelligent Expense Management
+                </Link>
+                <Link href="/services/ai-lead-generation-engine" className="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600">
+                  AI Lead Generation Engine
+                </Link>
+                <div className="border-t border-gray-100 my-2"></div>
+                <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">Enterprise IT Services</div>
+                <Link href="/services/enterprise-cloud-migration" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  Enterprise Cloud Migration
+                </Link>
+                <Link href="/services/devops-cicd-implementation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600">
+                  DevOps & CI/CD Implementation
+                </Link>
+                <Link href="/services/advanced-cybersecurity-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600">
+                  Advanced Cybersecurity Solutions
+                </Link>
+                <Link href="/services/database-management-optimization" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600">
+                  Database Management & Optimization
                 </Link>
                 <div className="border-t border-gray-100 my-2"></div>
                 <Link href="/services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 font-medium">
@@ -373,8 +419,44 @@ export function Header() {
 
 export function Footer() {
   return (
-    <footer className="border-t border-gray-200 mt-16 bg-gray-50">
+    <footer className="border-t border-gray-200 mt-16 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-6 py-12">
+        {/* Contact Information Banner */}
+        <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-white mb-12">
+          <h3 className="text-2xl font-bold text-center mb-6">Ready to Transform Your Business?</h3>
+          <div className="grid md:grid-cols-3 gap-6 text-center">
+            <div className="flex flex-col items-center">
+              <svg className="w-8 h-8 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              <h4 className="font-bold mb-2">Call Us</h4>
+              <a href="tel:+13024640950" className="text-lg font-semibold hover:underline">
+                +1 302 464 0950
+              </a>
+            </div>
+            <div className="flex flex-col items-center">
+              <svg className="w-8 h-8 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              <h4 className="font-bold mb-2">Email Us</h4>
+              <a href="mailto:kleber@ziontechgroup.com" className="text-lg font-semibold hover:underline">
+                kleber@ziontechgroup.com
+              </a>
+            </div>
+            <div className="flex flex-col items-center">
+              <svg className="w-8 h-8 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              <h4 className="font-bold mb-2">Visit Us</h4>
+              <div className="text-lg font-semibold">
+                364 E Main St STE 1008<br />
+                Middletown DE 19709
+              </div>
+            </div>
+          </div>
+        </div>
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Services */}
           <div>

@@ -20,9 +20,9 @@ const SiteFooter: React.FC = () => {
 						<h3 className="text-white font-semibold mb-3">Services</h3>
 						<ul className="space-y-2">
 							<li><Link to="/services" className="hover:text-white">All Services</Link></li>
-							<li><Link to="/services/ai-services" className="hover:text-white">AI Services</Link></li>
-							<li><Link to="/services/micro-saas" className="hover:text-white">Micro SaaS</Link></li>
-							<li><Link to="/services/it-services" className="hover:text-white">IT Services</Link></li>
+							<li><Link to="/it-services" className="hover:text-white">IT Services</Link></li>
+							<li><Link to="/micro-saas" className="hover:text-white">Micro SaaS</Link></li>
+							<li><Link to="/services/consulting" className="hover:text-white">Consulting</Link></li>
 						</ul>
 					</div>
 
@@ -41,6 +41,9 @@ const SiteFooter: React.FC = () => {
 						<ul className="space-y-2">
 							<li><Link to="/about" className="hover:text-white">About</Link></li>
 							<li><Link to="/contact" className="hover:text-white">Contact</Link></li>
+							<li><Link to="/careers" className="hover:text-white">Careers</Link></li>
+							<li><Link to="/news" className="hover:text-white">News</Link></li>
+							<li><Link to="/faq" className="hover:text-white">FAQ</Link></li>
 							<li><Link to="/privacy" className="hover:text-white">Privacy</Link></li>
 							<li><Link to="/terms" className="hover:text-white">Terms</Link></li>
 						</ul>
