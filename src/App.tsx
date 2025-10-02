@@ -13,6 +13,10 @@ import NotificationSystem from './components/NotificationSystem';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import EnhancedSEOHead from './components/EnhancedSEOHead';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
+import SecurityAuditPanel from './components/SecurityAuditPanel';
+import SEOAuditDashboard from './components/SEOAuditDashboard';
+import AnalyticsDashboard from './components/AnalyticsDashboard';
 
 // Lazy loaded components for better performance
 const HomePage = React.lazy(() => import('./pages/HomePage'));
@@ -94,6 +98,10 @@ const initializePerformanceEnhancements = () => {
 const App: React.FC = () => {
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
+  const [showAdvancedPerformanceMonitor, setShowAdvancedPerformanceMonitor] = useState(false);
+  const [showSecurityAudit, setShowSecurityAudit] = useState(false);
+  const [showSEOAudit, setShowSEOAudit] = useState(false);
+  const [showAnalytics, setShowAnalytics] = useState(false);
   const [notifications, setNotifications] = useState<Notification[]>([]);
 
   const handleRemoveNotification = (id: string) => {
@@ -112,7 +120,7 @@ const App: React.FC = () => {
     canonical: typeof window !== 'undefined' ? window.location.href : 'https://zion.app/',
   }), []);
 
-  // Simple hotkeys for demo toggles and initialization
+  // Enhanced hotkeys for admin panels
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
       if (!e.ctrlKey || !e.shiftKey) return;
@@ -124,6 +132,22 @@ const App: React.FC = () => {
         case 'm':
           e.preventDefault();
           setShowPerformanceMonitor((v) => !v);
+          break;
+        case 'a':
+          e.preventDefault();
+          setShowAdvancedPerformanceMonitor((v) => !v);
+          break;
+        case 's':
+          e.preventDefault();
+          setShowSecurityAudit((v) => !v);
+          break;
+        case 'o':
+          e.preventDefault();
+          setShowSEOAudit((v) => !v);
+          break;
+        case 'd':
+          e.preventDefault();
+          setShowAnalytics((v) => !v);
           break;
         default:
           break;
@@ -257,33 +281,89 @@ const App: React.FC = () => {
           </Router>
         </EnhancedErrorBoundary>
       </AccessibilityEnhancer>
+
+      {showPerformanceOptimizer && (
+        <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center" role="dialog" aria-modal="true">
+          <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+            <div className="flex justify-between items-center mb-4">
+              <h2 className="text-2xl font-bold">Performance Optimizer</h2>
+              <button onClick={() => setShowPerformanceOptimizer(false)} className="text-gray-500 hover:text-gray-700 text-2xl">✕</button>
+            </div>
+            <PerformanceOptimizer isVisible={true} onClose={() => setShowPerformanceOptimizer(false)} />
+          </div>
+        </div>
+      )}
+
+      {showPerformanceMonitor && (
+        <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center" role="dialog" aria-modal="true">
+          <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+            <div className="flex justify-between items-center mb-4">
+              <h2 className="text-2xl font-bold">Performance Monitor</h2>
+              <button onClick={() => setShowPerformanceMonitor(false)} className="text-gray-500 hover:text-gray-700 text-2xl">✕</button>
+            </div>
+            <PerformanceMonitor />
+          </div>
+        </div>
+      )}
+
+      {showAdvancedPerformanceMonitor && (
+        <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center" role="dialog" aria-modal="true">
+          <div className="max-w-6xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+            <div className="bg-white rounded-lg p-6">
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-2xl font-bold">Advanced Performance Monitor</h2>
+                <button onClick={() => setShowAdvancedPerformanceMonitor(false)} className="text-gray-500 hover:text-gray-700 text-2xl">✕</button>
+              </div>
+              <AdvancedPerformanceMonitor />
+            </div>
+          </div>
+        </div>
+      )}
+
+      {showSecurityAudit && (
+        <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center" role="dialog" aria-modal="true">
+          <div className="max-w-6xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+            <div className="bg-white rounded-lg p-6">
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-2xl font-bold">Security Audit Panel</h2>
+                <button onClick={() => setShowSecurityAudit(false)} className="text-gray-500 hover:text-gray-700 text-2xl">✕</button>
+              </div>
+              <SecurityAuditPanel />
+            </div>
+          </div>
+        </div>
+      )}
+
+      {showSEOAudit && (
+        <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center" role="dialog" aria-modal="true">
+          <div className="max-w-6xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+            <div className="bg-white rounded-lg p-6">
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-2xl font-bold">SEO Audit Dashboard</h2>
+                <button onClick={() => setShowSEOAudit(false)} className="text-gray-500 hover:text-gray-700 text-2xl">✕</button>
+              </div>
+              <SEOAuditDashboard />
+            </div>
+          </div>
+        </div>
+      )}
+
+      {showAnalytics && (
+        <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center" role="dialog" aria-modal="true">
+          <div className="max-w-6xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+            <div className="bg-white rounded-lg p-6">
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-2xl font-bold">Analytics Dashboard</h2>
+                <button onClick={() => setShowAnalytics(false)} className="text-gray-500 hover:text-gray-700 text-2xl">✕</button>
+              </div>
+              <AnalyticsDashboard />
+            </div>
+          </div>
+        </div>
+      )}
+
+      <NotificationSystem notifications={notifications} onRemove={handleRemoveNotification} />
     </HelmetProvider>
-
-    {showPerformanceOptimizer && (
-      <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center" role="dialog" aria-modal="true">
-        <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-          <div className="flex justify-between items-center mb-4">
-            <h2 className="text-2xl font-bold">Performance Optimizer</h2>
-            <button onClick={() => setShowPerformanceOptimizer(false)} className="text-gray-500 hover:text-gray-700 text-2xl">✕</button>
-          </div>
-          <PerformanceOptimizer isVisible={true} onClose={() => setShowPerformanceOptimizer(false)} />
-        </div>
-      </div>
-    )}
-
-    {showPerformanceMonitor && (
-      <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center" role="dialog" aria-modal="true">
-        <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-          <div className="flex justify-between items-center mb-4">
-            <h2 className="text-2xl font-bold">Performance Monitor</h2>
-            <button onClick={() => setShowPerformanceMonitor(false)} className="text-gray-500 hover:text-gray-700 text-2xl">✕</button>
-          </div>
-          <PerformanceMonitor />
-        </div>
-      </div>
-    )}
-
-    <NotificationSystem notifications={notifications} onRemove={handleRemoveNotification} />
   );
 };
 
