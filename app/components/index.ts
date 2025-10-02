@@ -2,7 +2,7 @@
 export { default as UnifiedBanner } from './UnifiedBannerSystem';
 export { default as ContentShowcase } from './ContentShowcase';
 export { default as FeaturedServiceCard } from './FeaturedServiceCard';
-export { default as Navigation } from './Navigation';
+export { Header, Footer } from './Navigation';
 export { default as NewServicesHero } from './NewServicesHero';
 export { default as SuccessStory } from './SuccessStory';
 export { default as UnifiedContentPromotion } from './UnifiedContentPromotion';
