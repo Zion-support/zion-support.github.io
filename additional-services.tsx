@@ -389,6 +389,159 @@ export default function AdditionalServices() {
             'Compliance tracking and reporting'
           ],
           link: '/contact'
+        },
+        {
+          name: 'AI-Powered Personal Finance Coach',
+          blurb: 'Intelligent personal finance management with budgeting, investment advice, and goal tracking.',
+          price: '$19.99 - $99/month',
+          eta: '2-3 weeks',
+          bullets: [
+            'AI-powered budgeting and expense categorization',
+            'Personalized investment recommendations',
+            'Goal tracking and milestone celebrations',
+            'Bill payment reminders and automation',
+            'Credit score monitoring and improvement tips',
+            'Tax optimization suggestions'
+          ],
+          link: '/contact',
+          marketSize: '$1.2T personal finance management market',
+          roi: 'Average user saves $2,400 annually'
+        },
+        {
+          name: 'Smart Home Energy Optimizer',
+          blurb: 'AI-driven energy consumption optimization for smart homes with cost savings and sustainability tracking.',
+          price: '$29 - $149/month',
+          eta: '2-4 weeks',
+          bullets: [
+            'Real-time energy usage monitoring and optimization',
+            'Smart device automation and scheduling',
+            'Cost savings recommendations and tracking',
+            'Carbon footprint monitoring and reduction goals',
+            'Integration with major smart home platforms',
+            'Energy bill prediction and budget alerts'
+          ],
+          link: '/contact',
+          marketSize: '$84B smart home market',
+          roi: 'Average 25% reduction in energy bills'
+        },
+        {
+          name: 'AI-Powered Learning Management System',
+          blurb: 'Intelligent educational platform with personalized learning paths and progress tracking.',
+          price: '$49 - $299/month',
+          eta: '3-4 weeks',
+          bullets: [
+            'AI-powered personalized learning recommendations',
+            'Adaptive content delivery based on learning style',
+            'Progress tracking and performance analytics',
+            'Automated quiz generation and assessment',
+            'Multi-language support and accessibility features',
+            'Integration with video conferencing and collaboration tools'
+          ],
+          link: '/contact',
+          marketSize: '$366B online education market',
+          roi: '40% improvement in learning outcomes'
+        },
+        {
+          name: 'Smart Restaurant Management Suite',
+          blurb: 'Comprehensive restaurant operations platform with inventory, staff scheduling, and customer analytics.',
+          price: '$199 - $999/month',
+          eta: '3-5 weeks',
+          bullets: [
+            'AI-powered demand forecasting and inventory management',
+            'Staff scheduling optimization and labor cost tracking',
+            'Customer analytics and loyalty program management',
+            'Menu optimization based on profitability and popularity',
+            'POS integration and payment processing',
+            'Multi-location management and reporting'
+          ],
+          link: '/contact',
+          marketSize: '$3.2T global restaurant industry',
+          roi: 'Average 15% increase in profit margins'
+        },
+        {
+          name: 'AI-Powered Fitness Coach Platform',
+          blurb: 'Personalized fitness training with AI-driven workout plans, nutrition guidance, and progress tracking.',
+          price: '$39 - $199/month',
+          eta: '2-3 weeks',
+          bullets: [
+            'AI-generated personalized workout plans',
+            'Nutrition tracking and meal planning',
+            'Wearable device integration and biometric monitoring',
+            'Progress photos and body composition tracking',
+            'Virtual personal trainer with form correction',
+            'Community features and social challenges'
+          ],
+          link: '/contact',
+          marketSize: '$96B fitness industry market',
+          roi: 'Users achieve goals 3x faster on average'
+        },
+        {
+          name: 'Smart Property Management Platform',
+          blurb: 'Comprehensive property management solution with tenant screening, rent collection, and maintenance automation.',
+          price: '$149 - $799/month',
+          eta: '3-4 weeks',
+          bullets: [
+            'AI-powered tenant screening and credit analysis',
+            'Automated rent collection and late payment tracking',
+            'Maintenance request management and vendor coordination',
+            'Property performance analytics and ROI tracking',
+            'Tenant communication portal and document management',
+            'Multi-property portfolio management and reporting'
+          ],
+          link: '/contact',
+          marketSize: '$87B property management market',
+          roi: 'Average 20% reduction in vacancy rates'
+        },
+        {
+          name: 'AI-Powered Event Planning Assistant',
+          blurb: 'Intelligent event management platform with vendor recommendations, budget tracking, and guest management.',
+          price: '$99 - $499/month',
+          eta: '2-3 weeks',
+          bullets: [
+            'AI-powered vendor recommendations and price comparisons',
+            'Automated budget tracking and cost optimization',
+            'Guest list management and RSVP tracking',
+            'Event timeline creation and task management',
+            'Venue selection with availability and pricing',
+            'Post-event analytics and feedback collection'
+          ],
+          link: '/contact',
+          marketSize: '$325B event planning industry',
+          roi: 'Average 30% reduction in planning time'
+        },
+        {
+          name: 'Smart Pet Care Management System',
+          blurb: 'Comprehensive pet care platform with health tracking, appointment scheduling, and emergency alerts.',
+          price: '$29 - $149/month',
+          eta: '2-3 weeks',
+          bullets: [
+            'Pet health records and vaccination tracking',
+            'Appointment scheduling with veterinarians and groomers',
+            'Medication reminders and dosage tracking',
+            'Emergency contact system and lost pet alerts',
+            'Pet activity monitoring and behavior insights',
+            'Insurance claim management and reimbursement tracking'
+          ],
+          link: '/contact',
+          marketSize: '$261B pet care industry',
+          roi: 'Pet owners save average $800 annually'
+        },
+        {
+          name: 'AI-Powered Travel Planning Suite',
+          blurb: 'Intelligent travel planning with itinerary optimization, cost tracking, and real-time updates.',
+          price: '$49 - $249/month',
+          eta: '2-3 weeks',
+          bullets: [
+            'AI-powered itinerary creation and optimization',
+            'Real-time price monitoring and booking alerts',
+            'Travel document management and expiration tracking',
+            'Weather and local event integration',
+            'Expense tracking and budget management',
+            'Travel insurance and emergency assistance'
+          ],
+          link: '/contact',
+          marketSize: '$1.9T global travel market',
+          roi: 'Users save average 25% on travel costs'
         }
       ]
     },
@@ -667,6 +820,159 @@ export default function AdditionalServices() {
             'False positive reduction through ML'
           ],
           link: '/contact'
+        },
+        {
+          name: 'AI-Powered Autonomous Vehicle Fleet Management',
+          blurb: 'Intelligent fleet management system for autonomous vehicles with route optimization and predictive maintenance.',
+          price: '$5,000 - $25,000/month',
+          eta: '8-12 weeks',
+          bullets: [
+            'AI-powered route optimization and traffic prediction',
+            'Autonomous vehicle coordination and scheduling',
+            'Predictive maintenance and failure prevention',
+            'Real-time monitoring and safety compliance',
+            'Passenger demand forecasting and dynamic pricing',
+            'Integration with smart city infrastructure'
+          ],
+          link: '/contact',
+          marketSize: '$173B autonomous vehicle market',
+          roi: '40% reduction in operational costs'
+        },
+        {
+          name: 'AI-Powered Drug Discovery Platform',
+          blurb: 'Advanced AI platform for pharmaceutical research with molecular design and clinical trial optimization.',
+          price: '$15,000 - $100,000/month',
+          eta: '12-20 weeks',
+          bullets: [
+            'AI-powered molecular design and optimization',
+            'Drug-target interaction prediction',
+            'Clinical trial design and patient stratification',
+            'Adverse effect prediction and safety assessment',
+            'Patent landscape analysis and IP optimization',
+            'Regulatory compliance and approval tracking'
+          ],
+          link: '/contact',
+          marketSize: '$1.7T pharmaceutical industry',
+          roi: '50% reduction in drug development time'
+        },
+        {
+          name: 'AI-Powered Climate Change Analytics',
+          blurb: 'Comprehensive climate data analysis with carbon footprint tracking and sustainability optimization.',
+          price: '$2,500 - $15,000/month',
+          eta: '6-10 weeks',
+          bullets: [
+            'Real-time climate data processing and analysis',
+            'Carbon footprint calculation and tracking',
+            'Sustainability strategy optimization',
+            'ESG reporting and compliance automation',
+            'Climate risk assessment and mitigation planning',
+            'Green energy transition planning and optimization'
+          ],
+          link: '/contact',
+          marketSize: '$500B climate tech market',
+          roi: 'Average 30% reduction in carbon emissions'
+        },
+        {
+          name: 'AI-Powered Space Mission Planning',
+          blurb: 'Advanced AI system for space mission optimization, satellite management, and orbital mechanics.',
+          price: '$10,000 - $50,000/month',
+          eta: '10-16 weeks',
+          bullets: [
+            'Autonomous mission planning and trajectory optimization',
+            'Satellite constellation management and coordination',
+            'Space debris tracking and collision avoidance',
+            'Resource allocation and fuel optimization',
+            'Communication network optimization',
+            'Earth observation data processing and analysis'
+          ],
+          link: '/contact',
+          marketSize: '$366B space industry market',
+          roi: '60% improvement in mission success rates'
+        },
+        {
+          name: 'AI-Powered Quantum Computing Simulator',
+          blurb: 'Advanced quantum computing simulation and algorithm development platform for research and development.',
+          price: '$8,000 - $40,000/month',
+          eta: '8-14 weeks',
+          bullets: [
+            'Quantum algorithm simulation and optimization',
+            'Quantum error correction and noise modeling',
+            'Quantum machine learning algorithm development',
+            'Cryptographic protocol analysis and optimization',
+            'Quantum chemistry and materials science simulations',
+            'Integration with existing quantum hardware'
+          ],
+          link: '/contact',
+          marketSize: '$65B quantum computing market',
+          roi: '80% faster quantum algorithm development'
+        },
+        {
+          name: 'AI-Powered Brain-Computer Interface Platform',
+          blurb: 'Advanced neural interface system with brain signal processing and motor control applications.',
+          price: '$12,000 - $60,000/month',
+          eta: '12-20 weeks',
+          bullets: [
+            'Real-time brain signal processing and interpretation',
+            'Motor control and prosthetic device integration',
+            'Cognitive enhancement and memory optimization',
+            'Medical diagnosis and treatment monitoring',
+            'Neural rehabilitation and therapy optimization',
+            'Research data collection and analysis tools'
+          ],
+          link: '/contact',
+          marketSize: '$2.4B brain-computer interface market',
+          roi: 'Significant improvement in patient outcomes'
+        },
+        {
+          name: 'AI-Powered Synthetic Biology Platform',
+          blurb: 'Intelligent synthetic biology design platform for genetic engineering and biomanufacturing optimization.',
+          price: '$20,000 - $100,000/month',
+          eta: '16-24 weeks',
+          bullets: [
+            'AI-powered genetic circuit design and optimization',
+            'Protein structure prediction and engineering',
+            'Metabolic pathway design and optimization',
+            'Biomaterial synthesis and characterization',
+            'Biomanufacturing process optimization',
+            'Biosafety and risk assessment automation'
+          ],
+          link: '/contact',
+          marketSize: '$61B synthetic biology market',
+          roi: '70% reduction in design iteration time'
+        },
+        {
+          name: 'AI-Powered Cybersecurity Threat Intelligence',
+          blurb: 'Advanced threat detection and response system with predictive security analytics.',
+          price: '$3,500 - $18,000/month',
+          eta: '6-10 weeks',
+          bullets: [
+            'Real-time threat detection and classification',
+            'Predictive security analytics and risk assessment',
+            'Automated incident response and remediation',
+            'Threat hunting and forensic analysis',
+            'Security orchestration and automation',
+            'Compliance monitoring and reporting'
+          ],
+          link: '/contact',
+          marketSize: '$248B cybersecurity market',
+          roi: '90% reduction in security incidents'
+        },
+        {
+          name: 'AI-Powered Digital Twin Platform',
+          blurb: 'Comprehensive digital twin creation and management for industrial assets and processes.',
+          price: '$5,000 - $30,000/month',
+          eta: '8-14 weeks',
+          bullets: [
+            'Real-time asset modeling and simulation',
+            'Predictive maintenance and failure prevention',
+            'Process optimization and performance monitoring',
+            'Virtual testing and scenario analysis',
+            'Integration with IoT sensors and data streams',
+            'Collaborative design and engineering workflows'
+          ],
+          link: '/contact',
+          marketSize: '$48B digital twin market',
+          roi: '35% improvement in operational efficiency'
         }
       ]
     },
@@ -924,6 +1230,159 @@ export default function AdditionalServices() {
             'Developer portal and documentation'
           ],
           link: '/contact'
+        },
+        {
+          name: 'Edge Computing Infrastructure Platform',
+          blurb: 'Distributed edge computing infrastructure with low-latency processing and global deployment.',
+          price: '$3,000 - $20,000/month',
+          eta: '6-12 weeks',
+          bullets: [
+            'Global edge node deployment and management',
+            'Low-latency data processing and analytics',
+            'Content delivery network optimization',
+            'IoT device integration and management',
+            'Real-time decision making and automation',
+            'Edge security and compliance implementation'
+          ],
+          link: '/contact',
+          marketSize: '$44B edge computing market',
+          roi: '60% reduction in latency, 40% cost savings'
+        },
+        {
+          name: '5G Network Infrastructure Solutions',
+          blurb: 'Comprehensive 5G network deployment with private networks and enterprise connectivity.',
+          price: '$10,000 - $100,000/project',
+          eta: '8-16 weeks',
+          bullets: [
+            '5G private network design and deployment',
+            'Network slicing and resource optimization',
+            'Edge computing integration and management',
+            'IoT connectivity and device management',
+            'Network security and threat protection',
+            'Performance monitoring and optimization'
+          ],
+          link: '/contact',
+          marketSize: '$667B 5G market',
+          roi: '10x improvement in network performance'
+        },
+        {
+          name: 'Hyperconverged Infrastructure (HCI) Solutions',
+          blurb: 'Integrated compute, storage, and networking infrastructure with simplified management.',
+          price: '$5,000 - $50,000/project',
+          eta: '4-8 weeks',
+          bullets: [
+            'HCI cluster design and implementation',
+            'Automated provisioning and scaling',
+            'Data protection and disaster recovery',
+            'Performance optimization and monitoring',
+            'Cost reduction and resource efficiency',
+            'Cloud integration and hybrid deployment'
+          ],
+          link: '/contact',
+          marketSize: '$27B hyperconverged infrastructure market',
+          roi: '50% reduction in infrastructure costs'
+        },
+        {
+          name: 'Container Security & Compliance Platform',
+          blurb: 'Comprehensive container security with vulnerability scanning and compliance automation.',
+          price: '$2,000 - $15,000/month',
+          eta: '4-8 weeks',
+          bullets: [
+            'Container vulnerability scanning and remediation',
+            'Runtime security monitoring and protection',
+            'Compliance automation and reporting',
+            'Secrets management and encryption',
+            'Network security and micro-segmentation',
+            'Integration with CI/CD pipelines'
+          ],
+          link: '/contact',
+          marketSize: '$2.8B container security market',
+          roi: '80% reduction in security vulnerabilities'
+        },
+        {
+          name: 'AI-Optimized Data Center Solutions',
+          blurb: 'Intelligent data center infrastructure with AI-powered optimization and automation.',
+          price: '$15,000 - $150,000/project',
+          eta: '8-20 weeks',
+          bullets: [
+            'AI-powered capacity planning and optimization',
+            'Automated resource allocation and scaling',
+            'Predictive maintenance and failure prevention',
+            'Energy efficiency optimization and sustainability',
+            'Performance monitoring and analytics',
+            'Multi-cloud integration and management'
+          ],
+          link: '/contact',
+          marketSize: '$251B data center market',
+          roi: '35% improvement in energy efficiency'
+        },
+        {
+          name: 'Quantum-Safe Cryptography Implementation',
+          blurb: 'Future-proof cryptographic solutions with quantum-resistant algorithms and security.',
+          price: '$8,000 - $60,000/project',
+          eta: '6-14 weeks',
+          bullets: [
+            'Quantum-resistant cryptographic algorithm implementation',
+            'Post-quantum cryptography migration planning',
+            'Hybrid classical-quantum security systems',
+            'Cryptographic key management and rotation',
+            'Compliance with quantum-safe standards',
+            'Security assessment and risk mitigation'
+          ],
+          link: '/contact',
+          marketSize: '$2.6B quantum cryptography market',
+          roi: 'Future-proof security investment'
+        },
+        {
+          name: 'Autonomous Network Operations Platform',
+          blurb: 'Self-healing network infrastructure with AI-powered monitoring and automated remediation.',
+          price: '$4,000 - $25,000/month',
+          eta: '6-12 weeks',
+          bullets: [
+            'AI-powered network monitoring and analytics',
+            'Automated incident detection and response',
+            'Self-healing network infrastructure',
+            'Predictive maintenance and optimization',
+            'Traffic engineering and load balancing',
+            'Multi-vendor network management'
+          ],
+          link: '/contact',
+          marketSize: '$15B network automation market',
+          roi: '70% reduction in network downtime'
+        },
+        {
+          name: 'Blockchain Infrastructure & Node Management',
+          blurb: 'Comprehensive blockchain infrastructure with node management and smart contract deployment.',
+          price: '$3,000 - $30,000/month',
+          eta: '4-10 weeks',
+          bullets: [
+            'Blockchain node deployment and management',
+            'Smart contract development and deployment',
+            'Consensus mechanism optimization',
+            'Network monitoring and performance analytics',
+            'Security auditing and vulnerability assessment',
+            'Multi-blockchain integration and interoperability'
+          ],
+          link: '/contact',
+          marketSize: '$163B blockchain market',
+          roi: '50% reduction in blockchain operational costs'
+        },
+        {
+          name: 'Advanced Threat Hunting & SOC Services',
+          blurb: '24/7 security operations center with advanced threat hunting and incident response.',
+          price: '$5,000 - $40,000/month',
+          eta: '4-8 weeks',
+          bullets: [
+            '24/7 security monitoring and threat detection',
+            'Advanced threat hunting and investigation',
+            'Incident response and forensic analysis',
+            'Threat intelligence and attribution',
+            'Security awareness training and simulation',
+            'Compliance monitoring and reporting'
+          ],
+          link: '/contact',
+          marketSize: '$46B managed security services market',
+          roi: '95% reduction in security incident response time'
         }
       ]
     },

@@ -748,6 +748,44 @@ export default function HomePage() {
                 Call Now: +1 302 464 0950
               </a>
             </div>
+            
+            {/* Enhanced Contact Information */}
+            <div className="mt-8 bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <h3 className="text-lg font-semibold text-white mb-4 text-center">Ready to Transform Your Business?</h3>
+              <div className="grid md:grid-cols-3 gap-6 text-center">
+                <div>
+                  <div className="flex items-center justify-center mb-2">
+                    <Phone className="h-5 w-5 text-green-400 mr-2" />
+                    <span className="text-white font-semibold">Call Us</span>
+                  </div>
+                  <a href="tel:+13024640950" className="text-green-400 hover:text-green-300 font-bold">
+                    +1 302 464 0950
+                  </a>
+                  <p className="text-sm text-blue-100 mt-1">Available 24/7 for urgent projects</p>
+                </div>
+                <div>
+                  <div className="flex items-center justify-center mb-2">
+                    <Mail className="h-5 w-5 text-blue-400 mr-2" />
+                    <span className="text-white font-semibold">Email Us</span>
+                  </div>
+                  <a href="mailto:kleber@ziontechgroup.com" className="text-blue-400 hover:text-blue-300 font-bold">
+                    kleber@ziontechgroup.com
+                  </a>
+                  <p className="text-sm text-blue-100 mt-1">Response within 2 hours</p>
+                </div>
+                <div>
+                  <div className="flex items-center justify-center mb-2">
+                    <MapPin className="h-5 w-5 text-purple-400 mr-2" />
+                    <span className="text-white font-semibold">Visit Us</span>
+                  </div>
+                  <p className="text-purple-400 font-bold">
+                    364 E Main St STE 1008<br />
+                    Middletown DE 19709
+                  </p>
+                  <p className="text-sm text-blue-100 mt-1">Delaware headquarters</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -760,13 +798,13 @@ export default function HomePage() {
               Comprehensive Technology Solutions
             </h2>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-              We offer over 50 production-ready solutions across AI, micro SaaS, and IT services with proven ROI and fast delivery.
+              We offer over 100+ production-ready solutions across AI, micro SaaS, and IT services with proven ROI and fast delivery.
             </p>
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl font-bold text-cyan-400 mb-2">50+</div>
+              <div className="text-4xl font-bold text-cyan-400 mb-2">100+</div>
               <div className="text-blue-100">Production-Ready Solutions</div>
             </div>
             <div>
@@ -780,6 +818,164 @@ export default function HomePage() {
             <div>
               <div className="text-4xl font-bold text-cyan-400 mb-2">24/7</div>
               <div className="text-blue-100">Expert Support Available</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Enhanced Service Showcase */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Our Revolutionary Service Categories
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Cutting-edge solutions across multiple technology domains with proven results and competitive pricing
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+            {/* AI Services */}
+            <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl p-8 border border-blue-200">
+              <div className="text-center mb-6">
+                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-3xl">🤖</span>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">AI Services</h3>
+                <p className="text-gray-600">Advanced artificial intelligence solutions</p>
+              </div>
+              
+              <div className="space-y-4 mb-6">
+                <div className="flex items-center justify-between">
+                  <span className="text-gray-700">Quantum Computing Solutions</span>
+                  <span className="text-blue-600 font-semibold">$8K-$40K/mo</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-gray-700">Drug Discovery Platform</span>
+                  <span className="text-blue-600 font-semibold">$15K-$100K/mo</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-gray-700">Brain-Computer Interface</span>
+                  <span className="text-blue-600 font-semibold">$12K-$60K/mo</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-gray-700">Autonomous Vehicle Fleet</span>
+                  <span className="text-blue-600 font-semibold">$5K-$25K/mo</span>
+                </div>
+              </div>
+              
+              <Link 
+                href="/additional-services" 
+                className="block w-full bg-blue-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+              >
+                View All AI Services →
+              </Link>
+            </div>
+
+            {/* Micro SaaS */}
+            <div className="bg-gradient-to-br from-green-50 to-emerald-100 rounded-2xl p-8 border border-green-200">
+              <div className="text-center mb-6">
+                <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-3xl">⚡</span>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Micro SaaS</h3>
+                <p className="text-gray-600">Innovative software-as-a-service solutions</p>
+              </div>
+              
+              <div className="space-y-4 mb-6">
+                <div className="flex items-center justify-between">
+                  <span className="text-gray-700">Personal Finance Coach</span>
+                  <span className="text-green-600 font-semibold">$20-$99/mo</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-gray-700">Smart Home Energy Optimizer</span>
+                  <span className="text-green-600 font-semibold">$29-$149/mo</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-gray-700">Restaurant Management Suite</span>
+                  <span className="text-green-600 font-semibold">$199-$999/mo</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-gray-700">AI Fitness Coach Platform</span>
+                  <span className="text-green-600 font-semibold">$39-$199/mo</span>
+                </div>
+              </div>
+              
+              <Link 
+                href="/additional-services" 
+                className="block w-full bg-green-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
+              >
+                View All Micro SaaS →
+              </Link>
+            </div>
+
+            {/* IT Solutions */}
+            <div className="bg-gradient-to-br from-purple-50 to-violet-100 rounded-2xl p-8 border border-purple-200">
+              <div className="text-center mb-6">
+                <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-3xl">☁️</span>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">IT Solutions</h3>
+                <p className="text-gray-600">Comprehensive technology infrastructure</p>
+              </div>
+              
+              <div className="space-y-4 mb-6">
+                <div className="flex items-center justify-between">
+                  <span className="text-gray-700">5G Network Infrastructure</span>
+                  <span className="text-purple-600 font-semibold">$10K-$100K</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-gray-700">Edge Computing Platform</span>
+                  <span className="text-purple-600 font-semibold">$3K-$20K/mo</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-gray-700">Quantum-Safe Cryptography</span>
+                  <span className="text-purple-600 font-semibold">$8K-$60K</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-gray-700">AI-Optimized Data Center</span>
+                  <span className="text-purple-600 font-semibold">$15K-$150K</span>
+                </div>
+              </div>
+              
+              <Link 
+                href="/additional-services" 
+                className="block w-full bg-purple-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+              >
+                View All IT Solutions →
+              </Link>
+            </div>
+          </div>
+
+          {/* Market Opportunities */}
+          <div className="bg-gradient-to-r from-gray-900 to-blue-900 rounded-2xl p-8 text-white">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl md:text-3xl font-bold mb-4">
+                Massive Market Opportunities
+              </h3>
+              <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+                Our solutions address multi-billion dollar markets with proven ROI and competitive advantages
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+              <div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">$1.7T</div>
+                <div className="text-blue-100 text-sm">Pharmaceutical Industry</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">$667B</div>
+                <div className="text-blue-100 text-sm">5G Network Market</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">$366B</div>
+                <div className="text-blue-100 text-sm">Space Industry</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">$248B</div>
+                <div className="text-blue-100 text-sm">Cybersecurity Market</div>
+              </div>
             </div>
           </div>
         </div>
