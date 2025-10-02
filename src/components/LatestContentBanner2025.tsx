@@ -73,7 +73,8 @@ const LatestContentBanner2025: React.FC = () => {
       emoji: "🏆",
       highlight: "MEGA SUCCESS",
       impact: "$10B Revenue"
-=======
+    },
+    {
       title: "Meta-Cognitive AI: The Thinking AI Revolution",
       description: "95% Decision Accuracy, $2M+ Annual Savings",
       slug: "meta-cognitive-ai-revolution-2025",

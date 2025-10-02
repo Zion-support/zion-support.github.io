@@ -124,11 +124,10 @@ function Header() {
                 </Link>
                 <Link href="/services/new-services-catalog" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">
                   New Services Catalog →
-=======
+                </Link>
                 <div className="border-t border-gray-100 my-3"></div>
                 <Link href="/services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 font-medium">
                   📋 View All Services →
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d21e
                 </Link>
               </div>
             </div>

@@ -1556,12 +1556,11 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
-  },
-<<<<<<< HEAD
+  }
 ]);
 
 // Sept 30, 2025 – Fresh articles to add and advertise on homepage
-posts.push([
+posts.concat([
   {
     slug: "ai-safety-scorecards-2026",
     title: "AI Safety Scorecards 2026: KPIs, Budgets, Rollbacks",
