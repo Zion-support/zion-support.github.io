@@ -48,26 +48,15 @@ const ModernHeader: React.FC = () => {
         { label: 'Advanced Cybersecurity AI', path: '/services/advanced-cybersecurity-ai' },
         { label: 'AI Solutions Hub', path: '/ai-solutions' },
         { label: 'Quantum Computing', path: '/quantum-computing' },
-        { label: 'Cybersecurity Platform', path: '/cybersecurity' },
         { label: 'Cloud & DevOps', path: '/cloud-devops' },
-        { label: 'IoT & Edge Computing', path: '/iot-edge-computing' },
-        { label: 'Digital Twin Solutions', path: '/digital-twin' },
-        { label: 'Blockchain & Web3', path: '/blockchain-web3' },
-        { label: 'Space Technology', path: '/space-tech' },
       ]
     },
     {
       label: 'Resources',
       path: '/resources',
       dropdown: [
+        { label: 'Resources Hub', path: '/resources' },
         { label: 'Case Studies', path: '/case-studies' },
-        { label: 'White Papers', path: '/white-papers' },
-        { label: 'Webinars', path: '/webinars' },
-        { label: 'Documentation', path: '/docs' },
-        { label: 'API Reference', path: '/docs/api' },
-        { label: 'Developer Tools', path: '/developer-tools' },
-        { label: 'Training & Certification', path: '/training' },
-        { label: 'Community Forum', path: '/community' },
         { label: 'Blog', path: '/blog' },
       ]
     },
@@ -78,12 +67,6 @@ const ModernHeader: React.FC = () => {
         { label: 'About Us', path: '/about' },
         { label: 'Our Team', path: '/team' },
         { label: 'Partners', path: '/partners' },
-        { label: 'News & Events', path: '/news' },
-        { label: 'Press Kit', path: '/press' },
-        { label: 'Investor Relations', path: '/investors' },
-        { label: 'Sustainability', path: '/sustainability' },
-        { label: 'Diversity & Inclusion', path: '/diversity' },
-        { label: 'Careers', path: '/careers' },
       ]
     },
     {
