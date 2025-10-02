@@ -113,7 +113,7 @@ const App: React.FC = () => {
         <PerformanceMonitor enabled={true} showMetrics={process.env.NODE_ENV === 'development'} />
         <div className="min-h-screen bg-white">
           <ModernHeader />
-          <main>
+          <main id="main-content" role="main">
             <AppRouter />
           </main>
           <ModernFooter />

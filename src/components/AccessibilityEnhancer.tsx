@@ -6,160 +6,205 @@ interface AccessibilityEnhancerProps {
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
   useEffect(() => {
-    // Enhanced keyboard navigation
-    const handleKeyDown = (event: KeyboardEvent) => {
-      // Skip to main content
-      if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
-        const mainContent = document.querySelector('main');
-        if (mainContent) {
-          (mainContent as HTMLElement).focus();
-          event.preventDefault();
-        }
+    // Add accessibility enhancements
+    const enhanceAccessibility = () => {
+      // 1. Add ARIA landmarks
+      const main = document.querySelector('main');
+      if (main && !main.getAttribute('role')) {
+        main.setAttribute('role', 'main');
       }
 
-      // Escape key handling for modals
-      if (event.key === 'Escape') {
-        const modals = document.querySelectorAll('[role="dialog"]');
-        modals.forEach(modal => {
-          const closeButton = modal.querySelector('[aria-label*="close"], [aria-label*="Close"]');
-          if (closeButton && document.activeElement === modal) {
-            (closeButton as HTMLElement).click();
+      const header = document.querySelector('header');
+      if (header && !header.getAttribute('role')) {
+        header.setAttribute('role', 'banner');
+      }
+
+      const footer = document.querySelector('footer');
+      if (footer && !footer.getAttribute('role')) {
+        footer.setAttribute('role', 'contentinfo');
+      }
+
+      // 2. Enhance navigation
+      const nav = document.querySelector('nav');
+      if (nav && !nav.getAttribute('role')) {
+        nav.setAttribute('role', 'navigation');
+        nav.setAttribute('aria-label', 'Main navigation');
+      }
+
+      // 3. Add focus management
+      const focusableElements = document.querySelectorAll(
+        'a[href], button, input, textarea, select, [tabindex]:not([tabindex="-1"])'
+      );
+
+      focusableElements.forEach((element) => {
+        if (!element.getAttribute('tabindex')) {
+          element.setAttribute('tabindex', '0');
+        }
+      });
+
+      // 4. Enhance form elements
+      const inputs = document.querySelectorAll('input, textarea, select');
+      inputs.forEach((input) => {
+        if (!input.getAttribute('aria-label') && !input.getAttribute('aria-labelledby')) {
+          const label = document.querySelector(`label[for="${input.id}"]`);
+          if (label) {
+            input.setAttribute('aria-labelledby', label.id || `label-${input.id}`);
+          }
+        }
+      });
+
+      // 5. Add keyboard navigation support
+      const addKeyboardSupport = () => {
+        // Escape key to close modals
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') {
+            const modals = document.querySelectorAll('[role="dialog"]');
+            modals.forEach((modal) => {
+              const closeButton = modal.querySelector('[aria-label*="close"], [aria-label*="Close"]');
+              if (closeButton) {
+                (closeButton as HTMLElement).click();
+              }
+            });
           }
         });
-      }
-    };
 
-    // Focus management
-    const manageFocus = () => {
-      // Add focus indicators
-      const style = document.createElement('style');
-      style.textContent = `
-        *:focus {
-          outline: 2px solid #3b82f6 !important;
-          outline-offset: 2px !important;
-        }
+        // Arrow keys for dropdown navigation
+        const dropdowns = document.querySelectorAll('[aria-haspopup="true"]');
+        dropdowns.forEach((dropdown) => {
+          dropdown.addEventListener('keydown', (e) => {
+            const menu = dropdown.nextElementSibling;
+            if (menu && menu.getAttribute('role') === 'menu') {
+              const menuItems = menu.querySelectorAll('[role="menuitem"]');
+              const currentIndex = Array.from(menuItems).indexOf(document.activeElement as Element);
+              
+              switch (e.key) {
+                case 'ArrowDown':
+                  e.preventDefault();
+                  const nextIndex = (currentIndex + 1) % menuItems.length;
+                  (menuItems[nextIndex] as HTMLElement).focus();
+                  break;
+                case 'ArrowUp':
+                  e.preventDefault();
+                  const prevIndex = currentIndex <= 0 ? menuItems.length - 1 : currentIndex - 1;
+                  (menuItems[prevIndex] as HTMLElement).focus();
+                  break;
+                case 'Home':
+                  e.preventDefault();
+                  (menuItems[0] as HTMLElement).focus();
+                  break;
+                case 'End':
+                  e.preventDefault();
+                  (menuItems[menuItems.length - 1] as HTMLElement).focus();
+                  break;
+              }
+            }
+          });
+        });
+      };
+
+      addKeyboardSupport();
+
+      // 6. Add screen reader announcements
+      const announceToScreenReader = (message: string) => {
+        const announcement = document.createElement('div');
+        announcement.setAttribute('aria-live', 'polite');
+        announcement.setAttribute('aria-atomic', 'true');
+        announcement.className = 'sr-only';
+        announcement.textContent = message;
+        document.body.appendChild(announcement);
         
-        .focus-visible:focus {
-          outline: 2px solid #3b82f6 !important;
-          outline-offset: 2px !important;
-        }
-        
-        /* High contrast mode support */
-        @media (prefers-contrast: high) {
-          * {
-            border-color: currentColor !important;
+        setTimeout(() => {
+          document.body.removeChild(announcement);
+        }, 1000);
+      };
+
+      // 7. Enhance color contrast
+      const enhanceColorContrast = () => {
+        const style = document.createElement('style');
+        style.textContent = `
+          /* High contrast mode support */
+          @media (prefers-contrast: high) {
+            :root {
+              --color-primary: #0000ff;
+              --color-secondary: #000000;
+              --color-text: #000000;
+              --color-background: #ffffff;
+            }
+            
+            button, a {
+              border: 2px solid currentColor;
+            }
           }
-        }
-        
-        /* Reduced motion support */
-        @media (prefers-reduced-motion: reduce) {
-          *, *::before, *::after {
-            animation-duration: 0.01ms !important;
-            animation-iteration-count: 1 !important;
-            transition-duration: 0.01ms !important;
+          
+          /* Reduced motion support */
+          @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+              animation-duration: 0.01ms !important;
+              animation-iteration-count: 1 !important;
+              transition-duration: 0.01ms !important;
+              scroll-behavior: auto !important;
+            }
           }
-        }
-      `;
-      document.head.appendChild(style);
+          
+          /* Focus indicators */
+          *:focus {
+            outline: 2px solid #3b82f6;
+            outline-offset: 2px;
+          }
+          
+          /* Skip link */
+          .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: #000;
+            color: #fff;
+            padding: 8px;
+            text-decoration: none;
+            z-index: 1000;
+          }
+          
+          .skip-link:focus {
+            top: 6px;
+          }
+          
+          /* Screen reader only content */
+          .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+          }
+        `;
+        document.head.appendChild(style);
+      };
 
-      // Add skip link
-      const skipLink = document.createElement('a');
-      skipLink.href = '#main-content';
-      skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
-      skipLink.style.cssText = `
-        position: absolute;
-        top: -40px;
-        left: 6px;
-        background: #2563eb;
-        color: white;
-        padding: 8px;
-        text-decoration: none;
-        border-radius: 4px;
-        z-index: 1000;
-        transition: top 0.3s;
-      `;
-      
-      skipLink.addEventListener('focus', () => {
-        skipLink.style.top = '6px';
-      });
-      
-      skipLink.addEventListener('blur', () => {
-        skipLink.style.top = '-40px';
-      });
+      enhanceColorContrast();
 
-      document.body.insertBefore(skipLink, document.body.firstChild);
+      // 8. Add loading states
+      const addLoadingStates = () => {
+        const buttons = document.querySelectorAll('button[type="submit"], button[data-loading]');
+        buttons.forEach((button) => {
+          button.addEventListener('click', () => {
+            button.setAttribute('aria-busy', 'true');
+            button.setAttribute('disabled', 'true');
+            button.textContent = 'Loading...';
+          });
+        });
+      };
 
-      // Add main content ID
-      const mainContent = document.querySelector('main');
-      if (mainContent && !mainContent.id) {
-        mainContent.id = 'main-content';
-      }
+      addLoadingStates();
     };
 
-    // ARIA enhancements
-    const enhanceARIA = () => {
-      // Add ARIA labels to buttons without text
-      const iconButtons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
-      iconButtons.forEach(button => {
-        const icon = button.querySelector('svg');
-        if (icon && !button.textContent?.trim()) {
-          const iconName = icon.getAttribute('data-icon') || 'button';
-          button.setAttribute('aria-label', iconName);
-        }
-      });
+    // Run enhancements after a short delay to ensure DOM is ready
+    const timer = setTimeout(enhanceAccessibility, 100);
 
-      // Add role to navigation elements
-      const navElements = document.querySelectorAll('nav:not([role])');
-      navElements.forEach(nav => nav.setAttribute('role', 'navigation'));
-
-      // Add heading hierarchy
-      const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-      headings.forEach((heading, index) => {
-        if (!heading.id) {
-          const text = heading.textContent?.toLowerCase().replace(/\s+/g, '-') || `heading-${index}`;
-          heading.id = text;
-        }
-      });
-    };
-
-    // Color contrast checker
-    const checkColorContrast = () => {
-      const elements = document.querySelectorAll('*');
-      elements.forEach(element => {
-        const styles = window.getComputedStyle(element);
-        const color = styles.color;
-        const backgroundColor = styles.backgroundColor;
-        
-        // Basic contrast check (simplified)
-        if (color && backgroundColor && backgroundColor !== 'rgba(0, 0, 0, 0)') {
-          // This is a simplified check - in production, you'd want a more robust solution
-          element.setAttribute('data-contrast-checked', 'true');
-        }
-      });
-    };
-
-    // Initialize all enhancements
-    document.addEventListener('keydown', handleKeyDown);
-    manageFocus();
-    enhanceARIA();
-    checkColorContrast();
-
-    // Re-run enhancements when DOM changes
-    const observer = new MutationObserver(() => {
-      enhanceARIA();
-      checkColorContrast();
-    });
-
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true
-    });
-
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-      observer.disconnect();
-    };
+    return () => clearTimeout(timer);
   }, []);
 
   return <>{children}</>;

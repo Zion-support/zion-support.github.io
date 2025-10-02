@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-# Sitemap
+# Sitemaps
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
 # Disallow admin and private areas
@@ -11,11 +11,11 @@ Disallow: /_next/
 Disallow: /private/
 
 # Allow important pages
-Allow: /services/
-Allow: /blog/
-Allow: /case-studies/
-Allow: /about/
-Allow: /contact/
-
-# Crawl delay
-Crawl-delay: 1
+Allow: /
+Allow: /about
+Allow: /services
+Allow: /solutions
+Allow: /case-studies
+Allow: /blog
+Allow: /contact
+Allow: /resources

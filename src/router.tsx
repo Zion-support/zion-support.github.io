@@ -37,6 +37,8 @@ import AISolutions from './pages/AISolutions';
 import Pricing from './pages/Pricing';
 import Demo from './pages/Demo';
 import Support from './pages/Support';
+import Privacy from './pages/Privacy';
+import Terms from './pages/Terms';
 
 export const AppRouter: React.FC = () => {
   return (
@@ -121,8 +123,8 @@ export const AppRouter: React.FC = () => {
       
       {/* Additional action routes */}
       <Route path="/request-quote" element={<Contact />} />
-      <Route path="/privacy" element={<About />} />
-      <Route path="/terms" element={<About />} />
+      <Route path="/privacy" element={<Privacy />} />
+      <Route path="/terms" element={<Terms />} />
       <Route path="/cookies" element={<About />} />
       <Route path="/status" element={<Support />} />
     </Routes>
