@@ -1,11 +1,12 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   const footerLinks = {
     services: [
+      { name: 'All Services', href: '/services' },
       { name: 'AI Services', href: '/ai-services' },
       { name: 'Micro SaaS', href: '/services/micro-saas' },
       { name: 'IT Services', href: '/services/it-services-comprehensive' },
@@ -16,6 +17,11 @@ const Footer: React.FC = () => {
       { name: 'Data Analytics', href: '/services/data-analytics-business-intelligence' },
       { name: 'Additional Services', href: '/additional-services' },
       { name: 'Comprehensive Services', href: '/comprehensive-services' },
+      { name: 'AI Content Tools', href: '/services/ai-powered-content-tools' },
+      { name: 'Telemedicine Platform', href: '/services/telemedicine-platform' },
+      { name: 'Remote Collaboration', href: '/services/remote-collaboration-suite' },
+      { name: 'API Integration', href: '/services/api-integration-platform' },
+      { name: 'Customer Insights', href: '/services/ai-customer-insights-platform' },
     ],
     solutions: [
       { name: 'All Solutions', href: '/solutions' },
@@ -62,7 +68,7 @@ const Footer: React.FC = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center space-x-2 mb-6">
+            <Link to="/" className="flex items-center space-x-2 mb-6">
               <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">Z</span>
               </div>
@@ -118,7 +124,7 @@ const Footer: React.FC = () => {
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
                   <Link
-                    href={link.href}
+                    to={link.href}
                     className="text-gray-400 hover:text-white transition-colors"
                   >
                     {link.name}
@@ -135,7 +141,7 @@ const Footer: React.FC = () => {
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
                   <Link
-                    href={link.href}
+                    to={link.href}
                     className="text-gray-400 hover:text-white transition-colors"
                   >
                     {link.name}
@@ -152,7 +158,7 @@ const Footer: React.FC = () => {
               {footerLinks.resources.map((link) => (
                 <li key={link.name}>
                   <Link
-                    href={link.href}
+                    to={link.href}
                     className="text-gray-400 hover:text-white transition-colors"
                   >
                     {link.name}
@@ -191,13 +197,13 @@ const Footer: React.FC = () => {
             © {currentYear} Zion Tech Solutions. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link href="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
+            <Link to="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
               Terms of Service
             </Link>
-            <Link href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
+            <Link to="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
               Privacy Policy
             </Link>
-            <Link href="/sitemap" className="text-gray-400 hover:text-white text-sm transition-colors">Sitemap</Link>
+            <Link to="/sitemap" className="text-gray-400 hover:text-white text-sm transition-colors">Sitemap</Link>
           </div>
         </div>
       </div>

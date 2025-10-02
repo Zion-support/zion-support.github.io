@@ -1,16 +1,8 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import ComprehensiveServices from './ComprehensiveServices';
-=======
-import React from 'react';';
-import {
-Helmet
-} from 'react-helmet-async';';
-import ComprehensiveServices from './ComprehensiveServices';';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
-const Services: React.FC = () => {,
+const Services: React.FC = () => {
 
   return (
     <>
@@ -26,4 +18,3 @@ const Services: React.FC = () => {,
 };
 
 export default Services;
-;
