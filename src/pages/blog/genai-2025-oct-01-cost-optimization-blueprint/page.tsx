@@ -23,7 +23,7 @@ export default function GenAICostOptimizationBlueprint(): React.JSX.Element {
             experience while keeping costs predictable.
           </p>
           <p>
-            We cover multi-tier routing strategies, cache hit optimization,
+            We cover multi-tier routing strategies, cache hit optimization
             fallback patterns, and evaluators that protect task quality under
             variable loads and budgets.
           </p>

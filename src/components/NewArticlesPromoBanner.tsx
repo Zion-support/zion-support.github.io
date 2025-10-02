@@ -7,10 +7,11 @@ rotationInterval?: number;
 className?: string;
 }
 
-const NewArticlesPromoBanner: React.FC<NewArticlesPromoBannerProps> = ({ variant = 'default',
-  showCount = 3,
-  autoRotate = false,
-  rotationInterval = 5000,
+const NewArticlesPromoBanner: React.FC<NewArticlesPromoBannerProps> = ({
+  variant = 'default'
+  showCount = 3
+  autoRotate = false
+  rotationInterval = 5000
   className = ''
 }) => {
   const [, setCurrentIndex] = useState(0);

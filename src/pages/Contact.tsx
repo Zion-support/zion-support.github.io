@@ -10,52 +10,52 @@ const ContactFormComponent: React.FC = () => null,
 export default function Contact(): React.JSX.Element {
   const contactInfo = [
     {
-      icon: <Mail className="w-6 h-6/>,",
-      title: "Email Us",",
-      details: "hello@ziontechgroup.com",",
-      description: "Send us an email anytime",",
+      icon: <Mail className="w-6 h-6" />,
+      title: "Email Us",
+      details: "hello@ziontechgroup.com",
+      description: "Send us an email anytime"
     },
     {
-      icon: <Phone className="w-6 h-6/>,",
-      title: "Call Us",",
-      details: "+1 (555) 123-4567",",
-      description: "Mon-Fri from 9am to 6pm",",
+      icon: <Phone className="w-6 h-6" />,
+      title: "Call Us",
+      details: "+1 (555) 123-4567",
+      description: "Mon-Fri from 9am to 6pm"
     },
     {
-      icon: <MapPin className="w-6 h-6/>,",
-      title: "Visit Us",",
-      details: "123 Tech Street, San Francisco, CA 94105",",
-      description: "Come say hello at our office",",
+      icon: <MapPin className="w-6 h-6" />,
+      title: "Visit Us",
+      details: "123 Tech Street, San Francisco, CA 94105",
+      description: "Come say hello at our office"
     },
     {
-      icon: <Clock className="w-6 h-6/>,",
-      title: "Response Time",",
-      details: "Within 24 hours",",
-      description: "We respond to all inquiries quickly",",
-    },
+      icon: <Clock className="w-6 h-6" />,
+      title: "Response Time",
+      details: "Within 24 hours",
+      description: "We respond to all inquiries quickly"
+    }
   ];
 
   const stats = [
     {
-      icon: <Users className="w-8 h-8/>,",
-      value: "500+",",
-      label: "Happy Clients",",
+      icon: <Users className="w-8 h-8" />,
+      value: "500+",
+      label: "Happy Clients"
     },
     {
-      icon: <Award className="w-8 h-8/>,",
-      value: "99.9%",",
-      label: "Satisfaction Rate",",
+      icon: <Award className="w-8 h-8" />,
+      value: "99.9%",
+      label: "Satisfaction Rate"
     },
     {
-      icon: <Globe className="w-8 h-8/>,",
-      value: "50+",",
-      label: "Countries Served",",
+      icon: <Globe className="w-8 h-8" />,
+      value: "50+",
+      label: "Countries Served"
     },
     {
-      icon: <Zap className="w-8 h-8/>,",
-      value: "24/7",",
-      label: "Support Available",",
-    },
+      icon: <Zap className="w-8 h-8" />,
+      value: "24/7",
+      label: "Support Available"
+    }
   ];
 
   return (
@@ -210,21 +210,25 @@ export default function Contact(): React.JSX.Element {
             <div className="max-w-4xl mx-auto space-y-6">
               {[
                 {
-                  question: "How quickly can you start my project?",",
-                  answer: "We typically begin new projects within 1-2 weeks of contract signing. Rush projects can be accommodated with additional planning.",",
+                  question: "How quickly can you start my project?",
+                  answer:
+                    "We typically begin new projects within 1-2 weeks of contract signing. Rush projects can be accommodated with additional planning."
                 },
                 {
-                  question: "What&apos;s your typical project timeline?",",
-                  answer: "Project timelines vary based on complexity. Simple websites take 2-4 weeks, while complex AI implementations can take 3-6 months.",",
+                  question: "What&apos;s your typical project timeline?",
+                  answer:
+                    "Project timelines vary based on complexity. Simple websites take 2-4 weeks, while complex AI implementations can take 3-6 months."
                 },
                 {
-                  question: "Do you provide ongoing support?",",
-                  answer: "Yes! We offer comprehensive support packages including maintenance, updates, and 24/7 monitoring for all our solutions.",",
+                  question: "Do you provide ongoing support?",
+                  answer:
+                    "Yes! We offer comprehensive support packages including maintenance, updates, and 24/7 monitoring for all our solutions."
                 },
                 {
-                  question: "What technologies do you specialize in?",",
-                  answer: "We specialize in AI/ML, cloud computing, cybersecurity, quantum computing, and modern web technologies like React, Node.js, and Python.",",
-                },
+                  question: "What technologies do you specialize in?",
+                  answer:
+                    "We specialize in AI/ML, cloud computing, cybersecurity, quantum computing, and modern web technologies like React, Node.js, and Python."
+                }
               ].map((faq, index) => (
                 <div
                   key={index}

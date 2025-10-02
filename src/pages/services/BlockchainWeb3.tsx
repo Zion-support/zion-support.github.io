@@ -1,10 +1,6 @@
 import React from 'react';
-import {
-Helmet
-} from 'react-helmet-async';
-import {
-Coins
-} from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Coins } from 'lucide-react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 const BlockchainWeb3: React.FC = () => {,
@@ -49,66 +45,66 @@ const BlockchainWeb3: React.FC = () => {,
 
   const pricing = [
     {
-      name: "Startup",",
-      price: "$8,500",",
-      period: "/month",",
-      description: "Perfect for startups and small projects entering the Web3 space",",
+      name: "Startup",
+      price: "$8,500",
+      period: "/month",
+      description: "Perfect for startups and small projects entering the Web3 space",
       features: [,
-        "Basic smart contract development",";
-        "Single blockchain integration",";
-        "Standard security auditing",";
-        "Email support",";
-        "Monthly progress reports",";
-        "Basic DeFi protocol setup",";
-        "Simple NFT marketplace",";
-        "Standard token development",";
+        "Basic smart contract development",
+        "Single blockchain integration",
+        "Standard security auditing",
+        "Email support",
+        "Monthly progress reports",
+        "Basic DeFi protocol setup",
+        "Simple NFT marketplace",
+        "Standard token development",
         "Basic analytics dashboard"
-      ],
-      popular: false,
+      ]
+      popular: false
     },
     {
-      name: "Growth",",
-      price: "$25,000",",
-      period: "/month",",
-      description: "Ideal for growing projects with complex blockchain requirements",",
+      name: "Growth",
+      price: "$25,000",
+      period: "/month",
+      description: "Ideal for growing projects with complex blockchain requirements",
       features: [,
-        "Advanced smart contract development",";
-        "Multi-chain integration (5 networks)",";
-        "Comprehensive security auditing",";
-        "Priority support",";
-        "Weekly progress reports",";
-        "Advanced DeFi protocols",";
-        "Custom NFT marketplace with advanced features",";
-        "Tokenomics design & implementation",";
-        "Advanced analytics & reporting",";
-        "Custom Web3 integrations",";
-        "DAO governance setup",";
+        "Advanced smart contract development",
+        "Multi-chain integration (5 networks)",
+        "Comprehensive security auditing",
+        "Priority support",
+        "Weekly progress reports",
+        "Advanced DeFi protocols",
+        "Custom NFT marketplace with advanced features",
+        "Tokenomics design & implementation",
+        "Advanced analytics & reporting",
+        "Custom Web3 integrations",
+        "DAO governance setup",
         "Yield farming protocols"
-      ],
-      popular: true,
+      ]
+      popular: true
     },
     {
-      name: "Enterprise",",
-      price: "$75,000",",
-      period: "/month",",
-      description: "Complete solution for large-scale blockchain and Web3 implementations",",
+      name: "Enterprise",
+      price: "$75,000",
+      period: "/month",
+      description: "Complete solution for large-scale blockchain and Web3 implementations",
       features: [,
-        "Enterprise-grade smart contract suite",";
-        "Unlimited blockchain integrations",";
-        "Third-party security audits",";
-        "Dedicated blockchain architect",";
-        "Daily progress reports",";
-        "Complex DeFi ecosystem development",";
-        "Enterprise NFT & tokenization platform",";
-        "Custom blockchain development",";
-        "Enterprise analytics & compliance",";
-        "Full Web3 ecosystem integration",";
-        "Advanced DAO governance",";
-        "Cross-chain bridge development",";
-        "SLA guarantee",";
+        "Enterprise-grade smart contract suite",
+        "Unlimited blockchain integrations",
+        "Third-party security audits",
+        "Dedicated blockchain architect",
+        "Daily progress reports",
+        "Complex DeFi ecosystem development",
+        "Enterprise NFT & tokenization platform",
+        "Custom blockchain development",
+        "Enterprise analytics & compliance",
+        "Full Web3 ecosystem integration",
+        "Advanced DAO governance",
+        "Cross-chain bridge development",
+        "SLA guarantee",
         "24/7 monitoring & support"
-      ],
-      popular: false,
+      ]
+      popular: false
     }
   ];
 
@@ -168,18 +164,18 @@ const BlockchainWeb3: React.FC = () => {,
   ];
 
   const technologies = [
-    { name: "Ethereum", type: "Smart Contracts" },";
-    { name: "Polygon", type: "Layer 2 Scaling" },";
-    { name: "Binance Smart Chain", type: "High Performance" },";
-    { name: "Solana", type: "Ultra Fast" },";
-    { name: "Polkadot", type: "Interoperability" },";
-    { name: "Avalanche", type: "Subnets" },";
-    { name: "Arbitrum", type: "Optimistic Rollups" },";
-    { name: "Optimism", type: "Layer 2 Solution" },";
-    { name: "Cosmos", type: "Inter-Blockchain" },";
-    { name: "Near Protocol", type: "Developer Friendly" },";
-    { name: "Algorand", type: "Pure Proof of Stake" },";
-    { name: "Fantom", type: "Fast Finality" }";
+    { name: "Ethereum", type: "Smart Contracts" }
+    { name: "Polygon", type: "Layer 2 Scaling" }
+    { name: "Binance Smart Chain", type: "High Performance" }
+    { name: "Solana", type: "Ultra Fast" }
+    { name: "Polkadot", type: "Interoperability" }
+    { name: "Avalanche", type: "Subnets" }
+    { name: "Arbitrum", type: "Optimistic Rollups" }
+    { name: "Optimism", type: "Layer 2 Solution" }
+    { name: "Cosmos", type: "Inter-Blockchain" }
+    { name: "Near Protocol", type: "Developer Friendly" }
+    { name: "Algorand", type: "Pure Proof of Stake" }
+    { name: "Fantom", type: "Fast Finality" }
   ];
 
   return (
@@ -201,8 +197,8 @@ const BlockchainWeb3: React.FC = () => {,
               <h1 className="text-5xl md: text-7xl font-bold mb-6">",
                 Blockchain & <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">Web3</span>
               </h1>
-              <p className="text-xl md: text-2xl text-indigo-100 max-w-4xl mx-auto mb-8">",
-                Expert blockchain and Web3 services including DeFi protocols, NFT marketplaces, 
+              <p className="text-xl md:text-2xl text-indigo-100 max-w-4xl mx-auto mb-8">
+                Expert blockchain and Web3 services including DeFi protocols, NFT marketplaces
                 DAO governance, and enterprise-grade smart contract development with multi-chain integration.
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center">",
@@ -410,7 +406,7 @@ const BlockchainWeb3: React.FC = () => {,
                     className={
 `w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${`;
 plan.popular
-? 'bg-indigo-600 text-white hover: bg-indigo-700',',
+? 'bg-indigo-600 text-white hover:bg-indigo-700'
 : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
 }`}`;
                   >

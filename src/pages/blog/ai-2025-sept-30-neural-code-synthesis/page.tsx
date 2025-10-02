@@ -25,7 +25,7 @@ export default function NeuralCodeSynthesis2025(): React.JSX.Element {
         <div className="prose prose-invert max-w-3xl">
           <p>
             This guide outlines how to safely deploy neural code assistants in
-            enterprise environments. It covers KPI-linked eval scorecards,
+            enterprise environments. It covers KPI-linked eval scorecards
             CI policy tests, change failure rate baselines, and rollback
             guardrails that let teams accelerate delivery without regressions.
           </p>

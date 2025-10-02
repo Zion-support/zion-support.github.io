@@ -22,19 +22,17 @@ locale?: string;
 export function generateMetaTags(config: SEOConfig): Record<string, string> {,
   const meta: Record<string, string> = {,
     // Basic meta
-    title: config.title,,
-    description: config.description,,
-    
+    title: config.title,
+    description: config.description,
     // Open Graph
-    'og:title': config.title,',
-    'og:description': config.description,',
-    'og:type': config.type || 'website',',
-    'og:locale': config.locale || 'en_US',',
-    
+    'og:title': config.title,
+    'og:description': config.description,
+    'og:type': config.type || 'website',
+    'og:locale': config.locale || 'en_US',
     // Twitter Card
-    'twitter:card': 'summary_large_image',',
-    'twitter:title': config.title,',
-    'twitter:description': config.description,',
+    'twitter:card': 'summary_large_image',
+    'twitter:title': config.title,
+    'twitter:description': config.description
   };
 
   if (config.keywords && config.keywords.length > 0) {
@@ -47,7 +45,7 @@ export function generateMetaTags(config: SEOConfig): Record<string, string> {,
   }
 
   if (config.ogImage) {
-meta['og:image'] = config.ogImage,',
+meta['og:image'] = config.ogImage;
 meta['twitter:image'] = config.ogImage;
 }
 
@@ -74,12 +72,12 @@ export function generateStructuredData(config: SEOConfig): object {,
   const structuredData: any = {,
     '@context': 'https://schema.org',',
     '@type': config.type === 'article' ? 'Article' : 'WebPage',
-    headline: config.title,,
-    description: config.description,,
+    headline: config.title,
+    description: config.description,
     author: {,
       '@type': 'Organization',
-      name: config.author || 'Zion Tech Group',',
-    },
+      name: config.author || 'Zion Tech Group'
+    }
   };
 
   if (config.publishDate) {
@@ -143,7 +141,7 @@ export function extractKeywords(content: string, maxKeywords: number = 20): stri
     'the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for',
     'of', 'with', 'by', 'from', 'as', 'is', 'was', 'are', 'were', 'been',
     'be', 'have', 'has', 'had', 'do', 'does', 'did', 'will', 'would', 'could',
-    'should', 'may', 'might', 'must', 'can', 'this', 'that', 'these', 'those',
+    'should', 'may', 'might', 'must', 'can', 'this', 'that', 'these', 'those'
   ]);
 
   // Extract words

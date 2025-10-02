@@ -1,10 +1,7 @@
 import React from 'react';
-import {
-Link
-} from 'react-router-dom';
-import {
-ArrowRight
-} from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+
 interface BannerType {
 id: string,
 title: string,
@@ -20,7 +17,8 @@ banner: BannerType,
 className?: string;
 }
 
-const EnhancedPromotionalBanner: React.FC<EnhancedPromotionalBannerProps> = ({ banner,
+const EnhancedPromotionalBanner: React.FC<EnhancedPromotionalBannerProps> = ({
+  banner
   className = ''
 }) => {
   const variantStyles = {

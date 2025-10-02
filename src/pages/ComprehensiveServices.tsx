@@ -1,13 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Zap, Bot, BarChart3, Shield, Cloud, Database,
-  Smartphone, Globe, Cpu, Lock, Users, FileText,
-  TrendingUp, Settings, Headphones, Code,
-  Brain, Target, CheckCircle, Star,
-  Mail, MessageCircle
-} from 'lucide-react';
-const ComprehensiveServices: React.FC = () => {,
+import { Zap, Bot, BarChart3, Shield, Cloud, Database, Smartphone, Globe, Cpu, Lock, Users, FileText, TrendingUp, Settings, Headphones, Code, Brain, Target, CheckCircle, Star, Mail, MessageCircle } from 'lucide-react';
+
+const ComprehensiveServices: React.FC = () => {
   const microSaasServices = [
     {
       id: 'ai-content-generator',',
@@ -105,121 +100,147 @@ const ComprehensiveServices: React.FC = () => {,
       link: '/services/conversational-ai',',
     },
     {
-      id: 'ai-data-analytics',',
-      title: 'AI Data Analytics Platform',',
-      description: 'Turn raw data into actionable insights with advanced machine learning, predictive analytics, and automated reporting.',',
-      features: ['Predictive analytics', 'Automated reporting', 'Real-time dashboards', 'Data visualization', 'ML models'],',
-      pricing: 'Starting at $299/month',',
-      icon: BarChart3,,
-      color: 'from-green-600 to-teal-600',',
-      link: '/services/ai-data-analytics',',
+      id: 'ai-predictive-analytics',
+      title: 'AI Predictive Analytics',
+      description: 'Transform your business with advanced AI predictive analytics that deliver 94% accuracy in forecasting, customer behavior prediction, and risk assessment.',
+      features: ['94% prediction accuracy', 'Real-time forecasting', 'Customer lifetime value', 'Revenue forecasting', 'Risk assessment'],
+      pricing: 'Starting at $299/month',
+      icon: BarChart3,
+      color: 'from-indigo-600 to-purple-600',
+      link: '/services/ai-predictive-analytics'
     },
     {
-      id: 'edge-computing-ai',',
-      title: 'Edge Computing AI',',
-      description: 'Deploy AI at the edge for real-time processing with sub-10ms response times. Transform IoT, industrial, and smart city applications.',',
-      features: ['Sub-10ms response times', 'Offline capability', '90% latency reduction', 'Unlimited scale', 'Real-time analytics'],',
-      pricing: 'Starting at $1,999/month',',
-      icon: Cpu,,
-      color: 'from-teal-600 to-blue-600',',
-      link: '/services/edge-computing-ai',',
+      id: 'conversational-ai',
+      title: 'Conversational AI',
+      description: 'Deploy advanced conversational AI with 96% accuracy, 150+ language support, and multi-modal conversations for customer support, sales, and engagement.',
+      features: ['96% conversation accuracy', '150+ languages', 'Multi-modal support', 'Real-time processing', 'Enterprise security'],
+      pricing: 'Starting at $399/month',
+      icon: MessageCircle,
+      color: 'from-violet-600 to-pink-600',
+      link: '/services/conversational-ai'
     },
     {
-      id: 'ai-document-processing',',
-      title: 'Intelligent Document Processing',',
-      description: 'Extract, classify, and process documents automatically with 99% accuracy using advanced OCR and NLP technologies.',',
-      features: ['99% accuracy', 'OCR technology', 'NLP processing', 'Document classification', 'Data extraction'],',
-      pricing: 'Starting at $149/month',',
-      icon: FileText,,
-      color: 'from-indigo-600 to-blue-600',',
-      link: '/services/ai-document-processing',',
+      id: 'ai-data-analytics',
+      title: 'AI Data Analytics Platform',
+      description: 'Turn raw data into actionable insights with advanced machine learning, predictive analytics, and automated reporting.',
+      features: ['Predictive analytics', 'Automated reporting', 'Real-time dashboards', 'Data visualization', 'ML models'],
+      pricing: 'Starting at $299/month',
+      icon: BarChart3,
+      color: 'from-green-600 to-teal-600',
+      link: '/services/ai-data-analytics'
     },
     {
-      id: 'ai-cognitive-automation',',
-      title: 'Real-Time Cognitive Automation',',
-      description: 'Advanced AI system that learns and adapts to your business processes in real-time, optimizing performance continuously.',',
-      features: ['Real-time learning', 'Adaptive algorithms', 'Performance optimization', 'Self-healing systems', 'Continuous improvement'],',
-      pricing: 'Custom pricing',',
-      icon: Brain,,
-      color: 'from-cyan-600 to-blue-600',',
-      link: '/services/ai-cognitive-automation',',
+      id: 'edge-computing-ai',
+      title: 'Edge Computing AI',
+      description: 'Deploy AI at the edge for real-time processing with sub-10ms response times. Transform IoT, industrial, and smart city applications.',
+      features: ['Sub-10ms response times', 'Offline capability', '90% latency reduction', 'Unlimited scale', 'Real-time analytics'],
+      pricing: 'Starting at $1,999/month',
+      icon: Cpu,
+      color: 'from-teal-600 to-blue-600',
+      link: '/services/edge-computing-ai'
     },
     {
-      id: 'ai-cybersecurity',',
-      title: 'Advanced Cybersecurity AI',',
-      description: 'AI-powered security solutions that detect and prevent threats in real-time with advanced behavioral analysis.',',
-      features: ['Real-time threat detection', 'Behavioral analysis', 'Automated response', 'Threat intelligence', 'Compliance monitoring'],',
-      pricing: 'Starting at $399/month',',
-      icon: Shield,,
-      color: 'from-red-600 to-orange-600',',
-      link: '/services/ai-cybersecurity',',
+      id: 'ai-document-processing',
+      title: 'Intelligent Document Processing',
+      description: 'Extract, classify, and process documents automatically with 99% accuracy using advanced OCR and NLP technologies.',
+      features: ['99% accuracy', 'OCR technology', 'NLP processing', 'Document classification', 'Data extraction'],
+      pricing: 'Starting at $149/month',
+      icon: FileText,
+      color: 'from-indigo-600 to-blue-600',
+      link: '/services/ai-document-processing'
     },
+    {
+      id: 'ai-cognitive-automation',
+      title: 'Real-Time Cognitive Automation',
+      description: 'Advanced AI system that learns and adapts to your business processes in real-time, optimizing performance continuously.',
+      features: ['Real-time learning', 'Adaptive algorithms', 'Performance optimization', 'Self-healing systems', 'Continuous improvement'],
+      pricing: 'Custom pricing',
+      icon: Brain,
+      color: 'from-cyan-600 to-blue-600',
+      link: '/services/ai-cognitive-automation'
+    },
+    {
+      id: 'ai-cybersecurity',
+      title: 'Advanced Cybersecurity AI',
+      description: 'AI-powered security solutions that detect and prevent threats in real-time with advanced behavioral analysis.',
+      features: ['Real-time threat detection', 'Behavioral analysis', 'Automated response', 'Threat intelligence', 'Compliance monitoring'],
+      pricing: 'Starting at $399/month',
+      icon: Shield,
+      color: 'from-red-600 to-orange-600',
+      link: '/services/ai-cybersecurity'
+    }
   ];
 
   const itServices = [
     {
-      id: 'cloud-migration',',
+      id: 'cloud-migration',
       title: 'Cloud Migration Services',
       description: 'Seamless migration to cloud platforms with zero downtime. AWS, Azure, and GCP certified experts.',
-      features: ['Zero downtime migration', 'Multi-cloud support', 'Cost optimization', 'Security compliance', '24/7 support']',
+      features: ['Zero downtime migration', 'Multi-cloud support', 'Cost optimization', 'Security compliance', '24/7 support'],
       pricing: 'Starting at $5,000',
-      icon: Cloud,,
+      icon: Cloud,
       color: 'from-blue-600 to-cyan-600',
-      link: '/services/cloud-migration},
+      link: '/services/cloud-migration'
+    },
     {
-      id: 'devops-automation',',
+      id: 'devops-automation',
       title: 'DevOps Automation',
       description: 'Complete DevOps transformation with CI/CD pipelines, infrastructure as code, and automated testing.',
-      features: ['CI/CD pipelines', 'Infrastructure as code', 'Automated testing', 'Monitoring & alerting', 'Security scanning']',
+      features: ['CI/CD pipelines', 'Infrastructure as code', 'Automated testing', 'Monitoring & alerting', 'Security scanning'],
       pricing: 'Starting at $3,000/month',
-      icon: Settings,,
+      icon: Settings,
       color: 'from-green-600 to-emerald-600',
-      link: '/services/devops-automation},
+      link: '/services/devops-automation'
+    },
     {
-      id: 'database-optimization',',
+      id: 'database-optimization',
       title: 'Database Optimization',
       description: 'Optimize database performance, implement backup strategies, and ensure data security and compliance.',
-      features: ['Performance tuning', 'Backup strategies', 'Data security', 'Compliance', 'Monitoring']',
+      features: ['Performance tuning', 'Backup strategies', 'Data security', 'Compliance', 'Monitoring'],
       pricing: 'Starting at $2,500',
-      icon: Database,,
+      icon: Database,
       color: 'from-purple-600 to-violet-600',
-      link: '/services/database-optimization},
+      link: '/services/database-optimization'
+    },
     {
-      id: 'mobile-app-development',',
+      id: 'mobile-app-development',
       title: 'Mobile App Development',
       description: 'Native and cross-platform mobile app development with modern frameworks and best practices.',
-      features: ['Native & cross-platform', 'Modern frameworks', 'App store optimization', 'Performance optimization', 'Maintenance']',
+      features: ['Native & cross-platform', 'Modern frameworks', 'App store optimization', 'Performance optimization', 'Maintenance'],
       pricing: 'Starting at $15,000',
-      icon: Smartphone,,
+      icon: Smartphone,
       color: 'from-pink-600 to-rose-600',
-      link: '/services/mobile-app-development},
+      link: '/services/mobile-app-development'
+    },
     {
-      id: 'quantum-computing',',
+      id: 'quantum-computing',
       title: 'Quantum Computing Solutions',
       description: 'Cutting-edge quantum computing services for optimization, cryptography, and advanced simulations.',
-      features: ['Quantum algorithms', 'Cryptography', 'Optimization problems', 'Simulation', 'Research & development']',
+      features: ['Quantum algorithms', 'Cryptography', 'Optimization problems', 'Simulation', 'Research & development'],
       pricing: 'Custom pricing',
-      icon: Cpu,,
+      icon: Cpu,
       color: 'from-indigo-600 to-purple-600',
-      link: '/services/quantum-computing},
+      link: '/services/quantum-computing'
+    },
     {
-      id: 'blockchain-web3',',
+      id: 'blockchain-web3',
       title: 'Blockchain & Web3 Development',
       description: 'Smart contracts, DeFi solutions, NFT platforms, and blockchain infrastructure development.',
-      features: ['Smart contracts', 'DeFi solutions', 'NFT platforms', 'Blockchain infrastructure', 'Token development']',
+      features: ['Smart contracts', 'DeFi solutions', 'NFT platforms', 'Blockchain infrastructure', 'Token development'],
       pricing: 'Starting at $10,000',
-      icon: Lock,,
+      icon: Lock,
       color: 'from-yellow-600 to-orange-600',
-      link: '/services/blockchain-web3},
+      link: '/services/blockchain-web3'
+    }
   ];
 
   const ServiceCard = ({ service }: { service: any }) => {
 const Icon = service.icon;
 return (
-<div className="bg-white rounded-xl shadow-lg hover: shadow-2xl transition-all duration-300 hover:scale-105 overflow-hidden">,",
-<div className={`bg-gradient-to-br ${service.color`;
-} p-6 text-white`}>`;
-          <Icon className="w-12 h-12 mb-4/>
+<div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 overflow-hidden">
+<div className={`bg-gradient-to-br ${service.color
+} p-6 text-white`}>
+          <Icon className="w-12 h-12 mb-4" />
           <h3 className="text-xl font-bold mb-2">{service.title}</h3>
           <p className="text-white/90 mb-4">{service.description}</p>
           <div className="flex items-center justify-between">

@@ -5,20 +5,22 @@ enablePerformanceTracking?: boolean;
 enableErrorTracking?: boolean;
 }
 
-const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({ enableConversionTracking = true,
-  enablePerformanceTracking = true,
+const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
+  enableConversionTracking = true
+  enablePerformanceTracking = true
   enableErrorTracking = true
 }) => {
   useEffect(() => {
     // Initialize Google Analytics 4
     const initGA4 = () => {
-      if (typeof window !== 'undefined' && window.gtag) {;
-        window.gtag('config', 'G-XXXXXXXXXX', {;
-          page_title: document.title,,
-          page_location: window.location.href,,
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('config', 'G-XXXXXXXXXX', {
+          page_title: document.title,
+          page_location: window.location.href,
           custom_map: {,
-            custom_parameter_1: 'ai_solutions',',
-            custom_parameter_2: 'enterprise_tech};
+            custom_parameter_1: 'ai_solutions',
+            custom_parameter_2: 'enterprise_tech'
+          }
         });
       }
     };

@@ -1,10 +1,6 @@
 import React from 'react';
-import {
-Helmet
-} from 'react-helmet-async';
-import {
-Globe
-} from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Globe } from 'lucide-react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 const AIVirtualAssistant: React.FC = () => {,
@@ -67,8 +63,8 @@ const AIVirtualAssistant: React.FC = () => {,
               <h1 className="text-5xl md: text-7xl font-bold mb-6">",
                 AI Virtual <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Assistant</span>
               </h1>
-              <p className="text-xl md: text-2xl text-purple-100 max-w-4xl mx-auto mb-8">",
-                Deploy AI-powered virtual assistants that handle customer inquiries 24/7 with 95% accuracy, 
+              <p className="text-xl md:text-2xl text-purple-100 max-w-4xl mx-auto mb-8">
+                Deploy AI-powered virtual assistants that handle customer inquiries 24/7 with 95% accuracy
                 support 120+ languages, and seamlessly integrate with your existing systems.
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center">",

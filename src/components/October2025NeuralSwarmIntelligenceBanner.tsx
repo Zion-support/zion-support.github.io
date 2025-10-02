@@ -87,8 +87,8 @@ const October2025NeuralSwarmIntelligenceBanner: React.FC = () => {,
             <div className="relative">
               <motion.div
                 animate={{
-                  scale: [1, 1.05, 1],,
-                  rotate: [0, 5, 0],,
+                  scale: [1, 1.05, 1],
+                  rotate: [0, 5, 0]
                 }}
                 transition={{
                   duration: 5,,

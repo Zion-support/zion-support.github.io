@@ -15,7 +15,7 @@ const Page = () => {
           <div className="mb-6 text-sm text-zion-slate-light">Engineering • 9 min read • 2025-10-01</div>
           <h1 className="text-4xl font-bold mb-4">Generative AI Code Assistants (2025)</h1>
           <p className="text-zion-slate-light mb-6">
-            Proven patterns for integrating AI into the SDLC: requirements, scaffolding, tests-first, safe refactors,,
+            Proven patterns for integrating AI into the SDLC: requirements, scaffolding, tests-first, safe refactors
             and production-ready reviews with evaluator-backed quality gates.
           </p>
 

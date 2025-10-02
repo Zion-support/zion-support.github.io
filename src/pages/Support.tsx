@@ -1,14 +1,11 @@
 import React, { useState } from 'react';
-import {
-Link
-} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import {
 
 } from 'lucide-react';
-import {
-Helmet
-} from 'react-helmet-async';
-const Support: React.FC = () => {,
+import { Helmet } from 'react-helmet-async';
+
+const Support: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const contactMethods = [
@@ -26,7 +23,7 @@ description: 'Get instant help through our chat system',',
 availability: '24/7',',
 responseTime: '< 30 seconds',',
 contact: 'Start Chat'
-}
+},
     {
 icon: Mail,,
 title: 'Email Support',',
@@ -34,7 +31,7 @@ description: 'Send us detailed questions and get comprehensive answers',',
 availability: '24/7',',
 responseTime: '< 2 hours',',
 contact: 'support@ziontechgroup.com'
-}
+},
     {
 icon: Video,,
 title: 'Video Call',',
@@ -47,20 +44,20 @@ contact: 'Schedule Call'
 
   const faqCategories = [
     {
-      id: 'general',',
-      title: 'General',',
-      icon: BookOpen,
-    }
+      id: 'general',
+      title: 'General',
+      icon: BookOpen
+    },
     {
 id: 'technical',',
 title: 'Technical',',
 icon: Zap
-}
+},
     {
 id: 'billing',',
 title: 'Billing',',
 icon: Users
-}
+},
     {
 id: 'account',',
 title: 'Account',',
@@ -85,7 +82,7 @@ icon: Clock
 category: 'account',',
 question: 'How do I update my account information?',',
 answer: 'You can update your account information through our client portal or contact our support team for assistance.'
-}
+},
     {
       category: 'technical',',
       question: 'Do you provide training for your solutions?',',
@@ -105,10 +102,10 @@ answer: 'You can update your account information through our client portal or co
     return matchesCategory && matchesQuery;
   });
   const quickActions = [
-    { title: 'Report a Bug', description: 'Found an issue? Let us know', link: '/contact', icon: '🐛' },
-    { title: 'Request a Feature', description: "Have an idea? We'd love to hear it", link: '/contact', icon: '💡' },
-    { title: 'Schedule Training', description: 'Book a training session for your team', link: '/training', icon: '🎓' },
-    { title: 'View Status Page', description: 'Check system status and uptime', link: '/status', icon: '📊' };
+    { title: 'Report a Bug', description: 'Found an issue? Let us know', link: '/contact', icon: '🐛' }
+    { title: 'Request a Feature', description: "Have an idea? We'd love to hear it", link: '/contact', icon: '💡' }
+    { title: 'Schedule Training', description: 'Book a training session for your team', link: '/training', icon: '🎓' }
+    { title: 'View Status Page', description: 'Check system status and uptime', link: '/status', icon: '📊' }
   ];
 
   return (

@@ -114,7 +114,7 @@ export default function AutonomousSupplyChainRevolution2025(): void {
                 <h3 className="text-2xl font-bold mb-4 text-cyan-300">3. Predictive Risk Management</h3>
                 <p className="text-gray-300 mb-4">
                   AI continuously monitors supply chain health, detecting early warning signals of potential disruptions. 
-                  The system analyzes supplier financial health, geopolitical risks, weather patterns, logistics constraints, 
+                  The system analyzes supplier financial health, geopolitical risks, weather patterns, logistics constraints
                   and quality issues to predict problems weeks in advance and automatically trigger mitigation actions.
                 </p>
                 <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">
@@ -204,7 +204,7 @@ export default function AutonomousSupplyChainRevolution2025(): void {
               <h2 className="text-3xl font-bold mb-6 text-blue-300">The Future of Supply Chains</h2>
               <p className="text-gray-300 mb-4 leading-relaxed">
                 Autonomous AI supply chains represent the future of logistics and operations. Leading enterprises are achieving 
-                competitive advantages that traditional organizations simply cannot match—near-perfect forecast accuracy, 
+                competitive advantages that traditional organizations simply cannot match—near-perfect forecast accuracy
                 dramatically lower costs, superior service levels, and resilience to disruptions that would cripple competitors.
               </p>
               <p className="text-gray-300 mb-4 leading-relaxed">

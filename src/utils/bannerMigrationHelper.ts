@@ -9,11 +9,11 @@
 /**
  * Converts legacy NewContentPromoBanner props to UnifiedPromotionalBanner props
  */
-export function convertNewContentPromoProps(legacyProps: {,
-title: string,,
-description: string,,
-ctaText: string,,
-ctaLink: string,,
+export function convertNewContentPromoProps(legacyProps: {
+title: string;
+description: string;
+ctaText: string;
+ctaLink: string;
 featuredItems?: Array<{ title: string; category: string; link: string
 }>;
   className?: string;
@@ -38,42 +38,38 @@ featuredItems?: Array<{ title: string; category: string; link: string
  */
 export const bannerPresets = {
   octoberBreakthrough: {,
-    variant: 'premium' as const,',
-    theme: 'gradient' as const,',
-    icon: 'rocket' as const,',
-    badge: '🚀 OCTOBER 2025',',
-    animated: true,
-  },
-  
+    variant: 'premium' as const,
+    theme: 'gradient' as const,
+    icon: 'rocket' as const,
+    badge: '🚀 OCTOBER 2025',
+    animated: true
+  }
   januaryInnovation: {,
-    variant: 'hero' as const,',
-    theme: 'purple' as const,',
-    icon: 'sparkles' as const,',
-    badge: '✨ JANUARY 2026',',
-    animated: true,
-  },
-  
+    variant: 'hero' as const,
+    theme: 'purple' as const,
+    icon: 'sparkles' as const,
+    badge: '✨ JANUARY 2026',
+    animated: true
+  }
   februaryRevolution: {,
-    variant: 'mega' as const,',
-    theme: 'gradient' as const,',
-    icon: 'zap' as const,',
-    badge: '⚡ FEBRUARY 2026',',
-    animated: true,
-  },
-  
+    variant: 'mega' as const,
+    theme: 'gradient' as const,
+    icon: 'zap' as const,
+    badge: '⚡ FEBRUARY 2026',
+    animated: true
+  }
   compactUpdate: {,
-    variant: 'compact' as const,',
-    theme: 'blue' as const,',
-    icon: 'star' as const,',
-    animated: false,
-  },
-  
+    variant: 'compact' as const,
+    theme: 'blue' as const,
+    icon: 'star' as const,
+    animated: false
+  }
   enterpriseSolution: {,
-    variant: 'premium' as const,',
-    theme: 'cyan' as const,',
-    icon: 'rocket' as const,',
-    badge: 'ENTERPRISE',',
-    animated: true,
+    variant: 'premium' as const,
+    theme: 'cyan' as const,
+    icon: 'rocket' as const,
+    badge: 'ENTERPRISE',
+    animated: true
   }
 };
 
@@ -85,7 +81,7 @@ export function createBannerConfig(
   overrides: Partial<UnifiedPromotionalBannerProps>,
 ): UnifiedPromotionalBannerProps {
   return {
-    ...bannerPresets[preset],
+    ...bannerPresets[preset]
     ...overrides
   } as UnifiedPromotionalBannerProps;
 }
@@ -94,34 +90,34 @@ export function createBannerConfig(
  * Banner content templates for common use cases
  */
 export const bannerTemplates = {
-newAIBreakthroughs: (count: number = 3) => ({ ,
-title: `🚀 JUST RELEASED: ${count`;
-} Revolutionary AI Breakthroughs`,`;
-    ctaText: 'Explore Latest Innovations',',
-    ctaLink: '/blog',',
-    icon: 'rocket' as const',
-  }),
-  
-  enterpriseUpdate: (topic: string) => ({ title: `🎯 NEW ENTERPRISE SOLUTION: ${topic}`,`;
-    ctaText: 'Learn More',',
-    ctaLink: '/services',',
-    icon: 'sparkles' as const',
-  }),
-  
-  researchRelease: (field: string) => ({ title: `🔬 BREAKTHROUGH RESEARCH: ${field}`,`;
-    ctaText: 'Read Full Report',',
-    ctaLink: '/blog',',
-    icon: 'zap' as const',
+newAIBreakthroughs: (count: number = 3) => ({,
+title: `🚀 JUST RELEASED: ${count
+} Revolutionary AI Breakthroughs`,
+    ctaText: 'Explore Latest Innovations',
+    ctaLink: '/blog',
+    icon: 'rocket' as const
+  })
+  enterpriseUpdate: (topic: string) => ({,
+    title: `🎯 NEW ENTERPRISE SOLUTION: ${topic}`,
+    ctaText: 'Learn More',
+    ctaLink: '/services',
+    icon: 'sparkles' as const
+  })
+  researchRelease: (field: string) => ({,
+    title: `🔬 BREAKTHROUGH RESEARCH: ${field}`,
+    ctaText: 'Read Full Report',
+    ctaLink: '/blog',
+    icon: 'zap' as const
   })
 };
 
 /**
  * Helper to create featured items with consistent formatting
  */
-export function createFeaturedItems(items: Array<{,
-title: string,,
-category: string,,
-link: string,,
+export function createFeaturedItems(items: Array<{
+title: string;
+category: string;
+link: string;
 metrics?: string;
 }>): FeaturedItem[] {
   return items.map(item => ({
@@ -135,11 +131,11 @@ metrics?: string;
 /**
  * Date formatter for banner dates
  */
-export function formatBannerDate(date: Date = new Date()): string {,
-  return date.toLocaleDateString('en-US', { ;
-    month: 'long', ',
-    day: 'numeric', ',
-    year: 'numeric' ,
+export function formatBannerDate(date: Date = new Date()): string {
+  return date.toLocaleDateString('en-US', { 
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric' 
   });
 }
 
@@ -147,7 +143,7 @@ export function formatBannerDate(date: Date = new Date()): string {,
  * Component usage guide for developers
  */
 export const usageExamples = {
-  basic: `,`;
+  basic: `,
     <UnifiedPromotionalBanner
       variant="default"
       title="Your Title Here"
@@ -156,7 +152,7 @@ export const usageExamples = {
       ctaLink="/blog/>
   `,`;
   
-  withPreset: `,`;
+  withPreset: `,
     <UnifiedPromotionalBanner
       {...createBannerConfig('octoberBreakthrough', {;
         title: "3 Revolutionary AI Systems",",
@@ -168,7 +164,7 @@ export const usageExamples = {
     />
   `,`;
   
-  withFeaturedItems: `,`;
+  withFeaturedItems: `,
     <UnifiedPromotionalBanner
       variant="premium"
       title="Latest Innovations"

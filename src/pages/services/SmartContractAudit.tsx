@@ -1,10 +1,6 @@
 import React from 'react';
-import {
-Helmet
-} from 'react-helmet-async';
-import {
-Globe
-} from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Globe } from 'lucide-react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 const SmartContractAudit: React.FC = () => {,
@@ -49,61 +45,61 @@ const SmartContractAudit: React.FC = () => {,
 
   const pricing = [
     {
-      name: "Basic Audit",",
-      price: "$2,500",",
-      period: "one-time",",
-      description: "Perfect for simple smart contracts and token contracts",",
+      name: "Basic Audit",
+      price: "$2,500",
+      period: "one-time",
+      description: "Perfect for simple smart contracts and token contracts",
       features: [,
-        "Static code analysis",";
-        "Manual code review",";
-        "Basic vulnerability scan",";
-        "Security report",";
-        "Email support",";
-        "1 revision included",";
-        "Standard compliance check",";
+        "Static code analysis",
+        "Manual code review",
+        "Basic vulnerability scan",
+        "Security report",
+        "Email support",
+        "1 revision included",
+        "Standard compliance check",
         "Up to 500 lines of code"
-      ],
-      popular: false,
+      ]
+      popular: false
     },
     {
-      name: "Professional Audit",",
-      price: "$8,500",",
-      period: "one-time",",
-      description: "Comprehensive audit for complex DeFi protocols and dApps",",
+      name: "Professional Audit",
+      price: "$8,500",
+      period: "one-time",
+      description: "Comprehensive audit for complex DeFi protocols and dApps",
       features: [,
-        "Full static & dynamic analysis",";
-        "Comprehensive manual review",";
-        "Advanced vulnerability scanning",";
-        "Detailed security report",";
-        "Priority support",";
-        "3 revisions included",";
-        "Full compliance verification",";
-        "Up to 2,000 lines of code",";
-        "Gas optimization analysis",";
+        "Full static & dynamic analysis",
+        "Comprehensive manual review",
+        "Advanced vulnerability scanning",
+        "Detailed security report",
+        "Priority support",
+        "3 revisions included",
+        "Full compliance verification",
+        "Up to 2,000 lines of code",
+        "Gas optimization analysis",
         "Architecture review"
-      ],
-      popular: true,
+      ]
+      popular: true
     },
     {
-      name: "Enterprise Audit",",
-      price: "$25,000",",
-      period: "one-time",",
-      description: "Complete audit solution for enterprise blockchain projects",",
+      name: "Enterprise Audit",
+      price: "$25,000",
+      period: "one-time",
+      description: "Complete audit solution for enterprise blockchain projects",
       features: [,
-        "End-to-end security analysis",";
-        "Multi-contract system review",";
-        "Formal verification",";
-        "Executive summary report",";
-        "Dedicated security consultant",";
-        "Unlimited revisions",";
-        "Full regulatory compliance",";
-        "Unlimited lines of code",";
-        "Performance optimization",";
-        "Architecture & design review",";
-        "Post-deployment monitoring",";
+        "End-to-end security analysis",
+        "Multi-contract system review",
+        "Formal verification",
+        "Executive summary report",
+        "Dedicated security consultant",
+        "Unlimited revisions",
+        "Full regulatory compliance",
+        "Unlimited lines of code",
+        "Performance optimization",
+        "Architecture & design review",
+        "Post-deployment monitoring",
         "Security training included"
-      ],
-      popular: false,
+      ]
+      popular: false
     }
   ];
 
@@ -421,7 +417,7 @@ const SmartContractAudit: React.FC = () => {,
                     className={
 `w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${`;
 plan.popular
-? 'bg-red-600 text-white hover: bg-red-700',',
+? 'bg-red-600 text-white hover:bg-red-700'
 : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
 }`}`;
                   >

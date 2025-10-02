@@ -1,7 +1,6 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import {
-AlertTriangle
-} from 'lucide-react';
+import { AlertTriangle } from 'lucide-react';
+
 interface Props {
   children: ReactNode;
 }
@@ -12,7 +11,7 @@ error?: Error;
 }
 
 class ErrorBoundary extends Component<Props, State> {
-public state: State = {,,
+public state: State = {
 hasError: false
 };
 

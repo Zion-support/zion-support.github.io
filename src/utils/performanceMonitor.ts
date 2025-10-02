@@ -115,17 +115,18 @@ class PerformanceMonitor {
         // Send to custom analytics endpoint
         if (process.env.REACT_APP_ANALYTICS_ENDPOINT) {
           await fetch(process.env.REACT_APP_ANALYTICS_ENDPOINT, {
-            method: 'POST',',
+            method: 'POST',
             headers: {,
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ type: 'performance_metrics',',
+              'Content-Type': 'application/json'
+            }
+            body: JSON.stringify({,
+              type: 'performance_metrics',
               data: {,
-                ...this.metrics,
-                score: this.getPerformanceScore(),,
-                timestamp: Date.now(),,
-                url: window.location.href,,
-                userAgent: navigator.userAgent,
+                ...this.metrics
+                score: this.getPerformanceScore(),
+                timestamp: Date.now(),
+                url: window.location.href,
+                userAgent: navigator.userAgent
               }
             })
           });
@@ -143,17 +144,17 @@ class PerformanceMonitor {
    */
   private getMetricRating(key: keyof PerformanceMetrics, value: number): string {,
 switch (key) {
-case 'cls':,
-return value <= 0.1 ? 'good' : value <= 0.25 ? 'needs-improvement' : 'poor',
-case 'fid':,
-return value <= 100 ? 'good' : value <= 300 ? 'needs-improvement' : 'poor',
-case 'lcp':,
-return value <= 2500 ? 'good' : value <= 4000 ? 'needs-improvement' : 'poor',
-case 'fcp':,
-return value <= 1800 ? 'good' : value <= 3000 ? 'needs-improvement' : 'poor',
-case 'ttfb':,
-return value <= 600 ? 'good' : value <= 1500 ? 'needs-improvement' : 'poor',
-default: ,,
+case 'cls':
+return value <= 0.1 ? 'good' : value <= 0.25 ? 'needs-improvement' : 'poor';
+case 'fid':
+return value <= 100 ? 'good' : value <= 300 ? 'needs-improvement' : 'poor';
+case 'lcp':
+return value <= 2500 ? 'good' : value <= 4000 ? 'needs-improvement' : 'poor';
+case 'fcp':
+return value <= 1800 ? 'good' : value <= 3000 ? 'needs-improvement' : 'poor';
+case 'ttfb':
+return value <= 600 ? 'good' : value <= 1500 ? 'needs-improvement' : 'poor';
+default:
 return 'unknown';
 }
   }

@@ -15,8 +15,8 @@ formats?: ('webp' | 'avif' | 'jpg' | 'png')[];
 }
 
 export interface ResponsiveImageConfig extends ImageConfig {
-srcSet?: string,
-sizes?: string,
+srcSet?: string;
+sizes?: string;
 breakpoints?: number[];
 }
 
@@ -39,17 +39,17 @@ export const generateSizes = (
   config?: { mobile?: string; tablet?: string; desktop?: string }
 ): string => {
   const defaults = {
-    mobile: '100vw',',
-    tablet: '50vw',',
-    desktop: '33vw',',
+    mobile: '100vw',
+    tablet: '50vw',
+    desktop: '33vw'
   };
   
   const sizes = { ...defaults, ...config };
   
   return [
-    `(max-width: 640px) ${sizes.mobile}`,`;
-    `(max-width: 1024px) ${sizes.tablet}`,`;
-    sizes.desktop,
+    `(max-width: 640px) ${sizes.mobile}`,
+    `(max-width: 1024px) ${sizes.tablet}`,
+    sizes.desktop
   ].join(', ');
 };
 
@@ -57,11 +57,11 @@ export const generateSizes = (
  * Get optimized image URL (for CDN or image optimization service)
  */
 export const getOptimizedUrl = (
-  src: string,,
+  src: string,
   options: {,
-width?: number,
-height?: number,
-quality?: number,
+width?: number;
+height?: number;
+quality?: number;
 format?: 'webp' | 'avif' | 'jpg' | 'png';
 } = {}
 ): string => {
@@ -159,8 +159,8 @@ export const getImageDimensions = (src: string): Promise<{ width: number; height
     const img = new Image();
     img.onload = () => {
       resolve({
-        width: img.naturalWidth,,
-        height: img.naturalHeight,,
+        width: img.naturalWidth,
+        height: img.naturalHeight
       });
     };
     img.onerror = reject;
@@ -174,8 +174,8 @@ export const getImageDimensions = (src: string): Promise<{ width: number; height
 export const isFormatSupported = async (format: 'webp' | 'avif'): Promise<boolean> => {',
   if (typeof window === 'undefined') return false;
   const testImages = {
-    webp: 'data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=',',
-    avif: 'data:image/avif;base64,AAAAIGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZk1BMUIAAADybWV0YQAAAAAAAAAoaGRscgAAAAAAAAAAcGljdAAAAAAAAAAAAAAAAGxpYmF2aWYAAAAADnBpdG0AAAAAAAEAAAAeaWxvYwAAAABEAAABAAEAAAABAAABGgAAAB0AAAAoaWluZgAAAAAAAQAAABppbmZlAgAAAAABAABhdjAxQ29sb3IAAAAAamlwcnAAAABLaXBjbwAAABRpc3BlAAAAAAAAAAIAAAACAAAAEHBpeGkAAAAAAwgICAAAAAxhdjFDgQ0MAAAAABNjb2xybmNseAACAAIAAYAAAAAXaXBtYQAAAAAAAAABAAEEAQKDBAAAACVtZGF0EgAKCBgANogQEAwgMg8f8D///8WfhwB8+ErK42A=',',
+    webp: 'data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=',
+    avif: 'data:image/avif;base64,AAAAIGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZk1BMUIAAADybWV0YQAAAAAAAAAoaGRscgAAAAAAAAAAcGljdAAAAAAAAAAAAAAAAGxpYmF2aWYAAAAADnBpdG0AAAAAAAEAAAAeaWxvYwAAAABEAAABAAEAAAABAAABGgAAAB0AAAAoaWluZgAAAAAAAQAAABppbmZlAgAAAAABAABhdjAxQ29sb3IAAAAAamlwcnAAAABLaXBjbwAAABRpc3BlAAAAAAAAAAIAAAACAAAAEHBpeGkAAAAAAwgICAAAAAxhdjFDgQ0MAAAAABNjb2xybmNseAACAAIAAYAAAAAXaXBtYQAAAAAAAAABAAEEAQKDBAAAACVtZGF0EgAKCBgANogQEAwgMg8f8D///8WfhwB8+ErK42A='
   };
   
   return new Promise((resolve) => {
@@ -229,11 +229,11 @@ export const createPictureElement = (config: ResponsiveImageConfig): HTMLPicture
  * Progressive image loading with blur-up effect
  */
 export const loadProgressiveImage = (
-  container: HTMLElement,,
+  container: HTMLElement,
   config: {,
     placeholder: string; // Low-res placeholder (e.g., 20x20),
     src: string; // Full resolution image,
-    alt: string,
+    alt: string;
   }
 ): void => {
   // Create placeholder image
@@ -279,15 +279,15 @@ export const getOptimalQuality = (): number => {
   const effectiveType = connection?.effectiveType;
   
   switch (effectiveType) {
-case '4g':,
+case '4g':
 return 85;
-case '3g':,
+case '3g':
 return 70;
-case '2g':,
+case '2g':
 return 50;
-case 'slow-2g':,
+case 'slow-2g':
 return 40;
-default: ,,
+default:
 return 80;
 }
 };
@@ -301,10 +301,10 @@ export const estimateDataUsage = (
   format: 'jpg' | 'png' | 'webp' | 'avif' = 'jpg): number => {
   const pixels = width * height;
   const bytesPerPixel = {
-    jpg: 0.5,,
-    webp: 0.3,,
-    avif: 0.2,,
-    png: 3,,
+    jpg: 0.5,
+    webp: 0.3,
+    avif: 0.2,
+    png: 3
   };
   
   return Math.round(pixels * bytesPerPixel[format]);
@@ -323,7 +323,7 @@ export class ImageLoader {
       this.queue.push({
         src,
         priority,
-        callback: resolve,,
+        callback: resolve
       });
       
       this.queue.sort((a, b) => b.priority - a.priority);
@@ -372,6 +372,6 @@ export default {
   loadProgressiveImage,
   getOptimalQuality,
   estimateDataUsage,
-  imageLoader,
+  imageLoader
 };
 ;

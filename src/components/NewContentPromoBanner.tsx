@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import {
-CheckCircle
-} from 'lucide-react';
-const NewContentPromoBanner: React.FC = () => {,
+import { CheckCircle } from 'lucide-react';
+
+const NewContentPromoBanner: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);
 
   const features = [

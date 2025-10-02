@@ -13,7 +13,7 @@ export default function AI2029SelfHealingPlatforms(): React.JSX.Element {
         <p className="text-zion-slate-light mb-8">Budgeted Actions • Live Canaries • Instant Rollback</p>
         <div className="prose prose-invert max-w-3xl">
           <p>
-            Build incident‑resilient platforms that auto‑contain failures within 60 seconds using policy‑tested playbooks,
+            Build incident‑resilient platforms that auto‑contain failures within 60 seconds using policy‑tested playbooks
             KPI‑linked budgets, and live canaries. Minimize blast radius without slowing delivery.
           </p>
           <p>

@@ -134,9 +134,10 @@ const October2025NewAIBreakthroughContentBanner: React.FC = () => {,
               💎 Combined Enterprise Impact: $13.3B,
             </h3>
             <p className="text-gray-300 leading-relaxed">
-              These three breakthrough technologies work together to create a comprehensive AI innovation platform: <strong className="text-purple-400"> NAS designs optimal architectures</strong>, ",
-              <strong className="text-emerald-400"> distributed RL trains them at scale</strong>, and ";
-              <strong className="text-indigo-400"> privacy-preserving techniques</strong> enable deployment on sensitive data. ";
+              These three breakthrough technologies work together to create a comprehensive AI innovation platform: 
+              <strong className="text-purple-400"> NAS designs optimal architectures</strong>
+              <strong className="text-emerald-400"> distributed RL trains them at scale</strong>, and 
+              <strong className="text-indigo-400"> privacy-preserving techniques</strong> enable deployment on sensitive data. 
               Fortune 500 companies are already achieving 847% ROI with integrated implementations.
             </p>
           </div>

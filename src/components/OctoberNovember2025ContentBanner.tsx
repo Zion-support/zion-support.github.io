@@ -10,8 +10,8 @@ export default function OctoberNovember2025ContentBanner(): void {
           <h2 className="text-5xl md: text-6xl font-extrabold leading-tight mb-6">",
             Latest Enterprise AI Strategies
           </h2>
-          <p className="text-xl md: text-2xl text-blue-50 max-w-3xl mx-auto leading-relaxed">",
-            Production-ready frameworks for AI supply chains, multi-agent systems, governance,
+          <p className="text-xl md:text-2xl text-blue-50 max-w-3xl mx-auto leading-relaxed">
+            Production-ready frameworks for AI supply chains, multi-agent systems, governance
             and real-time inference optimization
           </p>
         </div>

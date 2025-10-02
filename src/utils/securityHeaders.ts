@@ -24,12 +24,12 @@ csp: {,,
 'block-all-mixed-content': boolean;
 };
   headers: {,
-    [key: string]: string,
+    [key: string]: string;
   };
 }
 
 export class SecurityManager {
-private config: SecurityConfig,,
+private config: SecurityConfig;
 constructor() {
 this.config = this.getDefaultConfig();
 }
@@ -42,24 +42,24 @@ this.config = this.getDefaultConfig();
   private getDefaultConfig(): SecurityConfig {
     return {
       csp: {,
-        'default-src': ["'self'"],";
-        'script-src': ["'self'", "'unsafe-inline'", "'unsafe-eval'", 'https://www.googletagmanager.com', 'https://www.google-analytics.com'],',
-        'style-src': ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com'],',
-        'img-src': ["'self'", 'data: ', 'https:', 'blob:'],',
-        'connect-src': ["'self'", 'https://www.google-analytics.com', 'https://analytics.google.com'],',
-        'font-src': ["'self'", 'https://fonts.gstatic.com', 'data:'],',
-        'object-src': ["'none'"],";
-        'media-src': ["'self'"],";
-        'frame-src': ["'none'"],";
-        'worker-src': ["'self'", 'blob: '],',
-        'child-src': ["'self'"],";
-        'form-action': ["'self'"],";
-        'frame-ancestors': ["'none'"],";
-        'base-uri': ["'self'"],";
-        'manifest-src': ["'self'"],";
+        'default-src': ["'self'"],
+        'script-src': ["'self'", "'unsafe-inline'", "'unsafe-eval'", 'https://www.googletagmanager.com', 'https://www.google-analytics.com'],
+        'style-src': ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com'],
+        'img-src': ["'self'", 'data:', 'https:', 'blob:'],
+        'connect-src': ["'self'", 'https://www.google-analytics.com', 'https://analytics.google.com'],
+        'font-src': ["'self'", 'https://fonts.gstatic.com', 'data:'],
+        'object-src': ["'none'"],
+        'media-src': ["'self'"],
+        'frame-src': ["'none'"],
+        'worker-src': ["'self'", 'blob:'],
+        'child-src': ["'self'"],
+        'form-action': ["'self'"],
+        'frame-ancestors': ["'none'"],
+        'base-uri': ["'self'"],
+        'manifest-src': ["'self'"],
         'upgrade-insecure-requests': true,
-        'block-all-mixed-content': true;
-      },
+        'block-all-mixed-content': true
+      }
       headers: {,
         'X-Frame-Options': 'DENY',
         'X-Content-Type-Options': 'nosniff',
@@ -95,8 +95,8 @@ this.config = this.getDefaultConfig();
 
   public getSecurityHeaders(): { [key: string]: string } {
     return {
-      ...this.config.headers,
-      'Content-Security-Policy': this.getCSPDirective();
+      ...this.config.headers
+      'Content-Security-Policy': this.getCSPDirective()
     };
   }
 
@@ -154,7 +154,7 @@ this.config = this.getDefaultConfig();
   }
 
   public getSecurityReport(): {
-csp: string,,
+csp: string;
 headers: { [key: string]: string
 };
     score: number,

@@ -112,10 +112,10 @@ const UltimateContentShowcase2026: React.FC = () => {,
         <div className="bg-gradient-to-r from-purple-900/30 to-blue-900/30 rounded-2xl p-8 border border-purple-500/20">
           <div className="grid md: grid-cols-4 gap-8 text-center">",
             {[
-              { value: '2026', label: 'Revolutionary Year', icon: '🌟' },
-              { value: '500+', label: 'Enterprise Clients', icon: '🏢' },
-              { value: '$2B+', label: 'Cost Savings Delivered', icon: '💰' },
-              { value: '99.9%', label: 'System Uptime', icon: '⚡' };
+              { value: '2026', label: 'Revolutionary Year', icon: '🌟' }
+              { value: '500+', label: 'Enterprise Clients', icon: '🏢' }
+              { value: '$2B+', label: 'Cost Savings Delivered', icon: '💰' }
+              { value: '99.9%', label: 'System Uptime', icon: '⚡' }
             ].map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="text-4xl mb-2">{stat.icon}</div>

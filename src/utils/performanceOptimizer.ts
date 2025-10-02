@@ -7,11 +7,11 @@
  * Web Vitals metrics tracking
  */
 export interface WebVitalsMetrics {
-FCP?: number; // First Contentful Paint,
-LCP?: number; // Largest Contentful Paint,
-FID?: number; // First Input Delay,
-CLS?: number; // Cumulative Layout Shift,
-TTFB?: number; // Time to First Byte,
+FCP?: number; // First Contentful Paint
+LCP?: number; // Largest Contentful Paint
+FID?: number; // First Input Delay
+CLS?: number; // Cumulative Layout Shift
+TTFB?: number; // Time to First Byte
 INP?: number; // Interaction to Next Paint
 }
 
@@ -73,12 +73,12 @@ export const lazyLoadImages = (): void => {
 /**
  * Debounce function for performance optimization
  */
-export function debounce<T extends (...args: any[]) => any>(,
-  func: T,,
-  wait: number,
-): (...args: Parameters<T>) => void {,
-let timeout: NodeJS.Timeout | null = null,,
-return function executedFunction(...args: Parameters<T>) {,,
+export function debounce<T extends (...args: any[]) => any>(
+  func: T,
+  wait: number
+): (...args: Parameters<T>) => void {
+let timeout: NodeJS.Timeout | null = null;
+return function executedFunction(...args: Parameters<T>) {
 const later = () => {
 timeout = null;
 func(...args);
@@ -115,8 +115,8 @@ export const measurePageLoad = (): WebVitalsMetrics | null => {
   const perfData = window.performance.timing;
   const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
   return {
-    FCP: navigation?.responseStart - navigation?.fetchStart,,
-    TTFB: perfData.responseStart - perfData.navigationStart,,
+    FCP: navigation?.responseStart - navigation?.fetchStart,
+    TTFB: perfData.responseStart - perfData.navigationStart
   };
 };
 
@@ -130,10 +130,10 @@ export const reportWebVitals = (metrics: WebVitalsMetrics): void => {,
   if (typeof window !== 'undefined' && (window as any).gtag) {;
     Object.entries(metrics).forEach(([key, value]) => {
       if (value !== undefined) {
-        (window as any).gtag('event', key, {;
-          value: Math.round(value),,
-          event_category: 'Web Vitals',',
-          non_interaction: true,,
+        (window as any).gtag('event', key, {
+          value: Math.round(value),
+          event_category: 'Web Vitals',
+          non_interaction: true
         });
       }
     });
@@ -268,8 +268,8 @@ maxFirstLoad: number; // in ms,,
 maxInteractive: number; // in ms
 }
 
-export const checkPerformanceBudget = (budget: PerformanceBudget): {,
-passed: boolean,,
+export const checkPerformanceBudget = (budget: PerformanceBudget): {
+passed: boolean;
 violations: string[];
 } => {
   const violations: string[] = [],

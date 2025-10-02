@@ -12,7 +12,7 @@ const bannerComponents = {
   'october2025-document-automation': lazy(() => import('./October2025DocumentAutomationBanner')),
   'october2025-revops': lazy(() => import('./October2025RevOpsBanner')),
   'january2026-revolutionary': lazy(() => import('./January2026RevolutionaryBanner')),
-  'new-services-2026': lazy(() => import('./NewServicesPromoBanner2026')),
+  'new-services-2026': lazy(() => import('./NewServicesPromoBanner2026'))
 };
 
 export type BannerKey = keyof typeof bannerComponents;
@@ -20,11 +20,11 @@ export type BannerKey = keyof typeof bannerComponents;
 interface BannerRotationManagerProps {
 /** Array of banner keys to display in rotation */
 banners?: BannerKey[];
-/** Rotation interval in milliseconds (default: 8000) */,,
+/** Rotation interval in milliseconds (default: 8000) */
 interval?: number;
-/** Whether to auto-rotate banners (default: true) */,,
+/** Whether to auto-rotate banners (default: true) */
 autoRotate?: boolean;
-/** Maximum number of banners to show (default: 3) */,,
+/** Maximum number of banners to show (default: 3) */
 maxBanners?: number;
 }
 
@@ -42,11 +42,11 @@ const LoadingFallback = () => (
 export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({ banners = [
     'october2025-new-breakthrough',
     'october2025-tech-breakthrough',
-    'october2025-next-gen-ai',
-  ],
-  interval = 8000,
+    'october2025-next-gen-ai'
+  ]
+  interval = 8000
   autoRotate = false, // Disabled by default to reduce unnecessary re-renders
-  maxBanners = 3,
+  maxBanners = 3
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [visibleBanners, setVisibleBanners] = useState<BannerKey[]>([]);

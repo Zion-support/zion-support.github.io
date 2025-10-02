@@ -1,19 +1,17 @@
 import React from 'react';
-import {
-Link
-} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import {
 
 } from 'lucide-react';
 const Pricing: React.FC = () => {,
   const pricingPlans = [
     {
-      name: 'Starter',',
-      description: 'Perfect for small businesses and startups',',
-      price: '$99',',
-      period: 'month',',
-      icon: Zap,,
-      color: 'blue',',
+      name: 'Starter',
+      description: 'Perfect for small businesses and startups',
+      price: '$99',
+      period: 'month',
+      icon: Zap,
+      color: 'blue',
       features: [,
         'Basic AI Automation',
         'Email Support',
@@ -21,21 +19,21 @@ const Pricing: React.FC = () => {,
         'Standard Analytics',
         'Basic Integrations',
         'Monthly Reports'
-      ],
+      ]
       limitations: [,
         'Limited API Calls',
         'Basic Customization'
-      ],
-      cta: 'Start Free Trial',',
-      popular: false,
+      ]
+      cta: 'Start Free Trial',
+      popular: false
     },
     {
-      name: 'Professional',',
-      description: 'Ideal for growing businesses',',
-      price: '$299',',
-      period: 'month',',
-      icon: Shield,,
-      color: 'green',',
+      name: 'Professional',
+      description: 'Ideal for growing businesses',
+      price: '$299',
+      period: 'month',
+      icon: Shield,
+      color: 'green',
       features: [,
         'Advanced AI Automation',
         'Priority Support',
@@ -45,18 +43,18 @@ const Pricing: React.FC = () => {,
         'Weekly Reports',
         'Training Sessions',
         'API Access'
-      ],
-      limitations: [],,
-      cta: 'Start Free Trial',',
-      popular: true,
+      ]
+      limitations: [],
+      cta: 'Start Free Trial',
+      popular: true
     },
     {
-      name: 'Enterprise',',
-      description: 'For large organizations with complex needs',',
-      price: 'Custom',',
-      period: 'contact us',',
-      icon: Crown,,
-      color: 'purple',',
+      name: 'Enterprise',
+      description: 'For large organizations with complex needs',
+      price: 'Custom',
+      period: 'contact us',
+      icon: Crown,
+      color: 'purple',
       features: [,
         'Unlimited AI Automation',
         '24/7 Dedicated Support',
@@ -68,10 +66,10 @@ const Pricing: React.FC = () => {,
         'Full API Access',
         'Custom Development',
         'SLA Guarantee'
-      ],
-      limitations: [],,
-      cta: 'Contact Sales',',
-      popular: false,
+      ]
+      limitations: [],
+      cta: 'Contact Sales',
+      popular: false
     }
   ];
 
@@ -130,7 +128,7 @@ const Pricing: React.FC = () => {,
               Simple, Transparent Pricing
             </h1>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Choose the perfect plan for your business. Start with a free trial, 
+              Choose the perfect plan for your business. Start with a free trial
               no credit card required. Scale as you grow.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">",
@@ -211,7 +209,7 @@ const Pricing: React.FC = () => {,
                     className={
 `block w-full text-center px-6 py-3 rounded-lg font-semibold transition-colors ${`;
 plan.popular
-? 'bg-blue-600 text-white hover: bg-blue-700',',
+? 'bg-blue-600 text-white hover:bg-blue-700'
 : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
 }`}`;
                   >

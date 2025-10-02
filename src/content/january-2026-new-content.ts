@@ -81,7 +81,7 @@ export const january2026NewContent = {
       readTime: "13 min",",
       excerpt: "Explore the future of cybersecurity with quantum-safe encryption and protection systems that are resistant to quantum computing attacks.",
     }
-  ],
+  ]
   featuredServices: [,
     {
       id: "ai-2026-autonomous-enterprise-solutions",",
@@ -116,7 +116,7 @@ export const january2026NewContent = {
       pricing: "Starting at $100K/month",",
       features: ["Synthetic consciousness", "Emotional intelligence", "Creative autonomy", "Self-awareness"]",
     }
-  ],
+  ]
   caseStudies: [,
     {
       id: "fortune-100-autonomous-transformation",",

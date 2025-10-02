@@ -29,8 +29,8 @@ const October2025UltimateEnterpriseBanner = () => {
           </h2>
           
           <p className="text-2xl text-gray-300 max-w-4xl mx-auto font-medium">
-            Breakthrough solutions delivering <span className="text-cyan-400 font-bold">156%-184% ROI</span>, ";
-            <span className="text-purple-400 font-bold"> $262M+ savings</span>, and ";
+            Breakthrough solutions delivering <span className="text-cyan-400 font-bold">156%-184% ROI</span>
+            <span className="text-purple-400 font-bold"> $262M+ savings</span>, and 
             <span className="text-blue-400 font-bold"> transformative results</span>
           </p>
         </div>

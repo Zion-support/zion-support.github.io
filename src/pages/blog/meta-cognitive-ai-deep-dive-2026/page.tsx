@@ -25,7 +25,7 @@ export default function MetaCognitiveAIDeepDive2026(): React.JSX.Element {
             production patterns that combine verifier stacks, introspective loops, and KPI-linked guardrails.
           </p>
           <p>
-            You will learn how to set budgeted action limits, wire live canaries to rollback automatically,
+            You will learn how to set budgeted action limits, wire live canaries to rollback automatically
             and generate signed attestations for auditable outcomes across critical workflows.
           </p>
         </div>

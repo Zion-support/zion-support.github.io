@@ -33,24 +33,24 @@ keywords?: string;
 canonical?: string;
 robots?: string;
 };
-  openGraph: Record<string, string>,
-  twitterCard: Record<string, string>,
+  openGraph: Record<string, string>;
+  twitterCard: Record<string, string>;
   headings: {,
-h1: number,,
-h2: number,,
-h3: number,,
-h4: number,,
-h5: number,,
+h1: number;
+h2: number;
+h3: number;
+h4: number;
+h5: number;
 h6: number;
 };
   images: {,
-total: number,,
-withAlt: number,,
+total: number;
+withAlt: number;
 withoutAlt: number;
 };
   links: {,
-internal: number,,
-external: number,,
+internal: number;
+external: number;
 nofollow: number;
 };
   structuredData: any[],
@@ -87,7 +87,7 @@ class SEOAuditor {
       images,
       links,
       structuredData,
-      mobileOptimized,
+      mobileOptimized
     };
   }
 
@@ -207,12 +207,12 @@ class SEOAuditor {
    */
   private auditHeadings() {
     const headings = {
-      h1: document.querySelectorAll('h1').length,',
-      h2: document.querySelectorAll('h2').length,',
-      h3: document.querySelectorAll('h3').length,',
-      h4: document.querySelectorAll('h4').length,',
-      h5: document.querySelectorAll('h5').length,',
-      h6: document.querySelectorAll('h6').length,',
+      h1: document.querySelectorAll('h1').length,
+      h2: document.querySelectorAll('h2').length,
+      h3: document.querySelectorAll('h3').length,
+      h4: document.querySelectorAll('h4').length,
+      h5: document.querySelectorAll('h5').length,
+      h6: document.querySelectorAll('h6').length
     };
 
     if (headings.h1 === 0) {
@@ -237,9 +237,9 @@ class SEOAuditor {
     const imagesWithAlt = Array.from(images).filter(img => img.alt && img.alt.trim().length > 0);
     
     const metrics = {
-      total: images.length,,
-      withAlt: imagesWithAlt.length,,
-      withoutAlt: images.length - imagesWithAlt.length,,
+      total: images.length,
+      withAlt: imagesWithAlt.length,
+      withoutAlt: images.length - imagesWithAlt.length
     };
 
     if (metrics.withoutAlt > 0) {
@@ -297,7 +297,7 @@ class SEOAuditor {
     return {
       internal,
       external,
-      nofollow,
+      nofollow
     };
   }
 
@@ -305,7 +305,7 @@ class SEOAuditor {
    * Audit structured data
    */
   private auditStructuredData(): any[] {
-const structuredData: any[] = [],,
+const structuredData: any[] = [];
 const scripts = document.querySelectorAll('script[type="application/ld+json"]');
 scripts.forEach(script => {
 try {
@@ -375,7 +375,7 @@ structuredData.push(data);
       message,
       element,
       recommendation,
-      impact,
+      impact
     });
   }
 

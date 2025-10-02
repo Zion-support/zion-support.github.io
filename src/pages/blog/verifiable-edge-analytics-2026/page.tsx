@@ -28,8 +28,8 @@ export default function VerifiableEdgeAnalytics2026(): React.JSX.Element {
             attestations to make pipelines verifiable across environments.
           </p>
           <p>
-            Highlights: key derivation for scoped IDs, local redaction filters,,
-            minimal event shapes, DP parameters, signed SBOMs and attestations,
+            Highlights: key derivation for scoped IDs, local redaction filters,
+            minimal event shapes, DP parameters, signed SBOMs and attestations
             and observability hooks that link SLIs to product KPIs.
           </p>
         </div>

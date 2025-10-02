@@ -4,15 +4,13 @@
     "noEmit": true,
     "skipLibCheck": true
   },
-  "include": [],
+  "include": [
+    "src/types/**/*.d.ts"
+  ],
   "exclude": [
     "node_modules",
     "dist",
     "build",
-    "coverage",
-    "**/*.test.ts",
-    "**/*.test.tsx",
-    "**/*.spec.ts",
-    "**/*.spec.tsx"
+    "coverage"
   ]
 }

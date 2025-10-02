@@ -15,11 +15,11 @@ imageUrl?: string;
 
 export const newJanuary2026BlogPosts: BlogPost[] = [,
   {
-    id: "ai-2026-january-hyperautomation-platform",",
-    title: "⚙️ AI Hyperautomation Platform 2026: End-to-End Business Automation",",
-    excerpt: "Complete business process automation achieving 95% automation rates with 10x efficiency improvements and $2.8B success stories.",",
-    content: `,`;
-# AI Hyperautomation Platform 2026: End-to-End Business Automation,
+    id: "ai-2026-january-hyperautomation-platform",
+    title: "⚙️ AI Hyperautomation Platform 2026: End-to-End Business Automation",
+    excerpt: "Complete business process automation achieving 95% automation rates with 10x efficiency improvements and $2.8B success stories.",
+    content: `,
+# AI Hyperautomation Platform 2026: End-to-End Business Automation
 
 The future of business operations is here. Our AI Hyperautomation Platform represents the most comprehensive automation solution ever developed, achieving unprecedented levels of business process automation across every industry vertical.
 
@@ -146,11 +146,11 @@ The age of hyperautomation has begun. The question isn't whether to automate - i
     imageUrl: "/images/hyperautomation-platform-2026.jpg",
   },
   {
-    id: "ai-2026-january-quantum-security-breakthrough",",
-    title: "🔐 Quantum-Safe Security 2026: Unbreakable Enterprise Protection",",
-    excerpt: "Quantum-resistant security systems protecting $2.8B in assets with 99.99% threat prevention and zero security breaches across enterprise networks.",",
-    content: `,`;
-# Quantum-Safe Security 2026: Unbreakable Enterprise Protection,
+    id: "ai-2026-january-quantum-security-breakthrough",
+    title: "🔐 Quantum-Safe Security 2026: Unbreakable Enterprise Protection",
+    excerpt: "Quantum-resistant security systems protecting $2.8B in assets with 99.99% threat prevention and zero security breaches across enterprise networks.",
+    content: `,
+# Quantum-Safe Security 2026: Unbreakable Enterprise Protection
 
 As quantum computing advances, traditional encryption methods become vulnerable. Our Quantum-Safe Security platform provides the ultimate protection against both current and future threats, ensuring your enterprise remains secure in the quantum era.
 
@@ -294,11 +294,11 @@ The quantum era is coming. The question isn't whether your security will be comp
     imageUrl: "/images/quantum-security-2026.jpg",
   },
   {
-    id: "ai-2026-january-blockchain-integration",",
-    title: "⛓️ Blockchain-AI Integration 2026: Trustless Intelligence Revolution",",
-    excerpt: "Revolutionary integration of blockchain and AI creating trustless intelligence systems with decentralized governance and $1.2B enterprise value creation.",",
-    content: `,`;
-# Blockchain-AI Integration 2026: Trustless Intelligence Revolution,
+    id: "ai-2026-january-blockchain-integration",
+    title: "⛓️ Blockchain-AI Integration 2026: Trustless Intelligence Revolution",
+    excerpt: "Revolutionary integration of blockchain and AI creating trustless intelligence systems with decentralized governance and $1.2B enterprise value creation.",
+    content: `,
+# Blockchain-AI Integration 2026: Trustless Intelligence Revolution
 
 The convergence of blockchain and artificial intelligence represents the most significant technological advancement since the internet. Our Blockchain-AI Integration platform creates trustless intelligence systems that operate with complete transparency, security, and decentralized governance.
 

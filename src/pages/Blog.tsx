@@ -1,10 +1,8 @@
-import {
-Zap
-} from "lucide-react";";
-import React, { useMemo, useState } from "react";";
-import BlogPromotionBanner from "../components/BlogPromotionBanner";";
-// const Footer: React.FC = () => null,
-// import Header from "../components/Header";";
+import { Zap } from "lucide-react";
+import React, { useMemo, useState } from "react";
+import BlogPromotionBanner from "../components/BlogPromotionBanner";
+// const Footer: React.FC = () => null;
+// import Header from "../components/Header";
 
 interface BlogPost {
 id: number,
@@ -26,146 +24,146 @@ export default function Blog(): React.JSX.Element {
   const [searchTerm, setSearchTerm] = useState("");";
 
   const categories = [
-    "All",";
-    "AI Strategy",";
-    "Security",";
-    "Edge Computing",";
-    "GenAI",";
-    "Data Engineering",";
-    "Technology",";
-    "AI Solutions",";
-    "Case Studies",";
-    "Industry Insights",";
-    "Tutorials",";
+    "All",
+    "AI Strategy",
+    "Security",
+    "Edge Computing",
+    "GenAI",
+    "Data Engineering",
+    "Technology",
+    "AI Solutions",
+    "Case Studies",
+    "Industry Insights",
+    "Tutorials"
   ];
 
   const staticPosts: BlogPost[] = [,
     {
-      id: 1,,
-      title: "How AI Workflow Automation Transformed a Fortune 500 Company",",
-      excerpt: "Discover how our AI workflow automation solution reduced manual processes by 80% and increased operational efficiency by 300% for a leading financial services company.",",
-      content: "Full case study content here...",",
-      author: "Sarah Johnson",",
-      date: "2025-01-15",",
-      readTime: "8 min read",",
-      category: "Case Studies",",
-      tags: ["AI", "Automation", "Case Study", "Financial Services"],",
-      image: "/api/placeholder/400/250",",
-      featured: true,,
-      views: 1250,,
+      id: 1,
+      title: "How AI Workflow Automation Transformed a Fortune 500 Company",
+      excerpt: "Discover how our AI workflow automation solution reduced manual processes by 80% and increased operational efficiency by 300% for a leading financial services company.",
+      content: "Full case study content here...",
+      author: "Sarah Johnson",
+      date: "2025-01-15",
+      readTime: "8 min read",
+      category: "Case Studies",
+      tags: ["AI", "Automation", "Case Study", "Financial Services"],
+      image: "/api/placeholder/400/250",
+      featured: true,
+      views: 1250
     },
     {
-      id: 7,,
-      title: "Serverless AI Inference: The Cost Optimization Playbook",",
-      excerpt: "Cut inference spend 40–70% with adaptive batching, warm pools, and tiered quality without hurting P95.",",
-      content: "Full article content here...",",
-      author: "Zion Tech Group Team",",
-      date: "2025-09-29",",
-      readTime: "9 min read",",
-      category: "AI Solutions",",
-      tags: ["Serverless", "Inference", "Cost"],",
-      image: "/api/placeholder/400/250",",
-      featured: true,,
-      views: 421,,
+      id: 7,
+      title: "Serverless AI Inference: The Cost Optimization Playbook",
+      excerpt: "Cut inference spend 40–70% with adaptive batching, warm pools, and tiered quality without hurting P95.",
+      content: "Full article content here...",
+      author: "Zion Tech Group Team",
+      date: "2025-09-29",
+      readTime: "9 min read",
+      category: "AI Solutions",
+      tags: ["Serverless", "Inference", "Cost"],
+      image: "/api/placeholder/400/250",
+      featured: true,
+      views: 421
     },
     {
-      id: 8,,
-      title: "RAG Architectures That Actually Work in Production",",
-      excerpt: "Proven patterns for chunking, freshness, hybrid search, and evals that keep quality high.",",
-      content: "Full article content here...",",
-      author: "Zion Tech Group Team",",
-      date: "2025-09-28",",
-      readTime: "12 min read",",
-      category: "AI Solutions",",
-      tags: ["RAG", "Vector Search", "Evals"],",
-      image: "/api/placeholder/400/250",",
-      featured: true,,
-      views: 368,,
+      id: 8,
+      title: "RAG Architectures That Actually Work in Production",
+      excerpt: "Proven patterns for chunking, freshness, hybrid search, and evals that keep quality high.",
+      content: "Full article content here...",
+      author: "Zion Tech Group Team",
+      date: "2025-09-28",
+      readTime: "12 min read",
+      category: "AI Solutions",
+      tags: ["RAG", "Vector Search", "Evals"],
+      image: "/api/placeholder/400/250",
+      featured: true,
+      views: 368
     },
     {
-      id: 9,,
-      title: "Secure GenAI: Policy‑First Guardrails That Scale",",
-      excerpt: "Prompt isolation, PII redaction, and network egress controls—ship safely without slowing teams.",",
-      content: "Full article content here...",",
-      author: "Zion Tech Group Team",",
-      date: "2025-09-27",",
-      readTime: "8 min read",",
-      category: "Technology",",
-      tags: ["GenAI", "Security", "Compliance"],",
-      image: "/api/placeholder/400/250",",
-      featured: false,,
-      views: 297,,
+      id: 9,
+      title: "Secure GenAI: Policy‑First Guardrails That Scale",
+      excerpt: "Prompt isolation, PII redaction, and network egress controls—ship safely without slowing teams.",
+      content: "Full article content here...",
+      author: "Zion Tech Group Team",
+      date: "2025-09-27",
+      readTime: "8 min read",
+      category: "Technology",
+      tags: ["GenAI", "Security", "Compliance"],
+      image: "/api/placeholder/400/250",
+      featured: false,
+      views: 297
     },
     {
-      id: 2,,
-      title: "The Future of AI-Powered Customer Support: A Complete Guide",",
-      excerpt: "Explore the latest trends in AI customer support and learn how virtual assistants are revolutionizing customer service across industries.",",
-      content: "Full article content here...",",
-      author: "Michael Chen",",
-      date: "2025-01-12",",
-      readTime: "12 min read",",
-      category: "AI Solutions",",
-      tags: ["AI", "Customer Support", "Virtual Assistant", "Trends"],",
-      image: "/api/placeholder/400/250",",
-      featured: true,,
-      views: 980,,
+      id: 2,
+      title: "The Future of AI-Powered Customer Support: A Complete Guide",
+      excerpt: "Explore the latest trends in AI customer support and learn how virtual assistants are revolutionizing customer service across industries.",
+      content: "Full article content here...",
+      author: "Michael Chen",
+      date: "2025-01-12",
+      readTime: "12 min read",
+      category: "AI Solutions",
+      tags: ["AI", "Customer Support", "Virtual Assistant", "Trends"],
+      image: "/api/placeholder/400/250",
+      featured: true,
+      views: 980
     },
     {
-      id: 3,,
-      title: "Building Scalable Cloud Infrastructure: Best Practices 2025",",
-      excerpt: "Learn the essential strategies for building robust, scalable cloud infrastructure that can handle modern business demands.",",
-      content: "Full article content here...",",
-      author: "Emily Rodriguez",",
-      date: "2025-01-10",",
-      readTime: "15 min read",",
-      category: "Technology",",
-      tags: ["Cloud", "Infrastructure", "Scalability", "DevOps"],",
-      image: "/api/placeholder/400/250",",
-      featured: false,,
-      views: 756,,
+      id: 3,
+      title: "Building Scalable Cloud Infrastructure: Best Practices 2025",
+      excerpt: "Learn the essential strategies for building robust, scalable cloud infrastructure that can handle modern business demands.",
+      content: "Full article content here...",
+      author: "Emily Rodriguez",
+      date: "2025-01-10",
+      readTime: "15 min read",
+      category: "Technology",
+      tags: ["Cloud", "Infrastructure", "Scalability", "DevOps"],
+      image: "/api/placeholder/400/250",
+      featured: false,
+      views: 756
     },
     {
-      id: 4,,
-      title: "AI Data Analytics: Transforming Raw Data into Business Gold",",
-      excerpt: "See how machine learning and predictive analytics are helping businesses make data-driven decisions that drive real results.",",
-      content: "Full article content here...",",
-      author: "David Kim",",
-      date: "2025-01-08",",
-      readTime: "10 min read",",
-      category: "AI Solutions",",
-      tags: ["AI", "Data Analytics", "Machine Learning", "Business Intelligence"],",
-      image: "/api/placeholder/400/250",",
-      featured: false,,
-      views: 892,,
+      id: 4,
+      title: "AI Data Analytics: Transforming Raw Data into Business Gold",
+      excerpt: "See how machine learning and predictive analytics are helping businesses make data-driven decisions that drive real results.",
+      content: "Full article content here...",
+      author: "David Kim",
+      date: "2025-01-08",
+      readTime: "10 min read",
+      category: "AI Solutions",
+      tags: ["AI", "Data Analytics", "Machine Learning", "Business Intelligence"],
+      image: "/api/placeholder/400/250",
+      featured: false,
+      views: 892
     },
     {
-      id: 5,,
-      title: "Cybersecurity in the Age of AI: Protecting Your Digital Assets",",
-      excerpt: "Understand the evolving threat landscape and learn how AI-powered security solutions can protect your business from modern cyber threats.",",
-      content: "Full article content here...",",
-      author: "Lisa Wang",",
-      date: "2025-01-05",",
-      readTime: "14 min read",",
-      category: "Technology",",
-      tags: ["Cybersecurity", "AI", "Security", "Threat Detection"],",
-      image: "/api/placeholder/400/250",",
-      featured: false,,
-      views: 634,,
+      id: 5,
+      title: "Cybersecurity in the Age of AI: Protecting Your Digital Assets",
+      excerpt: "Understand the evolving threat landscape and learn how AI-powered security solutions can protect your business from modern cyber threats.",
+      content: "Full article content here...",
+      author: "Lisa Wang",
+      date: "2025-01-05",
+      readTime: "14 min read",
+      category: "Technology",
+      tags: ["Cybersecurity", "AI", "Security", "Threat Detection"],
+      image: "/api/placeholder/400/250",
+      featured: false,
+      views: 634
     },
     {
-      id: 6,,
-      title: "Healthcare Industry Transformation: AI-Powered Patient Care",",
-      excerpt: "Explore how AI is revolutionizing healthcare delivery, from diagnostic assistance to personalized treatment plans.",",
-      content: "Full article content here...",",
-      author: "Dr. James Wilson",",
-      date: "2025-01-03",",
-      readTime: "11 min read",",
-      category: "Industry Insights",",
-      tags: ["AI", "Healthcare", "Patient Care", "Medical Technology"],",
-      image: "/api/placeholder/400/250",",
-      featured: false,,
-      views: 445,,
-    },
+      id: 6,
+      title: "Healthcare Industry Transformation: AI-Powered Patient Care",
+      excerpt: "Explore how AI is revolutionizing healthcare delivery, from diagnostic assistance to personalized treatment plans.",
+      content: "Full article content here...",
+      author: "Dr. James Wilson",
+      date: "2025-01-03",
+      readTime: "11 min read",
+      category: "Industry Insights",
+      tags: ["AI", "Healthcare", "Patient Care", "Medical Technology"],
+      image: "/api/placeholder/400/250",
+      featured: false,
+      views: 445
+    }
   ];
 
   // Map content entries into this page's structure;
@@ -201,24 +199,24 @@ export default function Blog(): React.JSX.Element {
 
   const getCategoryIcon = (category: string) => {,
 switch (category) {
-case "AI Solutions": return Zap,";
-case "Case Studies": return BarChart3,";
-case "Technology": return Code,";
-case "Industry Insights": return TrendingUp,";
-case "Tutorials": return Bot,";
+case "AI Solutions": return Zap;
+case "Case Studies": return BarChart3;
+case "Technology": return Code;
+case "Industry Insights": return TrendingUp;
+case "Tutorials": return Bot;
 default: return Shield;
 };
   };
 
   const getCategoryColor = (category: string) => {,
 switch (category) {
-case "AI Solutions": return "text-blue-400 bg-blue-500/10 border-blue-500/30",";
-case "Case Studies": return "text-green-400 bg-green-500/10 border-green-500/30",";
-case "Technology": return "text-purple-400 bg-purple-500/10 border-purple-500/30",";
-case "Industry Insights": return "text-orange-400 bg-orange-500/10 border-orange-500/30",";
-case "Tutorials": return "text-cyan-400 bg-cyan-500/10 border-cyan-500/30",";
-default: return "text-gray-400 bg-gray-500/10 border-gray-500/30";";
-};
+case "AI Solutions": return "text-blue-400 bg-blue-500/10 border-blue-500/30";
+case "Case Studies": return "text-green-400 bg-green-500/10 border-green-500/30";
+case "Technology": return "text-purple-400 bg-purple-500/10 border-purple-500/30";
+case "Industry Insights": return "text-orange-400 bg-orange-500/10 border-orange-500/30";
+case "Tutorials": return "text-cyan-400 bg-cyan-500/10 border-cyan-500/30";
+default: return "text-gray-400 bg-gray-500/10 border-gray-500/30";
+}
   };
 
   return (
@@ -276,7 +274,7 @@ default: return "text-gray-400 bg-gray-500/10 border-gray-500/30";";
               </span>
             </h1>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Stay ahead with the latest insights on AI, technology trends, case studies, 
+              Stay ahead with the latest insights on AI, technology trends, case studies
               and industry best practices from our team of experts.
             </p>
           </div>
@@ -317,7 +315,7 @@ default: return "text-gray-400 bg-gray-500/10 border-gray-500/30";";
 selectedCategory === "All" && searchTerm === "" && (";
 <div className="mb-16">
 <h2 className="text-2xl font-bold text-white mb-8">Featured Articles</h2>
-<div className="grid md: grid-cols-2 gap-8">,",
+<div className="grid md:grid-cols-2 gap-8">
 {featuredPosts.map((post) => {
 const CategoryIcon = getCategoryIcon(post.category);
 const categoryColor = getCategoryColor(post.category);

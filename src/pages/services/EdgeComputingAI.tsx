@@ -1,10 +1,6 @@
 import React from 'react';
-import {
-Helmet
-} from 'react-helmet-async';
-import {
-Cloud
-} from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Cloud } from 'lucide-react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 const EdgeComputingAI: React.FC = () => {,
@@ -49,61 +45,61 @@ const EdgeComputingAI: React.FC = () => {,
 
   const pricing = [
     {
-      name: "Edge Starter",",
-      price: "$1,999",",
-      period: "/month",",
-      description: "Perfect for small-scale edge deployments and proof of concepts",",
+      name: "Edge Starter",
+      price: "$1,999",
+      period: "/month",
+      description: "Perfect for small-scale edge deployments and proof of concepts",
       features: [,
-        "Up to 10 edge devices",";
-        "Basic AI model deployment",";
-        "Standard monitoring",";
-        "Email support",";
-        "Monthly analytics reports",";
-        "Basic security features",";
-        "Standard protocols",";
+        "Up to 10 edge devices",
+        "Basic AI model deployment",
+        "Standard monitoring",
+        "Email support",
+        "Monthly analytics reports",
+        "Basic security features",
+        "Standard protocols",
         "Cloud backup integration"
-      ],
-      popular: false,
+      ]
+      popular: false
     },
     {
-      name: "Edge Professional",",
-      price: "$5,999",",
-      period: "/month",",
-      description: "Ideal for medium-scale deployments with advanced requirements",",
+      name: "Edge Professional",
+      price: "$5,999",
+      period: "/month",
+      description: "Ideal for medium-scale deployments with advanced requirements",
       features: [,
-        "Up to 100 edge devices",";
-        "Advanced AI model deployment",";
-        "Real-time monitoring & alerting",";
-        "Priority support",";
-        "Custom analytics dashboards",";
-        "Advanced security & encryption",";
-        "Optimized protocols",";
-        "Hybrid cloud integration",";
-        "Custom model training",";
+        "Up to 100 edge devices",
+        "Advanced AI model deployment",
+        "Real-time monitoring & alerting",
+        "Priority support",
+        "Custom analytics dashboards",
+        "Advanced security & encryption",
+        "Optimized protocols",
+        "Hybrid cloud integration",
+        "Custom model training",
         "API access"
-      ],
-      popular: true,
+      ]
+      popular: true
     },
     {
-      name: "Edge Enterprise",",
-      price: "$15,999",",
-      period: "/month",",
-      description: "Complete solution for large-scale enterprise edge deployments",",
+      name: "Edge Enterprise",
+      price: "$15,999",
+      period: "/month",
+      description: "Complete solution for large-scale enterprise edge deployments",
       features: [,
-        "Unlimited edge devices",";
-        "Custom AI model development",";
-        "Enterprise monitoring suite",";
-        "Dedicated edge specialist",";
-        "Custom analytics & reporting",";
-        "Enterprise security suite",";
-        "Custom protocol development",";
-        "Multi-cloud integration",";
-        "On-premise deployment",";
-        "24/7 monitoring & support",";
-        "SLA guarantee",";
+        "Unlimited edge devices",
+        "Custom AI model development",
+        "Enterprise monitoring suite",
+        "Dedicated edge specialist",
+        "Custom analytics & reporting",
+        "Enterprise security suite",
+        "Custom protocol development",
+        "Multi-cloud integration",
+        "On-premise deployment",
+        "24/7 monitoring & support",
+        "SLA guarantee",
         "Training & consultation"
-      ],
-      popular: false,
+      ]
+      popular: false
     }
   ];
 
@@ -409,7 +405,7 @@ const EdgeComputingAI: React.FC = () => {,
                     className={
 `w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${`;
 plan.popular
-? 'bg-teal-600 text-white hover: bg-teal-700',',
+? 'bg-teal-600 text-white hover:bg-teal-700'
 : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
 }`}`;
                   >

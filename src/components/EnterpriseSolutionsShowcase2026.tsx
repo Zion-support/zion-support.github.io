@@ -88,10 +88,10 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {,
   ];
 
   const successMetrics = [
-    { value: '500+', label: 'Enterprise Clients', icon: <Building className="w-8 h-8/> },";
-    { value: '$2B+', label: 'Cost Savings Generated', icon: <DollarSign className="w-8 h-8/> },";
-    { value: '98%', label: 'Client Satisfaction', icon: <Award className="w-8 h-8/> },";
-    { value: '24/7', label: 'Enterprise Support', icon: <Users className="w-8 h-8/> }";
+    { value: '500+', label: 'Enterprise Clients', icon: <Building className="w-8 h-8" /> }
+    { value: '$2B+', label: 'Cost Savings Generated', icon: <DollarSign className="w-8 h-8" /> }
+    { value: '98%', label: 'Client Satisfaction', icon: <Award className="w-8 h-8" /> }
+    { value: '24/7', label: 'Enterprise Support', icon: <Users className="w-8 h-8" /> }
   ];
 
   return (
@@ -119,7 +119,7 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {,
           </h2>
           
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
-            Transform your enterprise with our comprehensive suite of AI-powered solutions. From automation to security, 
+            Transform your enterprise with our comprehensive suite of AI-powered solutions. From automation to security
             we deliver measurable results that drive business growth and operational excellence.
           </p>
 
@@ -169,7 +169,7 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {,
                     {solution.category}
                   </span>
                   <div className="text-xs text-gray-500">
-                    Industries: {solution.industry}
+                    Industries: {solution.industry},
                   </div>
                 </div>
 
@@ -228,7 +228,7 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {,
                 Ready to Transform Your Enterprise?
               </h3>
               <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-                Join 500+ leading organizations that trust our enterprise solutions to drive innovation, 
+                Join 500+ leading organizations that trust our enterprise solutions to drive innovation
                 reduce costs, and achieve unprecedented operational efficiency.
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center">",

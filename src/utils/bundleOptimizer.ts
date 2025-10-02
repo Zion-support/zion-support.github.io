@@ -65,10 +65,10 @@ export class BundleOptimizer {
     console.log('Applying optimizations: ', optimizations);',
 
     // Simulate after optimization
-    const after: BundleAnalysis = {,
-      ...before,
+    const after: BundleAnalysis = {
+      ...before
       totalSize: Math.round(before.totalSize * 0.65), // 35% reduction,
-      recommendations: [],
+      recommendations: []
     };
 
     const savings = before.totalSize - after.totalSize;
@@ -85,8 +85,8 @@ export class BundleOptimizer {
   /**
    * Generate optimization recommendations
    */
-  private generateRecommendations(analysis: BundleAnalysis): string[] {,
-const recommendations: string[] = [],,
+  private generateRecommendations(analysis: BundleAnalysis): string[] {
+const recommendations: string[] = [];
 // Check for large components
 const largeComponents = analysis.largestComponents.filter(
 c => c.size > this.threshold
@@ -121,11 +121,11 @@ recommendations.push(
   private getComponentSizes(): Array<{ name: string; size: number }> {
     // In production, this would integrate with actual build tools
     return [
-      { name: 'App.tsx', size: 450 * 1024 },
-      { name: 'Home.tsx', size: 280 * 1024 },
-      { name: 'BannerComponents', size: 650 * 1024 },
-      { name: 'BlogComponents', size: 320 * 1024 },
-      { name: 'UtilityFunctions', size: 180 * 1024 };
+      { name: 'App.tsx', size: 450 * 1024 }
+      { name: 'Home.tsx', size: 280 * 1024 }
+      { name: 'BannerComponents', size: 650 * 1024 }
+      { name: 'BlogComponents', size: 320 * 1024 }
+      { name: 'UtilityFunctions', size: 180 * 1024 }
     ];
   }
 
@@ -133,7 +133,7 @@ recommendations.push(
    * Implement tree shaking for unused exports
    */
   enableTreeShaking(): {
-unusedExports: string[],,
+unusedExports: string[];
 potentialSavings: number;
 } {
     console.log('Analyzing unused exports...');
@@ -156,7 +156,7 @@ potentialSavings: number;
    * Optimize chunk splitting strategy
    */
   optimizeChunkStrategy(): {
-strategy: string,,
+strategy: string;
 expectedImprovement: string;
 } {
     return {

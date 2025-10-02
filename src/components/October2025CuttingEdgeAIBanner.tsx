@@ -23,7 +23,7 @@ const October2025CuttingEdgeAIBanner = () => {
           </h2>
           
           <p className="text-xl text-purple-200 max-w-3xl mx-auto">
-            Explore the forefront of AI innovation: Agentic governance, neural-symbolic fusion, ,
+            Explore the forefront of AI innovation: Agentic governance, neural-symbolic fusion
             continuous learning systems, and distributed inference at internet scale
           </p>
         </div>

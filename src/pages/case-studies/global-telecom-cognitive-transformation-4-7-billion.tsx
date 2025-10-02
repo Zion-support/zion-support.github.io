@@ -49,10 +49,10 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {,
               
               <p className="text-xl text-purple-100 leading-relaxed mb-8">
                 How a global telecom leader deployed enterprise-wide cognitive computing to achieve 
-                <span className="font-bold text-green-300"> 98.7% customer satisfaction</span>, ";
-                <span className="font-bold text-green-300"> 99.96% network reliability</span>, and ";
-                <span className="font-bold text-green-300"> $4.7B in total value</span> with ";
-                <span className="font-bold text-green-300"> 3,602% ROI</span>.";
+                <span className="font-bold text-green-300"> 98.7% customer satisfaction</span>
+                <span className="font-bold text-green-300"> 99.96% network reliability</span>, and 
+                <span className="font-bold text-green-300"> $4.7B in total value</span> with 
+                <span className="font-bold text-green-300"> 3,602% ROI</span>.
               </p>
               
               <div className="flex items-center gap-6 text-sm text-purple-200 flex-wrap">
@@ -182,37 +182,37 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {,
                 <div className="space-y-6">
                   {[
                     {
-                      title: "Cognitive Customer Intelligence",",
-                      icon: "❤️",",
+                      title: "Cognitive Customer Intelligence",
+                      icon: "❤️",
                       features: [,
-                        "Cognitive virtual assistant handling 2.3M daily interactions",";
-                        "Personalization engine with 1-to-1 recommendations",";
-                        "Predictive churn detection with 97.8% accuracy",";
+                        "Cognitive virtual assistant handling 2.3M daily interactions",
+                        "Personalization engine with 1-to-1 recommendations",
+                        "Predictive churn detection with 97.8% accuracy",
                         "Automated issue resolution (85% success rate)"
-                      ],
-                      tech: "GPT-4 fine-tuned, Knowledge graphs, Vector databases, Real-time ML",
+                      ]
+                      tech: "GPT-4 fine-tuned, Knowledge graphs, Vector databases, Real-time ML"
                     },
                     {
-                      title: "Autonomous Network Intelligence",",
-                      icon: "🌐",",
+                      title: "Autonomous Network Intelligence",
+                      icon: "🌐",
                       features: [,
-                        "Continuous monitoring of 500,000+ network elements",";
-                        "Predictive failure detection (99.6% accuracy)",";
-                        "Automated root cause analysis",";
+                        "Continuous monitoring of 500,000+ network elements",
+                        "Predictive failure detection (99.6% accuracy)",
+                        "Automated root cause analysis",
                         "Self-healing network capabilities"
-                      ],
-                      tech: "Unsupervised learning, Causal reasoning, Optimization algorithms",
+                      ]
+                      tech: "Unsupervised learning, Causal reasoning, Optimization algorithms"
                     },
                     {
-                      title: "Enterprise Cognitive Intelligence",",
-                      icon: "📊",",
+                      title: "Enterprise Cognitive Intelligence",
+                      icon: "📊",
                       features: [,
-                        "Real-time analytics across all business units",";
-                        "Predictive modeling for market opportunities",";
-                        "Competitive intelligence analysis",";
+                        "Real-time analytics across all business units",
+                        "Predictive modeling for market opportunities",
+                        "Competitive intelligence analysis",
                         "Scenario planning and simulation"
-                      ],
-                      tech: "Natural language queries, Automated insights, Causal inference",
+                      ]
+                      tech: "Natural language queries, Automated insights, Causal inference"
                     }
                   ].map((solution, idx) => (
                     <div key={idx} className="bg-gradient-to-br from-purple-900/30 to-blue-900/30 border border-purple-500/30 rounded-xl p-6">
@@ -254,12 +254,12 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {,
                     <h3 className="text-xl font-bold text-white mb-4">Customer Experience Transformation</h3>
                     <div className="grid md: grid-cols-2 gap-4">",
                       {[
-                        { label: "Customer Satisfaction", value: "98.7%", change: "from 32%" },";
-                        { label: "Net Promoter Score", value: "+72", change: "from -18" },";
-                        { label: "First Contact Resolution", value: "94%", change: "from 18%" },";
-                        { label: "Average Handle Time", value: "3.2 min", change: "from 18.7 min" },";
-                        { label: "Churn Reduction Value", value: "$1.8B", change: "annual" },";
-                        { label: "Revenue Growth", value: "$890M", change: "incremental" }";
+                        { label: "Customer Satisfaction", value: "98.7%", change: "from 32%" }
+                        { label: "Net Promoter Score", value: "+72", change: "from -18" }
+                        { label: "First Contact Resolution", value: "94%", change: "from 18%" }
+                        { label: "Average Handle Time", value: "3.2 min", change: "from 18.7 min" }
+                        { label: "Churn Reduction Value", value: "$1.8B", change: "annual" }
+                        { label: "Revenue Growth", value: "$890M", change: "incremental" }
                       ].map((metric, i) => (
                         <div key={i} className="bg-black/30 rounded-lg p-4">
                           <div className="text-sm text-purple-300 mb-1">{metric.label}</div>
@@ -274,12 +274,12 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {,
                     <h3 className="text-xl font-bold text-white mb-4">Network Operations Excellence</h3>
                     <div className="grid md: grid-cols-2 gap-4">",
                       {[
-                        { label: "Network Availability", value: "99.96%", change: "from 98.2%" },";
-                        { label: "Mean Time to Resolve", value: "18 min", change: "from 4.2 hrs" },";
-                        { label: "Automated Resolution", value: "87%", change: "of incidents" },";
-                        { label: "Predictive Accuracy", value: "99.6%", change: "for failures" },";
-                        { label: "Downtime Reduction", value: "$1.2B", change: "annual savings" },";
-                        { label: "OPEX Optimization", value: "$420M", change: "annual savings" }";
+                        { label: "Network Availability", value: "99.96%", change: "from 98.2%" }
+                        { label: "Mean Time to Resolve", value: "18 min", change: "from 4.2 hrs" }
+                        { label: "Automated Resolution", value: "87%", change: "of incidents" }
+                        { label: "Predictive Accuracy", value: "99.6%", change: "for failures" }
+                        { label: "Downtime Reduction", value: "$1.2B", change: "annual savings" }
+                        { label: "OPEX Optimization", value: "$420M", change: "annual savings" }
                       ].map((metric, i) => (
                         <div key={i} className="bg-black/30 rounded-lg p-4">
                           <div className="text-sm text-purple-300 mb-1">{metric.label}</div>
@@ -294,12 +294,12 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {,
                     <h3 className="text-xl font-bold text-white mb-4">Business Intelligence Revolution</h3>
                     <div className="grid md: grid-cols-2 gap-4">",
                       {[
-                        { label: "Insight Generation Time", value: "<1 hour", change: "from weeks" },";
-                        { label: "Prediction Accuracy", value: "98.5%", change: "market forecasts" },";
-                        { label: "Data-Driven Decisions", value: "99%", change: "from 60%" },";
-                        { label: "Executive Satisfaction", value: "97%", change: "with insights" },";
-                        { label: "Opportunities Captured", value: "$2.1B", change: "annual" },";
-                        { label: "Decision Speed", value: "10x", change: "faster" }";
+                        { label: "Insight Generation Time", value: "<1 hour", change: "from weeks" }
+                        { label: "Prediction Accuracy", value: "98.5%", change: "market forecasts" }
+                        { label: "Data-Driven Decisions", value: "99%", change: "from 60%" }
+                        { label: "Executive Satisfaction", value: "97%", change: "with insights" }
+                        { label: "Opportunities Captured", value: "$2.1B", change: "annual" }
+                        { label: "Decision Speed", value: "10x", change: "faster" }
                       ].map((metric, i) => (
                         <div key={i} className="bg-black/30 rounded-lg p-4">
                           <div className="text-sm text-purple-300 mb-1">{metric.label}</div>

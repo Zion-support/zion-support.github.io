@@ -22,7 +22,7 @@ export default function October2025AIRevolutionBanner({ className = '' }: Octobe
           </h2>
           
           <p className="text-xl text-white/80 max-w-4xl mx-auto leading-relaxed">
-            <strong className="text-white">NEW TODAY: </strong> Master autonomous AI agents (94% task automation), ",
+            <strong className="text-white">NEW TODAY:</strong> Master autonomous AI agents (94% task automation)
             AI-powered development tools (5x faster coding), and enterprise AI safety (99.2% compliance). 
             The definitive guides for forward-thinking organizations transforming with AI in 2025.
           </p>
@@ -93,7 +93,7 @@ export default function October2025AIRevolutionBanner({ className = '' }: Octobe
             </h3>
             
             <p className="text-white/70 mb-4 leading-relaxed">
-              Transform your engineering workflow with AI-native tools. Top teams achieve 5x faster development, 
+              Transform your engineering workflow with AI-native tools. Top teams achieve 5x faster development
               80% fewer bugs, and 92% developer satisfaction. The complete AI coding toolkit.
             </p>
             
@@ -137,7 +137,7 @@ export default function October2025AIRevolutionBanner({ className = '' }: Octobe
             </h3>
             
             <p className="text-white/70 mb-4 leading-relaxed">
-              Deploy AI safely and responsibly. Leading organizations achieve 99.2% safety compliance, 
+              Deploy AI safely and responsibly. Leading organizations achieve 99.2% safety compliance
               prevent costly failures, and build stakeholder trust. Your complete responsible AI framework.
             </p>
             

@@ -1,10 +1,6 @@
 import React from 'react';
-import {
-Link
-} from "react-router-dom";";
-import {
-Helmet
-} from "react-helmet-async";";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import {
 
 } from "lucide-react";";
@@ -35,7 +31,7 @@ category: 'Quantum Computing',',
 date: '2025-01-10',',
 readMinutes: 20,,
 featured: false
-}
+},
     {
 id: '3',',
 title: 'Manufacturing AI Transformation: $50M Savings & 95% Efficiency',',
@@ -52,14 +48,15 @@ featured: true
       title: 'AI Revolution 2026: The Next Frontier of Enterprise Intelligence',
       description: 'Discover autonomous AI agents, neural interfaces, and predictive intelligence systems achieving 300% productivity gains.',
       category: 'AI Innovation',
-      publishedAt: '2025-01-15}
+      publishedAt: '2025-01-15'
+    },
     {
 slug: 'quantum-ai-breakthrough',',
 title: 'Quantum AI Breakthrough: Solving Impossible Problems in Seconds',',
 description: 'Explore quantum-enhanced AI delivering 500x faster results and revolutionizing computational capabilities.',',
 category: 'Quantum Computing',',
 publishedAt: '2025-01-10'
-}
+},
     {
 slug: 'manufacturing-success',',
 title: 'Manufacturing AI Transformation: $50M Savings & 95% Efficiency',',
@@ -97,50 +94,50 @@ publishedAt: '2025-01-05'
         {/* Enhanced Structured Data */}
             <script type="application/ld+json">
           {JSON.stringify({
-            "@context": "https://schema.org",",
-            "@type": "Organization",";
-            "name": "Zion Tech Group",";
-            "alternateName": "Zion Tech",";
-            "description": "Leading AI and IT solutions provider specializing in AI workflow automation, quantum computing, edge AI, and zero trust security.",";
-            "url": "https://ziontechgroup.com",",
-            "logo": {";
-              "@type": "ImageObject",";
-              "url": "https://ziontechgroup.com/logo.png",",
-              "width": 200,";
-              "height": 60";
-            },
-            "image": "https://ziontechgroup.com/og-image.jpg",",
-            "contactPoint": {";
-"@type": "ContactPoint",";
-"telephone": "+1-302-464-0950",";
-"contactType": "customer service",";
-"availableLanguage": "English",";
-"areaServed": "US",";
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Zion Tech Group",
+            "alternateName": "Zion Tech",
+            "description": "Leading AI and IT solutions provider specializing in AI workflow automation, quantum computing, edge AI, and zero trust security.",
+            "url": "https://ziontechgroup.com",
+            "logo": {,
+              "@type": "ImageObject",
+              "url": "https://ziontechgroup.com/logo.png",
+              "width": 200,
+              "height": 60
+            }
+            "image": "https://ziontechgroup.com/og-image.jpg",
+            "contactPoint": {,
+"@type": "ContactPoint",
+"telephone": "+1-302-464-0950",
+"contactType": "customer service",
+"availableLanguage": "English",
+"areaServed": "US",
 "email": "kleber@ziontechgroup.com"
 }
-            "sameAs": [";
-              "https://linkedin.com/company/zion-tech-group",",
-              "https://twitter.com/ziontechgroup",",
-              "https://github.com/ZionClouds",
-            ],
-            "foundingDate": "2020",";
-            "numberOfEmployees": "50-100",";
-            "address": {";
-"@type": "PostalAddress",";
-"streetAddress": "364 E Main St STE 1008",";
-"addressLocality": "Middletown",";
-"addressRegion": "DE",";
-"postalCode": "19709",";
+            "sameAs": [,
+              "https://linkedin.com/company/zion-tech-group",
+              "https://twitter.com/ziontechgroup",
+              "https://github.com/ZionClouds"
+            ]
+            "foundingDate": "2020",
+            "numberOfEmployees": "50-100",
+            "address": {,
+"@type": "PostalAddress",
+"streetAddress": "364 E Main St STE 1008",
+"addressLocality": "Middletown",
+"addressRegion": "DE",
+"postalCode": "19709",
 "addressCountry": "US"
 }
-            "serviceArea": {";
-"@type": "Country",";
+            "serviceArea": {,
+"@type": "Country",
 "name": "United States"
 }
-            "hasOfferCatalog": {";
-"@type": "OfferCatalog",";
-"name": "AI and IT Solutions",";
-"itemListElement": [,";
+            "hasOfferCatalog": {,
+"@type": "OfferCatalog",
+"name": "AI and IT Solutions",
+"itemListElement": [,
 {
 "@type": "Offer",";
 "itemOffered": {,";
@@ -148,7 +145,7 @@ publishedAt: '2025-01-05'
 "name": "AI Workflow Automation",";
 "description": "Automate complex business processes with AI-powered workflows"
 }
-                }
+                },
                 {
 "@type": "Offer",";
 "itemOffered": {,";
@@ -156,7 +153,7 @@ publishedAt: '2025-01-05'
 "name": "AI Virtual Assistant",";
 "description": "Intelligent virtual assistants for customer service and support"
 }
-                }
+                },
                 {
 "@type": "Offer",";
 "itemOffered": {,";
@@ -164,7 +161,7 @@ publishedAt: '2025-01-05'
 "name": "AI Data Analytics",";
 "description": "Advanced data analytics and insights powered by AI"
 }
-                }
+                },
                 {
 "@type": "Offer",";
 "itemOffered": {,";
@@ -174,12 +171,12 @@ publishedAt: '2025-01-05'
 }
                 }
               ]
-            },
-            "aggregateRating": {";
-"@type": "AggregateRating",";
-"ratingValue": "4.8",";
-"reviewCount": "150",";
-"bestRating": "5",";
+            }
+            "aggregateRating": {,
+"@type": "AggregateRating",
+"ratingValue": "4.8",
+"reviewCount": "150",
+"bestRating": "5",
 "worstRating": "1"
 }
           })}

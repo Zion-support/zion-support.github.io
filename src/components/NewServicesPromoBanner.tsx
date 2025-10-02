@@ -6,9 +6,10 @@ featuredOnly?: boolean;
 className?: string;
 }
 
-const NewServicesPromoBanner: React.FC<NewServicesPromoBannerProps> = ({ variant = 'default',
-  showCount = 3,
-  featuredOnly = true,
+const NewServicesPromoBanner: React.FC<NewServicesPromoBannerProps> = ({
+  variant = 'default'
+  showCount = 3
+  featuredOnly = true
   className = ''
 }) => {
   const services = featuredOnly

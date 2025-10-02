@@ -16,7 +16,7 @@ return (
 </span>
 <Link
 to="/blog"
-className="bg-white text-purple-700 px-4 py-1.5 rounded-full font-semibold hover: bg-pink-50 transition-colors flex items-center gap-1 text-sm",",
+className="bg-white text-purple-700 px-4 py-1.5 rounded-full font-semibold hover:bg-pink-50 transition-colors flex items-center gap-1 text-sm"
 >
 Explore Now
 <ArrowRight className="w-4 h-4/>

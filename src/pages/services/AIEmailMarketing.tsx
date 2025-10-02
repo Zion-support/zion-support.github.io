@@ -1,10 +1,6 @@
 import React from 'react';
-import {
-Helmet
-} from 'react-helmet-async';
-import {
-TrendingUp
-} from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { TrendingUp } from 'lucide-react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 const AIEmailMarketing: React.FC = () => {,
@@ -49,61 +45,61 @@ const AIEmailMarketing: React.FC = () => {,
 
   const pricing = [
     {
-      name: "Starter",",
-      price: "$79",",
-      period: "/month",",
-      description: "Perfect for small businesses starting with AI-powered email marketing",",
+      name: "Starter",
+      price: "$79",
+      period: "/month",
+      description: "Perfect for small businesses starting with AI-powered email marketing",
       features: [,
-        "Up to 10,000 subscribers",";
-        "Basic AI content generation",";
-        "Simple automation",";
-        "Email support",";
-        "Basic analytics",";
-        "Standard templates",";
-        "5 campaigns/month",";
+        "Up to 10,000 subscribers",
+        "Basic AI content generation",
+        "Simple automation",
+        "Email support",
+        "Basic analytics",
+        "Standard templates",
+        "5 campaigns/month",
         "Basic segmentation"
-      ],
-      popular: false,
+      ]
+      popular: false
     },
     {
-      name: "Professional",",
-      price: "$199",",
-      period: "/month",",
-      description: "Ideal for growing businesses with advanced email marketing needs",",
+      name: "Professional",
+      price: "$199",
+      period: "/month",
+      description: "Ideal for growing businesses with advanced email marketing needs",
       features: [,
-        "Up to 50,000 subscribers",";
-        "Advanced AI content generation",";
-        "Smart automation workflows",";
-        "Priority support",";
-        "Advanced analytics & insights",";
-        "Custom templates",";
-        "Unlimited campaigns",";
-        "Advanced segmentation",";
-        "A/B testing",";
+        "Up to 50,000 subscribers",
+        "Advanced AI content generation",
+        "Smart automation workflows",
+        "Priority support",
+        "Advanced analytics & insights",
+        "Custom templates",
+        "Unlimited campaigns",
+        "Advanced segmentation",
+        "A/B testing",
         "API access"
-      ],
-      popular: true,
+      ]
+      popular: true
     },
     {
-      name: "Enterprise",",
-      price: "$599",",
-      period: "/month",",
-      description: "Complete solution for large organizations with enterprise requirements",",
+      name: "Enterprise",
+      price: "$599",
+      period: "/month",
+      description: "Complete solution for large organizations with enterprise requirements",
       features: [,
-        "Unlimited subscribers",";
-        "Enterprise AI capabilities",";
-        "Complex automation workflows",";
-        "Dedicated account manager",";
-        "Enterprise analytics suite",";
-        "White-label templates",";
-        "Unlimited campaigns",";
-        "Advanced AI segmentation",";
-        "Custom integrations",";
-        "Advanced security features",";
-        "SLA guarantee",";
+        "Unlimited subscribers",
+        "Enterprise AI capabilities",
+        "Complex automation workflows",
+        "Dedicated account manager",
+        "Enterprise analytics suite",
+        "White-label templates",
+        "Unlimited campaigns",
+        "Advanced AI segmentation",
+        "Custom integrations",
+        "Advanced security features",
+        "SLA guarantee",
         "Training & consultation"
-      ],
-      popular: false,
+      ]
+      popular: false
     }
   ];
 
@@ -409,7 +405,7 @@ const AIEmailMarketing: React.FC = () => {,
                     className={
 `w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${`;
 plan.popular
-? 'bg-emerald-600 text-white hover: bg-emerald-700',',
+? 'bg-emerald-600 text-white hover:bg-emerald-700'
 : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
 }`}`;
                   >

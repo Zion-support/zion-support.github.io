@@ -1,8 +1,7 @@
 import React from 'react';
-import {
-Helmet
-} from 'react-helmet-async';
-const Team: React.FC = () => {,
+import { Helmet } from 'react-helmet-async';
+
+const Team: React.FC = () => {
   const teamMembers = [
     {
       name: 'Kleber Santos',',

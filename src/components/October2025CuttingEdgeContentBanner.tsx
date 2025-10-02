@@ -1,6 +1,5 @@
-import {
-Link
-} from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
 const October2025CuttingEdgeContentBanner = () => {
   const featuredArticles = [
     {
@@ -56,9 +55,9 @@ const October2025CuttingEdgeContentBanner = () => {
           </h2>
           
           <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-            🚀 <span className="font-semibold text-purple-300">Master autonomous systems</span> with self-healing capabilities, ";
-            <span className="font-semibold text-cyan-300"> unlock 10x LLM performance</span> with advanced prompting, and ";
-            <span className="font-semibold text-pink-300"> deliver personalization at massive scale</span> — Essential reading for technology leaders!";
+            🚀 <span className="font-semibold text-purple-300">Master autonomous systems</span> with self-healing capabilities
+            <span className="font-semibold text-cyan-300"> unlock 10x LLM performance</span> with advanced prompting, and 
+            <span className="font-semibold text-pink-300"> deliver personalization at massive scale</span> — Essential reading for technology leaders!
           </p>
         </div>
 

@@ -36,16 +36,20 @@ const AIIncidentResponsePlaybooks2025: React.FC = () => {,
 
           <h3>Example Playbook Skeleton</h3>
           <pre className="text-sm overflow-x-auto">
-{`playbook: name: contain-compromised-credential,`;
+{`playbook:
+  name: contain-compromised-credential,
   budget: low,
-  approvals: - security_oncall,
-  steps: - verify_signal: oidc-anomaly,
-    - action: revoke_tokens scoped:user_id,
-    - action: rotate_keys scoped:workload,
-    - rollback: restore_tokens if:canary_fails,
-  telemetry: - emit: action.outcome,
-    - emit: time_to_contain,
-`}`;
+  approvals:
+    - security_oncall
+  steps:
+    - verify_signal: oidc-anomaly
+    - action: revoke_tokens scoped:user_id
+    - action: rotate_keys scoped:workload
+    - rollback: restore_tokens if:canary_fails
+  telemetry:
+    - emit: action.outcome
+    - emit: time_to_contain
+`}
           </pre>
 
           <h3>Rollout Strategy</h3>

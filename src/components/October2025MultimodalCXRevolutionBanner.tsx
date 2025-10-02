@@ -117,7 +117,7 @@ const October2025MultimodalCXRevolutionBanner = () => {
           <div className="grid md: grid-cols-2 gap-8 mb-6">",
             <div>
               <div className="text-red-400 font-semibold mb-2 flex items-center gap-2">
-                <AlertCircle className="w-5 h-5/>
+                <AlertCircle className="w-5 h-5" />
                 Before: Customer Experience Crisis,
               </div>
               <ul className="space-y-2 text-gray-300">
@@ -146,7 +146,7 @@ const October2025MultimodalCXRevolutionBanner = () => {
 
             <div>
               <div className="text-green-400 font-semibold mb-2 flex items-center gap-2">
-                <CheckCircle className="w-5 h-5/>
+                <CheckCircle className="w-5 h-5" />
                 After: Multimodal AI Excellence,
               </div>
               <ul className="space-y-2 text-gray-300">

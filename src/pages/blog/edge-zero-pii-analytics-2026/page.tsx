@@ -13,7 +13,7 @@ export default function EdgeZeroPIIAnalytics2026(): React.JSX.Element {
         <p className="text-zion-slate-light mb-8">Scoped IDs • Edge Aggregation • DP Noise</p>
         <div className="prose prose-invert max-w-3xl">
           <p>
-            Ship decision‑grade analytics without collecting personal data. Use scoped identifiers, on‑device aggregation,
+            Ship decision‑grade analytics without collecting personal data. Use scoped identifiers, on‑device aggregation
             and differential privacy noise to preserve utility while protecting users.
           </p>
           <p>

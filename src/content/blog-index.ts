@@ -20,58 +20,58 @@ valueProposition: string;
  */
 export const october2025Breakthroughs: BlogPost[] = [,
   {
-    slug: 'ai-2025-oct-01-neural-architecture-evolution-breakthrough',',
-    title: 'Neural Architecture Evolution 2025',',
-    description: 'Self-designing AI models achieving 10,000x faster development, 97% accuracy improvement, and $25M annual savings through autonomous model evolution.',',
-    category: 'AI Innovation',',
-    date: '2025-10-01',',
-    readTime: '25 min',',
+    slug: 'ai-2025-oct-01-neural-architecture-evolution-breakthrough',
+    title: 'Neural Architecture Evolution 2025',
+    description: 'Self-designing AI models achieving 10,000x faster development, 97% accuracy improvement, and $25M annual savings through autonomous model evolution.',
+    category: 'AI Innovation',
+    date: '2025-10-01',
+    readTime: '25 min',
     tags: [,
       'neural architecture search',
       'AutoML',
       'model optimization',
       'AI evolution',
       'machine learning',
-      'enterprise AI',
-    ],
-    featured: true,,
-    valueProposition: '$25M annual savings',',
+      'enterprise AI'
+    ]
+    featured: true,
+    valueProposition: '$25M annual savings'
   },
   {
-    slug: 'ai-2025-oct-01-quantum-inspired-optimization-enterprise',',
-    title: 'Quantum-Inspired Optimization 2025',',
-    description: 'Revolutionary quantum-inspired algorithms solving enterprise problems 1000x faster with 99.8% optimality, delivering $42M annual value.',',
-    category: 'Quantum Computing',',
-    date: '2025-10-01',',
-    readTime: '22 min',',
+    slug: 'ai-2025-oct-01-quantum-inspired-optimization-enterprise',
+    title: 'Quantum-Inspired Optimization 2025',
+    description: 'Revolutionary quantum-inspired algorithms solving enterprise problems 1000x faster with 99.8% optimality, delivering $42M annual value.',
+    category: 'Quantum Computing',
+    date: '2025-10-01',
+    readTime: '22 min',
     tags: [,
       'quantum optimization',
       'quantum computing',
       'enterprise optimization',
       'quantum algorithms',
       'supply chain',
-      'portfolio optimization',
-    ],
-    featured: true,,
-    valueProposition: '$42M annual value creation',',
+      'portfolio optimization'
+    ]
+    featured: true,
+    valueProposition: '$42M annual value creation'
   },
   {
-    slug: 'ai-2025-oct-01-intelligent-automation-orchestration-platform',',
-    title: 'Intelligent Automation Orchestration 2025',',
-    description: 'AI-powered automation platform achieving 98% process automation, 85% cost reduction, and $67M annual savings through intelligent orchestration.',',
-    category: 'Enterprise Automation',',
-    date: '2025-10-01',',
-    readTime: '28 min',',
+    slug: 'ai-2025-oct-01-intelligent-automation-orchestration-platform',
+    title: 'Intelligent Automation Orchestration 2025',
+    description: 'AI-powered automation platform achieving 98% process automation, 85% cost reduction, and $67M annual savings through intelligent orchestration.',
+    category: 'Enterprise Automation',
+    date: '2025-10-01',
+    readTime: '28 min',
     tags: [,
       'intelligent automation',
       'process automation',
       'RPA',
       'AI orchestration',
       'workflow automation',
-      'digital transformation',
-    ],
-    featured: true,,
-    valueProposition: '$67M annual savings',',
+      'digital transformation'
+    ]
+    featured: true,
+    valueProposition: '$67M annual savings'
   },
   {
     slug: 'ai-2025-oct-03-continuous-intelligence-platforms',',
@@ -94,22 +94,23 @@ export const october2025Breakthroughs: BlogPost[] = [,
     featured: true,,
     valueProposition: '$42M annual savings},
   {
-    slug: 'ai-2025-oct-03-quantum-supply-chain-optimization',',
-    title: 'Quantum Supply Chain 2025',',
-    description: '10,000x faster plans with hybrid quantum-inspired optimization and ML heuristics.',',
-    category: 'Quantum Computing',',
-    date: '2025-10-03',',
-    readTime: '11 min',',
-    tags: ['quantum', 'optimization', 'supply chain'],',
-    featured: true,,
-    valueProposition: '$127M annual savings},
+    slug: 'ai-2025-oct-03-quantum-supply-chain-optimization',
+    title: 'Quantum Supply Chain 2025',
+    description: '10,000x faster plans with hybrid quantum-inspired optimization and ML heuristics.',
+    category: 'Quantum Computing',
+    date: '2025-10-03',
+    readTime: '11 min',
+    tags: ['quantum', 'optimization', 'supply chain'],
+    featured: true,
+    valueProposition: '$127M annual savings'
+  }
 ];
 
 /**
  * All blog posts collection
  */
-export const allBlogPosts: BlogPost[] = [,
-  ...october2025Breakthroughs,
+export const allBlogPosts: BlogPost[] = [
+  ...october2025Breakthroughs
   // Newly added October 2025 posts
   {
     slug: 'ai-2025-oct-01-private-feature-flags-zero-pii',',
@@ -122,15 +123,16 @@ export const allBlogPosts: BlogPost[] = [,
     featured: true,,
     valueProposition: 'Zero PII, <100ms at edge},
   {
-    slug: 'ai-2025-oct-01-runtime-rollback-guardrails',',
-    title: 'Runtime Rollback Guardrails: Ship Faster With Reversible Changes',',
-    description: 'Blueprint for instant rollbacks, canary scorecards, and budgeted routes—move fast without breakage.',',
-    category: 'Reliability',',
-    date: '2025-10-01',',
-    readTime: '7 min',',
-    tags: ['Rollback', 'Canary', 'Guardrails', 'Deploy', 'SRE'],',
-    featured: true,,
-    valueProposition: 'Faster deploys, safer rollbacks},
+    slug: 'ai-2025-oct-01-runtime-rollback-guardrails',
+    title: 'Runtime Rollback Guardrails: Ship Faster With Reversible Changes',
+    description: 'Blueprint for instant rollbacks, canary scorecards, and budgeted routes—move fast without breakage.',
+    category: 'Reliability',
+    date: '2025-10-01',
+    readTime: '7 min',
+    tags: ['Rollback', 'Canary', 'Guardrails', 'Deploy', 'SRE'],
+    featured: true,
+    valueProposition: 'Faster deploys, safer rollbacks'
+  }
   // October 1, 2025 additions (this branch)
   {
     slug: 'edge-2025-oct-01-zero-pii-telemetry-v2',',
@@ -143,15 +145,16 @@ export const allBlogPosts: BlogPost[] = [,
     featured: true,,
     valueProposition: '$8M+ savings via safe analytics},
   {
-    slug: 'genai-2025-oct-01-eval-scorecards-live-canaries',',
-    title: 'Live Evals & Scorecards: Ship GenAI Fast Without Regressions',',
-    description: 'Online evals tied to KPIs with canary gates and auto‑rollback when quality dips.',',
-    category: 'GenAI',',
-    date: '2025-10-01',',
-    readTime: '10 min',',
-    tags: ['Evals', 'Scorecards', 'Canaries', 'Guardrails'],',
-    featured: true,,
-    valueProposition: 'Protect velocity, prevent regressions},
+    slug: 'genai-2025-oct-01-eval-scorecards-live-canaries',
+    title: 'Live Evals & Scorecards: Ship GenAI Fast Without Regressions',
+    description: 'Online evals tied to KPIs with canary gates and auto‑rollback when quality dips.',
+    category: 'GenAI',
+    date: '2025-10-01',
+    readTime: '10 min',
+    tags: ['Evals', 'Scorecards', 'Canaries', 'Guardrails'],
+    featured: true,
+    valueProposition: 'Protect velocity, prevent regressions'
+  }
   // October 2, 2025 additions (from main)
   {
     slug: 'ai-2025-oct-02-private-experiments-blueprint',',
@@ -164,15 +167,16 @@ export const allBlogPosts: BlogPost[] = [,
     featured: true,,
     valueProposition: 'Zero‑PII experiments at the edge},
   {
-    slug: 'ai-2025-oct-02-rollback-guardrails-blueprint',',
-    title: 'Runtime Rollback Guardrails Blueprint',',
-    description: 'Implement instant rollbacks, canary scorecards, and objective quality budgets.',',
-    category: 'Reliability',',
-    date: '2025-10-02',',
-    readTime: '9 min',',
-    tags: ['Rollback', 'Canary', 'Guardrails', 'Budgets'],',
-    featured: true,,
-    valueProposition: 'Instant reversibility, resilient releases},
+    slug: 'ai-2025-oct-02-rollback-guardrails-blueprint',
+    title: 'Runtime Rollback Guardrails Blueprint',
+    description: 'Implement instant rollbacks, canary scorecards, and objective quality budgets.',
+    category: 'Reliability',
+    date: '2025-10-02',
+    readTime: '9 min',
+    tags: ['Rollback', 'Canary', 'Guardrails', 'Budgets'],
+    featured: true,
+    valueProposition: 'Instant reversibility, resilient releases'
+  }
 ];
 
 /**
@@ -244,10 +248,10 @@ export function getTotalValueProposition(): string {
  * Blog post statistics
  */
 export const blogStats = {
-  totalPosts: allBlogPosts.length,,
-  featuredPosts: getFeaturedPosts().length,,
-  categories: getAllCategories().length,,
-  tags: getAllTags().length,,
-  totalValue: getTotalValueProposition(),
+  totalPosts: allBlogPosts.length,
+  featuredPosts: getFeaturedPosts().length,
+  categories: getAllCategories().length,
+  tags: getAllTags().length,
+  totalValue: getTotalValueProposition()
 };
 ;

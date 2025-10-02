@@ -124,10 +124,10 @@ const NewContentPromotionalBanner2026 = () => {
 
           <div className="grid grid-cols-2 md: grid-cols-4 gap-8">",
             {[
-              { value: '2.5M+', label: 'Global Readers', icon: <Users className="w-8 h-8/>, color: 'text-violet-400' },
-              { value: '$15B+', label: 'Value Created', icon: <TrendingUp className="w-8 h-8/>, color: 'text-purple-400' },
-              { value: '99.9%', label: 'Content Accuracy', icon: <Star className="w-8 h-8/>, color: 'text-blue-400' },
-              { value: '150+', label: 'Countries Reached', icon: <Globe className="w-8 h-8/>, color: 'text-emerald-400' };
+              { value: '2.5M+', label: 'Global Readers', icon: <Users className="w-8 h-8" />, color: 'text-violet-400' }
+              { value: '$15B+', label: 'Value Created', icon: <TrendingUp className="w-8 h-8" />, color: 'text-purple-400' }
+              { value: '99.9%', label: 'Content Accuracy', icon: <Star className="w-8 h-8" />, color: 'text-blue-400' }
+              { value: '150+', label: 'Countries Reached', icon: <Globe className="w-8 h-8" />, color: 'text-emerald-400' }
             ].map((stat, index) => (
               <div key={index} className="text-center">
                 <div className={`${stat.color} mb-2 flex justify-center`}>`;
@@ -152,7 +152,7 @@ const NewContentPromotionalBanner2026 = () => {
                 Join the Content Revolution
               </h3>
               <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-                Be among the first to access revolutionary AI insights, breakthrough research, 
+                Be among the first to access revolutionary AI insights, breakthrough research
                 and transformative technologies that are reshaping our world.
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center">",

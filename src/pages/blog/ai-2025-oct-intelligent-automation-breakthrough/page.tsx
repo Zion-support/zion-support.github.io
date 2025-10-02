@@ -15,7 +15,7 @@ const Page = () => {
           <div className="mb-6 text-sm text-zion-slate-light">Automation • 8 min read • 2025-10-01</div>
           <h1 className="text-4xl font-bold mb-4">Intelligent Automation Breakthrough 2025</h1>
           <p className="text-zion-slate-light mb-6">
-            Go beyond scripts with agents that plan, execute, and recover safely. Learn production patterns for approvals,
+            Go beyond scripts with agents that plan, execute, and recover safely. Learn production patterns for approvals
             budgets, eval‑gated actions, and deterministic rollback.
           </p>
 

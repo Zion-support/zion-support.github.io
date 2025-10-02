@@ -1,7 +1,5 @@
-import {
-Link
-} from "react-router-dom";";
-import Header from "../../../components/Header";";
+import { Link } from "react-router-dom";
+import Header from "../../../components/Header";
 
 const AdaptiveLearningPlatforms = () => {
   return (
@@ -91,7 +89,7 @@ const AdaptiveLearningPlatforms = () => {
                 platforms are revolutionizing how organizations develop talent.
               </p>
               <p className="text-lg leading-relaxed mb-4">
-                By personalizing learning paths in real-time based on individual performance, learning styles, 
+                By personalizing learning paths in real-time based on individual performance, learning styles
                 and career goals, adaptive platforms achieve 92% completion rates—a 4x improvement over 
                 traditional methods.
               </p>
@@ -215,7 +213,7 @@ const AdaptiveLearningPlatforms = () => {
                 <div className="bg-gradient-to-br from-green-900/40 to-teal-900/40 rounded-xl p-6 border border-green-500/30">
                   <h3 className="text-xl font-bold text-white mb-3">Compliance Training</h3>
                   <p className="mb-3">
-                    Transform mandatory compliance training from boring checkbox exercises into engaging, 
+                    Transform mandatory compliance training from boring checkbox exercises into engaging
                     personalized experiences with scenario-based learning.
                   </p>
                   <div className="text-sm space-y-1">

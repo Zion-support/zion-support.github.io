@@ -52,19 +52,19 @@ class ContentRecommendationEngine {
    * Get recommendations for user
    */
   getRecommendations(
-    userId: string,,
+    userId: string,
     options: {,
-limit?: number,
-excludeViewed?: boolean,
-category?: string,
+limit?: number;
+excludeViewed?: boolean;
+category?: string;
 type?: ContentItem['type'];
 } = {}
   ): RecommendationResult[] {
     const {
-      limit = 5,
-      excludeViewed = true,
+      limit = 5
+      excludeViewed = true
       category,
-      type,
+      type
     } = options;
 
     // Get or create user profile
@@ -99,8 +99,8 @@ type?: ContentItem['type'];
       const content = this.contentCatalog.find((c) => c.id === rec.contentId)!;
       return {
         content,
-        score: rec.score,,
-        reasons: rec.reasons,,
+        score: rec.score,
+        reasons: rec.reasons
       };
     });
   }
@@ -172,9 +172,9 @@ type?: ContentItem['type'];
     }
 
     return {
-      contentId: content.id,,
-      score: Math.min(score, 100),,
-      reasons,
+      contentId: content.id,
+      score: Math.min(score, 100),
+      reasons
     };
   }
 
@@ -184,11 +184,11 @@ type?: ContentItem['type'];
   private createUserProfile(userId: string): UserProfile {,
     if (!this.userProfiles.has(userId)) {
       this.userProfiles.set(userId, {
-        interests: [],,
-        viewedContent: [],,
-        preferredCategories: [],,
-        readingLevel: 'intermediate',',
-        engagement: 0.5,,
+        interests: [],
+        viewedContent: [],
+        preferredCategories: [],
+        readingLevel: 'intermediate',
+        engagement: 0.5
       });
     }
     return this.userProfiles.get(userId)!;
@@ -198,11 +198,11 @@ type?: ContentItem['type'];
    * Update user profile based on interaction
    */
   updateUserProfile(
-    userId: string,,
+    userId: string,
     update: {,
-viewedContent?: string,
-interest?: string,
-category?: string,
+viewedContent?: string;
+interest?: string;
+category?: string;
 engagement?: number;
 }
   ): void {
@@ -243,8 +243,8 @@ engagement?: number;
     const scored = this.contentCatalog
       .filter((c) => c.id !== contentId)
       .map((item) => ({
-        content: item,,
-        score: this.calculateSimilarity(source, item),,
+        content: item,
+        score: this.calculateSimilarity(source, item)
       }))
       .sort((a, b) => b.score - a.score)
       .slice(0, limit);
@@ -315,8 +315,8 @@ engagement?: number;
     
     return this.contentCatalog
       .map((item) => ({
-        content: item,,
-        relevance: this.calculateRelevance(item, lowerQuery),,
+        content: item,
+        relevance: this.calculateRelevance(item, lowerQuery)
       }))
       .filter((r) => r.relevance > 0)
       .sort((a, b) => b.relevance - a.relevance)
@@ -361,7 +361,7 @@ engagement?: number;
       'architecture',
       'infrastructure',
       'kubernetes',
-      'microservices',
+      'microservices'
     ];
 
     const hasTechnicalTerms = technicalTerms.some((term) =>
@@ -447,12 +447,12 @@ engagement?: number;
     // Extract category and tags as interests
     if (content) {
       this.updateUserProfile(userId, {
-        category: content.category,,
+        category: content.category
       });
       
       content.tags.forEach((tag) => {
         this.updateUserProfile(userId, {
-          interest: tag,,
+          interest: tag
         });
       });
     }
@@ -471,9 +471,9 @@ engagement?: number;
   /**
    * Get content stats
    */
-  getContentStats(contentId: string): {,
-views: number,,
-conversions: number,,
+  getContentStats(contentId: string): {
+views: number;
+conversions: number;
 conversionRate: number;
 } | null {
     const content = this.contentCatalog.find((c) => c.id === contentId);
@@ -486,7 +486,7 @@ conversionRate: number;
     return {
       views,
       conversions,
-      conversionRate,
+      conversionRate
     };
   }
 
@@ -496,11 +496,11 @@ conversionRate: number;
   getUserProfile(userId: string): UserProfile {,
     if (!this.userProfiles.has(userId)) {
       this.userProfiles.set(userId, {
-        interests: [],,
-        viewedContent: [],,
-        preferredCategories: [],,
-        readingLevel: 'intermediate',',
-        engagement: 0.5,,
+        interests: [],
+        viewedContent: [],
+        preferredCategories: [],
+        readingLevel: 'intermediate',
+        engagement: 0.5
       });
     }
     return this.userProfiles.get(userId)!;
@@ -524,13 +524,13 @@ conversionRate: number;
    * Export recommendations data
    */
   exportData(): {
-catalog:ContentItem[],,
+catalog: ContentItem[];
 profiles: { [userId: string]: UserProfile
 };
   } {
     return {
-      catalog: [...this.contentCatalog],,
-      profiles: Object.fromEntries(this.userProfiles),,
+      catalog: [...this.contentCatalog],
+      profiles: Object.fromEntries(this.userProfiles)
     };
   }
 }

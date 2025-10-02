@@ -36,11 +36,11 @@ const EnhancedPerformanceMonitor: React.FC = () => {,
     cls: 0.1, // Cumulative Layout Shift,
     fid: 100, // ms,
     lcp: 2500, // ms,
-    ttfb: 600 // ms,
+    ttfb: 600 // ms
   };
 
-  const generateAlert = (metric: string, value: number, threshold: number): PerformanceAlert => {,
-const type = value > threshold ? 'error' : value > threshold * 0.8 ? 'warning' : 'info',
+  const generateAlert = (metric: string, value: number, threshold: number): PerformanceAlert => {
+const type = value > threshold ? 'error' : value > threshold * 0.8 ? 'warning' : 'info';
 return {
 id: `${metric`;
 }-${Date.now()}`,`;
@@ -78,7 +78,7 @@ id: `${metric`;
         
         // Update metrics with web vitals
         setMetrics(prev => ({
-          ...prev,
+          ...prev
           [metric.name.toLowerCase()]: metric.value
         } as PerformanceMetrics));
 

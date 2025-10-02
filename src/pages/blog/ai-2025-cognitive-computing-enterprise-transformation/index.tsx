@@ -47,9 +47,9 @@ const CognitiveComputingTransformation: React.FC = () => {,
               </h1>
               
               <p className="text-xl text-purple-100 leading-relaxed mb-8">
-                Leading organizations are achieving <span className="font-bold text-green-300">98.5% decision accuracy</span>, ";
-                <span className="font-bold text-green-300"> $1.2B+ in annual value</span>, and ";
-                <span className="font-bold text-green-300"> 92% faster problem-solving</span> by deploying cognitive AI platforms that understand, reason, and learn like humans.";
+                Leading organizations are achieving <span className="font-bold text-green-300">98.5% decision accuracy</span>
+                <span className="font-bold text-green-300"> $1.2B+ in annual value</span>, and 
+                <span className="font-bold text-green-300"> 92% faster problem-solving</span> by deploying cognitive AI platforms that understand, reason, and learn like humans.
               </p>
               
               <div className="flex items-center gap-4 text-sm text-purple-200">
@@ -127,42 +127,42 @@ const CognitiveComputingTransformation: React.FC = () => {,
                 <div className="grid gap-6">
                   {[
                     {
-                      title: "Natural Language Understanding",",
-                      icon: "💬",",
+                      title: "Natural Language Understanding",
+                      icon: "💬",
                       features: [,
-                        "Semantic comprehension of unstructured text",";
-                        "Intent recognition with 98.7% accuracy",";
-                        "Multi-language support for global operations",";
+                        "Semantic comprehension of unstructured text",
+                        "Intent recognition with 98.7% accuracy",
+                        "Multi-language support for global operations",
                         "Context-aware interpretation"
                       ]
                     },
                     {
-                      title: "Knowledge Reasoning",",
-                      icon: "🧠",",
+                      title: "Knowledge Reasoning",
+                      icon: "🧠",
                       features: [,
-                        "Inference over complex knowledge graphs",";
-                        "Causal relationship understanding",";
-                        "Analogical reasoning for novel situations",";
+                        "Inference over complex knowledge graphs",
+                        "Causal relationship understanding",
+                        "Analogical reasoning for novel situations",
                         "Counterfactual analysis"
                       ]
                     },
                     {
-                      title: "Continuous Learning",",
-                      icon: "📈",",
+                      title: "Continuous Learning",
+                      icon: "📈",
                       features: [,
-                        "Adaptive models that improve over time",";
-                        "Transfer learning across domains",";
-                        "Few-shot learning for new scenarios",";
+                        "Adaptive models that improve over time",
+                        "Transfer learning across domains",
+                        "Few-shot learning for new scenarios",
                         "Reinforcement learning from outcomes"
                       ]
                     },
                     {
-                      title: "Explainable Intelligence",",
-                      icon: "🔍",",
+                      title: "Explainable Intelligence",
+                      icon: "🔍",
                       features: [,
-                        "Transparent decision pathways",";
-                        "Confidence scoring for recommendations",";
-                        "Audit trails for compliance",";
+                        "Transparent decision pathways",
+                        "Confidence scoring for recommendations",
+                        "Audit trails for compliance",
                         "Human-interpretable explanations"
                       ]
                     }
@@ -194,33 +194,33 @@ const CognitiveComputingTransformation: React.FC = () => {,
                 <div className="space-y-6">
                   {[
                     {
-                      title: "Intelligent Decision Support",",
-                      industry: "Financial Services",",
+                      title: "Intelligent Decision Support",
+                      industry: "Financial Services",
                       impact: {,
-                        accuracy: "98.5% accurate risk predictions",",
-                        value: "$847M prevented losses",",
-                        speed: "85% faster decision-making",",
-                        roi: "$127M net value in Year 1",
+                        accuracy: "98.5% accurate risk predictions",
+                        value: "$847M prevented losses",
+                        speed: "85% faster decision-making",
+                        roi: "$127M net value in Year 1"
                       }
                     },
                     {
-                      title: "Customer Intelligence Platform",",
-                      industry: "Retail",",
+                      title: "Customer Intelligence Platform",
+                      industry: "Retail",
                       impact: {,
-                        conversion: "12.8x increase in conversion rates",",
-                        satisfaction: "97.8% customer satisfaction",",
-                        revenue: "$3.4B incremental revenue",",
-                        churn: "89% reduction in churn",
+                        conversion: "12.8x increase in conversion rates",
+                        satisfaction: "97.8% customer satisfaction",
+                        revenue: "$3.4B incremental revenue",
+                        churn: "89% reduction in churn"
                       }
                     },
                     {
-                      title: "Autonomous Operations Management",",
-                      industry: "Manufacturing",",
+                      title: "Autonomous Operations Management",
+                      industry: "Manufacturing",
                       impact: {,
-                        prediction: "99.6% prediction accuracy",",
-                        downtime: "87% reduction in downtime",",
-                        savings: "$2.1B prevented losses",",
-                        quality: "94% improvement in quality",
+                        prediction: "99.6% prediction accuracy",
+                        downtime: "87% reduction in downtime",
+                        savings: "$2.1B prevented losses",
+                        quality: "94% improvement in quality"
                       }
                     }
                   ].map((app, idx) => (

@@ -5,9 +5,9 @@ delay?: number;
 children: React.ReactNode;
 }
 
-const AnimatedSection: React.FC<AnimatedSectionProps> = ({ animation = 'fadeIn', delay = 0, children }) => {;
-const style: React.CSSProperties = {,,
-animationDelay: `${delay`;
+const AnimatedSection: React.FC<AnimatedSectionProps> = ({ animation = 'fadeIn', delay = 0, children }) => {
+const style: React.CSSProperties = {
+animationDelay: `${delay
 }ms`
   };
 

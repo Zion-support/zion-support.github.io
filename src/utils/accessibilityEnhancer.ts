@@ -17,13 +17,13 @@ class AccessibilityEnhancer {
   private observers: MutationObserver[] = [],
   private keyboardListeners: Map<string, (event: KeyboardEvent) => void> = new Map(),
 
-  constructor(config: AccessibilityConfig = {,
-    enableKeyboardNavigation: true,,
-    enableScreenReaderSupport: true,,
-    enableHighContrast: true,,
-    enableReducedMotion: true,,
-    enableFocusIndicators: true,,
-    enableAriaLabels: true,,
+  constructor(config: AccessibilityConfig = {
+    enableKeyboardNavigation: true,
+    enableScreenReaderSupport: true,
+    enableHighContrast: true,
+    enableReducedMotion: true,
+    enableFocusIndicators: true,
+    enableAriaLabels: true
   }) {
     this.config = config;
     this.initializeAccessibility();
@@ -107,9 +107,9 @@ class AccessibilityEnhancer {
    * Setup high contrast support
    */
   private setupHighContrastSupport(): void {
-// Detect user's high contrast preference;
-const mediaQuery = window.matchMedia('(prefers-contrast: high)'),',
-const handleContrastChange = (e: MediaQueryListEvent) => {,,
+// Detect user's high contrast preference
+const mediaQuery = window.matchMedia('(prefers-contrast: high)');
+const handleContrastChange = (e: MediaQueryListEvent) => {
 if (e.matches) {
 document.documentElement.classList.add('high-contrast');
 } else {
@@ -128,8 +128,8 @@ document.documentElement.classList.add('high-contrast');
    * Setup reduced motion support
    */
   private setupReducedMotionSupport(): void {
-const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)'),',
-const handleMotionChange = (e: MediaQueryListEvent) => {,,
+const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+const handleMotionChange = (e: MediaQueryListEvent) => {
 if (e.matches) {
 document.documentElement.classList.add('reduce-motion');
 } else {
@@ -150,19 +150,19 @@ document.documentElement.classList.add('reduce-motion');
   private setupFocusIndicators(): void {
 const style = document.createElement('style');
 style.textContent = `
-.keyboard-navigation *:focus {,
-outline: 2px solid #3b82f6 !important,,
+.keyboard-navigation *:focus {
+outline: 2px solid #3b82f6 !important;
 outline-offset: 2px !important;
 }
       
       .high-contrast *:focus {
-outline: 3px solid #ffffff !important,,
+outline: 3px solid #ffffff !important;
 outline-offset: 3px !important;
 }
       
       .reduce-motion * {
-animation-duration: 0.01ms !important,,
-animation-iteration-count: 1 !important,,
+animation-duration: 0.01ms !important;
+animation-iteration-count: 1 !important;
 transition-duration: 0.01ms !important;
 }
     `;`;
@@ -184,8 +184,8 @@ transition-duration: 0.01ms !important;
     });
 
     observer.observe(document.body, {
-      childList: true,,
-      subtree: true,,
+      childList: true,
+      subtree: true
     });
 
     this.observers.push(observer);

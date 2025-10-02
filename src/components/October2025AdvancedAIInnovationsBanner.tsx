@@ -23,7 +23,7 @@ const October2025AdvancedAIInnovationsBanner = () => {
           </h2>
           
           <p className="text-xl text-indigo-200 max-w-3xl mx-auto">
-            Explore revolutionary advances in neuromorphic computing, synthetic data generation, 
+            Explore revolutionary advances in neuromorphic computing, synthetic data generation
             and quantum machine learning that are reshaping enterprise AI in 2025
           </p>
         </div>
@@ -82,7 +82,7 @@ const October2025AdvancedAIInnovationsBanner = () => {
             </h3>
             
             <p className="text-purple-200/80 text-sm mb-4 line-clamp-3">
-              Learn how leading organizations generate 60-80% of training data synthetically, 
+              Learn how leading organizations generate 60-80% of training data synthetically
               enabling faster iteration, privacy compliance, and more robust AI systems.
             </p>
             
@@ -115,7 +115,7 @@ const October2025AdvancedAIInnovationsBanner = () => {
             </h3>
             
             <p className="text-pink-200/80 text-sm mb-4 line-clamp-3">
-              Explore how quantum ML is delivering exponential speedups for optimization, drug discovery, 
+              Explore how quantum ML is delivering exponential speedups for optimization, drug discovery
               financial modeling, and cryptography with 1,000+ qubit systems.
             </p>
             

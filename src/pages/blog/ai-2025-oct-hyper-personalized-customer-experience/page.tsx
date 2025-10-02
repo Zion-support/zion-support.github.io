@@ -68,7 +68,7 @@ export default function HyperPersonalizedCustomerExperience2025(): void {
               <h2 className="text-3xl font-bold mb-6 text-pink-300">The Experience Imperative</h2>
               <p className="text-gray-300 mb-4 leading-relaxed">
                 Customer expectations have reached unprecedented levels. 87% of customers expect companies to anticipate their 
-                needs, and 76% get frustrated when experiences aren't personalized. Yet most enterprises still deliver generic,
+                needs, and 76% get frustrated when experiences aren't personalized. Yet most enterprises still deliver generic
                 one-size-fits-all experiences that feel robotic and irrelevant.
               </p>
               <p className="text-gray-300 mb-4 leading-relaxed">
@@ -114,7 +114,7 @@ export default function HyperPersonalizedCustomerExperience2025(): void {
               <div className="bg-slate-800/50 rounded-xl p-6 mb-6 border border-pink-500/20">
                 <h3 className="text-2xl font-bold mb-4 text-rose-300">3. Real-Time Experience Orchestration</h3>
                 <p className="text-gray-300 mb-4">
-                  AI agents dynamically compose personalized experiences across all channels based on predicted customer intent, 
+                  AI agents dynamically compose personalized experiences across all channels based on predicted customer intent
                   context, and goals. Every element—content, offers, messaging, layout, products—adapts in milliseconds to 
                   optimize for engagement, satisfaction, and business outcomes.
                 </p>

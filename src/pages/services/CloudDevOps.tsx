@@ -1,10 +1,6 @@
 import React from 'react';
-import {
-Helmet
-} from 'react-helmet-async';
-import {
-Monitor
-} from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Monitor } from 'lucide-react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 const CloudDevOps: React.FC = () => {,
@@ -49,61 +45,61 @@ const CloudDevOps: React.FC = () => {,
 
   const pricing = [
     {
-      name: "Startup",",
-      price: "$3,500",",
-      period: "/month",",
-      description: "Perfect for startups and small teams getting started with cloud infrastructure",",
+      name: "Startup",
+      price: "$3,500",
+      period: "/month",
+      description: "Perfect for startups and small teams getting started with cloud infrastructure",
       features: [,
-        "Single cloud provider setup",";
-        "Basic CI/CD pipeline",";
-        "Standard monitoring",";
-        "Email support",";
-        "Monthly infrastructure review",";
-        "Basic security scanning",";
-        "Up to 5 environments",";
+        "Single cloud provider setup",
+        "Basic CI/CD pipeline",
+        "Standard monitoring",
+        "Email support",
+        "Monthly infrastructure review",
+        "Basic security scanning",
+        "Up to 5 environments",
         "Standard backup strategy"
-      ],
-      popular: false,
+      ]
+      popular: false
     },
     {
-      name: "Growth",",
-      price: "$8,500",",
-      period: "/month",",
-      description: "Ideal for growing companies with complex deployment needs",",
+      name: "Growth",
+      price: "$8,500",
+      period: "/month",
+      description: "Ideal for growing companies with complex deployment needs",
       features: [,
-        "Multi-cloud setup",";
-        "Advanced CI/CD with testing",";
-        "Comprehensive monitoring & alerting",";
-        "Priority support",";
-        "Weekly infrastructure reviews",";
-        "Advanced security & compliance",";
-        "Up to 15 environments",";
-        "Automated backup & recovery",";
-        "Performance optimization",";
+        "Multi-cloud setup",
+        "Advanced CI/CD with testing",
+        "Comprehensive monitoring & alerting",
+        "Priority support",
+        "Weekly infrastructure reviews",
+        "Advanced security & compliance",
+        "Up to 15 environments",
+        "Automated backup & recovery",
+        "Performance optimization",
         "Disaster recovery planning"
-      ],
-      popular: true,
+      ]
+      popular: true
     },
     {
-      name: "Enterprise",",
-      price: "$25,000",",
-      period: "/month",",
-      description: "Complete solution for large organizations with enterprise requirements",",
+      name: "Enterprise",
+      price: "$25,000",
+      period: "/month",
+      description: "Complete solution for large organizations with enterprise requirements",
       features: [,
-        "Hybrid & multi-cloud architecture",";
-        "Enterprise-grade CI/CD",";
-        "Advanced monitoring with AI insights",";
-        "Dedicated DevOps engineer",";
-        "Daily infrastructure management",";
-        "Full security & compliance suite",";
-        "Unlimited environments",";
-        "Enterprise backup & disaster recovery",";
-        "24/7 monitoring & support",";
-        "Custom automation development",";
-        "SLA guarantee",";
+        "Hybrid & multi-cloud architecture",
+        "Enterprise-grade CI/CD",
+        "Advanced monitoring with AI insights",
+        "Dedicated DevOps engineer",
+        "Daily infrastructure management",
+        "Full security & compliance suite",
+        "Unlimited environments",
+        "Enterprise backup & disaster recovery",
+        "24/7 monitoring & support",
+        "Custom automation development",
+        "SLA guarantee",
         "On-premise integration"
-      ],
-      popular: false,
+      ]
+      popular: false
     }
   ];
 
@@ -177,8 +173,8 @@ const CloudDevOps: React.FC = () => {,
               <h1 className="text-5xl md: text-7xl font-bold mb-6">",
                 Cloud & <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">DevOps</span>
               </h1>
-              <p className="text-xl md: text-2xl text-green-100 max-w-4xl mx-auto mb-8">",
-                Expert cloud infrastructure and DevOps services that deliver 99.99% uptime, 
+              <p className="text-xl md:text-2xl text-green-100 max-w-4xl mx-auto mb-8">
+                Expert cloud infrastructure and DevOps services that deliver 99.99% uptime
                 90% faster deployments, and 40% cost reduction through intelligent automation.
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center">",
@@ -359,7 +355,7 @@ const CloudDevOps: React.FC = () => {,
                     className={
 `w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${`;
 plan.popular
-? 'bg-green-600 text-white hover: bg-green-700',',
+? 'bg-green-600 text-white hover:bg-green-700'
 : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
 }`}`;
                   >

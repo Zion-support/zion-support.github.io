@@ -206,7 +206,7 @@ class PerformanceMetricsTracker {
       name,
       value: Math.round(value),,
       rating,
-      timestamp: Date.now(),,
+      timestamp: Date.now()
     };
     
     this.metrics.set(name, metric);
@@ -285,8 +285,8 @@ class PerformanceMetricsTracker {
       this.budgets.push({
         metric,
         budget,
-        current: 0,,
-        status: 'pass',',
+        current: 0,
+        status: 'pass'
       });
     }
     this.checkBudgets();
@@ -318,18 +318,18 @@ class PerformanceMetricsTracker {
   getReport(): PerformanceReport {
     return {
       webVitals: {,
-        lcp: this.metrics.get('LCP'),',
-        fid: this.metrics.get('FID'),',
-        cls: this.metrics.get('CLS'),',
-        fcp: this.metrics.get('FCP'),',
-        ttfb: this.metrics.get('TTFB'),',
-      },
+        lcp: this.metrics.get('LCP'),
+        fid: this.metrics.get('FID'),
+        cls: this.metrics.get('CLS'),
+        fcp: this.metrics.get('FCP'),
+        ttfb: this.metrics.get('TTFB')
+      }
       customMetrics: Array.from(this.metrics.values()).filter(,
-        m => !['LCP', 'FID', 'CLS', 'FCP', 'TTFB'].includes(m.name);
-      ),
-      resourceTimings: this.getResourceTimings(),,
-      budgets: [...this.budgets],,
-      timestamp: new Date(),,
+        m => !['LCP', 'FID', 'CLS', 'FCP', 'TTFB'].includes(m.name)
+      )
+      resourceTimings: this.getResourceTimings(),
+      budgets: [...this.budgets],
+      timestamp: new Date()
     };
   }
 
@@ -339,10 +339,10 @@ class PerformanceMetricsTracker {
   private getResourceTimings(): ResourceTiming[] {
     const resources = performance.getEntriesByType('resource') as PerformanceResourceTiming[];
     return resources.map(resource => ({
-      name: resource.name,,
-      duration: Math.round(resource.duration),,
-      size: resource.transferSize || 0,,
-      type: this.getResourceType(resource.name),,
+      name: resource.name,
+      duration: Math.round(resource.duration),
+      size: resource.transferSize || 0,
+      type: this.getResourceType(resource.name)
     }));
   }
 

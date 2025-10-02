@@ -9,32 +9,32 @@ import {
 const mockLocalStorage = (() => {
   let store: Record<string, string> = {};
   return {
-    getItem: (key: string) => store[key] || null,,
+    getItem: (key: string) => store[key] || null,
     setItem: (key: string, value: string) => {,
       store[key] = value;
-    },
+    }
     removeItem: (key: string) => {,
       delete store[key];
-    },
+    }
     clear: () => {,
       store = {};
-    },
+    }
   };
 })();
 
 const mockSessionStorage = (() => {
   let store: Record<string, string> = {};
   return {
-    getItem: (key: string) => store[key] || null,,
+    getItem: (key: string) => store[key] || null,
     setItem: (key: string, value: string) => {,
       store[key] = value;
-    },
+    }
     removeItem: (key: string) => {,
       delete store[key];
-    },
+    }
     clear: () => {,
       store = {};
-    },
+    }
   };
 })();
 
@@ -50,11 +50,11 @@ describe('Analytics Tracking System', () => {;
   describe('trackEvent', () => {;
     it('should track custom event with all properties', () => {;
       const event = {
-        category: 'test',',
-        action: 'click',',
-        label: 'button',',
-        value: 100,,
-        metadata: { extra: 'data' },
+        category: 'test',
+        action: 'click',
+        label: 'button',
+        value: 100,
+        metadata: { extra: 'data' }
       };
 
       expect(() => trackEvent(event)).not.toThrow();
@@ -62,8 +62,8 @@ describe('Analytics Tracking System', () => {;
 
     it('should store event in localStorage', () => {;
       trackEvent({
-        category: 'test',',
-        action: 'test_action',',
+        category: 'test',
+        action: 'test_action'
       });
 
       const stored = mockLocalStorage.getItem('analytics_events');
@@ -81,9 +81,8 @@ describe('Analytics Tracking System', () => {;
       // Track 150 events
       for (let i = 0; i < 150; i++) {
         trackEvent({
-          category: 'test',',
-          action: `action_${i}`,`;
-        });
+          category: 'test',
+          action: `action_${i}`});
       }
 
       const stored = mockLocalStorage.getItem('analytics_events');
@@ -94,18 +93,18 @@ describe('Analytics Tracking System', () => {;
     });
   });
 
-  describe('trackPageView', () => {;
-    it('should track page view with path', () => {;
-      Object.defineProperty(document, 'title', {;
-        value: 'Test Page',',
-        writable: true,,
+  describe('trackPageView', () => {
+    it('should track page view with path', () => {
+      Object.defineProperty(document, 'title', {
+        value: 'Test Page',
+        writable: true
       });
 
       trackPageView('/test-path', 'Test Page');
       const stored = mockLocalStorage.getItem('analytics_events');
       if (stored) {
 const events = JSON.parse(stored);
-const pageViewEvent = events.find((e: any) => e.category === 'page_view'),',
+const pageViewEvent = events.find((e: any) => e.category === 'page_view');
 expect(pageViewEvent).toBeTruthy();
 expect(pageViewEvent.label).toBe('/test-path');
 }
@@ -131,7 +130,7 @@ expect(pageViewEvent.label).toBe('/test-path');
       if (stored) {
 const events = JSON.parse(stored);
 const bannerEvent = events.find(
-(e: any) => e.category === 'banner' && e.action === 'click',',
+(e: any) => e.category === 'banner' && e.action === 'click'
 );
 expect(bannerEvent).toBeTruthy();
 expect(bannerEvent.metadata.source).toBe('homepage');
@@ -142,15 +141,15 @@ expect(bannerEvent.metadata.source).toBe('homepage');
   describe('trackConversion', () => {;
     it('should track newsletter signup conversion', () => {;
       trackConversion({
-        type: 'newsletter_signup',',
-        value: 10,,
-        source: 'homepage',',
+        type: 'newsletter_signup',
+        value: 10,
+        source: 'homepage'
       });
 
       const stored = mockLocalStorage.getItem('analytics_events');
       if (stored) {
 const events = JSON.parse(stored);
-const conversionEvent = events.find((e: any) => e.category === 'conversion'),',
+const conversionEvent = events.find((e: any) => e.category === 'conversion');
 expect(conversionEvent).toBeTruthy();
 expect(conversionEvent.action).toBe('newsletter_signup');
 expect(conversionEvent.value).toBe(10);

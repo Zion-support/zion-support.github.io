@@ -1,10 +1,6 @@
 import React from 'react';
-import {
-Helmet
-} from 'react-helmet-async';
-import {
-TrendingUp
-} from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { TrendingUp } from 'lucide-react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 const AIWorkflowAutomation: React.FC = () => {,
@@ -49,54 +45,54 @@ const AIWorkflowAutomation: React.FC = () => {,
 
   const pricing = [
     {
-      name: "Starter",",
-      price: "$2,500",",
-      period: "/month",",
-      description: "Perfect for small businesses getting started with automation",",
+      name: "Starter",
+      price: "$2,500",
+      period: "/month",
+      description: "Perfect for small businesses getting started with automation",
       features: [,
-        "Up to 10 automated workflows",";
-        "5 user accounts",";
-        "Basic analytics dashboard",";
-        "Email support",";
-        "Standard integrations (5)",";
+        "Up to 10 automated workflows",
+        "5 user accounts",
+        "Basic analytics dashboard",
+        "Email support",
+        "Standard integrations (5)",
         "Monthly reporting"
-      ],
-      popular: false,
+      ]
+      popular: false
     },
     {
-      name: "Professional",",
-      price: "$7,500",",
-      period: "/month",",
-      description: "Ideal for growing businesses with complex workflows",",
+      name: "Professional",
+      price: "$7,500",
+      period: "/month",
+      description: "Ideal for growing businesses with complex workflows",
       features: [,
-        "Unlimited automated workflows",";
-        "25 user accounts",";
-        "Advanced analytics & AI insights",";
-        "Priority support",";
-        "Advanced integrations (25)",";
-        "Real-time monitoring",";
-        "Custom workflow templates",";
+        "Unlimited automated workflows",
+        "25 user accounts",
+        "Advanced analytics & AI insights",
+        "Priority support",
+        "Advanced integrations (25)",
+        "Real-time monitoring",
+        "Custom workflow templates",
         "API access"
-      ],
-      popular: true,
+      ]
+      popular: true
     },
     {
-      name: "Enterprise",",
-      price: "$25,000",",
-      period: "/month",",
-      description: "Complete solution for large organizations",",
+      name: "Enterprise",
+      price: "$25,000",
+      period: "/month",
+      description: "Complete solution for large organizations",
       features: [,
-        "Unlimited everything",";
-        "Unlimited user accounts",";
-        "Enterprise-grade analytics",";
-        "Dedicated success manager",";
-        "Unlimited integrations",";
-        "Advanced security features",";
-        "Custom development",";
-        "SLA guarantee",";
+        "Unlimited everything",
+        "Unlimited user accounts",
+        "Enterprise-grade analytics",
+        "Dedicated success manager",
+        "Unlimited integrations",
+        "Advanced security features",
+        "Custom development",
+        "SLA guarantee",
         "On-premise deployment option"
-      ],
-      popular: false,
+      ]
+      popular: false
     }
   ];
 
@@ -126,35 +122,35 @@ const AIWorkflowAutomation: React.FC = () => {,
 
   const caseStudies = [
     {
-      title: "Fortune 500 Manufacturing",",
-      challenge: "Manual workflow processes causing delays and errors",",
-      solution: "Implemented AI-driven automation for supply chain management",",
+      title: "Fortune 500 Manufacturing",
+      challenge: "Manual workflow processes causing delays and errors",
+      solution: "Implemented AI-driven automation for supply chain management",
       results: [,
-        "85% reduction in processing time",";
-        "99.7% accuracy improvement",";
-        "$15M annual cost savings",";
+        "85% reduction in processing time",
+        "99.7% accuracy improvement",
+        "$15M annual cost savings",
         "ROI achieved in 4 months"
       ]
     },
     {
-      title: "Global Financial Services",",
-      challenge: "Complex compliance workflows requiring manual oversight",",
-      solution: "Deployed intelligent automation with real-time monitoring",",
+      title: "Global Financial Services",
+      challenge: "Complex compliance workflows requiring manual oversight",
+      solution: "Deployed intelligent automation with real-time monitoring",
       results: [,
-        "90% faster compliance reporting",";
-        "100% audit compliance rate",";
-        "$8M operational savings",";
+        "90% faster compliance reporting",
+        "100% audit compliance rate",
+        "$8M operational savings",
         "50% reduction in compliance team workload"
       ]
     },
     {
-      title: "Healthcare System",",
-      challenge: "Patient data processing bottlenecks",",
-      solution: "Automated patient intake and data processing workflows",",
+      title: "Healthcare System",
+      challenge: "Patient data processing bottlenecks",
+      solution: "Automated patient intake and data processing workflows",
       results: [,
-        "75% faster patient processing",";
-        "95% reduction in data entry errors",";
-        "40% improvement in patient satisfaction",";
+        "75% faster patient processing",
+        "95% reduction in data entry errors",
+        "40% improvement in patient satisfaction",
         "$12M annual efficiency gains"
       ]
     }
@@ -317,7 +313,7 @@ const AIWorkflowAutomation: React.FC = () => {,
                     className={
 `w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${`;
 plan.popular
-? 'bg-blue-600 text-white hover: bg-blue-700',',
+? 'bg-blue-600 text-white hover:bg-blue-700'
 : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
 }`}`;
                   >

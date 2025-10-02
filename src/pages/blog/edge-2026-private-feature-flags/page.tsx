@@ -13,7 +13,7 @@ export default function EdgePrivateFeatureFlags2026(): React.JSX.Element {
         <p className="text-zion-slate-light mb-8">Signed configs • Scoped IDs • On‑Device Telemetry</p>
         <div className="prose prose-invert max-w-3xl">
           <p>
-            Deliver private, compliant rollouts at global edge latency using signed configurations, scoped identifiers,
+            Deliver private, compliant rollouts at global edge latency using signed configurations, scoped identifiers
             and on‑device telemetry. Keep user data local while preserving observability.
           </p>
           <p>

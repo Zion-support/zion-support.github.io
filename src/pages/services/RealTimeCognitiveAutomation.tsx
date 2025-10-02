@@ -1,7 +1,5 @@
-import {
-Link
-} from "react-router-dom";";
-import Header from "../../components/Header";";
+import { Link } from "react-router-dom";
+import Header from "../../components/Header";
 
 const RealTimeCognitiveAutomation = () => {
   return (
@@ -47,7 +45,7 @@ const RealTimeCognitiveAutomation = () => {
             </h1>
 
             <p className="text-xl text-zion-slate-light leading-relaxed mb-8">
-              Revolutionize your business operations with AI-powered workflows that deliver instant decision-making, 
+              Revolutionize your business operations with AI-powered workflows that deliver instant decision-making
               self-learning automation, and 99.97% accuracy. Achieve 87% cost reduction and 10x productivity gains.
             </p>
 

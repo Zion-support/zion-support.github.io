@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
-// import {
-useWebVitals
-} from "../hooks/usePerformance";";
+// import { useWebVitals } from "../hooks/usePerformance";
 
 interface PerformanceMetrics {
 lcp?: number;
@@ -26,8 +24,8 @@ export const PerformanceMonitor: React.FC = () => {,
     // Listen for performance metrics
     const handleMetric = (metric: any) => {,
       setMetrics(prev => ({
-        ...prev,
-        [metric.name.toLowerCase()]: metric.value,
+        ...prev
+        [metric.name.toLowerCase()]: metric.value
       }));
 
       // Show monitor if poor performance is detected
@@ -57,28 +55,28 @@ export const PerformanceMonitor: React.FC = () => {,
 
   const getMetricColor = (name: string, value: number) => {,
 switch (name) {
-case 'lcp':,
-return value <= 2500 ? 'text-green-400' : value <= 4000 ? 'text-yellow-400' : 'text-red-400',
-case 'fid':,
-return value <= 100 ? 'text-green-400' : value <= 300 ? 'text-yellow-400' : 'text-red-400',
-case 'cls':,
-return value <= 0.1 ? 'text-green-400' : value <= 0.25 ? 'text-yellow-400' : 'text-red-400',
-case 'fcp':,
-return value <= 1800 ? 'text-green-400' : value <= 3000 ? 'text-yellow-400' : 'text-red-400',
-case 'ttfb':,
-return value <= 800 ? 'text-green-400' : value <= 1800 ? 'text-yellow-400' : 'text-red-400',
-default: ,,
+case 'lcp':
+return value <= 2500 ? 'text-green-400' : value <= 4000 ? 'text-yellow-400' : 'text-red-400';
+case 'fid':
+return value <= 100 ? 'text-green-400' : value <= 300 ? 'text-yellow-400' : 'text-red-400';
+case 'cls':
+return value <= 0.1 ? 'text-green-400' : value <= 0.25 ? 'text-yellow-400' : 'text-red-400';
+case 'fcp':
+return value <= 1800 ? 'text-green-400' : value <= 3000 ? 'text-yellow-400' : 'text-red-400';
+case 'ttfb':
+return value <= 800 ? 'text-green-400' : value <= 1800 ? 'text-yellow-400' : 'text-red-400';
+default:
 return 'text-gray-400';
 };
   };
 
-  const getMetricLabel = (name: string) => {,
-    const labels: Record<string, string> = {,
-      lcp: 'Largest Contentful Paint',',
-      fid: 'First Input Delay',',
-      cls: 'Cumulative Layout Shift',',
-      fcp: 'First Contentful Paint',',
-      ttfb: 'Time to First Byte',',
+  const getMetricLabel = (name: string) => {
+    const labels: Record<string, string> = {
+      lcp: 'Largest Contentful Paint',
+      fid: 'First Input Delay',
+      cls: 'Cumulative Layout Shift',
+      fcp: 'First Contentful Paint',
+      ttfb: 'Time to First Byte'
     };
     return labels[name] || name.toUpperCase();
   };
