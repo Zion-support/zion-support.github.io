@@ -44,26 +44,26 @@ const October2025FreshContentBanner = () => {
           </h2>
           
           <p className="text-xl text-purple-200 max-w-3xl mx-auto">";
-            Fresh insights on DevSecOps automation, multimodal customer experience, autonomous networking, 
+            Fresh insights on DevSecOps automation, multimodal customer experience, autonomous networking
             and advanced prompt engineering—featuring real ROI metrics and implementation blueprints
           </p>
         </div>
 
         {/* Featured Articles Grid */}
-        <div className="grid md: grid-cols-2 gap-6 mb-10">",
+        <div className="grid md: grid-cols-2 gap-6 mb-10">"
 =======
-        <div className="grid md: grid-cols-2 gap-6 mb-10">";,
+        <div className="grid md: grid-cols-2 gap-6 mb-10">";
           {/* Article 1 - DevSecOps */}
           <Link 
             to="/blog/ai-2025-october-devsecops-continuous-compliance-automation"
-            className="group bg-gradient-to-br from-indigo-800/40 to-purple-900/40 backdrop-blur-sm border border-indigo-400/30 rounded-2xl p-6 hover: scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-500/50",
+            className="group bg-gradient-to-br from-indigo-800/40 to-purple-900/40 backdrop-blur-sm border border-indigo-400/30 rounded-2xl p-6 hover: scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-500/50"
           >
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-3 bg-indigo-500/20 rounded-xl group-hover: bg-indigo-500/30 transition-colors">",
+              <div className="p-3 bg-indigo-500/20 rounded-xl group-hover: bg-indigo-500/30 transition-colors">"
                 <Shield className="w-8 h-8 text-indigo-300/>
 =======
             <div className="flex items-center gap-3 mb-4">";
-              <div className="p-3 bg-indigo-500/20 rounded-xl group-hover: bg-indigo-500/30 transition-colors">";,
+              <div className="p-3 bg-indigo-500/20 rounded-xl group-hover: bg-indigo-500/30 transition-colors">";
                 <Shield className="w-8 h-8 text-indigo-300" />";
               </div>
               <div className="flex-1">";
@@ -71,9 +71,9 @@ const October2025FreshContentBanner = () => {
               </div>
             </div>
             
-            <h3 className="text-xl font-bold text-white mb-3 group-hover: text-indigo-200 transition-colors">",
+            <h3 className="text-xl font-bold text-white mb-3 group-hover: text-indigo-200 transition-colors">"
 =======
-            <h3 className="text-xl font-bold text-white mb-3 group-hover: text-indigo-200 transition-colors">";,
+            <h3 className="text-xl font-bold text-white mb-3 group-hover: text-indigo-200 transition-colors">";
               AI-Powered DevSecOps & Continuous Compliance Automation 2025
             </h3>
             
@@ -88,23 +88,23 @@ const October2025FreshContentBanner = () => {
                 <span>•</span>
                 <span>$12M avg savings</span>
               </div>
-              <ArrowRight className="w-5 h-5 text-indigo-300 group-hover: translate-x-1 transition-transform/>",
+              <ArrowRight className="w-5 h-5 text-indigo-300 group-hover: translate-x-1 transition-transform/>"
 =======
-              <ArrowRight className="w-5 h-5 text-indigo-300 group-hover: translate-x-1 transition-transform" />";,
+              <ArrowRight className="w-5 h-5 text-indigo-300 group-hover: translate-x-1 transition-transform" />";
             </div>
           </Link>
 
           {/* Article 2 - Multimodal CX */}
           <Link 
             to="/blog/ai-2025-october-multimodal-customer-experience-revolution"
-            className="group bg-gradient-to-br from-rose-800/40 to-orange-900/40 backdrop-blur-sm border border-rose-400/30 rounded-2xl p-6 hover: scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-rose-500/50",
+            className="group bg-gradient-to-br from-rose-800/40 to-orange-900/40 backdrop-blur-sm border border-rose-400/30 rounded-2xl p-6 hover: scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-rose-500/50"
           >
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-3 bg-rose-500/20 rounded-xl group-hover: bg-rose-500/30 transition-colors">",
+              <div className="p-3 bg-rose-500/20 rounded-xl group-hover: bg-rose-500/30 transition-colors">"
                 <Users className="w-8 h-8 text-rose-300/>
 =======
             <div className="flex items-center gap-3 mb-4">";
-              <div className="p-3 bg-rose-500/20 rounded-xl group-hover: bg-rose-500/30 transition-colors">";,
+              <div className="p-3 bg-rose-500/20 rounded-xl group-hover: bg-rose-500/30 transition-colors">";
                 <Users className="w-8 h-8 text-rose-300" />";
               </div>
               <div className="flex-1">";
@@ -112,9 +112,9 @@ const October2025FreshContentBanner = () => {
               </div>
             </div>
             
-            <h3 className="text-xl font-bold text-white mb-3 group-hover: text-rose-200 transition-colors">",
+            <h3 className="text-xl font-bold text-white mb-3 group-hover: text-rose-200 transition-colors">"
 =======
-            <h3 className="text-xl font-bold text-white mb-3 group-hover: text-rose-200 transition-colors">";,
+            <h3 className="text-xl font-bold text-white mb-3 group-hover: text-rose-200 transition-colors">";
               Real-Time Multimodal AI for Enterprise Customer Experience 2025
             </h3>
             
@@ -129,23 +129,23 @@ const October2025FreshContentBanner = () => {
                 <span>•</span>
                 <span>$18M revenue lift</span>
               </div>
-              <ArrowRight className="w-5 h-5 text-rose-300 group-hover: translate-x-1 transition-transform/>",
+              <ArrowRight className="w-5 h-5 text-rose-300 group-hover: translate-x-1 transition-transform/>"
 =======
-              <ArrowRight className="w-5 h-5 text-rose-300 group-hover: translate-x-1 transition-transform" />";,
+              <ArrowRight className="w-5 h-5 text-rose-300 group-hover: translate-x-1 transition-transform" />";
             </div>
           </Link>
 
           {/* Article 3 - Network Operations */}
           <Link 
             to="/blog/ai-2025-october-autonomous-network-operations-sd-wan"
-            className="group bg-gradient-to-br from-cyan-800/40 to-blue-900/40 backdrop-blur-sm border border-cyan-400/30 rounded-2xl p-6 hover: scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/50",
+            className="group bg-gradient-to-br from-cyan-800/40 to-blue-900/40 backdrop-blur-sm border border-cyan-400/30 rounded-2xl p-6 hover: scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/50"
           >
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-3 bg-cyan-500/20 rounded-xl group-hover: bg-cyan-500/30 transition-colors">",
+              <div className="p-3 bg-cyan-500/20 rounded-xl group-hover: bg-cyan-500/30 transition-colors">"
                 <Network className="w-8 h-8 text-cyan-300/>
 =======
             <div className="flex items-center gap-3 mb-4">";
-              <div className="p-3 bg-cyan-500/20 rounded-xl group-hover: bg-cyan-500/30 transition-colors">";,
+              <div className="p-3 bg-cyan-500/20 rounded-xl group-hover: bg-cyan-500/30 transition-colors">";
                 <Network className="w-8 h-8 text-cyan-300" />";
               </div>
               <div className="flex-1">";
@@ -153,19 +153,19 @@ const October2025FreshContentBanner = () => {
               </div>
             </div>
             
-            <h3 className="text-xl font-bold text-white mb-3 group-hover: text-cyan-200 transition-colors">",
+            <h3 className="text-xl font-bold text-white mb-3 group-hover: text-cyan-200 transition-colors">"
               Autonomous Network Operations with AI-Driven SD-WAN 2025
             </h3>
             
             <p className="text-blue-200/80 text-sm mb-4 line-clamp-3">
               Transform network management with autonomous SD-WAN that optimizes routing, predicts failures
 =======
-            <h3 className="text-xl font-bold text-white mb-3 group-hover: text-cyan-200 transition-colors">";,
+            <h3 className="text-xl font-bold text-white mb-3 group-hover: text-cyan-200 transition-colors">";
               Autonomous Network Operations with AI-Driven SD-WAN 2025
             </h3>
             
             <p className="text-blue-200/80 text-sm mb-4 line-clamp-3">";
-              Transform network management with autonomous SD-WAN that optimizes routing, predicts failures, 
+              Transform network management with autonomous SD-WAN that optimizes routing, predicts failures
               and self-heals—reducing incidents by 91% and improving performance by 6.8x.
             </p>
             
@@ -175,23 +175,23 @@ const October2025FreshContentBanner = () => {
                 <span>•</span>
                 <span>$8.4M savings</span>
               </div>
-              <ArrowRight className="w-5 h-5 text-cyan-300 group-hover: translate-x-1 transition-transform/>",
+              <ArrowRight className="w-5 h-5 text-cyan-300 group-hover: translate-x-1 transition-transform/>"
 =======
-              <ArrowRight className="w-5 h-5 text-cyan-300 group-hover: translate-x-1 transition-transform" />";,
+              <ArrowRight className="w-5 h-5 text-cyan-300 group-hover: translate-x-1 transition-transform" />";
             </div>
           </Link>
 
           {/* Article 4 - Prompt Engineering */}
           <Link 
             to="/blog/ai-2025-october-advanced-prompt-engineering-chain-of-thought"
-            className="group bg-gradient-to-br from-violet-800/40 to-fuchsia-900/40 backdrop-blur-sm border border-violet-400/30 rounded-2xl p-6 hover: scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-violet-500/50",
+            className="group bg-gradient-to-br from-violet-800/40 to-fuchsia-900/40 backdrop-blur-sm border border-violet-400/30 rounded-2xl p-6 hover: scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-violet-500/50"
           >
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-3 bg-violet-500/20 rounded-xl group-hover: bg-violet-500/30 transition-colors">",
+              <div className="p-3 bg-violet-500/20 rounded-xl group-hover: bg-violet-500/30 transition-colors">"
                 <Lightbulb className="w-8 h-8 text-violet-300/>
 =======
             <div className="flex items-center gap-3 mb-4">";
-              <div className="p-3 bg-violet-500/20 rounded-xl group-hover: bg-violet-500/30 transition-colors">";,
+              <div className="p-3 bg-violet-500/20 rounded-xl group-hover: bg-violet-500/30 transition-colors">";
                 <Lightbulb className="w-8 h-8 text-violet-300" />";
               </div>
               <div className="flex-1">";
@@ -199,9 +199,9 @@ const October2025FreshContentBanner = () => {
               </div>
             </div>
             
-            <h3 className="text-xl font-bold text-white mb-3 group-hover: text-violet-200 transition-colors">",
+            <h3 className="text-xl font-bold text-white mb-3 group-hover: text-violet-200 transition-colors">"
 =======
-            <h3 className="text-xl font-bold text-white mb-3 group-hover: text-violet-200 transition-colors">";,
+            <h3 className="text-xl font-bold text-white mb-3 group-hover: text-violet-200 transition-colors">";
               Advanced Prompt Engineering & Chain-of-Thought Reasoning 2025
             </h3>
             
@@ -216,9 +216,9 @@ const October2025FreshContentBanner = () => {
                 <span>•</span>
                 <span>$22M productivity</span>
               </div>
-              <ArrowRight className="w-5 h-5 text-violet-300 group-hover: translate-x-1 transition-transform/>",
+              <ArrowRight className="w-5 h-5 text-violet-300 group-hover: translate-x-1 transition-transform/>"
 =======
-              <ArrowRight className="w-5 h-5 text-violet-300 group-hover: translate-x-1 transition-transform" />";,
+              <ArrowRight className="w-5 h-5 text-violet-300 group-hover: translate-x-1 transition-transform" />";
             </div>
           </Link>
         </div>
@@ -227,7 +227,7 @@ const October2025FreshContentBanner = () => {
         <div className="text-center mt-10">";
           <Link 
             to="/blog"
-            className="inline-flex items-center gap-3 bg-gradient-to-r from-indigo-600 to-pink-600 hover: from-indigo-700 hover:to-pink-700 text-white font-bold text-lg px-10 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl",
+            className="inline-flex items-center gap-3 bg-gradient-to-r from-indigo-600 to-pink-600 hover: from-indigo-700 hover:to-pink-700 text-white font-bold text-lg px-10 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl"
           >
             <span>Read All Latest Articles</span>
             <ArrowRight className="w-6 h-6/>
@@ -241,11 +241,11 @@ const October2025FreshContentBanner = () => {
         </div>
 
         {/* Stats Bar */}
-        <div className="mt-12 grid grid-cols-2 md: grid-cols-4 gap-6">",
+        <div className="mt-12 grid grid-cols-2 md: grid-cols-4 gap-6">"
           <div className="text-center">
             <div className="text-3xl font-extrabold text-transparent bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text mb-1">
 =======
-        <div className="mt-12 grid grid-cols-2 md: grid-cols-4 gap-6">";,
+        <div className="mt-12 grid grid-cols-2 md: grid-cols-4 gap-6">";
           <div className="text-center">";
             <div className="text-3xl font-extrabold text-transparent bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text mb-1">";
               94%

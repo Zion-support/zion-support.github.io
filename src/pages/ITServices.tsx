@@ -1,29 +1,6 @@
 import React from "react";
-import {
-Helmet
-} from "react-helmet-async";
-import {
-CheckCircle,
-ArrowRight,
-DollarSign,
-Clock,
-Star,
-TrendingUp,
-Globe,
-Smartphone,
-MessageSquare,
-Zap,
-Settings,
-Monitor,
-Cpu,
-HardDrive,
-Wifi,
-Eye,
-Key,
-AlertTriangle,
-Users,
-Building
-} from "lucide-react";
+import { Helmet } from "react-helmet-async";
+import { CheckCircle, ArrowRight, DollarSign, Clock, Star, TrendingUp, Globe, Smartphone, MessageSquare, Zap, Settings, Monitor, Cpu, HardDrive, Wifi, Eye, Key, AlertTriangle, Users, Building } from "lucide-react";
 
 export default function ITServices(): React.JSX.Element {
   const itServices = [
@@ -35,21 +12,21 @@ export default function ITServices(): React.JSX.Element {
       eta: "4-12 weeks",
       category: "Cloud Infrastructure",
       icon: Cloud,
-      features: [
+      features: [,
         "Multi-cloud strategy and architecture design",
         "Automated migration with zero downtime",
         "Cost optimization with 30-50% savings",
         "Security hardening and compliance setup",
         "Performance monitoring and optimization",
         "Disaster recovery and backup solutions",
-        "24/7 cloud operations support",
-      ],
-      benefits: [
+        "24/7 cloud operations support"
+      ]
+      benefits: [,
         "50% reduction in infrastructure costs",
         "99.99% uptime guarantee",
         "3x faster application deployment",
-        "Complete security compliance",
-      ],
+        "Complete security compliance"
+      ]
       useCases: ["Enterprise companies", "SaaS providers", "E-commerce platforms", "Healthcare systems"],
       marketSize: "$623.3B cloud computing market",
       link: "/contact"
@@ -62,21 +39,21 @@ export default function ITServices(): React.JSX.Element {
       eta: "3-8 weeks",
       category: "Cybersecurity",
       icon: Shield,
-      features: [
+      features: [,
         "Identity and access management (IAM) setup",
         "Network segmentation and micro-segmentation",
         "Endpoint detection and response (EDR)",
         "Security information and event management (SIEM)",
         "Multi-factor authentication (MFA) implementation",
         "Continuous security monitoring",
-        "Incident response automation",
-      ],
-      benefits: [
+        "Incident response automation"
+      ]
+      benefits: [,
         "95% reduction in security incidents",
         "100% compliance with industry standards",
         "Real-time threat detection and response",
-        "Automated security policy enforcement",
-      ],
+        "Automated security policy enforcement"
+      ]
       useCases: ["Financial institutions", "Government agencies", "Healthcare organizations", "Large enterprises"],
       marketSize: "$366.1B cybersecurity market",
       link: "/contact"
@@ -89,21 +66,21 @@ export default function ITServices(): React.JSX.Element {
       eta: "3-6 weeks",
       category: "DevOps & Automation",
       icon: Zap,
-      features: [
+      features: [,
         "CI/CD pipeline setup with automated testing",
         "Infrastructure as Code (IaC) with Terraform",
         "Container orchestration with Kubernetes",
         "Automated deployment and rollback",
         "Performance monitoring and alerting",
         "Security scanning and compliance checks",
-        "Developer productivity tools integration",
-      ],
-      benefits: [
+        "Developer productivity tools integration"
+      ]
+      benefits: [,
         "10x faster deployment cycles",
         "80% reduction in deployment failures",
         "50% improvement in developer productivity",
-        "Automated quality assurance",
-      ],
+        "Automated quality assurance"
+      ]
       useCases: ["Software companies", "Tech startups", "E-commerce platforms", "Financial services"],
       marketSize: "$10.3B DevOps market",
       link: "/contact"
@@ -116,21 +93,21 @@ export default function ITServices(): React.JSX.Element {
       eta: "4-10 weeks",
       category: "Data & Analytics",
       icon: Database,
-      features: [
+      features: [,
         "Data lake and data warehouse architecture",
         "Real-time data streaming with Apache Kafka",
         "ETL/ELT pipeline automation",
         "Data quality monitoring and governance",
         "Machine learning pipeline integration",
         "Business intelligence dashboard creation",
-        "Data security and privacy compliance",
-      ],
-      benefits: [
+        "Data security and privacy compliance"
+      ]
+      benefits: [,
         "5x faster data processing",
         "Real-time business insights",
         "90% reduction in data errors",
-        "Automated data governance",
-      ],
+        "Automated data governance"
+      ]
       useCases: ["Analytics companies", "E-commerce platforms", "Financial services", "Healthcare systems"],
       marketSize: "$274.3B data analytics market",
       link: "/contact"
@@ -143,21 +120,21 @@ export default function ITServices(): React.JSX.Element {
       eta: "2-6 weeks",
       category: "Network Solutions",
       icon: Network,
-      features: [
+      features: [,
         "SD-WAN implementation and optimization",
         "Network security with next-gen firewalls",
         "Load balancing and traffic optimization",
         "Network monitoring and performance analytics",
         "Wireless infrastructure setup",
         "VPN and remote access solutions",
-        "Disaster recovery network planning",
-      ],
-      benefits: [
+        "Disaster recovery network planning"
+      ]
+      benefits: [,
         "60% improvement in network performance",
         "99.9% network uptime guarantee",
         "40% reduction in network costs",
-        "Enhanced security and compliance",
-      ],
+        "Enhanced security and compliance"
+      ]
       useCases: ["Multi-location businesses", "Remote work environments", "Healthcare networks", "Educational institutions"],
       marketSize: "$45.2B SD-WAN market",
       link: "/contact"
@@ -170,21 +147,21 @@ export default function ITServices(): React.JSX.Element {
       eta: "2-4 weeks",
       category: "Compliance & Governance",
       icon: Lock,
-      features: [
+      features: [,
         "Automated compliance monitoring and reporting",
         "Policy management and enforcement",
         "Risk assessment and mitigation",
         "Audit trail and evidence collection",
         "Employee training and awareness programs",
         "Incident response and breach notification",
-        "Regulatory change management",
-      ],
-      benefits: [
+        "Regulatory change management"
+      ]
+      benefits: [,
         "90% reduction in compliance costs",
         "100% audit readiness",
         "Automated risk management",
-        "Continuous compliance monitoring",
-      ],
+        "Continuous compliance monitoring"
+      ]
       useCases: ["Healthcare providers", "Financial services", "SaaS companies", "Government contractors"],
       marketSize: "$56.9B compliance management market",
       link: "/contact"

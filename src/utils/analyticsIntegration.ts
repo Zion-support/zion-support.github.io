@@ -5,7 +5,7 @@
  * (Google Analytics, Mixpanel, Amplitude, Segment, etc.) with
  * privacy-focused tracking and GDPR compliance.
  * 
- * Features: * - Multi-provider support,
+ * Features: * - Multi-provider support
  * - Event tracking with custom properties
  * - User identification and traits
  * - Page view tracking
@@ -19,9 +19,9 @@ export interface AnalyticsEvent {
   properties?: Record<string, string | number | boolean>;
   timestamp: number,
 =======
-  name: string;,
+  name: string;
   properties?: Record<string, string | number | boolean>;
-  timestamp: number;,
+  timestamp: number;
   userId?: string;
   sessionId?: string;
 }
@@ -29,7 +29,7 @@ export interface AnalyticsEvent {
 export interface AnalyticsUser {
   id: string,
 =======
-  id: string;,
+  id: string;
   traits?: Record<string, string | number | boolean>;
   anonymousId?: string;
 }
@@ -39,9 +39,9 @@ providers: {,
 googleAnalytics?: {
 measurementId: string;
 =======
-providers: {,,
-googleAnalytics?: {,
-measurementId: string;,
+providers: {,
+googleAnalytics?: {
+measurementId: string;
 enabled: boolean;
 };
     mixpanel?: {
@@ -61,29 +61,28 @@ enabled: boolean;
 respectDoNotTrack: boolean;
 anonymizeIp: boolean;
 =======
-respectDoNotTrack: boolean;,
-anonymizeIp: boolean;,
+respectDoNotTrack: boolean;
+anonymizeIp: boolean;
 consentRequired: boolean;
 };
   debug: boolean;
 }
 
 class AnalyticsIntegration {
-  private config: AnalyticsConfig,
-  private eventQueue: AnalyticsEvent[] = [],
+  private config: AnalyticsConfig
+  private eventQueue: AnalyticsEvent[] = []
   private currentUser?: AnalyticsUser;
-  private sessionId: string,
-  private consentGiven: boolean = false,
-  private initialized: boolean = false,
+  private sessionId: string
+  private consentGiven: boolean = false
+  private initialized: boolean = false
 =======
-  private config: AnalyticsConfig;,
-  private eventQueue: AnalyticsEvent[] = [];,
+  private config: AnalyticsConfig;
+  private eventQueue: AnalyticsEvent[] = [];
   private currentUser?: AnalyticsUser;
-  private sessionId: string;,
-  private consentGiven: boolean = false;,
-  private initialized: boolean = false;,
-
-  constructor(config: AnalyticsConfig) {,
+  private sessionId: string;
+  private consentGiven: boolean = false;
+  private initialized: boolean = false;
+  constructor(config: AnalyticsConfig) {
     this.config = config;
     this.sessionId = this.generateSessionId();
     
@@ -149,7 +148,7 @@ class AnalyticsIntegration {
 
     // Initialize gtag
     (window as any).dataLayer = (window as any).dataLayer || [];
-    function gtag(...args: any[]) {,
+    function gtag(...args: any[]) {
       (window as any).dataLayer.push(args);
     };
     (window as any).gtag = gtag;
@@ -162,7 +161,7 @@ class AnalyticsIntegration {
     gtag('js', new Date());';
     gtag('config', measurementId, {';
       anonymize_ip: this.config.privacy.anonymizeIp,,
-      send_page_view: false, // We'll handle this manually';,
+      send_page_view: false, // We'll handle this manually';
     });
 
     if (this.config.debug) {
@@ -177,13 +176,13 @@ class AnalyticsIntegration {
     const { token } = this.config.providers.mixpanel!;
     
     // Load Mixpanel
-    (function(f: any, b: any) {,
+    (function(f: any, b: any) {
       if (!b.__SV) {
         var i, h;
         window.mixpanel = b;
         b._i = [];
-        b.init = function(e: any, f: any, c: any) {,
-          function g(a: any, d: any) {,
+        b.init = function(e: any, f: any, c: any) {
+          function g(a: any, d: any) {
             var b = d.split('.');
 =======
             var b = d.split('.');';
@@ -195,7 +194,7 @@ class AnalyticsIntegration {
           var a = b;
           'undefined' !== typeof c ? (a = b[c] = []) : (c = 'mixpanel');';
           a.people = a.people || [];
-          a.toString = function(a: any) {,
+          a.toString = function(a: any) {
             var d = 'mixpanel';
             'mixpanel' !== c && (d += '.' + c);
             a || (d += ' (stub)');
@@ -216,7 +215,7 @@ class AnalyticsIntegration {
           for (h = 0; h < i.length; h++) g(a, i[h]);
           var j = 'set set_once union unset remove delete'.split(' ');';
           a.get_group = function() {
-            function b(c: any) {,
+            function b(c: any) {
               d[c] = function() {
                 call2_args = arguments;
                 call2 = [c].concat(Array.prototype.slice.call(call2_args, 0));
@@ -227,7 +226,7 @@ class AnalyticsIntegration {
               var d = {}
                 e = ['get_group'].concat(Array.prototype.slice.call(arguments, 0))
 =======
-              var d = {},
+              var d = {}
                 e = ['get_group'].concat(Array.prototype.slice.call(arguments, 0)),';
                 c = 0;
               c < j.length;
@@ -245,11 +244,11 @@ class AnalyticsIntegration {
     (window as any).mixpanel.init(token, {
       debug: this.config.debug,
       track_pageview: false,
-      persistence: 'localStorage'
+      persistence: 'localStorage',
 =======
       debug: this.config.debug,,
       track_pageview: false,,
-      persistence: 'localStorage',';,
+      persistence: 'localStorage',';
     });
 
     if (this.config.debug) {
@@ -264,31 +263,31 @@ class AnalyticsIntegration {
     const { apiKey } = this.config.providers.amplitude!;
     
     // Load Amplitude
-    (function(e: any, t: any) {,
+    (function(e: any, t: any) {
       var n = e.amplitude || { _q: [], _iq: {} };
       var r = t.createElement('script');';
       r.type = 'text/javascript';';
       r.integrity = 'sha384-u0hlTAJ1tNefeBKwiBNwB4CkHZ1ck4ajx/pKmwWtc+IufKJiCQZ+WjJIi+7C6Ntm';';
       r.crossOrigin = 'anonymous';';
       r.async = true;
-      r.src = 'https://cdn.amplitude.com/libs/amplitude-8.21.4-min.gz.js';',
+      r.src = 'https://cdn.amplitude.com/libs/amplitude-8.21.4-min.gz.js';'
       r.onload = function() {
         if (!e.amplitude.runQueuedFunctions) {
-          console.log('[Amplitude] Error: could not load SDK');',
+          console.log('[Amplitude] Error: could not load SDK');'
         }
       };
-      var s: any = t.getElementsByTagName('script')[0];',
+      var s: any = t.getElementsByTagName('script')[0];'
 =======
-      r.src = 'https: //cdn.amplitude.com/libs/amplitude-8.21.4-min.gz.js';';,
+      r.src = 'https: //cdn.amplitude.com/libs/amplitude-8.21.4-min.gz.js';';
       r.onload = function() {
         if (!e.amplitude.runQueuedFunctions) {
-          console.log('[Amplitude] Error: could not load SDK');';,
+          console.log('[Amplitude] Error: could not load SDK');';
         }
       };
-      var s: any = t.getElementsByTagName('script')[0];';,
+      var s: any = t.getElementsByTagName('script')[0];';
       s.parentNode.insertBefore(r, s);
       
-      function i(e: any, t: any) {,
+      function i(e: any, t: any) {
         e.prototype[t] = function() {
           this._q.push([t].concat(Array.prototype.slice.call(arguments, 0)));
           return this;
@@ -319,8 +318,8 @@ class AnalyticsIntegration {
 =======
       var d = ['init', 'logEvent', 'logRevenue', 'setUserId', 'setUserProperties', 'setOptOut', 'setVersionName', 'setDomain', 'setDeviceId', 'enableTracking', 'setGlobalUserProperties', 'identify', 'clearUserProperties', 'setGroup', 'logRevenueV2', 'regenerateDeviceId', 'groupIdentify', 'onInit', 'logEventWithTimestamp', 'logEventWithGroups', 'setSessionId', 'resetSessionId', 'getDeviceId', 'getUserId', 'setMinTimeBetweenSessionsMillis', 'setEventUploadThreshold', 'setUseDynamicConfig', 'setServerZone', 'setServerUrl', 'sendEvents', 'setLibrary', 'setTransport'];';
       
-      function v(e: any) {,
-        function t(t: any) {,
+      function v(e: any) {
+        function t(t: any) {
           e[t] = function() {
             e._q.push([t].concat(Array.prototype.slice.call(arguments, 0)));
           };
@@ -344,8 +343,7 @@ class AnalyticsIntegration {
       includeReferrer: true,,
       includeUtm: true,,
       trackingOptions: {,
-        ipAddress: !this.config.privacy.anonymizeIp,,
-      },
+        ipAddress: !this.config.privacy.anonymizeIp,}
     });
 
     if (this.config.debug) {
@@ -412,7 +410,7 @@ class AnalyticsIntegration {
             'setAnonymousId',';
             'addDestinationMiddleware',';
           ];
-          analytics.factory = function(e: any) {,
+          analytics.factory = function(e: any) {
             return function() {
               var t = Array.prototype.slice.call(arguments);
               t.unshift(e);
@@ -424,24 +422,24 @@ class AnalyticsIntegration {
             var key = analytics.methods[e];
             analytics[key] = analytics.factory(key);
           }
-          analytics.load = function(key: any, e: any) {,
+          analytics.load = function(key: any, e: any) {
             var t = document.createElement('script');
             t.type = 'text/javascript';
             t.async = !0;
             t.src =
-              'https://cdn.segment.com/analytics.js/v1/' +',
+              'https://cdn.segment.com/analytics.js/v1/' +'
               key +
               '/analytics.min.js';
-            var n: any = document.getElementsByTagName('script')[0];',
+            var n: any = document.getElementsByTagName('script')[0];'
 =======
             var t = document.createElement('script');';
             t.type = 'text/javascript';';
             t.async = !0;
             t.src =
-              'https: //cdn.segment.com/analytics.js/v1/' +';,
+              'https: //cdn.segment.com/analytics.js/v1/' +';
               key +
               '/analytics.min.js';';
-            var n: any = document.getElementsByTagName('script')[0];';,
+            var n: any = document.getElementsByTagName('script')[0];';
             n.parentNode.insertBefore(t, n);
             analytics._loadOptions = e;
           };
@@ -459,18 +457,17 @@ class AnalyticsIntegration {
   /**
    * Track event
    */
-  track(eventName: string, properties?: Record<string, any>): void {,
-    const event: AnalyticsEvent = {,
+  track(eventName: string, properties?: Record<string, any>): void {
+    const event: AnalyticsEvent = {
       name: eventName,,
       properties,
       timestamp: Date.now(),
       userId: this.currentUser?.id,
-      sessionId: this.sessionId
+      sessionId: this.sessionId,
 =======
       timestamp: Date.now(),,
       userId: this.currentUser?.id,,
-      sessionId: this.sessionId,,
-    };
+      sessionId: this.sessionId,};
 
     if (!this.consentGiven || !this.initialized) {
       this.eventQueue.push(event);
@@ -495,9 +492,9 @@ class AnalyticsIntegration {
     }
 
     if (this.config.debug) {
-      console.log('[Analytics] Event tracked: ', eventName, properties);',
+      console.log('[Analytics] Event tracked: ', eventName, properties);'
 =======
-      console.log('[Analytics] Event tracked: ', eventName, properties);';,
+      console.log('[Analytics] Event tracked: ', eventName, properties);';
     }
   }
 
@@ -510,14 +507,13 @@ class AnalyticsIntegration {
       path: window.location.pathname,
       url: window.location.href,
       title: document.title,
-      referrer: document.referrer
+      referrer: document.referrer,
 =======
-      ...properties,
+      ...properties
       path: window.location.pathname,,
       url: window.location.href,,
       title: document.title,,
-      referrer: document.referrer,,
-    };
+      referrer: document.referrer,};
 
     if (this.config.providers.googleAnalytics?.enabled) {
       (window as any).gtag?.('event', 'page_view', pageProps);';
@@ -536,22 +532,22 @@ class AnalyticsIntegration {
     }
 
     if (this.config.debug) {
-      console.log('[Analytics] Page viewed: ', pageName || document.title, pageProps);',
+      console.log('[Analytics] Page viewed: ', pageName || document.title, pageProps);'
 =======
-      console.log('[Analytics] Page viewed: ', pageName || document.title, pageProps);';,
+      console.log('[Analytics] Page viewed: ', pageName || document.title, pageProps);';
     }
   }
 
   /**
    * Identify user
    */
-  identify(userId: string, traits?: Record<string, any>): void {,
+  identify(userId: string, traits?: Record<string, any>): void {
     this.currentUser = {
       id: userId,
       traits
 =======
       id: userId,,
-      traits,
+      traits
     };
 
     if (!this.consentGiven || !this.initialized) {
@@ -584,16 +580,16 @@ class AnalyticsIntegration {
     }
 
     if (this.config.debug) {
-      console.log('[Analytics] User identified: ', userId, traits);',
+      console.log('[Analytics] User identified: ', userId, traits);'
 =======
-      console.log('[Analytics] User identified: ', userId, traits);';,
+      console.log('[Analytics] User identified: ', userId, traits);';
     }
   }
 
   /**
    * Set user consent
    */
-  setConsent(granted: boolean): void {,
+  setConsent(granted: boolean): void {
     this.consentGiven = granted;
     this.storeConsent(granted);
 
@@ -602,9 +598,9 @@ class AnalyticsIntegration {
     }
 
     if (this.config.debug) {
-      console.log('[Analytics] Consent: ', granted ? 'granted' : 'revoked');',
+      console.log('[Analytics] Consent: ', granted ? 'granted' : 'revoked');'
 =======
-      console.log('[Analytics] Consent: ', granted ? 'granted' : 'revoked');';,
+      console.log('[Analytics] Consent: ', granted ? 'granted' : 'revoked');';
     }
   }
 
@@ -653,7 +649,7 @@ class AnalyticsIntegration {
   /**
    * Store consent
    */
-  private storeConsent(granted: boolean): void {,
+  private storeConsent(granted: boolean): void {
     try {
       localStorage.setItem('analytics-consent', granted ? 'true' : 'false');';
     } catch {
@@ -663,7 +659,7 @@ class AnalyticsIntegration {
 }
 
 // Default configuration
-const defaultConfig: AnalyticsConfig = {,
+const defaultConfig: AnalyticsConfig = {
   providers: {},
   privacy: {,
     respectDoNotTrack: true,
@@ -674,22 +670,20 @@ const defaultConfig: AnalyticsConfig = {,
 };
 
 // Singleton instance (will be initialized with actual config by the app)
-export let analytics: AnalyticsIntegration,
+export let analytics: AnalyticsIntegration
 =======
     respectDoNotTrack: true,,
     anonymizeIp: true,,
-    consentRequired: false,,
-  },
+    consentRequired: false,},
   debug: process.env.NODE_ENV === 'development',';
 };
 
 // Singleton instance (will be initialized with actual config by the app)
-export let analytics: AnalyticsIntegration;,
-
+export let analytics: AnalyticsIntegration;
 /**
  * Initialize analytics
  */
-export function initializeAnalytics(config: Partial<AnalyticsConfig>): AnalyticsIntegration {,
+export function initializeAnalytics(config: Partial<AnalyticsConfig>): AnalyticsIntegration {
   const mergedConfig = {
     ...defaultConfig
     ...config
@@ -702,16 +696,16 @@ export function initializeAnalytics(config: Partial<AnalyticsConfig>): Analytics
       ...config.privacy
     }
 =======
-    ...defaultConfig,
-    ...config,
+    ...defaultConfig
+    ...config
     providers: {,
-      ...defaultConfig.providers,
-      ...config.providers,
-    },
+      ...defaultConfig.providers
+      ...config.providers
+    }
     privacy: {,
-      ...defaultConfig.privacy,
-      ...config.privacy,
-    },
+      ...defaultConfig.privacy
+      ...config.privacy
+    }
   };
 
   analytics = new AnalyticsIntegration(mergedConfig);

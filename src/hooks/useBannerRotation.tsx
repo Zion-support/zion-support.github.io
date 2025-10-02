@@ -8,17 +8,17 @@ import {
 
 } from '../utils/bannerRotation';
 interface UseBannerRotationOptions {
-banners: BannerConfig[];,
-strategy?: Partial<RotationStrategy>;,
-autoRotate?: boolean;,
+banners: BannerConfig[];
+strategy?: Partial<RotationStrategy>;
+autoRotate?: boolean;
 balancedSelection?: boolean;
 }
 
 interface UseBannerRotationReturn {
-displayedBanners: BannerConfig[];,
-handleBannerImpression: (bannerId: string) => void;,
-handleBannerClick: (bannerId: string) => void;,
-refreshBanners: () => void;,
+displayedBanners: BannerConfig[];
+handleBannerImpression: (bannerId: string) => void;
+handleBannerClick: (bannerId: string) => void;
+refreshBanners: () => void;
 isLoading: boolean;
 }
 
@@ -55,13 +55,13 @@ export const useBannerRotation = ({
   }, [bannersWithStats, strategy, balancedSelection]);
   
   // Handle banner impression
-  const handleBannerImpression = useCallback((bannerId: string) => {,
+  const handleBannerImpression = useCallback((bannerId: string) => {
     trackImpression(bannerId);
     trackBannerInteraction(bannerId, 'impression');';
   }, []);
   
   // Handle banner click
-  const handleBannerClick = useCallback((bannerId: string) => {,
+  const handleBannerClick = useCallback((bannerId: string) => {
     trackClick(bannerId);
     trackBannerInteraction(bannerId, 'click');';
   }, []);
@@ -128,7 +128,7 @@ export const useBannerVisibility = (
         }
       },
       {
-        threshold: 0.5, // 50% visible,
+        threshold: 0.5, // 50% visible
       }
     );
     
@@ -145,11 +145,11 @@ export const useBannerVisibility = (
  */
 export const useBannerABTest = (
   variations: BannerConfig[],,
-  testName: string,
+  testName: string
 ): {
   selectedVariation: BannerConfig,
 =======
-  selectedVariation: BannerConfig;,
+  selectedVariation: BannerConfig;
   trackVariationPerformance: (metric: string, value: number) => void;
 } => {
   // Get consistent user ID for test assignment
@@ -176,7 +176,7 @@ export const useBannerABTest = (
   
   // Track variation performance
   const trackVariationPerformance = useCallback(
-    (metric: string, value: number) => {,
+    (metric: string, value: number) => {
       trackBannerInteraction(selectedVariation.id, 'click', {;
 =======
       trackBannerInteraction(selectedVariation.id, 'click', {';

@@ -4,11 +4,11 @@ import {
 } from 'web-vitals';
 
 interface PerformanceMetrics {
-cls: number | null;,
-fid: number | null;,
-fcp: number | null;,
-lcp: number | null;,
-ttfb: number | null;,
+cls: number | null;
+fid: number | null;
+fcp: number | null;
+lcp: number | null;
+ttfb: number | null;
 score: number;
 }
 
@@ -31,7 +31,7 @@ import React, { useEffect } from 'react';
 
 const PerformanceOptimizer: React.FC = () => {
   useEffect(() => {
-const sendToAnalytics = (metric: any) => {,
+const sendToAnalytics = (metric: any) => {
 // Send to your analytics service
 console.log(`Performance metric ${metric.name
 }:`, metric.value);
@@ -39,19 +39,19 @@ console.log(`Performance metric ${metric.name
       setMetrics(prev => {
         const newMetrics = { ...prev };
         switch (metric.name) {
-case 'CLS':,
+case 'CLS':
 newMetrics.cls = metric.value;
 break;
-case 'FID':,
+case 'FID':
 newMetrics.fid = metric.value;
 break;
-case 'FCP':,
+case 'FCP':
 newMetrics.fcp = metric.value;
 break;
-case 'LCP':,
+case 'LCP':
 newMetrics.lcp = metric.value;
 break;
-case 'TTFB':,
+case 'TTFB':
 newMetrics.ttfb = metric.value;
 break;
 }
@@ -95,7 +95,7 @@ break;
 
   const handleOptimizationToggle = (key: keyof typeof optimizations) => {
     setOptimizations(prev => ({
-      ...prev,
+      ...prev
       [key]: !prev[key]
     }));
   };

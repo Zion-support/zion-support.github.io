@@ -37,26 +37,26 @@ const October2025NewContentBanner = () => {
             Discover cutting-edge insights on multimodal AI agents, zero-trust security architectures
 =======
           <p className="text-xl text-blue-200 max-w-3xl mx-auto">";
-            Discover cutting-edge insights on multimodal AI agents, zero-trust security architectures, 
+            Discover cutting-edge insights on multimodal AI agents, zero-trust security architectures
             and production-scale RAG pipelines from industry leaders
           </p>
         </div>
 
         {/* Featured Articles Grid */}
-        <div className="grid md: grid-cols-3 gap-6 mb-10">",
+        <div className="grid md: grid-cols-3 gap-6 mb-10">"
 =======
-        <div className="grid md: grid-cols-3 gap-6 mb-10">";,
+        <div className="grid md: grid-cols-3 gap-6 mb-10">";
           {/* Article 1 - Multimodal AI Agents */}
           <Link 
             to="/blog/ai-2025-october-multimodal-agents-enterprise-automation"
-            className="group bg-gradient-to-br from-purple-800/40 to-purple-900/40 backdrop-blur-sm border border-purple-400/30 rounded-2xl p-6 hover: scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/50",
+            className="group bg-gradient-to-br from-purple-800/40 to-purple-900/40 backdrop-blur-sm border border-purple-400/30 rounded-2xl p-6 hover: scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/50"
           >
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-3 bg-purple-500/20 rounded-xl group-hover: bg-purple-500/30 transition-colors">",
+              <div className="p-3 bg-purple-500/20 rounded-xl group-hover: bg-purple-500/30 transition-colors">"
                 <Brain className="w-8 h-8 text-purple-300/>
 =======
             <div className="flex items-center gap-3 mb-4">";
-              <div className="p-3 bg-purple-500/20 rounded-xl group-hover: bg-purple-500/30 transition-colors">";,
+              <div className="p-3 bg-purple-500/20 rounded-xl group-hover: bg-purple-500/30 transition-colors">";
                 <Brain className="w-8 h-8 text-purple-300" />";
               </div>
               <div className="flex-1">";
@@ -64,10 +64,10 @@ const October2025NewContentBanner = () => {
               </div>
             </div>
             
-            <h3 className="text-xl font-bold text-white mb-3 group-hover: text-purple-200 transition-colors">",
+            <h3 className="text-xl font-bold text-white mb-3 group-hover: text-purple-200 transition-colors">"
 =======
-            <h3 className="text-xl font-bold text-white mb-3 group-hover: text-purple-200 transition-colors">";,
-              Multimodal AI Agents: The Next Evolution in Enterprise Automation,
+            <h3 className="text-xl font-bold text-white mb-3 group-hover: text-purple-200 transition-colors">";
+              Multimodal AI Agents: The Next Evolution in Enterprise Automation
             </h3>
             
             <p className="text-blue-200/80 text-sm mb-4 line-clamp-3">";
@@ -81,23 +81,23 @@ const October2025NewContentBanner = () => {
                 <span>•</span>
                 <span>Oct 1, 2025</span>
               </div>
-              <ArrowRight className="w-5 h-5 text-purple-300 group-hover: translate-x-1 transition-transform/>",
+              <ArrowRight className="w-5 h-5 text-purple-300 group-hover: translate-x-1 transition-transform/>"
 =======
-              <ArrowRight className="w-5 h-5 text-purple-300 group-hover: translate-x-1 transition-transform" />";,
+              <ArrowRight className="w-5 h-5 text-purple-300 group-hover: translate-x-1 transition-transform" />";
             </div>
           </Link>
 
           {/* Article 2 - AI Security Mesh */}
           <Link 
             to="/blog/ai-2025-october-security-mesh-zero-trust-ai"
-            className="group bg-gradient-to-br from-red-800/40 to-orange-900/40 backdrop-blur-sm border border-red-400/30 rounded-2xl p-6 hover: scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-red-500/50",
+            className="group bg-gradient-to-br from-red-800/40 to-orange-900/40 backdrop-blur-sm border border-red-400/30 rounded-2xl p-6 hover: scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-red-500/50"
           >
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-3 bg-red-500/20 rounded-xl group-hover: bg-red-500/30 transition-colors">",
+              <div className="p-3 bg-red-500/20 rounded-xl group-hover: bg-red-500/30 transition-colors">"
                 <Shield className="w-8 h-8 text-red-300/>
 =======
             <div className="flex items-center gap-3 mb-4">";
-              <div className="p-3 bg-red-500/20 rounded-xl group-hover: bg-red-500/30 transition-colors">";,
+              <div className="p-3 bg-red-500/20 rounded-xl group-hover: bg-red-500/30 transition-colors">";
                 <Shield className="w-8 h-8 text-red-300" />";
               </div>
               <div className="flex-1">";
@@ -105,10 +105,10 @@ const October2025NewContentBanner = () => {
               </div>
             </div>
             
-            <h3 className="text-xl font-bold text-white mb-3 group-hover: text-red-200 transition-colors">",
+            <h3 className="text-xl font-bold text-white mb-3 group-hover: text-red-200 transition-colors">"
 =======
-            <h3 className="text-xl font-bold text-white mb-3 group-hover: text-red-200 transition-colors">";,
-              AI Security Mesh Architecture: Zero Trust for AI Systems 2025,
+            <h3 className="text-xl font-bold text-white mb-3 group-hover: text-red-200 transition-colors">";
+              AI Security Mesh Architecture: Zero Trust for AI Systems 2025
             </h3>
             
             <p className="text-orange-200/80 text-sm mb-4 line-clamp-3">";
@@ -122,23 +122,23 @@ const October2025NewContentBanner = () => {
                 <span>•</span>
                 <span>Oct 1, 2025</span>
               </div>
-              <ArrowRight className="w-5 h-5 text-red-300 group-hover: translate-x-1 transition-transform/>",
+              <ArrowRight className="w-5 h-5 text-red-300 group-hover: translate-x-1 transition-transform/>"
 =======
-              <ArrowRight className="w-5 h-5 text-red-300 group-hover: translate-x-1 transition-transform" />";,
+              <ArrowRight className="w-5 h-5 text-red-300 group-hover: translate-x-1 transition-transform" />";
             </div>
           </Link>
 
           {/* Article 3 - RAG 2.0 */}
           <Link 
             to="/blog/ai-2025-october-rag-2-production-scale-pipelines"
-            className="group bg-gradient-to-br from-blue-800/40 to-cyan-900/40 backdrop-blur-sm border border-blue-400/30 rounded-2xl p-6 hover: scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/50",
+            className="group bg-gradient-to-br from-blue-800/40 to-cyan-900/40 backdrop-blur-sm border border-blue-400/30 rounded-2xl p-6 hover: scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/50"
           >
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-3 bg-blue-500/20 rounded-xl group-hover: bg-blue-500/30 transition-colors">",
+              <div className="p-3 bg-blue-500/20 rounded-xl group-hover: bg-blue-500/30 transition-colors">"
                 <Database className="w-8 h-8 text-blue-300/>
 =======
             <div className="flex items-center gap-3 mb-4">";
-              <div className="p-3 bg-blue-500/20 rounded-xl group-hover: bg-blue-500/30 transition-colors">";,
+              <div className="p-3 bg-blue-500/20 rounded-xl group-hover: bg-blue-500/30 transition-colors">";
                 <Database className="w-8 h-8 text-blue-300" />";
               </div>
               <div className="flex-1">";
@@ -146,10 +146,10 @@ const October2025NewContentBanner = () => {
               </div>
             </div>
             
-            <h3 className="text-xl font-bold text-white mb-3 group-hover: text-blue-200 transition-colors">",
+            <h3 className="text-xl font-bold text-white mb-3 group-hover: text-blue-200 transition-colors">"
 =======
-            <h3 className="text-xl font-bold text-white mb-3 group-hover: text-blue-200 transition-colors">";,
-              RAG 2.0: Production-Scale Retrieval-Augmented Generation Pipelines,
+            <h3 className="text-xl font-bold text-white mb-3 group-hover: text-blue-200 transition-colors">";
+              RAG 2.0: Production-Scale Retrieval-Augmented Generation Pipelines
             </h3>
             
             <p className="text-cyan-200/80 text-sm mb-4 line-clamp-3">";
@@ -163,9 +163,9 @@ const October2025NewContentBanner = () => {
                 <span>•</span>
                 <span>Oct 1, 2025</span>
               </div>
-              <ArrowRight className="w-5 h-5 text-blue-300 group-hover: translate-x-1 transition-transform/>",
+              <ArrowRight className="w-5 h-5 text-blue-300 group-hover: translate-x-1 transition-transform/>"
 =======
-              <ArrowRight className="w-5 h-5 text-blue-300 group-hover: translate-x-1 transition-transform" />";,
+              <ArrowRight className="w-5 h-5 text-blue-300 group-hover: translate-x-1 transition-transform" />";
             </div>
           </Link>
         </div>
@@ -174,7 +174,7 @@ const October2025NewContentBanner = () => {
         <div className="text-center mt-10">";
           <Link 
             to="/blog"
-            className="inline-flex items-center gap-3 bg-gradient-to-r from-purple-600 to-blue-600 hover: from-purple-700 hover:to-blue-700 text-white font-bold text-lg px-10 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl",
+            className="inline-flex items-center gap-3 bg-gradient-to-r from-purple-600 to-blue-600 hover: from-purple-700 hover:to-blue-700 text-white font-bold text-lg px-10 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl"
           >
             <span>Explore All Insights</span>
             <ArrowRight className="w-6 h-6/>
@@ -188,11 +188,11 @@ const October2025NewContentBanner = () => {
         </div>
 
         {/* Stats Bar */}
-        <div className="mt-12 grid grid-cols-2 md: grid-cols-4 gap-6">",
+        <div className="mt-12 grid grid-cols-2 md: grid-cols-4 gap-6">"
           <div className="text-center">
             <div className="text-3xl font-extrabold text-transparent bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text mb-1">
 =======
-        <div className="mt-12 grid grid-cols-2 md: grid-cols-4 gap-6">";,
+        <div className="mt-12 grid grid-cols-2 md: grid-cols-4 gap-6">";
           <div className="text-center">";
             <div className="text-3xl font-extrabold text-transparent bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text mb-1">";
               10x

@@ -3,13 +3,13 @@ export default function October2025SelfHealingSpotlightBanner(): void {
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white py-12 px-4">
       <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col md: flex-row items-center gap-8">",
+        <div className="flex flex-col md: flex-row items-center gap-8">"
           <div className="flex-1">
             <div className="inline-block bg-red-500 text-white px-3 py-1 rounded-full text-xs font-bold mb-3 animate-bounce">
 =======
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white py-12 px-4">";
       <div className="max-w-6xl mx-auto">";
-        <div className="flex flex-col md: flex-row items-center gap-8">";,
+        <div className="flex flex-col md: flex-row items-center gap-8">";
           <div className="flex-1">";
             <div className="inline-block bg-red-500 text-white px-3 py-1 rounded-full text-xs font-bold mb-3 animate-bounce">";
               🔥 HOT - JUST PUBLISHED TODAY
@@ -41,7 +41,7 @@ export default function October2025SelfHealingSpotlightBanner(): void {
             </div>
             <Link
               to="/blog/ai-2025-october-2-agentic-self-healing-infrastructure-revolution"
-              className="inline-block bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-xl font-bold text-lg hover: from-purple-600 hover:to-pink-600 transition-all shadow-lg hover:shadow-xl",
+              className="inline-block bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-xl font-bold text-lg hover: from-purple-600 hover:to-pink-600 transition-all shadow-lg hover:shadow-xl"
             >
               Read Complete Guide + Fortune 500 Case Study →
             </Link>

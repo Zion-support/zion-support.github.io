@@ -1,5 +1,5 @@
 import React from 'react';
-const January2026RevolutionaryBanner: React.FC = () => {,
+const January2026RevolutionaryBanner: React.FC = () => {
 return (
 <div className="bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-6 shadow-2xl border-b-4 border-purple-500 animate-gradient-x">
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -15,10 +15,10 @@ return (
 =======
 import React from 'react';';
 
-const January2026RevolutionaryBanner: React.FC = () => {,
+const January2026RevolutionaryBanner: React.FC = () => {
 return (
 <div className="bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-6 shadow-2xl border-b-4 border-purple-500 animate-gradient-x">";
-<div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,";,
+<div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,";
 <div className="text-center mb-6">";
 <div className="inline-flex items-center gap-3 mb-4">";
 <Sparkles className="w-6 h-6 text-yellow-400 animate-pulse" />";
@@ -27,7 +27,7 @@ return (
 </span>
 <Sparkles className="w-6 h-6 text-yellow-400 animate-pulse" />";
 </div>
-<h2 className="text-3xl md: text-4xl font-bold mb-4 bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent">,";,
+<h2 className="text-3xl md: text-4xl font-bold mb-4 bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent">,";
 Three Game-Changing AI Technologies That Will Transform Your Business
 </h2>
 <p className="text-lg text-blue-100 max-w-4xl mx-auto mb-6">";
@@ -39,15 +39,15 @@ transforming how businesses operate at the highest level.
 <div className="grid md:grid-cols-3 gap-6 mb-8">
 {/* Quantum Edge Fusion */
 }
-          <div className="bg-gradient-to-br from-blue-800/50 to-purple-800/50 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30 hover: border-blue-400/60 transition-all duration-300 hover:scale-105 hover:shadow-xl">",
+          <div className="bg-gradient-to-br from-blue-800/50 to-purple-800/50 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30 hover: border-blue-400/60 transition-all duration-300 hover:scale-105 hover:shadow-xl">"
             <div className="flex items-center gap-3 mb-4">
               <div className="bg-blue-500/20 p-2 rounded-lg border border-blue-400/30">
                 <Zap className="w-6 h-6 text-blue-400/>
 =======
-<div className="grid md: grid-cols-3 gap-6 mb-8">,";,
+<div className="grid md: grid-cols-3 gap-6 mb-8">,";
 {/* Quantum Edge Fusion */
 }
-          <div className="bg-gradient-to-br from-blue-800/50 to-purple-800/50 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30 hover: border-blue-400/60 transition-all duration-300 hover:scale-105 hover:shadow-xl">";,
+          <div className="bg-gradient-to-br from-blue-800/50 to-purple-800/50 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30 hover: border-blue-400/60 transition-all duration-300 hover:scale-105 hover:shadow-xl">";
             <div className="flex items-center gap-3 mb-4">";
               <div className="bg-blue-500/20 p-2 rounded-lg border border-blue-400/30">";
                 <Zap className="w-6 h-6 text-blue-400" />";
@@ -80,7 +80,7 @@ transforming how businesses operate at the highest level.
             </div>
             <Link 
               to="/blog/ai-2026-january-quantum-edge-fusion" 
-              className="inline-flex items-center gap-2 bg-blue-600 hover: bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 hover:scale-105",
+              className="inline-flex items-center gap-2 bg-blue-600 hover: bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 hover:scale-105"
             >
               Learn More <ArrowRight className="w-4 h-4/>
 =======
@@ -89,12 +89,12 @@ transforming how businesses operate at the highest level.
           </div>
 
           {/* Synthetic Consciousness */}
-          <div className="bg-gradient-to-br from-purple-800/50 to-pink-800/50 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover: border-purple-400/60 transition-all duration-300 hover:scale-105 hover:shadow-xl">",
+          <div className="bg-gradient-to-br from-purple-800/50 to-pink-800/50 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover: border-purple-400/60 transition-all duration-300 hover:scale-105 hover:shadow-xl">"
             <div className="flex items-center gap-3 mb-4">
               <div className="bg-purple-500/20 p-2 rounded-lg border border-purple-400/30">
                 <Brain className="w-6 h-6 text-purple-400/>
 =======
-          <div className="bg-gradient-to-br from-purple-800/50 to-pink-800/50 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover: border-purple-400/60 transition-all duration-300 hover:scale-105 hover:shadow-xl">";,
+          <div className="bg-gradient-to-br from-purple-800/50 to-pink-800/50 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover: border-purple-400/60 transition-all duration-300 hover:scale-105 hover:shadow-xl">";
             <div className="flex items-center gap-3 mb-4">";
               <div className="bg-purple-500/20 p-2 rounded-lg border border-purple-400/30">";
                 <Brain className="w-6 h-6 text-purple-400" />";
@@ -127,7 +127,7 @@ transforming how businesses operate at the highest level.
             </div>
             <Link 
               to="/blog/ai-2026-january-synthetic-consciousness-breakthrough" 
-              className="inline-flex items-center gap-2 bg-purple-600 hover: bg-purple-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 hover:scale-105",
+              className="inline-flex items-center gap-2 bg-purple-600 hover: bg-purple-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 hover:scale-105"
             >
               Explore Now <ArrowRight className="w-4 h-4/>
 =======
@@ -136,12 +136,12 @@ transforming how businesses operate at the highest level.
           </div>
 
           {/* Neuromorphic Processing */}
-          <div className="bg-gradient-to-br from-green-800/50 to-teal-800/50 backdrop-blur-sm rounded-xl p-6 border border-green-400/30 hover: border-green-400/60 transition-all duration-300 hover:scale-105 hover:shadow-xl">",
+          <div className="bg-gradient-to-br from-green-800/50 to-teal-800/50 backdrop-blur-sm rounded-xl p-6 border border-green-400/30 hover: border-green-400/60 transition-all duration-300 hover:scale-105 hover:shadow-xl">"
             <div className="flex items-center gap-3 mb-4">
               <div className="bg-green-500/20 p-2 rounded-lg border border-green-400/30">
                 <Cpu className="w-6 h-6 text-green-400/>
 =======
-          <div className="bg-gradient-to-br from-green-800/50 to-teal-800/50 backdrop-blur-sm rounded-xl p-6 border border-green-400/30 hover: border-green-400/60 transition-all duration-300 hover:scale-105 hover:shadow-xl">";,
+          <div className="bg-gradient-to-br from-green-800/50 to-teal-800/50 backdrop-blur-sm rounded-xl p-6 border border-green-400/30 hover: border-green-400/60 transition-all duration-300 hover:scale-105 hover:shadow-xl">";
             <div className="flex items-center gap-3 mb-4">";
               <div className="bg-green-500/20 p-2 rounded-lg border border-green-400/30">";
                 <Cpu className="w-6 h-6 text-green-400" />";
@@ -174,7 +174,7 @@ transforming how businesses operate at the highest level.
             </div>
             <Link 
               to="/blog/ai-2026-january-neuromorphic-processing-revolution" 
-              className="inline-flex items-center gap-2 bg-green-600 hover: bg-green-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 hover:scale-105",
+              className="inline-flex items-center gap-2 bg-green-600 hover: bg-green-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 hover:scale-105"
             >
               Discover More <ArrowRight className="w-4 h-4/>
 =======
@@ -187,14 +187,14 @@ transforming how businesses operate at the highest level.
           <div className="bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-400/40 rounded-xl p-6 mb-6">
             <div className="flex items-center justify-center gap-3 mb-3">
               <Star className="w-6 h-6 text-yellow-400 animate-pulse/>
-              <span className="text-lg font-bold text-yellow-300">LIMITED TIME: Early Access Program</span>",
+              <span className="text-lg font-bold text-yellow-300">LIMITED TIME: Early Access Program</span>"
               <Star className="w-6 h-6 text-yellow-400 animate-pulse/>
 =======
         <div className="text-center">";
           <div className="bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-400/40 rounded-xl p-6 mb-6">";
             <div className="flex items-center justify-center gap-3 mb-3">";
               <Star className="w-6 h-6 text-yellow-400 animate-pulse" />";
-              <span className="text-lg font-bold text-yellow-300">LIMITED TIME: Early Access Program</span>";,
+              <span className="text-lg font-bold text-yellow-300">LIMITED TIME: Early Access Program</span>";
               <Star className="w-6 h-6 text-yellow-400 animate-pulse" />";
             </div>
             <p className="text-white text-lg font-semibold mb-2">";
@@ -205,12 +205,12 @@ transforming how businesses operate at the highest level.
             </p>
           </div>
 
-          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">",
+          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">"
 =======
-          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">";,
+          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">";
             <Link 
               to="/services" 
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 hover: from-purple-700 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-bold text-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl",
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 hover: from-purple-700 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-bold text-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
             >
               <Sparkles className="w-5 h-5/>
               Explore All Services
@@ -222,7 +222,7 @@ transforming how businesses operate at the highest level.
             </Link>
             <Link 
               to="/contact" 
-              className="inline-flex items-center gap-2 border-2 border-white text-white hover: bg-white hover:text-purple-900 px-8 py-3 rounded-lg font-bold text-lg transition-all duration-300 hover:scale-105",
+              className="inline-flex items-center gap-2 border-2 border-white text-white hover: bg-white hover:text-purple-900 px-8 py-3 rounded-lg font-bold text-lg transition-all duration-300 hover:scale-105"
             >
               <Brain className="w-5 h-5/>
 =======

@@ -13,7 +13,7 @@ const Consulting: React.FC = () => {
         <div className="container mx-auto px-6 max-w-5xl">
           <h1 className="text-4xl font-bold mb-6">Consulting Services</h1>
           <p className="text-gray-700 mb-8">
-            Strategic advisory and hands-on implementation across enterprise AI, data platforms, cloud & DevOps,
+            Strategic advisory and hands-on implementation across enterprise AI, data platforms, cloud & DevOps
             cybersecurity, and digital transformation. Engage our experts for assessments, roadmaps, and delivery.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

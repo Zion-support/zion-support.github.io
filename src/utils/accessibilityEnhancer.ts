@@ -4,39 +4,36 @@
  */
 
 interface AccessibilityConfig {
-enableKeyboardNavigation: boolean;,
-enableScreenReaderSupport: boolean;,
-enableHighContrast: boolean;,
-enableReducedMotion: boolean;,
-enableFocusIndicators: boolean;,
+enableKeyboardNavigation: boolean;
+enableScreenReaderSupport: boolean;
+enableHighContrast: boolean;
+enableReducedMotion: boolean;
+enableFocusIndicators: boolean;
 enableAriaLabels: boolean;
 }
 
 class AccessibilityEnhancer {
-  private config: AccessibilityConfig,
-  private observers: MutationObserver[] = [],
-  private keyboardListeners: Map<string, (event: KeyboardEvent) => void> = new Map(),
-
+  private config: AccessibilityConfig
+  private observers: MutationObserver[] = []
+  private keyboardListeners: Map<string, (event: KeyboardEvent) => void> = new Map()
   constructor(config: AccessibilityConfig = {
     enableKeyboardNavigation: true,
     enableScreenReaderSupport: true,
     enableHighContrast: true,
     enableReducedMotion: true,
     enableFocusIndicators: true,
-    enableAriaLabels: true
+    enableAriaLabels: true,
 =======
-  private config: AccessibilityConfig;,
-  private observers: MutationObserver[] = [];,
-  private keyboardListeners: Map<string, (event: KeyboardEvent) => void> = new Map();,
-
-  constructor(config: AccessibilityConfig = {,
+  private config: AccessibilityConfig;
+  private observers: MutationObserver[] = [];
+  private keyboardListeners: Map<string, (event: KeyboardEvent) => void> = new Map();
+  constructor(config: AccessibilityConfig = {
     enableKeyboardNavigation: true,,
     enableScreenReaderSupport: true,,
     enableHighContrast: true,,
     enableReducedMotion: true,,
     enableFocusIndicators: true,,
-    enableAriaLabels: true,,
-  }) {
+    enableAriaLabels: true,}) {,
     this.config = config;
     this.initializeAccessibility();
   }
@@ -80,16 +77,16 @@ class AccessibilityEnhancer {
     const skipLink = document.createElement('a');
     skipLink.href = '#main-content';
     skipLink.textContent = 'Skip to main content';
-    skipLink.className = 'sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';',
+    skipLink.className = 'sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';'
 =======
     const skipLink = document.createElement('a');';
     skipLink.href = '#main-content';';
     skipLink.textContent = 'Skip to main content';';
-    skipLink.className = 'sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';';,
+    skipLink.className = 'sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';';
     document.body.insertBefore(skipLink, document.body.firstChild);
 
     // Tab navigation improvements
-    const handleTabNavigation = (event: KeyboardEvent) => {,
+    const handleTabNavigation = (event: KeyboardEvent) => {
       if (event.key === 'Tab') {;
         document.body.classList.add('keyboard-navigation');
 =======
@@ -143,8 +140,8 @@ const mediaQuery = window.matchMedia('(prefers-contrast: high)');
 const handleContrastChange = (e: MediaQueryListEvent) => {
 =======
 // Detect user's high contrast preference';
-const mediaQuery = window.matchMedia('(prefers-contrast: high)');';,
-const handleContrastChange = (e: MediaQueryListEvent) => {,,
+const mediaQuery = window.matchMedia('(prefers-contrast: high)');';
+const handleContrastChange = (e: MediaQueryListEvent) => {,
 if (e.matches) {
 document.documentElement.classList.add('high-contrast');';
 } else {
@@ -169,8 +166,8 @@ document.documentElement.classList.add('high-contrast');';
 const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
 const handleMotionChange = (e: MediaQueryListEvent) => {
 =======
-const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');';,
-const handleMotionChange = (e: MediaQueryListEvent) => {,,
+const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');';
+const handleMotionChange = (e: MediaQueryListEvent) => {,
 if (e.matches) {
 document.documentElement.classList.add('reduce-motion');';
 } else {
@@ -229,11 +226,10 @@ transition-duration: 0.01ms !important;
 
     observer.observe(document.body, {
       childList: true,
-      subtree: true
+      subtree: true,
 =======
       childList: true,,
-      subtree: true,,
-    });
+      subtree: true,});
 
     this.observers.push(observer);
 
@@ -244,11 +240,11 @@ transition-duration: 0.01ms !important;
   /**
    * Add ARIA labels to elements
    */
-  private addAriaLabels(element: Element): void {,
+  private addAriaLabels(element: Element): void {
     // Add ARIA labels to buttons without text
-    const buttons = element.querySelectorAll('button: not([aria-label]):not([aria-labelledby])');',
+    const buttons = element.querySelectorAll('button: not([aria-label]):not([aria-labelledby])');'
 =======
-    const buttons = element.querySelectorAll('button: not([aria-label]):not([aria-labelledby])');';,
+    const buttons = element.querySelectorAll('button: not([aria-label]):not([aria-labelledby])');';
     buttons.forEach((button) => {
       const icon = button.querySelector('svg, i, [class*="icon"]');';
       if (icon && !button.textContent?.trim()) {
@@ -257,9 +253,9 @@ transition-duration: 0.01ms !important;
     });
 
     // Add ARIA labels to links without descriptive text
-    const links = element.querySelectorAll('a: not([aria-label]):not([aria-labelledby])');',
+    const links = element.querySelectorAll('a: not([aria-label]):not([aria-labelledby])');'
 =======
-    const links = element.querySelectorAll('a: not([aria-label]):not([aria-labelledby])');';,
+    const links = element.querySelectorAll('a: not([aria-label]):not([aria-labelledby])');';
     links.forEach((link) => {
       if (!link.textContent?.trim() || link.textContent.trim().length < 3) {
         link.setAttribute('aria-label', this.generateLinkLabel(link));';
@@ -267,9 +263,9 @@ transition-duration: 0.01ms !important;
     });
 
     // Add ARIA labels to images without alt text
-    const images = element.querySelectorAll('img: not([alt])');',
+    const images = element.querySelectorAll('img: not([alt])');'
 =======
-    const images = element.querySelectorAll('img: not([alt])');';,
+    const images = element.querySelectorAll('img: not([alt])');';
     images.forEach((img) => {
       img.setAttribute('alt', this.generateImageAlt(img));';
     });
@@ -334,7 +330,7 @@ transition-duration: 0.01ms !important;
   /**
    * Announce message to screen readers
    */
-  announce(message: string): void {,
+  announce(message: string): void {
     const liveRegion = document.getElementById('live-region');
 =======
     const liveRegion = document.getElementById('live-region');';
@@ -351,7 +347,7 @@ transition-duration: 0.01ms !important;
   /**
    * Add screen reader only text
    */
-  private addScreenReaderText(elementSelector: string, text: string): void {,
+  private addScreenReaderText(elementSelector: string, text: string): void {
     const element = document.querySelector(`[class*="${elementSelector}"], #${elementSelector}`);`;
     if (element) {
       const srText = document.createElement('span');';
@@ -364,7 +360,7 @@ transition-duration: 0.01ms !important;
   /**
    * Generate button label
    */
-  private generateButtonLabel(button: Element): string {,
+  private generateButtonLabel(button: Element): string {
     const className = button.className;
     const context = button.closest('[class*="banner"], [class*="card"], [class*="section"]');
     if (className.includes('close')) return 'Close';
@@ -388,7 +384,7 @@ transition-duration: 0.01ms !important;
   /**
    * Generate link label
    */
-  private generateLinkLabel(link: Element): string {,
+  private generateLinkLabel(link: Element): string {
     const href = link.getAttribute('href');
     if (href?.startsWith('#')) return `Go to ${href.substring(1)}`;`;
     if (href?.startsWith('http')) return 'External link';
@@ -404,7 +400,7 @@ transition-duration: 0.01ms !important;
   /**
    * Generate image alt text
    */
-  private generateImageAlt(img: Element): string {,
+  private generateImageAlt(img: Element): string {
     const src = img.getAttribute('src') || '';
     const className = img.className;
     

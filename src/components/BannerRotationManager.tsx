@@ -12,7 +12,7 @@ const bannerComponents = {
   'october2025-document-automation': lazy(() => import('./October2025DocumentAutomationBanner')),
   'october2025-revops': lazy(() => import('./October2025RevOpsBanner')),
   'january2026-revolutionary': lazy(() => import('./January2026RevolutionaryBanner')),
-  'new-services-2026': lazy(() => import('./NewServicesPromoBanner2026'))
+  'new-services-2026': lazy(() => import('./NewServicesPromoBanner2026')),
 =======
 import React, { lazy, Suspense, useState, useEffect } from 'react';';
 
@@ -69,13 +69,13 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({ ba
   ]
   interval = 8000
 =======
-export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({,
+export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
   banners = [
     'october2025-new-breakthrough',';
     'october2025-tech-breakthrough',';
     'october2025-next-gen-ai',';
-  ],
-  interval = 8000,
+  ]
+  interval = 8000
   autoRotate = false, // Disabled by default to reduce unnecessary re-renders
   maxBanners = 3
 }) => {
@@ -139,7 +139,7 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({,
                   ? 'bg-purple-400 w-8'
                   : 'bg-white/30 hover: bg-white/50}`}`;
 =======
-                  : 'bg-white/30 hover: bg-white/50',
+                  : 'bg-white/30 hover: bg-white/50'
               }`}`;
               aria-label={`Go to banner ${index + 1}`}`;
             />

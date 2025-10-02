@@ -46,71 +46,70 @@ const October2025OperationalExcellenceBanner = () => {
             <span className="text-cyan-300 font-semibold"> Customer Intent Prediction (98.2% Accuracy)</span>
 =======
           <p className="text-2xl text-teal-200 max-w-4xl mx-auto leading-relaxed">";
-            Discover breakthrough AI innovations delivering unprecedented efficiency: <span className="text-emerald-300 font-semibold"> Predictive Maintenance (99.6% Accuracy)</span>, ";,
+            Discover breakthrough AI innovations delivering unprecedented efficiency: <span className="text-emerald-300 font-semibold"> Predictive Maintenance (99.6% Accuracy)</span>, ";
             <span className="text-teal-300 font-semibold"> Autonomous API Orchestration (99.8% Uptime)</span>, and ";
             <span className="text-cyan-300 font-semibold"> Customer Intent Prediction (98.2% Accuracy)</span>";
           </p>
         </div>
 
         {/* Key Metrics Showcase */}
-        <div className="grid md: grid-cols-4 gap-4 mb-12 max-w-6xl mx-auto">",
-          <div className="bg-gradient-to-br from-emerald-800/40 to-emerald-900/40 backdrop-blur-sm border border-emerald-400/30 rounded-2xl p-6 text-center hover: scale-105 transition-transform shadow-lg">",
+        <div className="grid md: grid-cols-4 gap-4 mb-12 max-w-6xl mx-auto">"
+          <div className="bg-gradient-to-br from-emerald-800/40 to-emerald-900/40 backdrop-blur-sm border border-emerald-400/30 rounded-2xl p-6 text-center hover: scale-105 transition-transform shadow-lg">"
             <div className="text-5xl font-extrabold text-emerald-300 mb-2">$24.4B</div>
             <div className="text-emerald-200 font-semibold text-sm uppercase tracking-wide">Combined Value Creation</div>
           </div>
           
-          <div className="bg-gradient-to-br from-teal-800/40 to-teal-900/40 backdrop-blur-sm border border-teal-400/30 rounded-2xl p-6 text-center hover: scale-105 transition-transform shadow-lg">",
+          <div className="bg-gradient-to-br from-teal-800/40 to-teal-900/40 backdrop-blur-sm border border-teal-400/30 rounded-2xl p-6 text-center hover: scale-105 transition-transform shadow-lg">"
             <div className="text-5xl font-extrabold text-teal-300 mb-2">99.2%</div>
             <div className="text-teal-200 font-semibold text-sm uppercase tracking-wide">Average Accuracy</div>
           </div>
           
-          <div className="bg-gradient-to-br from-cyan-800/40 to-cyan-900/40 backdrop-blur-sm border border-cyan-400/30 rounded-2xl p-6 text-center hover: scale-105 transition-transform shadow-lg">",
+          <div className="bg-gradient-to-br from-cyan-800/40 to-cyan-900/40 backdrop-blur-sm border border-cyan-400/30 rounded-2xl p-6 text-center hover: scale-105 transition-transform shadow-lg">"
             <div className="text-5xl font-extrabold text-cyan-300 mb-2">92%</div>
             <div className="text-cyan-200 font-semibold text-sm uppercase tracking-wide">Cost Reduction</div>
           </div>
           
-          <div className="bg-gradient-to-br from-blue-800/40 to-blue-900/40 backdrop-blur-sm border border-blue-400/30 rounded-2xl p-6 text-center hover: scale-105 transition-transform shadow-lg">",
+          <div className="bg-gradient-to-br from-blue-800/40 to-blue-900/40 backdrop-blur-sm border border-blue-400/30 rounded-2xl p-6 text-center hover: scale-105 transition-transform shadow-lg">"
             <div className="text-5xl font-extrabold text-blue-300 mb-2">560%</div>
             <div className="text-blue-200 font-semibold text-sm uppercase tracking-wide">Average ROI</div>
 =======
-        <div className="grid md: grid-cols-4 gap-4 mb-12 max-w-6xl mx-auto">";,
-          <div className="bg-gradient-to-br from-emerald-800/40 to-emerald-900/40 backdrop-blur-sm border border-emerald-400/30 rounded-2xl p-6 text-center hover: scale-105 transition-transform shadow-lg">";,
+        <div className="grid md: grid-cols-4 gap-4 mb-12 max-w-6xl mx-auto">";
+          <div className="bg-gradient-to-br from-emerald-800/40 to-emerald-900/40 backdrop-blur-sm border border-emerald-400/30 rounded-2xl p-6 text-center hover: scale-105 transition-transform shadow-lg">";
             <div className="text-5xl font-extrabold text-emerald-300 mb-2">$24.4B</div>";
             <div className="text-emerald-200 font-semibold text-sm uppercase tracking-wide">Combined Value Creation</div>";
           </div>
           
-          <div className="bg-gradient-to-br from-teal-800/40 to-teal-900/40 backdrop-blur-sm border border-teal-400/30 rounded-2xl p-6 text-center hover: scale-105 transition-transform shadow-lg">";,
+          <div className="bg-gradient-to-br from-teal-800/40 to-teal-900/40 backdrop-blur-sm border border-teal-400/30 rounded-2xl p-6 text-center hover: scale-105 transition-transform shadow-lg">";
             <div className="text-5xl font-extrabold text-teal-300 mb-2">99.2%</div>";
             <div className="text-teal-200 font-semibold text-sm uppercase tracking-wide">Average Accuracy</div>";
           </div>
           
-          <div className="bg-gradient-to-br from-cyan-800/40 to-cyan-900/40 backdrop-blur-sm border border-cyan-400/30 rounded-2xl p-6 text-center hover: scale-105 transition-transform shadow-lg">";,
+          <div className="bg-gradient-to-br from-cyan-800/40 to-cyan-900/40 backdrop-blur-sm border border-cyan-400/30 rounded-2xl p-6 text-center hover: scale-105 transition-transform shadow-lg">";
             <div className="text-5xl font-extrabold text-cyan-300 mb-2">92%</div>";
             <div className="text-cyan-200 font-semibold text-sm uppercase tracking-wide">Cost Reduction</div>";
           </div>
           
-          <div className="bg-gradient-to-br from-blue-800/40 to-blue-900/40 backdrop-blur-sm border border-blue-400/30 rounded-2xl p-6 text-center hover: scale-105 transition-transform shadow-lg">";,
+          <div className="bg-gradient-to-br from-blue-800/40 to-blue-900/40 backdrop-blur-sm border border-blue-400/30 rounded-2xl p-6 text-center hover: scale-105 transition-transform shadow-lg">";
             <div className="text-5xl font-extrabold text-blue-300 mb-2">560%</div>";
             <div className="text-blue-200 font-semibold text-sm uppercase tracking-wide">Average ROI</div>";
           </div>
         </div>
 
         {/* Featured Articles Grid */}
-        <div className="grid md: grid-cols-3 gap-6 mb-10">",
+        <div className="grid md: grid-cols-3 gap-6 mb-10">"
 =======
-        <div className="grid md: grid-cols-3 gap-6 mb-10">";,
-          
+        <div className="grid md: grid-cols-3 gap-6 mb-10">";
           {/* Article 1 - Predictive Maintenance */}
           <Link 
             to="/blog/ai-2025-oct-predictive-maintenance-enterprise-breakthrough"
-            className="group bg-gradient-to-br from-emerald-800/50 to-emerald-900/50 backdrop-blur-sm border-2 border-emerald-400/40 rounded-2xl p-8 hover: scale-105 hover:shadow-2xl hover:shadow-emerald-500/50 transition-all duration-300",
+            className="group bg-gradient-to-br from-emerald-800/50 to-emerald-900/50 backdrop-blur-sm border-2 border-emerald-400/40 rounded-2xl p-8 hover: scale-105 hover:shadow-2xl hover:shadow-emerald-500/50 transition-all duration-300"
           >
             <div className="flex items-center gap-4 mb-6">
-              <div className="p-4 bg-emerald-500/30 rounded-2xl group-hover: bg-emerald-500/40 transition-colors shadow-lg">",
+              <div className="p-4 bg-emerald-500/30 rounded-2xl group-hover: bg-emerald-500/40 transition-colors shadow-lg">"
                 <Wrench className="w-10 h-10 text-emerald-200/>
 =======
             <div className="flex items-center gap-4 mb-6">";
-              <div className="p-4 bg-emerald-500/30 rounded-2xl group-hover: bg-emerald-500/40 transition-colors shadow-lg">";,
+              <div className="p-4 bg-emerald-500/30 rounded-2xl group-hover: bg-emerald-500/40 transition-colors shadow-lg">";
                 <Wrench className="w-10 h-10 text-emerald-200" />";
               </div>
               <div className="flex-1">";
@@ -120,14 +119,14 @@ const October2025OperationalExcellenceBanner = () => {
               </div>
             </div>
             
-            <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-emerald-200 transition-colors leading-tight">",
-              AI-Powered Predictive Maintenance: 99.6% Failure Prediction,
+            <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-emerald-200 transition-colors leading-tight">"
+              AI-Powered Predictive Maintenance: 99.6% Failure Prediction
             </h3>
             
             <p className="text-teal-200 text-base mb-6 leading-relaxed line-clamp-4">
 =======
-            <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-emerald-200 transition-colors leading-tight">";,
-              AI-Powered Predictive Maintenance: 99.6% Failure Prediction,
+            <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-emerald-200 transition-colors leading-tight">";
+              AI-Powered Predictive Maintenance: 99.6% Failure Prediction
             </h3>
             
             <p className="text-teal-200 text-base mb-6 leading-relaxed line-clamp-4">";
@@ -170,23 +169,23 @@ const October2025OperationalExcellenceBanner = () => {
                 <span>•</span>
                 <span className="font-medium">Oct 1, 2025</span>";
               </div>
-              <ArrowRight className="w-6 h-6 text-emerald-300 group-hover: translate-x-2 transition-transform/>",
+              <ArrowRight className="w-6 h-6 text-emerald-300 group-hover: translate-x-2 transition-transform/>"
 =======
-              <ArrowRight className="w-6 h-6 text-emerald-300 group-hover: translate-x-2 transition-transform" />";,
+              <ArrowRight className="w-6 h-6 text-emerald-300 group-hover: translate-x-2 transition-transform" />";
             </div>
           </Link>
 
           {/* Article 2 - API Orchestration */}
           <Link 
             to="/blog/ai-2025-oct-autonomous-api-orchestration-revolution"
-            className="group bg-gradient-to-br from-teal-800/50 to-teal-900/50 backdrop-blur-sm border-2 border-teal-400/40 rounded-2xl p-8 hover: scale-105 hover:shadow-2xl hover:shadow-teal-500/50 transition-all duration-300",
+            className="group bg-gradient-to-br from-teal-800/50 to-teal-900/50 backdrop-blur-sm border-2 border-teal-400/40 rounded-2xl p-8 hover: scale-105 hover:shadow-2xl hover:shadow-teal-500/50 transition-all duration-300"
           >
             <div className="flex items-center gap-4 mb-6">
-              <div className="p-4 bg-teal-500/30 rounded-2xl group-hover: bg-teal-500/40 transition-colors shadow-lg">",
+              <div className="p-4 bg-teal-500/30 rounded-2xl group-hover: bg-teal-500/40 transition-colors shadow-lg">"
                 <Network className="w-10 h-10 text-teal-200/>
 =======
             <div className="flex items-center gap-4 mb-6">";
-              <div className="p-4 bg-teal-500/30 rounded-2xl group-hover: bg-teal-500/40 transition-colors shadow-lg">";,
+              <div className="p-4 bg-teal-500/30 rounded-2xl group-hover: bg-teal-500/40 transition-colors shadow-lg">";
                 <Network className="w-10 h-10 text-teal-200" />";
               </div>
               <div className="flex-1">";
@@ -196,14 +195,14 @@ const October2025OperationalExcellenceBanner = () => {
               </div>
             </div>
             
-            <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-teal-200 transition-colors leading-tight">",
-              Autonomous API Orchestration: Self-Healing Microservices,
+            <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-teal-200 transition-colors leading-tight">"
+              Autonomous API Orchestration: Self-Healing Microservices
             </h3>
             
             <p className="text-teal-200 text-base mb-6 leading-relaxed line-clamp-4">
 =======
-            <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-teal-200 transition-colors leading-tight">";,
-              Autonomous API Orchestration: Self-Healing Microservices,
+            <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-teal-200 transition-colors leading-tight">";
+              Autonomous API Orchestration: Self-Healing Microservices
             </h3>
             
             <p className="text-teal-200 text-base mb-6 leading-relaxed line-clamp-4">";
@@ -246,23 +245,23 @@ const October2025OperationalExcellenceBanner = () => {
                 <span>•</span>
                 <span className="font-medium">Oct 1, 2025</span>";
               </div>
-              <ArrowRight className="w-6 h-6 text-teal-300 group-hover: translate-x-2 transition-transform/>",
+              <ArrowRight className="w-6 h-6 text-teal-300 group-hover: translate-x-2 transition-transform/>"
 =======
-              <ArrowRight className="w-6 h-6 text-teal-300 group-hover: translate-x-2 transition-transform" />";,
+              <ArrowRight className="w-6 h-6 text-teal-300 group-hover: translate-x-2 transition-transform" />";
             </div>
           </Link>
 
           {/* Article 3 - Customer Intent Prediction */}
           <Link 
             to="/blog/ai-2025-oct-customer-intent-prediction-breakthrough"
-            className="group bg-gradient-to-br from-cyan-800/50 to-cyan-900/50 backdrop-blur-sm border-2 border-cyan-400/40 rounded-2xl p-8 hover: scale-105 hover:shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300",
+            className="group bg-gradient-to-br from-cyan-800/50 to-cyan-900/50 backdrop-blur-sm border-2 border-cyan-400/40 rounded-2xl p-8 hover: scale-105 hover:shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300"
           >
             <div className="flex items-center gap-4 mb-6">
-              <div className="p-4 bg-cyan-500/30 rounded-2xl group-hover: bg-cyan-500/40 transition-colors shadow-lg">",
+              <div className="p-4 bg-cyan-500/30 rounded-2xl group-hover: bg-cyan-500/40 transition-colors shadow-lg">"
                 <Target className="w-10 h-10 text-cyan-200/>
 =======
             <div className="flex items-center gap-4 mb-6">";
-              <div className="p-4 bg-cyan-500/30 rounded-2xl group-hover: bg-cyan-500/40 transition-colors shadow-lg">";,
+              <div className="p-4 bg-cyan-500/30 rounded-2xl group-hover: bg-cyan-500/40 transition-colors shadow-lg">";
                 <Target className="w-10 h-10 text-cyan-200" />";
               </div>
               <div className="flex-1">";
@@ -272,14 +271,14 @@ const October2025OperationalExcellenceBanner = () => {
               </div>
             </div>
             
-            <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-cyan-200 transition-colors leading-tight">",
-              Real-Time AI Customer Intent: 98.2% Prediction Accuracy,
+            <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-cyan-200 transition-colors leading-tight">"
+              Real-Time AI Customer Intent: 98.2% Prediction Accuracy
             </h3>
             
             <p className="text-cyan-200 text-base mb-6 leading-relaxed line-clamp-4">
 =======
-            <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-cyan-200 transition-colors leading-tight">";,
-              Real-Time AI Customer Intent: 98.2% Prediction Accuracy,
+            <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-cyan-200 transition-colors leading-tight">";
+              Real-Time AI Customer Intent: 98.2% Prediction Accuracy
             </h3>
             
             <p className="text-cyan-200 text-base mb-6 leading-relaxed line-clamp-4">";
@@ -322,9 +321,9 @@ const October2025OperationalExcellenceBanner = () => {
                 <span>•</span>
                 <span className="font-medium">Oct 1, 2025</span>";
               </div>
-              <ArrowRight className="w-6 h-6 text-cyan-300 group-hover: translate-x-2 transition-transform/>",
+              <ArrowRight className="w-6 h-6 text-cyan-300 group-hover: translate-x-2 transition-transform/>"
 =======
-              <ArrowRight className="w-6 h-6 text-cyan-300 group-hover: translate-x-2 transition-transform" />";,
+              <ArrowRight className="w-6 h-6 text-cyan-300 group-hover: translate-x-2 transition-transform" />";
             </div>
           </Link>
         </div>
@@ -346,7 +345,7 @@ const October2025OperationalExcellenceBanner = () => {
           <div className="flex flex-wrap gap-4 justify-center">";
             <Link
               to="/blog"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-teal-500 hover: from-emerald-400 hover:to-teal-400 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105",
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-teal-500 hover: from-emerald-400 hover:to-teal-400 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105"
             >
               <span>Explore All Innovations</span>
               <ArrowRight className="w-5 h-5/>
@@ -356,7 +355,7 @@ const October2025OperationalExcellenceBanner = () => {
             
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 bg-white/10 hover: bg-white/20 backdrop-blur-sm border-2 border-white/30 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105",
+              className="inline-flex items-center gap-2 bg-white/10 hover: bg-white/20 backdrop-blur-sm border-2 border-white/30 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105"
             >
               <span>Get Started Today</span>
               <ArrowRight className="w-5 h-5/>

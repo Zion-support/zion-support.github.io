@@ -7,33 +7,33 @@ export default function October2025EdgeAIQuantumCryptoBanner(): void {
           {/* Header */}
           <div className="flex items-center justify-center gap-3 mb-6">
             <Sparkles className="w-6 h-6 text-cyan-400 animate-pulse/>
-            <span className="text-lg md: text-xl font-bold text-cyan-400 uppercase tracking-wider">",
-              🚀 JUST RELEASED OCTOBER 1, 2025: Revolutionary Technology Guides,
+            <span className="text-lg md: text-xl font-bold text-cyan-400 uppercase tracking-wider">"
+              🚀 JUST RELEASED OCTOBER 1, 2025: Revolutionary Technology Guides
             </span>
             <Sparkles className="w-6 h-6 text-cyan-400 animate-pulse/>
           </div>
 
           {/* Main Content */}
           <div className="text-center mb-8">
-            <h2 className="text-3xl md: text-5xl font-extrabold text-white mb-4 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">",
+            <h2 className="text-3xl md: text-5xl font-extrabold text-white mb-4 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">"
               Edge AI + 5G Networks & Quantum-Safe Cryptography
             </h2>
-            <p className="text-lg md: text-xl text-gray-300 max-w-4xl mx-auto mb-6">",
+            <p className="text-lg md: text-xl text-gray-300 max-w-4xl mx-auto mb-6">"
 =======
           <div className="flex items-center justify-center gap-3 mb-6">";
             <Sparkles className="w-6 h-6 text-cyan-400 animate-pulse" />";
-            <span className="text-lg md: text-xl font-bold text-cyan-400 uppercase tracking-wider">";,
-              🚀 JUST RELEASED OCTOBER 1, 2025: Revolutionary Technology Guides,
+            <span className="text-lg md: text-xl font-bold text-cyan-400 uppercase tracking-wider">";
+              🚀 JUST RELEASED OCTOBER 1, 2025: Revolutionary Technology Guides
             </span>
             <Sparkles className="w-6 h-6 text-cyan-400 animate-pulse" />";
           </div>
 
           {/* Main Content */}
           <div className="text-center mb-8">";
-            <h2 className="text-3xl md: text-5xl font-extrabold text-white mb-4 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">";,
+            <h2 className="text-3xl md: text-5xl font-extrabold text-white mb-4 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">";
               Edge AI + 5G Networks & Quantum-Safe Cryptography
             </h2>
-            <p className="text-lg md: text-xl text-gray-300 max-w-4xl mx-auto mb-6">";,
+            <p className="text-lg md: text-xl text-gray-300 max-w-4xl mx-auto mb-6">";
               ⚡ Master ultra-low latency AI at the edge with 5G networks (sub-10ms response, 80% bandwidth savings) 
               and protect your enterprise from quantum threats with NIST-approved post-quantum cryptography (PQC). 
               Build the future-proof infrastructure your organization needs today!
@@ -41,16 +41,16 @@ export default function October2025EdgeAIQuantumCryptoBanner(): void {
           </div>
 
           {/* Feature Cards */}
-          <div className="grid md: grid-cols-2 gap-6 mb-8">",
+          <div className="grid md: grid-cols-2 gap-6 mb-8">"
             {/* Edge AI + 5G Card */}
-            <div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30 hover: scale-105 transition-all duration-300 hover:shadow-2xl">",
+            <div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30 hover: scale-105 transition-all duration-300 hover:shadow-2xl">"
               <div className="flex items-center gap-4 mb-4">
                 <div className="bg-cyan-500/20 p-3 rounded-lg">
                   <Zap className="w-8 h-8 text-cyan-400/>
 =======
-          <div className="grid md: grid-cols-2 gap-6 mb-8">";,
+          <div className="grid md: grid-cols-2 gap-6 mb-8">";
             {/* Edge AI + 5G Card */}
-            <div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30 hover: scale-105 transition-all duration-300 hover:shadow-2xl">";,
+            <div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30 hover: scale-105 transition-all duration-300 hover:shadow-2xl">";
               <div className="flex items-center gap-4 mb-4">";
                 <div className="bg-cyan-500/20 p-3 rounded-lg">";
                   <Zap className="w-8 h-8 text-cyan-400" />";
@@ -64,7 +64,7 @@ export default function October2025EdgeAIQuantumCryptoBanner(): void {
                 Deploy intelligent edge computing systems with 5G networks achieving sub-10ms latency
 =======
               <p className="text-gray-300 mb-4">";
-                Deploy intelligent edge computing systems with 5G networks achieving sub-10ms latency, 
+                Deploy intelligent edge computing systems with 5G networks achieving sub-10ms latency
                 80% bandwidth reduction, and 99.999% availability for mission-critical operations.
               </p>
               <div className="flex flex-wrap gap-2 mb-4">";
@@ -81,7 +81,7 @@ export default function October2025EdgeAIQuantumCryptoBanner(): void {
               </ul>
               <Link
                 to="/blog/ai-edge-computing-5g-networks-2025"
-                className="bg-cyan-500 hover: bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 transition-all duration-300 hover:scale-105",
+                className="bg-cyan-500 hover: bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 transition-all duration-300 hover:scale-105"
               >
                 Read Edge AI Guide
                 <ArrowRight className="w-4 h-4/>
@@ -91,12 +91,12 @@ export default function October2025EdgeAIQuantumCryptoBanner(): void {
             </div>
 
             {/* Quantum-Safe Cryptography Card */}
-            <div className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/30 hover: scale-105 transition-all duration-300 hover:shadow-2xl">",
+            <div className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/30 hover: scale-105 transition-all duration-300 hover:shadow-2xl">"
               <div className="flex items-center gap-4 mb-4">
                 <div className="bg-purple-500/20 p-3 rounded-lg">
                   <Shield className="w-8 h-8 text-purple-400/>
 =======
-            <div className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/30 hover: scale-105 transition-all duration-300 hover:shadow-2xl">";,
+            <div className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/30 hover: scale-105 transition-all duration-300 hover:shadow-2xl">";
               <div className="flex items-center gap-4 mb-4">";
                 <div className="bg-purple-500/20 p-3 rounded-lg">";
                   <Shield className="w-8 h-8 text-purple-400" />";
@@ -124,7 +124,7 @@ export default function October2025EdgeAIQuantumCryptoBanner(): void {
               </ul>
               <Link
                 to="/blog/quantum-safe-cryptography-implementation-2025"
-                className="bg-purple-500 hover: bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 transition-all duration-300 hover:scale-105",
+                className="bg-purple-500 hover: bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 transition-all duration-300 hover:scale-105"
               >
                 Read Quantum Security Guide
                 <ArrowRight className="w-4 h-4/>
@@ -135,12 +135,12 @@ export default function October2025EdgeAIQuantumCryptoBanner(): void {
           </div>
 
           {/* Key Metrics Section */}
-          <div className="grid grid-cols-2 md: grid-cols-4 gap-4 mb-8">",
+          <div className="grid grid-cols-2 md: grid-cols-4 gap-4 mb-8">"
             <div className="bg-cyan-500/10 backdrop-blur-sm rounded-xl p-4 border border-cyan-500/30 text-center">
               <div className="text-3xl font-extrabold text-cyan-400 mb-1">&lt;10ms</div>
               <div className="text-cyan-300 text-sm">Edge AI Latency</div>
 =======
-          <div className="grid grid-cols-2 md: grid-cols-4 gap-4 mb-8">";,
+          <div className="grid grid-cols-2 md: grid-cols-4 gap-4 mb-8">";
             <div className="bg-cyan-500/10 backdrop-blur-sm rounded-xl p-4 border border-cyan-500/30 text-center">";
               <div className="text-3xl font-extrabold text-cyan-400 mb-1">&lt;10ms</div>";
               <div className="text-cyan-300 text-sm">Edge AI Latency</div>";
@@ -160,12 +160,12 @@ export default function October2025EdgeAIQuantumCryptoBanner(): void {
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">"
 =======
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">";
             <Link
               to="/blog"
-              className="bg-gradient-to-r from-cyan-500 to-purple-500 hover: from-cyan-600 hover:to-purple-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2",
+              className="bg-gradient-to-r from-cyan-500 to-purple-500 hover: from-cyan-600 hover:to-purple-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2"
             >
               <Sparkles className="w-5 h-5/>
 =======
@@ -174,7 +174,7 @@ export default function October2025EdgeAIQuantumCryptoBanner(): void {
             </Link>
             <Link
               to="/contact"
-              className="border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2",
+              className="border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2"
             >
               <ArrowRight className="w-5 h-5/>
 =======

@@ -4,7 +4,7 @@
  */
 
 export interface SecurityConfig {
-csp: {,,
+csp: {,
 'default-src': string[];
 'script-src': string[];
 'style-src': string[];
@@ -45,7 +45,7 @@ csp: {,,
 'block-all-mixed-content': boolean;';
 };
   headers: {,
-    [key: string]: string;,
+    [key: string]: string;
   };
 }
 
@@ -94,15 +94,15 @@ this.config = this.getDefaultConfig();
         'Cross-Origin-Opener-Policy': 'same-origin',
 =======
         'default-src': ["'self'"],";
-        'script-src': ["'self'", "'unsafe-inline'", "'unsafe-eval'", 'https: //www.googletagmanager.com', 'https://www.google-analytics.com'],';,
-        'style-src': ["'self'", "'unsafe-inline'", 'https: //fonts.googleapis.com'],';,
-        'img-src': ["'self'", 'data: ', 'https:', 'blob:'],';,
-        'connect-src': ["'self'", 'https: //www.google-analytics.com', 'https://analytics.google.com'],';,
-        'font-src': ["'self'", 'https: //fonts.gstatic.com', 'data:'],';,
+        'script-src': ["'self'", "'unsafe-inline'", "'unsafe-eval'", 'https: //www.googletagmanager.com', 'https://www.google-analytics.com'],';
+        'style-src': ["'self'", "'unsafe-inline'", 'https: //fonts.googleapis.com'],';
+        'img-src': ["'self'", 'data: ', 'https:', 'blob:'],';
+        'connect-src': ["'self'", 'https: //www.google-analytics.com', 'https://analytics.google.com'],';
+        'font-src': ["'self'", 'https: //fonts.gstatic.com', 'data:'],';
         'object-src': ["'none'"],";
         'media-src': ["'self'"],";
         'frame-src': ["'none'"],";
-        'worker-src': ["'self'", 'blob: '],';,
+        'worker-src': ["'self'", 'blob: '],';
         'child-src': ["'self'"],";
         'form-action': ["'self'"],";
         'frame-ancestors': ["'none'"],";
@@ -110,7 +110,7 @@ this.config = this.getDefaultConfig();
         'manifest-src': ["'self'"],";
         'upgrade-insecure-requests': true,';
         'block-all-mixed-content': true';
-      },
+      }
       headers: {,
         'X-Frame-Options': 'DENY',';
         'X-Content-Type-Options': 'nosniff',';
@@ -129,13 +129,11 @@ this.config = this.getDefaultConfig();
 
   public getCSPDirective(): string {
     const { csp } = this.config;
-    const directives: string[] = [],
-
+    const directives: string[] = []
     Object.entries(csp).forEach(([directive, values]) => {
       if (typeof values === 'boolean') {;
 =======
-    const directives: string[] = [];,
-
+    const directives: string[] = [];
     Object.entries(csp).forEach(([directive, values]) => {
       if (typeof values === 'boolean') {';
         if (values) {
@@ -152,22 +150,22 @@ this.config = this.getDefaultConfig();
   public getSecurityHeaders(): { [key: string]: string } {
     return {
       ...this.config.headers
-      'Content-Security-Policy': this.getCSPDirective()
+      'Content-Security-Policy': this.getCSPDirective(),
 =======
-      ...this.config.headers,
+      ...this.config.headers
       'Content-Security-Policy': this.getCSPDirective()';
     };
   }
 
-  public updateCSPDirective(directive: string, values: string[]): void {,
+  public updateCSPDirective(directive: string, values: string[]): void {
     if (directive in this.config.csp) {
       (this.config.csp as any)[directive] = values;
     }
   }
 
-  public addTrustedDomain(domain: string, directive: string = 'script-src'): void {',
+  public addTrustedDomain(domain: string, directive: string = 'script-src'): void {'
 =======
-  public addTrustedDomain(domain: string, directive: string = 'script-src'): void {';,
+  public addTrustedDomain(domain: string, directive: string = 'script-src'): void {';
     if (directive in this.config.csp) {
       const currentValues = (this.config.csp as any)[directive] as string[];
       if (!currentValues.includes(domain)) {
@@ -176,9 +174,9 @@ this.config = this.getDefaultConfig();
     }
   }
 
-  public removeTrustedDomain(domain: string, directive: string = 'script-src'): void {',
+  public removeTrustedDomain(domain: string, directive: string = 'script-src'): void {'
 =======
-  public removeTrustedDomain(domain: string, directive: string = 'script-src'): void {';,
+  public removeTrustedDomain(domain: string, directive: string = 'script-src'): void {';
     if (directive in this.config.csp) {
       const currentValues = (this.config.csp as any)[directive] as string[];
       const index = currentValues.indexOf(domain);
@@ -188,30 +186,30 @@ this.config = this.getDefaultConfig();
     }
   }
 
-  public validateInput(input: string, type: 'html' | 'url' | 'script' = 'html'): boolean {',
+  public validateInput(input: string, type: 'html' | 'url' | 'script' = 'html'): boolean {'
     const patterns = {
       html: /^[^<>]*$/,,
       url: /^https?:\/\/[^\s<>]+$/,,
       script: /^[^<>'"]*$/",
 =======
-  public validateInput(input: string, type: 'html' | 'url' | 'script' = 'html'): boolean {';,
+  public validateInput(input: string, type: 'html' | 'url' | 'script' = 'html'): boolean {';
     const patterns = {
       html: /^[^<>]*$/,,
       url: /^https?:\/\/[^\s<>]+$/,,
-      script: /^[^<>'"]*$/";,
+      script: /^[^<>'"]*$/";
     };
 
     return patterns[type].test(input);
   }
 
-  public sanitizeInput(input: string): string {,
+  public sanitizeInput(input: string): string {
     return input
       .replace(/[<>]/g, '');
-      .replace(/javascript: /gi, '')',
+      .replace(/javascript: /gi, '')'
       .replace(/on\w+=/gi, '');
 =======
       .replace(/[<>]/g, '')';
-      .replace(/javascript: /gi, '')';,
+      .replace(/javascript: /gi, '')';
       .replace(/on\w+=/gi, '')';
       .trim();
   }
@@ -234,7 +232,7 @@ headers: { [key: string]: string
 };
     score: number,
 =======
-    score: number;,
+    score: number;
   } {
     const headers = this.getSecurityHeaders();
     let score = 100;
@@ -267,7 +265,7 @@ headers: { [key: string]: string
     return {
       csp,
       headers,
-      score: Math.max(0, Math.min(100, score)),
+      score: Math.max(0, Math.min(100, score))
     };
   }
 }
@@ -276,11 +274,11 @@ headers: { [key: string]: string
 export const securityManager = new SecurityManager();
 
 // Helper functions
-export const sanitizeHTML = (html: string): string => {,
+export const sanitizeHTML = (html: string): string => {
   return securityManager.sanitizeInput(html);
 };
 
-export const validateURL = (url: string): boolean => {,
+export const validateURL = (url: string): boolean => {
   return securityManager.validateInput(url, 'url');
 =======
   return securityManager.validateInput(url, 'url');';

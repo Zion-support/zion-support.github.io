@@ -8,7 +8,7 @@ const October2025DocumentAutomationBanner = () => {
         <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1.5s' }} />;
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-8">",
+      <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-8">"
         {/* Breaking News Badge */}
         <div className="flex justify-center mb-4">
           <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-white font-bold text-sm shadow-lg animate-pulse">
@@ -23,7 +23,7 @@ const October2025DocumentAutomationBanner = () => {
         <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1.5s' }} />';
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-8">";,
+      <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-8">";
         {/* Breaking News Badge */}
         <div className="flex justify-center mb-4">";
           <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-white font-bold text-sm shadow-lg animate-pulse">";
@@ -35,10 +35,10 @@ const October2025DocumentAutomationBanner = () => {
 
         {/* Main Headline */}
         <div className="text-center mb-6">
-          <h2 className="text-4xl md: text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300 mb-3">",
+          <h2 className="text-4xl md: text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300 mb-3">"
             📄 Intelligent Document Automation Revolution
           </h2>
-          <p className="text-2xl md: text-3xl font-bold text-indigo-100 mb-4">",
+          <p className="text-2xl md: text-3xl font-bold text-indigo-100 mb-4">"
             Transform Operations with AI-Powered Document Processing
           </p>
           <p className="text-lg text-indigo-200 max-w-4xl mx-auto">
@@ -47,10 +47,10 @@ const October2025DocumentAutomationBanner = () => {
             <span className="font-bold text-white"> $47M annual savings</span> through intelligent document automation
 =======
         <div className="text-center mb-6">";
-          <h2 className="text-4xl md: text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300 mb-3">";,
+          <h2 className="text-4xl md: text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300 mb-3">";
             📄 Intelligent Document Automation Revolution
           </h2>
-          <p className="text-2xl md: text-3xl font-bold text-indigo-100 mb-4">";,
+          <p className="text-2xl md: text-3xl font-bold text-indigo-100 mb-4">";
             Transform Operations with AI-Powered Document Processing
           </p>
           <p className="text-lg text-indigo-200 max-w-4xl mx-auto">";
@@ -61,44 +61,44 @@ const October2025DocumentAutomationBanner = () => {
         </div>
 
         {/* Key Metrics Grid */}
-        <div className="grid grid-cols-2 md: grid-cols-4 gap-4 mb-8">",
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-indigo-400/30 hover: border-indigo-400/60 transition-all hover:scale-105">",
+        <div className="grid grid-cols-2 md: grid-cols-4 gap-4 mb-8">"
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-indigo-400/30 hover: border-indigo-400/60 transition-all hover:scale-105">"
             <Zap className="w-8 h-8 text-indigo-300 mx-auto mb-2/>
             <div className="text-3xl font-black text-white mb-1">94%</div>
             <div className="text-sm text-indigo-200">Faster Processing</div>
           </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-purple-400/30 hover: border-purple-400/60 transition-all hover:scale-105">",
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-purple-400/30 hover: border-purple-400/60 transition-all hover:scale-105">"
             <Target className="w-8 h-8 text-purple-300 mx-auto mb-2/>
             <div className="text-3xl font-black text-white mb-1">99.2%</div>
             <div className="text-sm text-purple-200">Accuracy</div>
           </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-pink-400/30 hover: border-pink-400/60 transition-all hover:scale-105">",
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-pink-400/30 hover: border-pink-400/60 transition-all hover:scale-105">"
             <DollarSign className="w-8 h-8 text-pink-300 mx-auto mb-2/>
             <div className="text-3xl font-black text-white mb-1">$47M</div>
             <div className="text-sm text-pink-200">Annual Savings</div>
           </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-indigo-400/30 hover: border-indigo-400/60 transition-all hover:scale-105">",
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-indigo-400/30 hover: border-indigo-400/60 transition-all hover:scale-105">"
             <TrendingUp className="w-8 h-8 text-indigo-300 mx-auto mb-2/>
             <div className="text-3xl font-black text-white mb-1">340%</div>
             <div className="text-sm text-indigo-200">ROI Year 1</div>
 =======
-        <div className="grid grid-cols-2 md: grid-cols-4 gap-4 mb-8">";,
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-indigo-400/30 hover: border-indigo-400/60 transition-all hover:scale-105">";,
+        <div className="grid grid-cols-2 md: grid-cols-4 gap-4 mb-8">";
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-indigo-400/30 hover: border-indigo-400/60 transition-all hover:scale-105">";
             <Zap className="w-8 h-8 text-indigo-300 mx-auto mb-2" />";
             <div className="text-3xl font-black text-white mb-1">94%</div>";
             <div className="text-sm text-indigo-200">Faster Processing</div>";
           </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-purple-400/30 hover: border-purple-400/60 transition-all hover:scale-105">";,
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-purple-400/30 hover: border-purple-400/60 transition-all hover:scale-105">";
             <Target className="w-8 h-8 text-purple-300 mx-auto mb-2" />";
             <div className="text-3xl font-black text-white mb-1">99.2%</div>";
             <div className="text-sm text-purple-200">Accuracy</div>";
           </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-pink-400/30 hover: border-pink-400/60 transition-all hover:scale-105">";,
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-pink-400/30 hover: border-pink-400/60 transition-all hover:scale-105">";
             <DollarSign className="w-8 h-8 text-pink-300 mx-auto mb-2" />";
             <div className="text-3xl font-black text-white mb-1">$47M</div>";
             <div className="text-sm text-pink-200">Annual Savings</div>";
           </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-indigo-400/30 hover: border-indigo-400/60 transition-all hover:scale-105">";,
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-indigo-400/30 hover: border-indigo-400/60 transition-all hover:scale-105">";
             <TrendingUp className="w-8 h-8 text-indigo-300 mx-auto mb-2" />";
             <div className="text-3xl font-black text-white mb-1">340%</div>";
             <div className="text-sm text-indigo-200">ROI Year 1</div>";
@@ -107,7 +107,7 @@ const October2025DocumentAutomationBanner = () => {
 
         {/* Featured Content */}
         <div className="bg-white/5 backdrop-blur-md rounded-xl p-6 border border-indigo-400/30 mb-6">
-          <div className="grid md: grid-cols-2 gap-6">",
+          <div className="grid md: grid-cols-2 gap-6">"
             {/* Blog Post */}
             <div className="bg-gradient-to-br from-indigo-800/50 to-purple-800/50 rounded-lg p-5 border border-indigo-400/40">
               <div className="text-indigo-300 font-bold mb-2 flex items-center">
@@ -117,7 +117,7 @@ const October2025DocumentAutomationBanner = () => {
               <h3 className="text-xl font-bold text-white mb-2">
 =======
         <div className="bg-white/5 backdrop-blur-md rounded-xl p-6 border border-indigo-400/30 mb-6">";
-          <div className="grid md: grid-cols-2 gap-6">";,
+          <div className="grid md: grid-cols-2 gap-6">";
             {/* Blog Post */}
             <div className="bg-gradient-to-br from-indigo-800/50 to-purple-800/50 rounded-lg p-5 border border-indigo-400/40">";
               <div className="text-indigo-300 font-bold mb-2 flex items-center">";
@@ -125,7 +125,7 @@ const October2025DocumentAutomationBanner = () => {
                 COMPREHENSIVE IMPLEMENTATION GUIDE
               </div>
               <h3 className="text-xl font-bold text-white mb-2">";
-                Intelligent Document Automation: Complete Technical Guide,
+                Intelligent Document Automation: Complete Technical Guide
               </h3>
               <p className="text-indigo-100 text-sm mb-4">";
                 Master AI-powered document processing with advanced OCR, NLP, and workflow automation. 
@@ -134,7 +134,7 @@ const October2025DocumentAutomationBanner = () => {
               </p>
               <Link
                 to="/blog/ai-2025-oct-01-intelligent-document-automation-revolution"
-                className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-indigo-500 to-purple-500 hover: from-indigo-600 hover:to-purple-600 text-white font-semibold rounded-lg transition-all shadow-lg hover:shadow-xl",
+                className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-indigo-500 to-purple-500 hover: from-indigo-600 hover:to-purple-600 text-white font-semibold rounded-lg transition-all shadow-lg hover:shadow-xl"
               >
                 Read Complete Guide
                 <ArrowRight className="w-4 h-4 ml-2/>
@@ -150,7 +150,7 @@ const October2025DocumentAutomationBanner = () => {
                 FORTUNE 500 SUCCESS STORY
               </div>
               <h3 className="text-xl font-bold text-white mb-2">
-                Insurance Leader: $47M Saved Processing 2.4M Documents,
+                Insurance Leader: $47M Saved Processing 2.4M Documents
               </h3>
               <p className="text-purple-100 text-sm mb-4">
                 Real transformation: How a $18B insurance company achieved $47M annual savings
@@ -161,7 +161,7 @@ const October2025DocumentAutomationBanner = () => {
                 FORTUNE 500 SUCCESS STORY
               </div>
               <h3 className="text-xl font-bold text-white mb-2">";
-                Insurance Leader: $47M Saved Processing 2.4M Documents,
+                Insurance Leader: $47M Saved Processing 2.4M Documents
               </h3>
               <p className="text-purple-100 text-sm mb-4">";
                 Real transformation: How a $18B insurance company achieved $47M annual savings, ,
@@ -170,7 +170,7 @@ const October2025DocumentAutomationBanner = () => {
               </p>
               <Link
                 to="/case-studies/ai-2025-oct-01-insurance-company-document-automation-47-million-success"
-                className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 hover: from-purple-600 hover:to-pink-600 text-white font-semibold rounded-lg transition-all shadow-lg hover:shadow-xl",
+                className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 hover: from-purple-600 hover:to-pink-600 text-white font-semibold rounded-lg transition-all shadow-lg hover:shadow-xl"
               >
                 Read Success Story
                 <ArrowRight className="w-4 h-4 ml-2/>
@@ -186,11 +186,11 @@ const October2025DocumentAutomationBanner = () => {
           <h3 className="text-2xl font-bold text-white mb-4 text-center">";
             Breakthrough Intelligent Document Processing Capabilities
           </h3>
-          <div className="grid md: grid-cols-3 gap-4 text-indigo-100">",
+          <div className="grid md: grid-cols-3 gap-4 text-indigo-100">"
             <div className="flex items-start">
               <CheckCircle className="w-5 h-5 text-indigo-400 mr-3 mt-1 flex-shrink-0/>
 =======
-          <div className="grid md: grid-cols-3 gap-4 text-indigo-100">";,
+          <div className="grid md: grid-cols-3 gap-4 text-indigo-100">";
             <div className="flex items-start">";
               <CheckCircle className="w-5 h-5 text-indigo-400 mr-3 mt-1 flex-shrink-0" />";
               <div>
@@ -256,12 +256,12 @@ const October2025DocumentAutomationBanner = () => {
           <h3 className="text-xl font-bold text-white mb-4 text-center">";
             Proven Results Across Industries
           </h3>
-          <div className="grid md: grid-cols-3 gap-4 text-sm">",
+          <div className="grid md: grid-cols-3 gap-4 text-sm">"
             <div className="bg-indigo-800/30 rounded-lg p-4 border border-indigo-400/20">
               <div className="font-bold text-white mb-2">Financial Services</div>
               <div className="text-indigo-200">Loan apps, KYC docs → 92% faster, $23M savings</div>
 =======
-          <div className="grid md: grid-cols-3 gap-4 text-sm">";,
+          <div className="grid md: grid-cols-3 gap-4 text-sm">";
             <div className="bg-indigo-800/30 rounded-lg p-4 border border-indigo-400/20">";
               <div className="font-bold text-white mb-2">Financial Services</div>";
               <div className="text-indigo-200">Loan apps, KYC docs → 92% faster, $23M savings</div>";
@@ -294,9 +294,9 @@ const October2025DocumentAutomationBanner = () => {
           <h3 className="text-xl font-bold text-white mb-4 text-center">";
             Fortune 500 Insurance Company Results
           </h3>
-          <div className="grid md: grid-cols-4 gap-4 text-center">",
+          <div className="grid md: grid-cols-4 gap-4 text-center">"
 =======
-          <div className="grid md: grid-cols-4 gap-4 text-center">";,
+          <div className="grid md: grid-cols-4 gap-4 text-center">";
             <div>
               <div className="text-3xl font-black text-indigo-300 mb-1">2.4M</div>";
               <div className="text-sm text-indigo-200">Documents/Year Automated</div>";
@@ -325,12 +325,12 @@ const October2025DocumentAutomationBanner = () => {
             Schedule a Document Automation Assessment with Zion Tech Group and discover how AI can deliver 
             340% ROI and eliminate 90% of manual processing
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">"
 =======
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">";
             <Link
               to="/contact"
-              className="inline-flex items-center justify-center px-8 py-4 bg-white text-indigo-600 font-bold rounded-lg hover: bg-indigo-50 transition-all shadow-xl hover:shadow-2xl",
+              className="inline-flex items-center justify-center px-8 py-4 bg-white text-indigo-600 font-bold rounded-lg hover: bg-indigo-50 transition-all shadow-xl hover:shadow-2xl"
             >
               Schedule Assessment
               <ArrowRight className="w-5 h-5 ml-2/>
@@ -339,7 +339,7 @@ const October2025DocumentAutomationBanner = () => {
             </Link>
             <Link
               to="/blog"
-              className="inline-flex items-center justify-center px-8 py-4 bg-indigo-800 text-white font-bold rounded-lg hover: bg-indigo-900 transition-all shadow-xl",
+              className="inline-flex items-center justify-center px-8 py-4 bg-indigo-800 text-white font-bold rounded-lg hover: bg-indigo-900 transition-all shadow-xl"
             >
               Explore All Solutions
               <ArrowRight className="w-5 h-5 ml-2/>

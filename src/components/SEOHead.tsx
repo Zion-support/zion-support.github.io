@@ -2,9 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 =======
 import React from 'react';';
-import {
-Helmet
-} from 'react-helmet-async';';
+import { Helmet } from 'react-helmet-async';';
 
 interface SEOHeadProps {
   title?: string;
@@ -18,14 +16,14 @@ interface SEOHeadProps {
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
-  title = 'Zion Tech Group — AI, Micro SaaS, and IT Services',
-  description = 'Enterprise-grade AI, micro SaaS, and IT solutions. Transform your business with cutting-edge technology and automation.',
-  keywords = 'AI services, micro SaaS, IT services, cloud migration, DevOps, SRE, enterprise software, automation',
-  canonicalUrl,
-  ogImage = '/images/og-image.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-  structuredData,
+  title = 'Zion Tech Group — AI, Micro SaaS, and IT Services'
+  description = 'Enterprise-grade AI, micro SaaS, and IT solutions. Transform your business with cutting-edge technology and automation.'
+  keywords = 'AI services, micro SaaS, IT services, cloud migration, DevOps, SRE, enterprise software, automation'
+  canonicalUrl
+  ogImage = '/images/og-image.jpg'
+  ogType = 'website'
+  twitterCard = 'summary_large_image'
+  structuredData
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullCanonicalUrl = typeof window !== 'undefined' ? (canonicalUrl || window.location.href) : (canonicalUrl || 'https://ziontechgroup.com');
@@ -37,24 +35,24 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     url: 'https://ziontechgroup.com',
     logo: 'https://ziontechgroup.com/images/logo.png',
     description: 'Enterprise-grade AI, micro SaaS, and IT solutions',
-    address: {
+    address: {,
       '@type': 'PostalAddress',
       streetAddress: '364 E Main St STE 1008',
       addressLocality: 'Middletown',
       addressRegion: 'DE',
       postalCode: '19709',
-      addressCountry: 'US',
-    },
-    contactPoint: {
+      addressCountry: 'US'
+    }
+    contactPoint: {,
       '@type': 'ContactPoint',
       telephone: '+1-302-464-0950',
       contactType: 'customer service',
-      email: 'kleber@ziontechgroup.com',
-    },
-    sameAs: [
+      email: 'kleber@ziontechgroup.com'
+    }
+    sameAs: [,
       'https://linkedin.com/company/zion-tech-group',
-      'https://twitter.com/ziontechgroup',
-    ],
+      'https://twitter.com/ziontechgroup'
+    ]
   };
 
   return (

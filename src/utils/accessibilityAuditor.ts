@@ -4,10 +4,10 @@
  */
 
 interface AccessibilityIssue {
-severity: 'critical' | 'serious' | 'moderate' | 'minor';,
-element: string;,
-issue: string;,
-recommendation: string;,
+severity: 'critical' | 'serious' | 'moderate' | 'minor';
+element: string;
+issue: string;
+recommendation: string;
 wcagCriterion: string;
 }
 
@@ -15,18 +15,18 @@ interface AccessibilityReport {
 score: number,
 issues: AccessibilityIssue[],
 compliantAreas: string[],
-summary: {,,
+summary: {,
 critical: number,
 serious: number,
 moderate: number,
 =======
-score: number;,
-issues: AccessibilityIssue[];,
-compliantAreas: string[];,
-summary: {,,
-critical: number;,
-serious: number;,
-moderate: number;,
+score: number;
+issues: AccessibilityIssue[];
+compliantAreas: string[];
+summary: {,
+critical: number;
+serious: number;
+moderate: number;
 minor: number;
 };
 }
@@ -38,10 +38,10 @@ export class AccessibilityAuditor {
     understandable: ['3.1.1', '3.2.1', '3.3.1'],',
     robust: ['4.1.1', '4.1.2']',
 =======
-    perceivable: ['1.1.1', '1.2.1', '1.3.1', '1.4.1', '1.4.3'],';,
-    operable: ['2.1.1', '2.1.2', '2.4.1', '2.4.3', '2.4.7'],';,
-    understandable: ['3.1.1', '3.2.1', '3.3.1'],';,
-    robust: ['4.1.1', '4.1.2']';,
+    perceivable: ['1.1.1', '1.2.1', '1.3.1', '1.4.1', '1.4.3'],';
+    operable: ['2.1.1', '2.1.2', '2.4.1', '2.4.3', '2.4.7'],';
+    understandable: ['3.1.1', '3.2.1', '3.3.1'],';
+    robust: ['4.1.1', '4.1.2']';
   };
 
   /**
@@ -64,12 +64,12 @@ export class AccessibilityAuditor {
         critical: issues.filter(i => i.severity === 'critical').length,
         serious: issues.filter(i => i.severity === 'serious').length,
         moderate: issues.filter(i => i.severity === 'moderate').length,
-        minor: issues.filter(i => i.severity === 'minor').length
+        minor: issues.filter(i => i.severity === 'minor').length,
 =======
-        critical: issues.filter(i => i.severity === 'critical').length,';,
-        serious: issues.filter(i => i.severity === 'serious').length,';,
-        moderate: issues.filter(i => i.severity === 'moderate').length,';,
-        minor: issues.filter(i => i.severity === 'minor').length';,
+        critical: issues.filter(i => i.severity === 'critical').length,';
+        serious: issues.filter(i => i.severity === 'serious').length,';
+        moderate: issues.filter(i => i.severity === 'moderate').length,';
+        minor: issues.filter(i => i.severity === 'minor').length';
       }
     };
   }
@@ -78,8 +78,7 @@ export class AccessibilityAuditor {
    * Detect accessibility issues
    */
   private detectIssues(): AccessibilityIssue[] {
-    const issues: AccessibilityIssue[] = [],
-
+    const issues: AccessibilityIssue[] = []
     // Check for images without alt text
     issues.push({
       severity: 'serious',',
@@ -144,78 +143,77 @@ export class AccessibilityAuditor {
       recommendation: 'Use <nav>, <main>, <article>, <aside> appropriately',',
       wcagCriterion: '1.3.1 (Level A)});
 =======
-    const issues: AccessibilityIssue[] = [];,
-
+    const issues: AccessibilityIssue[] = [];
     // Check for images without alt text
     issues.push({
-      severity: 'serious',';,
-      element: '<img alt="Zion Tech Group"> tags',';,
-      issue: 'Missing alt attributes on images',';,
-      recommendation: 'Add descriptive alt text to all images',';,
-      wcagCriterion: '1.1.1 (Level A)',
+      severity: 'serious',';
+      element: '<img alt="Zion Tech Group"> tags',';
+      issue: 'Missing alt attributes on images',';
+      recommendation: 'Add descriptive alt text to all images',';
+      wcagCriterion: '1.1.1 (Level A)'
     });
 
     // Check for proper heading structure
     issues.push({
-      severity: 'moderate',';,
-      element: '<h1>-<h6> tags',';,
-      issue: 'Skipped heading levels detected',';,
-      recommendation: 'Ensure heading hierarchy is logical (h1 → h2 → h3)',';,
-      wcagCriterion: '2.4.6 (Level AA)',
+      severity: 'moderate',';
+      element: '<h1>-<h6> tags',';
+      issue: 'Skipped heading levels detected',';
+      recommendation: 'Ensure heading hierarchy is logical (h1 → h2 → h3)',';
+      wcagCriterion: '2.4.6 (Level AA)'
     });
 
     // Check for keyboard navigation
     issues.push({
-      severity: 'critical',';,
-      element: 'Interactive elements',';,
-      issue: 'Some interactive elements not keyboard accessible',';,
-      recommendation: 'Ensure all interactive elements can be accessed via keyboard',';,
-      wcagCriterion: '2.1.1 (Level A)',
+      severity: 'critical',';
+      element: 'Interactive elements',';
+      issue: 'Some interactive elements not keyboard accessible',';
+      recommendation: 'Ensure all interactive elements can be accessed via keyboard',';
+      wcagCriterion: '2.1.1 (Level A)'
     });
 
     // Check for color contrast
     issues.push({
-      severity: 'serious',';,
-      element: 'Text elements',';,
-      issue: 'Insufficient color contrast ratio on some text',';,
-      recommendation: 'Ensure minimum 4.5:1 contrast ratio for normal text',';,
-      wcagCriterion: '1.4.3 (Level AA)',
+      severity: 'serious',';
+      element: 'Text elements',';
+      issue: 'Insufficient color contrast ratio on some text',';
+      recommendation: 'Ensure minimum 4.5:1 contrast ratio for normal text',';
+      wcagCriterion: '1.4.3 (Level AA)'
     });
 
     // Check for ARIA labels
     issues.push({
-      severity: 'moderate',';,
-      element: 'Banner components',';,
-      issue: 'Missing ARIA labels on banner navigation',';,
-      recommendation: 'Add aria-label to navigation regions',';,
-      wcagCriterion: '4.1.2 (Level A)',
+      severity: 'moderate',';
+      element: 'Banner components',';
+      issue: 'Missing ARIA labels on banner navigation',';
+      recommendation: 'Add aria-label to navigation regions',';
+      wcagCriterion: '4.1.2 (Level A)'
     });
 
     // Check for focus indicators
     issues.push({
-      severity: 'moderate',';,
-      element: 'Links and buttons',';,
-      issue: 'Focus indicators not always visible',';,
-      recommendation: 'Ensure visible focus indicators on all focusable elements',';,
-      wcagCriterion: '2.4.7 (Level AA)',
+      severity: 'moderate',';
+      element: 'Links and buttons',';
+      issue: 'Focus indicators not always visible',';
+      recommendation: 'Ensure visible focus indicators on all focusable elements',';
+      wcagCriterion: '2.4.7 (Level AA)'
     });
 
     // Check for form labels
     issues.push({
-      severity: 'serious',';,
-      element: '<input> elements',';,
-      issue: 'Form inputs missing associated labels',';,
-      recommendation: 'Add <label> elements or aria-label to all form inputs',';,
-      wcagCriterion: '1.3.1 (Level A)',
+      severity: 'serious',';
+      element: '<input> elements',';
+      issue: 'Form inputs missing associated labels',';
+      recommendation: 'Add <label> elements or aria-label to all form inputs',';
+      wcagCriterion: '1.3.1 (Level A)'
     });
 
     // Check for semantic HTML
     issues.push({
-      severity: 'minor',';,
-      element: 'Page structure',';,
-      issue: 'Not using semantic HTML5 elements consistently',';,
-      recommendation: 'Use <nav>, <main>, <article>, <aside> appropriately',';,
-      wcagCriterion: '1.3.1 (Level A)',
+      severity: 'minor',';
+      element: 'Page structure',';
+      issue: 'Not using semantic HTML5 elements consistently',';
+      recommendation: 'Use <nav>, <main>, <article>, <aside> appropriately',';
+      wcagCriterion: '1.3.1 (Level A)'
     });
 
     return issues;
@@ -239,12 +237,12 @@ export class AccessibilityAuditor {
   /**
    * Calculate accessibility score
    */
-  private calculateScore(issues: AccessibilityIssue[]): number {,
+  private calculateScore(issues: AccessibilityIssue[]): number {
     const weights = {
       critical: 25,,
       serious: 15,,
       moderate: 8,,
-      minor: 3,
+      minor: 3
     };
 
     const deductions = issues.reduce((total, issue) => {

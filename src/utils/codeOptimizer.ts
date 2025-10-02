@@ -15,10 +15,10 @@ return function executedFunction(...args: Parameters<T>) {
 =======
 export function debounce<T extends (...args: unknown[]) => unknown>(,
   func: T,,
-  wait: number,
-): (...args: Parameters<T>) => void {,
-let timeout: NodeJS.Timeout | null = null;,
-return function executedFunction(...args: Parameters<T>) {,,
+  wait: number
+): (...args: Parameters<T>) => void {
+let timeout: NodeJS.Timeout | null = null;
+return function executedFunction(...args: Parameters<T>) {,
 const later = () => {
 timeout = null;
 func(...args);
@@ -34,13 +34,12 @@ func(...args);
  */
 export function throttle<T extends (...args: unknown[]) => unknown>(,
   func: T,,
-  limit: number,
-): (...args: Parameters<T>) => void {,
-  let inThrottle: boolean = false,
+  limit: number
+): (...args: Parameters<T>) => void {
+  let inThrottle: boolean = false
 =======
-  let inThrottle: boolean = false;,
-  
-  return function executedFunction(...args: Parameters<T>) {,
+  let inThrottle: boolean = false;
+  return function executedFunction(...args: Parameters<T>) {
     if (!inThrottle) {
       func(...args);
       inThrottle = true;
@@ -54,11 +53,11 @@ export function throttle<T extends (...args: unknown[]) => unknown>(,
  */
 export function memoize<T extends (...args: unknown[]) => unknown>(,
   func: T,,
-  keyGenerator?: (...args: Parameters<T>) => string,
+  keyGenerator?: (...args: Parameters<T>) => string
 ): T {
   const cache = new Map<string, ReturnType<T>>();
   
-  return ((...args: Parameters<T>) => {,
+  return ((...args: Parameters<T>) => {
     const key = keyGenerator ? keyGenerator(...args) : JSON.stringify(args);
     
     if (cache.has(key)) {
@@ -80,17 +79,17 @@ private running: boolean = false;
 private concurrency: number;
 constructor(concurrency: number = 3) {
 =======
-private queue: Array<() => Promise<any>> = [];,
-private running: boolean = false;,
-private concurrency: number;,
-constructor(concurrency: number = 3) {,,
+private queue: Array<() => Promise<any>> = [];
+private running: boolean = false;
+private concurrency: number;
+constructor(concurrency: number = 3) {,
 this.concurrency = concurrency;
 }
 
   /**
    * Add task to queue
    */
-  add<T>(task: () => Promise<T>): Promise<T> {,
+  add<T>(task: () => Promise<T>): Promise<T> {
     return new Promise((resolve, reject) => {
       this.queue.push(async () => {
         try {
@@ -115,10 +114,9 @@ this.concurrency = concurrency;
 
     this.running = true;
 
-    const tasks: Array<Promise<any>> = [],
+    const tasks: Array<Promise<any>> = []
 =======
-    const tasks: Array<Promise<any>> = [];,
-    
+    const tasks: Array<Promise<any>> = [];
     while (this.queue.length > 0 && tasks.length < this.concurrency) {
       const task = this.queue.shift();
       if (task) {
@@ -146,10 +144,10 @@ let rafId: number | null = null;
 return function executedFunction(...args: Parameters<T>) {
 =======
 export function rafThrottle<T extends (...args: any[]) => any>(,
-  func: T,
-): (...args: Parameters<T>) => void {,
-let rafId: number | null = null;,
-return function executedFunction(...args: Parameters<T>) {,,
+  func: T
+): (...args: Parameters<T>) => void {
+let rafId: number | null = null;
+return function executedFunction(...args: Parameters<T>) {,
 if (rafId) {
 cancelAnimationFrame(rafId);
 }
@@ -165,22 +163,21 @@ cancelAnimationFrame(rafId);
  * Batch updates to reduce re-renders
  */
 export class BatchUpdater {
-  private updates: Map<string, any> = new Map(),
-  private scheduled: boolean = false,
-  private callback: (updates: Map<string, any>) => void,
+  private updates: Map<string, any> = new Map()
+  private scheduled: boolean = false
+  private callback: (updates: Map<string, any>) => void
 =======
-  private updates: Map<string, any> = new Map();,
-  private scheduled: boolean = false;,
-  private callback: (updates: Map<string, any>) => void;,
-
-  constructor(callback: (updates: Map<string, any>) => void) {,
+  private updates: Map<string, any> = new Map();
+  private scheduled: boolean = false;
+  private callback: (updates: Map<string, any>) => void;
+  constructor(callback: (updates: Map<string, any>) => void) {
     this.callback = callback;
   }
 
   /**
    * Schedule an update
    */
-  update(key: string, value: any): void {,
+  update(key: string, value: any): void {
     this.updates.set(key, value);
     
     if (!this.scheduled) {
@@ -210,16 +207,16 @@ export const arrayUtils = {
 */
 unique<T>(array: T[]): T[] {
 =======
-unique<T>(array: T[]): T[] {,,
+unique<T>(array: T[]): T[] {,
 return Array.from(new Set(array));
 }
   /**
    * Chunk array into smaller arrays
    */
-  chunk<T>(array: T[], size: number): T[][] {,
-    const chunks: T[][] = [],
+  chunk<T>(array: T[], size: number): T[][] {
+    const chunks: T[][] = []
 =======
-    const chunks: T[][] = [];,
+    const chunks: T[][] = [];
     for (let i = 0; i < array.length; i += size) {
       chunks.push(array.slice(i, i + size));
     }
@@ -228,7 +225,7 @@ return Array.from(new Set(array));
   /**
    * Flatten nested arrays
    */
-  flatten<T>(array: any[]): T[] {,
+  flatten<T>(array: any[]): T[] {
     return array.reduce(
       (acc, val) => acc.concat(Array.isArray(val) ? arrayUtils.flatten(val) : val)
       []
@@ -245,19 +242,19 @@ export const objectUtils = {
 */
 deepClone<T>(obj: T): T {
 =======
-deepClone<T>(obj: T): T {,,
+deepClone<T>(obj: T): T {,
 return JSON.parse(JSON.stringify(obj));
 }
   /**
    * Check if two objects are equal
    */
-  isEqual(obj1: any, obj2: any): boolean {,
+  isEqual(obj1: any, obj2: any): boolean {
     return JSON.stringify(obj1) === JSON.stringify(obj2);
   }
   /**
    * Pick specific properties from object
    */
-  pick<T extends object, K extends keyof T>(obj: T, keys: K[]): Pick<T, K> {,
+  pick<T extends object, K extends keyof T>(obj: T, keys: K[]): Pick<T, K> {
     const result = {} as Pick<T, K>;
     keys.forEach(key => {
       if (key in obj) {
@@ -273,9 +270,9 @@ return JSON.parse(JSON.stringify(obj));
  */
 export function measurePerformance<T>(
   fn: () => T,,
-  label: string = 'Operation): T {
+  label: string = 'Operation): T {,
 =======
-  label: string = 'Operation',
+  label: string = 'Operation'
 ): T {
   const start = performance.now();
   const result = fn();
@@ -291,9 +288,9 @@ export function measurePerformance<T>(
  */
 export async function measureAsyncPerformance<T>(
   fn: () => Promise<T>,,
-  label: string = 'Async Operation): Promise<T> {
+  label: string = 'Async Operation): Promise<T> {,
 =======
-  label: string = 'Async Operation',
+  label: string = 'Async Operation'
 ): Promise<T> {
   const start = performance.now();
   const result = await fn();

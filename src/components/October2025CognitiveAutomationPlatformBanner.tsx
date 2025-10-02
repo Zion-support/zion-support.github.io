@@ -2,7 +2,7 @@ import React from 'react';
 =======
 import React from 'react';';
 
-const October2025CognitiveAutomationPlatformBanner: React.FC = () => {,
+const October2025CognitiveAutomationPlatformBanner: React.FC = () => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -27,24 +27,24 @@ const October2025CognitiveAutomationPlatformBanner: React.FC = () => {,
           className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/20 backdrop-blur-sm rounded-full border border-emerald-400/30 mb-6"
         >
           <span className="text-2xl">🧠🤖</span>
-          <span className="text-emerald-200 font-semibold text-sm">ENTERPRISE REVOLUTION: OCTOBER 1, 2025</span>",
+          <span className="text-emerald-200 font-semibold text-sm">ENTERPRISE REVOLUTION: OCTOBER 1, 2025</span>"
           <span className="text-2xl">🚀💎</span>
         </motion.div>
 
         {/* Main Content */}
-        <div className="grid lg: grid-cols-2 gap-8 items-center">",
+        <div className="grid lg: grid-cols-2 gap-8 items-center">"
           <div>
-            <h2 className="text-4xl lg: text-5xl font-bold text-white mb-4 leading-tight">",
+            <h2 className="text-4xl lg: text-5xl font-bold text-white mb-4 leading-tight">"
 =======
           <span className="text-2xl">🧠🤖</span>";
-          <span className="text-emerald-200 font-semibold text-sm">ENTERPRISE REVOLUTION: OCTOBER 1, 2025</span>";,
+          <span className="text-emerald-200 font-semibold text-sm">ENTERPRISE REVOLUTION: OCTOBER 1, 2025</span>";
           <span className="text-2xl">🚀💎</span>";
         </motion.div>
 
         {/* Main Content */}
-        <div className="grid lg: grid-cols-2 gap-8 items-center">";,
+        <div className="grid lg: grid-cols-2 gap-8 items-center">";
           <div>
-            <h2 className="text-4xl lg: text-5xl font-bold text-white mb-4 leading-tight">";,
+            <h2 className="text-4xl lg: text-5xl font-bold text-white mb-4 leading-tight">";
               Cognitive Automation Platform 3.0
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400 mt-2">";
                 The Enterprise Operating System
@@ -85,7 +85,7 @@ const October2025CognitiveAutomationPlatformBanner: React.FC = () => {,
                 href="/blog/ai-2025-october-cognitive-automation-platform"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-bold rounded-lg shadow-lg hover: shadow-emerald-500/50 transition-all",
+                className="px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-bold rounded-lg shadow-lg hover: shadow-emerald-500/50 transition-all"
               >
                 Explore Platform 3.0 →
               </motion.a>
@@ -93,7 +93,7 @@ const October2025CognitiveAutomationPlatformBanner: React.FC = () => {,
                 href="/contact"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-lg border border-white/20 hover: bg-white/20 transition-all",
+                className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-lg border border-white/20 hover: bg-white/20 transition-all"
               >
                 Start Automation
               </motion.a>
@@ -101,61 +101,60 @@ const October2025CognitiveAutomationPlatformBanner: React.FC = () => {,
           </div>
 
           {/* Visual Element */}
-          <div className="hidden lg: block">",
+          <div className="hidden lg: block">"
             <div className="relative">
               <motion.div
                 animate={{
                   scale: [1, 1.05, 1],
-                  rotate: [0, 3, 0]
+                  rotate: [0, 3, 0],
 =======
-          <div className="hidden lg: block">";,
+          <div className="hidden lg: block">";
             <div className="relative">";
               <motion.div
                 animate={{
                   scale: [1, 1.05, 1],,
-                  rotate: [0, 3, 0],,
-                }}
+                  rotate: [0, 3, 0],}},
                 transition={{
                   duration: 5,,
                   repeat: Infinity,,
-                  ease: "easeInOut",
+                  ease: "easeInOut"
                 }}
                 className="bg-gradient-to-br from-emerald-500/20 to-teal-500/20 backdrop-blur-lg rounded-2xl p-8 border border-emerald-400/30"
               >
-                <h3 className="text-2xl font-bold text-white mb-4">Platform Features: </h3>",
+                <h3 className="text-2xl font-bold text-white mb-4">Platform Features: </h3>"
                 <ul className="space-y-3 text-emerald-100">
                   <li className="flex items-start gap-3">
                     <span className="text-2xl">🧠</span>
-                    <span><strong>Cognitive Understanding: </strong> Natural language & visual intelligence</span>,
+                    <span><strong>Cognitive Understanding: </strong> Natural language & visual intelligence</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-2xl">⚙️</span>
-                    <span><strong>Autonomous Decisions: </strong> 99.94% accuracy without human input</span>,
+                    <span><strong>Autonomous Decisions: </strong> 99.94% accuracy without human input</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-2xl">📈</span>
-                    <span><strong>Continuous Learning: </strong> Real-time adaptation & optimization</span>,
+                    <span><strong>Continuous Learning: </strong> Real-time adaptation & optimization</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-2xl">🌍</span>
 =======
-                <h3 className="text-2xl font-bold text-white mb-4">Platform Features: </h3>";,
+                <h3 className="text-2xl font-bold text-white mb-4">Platform Features: </h3>";
                 <ul className="space-y-3 text-emerald-100">";
                   <li className="flex items-start gap-3">";
                     <span className="text-2xl">🧠</span>";
-                    <span><strong>Cognitive Understanding: </strong> Natural language & visual intelligence</span>,
+                    <span><strong>Cognitive Understanding: </strong> Natural language & visual intelligence</span>
                   </li>
                   <li className="flex items-start gap-3">";
                     <span className="text-2xl">⚙️</span>";
-                    <span><strong>Autonomous Decisions: </strong> 99.94% accuracy without human input</span>,
+                    <span><strong>Autonomous Decisions: </strong> 99.94% accuracy without human input</span>
                   </li>
                   <li className="flex items-start gap-3">";
                     <span className="text-2xl">📈</span>";
-                    <span><strong>Continuous Learning: </strong> Real-time adaptation & optimization</span>,
+                    <span><strong>Continuous Learning: </strong> Real-time adaptation & optimization</span>
                   </li>
                   <li className="flex items-start gap-3">";
                     <span className="text-2xl">🌍</span>";
-                    <span><strong>Global Scale: </strong> 67 countries, 95 departments, 84,000 employees</span>,
+                    <span><strong>Global Scale: </strong> 67 countries, 95 departments, 84,000 employees</span>
                   </li>
                 </ul>
               </motion.div>
@@ -171,10 +170,10 @@ const October2025CognitiveAutomationPlatformBanner: React.FC = () => {,
           className="mt-8 pt-6 border-t border-emerald-400/30 text-center"
         >
           <p className="text-emerald-200 text-sm">
-            🏆 <strong className="text-white">ENTERPRISE TRANSFORMATION: </strong> Fortune 50 Success Story | 87% Cost Reduction | 25x Faster Processing",
+            🏆 <strong className="text-white">ENTERPRISE TRANSFORMATION: </strong> Fortune 50 Success Story | 87% Cost Reduction | 25x Faster Processing"
 =======
           <p className="text-emerald-200 text-sm">";
-            🏆 <strong className="text-white">ENTERPRISE TRANSFORMATION: </strong> Fortune 50 Success Story | 87% Cost Reduction | 25x Faster Processing";,
+            🏆 <strong className="text-white">ENTERPRISE TRANSFORMATION: </strong> Fortune 50 Success Story | 87% Cost Reduction | 25x Faster Processing";
           </p>
         </motion.div>
       </div>

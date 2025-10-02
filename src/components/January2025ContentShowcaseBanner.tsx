@@ -2,33 +2,33 @@ import React from 'react';
 =======
 import React from 'react';';
 
-const January2025ContentShowcaseBanner: React.FC = () => {,
+const January2025ContentShowcaseBanner: React.FC = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">";
       {/* Animated Background */}
       <div className="absolute inset-0 bg-[url('/images/abstract-pattern.svg')] opacity-10 animate-pulse"></div>
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white/5 to-transparent transform -skew-y-1"></div>
-      <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20">",
+      <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20">"
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-pink-500/20 text-pink-400 px-6 py-3 rounded-full text-sm font-medium mb-8">
             <Sparkles className="w-5 h-5/>
             <span>JANUARY 2025 CONTENT COLLECTION</span>
           </div>
           
-          <h2 className="text-4xl md: text-6xl font-bold text-white mb-6 leading-tight">",
+          <h2 className="text-4xl md: text-6xl font-bold text-white mb-6 leading-tight">"
             <span className="bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 bg-clip-text text-transparent">
 =======
       <div className="absolute inset-0 bg-[url('/images/abstract-pattern.svg')] opacity-10 animate-pulse"></div>";
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white/5 to-transparent transform -skew-y-1"></div>";
       
-      <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20">";,
+      <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20">";
         <div className="text-center mb-16">";
           <div className="inline-flex items-center gap-2 bg-pink-500/20 text-pink-400 px-6 py-3 rounded-full text-sm font-medium mb-8">";
             <Sparkles className="w-5 h-5" />";
             <span>JANUARY 2025 CONTENT COLLECTION</span>
           </div>
           
-          <h2 className="text-4xl md: text-6xl font-bold text-white mb-6 leading-tight">";,
+          <h2 className="text-4xl md: text-6xl font-bold text-white mb-6 leading-tight">";
             <span className="bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 bg-clip-text text-transparent">";
               Complete AI Knowledge Hub
             </span>
@@ -40,25 +40,25 @@ const January2025ContentShowcaseBanner: React.FC = () => {,
             Access the most comprehensive collection of AI insights, breakthrough technologies
 =======
           <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-12">";
-            Access the most comprehensive collection of AI insights, breakthrough technologies, 
+            Access the most comprehensive collection of AI insights, breakthrough technologies
             and proven enterprise strategies. Everything you need to master AI transformation in one place.
           </p>
         </div>
 
         {/* Content Categories */}
-        <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">",
+        <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">"
           {/* Breakthrough Technologies */}
-          <div className="group relative bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 hover: border-pink-400/50 transition-all duration-300 hover:transform hover:scale-105">",
-            <div className="absolute inset-0 bg-gradient-to-br from-pink-500/10 to-purple-500/10 rounded-3xl opacity-0 group-hover: opacity-100 transition-opacity duration-300"></div>",
+          <div className="group relative bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 hover: border-pink-400/50 transition-all duration-300 hover:transform hover:scale-105">"
+            <div className="absolute inset-0 bg-gradient-to-br from-pink-500/10 to-purple-500/10 rounded-3xl opacity-0 group-hover: opacity-100 transition-opacity duration-300"></div>"
             <div className="relative">
               <div className="flex items-center gap-4 mb-6">
                 <div className="p-3 bg-pink-500/20 rounded-xl">
                   <Zap className="w-8 h-8 text-pink-400/>
 =======
-        <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">";,
+        <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">";
           {/* Breakthrough Technologies */}
-          <div className="group relative bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 hover: border-pink-400/50 transition-all duration-300 hover:transform hover:scale-105">";,
-            <div className="absolute inset-0 bg-gradient-to-br from-pink-500/10 to-purple-500/10 rounded-3xl opacity-0 group-hover: opacity-100 transition-opacity duration-300"></div>";,
+          <div className="group relative bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 hover: border-pink-400/50 transition-all duration-300 hover:transform hover:scale-105">";
+            <div className="absolute inset-0 bg-gradient-to-br from-pink-500/10 to-purple-500/10 rounded-3xl opacity-0 group-hover: opacity-100 transition-opacity duration-300"></div>";
             <div className="relative">";
               <div className="flex items-center gap-4 mb-6">";
                 <div className="p-3 bg-pink-500/20 rounded-xl">";
@@ -74,7 +74,7 @@ const January2025ContentShowcaseBanner: React.FC = () => {,
                 Explore the latest AI breakthroughs including quantum-neural fusion, synthetic consciousness
 =======
               <p className="text-gray-300 mb-6 leading-relaxed">";
-                Explore the latest AI breakthroughs including quantum-neural fusion, synthetic consciousness, 
+                Explore the latest AI breakthroughs including quantum-neural fusion, synthetic consciousness
                 and neuromorphic computing.
               </p>
               
@@ -95,7 +95,7 @@ const January2025ContentShowcaseBanner: React.FC = () => {,
               
               <Link 
                 to="/blog/category/breakthrough-technologies"
-                className="inline-flex items-center gap-2 text-pink-400 hover: text-pink-300 font-medium transition-colors",
+                className="inline-flex items-center gap-2 text-pink-400 hover: text-pink-300 font-medium transition-colors"
               >
                 Explore All Technologies
                 <ArrowRight className="w-4 h-4/>
@@ -106,15 +106,15 @@ const January2025ContentShowcaseBanner: React.FC = () => {,
           </div>
 
           {/* Enterprise Case Studies */}
-          <div className="group relative bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 hover: border-purple-400/50 transition-all duration-300 hover:transform hover:scale-105">",
-            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-blue-500/10 rounded-3xl opacity-0 group-hover: opacity-100 transition-opacity duration-300"></div>",
+          <div className="group relative bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 hover: border-purple-400/50 transition-all duration-300 hover:transform hover:scale-105">"
+            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-blue-500/10 rounded-3xl opacity-0 group-hover: opacity-100 transition-opacity duration-300"></div>"
             <div className="relative">
               <div className="flex items-center gap-4 mb-6">
                 <div className="p-3 bg-purple-500/20 rounded-xl">
                   <Award className="w-8 h-8 text-purple-400/>
 =======
-          <div className="group relative bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 hover: border-purple-400/50 transition-all duration-300 hover:transform hover:scale-105">";,
-            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-blue-500/10 rounded-3xl opacity-0 group-hover: opacity-100 transition-opacity duration-300"></div>";,
+          <div className="group relative bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 hover: border-purple-400/50 transition-all duration-300 hover:transform hover:scale-105">";
+            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-blue-500/10 rounded-3xl opacity-0 group-hover: opacity-100 transition-opacity duration-300"></div>";
             <div className="relative">";
               <div className="flex items-center gap-4 mb-6">";
                 <div className="p-3 bg-purple-500/20 rounded-xl">";
@@ -148,7 +148,7 @@ const January2025ContentShowcaseBanner: React.FC = () => {,
               
               <Link 
                 to="/case-studies"
-                className="inline-flex items-center gap-2 text-purple-400 hover: text-purple-300 font-medium transition-colors",
+                className="inline-flex items-center gap-2 text-purple-400 hover: text-purple-300 font-medium transition-colors"
               >
                 View All Case Studies
                 <ArrowRight className="w-4 h-4/>
@@ -159,15 +159,15 @@ const January2025ContentShowcaseBanner: React.FC = () => {,
           </div>
 
           {/* Latest Articles */}
-          <div className="group relative bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 hover: border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105">",
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-emerald-500/10 rounded-3xl opacity-0 group-hover: opacity-100 transition-opacity duration-300"></div>",
+          <div className="group relative bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 hover: border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105">"
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-emerald-500/10 rounded-3xl opacity-0 group-hover: opacity-100 transition-opacity duration-300"></div>"
             <div className="relative">
               <div className="flex items-center gap-4 mb-6">
                 <div className="p-3 bg-blue-500/20 rounded-xl">
                   <BookOpen className="w-8 h-8 text-blue-400/>
 =======
-          <div className="group relative bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 hover: border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105">";,
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-emerald-500/10 rounded-3xl opacity-0 group-hover: opacity-100 transition-opacity duration-300"></div>";,
+          <div className="group relative bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 hover: border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105">";
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-emerald-500/10 rounded-3xl opacity-0 group-hover: opacity-100 transition-opacity duration-300"></div>";
             <div className="relative">";
               <div className="flex items-center gap-4 mb-6">";
                 <div className="p-3 bg-blue-500/20 rounded-xl">";
@@ -201,7 +201,7 @@ const January2025ContentShowcaseBanner: React.FC = () => {,
               
               <Link 
                 to="/blog"
-                className="inline-flex items-center gap-2 text-blue-400 hover: text-blue-300 font-medium transition-colors",
+                className="inline-flex items-center gap-2 text-blue-400 hover: text-blue-300 font-medium transition-colors"
               >
                 Read All Articles
                 <ArrowRight className="w-4 h-4/>
@@ -215,14 +215,14 @@ const January2025ContentShowcaseBanner: React.FC = () => {,
         {/* Statistics */}
         <div className="bg-white/5 backdrop-blur-lg rounded-3xl p-12 border border-white/20 mb-16">
           <h3 className="text-3xl font-bold text-white text-center mb-12">Content Library Overview</h3>
-          <div className="grid grid-cols-2 md: grid-cols-4 gap-8">",
+          <div className="grid grid-cols-2 md: grid-cols-4 gap-8">"
             <div className="text-center">
               <div className="text-4xl font-bold text-pink-400 mb-2">62</div>
               <div className="text-gray-300">Total Articles</div>
 =======
         <div className="bg-white/5 backdrop-blur-lg rounded-3xl p-12 border border-white/20 mb-16">";
           <h3 className="text-3xl font-bold text-white text-center mb-12">Content Library Overview</h3>";
-          <div className="grid grid-cols-2 md: grid-cols-4 gap-8">";,
+          <div className="grid grid-cols-2 md: grid-cols-4 gap-8">";
             <div className="text-center">";
               <div className="text-4xl font-bold text-pink-400 mb-2">62</div>";
               <div className="text-gray-300">Total Articles</div>";
@@ -243,13 +243,13 @@ const January2025ContentShowcaseBanner: React.FC = () => {,
         </div>
 
         {/* Featured Content Preview */}
-        <div className="grid md: grid-cols-2 gap-8 mb-16">",
+        <div className="grid md: grid-cols-2 gap-8 mb-16">"
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
             <div className="flex items-center gap-3 mb-4">
               <Star className="w-6 h-6 text-yellow-400 fill-current/>
               <h4 className="text-xl font-bold text-white">Most Popular</h4>
 =======
-        <div className="grid md: grid-cols-2 gap-8 mb-16">";,
+        <div className="grid md: grid-cols-2 gap-8 mb-16">";
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/20">";
             <div className="flex items-center gap-3 mb-4">";
               <Star className="w-6 h-6 text-yellow-400 fill-current" />";
@@ -261,12 +261,12 @@ const January2025ContentShowcaseBanner: React.FC = () => {,
             </p>
             <div className="flex items-center justify-between">
               <span className="text-pink-400 font-medium">15 min read</span>
-              <Link to="/blog/ai-quantum-neural-fusion-2025" className="text-pink-400 hover: text-pink-300">",
+              <Link to="/blog/ai-quantum-neural-fusion-2025" className="text-pink-400 hover: text-pink-300">"
                 <ArrowRight className="w-4 h-4/>
 =======
             <div className="flex items-center justify-between">";
               <span className="text-pink-400 font-medium">15 min read</span>";
-              <Link to="/blog/ai-quantum-neural-fusion-2025" className="text-pink-400 hover: text-pink-300">";,
+              <Link to="/blog/ai-quantum-neural-fusion-2025" className="text-pink-400 hover: text-pink-300">";
                 <ArrowRight className="w-4 h-4" />";
               </Link>
             </div>
@@ -288,12 +288,12 @@ const January2025ContentShowcaseBanner: React.FC = () => {,
             </p>
             <div className="flex items-center justify-between">
               <span className="text-emerald-400 font-medium">12 min read</span>
-              <Link to="/blog/autonomous-enterprise-mesh-2025" className="text-emerald-400 hover: text-emerald-300">",
+              <Link to="/blog/autonomous-enterprise-mesh-2025" className="text-emerald-400 hover: text-emerald-300">"
                 <ArrowRight className="w-4 h-4/>
 =======
             <div className="flex items-center justify-between">";
               <span className="text-emerald-400 font-medium">12 min read</span>";
-              <Link to="/blog/autonomous-enterprise-mesh-2025" className="text-emerald-400 hover: text-emerald-300">";,
+              <Link to="/blog/autonomous-enterprise-mesh-2025" className="text-emerald-400 hover: text-emerald-300">";
                 <ArrowRight className="w-4 h-4" />";
               </Link>
             </div>
@@ -302,13 +302,13 @@ const January2025ContentShowcaseBanner: React.FC = () => {,
 
         {/* Call to Action */}
         <div className="text-center">
-          <div className="flex flex-col sm: flex-row items-center justify-center gap-4 mb-6">",
+          <div className="flex flex-col sm: flex-row items-center justify-center gap-4 mb-6">"
 =======
         <div className="text-center">";
-          <div className="flex flex-col sm: flex-row items-center justify-center gap-4 mb-6">";,
+          <div className="flex flex-col sm: flex-row items-center justify-center gap-4 mb-6">";
             <Link
               to="/resources"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-pink-500 to-purple-500 text-white px-8 py-4 rounded-full font-semibold hover: from-pink-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105",
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-pink-500 to-purple-500 text-white px-8 py-4 rounded-full font-semibold hover: from-pink-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
             >
               <BookOpen className="w-5 h-5/>
 =======
@@ -317,7 +317,7 @@ const January2025ContentShowcaseBanner: React.FC = () => {,
             </Link>
             <Link
               to="/newsletter"
-              className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-full font-semibold border border-white/20 hover: bg-white/20 transition-all duration-300",
+              className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-full font-semibold border border-white/20 hover: bg-white/20 transition-all duration-300"
             >
               <Users className="w-5 h-5/>
 =======

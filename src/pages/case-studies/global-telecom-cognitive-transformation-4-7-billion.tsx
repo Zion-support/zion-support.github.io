@@ -4,20 +4,20 @@ import Header from '../../components/Header';
 import React from 'react';';
 import Header from '../../components/Header';';
 
-const GlobalTelecomCognitiveTransformation: React.FC = () => {,
+const GlobalTelecomCognitiveTransformation: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Fortune 20 Telecom: $4.7B Cognitive Computing Success Story | Zion Tech Group</title>,
+        <title>Fortune 20 Telecom: $4.7B Cognitive Computing Success Story | Zion Tech Group</title>
         <meta 
           name="description" 
           content="How a Fortune 20 telecommunications provider achieved $4.7B in value through cognitive computing transformation. 98.7% satisfaction, 99.96% reliability, 3,602% ROI." /><meta 
           name="keywords" 
-          content="cognitive computing case study, telecom transformation, AI success story, enterprise cognitive AI, telecommunications AI" /><link rel="canonical" href="https://ziontechgroup.com/case-studies/global-telecom-cognitive-transformation-4-7-billion/>",
+          content="cognitive computing case study, telecom transformation, AI success story, enterprise cognitive AI, telecommunications AI" /><link rel="canonical" href="https://ziontechgroup.com/case-studies/global-telecom-cognitive-transformation-4-7-billion/>"
 =======
           content="cognitive computing case study, telecom transformation, AI success story, enterprise cognitive AI, telecommunications AI" 
         />
-        <link rel="canonical" href="https: //ziontechgroup.com/case-studies/global-telecom-cognitive-transformation-4-7-billion" />";,
+        <link rel="canonical" href="https: //ziontechgroup.com/case-studies/global-telecom-cognitive-transformation-4-7-billion" />";
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">";
@@ -26,12 +26,12 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {,
         {/* Hero Section */}
         <div className="relative pt-24 pb-16 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(139,92,246,0.2),transparent_50%)]/>
-          <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
             {/* Breadcrumb */}
             <nav className="flex items-center space-x-2 text-sm mb-8">
-              <Link to="/" className="text-purple-300 hover: text-white transition-colors">Home</Link>",
+              <Link to="/" className="text-purple-300 hover: text-white transition-colors">Home</Link>"
               <span className="text-purple-400">/</span>
-              <Link to="/case-studies" className="text-purple-300 hover: text-white transition-colors">Case Studies</Link>",
+              <Link to="/case-studies" className="text-purple-300 hover: text-white transition-colors">Case Studies</Link>"
               <span className="text-purple-400">/</span>
               <span className="text-white">Fortune 20 Telecom</span>
             </nav>
@@ -45,12 +45,12 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {,
         <div className="relative pt-24 pb-16 overflow-hidden">";
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(139,92,246,0.2),transparent_50%)]" />";
           
-          <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
+          <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";
             {/* Breadcrumb */}
             <nav className="flex items-center space-x-2 text-sm mb-8">";
-              <Link to="/" className="text-purple-300 hover: text-white transition-colors">Home</Link>";,
+              <Link to="/" className="text-purple-300 hover: text-white transition-colors">Home</Link>";
               <span className="text-purple-400">/</span>";
-              <Link to="/case-studies" className="text-purple-300 hover: text-white transition-colors">Case Studies</Link>";,
+              <Link to="/case-studies" className="text-purple-300 hover: text-white transition-colors">Case Studies</Link>";
               <span className="text-purple-400">/</span>";
               <span className="text-white">Fortune 20 Telecom</span>";
             </nav>
@@ -70,10 +70,10 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {,
                 </span>
               </div>
               
-              <h1 className="text-4xl sm: text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">",
+              <h1 className="text-4xl sm: text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">"
 =======
-              <h1 className="text-4xl sm: text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">";,
-                Fortune 20 Global Telecommunications Provider: $4.7B Cognitive Computing Transformation,
+              <h1 className="text-4xl sm: text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">";
+                Fortune 20 Global Telecommunications Provider: $4.7B Cognitive Computing Transformation
               </h1>
               
               <p className="text-xl text-purple-100 leading-relaxed mb-8">";
@@ -126,12 +126,12 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {,
         
         {/* Key Metrics Bar */}
         <div className="bg-gradient-to-r from-green-900/30 to-emerald-900/30 border-y border-green-500/30 py-8">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className="grid grid-cols-2 md: grid-cols-5 gap-6 text-center">",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
+            <div className="grid grid-cols-2 md: grid-cols-5 gap-6 text-center">"
 =======
         <div className="bg-gradient-to-r from-green-900/30 to-emerald-900/30 border-y border-green-500/30 py-8">";
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
-            <div className="grid grid-cols-2 md: grid-cols-5 gap-6 text-center">";,
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";
+            <div className="grid grid-cols-2 md: grid-cols-5 gap-6 text-center">";
               <div>
                 <div className="text-3xl font-bold text-green-400 mb-1">$4.7B</div>";
                 <div className="text-xs text-purple-200">Total Value Delivered</div>";
@@ -157,19 +157,19 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {,
         </div>
         
         {/* Main Content */}
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">",
-          <div className="grid lg: grid-cols-3 gap-8">",
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">"
+          <div className="grid lg: grid-cols-3 gap-8">"
             {/* Main Column */}
-            <div className="lg: col-span-2 space-y-12">",
+            <div className="lg: col-span-2 space-y-12">"
               {/* Challenge Section */}
               <section>
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                   <Target className="w-8 h-8 text-red-400/>
 =======
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">";,
-          <div className="grid lg: grid-cols-3 gap-8">";,
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">";
+          <div className="grid lg: grid-cols-3 gap-8">";
             {/* Main Column */}
-            <div className="lg: col-span-2 space-y-12">";,
+            <div className="lg: col-span-2 space-y-12">";
               {/* Challenge Section */}
               <section>
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">";
@@ -241,7 +241,7 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {,
 =======
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">";
                   <Brain className="w-8 h-8 text-purple-400" />";
-                  The Solution: Cognitive Computing Platform,
+                  The Solution: Cognitive Computing Platform
                 </h2>
                 
                 <div className="space-y-6">";
@@ -277,39 +277,39 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {,
                         "Competitive intelligence analysis",
                         "Scenario planning and simulation"
                       ]
-                      tech: "Natural language queries, Automated insights, Causal inference"
+                      tech: "Natural language queries, Automated insights, Causal inference",
 =======
-                      title: "Cognitive Customer Intelligence",";,
-                      icon: "❤️",";,
+                      title: "Cognitive Customer Intelligence",";
+                      icon: "❤️",";
                       features: [,
                         "Cognitive virtual assistant handling 2.3M daily interactions",";
                         "Personalization engine with 1-to-1 recommendations",";
                         "Predictive churn detection with 97.8% accuracy",";
                         "Automated issue resolution (85% success rate)"
-                      ],
-                      tech: "GPT-4 fine-tuned, Knowledge graphs, Vector databases, Real-time ML",
+                      ]
+                      tech: "GPT-4 fine-tuned, Knowledge graphs, Vector databases, Real-time ML"
                     },
                     {
-                      title: "Autonomous Network Intelligence",";,
-                      icon: "🌐",";,
+                      title: "Autonomous Network Intelligence",";
+                      icon: "🌐",";
                       features: [,
                         "Continuous monitoring of 500,000+ network elements",";
                         "Predictive failure detection (99.6% accuracy)",";
                         "Automated root cause analysis",";
                         "Self-healing network capabilities"
-                      ],
-                      tech: "Unsupervised learning, Causal reasoning, Optimization algorithms",
+                      ]
+                      tech: "Unsupervised learning, Causal reasoning, Optimization algorithms"
                     },
                     {
-                      title: "Enterprise Cognitive Intelligence",";,
-                      icon: "📊",";,
+                      title: "Enterprise Cognitive Intelligence",";
+                      icon: "📊",";
                       features: [,
                         "Real-time analytics across all business units",";
                         "Predictive modeling for market opportunities",";
                         "Competitive intelligence analysis",";
                         "Scenario planning and simulation"
-                      ],
-                      tech: "Natural language queries, Automated insights, Causal inference",
+                      ]
+                      tech: "Natural language queries, Automated insights, Causal inference"
                     }
                   ].map((solution, idx) => (
                     <div key={idx} className="bg-gradient-to-br from-purple-900/30 to-blue-900/30 border border-purple-500/30 rounded-xl p-6">";
@@ -319,14 +319,14 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {,
                       </h3>
                       
                       <div className="mb-4">
-                        <p className="text-sm font-semibold text-purple-300 mb-2">Capabilities Deployed: </p>",
+                        <p className="text-sm font-semibold text-purple-300 mb-2">Capabilities Deployed: </p>"
                         <ul className="space-y-2">
                           {solution.features.map((feature, i) => (
                             <li key={i} className="flex items-start gap-2 text-purple-100">
                               <CheckCircle className="w-4 h-4 text-green-400 mt-1 flex-shrink-0/>
 =======
                       <div className="mb-4">";
-                        <p className="text-sm font-semibold text-purple-300 mb-2">Capabilities Deployed: </p>";,
+                        <p className="text-sm font-semibold text-purple-300 mb-2">Capabilities Deployed: </p>";
                         <ul className="space-y-2">";
                           {solution.features.map((feature, i) => (
                             <li key={i} className="flex items-start gap-2 text-purple-100">";
@@ -338,11 +338,11 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {,
                       </div>
                       
                       <div className="bg-black/30 rounded-lg p-3">
-                        <p className="text-xs font-semibold text-purple-300 mb-1">Technology Stack: </p>",
+                        <p className="text-xs font-semibold text-purple-300 mb-1">Technology Stack: </p>"
                         <p className="text-sm text-purple-100">{solution.tech}</p>
 =======
                       <div className="bg-black/30 rounded-lg p-3">";
-                        <p className="text-xs font-semibold text-purple-300 mb-1">Technology Stack: </p>";,
+                        <p className="text-xs font-semibold text-purple-300 mb-1">Technology Stack: </p>";
                         <p className="text-sm text-purple-100">{solution.tech}</p>";
                       </div>
                     </div>
@@ -360,7 +360,7 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {,
                 <div className="space-y-6">
                   <div className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-xl p-6">
                     <h3 className="text-xl font-bold text-white mb-4">Customer Experience Transformation</h3>
-                    <div className="grid md: grid-cols-2 gap-4">",
+                    <div className="grid md: grid-cols-2 gap-4">"
                       {[
                         { label: "Customer Satisfaction", value: "98.7%", change: "from 32%" }
                         { label: "Net Promoter Score", value: "+72", change: "from -18" }
@@ -377,7 +377,7 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {,
                 <div className="space-y-6">";
                   <div className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-xl p-6">";
                     <h3 className="text-xl font-bold text-white mb-4">Customer Experience Transformation</h3>";
-                    <div className="grid md: grid-cols-2 gap-4">";,
+                    <div className="grid md: grid-cols-2 gap-4">";
                       {[
                         { label: "Customer Satisfaction", value: "98.7%", change: "from 32%" },";
                         { label: "Net Promoter Score", value: "+72", change: "from -18" },";
@@ -397,7 +397,7 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {,
                   
                   <div className="bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-xl p-6">
                     <h3 className="text-xl font-bold text-white mb-4">Network Operations Excellence</h3>
-                    <div className="grid md: grid-cols-2 gap-4">",
+                    <div className="grid md: grid-cols-2 gap-4">"
                       {[
                         { label: "Network Availability", value: "99.96%", change: "from 98.2%" }
                         { label: "Mean Time to Resolve", value: "18 min", change: "from 4.2 hrs" }
@@ -408,7 +408,7 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {,
 =======
                   <div className="bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-xl p-6">";
                     <h3 className="text-xl font-bold text-white mb-4">Network Operations Excellence</h3>";
-                    <div className="grid md: grid-cols-2 gap-4">";,
+                    <div className="grid md: grid-cols-2 gap-4">";
                       {[
                         { label: "Network Availability", value: "99.96%", change: "from 98.2%" },";
                         { label: "Mean Time to Resolve", value: "18 min", change: "from 4.2 hrs" },";
@@ -428,7 +428,7 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {,
                   
                   <div className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-xl p-6">
                     <h3 className="text-xl font-bold text-white mb-4">Business Intelligence Revolution</h3>
-                    <div className="grid md: grid-cols-2 gap-4">",
+                    <div className="grid md: grid-cols-2 gap-4">"
                       {[
                         { label: "Insight Generation Time", value: "<1 hour", change: "from weeks" }
                         { label: "Prediction Accuracy", value: "98.5%", change: "market forecasts" }
@@ -439,7 +439,7 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {,
 =======
                   <div className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-xl p-6">";
                     <h3 className="text-xl font-bold text-white mb-4">Business Intelligence Revolution</h3>";
-                    <div className="grid md: grid-cols-2 gap-4">";,
+                    <div className="grid md: grid-cols-2 gap-4">";
                       {[
                         { label: "Insight Generation Time", value: "<1 hour", change: "from weeks" },";
                         { label: "Prediction Accuracy", value: "98.5%", change: "market forecasts" },";
@@ -463,45 +463,45 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {,
               <section>
                 <h2 className="text-3xl font-bold text-white mb-6">Total Financial Impact</h2>
                 <div className="bg-gradient-to-r from-green-900/30 to-emerald-900/30 border border-green-500/30 rounded-xl p-8">
-                  <div className="grid md: grid-cols-2 gap-8 mb-6">",
+                  <div className="grid md: grid-cols-2 gap-8 mb-6">"
                     <div>
                       <h3 className="text-lg font-bold text-white mb-4">Revenue Growth</h3>
                       <ul className="space-y-2 text-purple-100">
-                        <li className="flex justify-between"><span>Churn reduction: </span><span className="font-bold text-green-300">$1.8B</span></li>",
-                        <li className="flex justify-between"><span>New customers: </span><span className="font-bold text-green-300">$1.2B</span></li>",
-                        <li className="flex justify-between"><span>Upsell/cross-sell: </span><span className="font-bold text-green-300">$890M</span></li>",
-                        <li className="flex justify-between"><span>New opportunities: </span><span className="font-bold text-green-300">$2.1B</span></li>",
-                        <li className="flex justify-between pt-2 border-t border-green-500/30"><span className="font-bold">Total Revenue: </span><span className="font-bold text-xl text-green-300">$6.0B</span></li>",
+                        <li className="flex justify-between"><span>Churn reduction: </span><span className="font-bold text-green-300">$1.8B</span></li>"
+                        <li className="flex justify-between"><span>New customers: </span><span className="font-bold text-green-300">$1.2B</span></li>"
+                        <li className="flex justify-between"><span>Upsell/cross-sell: </span><span className="font-bold text-green-300">$890M</span></li>"
+                        <li className="flex justify-between"><span>New opportunities: </span><span className="font-bold text-green-300">$2.1B</span></li>"
+                        <li className="flex justify-between pt-2 border-t border-green-500/30"><span className="font-bold">Total Revenue: </span><span className="font-bold text-xl text-green-300">$6.0B</span></li>"
 =======
                 <h2 className="text-3xl font-bold text-white mb-6">Total Financial Impact</h2>";
                 
                 <div className="bg-gradient-to-r from-green-900/30 to-emerald-900/30 border border-green-500/30 rounded-xl p-8">";
-                  <div className="grid md: grid-cols-2 gap-8 mb-6">";,
+                  <div className="grid md: grid-cols-2 gap-8 mb-6">";
                     <div>
                       <h3 className="text-lg font-bold text-white mb-4">Revenue Growth</h3>";
                       <ul className="space-y-2 text-purple-100">";
-                        <li className="flex justify-between"><span>Churn reduction: </span><span className="font-bold text-green-300">$1.8B</span></li>";,
-                        <li className="flex justify-between"><span>New customers: </span><span className="font-bold text-green-300">$1.2B</span></li>";,
-                        <li className="flex justify-between"><span>Upsell/cross-sell: </span><span className="font-bold text-green-300">$890M</span></li>";,
-                        <li className="flex justify-between"><span>New opportunities: </span><span className="font-bold text-green-300">$2.1B</span></li>";,
-                        <li className="flex justify-between pt-2 border-t border-green-500/30"><span className="font-bold">Total Revenue: </span><span className="font-bold text-xl text-green-300">$6.0B</span></li>";,
+                        <li className="flex justify-between"><span>Churn reduction: </span><span className="font-bold text-green-300">$1.8B</span></li>";
+                        <li className="flex justify-between"><span>New customers: </span><span className="font-bold text-green-300">$1.2B</span></li>";
+                        <li className="flex justify-between"><span>Upsell/cross-sell: </span><span className="font-bold text-green-300">$890M</span></li>";
+                        <li className="flex justify-between"><span>New opportunities: </span><span className="font-bold text-green-300">$2.1B</span></li>";
+                        <li className="flex justify-between pt-2 border-t border-green-500/30"><span className="font-bold">Total Revenue: </span><span className="font-bold text-xl text-green-300">$6.0B</span></li>";
                       </ul>
                     </div>
                     
                     <div>
                       <h3 className="text-lg font-bold text-white mb-4">Cost Reduction</h3>
                       <ul className="space-y-2 text-purple-100">
-                        <li className="flex justify-between"><span>Network operations: </span><span className="font-bold text-green-300">$1.62B</span></li>",
-                        <li className="flex justify-between"><span>Customer service: </span><span className="font-bold text-green-300">$640M</span></li>",
-                        <li className="flex justify-between"><span>Business operations: </span><span className="font-bold text-green-300">$280M</span></li>",
-                        <li className="flex justify-between pt-2 border-t border-green-500/30"><span className="font-bold">Total Savings: </span><span className="font-bold text-xl text-green-300">$2.54B</span></li>",
+                        <li className="flex justify-between"><span>Network operations: </span><span className="font-bold text-green-300">$1.62B</span></li>"
+                        <li className="flex justify-between"><span>Customer service: </span><span className="font-bold text-green-300">$640M</span></li>"
+                        <li className="flex justify-between"><span>Business operations: </span><span className="font-bold text-green-300">$280M</span></li>"
+                        <li className="flex justify-between pt-2 border-t border-green-500/30"><span className="font-bold">Total Savings: </span><span className="font-bold text-xl text-green-300">$2.54B</span></li>"
 =======
                       <h3 className="text-lg font-bold text-white mb-4">Cost Reduction</h3>";
                       <ul className="space-y-2 text-purple-100">";
-                        <li className="flex justify-between"><span>Network operations: </span><span className="font-bold text-green-300">$1.62B</span></li>";,
-                        <li className="flex justify-between"><span>Customer service: </span><span className="font-bold text-green-300">$640M</span></li>";,
-                        <li className="flex justify-between"><span>Business operations: </span><span className="font-bold text-green-300">$280M</span></li>";,
-                        <li className="flex justify-between pt-2 border-t border-green-500/30"><span className="font-bold">Total Savings: </span><span className="font-bold text-xl text-green-300">$2.54B</span></li>";,
+                        <li className="flex justify-between"><span>Network operations: </span><span className="font-bold text-green-300">$1.62B</span></li>";
+                        <li className="flex justify-between"><span>Customer service: </span><span className="font-bold text-green-300">$640M</span></li>";
+                        <li className="flex justify-between"><span>Business operations: </span><span className="font-bold text-green-300">$280M</span></li>";
+                        <li className="flex justify-between pt-2 border-t border-green-500/30"><span className="font-bold">Total Savings: </span><span className="font-bold text-xl text-green-300">$2.54B</span></li>";
                       </ul>
                     </div>
                   </div>
@@ -563,12 +563,12 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {,
                 <div className="mt-6 pt-6 border-t border-white/10">";
                   <Link
                     to="/contact"
-                    className="w-full inline-flex items-center justify-center px-6 py-3 rounded-xl font-bold text-white bg-gradient-to-r from-purple-600 to-pink-600 hover: from-purple-700 hover:to-pink-700 shadow-xl transition-all duration-300 hover:scale-105 group",
+                    className="w-full inline-flex items-center justify-center px-6 py-3 rounded-xl font-bold text-white bg-gradient-to-r from-purple-600 to-pink-600 hover: from-purple-700 hover:to-pink-700 shadow-xl transition-all duration-300 hover:scale-105 group"
                   >
                     Get Similar Results
-                    <ArrowRight className="ml-2 w-5 h-5 group-hover: translate-x-1 transition-transform/>",
+                    <ArrowRight className="ml-2 w-5 h-5 group-hover: translate-x-1 transition-transform/>"
 =======
-                    <ArrowRight className="ml-2 w-5 h-5 group-hover: translate-x-1 transition-transform" />";,
+                    <ArrowRight className="ml-2 w-5 h-5 group-hover: translate-x-1 transition-transform" />";
                   </Link>
                 </div>
               </div>
@@ -613,16 +613,16 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {,
             <div className="flex flex-wrap gap-4 justify-center">";
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 rounded-xl font-bold text-white bg-gradient-to-r from-purple-600 to-pink-600 hover: from-purple-700 hover:to-pink-700 shadow-xl hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105 group",
+                className="inline-flex items-center px-8 py-4 rounded-xl font-bold text-white bg-gradient-to-r from-purple-600 to-pink-600 hover: from-purple-700 hover:to-pink-700 shadow-xl hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105 group"
               >
                 Schedule Consultation
-                <ArrowRight className="ml-2 w-5 h-5 group-hover: translate-x-1 transition-transform/>",
+                <ArrowRight className="ml-2 w-5 h-5 group-hover: translate-x-1 transition-transform/>"
 =======
-                <ArrowRight className="ml-2 w-5 h-5 group-hover: translate-x-1 transition-transform" />";,
+                <ArrowRight className="ml-2 w-5 h-5 group-hover: translate-x-1 transition-transform" />";
               </Link>
               <Link
                 to="/case-studies"
-                className="inline-flex items-center px-8 py-4 rounded-xl font-bold text-white bg-white/10 hover: bg-white/20 backdrop-blur-sm border border-white/20 transition-all duration-300 hover:scale-105",
+                className="inline-flex items-center px-8 py-4 rounded-xl font-bold text-white bg-white/10 hover: bg-white/20 backdrop-blur-sm border border-white/20 transition-all duration-300 hover:scale-105"
               >
                 View More Case Studies
               </Link>

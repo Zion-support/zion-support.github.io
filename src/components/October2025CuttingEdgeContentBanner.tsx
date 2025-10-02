@@ -1,8 +1,6 @@
 import { Link } from 'react-router-dom';
 =======
-import {
-Link
-} from 'react-router-dom';';
+import { Link } from 'react-router-dom';';
 
 const October2025CuttingEdgeContentBanner = () => {
   const featuredArticles = [
@@ -13,7 +11,7 @@ const October2025CuttingEdgeContentBanner = () => {
       link: "/blog/ai-2025-oct-next-gen-autonomous-orchestration",",
       gradient: "from-cyan-500 to-blue-600",",
       icon: <Zap className="w-6 h-6/>,",
-      metrics: ["99.99% Uptime", "85% Cost Cut", "95% Faster Recovery"]",
+      metrics: ["99.99% Uptime", "85% Cost Cut", "95% Faster Recovery"]"
     },
     {
       title: "Advanced Prompt Engineering Mastery — 10x LLM Performance",",
@@ -22,7 +20,7 @@ const October2025CuttingEdgeContentBanner = () => {
       link: "/blog/ai-2025-oct-advanced-prompt-engineering-mastery",",
       gradient: "from-purple-500 to-pink-600",",
       icon: <Sparkles className="w-6 h-6/>,",
-      metrics: ["10x Performance", "95%+ Accuracy", "$990K Savings"]",
+      metrics: ["10x Performance", "95%+ Accuracy", "$990K Savings"]"
     },
     {
       title: "Real-Time AI Personalization at Scale — 100M+ Users",",
@@ -33,31 +31,31 @@ const October2025CuttingEdgeContentBanner = () => {
       icon: <TrendingUp className="w-6 h-6/>,",
       metrics: ["340% Revenue", "Sub-50ms Latency", "100M+ Users"]",
 =======
-      title: "Next-Gen Autonomous Orchestration — Self-Healing Systems at Scale",";,
-      subtitle: "99.99% Uptime, 85% Cost Reduction, Zero-Touch Operations",";,
-      category: "Autonomous Systems",";,
-      link: "/blog/ai-2025-oct-next-gen-autonomous-orchestration",";,
-      gradient: "from-cyan-500 to-blue-600",";,
-      icon: <Zap className="w-6 h-6" />,";,
-      metrics: ["99.99% Uptime", "85% Cost Cut", "95% Faster Recovery"]";,
+      title: "Next-Gen Autonomous Orchestration — Self-Healing Systems at Scale",";
+      subtitle: "99.99% Uptime, 85% Cost Reduction, Zero-Touch Operations",";
+      category: "Autonomous Systems",";
+      link: "/blog/ai-2025-oct-next-gen-autonomous-orchestration",";
+      gradient: "from-cyan-500 to-blue-600",";
+      icon: <Zap className="w-6 h-6" />,";
+      metrics: ["99.99% Uptime", "85% Cost Cut", "95% Faster Recovery"]";
     },
     {
-      title: "Advanced Prompt Engineering Mastery — 10x LLM Performance",";,
-      subtitle: "95%+ Accuracy, 80% Cost Reduction, Production-Grade Techniques",";,
-      category: "LLM Engineering",";,
-      link: "/blog/ai-2025-oct-advanced-prompt-engineering-mastery",";,
-      gradient: "from-purple-500 to-pink-600",";,
-      icon: <Sparkles className="w-6 h-6" />,";,
-      metrics: ["10x Performance", "95%+ Accuracy", "$990K Savings"]";,
+      title: "Advanced Prompt Engineering Mastery — 10x LLM Performance",";
+      subtitle: "95%+ Accuracy, 80% Cost Reduction, Production-Grade Techniques",";
+      category: "LLM Engineering",";
+      link: "/blog/ai-2025-oct-advanced-prompt-engineering-mastery",";
+      gradient: "from-purple-500 to-pink-600",";
+      icon: <Sparkles className="w-6 h-6" />,";
+      metrics: ["10x Performance", "95%+ Accuracy", "$990K Savings"]";
     },
     {
-      title: "Real-Time AI Personalization at Scale — 100M+ Users",";,
-      subtitle: "340% Revenue Lift, Sub-50ms Latency, 10M Decisions/Second",";,
-      category: "ML at Scale",";,
-      link: "/blog/ai-2025-oct-real-time-personalization-at-scale",";,
-      gradient: "from-orange-500 to-red-600",";,
-      icon: <TrendingUp className="w-6 h-6" />,";,
-      metrics: ["340% Revenue", "Sub-50ms Latency", "100M+ Users"]";,
+      title: "Real-Time AI Personalization at Scale — 100M+ Users",";
+      subtitle: "340% Revenue Lift, Sub-50ms Latency, 10M Decisions/Second",";
+      category: "ML at Scale",";
+      link: "/blog/ai-2025-oct-real-time-personalization-at-scale",";
+      gradient: "from-orange-500 to-red-600",";
+      icon: <TrendingUp className="w-6 h-6" />,";
+      metrics: ["340% Revenue", "Sub-50ms Latency", "100M+ Users"]";
     }
   ];
 
@@ -85,7 +83,7 @@ const October2025CuttingEdgeContentBanner = () => {
             </span>
           </div>
           
-          <h2 className="text-4xl md: text-5xl font-bold text-white mb-4 leading-tight">",
+          <h2 className="text-4xl md: text-5xl font-bold text-white mb-4 leading-tight">"
             3 Game-Changing Enterprise AI Breakthroughs
           </h2>
           
@@ -94,7 +92,7 @@ const October2025CuttingEdgeContentBanner = () => {
             <span className="font-semibold text-cyan-300"> unlock 10x LLM performance</span> with advanced prompting, and 
             <span className="font-semibold text-pink-300"> deliver personalization at massive scale</span> — Essential reading for technology leaders!
 =======
-          <h2 className="text-4xl md: text-5xl font-bold text-white mb-4 leading-tight">";,
+          <h2 className="text-4xl md: text-5xl font-bold text-white mb-4 leading-tight">";
             3 Game-Changing Enterprise AI Breakthroughs
           </h2>
           
@@ -106,14 +104,14 @@ const October2025CuttingEdgeContentBanner = () => {
         </div>
 
         {/* Featured Articles Grid */}
-        <div className="grid md: grid-cols-3 gap-6 mb-8">",
+        <div className="grid md: grid-cols-3 gap-6 mb-8">"
 =======
-        <div className="grid md: grid-cols-3 gap-6 mb-8">";,
+        <div className="grid md: grid-cols-3 gap-6 mb-8">";
           {featuredArticles.map((article, index) => (
             <Link
               key={index}
               to={article.link}
-              className="group relative overflow-hidden bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50 hover: border-purple-500/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20",
+              className="group relative overflow-hidden bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50 hover: border-purple-500/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20"
             >
               {/* Card gradient overlay */}
               <div className={`absolute inset-0 bg-gradient-to-br ${article.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}></div>`;
@@ -132,9 +130,9 @@ const October2025CuttingEdgeContentBanner = () => {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-lg font-bold text-white mb-2 line-clamp-2 group-hover: text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-cyan-400 transition-all duration-300">",
+                <h3 className="text-lg font-bold text-white mb-2 line-clamp-2 group-hover: text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-cyan-400 transition-all duration-300">"
 =======
-                <h3 className="text-lg font-bold text-white mb-2 line-clamp-2 group-hover: text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-cyan-400 transition-all duration-300">";,
+                <h3 className="text-lg font-bold text-white mb-2 line-clamp-2 group-hover: text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-cyan-400 transition-all duration-300">";
                   {article.title}
                 </h3>
 
@@ -156,13 +154,13 @@ const October2025CuttingEdgeContentBanner = () => {
                 </div>
 
                 {/* Read More Link */}
-                <div className="flex items-center text-sm font-semibold text-purple-400 group-hover: text-cyan-400 transition-colors">",
+                <div className="flex items-center text-sm font-semibold text-purple-400 group-hover: text-cyan-400 transition-colors">"
                   Read Full Article
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform/>",
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform/>"
 =======
-                <div className="flex items-center text-sm font-semibold text-purple-400 group-hover: text-cyan-400 transition-colors">";,
+                <div className="flex items-center text-sm font-semibold text-purple-400 group-hover: text-cyan-400 transition-colors">";
                   Read Full Article
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform" />";,
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform" />";
                 </div>
               </div>
             </Link>
@@ -171,25 +169,25 @@ const October2025CuttingEdgeContentBanner = () => {
 
         {/* CTA Section */}
         <div className="text-center">
-          <div className="inline-flex flex-col sm: flex-row gap-4">",
+          <div className="inline-flex flex-col sm: flex-row gap-4">"
 =======
         <div className="text-center">";
-          <div className="inline-flex flex-col sm: flex-row gap-4">";,
+          <div className="inline-flex flex-col sm: flex-row gap-4">";
             <Link
               to="/blog"
-              className="group px-8 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-bold rounded-xl hover: from-purple-500 hover:to-cyan-500 transition-all duration-300 shadow-lg hover:shadow-purple-500/50 hover:scale-105",
+              className="group px-8 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-bold rounded-xl hover: from-purple-500 hover:to-cyan-500 transition-all duration-300 shadow-lg hover:shadow-purple-500/50 hover:scale-105"
             >
               <span className="flex items-center gap-2">";
                 Explore All Latest Content
-                <ArrowRight className="w-5 h-5 group-hover: translate-x-1 transition-transform/>",
+                <ArrowRight className="w-5 h-5 group-hover: translate-x-1 transition-transform/>"
 =======
-                <ArrowRight className="w-5 h-5 group-hover: translate-x-1 transition-transform" />";,
+                <ArrowRight className="w-5 h-5 group-hover: translate-x-1 transition-transform" />";
               </span>
             </Link>
             
             <Link
               to="/contact"
-              className="px-8 py-4 bg-slate-800/80 backdrop-blur-sm text-white font-bold rounded-xl border border-purple-500/30 hover: border-purple-500 hover:bg-slate-700/80 transition-all duration-300",
+              className="px-8 py-4 bg-slate-800/80 backdrop-blur-sm text-white font-bold rounded-xl border border-purple-500/30 hover: border-purple-500 hover:bg-slate-700/80 transition-all duration-300"
             >
               Schedule Expert Consultation
             </Link>
@@ -214,21 +212,21 @@ const October2025CuttingEdgeContentBanner = () => {
           66% { transform: translate(-20px, 20px) scale(0.9); }
         }
         .animate-blob {
-          animation: blob 7s infinite,
+          animation: blob 7s infinite
         }
         .animation-delay-2000 {
-          animation-delay: 2s,
+          animation-delay: 2s
         }
         .animation-delay-4000 {
           animation-delay: 4s,
 =======
-          animation: blob 7s infinite;,
+          animation: blob 7s infinite;
         }
         .animation-delay-2000 {
-          animation-delay: 2s;,
+          animation-delay: 2s;
         }
         .animation-delay-4000 {
-          animation-delay: 4s;,
+          animation-delay: 4s;
         }
       `}</style>`;
     </div>

@@ -9,19 +9,19 @@ export default function FederatedLearningZeroPII2025(): React.JSX.Element {
           name="description"
           content="Scoped IDs, on‑device training, DP noise, and attestations enabling privacy‑preserving learning worldwide." /><link
           rel="canonical"
-          href="https://ziontechgroup.com/blog/edge-2025-sept-30-federated-learning-zero-pii",
+          href="https://ziontechgroup.com/blog/edge-2025-sept-30-federated-learning-zero-pii"
         />
       </Helmet>
 
       <div className="container mx-auto px-6 py-16">
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">",
+        <h1 className="text-4xl md: text-5xl font-bold mb-4">"
 =======
-          href="https: //ziontechgroup.com/blog/edge-2025-sept-30-federated-learning-zero-pii",
+          href="https: //ziontechgroup.com/blog/edge-2025-sept-30-federated-learning-zero-pii"
         />
       </Helmet>
 
       <div className="container mx-auto px-6 py-16">";
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">";,
+        <h1 className="text-4xl md: text-5xl font-bold mb-4">";
           Federated Learning — Zero‑PII Personalization at the Edge
         </h1>
         <p className="text-zion-slate-light mb-8">";

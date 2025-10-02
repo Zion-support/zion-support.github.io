@@ -75,7 +75,7 @@ tags.push(`<title>${escapeHtml(metadata.title)`;
 /**
  * Generate structured data (JSON-LD)
  */
-export const generateStructuredData = (type: string, data: Record<string, any>): string => {,
+export const generateStructuredData = (type: string, data: Record<string, any>): string => {
 =======
 export const generateStructuredData = (type: string, data: Record<string, unknown>): string => {
   const structuredData = {
@@ -86,7 +86,7 @@ export const generateStructuredData = (type: string, data: Record<string, unknow
 
   return `<script type="application/ld+json">${JSON.stringify(structuredData, null, 2)}</script>`;`;
 =======
-    ...data,
+    ...data
   } as Record<string, unknown>;
   return `<script type="application/ld+json">${JSON.stringify(structuredData, null, 2)}</script>`;
 };
@@ -116,8 +116,8 @@ url: string;
       name: article.author
     }
 =======
-      name: article.author,
-    },
+      name: article.author
+    }
     datePublished: article.publishDate,
     dateModified: article.modifiedDate || article.publishDate,
     image: article.image,
@@ -130,9 +130,9 @@ url: string;
         url: 'https://ziontechgroup.com/logo.png}
     }
 =======
-        url: 'https://ziontechgroup.com/logo.png',
-      },
-    },
+        url: 'https://ziontechgroup.com/logo.png'
+      }
+    }
   });
 };
 
@@ -142,8 +142,8 @@ export const generateBreadcrumbStructuredData = (breadcrumbs: Array<{ name: stri
       '@type': 'ListItem',
       position: index + 1,
       name: crumb.name,
-      item: crumb.url,
-    })),
+      item: crumb.url
+    }))
   });
 };
 
@@ -162,16 +162,16 @@ export const generateOrganizationStructuredData = (): string => {
       '@type': 'ContactPoint',
       telephone: '+1-800-ZION-TECH',',
       contactType: 'Customer Service',',
-      email: 'contact@ziontechgroup.com}
+      email: 'contact@ziontechgroup.com},
 =======
-      'https://github.com/zion-holdings',
-    ],
-    contactPoint: {
+      'https://github.com/zion-holdings'
+    ]
+    contactPoint: {,
       '@type': 'ContactPoint',
       telephone: '+1-800-ZION-TECH',
       contactType: 'Customer Service',
-      email: 'contact@ziontechgroup.com',
-    },
+      email: 'contact@ziontechgroup.com'
+    }
   });
 };
 
@@ -179,17 +179,17 @@ export const generateFAQStructuredData = (faqs: Array<{ question: string; answer
   return generateStructuredData('FAQPage', {
     mainEntity: faqs.map(faq => ({,
 =======
-    mainEntity: faqs.map((faq) => ({
+    mainEntity: faqs.map((faq) => ({,
       '@type': 'Question',
       name: faq.question,
       acceptedAnswer: {,
         '@type': 'Answer',
-        text: faq.answer,
+        text: faq.answer
       }
     }))
 =======
-      },
-    })),
+      }
+    }))
   });
 };
 
@@ -203,7 +203,7 @@ export const generateSitemapXML = (urls: Array<{ loc: string; lastmod?: string; 
   </url>`).join('');';`;
 
   return `<?xml version="1.0" encoding="UTF-8"?>";`;
-<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">",
+<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">"
 ${urlsXml}
 </urlset>`;`;
 =======
@@ -256,7 +256,7 @@ lines.push(`User-agent: ${config.userAgent || '*'
 /**
  * Optimize title for SEO
  */
-export const optimizeTitle = (title: string, maxLength: number = 60): string => {,
+export const optimizeTitle = (title: string, maxLength: number = 60): string => {
 =======
 export const optimizeTitle = (title: string, maxLength: number = 60): string => {
   if (title.length <= maxLength) return title;
@@ -268,7 +268,7 @@ export const optimizeTitle = (title: string, maxLength: number = 60): string => 
 /**
  * Optimize description for SEO
  */
-export const optimizeDescription = (description: string, maxLength: number = 160): string => {,
+export const optimizeDescription = (description: string, maxLength: number = 160): string => {
 =======
 export const optimizeDescription = (description: string, maxLength: number = 160): string => {
   if (description.length <= maxLength) return description;
@@ -280,7 +280,7 @@ export const optimizeDescription = (description: string, maxLength: number = 160
 /**
  * Extract keywords from content
  */
-export const extractKeywords = (content: string, maxKeywords: number = 10): string[] => {,
+export const extractKeywords = (content: string, maxKeywords: number = 10): string[] => {
   // Remove special characters and convert to lowercase
   const cleaned = content.toLowerCase().replace(/[^a-z0-9\s]/g, '');
   // Split into words
@@ -303,7 +303,7 @@ export const extractKeywords = (content: string, maxKeywords: number = 10): stri
 /**
  * Generate URL slug from title
  */
-export const generateSlug = (title: string): string => {,
+export const generateSlug = (title: string): string => {
   return title
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, '-');
@@ -348,8 +348,8 @@ issues.push('URL is too long (>100 characters)');
 /**
  * Escape HTML for safe meta tag generation
  */
-function escapeHtml(text: string): string {,
-  const map: Record<string, string> = {,
+function escapeHtml(text: string): string {
+  const map: Record<string, string> = {
 =======
   if (url.split('/').filter(Boolean).length > 5) {
     issues.push('URL has too many path segments (>5)');
@@ -365,7 +365,7 @@ function escapeHtml(text: string): string {
     '"': '&quot;',
     "'": '&#039;
 =======
-    "'": '&#039;',
+    "'": '&#039;'
   };
   return text.replace(/[&<>"']/g, (m) => map[m]);
 }
@@ -373,7 +373,7 @@ function escapeHtml(text: string): string {
 /**
  * Calculate reading time
  */
-export const calculateReadingTime = (content: string, wordsPerMinute: number = 200): number => {,
+export const calculateReadingTime = (content: string, wordsPerMinute: number = 200): number => {
 =======
 export const calculateReadingTime = (content: string, wordsPerMinute: number = 200): number => {
   const words = content.trim().split(/\s+/).length;
@@ -455,6 +455,6 @@ export default {
   generateSlug,
   validateSEOUrl,
   calculateReadingTime,
-  checkContentQuality,
+  checkContentQuality
 };
 ;

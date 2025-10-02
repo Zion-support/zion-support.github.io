@@ -9,16 +9,16 @@ const October2025MultimodalCXRevolutionBanner = () => {
         <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>;
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">",
+      <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">"
         {/* Header Section */}
         <div className="text-center mb-10">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-500/30 rounded-full mb-4 animate-pulse">
             <Sparkles className="w-5 h-5 text-cyan-400/>
-            <span className="text-cyan-300 font-semibold text-sm">🚀 JUST LAUNCHED: OCTOBER 1, 2025 — MULTIMODAL AI CUSTOMER EXPERIENCE REVOLUTION</span>",
+            <span className="text-cyan-300 font-semibold text-sm">🚀 JUST LAUNCHED: OCTOBER 1, 2025 — MULTIMODAL AI CUSTOMER EXPERIENCE REVOLUTION</span>"
             <Sparkles className="w-5 h-5 text-cyan-400/>
           </div>
           
-          <h2 className="text-4xl md: text-5xl font-bold text-white mb-4 leading-tight">",
+          <h2 className="text-4xl md: text-5xl font-bold text-white mb-4 leading-tight">"
 =======
     <div className="relative bg-gradient-to-br from-cyan-900/20 via-blue-900/20 to-purple-900/20 border-y border-cyan-500/30 overflow-hidden">";
       {/* Animated background effects */};
@@ -28,16 +28,16 @@ const October2025MultimodalCXRevolutionBanner = () => {
         <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>';
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">";,
+      <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">";
         {/* Header Section */}
         <div className="text-center mb-10">";
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-500/30 rounded-full mb-4 animate-pulse">";
             <Sparkles className="w-5 h-5 text-cyan-400" />";
-            <span className="text-cyan-300 font-semibold text-sm">🚀 JUST LAUNCHED: OCTOBER 1, 2025 — MULTIMODAL AI CUSTOMER EXPERIENCE REVOLUTION</span>";,
+            <span className="text-cyan-300 font-semibold text-sm">🚀 JUST LAUNCHED: OCTOBER 1, 2025 — MULTIMODAL AI CUSTOMER EXPERIENCE REVOLUTION</span>";
             <Sparkles className="w-5 h-5 text-cyan-400" />";
           </div>
           
-          <h2 className="text-4xl md: text-5xl font-bold text-white mb-4 leading-tight">";,
+          <h2 className="text-4xl md: text-5xl font-bold text-white mb-4 leading-tight">";
             Multimodal AI Customer Experience Platform
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400">";
@@ -53,57 +53,57 @@ const October2025MultimodalCXRevolutionBanner = () => {
         </div>
 
         {/* Key Metrics Grid */}
-        <div className="grid grid-cols-2 md: grid-cols-4 gap-4 mb-10">",
-          <div className="bg-gradient-to-br from-cyan-900/40 to-cyan-800/40 backdrop-blur-sm border border-cyan-500/30 rounded-xl p-6 text-center hover: scale-105 transition-transform duration-300">",
+        <div className="grid grid-cols-2 md: grid-cols-4 gap-4 mb-10">"
+          <div className="bg-gradient-to-br from-cyan-900/40 to-cyan-800/40 backdrop-blur-sm border border-cyan-500/30 rounded-xl p-6 text-center hover: scale-105 transition-transform duration-300">"
             <Heart className="w-8 h-8 text-cyan-400 mx-auto mb-2/>
             <div className="text-3xl font-bold text-white mb-1">94%</div>
             <div className="text-sm text-cyan-200">Customer Satisfaction</div>
             <div className="text-xs text-gray-400 mt-1">+147% improvement</div>
           </div>
 
-          <div className="bg-gradient-to-br from-blue-900/40 to-blue-800/40 backdrop-blur-sm border border-blue-500/30 rounded-xl p-6 text-center hover: scale-105 transition-transform duration-300">",
+          <div className="bg-gradient-to-br from-blue-900/40 to-blue-800/40 backdrop-blur-sm border border-blue-500/30 rounded-xl p-6 text-center hover: scale-105 transition-transform duration-300">"
             <Target className="w-8 h-8 text-blue-400 mx-auto mb-2/>
             <div className="text-3xl font-bold text-white mb-1">87%</div>
             <div className="text-sm text-blue-200">First Contact Resolution</div>
             <div className="text-xs text-gray-400 mt-1">+278% improvement</div>
           </div>
 
-          <div className="bg-gradient-to-br from-purple-900/40 to-purple-800/40 backdrop-blur-sm border border-purple-500/30 rounded-xl p-6 text-center hover: scale-105 transition-transform duration-300">",
+          <div className="bg-gradient-to-br from-purple-900/40 to-purple-800/40 backdrop-blur-sm border border-purple-500/30 rounded-xl p-6 text-center hover: scale-105 transition-transform duration-300">"
             <TrendingUp className="w-8 h-8 text-purple-400 mx-auto mb-2/>
             <div className="text-3xl font-bold text-white mb-1">287%</div>
             <div className="text-sm text-purple-200">ROI First Year</div>
             <div className="text-xs text-gray-400 mt-1">$340M value</div>
           </div>
 
-          <div className="bg-gradient-to-br from-green-900/40 to-green-800/40 backdrop-blur-sm border border-green-500/30 rounded-xl p-6 text-center hover: scale-105 transition-transform duration-300">",
+          <div className="bg-gradient-to-br from-green-900/40 to-green-800/40 backdrop-blur-sm border border-green-500/30 rounded-xl p-6 text-center hover: scale-105 transition-transform duration-300">"
             <Zap className="w-8 h-8 text-green-400 mx-auto mb-2/>
             <div className="text-3xl font-bold text-white mb-1">85%</div>
             <div className="text-sm text-green-200">Automation Rate</div>
             <div className="text-xs text-gray-400 mt-1">$243M cost saved</div>
 =======
-        <div className="grid grid-cols-2 md: grid-cols-4 gap-4 mb-10">";,
-          <div className="bg-gradient-to-br from-cyan-900/40 to-cyan-800/40 backdrop-blur-sm border border-cyan-500/30 rounded-xl p-6 text-center hover: scale-105 transition-transform duration-300">";,
+        <div className="grid grid-cols-2 md: grid-cols-4 gap-4 mb-10">";
+          <div className="bg-gradient-to-br from-cyan-900/40 to-cyan-800/40 backdrop-blur-sm border border-cyan-500/30 rounded-xl p-6 text-center hover: scale-105 transition-transform duration-300">";
             <Heart className="w-8 h-8 text-cyan-400 mx-auto mb-2" />";
             <div className="text-3xl font-bold text-white mb-1">94%</div>";
             <div className="text-sm text-cyan-200">Customer Satisfaction</div>";
             <div className="text-xs text-gray-400 mt-1">+147% improvement</div>";
           </div>
 
-          <div className="bg-gradient-to-br from-blue-900/40 to-blue-800/40 backdrop-blur-sm border border-blue-500/30 rounded-xl p-6 text-center hover: scale-105 transition-transform duration-300">";,
+          <div className="bg-gradient-to-br from-blue-900/40 to-blue-800/40 backdrop-blur-sm border border-blue-500/30 rounded-xl p-6 text-center hover: scale-105 transition-transform duration-300">";
             <Target className="w-8 h-8 text-blue-400 mx-auto mb-2" />";
             <div className="text-3xl font-bold text-white mb-1">87%</div>";
             <div className="text-sm text-blue-200">First Contact Resolution</div>";
             <div className="text-xs text-gray-400 mt-1">+278% improvement</div>";
           </div>
 
-          <div className="bg-gradient-to-br from-purple-900/40 to-purple-800/40 backdrop-blur-sm border border-purple-500/30 rounded-xl p-6 text-center hover: scale-105 transition-transform duration-300">";,
+          <div className="bg-gradient-to-br from-purple-900/40 to-purple-800/40 backdrop-blur-sm border border-purple-500/30 rounded-xl p-6 text-center hover: scale-105 transition-transform duration-300">";
             <TrendingUp className="w-8 h-8 text-purple-400 mx-auto mb-2" />";
             <div className="text-3xl font-bold text-white mb-1">287%</div>";
             <div className="text-sm text-purple-200">ROI First Year</div>";
             <div className="text-xs text-gray-400 mt-1">$340M value</div>";
           </div>
 
-          <div className="bg-gradient-to-br from-green-900/40 to-green-800/40 backdrop-blur-sm border border-green-500/30 rounded-xl p-6 text-center hover: scale-105 transition-transform duration-300">";,
+          <div className="bg-gradient-to-br from-green-900/40 to-green-800/40 backdrop-blur-sm border border-green-500/30 rounded-xl p-6 text-center hover: scale-105 transition-transform duration-300">";
             <Zap className="w-8 h-8 text-green-400 mx-auto mb-2" />";
             <div className="text-3xl font-bold text-white mb-1">85%</div>";
             <div className="text-sm text-green-200">Automation Rate</div>";
@@ -116,12 +116,12 @@ const October2025MultimodalCXRevolutionBanner = () => {
           <h3 className="text-2xl font-bold text-white mb-6 text-center">";
             🔥 Revolutionary Multimodal Capabilities
           </h3>
-          <div className="grid md: grid-cols-3 gap-6">",
+          <div className="grid md: grid-cols-3 gap-6">"
             <div className="flex items-start gap-4">
               <div className="flex-shrink-0 w-12 h-12 bg-cyan-500/20 border border-cyan-500/30 rounded-lg flex items-center justify-center">
                 <Eye className="w-6 h-6 text-cyan-400/>
 =======
-          <div className="grid md: grid-cols-3 gap-6">";,
+          <div className="grid md: grid-cols-3 gap-6">";
             <div className="flex items-start gap-4">";
               <div className="flex-shrink-0 w-12 h-12 bg-cyan-500/20 border border-cyan-500/30 rounded-lg flex items-center justify-center">";
                 <Eye className="w-6 h-6 text-cyan-400" />";
@@ -172,11 +172,11 @@ const October2025MultimodalCXRevolutionBanner = () => {
         <div className="bg-gradient-to-r from-cyan-900/30 via-blue-900/30 to-purple-900/30 backdrop-blur-sm border border-white/10 rounded-2xl p-8 mb-10">
           <div className="flex items-center justify-center gap-3 mb-4">
             <Users className="w-8 h-8 text-cyan-400/>
-            <h3 className="text-2xl font-bold text-white">Global Retail: $340M Transformation Success</h3>",
+            <h3 className="text-2xl font-bold text-white">Global Retail: $340M Transformation Success</h3>"
             <Users className="w-8 h-8 text-cyan-400/>
           </div>
           
-          <div className="grid md: grid-cols-2 gap-8 mb-6">",
+          <div className="grid md: grid-cols-2 gap-8 mb-6">"
             <div>
               <div className="text-red-400 font-semibold mb-2 flex items-center gap-2">
                 <AlertCircle className="w-5 h-5" />
@@ -189,11 +189,11 @@ const October2025MultimodalCXRevolutionBanner = () => {
         <div className="bg-gradient-to-r from-cyan-900/30 via-blue-900/30 to-purple-900/30 backdrop-blur-sm border border-white/10 rounded-2xl p-8 mb-10">";
           <div className="flex items-center justify-center gap-3 mb-4">";
             <Users className="w-8 h-8 text-cyan-400" />";
-            <h3 className="text-2xl font-bold text-white">Global Retail: $340M Transformation Success</h3>";,
+            <h3 className="text-2xl font-bold text-white">Global Retail: $340M Transformation Success</h3>";
             <Users className="w-8 h-8 text-cyan-400" />";
           </div>
           
-          <div className="grid md: grid-cols-2 gap-8 mb-6">";,
+          <div className="grid md: grid-cols-2 gap-8 mb-6">";
             <div>
               <div className="text-red-400 font-semibold mb-2 flex items-center gap-2">";
                 <AlertCircle className="w-5 h-5" />";
@@ -202,7 +202,7 @@ const October2025MultimodalCXRevolutionBanner = () => {
               <ul className="space-y-2 text-gray-300">";
                 <li className="flex items-start gap-2">";
                   <span className="text-red-400 mt-1">✗</span>";
-                  <span>38% CSAT score (industry: 72%)</span>,
+                  <span>38% CSAT score (industry: 72%)</span>
                 </li>
                 <li className="flex items-start gap-2">";
                   <span className="text-red-400 mt-1">✗</span>";
@@ -286,62 +286,62 @@ const October2025MultimodalCXRevolutionBanner = () => {
           <h3 className="text-2xl font-bold text-white mb-6 text-center">";
             🌍 Proven Across Industries — 127M Customers Globally
           </h3>
-          <div className="grid grid-cols-2 md: grid-cols-5 gap-4">",
-            <div className="text-center p-4 bg-white/5 rounded-lg hover: bg-white/10 transition-colors">",
+          <div className="grid grid-cols-2 md: grid-cols-5 gap-4">"
+            <div className="text-center p-4 bg-white/5 rounded-lg hover: bg-white/10 transition-colors">"
               <div className="text-3xl mb-2">🛒</div>
               <div className="text-sm font-semibold text-white">Retail & E-Commerce</div>
               <div className="text-xs text-gray-400 mt-1">287% ROI avg</div>
             </div>
 
-            <div className="text-center p-4 bg-white/5 rounded-lg hover: bg-white/10 transition-colors">",
+            <div className="text-center p-4 bg-white/5 rounded-lg hover: bg-white/10 transition-colors">"
               <div className="text-3xl mb-2">🏦</div>
               <div className="text-sm font-semibold text-white">Financial Services</div>
               <div className="text-xs text-gray-400 mt-1">92% CSAT</div>
             </div>
 
-            <div className="text-center p-4 bg-white/5 rounded-lg hover: bg-white/10 transition-colors">",
+            <div className="text-center p-4 bg-white/5 rounded-lg hover: bg-white/10 transition-colors">"
               <div className="text-3xl mb-2">🏥</div>
               <div className="text-sm font-semibold text-white">Healthcare</div>
               <div className="text-xs text-gray-400 mt-1">89% satisfaction</div>
             </div>
 
-            <div className="text-center p-4 bg-white/5 rounded-lg hover: bg-white/10 transition-colors">",
+            <div className="text-center p-4 bg-white/5 rounded-lg hover: bg-white/10 transition-colors">"
               <div className="text-3xl mb-2">✈️</div>
               <div className="text-sm font-semibold text-white">Travel</div>
               <div className="text-xs text-gray-400 mt-1">234% conversion</div>
             </div>
 
-            <div className="text-center p-4 bg-white/5 rounded-lg hover: bg-white/10 transition-colors">",
+            <div className="text-center p-4 bg-white/5 rounded-lg hover: bg-white/10 transition-colors">"
               <div className="text-3xl mb-2">📱</div>
               <div className="text-sm font-semibold text-white">Telecom</div>
               <div className="text-xs text-gray-400 mt-1">67% cost cut</div>
 =======
-          <div className="grid grid-cols-2 md: grid-cols-5 gap-4">";,
-            <div className="text-center p-4 bg-white/5 rounded-lg hover: bg-white/10 transition-colors">";,
+          <div className="grid grid-cols-2 md: grid-cols-5 gap-4">";
+            <div className="text-center p-4 bg-white/5 rounded-lg hover: bg-white/10 transition-colors">";
               <div className="text-3xl mb-2">🛒</div>";
               <div className="text-sm font-semibold text-white">Retail & E-Commerce</div>";
               <div className="text-xs text-gray-400 mt-1">287% ROI avg</div>";
             </div>
 
-            <div className="text-center p-4 bg-white/5 rounded-lg hover: bg-white/10 transition-colors">";,
+            <div className="text-center p-4 bg-white/5 rounded-lg hover: bg-white/10 transition-colors">";
               <div className="text-3xl mb-2">🏦</div>";
               <div className="text-sm font-semibold text-white">Financial Services</div>";
               <div className="text-xs text-gray-400 mt-1">92% CSAT</div>";
             </div>
 
-            <div className="text-center p-4 bg-white/5 rounded-lg hover: bg-white/10 transition-colors">";,
+            <div className="text-center p-4 bg-white/5 rounded-lg hover: bg-white/10 transition-colors">";
               <div className="text-3xl mb-2">🏥</div>";
               <div className="text-sm font-semibold text-white">Healthcare</div>";
               <div className="text-xs text-gray-400 mt-1">89% satisfaction</div>";
             </div>
 
-            <div className="text-center p-4 bg-white/5 rounded-lg hover: bg-white/10 transition-colors">";,
+            <div className="text-center p-4 bg-white/5 rounded-lg hover: bg-white/10 transition-colors">";
               <div className="text-3xl mb-2">✈️</div>";
               <div className="text-sm font-semibold text-white">Travel</div>";
               <div className="text-xs text-gray-400 mt-1">234% conversion</div>";
             </div>
 
-            <div className="text-center p-4 bg-white/5 rounded-lg hover: bg-white/10 transition-colors">";,
+            <div className="text-center p-4 bg-white/5 rounded-lg hover: bg-white/10 transition-colors">";
               <div className="text-3xl mb-2">📱</div>";
               <div className="text-sm font-semibold text-white">Telecom</div>";
               <div className="text-xs text-gray-400 mt-1">67% cost cut</div>";
@@ -350,12 +350,12 @@ const October2025MultimodalCXRevolutionBanner = () => {
         </div>
 
         {/* Call to Action Section */}
-        <div className="grid md: grid-cols-3 gap-6">",
+        <div className="grid md: grid-cols-3 gap-6">"
 =======
-        <div className="grid md: grid-cols-3 gap-6">";,
+        <div className="grid md: grid-cols-3 gap-6">";
           <Link
             to="/blog/ai-2025-oct-multimodal-ai-customer-experience-revolution"
-            className="group bg-gradient-to-br from-cyan-600 to-cyan-700 hover: from-cyan-500 hover:to-cyan-600 rounded-xl p-6 text-center transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/50",
+            className="group bg-gradient-to-br from-cyan-600 to-cyan-700 hover: from-cyan-500 hover:to-cyan-600 rounded-xl p-6 text-center transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/50"
           >
             <Brain className="w-12 h-12 text-white mx-auto mb-4/>
             <div className="text-xl font-bold text-white mb-2">
@@ -367,11 +367,11 @@ const October2025MultimodalCXRevolutionBanner = () => {
             <div className="text-sm text-cyan-100 mb-4">";
               Complete guide to multimodal AI customer experience with architecture, implementation roadmap, and ROI calculator
             </div>
-            <div className="flex items-center justify-center gap-2 text-white font-semibold group-hover: gap-4 transition-all">",
+            <div className="flex items-center justify-center gap-2 text-white font-semibold group-hover: gap-4 transition-all">"
               <span>Explore Technology</span>
               <ArrowRight className="w-5 h-5/>
 =======
-            <div className="flex items-center justify-center gap-2 text-white font-semibold group-hover: gap-4 transition-all">";,
+            <div className="flex items-center justify-center gap-2 text-white font-semibold group-hover: gap-4 transition-all">";
               <span>Explore Technology</span>
               <ArrowRight className="w-5 h-5" />";
             </div>
@@ -379,16 +379,16 @@ const October2025MultimodalCXRevolutionBanner = () => {
 
           <Link
             to="/case-studies/ai-2025-oct-global-retail-multimodal-cx-transformation-340-million-success"
-            className="group bg-gradient-to-br from-blue-600 to-blue-700 hover: from-blue-500 hover:to-blue-600 rounded-xl p-6 text-center transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/50",
+            className="group bg-gradient-to-br from-blue-600 to-blue-700 hover: from-blue-500 hover:to-blue-600 rounded-xl p-6 text-center transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/50"
           >
             <Users className="w-12 h-12 text-white mx-auto mb-4/>
             <div className="text-xl font-bold text-white mb-2">
               $340M Success Story
             </div>
             <div className="text-sm text-blue-100 mb-4">
-              Fortune 100 transformation: 94% CSAT, 287% ROI, 85% automation — complete 16-week implementation journey,
+              Fortune 100 transformation: 94% CSAT, 287% ROI, 85% automation — complete 16-week implementation journey
             </div>
-            <div className="flex items-center justify-center gap-2 text-white font-semibold group-hover: gap-4 transition-all">",
+            <div className="flex items-center justify-center gap-2 text-white font-semibold group-hover: gap-4 transition-all">"
               <span>See Results</span>
               <ArrowRight className="w-5 h-5/>
 =======
@@ -397,9 +397,9 @@ const October2025MultimodalCXRevolutionBanner = () => {
               $340M Success Story
             </div>
             <div className="text-sm text-blue-100 mb-4">";
-              Fortune 100 transformation: 94% CSAT, 287% ROI, 85% automation — complete 16-week implementation journey,
+              Fortune 100 transformation: 94% CSAT, 287% ROI, 85% automation — complete 16-week implementation journey
             </div>
-            <div className="flex items-center justify-center gap-2 text-white font-semibold group-hover: gap-4 transition-all">";,
+            <div className="flex items-center justify-center gap-2 text-white font-semibold group-hover: gap-4 transition-all">";
               <span>See Results</span>
               <ArrowRight className="w-5 h-5" />";
             </div>
@@ -407,7 +407,7 @@ const October2025MultimodalCXRevolutionBanner = () => {
 
           <Link
             to="/services/multimodal-ai-customer-experience-platform-services"
-            className="group bg-gradient-to-br from-purple-600 to-purple-700 hover: from-purple-500 hover:to-purple-600 rounded-xl p-6 text-center transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50",
+            className="group bg-gradient-to-br from-purple-600 to-purple-700 hover: from-purple-500 hover:to-purple-600 rounded-xl p-6 text-center transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50"
           >
             <Target className="w-12 h-12 text-white mx-auto mb-4/>
             <div className="text-xl font-bold text-white mb-2">
@@ -419,11 +419,11 @@ const October2025MultimodalCXRevolutionBanner = () => {
             <div className="text-sm text-purple-100 mb-4">";
               Enterprise platform, implementation services, managed support — flexible pricing with guaranteed ROI and proven results
             </div>
-            <div className="flex items-center justify-center gap-2 text-white font-semibold group-hover: gap-4 transition-all">",
+            <div className="flex items-center justify-center gap-2 text-white font-semibold group-hover: gap-4 transition-all">"
               <span>Get Started</span>
               <ArrowRight className="w-5 h-5/>
 =======
-            <div className="flex items-center justify-center gap-2 text-white font-semibold group-hover: gap-4 transition-all">";,
+            <div className="flex items-center justify-center gap-2 text-white font-semibold group-hover: gap-4 transition-all">";
               <span>Get Started</span>
               <ArrowRight className="w-5 h-5" />";
             </div>
@@ -441,7 +441,7 @@ const October2025MultimodalCXRevolutionBanner = () => {
             </div>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 hover: from-cyan-500 hover:to-blue-500 rounded-lg text-white font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/50",
+              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 hover: from-cyan-500 hover:to-blue-500 rounded-lg text-white font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/50"
             >
               <Heart className="w-6 h-6/>
               <span>Schedule Free Assessment</span>

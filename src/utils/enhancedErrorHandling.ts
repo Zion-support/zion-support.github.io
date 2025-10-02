@@ -4,25 +4,25 @@
  */
 
 export interface ErrorInfo {
-message: string;,
-stack?: string;,
-componentStack?: string;,
-errorBoundary?: string;,
-timestamp: number;,
-userAgent: string;,
-url: string;,
-userId?: string;,
-sessionId?: string;,
-severity: 'low' | 'medium' | 'high' | 'critical';,
+message: string;
+stack?: string;
+componentStack?: string;
+errorBoundary?: string;
+timestamp: number;
+userAgent: string;
+url: string;
+userId?: string;
+sessionId?: string;
+severity: 'low' | 'medium' | 'high' | 'critical';
 category: 'javascript' | 'network' | 'resource' | 'promise' | 'react' | 'unknown';
 }
 
 export interface ErrorReport {
-errors: ErrorInfo[];,
-totalErrors: number;,
-criticalErrors: number;,
-lastError?: ErrorInfo;,
-errorRate: number;,
+errors: ErrorInfo[];
+totalErrors: number;
+criticalErrors: number;
+lastError?: ErrorInfo;
+errorRate: number;
 timestamp: number;
 }
 
@@ -58,14 +58,14 @@ this.initialize();
       this.handleError({
         message: event.reason?.message || 'Unhandled promise rejection',',
 =======
-        category: 'javascript',
+        category: 'javascript'
       });
     });
 
     // Unhandled promise rejection handler
     window.addEventListener('unhandledrejection', (event) => {';
       this.handleError({
-        message: event.reason?.message || 'Unhandled promise rejection',';,
+        message: event.reason?.message || 'Unhandled promise rejection',';
         stack: event.reason?.stack,,
         timestamp: Date.now(),,
         userAgent: navigator.userAgent,,
@@ -73,14 +73,14 @@ this.initialize();
         severity: this.determineSeverity(event.reason),,
         category: 'promise});
 =======
-        category: 'promise',
+        category: 'promise'
       });
     });
 
     this.isInitialized = true;
   }
 
-  private determineSeverity(error: any): 'low' | 'medium' | 'high' | 'critical' {',
+  private determineSeverity(error: any): 'low' | 'medium' | 'high' | 'critical' {'
     if (!error) return 'low';
     const message = error.message?.toLowerCase() || '';
     // Critical errors
@@ -97,7 +97,7 @@ this.initialize();
     if (message.includes('warning') || message.includes('deprecated')) {;
       return 'medium';
 =======
-  private determineSeverity(error: any): 'low' | 'medium' | 'high' | 'critical' {';,
+  private determineSeverity(error: any): 'low' | 'medium' | 'high' | 'critical' {';
     if (!error) return 'low';';
 
     const message = error.message?.toLowerCase() || '';';
@@ -120,7 +120,7 @@ this.initialize();
     return 'low';';
   }
 
-  private handleError(errorInfo: ErrorInfo): void {,
+  private handleError(errorInfo: ErrorInfo): void {
     this.errors.push(errorInfo);
     
     // Keep only the most recent errors
@@ -130,19 +130,19 @@ this.initialize();
 
     // Log critical errors immediately
     if (errorInfo.severity === 'critical') {;
-      console.error('Critical Error: ', errorInfo);',
+      console.error('Critical Error: ', errorInfo);'
 =======
     if (errorInfo.severity === 'critical') {';
-      console.error('Critical Error: ', errorInfo);';,
+      console.error('Critical Error: ', errorInfo);';
     }
 
     // Send to analytics or error reporting service
     this.reportError(errorInfo);
   }
 
-  private reportError(errorInfo: ErrorInfo): void {,
+  private reportError(errorInfo: ErrorInfo): void {
     // In a real application, you would send this to an error reporting service
-    console.log('Error reported: ', errorInfo);',
+    console.log('Error reported: ', errorInfo);'
   }
 
   public logError(
@@ -151,7 +151,7 @@ this.initialize();
     errorBoundary?: string
     additionalInfo?: Partial<ErrorInfo>
   ): void {
-    const errorInfo: ErrorInfo = {,
+    const errorInfo: ErrorInfo = {
       message: typeof error === 'string' ? error : error.message,',
       stack: typeof error === 'object' ? error.stack : undefined,',
       componentStack,
@@ -162,25 +162,25 @@ this.initialize();
       severity: 'medium',',
       category: 'react',',
 =======
-    console.log('Error reported: ', errorInfo);';,
+    console.log('Error reported: ', errorInfo);';
   }
 
   public logError(
     error: Error | string,,
-    componentStack?: string,
-    errorBoundary?: string,
+    componentStack?: string
+    errorBoundary?: string
     additionalInfo?: Partial<ErrorInfo>
   ): void {
-    const errorInfo: ErrorInfo = {,
-      message: typeof error === 'string' ? error : error.message,';,
-      stack: typeof error === 'object' ? error.stack : undefined,';,
+    const errorInfo: ErrorInfo = {
+      message: typeof error === 'string' ? error : error.message,';
+      stack: typeof error === 'object' ? error.stack : undefined,';
       componentStack,
       errorBoundary,
       timestamp: Date.now(),,
-      userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',';,
-      url: typeof window !== 'undefined' ? window.location.href : 'unknown',';,
-      severity: 'medium',';,
-      category: 'react',';,
+      userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',';
+      url: typeof window !== 'undefined' ? window.location.href : 'unknown',';
+      severity: 'medium',';
+      category: 'react',';
       ...additionalInfo
     };
 
@@ -201,7 +201,7 @@ this.initialize();
       criticalErrors,
       lastError,
       errorRate: this.calculateErrorRate(),,
-      timestamp: Date.now(),
+      timestamp: Date.now()
     };
   }
 

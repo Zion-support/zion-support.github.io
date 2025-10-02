@@ -29,13 +29,13 @@ export interface CaseStudy {
  * Content cache to minimize file system reads
  */
 class ContentCache {
-  private blogCache: Map<string, BlogPost> = new Map(),
-  private caseStudyCache: Map<string, CaseStudy> = new Map(),
-  private lastUpdate: number = 0,
+  private blogCache: Map<string, BlogPost> = new Map()
+  private caseStudyCache: Map<string, CaseStudy> = new Map()
+  private lastUpdate: number = 0
 =======
-  private blogCache: Map<string, BlogPost> = new Map();,
-  private caseStudyCache: Map<string, CaseStudy> = new Map();,
-  private lastUpdate: number = 0;,
+  private blogCache: Map<string, BlogPost> = new Map();
+  private caseStudyCache: Map<string, CaseStudy> = new Map();
+  private lastUpdate: number = 0;
   private readonly CACHE_TTL = 5 * 60 * 1000; // 5 minutes
 
   isCacheValid(): boolean {

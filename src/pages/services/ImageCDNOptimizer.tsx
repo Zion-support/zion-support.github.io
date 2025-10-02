@@ -6,7 +6,7 @@ const ImageCDNOptimizer: React.FC = () => {
       <header className="mb-8">
         <h1 className="text-3xl font-bold text-gray-900">Image CDN Optimizer</h1>
         <p className="mt-3 text-gray-600">
-          A drop-in image optimization and CDN routing layer. We auto-generate responsive variants, convert to modern formats (AVIF/WebP),
+          A drop-in image optimization and CDN routing layer. We auto-generate responsive variants, convert to modern formats (AVIF/WebP)
           lazy-load intelligently, and route via a global CDN for fast TTFB and LCP.
         </p>
       </header>
@@ -74,7 +74,7 @@ const ImageCDNOptimizer: React.FC = () => {
       <div className="mt-10">
         <a href="/contact" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">Optimize my images</a>
         <p className="mt-4 text-sm text-gray-600">
-          Contact: +1 302 464 0950 · kleber@ziontechgroup.com · 364 E Main St STE 1008, Middletown DE 19709
+          Contact: +1 302 464 0950 · kleber@ziontechgroup.com · 364 E Main St STE 1008, Middletown DE 19709,
         </p>
       </div>
     </section>

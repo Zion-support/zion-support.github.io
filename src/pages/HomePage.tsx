@@ -1,19 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  Brain,
-  Cpu,
-  TrendingUp,
-  Shield,
-  Cloud,
-  BarChart3,
-  Rocket,
-  Award,
-  Target,
-  Users,
-  Zap
-} from 'lucide-react';
+import { ArrowRight, Brain, Cpu, TrendingUp, Shield, Cloud, BarChart3, Rocket, Award, Target, Users, Zap } from 'lucide-react';
 
 const HomePage: React.FC = () => {
   return (
@@ -26,7 +13,7 @@ const HomePage: React.FC = () => {
             Revolutionary AI Breakthroughs 2026
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto">
-            Discover revolutionary AI breakthroughs: Quantum Computing (1000x gains), 
+            Discover revolutionary AI breakthroughs: Quantum Computing (1000x gains)
             Autonomous Enterprise (95% automation), and $150M ROI success stories.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -161,7 +148,7 @@ const HomePage: React.FC = () => {
                 <h3 className="text-2xl font-semibold">95% Automation Achievement</h3>
               </div>
               <p className="text-gray-600 mb-6">
-                "Our autonomous enterprise system now handles 95% of routine operations, 
+                "Our autonomous enterprise system now handles 95% of routine operations
                 freeing our team to focus on strategic initiatives."
               </p>
               <div className="flex items-center">

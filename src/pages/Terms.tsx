@@ -2,11 +2,9 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 =======
 import React from 'react';';
-import {
-Helmet
-} from 'react-helmet-async';';
+import { Helmet } from 'react-helmet-async';';
 
-const Terms: React.FC = () => {,
+const Terms: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -14,7 +12,7 @@ const Terms: React.FC = () => {,
         <meta name="description" content="Terms of Service for Zion Tech Group - Our terms and conditions for using our services." /><meta name="robots" content="index, follow" /></Helmet>
       
       <div className="min-h-screen bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-16">",
+        <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-16">"
           <div className="prose prose-lg max-w-none">
             <h1 className="text-4xl font-bold text-gray-900 mb-8">Terms of Service</h1>
             <p className="text-lg text-gray-600 mb-8">
@@ -24,12 +22,12 @@ const Terms: React.FC = () => {,
       </Helmet>
       
       <div className="min-h-screen bg-white">";
-        <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-16">";,
+        <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-16">";
           <div className="prose prose-lg max-w-none">";
             <h1 className="text-4xl font-bold text-gray-900 mb-8">Terms of Service</h1>";
             
             <p className="text-lg text-gray-600 mb-8">";
-              Last updated: January 2, 2025,
+              Last updated: January 2, 2025
             </p>
 
             <div className="space-y-8">";
@@ -52,7 +50,7 @@ const Terms: React.FC = () => {,
                   website for personal, non-commercial transitory viewing only.
                 </p>
                 <p className="text-gray-600 mb-4">
-                  This is the grant of a license, not a transfer of title, and under this license you may not: </p>,
+                  This is the grant of a license, not a transfer of title, and under this license you may not: </p>
                 <ul className="list-disc list-inside text-gray-600 space-y-2">
 =======
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">Use License</h2>";
@@ -61,7 +59,7 @@ const Terms: React.FC = () => {,
                   website for personal, non-commercial transitory viewing only.
                 </p>
                 <p className="text-gray-600 mb-4">";
-                  This is the grant of a license, not a transfer of title, and under this license you may not: </p>,
+                  This is the grant of a license, not a transfer of title, and under this license you may not: </p>
                 <ul className="list-disc list-inside text-gray-600 space-y-2">";
                   <li>Modify or copy the materials</li>
                   <li>Use the materials for any commercial purpose or for any public display</li>
@@ -81,12 +79,12 @@ const Terms: React.FC = () => {,
               <section>
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">User Responsibilities</h2>
                 <p className="text-gray-600 mb-4">
-                  Users are responsible for: </p>,
+                  Users are responsible for: </p>
                 <ul className="list-disc list-inside text-gray-600 space-y-2">
 =======
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">User Responsibilities</h2>";
                 <p className="text-gray-600 mb-4">";
-                  Users are responsible for: </p>,
+                  Users are responsible for: </p>
                 <ul className="list-disc list-inside text-gray-600 space-y-2">";
                   <li>Maintaining the confidentiality of their account credentials</li>
                   <li>All activities that occur under their account</li>
@@ -128,13 +126,13 @@ const Terms: React.FC = () => {,
               <section>
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">Contact Information</h2>
                 <p className="text-gray-600 mb-4">
-                  If you have any questions about these Terms of Service, please contact us at: </p>,
+                  If you have any questions about these Terms of Service, please contact us at: </p>
                 <div className="bg-gray-50 p-4 rounded-lg">
                   <p className="text-gray-600">
 =======
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">Contact Information</h2>";
                 <p className="text-gray-600 mb-4">";
-                  If you have any questions about these Terms of Service, please contact us at: </p>,
+                  If you have any questions about these Terms of Service, please contact us at: </p>
                 <div className="bg-gray-50 p-4 rounded-lg">";
                   <p className="text-gray-600">";
                     Email: legal@ziontechgroup.com<br />,

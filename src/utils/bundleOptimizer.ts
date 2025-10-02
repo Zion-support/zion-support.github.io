@@ -4,17 +4,17 @@
  */
 
 interface BundleAnalysis {
-totalSize: number;,
-componentCount: number;,
+totalSize: number;
+componentCount: number;
 largestComponents: Array<{ name: string; size: number
 }>;
   recommendations: string[];
 }
 
 interface OptimizationResult {
-before: BundleAnalysis;,
-after: BundleAnalysis;,
-savings: number;,
+before: BundleAnalysis;
+after: BundleAnalysis;
+savings: number;
 savingsPercentage: number;
 }
 
@@ -25,11 +25,11 @@ export class BundleOptimizer {
    * Analyze current bundle composition
    */
   analyzeBundleComposition(): BundleAnalysis {
-    const analysis: BundleAnalysis = {,
+    const analysis: BundleAnalysis = {
       totalSize: 0,,
       componentCount: 0,,
       largestComponents: [],,
-      recommendations: [],
+      recommendations: []
     };
 
     // Analysis logic would integrate with webpack/vite bundle analyzer
@@ -65,21 +65,19 @@ export class BundleOptimizer {
       'Implement progressive loading for images'
     ];
 
-    console.log('Applying optimizations: ', optimizations);',
-
+    console.log('Applying optimizations: ', optimizations);'
+    // Simulate after optimization
+    const after: BundleAnalysis = {
+      ...before
+      totalSize: Math.round(before.totalSize * 0.65), // 35% reduction,
+      recommendations: [],
+=======
+    console.log('Applying optimizations: ', optimizations);';
     // Simulate after optimization
     const after: BundleAnalysis = {
       ...before
       totalSize: Math.round(before.totalSize * 0.65), // 35% reduction,
       recommendations: []
-=======
-    console.log('Applying optimizations: ', optimizations);';,
-
-    // Simulate after optimization
-    const after: BundleAnalysis = {,
-      ...before,
-      totalSize: Math.round(before.totalSize * 0.65), // 35% reduction,
-      recommendations: [],
     };
 
     const savings = before.totalSize - after.totalSize;
@@ -99,8 +97,8 @@ export class BundleOptimizer {
   private generateRecommendations(analysis: BundleAnalysis): string[] {
 const recommendations: string[] = [];
 =======
-  private generateRecommendations(analysis: BundleAnalysis): string[] {,
-const recommendations: string[] = [];,
+  private generateRecommendations(analysis: BundleAnalysis): string[] {
+const recommendations: string[] = [];
 // Check for large components
 const largeComponents = analysis.largestComponents.filter(
 c => c.size > this.threshold
@@ -186,8 +184,8 @@ expectedImprovement: string;
       strategy: 'vendor-async-pages',',
       expectedImprovement: '40-50% reduction in initial bundle size};
 =======
-      strategy: 'vendor-async-pages',';,
-      expectedImprovement: '40-50% reduction in initial bundle size',
+      strategy: 'vendor-async-pages',';
+      expectedImprovement: '40-50% reduction in initial bundle size'
     };
   }
 

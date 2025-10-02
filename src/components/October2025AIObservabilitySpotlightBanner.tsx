@@ -19,10 +19,10 @@ export default function October2025AIObservabilitySpotlightBanner(): void {
         </div>
 
         <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 mb-8">
-          <div className="grid md: grid-cols-4 gap-6 text-center">",
+          <div className="grid md: grid-cols-4 gap-6 text-center">"
 =======
         <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 mb-8">";
-          <div className="grid md: grid-cols-4 gap-6 text-center">";,
+          <div className="grid md: grid-cols-4 gap-6 text-center">";
             <div>
               <div className="text-4xl font-bold text-cyan-400 mb-2">$3.7B</div>";
               <div className="text-sm text-gray-300">Total Value Created</div>";
@@ -42,12 +42,12 @@ export default function October2025AIObservabilitySpotlightBanner(): void {
           </div>
         </div>
 
-        <div className="grid md: grid-cols-2 gap-8 mb-8">",
+        <div className="grid md: grid-cols-2 gap-8 mb-8">"
           <div className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 p-6 rounded-xl border border-cyan-500/50">
             <h4 className="text-2xl font-bold mb-4">🎯 Core Capabilities</h4>
             <ul className="space-y-2">
 =======
-        <div className="grid md: grid-cols-2 gap-8 mb-8">";,
+        <div className="grid md: grid-cols-2 gap-8 mb-8">";
           <div className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 p-6 rounded-xl border border-cyan-500/50">";
             <h4 className="text-2xl font-bold mb-4">🎯 Core Capabilities</h4>";
             <ul className="space-y-2">";
@@ -73,7 +73,7 @@ export default function October2025AIObservabilitySpotlightBanner(): void {
         <div className="text-center">";
           <Link
             to="/blog/ai-2025-october-2-next-gen-ai-observability-platform"
-            className="inline-block bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-10 py-5 rounded-xl font-bold text-xl hover: from-cyan-600 hover:to-blue-600 transition-all shadow-2xl hover:shadow-cyan-500/50 transform hover:scale-105",
+            className="inline-block bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-10 py-5 rounded-xl font-bold text-xl hover: from-cyan-600 hover:to-blue-600 transition-all shadow-2xl hover:shadow-cyan-500/50 transform hover:scale-105"
           >
             🚀 Read Complete Platform Guide + Enterprise Success Story
           </Link>

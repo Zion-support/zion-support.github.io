@@ -5,14 +5,12 @@ import {
 } from 'lucide-react';
 =======
 import React from 'react';';
-import {
-Helmet
-} from 'react-helmet-async';';
+import { Helmet } from 'react-helmet-async';';
 import {
 
 } from 'lucide-react';';
 
-const SmartAppointmentScheduler: React.FC = () => {,
+const SmartAppointmentScheduler: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -29,7 +27,7 @@ const SmartAppointmentScheduler: React.FC = () => {,
             <div className="bg-gradient-to-r from-green-600 to-teal-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
               <Users className="w-10 h-10 text-white/>
             </div>
-            <h1 className="text-4xl md: text-6xl font-bold text-gray-900 mb-6">",
+            <h1 className="text-4xl md: text-6xl font-bold text-gray-900 mb-6">"
               Smart Appointment Scheduler
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
@@ -39,11 +37,11 @@ const SmartAppointmentScheduler: React.FC = () => {,
             <div className="bg-gradient-to-r from-green-600 to-teal-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">";
               <Users className="w-10 h-10 text-white" />";
             </div>
-            <h1 className="text-4xl md: text-6xl font-bold text-gray-900 mb-6">";,
+            <h1 className="text-4xl md: text-6xl font-bold text-gray-900 mb-6">";
               Smart Appointment Scheduler
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">";
-              Healthcare-focused SaaS for online appointments, virtual consultations, patient data management, 
+              Healthcare-focused SaaS for online appointments, virtual consultations, patient data management
               and automated reminders. Streamline your practice with intelligent scheduling.
             </p>
             <div className="bg-white rounded-lg shadow-lg p-6 max-w-2xl mx-auto">";
@@ -51,19 +49,19 @@ const SmartAppointmentScheduler: React.FC = () => {,
                 <span className="text-3xl font-bold text-green-600">Starting at $49/month</span>";
               </div>
               <p className="text-gray-600 mb-6">Perfect for hospitals, clinics, and private practices looking to modernize their appointment system.</p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">"
 =======
               <p className="text-gray-600 mb-6">Perfect for hospitals, clinics, and private practices looking to modernize their appointment system.</p>";
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">";
                 <a 
-                  href="tel: +13024640950" ,
-                  className="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover: bg-green-700 transition-colors text-center",
+                  href="tel: +13024640950"
+                  className="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover: bg-green-700 transition-colors text-center"
                 >
                   Call +1 302 464 0950
                 </a>
                 <a 
-                  href="mailto: kleber@ziontechgroup.com" ,
-                  className="border-2 border-green-600 text-green-600 px-6 py-3 rounded-lg font-semibold hover: bg-green-50 transition-colors text-center",
+                  href="mailto: kleber@ziontechgroup.com"
+                  className="border-2 border-green-600 text-green-600 px-6 py-3 rounded-lg font-semibold hover: bg-green-50 transition-colors text-center"
                 >
                   Email Us
                 </a>
@@ -74,14 +72,14 @@ const SmartAppointmentScheduler: React.FC = () => {,
           {/* Features */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Key Features</h2>
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">"
               <div className="bg-white rounded-lg shadow-lg p-6">
                 <div className="bg-green-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                   <Calendar className="w-6 h-6 text-green-600/>
 =======
           <section className="mb-16">";
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Key Features</h2>";
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">";,
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">";
               <div className="bg-white rounded-lg shadow-lg p-6">";
                 <div className="bg-green-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">";
                   <Calendar className="w-6 h-6 text-green-600" />";
@@ -150,7 +148,7 @@ const SmartAppointmentScheduler: React.FC = () => {,
           {/* Pricing */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Pricing Plans</h2>
-            <div className="grid md: grid-cols-3 gap-8">",
+            <div className="grid md: grid-cols-3 gap-8">"
               <div className="bg-white rounded-lg shadow-lg p-8">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Small Practice</h3>
                 <div className="text-3xl font-bold text-green-600 mb-6">$49/month</div>
@@ -172,7 +170,7 @@ const SmartAppointmentScheduler: React.FC = () => {,
 =======
           <section className="mb-16">";
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Pricing Plans</h2>";
-            <div className="grid md: grid-cols-3 gap-8">";,
+            <div className="grid md: grid-cols-3 gap-8">";
               <div className="bg-white rounded-lg shadow-lg p-8">";
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Small Practice</h3>";
                 <div className="text-3xl font-bold text-green-600 mb-6">$49/month</div>";
@@ -195,8 +193,8 @@ const SmartAppointmentScheduler: React.FC = () => {,
                   </li>
                 </ul>
                 <a 
-                  href="tel: +13024640950" ,
-                  className="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover: bg-green-700 transition-colors text-center block",
+                  href="tel: +13024640950"
+                  className="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover: bg-green-700 transition-colors text-center block"
                 >
                   Get Started
                 </a>
@@ -252,8 +250,8 @@ const SmartAppointmentScheduler: React.FC = () => {,
                   </li>
                 </ul>
                 <a 
-                  href="tel: +13024640950" ,
-                  className="w-full bg-white text-green-600 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors text-center block",
+                  href="tel: +13024640950"
+                  className="w-full bg-white text-green-600 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors text-center block"
                 >
                   Get Started
                 </a>
@@ -307,8 +305,8 @@ const SmartAppointmentScheduler: React.FC = () => {,
                   </li>
                 </ul>
                 <a 
-                  href="mailto: kleber@ziontechgroup.com" ,
-                  className="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover: bg-green-700 transition-colors text-center block",
+                  href="mailto: kleber@ziontechgroup.com"
+                  className="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover: bg-green-700 transition-colors text-center block"
                 >
                   Contact Sales
                 </a>
@@ -323,18 +321,18 @@ const SmartAppointmentScheduler: React.FC = () => {,
               <p className="text-lg text-gray-600 mb-8">";
                 Contact us today for a free consultation and to discuss your appointment scheduling needs.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">"
 =======
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">";
                 <a 
-                  href="tel: +13024640950" ,
-                  className="bg-green-600 text-white px-8 py-4 rounded-lg font-semibold hover: bg-green-700 transition-colors text-center",
+                  href="tel: +13024640950"
+                  className="bg-green-600 text-white px-8 py-4 rounded-lg font-semibold hover: bg-green-700 transition-colors text-center"
                 >
                   Call +1 302 464 0950
                 </a>
                 <a 
-                  href="mailto: kleber@ziontechgroup.com" ,
-                  className="border-2 border-green-600 text-green-600 px-8 py-4 rounded-lg font-semibold hover: bg-green-50 transition-colors text-center",
+                  href="mailto: kleber@ziontechgroup.com"
+                  className="border-2 border-green-600 text-green-600 px-8 py-4 rounded-lg font-semibold hover: bg-green-50 transition-colors text-center"
                 >
                   Email Us
                 </a>

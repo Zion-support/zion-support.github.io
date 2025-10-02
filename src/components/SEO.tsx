@@ -2,9 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 =======
 import React from 'react';';
-import {
-Helmet
-} from 'react-helmet-async';';
+import { Helmet } from 'react-helmet-async';';
 =======
 
 interface SEOProps {
@@ -19,14 +17,14 @@ interface SEOProps {
 }
 
 const SEO: React.FC<SEOProps> = ({
-  title = 'Zion Tech Group — AI, Micro SaaS, and IT Services',
-  description = 'Enterprise-grade AI, micro SaaS, and IT solutions. Transform your business with cutting-edge technology and automation.',
-  keywords = 'AI services, micro SaaS, IT services, cloud migration, DevOps, SRE, enterprise software, automation',
-  canonical,
-  ogImage = 'https://ziontechgroup.com/og-image.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-  noIndex = false,
+  title = 'Zion Tech Group — AI, Micro SaaS, and IT Services'
+  description = 'Enterprise-grade AI, micro SaaS, and IT solutions. Transform your business with cutting-edge technology and automation.'
+  keywords = 'AI services, micro SaaS, IT services, cloud migration, DevOps, SRE, enterprise software, automation'
+  canonical
+  ogImage = 'https://ziontechgroup.com/og-image.jpg'
+  ogType = 'website'
+  twitterCard = 'summary_large_image'
+  noIndex = false
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : 'https://ziontechgroup.com');
@@ -48,9 +46,8 @@ const SEO: React.FC<SEOProps> = ({
       <meta property="og:type" content={ogType} />";
       <meta property="og:url" content={canonicalUrl} />";
       <meta property="og:image" content={ogImage} />";
-      <meta property="og: site_name" content="Zion Tech Group" />";,
-      <meta property="og: locale" content="en_US" />";,
-      
+      <meta property="og: site_name" content="Zion Tech Group" />";
+      <meta property="og: locale" content="en_US" />";
       {/* Twitter */}
       <meta name="twitter:card" content={twitterCard} />";
       <meta name="twitter:title" content={fullTitle} />";
@@ -90,18 +87,18 @@ const SEO: React.FC<SEOProps> = ({
             "https://linkedin.com/company/zion-tech-group",
             "https://github.com/ZionClouds"
 =======
-          "@context": "https: //schema.org",";,
+          "@context": "https: //schema.org",";
           "@type": "Organization",";
           "name": "Zion Tech Group",";
-          "url": "https: //ziontechgroup.com",";,
-          "logo": "https: //ziontechgroup.com/logo.png",";,
+          "url": "https: //ziontechgroup.com",";
+          "logo": "https: //ziontechgroup.com/logo.png",";
           "description": "Enterprise-grade AI, micro SaaS, and IT solutions provider",";
           "contactPoint": {";
             "@type": "ContactPoint",";
             "telephone": "+1-302-464-0950",";
             "contactType": "customer service",";
             "email": "kleber@ziontechgroup.com"
-          },
+          }
           "address": {";
             "@type": "PostalAddress",";
             "streetAddress": "364 E Main St STE 1008",";
@@ -109,11 +106,11 @@ const SEO: React.FC<SEOProps> = ({
             "addressRegion": "DE",";
             "postalCode": "19709",";
             "addressCountry": "US"
-          },
+          }
           "sameAs": [";
-            "https: //twitter.com/ziontechgroup",";,
-            "https: //linkedin.com/company/zion-tech-group",";,
-            "https: //github.com/ZionClouds",
+            "https: //twitter.com/ziontechgroup",";
+            "https: //linkedin.com/company/zion-tech-group",";
+            "https: //github.com/ZionClouds"
           ]
         })}
       </script>
@@ -148,21 +145,21 @@ const SEO: React.FC<SEOProps> = ({
         url: 'https://ziontechgroup.com',
         logo: 'https://ziontechgroup.com/logo.png',
         description: 'Enterprise-grade AI, micro SaaS, and IT solutions provider',
-        contactPoint: {
+        contactPoint: {,
           '@type': 'ContactPoint',
           telephone: '+1-302-464-0950',
           contactType: 'customer service',
           email: 'kleber@ziontechgroup.com'
-        },
-        address: {
+        }
+        address: {,
           '@type': 'PostalAddress',
           streetAddress: '364 E Main St STE 1008',
           addressLocality: 'Middletown',
           addressRegion: 'DE',
           postalCode: '19709',
           addressCountry: 'US'
-        },
-        sameAs: [
+        }
+        sameAs: [,
           'https://twitter.com/ziontechgroup',
           'https://linkedin.com/company/zion-tech-group',
           'https://github.com/ZionClouds'

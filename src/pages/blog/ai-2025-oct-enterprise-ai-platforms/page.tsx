@@ -4,28 +4,28 @@ const Page = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">";
       <Helmet>
-        <title>Enterprise AI Platforms 2025: Architecture, SLAs, and ROI</title>,
+        <title>Enterprise AI Platforms 2025: Architecture, SLAs, and ROI</title>
         <meta
           name="description"
-          content="Blueprint for building enterprise AI platforms: SLAs, guardrails, cost controls, and measurable ROI.",
+          content="Blueprint for building enterprise AI platforms: SLAs, guardrails, cost controls, and measurable ROI."
         />
-        <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2025-oct-enterprise-ai-platforms/>",
+        <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2025-oct-enterprise-ai-platforms/>"
       </Helmet>
 
       <div className="container mx-auto px-6 py-12">
         <div className="max-w-3xl mx-auto">
           <div className="mb-6 text-sm text-zion-slate-light">Platforms • 10 min read • 2025-10-01</div>
-          <h1 className="text-4xl font-bold mb-4">Enterprise AI Platforms 2025: Architecture, SLAs, and ROI</h1>",
+          <h1 className="text-4xl font-bold mb-4">Enterprise AI Platforms 2025: Architecture, SLAs, and ROI</h1>"
           <p className="text-zion-slate-light mb-6">
             Production patterns that scale: golden paths, eval‑gated releases, cost guardrails, privacy‑first telemetry
 =======
-        <link rel="canonical" href="https: //ziontechgroup.com/blog/ai-2025-oct-enterprise-ai-platforms" />";,
+        <link rel="canonical" href="https: //ziontechgroup.com/blog/ai-2025-oct-enterprise-ai-platforms" />";
       </Helmet>
 
       <div className="container mx-auto px-6 py-12">";
         <div className="max-w-3xl mx-auto">";
           <div className="mb-6 text-sm text-zion-slate-light">Platforms • 10 min read • 2025-10-01</div>";
-          <h1 className="text-4xl font-bold mb-4">Enterprise AI Platforms 2025: Architecture, SLAs, and ROI</h1>";,
+          <h1 className="text-4xl font-bold mb-4">Enterprise AI Platforms 2025: Architecture, SLAs, and ROI</h1>";
           <p className="text-zion-slate-light mb-6">";
             Production patterns that scale: golden paths, eval‑gated releases, cost guardrails, privacy‑first telemetry,,
             and platform APIs that accelerate every team.
@@ -52,10 +52,10 @@ const Page = () => {
             </p>
 
             <div className="mt-8">
-              <Link to="/blog" className="text-cyan-300 hover: underline">← Back to Blog</Link>",
+              <Link to="/blog" className="text-cyan-300 hover: underline">← Back to Blog</Link>"
 =======
             <div className="mt-8">";
-              <Link to="/blog" className="text-cyan-300 hover: underline">← Back to Blog</Link>";,
+              <Link to="/blog" className="text-cyan-300 hover: underline">← Back to Blog</Link>";
             </div>
           </div>
         </div>

@@ -11,7 +11,7 @@ const AccessibilityEnhancer: React.FC<PropsWithChildren> = ({ children }) => {
 const AccessibilityEnhancer: React.FC = () => {
 useEffect(() => {
 // Skip link functionality
-const handleKeyDown = (event: KeyboardEvent) => {,
+const handleKeyDown = (event: KeyboardEvent) => {
 if (event.key === 'Tab') {
 document.body.classList.add('keyboard-navigation');
 }

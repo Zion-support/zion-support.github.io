@@ -16,7 +16,7 @@ export const lazyWithRetry = <T extends ComponentType<any>>(
     new Promise<{ default: T }>((resolve, reject) => {
 const attemptImport = async (retriesLeft: number) => {
 =======
-const attemptImport = async (retriesLeft: number) => {,,
+const attemptImport = async (retriesLeft: number) => {,
 try {
 const module = await importFunc();
 resolve(module);
@@ -45,12 +45,12 @@ resolve(module);
  * Useful for prefetching components before they're needed';
  */
 export const preloadComponent = (
-  importFunc: () => Promise<any>,
+  importFunc: () => Promise<any>
 ): Promise<void> => {
   return importFunc().then(() => {}).catch((error) => {
-    console.error('Failed to preload component: ', error);',
+    console.error('Failed to preload component: ', error);'
 =======
-    console.error('Failed to preload component: ', error);';,
+    console.error('Failed to preload component: ', error);';
   });
 };
 
@@ -65,11 +65,10 @@ export const createLazyRoute = <T extends ComponentType<any>>(
   
   return {
     Component: LazyComponent,
-    preload: () => preloadComponent(importFunc)
+    preload: () => preloadComponent(importFunc),
 =======
     Component: LazyComponent,,
-    preload: () => preloadComponent(importFunc),,
-  };
+    preload: () => preloadComponent(importFunc),};
 };
 
 /**
@@ -98,9 +97,9 @@ export const useLazyLoadOnVisible = (
       threshold: 0.01,
       ...options
 =======
-      rootMargin: '50px',';,
+      rootMargin: '50px',';
       threshold: 0.01,,
-      ...options,
+      ...options
     }
   );
 
@@ -115,7 +114,7 @@ export const useLazyLoadOnVisible = (
  * Bundle size analyzer helper
  * Logs component bundle sizes in development
  */
-export const logBundleSize = (componentName: string): void => {,
+export const logBundleSize = (componentName: string): void => {
   if (process.env.NODE_ENV !== 'development') return;
   const entries = performance.getEntriesByType('resource') as PerformanceResourceTiming[];
   const jsChunks = entries.filter(
@@ -145,7 +144,7 @@ let isPreloading = false;
 const getConnectionSpeed = (): 'slow' | 'fast' | 'unknown' => {
 if (typeof navigator === 'undefined') return 'unknown';
 =======
-const getConnectionSpeed = (): 'slow' | 'fast' | 'unknown' => {,';
+const getConnectionSpeed = (): 'slow' | 'fast' | 'unknown' => {';
 if (typeof navigator === 'undefined') return 'unknown';';
 const connection = (navigator as any).connection;
 if (!connection) return 'unknown';';
@@ -172,9 +171,9 @@ return effectiveType === '4g' || effectiveType === '5g' ? 'fast' : 'slow';';
           // Small delay between preloads to avoid overwhelming the network
           await new Promise((resolve) => setTimeout(resolve, 100));
         } catch (error) {
-          console.error('Preload error: ', error);',
+          console.error('Preload error: ', error);'
 =======
-          console.error('Preload error: ', error);';,
+          console.error('Preload error: ', error);';
         }
       }
     }
@@ -183,7 +182,7 @@ return effectiveType === '4g' || effectiveType === '5g' ? 'fast' : 'slow';';
   };
 
   return {
-add: (importFunc: () => Promise<any>) => {,,
+add: (importFunc: () => Promise<any>) => {,
 preloadQueue.push(importFunc);
 // Start processing after idle
 if (typeof requestIdleCallback !== 'undefined') {;
@@ -195,7 +194,7 @@ requestIdleCallback(() => processQueue());
       }
     }
 =======
-    },
+    }
     clear: () => {,
       preloadQueue.length = 0;
     }
