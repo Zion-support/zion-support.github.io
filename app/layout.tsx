@@ -89,6 +89,9 @@ function Header() {
                 <Link href="/services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 font-medium">
                   View All Services →
                 </Link>
+                <Link href="/services/new-services-catalog" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">
+                  New Services Catalog →
+                </Link>
               </div>
             </div>
           </div>
@@ -205,11 +208,12 @@ function Footer() {
             <h3 className="font-semibold text-gray-900 mb-3">Services</h3>
             <div className="space-y-2">
               <Link href="/services" className="block text-gray-600 hover:text-blue-600 transition-colors">All Services</Link>
-              <Link href="/services/ai-data-analytics" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Data Analytics</Link>
-              <Link href="/services/ai-workflow-automation" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Workflow Automation</Link>
-              <Link href="/services/ai-virtual-assistant" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Virtual Assistant</Link>
-              <Link href="/services/cloud-migration" className="block text-gray-600 hover:text-blue-600 transition-colors">Cloud Migration</Link>
-              <Link href="/services/micro-saas" className="block text-gray-600 hover:text-blue-600 transition-colors">Micro SaaS</Link>
+              <Link href="/services/new-services-catalog" className="block text-gray-600 hover:text-purple-600 transition-colors font-medium">✨ New Services Catalog</Link>
+              <Link href="/services/ai-email-marketing" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Email Marketing</Link>
+              <Link href="/services/healthcare-scheduler" className="block text-gray-600 hover:text-blue-600 transition-colors">Healthcare Scheduler</Link>
+              <Link href="/services/autonomous-orchestrator" className="block text-gray-600 hover:text-blue-600 transition-colors">Autonomous Orchestrator</Link>
+              <Link href="/services/smart-inventory" className="block text-gray-600 hover:text-blue-600 transition-colors">Smart Inventory</Link>
+              <Link href="/services/content-moderation" className="block text-gray-600 hover:text-blue-600 transition-colors">Content Moderation</Link>
             </div>
           </div>
           <div>
