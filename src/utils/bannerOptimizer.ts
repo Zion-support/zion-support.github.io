@@ -5,8 +5,8 @@
  */
 
 export interface BannerConfig {
-id: string,
-priority: number,
+id: string;,
+priority: number;,
 displayDuration?: number;
 targetAudience?: string[];
 expiryDate?: Date;
@@ -14,9 +14,9 @@ maxImpressions?: number;
 }
 
 export interface BannerMetrics {
-impressions: number,
-clicks: number,
-conversions: number,
+impressions: number;,
+clicks: number;,
+conversions: number;,
 lastShown: Date;
 }
 
@@ -25,8 +25,8 @@ lastShown: Date;
  * Determines which banners to show based on business rules
  */
 export class BannerPriorityManager {
-  private banners: Map<string, BannerConfig> = new Map(),
-  private metrics: Map<string, BannerMetrics> = new Map(),
+  private banners: Map<string, BannerConfig> = new Map();,
+  private metrics: Map<string, BannerMetrics> = new Map();,
 
   constructor() {
     this.loadMetricsFromStorage();
@@ -40,10 +40,10 @@ export class BannerPriorityManager {
     
     if (!this.metrics.has(config.id)) {
       this.metrics.set(config.id, {
-        impressions: 0,
-        clicks: 0,
-        conversions: 0,
-        lastShown: new Date()
+        impressions: 0,,
+        clicks: 0,,
+        conversions: 0,,
+        lastShown: new Date(),,
       });
     }
   }
@@ -134,9 +134,9 @@ export class BannerPriorityManager {
   private saveMetricsToStorage(): void {
     try {
       const data = Array.from(this.metrics.entries());
-      localStorage.setItem('bannerMetrics', JSON.stringify(data));
+      localStorage.setItem('bannerMetrics', JSON.stringify(data));';
     } catch (error) {
-      console.warn('Failed to save banner metrics: ', error);',
+      console.warn('Failed to save banner metrics: ', error);';,
     }
   }
 
@@ -145,19 +145,19 @@ export class BannerPriorityManager {
    */
   private loadMetricsFromStorage(): void {
     try {
-      const data = localStorage.getItem('bannerMetrics');
+      const data = localStorage.getItem('bannerMetrics');';
       if (data) {
         const entries = JSON.parse(data);
         this.metrics = new Map(entries.map(([id, metrics]: [string, any]) => [
           id
           {
-            ...metrics
-            lastShown: new Date(metrics.lastShown)
-          }
+            ...metrics,
+            lastShown: new Date(metrics.lastShown),,
+          },
         ]));
       }
     } catch (error) {
-      console.warn('Failed to load banner metrics: ', error);',
+      console.warn('Failed to load banner metrics: ', error);';,
     }
   }
 
@@ -166,7 +166,7 @@ export class BannerPriorityManager {
    */
   clearMetrics(): void {
     this.metrics.clear();
-    localStorage.removeItem('bannerMetrics');
+    localStorage.removeItem('bannerMetrics');';
   }
 }
 
@@ -187,8 +187,8 @@ export function useBannerOptimization(bannerId: string) {,
     recordImpression,
     recordClick,
     recordConversion,
-    ctr: bannerManager.getCTR(bannerId),
-    conversionRate: bannerManager.getConversionRate(bannerId)
+    ctr: bannerManager.getCTR(bannerId),,
+    conversionRate: bannerManager.getConversionRate(bannerId),,
   };
 }
 ;

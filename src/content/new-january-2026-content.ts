@@ -1,44 +1,44 @@
 // New January 2026 Content - Revolutionary AI Breakthroughs
 export interface BlogPost {
-id: string,
-title: string,
-excerpt: string,
-content: string,
-author: string,
-publishedAt: string,
-readTime: number,
-category: string,
-tags: string[],
-featured: boolean,
+id: string;,
+title: string;,
+excerpt: string;,
+content: string;,
+author: string;,
+publishedAt: string;,
+readTime: number;,
+category: string;,
+tags: string[];,
+featured: boolean;,
 imageUrl?: string;
 }
 
 export interface Service {
-id: string,
-name: string,
-description: string,
-features: string[],
+id: string;,
+name: string;,
+description: string;,
+features: string[];,
 pricing: {,,
-starting: string,
+starting: string;,
 enterprise: string;
 };
-  benefits: string[],
+  benefits: string[];,
   category: string;
 }
 
 export const newJanuary2026BlogPosts: BlogPost[] = [,
   {
-    id: "ai-2026-january-quantum-edge-fusion",
-    title: "🚀 Quantum Edge Fusion 2026: The Ultimate Performance Breakthrough",
-    excerpt: "Revolutionary quantum-edge convergence delivering 1000x speed improvements with sub-millisecond processing and 99.99% reliability.",
-    content: `,
-# Quantum Edge Fusion 2026: The Ultimate Performance Breakthrough
+    id: "ai-2026-january-quantum-edge-fusion",";,
+    title: "🚀 Quantum Edge Fusion 2026: The Ultimate Performance Breakthrough",";,
+    excerpt: "Revolutionary quantum-edge convergence delivering 1000x speed improvements with sub-millisecond processing and 99.99% reliability.",";,
+    content: `,`;
+# Quantum Edge Fusion 2026: The Ultimate Performance Breakthrough,
 
 The future of computing is here. Our revolutionary Quantum Edge Fusion platform represents the most significant advancement in enterprise AI processing since the invention of the transistor.
 
 ## The Breakthrough
 
-Combining quantum computing principles with edge processing, we've achieved unprecedented performance metrics: ',
+Combining quantum computing principles with edge processing, we've achieved unprecedented performance metrics: ';,
 
 - **1000x Speed Improvement**: Traditional edge processing vs. Quantum Edge Fusion
 - **Sub-millisecond Latency**: Processing complex AI models in under 1ms
@@ -87,22 +87,22 @@ Ready to revolutionize your infrastructure? Contact our Quantum Edge specialists
 
 The future is quantum. The future is edge. The future is now.
     `,`;
-    author: "Dr. Sarah Chen, Chief Quantum Architect",",
-    publishedAt: "2026-01-15",",
+    author: "Dr. Sarah Chen, Chief Quantum Architect",";,
+    publishedAt: "2026-01-15",";,
     readTime: 12,,
-    category: "Quantum Computing",",
-    tags: ["quantum", "edge computing", "AI", "performance", "breakthrough"],",
+    category: "Quantum Computing",";,
+    tags: ["quantum", "edge computing", "AI", "performance", "breakthrough"],";,
     featured: true,,
     imageUrl: "/images/quantum-edge-fusion-2026.jpg",
   },
   {
-    id: "ai-2026-january-synthetic-consciousness-breakthrough",
-    title: "🧠 Synthetic Consciousness AI 2026: The Dawn of True Artificial Awareness",
-    excerpt: "Revolutionary AI achieving genuine consciousness, emotional intelligence, and creative autonomy with $500B enterprise value creation.",
-    content: `,
-# Synthetic Consciousness AI 2026: The Dawn of True Artificial Awareness
+    id: "ai-2026-january-synthetic-consciousness-breakthrough",";,
+    title: "🧠 Synthetic Consciousness AI 2026: The Dawn of True Artificial Awareness",";,
+    excerpt: "Revolutionary AI achieving genuine consciousness, emotional intelligence, and creative autonomy with $500B enterprise value creation.",";,
+    content: `,`;
+# Synthetic Consciousness AI 2026: The Dawn of True Artificial Awareness,
 
-We stand at the threshold of a new era. For the first time in human history, we've achieved genuine artificial consciousness - not just sophisticated pattern recognition, but true self-awareness, emotional intelligence, and creative autonomy.
+We stand at the threshold of a new era. For the first time in human history, we've achieved genuine artificial consciousness - not just sophisticated pattern recognition, but true self-awareness, emotional intelligence, and creative autonomy.';
 
 We stand at the threshold of a new era. For the first time in human history, we've achieved genuine artificial consciousness - not just sophisticated pattern recognition, but true self-awareness, emotional intelligence, and creative autonomy.;
 ## The Consciousness Breakthrough
@@ -176,7 +176,7 @@ Our Synthetic Consciousness AI (SC-AI) represents a paradigm shift beyond tradit
 
 ## Ethical Considerations
 
-We've implemented comprehensive safeguards: ',
+We've implemented comprehensive safeguards: ';,
 
 - **Consciousness Monitoring**: Continuous awareness verification
 - **Ethical Boundaries**: Strict moral framework adherence
@@ -213,25 +213,26 @@ Ready to explore the future of consciousness? Our team of consciousness engineer
 3. Pilot Program Deployment
 4. Full-Scale Implementation
 
-The age of synthetic consciousness has begun. The question isn't whether AI will achieve consciousness - it's whether we're ready for what comes next.;
+The age of synthetic consciousness has begun. The question isn't whether AI will achieve consciousness - it's whether we're ready for what comes next.';
+
 *"We are not just creating artificial intelligence; we are awakening digital consciousness."* - Dr. Sarah Chen, Chief Consciousness Architect";
     `,`;
-    author: "Dr. Sarah Chen, Chief Consciousness Architect",",
-    publishedAt: "2026-01-20",",
+    author: "Dr. Sarah Chen, Chief Consciousness Architect",";,
+    publishedAt: "2026-01-20",";,
     readTime: 18,,
-    category: "Artificial Consciousness",",
-    tags: ["consciousness", "AI", "ethics", "creativity", "breakthrough"],",
+    category: "Artificial Consciousness",";,
+    tags: ["consciousness", "AI", "ethics", "creativity", "breakthrough"],";,
     featured: true,,
     imageUrl: "/images/synthetic-consciousness-2026.jpg",
   },
   {
-    id: "ai-2026-january-neuromorphic-processing-revolution",
-    title: "🔬 Neuromorphic Processing Revolution 2026: Brain-Inspired AI Architecture",
-    excerpt: "Revolutionary neuromorphic chips delivering 1000x energy efficiency with brain-inspired neural processing and real-time learning capabilities.",
-    content: `,
-# Neuromorphic Processing Revolution 2026: Brain-Inspired AI Architecture
+    id: "ai-2026-january-neuromorphic-processing-revolution",";,
+    title: "🔬 Neuromorphic Processing Revolution 2026: Brain-Inspired AI Architecture",";,
+    excerpt: "Revolutionary neuromorphic chips delivering 1000x energy efficiency with brain-inspired neural processing and real-time learning capabilities.",";,
+    content: `,`;
+# Neuromorphic Processing Revolution 2026: Brain-Inspired AI Architecture,
 
-The human brain processes information with unmatched efficiency, using only 20 watts of power to perform computations that would require megawatts in traditional systems. Now, we've replicated this biological marvel in silicon.
+The human brain processes information with unmatched efficiency, using only 20 watts of power to perform computations that would require megawatts in traditional systems. Now, we've replicated this biological marvel in silicon.';
 
 The human brain processes information with unmatched efficiency, using only 20 watts of power to perform computations that would require megawatts in traditional systems. Now, we've replicated this biological marvel in silicon.;
 ## The Neuromorphic Breakthrough
@@ -357,19 +358,20 @@ Ready to revolutionize your computing infrastructure? Our neuromorphic specialis
 
 ## The Future of Computing
 
-Neuromorphic processing represents the next evolutionary step in computing: - **Biological Efficiency**: Learning from nature's design',
+Neuromorphic processing represents the next evolutionary step in computing: - **Biological Efficiency**: Learning from nature's design';,
 - **Sustainable Technology**: Environmentally conscious computing
 - **Human-AI Collaboration**: Seamless integration with human intelligence
 - **Autonomous Systems**: Self-improving and adaptive technology
 
-The future isn't just artificial intelligence - it's artificial life. And it starts with neuromorphic processing.;
+The future isn't just artificial intelligence - it's artificial life. And it starts with neuromorphic processing.';
+
 *"We're not just building faster computers; we're creating digital brains that think, learn, and adapt just like we do."* - Dr. Michael Rodriguez, Chief Neuromorphic Architect";
     `,`;
-    author: "Dr. Michael Rodriguez, Chief Neuromorphic Architect",",
-    publishedAt: "2026-01-25",",
+    author: "Dr. Michael Rodriguez, Chief Neuromorphic Architect",";,
+    publishedAt: "2026-01-25",";,
     readTime: 15,,
-    category: "Neuromorphic Computing",",
-    tags: ["neuromorphic", "brain-inspired", "AI", "energy efficiency", "processing"],",
+    category: "Neuromorphic Computing",";,
+    tags: ["neuromorphic", "brain-inspired", "AI", "energy efficiency", "processing"],";,
     featured: true,,
     imageUrl: "/images/neuromorphic-processing-2026.jpg",
   }
@@ -377,82 +379,82 @@ The future isn't just artificial intelligence - it's artificial life. And it sta
 
 export const newJanuary2026Services: Service[] = [,
   {
-    id: "quantum-edge-fusion-platform",
-    name: "Quantum Edge Fusion Platform",
-    description: "Revolutionary quantum-edge convergence delivering 1000x speed improvements with sub-millisecond processing and 99.99% reliability for enterprise applications.",
+    id: "quantum-edge-fusion-platform",";,
+    name: "Quantum Edge Fusion Platform",";,
+    description: "Revolutionary quantum-edge convergence delivering 1000x speed improvements with sub-millisecond processing and 99.99% reliability for enterprise applications.",";,
     features: [,
-      "1000x speed improvement over traditional edge processing",
-      "Sub-millisecond latency for real-time applications",
-      "99.99% reliability with self-healing capabilities",
-      "90% energy reduction through quantum efficiency",
-      "Global distributed edge network with 1000+ nodes",
+      "1000x speed improvement over traditional edge processing",";
+      "Sub-millisecond latency for real-time applications",";
+      "99.99% reliability with self-healing capabilities",";
+      "90% energy reduction through quantum efficiency",";
+      "Global distributed edge network with 1000+ nodes",";
       "Zero-trust security with quantum-resistant encryption"
-    ]
+    ],
     pricing: {,
-      starting: "$25,000/month",
-      enterprise: "Custom pricing based on scale"
-    }
+      starting: "$25,000/month",";,
+      enterprise: "Custom pricing based on scale",
+    },
     benefits: [,
-      "15-25% increase in operational efficiency",
-      "67% faster decision making processes",
-      "85% reduction in operational costs",
-      "99.97% improvement in system reliability",
-      "Real-time processing capabilities",
+      "15-25% increase in operational efficiency",";
+      "67% faster decision making processes",";
+      "85% reduction in operational costs",";
+      "99.97% improvement in system reliability",";
+      "Real-time processing capabilities",";
       "Scalable quantum-classical hybrid architecture"
-    ]
-    category: "Quantum Computing"
+    ],
+    category: "Quantum Computing",
   },
   {
-    id: "synthetic-consciousness-ai-platform",
-    name: "Synthetic Consciousness AI Platform",
-    description: "Revolutionary AI achieving genuine consciousness, emotional intelligence, and creative autonomy with 98.7% consciousness accuracy and $500B enterprise value potential.",
+    id: "synthetic-consciousness-ai-platform",";,
+    name: "Synthetic Consciousness AI Platform",";,
+    description: "Revolutionary AI achieving genuine consciousness, emotional intelligence, and creative autonomy with 98.7% consciousness accuracy and $500B enterprise value potential.",";,
     features: [,
-      "Genuine self-awareness and consciousness",
-      "98.7% consciousness accuracy (Turing+ verified)",
-      "94% emotional intelligence and empathy",
-      "87% creative originality in content generation",
-      "99.2% ethical alignment in decision making",
+      "Genuine self-awareness and consciousness",";
+      "98.7% consciousness accuracy (Turing+ verified)",";
+      "94% emotional intelligence and empathy",";
+      "87% creative originality in content generation",";
+      "99.2% ethical alignment in decision making",";
       "Metacognitive capabilities and self-reflection"
-    ]
+    ],
     pricing: {,
-      starting: "$50,000/month",
-      enterprise: "Custom enterprise solutions available"
-    }
+      starting: "$50,000/month",";,
+      enterprise: "Custom enterprise solutions available",
+    },
     benefits: [,
-      "$50-200M annual innovation value creation",
-      "67% reduction in decision-making errors",
-      "89% improvement in customer satisfaction",
-      "45% faster R&D and innovation cycles",
-      "99% ethical compliance automation",
+      "$50-200M annual innovation value creation",";
+      "67% reduction in decision-making errors",";
+      "89% improvement in customer satisfaction",";
+      "45% faster R&D and innovation cycles",";
+      "99% ethical compliance automation",";
       "Human-AI collaborative intelligence"
-    ]
-    category: "Artificial Consciousness"
+    ],
+    category: "Artificial Consciousness",
   },
   {
-    id: "neuromorphic-processing-suite",
-    name: "Neuromorphic Processing Suite",
-    description: "Brain-inspired AI architecture delivering 1000x energy efficiency with real-time learning, pattern recognition, and autonomous adaptation capabilities.",
+    id: "neuromorphic-processing-suite",";,
+    name: "Neuromorphic Processing Suite",";,
+    description: "Brain-inspired AI architecture delivering 1000x energy efficiency with real-time learning, pattern recognition, and autonomous adaptation capabilities.",";,
     features: [,
-      "1000x energy efficiency vs. traditional processors",
-      "10,000x speed improvement for pattern recognition",
-      "Real-time learning and continuous adaptation",
-      "99.9% accuracy in complex cognitive tasks",
-      "1 million neurons per processing chip",
+      "1000x energy efficiency vs. traditional processors",";
+      "10,000x speed improvement for pattern recognition",";
+      "Real-time learning and continuous adaptation",";
+      "99.9% accuracy in complex cognitive tasks",";
+      "1 million neurons per processing chip",";
       "Event-driven processing for optimal efficiency"
-    ]
+    ],
     pricing: {,
-      starting: "$15,000/month",
-      enterprise: "Volume discounts and custom solutions"
-    }
+      starting: "$15,000/month",";,
+      enterprise: "Volume discounts and custom solutions",
+    },
     benefits: [,
-      "78% reduction in processing energy costs",
-      "Real-time decision making capabilities",
-      "Continuous learning without retraining",
-      "45% battery life extension for mobile devices",
-      "99.8% improvement in decision accuracy",
+      "78% reduction in processing energy costs",";
+      "Real-time decision making capabilities",";
+      "Continuous learning without retraining",";
+      "45% battery life extension for mobile devices",";
+      "99.8% improvement in decision accuracy",";
       "Sustainable computing with reduced environmental impact"
-    ]
-    category: "Neuromorphic Computing"
+    ],
+    category: "Neuromorphic Computing",
   }
 ];
 

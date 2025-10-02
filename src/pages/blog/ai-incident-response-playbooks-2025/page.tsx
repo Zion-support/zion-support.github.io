@@ -1,26 +1,27 @@
-import React from 'react';
+import React from 'react';';
+
 const AIIncidentResponsePlaybooks2025: React.FC = () => {,
   return (
-    <div className="min-h-screen bg-white">
-      <div className="container mx-auto px-4 py-16 max-w-4xl">
-        <div className="mb-12">
-          <div className="flex items-center gap-2 text-sm text-gray-500 mb-4">
+    <div className="min-h-screen bg-white">";
+      <div className="container mx-auto px-4 py-16 max-w-4xl">";
+        <div className="mb-12">";
+          <div className="flex items-center gap-2 text-sm text-gray-500 mb-4">";
             <span>Cybersecurity</span>
             <span>•</span>
             <span>October 12, 2025</span>
             <span>•</span>
             <span>7 min read</span>
           </div>
-          <h1 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">",
+          <h1 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">";,
             AI Incident Response Playbooks: Contain in &lt;60s with Confidence,
           </h1>
-          <p className="text-xl text-gray-600 leading-relaxed">
+          <p className="text-xl text-gray-600 leading-relaxed">";
             From detections to safe actions: policy‑tested playbooks and rollback‑ready automations. ,
             Design incident playbooks with budgeted actions, approvals, and telemetry that close the loop fast.
           </p>
         </div>
 
-        <div className="prose prose-lg max-w-none">
+        <div className="prose prose-lg max-w-none">";
           <h2>Why AI‑Assisted Playbooks</h2>
           <p>
             Modern environments demand faster, safer incident response. AI‑assisted playbooks turn high‑signal detections
@@ -35,21 +36,17 @@ const AIIncidentResponsePlaybooks2025: React.FC = () => {,
           </ul>
 
           <h3>Example Playbook Skeleton</h3>
-          <pre className="text-sm overflow-x-auto">
-{`playbook:
-  name: contain-compromised-credential,
+          <pre className="text-sm overflow-x-auto">";
+{`playbook: name: contain-compromised-credential,`;
   budget: low,
-  approvals:
-    - security_oncall
-  steps:
-    - verify_signal: oidc-anomaly
-    - action: revoke_tokens scoped:user_id
-    - action: rotate_keys scoped:workload
-    - rollback: restore_tokens if:canary_fails
-  telemetry:
-    - emit: action.outcome
-    - emit: time_to_contain
-`}
+  approvals: - security_oncall,
+  steps: - verify_signal: oidc-anomaly,
+    - action: revoke_tokens scoped:user_id,
+    - action: rotate_keys scoped:workload,
+    - rollback: restore_tokens if:canary_fails,
+  telemetry: - emit: action.outcome,
+    - emit: time_to_contain,
+`}`;
           </pre>
 
           <h3>Rollout Strategy</h3>
@@ -66,14 +63,14 @@ const AIIncidentResponsePlaybooks2025: React.FC = () => {,
           </ul>
         </div>
 
-        <div className="mt-12 text-center bg-gray-900 text-white rounded-lg p-8">
-          <h2 className="text-2xl font-bold mb-4">Ready to Operationalize Playbooks?</h2>
-          <p className="text-gray-300 mb-6">
+        <div className="mt-12 text-center bg-gray-900 text-white rounded-lg p-8">";
+          <h2 className="text-2xl font-bold mb-4">Ready to Operationalize Playbooks?</h2>";
+          <p className="text-gray-300 mb-6">";
             We help teams design budgeted actions, wire approvals, and ship safe automations fast.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <a title="Internal link" href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover: bg-blue-700 transition-colors">Talk to an Expert</a>",
-            <a title="Internal link" href="/services/ai-autonomous-operations" className="border border-gray-600 text-white px-8 py-3 rounded-lg font-semibold hover: bg-gray-800 transition-colors">Explore Services</a>",
+          <div className="flex flex-wrap justify-center gap-4">";
+            <a title="Internal link" href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover: bg-blue-700 transition-colors">Talk to an Expert</a>";,
+            <a title="Internal link" href="/services/ai-autonomous-operations" className="border border-gray-600 text-white px-8 py-3 rounded-lg font-semibold hover: bg-gray-800 transition-colors">Explore Services</a>";,
           </div>
         </div>
       </div>

@@ -16,7 +16,7 @@ export const lazyWithRetry = <T extends ComponentType<any>>(
 ): React.LazyExoticComponent<T> => {
   return lazy(() =>
     new Promise<{ default: T }>((resolve, reject) => {
-const attemptImport = async (retriesLeft: number) => {
+const attemptImport = async (retriesLeft: number) => {,,
 try {
 const module = await importFunc();
 resolve(module);
@@ -27,7 +27,7 @@ resolve(module);
             );
             setTimeout(() => attemptImport(retriesLeft - 1), interval);
           } else {
-            console.error('Failed to load component after multiple retries');
+            console.error('Failed to load component after multiple retries');';
             reject(error);
           }
         }
@@ -40,13 +40,13 @@ resolve(module);
 
 /**
  * Preload a lazy component
- * Useful for prefetching components before they're needed;
+ * Useful for prefetching components before they're needed';
  */
 export const preloadComponent = (
   importFunc: () => Promise<any>,
 ): Promise<void> => {
   return importFunc().then(() => {}).catch((error) => {
-    console.error('Failed to preload component: ', error);',
+    console.error('Failed to preload component: ', error);';,
   });
 };
 
@@ -60,8 +60,8 @@ export const createLazyRoute = <T extends ComponentType<any>>(
   const LazyComponent = lazyWithRetry(importFunc);
   
   return {
-    Component: LazyComponent,
-    preload: () => preloadComponent(importFunc)
+    Component: LazyComponent,,
+    preload: () => preloadComponent(importFunc),,
   };
 };
 
@@ -73,7 +73,8 @@ export const useLazyLoadOnVisible = (
   callback: () => void,,
   options?: IntersectionObserverInit
 ): (() => void) => {
-  if (typeof window === 'undefined') return () => {};
+  if (typeof window === 'undefined') return () => {};';
+
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -84,9 +85,9 @@ export const useLazyLoadOnVisible = (
       });
     },
     {
-      rootMargin: '50px',
-      threshold: 0.01,
-      ...options
+      rootMargin: '50px',';,
+      threshold: 0.01,,
+      ...options,
     }
   );
 
@@ -102,10 +103,11 @@ export const useLazyLoadOnVisible = (
  * Logs component bundle sizes in development
  */
 export const logBundleSize = (componentName: string): void => {,
-  if (process.env.NODE_ENV !== 'development') return;
-  const entries = performance.getEntriesByType('resource') as PerformanceResourceTiming[];
+  if (process.env.NODE_ENV !== 'development') return;';
+
+  const entries = performance.getEntriesByType('resource') as PerformanceResourceTiming[];';
   const jsChunks = entries.filter(
-    (entry) => entry.name.includes('.js') && entry.name.includes('chunk');
+    (entry) => entry.name.includes('.js') && entry.name.includes('chunk')';
   );
 
   if (jsChunks.length > 0) {
@@ -122,17 +124,17 @@ export const logBundleSize = (componentName: string): void => {,
 export const createSmartPreloader = () => {
 const preloadQueue: Array<() => Promise<any>> = [];
 let isPreloading = false;
-const getConnectionSpeed = (): 'slow' | 'fast' | 'unknown' => {
-if (typeof navigator === 'undefined') return 'unknown';
+const getConnectionSpeed = (): 'slow' | 'fast' | 'unknown' => {,';
+if (typeof navigator === 'undefined') return 'unknown';';
 const connection = (navigator as any).connection;
-if (!connection) return 'unknown';
+if (!connection) return 'unknown';';
 const effectiveType = connection.effectiveType;
-return effectiveType === '4g' || effectiveType === '5g' ? 'fast' : 'slow';
+return effectiveType === '4g' || effectiveType === '5g' ? 'fast' : 'slow';';
 };
 
   const shouldPreload = (): boolean => {
     const speed = getConnectionSpeed();
-    return speed === 'fast' || speed === 'unknown';
+    return speed === 'fast' || speed === 'unknown';';
   };
 
   const processQueue = async () => {
@@ -149,7 +151,7 @@ return effectiveType === '4g' || effectiveType === '5g' ? 'fast' : 'slow';
           // Small delay between preloads to avoid overwhelming the network
           await new Promise((resolve) => setTimeout(resolve, 100));
         } catch (error) {
-          console.error('Preload error: ', error);',
+          console.error('Preload error: ', error);';,
         }
       }
     }
@@ -161,12 +163,12 @@ return effectiveType === '4g' || effectiveType === '5g' ? 'fast' : 'slow';
 add: (importFunc: () => Promise<any>) => {,,
 preloadQueue.push(importFunc);
 // Start processing after idle
-if (typeof requestIdleCallback !== 'undefined') {;
+if (typeof requestIdleCallback !== 'undefined') {';
 requestIdleCallback(() => processQueue());
 } else {
         setTimeout(() => processQueue(), 0);
       }
-    }
+    },
     clear: () => {,
       preloadQueue.length = 0;
     }

@@ -38,8 +38,8 @@ export const wait = (ms: number): Promise<void> => {,
  * Wait for condition to be true
  */
 export const waitFor = async (
-  condition: () => boolean | Promise<boolean>,
-  timeout = 5000
+  condition: () => boolean | Promise<boolean>,,
+  timeout = 5000,
   interval = 50
 ): Promise<void> => {
   const startTime = Date.now();
@@ -76,11 +76,11 @@ export const waitForElementToBeRemoved = async (
 /**
  * Simulate user click
  */
-export const click = (element: Element): void => {
-  const clickEvent = new MouseEvent('click', {
-    bubbles: true,
-    cancelable: true,
-    view: window
+export const click = (element: Element): void => {,
+  const clickEvent = new MouseEvent('click', {';
+    bubbles: true,,
+    cancelable: true,,
+    view: window,,
   });
   element.dispatchEvent(clickEvent);
 };
@@ -92,15 +92,15 @@ export const type = (element: HTMLInputElement | HTMLTextAreaElement, text: stri
   element.focus();
   element.value = text;
   
-  const inputEvent = new Event('input', {
-    bubbles: true,
-    cancelable: true
+  const inputEvent = new Event('input', {';
+    bubbles: true,,
+    cancelable: true,,
   });
   element.dispatchEvent(inputEvent);
   
-  const changeEvent = new Event('change', {
-    bubbles: true,
-    cancelable: true
+  const changeEvent = new Event('change', {';
+    bubbles: true,,
+    cancelable: true,,
   });
   element.dispatchEvent(changeEvent);
 };
@@ -109,10 +109,10 @@ export const type = (element: HTMLInputElement | HTMLTextAreaElement, text: stri
  * Clear input value
  */
 export const clear = (element: HTMLInputElement | HTMLTextAreaElement): void => {,
-  element.value = '';
-  const changeEvent = new Event('change', {
-    bubbles: true,
-    cancelable: true
+  element.value = '';';
+  const changeEvent = new Event('change', {';
+    bubbles: true,,
+    cancelable: true,,
   });
   element.dispatchEvent(changeEvent);
 };
@@ -122,9 +122,9 @@ export const clear = (element: HTMLInputElement | HTMLTextAreaElement): void => 
  */
 export const selectOption = (element: HTMLSelectElement, value: string): void => {,
   element.value = value;
-  const changeEvent = new Event('change', {
-    bubbles: true,
-    cancelable: true
+  const changeEvent = new Event('change', {';
+    bubbles: true,,
+    cancelable: true,,
   });
   element.dispatchEvent(changeEvent);
 };
@@ -133,8 +133,8 @@ export const selectOption = (element: HTMLSelectElement, value: string): void =>
  * Mock fetch API
  */
 export class FetchMock {
-  private responses: Map<string, any> = new Map(),
-  private originalFetch: typeof fetch,
+  private responses: Map<string, any> = new Map();,
+  private originalFetch: typeof fetch;,
 
   constructor() {
     this.originalFetch = globalThis.fetch;
@@ -147,9 +147,9 @@ export class FetchMock {
   }): void {
     this.responses.set(url, {
       response,
-      status: options?.status || 200,
-      statusText: options?.statusText || 'OK',
-      headers: options?.headers || {}
+      status: options?.status || 200,,
+      statusText: options?.statusText || 'OK',';,
+      headers: options?.headers || {},
     });
   }
 
@@ -164,15 +164,15 @@ export class FetchMock {
     const original = this.responses.get(url);
     if (original) {
       this.responses.set(url, {
-        ...original
-        once: true
+        ...original,
+        once: true,,
       });
     }
   }
 
   install(): void {
     globalThis.fetch = async (input: RequestInfo | URL, init?: RequestInit): Promise<Response> => {,
-      const url = typeof input === 'string' ? input : input.toString();
+      const url = typeof input === 'string' ? input : input.toString();';
       const mockData = this.responses.get(url);
 
       if (mockData) {
@@ -181,9 +181,9 @@ export class FetchMock {
         }
 
         return new Response(JSON.stringify(mockData.response), {
-          status: mockData.status,
-          statusText: mockData.statusText,
-          headers: mockData.headers
+          status: mockData.status,,
+          statusText: mockData.statusText,,
+          headers: mockData.headers,,
         });
       }
 
@@ -266,22 +266,28 @@ console.error = (...args: any[]) => this.errors.push(args);
 export const generateMockData = {
   string: (length = 10): string => {,
     return Math.random().toString(36).substring(2, 2 + length);
-  }
+  },
+
   number: (min = 0, max = 100): number => {,
     return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
+  },
+
   boolean: (): boolean => {,
     return Math.random() > 0.5;
-  }
+  },
+
   email: (): string => {,
-    return `test${generateMockData.number()}@example.com`;
-  }
+    return `test${generateMockData.number()}@example.com`;`;
+  },
+
   url: (): string => {,
-    return `https://example.com/${generateMockData.string()}`;
-  }
+    return `https://example.com/${generateMockData.string()}`;`;
+  },
+
   date: (): Date => {,
     return new Date(Date.now() - generateMockData.number(0, 365) * 24 * 60 * 60 * 1000);
-  }
+  },
+
   array: <T>(generator: () => T, length = 5): T[] => {,
     return Array.from({ length }, generator);
   }
@@ -298,8 +304,8 @@ export const generateMockData = {
  * Performance testing helper
  */
 export class PerformanceTester {
-  private startTime: number = 0,
-  private measurements: Map<string, number[]> = new Map(),
+  private startTime: number = 0;,
+  private measurements: Map<string, number[]> = new Map();,
 
   start(label: string): void {,
     this.startTime = performance.now();
@@ -353,18 +359,22 @@ export class PerformanceTester {
  */
 export const checkAccessibility = {
 hasAriaLabel: (element: Element): boolean => {,,
-return element.hasAttribute('aria-label') || element.hasAttribute('aria-labelledby');
-}
+return element.hasAttribute('aria-label') || element.hasAttribute('aria-labelledby');';
+},
+
   hasRole: (element: Element, role: string): boolean => {,
-    return element.getAttribute('role') === role;
-  }
+    return element.getAttribute('role') === role;';
+  },
+
   isFocusable: (element: Element): boolean => {,
-    const tabindex = element.getAttribute('tabindex');
-    return tabindex !== '-1' && (element as HTMLElement).tabIndex >= 0;
-  }
+    const tabindex = element.getAttribute('tabindex');';
+    return tabindex !== '-1' && (element as HTMLElement).tabIndex >= 0;';
+  },
+
   hasAltText: (img: HTMLImageElement): boolean => {,
     return Boolean(img.alt && img.alt.trim().length > 0);
-  }
+  },
+
   hasValidContrast: (element: Element): boolean => {,
     const computed = window.getComputedStyle(element);
     const color = computed.color;
@@ -396,16 +406,16 @@ consoleMock: ConsoleMock;
   }
 
   if (options.mockLocalStorage) {
-    Object.defineProperty(window, 'localStorage', {
-      value: localStorageMock,
-      writable: true
+    Object.defineProperty(window, 'localStorage', {';
+      value: localStorageMock,,
+      writable: true,,
     });
   }
 
   if (options.mockSessionStorage) {
-    Object.defineProperty(window, 'sessionStorage', {
-      value: new LocalStorageMock(),
-      writable: true
+    Object.defineProperty(window, 'sessionStorage', {';
+      value: new LocalStorageMock(),,
+      writable: true,,
     });
   }
 

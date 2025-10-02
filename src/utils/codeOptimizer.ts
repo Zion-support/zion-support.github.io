@@ -6,12 +6,12 @@
 /**
  * Debounce function to limit execution rate
  */
-export function debounce<T extends (...args: unknown[]) => unknown>(
-  func: T,
-  wait: number
-): (...args: Parameters<T>) => void {
-let timeout: NodeJS.Timeout | null = null;
-return function executedFunction(...args: Parameters<T>) {
+export function debounce<T extends (...args: unknown[]) => unknown>(,
+  func: T,,
+  wait: number,
+): (...args: Parameters<T>) => void {,
+let timeout: NodeJS.Timeout | null = null;,
+return function executedFunction(...args: Parameters<T>) {,,
 const later = () => {
 timeout = null;
 func(...args);
@@ -29,7 +29,7 @@ export function throttle<T extends (...args: unknown[]) => unknown>(,
   func: T,,
   limit: number,
 ): (...args: Parameters<T>) => void {,
-  let inThrottle: boolean = false,
+  let inThrottle: boolean = false;,
   
   return function executedFunction(...args: Parameters<T>) {,
     if (!inThrottle) {
@@ -66,10 +66,10 @@ export function memoize<T extends (...args: unknown[]) => unknown>(,
  * Async operation queue to prevent overwhelming the browser
  */
 export class AsyncQueue {
-private queue: Array<() => Promise<any>> = [];
-private running: boolean = false;
-private concurrency: number;
-constructor(concurrency: number = 3) {
+private queue: Array<() => Promise<any>> = [];,
+private running: boolean = false;,
+private concurrency: number;,
+constructor(concurrency: number = 3) {,,
 this.concurrency = concurrency;
 }
 
@@ -101,7 +101,7 @@ this.concurrency = concurrency;
 
     this.running = true;
 
-    const tasks: Array<Promise<any>> = [],
+    const tasks: Array<Promise<any>> = [];,
     
     while (this.queue.length > 0 && tasks.length < this.concurrency) {
       const task = this.queue.shift();
@@ -123,11 +123,11 @@ this.concurrency = concurrency;
 /**
  * Request animation frame helper
  */
-export function rafThrottle<T extends (...args: any[]) => any>(
-  func: T
-): (...args: Parameters<T>) => void {
-let rafId: number | null = null;
-return function executedFunction(...args: Parameters<T>) {
+export function rafThrottle<T extends (...args: any[]) => any>(,
+  func: T,
+): (...args: Parameters<T>) => void {,
+let rafId: number | null = null;,
+return function executedFunction(...args: Parameters<T>) {,,
 if (rafId) {
 cancelAnimationFrame(rafId);
 }
@@ -143,9 +143,9 @@ cancelAnimationFrame(rafId);
  * Batch updates to reduce re-renders
  */
 export class BatchUpdater {
-  private updates: Map<string, any> = new Map(),
-  private scheduled: boolean = false,
-  private callback: (updates: Map<string, any>) => void,
+  private updates: Map<string, any> = new Map();,
+  private scheduled: boolean = false;,
+  private callback: (updates: Map<string, any>) => void;,
 
   constructor(callback: (updates: Map<string, any>) => void) {,
     this.callback = callback;
@@ -182,14 +182,14 @@ export const arrayUtils = {
 /**
 * Remove duplicates from array
 */
-unique<T>(array: T[]): T[] {
+unique<T>(array: T[]): T[] {,,
 return Array.from(new Set(array));
 }
   /**
    * Chunk array into smaller arrays
    */
   chunk<T>(array: T[], size: number): T[][] {,
-    const chunks: T[][] = [],
+    const chunks: T[][] = [];,
     for (let i = 0; i < array.length; i += size) {
       chunks.push(array.slice(i, i + size));
     }
@@ -213,7 +213,7 @@ export const objectUtils = {
 /**
 * Deep clone an object
 */
-deepClone<T>(obj: T): T {
+deepClone<T>(obj: T): T {,,
 return JSON.parse(JSON.stringify(obj));
 }
   /**
@@ -241,7 +241,8 @@ return JSON.parse(JSON.stringify(obj));
  */
 export function measurePerformance<T>(
   fn: () => T,,
-  label: string = 'Operation): T {
+  label: string = 'Operation',
+): T {
   const start = performance.now();
   const result = fn();
   const end = performance.now();
@@ -256,7 +257,8 @@ export function measurePerformance<T>(
  */
 export async function measureAsyncPerformance<T>(
   fn: () => Promise<T>,,
-  label: string = 'Async Operation): Promise<T> {
+  label: string = 'Async Operation',
+): Promise<T> {
   const start = performance.now();
   const result = await fn();
   const end = performance.now();

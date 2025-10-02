@@ -1,8 +1,8 @@
 {
-  "timestamp": "2025-10-02T12:43:22.555Z",
+  "timestamp": "2025-10-02T12:31:43.322Z",
   "summary": {
-    "totalFiles": 430,
-    "fixedFiles": 428,
+    "totalFiles": 429,
+    "fixedFiles": 427,
     "errors": 0,
     "fixedFileList": [
       "/workspace/src/App.tsx",
@@ -233,7 +233,6 @@
       "/workspace/src/pages/Privacy.tsx",
       "/workspace/src/pages/Resources.tsx",
       "/workspace/src/pages/Services.tsx",
-      "/workspace/src/pages/ServicesCatalog.tsx",
       "/workspace/src/pages/ServicesPage.tsx",
       "/workspace/src/pages/Solutions.tsx",
       "/workspace/src/pages/SolutionsPage.tsx",
@@ -665,7 +664,6 @@
     "/workspace/src/pages/Privacy.tsx",
     "/workspace/src/pages/Resources.tsx",
     "/workspace/src/pages/Services.tsx",
-    "/workspace/src/pages/ServicesCatalog.tsx",
     "/workspace/src/pages/ServicesPage.tsx",
     "/workspace/src/pages/Solutions.tsx",
     "/workspace/src/pages/SolutionsPage.tsx",

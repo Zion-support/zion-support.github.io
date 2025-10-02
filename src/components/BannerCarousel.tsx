@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';';
+
 interface BannerProps {
-title: string,
-description: string,
+title: string;,
+description: string;,
 image?: string;
 link?: string;
 }
@@ -11,18 +12,18 @@ const BannerCarousel: React.FC = () => {,
 
   const banners: BannerProps[] = [,
     {
-      title: "AI-Powered Business Solutions",",
-      description: "Transform your business with cutting-edge AI technology",",
+      title: "AI-Powered Business Solutions",";,
+      description: "Transform your business with cutting-edge AI technology",";,
       link: "/services/ai-services",
     },
     {
-      title: "Micro SaaS Solutions",",
-      description: "Scalable software solutions for modern businesses",",
+      title: "Micro SaaS Solutions",";,
+      description: "Scalable software solutions for modern businesses",";,
       link: "/services/micro-saas",
     },
     {
-      title: "Enterprise IT Services",",
-      description: "Comprehensive IT solutions for enterprise needs",",
+      title: "Enterprise IT Services",";,
+      description: "Comprehensive IT solutions for enterprise needs",";,
       link: "/services/it-services",
     }
   ];
@@ -36,10 +37,10 @@ const BannerCarousel: React.FC = () => {,
   }, [banners.length]);
 
   return (
-    <div className="relative bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg overflow-hidden">
-      <div className="p-8 text-white">
-        <h2 className="text-3xl font-bold mb-4">{banners[currentBanner].title}</h2>
-        <p className="text-xl mb-6">{banners[currentBanner].description}</p>
+    <div className="relative bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg overflow-hidden">";
+      <div className="p-8 text-white">";
+        <h2 className="text-3xl font-bold mb-4">{banners[currentBanner].title}</h2>";
+        <p className="text-xl mb-6">{banners[currentBanner].description}</p>";
         {banners[currentBanner].link && (
           <a 
             href={banners[currentBanner].link}
@@ -51,7 +52,7 @@ const BannerCarousel: React.FC = () => {,
       </div>
       
       {/* Banner indicators */}
-      <div className="absolute bottom-4 right-4 flex space-x-2">
+      <div className="absolute bottom-4 right-4 flex space-x-2">";
         {banners.map((_, index) => (
           <button
             key={index}
