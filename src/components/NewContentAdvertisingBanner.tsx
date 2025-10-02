@@ -42,76 +42,39 @@ const NewContentAdvertisingBanner: React.FC = () => {
     },
     {
       id: 1,
-      title: 'GenAI Cache Quality Tiers v2',
-      category: 'GenAI Engineering',
+      title: 'AI 2027: Operational Trust Blueprint',
+      category: 'AI Strategy',
       readTime: '8 min',
-      rating: 5.0,
-      readers: '120K+',
+      rating: 4.9,
+      readers: '58K+',
       badge: 'NEW',
       gradient: 'from-blue-500 to-purple-500',
       icon: <Star className="w-6 h-6" />,
-      link: '/blog/genai-2025-oct-03-cache-quality-tiers-v2'
+      link: '/blog/ai-2027-operational-trust-blueprint'
     },
     {
       id: 2,
-      title: 'Edge 2026: Attested Analytics',
-      category: 'Analytics',
+      title: 'Edge 2026: Private Feature Flags',
+      category: 'Architecture',
       readTime: '7 min',
-      rating: 4.9,
-      readers: '87K+',
-      badge: 'FEATURED',
+      rating: 4.8,
+      readers: '41K+',
+      badge: 'TRENDING',
       gradient: 'from-cyan-500 to-blue-500',
       icon: <TrendingUp className="w-6 h-6" />,
-      link: '/blog/edge-2026-attested-analytics'
+      link: '/blog/edge-2026-private-feature-flags'
     },
     {
       id: 3,
-      title: 'Consentless Journeys Blueprint',
-      category: 'Experimentation',
-      readTime: '7 min',
-      rating: 5.0,
-      readers: '65K+',
-      badge: 'NEW',
+      title: 'GenAI Quality Tiers v2 (2026)',
+      category: 'GenAI',
+      readTime: '8 min',
+      rating: 4.9,
+      readers: '47K+',
+      badge: 'FEATURED',
       gradient: 'from-green-500 to-emerald-500',
       icon: <Award className="w-6 h-6" />,
-      link: '/blog/edge-2025-oct-03-consentless-journeys-blueprint'
-    },
-    {
-      id: 4,
-      title: 'Consentless Analytics v4 (2027)',
-      category: 'Analytics',
-      readTime: '6 min',
-      rating: 4.9,
-      readers: '52K+',
-      badge: 'FEATURED',
-      gradient: 'from-emerald-500 to-cyan-500',
-      icon: <TrendingUp className="w-6 h-6" />,
-      link: '/blog/edge-2027-consentless-analytics-v4'
-    }
-    ,
-    {
-      id: 5,
-      title: 'Operational Trust Scorecards v3',
-      category: 'AI Operations',
-      readTime: '9 min',
-      rating: 5.0,
-      readers: '41K+',
-      badge: 'NEW',
-      gradient: 'from-purple-500 to-pink-500',
-      icon: <Sparkles className="w-6 h-6" />,
-      link: '/blog/ai-2025-oct-01-operational-trust-v3'
-    },
-    {
-      id: 6,
-      title: 'Consentless Experiments v3 (<100ms)',
-      category: 'Analytics',
-      readTime: '7 min',
-      rating: 4.9,
-      readers: '33K+',
-      badge: 'NEW',
-      gradient: 'from-teal-500 to-emerald-500',
-      icon: <TrendingUp className="w-6 h-6" />,
-      link: '/blog/edge-2025-oct-01-private-consentless-experiments'
+      link: '/blog/genai-quality-tiers-v2-2026'
     }
   ];
 

@@ -18,7 +18,7 @@ const NewArticlesPromoBanner: React.FC<NewArticlesPromoBannerProps> = ({
   rotationInterval = 5000,
   className = ''
 }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [, setCurrentIndex] = useState(0);
   const featuredArticles = newArticles2025.filter(a => a.featured).slice(0, showCount);
 
   useEffect(() => {
