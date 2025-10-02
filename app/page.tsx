@@ -227,6 +227,9 @@ export default function HomePage() {
       {/* 🚀 NEWEST BREAKTHROUGH CONTENT - JANUARY 30, 2026 - REVOLUTIONARY AI TECHNOLOGIES! */}
       <NewContent2026BreakthroughBanner />
 
+      {/* Featured Dual Cards Section */}
+      <section className="py-12">
+        <div className="max-w-6xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             <Link href="/blog/ai-2027-quantum-revolution" className="group">
               <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 backdrop-blur-lg rounded-2xl p-8 border border-purple-500/30 hover:border-purple-400/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/30">
@@ -351,19 +354,21 @@ export default function HomePage() {
       <EnterpriseAutomationSuccessBanner />
 
       {/* 📣 Featured: New — Autonomous Governance & Agent Ops Observability */}
-      <div className="bg-gradient-to-r from-purple-700/20 to-fuchsia-700/20 border border-white/10 rounded-2xl p-6 mb-8">
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-          <div>
-            <div className="text-xs uppercase tracking-wide text-fuchsia-300 mb-1">New</div>
-            <h3 className="text-xl font-bold">Autonomous Governance 2027 + Agent Ops Observability 2026</h3>
-            <p className="text-white/70">Policy gates, budgets, metrics, and evals to ship reliable autonomy.</p>
+      <section className="mb-8">
+        <div className="bg-gradient-to-r from-purple-700/20 to-fuchsia-700/20 border border-white/10 rounded-2xl p-6">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+            <div>
+              <div className="text-xs uppercase tracking-wide text-fuchsia-300 mb-1">New</div>
+              <h3 className="text-xl font-bold">Autonomous Governance 2027 + Agent Ops Observability 2026</h3>
+              <p className="text-white/70">Policy gates, budgets, metrics, and evals to ship reliable autonomy.</p>
+            </div>
+            <div className="flex gap-3">
+              <Link href="/blog/ai-2027-autonomous-governance-blueprint" className="inline-flex items-center gap-2 bg-white text-purple-700 px-4 py-2 rounded-lg font-semibold hover:bg-purple-50 transition-colors">Read Governance</Link>
+              <Link href="/blog/ai-2026-agent-ops-observability" className="inline-flex items-center gap-2 bg-fuchsia-500 text-white px-4 py-2 rounded-lg font-semibold hover:bg-fuchsia-400 transition-colors">Read Observability</Link>
+            </div>
           </div>
-          <div className="flex gap-3">
-            <Link href="/blog/ai-2027-autonomous-governance-blueprint" className="inline-flex items-center gap-2 bg-white text-purple-700 px-4 py-2 rounded-lg font-semibold hover:bg-purple-50 transition-colors">Read Governance</Link>
-            <Link href="/blog/ai-2026-agent-ops-observability" className="inline-flex items-center gap-2 bg-fuchsia-500 text-white px-4 py-2 rounded-lg font-semibold hover:bg-fuchsia-400 transition-colors">Read Observability</Link>
-                  </div>
-                </div>
-              </div>
+        </div>
+      </section>
       {/* 🔔 New Promotions: Governance + Agent Ops */}
       <section className="py-6 bg-gradient-to-r from-blue-700 via-indigo-700 to-fuchsia-700 text-white">
         <div className="max-w-6xl mx-auto px-4">
@@ -376,6 +381,9 @@ export default function HomePage() {
               <h3 className="text-xl font-bold">AI 2027 Autonomous Governance Blueprint</h3>
               <p className="text-white/80 mt-2 text-sm">Policy → controls → telemetry → review. Ship autonomy safely with measurable guardrails.</p>
             </Link>
+          </div>
+        </div>
+      </section>
 
       {/* 🔔 New: Enterprise Autonomy Blueprint 2026 */}
       <AutonomyBlueprint2026Banner />
@@ -409,7 +417,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-=======
+
       {/* 🚀🚀🚀 FRESH CONTENT 2027 - Revolutionary AI Breakthroughs! 🚀🚀🚀 */}
       <RevolutionaryAI2027Banner />
       
@@ -877,10 +885,11 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* 🔥 BRAND NEW CONTENT - SEPTEMBER 30, 2025 - 5 EXCLUSIVE PUBLICATIONS! */}
-        <section className="bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 text-white py-20">
+      {/* 🔥 BRAND NEW CONTENT - SEPTEMBER 30, 2025 - 5 EXCLUSIVE PUBLICATIONS! */}
+      <section className="bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 text-white py-20">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-12">
               <div className="flex items-center justify-center gap-4 mb-6">
