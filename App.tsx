@@ -8,6 +8,7 @@ import ConsensusIntelligenceBreakthroughBanner from "./components/ConsensusIntel
 import AutonomousEnterpriseBreakthroughBanner from "./components/AutonomousEnterpriseBreakthroughBanner";
 import June2026MegaBreakthroughBanner from "./components/June2026MegaBreakthroughBanner";
 import QuantumConsciousnessRevolutionBanner from "./components/QuantumConsciousnessRevolutionBanner";
+import July2026AutomationBreakthroughBanner from "./components/July2026AutomationBreakthroughBanner";
 
 // Lazy load pages for better performance
 const LazyHomePage = React.lazy(() => import('./app/page'));
@@ -30,6 +31,9 @@ export default function App(): JSX.Element {
       <Router>
         <div className="min-h-screen bg-slate-950">
           <Header />
+          
+          {/* NEW: July 2026 Automation Breakthrough Banner - MOST PROMINENT */}
+          <July2026AutomationBreakthroughBanner />
           
           {/* NEW: June 2026 Mega Breakthrough Banner - Most Prominent */}
           <June2026MegaBreakthroughBanner />
