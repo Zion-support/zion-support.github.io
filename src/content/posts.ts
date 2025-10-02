@@ -1422,7 +1422,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-13",
     featured: true,
     readTime: "8 min read"
-  }
+  },
 );
 
 // Sept 30, 2025 – Fresh drop to expand catalog and advertise on Home (v4)
