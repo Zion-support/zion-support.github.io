@@ -60,6 +60,15 @@ export function Header() {
                 <Link href="/services/ai-cybersecurity-automation-suite" className="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600">
                   AI Cybersecurity Automation Suite
                 </Link>
+                <Link href="/services/ai-sales-copilot" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  AI Sales Copilot
+                </Link>
+                <Link href="/services/data-quality-observability" className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600">
+                  Data Quality & Observability
+                </Link>
+                <Link href="/services/finops-cost-optimizer" className="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600">
+                  FinOps Cost Optimizer
+                </Link>
                 <div className="border-t border-gray-100 my-2"></div>
                 <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">Industry Solutions</div>
                 <Link href="/services/manufacturing-ai-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600">
@@ -84,6 +93,12 @@ export function Header() {
                 </Link>
                 <Link href="/services/ai-financial-analysis-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600">
                   AI Financial Analysis Platform
+                </Link>
+                <Link href="/services/genai-rag-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600">
+                  Enterprise RAG & GenAI Platform
+                </Link>
+                <Link href="/services/ai-marketing-studio" className="block px-4 py-2 text-sm text-gray-700 hover:bg-rose-50 hover:text-rose-600">
+                  AI Marketing Studio
                 </Link>
                 <div className="border-t border-gray-100 my-2"></div>
                 <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">Specialized Solutions</div>
