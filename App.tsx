@@ -42,8 +42,11 @@ export default function App(): JSX.Element {
             <Route path="/careers" element={<CareersPage />} />
             <Route path="/marketplace" element={<MarketplacePage />} />
             <Route path="/services" element={<div className="py-20 px-4"><h1 className="text-4xl font-bold text-center text-white">Services</h1></div>} />
-            <Route path="/comprehensive-micro-saas-services" element={<div className="py-20 px-4"><h1 className="text-4xl font-bold text-center text-white">Comprehensive Micro SaaS Services</h1></div>} />
-            <Route path="/comprehensive-it-services" element={<div className="py-20 px-4"><h1 className="text-4xl font-bold text-center text-white">Comprehensive IT Services</h1></div>} />
+            <Route path="/services/comprehensive-micro-saas-solutions" element={<div className="py-20 px-4"><h1 className="text-4xl font-bold text-center text-white">Comprehensive Micro SaaS Solutions</h1></div>} />
+            <Route path="/services/comprehensive-it-services" element={<div className="py-20 px-4"><h1 className="text-4xl font-bold text-center text-white">Comprehensive IT Services</h1></div>} />
+            <Route path="/services/ai-voice-assistant-platform" element={<div className="py-20 px-4"><h1 className="text-4xl font-bold text-center text-white">AI Voice Assistant Platform</h1></div>} />
+            <Route path="/services/ai-document-automation-platform" element={<div className="py-20 px-4"><h1 className="text-4xl font-bold text-center text-white">AI Document Automation Platform</h1></div>} />
+            <Route path="/services/ai-business-intelligence-platform" element={<div className="py-20 px-4"><h1 className="text-4xl font-bold text-center text-white">AI Business Intelligence Platform</h1></div>} />
             <Route path="/case-studies" element={<div className="py-20 px-4"><h1 className="text-4xl font-bold text-center text-white">Case Studies</h1></div>} />
             <Route path="/contact" element={<div className="py-20 px-4"><h1 className="text-4xl font-bold text-center text-white">Contact</h1></div>} />
             <Route path="/about" element={<div className="py-20 px-4"><h1 className="text-4xl font-bold text-center text-white">About</h1></div>} />
