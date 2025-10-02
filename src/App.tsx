@@ -273,7 +273,7 @@ const App: React.FC = () => {
 
   return (
     <EnhancedErrorBoundary>
-      {/* <AccessibilityEnhancer> */}
+      <AccessibilityEnhancer>
         <SEOOptimizer title={seoDataForOptimizer.title} description={seoDataForOptimizer.description} canonicalUrl={seoDataForOptimizer.canonical} />
         <AdvancedAnalytics enableConversionTracking enablePerformanceTracking enableErrorTracking />
         <div className="min-h-screen bg-white">
@@ -284,6 +284,7 @@ const App: React.FC = () => {
           <Footer />
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <NotificationSystem notifications={notifications} onRemove={handleRemoveNotification} />
       </EnhancedErrorBoundary>
     </AccessibilityEnhancer>
@@ -293,6 +294,8 @@ const App: React.FC = () => {
 export default App;
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-44c4
 =======
+=======
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d21e
 
         {showPerformanceOptimizer && (
           <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center" role="dialog" aria-modal="true">
