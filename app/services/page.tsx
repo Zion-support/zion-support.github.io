@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
+import EnhancedServicesCatalog from '../../enhanced-services-catalog-new';
 
 export const metadata: Metadata = {
   title: 'AI & IT Services | Zion Tech Group - Enterprise Solutions',
