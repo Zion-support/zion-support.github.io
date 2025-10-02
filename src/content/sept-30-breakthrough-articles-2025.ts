@@ -11,7 +11,7 @@ tags: string[];
 featured: boolean;
 readTime: string;
 impact: string;
-metrics: {,
+metrics: {
 improvement: string;
 roi: string;
 timeframe: string;

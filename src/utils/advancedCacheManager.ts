@@ -10,9 +10,9 @@ strategy: 'LRU' | 'LFU' | 'FIFO';
 }
 
 interface CacheEntry<T> {
-value: T;,
-timestamp: number;,
-accessCount: number;,
+value: T;
+timestamp: number;
+accessCount: number;
 size: number;
 }
 
@@ -157,7 +157,7 @@ class AdvancedCacheManager<T = any> {
    */
   private evict(): void {
 if (this.cache.size === 0) return;
-let keyToEvict: string | null = null;,
+let keyToEvict: string | null = null;
 switch (this.config.strategy) {
 case 'LRU': // Least Recently Used,
 keyToEvict = this.findLRUKey();

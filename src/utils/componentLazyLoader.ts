@@ -113,7 +113,7 @@ class ErrorBoundary extends React.Component<
   { children: React.ReactNode; fallback?: ComponentType<any> },
   { hasError: boolean }
 > {
-constructor(props: any) {,
+constructor(props: any) {
 super(props);
 this.state = { hasError: false
 };

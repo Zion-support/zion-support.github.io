@@ -98,8 +98,8 @@ const CaseStudiesPage: React.FC = () => {
               Success Stories & Case Studies
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover how we've helped businesses across various industries achieve 
-              remarkable results through innovative technology solutions.
+              Discover how we've helped businesses across various industries achieve,
+    remarkable results through innovative technology solutions.
             </p>
           </div>
 

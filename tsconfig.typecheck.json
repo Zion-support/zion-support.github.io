@@ -5,10 +5,8 @@
     "skipLibCheck": true
   },
   "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "types/**/*.ts",
-    "next-env.d.ts"
+    "src/main.tsx",
+    "src/App.minimal.tsx"
   ],
   "exclude": [
     "node_modules",

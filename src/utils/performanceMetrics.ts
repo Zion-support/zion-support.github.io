@@ -34,7 +34,7 @@ status: 'pass' | 'warn' | 'fail';
 }
 
 export interface PerformanceReport {
-webVitals: {,
+webVitals: {
 lcp?: PerformanceMetric;
 fid?: PerformanceMetric;
 cls?: PerformanceMetric;

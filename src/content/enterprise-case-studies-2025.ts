@@ -9,8 +9,8 @@ industry: string;
 description: string;
 challenge: string;
 solution: string;
-results: {,
-metrics: {,
+results: {
+metrics: {
 performance: string;
 savings: string;
 accuracy: string;

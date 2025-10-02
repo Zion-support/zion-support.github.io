@@ -27,7 +27,7 @@ impact: 'high' | 'medium' | 'low';
 export interface SEOMetrics {
 score: number; // 0-100,
 issues: SEOIssue[];
-metadata: {,
+metadata: {
 title?: string;
 description?: string;
 keywords?: string;
@@ -37,21 +37,21 @@ robots?: string;
   openGraph: Record<string, string>;
   twitterCard: Record<string, string>;
   headings: {
-h1: number;,
-h2: number;,
-h3: number;,
-h4: number;,
-h5: number;,
+h1: number;
+h2: number;
+h3: number;
+h4: number;
+h5: number;
 h6: number;
 };
   images: {
-total: number;,
-withAlt: number;,
+total: number;
+withAlt: number;
 withoutAlt: number;
 };
   links: {
-internal: number;,
-external: number;,
+internal: number;
+external: number;
 nofollow: number;
 };
   structuredData: any[];
@@ -310,7 +310,7 @@ class SEOAuditor {
    * Audit structured data
    */
   private auditStructuredData(): any[] {
-const structuredData: any[] = [];,
+const structuredData: any[] = [];
 const scripts = document.querySelectorAll('script[type="application/ld+json"]');
 scripts.forEach(script => {
 try {

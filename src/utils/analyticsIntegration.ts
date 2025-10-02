@@ -30,27 +30,27 @@ export interface AnalyticsUser {
 }
 
 export interface AnalyticsConfig {
-providers: {,
-googleAnalytics?: {,
+providers: {
+googleAnalytics?: {
 measurementId: string;
 enabled: boolean;
 };
     mixpanel?: {
-token: string;,
+token: string;
 enabled: boolean;
 };
     amplitude?: {
-apiKey: string;,
+apiKey: string;
 enabled: boolean;
 };
     segment?: {
-writeKey: string;,
+writeKey: string;
 enabled: boolean;
 };
   };
   privacy: {
-respectDoNotTrack: boolean;,
-anonymizeIp: boolean;,
+respectDoNotTrack: boolean;
+anonymizeIp: boolean;
 consentRequired: boolean;
 };
   debug: boolean;

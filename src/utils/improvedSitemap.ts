@@ -8,7 +8,7 @@ loc: string;
 lastmod?: string;
 changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
 priority?: number;
-images?: Array<{,
+images?: Array<{
 loc: string;
 caption?: string;
 title?: string;
@@ -17,7 +17,7 @@ title?: string;
 
 export interface SitemapConfig {
 baseUrl: string;
-routes: Array<{,
+routes: Array<{
 path: string;
 priority?: number;
 changefreq?: SitemapURL['changefreq'];
@@ -26,9 +26,9 @@ dynamic?: boolean;
 }
 
 export class ImprovedSitemapGenerator {
-private config: SitemapConfig;,
-private urls: SitemapURL[] = [];,
-constructor(config: SitemapConfig) {,
+private config: SitemapConfig;
+private urls: SitemapURL[] = [];
+constructor(config: SitemapConfig) {
 this.config = config;
 }
 
@@ -51,7 +51,7 @@ this.config = config;
 
   public addBlogPosts(posts: Array<{ slug: string; date: string; images?: string[] }>): void {
 posts.forEach(post => {
-const url: SitemapURL = {,
+const url: SitemapURL = {
 loc: `${this.config.baseUrl
 }/blog/${post.slug}`,
         lastmod: post.date,
@@ -93,8 +93,8 @@ loc: `${this.config.baseUrl
 
   public generateXML(): string {
 let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
-xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"';,
-xml += ' xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n';,
+xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"';
+xml += ' xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n';
 this.urls.forEach(url => {
 xml += '  <url>\n';
 xml += `    <loc>${this.escapeXML(url.loc)
@@ -114,7 +114,7 @@ xml += `    <loc>${this.escapeXML(url.loc)
 
       if (url.images && url.images.length > 0) {
 url.images.forEach(image => {
-xml += '    <image:image>\n';,
+xml += '    <image:image>\n';
 xml += `      <image:loc>${this.escapeXML(image.loc)
 }</image:loc>\n`;
           if (image.caption) {
@@ -136,7 +136,7 @@ xml += `      <image:loc>${this.escapeXML(image.loc)
 
   public generateSitemapIndex(sitemaps: Array<{ loc: string; lastmod?: string }>): string {
 let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
-xml += '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';,
+xml += '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
 sitemaps.forEach(sitemap => {
 xml += '  <sitemap>\n';
 xml += `    <loc>${this.escapeXML(sitemap.loc)

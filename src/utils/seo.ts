@@ -42,10 +42,10 @@ export const generateMetaTags = (data: SEOData) => {
 };
 
 export const generateStructuredData = (data: {
-name: string;,
-description: string;,
-url: string;,
-logo?: string;,
+name: string;
+description: string;
+url: string;
+logo?: string;
 sameAs?: string[];
 }) => {
   return {
@@ -60,7 +60,7 @@ sameAs?: string[];
 };
 
 export const generateBreadcrumbStructuredData = (items: Array<{
-name: string;,
+name: string;
 url: string;
 }>) => {
   return {

@@ -15,7 +15,7 @@ interface AccessibilityReport {
 score: number;
 issues: AccessibilityIssue[];
 compliantAreas: string[];
-summary: {,
+summary: {
 critical: number;
 serious: number;
 moderate: number;
@@ -192,7 +192,7 @@ export class AccessibilityAuditor {
    * Quick accessibility fixes
    */
   applyQuickFixes(): {
-applied: string[];,
+applied: string[];
 manual: string[];
 } {
     const applied = [

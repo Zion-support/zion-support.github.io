@@ -4,7 +4,7 @@
  */
 
 export interface SecurityConfig {
-csp: {,
+csp: {
 'default-src': string[];
 'script-src': string[];
 'style-src': string[];
@@ -29,7 +29,7 @@ csp: {,
 }
 
 export class SecurityManager {
-private config: SecurityConfig;,
+private config: SecurityConfig;
 constructor() {
 this.config = this.getDefaultConfig();
 }
@@ -154,7 +154,7 @@ this.config = this.getDefaultConfig();
   }
 
   public getSecurityReport(): {
-csp: string;,
+csp: string;
 headers: { [key: string]: string
 };
     score: number;

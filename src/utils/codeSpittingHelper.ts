@@ -16,7 +16,7 @@ export const lazyWithRetry = <T extends ComponentType<any>>(
 ): React.LazyExoticComponent<T> => {
   return lazy(() =>
     new Promise<{ default: T }>((resolve, reject) => {
-const attemptImport = async (retriesLeft: number) => {,
+const attemptImport = async (retriesLeft: number) => {
 try {
 const module = await importFunc();
 resolve(module);
@@ -122,9 +122,9 @@ export const logBundleSize = (componentName: string): void => {
  * Preloads components based on user behavior and connection speed
  */
 export const createSmartPreloader = () => {
-const preloadQueue: Array<() => Promise<any>> = [];,
+const preloadQueue: Array<() => Promise<any>> = [];
 let isPreloading = false;
-const getConnectionSpeed = (): 'slow' | 'fast' | 'unknown' => {,
+const getConnectionSpeed = (): 'slow' | 'fast' | 'unknown' => {
 if (typeof navigator === 'undefined') return 'unknown';
 const connection = (navigator as any).connection;
 if (!connection) return 'unknown';
@@ -160,7 +160,7 @@ return effectiveType === '4g' || effectiveType === '5g' ? 'fast' : 'slow';
   };
 
   return {
-add: (importFunc: () => Promise<any>) => {,
+add: (importFunc: () => Promise<any>) => {
 preloadQueue.push(importFunc);
 // Start processing after idle
 if (typeof requestIdleCallback !== 'undefined') {

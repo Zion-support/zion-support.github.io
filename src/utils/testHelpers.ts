@@ -234,17 +234,17 @@ export class LocalStorageMock {
  * Mock console methods
  */
 export class ConsoleMock {
-private originalConsole: typeof console;,
-logs: any[] = [];,
-warnings: any[] = [];,
-errors: any[] = [];,
+private originalConsole: typeof console;
+logs: any[] = [];
+warnings: any[] = [];
+errors: any[] = [];
 constructor() {
 this.originalConsole = console;
 }
 
   install(): void {
-console.log = (...args: any[]) => this.logs.push(args);,
-console.warn = (...args: any[]) => this.warnings.push(args);,
+console.log = (...args: any[]) => this.logs.push(args);
+console.warn = (...args: any[]) => this.warnings.push(args);
 console.error = (...args: any[]) => this.errors.push(args);
 }
 
@@ -360,7 +360,7 @@ export class PerformanceTester {
  * Accessibility testing helper
  */
 export const checkAccessibility = {
-hasAriaLabel: (element: Element): boolean => {,
+hasAriaLabel: (element: Element): boolean => {
 return element.hasAttribute('aria-label') || element.hasAttribute('aria-labelledby');
 },
 
@@ -391,8 +391,8 @@ return element.hasAttribute('aria-label') || element.hasAttribute('aria-labelled
  * Setup test environment
  */
 export const setupTestEnvironment = (options: TestSetupOptions = {}): {
-cleanup: () => void;,
-fetchMock: FetchMock;,
+cleanup: () => void;
+fetchMock: FetchMock;
 consoleMock: ConsoleMock;
 } => {
   const fetchMock = new FetchMock();

@@ -1000,7 +1000,7 @@ const now = new Date();
 return enhancedPromotionalBanners
 .filter(banner => {
 const startDate = new Date(banner.startDate);
-const endDate = banner.endDate ? new Date(banner.endDate) : null;,
+const endDate = banner.endDate ? new Date(banner.endDate) : null;
 return startDate <= now && (!endDate || endDate >= now);
 })
     .sort((a, b) => a.priority - b.priority);

@@ -16,15 +16,15 @@ interface SecurityReport {
 score: number;
 vulnerabilities: SecurityVulnerability[];
 secureAreas: string[];
-summary: {,
+summary: {
 critical: number;
 high: number;
 medium: number;
 low: number;
 };
   complianceStatus: {
-owasp: boolean;,
-gdpr: boolean;,
+owasp: boolean;
+gdpr: boolean;
 soc2: boolean;
 };
 }
@@ -184,8 +184,8 @@ export class SecurityAuditor {
    * Check compliance status
    */
   private checkCompliance(vulnerabilities: SecurityVulnerability[]): {
-owasp: boolean;,
-gdpr: boolean;,
+owasp: boolean;
+gdpr: boolean;
 soc2: boolean;
 } {
     const criticalOrHigh = vulnerabilities.filter(
@@ -223,7 +223,7 @@ soc2: boolean;
    * Apply quick security fixes
    */
   applyQuickFixes(): {
-applied: string[];,
+applied: string[];
 manual: string[];
 } {
     const applied = [
@@ -273,7 +273,7 @@ const audit = this.auditSecurity();
 const recommendations = this.generateRecommendations();
 const fixes = this.applyQuickFixes();
 const dependencies = this.checkDependencies();
-const getRiskLevel = (score: number): string => {,
+const getRiskLevel = (score: number): string => {
 if (score >= 90) return 'LOW RISK ✅';
 if (score >= 75) return 'MODERATE RISK ⚠️';
 if (score >= 60) return 'HIGH RISK 🔴';

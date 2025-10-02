@@ -104,9 +104,9 @@ email: 'devops@ziontechgroup.com'
                 </div>
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h2>
                 <p className="text-gray-600">
-                  To democratize advanced AI and technology solutions, making them accessible and affordable 
-                  for businesses of all sizes. We believe that cutting-edge technology should be a catalyst 
-                  for growth, not a barrier to entry.
+                  To democratize advanced AI and technology solutions, making them accessible and affordable,
+    for businesses of all sizes. We believe that cutting-edge technology should be a catalyst,
+    for growth, not a barrier to entry.
                 </p>
               </div>
               <div className="bg-white rounded-lg shadow-lg p-8">
@@ -115,9 +115,9 @@ email: 'devops@ziontechgroup.com'
                 </div>
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h2>
                 <p className="text-gray-600">
-                  To be the global leader in AI-powered business transformation, creating a world where 
-                  every organization can leverage advanced technology to achieve unprecedented levels of 
-                  efficiency, innovation, and success.
+                  To be the global leader in AI-powered business transformation, creating a world where,
+    every organization can leverage advanced technology to achieve unprecedented levels of,
+    efficiency, innovation, and success.
                 </p>
               </div>
             </div>
@@ -164,8 +164,8 @@ email: 'devops@ziontechgroup.com'
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>
                   <p className="text-blue-600 font-semibold mb-3">{member.role}</p>
                   <p className="text-gray-600 mb-4">{member.description}</p>
-                  <a 
-                    href={`mailto:${member.email}`}
+                  <a,
+    href={`mailto:${member.email}`}
                     className="text-blue-600 hover:text-blue-700 transition-colors"
                   >
                     {member.email}
@@ -231,15 +231,15 @@ email: 'devops@ziontechgroup.com'
                 Let's discuss how our technology solutions can transform your business.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
-                  href="tel:+13024640950" 
+                <a,
+    href="tel:+13024640950" 
                   className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
                 >
                   <Phone className="w-5 h-5 inline mr-2" />
                   Call +1 302 464 0950
                 </a>
-                <a 
-                  href="mailto:kleber@ziontechgroup.com" 
+                <a,
+    href="mailto:kleber@ziontechgroup.com" 
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center"
                 >
                   <Mail className="w-5 h-5 inline mr-2" />

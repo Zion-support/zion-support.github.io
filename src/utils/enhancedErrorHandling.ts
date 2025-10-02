@@ -27,7 +27,7 @@ timestamp: number;
 }
 
 class EnhancedErrorHandler {
-private errors: ErrorInfo[] = [];,
+private errors: ErrorInfo[] = [];
 private maxErrors = 100;
 private isInitialized = false;
 constructor() {

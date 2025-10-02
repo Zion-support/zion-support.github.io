@@ -31,22 +31,22 @@ id: string;
 title: string;
 description: string;
 category: string;
-pricing: {,
+pricing: {
 starting: string;
 popular?: boolean;
 };
   features: string[];
   metrics?: Array<{
-value: string;,
+value: string;
 label: string;
 }>;
   testimonial?: {
-quote: string;,
-author: string;,
+quote: string;
+author: string;
 company: string;
 };
   cta: {
-primary: string;,
+primary: string;
 secondary: string;
 };
   icon: string;

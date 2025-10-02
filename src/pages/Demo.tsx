@@ -114,8 +114,8 @@ rating: 5
               Schedule Your Demo
             </h1>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              See how our AI solutions can transform your business. Book a personalized demo 
-              tailored to your specific needs and challenges.
+              See how our AI solutions can transform your business. Book a personalized demo,
+    tailored to your specific needs and challenges.
             </p>
             <div className="flex items-center justify-center space-x-8 text-blue-100">
               <div className="flex items-center">
@@ -179,12 +179,12 @@ rating: 5
                   <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">
                     First Name *
                   </label>
-                  <input
-                    type="text"
+                  <input,
+    type="text"
                     id="firstName"
                     name="firstName"
-                    required
-                    value={formData.firstName}
+                    required,
+    value={formData.firstName}
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
@@ -193,12 +193,12 @@ rating: 5
                   <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">
                     Last Name *
                   </label>
-                  <input
-                    type="text"
+                  <input,
+    type="text"
                     id="lastName"
                     name="lastName"
-                    required
-                    value={formData.lastName}
+                    required,
+    value={formData.lastName}
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
@@ -210,12 +210,12 @@ rating: 5
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                     Email Address *
                   </label>
-                  <input
-                    type="email"
+                  <input,
+    type="email"
                     id="email"
                     name="email"
-                    required
-                    value={formData.email}
+                    required,
+    value={formData.email}
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
@@ -224,8 +224,8 @@ rating: 5
                   <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
                     Phone Number
                   </label>
-                  <input
-                    type="tel"
+                  <input,
+    type="tel"
                     id="phone"
                     name="phone"
                     value={formData.phone}
@@ -241,12 +241,12 @@ rating: 5
                   <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
                     Company Name *
                   </label>
-                  <input
-                    type="text"
+                  <input,
+    type="text"
                     id="company"
                     name="company"
-                    required
-                    value={formData.company}
+                    required,
+    value={formData.company}
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
@@ -255,12 +255,12 @@ rating: 5
                   <label htmlFor="jobTitle" className="block text-sm font-medium text-gray-700 mb-2">
                     Job Title *
                   </label>
-                  <input
-                    type="text"
+                  <input,
+    type="text"
                     id="jobTitle"
                     name="jobTitle"
-                    required
-                    value={formData.jobTitle}
+                    required,
+    value={formData.jobTitle}
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
@@ -272,11 +272,11 @@ rating: 5
                   <label htmlFor="companySize" className="block text-sm font-medium text-gray-700 mb-2">
                     Company Size *
                   </label>
-                  <select
-                    id="companySize"
+                  <select,
+    id="companySize"
                     name="companySize"
-                    required
-                    value={formData.companySize}
+                    required,
+    value={formData.companySize}
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   >
@@ -290,11 +290,11 @@ rating: 5
                   <label htmlFor="useCase" className="block text-sm font-medium text-gray-700 mb-2">
                     Primary Use Case *
                   </label>
-                  <select
-                    id="useCase"
+                  <select,
+    id="useCase"
                     name="useCase"
-                    required
-                    value={formData.useCase}
+                    required,
+    value={formData.useCase}
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   >
@@ -312,8 +312,8 @@ rating: 5
                   <label htmlFor="preferredDate" className="block text-sm font-medium text-gray-700 mb-2">
                     Preferred Date
                   </label>
-                  <input
-                    type="date"
+                  <input,
+    type="date"
                     id="preferredDate"
                     name="preferredDate"
                     value={formData.preferredDate}
@@ -325,8 +325,8 @@ rating: 5
                   <label htmlFor="preferredTime" className="block text-sm font-medium text-gray-700 mb-2">
                     Preferred Time
                   </label>
-                  <select
-                    id="preferredTime"
+                  <select,
+    id="preferredTime"
                     name="preferredTime"
                     value={formData.preferredTime}
                     onChange={handleInputChange}
@@ -342,8 +342,8 @@ rating: 5
                   <label htmlFor="timeZone" className="block text-sm font-medium text-gray-700 mb-2">
                     Time Zone
                   </label>
-                  <select
-                    id="timeZone"
+                  <select,
+    id="timeZone"
                     name="timeZone"
                     value={formData.timeZone}
                     onChange={handleInputChange}
@@ -363,8 +363,8 @@ rating: 5
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                   Additional Information
                 </label>
-                <textarea
-                  id="message"
+                <textarea,
+    id="message"
                   name="message"
                   rows={4}
                   value={formData.message}
@@ -375,8 +375,8 @@ rating: 5
               </div>
 
               <div className="text-center">
-                <button
-                  type="submit"
+                <button,
+    type="submit"
                   className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg"
                 >
                   Schedule My Demo
@@ -431,14 +431,14 @@ rating: 5
             Join thousands of businesses that have transformed their operations with our AI solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
+            <Link,
+    to="/contact"
               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Contact Us Now
             </Link>
-            <Link
-              to="/case-studies"
+            <Link,
+    to="/case-studies"
               className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors"
             >
               View Success Stories

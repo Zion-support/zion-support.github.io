@@ -14,7 +14,7 @@ gradient: string;
 featured: boolean;
 tags: string[];
 highlights: string[];
-metrics: {,
+metrics: {
 [key: string]: string;
 };
 }

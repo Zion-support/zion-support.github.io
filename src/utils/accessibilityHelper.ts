@@ -7,12 +7,12 @@
  * Focus trap for modals and dialogs
  */
 export class FocusTrap {
-private element: HTMLElement;,
-private focusableElements: HTMLElement[] = [];,
-private firstFocusableElement?: HTMLElement;,
-private lastFocusableElement?: HTMLElement;,
-private previouslyFocusedElement?: HTMLElement;,
-constructor(element: HTMLElement) {,
+private element: HTMLElement;
+private focusableElements: HTMLElement[] = [];
+private firstFocusableElement?: HTMLElement;
+private lastFocusableElement?: HTMLElement;
+private previouslyFocusedElement?: HTMLElement;
+constructor(element: HTMLElement) {
 this.element = element;
 this.updateFocusableElements();
 }
@@ -242,7 +242,7 @@ export function createLoadingAnnouncement(message = 'Loading...'): void {
  * Ensure proper heading hierarchy
  */
 export function validateHeadingHierarchy(): {
-valid: boolean;,
+valid: boolean;
 issues: string[];
 } {
   if (typeof document === 'undefined') {

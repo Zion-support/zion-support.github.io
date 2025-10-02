@@ -9,8 +9,8 @@ userId?: string;
 }
 
 class ErrorHandler {
-private static instance: ErrorHandler;,
-private errorQueue: ErrorInfo[] = [];,
+private static instance: ErrorHandler;
+private errorQueue: ErrorInfo[] = [];
 private maxQueueSize = 50;
 private constructor() {
 this.setupGlobalErrorHandlers();

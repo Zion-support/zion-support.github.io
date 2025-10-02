@@ -201,22 +201,22 @@ export default function Blog(): React.JSX.Element {
 
   const getCategoryIcon = (category: string) => {
 switch (category) {
-case "AI Solutions": return Zap;,
-case "Case Studies": return BarChart3;,
-case "Technology": return Code;,
-case "Industry Insights": return TrendingUp;,
-case "Tutorials": return Bot;,
+case "AI Solutions": return Zap;
+case "Case Studies": return BarChart3;
+case "Technology": return Code;
+case "Industry Insights": return TrendingUp;
+case "Tutorials": return Bot;
 default: return Shield;
 }
   };
 
   const getCategoryColor = (category: string) => {
 switch (category) {
-case "AI Solutions": return "text-blue-400 bg-blue-500/10 border-blue-500/30";,
-case "Case Studies": return "text-green-400 bg-green-500/10 border-green-500/30";,
-case "Technology": return "text-purple-400 bg-purple-500/10 border-purple-500/30";,
-case "Industry Insights": return "text-orange-400 bg-orange-500/10 border-orange-500/30";,
-case "Tutorials": return "text-cyan-400 bg-cyan-500/10 border-cyan-500/30";,
+case "AI Solutions": return "text-blue-400 bg-blue-500/10 border-blue-500/30";
+case "Case Studies": return "text-green-400 bg-green-500/10 border-green-500/30";
+case "Technology": return "text-purple-400 bg-purple-500/10 border-purple-500/30";
+case "Industry Insights": return "text-orange-400 bg-orange-500/10 border-orange-500/30";
+case "Tutorials": return "text-cyan-400 bg-cyan-500/10 border-cyan-500/30";
 default: return "text-gray-400 bg-gray-500/10 border-gray-500/30";
 }
   };

@@ -241,8 +241,8 @@ return (
             <span className="text-sm font-semibold bg-white/20 px-3 py-1 rounded-full">
               {service.pricing}
             </span>
-            <Link 
-              to={service.link}
+            <Link,
+    to={service.link}
               className="text-white hover:text-white/80 transition-colors"
             >
               Learn More →
@@ -281,14 +281,14 @@ return (
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Ready to Get Started?</h2>
             <p className="text-gray-600 mb-6">Contact us today for a free consultation and custom pricing.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="tel:+13024640950" 
+              <a,
+    href="tel:+13024640950" 
                 className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center"
               >
                 Call +1 302 464 0950
               </a>
-              <a 
-                href="mailto:kleber@ziontechgroup.com" 
+              <a,
+    href="mailto:kleber@ziontechgroup.com" 
                 className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors text-center"
               >
                 Email Us
@@ -393,14 +393,14 @@ return (
               Let's discuss how our technology solutions can drive your success.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="tel:+13024640950" 
+              <a,
+    href="tel:+13024640950" 
                 className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
               >
                 Call +1 302 464 0950
               </a>
-              <a 
-                href="mailto:kleber@ziontechgroup.com" 
+              <a,
+    href="mailto:kleber@ziontechgroup.com" 
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center"
               >
                 Email Us Today

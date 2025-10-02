@@ -56,14 +56,14 @@ description: 'Delivering exceptional results with proven ROI and measurable impa
             <section className="mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
               <p className="text-gray-700 leading-relaxed mb-6">
-                At Zion Tech Group, we are dedicated to empowering businesses through cutting-edge 
-                artificial intelligence and information technology solutions. Our mission is to 
-                accelerate digital transformation and drive innovation across industries.
+                At Zion Tech Group, we are dedicated to empowering businesses through cutting-edge,
+    artificial intelligence and information technology solutions. Our mission is to,
+    accelerate digital transformation and drive innovation across industries.
               </p>
               <p className="text-gray-700 leading-relaxed">
                 We believe that technology should be accessible, scalable, and transformative. 
-                Our team of experts works tirelessly to deliver solutions that not only meet 
-                current needs but anticipate future challenges.
+                Our team of experts works tirelessly to deliver solutions that not only meet,
+    current needs but anticipate future challenges.
               </p>
             </section>
 
@@ -80,22 +80,22 @@ description: 'Delivering exceptional results with proven ROI and measurable impa
                 <div className="bg-white p-6 rounded-lg shadow-md">
                   <h3 className="text-xl font-bold text-gray-900 mb-3">Excellence</h3>
                   <p className="text-gray-700">
-                    We maintain the highest standards in everything we do, from code quality 
-                    to customer service.
+                    We maintain the highest standards in everything we do, from code quality,
+    to customer service.
                   </p>
                 </div>
                 <div className="bg-white p-6 rounded-lg shadow-md">
                   <h3 className="text-xl font-bold text-gray-900 mb-3">Integrity</h3>
                   <p className="text-gray-700">
-                    We conduct business with honesty, transparency, and ethical practices 
-                    in all our interactions.
+                    We conduct business with honesty, transparency, and ethical practices,
+    in all our interactions.
                   </p>
                 </div>
                 <div className="bg-white p-6 rounded-lg shadow-md">
                   <h3 className="text-xl font-bold text-gray-900 mb-3">Collaboration</h3>
                   <p className="text-gray-700">
-                    We work closely with our clients as partners, ensuring their success 
-                    is our success.
+                    We work closely with our clients as partners, ensuring their success,
+    is our success.
                   </p>
                 </div>
               </div>

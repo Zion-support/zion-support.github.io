@@ -10,8 +10,8 @@ export function debounce<T extends (...args: unknown[]) => unknown>(
   func: T,
   wait: number
 ): (...args: Parameters<T>) => void {
-let timeout: NodeJS.Timeout | null = null;,
-return function executedFunction(...args: Parameters<T>) {,
+let timeout: NodeJS.Timeout | null = null;
+return function executedFunction(...args: Parameters<T>) {
 const later = () => {
 timeout = null;
 func(...args);
@@ -66,10 +66,10 @@ export function memoize<T extends (...args: unknown[]) => unknown>(
  * Async operation queue to prevent overwhelming the browser
  */
 export class AsyncQueue {
-private queue: Array<() => Promise<any>> = [];,
-private running: boolean = false;,
-private concurrency: number;,
-constructor(concurrency: number = 3) {,
+private queue: Array<() => Promise<any>> = [];
+private running: boolean = false;
+private concurrency: number;
+constructor(concurrency: number = 3) {
 this.concurrency = concurrency;
 }
 
@@ -126,8 +126,8 @@ this.concurrency = concurrency;
 export function rafThrottle<T extends (...args: any[]) => any>(
   func: T
 ): (...args: Parameters<T>) => void {
-let rafId: number | null = null;,
-return function executedFunction(...args: Parameters<T>) {,
+let rafId: number | null = null;
+return function executedFunction(...args: Parameters<T>) {
 if (rafId) {
 cancelAnimationFrame(rafId);
 }
@@ -182,7 +182,7 @@ export const arrayUtils = {
 /**
 * Remove duplicates from array
 */
-unique<T>(array: T[]): T[] {,
+unique<T>(array: T[]): T[] {
 return Array.from(new Set(array));
 },
 
@@ -215,7 +215,7 @@ export const objectUtils = {
 /**
 * Deep clone an object
 */
-deepClone<T>(obj: T): T {,
+deepClone<T>(obj: T): T {
 return JSON.parse(JSON.stringify(obj));
 },
 

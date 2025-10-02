@@ -16,8 +16,8 @@ import LatestArticlesShowcase from "../components/LatestArticlesShowcase";
 import SuccessStoriesShowcase from "../components/SuccessStoriesShowcase";
 
 const Home = () => {
-  // Mock data for the homepage
-  const latestInsights = [
+  // Mock data for the homepage,
+    const latestInsights = [
     {
       id: '1',
       title: 'AI Revolution 2026: The Next Frontier of Enterprise Intelligence',
@@ -74,25 +74,25 @@ publishedAt: '2025-01-05'
     <>
       <Helmet>
         <title>Zion Tech Group - Leading AI & IT Solutions | Transform Your Business</title>
-        <meta
-          name="description"
+        <meta,
+    name="description"
           content="Zion Tech Group delivers cutting-edge AI and IT solutions that transform businesses. NEW 2025: AI Workflow Automation, Quantum Computing, Edge AI, Zero Trust Security. Expert consulting services with proven results."
         />
-        <meta
-          name="keywords"
+        <meta,
+    name="keywords"
           content="AI solutions, IT consulting, cybersecurity, machine learning, cloud infrastructure, digital transformation, AI workflow automation, quantum computing, edge AI, zero trust security, micro SAAS platforms, AI virtual assistant, data analytics"
         />
         <meta property="og:title" content="Zion Tech Group - Leading AI & IT Solutions" />
-        <meta
-          property="og:description"
+        <meta,
+    property="og:description"
           content="Transform your business with cutting-edge AI and IT solutions. NEW 2025: AI Workflow Automation, Quantum Computing, Edge AI, Zero Trust Security. Expert consulting with proven results."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Zion Tech Group - Leading AI & IT Solutions" />
-        <meta
-          name="twitter:description"
+        <meta,
+    name="twitter:description"
           content="Transform your business with cutting-edge AI and IT solutions. NEW 2025: AI Workflow Automation, Quantum Computing, Edge AI, Zero Trust Security."
         />
         <link rel="canonical" href="https://ziontechgroup.com" />
@@ -146,7 +146,7 @@ publishedAt: '2025-01-05'
 "itemListElement": [,
 {
 "@type": "Offer",
-"itemOffered": {,
+"itemOffered": {
 "@type": "Service",
 "name": "AI Workflow Automation",
 "description": "Automate complex business processes with AI-powered workflows"
@@ -154,7 +154,7 @@ publishedAt: '2025-01-05'
                 }
                 {
 "@type": "Offer",
-"itemOffered": {,
+"itemOffered": {
 "@type": "Service",
 "name": "AI Virtual Assistant",
 "description": "Intelligent virtual assistants for customer service and support"
@@ -162,7 +162,7 @@ publishedAt: '2025-01-05'
                 }
                 {
 "@type": "Offer",
-"itemOffered": {,
+"itemOffered": {
 "@type": "Service",
 "name": "AI Data Analytics",
 "description": "Advanced data analytics and insights powered by AI"
@@ -170,7 +170,7 @@ publishedAt: '2025-01-05'
                 }
                 {
 "@type": "Offer",
-"itemOffered": {,
+"itemOffered": {
 "@type": "Service",
 "name": "Quantum Computing Consulting",
 "description": "Expert consulting on quantum computing solutions"
@@ -248,17 +248,17 @@ publishedAt: '2025-01-05'
         
         {/* Enhanced Promotional Banners */}
         {getFeaturedBanners().slice(0, 4).map((banner) => (
-          <EnhancedPromotionalBanner
-            key={banner.id}
+          <EnhancedPromotionalBanner,
+    key={banner.id}
             banner={banner}
           />
         ))}
         
         <NewContentAnnouncement />
-        <LatestContentBanner 
-          variant="info"
-          autoRotate
-          rotationInterval={7000}
+        <LatestContentBanner,
+    variant="info"
+          autoRotate,
+    rotationInterval={7000}
         />
         <NewContentPromoBanner 
         />
@@ -267,8 +267,8 @@ publishedAt: '2025-01-05'
           <NewContentAdvertisingBanner />
           {/* Inline promo for new service */}
           <div className="mt-4">
-            <ContentPromotionBanner
-              variant="info"
+            <ContentPromotionBanner,
+    variant="info"
               title="🧪 New Service: Edge Experimentation Suite"
               description="Privacy‑first A/B testing at <100ms with scoped IDs and on‑device metrics."
               ctaText="Learn more"
@@ -365,8 +365,8 @@ publishedAt: '2025-01-05'
         </div>
         
         {/* Content Promotion Banner */}
-        <ContentPromotionBanner
-          variant="info"
+        <ContentPromotionBanner,
+    variant="info"
           title="🚀 Fresh: Incident Playbooks + Privacy‑Preserving Analytics"
           description="Budgeted actions, approvals, and DP‑backed telemetry you can ship today."
           ctaText="Read the latest"
@@ -376,12 +376,12 @@ publishedAt: '2025-01-05'
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-zion-blue rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
-          <div
-            className="absolute -bottom-40 -left-40 w-80 h-80 bg-zion-purple rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"
+          <div,
+    className="absolute -bottom-40 -left-40 w-80 h-80 bg-zion-purple rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"
             style={{ animationDelay: "2s" }}
           ></div>
-          <div
-            className="absolute top-40 left-1/2 w-60 h-60 bg-zion-cyan rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"
+          <div,
+    className="absolute top-40 left-1/2 w-60 h-60 bg-zion-cyan rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"
             style={{ animationDelay: "4s" }}
           ></div>
         </div>
@@ -406,14 +406,14 @@ publishedAt: '2025-01-05'
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  to="/services" 
+                <Link,
+    to="/services" 
                   className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
                 >
                   Explore Services
                 </Link>
-                <Link 
-                  to="/contact" 
+                <Link,
+    to="/contact" 
                   className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
                 >
                   Get Started
@@ -465,8 +465,8 @@ publishedAt: '2025-01-05'
                   </li>
                 </ul>
                 
-                <Link
-                  to="/services/ai-services"
+                <Link,
+    to="/services/ai-services"
                   className="block w-full text-center py-3 px-4 rounded-lg font-semibold bg-blue-600 text-white hover:bg-blue-700 transition-colors"
                 >
                   Learn More
@@ -508,8 +508,8 @@ publishedAt: '2025-01-05'
                   </li>
                 </ul>
                 
-                <Link
-                  to="/services/micro-saas"
+                <Link,
+    to="/services/micro-saas"
                   className="block w-full text-center py-3 px-4 rounded-lg font-semibold bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 transition-colors"
                 >
                   Learn More
@@ -545,8 +545,8 @@ publishedAt: '2025-01-05'
                   </li>
                 </ul>
                 
-                <Link
-                  to="/services/it-services"
+                <Link,
+    to="/services/it-services"
                   className="block w-full text-center py-3 px-4 rounded-lg font-semibold bg-blue-600 text-white hover:bg-blue-700 transition-colors"
                 >
                   Learn More
@@ -692,8 +692,8 @@ publishedAt: '2025-01-05'
             </div>
             
             <div className="text-center mt-12">
-              <Link
-                to="/blog"
+              <Link,
+    to="/blog"
                 className="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
               >
                 Explore All Content
@@ -761,8 +761,8 @@ publishedAt: '2025-01-05'
             </div>
             
             <div className="text-center">
-              <Link
-                to="/case-studies"
+              <Link,
+    to="/case-studies"
                 className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
               >
                 <span className="w-5 h-5">🏆</span>
@@ -850,14 +850,14 @@ publishedAt: '2025-01-05'
               Join hundreds of enterprises already leveraging our AI and technology solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
+              <Link,
+    to="/contact" 
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Start Your Project
               </Link>
-              <Link 
-                to="/case-studies" 
+              <Link,
+    to="/case-studies" 
                 className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
               >
                 View Case Studies

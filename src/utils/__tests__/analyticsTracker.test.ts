@@ -108,7 +108,7 @@ describe('Analytics Tracking System', () => {
       const stored = mockLocalStorage.getItem('analytics_events');
       if (stored) {
 const events = JSON.parse(stored);
-const pageViewEvent = events.find((e: any) => e.category === 'page_view');,
+const pageViewEvent = events.find((e: any) => e.category === 'page_view');
 expect(pageViewEvent).toBeTruthy();
 expect(pageViewEvent.label).toBe('/test-path');
 }
@@ -155,7 +155,7 @@ expect(bannerEvent.metadata.source).toBe('homepage');
       const stored = mockLocalStorage.getItem('analytics_events');
       if (stored) {
 const events = JSON.parse(stored);
-const conversionEvent = events.find((e: any) => e.category === 'conversion');,
+const conversionEvent = events.find((e: any) => e.category === 'conversion');
 expect(conversionEvent).toBeTruthy();
 expect(conversionEvent.action).toBe('newsletter_signup');
 expect(conversionEvent.value).toBe(10);

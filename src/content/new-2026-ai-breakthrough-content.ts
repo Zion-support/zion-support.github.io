@@ -21,7 +21,7 @@ description: string;
 content: string;
 company: string;
 industry: string;
-results: {,
+results: {
 roi: string;
 metrics: string[];
 duration: string;

@@ -16,7 +16,7 @@ image?: string;
 newBadge?: boolean;
 trending?: boolean;
 valueProposition: string;
-metrics: {,
+metrics: {
 performance: string;
 savings: string;
 accuracy: string;

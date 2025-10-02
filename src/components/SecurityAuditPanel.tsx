@@ -179,37 +179,37 @@ const SecurityAuditPanel: React.FC = () => {
 
   const getStatusIcon = (status: string) => {
 switch (status) {
-case 'pass':,
+case 'pass':
 return <CheckCircle className="w-5 h-5 text-green-600" />;
-case 'fail':,
+case 'fail':
 return <XCircle className="w-5 h-5 text-red-600" />;
-case 'warning':,
+case 'warning':
 return <AlertTriangle className="w-5 h-5 text-yellow-600" />;
-default:,
+default:
 return <Eye className="w-5 h-5 text-blue-600" />;
 }
   };
 
   const getSeverityColor = (severity: string) => {
 switch (severity) {
-case 'critical':,
+case 'critical':
 return 'bg-red-100 text-red-800 border-red-200';
-case 'high':,
+case 'high':
 return 'bg-orange-100 text-orange-800 border-orange-200';
-case 'medium':,
+case 'medium':
 return 'bg-yellow-100 text-yellow-800 border-yellow-200';
-default:,
+default:
 return 'bg-blue-100 text-blue-800 border-blue-200';
 }
   };
 
   const getCategoryIcon = (category: string) => {
 switch (category) {
-case 'headers':,
+case 'headers':
 return <Globe className="w-4 h-4" />;
-case 'authentication':,
+case 'authentication':
 return <Lock className="w-4 h-4" />;
-default:,
+default:
 return <Shield className="w-4 h-4" />;
 }
   };

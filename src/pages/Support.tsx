@@ -136,8 +136,8 @@ answer: 'You can update your account information through our client portal or co
             <div className="max-w-2xl mx-auto">
               <div className="relative">
                 <span className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5">🔎</span>
-                <input
-                  type="text"
+                <input,
+    type="text"
                   placeholder="Search our knowledge base..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
@@ -152,8 +152,8 @@ answer: 'You can update your account information through our client portal or co
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Category Filter */}
             <div className="flex flex-wrap justify-center gap-4 mb-12">
-              <button
-                onClick={() => setSelectedCategory('all')}
+              <button,
+    onClick={() => setSelectedCategory('all')}
                 className={`px-6 py-3 rounded-lg font-semibold transition-colors ${
                   selectedCategory === 'all'
                     ? 'bg-blue-600 text-white'
@@ -163,8 +163,8 @@ answer: 'You can update your account information through our client portal or co
                 All Categories
               </button>
               {faqCategories.map((category) => (
-                <button
-                  key={category.id}
+                <button,
+    key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
                   className={`px-6 py-3 rounded-lg font-semibold transition-colors flex items-center ${
                     selectedCategory === category.id
@@ -212,15 +212,15 @@ answer: 'You can update your account information through our client portal or co
               Can't find what you're looking for? Our support team is ready to help you with any questions or issues.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
+              <Link,
+    to="/contact"
                 className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-gray-50 transition-colors"
               >
                 Contact Support
                 <MessageCircle className="ml-2 h-5 w-5" />
               </Link>
-              <Link
-                to="/documentation"
+              <Link,
+    to="/documentation"
                 className="inline-flex items-center px-8 py-3 border border-white text-base font-medium rounded-md text-white hover:bg-white/10 transition-colors"
               >
                 View Documentation

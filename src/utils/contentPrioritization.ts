@@ -276,15 +276,15 @@ export const getEvergreenContent = (
 export const createMixedFeed = (
   items: ContentItem[],
   config: {
-trendingCount: number;,
-newCount: number;,
-evergreenCount: number;,
+trendingCount: number;
+newCount: number;
+evergreenCount: number;
 totalMax: number;
 }
 ): {
-trending: ContentItem[];,
-new: ContentItem[];,
-evergreen: ContentItem[];,
+trending: ContentItem[];
+new: ContentItem[];
+evergreen: ContentItem[];
 all: ContentItem[];
 } => {
   const trending = getTrendingContent(items, config.trendingCount);

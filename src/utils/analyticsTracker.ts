@@ -353,7 +353,7 @@ const storeEventLocally = (event: AnalyticsEvent): void => {
 try {
 const key = 'analytics_events';
 const stored = localStorage.getItem(key);
-const events: AnalyticsEvent[] = stored ? JSON.parse(stored) : [];,
+const events: AnalyticsEvent[] = stored ? JSON.parse(stored) : [];
 events.push(event);
 // Keep only last 100 events
 if (events.length > 100) {
@@ -421,8 +421,8 @@ const generateTransactionId = (): string => {
  * Get analytics summary
  */
 export const getAnalyticsSummary = (): {
-events: AnalyticsEvent[];,
-sessionId: string;,
+events: AnalyticsEvent[];
+sessionId: string;
 userId: string;
 } => {
   const stored = localStorage.getItem('analytics_events');

@@ -143,18 +143,18 @@ icon: BarChart3
               AI Solutions Hub
             </h1>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Comprehensive AI solutions designed to transform your business. From machine learning 
-              to automation, we provide the tools and expertise you need to succeed in the AI era.
+              Comprehensive AI solutions designed to transform your business. From machine learning,
+    to automation, we provide the tools and expertise you need to succeed in the AI era.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
+              <Link,
+    to="/contact"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Get Started
               </Link>
-              <Link
-                to="/demo"
+              <Link,
+    to="/demo"
                 className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors"
               >
                 Schedule Demo
@@ -194,8 +194,8 @@ icon: BarChart3
                       </li>
                     ))}
                   </ul>
-                  <Link
-                    to="/contact"
+                  <Link,
+    to="/contact"
                     className={`inline-flex items-center text-${solution.color}-600 hover:text-${solution.color}-700 font-semibold transition-colors`}
                   >
                     Learn More
@@ -287,14 +287,14 @@ icon: BarChart3
             Let our AI experts help you identify opportunities and implement solutions that drive real results.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
+            <Link,
+    to="/contact"
               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Start Your AI Journey
             </Link>
-            <Link
-              to="/case-studies"
+            <Link,
+    to="/case-studies"
               className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors"
             >
               View Success Stories

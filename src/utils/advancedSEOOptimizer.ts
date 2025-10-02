@@ -39,10 +39,10 @@ class AdvancedSEOOptimizer {
    * Analyze page for SEO optimization
    */
   analyzePage(options: {
-title?: string;,
-description?: string;,
-content?: string;,
-headings?: string[];,
+title?: string;
+description?: string;
+content?: string;
+headings?: string[];
 images?: { src: string; alt: string
 }[];
     links?: { href: string; text: string; isInternal: boolean }[];
@@ -425,7 +425,7 @@ images?: { src: string; alt: string
    * Identify SEO issues
    */
   private identifyIssues(metrics: SEOMetrics): string[] {
-const issues: string[] = [];,
+const issues: string[] = [];
 if (metrics.titleScore < 50) issues.push('Title tag is poorly optimized');
 if (metrics.descriptionScore < 50) issues.push('Meta description is poorly optimized');
 if (metrics.headingScore < 40) issues.push('Missing or poorly structured headings');
@@ -440,7 +440,7 @@ return issues;
    * Identify SEO strengths
    */
   private identifyStrengths(metrics: SEOMetrics): string[] {
-const strengths: string[] = [];,
+const strengths: string[] = [];
 if (metrics.titleScore >= 80) strengths.push('Excellent title tag optimization');
 if (metrics.descriptionScore >= 80) strengths.push('Well-optimized meta description');
 if (metrics.headingScore >= 80) strengths.push('Strong heading structure');
@@ -468,11 +468,11 @@ return strengths;
    * Optimize meta tags
    */
   optimizeMetaTags(page: {
-title: string;,
-description: string;,
-keywords: string[];,
-author?: string;,
-image?: string;,
+title: string;
+description: string;
+keywords: string[];
+author?: string;
+image?: string;
 url?: string;
 }): { [key: string]: string } {
     return {

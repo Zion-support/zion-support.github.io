@@ -7,27 +7,27 @@ import {
   Database,
   Network,
   Lock,
-  CheckCircle
-  ArrowRight
-  DollarSign
-  Clock
-  Star
-  TrendingUp
-  Globe
-  Smartphone
-  MessageSquare
-  Zap
+  CheckCircle,
+    ArrowRight
+  DollarSign,
+    Clock
+  Star,
+    TrendingUp
+  Globe,
+    Smartphone
+  MessageSquare,
+    Zap
   
-  Settings
-  Monitor
-  Cpu
-  HardDrive
-  Wifi
-  Eye
-  Key
-  AlertTriangle
-  Users
-  Building
+  Settings,
+    Monitor
+  Cpu,
+    HardDrive
+  Wifi,
+    Eye
+  Key,
+    AlertTriangle
+  Users,
+    Building
 } from "lucide-react";
 
 export default function ITServices(): React.JSX.Element {
@@ -254,8 +254,8 @@ export default function ITServices(): React.JSX.Element {
     <>
       <Helmet>
         <title>IT Services & Solutions - Zion Tech Group | Enterprise Technology Services</title>
-        <meta 
-          name="description" 
+        <meta,
+    name="description" 
           content="Comprehensive IT services including cloud migration, cybersecurity, DevOps automation, and data engineering. Enterprise-grade solutions with proven results." 
         />
         <meta name="keywords" content="IT services, cloud migration, cybersecurity, DevOps, data engineering, network infrastructure, compliance" />
@@ -354,8 +354,8 @@ export default function ITServices(): React.JSX.Element {
                       <div className="text-lg font-semibold text-cyan-400">{service.price}</div>
                       <div className="text-sm text-slate-400">{service.eta} implementation</div>
                     </div>
-                    <a 
-                      href={service.link}
+                    <a,
+    href={service.link}
                       className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
                     >
                       Get Started
@@ -474,15 +474,15 @@ export default function ITServices(): React.JSX.Element {
 
             <div className="mt-8 text-center">
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
-                <a 
-                  href="tel:+13024640950" 
+                <a,
+    href="tel:+13024640950" 
                   className="inline-flex items-center gap-2 bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-slate-100 transition-colors"
                 >
                   <Smartphone className="w-4 h-4" />
                   +1 302 464 0950
                 </a>
-                <a 
-                  href="mailto:kleber@ziontechgroup.com" 
+                <a,
+    href="mailto:kleber@ziontechgroup.com" 
                   className="inline-flex items-center gap-2 bg-slate-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-slate-600 transition-colors"
                 >
                   <MessageSquare className="w-4 h-4" />

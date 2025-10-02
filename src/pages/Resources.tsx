@@ -126,18 +126,18 @@ link: '/blog/ethical-ai-systems'
               Resources & Knowledge Hub
             </h1>
             <p className="text-xl text-indigo-100 mb-8 max-w-3xl mx-auto">
-              Access our comprehensive library of resources, from case studies and white papers 
-              to training materials and community forums. Everything you need to succeed with AI.
+              Access our comprehensive library of resources, from case studies and white papers,
+    to training materials and community forums. Everything you need to succeed with AI.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/blog"
+              <Link,
+    to="/blog"
                 className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Browse Blog
               </Link>
-              <Link
-                to="/community"
+              <Link,
+    to="/community"
                 className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors"
               >
                 Join Community
@@ -163,8 +163,8 @@ link: '/blog/ethical-ai-systems'
             {resourceCategories.map((category) => {
               const IconComponent = category.icon;
               return (
-                <Link
-                  key={category.title}
+                <Link,
+    key={category.title}
                   to={category.link}
                   className="bg-white rounded-lg shadow-lg border border-gray-200 p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                 >
@@ -217,8 +217,8 @@ link: '/blog/ethical-ai-systems'
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{resource.title}</h3>
                   <p className="text-gray-600 mb-6">{resource.description}</p>
                   {resource.downloadLink ? (
-                    <a
-                      href={resource.downloadLink}
+                    <a,
+    href={resource.downloadLink}
                       className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold transition-colors"
                       download
                     >
@@ -226,8 +226,8 @@ link: '/blog/ethical-ai-systems'
                       Download Now
                     </a>
                   ) : (
-                    <Link
-                      to={resource.link}
+                    <Link,
+    to={resource.link}
                       className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold transition-colors"
                     >
                       Read More
@@ -253,8 +253,8 @@ link: '/blog/ethical-ai-systems'
                 Stay updated with the latest insights and trends in AI
               </p>
             </div>
-            <Link
-              to="/blog"
+            <Link,
+    to="/blog"
               className="hidden md:inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold transition-colors"
             >
               View All Posts
@@ -263,8 +263,8 @@ link: '/blog/ethical-ai-systems'
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {latestBlogPosts.map((post) => (
-              <Link
-                key={post.title}
+              <Link,
+    key={post.title}
                 to={post.link}
                 className="bg-white rounded-lg shadow-lg border border-gray-200 p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
@@ -281,8 +281,8 @@ link: '/blog/ethical-ai-systems'
           </div>
           
           <div className="text-center mt-12 md:hidden">
-            <Link
-              to="/blog"
+            <Link,
+    to="/blog"
               className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold transition-colors"
             >
               View All Blog Posts
@@ -301,14 +301,14 @@ link: '/blog/ethical-ai-systems'
             Our experts are here to help you find the right resources and guide you through your AI journey.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
+            <Link,
+    to="/contact"
               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Contact Support
             </Link>
-            <Link
-              to="/training"
+            <Link,
+    to="/training"
               className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors"
             >
               View Training

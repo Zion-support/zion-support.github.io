@@ -15,7 +15,7 @@ userImpactScore: number;
 interface AIInsights {
 predictedHighRiskActions: string[];
 recommendedImprovements: string[];
-errorTrends: Array<{,
+errorTrends: Array<{
 category: string;
 trend: 'increasing' | 'decreasing' | 'stable';
 }>;
@@ -27,7 +27,7 @@ severity: string;
 message: string;
 lastOccurrence: string | Date;
 occurrenceCount: number;
-context: {,
+context: {
 component?: string;
 action?: string;
 };
@@ -127,19 +127,19 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
 
   const getSeverityColor = (severity: string) => {
 switch (severity) {
-case 'critical': return 'text-red-600 bg-red-100';,
-case 'high': return 'text-orange-600 bg-orange-100';,
-case 'medium': return 'text-yellow-600 bg-yellow-100';,
-case 'low': return 'text-blue-600 bg-blue-100';,
+case 'critical': return 'text-red-600 bg-red-100';
+case 'high': return 'text-orange-600 bg-orange-100';
+case 'medium': return 'text-yellow-600 bg-yellow-100';
+case 'low': return 'text-blue-600 bg-blue-100';
 default: return 'text-gray-600 bg-gray-100';
 }
   };
 
   const getTrendIcon = (trend: string) => {
 switch (trend) {
-case 'increasing': return '📈';,
-case 'decreasing': return '📉';,
-case 'stable': return '➡️';,
+case 'increasing': return '📈';
+case 'decreasing': return '📉';
+case 'stable': return '➡️';
 default: return '❓';
 }
   };

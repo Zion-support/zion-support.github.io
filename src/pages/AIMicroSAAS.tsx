@@ -7,21 +7,20 @@ import {
   BarChart3,
   MessageSquare,
   FileText,
-  Users
-  CheckCircle
-  ArrowRight
-  DollarSign
-  Clock
-  Star
-  TrendingUp
-  
-  Lock
-  Smartphone
-  Cloud
-  Database
-  Cpu
-  Target
-  Rocket
+  Users,
+    CheckCircle
+  ArrowRight,
+    DollarSign
+  Clock,
+    Star
+  TrendingUp,
+    Lock
+  Smartphone,
+    Cloud
+  Database,
+    Cpu
+  Target,
+    Rocket
 } from "lucide-react";
 
 export default function AIMicroSAAS(): React.JSX.Element {
@@ -215,8 +214,8 @@ export default function AIMicroSAAS(): React.JSX.Element {
     <>
       <Helmet>
         <title>AI Micro SaaS Services - Zion Tech Group | Innovative AI Solutions</title>
-        <meta 
-          name="description" 
+        <meta,
+    name="description" 
           content="Cutting-edge AI micro SaaS services including content optimization, automation, analytics, and customer intelligence. Real solutions with proven ROI." 
         />
         <meta name="keywords" content="AI micro SaaS, automation, content optimization, customer intelligence, business intelligence, cybersecurity" />
@@ -235,8 +234,8 @@ export default function AIMicroSAAS(): React.JSX.Element {
               Revolutionary AI Micro SaaS Platform
             </h1>
             <p className="text-xl text-blue-100 mb-8 max-w-4xl mx-auto">
-              Deploy cutting-edge AI micro SaaS solutions that deliver measurable ROI. Our platform offers 
-              intelligent automation, advanced analytics, and customer intelligence tools designed for modern businesses.
+              Deploy cutting-edge AI micro SaaS solutions that deliver measurable ROI. Our platform offers,
+    intelligent automation, advanced analytics, and customer intelligence tools designed for modern businesses.
             </p>
             <div className="flex items-center justify-center gap-6 text-sm text-blue-200">
               <div className="flex items-center">
@@ -315,8 +314,8 @@ export default function AIMicroSAAS(): React.JSX.Element {
                       <div className="text-lg font-semibold text-cyan-400">{service.price}</div>
                       <div className="text-sm text-slate-400">{service.eta} deployment</div>
                     </div>
-                    <a 
-                      href={service.link}
+                    <a,
+    href={service.link}
                       className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
                     >
                       Get Started
@@ -403,15 +402,15 @@ export default function AIMicroSAAS(): React.JSX.Element {
 
             <div className="mt-8 text-center">
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
-                <a 
-                  href="tel:+13024640950" 
+                <a,
+    href="tel:+13024640950" 
                   className="inline-flex items-center gap-2 bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-slate-100 transition-colors"
                 >
                   <Smartphone className="w-4 h-4" />
                   +1 302 464 0950
                 </a>
-                <a 
-                  href="mailto:kleber@ziontechgroup.com" 
+                <a,
+    href="mailto:kleber@ziontechgroup.com" 
                   className="inline-flex items-center gap-2 bg-slate-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-slate-600 transition-colors"
                 >
                   <MessageSquare className="w-4 h-4" />

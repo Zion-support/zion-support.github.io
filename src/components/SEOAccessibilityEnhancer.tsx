@@ -124,7 +124,7 @@ const SEOAccessibilityEnhancer: React.FC<SEOAccessibilityEnhancerProps> = ({
     const style = document.createElement('style');
     style.textContent = `
       .keyboard-navigation *:focus {
-outline: 2px solid #3b82f6 !important;,
+outline: 2px solid #3b82f6 !important;
 outline-offset: 2px !important;
 }
       
@@ -141,13 +141,13 @@ outline-offset: 2px !important;
       }
       
       .focus\\:not-sr-only:focus {
-position: static;,
-width: auto;,
-height: auto;,
-padding: inherit;,
-margin: inherit;,
-overflow: visible;,
-clip: auto;,
+position: static;
+width: auto;
+height: auto;
+padding: inherit;
+margin: inherit;
+overflow: visible;
+clip: auto;
 white-space: normal;
 }
     `;

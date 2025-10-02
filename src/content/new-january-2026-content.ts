@@ -18,7 +18,7 @@ id: string;
 name: string;
 description: string;
 features: string[];
-pricing: {,
+pricing: {
 starting: string;
 enterprise: string;
 };

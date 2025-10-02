@@ -47,7 +47,7 @@ export function generateMetaTags(config: SEOConfig): Record<string, string> {
   }
 
   if (config.ogImage) {
-meta['og:image'] = config.ogImage;,
+meta['og:image'] = config.ogImage;
 meta['twitter:image'] = config.ogImage;
 }
 

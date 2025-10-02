@@ -54,9 +54,9 @@ class ContentRecommendationEngine {
   getRecommendations(
     userId: string,
     options: {
-limit?: number;,
-excludeViewed?: boolean;,
-category?: string;,
+limit?: number;
+excludeViewed?: boolean;
+category?: string;
 type?: ContentItem['type'];
 } = {}
   ): RecommendationResult[] {
@@ -200,9 +200,9 @@ type?: ContentItem['type'];
   updateUserProfile(
     userId: string,
     update: {
-viewedContent?: string;,
-interest?: string;,
-category?: string;,
+viewedContent?: string;
+interest?: string;
+category?: string;
 engagement?: number;
 }
   ): void {
@@ -472,8 +472,8 @@ engagement?: number;
    * Get content stats
    */
   getContentStats(contentId: string): {
-views: number;,
-conversions: number;,
+views: number;
+conversions: number;
 conversionRate: number;
 } | null {
     const content = this.contentCatalog.find((c) => c.id === contentId);
@@ -524,7 +524,7 @@ conversionRate: number;
    * Export recommendations data
    */
   exportData(): {
-catalog: ContentItem[];,
+catalog: ContentItem[];
 profiles: { [userId: string]: UserProfile
 };
   } {

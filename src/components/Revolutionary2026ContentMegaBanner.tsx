@@ -26,8 +26,8 @@ const Revolutionary2026ContentMegaBanner: React.FC = () => {
       category: "Enterprise Automation"
       date: "2026-01-15"
       readTime: "38 min"
-      trending: true
-      icon: "🤖"
+      trending: true,
+    icon: "🤖"
       impact: "98% Automation"
       featured: true
     },
@@ -136,8 +136,8 @@ featured: false
         {/* Featured Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {revolutionaryContent.map((content) => (
-            <div
-              key={content.id}
+            <div,
+    key={content.id}
               className="group relative"
             >
               {/* Featured badge */}
@@ -206,8 +206,8 @@ featured: false
                 </div>
 
                 {/* CTA Button */}
-                <a
-                  href={`/blog/${content.slug}`}
+                <a,
+    href={`/blog/${content.slug}`}
                   className="group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
                 >
                   <ArrowRight className="w-4 h-4" />

@@ -23,7 +23,7 @@ totalIssues: number;
 errors: number;
 warnings: number;
 issues: SEOIssue[];
-metrics: {,
+metrics: {
 pageTitle: string;
 metaDescription: string;
 headings: { h1: number; h2: number; h3: number; h4: number; h5: number; h6: number
@@ -201,35 +201,35 @@ const SEOAuditDashboard: React.FC = () => {
 
   const getIssueIcon = (type: string) => {
 switch (type) {
-case 'error':,
+case 'error':
 return <XCircle className="w-5 h-5 text-red-600" />;
-case 'warning':,
+case 'warning':
 return <AlertTriangle className="w-5 h-5 text-yellow-600" />;
-default:,
+default:
 return <CheckCircle className="w-5 h-5 text-blue-600" />;
 }
   };
 
   const getImpactColor = (impact: string) => {
 switch (impact) {
-case 'high':,
+case 'high':
 return 'bg-red-100 text-red-800 border-red-200';
-case 'medium':,
+case 'medium':
 return 'bg-yellow-100 text-yellow-800 border-yellow-200';
-default:,
+default:
 return 'bg-blue-100 text-blue-800 border-blue-200';
 }
   };
 
   const getCategoryIcon = (category: string) => {
 switch (category) {
-case 'content':,
+case 'content':
 return <Search className="w-4 h-4" />;
-case 'mobile':,
+case 'mobile':
 return <Smartphone className="w-4 h-4" />;
-case 'performance':,
+case 'performance':
 return <Zap className="w-4 h-4" />;
-default:,
+default:
 return <Globe className="w-4 h-4" />;
 }
   };

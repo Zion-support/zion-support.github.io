@@ -110,10 +110,10 @@ const PerformanceOptimizer: React.FC<{ isVisible?: boolean; onClose?: () => void
           justify-content: center;
         }
         .hero-title {
-font-size: 3rem;,
-font-weight: 700;,
-color: white;,
-text-align: center;,
+font-size: 3rem;
+font-weight: 700;
+color: white;
+text-align: center;
 margin-bottom: 1rem;
 }
         @media (max-width: 768px) {

@@ -10,10 +10,10 @@
  * Converts legacy NewContentPromoBanner props to UnifiedPromotionalBanner props
  */
 export function convertNewContentPromoProps(legacyProps: {
-title: string;,
-description: string;,
-ctaText: string;,
-ctaLink: string;,
+title: string;
+description: string;
+ctaText: string;
+ctaLink: string;
 featuredItems?: Array<{ title: string; category: string; link: string
 }>;
   className?: string;
@@ -95,7 +95,7 @@ export function createBannerConfig(
  * Banner content templates for common use cases
  */
 export const bannerTemplates = {
-newAIBreakthroughs: (count: number = 3) => ({,
+newAIBreakthroughs: (count: number = 3) => ({
 title: `🚀 JUST RELEASED: ${count
 } Revolutionary AI Breakthroughs`,
     ctaText: 'Explore Latest Innovations',
@@ -122,9 +122,9 @@ title: `🚀 JUST RELEASED: ${count
  * Helper to create featured items with consistent formatting
  */
 export function createFeaturedItems(items: Array<{
-title: string;,
-category: string;,
-link: string;,
+title: string;
+category: string;
+link: string;
 metrics?: string;
 }>): FeaturedItem[] {
   return items.map(item => ({

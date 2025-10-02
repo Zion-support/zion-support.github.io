@@ -2,10 +2,7 @@
  * Enhanced Analytics System
  * Tracks user behavior, performance, and business metrics
  */
-
-// import {
-getPerformanceOptimizer
-} from './performanceOptimizer';
+import { getPerformanceOptimizer } from './performanceOptimizer';
 
 interface PageView {
 path: string;
@@ -40,9 +37,9 @@ performanceMetrics: any;
 }
 
 class EnhancedAnalytics {
-private session: SessionData;,
+private session: SessionData;
 private isInitialized = false;
-private performanceOptimizer: any;,
+private performanceOptimizer: any;
 constructor() {
 this.session = this.createNewSession();
 if (typeof window !== 'undefined') {
@@ -430,9 +427,9 @@ this.initialize();
    * Get analytics report
    */
   getReport(): {
-summary: any;,
-engagement: any;,
-performance: any;,
+summary: any;
+engagement: any;
+performance: any;
 conversions: any;
 } {
     return {

@@ -41,7 +41,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
   };
 
   const generateAlert = (metric: string, value: number, threshold: number): PerformanceAlert => {
-const type = value > threshold ? 'error' : value > threshold * 0.8 ? 'warning' : 'info';,
+const type = value > threshold ? 'error' : value > threshold * 0.8 ? 'warning' : 'info';
 return {
 id: `${metric
 }-${Date.now()}`,

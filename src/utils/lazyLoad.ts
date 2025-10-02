@@ -10,7 +10,7 @@ export function lazyRetry<T extends ComponentType<any>>(
 ): React.LazyExoticComponent<T> {
   return lazy(() => {
     return new Promise<{ default: T }>((resolve, reject) => {
-const attemptLoad = (attemptsLeft: number) => {,
+const attemptLoad = (attemptsLeft: number) => {
 componentImport()
 .then(resolve)
 .catch((error) => {

@@ -15,8 +15,8 @@ formats?: ('webp' | 'avif' | 'jpg' | 'png')[];
 }
 
 export interface ResponsiveImageConfig extends ImageConfig {
-srcSet?: string;,
-sizes?: string;,
+srcSet?: string;
+sizes?: string;
 breakpoints?: number[];
 }
 
@@ -59,9 +59,9 @@ export const generateSizes = (
 export const getOptimizedUrl = (
   src: string,
   options: {
-width?: number;,
-height?: number;,
-quality?: number;,
+width?: number;
+height?: number;
+quality?: number;
 format?: 'webp' | 'avif' | 'jpg' | 'png';
 } = {}
 ): string => {
@@ -283,15 +283,15 @@ export const getOptimalQuality = (): number => {
   const effectiveType = connection?.effectiveType;
   
   switch (effectiveType) {
-case '4g':,
+case '4g':
 return 85;
-case '3g':,
+case '3g':
 return 70;
-case '2g':,
+case '2g':
 return 50;
-case 'slow-2g':,
+case 'slow-2g':
 return 40;
-default:,
+default:
 return 80;
 }
 };

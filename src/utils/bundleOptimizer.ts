@@ -87,7 +87,7 @@ export class BundleOptimizer {
    * Generate optimization recommendations
    */
   private generateRecommendations(analysis: BundleAnalysis): string[] {
-const recommendations: string[] = [];,
+const recommendations: string[] = [];
 // Check for large components
 const largeComponents = analysis.largestComponents.filter(
 c => c.size > this.threshold
@@ -134,7 +134,7 @@ recommendations.push(
    * Implement tree shaking for unused exports
    */
   enableTreeShaking(): {
-unusedExports: string[];,
+unusedExports: string[];
 potentialSavings: number;
 } {
     console.log('Analyzing unused exports...');
@@ -158,7 +158,7 @@ potentialSavings: number;
    * Optimize chunk splitting strategy
    */
   optimizeChunkStrategy(): {
-strategy: string;,
+strategy: string;
 expectedImprovement: string;
 } {
     return {

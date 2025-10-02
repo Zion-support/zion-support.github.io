@@ -7,15 +7,15 @@ Activity
 } from 'lucide-react';
 
 interface AnalyticsData {
-visitors: {,
+visitors: {
 total: number;
 unique: number;
 returning: number;
 new: number;
 };
   pageViews: {
-total: number;,
-average: number;,
+total: number;
+average: number;
 topPages: Array<{ page: string; views: number; bounceRate: number
 }>;
   };
@@ -25,9 +25,9 @@ topPages: Array<{ page: string; views: number; bounceRate: number
     devices: Array<{ device: string; visitors: number; percentage: number }>;
   };
   performance: {
-averageLoadTime: number;,
-bounceRate: number;,
-conversionRate: number;,
+averageLoadTime: number;
+bounceRate: number;
+conversionRate: number;
 engagementScore: number;
 };
   trends: {
@@ -35,7 +35,7 @@ engagementScore: number;
     weekly: Array<{ week: string; visitors: number; pageViews: number }>;
   };
   realTime: {
-activeUsers: number;,
+activeUsers: number;
 currentPages: Array<{ page: string; users: number
 }>;
     referrers: Array<{ source: string; users: number }>;

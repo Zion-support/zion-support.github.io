@@ -193,10 +193,10 @@ banner.subtitle && (
       <style jsx>{
 `
 .banner-item {
-position: absolute;,
-top: 0;,
-left: 0;,
-width: 100%;,
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
 height: 100%;
 }
         
@@ -205,7 +205,7 @@ height: 100%;
         }
         
         .banner-container {
-min-height: 300px;,
+min-height: 300px;
 position: relative;
 }
         
