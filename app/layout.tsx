@@ -51,8 +51,9 @@ function Header() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </button>
-            <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <div className="absolute top-full left-0 mt-2 w-72 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
               <div className="py-2">
+                <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">Core Services</div>
                 <Link href="/services/ai-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
                   AI Services & Solutions
                 </Link>
@@ -62,9 +63,20 @@ function Header() {
                 <Link href="/services/it-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
                   IT Services & Solutions
                 </Link>
+                <div className="border-t border-gray-100 my-2"></div>
+                <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">Specialized Solutions</div>
+                <Link href="/services/ai-autonomous-operations" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  Autonomous Operations
+                </Link>
+                <Link href="/services/ai-quantum-computing-2026" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  Quantum Computing
+                </Link>
+                <Link href="/services/ai-cybersecurity-2025" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  Cybersecurity
+                </Link>
                 <div className="border-t border-gray-100 my-1"></div>
                 <Link href="/services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 font-medium">
-                  All Services
+                  View All Services →
                 </Link>
               </div>
             </div>
@@ -75,21 +87,37 @@ function Header() {
             Solutions
           </Link>
 
-          {/* Case Studies */}
-          <Link href="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors font-medium flex items-center gap-1">
-            Case Studies
-            <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
-              $43M+ ROI
-            </span>
-          </Link>
-
-          {/* Blog */}
-          <Link href="/blog" className="text-gray-700 hover:text-blue-600 transition-colors font-medium flex items-center gap-1">
-            Blog
-            <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
-              50+ Articles
-            </span>
-          </Link>
+          {/* Resources Dropdown */}
+          <div className="relative group">
+            <button className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1 font-medium">
+              Resources
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <div className="py-2">
+                <Link href="/case-studies" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 flex items-center gap-2">
+                  Case Studies
+                  <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                    $43M+ ROI
+                  </span>
+                </Link>
+                <Link href="/blog" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 flex items-center gap-2">
+                  Blog & Insights
+                  <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                    50+ Articles
+                  </span>
+                </Link>
+                <Link href="/guides" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  Implementation Guides
+                </Link>
+                <Link href="/content-hub" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  Content Hub
+                </Link>
+              </div>
+            </div>
+          </div>
 
           {/* About */}
           <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
@@ -117,7 +145,7 @@ function Footer() {
   return (
     <footer className="border-t border-gray-200 mt-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Services */}
           <div>
             <h3 className="font-semibold text-gray-900 mb-4 text-lg">Services</h3>
@@ -131,27 +159,33 @@ function Footer() {
               <Link href="/services/it-services" className="block text-gray-600 hover:text-blue-600 transition-colors">
                 IT Services & Solutions
               </Link>
+              <Link href="/services/ai-autonomous-operations" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                Autonomous Operations
+              </Link>
+              <Link href="/services/ai-quantum-computing-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                Quantum Computing
+              </Link>
               <Link href="/services" className="block text-gray-600 hover:text-blue-600 transition-colors font-medium">
-                All Services
+                View All Services →
               </Link>
             </div>
           </div>
 
-          {/* Company */}
+          {/* Solutions */}
           <div>
-            <h3 className="font-semibold text-gray-900 mb-4 text-lg">Company</h3>
+            <h3 className="font-semibold text-gray-900 mb-4 text-lg">Solutions</h3>
             <div className="space-y-3">
-              <Link href="/about" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                About Us
-              </Link>
               <Link href="/solutions" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                Solutions
+                Enterprise Solutions
               </Link>
-              <Link href="/case-studies" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                Case Studies
+              <Link href="/enterprise" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                Enterprise Platform
               </Link>
-              <Link href="/contact" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                Contact
+              <Link href="/services-advertising" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                Advertising Solutions
+              </Link>
+              <Link href="/content-hub" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                Content Hub
               </Link>
             </div>
           </div>
@@ -163,15 +197,40 @@ function Footer() {
               <Link href="/blog" className="block text-gray-600 hover:text-blue-600 transition-colors">
                 Blog & Insights
               </Link>
+              <Link href="/case-studies" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                Case Studies
+              </Link>
               <Link href="/guides" className="block text-gray-600 hover:text-blue-600 transition-colors">
                 Implementation Guides
               </Link>
-              <Link href="/enterprise" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                Enterprise Solutions
+              <Link href="/guides/ai-2026-implementation-roadmap" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                AI 2026 Roadmap
               </Link>
-              <a href="https://ziontechgroup.com" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                Main Website
-              </a>
+              <Link href="/guides/ai-2027-implementation-roadmap" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                AI 2027 Roadmap
+              </Link>
+            </div>
+          </div>
+
+          {/* Company */}
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-4 text-lg">Company</h3>
+            <div className="space-y-3">
+              <Link href="/about" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                About Us
+              </Link>
+              <Link href="/contact" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                Contact
+              </Link>
+              <Link href="/security" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                Security
+              </Link>
+              <Link href="/privacy" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                Privacy Policy
+              </Link>
+              <Link href="/terms" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                Terms of Service
+              </Link>
             </div>
           </div>
 
@@ -215,10 +274,11 @@ function Footer() {
             <div className="text-sm text-gray-500 mb-4 md:mb-0">
               © {new Date().getFullYear()} Zion Tech Group. All rights reserved.
             </div>
-            <div className="flex space-x-6 text-sm text-gray-500">
+            <div className="flex flex-wrap gap-6 text-sm text-gray-500">
               <Link href="/privacy" className="hover:text-blue-600 transition-colors">Privacy Policy</Link>
               <Link href="/terms" className="hover:text-blue-600 transition-colors">Terms of Service</Link>
               <Link href="/security" className="hover:text-blue-600 transition-colors">Security</Link>
+              <a href="https://ziontechgroup.com" className="hover:text-blue-600 transition-colors">Main Website</a>
             </div>
           </div>
         </div>
