@@ -207,10 +207,10 @@ export default function EnterpriseBlockchainIntegration2025Page(): void {
               Let's discuss how blockchain can transform your business operations. Our blockchain architects and engineers will help you identify the highest-impact use cases and design a solution that delivers measurable ROI.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-semibold rounded-xl transition-all transform hover:scale-105 shadow-xl">
+              <a title="Internal link" href="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-semibold rounded-xl transition-all transform hover:scale-105 shadow-xl">
                 Schedule Consultation
               </a>
-              <a href="/demo" className="inline-flex items-center justify-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl border border-white/20 transition-all">
+              <a title="Internal link" href="/demo" className="inline-flex items-center justify-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl border border-white/20 transition-all">
                 Explore Use Cases
               </a>
             </div>

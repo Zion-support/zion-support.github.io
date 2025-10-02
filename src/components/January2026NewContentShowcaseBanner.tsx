@@ -103,7 +103,7 @@ const January2026NewContentShowcaseBanner: React.FC = () => {
           transition={{ delay: 0.9, duration: 0.6 }}
           className="text-center"
         >
-          <a
+          <a title="Internal link"
             href="/blog"
             className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
           >

@@ -191,14 +191,14 @@ const February2026ContentShowcaseBanner = () => {
                 <div className="text-sm text-gray-400">First 6 months only</div>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a
+                <a title="Internal link"
                   href="/subscribe"
                   className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 flex items-center justify-center gap-2"
                 >
                   <Sparkles className="w-5 h-5" />
                   <span>Get Premium Access</span>
                 </a>
-                <a
+                <a title="Internal link"
                   href="/contact"
                   className="border-2 border-emerald-500 text-emerald-400 hover:bg-emerald-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
                 >

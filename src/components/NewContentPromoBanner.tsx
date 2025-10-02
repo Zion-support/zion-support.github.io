@@ -2,230 +2,104 @@ import React, { useState } from 'react';
 import { 
   Sparkles, 
   ArrowRight, 
-  X, 
-  BookOpen, 
   TrendingUp, 
+  Users, 
   Zap,
-  Shield,
-  Cloud,
-  Brain,
-  Star
+  Star,
+  CheckCircle
 } from 'lucide-react';
 
-interface NewContentPromoBannerProps {
-  variant?: 'info' | 'premium' | 'success' | 'warning';
-  className?: string;
-}
+const NewContentPromoBanner: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(true);
 
-const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({ 
-  variant = 'premium', 
-  className = '' 
-}) => {
-  const [isDismissed, setIsDismissed] = useState(false);
-
-  const variants = {
-    info: 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white border-blue-400/30',
-    premium: 'bg-gradient-to-r from-purple-500 to-pink-500 text-white border-purple-400/30',
-    success: 'bg-gradient-to-r from-green-500 to-emerald-500 text-white border-green-400/30',
-    warning: 'bg-gradient-to-r from-orange-500 to-red-500 text-white border-orange-400/30'
-  };
-
-  const featuredContent = [
+  const features = [
     {
-      title: "AI Safety Budgets 2026",
-      description: "Guardrails wired to KPIs, approvals, rollbacks",
-      icon: Shield,
-      link: "/blog/ai-safety-budgets-2026",
-      category: "AI Strategy"
+      icon: <TrendingUp className="w-5 h-5" />,
+      text: "AI-Powered Analytics"
     },
     {
-      title: "Edge Privacy for ML 2026",
-      description: "On‑device filters and scoped identifiers",
-      icon: Cloud,
-      link: "/blog/edge-privacy-ml-2026",
-      category: "Edge"
+      icon: <Users className="w-5 h-5" />,
+      text: "Team Collaboration"
     },
     {
-      title: "Agent Evals in Prod 2026",
-      description: "Online checks that predict outcomes",
-      icon: TrendingUp,
-      link: "/blog/agent-evals-in-prod-2026",
-      category: "GenAI"
+      icon: <Zap className="w-5 h-5" />,
+      text: "Lightning Fast"
     },
     {
-      title: "Cost‑Aware Inference 2026",
-      description: "Warm pools and quality tiers under SLAs",
-      icon: Zap,
-      link: "/blog/ai-cost-aware-inference-2026",
-      category: "GenAI"
-    },
-    {
-      title: "Platform Golden Paths 2026",
-      description: "Paved roads that move KPIs",
-      icon: TrendingUp,
-      link: "/blog/platform-golden-paths-kpis-2026",
-      category: "Platform"
-    },
-    {
-      title: "Quality‑Tiered GenAI Routing 2026",
-      description: "Control cost with tiers, caches, and eval signals",
-      icon: Zap,
-      link: "/blog/genai-routing-under-budgets-2026",
-      category: "GenAI"
-    },
-    {
-      title: "On‑Device Agents 2026",
-      description: "Offline‑capable tools, private caches, safe fallbacks",
-      icon: Cloud,
-      link: "/blog/on-device-agents-offline-tools-2026",
-      category: "Edge"
-    },
-    {
-      title: "Zero‑Trust Observability 2026",
-      description: "Signed traces and least‑privilege telemetry",
-      icon: Shield,
-      link: "/blog/zero-trust-observability-2026",
-      category: "Security"
-    },
-    {
-      title: "AI Incident Response Playbooks",
-      description: "Contain incidents in under 60 seconds",
-      icon: TrendingUp,
-      link: "/blog/ai-incident-response-playbooks-2025",
-      category: "Security"
-    },
-    {
-      title: "Agentic Workflows Blueprint 2026",
-      description: "Compose multi‑tool agents with safe tools and policy tests in CI",
-      icon: TrendingUp,
-      link: "/blog/agentic-workflows-blueprint-2026",
-      category: "GenAI"
-    },
-    {
-      title: "Edge LLM Caching",
-      description: "Sub‑100ms prompts via tiered KV, signed configs, freshness windows",
-      icon: Zap,
-      link: "/blog/edge-llm-caching-blueprint-2025",
-      category: "Architecture"
-    },
-    {
-      title: "AI Operational Scorecards 2026",
-      description: "Guardrails wired to KPIs with PR checks, canaries, and SLOs",
-      icon: Brain,
-      link: "/blog/ai-operational-scorecards-2026",
-      category: "AI Strategy"
+      icon: <Star className="w-5 h-5" />,
+      text: "Premium Quality"
     }
   ];
 
-  if (isDismissed) return null;
+  if (!isVisible) return null;
 
   return (
-    <div className={`${variants[variant]} ${className} relative overflow-hidden`}>
-      {/* Animated background elements */}
+    <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white py-8 px-4 relative overflow-hidden">
+      {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-0 w-32 h-32 bg-white rounded-full animate-pulse"></div>
-        <div className="absolute bottom-0 right-0 w-24 h-24 bg-white rounded-full animate-bounce"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white rounded-full animate-ping"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/20 to-transparent"></div>
       </div>
-
-      <div className="relative z-10 max-w-7xl mx-auto px-6 py-6">
+      
+      <div className="max-w-7xl mx-auto relative z-10">
         <div className="flex items-center justify-between">
           <div className="flex-1">
-            <div className="flex items-center gap-3 mb-3">
-              <Sparkles className="w-6 h-6 animate-pulse" />
-              <span className="text-lg font-bold">🚀 NEW CONTENT ALERT</span>
-              <Star className="w-5 h-5 animate-spin" />
+            <div className="flex items-center gap-3 mb-4">
+              <Sparkles className="w-6 h-6 text-yellow-300 animate-pulse" />
+              <span className="bg-yellow-300 text-blue-900 px-3 py-1 rounded-full text-sm font-bold">
+                NEW CONTENT AVAILABLE
+              </span>
             </div>
             
-            <h3 className="text-xl font-bold mb-2">
-              Just Published: New Guides for 2026
-            </h3>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Revolutionary AI Breakthroughs 2026
+            </h2>
             
-            <p className="text-white/90 mb-4 text-sm">
-              Discover fresh insights on on‑device agents, GenAI cost controls, secure tool marketplaces,
-              and privacy‑first observability.
+            <p className="text-lg text-blue-100 mb-6 max-w-2xl">
+              Discover the latest AI innovations that are transforming industries worldwide. 
+              Get exclusive access to cutting-edge research and implementation guides.
             </p>
-
-            {/* Featured content grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
-              {featuredContent.map((item, index) => {
-                const Icon = item.icon;
-                return (
-                  <Link
-                    key={index}
-                    to={item.link}
-                    className="bg-white/10 backdrop-blur-sm rounded-lg p-3 hover:bg-white/20 transition-all duration-300 hover:scale-105 group"
-                  >
-                    <div className="flex items-center gap-2 mb-2">
-                      <Icon className="w-4 h-4 text-white/80" />
-                      <span className="text-xs font-medium text-white/80">{item.category}</span>
-                    </div>
-                    <h4 className="font-semibold text-white text-sm group-hover:text-yellow-300 transition-colors">
-                      {item.title}
-                    </h4>
-                    <p className="text-xs text-white/70 mt-1 line-clamp-2">
-                      {item.description}
-                    </p>
-                  </Link>
-                );
-              })}
+            
+            <div className="flex flex-wrap gap-4 mb-6">
+              {features.map((feature, index) => (
+                <div key={index} className="flex items-center gap-2 text-blue-100">
+                  <CheckCircle className="w-4 h-4 text-green-300" />
+                  <span className="text-sm">{feature.text}</span>
+                </div>
+              ))}
             </div>
-
-            {/* Action buttons */}
-            <div className="flex flex-wrap gap-3">
-              <Link
-                to="/blog"
-                className="bg-white text-purple-600 hover:bg-white/90 px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
-              >
-                <BookOpen className="w-4 h-4" />
-                Read All Articles
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              
-              <Link
-                to="/case-studies"
-                className="border border-white/30 text-white hover:bg-white/10 px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
-              >
-                <TrendingUp className="w-4 h-4" />
-                View Case Studies
-              </Link>
-
-              <Link
-                to="/services"
-                className="border border-white/30 text-white hover:bg-white/10 px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
-              >
-                <Shield className="w-4 h-4" />
-                Explore Services
-              </Link>
+            
+            <div className="flex flex-col sm:flex-row gap-4">
+              <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors flex items-center gap-2">
+                Explore Content
+                <ArrowRight className="w-4 h-4" />
+              </button>
+              <button className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                Learn More
+              </button>
             </div>
-
-            {/* Stats */}
-            <div className="flex items-center gap-6 mt-4 text-sm text-white/80">
-              <div className="flex items-center gap-1">
-                <span className="font-semibold">13</span>
-                <span>New Articles</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <span className="font-semibold">3</span>
-                <span>New Case Studies</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <span className="font-semibold">50+</span>
-                <span>Expert Insights</span>
+          </div>
+          
+          <div className="hidden lg:block ml-8">
+            <div className="w-64 h-64 bg-white/10 rounded-full flex items-center justify-center backdrop-blur-sm">
+              <div className="text-center">
+                <div className="text-4xl font-bold mb-2">2026</div>
+                <div className="text-lg text-blue-100">AI Revolution</div>
               </div>
             </div>
           </div>
-
-          {/* Dismiss button */}
-          <button
-            onClick={() => setIsDismissed(true)}
-            className="ml-4 p-2 hover:bg-white/10 rounded-full transition-colors"
-            aria-label="Dismiss banner"
-          >
-            <X className="w-5 h-5" />
-          </button>
         </div>
       </div>
+      
+      {/* Close Button */}
+      <button
+        onClick={() => setIsVisible(false)}
+        className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors"
+        aria-label="Close banner"
+      >
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
     </div>
   );
 };
