@@ -1,4 +1,4 @@
-import { onCLS, onFCP, onLCP, onTTFB, onINP, Metric } from 'web-vitals';
+import { onCLS, onFCP, onLCP, onTTFB, Metric } from 'web-vitals';
 
 interface PerformanceMetrics {
   cls: number | null;
@@ -36,10 +36,18 @@ class PerformanceMonitor {
   private initializeMetrics(): void {
     // Measure Core Web Vitals
     onCLS((metric) => this.updateMetric('cls', metric));
-    onINP((metric) => this.updateMetric('inp', metric));
     onFCP((metric) => this.updateMetric('fcp', metric));
     onLCP((metric) => this.updateMetric('lcp', metric));
     onTTFB((metric) => this.updateMetric('ttfb', metric));
+    
+    // Try to import onINP dynamically if available
+    import('web-vitals').then((webVitals) => {
+      if (webVitals.onINP) {
+        webVitals.onINP((metric: Metric) => this.updateMetric('inp', metric));
+      }
+    }).catch(() => {
+      // onINP not available, skip
+    });
   }
 
   private updateMetric(key: keyof PerformanceMetrics, metric: Metric): void {

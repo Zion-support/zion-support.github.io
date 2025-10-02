@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback, useMemo } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown, Zap, Phone } from 'lucide-react';
 
@@ -7,16 +7,20 @@ const ModernHeader: React.FC = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const location = useLocation();
 
-  const toggleDropdown = (dropdown: string) => {
+  const toggleDropdown = useCallback((dropdown: string) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
-  };
+  }, [activeDropdown]);
 
-  const isActive = (path: string) => location.pathname === path;
+  const isActive = useCallback((path: string) => location.pathname === path, [location.pathname]);
 
   const navigationItems = [
     {
       label: 'Home',
       path: '/',
+    },
+    {
+      label: 'Pricing',
+      path: '/pricing',
     },
     {
       label: 'Solutions',
@@ -46,6 +50,10 @@ const ModernHeader: React.FC = () => {
         { label: 'Intelligent Document Processing', path: '/services/ai-intelligent-document-processing' },
         { label: 'Real-Time Cognitive Automation', path: '/services/real-time-cognitive-automation' },
         { label: 'Advanced Cybersecurity AI', path: '/services/advanced-cybersecurity-ai' },
+        { label: 'Edge AI Inference Platform', path: '/services/edge-ai-inference' },
+        { label: 'Email Deliverability Optimizer', path: '/services/email-deliverability-optimizer' },
+        { label: 'Sales Playbook Copilot', path: '/services/sales-playbook-copilot' },
+        { label: 'Code Quality Gatekeeper', path: '/services/code-quality-gatekeeper' },
         { label: 'AI Solutions Hub', path: '/ai-solutions' },
         { label: 'Quantum Computing', path: '/quantum-computing' },
         { label: 'Cloud & DevOps', path: '/cloud-devops' },
