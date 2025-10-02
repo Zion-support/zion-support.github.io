@@ -257,33 +257,33 @@ const App: React.FC = () => {
           </Router>
         </EnhancedErrorBoundary>
       </AccessibilityEnhancer>
+
+      {showPerformanceOptimizer && (
+        <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center" role="dialog" aria-modal="true">
+          <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+            <div className="flex justify-between items-center mb-4">
+              <h2 className="text-2xl font-bold">Performance Optimizer</h2>
+              <button onClick={() => setShowPerformanceOptimizer(false)} className="text-gray-500 hover:text-gray-700 text-2xl">✕</button>
+            </div>
+            <PerformanceOptimizer isVisible={true} onClose={() => setShowPerformanceOptimizer(false)} />
+          </div>
+        </div>
+      )}
+
+      {showPerformanceMonitor && (
+        <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center" role="dialog" aria-modal="true">
+          <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+            <div className="flex justify-between items-center mb-4">
+              <h2 className="text-2xl font-bold">Performance Monitor</h2>
+              <button onClick={() => setShowPerformanceMonitor(false)} className="text-gray-500 hover:text-gray-700 text-2xl">✕</button>
+            </div>
+            <PerformanceMonitor />
+          </div>
+        </div>
+      )}
+
+      <NotificationSystem notifications={notifications} onRemove={handleRemoveNotification} />
     </HelmetProvider>
-
-    {showPerformanceOptimizer && (
-      <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center" role="dialog" aria-modal="true">
-        <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-          <div className="flex justify-between items-center mb-4">
-            <h2 className="text-2xl font-bold">Performance Optimizer</h2>
-            <button onClick={() => setShowPerformanceOptimizer(false)} className="text-gray-500 hover:text-gray-700 text-2xl">✕</button>
-          </div>
-          <PerformanceOptimizer isVisible={true} onClose={() => setShowPerformanceOptimizer(false)} />
-        </div>
-      </div>
-    )}
-
-    {showPerformanceMonitor && (
-      <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center" role="dialog" aria-modal="true">
-        <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-          <div className="flex justify-between items-center mb-4">
-            <h2 className="text-2xl font-bold">Performance Monitor</h2>
-            <button onClick={() => setShowPerformanceMonitor(false)} className="text-gray-500 hover:text-gray-700 text-2xl">✕</button>
-          </div>
-          <PerformanceMonitor />
-        </div>
-      </div>
-    )}
-
-    <NotificationSystem notifications={notifications} onRemove={handleRemoveNotification} />
   );
 };
 
