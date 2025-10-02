@@ -144,6 +144,70 @@ export default function ServicesPage() {
       href: '/services/ai-devops',
       pricing: '$5,999 - $29,999/month',
       category: 'IT Services'
+    },
+    {
+      title: 'AI Customer Support Automation',
+      description: 'Revolutionary AI-powered customer support with intelligent routing and 24/7 multilingual support',
+      icon: '🎧',
+      features: [
+        'Intelligent Intent Recognition',
+        'Real-time Sentiment Analysis',
+        'Multilingual Support (50+ languages)',
+        'Smart Ticket Routing',
+        'Predictive Analytics',
+        'Automated Resolution'
+      ],
+      href: '/services/ai-customer-support-automation',
+      pricing: '$499 - $2,999/month',
+      category: 'Micro SaaS'
+    },
+    {
+      title: 'AI Financial Analysis Platform',
+      description: 'Advanced AI-powered financial analysis with real-time market insights and predictive analytics',
+      icon: '💰',
+      features: [
+        'Real-time Market Analysis',
+        'Predictive Financial Modeling',
+        'Automated Reporting',
+        'Portfolio Optimization',
+        'Fraud Detection',
+        'Advanced Analytics'
+      ],
+      href: '/services/ai-financial-analysis-platform',
+      pricing: '$1,999 - $9,999/month',
+      category: 'Advanced AI'
+    },
+    {
+      title: 'AI Project Management Suite',
+      description: 'Intelligent project management with AI-powered resource allocation and risk prediction',
+      icon: '📋',
+      features: [
+        'Smart Resource Allocation',
+        'Risk Prediction & Mitigation',
+        'Automated Workflow Optimization',
+        'Predictive Analytics',
+        'Intelligent Collaboration',
+        'Performance Intelligence'
+      ],
+      href: '/services/ai-project-management-suite',
+      pricing: '$299 - $1,999/month',
+      category: 'Micro SaaS'
+    },
+    {
+      title: 'AI HR Recruitment Platform',
+      description: 'Revolutionary AI-powered recruitment with intelligent candidate matching and bias-free hiring',
+      icon: '👥',
+      features: [
+        'Smart Candidate Matching',
+        'Automated Screening',
+        'Bias-Free Hiring',
+        'AI-Powered Interviews',
+        'Predictive Analytics',
+        'Streamlined Workflow'
+      ],
+      href: '/services/ai-hr-recruitment-platform',
+      pricing: '$399 - $2,499/month',
+      category: 'Micro SaaS'
     }
   ];
 

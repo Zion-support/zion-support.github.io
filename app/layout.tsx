@@ -75,6 +75,20 @@ function Header() {
                   Autonomous Operations
                 </Link>
                 <div className="border-t border-gray-100 my-2"></div>
+                <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">New Micro SaaS Solutions</div>
+                <Link href="/services/ai-customer-support-automation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  AI Customer Support Automation
+                </Link>
+                <Link href="/services/ai-financial-analysis-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600">
+                  AI Financial Analysis Platform
+                </Link>
+                <Link href="/services/ai-project-management-suite" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600">
+                  AI Project Management Suite
+                </Link>
+                <Link href="/services/ai-hr-recruitment-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-pink-50 hover:text-pink-600">
+                  AI HR Recruitment Platform
+                </Link>
+                <div className="border-t border-gray-100 my-2"></div>
                 <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">Specialized Solutions</div>
                 <Link href="/services/ai-business-intelligence-2025" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
                   Business Intelligence
@@ -88,6 +102,9 @@ function Header() {
                 <div className="border-t border-gray-100 my-2"></div>
                 <Link href="/services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 font-medium">
                   View All Services →
+                </Link>
+                <Link href="/services-advertising" className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600 font-medium">
+                  💰 Services & Pricing Guide →
                 </Link>
                 <Link href="/services/new-services-catalog" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">
                   New Services Catalog →
@@ -261,11 +278,12 @@ function Footer() {
             <div className="space-y-2">
               <Link href="/services" className="block text-gray-600 hover:text-blue-600 transition-colors">All Services</Link>
               <Link href="/services/new-services-catalog" className="block text-gray-600 hover:text-purple-600 transition-colors font-medium">✨ New Services Catalog</Link>
-              <Link href="/services/ai-email-marketing" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Email Marketing</Link>
-              <Link href="/services/healthcare-scheduler" className="block text-gray-600 hover:text-blue-600 transition-colors">Healthcare Scheduler</Link>
-              <Link href="/services/autonomous-orchestrator" className="block text-gray-600 hover:text-blue-600 transition-colors">Autonomous Orchestrator</Link>
-              <Link href="/services/smart-inventory" className="block text-gray-600 hover:text-blue-600 transition-colors">Smart Inventory</Link>
-              <Link href="/services/content-moderation" className="block text-gray-600 hover:text-blue-600 transition-colors">Content Moderation</Link>
+              <Link href="/services/ai-customer-support-automation" className="block text-gray-600 hover:text-blue-600 transition-colors">🎧 AI Customer Support</Link>
+              <Link href="/services/ai-financial-analysis-platform" className="block text-gray-600 hover:text-green-600 transition-colors">💰 AI Financial Analysis</Link>
+              <Link href="/services/ai-project-management-suite" className="block text-gray-600 hover:text-purple-600 transition-colors">📋 AI Project Management</Link>
+              <Link href="/services/ai-hr-recruitment-platform" className="block text-gray-600 hover:text-pink-600 transition-colors">👥 AI HR Recruitment</Link>
+              <Link href="/services/ai-email-marketing" className="block text-gray-600 hover:text-blue-600 transition-colors">📧 AI Email Marketing</Link>
+              <Link href="/services/healthcare-scheduler" className="block text-gray-600 hover:text-blue-600 transition-colors">🏥 Healthcare Scheduler</Link>
             </div>
           </div>
           <div>
