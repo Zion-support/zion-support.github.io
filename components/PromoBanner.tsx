@@ -12,9 +12,17 @@ const PromoBanner: React.FC = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <span className="text-sm font-medium">
-              🚀 New: AI Implementation Roadmap 2026 - 
-              <Link to="/guides/ai-2026-implementation-roadmap" className="underline hover:no-underline ml-1">
-                Get Started Today
+              🚀 NEW: 50+ AI Micro SaaS Solutions - 
+              <Link to="/services" className="underline hover:no-underline ml-1">
+                Explore Now
+              </Link>
+              <span className="mx-2">•</span>
+              <Link to="/services/ai-customer-feedback-analyzer" className="underline hover:no-underline">
+                AI Feedback Analyzer - $149/month
+              </Link>
+              <span className="mx-2">•</span>
+              <Link to="/services/ai-quantum-optimization-engine" className="underline hover:no-underline">
+                Quantum AI Engine - $9,999/month
               </Link>
             </span>
           </div>
