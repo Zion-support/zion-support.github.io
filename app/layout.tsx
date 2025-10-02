@@ -54,14 +54,28 @@ function Header() {
             <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
               <div className="py-3">
                 <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">Core Services</div>
-                <Link href="/services/ai-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  AI Services & Solutions
+                <Link href="/services/ai-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600">
+                  AI & Machine Learning
                 </Link>
                 <Link href="/services/micro-saas" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
                   Micro SaaS Solutions
                 </Link>
-                <Link href="/services/it-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  IT Services & Solutions
+                <Link href="/services/it-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-600">
+                  IT Services & Infrastructure
+                </Link>
+                <div className="border-t border-gray-100 my-2"></div>
+                <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">Emerging Technologies</div>
+                <Link href="/services/blockchain-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-600">
+                  Blockchain Solutions
+                </Link>
+                <Link href="/services/iot-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600">
+                  IoT Solutions
+                </Link>
+                <Link href="/services/cybersecurity-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600">
+                  Cybersecurity Solutions
+                </Link>
+                <Link href="/services/data-analytics" className="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600">
+                  Data Analytics & BI
                 </Link>
                 <div className="border-t border-gray-100 my-2"></div>
                 <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">Industry Solutions</div>
@@ -73,17 +87,6 @@ function Header() {
                 </Link>
                 <Link href="/services/ai-autonomous-operations" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600">
                   Autonomous Operations
-                </Link>
-                <div className="border-t border-gray-100 my-2"></div>
-                <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">Specialized Solutions</div>
-                <Link href="/services/ai-business-intelligence-2025" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  Business Intelligence
-                </Link>
-                <Link href="/services/ai-cybersecurity-2025" className="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600">
-                  Cybersecurity
-                </Link>
-                <Link href="/services/ai-cloud-infrastructure-2025" className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600">
-                  Cloud Infrastructure
                 </Link>
                 <div className="border-t border-gray-100 my-2"></div>
                 <Link href="/services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 font-medium">
@@ -227,14 +230,29 @@ function Footer() {
           <div>
             <h3 className="font-semibold text-gray-900 mb-4 text-lg">Services</h3>
             <div className="space-y-3">
-              <Link href="/services/ai-services" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                AI Services & Solutions
+              <div className="text-sm font-medium text-gray-500 uppercase tracking-wide mb-2">Core Services</div>
+              <Link href="/services/ai-services" className="block text-gray-600 hover:text-purple-600 transition-colors">
+                AI & Machine Learning
               </Link>
               <Link href="/services/micro-saas" className="block text-gray-600 hover:text-blue-600 transition-colors">
                 Micro SaaS Solutions
               </Link>
-              <Link href="/services/it-services" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                IT Services & Solutions
+              <Link href="/services/it-services" className="block text-gray-600 hover:text-gray-600 transition-colors">
+                IT Services & Infrastructure
+              </Link>
+              
+              <div className="text-sm font-medium text-gray-500 uppercase tracking-wide mb-2 mt-4">Emerging Technologies</div>
+              <Link href="/services/blockchain-solutions" className="block text-gray-600 hover:text-yellow-600 transition-colors">
+                Blockchain Solutions
+              </Link>
+              <Link href="/services/iot-solutions" className="block text-gray-600 hover:text-green-600 transition-colors">
+                IoT Solutions
+              </Link>
+              <Link href="/services/cybersecurity-solutions" className="block text-gray-600 hover:text-red-600 transition-colors">
+                Cybersecurity Solutions
+              </Link>
+              <Link href="/services/data-analytics" className="block text-gray-600 hover:text-indigo-600 transition-colors">
+                Data Analytics & BI
               </Link>
               <Link href="/services/manufacturing-ai-platform" className="block text-gray-600 hover:text-green-600 transition-colors">
                 Manufacturing AI Platform
@@ -407,6 +425,9 @@ function Footer() {
 >>>>>>> 1c8c3bc8bb20 (feat: Add 2027 content and update links)
               <Link href="/contact" className="block text-gray-600 hover:text-blue-600 transition-colors">
                 Contact
+              </Link>
+              <Link href="/sitemap" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                Sitemap
               </Link>
               <Link href="/privacy" className="block text-gray-600 hover:text-blue-600 transition-colors">
                 Privacy Policy
