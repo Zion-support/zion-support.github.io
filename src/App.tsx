@@ -1,16 +1,16 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './index.css';
-import ModernHeader from './components/ModernHeader';
-import ModernFooter from './components/ModernFooter';
-import ModernHomepage from './components/ModernHomepage';
+import ModernHeader from './components/Header';
+import ModernFooter from './components/Footer';
+import ModernHomepage from './components/LatestContentBanner2025';
 import SEOOptimizer from './components/SEOOptimizer';
 import AdvancedAnalytics from './components/AdvancedAnalytics';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import NotificationSystem from './components/NotificationSystem';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+// import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
 // Types and interfaces
 interface Notification {
@@ -225,7 +225,7 @@ const App: React.FC = () => {
 
   return (
     <EnhancedErrorBoundary>
-      <AccessibilityEnhancer>
+      {/* <AccessibilityEnhancer> */}
         <SEOOptimizer title={seoDataForOptimizer.title} description={seoDataForOptimizer.description} canonicalUrl={seoDataForOptimizer.canonical} />
         <AdvancedAnalytics enableConversionTracking enablePerformanceTracking enableErrorTracking />
         <div className="min-h-screen bg-white">
