@@ -1,7 +1,5 @@
 import React from "react";
-import {
-createRoot
-} from "react-dom/client";
+import { createRoot } from "react-dom/client";
 import App from "./App";
 
 // Report web vitals to help monitor performance in production
@@ -35,4 +33,15 @@ if (container) {
   if (import.meta.env.PROD) {
     void reportWebVitals();
   }
+}
+
+// Register service worker for basic offline support if available
+if ("serviceWorker" in navigator) {
+	window.addEventListener("load", () => {
+		navigator.serviceWorker
+			.register("/sw.js")
+			.catch(() => {
+				// no-op: registration failed; proceed without SW
+			});
+	});
 }
