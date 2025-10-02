@@ -378,42 +378,38 @@ score -= 20;
 }
   
   // Keyword density check (title in content)
-export const checkContentQuality: (,,,
-  content: string,,,
-  title: string,,
+export const checkContentQuality = (
+  content: string,
+  title: string,
 ): { score: number; issues: string[]; recommendations: string[] } => {
-  const issues: string[]  = [];,,,
-  const recommendations: string[]  = [];,,,
-  let score: 100;,,,
-  const wordCount: content.trim().split(/\s+/).length;,,,
+  const issues: string[] = [];
+  const recommendations: string[] = [];
+  let score = 100;
+  const wordCount = content.trim().split(/\s+/).length;
   if (wordCount < 300) {
-    issues.push('Content is too short (<300 words)');';';
+    issues.push('Content is too short (<300 words)');
     score -= 20;
   }
-  const titleWords: title.toLowerCase().split(/\s+/);,,,
-  const contentLower: content.toLowerCase();,,,
-  const titleInContent: titleWords.some((word)  => contentLower.includes(word));,,,
+  const titleWords = title.toLowerCase().split(/\s+/);
+  const contentLower = content.toLowerCase();
+  const titleInContent = titleWords.some((word) => contentLower.includes(word));
   if (!titleInContent) {
-    issues.push('Title keywords not found in content');';';
+    issues.push('Title keywords not found in content');
     score -= 15;
   }
   
   // Heading check
-  if (!content.includes('#') && !content.includes('<h')) {;';';
-    recommendations.push('Add headings to improve content structure');';';
+  if (!content.includes('#') && !content.includes('<h')) {
+    recommendations.push('Add headings to improve content structure');
     score -= 10;
   }
   
   // Link check
-  if (!content.includes('http') && !content.includes('[') && !content.includes('<a')) {;';';
-  if (!content.includes('#') && !content.includes('<h')) {';';
-    recommendations.push('Add headings to improve content structure');';';
-    score -= 10;
-  }
-  if (!content.includes('http') && !content.includes('[') && !content.includes('<a')) {';';
-    recommendations.push('Add internal/external links');';';
+  if (!content.includes('http') && !content.includes('[') && !content.includes('<a')) {
+    recommendations.push('Add internal/external links');
     score -= 5;
   }
+  
   return { score: Math.max(0, score), issues, recommendations };
 };
 
