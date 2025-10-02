@@ -16,12 +16,24 @@ const Header: React.FC = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link to="/services" className="text-gray-600 hover:text-blue-600 transition-colors">Services</Link>
-            <Link to="/services" className="text-gray-600 hover:text-blue-600 transition-colors">Services Catalog</Link>
-            <Link to="/solutions" className="text-gray-600 hover:text-blue-600 transition-colors">Solutions</Link>
-            <Link to="/about" className="text-gray-600 hover:text-blue-600 transition-colors">About</Link>
-            <Link to="/contact" className="text-gray-600 hover:text-blue-600 transition-colors">Contact</Link>
-            <a href="/contact" className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">Get Started</a>
+            <Link to="/services" className="text-gray-600 hover:text-blue-600 transition-colors">
+              Services
+            </Link>
+            <Link to="/solutions" className="text-gray-600 hover:text-blue-600 transition-colors">
+              Solutions
+            </Link>
+            <Link to="/about" className="text-gray-600 hover:text-blue-600 transition-colors">
+              About
+            </Link>
+            <Link to="/contact" className="text-gray-600 hover:text-blue-600 transition-colors">
+              Contact
+            </Link>
+            <Link
+              to="/contact"
+              className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Get Started
+            </Link>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -40,12 +52,41 @@ const Header: React.FC = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-200">
             <nav className="flex flex-col space-y-4">
-              <Link to="/services" className="text-gray-600 hover:text-blue-600 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Services</Link>
-              <Link to="/services" className="text-gray-600 hover:text-blue-600 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Services Catalog</Link>
-              <Link to="/solutions" className="text-gray-600 hover:text-blue-600 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Solutions</Link>
-              <Link to="/about" className="text-gray-600 hover:text-blue-600 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>About</Link>
-              <Link to="/contact" className="text-gray-600 hover:text-blue-600 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
-              <a href="/contact" className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors text-center" onClick={() => setIsMobileMenuOpen(false)}>Get Started</a>
+              <Link
+                to="/services"
+                className="text-gray-600 hover:text-blue-600 transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Services
+              </Link>
+              <Link
+                to="/solutions"
+                className="text-gray-600 hover:text-blue-600 transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Solutions
+              </Link>
+              <Link
+                to="/about"
+                className="text-gray-600 hover:text-blue-600 transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                About
+              </Link>
+              <Link
+                to="/contact"
+                className="text-gray-600 hover:text-blue-600 transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Contact
+              </Link>
+              <Link
+                to="/contact"
+                className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors text-center"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Get Started
+              </Link>
             </nav>
           </div>
         )}

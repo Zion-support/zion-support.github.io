@@ -16,7 +16,7 @@ const Sidebar: React.FC = () => {
         { label: 'Case Studies', path: '/case-studies' },
         { label: 'Blog', path: '/blog' },
         { label: 'About', path: '/about' },
-      ]
+      ],
     },
     {
       title: 'Solutions',
@@ -28,19 +28,19 @@ const Sidebar: React.FC = () => {
         { label: 'Financial', path: '/solutions/financial' },
         { label: 'Retail', path: '/solutions/retail' },
         { label: 'Manufacturing', path: '/solutions/manufacturing' },
-      ]
+      ],
     },
     {
       title: 'Services',
       links: [
-        { label: 'AI Services', path: '/services' },
-        { label: 'IT Services', path: '/services' },
-        { label: 'Micro SaaS', path: '/services' },
-        { label: 'Cloud Solutions', path: '/services' },
-        { label: 'Data Analytics', path: '/services' },
-        { label: 'Cybersecurity', path: '/services' },
-        { label: 'Automation', path: '/services' },
-      ]
+        { label: 'AI Services', path: '/services/ai-services' },
+        { label: 'IT Services', path: '/services/it-services' },
+        { label: 'Micro SaaS', path: '/services/micro-saas' },
+        { label: 'Cloud Solutions', path: '/services/cloud' },
+        { label: 'Data Analytics', path: '/services/analytics' },
+        { label: 'Cybersecurity', path: '/services/security' },
+        { label: 'Automation', path: '/services/automation' },
+      ],
     },
     {
       title: 'Support',
@@ -50,12 +50,12 @@ const Sidebar: React.FC = () => {
         { label: 'Documentation', path: '/docs' },
         { label: 'Pricing', path: '/pricing' },
         { label: 'Partners', path: '/partners' },
-      ]
-    }
+      ],
+    },
   ];
 
   return (
-    <aside className="w-64 bg-gray-50 border-r border-gray-200 h-full overflow-y-auto hidden xl:block">
+    <aside className="w-full xl:w-72 bg-gray-50 border-r border-gray-200 h-full overflow-y-auto">
       <div className="p-6">
         <h2 className="text-lg font-semibold text-gray-900 mb-6">Navigation</h2>
         {sections.map((section, index) => (
