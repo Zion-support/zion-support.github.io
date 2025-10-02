@@ -104,6 +104,11 @@ const Support: React.FC = () => {
     { title: 'View Status Page', description: 'Check system status and uptime', link: '/status', icon: '📊' }
   ];
 
+  const filteredFaqs = faqs.filter((faq) => {
+    if (selectedCategory === 'all') return true;
+    return faq.category === selectedCategory;
+  });
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
@@ -135,7 +140,9 @@ const Support: React.FC = () => {
         </div>
       </section>
 
-            {/* Category Filter */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto">
+          {/* Category Filter */}
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               <button
                 onClick={() => setSelectedCategory('all')}
@@ -184,11 +191,11 @@ const Support: React.FC = () => {
                 </p>
               </div>
             )}
-          </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Contact CTA */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600">
+      {/* Contact CTA */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600">
           <div className="max-w-7xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Still Need Help?
@@ -213,7 +220,6 @@ const Support: React.FC = () => {
               </Link>
             </div>
           </div>
-        </div>
       </section>
     </div>
   );

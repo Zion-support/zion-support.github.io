@@ -1573,26 +1573,24 @@ posts.push({
 });
 
 // Sept 30, 2025 – Fresh articles to add and advertise on homepage
-posts.push(
-  {
-    slug: "edge-governed-flags-2026",
-    title: "Edge‑Governed Flags 2026: Policies at <100ms",
-    description: "Geo budgets, scoped IDs, and signed configs to ship compliant features worldwide under 100ms.",
-    category: "Architecture",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "6 min read"
-  },
-  {
-    slug: "genai-cache-playbook-2026",
-    title: "GenAI Cache Playbook 2026: Cut Spend 40–70%",
-    description: "Prompt caches, semantic de‑dupe, and TTL windows that keep quality high under strict budgets.",
-    category: "GenAI",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "8 min read"
-  }
-]);
+posts.push({
+  slug: "edge-governed-flags-2026",
+  title: "Edge‑Governed Flags 2026: Policies at <100ms",
+  description: "Geo budgets, scoped IDs, and signed configs to ship compliant features worldwide under 100ms.",
+  category: "Architecture",
+  publishedAt: "2025-09-30",
+  featured: true,
+  readTime: "6 min read"
+});
+posts.push({
+  slug: "genai-cache-playbook-2026",
+  title: "GenAI Cache Playbook 2026: Cut Spend 40–70%",
+  description: "Prompt caches, semantic de‑dupe, and TTL windows that keep quality high under strict budgets.",
+  category: "GenAI",
+  publishedAt: "2025-09-30",
+  featured: true,
+  readTime: "8 min read"
+});
 
 // Sept 30, 2025 – New articles to expand catalog and promote on homepage
 posts.push(
@@ -1650,7 +1648,7 @@ posts.push(
     featured: true,
     readTime: "8 min read"
   },
-
+  
 // Sept 30, 2025 – New posts for homepage promotion and advertising (added)
   {
     slug: "ai-governance-scorecards-q1-2026",
