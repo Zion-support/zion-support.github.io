@@ -1,9 +1,9 @@
 // Performance monitoring utilities
-import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
 interface PerformanceMetrics {
   cls: number | null;
-  fid: number | null;
+  inp: number | null;
   fcp: number | null;
   lcp: number | null;
   ttfb: number | null;
@@ -12,7 +12,7 @@ interface PerformanceMetrics {
 class PerformanceMonitor {
   private metrics: PerformanceMetrics = {
     cls: null,
-    fid: null,
+    inp: null,
     fcp: null,
     lcp: null,
     ttfb: null,
@@ -27,27 +27,27 @@ class PerformanceMonitor {
 
   private initializeWebVitals() {
     // Core Web Vitals
-    getCLS((metric) => {
+    onCLS((metric) => {
       this.metrics.cls = metric.value;
       this.reportMetric('CLS', metric.value);
     });
 
-    getFID((metric) => {
-      this.metrics.fid = metric.value;
-      this.reportMetric('FID', metric.value);
+    onINP((metric) => {
+      this.metrics.inp = metric.value;
+      this.reportMetric('INP', metric.value);
     });
 
-    getFCP((metric) => {
+    onFCP((metric) => {
       this.metrics.fcp = metric.value;
       this.reportMetric('FCP', metric.value);
     });
 
-    getLCP((metric) => {
+    onLCP((metric) => {
       this.metrics.lcp = metric.value;
       this.reportMetric('LCP', metric.value);
     });
 
-    getTTFB((metric) => {
+    onTTFB((metric) => {
       this.metrics.ttfb = metric.value;
       this.reportMetric('TTFB', metric.value);
     });

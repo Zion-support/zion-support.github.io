@@ -10,6 +10,8 @@ import BannerManager from './components/BannerManager';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import SEOHead from './components/EnhancedSEOHead';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import NotificationSystem from './components/NotificationSystem';
 
 // Pages
 import HomePage from './pages/HomePage';
@@ -38,8 +40,9 @@ const pageTransition = {
 
 const App: React.FC = () => {
   return (
-    <HelmetProvider>
-      <Router>
+    <AccessibilityEnhancer>
+      <HelmetProvider>
+        <Router>
         <div className="min-h-screen bg-gray-50">
           <SEOHead />
           <PerformanceOptimizer />
@@ -157,7 +160,8 @@ const App: React.FC = () => {
         )}
 
         <NotificationSystem notifications={notifications} onRemove={handleRemoveNotification} />
-      </EnhancedErrorBoundary>
+        </Router>
+      </HelmetProvider>
     </AccessibilityEnhancer>
   );
 };
