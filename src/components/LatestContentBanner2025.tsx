@@ -75,13 +75,31 @@ const LatestContentBanner2025: React.FC = () => {
       impact: "$10B Revenue"
     },
     {
+      title: "Meta-Cognitive AI: The Thinking AI Revolution",
+      description: "95% Decision Accuracy, $2M+ Annual Savings",
+      slug: "meta-cognitive-ai-revolution-2025",
+      category: "AI Innovation",
+      emoji: "🧠",
+      highlight: "BREAKTHROUGH",
+      impact: "95% Decision Accuracy"
+    },
+    {
+      title: "Quantum-Neural Networks: 1000x Processing Speed",
+      description: "Revolutionary Processing Power, $5M+ Savings",
+      slug: "quantum-neural-networks-2025",
+      category: "Quantum Computing",
+      emoji: "⚛️",
+      highlight: "BREAKTHROUGH",
+      impact: "1000x Speed Boost"
+    },
+    {
       title: "AI 2025: Autonomous Operations Revolution",
-      description: "95% Automation, $2M+ Annual Savings",
+      description: "98% Automation, $10M+ Annual Savings",
       slug: "ai-autonomous-operations-2025",
       category: "AI Innovation",
       emoji: "🚀",
-      highlight: "NEW TODAY",
-      impact: "95% Automation"
+      highlight: "BREAKTHROUGH",
+      impact: "98% Automation"
     },
     {
       title: "Fortune 500 AI Transformation",
@@ -174,9 +192,6 @@ const LatestContentBanner2025: React.FC = () => {
           </p>
         </div>
 
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-          🚀 BREAKTHROUGH: Revolutionary AI Technologies 2025!
-        </h2>
         <p className="text-xl text-blue-100 mb-8 max-w-3xl">
           Experience <span className="font-bold text-yellow-300">3 REVOLUTIONARY breakthrough technologies</span> including our latest: "Meta-Cognitive AI: The Thinking AI Revolution" (95% decision accuracy, $2M+ savings), "Quantum-Neural Networks: 1000x Processing Speed" ($5M+ infrastructure savings), and "Autonomous Enterprise Operations: 98% Automation" ($10M+ annual savings) - plus comprehensive case studies and implementation guides!
         </p>
@@ -237,7 +252,6 @@ const LatestContentBanner2025: React.FC = () => {
                     <Zap className="w-4 h-4 text-cyan-400" />
                     {article.readTime}
                   </span>
-                  <span>{article.date ? new Date(article.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : 'Recent'}</span>
                 </div>
 
                 {/* CTA Button */}
@@ -265,14 +279,14 @@ const LatestContentBanner2025: React.FC = () => {
                 Join 50,000+ AI leaders and innovators.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
+                <a title="Internal link"
                   href="/blog"
                   className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 flex items-center justify-center gap-2"
                 >
                   <Sparkles className="w-5 h-5" />
                   <span>Explore All Articles</span>
                 </a>
-                <a
+                <a title="Internal link"
                   href="/contact"
                   className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
                 >

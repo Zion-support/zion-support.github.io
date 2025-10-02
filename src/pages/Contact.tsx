@@ -283,14 +283,14 @@ export default function Contact(): React.JSX.Element {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
+                <a title="Internal link"
                   href="#contact-form"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold hover:shadow-lg transition-all duration-300"
                 >
                   <MessageSquare className="w-5 h-5 mr-2" />
                   Start Your Project
                 </a>
-                <a
+                <a title="Internal link"
                   href="tel:+15551234567"
                   className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300"
                 >

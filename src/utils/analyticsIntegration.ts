@@ -17,7 +17,7 @@
 
 export interface AnalyticsEvent {
   name: string;
-  properties?: Record<string, any>;
+  properties?: Record<string, string | number | boolean>;
   timestamp: number;
   userId?: string;
   sessionId?: string;
@@ -25,7 +25,7 @@ export interface AnalyticsEvent {
 
 export interface AnalyticsUser {
   id: string;
-  traits?: Record<string, any>;
+  traits?: Record<string, string | number | boolean>;
   anonymousId?: string;
 }
 

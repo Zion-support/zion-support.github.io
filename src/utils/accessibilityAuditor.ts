@@ -63,7 +63,7 @@ export class AccessibilityAuditor {
     // Check for images without alt text
     issues.push({
       severity: 'serious',
-      element: '<img> tags',
+      element: '<img alt="Zion Tech Group"> tags',
       issue: 'Missing alt attributes on images',
       recommendation: 'Add descriptive alt text to all images',
       wcagCriterion: '1.1.1 (Level A)'

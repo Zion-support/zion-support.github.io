@@ -11,7 +11,7 @@ export interface AnalyticsEvent {
   timestamp: string;
   sessionId?: string;
   userId?: string;
-  metadata?: Record<string, any>;
+  metadata?: Record<string, string | number | boolean>;
 }
 
 export interface PageViewEvent {

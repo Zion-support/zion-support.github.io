@@ -1,161 +1,147 @@
-import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
+import { motion } from 'framer-motion';
 
-// import { resourcePreloader } from './utils/resourcePreloader';
-// import { criticalCSSManager } from './utils/criticalCSSManager';
-// import { sriUtility } from './security/sriUtility';
-// import { csrfProtection } from './security/csrfProtection';
-// import { structuredDataManager } from './seo/structuredDataManager';
-// import { keyboardNavigationManager } from './accessibility/keyboardNavigationManager';
-// import { screenReaderSupport } from './accessibility/screenReaderSupport';
-import './index.css';
-import SEOOptimizer from './components/SEOOptimizer';
-import AdvancedAnalytics from './components/AdvancedAnalytics';
+// Core Components
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Sidebar from './components/Sidebar';
+import BannerManager from './components/BannerManager';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
-import NotificationSystem from './components/NotificationSystem';
-import PerformanceMonitor from './components/PerformanceMonitor';
+import SEOHead from './components/EnhancedSEOHead';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import NotificationSystem from './components/NotificationSystem';
 
-// Local stub to avoid type errors when optional performance init is not present
-const initializePerformanceEnhancements = (): void => {};
+// Pages
+import HomePage from './pages/HomePage';
+import SolutionsPage from './pages/SolutionsPage';
+import ServicesPage from './pages/ServicesPage';
+import AboutPage from './pages/AboutPage';
+import ContactPage from './pages/ContactPage';
+import BlogPage from './pages/BlogPage';
+import CaseStudiesPage from './pages/CaseStudiesPage';
+import Resources from './pages/Resources';
 
-interface Notification {
-  id: string;
-  message: string;
-  type: 'success' | 'error' | 'info' | 'warning';
-}
+// Data
+import { bannerData } from './data/bannerData';
 
-interface WindowWithEnhancements extends Window {
-  advancedPerformanceOptimizer?: { initialize?: () => void };
-  advancedSEOOptimizer?: { initialize?: () => void };
-  advancedSecurityManager?: { initialize?: () => void };
-  advancedAnalytics?: { initialize?: () => void };
-  advancedErrorHandler?: { initialize?: () => void };
-  advancedCachingSystem?: { initialize?: () => void };
-  advancedUXOptimizer?: { initialize?: () => void };
-  advancedTestingFramework?: { initialize?: () => void };
-  advancedI18n?: { initialize?: () => void };
-  enhancements?: Record<string, unknown>;
-  performanceOptimizer?: unknown;
-  seoOptimizer?: unknown;
-  accessibilityEnhancer?: unknown;
-  securityManager?: unknown;
-  analytics?: unknown;
-  errorHandler?: unknown;
-  cachingSystem?: unknown;
-  uxOptimizer?: unknown;
-  testingFramework?: unknown;
-  i18n?: unknown;
-}
+// Animation variants
+const pageVariants = {
+  initial: { opacity: 0, y: 20 },
+  in: { opacity: 1, y: 0 },
+  out: { opacity: 0, y: -20 }
+};
 
-interface SecurityManager {
-  initialize?: () => void;
-}
+const pageTransition = {
+  type: 'tween',
+  ease: 'anticipate',
+  duration: 0.5
+};
 
-export default function App(): React.JSX.Element {
-  const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
-  const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
-  const [notifications, setNotifications] = useState<Notification[]>([]);
-
-  interface SEOData {
-    title: string;
-    description: string;
-    canonical: string;
-  }
-
-  const seoDataForOptimizer: SEOData = useMemo(() => ({
-    title: 'Zion Tech Group - Leading AI & Technology Solutions',
-    description: 'Cutting-edge AI, cloud, and digital transformation solutions for modern enterprises.',
-    canonical: typeof window !== 'undefined' ? window.location.href : 'https://zion.app/',
-  }), []);
-
-  // Simple hotkeys for demo toggles
-  useEffect(() => {
-    const onKeyDown = (e: KeyboardEvent) => {
-      if (!e.ctrlKey || !e.shiftKey) return;
-      switch (e.key.toLowerCase()) {
-        case 'p':
-          e.preventDefault();
-          setShowPerformanceOptimizer((v) => !v);
-          break;
-        case 'm':
-          e.preventDefault();
-          setShowPerformanceMonitor((v) => !v);
-          break;
-        default:
-          break;
-      }
-      try {
-        if (enhancedSecurityManager && typeof (enhancedSecurityManager as SecurityManager).initialize === 'function') {
-          (enhancedSecurityManager as SecurityManager).initialize?.();
-        }
-      
-        // Initialize new performance and accessibility enhancements
-        initializePerformanceEnhancements();
-        accessibilityEnhancer.initialize();
-      
-      // Initialize advanced optimizers
-      // Guard optional advanced systems if present in global scope
-      const windowWithEnhancements = window as WindowWithEnhancements;
-      const advancedPerformanceOptimizer = windowWithEnhancements.advancedPerformanceOptimizer;
-      const advancedSEOOptimizer = windowWithEnhancements.advancedSEOOptimizer;
-      const advancedSecurityManager = windowWithEnhancements.advancedSecurityManager;
-      const advancedAnalytics = windowWithEnhancements.advancedAnalytics;
-      const advancedErrorHandler = windowWithEnhancements.advancedErrorHandler;
-      const advancedCachingSystem = windowWithEnhancements.advancedCachingSystem;
-      const advancedUXOptimizer = windowWithEnhancements.advancedUXOptimizer;
-      const advancedTestingFramework = windowWithEnhancements.advancedTestingFramework;
-      const advancedI18n = windowWithEnhancements.advancedI18n;
-
-      advancedPerformanceOptimizer?.initialize?.();
-      advancedSEOOptimizer?.initialize?.();
-      accessibilityEnhancer.initialize();
-      advancedSecurityManager?.initialize?.();
-      advancedAnalytics?.initialize?.();
-      // advancedErrorHandler is initialized in constructor
-      advancedCachingSystem?.initialize?.();
-      advancedUXOptimizer?.initialize?.();
-      advancedTestingFramework?.initialize?.();
-      advancedI18n?.initialize?.();
-      // Store enhancements globally for debugging
-      windowWithEnhancements.enhancements = {
-        performanceOptimizer: advancedPerformanceOptimizer,
-        seoOptimizer: advancedSEOOptimizer,
-        accessibilityEnhancer: accessibilityEnhancer,
-        securityManager: advancedSecurityManager,
-        analytics: advancedAnalytics,
-        errorHandler: advancedErrorHandler,
-        cachingSystem: advancedCachingSystem,
-        uxOptimizer: advancedUXOptimizer
-      };
-      windowWithEnhancements.performanceOptimizer = advancedPerformanceOptimizer;
-      windowWithEnhancements.seoOptimizer = advancedSEOOptimizer;
-      windowWithEnhancements.accessibilityEnhancer = accessibilityEnhancer;
-      windowWithEnhancements.securityManager = advancedSecurityManager;
-      windowWithEnhancements.analytics = advancedAnalytics;
-      windowWithEnhancements.errorHandler = advancedErrorHandler;
-      windowWithEnhancements.cachingSystem = advancedCachingSystem;
-      windowWithEnhancements.uxOptimizer = advancedUXOptimizer;
-      windowWithEnhancements.testingFramework = advancedTestingFramework;
-      windowWithEnhancements.i18n = advancedI18n;
-    } catch (error) {
-      console.error('Error initializing enhancements:', error);
-    }
-    };
-
-    window.addEventListener('keydown', onKeyDown);
-    return () => window.removeEventListener('keydown', onKeyDown);
-  }, []);
-
-  const handleRemoveNotification = useCallback((id: string) => {
-    setNotifications((prev) => prev.filter((n) => n.id !== id));
-  }, []);
-
+const App: React.FC = () => {
   return (
-    <EnhancedErrorBoundary>
-      <SEOOptimizer title={seoDataForOptimizer.title} description={seoDataForOptimizer.description} canonicalUrl={seoDataForOptimizer.canonical} />
-      <AdvancedAnalytics enableConversionTracking enablePerformanceTracking enableErrorTracking />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <AppRouter />
+    <AccessibilityEnhancer>
+      <HelmetProvider>
+        <Router>
+        <div className="min-h-screen bg-gray-50">
+          <SEOHead />
+          <PerformanceOptimizer />
+          <EnhancedErrorBoundary>
+            <Header />
+            
+            {/* Dynamic Banner System */}
+            <motion.div
+              initial="initial"
+              animate="in"
+              exit="out"
+              variants={pageVariants}
+              transition={pageTransition}
+              className="relative"
+            >
+              <BannerManager 
+                banners={bannerData}
+                rotationInterval={8000}
+                maxVisibleBanners={3}
+              />
+            </motion.div>
+
+            {/* Main Content with Sidebar */}
+            <motion.main
+              initial="initial"
+              animate="in"
+              exit="out"
+              variants={pageVariants}
+              transition={pageTransition}
+              className="relative z-10"
+            >
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 xl:grid-cols-[18rem_1fr] gap-8">
+                <Sidebar />
+                <div id="main-content">
+                <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/solutions/*" element={<SolutionsPage />} />
+                <Route path="/services/*" element={<ServicesPage />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/contact" element={<ContactPage />} />
+                <Route path="/blog/*" element={<BlogPage />} />
+                <Route path="/case-studies" element={<CaseStudiesPage />} />
+                <Route path="/resources" element={<Resources />} />
+                
+                {/* Dynamic Routes for Solutions */}
+                <Route path="/solutions/enterprise" element={<SolutionsPage category="enterprise" />} />
+                <Route path="/solutions/smb" element={<SolutionsPage category="smb" />} />
+                <Route path="/solutions/startup" element={<SolutionsPage category="startup" />} />
+                <Route path="/solutions/government" element={<SolutionsPage category="government" />} />
+                <Route path="/solutions/healthcare" element={<SolutionsPage category="healthcare" />} />
+                <Route path="/solutions/financial" element={<SolutionsPage category="financial" />} />
+                <Route path="/solutions/manufacturing" element={<SolutionsPage category="manufacturing" />} />
+                <Route path="/solutions/retail" element={<SolutionsPage category="retail" />} />
+                <Route path="/solutions/education" element={<SolutionsPage category="education" />} />
+                <Route path="/solutions/transportation" element={<SolutionsPage category="transportation" />} />
+                
+                {/* Dynamic Routes for Services */}
+                <Route path="/services/ai-content-generator" element={<ServicesPage service="ai-content-generator" />} />
+                <Route path="/services/smart-appointment-scheduler" element={<ServicesPage service="smart-appointment-scheduler" />} />
+                <Route path="/services/ai-workflow-automation" element={<ServicesPage service="ai-workflow-automation" />} />
+                <Route path="/services/ai-virtual-assistant" element={<ServicesPage service="ai-virtual-assistant" />} />
+                <Route path="/services/ai-data-analytics" element={<ServicesPage service="ai-data-analytics" />} />
+                <Route path="/services/ai-intelligent-document-processing" element={<ServicesPage service="ai-intelligent-document-processing" />} />
+                <Route path="/services/real-time-cognitive-automation" element={<ServicesPage service="real-time-cognitive-automation" />} />
+                <Route path="/services/advanced-cybersecurity-ai" element={<ServicesPage service="advanced-cybersecurity-ai" />} />
+                
+                {/* AI Solutions Routes */}
+                <Route path="/ai-solutions" element={<ServicesPage category="ai-solutions" />} />
+                <Route path="/quantum-computing" element={<ServicesPage category="quantum-computing" />} />
+                <Route path="/cloud-devops" element={<ServicesPage category="cloud-devops" />} />
+                
+                {/* Blog Routes */}
+                <Route path="/blog/:slug" element={<BlogPage />} />
+                
+                {/* 404 Fallback */}
+                <Route path="*" element={
+                  <div className="min-h-screen flex items-center justify-center">
+                    <div className="text-center">
+                      <h1 className="text-6xl font-bold text-gray-300 mb-4">404</h1>
+                      <p className="text-xl text-gray-600 mb-8">Page not found</p>
+                      <a 
+                        href="/" 
+                        className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+                      >
+                        Return Home
+                      </a>
+                    </div>
+                  </div>
+                } />
+                </Routes>
+                </div>
+              </div>
+            </motion.main>
+
+            <Footer />
+          </EnhancedErrorBoundary>
+        </div>
 
         {showPerformanceOptimizer && (
           <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center" role="dialog" aria-modal="true">
@@ -170,19 +156,22 @@ export default function App(): React.JSX.Element {
         )}
 
         {showPerformanceMonitor && (
-          <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center">
+          <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center" role="dialog" aria-modal="true">
             <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
               <div className="flex justify-between items-center mb-4">
                 <h2 className="text-2xl font-bold">Performance Monitor</h2>
                 <button onClick={() => setShowPerformanceMonitor(false)} className="text-gray-500 hover:text-gray-700 text-2xl">✕</button>
               </div>
-              <PerformanceMonitor showDashboard={true} />
+              <PerformanceMonitor />
             </div>
           </div>
         )}
 
         <NotificationSystem notifications={notifications} onRemove={handleRemoveNotification} />
-      </div>
-    </EnhancedErrorBoundary>
+        </Router>
+      </HelmetProvider>
+    </AccessibilityEnhancer>
   );
-}
+};
+
+export default App;

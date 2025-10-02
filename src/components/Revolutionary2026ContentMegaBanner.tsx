@@ -1,4 +1,5 @@
 import React from 'react';
+import { ArrowRight, Sparkles, TrendingUp, Zap, Star, Rocket, Brain, Atom, Bot, Gem, Microscope, Shield } from 'lucide-react';
 
 const Revolutionary2026ContentMegaBanner: React.FC = () => {
   const revolutionaryContent = [
@@ -95,12 +96,6 @@ const Revolutionary2026ContentMegaBanner: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-3 mb-6">
-            <motion.div
-              animate={{ rotate: [0, 360] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-            >
-              <Sparkles className="w-8 h-8 text-yellow-400" />
-            </motion.div>
             <div className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-500/20 to-blue-500/20 backdrop-blur-sm rounded-full border border-purple-500/30">
               <Rocket className="w-4 h-4 text-purple-400" />
               <span className="text-sm font-semibold text-white">REVOLUTIONARY BREAKTHROUGH • 2026</span>
@@ -139,12 +134,8 @@ const Revolutionary2026ContentMegaBanner: React.FC = () => {
         {/* Featured Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {revolutionaryContent.map((content, index) => (
-            <motion.div
+            <div
               key={content.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              whileHover={{ scale: 1.05 }}
               className="group relative"
             >
               {/* Featured badge */}
@@ -222,7 +213,7 @@ const Revolutionary2026ContentMegaBanner: React.FC = () => {
                   <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
                 </a>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
@@ -266,14 +257,14 @@ const Revolutionary2026ContentMegaBanner: React.FC = () => {
                 Get exclusive access to implementation guides, case studies, and expert consultations.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
+                <a title="Internal link"
                   href="/contact"
                   className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 flex items-center justify-center gap-2"
                 >
                   <Rocket className="w-5 h-5" />
                   <span>Start Your Revolution</span>
                 </a>
-                <a
+                <a title="Internal link"
                   href="/blog"
                   className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
                 >
