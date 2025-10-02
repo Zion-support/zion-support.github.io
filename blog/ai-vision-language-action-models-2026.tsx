@@ -200,7 +200,7 @@ const AIVisionLanguageActionModels2026 = () => {
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
                   <div>
-                    <strong className="text-white">Low-latency vision processing:</strong> Run vision encoder on GPU at 30-60 FPS. Use TensorRT optimization for <15ms inference.
+                    <strong className="text-white">Low-latency vision processing:</strong> Run vision encoder on GPU at 30-60 FPS. Use TensorRT optimization for &lt;15ms inference.
                   </div>
                 </li>
                 <li className="flex items-start gap-3">

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import { useState } from "react",;
 import { BookOpen, Code, Copy, Terminal } from "lucide-react",;
@@ -17,10 +13,6 @@ export function ApiDocumentation() {;
     <Card className="bg-zinc-900 border-zinc-800 text-white">;
 
       <CardHeader>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
         <CardTitle className="text-xl flex items-center">;
           <BookOpen className="mr-2" size={20} /> API Documentation;
         </CardTitle>;

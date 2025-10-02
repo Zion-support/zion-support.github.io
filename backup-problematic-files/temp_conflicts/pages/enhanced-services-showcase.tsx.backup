@@ -285,18 +285,3 @@ pr-12325
       {children}
     </button>;
 
-<<<<<<< HEAD
-=======
-      {children}
-    </button>;
-:temp_conflicts/pages/enhanced-services-showcase.tsx
-  );
-};
-}
-}
-}
-  ),;
-},
-:backup-problematic-files/temp_conflicts/pages/enhanced-services-showcase.tsx
-=======
->>>>>>> main

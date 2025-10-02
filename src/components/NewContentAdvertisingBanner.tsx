@@ -1,8 +1,44 @@
 import React from 'react';
-import { ArrowRight, Sparkles, TrendingUp, Zap, Star, Users, Award, Target } from 'lucide-react';
+
+interface FeaturedContent {
+  id: number;
+  title: string;
+  category: string;
+  readTime: string;
+  rating: number;
+  readers: string;
+  badge: string;
+  gradient: string;
+  icon: React.ReactNode;
+  link: string;
+}
 
 const NewContentAdvertisingBanner: React.FC = () => {
-  const featuredContent = [
+  const featuredContent: FeaturedContent[] = [
+    {
+      id: 0,
+      title: 'Governed Agent Rollbacks',
+      category: 'AI Operations',
+      readTime: '7 min',
+      rating: 5.0,
+      readers: '25K+',
+      badge: 'NEW',
+      gradient: 'from-pink-500 to-red-500',
+      icon: <Sparkles className="w-6 h-6" />,
+      link: '/blog/ai-2025-oct-03-governed-agent-rollbacks'
+    },
+    {
+      id: 7,
+      title: 'Consentless Personalization (Edge)',
+      category: 'Edge Computing',
+      readTime: '6 min',
+      rating: 4.9,
+      readers: '19K+',
+      badge: 'FEATURED',
+      gradient: 'from-teal-500 to-cyan-500',
+      icon: <TrendingUp className="w-6 h-6" />,
+      link: '/blog/edge-2025-oct-02-consentless-personalization-blueprint'
+    },
     {
       id: 1,
       title: 'AI 2027: Operational Trust Blueprint',
@@ -63,7 +99,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
           <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-indigo-500/20 to-pink-500/20 border border-indigo-500/30 mb-8 animate-fade-in">
             <Sparkles className="w-5 h-5 text-indigo-400 animate-pulse" />
             <span className="text-indigo-400 font-bold text-sm tracking-wider uppercase">
-              🚀 NEW CONTENT LAUNCH • January 2026
+              🚀 NEW CONTENT LAUNCH • Sept 30, 2025
             </span>
             <Sparkles className="w-5 h-5 text-pink-400 animate-pulse" />
           </div>
@@ -151,7 +187,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
 
                 {/* CTA Button */}
                 <a
-                  href={(content as any).link || '/blog'}
+                  href={content.link || '/blog'}
                   className={`group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r ${content.gradient} hover:opacity-90 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1`}
                 >
                   <span>Read Now</span>
@@ -187,14 +223,14 @@ const NewContentAdvertisingBanner: React.FC = () => {
                 <div className="text-sm text-gray-400">First 3 months</div>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a
+                <a title="Internal link"
                   href="/subscribe"
                   className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 flex items-center justify-center gap-2"
                 >
                   <Sparkles className="w-5 h-5" />
                   <span>Get Premium Access</span>
                 </a>
-                <a
+                <a title="Internal link"
                   href="/contact"
                   className="border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
                 >

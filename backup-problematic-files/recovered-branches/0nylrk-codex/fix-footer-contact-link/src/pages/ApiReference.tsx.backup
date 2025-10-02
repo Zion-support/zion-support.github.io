@@ -246,15 +246,6 @@ pr-12325
 
                   </button>;
 
-<<<<<<< HEAD
-                </li>;              ))}
-            </ul>;
-          </div>;
-        </div>;
-;
-        {/* Endpoint details */}
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
         <div className="md:col-span-4">;
           {activeEndpointData ? (;

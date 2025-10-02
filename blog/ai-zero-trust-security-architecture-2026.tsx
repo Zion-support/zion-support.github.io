@@ -169,7 +169,7 @@ const AIZeroTrustSecurityArchitecture2026 = () => {
             <ul className="list-disc pl-8 space-y-2 text-gray-700 mb-6">
               <li><strong>Behavioral anomaly detection:</strong> Identify unusual patterns indicating compromise</li>
               <li><strong>Micro-segmentation:</strong> Limit blast radius with granular network isolation</li>
-              <li><strong>Automated containment:</strong> Isolate compromised assets in <5 seconds</li>
+              <li><strong>Automated containment:</strong> Isolate compromised assets in &lt;5 seconds</li>
               <li><strong>Forensic telemetry:</strong> Complete audit trails for incident investigation</li>
             </ul>
 

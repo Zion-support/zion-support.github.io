@@ -18,6 +18,8 @@ interface ContentItem {
 
 const featuredContent: ContentItem[] = [
   {
+  },
+  {
     id: '1',
     title: 'AI 2027: Quantum Consciousness Fusion',
     description: 'Revolutionary breakthrough combining quantum computing with consciousness simulation, achieving 100,000x processing speed and genuine artificial awareness capabilities.',
@@ -28,6 +30,18 @@ const featuredContent: ContentItem[] = [
     publishedDate: 'February 15, 2027',
     readTime: '15 min read',
     category: 'Quantum AI'
+  },
+  {
+    id: '10',
+    title: 'E2E AI Tracing 2026: From Prompts to Outcomes',
+    description: 'Instrument prompts, tools, calls, budgets, and outcomes. Wire traces to KPI‑linked scorecards for reliable autonomy.',
+    link: '/blog/ai-2026-e2e-ai-tracing',
+    badge: 'New',
+    badgeColor: 'bg-gradient-to-r from-cyan-600 to-sky-600',
+    icon: '🧭',
+    publishedDate: 'January 30, 2026',
+    readTime: '12 min read',
+    category: 'AI Operations'
   },
   {
     id: '9',
@@ -124,6 +138,45 @@ const featuredContent: ContentItem[] = [
     publishedDate: 'September 30, 2025',
     readTime: '16 min read',
     category: 'Data Governance'
+  }
+  ,
+  {
+    id: '11',
+    title: 'AI 2026 Agentic Workflow Orchestration',
+    description: 'Guardrails, reviews, and online evals for reliable multi-agent workflows that achieve measurable ROI.',
+    link: '/blog/ai-2026-agentic-workflow-orchestration',
+    badge: 'New',
+    badgeColor: 'bg-gradient-to-r from-fuchsia-600 to-purple-600',
+    icon: '🧩',
+    publishedDate: 'October 1, 2025',
+    readTime: '16 min read',
+    category: 'Implementation Guide'
+  }
+  ,
+  {
+    id: '12',
+    title: 'AI Insights: New Content Highlights — Sept 30, 2025',
+    description: 'Today’s newest additions across workflows, data fabric, and resilience—what changed and why it matters.',
+    link: '/blog/ai-september-30-2025-new-content-highlights',
+    badge: 'Fresh',
+    badgeColor: 'bg-gradient-to-r from-sky-600 to-indigo-600',
+    icon: '🆕',
+    publishedDate: 'September 30, 2025',
+    readTime: '8 min read',
+    category: 'Featured Article'
+  }
+  ,
+  {
+    id: '13',
+    title: 'AI Strategic Roadmaps — October 2025',
+    description: 'Quarterly plan for governed autonomy, cost-aware routing, and data fabric foundations with milestones and risks.',
+    link: '/blog/ai-october-2025-strategic-roadmaps',
+    badge: 'Roadmap',
+    badgeColor: 'bg-gradient-to-r from-emerald-600 to-green-600',
+    icon: '🗺️',
+    publishedDate: 'October 1, 2025',
+    readTime: '10 min read',
+    category: 'Implementation Guide'
   }
 ];
 

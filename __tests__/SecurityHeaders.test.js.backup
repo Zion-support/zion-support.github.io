@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-
-import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import SecurityHeaders from '../components/SecurityHeaders';
-=======
->>>>>>> main
 
 
   test('renders without crashing', () => {
@@ -30,11 +22,3 @@ import SecurityHeaders from '../components/SecurityHeaders';
     // Add styling tests if needed;
 
 
-<<<<<<< HEAD
-=======
-
-
-
-
-
->>>>>>> main

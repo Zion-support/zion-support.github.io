@@ -1,332 +1,219 @@
 import React from 'react';
 import Link from 'next/link';
 
-const caseStudies = [
-  {
-    title: 'Fortune 500 AI Transformation: Breakthrough Success Story 2026',
-    slug: 'fortune-500-ai-2026-breakthrough-success',
-    excerpt: 'Discover how a leading Fortune 500 company achieved unprecedented success through AI transformation, implementing autonomous agent factories and quantum neural networks to drive 400% operational efficiency gains.',
-    company: 'Fortune 500 Manufacturing',
-    industry: 'Global Manufacturing',
-    roi: '$2.3B',
-    duration: '18 months',
-    category: 'Breakthrough Success',
-    publishedAt: 'January 15, 2026',
-    image: '🚀',
-    color: 'blue',
-    readTime: '16 min read',
-    featured: true,
-    metrics: {
-      costSavings: '$2.3B',
-      efficiencyGain: '400%',
-      automation: '95%'
-    }
-  },
-  {
-    title: '$150M ROI Success Story - AI 2027 Mega Transformation',
-    slug: 'ai-2027-mega-transformation-success',
-    excerpt: 'Discover how a Fortune 500 company achieved $150M in ROI through our comprehensive AI 2027 transformation, revolutionizing their operations and market position.',
-    company: 'Fortune 500 Manufacturing',
-    industry: 'Advanced Manufacturing',
-    roi: '$150M',
-    duration: '18 months',
-    category: 'Mega Transformation',
-    publishedAt: 'March 15, 2027',
-    image: '💰',
-    color: 'green',
-    readTime: '18 min read',
-    featured: true,
-    metrics: {
-      costSavings: '$65M',
-      efficiencyGain: '85%',
-      marketShare: '+12%'
-    }
-  },
-  {
-    title: 'AI Sustainability Transformation: $10M ROI Success',
-    slug: 'ai-sustainability-transformation-2026',
-    excerpt: 'How a global energy company achieved $10M ROI through AI-driven sustainability initiatives, reducing carbon footprint by 40% while increasing operational efficiency.',
-    company: 'Global Energy Corp',
-    industry: 'Energy & Utilities',
-    roi: '$10M',
-    duration: '12 months',
-    category: 'Sustainability',
-    publishedAt: 'January 10, 2026',
-    image: '🌱',
-    color: 'green',
-    readTime: '15 min read',
-    featured: true,
-    metrics: {
-      costSavings: '$8M',
-      efficiencyGain: '40%',
-      marketShare: '+5%'
-    }
-  },
-  {
-    title: 'AI Autonomous Business Systems: $15M ROI Success',
-    slug: 'ai-autonomous-business-systems-success-2026',
-    excerpt: 'Learn how a financial services company achieved $15M ROI through autonomous AI business systems, achieving 95% operational autonomy and 300% efficiency gains.',
-    company: 'Financial Services Inc',
-    industry: 'Financial Services',
-    roi: '$15M',
-    duration: '15 months',
-    category: 'Autonomous Systems',
-    publishedAt: 'January 5, 2026',
-    image: '🏦',
-    color: 'blue',
-    readTime: '16 min read',
-    featured: true,
-    metrics: {
-      costSavings: '$12M',
-      efficiencyGain: '300%',
-      marketShare: '+8%'
-    }
-  },
-  {
-    title: 'AI Neural Interface Success: $12M ROI Achievement',
-    slug: 'ai-neural-interface-success-2026',
-    excerpt: 'Revolutionary neural interface implementation delivering $12M ROI through enhanced human-AI collaboration and unprecedented decision-making capabilities.',
-    company: 'Tech Innovation Ltd',
-    industry: 'Technology',
-    roi: '$12M',
-    duration: '14 months',
-    category: 'Neural Interfaces',
-    publishedAt: 'December 20, 2025',
-    image: '🧠',
-    color: 'purple',
-    readTime: '14 min read',
-    featured: false,
-    metrics: {
-      costSavings: '$9M',
-      efficiencyGain: '250%',
-      marketShare: '+6%'
-    }
-  }
-];
-
-const categories = [
-  { name: 'All', count: caseStudies.length, color: 'gray' },
-  { name: 'Mega Transformation', count: caseStudies.filter(cs => cs.category === 'Mega Transformation').length, color: 'green' },
-  { name: 'Autonomous Systems', count: caseStudies.filter(cs => cs.category === 'Autonomous Systems').length, color: 'blue' },
-  { name: 'Sustainability', count: caseStudies.filter(cs => cs.category === 'Sustainability').length, color: 'green' },
-  { name: 'Neural Interfaces', count: caseStudies.filter(cs => cs.category === 'Neural Interfaces').length, color: 'purple' }
-];
+export const metadata = {
+  title: 'Case Studies - Zion Tech Group',
+  description: 'Explore our successful AI and IT transformation case studies. See how we\'ve helped Fortune 500 companies achieve breakthrough results.',
+  keywords: 'case studies, AI transformation, enterprise success, ROI, business intelligence',
+};
 
 export default function CaseStudiesPage() {
+  const caseStudies = [
+    {
+      title: 'AI 2026 November Quantum Superintelligence Breakthrough',
+      company: 'Fortune 500 Technology Leader',
+      industry: 'Technology',
+      roi: '$500B',
+      description: 'Revolutionary quantum AI implementation achieving unprecedented business transformation.',
+      link: '/case-studies/ai-2026-november-quantum-superintelligence-500-billion-success',
+      featured: true
+    },
+    {
+      title: 'AI 2026 August Quantum Consciousness Revolution',
+      company: 'Global Manufacturing Giant',
+      industry: 'Manufacturing',
+      roi: '$50B',
+      description: 'Autonomous operations transformation with quantum consciousness breakthrough.',
+      link: '/case-studies/ai-2026-august-breakthrough-8-5-billion-success',
+      featured: true
+    },
+    {
+      title: 'AI 2026 July Mega Breakthrough Revolution',
+      company: 'Fortune 100 Financial Services',
+      industry: 'Financial Services',
+      roi: '$25.3B',
+      description: 'Enterprise automation revolution with AI-powered business intelligence.',
+      link: '/case-studies/ai-2026-july-revolutionary-breakthrough-mega-success',
+      featured: true
+    },
+    {
+      title: 'Supply Chain Transformation 2026',
+      company: 'Global Logistics Leader',
+      industry: 'Logistics',
+      roi: '$2.8B',
+      description: 'AI-powered supply chain optimization and autonomous operations.',
+      link: '/case-studies/supply-chain-transformation-2026',
+      featured: false
+    },
+    {
+      title: 'Healthcare AI Transformation 2026',
+      company: 'Major Healthcare System',
+      industry: 'Healthcare',
+      roi: '$1.2B',
+      description: 'Healthcare automation and AI-powered patient care optimization.',
+      link: '/case-studies/healthcare-ai-transformation-2026',
+      featured: false
+    },
+    {
+      title: 'AI 2028 Autonomous Enterprise Mega Success',
+      company: 'Fortune 500 Retail Leader',
+      industry: 'Retail',
+      roi: '$847B',
+      description: 'Next-generation autonomous enterprise systems implementation.',
+      link: '/case-studies/ai-2028-autonomous-enterprise-mega-success',
+      featured: false
+    }
+  ];
+
+  const featuredStudies = caseStudies.filter(study => study.featured);
+  const otherStudies = caseStudies.filter(study => !study.featured);
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-      <div className="max-w-7xl mx-auto px-4 py-12">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-            Success
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-blue-600">
-              {' '}Stories
-            </span>
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Discover how leading companies achieve extraordinary results through our AI transformation programs. 
-            Real ROI, real results, real success stories.
-          </p>
-        </div>
-
-        {/* ROI Summary */}
-        <div className="bg-gradient-to-r from-green-500 to-blue-600 rounded-2xl p-8 text-white mb-12">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold mb-4">Total Client ROI Achieved</h2>
-            <div className="text-6xl font-bold mb-2">$187M+</div>
-            <p className="text-green-100 text-lg">Across all transformation projects</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4 text-center">
-              <div className="text-2xl font-bold">$150M</div>
-              <div className="text-sm text-green-100">Mega Transformation</div>
-            </div>
-            <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4 text-center">
-              <div className="text-2xl font-bold">$15M</div>
-              <div className="text-sm text-green-100">Autonomous Systems</div>
-            </div>
-            <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4 text-center">
-              <div className="text-2xl font-bold">$12M</div>
-              <div className="text-sm text-green-100">Neural Interfaces</div>
-            </div>
-            <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4 text-center">
-              <div className="text-2xl font-bold">$10M</div>
-              <div className="text-sm text-green-100">Sustainability</div>
+    <div className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Success Stories
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Discover how Fortune 500 companies achieved breakthrough results with our AI and IT solutions
+            </p>
+            <div className="flex flex-wrap justify-center gap-4 text-sm">
+              <div className="bg-blue-600 px-4 py-2 rounded-full">
+                <span className="font-semibold">$500B+</span> Total ROI Delivered
+              </div>
+              <div className="bg-green-600 px-4 py-2 rounded-full">
+                <span className="font-semibold">100+</span> Successful Transformations
+              </div>
+              <div className="bg-purple-600 px-4 py-2 rounded-full">
+                <span className="font-semibold">Fortune 500</span> Clients Served
+              </div>
             </div>
           </div>
         </div>
+      </div>
 
-        {/* Categories */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {categories.map((category) => (
-            <button
-              key={category.name}
-              className={`px-6 py-3 rounded-full font-semibold transition-colors ${
-                category.color === 'gray'
-                  ? 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                  : category.color === 'green'
-                  ? 'bg-green-100 text-green-700 hover:bg-green-200'
-                  : category.color === 'blue'
-                  ? 'bg-blue-100 text-blue-700 hover:bg-blue-200'
-                  : 'bg-purple-100 text-purple-700 hover:bg-purple-200'
-              }`}
-            >
-              {category.name} ({category.count})
-            </button>
-          ))}
-        </div>
-
-        {/* Featured Case Studies */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Featured Success Stories</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {caseStudies.filter(cs => cs.featured).map((study) => (
-              <Link key={study.slug} href={`/case-studies/${study.slug}`} className="group">
-                <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-gray-200 hover:border-green-200">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className={`w-16 h-16 rounded-xl flex items-center justify-center ${
-                      study.color === 'green' ? 'bg-green-100' :
-                      study.color === 'blue' ? 'bg-blue-100' :
-                      study.color === 'purple' ? 'bg-purple-100' :
-                      'bg-indigo-100'
-                    }`}>
-                      <span className="text-3xl">{study.image}</span>
-                    </div>
-                    <div>
-                      <div className={`text-sm font-semibold ${
-                        study.color === 'green' ? 'text-green-600' :
-                        study.color === 'blue' ? 'text-blue-600' :
-                        study.color === 'purple' ? 'text-purple-600' :
-                        'text-indigo-600'
-                      }`}>
-                        {study.category}
-                      </div>
-                      <div className="text-sm text-gray-500">{study.readTime}</div>
-                    </div>
-                  </div>
-                  
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-green-600 transition-colors">
-                    {study.title}
-                  </h3>
-                  
-                  <p className="text-gray-600 mb-6 line-clamp-3">
-                    {study.excerpt}
-                  </p>
-
-                  {/* ROI Highlight */}
-                  <div className="bg-gradient-to-r from-green-50 to-blue-50 p-4 rounded-lg mb-4">
-                    <div className="text-center">
-                      <div className="text-3xl font-bold text-green-600 mb-1">{study.roi}</div>
-                      <div className="text-sm text-gray-600">Total ROI Achieved</div>
-                    </div>
-                  </div>
-
-                  {/* Metrics */}
-                  <div className="grid grid-cols-3 gap-4 mb-4">
-                    <div className="text-center">
-                      <div className="text-lg font-bold text-blue-600">{study.metrics.costSavings}</div>
-                      <div className="text-xs text-gray-500">Cost Savings</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-lg font-bold text-green-600">{study.metrics.efficiencyGain}</div>
-                      <div className="text-xs text-gray-500">Efficiency Gain</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-lg font-bold text-purple-600">{study.metrics.marketShare}</div>
-                      <div className="text-xs text-gray-500">Market Share</div>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center justify-between">
-                    <div className="text-sm text-gray-500">
-                      <div className="font-semibold">{study.company}</div>
-                      <div>{study.industry} • {study.duration}</div>
-                    </div>
-                    <div className="text-green-600 font-semibold group-hover:text-green-700 transition-colors">
-                      Read Case Study →
-                    </div>
-                  </div>
-                </div>
-              </Link>
-            ))}
+      {/* Featured Case Studies */}
+      <div className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Featured Success Stories
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Our most impactful transformations that achieved unprecedented business results
+            </p>
           </div>
-        </div>
 
-        {/* All Case Studies */}
-        <div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">All Success Stories</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {caseStudies.map((study) => (
-              <Link key={study.slug} href={`/case-studies/${study.slug}`} className="group">
-                <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200">
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                      study.color === 'green' ? 'bg-green-100 text-green-800' :
-                      study.color === 'blue' ? 'bg-blue-100 text-blue-800' :
-                      study.color === 'purple' ? 'bg-purple-100 text-purple-800' :
-                      'bg-indigo-100 text-indigo-800'
-                    }`}>
-                      {study.category}
+            {featuredStudies.map((study, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+                      {study.industry}
                     </span>
-                    {study.featured && (
-                      <span className="bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full text-xs font-semibold">
-                        ⭐ Featured
-                      </span>
-                    )}
+                    <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-bold">
+                      {study.roi} ROI
+                    </span>
                   </div>
-                  
-                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-green-600 transition-colors">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
                     {study.title}
                   </h3>
-                  
-                  <p className="text-gray-600 mb-3 text-sm line-clamp-2">
-                    {study.excerpt}
+                  <p className="text-gray-600 mb-4">
+                    {study.description}
                   </p>
-
-                  {/* ROI Badge */}
-                  <div className={`inline-block px-3 py-1 rounded-full text-sm font-bold mb-3 ${
-                    study.color === 'green' ? 'bg-green-100 text-green-800' :
-                    study.color === 'blue' ? 'bg-blue-100 text-blue-800' :
-                    study.color === 'purple' ? 'bg-purple-100 text-purple-800' :
-                    'bg-indigo-100 text-indigo-800'
-                  }`}>
-                    {study.roi} ROI
-                  </div>
-
                   <div className="flex items-center justify-between">
-                    <div className="text-sm text-gray-500">
-                      <div>{study.company}</div>
-                      <div>{study.readTime}</div>
-                    </div>
-                    <div className="text-green-600 font-semibold group-hover:text-green-700 transition-colors">
-                      Read →
-                    </div>
+                    <span className="text-sm text-gray-500">
+                      {study.company}
+                    </span>
+                    <Link 
+                      href={study.link}
+                      className="text-blue-600 hover:text-blue-800 font-medium text-sm flex items-center gap-1"
+                    >
+                      Read Case Study
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </Link>
                   </div>
                 </div>
-              </Link>
+              </div>
             ))}
           </div>
         </div>
+      </div>
 
-        {/* Call to Action */}
-        <div className="mt-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl p-8 text-white text-center">
-          <h3 className="text-2xl font-bold mb-4">Ready to Achieve Similar Results?</h3>
-          <p className="text-green-100 mb-6 max-w-2xl mx-auto">
-            Join the companies that have achieved extraordinary ROI through our AI transformation programs. 
-            Let's discuss how we can help you achieve similar success.
+      {/* All Case Studies */}
+      <div className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              All Case Studies
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Comprehensive collection of our successful AI and IT transformation projects
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {otherStudies.map((study, index) => (
+              <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow duration-300">
+                <div className="flex items-center justify-between mb-3">
+                  <span className="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">
+                    {study.industry}
+                  </span>
+                  <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-bold">
+                    {study.roi} ROI
+                  </span>
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">
+                  {study.title}
+                </h3>
+                <p className="text-gray-600 mb-4 text-sm">
+                  {study.description}
+                </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-xs text-gray-500">
+                    {study.company}
+                  </span>
+                  <Link 
+                    href={study.link}
+                    className="text-blue-600 hover:text-blue-800 font-medium text-sm flex items-center gap-1"
+                  >
+                    Read More
+                    <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* CTA Section */}
+      <div className="bg-blue-600 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Ready to Create Your Success Story?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            Join the Fortune 500 companies that have achieved breakthrough results with our AI and IT solutions
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <Link 
               href="/contact"
-              className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
             >
               Start Your Transformation
             </Link>
-            <Link
+            <Link 
               href="/services"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200"
             >
               Explore Our Services
             </Link>

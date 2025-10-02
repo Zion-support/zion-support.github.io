@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -9,58 +8,414 @@ export const metadata: Metadata = {
 };
 
 export default function ServicesPage() {
+  const serviceCategories = [
+    {
+      title: 'AI Content Optimization Suite',
+      description: 'AI-powered content optimization platform for headlines, email subject lines, and marketing copy',
+      icon: '📝',
+      href: '/services/ai-content-optimization-suite',
+      pricing: 'Starting from $29/month',
+      features: [
+        'HeadlineMaster AI - B2B Marketing Headlines',
+        'PodcastTranscriber Pro - Accurate Transcriptions',
+        'ContentAnalyzer AI - Performance Analytics',
+        'A/B Testing Capabilities',
+        'Industry-Specific Optimization',
+        'Real-time Performance Tracking'
+      ]
+    },
+    {
+      title: 'Remote Work Productivity Suite',
+      description: 'Comprehensive remote work solutions including meeting optimization, team onboarding, and productivity analytics',
+      icon: '🏠',
+      href: '/services/remote-work-productivity-suite',
+      pricing: 'Starting from $19/month',
+      features: [
+        'MeetingTimer Pro - Meeting Efficiency',
+        'RemoteOnboarding - Team Integration',
+        'TeamAnalytics Pro - Productivity Insights',
+        'AI-Powered Meeting Assistant',
+        'Virtual Team Building Tools',
+        'Collaboration Analytics'
+      ]
+    },
+    {
+      title: 'Healthcare Scheduling Platform',
+      description: 'Comprehensive healthcare scheduling SaaS for hospitals and clinics with HIPAA compliance',
+      icon: '🏥',
+      href: '/services/healthcare-scheduling-platform',
+      pricing: 'Starting from $149/month',
+      features: [
+        'Smart Appointment Scheduling',
+        'Virtual Consultations Platform',
+        'Patient Data Management',
+        'HIPAA Compliance & Security',
+        'Analytics Dashboard',
+        'Mobile Applications'
+      ]
+    },
+    {
+      title: 'AI Meeting Assistant Platform',
+      description: 'AI-powered meeting assistant that records conversations, extracts decisions, and manages tasks automatically',
+      icon: '🤖',
+      href: '/services/ai-meeting-assistant-platform',
+      pricing: 'Starting from $29/month',
+      features: [
+        'Intelligent Recording & Transcription',
+        'Smart Summarization & Decision Extraction',
+        'Automatic Task Management',
+        'Natural Language Processing',
+        'Calendar Integration',
+        'Advanced Analytics'
+      ]
+    },
+    {
+      title: 'Habit Tracking & Wellness Platform',
+      description: 'AI-powered habit tracking and wellness platform for personal development and goal achievement',
+      icon: '💪',
+      href: '/services/habit-tracking-wellness-platform',
+      pricing: 'Starting from $7.99/month',
+      features: [
+        'Smart Habit Builder',
+        'Morning Routine Optimizer',
+        'Wellness Analytics',
+        'AI-Powered Insights',
+        'Community Features',
+        'Wearable Device Integration'
+      ]
+    },
+    {
+      title: 'AI Cybersecurity Automation',
+      description: 'Advanced AI-powered cybersecurity automation platform with threat detection and automated response',
+      icon: '🔒',
+      href: '/services/ai-cybersecurity-automation',
+      pricing: 'Starting from $1,499/month',
+      features: [
+        'AI Threat Detection',
+        'Automated Response System',
+        'Vulnerability Assessment',
+        'Zero Trust Architecture',
+        'Security Orchestration',
+        'Compliance & Reporting'
+      ]
+    },
+    {
+      title: 'Cloud-Native DevOps Platform',
+      description: 'Comprehensive cloud-native DevOps platform with CI/CD automation and infrastructure as code',
+      icon: '☁️',
+      href: '/services/cloud-native-devops-platform',
+      pricing: 'Starting from $1,499/month',
+      features: [
+        'CI/CD Automation',
+        'Infrastructure as Code',
+        'Container Orchestration',
+        'Monitoring & Observability',
+        'Security & Compliance',
+        'Multi-Cloud Support'
+      ]
+    },
+    {
+      title: 'Advanced Micro SaaS Solutions',
+      description: 'Cutting-edge micro SaaS platforms designed to solve specific business challenges with AI-powered automation',
+      icon: '🚀',
+      href: '/services/advanced-micro-saas-solutions',
+      pricing: 'Starting from $199/month',
+      features: [
+        'AI-Powered Content Creation Suite',
+        'Smart Inventory Management Platform',
+        'Automated Customer Support AI',
+        'Financial Analytics Dashboard',
+        'HR Automation Suite',
+        'Project Management Intelligence'
+      ]
+    },
+    {
+      title: 'Comprehensive AI Services',
+      description: 'Full-spectrum AI solutions including machine learning, NLP, computer vision, and autonomous systems',
+      icon: '🧠',
+      href: '/services/ai-services-comprehensive',
+      pricing: 'Starting from $2,500/project',
+      features: [
+        'Machine Learning Model Development',
+        'Natural Language Processing Suite',
+        'Computer Vision & Image Recognition',
+        'Autonomous Systems Development',
+        'AI-Powered Business Intelligence',
+        'AI Consulting & Strategy'
+      ]
+    },
+    {
+      title: 'AI Content Optimization Suite',
+      description: 'AI-powered content creation, optimization, and performance analytics for marketing and business growth',
+      icon: '📝',
+      href: '/services/ai-content-optimization-suite',
+      pricing: 'Starting from $199/month',
+      features: [
+        'AI Content Generation',
+        'SEO Optimization',
+        'Performance Analytics',
+        'Content Personalization',
+        'Quality Assurance',
+        'Content Calendar Management'
+      ]
+    },
+    {
+      title: 'AI Workflow Automation Platform',
+      description: 'Automate complex business workflows with AI-powered automation and intelligent decision making',
+      icon: '⚡',
+      href: '/services/ai-workflow-automation-platform',
+      pricing: 'Starting from $299/month',
+      features: [
+        'Visual Workflow Builder',
+        'AI-Powered Decision Making',
+        'Integration Hub (500+ apps)',
+        'Real-time Monitoring',
+        'Enterprise Security',
+        'Custom Development'
+      ]
+    },
+    {
+      title: 'AI Customer Insights Platform',
+      description: 'Transform customer data into actionable insights with AI-powered analytics and predictive modeling',
+      icon: '🔍',
+      href: '/services/ai-customer-insights-platform',
+      pricing: 'Starting from $299/month',
+      features: [
+        'AI-Powered Sentiment Analysis',
+        'Customer Behavior Analytics',
+        'Predictive Customer Lifetime Value',
+        'Personalized Recommendations',
+        'Revenue Optimization',
+        'Privacy-First Analytics'
+      ]
+    },
+    {
+      title: 'AI Financial Forecasting Suite',
+      description: 'Advanced AI-powered financial forecasting and analysis platform with real-time market predictions and risk assessment',
+      icon: '💰',
+      href: '/services/ai-financial-forecasting-suite',
+      pricing: 'Starting from $499/month',
+      features: [
+        'AI Market Predictions',
+        'Automated Financial Planning',
+        'Advanced Risk Assessment',
+        'Investment Optimization',
+        'Goal-Based Planning',
+        'Real-Time Data Integration'
+      ]
+    },
+    {
+      title: 'IoT Smart Infrastructure Platform',
+      description: 'Comprehensive IoT platform for smart cities, buildings, and infrastructure with real-time monitoring and predictive maintenance',
+      icon: '🏗️',
+      href: '/services/iot-smart-infrastructure-platform',
+      pricing: 'Starting from $199/month',
+      features: [
+        'Smart Device Management',
+        'Predictive Maintenance',
+        'Advanced Security',
+        'Real-Time Analytics',
+        'Energy Optimization',
+        'Scalable Architecture'
+      ]
+    },
+    {
+      title: 'Blockchain Enterprise Solutions',
+      description: 'Enterprise-grade blockchain solutions for supply chain, finance, and data integrity with smart contracts and DeFi',
+      icon: '⛓️',
+      href: '/services/blockchain-enterprise-solutions',
+      pricing: 'Starting from $2,999/project',
+      features: [
+        'Smart Contract Development',
+        'Supply Chain Transparency',
+        'DeFi Solutions',
+        'Data Integrity & Security',
+        'Cross-Chain Integration',
+        'Enterprise Security'
+      ]
+    },
+    {
+      title: 'AI Financial Analysis Platform',
+      description: 'Advanced AI-powered financial analysis, forecasting, and risk assessment for informed decision making',
+      icon: '💰',
+      href: '/services/ai-financial-analysis-platform',
+      pricing: 'Starting from $599/month',
+      features: [
+        'Automated Financial Reporting',
+        'Predictive Forecasting',
+        'Risk Assessment',
+        'Investment Analysis',
+        'Fraud Detection',
+        'Regulatory Compliance'
+      ]
+    },
+    {
+      title: 'Complete IT Services',
+      description: 'Comprehensive IT services including cloud migration, DevOps, cybersecurity, and digital transformation',
+      icon: '💻',
+      href: '/services/it-services-comprehensive',
+      pricing: 'Starting from $1,500/month',
+      features: [
+        'Cloud Migration & Management',
+        'DevOps & CI/CD Implementation',
+        'Cybersecurity Solutions',
+        'Infrastructure Management',
+        'Digital Transformation Consulting',
+        'Database Management & Optimization'
+      ]
+    }
+  ];
+
   const services = [
     {
-      title: 'AI Data Analytics',
-      description: 'Transform data into actionable insights with predictive modeling and real-time dashboards',
-      icon: '📊',
+      title: 'AI Document Automation Platform',
+      description: 'Automate document processing, data extraction, and workflow management with 99.5% accuracy',
+      icon: '📄',
       features: [
-        'Predictive Analytics & Forecasting',
-        'Real-time Business Intelligence',
-        'Machine Learning Model Development',
-        'Data Visualization & Reporting',
-        'Custom Analytics Solutions'
+        'Intelligent Data Extraction',
+        'Smart Document Classification',
+        'Automated Workflow Processing',
+        'Compliance & Security Controls',
+        'Real-time Analytics & Reporting'
       ],
-      href: '/services/ai-data-analytics'
+      href: '/services/ai-document-automation',
+      pricing: '$299 - $799/month',
+      category: 'AI Automation'
     },
     {
-      title: 'AI Workflow Automation',
-      description: 'Automate business processes with intelligent workflow design and smart triggers',
+      title: 'AI Customer Insights Platform',
+      description: 'Transform customer data into actionable insights with AI-powered analytics and predictive modeling',
+      icon: '👥',
+      features: [
+        'Predictive Customer Analytics',
+        'Behavioral Segmentation',
+        'Journey Mapping & Analysis',
+        'Sentiment Analysis',
+        'Revenue Optimization'
+      ],
+      href: '/services/ai-customer-insights-platform',
+      pricing: '$499 - $1,299/month',
+      category: 'Business Intelligence'
+    },
+    {
+      title: 'AI Workflow Automation Platform',
+      description: 'Streamline business operations with intelligent workflow automation and process optimization',
       icon: '⚡',
       features: [
-        'Process Automation Design',
-        'Intelligent Document Processing',
-        'Business Rule Engine Development',
-        'Workflow Optimization',
-        'Integration & Orchestration'
+        'Visual Workflow Builder',
+        'AI-Powered Decision Making',
+        'System Integrations',
+        'Process Monitoring',
+        'Exception Handling'
       ],
-      href: '/services/ai-workflow-automation'
+      href: '/services/ai-workflow-automation-platform',
+      pricing: '$399 - $999/month',
+      category: 'Process Automation'
     },
     {
-      title: 'AI Virtual Assistant',
-      description: '24/7 intelligent customer support with natural language processing',
+      title: 'Healthcare AI Diagnostics Platform',
+      description: 'Revolutionary AI-powered diagnostic platform for healthcare providers with 95% accuracy',
+      icon: '🏥',
+      features: [
+        'Medical Imaging AI',
+        'Clinical Decision Support',
+        'Predictive Analytics',
+        'Early Disease Detection',
+        'HIPAA Compliance'
+      ],
+      href: '/services/healthcare-ai-diagnostics-platform',
+      pricing: '$2,999 - $7,999/month',
+      category: 'Healthcare AI'
+    },
+    {
+      title: 'FinTech AI Risk Management Platform',
+      description: 'Advanced AI-powered risk management for financial institutions with 99.8% fraud detection accuracy',
+      icon: '💰',
+      features: [
+        'Real-time Fraud Detection',
+        'Credit Risk Assessment',
+        'Regulatory Compliance',
+        'Market Risk Analysis',
+        'Predictive Analytics'
+      ],
+      href: '/services/fintech-ai-risk-management',
+      pricing: '$1,999 - $4,999/month',
+      category: 'FinTech AI'
+    },
+    {
+      title: 'AI Inventory Optimization Platform',
+      description: 'Optimize inventory management with AI-powered demand forecasting and automated reordering',
+      icon: '📦',
+      features: [
+        'Demand Forecasting',
+        'Automated Reordering',
+        'Stock Optimization',
+        'Supplier Management',
+        'Risk Management'
+      ],
+      href: '/services/ai-inventory-optimization-platform',
+      pricing: '$599 - $1,999/month',
+      category: 'Supply Chain AI'
+    },
+    {
+      title: 'AI Content Generation Tool',
+      description: 'Revolutionary AI-powered content creation platform for blogs, social media, and marketing materials',
+      icon: '✍️',
+      features: [
+        'Smart Templates for All Content Types',
+        'SEO Optimization & Keyword Integration',
+        'Plagiarism Detection & Originality',
+        'Brand Voice Matching & Consistency',
+        'Multi-Platform Publishing'
+      ],
+      href: '/services/ai-content-generation-tool',
+      pricing: '$50 - $500/month',
+      category: 'Micro SaaS'
+    },
+    {
+      title: 'Automated Appointment Scheduler',
+      description: 'Intelligent scheduling system with calendar integration and automated reminders',
+      icon: '📅',
+      features: [
+        'Calendar Synchronization',
+        'Automated Email & SMS Reminders',
+        'Customizable Booking Pages',
+        'Real-time Availability Updates',
+        'Analytics Dashboard'
+      ],
+      href: '/services/automated-appointment-scheduler',
+      pricing: '$25 - $200/month',
+      category: 'Micro SaaS'
+    },
+    {
+      title: 'AI Customer Support Chatbot',
+      description: 'Intelligent chatbot with natural language processing and seamless human handoff',
       icon: '🤖',
       features: [
         'Natural Language Processing',
-        'Multi-channel Support',
-        'Intelligent Routing',
-        'Sentiment Analysis',
-        'Continuous Learning Systems'
+        '24/7 Availability',
+        'Seamless Human Handoff',
+        'Knowledge Base Integration',
+        'Advanced Analytics'
       ],
-      href: '/services/ai-virtual-assistant'
+      href: '/services/ai-customer-support-chatbot',
+      pricing: '$100 - $800/month',
+      category: 'AI Services'
     },
     {
-      title: 'Autonomous Business Operations',
-      description: 'Self-managing AI systems that operate entire business processes autonomously',
-      icon: '🧠',
+      title: 'AI Resume Screening Service',
+      description: 'Automated candidate evaluation with bias detection and intelligent scoring',
+      icon: '📄',
       features: [
-        'Autonomous Process Management',
-        'Predictive Maintenance',
-        'Intelligent Resource Allocation',
-        'Self-healing Systems',
-        'Continuous Optimization'
+        'Smart Keyword Matching',
+        'Bias Detection & Prevention',
+        'Candidate Scoring System',
+        'HR Software Integration',
+        'Analytics Dashboard'
       ],
-      href: '/services/autonomous-operations'
+      href: '/services/ai-resume-screening-service',
+      pricing: '$500 - $5,000/month',
+      category: 'AI Services'
     },
     {
       title: 'Generative AI Solutions',
@@ -89,17 +444,30 @@ export default function ServicesPage() {
       href: '/services/cloud-migration'
     },
     {
-      title: 'Micro SaaS Development',
-      description: 'Custom micro SaaS solutions designed for specific business needs and rapid deployment',
+      title: 'Micro SaaS Solutions',
+      description: 'Production-ready micro SaaS applications for specific business needs with immediate ROI',
       icon: '🔧',
       features: [
-        'Rapid Prototype Development',
-        'Scalable Architecture Design',
-        'API Development & Integration',
-        'User Experience Optimization',
-        'Performance Monitoring'
+        'Cloud Cost Management',
+        'AI Content Creation',
+        'Compliance Automation',
+        'Smart HR & Analytics',
+        'Workflow Automation'
       ],
       href: '/services/micro-saas'
+    },
+    {
+      title: 'IT Services & Solutions',
+      description: 'Comprehensive IT services including cloud migration, DevOps, cybersecurity, and platform engineering',
+      icon: '🖥️',
+      features: [
+        'Platform Engineering',
+        'Cloud Migration',
+        'DevOps Automation',
+        'Cybersecurity Operations',
+        'Data Analytics Platforms'
+      ],
+      href: '/services/it-services'
     },
     {
       title: 'Enterprise AI Consulting',
@@ -115,17 +483,173 @@ export default function ServicesPage() {
       href: '/services/ai-consulting'
     },
     {
-      title: 'Cybersecurity & AI Security',
-      description: 'Advanced security solutions powered by AI for comprehensive threat protection',
+      title: 'Cybersecurity Risk Assessment',
+      description: 'Comprehensive security evaluation with vulnerability scanning and compliance checks',
       icon: '🛡️',
       features: [
-        'AI-Powered Threat Detection',
-        'Security Orchestration',
-        'Vulnerability Assessment',
-        'Incident Response Automation',
-        'Compliance Management'
+        'Vulnerability Scanning',
+        'Compliance Checks (GDPR, HIPAA, SOX)',
+        'Detailed Risk Reports',
+        'Penetration Testing',
+        'Security Training'
       ],
-      href: '/services/ai-security'
+      href: '/services/cybersecurity-risk-assessment',
+      pricing: '$1,000 - $25,000+',
+      category: 'IT Services'
+    },
+    {
+      title: 'AI-Powered Email Marketing Suite',
+      description: 'Revolutionary email marketing platform with AI-driven optimization and automated personalization',
+      icon: '📧',
+      features: [
+        '40% SEO Improvement',
+        '60% Higher Engagement',
+        '70% Time Savings',
+        '85% Prediction Accuracy'
+      ],
+      href: '/services/ai-content-optimization-platform',
+      pricing: '$99/month',
+      category: 'AI Services'
+    },
+    {
+      title: 'AI Financial Forecasting Suite',
+      description: 'Revolutionize financial planning with AI-powered forecasting. Predict market trends and optimize investments.',
+      icon: '💰',
+      features: [
+        '78% Prediction Accuracy',
+        '25% Return Improvement',
+        '90% Risk Assessment',
+        '80% Time Savings'
+      ],
+      href: '/services/ai-financial-forecasting-suite',
+      pricing: '$499/month',
+      category: 'AI Services'
+    },
+    {
+      title: 'Smart Inventory Management SaaS',
+      description: 'AI-powered inventory optimization for retail, e-commerce, and manufacturing. Reduce costs and prevent stockouts.',
+      icon: '📦',
+      features: [
+        '30% Cost Reduction',
+        '60% Less Stockouts',
+        '85% Demand Accuracy',
+        '40% Cash Flow Improvement'
+      ],
+      href: '/services/smart-inventory-management-saas',
+      pricing: '$79/month',
+      category: 'Micro SaaS'
+    },
+    {
+      title: 'AI-Powered CRM Automation',
+      description: 'Transform customer relationships with AI automation. Automate lead scoring, sales forecasting, and engagement.',
+      icon: '🤝',
+      features: [
+        '90% Lead Scoring Accuracy',
+        '85% Forecast Accuracy',
+        '70% Higher Engagement',
+        '40% Churn Reduction'
+      ],
+      href: '/services/ai-powered-crm-automation',
+      pricing: '$149/month',
+      category: 'AI Services'
+    },
+    {
+      title: 'Cloud-Native DevOps Platform',
+      description: 'Enterprise-grade DevOps platform with CI/CD automation, infrastructure as code, and advanced monitoring.',
+      icon: '⚙️',
+      features: [
+        '50% Faster Deployments',
+        '80% Infrastructure Automation',
+        '99.9% Success Rate',
+        '30% Cost Optimization'
+      ],
+      href: '/services/cloud-native-devops-platform',
+      pricing: '$299/month',
+      category: 'IT Services'
+    },
+    {
+      title: 'AI Cybersecurity Automation Suite',
+      description: 'Advanced AI-powered cybersecurity platform. Detect threats, automate responses, and protect infrastructure.',
+      icon: '🛡️',
+      features: [
+        '99.5% Threat Detection',
+        '90% Faster Response',
+        '95% Insider Threat Detection',
+        '70% Alert Reduction'
+      ],
+      href: '/services/ai-cybersecurity-automation-suite',
+      pricing: '$399/month',
+      category: 'AI Services'
+    },
+    {
+      title: 'AI Customer Service Automation',
+      description: 'Transform customer support with intelligent automation and 24/7 AI-powered assistance',
+      icon: '🎧',
+      features: [
+        '300% ROI',
+        '60% Cost Reduction',
+        '80% Faster Response',
+        '24/7 Support'
+      ],
+      href: '/services/ai-customer-service-automation',
+      pricing: '$299/month',
+      category: 'Micro SaaS'
+    },
+    {
+      title: 'Smart Appointment Scheduler',
+      description: 'Streamline bookings with AI-powered optimization and automated reminders',
+      icon: '📅',
+      features: [
+        '250% ROI',
+        '50% Less No-Shows',
+        '35% More Bookings',
+        '30 Day Trial'
+      ],
+      href: '/services/appointment-scheduling-saas',
+      pricing: '$49/month',
+      category: 'Micro SaaS'
+    },
+    {
+      title: 'Enterprise Cloud Migration',
+      description: 'Seamless cloud transformation with zero downtime and expert guidance',
+      icon: '☁️',
+      features: [
+        '200% ROI',
+        '40% Cost Reduction',
+        'Zero Downtime',
+        '24/7 Support'
+      ],
+      href: '/services/cloud-migration-service',
+      pricing: 'Custom Pricing',
+      category: 'IT Services'
+    },
+    {
+      title: 'AI Cybersecurity Platform',
+      description: 'Advanced threat detection and response with AI-powered security automation',
+      icon: '🛡️',
+      features: [
+        '500% ROI',
+        '90% Threat Reduction',
+        'Real-time Monitoring',
+        '14 Day Trial'
+      ],
+      href: '/services/ai-cybersecurity-platform',
+      pricing: '$399/month',
+      category: 'Advanced AI'
+    },
+    {
+      title: 'Telemedicine Platform',
+      description: 'Complete virtual healthcare solution with video consultations and patient management',
+      icon: '🏥',
+      features: [
+        '300% ROI',
+        '200% Patient Reach',
+        '60% Less No-Shows',
+        '30 Day Trial'
+      ],
+      href: '/services/healthcare-telemedicine-platform',
+      pricing: '$149/month',
+      category: 'Micro SaaS'
     }
   ];
 
@@ -158,6 +682,54 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* Service Categories */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Service Categories
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Explore our comprehensive service categories designed to meet all your technology needs
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            {serviceCategories.map((category, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+                <div className="p-8">
+                  <div className="text-center mb-6">
+                    <span className="text-5xl mb-4 block">{category.icon}</span>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-3">{category.title}</h3>
+                    <p className="text-gray-600 mb-4">{category.description}</p>
+                    <div className="text-lg font-semibold text-green-600 mb-4">{category.pricing}</div>
+                  </div>
+                  
+                  <div className="mb-6">
+                    <h4 className="font-semibold text-gray-900 mb-3">Featured Services:</h4>
+                    <ul className="text-sm text-gray-600 space-y-2">
+                      {category.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-center">
+                          <span className="text-green-500 mr-2">✓</span>
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  
+                  <a 
+                    href={category.href}
+                    className="w-full bg-blue-600 text-white text-center py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors block"
+                  >
+                    Explore {category.title}
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Services Grid */}
       <section className="py-20 px-6">
         <div className="container mx-auto">
@@ -177,8 +749,17 @@ export default function ServicesPage() {
                 key={index}
                 className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-200 hover:border-blue-300 group"
               >
-                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                  {service.icon}
+                <div className="flex items-center justify-between mb-4">
+                  <div className="text-4xl group-hover:scale-110 transition-transform duration-300">
+                    {service.icon}
+                  </div>
+                  <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
+                    service.category === 'Micro SaaS' ? 'bg-orange-100 text-orange-800' :
+                    service.category === 'Advanced AI' ? 'bg-blue-100 text-blue-800' :
+                    'bg-green-100 text-green-800'
+                  }`}>
+                    {service.category}
+                  </span>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   {service.title}
@@ -196,15 +777,21 @@ export default function ServicesPage() {
                     </li>
                   ))}
                 </ul>
-                <Link
+                <div className="mb-4 p-3 bg-blue-50 rounded-lg border border-blue-200">
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-blue-800 font-medium">Starting at:</span>
+                    <span className="text-lg font-bold text-blue-600">{service.pricing}</span>
+                  </div>
+                </div>
+                <a
                   href={service.href}
-                  className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors group-hover:underline"
+                  className="inline-flex items-center justify-center w-full py-3 px-6 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors group-hover:shadow-lg"
                 >
-                  <span>Learn More</span>
+                  <span>Get Started</span>
                   <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
                   </svg>
-                </Link>
+                </a>
               </div>
             ))}
           </div>

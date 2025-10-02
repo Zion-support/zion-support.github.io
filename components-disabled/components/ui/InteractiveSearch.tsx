@@ -7,7 +7,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         onChange={e => setValue(e && e.target.value)}
         placeholder={placeholder}
 }
-import React from "react";
+
 interface InteractiveSearchProps {;
   placeholder?: string;
 ;
@@ -20,7 +20,7 @@ export default /**;
         </button>)}
     </motion.div>);
 }'
-import React from './react';
+
 interface InteractiveSearchProps {}
   placeholder?: string;
   on_search?: (query: string) => void,

@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Sparkles, TrendingUp } from 'lucide-react';
 
 interface LatestContentBannerProps {
   variant?: 'info' | 'success' | 'warning';
@@ -27,10 +25,10 @@ const LatestContentBanner: React.FC<LatestContentBannerProps> = ({
             <Sparkles className="w-6 h-6 animate-pulse" />
             <div>
               <h3 className="font-bold text-lg">
-                🔥 New: GenAI Reliability Scorecards 2027 · Edge Private Analytics 2027
+                🔥 New Today: Runtime Scorecards · Edge A/B &lt;100ms · Agent Guardrails v2
               </h3>
               <p className="text-sm opacity-90">
-                Plus: GenAI Cache Playbook 2026 — cut cost 50% with semantic caches
+                Now live: 3 new guides + dozens of updated insights
               </p>
             </div>
           </div>

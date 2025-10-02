@@ -1,18 +1,32 @@
 module.exports = {
-
-  extends: [
-    'next/core-web-vitals',
-    '@typescript-eslint/recommended' ],
+  root: true,
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint'],
+  plugins: ['@typescript-eslint', 'react', 'react-hooks'],
+  extends: [
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:react-hooks/recommended'
+  ],
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    ecmaFeatures: { jsx: true },
+    project: null
+  },
+  settings: {
+    react: { version: 'detect' }
+  },
   rules: {
-    '@typescript-eslint/no-unused-vars': ['warn' { argsIgnorePattern: '^_' }],
+    '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
     '@typescript-eslint/no-explicit-any': 'warn',
+    'react/react-in-jsx-scope': 'off',
     'prefer-const': 'error',
     'no-var': 'error',
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
     'react-hooks/exhaustive-deps': 'warn',
-    'react/no-unescaped-entities': 'off' },
+    'react/no-unescaped-entities': 'off'
+  },
   ignorePatterns: [
     'node_modules/',
     '.next/',
@@ -27,4 +41,7 @@ module.exports = {
     'automation_backup/',
     'broken_files_backup/',
     'contracts/',
-    'hardhat/' ] };
+    'hardhat/',
+    'src/content/posts.ts'
+  ]
+};

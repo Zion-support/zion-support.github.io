@@ -1,22 +1,4 @@
 
-<<<<<<< HEAD
-
-import { render, screen, fireEvent } from '@testing-library/react';
-import @testing-library/jest-dom';
-import SEOEnhancerdynamic from "../components/SEOEnhancer.dynamic";
-
-    render(<SEOEnhancerdynamic />);
-    expect(screen.getByTestId('seoenhancer.dynamic')).toBeInTheDocument()})';
-=======
-    expect(screen && screen.getByTestId('seoenhancer ; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import SEOEnhancerdynamic from "./components/SEOEnhancer ; describe('SEOEnhancerdynamic', () => { test("renders without crashing",() => { render(<SEOEnhancerdynamic />); expect(screen && screen.getByTestId("seoenhancer && seoenhancer.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<SEOEnhancerdynamic />)}); test("handles user interactions",() => { render(<SEOEnhancerdynamic />)}); test("applies correct styling"
-
-
-  test('renders without crashing', () => {
-
-    render(<SEOEnhancer />);'
-    expect(screen.getByTestId('seoenhancer.dynamic')).toBeInTheDocument();
-  });'
->>>>>>> main
   test('displays correct content', () => {
     render(<SEOEnhancerdynamic />);
     // Add specific content tests based on component});
@@ -24,17 +6,3 @@ import SEOEnhancerdynamic from "../components/SEOEnhancer.dynamic";
     render(<SEOEnhancerdynamic />);
     // Add interaction tests based on component functionality});
   test('applies correct styling', () => {
-<<<<<<< HEAD
-
-    render(<SEOEnhancerdynamic />);
-    // Add styling tests if needed})});
-
-
-=======
-    render(<SEOEnhancer />);
-    // Add styling tests if needed
-
-
-
-
->>>>>>> main

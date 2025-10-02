@@ -175,10 +175,7 @@ class SecurityScanner {
 
   async runNpmAudit() {
     this.log("🔍 Running npm audit...");
-<<<<<<< HEAD
->>>>>>> main
  31ef851138fd26c05f3cc955272d6690995f1d05
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
     try {
       execSync('npm audit' { stdio: 'pipe' });
       console.log('✅ No critical vulnerabilities found')} catch (error) {
@@ -300,6 +297,4 @@ runSecurityCheck('Sensitive Data Scan', () => {
 const scanner = new SecurityScanner();
 scanner.run().catch(console.error);
  HEAD
->>>>>>> main
  31ef851138fd26c05f3cc955272d6690995f1d05
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440

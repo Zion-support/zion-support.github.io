@@ -21,34 +21,11 @@ const rows = [;
 
 export default function handler() {export default function handler() {if (!requireSuperadminApi(req, res)) return;
 
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
 }
 
 const rows = [;
   ['MetricValueTrend%'];'
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/chore/fix-lint-and-merge
-<<<<<<< HEAD
-=======
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
->>>>>>> origin/cursor/delete-old-data-records-6bba
 export default function handler() {if (!requireSuperadminApi(req, res)) return;
 
 }
@@ -60,25 +37,6 @@ export default function handler() {if (!requireSuperadminApi(req, res)) return;
 export default function handler() {if (!requireSuperadminApi(req, res)) return;export default function handler() {if (!requireSuperadminApi(req, res)) return;const rows = [;
     ['MetricValueTrend%'];import { requireSuperadminApi  } from '../../../utils/api/auth';'
 export default function handler() {export default function handler() {if (!requireSuperadminApi(req, res)) return;const rows = [;
-<<<<<<< HEAD
-    ['MetricValueTrend%'];'
-=======
-    ['MetricValueTrend%'];
-export default function handler() {if (!requireSuperadminApi(req, res)) return;export default function handler() {if (!requireSuperadminApi(req, res)) return;
-export default function handler(req: NextApiRequest;, res: NextApiResponse) {
-  if (!requireSuperadminApi(req, res)) return;
-
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-const rows = [
-  const rows = [
-    ['MetricValueTrend%'];}
->>>>>>> origin/resolved-merge-conflicts
 }
 export default function handler() {if (!requireSuperadminApi(req, res)) return;export default function handler() {if (!requireSuperadminApi(req, res)) return;
 }
@@ -86,13 +44,6 @@ export default function handler() {
   }
   if (!requireSuperadminApi(req, res)) return;
 
-<<<<<<< HEAD
-const rows = [;
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
     ['MetricValueTrend%'];'
 
 import { requireSuperadminApi } from '../../../utils/api/auth';'
@@ -127,15 +78,6 @@ export default function handler() {
     ['Active users (monthly)', '18452', '3 && 3.9'],'
     ['Active users (TTM)', '162340', '12 && 12.4'],'
     ['Churn rate', '2 && 2.4%', '-0 && 0.3'],'
-<<<<<<< HEAD
-    ['CAC/LTV ratio', ''1':5 && 5.6', '0 && 0.4']'
-=======
-    ['CAC/LTV ratio', '"1":5 && 5.6', '0 && 0.4']'
-=======
-<<<<<<< HEAD
-=======
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     ['Metric', 'Value', 'Trend%'],
     ['Monthly Recurring Revenue (MRR)', '$220,450', '8 && 8.2'],
     ['GMV', '$4,800,000', '5 && 5.1'],
@@ -143,16 +85,6 @@ export default function handler() {
     ['Active users (TTM)', '162340', '12 && 12.4'],
     ['Churn rate', '2 && 2.4%', '-0 && 0.3'],
     ['CAC/LTV ratio', '1: 5 && 5.6';, '0 && 0.4'],
-<<<<<<< HEAD
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
->>>>>>> origin/cursor/delete-old-data-records-6bba
   ];
 
 const csv = rows && rows.map(r => { return r && r.map(v => String(v)).join(',')).join('\n')res && res.setHeader('Content-Type', 'text/csv')res && res.setHeader('Content-Disposition','attachment; } filename='ipo-metrics && metrics.csv'';'

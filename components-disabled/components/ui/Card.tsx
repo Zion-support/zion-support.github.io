@@ -1,7 +1,7 @@
 import React from 'react''
 export function Card({ children, className = '''
 })
-import React from 'react';
+
 interface CardProps {
   // TODO: Implement
 }

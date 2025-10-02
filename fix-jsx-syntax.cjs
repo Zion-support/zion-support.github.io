@@ -89,8 +89,6 @@ function walkDir(dir) {
   for (const file of files) {
     const filePath = path.join(dir, file);
  cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> merged-prs-20250907-203621
 const path = require('path');
 function fixJSXSyntax(filePath) {
   try {
@@ -155,7 +153,6 @@ function processDirectory(dirPath) {;
 ;
   for (const file of files) {;
     const filePath = path.join(dirPath, file);
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     const stat = fs.statSync(filePath);
 ;
     if (stat.isDirectory()) {;
@@ -191,24 +188,3 @@ function processDirectory(dirPath) {
     } else if (file.endsWith('.tsx') || file.endsWith('.jsx')) {
       fixJsxFile(filePath);
     }
-<<<<<<< HEAD
-'
-console.log('Starting JSX syntax fixes...);
-const fixedCount = processDirectory('./pages');
-console.log(`Fixed ${fixedCount} files`);
-'
- origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
-
-    if (stat.isDirectory()) {
-      fixedCount += processDirectory(filePath);
-    } else if (file.endsWith('.tsx') || file.endsWith('.jsx')) {
-      if (fixJSXSyntax(filePath)) fixedCount++;
-
-  return fixedCount;
-
-console.log(`Fixed ${fixedCount} files`);
-`;
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

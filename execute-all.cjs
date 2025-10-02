@@ -17,19 +17,6 @@ class ExecuteAllScripts {
   }
 
  HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
- merged-prs-20250907-203621
-  async run() {
-    console.log('🚀 Executing all automation scripts...');
-    const scripts = [
-      'comprehensive-automation-suite.cjs',
-      'final-automation-suite-fixed.cjs',
-      'master-automation-orchestrator.cjs'
-    ];
- HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 
     for (const script of scripts) {
       try {
@@ -94,8 +81,6 @@ async function runAll() {
   async run() {
     console.log('🚀 Executing all automation scripts...');
     const scripts = ['comprehensive-automation-suite.cjs', 'final-automation-suite-fixed.cjs', 'ultimate-automation-orchestrator.cjs'];
-=======
->>>>>>> merged-prs-20250907-203621
 
     for (const script of scripts) {
       try {
@@ -110,17 +95,8 @@ const executor = new ExecuteAllScripts();
  HEAD
 executor.run().catch(console.error);
  origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
 
 const executor = new ExecuteAllScripts();
 executor.run().catch(console.error);
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
-=======
 
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
-=======
 executor.run().catch(console.error);
->>>>>>> origin/chore/fix-lint-and-merge
-=======
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

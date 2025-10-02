@@ -59,7 +59,7 @@ const LazyComponent: React.FC<LazyComponentProps /> = ({ children;, }
 
 ;
 export default LazyComponent;
-import React from 'react';
+
 },
     <Suspense fallback={fallback} />
       {children}
@@ -69,7 +69,7 @@ import React from 'react';
 
 export default LazyComponent;
 }
-import React, { Suspense, lazy } from 'react';
+
 interface LazyComponentProps {
   children: ReactNode;
   fallback?: ReactNode;

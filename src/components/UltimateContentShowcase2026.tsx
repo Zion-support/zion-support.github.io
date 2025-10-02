@@ -42,7 +42,7 @@ const UltimateContentShowcase2026: React.FC = () => {
                 <span className="text-gray-300 text-sm">Enterprise-grade security</span>
               </div>
             </div>
-            <a 
+            <a title="Internal link" 
               href="/quantum-ai" 
               className="inline-block mt-6 text-purple-400 hover:text-purple-300 font-semibold transition-colors duration-300"
             >
@@ -71,7 +71,7 @@ const UltimateContentShowcase2026: React.FC = () => {
                 <span className="text-gray-300 text-sm">Cognitive optimization</span>
               </div>
             </div>
-            <a 
+            <a title="Internal link" 
               href="/meta-cognitive-ai" 
               className="inline-block mt-6 text-blue-400 hover:text-blue-300 font-semibold transition-colors duration-300"
             >
@@ -100,7 +100,7 @@ const UltimateContentShowcase2026: React.FC = () => {
                 <span className="text-gray-300 text-sm">Zero-touch operations</span>
               </div>
             </div>
-            <a 
+            <a title="Internal link" 
               href="/autonomous-operations" 
               className="inline-block mt-6 text-green-400 hover:text-green-300 font-semibold transition-colors duration-300"
             >
@@ -137,13 +137,13 @@ const UltimateContentShowcase2026: React.FC = () => {
             Ready to experience the future of AI? Join the revolution today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
+            <a title="Internal link" 
               href="/contact" 
               className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
             >
               Get Started Now
             </a>
-            <a 
+            <a title="Internal link" 
               href="/case-studies" 
               className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >

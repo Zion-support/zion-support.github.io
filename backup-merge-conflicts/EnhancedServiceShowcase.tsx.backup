@@ -1,12 +1,3 @@
-<<<<<<< HEAD:backup-merge-conflicts/EnhancedServiceShowcase.tsx.backup
-
-
-interface EnhancedServiceShowcaseProps {
-  // Add props here as needed
-=======
-interface EnhancedServiceShowcaseProps {}
-  // Add props here as needed;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:temp_backup/EnhancedServiceShowcase.tsx
 }
 export default function EnhancedServiceShowcase({ }: EnhancedServiceShowcaseProps) {}
   return (

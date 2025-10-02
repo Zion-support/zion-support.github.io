@@ -1,6 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
-import { ArrowRight, Sparkles, TrendingUp, Zap, Brain, Atom, Target } from 'lucide-react';
 
 const January2026RevolutionaryContentBanner: React.FC = () => {
   const revolutionaryContent = [
@@ -110,7 +108,7 @@ const January2026RevolutionaryContentBanner: React.FC = () => {
 
               {/* CTA Button */}
               <Link 
-                href={`/${content.type === 'blog' ? 'blog' : 'case-studies'}/${content.slug}`}
+                to={`/${content.type === 'blog' ? 'blog' : 'case-studies'}/${content.slug}`}
                 className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 group-hover:shadow-lg group-hover:shadow-blue-500/25"
               >
                 {content.type === 'blog' ? 'Read Article' : 'View Case Study'}
@@ -151,13 +149,13 @@ const January2026RevolutionaryContentBanner: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                href="/contact" 
+                to="/contact" 
                 className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
               >
                 Start Your Transformation
               </Link>
               <Link 
-                href="/services" 
+                to="/services" 
                 className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 Explore Our Services

@@ -6,7 +6,6 @@ export const metadata = {
   title: 'AI Autonomous Business Systems 2026: Complete Enterprise Automation Revolution',
   description: 'Transform your enterprise with AI autonomous business systems that achieve 99% automation, $15M+ ROI, and zero-touch operations across all business functions.',
   keywords: 'AI autonomous systems, business automation, enterprise AI, autonomous operations, AI transformation 2026',
-=======
 import { Clock, ArrowRight, Bot, Zap, Target, TrendingUp } from 'lucide-react';
 
 export const metadata = {
@@ -232,7 +231,6 @@ export default function AutonomousBusinessSystems2026() {
               <li>Continuous learning and improvement systems</li>
               <li>Full ROI realization and optimization</li>
             </ul>
-=======
         <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Implementation Architecture</h3>
         
         <div className="bg-gray-50 p-6 rounded-xl mb-8">

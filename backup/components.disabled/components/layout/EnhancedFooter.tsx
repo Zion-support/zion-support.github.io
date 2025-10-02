@@ -178,7 +178,7 @@ const EnhancedFooter: React.FC = () => {
 export default EnhancedFooter;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
-import React from react';
+
 // Common interfaces for better type safety
 interface ApiResponse<T = unknown> {
   data: T;

@@ -1,272 +1,281 @@
 import React from 'react';
-import { Metadata } from 'next';
+import Link from 'next/link';
 
-export const metadata: Metadata = {
-  title: 'AI Innovation Lab: Revolutionary Product Development Services | Zion Tech Group',
-  description: 'Transform your product development with our AI Innovation Lab, achieving 10x faster time-to-market and 85% cost reduction through revolutionary AI technologies.',
-  keywords: 'AI innovation lab, product development, AI R&D, innovation services, AI breakthrough development',
-  openGraph: {
-    title: 'AI Innovation Lab: Revolutionary Product Development',
-    description: 'Achieve 10x faster time-to-market and 85% cost reduction with our AI Innovation Lab services.',
-    type: 'website',
-  },
-};
-
-export default function AIInnovationLab() {
+export default function AIInnovationLabPage() {
   return (
-    <div className="min-h-screen bg-slate-950">
-      <div className="container mx-auto px-6 py-16">
-        {/* Hero Section */}
-        <header className="mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-500/30 mb-6">
-            <span className="text-purple-400 font-bold text-sm tracking-wider uppercase">
-              🧪 AI Innovation Lab
-            </span>
+    <main className="min-h-screen bg-slate-950 text-white">
+      <div className="max-w-6xl mx-auto px-4 py-16">
+        <div className="mb-12">
+          <Link href="/services" className="text-blue-400 hover:text-blue-300 mb-4 inline-block">
+            ← Back to Services
+          </Link>
+          <div className="flex items-center gap-2 mb-6">
+            <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-2 rounded-full text-sm font-bold">AI INNOVATION</span>
+            <span className="bg-gradient-to-r from-green-400 to-emerald-500 text-black px-4 py-2 rounded-full text-sm font-bold">500x SPEED</span>
+          </div>
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            AI Innovation Lab
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-4xl">
+            Revolutionary Neural Architecture Search (NAS) technology delivering 500x faster AI model development 
+            with 99.7% accuracy. Transform your AI development from months to days with autonomous architecture discovery.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-12 mb-16">
+          <div>
+            <h2 className="text-3xl font-bold mb-6">Autonomous AI Development</h2>
+            <p className="text-lg text-gray-300 mb-6">
+              Our AI Innovation Lab leverages breakthrough NAS technology to autonomously discover optimal 
+              neural architectures. Experience 500x faster model development with unprecedented accuracy 
+              and performance improvements.
+            </p>
+            <div className="space-y-4">
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center">
+                  <span className="text-white text-sm">✓</span>
+                </div>
+                <span className="text-gray-300">500x faster model development</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center">
+                  <span className="text-white text-sm">✓</span>
+                </div>
+                <span className="text-gray-300">99.7% model accuracy</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center">
+                  <span className="text-white text-sm">✓</span>
+                </div>
+                <span className="text-gray-300">Autonomous architecture discovery</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center">
+                  <span className="text-white text-sm">✓</span>
+                </div>
+                <span className="text-gray-300">90% cost reduction</span>
+              </div>
+            </div>
           </div>
           
-          <h1 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent leading-tight">
-            AI Innovation Lab: Revolutionary Product Development
-          </h1>
-          
-          <p className="text-xl text-gray-300 mb-8 max-w-4xl leading-relaxed">
-            Transform your product development with our AI Innovation Lab, achieving 
-            <span className="text-purple-400 font-bold"> 10x faster time-to-market</span> and 
-            <span className="text-blue-400 font-bold"> 85% cost reduction</span> through 
-            revolutionary AI technologies and breakthrough methodologies.
-          </p>
-        </header>
-
-        {/* Key Metrics Banner */}
-        <div className="bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-500/30 rounded-2xl p-8 mb-16">
-          <div className="grid md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-4xl font-extrabold text-purple-400 mb-2">10x</div>
-              <div className="text-gray-300 text-sm">Faster Time-to-Market</div>
-            </div>
-            <div>
-              <div className="text-4xl font-extrabold text-blue-400 mb-2">85%</div>
-              <div className="text-gray-300 text-sm">Cost Reduction</div>
-            </div>
-            <div>
-              <div className="text-4xl font-extrabold text-cyan-400 mb-2">95%</div>
-              <div className="text-gray-300 text-sm">Success Rate</div>
-            </div>
-            <div>
-              <div className="text-4xl font-extrabold text-green-400 mb-2">$100M+</div>
-              <div className="text-gray-300 text-sm">Market Value Created</div>
+          <div className="bg-gradient-to-r from-blue-900/20 to-cyan-900/20 rounded-xl p-8 border border-blue-500/20">
+            <h3 className="text-2xl font-bold mb-4">Development Metrics</h3>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="text-center">
+                <div className="text-4xl font-bold text-blue-300 mb-2">500x</div>
+                <div className="text-sm text-gray-300">Faster Development</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-green-300 mb-2">99.7%</div>
+                <div className="text-sm text-gray-300">Accuracy</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-purple-300 mb-2">90%</div>
+                <div className="text-sm text-gray-300">Cost Reduction</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-orange-300 mb-2">10K+</div>
+                <div className="text-sm text-gray-300">Architectures/Week</div>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Services Overview */}
-        <section className="mb-16">
-          <h2 className="text-4xl font-extrabold mb-8 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent text-center">
-            Innovation Lab Services
-          </h2>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* AI-Driven Research & Development */}
-            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105">
-              <div className="text-5xl mb-4">🔬</div>
-              <h3 className="text-2xl font-bold text-white mb-4">AI-Driven R&D</h3>
-              <p className="text-gray-400 mb-6 leading-relaxed">
-                Accelerate research and development with AI-powered discovery, automated experimentation, 
-                and predictive modeling that reduces R&D cycles by 70%.
+        <div className="mb-16">
+          <h2 className="text-4xl font-bold mb-8 text-center">NAS Innovation Services</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-blue-900/20 to-cyan-900/20 rounded-xl p-8 border border-blue-500/20 hover:border-blue-400/40 transition-all">
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-6">
+                <span className="text-2xl">🔍</span>
+              </div>
+              <h3 className="text-2xl font-bold mb-4">Autonomous Architecture Discovery</h3>
+              <p className="text-gray-300 mb-6">
+                Our NAS system autonomously explores thousands of architectural variations to discover 
+                optimal designs for your specific AI tasks and requirements.
               </p>
-              <ul className="space-y-2 text-sm text-gray-300 mb-6">
-                <li>• Automated hypothesis generation</li>
-                <li>• AI-powered experiment design</li>
-                <li>• Predictive outcome modeling</li>
-                <li>• Real-time optimization</li>
+              <ul className="text-sm text-gray-400 space-y-2">
+                <li>• Quantum-enhanced search algorithms</li>
+                <li>• Unlimited architecture exploration</li>
+                <li>• Self-improving discovery</li>
+                <li>• Novel pattern identification</li>
               </ul>
-              <a href="/contact" className="text-purple-400 hover:text-purple-300 font-semibold transition-colors">
-                Learn More →
-              </a>
             </div>
 
-            {/* Rapid Prototyping */}
-            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105">
-              <div className="text-5xl mb-4">⚡</div>
-              <h3 className="text-2xl font-bold text-white mb-4">Rapid Prototyping</h3>
-              <p className="text-gray-400 mb-6 leading-relaxed">
-                Create and test prototypes 10x faster with AI-assisted design, automated testing, 
-                and intelligent iteration that accelerates innovation cycles.
+            <div className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 rounded-xl p-8 border border-green-500/20 hover:border-green-400/40 transition-all">
+              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mb-6">
+                <span className="text-2xl">⚡</span>
+              </div>
+              <h3 className="text-2xl font-bold mb-4">Real-Time Performance Prediction</h3>
+              <p className="text-gray-300 mb-6">
+                Advanced performance prediction models accurately estimate model performance before 
+                full training, enabling rapid evaluation of promising architectures.
               </p>
-              <ul className="space-y-2 text-sm text-gray-300 mb-6">
-                <li>• AI-assisted design optimization</li>
-                <li>• Automated testing frameworks</li>
-                <li>• Intelligent iteration loops</li>
-                <li>• Virtual prototyping</li>
+              <ul className="text-sm text-gray-400 space-y-2">
+                <li>• Instant performance estimation</li>
+                <li>• 99.7% prediction accuracy</li>
+                <li>• Multi-objective optimization</li>
+                <li>• Resource-aware selection</li>
               </ul>
-              <a href="/contact" className="text-blue-400 hover:text-blue-300 font-semibold transition-colors">
-                Learn More →
-              </a>
             </div>
 
-            {/* Market Intelligence */}
-            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
-              <div className="text-5xl mb-4">📊</div>
-              <h3 className="text-2xl font-bold text-white mb-4">Market Intelligence</h3>
-              <p className="text-gray-400 mb-6 leading-relaxed">
-                Leverage AI-powered market analysis, trend prediction, and competitive intelligence 
-                to identify breakthrough opportunities and optimize product positioning.
+            <div className="bg-gradient-to-br from-purple-900/20 to-indigo-900/20 rounded-xl p-8 border border-purple-500/20 hover:border-purple-400/40 transition-all">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-xl flex items-center justify-center mb-6">
+                <span className="text-2xl">🚀</span>
+              </div>
+              <h3 className="text-2xl font-bold mb-4">Multi-Domain Optimization</h3>
+              <p className="text-gray-300 mb-6">
+                Simultaneous optimization across multiple AI domains and tasks, discovering 
+                architectures that excel across different applications and use cases.
               </p>
-              <ul className="space-y-2 text-sm text-gray-300 mb-6">
-                <li>• Real-time market analysis</li>
-                <li>• Trend prediction algorithms</li>
-                <li>• Competitive intelligence</li>
-                <li>• Opportunity identification</li>
+              <ul className="text-sm text-gray-400 space-y-2">
+                <li>• Cross-domain architecture transfer</li>
+                <li>• Multi-task optimization</li>
+                <li>• General-purpose designs</li>
+                <li>• Scalable solutions</li>
               </ul>
-              <a href="/contact" className="text-cyan-400 hover:text-cyan-300 font-semibold transition-colors">
-                Learn More →
-              </a>
             </div>
           </div>
-        </section>
+        </div>
 
-        {/* Success Stories */}
-        <section className="mb-16">
-          <h2 className="text-4xl font-extrabold mb-8 bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent text-center">
-            Innovation Lab Success Stories
-          </h2>
-          
+        <div className="mb-16">
+          <h2 className="text-4xl font-bold mb-8 text-center">Implementation Process</h2>
+          <div className="space-y-6">
+            <div className="flex items-start gap-6">
+              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center flex-shrink-0">
+                <span className="text-white font-bold">1</span>
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold mb-2">Requirements Analysis</h3>
+                <p className="text-gray-300">
+                  Comprehensive analysis of your AI requirements, performance targets, and constraints. 
+                  We define clear objectives for the NAS search process.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-6">
+              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center flex-shrink-0">
+                <span className="text-white font-bold">2</span>
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold mb-2">NAS System Deployment</h3>
+                <p className="text-gray-300">
+                  Deploy our autonomous NAS system with quantum-enhanced search algorithms. 
+                  The system begins exploring architectural variations immediately.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-6">
+              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full flex items-center justify-center flex-shrink-0">
+                <span className="text-white font-bold">3</span>
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold mb-2">Architecture Discovery</h3>
+                <p className="text-gray-300">
+                  Autonomous discovery of optimal architectures through continuous exploration 
+                  and evaluation. The system learns and improves with each iteration.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-6">
+              <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center flex-shrink-0">
+                <span className="text-white font-bold">4</span>
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold mb-2">Model Training & Validation</h3>
+                <p className="text-gray-300">
+                  Training and validation of discovered architectures on your specific datasets. 
+                  We ensure optimal performance and validate results.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-6">
+              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
+                <span className="text-white font-bold">5</span>
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold mb-2">Deployment & Optimization</h3>
+                <p className="text-gray-300">
+                  Deployment of optimized models with continuous monitoring and improvement. 
+                  The system continues to learn and optimize post-deployment.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="mb-16">
+          <h2 className="text-4xl font-bold mb-8 text-center">Success Stories</h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-br from-green-500/10 to-blue-500/10 border border-green-500/30 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-green-400 mb-4">FinTech Breakthrough</h3>
+            <div className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 rounded-xl p-8 border border-green-500/20">
+              <h3 className="text-2xl font-bold mb-4">AI Startup Breakthrough</h3>
               <p className="text-gray-300 mb-4">
-                Developed revolutionary AI-powered trading algorithm that achieved 300% better performance 
-                than traditional methods, generating $50M+ in additional revenue.
+                Achieved 500x faster model development with 99.7% accuracy on computer vision tasks.
               </p>
-              <div className="grid grid-cols-2 gap-4 text-sm">
-                <div>
-                  <div className="text-2xl font-bold text-green-400">300%</div>
-                  <div className="text-gray-300">Performance Improvement</div>
+              <div className="space-y-2 text-sm">
+                <div className="flex justify-between">
+                  <span className="text-gray-400">Development Speed:</span>
+                  <span className="text-green-300 font-bold">500x faster</span>
                 </div>
-                <div>
-                  <div className="text-2xl font-bold text-blue-400">$50M+</div>
-                  <div className="text-gray-300">Additional Revenue</div>
+                <div className="flex justify-between">
+                  <span className="text-gray-400">Model Accuracy:</span>
+                  <span className="text-green-300 font-bold">99.7%</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-400">Time to Market:</span>
+                  <span className="text-green-300 font-bold">3 days vs 4 months</span>
                 </div>
               </div>
             </div>
-            
-            <div className="bg-gradient-to-br from-purple-500/10 to-blue-500/10 border border-purple-500/30 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-purple-400 mb-4">Healthcare Innovation</h3>
+
+            <div className="bg-gradient-to-br from-blue-900/20 to-cyan-900/20 rounded-xl p-8 border border-blue-500/20">
+              <h3 className="text-2xl font-bold mb-4">Enterprise AI Acceleration</h3>
               <p className="text-gray-300 mb-4">
-                Created AI-powered diagnostic system that reduced diagnosis time by 80% and improved 
-                accuracy by 95%, saving $25M annually in healthcare costs.
+                Reduced AI model development time from 6 months to 5 days across multiple domains.
               </p>
-              <div className="grid grid-cols-2 gap-4 text-sm">
-                <div>
-                  <div className="text-2xl font-bold text-purple-400">80%</div>
-                  <div className="text-gray-300">Faster Diagnosis</div>
+              <div className="space-y-2 text-sm">
+                <div className="flex justify-between">
+                  <span className="text-gray-400">Speed Improvement:</span>
+                  <span className="text-blue-300 font-bold">500x</span>
                 </div>
-                <div>
-                  <div className="text-2xl font-bold text-blue-400">$25M</div>
-                  <div className="text-gray-300">Annual Savings</div>
+                <div className="flex justify-between">
+                  <span className="text-gray-400">Cost Savings:</span>
+                  <span className="text-blue-300 font-bold">$1.8M annually</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-400">Architectures Explored:</span>
+                  <span className="text-blue-300 font-bold">10K+ weekly</span>
                 </div>
               </div>
             </div>
           </div>
-        </section>
+        </div>
 
-        {/* Innovation Process */}
-        <section className="mb-16">
-          <h2 className="text-4xl font-extrabold mb-8 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent text-center">
-            Our Innovation Process
-          </h2>
-          
-          <div className="space-y-8">
-            <div className="flex items-start gap-6 p-6 bg-slate-900/50 rounded-xl">
-              <div className="bg-purple-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg">1</div>
-              <div>
-                <h3 className="text-2xl font-bold text-white mb-3">Discovery & Ideation</h3>
-                <p className="text-gray-300 mb-4">
-                  AI-powered market research and opportunity identification to discover breakthrough innovation opportunities 
-                  with highest potential for success and market impact.
-                </p>
-                <ul className="text-gray-400 text-sm space-y-1">
-                  <li>• Automated market scanning</li>
-                  <li>• AI-driven opportunity assessment</li>
-                  <li>• Competitive landscape analysis</li>
-                </ul>
-              </div>
-            </div>
-            
-            <div className="flex items-start gap-6 p-6 bg-slate-900/50 rounded-xl">
-              <div className="bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg">2</div>
-              <div>
-                <h3 className="text-2xl font-bold text-white mb-3">Rapid Prototyping</h3>
-                <p className="text-gray-300 mb-4">
-                  AI-assisted design and development of functional prototypes with intelligent testing 
-                  and optimization to validate concepts quickly and efficiently.
-                </p>
-                <ul className="text-gray-400 text-sm space-y-1">
-                  <li>• AI-assisted design optimization</li>
-                  <li>• Automated testing frameworks</li>
-                  <li>• Intelligent iteration cycles</li>
-                </ul>
-              </div>
-            </div>
-            
-            <div className="flex items-start gap-6 p-6 bg-slate-900/50 rounded-xl">
-              <div className="bg-cyan-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg">3</div>
-              <div>
-                <h3 className="text-2xl font-bold text-white mb-3">Validation & Optimization</h3>
-                <p className="text-gray-300 mb-4">
-                  Comprehensive testing, validation, and optimization using AI-powered analytics 
-                  to ensure maximum performance and market readiness.
-                </p>
-                <ul className="text-gray-400 text-sm space-y-1">
-                  <li>• AI-powered performance optimization</li>
-                  <li>• Automated validation testing</li>
-                  <li>• Market readiness assessment</li>
-                </ul>
-              </div>
-            </div>
-            
-            <div className="flex items-start gap-6 p-6 bg-slate-900/50 rounded-xl">
-              <div className="bg-green-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg">4</div>
-              <div>
-                <h3 className="text-2xl font-bold text-white mb-3">Scale & Launch</h3>
-                <p className="text-gray-300 mb-4">
-                  Full-scale development and market launch with ongoing AI-powered optimization 
-                  and performance monitoring for sustained success.
-                </p>
-                <ul className="text-gray-400 text-sm space-y-1">
-                  <li>• Full-scale development support</li>
-                  <li>• AI-powered launch optimization</li>
-                  <li>• Continuous performance monitoring</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-500/30 rounded-2xl p-12 text-center">
-          <h2 className="text-4xl font-extrabold text-white mb-6">
-            Ready to Transform Your Innovation Process?
-          </h2>
+        <div className="bg-gradient-to-r from-blue-900/20 via-cyan-900/20 to-green-900/20 rounded-xl p-12 border border-blue-500/20 text-center">
+          <h2 className="text-4xl font-bold mb-6">Ready to Accelerate Your AI Development?</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Join leading organizations achieving breakthrough innovation with our AI Innovation Lab. 
-            Get started with a free innovation assessment and personalized roadmap.
+            Transform your AI development process with autonomous architecture discovery. 
+            Our NAS technology can help you achieve breakthrough performance in days instead of months.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
+          <div className="flex flex-wrap justify-center gap-6">
+            <Link 
               href="/contact" 
-              className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50"
+              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all shadow-lg hover:shadow-xl"
             >
-              Get Free Innovation Assessment
-            </a>
-            <a 
-              href="/case-studies" 
-              className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+              Schedule Demo
+            </Link>
+            <Link 
+              href="/case-studies/ai-2026-neural-architecture-search-500x-success" 
+              className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all"
             >
-              View Innovation Success Stories
-            </a>
+              View Success Story
+            </Link>
           </div>
-        </section>
+        </div>
       </div>
-    </div>
+    </main>
   );
 }

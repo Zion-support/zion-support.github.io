@@ -71,7 +71,6 @@ class ClassNameSyntaxFixer {
     this.log('\n📊 ClassName Syntax Fixing Report');
     this.log('====');
     this.log(`Fixes Applied: ${this.fixes.length}`);
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     this.log(`Errors Found: ${this.errors.length}`);
     if (this.fixes.length > 0) {
       this.log('\n✅ Fixes Applied:');
@@ -95,8 +94,3 @@ fixer.run().catch(console.error);
 const fs = require('fs')
 const path = require('path')
 const glob = require('glob')
-<<<<<<< HEAD
-  log(message, type = 'INFO')
-=======
-  log(message, type = 'INFO')
-      const fixedQuoted = quoted.replace(/"([a-z]+)"      const fixedQuoted = quoted.replace(/"([a-z]+)"
