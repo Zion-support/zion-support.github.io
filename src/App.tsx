@@ -23,6 +23,12 @@ const SolutionsPage = React.lazy(() => import('./pages/SolutionsPage'));
 const BlogPage = React.lazy(() => import('./pages/BlogPage'));
 const CaseStudiesPage = React.lazy(() => import('./pages/CaseStudiesPage'));
 const Resources = React.lazy(() => import('./pages/Resources'));
+const Privacy = React.lazy(() => import('./pages/Privacy'));
+const Terms = React.lazy(() => import('./pages/Terms'));
+const Team = React.lazy(() => import('./pages/Team'));
+const SupportPage = React.lazy(() => import('./pages/Support'));
+const SitemapPage = React.lazy(() => import('./pages/Sitemap'));
+const CookiesPage = React.lazy(() => import('./pages/Cookies'));
 
 // Loading component
 const LoadingSpinner = () => (
@@ -176,6 +182,20 @@ const App: React.FC = () => {
                           <Route path="/blog/*" element={<BlogPage />} />
                           <Route path="/case-studies" element={<CaseStudiesPage />} />
                           <Route path="/resources" element={<Resources />} />
+                          
+                          {/* Company & Info routes to align with sitemap */}
+                          <Route path="/partners" element={<AboutPage />} />
+                          <Route path="/news" element={<AboutPage />} />
+                          <Route path="/careers" element={<AboutPage />} />
+                          <Route path="/faq" element={<SupportPage />} />
+                          <Route path="/team" element={<Team />} />
+                          <Route path="/help" element={<SupportPage />} />
+                          <Route path="/security" element={<SupportPage />} />
+                          <Route path="/status" element={<SupportPage />} />
+                          <Route path="/privacy" element={<Privacy />} />
+                          <Route path="/terms" element={<Terms />} />
+                          <Route path="/cookies" element={<CookiesPage />} />
+                          <Route path="/sitemap" element={<SitemapPage />} />
                           
                           {/* Dynamic Routes for Solutions */}
                           <Route path="/solutions/enterprise" element={<SolutionsPage category="enterprise" />} />
