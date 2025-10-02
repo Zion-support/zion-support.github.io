@@ -14,6 +14,7 @@ module.exports = {
     '^@utils/(.*)$': '<rootDir>/src/utils/$1',
     '^@hooks/(.*)$': '<rootDir>/src/hooks/$1'
   },
+  // Limit tests to src only; ignore legacy root __tests__
   testMatch: ['<rootDir>/src/**/?(*.)+(spec|test).[jt]s?(x)'],
   testPathIgnorePatterns: [
     '/node_modules/',
