@@ -1,0 +1,33 @@
+{
+  "analysisDate": "2025-10-02T18:47:23.648Z",
+  "baseUrl": "https://ziontechgroup.com",
+  "summary": {
+    "totalPagesAnalyzed": 1,
+    "totalExternalLinks": 0,
+    "totalImages": 0,
+    "totalForms": 0,
+    "brokenLinks": 0,
+    "contentIssues": 1
+  },
+  "brokenLinks": [],
+  "contentIssues": [
+    {
+      "url": "https://ziontechgroup.com",
+      "issue": "Very little content found",
+      "type": "minimal_content"
+    }
+  ],
+  "missingPages": [],
+  "externalLinks": [],
+  "images": [],
+  "forms": [],
+  "navigation": [],
+  "recommendations": [
+    "Address content issues including placeholders and missing meta tags",
+    "Implement proper error handling for 404 pages",
+    "Add structured data markup for better SEO",
+    "Optimize images for better performance",
+    "Implement proper caching headers",
+    "Add security headers (CSP, HSTS, etc.)"
+  ]
+}

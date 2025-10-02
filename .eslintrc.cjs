@@ -32,6 +32,8 @@ module.exports = {
     '.next/',
     'out/',
     'dist/',
+    'src/**',
+    'src/pages/**',
     'api-backup/',
     'pages.disabled/',
     'backup-pages/',
@@ -41,6 +43,7 @@ module.exports = {
     'automation_backup/',
     'broken_files_backup/',
     'contracts/',
-    'hardhat/'
+    'hardhat/',
+    'src/content/posts.ts'
   ]
 };
