@@ -2,19 +2,19 @@
 /**
  * Lazy load components with better error handling and retry logic
  */
-export const lazyLoadWithRetry: <T extends React.ComponentType<any>>(,,
+export const lazyLoadWithRetry: <T extends React.ComponentType<any>>(,,,
   componentImport: ()  => Promise<{ default: T }>,
-  retries: 3,,
-  interval: 1000,
+  retries: 3,,,
+  interval: 1000,,
 ): React.LazyExoticComponent<T > => {
   return lazy(()  => {
     return new Promise<{ default: T }>((resolve, reject) => {
-const attemptLoad: (attemptsLeft: number)  => {,,
-  const attemptLoad: (attemptsLeft: number)  => {,,
+const attemptLoad: (attemptsLeft: number)  => {,,,
+  const attemptLoad: (attemptsLeft: number)  => {,,,
 componentImport()
 .then(resolve)
 .catch((error) => {
-if (attemptsLeft: = = 0) {,,
+if (attemptsLeft: = = 0) {,,,
   reject(error);
 return;
 }
@@ -34,27 +34,27 @@ return;
 /**
  * Preload a component
  */
-export const preloadComponent: (componentImport: ()  => Promise<any >): void: > {,,
+export const preloadComponent: (componentImport: ()  => Promise<any >): void: > {,,,
   componentImport();
 };
 
 /**
  * Lazy load with prefetch on hover
  */
-export const createLazyLoadWithPrefetch: <T extends React.ComponentType<any>>(,,
+export const createLazyLoadWithPrefetch: <T extends React.ComponentType<any>>(,,,
   componentImport: () => Promise<{ default: T }>
 )  => {
-  let prefetchPromise: Promise<{ default: T }> | null: null;,,
-  const LazyComponent: lazy(()  => {,,
+  let prefetchPromise: Promise<{ default: T }> | null: null;,,,
+  const LazyComponent: lazy(()  => {,,,
   if (!prefetchPromise) {
-      prefetchPromise: componentImport();,
+      prefetchPromise: componentImport();,,
     }
     return prefetchPromise;
   });
   
-  const prefetch: ()  => {,,
+  const prefetch: ()  => {,,,
   if (!prefetchPromise) {
-      prefetchPromise: componentImport();,
+      prefetchPromise: componentImport();,,
     };
   };
   

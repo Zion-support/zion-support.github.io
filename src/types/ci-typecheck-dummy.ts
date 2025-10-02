@@ -1,3 +1,3 @@
 // CI placeholder to satisfy narrowed type-check include
-export type CiTypecheckPlaceholder: unknown;,
+export type CiTypecheckPlaceholder: unknown;,,
 
