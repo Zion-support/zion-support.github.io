@@ -89,17 +89,30 @@ export default function ServicesPage() {
       href: '/services/cloud-migration'
     },
     {
-      title: 'Micro SaaS Development',
-      description: 'Custom micro SaaS solutions designed for specific business needs and rapid deployment',
+      title: 'Micro SaaS Solutions',
+      description: 'Production-ready micro SaaS applications for specific business needs with immediate ROI',
       icon: '🔧',
       features: [
-        'Rapid Prototype Development',
-        'Scalable Architecture Design',
-        'API Development & Integration',
-        'User Experience Optimization',
-        'Performance Monitoring'
+        'Cloud Cost Management',
+        'AI Content Creation',
+        'Compliance Automation',
+        'Smart HR & Analytics',
+        'Workflow Automation'
       ],
       href: '/services/micro-saas'
+    },
+    {
+      title: 'IT Services & Solutions',
+      description: 'Comprehensive IT services including cloud migration, DevOps, cybersecurity, and platform engineering',
+      icon: '🖥️',
+      features: [
+        'Platform Engineering',
+        'Cloud Migration',
+        'DevOps Automation',
+        'Cybersecurity Operations',
+        'Data Analytics Platforms'
+      ],
+      href: '/services/it-services'
     },
     {
       title: 'Enterprise AI Consulting',
