@@ -27,7 +27,7 @@ const BannerManager: React.FC<BannerManagerProps> = ({
   rotationInterval = 10000,
   maxVisibleBanners = 3
 }) => {
-  const [currentBanners, setCurrentBanners] = useState<BannerData[]>([]);
+  const [, setCurrentBanners] = useState<BannerData[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // Filter active banners and sort by priority
