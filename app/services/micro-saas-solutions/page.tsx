@@ -1,8 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
-import FeaturedServiceCard from '../../components/FeaturedServiceCard';
+import FeaturedServiceCard from '../../../components/FeaturedServiceCard';
 
-export default function ServicesPage() {
+export default function MicroSaaSSolutionsPage() {
   const microSaaSServices = [
     {
       title: "AI Content Generation Suite",
@@ -14,7 +14,9 @@ export default function ServicesPage() {
         "Email marketing copy generation",
         "SEO-optimized content",
         "Multi-language support",
-        "Content analytics dashboard"
+        "Content analytics dashboard",
+        "Brand voice customization",
+        "Plagiarism detection"
       ],
       to: "/services/ai-content-generation-suite",
       popular: true
@@ -28,8 +30,10 @@ export default function ServicesPage() {
         "Patient portal access",
         "Medical record management",
         "Virtual consultation platform",
-        "HIPAA compliance",
-        "Insurance verification"
+        "Automated reminders",
+        "Insurance verification",
+        "Payment processing",
+        "HIPAA compliance"
       ],
       to: "/services/healthcare-appointment-scheduler",
       popular: false
@@ -44,7 +48,9 @@ export default function ServicesPage() {
         "Skill matching algorithms",
         "Interview scheduling automation",
         "Candidate scoring system",
-        "Analytics and reporting"
+        "Integration with job boards",
+        "Analytics and reporting",
+        "Team collaboration tools"
       ],
       to: "/services/ai-recruiting-platform",
       popular: false
@@ -59,57 +65,45 @@ export default function ServicesPage() {
         "Cryptographic solutions",
         "Scientific research support",
         "Quantum simulation services",
+        "Custom quantum applications",
+        "Performance benchmarking",
         "Expert consultation"
       ],
       to: "/services/quantum-computing-solutions",
       popular: false
-    }
-  ];
-
-  const enterpriseServices = [
-    {
-      title: "AI Autonomous Operations 2026",
-      description: "Revolutionary autonomous business operations powered by advanced AI. Transform your enterprise with self-managing systems that optimize processes 24/7.",
-      price: "Custom Pricing",
-      features: [
-        "Autonomous process optimization",
-        "Self-healing infrastructure",
-        "Predictive maintenance",
-        "Real-time decision making",
-        "Cost reduction up to 60%",
-        "24/7 autonomous monitoring"
-      ],
-      to: "/services/ai-autonomous-operations-2026",
-      popular: true
     },
     {
-      title: "AI FinTech Transformation",
-      description: "Complete financial technology transformation with AI-powered solutions. Enhance trading algorithms, risk management, and customer experience.",
-      price: "Custom Pricing",
+      title: "Smart Analytics Dashboard",
+      description: "Real-time business intelligence platform that transforms raw data into actionable insights. Perfect for small to medium businesses looking to make data-driven decisions.",
+      price: "$49/month",
       features: [
-        "AI trading algorithms",
-        "Risk assessment automation",
-        "Fraud detection systems",
-        "Customer analytics",
-        "Regulatory compliance",
-        "Real-time processing"
+        "Real-time data visualization",
+        "Custom dashboard creation",
+        "Automated report generation",
+        "Data source integration",
+        "Predictive analytics",
+        "Mobile-responsive design",
+        "Team collaboration features",
+        "API access"
       ],
-      to: "/services/ai-fintech-transformation",
+      to: "/services/smart-analytics-dashboard",
       popular: false
     },
     {
-      title: "AI Retail Automation",
-      description: "Transform retail operations with AI-powered automation. Optimize inventory, personalize customer experience, and streamline operations.",
-      price: "Custom Pricing",
+      title: "AI Customer Support Bot",
+      description: "Intelligent customer service automation that handles inquiries, provides instant responses, and escalates complex issues to human agents seamlessly.",
+      price: "$39/month",
       features: [
-        "Inventory optimization",
-        "Customer personalization",
-        "Demand forecasting",
-        "Price optimization",
-        "Supply chain automation",
-        "Customer analytics"
+        "Natural language processing",
+        "Multi-channel support",
+        "Knowledge base integration",
+        "Sentiment analysis",
+        "Automated ticket routing",
+        "Performance analytics",
+        "Custom bot training",
+        "24/7 availability"
       ],
-      to: "/services/ai-retail-automation",
+      to: "/services/ai-customer-support-bot",
       popular: false
     }
   ];
@@ -118,32 +112,22 @@ export default function ServicesPage() {
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
       <div className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              Our Services
+              Micro SaaS Solutions
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive AI, micro SaaS, and IT solutions designed to transform your business. 
-              From innovative micro SaaS tools to enterprise-grade AI platforms.
+              Innovative, focused software solutions designed to solve specific business problems. 
+              Our micro SaaS offerings provide powerful functionality at affordable prices.
             </p>
           </div>
         </div>
       </div>
 
-      {/* Micro SaaS Services Section */}
+      {/* Services Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Micro SaaS Solutions
-          </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Focused, affordable software solutions designed to solve specific business problems. 
-            Perfect for small to medium businesses looking for powerful, cost-effective tools.
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {microSaaSServices.map((service, index) => (
             <FeaturedServiceCard
               key={index}
@@ -158,44 +142,15 @@ export default function ServicesPage() {
         </div>
       </div>
 
-      {/* Enterprise Services Section */}
+      {/* Benefits Section */}
       <div className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Enterprise AI Solutions
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Advanced AI platforms and solutions for large enterprises. 
-              Transform your business operations with cutting-edge artificial intelligence.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {enterpriseServices.map((service, index) => (
-              <FeaturedServiceCard
-                key={index}
-                title={service.title}
-                description={service.description}
-                price={service.price}
-                features={service.features}
-                to={service.to}
-                popular={service.popular}
-              />
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Why Choose Us Section */}
-      <div className="bg-gray-50 py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Why Choose Zion Tech Group?
+              Why Choose Our Micro SaaS Solutions?
             </h2>
             <p className="text-lg text-gray-600">
-              Leading the industry with innovative solutions and exceptional service
+              Focused, affordable, and powerful tools designed for modern businesses
             </p>
           </div>
           
@@ -206,38 +161,38 @@ export default function ServicesPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Cutting-Edge Technology</h3>
-              <p className="text-gray-600">Latest AI and quantum computing technologies</p>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Fast Implementation</h3>
+              <p className="text-gray-600">Get up and running in minutes, not months</p>
             </div>
             
             <div className="text-center">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Proven Results</h3>
-              <p className="text-gray-600">$43M+ in client ROI across 25+ case studies</p>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Cost Effective</h3>
+              <p className="text-gray-600">Affordable pricing with no hidden fees</p>
             </div>
             
             <div className="text-center">
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 2.25a9.75 9.75 0 100 19.5 9.75 9.75 0 000-19.5z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">24/7 Support</h3>
-              <p className="text-gray-600">Round-the-clock technical support and maintenance</p>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Reliable Support</h3>
+              <p className="text-gray-600">24/7 customer support and regular updates</p>
             </div>
             
             <div className="text-center">
               <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Scalable Solutions</h3>
-              <p className="text-gray-600">Solutions that grow with your business needs</p>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Scalable</h3>
+              <p className="text-gray-600">Grows with your business needs</p>
             </div>
           </div>
         </div>
@@ -246,9 +201,9 @@ export default function ServicesPage() {
       {/* Contact Section */}
       <div className="bg-gray-900 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
+          <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
           <p className="text-xl text-gray-300 mb-8">
-            Contact us today to discuss your specific needs and get a custom solution
+            Contact us today to learn more about our micro SaaS solutions
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a 

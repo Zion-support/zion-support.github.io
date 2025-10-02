@@ -43,6 +43,7 @@ function Header() {
         <div className="hidden md:flex gap-6">
           <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors">About</Link>
           <Link href="/services" className="text-gray-700 hover:text-blue-600 transition-colors">Services</Link>
+          <Link href="/services/micro-saas-solutions" className="text-gray-700 hover:text-blue-600 transition-colors">Micro SaaS</Link>
           <div className="relative group">
             <Link href="/services/ai-autonomous-operations-2026" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
               AI Operations 2026
@@ -145,7 +146,11 @@ function Footer() {
               <Link href="/services/ai-autonomous-cloud-ops" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Autonomous Cloud Ops</Link>
               <Link href="/services/ai-fintech-transformation" className="block text-gray-600 hover:text-blue-600 transition-colors">AI FinTech Transformation</Link>
               <Link href="/services/ai-retail-automation" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Retail Automation</Link>
-              <Link href="/services/micro-saas" className="block text-gray-600 hover:text-blue-600 transition-colors">Micro SaaS</Link>
+              <Link href="/services/micro-saas-solutions" className="block text-gray-600 hover:text-blue-600 transition-colors">Micro SaaS Solutions</Link>
+              <Link href="/services/ai-content-generation-suite" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Content Generation</Link>
+              <Link href="/services/healthcare-appointment-scheduler" className="block text-gray-600 hover:text-blue-600 transition-colors">Healthcare Scheduling</Link>
+              <Link href="/services/ai-recruiting-platform" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Recruiting Platform</Link>
+              <Link href="/services/quantum-computing-solutions" className="block text-gray-600 hover:text-blue-600 transition-colors">Quantum Computing</Link>
             </div>
           </div>
           <div>
