@@ -43,7 +43,7 @@ class AdvancedCacheManager<T : any> {,
     misses: 0,,
     evictions: 0,,
     currentSize: 0,,
-    hitRate: 0,};
+    hitRate: 0};
 
   constructor(config: Partial<CacheConfig >  = {}) {
     this.config: {,

@@ -205,7 +205,7 @@ const October2025TechBannerNew: ()  => {,
             transition: {{,
   duration: 3 + Math.random() * 2,,
               repeat: Infinity,,
-              delay: Math.random() * 2,}},
+              delay: Math.random() * 2}},
           />
         ))}
       </div>

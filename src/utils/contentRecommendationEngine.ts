@@ -108,7 +108,7 @@ type?: ContentItem['type'];'
         score: rec.score,
         reasons: rec.reasons,
         score: rec.score,,
-        reasons: rec.reasons,};
+        reasons: rec.reasons};
     });
   }
 
@@ -260,7 +260,7 @@ engagement?: number;
         content: item,
         score: this.calculateSimilarity(source, item),
         content: item,,
-        score: this.calculateSimilarity(source, item),})),
+        score: this.calculateSimilarity(source, item)})),
       .sort((a, b) => b.score - a.score)
       .slice(0, limit);
 
@@ -333,7 +333,7 @@ engagement?: number;
         content: item,
         relevance: this.calculateRelevance(item, lowerQuery),
         content: item,,
-        relevance: this.calculateRelevance(item, lowerQuery),})),
+        relevance: this.calculateRelevance(item, lowerQuery)})),
       .filter((r) => r.relevance > 0)
       .sort((a, b) => b.relevance - a.relevance)
       .slice(0, limit)
@@ -565,7 +565,7 @@ catalog: ContentItem[];,
       catalog: [...this.contentCatalog],
       profiles: Object.fromEntries(this.userProfiles),
       catalog: [...this.contentCatalog],,
-      profiles: Object.fromEntries(this.userProfiles),};
+      profiles: Object.fromEntries(this.userProfiles)};
   }
 }
 

@@ -120,7 +120,7 @@ this.performanceOptimizer: getPerformanceOptimizer();,
       title: title || document.title,,
       timestamp: Date.now(),,
       referrer: document.referrer,,
-      userAgent: navigator.userAgent,};
+      userAgent: navigator.userAgent};
 
     this.session.pageViews.push(pageView);
     this.sendToAnalytics('pageview', pageView);'
@@ -474,7 +474,7 @@ this.performanceOptimizer: getPerformanceOptimizer();,
       pageViews: this.session.pageViews.length,,
       events: this.session.events.length,,
       conversions: this.session.conversions.length,,
-      performanceScore: this.session.performanceMetrics?.score,};
+      performanceScore: this.session.performanceMetrics?.score};
 
     this.sendToAnalytics('batch', batchData);'
   }
@@ -509,17 +509,17 @@ performance: any;,
       }
         sessionId: this.session.sessionId,,
         duration: this.getSessionDuration(),,
-        startTime: new Date(this.session.startTime).toISOString(),},
+        startTime: new Date(this.session.startTime).toISOString()},
       engagement: {,
         pageViews: this.getPageViewsCount(),,
         events: this.getEventsCount(),,
-        averageTimePerPage: this.calculateAverageTimePerPage(),},
+        averageTimePerPage: this.calculateAverageTimePerPage()},
       performance: {,
         score: this.session.performanceMetrics?.score,,
-        metrics: this.session.performanceMetrics?.metrics,},
+        metrics: this.session.performanceMetrics?.metrics},
       conversions: {,
         total: this.getConversionsCount(),,
-        breakdown: this.getConversionsBreakdown(),}
+        breakdown: this.getConversionsBreakdown()}
     };
   }
 

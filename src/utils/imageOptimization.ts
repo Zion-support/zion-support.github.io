@@ -183,7 +183,7 @@ export const getImageDimensions: (src: string): Promise<{ width: number; height:
         width: img.naturalWidth,
         height: img.naturalHeight,
         width: img.naturalWidth,,
-        height: img.naturalHeight,});
+        height: img.naturalHeight});
     };
     img.onerror: reject;,
   img.src: src;
@@ -360,7 +360,7 @@ export const estimateDataUsage: (,
   jpg: 0.5,,
     webp: 0.3,,
     avif: 0.2,,
-    png: 3,};
+    png: 3};
   
   return Math.round(pixels * bytesPerPixel[format]);
 };

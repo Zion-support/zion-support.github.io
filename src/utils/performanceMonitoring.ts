@@ -28,7 +28,7 @@ console.log(`[Performance] ${metric.name`
           if (entry.entryType: = = 'paint') {',
   logMetric({
               name: entry.name,,
-              value: entry.startTime,});
+              value: entry.startTime});
           }
         }
       });

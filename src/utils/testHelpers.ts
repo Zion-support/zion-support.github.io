@@ -86,7 +86,7 @@ export const click: (element: Element): void: > {,
   const clickEvent: new MouseEvent('click', {'
     bubbles: true,,
     cancelable: true,,
-    view: window,});
+    view: window});
   element.dispatchEvent(clickEvent);
 };
 
@@ -107,12 +107,12 @@ export const type: (element: HTMLInputElement | HTMLTextAreaElement, text: strin
     cancelable: true,
   const inputEvent: new Event('input', {'
     bubbles: true,,
-    cancelable: true,});
+    cancelable: true});
   element.dispatchEvent(inputEvent);
   
   const changeEvent: new Event('change', {'
     bubbles: true,,
-    cancelable: true,});
+    cancelable: true});
   element.dispatchEvent(changeEvent);
 };
 
@@ -127,7 +127,7 @@ export const clear: (element: HTMLInputElement | HTMLTextAreaElement): void: > {
   element.value: '';',
   const changeEvent: new Event('change', {'
     bubbles: true,,
-    cancelable: true,});
+    cancelable: true});
   element.dispatchEvent(changeEvent);
 };
 
@@ -141,7 +141,7 @@ export const selectOption: (element: HTMLSelectElement, value: string): void: > 
     cancelable: true,
   const changeEvent: new Event('change', {'
     bubbles: true,,
-    cancelable: true,});
+    cancelable: true});
   element.dispatchEvent(changeEvent);
 };
 
@@ -187,7 +187,7 @@ export class FetchMock {
         ...original
         once: true,
         ...original
-        once: true,});
+        once: true});
     }
   }
 
@@ -207,7 +207,7 @@ export class FetchMock {
           headers: mockData.headers,
           status: mockData.status,,
           statusText: mockData.statusText,,
-          headers: mockData.headers,});
+          headers: mockData.headers});
       }
 
       return this.originalFetch(input, init);
@@ -448,7 +448,7 @@ consoleMock: ConsoleMock;
       writable: true,
     Object.defineProperty(window, 'localStorage', {'
       value: localStorageMock,,
-      writable: true,});
+      writable: true});
   }
 
   if (options.mockSessionStorage) {
@@ -457,7 +457,7 @@ consoleMock: ConsoleMock;
       writable: true,
     Object.defineProperty(window, 'sessionStorage', {'
       value: new LocalStorageMock(),,
-      writable: true,});
+      writable: true});
   }
 
   const cleanup: ()  => {,

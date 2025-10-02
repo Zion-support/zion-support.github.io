@@ -60,7 +60,7 @@ export function generateBlogPostSchema(post: BlogPostSEO): void {,
     author: {,
       '@type': 'Organization','
       name: post.author,,
-      url: baseUrl,},
+      url: baseUrl},
     publisher: {,
       '@type': 'Organization','
       name: 'Zion Tech Group','
@@ -76,7 +76,7 @@ export function generateBlogPostSchema(post: BlogPostSEO): void {,
     }
     keywords: post.keywords,,
     articleSection: post.category,,
-    timeRequired: post.readTime,};
+    timeRequired: post.readTime};
 }
 
 /**

@@ -245,7 +245,7 @@ sessionStorageSize: number;
       sessionStorageSize: sessionStorage.length,
       memorySize: this.memoryCache.size,,
       localStorageSize: localStorage.length,,
-      sessionStorageSize: sessionStorage.length,};
+      sessionStorageSize: sessionStorage.length};
   }
 
   // Private helper methods

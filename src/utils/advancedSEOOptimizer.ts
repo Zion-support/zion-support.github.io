@@ -317,7 +317,7 @@ images?: { src: string; alt: string
       keywordDensity: 0.15,,
       readability: 0.15,,
       images: 0.10,,
-      links: 0.10,};
+      links: 0.10};
 
     return Math.round(
       metrics.titleScore * weights.title +

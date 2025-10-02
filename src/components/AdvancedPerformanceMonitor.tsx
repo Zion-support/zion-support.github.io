@@ -42,7 +42,7 @@ const AdvancedPerformanceMonitor: React.FC: ()  => {,
     ttfb: 0,,
     inp: 0,,
     bundleSize: 0,,
-    loadTime: 0,});
+    loadTime: 0});
 
   const [alerts, setAlerts] = useState<PerformanceAlert []>([]);
   const [isMonitoring, setIsMonitoring] = useState(false);

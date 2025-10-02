@@ -329,7 +329,7 @@ class AnalyticsIntegration {
       includeReferrer: true,,
       includeUtm: true,,
       trackingOptions: {,
-        ipAddress: !this.config.privacy.anonymizeIp,}
+        ipAddress: !this.config.privacy.anonymizeIp}
     });
 
     if (this.config.debug) {
@@ -448,7 +448,7 @@ class AnalyticsIntegration {
       sessionId: this.sessionId,
       timestamp: Date.now(),,
       userId: this.currentUser?.id,,
-      sessionId: this.sessionId,};
+      sessionId: this.sessionId};
 
     if (!this.consentGiven || !this.initialized) {
       this.eventQueue.push(event);
@@ -492,7 +492,7 @@ class AnalyticsIntegration {
       path: window.location.pathname,,
       url: window.location.href,,
       title: document.title,,
-      referrer: document.referrer,};
+      referrer: document.referrer};
 
     if (this.config.providers.googleAnalytics?.enabled) {
       (window as any).gtag?.('event', 'page_view', pageProps);'

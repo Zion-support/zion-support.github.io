@@ -104,7 +104,7 @@ class ErrorTracker {
       timestamp: new Date(),,
       context: this.enrichContext(context),,
       userAgent: navigator.userAgent,,
-      resolved: false,};
+      resolved: false};
 
     this.errors.push(trackedError);
     
@@ -312,8 +312,8 @@ class ErrorTracker {
         ...context.metadata
         viewport: {,
           width: window.innerWidth,,
-          height: window.innerHeight,},
-        timestamp: new Date().toISOString(),}
+          height: window.innerHeight},
+        timestamp: new Date().toISOString()}
     };
   }
 
@@ -427,7 +427,7 @@ export function setupGlobalErrorHandling(): void {
         }
           filename: event.filename,,
           lineno: event.lineno,,
-          colno: event.colno,}
+          colno: event.colno}
       }
     );
   });

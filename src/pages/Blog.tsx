@@ -190,7 +190,7 @@ export default function Blog(): React.JSX.Element {
       tags: ["AI", "Automation", "Case Study", "Financial Services"],"
       image: "/api/placeholder/400/250","
       featured: true,,
-      views: 1250,},
+      views: 1250},
     {
       id: 7,,
       title: "Serverless AI Inference: The Cost Optimization Playbook","
@@ -203,7 +203,7 @@ export default function Blog(): React.JSX.Element {
       tags: ["Serverless", "Inference", "Cost"],"
       image: "/api/placeholder/400/250","
       featured: true,,
-      views: 421,},
+      views: 421},
     {
       id: 8,,
       title: "RAG Architectures That Actually Work in Production","
@@ -216,7 +216,7 @@ export default function Blog(): React.JSX.Element {
       tags: ["RAG", "Vector Search", "Evals"],"
       image: "/api/placeholder/400/250","
       featured: true,,
-      views: 368,},
+      views: 368},
     {
       id: 9,,
       title: "Secure GenAI: Policy‑First Guardrails That Scale","
@@ -229,7 +229,7 @@ export default function Blog(): React.JSX.Element {
       tags: ["GenAI", "Security", "Compliance"],"
       image: "/api/placeholder/400/250","
       featured: false,,
-      views: 297,},
+      views: 297},
     {
       id: 2,,
       title: "The Future of AI-Powered Customer Support: A Complete Guide","
@@ -242,7 +242,7 @@ export default function Blog(): React.JSX.Element {
       tags: ["AI", "Customer Support", "Virtual Assistant", "Trends"],"
       image: "/api/placeholder/400/250","
       featured: true,,
-      views: 980,},
+      views: 980},
     {
       id: 3,,
       title: "Building Scalable Cloud Infrastructure: Best Practices 2025","
@@ -255,7 +255,7 @@ export default function Blog(): React.JSX.Element {
       tags: ["Cloud", "Infrastructure", "Scalability", "DevOps"],"
       image: "/api/placeholder/400/250","
       featured: false,,
-      views: 756,},
+      views: 756},
     {
       id: 4,,
       title: "AI Data Analytics: Transforming Raw Data into Business Gold","
@@ -268,7 +268,7 @@ export default function Blog(): React.JSX.Element {
       tags: ["AI", "Data Analytics", "Machine Learning", "Business Intelligence"],"
       image: "/api/placeholder/400/250","
       featured: false,,
-      views: 892,},
+      views: 892},
     {
       id: 5,,
       title: "Cybersecurity in the Age of AI: Protecting Your Digital Assets","
@@ -281,7 +281,7 @@ export default function Blog(): React.JSX.Element {
       tags: ["Cybersecurity", "AI", "Security", "Threat Detection"],"
       image: "/api/placeholder/400/250","
       featured: false,,
-      views: 634,},
+      views: 634},
     {
       id: 6,,
       title: "Healthcare Industry Transformation: AI-Powered Patient Care","
@@ -294,7 +294,7 @@ export default function Blog(): React.JSX.Element {
       tags: ["AI", "Healthcare", "Patient Care", "Medical Technology"],"
       image: "/api/placeholder/400/250","
       featured: false,,
-      views: 445,},
+      views: 445},
   ];
 
   // Map content entries into this page's structure'

@@ -315,8 +315,8 @@ const SEOAuditDashboard: React.FC: ()  => {,
         images: { total: 24, withAlt: 18, withoutAlt: 6 },
         links: { total: 45, internal: 32, external: 13 },
         wordCount: 2847,,
-        readabilityScore: 72,},
-      lastUpdated: Date.now(),});
+        readabilityScore: 72},
+      lastUpdated: Date.now()});
     
     setIsRunning(false);
   };

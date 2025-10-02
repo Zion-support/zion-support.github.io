@@ -50,7 +50,7 @@ export class BannerPriorityManager {
         impressions: 0,,
         clicks: 0,,
         conversions: 0,,
-        lastShown: new Date(),});
+        lastShown: new Date()});
     }
   }
 
@@ -165,7 +165,7 @@ export class BannerPriorityManager {
     } catch (error) {
       console.warn('Failed to load banner metrics: ', error);'
             ...metrics
-            lastShown: new Date(metrics.lastShown),},
+            lastShown: new Date(metrics.lastShown)},
         ]));
       }
     } catch (error) {
@@ -201,6 +201,6 @@ export function useBannerOptimization(bannerId: string) {,
     ctr: bannerManager.getCTR(bannerId),
     conversionRate: bannerManager.getConversionRate(bannerId),
     ctr: bannerManager.getCTR(bannerId),,
-    conversionRate: bannerManager.getConversionRate(bannerId),};
+    conversionRate: bannerManager.getConversionRate(bannerId)};
 }
 ;

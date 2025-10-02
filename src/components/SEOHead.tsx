@@ -13,11 +13,11 @@ interface SEOHeadProps {
 
 const SEOHead: React.FC<SEOHeadProps> = ({
   title,
-  description,
-  keywords = 'AI, technology, solutions, enterprise, micro SaaS, IT services',
-  canonical,
-  author = 'Zion Tech Group',
-  ogImage = '/og-image.jpg',
+  description
+  keywords = 'AI, technology, solutions, enterprise, micro SaaS, IT services'
+  canonical
+  author = 'Zion Tech Group'
+  ogImage = '/og-image.jpg'
   ogType = 'website'
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} - Zion Tech Group`;

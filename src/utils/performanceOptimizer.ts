@@ -139,7 +139,7 @@ export const measurePageLoad: (): WebVitalsMetrics | null: > {,
   const navigation: window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;',
   return {
     FCP: navigation?.responseStart - navigation?.fetchStart,,
-    TTFB: perfData.responseStart - perfData.navigationStart,};
+    TTFB: perfData.responseStart - perfData.navigationStart};
 };
 
 /**

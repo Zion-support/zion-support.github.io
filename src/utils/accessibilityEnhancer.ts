@@ -220,7 +220,7 @@ animation-duration: 0.01ms !important;,
       childList: true,
       subtree: true,
       childList: true,,
-      subtree: true,});
+      subtree: true});
 
     this.observers.push(observer);
 
