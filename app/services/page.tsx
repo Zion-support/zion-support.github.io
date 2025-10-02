@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
 export default function ServicesPage() {
@@ -30,6 +29,71 @@ export default function ServicesPage() {
         'Explainable scores',
         'Batch & streaming ingestion',
         'SLA-backed responses'
+      ]
+    },
+    {
+      title: 'AI-Powered Content Tools',
+      description: 'Advanced AI content optimization tools for headlines, email subject lines, and marketing copy.',
+      icon: '📝',
+      href: '/services/ai-powered-content-tools',
+      pricing: 'Starting from $29/month',
+      features: [
+        'HeadlineMaster AI - B2B Marketing Headlines',
+        'EmailSubjectAI - Open Rate Optimization',
+        'ContentAnalyzer Pro - Performance Analytics',
+        'PodcastTranscriber AI - Accurate Transcriptions'
+      ]
+    },
+    {
+      title: 'Telemedicine Platform',
+      description: 'Comprehensive telemedicine solution for hospitals and clinics with virtual consultations.',
+      icon: '🏥',
+      href: '/services/telemedicine-platform',
+      pricing: 'Starting from $299/month',
+      features: [
+        'HD video conferencing',
+        'Secure patient records',
+        'HIPAA compliance',
+        'Automated appointment scheduling'
+      ]
+    },
+    {
+      title: 'Remote Collaboration Suite',
+      description: 'Complete remote work platform integrating video conferencing, messaging, and project management.',
+      icon: '💻',
+      href: '/services/remote-collaboration-suite',
+      pricing: 'Starting from $25/user/month',
+      features: [
+        'Video conferencing for 1000+ participants',
+        'Team messaging and file sharing',
+        'Project management suite',
+        'Document collaboration tools'
+      ]
+    },
+    {
+      title: 'API Integration Platform',
+      description: 'Enterprise-grade API integration platform for seamless software system connectivity.',
+      icon: '🔗',
+      href: '/services/api-integration-platform',
+      pricing: 'Starting from $99/month',
+      features: [
+        'API gateway with load balancing',
+        'Data synchronization engine',
+        'Webhook automation hub',
+        'Legacy system connectors'
+      ]
+    },
+    {
+      title: 'AI Customer Insights Platform',
+      description: 'AI-powered customer analytics for behavioral analysis, sentiment tracking, and predictive insights.',
+      icon: '🧠',
+      href: '/services/ai-customer-insights-platform',
+      pricing: 'Starting from $299/month',
+      features: [
+        'Behavioral analytics engine',
+        'Sentiment intelligence',
+        'Predictive customer analytics',
+        'Real-time customer intelligence'
       ]
     },
     {
@@ -1725,11 +1789,6 @@ const ServicesPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive AI, micro SaaS, and IT services. Explore our full range of technology solutions." />
-      </Helmet>
-      
       <div className="min-h-screen py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -1812,10 +1871,7 @@ const ServicesPage: React.FC = () => {
                   ))}
                 </ul>
                 
-                <Link
-                  to={service.href}
-                  className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-3 rounded-lg font-semibold transition-colors"
-                >
+                <Link href={service.href} className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-3 rounded-lg font-semibold transition-colors">
                   Learn More
                 </Link>
               </div>
@@ -1832,13 +1888,13 @@ const ServicesPage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/contact" 
+                href="/contact" 
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Contact Us
               </Link>
               <Link 
-                to="/case-studies" 
+                href="/case-studies" 
                 className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
               >
                 View Case Studies

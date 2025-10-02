@@ -1,11 +1,19 @@
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Metadata } from 'next';
 
-const ContactPage: React.FC = () => {
+export const metadata: Metadata = {
+  title: 'Contact Us - Zion Tech Group | AI, Micro SaaS & IT Solutions',
+  description: 'Get in touch with Zion Tech Group for AI, micro SaaS, and IT solutions. Contact us today for a consultation. Phone: +1 302 464 0950',
+  keywords: 'contact Zion Tech Group, AI consulting, micro SaaS development, IT services contact, business consultation',
+};
+
+export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
+    phone: '',
+    service: '',
     message: ''
   });
 
@@ -15,7 +23,7 @@ const ContactPage: React.FC = () => {
     console.log('Form submitted:', formData);
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
@@ -24,10 +32,6 @@ const ContactPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Contact Us - Zion Tech Group</title>
-        <meta name="description" content="Get in touch with Zion Tech Group for AI, micro SaaS, and IT solutions. Contact us today for a consultation." />
-      </Helmet>
       
       <div className="min-h-screen py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -46,19 +50,36 @@ const ContactPage: React.FC = () => {
             <div className="bg-white rounded-xl shadow-lg p-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Send us a message</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                    Full Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    required
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  />
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                      Full Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      required
+                      value={formData.name}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                      Phone Number
+                    </label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      placeholder="+1 (555) 123-4567"
+                    />
+                  </div>
                 </div>
                 
                 <div>
@@ -78,7 +99,7 @@ const ContactPage: React.FC = () => {
                 
                 <div>
                   <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-                    Company
+                    Company Name
                   </label>
                   <input
                     type="text"
@@ -88,6 +109,33 @@ const ContactPage: React.FC = () => {
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
+                </div>
+
+                <div>
+                  <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
+                    Service Interest
+                  </label>
+                  <select
+                    id="service"
+                    name="service"
+                    value={formData.service}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  >
+                    <option value="">Select a service</option>
+                    <option value="ai-services">AI Services</option>
+                    <option value="micro-saas">Micro SaaS Development</option>
+                    <option value="it-services">IT Services</option>
+                    <option value="ai-content-tools">AI Content Tools</option>
+                    <option value="telemedicine">Telemedicine Platform</option>
+                    <option value="remote-collaboration">Remote Collaboration Suite</option>
+                    <option value="api-integration">API Integration Platform</option>
+                    <option value="customer-insights">AI Customer Insights</option>
+                    <option value="blockchain">Blockchain Solutions</option>
+                    <option value="quantum-computing">Quantum Computing</option>
+                    <option value="consulting">Consulting</option>
+                    <option value="other">Other</option>
+                  </select>
                 </div>
                 
                 <div>
@@ -177,6 +225,4 @@ const ContactPage: React.FC = () => {
       </div>
     </>
   );
-};
-
-export default ContactPage;
+}
