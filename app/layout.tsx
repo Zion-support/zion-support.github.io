@@ -51,7 +51,7 @@ function Header() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </button>
-            <div className="absolute top-full left-0 mt-2 w-72 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
               <div className="py-3">
                 <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">Core Services</div>
                 <Link href="/services/ai-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
@@ -64,15 +64,26 @@ function Header() {
                   IT Services & Solutions
                 </Link>
                 <div className="border-t border-gray-100 my-2"></div>
-                <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">Specialized Solutions</div>
-                <Link href="/services/ai-autonomous-operations" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">Industry Solutions</div>
+                <Link href="/services/manufacturing-ai-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600">
+                  Manufacturing AI Platform
+                </Link>
+                <Link href="/services/supply-chain-intelligence" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  Supply Chain Intelligence
+                </Link>
+                <Link href="/services/ai-autonomous-operations" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600">
                   Autonomous Operations
                 </Link>
+                <div className="border-t border-gray-100 my-2"></div>
+                <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">Specialized Solutions</div>
                 <Link href="/services/ai-business-intelligence-2025" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
                   Business Intelligence
                 </Link>
-                <Link href="/services/ai-cybersecurity-2025" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                <Link href="/services/ai-cybersecurity-2025" className="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600">
                   Cybersecurity
+                </Link>
+                <Link href="/services/ai-cloud-infrastructure-2025" className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600">
+                  Cloud Infrastructure
                 </Link>
                 <div className="border-t border-gray-100 my-2"></div>
                 <Link href="/services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 font-medium">
@@ -163,11 +174,11 @@ function Footer() {
               <Link href="/services/it-services" className="block text-gray-600 hover:text-blue-600 transition-colors">
                 IT Services & Solutions
               </Link>
-              <Link href="/services/ai-autonomous-operations" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                Autonomous Operations
+              <Link href="/services/manufacturing-ai-platform" className="block text-gray-600 hover:text-green-600 transition-colors">
+                Manufacturing AI Platform
               </Link>
-              <Link href="/services/ai-business-intelligence-2025" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                Business Intelligence
+              <Link href="/services/supply-chain-intelligence" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                Supply Chain Intelligence
               </Link>
               <Link href="/services" className="block text-gray-600 hover:text-blue-600 transition-colors font-medium">
                 All Services →
