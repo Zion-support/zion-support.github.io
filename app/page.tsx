@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
