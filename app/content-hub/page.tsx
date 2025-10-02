@@ -20,6 +20,26 @@ export const metadata = {
 export default function ContentHub() {
   const featuredContent = [
     {
+        { title: 'AI 2027 Transcendent Meta-Intelligence Breakthrough: $1.8T Success', slug: '/blog/ai-2027-transcendent-meta-intelligence-breakthrough', readTime: '32 min', featured: true, isNew: true },
+        { title: 'AI 2028 Omnipotent Superintelligence Breakthrough: $3.2T Success', slug: '/blog/ai-2028-omnipotent-superintelligence-breakthrough', readTime: '36 min', featured: true, isNew: true },
+        { title: 'Neural Adaptive Systems: The $89B Enterprise AI Revolution', slug: '/blog/ai-2025-oct-neural-adaptive-systems-enterprise-revolution', readTime: '24 min', featured: true, isNew: false },
+=======
+        { title: 'AI 2027 Quantum AI Breakthrough: The $500B Enterprise Transformation Revolution', slug: '/blog/ai-2027-quantum-ai-breakthrough-enterprise-transformation', readTime: '35 min', featured: true, isNew: true },
+        { title: 'AI 2027 Autonomous Enterprise Operations: The 99.9% Automation Revolution', slug: '/blog/ai-2027-autonomous-enterprise-operations-revolution', readTime: '32 min', featured: true, isNew: true },
+        { title: 'Neural Adaptive Systems: The $89B Enterprise AI Revolution', slug: '/blog/ai-2025-oct-neural-adaptive-systems-enterprise-revolution', readTime: '24 min', featured: true },
+        { title: 'AI Agent Swarms Enterprise Orchestration 2026', slug: '/blog/ai-agent-swarms-enterprise-orchestration-2026', readTime: '28 min', featured: true },
+        { title: 'Quantum-Enhanced AI Enterprise Breakthrough 2026', slug: '/blog/quantum-enhanced-ai-enterprise-breakthrough-2026', readTime: '32 min', featured: true },
+        { title: 'Agentic Workflow Orchestration 2026', slug: '/blog/agentic-workflow-orchestration-2026', readTime: '16 min', featured: true },
+        { title: 'AI Enterprise Agents Blueprint 2026', slug: '/blog/ai-enterprise-agents-blueprint-2026', readTime: '18 min', featured: true },
+        { title: 'AI Agent Observability 2026', slug: '/blog/ai-agent-observability-2026', readTime: '18 min', featured: true },
+        { title: 'AI Enterprise Automation 2026', slug: '/blog/ai-enterprise-automation-2026', readTime: '18 min', featured: true },
+        { title: 'AI Multimodal Enterprise Solutions 2026', slug: '/blog/ai-multimodal-enterprise-2026', readTime: '15 min', featured: true },
+        { title: 'AI Implementation Playbook 2026', slug: '/blog/ai-implementation-playbook-2026', readTime: '12 min', featured: true },
+        { title: 'AI Governance Maturity Model 2026', slug: '/blog/ai-governance-maturity-model-2026', readTime: '14 min', featured: true },
+        { title: 'AI Autonomous Agents 2025', slug: '/blog/ai-autonomous-agents-2025', readTime: '18 min', featured: false },
+        { title: 'AI Governance Framework 2025', slug: '/blog/ai-governance-framework-2025', readTime: '15 min', featured: false },
+      ]
+=======
       title: "AI 2026-2027 Revolutionary Breakthrough: Comprehensive Guide",
       description: "The ultimate guide to $5.8T in proven ROI through revolutionary AI breakthroughs",
       url: "/blog/ai-2026-2027-revolutionary-breakthrough-comprehensive-guide",

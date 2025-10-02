@@ -388,6 +388,25 @@ export const posts: BlogPost[] = [
     readTime: "8 min read"
   },
   {
+    slug: "ai-governance-scorecards-2026",
+    title: "AI Governance 2026: Scorecards Engineers Actually Use",
+    description: "Guardrails wired to product KPIs with PR checks and online canaries that speed teams up.",
+    category: "AI Strategy",
+    publishedAt: "2025-10-07",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "freshness-aware-rag-v2",
+    title: "Freshness‑Aware RAG v2: TTL Budgets and Versioned Corpora",
+    description: "Keep answers accurate with freshness windows, async warmups, and KPI‑aligned evaluation.",
+    category: "GenAI",
+    publishedAt: "2025-10-07",
+    featured: true,
+    readTime: "8 min read"
+  }
+  ,
+  {
     slug: "ai-platform-roadmaps-2026",
     title: "AI Product Roadmaps 2026: From Bet to Business Impact",
     description: "Outcome-led roadmaps that connect bets to scorecards, trains, and shipped value.",
