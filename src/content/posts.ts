@@ -1503,11 +1503,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2026-04-01",
     featured: true,
     readTime: "8 min read"
-  }
-);
-
-// Jan 2026 – New articles to create more content and advertise on Home
-posts.push(
+  },
   {
     slug: "ai-risk-budgets-blueprint-2026",
     title: "AI Risk Budgets Blueprint 2026: Ship Faster, Stay Safe",
