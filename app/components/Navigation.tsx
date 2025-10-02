@@ -95,63 +95,100 @@ export function Header() {
                   Autonomous Operations
                 </Link>
                 <div className="border-t border-gray-100 my-2"></div>
-                <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">New AI-Powered Solutions</div>
-                <Link to="/services/ai-content-optimization-suite" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  AI Content Optimization Suite
+                <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">New Micro SaaS Solutions</div>
+                <Link to="/services/ai-invoice-processing-saas" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  AI Invoice Processing SaaS
                 </Link>
-                <Link to="/services/ai-workflow-automation-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600">
-                  AI Workflow Automation Platform
+                <Link to="/services/ai-expense-management-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600">
+                  AI Expense Management Platform
                 </Link>
-                <Link to="/services/it-services/ai-observability-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600">
-                  AI Observability Platform
-                </Link>
-                <Link to="/services/ai-governance-risk-compliance" className="block px-4 py-2 text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-600">
-                  AI Governance, Risk & Compliance
-                </Link>
-                <Link to="/services/ai-customer-insights-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600">
-                  AI Customer Insights Platform
-                </Link>
-                <Link to="/services/ai-powered-content-tools" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  AI-Powered Content Tools
-                </Link>
-                <Link to="/services/appointment-scheduling-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600">
-                  Appointment Scheduling Solutions
-                </Link>
-                <Link to="/services/remote-collaboration-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600">
-                  Remote Collaboration Platform
-                </Link>
-                <Link to="/services/api-integration-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600">
-                  API Integration Services
-                </Link>
-                <Link to="/services/ai-fraud-detection-system" className="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600">
-                  AI Fraud Detection System
-                </Link>
-                <Link to="/services/cloud-cost-optimization" className="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600">
-                  Cloud Cost Optimization
-                </Link>
-                <Link to="/services/ai-financial-analysis-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600">
-                  AI Financial Analysis Platform
-                </Link>
-                <Link to="/services/genai-rag-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600">
-                  Enterprise RAG & GenAI Platform
-                </Link>
-                <Link to="/services/ai-marketing-studio" className="block px-4 py-2 text-sm text-gray-700 hover:bg-rose-50 hover:text-rose-600">
-                  AI Marketing Studio
-                </Link>
-                <Link to="/services/ai-project-management-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  AI Project Management Platform
-                </Link>
-                <Link to="/services/smart-invoice-processing" className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600">
-                  Smart Invoice Processing System
-                </Link>
-                <Link to="/services/ai-customer-onboarding" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600">
-                  AI Customer Onboarding Platform
-                </Link>
-                <Link to="/services/intelligent-expense-management" className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600">
-                  Intelligent Expense Management
+                <Link to="/services/ai-customer-onboarding-automation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600">
+                  AI Customer Onboarding Automation
                 </Link>
                 <Link to="/services/ai-lead-generation-engine" className="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600">
                   AI Lead Generation Engine
+                </Link>
+                <Link to="/services/ai-inventory-optimization-saas" className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600">
+                  AI Inventory Optimization SaaS
+                </Link>
+                <Link to="/services/ai-social-media-analytics-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-rose-50 hover:text-rose-600">
+                  AI Social Media Analytics Platform
+                </Link>
+                <Link to="/services/ai-appointment-scheduling-saas" className="block px-4 py-2 text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-600">
+                  AI Appointment Scheduling SaaS
+                </Link>
+                <Link to="/services/ai-chatbot-builder-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-cyan-50 hover:text-cyan-600">
+                  AI Chatbot Builder Platform
+                </Link>
+                <Link to="/services/ai-email-signature-manager" className="block px-4 py-2 text-sm text-gray-700 hover:bg-violet-50 hover:text-violet-600">
+                  AI Email Signature Manager
+                </Link>
+                <Link to="/services/ai-content-calendar-saas" className="block px-4 py-2 text-sm text-gray-700 hover:bg-teal-50 hover:text-teal-600">
+                  AI Content Calendar SaaS
+                </Link>
+                <div className="border-t border-gray-100 my-2"></div>
+                <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">Advanced AI Services</div>
+                <Link to="/services/ai-predictive-analytics-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  AI Predictive Analytics Platform
+                </Link>
+                <Link to="/services/ai-natural-language-processing-service" className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600">
+                  AI Natural Language Processing Service
+                </Link>
+                <Link to="/services/ai-computer-vision-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600">
+                  AI Computer Vision Platform
+                </Link>
+                <Link to="/services/ai-recommendation-engine" className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600">
+                  AI Recommendation Engine
+                </Link>
+                <Link to="/services/ai-chatbot-development-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600">
+                  AI Chatbot Development Platform
+                </Link>
+                <Link to="/services/ai-automated-testing-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600">
+                  AI Automated Testing Platform
+                </Link>
+                <Link to="/services/ai-data-quality-management" className="block px-4 py-2 text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-600">
+                  AI Data Quality Management
+                </Link>
+                <Link to="/services/ai-business-process-automation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-cyan-50 hover:text-cyan-600">
+                  AI Business Process Automation
+                </Link>
+                <Link to="/services/ai-fraud-detection-system" className="block px-4 py-2 text-sm text-gray-700 hover:bg-rose-50 hover:text-rose-600">
+                  AI Fraud Detection System
+                </Link>
+                <Link to="/services/ai-customer-insights-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-violet-50 hover:text-violet-600">
+                  AI Customer Insights Platform
+                </Link>
+                <div className="border-t border-gray-100 my-2"></div>
+                <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">IT Services & Solutions</div>
+                <Link to="/services/cloud-migration-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  Cloud Migration Services
+                </Link>
+                <Link to="/services/devops-automation-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600">
+                  DevOps Automation Services
+                </Link>
+                <Link to="/services/cybersecurity-consulting-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600">
+                  Cybersecurity Consulting Services
+                </Link>
+                <Link to="/services/data-analytics-consulting" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600">
+                  Data Analytics Consulting
+                </Link>
+                <Link to="/services/network-infrastructure-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600">
+                  Network Infrastructure Services
+                </Link>
+                <Link to="/services/database-optimization-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600">
+                  Database Optimization Services
+                </Link>
+                <Link to="/services/api-integration-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-600">
+                  API Integration Services
+                </Link>
+                <Link to="/services/mobile-app-development-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-cyan-50 hover:text-cyan-600">
+                  Mobile App Development Services
+                </Link>
+                <Link to="/services/cloud-infrastructure-management" className="block px-4 py-2 text-sm text-gray-700 hover:bg-violet-50 hover:text-violet-600">
+                  Cloud Infrastructure Management
+                </Link>
+                <Link to="/services/it-support-and-helpdesk-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-teal-50 hover:text-teal-600">
+                  IT Support and Helpdesk Services
                 </Link>
                 <div className="border-t border-gray-100 my-2"></div>
                 <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">Specialized Solutions</div>
@@ -329,11 +366,24 @@ export function Header() {
                   <Link to="/services/micro-saas" className="block text-sm text-gray-600 hover:text-blue-600">Micro SaaS</Link>
                   <Link to="/services/it-services" className="block text-sm text-gray-600 hover:text-blue-600">IT Services</Link>
                   <div className="border-t border-gray-200 my-2"></div>
-                  <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide">New AI Solutions</div>
-                  <Link to="/services/ai-content-optimization-suite" className="block text-sm text-gray-600 hover:text-blue-600">AI Content Suite</Link>
-                  <Link to="/services/ai-workflow-automation-platform" className="block text-sm text-gray-600 hover:text-blue-600">Workflow Automation</Link>
-                  <Link to="/services/ai-customer-insights-platform" className="block text-sm text-gray-600 hover:text-blue-600">Customer Insights</Link>
-                  <Link to="/services/ai-financial-analysis-platform" className="block text-sm text-gray-600 hover:text-blue-600">Financial Analysis</Link>
+                  <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide">New Micro SaaS</div>
+                  <Link to="/services/ai-invoice-processing-saas" className="block text-sm text-gray-600 hover:text-blue-600">AI Invoice Processing</Link>
+                  <Link to="/services/ai-expense-management-platform" className="block text-sm text-gray-600 hover:text-blue-600">AI Expense Management</Link>
+                  <Link to="/services/ai-customer-onboarding-automation" className="block text-sm text-gray-600 hover:text-blue-600">AI Customer Onboarding</Link>
+                  <Link to="/services/ai-lead-generation-engine" className="block text-sm text-gray-600 hover:text-blue-600">AI Lead Generation</Link>
+                  <Link to="/services/ai-inventory-optimization-saas" className="block text-sm text-gray-600 hover:text-blue-600">AI Inventory Optimization</Link>
+                  <div className="border-t border-gray-200 my-2"></div>
+                  <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Advanced AI Services</div>
+                  <Link to="/services/ai-predictive-analytics-platform" className="block text-sm text-gray-600 hover:text-blue-600">AI Predictive Analytics</Link>
+                  <Link to="/services/ai-natural-language-processing-service" className="block text-sm text-gray-600 hover:text-blue-600">AI Natural Language Processing</Link>
+                  <Link to="/services/ai-computer-vision-platform" className="block text-sm text-gray-600 hover:text-blue-600">AI Computer Vision</Link>
+                  <Link to="/services/ai-recommendation-engine" className="block text-sm text-gray-600 hover:text-blue-600">AI Recommendation Engine</Link>
+                  <div className="border-t border-gray-200 my-2"></div>
+                  <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide">IT Services</div>
+                  <Link to="/services/cloud-migration-services" className="block text-sm text-gray-600 hover:text-blue-600">Cloud Migration</Link>
+                  <Link to="/services/devops-automation-services" className="block text-sm text-gray-600 hover:text-blue-600">DevOps Automation</Link>
+                  <Link to="/services/cybersecurity-consulting-services" className="block text-sm text-gray-600 hover:text-blue-600">Cybersecurity Consulting</Link>
+                  <Link to="/services/data-analytics-consulting" className="block text-sm text-gray-600 hover:text-blue-600">Data Analytics Consulting</Link>
                   <div className="border-t border-gray-200 my-2"></div>
                   <Link to="/services/manufacturing-ai-platform" className="block text-sm text-gray-600 hover:text-blue-600">Manufacturing AI</Link>
                   <Link to="/services/supply-chain-intelligence" className="block text-sm text-gray-600 hover:text-blue-600">Supply Chain</Link>
@@ -465,11 +515,17 @@ export function Footer() {
               <Link to="/services/micro-saas" className="block text-gray-600 hover:text-blue-600 transition-colors">Micro SaaS</Link>
               <Link to="/services/it-services" className="block text-gray-600 hover:text-blue-600 transition-colors">IT Services</Link>
               <div className="border-t border-gray-200 my-2"></div>
-              <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1">New AI Solutions</div>
-              <Link to="/services/ai-content-optimization-suite" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Content Suite</Link>
-              <Link to="/services/ai-workflow-automation-platform" className="block text-gray-600 hover:text-blue-600 transition-colors">Workflow Automation</Link>
-              <Link to="/services/ai-customer-insights-platform" className="block text-gray-600 hover:text-blue-600 transition-colors">Customer Insights</Link>
-              <Link to="/services/ai-financial-analysis-platform" className="block text-gray-600 hover:text-blue-600 transition-colors">Financial Analysis</Link>
+              <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1">New Micro SaaS</div>
+              <Link to="/services/ai-invoice-processing-saas" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Invoice Processing</Link>
+              <Link to="/services/ai-expense-management-platform" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Expense Management</Link>
+              <Link to="/services/ai-customer-onboarding-automation" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Customer Onboarding</Link>
+              <Link to="/services/ai-lead-generation-engine" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Lead Generation</Link>
+              <div className="border-t border-gray-200 my-2"></div>
+              <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1">Advanced AI Services</div>
+              <Link to="/services/ai-predictive-analytics-platform" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Predictive Analytics</Link>
+              <Link to="/services/ai-natural-language-processing-service" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Natural Language Processing</Link>
+              <Link to="/services/ai-computer-vision-platform" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Computer Vision</Link>
+              <Link to="/services/ai-recommendation-engine" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Recommendation Engine</Link>
             </div>
           </div>
           
