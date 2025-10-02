@@ -61,27 +61,27 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
       {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
+      <section className="relative py-12 md:py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10"></div>
         <div className="relative max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-6">
+          <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4 md:mb-6">
             Revolutionary AI Breakthroughs 2026
           </h1>
-          <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto">
+          <p className="text-lg md:text-xl lg:text-2xl text-gray-600 mb-6 md:mb-8 max-w-4xl mx-auto px-4">
             Discover revolutionary AI breakthroughs: Quantum Computing (1000x gains), 
             Autonomous Enterprise (95% automation), and $150M ROI success stories.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center px-4">
             <Link 
               to="/services" 
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300"
+              className="inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 text-sm md:text-base"
             >
               Explore AI Solutions
-              <ArrowRight className="ml-2 w-5 h-5" />
+              <ArrowRight className="ml-2 w-4 md:w-5 h-4 md:h-5" />
             </Link>
             <Link 
               to="/case-studies" 
-              className="inline-flex items-center px-8 py-4 border-2 border-gray-300 text-gray-700 font-semibold rounded-lg hover:border-blue-500 hover:text-blue-600 transition-all duration-300"
+              className="inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-4 border-2 border-gray-300 text-gray-700 font-semibold rounded-lg hover:border-blue-500 hover:text-blue-600 transition-all duration-300 text-sm md:text-base"
             >
               View Success Stories
             </Link>
@@ -90,114 +90,114 @@ export default function HomePage() {
       </section>
 
       {/* Key Metrics */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-12 md:py-16 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-blue-600 mb-2">1000x</div>
-              <div className="text-gray-600">Performance Gains</div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+            <div className="text-center p-4 md:p-0">
+              <div className="text-2xl md:text-4xl font-bold text-blue-600 mb-1 md:mb-2">1000x</div>
+              <div className="text-sm md:text-base text-gray-600">Performance Gains</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-purple-600 mb-2">95%</div>
-              <div className="text-gray-600">Automation Rate</div>
+            <div className="text-center p-4 md:p-0">
+              <div className="text-2xl md:text-4xl font-bold text-purple-600 mb-1 md:mb-2">95%</div>
+              <div className="text-sm md:text-base text-gray-600">Automation Rate</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-green-600 mb-2">$150M</div>
-              <div className="text-gray-600">ROI Achieved</div>
+            <div className="text-center p-4 md:p-0">
+              <div className="text-2xl md:text-4xl font-bold text-green-600 mb-1 md:mb-2">$150M</div>
+              <div className="text-sm md:text-base text-gray-600">ROI Achieved</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-orange-600 mb-2">500+</div>
-              <div className="text-gray-600">Enterprise Clients</div>
+            <div className="text-center p-4 md:p-0">
+              <div className="text-2xl md:text-4xl font-bold text-orange-600 mb-1 md:mb-2">500+</div>
+              <div className="text-sm md:text-base text-gray-600">Enterprise Clients</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Featured Services */}
-      <section className="py-20 px-4 bg-gray-50">
+      <section className="py-12 md:py-20 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Revolutionary AI Services</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Revolutionary AI Services</h2>
+            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4">
               Transform your organization with cutting-edge AI innovations and enterprise-grade solutions
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                <Brain className="w-6 h-6 text-blue-600" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            <div className="bg-white p-6 md:p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-10 md:w-12 h-10 md:h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-3 md:mb-4">
+                <Brain className="w-5 md:w-6 h-5 md:h-6 text-blue-600" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Quantum AI Computing</h3>
-              <p className="text-gray-600 mb-4">
+              <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-3">Quantum AI Computing</h3>
+              <p className="text-sm md:text-base text-gray-600 mb-3 md:mb-4">
                 Leverage quantum-enhanced AI for unprecedented computational power and breakthrough performance.
               </p>
-              <Link to="/services/quantum-ai" className="text-blue-600 font-semibold hover:text-blue-700">
+              <Link to="/services/quantum-ai" className="text-blue-600 font-semibold hover:text-blue-700 text-sm md:text-base">
                 Learn More →
               </Link>
             </div>
 
-            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                <Cpu className="w-6 h-6 text-purple-600" />
+            <div className="bg-white p-6 md:p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-10 md:w-12 h-10 md:h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-3 md:mb-4">
+                <Cpu className="w-5 md:w-6 h-5 md:h-6 text-purple-600" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Autonomous Enterprise</h3>
-              <p className="text-gray-600 mb-4">
+              <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-3">Autonomous Enterprise</h3>
+              <p className="text-sm md:text-base text-gray-600 mb-3 md:mb-4">
                 Achieve 95% automation across your enterprise with self-managing AI systems.
               </p>
-              <Link to="/services/autonomous-enterprise" className="text-purple-600 font-semibold hover:text-purple-700">
+              <Link to="/services/autonomous-enterprise" className="text-purple-600 font-semibold hover:text-purple-700 text-sm md:text-base">
                 Learn More →
               </Link>
             </div>
 
-            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-                <TrendingUp className="w-6 h-6 text-green-600" />
+            <div className="bg-white p-6 md:p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-10 md:w-12 h-10 md:h-12 bg-green-100 rounded-lg flex items-center justify-center mb-3 md:mb-4">
+                <TrendingUp className="w-5 md:w-6 h-5 md:h-6 text-green-600" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">AI ROI Optimization</h3>
-              <p className="text-gray-600 mb-4">
+              <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-3">AI ROI Optimization</h3>
+              <p className="text-sm md:text-base text-gray-600 mb-3 md:mb-4">
                 Proven strategies to achieve $150M+ ROI through strategic AI implementation.
               </p>
-              <Link to="/services/ai-roi" className="text-green-600 font-semibold hover:text-green-700">
+              <Link to="/services/ai-roi" className="text-green-600 font-semibold hover:text-green-700 text-sm md:text-base">
                 Learn More →
               </Link>
             </div>
 
-            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
-                <Shield className="w-6 h-6 text-orange-600" />
+            <div className="bg-white p-6 md:p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-10 md:w-12 h-10 md:h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-3 md:mb-4">
+                <Shield className="w-5 md:w-6 h-5 md:h-6 text-orange-600" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">AI Security & Governance</h3>
-              <p className="text-gray-600 mb-4">
+              <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-3">AI Security & Governance</h3>
+              <p className="text-sm md:text-base text-gray-600 mb-3 md:mb-4">
                 Enterprise-grade AI security frameworks and governance models.
               </p>
-              <Link to="/services/ai-security" className="text-orange-600 font-semibold hover:text-orange-700">
+              <Link to="/services/ai-security" className="text-orange-600 font-semibold hover:text-orange-700 text-sm md:text-base">
                 Learn More →
               </Link>
             </div>
 
-            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
-                <Cloud className="w-6 h-6 text-red-600" />
+            <div className="bg-white p-6 md:p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-10 md:w-12 h-10 md:h-12 bg-red-100 rounded-lg flex items-center justify-center mb-3 md:mb-4">
+                <Cloud className="w-5 md:w-6 h-5 md:h-6 text-red-600" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Cloud AI Infrastructure</h3>
-              <p className="text-gray-600 mb-4">
+              <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-3">Cloud AI Infrastructure</h3>
+              <p className="text-sm md:text-base text-gray-600 mb-3 md:mb-4">
                 Scalable, secure cloud infrastructure optimized for AI workloads.
               </p>
-              <Link to="/services/cloud-ai" className="text-red-600 font-semibold hover:text-red-700">
+              <Link to="/services/cloud-ai" className="text-red-600 font-semibold hover:text-red-700 text-sm md:text-base">
                 Learn More →
               </Link>
             </div>
 
-            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
-                <BarChart3 className="w-6 h-6 text-indigo-600" />
+            <div className="bg-white p-6 md:p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-10 md:w-12 h-10 md:h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-3 md:mb-4">
+                <BarChart3 className="w-5 md:w-6 h-5 md:h-6 text-indigo-600" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">AI Analytics & Insights</h3>
-              <p className="text-gray-600 mb-4">
+              <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-3">AI Analytics & Insights</h3>
+              <p className="text-sm md:text-base text-gray-600 mb-3 md:mb-4">
                 Advanced analytics platforms powered by next-generation AI.
               </p>
-              <Link to="/services/ai-analytics" className="text-indigo-600 font-semibold hover:text-indigo-700">
+              <Link to="/services/ai-analytics" className="text-indigo-600 font-semibold hover:text-indigo-700 text-sm md:text-base">
                 Learn More →
               </Link>
             </div>
@@ -206,52 +206,52 @@ export default function HomePage() {
       </section>
 
       {/* Success Stories */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-12 md:py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Success Stories</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Success Stories</h2>
+            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4">
               Real results from Fortune 500 companies and enterprise clients
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
+            <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-6 md:p-8 rounded-xl">
               <div className="flex items-center mb-4">
-                <Award className="w-8 h-8 text-blue-600 mr-3" />
-                <h3 className="text-2xl font-semibold">Fortune 500 Transformation</h3>
+                <Award className="w-6 md:w-8 h-6 md:h-8 text-blue-600 mr-3" />
+                <h3 className="text-xl md:text-2xl font-semibold">Fortune 500 Transformation</h3>
               </div>
-              <p className="text-gray-600 mb-6">
+              <p className="text-sm md:text-base text-gray-600 mb-4 md:mb-6">
                 "Zion Tech Group's AI solutions delivered a 1000x performance improvement 
                 and $150M ROI within the first year of implementation."
               </p>
               <div className="flex items-center">
-                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-                  <Users className="w-6 h-6 text-blue-600" />
+                <div className="w-10 md:w-12 h-10 md:h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                  <Users className="w-5 md:w-6 h-5 md:h-6 text-blue-600" />
                 </div>
                 <div>
-                  <div className="font-semibold">Sarah Chen</div>
-                  <div className="text-gray-600">CTO, Global Tech Corp</div>
+                  <div className="font-semibold text-sm md:text-base">Sarah Chen</div>
+                  <div className="text-gray-600 text-sm md:text-base">CTO, Global Tech Corp</div>
                 </div>
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-green-50 to-blue-50 p-8 rounded-xl">
+            <div className="bg-gradient-to-br from-green-50 to-blue-50 p-6 md:p-8 rounded-xl">
               <div className="flex items-center mb-4">
-                <Target className="w-8 h-8 text-green-600 mr-3" />
-                <h3 className="text-2xl font-semibold">95% Automation Achievement</h3>
+                <Target className="w-6 md:w-8 h-6 md:h-8 text-green-600 mr-3" />
+                <h3 className="text-xl md:text-2xl font-semibold">95% Automation Achievement</h3>
               </div>
-              <p className="text-gray-600 mb-6">
+              <p className="text-sm md:text-base text-gray-600 mb-4 md:mb-6">
                 "Our autonomous enterprise system now handles 95% of routine operations, 
                 freeing our team to focus on strategic initiatives."
               </p>
               <div className="flex items-center">
-                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
-                  <Zap className="w-6 h-6 text-green-600" />
+                <div className="w-10 md:w-12 h-10 md:h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                  <Zap className="w-5 md:w-6 h-5 md:h-6 text-green-600" />
                 </div>
                 <div>
-                  <div className="font-semibold">Michael Rodriguez</div>
-                  <div className="text-gray-600">CEO, InnovateCorp</div>
+                  <div className="font-semibold text-sm md:text-base">Michael Rodriguez</div>
+                  <div className="text-gray-600 text-sm md:text-base">CEO, InnovateCorp</div>
                 </div>
               </div>
             </div>
@@ -260,25 +260,25 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-blue-600 to-purple-600">
+      <section className="py-12 md:py-20 px-4 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 md:mb-6">
             Ready to Transform Your Organization?
           </h2>
-          <p className="text-xl text-blue-100 mb-8">
+          <p className="text-lg md:text-xl text-blue-100 mb-6 md:mb-8 px-4">
             Join the AI revolution and unlock unprecedented growth with Zion Tech Group
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               to="/contact" 
-              className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300"
+              className="inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 text-sm md:text-base"
             >
               Get Started Today
-              <Rocket className="ml-2 w-5 h-5" />
+              <Rocket className="ml-2 w-4 md:w-5 h-4 md:h-5" />
             </Link>
             <Link 
               to="/services" 
-              className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300"
+              className="inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 text-sm md:text-base"
             >
               Explore Solutions
             </Link>
@@ -287,22 +287,22 @@ export default function HomePage() {
       </section>
 
       {/* Contact Info */}
-      <section className="py-12 px-4 bg-gray-900 text-white">
+      <section className="py-8 md:py-12 px-4 bg-gray-900 text-white">
         <div className="max-w-7xl mx-auto text-center">
-          <h3 className="text-2xl font-bold mb-4">Get in Touch</h3>
-          <div className="flex flex-col md:flex-row justify-center items-center gap-8">
+          <h3 className="text-xl md:text-2xl font-bold mb-4">Get in Touch</h3>
+          <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8">
             <div className="flex items-center">
-              <Globe className="w-5 h-5 mr-2" />
-              <span>ziontechgroup.com</span>
+              <Globe className="w-4 md:w-5 h-4 md:h-5 mr-2" />
+              <span className="text-sm md:text-base">ziontechgroup.com</span>
             </div>
             <div className="flex items-center">
-              <span>📧 kleber@ziontechgroup.com</span>
+              <span className="text-sm md:text-base">📧 kleber@ziontechgroup.com</span>
             </div>
             <div className="flex items-center">
-              <span>📞 +1 302 464 0950</span>
+              <span className="text-sm md:text-base">📞 +1 302 464 0950</span>
             </div>
             <div className="flex items-center">
-              <span>📍 364 E Main St STE 1008, Middletown DE 19709</span>
+              <span className="text-sm md:text-base">📍 364 E Main St STE 1008, Middletown DE 19709</span>
             </div>
           </div>
         </div>

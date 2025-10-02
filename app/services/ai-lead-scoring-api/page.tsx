@@ -26,73 +26,75 @@ import {
   Headphones,
   ExternalLink,
   Download,
-  Play
+  Play,
+  Activity,
+  Target as TargetIcon
 } from 'lucide-react';
 
 export const metadata = {
-  title: 'AI Content Optimization Suite — Zion Tech Group | $199/month',
-  description: 'Revolutionary AI-powered content optimization platform that increases engagement by 60% and improves SEO rankings by 40%. Transform your content with AI that understands your audience.',
-  keywords: 'AI content optimization, content marketing, SEO optimization, AI writing, content analytics, marketing automation',
+  title: 'AI Lead Scoring API — Zion Tech Group | $299/month',
+  description: 'Real-time lead scoring API with 95% accuracy using behavioral, firmographic, and engagement signals. Score leads instantly with AI-powered intelligence.',
+  keywords: 'AI lead scoring, lead qualification, sales automation, CRM integration, behavioral analysis, lead intelligence',
   openGraph: {
-    title: 'AI Content Optimization Suite — Zion Tech Group | $199/month',
-    description: 'Revolutionary AI-powered content optimization platform that increases engagement by 60% and improves SEO rankings by 40%.',
+    title: 'AI Lead Scoring API — Zion Tech Group | $299/month',
+    description: 'Real-time lead scoring API with 95% accuracy using behavioral, firmographic, and engagement signals.',
     type: 'website',
-    url: 'https://ziontechgroup.com/services/ai-content-optimization-suite',
+    url: 'https://ziontechgroup.com/services/ai-lead-scoring-api',
     images: [
       {
-        url: '/og-ai-content-suite.jpg',
+        url: '/og-ai-lead-scoring.jpg',
         width: 1200,
         height: 630,
-        alt: 'AI Content Optimization Suite - Zion Tech Group',
+        alt: 'AI Lead Scoring API - Zion Tech Group',
       },
     ],
   },
 };
 
-export default function AIContentOptimizationSuitePage() {
+export default function AILeadScoringAPIPage() {
   const features = [
-    'AI-powered headline optimization with 60% higher engagement',
-    'Content performance analytics with real-time insights',
-    'SEO optimization suggestions for 40% ranking improvement',
-    'A/B testing capabilities for content optimization',
-    'Brand voice consistency across all content',
-    'Multi-platform publishing automation'
+    'Real-time lead scoring with 95% accuracy',
+    'Behavioral analysis and engagement tracking',
+    'Firmographic data integration',
+    'Explainable AI scores with reasoning',
+    'Custom scoring models for your business',
+    'API-first architecture for easy integration'
   ];
 
   const benefits = [
-    '60% higher engagement rates',
-    '40% improvement in SEO rankings',
-    '70% time savings on content creation',
-    '85% prediction accuracy for viral content',
-    '300% ROI in 3 months',
-    '24/7 Expert Support'
+    '95% scoring accuracy',
+    '50% increase in qualified leads',
+    '30% reduction in sales cycle',
+    '80% improvement in conversion rates',
+    '250% ROI in 2 months',
+    '24/7 API Support'
   ];
 
   const useCases = [
-    'Blog post optimization for higher traffic',
-    'Social media content for better engagement',
-    'Email marketing campaigns for improved open rates',
-    'Product descriptions for e-commerce conversion',
-    'Landing page copy for better conversion rates',
-    'Press releases and PR content optimization'
+    'CRM integration for automatic lead scoring',
+    'Marketing automation platform enhancement',
+    'Sales team lead prioritization',
+    'Lead qualification and routing',
+    'Customer success prediction',
+    'Account-based marketing optimization'
   ];
 
   const integrations = [
-    'WordPress - Direct publishing integration',
-    'Shopify - E-commerce content optimization',
-    'Mailchimp - Email campaign optimization',
-    'HubSpot - CRM and marketing automation',
-    'Google Analytics - Performance tracking',
-    'Social media platforms - Automated posting'
+    'Salesforce - Native CRM integration',
+    'HubSpot - Marketing automation',
+    'Pipedrive - Sales pipeline management',
+    'Zapier - Workflow automation',
+    'Webhooks - Real-time data sync',
+    'Custom API endpoints'
   ];
 
   const technologies = [
-    'GPT-4 - Advanced language processing',
-    'BERT - Context understanding',
-    'TensorFlow - Machine learning models',
-    'React - Modern web interface',
-    'Node.js - Scalable backend',
-    'PostgreSQL - Data management'
+    'Machine Learning - Advanced algorithms',
+    'Python - Core processing engine',
+    'FastAPI - High-performance API',
+    'PostgreSQL - Data storage',
+    'Redis - Caching layer',
+    'Docker - Containerized deployment'
   ];
 
   return (
@@ -104,32 +106,32 @@ export default function AIContentOptimizationSuitePage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold mb-6">
-                <Brain className="w-4 h-4 mr-2" />
+                <Activity className="w-4 h-4 mr-2" />
                 AI Micro SaaS Solution
               </div>
               <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-6">
-                AI Content Optimization Suite
+                AI Lead Scoring API
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Revolutionary AI-powered content optimization platform that increases engagement by 60% and improves SEO rankings by 40%. 
-                Transform your content with AI that understands your audience and drives measurable results.
+                Real-time lead scoring API with 95% accuracy using behavioral, firmographic, and engagement signals. 
+                Score leads instantly with AI-powered intelligence and explainable results.
               </p>
               
               {/* Pricing */}
               <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-6 text-white mb-8">
                 <div className="flex items-center justify-between mb-4">
                   <div>
-                    <div className="text-3xl font-bold">$199/month</div>
+                    <div className="text-3xl font-bold">$299/month</div>
                     <div className="text-blue-100">Our Special Price</div>
                   </div>
                   <div className="text-right">
-                    <div className="text-lg line-through text-blue-200">$299/month</div>
+                    <div className="text-lg line-through text-blue-200">$499/month</div>
                     <div className="text-blue-100">Market Price</div>
                   </div>
                 </div>
                 <div className="text-center">
-                  <div className="text-lg font-semibold mb-2">300% ROI in 3 months</div>
-                  <div className="text-sm text-blue-100">Implementation: 2-3 days</div>
+                  <div className="text-lg font-semibold mb-2">250% ROI in 2 months</div>
+                  <div className="text-sm text-blue-100">Implementation: 1-2 days</div>
                 </div>
               </div>
 
@@ -146,7 +148,7 @@ export default function AIContentOptimizationSuitePage() {
                   className="inline-flex items-center px-8 py-4 border-2 border-gray-300 text-gray-700 font-semibold rounded-lg hover:border-blue-500 hover:text-blue-600 transition-all duration-300"
                 >
                   <Play className="mr-2 w-5 h-5" />
-                  Watch Demo
+                  API Documentation
                 </Link>
               </div>
             </div>
@@ -154,26 +156,26 @@ export default function AIContentOptimizationSuitePage() {
             <div className="relative">
               <div className="bg-white rounded-2xl shadow-2xl p-8 border border-gray-200">
                 <div className="text-center mb-6">
-                  <div className="text-6xl mb-4">📝</div>
-                  <h3 className="text-2xl font-bold text-gray-900">Content Performance Dashboard</h3>
+                  <div className="text-6xl mb-4">📈</div>
+                  <h3 className="text-2xl font-bold text-gray-900">Lead Scoring Dashboard</h3>
                 </div>
                 
                 <div className="space-y-4">
                   <div className="flex justify-between items-center p-4 bg-green-50 rounded-lg">
-                    <span className="text-gray-700">Engagement Rate</span>
-                    <span className="text-green-600 font-bold">+60%</span>
+                    <span className="text-gray-700">Scoring Accuracy</span>
+                    <span className="text-green-600 font-bold">95%</span>
                   </div>
                   <div className="flex justify-between items-center p-4 bg-blue-50 rounded-lg">
-                    <span className="text-gray-700">SEO Rankings</span>
-                    <span className="text-blue-600 font-bold">+40%</span>
+                    <span className="text-gray-700">Qualified Leads</span>
+                    <span className="text-blue-600 font-bold">+50%</span>
                   </div>
                   <div className="flex justify-between items-center p-4 bg-purple-50 rounded-lg">
-                    <span className="text-gray-700">Time Saved</span>
-                    <span className="text-purple-600 font-bold">70%</span>
+                    <span className="text-gray-700">Sales Cycle</span>
+                    <span className="text-purple-600 font-bold">-30%</span>
                   </div>
                   <div className="flex justify-between items-center p-4 bg-orange-50 rounded-lg">
-                    <span className="text-gray-700">Prediction Accuracy</span>
-                    <span className="text-orange-600 font-bold">85%</span>
+                    <span className="text-gray-700">Conversion Rate</span>
+                    <span className="text-orange-600 font-bold">+80%</span>
                   </div>
                 </div>
               </div>
@@ -188,7 +190,7 @@ export default function AIContentOptimizationSuitePage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Powerful Features</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Everything you need to optimize your content and drive better results
+              Advanced AI capabilities for accurate lead scoring and qualification
             </p>
           </div>
           
@@ -214,7 +216,7 @@ export default function AIContentOptimizationSuitePage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Measurable Benefits</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Real results from our AI-powered content optimization
+              Real results from our AI-powered lead scoring
             </p>
           </div>
           
@@ -240,14 +242,14 @@ export default function AIContentOptimizationSuitePage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Perfect For</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Ideal use cases for AI Content Optimization Suite
+              Ideal use cases for AI Lead Scoring API
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
               <div key={index} className="flex items-center p-6 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl border border-gray-200">
-                <Target className="w-8 h-8 text-blue-600 mr-4 flex-shrink-0" />
+                <TargetIcon className="w-8 h-8 text-blue-600 mr-4 flex-shrink-0" />
                 <p className="text-gray-700 font-medium">{useCase}</p>
               </div>
             ))}
@@ -261,7 +263,7 @@ export default function AIContentOptimizationSuitePage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Seamless Integrations</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Connect with your favorite tools and platforms
+              Connect with your favorite CRM and marketing tools
             </p>
           </div>
           
@@ -305,10 +307,10 @@ export default function AIContentOptimizationSuitePage() {
       <section className="py-20 px-4 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Content?
+            Ready to Score Leads with AI?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Join hundreds of companies already using our AI Content Optimization Suite to drive better results
+            Join hundreds of companies already using our AI Lead Scoring API to improve their sales performance
           </p>
           
           {/* Contact Information */}
