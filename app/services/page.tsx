@@ -59,6 +59,81 @@ export default function ServicesPage() {
 
   const services = [
     {
+      title: 'AI Content Generation Tool',
+      description: 'Revolutionary AI-powered content creation platform for blogs, social media, and marketing materials',
+      icon: '✍️',
+      features: [
+        'Smart Templates for All Content Types',
+        'SEO Optimization & Keyword Integration',
+        'Plagiarism Detection & Originality',
+        'Brand Voice Matching & Consistency',
+        'Multi-Platform Publishing'
+      ],
+      href: '/services/ai-content-generation-tool',
+      pricing: '$50 - $500/month',
+      category: 'Micro SaaS'
+    },
+    {
+      title: 'Automated Appointment Scheduler',
+      description: 'Intelligent scheduling system with calendar integration and automated reminders',
+      icon: '📅',
+      features: [
+        'Calendar Synchronization',
+        'Automated Email & SMS Reminders',
+        'Customizable Booking Pages',
+        'Real-time Availability Updates',
+        'Analytics Dashboard'
+      ],
+      href: '/services/automated-appointment-scheduler',
+      pricing: '$25 - $200/month',
+      category: 'Micro SaaS'
+    },
+    {
+      title: 'AI Customer Support Chatbot',
+      description: 'Intelligent chatbot with natural language processing and seamless human handoff',
+      icon: '🤖',
+      features: [
+        'Natural Language Processing',
+        '24/7 Availability',
+        'Seamless Human Handoff',
+        'Knowledge Base Integration',
+        'Advanced Analytics'
+      ],
+      href: '/services/ai-customer-support-chatbot',
+      pricing: '$100 - $800/month',
+      category: 'AI Services'
+    },
+    {
+      title: 'AI Resume Screening Service',
+      description: 'Automated candidate evaluation with bias detection and intelligent scoring',
+      icon: '📄',
+      features: [
+        'Smart Keyword Matching',
+        'Bias Detection & Prevention',
+        'Candidate Scoring System',
+        'HR Software Integration',
+        'Analytics Dashboard'
+      ],
+      href: '/services/ai-resume-screening-service',
+      pricing: '$500 - $5,000/month',
+      category: 'AI Services'
+    },
+    {
+      title: 'Cybersecurity Risk Assessment',
+      description: 'Comprehensive security evaluation with vulnerability scanning and compliance checks',
+      icon: '🛡️',
+      features: [
+        'Vulnerability Scanning',
+        'Compliance Checks (GDPR, HIPAA, SOX)',
+        'Detailed Risk Reports',
+        'Penetration Testing',
+        'Security Training'
+      ],
+      href: '/services/cybersecurity-risk-assessment',
+      pricing: '$1,000 - $25,000+',
+      category: 'IT Services'
+    },
+    {
       title: 'AI-Powered Email Marketing Suite',
       description: 'Revolutionary email marketing platform with AI-driven optimization and automated personalization',
       icon: '📧',

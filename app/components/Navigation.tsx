@@ -62,12 +62,31 @@ export function Header() {
                   Autonomous Operations
                 </Link>
                 <div className="border-t border-gray-100 my-2"></div>
-                <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">Specialized Solutions</div>
+                <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">New Micro SaaS Solutions</div>
+                <Link href="/services/ai-content-generation-tool" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  AI Content Generation Tool
+                </Link>
+                <Link href="/services/automated-appointment-scheduler" className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600">
+                  Automated Appointment Scheduler
+                </Link>
+                <Link href="/services/ai-customer-support-chatbot" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600">
+                  AI Customer Support Chatbot
+                </Link>
+                <div className="border-t border-gray-100 my-2"></div>
+                <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">Advanced AI Services</div>
+                <Link href="/services/ai-resume-screening-service" className="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600">
+                  AI Resume Screening Service
+                </Link>
                 <Link href="/services/ai-business-intelligence-2025" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
                   Business Intelligence
                 </Link>
+                <div className="border-t border-gray-100 my-2"></div>
+                <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">IT Security Services</div>
+                <Link href="/services/cybersecurity-risk-assessment" className="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600">
+                  Cybersecurity Risk Assessment
+                </Link>
                 <Link href="/services/ai-cybersecurity-2025" className="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600">
-                  Cybersecurity
+                  AI Cybersecurity Solutions
                 </Link>
                 <Link href="/services/ai-cloud-infrastructure-2025" className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600">
                   Cloud Infrastructure
@@ -226,12 +245,17 @@ export function Header() {
               </button>
               {openDropdown === 'mobile-services' && (
                 <div className="mt-2 pl-4 space-y-2">
+                  <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Core Services</div>
                   <Link href="/services/ai-services" className="block text-sm text-gray-600 hover:text-blue-600">AI Services</Link>
                   <Link href="/services/micro-saas" className="block text-sm text-gray-600 hover:text-blue-600">Micro SaaS</Link>
                   <Link href="/services/it-services" className="block text-sm text-gray-600 hover:text-blue-600">IT Services</Link>
-                  <Link href="/services/manufacturing-ai-platform" className="block text-sm text-gray-600 hover:text-blue-600">Manufacturing AI</Link>
-                  <Link href="/services/supply-chain-intelligence" className="block text-sm text-gray-600 hover:text-blue-600">Supply Chain</Link>
-                  <Link href="/services" className="block text-sm text-gray-600 hover:text-blue-600">View All Services</Link>
+                  <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 mt-4">New Solutions</div>
+                  <Link href="/services/ai-content-generation-tool" className="block text-sm text-gray-600 hover:text-blue-600">AI Content Generation</Link>
+                  <Link href="/services/automated-appointment-scheduler" className="block text-sm text-gray-600 hover:text-blue-600">Appointment Scheduler</Link>
+                  <Link href="/services/ai-customer-support-chatbot" className="block text-sm text-gray-600 hover:text-blue-600">AI Support Chatbot</Link>
+                  <Link href="/services/ai-resume-screening-service" className="block text-sm text-gray-600 hover:text-blue-600">AI Resume Screening</Link>
+                  <Link href="/services/cybersecurity-risk-assessment" className="block text-sm text-gray-600 hover:text-blue-600">Cybersecurity Assessment</Link>
+                  <Link href="/services" className="block text-sm text-gray-600 hover:text-blue-600 font-medium mt-2">View All Services</Link>
                 </div>
               )}
             </div>
@@ -321,8 +345,12 @@ export function Footer() {
               <Link href="/services/ai-services" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Services</Link>
               <Link href="/services/micro-saas" className="block text-gray-600 hover:text-blue-600 transition-colors">Micro SaaS</Link>
               <Link href="/services/it-services" className="block text-gray-600 hover:text-blue-600 transition-colors">IT Services</Link>
-              <Link href="/services/manufacturing-ai-platform" className="block text-gray-600 hover:text-blue-600 transition-colors">Manufacturing AI</Link>
-              <Link href="/services/supply-chain-intelligence" className="block text-gray-600 hover:text-blue-600 transition-colors">Supply Chain</Link>
+              <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mt-3 mb-2">New Solutions</div>
+              <Link href="/services/ai-content-generation-tool" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Content Generation</Link>
+              <Link href="/services/automated-appointment-scheduler" className="block text-gray-600 hover:text-blue-600 transition-colors">Appointment Scheduler</Link>
+              <Link href="/services/ai-customer-support-chatbot" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Support Chatbot</Link>
+              <Link href="/services/ai-resume-screening-service" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Resume Screening</Link>
+              <Link href="/services/cybersecurity-risk-assessment" className="block text-gray-600 hover:text-blue-600 transition-colors">Cybersecurity Assessment</Link>
             </div>
           </div>
           <div>
