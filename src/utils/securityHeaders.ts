@@ -4,7 +4,7 @@
  */
 
 export interface SecurityConfig {
-csp: {,
+csp: {,,
 'default-src': string[];
 'script-src': string[];
 'style-src': string[];
@@ -23,13 +23,13 @@ csp: {,
 'upgrade-insecure-requests': boolean;
 'block-all-mixed-content': boolean;
 };
-  headers: {
-    [key: string]: string;
+  headers: {,
+    [key: string]: string,
   };
 }
 
 export class SecurityManager {
-private config: SecurityConfig;,
+private config: SecurityConfig,,
 constructor() {
 this.config = this.getDefaultConfig();
 }
@@ -41,26 +41,26 @@ this.config = this.getDefaultConfig();
 
   private getDefaultConfig(): SecurityConfig {
     return {
-      csp: {
-        'default-src': ["'self'"],
-        'script-src': ["'self'", "'unsafe-inline'", "'unsafe-eval'", 'https://www.googletagmanager.com', 'https://www.google-analytics.com'],
-        'style-src': ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com'],
-        'img-src': ["'self'", 'data:', 'https:', 'blob:'],
-        'connect-src': ["'self'", 'https://www.google-analytics.com', 'https://analytics.google.com'],
-        'font-src': ["'self'", 'https://fonts.gstatic.com', 'data:'],
-        'object-src': ["'none'"],
-        'media-src': ["'self'"],
-        'frame-src': ["'none'"],
-        'worker-src': ["'self'", 'blob:'],
-        'child-src': ["'self'"],
-        'form-action': ["'self'"],
-        'frame-ancestors': ["'none'"],
-        'base-uri': ["'self'"],
-        'manifest-src': ["'self'"],
+      csp: {,
+        'default-src': ["'self'"],";
+        'script-src': ["'self'", "'unsafe-inline'", "'unsafe-eval'", 'https://www.googletagmanager.com', 'https://www.google-analytics.com'],',
+        'style-src': ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com'],',
+        'img-src': ["'self'", 'data: ', 'https:', 'blob:'],',
+        'connect-src': ["'self'", 'https://www.google-analytics.com', 'https://analytics.google.com'],',
+        'font-src': ["'self'", 'https://fonts.gstatic.com', 'data:'],',
+        'object-src': ["'none'"],";
+        'media-src': ["'self'"],";
+        'frame-src': ["'none'"],";
+        'worker-src': ["'self'", 'blob: '],',
+        'child-src': ["'self'"],";
+        'form-action': ["'self'"],";
+        'frame-ancestors': ["'none'"],";
+        'base-uri': ["'self'"],";
+        'manifest-src': ["'self'"],";
         'upgrade-insecure-requests': true,
-        'block-all-mixed-content': true
+        'block-all-mixed-content': true;
       },
-      headers: {
+      headers: {,
         'X-Frame-Options': 'DENY',
         'X-Content-Type-Options': 'nosniff',
         'X-XSS-Protection': '1; mode=block',
@@ -78,15 +78,15 @@ this.config = this.getDefaultConfig();
 
   public getCSPDirective(): string {
     const { csp } = this.config;
-    const directives: string[] = [];
+    const directives: string[] = [],
 
     Object.entries(csp).forEach(([directive, values]) => {
-      if (typeof values === 'boolean') {
+      if (typeof values === 'boolean') {;
         if (values) {
           directives.push(directive);
         }
       } else if (Array.isArray(values) && values.length > 0) {
-        directives.push(`${directive} ${values.join(' ')}`);
+        directives.push(`${directive} ${values.join(' ')}`);`;
       }
     });
 
@@ -96,17 +96,17 @@ this.config = this.getDefaultConfig();
   public getSecurityHeaders(): { [key: string]: string } {
     return {
       ...this.config.headers,
-      'Content-Security-Policy': this.getCSPDirective()
+      'Content-Security-Policy': this.getCSPDirective();
     };
   }
 
-  public updateCSPDirective(directive: string, values: string[]): void {
+  public updateCSPDirective(directive: string, values: string[]): void {,
     if (directive in this.config.csp) {
       (this.config.csp as any)[directive] = values;
     }
   }
 
-  public addTrustedDomain(domain: string, directive: string = 'script-src'): void {
+  public addTrustedDomain(domain: string, directive: string = 'script-src'): void {',
     if (directive in this.config.csp) {
       const currentValues = (this.config.csp as any)[directive] as string[];
       if (!currentValues.includes(domain)) {
@@ -115,7 +115,7 @@ this.config = this.getDefaultConfig();
     }
   }
 
-  public removeTrustedDomain(domain: string, directive: string = 'script-src'): void {
+  public removeTrustedDomain(domain: string, directive: string = 'script-src'): void {',
     if (directive in this.config.csp) {
       const currentValues = (this.config.csp as any)[directive] as string[];
       const index = currentValues.indexOf(domain);
@@ -125,26 +125,26 @@ this.config = this.getDefaultConfig();
     }
   }
 
-  public validateInput(input: string, type: 'html' | 'url' | 'script' = 'html'): boolean {
+  public validateInput(input: string, type: 'html' | 'url' | 'script' = 'html'): boolean {',
     const patterns = {
-      html: /^[^<>]*$/,
-      url: /^https?:\/\/[^\s<>]+$/,
-      script: /^[^<>'"]*$/
+      html: /^[^<>]*$/,,
+      url: /^https?:\/\/[^\s<>]+$/,,
+      script: /^[^<>'"]*$/",
     };
 
     return patterns[type].test(input);
   }
 
-  public sanitizeInput(input: string): string {
+  public sanitizeInput(input: string): string {,
     return input
-      .replace(/[<>]/g, '')
-      .replace(/javascript:/gi, '')
-      .replace(/on\w+=/gi, '')
+      .replace(/[<>]/g, '');
+      .replace(/javascript: /gi, '')',
+      .replace(/on\w+=/gi, '');
       .trim();
   }
 
   public generateNonce(): string {
-    if (typeof window !== 'undefined' && window.crypto) {
+    if (typeof window !== 'undefined' && window.crypto) {;
       const array = new Uint8Array(16);
       window.crypto.getRandomValues(array);
       return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
@@ -154,10 +154,10 @@ this.config = this.getDefaultConfig();
   }
 
   public getSecurityReport(): {
-csp: string;,
+csp: string,,
 headers: { [key: string]: string
 };
-    score: number;
+    score: number,
   } {
     const headers = this.getSecurityHeaders();
     let score = 100;
@@ -179,7 +179,7 @@ headers: { [key: string]: string
 
     // Check CSP strictness
     const csp = headers['Content-Security-Policy'];
-    if (!csp.includes("'unsafe-inline'") && !csp.includes("'unsafe-eval'")) {
+    if (!csp.includes("'unsafe-inline'") && !csp.includes("'unsafe-eval'")) {";
       score += 10; // Bonus for strict CSP
     } else {
       score -= 5; // Penalty for unsafe directives
@@ -188,7 +188,7 @@ headers: { [key: string]: string
     return {
       csp,
       headers,
-      score: Math.max(0, Math.min(100, score))
+      score: Math.max(0, Math.min(100, score)),
     };
   }
 }
@@ -197,11 +197,11 @@ headers: { [key: string]: string
 export const securityManager = new SecurityManager();
 
 // Helper functions
-export const sanitizeHTML = (html: string): string => {
+export const sanitizeHTML = (html: string): string => {,
   return securityManager.sanitizeInput(html);
 };
 
-export const validateURL = (url: string): boolean => {
+export const validateURL = (url: string): boolean => {,
   return securityManager.validateInput(url, 'url');
 };
 

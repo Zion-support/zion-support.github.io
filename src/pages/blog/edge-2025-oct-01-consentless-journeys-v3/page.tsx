@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react";";
 
 export default function ConsentlessJourneysV3(): React.JSX.Element {
   return (
@@ -7,16 +7,14 @@ export default function ConsentlessJourneysV3(): React.JSX.Element {
         <title>Consentless Journeys v3 — Private Personalization &lt;100ms</title>
         <meta
           name="description"
-          content="Scoped IDs, signed configs, and on-device models for zero‑PII journeys worldwide under 100ms."
-        />
-        <link
+          content="Scoped IDs, signed configs, and on-device models for zero‑PII journeys worldwide under 100ms." /><link
           rel="canonical"
-          href="https://ziontechgroup.com/blog/edge-2025-oct-01-consentless-journeys-v3"
+          href="https://ziontechgroup.com/blog/edge-2025-oct-01-consentless-journeys-v3",
         />
       </Helmet>
 
       <div className="container mx-auto px-6 py-16">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">Consentless Journeys v3</h1>
+        <h1 className="text-4xl md: text-5xl font-bold mb-4">Consentless Journeys v3</h1>",
         <p className="text-zion-slate-light mb-8">Private Personalization &lt;100ms</p>
         <div className="prose prose-invert max-w-3xl">
           <p>
@@ -30,10 +28,11 @@ export default function ConsentlessJourneysV3(): React.JSX.Element {
           </p>
         </div>
         <div className="mt-8">
-          <Link to="/blog" className="text-cyan-300 hover:underline">← Back to Blog</Link>
+          <Link to="/blog" className="text-cyan-300 hover: underline">← Back to Blog</Link>",
         </div>
       </div>
     </div>
   );
 }
 
+;

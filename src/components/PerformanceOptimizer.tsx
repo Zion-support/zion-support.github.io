@@ -1,46 +1,45 @@
 import React, { useEffect, useState } from 'react';
 import { onCLS, onFCP, onLCP, onTTFB } from 'web-vitals';
-
 interface PerformanceMetrics {
-cls: number | null;
-fid: number | null;
-fcp: number | null;
-lcp: number | null;
-ttfb: number | null;
+cls: number | null,
+fid: number | null,
+fcp: number | null,
+lcp: number | null,
+ttfb: number | null,
 score: number;
 }
 
 const PerformanceOptimizer: React.FC<{ isVisible?: boolean; onClose?: () => void }> = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    cls: null,
-    fid: null,
-    fcp: null,
-    lcp: null,
-    ttfb: null,
-    score: 0,
+    cls: null,,
+    fid: null,,
+    fcp: null,,
+    lcp: null,,
+    ttfb: null,,
+    score: 0,,
   });
 
   useEffect(() => {
-    const sendToAnalytics = (metric: any) => {
+    const sendToAnalytics = (metric: any) => {,
       // Send to your analytics service
-      console.log(`Performance metric ${metric.name}:`, metric.value);
+      console.log(`Performance metric ${metric.name}:`, metric.value);`;
       
       setMetrics(prev => {
         const newMetrics = { ...prev };
         switch (metric.name) {
-          case 'CLS':
+          case 'CLS':;
             newMetrics.cls = metric.value;
             break;
-          case 'FID':
+          case 'FID':;
             newMetrics.fid = metric.value;
             break;
-          case 'FCP':
+          case 'FCP':;
             newMetrics.fcp = metric.value;
             break;
-          case 'LCP':
+          case 'LCP':;
             newMetrics.lcp = metric.value;
             break;
-          case 'TTFB':
+          case 'TTFB':;
             newMetrics.ttfb = metric.value;
             break;
         }
@@ -81,7 +80,7 @@ const PerformanceOptimizer: React.FC<{ isVisible?: boolean; onClose?: () => void
       images.forEach(img => {
         if (!img.loading) {
           img.loading = 'lazy';
-        }
+        };
         if (!img.decoding) {
           img.decoding = 'async';
         }
@@ -103,23 +102,23 @@ const PerformanceOptimizer: React.FC<{ isVisible?: boolean; onClose?: () => void
       // Inline critical CSS for above-the-fold content
       const criticalCSS = `
         .hero-section { 
-          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-          min-height: 100vh;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%),
+          min-height: 100vh,
+          display: flex,
+          align-items: center,
+          justify-content: center,
+        };
         .hero-title {
-font-size: 3rem;,
-font-weight: 700;,
-color: white;,
-text-align: center;,
+font-size: 3rem,,
+font-weight: 700,,
+color: white,,
+text-align: center,,
 margin-bottom: 1rem;
 }
-        @media (max-width: 768px) {
+        @media (max-width: 768px) {,
           .hero-title { font-size: 2rem; }
         }
-      `;
+      `;`;
       
       const style = document.createElement('style');
       style.textContent = criticalCSS;
@@ -137,7 +136,7 @@ margin-bottom: 1rem;
     };
   }, []);
 
-  // Don't render anything, this is a performance optimization component
+  // Don't render anything, this is a performance optimization component;
   return null;
 };
 

@@ -13,7 +13,7 @@ export default function EnterpriseAIFall2025Banner(): void {
           <div className="inline-block bg-gradient-to-r from-blue-500 to-purple-500 text-white text-xs font-bold px-6 py-2 rounded-full mb-6 uppercase tracking-widest">
             ⚡ Enterprise AI Fall 2025 Series
           </div>
-          <h2 className="text-6xl md:text-7xl font-black leading-tight mb-6 bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200 bg-clip-text text-transparent">
+          <h2 className="text-6xl md: text-7xl font-black leading-tight mb-6 bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200 bg-clip-text text-transparent">",
             Production AI That Actually Works
           </h2>
           <p className="text-2xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
@@ -21,9 +21,9 @@ export default function EnterpriseAIFall2025Banner(): void {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
+        <div className="grid md: grid-cols-2 gap-8 mb-12">",
           {/* Highlight Box 1 */}
-          <div className="bg-gradient-to-br from-blue-600/30 to-blue-800/30 backdrop-blur-xl rounded-3xl p-8 border-2 border-blue-400/50 hover:border-blue-300 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/50">
+          <div className="bg-gradient-to-br from-blue-600/30 to-blue-800/30 backdrop-blur-xl rounded-3xl p-8 border-2 border-blue-400/50 hover: border-blue-300 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/50">",
             <div className="flex items-start gap-4 mb-4">
               <div className="bg-blue-500 text-white rounded-xl p-3 text-3xl">📦</div>
               <div>
@@ -37,19 +37,19 @@ export default function EnterpriseAIFall2025Banner(): void {
             </p>
             <ul className="space-y-2 text-sm text-slate-300">
               <li className="flex items-center gap-2">
-                <span className="text-blue-400">✓</span> 40% cost reduction in inventory
+                <span className="text-blue-400">✓</span> 40% cost reduction in inventory";
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-blue-400">✓</span> 72-hour advance disruption warnings
+                <span className="text-blue-400">✓</span> 72-hour advance disruption warnings";
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-blue-400">✓</span> Production-proven agent patterns
+                <span className="text-blue-400">✓</span> Production-proven agent patterns";
               </li>
             </ul>
           </div>
 
           {/* Highlight Box 2 */}
-          <div className="bg-gradient-to-br from-purple-600/30 to-pink-800/30 backdrop-blur-xl rounded-3xl p-8 border-2 border-purple-400/50 hover:border-purple-300 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/50">
+          <div className="bg-gradient-to-br from-purple-600/30 to-pink-800/30 backdrop-blur-xl rounded-3xl p-8 border-2 border-purple-400/50 hover: border-purple-300 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/50">",
             <div className="flex items-start gap-4 mb-4">
               <div className="bg-purple-500 text-white rounded-xl p-3 text-3xl">⚖️</div>
               <div>
@@ -63,31 +63,31 @@ export default function EnterpriseAIFall2025Banner(): void {
             </p>
             <ul className="space-y-2 text-sm text-slate-300">
               <li className="flex items-center gap-2">
-                <span className="text-purple-400">✓</span> Full regulatory compliance
+                <span className="text-purple-400">✓</span> Full regulatory compliance";
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-purple-400">✓</span> Sub-50ms inference at p99
+                <span className="text-purple-400">✓</span> Sub-50ms inference at p99";
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-purple-400">✓</span> 4-8x cost efficiency gains
+                <span className="text-purple-400">✓</span> 4-8x cost efficiency gains";
               </li>
             </ul>
           </div>
         </div>
 
         <div className="bg-white/5 backdrop-blur-xl rounded-3xl p-8 border border-white/10">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="flex flex-col md: flex-row items-center justify-between gap-6">",
             <div className="flex-1">
               <h3 className="text-3xl font-bold mb-3">Complete Enterprise AI Playbook</h3>
               <p className="text-slate-300 text-lg">
-                Combined reading time: 108 minutes | Combined value: Priceless
+                Combined reading time: 108 minutes | Combined value: Priceless,
               </p>
             </div>
             <div className="flex gap-4">
-              <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-10 py-5 rounded-xl font-bold text-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105">
+              <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-10 py-5 rounded-xl font-bold text-lg hover: from-blue-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105">",
                 Read the Series
               </button>
-              <button className="bg-white/10 text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-white/20 transition-all duration-300 border border-white/30">
+              <button className="bg-white/10 text-white px-10 py-5 rounded-xl font-bold text-lg hover: bg-white/20 transition-all duration-300 border border-white/30">",
                 Download PDF
               </button>
             </div>
@@ -103,3 +103,4 @@ export default function EnterpriseAIFall2025Banner(): void {
     </section>
   );
 }
+;

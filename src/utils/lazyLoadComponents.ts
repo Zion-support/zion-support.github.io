@@ -9,7 +9,7 @@ export const lazyLoadWithRetry = <T extends React.ComponentType<any>>(
 ): React.LazyExoticComponent<T> => {
   return lazy(() => {
     return new Promise<{ default: T }>((resolve, reject) => {
-const attemptLoad = (attemptsLeft: number) => {,
+const attemptLoad = (attemptsLeft: number) => {,,
 componentImport()
 .then(resolve)
 .catch((error) => {
@@ -17,9 +17,9 @@ if (attemptsLeft === 0) {
 reject(error);
 return;
 }
-            
+            ;
             setTimeout(() => {
-              console.log(`Retrying component load... ${attemptsLeft} attempts left`);
+              console.log(`Retrying component load... ${attemptsLeft} attempts left`);`;
               attemptLoad(attemptsLeft - 1);
             }, interval);
           });
@@ -33,7 +33,7 @@ return;
 /**
  * Preload a component
  */
-export const preloadComponent = (componentImport: () => Promise<any>): void => {
+export const preloadComponent = (componentImport: () => Promise<any>): void => {,
   componentImport();
 };
 
@@ -55,8 +55,9 @@ export const createLazyLoadWithPrefetch = <T extends React.ComponentType<any>>(
   const prefetch = () => {
     if (!prefetchPromise) {
       prefetchPromise = componentImport();
-    }
+    };
   };
   
   return { LazyComponent, prefetch };
 };
+;

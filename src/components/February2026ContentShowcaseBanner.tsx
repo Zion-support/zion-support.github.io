@@ -2,44 +2,41 @@
 const February2026ContentShowcaseBanner = () => {
   const featuredContent = [
     {
-      id: 1,
-      title: 'Autonomous Neural Networks 2026',
-      category: 'AI Architecture',
-      readTime: '12 min',
-      rating: 5.0,
-      readers: '180K+',
-      badge: 'BREAKTHROUGH',
-      gradient: 'from-emerald-500 to-teal-500',
-      icon: <Brain className="w-6 h-6" />,
-      link: '/blog/ai-2026-feb-autonomous-neural-networks',
-      description: 'Self-evolving neural architectures achieving 99.97% accuracy in autonomous decision-making'
-    },
+      id: 1,,
+      title: 'Autonomous Neural Networks 2026',',
+      category: 'AI Architecture',',
+      readTime: '12 min',',
+      rating: 5.0,,
+      readers: '180K+',',
+      badge: 'BREAKTHROUGH',',
+      gradient: 'from-emerald-500 to-teal-500',',
+      icon: <Brain className="w-6 h-6/>,",
+      link: '/blog/ai-2026-feb-autonomous-neural-networks',',
+      description: 'Self-evolving neural architectures achieving 99.97% accuracy in autonomous decision-making},
     {
-      id: 2,
-      title: 'Quantum Edge Computing Revolution',
-      category: 'Edge Computing',
-      readTime: '15 min',
-      rating: 4.9,
-      readers: '156K+',
-      badge: 'FEATURED',
-      gradient: 'from-blue-500 to-cyan-500',
-      icon: <Zap className="w-6 h-6" />,
-      link: '/blog/edge-2026-feb-quantum-computing',
-      description: 'Ultra-low latency quantum processing delivering sub-millisecond response times'
-    },
+      id: 2,,
+      title: 'Quantum Edge Computing Revolution',',
+      category: 'Edge Computing',',
+      readTime: '15 min',',
+      rating: 4.9,,
+      readers: '156K+',',
+      badge: 'FEATURED',',
+      gradient: 'from-blue-500 to-cyan-500',',
+      icon: <Zap className="w-6 h-6/>,",
+      link: '/blog/edge-2026-feb-quantum-computing',',
+      description: 'Ultra-low latency quantum processing delivering sub-millisecond response times},
     {
-      id: 3,
-      title: 'Meta-Cognitive AI Systems',
-      category: 'AI Psychology',
-      readTime: '18 min',
-      rating: 5.0,
-      readers: '203K+',
-      badge: 'REVOLUTIONARY',
-      gradient: 'from-purple-500 to-pink-500',
-      icon: <Sparkles className="w-6 h-6" />,
-      link: '/blog/ai-2026-feb-meta-cognitive-systems',
-      description: 'AI that thinks about thinking - achieving true self-awareness and autonomous learning'
-    }
+      id: 3,,
+      title: 'Meta-Cognitive AI Systems',',
+      category: 'AI Psychology',',
+      readTime: '18 min',',
+      rating: 5.0,,
+      readers: '203K+',',
+      badge: 'REVOLUTIONARY',',
+      gradient: 'from-purple-500 to-pink-500',',
+      icon: <Sparkles className="w-6 h-6/>,",
+      link: '/blog/ai-2026-feb-meta-cognitive-systems',',
+      description: 'AI that thinks about thinking - achieving true self-awareness and autonomous learning}
   ];
 
   return (
@@ -47,22 +44,22 @@ const February2026ContentShowcaseBanner = () => {
       {/* Animated background effects */}
       <div className="absolute inset-0 overflow-hidden opacity-20">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-emerald-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>;
+        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>;
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
         {/* Header Section */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-emerald-500/20 to-blue-500/20 border border-emerald-500/30 mb-8">
-            <Sparkles className="w-6 h-6 text-emerald-400 animate-pulse" />
+            <Sparkles className="w-6 h-6 text-emerald-400 animate-pulse/>
             <span className="text-emerald-400 font-bold text-lg tracking-wider uppercase">
-              🌟 FEBRUARY 2026: REVOLUTIONARY CONTENT SHOWCASE
+              🌟 FEBRUARY 2026: REVOLUTIONARY CONTENT SHOWCASE,
             </span>
-            <Sparkles className="w-6 h-6 text-blue-400 animate-pulse" />
+            <Sparkles className="w-6 h-6 text-blue-400 animate-pulse/>
           </div>
 
-          <h2 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-emerald-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+          <h2 className="text-5xl md: text-6xl font-extrabold mb-6 bg-gradient-to-r from-emerald-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">",
             The Future of AI is Now
           </h2>
           
@@ -72,15 +69,15 @@ const February2026ContentShowcaseBanner = () => {
           </p>
 
           {/* Achievement Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
+          <div className="grid grid-cols-2 md: grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">",
             {[
-              { value: '500K+', label: 'Monthly Readers', icon: <Users className="w-8 h-8" />, color: 'text-emerald-400' },
-              { value: '99.9%', label: 'Content Accuracy', icon: <Star className="w-8 h-8" />, color: 'text-blue-400' },
-              { value: '200+', label: 'Expert Articles', icon: <Award className="w-8 h-8" />, color: 'text-purple-400' },
-              { value: '50+', label: 'Industry Awards', icon: <TrendingUp className="w-8 h-8" />, color: 'text-pink-400' }
+              { value: '500K+', label: 'Monthly Readers', icon: <Users className="w-8 h-8/>, color: 'text-emerald-400' },
+              { value: '99.9%', label: 'Content Accuracy', icon: <Star className="w-8 h-8/>, color: 'text-blue-400' },
+              { value: '200+', label: 'Expert Articles', icon: <Award className="w-8 h-8/>, color: 'text-purple-400' },
+              { value: '50+', label: 'Industry Awards', icon: <TrendingUp className="w-8 h-8/>, color: 'text-pink-400' };
             ].map((achievement, index) => (
               <div key={index} className="text-center">
-                <div className={`${achievement.color} mb-2 flex justify-center`}>
+                <div className={`${achievement.color} mb-2 flex justify-center`}>`;
                   {achievement.icon}
                 </div>
                 <div className="text-3xl font-extrabold bg-gradient-to-r from-emerald-400 to-purple-400 bg-clip-text text-transparent mb-1">
@@ -95,15 +92,15 @@ const February2026ContentShowcaseBanner = () => {
         </div>
 
         {/* Featured Content Cards */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        <div className="grid md: grid-cols-3 gap-8 mb-16">",
           {featuredContent.map((content, index) => (
             <div 
               key={content.id}
-              className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-emerald-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/20"
-              style={{ animationDelay: `${index * 200}ms` }}
+              className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover: border-emerald-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/20",
+              style={{ animationDelay: `${index * 200}ms` }}`;
             >
               {/* Card glow effect */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${content.gradient} opacity-0 group-hover:opacity-10 transition-all duration-500`}></div>
+              <div className={`absolute inset-0 bg-gradient-to-br ${content.gradient} opacity-0 group-hover:opacity-10 transition-all duration-500`}></div>`;
               
               <div className="relative p-8">
                 {/* Badge */}
@@ -111,7 +108,7 @@ const February2026ContentShowcaseBanner = () => {
                   <div className="flex items-center gap-2 text-emerald-400">
                     {content.icon}
                   </div>
-                  <div className={`px-3 py-1.5 rounded-full bg-gradient-to-r ${content.gradient} text-white text-xs font-bold border border-white/30`}>
+                  <div className={`px-3 py-1.5 rounded-full bg-gradient-to-r ${content.gradient} text-white text-xs font-bold border border-white/30`}>`;
                     {content.badge}
                   </div>
                 </div>
@@ -124,7 +121,7 @@ const February2026ContentShowcaseBanner = () => {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-emerald-400 transition-colors duration-300 leading-tight">
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-emerald-400 transition-colors duration-300 leading-tight">",
                   {content.title}
                 </h3>
 
@@ -136,11 +133,11 @@ const February2026ContentShowcaseBanner = () => {
                 {/* Meta Info */}
                 <div className="flex items-center justify-between text-sm text-gray-500 mb-6 pb-6 border-b border-white/10">
                   <span className="flex items-center gap-2">
-                    <Zap className="w-4 h-4 text-emerald-400" />
+                    <Zap className="w-4 h-4 text-emerald-400/>
                     {content.readTime}
                   </span>
                   <span className="flex items-center gap-1">
-                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                    <Star className="w-4 h-4 text-yellow-400 fill-current/>
                     {content.rating}
                   </span>
                 </div>
@@ -148,7 +145,7 @@ const February2026ContentShowcaseBanner = () => {
                 {/* Reader Count */}
                 <div className="mb-6">
                   <div className="flex items-center gap-2 text-gray-400">
-                    <Users className="w-4 h-4" />
+                    <Users className="w-4 h-4/>
                     <span className="text-sm">{content.readers} readers</span>
                   </div>
                 </div>
@@ -156,10 +153,10 @@ const February2026ContentShowcaseBanner = () => {
                 {/* CTA Button */}
                 <a
                   href={content.link}
-                  className={`group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r ${content.gradient} hover:opacity-90 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 transform hover:-translate-y-1`}
+                  className={`group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r ${content.gradient} hover:opacity-90 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 transform hover:-translate-y-1`}`;
                 >
                   <span>Read Now</span>
-                  <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                  <ArrowRight className="w-4 h-4 group-hover/btn: translate-x-1 transition-transform duration-300/>",
                 </a>
               </div>
             </div>
@@ -167,10 +164,10 @@ const February2026ContentShowcaseBanner = () => {
         </div>
 
         {/* Special Offer Section */}
-        <div className="bg-gradient-to-r from-emerald-500/10 to-blue-500/10 rounded-3xl p-8 md:p-12 border border-emerald-500/20 mb-16">
+        <div className="bg-gradient-to-r from-emerald-500/10 to-blue-500/10 rounded-3xl p-8 md: p-12 border border-emerald-500/20 mb-16">",
           <div className="text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-500/30 mb-6">
-              <Star className="w-5 h-5 text-yellow-400 fill-current" />
+              <Star className="w-5 h-5 text-yellow-400 fill-current/>
               <span className="text-yellow-400 font-bold text-sm tracking-wider uppercase">
                 EXCLUSIVE FEBRUARY OFFER
               </span>
@@ -184,26 +181,26 @@ const February2026ContentShowcaseBanner = () => {
               Join our elite community of technology pioneers and thought leaders.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            <div className="flex flex-col sm: flex-row gap-6 justify-center items-center">",
               <div className="text-center">
                 <div className="text-3xl font-extrabold text-emerald-400 line-through opacity-50">$399/month</div>
                 <div className="text-2xl font-bold text-white">$149/month</div>
                 <div className="text-sm text-gray-400">First 6 months only</div>
               </div>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm: flex-row gap-4">",
                 <a title="Internal link"
                   href="/subscribe"
-                  className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 flex items-center justify-center gap-2"
+                  className="bg-gradient-to-r from-emerald-500 to-blue-600 hover: from-emerald-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 flex items-center justify-center gap-2",
                 >
-                  <Sparkles className="w-5 h-5" />
+                  <Sparkles className="w-5 h-5/>
                   <span>Get Premium Access</span>
                 </a>
                 <a title="Internal link"
                   href="/contact"
-                  className="border-2 border-emerald-500 text-emerald-400 hover:bg-emerald-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
+                  className="border-2 border-emerald-500 text-emerald-400 hover: bg-emerald-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2",
                 >
                   <span>Contact Sales</span>
-                  <ArrowRight className="w-5 h-5" />
+                  <ArrowRight className="w-5 h-5/>
                 </a>
               </div>
             </div>
@@ -221,15 +218,15 @@ const February2026ContentShowcaseBanner = () => {
                 Get weekly insights, exclusive content previews, and early access to revolutionary AI breakthroughs. 
                 Join 500K+ subscribers who never miss the future.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center max-w-md mx-auto">",
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="flex-1 px-6 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-emerald-500 focus:bg-white/20 transition-all duration-300"
+                  className="flex-1 px-6 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus: outline-none focus:border-emerald-500 focus:bg-white/20 transition-all duration-300",
                 />
-                <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 flex items-center justify-center gap-2">
+                <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover: from-emerald-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 flex items-center justify-center gap-2">",
                   <span>Subscribe</span>
-                  <ArrowRight className="w-5 h-5" />
+                  <ArrowRight className="w-5 h-5/>
                 </button>
               </div>
               <p className="text-xs text-gray-500 mt-4">

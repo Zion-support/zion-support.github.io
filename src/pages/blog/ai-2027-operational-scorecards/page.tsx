@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react";";
 
 export default function AIOperationalScorecards2027(): React.JSX.Element {
   return (
@@ -7,16 +7,14 @@ export default function AIOperationalScorecards2027(): React.JSX.Element {
         <title>Operational AI Scorecards 2027 — KPIs, Budgets, Rollback</title>
         <meta
           name="description"
-          content="Live scorecards that link SLIs to product KPIs with budgeted actions and instant rollback."
-        />
-        <link
+          content="Live scorecards that link SLIs to product KPIs with budgeted actions and instant rollback." /><link
           rel="canonical"
-          href="https://ziontechgroup.com/blog/ai-2027-operational-scorecards"
+          href="https://ziontechgroup.com/blog/ai-2027-operational-scorecards",
         />
       </Helmet>
 
       <div className="container mx-auto px-6 py-16">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">
+        <h1 className="text-4xl md: text-5xl font-bold mb-4">",
           Operational AI Scorecards 2027 — KPIs, Budgets, Rollback
         </h1>
         <p className="text-zion-slate-light mb-8">
@@ -38,3 +36,4 @@ export default function AIOperationalScorecards2027(): React.JSX.Element {
   );
 }
 
+;

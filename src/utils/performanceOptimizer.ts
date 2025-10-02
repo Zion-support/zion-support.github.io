@@ -18,9 +18,8 @@ INP?: number; // Interaction to Next Paint
 /**
  * Resource hints for performance
  */
-export const prefetchResources = (urls: string[]): void => {
+export const prefetchResources = (urls: string[]): void => {,
   if (typeof document === 'undefined') return;
-
   urls.forEach(url => {
     const link = document.createElement('link');
     link.rel = 'prefetch';
@@ -32,9 +31,8 @@ export const prefetchResources = (urls: string[]): void => {
 /**
  * Preconnect to external domains
  */
-export const preconnectDomains = (domains: string[]): void => {
+export const preconnectDomains = (domains: string[]): void => {,
   if (typeof document === 'undefined') return;
-
   domains.forEach(domain => {
     const link = document.createElement('link');
     link.rel = 'preconnect';
@@ -50,7 +48,6 @@ export const preconnectDomains = (domains: string[]): void => {
 export const lazyLoadImages = (): void => {
   if (typeof window === 'undefined') return;
   if (!('IntersectionObserver' in window)) return;
-
   const imageObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -64,11 +61,11 @@ export const lazyLoadImages = (): void => {
       }
     });
   }, {
-    rootMargin: '50px 0px',
-    threshold: 0.01
+    rootMargin: '50px 0px',',
+    threshold: 0.01,
   });
 
-  document.querySelectorAll('img[data-src]').forEach(img => {
+  document.querySelectorAll('img[data-src]').forEach(img => {;
     imageObserver.observe(img);
   });
 };
@@ -76,12 +73,12 @@ export const lazyLoadImages = (): void => {
 /**
  * Debounce function for performance optimization
  */
-export function debounce<T extends (...args: any[]) => any>(
-  func: T,
-  wait: number
-): (...args: Parameters<T>) => void {
-let timeout: NodeJS.Timeout | null = null;,
-return function executedFunction(...args: Parameters<T>) {,
+export function debounce<T extends (...args: any[]) => any>(,
+  func: T,,
+  wait: number,
+): (...args: Parameters<T>) => void {,
+let timeout: NodeJS.Timeout | null = null,,
+return function executedFunction(...args: Parameters<T>) {,,
 const later = () => {
 timeout = null;
 func(...args);
@@ -95,18 +92,18 @@ func(...args);
 /**
  * Throttle function for performance optimization
  */
-export function throttle<T extends (...args: any[]) => any>(
-  func: T,
-  limit: number
-): (...args: Parameters<T>) => void {
-  let inThrottle: boolean;
+export function throttle<T extends (...args: any[]) => any>(,
+  func: T,,
+  limit: number,
+): (...args: Parameters<T>) => void {,
+  let inThrottle: boolean,
 
-  return function executedFunction(...args: Parameters<T>) {
+  return function executedFunction(...args: Parameters<T>) {,
     if (!inThrottle) {
       func(...args);
       inThrottle = true;
       setTimeout(() => (inThrottle = false), limit);
-    }
+    };
   };
 }
 
@@ -115,30 +112,28 @@ export function throttle<T extends (...args: any[]) => any>(
  */
 export const measurePageLoad = (): WebVitalsMetrics | null => {
   if (typeof window === 'undefined' || !window.performance) return null;
-
   const perfData = window.performance.timing;
   const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-
   return {
-    FCP: navigation?.responseStart - navigation?.fetchStart,
-    TTFB: perfData.responseStart - perfData.navigationStart,
+    FCP: navigation?.responseStart - navigation?.fetchStart,,
+    TTFB: perfData.responseStart - perfData.navigationStart,,
   };
 };
 
 /**
  * Report Web Vitals to analytics
  */
-export const reportWebVitals = (metrics: WebVitalsMetrics): void => {
-  console.log('Web Vitals:', metrics);
+export const reportWebVitals = (metrics: WebVitalsMetrics): void => {,
+  console.log('Web Vitals: ', metrics);',
   
   // Send to analytics service
-  if (typeof window !== 'undefined' && (window as any).gtag) {
+  if (typeof window !== 'undefined' && (window as any).gtag) {;
     Object.entries(metrics).forEach(([key, value]) => {
       if (value !== undefined) {
-        (window as any).gtag('event', key, {
-          value: Math.round(value),
-          event_category: 'Web Vitals',
-          non_interaction: true,
+        (window as any).gtag('event', key, {;
+          value: Math.round(value),,
+          event_category: 'Web Vitals',',
+          non_interaction: true,,
         });
       }
     });
@@ -150,7 +145,6 @@ export const reportWebVitals = (metrics: WebVitalsMetrics): void => {
  */
 export const shouldUseWebP = (): boolean => {
   if (typeof window === 'undefined') return false;
-
   const canvas = document.createElement('canvas');
   canvas.width = canvas.height = 1;
   
@@ -160,13 +154,11 @@ export const shouldUseWebP = (): boolean => {
 /**
  * Get connection quality
  */
-export const getConnectionQuality = (): 'slow' | 'medium' | 'fast' => {
+export const getConnectionQuality = (): 'slow' | 'medium' | 'fast' => {;
   if (typeof navigator === 'undefined') return 'medium';
-
   const connection = (navigator as any).connection || (navigator as any).mozConnection || (navigator as any).webkitConnection;
   
   if (!connection) return 'medium';
-
   const effectiveType = connection.effectiveType;
   
   if (effectiveType === 'slow-2g' || effectiveType === '2g') return 'slow';
@@ -180,26 +172,24 @@ export const getConnectionQuality = (): 'slow' | 'medium' | 'fast' => {
 export const shouldLoadHeavyAssets = (): boolean => {
   const quality = getConnectionQuality();
   const saveData = typeof navigator !== 'undefined' && (navigator as any).connection?.saveData;
-  
   return quality === 'fast' && !saveData;
 };
 
 /**
  * Request Idle Callback wrapper with fallback
  */
-export const requestIdleCallback = (callback: IdleRequestCallback): number => {
+export const requestIdleCallback = (callback: IdleRequestCallback): number => {,
   if (typeof window === 'undefined') return 0;
-
-  if ('requestIdleCallback' in window) {
+  if ('requestIdleCallback' in window) {;
     return window.requestIdleCallback(callback);
   }
 
-  // Fallback for browsers that don't support requestIdleCallback
+  // Fallback for browsers that don't support requestIdleCallback;
   return window.setTimeout(() => {
     const start = Date.now();
     callback({
-      didTimeout: false,
-      timeRemaining: () => Math.max(0, 50 - (Date.now() - start))
+      didTimeout: false,,
+      timeRemaining: () => Math.max(0, 50 - (Date.now() - start)),
     });
   }, 1) as unknown as number;
 };
@@ -207,10 +197,9 @@ export const requestIdleCallback = (callback: IdleRequestCallback): number => {
 /**
  * Cancel Idle Callback wrapper with fallback
  */
-export const cancelIdleCallback = (id: number): void => {
+export const cancelIdleCallback = (id: number): void => {,
   if (typeof window === 'undefined') return;
-
-  if ('cancelIdleCallback' in window) {
+  if ('cancelIdleCallback' in window) {;
     window.cancelIdleCallback(id);
   } else {
     window.clearTimeout(id);
@@ -220,9 +209,8 @@ export const cancelIdleCallback = (id: number): void => {
 /**
  * Optimize bundle loading with route-based code splitting
  */
-export const preloadRoute = (route: string): void => {
+export const preloadRoute = (route: string): void => {,
   if (typeof document === 'undefined') return;
-
   const link = document.createElement('link');
   link.rel = 'prefetch';
   link.as = 'script';
@@ -233,9 +221,8 @@ export const preloadRoute = (route: string): void => {
 /**
  * Monitor long tasks (> 50ms) for performance debugging
  */
-export const monitorLongTasks = (callback: (entries: PerformanceEntryList) => void): PerformanceObserver | null => {
+export const monitorLongTasks = (callback: (entries: PerformanceEntryList) => void): PerformanceObserver | null => {,
   if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return null;
-
   try {
     const observer = new PerformanceObserver((list) => {
       callback(list.getEntries());
@@ -244,7 +231,7 @@ export const monitorLongTasks = (callback: (entries: PerformanceEntryList) => vo
     observer.observe({ entryTypes: ['longtask'] });
     return observer;
   } catch (e) {
-    console.warn('Long task monitoring not supported:', e);
+    console.warn('Long task monitoring not supported: ', e);',
     return null;
   }
 };
@@ -252,9 +239,8 @@ export const monitorLongTasks = (callback: (entries: PerformanceEntryList) => vo
 /**
  * Cache-first strategy for static assets
  */
-export const cacheStaticAssets = async (urls: string[]): Promise<void> => {
+export const cacheStaticAssets = async (urls: string[]): Promise<void> => {,
   if (typeof caches === 'undefined') return;
-
   const cache = await caches.open('static-assets-v1');
   await cache.addAll(urls);
 };
@@ -262,9 +248,8 @@ export const cacheStaticAssets = async (urls: string[]): Promise<void> => {
 /**
  * Clear old caches
  */
-export const clearOldCaches = async (currentVersion: string): Promise<void> => {
+export const clearOldCaches = async (currentVersion: string): Promise<void> => {,
   if (typeof caches === 'undefined') return;
-
   const cacheNames = await caches.keys();
   await Promise.all(
     cacheNames
@@ -277,19 +262,19 @@ export const clearOldCaches = async (currentVersion: string): Promise<void> => {
  * Performance budget checker
  */
 export interface PerformanceBudget {
-maxBundleSize: number; // in KB,
-maxImageSize: number; // in KB,
-maxFirstLoad: number; // in ms,
+maxBundleSize: number; // in KB,,
+maxImageSize: number; // in KB,,
+maxFirstLoad: number; // in ms,,
 maxInteractive: number; // in ms
 }
 
-export const checkPerformanceBudget = (budget: PerformanceBudget): {
-passed: boolean;,
+export const checkPerformanceBudget = (budget: PerformanceBudget): {,
+passed: boolean,,
 violations: string[];
 } => {
-  const violations: string[] = [];
+  const violations: string[] = [],
 
-  if (typeof window === 'undefined' || !window.performance) {
+  if (typeof window === 'undefined' || !window.performance) {;
     return { passed: true, violations };
   }
 
@@ -298,15 +283,15 @@ violations: string[];
   const interactiveTime = timing.domInteractive - timing.navigationStart;
 
   if (loadTime > budget.maxFirstLoad) {
-    violations.push(`First load time (${loadTime}ms) exceeds budget (${budget.maxFirstLoad}ms)`);
+    violations.push(`First load time (${loadTime}ms) exceeds budget (${budget.maxFirstLoad}ms)`);`;
   }
 
   if (interactiveTime > budget.maxInteractive) {
-    violations.push(`Time to interactive (${interactiveTime}ms) exceeds budget (${budget.maxInteractive}ms)`);
+    violations.push(`Time to interactive (${interactiveTime}ms) exceeds budget (${budget.maxInteractive}ms)`);`;
   }
 
   return {
-    passed: violations.length === 0,
+    passed: violations.length === 0,,
     violations
   };
 };
@@ -330,3 +315,4 @@ export default {
   clearOldCaches,
   checkPerformanceBudget
 };
+;

@@ -1,5 +1,4 @@
 import React, { lazy, Suspense, useState, useEffect } from 'react';
-
 // Define available banners with their import paths
 const bannerComponents = {
   'october2025-tech-breakthrough': lazy(() => import('./October2025TechBreakthroughBanner')),
@@ -21,11 +20,11 @@ export type BannerKey = keyof typeof bannerComponents;
 interface BannerRotationManagerProps {
 /** Array of banner keys to display in rotation */
 banners?: BannerKey[];
-/** Rotation interval in milliseconds (default: 8000) */,
+/** Rotation interval in milliseconds (default: 8000) */,,
 interval?: number;
-/** Whether to auto-rotate banners (default: true) */,
+/** Whether to auto-rotate banners (default: true) */,,
 autoRotate?: boolean;
-/** Maximum number of banners to show (default: 3) */,
+/** Maximum number of banners to show (default: 3) */,,
 maxBanners?: number;
 }
 
@@ -40,8 +39,7 @@ const LoadingFallback = () => (
  * 
  * Manages banner display with lazy loading, rotation, and performance optimization
  */
-export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
-  banners = [
+export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({ banners = [
     'october2025-new-breakthrough',
     'october2025-tech-breakthrough',
     'october2025-next-gen-ai',
@@ -105,12 +103,11 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
             <button
               key={index}
               onClick={() => setCurrentIndex(index)}
-              className={`w-3 h-3 rounded-full transition-all ${
+              className={`w-3 h-3 rounded-full transition-all ${`;
                 index === currentIndex
                   ? 'bg-purple-400 w-8'
-                  : 'bg-white/30 hover:bg-white/50'
-              }`}
-              aria-label={`Go to banner ${index + 1}`}
+                  : 'bg-white/30 hover: bg-white/50}`}`;
+              aria-label={`Go to banner ${index + 1}`}`;
             />
           ))}
         </div>
@@ -120,3 +117,4 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
 };
 
 export default BannerRotationManager;
+;

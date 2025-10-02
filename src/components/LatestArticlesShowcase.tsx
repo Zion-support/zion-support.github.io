@@ -1,6 +1,5 @@
 import React from 'react';
-
-const LatestArticlesShowcase: React.FC = () => {
+const LatestArticlesShowcase: React.FC = () => {,
   const latestArticles = newArticles2025.filter(a => a.featured).slice(0, 6);
 
   return (
@@ -15,12 +14,12 @@ const LatestArticlesShowcase: React.FC = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
           {latestArticles.map((article) => (
             <Link
               key={article.id}
               to={article.link}
-              className="group bg-white rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 hover:border-indigo-300"
+              className="group bg-white rounded-xl shadow-md hover: shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 hover:border-indigo-300",
             >
               <div className="p-6">
                 <div className="flex items-center justify-between mb-3">
@@ -34,7 +33,7 @@ const LatestArticlesShowcase: React.FC = () => {
                   )}
                 </div>
                 
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover: text-indigo-600 transition-colors">",
                   {article.title}
                 </h3>
                 
@@ -44,12 +43,12 @@ const LatestArticlesShowcase: React.FC = () => {
                 
                 <div className="flex items-center justify-between text-sm">
                   <div className="flex items-center text-gray-500">
-                    <Clock className="w-4 h-4 mr-1" />
+                    <Clock className="w-4 h-4 mr-1/>
                     {article.readTime}
                   </div>
-                  <div className="text-indigo-600 font-semibold group-hover:gap-2 flex items-center transition-all">
+                  <div className="text-indigo-600 font-semibold group-hover: gap-2 flex items-center transition-all">",
                     Read More
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-4 h-4 group-hover: translate-x-1 transition-transform/>",
                   </div>
                 </div>
                 
@@ -71,10 +70,10 @@ const LatestArticlesShowcase: React.FC = () => {
         <div className="text-center mt-12">
           <Link
             to="/blog"
-            className="inline-flex items-center gap-2 bg-indigo-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-indigo-700 transition-all hover:scale-105 shadow-lg"
+            className="inline-flex items-center gap-2 bg-indigo-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover: bg-indigo-700 transition-all hover:scale-105 shadow-lg",
           >
             View All Articles
-            <ArrowRight className="w-6 h-6" />
+            <ArrowRight className="w-6 h-6/>
           </Link>
         </div>
       </div>

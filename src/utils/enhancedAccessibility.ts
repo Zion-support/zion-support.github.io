@@ -4,66 +4,66 @@
  */
 
 export interface AccessibilityConfig {
-enableKeyboardNavigation: boolean;
-enableScreenReaderSupport: boolean;
-enableHighContrast: boolean;
-enableFocusManagement: boolean;
-enableARIALabels: boolean;
-enableColorContrast: boolean;
-enableTextScaling: boolean;
-enableMotionReduction: boolean;
-enableVoiceControl: boolean;
+enableKeyboardNavigation: boolean,
+enableScreenReaderSupport: boolean,
+enableHighContrast: boolean,
+enableFocusManagement: boolean,
+enableARIALabels: boolean,
+enableColorContrast: boolean,
+enableTextScaling: boolean,
+enableMotionReduction: boolean,
+enableVoiceControl: boolean,
 enableTouchAccessibility: boolean;
 }
 
 export interface AccessibilityMetrics {
-colorContrastRatio: number;
-focusableElements: number;
-ariaLabels: number;
-headingStructure: number;
-altTexts: number;
-keyboardTraps: number;
-screenReaderCompatibility: number;
-overallScore: number;
-totalElements: number;
-accessibleElements: number;
-issuesFound: number;
+colorContrastRatio: number,
+focusableElements: number,
+ariaLabels: number,
+headingStructure: number,
+altTexts: number,
+keyboardTraps: number,
+screenReaderCompatibility: number,
+overallScore: number,
+totalElements: number,
+accessibleElements: number,
+issuesFound: number,
 score: number;
 }
 
 class EnhancedAccessibility {
-private config: AccessibilityConfig;,
-private metrics: AccessibilityMetrics;,
-private isInitialized: boolean = false;,
+private config: AccessibilityConfig,,
+private metrics: AccessibilityMetrics,,
+private isInitialized: boolean = false,,
 constructor(config: Partial<AccessibilityConfig> = {
 }) {
     this.config = {
-      enableKeyboardNavigation: true,
-      enableScreenReaderSupport: true,
-      enableHighContrast: true,
-      enableFocusManagement: true,
-      enableARIALabels: true,
-      enableColorContrast: true,
-      enableTextScaling: true,
-      enableMotionReduction: true,
-      enableVoiceControl: true,
-      enableTouchAccessibility: true,
+      enableKeyboardNavigation: true,,
+      enableScreenReaderSupport: true,,
+      enableHighContrast: true,,
+      enableFocusManagement: true,,
+      enableARIALabels: true,,
+      enableColorContrast: true,,
+      enableTextScaling: true,,
+      enableMotionReduction: true,,
+      enableVoiceControl: true,,
+      enableTouchAccessibility: true,,
       ...config
     };
 
     this.metrics = {
-      colorContrastRatio: 0,
-      focusableElements: 0,
-      ariaLabels: 0,
-      headingStructure: 0,
-      altTexts: 0,
-      keyboardTraps: 0,
-      screenReaderCompatibility: 0,
-      overallScore: 0,
-      totalElements: 0,
-      accessibleElements: 0,
-      issuesFound: 0,
-      score: 0
+      colorContrastRatio: 0,,
+      focusableElements: 0,,
+      ariaLabels: 0,,
+      headingStructure: 0,,
+      altTexts: 0,,
+      keyboardTraps: 0,,
+      screenReaderCompatibility: 0,,
+      overallScore: 0,,
+      totalElements: 0,,
+      accessibleElements: 0,,
+      issuesFound: 0,,
+      score: 0,
     };
   }
 
@@ -88,7 +88,7 @@ constructor(config: Partial<AccessibilityConfig> = {
   private setupKeyboardNavigation(): void {
     if (!this.config.enableKeyboardNavigation) return;
 
-    document.addEventListener('keydown', (event) => {
+    document.addEventListener('keydown', (event) => {;
       // Skip links and form elements
       if (event.target instanceof HTMLAnchorElement || 
           event.target instanceof HTMLInputElement ||
@@ -98,19 +98,19 @@ constructor(config: Partial<AccessibilityConfig> = {
       }
 
       // Handle arrow key navigation
-      if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+      if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {;
         event.preventDefault();
         this.navigateWithArrows(event.key === 'ArrowDown' ? 1 : -1);
       }
 
       // Handle tab navigation
-      if (event.key === 'Tab') {
+      if (event.key === 'Tab') {;
         this.enhanceTabNavigation(event);
       }
     });
   }
 
-  private navigateWithArrows(direction: number): void {
+  private navigateWithArrows(direction: number): void {,
     const focusableElements = this.getFocusableElements();
     const currentIndex = focusableElements.indexOf(document.activeElement as HTMLElement);
     const nextIndex = Math.max(0, Math.min(focusableElements.length - 1, currentIndex + direction));
@@ -120,7 +120,7 @@ constructor(config: Partial<AccessibilityConfig> = {
     }
   }
 
-  private enhanceTabNavigation(event: KeyboardEvent): void {
+  private enhanceTabNavigation(event: KeyboardEvent): void {,
     const focusableElements = this.getFocusableElements();
     const currentIndex = focusableElements.indexOf(document.activeElement as HTMLElement);
     
@@ -164,10 +164,10 @@ constructor(config: Partial<AccessibilityConfig> = {
   private enhanceFormLabels(): void {
     const inputs = document.querySelectorAll('input, textarea, select');
     inputs.forEach((input) => {
-      if (!input.getAttribute('aria-label') && !input.getAttribute('aria-labelledby')) {
-        const label = document.querySelector(`label[for="${input.id}"]`);
+      if (!input.getAttribute('aria-label') && !input.getAttribute('aria-labelledby')) {;
+        const label = document.querySelector(`label[for="${input.id}"]`);`;
         if (label) {
-          input.setAttribute('aria-labelledby', label.id || `label-${input.id}`);
+          input.setAttribute('aria-labelledby', label.id || `label-${input.id}`);`;
         }
       }
     });
@@ -179,19 +179,19 @@ constructor(config: Partial<AccessibilityConfig> = {
     skipLinks.innerHTML = `
       <a href="#main-content" class="skip-link">Skip to main content</a>
       <a href="#navigation" class="skip-link">Skip to navigation</a>
-    `;
+    `;`;
     document.body.insertBefore(skipLinks, document.body.firstChild);
   }
 
   private setupHighContrast(): void {
 if (!this.config.enableHighContrast) return;
 // Check for high contrast mode preference
-if (window.matchMedia('(prefers-contrast: high)').matches) {,
+if (window.matchMedia('(prefers-contrast: high)').matches) {,',
 document.body.classList.add('high-contrast');
 }
 
     // Listen for changes in contrast preference
-    window.matchMedia('(prefers-contrast: high)').addEventListener('change', (e) => {
+    window.matchMedia('(prefers-contrast: high)').addEventListener('change', (e) => {',
       if (e.matches) {
         document.body.classList.add('high-contrast');
       } else {
@@ -204,11 +204,11 @@ document.body.classList.add('high-contrast');
     if (!this.config.enableFocusManagement) return;
 
     // Add focus indicators
-    document.addEventListener('focusin', (event) => {
+    document.addEventListener('focusin', (event) => {;
       (event.target as HTMLElement).classList.add('focus-visible');
     });
 
-    document.addEventListener('focusout', (event) => {
+    document.addEventListener('focusout', (event) => {;
       (event.target as HTMLElement).classList.remove('focus-visible');
     });
   }
@@ -217,7 +217,7 @@ document.body.classList.add('high-contrast');
     if (!this.config.enableARIALabels) return;
 
     // Add ARIA labels to interactive elements
-    const buttons = document.querySelectorAll('button:not([aria-label])');
+    const buttons = document.querySelectorAll('button: not([aria-label])');',
     buttons.forEach((button) => {
       if (!button.textContent?.trim()) {
         button.setAttribute('aria-label', 'Button');
@@ -225,7 +225,7 @@ document.body.classList.add('high-contrast');
     });
 
     // Add ARIA labels to images
-    const images = document.querySelectorAll('img:not([alt])');
+    const images = document.querySelectorAll('img: not([alt])');',
     images.forEach((img) => {
       img.setAttribute('alt', 'Image');
     });
@@ -243,7 +243,6 @@ document.body.classList.add('high-contrast');
 
     // Support for text scaling
     document.body.style.fontSize = '100%';
-    
     // Listen for text scaling changes
     const observer = new ResizeObserver(() => {
       this.updateTextScaling();
@@ -255,12 +254,12 @@ document.body.classList.add('high-contrast');
   private setupMotionReduction(): void {
 if (!this.config.enableMotionReduction) return;
 // Check for reduced motion preference
-if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {,
+if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {,',
 document.body.classList.add('reduced-motion');
 }
 
     // Listen for changes in motion preference
-    window.matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change', (e) => {
+    window.matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change', (e) => {',
       if (e.matches) {
         document.body.classList.add('reduced-motion');
       } else {
@@ -273,8 +272,8 @@ document.body.classList.add('reduced-motion');
     if (!this.config.enableVoiceControl) return;
 
     // Add voice control support
-    document.addEventListener('keydown', (event) => {
-      if (event.ctrlKey && event.key === 'v') {
+    document.addEventListener('keydown', (event) => {;
+      if (event.ctrlKey && event.key === 'v') {;
         this.activateVoiceControl();
       }
     });
@@ -299,13 +298,12 @@ document.body.classList.add('reduced-motion');
   private getFocusableElements(): HTMLElement[] {
     const focusableSelectors = [
       'a[href]',
-      'button:not([disabled])',
-      'input:not([disabled])',
-      'select:not([disabled])',
-      'textarea:not([disabled])',
+      'button: not([disabled])',',
+      'input: not([disabled])',',
+      'select: not([disabled])',',
+      'textarea: not([disabled])',',
       '[tabindex]:not([tabindex="-1"])'
     ].join(', ');
-
     return Array.from(document.querySelectorAll(focusableSelectors)) as HTMLElement[];
   }
 
@@ -317,7 +315,7 @@ document.body.classList.add('reduced-motion');
   private updateTextScaling(): void {
     // Update text scaling based on user preferences
     const fontSize = window.getComputedStyle(document.body).fontSize;
-    console.log('Text scaling updated:', fontSize);
+    console.log('Text scaling updated: ', fontSize);',
   }
 
   private activateVoiceControl(): void {
@@ -332,20 +330,19 @@ document.body.classList.add('reduced-motion');
     const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
     const images = document.querySelectorAll('img');
     const imagesWithAlt = document.querySelectorAll('img[alt]');
-
     this.metrics = {
-      colorContrastRatio: 4.5, // Would be calculated by a contrast checker
-      focusableElements: focusableElements.length,
-      ariaLabels: ariaLabels.length,
-      headingStructure: headings.length,
-      altTexts: imagesWithAlt.length,
-      keyboardTraps: 0, // Would be detected by testing
-      screenReaderCompatibility: 85, // Would be calculated based on various factors
-      overallScore: 0,
-      totalElements: elements.length,
-      accessibleElements: focusableElements.length + ariaLabels.length,
-      issuesFound: 0,
-      score: 0
+      colorContrastRatio: 4.5, // Would be calculated by a contrast checker,
+      focusableElements: focusableElements.length,,
+      ariaLabels: ariaLabels.length,,
+      headingStructure: headings.length,,
+      altTexts: imagesWithAlt.length,,
+      keyboardTraps: 0, // Would be detected by testing,
+      screenReaderCompatibility: 85, // Would be calculated based on various factors,
+      overallScore: 0,,
+      totalElements: elements.length,,
+      accessibleElements: focusableElements.length + ariaLabels.length,,
+      issuesFound: 0,,
+      score: 0,
     };
 
     // Calculate overall score
@@ -382,7 +379,7 @@ document.body.classList.add('reduced-motion');
     return Math.min(maxScore, score);
   }
 
-  public announce(message: string): void {
+  public announce(message: string): void {,
     const announcement = document.getElementById('announcements');
     if (announcement) {
       announcement.textContent = message;
@@ -396,7 +393,7 @@ document.body.classList.add('reduced-motion');
   public getReport(): string {
 const metrics = this.analyzeAccessibility();
 return `
-Enhanced Accessibility Report:,
+Enhanced Accessibility Report: ,,
 - Overall Score: ${metrics.overallScore
 }/100
 - Focusable Elements: ${metrics.focusableElements}
@@ -405,7 +402,7 @@ Enhanced Accessibility Report:,
 - Heading Structure: ${metrics.headingStructure}
 - Issues Found: ${metrics.issuesFound}
 - Score: ${metrics.score}%
-`;
+`;`;
   }
 }
 
@@ -413,6 +410,7 @@ Enhanced Accessibility Report:,
 export const enhancedAccessibility = new EnhancedAccessibility();
 
 // Auto-initialize in browser environment
-if (typeof window !== 'undefined') {
+if (typeof window !== 'undefined') {;
   enhancedAccessibility.initialize();
 }
+;

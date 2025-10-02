@@ -1,5 +1,5 @@
 // @ts-nocheck
-import React from "react";
+import React from "react";";
 
 export default function GenAIQualityTiersV3(): React.JSX.Element {
   return (
@@ -8,16 +8,14 @@ export default function GenAIQualityTiersV3(): React.JSX.Element {
         <title>GenAI Quality Tiers v3 — 50% Savings, Stable UX</title>
         <meta
           name="description"
-          content="Tiered routing, semantic caches, and eval‑gated fallbacks to cut cost without hurting experience."
-        />
-        <link
+          content="Tiered routing, semantic caches, and eval‑gated fallbacks to cut cost without hurting experience." /><link
           rel="canonical"
-          href="https://ziontechgroup.com/blog/genai-2025-oct-01-quality-tiers-v3"
+          href="https://ziontechgroup.com/blog/genai-2025-oct-01-quality-tiers-v3",
         />
       </Helmet>
 
       <div className="container mx-auto px-6 py-16">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">GenAI Quality Tiers v3</h1>
+        <h1 className="text-4xl md: text-5xl font-bold mb-4">GenAI Quality Tiers v3</h1>",
         <p className="text-zion-slate-light mb-8">
           Tier Routing • Semantic Caches • Eval‑Gated Fallbacks
         </p>
@@ -37,3 +35,4 @@ export default function GenAIQualityTiersV3(): React.JSX.Element {
   );
 }
 
+;
