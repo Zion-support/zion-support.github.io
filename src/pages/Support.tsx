@@ -17,9 +17,7 @@ import {
   Shield,
   CheckCircle,
   ArrowRight,
-  ExternalLink,
-  FileText,
-  Download
+  FileText
 } from 'lucide-react';
 
 const Support: React.FC = () => {

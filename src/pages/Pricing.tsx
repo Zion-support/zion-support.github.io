@@ -184,7 +184,7 @@ const Pricing: React.FC = () => {
 
             {/* Pricing Plans */}
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-              {plans.map((plan, index) => (
+              {plans.map((plan) => (
                 <div
                   key={plan.name}
                   className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 hover:bg-slate-800/70 transition-all duration-300 ${

@@ -80,7 +80,7 @@ class AdvancedCacheManager<T = any> {
   /**
    * Set value in cache
    */
-  set(key: string, value: T, customMaxAge?: number): void {
+  set(key: string, value: T): void {
     // If cache is full, evict based on strategy
     if (this.cache.size >= this.config.maxSize) {
       this.evict();
