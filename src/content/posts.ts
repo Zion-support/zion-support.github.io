@@ -1768,6 +1768,7 @@ posts.push(
   },
 
 // Mar 2026 – Brand-new posts to advertise and surface on Home
+,
   {
     slug: "ai-governance-pr-policy-tests-2026",
     title: "PR Policy Tests 2026: Guardrails That Accelerate Delivery",
