@@ -332,7 +332,7 @@ class EnhancedAccessibility {
     const focusableElements = this.getFocusableElements();
     const ariaLabels = document.querySelectorAll('[aria-label], [aria-labelledby]');
     const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-    // const images = document.querySelectorAll('img'); // Available for future use
+    const images = document.querySelectorAll('img');
     const imagesWithAlt = document.querySelectorAll('img[alt]');
 
     this.metrics = {

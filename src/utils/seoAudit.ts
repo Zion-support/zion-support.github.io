@@ -111,7 +111,7 @@ class SEOAuditor {
         this.addIssue('warning', 'metadata', 'Title is too long', 'title', 'Keep title under 60 characters to avoid truncation', 'medium');
       }
     } else {
-      this.addIssue('error', 'metadata', 'Title tag is missing', 'head', 'Add a <title> tag to the <head>', 'high');
+      this.addIssue('error', 'metadata', 'Title tag is missing', 'head', 'Add a <title> tag to the <head> section', 'high');
     }
 
     // Meta description

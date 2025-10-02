@@ -36,9 +36,9 @@ export const metadata = {
 function Header() {
   return (
     <header className="border-b border-gray-200 sticky top-0 z-50 bg-white shadow-sm">
-      <nav className="flex items-center justify-between px-4 py-3 max-w-7xl mx-auto">
-        <Link href="/" className="font-bold text-xl text-gray-900 hover:text-blue-600 transition-colors flex items-center">
-          <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Zion Tech Group</span>
+      <nav className="flex items-center justify-between px-4 py-3 max-w-6xl mx-auto">
+        <Link href="/" className="font-bold text-lg text-gray-900 hover:text-blue-600 transition-colors">
+          Zion Tech Group
         </Link>
         
         {/* Desktop Navigation */}
@@ -51,28 +51,42 @@ function Header() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </button>
-            <div className="absolute top-full left-0 mt-2 w-72 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
               <div className="py-3">
                 <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">Core Services</div>
-                <Link href="/services/ai-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  AI Services & Solutions
+                <Link href="/services/ai-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600">
+                  AI & Machine Learning
                 </Link>
                 <Link href="/services/micro-saas" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
                   Micro SaaS Solutions
                 </Link>
-                <Link href="/services/it-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  IT Services & Solutions
+                <Link href="/services/it-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-600">
+                  IT Services & Infrastructure
                 </Link>
                 <div className="border-t border-gray-100 my-2"></div>
-                <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">Specialized Solutions</div>
-                <Link href="/services/ai-autonomous-operations" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">Emerging Technologies</div>
+                <Link href="/services/blockchain-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-600">
+                  Blockchain Solutions
+                </Link>
+                <Link href="/services/iot-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600">
+                  IoT Solutions
+                </Link>
+                <Link href="/services/cybersecurity-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600">
+                  Cybersecurity Solutions
+                </Link>
+                <Link href="/services/data-analytics" className="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600">
+                  Data Analytics & BI
+                </Link>
+                <div className="border-t border-gray-100 my-2"></div>
+                <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">Industry Solutions</div>
+                <Link href="/services/manufacturing-ai-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600">
+                  Manufacturing AI Platform
+                </Link>
+                <Link href="/services/supply-chain-intelligence" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  Supply Chain Intelligence
+                </Link>
+                <Link href="/services/ai-autonomous-operations" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600">
                   Autonomous Operations
-                </Link>
-                <Link href="/services/ai-business-intelligence-2025" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  Business Intelligence
-                </Link>
-                <Link href="/services/ai-cybersecurity-2025" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  Cybersecurity
                 </Link>
                 <div className="border-t border-gray-100 my-2"></div>
                 <Link href="/services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 font-medium">
@@ -81,11 +95,32 @@ function Header() {
               </div>
             </div>
           </div>
-
-          {/* Solutions */}
-          <Link href="/solutions" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
-            Solutions
-          </Link>
+          
+          {/* Solutions Dropdown */}
+          <div className="relative group">
+            <button className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1 font-medium">
+              Solutions
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <div className="py-3">
+                <Link href="/solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  All Solutions
+                </Link>
+                <Link href="/enterprise" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  Enterprise Solutions
+                </Link>
+                <Link href="/services/ai-quantum-computing-2026" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  Quantum Computing
+                </Link>
+                <Link href="/services/ai-autonomous-operations-2026" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  AI Operations 2026
+                </Link>
+              </div>
+            </div>
+          </div>
 
           {/* Resources Dropdown */}
           <div className="relative group">
@@ -97,17 +132,11 @@ function Header() {
             </button>
             <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
               <div className="py-3">
-                <Link href="/case-studies" className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600 flex items-center gap-2">
-                  <span>Case Studies</span>
-                  <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
-                    $43M+ ROI
-                  </span>
+                <Link href="/blog" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  Blog & Insights
                 </Link>
-                <Link href="/blog" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600 flex items-center gap-2">
-                  <span>Blog & Insights</span>
-                  <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
-                    50+ Articles
-                  </span>
+                <Link href="/case-studies" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  Case Studies
                 </Link>
                 <Link href="/guides" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
                   Implementation Guides
@@ -115,27 +144,51 @@ function Header() {
                 <Link href="/content-hub" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
                   Content Hub
                 </Link>
-                <div className="border-t border-gray-100 my-2"></div>
-                <Link href="/enterprise" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  Enterprise Solutions
-                </Link>
               </div>
             </div>
           </div>
 
-          {/* About */}
-          <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
-            About
-          </Link>
-
-          {/* Contact */}
-          <Link href="/contact" className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium">
-            Contact Us
-          </Link>
+          <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors">About</Link>
+          <Link href="/contact" className="text-gray-700 hover:text-blue-600 transition-colors">Contact</Link>
+          
+          {/* Featured Success Stories */}
+          <div className="relative group">
+            <button className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1 font-medium">
+              Success Stories
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <div className="py-3">
+                <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">Featured Breakthroughs</div>
+                <Link href="/blog/ai-2026-november-quantum-superintelligence-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 flex items-center gap-2">
+                  November 2026 Quantum AI
+                  <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                    $500B ROI
+                  </span>
+                </Link>
+                <Link href="/blog/ai-2026-august-quantum-consciousness-revolution" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 flex items-center gap-2">
+                  August 2026 Quantum Consciousness
+                  <span className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                    $50B SUCCESS
+                  </span>
+                </Link>
+                <Link href="/blog/ai-2026-july-mega-breakthrough-revolution" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 flex items-center gap-2">
+                  July 2026 Mega Breakthrough
+                  <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                    $25.3B SUCCESS
+                  </span>
+                </Link>
+                <div className="border-t border-gray-100 my-2"></div>
+                <Link href="/case-studies" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 font-medium">
+                  View All Case Studies →
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
-
-        {/* Mobile Menu Button */}
-        <button className="lg:hidden p-2" aria-label="Toggle menu">
+        <button className="md:hidden p-2" aria-label="Toggle menu">
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
           </svg>
@@ -149,85 +202,82 @@ function Footer() {
   return (
     <footer className="border-t border-gray-200 mt-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Services */}
           <div>
             <h3 className="font-semibold text-gray-900 mb-4 text-lg">Services</h3>
             <div className="space-y-3">
-              <Link href="/services/ai-services" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                AI Services & Solutions
+              <div className="text-sm font-medium text-gray-500 uppercase tracking-wide mb-2">Core Services</div>
+              <Link href="/services/ai-services" className="block text-gray-600 hover:text-purple-600 transition-colors">
+                AI & Machine Learning
               </Link>
               <Link href="/services/micro-saas" className="block text-gray-600 hover:text-blue-600 transition-colors">
                 Micro SaaS Solutions
               </Link>
-              <Link href="/services/it-services" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                IT Services & Solutions
+              <Link href="/services/it-services" className="block text-gray-600 hover:text-gray-600 transition-colors">
+                IT Services & Infrastructure
               </Link>
-              <Link href="/services/ai-autonomous-operations" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                Autonomous Operations
+              
+              <div className="text-sm font-medium text-gray-500 uppercase tracking-wide mb-2 mt-4">Emerging Technologies</div>
+              <Link href="/services/blockchain-solutions" className="block text-gray-600 hover:text-yellow-600 transition-colors">
+                Blockchain Solutions
               </Link>
-              <Link href="/services/ai-business-intelligence-2025" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                Business Intelligence
+              <Link href="/services/iot-solutions" className="block text-gray-600 hover:text-green-600 transition-colors">
+                IoT Solutions
+              </Link>
+              <Link href="/services/cybersecurity-solutions" className="block text-gray-600 hover:text-red-600 transition-colors">
+                Cybersecurity Solutions
+              </Link>
+              <Link href="/services/data-analytics" className="block text-gray-600 hover:text-indigo-600 transition-colors">
+                Data Analytics & BI
+              </Link>
+              <Link href="/services/manufacturing-ai-platform" className="block text-gray-600 hover:text-green-600 transition-colors">
+                Manufacturing AI Platform
+              </Link>
+              <Link href="/services/supply-chain-intelligence" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                Supply Chain Intelligence
               </Link>
               <Link href="/services" className="block text-gray-600 hover:text-blue-600 transition-colors font-medium">
                 All Services →
               </Link>
             </div>
           </div>
-
-          {/* Solutions */}
           <div>
-            <h3 className="font-semibold text-gray-900 mb-4 text-lg">Solutions</h3>
-            <div className="space-y-3">
-              <Link href="/solutions" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                All Solutions
+            <h3 className="font-semibold text-gray-900 mb-3">Latest Content</h3>
+            <div className="space-y-2">
+              <Link href="/blog/ai-customer-data-platforms-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                📊 AI Customer Data Platforms 2026
               </Link>
-              <Link href="/enterprise" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                Enterprise Solutions
+              <Link href="/blog/ai-customer-journey-ai-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                🛤️ AI Customer Journey 2026
               </Link>
-              <Link href="/services/ai-cybersecurity-2025" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                Cybersecurity
+              <Link href="/blog/ai-agent-observability-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                🔍 AI Agent Observability 2026
               </Link>
-              <Link href="/services/ai-cloud-infrastructure-2025" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                Cloud Infrastructure
+              <Link href="/blog/agentic-workflow-orchestration-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                ⚡ Agentic Workflow Orchestration
               </Link>
-              <Link href="/services/ai-quantum-computing-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                Quantum Computing
-              </Link>
-            </div>
-          </div>
-
-          {/* Resources */}
-          <div>
-            <h3 className="font-semibold text-gray-900 mb-4 text-lg">Resources</h3>
-            <div className="space-y-3">
-              <Link href="/case-studies" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                Case Studies
+              <Link href="/blog/ai-autonomous-cloud-ops-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                ☁️ AI Autonomous Cloud Ops 2026
               </Link>
               <Link href="/blog" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                Blog & Insights
-              </Link>
-              <Link href="/guides" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                Implementation Guides
-              </Link>
-              <Link href="/content-hub" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                Content Hub
-              </Link>
-              <Link href="/services-advertising" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                Advertising Solutions
+                📚 View All Blog Posts
               </Link>
             </div>
           </div>
 
-          {/* Company */}
+          {/* Company & Contact */}
           <div>
             <h3 className="font-semibold text-gray-900 mb-4 text-lg">Company</h3>
-            <div className="space-y-3">
+            <div className="space-y-3 mb-6">
               <Link href="/about" className="block text-gray-600 hover:text-blue-600 transition-colors">
                 About Us
               </Link>
               <Link href="/contact" className="block text-gray-600 hover:text-blue-600 transition-colors">
                 Contact
+              </Link>
+              <Link href="/sitemap" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                Sitemap
               </Link>
               <Link href="/privacy" className="block text-gray-600 hover:text-blue-600 transition-colors">
                 Privacy Policy
@@ -239,11 +289,8 @@ function Footer() {
                 Security
               </Link>
             </div>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <h3 className="font-semibold text-gray-900 mb-4 text-lg">Get In Touch</h3>
+            
+            {/* Contact Info */}
             <div className="space-y-3">
               <div className="flex items-center">
                 <svg className="w-5 h-5 text-gray-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -296,22 +343,8 @@ function Footer() {
             </div>
           </div>
         </div>
-        
-        {/* Bottom Bar */}
-        <div className="border-t border-gray-200 mt-8 pt-6">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-sm text-gray-500 mb-4 md:mb-0">
-              © {new Date().getFullYear()} Zion Tech Group. All rights reserved. | 
-              <span className="ml-2">Delaware, USA</span>
-            </div>
-            <div className="flex flex-wrap gap-4 text-sm text-gray-500">
-              <Link href="/privacy" className="hover:text-blue-600 transition-colors">Privacy Policy</Link>
-              <Link href="/terms" className="hover:text-blue-600 transition-colors">Terms of Service</Link>
-              <Link href="/security" className="hover:text-blue-600 transition-colors">Security</Link>
-              <span className="text-gray-400">|</span>
-              <span className="text-gray-400">SOC 2 Type II Certified</span>
-            </div>
-          </div>
+        <div className="border-t border-gray-200 mt-6 pt-4 text-xs text-gray-500 text-center">
+          © {new Date().getFullYear()} Zion Tech Group. All rights reserved.
         </div>
       </div>
     </footer>

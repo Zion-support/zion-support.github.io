@@ -1,187 +1,246 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 
 interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  componentCount: number;
-  bundleSize: number;
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  fcp?: number;
+  ttfb?: number;
+  loadTime?: number;
+  domContentLoaded?: number;
+  firstPaint?: number;
+  firstContentfulPaint?: number;
 }
 
 interface PerformanceMonitorProps {
   enabled?: boolean;
-  logLevel?: 'debug' | 'info' | 'warn' | 'error';
-  reportInterval?: number;
+  showMetrics?: boolean;
+  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
 }
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
-  enabled = true,
-  logLevel = 'info',
-  reportInterval = 5000,
+  enabled = process.env.NODE_ENV === 'development',
+  showMetrics = false,
+  onMetricsUpdate
 }) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0,
-    renderTime: 0,
-    memoryUsage: 0,
-    componentCount: 0,
-    bundleSize: 0,
-  });
-
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
   const [isVisible, setIsVisible] = useState(false);
 
-  // Measure performance metrics
-  const measurePerformance = useCallback(() => {
-    if (!enabled) return;
+  const updateMetrics = useCallback((newMetrics: PerformanceMetrics) => {
+    setMetrics(prev => ({ ...prev, ...newMetrics }));
+    onMetricsUpdate?.(newMetrics);
+  }, [onMetricsUpdate]);
 
-    const startTime = performance.now();
-    
-    // Measure page load time
-    const loadTime = performance.timing?.loadEventEnd 
-      ? performance.timing.loadEventEnd - performance.timing.navigationStart
-      : 0;
-
-    // Measure render time
-    const renderTime = performance.now() - startTime;
-
-    // Estimate memory usage (if available)
-    const memoryUsage = (performance as any).memory?.usedJSHeapSize 
-      ? Math.round((performance as any).memory.usedJSHeapSize / 1024 / 1024)
-      : 0;
-
-    // Count React components (rough estimate)
-    const componentCount = document.querySelectorAll('[data-reactroot]').length;
-
-    // Estimate bundle size (rough calculation)
-    const scripts = document.querySelectorAll('script[src]');
-    let bundleSize = 0;
-    scripts.forEach(script => {
-      const src = script.getAttribute('src');
-      if (src && !src.includes('vendor')) {
-        bundleSize += 50; // Rough estimate
-      }
-    });
-
-    setMetrics({
-      loadTime,
-      renderTime,
-      memoryUsage,
-      componentCount,
-      bundleSize,
-    });
-
-    // Log performance data
-    if (logLevel === 'debug' || logLevel === 'info') {
-      console.log('Performance Metrics:', {
-        loadTime: `${loadTime}ms`,
-        renderTime: `${renderTime.toFixed(2)}ms`,
-        memoryUsage: `${memoryUsage}MB`,
-        componentCount,
-        bundleSize: `${bundleSize}KB`,
-      });
-    }
-  }, [enabled, logLevel]);
-
-  // Set up performance monitoring
   useEffect(() => {
     if (!enabled) return;
 
-    // Initial measurement
-    measurePerformance();
-
-    // Set up interval monitoring
-    const interval = setInterval(measurePerformance, reportInterval);
-
-    // Monitor performance entries
-    const observer = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-        if (entry.entryType === 'measure' || entry.entryType === 'navigation') {
-          if (logLevel === 'debug') {
-            console.log('Performance Entry:', entry);
-          }
-        }
-      });
-    });
-
-    try {
-      observer.observe({ entryTypes: ['measure', 'navigation'] });
-    } catch (error) {
-      console.warn('Performance Observer not supported:', error);
+    // Only show in development or when performance issues are detected
+    if (process.env.NODE_ENV === 'development') {
+      setIsVisible(true);
     }
+
+    // Get basic performance metrics
+    const getBasicMetrics = () => {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const paint = performance.getEntriesByType('paint');
+      
+      const basicMetrics: PerformanceMetrics = {
+        loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+        ttfb: navigation.responseStart - navigation.requestStart,
+        firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime,
+        firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime,
+      };
+
+      updateMetrics(basicMetrics);
+    };
+
+    // Get Core Web Vitals using web-vitals library if available
+    const getWebVitals = async () => {
+      try {
+        // Dynamic import to avoid bundle size impact
+        const { getCLS, getFID, getFCP, getLCP, getTTFB } = await import('web-vitals');
+        
+        getCLS((metric) => {
+          updateMetrics({ cls: metric.value });
+        });
+        
+        getFID((metric) => {
+          updateMetrics({ fid: metric.value });
+        });
+        
+        getFCP((metric) => {
+          updateMetrics({ fcp: metric.value });
+        });
+        
+        getLCP((metric) => {
+          updateMetrics({ lcp: metric.value });
+        });
+        
+        getTTFB((metric) => {
+          updateMetrics({ ttfb: metric.value });
+        });
+      } catch (error) {
+        console.warn('Web Vitals library not available:', error);
+      }
+    };
+
+    // Monitor resource loading
+    const monitorResources = () => {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          if (entry.entryType === 'resource') {
+            const resourceEntry = entry as PerformanceResourceTiming;
+            if (resourceEntry.duration > 1000) { // Resources taking more than 1 second
+              console.warn('Slow resource detected:', {
+                name: resourceEntry.name,
+                duration: resourceEntry.duration,
+                size: resourceEntry.transferSize
+              });
+            }
+          }
+        });
+      });
+
+      observer.observe({ entryTypes: ['resource'] });
+    };
+
+    // Monitor long tasks
+    const monitorLongTasks = () => {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          if (entry.duration > 50) { // Tasks longer than 50ms
+            console.warn('Long task detected:', {
+              duration: entry.duration,
+              startTime: entry.startTime
+            });
+          }
+        });
+      });
+
+      observer.observe({ entryTypes: ['longtask'] });
+    };
+
+    // Initialize monitoring
+    getBasicMetrics();
+    getWebVitals();
+    monitorResources();
+    monitorLongTasks();
+
+    // Check for performance issues
+    const checkPerformanceIssues = () => {
+      const issues: string[] = [];
+      
+      if (metrics.lcp && metrics.lcp > 2500) {
+        issues.push('LCP is above 2.5s threshold');
+      }
+      
+      if (metrics.fid && metrics.fid > 100) {
+        issues.push('FID is above 100ms threshold');
+      }
+      
+      if (metrics.cls && metrics.cls > 0.1) {
+        issues.push('CLS is above 0.1 threshold');
+      }
+      
+      if (issues.length > 0) {
+        console.warn('Performance issues detected:', issues);
+        setIsVisible(true);
+      }
+    };
+
+    // Check performance after a delay to allow metrics to load
+    const timeoutId = setTimeout(checkPerformanceIssues, 3000);
 
     return () => {
-      clearInterval(interval);
-      observer.disconnect();
+      clearTimeout(timeoutId);
     };
-  }, [enabled, logLevel, reportInterval, measurePerformance]);
+  }, [enabled, updateMetrics, metrics.lcp, metrics.fid, metrics.cls]);
 
-  // Toggle visibility with keyboard shortcut
-  useEffect(() => {
-    const handleKeyPress = (event: KeyboardEvent) => {
-      if (event.ctrlKey && event.shiftKey && event.key === 'P') {
-        setIsVisible(prev => !prev);
-      }
-    };
+  const getPerformanceGrade = (metric: number, thresholds: { good: number; needsImprovement: number }) => {
+    if (metric <= thresholds.good) return 'Good';
+    if (metric <= thresholds.needsImprovement) return 'Needs Improvement';
+    return 'Poor';
+  };
 
-    document.addEventListener('keydown', handleKeyPress);
-    return () => document.removeEventListener('keydown', handleKeyPress);
-  }, []);
+  const formatMetric = (value?: number, unit: string = 'ms') => {
+    if (value === undefined) return 'N/A';
+    return `${value.toFixed(2)}${unit}`;
+  };
 
   if (!enabled || !isVisible) {
     return null;
   }
 
   return (
-    <div className="fixed bottom-4 right-4 bg-black bg-opacity-90 text-white p-4 rounded-lg shadow-lg z-50 min-w-[300px]">
-      <div className="flex items-center justify-between mb-2">
-        <h3 className="text-sm font-semibold">Performance Monitor</h3>
+    <div 
+      className="performance-monitor"
+      style={{
+        position: 'fixed',
+        bottom: '20px',
+        left: '20px',
+        background: 'rgba(0, 0, 0, 0.9)',
+        color: 'white',
+        padding: '15px',
+        borderRadius: '8px',
+        fontSize: '12px',
+        fontFamily: 'monospace',
+        zIndex: 1000,
+        minWidth: '300px',
+        maxWidth: '400px'
+      }}
+      role="region"
+      aria-label="Performance metrics"
+    >
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
+        <h3 style={{ margin: 0, fontSize: '14px' }}>Performance Monitor</h3>
         <button
           onClick={() => setIsVisible(false)}
-          className="text-gray-400 hover:text-white text-lg"
+          style={{
+            background: 'transparent',
+            border: 'none',
+            color: 'white',
+            cursor: 'pointer',
+            fontSize: '16px'
+          }}
+          aria-label="Close performance monitor"
         >
           ×
         </button>
       </div>
       
-      <div className="space-y-2 text-xs">
-        <div className="flex justify-between">
-          <span>Load Time:</span>
-          <span className={`${metrics.loadTime > 3000 ? 'text-red-400' : metrics.loadTime > 1000 ? 'text-yellow-400' : 'text-green-400'}`}>
-            {metrics.loadTime.toFixed(0)}ms
-          </span>
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px' }}>
+        <div>
+          <div style={{ fontWeight: 'bold', marginBottom: '4px' }}>Core Web Vitals</div>
+          <div>LCP: {formatMetric(metrics.lcp, 'ms')}</div>
+          <div style={{ fontSize: '10px', color: '#ccc' }}>
+            {metrics.lcp ? getPerformanceGrade(metrics.lcp, { good: 2500, needsImprovement: 4000 }) : 'N/A'}
+          </div>
+          
+          <div>FID: {formatMetric(metrics.fid, 'ms')}</div>
+          <div style={{ fontSize: '10px', color: '#ccc' }}>
+            {metrics.fid ? getPerformanceGrade(metrics.fid, { good: 100, needsImprovement: 300 }) : 'N/A'}
+          </div>
+          
+          <div>CLS: {formatMetric(metrics.cls)}</div>
+          <div style={{ fontSize: '10px', color: '#ccc' }}>
+            {metrics.cls ? getPerformanceGrade(metrics.cls, { good: 0.1, needsImprovement: 0.25 }) : 'N/A'}
+          </div>
         </div>
         
-        <div className="flex justify-between">
-          <span>Render Time:</span>
-          <span className={`${metrics.renderTime > 100 ? 'text-red-400' : metrics.renderTime > 50 ? 'text-yellow-400' : 'text-green-400'}`}>
-            {metrics.renderTime.toFixed(2)}ms
-          </span>
-        </div>
-        
-        <div className="flex justify-between">
-          <span>Memory Usage:</span>
-          <span className={`${metrics.memoryUsage > 100 ? 'text-red-400' : metrics.memoryUsage > 50 ? 'text-yellow-400' : 'text-green-400'}`}>
-            {metrics.memoryUsage}MB
-          </span>
-        </div>
-        
-        <div className="flex justify-between">
-          <span>Components:</span>
-          <span className="text-blue-400">{metrics.componentCount}</span>
-        </div>
-        
-        <div className="flex justify-between">
-          <span>Bundle Size:</span>
-          <span className={`${metrics.bundleSize > 1000 ? 'text-red-400' : metrics.bundleSize > 500 ? 'text-yellow-400' : 'text-green-400'}`}>
-            ~{metrics.bundleSize}KB
-          </span>
+        <div>
+          <div style={{ fontWeight: 'bold', marginBottom: '4px' }}>Loading Metrics</div>
+          <div>FCP: {formatMetric(metrics.fcp, 'ms')}</div>
+          <div>TTFB: {formatMetric(metrics.ttfb, 'ms')}</div>
+          <div>Load: {formatMetric(metrics.loadTime, 'ms')}</div>
+          <div>DOM Ready: {formatMetric(metrics.domContentLoaded, 'ms')}</div>
         </div>
       </div>
       
-      <div className="mt-3 pt-2 border-t border-gray-600">
-        <div className="text-xs text-gray-400">
-          Press Ctrl+Shift+P to toggle
-        </div>
+      <div style={{ marginTop: '10px', fontSize: '10px', color: '#ccc' }}>
+        <div>Green: Good | Yellow: Needs Improvement | Red: Poor</div>
       </div>
     </div>
   );

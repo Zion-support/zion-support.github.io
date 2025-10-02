@@ -41,7 +41,7 @@ const AIAutonomousOperations: React.FC = () => {
         </div>
 
         <div className="text-center">
-          <a 
+          <a title="Internal link" 
             href="/contact" 
             className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
           >

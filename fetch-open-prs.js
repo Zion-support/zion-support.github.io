@@ -1,57 +1,58 @@
 #!/usr/bin/env node
 
-const https = require('https');
+import https from 'https';
+import fs from 'fs';
+
+// GitHub API endpoint for open PRs
+const repo = 'Zion-Holdings/zion.app';
+const url = `https://api.github.com/repos/${repo}/pulls?state=open&per_page=100`;
+
+console.log('Fetching open PRs from GitHub...');
 
 const options = {
-  hostname: 'api.github.com',
-  path: '/repos/Zion-Holdings/zion.app/pulls?state=open',
   headers: {
-    'Authorization': 'token ' + (process.env.GITHUB_TOKEN || ''),
-    'User-Agent': 'Node.js',
+    'User-Agent': 'GitHub-PR-Merger',
     'Accept': 'application/vnd.github.v3+json'
   }
 };
 
-console.log('🔍 Checking for open pull requests...');
-
-const req = https.get(options, (res) => {
+https.get(url, options, (res) => {
   let data = '';
-  
+
   res.on('data', (chunk) => {
     data += chunk;
   });
-  
+
   res.on('end', () => {
     try {
       const prs = JSON.parse(data);
-      console.log(`Found ${prs.length} open pull requests:`);
+      
+      if (prs.length === 0) {
+        console.log('No open PRs found.');
+        return;
+      }
+
+      console.log(`Found ${prs.length} open PRs:`);
+      console.log('=====================================');
       
       prs.forEach((pr, index) => {
         console.log(`${index + 1}. PR #${pr.number}: ${pr.title}`);
-        console.log(`   Branch: ${pr.head.ref} -> ${pr.base.ref}`);
-        console.log(`   State: ${pr.state}`);
-        console.log(`   Mergeable: ${pr.mergeable}`);
+        console.log(`   Branch: ${pr.head.ref}`);
+        console.log(`   Author: ${pr.user.login}`);
+        console.log(`   Created: ${pr.created_at}`);
         console.log(`   URL: ${pr.html_url}`);
-        console.log('');
+        console.log(`   Mergeable: ${pr.mergeable === null ? 'Unknown' : pr.mergeable}`);
+        console.log('   ---');
       });
-      
-      if (prs.length === 0) {
-        console.log('✅ No open pull requests found');
-      }
-      
+
       // Save to file for processing
-      require('fs').writeFileSync('open_prs_current.json', JSON.stringify(prs, null, 2));
-      console.log('📁 Saved PR data to open_prs_current.json');
+      fs.writeFileSync('open-prs.json', JSON.stringify(prs, null, 2));
+      console.log('\nOpen PRs saved to open-prs.json');
       
     } catch (error) {
-      console.error('❌ Error parsing PR data:', error.message);
-      console.log('Raw response:', data);
+      console.error('Error parsing PR data:', error.message);
     }
   });
+}).on('error', (error) => {
+  console.error('Error fetching PRs:', error.message);
 });
-
-req.on('error', (error) => {
-  console.error('❌ Error checking PRs:', error.message);
-});
-
-req.end();

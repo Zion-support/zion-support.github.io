@@ -1,4 +1,5 @@
 import React from 'react';
+import { DollarSign, TrendingDown, Zap, Link, ArrowRight } from 'lucide-react';
 
 const AICostOptimizationBanner: React.FC = () => {
   const costOptimizationContent = [
@@ -197,14 +198,14 @@ const AICostOptimizationBanner: React.FC = () => {
                 optimization strategies. Get your free cost optimization audit today.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
+                <a title="Internal link"
                   href="/contact"
                   className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 flex items-center justify-center gap-2"
                 >
                   <DollarSign className="w-5 h-5" />
                   <span>Get Free Cost Audit</span>
                 </a>
-                <a
+                <a title="Internal link"
                   href="tel:+13024640950"
                   className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
                 >

@@ -100,13 +100,13 @@ const AIInnovationAdvertisingBanner: React.FC = () => {
             </div>
 
             <div className="space-y-4">
-              <a 
+              <a title="Internal link" 
                 href="/contact?offer=ai-innovation-50" 
                 className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1 text-center block"
               >
                 Claim Your 50% Discount Now
               </a>
-              <a 
+              <a title="Internal link" 
                 href="/schedule-demo" 
                 className="w-full border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 text-center block"
               >

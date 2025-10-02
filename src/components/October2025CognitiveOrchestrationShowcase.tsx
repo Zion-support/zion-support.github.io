@@ -99,7 +99,7 @@ const October2025CognitiveOrchestrationShowcase: React.FC = () => {
             Schedule your free assessment and discover how Cognitive Orchestration can transform your enterprise
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
+            <a title="Internal link"
               href="tel:+13024640950"
               className="bg-black text-white hover:bg-gray-800 font-bold py-4 px-8 rounded-lg text-lg transition-all inline-block"
             >

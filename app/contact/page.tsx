@@ -1,300 +1,310 @@
 import React from 'react';
-import Head from 'next/head';
-import ContactInfo from '../../components/ContactInfo';
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Globe, 
-  Clock, 
-  CheckCircle, 
-  ArrowRight,
-  MessageSquare,
-  Calendar,
-  Users,
-  Award,
-  Star,
-  DollarSign,
-  Target,
-  Zap
-} from 'lucide-react';
+import Link from 'next/link';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Contact Zion Tech Group - Get Started with AI Solutions',
+  description: 'Contact Zion Tech Group for AI consulting, micro SaaS development, and IT solutions. Call +1 302 464 0950 or email kleber@ziontechgroup.com',
+  keywords: 'contact Zion Tech Group, AI consulting, IT solutions, business transformation, contact form',
+};
 
 export default function ContactPage() {
-  const title = 'Contact Us — Zion Tech Group';
-  const description = 'Get in touch with Zion Tech Group for AI, micro SaaS, and IT solutions. Call +1 302 464 0950 or email kleber@ziontechgroup.com for a free consultation.';
-
-  const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  };
-
-  const businessHours = [
-    { day: 'Monday - Friday', hours: '9:00 AM - 6:00 PM EST' },
-    { day: 'Saturday', hours: '10:00 AM - 4:00 PM EST' },
-    { day: 'Sunday', hours: 'By Appointment' }
-  ];
-
-  const services = [
-    'AI Services & Solutions',
-    'Micro SaaS Development',
-    'IT Services & Infrastructure',
-    'Cloud Migration & Architecture',
-    'DevOps & CI/CD Pipeline',
-    'Cybersecurity & Compliance',
-    'Data Engineering & Analytics',
-    'Platform Engineering'
-  ];
-
-  const stats = [
-    { label: 'Projects Completed', value: '500+', icon: Target },
-    { label: 'Client Satisfaction', value: '98%', icon: Star },
-    { label: 'Average ROI', value: '340%', icon: DollarSign },
-    { label: 'Response Time', value: '< 2 hours', icon: Clock }
-  ];
-
-  const consultationBenefits = [
-    'Free 30-minute consultation',
-    'Custom solution proposal within 48 hours',
-    'Transparent pricing with no hidden costs',
-    'Implementation timeline and roadmap',
-    'ROI projections and success metrics',
-    'Ongoing support and maintenance'
-  ];
-
   return (
-    <>
-      <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href={`${contactInfo.website}/contact`} />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-slate-50">
-        {/* Header Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
-          <div className="container mx-auto px-6 text-center">
-            <div className="flex items-center justify-center mb-4">
-              <MessageSquare className="h-8 w-8 mr-3" />
-              <span className="text-lg font-semibold">Contact Us</span>
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Get In Touch
-            </h1>
-            <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto">
-              Ready to transform your business with AI, micro SaaS, or IT solutions? 
-              Contact us today for a free consultation and custom proposal.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-lg">
-              <a 
-                href={`tel:${contactInfo.phone}`} 
-                className="flex items-center bg-white/20 hover:bg-white/30 px-6 py-3 rounded-lg transition-colors"
-              >
-                <Phone className="h-5 w-5 mr-2" />
-                {contactInfo.phone}
-              </a>
-              <a 
-                href={`mailto:${contactInfo.email}`} 
-                className="flex items-center bg-white/20 hover:bg-white/30 px-6 py-3 rounded-lg transition-colors"
-              >
-                <Mail className="h-5 w-5 mr-2" />
-                {contactInfo.email}
-              </a>
-            </div>
-          </div>
-        </section>
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+      {/* Hero Section */}
+      <section className="relative py-20 px-6 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div className="container mx-auto text-center">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            Contact Us
+          </h1>
+          <p className="text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
+            Ready to transform your business with AI? Let's discuss your project 
+            and explore how we can help you achieve your goals.
+          </p>
+        </div>
+      </section>
 
-        {/* Stats Section */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-6">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="flex justify-center mb-4">
-                    <stat.icon className="h-12 w-12 text-blue-600" />
+      {/* Contact Information */}
+      <section className="py-20 px-6">
+        <div className="container mx-auto">
+          <div className="grid md:grid-cols-2 gap-12">
+            {/* Contact Form */}
+            <div className="bg-white rounded-xl shadow-lg p-8">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
+              <form className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">
+                      First Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="firstName"
+                      name="firstName"
+                      required
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      placeholder="Your first name"
+                    />
                   </div>
-                  <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
-                  <div className="text-gray-600">{stat.label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Contact Information */}
-        <section className="py-16">
-          <div className="container mx-auto px-6">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              {/* Contact Details */}
-              <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-8">Contact Information</h2>
-                <ContactInfo variant="detailed" showTitle={false} />
-                
-                <div className="mt-8">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Business Hours</h3>
-                  <div className="space-y-2">
-                    {businessHours.map((schedule, index) => (
-                      <div key={index} className="flex justify-between items-center py-2 border-b border-gray-100">
-                        <span className="font-medium text-gray-900">{schedule.day}</span>
-                        <span className="text-gray-600">{schedule.hours}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              {/* Services We Offer */}
-              <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-8">Services We Offer</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {services.map((service, index) => (
-                    <div key={index} className="flex items-center p-4 bg-white rounded-lg shadow-sm border border-gray-100">
-                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                      <span className="text-gray-700">{service}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Free Consultation Section */}
-        <section className="py-16 bg-gray-50">
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Free Consultation</h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Get a free 30-minute consultation to discuss your project requirements and receive a custom proposal.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white rounded-xl p-8 shadow-sm">
-                <h3 className="text-xl font-semibold text-gray-900 mb-6">What's Included</h3>
-                <div className="space-y-4">
-                  {consultationBenefits.map((benefit, index) => (
-                    <div key={index} className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-700">{benefit}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              
-              <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-8">
-                <h3 className="text-xl font-semibold text-gray-900 mb-6">Schedule Your Call</h3>
-                <div className="space-y-4">
-                  <div className="flex items-center">
-                    <Calendar className="w-5 h-5 text-blue-600 mr-3" />
-                    <span className="text-gray-700">Available Monday - Friday, 9 AM - 6 PM EST</span>
-                  </div>
-                  <div className="flex items-center">
-                    <Clock className="w-5 h-5 text-blue-600 mr-3" />
-                    <span className="text-gray-700">30-minute consultation</span>
-                  </div>
-                  <div className="flex items-center">
-                    <Users className="w-5 h-5 text-blue-600 mr-3" />
-                    <span className="text-gray-700">Meet with our technical experts</span>
-                  </div>
-                  <div className="flex items-center">
-                    <Award className="w-5 h-5 text-blue-600 mr-3" />
-                    <span className="text-gray-700">Custom solution proposal within 48 hours</span>
+                  <div>
+                    <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">
+                      Last Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="lastName"
+                      name="lastName"
+                      required
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      placeholder="Your last name"
+                    />
                   </div>
                 </div>
                 
-                <div className="mt-6 space-y-3">
-                  <a 
-                    href={`tel:${contactInfo.phone}`}
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center"
-                  >
-                    <Phone className="mr-2 h-5 w-5" />
-                    Call Now: {contactInfo.phone}
-                  </a>
-                  <a 
-                    href={`mailto:${contactInfo.email}?subject=Free Consultation Request`}
-                    className="w-full bg-white hover:bg-gray-50 text-blue-600 font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center border border-blue-600"
-                  >
-                    <Mail className="mr-2 h-5 w-5" />
-                    Email Us
-                  </a>
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                    Email Address *
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="your.email@company.com"
+                  />
                 </div>
+                
+                <div>
+                  <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+                    Company
+                  </label>
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="Your company name"
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                    Phone Number
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="+1 (555) 123-4567"
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
+                    Service Interest
+                  </label>
+                  <select
+                    id="service"
+                    name="service"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  >
+                    <option value="">Select a service</option>
+                    <option value="ai-data-analytics">AI Data Analytics</option>
+                    <option value="ai-workflow-automation">AI Workflow Automation</option>
+                    <option value="ai-virtual-assistant">AI Virtual Assistant</option>
+                    <option value="autonomous-operations">Autonomous Business Operations</option>
+                    <option value="generative-ai">Generative AI Solutions</option>
+                    <option value="cloud-migration">Cloud Migration & DevOps</option>
+                    <option value="micro-saas">Micro SaaS Development</option>
+                    <option value="ai-consulting">Enterprise AI Consulting</option>
+                    <option value="ai-security">Cybersecurity & AI Security</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                    Message *
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows={6}
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="Tell us about your project, goals, and how we can help..."
+                  ></textarea>
+                </div>
+                
+                <button
+                  type="submit"
+                  className="w-full bg-blue-600 text-white py-4 px-6 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
+
+            {/* Contact Information */}
+            <div className="space-y-8">
+              <div className="bg-white rounded-xl shadow-lg p-8">
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">Get in Touch</h2>
+                
+                <div className="space-y-6">
+                  <div className="flex items-start">
+                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                      <span className="text-blue-600 text-xl">📞</span>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-gray-900 mb-1">Phone</h3>
+                      <a href="tel:+13024640950" className="text-blue-600 hover:text-blue-700 transition-colors">
+                        +1 302 464 0950
+                      </a>
+                      <p className="text-sm text-gray-600 mt-1">Available Monday - Friday, 9 AM - 6 PM EST</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start">
+                    <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                      <span className="text-green-600 text-xl">📧</span>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-gray-900 mb-1">Email</h3>
+                      <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:text-blue-700 transition-colors">
+                        kleber@ziontechgroup.com
+                      </a>
+                      <p className="text-sm text-gray-600 mt-1">We typically respond within 24 hours</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start">
+                    <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                      <span className="text-purple-600 text-xl">📍</span>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-gray-900 mb-1">Address</h3>
+                      <p className="text-gray-700">
+                        364 E Main St STE 1008<br />
+                        Middletown, DE 19709
+                      </p>
+                      <p className="text-sm text-gray-600 mt-1">United States</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Quick Response */}
+              <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-8 border border-blue-200">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Need Immediate Assistance?</h3>
+                <p className="text-gray-600 mb-6">
+                  For urgent inquiries or immediate support, call us directly. We're here to help you get started with your AI transformation journey.
+                </p>
+                <a
+                  href="tel:+13024640950"
+                  className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                >
+                  <span className="text-xl mr-2">📞</span>
+                  Call Now: +1 302 464 0950
+                </a>
+              </div>
+
+              {/* Business Hours */}
+              <div className="bg-white rounded-xl shadow-lg p-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Business Hours</h3>
+                <div className="space-y-2">
+                  <div className="flex justify-between">
+                    <span className="text-gray-600">Monday - Friday</span>
+                    <span className="font-semibold text-gray-900">9:00 AM - 6:00 PM EST</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-600">Saturday</span>
+                    <span className="font-semibold text-gray-900">10:00 AM - 4:00 PM EST</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-600">Sunday</span>
+                    <span className="font-semibold text-gray-900">Closed</span>
+                  </div>
+                </div>
+                <p className="text-sm text-gray-600 mt-4">
+                  Emergency support available 24/7 for existing clients
+                </p>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Why Choose Us */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Zion Tech Group?</h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                We deliver exceptional results with transparent pricing, fast delivery, and ongoing support.
+      {/* FAQ Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Quick answers to common questions about our services and process
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto space-y-6">
+            <div className="bg-gray-50 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">How quickly can you start my project?</h3>
+              <p className="text-gray-600">
+                Most projects can begin within 1-2 weeks of initial consultation. We'll provide a detailed timeline during our discovery call.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <DollarSign className="w-8 h-8 text-green-600" />
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Transparent Pricing</h3>
-                <p className="text-gray-600">No hidden fees. Clear pricing with market comparisons and guaranteed ROI.</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Zap className="w-8 h-8 text-blue-600" />
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Fast Delivery</h3>
-                <p className="text-gray-600">Most projects delivered 2-3x faster than industry standards with quality assurance.</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Star className="w-8 h-8 text-purple-600" />
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Proven Results</h3>
-                <p className="text-gray-600">98% client satisfaction with documented ROI improvements and case studies.</p>
-              </div>
+            <div className="bg-gray-50 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">What's included in your AI consulting services?</h3>
+              <p className="text-gray-600">
+                Our consulting includes strategy development, technology assessment, implementation planning, and ongoing support. We provide end-to-end guidance for your AI transformation.
+              </p>
+            </div>
+            
+            <div className="bg-gray-50 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Do you work with small businesses?</h3>
+              <p className="text-gray-600">
+                Absolutely! We work with businesses of all sizes, from startups to Fortune 500 companies. Our micro SaaS solutions are specifically designed for smaller organizations.
+              </p>
+            </div>
+            
+            <div className="bg-gray-50 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">What's your typical project timeline?</h3>
+              <p className="text-gray-600">
+                Project timelines vary based on complexity. Simple AI implementations can take 4-8 weeks, while comprehensive enterprise transformations may take 6-12 months.
+              </p>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Final CTA */}
-        <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-          <div className="container mx-auto px-6 text-center">
-            <h2 className="text-3xl font-bold mb-6">Ready to Get Started?</h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Contact us today for a free consultation and discover how our solutions can drive your success.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a 
-                href={`tel:${contactInfo.phone}`}
-                className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-colors flex items-center"
-              >
-                <Phone className="mr-2 h-5 w-5" />
-                Call {contactInfo.phone}
-              </a>
-              <a 
-                href={`mailto:${contactInfo.email}?subject=Project Inquiry`}
-                className="bg-white/20 hover:bg-white/30 text-white font-semibold py-4 px-8 rounded-lg transition-colors flex items-center"
-              >
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us
-              </a>
-            </div>
-            
-            <div className="mt-8 text-blue-100">
-              <p>📍 {contactInfo.address}</p>
-              <p>🌐 <a href={contactInfo.website} className="hover:text-white">{contactInfo.website}</a></p>
-            </div>
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-4xl font-bold mb-4">
+            Ready to Get Started?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            Don't wait to transform your business. Contact us today for a free consultation and discover how AI can drive your success.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="tel:+13024640950"
+              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl"
+            >
+              Call +1 302 464 0950
+            </a>
+            <a
+              href="mailto:kleber@ziontechgroup.com"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"
+            >
+              Email Us
+            </a>
           </div>
-        </section>
-      </div>
-    </>
+        </div>
+      </section>
+    </div>
   );
 }
