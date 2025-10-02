@@ -209,7 +209,11 @@ featured: false
                   href={`/blog/${content.slug}`}`;
                   className="group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r from-purple-500 to-blue-600 hover: from-purple-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1",
                 >
+<<<<<<< HEAD
+                  <ArrowRight className="w-4 h-4/>
+=======
                   <ArrowRight className="w-4 h-4" />
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f00f
                   <span>Explore Breakthrough</span>
                   <span className="w-4 h-4 group-hover/btn: translate-x-1 transition-transform duration-300">›</span>",
                 </a>

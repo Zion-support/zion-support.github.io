@@ -6,7 +6,13 @@
   },
   "include": [
     "src/**/*.ts",
+<<<<<<< HEAD
+    "src/**/*.tsx",
+    "types/**/*.ts",
+    "next-env.d.ts"
+=======
     "src/**/*.tsx"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f00f
   ],
   "exclude": [
     "node_modules",

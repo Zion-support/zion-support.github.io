@@ -206,7 +206,11 @@ const LatestContentBanner2025: React.FC = () => {,
                     <Zap className="w-4 h-4 text-cyan-400/>
                     {article.readTime || '5 min'};
                   </span>
+<<<<<<< HEAD
+                  <span>{article.date ? new Date(article.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : ''}</span>;
+=======
                   <span>{article.date ? new Date(article.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : ''}</span>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f00f
                 </div>
 
                 {/* CTA Button */}
