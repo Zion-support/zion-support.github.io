@@ -1,5 +1,14 @@
 import React, { useEffect, PropsWithChildren } from 'react';';
 
+<<<<<<< HEAD
+const AccessibilityEnhancer: React.FC = () => {,
+useEffect(() => {
+// Skip link functionality
+const handleKeyDown = (event: KeyboardEvent) => {,,
+if (event.key === 'Tab') {';
+document.body.classList.add('keyboard-navigation');';
+};
+=======
 const AccessibilityEnhancer: React.FC<React.PropsWithChildren> = ({ children }) => {
   useEffect(() => {
     // Skip link functionality
@@ -7,6 +16,7 @@ const AccessibilityEnhancer: React.FC<React.PropsWithChildren> = ({ children }) 
       if (event.key === 'Tab') {
         document.body.classList.add('keyboard-navigation');
       }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3b26
     };
 
     const handleMouseDown = () => {
@@ -87,8 +97,13 @@ const AccessibilityEnhancer: React.FC<React.PropsWithChildren> = ({ children }) 
     });
 
     observer.observe(document.body, {
+<<<<<<< HEAD
+      childList: true,,
+      subtree: true,
+=======
       childList: true,
       subtree: true
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3b26
     });
 
     return () => {

@@ -230,8 +230,13 @@ const App: React.FC = () => {,
           </div>
         )}
 
+<<<<<<< HEAD
+        <NotificationSystem notifications={notifications} onRemove={handleRemoveNotification} />
+      </HelmetProvider>
+=======
       <NotificationSystem notifications={notifications} onRemove={handleRemoveNotification} />
     </HelmetProvider>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3b26
     </>
   );
 };
