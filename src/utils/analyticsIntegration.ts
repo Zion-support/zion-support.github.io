@@ -192,7 +192,7 @@ class AnalyticsIntegration {
               };
             }
             for (
-              var d = {},
+              var d = {}
                 e = ['get_group'].concat(Array.prototype.slice.call(arguments, 0)),
                 c = 0;
               c < j.length;
@@ -285,12 +285,10 @@ class AnalyticsIntegration {
       e.amplitude = n;
     })(window, document);
 
-    (window as any).amplitude.getInstance().init(apiKey, undefined, {
-      includeReferrer: true,
+    (window as any).amplitude.getInstance().init(apiKey, undefined, {includeReferrer: true,
       includeUtm: true,
       trackingOptions: {
-        ipAddress: !this.config.privacy.anonymizeIp,
-      },
+        ipAddress: !this.config.privacy.anonymizeIp}
     });
 
     if (this.config.debug) {
@@ -374,14 +372,12 @@ class AnalyticsIntegration {
   /**
    * Track event
    */
-  track(eventName: string, properties?: Record<string, any>): void {
-    const event: AnalyticsEvent = {
+  track(eventName: string, properties?: Record<string, any>): void {const event: AnalyticsEvent = {
       name: eventName,
       properties,
       timestamp: Date.now(),
       userId: this.currentUser?.id,
-      sessionId: this.sessionId,
-    };
+      sessionId: this.sessionId};
 
     if (!this.consentGiven || !this.initialized) {
       this.eventQueue.push(event);
@@ -413,14 +409,12 @@ class AnalyticsIntegration {
   /**
    * Track page view
    */
-  page(pageName?: string, properties?: Record<string, any>): void {
-    const pageProps = {
+  page(pageName?: string, properties?: Record<string, any>): void {const pageProps = {
       ...properties,
       path: window.location.pathname,
       url: window.location.href,
       title: document.title,
-      referrer: document.referrer,
-    };
+      referrer: document.referrer};
 
     if (this.config.providers.googleAnalytics?.enabled) {
       (window as any).gtag?.('event', 'page_view', pageProps);
@@ -446,11 +440,9 @@ class AnalyticsIntegration {
   /**
    * Identify user
    */
-  identify(userId: string, traits?: Record<string, any>): void {
-    this.currentUser = {
+  identify(userId: string, traits?: Record<string, any>): void {this.currentUser = {
       id: userId,
-      traits,
-    };
+      traits};
 
     if (!this.consentGiven || !this.initialized) {
       return;
@@ -555,12 +547,10 @@ class AnalyticsIntegration {
 
 // Default configuration
 const defaultConfig: AnalyticsConfig = {
-  providers: {},
-  privacy: {
-    respectDoNotTrack: true,
+  providers: {}
+  privacy: {respectDoNotTrack: true,
     anonymizeIp: true,
-    consentRequired: false,
-  },
+    consentRequired: false}
   debug: process.env.NODE_ENV === 'development',
 };
 
@@ -570,18 +560,14 @@ export let analytics: AnalyticsIntegration;
 /**
  * Initialize analytics
  */
-export function initializeAnalytics(config: Partial<AnalyticsConfig>): AnalyticsIntegration {
-  const mergedConfig = {
+export function initializeAnalytics(config: Partial<AnalyticsConfig>): AnalyticsIntegration {const mergedConfig = {
     ...defaultConfig,
     ...config,
     providers: {
       ...defaultConfig.providers,
-      ...config.providers,
-    },
-    privacy: {
-      ...defaultConfig.privacy,
-      ...config.privacy,
-    },
+      ...config.providers}
+    privacy: {...defaultConfig.privacy,
+      ...config.privacy}
   };
 
   analytics = new AnalyticsIntegration(mergedConfig);

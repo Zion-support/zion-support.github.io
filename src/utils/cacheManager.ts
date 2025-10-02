@@ -27,18 +27,14 @@ class CacheManager {
     key: string,
     value: T,
     options: CacheOptions = {}
-  ): void {
-    const {
+  ): void {const {
       ttl = this.DEFAULT_TTL,
       strategy = 'memory',
-      maxSize = this.DEFAULT_MAX_SIZE,
-    } = options;
+      maxSize = this.DEFAULT_MAX_SIZE} =  options;
 
-    const entry: CacheEntry<T> = {
-      data: value,
+    const entry: CacheEntry<T> = {data: value,
       timestamp: Date.now(),
-      ttl,
-    };
+      ttl};
 
     switch (strategy) {
       case 'memory':
@@ -93,13 +89,13 @@ class CacheManager {
     strategy: 'memory' | 'localStorage' | 'sessionStorage' = 'memory'
   ): void {
 switch (strategy) {
-case 'memory':,
+case 'memory':
 this.memoryCache.delete(key);
 break;
-case 'localStorage':,
+case 'localStorage':
 localStorage.removeItem(key);
 break;
-case 'sessionStorage':,
+case 'sessionStorage':
 sessionStorage.removeItem(key);
 break;
 }
@@ -156,17 +152,17 @@ break;
    */
   invalidatePattern(pattern: RegExp, strategy: 'memory' | 'localStorage' | 'sessionStorage' = 'memory'): void {
 switch (strategy) {
-case 'memory':,
+case 'memory':
 Array.from(this.memoryCache.keys())
 .filter(key => pattern.test(key))
 .forEach(key => this.memoryCache.delete(key));
 break;
-case 'localStorage':,
+case 'localStorage':
 Object.keys(localStorage)
 .filter(key => pattern.test(key))
 .forEach(key => localStorage.removeItem(key));
 break;
-case 'sessionStorage':,
+case 'sessionStorage':
 Object.keys(sessionStorage)
 .filter(key => pattern.test(key))
 .forEach(key => sessionStorage.removeItem(key));
@@ -181,12 +177,10 @@ break;
 memorySize: number;,
 localStorageSize: number;,
 sessionStorageSize: number;
-} {
-    return {
+} {return {
       memorySize: this.memoryCache.size,
       localStorageSize: localStorage.length,
-      sessionStorageSize: sessionStorage.length,
-    };
+      sessionStorageSize: sessionStorage.length};
   }
 
   // Private helper methods
@@ -275,7 +269,7 @@ export const cacheManager = new CacheManager();
 if (typeof window !== 'undefined') {
   setInterval(() => {
     cacheManager.cleanup();
-  }, 5 * 60 * 1000);
+  } 5 * 60 * 1000);
 }
 
 export default cacheManager;

@@ -44,7 +44,7 @@ export const bannerPresets = {
     icon: 'rocket' as const,
     badge: '🚀 OCTOBER 2025',
     animated: true
-  },
+  }
   
   januaryInnovation: {
     variant: 'hero' as const,
@@ -52,7 +52,7 @@ export const bannerPresets = {
     icon: 'sparkles' as const,
     badge: '✨ JANUARY 2026',
     animated: true
-  },
+  }
   
   februaryRevolution: {
     variant: 'mega' as const,
@@ -60,14 +60,14 @@ export const bannerPresets = {
     icon: 'zap' as const,
     badge: '⚡ FEBRUARY 2026',
     animated: true
-  },
+  }
   
   compactUpdate: {
     variant: 'compact' as const,
     theme: 'blue' as const,
     icon: 'star' as const,
     animated: false
-  },
+  }
   
   enterpriseSolution: {
     variant: 'premium' as const,

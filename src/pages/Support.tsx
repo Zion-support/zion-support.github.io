@@ -21,7 +21,7 @@ const Support: React.FC = () => {
       availability: '24/7',
       responseTime: '< 2 minutes',
       contact: '+1 (555) 123-4567'
-    },
+    }
     {
 icon: MessageCircle,
 title: 'Live Chat',
@@ -76,17 +76,17 @@ icon: Clock
       category: 'general',
       question: 'What services does Zion Tech Group offer?',
       answer: 'We offer comprehensive AI and IT solutions including automation, cybersecurity, cloud infrastructure, data analytics, and digital transformation services.'
-    },
+    }
     {
       category: 'technical',
       question: 'How do I integrate your AI solutions with my existing systems?',
       answer: 'Our team provides complete integration support with APIs, documentation, and hands-on assistance to ensure seamless implementation.'
-    },
+    }
     {
       category: 'billing',
       question: 'What are your pricing models?',
       answer: 'We offer flexible pricing including subscription-based, project-based, and custom enterprise solutions tailored to your needs.'
-    },
+    }
     {
 category: 'account',
 question: 'How do I update my account information?',
@@ -96,7 +96,7 @@ answer: 'You can update your account information through our client portal or co
       category: 'technical',
       question: 'Do you provide training for your solutions?',
       answer: 'Yes, we provide comprehensive training programs including documentation, video tutorials, and live training sessions.'
-    },
+    }
     {
       question: 'Is there a community where I can get help from other users?',
       answer: "Yes! We have an active community forum where users can ask questions, share best practices, and get help from both our team and other experienced users. It's a great place to learn and network."
@@ -112,9 +112,9 @@ answer: 'You can update your account information through our client portal or co
     return matchesCategory && matchesQuery;
   });
   const quickActions = [
-    { title: 'Report a Bug', description: 'Found an issue? Let us know', link: '/contact', icon: '🐛' },
-    { title: 'Request a Feature', description: "Have an idea? We'd love to hear it", link: '/contact', icon: '💡' },
-    { title: 'Schedule Training', description: 'Book a training session for your team', link: '/training', icon: '🎓' },
+    { title: 'Report a Bug', description: 'Found an issue? Let us know', link: '/contact', icon: '🐛' }
+    { title: 'Request a Feature', description: "Have an idea? We'd love to hear it", link: '/contact', icon: '💡' }
+    { title: 'Schedule Training', description: 'Book a training session for your team', link: '/training', icon: '🎓' }
     { title: 'View Status Page', description: 'Check system status and uptime', link: '/status', icon: '📊' }
   ];
 

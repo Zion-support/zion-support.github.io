@@ -44,7 +44,7 @@ const UnifiedBannerSystem: React.FC<UnifiedBannerSystemProps> = ({
       .sort((a, b) => b.priority - a.priority)
       .slice(0, maxVisible);
     setVisibleBanners(sortedBanners);
-  }, [banners, maxVisible]);
+  } [banners, maxVisible]);
 
   // Auto-rotation logic
   useEffect(() => {
@@ -52,10 +52,10 @@ const UnifiedBannerSystem: React.FC<UnifiedBannerSystemProps> = ({
 
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % visibleBanners.length);
-    }, rotationInterval);
+    } rotationInterval);
 
     return () => clearInterval(interval);
-  }, [autoRotate, rotationInterval, visibleBanners.length]);
+  } [autoRotate, rotationInterval, visibleBanners.length]);
 
   const handleBannerClick = (banner: BannerConfig) => {
     // Analytics tracking
@@ -75,26 +75,26 @@ const UnifiedBannerSystem: React.FC<UnifiedBannerSystemProps> = ({
     switch (type) {
       case 'slide':
         return {
-          initial: { x: '100%', opacity: 0 },
-          animate: { x: 0, opacity: 1 },
+          initial: { x: '100%', opacity: 0 }
+          animate: { x: 0, opacity: 1 }
           exit: { x: '-100%', opacity: 0 }
         };
       case 'fade':
         return {
-          initial: { opacity: 0 },
-          animate: { opacity: 1 },
+          initial: { opacity: 0 }
+          animate: { opacity: 1 }
           exit: { opacity: 0 }
         };
       case 'scale':
         return {
-          initial: { scale: 0.8, opacity: 0 },
-          animate: { scale: 1, opacity: 1 },
+          initial: { scale: 0.8, opacity: 0 }
+          animate: { scale: 1, opacity: 1 }
           exit: { scale: 0.8, opacity: 0 }
         };
       default:
         return {
-          initial: { opacity: 1 },
-          animate: { opacity: 1 },
+          initial: { opacity: 1 }
+          animate: { opacity: 1 }
           exit: { opacity: 1 }
         };
     }

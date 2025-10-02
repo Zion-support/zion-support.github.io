@@ -2,10 +2,10 @@ import React from 'react';
 
 const January2026NewContentShowcaseBanner: React.FC = () => {
   const features = [
-    { icon: Brain, title: "Synthetic Consciousness", desc: "True AI awareness" },
-    { icon: Zap, title: "Quantum Edge Processing", desc: "Sub-millisecond speed" },
-    { icon: Network, title: "Autonomous Mesh", desc: "Self-organizing systems" },
-    { icon: Shield, title: "Quantum Security", desc: "Unbreakable protection" },
+    { icon: Brain, title: "Synthetic Consciousness", desc: "True AI awareness" }
+    { icon: Zap, title: "Quantum Edge Processing", desc: "Sub-millisecond speed" }
+    { icon: Network, title: "Autonomous Mesh", desc: "Self-organizing systems" }
+    { icon: Shield, title: "Quantum Security", desc: "Unbreakable protection" }
     { icon: Cpu, title: "Neuromorphic AI", desc: "Brain-inspired computing" }
   ];
 

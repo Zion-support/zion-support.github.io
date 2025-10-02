@@ -143,8 +143,7 @@ export class BannerPriorityManager {
   /**
    * Load metrics from localStorage
    */
-  private loadMetricsFromStorage(): void {
-    try {
+  private loadMetricsFromStorage(): void {try {
       const data = localStorage.getItem('bannerMetrics');
       if (data) {
         const entries = JSON.parse(data);
@@ -152,8 +151,7 @@ export class BannerPriorityManager {
           id,
           {
             ...metrics,
-            lastShown: new Date(metrics.lastShown),
-          },
+            lastShown: new Date(metrics.lastShown)}
         ]));
       }
     } catch (error) {
@@ -178,8 +176,7 @@ export const bannerManager = new BannerPriorityManager();
 /**
  * React hook for banner optimization
  */
-export function useBannerOptimization(bannerId: string) {
-  const recordImpression = () => bannerManager.recordImpression(bannerId);
+export function useBannerOptimization(bannerId: string) {const recordImpression = () => bannerManager.recordImpression(bannerId);
   const recordClick = () => bannerManager.recordClick(bannerId);
   const recordConversion = () => bannerManager.recordConversion(bannerId);
   
@@ -188,6 +185,5 @@ export function useBannerOptimization(bannerId: string) {
     recordClick,
     recordConversion,
     ctr: bannerManager.getCTR(bannerId),
-    conversionRate: bannerManager.getConversionRate(bannerId),
-  };
+    conversionRate: bannerManager.getConversionRate(bannerId)};
 }

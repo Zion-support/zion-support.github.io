@@ -21,7 +21,7 @@ export const newArticles2025: NewArticle[] = [
     link: "/blog/ai-2025-oct-03-reliable-agent-ops",
     readTime: "9 min read",
     tags: ["Agents", "Evals", "Guardrails", "Budgets"]
-  },
+  }
   {
     id: "ai-2025-oct-03-risk-controlled-autonomy",
     title: "🛡️ Risk‑Controlled Autonomy 2025",
@@ -32,7 +32,7 @@ export const newArticles2025: NewArticle[] = [
     link: "/blog/ai-2025-oct-03-risk-controlled-autonomy",
     readTime: "8 min read",
     tags: ["Agents", "Governance", "Budgets", "Rollback"]
-  },
+  }
   {
     id: "ai-2025-oct-03-risk-controlled-autonomy",
     title: "🛡️ Risk‑Controlled Autonomy 2025",
@@ -43,7 +43,7 @@ export const newArticles2025: NewArticle[] = [
     link: "/blog/ai-2025-oct-03-risk-controlled-autonomy",
     readTime: "8 min read",
     tags: ["Agents", "Governance", "Budgets", "Rollback"]
-  },
+  }
   {
     id: "ai-2025-oct-03-reliable-agent-ops",
     title: "🤖 Reliable Agent Ops: Budgets, Approvals, and Live Evals",
@@ -54,7 +54,7 @@ export const newArticles2025: NewArticle[] = [
     link: "/blog/ai-2025-oct-03-reliable-agent-ops",
     readTime: "9 min read",
     tags: ["Agents", "Evals", "Guardrails", "Budgets"]
-  },
+  }
   {
     id: "ai-2025-oct-03-private-feature-flags",
     title: "🚀 Private Feature Flags: <100ms Global Releases with Zero PII",
@@ -65,7 +65,7 @@ export const newArticles2025: NewArticle[] = [
     link: "/blog/ai-2025-oct-03-private-feature-flags",
     readTime: "7 min read",
     tags: ["Edge", "Feature Flags", "Privacy", "Delivery"]
-  },
+  }
   {
     id: "ai-2025-oct-03-synthetic-data-blueprint",
     title: "🎭 Synthetic Data Blueprint: Accuracy Without PII Risk",
@@ -76,7 +76,7 @@ export const newArticles2025: NewArticle[] = [
     link: "/blog/ai-2025-oct-03-synthetic-data-blueprint",
     readTime: "12 min read",
     tags: ["Synthetic Data", "Privacy", "Diffusion", "GANs"]
-  },
+  }
   {
     id: "ai-2025-october-quantum-safe-cryptography-revolution",
     title: "🔐 Quantum-Safe Cryptography Revolution 2025",
@@ -87,7 +87,7 @@ export const newArticles2025: NewArticle[] = [
     link: "/blog/ai-2025-october-quantum-safe-cryptography-revolution",
     readTime: "18 min read",
     tags: ["Quantum-Safe Cryptography", "Post-Quantum Security", "Enterprise Protection", "NIST Standards"]
-  },
+  }
   {
     id: "ai-2025-oct-03-quantum-safe-enterprise-playbook",
     title: "🔐 Quantum-Safe Enterprise Playbook (2025)",
@@ -98,7 +98,7 @@ export const newArticles2025: NewArticle[] = [
     link: "/blog/quantum-safe-cryptography-enterprise-migration-2025",
     readTime: "9 min read",
     tags: ["Post-Quantum", "PQC", "NIST", "Migration"]
-  },
+  }
   {
     id: "ai-2025-oct-03-neuromorphic-edge-intelligence",
     title: "🧠 Neuromorphic Edge Intelligence: Sub‑10ms Decisions",
@@ -109,7 +109,7 @@ export const newArticles2025: NewArticle[] = [
     link: "/blog/neuromorphic-edge-ai-event-driven-2025",
     readTime: "8 min read",
     tags: ["Neuromorphic", "SNN", "Edge", "Efficiency"]
-  },
+  }
   {
     id: "ai-2025-oct-03-synthetic-data-production",
     title: "🎭 Synthetic Data in Production: Privacy‑Safe Accuracy",
@@ -120,7 +120,7 @@ export const newArticles2025: NewArticle[] = [
     link: "/blog/synthetic-data-production-privacy-2025",
     readTime: "10 min read",
     tags: ["Synthetic Data", "Privacy", "MLOps", "Quality"]
-  },
+  }
   {
     id: "ai-2025-oct-03-neuromorphic-edge-ai-breakthrough",
     title: "🧠 Neuromorphic Edge AI 2025: 1000x Efficiency for Real-Time Intelligence",
@@ -131,7 +131,7 @@ export const newArticles2025: NewArticle[] = [
     link: "/blog/ai-2025-oct-03-neuromorphic-edge-ai-breakthrough",
     readTime: "11 min read",
     tags: ["Neuromorphic", "Edge AI", "SNN", "Energy Efficiency"]
-  },
+  }
   {
     id: "ai-2025-oct-03-synthetic-data-production-playbook",
     title: "🎭 Synthetic Data in Production: Privacy-Safe Accuracy Gains in 2025",
@@ -142,7 +142,7 @@ export const newArticles2025: NewArticle[] = [
     link: "/blog/ai-2025-oct-03-synthetic-data-production-playbook",
     readTime: "9 min read",
     tags: ["Synthetic Data", "Privacy", "Diffusion", "GANs", "Compliance"]
-  },
+  }
   {
     id: "ai-2025-october-neuromorphic-computing-breakthrough",
     title: "🧠 Neuromorphic Computing Breakthrough: Brain-Inspired AI Revolution",
@@ -153,7 +153,7 @@ export const newArticles2025: NewArticle[] = [
     link: "/blog/ai-2025-october-neuromorphic-computing-breakthrough",
     readTime: "22 min read",
     tags: ["Neuromorphic Computing", "Brain-Inspired AI", "Energy Efficiency", "Edge AI"]
-  },
+  }
   {
     id: "ai-2025-october-synthetic-data-generation-mastery",
     title: "🎭 Synthetic Data Generation Mastery: AI-Powered Data Creation Revolution",
@@ -164,7 +164,7 @@ export const newArticles2025: NewArticle[] = [
     link: "/blog/ai-2025-october-synthetic-data-generation-mastery",
     readTime: "20 min read",
     tags: ["Synthetic Data", "AI Training", "Data Privacy", "Model Performance"]
-  },
+  }
   {
     id: "ai-adaptive-learning-systems-2025",
     title: "🎓 AI-Powered Adaptive Learning Systems: Next-Gen Personalized Education",
@@ -175,7 +175,7 @@ export const newArticles2025: NewArticle[] = [
     link: "/blog/ai-adaptive-learning-systems-personalized-education-2025",
     readTime: "24 min read",
     tags: ["Adaptive Learning", "Personalized Education", "AI EdTech", "Student Success"]
-  },
+  }
   {
     id: "neuromorphic-computing-2025",
     title: "🧠 Neuromorphic Computing Revolution: Brain-Inspired AI Architecture",
@@ -186,7 +186,7 @@ export const newArticles2025: NewArticle[] = [
     link: "/blog/neuromorphic-computing-brain-inspired-ai-2025",
     readTime: "22 min read",
     tags: ["Neuromorphic Computing", "Brain-Inspired AI", "Edge AI", "Energy Efficiency"]
-  },
+  }
   {
     id: "ai-protein-design-drug-discovery-2025",
     title: "🧬 AI-Driven Protein Design: Revolutionary Breakthrough in Drug Discovery",
@@ -197,7 +197,7 @@ export const newArticles2025: NewArticle[] = [
     link: "/blog/ai-protein-design-drug-discovery-breakthrough-2025",
     readTime: "26 min read",
     tags: ["Protein Design", "Drug Discovery", "Biotech AI", "Pharmaceutical AI"]
-  },
+  }
   {
     id: "ai-2025-october-quantum-safe-cryptography-revolution",
     title: "🔐 Quantum-Safe Cryptography Revolution 2025",
@@ -208,7 +208,7 @@ export const newArticles2025: NewArticle[] = [
     link: "/blog/ai-2025-october-quantum-safe-cryptography-revolution",
     readTime: "18 min read",
     tags: ["Quantum Security", "Post-Quantum Cryptography", "NIST Standards", "Enterprise Security"]
-  },
+  }
   {
     id: "ai-2025-october-neuromorphic-computing-breakthrough",
     title: "🧠 Neuromorphic Computing Breakthrough 2025",
@@ -219,7 +219,7 @@ export const newArticles2025: NewArticle[] = [
     link: "/blog/ai-2025-october-neuromorphic-computing-breakthrough",
     readTime: "20 min read",
     tags: ["Neuromorphic Computing", "SNNs", "Energy Efficiency", "Edge AI", "Intel Loihi"]
-  },
+  }
   {
     id: "ai-2025-october-synthetic-data-generation-mastery",
     title: "🎲 Synthetic Data Generation Mastery 2025",
@@ -230,7 +230,7 @@ export const newArticles2025: NewArticle[] = [
     link: "/blog/ai-2025-october-synthetic-data-generation-mastery",
     readTime: "22 min read",
     tags: ["Synthetic Data", "GANs", "Privacy-Preserving AI", "GDPR Compliance", "Data Augmentation"]
-  },
+  }
   {
     id: "ai-agent-evaluations-2026",
     title: "🧪 AI Agent Evaluations 2026: Reliable Metrics & Safe Deployments",
@@ -241,7 +241,7 @@ export const newArticles2025: NewArticle[] = [
     link: "/blog/ai-agent-evaluations-2026",
     readTime: "16 min read",
     tags: ["Agent Evals", "Safety Budgets", "Reliability", "Governance"]
-  },
+  }
   {
     id: "ai-platform-cost-optimization-2026",
     title: "💸 AI Platform Cost Optimization 2026: 50–80% Savings Playbook",
@@ -252,7 +252,7 @@ export const newArticles2025: NewArticle[] = [
     link: "/blog/ai-platform-cost-optimization-2026",
     readTime: "14 min read",
     tags: ["FinOps", "Autoscaling", "Quantization", "Spot Instances"]
-  },
+  }
   {
     id: "realtime-ai-decision-engines-2025",
     title: "⚡ Real-Time AI Decision Engines: 10M/sec Under 1ms Latency",
@@ -263,7 +263,7 @@ export const newArticles2025: NewArticle[] = [
     link: "/blog/real-time-ai-decision-engines-2025",
     readTime: "10 min read",
     tags: ["Low Latency", "Caching", "SLAs", "Tracing"]
-  },
+  }
   {
     id: "privacy-first-telemetry-quickstart-2025",
     title: "🔒 Privacy‑First Telemetry Quickstart: Signal‑Rich, PII‑Safe Analytics",
@@ -274,7 +274,7 @@ export const newArticles2025: NewArticle[] = [
     link: "/blog/privacy-first-telemetry-quickstart-2025",
     readTime: "7 min read",
     tags: ["Telemetry", "Privacy", "DP", "Scoped IDs"]
-  },
+  }
   {
     id: "agent-runbooks-2025",
     title: "🤖 Agent Runbooks 2025: Budgeted Actions, Rollbacks, and Safety Gates",
@@ -285,7 +285,7 @@ export const newArticles2025: NewArticle[] = [
     link: "/blog/agent-runbooks-2025",
     readTime: "8 min read",
     tags: ["Agents", "Runbooks", "Budgets", "Safety"]
-  },
+  }
   {
     id: "multimodal-ai-revolution-2025",
     title: "🎭 Multimodal AI Revolution: Unified Vision-Language-Audio Processing",
@@ -296,7 +296,7 @@ export const newArticles2025: NewArticle[] = [
     link: "/blog/multimodal-ai-revolution-2025",
     readTime: "18 min read",
     tags: ["Multimodal AI", "Computer Vision", "NLP", "Audio Processing", "Deep Learning"]
-  },
+  }
   {
     id: "blockchain-ai-integration-2025",
     title: "⛓️ Blockchain-AI Integration 2025: Trustless Intelligence at Scale",
@@ -307,7 +307,7 @@ export const newArticles2025: NewArticle[] = [
     link: "/blog/blockchain-ai-integration-2025",
     readTime: "16 min read",
     tags: ["Blockchain", "AI", "Web3", "Decentralized AI", "Smart Contracts"]
-  },
+  }
   {
     id: "green-ai-sustainability-2025",
     title: "🌱 Green AI & Sustainability: Carbon-Neutral ML at Scale",
@@ -318,7 +318,7 @@ export const newArticles2025: NewArticle[] = [
     link: "/blog/green-ai-sustainability-2025",
     readTime: "14 min read",
     tags: ["Green AI", "Sustainability", "Carbon Neutral", "Energy Efficiency", "Climate Tech"]
-  },
+  }
   {
     id: "ai-regulatory-compliance-2025",
     title: "📋 AI Regulatory Compliance 2025: Global Standards & Implementation",
@@ -329,7 +329,7 @@ export const newArticles2025: NewArticle[] = [
     link: "/blog/ai-regulatory-compliance-2025",
     readTime: "19 min read",
     tags: ["Compliance", "Regulations", "GDPR", "EU AI Act", "Governance"]
-  },
+  }
   {
     id: "automated-ml-neural-architecture-search-2025",
     title: "🤖 Automated ML & Neural Architecture Search: Self-Designing AI",
@@ -340,7 +340,7 @@ export const newArticles2025: NewArticle[] = [
     link: "/blog/automated-ml-neural-architecture-search-2025",
     readTime: "17 min read",
     tags: ["AutoML", "Neural Architecture Search", "Optimization", "Hyperparameter Tuning"]
-  },
+  }
   {
     id: "ai-autonomous-infrastructure-2025",
     title: "🏗️ AI Autonomous Infrastructure: Self-Healing, Self-Optimizing Systems",
@@ -351,7 +351,7 @@ export const newArticles2025: NewArticle[] = [
     link: "/blog/ai-autonomous-infrastructure-2025",
     readTime: "20 min read",
     tags: ["Infrastructure", "Autonomous Systems", "Self-Healing", "Cloud Native", "DevOps"]
-  },
+  }
   {
     id: "quantum-entanglement-ai-2025",
     title: "⚛️ Quantum Entanglement for AI: Next-Generation Computing",
@@ -362,7 +362,7 @@ export const newArticles2025: NewArticle[] = [
     link: "/blog/quantum-entanglement-ai-2025",
     readTime: "22 min read",
     tags: ["Quantum Computing", "Quantum AI", "Entanglement", "Advanced Computing"]
-  },
+  }
   {
     id: "ai-memory-augmented-networks-2025",
     title: "🧠 Memory-Augmented Neural Networks: Long-Term Context AI",
@@ -373,7 +373,7 @@ export const newArticles2025: NewArticle[] = [
     link: "/blog/ai-memory-augmented-networks-2025",
     readTime: "15 min read",
     tags: ["Neural Networks", "Memory Systems", "Context Retention", "Architecture"]
-  },
+  }
   {
     id: "ai-federated-learning-enterprise-2025",
     title: "🔐 Federated Learning for Enterprise: Privacy-First Distributed AI",
@@ -384,7 +384,7 @@ export const newArticles2025: NewArticle[] = [
     link: "/blog/ai-federated-learning-enterprise-2025",
     readTime: "16 min read",
     tags: ["Federated Learning", "Privacy", "Distributed AI", "Secure ML"]
-  },
+  }
   {
     id: "ai-real-time-anomaly-detection-2025",
     title: "🚨 Real-Time Anomaly Detection: Sub-Millisecond Threat Response",

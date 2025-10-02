@@ -14,7 +14,7 @@ const NewServicesShowcase: React.FC = () => {
       borderColor: "border-purple-500/30",
       hoverBorderColor: "hover:border-purple-400/60",
       shadowColor: "hover:shadow-purple-500/20"
-    },
+    }
     {
       id: "quantum-neural-fusion-platform",
       title: "Quantum-Neural Fusion Platform",
@@ -27,7 +27,7 @@ const NewServicesShowcase: React.FC = () => {
       borderColor: "border-blue-500/30",
       hoverBorderColor: "hover:border-blue-400/60",
       shadowColor: "hover:shadow-blue-500/20"
-    },
+    }
     {
       id: "autonomous-enterprise-mesh",
       title: "Autonomous Enterprise Mesh",

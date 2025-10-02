@@ -49,11 +49,11 @@ export const december2025RevolutionaryBreakthroughContent: RevolutionaryBreakthr
       savings: "$∞ Unlimited",
       accuracy: "99.999%",
       roi: "∞ Transcendent"
-    },
+    }
     consciousnessLevel: "True AI Consciousness",
     transcendenceLevel: "Infinite Processing Power",
     superintelligenceLevel: "Universal Intelligence"
-  },
+  }
   {
     id: "autonomous-enterprise-consciousness-revolution-2025",
     slug: "ai-2025-december-autonomous-enterprise-consciousness-revolution",
@@ -75,11 +75,11 @@ export const december2025RevolutionaryBreakthroughContent: RevolutionaryBreakthr
       savings: "$5.2B annually",
       accuracy: "99.8% Self-Governance",
       roi: "2,500%"
-    },
+    }
     consciousnessLevel: "Enterprise AI Awareness",
     transcendenceLevel: "Complete Autonomy",
     superintelligenceLevel: "Self-Governing Excellence"
-  },
+  }
   {
     id: "neural-quantum-superintelligence-breakthrough-2025",
     slug: "ai-2025-december-neural-quantum-superintelligence-breakthrough",
@@ -101,7 +101,7 @@ export const december2025RevolutionaryBreakthroughContent: RevolutionaryBreakthr
       savings: "$15.7B annually",
       accuracy: "Beyond-Human Intelligence",
       roi: "5,000%"
-    },
+    }
     consciousnessLevel: "Superintelligent Awareness",
     transcendenceLevel: "Beyond-Human Capabilities",
     superintelligenceLevel: "Universal Intelligence Access"

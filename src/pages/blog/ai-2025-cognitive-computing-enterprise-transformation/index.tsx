@@ -142,7 +142,7 @@ const CognitiveComputingTransformation: React.FC = () => {
                         "Multi-language support for global operations",
                         "Context-aware interpretation"
                       ]
-                    },
+                    }
                     {
                       title: "Knowledge Reasoning",
                       icon: "🧠",
@@ -152,7 +152,7 @@ const CognitiveComputingTransformation: React.FC = () => {
                         "Analogical reasoning for novel situations",
                         "Counterfactual analysis"
                       ]
-                    },
+                    }
                     {
                       title: "Continuous Learning",
                       icon: "📈",
@@ -162,7 +162,7 @@ const CognitiveComputingTransformation: React.FC = () => {
                         "Few-shot learning for new scenarios",
                         "Reinforcement learning from outcomes"
                       ]
-                    },
+                    }
                     {
                       title: "Explainable Intelligence",
                       icon: "🔍",
@@ -209,7 +209,7 @@ const CognitiveComputingTransformation: React.FC = () => {
                         speed: "85% faster decision-making",
                         roi: "$127M net value in Year 1"
                       }
-                    },
+                    }
                     {
                       title: "Customer Intelligence Platform",
                       industry: "Retail",
@@ -219,7 +219,7 @@ const CognitiveComputingTransformation: React.FC = () => {
                         revenue: "$3.4B incremental revenue",
                         churn: "89% reduction in churn"
                       }
-                    },
+                    }
                     {
                       title: "Autonomous Operations Management",
                       industry: "Manufacturing",
@@ -263,19 +263,19 @@ const CognitiveComputingTransformation: React.FC = () => {
                       duration: "Months 1-3",
                       investment: "$3-7M",
                       objectives: "Deploy cognitive platform infrastructure, establish data pipelines, assess readiness"
-                    },
+                    }
                     {
                       phase: "Phase 2: Pilot Development",
                       duration: "Months 4-6",
                       investment: "$5-10M",
                       objectives: "Build cognitive models, deploy pilot applications, validate business value"
-                    },
+                    }
                     {
                       phase: "Phase 3: Enterprise Rollout",
                       duration: "Months 7-12",
                       investment: "$10-20M",
                       objectives: "Scale to production, deploy 5-10 use cases, integrate with all systems"
-                    },
+                    }
                     {
                       phase: "Phase 4: Optimization",
                       duration: "Months 13+",

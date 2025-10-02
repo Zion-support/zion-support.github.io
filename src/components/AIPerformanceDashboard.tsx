@@ -15,7 +15,7 @@ userImpactScore: number;
 interface AIInsights {
 predictedHighRiskActions: string[];
 recommendedImprovements: string[];
-errorTrends: Array<{,
+errorTrends: Array<{
 category: string;
 trend: 'increasing' | 'decreasing' | 'stable';
 }>;
@@ -65,8 +65,8 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
               'Consider implementing circuit breaker pattern'
             ],
             errorTrends: [
-              { category: 'authentication', trend: 'decreasing' },
-              { category: 'database', trend: 'stable' },
+              { category: 'authentication', trend: 'decreasing' }
+              { category: 'database', trend: 'stable' }
               { category: 'ui', trend: 'increasing' }
             ]
           };
@@ -78,21 +78,21 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
               message: 'Failed to load user profile data',
               lastOccurrence: new Date(Date.now() - Math.random() * 3600000),
               occurrenceCount: Math.floor(Math.random() * 50 + 10),
-              context: { component: 'UserProfile', action: 'load' },
+              context: { component: 'UserProfile', action: 'load' }
               aiPredictedImpact: Math.random() * 0.8 + 0.2,
               resolutionSuggestions: [
                 'Check database connection pool',
                 'Implement retry mechanism with exponential backoff',
                 'Add fallback to cached data'
               ]
-            },
+            }
             {
               id: '2',
               severity: 'medium',
               message: 'Slow response time in search functionality',
               lastOccurrence: new Date(Date.now() - Math.random() * 1800000),
               occurrenceCount: Math.floor(Math.random() * 20 + 5),
-              context: { component: 'SearchBar', action: 'query' },
+              context: { component: 'SearchBar', action: 'query' }
               aiPredictedImpact: Math.random() * 0.6 + 0.1,
               resolutionSuggestions: [
                 'Implement search result caching',
@@ -121,7 +121,7 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
 
       return () => clearInterval(interval);
     }
-  }, [isVisible]);
+  } [isVisible]);
 
   if (!isVisible) return null;
 

@@ -56,13 +56,11 @@ export const preloadComponent = (
  */
 export const createLazyRoute = <T extends ComponentType<any>>(
   importFunc: () => Promise<{ default: T }>
-) => {
-  const LazyComponent = lazyWithRetry(importFunc);
+) => {const LazyComponent = lazyWithRetry(importFunc);
   
   return {
     Component: LazyComponent,
-    preload: () => preloadComponent(importFunc),
-  };
+    preload: () => preloadComponent(importFunc)};
 };
 
 /**
@@ -83,7 +81,7 @@ export const useLazyLoadOnVisible = (
           observer.disconnect();
         }
       });
-    },
+    }
     {
       rootMargin: '50px',
       threshold: 0.01,
@@ -168,10 +166,10 @@ requestIdleCallback(() => processQueue());
 } else {
         setTimeout(() => processQueue(), 0);
       }
-    },
+    }
     clear: () => {
       preloadQueue.length = 0;
-    },
+    }
   };
 };
 

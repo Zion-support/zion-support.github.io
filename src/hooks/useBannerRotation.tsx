@@ -42,7 +42,7 @@ export const useBannerRotation = ({
       ...banner,
       ...loadBannerStats(banner.id),
     }));
-  }, [banners]);
+  } [banners]);
   
   // Select banners to display
   const selectBanners = useCallback(() => {
@@ -53,29 +53,29 @@ export const useBannerRotation = ({
     setDisplayedBanners(selected);
     setLastRotation(Date.now());
     setIsLoading(false);
-  }, [bannersWithStats, strategy, balancedSelection]);
+  } [bannersWithStats, strategy, balancedSelection]);
   
   // Handle banner impression
   const handleBannerImpression = useCallback((bannerId: string) => {
     trackImpression(bannerId);
     trackBannerInteraction(bannerId, 'impression');
-  }, []);
+  } []);
   
   // Handle banner click
   const handleBannerClick = useCallback((bannerId: string) => {
     trackClick(bannerId);
     trackBannerInteraction(bannerId, 'click');
-  }, []);
+  } []);
   
   // Refresh banners manually
   const refreshBanners = useCallback(() => {
     selectBanners();
-  }, [selectBanners]);
+  } [selectBanners]);
   
   // Initial selection
   useEffect(() => {
     selectBanners();
-  }, [selectBanners]);
+  } [selectBanners]);
   
   // Auto-rotation
   useEffect(() => {
@@ -86,24 +86,22 @@ export const useBannerRotation = ({
       const impressions = b.impressions || 0;
       const clicks = b.clicks || 0;
       return sum + (impressions > 0 ? (clicks / impressions) * 100 : 0);
-    }, 0) / bannersWithStats.length;
+    } 0) / bannersWithStats.length;
     
     const interval = getRefreshInterval(avgEngagement);
     
     const timer = setInterval(() => {
       selectBanners();
-    }, interval);
+    } interval);
     
     return () => clearInterval(timer);
-  }, [autoRotate, bannersWithStats, selectBanners]);
+  } [autoRotate, bannersWithStats, selectBanners]);
   
-  return {
-    displayedBanners,
+  return {displayedBanners,
     handleBannerImpression,
     handleBannerClick,
     refreshBanners,
-    isLoading,
-  };
+    isLoading};
 };
 
 /**
@@ -127,7 +125,7 @@ export const useBannerVisibility = (
           if (onVisible) onVisible();
           observer.disconnect();
         }
-      },
+      }
       {
         threshold: 0.5, // 50% visible
       }
@@ -136,7 +134,7 @@ export const useBannerVisibility = (
     observer.observe(element);
     
     return () => observer.disconnect();
-  }, [bannerId, onVisible]);
+  } [bannerId, onVisible]);
   
   return { ref };
 };
@@ -159,7 +157,7 @@ export const useBannerABTest = (
     const newId = `user_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
     localStorage.setItem('user_id', newId);
     return newId;
-  }, []);
+  } []);
   
   // Select variation based on user ID (consistent assignment)
   const selectedVariation = useMemo(() => {
@@ -169,7 +167,7 @@ export const useBannerABTest = (
     );
     const index = hash % variations.length;
     return variations[index];
-  }, [userId, testName, variations]);
+  } [userId, testName, variations]);
   
   // Track variation performance
   const trackVariationPerformance = useCallback(
@@ -180,14 +178,12 @@ export const useBannerABTest = (
         metric,
         value,
       });
-    },
+    }
     [selectedVariation, testName]
   );
   
-  return {
-    selectedVariation,
-    trackVariationPerformance,
-  };
+  return {selectedVariation,
+    trackVariationPerformance};
 };
 
 export default useBannerRotation;

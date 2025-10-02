@@ -38,22 +38,22 @@ const NotificationSystem: React.FC<NotificationSystemProps> = ({
       if (!notification.persistent && notification.duration) {
         const timer = setTimeout(() => {
           onRemove(notification.id);
-        }, notification.duration);
+        } notification.duration);
 
         return () => clearTimeout(timer);
       }
     });
-  }, [notifications, onRemove]);
+  } [notifications, onRemove]);
 
   const getIcon = (type: Notification['type']) => {
 switch (type) {
-case 'success':,
+case 'success':
 return <CheckCircle className="w-5 h-5 text-green-600" />;
-case 'error':,
+case 'error':
 return <XCircle className="w-5 h-5 text-red-600" />;
-case 'warning':,
+case 'warning':
 return <AlertTriangle className="w-5 h-5 text-yellow-600" />;
-case 'info':,
+case 'info':
 default:,
 return <Info className="w-5 h-5 text-blue-600" />;
 }
@@ -61,13 +61,13 @@ return <Info className="w-5 h-5 text-blue-600" />;
 
   const getStyles = (type: Notification['type']) => {
 switch (type) {
-case 'success':,
+case 'success':
 return 'bg-green-50 border-green-200 text-green-800';
-case 'error':,
+case 'error':
 return 'bg-red-50 border-red-200 text-red-800';
-case 'warning':,
+case 'warning':
 return 'bg-yellow-50 border-yellow-200 text-yellow-800';
-case 'info':,
+case 'info':
 default:,
 return 'bg-blue-50 border-blue-200 text-blue-800';
 }
@@ -75,17 +75,17 @@ return 'bg-blue-50 border-blue-200 text-blue-800';
 
   const getPositionClasses = () => {
 switch (position) {
-case 'top-left':,
+case 'top-left':
 return 'top-4 left-4';
-case 'top-center':,
+case 'top-center':
 return 'top-4 left-1/2 transform -translate-x-1/2';
-case 'bottom-left':,
+case 'bottom-left':
 return 'bottom-4 left-4';
-case 'bottom-center':,
+case 'bottom-center':
 return 'bottom-4 left-1/2 transform -translate-x-1/2';
-case 'bottom-right':,
+case 'bottom-right':
 return 'bottom-4 right-4';
-case 'top-right':,
+case 'top-right':
 default:,
 return 'top-4 right-4';
 }
@@ -96,7 +96,7 @@ return 'top-4 right-4';
       opacity: 0,
       y: position.includes('top') ? -50 : 50,
       scale: 0.8
-    },
+    }
     animate: {
       opacity: 1,
       y: 0,
@@ -106,7 +106,7 @@ return 'top-4 right-4';
         stiffness: 300,
         damping: 25
       }
-    },
+    }
     exit: {
       opacity: 0,
       y: position.includes('top') ? -50 : 50,

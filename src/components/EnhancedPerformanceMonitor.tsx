@@ -132,7 +132,7 @@ id: `${metric
     return () => {
       window.removeEventListener('load', startMonitoring);
     };
-  }, [thresholds]);
+  } [thresholds]);
 
   // Development mode: Show performance dashboard
   if (process.env.NODE_ENV === 'development') {

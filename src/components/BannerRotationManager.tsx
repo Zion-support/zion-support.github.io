@@ -1,8 +1,7 @@
 import React, { lazy, Suspense, useState, useEffect } from 'react';
 
 // Define available banners with their import paths
-const bannerComponents = {
-  'october2025-tech-breakthrough': lazy(() => import('./October2025TechBreakthroughBanner')),
+const bannerComponents = {'october2025-tech-breakthrough': lazy(() => import('./October2025TechBreakthroughBanner')),
   'october2025-next-gen-ai': lazy(() => import('./October2025NextGenAIBanner')),
   'october2025-operational-excellence': lazy(() => import('./October2025OperationalExcellenceBanner')),
   'october2025-edge-ai-quantum': lazy(() => import('./October2025EdgeAIQuantumCryptoBanner')),
@@ -13,8 +12,7 @@ const bannerComponents = {
   'october2025-document-automation': lazy(() => import('./October2025DocumentAutomationBanner')),
   'october2025-revops': lazy(() => import('./October2025RevOpsBanner')),
   'january2026-revolutionary': lazy(() => import('./January2026RevolutionaryBanner')),
-  'new-services-2026': lazy(() => import('./NewServicesPromoBanner2026')),
-};
+  'new-services-2026': lazy(() => import('./NewServicesPromoBanner2026'))};
 
 export type BannerKey = keyof typeof bannerComponents;
 
@@ -41,11 +39,9 @@ const LoadingFallback = () => (
  * Manages banner display with lazy loading, rotation, and performance optimization
  */
 export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
-  banners = [
-    'october2025-new-breakthrough',
+  banners = ['october2025-new-breakthrough',
     'october2025-tech-breakthrough',
-    'october2025-next-gen-ai',
-  ],
+    'october2025-next-gen-ai'],
   interval = 8000,
   autoRotate = false, // Disabled by default to reduce unnecessary re-renders
   maxBanners = 3,
@@ -57,7 +53,7 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
   useEffect(() => {
     const selected = banners.slice(0, maxBanners);
     setVisibleBanners(selected);
-  }, [banners, maxBanners]);
+  } [banners, maxBanners]);
 
   // Auto-rotation logic
   useEffect(() => {
@@ -65,10 +61,10 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
 
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % visibleBanners.length);
-    }, interval);
+    } interval);
 
     return () => clearInterval(timer);
-  }, [autoRotate, interval, visibleBanners.length]);
+  } [autoRotate, interval, visibleBanners.length]);
 
   if (visibleBanners.length === 0) return null;
 

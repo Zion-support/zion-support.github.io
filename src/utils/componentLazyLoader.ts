@@ -26,7 +26,7 @@ export function createLazyComponent<T extends ComponentType<any>>(
       const FallbackComponent = fallback;
       return React.createElement(
         ErrorBoundary,
-        { fallback: React.createElement(FallbackComponent) },
+        { fallback: React.createElement(FallbackComponent) }
         React.createElement(LazyComponent, props)
       );
     };
@@ -54,7 +54,7 @@ export function preloadComponent(importFn: () => Promise<any>): void {
       promise.catch(() => {
         // Silently handle preload errors
       });
-    }, 1);
+    } 1);
   }
 }
 
@@ -77,7 +77,7 @@ export function createVisibilityLazyComponent<T extends ComponentType<any>>(
                 observer.disconnect();
               }
             });
-          },
+          }
           { threshold }
         );
         
@@ -102,7 +102,7 @@ export function batchPreload(
   components.forEach((importFn, index) => {
     setTimeout(() => {
       preloadComponent(importFn);
-    }, index * delayMs);
+    } index * delayMs);
   });
 }
 
@@ -110,7 +110,7 @@ export function batchPreload(
  * Error boundary for lazy-loaded components
  */
 class ErrorBoundary extends React.Component<
-  { children: React.ReactNode; fallback?: ComponentType<any> },
+  { children: React.ReactNode; fallback?: ComponentType<any> }
   { hasError: boolean }
 > {
 constructor(props: any) {,

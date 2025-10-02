@@ -9,7 +9,7 @@ export default function October2025NewestContentMegaShowcase(): void {
       metric: "2,847% ROI",
       link: "/blog/ai-2025-october-autonomous-mesh-intelligence-platform",
       gradient: "from-blue-500 to-cyan-500"
-    },
+    }
     {
       icon: <Atom className="w-8 h-8" />,
       title: "Quantum-Neural Hybrid Systems",
@@ -18,7 +18,7 @@ export default function October2025NewestContentMegaShowcase(): void {
       metric: "44,800% ROI",
       link: "/blog/ai-2025-october-quantum-neural-hybrid-systems",
       gradient: "from-purple-500 to-pink-500"
-    },
+    }
     {
       icon: <Brain className="w-8 h-8" />,
       title: "Neural-Symbolic Reasoning Systems",

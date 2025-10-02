@@ -6,8 +6,7 @@ import {
 
 } from '../bannerRotation';
 
-describe('Banner Rotation System', () => {
-  // Sample test banners
+describe('Banner Rotation System', () => {// Sample test banners
   const testBanners: BannerConfig[] = [
     {
       id: 'banner1',
@@ -16,35 +15,28 @@ describe('Banner Rotation System', () => {
       category: 'breakthrough',
       impressions: 1000,
       clicks: 50,
-      active: true,
-    },
-    {
-      id: 'banner2',
+      active: true}
+    {id: 'banner2',
       component: 'TestBanner2',
       priority: 8,
       category: 'enterprise',
       impressions: 800,
       clicks: 80,
-      active: true,
-    },
-    {
-      id: 'banner3',
+      active: true}
+    {id: 'banner3',
       component: 'TestBanner3',
       priority: 6,
       category: 'innovation',
       impressions: 500,
       clicks: 25,
-      active: true,
-    },
-    {
-      id: 'banner4',
+      active: true}
+    {id: 'banner4',
       component: 'TestBanner4',
       priority: 9,
       category: 'breakthrough',
       impressions: 0,
       clicks: 0,
-      active: false,
-    },
+      active: false}
   ];
 
   describe('calculateEngagementScore', () => {

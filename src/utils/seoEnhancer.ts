@@ -19,8 +19,7 @@ locale?: string;
 /**
  * Generate comprehensive meta tags for SEO
  */
-export function generateMetaTags(config: SEOConfig): Record<string, string> {
-  const meta: Record<string, string> = {
+export function generateMetaTags(config: SEOConfig): Record<string, string> {const meta: Record<string, string> = {
     // Basic meta
     title: config.title,
     description: config.description,
@@ -34,8 +33,7 @@ export function generateMetaTags(config: SEOConfig): Record<string, string> {
     // Twitter Card
     'twitter:card': 'summary_large_image',
     'twitter:title': config.title,
-    'twitter:description': config.description,
-  };
+    'twitter:description': config.description};
 
   if (config.keywords && config.keywords.length > 0) {
     meta.keywords = config.keywords.join(', ');
@@ -70,16 +68,14 @@ meta['twitter:image'] = config.ogImage;
 /**
  * Generate JSON-LD structured data
  */
-export function generateStructuredData(config: SEOConfig): object {
-  const structuredData: any = {
+export function generateStructuredData(config: SEOConfig): object {const structuredData: any = {
     '@context': 'https://schema.org',
     '@type': config.type === 'article' ? 'Article' : 'WebPage',
     headline: config.title,
     description: config.description,
     author: {
       '@type': 'Organization',
-      name: config.author || 'Zion Tech Group',
-    },
+      name: config.author || 'Zion Tech Group'}
   };
 
   if (config.publishDate) {

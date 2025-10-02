@@ -32,13 +32,13 @@ export const octoberUltimateEnterpriseContent = [
       efficiency: "4.5x",
       uptime: "99.7%",
       complexity: "-67%"
-    },
+    }
     cta: {
       text: "Read the Multi-Cloud Intelligence Guide",
       link: "/blog/ai-2025-oct-01-adaptive-multi-cloud-intelligence-revolution",
       badge: "NEW RELEASE"
     }
-  },
+  }
   {
     id: "conversational-ai-enterprise-transformation-2025",
     title: "🎯 NEW: Conversational AI Revolution - 184% ROI, 94% Customer Satisfaction",
@@ -69,7 +69,7 @@ export const octoberUltimateEnterpriseContent = [
       savings: "$173M",
       automation: "78%",
       responseTime: "2.3min"
-    },
+    }
     cta: {
       text: "Explore Conversational AI Platform",
       link: "/blog/ai-2025-oct-01-conversational-ai-enterprise-transformation-platform",

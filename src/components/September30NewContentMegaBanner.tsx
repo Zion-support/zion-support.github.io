@@ -8,7 +8,7 @@ const September30NewContentMegaBanner = () => {
       link: "/blog/ai-neural-coding-breakthrough-2025",
       category: "Neural AI",
       impact: "95% faster development"
-    },
+    }
     {
       title: "AI Holographic Computing",
       description: "Immersive 3D data visualization with zero latency",
@@ -16,7 +16,7 @@ const September30NewContentMegaBanner = () => {
       link: "/blog/ai-holographic-computing-2025",
       category: "Spatial AI",
       impact: "10x faster insights"
-    },
+    }
     {
       title: "AI Quantum Consciousness",
       description: "1M times faster reasoning with emergent creativity",
@@ -24,7 +24,7 @@ const September30NewContentMegaBanner = () => {
       link: "/blog/ai-quantum-consciousness-2025",
       category: "Quantum AI",
       impact: "1M× performance"
-    },
+    }
     {
       title: "AI Molecular Manufacturing",
       description: "Atomic-precision production with zero waste",
@@ -32,7 +32,7 @@ const September30NewContentMegaBanner = () => {
       link: "/blog/ai-molecular-manufacturing-2025",
       category: "NanoTech",
       impact: "100% recyclable"
-    },
+    }
     {
       title: "AI Personalized Education",
       description: "10x better learning outcomes for every student",

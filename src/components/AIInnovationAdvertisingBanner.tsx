@@ -28,22 +28,22 @@ Get early access to our breakthrough AI technologies and transform your enterpri
                   icon: '⚡',
                   title: 'Quantum-Neural AI Access',
                   description: '1000x faster processing with quantum-classical hybrid systems'
-                },
+                }
                 {
                   icon: '🧠',
                   title: 'Meta-Cognitive AI Framework',
                   description: 'Self-aware AI that thinks about its own thinking processes'
-                },
+                }
                 {
                   icon: '🤖',
                   title: 'Autonomous Operations Suite',
                   description: '98% automation rate with self-healing and self-optimizing systems'
-                },
+                }
                 {
                   icon: '🛡️',
                   title: 'Enterprise Security Package',
                   description: 'Military-grade security for AI systems and data protection'
-                },
+                }
                 {
                   icon: '📊',
                   title: 'Real-time Analytics Dashboard',
@@ -135,12 +135,12 @@ Get early access to our breakthrough AI technologies and transform your enterpri
                 company: 'Fortune 500 Tech Giant',
                 result: '300% ROI increase',
                 testimonial: 'Zion Tech Group\'s AI solutions revolutionized our operations'
-              },
+              }
               {
                 company: 'Global Financial Institution',
                 result: '$50M cost savings',
                 testimonial: 'The autonomous systems reduced our operational costs dramatically'
-              },
+              }
               {
                 company: 'Leading Healthcare System',
                 result: '99.9% uptime achieved',

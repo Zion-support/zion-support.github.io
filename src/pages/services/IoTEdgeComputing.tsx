@@ -15,31 +15,31 @@ const IoTEdgeComputing: React.FC = () => {
       title: "Edge AI Processing",
       description: "Real-time AI inference at the edge with optimized models for low-latency decision making.",
       benefit: "95% latency reduction"
-    },
+    }
     {
       icon: Network,
       title: "5G Integration",
       description: "Seamless 5G connectivity with edge computing for ultra-low latency applications.",
       benefit: "Sub-millisecond response times"
-    },
+    }
     {
       icon: Shield,
       title: "Edge Security",
       description: "Advanced security protocols for edge devices with encrypted communication and threat detection.",
       benefit: "Zero-trust architecture"
-    },
+    }
     {
       icon: Database,
       title: "Data Synchronization",
       description: "Intelligent data synchronization between edge devices and cloud with conflict resolution.",
       benefit: "99.9% data consistency"
-    },
+    }
     {
       icon: Zap,
       title: "Real-time Analytics",
       description: "Stream processing and analytics at the edge for immediate insights and actions.",
       benefit: "Real-time decision making"
-    },
+    }
     {
       icon: Globe,
       title: "Global Connectivity",
@@ -65,7 +65,7 @@ const IoTEdgeComputing: React.FC = () => {
         "Standard integrations (10)"
       ],
       popular: false
-    },
+    }
     {
       name: "Production",
       price: "$15,000",
@@ -85,7 +85,7 @@ const IoTEdgeComputing: React.FC = () => {
         "5G connectivity support"
       ],
       popular: true
-    },
+    }
     {
       name: "Enterprise",
       price: "$45,000",
@@ -117,14 +117,14 @@ const IoTEdgeComputing: React.FC = () => {
       content: "Zion's IoT edge computing solution reduced our production line latency by 98%. Real-time quality control now catches defects instantly, saving us $2M annually.",
       rating: 5,
       company: "Smart Manufacturing Corp"
-    },
+    }
     {
       name: "Sarah Williams",
       role: "VP Technology, Smart City Initiative",
       content: "The edge AI processing for traffic management reduced congestion by 35% and emergency response times by 50%. The system pays for itself every quarter.",
       rating: 5,
       company: "Smart City Initiative"
-    },
+    }
     {
       name: "Dr. Michael Chen",
       role: "Head of R&D, Healthcare IoT",
@@ -141,21 +141,21 @@ const IoTEdgeComputing: React.FC = () => {
       description: "Real-time quality control, predictive maintenance, and automated optimization on production lines.",
       metrics: "98% defect detection accuracy",
       benefits: ["Predictive maintenance", "Quality control automation", "Energy optimization"]
-    },
+    }
     {
       title: "Smart Cities",
       icon: Globe,
       description: "Traffic management, environmental monitoring, and public safety systems with real-time response.",
       metrics: "35% traffic reduction",
       benefits: ["Traffic optimization", "Environmental monitoring", "Public safety alerts"]
-    },
+    }
     {
       title: "Healthcare IoT",
       icon: Monitor,
       description: "Patient monitoring, medical device integration, and emergency response systems.",
       metrics: "50% faster emergency response",
       benefits: ["Real-time patient monitoring", "Medical device integration", "Emergency automation"]
-    },
+    }
     {
       title: "Retail Analytics",
       icon: BarChart3,
@@ -166,11 +166,11 @@ const IoTEdgeComputing: React.FC = () => {
   ];
 
   const industries = [
-    { name: "Manufacturing", devices: "Industrial sensors, PLCs, robotics" },
-    { name: "Healthcare", devices: "Patient monitors, medical devices, wearables" },
-    { name: "Retail", devices: "POS systems, inventory sensors, customer analytics" },
-    { name: "Transportation", devices: "Fleet tracking, traffic sensors, autonomous vehicles" },
-    { name: "Energy", devices: "Smart meters, grid sensors, renewable energy" },
+    { name: "Manufacturing", devices: "Industrial sensors, PLCs, robotics" }
+    { name: "Healthcare", devices: "Patient monitors, medical devices, wearables" }
+    { name: "Retail", devices: "POS systems, inventory sensors, customer analytics" }
+    { name: "Transportation", devices: "Fleet tracking, traffic sensors, autonomous vehicles" }
+    { name: "Energy", devices: "Smart meters, grid sensors, renewable energy" }
     { name: "Agriculture", devices: "Soil sensors, weather stations, irrigation systems" }
   ];
 

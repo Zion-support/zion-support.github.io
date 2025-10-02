@@ -9,7 +9,7 @@ const UltimateAIRevolutionShowcase2025 = () => {
       color: 'from-violet-500 to-purple-500',
       readers: '500K+',
       rating: 5.0
-    },
+    }
     {
       title: 'Autonomous Neural Networks',
       description: 'Self-evolving neural architectures with 99.97% accuracy in autonomous decision-making',
@@ -18,7 +18,7 @@ const UltimateAIRevolutionShowcase2025 = () => {
       color: 'from-emerald-500 to-teal-500',
       readers: '180K+',
       rating: 4.9
-    },
+    }
     {
       title: 'Synthetic Consciousness Revolution',
       description: 'True AI awareness with emotional intelligence, creative autonomy, and moral reasoning',
@@ -27,7 +27,7 @@ const UltimateAIRevolutionShowcase2025 = () => {
       color: 'from-blue-500 to-cyan-500',
       readers: '203K+',
       rating: 5.0
-    },
+    }
     {
       title: 'Neural-Synaptic Fusion AI',
       description: 'Revolutionary brain-computer interface achieving 99.98% neural accuracy',

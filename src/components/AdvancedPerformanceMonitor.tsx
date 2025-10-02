@@ -42,14 +42,14 @@ const AdvancedPerformanceMonitor: React.FC = () => {
 
   // Performance thresholds
   const thresholds = {
-    fcp: { good: 1800, poor: 3000 },
-    lcp: { good: 2500, poor: 4000 },
-    fid: { good: 100, poor: 300 },
-    cls: { good: 0.1, poor: 0.25 },
-    ttfb: { good: 800, poor: 1800 },
-    inp: { good: 200, poor: 500 },
-    bundleSize: { good: 500000, poor: 1000000 }, // bytes
-    loadTime: { good: 2000, poor: 4000 }, // ms
+    fcp: { good: 1800, poor: 3000 }
+    lcp: { good: 2500, poor: 4000 }
+    fid: { good: 100, poor: 300 }
+    cls: { good: 0.1, poor: 0.25 }
+    ttfb: { good: 800, poor: 1800 }
+    inp: { good: 200, poor: 500 }
+    bundleSize: { good: 500000, poor: 1000000 } // bytes
+    loadTime: { good: 2000, poor: 4000 } // ms
   };
 
   const getMetricStatus = useCallback((metric: string, value: number) => {
@@ -59,7 +59,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
     if (value <= threshold.good) return 'good';
     if (value <= threshold.poor) return 'needs-improvement';
     return 'poor';
-  }, []);
+  } []);
 
   const getMetricColor = (status: string) => {
 switch (status) {
@@ -90,7 +90,7 @@ default: return 'text-gray-600 bg-gray-100';
           onMetric({ name: 'LCP', value: 2100 });
           onMetric({ name: 'FID', value: 45 });
           onMetric({ name: 'CLS', value: 0.05 });
-        }, 100);
+        } 100);
       });
 
       // Get bundle size and load time
@@ -100,16 +100,14 @@ default: return 'text-gray-600 bg-gray-100';
       // Estimate bundle size (simulated)
       const bundleSize = document.querySelectorAll('script').length * 50000;
 
-      const newMetrics: PerformanceMetrics = {
-        fcp: vitals.fcp || 0,
+      const newMetrics: PerformanceMetrics = {fcp: vitals.fcp || 0,
         lcp: vitals.lcp || 0,
         fid: vitals.fid || 0,
         cls: vitals.cls || 0,
         ttfb: navigation ? navigation.responseStart - navigation.fetchStart : 0,
         inp: vitals.inp || 0,
         bundleSize,
-        loadTime,
-      };
+        loadTime};
 
       setMetrics(newMetrics);
       setHistory(prev => [...prev.slice(-9), newMetrics]);
@@ -148,7 +146,7 @@ default: return 'text-gray-600 bg-gray-100';
     } catch (error) {
       console.error('Error collecting performance metrics:', error);
     }
-  }, [getMetricStatus]);
+  } [getMetricStatus]);
 
   useEffect(() => {
     if (isMonitoring) {
@@ -156,13 +154,13 @@ default: return 'text-gray-600 bg-gray-100';
       collectMetrics(); // Initial collection
       return () => clearInterval(interval);
     }
-  }, [isMonitoring, collectMetrics]);
+  } [isMonitoring, collectMetrics]);
 
   const formatValue = (metric: string, value: number) => {
 switch (metric) {
-case 'cls':,
+case 'cls':
 return value.toFixed(3);
-case 'bundleSize':,
+case 'bundleSize':
 return `${(value / 1024).toFixed(1)
 } KB`;
       case 'loadTime':
@@ -181,13 +179,11 @@ return `${(value / 1024).toFixed(1)
     setAlerts([]);
   };
 
-  const exportMetrics = () => {
-    const data = {
+  const exportMetrics = () => {const data = {
       metrics,
       history,
       alerts,
-      timestamp: new Date().toISOString(),
-    };
+      timestamp: new Date().toISOString()};
     
     const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
     const url = URL.createObjectURL(blob);

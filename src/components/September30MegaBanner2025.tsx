@@ -9,7 +9,7 @@ const September30MegaBanner2025 = () => {
       icon: "⚡",
       gradient: "from-yellow-500 to-orange-500",
       metric: "10,000x Faster"
-    },
+    }
     {
       title: "Neural Code Synthesis",
       description: "AI generates production apps from plain English with 95% accuracy & built-in security",
@@ -18,7 +18,7 @@ const September30MegaBanner2025 = () => {
       icon: "💻",
       gradient: "from-blue-500 to-cyan-500",
       metric: "90% Dev Time Cut"
-    },
+    }
     {
       title: "Multimodal AI Fusion",
       description: "Unified understanding of text, images, audio & video - 98% cross-modal accuracy",
@@ -27,7 +27,7 @@ const September30MegaBanner2025 = () => {
       icon: "🎭",
       gradient: "from-purple-500 to-pink-500",
       metric: "98% Accuracy"
-    },
+    }
     {
       title: "AI Supply Chain Revolution",
       description: "99.5% forecast accuracy + 85% inventory reduction through neural optimization",
@@ -36,7 +36,7 @@ const September30MegaBanner2025 = () => {
       icon: "📦",
       gradient: "from-green-500 to-teal-500",
       metric: "85% Less Inventory"
-    },
+    }
     {
       title: "Cognitive AI Assistants",
       description: "Human-level understanding & reasoning - 92% satisfaction with emotional intelligence",
@@ -45,7 +45,7 @@ const September30MegaBanner2025 = () => {
       icon: "🤖",
       gradient: "from-indigo-500 to-purple-500",
       metric: "92% Satisfaction"
-    },
+    }
     {
       title: "AI Cybersecurity Mesh",
       description: "Zero-trust distributed defense - 99.99% threat detection with sub-second response",
@@ -54,7 +54,7 @@ const September30MegaBanner2025 = () => {
       icon: "🛡️",
       gradient: "from-red-500 to-orange-500",
       metric: "99.99% Detection"
-    },
+    }
     {
       title: "Federated Learning Enterprise",
       description: "Train powerful AI with zero data sharing - 100% GDPR/HIPAA compliance",
@@ -63,7 +63,7 @@ const September30MegaBanner2025 = () => {
       icon: "🔒",
       gradient: "from-slate-600 to-slate-800",
       metric: "100% Privacy"
-    },
+    }
     {
       title: "AI Financial Modeling",
       description: "95% market prediction accuracy - Real-time analysis of millions of signals",

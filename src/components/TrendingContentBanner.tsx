@@ -16,7 +16,7 @@ const TrendingContentBanner: React.FC = () => {
       icon: TrendingUp,
       link: "/blog/ai-disaster-recovery-playbooks-2025",
       badge: "NEW"
-    },
+    }
     {
       title: "Private Feature Flags: Zero‑PII Experiments",
       description: "Signed configs, scoped IDs, and edge analytics under 100ms.",
@@ -26,7 +26,7 @@ const TrendingContentBanner: React.FC = () => {
       icon: Shield,
       link: "/blog/ai-2025-oct-01-private-feature-flags-zero-pii",
       badge: "NEW"
-    },
+    }
     {
       title: "Runtime Rollback Guardrails",
       description: "Canary scorecards, kill switches, and instant reversibility.",
@@ -36,7 +36,7 @@ const TrendingContentBanner: React.FC = () => {
       icon: TrendingUp,
       link: "/blog/ai-2025-oct-01-runtime-rollback-guardrails",
       badge: "TRENDING"
-    },
+    }
     {
       title: "AI Autonomous Infrastructure 2026",
       description: "Self‑healing, self‑optimizing, self‑scaling platforms with budgets.",
@@ -46,7 +46,7 @@ const TrendingContentBanner: React.FC = () => {
       icon: TrendingUp,
       link: "/blog/ai-autonomous-infrastructure-2026",
       badge: "HOT"
-    },
+    }
     {
       title: "Zero‑Trust for GenAI 2026",
       description: "Prompt firewalls, egress controls, and signed outputs at scale.",
@@ -56,7 +56,7 @@ const TrendingContentBanner: React.FC = () => {
       icon: Shield,
       link: "/blog/zero-trust-for-genai-2026",
       badge: "TRENDING"
-    },
+    }
     {
       title: "Quantum‑AI Hybrid Blueprint 2026",
       description: "Near‑term wins by combining QC libs with AI orchestration.",
@@ -66,7 +66,7 @@ const TrendingContentBanner: React.FC = () => {
       icon: Brain,
       link: "/blog/quantum-ai-hybrid-blueprint-2026",
       badge: "NEW"
-    },
+    }
     {
       title: "Edge LLM Caching Blueprint 2026",
       description: "Sub‑100ms prompts via tiered caches and freshness windows.",
@@ -76,7 +76,7 @@ const TrendingContentBanner: React.FC = () => {
       icon: Zap,
       link: "/blog/edge-llm-caching-blueprint-2026",
       badge: "POPULAR"
-    },
+    }
     {
       title: "GenAI Data Governance Quickstart",
       description: "Policy tests, lineage, consent scopes, and KPI‑linked checks.",
@@ -92,10 +92,10 @@ const TrendingContentBanner: React.FC = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % trendingItems.length);
-    }, 4000);
+    } 4000);
 
     return () => clearInterval(interval);
-  }, [trendingItems.length]);
+  } [trendingItems.length]);
 
   const currentItem = trendingItems[currentIndex];
 

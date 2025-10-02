@@ -15,12 +15,12 @@ const BannerCarousel: React.FC = () => {
       title: "AI-Powered Business Solutions",
       description: "Transform your business with cutting-edge AI technology",
       link: "/services/ai-services"
-    },
+    }
     {
       title: "Micro SaaS Solutions",
       description: "Scalable software solutions for modern businesses",
       link: "/services/micro-saas"
-    },
+    }
     {
       title: "Enterprise IT Services",
       description: "Comprehensive IT solutions for enterprise needs",
@@ -31,10 +31,10 @@ const BannerCarousel: React.FC = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentBanner((prev) => (prev + 1) % banners.length);
-    }, 5000);
+    } 5000);
 
     return () => clearInterval(timer);
-  }, [banners.length]);
+  } [banners.length]);
 
   return (
     <div className="relative bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg overflow-hidden">

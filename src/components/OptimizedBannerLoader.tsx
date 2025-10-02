@@ -54,7 +54,7 @@ export default function OptimizedBannerLoader({
             observer.disconnect();
           }
         });
-      },
+      }
       { rootMargin: '200px' } // Load 200px before entering viewport
     );
 
@@ -66,14 +66,14 @@ export default function OptimizedBannerLoader({
     return () => {
       observer.disconnect();
     };
-  }, [bannerId, importFn, priority, preload, Component]);
+  } [bannerId, importFn, priority, preload, Component]);
 
   // Record impression when banner is visible
   useEffect(() => {
     if (isVisible) {
       bannerManager.recordImpression(bannerId);
     }
-  }, [isVisible, bannerId]);
+  } [isVisible, bannerId]);
 
   if (!Component) {
     return <div id={`banner-${bannerId}`}>{fallback}</div>;

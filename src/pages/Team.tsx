@@ -11,35 +11,35 @@ const Team: React.FC = () => {
       bio: 'Visionary leader with 15+ years in AI and enterprise technology',
       image: '/images/team/kleber-santos.jpg',
       linkedin: 'https://linkedin.com/in/kleber-santos'
-    },
+    }
     {
       name: 'Dr. Sarah Chen',
       role: 'Chief Technology Officer',
       bio: 'AI research expert with PhD in Machine Learning from MIT',
       image: '/images/team/sarah-chen.jpg',
       linkedin: 'https://linkedin.com/in/sarah-chen-ai'
-    },
+    }
     {
       name: 'Michael Rodriguez',
       role: 'Head of Engineering',
       bio: 'Full-stack architect with expertise in scalable cloud systems',
       image: '/images/team/michael-rodriguez.jpg',
       linkedin: 'https://linkedin.com/in/michael-rodriguez-eng'
-    },
+    }
     {
       name: 'Dr. Emily Watson',
       role: 'AI Research Director',
       bio: 'Quantum computing specialist and AI ethics researcher',
       image: '/images/team/emily-watson.jpg',
       linkedin: 'https://linkedin.com/in/emily-watson-ai'
-    },
+    }
     {
       name: 'James Park',
       role: 'Head of Product',
       bio: 'Product strategy expert with focus on user experience and innovation',
       image: '/images/team/james-park.jpg',
       linkedin: 'https://linkedin.com/in/james-park-product'
-    },
+    }
     {
       name: 'Lisa Thompson',
       role: 'Head of Customer Success',
@@ -54,17 +54,17 @@ const Team: React.FC = () => {
       title: 'Innovation First',
       description: 'We push the boundaries of what\'s possible with AI and technology',
       icon: '🚀'
-    },
+    }
     {
       title: 'Customer Success',
       description: 'Our clients\' success is our ultimate measure of achievement',
       icon: '🎯'
-    },
+    }
     {
       title: 'Ethical AI',
       description: 'We build AI systems that are fair, transparent, and beneficial',
       icon: '⚖️'
-    },
+    }
     {
       title: 'Collaboration',
       description: 'Great results come from great teams working together',

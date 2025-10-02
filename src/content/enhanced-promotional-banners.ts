@@ -13,8 +13,7 @@ endDate?: string;
 }
 
 export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
-  {
-    id: 'oct-01-autonomous-business-ops-2025',
+  {id: 'oct-01-autonomous-business-ops-2025',
     title: '🚀 JUST RELEASED: Autonomous Business Operations Platform — $650M Value Creation, 85% Cost Reduction in 90 Days!',
     description: 'Revolutionary AI platform eliminating manual processes across 40+ workflows. Fortune 100 achieved $650M annual value, 99.7% accuracy, 10x faster operations. 50% OFF through December + FREE 30-day proof of concept!',
     ctaText: 'Transform Your Business Now',
@@ -23,10 +22,8 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '🚀',
     featured: true,
     priority: 0,
-    startDate: '2025-10-01',
-  },
-  {
-    id: 'oct-01-autonomous-ops-blog-2025',
+    startDate: '2025-10-01'}
+  {id: 'oct-01-autonomous-ops-blog-2025',
     title: '📖 NEW GUIDE: The Complete Autonomous Business Operations Revolution — 22-Minute Deep Dive',
     description: 'Learn how Fortune 500 companies are deploying self-managing AI systems. Complete implementation guide with architecture, ROI calculator, and production best practices.',
     ctaText: 'Read the Complete Guide',
@@ -35,10 +32,8 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '📖',
     featured: true,
     priority: 1,
-    startDate: '2025-10-01',
-  },
-  {
-    id: 'oct-01-650m-case-study-2025',
+    startDate: '2025-10-01'}
+  {id: 'oct-01-650m-case-study-2025',
     title: '💰 CASE STUDY: Fortune 100 Creates $650M Annual Value Through Autonomous Operations',
     description: 'Incredible transformation story! 85% cost reduction, 10x faster processing, 99.7% accuracy, 40+ autonomous workflows deployed in 90 days. Complete technical details and lessons learned.',
     ctaText: 'Read $650M Success Story',
@@ -47,10 +42,8 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '💰',
     featured: true,
     priority: 2,
-    startDate: '2025-10-01',
-  },
-  {
-    id: 'oct-01-agent-swarm-breakthrough-2025',
+    startDate: '2025-10-01'}
+  {id: 'oct-01-agent-swarm-breakthrough-2025',
     title: '🔥🤖 BREAKTHROUGH: Revolutionary Agent Swarm Platform — 100,000+ AI Agents Working in Perfect Harmony',
     description: 'Just launched! Coordinate massive swarms of 100,000+ specialized AI agents achieving 99.999% reliability, sub-second response times, and 95% cost reduction. $890M healthcare success story + production-ready services now available.',
     ctaText: 'Explore Agent Swarms',
@@ -59,10 +52,8 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '🤖',
     featured: true,
     priority: 3,
-    startDate: '2025-10-01',
-  },
-  {
-    id: 'oct-01-healthcare-890m-success-2025',
+    startDate: '2025-10-01'}
+  {id: 'oct-01-healthcare-890m-success-2025',
     title: '💰 $890M Value Creation: Global Healthcare Network Transforms with 75,000 AI Agents',
     description: 'Incredible results! 98.7% diagnostic accuracy, 89% faster diagnoses, 99.97% uptime, and $890M annual value. See how agent swarms revolutionized healthcare for 150M patients.',
     ctaText: 'Read Success Story',
@@ -71,10 +62,8 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '🏥',
     featured: true,
     priority: 1,
-    startDate: '2025-10-01',
-  },
-  {
-    id: 'oct-01-enterprise-platform-automation-2025',
+    startDate: '2025-10-01'}
+  {id: 'oct-01-enterprise-platform-automation-2025',
     title: '🚀 NEW TODAY: Enterprise AI Platform Revolution & Intelligent Automation Breakthrough',
     description: 'Transform your enterprise! Build comprehensive AI platforms with 40-60% cost reduction and $500M value creation. Plus: End manual operations with intelligent automation achieving 300-500% ROI.',
     ctaText: 'Discover the Revolution',
@@ -83,10 +72,8 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '🚀',
     featured: true,
     priority: 2,
-    startDate: '2025-10-01',
-  },
-  {
-    id: 'enterprise-platform-implementation-service-2025',
+    startDate: '2025-10-01'}
+  {id: 'enterprise-platform-implementation-service-2025',
     title: '⚡ NEW SERVICE: Enterprise AI Platform Implementation - Production Ready in 90 Days',
     description: 'Complete AI platform deployment with proven ROI. $50M+ annual value, 90% accuracy, 3-5x faster deployment. Transform your enterprise with our comprehensive implementation service.',
     ctaText: 'Get Started Today',
@@ -95,10 +82,8 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '⚡',
     featured: true,
     priority: 1,
-    startDate: '2025-10-01',
-  },
-  {
-    id: 'oct-01-500m-success-story-2025',
+    startDate: '2025-10-01'}
+  {id: 'oct-01-500m-success-story-2025',
     title: '💰 SUCCESS STORY: Fortune 100 Company Creates $500M Annual Value in 90 Days',
     description: 'See how a global enterprise transformed operations with our AI platform. 10x faster deployment, 85% cost reduction, 40+ autonomous workflows. Read the complete case study.',
     ctaText: 'Read Success Story',
@@ -107,10 +92,8 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '💰',
     featured: true,
     priority: 2,
-    startDate: '2025-10-01',
-  },
-  {
-    id: 'oct-01-latest-breakthrough-2025-featured',
+    startDate: '2025-10-01'}
+  {id: 'oct-01-latest-breakthrough-2025-featured',
     title: '🎯 JUST RELEASED: Edge AI Compression, Continuous Learning, Synthetic Data Generation',
     description: 'Three groundbreaking articles just dropped! Deploy models 100x smaller, build self-improving AI systems with 47% accuracy gains, and generate unlimited training data. Transform your AI capabilities today.',
     ctaText: 'Read the Latest Breakthroughs',
@@ -119,10 +102,8 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '🎯',
     featured: true,
     priority: 3,
-    startDate: '2025-10-01',
-  },
-  {
-    id: 'ai-model-compression-edge-oct-2025',
+    startDate: '2025-10-01'}
+  {id: 'ai-model-compression-edge-oct-2025',
     title: '⚡ NEW: AI Model Compression — Deploy 100x Smaller Models with 95%+ Accuracy',
     description: 'Master edge deployment with INT8/INT4 quantization, structured pruning, and knowledge distillation. Achieve sub-50ms inference on mobile and IoT devices with 92% memory reduction.',
     ctaText: 'Learn Edge AI Deployment',
@@ -131,10 +112,8 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '⚡',
     featured: true,
     priority: 1,
-    startDate: '2025-10-01',
-  },
-  {
-    id: 'continuous-learning-systems-oct-2025',
+    startDate: '2025-10-01'}
+  {id: 'continuous-learning-systems-oct-2025',
     title: '🔄 NEW: Continuous Learning — 47% Accuracy Improvement with Self-Improving AI',
     description: 'Build systems that adapt in real-time to concept drift. 99.8% uptime during live updates, 73% faster adaptation, and $5.8M annual value from continuous model improvement.',
     ctaText: 'Build Self-Improving AI',
@@ -143,10 +122,8 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '🔄',
     featured: true,
     priority: 2,
-    startDate: '2025-10-01',
-  },
-  {
-    id: 'synthetic-data-generation-oct-2025',
+    startDate: '2025-10-01'}
+  {id: 'synthetic-data-generation-oct-2025',
     title: '🎨 NEW: Synthetic Data — Generate Unlimited Training Data with 98% Fidelity',
     description: 'Overcome data scarcity and privacy constraints. Create 10,000x rare event augmentation, achieve 100% privacy compliance, and save $8.4M on data collection costs.',
     ctaText: 'Master Synthetic Data',
@@ -155,10 +132,8 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '🎨',
     featured: true,
     priority: 3,
-    startDate: '2025-10-01',
-  },
-  {
-    id: 'oct-01-latest-breakthrough-content-2025',
+    startDate: '2025-10-01'}
+  {id: 'oct-01-latest-breakthrough-content-2025',
     title: '🚀 NEW TODAY: Continuous Intelligence, GenAI Supply Chain Resilience, Autonomous Cloud Security',
     description: 'Just released! Real-time AI decisioning at 100M+ events/sec, self-healing supply chains with 99.7% uptime, and autonomous threat neutralization in <5 seconds. Transform your operations now.',
     ctaText: 'Read the Latest Articles',
@@ -167,10 +142,8 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '🚀',
     featured: true,
     priority: 0,
-    startDate: '2025-10-01',
-  },
-  {
-    id: 'continuous-intelligence-oct-2025',
+    startDate: '2025-10-01'}
+  {id: 'continuous-intelligence-oct-2025',
     title: '⚡ NEW: Continuous Intelligence Platforms — 100M Events/Second with Sub-50ms Latency',
     description: '$215M+ annual value from instant automated decisions. Real-time AI decisioning revolutionizing enterprise operations with 96% accuracy at unprecedented scale.',
     ctaText: 'Discover Continuous Intelligence',
@@ -179,10 +152,8 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '⚡',
     featured: true,
     priority: 1,
-    startDate: '2025-10-01',
-  },
-  {
-    id: 'genai-supply-chain-oct-2025',
+    startDate: '2025-10-01'}
+  {id: 'genai-supply-chain-oct-2025',
     title: '🔄 NEW: GenAI Supply Chain Resilience — 99.7% Uptime During Any Disruption',
     description: 'Self-healing supply chains that adapt in real-time. 78% faster recovery from disruptions and $180M+ savings through intelligent resilience and adaptive networks.',
     ctaText: 'Build Resilient Supply Chains',
@@ -191,10 +162,8 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '🔄',
     featured: true,
     priority: 2,
-    startDate: '2025-10-01',
-  },
-  {
-    id: 'autonomous-security-oct-2025',
+    startDate: '2025-10-01'}
+  {id: 'autonomous-security-oct-2025',
     title: '🛡️ NEW: Autonomous Cloud Security — 99.98% Threat Neutralization in <5 Seconds',
     description: 'Self-defending infrastructure with AI-powered threat intelligence. 94% reduction in security workload through real-time autonomous defense without human intervention.',
     ctaText: 'Explore Autonomous Security',
@@ -203,10 +172,8 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '🛡️',
     featured: true,
     priority: 3,
-    startDate: '2025-10-01',
-  },
-  {
-    id: 'oct-01-breakthrough-new-content-2025',
+    startDate: '2025-10-01'}
+  {id: 'oct-01-breakthrough-new-content-2025',
     title: '🔥 JUST RELEASED: AI Security Zero Trust, Cloud-Native Kubernetes, Real-Time Streaming Analytics',
     description: 'Revolutionary new content! 99.97% threat detection with AI Zero Trust, 10x faster ML deployment with Kubernetes, and sub-100ms insights from billions of events. Transform your enterprise today.',
     ctaText: 'Explore Latest Breakthroughs',
@@ -215,10 +182,8 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '🔥',
     featured: true,
     priority: 4,
-    startDate: '2025-10-01',
-  },
-  {
-    id: 'ai-security-zero-trust-oct-2025',
+    startDate: '2025-10-01'}
+  {id: 'ai-security-zero-trust-oct-2025',
     title: '🛡️ NEW: AI Automation Security with Zero Trust — 99.97% Threat Detection',
     description: '89% reduction in security incidents with sub-second response times. $42M+ annual savings through intelligent defense systems.',
     ctaText: 'Read Security Guide',
@@ -227,10 +192,8 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '🛡️',
     featured: true,
     priority: 1,
-    startDate: '2025-10-01',
-  },
-  {
-    id: 'cloud-native-kubernetes-oct-2025',
+    startDate: '2025-10-01'}
+  {id: 'cloud-native-kubernetes-oct-2025',
     title: '☁️ NEW: Cloud-Native AI on Kubernetes — 10x Faster Deployment, 85% Cost Reduction',
     description: 'Transform ML operations with container orchestration. 99.99% uptime and seamless scaling from prototype to production.',
     ctaText: 'Master Cloud-Native AI',
@@ -239,10 +202,8 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '☁️',
     featured: true,
     priority: 2,
-    startDate: '2025-10-01',
-  },
-  {
-    id: 'real-time-analytics-oct-2025',
+    startDate: '2025-10-01'}
+  {id: 'real-time-analytics-oct-2025',
     title: '⚡ NEW: Real-Time AI Analytics — Process Billions of Events in Sub-100ms',
     description: '$87M+ annual value from instant insights. 97% accuracy while handling 10TB+ streaming data daily with infinite scale.',
     ctaText: 'Unlock Real-Time Intelligence',
@@ -251,10 +212,8 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '⚡',
     featured: true,
     priority: 3,
-    startDate: '2025-10-01',
-  },
-  {
-    id: 'oct-01-new-content-2025',
+    startDate: '2025-10-01'}
+  {id: 'oct-01-new-content-2025',
     title: '🚀 NEW TODAY: Multi-Agent Orchestration, Sub-10ms Vector Search, Autonomous Pipelines',
     description: 'Fresh content just released! Coordinate 10,000+ agents with 99.99% reliability, achieve sub-10ms semantic search at billion-scale, and build self-healing data infrastructure. Transform your AI operations now.',
     ctaText: 'Read the Latest',
@@ -263,10 +222,8 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '🚀',
     featured: true,
     priority: 4,
-    startDate: '2025-10-01',
-  },
-  {
-    id: 'multiagent-orchestration-oct-2025',
+    startDate: '2025-10-01'}
+  {id: 'multiagent-orchestration-oct-2025',
     title: '🤖 BREAKTHROUGH: Multi-Agent Orchestration — 10,000+ Agents, 99.99% Reliability',
     description: 'Coordinate thousands of specialized AI agents at enterprise scale. 73% cost reduction, 92% faster responses, and proven patterns for production deployment.',
     ctaText: 'Master Multi-Agent Systems',
@@ -275,10 +232,8 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '🤖',
     featured: true,
     priority: 1,
-    startDate: '2025-10-01',
-  },
-  {
-    id: 'vector-search-optimization-oct-2025',
+    startDate: '2025-10-01'}
+  {id: 'vector-search-optimization-oct-2025',
     title: '⚡ NEW: Real-Time Embedding Optimization — Sub-10ms at Billion-Scale',
     description: 'Lightning-fast vector search with 94% latency reduction and 67% cost savings. HNSW, quantization, and caching strategies for production RAG systems.',
     ctaText: 'Optimize Vector Search',
@@ -287,10 +242,8 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '⚡',
     featured: true,
     priority: 2,
-    startDate: '2025-10-01',
-  },
-  {
-    id: 'autonomous-pipelines-oct-2025',
+    startDate: '2025-10-01'}
+  {id: 'autonomous-pipelines-oct-2025',
     title: '🔧 NEW: Autonomous Data Pipelines — 500TB Daily with 99.95% Reliability',
     description: 'Self-healing infrastructure that processes massive data with 87% less manual work. Build pipelines that manage themselves at enterprise scale.',
     ctaText: 'Build Autonomous Pipelines',
@@ -299,10 +252,8 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '🔧',
     featured: true,
     priority: 3,
-    startDate: '2025-10-01',
-  },
-  {
-    id: 'oct-01-quantum-mesh-edge-2025',
+    startDate: '2025-10-01'}
+  {id: 'oct-01-quantum-mesh-edge-2025',
     title: '🌟 JUST RELEASED: Quantum Neural Networks, Autonomous AI Mesh, <50ms Edge GenAI',
     description: '3 revolutionary articles just dropped! 500x faster training, self-organizing intelligence, and ultra-low latency at global scale. The future of enterprise AI is here.',
     ctaText: 'Explore the Breakthroughs',
@@ -311,10 +262,8 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '🌟',
     featured: true,
     priority: 4,
-    startDate: '2025-10-01',
-  },
-  {
-    id: 'agentic-swarm-intelligence-oct-2025',
+    startDate: '2025-10-01'}
+  {id: 'agentic-swarm-intelligence-oct-2025',
     title: '🤖 NEW TODAY: Agentic Swarm Intelligence — Coordinate 10,000+ AI Agents',
     description: 'Deploy distributed AI agent swarms with 99.99% reliability and 87% cost reduction. Autonomous coordination at enterprise scale with sub-second latency.',
     ctaText: 'Explore Agent Swarms',
@@ -323,10 +272,8 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '🤖',
     featured: true,
     priority: 1,
-    startDate: '2025-10-01',
-  },
-  {
-    id: 'quantum-supply-chain-oct-2025',
+    startDate: '2025-10-01'}
+  {id: 'quantum-supply-chain-oct-2025',
     title: '⚡ NEW TODAY: Quantum-Inspired Supply Chain — Solve in Seconds, Not Days',
     description: 'Optimize 50,000+ variables in under 60 seconds with 10,000x faster performance. $127M annual savings and 94% cost reduction for global supply chains.',
     ctaText: 'Optimize Your Supply Chain',
@@ -335,10 +282,8 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '⚡',
     featured: true,
     priority: 2,
-    startDate: '2025-10-01',
-  },
-  {
-    id: 'neural-architecture-search-oct-2025',
+    startDate: '2025-10-01'}
+  {id: 'neural-architecture-search-oct-2025',
     title: '🧠 NEW TODAY: Neural Architecture Search — Design AI Models in Hours',
     description: 'Automate model discovery with 1000x faster design and 97% accuracy improvements. Build state-of-the-art models without ML PhDs.',
     ctaText: 'Automate AI Development',
@@ -347,10 +292,8 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '🧠',
     featured: true,
     priority: 3,
-    startDate: '2025-10-01',
-  },
-  {
-    id: 'oct-breakthrough-2025',
+    startDate: '2025-10-01'}
+  {id: 'oct-breakthrough-2025',
     title: '🚀 BREAKTHROUGH: Neuromorphic AI, Sovereign Data Centers, Vector-First Databases',
     description: '3 game-changing articles just dropped! 1000x energy efficiency, national AI independence, and 100x faster queries. Transform your enterprise AI infrastructure today.',
     ctaText: 'Explore the Revolution',
@@ -359,10 +302,8 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '🚀',
     featured: true,
     priority: 4,
-    startDate: '2025-10-01',
-  },
-  {
-    id: 'neuromorphic-ai-chips-oct-2025',
+    startDate: '2025-10-01'}
+  {id: 'neuromorphic-ai-chips-oct-2025',
     title: '⚡ NEW: Neuromorphic AI Chips — 1000x Energy Efficiency',
     description: 'Brain-inspired computing delivering sub-millisecond latency with 99% less power. The future of enterprise AI hardware is here.',
     ctaText: 'Discover Neuromorphic AI',
@@ -371,10 +312,8 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '⚡',
     featured: true,
     priority: 1,
-    startDate: '2025-10-01',
-  },
-  {
-    id: 'sovereign-ai-centers-oct-2025',
+    startDate: '2025-10-01'}
+  {id: 'sovereign-ai-centers-oct-2025',
     title: '🛡️ NEW: Sovereign AI Data Centers — National AI Independence',
     description: '$100B+ investment reshaping global AI. Build domestically controlled infrastructure ensuring data sovereignty and compliance.',
     ctaText: 'Build Sovereign AI',
@@ -383,10 +322,8 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '🛡️',
     featured: true,
     priority: 2,
-    startDate: '2025-10-01',
-  },
-  {
-    id: 'ai-native-databases-oct-2025',
+    startDate: '2025-10-01'}
+  {id: 'ai-native-databases-oct-2025',
     title: '💾 NEW: AI-Native Databases — 100x Faster Queries',
     description: 'Vector-first architecture with semantic search and sub-10ms latency at billion-vector scale. Revolutionize your AI applications.',
     ctaText: 'Upgrade Your Database',
@@ -395,10 +332,8 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '💾',
     featured: true,
     priority: 3,
-    startDate: '2025-10-01',
-  },
-  {
-    id: 'ai-self-healing-infrastructure-oct-2025',
+    startDate: '2025-10-01'}
+  {id: 'ai-self-healing-infrastructure-oct-2025',
     title: '🔄 NEW: AI Self-Healing Infrastructure — 99.99% Uptime Guaranteed',
     description: 'Autonomous infrastructure detecting and fixing issues in real-time. 95% MTTR reduction, zero human intervention.',
     ctaText: 'Explore Self-Healing AI',
@@ -407,10 +342,8 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '🔄',
     featured: true,
     priority: 4,
-    startDate: '2025-10-01',
-  },
-  {
-    id: 'generative-ai-code-assistants-oct-2025',
+    startDate: '2025-10-01'}
+  {id: 'generative-ai-code-assistants-oct-2025',
     title: '💻 NEW: AI Code Assistants — 10x Developer Productivity',
     description: 'Next-gen AI pair programming that writes production-ready code. Ship 5x faster with 40% fewer bugs.',
     ctaText: 'Boost Your Dev Team',
@@ -419,10 +352,8 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '💻',
     featured: true,
     priority: 2,
-    startDate: '2025-10-01',
-  },
-  {
-    id: 'edge-ai-privacy-analytics-oct-2025',
+    startDate: '2025-10-01'}
+  {id: 'edge-ai-privacy-analytics-oct-2025',
     title: '🔐 NEW: Privacy-Preserving Analytics — 95%+ Accuracy, Zero PII',
     description: 'GDPR/CCPA compliant analytics by design. Extract insights without collecting personal data.',
     ctaText: 'Learn Privacy-First AI',
@@ -431,10 +362,8 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '🔐',
     featured: true,
     priority: 3,
-    startDate: '2025-10-01',
-  },
-  {
-    id: 'ai-supply-chain-optimization-oct-2025',
+    startDate: '2025-10-01'}
+  {id: 'ai-supply-chain-optimization-oct-2025',
     title: '📦 NEW: AI Supply Chain Optimization — 35% Cost Savings',
     description: 'Transform operations with intelligent demand forecasting and logistics automation. 45% fulfillment boost.',
     ctaText: 'Optimize Your Supply Chain',
@@ -443,10 +372,8 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '📦',
     featured: true,
     priority: 4,
-    startDate: '2025-10-01',
-  },
-  {
-    id: 'ai-ethics-operational-blueprint-2026',
+    startDate: '2025-10-01'}
+  {id: 'ai-ethics-operational-blueprint-2026',
     title: '⚖️ AI Ethics Operational Blueprint 2026',
     description: 'Bias tests, fairness SLAs, and audit trails teams adopt. Ship fast, stay compliant.',
     ctaText: 'Read the blueprint',
@@ -455,10 +382,8 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '⚖️',
     featured: true,
     priority: 5,
-    startDate: '2025-09-30',
-  },
-  {
-    id: 'edge-rag-blueprint-2026',
+    startDate: '2025-09-30'}
+  {id: 'edge-rag-blueprint-2026',
     title: '🛰️ Edge RAG Blueprint 2026 — <100ms Private Answers',
     description: 'Freshness TTLs, hybrid retrieval, and on-device caches for trustworthy answers.',
     ctaText: 'Explore Edge RAG',
@@ -467,10 +392,8 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '🛰️',
     featured: true,
     priority: 2,
-    startDate: '2025-09-30',
-  },
-  {
-    id: 'platform-roi-scorecards-2026',
+    startDate: '2025-09-30'}
+  {id: 'platform-roi-scorecards-2026',
     title: '📈 Platform ROI Scorecards 2026',
     description: 'Connect golden paths to adoption, SLOs, and revenue with actionable scorecards.',
     ctaText: 'See the guide',
@@ -479,10 +402,8 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '📈',
     featured: true,
     priority: 3,
-    startDate: '2025-09-30',
-  },
-  {
-    id: 'multimodal-ai-launch',
+    startDate: '2025-09-30'}
+  {id: 'multimodal-ai-launch',
     title: '🎭 Multimodal AI Revolution - Just Released!',
     description: 'Master unified vision-language-audio AI achieving 98% accuracy. Transform your applications with cutting-edge multimodal capabilities.',
     ctaText: 'Explore Multimodal AI',
@@ -491,10 +412,8 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '🎭',
     featured: true,
     priority: 1,
-    startDate: '2025-10-15',
-  },
-  {
-    id: 'blockchain-ai-integration',
+    startDate: '2025-10-15'}
+  {id: 'blockchain-ai-integration',
     title: '⛓️ Blockchain-AI Integration Now Available',
     description: 'Combine blockchain immutability with AI intelligence for trustless, verifiable systems. Decentralized AI governance at scale.',
     ctaText: 'Learn About Blockchain-AI',
@@ -503,10 +422,8 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '⛓️',
     featured: true,
     priority: 2,
-    startDate: '2025-10-15',
-  },
-  {
-    id: 'green-ai-sustainability',
+    startDate: '2025-10-15'}
+  {id: 'green-ai-sustainability',
     title: '🌱 Green AI: 90% Carbon Reduction Achieved',
     description: 'Build sustainable AI systems with carbon-neutral ML at scale. Join the environmental revolution in AI.',
     ctaText: 'Discover Green AI',
@@ -515,10 +432,8 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '🌱',
     featured: true,
     priority: 3,
-    startDate: '2025-10-15',
-  },
-  {
-    id: 'ai-predictive-maintenance',
+    startDate: '2025-10-15'}
+  {id: 'ai-predictive-maintenance',
     title: '⚙️ AI Predictive Maintenance - 85% Downtime Reduction',
     description: 'New service: Predict equipment failures with 98% accuracy. Reduce costs by 40% and eliminate unplanned downtime.',
     ctaText: 'Get Started',
@@ -527,10 +442,8 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '⚙️',
     featured: true,
     priority: 4,
-    startDate: '2025-10-15',
-  },
-  {
-    id: 'ai-talent-acquisition',
+    startDate: '2025-10-15'}
+  {id: 'ai-talent-acquisition',
     title: '👥 AI Talent Acquisition - 10x Faster Hiring',
     description: 'Revolutionary recruiting with AI matching candidates 10x faster with 95% accuracy. Transform your HR operations.',
     ctaText: 'Explore Solution',
@@ -539,9 +452,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '👥',
     featured: true,
     priority: 5,
-    startDate: '2025-10-15',
-  }
-  ,
+    startDate: '2025-10-15'}
   {
     id: 'oct-30-new-content-drop',
     title: '🚀 New Content Drop: Platform ROI, Supply Chain v2, Edge Experiments',
@@ -553,7 +464,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     featured: true,
     priority: 0,
     startDate: '2025-10-30'
-  },
+  }
   {
     id: 'oct-01-2025-mega-breakthrough-launch',
     title: '🎉 MEGA LAUNCH: 6 Revolutionary AI Breakthroughs Released Today!',
@@ -565,7 +476,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     featured: true,
     priority: 0,
     startDate: '2025-10-01'
-  },
+  }
   {
     id: 'autonomous-devops-oct-01-2025',
     title: '⚡ NEW: Autonomous DevOps - 80% Faster Releases with Zero Downtime',
@@ -577,7 +488,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     featured: true,
     priority: 1,
     startDate: '2025-10-01'
-  },
+  }
   {
     id: 'ai-incident-response-oct-01-2025',
     title: '🚨 NEW: AI Incident Response - Resolve Issues in Under 60 Seconds',
@@ -589,7 +500,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     featured: true,
     priority: 2,
     startDate: '2025-10-01'
-  },
+  }
   {
     id: 'enterprise-llm-fine-tuning-oct-01-2025',
     title: '🧠 NEW: Enterprise LLM Fine-Tuning - 10x Better Performance',
@@ -601,7 +512,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     featured: true,
     priority: 3,
     startDate: '2025-10-01'
-  },
+  }
   {
     id: 'intelligent-cost-optimization-oct-01-2025',
     title: '💰 NEW: AI Cost Optimization - Save 40-65% on Cloud Spend',
@@ -613,7 +524,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     featured: true,
     priority: 4,
     startDate: '2025-10-01'
-  },
+  }
   {
     id: 'zero-latency-edge-oct-01-2025',
     title: '⚡ NEW: Zero-Latency Edge Computing - Sub-Millisecond Global Processing',
@@ -625,7 +536,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     featured: true,
     priority: 5,
     startDate: '2025-10-01'
-  },
+  }
   {
     id: 'conversational-ai-oct-01-2025',
     title: '💬 NEW: Conversational AI Platforms - Human-Level Interactions',
@@ -638,7 +549,6 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     priority: 6,
     startDate: '2025-10-01'
   }
-  ,
   {
     id: 'oct-03-continuous-intelligence-2025',
     title: '⚡ NEW: Continuous Intelligence — 100M Events/sec under 50ms',
@@ -650,7 +560,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     featured: true,
     priority: 0,
     startDate: '2025-10-03'
-  },
+  }
   {
     id: 'oct-03-autonomous-cloud-security-2025',
     title: '🛡️ NEW: Autonomous Cloud Security — Neutralize Threats in <5s',
@@ -662,7 +572,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     featured: true,
     priority: 1,
     startDate: '2025-10-03'
-  },
+  }
   {
     id: 'oct-03-quantum-supply-chain-2025',
     title: '🧮 NEW: Quantum Supply Chain — Solve in Minutes, Not Days',
@@ -690,7 +600,7 @@ enhancedPromotionalBanners.unshift(
     featured: true,
     priority: 0,
     startDate: '2025-10-08'
-  },
+  }
   {
     id: 'ai-self-healing-infra-banner-2025',
     title: '🔄 NEW: AI Self-Healing Infrastructure — 99.99% Uptime',
@@ -702,7 +612,7 @@ enhancedPromotionalBanners.unshift(
     featured: true,
     priority: 0,
     startDate: '2025-10-01'
-  },
+  }
   {
     id: 'genai-code-assistants-banner-2025',
     title: '💻 NEW: Generative AI Code Assistants — 10x Productivity',
@@ -714,7 +624,7 @@ enhancedPromotionalBanners.unshift(
     featured: true,
     priority: 1,
     startDate: '2025-10-01'
-  },
+  }
   {
     id: 'edge-privacy-analytics-banner-2025',
     title: '🔐 NEW: Edge Privacy‑Preserving Analytics — Zero PII',
@@ -742,7 +652,7 @@ enhancedPromotionalBanners.unshift(
     featured: true,
     priority: 0,
     startDate: '2025-10-08'
-  },
+  }
   {
     id: 'oct-08-governed-multiagent-platforms',
     title: '🛡️ Governed Multi‑Agent Platforms — Budgets, SLIs, Rollback',
@@ -754,7 +664,7 @@ enhancedPromotionalBanners.unshift(
     featured: true,
     priority: 1,
     startDate: '2025-10-08'
-  },
+  }
   {
     id: 'oct-08-edge-private-analytics-v4',
     title: '🔐 Edge Private Analytics v4 — Zero‑PII, <100ms',
@@ -766,7 +676,7 @@ enhancedPromotionalBanners.unshift(
     featured: true,
     priority: 2,
     startDate: '2025-10-08'
-  },
+  }
   {
     id: 'oct-08-cache-strata-v5',
     title: '⚡ Cache Strata v5 — Features → Chunks → Answers',
@@ -794,7 +704,7 @@ enhancedPromotionalBanners.unshift(
     featured: true,
     priority: 0,
     startDate: '2025-10-07'
-  },
+  }
   {
     id: 'oct-07-evaluator-pipelines-blueprint',
     title: '🛡️ NEW: Evaluator Pipelines — Predict Production, Gate Risk',
@@ -1023,7 +933,7 @@ enhancedPromotionalBanners.unshift(
     featured: true,
     priority: 0,
     startDate: '2025-10-06'
-  },
+  }
   {
     id: 'oct-06-feature-stores-2025',
     title: '⚡ Real-Time Feature Stores — Sub-10ms Reads at 10M+ RPS',
@@ -1035,7 +945,7 @@ enhancedPromotionalBanners.unshift(
     featured: true,
     priority: 1,
     startDate: '2025-10-06'
-  },
+  }
   {
     id: 'oct-06-policy-tests-v3-2025',
     title: '🛡️ Policy Tests v3 — Change Gates That Predict Production',
@@ -1047,7 +957,7 @@ enhancedPromotionalBanners.unshift(
     featured: true,
     priority: 2,
     startDate: '2025-10-06'
-  },
+  }
   {
     id: 'oct-06-evaluator-gates-2025',
     title: '✅ Evaluator-Driven Release Gates — Ship Faster, Fewer Regressions',

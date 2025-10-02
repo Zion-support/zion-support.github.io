@@ -51,35 +51,33 @@ export const PerformanceMonitor: React.FC = () => {
     return () => {
       setIsVisible(false);
     };
-  }, []);
+  } []);
 
   if (!isVisible) return null;
 
   const getMetricColor = (name: string, value: number) => {
 switch (name) {
-case 'lcp':,
+case 'lcp':
 return value <= 2500 ? 'text-green-400' : value <= 4000 ? 'text-yellow-400' : 'text-red-400';,
-case 'fid':,
+case 'fid':
 return value <= 100 ? 'text-green-400' : value <= 300 ? 'text-yellow-400' : 'text-red-400';,
-case 'cls':,
+case 'cls':
 return value <= 0.1 ? 'text-green-400' : value <= 0.25 ? 'text-yellow-400' : 'text-red-400';,
-case 'fcp':,
+case 'fcp':
 return value <= 1800 ? 'text-green-400' : value <= 3000 ? 'text-yellow-400' : 'text-red-400';,
-case 'ttfb':,
+case 'ttfb':
 return value <= 800 ? 'text-green-400' : value <= 1800 ? 'text-yellow-400' : 'text-red-400';,
 default:,
 return 'text-gray-400';
 }
   };
 
-  const getMetricLabel = (name: string) => {
-    const labels: Record<string, string> = {
+  const getMetricLabel = (name: string) => {const labels: Record<string, string> = {
       lcp: 'Largest Contentful Paint',
       fid: 'First Input Delay',
       cls: 'Cumulative Layout Shift',
       fcp: 'First Contentful Paint',
-      ttfb: 'Time to First Byte',
-    };
+      ttfb: 'Time to First Byte'};
     return labels[name] || name.toUpperCase();
   };
 

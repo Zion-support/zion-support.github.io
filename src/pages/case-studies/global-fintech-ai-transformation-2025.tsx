@@ -130,27 +130,27 @@ const GlobalFinTechAITransformation = () => {
                     title: "Real-Time Fraud Detection Platform",
                     icon: "🛡️",
                     results: ["94.7% detection accuracy", "$22.1M annual savings", "<50ms detection latency", "92% fraud loss reduction"]
-                  },
+                  }
                   {
                     title: "Intelligent Credit Decisioning Engine",
                     icon: "⚡",
                     results: ["2-minute decisions", "56% approval rate (up from 42%)", "$28M incremental revenue", "18% default rate (down from 23%)"]
-                  },
+                  }
                   {
                     title: "Hyper-Personalization Platform",
                     icon: "🎯",
                     results: ["18.4% conversion rate", "8% churn rate (down from 28%)", "87 NPS (up from 62)", "$45M incremental revenue"]
-                  },
+                  }
                   {
                     title: "Cognitive Process Automation",
                     icon: "🤖",
                     results: ["92% automation rate", "450 FTE redeployed", "$38M annual savings", "95% faster processing"]
-                  },
+                  }
                   {
                     title: "Predictive Customer Analytics",
                     icon: "📊",
                     results: ["94% churn prediction accuracy", "42% LTV increase", "$32M retained revenue", "3.2 products per customer"]
-                  },
+                  }
                   {
                     title: "AI-Powered Compliance Monitoring",
                     icon: "📋",
@@ -185,13 +185,13 @@ const GlobalFinTechAITransformation = () => {
                     duration: "Months 1-6",
                     focus: "AI strategy, data platform modernization, ML infrastructure, quick wins",
                     results: ["Infrastructure deployed", "Data platform operational", "First models in production", "$4.2M in early value"]
-                  },
+                  }
                   {
                     phase: "Phase 2: Scaling",
                     duration: "Months 7-12",
                     focus: "Core AI capabilities deployment, enterprise-wide integration, process automation scaling",
                     results: ["All major initiatives deployed", "$78M in value delivered", "85% process automation", "Organization transformed"]
-                  },
+                  }
                   {
                     phase: "Phase 3: Optimization",
                     duration: "Months 13-18",

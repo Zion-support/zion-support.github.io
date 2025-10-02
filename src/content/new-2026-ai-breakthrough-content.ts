@@ -122,7 +122,7 @@ Ready to experience the future? Contact Zion Tech Group to begin your hyperconsc
     featured: true,
     readTime: "12 min read",
     imageUrl: "/images/ai-hyperconscious-computing.jpg"
-  },
+  }
   {
     id: "quantum-neural-fusion-2026-breakthrough",
     title: "Quantum-Neural Fusion 2026: The Ultimate Computing Breakthrough",
@@ -214,7 +214,7 @@ The future of computing is here. The question isn't whether to adopt quantum-neu
     featured: true,
     readTime: "15 min read",
     imageUrl: "/images/quantum-neural-fusion.jpg"
-  },
+  }
   {
     id: "autonomous-enterprise-mesh-2026",
     title: "Autonomous Enterprise Mesh 2026: Self-Organizing Business Intelligence",
@@ -459,10 +459,10 @@ Contact Zion Tech Group to begin your hyperconscious enterprise transformation. 
       roi: "$1.2 Trillion",
       metrics: ["99.999% operational accuracy", "300% revenue growth", "95% cost reduction", "100% customer satisfaction"],
       duration: "12 months"
-    },
+    }
     publishDate: "2026-01-30",
     featured: true
-  },
+  }
   {
     id: "quantum-neural-fusion-manufacturing-success",
     title: "Quantum-Neural Fusion Manufacturing Success: Perfect Production",
@@ -587,7 +587,7 @@ Ready to achieve perfect production? The quantum-neural revolution awaits.
       roi: "$2.8 Billion",
       metrics: ["100% quality achievement", "Zero defects", "95% cost reduction", "300% productivity improvement"],
       duration: "8 months"
-    },
+    }
     publishDate: "2026-02-05",
     featured: true
   }
@@ -602,7 +602,7 @@ export const newServices = [
     price: "$50,000/month",
     features: ["Consciousness Integration", "Autonomous Operations", "Infinite Optimization", "Universal Intelligence"],
     category: "AI Consulting"
-  },
+  }
   {
     id: "quantum-neural-fusion-platform",
     title: "Quantum-Neural Fusion Platform",
@@ -610,7 +610,7 @@ export const newServices = [
     price: "$100,000/month",
     features: ["Quantum Processing", "Neural Integration", "Perfect Optimization", "Infinite Scalability"],
     category: "Platform Services"
-  },
+  }
   {
     id: "autonomous-enterprise-mesh",
     title: "Autonomous Enterprise Mesh",

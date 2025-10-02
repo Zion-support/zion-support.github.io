@@ -13,19 +13,19 @@ const NewContentShowcase2025: React.FC = () => {
       description: "Unified vision-language-audio processing with 98% accuracy",
       link: "/blog/multimodal-ai-revolution-2025",
       color: "from-purple-500 to-pink-500"
-    },
+    }
     {
       title: "⛓️ Blockchain-AI Integration",
       description: "Trustless intelligence with decentralized governance",
       link: "/blog/blockchain-ai-integration-2025",
       color: "from-blue-500 to-cyan-500"
-    },
+    }
     {
       title: "🌱 Green AI & Sustainability",
       description: "Carbon-neutral ML with 90% emissions reduction",
       link: "/blog/green-ai-sustainability-2025",
       color: "from-green-500 to-emerald-500"
-    },
+    }
     {
       title: "⚙️ AI Predictive Maintenance",
       description: "85% downtime reduction with 98% prediction accuracy",

@@ -12,7 +12,7 @@ const January2026RevolutionaryContentBanner: React.FC = () => {
       impact: "98% Automation",
       type: "blog",
       readTime: "15 min"
-    },
+    }
     {
       title: "Quantum AI Breakthrough: Revolutionary Computing Paradigm",
       description: "10^18 Operations/sec, 99.9% Accuracy, $10B Market Value",
@@ -23,7 +23,7 @@ const January2026RevolutionaryContentBanner: React.FC = () => {
       impact: "10^18 Ops/sec",
       type: "blog",
       readTime: "18 min"
-    },
+    }
     {
       title: "Fortune 500 Quantum AI Transformation: $10B Revenue Impact",
       description: "500% Productivity Increase, 95% Process Automation, Market Leadership",
@@ -121,9 +121,9 @@ const January2026RevolutionaryContentBanner: React.FC = () => {
         {/* Stats Section */}
         <div className="grid md:grid-cols-4 gap-6 mb-12">
           {[
-            { value: '98%', label: 'Automation Rate', icon: '🤖', color: 'from-blue-400 to-cyan-400' },
-            { value: '10^18', label: 'Quantum Ops/sec', icon: '⚛️', color: 'from-purple-400 to-pink-400' },
-            { value: '$10B', label: 'Revenue Impact', icon: '💰', color: 'from-green-400 to-emerald-400' },
+            { value: '98%', label: 'Automation Rate', icon: '🤖', color: 'from-blue-400 to-cyan-400' }
+            { value: '10^18', label: 'Quantum Ops/sec', icon: '⚛️', color: 'from-purple-400 to-pink-400' }
+            { value: '$10B', label: 'Revenue Impact', icon: '💰', color: 'from-green-400 to-emerald-400' }
             { value: '500%', label: 'Productivity Gain', icon: '⚡', color: 'from-yellow-400 to-orange-400' }
           ].map((stat, index) => (
             <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-4 border border-white/10 text-center">

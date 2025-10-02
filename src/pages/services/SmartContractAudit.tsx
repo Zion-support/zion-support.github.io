@@ -15,31 +15,31 @@ const SmartContractAudit: React.FC = () => {
       title: "Comprehensive Security Analysis",
       description: "Deep code analysis using static analysis, dynamic testing, and formal verification to identify vulnerabilities.",
       benefit: "99.8% vulnerability detection rate"
-    },
+    }
     {
       icon: Search,
       title: "Automated Vulnerability Scanning",
       description: "AI-powered scanning tools that detect common smart contract vulnerabilities and security patterns.",
       benefit: "100+ vulnerability patterns detected"
-    },
+    }
     {
       icon: AlertTriangle,
       title: "Risk Assessment & Mitigation",
       description: "Detailed risk analysis with prioritized recommendations and mitigation strategies.",
       benefit: "Zero critical vulnerabilities in production"
-    },
+    }
     {
       icon: CheckCircle,
       title: "Compliance Verification",
       description: "Ensure compliance with industry standards, regulatory requirements, and best practices.",
       benefit: "100% compliance with standards"
-    },
+    }
     {
       icon: Clock,
       title: "Fast Turnaround",
       description: "Rapid audit completion with detailed reports delivered within 5-10 business days.",
       benefit: "5-10 day delivery guarantee"
-    },
+    }
     {
       icon: Users,
       title: "Expert Team",
@@ -65,7 +65,7 @@ const SmartContractAudit: React.FC = () => {
         "Up to 500 lines of code"
       ],
       popular: false
-    },
+    }
     {
       name: "Professional Audit",
       price: "$8,500",
@@ -84,7 +84,7 @@ const SmartContractAudit: React.FC = () => {
         "Architecture review"
       ],
       popular: true
-    },
+    }
     {
       name: "Enterprise Audit",
       price: "$25,000",
@@ -115,14 +115,14 @@ const SmartContractAudit: React.FC = () => {
       content: "The smart contract audit identified 3 critical vulnerabilities that could have resulted in $50M in losses. The team's expertise saved our project and gave us confidence for mainnet launch.",
       rating: 5,
       company: "DeFi Protocol"
-    },
+    }
     {
       name: "Sarah Rodriguez",
       role: "Founder, NFT Marketplace",
       content: "Professional audit process with clear communication and actionable recommendations. The compliance verification helped us meet regulatory requirements for our marketplace launch.",
       rating: 5,
       company: "NFT Marketplace"
-    },
+    }
     {
       name: "Dr. James Wilson",
       role: "Head of Blockchain, FinTech",
@@ -138,19 +138,19 @@ const SmartContractAudit: React.FC = () => {
       icon: Globe,
       description: "Comprehensive auditing for decentralized finance protocols including lending, borrowing, and trading platforms.",
       vulnerabilities: ["Reentrancy attacks", "Flash loan exploits", "Oracle manipulation", "Liquidity pool risks"]
-    },
+    }
     {
       title: "NFT Smart Contracts",
       icon: Code,
       description: "Specialized auditing for NFT marketplaces, minting contracts, and token standards compliance.",
       vulnerabilities: ["Metadata manipulation", "Royalty bypass", "Minting vulnerabilities", "Transfer restrictions"]
-    },
+    }
     {
       title: "Token Contracts",
       icon: Database,
       description: "Security analysis for ERC-20, ERC-721, ERC-1155, and custom token implementations.",
       vulnerabilities: ["Supply manipulation", "Access control issues", "Transfer bugs", "Approval vulnerabilities"]
-    },
+    }
     {
       title: "DAO Governance",
       icon: Users,
@@ -164,27 +164,27 @@ const SmartContractAudit: React.FC = () => {
       step: "01",
       title: "Initial Assessment",
       description: "Code review and architecture analysis to understand the smart contract functionality and design."
-    },
+    }
     {
       step: "02",
       title: "Automated Scanning",
       description: "AI-powered vulnerability detection using industry-leading security tools and custom analyzers."
-    },
+    }
     {
       step: "03",
       title: "Manual Review",
       description: "Expert manual code review focusing on business logic, edge cases, and complex interactions."
-    },
+    }
     {
       step: "04",
       title: "Risk Analysis",
       description: "Comprehensive risk assessment with vulnerability prioritization and impact analysis."
-    },
+    }
     {
       step: "05",
       title: "Report Generation",
       description: "Detailed security report with findings, recommendations, and remediation guidance."
-    },
+    }
     {
       step: "06",
       title: "Follow-up Support",

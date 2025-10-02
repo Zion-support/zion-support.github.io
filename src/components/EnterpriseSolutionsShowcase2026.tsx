@@ -15,7 +15,7 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
       gradient: 'from-blue-500 to-cyan-500',
       badge: 'BEST SELLER',
       features: ['Workflow Automation', 'Intelligent Routing', 'Process Optimization']
-    },
+    }
     {
       id: 2,
       title: 'Quantum-Enhanced Security Platform',
@@ -29,7 +29,7 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
       gradient: 'from-purple-500 to-indigo-500',
       badge: 'ENTERPRISE',
       features: ['Quantum Encryption', 'Zero-Trust Architecture', 'Threat Detection']
-    },
+    }
     {
       id: 3,
       title: 'Cloud-Native AI Infrastructure',
@@ -43,7 +43,7 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
       gradient: 'from-green-500 to-emerald-500',
       badge: 'CLOUD-FIRST',
       features: ['Multi-Cloud Deployment', 'Auto-Scaling', 'Cost Optimization']
-    },
+    }
     {
       id: 4,
       title: 'Predictive Analytics Intelligence',
@@ -57,7 +57,7 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
       gradient: 'from-orange-500 to-red-500',
       badge: 'PREDICTIVE',
       features: ['Trend Forecasting', 'Risk Analysis', 'Customer Insights']
-    },
+    }
     {
       id: 5,
       title: 'Digital Transformation Suite',
@@ -71,7 +71,7 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
       gradient: 'from-teal-500 to-cyan-500',
       badge: 'TRANSFORMATION',
       features: ['Strategy Consulting', 'Implementation', 'Change Management']
-    },
+    }
     {
       id: 6,
       title: 'Enterprise AI Governance',
@@ -89,9 +89,9 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
   ];
 
   const successMetrics = [
-    { value: '500+', label: 'Enterprise Clients', icon: <Building className="w-8 h-8" /> },
-    { value: '$2B+', label: 'Cost Savings Generated', icon: <DollarSign className="w-8 h-8" /> },
-    { value: '98%', label: 'Client Satisfaction', icon: <Award className="w-8 h-8" /> },
+    { value: '500+', label: 'Enterprise Clients', icon: <Building className="w-8 h-8" /> }
+    { value: '$2B+', label: 'Cost Savings Generated', icon: <DollarSign className="w-8 h-8" /> }
+    { value: '98%', label: 'Client Satisfaction', icon: <Award className="w-8 h-8" /> }
     { value: '24/7', label: 'Enterprise Support', icon: <Users className="w-8 h-8" /> }
   ];
 

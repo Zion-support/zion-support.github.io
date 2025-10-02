@@ -122,10 +122,10 @@ recommendations.push(
   private getComponentSizes(): Array<{ name: string; size: number }> {
     // In production, this would integrate with actual build tools
     return [
-      { name: 'App.tsx', size: 450 * 1024 },
-      { name: 'Home.tsx', size: 280 * 1024 },
-      { name: 'BannerComponents', size: 650 * 1024 },
-      { name: 'BlogComponents', size: 320 * 1024 },
+      { name: 'App.tsx', size: 450 * 1024 }
+      { name: 'Home.tsx', size: 280 * 1024 }
+      { name: 'BannerComponents', size: 650 * 1024 }
+      { name: 'BlogComponents', size: 320 * 1024 }
       { name: 'UtilityFunctions', size: 180 * 1024 }
     ];
   }

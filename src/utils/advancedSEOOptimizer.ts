@@ -47,16 +47,14 @@ images?: { src: string; alt: string
 }[];
     links?: { href: string; text: string; isInternal: boolean }[];
     keywords?: string[];
-  }): SEOAnalysis {
-    const {
+  }): SEOAnalysis {const {
       title = '',
       description = '',
       content = '',
       headings = [],
       images = [],
       links = [],
-      keywords = [],
-    } = options;
+      keywords = []} =  options;
 
     // Calculate metrics
     const metrics: SEOMetrics = {
@@ -83,13 +81,11 @@ images?: { src: string; alt: string
     const issues = this.identifyIssues(metrics, options);
     const strengths = this.identifyStrengths(metrics, options);
 
-    return {
-      metrics,
+    return {metrics,
       recommendations,
       keywords: extractedKeywords,
       issues,
-      strengths,
-    };
+      strengths};
   }
 
   /**
@@ -184,7 +180,7 @@ images?: { src: string; alt: string
     const keywordCount = keywords.reduce((count, keyword) => {
       const kw = keyword.toLowerCase();
       return count + words.filter((w) => w.includes(kw)).length;
-    }, 0);
+    } 0);
 
     const density = keywordCount / totalWords;
 
@@ -280,16 +276,14 @@ images?: { src: string; alt: string
   /**
    * Calculate overall SEO score
    */
-  private calculateOverallScore(metrics: SEOMetrics): number {
-    const weights = {
+  private calculateOverallScore(metrics: SEOMetrics): number {const weights = {
       title: 0.20,
       description: 0.15,
       headings: 0.15,
       keywordDensity: 0.15,
       readability: 0.15,
       images: 0.10,
-      links: 0.10,
-    };
+      links: 0.10};
 
     return Math.round(
       metrics.titleScore * weights.title +
@@ -454,11 +448,9 @@ return strengths;
   /**
    * Generate structured data (JSON-LD)
    */
-  generateStructuredData(type: 'Article' | 'Product' | 'Service', data: any): string {
-    const baseSchema = {
+  generateStructuredData(type: 'Article' | 'Product' | 'Service', data: any): string {const baseSchema = {
       '@context': 'https://schema.org',
-      '@type': type,
-    };
+      '@type': type};
 
     const schema = { ...baseSchema, ...data };
     return JSON.stringify(schema, null, 2);
@@ -474,8 +466,7 @@ keywords: string[];,
 author?: string;,
 image?: string;,
 url?: string;
-}): { [key: string]: string } {
-    return {
+}): { [key: string]: string } {return {
       title: this.optimizeTitle(page.title, page.keywords),
       description: this.optimizeDescription(page.description, page.keywords),
       keywords: page.keywords.join(', '),
@@ -487,8 +478,7 @@ url?: string;
       'twitter:title': page.title,
       'twitter:description': page.description,
       'twitter:image': page.image || '',
-      author: page.author || '',
-    };
+      author: page.author || ''};
   }
 
   /**

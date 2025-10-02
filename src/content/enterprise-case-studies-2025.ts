@@ -44,10 +44,10 @@ export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
         savings: "$3.7B annually",
         accuracy: "Zero errors",
         roi: "2,400%"
-      },
+      }
       timeframe: "18 months",
       scale: "450 facilities globally"
-    },
+    }
     technologies: ["Autonomous AI", "Self-Healing Infrastructure", "Predictive Analytics", "IoT Integration"],
     featured: true,
     date: "2025-01-20",
@@ -55,7 +55,7 @@ export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
     image: "/images/fortune-500-ai-transformation.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "financial-services-fraud-prevention",
     slug: "financial-services-fraud-prevention",
@@ -71,10 +71,10 @@ export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
         savings: "$47B prevented",
         accuracy: "Sub-1ms detection",
         roi: "3,200%"
-      },
+      }
       timeframe: "12 months",
       scale: "50M+ transactions daily"
-    },
+    }
     technologies: ["Quantum AI", "Real-time Analytics", "Behavioral Analysis", "Predictive Modeling"],
     featured: true,
     date: "2025-01-20",
@@ -82,7 +82,7 @@ export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
     image: "/images/financial-fraud-prevention.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "healthcare-ai-diagnostic-system",
     slug: "healthcare-ai-diagnostic-system",
@@ -98,10 +98,10 @@ export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
         savings: "$1.5B value",
         accuracy: "252 lives saved",
         roi: "497%"
-      },
+      }
       timeframe: "15 months",
       scale: "25 hospitals, 500K patients"
-    },
+    }
     technologies: ["Multimodal AI", "Diagnostic Imaging", "Clinical Decision Support", "Real-time Analytics"],
     featured: true,
     date: "2025-01-20",
@@ -109,7 +109,7 @@ export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
     image: "/images/healthcare-ai-diagnostics.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "retail-supply-chain-optimization",
     slug: "retail-supply-chain-optimization",
@@ -125,10 +125,10 @@ export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
         savings: "40% cost reduction",
         accuracy: "95% inventory accuracy",
         roi: "2,800%"
-      },
+      }
       timeframe: "10 months",
       scale: "2,000+ stores globally"
-    },
+    }
     technologies: ["Supply Chain AI", "Predictive Analytics", "Autonomous Optimization", "IoT Sensors"],
     featured: true,
     date: "2025-01-20",
@@ -136,7 +136,7 @@ export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
     image: "/images/retail-supply-chain-ai.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "energy-sector-smart-grid",
     slug: "energy-sector-smart-grid",
@@ -152,10 +152,10 @@ export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
         savings: "$890M annually",
         accuracy: "60% efficiency gain",
         roi: "1,600%"
-      },
+      }
       timeframe: "20 months",
       scale: "5M+ customers served"
-    },
+    }
     technologies: ["Smart Grid AI", "Predictive Maintenance", "Energy Optimization", "IoT Integration"],
     featured: true,
     date: "2025-01-20",
@@ -163,7 +163,7 @@ export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
     image: "/images/energy-smart-grid-ai.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "logistics-autonomous-fleet",
     slug: "logistics-autonomous-fleet",
@@ -179,10 +179,10 @@ export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
         savings: "$2.3B value",
         accuracy: "45% fuel savings",
         roi: "1,900%"
-      },
+      }
       timeframe: "14 months",
       scale: "50,000+ vehicles globally"
-    },
+    }
     technologies: ["Autonomous Fleet", "Route Optimization", "Predictive Maintenance", "IoT Sensors"],
     featured: true,
     date: "2025-01-20",

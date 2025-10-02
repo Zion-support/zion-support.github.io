@@ -25,7 +25,7 @@ export const octoberBreakthroughContent = [
       explainability: "10x",
       dataEfficiency: "60% less"
     }
-  },
+  }
   {
     id: "ai-powered-devops-orchestration-2025",
     title: "AI-Powered DevOps: Autonomous CI/CD Orchestration",
@@ -49,7 +49,7 @@ export const octoberBreakthroughContent = [
       recoverySpeed: "3x faster",
       uptime: "99.99%"
     }
-  },
+  }
   {
     id: "federated-learning-privacy-2026",
     title: "Federated Learning at Scale: Privacy-First AI for 2026",
@@ -73,7 +73,7 @@ export const octoberBreakthroughContent = [
       costSavings: "90%",
       scalability: "1000+ devices"
     }
-  },
+  }
   {
     id: "real-time-llm-streaming-2025",
     title: "Real-Time LLM Streaming: Sub-100ms Response Times",
@@ -97,7 +97,7 @@ export const octoberBreakthroughContent = [
       improvement: "80%",
       throughput: "5x"
     }
-  },
+  }
   {
     id: "ai-ethics-framework-2026",
     title: "Practical AI Ethics Framework: From Theory to Production",
@@ -121,7 +121,7 @@ export const octoberBreakthroughContent = [
       compliance: "100%",
       auditability: "Full"
     }
-  },
+  }
   {
     id: "multi-cloud-ai-orchestration-2025",
     title: "Multi-Cloud AI Orchestration: Ultimate Flexibility & Cost Optimization",
@@ -145,7 +145,7 @@ export const octoberBreakthroughContent = [
       flexibility: "3 clouds",
       efficiency: "+40%"
     }
-  },
+  }
   {
     id: "conversational-ai-breakthrough-2025",
     title: "Conversational AI 2.0: Context-Aware Multi-Turn Dialogue",

@@ -14,7 +14,7 @@ const January2026ContentShowcaseBanner: React.FC = () => {
       icon: '🤖',
       featured: true,
       gradient: 'from-cyan-500 to-blue-600'
-    },
+    }
     {
       id: 2,
       title: 'AI 2026: Quantum Neural Optimization - Revolutionary AI Performance Breakthrough',
@@ -27,7 +27,7 @@ const January2026ContentShowcaseBanner: React.FC = () => {
       icon: '⚛️',
       featured: true,
       gradient: 'from-purple-500 to-cyan-600'
-    },
+    }
     {
       id: 3,
       title: 'AI 2026: Meta-Cognitive Reasoning - The Next Frontier of Artificial Intelligence',

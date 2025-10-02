@@ -13,7 +13,7 @@ const AITrendsInsightsBanner2026: React.FC = () => {
       gradient: 'from-purple-500 to-pink-500',
       badge: 'TRENDING',
       insights: ['78% Fortune 500 adoption', '450% growth rate', '$12B market size']
-    },
+    }
     {
       id: 2,
       title: 'Quantum Computing Breakthroughs',
@@ -25,7 +25,7 @@ const AITrendsInsightsBanner2026: React.FC = () => {
       gradient: 'from-cyan-500 to-blue-500',
       badge: 'BREAKTHROUGH',
       insights: ['1000x speed boost', '300% efficiency gain', 'Commercial viability']
-    },
+    }
     {
       id: 3,
       title: 'Autonomous Business Operations',
@@ -37,7 +37,7 @@ const AITrendsInsightsBanner2026: React.FC = () => {
       gradient: 'from-green-500 to-emerald-500',
       badge: 'AUTOMATION',
       insights: ['95% automation rate', '60% cost reduction', '24/7 operations']
-    },
+    }
     {
       id: 4,
       title: 'AI-Powered Predictive Analytics',
@@ -49,7 +49,7 @@ const AITrendsInsightsBanner2026: React.FC = () => {
       gradient: 'from-orange-500 to-red-500',
       badge: 'PREDICTIVE',
       insights: ['99.9% accuracy', '350% adoption growth', '$8B market value']
-    },
+    }
     {
       id: 5,
       title: 'Edge AI Computing Revolution',
@@ -61,7 +61,7 @@ const AITrendsInsightsBanner2026: React.FC = () => {
       gradient: 'from-indigo-500 to-purple-500',
       badge: 'EDGE AI',
       insights: ['420% deployment growth', 'Real-time processing', 'IoT integration']
-    },
+    }
     {
       id: 6,
       title: 'AI Ethics and Governance',
@@ -77,9 +77,9 @@ const AITrendsInsightsBanner2026: React.FC = () => {
   ];
 
   const marketInsights = [
-    { value: '$2.5T', label: 'Global AI Market Size', icon: <TrendingUp className="w-6 h-6" /> },
-    { value: '85%', label: 'Enterprise AI Adoption', icon: <Users className="w-6 h-6" /> },
-    { value: '500M+', label: 'AI-Powered Devices', icon: <Globe className="w-6 h-6" /> },
+    { value: '$2.5T', label: 'Global AI Market Size', icon: <TrendingUp className="w-6 h-6" /> }
+    { value: '85%', label: 'Enterprise AI Adoption', icon: <Users className="w-6 h-6" /> }
+    { value: '500M+', label: 'AI-Powered Devices', icon: <Globe className="w-6 h-6" /> }
     { value: '2.3M', label: 'AI Job Openings', icon: <Award className="w-6 h-6" /> }
   ];
 

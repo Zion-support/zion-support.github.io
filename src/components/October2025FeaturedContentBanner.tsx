@@ -10,11 +10,11 @@ const October2025FeaturedContentBanner = () => {
       bgGradient: "from-indigo-900/40 to-blue-900/40",
       borderColor: "border-indigo-500/30",
       stats: [
-        { value: "90d", label: "To Outcomes" },
-        { value: "KPI", label: "Linked Gates" },
+        { value: "90d", label: "To Outcomes" }
+        { value: "KPI", label: "Linked Gates" }
         { value: "$$", label: "Predictable Cost" }
       ]
-    },
+    }
     {
       title: "Enterprise Neural Orchestration Platform",
       description: "89% faster AI deployment, 94% cost reduction, $12.4M annual savings",
@@ -24,11 +24,11 @@ const October2025FeaturedContentBanner = () => {
       bgGradient: "from-blue-900/40 to-purple-900/40",
       borderColor: "border-blue-500/30",
       stats: [
-        { value: "89%", label: "Faster Deployment" },
-        { value: "94%", label: "Cost Reduction" },
+        { value: "89%", label: "Faster Deployment" }
+        { value: "94%", label: "Cost Reduction" }
         { value: "$12.4M", label: "Annual Savings" }
       ]
-    },
+    }
     {
       title: "Cognitive Supply Chain Revolution",
       description: "76% forecast accuracy, 68% inventory cost reduction, $18.7M value",
@@ -38,11 +38,11 @@ const October2025FeaturedContentBanner = () => {
       bgGradient: "from-emerald-900/40 to-teal-900/40",
       borderColor: "border-emerald-500/30",
       stats: [
-        { value: "76%", label: "Forecast Accuracy" },
-        { value: "68%", label: "Cost Reduction" },
+        { value: "76%", label: "Forecast Accuracy" }
+        { value: "68%", label: "Cost Reduction" }
         { value: "$18.7M", label: "Annual Value" }
       ]
-    },
+    }
     {
       title: "AI Reliability Blueprints 2027",
       description: "Evaluators, action budgets, instant rollback — ship safely",
@@ -52,11 +52,11 @@ const October2025FeaturedContentBanner = () => {
       bgGradient: "from-cyan-900/40 to-blue-900/40",
       borderColor: "border-cyan-500/30",
       stats: [
-        { value: "KPI", label: "Linked Evals" },
-        { value: "1‑click", label: "Rollback" },
+        { value: "KPI", label: "Linked Evals" }
+        { value: "1‑click", label: "Rollback" }
         { value: "24/7", label: "Safe Ops" }
       ]
-    },
+    }
     {
       title: "Edge Inference Playbook 2027",
       description: "Sub‑100ms globally with warm pools and tiered caches",
@@ -66,8 +66,8 @@ const October2025FeaturedContentBanner = () => {
       bgGradient: "from-purple-900/40 to-pink-900/40",
       borderColor: "border-purple-500/30",
       stats: [
-        { value: "<100ms", label: "P95 Latency" },
-        { value: "SLA", label: "Aware Routing" },
+        { value: "<100ms", label: "P95 Latency" }
+        { value: "SLA", label: "Aware Routing" }
         { value: "$", label: "Predictable Spend" }
       ]
     }

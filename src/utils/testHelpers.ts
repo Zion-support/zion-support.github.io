@@ -150,7 +150,7 @@ export class FetchMock {
       response,
       status: options?.status || 200,
       statusText: options?.statusText || 'OK',
-      headers: options?.headers || {},
+      headers: options?.headers || {}
     });
   }
 
@@ -267,31 +267,31 @@ console.error = (...args: any[]) => this.errors.push(args);
 export const generateMockData = {
   string: (length = 10): string => {
     return Math.random().toString(36).substring(2, 2 + length);
-  },
+  }
 
   number: (min = 0, max = 100): number => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
-  },
+  }
 
   boolean: (): boolean => {
     return Math.random() > 0.5;
-  },
+  }
 
   email: (): string => {
     return `test${generateMockData.number()}@example.com`;
-  },
+  }
 
   url: (): string => {
     return `https://example.com/${generateMockData.string()}`;
-  },
+  }
 
   date: (): Date => {
     return new Date(Date.now() - generateMockData.number(0, 365) * 24 * 60 * 60 * 1000);
-  },
+  }
 
   array: <T>(generator: () => T, length = 5): T[] => {
-    return Array.from({ length }, generator);
-  },
+    return Array.from({ length } generator);
+  }
 
   object: <T extends Record<string, any>>(schema: { [K in keyof T]: () => T[K] }): T => {
     const result = {} as T;
@@ -299,7 +299,7 @@ export const generateMockData = {
       result[key as keyof T] = schema[key as keyof T]();
     });
     return result;
-  },
+  }
 };
 
 /**
@@ -362,20 +362,20 @@ export class PerformanceTester {
 export const checkAccessibility = {
 hasAriaLabel: (element: Element): boolean => {,
 return element.hasAttribute('aria-label') || element.hasAttribute('aria-labelledby');
-},
+}
 
   hasRole: (element: Element, role: string): boolean => {
     return element.getAttribute('role') === role;
-  },
+  }
 
   isFocusable: (element: Element): boolean => {
     const tabindex = element.getAttribute('tabindex');
     return tabindex !== '-1' && (element as HTMLElement).tabIndex >= 0;
-  },
+  }
 
   hasAltText: (img: HTMLImageElement): boolean => {
     return Boolean(img.alt && img.alt.trim().length > 0);
-  },
+  }
 
   hasValidContrast: (element: Element): boolean => {
     const computed = window.getComputedStyle(element);
@@ -384,7 +384,7 @@ return element.hasAttribute('aria-label') || element.hasAttribute('aria-labelled
     
     // This is a simplified check - real implementation would calculate contrast ratio
     return color !== background;
-  },
+  }
 };
 
 /**
@@ -430,15 +430,12 @@ consoleMock: ConsoleMock;
     }
   };
 
-  return {
-    cleanup,
+  return {cleanup,
     fetchMock,
-    consoleMock,
-  };
+    consoleMock};
 };
 
-export default {
-  wait,
+export default {wait,
   waitFor,
   waitForElement,
   waitForElementToBeRemoved,
@@ -452,5 +449,4 @@ export default {
   generateMockData,
   PerformanceTester,
   checkAccessibility,
-  setupTestEnvironment,
-};
+  setupTestEnvironment};

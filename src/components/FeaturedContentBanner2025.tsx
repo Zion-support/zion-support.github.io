@@ -10,7 +10,7 @@ export default function FeaturedContentBanner2025(): void {
       category: 'Latest AI Innovation',
       readTime: '45 min read',
       publishDate: 'Jan 30, 2025'
-    },
+    }
     {
       type: 'blog',
       title: 'AI Enterprise Transformation: $50M Annual Savings Blueprint',
@@ -20,7 +20,7 @@ export default function FeaturedContentBanner2025(): void {
       category: 'Success Story',
       readTime: '50 min read',
       publishDate: 'Jan 28, 2025'
-    },
+    }
     {
       type: 'blog',
       title: 'AI Innovation Labs: Product Development Revolution',

@@ -9,7 +9,7 @@ const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {
       stats: "$500B Enterprise Value",
       color: "from-purple-500 to-pink-500",
       bgColor: "bg-purple-500/10"
-    },
+    }
     {
       icon: Zap,
       title: "Quantum Edge Computing",
@@ -17,7 +17,7 @@ const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {
       stats: "200x Faster",
       color: "from-blue-500 to-cyan-500",
       bgColor: "bg-blue-500/10"
-    },
+    }
     {
       icon: Network,
       title: "Autonomous Enterprise Mesh",
@@ -25,7 +25,7 @@ const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {
       stats: "99.7% Efficiency",
       color: "from-green-500 to-emerald-500",
       bgColor: "bg-green-500/10"
-    },
+    }
     {
       icon: Shield,
       title: "Quantum-Safe Security",

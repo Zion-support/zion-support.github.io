@@ -63,8 +63,7 @@ class ErrorTracker {
     severity: ErrorSeverity = ErrorSeverity.MEDIUM,
     category: ErrorCategory = ErrorCategory.UNKNOWN,
     context: ErrorContext = {}
-  ): TrackedError {
-    const trackedError: TrackedError = {
+  ): TrackedError {const trackedError: TrackedError = {
       id: this.generateErrorId(),
       message: typeof error === 'string' ? error : error.message,
       stack: typeof error === 'string' ? undefined : error.stack,
@@ -73,8 +72,7 @@ class ErrorTracker {
       timestamp: new Date(),
       context: this.enrichContext(context),
       userAgent: navigator.userAgent,
-      resolved: false,
-    };
+      resolved: false};
 
     this.errors.push(trackedError);
     
@@ -108,8 +106,7 @@ class ErrorTracker {
     method: string,
     status?: number,
     context: ErrorContext = {}
-  ): TrackedError {
-    return this.trackError(
+  ): TrackedError {return this.trackError(
       error,
       status && status >= 500 ? ErrorSeverity.HIGH : ErrorSeverity.MEDIUM,
       ErrorCategory.NETWORK,
@@ -119,8 +116,7 @@ class ErrorTracker {
           ...context.metadata,
           url,
           method,
-          status,
-        },
+          status}
       }
     );
   }
@@ -133,8 +129,7 @@ class ErrorTracker {
     componentName: string,
     props?: Record<string, any>,
     context: ErrorContext = {}
-  ): TrackedError {
-    return this.trackError(
+  ): TrackedError {return this.trackError(
       error,
       ErrorSeverity.HIGH,
       ErrorCategory.RENDERING,
@@ -143,8 +138,7 @@ class ErrorTracker {
         component: componentName,
         metadata: {
           ...context.metadata,
-          props,
-        },
+          props}
       }
     );
   }
@@ -207,30 +201,26 @@ class ErrorTracker {
   /**
    * Get error statistics
    */
-  getStatistics() {
-    const total = this.errors.length;
+  getStatistics() {const total = this.errors.length;
     const unresolved = this.getUnresolvedErrors().length;
     
     const bySeverity = {
       [ErrorSeverity.LOW]: this.getErrorsBySeverity(ErrorSeverity.LOW).length,
       [ErrorSeverity.MEDIUM]: this.getErrorsBySeverity(ErrorSeverity.MEDIUM).length,
       [ErrorSeverity.HIGH]: this.getErrorsBySeverity(ErrorSeverity.HIGH).length,
-      [ErrorSeverity.CRITICAL]: this.getErrorsBySeverity(ErrorSeverity.CRITICAL).length,
-    };
+      [ErrorSeverity.CRITICAL]: this.getErrorsBySeverity(ErrorSeverity.CRITICAL).length};
 
     const byCategory = Object.values(ErrorCategory).reduce((acc, category) => {
       acc[category] = this.getErrorsByCategory(category).length;
       return acc;
-    }, {} as Record<ErrorCategory, number>);
+    } {} as Record<ErrorCategory, number>);
 
-    return {
-      total,
+    return {total,
       unresolved,
       resolved: total - unresolved,
       bySeverity,
       byCategory,
-      lastError: this.errors[this.errors.length - 1],
-    };
+      lastError: this.errors[this.errors.length - 1]};
   }
 
   /**
@@ -243,18 +233,16 @@ class ErrorTracker {
   /**
    * Enrich context with additional information
    */
-  private enrichContext(context: ErrorContext): ErrorContext {
-    return {
+  private enrichContext(context: ErrorContext): ErrorContext {return {
       ...context,
       route: context.route || window.location.pathname,
       metadata: {
         ...context.metadata,
         viewport: {
           width: window.innerWidth,
-          height: window.innerHeight,
-        },
+          height: window.innerHeight}
         timestamp: new Date().toISOString(),
-      },
+      }
     };
   }
 
@@ -284,18 +272,16 @@ class ErrorTracker {
     //     level: error.severity,
     //     tags: {
     //       category: error.category,
-    //     },
+    //     }
     //     extra: error.context,
     //   });
     // }
 
     // For now, we can send to a custom endpoint
-    if (process.env.REACT_APP_ERROR_ENDPOINT) {
-      fetch(process.env.REACT_APP_ERROR_ENDPOINT, {
+    if (process.env.REACT_APP_ERROR_ENDPOINT) {fetch(process.env.REACT_APP_ERROR_ENDPOINT, {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-        },
+          'Content-Type': 'application/json'}
         body: JSON.stringify(error),
       }).catch(err => {
         console.error('Failed to send error to monitoring service:', err);
@@ -312,7 +298,7 @@ export const errorTracker = new ErrorTracker();
  */
 export function handleComponentError(
   error: Error,
-  errorInfo: { componentStack: string },
+  errorInfo: { componentStack: string }
   componentName: string
 ): void {
   errorTracker.trackRenderError(error, componentName, {
@@ -323,8 +309,7 @@ export function handleComponentError(
 /**
  * Global error handler setup
  */
-export function setupGlobalErrorHandling(): void {
-  // Handle unhandled promise rejections
+export function setupGlobalErrorHandling(): void {// Handle unhandled promise rejections
   window.addEventListener('unhandledrejection', (event) => {
     errorTracker.trackError(
       new Error(event.reason),
@@ -333,15 +318,13 @@ export function setupGlobalErrorHandling(): void {
       {
         metadata: {
           type: 'unhandledRejection',
-          promise: event.promise,
-        },
+          promise: event.promise}
       }
     );
   });
 
   // Handle global errors
-  window.addEventListener('error', (event) => {
-    errorTracker.trackError(
+  window.addEventListener('error', (event) => {errorTracker.trackError(
       event.error || new Error(event.message),
       ErrorSeverity.HIGH,
       ErrorCategory.UNKNOWN,
@@ -349,8 +332,7 @@ export function setupGlobalErrorHandling(): void {
         metadata: {
           filename: event.filename,
           lineno: event.lineno,
-          colno: event.colno,
-        },
+          colno: event.colno}
       }
     );
   });

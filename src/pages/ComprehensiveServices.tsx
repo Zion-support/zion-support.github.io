@@ -19,7 +19,7 @@ const ComprehensiveServices: React.FC = () => {
       icon: FileText,
       color: 'from-blue-600 to-purple-600',
       link: '/services/ai-content-generator'
-    },
+    }
     {
       id: 'smart-appointment-scheduler',
       title: 'Smart Appointment Scheduler',
@@ -29,7 +29,7 @@ const ComprehensiveServices: React.FC = () => {
       icon: Users,
       color: 'from-green-600 to-teal-600',
       link: '/services/smart-appointment-scheduler'
-    },
+    }
     {
       id: 'ai-email-marketing',
       title: 'AI Email Marketing Platform',
@@ -39,7 +39,7 @@ const ComprehensiveServices: React.FC = () => {
       icon: Mail,
       color: 'from-emerald-600 to-green-600',
       link: '/services/ai-email-marketing'
-    },
+    }
     {
       id: 'api-integration-hub',
       title: 'API Integration Hub',
@@ -49,7 +49,7 @@ const ComprehensiveServices: React.FC = () => {
       icon: Code,
       color: 'from-orange-600 to-red-600',
       link: '/services/api-integration-hub'
-    },
+    }
     {
       id: 'remote-collaboration-suite',
       title: 'Remote Collaboration Suite',
@@ -59,7 +59,7 @@ const ComprehensiveServices: React.FC = () => {
       icon: Globe,
       color: 'from-purple-600 to-pink-600',
       link: '/services/remote-collaboration-suite'
-    },
+    }
     {
       id: 'smart-contract-audit',
       title: 'Smart Contract Audit Service',
@@ -82,7 +82,7 @@ const ComprehensiveServices: React.FC = () => {
       icon: Zap,
       color: 'from-blue-600 to-purple-600',
       link: '/services/ai-workflow-automation'
-    },
+    }
     {
       id: 'ai-virtual-assistant',
       title: 'AI Virtual Assistant',
@@ -92,77 +92,63 @@ const ComprehensiveServices: React.FC = () => {
       icon: Bot,
       color: 'from-purple-600 to-pink-600',
       link: '/services/ai-virtual-assistant'
-    },
-    {
-      id: 'ai-predictive-analytics',
+    }
+    {id: 'ai-predictive-analytics',
       title: 'AI Predictive Analytics',
       description: 'Transform your business with advanced AI predictive analytics that deliver 94% accuracy in forecasting, customer behavior prediction, and risk assessment.',
       features: ['94% prediction accuracy', 'Real-time forecasting', 'Customer lifetime value', 'Revenue forecasting', 'Risk assessment'],
       pricing: 'Starting at $299/month',
       icon: BarChart3,
       color: 'from-indigo-600 to-purple-600',
-      link: '/services/ai-predictive-analytics',
-    },
-    {
-      id: 'conversational-ai',
+      link: '/services/ai-predictive-analytics'}
+    {id: 'conversational-ai',
       title: 'Conversational AI',
       description: 'Deploy advanced conversational AI with 96% accuracy, 150+ language support, and multi-modal conversations for customer support, sales, and engagement.',
       features: ['96% conversation accuracy', '150+ languages', 'Multi-modal support', 'Real-time processing', 'Enterprise security'],
       pricing: 'Starting at $399/month',
       icon: MessageCircle,
       color: 'from-violet-600 to-pink-600',
-      link: '/services/conversational-ai',
-    },
-    {
-      id: 'ai-data-analytics',
+      link: '/services/conversational-ai'}
+    {id: 'ai-data-analytics',
       title: 'AI Data Analytics Platform',
       description: 'Turn raw data into actionable insights with advanced machine learning, predictive analytics, and automated reporting.',
       features: ['Predictive analytics', 'Automated reporting', 'Real-time dashboards', 'Data visualization', 'ML models'],
       pricing: 'Starting at $299/month',
       icon: BarChart3,
       color: 'from-green-600 to-teal-600',
-      link: '/services/ai-data-analytics',
-    },
-    {
-      id: 'edge-computing-ai',
+      link: '/services/ai-data-analytics'}
+    {id: 'edge-computing-ai',
       title: 'Edge Computing AI',
       description: 'Deploy AI at the edge for real-time processing with sub-10ms response times. Transform IoT, industrial, and smart city applications.',
       features: ['Sub-10ms response times', 'Offline capability', '90% latency reduction', 'Unlimited scale', 'Real-time analytics'],
       pricing: 'Starting at $1,999/month',
       icon: Cpu,
       color: 'from-teal-600 to-blue-600',
-      link: '/services/edge-computing-ai',
-    },
-    {
-      id: 'ai-document-processing',
+      link: '/services/edge-computing-ai'}
+    {id: 'ai-document-processing',
       title: 'Intelligent Document Processing',
       description: 'Extract, classify, and process documents automatically with 99% accuracy using advanced OCR and NLP technologies.',
       features: ['99% accuracy', 'OCR technology', 'NLP processing', 'Document classification', 'Data extraction'],
       pricing: 'Starting at $149/month',
       icon: FileText,
       color: 'from-indigo-600 to-blue-600',
-      link: '/services/ai-document-processing',
-    },
-    {
-      id: 'ai-cognitive-automation',
+      link: '/services/ai-document-processing'}
+    {id: 'ai-cognitive-automation',
       title: 'Real-Time Cognitive Automation',
       description: 'Advanced AI system that learns and adapts to your business processes in real-time, optimizing performance continuously.',
       features: ['Real-time learning', 'Adaptive algorithms', 'Performance optimization', 'Self-healing systems', 'Continuous improvement'],
       pricing: 'Custom pricing',
       icon: Brain,
       color: 'from-cyan-600 to-blue-600',
-      link: '/services/ai-cognitive-automation',
-    },
-    {
-      id: 'ai-cybersecurity',
+      link: '/services/ai-cognitive-automation'}
+    {id: 'ai-cybersecurity',
       title: 'Advanced Cybersecurity AI',
       description: 'AI-powered security solutions that detect and prevent threats in real-time with advanced behavioral analysis.',
       features: ['Real-time threat detection', 'Behavioral analysis', 'Automated response', 'Threat intelligence', 'Compliance monitoring'],
       pricing: 'Starting at $399/month',
       icon: Shield,
       color: 'from-red-600 to-orange-600',
-      link: '/services/ai-cybersecurity',
-    },
+      link: '/services/ai-cybersecurity'}
   ];
 
   const itServices = [
@@ -175,7 +161,7 @@ const ComprehensiveServices: React.FC = () => {
       icon: Cloud,
       color: 'from-blue-600 to-cyan-600'
       link: '/services/cloud-migration'
-    },
+    }
     {
       id: 'devops-automation',
       title: 'DevOps Automation'
@@ -185,7 +171,7 @@ const ComprehensiveServices: React.FC = () => {
       icon: Settings,
       color: 'from-green-600 to-emerald-600'
       link: '/services/devops-automation'
-    },
+    }
     {
       id: 'database-optimization',
       title: 'Database Optimization'
@@ -195,7 +181,7 @@ const ComprehensiveServices: React.FC = () => {
       icon: Database,
       color: 'from-purple-600 to-violet-600'
       link: '/services/database-optimization'
-    },
+    }
     {
       id: 'mobile-app-development',
       title: 'Mobile App Development'
@@ -205,7 +191,7 @@ const ComprehensiveServices: React.FC = () => {
       icon: Smartphone,
       color: 'from-pink-600 to-rose-600'
       link: '/services/mobile-app-development'
-    },
+    }
     {
       id: 'quantum-computing',
       title: 'Quantum Computing Solutions'
@@ -215,7 +201,7 @@ const ComprehensiveServices: React.FC = () => {
       icon: Cpu,
       color: 'from-indigo-600 to-purple-600'
       link: '/services/quantum-computing'
-    },
+    }
     {
       id: 'blockchain-web3',
       title: 'Blockchain & Web3 Development'
@@ -225,7 +211,7 @@ const ComprehensiveServices: React.FC = () => {
       icon: Lock,
       color: 'from-yellow-600 to-orange-600'
       link: '/services/blockchain-web3'
-    },
+    }
   ];
 
   const ServiceCard = ({ service }: { service: any }) => {

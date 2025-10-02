@@ -10,15 +10,15 @@ const NewContentPromoBanner: React.FC = () => {
     {
       icon: <TrendingUp className="w-5 h-5" />,
       text: "AI-Powered Analytics"
-    },
+    }
     {
       icon: <Users className="w-5 h-5" />,
       text: "Team Collaboration"
-    },
+    }
     {
       icon: <Zap className="w-5 h-5" />,
       text: "Lightning Fast"
-    },
+    }
     {
       icon: <Star className="w-5 h-5" />,
       text: "Premium Quality"

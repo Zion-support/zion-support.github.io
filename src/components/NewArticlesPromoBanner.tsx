@@ -22,10 +22,10 @@ const NewArticlesPromoBanner: React.FC<NewArticlesPromoBannerProps> = ({
     if (autoRotate && featuredArticles.length > 1) {
       const interval = setInterval(() => {
         setCurrentIndex((prev) => (prev + 1) % featuredArticles.length);
-      }, rotationInterval);
+      } rotationInterval);
       return () => clearInterval(interval);
     }
-  }, [autoRotate, featuredArticles.length, rotationInterval]);
+  } [autoRotate, featuredArticles.length, rotationInterval]);
 
   if (variant === 'compact') {
     return (

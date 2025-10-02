@@ -4,8 +4,7 @@ import Header from "../../components/Header";
 export default function PostBySlug(): React.JSX.Element {
   const { slug } = useParams();
 
-  const article = React.useMemo(() => {
-    if (!slug) return undefined;
+  const article = React.useMemo(() => {if (!slug) return undefined;
     const fromLatest = latestArticles.find((a) => a.slug === slug);
     if (fromLatest) {
       return {
@@ -15,35 +14,30 @@ export default function PostBySlug(): React.JSX.Element {
         category: fromLatest.category,
         publishedAt: fromLatest.date,
         readTime: fromLatest.readTime,
-        author: fromLatest.author,
-      };
+        author: fromLatest.author};
     }
     const fromBlogPosts = blogPosts.find((p) => p.slug === slug);
-    if (fromBlogPosts) {
-      return {
+    if (fromBlogPosts) {return {
         slug: fromBlogPosts.slug,
         title: fromBlogPosts.title,
         description: fromBlogPosts.description,
         category: fromBlogPosts.category,
         publishedAt: fromBlogPosts.date,
         readTime: fromBlogPosts.readTime,
-        author: fromBlogPosts.author,
-      };
+        author: fromBlogPosts.author};
     }
     const fromPosts = staticPosts.find((p) => p.slug === slug);
-    if (fromPosts) {
-      return {
+    if (fromPosts) {return {
         slug: fromPosts.slug,
         title: fromPosts.title,
         description: fromPosts.description,
         category: fromPosts.category,
         publishedAt: fromPosts.publishedAt,
         readTime: fromPosts.readTime,
-        author: "Zion Tech Group Team",
-      };
+        author: "Zion Tech Group Team"};
     }
     return undefined;
-  }, [slug]);
+  } [slug]);
 
   if (!article) {
 return (

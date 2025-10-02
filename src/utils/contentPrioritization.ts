@@ -24,13 +24,11 @@ priorityWeight: number; // Weight for manual priority,
 categoryBalance: boolean; // Whether to balance across categories
 }
 
-const DEFAULT_CONFIG: PrioritizationConfig = {
-  recencyWeight: 0.3,
+const DEFAULT_CONFIG: PrioritizationConfig = {recencyWeight: 0.3,
   valueWeight: 0.25,
   engagementWeight: 0.25,
   priorityWeight: 0.2,
-  categoryBalance: true,
-};
+  categoryBalance: true};
 
 /**
  * Calculate recency score (0-100)
@@ -154,7 +152,7 @@ export const prioritizeWithBalance = (
     if (!acc[item.category]) acc[item.category] = [];
     acc[item.category].push(item);
     return acc;
-  }, {} as Record<string, ContentItem[]>);
+  } {} as Record<string, ContentItem[]>);
   
   // Prioritize within each category
   const prioritizedByCategory: Record<string, ContentItem[]> = {};
@@ -207,7 +205,7 @@ export const getTopByCategory = (
     if (!acc[item.category]) acc[item.category] = [];
     acc[item.category].push(item);
     return acc;
-  }, {} as Record<string, ContentItem[]>);
+  } {} as Record<string, ContentItem[]>);
   
   const result: Record<string, ContentItem[]> = {};
   Object.keys(byCategory).forEach(category => {
@@ -314,16 +312,13 @@ all: ContentItem[];
     }
   });
   
-  return {
-    trending,
+  return {trending,
     new: newContent,
     evergreen,
-    all,
-  };
+    all};
 };
 
-export default {
-  calculateRecencyScore,
+export default {calculateRecencyScore,
   calculateValueScore,
   calculateEngagementScoreFromMetrics,
   calculateContentScore,
@@ -333,5 +328,4 @@ export default {
   filterByQuality,
   getTrendingContent,
   getEvergreenContent,
-  createMixedFeed,
-};
+  createMixedFeed};

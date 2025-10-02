@@ -38,7 +38,7 @@ Ship AI features weekly without surprises by wiring measurement to decisions.
     featured: true,
     readTime: "7 min read",
     image: "/images/operational-ai-scorecards-v2.jpg"
-  },
+  }
   {
     slug: "ai-2025-oct-04-enterprise-rag-quality-budgets",
     title: "Enterprise RAG Quality Budgets: Lift Correctness, Cut Spend",
@@ -64,7 +64,7 @@ Production RAG needs governance and budgets.
     featured: true,
     readTime: "8 min read",
     image: "/images/enterprise-rag-quality-budgets.jpg"
-  },
+  }
   {
     slug: "ai-2025-oct-04-autonomous-devops-platforms",
     title: "Autonomous DevOps Platforms: Self-Healing Infrastructure at Scale",
@@ -91,7 +91,7 @@ Modern infrastructure requires autonomous capabilities to handle the complexity 
     featured: true,
     readTime: "9 min read",
     image: "/images/autonomous-devops-platforms.jpg"
-  },
+  }
   {
     slug: "ai-2025-oct-04-multimodal-ai-integration",
     title: "Multimodal AI Integration: Vision, Language, and Decision Making",
@@ -119,7 +119,7 @@ Enterprise AI systems need to process and understand multiple data types simulta
     featured: true,
     readTime: "10 min read",
     image: "/images/multimodal-ai-integration.jpg"
-  },
+  }
   {
     slug: "ai-2025-oct-04-enterprise-ai-governance",
     title: "Enterprise AI Governance: Risk Management and Compliance at Scale",
@@ -147,7 +147,7 @@ Modern enterprises need robust AI governance to manage risks and ensure complian
     featured: true,
     readTime: "12 min read",
     image: "/images/enterprise-ai-governance.jpg"
-  },
+  }
   {
     slug: "ai-2025-oct-04-edge-computing-optimization",
     title: "Edge Computing Optimization: Deploy AI at the Network Edge",
@@ -176,7 +176,7 @@ Edge computing brings AI closer to data sources, enabling real-time processing w
     featured: true,
     readTime: "11 min read",
     image: "/images/edge-computing-optimization.jpg"
-  },
+  }
   {
     slug: "ai-2025-oct-04-enterprise-agents-in-production",
     title: "Enterprise Agents in Production: Budgets, Approvals, and Rollback",
@@ -203,7 +203,7 @@ This guide shows how to ship agentic systems that operate within explicit budget
     featured: true,
     readTime: "8 min read",
     image: "/images/governed-agentic-automation.jpg"
-  },
+  }
   {
     slug: "enterprise-rag-blueprint-v3-2025-10-03",
     title: "Enterprise RAG Blueprint v3: 45% Quality ↑, 62% Cost ↓",
@@ -216,7 +216,7 @@ This guide shows how to ship agentic systems that operate within explicit budget
     featured: true,
     readTime: "9 min read",
     image: "/images/enterprise-rag-blueprint-v3.jpg"
-  },
+  }
   {
     slug: "genai-cost-optimization-v6-2025-10-03",
     title: "GenAI Cost Optimization v6: Quality Tiers, Coalesce, Distill",
@@ -229,7 +229,7 @@ This guide shows how to ship agentic systems that operate within explicit budget
     featured: true,
     readTime: "9 min read",
     image: "/images/genai-cost-optimization-v6.jpg"
-  },
+  }
   {
     slug: "ai-2025-oct-01-enterprise-ai-governance-blueprint",
     title: "Enterprise AI Governance 2025: Scorecards, Guardrails, and Zero-Regret Rollouts",
@@ -259,7 +259,7 @@ Ready to operationalize this in your stack? Our team can help you land it safely
     featured: true,
     readTime: "9 min read",
     image: "/images/enterprise-ai-governance-2025.jpg"
-  },
+  }
   {
     slug: "ai-ops-excellence-2025-oct-03",
     title: "AI Ops Excellence: Live Scorecards, Canary Gates, Instant Rollback",
@@ -286,7 +286,7 @@ Operate AI systems safely at enterprise scale. Wire KPI-linked scorecards, budge
     featured: true,
     readTime: "6 min read",
     image: "/images/ai-ops-excellence.jpg"
-  },
+  }
   {
     slug: "ai-2025-oct-03-platform-reliability-scorecards-2027",
     title: "AI Platform Reliability Scorecards 2027: SLIs That Drive Outcomes",
@@ -313,7 +313,7 @@ Reliability that moves business metrics requires SLIs teams adopt and review wee
     featured: true,
     readTime: "8 min read",
     image: "/images/platform-reliability-scorecards-2027.jpg"
-  },
+  }
   {
     slug: "edge-2026-oct-03-consentless-experiments-v4",
     title: "Edge Experiments v4 (2026): Zero‑PII A/B Under 100ms",
@@ -334,7 +334,7 @@ Blueprint for compliant, fast experimentation:
     featured: true,
     readTime: "7 min read",
     image: "/images/edge-experiments-v4-2026.jpg"
-  },
+  }
   {
     slug: "genai-2027-oct-03-cost-controllers-v4",
     title: "GenAI Cost Controllers v4 (2027): Quality Tiers + Caches at Scale",
@@ -355,7 +355,7 @@ Cut spend 40–70% while tightening tails:
     featured: true,
     readTime: "9 min read",
     image: "/images/genai-cost-controllers-v4-2027.jpg"
-  },
+  }
   {
     slug: "ai-2025-oct-01-private-feature-flags-zero-pii",
     title: "Private Feature Flags: Zero‑PII Experiments Under 100ms",
@@ -385,7 +385,7 @@ We include rollout checklists, config schemas, and CI policy tests to keep exper
     featured: true,
     readTime: "8 min read",
     image: "/images/private-feature-flags.jpg"
-  },
+  }
   {
     slug: "ai-2025-oct-01-runtime-rollback-guardrails",
     title: "Runtime Rollback Guardrails: Ship Faster With Reversible Changes",
@@ -415,7 +415,7 @@ This guide includes reference dashboards, config examples, and incident drills t
     featured: true,
     readTime: "7 min read",
     image: "/images/runtime-rollback-guardrails.jpg"
-  },
+  }
   {
     slug: "ai-2025-oct-01-enterprise-agent-copilots",
     title: "Enterprise Agent Copilots 2025: 10x Velocity With Guardrails",
@@ -447,7 +447,7 @@ Need a playbook tailored to your platform? Our team can help you ship copilots s
     featured: true,
     readTime: "9 min read",
     image: "/images/enterprise-agent-copilots.jpg"
-  },
+  }
   {
     slug: "ai-2025-oct-01-vector-database-optimization-enterprise",
     title: "Vector Database Optimization 2025: Sub-10ms Search at Billion Scale",
@@ -471,7 +471,7 @@ Includes rollout checklists, SLO templates, and cost/latency trade-off playbooks
     featured: true,
     readTime: "11 min read",
     image: "/images/vector-db-optimization-2025.jpg"
-  },
+  }
   {
     slug: "ai-2025-oct-03-real-time-decision-engines",
     title: "Real-Time Decision Engines 2025: 10M+/sec Decisions under 1ms",
@@ -495,7 +495,7 @@ Includes rollout checklist, SLO templates, and incident playbooks.
     featured: true,
     readTime: "10 min read",
     image: "/images/real-time-decision-engines-2025.jpg"
-  },
+  }
   {
     slug: "ai-2025-oct-03-privacy-first-analytics",
     title: "Privacy‑First Analytics 2025: Signal‑Rich Insights Without PII",
@@ -519,7 +519,7 @@ Operational playbooks, CI policy tests, and dashboards included.
     featured: true,
     readTime: "8 min read",
     image: "/images/privacy-first-analytics-2025.jpg"
-  },
+  }
   {
     slug: "ai-2025-oct-03-agent-observability",
     title: "Agent Observability 2025: Live Traces, SLIs, and Rollback",
@@ -542,7 +542,7 @@ Reference dashboards and runbooks provided.
     featured: true,
     readTime: "9 min read",
     image: "/images/agent-observability-2025.jpg"
-  },
+  }
   {
     slug: "ai-2025-oct-01-hyper-personalization-engines-revolution",
     title: "Hyper-Personalization Engines 2025: 12.4x Engagement, 8x Conversion",
@@ -566,7 +566,7 @@ Comes with architecture diagrams, KPI scorecards, and rollout rituals.
     featured: true,
     readTime: "10 min read",
     image: "/images/hyper-personalization-engines-2025.jpg"
-  },
+  }
   {
     slug: "ai-2025-oct-02-cache-playbook-pro",
     title: "Enterprise GenAI Cache Playbook PRO: 60–85% Cost ↓, P95 30–45% ↓",
@@ -594,7 +594,7 @@ This playbook shows production patterns that consistently reduce LLM serving cos
     featured: true,
     readTime: "9 min read",
     image: "/images/genai-cache-playbook.jpg"
-  },
+  }
   {
     slug: "ai-2025-oct-02-operational-trust-scorecards",
     title: "Operational Trust for AI Systems: Scorecards, SLOs, and Guardrails",
@@ -621,7 +621,7 @@ Trust emerges from measurement. This guide ships a minimal stack: offline evals 
     featured: true,
     readTime: "7 min read",
     image: "/images/operational-trust.jpg"
-  },
+  }
   {
     slug: "ai-2025-october-enterprise-digital-twins-revolution",
     title: "Enterprise Digital Twins: The 2025 AI-Powered Revolution Transforming Business Operations",
@@ -640,7 +640,7 @@ For full details, see the complete article in our content repository.
     featured: true,
     readTime: "12 min read",
     image: "/images/digital-twins.jpg"
-  },
+  }
   {
     slug: "ai-autonomous-devops-platform-2025-october",
     title: "AI-Powered Autonomous DevOps Platform 2025: Self-Healing Infrastructure Revolution",
@@ -659,7 +659,7 @@ For full details, see the complete article in our content repository.
     featured: true,
     readTime: "16 min read",
     image: "/images/autonomous-devops.jpg"
-  },
+  }
   {
     slug: "quantum-safe-ai-security-framework-2025-october",
     title: "Quantum-Safe AI Security Framework 2025: Future-Proofing Enterprise Protection",
@@ -678,7 +678,7 @@ For full details, see the complete article in our content repository.
     featured: true,
     readTime: "18 min read",
     image: "/images/quantum-security.jpg"
-  },
+  }
   {
     slug: "real-time-cognitive-business-intelligence-2025-october",
     title: "Real-Time Cognitive Business Intelligence Platform 2025: AI-Driven Decision Revolution",
@@ -697,7 +697,7 @@ For full details, see the complete article in our content repository.
     featured: true,
     readTime: "17 min read",
     image: "/images/cognitive-bi.jpg"
-  },
+  }
   {
     slug: "ai-2025-oct-01-intelligent-autonomous-enterprise-mesh",
     title: "Intelligent Autonomous Enterprise Mesh: The Future of Distributed AI Operations",
@@ -716,7 +716,7 @@ For full details, see the complete article in our content repository.
     featured: true,
     readTime: "14 min read",
     image: "/images/enterprise-mesh.jpg"
-  },
+  }
   {
     slug: "ai-2025-oct-01-advanced-ai-powered-predictive-maintenance",
     title: "Advanced AI-Powered Predictive Maintenance: Eliminating Unplanned Downtime",
@@ -735,7 +735,7 @@ For full details, see the complete article in our content repository.
     featured: true,
     readTime: "13 min read",
     image: "/images/predictive-maintenance.jpg"
-  },
+  }
   {
     slug: "ai-workflow-automation-2025-guide",
     title: "The Complete Guide to AI Workflow Automation in 2025",
@@ -846,9 +846,8 @@ Don't let your competitors gain an edge. Start your AI automation journey today 
     featured: true,
     readTime: "8 min read",
     image: "/images/ai-workflow-automation.jpg"
-  },
-  {
-    slug: "edge-inference-patterns-that-reduce-latency",
+  }
+  {slug: "edge-inference-patterns-that-reduce-latency",
     title: "Edge Inference Patterns That Actually Reduce Latency",
     description: "Topologies and caching strategies that cut P95 by 40% in real deployments.",
     content: `
@@ -892,10 +891,8 @@ Want help designing a pragmatic edge plan? Our team has shipped this in finance,
     tags: ["Edge", "Inference", "Latency", "Caching", "LLM"],
     featured: true,
     readTime: "7 min read",
-    image: "/images/edge-inference.jpg",
-  },
-  {
-    slug: "north-star-engineering-metrics",
+    image: "/images/edge-inference.jpg"}
+  {slug: "north-star-engineering-metrics",
     title: "North‑Star Engineering Metrics: Fewer KPIs, Better Outcomes",
     description: "Pick three metrics that align delivery, reliability, and cost without dashboard bloat.",
     content: `
@@ -921,8 +918,7 @@ Too many dashboards, too little signal. Anchor on three metrics that force healt
     tags: ["Metrics", "Leadership", "DORA", "Cost"],
     featured: false,
     readTime: "5 min read",
-    image: "/images/north-star-metrics.jpg",
-  },
+    image: "/images/north-star-metrics.jpg"}
   {
     slug: "ai-virtual-assistant-best-practices",
     title: "Best Practices for Implementing AI Virtual Assistants in 2025",
@@ -1066,7 +1062,7 @@ The future of customer service is here. Don't get left behind—start your AI as
     featured: true,
     readTime: "10 min read",
     image: "/images/ai-virtual-assistant.jpg"
-  },
+  }
   {
     slug: "data-analytics-ai-transformation",
     title: "How AI is Transforming Data Analytics in 2025",
@@ -1297,7 +1293,7 @@ Ready to transform your data into actionable insights? Contact our team for a fr
     featured: false,
     readTime: "12 min read",
     image: "/images/ai-data-analytics.jpg"
-  },
+  }
   {
     slug: "micro-saas-platform-advantages",
     title: "Why Micro SAAS Platforms Are the Future of Business Software",
@@ -1534,7 +1530,6 @@ The future of business software is here, and it's micro SAAS. Don't get left beh
     readTime: "9 min read",
     image: "/images/micro-saas-platform.jpg"
   }
-  ,
   {
     slug: "ai-2025-oct-03-enterprise-rag-blueprint-v3",
     title: "Enterprise RAG Blueprint v3: 45% Quality ↑, 62% Cost ↓",
@@ -1558,7 +1553,7 @@ Includes reference architectures, rollout checklists, and KPI scorecards used in
     featured: true,
     readTime: "9 min read",
     image: "/images/enterprise-rag-blueprint-v3.jpg"
-  },
+  }
   {
     slug: "ai-2025-oct-03-governed-agentic-automation",
     title: "Governed Agentic Automation: Safe Tools, Fast Outcomes",
@@ -1582,7 +1577,7 @@ Comes with policy templates, dashboards, and incident playbooks.
     featured: true,
     readTime: "8 min read",
     image: "/images/governed-agentic-automation.jpg"
-  },
+  }
   {
     slug: "ai-2025-oct-03-genai-cost-optimization-v6",
     title: "GenAI Cost Optimization v6: Quality Tiers, Coalesce, and Distill",
@@ -1606,7 +1601,7 @@ Includes rollout rituals, SLO templates, and dashboards.
     featured: true,
     readTime: "9 min read",
     image: "/images/genai-cost-optimization-v6.jpg"
-  },
+  }
   {
     slug: "ai-2025-oct-03-autonomous-supply-chain-revolution",
     title: "Autonomous Supply Chain 2025: 99.2% Forecast Accuracy, 78% Cost ↓",
@@ -1630,7 +1625,7 @@ We include rollout checklists, reference architectures, and incident playbooks p
     featured: true,
     readTime: "11 min read",
     image: "/images/autonomous-supply-chain-2025.jpg"
-  },
+  }
   {
     slug: "ai-2025-oct-03-next-gen-security-operations",
     title: "Next‑Gen Security Operations: 99.97% Detection, Sub‑Second Response",
@@ -1654,7 +1649,7 @@ Includes dashboards, policy templates, and runbooks.
     featured: true,
     readTime: "9 min read",
     image: "/images/next-gen-security-ops-2025.jpg"
-  },
+  }
   {
     slug: "ai-2025-oct-03-hyper-personalized-cx-revolution",
     title: "Hyper‑Personalized CX: 12.4x Engagement, 8x Conversion Uplift",
@@ -1678,7 +1673,7 @@ We provide architecture diagrams, rollout rituals, and success metrics.
     featured: true,
     readTime: "10 min read",
     image: "/images/hyper-personalized-cx-2025.jpg"
-  },
+  }
   {
     slug: "ai-2025-oct-03-neuromorphic-edge-ai-breakthrough",
     title: "Neuromorphic Edge AI 2025: 1000x Efficiency for Real-Time Intelligence",
@@ -1697,7 +1692,7 @@ Key outcomes: sub-10ms latency, 1000x energy efficiency vs. GPUs, and reliable o
     featured: true,
     readTime: "11 min read",
     image: "/images/neuromorphic-edge-ai.jpg"
-  },
+  }
   {
     slug: "ai-2025-oct-03-synthetic-data-production-playbook",
     title: "Synthetic Data in Production: Privacy-Safe Accuracy Gains in 2025",
@@ -1716,7 +1711,7 @@ Includes rollout plan, governance guardrails, and real-world case studies across
     featured: true,
     readTime: "9 min read",
     image: "/images/synthetic-data.jpg"
-  },
+  }
   {
     slug: "ai-2025-oct-01-autonomous-revenue-operations-2025",
     title: "Autonomous Revenue Operations 2025: 3.2x Pipeline Velocity, 127% ROI",
@@ -1740,7 +1735,7 @@ Includes rollout checklist, KPIs, and dashboards that sales, marketing, and fina
     featured: true,
     readTime: "9 min read",
     image: "/images/autonomous-revops-2025.jpg"
-  },
+  }
   {
     slug: "ai-2025-oct-01-intelligent-document-automation-2025",
     title: "Intelligent Document Automation 2025: 99.2% Accuracy, 94% Faster Processing",
@@ -1765,7 +1760,6 @@ Comes with reference architectures and an operations playbook that cuts turnarou
     readTime: "10 min read",
     image: "/images/intelligent-document-automation-2025.jpg"
   }
-  ,
   {
     slug: "ai-2025-oct-03-enterprise-ai-platform-blueprint",
     title: "Enterprise AI Platform Blueprint 2025: Ship Weekly With Guardrails",
@@ -1795,7 +1789,7 @@ Ready to tailor this to your stack? Our team can help you land it quickly.
     featured: true,
     readTime: "9 min read",
     image: "/images/enterprise-ai-platform-blueprint-2025.jpg"
-  },
+  }
   {
     slug: "ai-2025-oct-03-private-experimentation-at-the-edge",
     title: "Private Experimentation at the Edge: <100ms, Zero‑PII Metrics",
@@ -1824,7 +1818,6 @@ Global experimentation without PII requires new primitives.
     readTime: "8 min read",
     image: "/images/private-experimentation-edge-2025.jpg"
   }
-  ,
   {
     slug: "ai-2025-oct-03-enterprise-evals-blueprint",
     title: "Enterprise AI Evals Blueprint: Scorecards That Drive Outcomes",
@@ -1853,7 +1846,6 @@ Most eval suites fail to predict production. This guide shows how to build eval 
     readTime: "8 min read",
     image: "/images/enterprise-ai-evals-blueprint.jpg"
   }
-  ,
   {
     slug: "ai-2025-oct-03-rag-guardrails-at-scale",
     title: "RAG Guardrails at Scale: Freshness Windows, Sources You Can Trust",
@@ -1879,7 +1871,6 @@ We include reference dashboards, rollout checklists, and incident playbooks.
     readTime: "9 min read",
     image: "/images/rag-guardrails-scale.jpg"
   }
-  ,
   {
     slug: "ai-2025-oct-03-agent-governance-in-production",
     title: "Agent Governance in Production: Budgets, Approvals, Rollback",

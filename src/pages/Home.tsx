@@ -26,7 +26,7 @@ const Home = () => {
       date: '2025-01-15',
       readMinutes: 25,
       featured: true
-    },
+    }
     {
 id: '2',
 title: 'Quantum AI Breakthrough: Solving Impossible Problems in Seconds',
@@ -111,7 +111,7 @@ publishedAt: '2025-01-05'
               "url": "https://ziontechgroup.com/logo.png",
               "width": 200,
               "height": 60
-            },
+            }
             "image": "https://ziontechgroup.com/og-image.jpg",
             "contactPoint": {
 "@type": "ContactPoint",
@@ -177,7 +177,7 @@ publishedAt: '2025-01-05'
 }
                 }
               ]
-            },
+            }
             "aggregateRating": {
 "@type": "AggregateRating",
 "ratingValue": "4.8",

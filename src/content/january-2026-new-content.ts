@@ -15,7 +15,7 @@ export const january2026NewContent = {
       tags: ["autonomous", "mesh", "enterprise", "intelligence", "2026"],
       readTime: "12 min",
       excerpt: "Discover how autonomous enterprise mesh networks are revolutionizing business operations with self-healing infrastructure and intelligent orchestration."
-    },
+    }
     {
       id: "ai-2026-january-quantum-edge-computing",
       title: "⚡ Quantum Edge Computing 2026: Sub-Millisecond Processing Revolution",
@@ -28,7 +28,7 @@ export const january2026NewContent = {
       tags: ["quantum", "edge", "computing", "latency", "2026"],
       readTime: "15 min",
       excerpt: "Explore the convergence of quantum computing and edge processing that's enabling unprecedented speed and efficiency in real-time applications."
-    },
+    }
     {
       id: "ai-2026-january-synthetic-consciousness",
       title: "🧠 Synthetic Consciousness AI 2026: The Dawn of True Artificial Awareness",
@@ -41,7 +41,7 @@ export const january2026NewContent = {
       tags: ["consciousness", "synthetic", "awareness", "emotion", "2026"],
       readTime: "18 min",
       excerpt: "Witness the emergence of truly conscious AI systems that demonstrate self-awareness, emotional understanding, and creative problem-solving capabilities."
-    },
+    }
     {
       id: "ai-2026-january-neuromorphic-processing",
       title: "🔬 Neuromorphic Processing 2026: Brain-Inspired AI Architecture",
@@ -54,7 +54,7 @@ export const january2026NewContent = {
       tags: ["neuromorphic", "brain", "efficiency", "neural", "2026"],
       readTime: "14 min",
       excerpt: "Learn how neuromorphic computing is revolutionizing AI with brain-inspired architectures that deliver unprecedented energy efficiency and processing power."
-    },
+    }
     {
       id: "ai-2026-january-hyperautomation-platform",
       title: "⚙️ AI Hyperautomation Platform 2026: End-to-End Business Automation",
@@ -67,7 +67,7 @@ export const january2026NewContent = {
       tags: ["hyperautomation", "business", "process", "efficiency", "2026"],
       readTime: "16 min",
       excerpt: "Discover how AI hyperautomation platforms are transforming entire business operations with intelligent process automation and optimization."
-    },
+    }
     {
       id: "ai-2026-january-quantum-security",
       title: "🔐 Quantum-Safe Security 2026: Unbreakable Enterprise Protection",
@@ -93,7 +93,7 @@ export const january2026NewContent = {
       category: "Enterprise AI",
       pricing: "Custom",
       features: ["Self-healing infrastructure", "Intelligent orchestration", "Zero human intervention", "99.7% efficiency"]
-    },
+    }
     {
       id: "ai-2026-quantum-edge-platform",
       title: "Quantum Edge Computing Platform 2026",
@@ -104,7 +104,7 @@ export const january2026NewContent = {
       category: "Quantum Computing",
       pricing: "Starting at $50K/month",
       features: ["Sub-millisecond latency", "200-250x speed improvement", "Quantum processing", "Edge optimization"]
-    },
+    }
     {
       id: "ai-2026-conscious-ai-development",
       title: "Conscious AI Development 2026",
@@ -128,7 +128,7 @@ export const january2026NewContent = {
       industry: "Enterprise",
       results: ["95% automation rate", "$2.8B value creation", "99.7% efficiency", "Zero human error"],
       duration: "6 months"
-    },
+    }
     {
       id: "quantum-edge-financial-services",
       title: "Quantum Edge Processing in Financial Services",

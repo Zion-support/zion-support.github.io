@@ -28,10 +28,10 @@ export const octoberNewBreakthroughContent = [
       deployment: "10x faster",
       costReduction: "75%",
       uptime: "99.99%"
-    },
+    }
     cta: "Read Full Guide",
     value: "$847M Value Created"
-  },
+  }
   {
     id: "real-time-ai-powered-business-intelligence-transformation",
     title: "Real-Time AI Business Intelligence: From Hours to Milliseconds",
@@ -58,10 +58,10 @@ export const octoberNewBreakthroughContent = [
       accuracy: "94%",
       efficiency: "85%",
       revenue: "+43%"
-    },
+    }
     cta: "Explore Solution",
     value: "$627M Impact"
-  },
+  }
   {
     id: "fortune-100-retailer-real-time-intelligence-success",
     title: "Fortune 100 Retailer: $627M Value Through Real-Time AI Intelligence",
@@ -88,7 +88,7 @@ export const octoberNewBreakthroughContent = [
       timeframe: "18 months",
       revenueGrowth: "4.7%",
       stockoutReduction: "37%"
-    },
+    }
     cta: "Read Case Study",
     value: "$627M Created"
   }
@@ -120,7 +120,7 @@ export const getOctober2025BreakthroughStats = () => {
   const totalValue = octoberNewBreakthroughContent.reduce((sum, item) => {
     const value = parseFloat(item.metrics.valueCreated?.replace(/[$M]/g, '') || item.metrics.totalValue?.replace(/[$M]/g, '') || '0');
     return sum + value;
-  }, 0);
+  } 0);
 
   return {
     totalArticles: octoberNewBreakthroughContent.length,

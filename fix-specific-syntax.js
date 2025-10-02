@@ -8,40 +8,41 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 /**
- * Fix remaining syntax errors in TypeScript/JavaScript files
+ * Fix specific syntax errors that remain
  */
 
-function fixRemainingSyntaxErrors(filePath) {
+function fixSpecificSyntaxErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-    // Fix trailing commas in array type definitions with objects
-    content = content.replace(/Array<\{([^}]+),\s*\}>\s*,/g, 'Array<{$1}>');
+    // Fix specific patterns that are causing parsing errors
+    // Fix Array<{...},> patterns
+    content = content.replace(/Array<\{\s*([^}]+),\s*\}\s*>/g, 'Array<{$1}>');
     
-    // Fix specific patterns that cause parsing errors
-    content = content.replace(/\}\s*,/g, '}');
+    // Fix trailing commas in interface properties
+    content = content.replace(/(\w+):\s*Array<\{([^}]+),\s*\}\s*>\s*,/g, '$1: Array<{$2}>;');
     
-    // Fix interface property definitions with trailing commas
-    content = content.replace(/(\w+):\s*([^;,\n]+),\s*;/g, '$1: $2;');
+    // Fix trailing commas in object type definitions
+    content = content.replace(/(\w+):\s*\{([^}]+),\s*\}\s*,/g, '$1: {$2};');
     
-    // Fix object type definitions with trailing commas
-    content = content.replace(/\{\s*([^}]+),\s*\}\s*([,;])/g, '{$1}$2');
-    
-    // Fix array type definitions
-    content = content.replace(/Array<([^>]+),\s*>/g, 'Array<$1>');
-    
-    // Fix function parameter type definitions
-    content = content.replace(/\(\s*([^)]+),\s*\)\s*=>/g, '($1) =>');
-    
-    // Fix specific error patterns found in the linter output
-    content = content.replace(/errorTrends:\s*Array<\{([^}]+),\s*\}>\s*,/g, 'errorTrends: Array<{$1}>;');
-    content = content.replace(/context:\s*\{([^}]+),\s*\}\s*,/g, 'context: {$1};');
-    
-    // Fix trailing commas in switch statements
+    // Fix trailing commas in switch cases
     content = content.replace(/case\s+['"`]([^'"`]+)['"`]:\s*,/g, "case '$1':");
     
-    // Fix trailing commas in object destructuring
+    // Fix trailing commas in function parameters
+    content = content.replace(/\(\s*([^)]+),\s*\)\s*=>/g, '($1) =>');
+    
+    // Fix trailing commas in object literals
+    content = content.replace(/\{\s*([^}]+),\s*\}\s*,/g, '{$1},');
+    
+    // Fix trailing commas in array literals
+    content = content.replace(/\[\s*([^\]]+),\s*\]\s*,/g, '[$1],');
+    
+    // Fix specific patterns found in the error messages
+    content = content.replace(/errorTrends:\s*Array<\{\s*([^}]+),\s*\}\s*>\s*,/g, 'errorTrends: Array<{$1}>;');
+    content = content.replace(/context:\s*\{\s*([^}]+),\s*\}\s*,/g, 'context: {$1};');
+    
+    // Fix trailing commas in destructuring assignments
     content = content.replace(/\{\s*([^}]+),\s*\}\s*=([^;]+)/g, '{$1} = $2');
     
     // Fix trailing commas in function calls
@@ -50,10 +51,10 @@ function fixRemainingSyntaxErrors(filePath) {
     // Fix trailing commas in method chaining
     content = content.replace(/\.([^.]+)\(([^)]+),\s*\)\s*\./g, '.$1($2).');
     
-    // Fix specific patterns for component props
-    content = content.replace(/interface\s+(\w+)Props\s*\{([^}]+),\s*\}/g, (match, name, body) => {
+    // Fix trailing commas in interface definitions
+    content = content.replace(/interface\s+(\w+)\s*\{([^}]+),\s*\}/g, (match, name, body) => {
       const cleanedBody = body.replace(/(\w+):\s*([^;,\n]+),\s*/g, '$1: $2;');
-      return `interface ${name}Props {${cleanedBody}}`;
+      return `interface ${name} {${cleanedBody}}`;
     });
 
     if (content !== fs.readFileSync(filePath, 'utf8')) {
@@ -94,11 +95,11 @@ function walkDirectory(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
 const srcDir = path.join(__dirname, 'src');
 const files = walkDirectory(srcDir);
 
-console.log(`Processing ${files.length} files for remaining syntax errors...`);
+console.log(`Processing ${files.length} files for specific syntax errors...`);
 
 let fixedCount = 0;
 for (const file of files) {
-  if (fixRemainingSyntaxErrors(file)) {
+  if (fixSpecificSyntaxErrors(file)) {
     console.log(`Fixed: ${file}`);
     fixedCount++;
   }

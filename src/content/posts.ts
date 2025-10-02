@@ -17,7 +17,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-03",
     featured: true,
     readTime: "12 min read"
-  },
+  }
   {
     slug: "ai-2027-cost-optimization-playbook",
     title: "AI 2027 Cost Optimization Playbook: Quality Tiers + Caches",
@@ -26,7 +26,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-02",
     featured: true,
     readTime: "9 min read"
-  },
+  }
   {
     slug: "edge-2026-private-feature-flags",
     title: "Edge 2026: Private Feature Flags at <100ms",
@@ -35,7 +35,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-01",
     featured: true,
     readTime: "8 min read"
-  },
+  }
   {
     slug: "ai-2027-executive-playbook-v2",
     title: "AI 2027: Executive Playbook v2 — Fund, Govern, Scale",
@@ -44,7 +44,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-03",
     featured: true,
     readTime: "10 min read"
-  },
+  }
   {
     slug: "edge-2027-private-inference-under-100ms",
     title: "Edge 2027: Private Inference — <100ms with Zero‑PII",
@@ -53,7 +53,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-03",
     featured: true,
     readTime: "8 min read"
-  },
+  }
   {
     slug: "genai-2027-cost-controllers-v2",
     title: "GenAI 2027: Cost Controllers v2 — Predictable Spend, Stable UX",
@@ -62,7 +62,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-03",
     featured: true,
     readTime: "9 min read"
-  },
+  }
   {
     slug: "ai-2027-customer-experience-agents",
     title: "AI 2027: Customer Experience Agents — 24/7 Autonomous CX",
@@ -71,7 +71,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-03",
     featured: true,
     readTime: "10 min read"
-  },
+  }
   {
     slug: "edge-2027-real-time-feature-flags",
     title: "Edge 2027: Real‑Time Feature Flags — <100ms, Zero‑PII Rollouts",
@@ -80,7 +80,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-02",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "genai-2027-quality-tiers-v4",
     title: "GenAI 2027: Quality Tiers v4 — Stable UX Under Budget",
@@ -89,7 +89,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-01",
     featured: true,
     readTime: "9 min read"
-  },
+  }
   {
     slug: "verifiable-edge-analytics-2026",
     title: "Verifiable Edge Analytics 2026: Zero‑PII Insights with Attestations",
@@ -98,7 +98,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-31",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "enterprise-rag-security-2027",
     title: "Enterprise RAG Security 2027: Auth‑Aware Retrieval and Signed Outputs",
@@ -107,7 +107,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
-  },
+  }
   {
     slug: "edge-consentless-personalization-2027",
     title: "Edge Personalization 2027: Zero‑PII, <100ms, Scoped IDs",
@@ -116,7 +116,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "ai-governance-pr-policy-tests-2027-q4",
     title: "AI Governance: PR Policy Tests Q4 2027 — Ship Fast, Stay Safe",
@@ -125,7 +125,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "platform-engineering-scorecards-2026",
     title: "Platform Engineering Scorecards 2026",
@@ -134,7 +134,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "9 min read"
-  },
+  }
   {
     slug: "edge-ai-blueprint-2026",
     title: "Edge AI Blueprint 2026",
@@ -143,7 +143,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "6 min read"
-  },
+  }
   {
     slug: "genai-cache-playbook-2026",
     title: "GenAI Cache Playbook 2026: Semantic, Programmatic, and Tiered Caches",
@@ -152,7 +152,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "9 min read"
-  },
+  }
   {
     slug: "edge-2026-private-feature-flags",
     title: "Edge 2026: Private Feature Flags",
@@ -161,7 +161,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "agent-release-guardrails-2026",
     title: "Agent Release Guardrails 2026",
@@ -170,7 +170,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "ai-trust-scorecards-v5-2027",
     title: "AI Trust Scorecards v5 (2027): KPIs, Budgets, Guardrails",
@@ -179,7 +179,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2026-12-01",
     featured: true,
     readTime: "9 min read"
-  },
+  }
   {
     slug: "ai-enterprise-cost-guardrails-2026",
     title: "AI Enterprise Cost Guardrails 2026: Budgets, Tiers, Approvals",
@@ -188,7 +188,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
-  },
+  }
   {
     slug: "ai-operational-scorecards-v4-2026",
     title: "AI Operational Scorecards v4 (2026)",
@@ -197,7 +197,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "edge-zero-pii-insights-2026",
     title: "Edge Zero‑PII Insights 2026",
@@ -206,7 +206,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "6 min read"
-  },
+  }
   {
     slug: "genai-quality-tiers-v2-2026",
     title: "GenAI Quality Tiers v2 (2026)",
@@ -215,7 +215,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
-  },
+  }
   {
     slug: "edge-rag-privacy-preserving-2026",
     title: "Edge RAG 2026: Privacy‑Preserving Answers",
@@ -224,7 +224,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
-  },
+  }
   {
     slug: "ai-governance-pr-policy-tests-2026",
     title: "PR Policy Tests 2026",
@@ -233,7 +233,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "ai-governance-live-metrics-2025",
     title: "AI Governance Live Metrics 2025: Ship Faster Without Regressions",
@@ -242,7 +242,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "edge-zero-pii-personalization-2025",
     title: "Edge Zero‑PII Personalization 2025: <100ms, Private by Design",
@@ -251,7 +251,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
-  },
+  }
   {
     slug: "ai-executive-scorecards-2027",
     title: "AI Executive Scorecards 2027: Proving ROI with Live KPIs",
@@ -260,7 +260,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2027-01-05",
     featured: true,
     readTime: "11 min read"
-  },
+  }
   {
     slug: "ai-2025-cost-controllers-v1",
     title: "AI Cost Controllers v1 (2025): Budgets, Tiers, and Guardrails",
@@ -269,7 +269,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "9 min read"
-  },
+  }
   {
     slug: "edge-2025-realtime-personalization",
     title: "Realtime Personalization 2025 at the Edge: <100ms, Zero‑PII",
@@ -278,7 +278,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
-  },
+  }
   {
     slug: "ai-2025-autonomous-infrastructure-blueprint",
     title: "Autonomous Infrastructure 2025: Self‑Healing, Self‑Optimizing, Self‑Scaling",
@@ -287,7 +287,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "12 min read"
-  },
+  }
   {
     slug: "edge-2025-zero-pii-experiments",
     title: "Edge Experiments 2025: Zero‑PII Global A/B at <100ms",
@@ -296,7 +296,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "9 min read"
-  },
+  }
   {
     slug: "genai-2025-routing-caches-v1",
     title: "GenAI Routing v1 (2025): Tiered Models + Semantic Caches",
@@ -305,7 +305,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "10 min read"
-  },
+  }
   {
     slug: "ai-2027-edge-native-agents",
     title: "Edge‑Native Agents 2027: Private Tools at <100ms",
@@ -314,7 +314,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
-  },
+  }
   {
     slug: "ai-2027-operational-scorecards",
     title: "Operational AI Scorecards 2027: KPIs, Budgets, Rollback",
@@ -323,7 +323,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "genai-2027-quality-tiers-at-scale",
     title: "GenAI 2027: Quality Tiers at Scale with Semantic Caches",
@@ -332,7 +332,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "9 min read"
-  },
+  }
   {
     slug: "ai-2026-reliable-genai-platform",
     title: "Reliable GenAI Platform 2026: SLAs, Budgets, and Rollback",
@@ -341,7 +341,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "12 min read"
-  },
+  }
   {
     slug: "edge-privacy-insights-2026",
     title: "Edge Privacy Insights 2026: Scoped IDs, On‑Device Telemetry, DP Noise",
@@ -350,7 +350,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
-  },
+  }
   {
     slug: "edge-consentless-experiments-2026-q4",
     title: "Edge Consentless Experiments Q4 2026: Global A/B in <100ms",
@@ -359,7 +359,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "6 min read"
-  },
+  }
   {
     slug: "ai-sla-scorecards-2026-q1",
     title: "AI SLA Scorecards 2026 Q1: SLIs, Budgets, Rollback",
@@ -368,7 +368,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2026-04-01",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "edge-private-insights-v2-2026",
     title: "Edge Private Insights v2 (2026): Zero‑PII Metrics at <100ms",
@@ -377,7 +377,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2026-04-01",
     featured: true,
     readTime: "6 min read"
-  },
+  }
   {
     slug: "agent-release-runbooks-v2-2026",
     title: "Agent Release Runbooks v2 (2026): Budgets + One‑Click Recovery",
@@ -386,7 +386,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2026-04-01",
     featured: true,
     readTime: "8 min read"
-  },
+  }
   {
     slug: "ai-operational-scorecards-q4-2026",
     title: "AI Operational Scorecards Q4 2026: SLIs Wired to KPIs",
@@ -395,7 +395,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-30",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "ai-operational-trust-q4-2025",
     title: "AI Operational Trust Q4 2025: Live Scorecards that Ship",
@@ -404,7 +404,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "ai-2026-reliable-agent-release-runbooks",
     title: "Reliable Agent Release Runbooks 2026: Approvals, Budgets, Rollbacks",
@@ -413,7 +413,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-30",
     featured: true,
     readTime: "9 min read"
-  },
+  }
   {
     slug: "edge-consentless-metrics-2026",
     title: "Edge Consentless Metrics 2026: Scoped IDs, On‑Device Aggregation",
@@ -422,7 +422,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-30",
     featured: true,
     readTime: "6 min read"
-  },
+  }
   {
     slug: "genai-budget-aware-routing-2026",
     title: "GenAI Budget‑Aware Routing 2026: Quality Tiers with Cost Guards",
@@ -431,7 +431,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-30",
     featured: true,
     readTime: "8 min read"
-  },
+  }
   {
     slug: "edge-consentless-analytics-q4-2025",
     title: "Consentless Edge Analytics Q4 2025: Private Metrics Under 100ms",
@@ -440,7 +440,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "6 min read"
-  },
+  }
   {
     slug: "genai-routing-quality-tiers-q4-2025",
     title: "GenAI Routing Quality Tiers Q4 2025: Predictable Cost, Stable UX",
@@ -449,7 +449,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
-  },
+  }
   {
     slug: "ai-governance-real-time-2026",
     title: "AI Governance in Real Time 2026: Live Canaries + PR Policy Tests",
@@ -458,7 +458,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "edge-inference-warm-pools-2026",
     title: "Edge Inference Warm Pools 2026: Sub‑100ms Global with Predictable Cost",
@@ -467,7 +467,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "6 min read"
-  },
+  }
   {
     slug: "agent-release-guardrails-2026",
     title: "Agent Release Guardrails 2026: Budgets, Approvals, and Instant Rollback",
@@ -476,7 +476,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "ai-governance-runtime-scorecards-2026",
     title: "AI Governance Runtime Scorecards 2026: KPIs, Budgets, Rollback",
@@ -485,7 +485,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "edge-experiments-under-100ms-quickstart-2026",
     title: "Edge Experiments Quickstart 2026: Private A/B at <100ms",
@@ -494,7 +494,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "6 min read"
-  },
+  }
   {
     slug: "agent-release-guardrails-checklist-2026-v2",
     title: "Agent Release Guardrails 2026 v2: Budgets, Approvals, Instant Rollback",
@@ -503,7 +503,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
-  },
+  }
   {
     slug: "ai-ethics-operational-blueprint-2026",
     title: "AI Ethics Operational Blueprint 2026: Bias, Fairness, Auditability",
@@ -512,7 +512,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-30",
     featured: true,
     readTime: "9 min read"
-  },
+  }
   {
     slug: "edge-rag-blueprint-2026",
     title: "Edge RAG Blueprint 2026: Fresh, Private Answers in <100ms",
@@ -521,7 +521,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-30",
     featured: true,
     readTime: "8 min read"
-  },
+  }
   {
     slug: "platform-roi-scorecards-2026",
     title: "Platform ROI Scorecards 2026: From Golden Paths to Revenue",
@@ -530,7 +530,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-30",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "ai-e2e-tracing-2025",
     title: "E2E AI Tracing: From Prompt to Outcome KPIs",
@@ -539,7 +539,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "edge-personalization-2026",
     title: "Edge Personalization: Privacy‑First, Sub‑100ms Experiences",
@@ -548,7 +548,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-15",
     featured: true,
     readTime: "6 min read"
-  },
+  }
   {
     slug: "policy-tests-quickstart-2025",
     title: "Policy Tests Quickstart: Ship Fast, Stay Safe",
@@ -557,7 +557,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "6 min read"
-  },
+  }
   {
     slug: "ai-unified-observability-platform-2025",
     title: "Unified AI Observability Platform: Complete Stack Visibility in 2025",
@@ -566,7 +566,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "18 min read"
-  },
+  }
   {
     slug: "ai-model-governance-compliance-2025",
     title: "AI Model Governance & Compliance 2025: Enterprise Frameworks",
@@ -575,7 +575,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-29",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "ai-edge-inference-optimization-2025",
     title: "Edge AI Inference Optimization: 1000x Performance Gains",
@@ -584,7 +584,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "20 min read"
-  },
+  }
   {
     slug: "ai-data-pipeline-automation-2025",
     title: "Autonomous AI Data Pipelines: Self-Healing Infrastructure",
@@ -593,7 +593,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "19 min read"
-  },
+  }
   {
     slug: "ai-security-threat-detection-2025",
     title: "AI-Powered Security: Real-Time Threat Detection & Response",
@@ -602,7 +602,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "21 min read"
-  },
+  }
   {
     slug: "ai-e2e-tracing-2025",
     title: "E2E AI Tracing: From Prompt to Outcome KPIs",
@@ -611,7 +611,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-29",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "edge-personalization-2025",
     title: "Edge Personalization: Privacy‑First, Sub‑100ms Experiences",
@@ -620,7 +620,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-29",
     featured: true,
     readTime: "6 min read"
-  },
+  }
   {
     slug: "policy-tests-quickstart-2025",
     title: "Policy Tests Quickstart: Ship Fast, Stay Safe",
@@ -629,7 +629,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-29",
     featured: true,
     readTime: "6 min read"
-  },
+  }
   {
     slug: "secure-ml-supply-chain-2026",
     title: "Secure ML Supply Chain 2026: SBOMs, Attestations, and Drift Guards",
@@ -638,7 +638,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-13",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "genai-routing-blueprint-2026",
     title: "GenAI Routing Blueprint 2026: Quality Tiers, Caches, and Budgets",
@@ -647,7 +647,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-13",
     featured: true,
     readTime: "8 min read"
-  },
+  }
   {
     slug: "golden-paths-roi-2026",
     title: "Golden Paths ROI 2026: Scorecards that Prove Platform Value",
@@ -656,7 +656,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-12",
     featured: true,
     readTime: "9 min read"
-  },
+  }
   {
     slug: "ai-platform-slos-2026",
     title: "AI Platform SLOs 2026: Budgets, Rollbacks, Live Canaries",
@@ -665,7 +665,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-12",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "rag-evals-in-the-loop-2026",
     title: "RAG Evals in the Loop: Prevent Regressions While Shipping Weekly",
@@ -674,7 +674,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-12",
     featured: true,
     readTime: "8 min read"
-  },
+  }
   {
     slug: "edge-feature-flags-2026",
     title: "Edge Feature Flags 2026: <100ms Global Releases with Budgets",
@@ -683,7 +683,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-12",
     featured: true,
     readTime: "6 min read"
-  },
+  }
   {
     slug: "ai-incident-response-playbooks-2025",
     title: "AI Incident Response Playbooks: Contain in <60s with Confidence",
@@ -692,7 +692,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-12",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "quantum-ai-hybrid-blueprint-2026",
     title: "Quantum‑AI Hybrid Blueprint 2026: Practical Wins in 12 Months",
@@ -701,7 +701,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-12",
     featured: true,
     readTime: "8 min read"
-  },
+  }
   {
     slug: "zero-trust-for-genai-2026",
     title: "Zero‑Trust for GenAI: Prompt Firewalls, Egress Policies, and Audit Trails",
@@ -710,7 +710,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-12",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "platform-engineering-scorecards-2026",
     title: "Platform Engineering Scorecards 2026: From Golden Paths to Outcomes",
@@ -719,7 +719,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-09",
     featured: true,
     readTime: "8 min read"
-  },
+  }
   {
     slug: "ai-cybersecurity-automation-2025",
     title: "AI Cybersecurity Automation: From Detections to Autonomic Response",
@@ -728,7 +728,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-09",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "edge-ai-blueprint-2026",
     title: "Edge AI Blueprint 2026: Private, Real‑Time Intelligence at Scale",
@@ -737,7 +737,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-09",
     featured: true,
     readTime: "9 min read"
-  },
+  }
   {
     slug: "ai-platform-roi-2025",
     title: "AI Platform ROI Scorecards: Proving Value Quarter by Quarter",
@@ -746,7 +746,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-03",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "secure-ml-supply-chain-2025",
     title: "Secure ML Supply Chain: From SBOMs to Model Lineage",
@@ -755,7 +755,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-03",
     featured: true,
     readTime: "6 min read"
-  },
+  }
   {
     slug: "edge-cdn-ml-personalization-2025",
     title: "Edge CDN + On‑Device ML: Personalization Under 100ms",
@@ -764,7 +764,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "6 min read"
-  },
+  }
   {
     slug: "ai-sales-copilot-2025",
     title: "AI Sales Copilot: Grounded Prompts, CRM Context, Reliable Evals",
@@ -773,7 +773,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "6 min read"
-  },
+  }
   {
     slug: "genai-evals-in-production-2025",
     title: "GenAI Evals in Production: Policy Tests That Scale",
@@ -782,7 +782,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
-  },
+  }
   {
     slug: "feature-flags-edge-2025",
     title: "Feature Flags at the Edge: <100ms Global Releases",
@@ -791,7 +791,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "secure-agents-runtime-2026",
     title: "Secure AI Agents Runtime: Sandboxes, Egress Policies, and Traces",
@@ -800,7 +800,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-09",
     featured: true,
     readTime: "8 min read"
-  },
+  }
   {
     slug: "edge-e2e-observability-2026",
     title: "Edge E2E Observability: User-Centric Tracing and <100ms Telemetry",
@@ -809,7 +809,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-09",
     featured: false,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "ai-cost-controllers-2026",
     title: "AI Cost Controllers: Budgets, Tiered Quality, and Guardrails",
@@ -818,7 +818,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-09",
     featured: true,
     readTime: "6 min read"
-  },
+  }
   {
     slug: "ai-governance-blueprint-2025",
     title: "AI Governance Blueprint 2025: Practical Guardrails That Ship",
@@ -827,7 +827,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-29",
     featured: true,
     readTime: "9 min read"
-  },
+  }
   {
     slug: "real-time-genai-guardrails-2025",
     title: "Real‑Time GenAI Guardrails: Inline Filters, Canaries, and Evals",
@@ -836,7 +836,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-29",
     featured: false,
     readTime: "8 min read"
-  },
+  }
   {
     slug: "ai-governance-scorecards-2026",
     title: "AI Governance 2026: Scorecards Engineers Actually Use",
@@ -845,7 +845,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-07",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "freshness-aware-rag-v2",
     title: "Freshness‑Aware RAG v2: TTL Budgets and Versioned Corpora",
@@ -854,7 +854,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-07",
     featured: true,
     readTime: "8 min read"
-  },
+  }
   {
     slug: "ai-platform-roadmaps-2026",
     title: "AI Product Roadmaps 2026: From Bet to Business Impact",
@@ -863,7 +863,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-06",
     featured: true,
     readTime: "9 min read"
-  },
+  }
   {
     slug: "genai-guardrails-blueprints-2026",
     title: "GenAI Guardrails Blueprints: Policy Tests, Canaries, and SLAs",
@@ -872,7 +872,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-06",
     featured: true,
     readTime: "8 min read"
-  },
+  }
   {
     slug: "cloud-finops-scorecards-2026",
     title: "Cloud FinOps Scorecards: Guardrails Engineers Actually Use",
@@ -881,27 +881,23 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-06",
     featured: false,
     readTime: "6 min read"
-  },
-  {
-    slug: "genai-platform-blueprint-2025",
+  }
+  {slug: "genai-platform-blueprint-2025",
     title: "GenAI Platform Blueprint: Shipping Weekly With Guardrails",
     description:
       "Reference architecture for prompts, tools, evals, and policy tests that let teams move fast safely.",
     category: "GenAI",
     publishedAt: "2025-09-29",
     featured: true,
-    readTime: "8 min read",
-  },
-  {
-    slug: "cost-optimized-vector-search",
+    readTime: "8 min read"}
+  {slug: "cost-optimized-vector-search",
     title: "Cost‑Optimized Vector Search: Hybrid, Caching, and Freshness",
     description:
       "Design decisions to cut retrieval cost 40%+ while improving answer quality with hybrid search and freshness windows.",
     category: "Architecture",
     publishedAt: "2025-09-29",
     featured: false,
-    readTime: "6 min read",
-  },
+    readTime: "6 min read"}
   {
     slug: "ai-risk-register-outcomes-2025",
     title: "AI Risk Register That Drives Outcomes: Owners, SLAs, and Policy Tests",
@@ -910,7 +906,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-29",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "zero-regret-rollouts-edge-flags-2025",
     title: "Zero‑Regret Rollouts: Edge Flags with Budgets and Instant Rollback",
@@ -919,16 +915,14 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-29",
     featured: true,
     readTime: "6 min read"
-  },
-  {
-    slug: "online-genai-evals-canaries-2025",
+  }
+  {slug: "online-genai-evals-canaries-2025",
     title: "Online GenAI Evals: Canary Checks That Keep Velocity High",
     description: "Run lightweight, KPI‑linked canaries in prod to prevent regressions while shipping weekly.",
     category: "GenAI",
     publishedAt: "2025-09-29",
     featured: true,
-    readTime: "7 min read",
-  },
+    readTime: "7 min read"}
   {
     slug: "llm-policy-testing-2025",
     title: "LLM Policy Testing in CI: Ship Fast, Stay Safe",
@@ -936,107 +930,87 @@ export const posts: BlogPost[] = [
     category: "AI Governance",
     publishedAt: "2025-10-08",
     readTime: "7 min read"
-  },
-  {
-    slug: "ai-roadmaps",
+  }
+  {slug: "ai-roadmaps",
     title: "Designing High-Impact AI Roadmaps",
     description:
       "A practical framework to align AI investments with measurable business outcomes and reduce time-to-value.",
     category: "AI Strategy",
     publishedAt: "2025-09-15",
     featured: false,
-    readTime: "6 min read",
-  },
-  {
-    slug: "cloud-finops-tactics",
+    readTime: "6 min read"}
+  {slug: "cloud-finops-tactics",
     title: "Cutting Cloud Spend Without Slowing Teams",
     description:
       "Proven tactics for right-sizing, demand shaping, and engineering-friendly guardrails that keep velocity high.",
     category: "Cloud FinOps",
     publishedAt: "2025-09-22",
     featured: false,
-    readTime: "6 min read",
-  },
-  {
-    slug: "zero-trust-for-saas",
+    readTime: "6 min read"}
+  {slug: "zero-trust-for-saas",
     title: "Zero-Trust in Practice for SaaS",
     description:
       "A pragmatic guide to rolling out least-privilege, continuous verification, and blast radius controls.",
     category: "Security",
     publishedAt: "2025-09-25",
     featured: false,
-    readTime: "7 min read",
-  },
-  {
-    slug: "generative-ai-enterprise",
+    readTime: "7 min read"}
+  {slug: "generative-ai-enterprise",
     title: "Generative AI in Enterprise: Real-World Success Stories",
     description:
       "Case studies from Fortune 500 companies showing how GenAI is transforming customer service, content creation, and business operations.",
     category: "AI Innovation",
     publishedAt: "2025-01-20",
     featured: false,
-    readTime: "9 min read",
-  },
-  {
-    slug: "cloud-migration-best-practices",
+    readTime: "9 min read"}
+  {slug: "cloud-migration-best-practices",
     title: "Cloud Migration Best Practices: Lessons from 100+ Projects",
     description:
       "Essential strategies for successful cloud migration, including risk mitigation, cost optimization, and timeline management.",
     category: "Cloud Strategy",
     publishedAt: "2025-01-18",
     featured: false,
-    readTime: "7 min read",
-  },
-  {
-    slug: "cybersecurity-2025-trends",
+    readTime: "7 min read"}
+  {slug: "cybersecurity-2025-trends",
     title: "Cybersecurity Trends 2025: What Every CISO Needs to Know",
     description:
       "Emerging threats, new defense strategies, and the latest security technologies shaping the cybersecurity landscape.",
     category: "Cybersecurity",
     publishedAt: "2025-01-15",
     featured: false,
-    readTime: "8 min read",
-  },
-  {
-    slug: "data-analytics-automation",
+    readTime: "8 min read"}
+  {slug: "data-analytics-automation",
     title: "Automating Data Analytics: From Insight to Action",
     description:
       "How AI-powered analytics platforms are revolutionizing business intelligence and enabling real-time decision making.",
     category: "Data Science",
     publishedAt: "2025-01-12",
     featured: false,
-    readTime: "8 min read",
-  },
-  {
-    slug: "devops-automation-guide",
+    readTime: "8 min read"}
+  {slug: "devops-automation-guide",
     title: "The Complete Guide to DevOps Automation",
     description:
       "Comprehensive strategies for automating CI/CD pipelines, infrastructure management, and deployment processes.",
     category: "DevOps",
     publishedAt: "2025-01-10",
     featured: false,
-    readTime: "10 min read",
-  },
-  {
-    slug: "microservices-architecture",
+    readTime: "10 min read"}
+  {slug: "microservices-architecture",
     title: "Microservices Architecture: Design Patterns and Best Practices",
     description:
       "Essential patterns for building scalable, maintainable microservices architectures in modern applications.",
     category: "Software Architecture",
     publishedAt: "2025-01-08",
     featured: false,
-    readTime: "9 min read",
-  },
-  {
-    slug: "ai-ethics-compliance",
+    readTime: "9 min read"}
+  {slug: "ai-ethics-compliance",
     title: "AI Ethics and Compliance: Building Responsible AI Systems",
     description:
       "Framework for developing AI systems that are fair, transparent, and compliant with emerging regulations.",
     category: "AI Governance",
     publishedAt: "2025-01-05",
     featured: false,
-    readTime: "8 min read",
-  },
+    readTime: "8 min read"}
   // removed conflicting branch entries
   {
     slug: "finops-scorecards-2025",
@@ -1046,7 +1020,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-08",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "enterprise-rag-blueprint-2025",
     title: "Enterprise RAG Blueprint v2: Freshness, Hybrid Search, Auth",
@@ -1056,7 +1030,6 @@ export const posts: BlogPost[] = [
     featured: true,
     readTime: "9 min read"
   }
-  ,
   {
     slug: "ai-runbooks-with-risk-budgets-2026",
     title: "AI Runbooks with Risk Budgets: Safe Automation That Ships",
@@ -1065,7 +1038,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-12",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "zero-trust-for-ai-agents-2026",
     title: "Zero‑Trust for AI Agents: Sandboxes, Egress Policies, Attestations",
@@ -1075,7 +1048,6 @@ export const posts: BlogPost[] = [
     featured: true,
     readTime: "8 min read"
   }
-  ,
   {
     slug: "agentic-workflows-blueprint-2026",
     title: "Agentic Workflows Blueprint 2026: Tools, Traces, and Safety Budgets",
@@ -1084,7 +1056,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-10",
     featured: true,
     readTime: "9 min read"
-  },
+  }
   {
     slug: "privacy-first-observability-2026",
     title: "Privacy‑First Observability: User‑Centric Traces Without PII Leaks",
@@ -1094,7 +1066,6 @@ export const posts: BlogPost[] = [
     featured: false,
     readTime: "7 min read"
   }
-  ,
   {
     slug: "on-device-agents-2026",
     title: "On‑Device Agents 2026: Private Tools That Work Offline",
@@ -1103,7 +1074,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-11",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "genai-budgets-and-quality-tiers-2026",
     title: "GenAI Budgets and Quality Tiers: Control Cost Without Hurting UX",
@@ -1112,7 +1083,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-11",
     featured: true,
     readTime: "6 min read"
-  },
+  }
   {
     slug: "secure-tools-marketplace-2026",
     title: "Secure Tools Marketplace: Vetting, Sandboxes, and Attestations",
@@ -1121,7 +1092,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-11",
     featured: false,
     readTime: "8 min read"
-  },
+  }
   {
     slug: "risk-budgets-for-agent-releases-2026",
     title: "Risk Budgets for Agent Releases: Ship Fast Without Surprises",
@@ -1130,7 +1101,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-11",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "privacy-first-telemetry-2026",
     title: "Privacy‑First Telemetry: Signal‑Rich, PII‑Safe Observability",
@@ -1139,7 +1110,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-11",
     featured: true,
     readTime: "6 min read"
-  },
+  }
   {
     slug: "cost-aware-inference-routing-2026",
     title: "Cost‑Aware Inference Routing: Quality Tiers Under Budget",
@@ -1149,7 +1120,6 @@ export const posts: BlogPost[] = [
     featured: false,
     readTime: "8 min read"
   }
-  ,
   {
     slug: "ai-governance-scorecards-quickstart-2025",
     title: "AI Governance Scorecards Quickstart: Ship Fast, Stay Safe",
@@ -1158,7 +1128,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-29",
     featured: true,
     readTime: "6 min read"
-  },
+  }
   {
     slug: "edge-llm-caching-blueprint-2026",
     title: "Edge LLM Caching Blueprint 2026: Sub‑100ms at Scale",
@@ -1167,7 +1137,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-10",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "ai-agent-slo-playbooks-2026",
     title: "AI Agent SLO Playbooks: Budgets, Rollbacks, and Live Traces",
@@ -1176,7 +1146,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-12",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "hybrid-vector-search-patterns-2026",
     title: "Hybrid Vector Search Patterns: Quality Under Cost and Freshness Budgets",
@@ -1185,7 +1155,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-12",
     featured: false,
     readTime: "6 min read"
-  },
+  }
   {
     slug: "ai-powered-digital-twins-2025",
     title: "AI-Powered Digital Twins 2025: Real-Time Simulation & Predictive Intelligence",
@@ -1194,7 +1164,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "12 min read"
-  },
+  }
   {
     slug: "ai-autonomous-code-refactoring-2026",
     title: "AI Autonomous Code Refactoring 2026: Self-Healing Codebases That Scale",
@@ -1203,7 +1173,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "14 min read"
-  },
+  }
   {
     slug: "quantum-ml-hybrid-computing-2026",
     title: "Quantum-ML Hybrid Computing 2026: 1000x Speedup for Optimization Problems",
@@ -1212,7 +1182,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "16 min read"
-  },
+  }
   {
     slug: "ai-powered-incident-prediction-2026",
     title: "AI-Powered Incident Prediction 2026: Zero-Downtime Operations",
@@ -1221,7 +1191,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "13 min read"
-  },
+  }
   {
     slug: "neuromorphic-edge-ai-2026",
     title: "Neuromorphic Edge AI 2026: Brain-Level Efficiency on Device",
@@ -1230,7 +1200,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "15 min read"
-  },
+  }
   {
     slug: "ai-supply-chain-optimization-2026",
     title: "AI Supply Chain Optimization 2026: End-to-End Autonomous Logistics",
@@ -1239,7 +1209,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "12 min read"
-  },
+  }
   {
     slug: "generative-ui-ai-2026",
     title: "Generative UI AI 2026: Interfaces That Design Themselves",
@@ -1248,7 +1218,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "11 min read"
-  },
+  }
   {
     slug: "ai-contract-intelligence-2026",
     title: "AI Contract Intelligence 2026: Automated Legal Analysis at Scale",
@@ -1257,7 +1227,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "10 min read"
-  },
+  }
   {
     slug: "swarm-intelligence-robotics-2026",
     title: "Swarm Intelligence Robotics 2026: Coordinated Autonomous Systems",
@@ -1266,7 +1236,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "14 min read"
-  },
+  }
   {
     slug: "ai-drug-discovery-acceleration-2026",
     title: "AI Drug Discovery Acceleration 2026: From Years to Months",
@@ -1275,7 +1245,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "13 min read"
-  },
+  }
   {
     slug: "cognitive-ai-assistants-2026",
     title: "Cognitive AI Assistants 2026: Understanding Context Like Humans",
@@ -1284,7 +1254,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "12 min read"
-  },
+  }
   {
     slug: "serverless-ai-architecture-2025",
     title: "Serverless AI Architecture 2025: Infinite Scale & Zero Ops",
@@ -1293,7 +1263,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "15 min read"
-  },
+  }
   {
     slug: "ai-enhanced-cybersecurity-2025",
     title: "AI-Enhanced Cybersecurity 2025: Autonomous Threat Detection & Response",
@@ -1303,7 +1273,6 @@ export const posts: BlogPost[] = [
     featured: true,
     readTime: "14 min read"
   }
-  ,
   {
     slug: "ai-risk-budgets-2026",
     title: "AI Risk Budgets 2026: Ship Faster With Guardrails",
@@ -1312,7 +1281,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-13",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "ai-autonomous-incident-runbooks-2025",
     title: "AI Autonomous Incident Runbooks: Budgeted Actions and Instant Rollback",
@@ -1321,7 +1290,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-29",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "privacy-preserving-agents-2026",
     title: "Privacy‑Preserving Agents 2026: On‑Device Tools and Scoped Telemetry",
@@ -1330,7 +1299,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-13",
     featured: true,
     readTime: "8 min read"
-  },
+  }
   {
     slug: "kpi-linked-policy-tests-2026",
     title: "KPI‑Linked Policy Tests 2026: Governance That Speeds Teams Up",
@@ -1339,7 +1308,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-13",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "serverless-inference-cost-playbook-2026",
     title: "Serverless Inference Cost Playbook 2026: Cut Spend 40–70%",
@@ -1348,7 +1317,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-13",
     featured: true,
     readTime: "8 min read"
-  },
+  }
   {
     slug: "multimodal-ai-agents-2026",
     title: "Multimodal AI Agents 2026: Vision + Language + Actions at Scale",
@@ -1357,7 +1326,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "10 min read"
-  },
+  }
   {
     slug: "real-time-ai-compliance-2026",
     title: "Real‑Time AI Compliance 2026: Automated Regulatory Checks in Production",
@@ -1366,7 +1335,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "9 min read"
-  },
+  }
   {
     slug: "federated-learning-enterprise-2026",
     title: "Federated Learning for Enterprise 2026: Train Without Centralizing Data",
@@ -1375,7 +1344,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "11 min read"
-  },
+  }
   {
     slug: "ai-powered-code-review-2026",
     title: "AI‑Powered Code Review 2026: Ship Faster with Intelligent PR Analysis",
@@ -1384,7 +1353,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
-  },
+  }
   {
     slug: "continuous-model-validation-2026",
     title: "Continuous Model Validation 2026: Catch Drift Before Users Do",
@@ -1393,7 +1362,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "9 min read"
-  },
+  }
   {
     slug: "privacy-first-feature-flags-2025",
     title: "Privacy‑First Feature Flags: Zero‑Regret Rollouts at the Edge",
@@ -1402,7 +1371,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-29",
     featured: true,
     readTime: "6 min read"
-  },
+  }
   {
     slug: "platform-roi-scorecards-quickstart-2025",
     title: "Platform ROI Scorecards: A Practical Quickstart",
@@ -1412,7 +1381,6 @@ export const posts: BlogPost[] = [
     featured: true,
     readTime: "7 min read"
   }
-  ,
   {
     slug: "ai-supply-chain-optimization-2025",
     title: "AI Supply Chain Optimization: 65% Faster Deliveries Under Budget",
@@ -1421,7 +1389,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-29",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "sovereign-ai-infrastructure-2026",
     title: "Sovereign AI Infrastructure 2026: Data Residency Meets Performance",
@@ -1430,7 +1398,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "9 min read"
-  },
+  }
   {
     slug: "ai-agent-orchestration-framework-2026",
     title: "AI Agent Orchestration Framework 2026: Coordinating Autonomous Systems at Scale",
@@ -1439,7 +1407,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "12 min read"
-  },
+  }
   {
     slug: "real-time-ai-decision-systems-2026",
     title: "Real‑Time AI Decision Systems 2026: Sub‑10ms Intelligent Actions at Scale",
@@ -1448,7 +1416,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "11 min read"
-  },
+  }
   {
     slug: "enterprise-ai-security-frameworks-2026",
     title: "Enterprise AI Security Frameworks 2026: Defense-in-Depth for AI Systems",
@@ -1457,7 +1425,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "10 min read"
-  },
+  }
   {
     slug: "neuromorphic-computing-breakthrough-2026",
     title: "Neuromorphic Computing Breakthrough 2026: Brain‑Inspired AI at 1000x Efficiency",
@@ -1466,7 +1434,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "13 min read"
-  },
+  }
   {
     slug: "ai-native-application-architecture-2026",
     title: "AI‑Native Application Architecture 2026: Building Apps with Intelligence at the Core",
@@ -1475,7 +1443,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "11 min read"
-  },
+  }
   {
     slug: "ai-powered-fintech-revolution-2026",
     title: "AI-Powered FinTech Revolution 2026: Autonomous Financial Services at Scale",
@@ -1484,7 +1452,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "15 min read"
-  },
+  }
   {
     slug: "voice-ai-next-generation-2026",
     title: "Next-Generation Voice AI 2026: Human-Indistinguishable Speech Systems",
@@ -1493,7 +1461,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "13 min read"
-  },
+  }
   {
     slug: "ai-climate-tech-solutions-2026",
     title: "AI Climate Tech Solutions 2026: Data-Driven Carbon Reduction at Scale",
@@ -1502,7 +1470,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "14 min read"
-  },
+  }
   {
     slug: "ai-content-moderation-2026",
     title: "AI Content Moderation 2026: Real-Time Safety at Billion-User Scale",
@@ -1511,7 +1479,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "12 min read"
-  },
+  }
   {
     slug: "ai-chip-design-automation-2026",
     title: "AI Chip Design Automation 2026: From Concept to Silicon in Weeks",
@@ -1520,7 +1488,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "16 min read"
-  },
+  }
   {
     slug: "ai-autonomous-threat-response-2025",
     title: "AI Autonomous Threat Response 2025: Zero-Touch Security That Scales",
@@ -1529,7 +1497,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "14 min read"
-  },
+  }
   {
     slug: "ai-prompt-engineering-mastery-2025",
     title: "AI Prompt Engineering Mastery 2025: Advanced LLM Optimization Techniques",
@@ -1538,7 +1506,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "16 min read"
-  },
+  }
   {
     slug: "ai-synthetic-data-generation-2025",
     title: "AI Synthetic Data Generation 2025: Privacy-Preserving Training at Scale",
@@ -1547,7 +1515,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "15 min read"
-  },
+  }
   {
     slug: "ai-explainability-frameworks-2025",
     title: "AI Explainability Frameworks 2025: Building Trust Through Transparency",
@@ -1556,7 +1524,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "13 min read"
-  },
+  }
   {
     slug: "ai-reinforcement-learning-production-2025",
     title: "AI Reinforcement Learning in Production 2025: Real-World RL at Scale",
@@ -1565,7 +1533,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "17 min read"
-  },
+  }
   {
     slug: "ai-autonomous-devops-2026",
     title: "AI Autonomous DevOps 2026: Self-Managing CI/CD Pipelines with Zero Downtime",
@@ -1574,7 +1542,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "14 min read"
-  },
+  }
   {
     slug: "ai-legal-document-automation-2026",
     title: "AI Legal Document Automation 2026: From Contracts to Compliance in Seconds",
@@ -1583,7 +1551,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "13 min read"
-  },
+  }
   {
     slug: "ai-customer-experience-hyper-personalization-2026",
     title: "AI Customer Experience 2026: Hyper-Personalization Achieving 400% Engagement",
@@ -1592,7 +1560,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "12 min read"
-  },
+  }
   {
     slug: "ai-renewable-energy-optimization-2026",
     title: "AI Renewable Energy Optimization 2026: Smart Grids Achieving 95% Efficiency",
@@ -1601,7 +1569,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "15 min read"
-  },
+  }
   {
     slug: "ai-research-acceleration-platform-2026",
     title: "AI Research Acceleration Platform 2026: 10x Faster Scientific Discovery",
@@ -1611,7 +1579,6 @@ export const posts: BlogPost[] = [
     featured: true,
     readTime: "16 min read"
   }
-  ,
   {
     slug: "privacy-first-observability-quickstart-2025",
     title: "Privacy‑First Observability Quickstart: Scoped IDs and Redaction",
@@ -1620,7 +1587,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-29",
     featured: false,
     readTime: "6 min read"
-  },
+  }
   {
     slug: "ai-sre-blueprints-2026",
     title: "AI SRE Blueprints 2026: Error Budgets, Rollbacks, and Live Traces",
@@ -1629,7 +1596,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-29",
     featured: true,
     readTime: "8 min read"
-  },
+  }
   {
     slug: "privacy-first-ab-testing-2026",
     title: "Privacy‑First A/B Testing 2026: Insights Without PII",
@@ -1643,14 +1610,14 @@ export const posts: BlogPost[] = [
 
 // Newly added content (auto-advertised on Home via latest sort)
 posts.push(
-  { slug: "ai-operational-trust-scorecards-2026", title: "AI Operational Trust Scorecards 2026: SLIs That Matter", description: "Define SLIs tied to product KPIs, wire budgets and rollback for trustworthy automation.", category: "AI Operations", publishedAt: "2025-09-30", featured: true, readTime: "7 min read" },
-  { slug: "edge-consentless-analytics-2026", title: "Edge Analytics 2026: Consent-Safe Insights Without PII", description: "On-device aggregation, scoped IDs, and DP noise for actionable, compliant insights.", category: "Analytics", publishedAt: "2025-09-30", featured: true, readTime: "6 min read" },
-  { slug: "genai-consent-mode-edge-2026", title: "GenAI Consent Mode 2026: On-Device Signals Without PII", description: "Respect user privacy with on-device aggregation, scoped IDs, and consent-aware analytics under strict SLAs.", category: "Analytics", publishedAt: "2025-10-31", featured: true, readTime: "6 min read" },
-  { slug: "ai-operational-evals-2026", title: "Operational Evals 2026: KPIs, Canaries, and Rollbacks", description: "Wire offline suites, PR checks, and live canaries to KPIs for safe, fast delivery.", category: "AI Engineering", publishedAt: "2025-09-30", featured: true, readTime: "7 min read" },
-  { slug: "edge-ab-testing-2026", title: "Edge A/B Testing 2026: Private Experiments at <100ms", description: "Scoped IDs, on-device metrics, and DP noise to run compliant, latency-free experiments.", category: "Analytics", publishedAt: "2025-09-30", featured: true, readTime: "6 min read" },
-  { slug: "ai-data-lineage-2026", title: "AI Data Lineage 2026: End-to-End Traceability for Models", description: "Track datasets, prompts, and model versions with signed SBOMs and audit-ready provenance.", category: "MLOps", publishedAt: "2025-10-31", featured: true, readTime: "7 min read" },
-  { slug: "agent-policy-gates-blueprint-2026", title: "Agent Policy Gates 2026: Approvals, Budgets, and Safe Tools", description: "Design approval workflows, budgeted actions, and sandboxed tools to ship reliable agent releases.", category: "AI Operations", publishedAt: "2025-10-31", featured: true, readTime: "7 min read" },
-  { slug: "sovereign-rag-platforms-2026", title: "Sovereign RAG Platforms 2026: Residency, Guardrails, and Speed", description: "Region-scoped corpora, auth-aware retrieval, and signed outputs without hurting UX.", category: "GenAI", publishedAt: "2025-09-30", featured: true, readTime: "8 min read" },
+  { slug: "ai-operational-trust-scorecards-2026", title: "AI Operational Trust Scorecards 2026: SLIs That Matter", description: "Define SLIs tied to product KPIs, wire budgets and rollback for trustworthy automation.", category: "AI Operations", publishedAt: "2025-09-30", featured: true, readTime: "7 min read" }
+  { slug: "edge-consentless-analytics-2026", title: "Edge Analytics 2026: Consent-Safe Insights Without PII", description: "On-device aggregation, scoped IDs, and DP noise for actionable, compliant insights.", category: "Analytics", publishedAt: "2025-09-30", featured: true, readTime: "6 min read" }
+  { slug: "genai-consent-mode-edge-2026", title: "GenAI Consent Mode 2026: On-Device Signals Without PII", description: "Respect user privacy with on-device aggregation, scoped IDs, and consent-aware analytics under strict SLAs.", category: "Analytics", publishedAt: "2025-10-31", featured: true, readTime: "6 min read" }
+  { slug: "ai-operational-evals-2026", title: "Operational Evals 2026: KPIs, Canaries, and Rollbacks", description: "Wire offline suites, PR checks, and live canaries to KPIs for safe, fast delivery.", category: "AI Engineering", publishedAt: "2025-09-30", featured: true, readTime: "7 min read" }
+  { slug: "edge-ab-testing-2026", title: "Edge A/B Testing 2026: Private Experiments at <100ms", description: "Scoped IDs, on-device metrics, and DP noise to run compliant, latency-free experiments.", category: "Analytics", publishedAt: "2025-09-30", featured: true, readTime: "6 min read" }
+  { slug: "ai-data-lineage-2026", title: "AI Data Lineage 2026: End-to-End Traceability for Models", description: "Track datasets, prompts, and model versions with signed SBOMs and audit-ready provenance.", category: "MLOps", publishedAt: "2025-10-31", featured: true, readTime: "7 min read" }
+  { slug: "agent-policy-gates-blueprint-2026", title: "Agent Policy Gates 2026: Approvals, Budgets, and Safe Tools", description: "Design approval workflows, budgeted actions, and sandboxed tools to ship reliable agent releases.", category: "AI Operations", publishedAt: "2025-10-31", featured: true, readTime: "7 min read" }
+  { slug: "sovereign-rag-platforms-2026", title: "Sovereign RAG Platforms 2026: Residency, Guardrails, and Speed", description: "Region-scoped corpora, auth-aware retrieval, and signed outputs without hurting UX.", category: "GenAI", publishedAt: "2025-09-30", featured: true, readTime: "8 min read" }
   {
     slug: "ai-platform-value-realization-2026",
     title: "AI Platform Value Realization 2026: From Pilots to Profit",
@@ -1659,7 +1626,7 @@ posts.push(
     publishedAt: "2025-10-30",
     featured: true,
     readTime: "8 min read"
-  },
+  }
   {
     slug: "secure-ml-supply-chain-v2-2026",
     title: "Secure ML Supply Chain v2: Attest Everything, Drift Nothing",
@@ -1668,7 +1635,7 @@ posts.push(
     publishedAt: "2025-10-30",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "edge-experiments-under-100ms-2026",
     title: "Edge Experiments Under 100ms: Privacy‑First A/B Without PII",
@@ -1677,7 +1644,7 @@ posts.push(
     publishedAt: "2025-10-30",
     featured: true,
     readTime: "6 min read"
-  },
+  }
   {
     slug: "ai-safety-budgets-2026",
     title: "AI Safety Budgets 2026: Guardrails That Keep Velocity High",
@@ -1686,7 +1653,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "edge-privacy-telemetry-2026",
     title: "Edge Privacy Telemetry 2026: Signal‑Rich, PII‑Safe Analytics",
@@ -1695,7 +1662,7 @@ posts.push(
     publishedAt: "2025-10-13",
     featured: true,
     readTime: "6 min read"
-  },
+  }
   {
     slug: "agent-release-checklists-2026",
     title: "Agent Release Checklists 2026: Budgets, Canaries, and Rollback",
@@ -1704,7 +1671,7 @@ posts.push(
     publishedAt: "2025-10-13",
     featured: true,
     readTime: "6 min read"
-  },
+  }
   {
     slug: "ai-threat-hunting-with-llms-2026",
     title: "AI Threat Hunting with LLMs 2026: Signals, Sandboxes, and Speed",
@@ -1713,7 +1680,7 @@ posts.push(
     publishedAt: "2025-10-13",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "llm-production-runbooks-2026",
     title: "LLM Production Runbooks 2026: Rollbacks, Budgets, and Canary Evals",
@@ -1735,7 +1702,7 @@ posts.push(
     publishedAt: "2026-03-20",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "edge-private-experimentation-v2-2026",
     title: "Edge Private Experimentation v2 (2026): <100ms A/B Without PII",
@@ -1744,7 +1711,7 @@ posts.push(
     publishedAt: "2026-03-22",
     featured: true,
     readTime: "6 min read"
-  },
+  }
   {
     slug: "genai-routing-quality-tiers-v3-2026",
     title: "GenAI Routing Quality Tiers v3 (2026): Stable UX Under Budget",
@@ -1765,7 +1732,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "edge-private-insights-blueprint-2026",
     title: "Edge Private Insights Blueprint 2026: Zero‑PII Analytics at <100ms",
@@ -1774,7 +1741,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "6 min read"
-  },
+  }
   {
     slug: "genai-routing-quality-tiers-2026",
     title: "GenAI Routing Quality Tiers 2026: Stable UX Under Budget",
@@ -1796,7 +1763,7 @@ posts.push(
     publishedAt: "2026-04-01",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "edge-zero-pii-personalization-2026",
     title: "Edge Zero‑PII Personalization 2026: Private <100ms Experiences",
@@ -1805,7 +1772,7 @@ posts.push(
     publishedAt: "2026-04-01",
     featured: true,
     readTime: "6 min read"
-  },
+  }
   {
     slug: "genai-quality-tiers-at-scale-2026",
     title: "GenAI Quality Tiers at Scale 2026: Predictable Cost, Stable UX",
@@ -1827,7 +1794,7 @@ posts.push(
     publishedAt: "2026-01-05",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "edge-consent-mode-2026",
     title: "Edge Consent Mode 2026: Private Analytics Without PII",
@@ -1836,7 +1803,7 @@ posts.push(
     publishedAt: "2026-01-05",
     featured: true,
     readTime: "6 min read"
-  },
+  }
   {
     slug: "genai-quality-tiers-blueprint-2026",
     title: "GenAI Quality Tiers Blueprint 2026: Predictable Cost, Stable UX",
@@ -1858,7 +1825,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "edge-private-insights-2026",
     title: "Edge Private Insights 2026: Actionable Metrics Without PII",
@@ -1867,7 +1834,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "6 min read"
-  },
+  }
   {
     slug: "genai-budgets-routing-2026",
     title: "GenAI Budgets & Routing 2026: Predictable Cost, Stable UX",
@@ -1889,7 +1856,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "edge-governed-flags-2026",
     title: "Edge‑Governed Flags 2026: Policies at <100ms",
@@ -1898,7 +1865,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "6 min read"
-  },
+  }
   {
     slug: "genai-cache-playbook-2026",
     title: "GenAI Cache Playbook 2026: Cut Spend 40–70%",
@@ -1920,7 +1887,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "edge-private-experimentation-2026",
     title: "Edge Private Experimentation 2026: <100ms A/B Without PII",
@@ -1929,7 +1896,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "6 min read"
-  },
+  }
   {
     slug: "agent-release-zero-regret-2026",
     title: "Agent Releases 2026: Zero‑Regret with Budgets & Rollback",
@@ -1938,7 +1905,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
-  },
+  }
   {
     slug: "ai-enterprise-autonomy-blueprint-2026",
     title: "Enterprise Autonomy Blueprint 2026: From Pilots to Production",
@@ -1947,7 +1914,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "9 min read"
-  },
+  }
   {
     slug: "edge-trustless-analytics-2026",
     title: "Edge Trustless Analytics 2026: Verifiable, PII‑Safe Insights",
@@ -1956,7 +1923,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "agentic-control-planes-blueprint-2027",
     title: "Agentic Control Planes 2027: Budgets, Policies, Instant Recovery",
@@ -1978,7 +1945,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "edge-experiments-quickstart-2026",
     title: "Edge Experiments Quickstart 2026: Private A/B at <100ms",
@@ -1987,7 +1954,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "6 min read"
-  },
+  }
   {
     slug: "agent-release-guardrails-checklist-2026",
     title: "Agent Release Guardrails 2026: Budgets, Approvals, Rollback",
@@ -2009,7 +1976,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "edge-governance-quickstart-2026",
     title: "Edge Governance Quickstart 2026: Policies Without Latency Penalties",
@@ -2018,7 +1985,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "6 min read"
-  },
+  }
   {
     slug: "genai-evals-blueprint-2026",
     title: "GenAI Evals Blueprint 2026: Offline Suites, PR Gates, Live Canaries",
@@ -2040,7 +2007,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "10 min read"
-  },
+  }
   {
     slug: "agent-mesh-governance-2027",
     title: "Agent Mesh Governance 2027: Policies, Budgets, and Live Canaries",
@@ -2049,7 +2016,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
-  },
+  }
   {
     slug: "enterprise-ai-cost-controllers-2027",
     title: "Enterprise AI Cost Controllers 2027: Predictable Spend, Stable UX",
@@ -2071,7 +2038,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "edge-real-time-personalization-2026",
     title: "Edge Real‑Time Personalization 2026: <100ms Experiences Without PII",
@@ -2080,7 +2047,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "6 min read"
-  },
+  }
   {
     slug: "agent-release-runbooks-2026",
     title: "Agent Release Runbooks 2026: Budgets, Evals, Instant Rollback",
@@ -2102,7 +2069,7 @@ posts.push(
     publishedAt: "2025-10-31",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "edge-zero-pii-analytics-2026",
     title: "Zero‑PII Edge Analytics 2026: Insights Under 100ms",
@@ -2111,7 +2078,7 @@ posts.push(
     publishedAt: "2025-10-31",
     featured: true,
     readTime: "6 min read"
-  },
+  }
   {
     slug: "agent-release-zero-regret-2026",
     title: "Zero‑Regret Agent Releases 2026: Budgets, Canaries, Rollback",
@@ -2133,7 +2100,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
-  },
+  }
   {
     slug: "privacy-safe-feature-flags-2026",
     title: "Privacy‑Safe Feature Flags 2026: Sub‑100ms Global Releases",
@@ -2142,7 +2109,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "platform-roi-scorecards-quickstart-2026",
     title: "Platform ROI Scorecards Quickstart 2026: Prove Value Fast",
@@ -2164,7 +2131,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "edge-inference-budgets-2025",
     title: "Edge Inference Budgets 2025: Quality Under Cost and Latency SLAs",
@@ -2173,7 +2140,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "6 min read"
-  },
+  }
   {
     slug: "agent-observability-live-traces-2025",
     title: "Agent Observability 2025: Live Traces, SLIs, and Safe Actions",
@@ -2195,7 +2162,7 @@ posts.push(
     publishedAt: "2025-10-30",
     featured: true,
     readTime: "8 min read"
-  },
+  }
   {
     slug: "agent-runbooks-zero-regret-2026",
     title: "Agent Runbooks 2026: Zero‑Regret Releases with Budgets & Rollback",
@@ -2204,7 +2171,7 @@ posts.push(
     publishedAt: "2025-10-30",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "edge-rag-privacy-preserving-2026",
     title: "Edge RAG 2026: Private Retrieval with Sub‑100ms Answers",
@@ -2226,7 +2193,7 @@ posts.push(
     publishedAt: "2025-10-31",
     featured: true,
     readTime: "8 min read"
-  },
+  }
   {
     slug: "secure-genai-data-guardrails-2026",
     title: "Secure GenAI Data Guardrails 2026: Scoped Access, Redaction, Attestations",
@@ -2235,7 +2202,7 @@ posts.push(
     publishedAt: "2025-10-31",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "sla-aware-inference-routing-2026",
     title: "SLA‑Aware Inference Routing 2026: Quality Tiers Under Budget",
@@ -2257,7 +2224,7 @@ posts.push(
     publishedAt: "2025-10-14",
     featured: true,
     readTime: "8 min read"
-  },
+  }
   {
     slug: "ai-e2e-tracing-blueprint-2025",
     title: "AI E2E Tracing Blueprint 2025: From Prompt to KPI",
@@ -2266,7 +2233,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "privacy-first-analytics-2026",
     title: "Privacy‑First Analytics 2026: Scoped IDs and On‑Device Telemetry",
@@ -2275,7 +2242,7 @@ posts.push(
     publishedAt: "2025-10-14",
     featured: true,
     readTime: "6 min read"
-  },
+  }
   {
     slug: "edge-personalization-playbook-2025",
     title: "Edge Personalization Playbook 2025: Private <100ms Experiences",
@@ -2284,7 +2251,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "6 min read"
-  },
+  }
   {
     slug: "genai-routing-playbook-2026",
     title: "GenAI Routing Playbook 2026: Quality Tiers Under Budget",
@@ -2293,7 +2260,7 @@ posts.push(
     publishedAt: "2025-10-14",
     featured: true,
     readTime: "8 min read"
-  },
+  }
   {
     slug: "kpi-linked-policy-tests-quickstart-2025",
     title: "KPI‑Linked Policy Tests Quickstart: Ship Fast, Stay Safe",
@@ -2315,7 +2282,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "sovereign-genai-platforms-2026",
     title: "Sovereign GenAI Platforms 2026: Residency, Guardrails, and Speed",
@@ -2324,7 +2291,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
-  },
+  }
   {
     slug: "incident-runbooks-kpi-linked-2026",
     title: "Incident Runbooks 2026: KPI‑Linked Budgets and Instant Rollback",
@@ -2346,7 +2313,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "18 min read"
-  },
+  }
   {
     slug: "ai-enterprise-genai-agent-platform-2026",
     title: "Enterprise GenAI Agent Platform 2026: Reliability, Budgets, Guardrails",
@@ -2355,7 +2322,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "20 min read"
-  },
+  }
   {
     slug: "manufacturing-ai-transformation-2026",
     title: "Manufacturing AI Transformation 2026: $18M ROI, 85% Downtime Reduction",
@@ -2364,7 +2331,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "14 min read"
-  },
+  }
   {
     slug: "ai-autonomous-infrastructure-2025",
     title: "AI Autonomous Infrastructure 2025: Self‑Healing, Self‑Optimizing, Self‑Scaling",
@@ -2373,7 +2340,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "9 min read"
-  },
+  }
   {
     slug: "multimodal-ai-foundations-2025",
     title: "Multimodal AI Foundations 2025: Vision × Language × Audio",
@@ -2382,7 +2349,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "11 min read"
-  },
+  }
   {
     slug: "privacy-first-analytics-quickstart-2025",
     title: "Privacy‑First Analytics Quickstart: Scoped IDs and On‑Device Telemetry",
@@ -2404,7 +2371,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "edge-cold-start-busting-2026",
     title: "Edge Cold-Start Busting 2026: Warm Pools, Prefetch, Tiered Caches",
@@ -2413,7 +2380,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "6 min read"
-  },
+  }
   {
     slug: "agent-runbooks-zero-regret-2026",
     title: "Agent Runbooks 2026: Zero‑Regret Releases with Budgets & Rollback",
@@ -2422,7 +2389,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "ai-governance-eu-ai-act-2026",
     title: "EU AI Act 2026 Playbook: Ship Fast, Stay Compliant",
@@ -2431,7 +2398,7 @@ posts.push(
     publishedAt: "2025-10-30",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "edge-rag-privacy-preserving-2026",
     title: "Edge RAG 2026: Private Retrieval with Sub‑100ms Answers",
@@ -2440,7 +2407,7 @@ posts.push(
     publishedAt: "2025-10-30",
     featured: true,
     readTime: "8 min read"
-  },
+  }
   {
     slug: "agent-safety-checklists-2026",
     title: "Agent Safety Checklists 2026: Budgets, Sandboxes, Rollbacks",
@@ -2462,7 +2429,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "edge-eval-canaries-2026",
     title: "Edge Evals & Canaries 2026: Quality at <100ms",
@@ -2471,7 +2438,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "6 min read"
-  },
+  }
   {
     slug: "ai-value-stream-maps-2026",
     title: "AI Value Stream Maps 2026: Proving ROI End‑to‑End",
@@ -2493,7 +2460,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "6 min read"
-  },
+  }
   {
     slug: "agent-evals-in-prod-2026",
     title: "Agent Evals in Production 2026: Online Checks that Predict Outcomes",
@@ -2502,7 +2469,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "ai-cost-aware-inference-2026",
     title: "Cost‑Aware Inference 2026: Warm Pools and Quality Tiers Under SLAs",
@@ -2511,7 +2478,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "platform-golden-paths-kpis-2026",
     title: "Platform Golden Paths 2026: Paved Roads that Move KPIs",
@@ -2520,7 +2487,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "genai-routing-under-budgets-2026",
     title: "Quality‑Tiered GenAI Routing 2026: Control Cost with Caches and Evals",
@@ -2529,7 +2496,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
-  },
+  }
   {
     slug: "on-device-agents-offline-tools-2026",
     title: "On‑Device Agents 2026: Offline‑Capable Tools and Private Caches",
@@ -2538,7 +2505,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "zero-trust-observability-2026",
     title: "Zero‑Trust Observability 2026: Signed Traces and Least‑Privilege Telemetry",
@@ -2560,7 +2527,7 @@ posts.push(
     publishedAt: "2025-11-30",
     featured: true,
     readTime: "8 min read"
-  },
+  }
   {
     slug: "ai-cost-guardrails-2026",
     title: "AI Cost Guardrails 2026: Tiered Quality, Budgets, and Live Canaries",
@@ -2569,7 +2536,7 @@ posts.push(
     publishedAt: "2025-11-30",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "privacy-first-insights-2026",
     title: "Privacy‑First Insights 2026: DP Noise, Scoped IDs, On‑Device Telemetry",
@@ -2591,7 +2558,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "edge-consentless-analytics-q4-2025",
     title: "Edge Consentless Analytics Q4 2025: Actionable Insights Without PII",
@@ -2600,7 +2567,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "6 min read"
-  },
+  }
   {
     slug: "genai-routing-quality-tiers-q4-2025",
     title: "GenAI Routing Quality Tiers Q4 2025: Predictable Cost, Stable UX",
@@ -2622,7 +2589,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "edge-retrieval-rag-2027",
     title: "Edge Retrieval RAG 2027: Sub‑100ms Answers Without PII",
@@ -2631,7 +2598,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
-  },
+  }
   {
     slug: "agentic-release-budgets-2027",
     title: "Agentic Release Budgets 2027: Safe Automation at Scale",
@@ -2640,7 +2607,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "6 min read"
-  },
+  }
   {
     slug: "privacy-first-experimentation-2027",
     title: "Privacy‑First Experimentation 2027: Insights Without PII",
@@ -2662,7 +2629,7 @@ posts.push(
     publishedAt: "2026-03-01",
     featured: true,
     readTime: "8 min read"
-  },
+  }
   {
     slug: "genai-quality-tiers-2026",
     title: "GenAI Quality Tiers 2026: Predictable Cost, Stable UX",
@@ -2671,7 +2638,7 @@ posts.push(
     publishedAt: "2026-02-20",
     featured: true,
     readTime: "8 min read"
-  },
+  }
   {
     slug: "privacy-safe-analytics-2026",
     title: "Privacy‑Safe Analytics 2026: Scoped IDs, Edge Aggregation, DP Noise",
@@ -2680,7 +2647,7 @@ posts.push(
     publishedAt: "2026-02-10",
     featured: true,
     readTime: "6 min read"
-  },
+  }
   {
     slug: "ai-platform-blueprints-2026",
     title: "AI Platform Blueprints 2026: Guardrails, Traces, and Budgets",
@@ -2689,7 +2656,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "9 min read"
-  },
+  }
   {
     slug: "edge-agents-2026",
     title: "Edge Agents 2026: Offline‑Capable Tools at <100ms",
@@ -2698,7 +2665,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "policy-checked-genai-2026",
     title: "Policy‑Checked GenAI 2026: CI Gates, Canaries, and Rollback",
@@ -2720,7 +2687,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "reliable-agent-evals-2025",
     title: "Reliable Agent Evals 2025: KPIs, Canaries, and Rollbacks",
@@ -2729,7 +2696,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
-  },
+  }
   {
     slug: "ai-operational-resilience-2025",
     title: "AI Operational Resilience 2025: Predict, Prevent, Remediate",
@@ -2751,7 +2718,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "edge-consentless-insights-2026",
     title: "Edge Consentless Insights 2026: Actionable Metrics Without PII",
@@ -2760,7 +2727,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "6 min read"
-  },
+  }
   {
     slug: "genai-routing-quality-tiers-2026",
     title: "GenAI Routing Quality Tiers 2026: Predictable Cost, Stable UX",
@@ -2782,7 +2749,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "edge-inference-warm-pools-2026",
     title: "Edge Inference Warm Pools 2026: Sub‑100ms Global with Predictable Cost",
@@ -2791,7 +2758,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "6 min read"
-  },
+  }
   {
     slug: "agent-release-guardrails-2026",
     title: "Agent Release Guardrails 2026: Budgets, Approvals, and Instant Rollback",
@@ -2813,7 +2780,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "12 min read"
-  },
+  }
   {
     slug: "ai-2027-cost-optimization-playbook",
     title: "AI 2027 Cost Optimization Playbook",
@@ -2835,7 +2802,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
-  },
+  }
   {
     slug: "edge-telemetry-privacy-2025",
     title: "Edge Telemetry 2025: Signal‑Rich Insights Without PII",
@@ -2844,7 +2811,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "6 min read"
-  },
+  }
   {
     slug: "genai-cache-strategies-2025",
     title: "GenAI Cache Strategies 2025: Cut Spend 40–70% With Stable UX",
@@ -2866,7 +2833,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "privacy-first-insights-quickstart-2025",
     title: "Privacy‑First Insights Quickstart 2025: Actionable Analytics Without PII",
@@ -2875,7 +2842,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "6 min read"
-  },
+  }
   {
     slug: "agent-safety-checklists-quickstart-2025",
     title: "Agent Safety Checklists 2025: Budgets, Sandboxes, Rollbacks",
@@ -2897,7 +2864,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "ai-governance-runtime-guardrails-2026",
     title: "AI Governance Runtime Guardrails 6: Inline Policies Without Friction",
@@ -2906,7 +2873,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "edge-model-warm-pools-2026",
     title: "Edge Model Warm Pools 2026: <100ms Global Starts Under Budget",
@@ -2915,7 +2882,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "6 min read"
-  },
+  }
   {
     slug: "edge-privacy-insights-2026",
     title: "Edge Privacy Insights 2026: Actionable Metrics Without PII",
@@ -2924,7 +2891,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "6 min read"
-  },
+  }
   {
     slug: "agentic-runtime-safety-2026",
     title: "Agentic Runtime Safety 2026: Budgets, Sandboxes, and Rollback",
@@ -2946,7 +2913,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
-  },
+  }
   {
     slug: "edge-private-analytics-2026",
     title: "Edge Private Analytics 2026: Actionable Insights Without PII",
@@ -2955,7 +2922,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "agent-safety-runbooks-2026",
     title: "Agent Safety Runbooks 2026: Approvals, Budgets, Canary Evals",
@@ -2964,7 +2931,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "ai-governance-scorecards-2026-q4",
     title: "AI Governance Scorecards 2026 Q4: Wire Guardrails to KPIs",
@@ -2973,7 +2940,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "edge-inference-cold-starts-2026",
     title: "Edge Inference 2026: Bust Cold Starts with Warm Pools",
@@ -2982,7 +2949,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "6 min read"
-  },
+  }
   {
     slug: "agent-release-playbooks-2026-q4",
     title: "Agent Release Playbooks 2026 Q4: Budgets, Approvals, Rollback",
@@ -3004,7 +2971,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "edge-private-insights-v3-2026",
     title: "Edge Private Insights v3 (2026): Scoped IDs, DP Noise, <100ms",
@@ -3013,7 +2980,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "6 min read"
-  },
+  }
   {
     slug: "agent-release-guardrails-v3-2026",
     title: "Agent Release Guardrails v3 (2026): Budgets, Canaries, Recovery",
@@ -3035,7 +3002,7 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
-  },
+  }
   {
     slug: "edge-consentless-experiments-2026-q4",
     title: "Edge Consentless Experiments 2026 Q4: <100ms A/B Without PII",

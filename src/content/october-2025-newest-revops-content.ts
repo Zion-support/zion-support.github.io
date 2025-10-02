@@ -29,12 +29,12 @@ export const octoberNewestRevOpsContent = [
       pipelineVelocity: "3.2x",
       revenue: "$127M",
       efficiency: "85%"
-    },
+    }
     cta: {
       text: "Read the Complete RevOps Guide",
       link: "/blog/ai-2025-oct-01-autonomous-revenue-operations-revolution"
     }
-  },
+  }
   {
     id: "saas-revops-case-study-2025",
     title: "📊 Fortune 500 SaaS: $127M Revenue Gain with Autonomous RevOps",
@@ -62,7 +62,7 @@ export const octoberNewestRevOpsContent = [
       winRate: "+42%",
       velocity: "3.2x",
       roi: "704%"
-    },
+    }
     cta: {
       text: "Read the Full Case Study",
       link: "/case-studies/ai-2025-oct-01-global-saas-autonomous-revops-127-million-success"

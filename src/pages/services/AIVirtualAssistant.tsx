@@ -15,31 +15,31 @@ const AIVirtualAssistant: React.FC = () => {
       title: "Natural Language Processing",
       description: "Advanced NLP capabilities that understand context, sentiment, and intent with 95% accuracy.",
       benefit: "95% conversation accuracy rate"
-    },
+    }
     {
       icon: MessageCircle,
       title: "Multi-Channel Support",
       description: "Deploy across web, mobile, social media, and voice channels with unified conversation history.",
       benefit: "Unified customer experience"
-    },
+    }
     {
       icon: Languages,
       title: "120+ Language Support",
       description: "Real-time translation and multilingual support for global customer bases.",
       benefit: "Global reach capability"
-    },
+    }
     {
       icon: Shield,
       title: "Enterprise Security",
       description: "Bank-grade security with end-to-end encryption, GDPR compliance, and data privacy protection.",
       benefit: "100% compliance guaranteed"
-    },
+    }
     {
       icon: Clock,
       title: "24/7 Availability",
       description: "Never miss a customer inquiry with round-the-clock intelligent assistance.",
       benefit: "99.9% uptime SLA"
-    },
+    }
     {
       icon: Users,
       title: "Human Handoff",

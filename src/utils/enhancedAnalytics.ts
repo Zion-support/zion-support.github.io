@@ -82,7 +82,7 @@ this.initialize();
       pageViews: [],
       events: [],
       conversions: [],
-      performanceMetrics: {},
+      performanceMetrics: {}
     };
   }
 
@@ -96,16 +96,14 @@ this.initialize();
   /**
    * Track page view
    */
-  trackPageView(path?: string, title?: string): void {
-    if (typeof window === 'undefined') return;
+  trackPageView(path?: string, title?: string): void {if (typeof window === 'undefined') return;
 
     const pageView: PageView = {
       path: path || window.location.pathname,
       title: title || document.title,
       timestamp: Date.now(),
       referrer: document.referrer,
-      userAgent: navigator.userAgent,
-    };
+      userAgent: navigator.userAgent};
 
     this.session.pageViews.push(pageView);
     this.sendToAnalytics('pageview', pageView);
@@ -119,14 +117,12 @@ this.initialize();
     action: string,
     label?: string,
     value?: number
-  ): void {
-    const event: UserEvent = {
+  ): void {const event: UserEvent = {
       category,
       action,
       label,
       value,
-      timestamp: Date.now(),
-    };
+      timestamp: Date.now()};
 
     this.session.events.push(event);
     this.sendToAnalytics('event', event);
@@ -139,13 +135,11 @@ this.initialize();
     type: ConversionEvent['type'],
     value: number = 0,
     metadata?: Record<string, any>
-  ): void {
-    const conversion: ConversionEvent = {
+  ): void {const conversion: ConversionEvent = {
       type,
       value,
       metadata,
-      timestamp: Date.now(),
-    };
+      timestamp: Date.now()};
 
     this.session.conversions.push(conversion);
     this.sendToAnalytics('conversion', conversion);
@@ -197,8 +191,7 @@ this.initialize();
   /**
    * Track performance metrics
    */
-  trackPerformance(): void {
-    if (!this.performanceOptimizer) return;
+  trackPerformance(): void {if (!this.performanceOptimizer) return;
 
     const metrics = this.performanceOptimizer.getMetrics();
     const score = this.performanceOptimizer.getPerformanceScore();
@@ -206,8 +199,7 @@ this.initialize();
     this.session.performanceMetrics = {
       metrics,
       score,
-      timestamp: Date.now(),
-    };
+      timestamp: Date.now()};
 
     this.sendToAnalytics('performance', {
       metrics,
@@ -378,7 +370,7 @@ this.initialize();
     // Send analytics data every 30 seconds
     setInterval(() => {
       this.syncData();
-    }, 30 * 1000);
+    } 30 * 1000);
   }
 
   /**
@@ -413,15 +405,13 @@ this.initialize();
   /**
    * Send batch data
    */
-  private sendBatchData(): void {
-    const batchData = {
+  private sendBatchData(): void {const batchData = {
       sessionId: this.session.sessionId,
       duration: this.getSessionDuration(),
       pageViews: this.session.pageViews.length,
       events: this.session.events.length,
       conversions: this.session.conversions.length,
-      performanceScore: this.session.performanceMetrics?.score,
-    };
+      performanceScore: this.session.performanceMetrics?.score};
 
     this.sendToAnalytics('batch', batchData);
   }
@@ -434,26 +424,18 @@ summary: any;,
 engagement: any;,
 performance: any;,
 conversions: any;
-} {
-    return {
+} {return {
       summary: {
         sessionId: this.session.sessionId,
         duration: this.getSessionDuration(),
-        startTime: new Date(this.session.startTime).toISOString(),
-      },
-      engagement: {
-        pageViews: this.getPageViewsCount(),
+        startTime: new Date(this.session.startTime).toISOString()}
+      engagement: {pageViews: this.getPageViewsCount(),
         events: this.getEventsCount(),
-        averageTimePerPage: this.calculateAverageTimePerPage(),
-      },
-      performance: {
-        score: this.session.performanceMetrics?.score,
-        metrics: this.session.performanceMetrics?.metrics,
-      },
-      conversions: {
-        total: this.getConversionsCount(),
-        breakdown: this.getConversionsBreakdown(),
-      },
+        averageTimePerPage: this.calculateAverageTimePerPage()}
+      performance: {score: this.session.performanceMetrics?.score,
+        metrics: this.session.performanceMetrics?.metrics}
+      conversions: {total: this.getConversionsCount(),
+        breakdown: this.getConversionsBreakdown()}
     };
   }
 

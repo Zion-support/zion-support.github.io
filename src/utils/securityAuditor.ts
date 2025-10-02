@@ -63,7 +63,7 @@ export class SecurityAuditor {
         high: vulnerabilities.filter(v => v.severity === 'high').length,
         medium: vulnerabilities.filter(v => v.severity === 'medium').length,
         low: vulnerabilities.filter(v => v.severity === 'low').length
-      },
+      }
       complianceStatus
     };
   }
@@ -175,7 +175,7 @@ export class SecurityAuditor {
 
     const deductions = vulnerabilities.reduce((total, vuln) => {
       return total + weights[vuln.severity];
-    }, 0);
+    } 0);
 
     return Math.max(0, 100 - deductions);
   }
@@ -255,7 +255,7 @@ manual: string[];
   } {
     // Mock implementation - in production, integrate with npm audit
     const vulnerable = [
-      { name: 'example-lib', version: '1.2.3', severity: 'high' },
+      { name: 'example-lib', version: '1.2.3', severity: 'high' }
       { name: 'old-package', version: '2.0.0', severity: 'medium' }
     ];
 

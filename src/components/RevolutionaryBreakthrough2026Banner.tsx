@@ -13,7 +13,7 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {
       trending: true,
       icon: '🚀',
       metrics: { value: '10x', label: 'Performance Gains' }
-    },
+    }
     {
       id: 2,
       title: 'Fortune 500 AI Transformation: $300M ROI Success Story',
@@ -25,7 +25,7 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {
       trending: true,
       icon: '🏆',
       metrics: { value: '$300M', label: 'ROI Achieved' }
-    },
+    }
     {
       id: 3,
       title: 'Quantum AI Computing Breakthrough: 1000x Performance',
@@ -37,7 +37,7 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {
       trending: true,
       icon: '⚛️',
       metrics: { value: '1000x', label: 'Performance Boost' }
-    },
+    }
     {
       id: 4,
       title: 'Autonomous Enterprise Systems: 95% Automation',
@@ -84,9 +84,9 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {
           {/* Key Stats */}
           <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
             {[
-              { value: '10x', label: 'Performance Gains', icon: '⚡' },
-              { value: '$300M+', label: 'ROI Achieved', icon: '💰' },
-              { value: '95%', label: 'Automation Rate', icon: '🤖' },
+              { value: '10x', label: 'Performance Gains', icon: '⚡' }
+              { value: '$300M+', label: 'ROI Achieved', icon: '💰' }
+              { value: '95%', label: 'Automation Rate', icon: '🤖' }
               { value: '99.9%', label: 'Efficiency Gains', icon: '🎯' }
             ].map((stat, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-purple-500/50 transition-all duration-300">
@@ -219,9 +219,9 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {
         {/* Success Indicators */}
         <div className="grid md:grid-cols-4 gap-8 mt-20">
           {[
-            { value: '500+', label: 'Enterprise Clients Transformed' },
-            { value: '$2B+', label: 'Total ROI Generated' },
-            { value: '99.9%', label: 'Success Rate' },
+            { value: '500+', label: 'Enterprise Clients Transformed' }
+            { value: '$2B+', label: 'Total ROI Generated' }
+            { value: '99.9%', label: 'Success Rate' }
             { value: '24/7', label: 'Expert Support' }
           ].map((stat, index) => (
             <div key={index} className="text-center">

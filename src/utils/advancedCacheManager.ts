@@ -24,23 +24,19 @@ currentSize: number;
 hitRate: number;
 }
 
-class AdvancedCacheManager<T = any> {
-  private cache: Map<string, CacheEntry<T>> = new Map();
+class AdvancedCacheManager<T = any> {private cache: Map<string, CacheEntry<T>> = new Map();
   private config: CacheConfig;
   private stats: CacheStats = {
     hits: 0,
     misses: 0,
     evictions: 0,
     currentSize: 0,
-    hitRate: 0,
-  };
+    hitRate: 0};
 
-  constructor(config: Partial<CacheConfig> = {}) {
-    this.config = {
+  constructor(config: Partial<CacheConfig> = {}) {this.config = {
       maxAge: config.maxAge || 5 * 60 * 1000, // 5 minutes default
       maxSize: config.maxSize || 100,
-      strategy: config.strategy || 'LRU',
-    };
+      strategy: config.strategy || 'LRU'};
   }
 
   /**
@@ -283,11 +279,9 @@ break;
   /**
    * Update config
    */
-  updateConfig(newConfig: Partial<CacheConfig>): void {
-    this.config = {
+  updateConfig(newConfig: Partial<CacheConfig>): void {this.config = {
       ...this.config,
-      ...newConfig,
-    };
+      ...newConfig};
   }
 
   /**
@@ -356,7 +350,7 @@ if (typeof window !== 'undefined') {
     apiCache.cleanExpired();
     contentCache.cleanExpired();
     imageCache.cleanExpired();
-  }, 5 * 60 * 1000); // Clean every 5 minutes
+  } 5 * 60 * 1000); // Clean every 5 minutes
 }
 
 export { AdvancedCacheManager, apiCache, contentCache, imageCache };

@@ -7,9 +7,9 @@ import {
 
 const About: React.FC = () => {
   const stats = [
-    { number: '10+', label: 'Years Experience', icon: Award },
-    { number: '500+', label: 'Projects Completed', icon: CheckCircle },
-    { number: '50+', label: 'Happy Clients', icon: Users },
+    { number: '10+', label: 'Years Experience', icon: Award }
+    { number: '500+', label: 'Projects Completed', icon: CheckCircle }
+    { number: '50+', label: 'Happy Clients', icon: Users }
     { number: '99%', label: 'Client Satisfaction', icon: Star }
   ];
 

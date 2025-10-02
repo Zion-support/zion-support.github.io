@@ -24,19 +24,19 @@ const offerings = {
           priceHint: '$2,000–$8,000 setup + $99–$499/mo',
           features: ['PDF/Docs ingestion', 'Embeddings store', 'Enterprise auth', 'Analytics'],
           path: '/services/ai-virtual-assistant'
-        },
+        }
         {
           name: 'Predictive Analytics',
           priceHint: '$3,000–$12,000 project',
           features: ['Forecasting', 'Churn/CLV models', 'Dashboards'],
           path: '/services/ai-data-analytics'
-        },
+        }
         {
           name: 'Document AI (IDP)',
           priceHint: '$4,000–$15,000 project',
           features: ['OCR', 'Entity extraction', 'Human-in-the-loop'],
           path: '/services/ai-intelligent-document-processing'
-        },
+        }
         {
           name: 'AI Email Subject Optimizer',
           priceHint: '$49–$299/mo',
@@ -44,7 +44,7 @@ const offerings = {
           path: '/services/ai-email-marketing'
         }
       ]
-    },
+    }
     cloud: {
       title: 'Cloud Solutions',
       items: [
@@ -53,7 +53,7 @@ const offerings = {
           priceHint: '$1,500–$8,000 project',
           features: ['Rightsizing', 'FinOps KPIs', 'Savings plan strategy'],
           path: '/services/cloud'
-        },
+        }
         {
           name: 'Landing Zone + IaC',
           priceHint: '$5,000–$20,000 project',
@@ -61,7 +61,7 @@ const offerings = {
           path: '/services/cloud'
         }
       ]
-    },
+    }
     analytics: {
       title: 'Data & Analytics',
       items: [
@@ -72,7 +72,7 @@ const offerings = {
           path: '/services/analytics'
         }
       ]
-    },
+    }
     security: {
       title: 'Cybersecurity',
       items: [
@@ -81,7 +81,7 @@ const offerings = {
           priceHint: '$2,000–$10,000 project',
           features: ['CIS/NIST baseline', 'Cloud posture', 'Action plan'],
           path: '/services/security'
-        },
+        }
         {
           name: 'SOC-lite (24/5)',
           priceHint: '$999–$3,999/mo',
@@ -89,7 +89,7 @@ const offerings = {
           path: '/services/security'
         }
       ]
-    },
+    }
     automation: {
       title: 'Automation',
       items: [
@@ -98,7 +98,7 @@ const offerings = {
           priceHint: '$1,500–$8,000 project',
           features: ['Zapier/Make', 'API orchestration', 'Audit trails'],
           path: '/services/ai-workflow-automation'
-        },
+        }
         {
           name: 'Appointment Scheduler (Healthcare)',
           priceHint: '$99–$499/mo',

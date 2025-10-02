@@ -11,16 +11,14 @@ ttfb: number | null;
 timestamp: string;
 }
 
-class PerformanceMonitor {
-  private static instance: PerformanceMonitor;
+class PerformanceMonitor {private static instance: PerformanceMonitor;
   private metrics: PerformanceMetrics = {
     cls: null,
     inp: null,
     fcp: null,
     lcp: null,
     ttfb: null,
-    timestamp: new Date().toISOString(),
-  };
+    timestamp: new Date().toISOString()};
   private observers: PerformanceObserver[] = [];
 
   private constructor() {
@@ -113,15 +111,13 @@ class PerformanceMonitor {
     }
   }
 
-  private logNavigationMetrics(navEntry: PerformanceNavigationTiming): void {
-    const metrics = {
+  private logNavigationMetrics(navEntry: PerformanceNavigationTiming): void {const metrics = {
       dns: navEntry.domainLookupEnd - navEntry.domainLookupStart,
       tcp: navEntry.connectEnd - navEntry.connectStart,
       request: navEntry.responseStart - navEntry.requestStart,
       response: navEntry.responseEnd - navEntry.responseStart,
       dom: navEntry.domContentLoadedEventEnd - navEntry.responseEnd,
-      load: navEntry.loadEventEnd - navEntry.navigationStart,
-    };
+      load: navEntry.loadEventEnd - navEntry.navigationStart};
 
     if (process.env.NODE_ENV === 'development') {
       console.log('Navigation metrics:', metrics);

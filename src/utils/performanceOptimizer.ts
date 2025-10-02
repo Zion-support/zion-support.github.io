@@ -63,7 +63,7 @@ export const lazyLoadImages = (): void => {
         }
       }
     });
-  }, {
+  } {
     rootMargin: '50px 0px',
     threshold: 0.01
   });
@@ -113,16 +113,14 @@ export function throttle<T extends (...args: any[]) => any>(
 /**
  * Measure page load performance
  */
-export const measurePageLoad = (): WebVitalsMetrics | null => {
-  if (typeof window === 'undefined' || !window.performance) return null;
+export const measurePageLoad = (): WebVitalsMetrics | null => {if (typeof window === 'undefined' || !window.performance) return null;
 
   const perfData = window.performance.timing;
   const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
 
   return {
     FCP: navigation?.responseStart - navigation?.fetchStart,
-    TTFB: perfData.responseStart - perfData.navigationStart,
-  };
+    TTFB: perfData.responseStart - perfData.navigationStart};
 };
 
 /**
@@ -201,7 +199,7 @@ export const requestIdleCallback = (callback: IdleRequestCallback): number => {
       didTimeout: false,
       timeRemaining: () => Math.max(0, 50 - (Date.now() - start))
     });
-  }, 1) as unknown as number;
+  } 1) as unknown as number;
 };
 
 /**

@@ -132,12 +132,12 @@ describe('UnifiedPromotionalBanner', () => {
         category: 'Category 1',
         link: '/item-1',
         metrics: '99% success'
-      },
+      }
       {
         title: 'Item 2',
         category: 'Category 2',
         link: '/item-2'
-      },
+      }
       {
         title: 'Item 3',
         category: 'Category 3',

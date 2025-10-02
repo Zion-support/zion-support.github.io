@@ -17,7 +17,7 @@ const Revolutionary2026ContentMegaBanner: React.FC = () => {
       icon: "🧠",
       impact: "1000x Speed",
       featured: true
-    },
+    }
     {
       id: 2,
       title: "Autonomous Enterprise Operations 2026",
@@ -30,7 +30,7 @@ const Revolutionary2026ContentMegaBanner: React.FC = () => {
       icon: "🤖"
       impact: "98% Automation"
       featured: true
-    },
+    }
     {
 id: 3,
 title: "Quantum-Neural Network Architecture",
@@ -69,7 +69,7 @@ featured: false
       icon: "📡",
       impact: "10,000+ Nodes",
       featured: false
-    },
+    }
     {
 id: 6,
 title: "Synthetic Data Generation Revolution",

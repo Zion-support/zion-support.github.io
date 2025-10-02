@@ -12,7 +12,7 @@ export const octoberCuttingEdgeInnovations = [
       detection: '<100ms',
       market: '$850B',
       reduction: '90%'
-    },
+    }
     highlights: [
       'Post-quantum cryptography with CRYSTALS-Kyber and Dilithium',
       'Quantum key distribution (QKD) for unhackable communication',
@@ -20,7 +20,7 @@ export const octoberCuttingEdgeInnovations = [
       'Zero-trust architecture with microsegmentation',
       'Proven in Fortune 500 financial institutions'
     ]
-  },
+  }
   {
     id: 'neuromorphic-computing',
     slug: 'ai-2025-october-neuromorphic-enterprise-revolution',
@@ -34,7 +34,7 @@ export const octoberCuttingEdgeInnovations = [
       latency: '<1ms',
       market: '$19B',
       costReduction: '95%'
-    },
+    }
     highlights: [
       'Spiking neural networks (SNNs) with biological realism',
       'Intel Loihi 2 and BrainChip Akida deployment guides',
@@ -42,7 +42,7 @@ export const octoberCuttingEdgeInnovations = [
       'Real-time edge AI for autonomous systems',
       'Proven in BMW autonomous driving and NASA rovers'
     ]
-  },
+  }
   {
     id: 'multi-agent-governance',
     slug: 'ai-2025-october-autonomous-multi-agent-governance',
@@ -56,7 +56,7 @@ export const octoberCuttingEdgeInnovations = [
       compliance: '99.97%',
       market: '$140B',
       riskReduction: '78%'
-    },
+    }
     highlights: [
       'Policy-as-code with Open Policy Agent (OPA)',
       'Multi-layered safety guardrails and circuit breakers',

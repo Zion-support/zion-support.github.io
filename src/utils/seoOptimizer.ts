@@ -99,7 +99,7 @@ url: string;
     author: {
       '@type': 'Person',
       name: article.author
-    },
+    }
     datePublished: article.publishDate,
     dateModified: article.modifiedDate || article.publishDate,
     image: article.image,

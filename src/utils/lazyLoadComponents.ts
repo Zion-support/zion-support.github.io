@@ -21,7 +21,7 @@ return;
             setTimeout(() => {
               console.log(`Retrying component load... ${attemptsLeft} attempts left`);
               attemptLoad(attemptsLeft - 1);
-            }, interval);
+            } interval);
           });
       };
       

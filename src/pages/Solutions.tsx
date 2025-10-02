@@ -8,18 +8,18 @@ import {
 
 const Solutions: React.FC = () => {
 	const solutions = [
-		{ icon: Zap, title: 'Enterprise Solutions', description: 'Comprehensive AI and automation solutions for large organizations', features: ['Scalable Architecture', '24/7 Support', 'Custom Integration', 'Advanced Analytics'], path: '/solutions/enterprise', color: 'blue' },
-		{ icon: Shield, title: 'SMB Solutions', description: 'Affordable, powerful solutions designed for small and medium businesses', features: ['Quick Deployment', 'Cost-Effective', 'Easy Management', 'ROI Tracking'], path: '/solutions/smb', color: 'green' },
-		{ icon: Globe, title: 'Startup Solutions', description: 'Innovative solutions to help startups scale rapidly and efficiently', features: ['Rapid Prototyping', 'Flexible Pricing', 'Expert Mentorship', 'Growth Analytics'], path: '/solutions/startup', color: 'purple' },
-		{ icon: Cpu, title: 'Government Solutions', description: 'Secure, compliant solutions meeting government standards and requirements', features: ['Security Compliance', 'Data Sovereignty', 'Audit Trails', 'Regulatory Support'], path: '/solutions/government', color: 'red' },
-		{ icon: Database, title: 'Healthcare Solutions', description: 'HIPAA-compliant AI solutions for healthcare organizations', features: ['HIPAA Compliance', 'Patient Privacy', 'Clinical Integration', 'Real-time Analytics'], path: '/solutions/healthcare', color: 'teal' },
+		{ icon: Zap, title: 'Enterprise Solutions', description: 'Comprehensive AI and automation solutions for large organizations', features: ['Scalable Architecture', '24/7 Support', 'Custom Integration', 'Advanced Analytics'], path: '/solutions/enterprise', color: 'blue' }
+		{ icon: Shield, title: 'SMB Solutions', description: 'Affordable, powerful solutions designed for small and medium businesses', features: ['Quick Deployment', 'Cost-Effective', 'Easy Management', 'ROI Tracking'], path: '/solutions/smb', color: 'green' }
+		{ icon: Globe, title: 'Startup Solutions', description: 'Innovative solutions to help startups scale rapidly and efficiently', features: ['Rapid Prototyping', 'Flexible Pricing', 'Expert Mentorship', 'Growth Analytics'], path: '/solutions/startup', color: 'purple' }
+		{ icon: Cpu, title: 'Government Solutions', description: 'Secure, compliant solutions meeting government standards and requirements', features: ['Security Compliance', 'Data Sovereignty', 'Audit Trails', 'Regulatory Support'], path: '/solutions/government', color: 'red' }
+		{ icon: Database, title: 'Healthcare Solutions', description: 'HIPAA-compliant AI solutions for healthcare organizations', features: ['HIPAA Compliance', 'Patient Privacy', 'Clinical Integration', 'Real-time Analytics'], path: '/solutions/healthcare', color: 'teal' }
 		{ icon: Cloud, title: 'Financial Solutions', description: 'Secure, compliant solutions for financial institutions and fintech companies', features: ['PCI Compliance', 'Fraud Detection', 'Risk Management', 'Regulatory Reporting'], path: '/solutions/financial', color: 'indigo' }
 	];
 
 	const industrySolutions = [
-		{ title: 'Manufacturing Solutions', description: 'Smart manufacturing with AI-powered predictive maintenance and quality control', path: '/solutions/manufacturing' },
-		{ title: 'Retail Solutions', description: 'Personalized customer experiences and intelligent inventory management', path: '/solutions/retail' },
-		{ title: 'Education Solutions', description: 'AI-powered learning platforms and educational analytics', path: '/solutions/education' },
+		{ title: 'Manufacturing Solutions', description: 'Smart manufacturing with AI-powered predictive maintenance and quality control', path: '/solutions/manufacturing' }
+		{ title: 'Retail Solutions', description: 'Personalized customer experiences and intelligent inventory management', path: '/solutions/retail' }
+		{ title: 'Education Solutions', description: 'AI-powered learning platforms and educational analytics', path: '/solutions/education' }
 		{ title: 'Transportation Solutions', description: 'Autonomous systems and intelligent logistics optimization', path: '/solutions/transportation' }
 	];
 

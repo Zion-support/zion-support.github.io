@@ -32,7 +32,7 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       "url": "https://ziontechgroup.com/logo.png",
       "width": 200,
       "height": 60
-    },
+    }
     "image": "https://ziontechgroup.com/og-image.jpg",
     "contactPoint": {
       "@type": "ContactPoint",
@@ -41,7 +41,7 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       "availableLanguage": "English",
       "areaServed": "US",
       "email": "kleber@ziontechgroup.com"
-    },
+    }
     "sameAs": [
       "https://linkedin.com/company/zion-tech-group",
       "https://twitter.com/ziontechgroup",
@@ -56,11 +56,11 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       "addressRegion": "DE",
       "postalCode": "19709",
       "addressCountry": "US"
-    },
+    }
     "serviceArea": {
       "@type": "Country",
       "name": "United States"
-    },
+    }
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "AI and IT Solutions",
@@ -72,7 +72,7 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
             "name": "AI Workflow Automation",
             "description": "Automate complex business processes with AI-powered workflows"
           }
-        },
+        }
         {
           "@type": "Offer",
           "itemOffered": {
@@ -80,7 +80,7 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
             "name": "AI Virtual Assistant",
             "description": "Intelligent virtual assistants for customer service and support"
           }
-        },
+        }
         {
           "@type": "Offer",
           "itemOffered": {
@@ -88,7 +88,7 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
             "name": "AI Data Analytics",
             "description": "Advanced data analytics and insights powered by AI"
           }
-        },
+        }
         {
           "@type": "Offer",
           "itemOffered": {
@@ -98,7 +98,7 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
           }
         }
       ]
-    },
+    }
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.8",

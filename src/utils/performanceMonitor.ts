@@ -113,12 +113,10 @@ class PerformanceMonitor {
         }
         
         // Send to custom analytics endpoint
-        if (process.env.REACT_APP_ANALYTICS_ENDPOINT) {
-          await fetch(process.env.REACT_APP_ANALYTICS_ENDPOINT, {
+        if (process.env.REACT_APP_ANALYTICS_ENDPOINT) {await fetch(process.env.REACT_APP_ANALYTICS_ENDPOINT, {
             method: 'POST',
             headers: {
-              'Content-Type': 'application/json',
-            },
+              'Content-Type': 'application/json'}
             body: JSON.stringify({
               type: 'performance_metrics',
               data: {
@@ -144,15 +142,15 @@ class PerformanceMonitor {
    */
   private getMetricRating(key: keyof PerformanceMetrics, value: number): string {
 switch (key) {
-case 'cls':,
+case 'cls':
 return value <= 0.1 ? 'good' : value <= 0.25 ? 'needs-improvement' : 'poor';,
-case 'fid':,
+case 'fid':
 return value <= 100 ? 'good' : value <= 300 ? 'needs-improvement' : 'poor';,
-case 'lcp':,
+case 'lcp':
 return value <= 2500 ? 'good' : value <= 4000 ? 'needs-improvement' : 'poor';,
-case 'fcp':,
+case 'fcp':
 return value <= 1800 ? 'good' : value <= 3000 ? 'needs-improvement' : 'poor';,
-case 'ttfb':,
+case 'ttfb':
 return value <= 600 ? 'good' : value <= 1500 ? 'needs-improvement' : 'poor';,
 default:,
 return 'unknown';
@@ -212,7 +210,7 @@ if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {
   window.addEventListener('load', () => {
     setTimeout(() => {
       performanceMonitor.sendToAnalytics();
-    }, 3000);
+    } 3000);
   });
 }
 

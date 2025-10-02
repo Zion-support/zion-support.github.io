@@ -102,7 +102,7 @@ const SEOAccessibilityEnhancer: React.FC<SEOAccessibilityEnhancerProps> = ({
 
       // Preload critical resources
       const criticalResources = [
-        { href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
+        { href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }
         { href: '/css/critical.css', as: 'style' }
       ];
 
@@ -157,7 +157,7 @@ white-space: normal;
       // Cleanup
       document.head.removeChild(style);
     };
-  }, []);
+  } []);
 
   // Default structured data for organization
   const defaultStructuredData = {

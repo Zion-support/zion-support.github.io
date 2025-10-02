@@ -98,7 +98,7 @@ export function announceToScreenReader(
   // Remove after announcement
   setTimeout(() => {
     document.body.removeChild(announcement);
-  }, 1000);
+  } 1000);
 }
 
 /**
@@ -150,7 +150,7 @@ export function setupSkipLinks(): void {
         'blur',
         () => {
           target.removeAttribute('tabindex');
-        },
+        }
         { once: true }
       );
     }
@@ -165,15 +165,13 @@ export function validateColorContrast(
   foreground: string,
   background: string,
   largeText = false
-): { valid: boolean; ratio: number; required: number } {
-  const ratio = getContrastRatio(foreground, background);
+): { valid: boolean; ratio: number; required: number } {const ratio = getContrastRatio(foreground, background);
   const required = largeText ? 3 : 4.5;
 
   return {
     valid: ratio >= required,
     ratio,
-    required,
-  };
+    required};
 }
 
 /**
@@ -269,17 +267,14 @@ issues: string[];
     previousLevel = level;
   });
 
-  return {
-    valid: issues.length === 0,
-    issues,
-  };
+  return {valid: issues.length === 0,
+    issues};
 }
 
 /**
  * Keyboard navigation helper
  */
-export const KeyboardNavigation = {
-  KEYS: {
+export const KeyboardNavigation = {KEYS: {
     ENTER: 'Enter',
     SPACE: ' ',
     ESCAPE: 'Escape',
@@ -289,12 +284,11 @@ export const KeyboardNavigation = {
     ARROW_RIGHT: 'ArrowRight',
     HOME: 'Home',
     END: 'End',
-    TAB: 'Tab',
-  },
+    TAB: 'Tab'}
 
   isActionKey(event: KeyboardEvent): boolean {
     return event.key === this.KEYS.ENTER || event.key === this.KEYS.SPACE;
-  },
+  }
 
   isArrowKey(event: KeyboardEvent): boolean {
     return [
@@ -303,14 +297,14 @@ export const KeyboardNavigation = {
       this.KEYS.ARROW_LEFT,
       this.KEYS.ARROW_RIGHT,
     ].includes(event.key);
-  },
+  }
 
   handleActionKey(event: KeyboardEvent, callback: () => void) {
     if (this.isActionKey(event)) {
       event.preventDefault();
       callback();
     }
-  },
+  }
 };
 
 /**
@@ -354,7 +348,7 @@ export function initializeAccessibility(): void {
         headingValidation.issues.forEach((issue) => console.warn(issue));
         console.groupEnd();
       }
-    }, 1000);
+    } 1000);
   }
 
   // Apply reduced motion preference

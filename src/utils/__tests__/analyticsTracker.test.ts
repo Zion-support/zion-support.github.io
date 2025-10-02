@@ -13,13 +13,13 @@ const mockLocalStorage = (() => {
     getItem: (key: string) => store[key] || null,
     setItem: (key: string, value: string) => {
       store[key] = value;
-    },
+    }
     removeItem: (key: string) => {
       delete store[key];
-    },
+    }
     clear: () => {
       store = {};
-    },
+    }
   };
 })();
 
@@ -29,13 +29,13 @@ const mockSessionStorage = (() => {
     getItem: (key: string) => store[key] || null,
     setItem: (key: string, value: string) => {
       store[key] = value;
-    },
+    }
     removeItem: (key: string) => {
       delete store[key];
-    },
+    }
     clear: () => {
       store = {};
-    },
+    }
   };
 })();
 
@@ -56,7 +56,7 @@ describe('Analytics Tracking System', () => {
         action: 'click',
         label: 'button',
         value: 100,
-        metadata: { extra: 'data' },
+        metadata: { extra: 'data' }
       };
 
       expect(() => trackEvent(event)).not.toThrow();

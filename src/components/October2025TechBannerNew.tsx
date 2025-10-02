@@ -11,7 +11,7 @@ const October2025TechBannerNew = () => {
       icon: Brain,
       color: "from-purple-500 to-pink-500",
       highlight: "NEW"
-    },
+    }
     {
       title: "Generative AI Code Generation",
       description: "Transforming Software Development",
@@ -19,7 +19,7 @@ const October2025TechBannerNew = () => {
       icon: Code2,
       color: "from-blue-500 to-cyan-500",
       highlight: "HOT"
-    },
+    }
     {
       title: "Real-Time Personalization Engines",
       description: "Revolutionizing Customer Experience",

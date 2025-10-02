@@ -63,9 +63,9 @@ const NextGenIntelligentAutomationBreakthrough = () => {
             {/* Key Metrics */}
             <div className="grid md:grid-cols-4 gap-4 mb-12">
               {[
-                { value: "$3.2T", label: "Automation Market 2025" },
-                { value: "85%", label: "Cost Reduction" },
-                { value: "94%", label: "Accuracy Rate" },
+                { value: "$3.2T", label: "Automation Market 2025" }
+                { value: "85%", label: "Cost Reduction" }
+                { value: "94%", label: "Accuracy Rate" }
                 { value: "10x", label: "Productivity Gain" }
               ].map((metric, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/30 text-center">
@@ -134,22 +134,22 @@ const NextGenIntelligentAutomationBreakthrough = () => {
                       title: "Cognitive Process Automation",
                       description: "AI systems that understand, learn, and make decisions like humans. 99.8% accuracy in document processing across any format.",
                       icon: "🧠"
-                    },
+                    }
                     {
                       title: "Adaptive Workflow Orchestration",
                       description: "Self-optimizing workflows that evolve based on outcomes. 87% auto-resolution rate for exceptions.",
                       icon: "🔄"
-                    },
+                    }
                     {
                       title: "Predictive Automation",
                       description: "Anticipate and act before issues occur. 96% forecast accuracy with 84% of failures prevented proactively.",
                       icon: "🔮"
-                    },
+                    }
                     {
                       title: "Generative Automation",
                       description: "AI that creates content, code, and solutions autonomously. 70% reduction in development time.",
                       icon: "✨"
-                    },
+                    }
                     {
                       title: "Autonomous Decision-Making",
                       description: "AI systems that make complex decisions independently. 97.8% accuracy in real-time risk-based decisions.",
@@ -181,19 +181,19 @@ const NextGenIntelligentAutomationBreakthrough = () => {
                       savings: "$12.4M",
                       automation: "95%",
                       results: ["Loan Processing: 96% faster", "KYC/AML: 100% coverage", "Fraud Detection: 99.4% accuracy"]
-                    },
+                    }
                     {
                       industry: "Healthcare",
                       savings: "$8.7M",
                       automation: "92%",
                       results: ["Claims Processing: 92% auto-adjudication", "Medical Coding: 99.1% accuracy", "70% administrative burden reduction"]
-                    },
+                    }
                     {
                       industry: "Manufacturing",
                       savings: "$18.2M",
                       automation: "94%",
                       results: ["Quality Control: 99.7% defect detection", "Inventory: 98% forecast accuracy", "Downtime: 73% reduction"]
-                    },
+                    }
                     {
                       industry: "Retail & E-commerce",
                       savings: "$6.8M",

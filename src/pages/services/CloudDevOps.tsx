@@ -15,31 +15,31 @@ const CloudDevOps: React.FC = () => {
       title: "Multi-Cloud Strategy",
       description: "Seamlessly deploy across AWS, Azure, GCP with intelligent workload optimization and cost management.",
       benefit: "40% cost reduction average"
-    },
+    }
     {
       icon: GitBranch,
       title: "CI/CD Automation",
       description: "End-to-end automation from code commit to production deployment with advanced testing and rollback capabilities.",
       benefit: "90% faster deployments"
-    },
+    }
     {
       icon: Shield,
       title: "DevSecOps Integration",
       description: "Security-first approach with automated vulnerability scanning, compliance checks, and threat detection.",
       benefit: "99.9% security compliance"
-    },
+    }
     {
       icon: Monitor,
       title: "Infrastructure as Code",
       description: "Manage entire infrastructure through code with Terraform, Ansible, and custom automation tools.",
       benefit: "Zero-downtime deployments"
-    },
+    }
     {
       icon: BarChart3,
       title: "Advanced Monitoring",
       description: "Real-time monitoring, alerting, and performance optimization with AI-powered insights.",
       benefit: "99.99% uptime SLA"
-    },
+    }
     {
       icon: Zap,
       title: "Auto-Scaling",
@@ -65,7 +65,7 @@ const CloudDevOps: React.FC = () => {
         "Standard backup strategy"
       ],
       popular: false
-    },
+    }
     {
       name: "Growth",
       price: "$8,500",
@@ -84,7 +84,7 @@ const CloudDevOps: React.FC = () => {
         "Disaster recovery planning"
       ],
       popular: true
-    },
+    }
     {
       name: "Enterprise",
       price: "$25,000",
@@ -115,14 +115,14 @@ const CloudDevOps: React.FC = () => {
       content: "Zion's DevOps team transformed our deployment process from weekly releases to multiple daily deployments. Our development velocity increased by 300%.",
       rating: 5,
       company: "FinTech Startup"
-    },
+    }
     {
       name: "Maria Rodriguez",
       role: "VP Engineering, E-Commerce Platform",
       content: "The multi-cloud strategy reduced our infrastructure costs by 45% while improving performance. The monitoring and alerting prevented 3 major outages.",
       rating: 5,
       company: "E-Commerce Platform"
-    },
+    }
     {
       name: "Dr. James Chen",
       role: "Head of IT, Healthcare Network",
@@ -138,19 +138,19 @@ const CloudDevOps: React.FC = () => {
       icon: Cloud,
       description: "Seamless migration to cloud platforms with zero downtime and minimal disruption.",
       benefits: ["99.9% uptime during migration", "Automated data validation", "Rollback capabilities"]
-    },
+    }
     {
       title: "Container Orchestration",
       icon: Server,
       description: "Kubernetes and Docker expertise for scalable, resilient containerized applications.",
       benefits: ["Auto-scaling capabilities", "Service mesh integration", "Advanced networking"]
-    },
+    }
     {
       title: "Infrastructure Automation",
       icon: Zap,
       description: "Complete infrastructure automation using Terraform, Ansible, and custom tools.",
       benefits: ["Infrastructure as Code", "Automated provisioning", "Environment consistency"]
-    },
+    }
     {
       title: "Security & Compliance",
       icon: Shield,

@@ -76,7 +76,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     // In production, send to error reporting service:
     // fetch('/api/errors', {
     //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' },
+    //   headers: { 'Content-Type': 'application/json' }
     //   body: JSON.stringify(errorReport)
     // });
   };

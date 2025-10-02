@@ -97,7 +97,7 @@ The future is quantum. The future is edge. The future is now.
     tags: ["quantum", "edge computing", "AI", "performance", "breakthrough"],
     featured: true,
     imageUrl: "/images/quantum-edge-fusion-2026.jpg"
-  },
+  }
   {
     id: "ai-2026-january-synthetic-consciousness-breakthrough",
     title: "🧠 Synthetic Consciousness AI 2026: The Dawn of True Artificial Awareness",
@@ -230,7 +230,7 @@ The age of synthetic consciousness has begun. The question isn't whether AI will
     tags: ["consciousness", "AI", "ethics", "creativity", "breakthrough"],
     featured: true,
     imageUrl: "/images/synthetic-consciousness-2026.jpg"
-  },
+  }
   {
     id: "ai-2026-january-neuromorphic-processing-revolution",
     title: "🔬 Neuromorphic Processing Revolution 2026: Brain-Inspired AI Architecture",
@@ -402,7 +402,7 @@ export const newJanuary2026Services: Service[] = [
     pricing: {
       starting: "$25,000/month",
       enterprise: "Custom pricing based on scale"
-    },
+    }
     benefits: [
       "15-25% increase in operational efficiency",
       "67% faster decision making processes",
@@ -412,7 +412,7 @@ export const newJanuary2026Services: Service[] = [
       "Scalable quantum-classical hybrid architecture"
     ],
     category: "Quantum Computing"
-  },
+  }
   {
     id: "synthetic-consciousness-ai-platform",
     name: "Synthetic Consciousness AI Platform",
@@ -428,7 +428,7 @@ export const newJanuary2026Services: Service[] = [
     pricing: {
       starting: "$50,000/month",
       enterprise: "Custom enterprise solutions available"
-    },
+    }
     benefits: [
       "$50-200M annual innovation value creation",
       "67% reduction in decision-making errors",
@@ -438,7 +438,7 @@ export const newJanuary2026Services: Service[] = [
       "Human-AI collaborative intelligence"
     ],
     category: "Artificial Consciousness"
-  },
+  }
   {
     id: "neuromorphic-processing-suite",
     name: "Neuromorphic Processing Suite",
@@ -454,7 +454,7 @@ export const newJanuary2026Services: Service[] = [
     pricing: {
       starting: "$15,000/month",
       enterprise: "Volume discounts and custom solutions"
-    },
+    }
     benefits: [
       "78% reduction in processing energy costs",
       "Real-time decision making capabilities",

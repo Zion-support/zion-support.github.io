@@ -11,7 +11,7 @@ const October2025NewContentBanner2 = () => {
       slug: "ai-2025-oct-01-ai-powered-sustainable-data-centers",
       gradient: "from-green-500 to-emerald-600",
       badge: "Green AI"
-    },
+    }
     {
       title: "Next-Gen Financial Risk Prediction",
       description: "94% accuracy in real-time market volatility forecasting with AI-powered risk systems",
@@ -19,7 +19,7 @@ const October2025NewContentBanner2 = () => {
       slug: "ai-2025-oct-01-ai-financial-risk-prediction-systems",
       gradient: "from-blue-500 to-cyan-600",
       badge: "FinTech"
-    },
+    }
     {
       title: "Voice AI Revolution in Enterprise",
       description: "Transform communication with 98% accuracy voice AI across 95+ languages",
@@ -27,7 +27,7 @@ const October2025NewContentBanner2 = () => {
       slug: "ai-2025-oct-01-voice-ai-revolution-enterprise",
       gradient: "from-purple-500 to-pink-600",
       badge: "Voice AI"
-    },
+    }
     {
       title: "Intelligent Automation & RPA 2.0",
       description: "Next-generation RPA with self-learning bots delivering 10x ROI",

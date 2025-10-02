@@ -27,8 +27,7 @@ checks: SecurityCheck[];
 lastUpdated: number;
 }
 
-const SecurityAuditPanel: React.FC = () => {
-  const [report, setReport] = useState<SecurityReport | null>(null);
+const SecurityAuditPanel: React.FC = () => {const [report, setReport] = useState<SecurityReport | null>(null);
   const [isRunning, setIsRunning] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedSeverity, setSelectedSeverity] = useState<string>('all');
@@ -41,102 +40,79 @@ const SecurityAuditPanel: React.FC = () => {
       status: 'pass',
       severity: 'high',
       category: 'headers',
-      recommendation: 'Ensure all traffic is redirected to HTTPS',
-    },
-    {
-      id: 'hsts-header',
+      recommendation: 'Ensure all traffic is redirected to HTTPS'}
+    {id: 'hsts-header',
       name: 'HSTS Header',
       description: 'Check for HTTP Strict Transport Security header',
       status: 'pass',
       severity: 'high',
       category: 'headers',
-      recommendation: 'Implement HSTS header with appropriate max-age',
-    },
-    {
-      id: 'csp-header',
+      recommendation: 'Implement HSTS header with appropriate max-age'}
+    {id: 'csp-header',
       name: 'Content Security Policy',
       description: 'Verify Content Security Policy is implemented',
       status: 'warning',
       severity: 'medium',
       category: 'headers',
       recommendation: 'Implement comprehensive CSP to prevent XSS attacks',
-      details: 'Current CSP may be too permissive',
-    },
-    {
-      id: 'x-frame-options',
+      details: 'Current CSP may be too permissive'}
+    {id: 'x-frame-options',
       name: 'X-Frame-Options',
       description: 'Check for clickjacking protection',
       status: 'pass',
       severity: 'medium',
-      category: 'headers',
-    },
-    {
-      id: 'x-content-type',
+      category: 'headers'}
+    {id: 'x-content-type',
       name: 'X-Content-Type-Options',
       description: 'Verify MIME type sniffing protection',
       status: 'pass',
       severity: 'medium',
-      category: 'headers',
-    },
-    {
-      id: 'referrer-policy',
+      category: 'headers'}
+    {id: 'referrer-policy',
       name: 'Referrer Policy',
       description: 'Check referrer information leakage protection',
       status: 'pass',
       severity: 'low',
-      category: 'headers',
-    },
-    {
-      id: 'mixed-content',
+      category: 'headers'}
+    {id: 'mixed-content',
       name: 'Mixed Content Check',
       description: 'Scan for HTTP resources on HTTPS pages',
       status: 'pass',
       severity: 'high',
-      category: 'content',
-    },
-    {
-      id: 'sensitive-data',
+      category: 'content'}
+    {id: 'sensitive-data',
       name: 'Sensitive Data Exposure',
       description: 'Check for exposed sensitive information',
       status: 'pass',
       severity: 'critical',
-      category: 'data',
-    },
-    {
-      id: 'authentication',
+      category: 'data'}
+    {id: 'authentication',
       name: 'Authentication Security',
       description: 'Verify secure authentication practices',
       status: 'info',
       severity: 'medium',
       category: 'authentication',
-      recommendation: 'Implement multi-factor authentication',
-    },
-    {
-      id: 'session-security',
+      recommendation: 'Implement multi-factor authentication'}
+    {id: 'session-security',
       name: 'Session Security',
       description: 'Check session management security',
       status: 'warning',
       severity: 'medium',
       category: 'authentication',
-      recommendation: 'Implement secure session management',
-    },
-    {
-      id: 'input-validation',
+      recommendation: 'Implement secure session management'}
+    {id: 'input-validation',
       name: 'Input Validation',
       description: 'Check for proper input validation',
       status: 'pass',
       severity: 'high',
-      category: 'content',
-    },
-    {
-      id: 'error-handling',
+      category: 'content'}
+    {id: 'error-handling',
       name: 'Error Handling',
       description: 'Verify secure error handling',
       status: 'warning',
       severity: 'low',
       category: 'content',
-      recommendation: 'Ensure errors don\'t leak sensitive information',
-    },
+      recommendation: 'Ensure errors don\'t leak sensitive information'}
   ];
 
   const runSecurityAudit = async () => {
@@ -179,11 +155,11 @@ const SecurityAuditPanel: React.FC = () => {
 
   const getStatusIcon = (status: string) => {
 switch (status) {
-case 'pass':,
+case 'pass':
 return <CheckCircle className="w-5 h-5 text-green-600" />;
-case 'fail':,
+case 'fail':
 return <XCircle className="w-5 h-5 text-red-600" />;
-case 'warning':,
+case 'warning':
 return <AlertTriangle className="w-5 h-5 text-yellow-600" />;
 default:,
 return <Eye className="w-5 h-5 text-blue-600" />;
@@ -192,11 +168,11 @@ return <Eye className="w-5 h-5 text-blue-600" />;
 
   const getSeverityColor = (severity: string) => {
 switch (severity) {
-case 'critical':,
+case 'critical':
 return 'bg-red-100 text-red-800 border-red-200';
-case 'high':,
+case 'high':
 return 'bg-orange-100 text-orange-800 border-orange-200';
-case 'medium':,
+case 'medium':
 return 'bg-yellow-100 text-yellow-800 border-yellow-200';
 default:,
 return 'bg-blue-100 text-blue-800 border-blue-200';
@@ -205,9 +181,9 @@ return 'bg-blue-100 text-blue-800 border-blue-200';
 
   const getCategoryIcon = (category: string) => {
 switch (category) {
-case 'headers':,
+case 'headers':
 return <Globe className="w-4 h-4" />;
-case 'authentication':,
+case 'authentication':
 return <Lock className="w-4 h-4" />;
 default:,
 return <Shield className="w-4 h-4" />;
@@ -226,7 +202,7 @@ return <Shield className="w-4 h-4" />;
   useEffect(() => {
     // Run initial audit
     runSecurityAudit();
-  }, []);
+  } []);
 
   return (
     <div className="bg-white rounded-lg shadow-lg p-6 max-w-6xl mx-auto">

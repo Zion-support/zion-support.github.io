@@ -13,37 +13,37 @@ const October2025MegaLaunchBanner: React.FC = () => {
       description: "Self-healing infrastructure achieving 99.9% uptime",
       link: "/blog/ai-2025-oct-04-autonomous-devops-platforms",
       category: "DevOps & Infrastructure"
-    },
+    }
     {
       title: "🎯 Multimodal AI Integration",
       description: "Vision, language & decision making unified",
       link: "/blog/ai-2025-oct-04-multimodal-ai-integration",
       category: "AI Research"
-    },
+    }
     {
       title: "📊 Operational AI Scorecards v2",
       description: "Gate risk, ship faster with KPI-linked SLIs",
       link: "/blog/ai-2025-oct-04-operational-ai-scorecards-v2",
       category: "AI Reliability"
-    },
+    }
     {
       title: "🛡️ Enterprise AI Governance",
       description: "Risk management & compliance at scale",
       link: "/blog/ai-2025-oct-04-enterprise-ai-governance",
       category: "AI Governance"
-    },
+    }
     {
       title: "⚡ Edge Computing Optimization",
       description: "Deploy AI at network edge with sub-millisecond latency",
       link: "/blog/ai-2025-oct-04-edge-computing-optimization",
       category: "Edge Computing"
-    },
+    }
     {
       title: "💰 Enterprise RAG Quality Budgets",
       description: "Lift correctness, cut spend with quality tiers",
       link: "/blog/ai-2025-oct-04-enterprise-rag-quality-budgets",
       category: "RAG Engineering"
-    },
+    }
     {
       title: "🔧 AI Autonomous Operations",
       description: "Self-healing systems with automated incident response",

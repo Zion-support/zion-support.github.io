@@ -14,7 +14,7 @@ const SuccessStoriesShowcase: React.FC = () => {
         "2M users impacted"
       ],
       color: "from-blue-500 to-cyan-500"
-    },
+    }
     {
       company: "Global Manufacturing Inc",
       industry: "Manufacturing",
@@ -27,7 +27,7 @@ const SuccessStoriesShowcase: React.FC = () => {
         "99.9% uptime achieved"
       ],
       color: "from-green-500 to-emerald-500"
-    },
+    }
     {
       company: "FinanceFirst Bank",
       industry: "Financial Services",

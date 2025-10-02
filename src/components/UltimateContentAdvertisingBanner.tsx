@@ -7,19 +7,19 @@ const UltimateContentAdvertisingBanner: React.FC = () => {
       title: "Revolutionary AI Technologies",
       description: "Meta-cognitive AI, quantum-neural networks, and autonomous operations",
       highlight: "1000x Performance"
-    },
+    }
     {
       icon: "💰",
       title: "Proven Cost Savings",
       description: "Fortune 500 case studies showing $500M+ in annual savings",
       highlight: "$500M+ Savings"
-    },
+    }
     {
       icon: "🛡️",
       title: "Military-Grade Security",
       description: "Zero-trust architecture with 99.99% threat detection",
       highlight: "99.99% Security"
-    },
+    }
     {
       icon: "🤖",
       title: "Autonomous Operations",
@@ -29,9 +29,9 @@ const UltimateContentAdvertisingBanner: React.FC = () => {
   ];
 
   const successStats = [
-    { value: "500+", label: "Enterprise Clients", icon: Users },
-    { value: "$500M+", label: "Cost Savings", icon: DollarSign },
-    { value: "98%", label: "Automation Rate", icon: Target },
+    { value: "500+", label: "Enterprise Clients", icon: Users }
+    { value: "$500M+", label: "Cost Savings", icon: DollarSign }
+    { value: "98%", label: "Automation Rate", icon: Target }
     { value: "99.99%", label: "Security Accuracy", icon: Shield }
   ];
 

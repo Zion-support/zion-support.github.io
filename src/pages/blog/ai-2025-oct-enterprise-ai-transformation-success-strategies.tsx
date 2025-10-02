@@ -63,9 +63,9 @@ const EnterpriseAITransformationSuccessStrategies = () => {
             {/* Key Metrics */}
             <div className="grid md:grid-cols-4 gap-4 mb-12">
               {[
-                { value: "$2.9T", label: "AI Business Value 2025" },
-                { value: "10x", label: "Average ROI" },
-                { value: "40%", label: "Cost Reduction" },
+                { value: "$2.9T", label: "AI Business Value 2025" }
+                { value: "10x", label: "Average ROI" }
+                { value: "40%", label: "Cost Reduction" }
                 { value: "73%", label: "Initiatives That Fail" }
               ].map((metric, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/30 text-center">
@@ -106,32 +106,32 @@ const EnterpriseAITransformationSuccessStrategies = () => {
                       pillar: "1. Strategic Vision & Executive Alignment",
                       description: "Start with clear vision and top-down commitment. Define compelling AI vision, secure executive sponsorship, and build comprehensive business case.",
                       icon: "🎯"
-                    },
+                    }
                     {
                       pillar: "2. Data Excellence Foundation",
                       description: "Treat data as strategic asset. Establish data governance, break down silos, ensure privacy & security, and build data engineering capability.",
                       icon: "📊"
-                    },
+                    }
                     {
                       pillar: "3. AI-Ready Infrastructure",
                       description: "Invest in scalable, flexible infrastructure. Cloud-first architecture, MLOps platform, compute optimization, and security & compliance.",
                       icon: "🏗️"
-                    },
+                    }
                     {
                       pillar: "4. Talent & Organizational Design",
                       description: "Build diverse, collaborative teams. Create AI Center of Excellence, implement hybrid operating model, upskill workforce, and retain talent.",
                       icon: "👥"
-                    },
+                    }
                     {
                       pillar: "5. Agile AI Development",
                       description: "Use iterative, business-driven approach. Start with quick wins, implement agile methodology, embrace experimentation, and measure everything.",
                       icon: "⚡"
-                    },
+                    }
                     {
                       pillar: "6. Responsible AI & Governance",
                       description: "Embed ethics and governance from day one. Establish ethics framework, implement governance, ensure compliance, and build trust through transparency.",
                       icon: "⚖️"
-                    },
+                    }
                     {
                       pillar: "7. Continuous Innovation",
                       description: "Continuously evolve AI capabilities. Stay current with advances, pilot emerging technologies, foster innovation culture, and build AI ecosystem.",
@@ -167,7 +167,7 @@ const EnterpriseAITransformationSuccessStrategies = () => {
                         "Data platform operational",
                         "First models in production"
                       ]
-                    },
+                    }
                     {
                       phase: "Phase 2: Scaling",
                       duration: "Months 7-18",
@@ -179,7 +179,7 @@ const EnterpriseAITransformationSuccessStrategies = () => {
                         "MLOps fully operational",
                         "Governance framework implemented"
                       ]
-                    },
+                    }
                     {
                       phase: "Phase 3: Transformation",
                       duration: "Months 19-36",
@@ -239,7 +239,7 @@ const EnterpriseAITransformationSuccessStrategies = () => {
                         "28% increase in customer lifetime value",
                         "18% revenue growth attributed to AI"
                       ]
-                    },
+                    }
                     {
                       company: "Healthcare Provider",
                       industry: "Multi-hospital system",
@@ -251,7 +251,7 @@ const EnterpriseAITransformationSuccessStrategies = () => {
                         "19% improvement in patient outcomes",
                         "$127M in operational efficiencies"
                       ]
-                    },
+                    }
                     {
                       company: "Manufacturing Enterprise",
                       industry: "Global manufacturer",

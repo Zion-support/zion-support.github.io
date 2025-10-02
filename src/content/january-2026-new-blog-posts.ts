@@ -147,7 +147,7 @@ The age of hyperautomation has begun. The question isn't whether to automate - i
     tags: ["hyperautomation", "AI", "business process", "efficiency", "transformation"],
     featured: true,
     imageUrl: "/images/hyperautomation-platform-2026.jpg"
-  },
+  }
   {
     id: "ai-2026-january-quantum-security-breakthrough",
     title: "🔐 Quantum-Safe Security 2026: Unbreakable Enterprise Protection",
@@ -298,7 +298,7 @@ The quantum era is coming. The question isn't whether your security will be comp
     tags: ["quantum security", "encryption", "cybersecurity", "protection", "compliance"],
     featured: true,
     imageUrl: "/images/quantum-security-2026.jpg"
-  },
+  }
   {
     id: "ai-2026-january-blockchain-integration",
     title: "⛓️ Blockchain-AI Integration 2026: Trustless Intelligence Revolution",

@@ -15,31 +15,31 @@ const ConversationalAI: React.FC = () => {
       title: "Advanced NLP & NLU",
       description: "State-of-the-art natural language processing that understands context, intent, and sentiment with 96% accuracy.",
       benefit: "96% conversation understanding"
-    },
+    }
     {
       icon: MessageCircle,
       title: "Multi-Modal Conversations",
       description: "Support for text, voice, and video conversations with seamless transitions between modalities.",
       benefit: "Unified conversation experience"
-    },
+    }
     {
       icon: Languages,
       title: "150+ Language Support",
       description: "Real-time translation and multilingual support with cultural context awareness.",
       benefit: "Global reach capability"
-    },
+    }
     {
       icon: Zap,
       title: "Real-Time Processing",
       description: "Sub-second response times with intelligent context retention across conversation threads.",
       benefit: "Instant response delivery"
-    },
+    }
     {
       icon: Shield,
       title: "Enterprise Security",
       description: "End-to-end encryption, GDPR compliance, and advanced privacy protection for sensitive conversations.",
       benefit: "100% privacy compliance"
-    },
+    }
     {
       icon: Users,
       title: "Human-AI Collaboration",
@@ -65,7 +65,7 @@ const ConversationalAI: React.FC = () => {
         "Basic customization"
       ],
       popular: false
-    },
+    }
     {
       name: "Professional",
       price: "$1,299",
@@ -85,7 +85,7 @@ const ConversationalAI: React.FC = () => {
         "Sentiment analysis"
       ],
       popular: true
-    },
+    }
     {
       name: "Enterprise",
       price: "$4,999",
@@ -117,14 +117,14 @@ const ConversationalAI: React.FC = () => {
       content: "Conversational AI reduced our customer service response time from 4 hours to 30 seconds. Customer satisfaction increased by 45% while reducing support costs by 60%.",
       rating: 5,
       company: "E-Commerce Giant"
-    },
+    }
     {
       name: "Dr. Robert Chen",
       role: "Head of Digital Health, Medical Systems",
       content: "The multi-modal conversation capabilities enabled us to provide personalized patient support 24/7. Patient engagement improved by 70% with better health outcomes.",
       rating: 5,
       company: "Medical Systems"
-    },
+    }
     {
       name: "Maria Rodriguez",
       role: "CTO, Global Financial Services",
@@ -140,19 +140,19 @@ const ConversationalAI: React.FC = () => {
       icon: Users,
       description: "24/7 intelligent customer service with instant responses and seamless human handoff.",
       benefits: ["60% cost reduction", "45% faster resolution", "95% customer satisfaction"]
-    },
+    }
     {
       title: "Sales & Lead Generation",
       icon: Zap,
       description: "Intelligent sales conversations that qualify leads and nurture prospects automatically.",
       benefits: ["35% increase in conversions", "50% more qualified leads", "40% sales team efficiency"]
-    },
+    }
     {
       title: "Healthcare Support",
       icon: MessageCircle,
       description: "Patient engagement, appointment scheduling, and health information delivery.",
       benefits: ["70% patient engagement", "30% appointment compliance", "25% readmission reduction"]
-    },
+    }
     {
       title: "Education & Training",
       icon: Brain,
@@ -166,27 +166,27 @@ const ConversationalAI: React.FC = () => {
       name: "CRM Systems",
       icon: Database,
       description: "Seamless integration with Salesforce, HubSpot, and custom CRM platforms."
-    },
+    }
     {
       name: "Communication Platforms",
       icon: Globe,
       description: "Native support for Slack, Teams, WhatsApp, and enterprise messaging systems."
-    },
+    }
     {
       name: "Voice & Video",
       icon: Mic,
       description: "Integration with Twilio, Zoom, WebRTC, and custom voice/video solutions."
-    },
+    }
     {
       name: "Analytics Platforms",
       icon: Zap,
       description: "Connect with Google Analytics, Mixpanel, and custom business intelligence tools."
-    },
+    }
     {
       name: "AI/ML Services",
       icon: Brain,
       description: "Integration with OpenAI, Azure AI, AWS AI services, and custom ML models."
-    },
+    }
     {
       name: "Enterprise Systems",
       icon: Shield,

@@ -37,7 +37,7 @@ export const sept30BreakthroughArticles: BreakthroughArticle[] = [
       roi: "400% increase in revenue",
       timeframe: "Deploy in 4 weeks"
     }
-  },
+  }
   {
     id: "neural-code-synthesis-2025",
     slug: "neural-code-synthesis-2025",
@@ -56,7 +56,7 @@ export const sept30BreakthroughArticles: BreakthroughArticle[] = [
       roi: "500% productivity increase",
       timeframe: "Immediate adoption"
     }
-  },
+  }
   {
     id: "multimodal-ai-fusion-2025",
     slug: "multimodal-ai-fusion-2025",
@@ -75,7 +75,7 @@ export const sept30BreakthroughArticles: BreakthroughArticle[] = [
       roi: "250% better customer insights",
       timeframe: "6 weeks to production"
     }
-  },
+  }
   {
     id: "ai-powered-supply-chain-2025",
     slug: "ai-powered-supply-chain-2025",
@@ -94,7 +94,7 @@ export const sept30BreakthroughArticles: BreakthroughArticle[] = [
       roi: "300% cost savings",
       timeframe: "8 weeks implementation"
     }
-  },
+  }
   {
     id: "cognitive-ai-assistants-2025",
     slug: "cognitive-ai-assistants-2025",
@@ -113,7 +113,7 @@ export const sept30BreakthroughArticles: BreakthroughArticle[] = [
       roi: "75% cost reduction",
       timeframe: "4 weeks to deploy"
     }
-  },
+  }
   {
     id: "ai-cybersecurity-mesh-2025",
     slug: "ai-cybersecurity-mesh-2025",
@@ -132,7 +132,7 @@ export const sept30BreakthroughArticles: BreakthroughArticle[] = [
       roi: "80% reduction in breaches",
       timeframe: "10 weeks deployment"
     }
-  },
+  }
   {
     id: "federated-learning-enterprise-2025",
     slug: "federated-learning-enterprise-2025",
@@ -151,7 +151,7 @@ export const sept30BreakthroughArticles: BreakthroughArticle[] = [
       roi: "Zero data breach risk",
       timeframe: "6 weeks implementation"
     }
-  },
+  }
   {
     id: "ai-financial-modeling-2025",
     slug: "ai-financial-modeling-2025",

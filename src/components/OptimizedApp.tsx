@@ -62,10 +62,10 @@ const MainContent: React.FC = () => {
     // Simulate loading time for demonstration
     const timer = setTimeout(() => {
       setIsLoaded(true);
-    }, 1000);
+    } 1000);
 
     return () => clearTimeout(timer);
-  }, []);
+  } []);
 
   if (!isLoaded) {
     return <LoadingSpinner />;

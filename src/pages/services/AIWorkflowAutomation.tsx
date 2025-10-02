@@ -15,31 +15,31 @@ const AIWorkflowAutomation: React.FC = () => {
       title: "Intelligent Process Discovery",
       description: "AI automatically maps your existing workflows and identifies optimization opportunities.",
       benefit: "Reduce manual mapping time by 90%"
-    },
+    }
     {
       icon: Zap,
       title: "Smart Automation Rules",
       description: "Machine learning algorithms create and optimize automation rules based on your data patterns.",
       benefit: "Increase automation accuracy by 95%"
-    },
+    }
     {
       icon: BarChart3,
       title: "Real-time Analytics",
       description: "Monitor workflow performance with advanced analytics and predictive insights.",
       benefit: "Improve decision-making speed by 80%"
-    },
+    }
     {
       icon: Shield,
       title: "Enterprise Security",
       description: "Bank-grade security with end-to-end encryption and compliance certifications.",
       benefit: "100% compliance with industry standards"
-    },
+    }
     {
       icon: Clock,
       title: "24/7 Operations",
       description: "Automated workflows run continuously without human intervention.",
       benefit: "Reduce operational costs by 75%"
-    },
+    }
     {
       icon: Users,
       title: "Collaborative Workflows",
@@ -63,7 +63,7 @@ const AIWorkflowAutomation: React.FC = () => {
         "Monthly reporting"
       ],
       popular: false
-    },
+    }
     {
       name: "Professional",
       price: "$7,500",
@@ -80,7 +80,7 @@ const AIWorkflowAutomation: React.FC = () => {
         "API access"
       ],
       popular: true
-    },
+    }
     {
       name: "Enterprise",
       price: "$25,000",
@@ -108,14 +108,14 @@ const AIWorkflowAutomation: React.FC = () => {
       content: "Zion's AI Workflow Automation reduced our processing time by 85% and eliminated manual errors completely. ROI achieved in just 3 months.",
       rating: 5,
       company: "TechFlow Solutions"
-    },
+    }
     {
       name: "Michael Rodriguez",
       role: "Operations Director, Global Manufacturing Co.",
       content: "The intelligent process discovery feature identified $2M in savings opportunities we never knew existed. Game-changing technology.",
       rating: 5,
       company: "Global Manufacturing Co."
-    },
+    }
     {
       name: "Dr. Lisa Wang",
       role: "VP Operations, HealthTech Innovations",
@@ -136,7 +136,7 @@ const AIWorkflowAutomation: React.FC = () => {
         "$15M annual cost savings",
         "ROI achieved in 4 months"
       ]
-    },
+    }
     {
       title: "Global Financial Services",
       challenge: "Complex compliance workflows requiring manual oversight",
@@ -147,7 +147,7 @@ const AIWorkflowAutomation: React.FC = () => {
         "$8M operational savings",
         "50% reduction in compliance team workload"
       ]
-    },
+    }
     {
       title: "Healthcare System",
       challenge: "Patient data processing bottlenecks",

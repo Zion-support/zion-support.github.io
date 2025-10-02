@@ -13,7 +13,7 @@ const LatestContentBanner2025: React.FC = () => {
       emoji: "🚀",
       highlight: "BREAKTHROUGH",
       impact: "$50M+ Savings"
-    },
+    }
     {
       title: "Zero‑PII Telemetry v2",
       description: "Decision‑grade signals without centralized IDs — privacy‑first analytics",
@@ -22,7 +22,7 @@ const LatestContentBanner2025: React.FC = () => {
       emoji: "🛡️",
       highlight: "NEW",
       impact: "Zero PII"
-    },
+    }
     {
       title: "Live Evals & Scorecards",
       description: "Ship GenAI fast without regressions — KPI‑wired canaries",
@@ -31,7 +31,7 @@ const LatestContentBanner2025: React.FC = () => {
       emoji: "📈",
       highlight: "NEW",
       impact: "No regressions"
-    },
+    }
     {
       title: "AI 2026: Future Predictions & Mega Trends",
       description: "Comprehensive analysis of revolutionary AI trends and transformative predictions through 2030",
@@ -40,7 +40,7 @@ const LatestContentBanner2025: React.FC = () => {
       emoji: "🔮",
       highlight: "TRENDS",
       impact: "2030 Vision"
-    },
+    }
     {
       title: "Enterprise AI Transformation 2026: Complete Guide",
       description: "12-phase framework proven to deliver $50M+ annual savings and 300% ROI for Fortune 500 companies",
@@ -49,7 +49,7 @@ const LatestContentBanner2025: React.FC = () => {
       emoji: "📚",
       highlight: "COMPLETE",
       impact: "300% ROI"
-    },
+    }
     {
       title: "Next-Generation Enterprise Automation: The 2026 AI Revolution",
       description: "98% Automation Rate, 1000x Processing Speed, $2.5B Cost Savings",
@@ -58,7 +58,7 @@ const LatestContentBanner2025: React.FC = () => {
       emoji: "🚀",
       highlight: "BREAKTHROUGH",
       impact: "98% Automation"
-    },
+    }
     {
       title: "Quantum AI Breakthrough: Revolutionary Computing Paradigm",
       description: "10^18 Operations/sec, 99.9% Accuracy, $10B Market Value",
@@ -67,7 +67,7 @@ const LatestContentBanner2025: React.FC = () => {
       emoji: "⚛️",
       highlight: "REVOLUTIONARY",
       impact: "10^18 Ops/sec"
-    },
+    }
     {
       title: "Fortune 500 Quantum AI Transformation: $10B Revenue Impact",
       description: "500% Productivity Increase, 95% Process Automation, Market Leadership",
@@ -76,7 +76,7 @@ const LatestContentBanner2025: React.FC = () => {
       emoji: "🏆",
       highlight: "MEGA SUCCESS",
       impact: "$10B Revenue"
-    },
+    }
     {
       title: "AI 2025: Autonomous Operations Revolution",
       description: "98% Automation, $10M+ Annual Savings",
@@ -85,7 +85,7 @@ const LatestContentBanner2025: React.FC = () => {
       emoji: "🚀",
       highlight: "BREAKTHROUGH",
       impact: "98% Automation"
-    },
+    }
     {
       title: "Fortune 500 AI Transformation",
       description: "$50M Annual Savings, 300% ROI",
@@ -94,7 +94,7 @@ const LatestContentBanner2025: React.FC = () => {
       emoji: "💰",
       highlight: "NEW TODAY",
       impact: "$50M Savings"
-    },
+    }
     {
       title: "AI Autonomous Operations Service",
       description: "Enterprise AI Solutions, 95% Automation",
@@ -103,7 +103,7 @@ const LatestContentBanner2025: React.FC = () => {
       emoji: "⚡",
       highlight: "NEW TODAY",
       impact: "95% Automation"
-    },
+    }
     {
       title: "Autonomous AI Agents in Enterprise",
       description: "70% Cost Reduction, 10x Productivity",

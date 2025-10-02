@@ -12,7 +12,7 @@ const October2025CuttingEdgeContentBanner = () => {
       gradient: "from-cyan-500 to-blue-600",
       icon: <Zap className="w-6 h-6" />,
       metrics: ["99.99% Uptime", "85% Cost Cut", "95% Faster Recovery"]
-    },
+    }
     {
       title: "Advanced Prompt Engineering Mastery — 10x LLM Performance",
       subtitle: "95%+ Accuracy, 80% Cost Reduction, Production-Grade Techniques",
@@ -21,7 +21,7 @@ const October2025CuttingEdgeContentBanner = () => {
       gradient: "from-purple-500 to-pink-600",
       icon: <Sparkles className="w-6 h-6" />,
       metrics: ["10x Performance", "95%+ Accuracy", "$990K Savings"]
-    },
+    }
     {
       title: "Real-Time AI Personalization at Scale — 100M+ Users",
       subtitle: "340% Revenue Lift, Sub-50ms Latency, 10M Decisions/Second",

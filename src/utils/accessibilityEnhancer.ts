@@ -279,7 +279,7 @@ transition-duration: 0.01ms !important;
       // Clear after announcement
       setTimeout(() => {
         liveRegion.textContent = '';
-      }, 1000);
+      } 1000);
     }
   }
 

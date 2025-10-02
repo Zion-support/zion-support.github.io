@@ -6,17 +6,17 @@ const AutonomousEnterpriseMesh2026: React.FC = () => {
       icon: Network,
       title: "Self-Organizing Networks",
       description: "AI systems that autonomously form optimal network topologies for maximum efficiency"
-    },
+    }
     {
       icon: Brain,
       title: "Collective Intelligence",
       description: "Distributed AI agents that share knowledge and learn from each other in real-time"
-    },
+    }
     {
       icon: Zap,
       title: "Dynamic Optimization",
       description: "Continuous self-optimization of business processes with zero human intervention"
-    },
+    }
     {
       icon: Shield,
       title: "Autonomous Security",
@@ -25,9 +25,9 @@ const AutonomousEnterpriseMesh2026: React.FC = () => {
   ];
 
   const stats = [
-    { value: "99.7%", label: "Operational Efficiency", color: "text-green-400" },
-    { value: "Zero", label: "Human Intervention", color: "text-blue-400" },
-    { value: "89%", label: "Cost Reduction", color: "text-purple-400" },
+    { value: "99.7%", label: "Operational Efficiency", color: "text-green-400" }
+    { value: "Zero", label: "Human Intervention", color: "text-blue-400" }
+    { value: "89%", label: "Cost Reduction", color: "text-purple-400" }
     { value: "1000x", label: "Scalability", color: "text-orange-400" }
   ];
 

@@ -26,7 +26,7 @@ const BannerManager: React.FC = () => {
       ctaText: 'Learn More',
       ctaLink: '/services',
       icon: '🤖'
-    },
+    }
     {
       id: 'cloud-migration',
       title: '☁️ Cloud Migration Services',
@@ -35,7 +35,7 @@ const BannerManager: React.FC = () => {
       ctaText: 'Get Started',
       ctaLink: '/contact',
       icon: '☁️'
-    },
+    }
     {
       id: 'digital-transformation',
       title: '🚀 Digital Transformation',
@@ -50,10 +50,10 @@ const BannerManager: React.FC = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentBannerIndex((prev) => (prev + 1) % banners.length);
-    }, 8000); // Change banner every 8 seconds
+    } 8000); // Change banner every 8 seconds
 
     return () => clearInterval(interval);
-  }, [banners.length]);
+  } [banners.length]);
 
   const getBannerStyles = (type: Banner['type']) => {
     switch (type) {

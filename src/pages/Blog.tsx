@@ -21,8 +21,7 @@ featured: boolean;
 views: number;
 }
 
-export default function Blog(): React.JSX.Element {
-  const [selectedCategory, setSelectedCategory] = useState("All");
+export default function Blog(): React.JSX.Element {const [selectedCategory, setSelectedCategory] = useState("All");
   const [searchTerm, setSearchTerm] = useState("");
 
   const categories = [
@@ -52,10 +51,8 @@ export default function Blog(): React.JSX.Element {
       tags: ["AI", "Automation", "Case Study", "Financial Services"],
       image: "/api/placeholder/400/250",
       featured: true,
-      views: 1250,
-    },
-    {
-      id: 7,
+      views: 1250}
+    {id: 7,
       title: "Serverless AI Inference: The Cost Optimization Playbook",
       excerpt: "Cut inference spend 40–70% with adaptive batching, warm pools, and tiered quality without hurting P95.",
       content: "Full article content here...",
@@ -66,10 +63,8 @@ export default function Blog(): React.JSX.Element {
       tags: ["Serverless", "Inference", "Cost"],
       image: "/api/placeholder/400/250",
       featured: true,
-      views: 421,
-    },
-    {
-      id: 8,
+      views: 421}
+    {id: 8,
       title: "RAG Architectures That Actually Work in Production",
       excerpt: "Proven patterns for chunking, freshness, hybrid search, and evals that keep quality high.",
       content: "Full article content here...",
@@ -80,10 +75,8 @@ export default function Blog(): React.JSX.Element {
       tags: ["RAG", "Vector Search", "Evals"],
       image: "/api/placeholder/400/250",
       featured: true,
-      views: 368,
-    },
-    {
-      id: 9,
+      views: 368}
+    {id: 9,
       title: "Secure GenAI: Policy‑First Guardrails That Scale",
       excerpt: "Prompt isolation, PII redaction, and network egress controls—ship safely without slowing teams.",
       content: "Full article content here...",
@@ -94,10 +87,8 @@ export default function Blog(): React.JSX.Element {
       tags: ["GenAI", "Security", "Compliance"],
       image: "/api/placeholder/400/250",
       featured: false,
-      views: 297,
-    },
-    {
-      id: 2,
+      views: 297}
+    {id: 2,
       title: "The Future of AI-Powered Customer Support: A Complete Guide",
       excerpt: "Explore the latest trends in AI customer support and learn how virtual assistants are revolutionizing customer service across industries.",
       content: "Full article content here...",
@@ -108,10 +99,8 @@ export default function Blog(): React.JSX.Element {
       tags: ["AI", "Customer Support", "Virtual Assistant", "Trends"],
       image: "/api/placeholder/400/250",
       featured: true,
-      views: 980,
-    },
-    {
-      id: 3,
+      views: 980}
+    {id: 3,
       title: "Building Scalable Cloud Infrastructure: Best Practices 2025",
       excerpt: "Learn the essential strategies for building robust, scalable cloud infrastructure that can handle modern business demands.",
       content: "Full article content here...",
@@ -122,10 +111,8 @@ export default function Blog(): React.JSX.Element {
       tags: ["Cloud", "Infrastructure", "Scalability", "DevOps"],
       image: "/api/placeholder/400/250",
       featured: false,
-      views: 756,
-    },
-    {
-      id: 4,
+      views: 756}
+    {id: 4,
       title: "AI Data Analytics: Transforming Raw Data into Business Gold",
       excerpt: "See how machine learning and predictive analytics are helping businesses make data-driven decisions that drive real results.",
       content: "Full article content here...",
@@ -136,10 +123,8 @@ export default function Blog(): React.JSX.Element {
       tags: ["AI", "Data Analytics", "Machine Learning", "Business Intelligence"],
       image: "/api/placeholder/400/250",
       featured: false,
-      views: 892,
-    },
-    {
-      id: 5,
+      views: 892}
+    {id: 5,
       title: "Cybersecurity in the Age of AI: Protecting Your Digital Assets",
       excerpt: "Understand the evolving threat landscape and learn how AI-powered security solutions can protect your business from modern cyber threats.",
       content: "Full article content here...",
@@ -150,10 +135,8 @@ export default function Blog(): React.JSX.Element {
       tags: ["Cybersecurity", "AI", "Security", "Threat Detection"],
       image: "/api/placeholder/400/250",
       featured: false,
-      views: 634,
-    },
-    {
-      id: 6,
+      views: 634}
+    {id: 6,
       title: "Healthcare Industry Transformation: AI-Powered Patient Care",
       excerpt: "Explore how AI is revolutionizing healthcare delivery, from diagnostic assistance to personalized treatment plans.",
       content: "Full article content here...",
@@ -164,8 +147,7 @@ export default function Blog(): React.JSX.Element {
       tags: ["AI", "Healthcare", "Patient Care", "Medical Technology"],
       image: "/api/placeholder/400/250",
       featured: false,
-      views: 445,
-    },
+      views: 445}
   ];
 
   // Map content entries into this page's structure
@@ -184,7 +166,7 @@ export default function Blog(): React.JSX.Element {
       featured: a.featured,
       views: a.trending ? 1000 : 250
     }));
-  }, []);
+  } []);
 
   const blogPosts: BlogPost[] = [...mappedFromContent, ...staticPosts];
 

@@ -184,7 +184,7 @@ export const arrayUtils = {
 */
 unique<T>(array: T[]): T[] {,
 return Array.from(new Set(array));
-},
+}
 
   /**
    * Chunk array into smaller arrays
@@ -195,7 +195,7 @@ return Array.from(new Set(array));
       chunks.push(array.slice(i, i + size));
     }
     return chunks;
-  },
+  }
 
   /**
    * Flatten nested arrays
@@ -205,7 +205,7 @@ return Array.from(new Set(array));
       (acc, val) => acc.concat(Array.isArray(val) ? arrayUtils.flatten(val) : val),
       []
     );
-  },
+  }
 };
 
 /**
@@ -217,14 +217,14 @@ export const objectUtils = {
 */
 deepClone<T>(obj: T): T {,
 return JSON.parse(JSON.stringify(obj));
-},
+}
 
   /**
    * Check if two objects are equal
    */
   isEqual(obj1: any, obj2: any): boolean {
     return JSON.stringify(obj1) === JSON.stringify(obj2);
-  },
+  }
 
   /**
    * Pick specific properties from object
@@ -237,7 +237,7 @@ return JSON.parse(JSON.stringify(obj));
       }
     });
     return result;
-  },
+  }
 };
 
 /**

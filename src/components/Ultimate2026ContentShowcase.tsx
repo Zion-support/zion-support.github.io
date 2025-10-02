@@ -15,7 +15,7 @@ const Ultimate2026ContentShowcase: React.FC = () => {
       impact: "$100M+ Savings",
       featured: true,
       stats: { savings: "$100M+", automation: "95%", roi: "300%" }
-    },
+    }
     {
       id: 2,
       title: "AI Security & Compliance Masterclass",
@@ -29,7 +29,7 @@ const Ultimate2026ContentShowcase: React.FC = () => {
       impact: "99.99% Security",
       featured: true,
       stats: { security: "99.99%", compliance: "100%", threats: "0" }
-    },
+    }
     {
       id: 3,
       title: "Quantum-Neural Computing Implementation",
@@ -43,7 +43,7 @@ const Ultimate2026ContentShowcase: React.FC = () => {
       impact: "1000x Performance",
       featured: true,
       stats: { performance: "1000x", efficiency: "95%", speed: "Lightning" }
-    },
+    }
     {
       id: 4,
       title: "Autonomous Operations Framework",
@@ -57,7 +57,7 @@ const Ultimate2026ContentShowcase: React.FC = () => {
       impact: "98% Automation",
       featured: false,
       stats: { automation: "98%", uptime: "99.9%", efficiency: "85%" }
-    },
+    }
     {
       id: 5,
       title: "Edge AI Deployment at Enterprise Scale",
@@ -71,7 +71,7 @@ const Ultimate2026ContentShowcase: React.FC = () => {
       impact: "10,000+ Nodes",
       featured: false,
       stats: { nodes: "10,000+", latency: "<1ms", reliability: "99.9%" }
-    },
+    }
     {
       id: 6,
       title: "Meta-Cognitive AI Development Guide",

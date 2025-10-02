@@ -26,7 +26,7 @@ export const bannerData: BannerData[] = [
     isActive: true,
     startDate: '2026-01-01',
     endDate: '2026-12-31'
-  },
+  }
   {
     id: 'october-2025-llm-orchestration',
     title: 'Enterprise LLM Orchestration Revolution',
@@ -39,7 +39,7 @@ export const bannerData: BannerData[] = [
     isActive: true,
     startDate: '2025-10-01',
     endDate: '2026-03-31'
-  },
+  }
   {
     id: 'cognitive-orchestration',
     title: 'Cognitive Orchestration Platform',
@@ -52,7 +52,7 @@ export const bannerData: BannerData[] = [
     isActive: true,
     startDate: '2025-10-01',
     endDate: '2026-06-30'
-  },
+  }
   {
     id: 'ai-ethics-governance',
     title: 'AI Ethics & Governance Framework',
@@ -65,7 +65,7 @@ export const bannerData: BannerData[] = [
     isActive: true,
     startDate: '2025-10-01',
     endDate: '2026-12-31'
-  },
+  }
   {
     id: 'real-time-intelligence-mesh',
     title: 'Real-Time Intelligence Mesh',
@@ -78,7 +78,7 @@ export const bannerData: BannerData[] = [
     isActive: true,
     startDate: '2025-10-01',
     endDate: '2026-09-30'
-  },
+  }
   {
     id: 'edge-ai-5g-revolution',
     title: 'Edge AI + 5G Revolution',
@@ -91,7 +91,7 @@ export const bannerData: BannerData[] = [
     isActive: true,
     startDate: '2025-10-01',
     endDate: '2026-08-31'
-  },
+  }
   {
     id: 'generative-ai-code-generation',
     title: 'Generative AI Code Generation',
@@ -104,7 +104,7 @@ export const bannerData: BannerData[] = [
     isActive: true,
     startDate: '2025-10-01',
     endDate: '2026-07-31'
-  },
+  }
   {
     id: 'quantum-edge-computing',
     title: 'Quantum-Enhanced Edge Computing',

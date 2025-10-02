@@ -15,31 +15,31 @@ const BlockchainWeb3: React.FC = () => {
       title: "Smart Contract Development",
       description: "Secure, audited smart contracts for DeFi, NFTs, DAOs, and enterprise applications with comprehensive testing.",
       benefit: "Zero security vulnerabilities"
-    },
+    }
     {
       icon: Network,
       title: "Multi-Chain Integration",
       description: "Seamless integration across Ethereum, Polygon, BSC, Solana, and other major blockchain networks.",
       benefit: "Universal compatibility"
-    },
+    }
     {
       icon: Lock,
       title: "DeFi Protocol Development",
       description: "Custom DeFi protocols including DEXs, lending platforms, yield farming, and liquidity management systems.",
       benefit: "Enterprise-grade security"
-    },
+    }
     {
       icon: Coins,
       title: "NFT Marketplace & Tokenization",
       description: "Complete NFT marketplace development with advanced features, tokenization services, and royalty management.",
       benefit: "Scalable NFT infrastructure"
-    },
+    }
     {
       icon: Database,
       title: "Blockchain Analytics",
       description: "Advanced blockchain data analysis, transaction monitoring, and compliance reporting with real-time insights.",
       benefit: "Real-time monitoring"
-    },
+    }
     {
       icon: Globe,
       title: "Web3 Integration",
@@ -66,7 +66,7 @@ const BlockchainWeb3: React.FC = () => {
         "Basic analytics dashboard"
       ],
       popular: false
-    },
+    }
     {
       name: "Growth",
       price: "$25,000",
@@ -87,7 +87,7 @@ const BlockchainWeb3: React.FC = () => {
         "Yield farming protocols"
       ],
       popular: true
-    },
+    }
     {
       name: "Enterprise",
       price: "$75,000",
@@ -120,14 +120,14 @@ const BlockchainWeb3: React.FC = () => {
       content: "Zion's blockchain expertise helped us launch a DeFi protocol that now manages $500M in TVL. The smart contract security audit prevented potential vulnerabilities worth millions.",
       rating: 5,
       company: "DeFi Innovation Lab"
-    },
+    }
     {
       name: "David Chen",
       role: "CTO, NFT Gaming Platform",
       content: "Our NFT marketplace went from concept to 100,000 users in 3 months. The multi-chain integration and advanced features set us apart from competitors.",
       rating: 5,
       company: "NFT Gaming Platform"
-    },
+    }
     {
       name: "Dr. Sarah Johnson",
       role: "Founder, Healthcare DAO",
@@ -144,21 +144,21 @@ const BlockchainWeb3: React.FC = () => {
       description: "Complete DeFi protocol development including DEXs, lending platforms, and yield farming systems.",
       metrics: "$500M+ TVL managed",
       benefits: ["Automated market makers", "Liquidity mining", "Cross-chain swaps"]
-    },
+    }
     {
       title: "NFT Solutions",
       icon: Coins,
       description: "End-to-end NFT marketplace development with advanced features and tokenization services.",
       metrics: "100K+ users supported",
       benefits: ["Custom marketplace", "Royalty management", "Metadata optimization"]
-    },
+    }
     {
       title: "DAO Governance",
       icon: Globe,
       description: "Decentralized autonomous organization setup with voting mechanisms and treasury management.",
       metrics: "50K+ community members",
       benefits: ["Voting systems", "Treasury management", "Proposal mechanisms"]
-    },
+    }
     {
       title: "Token Development",
       icon: Database,
@@ -169,17 +169,17 @@ const BlockchainWeb3: React.FC = () => {
   ];
 
   const technologies = [
-    { name: "Ethereum", type: "Smart Contracts" },
-    { name: "Polygon", type: "Layer 2 Scaling" },
-    { name: "Binance Smart Chain", type: "High Performance" },
-    { name: "Solana", type: "Ultra Fast" },
-    { name: "Polkadot", type: "Interoperability" },
-    { name: "Avalanche", type: "Subnets" },
-    { name: "Arbitrum", type: "Optimistic Rollups" },
-    { name: "Optimism", type: "Layer 2 Solution" },
-    { name: "Cosmos", type: "Inter-Blockchain" },
-    { name: "Near Protocol", type: "Developer Friendly" },
-    { name: "Algorand", type: "Pure Proof of Stake" },
+    { name: "Ethereum", type: "Smart Contracts" }
+    { name: "Polygon", type: "Layer 2 Scaling" }
+    { name: "Binance Smart Chain", type: "High Performance" }
+    { name: "Solana", type: "Ultra Fast" }
+    { name: "Polkadot", type: "Interoperability" }
+    { name: "Avalanche", type: "Subnets" }
+    { name: "Arbitrum", type: "Optimistic Rollups" }
+    { name: "Optimism", type: "Layer 2 Solution" }
+    { name: "Cosmos", type: "Inter-Blockchain" }
+    { name: "Near Protocol", type: "Developer Friendly" }
+    { name: "Algorand", type: "Pure Proof of Stake" }
     { name: "Fantom", type: "Fast Finality" }
   ];
 

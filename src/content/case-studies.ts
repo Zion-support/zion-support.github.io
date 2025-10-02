@@ -30,7 +30,7 @@ export const caseStudies: CaseStudy[] = [
     technologies: ["Azure IoT Hub", "TensorFlow", "Apache Kafka", "Azure ML", "Unity 3D", "Kubernetes"],
     duration: "18 months",
     imageUrl: "/images/case-studies/energy-digital-twin.jpg"
-  },
+  }
   {
     id: "fintech-ai-platform",
     title: "AI-Powered Financial Analytics Platform",
@@ -47,7 +47,7 @@ export const caseStudies: CaseStudy[] = [
     technologies: ["Python", "TensorFlow", "React", "AWS", "PostgreSQL", "Docker"],
     duration: "12 weeks",
     imageUrl: "/images/case-studies/fintech-platform.jpg"
-  },
+  }
   {
     id: "healthcare-chatbot",
     title: "Healthcare AI Chatbot System",
@@ -64,7 +64,7 @@ export const caseStudies: CaseStudy[] = [
     technologies: ["OpenAI GPT-4", "Node.js", "React", "MongoDB", "AWS Lambda"],
     duration: "8 weeks",
     imageUrl: "/images/case-studies/healthcare-chatbot.jpg"
-  },
+  }
   {
     id: "ecommerce-optimization",
     title: "E-commerce AI Optimization Suite",
@@ -81,7 +81,7 @@ export const caseStudies: CaseStudy[] = [
     technologies: ["Machine Learning", "Python", "Vue.js", "Redis", "Kubernetes"],
     duration: "10 weeks",
     imageUrl: "/images/case-studies/ecommerce-ai.jpg"
-  },
+  }
   {
     id: "manufacturing-iot",
     title: "Smart Manufacturing IoT Platform",
@@ -98,7 +98,7 @@ export const caseStudies: CaseStudy[] = [
     technologies: ["IoT Sensors", "Edge Computing", "Python", "React", "Azure IoT Hub"],
     duration: "16 weeks",
     imageUrl: "/images/case-studies/manufacturing-iot.jpg"
-  },
+  }
   {
     id: "saas-analytics",
     title: "SaaS Analytics Dashboard",
@@ -115,7 +115,7 @@ export const caseStudies: CaseStudy[] = [
     technologies: ["Apache Kafka", "ClickHouse", "React", "D3.js", "AWS"],
     duration: "14 weeks",
     imageUrl: "/images/case-studies/saas-analytics.jpg"
-  },
+  }
   {
     id: "cybersecurity-automation",
     title: "Automated Cybersecurity Platform",
@@ -133,7 +133,6 @@ export const caseStudies: CaseStudy[] = [
     duration: "20 weeks",
     imageUrl: "/images/case-studies/cybersecurity.jpg"
   }
-  ,
   {
     id: "telco-edge-observability",
     title: "Telco Edge Observability Overhaul",
@@ -151,7 +150,6 @@ export const caseStudies: CaseStudy[] = [
     duration: "18 weeks",
     imageUrl: "/images/case-studies/telco-edge.jpg"
   }
-  ,
   {
     id: "enterprise-rag-rollout",
     title: "Enterprise RAG Rollout at Fortune 500",

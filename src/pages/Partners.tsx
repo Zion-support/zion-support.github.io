@@ -11,35 +11,35 @@ const Partners: React.FC = () => {
       description: 'Strategic cloud and AI partnership',
       logo: '/images/partners/microsoft.png',
       website: 'https://microsoft.com'
-    },
+    }
     {
       name: 'Amazon Web Services',
       category: 'Cloud Infrastructure',
       description: 'AWS Advanced Technology Partner',
       logo: '/images/partners/aws.png',
       website: 'https://aws.amazon.com'
-    },
+    }
     {
       name: 'Google Cloud',
       category: 'AI & Machine Learning',
       description: 'Google Cloud AI/ML Specialization Partner',
       logo: '/images/partners/google-cloud.png',
       website: 'https://cloud.google.com'
-    },
+    }
     {
       name: 'IBM',
       category: 'Enterprise AI',
       description: 'IBM Business Partner for AI Solutions',
       logo: '/images/partners/ibm.png',
       website: 'https://ibm.com'
-    },
+    }
     {
       name: 'Salesforce',
       category: 'CRM Integration',
       description: 'Salesforce Consulting Partner',
       logo: '/images/partners/salesforce.png',
       website: 'https://salesforce.com'
-    },
+    }
     {
       name: 'ServiceNow',
       category: 'IT Service Management',
@@ -59,7 +59,7 @@ const Partners: React.FC = () => {
         'Joint go-to-market strategies',
         'Technical support and training'
       ]
-    },
+    }
     {
       title: 'Solution Partners',
       description: 'Specialized solution providers and integrators',
@@ -69,7 +69,7 @@ const Partners: React.FC = () => {
         'Joint customer implementations',
         'Shared expertise and resources'
       ]
-    },
+    }
     {
       title: 'Channel Partners',
       description: 'Resellers and distribution partners',

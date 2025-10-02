@@ -174,12 +174,12 @@ export const createSitemapGenerator = (baseUrl: string): ImprovedSitemapGenerato
   const config: SitemapConfig = {
     baseUrl,
     routes: [
-      { path: '/', priority: 1.0, changefreq: 'daily' },
-      { path: '/about', priority: 0.8, changefreq: 'monthly' },
-      { path: '/contact', priority: 0.9, changefreq: 'monthly' },
-      { path: '/blog', priority: 0.9, changefreq: 'daily' },
-      { path: '/case-studies', priority: 0.8, changefreq: 'weekly' },
-      { path: '/services', priority: 0.9, changefreq: 'monthly' },
+      { path: '/', priority: 1.0, changefreq: 'daily' }
+      { path: '/about', priority: 0.8, changefreq: 'monthly' }
+      { path: '/contact', priority: 0.9, changefreq: 'monthly' }
+      { path: '/blog', priority: 0.9, changefreq: 'daily' }
+      { path: '/case-studies', priority: 0.8, changefreq: 'weekly' }
+      { path: '/services', priority: 0.9, changefreq: 'monthly' }
     ],
   };
 

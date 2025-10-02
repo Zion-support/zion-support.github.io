@@ -27,8 +27,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullCanonicalUrl = canonicalUrl || window.location.href;
 
-  const defaultStructuredData = {
-    '@context': 'https://schema.org',
+  const defaultStructuredData = {'@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Zion Tech Group',
     url: 'https://ziontechgroup.com',
@@ -40,18 +39,13 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       addressLocality: 'Middletown',
       addressRegion: 'DE',
       postalCode: '19709',
-      addressCountry: 'US',
-    },
-    contactPoint: {
-      '@type': 'ContactPoint',
+      addressCountry: 'US'}
+    contactPoint: {'@type': 'ContactPoint',
       telephone: '+1-302-464-0950',
       contactType: 'customer service',
-      email: 'kleber@ziontechgroup.com',
-    },
-    sameAs: [
-      'https://linkedin.com/company/zion-tech-group',
-      'https://twitter.com/ziontechgroup',
-    ],
+      email: 'kleber@ziontechgroup.com'}
+    sameAs: ['https://linkedin.com/company/zion-tech-group',
+      'https://twitter.com/ziontechgroup'],
   };
 
   return (

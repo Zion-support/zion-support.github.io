@@ -15,31 +15,31 @@ const EdgeComputingAI: React.FC = () => {
       title: "Edge AI Processing",
       description: "Deploy AI models directly on edge devices for real-time inference without cloud dependency.",
       benefit: "Sub-10ms response times"
-    },
+    }
     {
       icon: Zap,
       title: "Real-Time Analytics",
       description: "Process and analyze data at the edge for instant insights and immediate action triggers.",
       benefit: "99.9% uptime with offline capability"
-    },
+    }
     {
       icon: Wifi,
       title: "Low-Latency Communication",
       description: "Optimized protocols for minimal latency between edge devices and central systems.",
       benefit: "90% reduction in network latency"
-    },
+    }
     {
       icon: Shield,
       title: "Enhanced Security",
       description: "Data processing at the edge reduces exposure and provides local security controls.",
       benefit: "Zero data transmission vulnerabilities"
-    },
+    }
     {
       icon: Clock,
       title: "Continuous Operation",
       description: "Edge devices operate independently, ensuring functionality even during network outages.",
       benefit: "100% local processing capability"
-    },
+    }
     {
       icon: Users,
       title: "Scalable Deployment",
@@ -65,7 +65,7 @@ const EdgeComputingAI: React.FC = () => {
         "Cloud backup integration"
       ],
       popular: false
-    },
+    }
     {
       name: "Edge Professional",
       price: "$5,999",
@@ -84,7 +84,7 @@ const EdgeComputingAI: React.FC = () => {
         "API access"
       ],
       popular: true
-    },
+    }
     {
       name: "Edge Enterprise",
       price: "$15,999",
@@ -115,14 +115,14 @@ const EdgeComputingAI: React.FC = () => {
       content: "Edge AI processing reduced our production line response times from 500ms to 8ms. This enabled real-time quality control that increased our product quality by 40%.",
       rating: 5,
       company: "Manufacturing Solutions"
-    },
+    }
     {
       name: "Lisa Chen",
       role: "VP Engineering, Smart City Initiative",
       content: "The edge computing platform enabled us to process traffic data locally, reducing network costs by 60% while improving traffic management response times by 10x.",
       rating: 5,
       company: "Smart City Initiative"
-    },
+    }
     {
       name: "Dr. Michael Rodriguez",
       role: "Head of Innovation, Healthcare Systems",
@@ -138,19 +138,19 @@ const EdgeComputingAI: React.FC = () => {
       icon: Monitor,
       description: "Real-time monitoring and control of industrial equipment with predictive maintenance capabilities.",
       benefits: ["50% reduction in downtime", "30% improvement in efficiency", "40% cost savings in maintenance"]
-    },
+    }
     {
       title: "Smart Cities",
       icon: Globe,
       description: "Intelligent traffic management, environmental monitoring, and public safety systems.",
       benefits: ["60% reduction in traffic congestion", "25% improvement in air quality", "35% faster emergency response"]
-    },
+    }
     {
       title: "Healthcare",
       icon: Smartphone,
       description: "Real-time patient monitoring, medical device control, and emergency response systems.",
       benefits: ["45% improvement in patient outcomes", "70% faster emergency detection", "50% reduction in hospital readmissions"]
-    },
+    }
     {
       title: "Retail & Commerce",
       icon: Database,
@@ -163,23 +163,23 @@ const EdgeComputingAI: React.FC = () => {
     {
       name: "TensorFlow Lite",
       description: "Optimized AI model deployment for edge devices with minimal resource requirements."
-    },
+    }
     {
       name: "OpenVINO",
       description: "Intel's toolkit for optimizing AI inference across various edge hardware platforms."
-    },
+    }
     {
       name: "NVIDIA Jetson",
       description: "Powerful edge AI computing platform for autonomous machines and robotics."
-    },
+    }
     {
       name: "AWS IoT Greengrass",
       description: "Edge runtime and cloud service for building, deploying, and managing IoT applications."
-    },
+    }
     {
       name: "Azure IoT Edge",
       description: "Cloud intelligence extended to edge devices for offline and low-latency scenarios."
-    },
+    }
     {
       name: "Custom Protocols",
       description: "Tailored communication protocols optimized for specific edge computing requirements."

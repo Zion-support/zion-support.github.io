@@ -20,7 +20,7 @@ export const revolutionaryBreakthroughs2025 = [
       savings: '$2M+',
       adoption: '500+'
     }
-  },
+  }
   {
     id: 'quantum-neural-networks',
     title: 'Quantum-Neural Networks: 1000x Processing Speed',
@@ -42,7 +42,7 @@ export const revolutionaryBreakthroughs2025 = [
       savings: '$5M+',
       breakthrough: 'Revolutionary'
     }
-  },
+  }
   {
     id: 'autonomous-operations',
     title: 'Autonomous Enterprise Operations: 98% Automation',
@@ -64,7 +64,7 @@ export const revolutionaryBreakthroughs2025 = [
       savings: '$10M+',
       roi: '500%'
     }
-  },
+  }
   {
     id: 'conscious-ai-agents',
     title: 'Conscious AI Agents: The Next Evolution',
@@ -86,7 +86,7 @@ export const revolutionaryBreakthroughs2025 = [
       collaboration: 'Revolutionary',
       innovation: 'Unprecedented'
     }
-  },
+  }
   {
     id: 'holographic-computing',
     title: 'AI Holographic Computing: 3D Data Processing',
@@ -108,7 +108,7 @@ export const revolutionaryBreakthroughs2025 = [
       insights: 'Unprecedented',
       savings: '$3M+'
     }
-  },
+  }
   {
     id: 'neuromorphic-ai',
     title: 'Neuromorphic AI: Brain-Inspired Computing',
@@ -155,7 +155,7 @@ export const breakthroughServices2025 = [
       '300% ROI',
       '500+ Enterprise Clients'
     ]
-  },
+  }
   {
     id: 'quantum-neural-implementation',
     title: 'Quantum-Neural Network Implementation',
@@ -177,7 +177,7 @@ export const breakthroughServices2025 = [
       '99.9% Efficiency',
       'Revolutionary Performance'
     ]
-  },
+  }
   {
     id: 'autonomous-operations-service',
     title: 'Autonomous Operations Service',
@@ -219,14 +219,14 @@ export const latestCaseStudies2025 = [
       automationRate: '95%',
       productivityGain: '400%',
       timeToMarket: '60%'
-    },
+    }
     highlights: [
       'Complete AI infrastructure overhaul',
       '95% process automation achieved',
       '$50M annual cost savings',
       '300% ROI in first year'
     ]
-  },
+  }
   {
     id: 'global-retail-optimization',
     title: 'Global Retail Chain: AI-Powered Optimization',
@@ -243,7 +243,7 @@ export const latestCaseStudies2025 = [
       automationRate: '92%',
       productivityGain: '400%',
       customerSatisfaction: '95%'
-    },
+    }
     highlights: [
       'AI-powered inventory optimization',
       '92% automated decision making',
@@ -263,11 +263,11 @@ export const promotionalBanners2025 = [
     href: '/revolutionary-breakthroughs-2025',
     urgency: 'Limited Time: Early Access Available',
     stats: [
-      { label: '95% Decision Accuracy', value: 'Meta-Cognitive AI' },
-      { label: '1000x Processing Speed', value: 'Quantum-Neural Networks' },
+      { label: '95% Decision Accuracy', value: 'Meta-Cognitive AI' }
+      { label: '1000x Processing Speed', value: 'Quantum-Neural Networks' }
       { label: '98% Automation Rate', value: 'Autonomous Operations' }
     ]
-  },
+  }
   {
     id: 'enterprise-transformation',
     title: '💎 Transform Your Enterprise Today',
@@ -277,8 +277,8 @@ export const promotionalBanners2025 = [
     href: '/enterprise-transformation',
     urgency: 'Free Assessment Available',
     stats: [
-      { label: '$50M+ Annual Savings', value: 'Average Client Results' },
-      { label: '95% Automation Rate', value: 'Operational Excellence' },
+      { label: '$50M+ Annual Savings', value: 'Average Client Results' }
+      { label: '95% Automation Rate', value: 'Operational Excellence' }
       { label: '300% ROI', value: 'First Year Returns' }
     ]
   }

@@ -58,7 +58,7 @@ export default function ITServices(): React.JSX.Element {
       useCases: ["Enterprise companies", "SaaS providers", "E-commerce platforms", "Healthcare systems"],
       marketSize: "$623.3B cloud computing market",
       link: "/contact"
-    },
+    }
     {
       id: "zero-trust-security",
       name: "Zero Trust Security Framework",
@@ -85,7 +85,7 @@ export default function ITServices(): React.JSX.Element {
       useCases: ["Financial institutions", "Government agencies", "Healthcare organizations", "Large enterprises"],
       marketSize: "$366.1B cybersecurity market",
       link: "/contact"
-    },
+    }
     {
       id: "devops-automation",
       name: "DevOps Automation Platform",
@@ -113,8 +113,7 @@ export default function ITServices(): React.JSX.Element {
       marketSize: "$10.3B DevOps market",
       link: "/contact"
     }
-    {
-      id: "data-engineering-platform",
+    {id: "data-engineering-platform",
       name: "Data Engineering Platform",
       blurb: "Scalable data infrastructure with real-time processing and analytics",
       price: "$4,000 - $20,000/month",
@@ -138,10 +137,8 @@ export default function ITServices(): React.JSX.Element {
       ],
       useCases: ["Analytics companies", "E-commerce platforms", "Financial services", "Healthcare systems"],
       marketSize: "$274.3B data analytics market",
-      link: "/contact",
-    },
-    {
-      id: "network-infrastructure",
+      link: "/contact"}
+    {id: "network-infrastructure",
       name: "Enterprise Network Infrastructure",
       blurb: "High-performance network design with SD-WAN and security integration",
       price: "$3,000 - $15,000/month",
@@ -165,10 +162,8 @@ export default function ITServices(): React.JSX.Element {
       ],
       useCases: ["Multi-location businesses", "Remote work environments", "Healthcare networks", "Educational institutions"],
       marketSize: "$45.2B SD-WAN market",
-      link: "/contact",
-    },
-    {
-      id: "compliance-automation",
+      link: "/contact"}
+    {id: "compliance-automation",
       name: "Compliance Automation Suite",
       blurb: "Automated compliance monitoring for SOC 2, HIPAA, GDPR, and industry standards",
       price: "$2,000 - $10,000/month",
@@ -192,62 +187,45 @@ export default function ITServices(): React.JSX.Element {
       ],
       useCases: ["Healthcare providers", "Financial services", "SaaS companies", "Government contractors"],
       marketSize: "$56.9B compliance management market",
-      link: "/contact",
-    },
+      link: "/contact"}
   ];
 
   const additionalITServices = [
-    {
-      name: "IT Infrastructure Assessment",
+    {name: "IT Infrastructure Assessment",
       description: "Comprehensive infrastructure audit and optimization recommendations"
       price: "$1,500 - $5,000/month",
-      features: ["Performance analysis", "Security assessment", "Cost optimization", "Modernization roadmap"],
-    },
-    {
-      name: "24/7 IT Support & Monitoring",
+      features: ["Performance analysis", "Security assessment", "Cost optimization", "Modernization roadmap"]}
+    {name: "24/7 IT Support & Monitoring",
       description: "Round-the-clock IT support with proactive monitoring"
       price: "$800 - $3,000/month",
-      features: ["24/7 helpdesk", "Proactive monitoring", "Remote support", "SLA guarantees"],
-    },
-    {
-      name: "Backup & Disaster Recovery",
+      features: ["24/7 helpdesk", "Proactive monitoring", "Remote support", "SLA guarantees"]}
+    {name: "Backup & Disaster Recovery",
       description: "Automated backup solutions with disaster recovery planning"
       price: "$500 - $2,500/month",
-      features: ["Automated backups", "Disaster recovery", "Business continuity", "Data protection"],
-    },
-    {
-      name: "IT Consulting & Strategy",
+      features: ["Automated backups", "Disaster recovery", "Business continuity", "Data protection"]}
+    {name: "IT Consulting & Strategy",
       description: "Strategic IT planning and digital transformation consulting"
       price: "$200 - $500/hour",
-      features: ["Strategic planning", "Technology roadmap", "Vendor selection", "Implementation guidance"],
-    },
+      features: ["Strategic planning", "Technology roadmap", "Vendor selection", "Implementation guidance"]}
   ];
 
   const industrySolutions = [
-    {
-      industry: "Healthcare",
+    {industry: "Healthcare",
       solutions: ["HIPAA compliance", "Patient data security", "Telemedicine infrastructure", "Medical device integration"],
       icon: Building,
-      color: "from-green-500 to-teal-500",
-    },
-    {
-      industry: "Financial Services",
+      color: "from-green-500 to-teal-500"}
+    {industry: "Financial Services",
       solutions: ["PCI DSS compliance", "Fraud detection systems", "Risk management", "Regulatory reporting"],
       icon: DollarSign,
-      color: "from-blue-500 to-indigo-500",
-    },
-    {
-      industry: "E-commerce",
+      color: "from-blue-500 to-indigo-500"}
+    {industry: "E-commerce",
       solutions: ["Scalable infrastructure", "Payment security", "Inventory management", "Customer analytics"],
       icon: Globe,
-      color: "from-purple-500 to-pink-500",
-    },
-    {
-      industry: "Manufacturing",
+      color: "from-purple-500 to-pink-500"}
+    {industry: "Manufacturing",
       solutions: ["IoT integration", "Predictive maintenance", "Supply chain optimization", "Quality control systems"],
       icon: Cpu,
-      color: "from-orange-500 to-red-500",
-    },
+      color: "from-orange-500 to-red-500"}
   ];
 
   return (

@@ -1,11 +1,11 @@
 export const generateSitemap = () => {
   const baseUrl = 'https://ziontechgroup.com';
   const pages = [
-    { url: '/', priority: 1.0, changefreq: 'daily' },
-    { url: '/blog', priority: 0.9, changefreq: 'daily' },
-    { url: '/case-studies', priority: 0.9, changefreq: 'weekly' },
-    { url: '/services', priority: 0.9, changefreq: 'weekly' },
-    { url: '/contact', priority: 0.8, changefreq: 'monthly' },
+    { url: '/', priority: 1.0, changefreq: 'daily' }
+    { url: '/blog', priority: 0.9, changefreq: 'daily' }
+    { url: '/case-studies', priority: 0.9, changefreq: 'weekly' }
+    { url: '/services', priority: 0.9, changefreq: 'weekly' }
+    { url: '/contact', priority: 0.8, changefreq: 'monthly' }
   ];
 
   const blogPosts = [

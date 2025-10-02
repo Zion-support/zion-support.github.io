@@ -59,13 +59,11 @@ excludeViewed?: boolean;,
 category?: string;,
 type?: ContentItem['type'];
 } = {}
-  ): RecommendationResult[] {
-    const {
+  ): RecommendationResult[] {const {
       limit = 5,
       excludeViewed = true,
       category,
-      type,
-    } = options;
+      type} =  options;
 
     // Get or create user profile
     const userProfile = this.createUserProfile(userId);
@@ -95,13 +93,11 @@ type?: ContentItem['type'];
       .sort((a, b) => b.score - a.score)
       .slice(0, limit);
 
-    return topRecommendations.map((rec) => {
-      const content = this.contentCatalog.find((c) => c.id === rec.contentId)!;
+    return topRecommendations.map((rec) => {const content = this.contentCatalog.find((c) => c.id === rec.contentId)!;
       return {
         content,
         score: rec.score,
-        reasons: rec.reasons,
-      };
+        reasons: rec.reasons};
     });
   }
 
@@ -171,11 +167,9 @@ type?: ContentItem['type'];
       }
     }
 
-    return {
-      contentId: content.id,
+    return {contentId: content.id,
       score: Math.min(score, 100),
-      reasons,
-    };
+      reasons};
   }
 
   /**
@@ -475,8 +469,7 @@ engagement?: number;
 views: number;,
 conversions: number;,
 conversionRate: number;
-} | null {
-    const content = this.contentCatalog.find((c) => c.id === contentId);
+} | null {const content = this.contentCatalog.find((c) => c.id === contentId);
     if (!content) return null;
 
     const views = content.views || 0;
@@ -486,8 +479,7 @@ conversionRate: number;
     return {
       views,
       conversions,
-      conversionRate,
-    };
+      conversionRate};
   }
 
   /**
@@ -527,11 +519,9 @@ conversionRate: number;
 catalog: ContentItem[];,
 profiles: { [userId: string]: UserProfile
 };
-  } {
-    return {
+  } {return {
       catalog: [...this.contentCatalog],
-      profiles: Object.fromEntries(this.userProfiles),
-    };
+      profiles: Object.fromEntries(this.userProfiles)};
   }
 }
 

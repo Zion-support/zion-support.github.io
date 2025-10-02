@@ -7,14 +7,14 @@ const October2025LatestContentBanner = () => {
       icon: Brain,
       link: "/blog/ai-2025-october-advanced-genai-orchestration-platform",
       gradient: "from-violet-600 to-purple-600"
-    },
+    }
     {
       title: "Enterprise AI Security: Zero Trust Framework",
       description: "Comprehensive security architecture protecting AI models, data, and inference endpoints",
       icon: Shield,
       link: "/blog/ai-2025-october-enterprise-ai-security-zero-trust-framework",
       gradient: "from-cyan-600 to-blue-600"
-    },
+    }
     {
       title: "Real-Time Multimodal AI Processing",
       description: "Revolutionary techniques for simultaneous text, vision, and audio processing in production",

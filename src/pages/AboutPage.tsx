@@ -12,7 +12,7 @@ description: 'Pushing the boundaries of AI technology to create revolutionary so
       icon: Brain,
       title: 'Innovation',
       description: 'Pushing the boundaries of AI technology to create revolutionary solutions'
-    },
+    }
     {
       icon: Shield,
       title: 'Security'
@@ -26,12 +26,12 @@ description: 'Delivering exceptional results with proven ROI and measurable impa
   ];
 
   const milestones = [
-    { year: '2020', event: 'Founded Zion Tech Group' },
-    { year: '2021', event: 'First Fortune 500 client' },
-    { year: '2022', event: 'AI breakthrough platform launch' },
-    { year: '2023', event: '100+ enterprise clients' },
-    { year: '2024', event: 'Quantum computing integration' },
-    { year: '2025', event: '240+ Fortune 500 clients' },
+    { year: '2020', event: 'Founded Zion Tech Group' }
+    { year: '2021', event: 'First Fortune 500 client' }
+    { year: '2022', event: 'AI breakthrough platform launch' }
+    { year: '2023', event: '100+ enterprise clients' }
+    { year: '2024', event: 'Quantum computing integration' }
+    { year: '2025', event: '240+ Fortune 500 clients' }
   ];
 
   return (

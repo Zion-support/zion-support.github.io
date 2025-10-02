@@ -13,7 +13,7 @@ const February2026ContentShowcaseBanner = () => {
       icon: <Brain className="w-6 h-6" />,
       link: '/blog/ai-2026-feb-autonomous-neural-networks',
       description: 'Self-evolving neural architectures achieving 99.97% accuracy in autonomous decision-making'
-    },
+    }
     {
       id: 2,
       title: 'Quantum Edge Computing Revolution',
@@ -26,7 +26,7 @@ const February2026ContentShowcaseBanner = () => {
       icon: <Zap className="w-6 h-6" />,
       link: '/blog/edge-2026-feb-quantum-computing',
       description: 'Ultra-low latency quantum processing delivering sub-millisecond response times'
-    },
+    }
     {
       id: 3,
       title: 'Meta-Cognitive AI Systems',
@@ -74,9 +74,9 @@ const February2026ContentShowcaseBanner = () => {
           {/* Achievement Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
             {[
-              { value: '500K+', label: 'Monthly Readers', icon: <Users className="w-8 h-8" />, color: 'text-emerald-400' },
-              { value: '99.9%', label: 'Content Accuracy', icon: <Star className="w-8 h-8" />, color: 'text-blue-400' },
-              { value: '200+', label: 'Expert Articles', icon: <Award className="w-8 h-8" />, color: 'text-purple-400' },
+              { value: '500K+', label: 'Monthly Readers', icon: <Users className="w-8 h-8" />, color: 'text-emerald-400' }
+              { value: '99.9%', label: 'Content Accuracy', icon: <Star className="w-8 h-8" />, color: 'text-blue-400' }
+              { value: '200+', label: 'Expert Articles', icon: <Award className="w-8 h-8" />, color: 'text-purple-400' }
               { value: '50+', label: 'Industry Awards', icon: <TrendingUp className="w-8 h-8" />, color: 'text-pink-400' }
             ].map((achievement, index) => (
               <div key={index} className="text-center">

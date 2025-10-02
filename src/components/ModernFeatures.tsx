@@ -6,27 +6,27 @@ const ModernFeatures: React.FC = () => {
       icon: <Zap className="w-10 h-10" />,
       title: "Lightning Fast",
       description: "Deploy AI solutions 10x faster with our pre-built frameworks and automation tools."
-    },
+    }
     {
       icon: <Shield className="w-10 h-10" />,
       title: "Enterprise Security",
       description: "Bank-level security with SOC 2, GDPR compliance, and continuous monitoring."
-    },
+    }
     {
       icon: <TrendingUp className="w-10 h-10" />,
       title: "Proven Results",
       description: "Average 300% ROI within 6 months across all client implementations."
-    },
+    }
     {
       icon: <Users className="w-10 h-10" />,
       title: "Expert Support",
       description: "Dedicated team of AI specialists providing 24/7 support and guidance."
-    },
+    }
     {
       icon: <Globe className="w-10 h-10" />,
       title: "Global Scale",
       description: "Infrastructure spanning 50+ countries for low-latency worldwide access."
-    },
+    }
     {
       icon: <Award className="w-10 h-10" />,
       title: "Award Winning",

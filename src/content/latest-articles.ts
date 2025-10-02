@@ -31,7 +31,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/ai-safety-budgets-2026.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "ai-e2e-tracing-2025",
     slug: "ai-e2e-tracing-2025",
@@ -47,7 +47,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/ai-e2e-tracing-2025.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "edge-privacy-ml-2026",
     slug: "edge-privacy-ml-2026",
@@ -63,7 +63,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/edge-privacy-ml-2026.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "agent-evals-in-prod-2026",
     slug: "agent-evals-in-prod-2026",
@@ -79,7 +79,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/agent-evals-in-prod-2026.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "ai-breach-drills-2026",
     slug: "ai-breach-drills-2026",
@@ -95,7 +95,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/secure-ml-supply-chain-2026.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "genai-routing-under-budgets-2026",
     slug: "genai-routing-under-budgets-2026",
@@ -111,7 +111,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/genai-routing-2026.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "edge-personalization-2025",
     slug: "edge-personalization-2025",
@@ -127,7 +127,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/edge-personalization-2025.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "platform-golden-paths-kpis-2026",
     slug: "platform-golden-paths-kpis-2026",
@@ -143,7 +143,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/platform-golden-paths-kpis-2026.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "ai-platform-slos-2026",
     slug: "ai-platform-slos-2026",
@@ -159,7 +159,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/ai-governance-scorecards-quickstart-2026.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "ai-operational-excellence-blueprint-2026",
     slug: "ai-operational-excellence-blueprint-2026",
@@ -175,7 +175,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/ai-operational-excellence-blueprint-2026.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "policy-tests-quickstart-2025",
     slug: "policy-tests-quickstart-2025",
@@ -191,7 +191,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/policy-tests-quickstart-2025.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "ai-enterprise-security-2026",
     slug: "ai-enterprise-security-2026",
@@ -207,7 +207,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/autonomous-infra-2026.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "quantum-ai-hybrid-2026",
     slug: "quantum-ai-hybrid-2026",
@@ -223,7 +223,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/quantum-ai-hybrid-2026.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "privacy-first-flags-2026",
     slug: "privacy-first-flags-2026",
@@ -239,7 +239,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/privacy-first-flags-2026.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "privacy-preserving-agents-2026",
     slug: "privacy-preserving-agents-2026",
@@ -255,7 +255,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/privacy-preserving-agents-2026.jpg",
     newBadge: true,
     trending: false
-  },
+  }
   {
     id: "reliable-rag-ops-2026",
     slug: "reliable-rag-ops-2026",
@@ -271,7 +271,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/reliable-rag-ops-2026.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "privacy-first-feature-flags-2026",
     slug: "privacy-first-feature-flags-2026",
@@ -287,7 +287,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/privacy-first-flags-2026.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "cost-aware-agents-2026",
     slug: "cost-aware-agents-2026",
@@ -303,7 +303,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/cost-aware-agents-2026.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "platform-kpis-2026",
     slug: "platform-kpis-2026",
@@ -319,7 +319,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/platform-kpis-2026.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "ai-incident-budgets-2026",
     slug: "ai-incident-budgets-2026",
@@ -335,7 +335,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/ai-incident-budgets-2026.jpg",
     newBadge: true,
     trending: false
-  },
+  }
   {
     id: "ai-incident-response-playbooks-2025",
     slug: "ai-incident-response-playbooks-2025",
@@ -351,7 +351,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/ai-incident-response-playbooks-2025.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "privacy-preserving-analytics-2025",
     slug: "privacy-preserving-analytics-2025",
@@ -367,7 +367,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/privacy-preserving-analytics-2025.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "platform-engineering-scorecards-2026",
     slug: "platform-engineering-scorecards-2026",
@@ -383,7 +383,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/platform-engineering-scorecards-2026.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "ai-cybersecurity-automation-2025",
     slug: "ai-cybersecurity-automation-2025",
@@ -399,7 +399,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/ai-cybersecurity-automation.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "edge-ai-blueprint-2026",
     slug: "edge-ai-blueprint-2026",
@@ -415,7 +415,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/edge-ai-blueprint-2026.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "llm-policy-testing-2025",
     slug: "llm-policy-testing-2025",
@@ -431,7 +431,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/ai-governance-blueprint.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "ai-operational-scorecards-2026",
     slug: "ai-operational-scorecards-2026",
@@ -447,7 +447,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/ai-operational-scorecards.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "edge-llm-caching-blueprint-2025",
     slug: "edge-llm-caching-blueprint-2025",
@@ -463,7 +463,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/edge-llm-caching.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "finops-scorecards-2025",
     slug: "finops-scorecards-2025",
@@ -479,7 +479,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/cloud-finops-guardrails.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "enterprise-rag-blueprint-2025",
     slug: "enterprise-rag-blueprint-2025",
@@ -495,7 +495,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/enterprise-rag-v2.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "ai-governance-scorecards-2026",
     slug: "ai-governance-scorecards-2026",
@@ -511,7 +511,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/ai-governance-scorecards-2026.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "freshness-aware-rag-v2",
     slug: "freshness-aware-rag-v2",
@@ -527,7 +527,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/freshness-aware-rag-v2.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "edge-flags-blueprint-2026",
     slug: "edge-flags-blueprint-2026",
@@ -543,7 +543,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/edge-flags-blueprint-2026.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "ai-platform-roadmaps-2026",
     slug: "ai-platform-roadmaps-2026",
@@ -559,7 +559,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/ai-product-roadmaps-2026.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "genai-guardrails-blueprints-2026",
     slug: "genai-guardrails-blueprints-2026",
@@ -575,7 +575,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/genai-guardrails-blueprints-2026.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "cloud-finops-scorecards-2026",
     slug: "cloud-finops-scorecards-2026",
@@ -591,7 +591,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/cloud-finops-scorecards-2026.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "ai-risk-register-2025",
     slug: "ai-risk-register-2025",
@@ -607,7 +607,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/ai-risk-register.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "ai-guardrails-scorecards-2025",
     slug: "ai-guardrails-scorecards-2025",
@@ -623,7 +623,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/ai-guardrails-scorecards.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "edge-flags-zero-regret-2025",
     slug: "edge-flags-zero-regret-2025",
@@ -639,7 +639,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/edge-flags-zero-regret.jpg",
     newBadge: true,
     trending: false
-  },
+  }
   {
     id: "freshness-aware-rag-2025",
     slug: "freshness-aware-rag-2025",
@@ -655,7 +655,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/freshness-aware-rag.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "ai-product-roadmaps-2025",
     slug: "ai-product-roadmaps-2025",
@@ -671,7 +671,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/ai-product-roadmaps.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "sbom-automation-ml-supply-chain",
     slug: "sbom-automation-ml-supply-chain",
@@ -687,7 +687,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/sbom-ml-supply-chain.jpg",
     newBadge: true,
     trending: false
-  },
+  }
   {
     id: "online-genai-evals-2025",
     slug: "online-genai-evals-2025",
@@ -703,7 +703,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/online-genai-evals.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "practical-rag-in-production-2025",
     slug: "practical-rag-in-production-2025",
@@ -719,7 +719,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/practical-rag-2025.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "ai-platform-engineering-2025",
     slug: "ai-platform-engineering-2025",
@@ -735,7 +735,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/ai-platform-engineering.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "enterprise-rag-blueprint-v2",
     slug: "enterprise-rag-blueprint-v2",
@@ -751,7 +751,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/enterprise-rag-v2.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "ai-autonomous-operations-guide",
     slug: "ai-autonomous-operations-guide",
@@ -767,7 +767,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/ai-autonomous-ops.jpg",
     newBadge: true,
     trending: false
-  },
+  }
   {
     id: "quantum-computing-business-guide",
     slug: "quantum-computing-business-guide",
@@ -783,7 +783,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/quantum-business.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "edge-ai-implementation-guide",
     slug: "edge-ai-implementation-guide",
@@ -799,7 +799,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/edge-ai-guide.jpg",
     newBadge: true,
     trending: false
-  },
+  }
   {
     id: "zero-trust-security-implementation",
     slug: "zero-trust-security-implementation",
@@ -815,7 +815,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/zero-trust-guide.jpg",
     newBadge: false,
     trending: true
-  },
+  }
   {
     id: "ai-content-generation-best-practices",
     slug: "ai-content-generation-best-practices",
@@ -831,7 +831,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/ai-content-generation.jpg",
     newBadge: true,
     trending: false
-  },
+  }
   {
     id: "mlops-reliability-patterns",
     slug: "mlops-reliability-patterns",
@@ -848,7 +848,6 @@ export const latestArticles: LatestArticle[] = [
     newBadge: false,
     trending: true
   }
-  ,
   {
     id: "secure-ml-supply-chain-2026",
     slug: "secure-ml-supply-chain-2026",
@@ -864,7 +863,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/secure-ml-supply-chain-2026.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "genai-routing-under-budgets-2026",
     slug: "genai-routing-under-budgets-2026",
@@ -880,7 +879,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/genai-routing-2026.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "platform-golden-paths-kpis-2026",
     slug: "platform-golden-paths-kpis-2026",
@@ -896,7 +895,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/platform-golden-paths-kpis-2026.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "ai-platform-scorecards-roi-2026",
     slug: "ai-platform-scorecards-roi-2026",
@@ -912,7 +911,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/ai-platform-scorecards-roi-2026.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "production-rag-quality-budgets-2026",
     slug: "production-rag-quality-budgets-2026",
@@ -928,7 +927,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/production-rag-quality-budgets-2026.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "ai-governance-blueprint-2025",
     slug: "ai-governance-blueprint-2025",
@@ -944,7 +943,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/ai-governance-blueprint.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "genai-guardrails-realtime-2025",
     slug: "genai-guardrails-realtime-2025",
@@ -960,7 +959,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/genai-guardrails.jpg",
     newBadge: true,
     trending: false
-  },
+  }
   {
     id: "cloud-finops-guardrails-2025",
     slug: "cloud-finops-guardrails-2025",
@@ -976,7 +975,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/cloud-finops-guardrails.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "practical-evals-scorecards-2025",
     slug: "practical-evals-scorecards-2025",
@@ -992,7 +991,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/practical-evals-2025.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "ai-agent-observability-2025",
     slug: "ai-agent-observability-2025",
@@ -1008,7 +1007,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/ai-agent-observability.jpg",
     newBadge: true,
     trending: false
-  },
+  }
   {
     id: "serverless-inference-cost-playbook-2025",
     slug: "serverless-inference-cost-playbook-2025",
@@ -1024,7 +1023,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/serverless-inference-costs.jpg",
     newBadge: true,
     trending: false
-  },
+  }
   {
     id: "ai-sales-copilot-playbook-2025",
     slug: "ai-sales-copilot-playbook-2025",
@@ -1040,7 +1039,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/ai-sales-copilot.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "secure-rag-2025",
     slug: "secure-rag-2025",
@@ -1057,7 +1056,6 @@ export const latestArticles: LatestArticle[] = [
     newBadge: true,
     trending: false
   }
-  ,
   {
     id: "agentic-workflows-blueprint-2026",
     slug: "agentic-workflows-blueprint-2026",
@@ -1073,7 +1071,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/agentic-workflows-2026.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "privacy-first-observability-2026",
     slug: "privacy-first-observability-2026",
@@ -1089,7 +1087,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/privacy-first-observability.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "on-device-agents-2026",
     slug: "on-device-agents-2026",
@@ -1105,7 +1103,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/on-device-agents-2026.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "genai-budgets-and-quality-tiers-2026",
     slug: "genai-budgets-and-quality-tiers-2026",
@@ -1121,7 +1119,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/genai-budgets-quality-tiers.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "secure-tools-marketplace-2026",
     slug: "secure-tools-marketplace-2026",
@@ -1137,7 +1135,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/secure-tools-marketplace.jpg",
     newBadge: true,
     trending: false
-  },
+  }
   {
     id: "ai-governance-in-practice-2026",
     slug: "ai-governance-in-practice-2026",
@@ -1153,7 +1151,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/ai-governance-in-practice-2026.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "edge-privacy-by-design-2026",
     slug: "edge-privacy-by-design-2026",
@@ -1170,7 +1168,6 @@ export const latestArticles: LatestArticle[] = [
     newBadge: true,
     trending: true
   }
-  ,
   {
     id: "ai-autonomous-incident-runbooks-2025",
     slug: "ai-autonomous-incident-runbooks-2025",
@@ -1186,7 +1183,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/ai-autonomous-incident-runbooks-2025.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "privacy-first-feature-flags-2025",
     slug: "privacy-first-feature-flags-2025",
@@ -1202,7 +1199,7 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/privacy-first-feature-flags-2025.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "platform-roi-scorecards-quickstart-2025",
     slug: "platform-roi-scorecards-quickstart-2025",
@@ -1238,7 +1235,7 @@ latestArticles.unshift(
     image: "/images/agent-blue-green-canary-2026.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "edge-llm-safety-caching-2026",
     slug: "edge-llm-safety-caching-2026",
@@ -1254,7 +1251,7 @@ latestArticles.unshift(
     image: "/images/edge-llm-safety-caching-2026.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "platform-slo-guardrails-2026",
     slug: "platform-slo-guardrails-2026",
@@ -1270,7 +1267,7 @@ latestArticles.unshift(
     image: "/images/platform-slo-guardrails-2026.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "ai-threat-hunting-with-llms-2026",
     slug: "ai-threat-hunting-with-llms-2026",
@@ -1286,7 +1283,7 @@ latestArticles.unshift(
     image: "/images/ai-threat-hunting-llms-2026.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "llm-production-runbooks-2026",
     slug: "llm-production-runbooks-2026",
@@ -1326,7 +1323,7 @@ latestArticles.unshift(
     image: "/images/agentic-observability-scorecards-2026.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "edge-privacy-cdn-2026",
     slug: "edge-privacy-cdn-2026",
@@ -1342,7 +1339,7 @@ latestArticles.unshift(
     image: "/images/edge-privacy-cdn-2026.jpg",
     newBadge: true,
     trending: true
-  },
+  }
   {
     id: "platform-golden-paths-slos-2026",
     slug: "platform-golden-paths-slos-2026",

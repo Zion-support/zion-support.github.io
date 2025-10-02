@@ -16,7 +16,7 @@ const GlobalAITransformationHub = () => {
       icon: <Target className="w-8 h-8" />,
       color: 'from-blue-500 to-cyan-500',
       link: '/services/enterprise-automation-transformation'
-    },
+    }
     {
       title: 'Quantum Consciousness AI',
       description: 'Revolutionary AI consciousness integration with infinite scalability',
@@ -24,7 +24,7 @@ const GlobalAITransformationHub = () => {
       icon: <Brain className="w-8 h-8" />,
       color: 'from-purple-500 to-violet-500',
       link: '/services/quantum-consciousness-ai-services'
-    },
+    }
     {
       title: 'Autonomous Operations',
       description: 'Self-managing systems with 99.99% uptime and zero human intervention',
@@ -32,7 +32,7 @@ const GlobalAITransformationHub = () => {
       icon: <Zap className="w-8 h-8" />,
       color: 'from-emerald-500 to-teal-500',
       link: '/services/autonomous-operations-platform'
-    },
+    }
     {
       title: 'Neural Security',
       description: 'Advanced AI-powered security with 99.7% threat prevention',
@@ -44,9 +44,9 @@ const GlobalAITransformationHub = () => {
   ];
 
   const successMetrics = [
-    { metric: '2.5M+', label: 'Global Users' },
-    { metric: '$15B+', label: 'Value Created' },
-    { metric: '99.99%', label: 'Success Rate' },
+    { metric: '2.5M+', label: 'Global Users' }
+    { metric: '$15B+', label: 'Value Created' }
+    { metric: '99.99%', label: 'Success Rate' }
     { metric: '500K+', label: 'Enterprise Clients' }
   ];
 

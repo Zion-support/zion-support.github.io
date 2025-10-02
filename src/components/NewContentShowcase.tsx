@@ -15,7 +15,7 @@ const newArticles2025 = [
     category: 'AI Infrastructure',
     link: '/blog/ai-autonomous-infrastructure-platform',
     readTime: '8 min read'
-  },
+  }
   {
     id: '2',
     title: 'Quantum-AI Hybrid Computing',
@@ -23,7 +23,7 @@ const newArticles2025 = [
     category: 'Quantum Computing',
     link: '/blog/quantum-ai-hybrid-computing',
     readTime: '12 min read'
-  },
+  }
   {
     id: '3',
     title: 'Zero Trust Security Framework',
@@ -43,7 +43,7 @@ const newServices2026 = [
     icon: '🤖',
     link: '/services/ai-autonomous-infrastructure-platform',
     pricing: 'Starting at $5,000/month'
-  },
+  }
   {
     id: '2',
     name: 'Quantum-AI Hybrid Computing',
@@ -52,7 +52,7 @@ const newServices2026 = [
     icon: '⚛️',
     link: '/services/quantum-ai-hybrid-computing'
     pricing: 'Starting at $10,000/month'
-  },
+  }
   {
     id: '3',
     name: 'Zero Trust Security Framework'

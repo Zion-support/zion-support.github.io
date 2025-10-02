@@ -26,7 +26,7 @@ export const octoberLatestBreakthroughContent = [
       downtime: "89%",
       market: "$47B"
     }
-  },
+  }
   {
     id: "autonomous-llm-orchestration-revolution",
     title: "Autonomous LLM Orchestration: 60% Cost Reduction at Enterprise Scale",
@@ -51,7 +51,7 @@ export const octoberLatestBreakthroughContent = [
       accuracy: "95%",
       market: "$180B"
     }
-  },
+  }
   {
     id: "vector-database-optimization-breakthrough",
     title: "Vector Database Optimization: 100x Faster RAG at Billion-Vector Scale",
@@ -76,7 +76,7 @@ export const octoberLatestBreakthroughContent = [
       recall: "99.9%",
       performance: "100x"
     }
-  },
+  }
   {
     id: "production-ready-ai-agents-framework",
     title: "Production-Ready AI Agents: 99.9% Uptime for Enterprise Autonomous Systems",

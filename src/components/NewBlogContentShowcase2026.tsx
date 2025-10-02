@@ -19,7 +19,7 @@ const NewBlogContentShowcase2026: React.FC = () => {
       gradient: 'from-blue-500 to-purple-500',
       badge: 'FEATURED',
       tags: ['AI', 'Revolution', 'Enterprise', 'Guide']
-    },
+    }
     {
       id: 2,
       title: 'Quantum Computing Breakthroughs: The Future of AI Processing',
@@ -37,7 +37,7 @@ const NewBlogContentShowcase2026: React.FC = () => {
       gradient: 'from-cyan-500 to-blue-500',
       badge: 'TRENDING',
       tags: ['Quantum', 'Computing', 'AI', 'Breakthrough']
-    },
+    }
     {
       id: 3,
       title: 'Enterprise AI Implementation: A Step-by-Step Success Guide',
@@ -55,7 +55,7 @@ const NewBlogContentShowcase2026: React.FC = () => {
       gradient: 'from-green-500 to-emerald-500',
       badge: 'POPULAR',
       tags: ['Enterprise', 'Implementation', 'AI', 'Success']
-    },
+    }
     {
       id: 4,
       title: 'Self-Evolving AI Systems: The Next Frontier of Artificial Intelligence',
@@ -73,7 +73,7 @@ const NewBlogContentShowcase2026: React.FC = () => {
       gradient: 'from-purple-500 to-pink-500',
       badge: 'INNOVATION',
       tags: ['Self-Evolving', 'AI', 'Innovation', 'Future']
-    },
+    }
     {
       id: 5,
       title: 'Predictive Analytics Revolution: Forecasting the Future with 99.9% Accuracy',
@@ -91,7 +91,7 @@ const NewBlogContentShowcase2026: React.FC = () => {
       gradient: 'from-orange-500 to-red-500',
       badge: 'ANALYTICS',
       tags: ['Predictive', 'Analytics', 'Forecasting', 'AI']
-    },
+    }
     {
       id: 6,
       title: 'AI Ethics and Governance: Building Responsible AI Systems',
@@ -113,9 +113,9 @@ const NewBlogContentShowcase2026: React.FC = () => {
   ];
 
   const blogStats = [
-    { value: '500+', label: 'Published Articles', icon: <Award className="w-6 h-6" /> },
-    { value: '2M+', label: 'Monthly Readers', icon: <Users className="w-6 h-6" /> },
-    { value: '4.8', label: 'Average Rating', icon: <Star className="w-6 h-6" /> },
+    { value: '500+', label: 'Published Articles', icon: <Award className="w-6 h-6" /> }
+    { value: '2M+', label: 'Monthly Readers', icon: <Users className="w-6 h-6" /> }
+    { value: '4.8', label: 'Average Rating', icon: <Star className="w-6 h-6" /> }
     { value: '150+', label: 'Expert Authors', icon: <Brain className="w-6 h-6" /> }
   ];
 

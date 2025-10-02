@@ -59,7 +59,7 @@ this.config = this.getDefaultConfig();
         'manifest-src': ["'self'"],
         'upgrade-insecure-requests': true,
         'block-all-mixed-content': true
-      },
+      }
       headers: {
         'X-Frame-Options': 'DENY',
         'X-Content-Type-Options': 'nosniff',

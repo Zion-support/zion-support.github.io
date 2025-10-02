@@ -8,7 +8,7 @@ const October2025AIOperationsBanner = () => {
       icon: Shield,
       stats: "99.2% Detection | 7,747% ROI",
       color: "from-blue-500 to-cyan-500"
-    },
+    }
     {
       title: "Autonomous Cloud Cost Optimization",
       description: "Save $127M+ annually with 67% cost reduction and 99.3% optimization accuracy",
@@ -16,7 +16,7 @@ const October2025AIOperationsBanner = () => {
       icon: TrendingDown,
       stats: "67% Savings | 18,287% ROI",
       color: "from-green-500 to-emerald-500"
-    },
+    }
     {
       title: "Real-Time AI Observability Platform",
       description: "99.94% uptime with predictive issue detection 37 minutes before impact",

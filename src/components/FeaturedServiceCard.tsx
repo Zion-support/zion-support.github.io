@@ -8,14 +8,14 @@ const FeaturedServiceCard: React.FC = () => {
       description: "Leverage artificial intelligence to automate processes and gain insights",
       features: ["Machine Learning", "NLP", "Computer Vision", "Predictive Analytics"],
       link: "/services/ai-services"
-    },
+    }
     {
       icon: "🚀",
       title: "Micro SaaS",
       description: "Scalable software solutions that address specific business needs",
       features: ["Custom Apps", "API Development", "Database Solutions", "Integration"],
       link: "/services/micro-saas"
-    },
+    }
     {
       icon: "💻",
       title: "IT Services",

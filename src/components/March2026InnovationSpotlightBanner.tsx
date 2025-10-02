@@ -7,14 +7,14 @@ const March2026InnovationSpotlightBanner = () => {
       impact: '500% cognitive enhancement',
       icon: '🧠',
       color: 'from-purple-500 to-indigo-500'
-    },
+    }
     {
       title: 'Quantum Temporal Computing',
       description: 'Processing information across multiple time dimensions simultaneously',
       impact: '1000x temporal efficiency',
       icon: '⏰',
       color: 'from-blue-500 to-cyan-500'
-    },
+    }
     {
       title: 'Autonomous Reality Synthesis',
       description: 'AI systems that create and manage parallel digital realities',
@@ -56,9 +56,9 @@ const March2026InnovationSpotlightBanner = () => {
           {/* Innovation Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
             {[
-              { value: '99.98%', label: 'Neural Accuracy', icon: '🧠', color: 'text-purple-400' },
-              { value: '1000x', label: 'Processing Speed', icon: '⚡', color: 'text-indigo-400' },
-              { value: '$5.2B', label: 'Market Creation', icon: '💰', color: 'text-blue-400' },
+              { value: '99.98%', label: 'Neural Accuracy', icon: '🧠', color: 'text-purple-400' }
+              { value: '1000x', label: 'Processing Speed', icon: '⚡', color: 'text-indigo-400' }
+              { value: '$5.2B', label: 'Market Creation', icon: '💰', color: 'text-blue-400' }
               { value: '500%', label: 'Enhancement', icon: '📈', color: 'text-emerald-400' }
             ].map((stat, index) => (
               <div key={index} className="text-center">
@@ -139,13 +139,13 @@ const March2026InnovationSpotlightBanner = () => {
                 achievement: '500% Cognitive Enhancement',
                 revenue: '$2.1B Revenue Growth',
                 icon: <Brain className="w-8 h-8" />
-              },
+              }
               {
                 company: 'Quantum Dynamics',
                 achievement: '1000x Processing Speed',
                 revenue: '$3.8B Market Value',
                 icon: <Zap className="w-8 h-8" />
-              },
+              }
               {
                 company: 'Reality Synthesis Corp',
                 achievement: '$5.2B Market Creation',

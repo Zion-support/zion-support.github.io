@@ -15,31 +15,31 @@ const AIEmailMarketing: React.FC = () => {
       title: "AI Content Generation",
       description: "Automatically generate personalized email content based on customer behavior, preferences, and engagement history.",
       benefit: "300% increase in open rates"
-    },
+    }
     {
       icon: Target,
       title: "Smart Segmentation",
       description: "AI-powered audience segmentation that identifies high-value customers and predicts optimal send times.",
       benefit: "85% improvement in click-through rates"
-    },
+    }
     {
       icon: BarChart3,
       title: "Predictive Analytics",
       description: "Advanced analytics that predict campaign performance and optimize subject lines, content, and timing.",
       benefit: "250% ROI improvement"
-    },
+    }
     {
       icon: Zap,
       title: "Automated Campaigns",
       description: "Intelligent automation that triggers personalized campaigns based on customer actions and lifecycle stages.",
       benefit: "70% reduction in manual work"
-    },
+    }
     {
       icon: Clock,
       title: "Optimal Timing",
       description: "AI determines the best time to send emails to each individual recipient for maximum engagement.",
       benefit: "45% increase in engagement"
-    },
+    }
     {
       icon: Shield,
       title: "Deliverability Optimization",
@@ -65,7 +65,7 @@ const AIEmailMarketing: React.FC = () => {
         "Basic segmentation"
       ],
       popular: false
-    },
+    }
     {
       name: "Professional",
       price: "$199",
@@ -84,7 +84,7 @@ const AIEmailMarketing: React.FC = () => {
         "API access"
       ],
       popular: true
-    },
+    }
     {
       name: "Enterprise",
       price: "$599",
@@ -115,14 +115,14 @@ const AIEmailMarketing: React.FC = () => {
       content: "AI email marketing increased our revenue by 180% in just 3 months. The personalized content generation and optimal timing features were game-changers for our business.",
       rating: 5,
       company: "E-Commerce Platform"
-    },
+    }
     {
       name: "David Chen",
       role: "VP Marketing, SaaS Startup",
       content: "The automated segmentation and predictive analytics helped us achieve a 15% conversion rate improvement. ROI increased by 250% within the first quarter.",
       rating: 5,
       company: "SaaS Startup"
-    },
+    }
     {
       name: "Sarah Johnson",
       role: "Head of Growth, FinTech",
@@ -138,19 +138,19 @@ const AIEmailMarketing: React.FC = () => {
       icon: Globe,
       description: "Personalized product recommendations, abandoned cart recovery, and post-purchase follow-ups.",
       benefits: ["40% increase in sales", "60% cart recovery rate", "35% customer lifetime value"]
-    },
+    }
     {
       title: "SaaS & B2B",
       icon: TrendingUp,
       description: "Lead nurturing, customer onboarding, feature announcements, and churn prevention campaigns.",
       benefits: ["50% faster onboarding", "30% reduction in churn", "45% increase in upgrades"]
-    },
+    }
     {
       title: "Healthcare",
       icon: Users,
       description: "Patient engagement, appointment reminders, health tips, and medication compliance.",
       benefits: ["70% appointment compliance", "40% patient engagement", "25% readmission reduction"]
-    },
+    }
     {
       title: "Education",
       icon: Brain,
@@ -163,23 +163,23 @@ const AIEmailMarketing: React.FC = () => {
     {
       title: "Content Personalization",
       description: "AI generates unique email content for each recipient based on their behavior, preferences, and engagement history."
-    },
+    }
     {
       title: "Behavioral Triggers",
       description: "Automated campaigns triggered by customer actions like website visits, product views, or purchase history."
-    },
+    }
     {
       title: "Predictive Segmentation",
       description: "Machine learning algorithms identify high-value segments and predict customer lifetime value."
-    },
+    }
     {
       title: "Subject Line Optimization",
       description: "AI tests and optimizes subject lines for maximum open rates using natural language processing."
-    },
+    }
     {
       title: "Send Time Optimization",
       description: "Advanced algorithms determine the optimal send time for each individual recipient."
-    },
+    }
     {
       title: "Performance Prediction",
       description: "Predict campaign performance before sending and optimize for maximum ROI."

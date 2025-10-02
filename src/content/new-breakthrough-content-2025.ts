@@ -47,7 +47,7 @@ export const breakthroughContent2025: BreakthroughContent[] = [
       accuracy: "99.99%",
       roi: "3,400%"
     }
-  },
+  }
   {
     id: "autonomous-enterprise-mesh-2025",
     slug: "autonomous-enterprise-mesh-2025",
@@ -70,7 +70,7 @@ export const breakthroughContent2025: BreakthroughContent[] = [
       accuracy: "98.5%",
       roi: "2,800%"
     }
-  },
+  }
   {
     id: "synthetic-consciousness-ai-2025",
     slug: "synthetic-consciousness-ai-2025",
@@ -93,7 +93,7 @@ export const breakthroughContent2025: BreakthroughContent[] = [
       accuracy: "95% emotional accuracy",
       roi: "∞ (transformational)"
     }
-  },
+  }
   {
     id: "neuromorphic-edge-computing-2025",
     slug: "neuromorphic-edge-computing-2025",
@@ -116,7 +116,7 @@ export const breakthroughContent2025: BreakthroughContent[] = [
       accuracy: "99.8%",
       roi: "2,400%"
     }
-  },
+  }
   {
     id: "ai-hyperautomation-platform-2025",
     slug: "ai-hyperautomation-platform-2025",
@@ -139,7 +139,7 @@ export const breakthroughContent2025: BreakthroughContent[] = [
       accuracy: "95% automation",
       roi: "1,200%"
     }
-  },
+  }
   {
     id: "quantum-blockchain-security-2025",
     slug: "quantum-blockchain-security-2025",

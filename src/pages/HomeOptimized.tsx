@@ -90,10 +90,10 @@ const HomeOptimized = () => {
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12 max-w-2xl mx-auto">
               {[
-                { value: "500+", label: "Projects Delivered" },
-                { value: "99.9%", label: "Uptime SLA" },
-                { value: "24/7", label: "Support" },
-                { value: "5★", label: "Client Rating" },
+                { value: "500+", label: "Projects Delivered" }
+                { value: "99.9%", label: "Uptime SLA" }
+                { value: "24/7", label: "Support" }
+                { value: "5★", label: "Client Rating" }
               ].map((stat, index) => (
                 <div key={index} className="text-center group hover:scale-105 transition-all duration-300">
                   <div className="text-3xl font-bold text-zion-cyan group-hover:text-zion-blue-light transition-colors">
@@ -158,29 +158,22 @@ const HomeOptimized = () => {
                 title: "Enterprise Security",
                 description: "Advanced cybersecurity solutions protecting your business from evolving threats.",
                 features: ["SOC 2 Compliance", "Penetration Testing", "24/7 Monitoring"],
-                color: "blue",
-              },
-              {
-                icon: Zap,
+                color: "blue"}
+              {icon: Zap,
                 title: "AI Innovation",
                 description: "Cutting-edge artificial intelligence solutions that transform your operations.",
                 features: ["Machine Learning", "Natural Language Processing", "Computer Vision"],
-                color: "purple",
-              },
-              {
-                icon: Users,
+                color: "purple"}
+              {icon: Users,
                 title: "Expert Team",
                 description: "World-class engineers and consultants dedicated to your success.",
                 features: ["10+ Years Experience", "Certified Professionals", "Dedicated Support"],
-                color: "cyan",
-              },
-              {
-                icon: Globe,
+                color: "cyan"}
+              {icon: Globe,
                 title: "Global Reach",
                 description: "Serving clients worldwide with localized expertise and support.",
                 features: ["50+ Countries", "Local Support", "24/7 Availability"],
-                color: "blue-light",
-              },
+                color: "blue-light"}
             ].map((feature, index) => (
               <div key={index} className="card group hover:scale-105 transition-all duration-300 hover:shadow-2xl">
                 <div className={`bg-zion-${feature.color}/20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:bg-zion-${feature.color}/30 transition-colors border border-zion-${feature.color}/30 shadow-lg`}>
@@ -247,18 +240,13 @@ const HomeOptimized = () => {
                 {
                   name: "Sarah Johnson",
                   role: "CEO, TechCorp",
-                  quote: "Zion Tech Group transformed our entire digital infrastructure. Their AI solutions increased our efficiency by 300%.",
-                },
-                {
-                  name: "Michael Chen",
+                  quote: "Zion Tech Group transformed our entire digital infrastructure. Their AI solutions increased our efficiency by 300%."}
+                {name: "Michael Chen",
                   role: "CTO, InnovateLab",
-                  quote: "Outstanding team and exceptional results. They delivered our mobile app ahead of schedule and under budget.",
-                },
-                {
-                  name: "Emily Rodriguez",
+                  quote: "Outstanding team and exceptional results. They delivered our mobile app ahead of schedule and under budget."}
+                {name: "Emily Rodriguez",
                   role: "Security Director, FinanceFirst",
-                  quote: "The security solutions they implemented gave us complete peace of mind. Highly recommended!",
-                },
+                  quote: "The security solutions they implemented gave us complete peace of mind. Highly recommended!"}
               ].map((testimonial, index) => (
                 <div key={index} className="card text-center hover:scale-105 transition-all duration-300 hover:shadow-2xl">
                   <div className="flex justify-center mb-4">

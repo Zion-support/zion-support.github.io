@@ -153,7 +153,7 @@ this.initializeObservers();
       alerts,
       timestamp: Date.now(),
       totalMetrics: this.metrics.length
-    }, null, 2);
+    } null, 2);
   }
 }
 

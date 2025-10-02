@@ -22,13 +22,11 @@ freshnessWeight: number;
 engagementWeight: number;
 }
 
-const DEFAULT_STRATEGY: RotationStrategy = {
-  maxVisible: 5,
+const DEFAULT_STRATEGY: RotationStrategy = {maxVisible: 5,
   rotationInterval: 300000, // 5 minutes
   priorityWeight: 0.5,
   freshnessWeight: 0.3,
-  engagementWeight: 0.2,
-};
+  engagementWeight: 0.2};
 
 /**
  * Calculate engagement score for a banner
@@ -102,7 +100,7 @@ export const groupBannersByCategory = (
     }
     acc[banner.category].push(banner);
     return acc;
-  }, {} as Record<string, BannerConfig[]>);
+  } {} as Record<string, BannerConfig[]>);
 };
 
 /**
@@ -230,12 +228,10 @@ export const getRefreshInterval = (avgEngagement: number): number => {
   return 180000; // 3 minutes for low engagement
 };
 
-export default {
-  selectBannersForDisplay,
+export default {selectBannersForDisplay,
   selectBalancedBanners,
   trackImpression,
   trackClick,
   loadBannerStats,
   selectBannerVariation,
-  getRefreshInterval,
-};
+  getRefreshInterval};

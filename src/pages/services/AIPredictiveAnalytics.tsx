@@ -15,31 +15,31 @@ const AIPredictiveAnalytics: React.FC = () => {
       title: "Machine Learning Models",
       description: "Advanced ML algorithms that predict future trends, customer behavior, and business outcomes with 94% accuracy.",
       benefit: "94% prediction accuracy rate"
-    },
+    }
     {
       icon: TrendingUp,
       title: "Real-Time Forecasting",
       description: "Live predictive analytics that update continuously as new data flows in, providing instant insights.",
       benefit: "Real-time decision making"
-    },
+    }
     {
       icon: Target,
       title: "Customer Lifetime Value",
       description: "Predict customer behavior, churn risk, and lifetime value to optimize marketing spend and retention.",
       benefit: "35% increase in customer retention"
-    },
+    }
     {
       icon: BarChart3,
       title: "Revenue Forecasting",
       description: "Accurate revenue predictions based on historical data, market trends, and external factors.",
       benefit: "98% forecast accuracy"
-    },
+    }
     {
       icon: Shield,
       title: "Risk Assessment",
       description: "Identify potential risks and opportunities before they impact your business operations.",
       benefit: "60% risk reduction"
-    },
+    }
     {
       icon: Clock,
       title: "Automated Insights",
@@ -65,7 +65,7 @@ const AIPredictiveAnalytics: React.FC = () => {
         "Basic forecasting"
       ],
       popular: false
-    },
+    }
     {
       name: "Professional",
       price: "$899",
@@ -84,7 +84,7 @@ const AIPredictiveAnalytics: React.FC = () => {
         "A/B testing insights"
       ],
       popular: true
-    },
+    }
     {
       name: "Enterprise",
       price: "$2,999",
@@ -115,14 +115,14 @@ const AIPredictiveAnalytics: React.FC = () => {
       content: "The predictive analytics platform helped us increase our customer retention by 40% and optimize our marketing spend by $2M annually. The ROI was evident within the first quarter.",
       rating: 5,
       company: "RetailTech Solutions"
-    },
+    }
     {
       name: "David Kim",
       role: "CFO, FinTech Innovations",
       content: "Revenue forecasting accuracy improved from 78% to 98%. This gave us the confidence to make strategic investments and secure additional funding rounds.",
       rating: 5,
       company: "FinTech Innovations"
-    },
+    }
     {
       name: "Dr. Sarah Thompson",
       role: "Head of Analytics, Healthcare Network",
@@ -138,19 +138,19 @@ const AIPredictiveAnalytics: React.FC = () => {
       icon: Globe,
       description: "Predict customer purchase behavior, optimize inventory, and personalize shopping experiences.",
       benefits: ["25% increase in conversion", "30% reduction in inventory costs", "40% improvement in customer satisfaction"]
-    },
+    }
     {
       title: "Financial Services",
       icon: Database,
       description: "Credit risk assessment, fraud detection, and investment portfolio optimization.",
       benefits: ["60% reduction in bad debt", "95% fraud detection accuracy", "20% increase in portfolio returns"]
-    },
+    }
     {
       title: "Healthcare Analytics",
       icon: Users,
       description: "Patient outcome prediction, resource allocation, and treatment optimization.",
       benefits: ["35% improvement in patient outcomes", "25% reduction in readmissions", "40% cost savings"]
-    },
+    }
     {
       title: "Supply Chain",
       icon: Zap,

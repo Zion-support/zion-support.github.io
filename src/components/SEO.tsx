@@ -73,7 +73,7 @@ const SEO: React.FC<SEOProps> = ({
             "telephone": "+1-302-464-0950",
             "contactType": "customer service",
             "email": "kleber@ziontechgroup.com"
-          },
+          }
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "364 E Main St STE 1008",
@@ -81,7 +81,7 @@ const SEO: React.FC<SEOProps> = ({
             "addressRegion": "DE",
             "postalCode": "19709",
             "addressCountry": "US"
-          },
+          }
           "sameAs": [
             "https://twitter.com/ziontechgroup",
             "https://linkedin.com/company/zion-tech-group",

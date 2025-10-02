@@ -58,8 +58,7 @@ nofollow: number;
   mobileOptimized: boolean;
 }
 
-class SEOAuditor {
-  private issues: SEOIssue[] = [];
+class SEOAuditor {private issues: SEOIssue[] = [];
 
   /**
    * Run full SEO audit
@@ -88,8 +87,7 @@ class SEOAuditor {
       images,
       links,
       structuredData,
-      mobileOptimized,
-    };
+      mobileOptimized};
   }
 
   /**
@@ -209,15 +207,13 @@ class SEOAuditor {
   /**
    * Audit heading hierarchy
    */
-  private auditHeadings() {
-    const headings = {
+  private auditHeadings() {const headings = {
       h1: document.querySelectorAll('h1').length,
       h2: document.querySelectorAll('h2').length,
       h3: document.querySelectorAll('h3').length,
       h4: document.querySelectorAll('h4').length,
       h5: document.querySelectorAll('h5').length,
-      h6: document.querySelectorAll('h6').length,
-    };
+      h6: document.querySelectorAll('h6').length};
 
     if (headings.h1 === 0) {
       this.addIssue('error', 'headings', 'No H1 heading found', 'body', 'Add exactly one H1 heading that describes the page content', 'high');
@@ -236,15 +232,13 @@ class SEOAuditor {
   /**
    * Audit images
    */
-  private auditImages() {
-    const images = document.querySelectorAll('img');
+  private auditImages() {const images = document.querySelectorAll('img');
     const imagesWithAlt = Array.from(images).filter(img => img.alt && img.alt.trim().length > 0);
     
     const metrics = {
       total: images.length,
       withAlt: imagesWithAlt.length,
-      withoutAlt: images.length - imagesWithAlt.length,
-    };
+      withoutAlt: images.length - imagesWithAlt.length};
 
     if (metrics.withoutAlt > 0) {
       this.addIssue('warning', 'images', `${metrics.withoutAlt} images missing alt text`, 'img', 'Add descriptive alt text to all images for accessibility and SEO', 'medium');
@@ -299,11 +293,9 @@ class SEOAuditor {
       }
     });
 
-    return {
-      internal,
+    return {internal,
       external,
-      nofollow,
-    };
+      nofollow};
   }
 
   /**

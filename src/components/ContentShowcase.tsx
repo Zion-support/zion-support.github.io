@@ -7,13 +7,13 @@ const ContentShowcase: React.FC = () => {
       description: "Discover the newest AI technologies and their applications in business",
       category: "AI Technology",
       readTime: "5 min read"
-    },
+    }
     {
       title: "Micro SaaS Trends 2024",
       description: "Explore the latest trends in micro SaaS development and deployment",
       category: "SaaS Solutions",
       readTime: "7 min read"
-    },
+    }
     {
       title: "Cloud Migration Guide",
       description: "Comprehensive guide to successful cloud migration strategies",

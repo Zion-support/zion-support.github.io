@@ -82,7 +82,7 @@ export const blogPosts: BlogPost[] = [
     featured: true,
     slug: '/blog/ai-revolution-2025',
     tags: ['AI', 'Business Strategy', 'Transformation', '2025 Trends']
-  },
+  }
   {
     id: 'ai-workflow-automation',
     title: 'AI Workflow Automation: Transforming Business Operations',
@@ -94,7 +94,7 @@ export const blogPosts: BlogPost[] = [
     featured: false,
     slug: '/blog/ai-workflow-automation',
     tags: ['Automation', 'Workflow', 'AI', 'Productivity']
-  },
+  }
   {
     id: 'cloud-migration-best-practices',
     title: 'Cloud Migration Best Practices for 2025',
@@ -106,7 +106,7 @@ export const blogPosts: BlogPost[] = [
     featured: false,
     slug: '/blog/cloud-migration-best-practices',
     tags: ['Cloud', 'Migration', 'Best Practices', 'DevOps']
-  },
+  }
   {
     id: 'cybersecurity-ai-era',
     title: 'Cybersecurity in the AI Era: Protecting Your Digital Assets',
@@ -118,7 +118,7 @@ export const blogPosts: BlogPost[] = [
     featured: false,
     slug: '/blog/cybersecurity-ai-era',
     tags: ['Cybersecurity', 'AI Security', 'Zero Trust', 'Threat Detection']
-  },
+  }
   {
     id: 'data-analytics-revolution',
     title: 'Data Analytics Revolution: From Insights to Action',
@@ -130,7 +130,7 @@ export const blogPosts: BlogPost[] = [
     featured: false,
     slug: '/blog/data-analytics-revolution',
     tags: ['Data Analytics', 'Insights', 'Predictive Modeling', 'Business Intelligence']
-  },
+  }
   {
     id: 'devops-automation-scaling',
     title: 'DevOps Automation: Scaling Infrastructure with Intelligence',
@@ -142,7 +142,7 @@ export const blogPosts: BlogPost[] = [
     featured: false,
     slug: '/blog/devops-automation-scaling',
     tags: ['DevOps', 'Automation', 'Infrastructure', 'CI/CD']
-  },
+  }
   {
     id: 'ai-virtual-assistants-customer-service',
     title: 'The Rise of AI Virtual Assistants in Customer Service',
@@ -172,7 +172,7 @@ export const caseStudies: CaseStudy[] = [
     featured: true,
     slug: '/case-studies/techcorp-ai-transformation',
     tags: ['AI Transformation', 'E-commerce', 'Automation', 'Cost Savings']
-  },
+  }
   {
     id: 'healthtech-solutions',
     title: 'HealthTech Solutions: AI Virtual Assistant Success',
@@ -186,7 +186,7 @@ export const caseStudies: CaseStudy[] = [
     featured: true,
     slug: '/case-studies/healthtech-solutions',
     tags: ['Healthcare', 'AI Assistant', 'Customer Service', 'Automation']
-  },
+  }
   {
     id: 'financeflow-automation',
     title: 'FinanceFlow: AI Workflow Automation Success',
@@ -213,7 +213,7 @@ export const services: Service[] = [
     pricing: {
       starting: '$199/month',
       popular: true
-    },
+    }
     features: [
       'Predictive Analytics',
       'Real-time Dashboards',
@@ -223,24 +223,24 @@ export const services: Service[] = [
       'Custom Visualizations'
     ],
     metrics: [
-      { value: '85%', label: 'Faster Decision Making' },
-      { value: '98%', label: 'Prediction Accuracy' },
+      { value: '85%', label: 'Faster Decision Making' }
+      { value: '98%', label: 'Prediction Accuracy' }
       { value: '300%', label: 'ROI Improvement' }
     ],
     testimonial: {
       quote: 'The AI Analytics Platform transformed how we make decisions. We can now predict trends and optimize operations like never before.',
       author: 'Sarah Chen',
       company: 'TechCorp Inc.'
-    },
+    }
     cta: {
       primary: 'Start Free Trial',
       secondary: 'View Case Studies'
-    },
+    }
     icon: '📊',
     featured: true,
     slug: '/services/ai-analytics-platform',
     tags: ['Analytics', 'AI', 'Data Visualization', 'Predictive Modeling']
-  },
+  }
   {
     id: 'ai-workflow-automation',
     title: 'AI Workflow Automation',
@@ -248,7 +248,7 @@ export const services: Service[] = [
     category: 'AI & Automation',
     pricing: {
       starting: '$149/month'
-    },
+    }
     features: [
       'Process Automation',
       'Smart Triggers',
@@ -258,19 +258,19 @@ export const services: Service[] = [
       'Custom Workflows'
     ],
     metrics: [
-      { value: '75%', label: 'Process Efficiency' },
-      { value: '60%', label: 'Time Savings' },
+      { value: '75%', label: 'Process Efficiency' }
+      { value: '60%', label: 'Time Savings' }
       { value: '90%', label: 'Error Reduction' }
     ],
     cta: {
       primary: 'Get Started',
       secondary: 'View Demo'
-    },
+    }
     icon: '⚙️',
     featured: true,
     slug: '/services/ai-workflow-automation',
     tags: ['Automation', 'Workflow', 'AI', 'Process Optimization']
-  },
+  }
   {
     id: 'ai-virtual-assistant',
     title: 'AI Virtual Assistant',
@@ -278,7 +278,7 @@ export const services: Service[] = [
     category: 'AI & Customer Service',
     pricing: {
       starting: '$99/month'
-    },
+    }
     features: [
       '24/7 Support',
       'Multi-channel',
@@ -288,19 +288,19 @@ export const services: Service[] = [
       'Escalation Management'
     ],
     metrics: [
-      { value: '95%', label: 'Customer Satisfaction' },
-      { value: '80%', label: 'Faster Response' },
+      { value: '95%', label: 'Customer Satisfaction' }
+      { value: '80%', label: 'Faster Response' }
       { value: '50%', label: 'Cost Reduction' }
     ],
     cta: {
       primary: 'Try Demo',
       secondary: 'Learn More'
-    },
+    }
     icon: '💬',
     featured: true,
     slug: '/services/ai-virtual-assistant',
     tags: ['AI Assistant', 'Customer Service', 'NLP', 'Automation']
-  },
+  }
   {
     id: 'cloud-migration',
     title: 'Cloud Migration',
@@ -308,7 +308,7 @@ export const services: Service[] = [
     category: 'Cloud Services',
     pricing: {
       starting: '$2,999'
-    },
+    }
     features: [
       'Zero Downtime',
       'Security Compliance',
@@ -320,12 +320,12 @@ export const services: Service[] = [
     cta: {
       primary: 'Get Quote',
       secondary: 'View Process'
-    },
+    }
     icon: '☁️',
     featured: false,
     slug: '/services/cloud-migration',
     tags: ['Cloud', 'Migration', 'Infrastructure', 'DevOps']
-  },
+  }
   {
     id: 'devops-automation',
     title: 'DevOps Automation',
@@ -333,7 +333,7 @@ export const services: Service[] = [
     category: 'DevOps & Infrastructure',
     pricing: {
       starting: '$399/month'
-    },
+    }
     features: [
       'CI/CD Pipelines',
       'Infrastructure as Code',
@@ -345,12 +345,12 @@ export const services: Service[] = [
     cta: {
       primary: 'Start Setup',
       secondary: 'View Benefits'
-    },
+    }
     icon: '🔧',
     featured: false,
     slug: '/services/devops-automation',
     tags: ['DevOps', 'CI/CD', 'Infrastructure', 'Automation']
-  },
+  }
   {
     id: 'cybersecurity-consulting',
     title: 'Cybersecurity Consulting',
@@ -358,7 +358,7 @@ export const services: Service[] = [
     category: 'Security & Compliance',
     pricing: {
       starting: '$599/month'
-    },
+    }
     features: [
       'Threat Detection',
       'Zero-trust Architecture',
@@ -370,7 +370,7 @@ export const services: Service[] = [
     cta: {
       primary: 'Security Audit',
       secondary: 'View Services'
-    },
+    }
     icon: '🛡️',
     featured: false,
     slug: '/services/cybersecurity-consulting',
@@ -392,7 +392,7 @@ export const promotionalBanners: PromotionalBanner[] = [
     hideAfter: 15,
     active: true,
     priority: 0
-  },
+  }
   {
     id: 'governance-scorecards-2026',
     message: '📚 AI Governance 2026: Scorecards Engineers Actually Use',
@@ -405,7 +405,7 @@ export const promotionalBanners: PromotionalBanner[] = [
     hideAfter: 18,
     active: true,
     priority: 1
-  },
+  }
   {
     id: 'freshness-aware-rag-v2',
     message: '🧭 Freshness‑Aware RAG v2: TTL Budgets and SLAs',
@@ -418,7 +418,7 @@ export const promotionalBanners: PromotionalBanner[] = [
     hideAfter: 16,
     active: true,
     priority: 2
-  },
+  }
   {
     id: 'edge-flags-blueprint-2026',
     message: '⚡ Edge Flags Blueprint 2026: <100ms Global Releases',
@@ -431,7 +431,7 @@ export const promotionalBanners: PromotionalBanner[] = [
     hideAfter: 16,
     active: true,
     priority: 2
-  },
+  }
   {
     id: 'new-blog-banner',
     message: '🔥 New: AI Platform Engineering 2025 + Secure ML Supply Chain',
@@ -444,7 +444,7 @@ export const promotionalBanners: PromotionalBanner[] = [
     hideAfter: 15,
     active: true,
     priority: 1
-  },
+  }
   {
     id: 'ai-risk-register-banner',
     message: '🛡️ New: AI Risk Register That Drives Action',
@@ -457,7 +457,7 @@ export const promotionalBanners: PromotionalBanner[] = [
     hideAfter: 16,
     active: true,
     priority: 1
-  },
+  }
   {
     id: 'practical-evals-banner',
     message: '📈 Practical AI Evals That Predict Outcomes',
@@ -470,7 +470,7 @@ export const promotionalBanners: PromotionalBanner[] = [
     hideAfter: 18,
     active: true,
     priority: 2
-  },
+  }
   {
     id: 'analytics-platform-banner',
     message: '🚀 Launch: AI Analytics Platform - Transform Data into Actionable Insights',
@@ -483,7 +483,7 @@ export const promotionalBanners: PromotionalBanner[] = [
     hideAfter: 18,
     active: true,
     priority: 2
-  },
+  }
   {
     id: 'techcorp-success-banner',
     message: '🏆 Success Story: TechCorp Achieved 90% Efficiency Gain with AI Transformation',
@@ -496,7 +496,7 @@ export const promotionalBanners: PromotionalBanner[] = [
     hideAfter: 20,
     active: true,
     priority: 3
-  },
+  }
   {
     id: 'free-trial-banner',
     message: '🎯 Limited Time: 30-Day Free Trial for AI Analytics Platform - No Credit Card Required',
@@ -509,7 +509,7 @@ export const promotionalBanners: PromotionalBanner[] = [
     hideAfter: 0,
     active: true,
     priority: 4
-  },
+  }
   {
     id: 'cloud-finops-guardrails-banner',
     message: '💸 Cloud FinOps Guardrails Engineers Actually Use',
@@ -522,7 +522,7 @@ export const promotionalBanners: PromotionalBanner[] = [
     hideAfter: 16,
     active: true,
     priority: 2
-  },
+  }
   {
     id: 'practical-evals-2025-banner',
     message: '📈 Practical AI Evals That Predict Business Outcomes',
@@ -535,7 +535,7 @@ export const promotionalBanners: PromotionalBanner[] = [
     hideAfter: 16,
     active: true,
     priority: 2
-  },
+  }
   {
     id: 'serverless-inference-costs-banner',
     message: '🧰 Serverless Inference Cost Playbook',

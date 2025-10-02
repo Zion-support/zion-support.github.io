@@ -136,27 +136,27 @@ const RealTimeCognitiveAutomation = () => {
                     title: "Intelligent Document Processing",
                     description: "99.8% accuracy across PDF, images, scanned documents, and handwriting. Support for 127 languages.",
                     icon: "📄"
-                  },
+                  }
                   {
                     title: "Cognitive Decision Engine",
                     description: "AI-powered decision-making with 94% prediction accuracy. Multi-criteria analysis in real-time.",
                     icon: "🎯"
-                  },
+                  }
                   {
                     title: "Workflow Orchestration",
                     description: "Visual no-code designer with smart routing and autonomous exception handling. 10x faster deployment.",
                     icon: "🔄"
-                  },
+                  }
                   {
                     title: "Natural Language Understanding",
                     description: "98% accuracy in intent recognition. Process and respond to human language with contextual understanding.",
                     icon: "💬"
-                  },
+                  }
                   {
                     title: "Predictive Analytics",
                     description: "Process mining and bottleneck detection. Anticipate issues before they occur with predictive maintenance.",
                     icon: "📊"
-                  },
+                  }
                   {
                     title: "Enterprise Integration",
                     description: "Pre-built connectors for 500+ systems including SAP, Salesforce, ServiceNow, and custom APIs.",
@@ -182,19 +182,19 @@ const RealTimeCognitiveAutomation = () => {
                     savings: "$12.4M",
                     automation: "95%",
                     highlights: ["Loan processing: 96% faster", "Fraud detection: 97% accuracy", "KYC/AML: 100% coverage"]
-                  },
+                  }
                   {
                     industry: "Healthcare",
                     savings: "$8.7M",
                     automation: "92%",
                     highlights: ["Claims processing: 92% auto-adjudication", "Medical coding: 99.1% accuracy", "Patient scheduling: 100% automated"]
-                  },
+                  }
                   {
                     industry: "Manufacturing",
                     savings: "$18.2M",
                     automation: "94%",
                     highlights: ["Quality control: 99.7% defect detection", "Inventory: 98% forecast accuracy", "Maintenance: 84% failures prevented"]
-                  },
+                  }
                   {
                     industry: "Retail & E-commerce",
                     savings: "$6.8M",
@@ -239,13 +239,13 @@ const RealTimeCognitiveAutomation = () => {
                     name: "Business Starter",
                     price: "$7,999",
                     features: ["50,000 transactions/month", "10 automated workflows", "Standard integrations", "Email support", "99.5% SLA"]
-                  },
+                  }
                   {
                     name: "Professional",
                     price: "$19,999",
                     popular: true,
                     features: ["250,000 transactions/month", "50 automated workflows", "Advanced integrations", "24/7 support", "99.9% SLA"]
-                  },
+                  }
                   {
                     name: "Enterprise",
                     price: "$49,999",

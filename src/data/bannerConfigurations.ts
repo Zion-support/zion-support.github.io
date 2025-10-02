@@ -18,7 +18,7 @@ export const bannerConfigurations: BannerConfig[] = [
     textColor: '#ffffff',
     animation: 'slide',
     duration: 5000
-  },
+  }
   {
     id: 'quantum-computing',
     title: 'Quantum Computing Breakthrough',
@@ -33,7 +33,7 @@ export const bannerConfigurations: BannerConfig[] = [
     textColor: '#ffffff',
     animation: 'fade',
     duration: 6000
-  },
+  }
   {
     id: 'enterprise-automation',
     title: 'Enterprise Automation Suite',
@@ -48,7 +48,7 @@ export const bannerConfigurations: BannerConfig[] = [
     textColor: '#ffffff',
     animation: 'scale',
     duration: 5000
-  },
+  }
   {
     id: 'cognitive-orchestration',
     title: 'Cognitive Orchestration Platform',
@@ -63,7 +63,7 @@ export const bannerConfigurations: BannerConfig[] = [
     textColor: '#ffffff',
     animation: 'slide',
     duration: 7000
-  },
+  }
   {
     id: 'edge-ai-5g',
     title: 'Edge AI + 5G Revolution',
@@ -78,7 +78,7 @@ export const bannerConfigurations: BannerConfig[] = [
     textColor: '#ffffff',
     animation: 'fade',
     duration: 5500
-  },
+  }
   {
     id: 'ai-security-framework',
     title: 'AI Security & Trust Framework',
@@ -98,12 +98,12 @@ export const bannerConfigurations: BannerConfig[] = [
 
 // Banner category filters
 export const bannerCategories = [
-  { id: 'all', name: 'All Categories', count: bannerConfigurations.length },
-  { id: 'ai', name: 'AI & Machine Learning', count: bannerConfigurations.filter(b => b.category === 'ai').length },
-  { id: 'quantum', name: 'Quantum Computing', count: bannerConfigurations.filter(b => b.category === 'quantum').length },
-  { id: 'automation', name: 'Automation', count: bannerConfigurations.filter(b => b.category === 'automation').length },
-  { id: 'cognitive', name: 'Cognitive Systems', count: bannerConfigurations.filter(b => b.category === 'cognitive').length },
-  { id: 'edge', name: 'Edge Computing', count: bannerConfigurations.filter(b => b.category === 'edge').length },
+  { id: 'all', name: 'All Categories', count: bannerConfigurations.length }
+  { id: 'ai', name: 'AI & Machine Learning', count: bannerConfigurations.filter(b => b.category === 'ai').length }
+  { id: 'quantum', name: 'Quantum Computing', count: bannerConfigurations.filter(b => b.category === 'quantum').length }
+  { id: 'automation', name: 'Automation', count: bannerConfigurations.filter(b => b.category === 'automation').length }
+  { id: 'cognitive', name: 'Cognitive Systems', count: bannerConfigurations.filter(b => b.category === 'cognitive').length }
+  { id: 'edge', name: 'Edge Computing', count: bannerConfigurations.filter(b => b.category === 'edge').length }
   { id: 'security', name: 'Security', count: bannerConfigurations.filter(b => b.category === 'security').length }
 ];
 

@@ -176,13 +176,13 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {
                       icon: "🚛",
                       agents: ["Demand forecasting agents", "Inventory management agents", "Logistics agents", "Procurement agents"],
                       results: ["99.2% demand forecast accuracy", "78% reduction in inventory costs", "94% on-time delivery", "$1.8B+ annual value"]
-                    },
+                    }
                     {
                       title: "Customer Experience Transformation",
                       icon: "❤️",
                       agents: ["Intent recognition agents", "Personalization agents", "Recommendation agents", "Support agents"],
                       results: ["97.8% customer satisfaction", "12.4x engagement increase", "89% faster response", "$3.2B+ revenue growth"]
-                    },
+                    }
                     {
                       title: "Financial Services Operations",
                       icon: "💰",

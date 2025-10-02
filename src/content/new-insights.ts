@@ -18,7 +18,7 @@ export const newInsights = [
         <li>Cut/scale based on evidence deltas</li>
       </ul>
     `
-  },
+  }
   {
     id: "guardrails-scorecards-evals-2025",
     title: "Guardrails Engineers Adopt: Scorecards, PR Gates, Online Canaries",
@@ -38,7 +38,7 @@ export const newInsights = [
         <li>Budgeted online evals</li>
       </ul>
     `
-  },
+  }
   {
     id: "edge-flags-blueprint-2025",
     title: "Edge Flags Blueprint: Zero‑Regret Rollouts",
@@ -52,7 +52,7 @@ export const newInsights = [
       <h2>Progressive Delivery</h2>
       <p>Segment by geo and account, cap risk with budgets, and stream telemetry for evidence‑based releases.</p>
     `
-  },
+  }
   {
     id: "rag-freshness-ttl-2025",
     title: "RAG Freshness: TTL Budgets and Versioned Corpora",
@@ -66,7 +66,7 @@ export const newInsights = [
       <h2>Operate with Freshness</h2>
       <p>Use TTL windows, async warmups, and versioned corpora to keep retrieval accurate at scale.</p>
     `
-  },
+  }
   {
     id: "secure-ml-supply-chain",
     title: "Secure ML Supply Chain: Lineage, SBOMs, and Egress Controls",
@@ -80,7 +80,7 @@ export const newInsights = [
       <h2>End-to-End Controls</h2>
       <p>Track lineage from datasets to deployed models. Enforce policy tests and signed artifacts across the pipeline.</p>
     `
-  },
+  }
   {
     id: "ai-automation-2025",
     title: "The Future of AI Automation in Enterprise",
@@ -113,7 +113,7 @@ export const newInsights = [
         <li>Employee satisfaction: 40% increase in job satisfaction scores</li>
       </ul>
     `
-  },
+  }
   {
     id: "cybersecurity-ai-2025",
     title: "AI-Powered Cybersecurity: The Next Generation of Protection",
@@ -141,7 +141,7 @@ export const newInsights = [
       <h3>Implementation Roadmap</h3>
       <p>Organizations should start with AI-enhanced endpoint detection and gradually expand to network-level and cloud security automation.</p>
     `
-  },
+  }
   {
     id: "cloud-native-2025",
     title: "Building Resilient Cloud-Native Applications",
@@ -166,7 +166,7 @@ export const newInsights = [
       <h3>Best Practices for 2025</h3>
       <p>Focus on observability, implement chaos engineering, and adopt GitOps workflows for reliable deployments.</p>
     `
-  },
+  }
   {
     id: "data-analytics-ai",
     title: "AI-Driven Data Analytics: From Insights to Action",
@@ -191,7 +191,7 @@ export const newInsights = [
       <h3>Implementation Strategy</h3>
       <p>Start with data quality initiatives, then implement self-service analytics platforms that empower business users to explore data independently.</p>
     `
-  },
+  }
   {
     id: "devops-automation-2025",
     title: "DevOps Automation: Accelerating Software Delivery",
@@ -216,7 +216,7 @@ export const newInsights = [
       <h3>Tools and Technologies</h3>
       <p>Leverage modern tools like Kubernetes, Terraform, and GitLab CI for comprehensive automation workflows.</p>
     `
-  },
+  }
   {
     id: "micro-saas-trends",
     title: "The Rise of Micro-SaaS: Building Profitable Niche Solutions",
@@ -241,7 +241,7 @@ export const newInsights = [
       <h3>Building Your Micro-SaaS</h3>
       <p>Start with customer discovery, validate your problem-solution fit, and iterate rapidly based on user feedback.</p>
     `
-  },
+  }
   {
     id: "enterprise-rag-blueprint-2025",
     title: "Enterprise RAG Blueprint v2: Freshness, Security, and Evals",
@@ -261,7 +261,7 @@ export const newInsights = [
         <li>Prompt firewalls and red-teaming</li>
       </ul>
     `
-  },
+  }
   {
     id: "finops-scorecards-2025",
     title: "Cloud FinOps Scorecards Engineers Actually Use",

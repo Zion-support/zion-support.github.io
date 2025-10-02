@@ -27,11 +27,11 @@ const contentItems: ContentItem[] = [
     featured: true,
     href: '/blog/ai-autonomous-cloud-operations-2026',
     metrics: [
-      { label: 'Uptime', value: '99.9%' },
-      { label: 'Cost Reduction', value: '90%' },
+      { label: 'Uptime', value: '99.9%' }
+      { label: 'Cost Reduction', value: '90%' }
       { label: 'Operations', value: 'Zero-touch' }
     ]
-  },
+  }
   {
     id: 'ai-fintech-transformation-2026',
     title: 'AI FinTech Transformation 2026: Complete Digital Banking Revolution',
@@ -43,11 +43,11 @@ const contentItems: ContentItem[] = [
     featured: true,
     href: '/blog/ai-fintech-transformation-2026',
     metrics: [
-      { label: 'Automation', value: '95%' },
-      { label: 'Annual Savings', value: '$5M+' },
+      { label: 'Automation', value: '95%' }
+      { label: 'Annual Savings', value: '$5M+' }
       { label: 'Accuracy', value: '99.9%' }
     ]
-  },
+  }
   {
     id: 'ai-retail-automation-2026',
     title: 'AI Retail Automation 2026: $8M ROI Case Study',
@@ -59,11 +59,11 @@ const contentItems: ContentItem[] = [
     featured: true,
     href: '/case-studies/ai-retail-automation-2026',
     metrics: [
-      { label: 'Automation Rate', value: '98%' },
-      { label: 'Productivity', value: '300%' },
+      { label: 'Automation Rate', value: '98%' }
+      { label: 'Productivity', value: '300%' }
       { label: 'Annual ROI', value: '$8M' }
     ]
-  },
+  }
   {
     id: 'ai-sustainability-green-tech-2026',
     title: 'AI Sustainability & Green Tech 2026: Carbon-Neutral Operations',
@@ -75,11 +75,11 @@ const contentItems: ContentItem[] = [
     featured: false,
     href: '/blog/ai-sustainability-green-tech-2026',
     metrics: [
-      { label: 'Energy Reduction', value: '80%' },
-      { label: 'Annual Savings', value: '$2M+' },
+      { label: 'Energy Reduction', value: '80%' }
+      { label: 'Annual Savings', value: '$2M+' }
       { label: 'Carbon Footprint', value: 'Neutral' }
     ]
-  },
+  }
   {
     id: 'ai-platform-architecture-2026',
     title: 'AI Platform Architecture 2026: Enterprise-Scale Infrastructure',
@@ -91,11 +91,11 @@ const contentItems: ContentItem[] = [
     featured: false,
     href: '/blog/ai-platform-architecture-2026',
     metrics: [
-      { label: 'Scalability', value: 'Enterprise' },
-      { label: 'Performance', value: '99.9%' },
+      { label: 'Scalability', value: 'Enterprise' }
+      { label: 'Performance', value: '99.9%' }
       { label: 'Integration', value: 'Seamless' }
     ]
-  },
+  }
   {
     id: 'ai-finops-advanced-2026',
     title: 'AI FinOps Advanced 2026: Complete Financial Operations Automation',
@@ -107,8 +107,8 @@ const contentItems: ContentItem[] = [
     featured: false,
     href: '/blog/ai-finops-advanced-2026',
     metrics: [
-      { label: 'Cost Optimization', value: '70%' },
-      { label: 'Automation', value: '95%' },
+      { label: 'Cost Optimization', value: '70%' }
+      { label: 'Automation', value: '95%' }
       { label: 'Accuracy', value: '99%' }
     ]
   }

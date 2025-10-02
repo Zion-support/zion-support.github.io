@@ -136,27 +136,27 @@ const AdvancedCybersecurityAI = () => {
                     title: "AI-Powered Threat Detection",
                     description: "99.92% accuracy with behavioral analysis, pattern recognition, and zero-day detection. 95% fewer false positives.",
                     icon: "🎯"
-                  },
+                  }
                   {
                     title: "Automated Incident Response",
                     description: "<5 second response initiation. 99.7% faster than manual response with intelligent quarantine and self-healing.",
                     icon: "⚡"
-                  },
+                  }
                   {
                     title: "Predictive Security Intelligence",
                     description: "Forecast threats before they happen with attack path analysis, vulnerability prediction, and risk scoring.",
                     icon: "🔮"
-                  },
+                  }
                   {
                     title: "Unified Security Platform",
                     description: "SIEM, EDR, NDR, SOAR, and UEBA in one platform. 500+ pre-built security integrations.",
                     icon: "🛡️"
-                  },
+                  }
                   {
                     title: "Advanced Analytics & Forensics",
                     description: "Attack timeline reconstruction, root cause analysis, and threat hunting with interactive visualization.",
                     icon: "🔬"
-                  },
+                  }
                   {
                     title: "Compliance & Governance",
                     description: "Automated monitoring for GDPR, HIPAA, PCI DSS, SOC 2, ISO 27001 with real-time compliance reporting.",
@@ -182,19 +182,19 @@ const AdvancedCybersecurityAI = () => {
                     savings: "$8.4M",
                     results: "Zero breaches",
                     highlights: ["96% reduction in fraud losses", "100% PCI compliance", "Real-time transaction monitoring"]
-                  },
+                  }
                   {
                     industry: "Healthcare",
                     savings: "$6.2M",
                     results: "100% HIPAA",
                     highlights: ["Zero ransomware infections", "92% reduction in security incidents", "Patient data protection"]
-                  },
+                  }
                   {
                     industry: "Manufacturing",
                     savings: "$4.8M",
                     results: "Zero disruptions",
                     highlights: ["OT/IT security convergence", "Industrial IoT protection", "IP theft prevention"]
-                  },
+                  }
                   {
                     industry: "Retail & E-commerce",
                     savings: "$5.6M",
@@ -239,13 +239,13 @@ const AdvancedCybersecurityAI = () => {
                     name: "Business Protection",
                     price: "$12,999",
                     features: ["Up to 100 endpoints", "10 TB log storage/month", "Core threat detection", "Email support (8x5)", "99.5% SLA"]
-                  },
+                  }
                   {
                     name: "Enterprise Security",
                     price: "$29,999",
                     popular: true,
                     features: ["Up to 1,000 endpoints", "50 TB log storage/month", "Advanced threat detection", "24/7 support", "99.9% SLA"]
-                  },
+                  }
                   {
                     name: "Managed Security",
                     price: "$59,999",

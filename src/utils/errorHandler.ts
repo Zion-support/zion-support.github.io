@@ -47,16 +47,14 @@ this.setupGlobalErrorHandlers();
     });
   }
 
-  public handleError(errorInfo: Partial<ErrorInfo>): void {
-    const fullErrorInfo: ErrorInfo = {
+  public handleError(errorInfo: Partial<ErrorInfo>): void {const fullErrorInfo: ErrorInfo = {
       message: errorInfo.message || 'Unknown error',
       stack: errorInfo.stack,
       componentStack: errorInfo.componentStack,
       timestamp: errorInfo.timestamp || new Date().toISOString(),
       url: errorInfo.url || window.location.href,
       userAgent: errorInfo.userAgent || navigator.userAgent,
-      userId: errorInfo.userId,
-    };
+      userId: errorInfo.userId};
 
     // Add to queue
     this.errorQueue.push(fullErrorInfo);
@@ -86,7 +84,7 @@ this.setupGlobalErrorHandlers();
       // Example integration with external service:
       // await fetch('/api/errors', {
       //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
+      //   headers: { 'Content-Type': 'application/json' }
       //   body: JSON.stringify(errorInfo),
       // });
     } catch (error) {
@@ -102,8 +100,7 @@ this.setupGlobalErrorHandlers();
     this.errorQueue = [];
   }
 
-  public getErrorStats(): { total: number; recent: number } {
-    const now = new Date();
+  public getErrorStats(): { total: number; recent: number } {const now = new Date();
     const oneHourAgo = new Date(now.getTime() - 60 * 60 * 1000);
     
     const recent = this.errorQueue.filter(
@@ -112,8 +109,7 @@ this.setupGlobalErrorHandlers();
 
     return {
       total: this.errorQueue.length,
-      recent,
-    };
+      recent};
   }
 }
 

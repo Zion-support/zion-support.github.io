@@ -26,7 +26,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
       gradient: 'from-pink-500 to-red-500',
       icon: <Sparkles className="w-6 h-6" />,
       link: '/blog/ai-2025-oct-03-governed-agent-rollbacks'
-    },
+    }
     {
       id: 7,
       title: 'Consentless Personalization (Edge)',
@@ -38,7 +38,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
       gradient: 'from-teal-500 to-cyan-500',
       icon: <TrendingUp className="w-6 h-6" />,
       link: '/blog/edge-2025-oct-02-consentless-personalization-blueprint'
-    },
+    }
     {
       id: 1,
       title: 'AI 2027: Operational Trust Blueprint',
@@ -50,7 +50,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
       gradient: 'from-blue-500 to-purple-500',
       icon: <Star className="w-6 h-6" />,
       link: '/blog/ai-2027-operational-trust-blueprint'
-    },
+    }
     {
       id: 2,
       title: 'Edge 2026: Private Feature Flags',
@@ -62,7 +62,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
       gradient: 'from-cyan-500 to-blue-500',
       icon: <TrendingUp className="w-6 h-6" />,
       link: '/blog/edge-2026-private-feature-flags'
-    },
+    }
     {
       id: 3,
       title: 'GenAI Quality Tiers v2 (2026)',
@@ -78,9 +78,9 @@ const NewContentAdvertisingBanner: React.FC = () => {
   ];
 
   const achievements = [
-    { value: '500K+', label: 'Monthly Readers', icon: <Users className="w-8 h-8" /> },
-    { value: '98%', label: 'Customer Satisfaction', icon: <Star className="w-8 h-8" /> },
-    { value: '200+', label: 'Expert Articles', icon: <Award className="w-8 h-8" /> },
+    { value: '500K+', label: 'Monthly Readers', icon: <Users className="w-8 h-8" /> }
+    { value: '98%', label: 'Customer Satisfaction', icon: <Star className="w-8 h-8" /> }
+    { value: '200+', label: 'Expert Articles', icon: <Award className="w-8 h-8" /> }
     { value: '50+', label: 'Industry Awards', icon: <Target className="w-8 h-8" /> }
   ];
 

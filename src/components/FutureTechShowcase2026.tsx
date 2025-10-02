@@ -15,7 +15,7 @@ const FutureTechShowcase2026: React.FC = () => {
       gradient: 'from-cyan-500 to-blue-500',
       badge: 'QUANTUM AI',
       stats: '10,000x Speed Boost'
-    },
+    }
     {
       id: 2,
       title: 'Self-Evolving AI Ecosystems',
@@ -29,7 +29,7 @@ const FutureTechShowcase2026: React.FC = () => {
       gradient: 'from-purple-500 to-pink-500',
       badge: 'SELF-EVOLVING',
       stats: '99.7% Auto-Improvement'
-    },
+    }
     {
       id: 3,
       title: 'Predictive Reality Modeling',
@@ -43,7 +43,7 @@ const FutureTechShowcase2026: React.FC = () => {
       gradient: 'from-green-500 to-emerald-500',
       badge: 'PREDICTIVE',
       stats: '99.9% Accuracy'
-    },
+    }
     {
       id: 4,
       title: 'Immersive AI Workspaces',
@@ -57,7 +57,7 @@ const FutureTechShowcase2026: React.FC = () => {
       gradient: 'from-orange-500 to-red-500',
       badge: 'IMMERSIVE',
       stats: '100% Integration'
-    },
+    }
     {
       id: 5,
       title: 'Quantum-Secure AI Networks',
@@ -71,7 +71,7 @@ const FutureTechShowcase2026: React.FC = () => {
       gradient: 'from-indigo-500 to-purple-500',
       badge: 'QUANTUM-SECURE',
       stats: 'Unbreakable Security'
-    },
+    }
     {
       id: 6,
       title: 'Meta-Cognitive AI Orchestration',
@@ -199,9 +199,9 @@ const FutureTechShowcase2026: React.FC = () => {
         {/* Revolutionary Stats Section */}
         <div className="grid md:grid-cols-4 gap-8 mb-16">
           {[
-            { value: '10,000x', label: 'Quantum Processing Speed', icon: '⚛️' },
-            { value: '99.7%', label: 'Auto-Improvement Rate', icon: '🧠' },
-            { value: '99.9%', label: 'Predictive Accuracy', icon: '🎯' },
+            { value: '10,000x', label: 'Quantum Processing Speed', icon: '⚛️' }
+            { value: '99.7%', label: 'Auto-Improvement Rate', icon: '🧠' }
+            { value: '99.9%', label: 'Predictive Accuracy', icon: '🎯' }
             { value: '$1B+', label: 'Enterprise Value Created', icon: '💰' }
           ].map((stat, index) => (
             <div key={index} className="text-center">

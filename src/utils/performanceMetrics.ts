@@ -203,13 +203,11 @@ class PerformanceMetricsTracker {
     name: string,
     value: number,
     rating: 'good' | 'needs-improvement' | 'poor'
-  ): void {
-    const metric: PerformanceMetric = {
+  ): void {const metric: PerformanceMetric = {
       name,
       value: Math.round(value),
       rating,
-      timestamp: Date.now(),
-    };
+      timestamp: Date.now()};
     
     this.metrics.set(name, metric);
     
@@ -317,15 +315,13 @@ class PerformanceMetricsTracker {
   /**
    * Get performance report
    */
-  getReport(): PerformanceReport {
-    return {
+  getReport(): PerformanceReport {return {
       webVitals: {
         lcp: this.metrics.get('LCP'),
         fid: this.metrics.get('FID'),
         cls: this.metrics.get('CLS'),
         fcp: this.metrics.get('FCP'),
-        ttfb: this.metrics.get('TTFB'),
-      },
+        ttfb: this.metrics.get('TTFB')}
       customMetrics: Array.from(this.metrics.values()).filter(
         m => !['LCP', 'FID', 'CLS', 'FCP', 'TTFB'].includes(m.name)
       ),
