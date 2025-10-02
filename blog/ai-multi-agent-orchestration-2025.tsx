@@ -94,7 +94,7 @@ const AIMultiAgentOrchestration2025 = () => {
               <li>• 97% fraud detection accuracy (up from 78%)</li>
               <li>• $50M annual savings from prevented fraud</li>
               <li>• 90% reduction in false positives</li>
-              <li>• <1 second average detection time</li>
+              <li>• &lt;1 second average detection time</li>
             </ul>
           </div>
 

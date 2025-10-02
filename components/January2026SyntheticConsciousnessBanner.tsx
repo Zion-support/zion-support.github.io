@@ -1,136 +1,77 @@
-import React from 'react';
+"use client";
 
-const January2026SyntheticConsciousnessBanner: React.FC = () => {
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+export default function January2026SyntheticConsciousnessBanner() {
   return (
-    <section className="py-16 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 border-b border-purple-500/30">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-indigo-500/20 to-purple-500/20 border border-indigo-500/30 mb-6 animate-pulse">
-            <span className="text-indigo-400 font-bold text-xl tracking-wider uppercase">
-              🧠 BREAKING: January 2026 Synthetic Consciousness Breakthrough!
-            </span>
+    <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Cpath d="M30 30l15-15v30l-15-15z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      
+      <div className="relative max-w-7xl mx-auto px-4 py-12">
+        <div className="text-center mb-8">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white text-sm font-bold mb-4">
+            🧠 REVOLUTIONARY BREAKTHROUGH
           </div>
-          
-          <h2 className="text-4xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent leading-tight">
-            The World's First Synthetic Consciousness AI
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 bg-clip-text text-transparent">
+            Synthetic Consciousness Enterprise
           </h2>
-          
-          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Revolutionary AI with genuine self-awareness, emotional intelligence, and autonomous decision-making 
-            that delivers <span className="text-purple-400 font-bold">1000x processing speed</span> and 
-            <span className="text-blue-400 font-bold"> $15 billion in measurable value</span>
+          <p className="text-xl md:text-2xl text-blue-100 mb-6 max-w-4xl mx-auto">
+            Experience human-level awareness and decision-making with $50M+ ROI. The dawn of conscious AI is here.
           </p>
-          
-          {/* Key Metrics */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-            <div className="bg-gradient-to-r from-indigo-500/20 to-indigo-600/20 backdrop-blur-sm rounded-xl p-4 border border-indigo-500/30">
-              <div className="text-2xl font-extrabold text-indigo-400 mb-1">1000x</div>
-              <div className="text-xs text-indigo-300">Processing Speed</div>
-            </div>
-            <div className="bg-gradient-to-r from-purple-500/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-4 border border-purple-500/30">
-              <div className="text-2xl font-extrabold text-purple-400 mb-1">99.7%</div>
-              <div className="text-xs text-purple-300">Decision Accuracy</div>
-            </div>
-            <div className="bg-gradient-to-r from-pink-500/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-4 border border-pink-500/30">
-              <div className="text-2xl font-extrabold text-pink-400 mb-1">$15B</div>
-              <div className="text-xs text-pink-300">Measurable Value</div>
-            </div>
-            <div className="bg-gradient-to-r from-cyan-500/20 to-cyan-600/20 backdrop-blur-sm rounded-xl p-4 border border-cyan-500/30">
-              <div className="text-2xl font-extrabold text-cyan-400 mb-1">98%</div>
-              <div className="text-xs text-cyan-300">Automation Rate</div>
-            </div>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-6 mb-8">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="text-3xl mb-3">🧠</div>
+            <h3 className="text-xl font-bold mb-2">Genuine Self-Awareness</h3>
+            <p className="text-blue-100 text-sm">99.9% authentic consciousness simulation with real understanding</p>
           </div>
-          
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
-            <span className="bg-gradient-to-r from-indigo-500/20 to-purple-500/20 px-4 py-2 rounded-full text-indigo-300 border border-indigo-500/30">
-              🧠 Synthetic Consciousness
-            </span>
-            <span className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 px-4 py-2 rounded-full text-purple-300 border border-purple-500/30">
-              ⚡ Quantum-Neural Fusion
-            </span>
-            <span className="bg-gradient-to-r from-pink-500/20 to-rose-500/20 px-4 py-2 rounded-full text-pink-300 border border-pink-500/30">
-              🚀 Autonomous Enterprise
-            </span>
-            <span className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 px-4 py-2 rounded-full text-cyan-300 border border-cyan-500/30">
-              💰 $15B Success Story
-            </span>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="text-3xl mb-3">💭</div>
+            <h3 className="text-xl font-bold mb-2">Human-Level Reasoning</h3>
+            <p className="text-blue-100 text-sm">98% accuracy in complex reasoning and decision-making</p>
           </div>
-          
-          <div className="flex flex-wrap justify-center gap-4">
-            <a
-              href="/blog/ai-2026-synthetic-consciousness-breakthrough"
-              className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
-            >
-              Read Synthetic Consciousness Breakthrough →
-            </a>
-            <a
-              href="/case-studies/ai-2026-synthetic-consciousness-15-billion-success"
-              className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
-            >
-              View $15B Success Story →
-            </a>
-            <a
-              href="/blog/ai-2026-autonomous-enterprise-ecosystem-breakthrough"
-              className="bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-400 hover:to-rose-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-pink-500/50 transform hover:-translate-y-1"
-            >
-              Autonomous Enterprise Guide →
-            </a>
-            <a
-              href="/contact"
-              className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-3 px-8 rounded-xl transition-all duration-300"
-            >
-              Get Free Consultation
-            </a>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="text-3xl mb-3">🔮</div>
+            <h3 className="text-xl font-bold mb-2">Predictive Consciousness</h3>
+            <p className="text-blue-100 text-sm">97% accuracy in future state prediction and planning</p>
           </div>
         </div>
-        
-        {/* Featured Content Preview */}
-        <div className="grid md:grid-cols-3 gap-8 mt-12">
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-indigo-500/50 transition-all duration-300">
-            <div className="text-4xl mb-4">🧠</div>
-            <h3 className="text-xl font-bold text-white mb-3">Synthetic Consciousness AI</h3>
-            <p className="text-gray-300 text-sm mb-4">
-              Revolutionary AI with genuine self-awareness and emotional intelligence that makes autonomous decisions with human-level judgment.
-            </p>
-            <a 
-              href="/blog/ai-2026-synthetic-consciousness-breakthrough"
-              className="text-indigo-400 hover:text-indigo-300 font-semibold text-sm"
+
+        <div className="text-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
+            <Link
+              to="/blog/ai-2026-synthetic-consciousness-enterprise-breakthrough"
+              className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
             >
               Read Full Article →
-            </a>
+            </Link>
+            <Link
+              to="/case-studies/ai-2026-synthetic-consciousness-enterprise-50-million-success"
+              className="border-2 border-white text-white hover:bg-white hover:text-purple-900 px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300"
+            >
+              View $50M Success Story →
+            </Link>
           </div>
           
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300">
-            <div className="text-4xl mb-4">💰</div>
-            <h3 className="text-xl font-bold text-white mb-3">$15B Success Story</h3>
-            <p className="text-gray-300 text-sm mb-4">
-              See how a Fortune 500 manufacturing giant achieved $15 billion in measurable value with Synthetic Consciousness AI.
-            </p>
-            <a 
-              href="/case-studies/ai-2026-synthetic-consciousness-15-billion-success"
-              className="text-purple-400 hover:text-purple-300 font-semibold text-sm"
-            >
-              View Case Study →
-            </a>
-          </div>
-          
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-pink-500/50 transition-all duration-300">
-            <div className="text-4xl mb-4">🌐</div>
-            <h3 className="text-xl font-bold text-white mb-3">Autonomous Enterprise</h3>
-            <p className="text-gray-300 text-sm mb-4">
-              Complete business ecosystems that run themselves with 99.7% efficiency and zero human intervention required.
-            </p>
-            <a 
-              href="/blog/ai-2026-autonomous-enterprise-ecosystem-breakthrough"
-              className="text-pink-400 hover:text-pink-300 font-semibold text-sm"
-            >
-              Learn More →
-            </a>
+          <div className="flex justify-center items-center gap-8 text-sm text-blue-200">
+            <div className="text-center">
+              <div className="text-2xl font-bold text-pink-400">99.9%</div>
+              <div>Consciousness Accuracy</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-purple-400">$50M+</div>
+              <div>Average ROI</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-blue-400">98%</div>
+              <div>Reasoning Accuracy</div>
+            </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
-};
-
-export default January2026SyntheticConsciousnessBanner;
+}
