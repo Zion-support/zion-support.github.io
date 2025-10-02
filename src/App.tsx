@@ -8,7 +8,7 @@ import SEOOptimizer from './components/SEOOptimizer';
 import AdvancedAnalytics from './components/AdvancedAnalytics';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import NotificationSystem from './components/NotificationSystem';
-import PerformanceMonitor from './components/PerformanceMonitor';
+import { PerformanceMonitor } from './components/PerformanceMonitor';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
@@ -44,7 +44,7 @@ interface WindowWithEnhancements extends Window {
 // Initialize performance enhancements function
 const initializePerformanceEnhancements = () => {
   // Performance enhancement initialization logic
-  console.log('Performance enhancements initialized');
+  // Performance enhancements initialized
 };
 
 // Simple placeholder components for other routes
