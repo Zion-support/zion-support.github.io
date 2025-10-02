@@ -1,227 +1,297 @@
-// @ts-nocheck
+import React from 'react';
+import Link from 'next/link';
 
-const posts = [
-  {
-    title: 'Enterprise AI Roadmap 2025: Scorecards, Guardrails, and Reliable Velocity',
-    description:
-      'A practical roadmap to fund, govern, and ship AI with KPI‑linked scorecards and guardrails‑as‑code.',
-    href: '/blog/ai-2025-oct-04-enterprise-ai-roadmap-scorecards',
-    date: '2025-10-04',
-    tags: ['Roadmap', 'Scorecards', 'Guardrails'],
-    featured: true,
-  },
-  {
-    title: 'AI 2026: Quantum-Neural Fusion Revolutionary Breakthrough',
-    description:
-      'Explore the groundbreaking convergence of quantum computing and neural networks that\'s revolutionizing enterprise AI in 2026.',
-    href: '/blog/ai-2026-quantum-neural-fusion-revolutionary-breakthrough',
-    date: '2026-01-15',
-    tags: ['Quantum Computing', 'Neural Networks', 'AI Fusion', 'Enterprise AI'],
-    featured: true,
-  },
-  {
-    title: 'AI 2026: Synthetic Consciousness Enterprise Transformation',
-    description:
-      'Discover how synthetic consciousness AI is revolutionizing enterprise operations with self-aware systems and autonomous decision-making.',
-    href: '/blog/ai-2026-synthetic-consciousness-enterprise-transformation',
-    date: '2026-01-20',
-    tags: ['Synthetic Consciousness', 'Self-Aware AI', 'Enterprise Transformation', 'AI Ethics'],
-    featured: true,
-  },
-  {
-    title: 'AI 2026: Autonomous Enterprise Operations Revolution',
-    description:
-      'Learn how autonomous AI systems are revolutionizing enterprise operations with self-managing, self-optimizing, and self-healing capabilities.',
-    href: '/blog/ai-2026-autonomous-enterprise-operations-revolution',
-    date: '2026-01-25',
-    tags: ['Autonomous Operations', 'Enterprise AI', 'Self-Managing Systems', 'Business Automation'],
-    featured: true,
-  },
-  {
-    title: 'GenAI Security in 2025: Practical Controls That Actually Work',
-    description:
-      'A pragmatic security blueprint for production GenAI: controls, gateways, and evals.',
-    href: '/blog/genai-security-2025',
-    date: '2025-09-11',
-    tags: ['AI', 'Security', 'Governance'],
-  },
-  {
-    title: 'Secure RAG Architecture in 2025: Safety, Scale, and Speed',
-    description:
-      'A pragmatic blueprint for multi-tenant, eval-driven RAG with strong isolation and uptime.',
-    href: '/blog/secure-rag-architecture-2025',
-    date: '2025-09-11',
-    tags: ['RAG', 'Security', 'Architecture'],
-  },
-  {
-    title: 'AI Product Roadmaps That Actually Ship',
-    description:
-      'Milestones, guardrails, and evals that keep AI features shipping on time with quality.',
-    href: '/blog/ai-product-roadmaps-that-ship',
-    date: '2025-09-11',
-    tags: ['Product', 'AI', 'Strategy'],
-  },
-  {
-    title: 'Edge AI in Manufacturing 2025: Faster Decisions, Lower Costs',
-    description:
-      'Move inference to the edge for sub-100ms decisions, resilience, and bandwidth savings.',
-    href: '/blog/edge-ai-in-manufacturing-2025',
-    date: '2025-09-11',
-    tags: ['Edge AI', 'Manufacturing', 'IoT'],
-  },
-  {
-    title: 'GenAI Evals in Production: What Actually Works',
-    description:
-      'Build continuous eval loops with golden tasks, HITL audits, and drift-aware sampling.',
-    href: '/blog/genai-evals-in-production',
-    date: '2025-09-11',
-    tags: ['GenAI', 'Evals', 'Quality'],
-  },
-  {
-    title: 'Startup Micro SaaS Playbook: From Idea to $10k MRR',
-    description:
-      'A pragmatic blueprint to launch and grow a Micro SaaS with capital efficiency.',
-    href: '/blog/startup-micro-saas-playbook',
-    date: '2025-09-11',
-    tags: ['Startup', 'SaaS', 'Growth'],
-  },
-  {
-    title: 'AI Governance Operating Model: From Policy to Practice',
-    description:
-      'Translate policy into day-to-day decisions with risk tiering, evals, and reviews.',
-    href: '/blog/ai-governance-operating-model',
-    date: '2025-09-11',
-    tags: ['AI', 'Governance', 'Risk'],
-  },
-  {
-    title: 'Serverless for ML in 2025: Simple, Cost-Efficient, Production-Ready',
-    description:
-      'Run ML and GenAI on serverless with predictable cost and strong reliability.',
-    href: '/blog/serverless-for-ml-2025',
-    date: '2025-09-11',
-    tags: ['Serverless', 'ML', 'Cloud'],
-  },
-  {
-    title: 'Practical AI Agents for Small Businesses',
-    description:
-      'How SMBs can deploy lightweight AI agents to automate support, sales outreach, and back-office tasks safely.',
-    href: '/blog/ai-agents-for-smbs',
-    date: '2025-09-11',
-    tags: ['AI', 'Automation', 'Agents'],
-  },
-  {
-    title: 'Production-Grade AI Agents: Observability and Safety',
-    description:
-      'How to harden agents for production with logging, evals, safety and cost controls.',
-    href: '/blog/production-grade-ai-agents',
-    date: '2025-09-11',
-    tags: ['AI', 'Agents', 'MLOps'],
-  },
-  {
-    title: 'Cloud Cost Optimization in 2025: Proven Playbook',
-    description:
-      'A tactical guide to cut 20–40% of cloud spend without sacrificing performance or velocity.',
-    href: '/blog/cloud-cost-optimization-2025',
-    date: '2025-09-11',
-    tags: ['Cloud', 'FinOps', 'DevOps'],
-  },
-  {
-    title: 'Cloud FinOps Automation: 30% Savings With Guardrails',
-    description:
-      'Automation-first FinOps: waste sweeps, rightsizing approvals, commitments, and guardrails.',
-    href: '/blog/cloud-finops-automation',
-    date: '2025-09-11',
-    tags: ['Cloud', 'FinOps', 'Automation'],
-  },
-  {
-    title: 'AI-Powered Customer Support Playbooks',
-    description:
-      'Production-ready patterns for self-serve assistants, case triage, agent copilots, and QA.',
-    href: '/blog/ai-customer-support-playbooks',
-    date: '2025-09-11',
-    tags: ['AI', 'CX', 'Automation'],
-  },
-  {
-    title: 'AI Infrastructure Cost Controls That Actually Work',
-    description:
-      'A pragmatic framework to reduce inference costs while maintaining performance and velocity.',
-    href: '/blog/ai-infra-cost-controls',
-    date: '2025-09-11',
-    tags: ['Cloud', 'FinOps', 'AI'],
-  },
-  {
-    title: 'Enterprise RAG Blueprint: From Pilot to Production',
-    description:
-      'Step-by-step architecture and rollout plan for RAG in regulated, multi-tenant environments.',
-    href: '/blog/enterprise-rag-blueprint',
-    date: '2025-09-11',
-    tags: ['RAG', 'LLM', 'Architecture'],
-  },
-  {
-    title: 'The Modern Data Stack in 2025: Pragmatic Guide',
-    description:
-      'Ingestion, lakehouse, transformations, metrics and activation that actually work at scale.',
-    href: '/blog/modern-data-stack-2025',
-    date: '2025-09-11',
-    tags: ['Data', 'Analytics', 'Engineering'],
-  },
-];
+export const metadata = {
+  title: 'Blog & Insights - Zion Tech Group',
+  description: 'Stay updated with the latest AI trends, breakthrough innovations, and enterprise transformation insights from Zion Tech Group.',
+  keywords: 'AI blog, technology insights, enterprise transformation, AI trends, breakthrough innovations',
+};
 
-export default function BlogIndexPage() {
+export default function BlogPage() {
+  const featuredPosts = [
+    {
+      title: 'AI 2026 November Quantum Superintelligence Breakthrough',
+      excerpt: 'Revolutionary quantum AI implementation achieving unprecedented business transformation with $500B ROI.',
+      date: 'November 2026',
+      readTime: '8 min read',
+      category: 'Quantum AI',
+      link: '/blog/ai-2026-november-quantum-superintelligence-breakthrough',
+      featured: true
+    },
+    {
+      title: 'AI 2026 August Quantum Consciousness Revolution',
+      excerpt: 'Autonomous operations transformation with quantum consciousness breakthrough delivering $50B success.',
+      date: 'August 2026',
+      readTime: '6 min read',
+      category: 'Autonomous Systems',
+      link: '/blog/ai-2026-august-quantum-consciousness-revolution',
+      featured: true
+    },
+    {
+      title: 'AI 2026 July Mega Breakthrough Revolution',
+      excerpt: 'Enterprise automation revolution with AI-powered business intelligence achieving $25.3B success.',
+      date: 'July 2026',
+      readTime: '7 min read',
+      category: 'Enterprise AI',
+      link: '/blog/ai-2026-july-mega-breakthrough-revolution',
+      featured: true
+    }
+  ];
+
+  const recentPosts = [
+    {
+      title: 'AI Customer Data Platforms 2026',
+      excerpt: 'Next-generation customer data platforms powered by AI for enterprise transformation.',
+      date: 'December 2025',
+      readTime: '5 min read',
+      category: 'Data Analytics',
+      link: '/blog/ai-customer-data-platforms-2026'
+    },
+    {
+      title: 'AI Customer Journey AI 2026',
+      excerpt: 'Revolutionary AI-powered customer journey optimization for enterprise success.',
+      date: 'December 2025',
+      readTime: '6 min read',
+      category: 'Customer Experience',
+      link: '/blog/ai-customer-journey-ai-2026'
+    },
+    {
+      title: 'AI Agent Observability 2026',
+      excerpt: 'Advanced observability solutions for AI agents in enterprise environments.',
+      date: 'December 2025',
+      readTime: '4 min read',
+      category: 'AI Operations',
+      link: '/blog/ai-agent-observability-2026'
+    },
+    {
+      title: 'Agentic Workflow Orchestration 2026',
+      excerpt: 'Autonomous workflow orchestration powered by AI agents for enterprise efficiency.',
+      date: 'December 2025',
+      readTime: '7 min read',
+      category: 'Workflow Automation',
+      link: '/blog/agentic-workflow-orchestration-2026'
+    },
+    {
+      title: 'AI Autonomous Cloud Ops 2026',
+      excerpt: 'Revolutionary autonomous cloud operations powered by AI for enterprise infrastructure.',
+      date: 'December 2025',
+      readTime: '5 min read',
+      category: 'Cloud Operations',
+      link: '/blog/ai-autonomous-cloud-ops-2026'
+    },
+    {
+      title: 'AI 2026 January Revolutionary Breakthroughs',
+      excerpt: 'Comprehensive overview of January 2026 AI breakthroughs and enterprise transformations.',
+      date: 'January 2026',
+      readTime: '8 min read',
+      category: 'AI Breakthroughs',
+      link: '/blog/ai-2026-january-revolutionary-breakthroughs'
+    }
+  ];
+
+  const categories = [
+    { name: 'AI Breakthroughs', count: 45 },
+    { name: 'Enterprise AI', count: 32 },
+    { name: 'Quantum Computing', count: 28 },
+    { name: 'Autonomous Systems', count: 25 },
+    { name: 'Data Analytics', count: 22 },
+    { name: 'Cloud Operations', count: 18 },
+    { name: 'Customer Experience', count: 15 },
+    { name: 'AI Operations', count: 12 }
+  ];
+
   return (
-    <div className='min-h-screen'>
-      <header className='mb-10'>
-        <h1 className='text-4xl md:text-5xl font-bold text-gray-900'>Blog</h1>
-        <p className='mt-3 text-gray-600 max-w-2xl'>
-          Curated insights, implementation guides, and trend reports from Zion Tech Group.
-        </p>
-      </header>
-
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-        {posts.map((post) => (
-          <a key={post.href} href={post.href} className='group'>
-            <article className={`border rounded-lg p-6 h-full hover:shadow-lg transition-all duration-300 ${
-              post.featured 
-                ? 'border-purple-200 bg-gradient-to-br from-purple-50 to-blue-50 hover:shadow-purple-200 hover:border-purple-300' 
-                : 'border-gray-200 bg-white hover:shadow-md hover:border-gray-300'
-            }`}>
-              <div className={`text-sm ${post.featured ? 'text-purple-600' : 'text-gray-500'}`}>
-                {post.date}
-                {post.featured && <span className='ml-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-bold'>FEATURED</span>}
+    <div className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Blog & Insights
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Stay ahead with the latest AI trends, breakthrough innovations, and enterprise transformation insights
+            </p>
+            <div className="flex flex-wrap justify-center gap-4 text-sm">
+              <div className="bg-blue-600 px-4 py-2 rounded-full">
+                <span className="font-semibold">200+</span> Articles Published
               </div>
-              <h2 className={`mt-2 text-2xl font-semibold transition-colors ${
-                post.featured 
-                  ? 'text-purple-900 group-hover:text-purple-700' 
-                  : 'text-gray-900 group-hover:text-blue-600'
-              }`}>
-                {post.title}
-              </h2>
-              <p className={`mt-2 ${post.featured ? 'text-purple-700' : 'text-gray-600'}`}>
-                {post.description}
-              </p>
-              <div className='mt-4 flex gap-2 flex-wrap'>
-                {post.tags.map((tag) => (
-                  <span key={tag} className={`text-xs px-2 py-1 rounded ${
-                    post.featured 
-                      ? 'bg-purple-100 text-purple-700 border border-purple-200' 
-                      : 'bg-blue-50 text-blue-700'
-                  }`}>
-                    {tag}
-                  </span>
+              <div className="bg-green-600 px-4 py-2 rounded-full">
+                <span className="font-semibold">50K+</span> Monthly Readers
+              </div>
+              <div className="bg-purple-600 px-4 py-2 rounded-full">
+                <span className="font-semibold">Fortune 500</span> Insights
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Featured Posts */}
+      <div className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Featured Articles
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Our most impactful insights and breakthrough discoveries
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {featuredPosts.map((post, index) => (
+              <article key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+                      {post.category}
+                    </span>
+                    <span className="text-sm text-gray-500">
+                      {post.readTime}
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    {post.title}
+                  </h3>
+                  <p className="text-gray-600 mb-4">
+                    {post.excerpt}
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-gray-500">
+                      {post.date}
+                    </span>
+                    <Link 
+                      href={post.link}
+                      className="text-blue-600 hover:text-blue-800 font-medium text-sm flex items-center gap-1"
+                    >
+                      Read Article
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </Link>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            {/* Main Content */}
+            <div className="lg:col-span-3">
+              <div className="mb-8">
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                  Recent Articles
+                </h2>
+                <p className="text-lg text-gray-600">
+                  Latest insights and breakthrough discoveries
+                </p>
+              </div>
+
+              <div className="space-y-6">
+                {recentPosts.map((post, index) => (
+                  <article key={index} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow duration-300">
+                    <div className="flex items-start justify-between mb-3">
+                      <span className="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">
+                        {post.category}
+                      </span>
+                      <span className="text-sm text-gray-500">
+                        {post.readTime}
+                      </span>
+                    </div>
+                    <h3 className="text-lg font-bold text-gray-900 mb-2">
+                      {post.title}
+                    </h3>
+                    <p className="text-gray-600 mb-4">
+                      {post.excerpt}
+                    </p>
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-gray-500">
+                        {post.date}
+                      </span>
+                      <Link 
+                        href={post.link}
+                        className="text-blue-600 hover:text-blue-800 font-medium text-sm flex items-center gap-1"
+                      >
+                        Read More
+                        <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </Link>
+                    </div>
+                  </article>
                 ))}
               </div>
-              <div className={`mt-4 font-medium transition-colors ${
-                post.featured 
-                  ? 'text-purple-600 group-hover:text-purple-800' 
-                  : 'text-blue-600 group-hover:text-blue-800'
-              }`}>
-                Read more →
+            </div>
+
+            {/* Sidebar */}
+            <div className="lg:col-span-1">
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-lg font-bold text-gray-900 mb-4">
+                  Categories
+                </h3>
+                <div className="space-y-2">
+                  {categories.map((category, index) => (
+                    <div key={index} className="flex items-center justify-between">
+                      <span className="text-gray-700 hover:text-blue-600 cursor-pointer">
+                        {category.name}
+                      </span>
+                      <span className="text-sm text-gray-500">
+                        {category.count}
+                      </span>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </article>
-          </a>
-        ))}
+
+              <div className="bg-blue-50 rounded-lg p-6 mt-6">
+                <h3 className="text-lg font-bold text-gray-900 mb-4">
+                  Stay Updated
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Get the latest AI insights and breakthrough discoveries delivered to your inbox.
+                </p>
+                <Link 
+                  href="/contact"
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200 inline-block"
+                >
+                  Subscribe Now
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* CTA Section */}
+      <div className="bg-blue-600 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            Discover how our AI and IT solutions can drive breakthrough results for your organization
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              href="/contact"
+              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
+            >
+              Get Started Today
+            </Link>
+            <Link 
+              href="/services"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200"
+            >
+              Explore Our Services
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );
 }
-
