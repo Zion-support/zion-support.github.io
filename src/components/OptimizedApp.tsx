@@ -11,9 +11,9 @@ motion
 } from 'framer-motion';';
 
 // Lazy load components for better performance
-const UnifiedBannerSystem = lazy(() => import('./UnifiedBannerSystem'));';
-const EnhancedPerformanceMonitor = lazy(() => import('./EnhancedPerformanceMonitor'));';
-const SEOAccessibilityEnhancer = lazy(() => import('./SEOAccessibilityEnhancer'));';
+const UnifiedBannerSystem = lazy(() => import('./UnifiedBannerSystem'));
+const EnhancedPerformanceMonitor = lazy(() => import('./EnhancedPerformanceMonitor'));
+const SEOAccessibilityEnhancer = lazy(() => import('./SEOAccessibilityEnhancer'));
 
 // Import banner configurations
 import { getFeaturedBanners } from '../data/bannerConfigurations';
@@ -23,9 +23,9 @@ getFeaturedBanners
 } from '../data/bannerConfigurations';';
 
 // Loading component
-const LoadingSpinner: React.FC = () => (,
-  <div className="flex items-center justify-center min-h-screen">";
-    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>";
+const LoadingSpinner: React.FC = () => (
+  <div className="flex items-center justify-center min-h-screen">
+    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
   </div>
 );
 
@@ -49,7 +49,7 @@ const ErrorFallback: React.FC<{ error: Error; resetErrorBoundary: () => void }> 
       </p>
       <button
         onClick={resetErrorBoundary}
-        className="bg-blue-600 text-white px-4 py-2 rounded-lg hover: bg-blue-700 transition-colors",
+        className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
       >
         Try again
       </button>
@@ -71,7 +71,7 @@ const ErrorFallback: React.FC<{ error: Error; resetErrorBoundary: () => void }> 
 );
 
 // Main content component
-const MainContent: React.FC = () => {,
+const MainContent: React.FC = () => {
   const [banners, setBanners] = useState(getFeaturedBanners(3));
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -116,11 +116,11 @@ const MainContent: React.FC = () => {,
               and autonomous systems. Experience the next generation of enterprise technology.
             </p>
             {/* CTA Buttons */}
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
-              <button className="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold hover: bg-gray-100 transition-colors">";,
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                 Explore Solutions
               </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover: bg-white hover:text-blue-900 transition-colors">";,
+              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors">
                 Contact Us
               </button>
             </div>
@@ -159,27 +159,27 @@ const MainContent: React.FC = () => {,
       </section>
 
       {/* Features Section */}
-      <section className="py-16">";
-        <div className="container mx-auto px-4">";
-          <div className="grid md: grid-cols-3 gap-8">";,
-            <div className="text-center p-6">";
-              <div className="text-4xl mb-4">🤖</div>";
-              <h3 className="text-xl font-bold mb-3">AI Solutions</h3>";
-              <p className="text-gray-600">";
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center p-6">
+              <div className="text-4xl mb-4">🤖</div>
+              <h3 className="text-xl font-bold mb-3">AI Solutions</h3>
+              <p className="text-gray-600">
                 Advanced artificial intelligence and machine learning solutions for enterprise applications.
               </p>
             </div>
-            <div className="text-center p-6">";
-              <div className="text-4xl mb-4">⚡</div>";
-              <h3 className="text-xl font-bold mb-3">Quantum Computing</h3>";
-              <p className="text-gray-600">";
+            <div className="text-center p-6">
+              <div className="text-4xl mb-4">⚡</div>
+              <h3 className="text-xl font-bold mb-3">Quantum Computing</h3>
+              <p className="text-gray-600">
                 Revolutionary quantum-enhanced computing platforms for unprecedented performance.
               </p>
             </div>
-            <div className="text-center p-6">";
-              <div className="text-4xl mb-4">🔄</div>";
-              <h3 className="text-xl font-bold mb-3">Automation</h3>";
-              <p className="text-gray-600">";
+            <div className="text-center p-6">
+              <div className="text-4xl mb-4">🔄</div>
+              <h3 className="text-xl font-bold mb-3">Automation</h3>
+              <p className="text-gray-600">
                 Complete automation suites for enterprise operations and workflows.
               </p>
             </div>
@@ -191,7 +191,7 @@ const MainContent: React.FC = () => {,
 };
 
 // Optimized App Component
-const OptimizedApp: React.FC = () => {,
+const OptimizedApp: React.FC = () => {
   return (
     <ErrorBoundary
       FallbackComponent={ErrorFallback}
@@ -211,8 +211,8 @@ const OptimizedApp: React.FC = () => {,
         <SEOAccessibilityEnhancer
           title="Zion Tech Group - Advanced AI and IT Solutions"
           description="Leading provider of AI-powered enterprise solutions, quantum computing, and autonomous systems. Transform your business with cutting-edge technology."
-          keywords={["AI", "Artificial Intelligence", "Enterprise Solutions", "Quantum Computing", "Automation", "IT Services"]}";
-          canonicalUrl={typeof window !== 'undefined' ? window.location.href : undefined}';
+          keywords={["AI", "Artificial Intelligence", "Enterprise Solutions", "Quantum Computing", "Automation", "IT Services"]}
+          canonicalUrl={typeof window !== 'undefined' ? window.location.href : undefined}
         />
       </Suspense>
 
