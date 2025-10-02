@@ -188,11 +188,63 @@ function Header() {
             </div>
           </div>
         </div>
-        <button className="md:hidden p-2" aria-label="Toggle menu">
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
+        {/* Mobile Navigation */}
+        <div className="md:hidden">
+          <button className="p-2" aria-label="Toggle menu" onClick={() => {
+            const menu = document.getElementById('mobile-menu');
+            if (menu) {
+              menu.classList.toggle('hidden');
+            }
+          }}>
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+          
+          {/* Mobile Menu */}
+          <div id="mobile-menu" className="hidden absolute top-full left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-50">
+            <div className="px-4 py-6 space-y-4">
+              <div>
+                <h4 className="font-semibold text-gray-900 mb-3">Services</h4>
+                <div className="space-y-2 pl-4">
+                  <Link href="/services/ai-services" className="block text-gray-600 hover:text-blue-600">AI & Machine Learning</Link>
+                  <Link href="/services/micro-saas" className="block text-gray-600 hover:text-blue-600">Micro SaaS Solutions</Link>
+                  <Link href="/services/it-services" className="block text-gray-600 hover:text-blue-600">IT Services</Link>
+                  <Link href="/services/blockchain-solutions" className="block text-gray-600 hover:text-blue-600">Blockchain Solutions</Link>
+                  <Link href="/services/cybersecurity-solutions" className="block text-gray-600 hover:text-blue-600">Cybersecurity</Link>
+                  <Link href="/services/data-analytics" className="block text-gray-600 hover:text-blue-600">Data Analytics</Link>
+                </div>
+              </div>
+              
+              <div>
+                <h4 className="font-semibold text-gray-900 mb-3">Solutions</h4>
+                <div className="space-y-2 pl-4">
+                  <Link href="/solutions" className="block text-gray-600 hover:text-blue-600">All Solutions</Link>
+                  <Link href="/enterprise" className="block text-gray-600 hover:text-blue-600">Enterprise Solutions</Link>
+                  <Link href="/services/manufacturing-ai-platform" className="block text-gray-600 hover:text-blue-600">Manufacturing AI</Link>
+                  <Link href="/services/supply-chain-intelligence" className="block text-gray-600 hover:text-blue-600">Supply Chain Intelligence</Link>
+                </div>
+              </div>
+              
+              <div>
+                <h4 className="font-semibold text-gray-900 mb-3">Resources</h4>
+                <div className="space-y-2 pl-4">
+                  <Link href="/blog" className="block text-gray-600 hover:text-blue-600">Blog & Insights</Link>
+                  <Link href="/case-studies" className="block text-gray-600 hover:text-blue-600">Case Studies</Link>
+                  <Link href="/guides" className="block text-gray-600 hover:text-blue-600">Implementation Guides</Link>
+                  <Link href="/content-hub" className="block text-gray-600 hover:text-blue-600">Content Hub</Link>
+                </div>
+              </div>
+              
+              <div className="border-t border-gray-200 pt-4">
+                <div className="space-y-2">
+                  <Link href="/about" className="block text-gray-600 hover:text-blue-600">About</Link>
+                  <Link href="/contact" className="block text-gray-600 hover:text-blue-600">Contact</Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </nav>
     </header>
   )

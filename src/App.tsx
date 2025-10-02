@@ -15,8 +15,6 @@ import HomePage from './pages/HomePage';
 
 // HomePage is imported from './pages/HomePage'
 
-<<<<<<< HEAD
-=======
 interface WindowWithEnhancements extends Window {
   advancedPerformanceOptimizer?: { initialize?: () => void };
   advancedSEOOptimizer?: { initialize?: () => void };
@@ -46,7 +44,6 @@ const initializePerformanceEnhancements = () => {
 };
 
 // Simple placeholder components for other routes
->>>>>>> 0987aa25a0c077eb72ddd7a8b3d56a96a9143fb4
 const ServicesPage = () => (
   <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
     <div className="container mx-auto px-4 py-8">
@@ -72,7 +69,6 @@ const ServicesPage = () => (
   </div>
 );
 
-<<<<<<< HEAD
 const AboutPage = () => (
   <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
     <div className="container mx-auto px-4 py-8">
@@ -105,7 +101,12 @@ const ContactPage = () => (
           <p className="text-gray-600 mb-6">
             Ready to transform your business? Contact us today for a consultation.
           </p>
-=======
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
 // App Router Component
 const AppRouter = () => (
   <Routes>
@@ -189,7 +190,6 @@ const App: React.FC = () => {
             <AppRouter />
           </main>
           <Footer />
->>>>>>> 0987aa25a0c077eb72ddd7a8b3d56a96a9143fb4
         </div>
         <div className="space-y-4">
           <div className="flex items-center justify-center">
@@ -216,27 +216,9 @@ const App: React.FC = () => {
   </div>
 );
 
-<<<<<<< HEAD
-function App() {
-  return (
-    <div className="min-h-screen bg-white">
-      <Header />
-      <main>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/services" element={<ServicesPage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="*" element={<HomePage />} />
-        </Routes>
-      </main>
-      <Footer />
-    </div>
-=======
         <NotificationSystem notifications={notifications} onRemove={handleRemoveNotification} />
       </EnhancedErrorBoundary>
     </AccessibilityEnhancer>
->>>>>>> 0987aa25a0c077eb72ddd7a8b3d56a96a9143fb4
   );
 }
 
