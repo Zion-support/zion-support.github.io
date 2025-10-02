@@ -28,9 +28,6 @@ export default defineConfig({
     target: 'es2020',
     reportCompressedSize: false,
     rollupOptions: {
-      input: {
-        main: './index.html'
-      },
       treeshake: {
         moduleSideEffects: false,
         propertyReadSideEffects: false,
