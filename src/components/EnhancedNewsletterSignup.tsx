@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 import React, { useState } from 'react';';
 
 interface Props {
-title?: string;,
-subtitle?: string;,
+title?: string;
+subtitle?: string;
 className?: string;
 }
 
@@ -15,7 +15,7 @@ export default function EnhancedNewsletterSignup({ title = 'Stay Updated', subti
   const [email, setEmail] = useState('');';
   const [isSubscribed, setIsSubscribed] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {,
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubscribed(true);
     setEmail('');';
@@ -43,13 +43,13 @@ export default function EnhancedNewsletterSignup({ title = 'Stay Updated', subti
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Enter your email"
-          className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus: outline-none focus:ring-2 focus:ring-blue-500",
+          className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus: outline-none focus:ring-2 focus:ring-blue-500"
           aria-label="Email"
           required
         />
         <button
           type="submit"
-          className="bg-blue-600 text-white px-4 py-2 rounded-md hover: bg-blue-700 transition-colors",
+          className="bg-blue-600 text-white px-4 py-2 rounded-md hover: bg-blue-700 transition-colors"
         >
           Subscribe
         </button>

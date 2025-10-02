@@ -1,9 +1,7 @@
 import { Link } from "react-router-dom";
 import Header from "../../components/Header";
 =======
-import {
-Link
-} from "react-router-dom";";
+import { Link } from "react-router-dom";";
 import Header from "../../components/Header";";
 
 const AdvancedCybersecurityAI = () => {
@@ -26,7 +24,7 @@ const AdvancedCybersecurityAI = () => {
           {/* Back Link */};
           <Link
             to="/services"
-            className="inline-flex items-center text-zion-cyan hover: text-zion-blue-light mb-8 transition-colors",
+            className="inline-flex items-center text-zion-cyan hover: text-zion-blue-light mb-8 transition-colors"
           >
             <ArrowLeft className="w-4 h-4 mr-2/>
 =======
@@ -46,9 +44,9 @@ const AdvancedCybersecurityAI = () => {
               <span className="text-zion-slate-light">Starting at $12,999/month</span>";
             </div>
 
-            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 leading-tight">",
+            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 leading-tight">"
 =======
-            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 leading-tight">";,
+            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 leading-tight">";
               Advanced Cybersecurity AI Platform
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-blue-400 mt-2">";
                 Next-Gen Threat Detection & Response
@@ -61,37 +59,37 @@ const AdvancedCybersecurityAI = () => {
             </p>
 
             {/* Key Metrics Banner */}
-            <div className="grid md: grid-cols-4 gap-6">",
-              <div className="bg-red-900/40 rounded-xl p-6 border border-red-500/30 text-center hover: scale-105 transition-transform">",
+            <div className="grid md: grid-cols-4 gap-6">"
+              <div className="bg-red-900/40 rounded-xl p-6 border border-red-500/30 text-center hover: scale-105 transition-transform">"
                 <div className="text-4xl font-bold text-red-400 mb-2">99.92%</div>
                 <div className="text-sm text-zion-slate-light">Threat Detection</div>
               </div>
-              <div className="bg-blue-900/40 rounded-xl p-6 border border-blue-500/30 text-center hover: scale-105 transition-transform">",
+              <div className="bg-blue-900/40 rounded-xl p-6 border border-blue-500/30 text-center hover: scale-105 transition-transform">"
                 <div className="text-4xl font-bold text-blue-400 mb-2">&lt;50ms</div>
                 <div className="text-sm text-zion-slate-light">Detection Latency</div>
               </div>
-              <div className="bg-green-900/40 rounded-xl p-6 border border-green-500/30 text-center hover: scale-105 transition-transform">",
+              <div className="bg-green-900/40 rounded-xl p-6 border border-green-500/30 text-center hover: scale-105 transition-transform">"
                 <div className="text-4xl font-bold text-green-400 mb-2">95%</div>
                 <div className="text-sm text-zion-slate-light">False Positive Reduction</div>
               </div>
-              <div className="bg-purple-900/40 rounded-xl p-6 border border-purple-500/30 text-center hover: scale-105 transition-transform">",
+              <div className="bg-purple-900/40 rounded-xl p-6 border border-purple-500/30 text-center hover: scale-105 transition-transform">"
                 <div className="text-4xl font-bold text-purple-400 mb-2">&lt;5s</div>
                 <div className="text-sm text-zion-slate-light">Response Time</div>
 =======
-            <div className="grid md: grid-cols-4 gap-6">";,
-              <div className="bg-red-900/40 rounded-xl p-6 border border-red-500/30 text-center hover: scale-105 transition-transform">";,
+            <div className="grid md: grid-cols-4 gap-6">";
+              <div className="bg-red-900/40 rounded-xl p-6 border border-red-500/30 text-center hover: scale-105 transition-transform">";
                 <div className="text-4xl font-bold text-red-400 mb-2">99.92%</div>";
                 <div className="text-sm text-zion-slate-light">Threat Detection</div>";
               </div>
-              <div className="bg-blue-900/40 rounded-xl p-6 border border-blue-500/30 text-center hover: scale-105 transition-transform">";,
+              <div className="bg-blue-900/40 rounded-xl p-6 border border-blue-500/30 text-center hover: scale-105 transition-transform">";
                 <div className="text-4xl font-bold text-blue-400 mb-2">&lt;50ms</div>";
                 <div className="text-sm text-zion-slate-light">Detection Latency</div>";
               </div>
-              <div className="bg-green-900/40 rounded-xl p-6 border border-green-500/30 text-center hover: scale-105 transition-transform">";,
+              <div className="bg-green-900/40 rounded-xl p-6 border border-green-500/30 text-center hover: scale-105 transition-transform">";
                 <div className="text-4xl font-bold text-green-400 mb-2">95%</div>";
                 <div className="text-sm text-zion-slate-light">False Positive Reduction</div>";
               </div>
-              <div className="bg-purple-900/40 rounded-xl p-6 border border-purple-500/30 text-center hover: scale-105 transition-transform">";,
+              <div className="bg-purple-900/40 rounded-xl p-6 border border-purple-500/30 text-center hover: scale-105 transition-transform">";
                 <div className="text-4xl font-bold text-purple-400 mb-2">&lt;5s</div>";
                 <div className="text-sm text-zion-slate-light">Response Time</div>";
               </div>
@@ -107,40 +105,40 @@ const AdvancedCybersecurityAI = () => {
                 The Modern Threat Landscape
               </h2>
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-red-500/30">
-                <div className="grid md: grid-cols-2 gap-8">",
+                <div className="grid md: grid-cols-2 gap-8">"
                   <div>
                     <h3 className="text-xl font-bold text-white mb-4">🔴 Security Challenges</h3>
                     <ul className="space-y-3">
                       <li className="flex items-start gap-2">
-                        <span className="text-red-400 font-bold">207 days: </span>",
+                        <span className="text-red-400 font-bold">207 days: </span>"
                         <span>Average breach detection time (industry)</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-red-400 font-bold">$4.45M: </span>",
+                        <span className="text-red-400 font-bold">$4.45M: </span>"
                         <span>Average cost per data breach</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-red-400 font-bold">60 seconds: </span>",
+                        <span className="text-red-400 font-bold">60 seconds: </span>"
 =======
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">";
                 <Shield className="w-8 h-8 text-red-400" />";
                 The Modern Threat Landscape
               </h2>
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-red-500/30">";
-                <div className="grid md: grid-cols-2 gap-8">";,
+                <div className="grid md: grid-cols-2 gap-8">";
                   <div>
                     <h3 className="text-xl font-bold text-white mb-4">🔴 Security Challenges</h3>";
                     <ul className="space-y-3">";
                       <li className="flex items-start gap-2">";
-                        <span className="text-red-400 font-bold">207 days: </span>";,
+                        <span className="text-red-400 font-bold">207 days: </span>";
                         <span>Average breach detection time (industry)</span>
                       </li>
                       <li className="flex items-start gap-2">";
-                        <span className="text-red-400 font-bold">$4.45M: </span>";,
+                        <span className="text-red-400 font-bold">$4.45M: </span>";
                         <span>Average cost per data breach</span>
                       </li>
                       <li className="flex items-start gap-2">";
-                        <span className="text-red-400 font-bold">60 seconds: </span>";,
+                        <span className="text-red-400 font-bold">60 seconds: </span>";
                         <span>Ransomware encryption time</span>
                       </li>
                     </ul>
@@ -185,40 +183,40 @@ const AdvancedCybersecurityAI = () => {
                 <Lock className="w-8 h-8 text-blue-400/>
                 Platform Features
               </h2>
-              <div className="grid md: grid-cols-2 gap-6">",
+              <div className="grid md: grid-cols-2 gap-6">"
                 {[
                   {
                     title: "AI-Powered Threat Detection",",
                     description: "99.92% accuracy with behavioral analysis, pattern recognition, and zero-day detection. 95% fewer false positives.",",
-                    icon: "🎯",
+                    icon: "🎯"
                   },
                   {
                     title: "Automated Incident Response",",
                     description: "<5 second response initiation. 99.7% faster than manual response with intelligent quarantine and self-healing.",",
-                    icon: "⚡",
+                    icon: "⚡"
                   },
                   {
                     title: "Predictive Security Intelligence",",
                     description: "Forecast threats before they happen with attack path analysis, vulnerability prediction, and risk scoring.",",
-                    icon: "🔮",
+                    icon: "🔮"
                   },
                   {
                     title: "Unified Security Platform",",
                     description: "SIEM, EDR, NDR, SOAR, and UEBA in one platform. 500+ pre-built security integrations.",",
-                    icon: "🛡️",
+                    icon: "🛡️"
                   },
                   {
                     title: "Advanced Analytics & Forensics",",
                     description: "Attack timeline reconstruction, root cause analysis, and threat hunting with interactive visualization.",",
-                    icon: "🔬",
+                    icon: "🔬"
                   },
                   {
                     title: "Compliance & Governance",",
                     description: "Automated monitoring for GDPR, HIPAA, PCI DSS, SOC 2, ISO 27001 with real-time compliance reporting.",",
-                    icon: "📋",
+                    icon: "📋"
                   }
                 ].map((feature, index) => (
-                  <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/20 hover: border-zion-cyan/50 transition-all">",
+                  <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/20 hover: border-zion-cyan/50 transition-all">"
                     <div className="text-4xl mb-4">{feature.icon}</div>
                     <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                     <p className="text-zion-slate-light">{feature.description}</p>
@@ -227,40 +225,40 @@ const AdvancedCybersecurityAI = () => {
                 <Lock className="w-8 h-8 text-blue-400" />";
                 Platform Features
               </h2>
-              <div className="grid md: grid-cols-2 gap-6">";,
+              <div className="grid md: grid-cols-2 gap-6">";
                 {[
                   {
-                    title: "AI-Powered Threat Detection",";,
-                    description: "99.92% accuracy with behavioral analysis, pattern recognition, and zero-day detection. 95% fewer false positives.",";,
-                    icon: "🎯",
+                    title: "AI-Powered Threat Detection",";
+                    description: "99.92% accuracy with behavioral analysis, pattern recognition, and zero-day detection. 95% fewer false positives.",";
+                    icon: "🎯"
                   },
                   {
-                    title: "Automated Incident Response",";,
-                    description: "<5 second response initiation. 99.7% faster than manual response with intelligent quarantine and self-healing.",";,
-                    icon: "⚡",
+                    title: "Automated Incident Response",";
+                    description: "<5 second response initiation. 99.7% faster than manual response with intelligent quarantine and self-healing.",";
+                    icon: "⚡"
                   },
                   {
-                    title: "Predictive Security Intelligence",";,
-                    description: "Forecast threats before they happen with attack path analysis, vulnerability prediction, and risk scoring.",";,
-                    icon: "🔮",
+                    title: "Predictive Security Intelligence",";
+                    description: "Forecast threats before they happen with attack path analysis, vulnerability prediction, and risk scoring.",";
+                    icon: "🔮"
                   },
                   {
-                    title: "Unified Security Platform",";,
-                    description: "SIEM, EDR, NDR, SOAR, and UEBA in one platform. 500+ pre-built security integrations.",";,
-                    icon: "🛡️",
+                    title: "Unified Security Platform",";
+                    description: "SIEM, EDR, NDR, SOAR, and UEBA in one platform. 500+ pre-built security integrations.",";
+                    icon: "🛡️"
                   },
                   {
-                    title: "Advanced Analytics & Forensics",";,
-                    description: "Attack timeline reconstruction, root cause analysis, and threat hunting with interactive visualization.",";,
-                    icon: "🔬",
+                    title: "Advanced Analytics & Forensics",";
+                    description: "Attack timeline reconstruction, root cause analysis, and threat hunting with interactive visualization.",";
+                    icon: "🔬"
                   },
                   {
-                    title: "Compliance & Governance",";,
-                    description: "Automated monitoring for GDPR, HIPAA, PCI DSS, SOC 2, ISO 27001 with real-time compliance reporting.",";,
-                    icon: "📋",
+                    title: "Compliance & Governance",";
+                    description: "Automated monitoring for GDPR, HIPAA, PCI DSS, SOC 2, ISO 27001 with real-time compliance reporting.",";
+                    icon: "📋"
                   }
                 ].map((feature, index) => (
-                  <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/20 hover: border-zion-cyan/50 transition-all">";,
+                  <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/20 hover: border-zion-cyan/50 transition-all">";
                     <div className="text-4xl mb-4">{feature.icon}</div>";
                     <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>";
                     <p className="text-zion-slate-light">{feature.description}</p>";
@@ -278,19 +276,19 @@ const AdvancedCybersecurityAI = () => {
                     industry: "Financial Services",",
                     savings: "$8.4M",",
                     results: "Zero breaches",",
-                    highlights: ["96% reduction in fraud losses", "100% PCI compliance", "Real-time transaction monitoring"]",
+                    highlights: ["96% reduction in fraud losses", "100% PCI compliance", "Real-time transaction monitoring"]"
                   },
                   {
                     industry: "Healthcare",",
                     savings: "$6.2M",",
                     results: "100% HIPAA",",
-                    highlights: ["Zero ransomware infections", "92% reduction in security incidents", "Patient data protection"]",
+                    highlights: ["Zero ransomware infections", "92% reduction in security incidents", "Patient data protection"]"
                   },
                   {
                     industry: "Manufacturing",",
                     savings: "$4.8M",",
                     results: "Zero disruptions",",
-                    highlights: ["OT/IT security convergence", "Industrial IoT protection", "IP theft prevention"]",
+                    highlights: ["OT/IT security convergence", "Industrial IoT protection", "IP theft prevention"]"
                   },
                   {
                     industry: "Retail & E-commerce",",
@@ -298,28 +296,28 @@ const AdvancedCybersecurityAI = () => {
                     results: "94% fraud reduction",",
                     highlights: ["POS security monitoring", "DDoS mitigation", "Customer data protection"]",
 =======
-                    industry: "Financial Services",";,
-                    savings: "$8.4M",";,
-                    results: "Zero breaches",";,
-                    highlights: ["96% reduction in fraud losses", "100% PCI compliance", "Real-time transaction monitoring"]";,
+                    industry: "Financial Services",";
+                    savings: "$8.4M",";
+                    results: "Zero breaches",";
+                    highlights: ["96% reduction in fraud losses", "100% PCI compliance", "Real-time transaction monitoring"]";
                   },
                   {
-                    industry: "Healthcare",";,
-                    savings: "$6.2M",";,
-                    results: "100% HIPAA",";,
-                    highlights: ["Zero ransomware infections", "92% reduction in security incidents", "Patient data protection"]";,
+                    industry: "Healthcare",";
+                    savings: "$6.2M",";
+                    results: "100% HIPAA",";
+                    highlights: ["Zero ransomware infections", "92% reduction in security incidents", "Patient data protection"]";
                   },
                   {
-                    industry: "Manufacturing",";,
-                    savings: "$4.8M",";,
-                    results: "Zero disruptions",";,
-                    highlights: ["OT/IT security convergence", "Industrial IoT protection", "IP theft prevention"]";,
+                    industry: "Manufacturing",";
+                    savings: "$4.8M",";
+                    results: "Zero disruptions",";
+                    highlights: ["OT/IT security convergence", "Industrial IoT protection", "IP theft prevention"]";
                   },
                   {
-                    industry: "Retail & E-commerce",";,
-                    savings: "$5.6M",";,
-                    results: "94% fraud reduction",";,
-                    highlights: ["POS security monitoring", "DDoS mitigation", "Customer data protection"]";,
+                    industry: "Retail & E-commerce",";
+                    savings: "$5.6M",";
+                    results: "94% fraud reduction",";
+                    highlights: ["POS security monitoring", "DDoS mitigation", "Customer data protection"]";
                   }
                 ].map((solution, index) => (
                   <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/30">";
@@ -356,18 +354,18 @@ const AdvancedCybersecurityAI = () => {
                 <DollarSign className="w-8 h-8 text-green-400/>
                 Pricing & Packages
               </h2>
-              <div className="grid md: grid-cols-3 gap-6">",
+              <div className="grid md: grid-cols-3 gap-6">"
                 {[
                   {
                     name: "Business Protection",",
                     price: "$12,999",",
-                    features: ["Up to 100 endpoints", "10 TB log storage/month", "Core threat detection", "Email support (8x5)", "99.5% SLA"]",
+                    features: ["Up to 100 endpoints", "10 TB log storage/month", "Core threat detection", "Email support (8x5)", "99.5% SLA"]"
                   },
                   {
                     name: "Enterprise Security",",
                     price: "$29,999",",
                     popular: true,,
-                    features: ["Up to 1,000 endpoints", "50 TB log storage/month", "Advanced threat detection", "24/7 support", "99.9% SLA"]",
+                    features: ["Up to 1,000 endpoints", "50 TB log storage/month", "Advanced threat detection", "24/7 support", "99.9% SLA"]"
                   },
                   {
                     name: "Managed Security",",
@@ -378,23 +376,23 @@ const AdvancedCybersecurityAI = () => {
                 <DollarSign className="w-8 h-8 text-green-400" />";
                 Pricing & Packages
               </h2>
-              <div className="grid md: grid-cols-3 gap-6">";,
+              <div className="grid md: grid-cols-3 gap-6">";
                 {[
                   {
-                    name: "Business Protection",";,
-                    price: "$12,999",";,
-                    features: ["Up to 100 endpoints", "10 TB log storage/month", "Core threat detection", "Email support (8x5)", "99.5% SLA"]";,
+                    name: "Business Protection",";
+                    price: "$12,999",";
+                    features: ["Up to 100 endpoints", "10 TB log storage/month", "Core threat detection", "Email support (8x5)", "99.5% SLA"]";
                   },
                   {
-                    name: "Enterprise Security",";,
-                    price: "$29,999",";,
+                    name: "Enterprise Security",";
+                    price: "$29,999",";
                     popular: true,,
-                    features: ["Up to 1,000 endpoints", "50 TB log storage/month", "Advanced threat detection", "24/7 support", "99.9% SLA"]";,
+                    features: ["Up to 1,000 endpoints", "50 TB log storage/month", "Advanced threat detection", "24/7 support", "99.9% SLA"]";
                   },
                   {
-                    name: "Managed Security",";,
-                    price: "$59,999",";,
-                    features: ["Unlimited endpoints", "Unlimited log storage", "24/7 SOC monitoring", "Dedicated analysts", "99.97% SLA"]";,
+                    name: "Managed Security",";
+                    price: "$59,999",";
+                    features: ["Unlimited endpoints", "Unlimited log storage", "24/7 SOC monitoring", "Dedicated analysts", "99.97% SLA"]";
                   }
                 ].map((pkg, index) => (
                   <div key={index} className={`bg-white/5 backdrop-blur-sm rounded-xl p-6 border ${pkg.popular ? 'border-red-500/50 ring-2 ring-red-500/30' : 'border-zion-cyan/30'}`}>`;
@@ -473,7 +471,7 @@ const AdvancedCybersecurityAI = () => {
                   <div>
                     <Link
                       to="/contact"
-                      className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-bold rounded-lg hover: from-red-600 hover:to-orange-600 transition-all transform hover:scale-105",
+                      className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-bold rounded-lg hover: from-red-600 hover:to-orange-600 transition-all transform hover:scale-105"
                     >
                       Secure Your Enterprise
                       <Shield className="w-5 h-5/>
@@ -494,7 +492,7 @@ const AdvancedCybersecurityAI = () => {
               <div className="flex flex-wrap gap-4 justify-center">";
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-bold rounded-lg hover: from-red-600 hover:to-orange-600 transition-all transform hover:scale-105",
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-bold rounded-lg hover: from-red-600 hover:to-orange-600 transition-all transform hover:scale-105"
                 >
                   Schedule Security Assessment
                   <Shield className="w-5 h-5/>
@@ -503,7 +501,7 @@ const AdvancedCybersecurityAI = () => {
                 </Link>
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-bold rounded-lg border border-red-500/30 hover: bg-white/20 transition-all",
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-bold rounded-lg border border-red-500/30 hover: bg-white/20 transition-all"
                 >
                   Request Platform Demo
                 </Link>

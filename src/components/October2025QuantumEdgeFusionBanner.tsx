@@ -2,7 +2,7 @@ import React from 'react';
 =======
 import React from 'react';';
 
-const October2025QuantumEdgeFusionBanner: React.FC = () => {,
+const October2025QuantumEdgeFusionBanner: React.FC = () => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -27,24 +27,24 @@ const October2025QuantumEdgeFusionBanner: React.FC = () => {,
           className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 backdrop-blur-sm rounded-full border border-cyan-400/30 mb-6"
         >
           <span className="text-2xl">⚛️⚡</span>
-          <span className="text-cyan-200 font-semibold text-sm">QUANTUM BREAKTHROUGH: OCTOBER 1, 2025</span>",
+          <span className="text-cyan-200 font-semibold text-sm">QUANTUM BREAKTHROUGH: OCTOBER 1, 2025</span>"
           <span className="text-2xl">🔬💎</span>
         </motion.div>
 
         {/* Main Content */}
-        <div className="grid lg: grid-cols-2 gap-8 items-center">",
+        <div className="grid lg: grid-cols-2 gap-8 items-center">"
           <div>
-            <h2 className="text-4xl lg: text-5xl font-bold text-white mb-4 leading-tight">",
+            <h2 className="text-4xl lg: text-5xl font-bold text-white mb-4 leading-tight">"
 =======
           <span className="text-2xl">⚛️⚡</span>";
-          <span className="text-cyan-200 font-semibold text-sm">QUANTUM BREAKTHROUGH: OCTOBER 1, 2025</span>";,
+          <span className="text-cyan-200 font-semibold text-sm">QUANTUM BREAKTHROUGH: OCTOBER 1, 2025</span>";
           <span className="text-2xl">🔬💎</span>";
         </motion.div>
 
         {/* Main Content */}
-        <div className="grid lg: grid-cols-2 gap-8 items-center">";,
+        <div className="grid lg: grid-cols-2 gap-8 items-center">";
           <div>
-            <h2 className="text-4xl lg: text-5xl font-bold text-white mb-4 leading-tight">";,
+            <h2 className="text-4xl lg: text-5xl font-bold text-white mb-4 leading-tight">";
               Quantum-Edge Fusion Architecture
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 mt-2">";
                 Sub-Microsecond AI Decisions
@@ -85,7 +85,7 @@ const October2025QuantumEdgeFusionBanner: React.FC = () => {,
                 href="/blog/ai-2025-october-quantum-edge-fusion-architecture"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-lg shadow-lg hover: shadow-cyan-500/50 transition-all",
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-lg shadow-lg hover: shadow-cyan-500/50 transition-all"
               >
                 Discover Quantum-Edge →
               </motion.a>
@@ -93,7 +93,7 @@ const October2025QuantumEdgeFusionBanner: React.FC = () => {,
                 href="/contact"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-lg border border-white/20 hover: bg-white/20 transition-all",
+                className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-lg border border-white/20 hover: bg-white/20 transition-all"
               >
                 Request Demo
               </motion.a>
@@ -101,61 +101,60 @@ const October2025QuantumEdgeFusionBanner: React.FC = () => {,
           </div>
 
           {/* Visual Element */}
-          <div className="hidden lg: block">",
+          <div className="hidden lg: block">"
             <div className="relative">
               <motion.div
                 animate={{
                   scale: [1, 1.05, 1],
-                  rotate: [0, -5, 0]
+                  rotate: [0, -5, 0],
 =======
-          <div className="hidden lg: block">";,
+          <div className="hidden lg: block">";
             <div className="relative">";
               <motion.div
                 animate={{
                   scale: [1, 1.05, 1],,
-                  rotate: [0, -5, 0],,
-                }}
+                  rotate: [0, -5, 0],}},
                 transition={{
                   duration: 6,,
                   repeat: Infinity,,
-                  ease: "easeInOut",
+                  ease: "easeInOut"
                 }}
                 className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 backdrop-blur-lg rounded-2xl p-8 border border-cyan-400/30"
               >
-                <h3 className="text-2xl font-bold text-white mb-4">Quantum Advantages: </h3>",
+                <h3 className="text-2xl font-bold text-white mb-4">Quantum Advantages: </h3>"
                 <ul className="space-y-3 text-cyan-100">
                   <li className="flex items-start gap-3">
                     <span className="text-2xl">⚡</span>
-                    <span><strong>Ultra-Low Latency: </strong> 0.7μs average decision time</span>,
+                    <span><strong>Ultra-Low Latency: </strong> 0.7μs average decision time</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-2xl">🎯</span>
-                    <span><strong>Extreme Accuracy: </strong> 99.97% precision rate</span>,
+                    <span><strong>Extreme Accuracy: </strong> 99.97% precision rate</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-2xl">🌐</span>
-                    <span><strong>Global Scale: </strong> 47,000 quantum-enhanced nodes</span>,
+                    <span><strong>Global Scale: </strong> 47,000 quantum-enhanced nodes</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-2xl">💰</span>
 =======
-                <h3 className="text-2xl font-bold text-white mb-4">Quantum Advantages: </h3>";,
+                <h3 className="text-2xl font-bold text-white mb-4">Quantum Advantages: </h3>";
                 <ul className="space-y-3 text-cyan-100">";
                   <li className="flex items-start gap-3">";
                     <span className="text-2xl">⚡</span>";
-                    <span><strong>Ultra-Low Latency: </strong> 0.7μs average decision time</span>,
+                    <span><strong>Ultra-Low Latency: </strong> 0.7μs average decision time</span>
                   </li>
                   <li className="flex items-start gap-3">";
                     <span className="text-2xl">🎯</span>";
-                    <span><strong>Extreme Accuracy: </strong> 99.97% precision rate</span>,
+                    <span><strong>Extreme Accuracy: </strong> 99.97% precision rate</span>
                   </li>
                   <li className="flex items-start gap-3">";
                     <span className="text-2xl">🌐</span>";
-                    <span><strong>Global Scale: </strong> 47,000 quantum-enhanced nodes</span>,
+                    <span><strong>Global Scale: </strong> 47,000 quantum-enhanced nodes</span>
                   </li>
                   <li className="flex items-start gap-3">";
                     <span className="text-2xl">💰</span>";
-                    <span><strong>Massive ROI: </strong> $8.2B additional revenue</span>,
+                    <span><strong>Massive ROI: </strong> $8.2B additional revenue</span>
                   </li>
                 </ul>
               </motion.div>
@@ -171,10 +170,10 @@ const October2025QuantumEdgeFusionBanner: React.FC = () => {,
           className="mt-8 pt-6 border-t border-cyan-400/30 text-center"
         >
           <p className="text-cyan-200 text-sm">
-            🏆 <strong className="text-white">QUANTUM COMPUTING BREAKTHROUGH: </strong> 127-Qubit Processors at Edge | Fortune 100 Success Story",
+            🏆 <strong className="text-white">QUANTUM COMPUTING BREAKTHROUGH: </strong> 127-Qubit Processors at Edge | Fortune 100 Success Story"
 =======
           <p className="text-cyan-200 text-sm">";
-            🏆 <strong className="text-white">QUANTUM COMPUTING BREAKTHROUGH: </strong> 127-Qubit Processors at Edge | Fortune 100 Success Story";,
+            🏆 <strong className="text-white">QUANTUM COMPUTING BREAKTHROUGH: </strong> 127-Qubit Processors at Edge | Fortune 100 Success Story";
           </p>
         </motion.div>
       </div>

@@ -5,70 +5,66 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 =======
 import React from 'react';';
-import {
-Helmet
-} from 'react-helmet-async';';
-import {
-Globe
-} from 'lucide-react';';
+import { Helmet } from 'react-helmet-async';';
+import { Globe } from 'lucide-react';';
 import Header from '../../components/Header';';
 import Footer from '../../components/Footer';';
 
-const SmartContractAudit: React.FC = () => {,
+const SmartContractAudit: React.FC = () => {
   const features = [
     {
       icon: Shield,,
       title: "Comprehensive Security Analysis",",
       description: "Deep code analysis using static analysis, dynamic testing, and formal verification to identify vulnerabilities.",",
 =======
-      title: "Comprehensive Security Analysis",";,
-      description: "Deep code analysis using static analysis, dynamic testing, and formal verification to identify vulnerabilities.",";,
-      benefit: "99.8% vulnerability detection rate",
+      title: "Comprehensive Security Analysis",";
+      description: "Deep code analysis using static analysis, dynamic testing, and formal verification to identify vulnerabilities.",";
+      benefit: "99.8% vulnerability detection rate"
     },
     {
       icon: Search,,
       title: "Automated Vulnerability Scanning",",
       description: "AI-powered scanning tools that detect common smart contract vulnerabilities and security patterns.",",
 =======
-      title: "Automated Vulnerability Scanning",";,
-      description: "AI-powered scanning tools that detect common smart contract vulnerabilities and security patterns.",";,
-      benefit: "100+ vulnerability patterns detected",
+      title: "Automated Vulnerability Scanning",";
+      description: "AI-powered scanning tools that detect common smart contract vulnerabilities and security patterns.",";
+      benefit: "100+ vulnerability patterns detected"
     },
     {
       icon: AlertTriangle,,
       title: "Risk Assessment & Mitigation",",
       description: "Detailed risk analysis with prioritized recommendations and mitigation strategies.",",
 =======
-      title: "Risk Assessment & Mitigation",";,
-      description: "Detailed risk analysis with prioritized recommendations and mitigation strategies.",";,
-      benefit: "Zero critical vulnerabilities in production",
+      title: "Risk Assessment & Mitigation",";
+      description: "Detailed risk analysis with prioritized recommendations and mitigation strategies.",";
+      benefit: "Zero critical vulnerabilities in production"
     },
     {
       icon: CheckCircle,,
       title: "Compliance Verification",",
       description: "Ensure compliance with industry standards, regulatory requirements, and best practices.",",
 =======
-      title: "Compliance Verification",";,
-      description: "Ensure compliance with industry standards, regulatory requirements, and best practices.",";,
-      benefit: "100% compliance with standards",
+      title: "Compliance Verification",";
+      description: "Ensure compliance with industry standards, regulatory requirements, and best practices.",";
+      benefit: "100% compliance with standards"
     },
     {
       icon: Clock,,
       title: "Fast Turnaround",",
       description: "Rapid audit completion with detailed reports delivered within 5-10 business days.",",
 =======
-      title: "Fast Turnaround",";,
-      description: "Rapid audit completion with detailed reports delivered within 5-10 business days.",";,
-      benefit: "5-10 day delivery guarantee",
+      title: "Fast Turnaround",";
+      description: "Rapid audit completion with detailed reports delivered within 5-10 business days.",";
+      benefit: "5-10 day delivery guarantee"
     },
     {
       icon: Users,,
       title: "Expert Team",",
       description: "Certified blockchain security experts with extensive experience in smart contract auditing.",",
 =======
-      title: "Expert Team",";,
-      description: "Certified blockchain security experts with extensive experience in smart contract auditing.",";,
-      benefit: "50+ successful audits completed",
+      title: "Expert Team",";
+      description: "Certified blockchain security experts with extensive experience in smart contract auditing.",";
+      benefit: "50+ successful audits completed"
     }
   ];
 
@@ -128,12 +124,12 @@ const SmartContractAudit: React.FC = () => {,
         "Post-deployment monitoring",
         "Security training included"
       ]
-      popular: false
+      popular: false,
 =======
-      name: "Basic Audit",";,
-      price: "$2,500",";,
-      period: "one-time",";,
-      description: "Perfect for simple smart contracts and token contracts",";,
+      name: "Basic Audit",";
+      price: "$2,500",";
+      period: "one-time",";
+      description: "Perfect for simple smart contracts and token contracts",";
       features: [,
         "Static code analysis",";
         "Manual code review",";
@@ -143,14 +139,14 @@ const SmartContractAudit: React.FC = () => {,
         "1 revision included",";
         "Standard compliance check",";
         "Up to 500 lines of code"
-      ],
-      popular: false,
+      ]
+      popular: false
     },
     {
-      name: "Professional Audit",";,
-      price: "$8,500",";,
-      period: "one-time",";,
-      description: "Comprehensive audit for complex DeFi protocols and dApps",";,
+      name: "Professional Audit",";
+      price: "$8,500",";
+      period: "one-time",";
+      description: "Comprehensive audit for complex DeFi protocols and dApps",";
       features: [,
         "Full static & dynamic analysis",";
         "Comprehensive manual review",";
@@ -162,14 +158,14 @@ const SmartContractAudit: React.FC = () => {,
         "Up to 2,000 lines of code",";
         "Gas optimization analysis",";
         "Architecture review"
-      ],
-      popular: true,
+      ]
+      popular: true
     },
     {
-      name: "Enterprise Audit",";,
-      price: "$25,000",";,
-      period: "one-time",";,
-      description: "Complete audit solution for enterprise blockchain projects",";,
+      name: "Enterprise Audit",";
+      price: "$25,000",";
+      period: "one-time",";
+      description: "Complete audit solution for enterprise blockchain projects",";
       features: [,
         "End-to-end security analysis",";
         "Multi-contract system review",";
@@ -183,8 +179,8 @@ const SmartContractAudit: React.FC = () => {,
         "Architecture & design review",";
         "Post-deployment monitoring",";
         "Security training included"
-      ],
-      popular: false,
+      ]
+      popular: false
     }
   ];
 
@@ -194,33 +190,33 @@ const SmartContractAudit: React.FC = () => {,
       role: "CTO, DeFi Protocol",",
       content: "The smart contract audit identified 3 critical vulnerabilities that could have resulted in $50M in losses. The team's expertise saved our project and gave us confidence for mainnet launch.",",
 =======
-      name: "Michael Chen",";,
-      role: "CTO, DeFi Protocol",";,
-      content: "The smart contract audit identified 3 critical vulnerabilities that could have resulted in $50M in losses. The team's expertise saved our project and gave us confidence for mainnet launch.",";,
+      name: "Michael Chen",";
+      role: "CTO, DeFi Protocol",";
+      content: "The smart contract audit identified 3 critical vulnerabilities that could have resulted in $50M in losses. The team's expertise saved our project and gave us confidence for mainnet launch.",";
       rating: 5,,
-      company: "DeFi Protocol",
+      company: "DeFi Protocol"
     },
     {
       name: "Sarah Rodriguez",",
       role: "Founder, NFT Marketplace",",
       content: "Professional audit process with clear communication and actionable recommendations. The compliance verification helped us meet regulatory requirements for our marketplace launch.",",
 =======
-      name: "Sarah Rodriguez",";,
-      role: "Founder, NFT Marketplace",";,
-      content: "Professional audit process with clear communication and actionable recommendations. The compliance verification helped us meet regulatory requirements for our marketplace launch.",";,
+      name: "Sarah Rodriguez",";
+      role: "Founder, NFT Marketplace",";
+      content: "Professional audit process with clear communication and actionable recommendations. The compliance verification helped us meet regulatory requirements for our marketplace launch.",";
       rating: 5,,
-      company: "NFT Marketplace",
+      company: "NFT Marketplace"
     },
     {
       name: "Dr. James Wilson",",
       role: "Head of Blockchain, FinTech",",
       content: "The enterprise audit package provided comprehensive security coverage for our multi-contract system. The formal verification process gave us mathematical proof of our contract's correctness.",",
 =======
-      name: "Dr. James Wilson",";,
-      role: "Head of Blockchain, FinTech",";,
-      content: "The enterprise audit package provided comprehensive security coverage for our multi-contract system. The formal verification process gave us mathematical proof of our contract's correctness.",";,
+      name: "Dr. James Wilson",";
+      role: "Head of Blockchain, FinTech",";
+      content: "The enterprise audit package provided comprehensive security coverage for our multi-contract system. The formal verification process gave us mathematical proof of our contract's correctness.",";
       rating: 5,,
-      company: "FinTech",
+      company: "FinTech"
     }
   ];
 
@@ -229,19 +225,19 @@ const SmartContractAudit: React.FC = () => {,
       title: "DeFi Protocols",",
       icon: Globe,,
       description: "Comprehensive auditing for decentralized finance protocols including lending, borrowing, and trading platforms.",",
-      vulnerabilities: ["Reentrancy attacks", "Flash loan exploits", "Oracle manipulation", "Liquidity pool risks"]",
+      vulnerabilities: ["Reentrancy attacks", "Flash loan exploits", "Oracle manipulation", "Liquidity pool risks"]"
     },
     {
       title: "NFT Smart Contracts",",
       icon: Code,,
       description: "Specialized auditing for NFT marketplaces, minting contracts, and token standards compliance.",",
-      vulnerabilities: ["Metadata manipulation", "Royalty bypass", "Minting vulnerabilities", "Transfer restrictions"]",
+      vulnerabilities: ["Metadata manipulation", "Royalty bypass", "Minting vulnerabilities", "Transfer restrictions"]"
     },
     {
       title: "Token Contracts",",
       icon: Database,,
       description: "Security analysis for ERC-20, ERC-721, ERC-1155, and custom token implementations.",",
-      vulnerabilities: ["Supply manipulation", "Access control issues", "Transfer bugs", "Approval vulnerabilities"]",
+      vulnerabilities: ["Supply manipulation", "Access control issues", "Transfer bugs", "Approval vulnerabilities"]"
     },
     {
       title: "DAO Governance",",
@@ -249,28 +245,28 @@ const SmartContractAudit: React.FC = () => {,
       description: "Auditing governance contracts, voting mechanisms, and treasury management systems.",",
       vulnerabilities: ["Vote manipulation", "Treasury exploits", "Proposal vulnerabilities", "Execution risks"]",
 =======
-      title: "DeFi Protocols",";,
+      title: "DeFi Protocols",";
       icon: Globe,,
-      description: "Comprehensive auditing for decentralized finance protocols including lending, borrowing, and trading platforms.",";,
-      vulnerabilities: ["Reentrancy attacks", "Flash loan exploits", "Oracle manipulation", "Liquidity pool risks"]";,
+      description: "Comprehensive auditing for decentralized finance protocols including lending, borrowing, and trading platforms.",";
+      vulnerabilities: ["Reentrancy attacks", "Flash loan exploits", "Oracle manipulation", "Liquidity pool risks"]";
     },
     {
-      title: "NFT Smart Contracts",";,
+      title: "NFT Smart Contracts",";
       icon: Code,,
-      description: "Specialized auditing for NFT marketplaces, minting contracts, and token standards compliance.",";,
-      vulnerabilities: ["Metadata manipulation", "Royalty bypass", "Minting vulnerabilities", "Transfer restrictions"]";,
+      description: "Specialized auditing for NFT marketplaces, minting contracts, and token standards compliance.",";
+      vulnerabilities: ["Metadata manipulation", "Royalty bypass", "Minting vulnerabilities", "Transfer restrictions"]";
     },
     {
-      title: "Token Contracts",";,
+      title: "Token Contracts",";
       icon: Database,,
-      description: "Security analysis for ERC-20, ERC-721, ERC-1155, and custom token implementations.",";,
-      vulnerabilities: ["Supply manipulation", "Access control issues", "Transfer bugs", "Approval vulnerabilities"]";,
+      description: "Security analysis for ERC-20, ERC-721, ERC-1155, and custom token implementations.",";
+      vulnerabilities: ["Supply manipulation", "Access control issues", "Transfer bugs", "Approval vulnerabilities"]";
     },
     {
-      title: "DAO Governance",";,
+      title: "DAO Governance",";
       icon: Users,,
-      description: "Auditing governance contracts, voting mechanisms, and treasury management systems.",";,
-      vulnerabilities: ["Vote manipulation", "Treasury exploits", "Proposal vulnerabilities", "Execution risks"]";,
+      description: "Auditing governance contracts, voting mechanisms, and treasury management systems.",";
+      vulnerabilities: ["Vote manipulation", "Treasury exploits", "Proposal vulnerabilities", "Execution risks"]";
     }
   ];
 
@@ -278,60 +274,60 @@ const SmartContractAudit: React.FC = () => {,
     {
       step: "01",",
       title: "Initial Assessment",",
-      description: "Code review and architecture analysis to understand the smart contract functionality and design.",
+      description: "Code review and architecture analysis to understand the smart contract functionality and design."
     },
     {
       step: "02",",
       title: "Automated Scanning",",
-      description: "AI-powered vulnerability detection using industry-leading security tools and custom analyzers.",
+      description: "AI-powered vulnerability detection using industry-leading security tools and custom analyzers."
     },
     {
       step: "03",",
       title: "Manual Review",",
-      description: "Expert manual code review focusing on business logic, edge cases, and complex interactions.",
+      description: "Expert manual code review focusing on business logic, edge cases, and complex interactions."
     },
     {
       step: "04",",
       title: "Risk Analysis",",
-      description: "Comprehensive risk assessment with vulnerability prioritization and impact analysis.",
+      description: "Comprehensive risk assessment with vulnerability prioritization and impact analysis."
     },
     {
       step: "05",",
       title: "Report Generation",",
-      description: "Detailed security report with findings, recommendations, and remediation guidance.",
+      description: "Detailed security report with findings, recommendations, and remediation guidance."
     },
     {
       step: "06",",
       title: "Follow-up Support",",
 =======
-      step: "01",";,
-      title: "Initial Assessment",";,
-      description: "Code review and architecture analysis to understand the smart contract functionality and design.",
+      step: "01",";
+      title: "Initial Assessment",";
+      description: "Code review and architecture analysis to understand the smart contract functionality and design."
     },
     {
-      step: "02",";,
-      title: "Automated Scanning",";,
-      description: "AI-powered vulnerability detection using industry-leading security tools and custom analyzers.",
+      step: "02",";
+      title: "Automated Scanning",";
+      description: "AI-powered vulnerability detection using industry-leading security tools and custom analyzers."
     },
     {
-      step: "03",";,
-      title: "Manual Review",";,
-      description: "Expert manual code review focusing on business logic, edge cases, and complex interactions.",
+      step: "03",";
+      title: "Manual Review",";
+      description: "Expert manual code review focusing on business logic, edge cases, and complex interactions."
     },
     {
-      step: "04",";,
-      title: "Risk Analysis",";,
-      description: "Comprehensive risk assessment with vulnerability prioritization and impact analysis.",
+      step: "04",";
+      title: "Risk Analysis",";
+      description: "Comprehensive risk assessment with vulnerability prioritization and impact analysis."
     },
     {
-      step: "05",";,
-      title: "Report Generation",";,
-      description: "Detailed security report with findings, recommendations, and remediation guidance.",
+      step: "05",";
+      title: "Report Generation",";
+      description: "Detailed security report with findings, recommendations, and remediation guidance."
     },
     {
-      step: "06",";,
-      title: "Follow-up Support",";,
-      description: "Ongoing support for vulnerability remediation and re-audit services.",
+      step: "06",";
+      title: "Follow-up Support",";
+      description: "Ongoing support for vulnerability remediation and re-audit services."
     }
   ];
 
@@ -341,12 +337,12 @@ const SmartContractAudit: React.FC = () => {,
         <title>Smart Contract Audit - Zion Tech Group | Blockchain Security Experts</title>
         <meta
           name="description"
-          content="Professional smart contract auditing services with 99.8% vulnerability detection rate. Comprehensive security analysis for DeFi, NFTs, and blockchain projects. 5-10 day delivery." /><meta name="keywords" content="smart contract audit, blockchain security, DeFi audit, NFT audit, smart contract security, vulnerability assessment, blockchain compliance" /><link rel="canonical" href="https://ziontechgroup.com/services/smart-contract-audit/>",
+          content="Professional smart contract auditing services with 99.8% vulnerability detection rate. Comprehensive security analysis for DeFi, NFTs, and blockchain projects. 5-10 day delivery." /><meta name="keywords" content="smart contract audit, blockchain security, DeFi audit, NFT audit, smart contract security, vulnerability assessment, blockchain compliance" /><link rel="canonical" href="https://ziontechgroup.com/services/smart-contract-audit/>"
 =======
           content="Professional smart contract auditing services with 99.8% vulnerability detection rate. Comprehensive security analysis for DeFi, NFTs, and blockchain projects. 5-10 day delivery."
         />
         <meta name="keywords" content="smart contract audit, blockchain security, DeFi audit, NFT audit, smart contract security, vulnerability assessment, blockchain compliance" />";
-        <link rel="canonical" href="https: //ziontechgroup.com/services/smart-contract-audit" />";,
+        <link rel="canonical" href="https: //ziontechgroup.com/services/smart-contract-audit" />";
       </Helmet>
 
       <Header />
@@ -354,31 +350,31 @@ const SmartContractAudit: React.FC = () => {,
       <main className="min-h-screen bg-white">";
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-red-900 via-orange-800 to-yellow-900 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
             <div className="text-center">
-              <h1 className="text-5xl md: text-7xl font-bold mb-6">",
+              <h1 className="text-5xl md: text-7xl font-bold mb-6">"
                 Smart Contract <span className="bg-gradient-to-r from-red-400 to-yellow-400 bg-clip-text text-transparent">Audit</span>
               </h1>
-              <p className="text-xl md: text-2xl text-red-100 max-w-4xl mx-auto mb-8">",
+              <p className="text-xl md: text-2xl text-red-100 max-w-4xl mx-auto mb-8">"
                 Professional smart contract auditing services with 99.8% vulnerability detection rate. 
                 Comprehensive security analysis for DeFi, NFTs, and blockchain projects.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">"
 =======
         <section className="bg-gradient-to-br from-red-900 via-orange-800 to-yellow-900 text-white py-20">";
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";
             <div className="text-center">";
-              <h1 className="text-5xl md: text-7xl font-bold mb-6">";,
+              <h1 className="text-5xl md: text-7xl font-bold mb-6">";
                 Smart Contract <span className="bg-gradient-to-r from-red-400 to-yellow-400 bg-clip-text text-transparent">Audit</span>";
               </h1>
-              <p className="text-xl md: text-2xl text-red-100 max-w-4xl mx-auto mb-8">";,
+              <p className="text-xl md: text-2xl text-red-100 max-w-4xl mx-auto mb-8">";
                 Professional smart contract auditing services with 99.8% vulnerability detection rate. 
                 Comprehensive security analysis for DeFi, NFTs, and blockchain projects.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">";
                 <a
                   href="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-red-600 hover: bg-red-700 text-white font-semibold rounded-lg transition-colors",
+                  className="inline-flex items-center px-8 py-4 bg-red-600 hover: bg-red-700 text-white font-semibold rounded-lg transition-colors"
                 >
                   <Phone className="w-5 h-5 mr-2/>
 =======
@@ -387,7 +383,7 @@ const SmartContractAudit: React.FC = () => {,
                 </a>
                 <a
                   href="#pricing"
-                  className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover: bg-white hover:text-red-900 font-semibold rounded-lg transition-colors",
+                  className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover: bg-white hover:text-red-900 font-semibold rounded-lg transition-colors"
                 >
                   View Pricing
                   <ArrowRight className="w-5 h-5 ml-2/>
@@ -401,12 +397,12 @@ const SmartContractAudit: React.FC = () => {,
 
         {/* Key Benefits */}
         <section className="py-16 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
 =======
         <section className="py-16 bg-gray-50">";
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";
             <div className="text-center mb-12">";
               <h2 className="text-4xl font-bold text-gray-900 mb-4">";
                 Why Choose Our Smart Contract Auditing Services?
@@ -416,12 +412,12 @@ const SmartContractAudit: React.FC = () => {,
               </p>
             </div>
 
-            <div className="grid md: grid-cols-4 gap-8">",
+            <div className="grid md: grid-cols-4 gap-8">"
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-red-100 rounded-full mb-4">
                   <Shield className="w-8 h-8 text-red-600/>
 =======
-            <div className="grid md: grid-cols-4 gap-8">";,
+            <div className="grid md: grid-cols-4 gap-8">";
               <div className="text-center">";
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-red-100 rounded-full mb-4">";
                   <Shield className="w-8 h-8 text-red-600" />";
@@ -468,12 +464,12 @@ const SmartContractAudit: React.FC = () => {,
 
         {/* Audit Types */}
         <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
 =======
         <section className="py-20">";
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";
             <div className="text-center mb-16">";
               <h2 className="text-4xl font-bold text-gray-900 mb-4">";
                 Specialized Audit Services
@@ -483,36 +479,36 @@ const SmartContractAudit: React.FC = () => {,
               </p>
             </div>
 
-            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">",
+            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">"
               {auditTypes.map((audit, index) => {
                 const Icon = audit.icon;
                 return (
-                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",
+                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">"
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-red-100 rounded-full mb-6">
                       <Icon className="w-8 h-8 text-red-600/>
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-4">{audit.title}</h3>
                     <p className="text-gray-600 mb-6">{audit.description}</p>
                     <div className="mb-4">
-                      <h4 className="font-semibold text-gray-900 mb-2">Common Vulnerabilities: </h4>",
+                      <h4 className="font-semibold text-gray-900 mb-2">Common Vulnerabilities: </h4>"
                       <ul className="space-y-1">
                         {audit.vulnerabilities.map((vuln, vulnIndex) => (
                           <li key={vulnIndex} className="flex items-center text-sm">
                             <AlertTriangle className="w-4 h-4 text-orange-500 mr-2 flex-shrink-0/>
                             <span className="text-gray-700">{vuln}</span>
 =======
-            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">";,
+            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">";
               {auditTypes.map((audit, index) => {
                 const Icon = audit.icon;
                 return (
-                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">";,
+                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">";
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-red-100 rounded-full mb-6">";
                       <Icon className="w-8 h-8 text-red-600" />";
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-4">{audit.title}</h3>";
                     <p className="text-gray-600 mb-6">{audit.description}</p>";
                     <div className="mb-4">";
-                      <h4 className="font-semibold text-gray-900 mb-2">Common Vulnerabilities: </h4>";,
+                      <h4 className="font-semibold text-gray-900 mb-2">Common Vulnerabilities: </h4>";
                       <ul className="space-y-1">";
                         {audit.vulnerabilities.map((vuln, vulnIndex) => (
                           <li key={vulnIndex} className="flex items-center text-sm">";
@@ -531,12 +527,12 @@ const SmartContractAudit: React.FC = () => {,
 
         {/* Process */}
         <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
 =======
         <section className="py-20 bg-gray-50">";
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";
             <div className="text-center mb-16">";
               <h2 className="text-4xl font-bold text-gray-900 mb-4">";
                 Our Audit Process
@@ -546,9 +542,9 @@ const SmartContractAudit: React.FC = () => {,
               </p>
             </div>
 
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">"
 =======
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">";,
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">";
               {process.map((step, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">";
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-red-100 rounded-lg mb-4">";
@@ -564,12 +560,12 @@ const SmartContractAudit: React.FC = () => {,
 
         {/* Features */}
         <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
 =======
         <section className="py-20">";
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";
             <div className="text-center mb-16">";
               <h2 className="text-4xl font-bold text-gray-900 mb-4">";
                 Advanced Security Analysis
@@ -579,11 +575,11 @@ const SmartContractAudit: React.FC = () => {,
               </p>
             </div>
 
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">"
               {features.map((feature, index) => {
                 const Icon = feature.icon;
                 return (
-                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",
+                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">"
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-red-100 rounded-lg mb-4">
                       <Icon className="w-6 h-6 text-red-600/>
                     </div>
@@ -592,11 +588,11 @@ const SmartContractAudit: React.FC = () => {,
                     <div className="inline-flex items-center text-green-600 font-semibold text-sm">
                       <CheckCircle className="w-4 h-4 mr-1/>
 =======
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">";,
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">";
               {features.map((feature, index) => {
                 const Icon = feature.icon;
                 return (
-                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">";,
+                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">";
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-red-100 rounded-lg mb-4">";
                       <Icon className="w-6 h-6 text-red-600" />";
                     </div>
@@ -615,12 +611,12 @@ const SmartContractAudit: React.FC = () => {,
 
         {/* Pricing */}
         <section id="pricing" className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
 =======
         <section id="pricing" className="py-20 bg-gray-50">";
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";
             <div className="text-center mb-16">";
               <h2 className="text-4xl font-bold text-gray-900 mb-4">";
                 Transparent Pricing for Every Project Size
@@ -630,9 +626,9 @@ const SmartContractAudit: React.FC = () => {,
               </p>
             </div>
 
-            <div className="grid md: grid-cols-3 gap-8">",
+            <div className="grid md: grid-cols-3 gap-8">"
 =======
-            <div className="grid md: grid-cols-3 gap-8">";,
+            <div className="grid md: grid-cols-3 gap-8">";
               {pricing.map((plan, index) => (
                 <div key={index} className={`bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? 'ring-2 ring-red-500 relative' : ''}`}>`;
                   {plan.popular && (
@@ -669,7 +665,7 @@ const SmartContractAudit: React.FC = () => {,
 plan.popular
 ? 'bg-red-600 text-white hover:bg-red-700'
 =======
-? 'bg-red-600 text-white hover: bg-red-700',';,
+? 'bg-red-600 text-white hover: bg-red-700',';
 : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
 }`}`;
                   >
@@ -683,7 +679,7 @@ plan.popular
               <p className="text-gray-600 mb-4">Need a custom audit solution?</p>";
               <a
                 href="/contact"
-                className="inline-flex items-center text-red-600 hover: text-red-700 font-semibold",
+                className="inline-flex items-center text-red-600 hover: text-red-700 font-semibold"
               >
                 Contact our Security Team
                 <ArrowRight className="w-4 h-4 ml-1/>
@@ -696,12 +692,12 @@ plan.popular
 
         {/* Testimonials */}
         <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
 =======
         <section className="py-20">";
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";
             <div className="text-center mb-16">";
               <h2 className="text-4xl font-bold text-gray-900 mb-4">";
                 What Our Clients Say
@@ -711,9 +707,9 @@ plan.popular
               </p>
             </div>
 
-            <div className="grid md: grid-cols-3 gap-8">",
+            <div className="grid md: grid-cols-3 gap-8">"
 =======
-            <div className="grid md: grid-cols-3 gap-8">";,
+            <div className="grid md: grid-cols-3 gap-8">";
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">";
                   <div className="flex items-center mb-4">";
@@ -739,23 +735,23 @@ plan.popular
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-br from-red-900 via-orange-800 to-yellow-900 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">"
             <h2 className="text-4xl font-bold mb-6">
 =======
         <section className="py-20 bg-gradient-to-br from-red-900 via-orange-800 to-yellow-900 text-white">";
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">";,
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">";
             <h2 className="text-4xl font-bold mb-6">";
               Ready to Secure Your Smart Contracts?
             </h2>
             <p className="text-xl text-red-100 max-w-3xl mx-auto mb-8">";
               Protect your blockchain project with professional smart contract auditing from certified security experts.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">"
 =======
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">";
               <a
                 href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-red-600 hover: bg-red-700 text-white font-semibold rounded-lg transition-colors",
+                className="inline-flex items-center px-8 py-4 bg-red-600 hover: bg-red-700 text-white font-semibold rounded-lg transition-colors"
               >
                 <Phone className="w-5 h-5 mr-2/>
 =======
@@ -764,7 +760,7 @@ plan.popular
               </a>
               <a
                 href="/case-studies"
-                className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover: bg-white hover:text-red-900 font-semibold rounded-lg transition-colors",
+                className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover: bg-white hover:text-red-900 font-semibold rounded-lg transition-colors"
               >
                 View Audit Reports
                 <ArrowRight className="w-5 h-5 ml-2/>

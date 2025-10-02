@@ -7,7 +7,7 @@ const September30NewContentMegaBanner = () => {
       icon: Brain,,
       link: "/blog/ai-neural-coding-breakthrough-2025",",
       category: "Neural AI",",
-      impact: "95% faster development",
+      impact: "95% faster development"
     },
     {
       title: "AI Holographic Computing",",
@@ -15,7 +15,7 @@ const September30NewContentMegaBanner = () => {
       icon: Layers,,
       link: "/blog/ai-holographic-computing-2025",",
       category: "Spatial AI",",
-      impact: "10x faster insights",
+      impact: "10x faster insights"
     },
     {
       title: "AI Quantum Consciousness",",
@@ -23,7 +23,7 @@ const September30NewContentMegaBanner = () => {
       icon: Atom,,
       link: "/blog/ai-quantum-consciousness-2025",",
       category: "Quantum AI",",
-      impact: "1M× performance",
+      impact: "1M× performance"
     },
     {
       title: "AI Molecular Manufacturing",",
@@ -31,7 +31,7 @@ const September30NewContentMegaBanner = () => {
       icon: Zap,,
       link: "/blog/ai-molecular-manufacturing-2025",",
       category: "NanoTech",",
-      impact: "100% recyclable",
+      impact: "100% recyclable"
     },
     {
       title: "AI Personalized Education",",
@@ -40,49 +40,49 @@ const September30NewContentMegaBanner = () => {
       link: "/blog/ai-personalized-education-revolution-2025",",
       category: "EdTech AI",",
 =======
-      title: "AI Neural Coding Breakthrough",";,
-      description: "Programming at the speed of thought with 99.7% accuracy",";,
+      title: "AI Neural Coding Breakthrough",";
+      description: "Programming at the speed of thought with 99.7% accuracy",";
       icon: Brain,,
-      link: "/blog/ai-neural-coding-breakthrough-2025",";,
-      category: "Neural AI",";,
-      impact: "95% faster development",
+      link: "/blog/ai-neural-coding-breakthrough-2025",";
+      category: "Neural AI",";
+      impact: "95% faster development"
     },
     {
-      title: "AI Holographic Computing",";,
-      description: "Immersive 3D data visualization with zero latency",";,
+      title: "AI Holographic Computing",";
+      description: "Immersive 3D data visualization with zero latency",";
       icon: Layers,,
-      link: "/blog/ai-holographic-computing-2025",";,
-      category: "Spatial AI",";,
-      impact: "10x faster insights",
+      link: "/blog/ai-holographic-computing-2025",";
+      category: "Spatial AI",";
+      impact: "10x faster insights"
     },
     {
-      title: "AI Quantum Consciousness",";,
-      description: "1M times faster reasoning with emergent creativity",";,
+      title: "AI Quantum Consciousness",";
+      description: "1M times faster reasoning with emergent creativity",";
       icon: Atom,,
-      link: "/blog/ai-quantum-consciousness-2025",";,
-      category: "Quantum AI",";,
-      impact: "1M× performance",
+      link: "/blog/ai-quantum-consciousness-2025",";
+      category: "Quantum AI",";
+      impact: "1M× performance"
     },
     {
-      title: "AI Molecular Manufacturing",";,
-      description: "Atomic-precision production with zero waste",";,
+      title: "AI Molecular Manufacturing",";
+      description: "Atomic-precision production with zero waste",";
       icon: Zap,,
-      link: "/blog/ai-molecular-manufacturing-2025",";,
-      category: "NanoTech",";,
-      impact: "100% recyclable",
+      link: "/blog/ai-molecular-manufacturing-2025",";
+      category: "NanoTech",";
+      impact: "100% recyclable"
     },
     {
-      title: "AI Personalized Education",";,
-      description: "10x better learning outcomes for every student",";,
+      title: "AI Personalized Education",";
+      description: "10x better learning outcomes for every student",";
       icon: GraduationCap,,
-      link: "/blog/ai-personalized-education-revolution-2025",";,
-      category: "EdTech AI",";,
-      impact: "97% mastery rate",
+      link: "/blog/ai-personalized-education-revolution-2025",";
+      category: "EdTech AI",";
+      impact: "97% mastery rate"
     }
   ];
 
   return (
-    <div className="bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900 rounded-3xl p-8 md: p-12 text-white shadow-2xl border border-purple-500/20 relative overflow-hidden">",
+    <div className="bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900 rounded-3xl p-8 md: p-12 text-white shadow-2xl border border-purple-500/20 relative overflow-hidden">"
       {/* Animated background */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-cyan-500/10 animate-pulse"></div>
       <div className="relative z-10">
@@ -94,9 +94,9 @@ const September30NewContentMegaBanner = () => {
             <Sparkles className="w-6 h-6 text-yellow-400 animate-pulse/>
           </div>
           
-          <h2 className="text-4xl md: text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent">",
+          <h2 className="text-4xl md: text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent">"
 =======
-    <div className="bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900 rounded-3xl p-8 md: p-12 text-white shadow-2xl border border-purple-500/20 relative overflow-hidden">";,
+    <div className="bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900 rounded-3xl p-8 md: p-12 text-white shadow-2xl border border-purple-500/20 relative overflow-hidden">";
       {/* Animated background */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-cyan-500/10 animate-pulse"></div>";
       
@@ -109,7 +109,7 @@ const September30NewContentMegaBanner = () => {
             <Sparkles className="w-6 h-6 text-yellow-400 animate-pulse" />";
           </div>
           
-          <h2 className="text-4xl md: text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent">";,
+          <h2 className="text-4xl md: text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent">";
             🚀 5 Revolutionary AI Breakthroughs
           </h2>
           
@@ -120,30 +120,30 @@ const September30NewContentMegaBanner = () => {
         </div>
 
         {/* Articles Grid */}
-        <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-6 mb-10">",
+        <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-6 mb-10">"
 =======
-        <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-6 mb-10">";,
+        <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-6 mb-10">";
           {newArticles.map((article, index) => (
             <Link
               key={index}
               to={article.link}
-              className="group bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover: bg-white/20 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl",
+              className="group bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover: bg-white/20 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
             >
               <div className="flex items-start gap-4">
-                <div className="bg-gradient-to-br from-cyan-500 to-blue-600 p-3 rounded-xl group-hover: scale-110 transition-transform">",
+                <div className="bg-gradient-to-br from-cyan-500 to-blue-600 p-3 rounded-xl group-hover: scale-110 transition-transform">"
                   <article.icon className="w-6 h-6/>
                 </div>
                 <div className="flex-1">
                   <div className="text-xs font-semibold text-cyan-300 mb-2">{article.category}</div>
-                  <h3 className="text-lg font-bold mb-2 group-hover: text-cyan-300 transition-colors">",
+                  <h3 className="text-lg font-bold mb-2 group-hover: text-cyan-300 transition-colors">"
 =======
               <div className="flex items-start gap-4">";
-                <div className="bg-gradient-to-br from-cyan-500 to-blue-600 p-3 rounded-xl group-hover: scale-110 transition-transform">";,
+                <div className="bg-gradient-to-br from-cyan-500 to-blue-600 p-3 rounded-xl group-hover: scale-110 transition-transform">";
                   <article.icon className="w-6 h-6" />";
                 </div>
                 <div className="flex-1">";
                   <div className="text-xs font-semibold text-cyan-300 mb-2">{article.category}</div>";
-                  <h3 className="text-lg font-bold mb-2 group-hover: text-cyan-300 transition-colors">";,
+                  <h3 className="text-lg font-bold mb-2 group-hover: text-cyan-300 transition-colors">";
                     {article.title}
                   </h3>
                   <p className="text-sm text-blue-200 mb-3">{article.description}</p>";
@@ -158,31 +158,31 @@ const September30NewContentMegaBanner = () => {
           {/* Additional promotional card */}
           <Link
             to="/blog"
-            className="group bg-gradient-to-br from-yellow-500/20 to-orange-500/20 backdrop-blur-sm rounded-2xl p-6 border border-yellow-400/30 hover: border-yellow-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl flex flex-col items-center justify-center text-center",
+            className="group bg-gradient-to-br from-yellow-500/20 to-orange-500/20 backdrop-blur-sm rounded-2xl p-6 border border-yellow-400/30 hover: border-yellow-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl flex flex-col items-center justify-center text-center"
           >
-            <Sparkles className="w-12 h-12 text-yellow-400 mb-4 group-hover: scale-125 transition-transform/>",
+            <Sparkles className="w-12 h-12 text-yellow-400 mb-4 group-hover: scale-125 transition-transform/>"
             <h3 className="text-xl font-bold mb-2">View All Articles</h3>
             <p className="text-sm text-yellow-200 mb-4">200+ groundbreaking insights</p>
             <div className="flex items-center gap-2 text-yellow-400 font-semibold">
               Explore Now
-              <ArrowRight className="w-5 h-5 group-hover: translate-x-1 transition-transform/>",
+              <ArrowRight className="w-5 h-5 group-hover: translate-x-1 transition-transform/>"
 =======
-            <Sparkles className="w-12 h-12 text-yellow-400 mb-4 group-hover: scale-125 transition-transform" />";,
+            <Sparkles className="w-12 h-12 text-yellow-400 mb-4 group-hover: scale-125 transition-transform" />";
             <h3 className="text-xl font-bold mb-2">View All Articles</h3>";
             <p className="text-sm text-yellow-200 mb-4">200+ groundbreaking insights</p>";
             <div className="flex items-center gap-2 text-yellow-400 font-semibold">";
               Explore Now
-              <ArrowRight className="w-5 h-5 group-hover: translate-x-1 transition-transform" />";,
+              <ArrowRight className="w-5 h-5 group-hover: translate-x-1 transition-transform" />";
             </div>
           </Link>
         </div>
 
         {/* Stats Banner */}
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 mb-8">
-          <div className="grid grid-cols-2 md: grid-cols-5 gap-6 text-center">",
+          <div className="grid grid-cols-2 md: grid-cols-5 gap-6 text-center">"
 =======
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 mb-8">";
-          <div className="grid grid-cols-2 md: grid-cols-5 gap-6 text-center">";,
+          <div className="grid grid-cols-2 md: grid-cols-5 gap-6 text-center">";
             <div>
               <div className="text-3xl font-bold text-cyan-400 mb-1">5</div>";
               <div className="text-sm text-blue-200">New Breakthroughs</div>";
@@ -207,24 +207,24 @@ const September30NewContentMegaBanner = () => {
         </div>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">",
+        <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">"
 =======
-        <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">";,
+        <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">";
           <Link
             to="/blog"
-            className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-400 hover:to-blue-500 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl inline-flex items-center gap-3 group",
+            className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-400 hover:to-blue-500 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl inline-flex items-center gap-3 group"
           >
-            <Brain className="w-6 h-6 group-hover: rotate-12 transition-transform/>",
+            <Brain className="w-6 h-6 group-hover: rotate-12 transition-transform/>"
             Explore All Breakthroughs
-            <ArrowRight className="w-5 h-5 group-hover: translate-x-1 transition-transform/>",
+            <ArrowRight className="w-5 h-5 group-hover: translate-x-1 transition-transform/>"
 =======
-            <Brain className="w-6 h-6 group-hover: rotate-12 transition-transform" />";,
+            <Brain className="w-6 h-6 group-hover: rotate-12 transition-transform" />";
             Explore All Breakthroughs
-            <ArrowRight className="w-5 h-5 group-hover: translate-x-1 transition-transform" />";,
+            <ArrowRight className="w-5 h-5 group-hover: translate-x-1 transition-transform" />";
           </Link>
           <Link
             to="/contact"
-            className="border-2 border-cyan-400 hover: bg-cyan-400 hover:text-gray-900 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 inline-flex items-center gap-3",
+            className="border-2 border-cyan-400 hover: bg-cyan-400 hover:text-gray-900 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 inline-flex items-center gap-3"
           >
             <Sparkles className="w-5 h-5/>
 =======

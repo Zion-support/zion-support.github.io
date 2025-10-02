@@ -3,11 +3,11 @@
 const Page = () => {
   return (
     <div className="container mx-auto px-6 py-12 text-white">
-      <h1 className="text-3xl font-bold mb-4">GenAI 2025: Economy Tiers Blueprint</h1>",
+      <h1 className="text-3xl font-bold mb-4">GenAI 2025: Economy Tiers Blueprint</h1>"
       <p className="text-zion-slate-light mb-6">
 =======
     <div className="container mx-auto px-6 py-12 text-white">";
-      <h1 className="text-3xl font-bold mb-4">GenAI 2025: Economy Tiers Blueprint</h1>";,
+      <h1 className="text-3xl font-bold mb-4">GenAI 2025: Economy Tiers Blueprint</h1>";
       <p className="text-zion-slate-light mb-6">";
         Tier routing + semantic caches with eval gates to cut spend 40–70% while keeping UX stable.
       </p>

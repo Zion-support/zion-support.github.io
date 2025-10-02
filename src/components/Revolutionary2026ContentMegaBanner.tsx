@@ -32,7 +32,7 @@ const Revolutionary2026ContentMegaBanner: React.FC = () => {
       icon: "🤖",
       impact: "98% Automation",
 =======
-      impact: "98% Automation"
+      impact: "98% Automation",
       featured: true
     },
     {
@@ -60,7 +60,7 @@ const Revolutionary2026ContentMegaBanner: React.FC = () => {
       icon: "🛡️",
       impact: "99.99% Security",
       featured: false
-    },
+    }
 =======
 id: 3,
 title: "Quantum-Neural Network Architecture",
@@ -73,7 +73,7 @@ trending: true,
 icon: "⚛️",
 impact: "Quantum Breakthrough",
 featured: true
-}
+},
     {
 id: 4,
 title: "Zero Trust AI Security Framework",
@@ -86,7 +86,7 @@ trending: true,
 icon: "🛡️",
 impact: "99.99% Security",
 featured: false
-}
+},
     {
       id: 5,
       title: "Edge AI Deployment at Scale",

@@ -20,7 +20,7 @@ const MicroSaaS: React.FC = () => {
       price: '$499 - $2,499/mo',
       features: ['Model optimization', 'OTA updates', 'Fleet telemetry', 'A/B tests'],
       link: 'https://ziontechgroup.com/services/micro-saas'
-    },
+    }
   ];
 
   return (

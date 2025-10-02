@@ -9,19 +9,19 @@ export default function AIEnterpriseTransformation2027(): React.JSX.Element {
           name="description"
           content="Executive playbook to plan, fund, and scale AI with measurable ROI using KPI-linked scorecards and governance." /><link
           rel="canonical"
-          href="https://ziontechgroup.com/blog/ai-enterprise-transformation-2027",
+          href="https://ziontechgroup.com/blog/ai-enterprise-transformation-2027"
         />
       </Helmet>
 
       <div className="container mx-auto px-6 py-16">
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">",
+        <h1 className="text-4xl md: text-5xl font-bold mb-4">"
 =======
-          href="https: //ziontechgroup.com/blog/ai-enterprise-transformation-2027",
+          href="https: //ziontechgroup.com/blog/ai-enterprise-transformation-2027"
         />
       </Helmet>
 
       <div className="container mx-auto px-6 py-16">";
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">";,
+        <h1 className="text-4xl md: text-5xl font-bold mb-4">";
           AI Enterprise Transformation 2027
         </h1>
         <p className="text-zion-slate-light mb-8">";

@@ -14,9 +14,9 @@ console.log(`[Performance] ${metric.name
           if (entry.entryType === 'paint') {;
             logMetric({
               name: entry.name,
-              value: entry.startTime
+              value: entry.startTime,
 =======
-const logMetric = (metric: any) => {,,
+const logMetric = (metric: any) => {,
 console.log(`[Performance] ${metric.name`;
 }:`, metric.value);`;
   };
@@ -29,16 +29,15 @@ console.log(`[Performance] ${metric.name`;
           if (entry.entryType === 'paint') {';
             logMetric({
               name: entry.name,,
-              value: entry.startTime,,
-            });
+              value: entry.startTime,});
           }
         }
       });
       observer.observe({ entryTypes: ['paint'] });';
     } catch (e) {
-      console.error('Performance observation error: ', e);',
+      console.error('Performance observation error: ', e);'
 =======
-      console.error('Performance observation error: ', e);';,
+      console.error('Performance observation error: ', e);';
     }
   }
 
@@ -52,11 +51,10 @@ console.log(`[Performance] ${metric.name`;
         const pageLoadTime = timing.loadEventEnd - timing.navigationStart;
         logMetric({
           name: 'Page Load Time',
-          value: pageLoadTime
+          value: pageLoadTime,
 =======
-          name: 'Page Load Time',';,
-          value: pageLoadTime,,
-        });
+          name: 'Page Load Time',';
+          value: pageLoadTime,});
       }, 0);
     });
   }

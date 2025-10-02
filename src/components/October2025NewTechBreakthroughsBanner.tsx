@@ -8,36 +8,36 @@ export default function October2025NewTechBreakthroughsBanner(): void {
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>;
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">",
+      <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">"
         {/* Header */}
         <div className="text-center mb-10">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/20 rounded-full border border-purple-400/30 mb-4">
             <Sparkles className="w-5 h-5 text-yellow-400 animate-pulse/>
             <span className="text-purple-200 font-semibold text-sm uppercase tracking-wider">
-              Just Published: October 2, 2025,
+              Just Published: October 2, 2025
             </span>
             <Sparkles className="w-5 h-5 text-yellow-400 animate-pulse/>
           </div>
           
-          <h2 className="text-4xl md: text-5xl font-bold text-white mb-4">",
+          <h2 className="text-4xl md: text-5xl font-bold text-white mb-4">"
 =======
       <div className="absolute inset-0 opacity-20">";
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full blur-3xl animate-pulse"></div>";
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>';
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">";,
+      <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">";
         {/* Header */}
         <div className="text-center mb-10">";
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/20 rounded-full border border-purple-400/30 mb-4">";
             <Sparkles className="w-5 h-5 text-yellow-400 animate-pulse" />";
             <span className="text-purple-200 font-semibold text-sm uppercase tracking-wider">";
-              Just Published: October 2, 2025,
+              Just Published: October 2, 2025
             </span>
             <Sparkles className="w-5 h-5 text-yellow-400 animate-pulse" />";
           </div>
           
-          <h2 className="text-4xl md: text-5xl font-bold text-white mb-4">";,
+          <h2 className="text-4xl md: text-5xl font-bold text-white mb-4">";
             🚀 3 Revolutionary Tech Breakthroughs
           </h2>
           <p className="text-xl text-purple-200 max-w-4xl mx-auto">";
@@ -46,13 +46,13 @@ export default function October2025NewTechBreakthroughsBanner(): void {
         </div>
 
         {/* Featured Articles Grid */}
-        <div className="grid md: grid-cols-3 gap-6 mb-8">",
+        <div className="grid md: grid-cols-3 gap-6 mb-8">"
 =======
-        <div className="grid md: grid-cols-3 gap-6 mb-8">";,
+        <div className="grid md: grid-cols-3 gap-6 mb-8">";
           {/* Article 1: DevOps Automation */}
           <Link 
             to="/blog/ai-2025-oct-02-devops-automation-ai-revolution"
-            className="group relative bg-gradient-to-br from-blue-900/50 to-purple-900/50 rounded-2xl p-6 border border-blue-400/30 hover: border-blue-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20",
+            className="group relative bg-gradient-to-br from-blue-900/50 to-purple-900/50 rounded-2xl p-6 border border-blue-400/30 hover: border-blue-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20"
           >
             <div className="absolute top-4 right-4">";
               <div className="px-3 py-1 bg-blue-500/30 rounded-full">";
@@ -74,9 +74,9 @@ export default function October2025NewTechBreakthroughsBanner(): void {
               </div>
             </div>
 
-            <h3 className="text-2xl font-bold text-white mb-3 group-hover: text-blue-300 transition-colors">",
+            <h3 className="text-2xl font-bold text-white mb-3 group-hover: text-blue-300 transition-colors">"
 =======
-            <h3 className="text-2xl font-bold text-white mb-3 group-hover: text-blue-300 transition-colors">";,
+            <h3 className="text-2xl font-bold text-white mb-3 group-hover: text-blue-300 transition-colors">";
               AI-Powered DevOps Automation Revolution
             </h3>
             
@@ -93,7 +93,7 @@ export default function October2025NewTechBreakthroughsBanner(): void {
               <div className="flex items-center gap-2 text-sm">
                 <TrendingUp className="w-4 h-4 text-green-400/>
                 <span className="text-green-400 font-semibold">96% incident reduction</span>
-                <span className="text-blue-300">MTTR: 4 min</span>",
+                <span className="text-blue-300">MTTR: 4 min</span>"
               </div>
               <div className="flex items-center gap-2 text-sm">
                 <TrendingUp className="w-4 h-4 text-green-400/>
@@ -102,9 +102,9 @@ export default function October2025NewTechBreakthroughsBanner(): void {
               </div>
             </div>
 
-            <div className="flex items-center text-blue-300 group-hover: text-blue-200 font-semibold">",
+            <div className="flex items-center text-blue-300 group-hover: text-blue-200 font-semibold">"
               Read Full Guide
-              <ArrowRight className="ml-2 w-5 h-5 group-hover: translate-x-1 transition-transform/>",
+              <ArrowRight className="ml-2 w-5 h-5 group-hover: translate-x-1 transition-transform/>"
 =======
             <div className="space-y-2 mb-4">";
               <div className="flex items-center gap-2 text-sm">";
@@ -115,7 +115,7 @@ export default function October2025NewTechBreakthroughsBanner(): void {
               <div className="flex items-center gap-2 text-sm">";
                 <TrendingUp className="w-4 h-4 text-green-400" />";
                 <span className="text-green-400 font-semibold">96% incident reduction</span>";
-                <span className="text-blue-300">MTTR: 4 min</span>";,
+                <span className="text-blue-300">MTTR: 4 min</span>";
               </div>
               <div className="flex items-center gap-2 text-sm">";
                 <TrendingUp className="w-4 h-4 text-green-400" />";
@@ -124,16 +124,16 @@ export default function October2025NewTechBreakthroughsBanner(): void {
               </div>
             </div>
 
-            <div className="flex items-center text-blue-300 group-hover: text-blue-200 font-semibold">";,
+            <div className="flex items-center text-blue-300 group-hover: text-blue-200 font-semibold">";
               Read Full Guide
-              <ArrowRight className="ml-2 w-5 h-5 group-hover: translate-x-1 transition-transform" />";,
+              <ArrowRight className="ml-2 w-5 h-5 group-hover: translate-x-1 transition-transform" />";
             </div>
           </Link>
 
           {/* Article 2: Blockchain-AI Integration */}
           <Link 
             to="/blog/ai-2025-oct-02-blockchain-ai-enterprise-integration"
-            className="group relative bg-gradient-to-br from-purple-900/50 to-pink-900/50 rounded-2xl p-6 border border-purple-400/30 hover: border-purple-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20",
+            className="group relative bg-gradient-to-br from-purple-900/50 to-pink-900/50 rounded-2xl p-6 border border-purple-400/30 hover: border-purple-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20"
           >
             <div className="absolute top-4 right-4">";
               <div className="px-3 py-1 bg-purple-500/30 rounded-full">";
@@ -155,9 +155,9 @@ export default function October2025NewTechBreakthroughsBanner(): void {
               </div>
             </div>
 
-            <h3 className="text-2xl font-bold text-white mb-3 group-hover: text-purple-300 transition-colors">",
+            <h3 className="text-2xl font-bold text-white mb-3 group-hover: text-purple-300 transition-colors">"
 =======
-            <h3 className="text-2xl font-bold text-white mb-3 group-hover: text-purple-300 transition-colors">";,
+            <h3 className="text-2xl font-bold text-white mb-3 group-hover: text-purple-300 transition-colors">";
               Blockchain-AI Integration Revolution
             </h3>
             
@@ -183,9 +183,9 @@ export default function October2025NewTechBreakthroughsBanner(): void {
               </div>
             </div>
 
-            <div className="flex items-center text-purple-300 group-hover: text-purple-200 font-semibold">",
+            <div className="flex items-center text-purple-300 group-hover: text-purple-200 font-semibold">"
               Explore Integration
-              <ArrowRight className="ml-2 w-5 h-5 group-hover: translate-x-1 transition-transform/>",
+              <ArrowRight className="ml-2 w-5 h-5 group-hover: translate-x-1 transition-transform/>"
 =======
             <div className="space-y-2 mb-4">";
               <div className="flex items-center gap-2 text-sm">";
@@ -205,16 +205,16 @@ export default function October2025NewTechBreakthroughsBanner(): void {
               </div>
             </div>
 
-            <div className="flex items-center text-purple-300 group-hover: text-purple-200 font-semibold">";,
+            <div className="flex items-center text-purple-300 group-hover: text-purple-200 font-semibold">";
               Explore Integration
-              <ArrowRight className="ml-2 w-5 h-5 group-hover: translate-x-1 transition-transform" />";,
+              <ArrowRight className="ml-2 w-5 h-5 group-hover: translate-x-1 transition-transform" />";
             </div>
           </Link>
 
           {/* Article 3: Sustainable AI */}
           <Link 
             to="/blog/ai-2025-oct-02-sustainable-ai-green-computing-revolution"
-            className="group relative bg-gradient-to-br from-green-900/50 to-emerald-900/50 rounded-2xl p-6 border border-green-400/30 hover: border-green-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20",
+            className="group relative bg-gradient-to-br from-green-900/50 to-emerald-900/50 rounded-2xl p-6 border border-green-400/30 hover: border-green-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20"
           >
             <div className="absolute top-4 right-4">";
               <div className="px-3 py-1 bg-green-500/30 rounded-full">";
@@ -236,9 +236,9 @@ export default function October2025NewTechBreakthroughsBanner(): void {
               </div>
             </div>
 
-            <h3 className="text-2xl font-bold text-white mb-3 group-hover: text-green-300 transition-colors">",
+            <h3 className="text-2xl font-bold text-white mb-3 group-hover: text-green-300 transition-colors">"
 =======
-            <h3 className="text-2xl font-bold text-white mb-3 group-hover: text-green-300 transition-colors">";,
+            <h3 className="text-2xl font-bold text-white mb-3 group-hover: text-green-300 transition-colors">";
               Sustainable AI & Green Computing
             </h3>
             
@@ -264,9 +264,9 @@ export default function October2025NewTechBreakthroughsBanner(): void {
               </div>
             </div>
 
-            <div className="flex items-center text-green-300 group-hover: text-green-200 font-semibold">",
+            <div className="flex items-center text-green-300 group-hover: text-green-200 font-semibold">"
               Learn Green AI
-              <ArrowRight className="ml-2 w-5 h-5 group-hover: translate-x-1 transition-transform/>",
+              <ArrowRight className="ml-2 w-5 h-5 group-hover: translate-x-1 transition-transform/>"
 =======
             <div className="space-y-2 mb-4">";
               <div className="flex items-center gap-2 text-sm">";
@@ -286,9 +286,9 @@ export default function October2025NewTechBreakthroughsBanner(): void {
               </div>
             </div>
 
-            <div className="flex items-center text-green-300 group-hover: text-green-200 font-semibold">";,
+            <div className="flex items-center text-green-300 group-hover: text-green-200 font-semibold">";
               Learn Green AI
-              <ArrowRight className="ml-2 w-5 h-5 group-hover: translate-x-1 transition-transform" />";,
+              <ArrowRight className="ml-2 w-5 h-5 group-hover: translate-x-1 transition-transform" />";
             </div>
           </Link>
         </div>
@@ -297,7 +297,7 @@ export default function October2025NewTechBreakthroughsBanner(): void {
         <div className="text-center">";
           <Link
             to="/blog"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 hover: from-purple-500 hover:to-blue-500 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/30",
+            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 hover: from-purple-500 hover:to-blue-500 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/30"
           >
             <Sparkles className="w-5 h-5/>
             Explore All Latest Breakthroughs

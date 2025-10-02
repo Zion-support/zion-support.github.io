@@ -4,26 +4,26 @@ export default function EdgeZeroKnowledgeAnalyticsBlueprint2026(): React.JSX.Ele
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">";
       <Helmet>
-        <title>Edge 2026: Zero‑Knowledge Analytics Blueprint</title>,
+        <title>Edge 2026: Zero‑Knowledge Analytics Blueprint</title>
         <meta
           name="description"
           content="Consentless, privacy‑proof analytics using ZK proofs, scoped IDs, and on‑device aggregation." /><link
           rel="canonical"
-          href="https://ziontechgroup.com/blog/edge-2026-zero-knowledge-analytics-blueprint",
+          href="https://ziontechgroup.com/blog/edge-2026-zero-knowledge-analytics-blueprint"
         />
       </Helmet>
 
       <div className="container mx-auto px-6 py-16">
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">Edge 2026: Zero‑Knowledge Analytics</h1>",
+        <h1 className="text-4xl md: text-5xl font-bold mb-4">Edge 2026: Zero‑Knowledge Analytics</h1>"
         <p className="text-zion-slate-light mb-8">ZK proofs • Local aggregation • Signed consent windows</p>
         <div className="prose prose-invert max-w-3xl">
 =======
-          href="https: //ziontechgroup.com/blog/edge-2026-zero-knowledge-analytics-blueprint",
+          href="https: //ziontechgroup.com/blog/edge-2026-zero-knowledge-analytics-blueprint"
         />
       </Helmet>
 
       <div className="container mx-auto px-6 py-16">";
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">Edge 2026: Zero‑Knowledge Analytics</h1>";,
+        <h1 className="text-4xl md: text-5xl font-bold mb-4">Edge 2026: Zero‑Knowledge Analytics</h1>";
         <p className="text-zion-slate-light mb-8">ZK proofs • Local aggregation • Signed consent windows</p>";
         <div className="prose prose-invert max-w-3xl">";
           <p>

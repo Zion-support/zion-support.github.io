@@ -4,7 +4,7 @@
  * Comprehensive performance monitoring and metrics collection for
  * web vitals, resource timing, and custom performance markers.
  * 
- * Features: * - Core Web Vitals tracking (LCP, FID, CLS, FCP, TTFB),
+ * Features: * - Core Web Vitals tracking (LCP, FID, CLS, FCP, TTFB)
  * - Custom performance markers
  * - Resource timing analysis
  * - Performance budgets and alerts
@@ -12,33 +12,33 @@
  */
 
 export interface PerformanceMetric {
-name: string;,
-value: number;,
-rating: 'good' | 'needs-improvement' | 'poor';,
+name: string;
+value: number;
+rating: 'good' | 'needs-improvement' | 'poor';
 timestamp: number;
 }
 
 export interface ResourceTiming {
-name: string;,
-duration: number;,
-size: number;,
+name: string;
+duration: number;
+size: number;
 type: string;
 }
 
 export interface PerformanceBudget {
-metric: string;,
-budget: number;,
-current: number;,
+metric: string;
+budget: number;
+current: number;
 status: 'pass' | 'warn' | 'fail';
 =======
-metric: string;,
-budget: number;,
-current: number;,
+metric: string;
+budget: number;
+current: number;
 status: 'pass' | 'warn' | 'fail';';
 }
 
 export interface PerformanceReport {
-webVitals: {,,
+webVitals: {,
 lcp?: PerformanceMetric;
 fid?: PerformanceMetric;
 cls?: PerformanceMetric;
@@ -49,23 +49,22 @@ ttfb?: PerformanceMetric;
   resourceTimings: ResourceTiming[],
   budgets: PerformanceBudget[],
 =======
-  customMetrics: PerformanceMetric[];,
-  resourceTimings: ResourceTiming[];,
-  budgets: PerformanceBudget[];,
+  customMetrics: PerformanceMetric[];
+  resourceTimings: ResourceTiming[];
+  budgets: PerformanceBudget[];
   timestamp: Date;
 }
 
 class PerformanceMetricsTracker {
-  private metrics: Map<string, PerformanceMetric> = new Map(),
-  private customMarkers: Map<string, number> = new Map(),
-  private budgets: PerformanceBudget[] = [],
-  private observers: PerformanceObserver[] = [],
+  private metrics: Map<string, PerformanceMetric> = new Map()
+  private customMarkers: Map<string, number> = new Map()
+  private budgets: PerformanceBudget[] = []
+  private observers: PerformanceObserver[] = []
 =======
-  private metrics: Map<string, PerformanceMetric> = new Map();,
-  private customMarkers: Map<string, number> = new Map();,
-  private budgets: PerformanceBudget[] = [];,
-  private observers: PerformanceObserver[] = [];,
-
+  private metrics: Map<string, PerformanceMetric> = new Map();
+  private customMarkers: Map<string, number> = new Map();
+  private budgets: PerformanceBudget[] = [];
+  private observers: PerformanceObserver[] = [];
   constructor() {
     this.setupObservers();
     this.trackWebVitals();
@@ -94,9 +93,9 @@ class PerformanceMetricsTracker {
         resourceObserver.observe({ entryTypes: ['resource'] });';
         this.observers.push(resourceObserver);
       } catch (e) {
-        console.warn('Failed to setup resource observer: ', e);',
+        console.warn('Failed to setup resource observer: ', e);'
 =======
-        console.warn('Failed to setup resource observer: ', e);';,
+        console.warn('Failed to setup resource observer: ', e);';
       }
     }
   }
@@ -139,9 +138,9 @@ class PerformanceMetricsTracker {
         observer.observe({ entryTypes: ['largest-contentful-paint'] });';
         this.observers.push(observer);
       } catch (e) {
-        console.warn('Failed to observe LCP: ', e);',
+        console.warn('Failed to observe LCP: ', e);'
 =======
-        console.warn('Failed to observe LCP: ', e);';,
+        console.warn('Failed to observe LCP: ', e);';
       }
     }
   }
@@ -164,9 +163,9 @@ class PerformanceMetricsTracker {
         observer.observe({ entryTypes: ['first-input'] });';
         this.observers.push(observer);
       } catch (e) {
-        console.warn('Failed to observe FID: ', e);',
+        console.warn('Failed to observe FID: ', e);'
 =======
-        console.warn('Failed to observe FID: ', e);';,
+        console.warn('Failed to observe FID: ', e);';
       }
     }
   }
@@ -191,9 +190,9 @@ class PerformanceMetricsTracker {
         observer.observe({ entryTypes: ['layout-shift'] });';
         this.observers.push(observer);
       } catch (e) {
-        console.warn('Failed to observe CLS: ', e);',
+        console.warn('Failed to observe CLS: ', e);'
 =======
-        console.warn('Failed to observe CLS: ', e);';,
+        console.warn('Failed to observe CLS: ', e);';
       }
     }
   }
@@ -216,9 +215,9 @@ class PerformanceMetricsTracker {
         observer.observe({ entryTypes: ['paint'] });';
         this.observers.push(observer);
       } catch (e) {
-        console.warn('Failed to observe FCP: ', e);',
+        console.warn('Failed to observe FCP: ', e);'
 =======
-        console.warn('Failed to observe FCP: ', e);';,
+        console.warn('Failed to observe FCP: ', e);';
       }
     }
   }
@@ -239,18 +238,17 @@ class PerformanceMetricsTracker {
   private recordMetric(
     name: string,,
     value: number,,
-    rating: 'good' | 'needs-improvement' | 'poor): void {
+    rating: 'good' | 'needs-improvement' | 'poor): void {,
 =======
-    rating: 'good' | 'needs-improvement' | 'poor',
+    rating: 'good' | 'needs-improvement' | 'poor'
   ): void {
-    const metric: PerformanceMetric = {,
+    const metric: PerformanceMetric = {
       name,
       value: Math.round(value),,
       rating,
-      timestamp: Date.now()
+      timestamp: Date.now(),
 =======
-      timestamp: Date.now(),,
-    };
+      timestamp: Date.now(),};
     
     this.metrics.set(name, metric);
     
@@ -268,7 +266,7 @@ class PerformanceMetricsTracker {
   /**
    * Track custom performance marker
    */
-  startMark(name: string): void {,
+  startMark(name: string): void {
     this.customMarkers.set(name, performance.now());
     performance.mark(`${name}-start`);`;
   }
@@ -276,7 +274,7 @@ class PerformanceMetricsTracker {
   /**
    * End custom performance marker and record metric
    */
-  endMark(name: string): number | null {,
+  endMark(name: string): number | null {
     const startTime = this.customMarkers.get(name);
     if (!startTime) {
       console.warn(`No start mark found for: ${name}`);`;
@@ -298,7 +296,7 @@ class PerformanceMetricsTracker {
   /**
    * Track resource timing
    */
-  private trackResourceTiming(entry: PerformanceResourceTiming): void {,
+  private trackResourceTiming(entry: PerformanceResourceTiming): void {
     // const resourceType = this.getResourceType(entry.name); // Available for future use
     const size = entry.transferSize || 0;
     
@@ -311,7 +309,7 @@ class PerformanceMetricsTracker {
   /**
    * Get resource type from URL
    */
-  private getResourceType(url: string): string {,
+  private getResourceType(url: string): string {
     if (url.match(/\.(js|mjs)$/)) return 'script';
     if (url.match(/\.css$/)) return 'stylesheet';
     if (url.match(/\.(jpg|jpeg|png|gif|svg|webp)$/)) return 'image';
@@ -328,7 +326,7 @@ class PerformanceMetricsTracker {
   /**
    * Set performance budget
    */
-  setBudget(metric: string, budget: number): void {,
+  setBudget(metric: string, budget: number): void {
     const existingBudget = this.budgets.find(b => b.metric === metric);
     if (existingBudget) {
       existingBudget.budget = budget;
@@ -337,10 +335,10 @@ class PerformanceMetricsTracker {
         metric,
         budget,
         current: 0,
-        status: 'pass'
+        status: 'pass',
 =======
         current: 0,,
-        status: 'pass',';,
+        status: 'pass',';
       });
     }
     this.checkBudgets();
@@ -383,21 +381,20 @@ class PerformanceMetricsTracker {
       )
       resourceTimings: this.getResourceTimings(),
       budgets: [...this.budgets],
-      timestamp: new Date()
+      timestamp: new Date(),
 =======
-        lcp: this.metrics.get('LCP'),';,
-        fid: this.metrics.get('FID'),';,
-        cls: this.metrics.get('CLS'),';,
-        fcp: this.metrics.get('FCP'),';,
-        ttfb: this.metrics.get('TTFB'),';,
-      },
+        lcp: this.metrics.get('LCP'),';
+        fid: this.metrics.get('FID'),';
+        cls: this.metrics.get('CLS'),';
+        fcp: this.metrics.get('FCP'),';
+        ttfb: this.metrics.get('TTFB'),';
+      }
       customMetrics: Array.from(this.metrics.values()).filter(,
         m => !['LCP', 'FID', 'CLS', 'FCP', 'TTFB'].includes(m.name)';
-      ),
+      )
       resourceTimings: this.getResourceTimings(),,
       budgets: [...this.budgets],,
-      timestamp: new Date(),,
-    };
+      timestamp: new Date(),};
   }
 
   /**
@@ -409,24 +406,23 @@ class PerformanceMetricsTracker {
       name: resource.name,
       duration: Math.round(resource.duration),
       size: resource.transferSize || 0,
-      type: this.getResourceType(resource.name)
+      type: this.getResourceType(resource.name),
 =======
       name: resource.name,,
       duration: Math.round(resource.duration),,
       size: resource.transferSize || 0,,
-      type: this.getResourceType(resource.name),,
-    }));
+      type: this.getResourceType(resource.name),}));
   }
 
   /**
    * Get rating for LCP
    */
-  private getRatingForLCP(value: number): 'good' | 'needs-improvement' | 'poor' {',
+  private getRatingForLCP(value: number): 'good' | 'needs-improvement' | 'poor' {'
     if (value <= 2500) return 'good';
     if (value <= 4000) return 'needs-improvement';
     return 'poor';
 =======
-  private getRatingForLCP(value: number): 'good' | 'needs-improvement' | 'poor' {';,
+  private getRatingForLCP(value: number): 'good' | 'needs-improvement' | 'poor' {';
     if (value <= 2500) return 'good';';
     if (value <= 4000) return 'needs-improvement';';
     return 'poor';';
@@ -435,12 +431,12 @@ class PerformanceMetricsTracker {
   /**
    * Get rating for FID
    */
-  private getRatingForFID(value: number): 'good' | 'needs-improvement' | 'poor' {',
+  private getRatingForFID(value: number): 'good' | 'needs-improvement' | 'poor' {'
     if (value <= 100) return 'good';
     if (value <= 300) return 'needs-improvement';
     return 'poor';
 =======
-  private getRatingForFID(value: number): 'good' | 'needs-improvement' | 'poor' {';,
+  private getRatingForFID(value: number): 'good' | 'needs-improvement' | 'poor' {';
     if (value <= 100) return 'good';';
     if (value <= 300) return 'needs-improvement';';
     return 'poor';';
@@ -449,12 +445,12 @@ class PerformanceMetricsTracker {
   /**
    * Get rating for CLS
    */
-  private getRatingForCLS(value: number): 'good' | 'needs-improvement' | 'poor' {',
+  private getRatingForCLS(value: number): 'good' | 'needs-improvement' | 'poor' {'
     if (value <= 0.1) return 'good';
     if (value <= 0.25) return 'needs-improvement';
     return 'poor';
 =======
-  private getRatingForCLS(value: number): 'good' | 'needs-improvement' | 'poor' {';,
+  private getRatingForCLS(value: number): 'good' | 'needs-improvement' | 'poor' {';
     if (value <= 0.1) return 'good';';
     if (value <= 0.25) return 'needs-improvement';';
     return 'poor';';
@@ -463,12 +459,12 @@ class PerformanceMetricsTracker {
   /**
    * Get rating for FCP
    */
-  private getRatingForFCP(value: number): 'good' | 'needs-improvement' | 'poor' {',
+  private getRatingForFCP(value: number): 'good' | 'needs-improvement' | 'poor' {'
     if (value <= 1800) return 'good';
     if (value <= 3000) return 'needs-improvement';
     return 'poor';
 =======
-  private getRatingForFCP(value: number): 'good' | 'needs-improvement' | 'poor' {';,
+  private getRatingForFCP(value: number): 'good' | 'needs-improvement' | 'poor' {';
     if (value <= 1800) return 'good';';
     if (value <= 3000) return 'needs-improvement';';
     return 'poor';';
@@ -477,12 +473,12 @@ class PerformanceMetricsTracker {
   /**
    * Get rating for TTFB
    */
-  private getRatingForTTFB(value: number): 'good' | 'needs-improvement' | 'poor' {',
+  private getRatingForTTFB(value: number): 'good' | 'needs-improvement' | 'poor' {'
     if (value <= 800) return 'good';
     if (value <= 1800) return 'needs-improvement';
     return 'poor';
 =======
-  private getRatingForTTFB(value: number): 'good' | 'needs-improvement' | 'poor' {';,
+  private getRatingForTTFB(value: number): 'good' | 'needs-improvement' | 'poor' {';
     if (value <= 800) return 'good';';
     if (value <= 1800) return 'needs-improvement';';
     return 'poor';';
@@ -491,12 +487,12 @@ class PerformanceMetricsTracker {
   /**
    * Get rating for custom metrics
    */
-  private getRatingForCustomMetric(value: number): 'good' | 'needs-improvement' | 'poor' {',
+  private getRatingForCustomMetric(value: number): 'good' | 'needs-improvement' | 'poor' {'
     if (value <= 1000) return 'good';
     if (value <= 3000) return 'needs-improvement';
     return 'poor';
 =======
-  private getRatingForCustomMetric(value: number): 'good' | 'needs-improvement' | 'poor' {';,
+  private getRatingForCustomMetric(value: number): 'good' | 'needs-improvement' | 'poor' {';
     if (value <= 1000) return 'good';';
     if (value <= 3000) return 'needs-improvement';';
     return 'poor';';

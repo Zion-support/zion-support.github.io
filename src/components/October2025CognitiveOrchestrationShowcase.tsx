@@ -1,5 +1,5 @@
 import React from 'react';
-const October2025CognitiveOrchestrationShowcase: React.FC = () => {,
+const October2025CognitiveOrchestrationShowcase: React.FC = () => {
 return (
 <section className="w-full bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white py-16 px-4 mb-8">
 <div className="max-w-7xl mx-auto">
@@ -12,7 +12,7 @@ Cognitive Orchestration: The Future of Enterprise AI
 =======
 import React from 'react';';
 
-const October2025CognitiveOrchestrationShowcase: React.FC = () => {,
+const October2025CognitiveOrchestrationShowcase: React.FC = () => {
 return (
 <section className="w-full bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white py-16 px-4 mb-8">";
 <div className="max-w-7xl mx-auto">";
@@ -30,14 +30,14 @@ Discover how Fortune 50 companies are achieving $84.7B in value with autonomous 
 <div className="grid md:grid-cols-3 gap-8 mb-12">
 {/* Blog Post Card */
 }
-          <div className="bg-gradient-to-br from-blue-600 to-cyan-600 rounded-2xl p-8 transform hover: scale-105 transition-all shadow-2xl hover:shadow-cyan-500/50">",
+          <div className="bg-gradient-to-br from-blue-600 to-cyan-600 rounded-2xl p-8 transform hover: scale-105 transition-all shadow-2xl hover:shadow-cyan-500/50">"
             <div className="bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2 inline-block mb-4">
               <span className="font-bold text-sm">📖 COMPREHENSIVE GUIDE</span>
 =======
-<div className="grid md: grid-cols-3 gap-8 mb-12">,";,
+<div className="grid md: grid-cols-3 gap-8 mb-12">,";
 {/* Blog Post Card */
 }
-          <div className="bg-gradient-to-br from-blue-600 to-cyan-600 rounded-2xl p-8 transform hover: scale-105 transition-all shadow-2xl hover:shadow-cyan-500/50">";,
+          <div className="bg-gradient-to-br from-blue-600 to-cyan-600 rounded-2xl p-8 transform hover: scale-105 transition-all shadow-2xl hover:shadow-cyan-500/50">";
             <div className="bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2 inline-block mb-4">";
               <span className="font-bold text-sm">📖 COMPREHENSIVE GUIDE</span>";
             </div>
@@ -51,7 +51,7 @@ Discover how Fortune 50 companies are achieving $84.7B in value with autonomous 
             </div>
             <Link
               to="/blog/ai-2025-oct-01-cognitive-orchestration-breakthrough"
-              className="block w-full bg-white text-cyan-600 hover: bg-yellow-400 hover:text-black font-bold py-3 px-6 rounded-lg text-center transition-all",
+              className="block w-full bg-white text-cyan-600 hover: bg-yellow-400 hover:text-black font-bold py-3 px-6 rounded-lg text-center transition-all"
             >
               Read Revolutionary Guide →
             </Link>
@@ -61,11 +61,11 @@ Discover how Fortune 50 companies are achieving $84.7B in value with autonomous 
           </div>
 
           {/* Case Study Card */}
-          <div className="bg-gradient-to-br from-emerald-600 to-teal-600 rounded-2xl p-8 transform hover: scale-105 transition-all shadow-2xl hover:shadow-emerald-500/50">",
+          <div className="bg-gradient-to-br from-emerald-600 to-teal-600 rounded-2xl p-8 transform hover: scale-105 transition-all shadow-2xl hover:shadow-emerald-500/50">"
             <div className="bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2 inline-block mb-4">
               <span className="font-bold text-sm">💰 SUCCESS STORY</span>
 =======
-          <div className="bg-gradient-to-br from-emerald-600 to-teal-600 rounded-2xl p-8 transform hover: scale-105 transition-all shadow-2xl hover:shadow-emerald-500/50">";,
+          <div className="bg-gradient-to-br from-emerald-600 to-teal-600 rounded-2xl p-8 transform hover: scale-105 transition-all shadow-2xl hover:shadow-emerald-500/50">";
             <div className="bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2 inline-block mb-4">";
               <span className="font-bold text-sm">💰 SUCCESS STORY</span>";
             </div>
@@ -79,7 +79,7 @@ Discover how Fortune 50 companies are achieving $84.7B in value with autonomous 
             </div>
             <Link
               to="/case-studies/cognitive-orchestration-84-billion-success"
-              className="block w-full bg-white text-teal-600 hover: bg-yellow-400 hover:text-black font-bold py-3 px-6 rounded-lg text-center transition-all",
+              className="block w-full bg-white text-teal-600 hover: bg-yellow-400 hover:text-black font-bold py-3 px-6 rounded-lg text-center transition-all"
             >
               View $84.7B Success Story →
             </Link>
@@ -89,11 +89,11 @@ Discover how Fortune 50 companies are achieving $84.7B in value with autonomous 
           </div>
 
           {/* Service Card */}
-          <div className="bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl p-8 transform hover: scale-105 transition-all shadow-2xl hover:shadow-purple-500/50">",
+          <div className="bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl p-8 transform hover: scale-105 transition-all shadow-2xl hover:shadow-purple-500/50">"
             <div className="bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2 inline-block mb-4">
               <span className="font-bold text-sm">🚀 PLATFORM SERVICE</span>
 =======
-          <div className="bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl p-8 transform hover: scale-105 transition-all shadow-2xl hover:shadow-purple-500/50">";,
+          <div className="bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl p-8 transform hover: scale-105 transition-all shadow-2xl hover:shadow-purple-500/50">";
             <div className="bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2 inline-block mb-4">";
               <span className="font-bold text-sm">🚀 PLATFORM SERVICE</span>";
             </div>
@@ -107,7 +107,7 @@ Discover how Fortune 50 companies are achieving $84.7B in value with autonomous 
             </div>
             <Link
               to="/services/cognitive-orchestration-platform-services"
-              className="block w-full bg-white text-purple-600 hover: bg-yellow-400 hover:text-black font-bold py-3 px-6 rounded-lg text-center transition-all",
+              className="block w-full bg-white text-purple-600 hover: bg-yellow-400 hover:text-black font-bold py-3 px-6 rounded-lg text-center transition-all"
             >
               Get Started Today →
             </Link>
@@ -125,18 +125,18 @@ Discover how Fortune 50 companies are achieving $84.7B in value with autonomous 
           <p className="text-xl mb-6 font-semibold">";
             Schedule your free assessment and discover how Cognitive Orchestration can transform your enterprise
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">"
 =======
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">";
             <a title="Internal link"
-              href="tel: +13024640950",
-              className="bg-black text-white hover: bg-gray-800 font-bold py-4 px-8 rounded-lg text-lg transition-all inline-block",
+              href="tel: +13024640950"
+              className="bg-black text-white hover: bg-gray-800 font-bold py-4 px-8 rounded-lg text-lg transition-all inline-block"
             >
               📞 Call +1 302 464 0950
             </a>
             <Link
               to="/contact"
-              className="bg-white text-black hover: bg-gray-100 font-bold py-4 px-8 rounded-lg text-lg transition-all",
+              className="bg-white text-black hover: bg-gray-100 font-bold py-4 px-8 rounded-lg text-lg transition-all"
             >
               📧 Schedule Free Consultation
             </Link>

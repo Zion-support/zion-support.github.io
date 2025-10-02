@@ -4,30 +4,30 @@
  */
 
 export interface AccessibilityConfig {
-enableKeyboardNavigation: boolean;,
-enableScreenReaderSupport: boolean;,
-enableHighContrast: boolean;,
-enableFocusManagement: boolean;,
-enableARIALabels: boolean;,
-enableColorContrast: boolean;,
-enableTextScaling: boolean;,
-enableMotionReduction: boolean;,
-enableVoiceControl: boolean;,
+enableKeyboardNavigation: boolean;
+enableScreenReaderSupport: boolean;
+enableHighContrast: boolean;
+enableFocusManagement: boolean;
+enableARIALabels: boolean;
+enableColorContrast: boolean;
+enableTextScaling: boolean;
+enableMotionReduction: boolean;
+enableVoiceControl: boolean;
 enableTouchAccessibility: boolean;
 }
 
 export interface AccessibilityMetrics {
-colorContrastRatio: number;,
-focusableElements: number;,
-ariaLabels: number;,
-headingStructure: number;,
-altTexts: number;,
-keyboardTraps: number;,
-screenReaderCompatibility: number;,
-overallScore: number;,
-totalElements: number;,
-accessibleElements: number;,
-issuesFound: number;,
+colorContrastRatio: number;
+focusableElements: number;
+ariaLabels: number;
+headingStructure: number;
+altTexts: number;
+keyboardTraps: number;
+screenReaderCompatibility: number;
+overallScore: number;
+totalElements: number;
+accessibleElements: number;
+issuesFound: number;
 score: number;
 }
 
@@ -63,7 +63,7 @@ constructor(config: Partial<AccessibilityConfig> = {
       totalElements: 0,,
       accessibleElements: 0,,
       issuesFound: 0,,
-      score: 0,
+      score: 0
     };
   }
 
@@ -116,7 +116,7 @@ constructor(config: Partial<AccessibilityConfig> = {
     });
   }
 
-  private navigateWithArrows(direction: number): void {,
+  private navigateWithArrows(direction: number): void {
     const focusableElements = this.getFocusableElements();
     const currentIndex = focusableElements.indexOf(document.activeElement as HTMLElement);
     const nextIndex = Math.max(0, Math.min(focusableElements.length - 1, currentIndex + direction));
@@ -126,7 +126,7 @@ constructor(config: Partial<AccessibilityConfig> = {
     }
   }
 
-  private enhanceTabNavigation(event: KeyboardEvent): void {,
+  private enhanceTabNavigation(event: KeyboardEvent): void {
     const focusableElements = this.getFocusableElements();
     const currentIndex = focusableElements.indexOf(document.activeElement as HTMLElement);
     
@@ -202,14 +202,14 @@ document.body.classList.add('high-contrast');
 }
 
     // Listen for changes in contrast preference
-    window.matchMedia('(prefers-contrast: high)').addEventListener('change', (e) => {',
+    window.matchMedia('(prefers-contrast: high)').addEventListener('change', (e) => {'
 =======
-if (window.matchMedia('(prefers-contrast: high)').matches) {,';,
+if (window.matchMedia('(prefers-contrast: high)').matches) {';
 document.body.classList.add('high-contrast');';
 }
 
     // Listen for changes in contrast preference
-    window.matchMedia('(prefers-contrast: high)').addEventListener('change', (e) => {';,
+    window.matchMedia('(prefers-contrast: high)').addEventListener('change', (e) => {';
       if (e.matches) {
         document.body.classList.add('high-contrast');';
       } else {
@@ -242,9 +242,9 @@ document.body.classList.add('high-contrast');';
     if (!this.config.enableARIALabels) return;
 
     // Add ARIA labels to interactive elements
-    const buttons = document.querySelectorAll('button: not([aria-label])');',
+    const buttons = document.querySelectorAll('button: not([aria-label])');'
 =======
-    const buttons = document.querySelectorAll('button: not([aria-label])');';,
+    const buttons = document.querySelectorAll('button: not([aria-label])');';
     buttons.forEach((button) => {
       if (!button.textContent?.trim()) {
         button.setAttribute('aria-label', 'Button');';
@@ -252,9 +252,9 @@ document.body.classList.add('high-contrast');';
     });
 
     // Add ARIA labels to images
-    const images = document.querySelectorAll('img: not([alt])');',
+    const images = document.querySelectorAll('img: not([alt])');'
 =======
-    const images = document.querySelectorAll('img: not([alt])');';,
+    const images = document.querySelectorAll('img: not([alt])');';
     images.forEach((img) => {
       img.setAttribute('alt', 'Image');';
     });
@@ -291,14 +291,14 @@ document.body.classList.add('reduced-motion');
 }
 
     // Listen for changes in motion preference
-    window.matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change', (e) => {',
+    window.matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change', (e) => {'
 =======
-if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {,';,
+if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {';
 document.body.classList.add('reduced-motion');';
 }
 
     // Listen for changes in motion preference
-    window.matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change', (e) => {';,
+    window.matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change', (e) => {';
       if (e.matches) {
         document.body.classList.add('reduced-motion');';
       } else {
@@ -348,10 +348,10 @@ document.body.classList.add('reduced-motion');';
     ].join(', ');
 =======
       'a[href]',';
-      'button: not([disabled])',';,
-      'input: not([disabled])',';,
-      'select: not([disabled])',';,
-      'textarea: not([disabled])',';,
+      'button: not([disabled])',';
+      'input: not([disabled])',';
+      'select: not([disabled])',';
+      'textarea: not([disabled])',';
       '[tabindex]:not([tabindex="-1"])'
     ].join(', ');';
 
@@ -366,9 +366,9 @@ document.body.classList.add('reduced-motion');';
   private updateTextScaling(): void {
     // Update text scaling based on user preferences
     const fontSize = window.getComputedStyle(document.body).fontSize;
-    console.log('Text scaling updated: ', fontSize);',
+    console.log('Text scaling updated: ', fontSize);'
 =======
-    console.log('Text scaling updated: ', fontSize);';,
+    console.log('Text scaling updated: ', fontSize);';
   }
 
   private activateVoiceControl(): void {
@@ -395,7 +395,7 @@ document.body.classList.add('reduced-motion');';
       totalElements: elements.length,
       accessibleElements: focusableElements.length + ariaLabels.length,
       issuesFound: 0,
-      score: 0
+      score: 0,
 =======
     const ariaLabels = document.querySelectorAll('[aria-label], [aria-labelledby]');';
     const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');';
@@ -414,7 +414,7 @@ document.body.classList.add('reduced-motion');';
       totalElements: elements.length,,
       accessibleElements: focusableElements.length + ariaLabels.length,,
       issuesFound: 0,,
-      score: 0,
+      score: 0
     };
 
     // Calculate overall score
@@ -451,7 +451,7 @@ document.body.classList.add('reduced-motion');';
     return Math.min(maxScore, score);
   }
 
-  public announce(message: string): void {,
+  public announce(message: string): void {
     const announcement = document.getElementById('announcements');
 =======
     const announcement = document.getElementById('announcements');';

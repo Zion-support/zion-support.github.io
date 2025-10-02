@@ -3,60 +3,56 @@ import { Link } from 'react-router-dom';
 import { Sparkles } from 'lucide-react';
 =======
 import React from 'react';';
-import {
-Link
-} from 'react-router-dom';';
-import {
-Sparkles
-} from 'lucide-react';';
+import { Link } from 'react-router-dom';';
+import { Sparkles } from 'lucide-react';';
 
-const NewContentShowcase2025: React.FC = () => {,
+const NewContentShowcase2025: React.FC = () => {
   const highlights = [
     {
       title: "🎭 Multimodal AI Revolution",",
       description: "Unified vision-language-audio processing with 98% accuracy",",
       link: "/blog/multimodal-ai-revolution-2025",",
-      color: "from-purple-500 to-pink-500",
+      color: "from-purple-500 to-pink-500"
     },
     {
       title: "⛓️ Blockchain-AI Integration",",
       description: "Trustless intelligence with decentralized governance",",
       link: "/blog/blockchain-ai-integration-2025",",
-      color: "from-blue-500 to-cyan-500",
+      color: "from-blue-500 to-cyan-500"
     },
     {
       title: "🌱 Green AI & Sustainability",",
       description: "Carbon-neutral ML with 90% emissions reduction",",
       link: "/blog/green-ai-sustainability-2025",",
-      color: "from-green-500 to-emerald-500",
+      color: "from-green-500 to-emerald-500"
     },
     {
       title: "⚙️ AI Predictive Maintenance",",
       description: "85% downtime reduction with 98% prediction accuracy",",
       link: "/services/ai-predictive-maintenance",",
 =======
-      title: "🎭 Multimodal AI Revolution",";,
-      description: "Unified vision-language-audio processing with 98% accuracy",";,
-      link: "/blog/multimodal-ai-revolution-2025",";,
-      color: "from-purple-500 to-pink-500",
+      title: "🎭 Multimodal AI Revolution",";
+      description: "Unified vision-language-audio processing with 98% accuracy",";
+      link: "/blog/multimodal-ai-revolution-2025",";
+      color: "from-purple-500 to-pink-500"
     },
     {
-      title: "⛓️ Blockchain-AI Integration",";,
-      description: "Trustless intelligence with decentralized governance",";,
-      link: "/blog/blockchain-ai-integration-2025",";,
-      color: "from-blue-500 to-cyan-500",
+      title: "⛓️ Blockchain-AI Integration",";
+      description: "Trustless intelligence with decentralized governance",";
+      link: "/blog/blockchain-ai-integration-2025",";
+      color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "🌱 Green AI & Sustainability",";,
-      description: "Carbon-neutral ML with 90% emissions reduction",";,
-      link: "/blog/green-ai-sustainability-2025",";,
-      color: "from-green-500 to-emerald-500",
+      title: "🌱 Green AI & Sustainability",";
+      description: "Carbon-neutral ML with 90% emissions reduction",";
+      link: "/blog/green-ai-sustainability-2025",";
+      color: "from-green-500 to-emerald-500"
     },
     {
-      title: "⚙️ AI Predictive Maintenance",";,
-      description: "85% downtime reduction with 98% prediction accuracy",";,
-      link: "/services/ai-predictive-maintenance",";,
-      color: "from-orange-500 to-red-500",
+      title: "⚙️ AI Predictive Maintenance",";
+      description: "85% downtime reduction with 98% prediction accuracy",";
+      link: "/services/ai-predictive-maintenance",";
+      color: "from-orange-500 to-red-500"
     }
   ];
 
@@ -82,14 +78,14 @@ const NewContentShowcase2025: React.FC = () => {,
           </p>
         </div>
 
-        <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-6">",
+        <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-6">"
 =======
-        <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-6">";,
+        <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-6">";
           {highlights.map((item, index) => (
             <Link
               key={index}
               to={item.link}
-              className="group relative overflow-hidden rounded-2xl p-6 bg-gray-800 hover: scale-105 transition-all duration-300",
+              className="group relative overflow-hidden rounded-2xl p-6 bg-gray-800 hover: scale-105 transition-all duration-300"
             >
               <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-20 transition-opacity`}></div>`;
               <h3 className="text-xl font-bold mb-3 relative z-10">{item.title}</h3>

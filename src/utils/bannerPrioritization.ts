@@ -4,12 +4,12 @@
  */
 
 export interface BannerMetadata {
-id: string;,
-name: string;,
-priority: number;,
-value: string;,
-publishDate: Date;,
-category: 'quantum' | 'autonomous' | 'ai' | 'green' | 'sovereign' | 'general';,
+id: string;
+name: string;
+priority: number;
+value: string;
+publishDate: Date;
+category: 'quantum' | 'autonomous' | 'ai' | 'green' | 'sovereign' | 'general';
 featured: boolean;
 }
 
@@ -87,77 +87,69 @@ export const bannerRegistry: BannerMetadata[] = [,
     featured: true
   }
 =======
-    id: 'jan2026-autonomous',';,
-    name: 'January 2026 Revolutionary Autonomous Intelligence',';,
+    id: 'jan2026-autonomous',';
+    name: 'January 2026 Revolutionary Autonomous Intelligence',';
     priority: 100,,
-    value: '$2.7B',';,
-    publishDate: new Date('2026-01-01'),';,
-    category: 'autonomous',';,
-    featured: true,,
-  },
+    value: '$2.7B',';
+    publishDate: new Date('2026-01-01'),';
+    category: 'autonomous',';
+    featured: true,},
   {
-    id: 'oct2025-governed-agent-platforms-v2',';,
-    name: 'Governed Agent Platforms v2 — Budgets, Scorecards, Instant Rollback',';,
+    id: 'oct2025-governed-agent-platforms-v2',';
+    name: 'Governed Agent Platforms v2 — Budgets, Scorecards, Instant Rollback',';
     priority: 97,,
-    value: '$1.1B',';,
-    publishDate: new Date('2025-10-01'),';,
-    category: 'ai',';,
-    featured: true,,
-  },
+    value: '$1.1B',';
+    publishDate: new Date('2025-10-01'),';
+    category: 'ai',';
+    featured: true,},
   {
-    id: 'jan2026-quantum',';,
-    name: 'January 2026 Quantum AI Consciousness Revolution',';,
+    id: 'jan2026-quantum',';
+    name: 'January 2026 Quantum AI Consciousness Revolution',';
     priority: 99,,
-    value: '$847B',';,
-    publishDate: new Date('2026-01-01'),';,
-    category: 'quantum',';,
-    featured: true,,
-  },
+    value: '$847B',';
+    publishDate: new Date('2026-01-01'),';
+    category: 'quantum',';
+    featured: true,},
   {
-    id: 'oct2025-neural-quantum',';,
-    name: 'October 2025 Neural-Quantum Orchestration',';,
+    id: 'oct2025-neural-quantum',';
+    name: 'October 2025 Neural-Quantum Orchestration',';
     priority: 98,,
-    value: '$18.7B',';,
-    publishDate: new Date('2025-10-01'),';,
-    category: 'quantum',';,
-    featured: true,,
-  },
+    value: '$18.7B',';
+    publishDate: new Date('2025-10-01'),';
+    category: 'quantum',';
+    featured: true,},
   {
-    id: 'oct2025-nas',';,
-    name: 'Neural Architecture Search',';,
+    id: 'oct2025-nas',';
+    name: 'Neural Architecture Search',';
     priority: 95,,
-    value: '$47M',';,
-    publishDate: new Date('2025-10-01'),';,
-    category: 'ai',';,
-    featured: true,,
-  },
+    value: '$47M',';
+    publishDate: new Date('2025-10-01'),';
+    category: 'ai',';
+    featured: true,},
   {
-    id: 'oct2025-sovereign',';,
-    name: 'Sovereign AI Infrastructure',';,
+    id: 'oct2025-sovereign',';
+    name: 'Sovereign AI Infrastructure',';
     priority: 94,,
-    value: '$2.4B',';,
-    publishDate: new Date('2025-10-01'),';,
-    category: 'sovereign',';,
-    featured: true,,
-  },
+    value: '$2.4B',';
+    publishDate: new Date('2025-10-01'),';
+    category: 'sovereign',';
+    featured: true,},
   {
-    id: 'oct2025-green',';,
-    name: 'Green AI & Sustainable Computing',';,
+    id: 'oct2025-green',';
+    name: 'Green AI & Sustainable Computing',';
     priority: 93,,
-    value: '$3.7B',';,
-    publishDate: new Date('2025-10-01'),';,
-    category: 'green',';,
-    featured: true,,
-  },
+    value: '$3.7B',';
+    publishDate: new Date('2025-10-01'),';
+    category: 'green',';
+    featured: true,},
   {
-    id: 'oct2025-edge-feature-stores',';,
-    name: 'Edge Feature Stores: Zero‑PII Personalization',';,
+    id: 'oct2025-edge-feature-stores',';
+    name: 'Edge Feature Stores: Zero‑PII Personalization',';
     priority: 96,,
-    value: '$1.2B',';,
-    publishDate: new Date('2025-10-02'),';,
-    category: 'ai',';,
-    featured: true,,
-  },
+    value: '$1.2B',';
+    publishDate: new Date('2025-10-02'),';
+    category: 'ai',';
+    featured: true,},
 ];
 
 /**
@@ -174,7 +166,7 @@ export const getPrioritizedBanners = (limit?: number): BannerMetadata[] => {
 export const getBannersByCategory = (
   category: BannerMetadata['category']',
 =======
-  category: BannerMetadata['category']';,
+  category: BannerMetadata['category']';
 ): BannerMetadata[] => {
   return bannerRegistry
     .filter(banner => banner.category === category)
@@ -193,7 +185,7 @@ export const getFeaturedBanners = (): BannerMetadata[] => {
 /**
  * Get most recent banners
  */
-export const getRecentBanners = (days: number = 30): BannerMetadata[] => {,
+export const getRecentBanners = (days: number = 30): BannerMetadata[] => {
   const cutoffDate = new Date();
   cutoffDate.setDate(cutoffDate.getDate() - days);
   
@@ -205,7 +197,7 @@ export const getRecentBanners = (days: number = 30): BannerMetadata[] => {,
 /**
  * Calculate total value from displayed banners
  */
-export const calculateTotalValue = (banners: BannerMetadata[]): number => {,
+export const calculateTotalValue = (banners: BannerMetadata[]): number => {
   return banners.reduce((total, banner) => {
     const value = parseFloat(banner.value.replace(/[^0-9.]/g, ''));
     const multiplier = banner.value.includes('T') ? 1000 ;
@@ -239,12 +231,12 @@ export const getBannerAnalytics = () => {
     featuredCount: bannerRegistry.filter(b => b.featured).length,,
     totalValue: `$${calculateTotalValue(bannerRegistry).toFixed(1)}B`,`;
     categories: {,
-      quantum: getBannersByCategory('quantum').length,';,
-      autonomous: getBannersByCategory('autonomous').length,';,
-      ai: getBannersByCategory('ai').length,';,
-      green: getBannersByCategory('green').length,';,
-      sovereign: getBannersByCategory('sovereign').length,';,
-    },
+      quantum: getBannersByCategory('quantum').length,';
+      autonomous: getBannersByCategory('autonomous').length,';
+      ai: getBannersByCategory('ai').length,';
+      green: getBannersByCategory('green').length,';
+      sovereign: getBannersByCategory('sovereign').length,';
+    }
   };
 };
 
@@ -252,27 +244,26 @@ export const getBannerAnalytics = () => {
  * Smart banner rotation based on user engagement
  */
 export class BannerRotationManager {
-  private viewCounts: Map<string, number> = new Map(),
-  private clickCounts: Map<string, number> = new Map(),
+  private viewCounts: Map<string, number> = new Map()
+  private clickCounts: Map<string, number> = new Map()
 =======
-  private viewCounts: Map<string, number> = new Map();,
-  private clickCounts: Map<string, number> = new Map();,
-
-  recordView(bannerId: string) {,
+  private viewCounts: Map<string, number> = new Map();
+  private clickCounts: Map<string, number> = new Map();
+  recordView(bannerId: string) {
     this.viewCounts.set(bannerId, (this.viewCounts.get(bannerId) || 0) + 1);
   }
 
-  recordClick(bannerId: string) {,
+  recordClick(bannerId: string) {
     this.clickCounts.set(bannerId, (this.clickCounts.get(bannerId) || 0) + 1);
   }
 
-  getEngagementScore(bannerId: string): number {,
+  getEngagementScore(bannerId: string): number {
     const views = this.viewCounts.get(bannerId) || 0;
     const clicks = this.clickCounts.get(bannerId) || 0;
     return views > 0 ? (clicks / views) * 100 : 0;
   }
 
-  getTopPerformingBanners(limit: number = 5): string[] {,
+  getTopPerformingBanners(limit: number = 5): string[] {
     return Array.from(this.viewCounts.keys())
       .sort((a, b) => this.getEngagementScore(b) - this.getEngagementScore(a))
       .slice(0, limit);

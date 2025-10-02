@@ -6,27 +6,27 @@ import {
 
 } from 'lucide-react';
 interface SecurityCheck {
-id: string;,
-name: string;,
-description: string;,
-status: 'pass' | 'fail' | 'warning' | 'info';,
-severity: 'low' | 'medium' | 'high' | 'critical';,
-category: 'headers' | 'content' | 'network' | 'authentication' | 'data';,
-recommendation?: string;,
+id: string;
+name: string;
+description: string;
+status: 'pass' | 'fail' | 'warning' | 'info';
+severity: 'low' | 'medium' | 'high' | 'critical';
+category: 'headers' | 'content' | 'network' | 'authentication' | 'data';
+recommendation?: string;
 details?: string;
 }
 
 interface SecurityReport {
-overallScore: number;,
-totalChecks: number;,
-passedChecks: number;,
-failedChecks: number;,
-warnings: number;,
-checks: SecurityCheck[];,
+overallScore: number;
+totalChecks: number;
+passedChecks: number;
+failedChecks: number;
+warnings: number;
+checks: SecurityCheck[];
 lastUpdated: number;
 }
 
-const SecurityAuditPanel: React.FC = () => {,
+const SecurityAuditPanel: React.FC = () => {
   const [report, setReport] = useState<SecurityReport | null>(null);
   const [isRunning, setIsRunning] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -141,108 +141,108 @@ const SecurityAuditPanel: React.FC = () => {,
 
   const securityChecks: SecurityCheck[] = [,
     {
-      id: 'https-check',';,
-      name: 'HTTPS Enforcement',';,
-      description: 'Verify that the site is served over HTTPS',';,
-      status: 'pass',';,
-      severity: 'high',';,
-      category: 'headers',';,
-      recommendation: 'Ensure all traffic is redirected to HTTPS',';,
+      id: 'https-check',';
+      name: 'HTTPS Enforcement',';
+      description: 'Verify that the site is served over HTTPS',';
+      status: 'pass',';
+      severity: 'high',';
+      category: 'headers',';
+      recommendation: 'Ensure all traffic is redirected to HTTPS',';
     },
     {
-      id: 'hsts-header',';,
-      name: 'HSTS Header',';,
-      description: 'Check for HTTP Strict Transport Security header',';,
-      status: 'pass',';,
-      severity: 'high',';,
-      category: 'headers',';,
-      recommendation: 'Implement HSTS header with appropriate max-age',';,
+      id: 'hsts-header',';
+      name: 'HSTS Header',';
+      description: 'Check for HTTP Strict Transport Security header',';
+      status: 'pass',';
+      severity: 'high',';
+      category: 'headers',';
+      recommendation: 'Implement HSTS header with appropriate max-age',';
     },
     {
-      id: 'csp-header',';,
-      name: 'Content Security Policy',';,
-      description: 'Verify Content Security Policy is implemented',';,
-      status: 'warning',';,
-      severity: 'medium',';,
-      category: 'headers',';,
-      recommendation: 'Implement comprehensive CSP to prevent XSS attacks',';,
-      details: 'Current CSP may be too permissive',';,
+      id: 'csp-header',';
+      name: 'Content Security Policy',';
+      description: 'Verify Content Security Policy is implemented',';
+      status: 'warning',';
+      severity: 'medium',';
+      category: 'headers',';
+      recommendation: 'Implement comprehensive CSP to prevent XSS attacks',';
+      details: 'Current CSP may be too permissive',';
     },
     {
-      id: 'x-frame-options',';,
-      name: 'X-Frame-Options',';,
-      description: 'Check for clickjacking protection',';,
-      status: 'pass',';,
-      severity: 'medium',';,
-      category: 'headers',';,
+      id: 'x-frame-options',';
+      name: 'X-Frame-Options',';
+      description: 'Check for clickjacking protection',';
+      status: 'pass',';
+      severity: 'medium',';
+      category: 'headers',';
     },
     {
-      id: 'x-content-type',';,
-      name: 'X-Content-Type-Options',';,
-      description: 'Verify MIME type sniffing protection',';,
-      status: 'pass',';,
-      severity: 'medium',';,
-      category: 'headers',';,
+      id: 'x-content-type',';
+      name: 'X-Content-Type-Options',';
+      description: 'Verify MIME type sniffing protection',';
+      status: 'pass',';
+      severity: 'medium',';
+      category: 'headers',';
     },
     {
-      id: 'referrer-policy',';,
-      name: 'Referrer Policy',';,
-      description: 'Check referrer information leakage protection',';,
-      status: 'pass',';,
-      severity: 'low',';,
-      category: 'headers',';,
+      id: 'referrer-policy',';
+      name: 'Referrer Policy',';
+      description: 'Check referrer information leakage protection',';
+      status: 'pass',';
+      severity: 'low',';
+      category: 'headers',';
     },
     {
-      id: 'mixed-content',';,
-      name: 'Mixed Content Check',';,
-      description: 'Scan for HTTP resources on HTTPS pages',';,
-      status: 'pass',';,
-      severity: 'high',';,
-      category: 'content',';,
+      id: 'mixed-content',';
+      name: 'Mixed Content Check',';
+      description: 'Scan for HTTP resources on HTTPS pages',';
+      status: 'pass',';
+      severity: 'high',';
+      category: 'content',';
     },
     {
-      id: 'sensitive-data',';,
-      name: 'Sensitive Data Exposure',';,
-      description: 'Check for exposed sensitive information',';,
-      status: 'pass',';,
-      severity: 'critical',';,
-      category: 'data',';,
+      id: 'sensitive-data',';
+      name: 'Sensitive Data Exposure',';
+      description: 'Check for exposed sensitive information',';
+      status: 'pass',';
+      severity: 'critical',';
+      category: 'data',';
     },
     {
-      id: 'authentication',';,
-      name: 'Authentication Security',';,
-      description: 'Verify secure authentication practices',';,
-      status: 'info',';,
-      severity: 'medium',';,
-      category: 'authentication',';,
-      recommendation: 'Implement multi-factor authentication',';,
+      id: 'authentication',';
+      name: 'Authentication Security',';
+      description: 'Verify secure authentication practices',';
+      status: 'info',';
+      severity: 'medium',';
+      category: 'authentication',';
+      recommendation: 'Implement multi-factor authentication',';
     },
     {
-      id: 'session-security',';,
-      name: 'Session Security',';,
-      description: 'Check session management security',';,
-      status: 'warning',';,
-      severity: 'medium',';,
-      category: 'authentication',';,
-      recommendation: 'Implement secure session management',';,
+      id: 'session-security',';
+      name: 'Session Security',';
+      description: 'Check session management security',';
+      status: 'warning',';
+      severity: 'medium',';
+      category: 'authentication',';
+      recommendation: 'Implement secure session management',';
     },
     {
-      id: 'input-validation',';,
-      name: 'Input Validation',';,
-      description: 'Check for proper input validation',';,
-      status: 'pass',';,
-      severity: 'high',';,
-      category: 'content',';,
+      id: 'input-validation',';
+      name: 'Input Validation',';
+      description: 'Check for proper input validation',';
+      status: 'pass',';
+      severity: 'high',';
+      category: 'content',';
     },
     {
-      id: 'error-handling',';,
-      name: 'Error Handling',';,
-      description: 'Verify secure error handling',';,
-      status: 'warning',';,
-      severity: 'low',';,
-      category: 'content',';,
-      recommendation: 'Ensure errors don\'t leak sensitive information',';,
-    },
+      id: 'error-handling',';
+      name: 'Error Handling',';
+      description: 'Verify secure error handling',';
+      status: 'warning',';
+      severity: 'low',';
+      category: 'content',';
+      recommendation: 'Ensure errors don\'t leak sensitive information',';
+    }
   ];
 
   const runSecurityAudit = async () => {
@@ -284,15 +284,14 @@ const SecurityAuditPanel: React.FC = () => {,
       failedChecks,
       warnings,
       checks,
-      lastUpdated: Date.now()
+      lastUpdated: Date.now(),
 =======
-      lastUpdated: Date.now(),,
-    });
+      lastUpdated: Date.now(),});
     
     setIsRunning(false);
   };
 
-  const getStatusIcon = (status: string) => {,
+  const getStatusIcon = (status: string) => {
 switch (status) {
 case 'pass':
 return <CheckCircle className="w-5 h-5 text-green-600" />;
@@ -315,7 +314,7 @@ return <Eye className="w-5 h-5 text-blue-600" />;";
 };
   };
 
-  const getSeverityColor = (severity: string) => {,
+  const getSeverityColor = (severity: string) => {
 switch (severity) {
 case 'critical':
 return 'bg-red-100 text-red-800 border-red-200';
@@ -337,7 +336,7 @@ return 'bg-blue-100 text-blue-800 border-blue-200';';
 };
   };
 
-  const getCategoryIcon = (category: string) => {,
+  const getCategoryIcon = (category: string) => {
 switch (category) {
 case 'headers':
 return <Globe className="w-4 h-4" />;
@@ -394,7 +393,7 @@ return <Shield className="w-4 h-4" />;";
               ? 'bg-gray-400 text-white cursor-not-allowed'
               : 'bg-blue-600 text-white hover: bg-blue-700}`}`;
 =======
-              : 'bg-blue-600 text-white hover: bg-blue-700',
+              : 'bg-blue-600 text-white hover: bg-blue-700'
           }`}`;
         >
           {
@@ -418,11 +417,11 @@ Run Security Audit
       {report && (
         <>
           {/* Security Score Overview */}
-          <div className="grid grid-cols-1 md: grid-cols-4 gap-4 mb-6">",
+          <div className="grid grid-cols-1 md: grid-cols-4 gap-4 mb-6">"
             <div className="bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg p-4 text-white">
               <div className="flex justify-between items-center">
 =======
-          <div className="grid grid-cols-1 md: grid-cols-4 gap-4 mb-6">";,
+          <div className="grid grid-cols-1 md: grid-cols-4 gap-4 mb-6">";
             <div className="bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg p-4 text-white">";
               <div className="flex justify-between items-center">";
                 <div>
@@ -515,7 +514,7 @@ Run Security Audit
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
-                  className="border border-gray-200 rounded-lg p-4 hover: shadow-md transition-shadow",
+                  className="border border-gray-200 rounded-lg p-4 hover: shadow-md transition-shadow"
                 >
                   <div className="flex items-start justify-between">";
                     <div className="flex items-start gap-3 flex-1">";
@@ -543,7 +542,7 @@ check.recommendation && (
 <p className="text-blue-700 text-sm">{check.recommendation
 =======
 <div className="bg-blue-50 border border-blue-200 rounded-lg p-3">";
-<p className="text-blue-800 text-sm font-medium">Recommendation: </p>,";,
+<p className="text-blue-800 text-sm font-medium">Recommendation: </p>,";
 <p className="text-blue-700 text-sm">{check.recommendation";
 }</p>
                           </div>

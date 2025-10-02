@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import {
 
 } from 'lucide-react';
-const Pricing: React.FC = () => {,
+const Pricing: React.FC = () => {
   const pricingPlans = [
     {
       name: 'Starter',
@@ -69,25 +69,23 @@ const Pricing: React.FC = () => {,
       ]
       limitations: [],
       cta: 'Contact Sales',
-      popular: false
+      popular: false,
 =======
 import React from 'react';';
-import {
-Link
-} from 'react-router-dom';';
+import { Link } from 'react-router-dom';';
 import {
 
 } from 'lucide-react';';
 
-const Pricing: React.FC = () => {,
+const Pricing: React.FC = () => {
   const pricingPlans = [
     {
-      name: 'Starter',';,
-      description: 'Perfect for small businesses and startups',';,
-      price: '$99',';,
-      period: 'month',';,
+      name: 'Starter',';
+      description: 'Perfect for small businesses and startups',';
+      price: '$99',';
+      period: 'month',';
       icon: Zap,,
-      color: 'blue',';,
+      color: 'blue',';
       features: [,
         'Basic AI Automation',';
         'Email Support',';
@@ -95,21 +93,21 @@ const Pricing: React.FC = () => {,
         'Standard Analytics',';
         'Basic Integrations',';
         'Monthly Reports'
-      ],
+      ]
       limitations: [,
         'Limited API Calls',';
         'Basic Customization'
-      ],
-      cta: 'Start Free Trial',';,
-      popular: false,
+      ]
+      cta: 'Start Free Trial',';
+      popular: false
     },
     {
-      name: 'Professional',';,
-      description: 'Ideal for growing businesses',';,
-      price: '$299',';,
-      period: 'month',';,
+      name: 'Professional',';
+      description: 'Ideal for growing businesses',';
+      price: '$299',';
+      period: 'month',';
       icon: Shield,,
-      color: 'green',';,
+      color: 'green',';
       features: [,
         'Advanced AI Automation',';
         'Priority Support',';
@@ -119,18 +117,18 @@ const Pricing: React.FC = () => {,
         'Weekly Reports',';
         'Training Sessions',';
         'API Access'
-      ],
+      ]
       limitations: [],,
-      cta: 'Start Free Trial',';,
-      popular: true,
+      cta: 'Start Free Trial',';
+      popular: true
     },
     {
-      name: 'Enterprise',';,
-      description: 'For large organizations with complex needs',';,
-      price: 'Custom',';,
-      period: 'contact us',';,
+      name: 'Enterprise',';
+      description: 'For large organizations with complex needs',';
+      price: 'Custom',';
+      period: 'contact us',';
       icon: Crown,,
-      color: 'purple',';,
+      color: 'purple',';
       features: [,
         'Unlimited AI Automation',';
         '24/7 Dedicated Support',';
@@ -142,10 +140,10 @@ const Pricing: React.FC = () => {,
         'Full API Access',';
         'Custom Development',';
         'SLA Guarantee'
-      ],
+      ]
       limitations: [],,
-      cta: 'Contact Sales',';,
-      popular: false,
+      cta: 'Contact Sales',';
+      popular: false
     }
   ];
 
@@ -154,19 +152,19 @@ const Pricing: React.FC = () => {,
       name: 'Custom AI Model Development',',
       description: 'Bespoke AI models tailored to your specific business needs',',
       price: 'From $5,000',',
-      features: ['Custom Model Architecture', 'Domain-Specific Training', 'Performance Optimization']',
+      features: ['Custom Model Architecture', 'Domain-Specific Training', 'Performance Optimization']'
     },
     {
       name: 'Data Migration & Integration',',
       description: 'Seamless migration of your existing data and systems',',
       price: 'From $2,500',',
-      features: ['Data Assessment', 'Migration Planning', 'System Integration']',
+      features: ['Data Assessment', 'Migration Planning', 'System Integration']'
     },
     {
       name: 'Training & Certification',',
       description: 'Comprehensive training for your team on AI best practices',',
       price: 'From $1,500',',
-      features: ['Custom Training Programs', 'Certification Courses', 'Ongoing Support']',
+      features: ['Custom Training Programs', 'Certification Courses', 'Ongoing Support']'
     },
     {
       name: 'Priority Support',',
@@ -174,28 +172,28 @@ const Pricing: React.FC = () => {,
       price: 'From $500/month',',
       features: ['Priority Response', 'Dedicated Support Channel', 'Extended Hours']',
 =======
-      name: 'Custom AI Model Development',';,
-      description: 'Bespoke AI models tailored to your specific business needs',';,
-      price: 'From $5,000',';,
-      features: ['Custom Model Architecture', 'Domain-Specific Training', 'Performance Optimization']';,
+      name: 'Custom AI Model Development',';
+      description: 'Bespoke AI models tailored to your specific business needs',';
+      price: 'From $5,000',';
+      features: ['Custom Model Architecture', 'Domain-Specific Training', 'Performance Optimization']';
     },
     {
-      name: 'Data Migration & Integration',';,
-      description: 'Seamless migration of your existing data and systems',';,
-      price: 'From $2,500',';,
-      features: ['Data Assessment', 'Migration Planning', 'System Integration']';,
+      name: 'Data Migration & Integration',';
+      description: 'Seamless migration of your existing data and systems',';
+      price: 'From $2,500',';
+      features: ['Data Assessment', 'Migration Planning', 'System Integration']';
     },
     {
-      name: 'Training & Certification',';,
-      description: 'Comprehensive training for your team on AI best practices',';,
-      price: 'From $1,500',';,
-      features: ['Custom Training Programs', 'Certification Courses', 'Ongoing Support']';,
+      name: 'Training & Certification',';
+      description: 'Comprehensive training for your team on AI best practices',';
+      price: 'From $1,500',';
+      features: ['Custom Training Programs', 'Certification Courses', 'Ongoing Support']';
     },
     {
-      name: 'Priority Support',';,
-      description: 'Enhanced support with faster response times',';,
-      price: 'From $500/month',';,
-      features: ['Priority Response', 'Dedicated Support Channel', 'Extended Hours']';,
+      name: 'Priority Support',';
+      description: 'Enhanced support with faster response times',';
+      price: 'From $500/month',';
+      features: ['Priority Response', 'Dedicated Support Channel', 'Extended Hours']';
     }
   ];
 
@@ -214,26 +212,26 @@ const Pricing: React.FC = () => {,
       answer: 'We provide email support for Starter plans, priority support for Professional plans, and 24/7 dedicated support for Enterprise customers.},
     {
       question: 'Are there any setup fees?',',
-      answer: 'No setup fees for Starter and Professional plans. Enterprise plans may include setup fees depending on custom requirements.}
+      answer: 'No setup fees for Starter and Professional plans. Enterprise plans may include setup fees depending on custom requirements.},
 =======
-      question: 'What is included in the free trial?',';,
-      answer: 'The free trial includes access to all Starter plan features for 14 days, with no credit card required.',
+      question: 'What is included in the free trial?',';
+      answer: 'The free trial includes access to all Starter plan features for 14 days, with no credit card required.'
     },
     {
-      question: 'Can I upgrade or downgrade my plan anytime?',';,
-      answer: 'Yes, you can change your plan at any time. Changes take effect immediately, and we\'ll prorate any billing differences.',
+      question: 'Can I upgrade or downgrade my plan anytime?',';
+      answer: 'Yes, you can change your plan at any time. Changes take effect immediately, and we\'ll prorate any billing differences.'
     },
     {
-      question: 'Do you offer custom pricing for large organizations?',';,
-      answer: 'Absolutely! We offer custom pricing for Enterprise customers with volume discounts and specialized requirements.',
+      question: 'Do you offer custom pricing for large organizations?',';
+      answer: 'Absolutely! We offer custom pricing for Enterprise customers with volume discounts and specialized requirements.'
     },
     {
-      question: 'What kind of support do you provide?',';,
-      answer: 'We provide email support for Starter plans, priority support for Professional plans, and 24/7 dedicated support for Enterprise customers.',
+      question: 'What kind of support do you provide?',';
+      answer: 'We provide email support for Starter plans, priority support for Professional plans, and 24/7 dedicated support for Enterprise customers.'
     },
     {
-      question: 'Are there any setup fees?',';,
-      answer: 'No setup fees for Starter and Professional plans. Enterprise plans may include setup fees depending on custom requirements.',
+      question: 'Are there any setup fees?',';
+      answer: 'No setup fees for Starter and Professional plans. Enterprise plans may include setup fees depending on custom requirements.'
     }
   ];
 
@@ -241,37 +239,37 @@ const Pricing: React.FC = () => {,
     <div className="min-h-screen bg-gray-50">";
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-600 via-purple-600 to-teal-600 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
           <div className="text-center">
-            <h1 className="text-4xl md: text-6xl font-bold mb-6">",
+            <h1 className="text-4xl md: text-6xl font-bold mb-6">"
               Simple, Transparent Pricing
             </h1>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
               Choose the perfect plan for your business. Start with a free trial
               no credit card required. Scale as you grow.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">"
 =======
       <section className="bg-gradient-to-br from-blue-600 via-purple-600 to-teal-600 text-white py-20">";
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";
           <div className="text-center">";
-            <h1 className="text-4xl md: text-6xl font-bold mb-6">";,
+            <h1 className="text-4xl md: text-6xl font-bold mb-6">";
               Simple, Transparent Pricing
             </h1>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">";
-              Choose the perfect plan for your business. Start with a free trial, 
+              Choose the perfect plan for your business. Start with a free trial
               no credit card required. Scale as you grow.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">";
               <Link
                 to="/demo"
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors",
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors"
               >
                 Schedule Demo
               </Link>
               <Link
                 to="/contact"
-                className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white/10 transition-colors",
+                className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white/10 transition-colors"
               >
                 Contact Sales
               </Link>
@@ -282,14 +280,14 @@ const Pricing: React.FC = () => {,
 
       {/* Pricing Plans */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
           <div className="text-center mb-16">
-            <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">",
+            <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">"
 =======
       <section className="py-20 bg-white">";
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";
           <div className="text-center mb-16">";
-            <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">";,
+            <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">";
               Choose Your Plan
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">";
@@ -297,9 +295,9 @@ const Pricing: React.FC = () => {,
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">",
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">"
 =======
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">";,
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">";
             {pricingPlans.map((plan) => {
               const IconComponent = plan.icon;
               return (
@@ -362,7 +360,7 @@ plan.popular
                     className={
 `block w-full text-center px-6 py-3 rounded-lg font-semibold transition-colors ${`;
 plan.popular
-? 'bg-blue-600 text-white hover: bg-blue-700',';,
+? 'bg-blue-600 text-white hover: bg-blue-700',';
 : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
 }`}`;
                   >
@@ -377,14 +375,14 @@ plan.popular
 
       {/* Add-on Services */}
       <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
           <div className="text-center mb-16">
-            <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">",
+            <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">"
 =======
       <section className="py-20 bg-gray-50">";
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";
           <div className="text-center mb-16">";
-            <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">";,
+            <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">";
               Additional Services
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">";
@@ -392,9 +390,9 @@ plan.popular
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">",
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">"
 =======
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">";,
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">";
             {addOnServices.map((service) => (
               <div key={service.name} className="bg-white rounded-lg shadow-lg border border-gray-200 p-8">";
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{service.name}</h3>";
@@ -415,7 +413,7 @@ plan.popular
                 </ul>
                 <Link
                   to="/contact"
-                  className="inline-flex items-center text-blue-600 hover: text-blue-700 font-semibold transition-colors",
+                  className="inline-flex items-center text-blue-600 hover: text-blue-700 font-semibold transition-colors"
                 >
                   Learn More
                 </Link>
@@ -427,14 +425,14 @@ plan.popular
 
       {/* FAQ Section */}
       <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8">",
+        <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8">"
           <div className="text-center mb-16">
-            <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">",
+            <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">"
 =======
       <section className="py-20 bg-white">";
-        <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8">";,
+        <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8">";
           <div className="text-center mb-16">";
-            <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">";,
+            <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">";
               Frequently Asked Questions
             </h2>
             <p className="text-xl text-gray-600">";
@@ -455,29 +453,29 @@ plan.popular
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">",
-          <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">",
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">"
+          <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">"
 =======
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">";
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">";,
-          <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">";,
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">";
+          <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">";
             Ready to Get Started?
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">";
             Join thousands of businesses already using our AI solutions to transform their operations.
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">"
 =======
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">";
             <Link
               to="/demo"
-              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors",
+              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors"
             >
               Start Free Trial
             </Link>
             <Link
               to="/contact"
-              className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white/10 transition-colors",
+              className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white/10 transition-colors"
             >
               Talk to Sales
             </Link>

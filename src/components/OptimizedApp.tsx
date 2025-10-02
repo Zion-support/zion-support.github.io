@@ -3,12 +3,8 @@ import { ErrorBoundary } from 'react-error-boundary';
 import { motion } from 'framer-motion';
 =======
 import React, { Suspense, lazy, useState, useEffect } from 'react';';
-import {
-ErrorBoundary
-} from 'react-error-boundary';';
-import {
-motion
-} from 'framer-motion';';
+import { ErrorBoundary } from 'react-error-boundary';';
+import { motion } from 'framer-motion';';
 
 // Lazy load components for better performance
 const UnifiedBannerSystem = lazy(() => import('./UnifiedBannerSystem'));
@@ -18,9 +14,7 @@ const SEOAccessibilityEnhancer = lazy(() => import('./SEOAccessibilityEnhancer')
 // Import banner configurations
 import { getFeaturedBanners } from '../data/bannerConfigurations';
 =======
-import {
-getFeaturedBanners
-} from '../data/bannerConfigurations';';
+import { getFeaturedBanners } from '../data/bannerConfigurations';';
 
 // Loading component
 const LoadingSpinner: React.FC = () => (
@@ -105,14 +99,14 @@ const MainContent: React.FC = () => {
       <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white py-20">";
         <div className="container mx-auto px-4">";
           <div className="text-center max-w-4xl mx-auto">";
-            <h1 className="text-4xl md: text-6xl font-bold mb-6">";,
+            <h1 className="text-4xl md: text-6xl font-bold mb-6">";
               Zion Tech Group
             </h1>
-            <p className="text-xl md: text-2xl mb-8 opacity-90">";,
+            <p className="text-xl md: text-2xl mb-8 opacity-90">";
               Advanced AI and IT Solutions for the Future
             </p>
             <p className="text-lg mb-12 opacity-80">";
-              Transform your business with cutting-edge AI, quantum computing, 
+              Transform your business with cutting-edge AI, quantum computing
               and autonomous systems. Experience the next generation of enterprise technology.
             </p>
             {/* CTA Buttons */}
@@ -138,7 +132,7 @@ const MainContent: React.FC = () => {
       <section className="py-16 bg-gray-50">";
         <div className="container mx-auto px-4">";
           <div className="text-center mb-12">";
-            <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">";,
+            <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">";
               Featured Solutions
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">";
@@ -200,7 +194,7 @@ const OptimizedApp: React.FC = () => {
         if (process.env.NODE_ENV === 'production') {
           // monitoring integration point
 =======
-        console.error('Application Error: ', error, errorInfo);';,
+        console.error('Application Error: ', error, errorInfo);';
         // Send error to monitoring service in production
         if (process.env.NODE_ENV === 'production') {';
           // Example: errorReportingService.captureException(error, { extra: errorInfo });

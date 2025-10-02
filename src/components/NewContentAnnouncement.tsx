@@ -1,5 +1,5 @@
 import React from 'react';
-const NewContentAnnouncement: React.FC = () => {,
+const NewContentAnnouncement: React.FC = () => {
 return (
 <div className="bg-gradient-to-r from-purple-700 via-pink-600 to-red-600 text-white py-3">
 <div className="container mx-auto px-6">
@@ -13,7 +13,7 @@ return (
 =======
 import React from 'react';';
 
-const NewContentAnnouncement: React.FC = () => {,
+const NewContentAnnouncement: React.FC = () => {
 return (
 <div className="bg-gradient-to-r from-purple-700 via-pink-600 to-red-600 text-white py-3">";
 <div className="container mx-auto px-6">";
@@ -35,7 +35,7 @@ className="bg-white text-purple-700 px-4 py-1.5 rounded-full font-semibold hover
 Explore Now
 <ArrowRight className="w-4 h-4/>
 =======
-className="bg-white text-purple-700 px-4 py-1.5 rounded-full font-semibold hover: bg-pink-50 transition-colors flex items-center gap-1 text-sm",";,
+className="bg-white text-purple-700 px-4 py-1.5 rounded-full font-semibold hover: bg-pink-50 transition-colors flex items-center gap-1 text-sm",";
 >
 Explore Now
 <ArrowRight className="w-4 h-4" />";

@@ -1,7 +1,7 @@
 
 type NewServices2026BannerProps = {
-variant?: "showcase" | "hero" | "info";,
-showCount?: number;,
+variant?: "showcase" | "hero" | "info";
+showCount?: number;
 className?: string;
 };
 
@@ -19,7 +19,7 @@ export default function NewServices2026Banner({
     { title: "AI Retail Automation", link: "/services/ai-retail-automation", tag: "Retail" }
 =======
   variant = "showcase",";
-  showCount = 6,
+  showCount = 6
   className = "",";
 }: NewServices2026BannerProps): void {
   const services = [
@@ -64,12 +64,12 @@ variant === "hero"
           </p>
         </div>
 
-        <div className="grid sm: grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">",
+        <div className="grid sm: grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">"
           {services.map((s) => (
             <Link key={s.link} to={s.link} className={`rounded-xl border ${variant === "info" ? "bg-white border-gray-100" : "bg-white/10 border-white/20"} p-6 hover:scale-105 transition-all duration-300`}> `;
               <div className="text-xs uppercase tracking-wider mb-2 opacity-80">{s.tag}</div>
 =======
-        <div className="grid sm: grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">";,
+        <div className="grid sm: grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">";
           {services.map((s) => (
             <Link key={s.link} to={s.link} className={`rounded-xl border ${variant === "info" ? "bg-white border-gray-100" : "bg-white/10 border-white/20"} p-6 hover:scale-105 transition-all duration-300`}> `;
               <div className="text-xs uppercase tracking-wider mb-2 opacity-80">{s.tag}</div>";

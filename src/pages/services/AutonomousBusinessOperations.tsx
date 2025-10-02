@@ -8,7 +8,7 @@ const AutonomousBusinessOperations = () => {
           name="description"
           content="Transform your enterprise with AI-powered autonomous operations. Deploy 40+ self-managing workflows in 90 days. $500M+ value creation. 300-500% ROI. Get started with a free consultation." /><meta
           name="keywords"
-          content="autonomous business operations, AI automation platform, enterprise automation, business process automation, operational efficiency, AI transformation, ROI guarantee" /><link rel="canonical" href="https://ziontechgroup.com/services/autonomous-business-operations/>",
+          content="autonomous business operations, AI automation platform, enterprise automation, business process automation, operational efficiency, AI transformation, ROI guarantee" /><link rel="canonical" href="https://ziontechgroup.com/services/autonomous-business-operations/>"
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900">
@@ -18,7 +18,7 @@ const AutonomousBusinessOperations = () => {
 =======
           content="autonomous business operations, AI automation platform, enterprise automation, business process automation, operational efficiency, AI transformation, ROI guarantee"
         />
-        <link rel="canonical" href="https: //ziontechgroup.com/services/autonomous-business-operations" />";,
+        <link rel="canonical" href="https: //ziontechgroup.com/services/autonomous-business-operations" />";
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900">";
@@ -41,21 +41,21 @@ const AutonomousBusinessOperations = () => {
             <div className="flex justify-center mb-8">";
               <div className="inline-flex items-center px-6 py-3 rounded-full bg-green-500/20 border-2 border-green-400/50 text-green-300 text-sm font-bold uppercase tracking-wider animate-pulse">";
                 <Rocket className="w-5 h-5 mr-2" />";
-                🔥 LIMITED OFFER: 50% OFF THROUGH DECEMBER 2025,
+                🔥 LIMITED OFFER: 50% OFF THROUGH DECEMBER 2025
               </div>
             </div>
 
             <div className="max-w-5xl mx-auto text-center">
-              <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">",
+              <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">"
                 Autonomous Business Operations Platform
               </h1>
-              <p className="text-2xl md: text-3xl text-blue-200 mb-8 font-semibold">",
+              <p className="text-2xl md: text-3xl text-blue-200 mb-8 font-semibold">"
 =======
             <div className="max-w-5xl mx-auto text-center">";
-              <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">";,
+              <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">";
                 Autonomous Business Operations Platform
               </h1>
-              <p className="text-2xl md: text-3xl text-blue-200 mb-8 font-semibold">";,
+              <p className="text-2xl md: text-3xl text-blue-200 mb-8 font-semibold">";
                 Transform Your Enterprise in 90 Days with Self-Managing AI Systems
               </p>
               <p className="text-xl text-blue-100 mb-12 max-w-3xl mx-auto leading-relaxed">";
@@ -63,12 +63,12 @@ const AutonomousBusinessOperations = () => {
               </p>
 
               {/* Key Metrics */}
-              <div className="grid grid-cols-2 md: grid-cols-4 gap-6 mb-12">",
+              <div className="grid grid-cols-2 md: grid-cols-4 gap-6 mb-12">"
                 <div className="bg-gradient-to-br from-green-600/30 to-emerald-600/30 backdrop-blur-sm rounded-xl p-6 border-2 border-green-400/50">
                   <div className="text-5xl font-bold text-green-300 mb-2">85%</div>
                   <div className="text-green-100 font-semibold">Cost Reduction</div>
 =======
-              <div className="grid grid-cols-2 md: grid-cols-4 gap-6 mb-12">";,
+              <div className="grid grid-cols-2 md: grid-cols-4 gap-6 mb-12">";
                 <div className="bg-gradient-to-br from-green-600/30 to-emerald-600/30 backdrop-blur-sm rounded-xl p-6 border-2 border-green-400/50">";
                   <div className="text-5xl font-bold text-green-300 mb-2">85%</div>";
                   <div className="text-green-100 font-semibold">Cost Reduction</div>";
@@ -88,12 +88,12 @@ const AutonomousBusinessOperations = () => {
               </div>
 
               {/* CTA Buttons */}
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">"
 =======
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">";
                 <Link
                   to="/contact"
-                  className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-green-500 to-emerald-500 hover: from-green-600 hover:to-emerald-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-2xl hover:shadow-green-500/50 hover:scale-105",
+                  className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-green-500 to-emerald-500 hover: from-green-600 hover:to-emerald-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-2xl hover:shadow-green-500/50 hover:scale-105"
                 >
                   <Rocket className="w-6 h-6/>
                   Start Free Consultation
@@ -105,7 +105,7 @@ const AutonomousBusinessOperations = () => {
                 </Link>
                 <Link
                   to="/case-studies/fortune-100-autonomous-operations-transformation-2025"
-                  className="inline-flex items-center justify-center gap-2 border-2 border-white text-white hover: bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-bold text-lg transition-all",
+                  className="inline-flex items-center justify-center gap-2 border-2 border-white text-white hover: bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-bold text-lg transition-all"
                 >
                   View $650M Case Study
                 </Link>
@@ -160,12 +160,12 @@ const AutonomousBusinessOperations = () => {
         {/* What You Get */}
         <section className="container mx-auto px-6 py-20 max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md: text-5xl font-bold text-white mb-4">",
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-4">"
               What's Included in Your Platform;
 =======
         <section className="container mx-auto px-6 py-20 max-w-6xl">";
           <div className="text-center mb-16">";
-            <h2 className="text-4xl md: text-5xl font-bold text-white mb-4">";,
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-4">";
               What's Included in Your Platform';
             </h2>
             <p className="text-xl text-blue-200 max-w-3xl mx-auto">";
@@ -173,15 +173,15 @@ const AutonomousBusinessOperations = () => {
             </p>
           </div>
 
-          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">"
             {/* Feature 1 */}
-            <div className="bg-gradient-to-br from-blue-900/60 to-cyan-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-blue-400/50 hover: border-blue-400/80 transition-all hover:scale-105">",
+            <div className="bg-gradient-to-br from-blue-900/60 to-cyan-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-blue-400/50 hover: border-blue-400/80 transition-all hover:scale-105">"
               <div className="bg-blue-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-blue-400/30">
                 <Zap className="w-8 h-8 text-blue-300/>
 =======
-          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">";,
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">";
             {/* Feature 1 */}
-            <div className="bg-gradient-to-br from-blue-900/60 to-cyan-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-blue-400/50 hover: border-blue-400/80 transition-all hover:scale-105">";,
+            <div className="bg-gradient-to-br from-blue-900/60 to-cyan-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-blue-400/50 hover: border-blue-400/80 transition-all hover:scale-105">";
               <div className="bg-blue-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-blue-400/30">";
                 <Zap className="w-8 h-8 text-blue-300" />";
               </div>
@@ -228,11 +228,11 @@ const AutonomousBusinessOperations = () => {
             </div>
 
             {/* Feature 2 */}
-            <div className="bg-gradient-to-br from-purple-900/60 to-pink-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-purple-400/50 hover: border-purple-400/80 transition-all hover:scale-105">",
+            <div className="bg-gradient-to-br from-purple-900/60 to-pink-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-purple-400/50 hover: border-purple-400/80 transition-all hover:scale-105">"
               <div className="bg-purple-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-purple-400/30">
                 <TrendingUp className="w-8 h-8 text-purple-300/>
 =======
-            <div className="bg-gradient-to-br from-purple-900/60 to-pink-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-purple-400/50 hover: border-purple-400/80 transition-all hover:scale-105">";,
+            <div className="bg-gradient-to-br from-purple-900/60 to-pink-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-purple-400/50 hover: border-purple-400/80 transition-all hover:scale-105">";
               <div className="bg-purple-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-purple-400/30">";
                 <TrendingUp className="w-8 h-8 text-purple-300" />";
               </div>
@@ -279,11 +279,11 @@ const AutonomousBusinessOperations = () => {
             </div>
 
             {/* Feature 3 */}
-            <div className="bg-gradient-to-br from-green-900/60 to-emerald-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-green-400/50 hover: border-green-400/80 transition-all hover:scale-105">",
+            <div className="bg-gradient-to-br from-green-900/60 to-emerald-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-green-400/50 hover: border-green-400/80 transition-all hover:scale-105">"
               <div className="bg-green-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-green-400/30">
                 <Shield className="w-8 h-8 text-green-300/>
 =======
-            <div className="bg-gradient-to-br from-green-900/60 to-emerald-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-green-400/50 hover: border-green-400/80 transition-all hover:scale-105">";,
+            <div className="bg-gradient-to-br from-green-900/60 to-emerald-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-green-400/50 hover: border-green-400/80 transition-all hover:scale-105">";
               <div className="bg-green-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-green-400/30">";
                 <Shield className="w-8 h-8 text-green-300" />";
               </div>
@@ -330,11 +330,11 @@ const AutonomousBusinessOperations = () => {
             </div>
 
             {/* Feature 4 */}
-            <div className="bg-gradient-to-br from-orange-900/60 to-red-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-orange-400/50 hover: border-orange-400/80 transition-all hover:scale-105">",
+            <div className="bg-gradient-to-br from-orange-900/60 to-red-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-orange-400/50 hover: border-orange-400/80 transition-all hover:scale-105">"
               <div className="bg-orange-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-orange-400/30">
                 <Users className="w-8 h-8 text-orange-300/>
 =======
-            <div className="bg-gradient-to-br from-orange-900/60 to-red-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-orange-400/50 hover: border-orange-400/80 transition-all hover:scale-105">";,
+            <div className="bg-gradient-to-br from-orange-900/60 to-red-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-orange-400/50 hover: border-orange-400/80 transition-all hover:scale-105">";
               <div className="bg-orange-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-orange-400/30">";
                 <Users className="w-8 h-8 text-orange-300" />";
               </div>
@@ -381,11 +381,11 @@ const AutonomousBusinessOperations = () => {
             </div>
 
             {/* Feature 5 */}
-            <div className="bg-gradient-to-br from-cyan-900/60 to-blue-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-cyan-400/50 hover: border-cyan-400/80 transition-all hover:scale-105">",
+            <div className="bg-gradient-to-br from-cyan-900/60 to-blue-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-cyan-400/50 hover: border-cyan-400/80 transition-all hover:scale-105">"
               <div className="bg-cyan-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-cyan-400/30">
                 <Clock className="w-8 h-8 text-cyan-300/>
 =======
-            <div className="bg-gradient-to-br from-cyan-900/60 to-blue-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-cyan-400/50 hover: border-cyan-400/80 transition-all hover:scale-105">";,
+            <div className="bg-gradient-to-br from-cyan-900/60 to-blue-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-cyan-400/50 hover: border-cyan-400/80 transition-all hover:scale-105">";
               <div className="bg-cyan-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-cyan-400/30">";
                 <Clock className="w-8 h-8 text-cyan-300" />";
               </div>
@@ -432,11 +432,11 @@ const AutonomousBusinessOperations = () => {
             </div>
 
             {/* Feature 6 */}
-            <div className="bg-gradient-to-br from-indigo-900/60 to-purple-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-indigo-400/50 hover: border-indigo-400/80 transition-all hover:scale-105">",
+            <div className="bg-gradient-to-br from-indigo-900/60 to-purple-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-indigo-400/50 hover: border-indigo-400/80 transition-all hover:scale-105">"
               <div className="bg-indigo-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-indigo-400/30">
                 <DollarSign className="w-8 h-8 text-indigo-300/>
 =======
-            <div className="bg-gradient-to-br from-indigo-900/60 to-purple-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-indigo-400/50 hover: border-indigo-400/80 transition-all hover:scale-105">";,
+            <div className="bg-gradient-to-br from-indigo-900/60 to-purple-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-indigo-400/50 hover: border-indigo-400/80 transition-all hover:scale-105">";
               <div className="bg-indigo-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-indigo-400/30">";
                 <DollarSign className="w-8 h-8 text-indigo-300" />";
               </div>
@@ -490,11 +490,11 @@ const AutonomousBusinessOperations = () => {
         {/* Implementation Timeline */}
         <section className="container mx-auto px-6 py-20 max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md: text-5xl font-bold text-white mb-4">",
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-4">"
 =======
         <section className="container mx-auto px-6 py-20 max-w-6xl">";
           <div className="text-center mb-16">";
-            <h2 className="text-4xl md: text-5xl font-bold text-white mb-4">";,
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-4">";
               90-Day Implementation Timeline
             </h2>
             <p className="text-xl text-blue-200">";
@@ -514,7 +514,7 @@ const AutonomousBusinessOperations = () => {
                   <p className="text-blue-100 mb-4">";
                     Process mapping, data assessment, and ROI modeling with your team
                   </p>
-                  <div className="grid md: grid-cols-3 gap-4 text-sm">",
+                  <div className="grid md: grid-cols-3 gap-4 text-sm">"
                     <div className="flex items-center gap-2 text-blue-200">
                       <CheckCircle className="w-4 h-4 text-blue-400/>
                       <span>Process workshops</span>
@@ -526,7 +526,7 @@ const AutonomousBusinessOperations = () => {
                     <div className="flex items-center gap-2 text-blue-200">
                       <CheckCircle className="w-4 h-4 text-blue-400/>
 =======
-                  <div className="grid md: grid-cols-3 gap-4 text-sm">";,
+                  <div className="grid md: grid-cols-3 gap-4 text-sm">";
                     <div className="flex items-center gap-2 text-blue-200">";
                       <CheckCircle className="w-4 h-4 text-blue-400" />";
                       <span>Process workshops</span>
@@ -555,7 +555,7 @@ const AutonomousBusinessOperations = () => {
                   <p className="text-purple-100 mb-4">";
                     Infrastructure deployment, model training, and system integration
                   </p>
-                  <div className="grid md: grid-cols-3 gap-4 text-sm">",
+                  <div className="grid md: grid-cols-3 gap-4 text-sm">"
                     <div className="flex items-center gap-2 text-purple-200">
                       <CheckCircle className="w-4 h-4 text-purple-400/>
                       <span>Cloud infrastructure</span>
@@ -567,7 +567,7 @@ const AutonomousBusinessOperations = () => {
                     <div className="flex items-center gap-2 text-purple-200">
                       <CheckCircle className="w-4 h-4 text-purple-400/>
 =======
-                  <div className="grid md: grid-cols-3 gap-4 text-sm">";,
+                  <div className="grid md: grid-cols-3 gap-4 text-sm">";
                     <div className="flex items-center gap-2 text-purple-200">";
                       <CheckCircle className="w-4 h-4 text-purple-400" />";
                       <span>Cloud infrastructure</span>
@@ -596,7 +596,7 @@ const AutonomousBusinessOperations = () => {
                   <p className="text-green-100 mb-4">";
                     Pilot deployment, validation, and full-scale rollout
                   </p>
-                  <div className="grid md: grid-cols-3 gap-4 text-sm">",
+                  <div className="grid md: grid-cols-3 gap-4 text-sm">"
                     <div className="flex items-center gap-2 text-green-200">
                       <CheckCircle className="w-4 h-4 text-green-400/>
                       <span>Pilot workflows</span>
@@ -608,7 +608,7 @@ const AutonomousBusinessOperations = () => {
                     <div className="flex items-center gap-2 text-green-200">
                       <CheckCircle className="w-4 h-4 text-green-400/>
 =======
-                  <div className="grid md: grid-cols-3 gap-4 text-sm">";,
+                  <div className="grid md: grid-cols-3 gap-4 text-sm">";
                     <div className="flex items-center gap-2 text-green-200">";
                       <CheckCircle className="w-4 h-4 text-green-400" />";
                       <span>Pilot workflows</span>
@@ -631,11 +631,11 @@ const AutonomousBusinessOperations = () => {
         {/* Pricing Section */}
         <section className="container mx-auto px-6 py-20 max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md: text-5xl font-bold text-white mb-4">",
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-4">"
 =======
         <section className="container mx-auto px-6 py-20 max-w-6xl">";
           <div className="text-center mb-16">";
-            <h2 className="text-4xl md: text-5xl font-bold text-white mb-4">";,
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-4">";
               Investment & ROI
             </h2>
             <p className="text-xl text-blue-200">";
@@ -643,9 +643,9 @@ const AutonomousBusinessOperations = () => {
             </p>
           </div>
 
-          <div className="grid md: grid-cols-2 gap-8 max-w-4xl mx-auto">",
+          <div className="grid md: grid-cols-2 gap-8 max-w-4xl mx-auto">"
 =======
-          <div className="grid md: grid-cols-2 gap-8 max-w-4xl mx-auto">";,
+          <div className="grid md: grid-cols-2 gap-8 max-w-4xl mx-auto">";
             {/* Investment */}
             <div className="bg-gradient-to-br from-blue-900/60 to-purple-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-blue-400/50">";
               <h3 className="text-2xl font-bold text-white mb-6 text-center">Total Investment</h3>";
@@ -749,14 +749,14 @@ const AutonomousBusinessOperations = () => {
         <section className="container mx-auto px-6 py-20 max-w-6xl">";
           <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-12 text-center">";
             <h2 className="text-4xl font-bold text-white mb-4">";
-              See It In Action: $650M Success Story,
+              See It In Action: $650M Success Story
             </h2>
             <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">";
               Read how a Fortune 100 financial services company transformed their operations and created $650M in annual value in just 12 months.
             </p>
             <Link
               to="/case-studies/fortune-100-autonomous-operations-transformation-2025"
-              className="inline-flex items-center gap-2 bg-white text-green-600 hover: bg-green-50 px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-xl hover:shadow-2xl",
+              className="inline-flex items-center gap-2 bg-white text-green-600 hover: bg-green-50 px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-xl hover:shadow-2xl"
             >
               Read Complete Case Study
               <ArrowRight className="w-5 h-5/>
@@ -769,23 +769,23 @@ const AutonomousBusinessOperations = () => {
         {/* Final CTA */}
         <section className="container mx-auto px-6 py-20 max-w-6xl">
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-center">
-            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">",
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">"
 =======
         <section className="container mx-auto px-6 py-20 max-w-6xl">";
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-center">";
-            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">";,
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">";
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">";
               Get started with a free 90-minute strategy consultation and custom ROI analysis.
             </p>
             
-            <div className="flex flex-col sm: flex-row gap-4 justify-center mb-8">",
+            <div className="flex flex-col sm: flex-row gap-4 justify-center mb-8">"
 =======
-            <div className="flex flex-col sm: flex-row gap-4 justify-center mb-8">";,
+            <div className="flex flex-col sm: flex-row gap-4 justify-center mb-8">";
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center gap-2 bg-white text-blue-600 hover: bg-blue-50 px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-xl hover:shadow-2xl",
+                className="inline-flex items-center justify-center gap-2 bg-white text-blue-600 hover: bg-blue-50 px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-xl hover:shadow-2xl"
               >
                 <Rocket className="w-5 h-5/>
                 Schedule Free Consultation
@@ -797,7 +797,7 @@ const AutonomousBusinessOperations = () => {
               </Link>
               <Link
                 to="/blog/ai-autonomous-business-operations-revolution-2025"
-                className="inline-flex items-center justify-center gap-2 border-2 border-white text-white hover: bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-bold text-lg transition-all",
+                className="inline-flex items-center justify-center gap-2 border-2 border-white text-white hover: bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-bold text-lg transition-all"
               >
                 Read Complete Guide
               </Link>

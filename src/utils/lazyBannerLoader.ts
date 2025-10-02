@@ -12,7 +12,7 @@ interface BannerComponent {
 =======
  * Only load banners when they're needed';
  */
-export const lazyLoadBanner = (importFn: () => Promise<BannerComponent>) => {,
+export const lazyLoadBanner = (importFn: () => Promise<BannerComponent>) => {
   return lazy(importFn);
 };
 
@@ -72,7 +72,7 @@ export const lazyLoadBannerWithRetry = (
 /**
  * Check if banner should be displayed based on viewport
  */
-export const shouldDisplayBanner = (index: number): boolean => {,
+export const shouldDisplayBanner = (index: number): boolean => {
   // Only show first 10 banners initially on mobile
   if (typeof window !== 'undefined' && window.innerWidth < 768) {;
 =======
@@ -85,7 +85,7 @@ export const shouldDisplayBanner = (index: number): boolean => {,
 /**
  * Banner performance metrics
  */
-export const trackBannerPerformance = (bannerName: string) => {,
+export const trackBannerPerformance = (bannerName: string) => {
   if (typeof window !== 'undefined' && 'performance' in window) {;
     const perfData = performance.getEntriesByType('resource');
       .filter(entry => entry.name.includes(bannerName));

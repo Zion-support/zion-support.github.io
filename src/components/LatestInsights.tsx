@@ -1,42 +1,42 @@
 import React from "react";";
 
-function isNew(dateIso: string): boolean {,
+function isNew(dateIso: string): boolean {
   const daysSince = (Date.now() - new Date(dateIso).getTime()) / (1000 * 60 * 60 * 24);
   return daysSince <= 7;
 }
 
-const LatestInsights: React.FC = () => {,
+const LatestInsights: React.FC = () => {
   return (
     <section className="py-20 bg-white/5">";
       <div className="container mx-auto px-6">";
         <div className="flex items-end justify-between mb-8">";
           <div>
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-2">Latest Insights</h2>",
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-2">Latest Insights</h2>"
             <p className="text-zion-slate-light">Research, guides, and playbooks from our team.</p>
 =======
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-2">Latest Insights</h2>";,
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-2">Latest Insights</h2>";
             <p className="text-zion-slate-light">Research, guides, and playbooks from our team.</p>";
           </div>
             <Link
             to="/insights"
-            className="hidden sm: inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors",
+            className="hidden sm: inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors"
           >
             View all
             <ArrowRight className="w-4 h-4/>
           </Link>
         </div>
 
-        <div className="grid gap-6 md: grid-cols-3">",
+        <div className="grid gap-6 md: grid-cols-3">"
 =======
             <ArrowRight className="w-4 h-4" />";
           </Link>
         </div>
 
-        <div className="grid gap-6 md: grid-cols-3">";,
+        <div className="grid gap-6 md: grid-cols-3">";
           {latestInsights.slice(0, 3).map((item) => (
             <div
               key={item.id}
-              className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl",
+              className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl"
             >
               <div className="flex items-center justify-between mb-4">";
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zion-cyan/20 text-zion-cyan text-xs font-medium">";
@@ -63,7 +63,7 @@ const LatestInsights: React.FC = () => {,
 
               <Link
                 to="/insights"
-                className="inline-flex items-center gap-2 text-zion-cyan hover: text-white transition-colors",
+                className="inline-flex items-center gap-2 text-zion-cyan hover: text-white transition-colors"
               >
                 Read more
                 <ArrowRight className="w-4 h-4/>
@@ -74,12 +74,12 @@ const LatestInsights: React.FC = () => {,
           ))}
         </div>
 
-        <div className="mt-8 sm: hidden">",
+        <div className="mt-8 sm: hidden">"
 =======
-        <div className="mt-8 sm: hidden">";,
+        <div className="mt-8 sm: hidden">";
           <Link
             to="/insights"
-            className="inline-flex items-center gap-2 text-zion-cyan hover: text-white transition-colors",
+            className="inline-flex items-center gap-2 text-zion-cyan hover: text-white transition-colors"
           >
             View all
             <ArrowRight className="w-4 h-4/>

@@ -1,5 +1,5 @@
 export const generateSitemap = () => {
-  const baseUrl = 'https://ziontechgroup.com';',
+  const baseUrl = 'https://ziontechgroup.com';'
   const pages = [
     { url: '/', priority: 1.0, changefreq: 'daily' }
     { url: '/blog', priority: 0.9, changefreq: 'daily' }
@@ -13,7 +13,7 @@ export const generateSitemap = () => {
     '/blog/ai-prompt-engineering-mastery-2025',
     '/blog/ai-synthetic-data-generation-2025'
 =======
-  const baseUrl = 'https: //ziontechgroup.com';';,
+  const baseUrl = 'https: //ziontechgroup.com';';
   const pages = [
     { url: '/', priority: 1.0, changefreq: 'daily' },';
     { url: '/blog', priority: 0.9, changefreq: 'daily' },';
@@ -32,18 +32,18 @@ export const generateSitemap = () => {
     pages.push({
       url: post,
       priority: 0.8,
-      changefreq: 'weekly'
+      changefreq: 'weekly',
 =======
       url: post,,
       priority: 0.8,,
-      changefreq: 'weekly',';,
+      changefreq: 'weekly',';
     });
   });
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>";`;
-<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">",
+<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">"
 =======
-<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">";,
+<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">";
 ${pages.map(page => `  <url>`;
     <loc>${baseUrl}${page.url}</loc>
     <changefreq>${page.changefreq}</changefreq>

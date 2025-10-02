@@ -29,9 +29,9 @@ const October2025LatestBreakthroughBanner = () => {
             </span>
           </div>
           
-          <h2 className="text-4xl md: text-5xl font-bold text-white mb-4">",
+          <h2 className="text-4xl md: text-5xl font-bold text-white mb-4">"
 =======
-          <h2 className="text-4xl md: text-5xl font-bold text-white mb-4">";,
+          <h2 className="text-4xl md: text-5xl font-bold text-white mb-4">";
             Latest AI Infrastructure Breakthroughs
           </h2>
           <p className="text-xl text-blue-200 max-w-3xl mx-auto">";
@@ -41,12 +41,12 @@ const October2025LatestBreakthroughBanner = () => {
         </div>
 
         {/* Content Cards */}
-        <div className="grid md: grid-cols-3 gap-6 mb-8">",
+        <div className="grid md: grid-cols-3 gap-6 mb-8">"
           {
 octoberLatestBreakthroughContent.map((content) => {
 const Icon = content.icon === "🚀" ? Zap : content.icon === "⚡" ? Database : Bot;
 =======
-        <div className="grid md: grid-cols-3 gap-6 mb-8">";,
+        <div className="grid md: grid-cols-3 gap-6 mb-8">";
           {
 octoberLatestBreakthroughContent.map((content) => {
 const Icon = content.icon === "🚀" ? Zap : content.icon === "⚡" ? Database : Bot;";
@@ -55,7 +55,7 @@ return (
 key={content.id
 }
                 to={`/blog/${content.slug}`}`;
-                className="group bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-6 hover: bg-white/20 hover:scale-105 transition-all duration-300",
+                className="group bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-6 hover: bg-white/20 hover:scale-105 transition-all duration-300"
               >
                 <div className="flex items-start gap-4 mb-4">
                   <div className={`bg-gradient-to-br ${content.gradient} p-3 rounded-lg`}>`;
@@ -63,7 +63,7 @@ key={content.id
                   </div>
                   <div className="flex-1">
                     <div className="text-xs text-blue-300 mb-2">{content.category}</div>
-                    <h3 className="text-lg font-bold text-white mb-2 group-hover: text-blue-300 transition-colors">",
+                    <h3 className="text-lg font-bold text-white mb-2 group-hover: text-blue-300 transition-colors">"
 =======
                 <div className="flex items-start gap-4 mb-4">";
                   <div className={`bg-gradient-to-br ${content.gradient} p-3 rounded-lg`}>`;
@@ -71,7 +71,7 @@ key={content.id
                   </div>
                   <div className="flex-1">";
                     <div className="text-xs text-blue-300 mb-2">{content.category}</div>";
-                    <h3 className="text-lg font-bold text-white mb-2 group-hover: text-blue-300 transition-colors">";,
+                    <h3 className="text-lg font-bold text-white mb-2 group-hover: text-blue-300 transition-colors">";
                       {content.title}
                     </h3>
                   </div>
@@ -108,11 +108,11 @@ key={content.id
                   ))}
                 </ul>
 
-                <div className="flex items-center gap-2 text-sm text-blue-300 font-semibold group-hover: gap-4 transition-all">",
+                <div className="flex items-center gap-2 text-sm text-blue-300 font-semibold group-hover: gap-4 transition-all">"
                   Read Full Article
                   <ArrowRight className="w-4 h-4/>
 =======
-                <div className="flex items-center gap-2 text-sm text-blue-300 font-semibold group-hover: gap-4 transition-all">";,
+                <div className="flex items-center gap-2 text-sm text-blue-300 font-semibold group-hover: gap-4 transition-all">";
                   Read Full Article
                   <ArrowRight className="w-4 h-4" />";
                 </div>
@@ -133,7 +133,7 @@ key={content.id
           <div className="flex flex-wrap gap-4 justify-center">";
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 bg-white text-blue-900 px-8 py-4 rounded-lg font-bold hover: bg-blue-50 transition-colors",
+              className="inline-flex items-center gap-2 bg-white text-blue-900 px-8 py-4 rounded-lg font-bold hover: bg-blue-50 transition-colors"
             >
               Schedule Free Consultation
               <ArrowRight className="w-5 h-5/>
@@ -142,7 +142,7 @@ key={content.id
             </Link>
             <Link
               to="/blog"
-              className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-lg font-bold hover: bg-blue-700 transition-colors",
+              className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-lg font-bold hover: bg-blue-700 transition-colors"
             >
               Explore All Articles
             </Link>
@@ -150,12 +150,12 @@ key={content.id
         </div>
 
         {/* Stats Bar */}
-        <div className="mt-8 grid grid-cols-2 md: grid-cols-4 gap-4">",
+        <div className="mt-8 grid grid-cols-2 md: grid-cols-4 gap-4">"
           <div className="text-center">
             <div className="text-3xl font-bold text-white mb-1">$700B+</div>
             <div className="text-sm text-blue-300">Combined Market Opportunity</div>
 =======
-        <div className="mt-8 grid grid-cols-2 md: grid-cols-4 gap-4">";,
+        <div className="mt-8 grid grid-cols-2 md: grid-cols-4 gap-4">";
           <div className="text-center">";
             <div className="text-3xl font-bold text-white mb-1">$700B+</div>";
             <div className="text-sm text-blue-300">Combined Market Opportunity</div>";

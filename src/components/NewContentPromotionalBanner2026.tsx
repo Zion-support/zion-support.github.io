@@ -21,35 +21,35 @@ const NewContentPromotionalBanner2026 = () => {
       impact: '500% Cognitive Enhancement',',
       readers: '203K+',',
       icon: '🚀',',
-      color: 'from-blue-500 to-cyan-500}
+      color: 'from-blue-500 to-cyan-500},
 =======
 import React from 'react';';
 
 const NewContentPromotionalBanner2026 = () => {
   const newContent = [
     {
-      title: 'Quantum-Conscious Intelligence',';,
-      date: 'January 2026',';,
-      impact: '$2.3B Enterprise Value',';,
-      readers: '500K+',';,
-      icon: '🧠',';,
-      color: 'from-violet-500 to-purple-500',
+      title: 'Quantum-Conscious Intelligence',';
+      date: 'January 2026',';
+      impact: '$2.3B Enterprise Value',';
+      readers: '500K+',';
+      icon: '🧠',';
+      color: 'from-violet-500 to-purple-500'
     },
     {
-      title: 'Autonomous Neural Networks',';,
-      date: 'February 2026',';,
-      impact: '99.97% Accuracy',';,
-      readers: '180K+',';,
-      icon: '⚡',';,
-      color: 'from-emerald-500 to-teal-500',
+      title: 'Autonomous Neural Networks',';
+      date: 'February 2026',';
+      impact: '99.97% Accuracy',';
+      readers: '180K+',';
+      icon: '⚡',';
+      color: 'from-emerald-500 to-teal-500'
     },
     {
-      title: 'Neural-Synaptic Fusion AI',';,
-      date: 'March 2026',';,
-      impact: '500% Cognitive Enhancement',';,
-      readers: '203K+',';,
-      icon: '🚀',';,
-      color: 'from-blue-500 to-cyan-500',
+      title: 'Neural-Synaptic Fusion AI',';
+      date: 'March 2026',';
+      impact: '500% Cognitive Enhancement',';
+      readers: '203K+',';
+      icon: '🚀',';
+      color: 'from-blue-500 to-cyan-500'
     }
   ];
 
@@ -78,7 +78,7 @@ const NewContentPromotionalBanner2026 = () => {
             <Globe className="w-6 h-6 text-purple-400 animate-pulse/>
           </div>
 
-          <h2 className="text-4xl md: text-5xl font-extrabold mb-6 bg-gradient-to-r from-violet-400 via-purple-400 to-blue-400 bg-clip-text text-transparent">",
+          <h2 className="text-4xl md: text-5xl font-extrabold mb-6 bg-gradient-to-r from-violet-400 via-purple-400 to-blue-400 bg-clip-text text-transparent">"
 =======
         <div className="text-center mb-12">";
           <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-violet-500/20 to-purple-500/20 border border-violet-500/30 mb-6">";
@@ -89,7 +89,7 @@ const NewContentPromotionalBanner2026 = () => {
             <Globe className="w-6 h-6 text-purple-400 animate-pulse" />";
           </div>
 
-          <h2 className="text-4xl md: text-5xl font-extrabold mb-6 bg-gradient-to-r from-violet-400 via-purple-400 to-blue-400 bg-clip-text text-transparent">";,
+          <h2 className="text-4xl md: text-5xl font-extrabold mb-6 bg-gradient-to-r from-violet-400 via-purple-400 to-blue-400 bg-clip-text text-transparent">";
             Revolutionary Content Just Released
           </h2>
           
@@ -100,13 +100,13 @@ const NewContentPromotionalBanner2026 = () => {
         </div>
 
         {/* Content Grid */}
-        <div className="grid md: grid-cols-3 gap-8 mb-12">",
+        <div className="grid md: grid-cols-3 gap-8 mb-12">"
 =======
-        <div className="grid md: grid-cols-3 gap-8 mb-12">";,
+        <div className="grid md: grid-cols-3 gap-8 mb-12">";
           {newContent.map((content, index) => (
             <div 
               key={index}
-              className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover: border-violet-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-violet-500/20",
+              className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover: border-violet-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-violet-500/20"
               style={{ animationDelay: `${index * 200}ms` }}`;
             >
               {/* Card glow effect */}
@@ -114,9 +114,9 @@ const NewContentPromotionalBanner2026 = () => {
               
               <div className="relative p-8">";
                 {/* Content Icon */}
-                <div className="text-5xl mb-6 text-center group-hover: animate-pulse">",
+                <div className="text-5xl mb-6 text-center group-hover: animate-pulse">"
 =======
-                <div className="text-5xl mb-6 text-center group-hover: animate-pulse">";,
+                <div className="text-5xl mb-6 text-center group-hover: animate-pulse">";
                   {content.icon}
                 </div>
 
@@ -130,9 +130,9 @@ const NewContentPromotionalBanner2026 = () => {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-violet-400 transition-colors duration-300 leading-tight text-center">",
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-violet-400 transition-colors duration-300 leading-tight text-center">"
 =======
-                <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-violet-400 transition-colors duration-300 leading-tight text-center">";,
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-violet-400 transition-colors duration-300 leading-tight text-center">";
                   {content.title}
                 </h3>
 
@@ -162,9 +162,9 @@ const NewContentPromotionalBanner2026 = () => {
                   className={`group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r ${content.color} hover:opacity-90 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-violet-500/50 transform hover:-translate-y-1`}`;
                 >
                   <span>Read Now</span>
-                  <ArrowRight className="w-4 h-4 group-hover/btn: translate-x-1 transition-transform duration-300/>",
+                  <ArrowRight className="w-4 h-4 group-hover/btn: translate-x-1 transition-transform duration-300/>"
 =======
-                  <ArrowRight className="w-4 h-4 group-hover/btn: translate-x-1 transition-transform duration-300" />";,
+                  <ArrowRight className="w-4 h-4 group-hover/btn: translate-x-1 transition-transform duration-300" />";
                 </a>
               </div>
             </div>
@@ -182,7 +182,7 @@ const NewContentPromotionalBanner2026 = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md: grid-cols-4 gap-8">",
+          <div className="grid grid-cols-2 md: grid-cols-4 gap-8">"
             {[
               { value: '2.5M+', label: 'Global Readers', icon: <Users className="w-8 h-8" />, color: 'text-violet-400' }
               { value: '$15B+', label: 'Value Created', icon: <TrendingUp className="w-8 h-8" />, color: 'text-purple-400' }
@@ -191,7 +191,7 @@ const NewContentPromotionalBanner2026 = () => {
             ].map((stat, index) => (
               <div key={index} className="text-center">
 =======
-          <div className="grid grid-cols-2 md: grid-cols-4 gap-8">";,
+          <div className="grid grid-cols-2 md: grid-cols-4 gap-8">";
             {[
               { value: '2.5M+', label: 'Global Readers', icon: <Users className="w-8 h-8" />, color: 'text-violet-400' },';
               { value: '$15B+', label: 'Value Created', icon: <TrendingUp className="w-8 h-8" />, color: 'text-purple-400' },';
@@ -224,16 +224,16 @@ const NewContentPromotionalBanner2026 = () => {
                 Be among the first to access revolutionary AI insights, breakthrough research
                 and transformative technologies that are reshaping our world.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">"
 =======
               <p className="text-gray-400 mb-8 max-w-2xl mx-auto">";
-                Be among the first to access revolutionary AI insights, breakthrough research, 
+                Be among the first to access revolutionary AI insights, breakthrough research
                 and transformative technologies that are reshaping our world.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">";
                 <a title="Internal link"
                   href="/blog"
-                  className="bg-gradient-to-r from-violet-500 to-purple-600 hover: from-violet-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-violet-500/50 flex items-center justify-center gap-2",
+                  className="bg-gradient-to-r from-violet-500 to-purple-600 hover: from-violet-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-violet-500/50 flex items-center justify-center gap-2"
                 >
                   <Rocket className="w-5 h-5/>
 =======
@@ -242,7 +242,7 @@ const NewContentPromotionalBanner2026 = () => {
                 </a>
                 <a title="Internal link"
                   href="/newsletter"
-                  className="border-2 border-violet-500 text-violet-400 hover: bg-violet-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2",
+                  className="border-2 border-violet-500 text-violet-400 hover: bg-violet-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
                 >
                   <span>Subscribe to Updates</span>
                   <ArrowRight className="w-5 h-5/>

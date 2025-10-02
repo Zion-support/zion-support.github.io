@@ -12,7 +12,7 @@ const RouterWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) =>
 );
 
 describe('UnifiedPromotionalBanner', () => {;
-  const defaultProps: UnifiedPromotionalBannerProps = {,
+  const defaultProps: UnifiedPromotionalBannerProps = {
     title: 'Test Banner Title',',
     description: 'Test banner description',',
     ctaText: 'Click Here',',
@@ -22,11 +22,11 @@ describe('UnifiedPromotionalBanner', () => {;
     it('renders with required props', () => {;
 =======
 describe('UnifiedPromotionalBanner', () => {';
-  const defaultProps: UnifiedPromotionalBannerProps = {,
-    title: 'Test Banner Title',';,
-    description: 'Test banner description',';,
-    ctaText: 'Click Here',';,
-    ctaLink: '/test-link',
+  const defaultProps: UnifiedPromotionalBannerProps = {
+    title: 'Test Banner Title',';
+    description: 'Test banner description',';
+    ctaText: 'Click Here',';
+    ctaLink: '/test-link'
   };
 
   describe('Core Functionality', () => {';
@@ -189,7 +189,7 @@ describe('UnifiedPromotionalBanner', () => {';
       {
         title: 'Item 3',',
         category: 'Category 3',',
-        link: '/item-3}
+        link: '/item-3},
     ];
 
     it('renders featured items when provided', () => {;
@@ -197,20 +197,20 @@ describe('UnifiedPromotionalBanner', () => {';
   describe('Featured Items', () => {';
     const featuredItems = [
       {
-        title: 'Item 1',';,
-        category: 'Category 1',';,
-        link: '/item-1',';,
-        metrics: '99% success',
+        title: 'Item 1',';
+        category: 'Category 1',';
+        link: '/item-1',';
+        metrics: '99% success'
       },
       {
-        title: 'Item 2',';,
-        category: 'Category 2',';,
-        link: '/item-2',
+        title: 'Item 2',';
+        category: 'Category 2',';
+        link: '/item-2'
       },
       {
-        title: 'Item 3',';,
-        category: 'Category 3',';,
-        link: '/item-3',
+        title: 'Item 3',';
+        category: 'Category 3',';
+        link: '/item-3'
       }
     ];
 
@@ -412,14 +412,14 @@ describe('UnifiedPromotionalBanner', () => {';
       );
 
       const banner = container.firstChild;
-      expect(banner).not.toHaveClass('hover: scale-[1.01]');',
+      expect(banner).not.toHaveClass('hover: scale-[1.01]');'
     });
   });
 
   describe('Accessibility', () => {;
     it('has accessible links', () => {;
 =======
-      expect(banner).not.toHaveClass('hover: scale-[1.01]');';,
+      expect(banner).not.toHaveClass('hover: scale-[1.01]');';
     });
   });
 
@@ -440,14 +440,14 @@ describe('UnifiedPromotionalBanner', () => {';
         {
           title: 'Test Item',',
           category: 'Test Category',',
-          link: '/test}
+          link: '/test},
 =======
     it('featured item links are accessible', () => {';
       const featuredItems = [
         {
-          title: 'Test Item',';,
-          category: 'Test Category',';,
-          link: '/test',
+          title: 'Test Item',';
+          category: 'Test Category',';
+          link: '/test'
         }
       ];
 
@@ -481,14 +481,14 @@ describe('UnifiedPromotionalBanner', () => {';
         {
           title: 'Item 1',',
           category: 'Category 1',',
-          link: '/item-1}
+          link: '/item-1},
 =======
     it('handles showCount greater than items length', () => {';
       const featuredItems = [
         {
-          title: 'Item 1',';,
-          category: 'Category 1',';,
-          link: '/item-1',
+          title: 'Item 1',';
+          category: 'Category 1',';
+          link: '/item-1'
         }
       ];
 

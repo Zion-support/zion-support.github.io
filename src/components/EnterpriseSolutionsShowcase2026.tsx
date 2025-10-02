@@ -2,7 +2,7 @@ import React from 'react';
 =======
 import React from 'react';';
 
-const EnterpriseSolutionsShowcase2026: React.FC = () => {,
+const EnterpriseSolutionsShowcase2026: React.FC = () => {
   const enterpriseSolutions = [
     {
       id: 1,,
@@ -16,7 +16,7 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {,
       icon: <Bot className="w-8 h-8/>,",
       gradient: 'from-blue-500 to-cyan-500',',
       badge: 'BEST SELLER',',
-      features: ['Workflow Automation', 'Intelligent Routing', 'Process Optimization']',
+      features: ['Workflow Automation', 'Intelligent Routing', 'Process Optimization']'
     },
     {
       id: 2,,
@@ -30,7 +30,7 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {,
       icon: <Shield className="w-8 h-8/>,",
       gradient: 'from-purple-500 to-indigo-500',',
       badge: 'ENTERPRISE',',
-      features: ['Quantum Encryption', 'Zero-Trust Architecture', 'Threat Detection']',
+      features: ['Quantum Encryption', 'Zero-Trust Architecture', 'Threat Detection']'
     },
     {
       id: 3,,
@@ -44,7 +44,7 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {,
       icon: <Cloud className="w-8 h-8/>,",
       gradient: 'from-green-500 to-emerald-500',',
       badge: 'CLOUD-FIRST',',
-      features: ['Multi-Cloud Deployment', 'Auto-Scaling', 'Cost Optimization']',
+      features: ['Multi-Cloud Deployment', 'Auto-Scaling', 'Cost Optimization']'
     },
     {
       id: 4,,
@@ -58,7 +58,7 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {,
       icon: <Target className="w-8 h-8/>,",
       gradient: 'from-orange-500 to-red-500',',
       badge: 'PREDICTIVE',',
-      features: ['Trend Forecasting', 'Risk Analysis', 'Customer Insights']',
+      features: ['Trend Forecasting', 'Risk Analysis', 'Customer Insights']'
     },
     {
       id: 5,,
@@ -72,7 +72,7 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {,
       icon: <Building className="w-8 h-8/>,",
       gradient: 'from-teal-500 to-cyan-500',',
       badge: 'TRANSFORMATION',',
-      features: ['Strategy Consulting', 'Implementation', 'Change Management']',
+      features: ['Strategy Consulting', 'Implementation', 'Change Management']'
     },
     {
       id: 6,,
@@ -88,87 +88,87 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {,
       badge: 'GOVERNANCE',',
       features: ['Ethical AI', 'Compliance Management', 'Risk Assessment']',
 =======
-      title: 'AI-Powered Enterprise Automation',';,
-      slug: 'ai-enterprise-automation-2026',';,
-      excerpt: 'Transform your enterprise with comprehensive AI automation achieving 95% process efficiency. From workflow optimization to intelligent decision-making systems.',';,
-      category: 'Enterprise Automation',';,
-      industry: 'All Industries',';,
-      roi: '300%',';,
-      savings: '$2M+',';,
-      icon: <Bot className="w-8 h-8" />,";,
-      gradient: 'from-blue-500 to-cyan-500',';,
-      badge: 'BEST SELLER',';,
-      features: ['Workflow Automation', 'Intelligent Routing', 'Process Optimization']';,
+      title: 'AI-Powered Enterprise Automation',';
+      slug: 'ai-enterprise-automation-2026',';
+      excerpt: 'Transform your enterprise with comprehensive AI automation achieving 95% process efficiency. From workflow optimization to intelligent decision-making systems.',';
+      category: 'Enterprise Automation',';
+      industry: 'All Industries',';
+      roi: '300%',';
+      savings: '$2M+',';
+      icon: <Bot className="w-8 h-8" />,";
+      gradient: 'from-blue-500 to-cyan-500',';
+      badge: 'BEST SELLER',';
+      features: ['Workflow Automation', 'Intelligent Routing', 'Process Optimization']';
     },
     {
       id: 2,,
-      title: 'Quantum-Enhanced Security Platform',';,
-      slug: 'quantum-security-platform-2026',';,
-      excerpt: 'Ultimate enterprise security with quantum-encrypted communications and zero-trust architectures. Protect your organization from advanced cyber threats.',';,
-      category: 'Cybersecurity',';,
-      industry: 'Finance, Healthcare, Government',';,
-      roi: '250%',';,
-      savings: '$5M+',';,
-      icon: <Shield className="w-8 h-8" />,";,
-      gradient: 'from-purple-500 to-indigo-500',';,
-      badge: 'ENTERPRISE',';,
-      features: ['Quantum Encryption', 'Zero-Trust Architecture', 'Threat Detection']';,
+      title: 'Quantum-Enhanced Security Platform',';
+      slug: 'quantum-security-platform-2026',';
+      excerpt: 'Ultimate enterprise security with quantum-encrypted communications and zero-trust architectures. Protect your organization from advanced cyber threats.',';
+      category: 'Cybersecurity',';
+      industry: 'Finance, Healthcare, Government',';
+      roi: '250%',';
+      savings: '$5M+',';
+      icon: <Shield className="w-8 h-8" />,";
+      gradient: 'from-purple-500 to-indigo-500',';
+      badge: 'ENTERPRISE',';
+      features: ['Quantum Encryption', 'Zero-Trust Architecture', 'Threat Detection']';
     },
     {
       id: 3,,
-      title: 'Cloud-Native AI Infrastructure',';,
-      slug: 'cloud-native-ai-infrastructure-2026',';,
-      excerpt: 'Scalable, secure, and cost-effective AI infrastructure built for enterprise scale. Deploy and manage AI models across multi-cloud environments.',';,
-      category: 'Cloud Infrastructure',';,
-      industry: 'Technology, Retail, Manufacturing',';,
-      roi: '400%',';,
-      savings: '$3M+',';,
-      icon: <Cloud className="w-8 h-8" />,";,
-      gradient: 'from-green-500 to-emerald-500',';,
-      badge: 'CLOUD-FIRST',';,
-      features: ['Multi-Cloud Deployment', 'Auto-Scaling', 'Cost Optimization']';,
+      title: 'Cloud-Native AI Infrastructure',';
+      slug: 'cloud-native-ai-infrastructure-2026',';
+      excerpt: 'Scalable, secure, and cost-effective AI infrastructure built for enterprise scale. Deploy and manage AI models across multi-cloud environments.',';
+      category: 'Cloud Infrastructure',';
+      industry: 'Technology, Retail, Manufacturing',';
+      roi: '400%',';
+      savings: '$3M+',';
+      icon: <Cloud className="w-8 h-8" />,";
+      gradient: 'from-green-500 to-emerald-500',';
+      badge: 'CLOUD-FIRST',';
+      features: ['Multi-Cloud Deployment', 'Auto-Scaling', 'Cost Optimization']';
     },
     {
       id: 4,,
-      title: 'Predictive Analytics Intelligence',';,
-      slug: 'predictive-analytics-intelligence-2026',';,
-      excerpt: 'Advanced predictive analytics that forecast business trends, customer behavior, and operational risks with 99.9% accuracy.',';,
-      category: 'Business Intelligence',';,
-      industry: 'Retail, Finance, Healthcare',';,
-      roi: '350%',';,
-      savings: '$4M+',';,
-      icon: <Target className="w-8 h-8" />,";,
-      gradient: 'from-orange-500 to-red-500',';,
-      badge: 'PREDICTIVE',';,
-      features: ['Trend Forecasting', 'Risk Analysis', 'Customer Insights']';,
+      title: 'Predictive Analytics Intelligence',';
+      slug: 'predictive-analytics-intelligence-2026',';
+      excerpt: 'Advanced predictive analytics that forecast business trends, customer behavior, and operational risks with 99.9% accuracy.',';
+      category: 'Business Intelligence',';
+      industry: 'Retail, Finance, Healthcare',';
+      roi: '350%',';
+      savings: '$4M+',';
+      icon: <Target className="w-8 h-8" />,";
+      gradient: 'from-orange-500 to-red-500',';
+      badge: 'PREDICTIVE',';
+      features: ['Trend Forecasting', 'Risk Analysis', 'Customer Insights']';
     },
     {
       id: 5,,
-      title: 'Digital Transformation Suite',';,
-      slug: 'digital-transformation-suite-2026',';,
-      excerpt: 'Complete digital transformation solution covering strategy, implementation, and optimization. Modernize your enterprise for the AI era.',';,
-      category: 'Digital Transformation',';,
-      industry: 'All Industries',';,
-      roi: '500%',';,
-      savings: '$10M+',';,
-      icon: <Building className="w-8 h-8" />,";,
-      gradient: 'from-teal-500 to-cyan-500',';,
-      badge: 'TRANSFORMATION',';,
-      features: ['Strategy Consulting', 'Implementation', 'Change Management']';,
+      title: 'Digital Transformation Suite',';
+      slug: 'digital-transformation-suite-2026',';
+      excerpt: 'Complete digital transformation solution covering strategy, implementation, and optimization. Modernize your enterprise for the AI era.',';
+      category: 'Digital Transformation',';
+      industry: 'All Industries',';
+      roi: '500%',';
+      savings: '$10M+',';
+      icon: <Building className="w-8 h-8" />,";
+      gradient: 'from-teal-500 to-cyan-500',';
+      badge: 'TRANSFORMATION',';
+      features: ['Strategy Consulting', 'Implementation', 'Change Management']';
     },
     {
       id: 6,,
-      title: 'Enterprise AI Governance',';,
-      slug: 'enterprise-ai-governance-2026',';,
-      excerpt: 'Comprehensive AI governance framework ensuring ethical AI deployment, compliance, and risk management across your organization.',';,
-      category: 'AI Governance',';,
-      industry: 'Finance, Healthcare, Government',';,
-      roi: '200%',';,
-      savings: '$1.5M+',';,
-      icon: <Users className="w-8 h-8" />,";,
-      gradient: 'from-pink-500 to-purple-500',';,
-      badge: 'GOVERNANCE',';,
-      features: ['Ethical AI', 'Compliance Management', 'Risk Assessment']';,
+      title: 'Enterprise AI Governance',';
+      slug: 'enterprise-ai-governance-2026',';
+      excerpt: 'Comprehensive AI governance framework ensuring ethical AI deployment, compliance, and risk management across your organization.',';
+      category: 'AI Governance',';
+      industry: 'Finance, Healthcare, Government',';
+      roi: '200%',';
+      savings: '$1.5M+',';
+      icon: <Users className="w-8 h-8" />,";
+      gradient: 'from-pink-500 to-purple-500',';
+      badge: 'GOVERNANCE',';
+      features: ['Ethical AI', 'Compliance Management', 'Risk Assessment']';
     }
   ];
 
@@ -209,7 +209,7 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {,
             <Sparkles className="w-5 h-5 text-indigo-400 animate-pulse/>
           </div>
 
-          <h2 className="text-5xl md: text-6xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent animate-fade-in">",
+          <h2 className="text-5xl md: text-6xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent animate-fade-in">"
             Enterprise Solutions Showcase 2026
           </h2>
           
@@ -225,19 +225,19 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {,
             <Sparkles className="w-5 h-5 text-indigo-400 animate-pulse" />";
           </div>
 
-          <h2 className="text-5xl md: text-6xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent animate-fade-in">";,
+          <h2 className="text-5xl md: text-6xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent animate-fade-in">";
             Enterprise Solutions Showcase 2026
           </h2>
           
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">";
-            Transform your enterprise with our comprehensive suite of AI-powered solutions. From automation to security, 
+            Transform your enterprise with our comprehensive suite of AI-powered solutions. From automation to security
             we deliver measurable results that drive business growth and operational excellence.
           </p>
 
           {/* Success Metrics */}
-          <div className="grid grid-cols-2 md: grid-cols-4 gap-6 max-w-4xl mx-auto">",
+          <div className="grid grid-cols-2 md: grid-cols-4 gap-6 max-w-4xl mx-auto">"
 =======
-          <div className="grid grid-cols-2 md: grid-cols-4 gap-6 max-w-4xl mx-auto">";,
+          <div className="grid grid-cols-2 md: grid-cols-4 gap-6 max-w-4xl mx-auto">";
             {successMetrics.map((metric, index) => (
               <div key={index} className="text-center">";
                 <div className="text-blue-400 mb-2 flex justify-center">";
@@ -255,13 +255,13 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {,
         </div>
 
         {/* Enterprise Solutions Grid */}
-        <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">",
+        <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">"
 =======
-        <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">";,
+        <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">";
           {enterpriseSolutions.map((solution, index) => (
             <div 
               key={solution.id}
-              className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover: border-blue-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20",
+              className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover: border-blue-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20"
               style={{ animationDelay: `${index * 150}ms` }}`;
             >
               {/* Card glow effect */}
@@ -270,10 +270,10 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {,
               <div className="relative p-8">";
                 {/* Icon & Badge */}
                 <div className="flex items-start justify-between mb-6">
-                  <div className="text-blue-400 group-hover: scale-110 transition-transform duration-300">",
+                  <div className="text-blue-400 group-hover: scale-110 transition-transform duration-300">"
 =======
                 <div className="flex items-start justify-between mb-6">";
-                  <div className="text-blue-400 group-hover: scale-110 transition-transform duration-300">";,
+                  <div className="text-blue-400 group-hover: scale-110 transition-transform duration-300">";
                     {solution.icon}
                   </div>
                   <div className={`px-3 py-1.5 rounded-full bg-gradient-to-r ${solution.gradient} text-white text-xs font-bold border border-white/30`}>`;
@@ -290,14 +290,14 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {,
                     Industries: {solution.industry},
 =======
                   <div className="text-xs text-gray-500">";
-                    Industries: {solution.industry}
+                    Industries: {solution.industry},
                   </div>
                 </div>
 
                 {/* Title */}
-                <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-blue-400 transition-colors duration-300 leading-tight">",
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-blue-400 transition-colors duration-300 leading-tight">"
 =======
-                <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-blue-400 transition-colors duration-300 leading-tight">";,
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-blue-400 transition-colors duration-300 leading-tight">";
                   {solution.title}
                 </h3>
 
@@ -320,11 +320,11 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {,
 
                 {/* Features */}
                 <div className="mb-6">
-                  <div className="text-gray-400 text-xs mb-2">Key Features: </div>",
+                  <div className="text-gray-400 text-xs mb-2">Key Features: </div>"
                   <div className="flex flex-wrap gap-1">
 =======
                 <div className="mb-6">";
-                  <div className="text-gray-400 text-xs mb-2">Key Features: </div>";,
+                  <div className="text-gray-400 text-xs mb-2">Key Features: </div>";
                   <div className="flex flex-wrap gap-1">";
                     {solution.features.map((feature, idx) => (
                       <span key={idx} className="px-2 py-1 rounded bg-white/10 text-gray-300 text-xs">";
@@ -340,9 +340,9 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {,
                   className={`group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r ${solution.gradient} hover:opacity-90 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1`}`;
                 >
                   <span>Explore Solution</span>
-                  <ArrowRight className="w-4 h-4 group-hover/btn: translate-x-1 transition-transform duration-300/>",
+                  <ArrowRight className="w-4 h-4 group-hover/btn: translate-x-1 transition-transform duration-300/>"
 =======
-                  <ArrowRight className="w-4 h-4 group-hover/btn: translate-x-1 transition-transform duration-300" />";,
+                  <ArrowRight className="w-4 h-4 group-hover/btn: translate-x-1 transition-transform duration-300" />";
                 </a>
               </div>
             </div>
@@ -360,16 +360,16 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {,
                 Join 500+ leading organizations that trust our enterprise solutions to drive innovation
                 reduce costs, and achieve unprecedented operational efficiency.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">"
 =======
               <p className="text-gray-400 mb-8 max-w-2xl mx-auto">";
-                Join 500+ leading organizations that trust our enterprise solutions to drive innovation, 
+                Join 500+ leading organizations that trust our enterprise solutions to drive innovation
                 reduce costs, and achieve unprecedented operational efficiency.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">";
                 <a title="Internal link"
                   href="/contact"
-                  className="bg-gradient-to-r from-blue-500 to-indigo-600 hover: from-blue-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 flex items-center justify-center gap-2",
+                  className="bg-gradient-to-r from-blue-500 to-indigo-600 hover: from-blue-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 flex items-center justify-center gap-2"
                 >
                   <Building className="w-5 h-5/>
 =======
@@ -378,7 +378,7 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {,
                 </a>
                 <a title="Internal link"
                   href="/case-studies"
-                  className="border-2 border-blue-500 text-blue-400 hover: bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2",
+                  className="border-2 border-blue-500 text-blue-400 hover: bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
                 >
                   <span>View Success Stories</span>
                   <ArrowRight className="w-5 h-5/>

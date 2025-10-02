@@ -10,9 +10,8 @@ const October2025TechBreakthroughBanner = () => {
       </div>
 
       {/* Animated Grid */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size: 64px_64px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,#000,transparent)]"></div>",
-
-      <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">",
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size: 64px_64px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,#000,transparent)]"></div>"
+      <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">"
         {/* Breaking News Badge */}
         <div className="flex items-center justify-center gap-3 mb-8">
           <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold text-sm animate-pulse shadow-lg shadow-cyan-500/50">
@@ -29,9 +28,8 @@ const October2025TechBreakthroughBanner = () => {
       </div>
 
       {/* Animated Grid */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size: 64px_64px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,#000,transparent)]"></div>";,
-
-      <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">";,
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size: 64px_64px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,#000,transparent)]"></div>";
+      <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">";
         {/* Breaking News Badge */}
         <div className="flex items-center justify-center gap-3 mb-8">";
           <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold text-sm animate-pulse shadow-lg shadow-cyan-500/50">";
@@ -43,69 +41,69 @@ const October2025TechBreakthroughBanner = () => {
 
         {/* Main Headline */}
         <div className="text-center mb-10">
-          <h2 className="text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">",
+          <h2 className="text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">"
             🚀 <span className="bg-gradient-to-r from-cyan-300 via-blue-300 to-indigo-300 bg-clip-text text-transparent">
               3 Revolutionary Enterprise Technologies
             </span> 🚀
           </h2>
-          <p className="text-xl md: text-2xl text-cyan-100 font-medium">",
+          <p className="text-xl md: text-2xl text-cyan-100 font-medium">"
 =======
         <div className="text-center mb-10">";
-          <h2 className="text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">";,
+          <h2 className="text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">";
             🚀 <span className="bg-gradient-to-r from-cyan-300 via-blue-300 to-indigo-300 bg-clip-text text-transparent">";
               3 Revolutionary Enterprise Technologies
             </span> 🚀
           </h2>
-          <p className="text-xl md: text-2xl text-cyan-100 font-medium">";,
+          <p className="text-xl md: text-2xl text-cyan-100 font-medium">";
             ⚡ Quantum-Safe Cryptography • Autonomous Risk Management • AI-Powered Digital Twins
           </p>
         </div>
 
         {/* Key Metrics Grid */}
-        <div className="grid md: grid-cols-4 gap-4 mb-10">",
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400/30 hover: border-cyan-400/60 transition-all duration-300 hover:scale-105">",
+        <div className="grid md: grid-cols-4 gap-4 mb-10">"
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400/30 hover: border-cyan-400/60 transition-all duration-300 hover:scale-105">"
             <div className="text-cyan-300 text-4xl font-bold mb-2">99.97%</div>
             <div className="text-white text-sm font-medium">Quantum Attack Protection</div>
             <div className="text-cyan-200 text-xs mt-1">Future-Proof Security</div>
           </div>
           
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/30 hover: border-blue-400/60 transition-all duration-300 hover:scale-105">",
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/30 hover: border-blue-400/60 transition-all duration-300 hover:scale-105">"
             <div className="text-blue-300 text-4xl font-bold mb-2">98.9%</div>
             <div className="text-white text-sm font-medium">Risk Prediction Accuracy</div>
             <div className="text-blue-200 text-xs mt-1">90+ Days Early Warning</div>
           </div>
           
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-indigo-400/30 hover: border-indigo-400/60 transition-all duration-300 hover:scale-105">",
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-indigo-400/30 hover: border-indigo-400/60 transition-all duration-300 hover:scale-105">"
             <div className="text-indigo-300 text-4xl font-bold mb-2">99.4%</div>
             <div className="text-white text-sm font-medium">Digital Twin Accuracy</div>
             <div className="text-indigo-200 text-xs mt-1">Real-World Fidelity</div>
           </div>
           
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-purple-400/30 hover: border-purple-400/60 transition-all duration-300 hover:scale-105">",
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-purple-400/30 hover: border-purple-400/60 transition-all duration-300 hover:scale-105">"
             <div className="text-purple-300 text-4xl font-bold mb-2">$151B</div>
             <div className="text-white text-sm font-medium">Combined Annual Value</div>
             <div className="text-purple-200 text-xs mt-1">Fortune 500 Average</div>
 =======
-        <div className="grid md: grid-cols-4 gap-4 mb-10">";,
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400/30 hover: border-cyan-400/60 transition-all duration-300 hover:scale-105">";,
+        <div className="grid md: grid-cols-4 gap-4 mb-10">";
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400/30 hover: border-cyan-400/60 transition-all duration-300 hover:scale-105">";
             <div className="text-cyan-300 text-4xl font-bold mb-2">99.97%</div>";
             <div className="text-white text-sm font-medium">Quantum Attack Protection</div>";
             <div className="text-cyan-200 text-xs mt-1">Future-Proof Security</div>";
           </div>
           
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/30 hover: border-blue-400/60 transition-all duration-300 hover:scale-105">";,
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/30 hover: border-blue-400/60 transition-all duration-300 hover:scale-105">";
             <div className="text-blue-300 text-4xl font-bold mb-2">98.9%</div>";
             <div className="text-white text-sm font-medium">Risk Prediction Accuracy</div>";
             <div className="text-blue-200 text-xs mt-1">90+ Days Early Warning</div>";
           </div>
           
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-indigo-400/30 hover: border-indigo-400/60 transition-all duration-300 hover:scale-105">";,
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-indigo-400/30 hover: border-indigo-400/60 transition-all duration-300 hover:scale-105">";
             <div className="text-indigo-300 text-4xl font-bold mb-2">99.4%</div>";
             <div className="text-white text-sm font-medium">Digital Twin Accuracy</div>";
             <div className="text-indigo-200 text-xs mt-1">Real-World Fidelity</div>";
           </div>
           
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-purple-400/30 hover: border-purple-400/60 transition-all duration-300 hover:scale-105">";,
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-purple-400/30 hover: border-purple-400/60 transition-all duration-300 hover:scale-105">";
             <div className="text-purple-300 text-4xl font-bold mb-2">$151B</div>";
             <div className="text-white text-sm font-medium">Combined Annual Value</div>";
             <div className="text-purple-200 text-xs mt-1">Fortune 500 Average</div>";
@@ -113,18 +111,18 @@ const October2025TechBreakthroughBanner = () => {
         </div>
 
         {/* Featured Content Cards */}
-        <div className="grid md: grid-cols-3 gap-6 mb-10">",
+        <div className="grid md: grid-cols-3 gap-6 mb-10">"
           {/* Quantum-Safe Cryptography */}
-          <div className="group bg-gradient-to-br from-cyan-900/80 to-cyan-950/80 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400/30 hover: border-cyan-400 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/30 hover:scale-105">",
+          <div className="group bg-gradient-to-br from-cyan-900/80 to-cyan-950/80 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400/30 hover: border-cyan-400 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/30 hover:scale-105">"
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-3 rounded-xl bg-cyan-500/20 group-hover: bg-cyan-500/30 transition-colors">",
+              <div className="p-3 rounded-xl bg-cyan-500/20 group-hover: bg-cyan-500/30 transition-colors">"
                 <Lock className="w-8 h-8 text-cyan-300/>
 =======
-        <div className="grid md: grid-cols-3 gap-6 mb-10">";,
+        <div className="grid md: grid-cols-3 gap-6 mb-10">";
           {/* Quantum-Safe Cryptography */}
-          <div className="group bg-gradient-to-br from-cyan-900/80 to-cyan-950/80 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400/30 hover: border-cyan-400 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/30 hover:scale-105">";,
+          <div className="group bg-gradient-to-br from-cyan-900/80 to-cyan-950/80 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400/30 hover: border-cyan-400 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/30 hover:scale-105">";
             <div className="flex items-center gap-3 mb-4">";
-              <div className="p-3 rounded-xl bg-cyan-500/20 group-hover: bg-cyan-500/30 transition-colors">";,
+              <div className="p-3 rounded-xl bg-cyan-500/20 group-hover: bg-cyan-500/30 transition-colors">";
                 <Lock className="w-8 h-8 text-cyan-300" />";
               </div>
               <div className="flex-1">";
@@ -132,7 +130,7 @@ const October2025TechBreakthroughBanner = () => {
                 <div className="text-sm text-cyan-100 font-medium">NIST-Approved • Production-Ready</div>";
               </div>
             </div>
-            <h3 className="text-xl font-bold text-white mb-3 group-hover: text-cyan-300 transition-colors">",
+            <h3 className="text-xl font-bold text-white mb-3 group-hover: text-cyan-300 transition-colors">"
               Quantum-Safe Cryptography Revolution
             </h3>
             <div className="space-y-2 mb-4">
@@ -151,7 +149,7 @@ const October2025TechBreakthroughBanner = () => {
               <div className="flex items-center gap-2 text-cyan-100 text-sm">
                 <Award className="w-4 h-4 text-cyan-400/>
 =======
-            <h3 className="text-xl font-bold text-white mb-3 group-hover: text-cyan-300 transition-colors">";,
+            <h3 className="text-xl font-bold text-white mb-3 group-hover: text-cyan-300 transition-colors">";
               Quantum-Safe Cryptography Revolution
             </h3>
             <div className="space-y-2 mb-4">";
@@ -174,24 +172,24 @@ const October2025TechBreakthroughBanner = () => {
             </div>
             <Link 
               to="/blog/ai-2025-oct-01-quantum-safe-cryptography-enterprise-systems"
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-cyan-500 to-blue-500 hover: from-cyan-400 hover:to-blue-400 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 group-hover:scale-105",
+              className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-cyan-500 to-blue-500 hover: from-cyan-400 hover:to-blue-400 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 group-hover:scale-105"
             >
               Read Full Analysis
-              <ArrowRight className="w-4 h-4 group-hover: translate-x-1 transition-transform/>",
+              <ArrowRight className="w-4 h-4 group-hover: translate-x-1 transition-transform/>"
 =======
-              <ArrowRight className="w-4 h-4 group-hover: translate-x-1 transition-transform" />";,
+              <ArrowRight className="w-4 h-4 group-hover: translate-x-1 transition-transform" />";
             </Link>
           </div>
 
           {/* Autonomous Risk Management */}
-          <div className="group bg-gradient-to-br from-blue-900/80 to-blue-950/80 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/30 hover: border-blue-400 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/30 hover:scale-105">",
+          <div className="group bg-gradient-to-br from-blue-900/80 to-blue-950/80 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/30 hover: border-blue-400 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/30 hover:scale-105">"
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-3 rounded-xl bg-blue-500/20 group-hover: bg-blue-500/30 transition-colors">",
+              <div className="p-3 rounded-xl bg-blue-500/20 group-hover: bg-blue-500/30 transition-colors">"
                 <TrendingUp className="w-8 h-8 text-blue-300/>
 =======
-          <div className="group bg-gradient-to-br from-blue-900/80 to-blue-950/80 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/30 hover: border-blue-400 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/30 hover:scale-105">";,
+          <div className="group bg-gradient-to-br from-blue-900/80 to-blue-950/80 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/30 hover: border-blue-400 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/30 hover:scale-105">";
             <div className="flex items-center gap-3 mb-4">";
-              <div className="p-3 rounded-xl bg-blue-500/20 group-hover: bg-blue-500/30 transition-colors">";,
+              <div className="p-3 rounded-xl bg-blue-500/20 group-hover: bg-blue-500/30 transition-colors">";
                 <TrendingUp className="w-8 h-8 text-blue-300" />";
               </div>
               <div className="flex-1">";
@@ -199,7 +197,7 @@ const October2025TechBreakthroughBanner = () => {
                 <div className="text-sm text-blue-100 font-medium">AI-Powered • Autonomous</div>";
               </div>
             </div>
-            <h3 className="text-xl font-bold text-white mb-3 group-hover: text-blue-300 transition-colors">",
+            <h3 className="text-xl font-bold text-white mb-3 group-hover: text-blue-300 transition-colors">"
               Autonomous Risk Management Platform
             </h3>
             <div className="space-y-2 mb-4">
@@ -218,7 +216,7 @@ const October2025TechBreakthroughBanner = () => {
               <div className="flex items-center gap-2 text-blue-100 text-sm">
                 <Award className="w-4 h-4 text-blue-400/>
 =======
-            <h3 className="text-xl font-bold text-white mb-3 group-hover: text-blue-300 transition-colors">";,
+            <h3 className="text-xl font-bold text-white mb-3 group-hover: text-blue-300 transition-colors">";
               Autonomous Risk Management Platform
             </h3>
             <div className="space-y-2 mb-4">";
@@ -241,24 +239,24 @@ const October2025TechBreakthroughBanner = () => {
             </div>
             <Link 
               to="/blog/ai-2025-oct-01-autonomous-risk-management-platform-revolution"
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-blue-500 to-indigo-500 hover: from-blue-400 hover:to-indigo-400 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-blue-500/50 group-hover:scale-105",
+              className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-blue-500 to-indigo-500 hover: from-blue-400 hover:to-indigo-400 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-blue-500/50 group-hover:scale-105"
             >
               Explore Platform
-              <ArrowRight className="w-4 h-4 group-hover: translate-x-1 transition-transform/>",
+              <ArrowRight className="w-4 h-4 group-hover: translate-x-1 transition-transform/>"
 =======
-              <ArrowRight className="w-4 h-4 group-hover: translate-x-1 transition-transform" />";,
+              <ArrowRight className="w-4 h-4 group-hover: translate-x-1 transition-transform" />";
             </Link>
           </div>
 
           {/* AI-Powered Digital Twins */}
-          <div className="group bg-gradient-to-br from-indigo-900/80 to-indigo-950/80 backdrop-blur-sm rounded-2xl p-6 border border-indigo-400/30 hover: border-indigo-400 transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-500/30 hover:scale-105">",
+          <div className="group bg-gradient-to-br from-indigo-900/80 to-indigo-950/80 backdrop-blur-sm rounded-2xl p-6 border border-indigo-400/30 hover: border-indigo-400 transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-500/30 hover:scale-105">"
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-3 rounded-xl bg-indigo-500/20 group-hover: bg-indigo-500/30 transition-colors">",
+              <div className="p-3 rounded-xl bg-indigo-500/20 group-hover: bg-indigo-500/30 transition-colors">"
                 <Target className="w-8 h-8 text-indigo-300/>
 =======
-          <div className="group bg-gradient-to-br from-indigo-900/80 to-indigo-950/80 backdrop-blur-sm rounded-2xl p-6 border border-indigo-400/30 hover: border-indigo-400 transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-500/30 hover:scale-105">";,
+          <div className="group bg-gradient-to-br from-indigo-900/80 to-indigo-950/80 backdrop-blur-sm rounded-2xl p-6 border border-indigo-400/30 hover: border-indigo-400 transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-500/30 hover:scale-105">";
             <div className="flex items-center gap-3 mb-4">";
-              <div className="p-3 rounded-xl bg-indigo-500/20 group-hover: bg-indigo-500/30 transition-colors">";,
+              <div className="p-3 rounded-xl bg-indigo-500/20 group-hover: bg-indigo-500/30 transition-colors">";
                 <Target className="w-8 h-8 text-indigo-300" />";
               </div>
               <div className="flex-1">";
@@ -266,7 +264,7 @@ const October2025TechBreakthroughBanner = () => {
                 <div className="text-sm text-indigo-100 font-medium">Real-Time • Self-Learning</div>";
               </div>
             </div>
-            <h3 className="text-xl font-bold text-white mb-3 group-hover: text-indigo-300 transition-colors">",
+            <h3 className="text-xl font-bold text-white mb-3 group-hover: text-indigo-300 transition-colors">"
               Next-Gen AI-Powered Digital Twins
             </h3>
             <div className="space-y-2 mb-4">
@@ -285,7 +283,7 @@ const October2025TechBreakthroughBanner = () => {
               <div className="flex items-center gap-2 text-indigo-100 text-sm">
                 <Award className="w-4 h-4 text-indigo-400/>
 =======
-            <h3 className="text-xl font-bold text-white mb-3 group-hover: text-indigo-300 transition-colors">";,
+            <h3 className="text-xl font-bold text-white mb-3 group-hover: text-indigo-300 transition-colors">";
               Next-Gen AI-Powered Digital Twins
             </h3>
             <div className="space-y-2 mb-4">";
@@ -308,12 +306,12 @@ const October2025TechBreakthroughBanner = () => {
             </div>
             <Link 
               to="/blog/ai-2025-oct-01-next-gen-digital-twins-enterprise-transformation"
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-indigo-500 to-purple-500 hover: from-indigo-400 hover:to-purple-400 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 group-hover:scale-105",
+              className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-indigo-500 to-purple-500 hover: from-indigo-400 hover:to-purple-400 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 group-hover:scale-105"
             >
               Discover Technology
-              <ArrowRight className="w-4 h-4 group-hover: translate-x-1 transition-transform/>",
+              <ArrowRight className="w-4 h-4 group-hover: translate-x-1 transition-transform/>"
 =======
-              <ArrowRight className="w-4 h-4 group-hover: translate-x-1 transition-transform" />";,
+              <ArrowRight className="w-4 h-4 group-hover: translate-x-1 transition-transform" />";
             </Link>
           </div>
         </div>
@@ -323,13 +321,13 @@ const October2025TechBreakthroughBanner = () => {
           <h3 className="text-2xl font-bold text-white mb-6 text-center">";
             🎯 Why These Technologies Are Game-Changers
           </h3>
-          <div className="grid md: grid-cols-3 gap-6">",
+          <div className="grid md: grid-cols-3 gap-6">"
             <div className="text-center">
               <div className="text-cyan-300 text-3xl font-bold mb-2">3-5 Years</div>
               <div className="text-white text-sm font-medium">Quantum Threat Window</div>
               <div className="text-cyan-200 text-xs mt-1">Deploy quantum-safe security NOW before it's too late</div>;
 =======
-          <div className="grid md: grid-cols-3 gap-6">";,
+          <div className="grid md: grid-cols-3 gap-6">";
             <div className="text-center">";
               <div className="text-cyan-300 text-3xl font-bold mb-2">3-5 Years</div>";
               <div className="text-white text-sm font-medium">Quantum Threat Window</div>";
@@ -353,54 +351,54 @@ const October2025TechBreakthroughBanner = () => {
           <h3 className="text-2xl font-bold text-white mb-6 text-center">";
             🌐 Proven Results Across Industries
           </h3>
-          <div className="grid grid-cols-2 md: grid-cols-5 gap-4">",
-            <div className="text-center p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover: border-cyan-400/50 transition-all duration-300 hover:scale-105">",
+          <div className="grid grid-cols-2 md: grid-cols-5 gap-4">"
+            <div className="text-center p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover: border-cyan-400/50 transition-all duration-300 hover:scale-105">"
               <div className="text-2xl mb-2">🏭</div>
               <div className="text-white text-sm font-semibold">Manufacturing</div>
               <div className="text-cyan-200 text-xs mt-1">127x ROI Average</div>
             </div>
-            <div className="text-center p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover: border-blue-400/50 transition-all duration-300 hover:scale-105">",
+            <div className="text-center p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover: border-blue-400/50 transition-all duration-300 hover:scale-105">"
               <div className="text-2xl mb-2">🏦</div>
               <div className="text-white text-sm font-semibold">Financial Services</div>
               <div className="text-blue-200 text-xs mt-1">845x ROI Average</div>
             </div>
-            <div className="text-center p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover: border-indigo-400/50 transition-all duration-300 hover:scale-105">",
+            <div className="text-center p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover: border-indigo-400/50 transition-all duration-300 hover:scale-105">"
               <div className="text-2xl mb-2">🏥</div>
               <div className="text-white text-sm font-semibold">Healthcare</div>
               <div className="text-indigo-200 text-xs mt-1">47x ROI Average</div>
             </div>
-            <div className="text-center p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover: border-purple-400/50 transition-all duration-300 hover:scale-105">",
+            <div className="text-center p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover: border-purple-400/50 transition-all duration-300 hover:scale-105">"
               <div className="text-2xl mb-2">⚡</div>
               <div className="text-white text-sm font-semibold">Energy & Utilities</div>
               <div className="text-purple-200 text-xs mt-1">89x ROI Average</div>
             </div>
-            <div className="text-center p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover: border-pink-400/50 transition-all duration-300 hover:scale-105">",
+            <div className="text-center p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover: border-pink-400/50 transition-all duration-300 hover:scale-105">"
               <div className="text-2xl mb-2">🏙️</div>
               <div className="text-white text-sm font-semibold">Smart Cities</div>
               <div className="text-pink-200 text-xs mt-1">34x ROI Average</div>
 =======
-          <div className="grid grid-cols-2 md: grid-cols-5 gap-4">";,
-            <div className="text-center p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover: border-cyan-400/50 transition-all duration-300 hover:scale-105">";,
+          <div className="grid grid-cols-2 md: grid-cols-5 gap-4">";
+            <div className="text-center p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover: border-cyan-400/50 transition-all duration-300 hover:scale-105">";
               <div className="text-2xl mb-2">🏭</div>";
               <div className="text-white text-sm font-semibold">Manufacturing</div>";
               <div className="text-cyan-200 text-xs mt-1">127x ROI Average</div>";
             </div>
-            <div className="text-center p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover: border-blue-400/50 transition-all duration-300 hover:scale-105">";,
+            <div className="text-center p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover: border-blue-400/50 transition-all duration-300 hover:scale-105">";
               <div className="text-2xl mb-2">🏦</div>";
               <div className="text-white text-sm font-semibold">Financial Services</div>";
               <div className="text-blue-200 text-xs mt-1">845x ROI Average</div>";
             </div>
-            <div className="text-center p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover: border-indigo-400/50 transition-all duration-300 hover:scale-105">";,
+            <div className="text-center p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover: border-indigo-400/50 transition-all duration-300 hover:scale-105">";
               <div className="text-2xl mb-2">🏥</div>";
               <div className="text-white text-sm font-semibold">Healthcare</div>";
               <div className="text-indigo-200 text-xs mt-1">47x ROI Average</div>";
             </div>
-            <div className="text-center p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover: border-purple-400/50 transition-all duration-300 hover:scale-105">";,
+            <div className="text-center p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover: border-purple-400/50 transition-all duration-300 hover:scale-105">";
               <div className="text-2xl mb-2">⚡</div>";
               <div className="text-white text-sm font-semibold">Energy & Utilities</div>";
               <div className="text-purple-200 text-xs mt-1">89x ROI Average</div>";
             </div>
-            <div className="text-center p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover: border-pink-400/50 transition-all duration-300 hover:scale-105">";,
+            <div className="text-center p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover: border-pink-400/50 transition-all duration-300 hover:scale-105">";
               <div className="text-2xl mb-2">🏙️</div>";
               <div className="text-white text-sm font-semibold">Smart Cities</div>";
               <div className="text-pink-200 text-xs mt-1">34x ROI Average</div>";
@@ -410,13 +408,13 @@ const October2025TechBreakthroughBanner = () => {
 
         {/* Call to Action */}
         <div className="text-center">
-          <div className="inline-flex flex-col sm: flex-row gap-4 items-center justify-center">",
+          <div className="inline-flex flex-col sm: flex-row gap-4 items-center justify-center">"
 =======
         <div className="text-center">";
-          <div className="inline-flex flex-col sm: flex-row gap-4 items-center justify-center">";,
+          <div className="inline-flex flex-col sm: flex-row gap-4 items-center justify-center">";
             <Link 
               to="/blog"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-500 hover: from-cyan-400 hover:via-blue-400 hover:to-indigo-400 text-white font-bold rounded-xl transition-all duration-300 shadow-2xl hover:shadow-cyan-500/50 hover:scale-105 text-lg",
+              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-500 hover: from-cyan-400 hover:via-blue-400 hover:to-indigo-400 text-white font-bold rounded-xl transition-all duration-300 shadow-2xl hover:shadow-cyan-500/50 hover:scale-105 text-lg"
             >
               <Sparkles className="w-6 h-6/>
               Read All 3 Breakthrough Articles
@@ -428,7 +426,7 @@ const October2025TechBreakthroughBanner = () => {
             </Link>
             <Link 
               to="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 hover: bg-white/20 backdrop-blur-sm text-white font-bold rounded-xl transition-all duration-300 border-2 border-white/30 hover:border-white/60 hover:scale-105 text-lg",
+              className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 hover: bg-white/20 backdrop-blur-sm text-white font-bold rounded-xl transition-all duration-300 border-2 border-white/30 hover:border-white/60 hover:scale-105 text-lg"
             >
               Get Free Assessment
               <ArrowRight className="w-6 h-6/>

@@ -11,7 +11,7 @@ interface OptimizedBannerLoaderProps {
 import React, { Suspense, useEffect, useState } from 'react';';
 
 interface OptimizedBannerLoaderProps {
-  bannerId: string;,
+  bannerId: string;
   importFn: () => Promise<{ default: React.ComponentType<Record<string, unknown>> }>;
   priority?: number;
   fallback?: React.ReactNode;
@@ -39,7 +39,7 @@ export default function OptimizedBannerLoader({
       priority
 =======
       id: bannerId,,
-      priority,
+      priority
     });
 
     // Preload if high priority
@@ -118,7 +118,7 @@ return (
 <div className="max-w-7xl mx-auto">";
 <div className="h-8 bg-gray-700 rounded w-3/4 mx-auto mb-4"></div>";
 <div className="h-4 bg-gray-700 rounded w-1/2 mx-auto mb-8"></div>";
-<div className="grid grid-cols-1 md: grid-cols-3 gap-6">,";,
+<div className="grid grid-cols-1 md: grid-cols-3 gap-6">,";
 <div className="h-64 bg-gray-700 rounded"></div>";
 <div className="h-64 bg-gray-700 rounded"></div>";
 <div className="h-64 bg-gray-700 rounded"></div>";

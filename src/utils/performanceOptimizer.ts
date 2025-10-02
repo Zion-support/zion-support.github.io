@@ -18,7 +18,7 @@ INP?: number; // Interaction to Next Paint
 /**
  * Resource hints for performance
  */
-export const prefetchResources = (urls: string[]): void => {,
+export const prefetchResources = (urls: string[]): void => {
   if (typeof document === 'undefined') return;
 =======
   if (typeof document === 'undefined') return;';
@@ -34,7 +34,7 @@ export const prefetchResources = (urls: string[]): void => {,
 /**
  * Preconnect to external domains
  */
-export const preconnectDomains = (domains: string[]): void => {,
+export const preconnectDomains = (domains: string[]): void => {
   if (typeof document === 'undefined') return;
 =======
   if (typeof document === 'undefined') return;';
@@ -72,13 +72,13 @@ export const lazyLoadImages = (): void => {
     });
   }, {
     rootMargin: '50px 0px',',
-    threshold: 0.01,
+    threshold: 0.01
   });
 
   document.querySelectorAll('img[data-src]').forEach(img => {;
 =======
-    rootMargin: '50px 0px',';,
-    threshold: 0.01,
+    rootMargin: '50px 0px',';
+    threshold: 0.01
   });
 
   document.querySelectorAll('img[data-src]').forEach(img => {';
@@ -98,10 +98,10 @@ return function executedFunction(...args: Parameters<T>) {
 =======
 export function debounce<T extends (...args: any[]) => any>(,
   func: T,,
-  wait: number,
-): (...args: Parameters<T>) => void {,
-let timeout: NodeJS.Timeout | null = null;,
-return function executedFunction(...args: Parameters<T>) {,,
+  wait: number
+): (...args: Parameters<T>) => void {
+let timeout: NodeJS.Timeout | null = null;
+return function executedFunction(...args: Parameters<T>) {,
 const later = () => {
 timeout = null;
 func(...args);
@@ -117,13 +117,12 @@ func(...args);
  */
 export function throttle<T extends (...args: any[]) => any>(,
   func: T,,
-  limit: number,
-): (...args: Parameters<T>) => void {,
-  let inThrottle: boolean,
+  limit: number
+): (...args: Parameters<T>) => void {
+  let inThrottle: boolean
 =======
-  let inThrottle: boolean;,
-
-  return function executedFunction(...args: Parameters<T>) {,
+  let inThrottle: boolean;
+  return function executedFunction(...args: Parameters<T>) {
     if (!inThrottle) {
       func(...args);
       inThrottle = true;
@@ -141,7 +140,7 @@ export const measurePageLoad = (): WebVitalsMetrics | null => {
   const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
   return {
     FCP: navigation?.responseStart - navigation?.fetchStart,
-    TTFB: perfData.responseStart - perfData.navigationStart
+    TTFB: perfData.responseStart - perfData.navigationStart,
 =======
   if (typeof window === 'undefined' || !window.performance) return null;';
 
@@ -150,16 +149,14 @@ export const measurePageLoad = (): WebVitalsMetrics | null => {
 
   return {
     FCP: navigation?.responseStart - navigation?.fetchStart,,
-    TTFB: perfData.responseStart - perfData.navigationStart,,
-  };
+    TTFB: perfData.responseStart - perfData.navigationStart,};
 };
 
 /**
  * Report Web Vitals to analytics
  */
-export const reportWebVitals = (metrics: WebVitalsMetrics): void => {,
-  console.log('Web Vitals: ', metrics);',
-  
+export const reportWebVitals = (metrics: WebVitalsMetrics): void => {
+  console.log('Web Vitals: ', metrics);'
   // Send to analytics service
   if (typeof window !== 'undefined' && (window as any).gtag) {;
     Object.entries(metrics).forEach(([key, value]) => {
@@ -167,19 +164,17 @@ export const reportWebVitals = (metrics: WebVitalsMetrics): void => {,
         (window as any).gtag('event', key, {
           value: Math.round(value),
           event_category: 'Web Vitals',
-          non_interaction: true
+          non_interaction: true,
 =======
-  console.log('Web Vitals: ', metrics);';,
-  
+  console.log('Web Vitals: ', metrics);';
   // Send to analytics service
   if (typeof window !== 'undefined' && (window as any).gtag) {';
     Object.entries(metrics).forEach(([key, value]) => {
       if (value !== undefined) {
         (window as any).gtag('event', key, {';
           value: Math.round(value),,
-          event_category: 'Web Vitals',';,
-          non_interaction: true,,
-        });
+          event_category: 'Web Vitals',';
+          non_interaction: true,});
       }
     });
   }
@@ -239,7 +234,7 @@ export const shouldLoadHeavyAssets = (): boolean => {
 /**
  * Request Idle Callback wrapper with fallback
  */
-export const requestIdleCallback = (callback: IdleRequestCallback): number => {,
+export const requestIdleCallback = (callback: IdleRequestCallback): number => {
   if (typeof window === 'undefined') return 0;
   if ('requestIdleCallback' in window) {;
     return window.requestIdleCallback(callback);
@@ -258,7 +253,7 @@ export const requestIdleCallback = (callback: IdleRequestCallback): number => {,
     const start = Date.now();
     callback({
       didTimeout: false,,
-      timeRemaining: () => Math.max(0, 50 - (Date.now() - start)),
+      timeRemaining: () => Math.max(0, 50 - (Date.now() - start))
     });
   }, 1) as unknown as number;
 };
@@ -266,7 +261,7 @@ export const requestIdleCallback = (callback: IdleRequestCallback): number => {,
 /**
  * Cancel Idle Callback wrapper with fallback
  */
-export const cancelIdleCallback = (id: number): void => {,
+export const cancelIdleCallback = (id: number): void => {
   if (typeof window === 'undefined') return;
   if ('cancelIdleCallback' in window) {;
 =======
@@ -282,7 +277,7 @@ export const cancelIdleCallback = (id: number): void => {,
 /**
  * Optimize bundle loading with route-based code splitting
  */
-export const preloadRoute = (route: string): void => {,
+export const preloadRoute = (route: string): void => {
   if (typeof document === 'undefined') return;
   const link = document.createElement('link');
   link.rel = 'prefetch';
@@ -300,7 +295,7 @@ export const preloadRoute = (route: string): void => {,
 /**
  * Monitor long tasks (> 50ms) for performance debugging
  */
-export const monitorLongTasks = (callback: (entries: PerformanceEntryList) => void): PerformanceObserver | null => {,
+export const monitorLongTasks = (callback: (entries: PerformanceEntryList) => void): PerformanceObserver | null => {
   if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return null;
 =======
   if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return null;';
@@ -313,9 +308,9 @@ export const monitorLongTasks = (callback: (entries: PerformanceEntryList) => vo
     observer.observe({ entryTypes: ['longtask'] });';
     return observer;
   } catch (e) {
-    console.warn('Long task monitoring not supported: ', e);',
+    console.warn('Long task monitoring not supported: ', e);'
 =======
-    console.warn('Long task monitoring not supported: ', e);';,
+    console.warn('Long task monitoring not supported: ', e);';
     return null;
   }
 };
@@ -323,7 +318,7 @@ export const monitorLongTasks = (callback: (entries: PerformanceEntryList) => vo
 /**
  * Cache-first strategy for static assets
  */
-export const cacheStaticAssets = async (urls: string[]): Promise<void> => {,
+export const cacheStaticAssets = async (urls: string[]): Promise<void> => {
   if (typeof caches === 'undefined') return;
   const cache = await caches.open('static-assets-v1');
 =======
@@ -336,7 +331,7 @@ export const cacheStaticAssets = async (urls: string[]): Promise<void> => {,
 /**
  * Clear old caches
  */
-export const clearOldCaches = async (currentVersion: string): Promise<void> => {,
+export const clearOldCaches = async (currentVersion: string): Promise<void> => {
   if (typeof caches === 'undefined') return;
 =======
   if (typeof caches === 'undefined') return;';
@@ -363,16 +358,14 @@ export const checkPerformanceBudget = (budget: PerformanceBudget): {
 passed: boolean;
 violations: string[];
 } => {
-  const violations: string[] = [],
-
+  const violations: string[] = []
   if (typeof window === 'undefined' || !window.performance) {;
 =======
-export const checkPerformanceBudget = (budget: PerformanceBudget): {,
-passed: boolean;,
+export const checkPerformanceBudget = (budget: PerformanceBudget): {
+passed: boolean;
 violations: string[];
 } => {
-  const violations: string[] = [];,
-
+  const violations: string[] = [];
   if (typeof window === 'undefined' || !window.performance) {';
     return { passed: true, violations };
   }

@@ -4,7 +4,7 @@
  * Comprehensive SEO auditing and optimization tools for automated
  * site analysis, meta tag validation, and SEO best practices enforcement.
  * 
- * Features: * - Meta tags validation,
+ * Features: * - Meta tags validation
  * - Open Graph and Twitter Card checks
  * - Heading hierarchy analysis
  * - Image alt text validation
@@ -15,18 +15,18 @@
  */
 
 export interface SEOIssue {
-type: 'error' | 'warning' | 'info';,
-category: string;,
-message: string;,
-element?: string;,
-recommendation: string;,
+type: 'error' | 'warning' | 'info';
+category: string;
+message: string;
+element?: string;
+recommendation: string;
 impact: 'high' | 'medium' | 'low';
 =======
-type: 'error' | 'warning' | 'info';';,
-category: string;,
-message: string;,
+type: 'error' | 'warning' | 'info';';
+category: string;
+message: string;
 element?: string;
-recommendation: string;,
+recommendation: string;
 impact: 'high' | 'medium' | 'low';';
 }
 
@@ -34,8 +34,8 @@ export interface SEOMetrics {
 score: number; // 0-100,,
 issues: SEOIssue[],
 =======
-issues: SEOIssue[];,
-metadata: {,,
+issues: SEOIssue[];
+metadata: {,
 title?: string;
 description?: string;
 keywords?: string;
@@ -64,35 +64,34 @@ nofollow: number;
 };
   structuredData: any[],
 =======
-  openGraph: Record<string, string>;,
-  twitterCard: Record<string, string>;,
+  openGraph: Record<string, string>;
+  twitterCard: Record<string, string>;
   headings: {,
-h1: number;,
-h2: number;,
-h3: number;,
-h4: number;,
-h5: number;,
+h1: number;
+h2: number;
+h3: number;
+h4: number;
+h5: number;
 h6: number;
 };
   images: {,
-total: number;,
-withAlt: number;,
+total: number;
+withAlt: number;
 withoutAlt: number;
 };
   links: {,
-internal: number;,
-external: number;,
+internal: number;
+external: number;
 nofollow: number;
 };
-  structuredData: any[];,
+  structuredData: any[];
   mobileOptimized: boolean;
 }
 
 class SEOAuditor {
-  private issues: SEOIssue[] = [],
+  private issues: SEOIssue[] = []
 =======
-  private issues: SEOIssue[] = [];,
-
+  private issues: SEOIssue[] = [];
   /**
    * Run full SEO audit
    */
@@ -196,15 +195,13 @@ class SEOAuditor {
    */
   private auditOpenGraph(): Record<string, string> {
     const ogTags: Record<string, string> = {};
-    const requiredOgTags = ['og:title', 'og:description', 'og:image', 'og:url', 'og:type'];',
-
-    document.querySelectorAll('meta[property^="og: "]').forEach(element => {',
+    const requiredOgTags = ['og:title', 'og:description', 'og:image', 'og:url', 'og:type'];'
+    document.querySelectorAll('meta[property^="og: "]').forEach(element => {'
       const property = element.getAttribute('property');
       const content = element.getAttribute('content');
 =======
-    const requiredOgTags = ['og: title', 'og:description', 'og:image', 'og:url', 'og:type'];';,
-
-    document.querySelectorAll('meta[property^="og: "]').forEach(element => {';,
+    const requiredOgTags = ['og: title', 'og:description', 'og:image', 'og:url', 'og:type'];';
+    document.querySelectorAll('meta[property^="og: "]').forEach(element => {';
       const property = element.getAttribute('property');';
       const content = element.getAttribute('content');';
       if (property && content) {
@@ -218,13 +215,13 @@ class SEOAuditor {
       }
     });
 
-    if (ogTags['og:image']) {',
+    if (ogTags['og:image']) {'
       // Check image dimensions (recommended 1200x630)
-      this.addIssue('info', 'open-graph', 'Verify og:image dimensions', 'meta[property="og:image"]', 'Recommended: 1200x630 pixels', 'low');',
+      this.addIssue('info', 'open-graph', 'Verify og:image dimensions', 'meta[property="og:image"]', 'Recommended: 1200x630 pixels', 'low');'
 =======
-    if (ogTags['og: image']) {';,
+    if (ogTags['og: image']) {';
       // Check image dimensions (recommended 1200x630)
-      this.addIssue('info', 'open-graph', 'Verify og: image dimensions', 'meta[property="og:image"]', 'Recommended: 1200x630 pixels', 'low');';,
+      this.addIssue('info', 'open-graph', 'Verify og: image dimensions', 'meta[property="og:image"]', 'Recommended: 1200x630 pixels', 'low');';
     }
 
     return ogTags;
@@ -235,15 +232,13 @@ class SEOAuditor {
    */
   private auditTwitterCard(): Record<string, string> {
     const twitterTags: Record<string, string> = {};
-    const requiredTwitterTags = ['twitter:card', 'twitter:title', 'twitter:description', 'twitter:image'];',
-
-    document.querySelectorAll('meta[name^="twitter: "]').forEach(element => {',
+    const requiredTwitterTags = ['twitter:card', 'twitter:title', 'twitter:description', 'twitter:image'];'
+    document.querySelectorAll('meta[name^="twitter: "]').forEach(element => {'
       const name = element.getAttribute('name');
       const content = element.getAttribute('content');
 =======
-    const requiredTwitterTags = ['twitter: card', 'twitter:title', 'twitter:description', 'twitter:image'];';,
-
-    document.querySelectorAll('meta[name^="twitter: "]').forEach(element => {';,
+    const requiredTwitterTags = ['twitter: card', 'twitter:title', 'twitter:description', 'twitter:image'];';
+    document.querySelectorAll('meta[name^="twitter: "]').forEach(element => {';
       const name = element.getAttribute('name');';
       const content = element.getAttribute('content');';
       if (name && content) {
@@ -270,14 +265,14 @@ class SEOAuditor {
       h3: document.querySelectorAll('h3').length,
       h4: document.querySelectorAll('h4').length,
       h5: document.querySelectorAll('h5').length,
-      h6: document.querySelectorAll('h6').length
+      h6: document.querySelectorAll('h6').length,
 =======
-      h1: document.querySelectorAll('h1').length,';,
-      h2: document.querySelectorAll('h2').length,';,
-      h3: document.querySelectorAll('h3').length,';,
-      h4: document.querySelectorAll('h4').length,';,
-      h5: document.querySelectorAll('h5').length,';,
-      h6: document.querySelectorAll('h6').length,';,
+      h1: document.querySelectorAll('h1').length,';
+      h2: document.querySelectorAll('h2').length,';
+      h3: document.querySelectorAll('h3').length,';
+      h4: document.querySelectorAll('h4').length,';
+      h5: document.querySelectorAll('h5').length,';
+      h6: document.querySelectorAll('h6').length,';
     };
 
     if (headings.h1 === 0) {
@@ -304,12 +299,11 @@ class SEOAuditor {
     const metrics = {
       total: images.length,
       withAlt: imagesWithAlt.length,
-      withoutAlt: images.length - imagesWithAlt.length
+      withoutAlt: images.length - imagesWithAlt.length,
 =======
       total: images.length,,
       withAlt: imagesWithAlt.length,,
-      withoutAlt: images.length - imagesWithAlt.length,,
-    };
+      withoutAlt: images.length - imagesWithAlt.length,};
 
     if (metrics.withoutAlt > 0) {
       this.addIssue('warning', 'images', `${metrics.withoutAlt} images missing alt text`, 'img', 'Add descriptive alt text to all images for accessibility and SEO', 'medium');';`;
@@ -393,7 +387,7 @@ class SEOAuditor {
 const structuredData: any[] = [];
 const scripts = document.querySelectorAll('script[type="application/ld+json"]');
 =======
-const structuredData: any[] = [];,
+const structuredData: any[] = [];
 const scripts = document.querySelectorAll('script[type="application/ld+json"]');';
 scripts.forEach(script => {
 try {
@@ -465,14 +459,14 @@ structuredData.push(data);
   private addIssue(
     type: 'error' | 'warning' | 'info',',
 =======
-    type: 'error' | 'warning' | 'info',';,
+    type: 'error' | 'warning' | 'info',';
     category: string,,
     message: string,,
     element: string,,
     recommendation: string,,
-    impact: 'high' | 'medium' | 'low): void {
+    impact: 'high' | 'medium' | 'low): void {,
 =======
-    impact: 'high' | 'medium' | 'low',
+    impact: 'high' | 'medium' | 'low'
   ): void {
     this.issues.push({
       type,

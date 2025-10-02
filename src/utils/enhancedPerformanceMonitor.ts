@@ -4,9 +4,9 @@
  */
 
 interface PerformanceMetric {
-name: string;,
-value: number;,
-rating: 'good' | 'needs-improvement' | 'poor';,
+name: string;
+value: number;
+rating: 'good' | 'needs-improvement' | 'poor';
 timestamp: number;
 }
 
@@ -19,7 +19,7 @@ private observers: PerformanceObserver[] = [];
 initialize(): void {
 if (typeof window === 'undefined') return;
 =======
-initialize(): void {,
+initialize(): void {
 if (typeof window === 'undefined') return;';
 this.observeWebVitals();
 this.observeLongTasks();
@@ -135,14 +135,14 @@ this.observeLayoutShifts();
   /**
    * Record a performance metric
    */
-  private recordMetric(name: string, value: number, rating: 'good' | 'needs-improvement' | 'poor'): void {',
+  private recordMetric(name: string, value: number, rating: 'good' | 'needs-improvement' | 'poor'): void {'
 =======
-  private recordMetric(name: string, value: number, rating: 'good' | 'needs-improvement' | 'poor'): void {';,
-    const metric: PerformanceMetric = {,
+  private recordMetric(name: string, value: number, rating: 'good' | 'needs-improvement' | 'poor'): void {';
+    const metric: PerformanceMetric = {
       name,
       value,
       rating,
-      timestamp: Date.now(),
+      timestamp: Date.now()
     };
     
     this.metrics.push(metric);
@@ -152,9 +152,9 @@ this.observeLayoutShifts();
   /**
    * Get rating for a metric
    */
-  private getRating(metric: string, value: number): 'good' | 'needs-improvement' | 'poor' {',
+  private getRating(metric: string, value: number): 'good' | 'needs-improvement' | 'poor' {'
 =======
-  private getRating(metric: string, value: number): 'good' | 'needs-improvement' | 'poor' {';,
+  private getRating(metric: string, value: number): 'good' | 'needs-improvement' | 'poor' {';
     const thresholds: Record<string, { good: number; poor: number }> = {
       lcp: { good: 2500, poor: 4000 },
       fid: { good: 100, poor: 300 },
@@ -216,7 +216,7 @@ this.observeLayoutShifts();
   /**
    * Get most common rating
    */
-  private getMostCommonRating(ratings: string[]): string {,
+  private getMostCommonRating(ratings: string[]): string {
     const counts: Record<string, number> = {};
     ratings.forEach((rating) => {
       counts[rating] = (counts[rating] || 0) + 1;

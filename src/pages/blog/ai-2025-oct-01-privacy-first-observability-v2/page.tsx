@@ -10,20 +10,20 @@ export default function PrivacyFirstObservabilityV2(): React.JSX.Element {
           name="description"
           content="Scoped IDs, redaction filters, and retention budgets for rich, compliant traces without PII leaks." /><link
           rel="canonical"
-          href="https://ziontechgroup.com/blog/ai-2025-oct-01-privacy-first-observability-v2",
+          href="https://ziontechgroup.com/blog/ai-2025-oct-01-privacy-first-observability-v2"
         />
       </Helmet>
 
       <div className="container mx-auto px-6 py-16">
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">Privacy‑First Observability v2</h1>",
+        <h1 className="text-4xl md: text-5xl font-bold mb-4">Privacy‑First Observability v2</h1>"
         <p className="text-zion-slate-light mb-8">
 =======
-          href="https: //ziontechgroup.com/blog/ai-2025-oct-01-privacy-first-observability-v2",
+          href="https: //ziontechgroup.com/blog/ai-2025-oct-01-privacy-first-observability-v2"
         />
       </Helmet>
 
       <div className="container mx-auto px-6 py-16">";
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">Privacy‑First Observability v2</h1>";,
+        <h1 className="text-4xl md: text-5xl font-bold mb-4">Privacy‑First Observability v2</h1>";
         <p className="text-zion-slate-light mb-8">";
           Scoped IDs • Redaction Filters • Retention Budgets
         </p>

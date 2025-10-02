@@ -3,8 +3,8 @@ import React from 'react';
 import React from 'react';';
 
 interface ComprehensivePromoBannerProps {
-variant?: 'hero' | 'compact' | 'featured';,
-showCount?: number;,
+variant?: 'hero' | 'compact' | 'featured';
+showCount?: number;
 className?: string;
 }
 
@@ -12,9 +12,9 @@ const ComprehensivePromoBanner: React.FC<ComprehensivePromoBannerProps> = ({
   variant = 'hero'
   showCount = 4
 =======
-const ComprehensivePromoBanner: React.FC<ComprehensivePromoBannerProps> = ({ ,
+const ComprehensivePromoBanner: React.FC<ComprehensivePromoBannerProps> = ({
   variant = 'hero', ';
-  showCount = 4,
+  showCount = 4
   className = '' 
 }) => {
   const latestArticles = newArticles2025.filter(a => a.featured).slice(0, showCount);
@@ -39,7 +39,7 @@ const ComprehensivePromoBanner: React.FC<ComprehensivePromoBannerProps> = ({ ,
           </div>
           <Link
             to="/blog"
-            className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover: bg-indigo-50 transition-colors flex items-center gap-2",
+            className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover: bg-indigo-50 transition-colors flex items-center gap-2"
           >
             Explore Now
             <ArrowRight className="w-5 h-5/>
@@ -71,22 +71,22 @@ const ComprehensivePromoBanner: React.FC<ComprehensivePromoBannerProps> = ({ ,
             Discover our newest articles and services transforming industries
           </p>
         </div>
-        <div className="grid md: grid-cols-2 gap-6 p-8">",
+        <div className="grid md: grid-cols-2 gap-6 p-8">"
           {latestArticles.slice(0, 2).map((article) => (
-            <div key={article.id} className="border border-gray-200 rounded-xl p-6 hover: shadow-lg transition-all">",
+            <div key={article.id} className="border border-gray-200 rounded-xl p-6 hover: shadow-lg transition-all">"
               <div className="text-sm text-indigo-600 font-semibold mb-2">{article.category}</div>
               <h4 className="text-lg font-bold text-gray-900 mb-2">{article.title}</h4>
               <p className="text-gray-600 mb-4">{article.description}</p>
-              <Link to={article.link} className="text-indigo-600 font-semibold hover: text-indigo-800 flex items-center gap-2">",
+              <Link to={article.link} className="text-indigo-600 font-semibold hover: text-indigo-800 flex items-center gap-2">"
                 Read More <ArrowRight className="w-4 h-4/>
 =======
-        <div className="grid md: grid-cols-2 gap-6 p-8">";,
+        <div className="grid md: grid-cols-2 gap-6 p-8">";
           {latestArticles.slice(0, 2).map((article) => (
-            <div key={article.id} className="border border-gray-200 rounded-xl p-6 hover: shadow-lg transition-all">";,
+            <div key={article.id} className="border border-gray-200 rounded-xl p-6 hover: shadow-lg transition-all">";
               <div className="text-sm text-indigo-600 font-semibold mb-2">{article.category}</div>";
               <h4 className="text-lg font-bold text-gray-900 mb-2">{article.title}</h4>";
               <p className="text-gray-600 mb-4">{article.description}</p>";
-              <Link to={article.link} className="text-indigo-600 font-semibold hover: text-indigo-800 flex items-center gap-2">";,
+              <Link to={article.link} className="text-indigo-600 font-semibold hover: text-indigo-800 flex items-center gap-2">";
                 Read More <ArrowRight className="w-4 h-4" />";
               </Link>
             </div>
@@ -103,9 +103,9 @@ const ComprehensivePromoBanner: React.FC<ComprehensivePromoBannerProps> = ({ ,
         <div className="text-center mb-10">
           <div className="inline-flex items-center px-4 py-2 bg-yellow-400/20 rounded-full text-yellow-300 mb-6">
             <Zap className="w-5 h-5 mr-2/>
-            <span className="font-bold">OCTOBER 2025: BREAKTHROUGH CONTENT RELEASE</span>",
+            <span className="font-bold">OCTOBER 2025: BREAKTHROUGH CONTENT RELEASE</span>"
           </div>
-          <h2 className="text-4xl md: text-5xl font-bold mb-4">",
+          <h2 className="text-4xl md: text-5xl font-bold mb-4">"
             {latestArticles.length} New Articles + {latestServices.length} Revolutionary Services
           </h2>
           <p className="text-xl text-purple-200 max-w-3xl mx-auto">
@@ -115,23 +115,23 @@ const ComprehensivePromoBanner: React.FC<ComprehensivePromoBannerProps> = ({ ,
         <div className="text-center mb-10">";
           <div className="inline-flex items-center px-4 py-2 bg-yellow-400/20 rounded-full text-yellow-300 mb-6">";
             <Zap className="w-5 h-5 mr-2" />";
-            <span className="font-bold">OCTOBER 2025: BREAKTHROUGH CONTENT RELEASE</span>";,
+            <span className="font-bold">OCTOBER 2025: BREAKTHROUGH CONTENT RELEASE</span>";
           </div>
-          <h2 className="text-4xl md: text-5xl font-bold mb-4">";,
+          <h2 className="text-4xl md: text-5xl font-bold mb-4">";
             {latestArticles.length} New Articles + {latestServices.length} Revolutionary Services
           </h2>
           <p className="text-xl text-purple-200 max-w-3xl mx-auto">";
-            Multimodal AI, Blockchain Integration, Green AI, AutoML, Predictive Maintenance, 
+            Multimodal AI, Blockchain Integration, Green AI, AutoML, Predictive Maintenance
             AI Talent Acquisition, Fraud Prevention & More!
           </p>
         </div>
 
-        <div className="grid md: grid-cols-2 gap-6 mb-8">",
+        <div className="grid md: grid-cols-2 gap-6 mb-8">"
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6">
             <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
               <Sparkles className="w-6 h-6 text-yellow-300/>
 =======
-        <div className="grid md: grid-cols-2 gap-6 mb-8">";,
+        <div className="grid md: grid-cols-2 gap-6 mb-8">";
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6">";
             <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">";
               <Sparkles className="w-6 h-6 text-yellow-300" />";
@@ -142,7 +142,7 @@ const ComprehensivePromoBanner: React.FC<ComprehensivePromoBannerProps> = ({ ,
                 <Link
                   key={article.id}
                   to={article.link}
-                  className="block bg-white/5 rounded-lg p-4 hover: bg-white/15 transition-all",
+                  className="block bg-white/5 rounded-lg p-4 hover: bg-white/15 transition-all"
                 >
                   <div className="text-sm text-purple-300 mb-1">{article.category}</div>";
                   <div className="font-semibold">{article.title}</div>";
@@ -166,7 +166,7 @@ const ComprehensivePromoBanner: React.FC<ComprehensivePromoBannerProps> = ({ ,
                 <Link
                   key={service.id}
                   to={service.link}
-                  className="block bg-white/5 rounded-lg p-4 hover: bg-white/15 transition-all",
+                  className="block bg-white/5 rounded-lg p-4 hover: bg-white/15 transition-all"
                 >
                   <div className="text-sm text-green-300 mb-1">{service.category}</div>";
                   <div className="font-semibold">{service.title}</div>";
@@ -180,7 +180,7 @@ const ComprehensivePromoBanner: React.FC<ComprehensivePromoBannerProps> = ({ ,
         <div className="text-center">";
           <Link
             to="/blog"
-            className="inline-flex items-center gap-2 bg-white text-indigo-900 px-8 py-4 rounded-xl font-bold text-lg hover: bg-indigo-50 transition-all hover:scale-105",
+            className="inline-flex items-center gap-2 bg-white text-indigo-900 px-8 py-4 rounded-xl font-bold text-lg hover: bg-indigo-50 transition-all hover:scale-105"
           >
             Explore All Content
             <ArrowRight className="w-6 h-6/>

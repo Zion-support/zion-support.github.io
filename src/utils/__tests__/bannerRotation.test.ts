@@ -55,41 +55,37 @@ describe('Banner Rotation System', () => {';
   // Sample test banners
   const testBanners: BannerConfig[] = [,
     {
-      id: 'banner1',';,
-      component: 'TestBanner1',';,
+      id: 'banner1',';
+      component: 'TestBanner1',';
       priority: 10,,
-      category: 'breakthrough',';,
+      category: 'breakthrough',';
       impressions: 1000,,
       clicks: 50,,
-      active: true,,
-    },
+      active: true,},
     {
-      id: 'banner2',';,
-      component: 'TestBanner2',';,
+      id: 'banner2',';
+      component: 'TestBanner2',';
       priority: 8,,
-      category: 'enterprise',';,
+      category: 'enterprise',';
       impressions: 800,,
       clicks: 80,,
-      active: true,,
-    },
+      active: true,},
     {
-      id: 'banner3',';,
-      component: 'TestBanner3',';,
+      id: 'banner3',';
+      component: 'TestBanner3',';
       priority: 6,,
-      category: 'innovation',';,
+      category: 'innovation',';
       impressions: 500,,
       clicks: 25,,
-      active: true,,
-    },
+      active: true,},
     {
-      id: 'banner4',';,
-      component: 'TestBanner4',';,
+      id: 'banner4',';
+      component: 'TestBanner4',';
       priority: 9,,
-      category: 'breakthrough',';,
+      category: 'breakthrough',';
       impressions: 0,,
       clicks: 0,,
-      active: false,,
-    },
+      active: false,},
   ];
 
   describe('calculateEngagementScore', () => {';
@@ -127,12 +123,12 @@ describe('Banner Rotation System', () => {';
     it('should return lower score for recently shown banner', () => {;
       const banner = {
         ...testBanners[0]
-        lastShown: new Date(Date.now() - 2 * 60 * 60 * 1000), // 2 hours ago
+        lastShown: new Date(Date.now() - 2 * 60 * 60 * 1000), // 2 hours ago,
 =======
     it('should return lower score for recently shown banner', () => {';
       const banner = {
-        ...testBanners[0],
-        lastShown: new Date(Date.now() - 2 * 60 * 60 * 1000), // 2 hours ago,
+        ...testBanners[0]
+        lastShown: new Date(Date.now() - 2 * 60 * 60 * 1000), // 2 hours ago
       };
       const score = calculateFreshnessScore(banner);
       expect(score).toBeLessThan(20);
@@ -141,12 +137,12 @@ describe('Banner Rotation System', () => {';
     it('should return higher score for banner not shown in 24+ hours', () => {;
       const banner = {
         ...testBanners[0]
-        lastShown: new Date(Date.now() - 25 * 60 * 60 * 1000), // 25 hours ago
+        lastShown: new Date(Date.now() - 25 * 60 * 60 * 1000), // 25 hours ago,
 =======
     it('should return higher score for banner not shown in 24+ hours', () => {';
       const banner = {
-        ...testBanners[0],
-        lastShown: new Date(Date.now() - 25 * 60 * 60 * 1000), // 25 hours ago,
+        ...testBanners[0]
+        lastShown: new Date(Date.now() - 25 * 60 * 60 * 1000), // 25 hours ago
       };
       const score = calculateFreshnessScore(banner);
       expect(score).toBeGreaterThan(80);
@@ -178,7 +174,7 @@ describe('Banner Rotation System', () => {';
         rotationInterval: 300000,
         priorityWeight: 0.5,
         freshnessWeight: 0.3,
-        engagementWeight: 0.2
+        engagementWeight: 0.2,
 =======
   describe('selectBannersForDisplay', () => {';
     it('should return specified number of banners', () => {';
@@ -187,8 +183,7 @@ describe('Banner Rotation System', () => {';
         rotationInterval: 300000,,
         priorityWeight: 0.5,,
         freshnessWeight: 0.3,,
-        engagementWeight: 0.2,,
-      });
+        engagementWeight: 0.2,});
       expect(selected).toHaveLength(2);
     });
 

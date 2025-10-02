@@ -9,19 +9,19 @@ export default function AgenticWorkflowOrchestration2026(): React.JSX.Element {
           name="description"
           content="Design agentic workflows with budgeted actions, KPI-linked canaries, and instant rollback for safe velocity." /><link
           rel="canonical"
-          href="https://ziontechgroup.com/blog/agentic-workflow-orchestration-2026",
+          href="https://ziontechgroup.com/blog/agentic-workflow-orchestration-2026"
         />
       </Helmet>
 
       <div className="container mx-auto px-6 py-16">
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">",
+        <h1 className="text-4xl md: text-5xl font-bold mb-4">"
 =======
-          href="https: //ziontechgroup.com/blog/agentic-workflow-orchestration-2026",
+          href="https: //ziontechgroup.com/blog/agentic-workflow-orchestration-2026"
         />
       </Helmet>
 
       <div className="container mx-auto px-6 py-16">";
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">";,
+        <h1 className="text-4xl md: text-5xl font-bold mb-4">";
           Agentic Workflow Orchestration 2026
         </h1>
         <p className="text-zion-slate-light mb-8">";

@@ -6,13 +6,13 @@ import {
 
 } from 'lucide-react';
 interface SEOIssue {
-id: string;,
-type: 'error' | 'warning' | 'info';,
-title: string;,
-description: string;,
-impact: 'high' | 'medium' | 'low';,
-category: 'content' | 'technical' | 'performance' | 'accessibility' | 'mobile';,
-fix: string;,
+id: string;
+type: 'error' | 'warning' | 'info';
+title: string;
+description: string;
+impact: 'high' | 'medium' | 'low';
+category: 'content' | 'technical' | 'performance' | 'accessibility' | 'mobile';
+fix: string;
 score: number;
 }
 
@@ -22,18 +22,18 @@ totalIssues: number,
 errors: number,
 warnings: number,
 issues: SEOIssue[],
-metrics: {,,
+metrics: {,
 pageTitle: string,
 metaDescription: string,
 =======
-overallScore: number;,
-totalIssues: number;,
-errors: number;,
-warnings: number;,
-issues: SEOIssue[];,
-metrics: {,,
-pageTitle: string;,
-metaDescription: string;,
+overallScore: number;
+totalIssues: number;
+errors: number;
+warnings: number;
+issues: SEOIssue[];
+metrics: {,
+pageTitle: string;
+metaDescription: string;
 headings: { h1: number; h2: number; h3: number; h4: number; h5: number; h6: number
 };
     images: { total: number; withAlt: number; withoutAlt: number };
@@ -41,13 +41,13 @@ headings: { h1: number; h2: number; h3: number; h4: number; h5: number; h6: numb
     wordCount: number,
     readabilityScore: number,
 =======
-    wordCount: number;,
-    readabilityScore: number;,
+    wordCount: number;
+    readabilityScore: number;
   };
   lastUpdated: number;
 }
 
-const SEOAuditDashboard: React.FC = () => {,
+const SEOAuditDashboard: React.FC = () => {
   const [report, setReport] = useState<SEOReport | null>(null);
   const [isRunning, setIsRunning] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -159,105 +159,95 @@ const SEOAuditDashboard: React.FC = () => {,
 
   const commonSEOIssues: SEOIssue[] = [,
     {
-      id: 'title-length',';,
-      type: 'warning',';,
-      title: 'Title Tag Length',';,
-      description: 'Page title should be between 30-60 characters',';,
-      impact: 'medium',';,
-      category: 'content',';,
-      fix: 'Optimize title length for better search engine visibility',';,
-      score: 75,,
-    },
+      id: 'title-length',';
+      type: 'warning',';
+      title: 'Title Tag Length',';
+      description: 'Page title should be between 30-60 characters',';
+      impact: 'medium',';
+      category: 'content',';
+      fix: 'Optimize title length for better search engine visibility',';
+      score: 75,},
     {
-      id: 'meta-description',';,
-      type: 'warning',';,
-      title: 'Meta Description',';,
-      description: 'Meta description should be between 120-160 characters',';,
-      impact: 'medium',';,
-      category: 'content',';,
-      fix: 'Write compelling meta descriptions that encourage clicks',';,
-      score: 80,,
-    },
+      id: 'meta-description',';
+      type: 'warning',';
+      title: 'Meta Description',';
+      description: 'Meta description should be between 120-160 characters',';
+      impact: 'medium',';
+      category: 'content',';
+      fix: 'Write compelling meta descriptions that encourage clicks',';
+      score: 80,},
     {
-      id: 'heading-structure',';,
-      type: 'info',';,
-      title: 'Heading Structure',';,
-      description: 'Ensure proper H1-H6 hierarchy',';,
-      impact: 'medium',';,
-      category: 'content',';,
-      fix: 'Use only one H1 tag and maintain logical heading order',';,
-      score: 85,,
-    },
+      id: 'heading-structure',';
+      type: 'info',';
+      title: 'Heading Structure',';
+      description: 'Ensure proper H1-H6 hierarchy',';
+      impact: 'medium',';
+      category: 'content',';
+      fix: 'Use only one H1 tag and maintain logical heading order',';
+      score: 85,},
     {
-      id: 'image-alt-text',';,
-      type: 'warning',';,
-      title: 'Missing Alt Text',';,
-      description: 'Some images are missing alt text attributes',';,
-      impact: 'high',';,
-      category: 'accessibility',';,
-      fix: 'Add descriptive alt text to all images',';,
-      score: 60,,
-    },
+      id: 'image-alt-text',';
+      type: 'warning',';
+      title: 'Missing Alt Text',';
+      description: 'Some images are missing alt text attributes',';
+      impact: 'high',';
+      category: 'accessibility',';
+      fix: 'Add descriptive alt text to all images',';
+      score: 60,},
     {
-      id: 'mobile-friendly',';,
-      type: 'info',';,
-      title: 'Mobile Optimization',';,
-      description: 'Check mobile responsiveness and usability',';,
-      impact: 'high',';,
-      category: 'mobile',';,
-      fix: 'Ensure all content is accessible on mobile devices',';,
-      score: 90,,
-    },
+      id: 'mobile-friendly',';
+      type: 'info',';
+      title: 'Mobile Optimization',';
+      description: 'Check mobile responsiveness and usability',';
+      impact: 'high',';
+      category: 'mobile',';
+      fix: 'Ensure all content is accessible on mobile devices',';
+      score: 90,},
     {
-      id: 'page-speed',';,
-      type: 'warning',';,
-      title: 'Page Load Speed',';,
-      description: 'Page loading time affects SEO rankings',';,
-      impact: 'high',';,
-      category: 'performance',';,
-      fix: 'Optimize images, minimize CSS/JS, and use CDN',';,
-      score: 70,,
-    },
+      id: 'page-speed',';
+      type: 'warning',';
+      title: 'Page Load Speed',';
+      description: 'Page loading time affects SEO rankings',';
+      impact: 'high',';
+      category: 'performance',';
+      fix: 'Optimize images, minimize CSS/JS, and use CDN',';
+      score: 70,},
     {
-      id: 'internal-linking',';,
-      type: 'info',';,
-      title: 'Internal Linking',';,
-      description: 'Improve internal link structure',';,
-      impact: 'medium',';,
-      category: 'technical',';,
-      fix: 'Create a logical internal linking structure',';,
-      score: 65,,
-    },
+      id: 'internal-linking',';
+      type: 'info',';
+      title: 'Internal Linking',';
+      description: 'Improve internal link structure',';
+      impact: 'medium',';
+      category: 'technical',';
+      fix: 'Create a logical internal linking structure',';
+      score: 65,},
     {
-      id: 'schema-markup',';,
-      type: 'info',';,
-      title: 'Schema Markup',';,
-      description: 'Implement structured data markup',';,
-      impact: 'medium',';,
-      category: 'technical',';,
-      fix: 'Add JSON-LD schema markup for better search results',';,
-      score: 50,,
-    },
+      id: 'schema-markup',';
+      type: 'info',';
+      title: 'Schema Markup',';
+      description: 'Implement structured data markup',';
+      impact: 'medium',';
+      category: 'technical',';
+      fix: 'Add JSON-LD schema markup for better search results',';
+      score: 50,},
     {
-      id: 'ssl-certificate',';,
-      type: 'info',';,
-      title: 'SSL Certificate',';,
-      description: 'Ensure HTTPS is properly configured',';,
-      impact: 'high',';,
-      category: 'technical',';,
-      fix: 'Maintain valid SSL certificate and redirect HTTP to HTTPS',';,
-      score: 95,,
-    },
+      id: 'ssl-certificate',';
+      type: 'info',';
+      title: 'SSL Certificate',';
+      description: 'Ensure HTTPS is properly configured',';
+      impact: 'high',';
+      category: 'technical',';
+      fix: 'Maintain valid SSL certificate and redirect HTTP to HTTPS',';
+      score: 95,},
     {
-      id: 'broken-links',';,
-      type: 'error',';,
-      title: 'Broken Links',';,
-      description: 'Check for broken internal and external links',';,
-      impact: 'medium',';,
-      category: 'technical',';,
-      fix: 'Fix or remove broken links to improve user experience',';,
-      score: 40,,
-    },
+      id: 'broken-links',';
+      type: 'error',';
+      title: 'Broken Links',';
+      description: 'Check for broken internal and external links',';
+      impact: 'medium',';
+      category: 'technical',';
+      fix: 'Fix or remove broken links to improve user experience',';
+      score: 40,},
   ];
 
   const runSEOAudit = async () => {
@@ -320,23 +310,21 @@ const SEOAuditDashboard: React.FC = () => {,
         wordCount: 2847,
         readabilityScore: 72
       }
-      lastUpdated: Date.now()
+      lastUpdated: Date.now(),
 =======
-        pageTitle: 'Zion Tech Group - Leading AI & Technology Solutions',';,
-        metaDescription: 'Cutting-edge AI, cloud, and digital transformation solutions for modern enterprises. Expert IT consulting and innovative technology implementations.',';,
+        pageTitle: 'Zion Tech Group - Leading AI & Technology Solutions',';
+        metaDescription: 'Cutting-edge AI, cloud, and digital transformation solutions for modern enterprises. Expert IT consulting and innovative technology implementations.',';
         headings: { h1: 1, h2: 8, h3: 15, h4: 12, h5: 6, h6: 2 },
         images: { total: 24, withAlt: 18, withoutAlt: 6 },
         links: { total: 45, internal: 32, external: 13 },
         wordCount: 2847,,
-        readabilityScore: 72,,
-      },
-      lastUpdated: Date.now(),,
-    });
+        readabilityScore: 72,},
+      lastUpdated: Date.now(),});
     
     setIsRunning(false);
   };
 
-  const getIssueIcon = (type: string) => {,
+  const getIssueIcon = (type: string) => {
 switch (type) {
 case 'error':
 return <XCircle className="w-5 h-5 text-red-600" />;
@@ -355,7 +343,7 @@ return <CheckCircle className="w-5 h-5 text-blue-600" />;";
 };
   };
 
-  const getImpactColor = (impact: string) => {,
+  const getImpactColor = (impact: string) => {
 switch (impact) {
 case 'high':
 return 'bg-red-100 text-red-800 border-red-200';
@@ -373,7 +361,7 @@ return 'bg-blue-100 text-blue-800 border-blue-200';';
 };
   };
 
-  const getCategoryIcon = (category: string) => {,
+  const getCategoryIcon = (category: string) => {
 switch (category) {
 case 'content':
 return <Search className="w-4 h-4" />;
@@ -386,7 +374,7 @@ return <Globe className="w-4 h-4" />;
 }
   };
 
-  const getScoreColor = (score: number) => {,
+  const getScoreColor = (score: number) => {
     if (score >= 80) return 'text-green-600 bg-green-100';
     if (score >= 60) return 'text-yellow-600 bg-yellow-100';
     return 'text-red-600 bg-red-100';
@@ -402,7 +390,7 @@ return <Globe className="w-4 h-4" />;";
 };
   };
 
-  const getScoreColor = (score: number) => {,
+  const getScoreColor = (score: number) => {
     if (score >= 80) return 'text-green-600 bg-green-100';';
     if (score >= 60) return 'text-yellow-600 bg-yellow-100';';
     return 'text-red-600 bg-red-100';';
@@ -445,7 +433,7 @@ return <Globe className="w-4 h-4" />;";
               ? 'bg-gray-400 text-white cursor-not-allowed'
               : 'bg-blue-600 text-white hover: bg-blue-700}`}`;
 =======
-              : 'bg-blue-600 text-white hover: bg-blue-700',
+              : 'bg-blue-600 text-white hover: bg-blue-700'
           }`}`;
         >
           {
@@ -469,11 +457,11 @@ Run SEO Audit
       {report && (
         <>
           {/* SEO Score Overview */}
-          <div className="grid grid-cols-1 md: grid-cols-4 gap-4 mb-6">",
+          <div className="grid grid-cols-1 md: grid-cols-4 gap-4 mb-6">"
             <div className="bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg p-4 text-white">
               <div className="flex justify-between items-center">
 =======
-          <div className="grid grid-cols-1 md: grid-cols-4 gap-4 mb-6">";,
+          <div className="grid grid-cols-1 md: grid-cols-4 gap-4 mb-6">";
             <div className="bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg p-4 text-white">";
               <div className="flex justify-between items-center">";
                 <div>
@@ -526,28 +514,28 @@ Run SEO Audit
           {/* SEO Metrics */}
           <div className="bg-gray-50 rounded-lg p-4 mb-6">
             <h3 className="text-lg font-semibold text-gray-900 mb-4">Page Metrics</h3>
-            <div className="grid grid-cols-1 md: grid-cols-3 gap-4">",
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-4">"
               <div>
                 <h4 className="font-medium text-gray-700 mb-2">Content Analysis</h4>
                 <div className="space-y-1 text-sm">
                   <div className="flex justify-between">
-                    <span>Word Count: </span>,
+                    <span>Word Count: </span>
                     <span className="font-medium">{report.metrics.wordCount.toLocaleString()}</span>
                   </div>
                   <div className="flex justify-between">
 =======
           <div className="bg-gray-50 rounded-lg p-4 mb-6">";
             <h3 className="text-lg font-semibold text-gray-900 mb-4">Page Metrics</h3>";
-            <div className="grid grid-cols-1 md: grid-cols-3 gap-4">";,
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-4">";
               <div>
                 <h4 className="font-medium text-gray-700 mb-2">Content Analysis</h4>";
                 <div className="space-y-1 text-sm">";
                   <div className="flex justify-between">";
-                    <span>Word Count: </span>,
+                    <span>Word Count: </span>
                     <span className="font-medium">{report.metrics.wordCount.toLocaleString()}</span>";
                   </div>
                   <div className="flex justify-between">";
-                    <span>Readability Score: </span>,
+                    <span>Readability Score: </span>
                     <span className={`px-2 py-1 rounded text-xs font-medium ${getScoreColor(report.metrics.readabilityScore)}`}>`;
                       {report.metrics.readabilityScore}/100
                     </span>
@@ -559,21 +547,21 @@ Run SEO Audit
                 <h4 className="font-medium text-gray-700 mb-2">Structure</h4>
                 <div className="space-y-1 text-sm">
                   <div className="flex justify-between">
-                    <span>H1 Tags: </span>,
+                    <span>H1 Tags: </span>
                     <span className="font-medium">{report.metrics.headings.h1}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Total Headings: </span>,
+                    <span>Total Headings: </span>
                     <span className="font-medium">
 =======
                 <h4 className="font-medium text-gray-700 mb-2">Structure</h4>";
                 <div className="space-y-1 text-sm">";
                   <div className="flex justify-between">";
-                    <span>H1 Tags: </span>,
+                    <span>H1 Tags: </span>
                     <span className="font-medium">{report.metrics.headings.h1}</span>";
                   </div>
                   <div className="flex justify-between">";
-                    <span>Total Headings: </span>,
+                    <span>Total Headings: </span>
                     <span className="font-medium">";
                       {Object.values(report.metrics.headings).reduce((sum, count) => sum + count, 0)}
                     </span>
@@ -585,21 +573,21 @@ Run SEO Audit
                 <h4 className="font-medium text-gray-700 mb-2">Media & Links</h4>
                 <div className="space-y-1 text-sm">
                   <div className="flex justify-between">
-                    <span>Images: </span>,
+                    <span>Images: </span>
                     <span className="font-medium">{report.metrics.images.total}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Missing Alt Text: </span>,
+                    <span>Missing Alt Text: </span>
                     <span className="font-medium text-red-600">{report.metrics.images.withoutAlt}</span>
 =======
                 <h4 className="font-medium text-gray-700 mb-2">Media & Links</h4>";
                 <div className="space-y-1 text-sm">";
                   <div className="flex justify-between">";
-                    <span>Images: </span>,
+                    <span>Images: </span>
                     <span className="font-medium">{report.metrics.images.total}</span>";
                   </div>
                   <div className="flex justify-between">";
-                    <span>Missing Alt Text: </span>,
+                    <span>Missing Alt Text: </span>
                     <span className="font-medium text-red-600">{report.metrics.images.withoutAlt}</span>";
                   </div>
                 </div>
@@ -650,7 +638,7 @@ Run SEO Audit
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
-                  className="border border-gray-200 rounded-lg p-4 hover: shadow-md transition-shadow",
+                  className="border border-gray-200 rounded-lg p-4 hover: shadow-md transition-shadow"
                 >
                   <div className="flex items-start justify-between">";
                     <div className="flex items-start gap-3 flex-1">";
@@ -675,12 +663,12 @@ Run SEO Audit
                         </div>
                         <p className="text-gray-600 text-sm mb-2">{issue.description}</p>
                         <div className="bg-green-50 border border-green-200 rounded-lg p-3">
-                          <p className="text-green-800 text-sm font-medium">How to Fix: </p>",
+                          <p className="text-green-800 text-sm font-medium">How to Fix: </p>"
                           <p className="text-green-700 text-sm">{issue.fix}</p>
 =======
                         <p className="text-gray-600 text-sm mb-2">{issue.description}</p>";
                         <div className="bg-green-50 border border-green-200 rounded-lg p-3">";
-                          <p className="text-green-800 text-sm font-medium">How to Fix: </p>";,
+                          <p className="text-green-800 text-sm font-medium">How to Fix: </p>";
                           <p className="text-green-700 text-sm">{issue.fix}</p>";
                         </div>
                       </div>

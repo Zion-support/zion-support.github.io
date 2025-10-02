@@ -2,7 +2,7 @@ import React from 'react';
 =======
 import React from 'react';';
 
-const RevolutionaryBreakthrough2026Banner: React.FC = () => {,
+const RevolutionaryBreakthrough2026Banner: React.FC = () => {
   const breakthroughContent = [
     {
       id: 1,,
@@ -52,50 +52,50 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {,
       icon: '🤖',',
       metrics: { value: '95%', label: 'Automation' };
 =======
-      title: 'AI Revolutionary Breakthrough: 10x Performance Gains',';,
-      slug: 'ai-revolutionary-breakthrough-january-2026',';,
-      excerpt: 'Discover the groundbreaking AI innovations delivering 10x performance gains, 95% cost reduction, and $500M+ ROI for Fortune 500 companies.',';,
-      category: 'Revolutionary AI Technology',';,
-      date: '2026-01-30',';,
-      readTime: '25 min',';,
+      title: 'AI Revolutionary Breakthrough: 10x Performance Gains',';
+      slug: 'ai-revolutionary-breakthrough-january-2026',';
+      excerpt: 'Discover the groundbreaking AI innovations delivering 10x performance gains, 95% cost reduction, and $500M+ ROI for Fortune 500 companies.',';
+      category: 'Revolutionary AI Technology',';
+      date: '2026-01-30',';
+      readTime: '25 min',';
       trending: true,,
-      icon: '🚀',';,
+      icon: '🚀',';
       metrics: { value: '10x', label: 'Performance Gains' }';
     },
     {
       id: 2,,
-      title: 'Fortune 500 AI Transformation: $300M ROI Success Story',';,
-      slug: 'fortune-500-ai-transformation-mega-success-2026',';,
-      excerpt: 'How a Fortune 500 manufacturing giant achieved $300M ROI, 95% operational automation, and 99.9% efficiency gains through revolutionary AI transformation.',';,
-      category: 'Mega Success Story',';,
-      date: '2026-01-30',';,
-      readTime: '18 min',';,
+      title: 'Fortune 500 AI Transformation: $300M ROI Success Story',';
+      slug: 'fortune-500-ai-transformation-mega-success-2026',';
+      excerpt: 'How a Fortune 500 manufacturing giant achieved $300M ROI, 95% operational automation, and 99.9% efficiency gains through revolutionary AI transformation.',';
+      category: 'Mega Success Story',';
+      date: '2026-01-30',';
+      readTime: '18 min',';
       trending: true,,
-      icon: '🏆',';,
+      icon: '🏆',';
       metrics: { value: '$300M', label: 'ROI Achieved' }';
     },
     {
       id: 3,,
-      title: 'Quantum AI Computing Breakthrough: 1000x Performance',';,
-      slug: 'ai-quantum-computing-breakthrough-2026',';,
-      excerpt: 'Revolutionary quantum-enhanced AI delivering 1000x performance improvements, 99.9% accuracy, and $500M+ ROI for enterprise operations.',';,
-      category: 'Quantum AI Technology',';,
-      date: '2026-01-30',';,
-      readTime: '32 min',';,
+      title: 'Quantum AI Computing Breakthrough: 1000x Performance',';
+      slug: 'ai-quantum-computing-breakthrough-2026',';
+      excerpt: 'Revolutionary quantum-enhanced AI delivering 1000x performance improvements, 99.9% accuracy, and $500M+ ROI for enterprise operations.',';
+      category: 'Quantum AI Technology',';
+      date: '2026-01-30',';
+      readTime: '32 min',';
       trending: true,,
-      icon: '⚛️',';,
+      icon: '⚛️',';
       metrics: { value: '1000x', label: 'Performance Boost' }';
     },
     {
       id: 4,,
-      title: 'Autonomous Enterprise Systems: 95% Automation',';,
-      slug: 'ai-autonomous-enterprise-2026',';,
-      excerpt: 'Transform your organization into a fully autonomous enterprise with AI-driven self-management achieving 95% automation and $200M+ savings.',';,
-      category: 'Autonomous Enterprise AI',';,
-      date: '2026-01-30',';,
-      readTime: '28 min',';,
+      title: 'Autonomous Enterprise Systems: 95% Automation',';
+      slug: 'ai-autonomous-enterprise-2026',';
+      excerpt: 'Transform your organization into a fully autonomous enterprise with AI-driven self-management achieving 95% automation and $200M+ savings.',';
+      category: 'Autonomous Enterprise AI',';
+      date: '2026-01-30',';
+      readTime: '28 min',';
       trending: true,,
-      icon: '🤖',';,
+      icon: '🤖',';
       metrics: { value: '95%', label: 'Automation' }';
     }
   ];
@@ -125,7 +125,7 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {,
             <Sparkles className="w-6 h-6 text-blue-400 animate-pulse/>
           </div>
 
-          <h2 className="text-6xl md: text-7xl font-extrabold mb-6 bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent animate-fade-in">",
+          <h2 className="text-6xl md: text-7xl font-extrabold mb-6 bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent animate-fade-in">"
             Revolutionary AI Breakthroughs
           </h2>
           
@@ -141,7 +141,7 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {,
             <Sparkles className="w-6 h-6 text-blue-400 animate-pulse" />";
           </div>
 
-          <h2 className="text-6xl md: text-7xl font-extrabold mb-6 bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent animate-fade-in">";,
+          <h2 className="text-6xl md: text-7xl font-extrabold mb-6 bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent animate-fade-in">";
             Revolutionary AI Breakthroughs
           </h2>
           
@@ -151,25 +151,25 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {,
           </p>
 
           {/* Key Stats */}
-          <div className="grid md: grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">",
+          <div className="grid md: grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">"
             {[
               { value: '10x', label: 'Performance Gains', icon: '⚡' }
               { value: '$300M+', label: 'ROI Achieved', icon: '💰' }
               { value: '95%', label: 'Automation Rate', icon: '🤖' }
               { value: '99.9%', label: 'Efficiency Gains', icon: '🎯' }
             ].map((stat, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover: border-purple-500/50 transition-all duration-300">",
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover: border-purple-500/50 transition-all duration-300">"
                 <div className="text-4xl mb-3">{stat.icon}</div>
                 <div className="text-3xl font-extrabold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-2">
 =======
-          <div className="grid md: grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">";,
+          <div className="grid md: grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">";
             {[
               { value: '10x', label: 'Performance Gains', icon: '⚡' },';
               { value: '$300M+', label: 'ROI Achieved', icon: '💰' },';
               { value: '95%', label: 'Automation Rate', icon: '🤖' },';
               { value: '99.9%', label: 'Efficiency Gains', icon: '🎯' }';
             ].map((stat, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover: border-purple-500/50 transition-all duration-300">";,
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover: border-purple-500/50 transition-all duration-300">";
                 <div className="text-4xl mb-3">{stat.icon}</div>";
                 <div className="text-3xl font-extrabold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-2">";
                   {stat.value}
@@ -183,27 +183,26 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {,
         </div>
 
         {/* Featured Content Grid */}
-        <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8 mb-16 max-w-[1600px] mx-auto">",
+        <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8 mb-16 max-w-[1600px] mx-auto">"
 =======
-        <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8 mb-16 max-w-[1600px] mx-auto">";,
+        <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8 mb-16 max-w-[1600px] mx-auto">";
           {breakthroughContent.map((content, index) => (
             <div 
               key={content.id}
-              className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover: border-purple-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20",
+              className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover: border-purple-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20"
               style={{ animationDelay: `${index * 150}ms` }}`;
             >
               {/* Card glow effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 via-blue-500/0 to-cyan-500/0 group-hover: from-purple-500/10 group-hover:via-blue-500/10 group-hover:to-cyan-500/10 transition-all duration-500"></div>",
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 via-blue-500/0 to-cyan-500/0 group-hover: from-purple-500/10 group-hover:via-blue-500/10 group-hover:to-cyan-500/10 transition-all duration-500"></div>"
 =======
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 via-blue-500/0 to-cyan-500/0 group-hover: from-purple-500/10 group-hover:via-blue-500/10 group-hover:to-cyan-500/10 transition-all duration-500"></div>";,
-              
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 via-blue-500/0 to-cyan-500/0 group-hover: from-purple-500/10 group-hover:via-blue-500/10 group-hover:to-cyan-500/10 transition-all duration-500"></div>";
               <div className="relative p-8">";
                 {/* Icon & Badges */}
                 <div className="flex items-start justify-between mb-6">
-                  <div className="text-6xl group-hover: scale-110 transition-transform duration-300">",
+                  <div className="text-6xl group-hover: scale-110 transition-transform duration-300">"
 =======
                 <div className="flex items-start justify-between mb-6">";
-                  <div className="text-6xl group-hover: scale-110 transition-transform duration-300">";,
+                  <div className="text-6xl group-hover: scale-110 transition-transform duration-300">";
                     {content.icon}
                   </div>
                   <div className="flex flex-col gap-2">";
@@ -230,9 +229,9 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {,
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl font-bold text-white mb-4 group-hover: text-purple-400 transition-colors duration-300 leading-tight">",
+                <h3 className="text-xl font-bold text-white mb-4 group-hover: text-purple-400 transition-colors duration-300 leading-tight">"
 =======
-                <h3 className="text-xl font-bold text-white mb-4 group-hover: text-purple-400 transition-colors duration-300 leading-tight">";,
+                <h3 className="text-xl font-bold text-white mb-4 group-hover: text-purple-400 transition-colors duration-300 leading-tight">";
                   {content.title}
                 </h3>
 
@@ -274,12 +273,12 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {,
                 {/* CTA Button */}
                 <Link
                   to={`/${content.slug.includes('case-studies') ? 'case-studies' : 'blog'}/${content.slug}`}`;
-                  className="group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r from-purple-500 to-blue-600 hover: from-purple-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1",
+                  className="group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r from-purple-500 to-blue-600 hover: from-purple-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
                 >
                   <span>Read Full Article</span>
-                  <ArrowRight className="w-4 h-4 group-hover/btn: translate-x-1 transition-transform duration-300/>",
+                  <ArrowRight className="w-4 h-4 group-hover/btn: translate-x-1 transition-transform duration-300/>"
 =======
-                  <ArrowRight className="w-4 h-4 group-hover/btn: translate-x-1 transition-transform duration-300" />";,
+                  <ArrowRight className="w-4 h-4 group-hover/btn: translate-x-1 transition-transform duration-300" />";
                 </Link>
               </div>
             </div>
@@ -297,12 +296,12 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {,
                 Join Fortune 500 companies achieving 10x performance gains and $300M+ ROI 
                 with our revolutionary AI technologies. Schedule your transformation consultation today.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">"
 =======
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">";
                 <a title="Internal link"
                   href="/contact"
-                  className="bg-gradient-to-r from-purple-500 to-blue-600 hover: from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 flex items-center justify-center gap-2",
+                  className="bg-gradient-to-r from-purple-500 to-blue-600 hover: from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 flex items-center justify-center gap-2"
                 >
                   <Sparkles className="w-5 h-5/>
 =======
@@ -310,8 +309,8 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {,
                   <span>Start Your AI Transformation</span>
                 </a>
                 <a title="Internal link"
-                  href="tel: +13024640950",
-                  className="border-2 border-purple-500 text-purple-400 hover: bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2",
+                  href="tel: +13024640950"
+                  className="border-2 border-purple-500 text-purple-400 hover: bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
                 >
                   <span>Call +1 302 464 0950</span>
                   <ArrowRight className="w-5 h-5/>
@@ -324,14 +323,14 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {,
         </div>
 
         {/* Success Indicators */}
-        <div className="grid md: grid-cols-4 gap-8 mt-20">",
+        <div className="grid md: grid-cols-4 gap-8 mt-20">"
           {[
             { value: '500+', label: 'Enterprise Clients Transformed' }
             { value: '$2B+', label: 'Total ROI Generated' }
             { value: '99.9%', label: 'Success Rate' }
             { value: '24/7', label: 'Expert Support' }
 =======
-        <div className="grid md: grid-cols-4 gap-8 mt-20">";,
+        <div className="grid md: grid-cols-4 gap-8 mt-20">";
           {[
             { value: '500+', label: 'Enterprise Clients Transformed' },';
             { value: '$2B+', label: 'Total ROI Generated' },';

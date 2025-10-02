@@ -2,11 +2,9 @@ import React from 'react';
 import { Globe, as, GlobeAltIcon } from 'lucide-react';
 =======
 import React from 'react';';
-import {
-Globe as GlobeAltIcon
-} from 'lucide-react';';
+import { Globe, as, GlobeAltIcon } from 'lucide-react';';
 
-const October2025SupplyChainRevolutionBanner: React.FC = () => {,
+const October2025SupplyChainRevolutionBanner: React.FC = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-emerald-900 via-teal-800 to-cyan-900 py-16 px-6 rounded-3xl shadow-2xl my-12 border-4 border-emerald-400/50">";
       {/* Animated Background Elements */}
@@ -34,31 +32,31 @@ const October2025SupplyChainRevolutionBanner: React.FC = () => {,
         </div>
 
         {/* Main Headline */}
-        <h2 className="text-5xl md: text-6xl font-extrabold text-center mb-6 text-white leading-tight">",
+        <h2 className="text-5xl md: text-6xl font-extrabold text-center mb-6 text-white leading-tight">"
           <span className="bg-gradient-to-r from-emerald-300 via-teal-200 to-cyan-300 bg-clip-text text-transparent animate-gradient">
 =======
-        <h2 className="text-5xl md: text-6xl font-extrabold text-center mb-6 text-white leading-tight">";,
+        <h2 className="text-5xl md: text-6xl font-extrabold text-center mb-6 text-white leading-tight">";
           <span className="bg-gradient-to-r from-emerald-300 via-teal-200 to-cyan-300 bg-clip-text text-transparent animate-gradient">";
             Autonomous Supply Chain Revolution
           </span>
         </h2>
 
-        <p className="text-2xl md: text-3xl text-center text-emerald-100 mb-8 font-semibold max-w-5xl mx-auto">",
+        <p className="text-2xl md: text-3xl text-center text-emerald-100 mb-8 font-semibold max-w-5xl mx-auto">"
 =======
-        <p className="text-2xl md: text-3xl text-center text-emerald-100 mb-8 font-semibold max-w-5xl mx-auto">";,
+        <p className="text-2xl md: text-3xl text-center text-emerald-100 mb-8 font-semibold max-w-5xl mx-auto">";
           Fortune 100 Retail Giant Achieves <span className="text-yellow-300">$4.2B Value Creation</span> with ";
           AI-Powered Supply Chain Intelligence
         </p>
 
         {/* Key Metrics Grid */}
-        <div className="grid grid-cols-2 md: grid-cols-4 gap-4 mb-10 max-w-6xl mx-auto">",
-          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border-2 border-emerald-400/30 hover: border-emerald-400/60 transition-all duration-300 hover:scale-105 hover:shadow-xl">",
+        <div className="grid grid-cols-2 md: grid-cols-4 gap-4 mb-10 max-w-6xl mx-auto">"
+          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border-2 border-emerald-400/30 hover: border-emerald-400/60 transition-all duration-300 hover:scale-105 hover:shadow-xl">"
             <div className="flex items-center gap-3 mb-2">
               <CurrencyDollarIcon className="w-8 h-8 text-yellow-300/>
               <div className="text-4xl font-extrabold text-yellow-300">$4.2B</div>
 =======
-        <div className="grid grid-cols-2 md: grid-cols-4 gap-4 mb-10 max-w-6xl mx-auto">";,
-          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border-2 border-emerald-400/30 hover: border-emerald-400/60 transition-all duration-300 hover:scale-105 hover:shadow-xl">";,
+        <div className="grid grid-cols-2 md: grid-cols-4 gap-4 mb-10 max-w-6xl mx-auto">";
+          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border-2 border-emerald-400/30 hover: border-emerald-400/60 transition-all duration-300 hover:scale-105 hover:shadow-xl">";
             <div className="flex items-center gap-3 mb-2">";
               <CurrencyDollarIcon className="w-8 h-8 text-yellow-300" />";
               <div className="text-4xl font-extrabold text-yellow-300">$4.2B</div>";
@@ -66,12 +64,12 @@ const October2025SupplyChainRevolutionBanner: React.FC = () => {,
             <div className="text-emerald-100 text-sm font-medium">Annual Value Creation</div>";
           </div>
 
-          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border-2 border-teal-400/30 hover: border-teal-400/60 transition-all duration-300 hover:scale-105 hover:shadow-xl">",
+          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border-2 border-teal-400/30 hover: border-teal-400/60 transition-all duration-300 hover:scale-105 hover:shadow-xl">"
             <div className="flex items-center gap-3 mb-2">
               <ChartBarIcon className="w-8 h-8 text-green-300/>
               <div className="text-4xl font-extrabold text-green-300">2,847%</div>
 =======
-          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border-2 border-teal-400/30 hover: border-teal-400/60 transition-all duration-300 hover:scale-105 hover:shadow-xl">";,
+          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border-2 border-teal-400/30 hover: border-teal-400/60 transition-all duration-300 hover:scale-105 hover:shadow-xl">";
             <div className="flex items-center gap-3 mb-2">";
               <ChartBarIcon className="w-8 h-8 text-green-300" />";
               <div className="text-4xl font-extrabold text-green-300">2,847%</div>";
@@ -79,12 +77,12 @@ const October2025SupplyChainRevolutionBanner: React.FC = () => {,
             <div className="text-teal-100 text-sm font-medium">ROI in 18 Months</div>";
           </div>
 
-          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border-2 border-cyan-400/30 hover: border-cyan-400/60 transition-all duration-300 hover:scale-105 hover:shadow-xl">",
+          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border-2 border-cyan-400/30 hover: border-cyan-400/60 transition-all duration-300 hover:scale-105 hover:shadow-xl">"
             <div className="flex items-center gap-3 mb-2">
               <CheckCircleIcon className="w-8 h-8 text-cyan-300/>
               <div className="text-4xl font-extrabold text-cyan-300">98.7%</div>
 =======
-          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border-2 border-cyan-400/30 hover: border-cyan-400/60 transition-all duration-300 hover:scale-105 hover:shadow-xl">";,
+          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border-2 border-cyan-400/30 hover: border-cyan-400/60 transition-all duration-300 hover:scale-105 hover:shadow-xl">";
             <div className="flex items-center gap-3 mb-2">";
               <CheckCircleIcon className="w-8 h-8 text-cyan-300" />";
               <div className="text-4xl font-extrabold text-cyan-300">98.7%</div>";
@@ -92,12 +90,12 @@ const October2025SupplyChainRevolutionBanner: React.FC = () => {,
             <div className="text-cyan-100 text-sm font-medium">On-Time Delivery Rate</div>";
           </div>
 
-          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border-2 border-emerald-400/30 hover: border-emerald-400/60 transition-all duration-300 hover:scale-105 hover:shadow-xl">",
+          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border-2 border-emerald-400/30 hover: border-emerald-400/60 transition-all duration-300 hover:scale-105 hover:shadow-xl">"
             <div className="flex items-center gap-3 mb-2">
               <TruckIcon className="w-8 h-8 text-emerald-300/>
               <div className="text-4xl font-extrabold text-emerald-300">87%</div>
 =======
-          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border-2 border-emerald-400/30 hover: border-emerald-400/60 transition-all duration-300 hover:scale-105 hover:shadow-xl">";,
+          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border-2 border-emerald-400/30 hover: border-emerald-400/60 transition-all duration-300 hover:scale-105 hover:shadow-xl">";
             <div className="flex items-center gap-3 mb-2">";
               <TruckIcon className="w-8 h-8 text-emerald-300" />";
               <div className="text-4xl font-extrabold text-emerald-300">87%</div>";
@@ -114,8 +112,8 @@ const October2025SupplyChainRevolutionBanner: React.FC = () => {,
             <SparklesIcon className="w-8 h-8 text-yellow-300 animate-pulse/>
           </h3>
           
-          <div className="grid md: grid-cols-3 gap-6">",
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/20 hover: border-emerald-400/50 transition-all">",
+          <div className="grid md: grid-cols-3 gap-6">"
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/20 hover: border-emerald-400/50 transition-all">"
               <div className="flex items-center gap-3 mb-3">
                 <ChartBarIcon className="w-6 h-6 text-emerald-400/>
                 <h4 className="text-xl font-bold text-white">Predictive Intelligence</h4>
@@ -139,8 +137,8 @@ const October2025SupplyChainRevolutionBanner: React.FC = () => {,
             <SparklesIcon className="w-8 h-8 text-yellow-300 animate-pulse" />";
           </h3>
           
-          <div className="grid md: grid-cols-3 gap-6">";,
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/20 hover: border-emerald-400/50 transition-all">";,
+          <div className="grid md: grid-cols-3 gap-6">";
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/20 hover: border-emerald-400/50 transition-all">";
               <div className="flex items-center gap-3 mb-3">";
                 <ChartBarIcon className="w-6 h-6 text-emerald-400" />";
                 <h4 className="text-xl font-bold text-white">Predictive Intelligence</h4>";
@@ -161,7 +159,7 @@ const October2025SupplyChainRevolutionBanner: React.FC = () => {,
               </ul>
             </div>
 
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/20 hover: border-cyan-400/50 transition-all">",
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/20 hover: border-cyan-400/50 transition-all">"
               <div className="flex items-center gap-3 mb-3">
                 <ClockIcon className="w-6 h-6 text-cyan-400/>
                 <h4 className="text-xl font-bold text-white">Autonomous Operations</h4>
@@ -178,7 +176,7 @@ const October2025SupplyChainRevolutionBanner: React.FC = () => {,
                 <li className="flex items-start gap-2">
                   <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5/>
 =======
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/20 hover: border-cyan-400/50 transition-all">";,
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/20 hover: border-cyan-400/50 transition-all">";
               <div className="flex items-center gap-3 mb-3">";
                 <ClockIcon className="w-6 h-6 text-cyan-400" />";
                 <h4 className="text-xl font-bold text-white">Autonomous Operations</h4>";
@@ -199,7 +197,7 @@ const October2025SupplyChainRevolutionBanner: React.FC = () => {,
               </ul>
             </div>
 
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-teal-400/20 hover: border-teal-400/50 transition-all">",
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-teal-400/20 hover: border-teal-400/50 transition-all">"
               <div className="flex items-center gap-3 mb-3">
                 <GlobeAltIcon className="w-6 h-6 text-teal-400/>
                 <h4 className="text-xl font-bold text-white">Complete Visibility</h4>
@@ -216,7 +214,7 @@ const October2025SupplyChainRevolutionBanner: React.FC = () => {,
                 <li className="flex items-start gap-2">
                   <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5/>
 =======
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-teal-400/20 hover: border-teal-400/50 transition-all">";,
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-teal-400/20 hover: border-teal-400/50 transition-all">";
               <div className="flex items-center gap-3 mb-3">";
                 <GlobeAltIcon className="w-6 h-6 text-teal-400" />";
                 <h4 className="text-xl font-bold text-white">Complete Visibility</h4>";
@@ -256,9 +254,9 @@ const October2025SupplyChainRevolutionBanner: React.FC = () => {,
             </div>
           </div>
 
-          <div className="grid md: grid-cols-2 gap-6 mb-6">",
+          <div className="grid md: grid-cols-2 gap-6 mb-6">"
 =======
-          <div className="grid md: grid-cols-2 gap-6 mb-6">";,
+          <div className="grid md: grid-cols-2 gap-6 mb-6">";
             <div>
               <h4 className="text-xl font-bold text-yellow-200 mb-3">The Challenge</h4>";
               <ul className="space-y-2 text-yellow-100">";
@@ -328,7 +326,7 @@ const October2025SupplyChainRevolutionBanner: React.FC = () => {,
               </div>
               <Link 
                 to="/case-studies/ai-2025-oct-fortune-100-retail-supply-chain-transformation-4-2b"
-                className="inline-flex items-center gap-2 bg-yellow-500 hover: bg-yellow-400 text-yellow-950 px-6 py-3 rounded-lg font-bold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105",
+                className="inline-flex items-center gap-2 bg-yellow-500 hover: bg-yellow-400 text-yellow-950 px-6 py-3 rounded-lg font-bold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
               >
                 Read Full Case Study
                 <ArrowRightIcon className="w-5 h-5/>
@@ -342,7 +340,7 @@ const October2025SupplyChainRevolutionBanner: React.FC = () => {,
         {/* Industry Applications */}
         <div className="mb-10">
           <h3 className="text-3xl font-bold text-white mb-6 text-center">Proven Across Industries</h3>
-          <div className="grid grid-cols-2 md: grid-cols-5 gap-4">",
+          <div className="grid grid-cols-2 md: grid-cols-5 gap-4">"
             {[
               { industry: 'Retail', value: '$4.2B', roi: '2,847%' }
               { industry: 'Manufacturing', value: '$2.7B', roi: '2,100%' }
@@ -350,14 +348,14 @@ const October2025SupplyChainRevolutionBanner: React.FC = () => {,
               { industry: 'Automotive', value: '$1.4B', roi: '2,400%' }
               { industry: 'Food & Beverage', value: '$670M', roi: '1,600%' }
             ].map((item, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-emerald-400/20 hover: border-emerald-400/50 transition-all hover:scale-105">",
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-emerald-400/20 hover: border-emerald-400/50 transition-all hover:scale-105">"
                 <div className="text-emerald-300 font-bold text-lg mb-1">{item.industry}</div>
                 <div className="text-white font-extrabold text-xl mb-1">{item.value}</div>
                 <div className="text-emerald-200 text-sm">ROI: {item.roi}</div>
 =======
         <div className="mb-10">";
           <h3 className="text-3xl font-bold text-white mb-6 text-center">Proven Across Industries</h3>";
-          <div className="grid grid-cols-2 md: grid-cols-5 gap-4">";,
+          <div className="grid grid-cols-2 md: grid-cols-5 gap-4">";
             {[
               { industry: 'Retail', value: '$4.2B', roi: '2,847%' },';
               { industry: 'Manufacturing', value: '$2.7B', roi: '2,100%' },';
@@ -365,7 +363,7 @@ const October2025SupplyChainRevolutionBanner: React.FC = () => {,
               { industry: 'Automotive', value: '$1.4B', roi: '2,400%' },';
               { industry: 'Food & Beverage', value: '$670M', roi: '1,600%' }';
             ].map((item, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-emerald-400/20 hover: border-emerald-400/50 transition-all hover:scale-105">";,
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-emerald-400/20 hover: border-emerald-400/50 transition-all hover:scale-105">";
                 <div className="text-emerald-300 font-bold text-lg mb-1">{item.industry}</div>";
                 <div className="text-white font-extrabold text-xl mb-1">{item.value}</div>";
                 <div className="text-emerald-200 text-sm">ROI: {item.roi}</div>";
@@ -375,12 +373,12 @@ const October2025SupplyChainRevolutionBanner: React.FC = () => {,
         </div>
 
         {/* Call to Action Buttons */}
-        <div className="flex flex-col md: flex-row gap-4 justify-center items-center mb-8">",
+        <div className="flex flex-col md: flex-row gap-4 justify-center items-center mb-8">"
 =======
-        <div className="flex flex-col md: flex-row gap-4 justify-center items-center mb-8">";,
+        <div className="flex flex-col md: flex-row gap-4 justify-center items-center mb-8">";
           <Link
             to="/content/blog/ai-2025-oct-autonomous-supply-chain-intelligence-revolution"
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-teal-500 hover: from-emerald-600 hover:to-teal-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105",
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-teal-500 hover: from-emerald-600 hover:to-teal-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105"
           >
             <SparklesIcon className="w-6 h-6/>
             Read the Revolutionary Guide
@@ -393,7 +391,7 @@ const October2025SupplyChainRevolutionBanner: React.FC = () => {,
 
           <Link
             to="/case-studies/ai-2025-oct-fortune-100-retail-supply-chain-transformation-4-2b"
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-500 to-orange-500 hover: from-yellow-600 hover:to-orange-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105",
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-500 to-orange-500 hover: from-yellow-600 hover:to-orange-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105"
           >
             <TruckIcon className="w-6 h-6/>
             View $4.2B Case Study
@@ -406,7 +404,7 @@ const October2025SupplyChainRevolutionBanner: React.FC = () => {,
 
           <Link
             to="/content/services/autonomous-supply-chain-intelligence-platform"
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover: from-cyan-600 hover:to-blue-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105",
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover: from-cyan-600 hover:to-blue-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105"
           >
             <ChartBarIcon className="w-6 h-6/>
             Explore Platform & Services
@@ -428,16 +426,16 @@ const October2025SupplyChainRevolutionBanner: React.FC = () => {,
               Identify your <strong className="text-yellow-300">$100M+ opportunity</strong> and get a detailed ROI projection. ";
               See how you can achieve similar results with autonomous supply chain intelligence.
             </p>
-            <div className="flex flex-col md: flex-row gap-4 justify-center items-center">",
+            <div className="flex flex-col md: flex-row gap-4 justify-center items-center">"
 =======
             <p className="text-xl text-green-100 mb-6 max-w-3xl mx-auto">";
               Identify your <strong className="text-yellow-300">$100M+ opportunity</strong> and get a detailed ROI projection. ";
               See how you can achieve similar results with autonomous supply chain intelligence.
             </p>
-            <div className="flex flex-col md: flex-row gap-4 justify-center items-center">";,
+            <div className="flex flex-col md: flex-row gap-4 justify-center items-center">";
               <Link
                 to="/contact?service=supply-chain-assessment"
-                className="inline-flex items-center gap-2 bg-white text-emerald-900 px-10 py-5 rounded-xl font-bold text-xl transition-all duration-300 shadow-lg hover: shadow-2xl hover:scale-105 hover:bg-emerald-50",
+                className="inline-flex items-center gap-2 bg-white text-emerald-900 px-10 py-5 rounded-xl font-bold text-xl transition-all duration-300 shadow-lg hover: shadow-2xl hover:scale-105 hover:bg-emerald-50"
               >
                 Schedule Free Assessment
                 <ArrowRightIcon className="w-6 h-6/>

@@ -9,7 +9,7 @@ export default function October2025LatestAIBreakthroughsBanner(): void {
             <span>🚀 JUST PUBLISHED — OCTOBER 1, 2025</span>
             <Zap className="h-4 w-4/>
           </div>
-          <h2 className="text-4xl md: text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 via-pink-400 to-rose-400 text-transparent bg-clip-text">",
+          <h2 className="text-4xl md: text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 via-pink-400 to-rose-400 text-transparent bg-clip-text">"
             3 Revolutionary AI Breakthroughs Transforming Enterprise Operations
           </h2>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
@@ -23,7 +23,7 @@ export default function October2025LatestAIBreakthroughsBanner(): void {
             <span>🚀 JUST PUBLISHED — OCTOBER 1, 2025</span>
             <Zap className="h-4 w-4" />";
           </div>
-          <h2 className="text-4xl md: text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 via-pink-400 to-rose-400 text-transparent bg-clip-text">";,
+          <h2 className="text-4xl md: text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 via-pink-400 to-rose-400 text-transparent bg-clip-text">";
             3 Revolutionary AI Breakthroughs Transforming Enterprise Operations
           </h2>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">";
@@ -33,12 +33,12 @@ export default function October2025LatestAIBreakthroughsBanner(): void {
           </p>
         </div>
 
-        <div className="grid md: grid-cols-3 gap-6 mb-8">",
+        <div className="grid md: grid-cols-3 gap-6 mb-8">"
 =======
-        <div className="grid md: grid-cols-3 gap-6 mb-8">";,
+        <div className="grid md: grid-cols-3 gap-6 mb-8">";
           <Link
             to="/blog/ai-2025-oct-autonomous-infrastructure-healing"
-            className="group bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-xl p-6 border border-purple-500/30 hover: border-purple-400/50 transition-all hover:scale-105",
+            className="group bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-xl p-6 border border-purple-500/30 hover: border-purple-400/50 transition-all hover:scale-105"
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="p-3 bg-purple-500/20 rounded-lg">
@@ -52,45 +52,45 @@ export default function October2025LatestAIBreakthroughsBanner(): void {
                 Infrastructure AI
               </span>
             </div>
-            <h3 className="text-xl font-bold mb-3 text-white group-hover: text-purple-300 transition-colors">",
+            <h3 className="text-xl font-bold mb-3 text-white group-hover: text-purple-300 transition-colors">"
               Autonomous Infrastructure Self-Healing Revolution
             </h3>
             <ul className="space-y-2 text-sm text-gray-300 mb-4">
               <li className="flex items-start gap-2">
                 <Zap className="h-4 w-4 text-yellow-400 mt-0.5 flex-shrink-0/>
-                <span><strong>99.97% Uptime: </strong> AI auto-resolves 94% of incidents</span>,
+                <span><strong>99.97% Uptime: </strong> AI auto-resolves 94% of incidents</span>
               </li>
               <li className="flex items-start gap-2">
                 <Zap className="h-4 w-4 text-green-400 mt-0.5 flex-shrink-0/>
-                <span><strong>Sub-Second Response: </strong> 850ms average remediation</span>,
+                <span><strong>Sub-Second Response: </strong> 850ms average remediation</span>
               </li>
               <li className="flex items-start gap-2">
                 <Zap className="h-4 w-4 text-blue-400 mt-0.5 flex-shrink-0/>
-                <span><strong>$67M+ Savings: </strong> 78% operational cost reduction</span>,
+                <span><strong>$67M+ Savings: </strong> 78% operational cost reduction</span>
               </li>
             </ul>
-            <div className="flex items-center text-purple-400 font-semibold group-hover: gap-3 gap-2 transition-all">",
+            <div className="flex items-center text-purple-400 font-semibold group-hover: gap-3 gap-2 transition-all">"
               Read Full Analysis
               <ArrowRight className="h-4 w-4/>
 =======
-            <h3 className="text-xl font-bold mb-3 text-white group-hover: text-purple-300 transition-colors">";,
+            <h3 className="text-xl font-bold mb-3 text-white group-hover: text-purple-300 transition-colors">";
               Autonomous Infrastructure Self-Healing Revolution
             </h3>
             <ul className="space-y-2 text-sm text-gray-300 mb-4">";
               <li className="flex items-start gap-2">";
                 <Zap className="h-4 w-4 text-yellow-400 mt-0.5 flex-shrink-0" />";
-                <span><strong>99.97% Uptime: </strong> AI auto-resolves 94% of incidents</span>,
+                <span><strong>99.97% Uptime: </strong> AI auto-resolves 94% of incidents</span>
               </li>
               <li className="flex items-start gap-2">";
                 <Zap className="h-4 w-4 text-green-400 mt-0.5 flex-shrink-0" />";
-                <span><strong>Sub-Second Response: </strong> 850ms average remediation</span>,
+                <span><strong>Sub-Second Response: </strong> 850ms average remediation</span>
               </li>
               <li className="flex items-start gap-2">";
                 <Zap className="h-4 w-4 text-blue-400 mt-0.5 flex-shrink-0" />";
-                <span><strong>$67M+ Savings: </strong> 78% operational cost reduction</span>,
+                <span><strong>$67M+ Savings: </strong> 78% operational cost reduction</span>
               </li>
             </ul>
-            <div className="flex items-center text-purple-400 font-semibold group-hover: gap-3 gap-2 transition-all">";,
+            <div className="flex items-center text-purple-400 font-semibold group-hover: gap-3 gap-2 transition-all">";
               Read Full Analysis
               <ArrowRight className="h-4 w-4" />";
             </div>
@@ -98,7 +98,7 @@ export default function October2025LatestAIBreakthroughsBanner(): void {
 
           <Link
             to="/blog/ai-2025-oct-cognitive-search-enterprise"
-            className="group bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-xl p-6 border border-indigo-500/30 hover: border-indigo-400/50 transition-all hover:scale-105",
+            className="group bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-xl p-6 border border-indigo-500/30 hover: border-indigo-400/50 transition-all hover:scale-105"
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="p-3 bg-indigo-500/20 rounded-lg">
@@ -112,45 +112,45 @@ export default function October2025LatestAIBreakthroughsBanner(): void {
                 Cognitive AI
               </span>
             </div>
-            <h3 className="text-xl font-bold mb-3 text-white group-hover: text-indigo-300 transition-colors">",
+            <h3 className="text-xl font-bold mb-3 text-white group-hover: text-indigo-300 transition-colors">"
               Cognitive Enterprise Search at Scale
             </h3>
             <ul className="space-y-2 text-sm text-gray-300 mb-4">
               <li className="flex items-start gap-2">
                 <Zap className="h-4 w-4 text-purple-400 mt-0.5 flex-shrink-0/>
-                <span><strong>97% Accuracy: </strong> AI delivers precise answers, not just docs</span>,
+                <span><strong>97% Accuracy: </strong> AI delivers precise answers, not just docs</span>
               </li>
               <li className="flex items-start gap-2">
                 <Zap className="h-4 w-4 text-yellow-400 mt-0.5 flex-shrink-0/>
-                <span><strong>12x Faster: </strong> Find critical info in seconds</span>,
+                <span><strong>12x Faster: </strong> Find critical info in seconds</span>
               </li>
               <li className="flex items-start gap-2">
                 <Zap className="h-4 w-4 text-green-400 mt-0.5 flex-shrink-0/>
-                <span><strong>$124M+ Value: </strong> Unlock productivity at scale</span>,
+                <span><strong>$124M+ Value: </strong> Unlock productivity at scale</span>
               </li>
             </ul>
-            <div className="flex items-center text-indigo-400 font-semibold group-hover: gap-3 gap-2 transition-all">",
+            <div className="flex items-center text-indigo-400 font-semibold group-hover: gap-3 gap-2 transition-all">"
               Read Full Analysis
               <ArrowRight className="h-4 w-4/>
 =======
-            <h3 className="text-xl font-bold mb-3 text-white group-hover: text-indigo-300 transition-colors">";,
+            <h3 className="text-xl font-bold mb-3 text-white group-hover: text-indigo-300 transition-colors">";
               Cognitive Enterprise Search at Scale
             </h3>
             <ul className="space-y-2 text-sm text-gray-300 mb-4">";
               <li className="flex items-start gap-2">";
                 <Zap className="h-4 w-4 text-purple-400 mt-0.5 flex-shrink-0" />";
-                <span><strong>97% Accuracy: </strong> AI delivers precise answers, not just docs</span>,
+                <span><strong>97% Accuracy: </strong> AI delivers precise answers, not just docs</span>
               </li>
               <li className="flex items-start gap-2">";
                 <Zap className="h-4 w-4 text-yellow-400 mt-0.5 flex-shrink-0" />";
-                <span><strong>12x Faster: </strong> Find critical info in seconds</span>,
+                <span><strong>12x Faster: </strong> Find critical info in seconds</span>
               </li>
               <li className="flex items-start gap-2">";
                 <Zap className="h-4 w-4 text-green-400 mt-0.5 flex-shrink-0" />";
-                <span><strong>$124M+ Value: </strong> Unlock productivity at scale</span>,
+                <span><strong>$124M+ Value: </strong> Unlock productivity at scale</span>
               </li>
             </ul>
-            <div className="flex items-center text-indigo-400 font-semibold group-hover: gap-3 gap-2 transition-all">";,
+            <div className="flex items-center text-indigo-400 font-semibold group-hover: gap-3 gap-2 transition-all">";
               Read Full Analysis
               <ArrowRight className="h-4 w-4" />";
             </div>
@@ -158,7 +158,7 @@ export default function October2025LatestAIBreakthroughsBanner(): void {
 
           <Link
             to="/blog/ai-2025-oct-realtime-personalization-engine"
-            className="group bg-gradient-to-br from-rose-500/20 to-purple-500/20 rounded-xl p-6 border border-rose-500/30 hover: border-rose-400/50 transition-all hover:scale-105",
+            className="group bg-gradient-to-br from-rose-500/20 to-purple-500/20 rounded-xl p-6 border border-rose-500/30 hover: border-rose-400/50 transition-all hover:scale-105"
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="p-3 bg-rose-500/20 rounded-lg">
@@ -172,45 +172,45 @@ export default function October2025LatestAIBreakthroughsBanner(): void {
                 Personalization AI
               </span>
             </div>
-            <h3 className="text-xl font-bold mb-3 text-white group-hover: text-rose-300 transition-colors">",
+            <h3 className="text-xl font-bold mb-3 text-white group-hover: text-rose-300 transition-colors">"
               Real-Time AI Personalization Engine
             </h3>
             <ul className="space-y-2 text-sm text-gray-300 mb-4">
               <li className="flex items-start gap-2">
                 <Zap className="h-4 w-4 text-rose-400 mt-0.5 flex-shrink-0/>
-                <span><strong>98.4% Relevance: </strong> Near-perfect intent prediction</span>,
+                <span><strong>98.4% Relevance: </strong> Near-perfect intent prediction</span>
               </li>
               <li className="flex items-start gap-2">
                 <Zap className="h-4 w-4 text-blue-400 mt-0.5 flex-shrink-0/>
-                <span><strong>8.7x Conversion: </strong> Dramatic engagement lift</span>,
+                <span><strong>8.7x Conversion: </strong> Dramatic engagement lift</span>
               </li>
               <li className="flex items-start gap-2">
                 <Zap className="h-4 w-4 text-green-400 mt-0.5 flex-shrink-0/>
-                <span><strong>$234M+ Revenue: </strong> Incremental growth unlocked</span>,
+                <span><strong>$234M+ Revenue: </strong> Incremental growth unlocked</span>
               </li>
             </ul>
-            <div className="flex items-center text-rose-400 font-semibold group-hover: gap-3 gap-2 transition-all">",
+            <div className="flex items-center text-rose-400 font-semibold group-hover: gap-3 gap-2 transition-all">"
               Read Full Analysis
               <ArrowRight className="h-4 w-4/>
 =======
-            <h3 className="text-xl font-bold mb-3 text-white group-hover: text-rose-300 transition-colors">";,
+            <h3 className="text-xl font-bold mb-3 text-white group-hover: text-rose-300 transition-colors">";
               Real-Time AI Personalization Engine
             </h3>
             <ul className="space-y-2 text-sm text-gray-300 mb-4">";
               <li className="flex items-start gap-2">";
                 <Zap className="h-4 w-4 text-rose-400 mt-0.5 flex-shrink-0" />";
-                <span><strong>98.4% Relevance: </strong> Near-perfect intent prediction</span>,
+                <span><strong>98.4% Relevance: </strong> Near-perfect intent prediction</span>
               </li>
               <li className="flex items-start gap-2">";
                 <Zap className="h-4 w-4 text-blue-400 mt-0.5 flex-shrink-0" />";
-                <span><strong>8.7x Conversion: </strong> Dramatic engagement lift</span>,
+                <span><strong>8.7x Conversion: </strong> Dramatic engagement lift</span>
               </li>
               <li className="flex items-start gap-2">";
                 <Zap className="h-4 w-4 text-green-400 mt-0.5 flex-shrink-0" />";
-                <span><strong>$234M+ Revenue: </strong> Incremental growth unlocked</span>,
+                <span><strong>$234M+ Revenue: </strong> Incremental growth unlocked</span>
               </li>
             </ul>
-            <div className="flex items-center text-rose-400 font-semibold group-hover: gap-3 gap-2 transition-all">";,
+            <div className="flex items-center text-rose-400 font-semibold group-hover: gap-3 gap-2 transition-all">";
               Read Full Analysis
               <ArrowRight className="h-4 w-4" />";
             </div>
@@ -220,7 +220,7 @@ export default function October2025LatestAIBreakthroughsBanner(): void {
         <div className="text-center">";
           <Link
             to="/blog"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-rose-600 text-white rounded-lg font-bold text-lg hover: from-purple-500 hover:to-rose-500 transition-all hover:scale-105 shadow-lg hover:shadow-xl",
+            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-rose-600 text-white rounded-lg font-bold text-lg hover: from-purple-500 hover:to-rose-500 transition-all hover:scale-105 shadow-lg hover:shadow-xl"
           >
             Explore All Latest AI Innovations
             <ArrowRight className="h-5 w-5/>

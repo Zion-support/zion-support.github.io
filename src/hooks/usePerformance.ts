@@ -4,14 +4,14 @@ import {
 // Simple web vitals reporter
 const reportWebVitals = (metric: { name: string; value: number; delta: number }) => {
   if (process.env.NODE_ENV === 'development') {;
-    console.log('Web Vital: ', metric);',
+    console.log('Web Vital: ', metric);'
 =======
 } from 'react';';
 
 // Simple web vitals reporter
 const reportWebVitals = (metric: { name: string; value: number; delta: number }) => {
   if (process.env.NODE_ENV === 'development') {';
-    console.log('Web Vital: ', metric);';,
+    console.log('Web Vital: ', metric);';
   };
   // In production, you might want to send this to an analytics service
 };
@@ -53,7 +53,7 @@ export const useIntersectionObserver = (
       }
 =======
         };
-      },
+      }
       options
     );
 
@@ -68,7 +68,7 @@ export const useIntersectionObserver = (
 };
 
 // Hook for measuring component render time
-export const useRenderTime = (componentName: string) => {,
+export const useRenderTime = (componentName: string) => {
   const renderStart = useRef<number>(0);
 
   useEffect(() => {
@@ -86,7 +86,7 @@ export const useRenderTime = (componentName: string) => {,
 };
 
 // Hook for lazy loading with performance tracking
-export const useLazyLoad = (threshold: number = 0.1) => {,
+export const useLazyLoad = (threshold: number = 0.1) => {
   const [shouldLoad, setShouldLoad] = useState(false);
   const [ref, isIntersecting] = useIntersectionObserver({
     threshold

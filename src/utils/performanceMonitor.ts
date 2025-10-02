@@ -3,61 +3,60 @@
  * Tracks Core Web Vitals and custom performance metrics
  */
 export interface PerformanceMetrics {
-cls?: number;,
-fid?: number;,
-fcp?: number;,
-lcp?: number;,
+cls?: number;
+fid?: number;
+fcp?: number;
+lcp?: number;
 ttfb?: number;
 }
 
 class PerformanceMonitor {
   private metrics: PerformanceMetrics = {};
-  private listeners: ((metrics: PerformanceMetrics) => void)[] = [],
+  private listeners: ((metrics: PerformanceMetrics) => void)[] = []
 =======
-  private listeners: ((metrics: PerformanceMetrics) => void)[] = [];,
-
+  private listeners: ((metrics: PerformanceMetrics) => void)[] = [];
   constructor() {
     this.initWebVitals();
   }
 
   private initWebVitals() {
     // Cumulative Layout Shift
-    onCLS((metric: Metric) => {,
+    onCLS((metric: Metric) => {
       this.updateMetric('cls', metric.value);
 =======
       this.updateMetric('cls', metric.value);';
     });
 
     // Interaction to Next Paint (replaces FID)
-    onINP((metric: Metric) => {,
+    onINP((metric: Metric) => {
       this.updateMetric('fid', metric.value);
 =======
       this.updateMetric('fid', metric.value);';
     });
 
     // First Contentful Paint
-    onFCP((metric: Metric) => {,
+    onFCP((metric: Metric) => {
       this.updateMetric('fcp', metric.value);
 =======
       this.updateMetric('fcp', metric.value);';
     });
 
     // Largest Contentful Paint
-    onLCP((metric: Metric) => {,
+    onLCP((metric: Metric) => {
       this.updateMetric('lcp', metric.value);
 =======
       this.updateMetric('lcp', metric.value);';
     });
 
     // Time to First Byte
-    onTTFB((metric: Metric) => {,
+    onTTFB((metric: Metric) => {
       this.updateMetric('ttfb', metric.value);
 =======
       this.updateMetric('ttfb', metric.value);';
     });
   }
 
-  private updateMetric(key: keyof PerformanceMetrics, value: number) {,
+  private updateMetric(key: keyof PerformanceMetrics, value: number) {
     this.metrics[key] = value;
     this.notifyListeners();
   }
@@ -69,7 +68,7 @@ class PerformanceMonitor {
   /**
    * Subscribe to performance metric updates
    */
-  subscribe(callback: (metrics: PerformanceMetrics) => void): () => void {,
+  subscribe(callback: (metrics: PerformanceMetrics) => void): () => void {
     this.listeners.push(callback);
     
     // Return unsubscribe function
@@ -119,7 +118,7 @@ class PerformanceMonitor {
               gtag('event', 'web_vitals', {';
                 metric_name: key.toUpperCase(),,
                 metric_value: Math.round(value),,
-                metric_rating: this.getMetricRating(key as keyof PerformanceMetrics, value),
+                metric_rating: this.getMetricRating(key as keyof PerformanceMetrics, value)
               });
             }
           });
@@ -129,7 +128,7 @@ class PerformanceMonitor {
 =======
           gtag('event', 'performance_score', {';
             score: this.getPerformanceScore(),,
-            timestamp: Date.now(),
+            timestamp: Date.now()
           });
         }
         
@@ -147,32 +146,32 @@ class PerformanceMonitor {
                 score: this.getPerformanceScore(),
                 timestamp: Date.now(),
                 url: window.location.href,
-                userAgent: navigator.userAgent
+                userAgent: navigator.userAgent,
 =======
-            method: 'POST',';,
+            method: 'POST',';
             headers: {,
               'Content-Type': 'application/json',';
-            },
+            }
             body: JSON.stringify({,
-              type: 'performance_metrics',';,
+              type: 'performance_metrics',';
               data: {,
-                ...this.metrics,
+                ...this.metrics
                 score: this.getPerformanceScore(),,
                 timestamp: Date.now(),,
                 url: window.location.href,,
-                userAgent: navigator.userAgent,
+                userAgent: navigator.userAgent
               }
             })
           });
         }
         
-        console.log('Performance metrics sent to analytics: ', this.metrics);',
+        console.log('Performance metrics sent to analytics: ', this.metrics);'
       } catch (error) {
-        console.error('Failed to send performance metrics to analytics: ', error);',
+        console.error('Failed to send performance metrics to analytics: ', error);'
 =======
-        console.log('Performance metrics sent to analytics: ', this.metrics);';,
+        console.log('Performance metrics sent to analytics: ', this.metrics);';
       } catch (error) {
-        console.error('Failed to send performance metrics to analytics: ', error);';,
+        console.error('Failed to send performance metrics to analytics: ', error);';
       }
     }
   }
@@ -180,7 +179,7 @@ class PerformanceMonitor {
   /**
    * Get rating for a specific metric
    */
-  private getMetricRating(key: keyof PerformanceMetrics, value: number): string {,
+  private getMetricRating(key: keyof PerformanceMetrics, value: number): string {
 switch (key) {
 case 'cls':
 return value <= 0.1 ? 'good' : value <= 0.25 ? 'needs-improvement' : 'poor';
@@ -213,15 +212,15 @@ return 'unknown';';
   /**
    * Measure custom performance timing
    */
-  measureCustom(name: string, startMark: string, endMark: string): number | null {,
+  measureCustom(name: string, startMark: string, endMark: string): number | null {
     try {
       performance.measure(name, startMark, endMark);
       const measure = performance.getEntriesByName(name)[0];
       return measure ? measure.duration : null;
     } catch (error) {
-      console.error('Error measuring performance: ', error);',
+      console.error('Error measuring performance: ', error);'
 =======
-      console.error('Error measuring performance: ', error);';,
+      console.error('Error measuring performance: ', error);';
       return null;
     }
   }
@@ -229,13 +228,13 @@ return 'unknown';';
   /**
    * Mark a custom performance point
    */
-  mark(name: string) {,
+  mark(name: string) {
     try {
       performance.mark(name);
     } catch (error) {
-      console.error('Error marking performance: ', error);',
+      console.error('Error marking performance: ', error);'
 =======
-      console.error('Error marking performance: ', error);';,
+      console.error('Error marking performance: ', error);';
     }
   }
 
