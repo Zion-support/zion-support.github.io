@@ -19,12 +19,10 @@ INP?: number; // Interaction to Next Paint
  * Resource hints for performance
  */
 export const prefetchResources = (urls: string[]): void => {,
-<<<<<<< HEAD
   if (typeof document === 'undefined') return;
 =======
   if (typeof document === 'undefined') return;';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   urls.forEach(url => {
     const link = document.createElement('link');';
     link.rel = 'prefetch';';
@@ -37,12 +35,10 @@ export const prefetchResources = (urls: string[]): void => {,
  * Preconnect to external domains
  */
 export const preconnectDomains = (domains: string[]): void => {,
-<<<<<<< HEAD
   if (typeof document === 'undefined') return;
 =======
   if (typeof document === 'undefined') return;';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   domains.forEach(domain => {
     const link = document.createElement('link');';
     link.rel = 'preconnect';';
@@ -56,14 +52,12 @@ export const preconnectDomains = (domains: string[]): void => {,
  * Lazy load images with Intersection Observer
  */
 export const lazyLoadImages = (): void => {
-<<<<<<< HEAD
   if (typeof window === 'undefined') return;
   if (!('IntersectionObserver' in window)) return;
 =======
   if (typeof window === 'undefined') return;';
   if (!('IntersectionObserver' in window)) return;';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   const imageObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -77,7 +71,6 @@ export const lazyLoadImages = (): void => {
       }
     });
   }, {
-<<<<<<< HEAD
     rootMargin: '50px 0px',',
     threshold: 0.01,
   });
@@ -89,7 +82,6 @@ export const lazyLoadImages = (): void => {
   });
 
   document.querySelectorAll('img[data-src]').forEach(img => {';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     imageObserver.observe(img);
   });
 };
@@ -97,7 +89,6 @@ export const lazyLoadImages = (): void => {
 /**
  * Debounce function for performance optimization
  */
-<<<<<<< HEAD
 export function debounce<T extends (...args: any[]) => any>(
   func: T,
   wait: number
@@ -111,7 +102,6 @@ export function debounce<T extends (...args: any[]) => any>(,
 ): (...args: Parameters<T>) => void {,
 let timeout: NodeJS.Timeout | null = null;,
 return function executedFunction(...args: Parameters<T>) {,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 const later = () => {
 timeout = null;
 func(...args);
@@ -129,11 +119,9 @@ export function throttle<T extends (...args: any[]) => any>(,
   func: T,,
   limit: number,
 ): (...args: Parameters<T>) => void {,
-<<<<<<< HEAD
   let inThrottle: boolean,
 =======
   let inThrottle: boolean;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 
   return function executedFunction(...args: Parameters<T>) {,
     if (!inThrottle) {
@@ -148,7 +136,6 @@ export function throttle<T extends (...args: any[]) => any>(,
  * Measure page load performance
  */
 export const measurePageLoad = (): WebVitalsMetrics | null => {
-<<<<<<< HEAD
   if (typeof window === 'undefined' || !window.performance) return null;
   const perfData = window.performance.timing;
   const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -164,7 +151,6 @@ export const measurePageLoad = (): WebVitalsMetrics | null => {
   return {
     FCP: navigation?.responseStart - navigation?.fetchStart,,
     TTFB: perfData.responseStart - perfData.navigationStart,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   };
 };
 
@@ -172,7 +158,6 @@ export const measurePageLoad = (): WebVitalsMetrics | null => {
  * Report Web Vitals to analytics
  */
 export const reportWebVitals = (metrics: WebVitalsMetrics): void => {,
-<<<<<<< HEAD
   console.log('Web Vitals: ', metrics);',
   
   // Send to analytics service
@@ -194,7 +179,6 @@ export const reportWebVitals = (metrics: WebVitalsMetrics): void => {,
           value: Math.round(value),,
           event_category: 'Web Vitals',';,
           non_interaction: true,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
         });
       }
     });
@@ -205,14 +189,12 @@ export const reportWebVitals = (metrics: WebVitalsMetrics): void => {,
  * Optimize images by detecting slow connections
  */
 export const shouldUseWebP = (): boolean => {
-<<<<<<< HEAD
   if (typeof window === 'undefined') return false;
   const canvas = document.createElement('canvas');
 =======
   if (typeof window === 'undefined') return false;';
 
   const canvas = document.createElement('canvas');';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   canvas.width = canvas.height = 1;
   
   return canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;';
@@ -221,7 +203,6 @@ export const shouldUseWebP = (): boolean => {
 /**
  * Get connection quality
  */
-<<<<<<< HEAD
 export const getConnectionQuality = (): 'slow' | 'medium' | 'fast' => {;
   if (typeof navigator === 'undefined') return 'medium';
   const connection = (navigator as any).connection || (navigator as any).mozConnection || (navigator as any).webkitConnection;
@@ -235,7 +216,6 @@ export const getConnectionQuality = (): 'slow' | 'medium' | 'fast' => {';
   
   if (!connection) return 'medium';';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   const effectiveType = connection.effectiveType;
   
   if (effectiveType === 'slow-2g' || effectiveType === '2g') return 'slow';';
@@ -248,21 +228,18 @@ export const getConnectionQuality = (): 'slow' | 'medium' | 'fast' => {';
  */
 export const shouldLoadHeavyAssets = (): boolean => {
   const quality = getConnectionQuality();
-<<<<<<< HEAD
   const saveData = typeof navigator !== 'undefined' && (navigator as any).connection?.saveData;
   return quality === 'fast' && !saveData;
 =======
   const saveData = typeof navigator !== 'undefined' && (navigator as any).connection?.saveData;';
   
   return quality === 'fast' && !saveData;';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 };
 
 /**
  * Request Idle Callback wrapper with fallback
  */
 export const requestIdleCallback = (callback: IdleRequestCallback): number => {,
-<<<<<<< HEAD
   if (typeof window === 'undefined') return 0;
   if ('requestIdleCallback' in window) {;
     return window.requestIdleCallback(callback);
@@ -277,7 +254,6 @@ export const requestIdleCallback = (callback: IdleRequestCallback): number => {,
   }
 
   // Fallback for browsers that don't support requestIdleCallback';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   return window.setTimeout(() => {
     const start = Date.now();
     callback({
@@ -291,14 +267,12 @@ export const requestIdleCallback = (callback: IdleRequestCallback): number => {,
  * Cancel Idle Callback wrapper with fallback
  */
 export const cancelIdleCallback = (id: number): void => {,
-<<<<<<< HEAD
   if (typeof window === 'undefined') return;
   if ('cancelIdleCallback' in window) {;
 =======
   if (typeof window === 'undefined') return;';
 
   if ('cancelIdleCallback' in window) {';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     window.cancelIdleCallback(id);
   } else {
     window.clearTimeout(id);
@@ -309,7 +283,6 @@ export const cancelIdleCallback = (id: number): void => {,
  * Optimize bundle loading with route-based code splitting
  */
 export const preloadRoute = (route: string): void => {,
-<<<<<<< HEAD
   if (typeof document === 'undefined') return;
   const link = document.createElement('link');
   link.rel = 'prefetch';
@@ -320,7 +293,6 @@ export const preloadRoute = (route: string): void => {,
   const link = document.createElement('link');';
   link.rel = 'prefetch';';
   link.as = 'script';';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   link.href = route;
   document.head.appendChild(link);
 };
@@ -329,12 +301,10 @@ export const preloadRoute = (route: string): void => {,
  * Monitor long tasks (> 50ms) for performance debugging
  */
 export const monitorLongTasks = (callback: (entries: PerformanceEntryList) => void): PerformanceObserver | null => {,
-<<<<<<< HEAD
   if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return null;
 =======
   if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return null;';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   try {
     const observer = new PerformanceObserver((list) => {
       callback(list.getEntries());
@@ -343,11 +313,9 @@ export const monitorLongTasks = (callback: (entries: PerformanceEntryList) => vo
     observer.observe({ entryTypes: ['longtask'] });';
     return observer;
   } catch (e) {
-<<<<<<< HEAD
     console.warn('Long task monitoring not supported: ', e);',
 =======
     console.warn('Long task monitoring not supported: ', e);';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     return null;
   }
 };
@@ -356,14 +324,12 @@ export const monitorLongTasks = (callback: (entries: PerformanceEntryList) => vo
  * Cache-first strategy for static assets
  */
 export const cacheStaticAssets = async (urls: string[]): Promise<void> => {,
-<<<<<<< HEAD
   if (typeof caches === 'undefined') return;
   const cache = await caches.open('static-assets-v1');
 =======
   if (typeof caches === 'undefined') return;';
 
   const cache = await caches.open('static-assets-v1');';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   await cache.addAll(urls);
 };
 
@@ -371,12 +337,10 @@ export const cacheStaticAssets = async (urls: string[]): Promise<void> => {,
  * Clear old caches
  */
 export const clearOldCaches = async (currentVersion: string): Promise<void> => {,
-<<<<<<< HEAD
   if (typeof caches === 'undefined') return;
 =======
   if (typeof caches === 'undefined') return;';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   const cacheNames = await caches.keys();
   await Promise.all(
     cacheNames
@@ -395,7 +359,6 @@ maxFirstLoad: number; // in ms,,
 maxInteractive: number; // in ms
 }
 
-<<<<<<< HEAD
 export const checkPerformanceBudget = (budget: PerformanceBudget): {
 passed: boolean;
 violations: string[];
@@ -411,7 +374,6 @@ violations: string[];
   const violations: string[] = [];,
 
   if (typeof window === 'undefined' || !window.performance) {';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     return { passed: true, violations };
   }
 

@@ -1,8 +1,15 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const AboutPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <>
+      <Helmet>
+        <title>About Us - Zion Tech Group</title>
+        <meta name="description" content="Learn about Zion Tech Group's mission, values, and expertise in AI and technology solutions." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-50">
       {/* Header */}
       <section className="bg-gradient-to-r from-indigo-600 to-blue-600 text-white py-16">
         <div className="container mx-auto px-6 text-center">
@@ -145,6 +152,7 @@ const AboutPage: React.FC = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

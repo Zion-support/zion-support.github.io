@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import {
-
+  BrowserRouter as Router,
+  Routes,
+  Route
 } from 'react-router-dom';
 import {
-HelmetProvider
+  HelmetProvider
 } from 'react-helmet-async';
 
 // Pages
@@ -52,42 +54,16 @@ const AppRouter: React.FC = () => {
     <HelmetProvider>
       <Router>
         <div className="min-h-screen bg-white">
-          <Header />
-          
-          <main>
+          <Suspense fallback={<div className="flex items-center justify-center min-h-screen">Loading...</div>}>
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/services" element={<ServicesPage />} />
-            <Route path="/services/catalog" element={<ServicesCatalog />} />
-            <Route path="/services/ai-services" element={<AISolutions />} />
-            <Route path="/services/it-services" element={<ITServices />} />
-            <Route path="/services/micro-saas" element={<AIMicroSAAS />} />
-            <Route path="/services/cloud" element={<CloudDevOps />} />
-            <Route path="/services/analytics" element={<AIDataAnalytics />} />
-            <Route path="/services/security" element={<AdvancedCybersecurityAI />} />
-            <Route path="/services/automation" element={<AIWorkflowAutomation />} />
-            <Route path="/solutions" element={<SolutionsPage />} />
-            <Route path="/solutions/enterprise" element={<SolutionsEnterprise />} />
-            <Route path="/solutions/smb" element={<SolutionsSMB />} />
-            <Route path="/solutions/startup" element={<SolutionsStartup />} />
-            <Route path="/solutions/healthcare" element={<SolutionsHealthcare />} />
-            <Route path="/solutions/financial" element={<SolutionsFinancial />} />
-            <Route path="/solutions/retail" element={<SolutionsRetail />} />
-            <Route path="/solutions/manufacturing" element={<SolutionsManufacturing />} />
-            <Route path="/resources" element={<Resources />} />
-            <Route path="/pricing" element={<Pricing />} />
-            <Route path="/partners" element={<Partners />} />
-            <Route path="/team" element={<Team />} />
-            <Route path="/privacy" element={<Privacy />} />
-            <Route path="/terms" element={<Terms />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/blog" element={<BlogPage />} />
               <Route path="/case-studies" element={<CaseStudiesPage />} />
             </Routes>
-          </main>
-          
-          <Footer />
+          </Suspense>
         </div>
       </Router>
     </HelmetProvider>

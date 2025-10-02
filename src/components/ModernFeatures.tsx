@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 const ModernFeatures: React.FC = () => {,
   const features = [
@@ -63,7 +62,6 @@ const ModernFeatures: React.FC = () => {,
     {
       icon: <Award className="w-10 h-10" />,";,
       title: "Award Winning",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       description: "Recognized industry leader with 15+ awards for innovation and excellence.",
     }
   ];
@@ -80,21 +78,17 @@ const ModernFeatures: React.FC = () => {,
           </p>
         </div>
         
-<<<<<<< HEAD
         <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">",
 =======
         <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           {features.map((feature, index) => (
             <div
               key={index}
               className="bg-white rounded-2xl p-8 shadow-lg hover: shadow-2xl transition-all duration-300 hover:scale-105 group",
             >
-<<<<<<< HEAD
               <div className="bg-gradient-to-br from-indigo-500 to-purple-600 text-white w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform">",
 =======
               <div className="bg-gradient-to-br from-indigo-500 to-purple-600 text-white w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 {feature.icon}
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-3">";

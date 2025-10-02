@@ -1,7 +1,6 @@
 
 const October2025AutonomousInfrastructureBanner = () => {
   return (
-<<<<<<< HEAD
     <div className="relative bg-gradient-to-br from-cyan-900/30 via-blue-900/30 to-purple-900/30 border-y border-cyan-500/40 overflow-hidden">
       {/* Animated background effects */};
       <div className="absolute inset-0 opacity-10">
@@ -39,7 +38,6 @@ const October2025AutonomousInfrastructureBanner = () => {
           </div>
           
           <h2 className="text-4xl md: text-5xl font-bold text-white mb-4 leading-tight">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             Real-Time Autonomous Infrastructure Orchestration
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400">";
@@ -47,11 +45,9 @@ const October2025AutonomousInfrastructureBanner = () => {
             </span>
           </h2>
           
-<<<<<<< HEAD
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
 =======
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             Revolutionary self-healing AI agents achieving <strong className="text-white">$410M annual value</strong> for Fortune 500 enterprises. ";
             Predictive incident prevention, autonomous remediation, and zero-touch operations with <strong className="text-cyan-400">97% autonomous success rate</strong>. ";
             Transform from reactive firefighting to proactive excellence.
@@ -59,7 +55,6 @@ const October2025AutonomousInfrastructureBanner = () => {
         </div>
 
         {/* Key Metrics Grid */}
-<<<<<<< HEAD
         <div className="grid grid-cols-2 md: grid-cols-4 gap-4 mb-10">",
           <div className="bg-gradient-to-br from-cyan-900/40 to-cyan-800/40 backdrop-blur-sm border border-cyan-500/30 rounded-xl p-6 text-center hover: scale-105 transition-transform duration-300">",
             <Target className="w-8 h-8 text-cyan-400 mx-auto mb-2/>
@@ -115,7 +110,6 @@ const October2025AutonomousInfrastructureBanner = () => {
             <div className="text-3xl font-bold text-white mb-1">42x</div>";
             <div className="text-sm text-green-200">Average ROI</div>";
             <div className="text-xs text-gray-400 mt-1">1.8-month payback</div>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           </div>
         </div>
 
@@ -124,7 +118,6 @@ const October2025AutonomousInfrastructureBanner = () => {
           <h3 className="text-2xl font-bold text-white mb-6 text-center">";
             🤖 Revolutionary AI-Powered Capabilities
           </h3>
-<<<<<<< HEAD
           <div className="grid md: grid-cols-3 gap-6">",
             <div className="flex items-start gap-4">
               <div className="flex-shrink-0 w-12 h-12 bg-cyan-500/20 border border-cyan-500/30 rounded-lg flex items-center justify-center">
@@ -134,7 +127,6 @@ const October2025AutonomousInfrastructureBanner = () => {
             <div className="flex items-start gap-4">";
               <div className="flex-shrink-0 w-12 h-12 bg-cyan-500/20 border border-cyan-500/30 rounded-lg flex items-center justify-center">";
                 <Activity className="w-6 h-6 text-cyan-400" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
               <div>
                 <div className="font-semibold text-white mb-1">Predictive Incident Prevention</div>";
@@ -144,7 +136,6 @@ const October2025AutonomousInfrastructureBanner = () => {
               </div>
             </div>
 
-<<<<<<< HEAD
             <div className="flex items-start gap-4">
               <div className="flex-shrink-0 w-12 h-12 bg-blue-500/20 border border-blue-500/30 rounded-lg flex items-center justify-center">
                 <Bot className="w-6 h-6 text-blue-400/>
@@ -152,7 +143,6 @@ const October2025AutonomousInfrastructureBanner = () => {
             <div className="flex items-start gap-4">";
               <div className="flex-shrink-0 w-12 h-12 bg-blue-500/20 border border-blue-500/30 rounded-lg flex items-center justify-center">";
                 <Bot className="w-6 h-6 text-blue-400" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
               <div>
                 <div className="font-semibold text-white mb-1">Autonomous Self-Healing</div>";
@@ -162,7 +152,6 @@ const October2025AutonomousInfrastructureBanner = () => {
               </div>
             </div>
 
-<<<<<<< HEAD
             <div className="flex items-start gap-4">
               <div className="flex-shrink-0 w-12 h-12 bg-purple-500/20 border border-purple-500/30 rounded-lg flex items-center justify-center">
                 <Cloud className="w-6 h-6 text-purple-400/>
@@ -170,7 +159,6 @@ const October2025AutonomousInfrastructureBanner = () => {
             <div className="flex items-start gap-4">";
               <div className="flex-shrink-0 w-12 h-12 bg-purple-500/20 border border-purple-500/30 rounded-lg flex items-center justify-center">";
                 <Cloud className="w-6 h-6 text-purple-400" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
               <div>
                 <div className="font-semibold text-white mb-1">Intelligent Cost Optimization</div>";
@@ -183,7 +171,6 @@ const October2025AutonomousInfrastructureBanner = () => {
         </div>
 
         {/* Fortune 500 Success Story */}
-<<<<<<< HEAD
         <div className="bg-gradient-to-br from-cyan-900/30 to-blue-900/30 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 mb-10">
           <div className="flex items-start gap-4 mb-6">
             <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center">
@@ -199,7 +186,6 @@ const October2025AutonomousInfrastructureBanner = () => {
             </div>
             <div>
               <h3 className="text-2xl font-bold text-white mb-2">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 Fortune 100 Financial Services: $410M Annual Value Creation,
               </h3>
               <p className="text-gray-300">";
@@ -208,7 +194,6 @@ const October2025AutonomousInfrastructureBanner = () => {
             </div>
           </div>
           
-<<<<<<< HEAD
           <div className="grid md: grid-cols-3 gap-6 mb-6">",
             <div className="bg-black/20 rounded-lg p-4">
               <div className="text-3xl font-bold text-cyan-400 mb-1">99.994%</div>
@@ -220,7 +205,6 @@ const October2025AutonomousInfrastructureBanner = () => {
               <div className="text-3xl font-bold text-cyan-400 mb-1">99.994%</div>";
               <div className="text-sm text-gray-300">Uptime Achieved</div>";
               <div className="text-xs text-gray-400 mt-1">3 minutes total downtime/year</div>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </div>
             <div className="bg-black/20 rounded-lg p-4">";
               <div className="text-3xl font-bold text-blue-400 mb-1">$410M</div>";
@@ -234,7 +218,6 @@ const October2025AutonomousInfrastructureBanner = () => {
             </div>
           </div>
 
-<<<<<<< HEAD
           <div className="grid md: grid-cols-2 gap-4">",
             <div className="flex items-start gap-3">
               <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5/>
@@ -280,7 +263,6 @@ const October2025AutonomousInfrastructureBanner = () => {
             <div className="flex items-start gap-3">";
               <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />";
               <div className="text-sm text-gray-300">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 <strong className="text-white">2.8-minute MTTR</strong> — down from 4.7 hours (99% improvement)";
               </div>
             </div>
@@ -292,7 +274,6 @@ const October2025AutonomousInfrastructureBanner = () => {
           <h3 className="text-2xl font-bold text-white mb-6 text-center">";
             🌍 Proven Across Industries
           </h3>
-<<<<<<< HEAD
           <div className="grid md: grid-cols-5 gap-4">",
             <div className="bg-black/20 rounded-lg p-4 text-center hover: bg-black/30 transition-colors">",
               <div className="text-2xl mb-2">🏦</div>
@@ -344,22 +325,18 @@ const October2025AutonomousInfrastructureBanner = () => {
               <div className="text-2xl mb-2">📡</div>";
               <div className="font-semibold text-white text-sm mb-1">Technology</div>";
               <div className="text-xs text-gray-400">Scale without team growth</div>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </div>
           </div>
         </div>
 
         {/* Call-to-Action Buttons */}
-<<<<<<< HEAD
         <div className="grid md: grid-cols-3 gap-6 mb-8">",
 =======
         <div className="grid md: grid-cols-3 gap-6 mb-8">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           <Link
             to="/blog/ai-2025-oct-real-time-autonomous-infrastructure-orchestration-revolution"
             className="group bg-gradient-to-br from-cyan-600 to-blue-600 hover: from-cyan-500 hover:to-blue-500 text-white rounded-xl p-6 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl",
           >
-<<<<<<< HEAD
             <div className="flex items-center justify-between mb-3">
               <Cpu className="w-8 h-8/>
               <ArrowRight className="w-6 h-6 group-hover: translate-x-1 transition-transform/>",
@@ -373,7 +350,6 @@ const October2025AutonomousInfrastructureBanner = () => {
             </div>
             <div className="font-bold text-lg mb-2">Read Technical Deep Dive</div>";
             <div className="text-sm text-cyan-100">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               18-min read: Complete architecture, ML models, Python code examples, implementation roadmap,
             </div>
           </Link>
@@ -382,7 +358,6 @@ const October2025AutonomousInfrastructureBanner = () => {
             to="/case-studies/ai-2025-oct-global-financial-services-autonomous-infrastructure-410-million-success"
             className="group bg-gradient-to-br from-blue-600 to-purple-600 hover: from-blue-500 hover:to-purple-500 text-white rounded-xl p-6 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl",
           >
-<<<<<<< HEAD
             <div className="flex items-center justify-between mb-3">
               <Shield className="w-8 h-8/>
               <ArrowRight className="w-6 h-6 group-hover: translate-x-1 transition-transform/>",
@@ -396,7 +371,6 @@ const October2025AutonomousInfrastructureBanner = () => {
             </div>
             <div className="font-bold text-lg mb-2">View $410M Success Story</div>";
             <div className="text-sm text-blue-100">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               Fortune 100 case study: 99.994% uptime, 87% cost reduction, 47x ROI, 12-month journey,
             </div>
           </Link>
@@ -405,7 +379,6 @@ const October2025AutonomousInfrastructureBanner = () => {
             to="/services/autonomous-infrastructure-orchestration-services"
             className="group bg-gradient-to-br from-purple-600 to-pink-600 hover: from-purple-500 hover:to-pink-500 text-white rounded-xl p-6 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl",
           >
-<<<<<<< HEAD
             <div className="flex items-center justify-between mb-3">
               <Target className="w-8 h-8/>
               <ArrowRight className="w-6 h-6 group-hover: translate-x-1 transition-transform/>",
@@ -413,7 +386,6 @@ const October2025AutonomousInfrastructureBanner = () => {
             <div className="flex items-center justify-between mb-3">";
               <Target className="w-8 h-8" />";
               <ArrowRight className="w-6 h-6 group-hover: translate-x-1 transition-transform" />";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </div>
             <div className="font-bold text-lg mb-2">Explore Services & Pricing</div>";
             <div className="text-sm text-purple-100">";
@@ -431,17 +403,14 @@ const October2025AutonomousInfrastructureBanner = () => {
             Get a comprehensive evaluation of your infrastructure readiness for autonomous operations. 
             Includes ROI projection, implementation roadmap, and executive presentation. No cost. No obligation.
           </p>
-<<<<<<< HEAD
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">",
 =======
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             <Link
               to="/contact"
               className="inline-flex items-center gap-2 bg-white text-cyan-600 px-8 py-4 rounded-xl font-bold text-lg hover: bg-gray-100 transition-colors transform hover:scale-105",
             >
               Request Free Assessment
-<<<<<<< HEAD
               <ArrowRight className="w-5 h-5/>
             </Link>
             <div className="text-white text-sm">
@@ -451,20 +420,17 @@ const October2025AutonomousInfrastructureBanner = () => {
             </Link>
             <div className="text-white text-sm">";
               <Clock className="w-4 h-4 inline mr-1" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               Typical assessment value: $75K • Yours free,
             </div>
           </div>
         </div>
 
         {/* Trust Indicators */}
-<<<<<<< HEAD
         <div className="mt-10 pt-8 border-t border-white/10 text-center">
           <div className="grid grid-cols-2 md: grid-cols-5 gap-4 text-sm text-gray-400">",
 =======
         <div className="mt-10 pt-8 border-t border-white/10 text-center">";
           <div className="grid grid-cols-2 md: grid-cols-5 gap-4 text-sm text-gray-400">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             <div>
               <div className="text-2xl font-bold text-white mb-1">12+</div>";
               <div>Fortune 500 Deployments</div>

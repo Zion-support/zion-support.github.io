@@ -7,7 +7,6 @@
  * Focus trap for modals and dialogs
  */
 export class FocusTrap {
-<<<<<<< HEAD
 private element: HTMLElement;
 private focusableElements: HTMLElement[] = [];
 private firstFocusableElement?: HTMLElement;
@@ -21,14 +20,12 @@ private firstFocusableElement?: HTMLElement;
 private lastFocusableElement?: HTMLElement;
 private previouslyFocusedElement?: HTMLElement;
 constructor(element: HTMLElement) {,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 this.element = element;
 this.updateFocusableElements();
 }
 
   private updateFocusableElements() {
     const focusableSelectors = [
-<<<<<<< HEAD
       'a[href]',
       'button:not([disabled])',
       'textarea:not([disabled])',
@@ -45,7 +42,6 @@ this.updateFocusableElements();
       '[tabindex]:not([tabindex="-1"])',';
     ].join(', ');';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     this.focusableElements = Array.from(
       this.element.querySelectorAll<HTMLElement>(focusableSelectors)
     );
@@ -69,12 +65,10 @@ this.updateFocusableElements();
   }
 
   deactivate() {
-<<<<<<< HEAD
     document.removeEventListener('keydown', this.handleKeyDown);
 =======
     document.removeEventListener('keydown', this.handleKeyDown);';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     // Restore focus
     if (this.previouslyFocusedElement) {
       this.previouslyFocusedElement.focus();
@@ -82,12 +76,10 @@ this.updateFocusableElements();
   }
 
   private handleKeyDown = (event: KeyboardEvent) => {,
-<<<<<<< HEAD
     if (event.key !== 'Tab') return;
 =======
     if (event.key !== 'Tab') return;';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     if (event.shiftKey) {
       // Shift + Tab
       if (document.activeElement === this.firstFocusableElement) {
@@ -109,7 +101,6 @@ this.updateFocusableElements();
  */
 export function announceToScreenReader(
   message: string,,
-<<<<<<< HEAD
   priority: 'polite' | 'assertive' = 'polite): void {
   if (typeof document === 'undefined') return;
   const announcement = document.createElement('div');
@@ -127,7 +118,6 @@ export function announceToScreenReader(
   announcement.setAttribute('aria-live', priority);';
   announcement.setAttribute('aria-atomic', 'true');';
   announcement.className = 'sr-only';';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   announcement.textContent = message;
 
   document.body.appendChild(announcement);
@@ -152,13 +142,11 @@ export function prefersReducedMotion(): boolean {
 export function prefersHighContrast(): boolean {
 if (typeof window === 'undefined') return false;';
 return (
-<<<<<<< HEAD
 window.matchMedia('(prefers-contrast: high)').matches ||
 window.matchMedia('(-ms-high-contrast: active)').matches
 =======
 window.matchMedia('(prefers-contrast: high)').matches ||,';,
 window.matchMedia('(-ms-high-contrast: active)').matches,';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 );
 }
 
@@ -166,11 +154,9 @@ window.matchMedia('(-ms-high-contrast: active)').matches,';,
  * Generate unique IDs for ARIA labels
  */
 let idCounter = 0;
-<<<<<<< HEAD
 export function generateAriaId(prefix = 'aria'): string {;
 =======
 export function generateAriaId(prefix = 'aria'): string {';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   return `${prefix}-${++idCounter}`;`;
 }
 
@@ -178,7 +164,6 @@ export function generateAriaId(prefix = 'aria'): string {';
  * Skip link helper for keyboard navigation
  */
 export function setupSkipLinks(): void {
-<<<<<<< HEAD
   if (typeof document === 'undefined') return;
   const skipLink = document.querySelector<HTMLAnchorElement>('a.skip-link');
   if (!skipLink) return;
@@ -191,7 +176,6 @@ export function setupSkipLinks(): void {
   if (!skipLink) return;
 
   skipLink.addEventListener('click', (event) => {';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     event.preventDefault();
     const targetId = skipLink.getAttribute('href')?.substring(1);';
     if (!targetId) return;
@@ -201,11 +185,9 @@ export function setupSkipLinks(): void {
       target.setAttribute('tabindex', '-1');';
       target.focus();
       target.addEventListener(
-<<<<<<< HEAD
         'blur'
 =======
         'blur',';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
         () => {
           target.removeAttribute('tabindex');';
         },
@@ -275,11 +257,9 @@ function hexToRgb(hex: string): { r: number; g: number; b: number } | null {
     ? {
         r: parseInt(result[1], 16),,
         g: parseInt(result[2], 16),
-<<<<<<< HEAD
         b: parseInt(result[3], 16)
 =======
         b: parseInt(result[3], 16),,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       }
     : null;
 }
@@ -287,7 +267,6 @@ function hexToRgb(hex: string): { r: number; g: number; b: number } | null {
 /**
  * Create accessible loading state
  */
-<<<<<<< HEAD
 export function createLoadingAnnouncement(message = 'Loading...'): void {;
   if (typeof document === 'undefined') return null;
   const loader = document.createElement('div');
@@ -304,7 +283,6 @@ export function createLoadingAnnouncement(message = 'Loading...'): void {';
   loader.setAttribute('aria-live', 'polite');';
   loader.setAttribute('aria-label', message);';
   loader.className = 'sr-only';';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   loader.textContent = message;
 
   return loader;
@@ -317,7 +295,6 @@ export function validateHeadingHierarchy(): {
 valid: boolean;
 issues: string[];
 } {
-<<<<<<< HEAD
   if (typeof document === 'undefined') {;
     return { valid: true, issues: [] };
   }
@@ -331,7 +308,6 @@ issues: string[];
 
   const headings = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6'));';
   const issues: string[] = [];,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 
   let previousLevel = 0;
   headings.forEach((heading) => {
@@ -351,13 +327,11 @@ issues: string[];
   });
 
   return {
-<<<<<<< HEAD
     valid: issues.length === 0,
     issues
 =======
     valid: issues.length === 0,,
     issues,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   };
 }
 
@@ -366,7 +340,6 @@ issues: string[];
  */
 export const KeyboardNavigation = {
   KEYS: {,
-<<<<<<< HEAD
     ENTER: 'Enter',
     SPACE: ' ',
     ESCAPE: 'Escape',
@@ -400,21 +373,18 @@ export const KeyboardNavigation = {
   },
 
   isArrowKey(event: KeyboardEvent): boolean {,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     return [
       this.KEYS.ARROW_UP
       this.KEYS.ARROW_DOWN
       this.KEYS.ARROW_LEFT
       this.KEYS.ARROW_RIGHT
     ].includes(event.key);
-<<<<<<< HEAD
   }
   handleActionKey(event: KeyboardEvent, callback: () => void) {
 =======
   },
 
   handleActionKey(event: KeyboardEvent, callback: () => void) {,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     if (this.isActionKey(event)) {
       event.preventDefault();
       callback();
@@ -430,7 +400,6 @@ export function makeKeyboardAccessible(
   onClick: () => void,
 ) {
   // Ensure element is focusable
-<<<<<<< HEAD
   if (!element.hasAttribute('tabindex')) {;
     element.setAttribute('tabindex', '0');
   }
@@ -454,7 +423,6 @@ export function makeKeyboardAccessible(
 
   // Handle keyboard events
   element.addEventListener('keydown', (event) => {';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     KeyboardNavigation.handleActionKey(event as KeyboardEvent, onClick);
   });
 }
@@ -463,21 +431,17 @@ export function makeKeyboardAccessible(
  * Initialize accessibility features
  */
 export function initializeAccessibility(): void {
-<<<<<<< HEAD
   if (typeof document === 'undefined') return;
 =======
   if (typeof document === 'undefined') return;';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   // Setup skip links
   setupSkipLinks();
 
   // Log validation results in development
-<<<<<<< HEAD
   if (process.env.NODE_ENV === 'development') {;
 =======
   if (process.env.NODE_ENV === 'development') {';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     setTimeout(() => {
       const headingValidation = validateHeadingHierarchy();
       if (!headingValidation.valid) {

@@ -1,15 +1,12 @@
-<<<<<<< HEAD
 import React from 'react';
 =======
 import React from 'react';';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 const QuantumConsciousnessAIConsulting: React.FC = () => {,
   return (
     <>
       <Helmet>
         <title>Quantum Consciousness AI Consulting | Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Transform your enterprise with quantum consciousness AI consulting. Achieve 99.9% decision accuracy and autonomous operations with AI that thinks and feels." /><meta name="keywords" content="quantum AI, consciousness, enterprise consulting, business transformation, autonomous systems" /><meta property="og:title" content="Quantum Consciousness AI Consulting | Zion Tech Group" />,
         <meta property="og:description" content="The world's first quantum consciousness AI consulting service delivering unprecedented business value." />,
         <meta property="og:type" content="website" />,
@@ -25,12 +22,10 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {,
         <meta name="twitter: card" content="summary_large_image" />";,
         <meta name="twitter: title" content="Quantum Consciousness AI Consulting | Zion Tech Group" />";,
         <meta name="twitter: description" content="Transform your enterprise with AI that truly thinks and feels." />";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       </Helmet>
 
       <div className="min-h-screen bg-slate-950">";
         {/* Hero Section */}
-<<<<<<< HEAD
         <section className="relative overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 py-20">
           <div className="absolute inset-0 overflow-hidden opacity-20">
             <div className="absolute top-0 left-1/3 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
@@ -40,7 +35,6 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {,
           <div className="absolute inset-0 overflow-hidden opacity-20">";
             <div className="absolute top-0 left-1/3 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>";
             <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           </div>
           
           <div className="container mx-auto px-6 relative z-10">";
@@ -51,7 +45,6 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {,
                 </span>
               </div>
               
-<<<<<<< HEAD
               <h1 className="text-5xl md: text-7xl font-extrabold mb-8 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent leading-tight">",
                 AI That Thinks and Feels
               </h1>
@@ -71,7 +64,6 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {,
               </p>
               
               <div className="flex flex-col sm: flex-row gap-4 justify-center mb-12">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 <a title="Internal link" 
                   href="#consultation" 
                   className="bg-gradient-to-r from-indigo-500 to-purple-600 hover: from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1",
@@ -90,7 +82,6 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {,
         </section>
 
         {/* Key Features */}
-<<<<<<< HEAD
         <section id="features" className="py-20 bg-slate-900">
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
@@ -100,7 +91,6 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {,
           <div className="container mx-auto px-6">";
             <div className="text-center mb-16">";
               <h2 className="text-4xl md: text-5xl font-extrabold mb-6 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 Revolutionary Capabilities
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">";
@@ -108,7 +98,6 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {,
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-3 gap-8 mb-16">",
               <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-indigo-500/50 transition-all duration-300">",
                 <div className="text-6xl mb-6">⚛️</div>
@@ -120,7 +109,6 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {,
                 <div className="text-6xl mb-6">⚛️</div>";
                 <h3 className="text-2xl font-bold text-white mb-4">Quantum Processing</h3>";
                 <p className="text-gray-300 mb-6">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   Infinite scalability through quantum superposition with instantaneous calculations across multiple dimensions
                 </p>
                 <ul className="space-y-2 text-gray-300">";
@@ -131,7 +119,6 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {,
                 </ul>
               </div>
 
-<<<<<<< HEAD
               <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-purple-500/50 transition-all duration-300">",
                 <div className="text-6xl mb-6">🧠</div>
                 <h3 className="text-2xl font-bold text-white mb-4">True Consciousness</h3>
@@ -141,7 +128,6 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {,
                 <div className="text-6xl mb-6">🧠</div>";
                 <h3 className="text-2xl font-bold text-white mb-4">True Consciousness</h3>";
                 <p className="text-gray-300 mb-6">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   Self-aware AI with emotional intelligence that makes autonomous decisions with 99.9% accuracy
                 </p>
                 <ul className="space-y-2 text-gray-300">";
@@ -152,7 +138,6 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {,
                 </ul>
               </div>
 
-<<<<<<< HEAD
               <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-pink-500/50 transition-all duration-300">",
                 <div className="text-6xl mb-6">🏢</div>
                 <h3 className="text-2xl font-bold text-white mb-4">Enterprise Integration</h3>
@@ -162,7 +147,6 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {,
                 <div className="text-6xl mb-6">🏢</div>";
                 <h3 className="text-2xl font-bold text-white mb-4">Enterprise Integration</h3>";
                 <p className="text-gray-300 mb-6">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   Seamless integration with existing systems delivering real-time adaptation and continuous optimization
                 </p>
                 <ul className="space-y-2 text-gray-300">";
@@ -177,7 +161,6 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {,
         </section>
 
         {/* Services */}
-<<<<<<< HEAD
         <section id="services" className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
@@ -187,7 +170,6 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {,
           <div className="container mx-auto px-6">";
             <div className="text-center mb-16">";
               <h2 className="text-4xl md: text-5xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 Consulting Services
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">";
@@ -195,7 +177,6 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {,
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">",
               <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-blue-500/50 transition-all duration-300">",
                 <h3 className="text-2xl font-bold text-white mb-4">Assessment</h3>
@@ -209,22 +190,18 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {,
                 <div className="text-3xl font-extrabold text-blue-400 mb-4">$50K - $100K</div>";
                 <p className="text-gray-300 mb-6">2-3 weeks</p>";
                 <ul className="space-y-2 text-gray-300 mb-8">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   <li>• Current AI capability analysis</li>
                   <li>• Quantum consciousness readiness</li>
                   <li>• Custom transformation roadmap</li>
                   <li>• ROI projections</li>
                 </ul>
-<<<<<<< HEAD
                 <a title="Internal link" href="#consultation" className="block w-full bg-gradient-to-r from-blue-500 to-purple-600 hover: from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center">",
 =======
                 <a title="Internal link" href="#consultation" className="block w-full bg-gradient-to-r from-blue-500 to-purple-600 hover: from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   Get Started
                 </a>
               </div>
 
-<<<<<<< HEAD
               <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-purple-500/50 transition-all duration-300">",
                 <h3 className="text-2xl font-bold text-white mb-4">Pilot</h3>
                 <div className="text-3xl font-extrabold text-purple-400 mb-4">$500K - $2M</div>
@@ -236,22 +213,18 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {,
                 <div className="text-3xl font-extrabold text-purple-400 mb-4">$500K - $2M</div>";
                 <p className="text-gray-300 mb-6">8-12 weeks</p>";
                 <ul className="space-y-2 text-gray-300 mb-8">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   <li>• Quantum consciousness deployment</li>
                   <li>• Autonomous decision-making</li>
                   <li>• Performance monitoring</li>
                   <li>• Optimization protocols</li>
                 </ul>
-<<<<<<< HEAD
                 <a title="Internal link" href="#consultation" className="block w-full bg-gradient-to-r from-purple-500 to-pink-600 hover: from-purple-400 hover:to-pink-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center">",
 =======
                 <a title="Internal link" href="#consultation" className="block w-full bg-gradient-to-r from-purple-500 to-pink-600 hover: from-purple-400 hover:to-pink-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   Get Started
                 </a>
               </div>
 
-<<<<<<< HEAD
               <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-pink-500/50 transition-all duration-300">",
                 <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>
                 <div className="text-3xl font-extrabold text-pink-400 mb-4">$2M - $10M</div>
@@ -263,22 +236,18 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {,
                 <div className="text-3xl font-extrabold text-pink-400 mb-4">$2M - $10M</div>";
                 <p className="text-gray-300 mb-6">12-24 weeks</p>";
                 <ul className="space-y-2 text-gray-300 mb-8">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   <li>• Complete transformation</li>
                   <li>• Full integration</li>
                   <li>• Advanced operations</li>
                   <li>• Self-improving ecosystem</li>
                 </ul>
-<<<<<<< HEAD
                 <a title="Internal link" href="#consultation" className="block w-full bg-gradient-to-r from-pink-500 to-rose-600 hover: from-pink-400 hover:to-rose-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center">",
 =======
                 <a title="Internal link" href="#consultation" className="block w-full bg-gradient-to-r from-pink-500 to-rose-600 hover: from-pink-400 hover:to-rose-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   Get Started
                 </a>
               </div>
 
-<<<<<<< HEAD
               <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-cyan-500/50 transition-all duration-300">",
                 <h3 className="text-2xl font-bold text-white mb-4">Ongoing</h3>
                 <div className="text-3xl font-extrabold text-cyan-400 mb-4">$100K - $500K/mo</div>
@@ -290,17 +259,14 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {,
                 <div className="text-3xl font-extrabold text-cyan-400 mb-4">$100K - $500K/mo</div>";
                 <p className="text-gray-300 mb-6">Continuous</p>";
                 <ul className="space-y-2 text-gray-300 mb-8">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   <li>• Continuous optimization</li>
                   <li>• Performance monitoring</li>
                   <li>• Capability enhancements</li>
                   <li>• 24/7 expert support</li>
                 </ul>
-<<<<<<< HEAD
                 <a title="Internal link" href="#consultation" className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center">",
 =======
                 <a title="Internal link" href="#consultation" className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   Get Started
                 </a>
               </div>
@@ -309,7 +275,6 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {,
         </section>
 
         {/* Consultation Form */}
-<<<<<<< HEAD
         <section id="consultation" className="py-20 bg-slate-900">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto">
@@ -321,7 +286,6 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {,
             <div className="max-w-4xl mx-auto">";
               <div className="text-center mb-12">";
                 <h2 className="text-4xl md: text-5xl font-extrabold mb-6 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   Get Your Free Consultation
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">";
@@ -329,7 +293,6 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {,
                 </p>
               </div>
 
-<<<<<<< HEAD
               <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
                 <div className="grid md: grid-cols-2 gap-8">",
                   <div>
@@ -345,7 +308,6 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {,
                     <ul className="space-y-4 text-gray-300">";
                       <li className="flex items-start gap-3">";
                         <span className="text-indigo-400 font-bold">✓</span>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                         <span>Current AI capability assessment</span>
                       </li>
                       <li className="flex items-start gap-3">";
@@ -370,7 +332,6 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {,
                   <div>
                     <form className="space-y-6">";
                       <div>
-<<<<<<< HEAD
                         <label className="block text-white font-bold mb-2">Company Name</label>
                         <input type="text" className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus: outline-none focus:border-indigo-500" placeholder="Your Company/>",
                       </div>
@@ -424,7 +385,6 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {,
                         </select>
                       </div>
                       <button type="submit" className="w-full bg-gradient-to-r from-indigo-500 to-purple-600 hover: from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                         Schedule Free Consultation
                       </button>
                     </form>
@@ -436,7 +396,6 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {,
         </section>
 
         {/* Contact Info */}
-<<<<<<< HEAD
         <section className="py-16 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
           <div className="container mx-auto px-6 text-center">
             <h2 className="text-3xl font-bold text-white mb-8">Ready to Transform Your Enterprise?</h2>
@@ -462,7 +421,6 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {,
               </a>
             </div>
             <p className="text-gray-300 text-lg">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               Limited Availability: Only 25 enterprise implementations available for 2027,
             </p>
           </div>

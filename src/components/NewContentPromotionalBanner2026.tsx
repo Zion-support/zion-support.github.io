@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 const NewContentPromotionalBanner2026 = () => {
   const newContent = [
@@ -52,13 +51,11 @@ const NewContentPromotionalBanner2026 = () => {
       icon: '🚀',';,
       color: 'from-blue-500 to-cyan-500',
     }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   ];
 
   return (
     <div className="py-16 bg-gradient-to-br from-slate-900 via-violet-900 to-purple-900 relative overflow-hidden">";
       {/* Animated background effects */}
-<<<<<<< HEAD
       <div className="absolute inset-0 overflow-hidden opacity-20">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-violet-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>;
@@ -68,12 +65,10 @@ const NewContentPromotionalBanner2026 = () => {
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-violet-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>";
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>';
         <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       </div>
 
       <div className="container mx-auto px-6 relative z-10">";
         {/* Header Section */}
-<<<<<<< HEAD
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-violet-500/20 to-purple-500/20 border border-violet-500/30 mb-6">
             <Globe className="w-6 h-6 text-violet-400 animate-pulse/>
@@ -95,7 +90,6 @@ const NewContentPromotionalBanner2026 = () => {
           </div>
 
           <h2 className="text-4xl md: text-5xl font-extrabold mb-6 bg-gradient-to-r from-violet-400 via-purple-400 to-blue-400 bg-clip-text text-transparent">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             Revolutionary Content Just Released
           </h2>
           
@@ -106,11 +100,9 @@ const NewContentPromotionalBanner2026 = () => {
         </div>
 
         {/* Content Grid */}
-<<<<<<< HEAD
         <div className="grid md: grid-cols-3 gap-8 mb-12">",
 =======
         <div className="grid md: grid-cols-3 gap-8 mb-12">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           {newContent.map((content, index) => (
             <div 
               key={index}
@@ -122,31 +114,25 @@ const NewContentPromotionalBanner2026 = () => {
               
               <div className="relative p-8">";
                 {/* Content Icon */}
-<<<<<<< HEAD
                 <div className="text-5xl mb-6 text-center group-hover: animate-pulse">",
 =======
                 <div className="text-5xl mb-6 text-center group-hover: animate-pulse">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   {content.icon}
                 </div>
 
                 {/* Date Badge */}
-<<<<<<< HEAD
                 <div className="text-center mb-4">
 =======
                 <div className="text-center mb-4">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   <span className={`inline-block px-3 py-1 rounded-full bg-gradient-to-r ${content.color} text-white text-xs font-bold`}>`;
                     {content.date}
                   </span>
                 </div>
 
                 {/* Title */}
-<<<<<<< HEAD
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-violet-400 transition-colors duration-300 leading-tight text-center">",
 =======
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-violet-400 transition-colors duration-300 leading-tight text-center">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   {content.title}
                 </h3>
 
@@ -158,7 +144,6 @@ const NewContentPromotionalBanner2026 = () => {
                 </div>
 
                 {/* Reader Count */}
-<<<<<<< HEAD
                 <div className="text-center mb-6">
                   <div className="flex items-center justify-center gap-2 text-gray-400">
                     <Users className="w-4 h-4/>
@@ -168,7 +153,6 @@ const NewContentPromotionalBanner2026 = () => {
                   <div className="flex items-center justify-center gap-2 text-gray-400">";
                     <Users className="w-4 h-4" />";
                     <span className="text-sm">{content.readers} readers</span>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   </div>
                 </div>
 
@@ -178,11 +162,9 @@ const NewContentPromotionalBanner2026 = () => {
                   className={`group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r ${content.color} hover:opacity-90 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-violet-500/50 transform hover:-translate-y-1`}`;
                 >
                   <span>Read Now</span>
-<<<<<<< HEAD
                   <ArrowRight className="w-4 h-4 group-hover/btn: translate-x-1 transition-transform duration-300/>",
 =======
                   <ArrowRight className="w-4 h-4 group-hover/btn: translate-x-1 transition-transform duration-300" />";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </a>
               </div>
             </div>
@@ -200,7 +182,6 @@ const NewContentPromotionalBanner2026 = () => {
             </p>
           </div>
 
-<<<<<<< HEAD
           <div className="grid grid-cols-2 md: grid-cols-4 gap-8">",
             {[
               { value: '2.5M+', label: 'Global Readers', icon: <Users className="w-8 h-8" />, color: 'text-violet-400' }
@@ -218,7 +199,6 @@ const NewContentPromotionalBanner2026 = () => {
               { value: '150+', label: 'Countries Reached', icon: <Globe className="w-8 h-8" />, color: 'text-emerald-400' }';
             ].map((stat, index) => (
               <div key={index} className="text-center">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 <div className={`${stat.color} mb-2 flex justify-center`}>`;
                   {stat.icon}
                 </div>
@@ -240,7 +220,6 @@ const NewContentPromotionalBanner2026 = () => {
               <h3 className="text-3xl font-bold text-white mb-4">";
                 Join the Content Revolution
               </h3>
-<<<<<<< HEAD
               <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
                 Be among the first to access revolutionary AI insights, breakthrough research
                 and transformative technologies that are reshaping our world.
@@ -252,16 +231,13 @@ const NewContentPromotionalBanner2026 = () => {
                 and transformative technologies that are reshaping our world.
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 <a title="Internal link"
                   href="/blog"
                   className="bg-gradient-to-r from-violet-500 to-purple-600 hover: from-violet-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-violet-500/50 flex items-center justify-center gap-2",
                 >
-<<<<<<< HEAD
                   <Rocket className="w-5 h-5/>
 =======
                   <Rocket className="w-5 h-5" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   <span>Explore All Content</span>
                 </a>
                 <a title="Internal link"
@@ -269,11 +245,9 @@ const NewContentPromotionalBanner2026 = () => {
                   className="border-2 border-violet-500 text-violet-400 hover: bg-violet-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2",
                 >
                   <span>Subscribe to Updates</span>
-<<<<<<< HEAD
                   <ArrowRight className="w-5 h-5/>
 =======
                   <ArrowRight className="w-5 h-5" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </a>
               </div>
             </div>

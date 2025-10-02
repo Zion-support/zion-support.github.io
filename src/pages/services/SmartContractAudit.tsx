@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Globe } from 'lucide-react';
@@ -15,80 +14,66 @@ Globe
 import Header from '../../components/Header';';
 import Footer from '../../components/Footer';';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 const SmartContractAudit: React.FC = () => {,
   const features = [
     {
       icon: Shield,,
-<<<<<<< HEAD
       title: "Comprehensive Security Analysis",",
       description: "Deep code analysis using static analysis, dynamic testing, and formal verification to identify vulnerabilities.",",
 =======
       title: "Comprehensive Security Analysis",";,
       description: "Deep code analysis using static analysis, dynamic testing, and formal verification to identify vulnerabilities.",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       benefit: "99.8% vulnerability detection rate",
     },
     {
       icon: Search,,
-<<<<<<< HEAD
       title: "Automated Vulnerability Scanning",",
       description: "AI-powered scanning tools that detect common smart contract vulnerabilities and security patterns.",",
 =======
       title: "Automated Vulnerability Scanning",";,
       description: "AI-powered scanning tools that detect common smart contract vulnerabilities and security patterns.",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       benefit: "100+ vulnerability patterns detected",
     },
     {
       icon: AlertTriangle,,
-<<<<<<< HEAD
       title: "Risk Assessment & Mitigation",",
       description: "Detailed risk analysis with prioritized recommendations and mitigation strategies.",",
 =======
       title: "Risk Assessment & Mitigation",";,
       description: "Detailed risk analysis with prioritized recommendations and mitigation strategies.",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       benefit: "Zero critical vulnerabilities in production",
     },
     {
       icon: CheckCircle,,
-<<<<<<< HEAD
       title: "Compliance Verification",",
       description: "Ensure compliance with industry standards, regulatory requirements, and best practices.",",
 =======
       title: "Compliance Verification",";,
       description: "Ensure compliance with industry standards, regulatory requirements, and best practices.",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       benefit: "100% compliance with standards",
     },
     {
       icon: Clock,,
-<<<<<<< HEAD
       title: "Fast Turnaround",",
       description: "Rapid audit completion with detailed reports delivered within 5-10 business days.",",
 =======
       title: "Fast Turnaround",";,
       description: "Rapid audit completion with detailed reports delivered within 5-10 business days.",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       benefit: "5-10 day delivery guarantee",
     },
     {
       icon: Users,,
-<<<<<<< HEAD
       title: "Expert Team",",
       description: "Certified blockchain security experts with extensive experience in smart contract auditing.",",
 =======
       title: "Expert Team",";,
       description: "Certified blockchain security experts with extensive experience in smart contract auditing.",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       benefit: "50+ successful audits completed",
     }
   ];
 
   const pricing = [
     {
-<<<<<<< HEAD
       name: "Basic Audit",
       price: "$2,500",
       period: "one-time",
@@ -200,13 +185,11 @@ const SmartContractAudit: React.FC = () => {,
         "Security training included"
       ],
       popular: false,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     }
   ];
 
   const testimonials = [
     {
-<<<<<<< HEAD
       name: "Michael Chen",",
       role: "CTO, DeFi Protocol",",
       content: "The smart contract audit identified 3 critical vulnerabilities that could have resulted in $50M in losses. The team's expertise saved our project and gave us confidence for mainnet launch.",",
@@ -214,12 +197,10 @@ const SmartContractAudit: React.FC = () => {,
       name: "Michael Chen",";,
       role: "CTO, DeFi Protocol",";,
       content: "The smart contract audit identified 3 critical vulnerabilities that could have resulted in $50M in losses. The team's expertise saved our project and gave us confidence for mainnet launch.",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       rating: 5,,
       company: "DeFi Protocol",
     },
     {
-<<<<<<< HEAD
       name: "Sarah Rodriguez",",
       role: "Founder, NFT Marketplace",",
       content: "Professional audit process with clear communication and actionable recommendations. The compliance verification helped us meet regulatory requirements for our marketplace launch.",",
@@ -227,12 +208,10 @@ const SmartContractAudit: React.FC = () => {,
       name: "Sarah Rodriguez",";,
       role: "Founder, NFT Marketplace",";,
       content: "Professional audit process with clear communication and actionable recommendations. The compliance verification helped us meet regulatory requirements for our marketplace launch.",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       rating: 5,,
       company: "NFT Marketplace",
     },
     {
-<<<<<<< HEAD
       name: "Dr. James Wilson",",
       role: "Head of Blockchain, FinTech",",
       content: "The enterprise audit package provided comprehensive security coverage for our multi-contract system. The formal verification process gave us mathematical proof of our contract's correctness.",",
@@ -240,7 +219,6 @@ const SmartContractAudit: React.FC = () => {,
       name: "Dr. James Wilson",";,
       role: "Head of Blockchain, FinTech",";,
       content: "The enterprise audit package provided comprehensive security coverage for our multi-contract system. The formal verification process gave us mathematical proof of our contract's correctness.",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       rating: 5,,
       company: "FinTech",
     }
@@ -248,7 +226,6 @@ const SmartContractAudit: React.FC = () => {,
 
   const auditTypes = [
     {
-<<<<<<< HEAD
       title: "DeFi Protocols",",
       icon: Globe,,
       description: "Comprehensive auditing for decentralized finance protocols including lending, borrowing, and trading platforms.",",
@@ -294,13 +271,11 @@ const SmartContractAudit: React.FC = () => {,
       icon: Users,,
       description: "Auditing governance contracts, voting mechanisms, and treasury management systems.",";,
       vulnerabilities: ["Vote manipulation", "Treasury exploits", "Proposal vulnerabilities", "Execution risks"]";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     }
   ];
 
   const process = [
     {
-<<<<<<< HEAD
       step: "01",",
       title: "Initial Assessment",",
       description: "Code review and architecture analysis to understand the smart contract functionality and design.",
@@ -356,7 +331,6 @@ const SmartContractAudit: React.FC = () => {,
     {
       step: "06",";,
       title: "Follow-up Support",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       description: "Ongoing support for vulnerability remediation and re-audit services.",
     }
   ];
@@ -367,21 +341,18 @@ const SmartContractAudit: React.FC = () => {,
         <title>Smart Contract Audit - Zion Tech Group | Blockchain Security Experts</title>
         <meta
           name="description"
-<<<<<<< HEAD
           content="Professional smart contract auditing services with 99.8% vulnerability detection rate. Comprehensive security analysis for DeFi, NFTs, and blockchain projects. 5-10 day delivery." /><meta name="keywords" content="smart contract audit, blockchain security, DeFi audit, NFT audit, smart contract security, vulnerability assessment, blockchain compliance" /><link rel="canonical" href="https://ziontechgroup.com/services/smart-contract-audit/>",
 =======
           content="Professional smart contract auditing services with 99.8% vulnerability detection rate. Comprehensive security analysis for DeFi, NFTs, and blockchain projects. 5-10 day delivery."
         />
         <meta name="keywords" content="smart contract audit, blockchain security, DeFi audit, NFT audit, smart contract security, vulnerability assessment, blockchain compliance" />";
         <link rel="canonical" href="https: //ziontechgroup.com/services/smart-contract-audit" />";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       </Helmet>
 
       <Header />
       
       <main className="min-h-screen bg-white">";
         {/* Hero Section */}
-<<<<<<< HEAD
         <section className="bg-gradient-to-br from-red-900 via-orange-800 to-yellow-900 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
             <div className="text-center">
@@ -405,16 +376,13 @@ const SmartContractAudit: React.FC = () => {,
                 Comprehensive security analysis for DeFi, NFTs, and blockchain projects.
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 <a
                   href="/contact"
                   className="inline-flex items-center px-8 py-4 bg-red-600 hover: bg-red-700 text-white font-semibold rounded-lg transition-colors",
                 >
-<<<<<<< HEAD
                   <Phone className="w-5 h-5 mr-2/>
 =======
                   <Phone className="w-5 h-5 mr-2" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   Request Quote
                 </a>
                 <a
@@ -422,11 +390,9 @@ const SmartContractAudit: React.FC = () => {,
                   className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover: bg-white hover:text-red-900 font-semibold rounded-lg transition-colors",
                 >
                   View Pricing
-<<<<<<< HEAD
                   <ArrowRight className="w-5 h-5 ml-2/>
 =======
                   <ArrowRight className="w-5 h-5 ml-2" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </a>
               </div>
             </div>
@@ -434,7 +400,6 @@ const SmartContractAudit: React.FC = () => {,
         </section>
 
         {/* Key Benefits */}
-<<<<<<< HEAD
         <section className="py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
             <div className="text-center mb-12">
@@ -444,7 +409,6 @@ const SmartContractAudit: React.FC = () => {,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
             <div className="text-center mb-12">";
               <h2 className="text-4xl font-bold text-gray-900 mb-4">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 Why Choose Our Smart Contract Auditing Services?
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
@@ -452,7 +416,6 @@ const SmartContractAudit: React.FC = () => {,
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-4 gap-8">",
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-red-100 rounded-full mb-4">
@@ -462,12 +425,10 @@ const SmartContractAudit: React.FC = () => {,
               <div className="text-center">";
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-red-100 rounded-full mb-4">";
                   <Shield className="w-8 h-8 text-red-600" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">99.8% Detection Rate</h3>";
                 <p className="text-gray-600">Industry-leading vulnerability detection</p>";
               </div>
-<<<<<<< HEAD
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-4">
                   <Clock className="w-8 h-8 text-orange-600/>
@@ -475,12 +436,10 @@ const SmartContractAudit: React.FC = () => {,
               <div className="text-center">";
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-4">";
                   <Clock className="w-8 h-8 text-orange-600" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">5-10 Day Delivery</h3>";
                 <p className="text-gray-600">Fast turnaround guaranteed</p>";
               </div>
-<<<<<<< HEAD
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-yellow-100 rounded-full mb-4">
                   <Users className="w-8 h-8 text-yellow-600/>
@@ -488,12 +447,10 @@ const SmartContractAudit: React.FC = () => {,
               <div className="text-center">";
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-yellow-100 rounded-full mb-4">";
                   <Users className="w-8 h-8 text-yellow-600" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">50+ Audits Completed</h3>";
                 <p className="text-gray-600">Proven track record of success</p>";
               </div>
-<<<<<<< HEAD
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
                   <CheckCircle className="w-8 h-8 text-green-600/>
@@ -501,7 +458,6 @@ const SmartContractAudit: React.FC = () => {,
               <div className="text-center">";
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">";
                   <CheckCircle className="w-8 h-8 text-green-600" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">100% Compliance</h3>";
                 <p className="text-gray-600">Meet all regulatory standards</p>";
@@ -511,7 +467,6 @@ const SmartContractAudit: React.FC = () => {,
         </section>
 
         {/* Audit Types */}
-<<<<<<< HEAD
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
             <div className="text-center mb-16">
@@ -521,7 +476,6 @@ const SmartContractAudit: React.FC = () => {,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
             <div className="text-center mb-16">";
               <h2 className="text-4xl font-bold text-gray-900 mb-4">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 Specialized Audit Services
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
@@ -529,7 +483,6 @@ const SmartContractAudit: React.FC = () => {,
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">",
               {auditTypes.map((audit, index) => {
                 const Icon = audit.icon;
@@ -565,7 +518,6 @@ const SmartContractAudit: React.FC = () => {,
                           <li key={vulnIndex} className="flex items-center text-sm">";
                             <AlertTriangle className="w-4 h-4 text-orange-500 mr-2 flex-shrink-0" />";
                             <span className="text-gray-700">{vuln}</span>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                           </li>
                         ))}
                       </ul>
@@ -578,7 +530,6 @@ const SmartContractAudit: React.FC = () => {,
         </section>
 
         {/* Process */}
-<<<<<<< HEAD
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
             <div className="text-center mb-16">
@@ -588,7 +539,6 @@ const SmartContractAudit: React.FC = () => {,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
             <div className="text-center mb-16">";
               <h2 className="text-4xl font-bold text-gray-900 mb-4">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 Our Audit Process
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
@@ -596,11 +546,9 @@ const SmartContractAudit: React.FC = () => {,
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
 =======
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               {process.map((step, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">";
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-red-100 rounded-lg mb-4">";
@@ -615,7 +563,6 @@ const SmartContractAudit: React.FC = () => {,
         </section>
 
         {/* Features */}
-<<<<<<< HEAD
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
             <div className="text-center mb-16">
@@ -625,7 +572,6 @@ const SmartContractAudit: React.FC = () => {,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
             <div className="text-center mb-16">";
               <h2 className="text-4xl font-bold text-gray-900 mb-4">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 Advanced Security Analysis
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
@@ -633,7 +579,6 @@ const SmartContractAudit: React.FC = () => {,
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
               {features.map((feature, index) => {
                 const Icon = feature.icon;
@@ -659,7 +604,6 @@ const SmartContractAudit: React.FC = () => {,
                     <p className="text-gray-600 mb-4">{feature.description}</p>";
                     <div className="inline-flex items-center text-green-600 font-semibold text-sm">";
                       <CheckCircle className="w-4 h-4 mr-1" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                       {feature.benefit}
                     </div>
                   </div>
@@ -670,7 +614,6 @@ const SmartContractAudit: React.FC = () => {,
         </section>
 
         {/* Pricing */}
-<<<<<<< HEAD
         <section id="pricing" className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
             <div className="text-center mb-16">
@@ -680,7 +623,6 @@ const SmartContractAudit: React.FC = () => {,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
             <div className="text-center mb-16">";
               <h2 className="text-4xl font-bold text-gray-900 mb-4">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 Transparent Pricing for Every Project Size
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
@@ -688,11 +630,9 @@ const SmartContractAudit: React.FC = () => {,
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-3 gap-8">",
 =======
             <div className="grid md: grid-cols-3 gap-8">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               {pricing.map((plan, index) => (
                 <div key={index} className={`bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? 'ring-2 ring-red-500 relative' : ''}`}>`;
                   {plan.popular && (
@@ -712,7 +652,6 @@ const SmartContractAudit: React.FC = () => {,
                   </div>
                   <ul className="space-y-4 mb-8">";
                     {plan.features.map((feature, featureIndex) => (
-<<<<<<< HEAD
                       <li key={featureIndex} className="flex items-center">
                         <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0/>
                         <span className="text-gray-700">{feature}</span>
@@ -720,7 +659,6 @@ const SmartContractAudit: React.FC = () => {,
                       <li key={featureIndex} className="flex items-center">";
                         <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />";
                         <span className="text-gray-700">{feature}</span>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                       </li>
                     ))}
                   </ul>
@@ -729,11 +667,9 @@ const SmartContractAudit: React.FC = () => {,
                     className={
 `w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${`;
 plan.popular
-<<<<<<< HEAD
 ? 'bg-red-600 text-white hover:bg-red-700'
 =======
 ? 'bg-red-600 text-white hover: bg-red-700',';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
 }`}`;
                   >
@@ -750,18 +686,15 @@ plan.popular
                 className="inline-flex items-center text-red-600 hover: text-red-700 font-semibold",
               >
                 Contact our Security Team
-<<<<<<< HEAD
                 <ArrowRight className="w-4 h-4 ml-1/>
 =======
                 <ArrowRight className="w-4 h-4 ml-1" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </a>
             </div>
           </div>
         </section>
 
         {/* Testimonials */}
-<<<<<<< HEAD
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
             <div className="text-center mb-16">
@@ -771,7 +704,6 @@ plan.popular
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
             <div className="text-center mb-16">";
               <h2 className="text-4xl font-bold text-gray-900 mb-4">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 What Our Clients Say
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
@@ -779,20 +711,16 @@ plan.popular
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-3 gap-8">",
 =======
             <div className="grid md: grid-cols-3 gap-8">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">";
                   <div className="flex items-center mb-4">";
                     {[...Array(testimonial.rating)].map((_, i) => (
-<<<<<<< HEAD
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current/>
 =======
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     ))}
                   </div>
                   <blockquote className="text-gray-700 mb-6 italic">";
@@ -810,7 +738,6 @@ plan.popular
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 bg-gradient-to-br from-red-900 via-orange-800 to-yellow-900 text-white">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">",
             <h2 className="text-4xl font-bold mb-6">
@@ -818,26 +745,21 @@ plan.popular
         <section className="py-20 bg-gradient-to-br from-red-900 via-orange-800 to-yellow-900 text-white">";
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">";,
             <h2 className="text-4xl font-bold mb-6">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               Ready to Secure Your Smart Contracts?
             </h2>
             <p className="text-xl text-red-100 max-w-3xl mx-auto mb-8">";
               Protect your blockchain project with professional smart contract auditing from certified security experts.
             </p>
-<<<<<<< HEAD
             <div className="flex flex-col sm: flex-row gap-4 justify-center">",
 =======
             <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               <a
                 href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-red-600 hover: bg-red-700 text-white font-semibold rounded-lg transition-colors",
               >
-<<<<<<< HEAD
                 <Phone className="w-5 h-5 mr-2/>
 =======
                 <Phone className="w-5 h-5 mr-2" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 Request Free Quote
               </a>
               <a
@@ -845,11 +767,9 @@ plan.popular
                 className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover: bg-white hover:text-red-900 font-semibold rounded-lg transition-colors",
               >
                 View Audit Reports
-<<<<<<< HEAD
                 <ArrowRight className="w-5 h-5 ml-2/>
 =======
                 <ArrowRight className="w-5 h-5 ml-2" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </a>
             </div>
           </div>

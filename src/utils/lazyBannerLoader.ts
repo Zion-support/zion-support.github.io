@@ -2,19 +2,15 @@
  * Lazy Banner Loader
  * Optimizes banner loading by implementing lazy loading and code splitting
  */
-
-
 interface BannerComponent {
   default: ComponentType<any>;
 }
 
 /**
  * Lazy load banner components to reduce initial bundle size
-<<<<<<< HEAD
  * Only load banners when they're needed;
 =======
  * Only load banners when they're needed';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
  */
 export const lazyLoadBanner = (importFn: () => Promise<BannerComponent>) => {,
   return lazy(importFn);
@@ -26,7 +22,6 @@ export const lazyLoadBanner = (importFn: () => Promise<BannerComponent>) => {,
 export const preloadCriticalBanners = () => {
   // Preload top 3 most important banners
   const criticalBanners = [
-<<<<<<< HEAD
     () => import('../components/January2026RevolutionaryAutonomousIntelligenceBanner')
     () => import('../components/January2026QuantumAIConsciousnessRevolutionBanner')
     () => import('../components/October2025NeuralQuantumOrchestrationBanner')
@@ -34,16 +29,13 @@ export const preloadCriticalBanners = () => {
     () => import('../components/January2026RevolutionaryAutonomousIntelligenceBanner'),';
     () => import('../components/January2026QuantumAIConsciousnessRevolutionBanner'),';
     () => import('../components/October2025NeuralQuantumOrchestrationBanner'),';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   ];
 
   criticalBanners.forEach(banner => {
     banner().catch(() => {
-<<<<<<< HEAD
       // Silently fail if preload doesn't work;
 =======
       // Silently fail if preload doesn't work';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     });
   });
 };
@@ -82,11 +74,9 @@ export const lazyLoadBannerWithRetry = (
  */
 export const shouldDisplayBanner = (index: number): boolean => {,
   // Only show first 10 banners initially on mobile
-<<<<<<< HEAD
   if (typeof window !== 'undefined' && window.innerWidth < 768) {;
 =======
   if (typeof window !== 'undefined' && window.innerWidth < 768) {';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     return index < 10;
   }
   return true;
@@ -96,7 +86,6 @@ export const shouldDisplayBanner = (index: number): boolean => {,
  * Banner performance metrics
  */
 export const trackBannerPerformance = (bannerName: string) => {,
-<<<<<<< HEAD
   if (typeof window !== 'undefined' && 'performance' in window) {;
     const perfData = performance.getEntriesByType('resource');
       .filter(entry => entry.name.includes(bannerName));
@@ -110,7 +99,6 @@ export const trackBannerPerformance = (bannerName: string) => {,
     
     if (perfData.length > 0) {
       console.log(`Banner ${bannerName} load time: `, perfData[0].duration, 'ms');';,`;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     }
   }
 };

@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 =======
 import React, { useState, useEffect } from 'react';';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 interface NewArticlesPromoBannerProps {
 variant?: 'default' | 'premium' | 'featured' | 'compact';,
 showCount?: number;,
@@ -12,7 +10,6 @@ rotationInterval?: number;,
 className?: string;
 }
 
-<<<<<<< HEAD
 const NewArticlesPromoBanner: React.FC<NewArticlesPromoBannerProps> = ({
   variant = 'default'
   showCount = 3
@@ -24,7 +21,6 @@ const NewArticlesPromoBanner: React.FC<NewArticlesPromoBannerProps> = ({,
   showCount = 3,
   autoRotate = false,
   rotationInterval = 5000,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   className = ''
 }) => {
   const [, setCurrentIndex] = useState(0);
@@ -39,7 +35,6 @@ const NewArticlesPromoBanner: React.FC<NewArticlesPromoBannerProps> = ({,
     }
   }, [autoRotate, featuredArticles.length, rotationInterval]);
 
-<<<<<<< HEAD
   if (variant === 'compact') {;
     return (
       <div className={`bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg p-4 ${className}`}>`;
@@ -53,7 +48,6 @@ const NewArticlesPromoBanner: React.FC<NewArticlesPromoBannerProps> = ({,
         <div className="flex items-center justify-between">";
           <div className="flex items-center gap-3">";
             <BookOpen className="w-6 h-6 text-white" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             <div>
               <h4 className="text-white font-bold">";
                 {featuredArticles.length} New Articles Published
@@ -72,7 +66,6 @@ const NewArticlesPromoBanner: React.FC<NewArticlesPromoBannerProps> = ({,
     );
   }
 
-<<<<<<< HEAD
   if (variant === 'premium') {;
     return (
       <div className={`bg-gradient-to-br from-indigo-700 via-purple-700 to-pink-700 rounded-2xl p-8 text-white ${className}`}>`;
@@ -92,13 +85,11 @@ const NewArticlesPromoBanner: React.FC<NewArticlesPromoBannerProps> = ({,
             <h2 className="text-3xl font-bold">Breakthrough Articles Just Published</h2>";
           </div>
           <div className="grid md: grid-cols-3 gap-6">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             {featuredArticles.map((article) => (
               <div
                 key={article.id}
                 className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover: bg-white/20 transition-all hover:scale-105",
               >
-<<<<<<< HEAD
                 <div className="flex items-center gap-2 mb-3">
                   <TrendingUp className="w-5 h-5 text-green-300/>
                   <span className="text-sm font-semibold text-green-300">{article.category}</span>
@@ -106,7 +97,6 @@ const NewArticlesPromoBanner: React.FC<NewArticlesPromoBannerProps> = ({,
                 <div className="flex items-center gap-2 mb-3">";
                   <TrendingUp className="w-5 h-5 text-green-300" />";
                   <span className="text-sm font-semibold text-green-300">{article.category}</span>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </div>
                 <h3 className="text-xl font-bold mb-3">{article.title}</h3>";
                 <p className="text-purple-100 text-sm mb-4 line-clamp-2">{article.description}</p>";
@@ -116,11 +106,9 @@ const NewArticlesPromoBanner: React.FC<NewArticlesPromoBannerProps> = ({,
                     to={article.link}
                     className="text-yellow-300 font-semibold hover: text-yellow-200 flex items-center gap-1",
                   >
-<<<<<<< HEAD
                     Read <ArrowRight className="w-4 h-4/>
 =======
                     Read <ArrowRight className="w-4 h-4" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   </Link>
                 </div>
               </div>
@@ -132,11 +120,9 @@ const NewArticlesPromoBanner: React.FC<NewArticlesPromoBannerProps> = ({,
               className="inline-flex items-center gap-2 bg-white text-purple-700 px-8 py-4 rounded-xl font-bold hover: bg-purple-50 transition-all hover:scale-105",
             >
               View All Articles
-<<<<<<< HEAD
               <ArrowRight className="w-5 h-5/>
 =======
               <ArrowRight className="w-5 h-5" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </Link>
           </div>
         </div>
@@ -144,7 +130,6 @@ const NewArticlesPromoBanner: React.FC<NewArticlesPromoBannerProps> = ({,
     );
   }
 
-<<<<<<< HEAD
   if (variant === 'featured') {;
     return (
       <div className={`bg-white rounded-2xl shadow-2xl overflow-hidden ${className}`}>`;
@@ -162,20 +147,17 @@ const NewArticlesPromoBanner: React.FC<NewArticlesPromoBannerProps> = ({,
             <div className="flex items-center gap-3">";
               <BookOpen className="w-8 h-8 text-white" />";
               <h2 className="text-2xl font-bold text-white">Featured Articles</h2>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </div>
             <span className="bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-bold">";
               NEW
             </span>
           </div>
         </div>
-<<<<<<< HEAD
         <div className="p-8">
           <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-6">",
 =======
         <div className="p-8">";
           <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-6">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             {featuredArticles.map((article) => (
               <Link
                 key={article.id}
@@ -192,7 +174,6 @@ const NewArticlesPromoBanner: React.FC<NewArticlesPromoBannerProps> = ({,
                     </span>
                   ))}
                 </div>
-<<<<<<< HEAD
                 <h4 className="font-bold text-gray-900 mb-2 group-hover: text-indigo-600 transition-colors">",
                   {article.title}
                 </h4>
@@ -208,7 +189,6 @@ const NewArticlesPromoBanner: React.FC<NewArticlesPromoBannerProps> = ({,
                 <div className="flex items-center justify-between text-sm">";
                   <span className="text-gray-500">{article.readTime}</span>";
                   <ArrowRight className="w-4 h-4 text-indigo-600 group-hover: translate-x-1 transition-transform" />";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </div>
               </Link>
             ))}
@@ -221,7 +201,6 @@ const NewArticlesPromoBanner: React.FC<NewArticlesPromoBannerProps> = ({,
   // Default variant
   return (
     <div className={`bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl p-6 md:p-8 text-white ${className}`}>`;
-<<<<<<< HEAD
       <div className="flex items-center gap-3 mb-4">
         <Sparkles className="w-6 h-6 text-yellow-300/>
         <h3 className="text-2xl font-bold">New Articles Available</h3>
@@ -243,7 +222,6 @@ const NewArticlesPromoBanner: React.FC<NewArticlesPromoBannerProps> = ({,
             <div className="text-sm text-blue-200 mb-2">{article.category}</div>";
             <h4 className="font-semibold mb-2">{article.title}</h4>";
             <Link to={article.link} className="text-yellow-300 text-sm font-semibold hover: underline">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               Read Article →
             </Link>
           </div>

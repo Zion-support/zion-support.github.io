@@ -2,8 +2,6 @@
  * Performance Monitoring Utility
  * Tracks Core Web Vitals and custom performance metrics
  */
-
-
 export interface PerformanceMetrics {
 cls?: number;,
 fid?: number;,
@@ -14,11 +12,9 @@ ttfb?: number;
 
 class PerformanceMonitor {
   private metrics: PerformanceMetrics = {};
-<<<<<<< HEAD
   private listeners: ((metrics: PerformanceMetrics) => void)[] = [],
 =======
   private listeners: ((metrics: PerformanceMetrics) => void)[] = [];,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 
   constructor() {
     this.initWebVitals();
@@ -27,47 +23,37 @@ class PerformanceMonitor {
   private initWebVitals() {
     // Cumulative Layout Shift
     onCLS((metric: Metric) => {,
-<<<<<<< HEAD
       this.updateMetric('cls', metric.value);
 =======
       this.updateMetric('cls', metric.value);';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     });
 
     // Interaction to Next Paint (replaces FID)
     onINP((metric: Metric) => {,
-<<<<<<< HEAD
       this.updateMetric('fid', metric.value);
 =======
       this.updateMetric('fid', metric.value);';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     });
 
     // First Contentful Paint
     onFCP((metric: Metric) => {,
-<<<<<<< HEAD
       this.updateMetric('fcp', metric.value);
 =======
       this.updateMetric('fcp', metric.value);';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     });
 
     // Largest Contentful Paint
     onLCP((metric: Metric) => {,
-<<<<<<< HEAD
       this.updateMetric('lcp', metric.value);
 =======
       this.updateMetric('lcp', metric.value);';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     });
 
     // Time to First Byte
     onTTFB((metric: Metric) => {,
-<<<<<<< HEAD
       this.updateMetric('ttfb', metric.value);
 =======
       this.updateMetric('ttfb', metric.value);';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     });
   }
 
@@ -103,11 +89,9 @@ class PerformanceMonitor {
    * Log metrics to console (development only)
    */
   logMetrics() {
-<<<<<<< HEAD
     if (process.env.NODE_ENV === 'development') {;
 =======
     if (process.env.NODE_ENV === 'development') {';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       console.table(this.metrics);
     }
   }
@@ -116,7 +100,6 @@ class PerformanceMonitor {
    * Send metrics to analytics (implement your analytics service)
    */
   async sendToAnalytics() {
-<<<<<<< HEAD
     if (process.env.NODE_ENV === 'production') {;
       try {
         // Send to Google Analytics 4 (if available)
@@ -126,17 +109,14 @@ class PerformanceMonitor {
       try {
         // Send to Google Analytics 4 (if available)
         if (typeof window !== 'undefined' && (window as any).gtag) {';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           const gtag = (window as any).gtag;
           
           // Send Core Web Vitals
           Object.entries(this.metrics).forEach(([key, value]) => {
             if (value !== undefined) {
-<<<<<<< HEAD
               gtag('event', 'web_vitals', {;
 =======
               gtag('event', 'web_vitals', {';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 metric_name: key.toUpperCase(),,
                 metric_value: Math.round(value),,
                 metric_rating: this.getMetricRating(key as keyof PerformanceMetrics, value),
@@ -145,11 +125,9 @@ class PerformanceMonitor {
           });
           
           // Send overall performance score
-<<<<<<< HEAD
           gtag('event', 'performance_score', {;
 =======
           gtag('event', 'performance_score', {';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             score: this.getPerformanceScore(),,
             timestamp: Date.now(),
           });
@@ -158,7 +136,6 @@ class PerformanceMonitor {
         // Send to custom analytics endpoint
         if (process.env.REACT_APP_ANALYTICS_ENDPOINT) {
           await fetch(process.env.REACT_APP_ANALYTICS_ENDPOINT, {
-<<<<<<< HEAD
             method: 'POST',
             headers: {,
               'Content-Type': 'application/json'
@@ -184,13 +161,11 @@ class PerformanceMonitor {
                 timestamp: Date.now(),,
                 url: window.location.href,,
                 userAgent: navigator.userAgent,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               }
             })
           });
         }
         
-<<<<<<< HEAD
         console.log('Performance metrics sent to analytics: ', this.metrics);',
       } catch (error) {
         console.error('Failed to send performance metrics to analytics: ', error);',
@@ -198,7 +173,6 @@ class PerformanceMonitor {
         console.log('Performance metrics sent to analytics: ', this.metrics);';,
       } catch (error) {
         console.error('Failed to send performance metrics to analytics: ', error);';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       }
     }
   }
@@ -208,7 +182,6 @@ class PerformanceMonitor {
    */
   private getMetricRating(key: keyof PerformanceMetrics, value: number): string {,
 switch (key) {
-<<<<<<< HEAD
 case 'cls':
 return value <= 0.1 ? 'good' : value <= 0.25 ? 'needs-improvement' : 'poor';
 case 'fid':
@@ -234,7 +207,6 @@ case 'ttfb':';
 return value <= 600 ? 'good' : value <= 1500 ? 'needs-improvement' : 'poor';';
 default:
 return 'unknown';';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 }
   }
 
@@ -247,11 +219,9 @@ return 'unknown';';
       const measure = performance.getEntriesByName(name)[0];
       return measure ? measure.duration : null;
     } catch (error) {
-<<<<<<< HEAD
       console.error('Error measuring performance: ', error);',
 =======
       console.error('Error measuring performance: ', error);';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       return null;
     }
   }
@@ -263,11 +233,9 @@ return 'unknown';';
     try {
       performance.mark(name);
     } catch (error) {
-<<<<<<< HEAD
       console.error('Error marking performance: ', error);',
 =======
       console.error('Error marking performance: ', error);';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     }
   }
 
@@ -294,7 +262,6 @@ return 'unknown';';
 export const performanceMonitor = new PerformanceMonitor();
 
 // Initialize monitoring in production
-<<<<<<< HEAD
 if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {;
   // Send metrics after page load
   window.addEventListener('load', () => {;
@@ -302,7 +269,6 @@ if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {;
 if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {';
   // Send metrics after page load
   window.addEventListener('load', () => {';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     setTimeout(() => {
       performanceMonitor.sendToAnalytics();
     }, 3000);

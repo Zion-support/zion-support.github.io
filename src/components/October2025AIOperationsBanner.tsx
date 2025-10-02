@@ -2,7 +2,6 @@
 const October2025AIOperationsBanner = () => {
   const newArticles = [
     {
-<<<<<<< HEAD
       title: "AI-Powered DevSecOps Automation",",
       description: "Achieve 99.2% vulnerability detection with 87% auto-remediation and 847% deployment acceleration",",
       link: "/blog/ai-2025-oct-01-devsecops-automation-revolution",",
@@ -46,17 +45,14 @@ const October2025AIOperationsBanner = () => {
       link: "/blog/ai-2025-oct-01-real-time-ai-observability-platform",";,
       icon: Activity,,
       stats: "98.7% Prevention | 17,488% ROI",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       color: "from-purple-500 to-pink-500",
     }
   ];
 
   return (
-<<<<<<< HEAD
     <div className="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-16 px-4 sm: px-6 lg:px-8 relative overflow-hidden">",
 =======
     <div className="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-16 px-4 sm: px-6 lg:px-8 relative overflow-hidden">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       {/* Animated background elements */}
       <div className="absolute inset-0 opacity-20">";
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl animate-pulse"></div>";
@@ -65,7 +61,6 @@ const October2025AIOperationsBanner = () => {
 
       <div className="max-w-7xl mx-auto relative z-10">";
         {/* Header */}
-<<<<<<< HEAD
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/20 rounded-full border border-blue-400/30 mb-4">
             <Activity className="w-4 h-4 text-blue-400 animate-pulse/>
@@ -83,7 +78,6 @@ const October2025AIOperationsBanner = () => {
             </span>
           </div>
           <h2 className="text-4xl md: text-5xl font-bold text-white mb-4">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             Transform Your Enterprise Operations
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">";
@@ -92,11 +86,9 @@ const October2025AIOperationsBanner = () => {
         </div>
 
         {/* Articles Grid */}
-<<<<<<< HEAD
         <div className="grid md: grid-cols-3 gap-6 mb-8">",
 =======
         <div className="grid md: grid-cols-3 gap-6 mb-8">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           {newArticles.map((article, index) => {
             const Icon = article.icon;
             return (
@@ -112,7 +104,6 @@ const October2025AIOperationsBanner = () => {
                 <div className="relative z-10">";
                   {/* Icon */}
                   <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${article.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>`;
-<<<<<<< HEAD
                     <Icon className="w-6 h-6 text-white/>
                   </div>
 
@@ -124,7 +115,6 @@ const October2025AIOperationsBanner = () => {
 
                   {/* Title */}
                   <h3 className="text-xl font-bold text-white mb-2 group-hover: text-blue-300 transition-colors">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     {article.title}
                   </h3>
 
@@ -141,7 +131,6 @@ const October2025AIOperationsBanner = () => {
                   </div>
 
                   {/* CTA */}
-<<<<<<< HEAD
                   <div className="flex items-center text-blue-400 group-hover: text-blue-300 transition-colors">",
                     <span className="text-sm font-semibold mr-2">Read Full Guide</span>
                     <ArrowRight className="w-4 h-4 group-hover: translate-x-1 transition-transform/>",
@@ -149,7 +138,6 @@ const October2025AIOperationsBanner = () => {
                   <div className="flex items-center text-blue-400 group-hover: text-blue-300 transition-colors">";,
                     <span className="text-sm font-semibold mr-2">Read Full Guide</span>";
                     <ArrowRight className="w-4 h-4 group-hover: translate-x-1 transition-transform" />";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   </div>
                 </div>
               </Link>
@@ -158,23 +146,19 @@ const October2025AIOperationsBanner = () => {
         </div>
 
         {/* Bottom CTA */}
-<<<<<<< HEAD
         <div className="text-center">
           <div className="inline-flex flex-col sm: flex-row gap-4 items-center">",
 =======
         <div className="text-center">";
           <div className="inline-flex flex-col sm: flex-row gap-4 items-center">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             <Link
               to="/blog"
               className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-500 text-white font-bold rounded-xl hover: from-blue-500 hover:to-blue-400 transition-all duration-300 shadow-lg hover:shadow-blue-500/50 group",
             >
               <span>Explore All AI Insights</span>
-<<<<<<< HEAD
               <ArrowRight className="w-5 h-5 group-hover: translate-x-1 transition-transform/>",
 =======
               <ArrowRight className="w-5 h-5 group-hover: translate-x-1 transition-transform" />";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </Link>
             <Link
               to="/contact"
@@ -186,11 +170,9 @@ const October2025AIOperationsBanner = () => {
         </div>
 
         {/* Trust Indicators */}
-<<<<<<< HEAD
         <div className="mt-12 grid grid-cols-2 md: grid-cols-4 gap-6 text-center">",
 =======
         <div className="mt-12 grid grid-cols-2 md: grid-cols-4 gap-6 text-center">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           <div>
             <div className="text-3xl font-bold text-white mb-1">99.2%</div>";
             <div className="text-sm text-gray-400">Security Detection</div>";

@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 import React from 'react';
 =======
 import React from 'react';';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 const AIInnovationAdvertisingBanner: React.FC = () => {,
 return (
 <section className="py-16 bg-gradient-to-r from-blue-900/40 via-purple-900/40 to-pink-900/40 border-y border-blue-500/20">";
@@ -21,7 +19,6 @@ Exclusive AI Innovation Access
 Get early access to our breakthrough AI technologies and transform your enterprise with cutting-edge solutions.
 </p>
 </div>
-<<<<<<< HEAD
 <div className="grid md:grid-cols-2 gap-8 mb-12">
 {/* Left Side - Features */
 }
@@ -88,7 +85,6 @@ Get early access to our breakthrough AI technologies and transform your enterpri
               ].map((feature, index) => (
                 <div key={index} className="flex items-start gap-4 p-4 bg-white/5 rounded-xl border border-white/10 hover: border-blue-500/50 transition-all duration-300">";,
                   <div className="text-3xl">{feature.icon}</div>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   <div>
                     <h4 className="text-lg font-bold text-white mb-2">{feature.title}</h4>";
                     <p className="text-gray-400 text-sm">{feature.description}</p>";
@@ -130,7 +126,6 @@ Get early access to our breakthrough AI technologies and transform your enterpri
                 <span className="text-green-400">✓</span>";
                 <span className="text-gray-300">Dedicated AI Engineer</span>";
               </div>
-<<<<<<< HEAD
               <div className="flex items-center gap-3">
                 <span className="text-green-400">✓</span>
                 <span className="text-gray-300">ROI Guarantee: 300%+ in 6 months</span>",
@@ -138,7 +133,6 @@ Get early access to our breakthrough AI technologies and transform your enterpri
               <div className="flex items-center gap-3">";
                 <span className="text-green-400">✓</span>";
                 <span className="text-gray-300">ROI Guarantee: 300%+ in 6 months</span>";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
             </div>
 
@@ -172,7 +166,6 @@ Get early access to our breakthrough AI technologies and transform your enterpri
             <p className="text-gray-400">Join 500+ enterprises already transforming with our AI solutions</p>";
           </div>
           
-<<<<<<< HEAD
           <div className="grid md: grid-cols-3 gap-6">",
             {[
               {
@@ -205,7 +198,6 @@ Get early access to our breakthrough AI technologies and transform your enterpri
                 result: '99.9% uptime achieved',';,
                 testimonial: 'Meta-cognitive AI improved our decision-making accuracy by 95%',
               }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             ].map((testimonial, index) => (
               <div key={index} className="text-center p-6 bg-white/5 rounded-xl border border-white/10">";
                 <div className="text-yellow-400 text-2xl mb-2">★★★★★</div>";

@@ -28,11 +28,9 @@ export default function AIMicroSAAS(): React.JSX.Element {
       price: "$299 - $1,499/month",
       eta: "1-2 weeks",
       category: "Content AI",
-<<<<<<< HEAD
       icon: undefined,
 =======
       icon: FileText,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-73c1
       features: [
         "AI-generated blog posts, social media content, and email campaigns",
         "SEO optimization with real-time keyword analysis",
@@ -58,11 +56,9 @@ export default function AIMicroSAAS(): React.JSX.Element {
       price: "$199 - $999/month",
       eta: "1-2 weeks",
       category: "Process Automation",
-<<<<<<< HEAD
       icon: undefined,
 =======
       icon: Zap,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-73c1
       features: [
         "Visual workflow builder with drag-and-drop interface",
         "500+ pre-built integrations (Slack, Salesforce, HubSpot, etc.)",
@@ -88,11 +84,9 @@ export default function AIMicroSAAS(): React.JSX.Element {
       price: "$399 - $1,999/month",
       eta: "2-3 weeks",
       category: "Business Intelligence",
-<<<<<<< HEAD
       icon: undefined,
 =======
       icon: BarChart3,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-73c1
       features: [
         "Real-time data visualization and custom dashboards",
         "AI-powered insights and anomaly detection",
@@ -118,11 +112,9 @@ export default function AIMicroSAAS(): React.JSX.Element {
       price: "$599 - $2,499/month",
       eta: "2-4 weeks",
       category: "Customer Analytics",
-<<<<<<< HEAD
       icon: undefined,
 =======
       icon: Users,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-73c1
       features: [
         "Real-time customer journey mapping",
         "AI-powered segmentation and targeting",
@@ -148,11 +140,9 @@ export default function AIMicroSAAS(): React.JSX.Element {
       price: "$799 - $3,999/month",
       eta: "2-3 weeks",
       category: "Cybersecurity",
-<<<<<<< HEAD
       icon: undefined,
 =======
       icon: Shield,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-73c1
       features: [
         "AI-powered threat detection and response",
         "Automated incident response workflows",
@@ -178,11 +168,9 @@ export default function AIMicroSAAS(): React.JSX.Element {
       price: "$1,299 - $4,999/month",
       eta: "3-4 weeks",
       category: "Voice AI",
-<<<<<<< HEAD
       icon: undefined,
 =======
       icon: MessageSquare,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-73c1
       features: [
         "Natural language processing with 95% accuracy",
         "Multi-language support with accent adaptation",

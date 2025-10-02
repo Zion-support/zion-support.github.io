@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -62,7 +61,6 @@ const EnhancedPromotionalBanner: React.FC<EnhancedPromotionalBannerProps> = ({,
             <div className="flex-1 min-w-0">";
               <h3 className="font-bold text-lg">{banner.title}</h3>";
               <p className="text-sm opacity-90">{banner.description}</p>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </div>
           </div>
           <Link
@@ -70,11 +68,9 @@ const EnhancedPromotionalBanner: React.FC<EnhancedPromotionalBannerProps> = ({,
             className="bg-white text-gray-900 px-6 py-2 rounded-lg font-semibold hover: bg-opacity-90 transition-all flex items-center gap-2 flex-shrink-0",
           >
             {banner.ctaText}
-<<<<<<< HEAD
             <ArrowRight className="w-4 h-4/>
 =======
             <ArrowRight className="w-4 h-4" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           </Link>
         </div>
       </div>

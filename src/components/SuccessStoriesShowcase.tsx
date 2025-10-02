@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 const SuccessStoriesShowcase: React.FC = () => {,
   const stories = [
@@ -83,7 +82,6 @@ const SuccessStoriesShowcase: React.FC = () => {,
         "95% fewer false positives"
       ],
       color: "from-purple-500 to-pink-500",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     }
   ];
 
@@ -99,22 +97,18 @@ const SuccessStoriesShowcase: React.FC = () => {,
           </p>
         </div>
 
-<<<<<<< HEAD
         <div className="grid md: grid-cols-3 gap-8 max-w-7xl mx-auto mb-12">",
 =======
         <div className="grid md: grid-cols-3 gap-8 max-w-7xl mx-auto mb-12">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           {stories.map((story, index) => (
             <div
               key={index}
               className="bg-white rounded-2xl shadow-xl overflow-hidden hover: scale-105 transition-all duration-300",
             >
               <div className={`bg-gradient-to-r ${story.color} text-white p-6`}>`;
-<<<<<<< HEAD
                 <div className="flex items-center gap-3 mb-4">
 =======
                 <div className="flex items-center gap-3 mb-4">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   {story.icon}
                   <div>
                     <h3 className="font-bold text-xl">{story.company}</h3>";
@@ -124,7 +118,6 @@ const SuccessStoriesShowcase: React.FC = () => {,
                 <div className="text-3xl font-bold">{story.result}</div>";
               </div>
               
-<<<<<<< HEAD
               <div className="p-6">
                 <p className="text-gray-600 mb-6">{story.description}</p>
                 <div className="space-y-2 mb-6">
@@ -133,7 +126,6 @@ const SuccessStoriesShowcase: React.FC = () => {,
                 <p className="text-gray-600 mb-6">{story.description}</p>";
                 
                 <div className="space-y-2 mb-6">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   {story.metrics.map((metric, idx) => (
                     <div key={idx} className="flex items-center gap-2">";
                       <div className="w-2 h-2 bg-green-500 rounded-full"></div>";
@@ -147,11 +139,9 @@ const SuccessStoriesShowcase: React.FC = () => {,
                   className="text-indigo-600 font-semibold hover: text-indigo-800 flex items-center gap-2",
                 >
                   Read Full Story
-<<<<<<< HEAD
                   <ArrowRight className="w-4 h-4/>
 =======
                   <ArrowRight className="w-4 h-4" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </Link>
               </div>
             </div>
@@ -164,11 +154,9 @@ const SuccessStoriesShowcase: React.FC = () => {,
             className="inline-flex items-center gap-2 bg-indigo-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover: bg-indigo-700 transition-all hover:scale-105 shadow-lg",
           >
             View All Success Stories
-<<<<<<< HEAD
             <ArrowRight className="w-6 h-6/>
 =======
             <ArrowRight className="w-6 h-6" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           </Link>
         </div>
       </div>

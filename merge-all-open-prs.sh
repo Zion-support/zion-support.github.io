@@ -25,25 +25,30 @@ NC='\033[0m' # No Color
 
 # Function to print colored output
 print_status() {
-    echo -e "${BLUE}[INFO]${NC} $1"
+    echo -e "${BLUE}[INFO]${NC} $1" 1>&2
 }
 
 print_success() {
-    echo -e "${GREEN}[SUCCESS]${NC} $1"
+    echo -e "${GREEN}[SUCCESS]${NC} $1" 1>&2
 }
 
 print_warning() {
-    echo -e "${YELLOW}[WARNING]${NC} $1"
+    echo -e "${YELLOW}[WARNING]${NC} $1" 1>&2
 }
 
 print_error() {
-    echo -e "${RED}[ERROR]${NC} $1"
+    echo -e "${RED}[ERROR]${NC} $1" 1>&2
 }
 
 # Function to check if we have GitHub CLI
 check_github_cli() {
     if command -v gh &> /dev/null; then
-        return 0
+        # ensure authenticated, otherwise treat as unavailable
+        if gh auth status &>/dev/null; then
+            return 0
+        else
+            return 1
+        fi
     else
         return 1
     fi
@@ -72,10 +77,18 @@ merge_pr() {
     print_status "Processing PR #${pr_number}: ${pr_title}"
     print_status "Branch: ${branch_name}"
     
-    # Check if branch exists
-    if ! git show-ref --verify --quiet refs/remotes/origin/${branch_name}; then
-        print_warning "Branch origin/${branch_name} not found, skipping PR #${pr_number}"
-        return 1
+    # Ensure we can fetch the PR head even if it's from a fork
+    local merge_ref="refs/remotes/origin/${branch_name}"
+    if ! git show-ref --verify --quiet "$merge_ref"; then
+        print_warning "Branch origin/${branch_name} not found. Attempting to fetch PR ref..."
+        # Fetch PR head into a local branch name pr-${pr_number}
+        if git fetch origin pull/${pr_number}/head:pr-${pr_number} 1>&2; then
+            merge_ref="pr-${pr_number}"
+            print_success "Fetched PR #${pr_number} head into ${merge_ref}"
+        else
+            print_error "Unable to fetch PR #${pr_number} head. Skipping."
+            return 1
+        fi
     fi
     
     # Fetch the latest changes
@@ -83,9 +96,9 @@ merge_pr() {
     git fetch origin
     
     # Try to merge the branch
-    print_status "Attempting to merge ${branch_name} into main..."
+    print_status "Attempting to merge ${merge_ref} into main..."
     
-    if git merge origin/${branch_name} --no-ff -m "Merge PR #${pr_number}: ${pr_title}"; then
+    if git merge ${merge_ref} --no-ff -m "Merge PR #${pr_number}: ${pr_title}"; then
         print_success "Successfully merged PR #${pr_number}"
         return 0
     else

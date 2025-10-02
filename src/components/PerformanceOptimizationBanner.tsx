@@ -2,7 +2,6 @@
 const PerformanceOptimizationBanner = () => {
   const optimizations = [
     {
-<<<<<<< HEAD
       title: 'Lightning Fast Loading',',
       description: 'Optimized bundle size with code splitting and lazy loading',',
       improvement: '87% faster',',
@@ -68,14 +67,12 @@ const PerformanceOptimizationBanner = () => {
       <div className="flex items-center gap-3 mb-4">";
         <Clock className="w-6 h-6 text-blue-400" />";
         <h3 className="text-xl font-bold text-blue-400">⚡ Performance & Optimization Improvements</h3>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       </div>
       
       <p className="text-gray-300 mb-6">";
         Enhanced application performance with cutting-edge optimizations for better user experience and search engine visibility.
       </p>
 
-<<<<<<< HEAD
       <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-4">",
         {optimizations.map((opt, index) => (
           <div key={index} className={`bg-gradient-to-br ${opt.color} rounded-lg p-4 text-white`}>`;
@@ -85,11 +82,9 @@ const PerformanceOptimizationBanner = () => {
         {optimizations.map((opt, index) => (
           <div key={index} className={`bg-gradient-to-br ${opt.color} rounded-lg p-4 text-white`}>`;
             <div className="flex items-center gap-3 mb-3">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               {opt.icon}
               <h4 className="font-bold text-sm">{opt.title}</h4>";
             </div>
-<<<<<<< HEAD
             <p className="text-xs opacity-90 mb-2">{opt.description}</p>
             <div className="flex items-center gap-2">
               <Star className="w-4 h-4 fill-yellow-400 text-yellow-400/>
@@ -99,13 +94,11 @@ const PerformanceOptimizationBanner = () => {
             <div className="flex items-center gap-2">";
               <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />";
               <span className="text-xs font-semibold">{opt.improvement}</span>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </div>
           </div>
         ))}
       </div>
 
-<<<<<<< HEAD
       <div className="mt-6 p-4 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-lg border border-green-400/30">
         <div className="flex items-center gap-2 mb-2">
           <CheckCircle className="w-5 h-5 text-green-400/>
@@ -115,7 +108,6 @@ const PerformanceOptimizationBanner = () => {
         <div className="flex items-center gap-2 mb-2">";
           <CheckCircle className="w-5 h-5 text-green-400" />";
           <span className="text-green-400 font-semibold">All Optimizations Active</span>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
         </div>
         <p className="text-sm text-gray-300">";
           Your application is now running with enhanced performance, security, and accessibility features.

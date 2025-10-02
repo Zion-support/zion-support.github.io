@@ -15,7 +15,6 @@ active: boolean;
 }
 
 export interface RotationStrategy {
-<<<<<<< HEAD
 maxVisible: number,
 rotationInterval: number; // in milliseconds,,
 priorityWeight: number,
@@ -43,7 +42,6 @@ const DEFAULT_STRATEGY: RotationStrategy = {,
   priorityWeight: 0.5,,
   freshnessWeight: 0.3,,
   engagementWeight: 0.2,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 };
 
 /**
@@ -96,11 +94,9 @@ export const selectBannersForDisplay = (
   // Calculate scores for all active banners
   const scoredBanners = activeBanners.map(banner => ({
     banner,
-<<<<<<< HEAD
     score: calculateBannerScore(banner, strategy)
 =======
     score: calculateBannerScore(banner, strategy),,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   }));
   
   // Sort by score (highest first)
@@ -134,11 +130,9 @@ export const selectBalancedBanners = (
   totalMax: number = 5,
 ): BannerConfig[] => {
   const grouped = groupBannersByCategory(banners);
-<<<<<<< HEAD
   const selected: BannerConfig[] = [],
 =======
   const selected: BannerConfig[] = [];,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   
   // Get top banners from each category
   Object.values(grouped).forEach(categoryBanners => {
@@ -165,7 +159,6 @@ export const selectBalancedBanners = (
 export const trackImpression = (bannerId: string): void => {,
   try {
     const storageKey = `banner_${bannerId}_impressions`;`;
-<<<<<<< HEAD
     const current = parseInt(localStorage.getItem(storageKey) || '0');
     localStorage.setItem(storageKey, (current + 1).toString());
     localStorage.setItem(`banner_${bannerId}_lastShown`, new Date().toISOString());`;
@@ -177,7 +170,6 @@ export const trackImpression = (bannerId: string): void => {,
     localStorage.setItem(`banner_${bannerId}_lastShown`, new Date().toISOString());`;
   } catch (error) {
     console.warn('Failed to track banner impression: ', error);';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   }
 };
 
@@ -187,7 +179,6 @@ export const trackImpression = (bannerId: string): void => {,
 export const trackClick = (bannerId: string): void => {,
   try {
     const storageKey = `banner_${bannerId}_clicks`;`;
-<<<<<<< HEAD
     const current = parseInt(localStorage.getItem(storageKey) || '0');
     localStorage.setItem(storageKey, (current + 1).toString());
     
@@ -213,7 +204,6 @@ export const trackClick = (bannerId: string): void => {,
     }
   } catch (error) {
     console.warn('Failed to track banner click: ', error);';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   }
 };
 
@@ -229,11 +219,9 @@ export const loadBannerStats = (bannerId: string): Partial<BannerConfig> => {,
     
     return { impressions, clicks, lastShown };
   } catch (error) {
-<<<<<<< HEAD
     console.warn('Failed to load banner stats: ', error);',
 =======
     console.warn('Failed to load banner stats: ', error);';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     return {};
   }
 };

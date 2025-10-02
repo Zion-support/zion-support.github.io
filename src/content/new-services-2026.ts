@@ -15,7 +15,6 @@ launchDate: string;
 
 export const newServices2026: NewService[] = [,
   {
-<<<<<<< HEAD
     id: "ai-predictive-maintenance",
     name: "AI Predictive Maintenance Platform",
     title: "⚙️ AI Predictive Maintenance: Zero Unplanned Downtime",
@@ -413,14 +412,12 @@ export const newServices2026: NewService[] = [,
     icon: "💻",";,
     featured: true,,
     launchDate: "2025-09-30",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   }
 ];
 
 // October 3, 2025 – New services to advertise prominently on homepage
 newServices2026.unshift(
   {
-<<<<<<< HEAD
     id: "ai-guarded-agent-operations",
     name: "AI Guarded Agent Operations",
     title: "🛡️ AI Guarded Agent Ops: Safe Autonomy at Scale",
@@ -518,14 +515,12 @@ newServices2026.unshift(
     icon: "🤖",";,
     featured: true,,
     launchDate: "2025-10-03",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   }
 );
 
 // Sept 30, 2025 – New service to advertise on the homepage
 newServices2026.push(
   {
-<<<<<<< HEAD
     id: "edge-experimentation-suite",
     name: "Edge Experimentation Suite",
     title: "🧪 Edge Experimentation Suite: Privacy‑First A/B at <100ms",
@@ -573,14 +568,12 @@ newServices2026.push(
     icon: "🧪",";,
     featured: true,,
     launchDate: "2025-09-30",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   }
 );
 
 // January 2026 – Fresh new services to advertise prominently
 newServices2026.push(
   {
-<<<<<<< HEAD
     id: "ai-autonomous-infrastructure-platform",
     name: "AI Autonomous Infrastructure Platform",
     title: "🏗️ AI Autonomous Infrastructure: Self-Healing, Self-Optimizing Systems",
@@ -828,6 +821,5 @@ newServices2026.push(
     icon: "🧠",";,
     featured: true,,
     launchDate: "2026-01-15",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   }
 );

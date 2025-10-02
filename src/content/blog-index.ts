@@ -20,7 +20,6 @@ valueProposition: string;
  */
 export const october2025Breakthroughs: BlogPost[] = [,
   {
-<<<<<<< HEAD
     slug: 'ai-2025-oct-01-neural-architecture-evolution-breakthrough',
     title: 'Neural Architecture Evolution 2025',
     description: 'Self-designing AI models achieving 10,000x faster development, 97% accuracy improvement, and $25M annual savings through autonomous model evolution.',
@@ -192,13 +191,11 @@ export const october2025Breakthroughs: BlogPost[] = [,
     featured: true,,
     valueProposition: '$127M annual savings',
   },
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 ];
 
 /**
  * All blog posts collection
  */
-<<<<<<< HEAD
 export const allBlogPosts: BlogPost[] = [
   ...october2025Breakthroughs
   // Newly added October 2025 posts
@@ -339,7 +336,6 @@ export const allBlogPosts: BlogPost[] = [,
     featured: true,,
     valueProposition: 'Instant reversibility, resilient releases',
   },
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 ];
 
 /**
@@ -411,7 +407,6 @@ export function getTotalValueProposition(): string {
  * Blog post statistics
  */
 export const blogStats = {
-<<<<<<< HEAD
   totalPosts: allBlogPosts.length,
   featuredPosts: getFeaturedPosts().length,
   categories: getAllCategories().length,
@@ -423,6 +418,5 @@ export const blogStats = {
   categories: getAllCategories().length,,
   tags: getAllTags().length,,
   totalValue: getTotalValueProposition(),
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 };
 ;

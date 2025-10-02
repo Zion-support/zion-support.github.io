@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import PromoBanner from './PromoBanner';
-import Sidebar from './Sidebar';
+import { Menu, X } from 'lucide-react';
 
-const Header: React.FC = () => {
+export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
@@ -137,90 +136,68 @@ const Header: React.FC = () => {
             </Link>
           </div>
 
-          {/* Mobile menu buttons */}
-          <div className="md:hidden flex items-center space-x-2">
-            {/* Sidebar toggle */}
+          {/* Mobile menu button */}
+          <div className="md:hidden">
             <button
-              className="p-2 rounded-lg hover:bg-gray-100 transition-colors"
-              onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-              aria-label="Toggle sidebar"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
-            {/* Mobile menu toggle */}
-            <button
-              className="p-2 rounded-lg hover:bg-gray-100 transition-colors lg:hidden"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-label="Toggle mobile menu"
+              className="text-gray-700 hover:text-blue-600 transition-colors"
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
-              </svg>
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden mt-4 pb-4 border-t border-gray-200 bg-white">
-            <div className="flex flex-col space-y-1 pt-4 max-h-96 overflow-y-auto">
-              {navigation.map((item) => (
-                <div key={item.name} className="px-4">
-                  <Link
-                    to={item.href}
-                    className="text-gray-700 hover:text-blue-600 font-medium py-3 transition-colors block px-3 rounded-lg hover:bg-blue-50"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {item.name}
-                  </Link>
-                  {item.submenu && (
-                    <div className="ml-4 space-y-1 border-l-2 border-gray-100 pl-4">
-                      {item.submenu.slice(0, 6).map((subItem) => (
-                        <Link
-                          key={subItem.name}
-                          to={subItem.href}
-                          className="text-gray-600 hover:text-blue-600 text-sm py-2 transition-colors block px-3 rounded-lg hover:bg-blue-50"
-                          onClick={() => setIsMenuOpen(false)}
-                        >
-                          {subItem.name}
-                        </Link>
-                      ))}
-                      {item.submenu.length > 6 && (
-                        <div className="px-3 py-2 text-xs text-gray-500">
-                          +{item.submenu.length - 6} more services
-                        </div>
-                      )}
-                    </div>
-                  )}
-                </div>
-              ))}
-              
-              <div className="pt-4 border-t border-gray-200 px-4">
-                <Link
-                  to="/contact"
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors text-center block"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Get Started
-                </Link>
-                <div className="mt-3 text-center">
-                  <a 
-                    href="tel:+13024640950" 
-                    className="text-sm text-blue-600 hover:text-blue-700 font-medium"
-                  >
-                    📞 +1 302 464 0950
-                  </a>
-                </div>
-              </div>
+          <div className="md:hidden mt-4 pb-4 border-t border-gray-200">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50 rounded-lg mt-2">
+              <Link 
+                to="/" 
+                className="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Home
+              </Link>
+              <Link 
+                to="/services" 
+                className="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Services
+              </Link>
+              <Link 
+                to="/case-studies" 
+                className="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Case Studies
+              </Link>
+              <Link 
+                to="/about" 
+                className="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                About
+              </Link>
+              <Link 
+                to="/contact" 
+                className="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Contact
+              </Link>
+              <Link 
+                to="/contact" 
+                className="block px-3 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold text-center mt-4"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Get Started
+              </Link>
             </div>
           </div>
         )}
-      </nav>
+      </div>
     </header>
     </>
   );
-};
-
-export default Header;
+}

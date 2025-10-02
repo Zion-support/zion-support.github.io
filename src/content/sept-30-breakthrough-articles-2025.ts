@@ -1,5 +1,4 @@
 export interface BreakthroughArticle {
-<<<<<<< HEAD
 id: string,
 slug: string,
 title: string,
@@ -31,14 +30,12 @@ impact: string;,
 metrics: {,,
 improvement: string;,
 roi: string;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 timeframe: string;
 };
 }
 
 export const sept30BreakthroughArticles: BreakthroughArticle[] = [,
   {
-<<<<<<< HEAD
     id: "real-time-ai-decision-engines-2025",
     slug: "real-time-ai-decision-engines-2025",
     title: "Real-Time AI Decision Engines: Sub-Millisecond Intelligence at Scale",
@@ -338,7 +335,6 @@ export const sept30BreakthroughArticles: BreakthroughArticle[] = [,
       improvement: "95% prediction accuracy",";,
       roi: "350% returns improvement",";,
       timeframe: "5 weeks to trading",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     }
   }
 ];

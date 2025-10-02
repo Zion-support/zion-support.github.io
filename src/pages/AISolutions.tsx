@@ -67,7 +67,6 @@ const AISolutions: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
   return (
     <>
       <Helmet>
@@ -282,12 +281,10 @@ const AISolutions: React.FC = () => {
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
               Comprehensive AI solutions designed to transform your business. From machine learning 
               to automation, we provide the tools and expertise you need to succeed in the AI era.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3272
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-<<<<<<< HEAD
                 className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-gray-50 transition-colors"
               >
                 Contact Our AI Experts
@@ -459,7 +456,6 @@ const AISolutions: React.FC = () => {
         </div>
       </section>
     </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3272
   );
 };
 
