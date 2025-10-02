@@ -35,7 +35,7 @@ export default function AdditionalServices() {
   const sections = [
     {
       id: 'micro-saas',
-      title: 'Micro SaaS — New Products',
+      title: 'Micro SaaS — Innovative Solutions',
       icon: Code,
       color: 'orange',
       items: [
@@ -90,12 +90,64 @@ export default function AdditionalServices() {
             'Market-specific keyword research'
           ],
           link: '/contact'
+        },
+        {
+          name: 'Smart Contract Audit Platform',
+          blurb: 'Automated smart contract security analysis with comprehensive vulnerability detection.',
+          price: '$1,200 - $5,000/month',
+          eta: '2-4 weeks',
+          bullets: [
+            'Automated vulnerability scanning and detection',
+            'Gas optimization recommendations',
+            'Compliance checking for DeFi protocols',
+            'Real-time monitoring and alerting'
+          ],
+          link: '/contact'
+        },
+        {
+          name: 'API Rate Limiting & Monetization',
+          blurb: 'Intelligent API rate limiting with usage-based billing and analytics.',
+          price: '$199 - $999/month',
+          eta: '1-2 weeks',
+          bullets: [
+            'Dynamic rate limiting based on user tiers',
+            'Usage analytics and billing automation',
+            'DDoS protection and traffic shaping',
+            'Developer portal with API documentation'
+          ],
+          link: '/contact'
+        },
+        {
+          name: 'Real Estate Investment Analytics',
+          blurb: 'AI-powered property valuation and investment opportunity analysis.',
+          price: '$499 - $2,499/month',
+          eta: '3-5 weeks',
+          bullets: [
+            'Automated property valuation models',
+            'Market trend analysis and predictions',
+            'ROI calculations and risk assessment',
+            'Portfolio optimization recommendations'
+          ],
+          link: '/contact'
+        },
+        {
+          name: 'Supply Chain Risk Intelligence',
+          blurb: 'Real-time supply chain monitoring with risk assessment and alternative sourcing.',
+          price: '$899 - $4,500/month',
+          eta: '4-6 weeks',
+          bullets: [
+            'Global supply chain mapping and monitoring',
+            'Risk scoring and early warning systems',
+            'Alternative supplier recommendations',
+            'Compliance tracking and reporting'
+          ],
+          link: '/contact'
         }
       ]
     },
     {
       id: 'ai',
-      title: 'AI Services — New Capabilities',
+      title: 'AI Services — Advanced Capabilities',
       icon: Brain,
       color: 'blue',
       items: [
@@ -137,12 +189,77 @@ export default function AdditionalServices() {
             'Multilingual, low-latency streaming'
           ],
           link: '/contact'
+        },
+        {
+          name: 'AI-Powered Code Review Assistant',
+          blurb: 'Automated code analysis, security scanning, and quality improvement suggestions.',
+          price: '$599 - $2,999/month',
+          eta: '2-4 weeks',
+          bullets: [
+            'Automated vulnerability detection and fixes',
+            'Code quality metrics and improvement suggestions',
+            'Security compliance checking',
+            'Performance optimization recommendations'
+          ],
+          link: '/contact'
+        },
+        {
+          name: 'Predictive Maintenance AI',
+          blurb: 'IoT sensor data analysis for predictive equipment maintenance and failure prevention.',
+          price: '$1,500 - $7,500/month',
+          eta: '4-8 weeks',
+          bullets: [
+            'Real-time sensor data processing',
+            'Failure prediction with confidence intervals',
+            'Maintenance scheduling optimization',
+            'Cost reduction through proactive maintenance'
+          ],
+          link: '/contact'
+        },
+        {
+          name: 'AI Customer Journey Analytics',
+          blurb: 'Advanced customer behavior analysis with personalized journey optimization.',
+          price: '$899 - $4,500/month',
+          eta: '3-6 weeks',
+          bullets: [
+            'Customer segmentation and persona analysis',
+            'Journey mapping and optimization recommendations',
+            'Churn prediction and retention strategies',
+            'Personalized marketing automation triggers'
+          ],
+          link: '/contact'
+        },
+        {
+          name: 'Autonomous Document Processing',
+          blurb: 'End-to-end document workflow automation with intelligent data extraction.',
+          price: '$1,200 - $5,500/month',
+          eta: '3-5 weeks',
+          bullets: [
+            'Multi-format document processing (PDF, images, forms)',
+            'Intelligent data extraction and validation',
+            'Workflow automation and approval routing',
+            'Compliance tracking and audit trails'
+          ],
+          link: '/contact'
+        },
+        {
+          name: 'AI-Powered Fraud Detection',
+          blurb: 'Real-time fraud detection with machine learning models and behavioral analysis.',
+          price: '$2,000 - $10,000/month',
+          eta: '4-8 weeks',
+          bullets: [
+            'Real-time transaction monitoring',
+            'Behavioral pattern analysis',
+            'Risk scoring and automated responses',
+            'False positive reduction through ML'
+          ],
+          link: '/contact'
         }
       ]
     },
     {
       id: 'it',
-      title: 'IT Services — New Offers',
+      title: 'IT Services — Comprehensive Solutions',
       icon: Cloud,
       color: 'green',
       items: [
@@ -184,6 +301,71 @@ export default function AdditionalServices() {
             'Incident workflows with on-call integration'
           ],
           link: '/contact'
+        },
+        {
+          name: 'Zero Trust Security Architecture',
+          blurb: 'Comprehensive zero trust implementation with identity verification and micro-segmentation.',
+          price: '$4,500 - $22,000/month',
+          eta: '6-12 weeks',
+          bullets: [
+            'Identity and access management (IAM) implementation',
+            'Network micro-segmentation and policy enforcement',
+            'Device trust and endpoint security',
+            'Continuous security monitoring and threat detection'
+          ],
+          link: '/contact'
+        },
+        {
+          name: 'Cloud Migration & Modernization',
+          blurb: 'Complete cloud migration strategy with application modernization and optimization.',
+          price: '$8,000 - $45,000/month',
+          eta: '8-16 weeks',
+          bullets: [
+            'Legacy application assessment and migration planning',
+            'Containerization and microservices architecture',
+            'Database migration and optimization',
+            'Cost optimization and performance tuning'
+          ],
+          link: '/contact'
+        },
+        {
+          name: 'DevSecOps Pipeline Implementation',
+          blurb: 'Secure CI/CD pipelines with automated security testing and compliance.',
+          price: '$3,200 - $15,000/month',
+          eta: '4-8 weeks',
+          bullets: [
+            'Automated security scanning and vulnerability management',
+            'Infrastructure as Code (IaC) security validation',
+            'Secrets management and secure deployment',
+            'Compliance automation and reporting'
+          ],
+          link: '/contact'
+        },
+        {
+          name: 'Disaster Recovery & Business Continuity',
+          blurb: 'Comprehensive disaster recovery planning with automated failover and testing.',
+          price: '$2,800 - $18,000/month',
+          eta: '6-10 weeks',
+          bullets: [
+            'Multi-region backup and replication strategies',
+            'Automated failover and recovery procedures',
+            'Business continuity planning and testing',
+            'RTO/RPO optimization and monitoring'
+          ],
+          link: '/contact'
+        },
+        {
+          name: 'API Gateway & Microservices Management',
+          blurb: 'Enterprise API management with security, monitoring, and developer portal.',
+          price: '$1,500 - $8,500/month',
+          eta: '3-6 weeks',
+          bullets: [
+            'API gateway configuration and management',
+            'Rate limiting, authentication, and authorization',
+            'API analytics and performance monitoring',
+            'Developer portal and documentation'
+          ],
+          link: '/contact'
         }
       ]
     }
@@ -191,6 +373,8 @@ export default function AdditionalServices() {
 
   const phoneHref = 'tel:+13024640950';
   const emailHref = 'mailto:kleber@ziontechgroup.com';
+  const websiteUrl = 'https://ziontechgroup.com';
+  const address = '364 E Main St STE 1008, Middletown DE 19709';
 
   return (
     <>

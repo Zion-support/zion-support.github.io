@@ -605,6 +605,160 @@ export default function ServicesPage() {
       href: '/services/healthcare-telemedicine-platform',
       pricing: '$149/month',
       category: 'Micro SaaS'
+    },
+    {
+      title: 'AI-Powered Smart Contract Platform',
+      description: 'Automated smart contract development, auditing, and deployment with AI-powered security analysis',
+      icon: '🔗',
+      features: [
+        'Automated smart contract generation',
+        'AI-powered security auditing',
+        'Gas optimization recommendations',
+        'DeFi protocol compliance checking',
+        'Real-time vulnerability monitoring',
+        'Multi-blockchain deployment'
+      ],
+      benefits: [
+        '90% Faster Development',
+        '99% Security Accuracy',
+        '50% Gas Savings',
+        '24/7 Monitoring'
+      ],
+      href: '/services/ai-smart-contract-platform',
+      pricing: '$1,200/month',
+      category: 'Advanced AI'
+    },
+    {
+      title: 'Autonomous Supply Chain Intelligence',
+      description: 'AI-driven supply chain optimization with predictive analytics and automated risk management',
+      icon: '🚛',
+      features: [
+        'Predictive demand forecasting',
+        'Automated inventory optimization',
+        'Supplier risk assessment',
+        'Route optimization algorithms',
+        'Sustainability tracking',
+        'Real-time supply chain visibility'
+      ],
+      benefits: [
+        '25% Cost Reduction',
+        '40% Faster Delivery',
+        '30% Risk Mitigation',
+        '95% Forecast Accuracy'
+      ],
+      href: '/services/autonomous-supply-chain',
+      pricing: '$3,500/month',
+      category: 'Advanced AI'
+    },
+    {
+      title: 'AI-Powered Financial Risk Platform',
+      description: 'Advanced financial risk management with real-time monitoring and automated compliance',
+      icon: '💰',
+      features: [
+        'Real-time credit risk assessment',
+        'Portfolio optimization algorithms',
+        'Market volatility prediction',
+        'Regulatory compliance automation',
+        'Fraud detection systems',
+        'Automated risk reporting'
+      ],
+      benefits: [
+        '35% Loss Reduction',
+        '20% Better Returns',
+        '90% Faster Assessment',
+        '100% Compliance'
+      ],
+      href: '/services/ai-financial-risk-platform',
+      pricing: '$5,000/month',
+      category: 'Advanced AI'
+    },
+    {
+      title: 'Zero Trust Security Architecture',
+      description: 'Comprehensive zero trust implementation with AI-powered threat detection and automated response',
+      icon: '🛡️',
+      features: [
+        'Identity and access management',
+        'Network micro-segmentation',
+        'Device trust verification',
+        'Continuous security monitoring',
+        'Automated threat response',
+        'Compliance automation'
+      ],
+      benefits: [
+        '99.9% Security Coverage',
+        '80% Faster Response',
+        '60% Breach Reduction',
+        'Automated Compliance'
+      ],
+      href: '/services/zero-trust-security',
+      pricing: '$4,500/month',
+      category: 'IT Services'
+    },
+    {
+      title: 'AI-Powered Marketing Intelligence',
+      description: 'Intelligent marketing automation with personalized customer journeys and predictive analytics',
+      icon: '📊',
+      features: [
+        'Customer segmentation AI',
+        'Personalized content generation',
+        'Campaign optimization',
+        'Predictive customer lifetime value',
+        'Multi-channel orchestration',
+        'Real-time marketing analytics'
+      ],
+      benefits: [
+        '40% Higher Conversions',
+        '60% Lower CAC',
+        '35% Increased LTV',
+        'Automated Optimization'
+      ],
+      href: '/services/ai-marketing-intelligence',
+      pricing: '$2,000/month',
+      category: 'Micro SaaS'
+    },
+    {
+      title: 'Autonomous DevOps Platform',
+      description: 'Self-healing infrastructure with AI-powered monitoring, optimization, and automated incident response',
+      icon: '⚙️',
+      features: [
+        'Self-healing infrastructure',
+        'AI-powered monitoring',
+        'Automated incident response',
+        'Performance optimization',
+        'Cost optimization',
+        'Predictive maintenance'
+      ],
+      benefits: [
+        '99.9% Uptime',
+        '70% Faster Recovery',
+        '50% Cost Reduction',
+        'Zero Manual Intervention'
+      ],
+      href: '/services/autonomous-devops',
+      pricing: '$6,000/month',
+      category: 'IT Services'
+    },
+    {
+      title: 'AI-Powered Quality Assurance Suite',
+      description: 'Automated software testing with intelligent test generation and comprehensive quality analysis',
+      icon: '🔍',
+      features: [
+        'Automated test generation',
+        'Intelligent bug detection',
+        'Performance testing automation',
+        'Security vulnerability scanning',
+        'Code quality analysis',
+        'Continuous testing integration'
+      ],
+      benefits: [
+        '70% Testing Time Reduction',
+        '85% Bug Detection Improvement',
+        '50% Defect Reduction',
+        'Automated Reporting'
+      ],
+      href: '/services/ai-quality-assurance',
+      pricing: '$1,500/month',
+      category: 'Micro SaaS'
     }
   ];
 
