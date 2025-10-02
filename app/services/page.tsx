@@ -38,6 +38,71 @@ export default function ServicesPage() {
       ]
     },
     {
+      title: 'AI-Powered Content Tools',
+      description: 'Advanced AI content optimization tools for headlines, email subject lines, and marketing copy.',
+      icon: '📝',
+      href: '/services/ai-powered-content-tools',
+      pricing: 'Starting from $29/month',
+      features: [
+        'HeadlineMaster AI - B2B Marketing Headlines',
+        'EmailSubjectAI - Open Rate Optimization',
+        'ContentAnalyzer Pro - Performance Analytics',
+        'PodcastTranscriber AI - Accurate Transcriptions'
+      ]
+    },
+    {
+      title: 'Telemedicine Platform',
+      description: 'Comprehensive telemedicine solution for hospitals and clinics with virtual consultations.',
+      icon: '🏥',
+      href: '/services/telemedicine-platform',
+      pricing: 'Starting from $299/month',
+      features: [
+        'HD video conferencing',
+        'Secure patient records',
+        'HIPAA compliance',
+        'Automated appointment scheduling'
+      ]
+    },
+    {
+      title: 'Remote Collaboration Suite',
+      description: 'Complete remote work platform integrating video conferencing, messaging, and project management.',
+      icon: '💻',
+      href: '/services/remote-collaboration-suite',
+      pricing: 'Starting from $25/user/month',
+      features: [
+        'Video conferencing for 1000+ participants',
+        'Team messaging and file sharing',
+        'Project management suite',
+        'Document collaboration tools'
+      ]
+    },
+    {
+      title: 'API Integration Platform',
+      description: 'Enterprise-grade API integration platform for seamless software system connectivity.',
+      icon: '🔗',
+      href: '/services/api-integration-platform',
+      pricing: 'Starting from $99/month',
+      features: [
+        'API gateway with load balancing',
+        'Data synchronization engine',
+        'Webhook automation hub',
+        'Legacy system connectors'
+      ]
+    },
+    {
+      title: 'AI Customer Insights Platform',
+      description: 'AI-powered customer analytics for behavioral analysis, sentiment tracking, and predictive insights.',
+      icon: '🧠',
+      href: '/services/ai-customer-insights-platform',
+      pricing: 'Starting from $299/month',
+      features: [
+        'Behavioral analytics engine',
+        'Sentiment intelligence',
+        'Predictive customer analytics',
+        'Real-time customer intelligence'
+      ]
+    },
+    {
       title: 'AI Observability Platform',
       description: 'Unified logs, metrics, traces and AI anomaly detection with SLOs and guided RCA.',
       icon: '📊',
