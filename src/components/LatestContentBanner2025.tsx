@@ -276,3 +276,4 @@ const LatestContentBanner2025: React.FC = () => {
   );
 };
 
+export default LatestContentBanner2025;
