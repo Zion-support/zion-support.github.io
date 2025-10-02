@@ -1,259 +1,246 @@
-
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Sparkles } from 'lucide-react';
+import React from "react";
+impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
+impo, r, t { Sparkl, e, s } fr, o, m "luci, d, e-rea, c, t";
 =======
-import React from 'react';';
-import {
-Link
-} from 'react-router-dom';';
-import {
-Sparkles
-} from 'lucide-react';';
-
-const GlobalAITransformationHub = () => {
-  const transformationAreas = [
+import React from "react";';
+impo, r, t {
+Li, n, k;
+} fr, o, m "rea, c, t-rout, e, r-d, o, m";';
+impo, r, t {
+Sparkl, e, s;
+} fr, o, m "luci, d, e-rea, c, t";';
+const, GlobalAITransformationHu, b = () => {
+  const, transformationArea, s = [
     {
-      title: 'Enterprise Automation',',
-      description: 'Complete business process automation with 95% efficiency gains',',
-      value: '$2.3B',',
-      icon: <Target className="w-8 h-8/>,",
-      color: 'from-blue-500 to-cyan-500',',
-      link: '/services/enterprise-automation-transformation},
+      tit, l, e: 'Enterprise, Automatio, n','
+      descripti, o, n: 'Complete, business, process automation, with, 95% efficiency, gain, s','
+      val, u, e: '$2.3B','
+      ic, o, n: <Target, className="w-8 h-8/>,"
+      col, o, r: 'fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0','
+      li, n, k: '/servic, e, s/enterpri, s, e-automati, o, n-transformati, o, n}
     {
-      title: 'Quantum Consciousness AI',',
-      description: 'Revolutionary AI consciousness integration with infinite scalability',',
-      value: '$500B',',
-      icon: <Brain className="w-8 h-8/>,",
-      color: 'from-purple-500 to-violet-500',',
-      link: '/services/quantum-consciousness-ai-services},
+      tit, l, e: 'Quantum, Consciousness, AI','
+      descripti, o, n: 'Revolutionary, AI, consciousness integration, with, infinite scalabili, t, y','
+      val, u, e: '$50, 0, B','
+      ic, o, n: <Brain, className="w-8 h-8/>,"
+      col, o, r: 'fr, o, m-purp, l, e-500, t, o-viol, e, t-5, 0, 0','
+      li, n, k: '/servic, e, s/quant, u, m-consciousne, s, s-ai-servic, e, s}
     {
-      title: 'Autonomous Operations',',
-      description: 'Self-managing systems with 99.99% uptime and zero human intervention',',
-      value: '$150B',',
-      icon: <Zap className="w-8 h-8/>,",
-      color: 'from-emerald-500 to-teal-500',',
-      link: '/services/autonomous-operations-platform},
+      tit, l, e: 'Autonomous, Operation, s','
+      descripti, o, n: 'Se, l, f-managing, systems, with 99.99% uptime, and, zero human, interventio, n','
+      val, u, e: '$15, 0, B','
+      ic, o, n: <Zap, className="w-8 h-8/>,"
+      col, o, r: 'fr, o, m-emera, l, d-500, t, o-te, a, l-5, 0, 0','
+      li, n, k: '/servic, e, s/autonomo, u, s-operatio, n, s-platfo, r, m}
     {
-      title: 'Neural Security',',
-      description: 'Advanced AI-powered security with 99.7% threat prevention',',
-      value: '$87B',',
-      icon: <Shield className="w-8 h-8/>,",
-      color: 'from-orange-500 to-red-500',',
-      link: '/services/neural-security-framework}
+      tit, l, e: 'Neural, Securit, y','
+      descripti, o, n: 'Advanced, A, I-powered, security, with 99.7% threat, preventio, n','
+      val, u, e: '$8, 7, B','
+      ic, o, n: <Shield, className="w-8 h-8/>,"
+      col, o, r: 'fr, o, m-oran, g, e-500, t, o-r, e, d-5, 0, 0','
+      li, n, k: '/servic, e, s/neur, a, l-securi, t, y-framewo, r, k}
   ];
-
-  const successMetrics = [
-    { metric: '2.5M+', label: 'Global Users' }
-    { metric: '$15B+', label: 'Value Created' }
-    { metric: '99.99%', label: 'Success Rate' }
-    { metric: '500K+', label: 'Enterprise Clients' }
+  const, successMetric, s = [
+    { metr, i, c: '2.5M+', lab, e, l: 'Global, User, s' }
+    { metr, i, c: '$1, 5, B+', lab, e, l: 'Value, Create, d' }
+    { metr, i, c: '99.99%', lab, e, l: 'Success, Rat, e' }
+    { metr, i, c: '50, 0, K+', lab, e, l: 'Enterprise, Client, s' }
   ];
-
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-blue-900/20 to-slate-900 border border-blue-400/30 rounded-2xl p-8 mb-12 animate-fade-in shadow-2xl">
-      <div className="flex items-center justify-center gap-3 mb-6">
-        <Globe className="w-8 h-8 text-blue-400 animate-pulse/>
-        <span className="text-2xl font-bold text-blue-400">🌍 GLOBAL AI TRANSFORMATION HUB</span>
-        <Globe className="w-8 h-8 text-blue-400 animate-pulse/>
-      </div>
-      
-      <h2 className="text-4xl md: text-5xl font-extrabold mb-6 text-center bg-gradient-to-r from-blue-400 via-cyan-400 to-emerald-400 bg-clip-text text-transparent">",
+    <div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-9, 0, 0/20, t, o-sla, t, e-900, border, border-bl, u, e-4, 0, 0/30, rounde, d-2x, l, p-8, m, b-12, animat, e-fa, d, e-in, shado, w-2, x, l">
+      <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-6">
+        <Globe, className="w-8 h-8, tex, t-bl, u, e-400, animat, e-pul, s, e  />
+        <span, className="te, x, t-2xl, fon, t-bold, tex, t-bl, u, e-4, 0, 0">🌍 GLOBAL, AI, TRANSFORMATION H, U, B</sp, a, n>
+        <Globe, className="w-8 h-8, tex, t-bl, u, e-400, animat, e-pul, s, e  />
+      </d, i, v>
+      <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, tex, t-center, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-cy, a, n-400, t, o-emera, l, d-400, b, g-cl, i, p-text, tex, t-transpare, n, t">"
 =======
-      title: 'Enterprise Automation',';,
-      description: 'Complete business process automation with 95% efficiency gains',';,
-      value: '$2.3B',';,
-      icon: <Target className="w-8 h-8" />,";,
-      color: 'from-blue-500 to-cyan-500',';,
-      link: '/services/enterprise-automation-transformation',
-    },
+      tit, l, e: 'Enterprise, Automatio, n',';
+      descripti, o, n: 'Complete, business, process automation, with, 95% efficiency, gain, s',';
+      val, u, e: '$2.3B',';
+      ic, o, n: <Target, className="w-8 h-8" />,";
+      col, o, r: 'fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0',';
+      li, n, k: '/servic, e, s/enterpri, s, e-automati, o, n-transformati, o, n'
+    }
     {
-      title: 'Quantum Consciousness AI',';,
-      description: 'Revolutionary AI consciousness integration with infinite scalability',';,
-      value: '$500B',';,
-      icon: <Brain className="w-8 h-8" />,";,
-      color: 'from-purple-500 to-violet-500',';,
-      link: '/services/quantum-consciousness-ai-services',
-    },
+      tit, l, e: 'Quantum, Consciousness, AI',';
+      descripti, o, n: 'Revolutionary, AI, consciousness integration, with, infinite scalabili, t, y',';
+      val, u, e: '$50, 0, B',';
+      ic, o, n: <Brain, className="w-8 h-8" />,";
+      col, o, r: 'fr, o, m-purp, l, e-500, t, o-viol, e, t-5, 0, 0',';
+      li, n, k: '/servic, e, s/quant, u, m-consciousne, s, s-ai-servic, e, s'
+    }
     {
-      title: 'Autonomous Operations',';,
-      description: 'Self-managing systems with 99.99% uptime and zero human intervention',';,
-      value: '$150B',';,
-      icon: <Zap className="w-8 h-8" />,";,
-      color: 'from-emerald-500 to-teal-500',';,
-      link: '/services/autonomous-operations-platform',
-    },
+      tit, l, e: 'Autonomous, Operation, s',';
+      descripti, o, n: 'Se, l, f-managing, systems, with 99.99% uptime, and, zero human, interventio, n',';
+      val, u, e: '$15, 0, B',';
+      ic, o, n: <Zap, className="w-8 h-8" />,";
+      col, o, r: 'fr, o, m-emera, l, d-500, t, o-te, a, l-5, 0, 0',';
+      li, n, k: '/servic, e, s/autonomo, u, s-operatio, n, s-platfo, r, m'
+    }
     {
-      title: 'Neural Security',';,
-      description: 'Advanced AI-powered security with 99.7% threat prevention',';,
-      value: '$87B',';,
-      icon: <Shield className="w-8 h-8" />,";,
-      color: 'from-orange-500 to-red-500',';,
-      link: '/services/neural-security-framework',
+      tit, l, e: 'Neural, Securit, y',';
+      descripti, o, n: 'Advanced, A, I-powered, security, with 99.7% threat, preventio, n',';
+      val, u, e: '$8, 7, B',';
+      ic, o, n: <Shield, className="w-8 h-8" />,";
+      col, o, r: 'fr, o, m-oran, g, e-500, t, o-r, e, d-5, 0, 0',';
+      li, n, k: '/servic, e, s/neur, a, l-securi, t, y-framewo, r, k'
     }
   ];
-
-  const successMetrics = [
-    { metric: '2.5M+', label: 'Global Users' },';
-    { metric: '$15B+', label: 'Value Created' },';
-    { metric: '99.99%', label: 'Success Rate' },';
-    { metric: '500K+', label: 'Enterprise Clients' }';
+  const, successMetric, s = [
+    { metr, i, c: '2.5M+', lab, e, l: 'Global, User, s' },';
+    { metr, i, c: '$1, 5, B+', lab, e, l: 'Value, Create, d' },';
+    { metr, i, c: '99.99%', lab, e, l: 'Success, Rat, e' },';
+    { metr, i, c: '50, 0, K+', lab, e, l: 'Enterprise, Client, s' }';
   ];
-
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-blue-900/20 to-slate-900 border border-blue-400/30 rounded-2xl p-8 mb-12 animate-fade-in shadow-2xl">";
-      <div className="flex items-center justify-center gap-3 mb-6">";
-        <Globe className="w-8 h-8 text-blue-400 animate-pulse" />";
-        <span className="text-2xl font-bold text-blue-400">🌍 GLOBAL AI TRANSFORMATION HUB</span>";
-        <Globe className="w-8 h-8 text-blue-400 animate-pulse" />";
-      </div>
-      
-      <h2 className="text-4xl md: text-5xl font-extrabold mb-6 text-center bg-gradient-to-r from-blue-400 via-cyan-400 to-emerald-400 bg-clip-text text-transparent">";,
-        Transforming Business Operations Worldwide
+    <div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-9, 0, 0/20, t, o-sla, t, e-900, border, border-bl, u, e-4, 0, 0/30, rounde, d-2x, l, p-8, m, b-12, animat, e-fa, d, e-in, shado, w-2, x, l">";
+      <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-6">";
+        <Globe, className="w-8 h-8, tex, t-bl, u, e-400, animat, e-pul, s, e" />";
+        <span, className="te, x, t-2xl, fon, t-bold, tex, t-bl, u, e-4, 0, 0">🌍 GLOBAL, AI, TRANSFORMATION H, U, B</sp, a, n>";
+        <Globe, className="w-8 h-8, tex, t-bl, u, e-400, animat, e-pul, s, e" />";
+      </d, i, v>
+      <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, tex, t-center, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-cy, a, n-400, t, o-emera, l, d-400, b, g-cl, i, p-text, tex, t-transpare, n, t">";
+        Transforming, Business, Operations Worldwi, d, e;
       </h2>
-      
-      <p className="text-xl text-gray-300 text-center mb-8 max-w-4xl mx-auto">";
-        Leading the global AI revolution with cutting-edge technologies that deliver unprecedented business value and operational excellence across all industries.
+      <p, className="te, x, t-xl, tex, t-gr, a, y-300, tex, t-center, m, b-8, ma, x-w-4xl, m, x-au, t, o">";
+        Leading, the, global AI, revolution, with cutti, n, g-edge, technologies, that deliver, unprecedented, business value, and, operational excellence, across, all industri, e, s.
       </p>
-
-      <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-6 mb-8">",
+      <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+  g:gr, i, d-co, l, s-4, ga, p-6, m, b-8">"
 =======
-      <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-6 mb-8">";,
-        {transformationAreas.map((area, index) => (
-          <Link 
-            key={index} 
-            to={area.link}
-            className={`bg-gradient-to-br ${area.color} rounded-xl p-6 text-white transform hover:scale-105 transition-all duration-300 hover:shadow-xl group`}`;
+      <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+  g:gr, i, d-co, l, s-4, ga, p-6, m, b-8">";
+        {transformationAre, a, s.m, a, p((ar, e, a, ind, e, x) => (
+          <Li, n, k
+  k, e, y={ind, e, x} 
+            to={ar, e, a.li, n, k}
+            classNa, m, e={`bg-gradie, n, t-to-br ${ar, e, a.col, o, r} round, e, d-x, l, p-6, tex, t-white, transform, hover: sca, l, e-105, transitio, n-all, duratio, n-300, hov, e,`
+  r:shad, o, w-xl, grou, p`}`;`
           >
-            <div className="mb-4">{area.icon}</div>
-            <h3 className="text-xl font-bold mb-3 group-hover:text-yellow-300 transition-colors">{area.title}</h3>
-            <p className="text-sm mb-4 opacity-90">{area.description}</p>
-            <div className="flex items-center justify-between">
-              <span className="text-lg font-bold bg-white/20 px-3 py-1 rounded-full">{area.value}</span>
-              <ArrowRight className="w-5 h-5 group-hover: translate-x-1 transition-transform/>",
+            <div, className="mb-4">{ar, e, a.ic, o, n}</d, i, v>
+            <h3, className="te, x, t-xl, fon, t-bold, m, b-3, grou, p-hov, e, r:te, x, t-yell, o, w-300, transitio, n-colo, r, s">{ar, e, a.tit, l, e}</h3>
+            <p, className="te, x, t-sm, m, b-4, opacit, y-90">{ar, e, a.descripti, o, n}</p>
+            <div, className="flex, item, s-center, justif, y-betwe, e, n">
+              <span, className="te, x, t-lg, fon, t-bold, b, g-whi, t, e/20, p, x-3, p, y-1, rounde, d-fu, l, l">{ar, e, a.val, u, e}</sp, a, n>
+              <ArrowRight, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
 =======
-            <div className="mb-4">{area.icon}</div>";
-            <h3 className="text-xl font-bold mb-3 group-hover:text-yellow-300 transition-colors">{area.title}</h3>";
-            <p className="text-sm mb-4 opacity-90">{area.description}</p>";
-            <div className="flex items-center justify-between">";
-              <span className="text-lg font-bold bg-white/20 px-3 py-1 rounded-full">{area.value}</span>";
-              <ArrowRight className="w-5 h-5 group-hover: translate-x-1 transition-transform" />";,
-            </div>
-          </Link>
+            <div, className="mb-4">{ar, e, a.ic, o, n}</d, i, v>";
+            <h3, className="te, x, t-xl, fon, t-bold, m, b-3, grou, p-hov, e, r:te, x, t-yell, o, w-300, transitio, n-colo, r, s">{ar, e, a.tit, l, e}</h3>";
+            <p, className="te, x, t-sm, m, b-4, opacit, y-90">{ar, e, a.descripti, o, n}</p>";
+            <div, className="flex, item, s-center, justif, y-betwe, e, n">";
+              <span, className="te, x, t-lg, fon, t-bold, b, g-whi, t, e/20, p, x-3, p, y-1, rounde, d-fu, l, l">{ar, e, a.val, u, e}</sp, a, n>";
+              <ArrowRight, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+            </d, i, v>
+          </Li, n, k>
         ))}
-      </div>
-
-      <div className="bg-gradient-to-r from-blue-500/20 to-emerald-500/20 rounded-xl p-6 mb-8 border border-blue-400/30">
-        <div className="flex items-center justify-center gap-3 mb-4">
-          <TrendingUp className="w-6 h-6 text-green-400/>
-          <span className="text-xl font-bold text-green-400">Global Success Metrics</span>
-        </div>
-        <div className="grid grid-cols-2 md: grid-cols-4 gap-4 text-center">",
+      </d, i, v>
+      <div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-emera, l, d-5, 0, 0/20, rounde, d-x, l, p-6, m, b-8, border, border-bl, u, e-4, 0, 0/30">
+        <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-4">
+          <TrendingUp, className="w-6 h-6, tex, t-gre, e, n-4, 0, 0  />
+          <span, className="te, x, t-xl, fon, t-bold, tex, t-gre, e, n-4, 0, 0">Global, Success, Metrics</sp, a, n>
+        </d, i, v>
+        <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, tex, t-cent, e, r">"
 =======
-      <div className="bg-gradient-to-r from-blue-500/20 to-emerald-500/20 rounded-xl p-6 mb-8 border border-blue-400/30">";
-        <div className="flex items-center justify-center gap-3 mb-4">";
-          <TrendingUp className="w-6 h-6 text-green-400" />";
-          <span className="text-xl font-bold text-green-400">Global Success Metrics</span>";
-        </div>
-        <div className="grid grid-cols-2 md: grid-cols-4 gap-4 text-center">";,
-          {successMetrics.map((item, index) => (
-            <div key={index}>
-              <div className="text-3xl font-bold text-white">{item.metric}</div>";
-              <div className="text-sm text-gray-300">{item.label}</div>";
-            </div>
+      <div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-emera, l, d-5, 0, 0/20, rounde, d-x, l, p-6, m, b-8, border, border-bl, u, e-4, 0, 0/30">";
+        <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-4">";
+          <TrendingUp, className="w-6 h-6, tex, t-gre, e, n-4, 0, 0" />";
+          <span, className="te, x, t-xl, fon, t-bold, tex, t-gre, e, n-4, 0, 0">Global, Success, Metrics</sp, a, n>";
+        </d, i, v>
+        <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, tex, t-cent, e, r">";
+          {successMetri, c, s.m, a, p((it, e, m, ind, e, x) => (
+            <div, ke, y={ind, e, x}>
+              <div, className="te, x, t-3xl, fon, t-bold, tex, t-whi, t, e">{it, e, m.metr, i, c}</d, i, v>";
+              <div, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">{it, e, m.lab, e, l}</d, i, v>";
+            </d, i, v>
           ))}
-        </div>
-      </div>
-
-      <div className="grid md: grid-cols-3 gap-6 mb-8">",
-        <div className="bg-gradient-to-br from-purple-500/20 to-violet-500/20 rounded-xl p-6 border border-purple-400/30">
-          <div className="flex items-center gap-3 mb-4">
-            <Rocket className="w-6 h-6 text-purple-400/>
-            <h3 className="text-lg font-bold text-purple-400">Revolutionary Breakthroughs</h3>
+        </d, i, v>
+      </d, i, v>
+      <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">"
+        <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/20, t, o-viol, e, t-5, 0, 0/20, rounde, d-x, l, p-6, border, border-purp, l, e-4, 0, 0/30">
+          <div, className="flex, item, s-center, ga, p-3, m, b-4">
+            <Rocket, className="w-6 h-6, tex, t-purp, l, e-4, 0, 0  />
+            <h3, className="te, x, t-lg, fon, t-bold, tex, t-purp, l, e-4, 0, 0">Revolutionary, Breakthrough, s</h3>
 =======
-      <div className="grid md: grid-cols-3 gap-6 mb-8">";,
-        <div className="bg-gradient-to-br from-purple-500/20 to-violet-500/20 rounded-xl p-6 border border-purple-400/30">";
-          <div className="flex items-center gap-3 mb-4">";
-            <Rocket className="w-6 h-6 text-purple-400" />";
-            <h3 className="text-lg font-bold text-purple-400">Revolutionary Breakthroughs</h3>";
-          </div>
-          <p className="text-gray-300 mb-4">Latest AI innovations achieving unprecedented accuracy and consciousness integration.</p>";
-          <Link 
-            to="/blog/ai-2026-revolutionary-breakthrough-announcement" 
-            className="text-purple-400 hover: text-purple-300 font-semibold flex items-center gap-2",
+      <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";
+        <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/20, t, o-viol, e, t-5, 0, 0/20, rounde, d-x, l, p-6, border, border-purp, l, e-4, 0, 0/30">";
+          <div, className="flex, item, s-center, ga, p-3, m, b-4">";
+            <Rocket, className="w-6 h-6, tex, t-purp, l, e-4, 0, 0" />";
+            <h3, className="te, x, t-lg, fon, t-bold, tex, t-purp, l, e-4, 0, 0">Revolutionary, Breakthrough, s</h3>";
+          </d, i, v>
+          <p, className="te, x, t-gr, a, y-300, m, b-4">Latest, AI, innovations achieving, unprecedented, accuracy and, consciousness, integration.</p>";
+          <Li, n, k
+  to="/bl, o, g/ai-20, 2, 6-revolutiona, r, y-breakthrou, g, h-announceme, n, t" 
+            classNa, m, e="te, x, t-purp, l, e-400, hov, e
+  r: te, x, t-purp, l, e-300, fon, t-semibold, flex, items-center, ga, p-2"
           >
-            Explore Breakthroughs <ArrowRight className="w-4 h-4/>
-          </Link>
-        </div>
-
-        <div className="bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-xl p-6 border border-emerald-400/30">
-          <div className="flex items-center gap-3 mb-4">
-            <Award className="w-6 h-6 text-emerald-400/>
-            <h3 className="text-lg font-bold text-emerald-400">Success Stories</h3>
+            Explore, Breakthrough, s <ArrowRight, className="w-4 h-4  />
+          </Li, n, k>
+        </d, i, v>
+        <div, className="bg-gradie, n, t-to-br, fro, m-emera, l, d-5, 0, 0/20, t, o-te, a, l-5, 0, 0/20, rounde, d-x, l, p-6, border, border-emera, l, d-4, 0, 0/30">
+          <div, className="flex, item, s-center, ga, p-3, m, b-4">
+            <Award, className="w-6 h-6, tex, t-emera, l, d-4, 0, 0  />
+            <h3, className="te, x, t-lg, fon, t-bold, tex, t-emera, l, d-4, 0, 0">Success, Storie, s</h3>
 =======
-            Explore Breakthroughs <ArrowRight className="w-4 h-4" />";
-          </Link>
-        </div>
-
-        <div className="bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-xl p-6 border border-emerald-400/30">";
-          <div className="flex items-center gap-3 mb-4">";
-            <Award className="w-6 h-6 text-emerald-400" />";
-            <h3 className="text-lg font-bold text-emerald-400">Success Stories</h3>";
-          </div>
-          <p className="text-gray-300 mb-4">Real-world transformations delivering billions in value creation and operational excellence.</p>";
-          <Link 
-            to="/case-studies" 
-            className="text-emerald-400 hover: text-emerald-300 font-semibold flex items-center gap-2",
+            Explore, Breakthrough, s <ArrowRight, className="w-4 h-4" />";
+          </Li, n, k>
+        </d, i, v>
+        <div, className="bg-gradie, n, t-to-br, fro, m-emera, l, d-5, 0, 0/20, t, o-te, a, l-5, 0, 0/20, rounde, d-x, l, p-6, border, border-emera, l, d-4, 0, 0/30">";
+          <div, className="flex, item, s-center, ga, p-3, m, b-4">";
+            <Award, className="w-6 h-6, tex, t-emera, l, d-4, 0, 0" />";
+            <h3, className="te, x, t-lg, fon, t-bold, tex, t-emera, l, d-4, 0, 0">Success, Storie, s</h3>";
+          </d, i, v>
+          <p, className="te, x, t-gr, a, y-300, m, b-4">Re, a, l-world, transformations, delivering billions, in, value creation, and, operational excellen, c, e.</p>";
+          <Li, n, k
+  to="/ca, s, e-studi, e, s" 
+            classNa, m, e="te, x, t-emera, l, d-400, hove, r: te, x, t-emera, l, d-300, fon, t-semibold, flex, items-center, ga, p-2"
           >
-            View Case Studies <ArrowRight className="w-4 h-4/>
-          </Link>
-        </div>
-
-        <div className="bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-xl p-6 border border-orange-400/30">
-          <div className="flex items-center gap-3 mb-4">
-            <Users className="w-6 h-6 text-orange-400/>
-            <h3 className="text-lg font-bold text-orange-400">Expert Services</h3>
+            View, Case, Studies <ArrowRight, className="w-4 h-4  />
+          </Li, n, k>
+        </d, i, v>
+        <div, className="bg-gradie, n, t-to-br, fro, m-oran, g, e-5, 0, 0/20, t, o-r, e, d-5, 0, 0/20, rounde, d-x, l, p-6, border, border-oran, g, e-4, 0, 0/30">
+          <div, className="flex, item, s-center, ga, p-3, m, b-4">
+            <Users, className="w-6 h-6, tex, t-oran, g, e-4, 0, 0  />
+            <h3, className="te, x, t-lg, fon, t-bold, tex, t-oran, g, e-4, 0, 0">Expert, Service, s</h3>
 =======
-            View Case Studies <ArrowRight className="w-4 h-4" />";
-          </Link>
-        </div>
-
-        <div className="bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-xl p-6 border border-orange-400/30">";
-          <div className="flex items-center gap-3 mb-4">";
-            <Users className="w-6 h-6 text-orange-400" />";
-            <h3 className="text-lg font-bold text-orange-400">Expert Services</h3>";
-          </div>
-          <p className="text-gray-300 mb-4">Comprehensive AI transformation services tailored to your specific business needs.</p>";
-          <Link 
-            to="/services" 
-            className="text-orange-400 hover: text-orange-300 font-semibold flex items-center gap-2",
+            View, Case, Studies <ArrowRight, className="w-4 h-4" />";
+          </Li, n, k>
+        </d, i, v>
+        <div, className="bg-gradie, n, t-to-br, fro, m-oran, g, e-5, 0, 0/20, t, o-r, e, d-5, 0, 0/20, rounde, d-x, l, p-6, border, border-oran, g, e-4, 0, 0/30">";
+          <div, className="flex, item, s-center, ga, p-3, m, b-4">";
+            <Users, className="w-6 h-6, tex, t-oran, g, e-4, 0, 0" />";
+            <h3, className="te, x, t-lg, fon, t-bold, tex, t-oran, g, e-4, 0, 0">Expert, Service, s</h3>";
+          </d, i, v>
+          <p, className="te, x, t-gr, a, y-300, m, b-4">Comprehensive, AI, transformation services, tailored, to your, specific, business nee, d, s.</p>";
+          <Li, n, k
+  to="/servic, e, s" 
+            classNa, m, e="te, x, t-oran, g, e-400, hove, r: te, x, t-oran, g, e-300, fon, t-semibold, flex, items-center, ga, p-2"
           >
-            Get Started <ArrowRight className="w-4 h-4/>
+            Get, Starte, d <ArrowRight, className="w-4 h-4  />
 =======
-            Get Started <ArrowRight className="w-4 h-4" />";
-          </Link>
-        </div>
-      </div>
-
-      <div className="text-center">";
-        <Link 
-          to="/contact" 
-          className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-emerald-500 text-white px-8 py-4 rounded-xl font-bold hover: from-blue-600 hover:to-emerald-600 transition-all duration-300 hover:scale-105 shadow-lg",
+            Get, Starte, d <ArrowRight, className="w-4 h-4" />";
+          </Li, n, k>
+        </d, i, v>
+      </d, i, v>
+      <div, className="te, x, t-cent, e, r">";
+        <Li, n, k
+  to="/conta, c, t" 
+          classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-emera, l, d-500, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, hove, r: fr, o, m-bl, u, e-600, hove, r:to-emera, l, d-600, transitio, n-all, duratio, n-300, hov, e
+  r:sca, l, e-105, shado, w-lg"
         >
-          <Sparkles className="w-5 h-5/>
-          Start Your AI Transformation Journey
-          <ArrowRight className="w-5 h-5/>
+          <Sparkles, className="w-5 h-5  />
+          Start, Your, AI Transformation, Journe, y;
+          <ArrowRight, className="w-5 h-5  />
 =======
-          <Sparkles className="w-5 h-5" />";
-          Start Your AI Transformation Journey
-          <ArrowRight className="w-5 h-5" />";
-        </Link>
-        <p className="mt-4 text-gray-400 text-sm">";
-          🌍 Join 2.5M+ professionals worldwide transforming their businesses with revolutionary AI technology
+          <Sparkles, className="w-5 h-5" />";
+          Start, Your, AI Transformation, Journe, y;
+          <ArrowRight, className="w-5 h-5" />";
+        </Li, n, k>
+        <p, className="mt-4, tex, t-gr, a, y-400, tex, t-sm">";
+          🌍 Joi, n, 2.5M+ professionals, worldwide, transforming their, businesses, with revolutionary, AI, technology;
         </p>
-      </div>
-    </div>
+      </d, i, v>
+    </d, i, v>
   );
 };
-
 export default GlobalAITransformationHub;

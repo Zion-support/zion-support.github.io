@@ -1,223 +1,226 @@
-import React from 'react';
+import React from "react";
 =======
-import React from 'react';';
-
-const NewServicesPromotionalBanner: React.FC = () => {,
+import React from "react";';
+const, NewServicesPromotionalBanne, r: Rea, c, t.FC = () => {
   return (
-    <section className="py-16 bg-gradient-to-r from-emerald-900/40 via-teal-900/40 to-cyan-900/40 border-y border-emerald-500/20">";
-      <div className="container mx-auto px-6">";
-        {/* Header */}
-        <div className="text-center mb-12">";
-          <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 border border-emerald-500/30 mb-6">";
-            <span className="text-emerald-400 font-bold text-sm tracking-wider uppercase animate-pulse">";
-              🆕 NEW SERVICES LAUNCH - 2026
-            </span>
-          </div>
-          <h2 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">";
-            Revolutionary New AI Services
+    <section, className="py-16, b, g-gradie, n, t-to-r, fro, m-emera, l, d-9, 0, 0/40, vi, a-te, a, l-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, borde, r-y, borde, r-emera, l, d-5, 0, 0/20">";
+      <div, className="container, m, x-auto, p, x-6">";
+        {/* Head, e, r */}
+        <div, className="text-center mb-12">";
+          <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-6, p, y-3, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, border, border-emera, l, d-5, 0, 0/30, m, b-6">";
+            <span, className="te, x, t-emera, l, d-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercase, animate-pul, s, e">";
+              🆕 NEW, SERVICES, LAUNCH - 20, 2, 6;
+            </sp, a, n>
+          </d, i, v>
+          <h2, className="te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-emera, l, d-400, vi, a-te, a, l-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transpare, n, t">";
+            Revolutionary, New, AI Servic, e, s;
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">";
-            Introducing groundbreaking AI services that will transform how enterprises operate, innovate, and compete in the digital age.
+          <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-auto, leadin, g-relax, e, d">";
+            Introducing, groundbreaking, AI services, that, will transform, how, enterprises opera, t, e, innova, t, e, and, compete, in the, digital, age.
           </p>
-        </div>
-
-        {/* Services Grid */}
-        <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-12">",
-          {/* Quantum AI Consulting */}
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-emerald-500/50 transition-all duration-300 hover:transform hover:scale-105 group">",
-            <div className="text-6xl mb-4 group-hover: animate-spin">⚛️</div>",
-            <h3 className="text-2xl font-bold text-white mb-4">Quantum AI Consulting</h3>
-            <p className="text-gray-400 mb-6 leading-relaxed">
+        </d, i, v>
+        {/* Services, Gri, d */}
+        <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+  g:gr, i, d-co, l, s-3, ga, p-8, m, b-12">"
+          {/* Quantum, AI, Consulting */}
+          <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10, hove, r: bord, e, r-emera, l, d-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:transform, hov, e
+  r:sca, l, e-105, grou, p">"
+            <div, className="te, x, t-6xl, m, b-4, grou, p-hov, e, r: anima, t, e-sp, i, n">⚛️</d, i, v>"
+            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4">Quantum, AI, Consulting</h3>
+            <p, className="te, x, t-gr, a, y-400, m, b-6, leadin, g-relax, e, d">
 =======
-        <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-12">";,
-          {/* Quantum AI Consulting */}
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-emerald-500/50 transition-all duration-300 hover:transform hover:scale-105 group">";,
-            <div className="text-6xl mb-4 group-hover: animate-spin">⚛️</div>";,
-            <h3 className="text-2xl font-bold text-white mb-4">Quantum AI Consulting</h3>";
-            <p className="text-gray-400 mb-6 leading-relaxed">";
-              Expert guidance on implementing quantum-enhanced AI solutions for maximum performance and competitive advantage.
+        <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+  g:gr, i, d-co, l, s-3, ga, p-8, m, b-12">";
+          {/* Quantum, AI, Consulting */}
+          <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10, hove, r: bord, e, r-emera, l, d-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-105, grou, p">";
+            <div, className="te, x, t-6xl, m, b-4, grou, p-ho, v, e
+  r: anima, t, e-sp, i, n">⚛️</d, i, v>";
+            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4">Quantum, AI, Consulting</h3>";
+            <p, className="te, x, t-gr, a, y-400, m, b-6, leadin, g-relax, e, d">";
+              Expert, guidance, on implementing, quantu, m-enhanced, AI, solutions for, maximum, performance and, competitive, advantage.
             </p>
-            <div className="space-y-3 mb-6">";
-              <div className="flex items-center gap-3">";
-                <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>";
-                <span className="text-gray-300 text-sm">Quantum algorithm optimization</span>";
-              </div>
-              <div className="flex items-center gap-3">";
-                <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>";
-                <span className="text-gray-300 text-sm">Hybrid quantum-classical systems</span>";
-              </div>
-              <div className="flex items-center gap-3">";
-                <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>";
-                <span className="text-gray-300 text-sm">Performance benchmarking</span>";
-              </div>
-            </div>
-            <div className="text-emerald-400 font-bold text-lg mb-4">Starting at $25,000/month</div>";
-            <a title="Internal link" 
-              href="/services/quantum-ai-consulting" 
-              className="inline-block bg-gradient-to-r from-emerald-500 to-teal-600 hover: from-emerald-400 hover:to-teal-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50",
+            <div, className="spa, c, e-y-3, m, b-6">";
+              <div, className="flex, item, s-center, ga, p-3">";
+                <span, className="w-2 h-2, b, g-emera, l, d-400, rounde, d-fu, l, l"></sp, a, n>";
+                <span, className="te, x, t-gr, a, y-300, tex, t-sm">Quantum, algorithm, optimization</sp, a, n>";
+              </d, i, v>
+              <div, className="flex, item, s-center, ga, p-3">";
+                <span, className="w-2 h-2, b, g-emera, l, d-400, rounde, d-fu, l, l"></sp, a, n>";
+                <span, className="te, x, t-gr, a, y-300, tex, t-sm">Hybrid, quantu, m-classical, system, s</sp, a, n>";
+              </d, i, v>
+              <div, className="flex, item, s-center, ga, p-3">";
+                <span, className="w-2 h-2, b, g-emera, l, d-400, rounde, d-fu, l, l"></sp, a, n>";
+                <span, className="te, x, t-gr, a, y-300, tex, t-sm">Performance, benchmarkin, g</sp, a, n>";
+              </d, i, v>
+            </d, i, v>
+            <div, className="te, x, t-emera, l, d-400, fon, t-bold, tex, t-lg, m, b-4">Starting, a, t $25,0, 0, 0/mon, t, h</d, i, v>";
+            <a, titl, e="Internal, lin, k" 
+              hr, e, f="/servic, e, s/quant, u, m-ai-consulti, n, g" 
+              classNa, m, e="inli, n, e-block, b, g-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-te, a, l-600, hove, r: fr, o, m-emera, l, d-400, hove, r:to-te, a, l-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hov, e
+  r:shad, o, w-emera, l, d-5, 0, 0/50"
             >
-              Learn More →
+              Learn, Mor, e →
             </a>
-          </div>
-
-          {/* AI Security Operations Center */}
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105 group">",
-            <div className="text-6xl mb-4 group-hover: animate-pulse">🛡️</div>",
-            <h3 className="text-2xl font-bold text-white mb-4">AI Security Operations Center</h3>
-            <p className="text-gray-400 mb-6 leading-relaxed">
+          </d, i, v>
+          {/* AI, Security, Operations Cent, e, r */}
+          <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10, hove, r: bord, e, r-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:transform, hov, e
+  r:sca, l, e-105, grou, p">"
+            <div, className="te, x, t-6xl, m, b-4, grou, p-hov, e, r: anima, t, e-pul, s, e">🛡️</d, i, v>"
+            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4">AI, Security, Operations Cent, e, r</h3>
+            <p, className="te, x, t-gr, a, y-400, m, b-6, leadin, g-relax, e, d">
 =======
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105 group">";,
-            <div className="text-6xl mb-4 group-hover: animate-pulse">🛡️</div>";,
-            <h3 className="text-2xl font-bold text-white mb-4">AI Security Operations Center</h3>";
-            <p className="text-gray-400 mb-6 leading-relaxed">";
-              24/7 monitoring and protection for your AI systems with advanced threat detection and automated response.
+          <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10, hove, r: bord, e, r-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-105, grou, p">";
+            <div, className="te, x, t-6xl, m, b-4, grou, p-ho, v, e
+  r: anima, t, e-pul, s, e">🛡️</d, i, v>";
+            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4">AI, Security, Operations Cent, e, r</h3>";
+            <p, className="te, x, t-gr, a, y-400, m, b-6, leadin, g-relax, e, d">";
+              24/7, monitoring, and protection, for, your AI, systems, with advanced, threat, detection and, automated, response.
             </p>
-            <div className="space-y-3 mb-6">";
-              <div className="flex items-center gap-3">";
-                <span className="w-2 h-2 bg-blue-400 rounded-full"></span>";
-                <span className="text-gray-300 text-sm">Real-time threat monitoring</span>";
-              </div>
-              <div className="flex items-center gap-3">";
-                <span className="w-2 h-2 bg-blue-400 rounded-full"></span>";
-                <span className="text-gray-300 text-sm">Automated incident response</span>";
-              </div>
-              <div className="flex items-center gap-3">";
-                <span className="w-2 h-2 bg-blue-400 rounded-full"></span>";
-                <span className="text-gray-300 text-sm">Compliance management</span>";
-              </div>
-            </div>
-            <div className="text-blue-400 font-bold text-lg mb-4">Starting at $15,000/month</div>";
-            <a title="Internal link" 
-              href="/services/ai-security-soc" 
-              className="inline-block bg-gradient-to-r from-blue-500 to-cyan-600 hover: from-blue-400 hover:to-cyan-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50",
+            <div, className="spa, c, e-y-3, m, b-6">";
+              <div, className="flex, item, s-center, ga, p-3">";
+                <span, className="w-2 h-2, b, g-bl, u, e-400, rounde, d-fu, l, l"></sp, a, n>";
+                <span, className="te, x, t-gr, a, y-300, tex, t-sm">Re, a, l-time, threat, monitoring</sp, a, n>";
+              </d, i, v>
+              <div, className="flex, item, s-center, ga, p-3">";
+                <span, className="w-2 h-2, b, g-bl, u, e-400, rounde, d-fu, l, l"></sp, a, n>";
+                <span, className="te, x, t-gr, a, y-300, tex, t-sm">Automated, incident, response</sp, a, n>";
+              </d, i, v>
+              <div, className="flex, item, s-center, ga, p-3">";
+                <span, className="w-2 h-2, b, g-bl, u, e-400, rounde, d-fu, l, l"></sp, a, n>";
+                <span, className="te, x, t-gr, a, y-300, tex, t-sm">Compliance, managemen, t</sp, a, n>";
+              </d, i, v>
+            </d, i, v>
+            <div, className="te, x, t-bl, u, e-400, fon, t-bold, tex, t-lg, m, b-4">Starting, a, t $15,0, 0, 0/mon, t, h</d, i, v>";
+            <a, titl, e="Internal, lin, k" 
+              hr, e, f="/servic, e, s/ai-securi, t, y-s, o, c" 
+              classNa, m, e="inli, n, e-block, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-cy, a, n-600, hove, r: fr, o, m-bl, u, e-400, hove, r:to-cy, a, n-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hov, e
+  r:shad, o, w-bl, u, e-5, 0, 0/50"
             >
-              Learn More →
+              Learn, Mor, e →
             </a>
-          </div>
-
-          {/* Autonomous Operations Platform */}
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105 group">",
-            <div className="text-6xl mb-4 group-hover: animate-bounce">🤖</div>",
-            <h3 className="text-2xl font-bold text-white mb-4">Autonomous Operations Platform</h3>
-            <p className="text-gray-400 mb-6 leading-relaxed">
+          </d, i, v>
+          {/* Autonomous, Operations, Platform */}
+          <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:transform, hov, e
+  r:sca, l, e-105, grou, p">"
+            <div, className="te, x, t-6xl, m, b-4, grou, p-hov, e, r: anima, t, e-boun, c, e">🤖</d, i, v>"
+            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4">Autonomous, Operations, Platform</h3>
+            <p, className="te, x, t-gr, a, y-400, m, b-6, leadin, g-relax, e, d">
 =======
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105 group">";,
-            <div className="text-6xl mb-4 group-hover: animate-bounce">🤖</div>";,
-            <h3 className="text-2xl font-bold text-white mb-4">Autonomous Operations Platform</h3>";
-            <p className="text-gray-400 mb-6 leading-relaxed">";
-              Complete automation platform with self-healing, self-optimizing, and self-scaling capabilities for enterprise operations.
+          <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-105, grou, p">";
+            <div, className="te, x, t-6xl, m, b-4, grou, p-ho, v, e
+  r: anima, t, e-boun, c, e">🤖</d, i, v>";
+            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4">Autonomous, Operations, Platform</h3>";
+            <p, className="te, x, t-gr, a, y-400, m, b-6, leadin, g-relax, e, d">";
+              Complete, automation, platform with, sel, f-heali, n, g, se, l, f-optimizi, n, g, and, sel, f-scaling, capabilities, for enterprise, operation, s.
             </p>
-            <div className="space-y-3 mb-6">";
-              <div className="flex items-center gap-3">";
-                <span className="w-2 h-2 bg-purple-400 rounded-full"></span>";
-                <span className="text-gray-300 text-sm">Self-healing infrastructure</span>";
-              </div>
-              <div className="flex items-center gap-3">";
-                <span className="w-2 h-2 bg-purple-400 rounded-full"></span>";
-                <span className="text-gray-300 text-sm">Dynamic resource optimization</span>";
-              </div>
-              <div className="flex items-center gap-3">";
-                <span className="w-2 h-2 bg-purple-400 rounded-full"></span>";
-                <span className="text-gray-300 text-sm">Predictive scaling</span>";
-              </div>
-            </div>
-            <div className="text-purple-400 font-bold text-lg mb-4">Starting at $35,000/month</div>";
-            <a title="Internal link" 
-              href="/services/autonomous-operations" 
-              className="inline-block bg-gradient-to-r from-purple-500 to-pink-600 hover: from-purple-400 hover:to-pink-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50",
+            <div, className="spa, c, e-y-3, m, b-6">";
+              <div, className="flex, item, s-center, ga, p-3">";
+                <span, className="w-2 h-2, b, g-purp, l, e-400, rounde, d-fu, l, l"></sp, a, n>";
+                <span, className="te, x, t-gr, a, y-300, tex, t-sm">Se, l, f-healing, infrastructur, e</sp, a, n>";
+              </d, i, v>
+              <div, className="flex, item, s-center, ga, p-3">";
+                <span, className="w-2 h-2, b, g-purp, l, e-400, rounde, d-fu, l, l"></sp, a, n>";
+                <span, className="te, x, t-gr, a, y-300, tex, t-sm">Dynamic, resource, optimization</sp, a, n>";
+              </d, i, v>
+              <div, className="flex, item, s-center, ga, p-3">";
+                <span, className="w-2 h-2, b, g-purp, l, e-400, rounde, d-fu, l, l"></sp, a, n>";
+                <span, className="te, x, t-gr, a, y-300, tex, t-sm">Predictive, scalin, g</sp, a, n>";
+              </d, i, v>
+            </d, i, v>
+            <div, className="te, x, t-purp, l, e-400, fon, t-bold, tex, t-lg, m, b-4">Starting, a, t $35,0, 0, 0/mon, t, h</d, i, v>";
+            <a, titl, e="Internal, lin, k" 
+              hr, e, f="/servic, e, s/autonomo, u, s-operatio, n, s" 
+              classNa, m, e="inli, n, e-block, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-400, hove, r:to-pi, n, k-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hov, e
+  r:shad, o, w-purp, l, e-5, 0, 0/50"
             >
-              Learn More →
+              Learn, Mor, e →
             </a>
-          </div>
-        </div>
-
-        {/* Special Offer Banner */}
-        <div className="bg-gradient-to-r from-emerald-900/30 to-teal-900/30 rounded-2xl p-8 border border-emerald-500/20 mb-12">
-          <div className="grid md: grid-cols-2 gap-8 items-center">",
+          </d, i, v>
+        </d, i, v>
+        {/* Special, Offer, Banner */}
+        <div, className="bg-gradie, n, t-to-r, fro, m-emera, l, d-9, 0, 0/30, t, o-te, a, l-9, 0, 0/30, rounde, d-2x, l, p-8, border, border-emera, l, d-5, 0, 0/20, m, b-12">
+          <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, item, s-cent, e, r">"
 =======
-        <div className="bg-gradient-to-r from-emerald-900/30 to-teal-900/30 rounded-2xl p-8 border border-emerald-500/20 mb-12">";
-          <div className="grid md: grid-cols-2 gap-8 items-center">";,
-            <div>
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-red-500/20 to-orange-500/20 border border-red-500/30 mb-4">";
-                <span className="text-red-400 font-bold text-sm">🔥 LIMITED TIME OFFER</span>";
-              </div>
-              <h3 className="text-3xl font-extrabold mb-4 text-white">";
-                Bundle All Three Services
+        <div, className="bg-gradie, n, t-to-r, fro, m-emera, l, d-9, 0, 0/30, t, o-te, a, l-9, 0, 0/30, rounde, d-2x, l, p-8, border, border-emera, l, d-5, 0, 0/20, m, b-12">";
+          <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, item, s-cent, e, r">";
+            <d, i, v>
+              <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-r, e, d-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, border, border-r, e, d-5, 0, 0/30, m, b-4">";
+                <span, className="te, x, t-r, e, d-400, fon, t-bold, tex, t-sm">🔥 LIMITED, TIME, OFFER</sp, a, n>";
+              </d, i, v>
+              <h3, className="te, x, t-3xl, fon, t-extrabold, m, b-4, tex, t-whi, t, e">";
+                Bundle, All, Three Servic, e, s;
               </h3>
-              <p className="text-xl text-gray-300 mb-6">";
-                Get Quantum AI Consulting, AI Security SOC, and Autonomous Operations Platform together with massive savings.
+              <p, className="te, x, t-xl, tex, t-gr, a, y-300, m, b-6">";
+                Get, Quantum, AI Consulti, n, g, AI, Security, SOC, and, Autonomous, Operations Platform, together, with massive, saving, s.
               </p>
-              <div className="space-y-3">";
-                <div className="flex items-center gap-3">";
-                  <span className="text-green-400">✓</span>";
-                  <span className="text-gray-300">40% discount on bundle</span>";
-                </div>
-                <div className="flex items-center gap-3">";
-                  <span className="text-green-400">✓</span>";
-                  <span className="text-gray-300">Free implementation support</span>";
-                </div>
-                <div className="flex items-center gap-3">";
-                  <span className="text-green-400">✓</span>";
-                  <span className="text-gray-300">Priority 24/7 support</span>";
-                </div>
-                <div className="flex items-center gap-3">";
-                  <span className="text-green-400">✓</span>";
-                  <span className="text-gray-300">Custom integration services</span>";
-                </div>
-              </div>
-            </div>
-            <div className="text-center">";
-              <div className="text-6xl font-extrabold bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent mb-2">";
-                $45,000
-              </div>
-              <div className="text-gray-400 text-lg mb-2">per month (40% off)</div>";
-              <div className="text-lg text-gray-500 line-through mb-4">$75,000/month</div>";
-              <div className="text-2xl text-emerald-400 font-bold mb-6">";
-                Save $30,000/month!
-              </div>
-              <a title="Internal link" 
-                href="/contact?offer=bundle-services-40" 
-                className="bg-gradient-to-r from-emerald-500 to-teal-600 hover: from-emerald-400 hover:to-teal-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 transform hover:-translate-y-1",
+              <div, className="spa, c, e-y-3">";
+                <div, className="flex, item, s-center, ga, p-3">";
+                  <span, className="te, x, t-gre, e, n-4, 0, 0">✓</sp, a, n>";
+                  <span, className="te, x, t-gr, a, y-3, 0, 0">40% discount, on, bundle</sp, a, n>";
+                </d, i, v>
+                <div, className="flex, item, s-center, ga, p-3">";
+                  <span, className="te, x, t-gre, e, n-4, 0, 0">✓</sp, a, n>";
+                  <span, className="te, x, t-gr, a, y-3, 0, 0">Free, implementation, support</sp, a, n>";
+                </d, i, v>
+                <div, className="flex, item, s-center, ga, p-3">";
+                  <span, className="te, x, t-gre, e, n-4, 0, 0">✓</sp, a, n>";
+                  <span, className="te, x, t-gr, a, y-3, 0, 0">Priority, 2, 4/7, suppor, t</sp, a, n>";
+                </d, i, v>
+                <div, className="flex, item, s-center, ga, p-3">";
+                  <span, className="te, x, t-gre, e, n-4, 0, 0">✓</sp, a, n>";
+                  <span, className="te, x, t-gr, a, y-3, 0, 0">Custom, integration, services</sp, a, n>";
+                </d, i, v>
+              </d, i, v>
+            </d, i, v>
+            <div, className="te, x, t-cent, e, r">";
+              <div, className="te, x, t-6xl, fon, t-extrabold, b, g-gradie, n, t-to-r, fro, m-emera, l, d-400, t, o-te, a, l-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2">";
+                $45,0, 0, 0;
+              </d, i, v>
+              <div, className="te, x, t-gr, a, y-400, tex, t-lg, m, b-2">per, mont, h (40% o, f, f)</d, i, v>";
+              <div, className="te, x, t-lg, tex, t-gr, a, y-500, lin, e-through, m, b-4">$75,0, 0, 0/mon, t, h</d, i, v>";
+              <div, className="te, x, t-2xl, tex, t-emera, l, d-400, fon, t-bold, m, b-6">";
+                Sa, v, e $30,0, 0, 0/mon, t, h!
+              </d, i, v>
+              <a, titl, e="Internal, lin, k" 
+                hr, e, f="/conta, c, t?off, e, r=bund, l, e-servic, e, s-40" 
+                classNa, m, e="bg-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-te, a, l-600, hove, r: fr, o, m-emera, l, d-400, hove, r:to-te, a, l-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-emera, l, d-5, 0, 0/50, transform, hove
+  r:-transla, t, e-y-1"
               >
-                Claim Bundle Offer
+                Claim, Bundle, Offer;
               </a>
-            </div>
-          </div>
-        </div>
-
-        {/* Testimonials */}
-        <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">";
-          <div className="text-center mb-8">";
-            <h3 className="text-2xl font-bold text-white mb-2">What Our Clients Say</h3>";
-            <p className="text-gray-400">Real results from enterprises using our new AI services</p>";
-          </div>
-          
-          <div className="grid md: grid-cols-2 gap-8">",
-            <div className="bg-white/5 rounded-xl p-6 border border-white/10">
-              <div className="text-yellow-400 text-2xl mb-4">★★★★★</div>
-              <p className="text-gray-300 mb-4 italic">
+            </d, i, v>
+          </d, i, v>
+        </d, i, v>
+        {/* Testimonia, l, s */}
+        <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10">";
+          <div, className="te, x, t-center, m, b-8">";
+            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-2">What, Our, Clients S, a, y</h3>";
+            <p, className="te, x, t-gr, a, y-4, 0, 0">Real, results, from enterprises, using, our new, AI, services</p>";
+          </d, i, v>
+          <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8">"
+            <div, className="bg-whi, t, e/5, rounde, d-x, l, p-6, border, border-whi, t, e/10">
+              <div, className="te, x, t-yell, o, w-400, tex, t-2xl, m, b-4">★★★★★</d, i, v>
+              <p, className="te, x, t-gr, a, y-300, m, b-4, itali, c">
 =======
-          <div className="grid md: grid-cols-2 gap-8">";,
-            <div className="bg-white/5 rounded-xl p-6 border border-white/10">";
-              <div className="text-yellow-400 text-2xl mb-4">★★★★★</div>";
-              <p className="text-gray-300 mb-4 italic">";
-                "The Quantum AI Consulting transformed our computational capabilities. We're seeing 300% performance improvements in our AI models."
+          <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8">";
+            <div, className="bg-whi, t, e/5, rounde, d-x, l, p-6, border, border-whi, t, e/10">";
+              <div, className="te, x, t-yell, o, w-400, tex, t-2xl, m, b-4">★★★★★</d, i, v>";
+              <p, className="te, x, t-gr, a, y-300, m, b-4, itali, c">";
+                "The, Quantum, AI Consulting, transformed, our computational, capabilitie, s. We're, seeing, 300% performance, improvements, in our, AI, models."
               </p>
-              <div className="text-emerald-400 font-semibold">CTO, Fortune 100 Tech Company</div>";
-            </div>
-            
-            <div className="bg-white/5 rounded-xl p-6 border border-white/10">";
-              <div className="text-yellow-400 text-2xl mb-4">★★★★★</div>";
-              <p className="text-gray-300 mb-4 italic">";
-                "The AI Security SOC gives us peace of mind. Zero security incidents since implementation, and 24/7 protection is invaluable."
+              <div, className="te, x, t-emera, l, d-400, fon, t-semibo, l, d">C, T, O, Fortune, 100, Tech Compa, n, y</d, i, v>";
+            </d, i, v>
+            <div, className="bg-whi, t, e/5, rounde, d-x, l, p-6, border, border-whi, t, e/10">";
+              <div, className="te, x, t-yell, o, w-400, tex, t-2xl, m, b-4">★★★★★</d, i, v>";
+              <p, className="te, x, t-gr, a, y-300, m, b-4, itali, c">";
+                "The, AI, Security SOC, gives, us peace, of, mind. Zero, security, incidents since, implementatio, n, and, 2, 4/7, protection, is invaluab, l, e."
               </p>
-              <div className="text-blue-400 font-semibold">CISO, Global Financial Institution</div>";
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+              <div, className="te, x, t-bl, u, e-400, fon, t-semibo, l, d">CI, S, O, Global, Financial, Institution</d, i, v>";
+            </d, i, v>
+          </d, i, v>
+        </d, i, v>
+      </d, i, v>
+    </secti, o, n>
   );
 };
-
 export default NewServicesPromotionalBanner;

@@ -1,43 +1,38 @@
-// @ts-nocheck
-import React from "react";";
-
-export default function EdgePrivatePersonalizationV2(): React.JSX.Element {
+// @ts-noche, c, k
+  import React from "react";";
+export, default, function EdgePrivatePersonalization, V, 2(): Rea, c, t.J, S, X.Eleme, n, t {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">";
+    <div, className="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e">";
       <Helmet>
-        <title>Edge Private Personalization v2 — Zero‑PII, Global &lt;100ms</title>
-        <meta
-          name="description"
-          content="Scoped IDs, signed configs, and on‑device models for privacy‑first personalization with stable SLAs." /><link
-          rel="canonical"
-          href="https://ziontechgroup.com/blog/edge-2025-sept-30-private-personalization-v2",
-        />
+        <title>Edge, Private, Personalization v2 — Ze, r, o‑P, I, I, Glob, a, l &lt;100, m, s</title>
+        <me, t, a
+  na, m, e="descripti, o, n"
+          content="Scoped, ID, s, signed, config, s, and, o, n‑device, models, for priva, c, y‑first, personalization, with stable, SLA, s." /><li, n, k 
+  r, e, l="canonic, a, l"
+          hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/bl, o, g/ed, g, e-20, 2, 5-se, p, t-30-priva, t, e-personalizati, o, n-v2",  />
       </Helmet>
-
-      <div className="container mx-auto px-6 py-16">
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">Edge Private Personalization v2</h1>",
-        <p className="text-zion-slate-light mb-8">Zero‑PII, Global &lt;100ms</p>
-        <div className="prose prose-invert max-w-3xl">
+      <div, className="container, m, x-auto, p, x-6, p, y-16">
+        <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4">Edge, Private, Personalization v2</h1>"
+        <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-8">Ze, r, o‑P, I, I, Glob, a, l &lt;100, m, s</p>
+        <div, className="prose, pros, e-invert, ma, x-w-3, x, l">
 =======
-          href="https: //ziontechgroup.com/blog/edge-2025-sept-30-private-personalization-v2",
-        />
+          hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ed, g, e-20, 2, 5-se, p, t-30-priva, t, e-personalizati, o, n-v2"
+         />
       </Helmet>
-
-      <div className="container mx-auto px-6 py-16">";
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">Edge Private Personalization v2</h1>";,
-        <p className="text-zion-slate-light mb-8">Zero‑PII, Global &lt;100ms</p>";
-        <div className="prose prose-invert max-w-3xl">";
+      <div, className="container, m, x-auto, p, x-6, p, y-16">";
+        <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4">Edge, Private, Personalization v2</h1>";
+        <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-8">Ze, r, o‑P, I, I, Glob, a, l &lt;100, m, s</p>";
+        <div, className="prose, pros, e-invert, ma, x-w-3, x, l">";
           <p>
-            Deliver privacy‑first personalization with scoped IDs, signed configurations, and on‑device models. Achieve
-            sub‑100ms global latency with deterministic cache strategies and geo‑aware budgets.
+            Deliver, privac, y‑first, personalization, with scoped, ID, s, signed, configuration, s, and, o, n‑device, model, s. Achie, v, e
+  s, u, b‑100ms, global, latency with, deterministic, cache strategies, and, geo‑aware, budget, s.
           </p>
           <p>
-            Includes validation flows, negative caching, and attested telemetry patterns you can ship today.
+            Includes, validation, flows, negative, cachin, g, and, attested, telemetry patterns, you, can ship, toda, y.
           </p>
-        </div>
-      </div>
-    </div>
+        </d, i, v>
+      </d, i, v>
+    </d, i, v>
   );
 }
-
 ;

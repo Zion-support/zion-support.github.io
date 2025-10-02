@@ -1,140 +1,135 @@
-import React from 'react';
-const January2026NewContentShowcaseBanner: React.FC = () => {,
-  const features = [
-    { icon: Brain, title: "Synthetic Consciousness", desc: "True AI awareness" }
-    { icon: Zap, title: "Quantum Edge Processing", desc: "Sub-millisecond speed" }
-    { icon: Network, title: "Autonomous Mesh", desc: "Self-organizing systems" }
-    { icon: Shield, title: "Quantum Security", desc: "Unbreakable protection" }
-    { icon: Cpu, title: "Neuromorphic AI", desc: "Brain-inspired computing" }
+import React from "react";
+const, January2026NewContentShowcaseBanne, r: Rea, c, t.FC = () => {
+  const, feature, s = [
+    { i, c, o
+  n: Bra, i, n, tit, l, e: "Synthetic, Consciousnes, s", de, s, c: "True, AI, awareness" }
+    { ic, o, n: Z, a, p, tit, l, e: "Quantum, Edge, Processing", de, s, c: "S, u, b-millisecond, spee, d" }
+    { ic, o, n: Netwo, r, k, tit, l, e: "Autonomous, Mes, h", de, s, c: "Se, l, f-organizing, system, s" }
+    { ic, o, n: Shie, l, d, tit, l, e: "Quantum, Securit, y", de, s, c: "Unbreakable, protectio, n" }
+    { ic, o, n: C, p, u, tit, l, e: "Neuromorphic, A, I", de, s, c: "Bra, i, n-inspired, computin, g" }
 =======
-import React from 'react';';
-
-const January2026NewContentShowcaseBanner: React.FC = () => {,
-  const features = [
-    { icon: Brain, title: "Synthetic Consciousness", desc: "True AI awareness" },";
-    { icon: Zap, title: "Quantum Edge Processing", desc: "Sub-millisecond speed" },";
-    { icon: Network, title: "Autonomous Mesh", desc: "Self-organizing systems" },";
-    { icon: Shield, title: "Quantum Security", desc: "Unbreakable protection" },";
-    { icon: Cpu, title: "Neuromorphic AI", desc: "Brain-inspired computing" }";
+import React from "react";';
+const, January2026NewContentShowcaseBanne, r: Rea, c, t.FC = () => {
+  const, feature, s = [
+    { i, c, o
+  n: Bra, i, n, tit, l, e: "Synthetic, Consciousnes, s", de, s, c: "True, AI, awareness" },";
+    { ic, o, n: Z, a, p, tit, l, e: "Quantum, Edge, Processing", de, s, c: "S, u, b-millisecond, spee, d" },";
+    { ic, o, n: Netwo, r, k, tit, l, e: "Autonomous, Mes, h", de, s, c: "Se, l, f-organizing, system, s" },";
+    { ic, o, n: Shie, l, d, tit, l, e: "Quantum, Securit, y", de, s, c: "Unbreakable, protectio, n" },";
+    { ic, o, n: C, p, u, tit, l, e: "Neuromorphic, A, I", de, s, c: "Bra, i, n-inspired, computin, g" }";
   ];
-
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-      className="relative overflow-hidden bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 rounded-2xl p-8 text-white"
+    <moti, o, n.d, i, v
+  initi, a, l={{ opaci, t, y: 0, y: 20 }}
+      anima, t, e={{ opaci, t, y: 1, y: 0 }}
+      transiti, o, n={{ durati, o, n: 0.8 }}
+      classNa, m, e="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, rounde, d-2x, l, p-8, tex, t-whi, t, e"
     >
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">";
-        <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent"></div>";
-      </div>
-
-      <div className="relative z-10">";
-        {/* Header */}
-        <div className="text-center mb-8">";
-          <motion.div
-            initial={{ scale: 0.9 }}
-            animate={{ scale: 1 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full text-sm font-semibold mb-4"
+      {/* Background, Patter, n */}
+      <div, className="absolute, inse, t-0, opacit, y-10">";
+        <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-whi, t, e/5, t, o-transpare, n, t"></d, i, v>";
+      </d, i, v>
+      <div, className="relativ, e, z-10">";
+        {/* Head, e, r */}
+        <div, className="te, x, t-center, m, b-8">";
+          <moti, o, n.d, i, v
+  initi, a, l={{ sca, l, e: 0.9 }}
+            anima, t, e={{ sca, l, e: 1 }}
+            transiti, o, n={{ del, a, y: 0.2, durati, o, n: 0.6 }}
+            classNa, m, e="inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-500, rounde, d-full, tex, t-sm, fon, t-semibold, m, b-4"
           >
-            <span className="mr-2">🚀</span>";
-            January 2026 - Revolutionary AI Breakthroughs
-          </motion.div>
-          
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.6 }}
-            className="text-4xl md: text-5xl font-bold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent mb-4",
+            <span, className="mr-2">🚀</sp, a, n>";
+            January, 202, 6 - Revolutionary, AI, Breakthroughs;
+          </moti, o, n.d, i, v>
+          <moti, o, n.h2
+  initi, a, l={{ opaci, t, y: 0, y: 20 }}
+            anima, t, e={{ opaci, t, y: 1, y: 0 }}
+            transiti, o, n={{ del, a, y: 0.3, durati, o, n: 0.6 }}
+            classNa, m, e="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-white, t, o-bl, u, e-200, b, g-cl, i, p-text, tex, t-transparent, m, b-4"
           >
-            The Future of AI is Here
-          </motion.h2>
-          
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.6 }}
-            className="text-xl text-blue-100 max-w-3xl mx-auto"
+            The, Future, of AI, is, Here;
+          </moti, o, n.h2>
+          <moti, o, n.p
+  initi, a, l={{ opaci, t, y: 0, y: 20 }}
+            anima, t, e={{ opaci, t, y: 1, y: 0 }}
+            transiti, o, n={{ del, a, y: 0.4, durati, o, n: 0.6 }}
+            classNa, m, e="te, x, t-xl, tex, t-bl, u, e-100, ma, x-w-3xl, m, x-au, t, o"
           >
-            Discover groundbreaking AI technologies that are revolutionizing enterprise operations
-            from synthetic consciousness to quantum edge computing and autonomous mesh networks.
-          </motion.p>
-        </div>
-
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-5 gap-6 mb-8">",
+            Discover, groundbreaking, AI technologies, that, are revolutionizing, enterprise, operations
+  from, synthetic, consciousness to, quantum, edge computing, and, autonomous mesh, network, s.
+          </moti, o, n.p>
+        </d, i, v>
+        {/* Features, Gri, d */}
+        <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l
+  g:gr, i, d-co, l, s-5, ga, p-6, m, b-8">"
 =======
-        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-5 gap-6 mb-8">";,
-          {features.map((feature, index) => (
-            <motion.div
-              key={feature.title}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 + index * 0.1, duration: 0.6 }}
-              className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center hover: bg-white/20 transition-all duration-300",
+        <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l
+  g:gr, i, d-co, l, s-5, ga, p-6, m, b-8">";
+          {featur, e, s.m, a, p((featu, r, e, ind, e, x) => (
+            <moti, o, n.d, i, v
+  k, e, y={featu, r, e.tit, l, e}
+              initi, a, l={{ opaci, t, y: 0, y: 20 }}
+              anima, t, e={{ opaci, t, y: 1, y: 0 }}
+              transiti, o, n={{ del, a, y: 0.5 + ind, e, x * 0.1, durati, o, n: 0.6 }}
+              classNa, m, e="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-4, tex, t-center, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-3, 0, 0"
             >
-              <feature.icon className="w-8 h-8 mx-auto mb-3 text-purple-300/>
-              <h3 className="font-semibold text-white mb-1">{feature.title}</h3>
-              <p className="text-sm text-blue-200">{feature.desc}</p>
+              <featu, r, e .icon, className="w-8 h-8, m, x-auto, m, b-3, tex, t-purp, l, e-3, 0, 0  />
+              <h3, className="fo, n, t-semibold, tex, t-white, m, b-1">{featu, r, e.tit, l, e}</h3>
+              <p, className="te, x, t-sm, tex, t-bl, u, e-2, 0, 0">{featu, r, e.de, s, c}</p>
 =======
-              <feature.icon className="w-8 h-8 mx-auto mb-3 text-purple-300" />";
-              <h3 className="font-semibold text-white mb-1">{feature.title}</h3>";
-              <p className="text-sm text-blue-200">{feature.desc}</p>";
-            </motion.div>
+              <featu, r, e.icon, className="w-8 h-8, m, x-auto, m, b-3, tex, t-purp, l, e-3, 0, 0" />";
+              <h3, className="fo, n, t-semibold, tex, t-white, m, b-1">{featu, r, e.tit, l, e}</h3>";
+              <p, className="te, x, t-sm, tex, t-bl, u, e-2, 0, 0">{featu, r, e.de, s, c}</p>";
+            </moti, o, n.d, i, v>
           ))}
-        </div>
-
-        {/* Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8, duration: 0.6 }}
-          className="grid grid-cols-2 md: grid-cols-4 gap-6 mb-8",
+        </d, i, v>
+        {/* Sta, t, s */}
+        <moti, o, n.d, i, v
+  initi, a, l={{ opaci, t, y: 0, y: 20 }}
+          anima, t, e={{ opaci, t, y: 1, y: 0 }}
+          transiti, o, n={{ del, a, y: 0.8, durati, o, n: 0.6 }}
+          classNa, m, e="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, m, b-8"
         >
-          <div className="text-center">";
-            <div className="text-3xl font-bold text-purple-300 mb-1">99.7%</div>";
-            <div className="text-sm text-blue-200">Efficiency</div>";
-          </div>
-          <div className="text-center">";
-            <div className="text-3xl font-bold text-blue-300 mb-1">200x</div>";
-            <div className="text-sm text-blue-200">Speed Boost</div>";
-          </div>
-          <div className="text-center">";
-            <div className="text-3xl font-bold text-green-300 mb-1">$500B</div>";
-            <div className="text-sm text-blue-200">Enterprise Value</div>";
-          </div>
-          <div className="text-center">";
-            <div className="text-3xl font-bold text-yellow-300 mb-1">95%</div>";
-            <div className="text-sm text-blue-200">Automation</div>";
-          </div>
-        </motion.div>
-
-        {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.9, duration: 0.6 }}
-          className="text-center"
+          <div, className="te, x, t-cent, e, r">";
+            <div, className="te, x, t-3xl, fon, t-bold, tex, t-purp, l, e-300, m, b-1">99.7%</d, i, v>";
+            <div, className="te, x, t-sm, tex, t-bl, u, e-2, 0, 0">Efficien, c, y</d, i, v>";
+          </d, i, v>
+          <div, className="te, x, t-cent, e, r">";
+            <div, className="te, x, t-3xl, fon, t-bold, tex, t-bl, u, e-300, m, b-1">20, 0, x</d, i, v>";
+            <div, className="te, x, t-sm, tex, t-bl, u, e-2, 0, 0">Speed, Boos, t</d, i, v>";
+          </d, i, v>
+          <div, className="te, x, t-cent, e, r">";
+            <div, className="te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-300, m, b-1">$50, 0, B</d, i, v>";
+            <div, className="te, x, t-sm, tex, t-bl, u, e-2, 0, 0">Enterprise, Valu, e</d, i, v>";
+          </d, i, v>
+          <div, className="te, x, t-cent, e, r">";
+            <div, className="te, x, t-3xl, fon, t-bold, tex, t-yell, o, w-300, m, b-1">95%</d, i, v>";
+            <div, className="te, x, t-sm, tex, t-bl, u, e-2, 0, 0">Automati, o, n</d, i, v>";
+          </d, i, v>
+        </moti, o, n.d, i, v>
+        {/* C, T, A */}
+        <moti, o, n.d, i, v
+  initi, a, l={{ opaci, t, y: 0, y: 20 }}
+          anima, t, e={{ opaci, t, y: 1, y: 0 }}
+          transiti, o, n={{ del, a, y: 0.9, durati, o, n: 0.6 }}
+          classNa, m, e="te, x, t-cent, e, r"
         >
-          <a title="Internal link"
-            href="/blog"
-            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover: from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl",
+          <a, titl, e="Internal, lin, k"
+            hr, e, f="/bl, o, g"
+            classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-500, hove, r: fr, o, m-purp, l, e-600, hove, r:to-bl, u, e-600, tex, t-white, fon, t-semibold, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, shado, w-lg, hov, e
+  r:shad, o, w-xl"
           >
-            Explore January 2026 Content
-            <ArrowRight className="ml-2 w-5 h-5/>
+            Explore, January, 2026 Conte, n, t;
+            <ArrowRight, className="ml-2 w-5 h-5  />
 =======
-            <ArrowRight className="ml-2 w-5 h-5" />";
+            <ArrowRight, className="ml-2 w-5 h-5" />";
           </a>
-        </motion.div>
-      </div>
-
-      {/* Floating Elements */}
-      <div className="absolute top-10 left-10 w-20 h-20 bg-purple-500/20 rounded-full blur-xl animate-pulse"></div>";
-      <div className="absolute bottom-10 right-10 w-32 h-32 bg-blue-500/20 rounded-full blur-xl animate-pulse delay-1000"></div>";
-    </motion.div>
+        </moti, o, n.d, i, v>
+      </d, i, v>
+      {/* Floating, Element, s */}
+      <div, className="absolute, to, p-10, lef, t-1, 0, w-2, 0, h-20, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-xl, animat, e-pul, s, e"></d, i, v>";
+      <div, className="absolute, botto, m-10, righ, t-1, 0, w-3, 2, h-32, b, g-bl, u, e-5, 0, 0/20, rounde, d-full, blu, r-xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>";
+    </moti, o, n.d, i, v>
   );
 };
-
 export default January2026NewContentShowcaseBanner;

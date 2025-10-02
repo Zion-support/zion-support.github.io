@@ -1,233 +1,222 @@
-import React, { useState } from 'react';
-import {
-Helmet
-} from 'react-helmet-async';
-import EnhancedContactForm from '../components/EnhancedContactForm';
-const ContactPage: React.FC = () => {,
-  const [formData, setFormData] = useState({
-    name: '',',
-    email: '',',
-    company: '',',
-    phone: '',',
-    service: '',',
-    message: '});
+import, Reac, t, { useSta, t, e } fr, o, m "rea, c, t";
+impo, r, t {
+Helm, e, t;
+} fr, o, m "rea, c, t-helm, e, t-asy, n, c";
+import, EnhancedContactForm, from "../componen, t, s/EnhancedContactFo, r, m";
+const, ContactPag, e: Rea, c, t.FC = () => {
+  con, s, t [formDa, t, a, setFormDa, t, a] = useSta, t, e({
+    na, m, e: '','
+    ema, i, l: '','
+    compa, n, y: '','
+    pho, n, e: '','
+    servi, c, e: '','
+    messa, g, e: '});
 =======
-import React, { useState } from 'react';';
-import { Helmet } from 'react-helmet-async';';
-import EnhancedContactForm from '../components/EnhancedContactForm';';
-
-const ContactPage: React.FC = () => {,
-  const [formData, setFormData] = useState({
-    name: '',';,
-    email: '',';,
-    company: '',';,
-    phone: '',';,
-    service: '',';,
-    message: '',
+import, Reac, t, { useSta, t, e } fr, o, m "rea, c, t";';
+import { Helmet } from "react-helmet-async";';
+import, EnhancedContactForm, from "../componen, t, s/EnhancedContactFo, r, m";';
+const, ContactPag, e: Rea, c, t.FC = () => {
+  con, s, t [formDa, t, a, setFormDa, t, a] = useSta, t, e({
+    na, m, e: '',';
+    ema, i, l: '',';
+    compa, n, y: '',';
+    pho, n, e: '',';
+    servi, c, e: '',';
+    messa, g, e: ''
   });
-
-  const handleSubmit = (e: React.FormEvent) => {,
-    e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted: ', formData);',
+  const, handleSubmi, t = (e: Rea, c, t.FormEve, n, t) => {
+    e.preventDefau, l, t();
+    // Handle, form, submission
+  conso, l, e.l, o, g('Form, submitte, d: ', formDa, t, a);'
 =======
-    console.log('Form submitted: ', formData);';,
+    conso, l, e.l, o, g('Form, submitte, d: ', formDa, t, a);';
   };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {,
-    setFormData({
-      ...formData
-      [e.target.name]: e.target.value
+  const, handleChang, e = (e: Rea, c, t.ChangeEve, n, t<HTMLInputEleme, n, t | HTMLTextAreaEleme, n, t | HTMLSelectEleme, n, t>) => {
+    setFormDa, t, a({
+      ...formDa, t, a;
+      [e.targ, e, t.na, m, e]: e.targ, e, t.val, u, e;
     });
   };
-
   return (
     <>
       <Helmet>
-        <title>Contact Us - Zion Tech Group</title>
-        <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact our experts for consultation and support." /></Helmet>
-      
-      <div className="container mx-auto px-4 py-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">",
+        <title>Contact, U, s - Zion, Tech, Group</title>
+        <meta name="descripti, o, n" content="Get, in, touch with, Zion, Tech Group, for, AI and, IT, solutions. Contact, our, experts for, consultation, and suppo, r, t." /></Helmet>
+      <div, className="container mx-auto px-4 py-8">
+        <div, className="max-w-6xl mx-auto">
+          <div, className="text-center mb-12">
+            <h1, className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">"
 =======
-        <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact our experts for consultation and support." />";
+        <meta name="descripti, o, n" content="Get, in, touch with, Zion, Tech Group, for, AI and, IT, solutions. Contact, our, experts for, consultation, and suppo, r, t." />";
       </Helmet>
-      
-      <div className="container mx-auto px-4 py-8">";
-        <div className="max-w-6xl mx-auto">";
-          <div className="text-center mb-12">";
-            <h1 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">";,
-              Contact Us
+      <div, className="container mx-auto px-4 py-8">";
+        <div, className="max-w-6xl mx-auto">";
+          <div, className="text-center mb-12">";
+            <h1, className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
+              Contact, U, s;
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
-              Ready to transform your business? Get in touch with our experts to discuss 
-              your specific needs and discover how we can help.
+            <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
+              Ready, to, transform your, busines, s? Get, in, touch with, our, experts to, discus, s
+  your, specific, needs and, discover, how we, can, help.
             </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg: grid-cols-2 gap-12">",
-            {/* Contact Information */}
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">Get In Touch</h2>
-              <div className="space-y-6">
-                <div className="flex items-start">
-                  <div className="text-2xl mr-4">📧</div>
+          </d, i, v>
+          <div, className="grid, gri, d-co, l, s-1 l
+  g: gr, i, d-co, l, s-2, ga, p-12">"
+            {/* Contact, Informatio, n */}
+            <d, i, v>
+              <h2, className="te, x, t-3xl, fon, t-bold, tex, t-gr, a, y-900, m, b-8">Get, In, Touch</h2>
+              <div, className="spa, c, e-y-6">
+                <div, className="flex, item, s-sta, r, t">
+                  <div, className="te, x, t-2xl, m, r-4">📧</d, i, v>
 =======
-          <div className="grid grid-cols-1 lg: grid-cols-2 gap-12">";,
-            {/* Contact Information */}
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">Get In Touch</h2>";
-              
-              <div className="space-y-6">";
-                <div className="flex items-start">";
-                  <div className="text-2xl mr-4">📧</div>";
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Email</h3>";
-                    <p className="text-gray-600">info@ziontechgroup.com</p>";
-                    <p className="text-gray-600">support@ziontechgroup.com</p>";
-                  </div>
-                </div>
-
-                <div className="flex items-start">";
-                  <div className="text-2xl mr-4">📞</div>";
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Phone</h3>
-                    <p className="text-gray-600">+1 (555) 123-4567</p>
-                    <p className="text-gray-600">Mon-Fri: 9AM-6PM EST</p>",
+          <div, className="grid, gri, d-co, l, s-1, l, g: gr, i, d-co, l, s-2, ga, p-12">";
+            {/* Contact, Informatio, n */}
+            <d, i, v>
+              <h2, className="te, x, t-3xl, fon, t-bold, tex, t-gr, a, y-900, m, b-8">Get, In, Touch</h2>";
+              <div, className="spa, c, e-y-6">";
+                <div, className="flex, item, s-sta, r, t">";
+                  <div, className="te, x, t-2xl, m, r-4">📧</d, i, v>";
+                  <d, i, v>
+                    <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">Ema, i, l</h3>";
+                    <p, className="te, x, t-gr, a, y-6, 0, 0">in, f, o@ziontechgro, u, p.c, o, m</p>";
+                    <p, className="te, x, t-gr, a, y-6, 0, 0">suppo, r, t@ziontechgro, u, p.c, o, m</p>";
+                  </d, i, v>
+                </d, i, v>
+                <div, className="flex, item, s-sta, r, t">";
+                  <div, className="te, x, t-2xl, m, r-4">📞</d, i, v>";
+                  <d, i, v>
+                    <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">Pho, n, e</h3>
+                    <p, className="te, x, t-gr, a, y-6, 0, 0">+1 (5, 5, 5) 1, 2, 3-45, 6, 7</p>
+                    <p, className="te, x, t-gr, a, y-6, 0, 0">M, o, n-F, r, i: 9, A, M-6PM, ES, T</p>"
 =======
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Phone</h3>";
-                    <p className="text-gray-600">+1 (555) 123-4567</p>";
-                    <p className="text-gray-600">Mon-Fri: 9AM-6PM EST</p>";,
-                  </div>
-                </div>
-
-                <div className="flex items-start">";
-                  <div className="text-2xl mr-4">📍</div>";
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Address</h3>";
-                    <p className="text-gray-600">";
-                      123 Technology Drive<br />
-                      Innovation District<br />
-                      Tech City, TC 12345
+                    <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">Pho, n, e</h3>";
+                    <p, className="te, x, t-gr, a, y-6, 0, 0">+1 (5, 5, 5) 1, 2, 3-45, 6, 7</p>";
+                    <p, className="te, x, t-gr, a, y-6, 0, 0">M, o, n-F, r, i: 9, A, M-6PM, ES, T</p>";
+                  </d, i, v>
+                </d, i, v>
+                <div, className="flex, item, s-sta, r, t">";
+                  <div, className="te, x, t-2xl, m, r-4">📍</d, i, v>";
+                  <d, i, v>
+                    <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">Addre, s, s</h3>";
+                    <p, className="te, x, t-gr, a, y-6, 0, 0">";
+                      123, Technology, Drive<br   />
+                      Innovation, Distric, t<br   />
+                      Tech, Cit, y, TC, 1234, 5;
                     </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start">";
-                  <div className="text-2xl mr-4">⏰</div>";
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Business Hours</h3>
-                    <p className="text-gray-600">Monday - Friday: 9:00 AM - 6:00 PM</p>",
-                    <p className="text-gray-600">Saturday: 10:00 AM - 4:00 PM</p>",
-                    <p className="text-gray-600">Sunday: Closed</p>",
+                  </d, i, v>
+                </d, i, v>
+                <div, className="flex, item, s-sta, r, t">";
+                  <div, className="te, x, t-2xl, m, r-4">⏰</d, i, v>";
+                  <d, i, v>
+                    <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">Business, Hour, s</h3>
+                    <p, className="te, x, t-gr, a, y-6, 0, 0">Mond, a, y - Frid, a, y: 9:00, A, M - 
+  6:00, P, M</p>"
+                    <p, className="te, x, t-gr, a, y-6, 0, 0">Saturd, a, y: 10:00, A, M - 
+  4:00, P, M</p>"
+                    <p, className="te, x, t-gr, a, y-6, 0, 0">Sund, a, y: Clos, e, d</p>"
 =======
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Business Hours</h3>";
-                    <p className="text-gray-600">Monday - Friday: 9:00 AM - 6:00 PM</p>";,
-                    <p className="text-gray-600">Saturday: 10:00 AM - 4:00 PM</p>";,
-                    <p className="text-gray-600">Sunday: Closed</p>";,
-                  </div>
-                </div>
-              </div>
-
-              {/* Services Quick Links */}
-              <div className="mt-12">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Our Services</h3>
-                <div className="grid grid-cols-1 sm: grid-cols-2 gap-4">",
-                  <div className="bg-blue-50 p-4 rounded-lg">
-                    <h4 className="font-bold text-gray-900 mb-2">AI Solutions</h4>
-                    <p className="text-gray-600 text-sm">Machine Learning & Automation</p>
+                    <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">Business, Hour, s</h3>";
+                    <p, className="te, x, t-gr, a, y-6, 0, 0">Mond, a, y - Frid, a, y: 9:00, A, M - 6:00, P, M</p>";
+                    <p, className="te, x, t-gr, a, y-6, 0, 0">Saturd, a, y: 10:00, A, M - 4:00, P, M</p>";
+                    <p, className="te, x, t-gr, a, y-6, 0, 0">Sun, d, a
+  y: Clos, e, d</p>";
+                  </d, i, v>
+                </d, i, v>
+              </d, i, v>
+              {/* Services, Quick, Links */}
+              <div, className="mt-12">
+                <h3, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, m, b-6">Our, Service, s</h3>
+                <div, className="grid, gri, d-co, l, s-1, s, m: gr, i, d-co, l, s-2, ga, p-4">"
+                  <div, className="bg-bl, u, e-5, 0, p-4, rounde, d-lg">
+                    <h4, className="fo, n, t-bold, tex, t-gr, a, y-900, m, b-2">AI, Solution, s</h4>
+                    <p, className="te, x, t-gr, a, y-600, tex, t-sm">Machine, Learnin, g & Automati, o, n</p>
 =======
-              <div className="mt-12">";
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Our Services</h3>";
-                <div className="grid grid-cols-1 sm: grid-cols-2 gap-4">";,
-                  <div className="bg-blue-50 p-4 rounded-lg">";
-                    <h4 className="font-bold text-gray-900 mb-2">AI Solutions</h4>";
-                    <p className="text-gray-600 text-sm">Machine Learning & Automation</p>";
-                  </div>
-                  <div className="bg-blue-50 p-4 rounded-lg">";
-                    <h4 className="font-bold text-gray-900 mb-2">Cloud Computing</h4>";
-                    <p className="text-gray-600 text-sm">Migration & Infrastructure</p>";
-                  </div>
-                  <div className="bg-blue-50 p-4 rounded-lg">";
-                    <h4 className="font-bold text-gray-900 mb-2">Digital Transformation</h4>";
-                    <p className="text-gray-600 text-sm">Process Optimization</p>";
-                  </div>
-                  <div className="bg-blue-50 p-4 rounded-lg">";
-                    <h4 className="font-bold text-gray-900 mb-2">Cybersecurity</h4>";
-                    <p className="text-gray-600 text-sm">Protection & Compliance</p>";
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Contact Form */}
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">Send Us a Message</h2>";
-              <EnhancedContactForm />
-            </div>
-          </div>
-
-          {/* FAQ Section */}
-          <section className="mt-16">";
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">";
-              Frequently Asked Questions
+              <div, className="mt-12">";
+                <h3, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, m, b-6">Our, Service, s</h3>";
+                <div, className="grid, gri, d-co, l, s-1, s, m: gr, i, d-co, l, s-2, ga, p-4">";
+                  <div, className="bg-bl, u, e-5, 0, p-4, rounde, d-lg">";
+                    <h4, className="fo, n, t-bold, tex, t-gr, a, y-900, m, b-2">AI, Solution, s</h4>";
+                    <p, className="te, x, t-gr, a, y-600, tex, t-sm">Machine, Learnin, g & Automati, o, n</p>";
+                  </d, i, v>
+                  <div, className="bg-bl, u, e-5, 0, p-4, rounde, d-lg">";
+                    <h4, className="fo, n, t-bold, tex, t-gr, a, y-900, m, b-2">Cloud, Computin, g</h4>";
+                    <p, className="te, x, t-gr, a, y-600, tex, t-sm">Migrati, o, n & Infrastructu, r, e</p>";
+                  </d, i, v>
+                  <div, className="bg-bl, u, e-5, 0, p-4, rounde, d-lg">";
+                    <h4, className="fo, n, t-bold, tex, t-gr, a, y-900, m, b-2">Digital, Transformatio, n</h4>";
+                    <p, className="te, x, t-gr, a, y-600, tex, t-sm">Process, Optimizatio, n</p>";
+                  </d, i, v>
+                  <div, className="bg-bl, u, e-5, 0, p-4, rounde, d-lg">";
+                    <h4, className="fo, n, t-bold, tex, t-gr, a, y-900, m, b-2">Cybersecuri, t, y</h4>";
+                    <p, className="te, x, t-gr, a, y-600, tex, t-sm">Protecti, o, n & Complian, c, e</p>";
+                  </d, i, v>
+                </d, i, v>
+              </d, i, v>
+            </d, i, v>
+            {/* Contact, For, m */}
+            <d, i, v>
+              <h2, className="te, x, t-3xl, fon, t-bold, tex, t-gr, a, y-900, m, b-8">Send, Us, a Messa, g, e</h2>";
+              <EnhancedContactFo, r, m   />
+            </d, i, v>
+          </d, i, v>
+          {/* FAQ, Sectio, n */}
+          <section, className="mt-16">";
+            <h2, className="te, x, t-3xl, fon, t-bold, tex, t-center, tex, t-gr, a, y-900, m, b-12">";
+              Frequently, Asked, Questions;
             </h2>
-            <div className="grid grid-cols-1 md: grid-cols-2 gap-8">",
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
+            <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2, ga, p-8">"
+              <div, className="bg-whit, e, p-6, rounde, d-lg, shado, w-md">
+                <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">
 =======
-            <div className="grid grid-cols-1 md: grid-cols-2 gap-8">";,
-              <div className="bg-white p-6 rounded-lg shadow-md">";
-                <h3 className="text-xl font-bold text-gray-900 mb-3">";
-                  How long does a typical project take?
+            <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2, ga, p-8">";
+              <div, className="bg-whit, e, p-6, rounde, d-lg, shado, w-md">";
+                <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">";
+                  How, long, does a, typical, project ta, k, e?
                 </h3>
-                <p className="text-gray-600">";
-                  Project timelines vary based on complexity and scope. Simple implementations 
-                  can take 2-4 weeks, while comprehensive digital transformations may take 
-                  3-6 months.
+                <p, className="te, x, t-gr, a, y-6, 0, 0">";
+                  Project, timelines, vary based, on, complexity and, scop, e. Simple, implementation, s
+  can, take, 2-4, week, s, while, comprehensive, digital transformations, may, take
+  3-6, month, s.
                 </p>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-md">";
-                <h3 className="text-xl font-bold text-gray-900 mb-3">";
-                  Do you provide ongoing support?
+              </d, i, v>
+              <div, className="bg-whit, e, p-6, rounde, d-lg, shado, w-md">";
+                <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">";
+                  Do, you, provide ongoing, suppor, t?
                 </h3>
-                <p className="text-gray-600">
-                  Yes, we offer comprehensive support packages including maintenance
+                <p, className="te, x, t-gr, a, y-6, 0, 0">
+                  Y, e, s, we, offer, comprehensive support, packages, including maintenan, c, e;
 =======
-                <p className="text-gray-600">";
-                  Yes, we offer comprehensive support packages including maintenance, 
-                  updates, and 24/7 technical assistance for critical systems.
+                <p, className="te, x, t-gr, a, y-6, 0, 0">";
+                  Y, e, s, we, offer, comprehensive support, packages, including maintenan, c, e
+                  updat, e, s, and, 2, 4/7, technical, assistance for, critical, systems.
                 </p>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-md">";
-                <h3 className="text-xl font-bold text-gray-900 mb-3">";
-                  What industries do you serve?
+              </d, i, v>
+              <div, className="bg-whit, e, p-6, rounde, d-lg, shado, w-md">";
+                <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">";
+                  What, industries, do you, serv, e?
                 </h3>
-                <p className="text-gray-600">
-                  We serve clients across various industries including healthcare
+                <p, className="te, x, t-gr, a, y-6, 0, 0">
+                  We, serve, clients across, various, industries including, healthcar, e;
 =======
-                <p className="text-gray-600">";
-                  We serve clients across various industries including healthcare, 
-                  finance, manufacturing, retail, and technology sectors.
+                <p, className="te, x, t-gr, a, y-6, 0, 0">";
+                  We, serve, clients across, various, industries including, healthcar, e
+                  finan, c, e, manufacturi, n, g, reta, i, l, and, technology, sectors.
                 </p>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-md">";
-                <h3 className="text-xl font-bold text-gray-900 mb-3">";
-                  Do you offer custom solutions?
+              </d, i, v>
+              <div, className="bg-whit, e, p-6, rounde, d-lg, shado, w-md">";
+                <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">";
+                  Do, you, offer custom, solution, s?
                 </h3>
-                <p className="text-gray-600">";
-                  Absolutely. We specialize in creating tailored solutions that meet 
-                  your specific business requirements and objectives.
+                <p, className="te, x, t-gr, a, y-6, 0, 0">";
+                  Absolute, l, y. We, specialize, in creating, tailored, solutions that, mee, t
+  your, specific, business requirements, and, objectives.
                 </p>
-              </div>
-            </div>
-          </section>
-        </div>
-      </div>
-    </>
+              </d, i, v>
+            </d, i, v>
+          </secti, o, n>
+        </d, i, v>
+      </d, i, v>
+    < />
   );
 };
-
 export default ContactPage;

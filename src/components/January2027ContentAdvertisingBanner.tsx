@@ -1,149 +1,151 @@
-
-export default function January2027ContentAdvertisingBanner(): void {
+export, default, function January2027ContentAdvertisingBann, e, r(): vo, i, d {
   return (
-    <div className="bg-gradient-to-r from-violet-500/20 to-purple-500/20 backdrop-blur-sm rounded-2xl p-8 border border-violet-500/30 mb-12">";
-      <div className="text-center">";
-        <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-violet-500/20 to-purple-500/20 border border-violet-500/30 mb-6">";
-          <span className="text-violet-400 font-bold text-lg tracking-wider uppercase">";
-            🚀 NEW 2027 BREAKTHROUGH CONTENT NOW LIVE!
-          </span>
-        </div>
-        
-        <h3 className="text-3xl md: text-4xl font-bold text-white mb-4">",
-          Revolutionary AI Breakthroughs: Neuromorphic Edge Computing & Quantum AI Security,
+    <div, className="bg-gradie, n, t-to-r, fro, m-viol, e, t-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, border, border-viol, e, t-5, 0, 0/30, m, b-12">";
+      <div, className="te, x, t-cent, e, r">";
+        <div, className="inli, n, e-flex, item, s-center, ga, p-3, p, x-8, p, y-4, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-viol, e, t-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, border, border-viol, e, t-5, 0, 0/30, m, b-6">";
+          <span, className="te, x, t-viol, e, t-400, fon, t-bold, tex, t-lg, trackin, g-wider, uppercas, e">";
+            🚀 NEW, 2027, BREAKTHROUGH CONTENT, NOW, LIVE!
+          </sp, a, n>
+        </d, i, v>
+        <h3, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-bold, tex, t-white, m, b-4">"
+          Revolutionary, AI, Breakthroughs: Neuromorphic, Edge, Computing & Quantum, AI, Security
         </h3>
-        
-        <p className="text-violet-200 text-lg mb-6 max-w-4xl mx-auto">
-          Discover the most advanced AI technologies reshaping enterprise operations: 1000x energy efficiency with neuromorphic computing
+        <p, className="te, x, t-viol, e, t-200, tex, t-lg, m, b-6, ma, x-w-4xl, m, x-au, t, o">
+          Discover, the, most advanced, AI, technologies reshaping, enterprise, operations: 1000x, energy, efficiency with, neuromorphic, computing;
 =======
-        <h3 className="text-3xl md: text-4xl font-bold text-white mb-4">";,
-          Revolutionary AI Breakthroughs: Neuromorphic Edge Computing & Quantum AI Security,
+        <h3, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-bold, tex, t-white, m, b-4">";
+          Revolutionary, AI, Breakthrough
+  s: Neuromorphic, Edge, Computing & Quantum, AI, Security
         </h3>
-        
-        <p className="text-violet-200 text-lg mb-6 max-w-4xl mx-auto">";
-          Discover the most advanced AI technologies reshaping enterprise operations: 1000x energy efficiency with neuromorphic computing, ,
-          $847B asset protection with quantum AI security, and proven Fortune 500 success stories with $2.3B+ annual savings.
+        <p, className="te, x, t-viol, e, t-200, tex, t-lg, m, b-6, ma, x-w-4xl, m, x-au, t, o">";
+          Discover, the, most advanced, AI, technologies reshaping, enterprise, operations: 1000x, energy, efficiency with, neuromorphic, computing
+          $847B, asset, protection with, quantum, AI securi, t, y, and, proven, Fortune 500, success, stories wi, t, h $2.3B+ annual, saving, s.
         </p>
-        
-        <div className="flex flex-wrap justify-center gap-4 text-sm mb-6">";
-          <span className="bg-green-500/20 px-4 py-2 rounded-full text-green-300 font-semibold">1000x Energy Efficiency</span>";
-          <span className="bg-purple-500/20 px-4 py-2 rounded-full text-purple-300 font-semibold">$847B Assets Protected</span>";
-          <span className="bg-blue-500/20 px-4 py-2 rounded-full text-blue-300 font-semibold">$2.3B Fortune 500 Savings</span>";
-          <span className="bg-cyan-500/20 px-4 py-2 rounded-full text-cyan-300 font-semibold">NIST-Approved Security</span>";
-          <span className="bg-emerald-500/20 px-4 py-2 rounded-full text-emerald-300 font-semibold">99.97% Threat Prevention</span>";
-          <span className="bg-indigo-500/20 px-4 py-2 rounded-full text-indigo-300 font-semibold">Sub-Microsecond Latency</span>";
-        </div>
-        
-        <div className="grid md: grid-cols-3 gap-6 max-w-5xl mx-auto mb-8">",
-          <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover: border-green-500/50 transition-all duration-300">",
-            <div className="text-center mb-4">
-              <div className="text-4xl mb-3">🧠</div>
-              <h4 className="text-xl font-bold text-white mb-2">Neuromorphic Edge Computing</h4>
-              <p className="text-gray-300 text-sm mb-4">1000x energy efficiency, sub-microsecond latency, $2.3B savings</p>
+        <div, className="flex, fle, x-wrap, justif, y-center, ga, p-4, tex, t-sm, m, b-6">";
+          <span, className="bg-gre, e, n-5, 0, 0/20, p, x-4, p, y-2, rounde, d-full, tex, t-gre, e, n-300, fon, t-semibo, l, d">1000x, Energy, Efficiency</sp, a, n>";
+          <span, className="bg-purp, l, e-5, 0, 0/20, p, x-4, p, y-2, rounde, d-full, tex, t-purp, l, e-300, fon, t-semibo, l, d">$847B, Assets, Protected</sp, a, n>";
+          <span, className="bg-bl, u, e-5, 0, 0/20, p, x-4, p, y-2, rounde, d-full, tex, t-bl, u, e-300, fon, t-semibo, l, d">$2.3B, Fortune, 500 Savin, g, s</sp, a, n>";
+          <span, className="bg-cy, a, n-5, 0, 0/20, p, x-4, p, y-2, rounde, d-full, tex, t-cy, a, n-300, fon, t-semibo, l, d">NI, S, T-Approved, Securit, y</sp, a, n>";
+          <span, className="bg-emera, l, d-5, 0, 0/20, p, x-4, p, y-2, rounde, d-full, tex, t-emera, l, d-300, fon, t-semibo, l, d">99.97% Threat, Preventio, n</sp, a, n>";
+          <span, className="bg-indi, g, o-5, 0, 0/20, p, x-4, p, y-2, rounde, d-full, tex, t-indi, g, o-300, fon, t-semibo, l, d">S, u, b-Microsecond, Latenc, y</sp, a, n>";
+        </d, i, v>
+        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, ma, x-w-5xl, m, x-auto, m, b-8">"
+          <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-gre, e, n-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0">"
+            <div, className="te, x, t-center, m, b-4">
+              <div, className="te, x, t-4xl, m, b-3">🧠</d, i, v>
+              <h4, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2">Neuromorphic, Edge, Computing</h4>
+              <p, className="te, x, t-gr, a, y-300, tex, t-sm, m, b-4">1000x, energy, efficiency, s, u, b-microsecond, latenc, y, $2.3B, saving, s</p>
 =======
-        <div className="grid md: grid-cols-3 gap-6 max-w-5xl mx-auto mb-8">";,
-          <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover: border-green-500/50 transition-all duration-300">";,
-            <div className="text-center mb-4">";
-              <div className="text-4xl mb-3">🧠</div>";
-              <h4 className="text-xl font-bold text-white mb-2">Neuromorphic Edge Computing</h4>";
-              <p className="text-gray-300 text-sm mb-4">1000x energy efficiency, sub-microsecond latency, $2.3B savings</p>";
-            </div>
-            <div className="space-y-2">";
-              <a title="Internal link"
-                href="/blog/ai-2027-neuromorphic-edge-computing-breakthrough"
-                className="block w-full bg-gradient-to-r from-green-500 to-emerald-600 hover: from-green-400 hover:to-emerald-500 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 text-center text-sm",
+        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, ma, x-w-5xl, m, x-auto, m, b-8">";
+          <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10, hov, e
+  r: bord, e, r-gre, e, n-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0">";
+            <div, className="te, x, t-center, m, b-4">";
+              <div, className="te, x, t-4xl, m, b-3">🧠</d, i, v>";
+              <h4, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2">Neuromorphic, Edge, Computing</h4>";
+              <p, className="te, x, t-gr, a, y-300, tex, t-sm, m, b-4">1000x, energy, efficiency, s, u, b-microsecond, latenc, y, $2.3B, saving, s</p>";
+            </d, i, v>
+            <div, className="spa, c, e-y-2">";
+              <a, titl, e="Internal, lin, k"
+                hr, e, f="/bl, o, g/ai-20, 2, 7-neuromorph, i, c-ed, g, e-computi, n, g-breakthrou, g, h"
+                classNa, m, e="bloc, k, w-full, b, g-gradie, n, t-to-r, fro, m-gre, e, n-500, t, o-emera, l, d-600, hove, r: fr, o, m-gre, e, n-400, hov, e
+  r:to-emera, l, d-500, tex, t-white, fon, t-bold, p, y-2, p, x-4, rounde, d-lg, transitio, n-all, duratio, n-300, tex, t-center, tex, t-sm"
               >
-                Read Full Article →
+                Read, Full, Article →
               </a>
-              <a title="Internal link"
-                href="/case-studies/fortune-500-neuromorphic-edge-computing-2-3-billion-success"
-                className="block w-full border border-green-500 text-green-400 hover: bg-green-500 hover:text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 text-center text-sm",
+              <a, titl, e="Internal, lin, k"
+                hr, e, f="/ca, s, e-studi, e, s/fortu, n, e-5, 0, 0-neuromorph, i, c-ed, g, e-computi, n, g-2-3-billi, o, n-succe, s, s"
+                classNa, m, e="bloc, k, w-full, border, border-gre, e, n-500, tex, t-gre, e, n-400, hove, r: bg-gre, e, n-500, hov, e
+  r:te, x, t-white, fon, t-bold, p, y-2, p, x-4, rounde, d-lg, transitio, n-all, duratio, n-300, tex, t-center, tex, t-sm"
               >
-                View Case Study →
+                View, Case, Study →
               </a>
-            </div>
-          </div>
-          
-          <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover: border-purple-500/50 transition-all duration-300">",
-            <div className="text-center mb-4">
-              <div className="text-4xl mb-3">🔐</div>
-              <h4 className="text-xl font-bold text-white mb-2">Quantum AI Security</h4>
-              <p className="text-gray-300 text-sm mb-4">Quantum-resistant AI, $847B protection, NIST-approved</p>
+            </d, i, v>
+          </d, i, v>
+          <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0">"
+            <div, className="te, x, t-center, m, b-4">
+              <div, className="te, x, t-4xl, m, b-3">🔐</d, i, v>
+              <h4, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2">Quantum, AI, Security</h4>
+              <p, className="te, x, t-gr, a, y-300, tex, t-sm, m, b-4">Quant, u, m-resistant, A, I, $847B, protectio, n, NI, S, T-approv, e, d</p>
 =======
-          <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover: border-purple-500/50 transition-all duration-300">";,
-            <div className="text-center mb-4">";
-              <div className="text-4xl mb-3">🔐</div>";
-              <h4 className="text-xl font-bold text-white mb-2">Quantum AI Security</h4>";
-              <p className="text-gray-300 text-sm mb-4">Quantum-resistant AI, $847B protection, NIST-approved</p>";
-            </div>
-            <div className="space-y-2">";
-              <a title="Internal link"
-                href="/blog/ai-2027-quantum-ai-security-revolution"
-                className="block w-full bg-gradient-to-r from-purple-500 to-indigo-600 hover: from-purple-400 hover:to-indigo-500 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 text-center text-sm",
+          <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0">";
+            <div, className="te, x, t-center, m, b-4">";
+              <div, className="te, x, t-4xl, m, b-3">🔐</d, i, v>";
+              <h4, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2">Quantum, AI, Security</h4>";
+              <p, className="te, x, t-gr, a, y-300, tex, t-sm, m, b-4">Quant, u, m-resistant, A, I, $847B, protectio, n, NI, S, T-approv, e, d</p>";
+            </d, i, v>
+            <div, className="spa, c, e-y-2">";
+              <a, titl, e="Internal, lin, k"
+                hr, e, f="/bl, o, g/ai-20, 2, 7-quant, u, m-ai-securi, t, y-revoluti, o, n"
+                classNa, m, e="bloc, k, w-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-indi, g, o-600, hove, r: fr, o, m-purp, l, e-400, hov, e
+  r:to-indi, g, o-500, tex, t-white, fon, t-bold, p, y-2, p, x-4, rounde, d-lg, transitio, n-all, duratio, n-300, tex, t-center, tex, t-sm"
               >
-                Read Full Article →
+                Read, Full, Article →
               </a>
-              <a title="Internal link"
-                href="/services/quantum-ai-security"
-                className="block w-full border border-purple-500 text-purple-400 hover: bg-purple-500 hover:text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 text-center text-sm",
+              <a, titl, e="Internal, lin, k"
+                hr, e, f="/servic, e, s/quant, u, m-ai-securi, t, y"
+                classNa, m, e="bloc, k, w-full, border, border-purp, l, e-500, tex, t-purp, l, e-400, hove, r: bg-purp, l, e-500, hov, e
+  r:te, x, t-white, fon, t-bold, p, y-2, p, x-4, rounde, d-lg, transitio, n-all, duratio, n-300, tex, t-center, tex, t-sm"
               >
-                Get Security Assessment →
+                Get, Security, Assessment →
               </a>
-            </div>
-          </div>
-          
-          <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover: border-blue-500/50 transition-all duration-300">",
-            <div className="text-center mb-4">
-              <div className="text-4xl mb-3">💰</div>
-              <h4 className="text-xl font-bold text-white mb-2">Fortune 500 Success</h4>
-              <p className="text-gray-300 text-sm mb-4">320 facilities, 78% downtime reduction, $2.3B savings</p>
+            </d, i, v>
+          </d, i, v>
+          <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0">"
+            <div, className="te, x, t-center, m, b-4">
+              <div, className="te, x, t-4xl, m, b-3">💰</d, i, v>
+              <h4, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2">Fortune, 500, Success</h4>
+              <p, className="te, x, t-gr, a, y-300, tex, t-sm, m, b-4">320, facilitie, s, 78% downtime, reductio, n, $2.3B, saving, s</p>
 =======
-          <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover: border-blue-500/50 transition-all duration-300">";,
-            <div className="text-center mb-4">";
-              <div className="text-4xl mb-3">💰</div>";
-              <h4 className="text-xl font-bold text-white mb-2">Fortune 500 Success</h4>";
-              <p className="text-gray-300 text-sm mb-4">320 facilities, 78% downtime reduction, $2.3B savings</p>";
-            </div>
-            <div className="space-y-2">";
-              <a title="Internal link"
-                href="/case-studies/fortune-500-neuromorphic-edge-computing-2-3-billion-success"
-                className="block w-full bg-gradient-to-r from-blue-500 to-cyan-600 hover: from-blue-400 hover:to-cyan-500 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 text-center text-sm",
+          <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0">";
+            <div, className="te, x, t-center, m, b-4">";
+              <div, className="te, x, t-4xl, m, b-3">💰</d, i, v>";
+              <h4, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2">Fortune, 500, Success</h4>";
+              <p, className="te, x, t-gr, a, y-300, tex, t-sm, m, b-4">320, facilitie, s, 78% downtime, reductio, n, $2.3B, saving, s</p>";
+            </d, i, v>
+            <div, className="spa, c, e-y-2">";
+              <a, titl, e="Internal, lin, k"
+                hr, e, f="/ca, s, e-studi, e, s/fortu, n, e-5, 0, 0-neuromorph, i, c-ed, g, e-computi, n, g-2-3-billi, o, n-succe, s, s"
+                classNa, m, e="bloc, k, w-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-cy, a, n-600, hove, r: fr, o, m-bl, u, e-400, hov, e
+  r:to-cy, a, n-500, tex, t-white, fon, t-bold, p, y-2, p, x-4, rounde, d-lg, transitio, n-all, duratio, n-300, tex, t-center, tex, t-sm"
               >
-                View Full Case Study →
+                View, Full, Case Stu, d, y →
               </a>
-              <a title="Internal link"
-                href="/contact"
-                className="block w-full border border-blue-500 text-blue-400 hover: bg-blue-500 hover:text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 text-center text-sm",
+              <a, titl, e="Internal, lin, k"
+                hr, e, f="/conta, c, t"
+                classNa, m, e="bloc, k, w-full, border, border-bl, u, e-500, tex, t-bl, u, e-400, hove, r: bg-bl, u, e-500, hov, e
+  r:te, x, t-white, fon, t-bold, p, y-2, p, x-4, rounde, d-lg, transitio, n-all, duratio, n-300, tex, t-center, tex, t-sm"
               >
-                Get Your Assessment →
+                Get, Your, Assessment →
               </a>
-            </div>
-          </div>
-        </div>
-        
-        <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+            </d, i, v>
+          </d, i, v>
+        </d, i, v>
+        <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
 =======
-        <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
-          <a title="Internal link"
-            href="/contact"
-            className="bg-gradient-to-r from-violet-500 to-purple-600 hover: from-violet-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-violet-500/50 transform hover:-translate-y-1",
+        <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
+          <a, titl, e="Internal, lin, k"
+            hr, e, f="/conta, c, t"
+            classNa, m, e="bg-gradie, n, t-to-r, fro, m-viol, e, t-500, t, o-purp, l, e-600, hove, r: fr, o, m-viol, e, t-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-viol, e, t-5, 0, 0/50, transform, hove
+  r:-transla, t, e-y-1"
           >
-            Get Free Consultation →
+            Get, Free, Consultation →
           </a>
-          <a title="Internal link"
-            href="/blog"
-            className="bg-gradient-to-r from-purple-500 to-indigo-600 hover: from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1",
+          <a, titl, e="Internal, lin, k"
+            hr, e, f="/bl, o, g"
+            classNa, m, e="bg-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-indi, g, o-600, hove, r: fr, o, m-purp, l, e-400, hove, r:to-indi, g, o-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transform, hove
+  r:-transla, t, e-y-1"
           >
-            Explore All Content →
+            Explore, All, Content →
           </a>
-          <a title="Internal link"
-            href="/case-studies"
-            className="border-2 border-violet-500 text-violet-400 hover: bg-violet-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300",
+          <a, titl, e="Internal, lin, k"
+            hr, e, f="/ca, s, e-studi, e, s"
+            classNa, m, e="bord, e, r-2, borde, r-viol, e, t-500, tex, t-viol, e, t-400, hove, r: bg-viol, e, t-500, hov, e
+  r:te, x, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-3, 0, 0"
           >
-            View Success Stories
+            View, Success, Stories;
           </a>
-        </div>
-      </div>
-    </div>
+        </d, i, v>
+      </d, i, v>
+    </d, i, v>
   );
 };

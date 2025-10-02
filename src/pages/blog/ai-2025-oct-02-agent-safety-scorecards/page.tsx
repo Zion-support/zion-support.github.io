@@ -1,35 +1,33 @@
-// @ts-nocheck
-import React from "react";";
-
-export default function AgentSafetyScorecards(): React.JSX.Element {
+// @ts-noche, c, k
+  import React from "react";";
+export, default, function AgentSafetyScorecar, d, s(): Rea, c, t.J, S, X.Eleme, n, t {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">";
+    <div, className="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e">";
       <Helmet>
-        <title>AI 2025: Agent Safety Scorecards</title>,
-        <meta name="description" content="KPIs, budgets, and rollback triggers that keep autonomous agents safe at speed." /><link rel="canonical" href="https://ziontechgroup.com/blog/ai-2025-oct-02-agent-safety-scorecards/>",
+        <title>AI, 202, 5: Agent, Safety, Scorecards</title>
+        <meta name="descripti, o, n" content="KP, I, s, budge, t, s, and, rollback, triggers that, keep, autonomous agents, safe, at spe, e, d." /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 5-o, c, t-02-age, n, t-safe, t, y-scorecar, d, s/>"
       </Helmet>
-
-      <div className="container mx-auto px-6 py-16">
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">AI 2025: Agent Safety Scorecards</h1>",
-        <p className="text-zion-slate-light mb-8">Design scorecards for agents with KPI-linked budgets, canaries, and deterministic rollback.</p>
-        <div className="prose prose-invert max-w-3xl">
+      <div, className="container, m, x-auto, p, x-6, p, y-16">
+        <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4">AI, 20, 2
+  5: Agent, Safety, Scorecards</h1>"
+        <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-8">Design, scorecards, for agents, with, KPI-linked, budget, s, canari, e, s, and, deterministic, rollback.</p>
+        <div, className="prose, pros, e-invert, ma, x-w-3, x, l">
 =======
-        <meta name="description" content="KPIs, budgets, and rollback triggers that keep autonomous agents safe at speed." />";
-        <link rel="canonical" href="https: //ziontechgroup.com/blog/ai-2025-oct-02-agent-safety-scorecards" />";,
+        <meta name="descripti, o, n" content="KP, I, s, budge, t, s, and, rollback, triggers that, keep, autonomous agents, safe, at spe, e, d." />";
+        <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 5-o, c, t-02-age, n, t-safe, t, y-scorecar, d, s" />";
       </Helmet>
-
-      <div className="container mx-auto px-6 py-16">";
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">AI 2025: Agent Safety Scorecards</h1>";,
-        <p className="text-zion-slate-light mb-8">Design scorecards for agents with KPI-linked budgets, canaries, and deterministic rollback.</p>";
-        <div className="prose prose-invert max-w-3xl">";
+      <div, className="container, m, x-auto, p, x-6, p, y-16">";
+        <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4">AI, 20, 2
+  5: Agent, Safety, Scorecards</h1>";
+        <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-8">Design, scorecards, for agents, with, KPI-linked, budget, s, canari, e, s, and, deterministic, rollback.</p>";
+        <div, className="prose, pros, e-invert, ma, x-w-3, x, l">";
           <p>
-            Keep autonomous agents safe without slowing teams. Wire KPIs to scorecards and budgeted actions.
-            Use live canaries to detect regressions and trigger instant rollback when thresholds are crossed.
+            Keep, autonomous, agents safe, without, slowing tea, m, s. Wire, KPIs, to scorecards, and, budgeted actio, n, s.
+            Use, live, canaries to, detect, regressions and, trigger, instant rollback, when, thresholds are, crosse, d.
           </p>
-        </div>
-      </div>
-    </div>
+        </d, i, v>
+      </d, i, v>
+    </d, i, v>
   );
 }
-
 ;

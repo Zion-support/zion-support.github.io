@@ -1,20 +1,17 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const SolutionsSMB: React.FC = () => {
+import React from "react";
+import { Helmet } from "react-helmet-async";
+const, SolutionsSM, B: Rea, c, t.FC = () => {
   return (
     <>
       <Helmet>
-        <title>SMB Solutions - Zion Tech Group</title>
-        <meta name="description" content="Cost-effective AI and IT solutions for SMBs." />
+        <title>SMB, Solution, s - Zion, Tech, Group</title>
+        <meta name="descripti, o, n" content="Co, s, t-effective, AI, and IT, solutions, for SM, B, s."  />
       </Helmet>
-      <div className="container mx-auto px-6 py-12">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">SMB Solutions</h1>
-        <p className="text-gray-600 max-w-3xl">Practical, scalable solutions designed for small to medium businesses.</p>
-      </div>
-    </>
+      <div, className="container, m, x-auto, p, x-6, p, y-12">
+        <h1, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">SMB, Solution, s</h1>
+        <p, className="te, x, t-gr, a, y-600, ma, x-w-3, x, l">Practic, a, l, scalable, solutions, designed for, small, to medium, businesse, s.</p>
+      </d, i, v>
+    < />
   );
 };
-
 export default SolutionsSMB;
-

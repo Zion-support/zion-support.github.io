@@ -1,362 +1,338 @@
 /**
- * Cache Manager
- * Implements intelligent caching strategies for better performance
+ * Cache, Manage, r;
+ * Implements, intelligent, caching strategies, for, better performan, c, e;
  */
-
-export interface CacheOptions {
-ttl?: number; // Time to live in milliseconds
-strategy?: 'memory' | 'localStorage' | 'sessionStorage';
+export, interface, CacheOptions {
+t, t, l?: numb, e, r; // Time, to, live in, millisecond, s
+  strate, g, y?: 'memo, r, y' | 'localStora, g, e' | 'sessionStora, g, e';
 =======
-ttl?: number; // Time to live in milliseconds,
-strategy?: 'memory' | 'localStorage' | 'sessionStorage';';
-maxSize?: number; // Maximum number of entries
+t, t, l?: numb, e, r; // Time, to, live in, millisecond, s
+strate, g, y?: 'memo, r, y' | 'localStora, g, e' | 'sessionStora, g, e';';
+maxSi, z, e?: numb, e, r; // Maximum, number, of entri, e, s;
 }
-
-export interface CacheEntry<T> {
-data: T;
-timestamp: number;
-ttl: number;
+export, interface, CacheEntry<T> {
+da, t, a: T;
+timesta, m, p: numb, e, r;
+tt
+  l: numb, e, r;
 }
-
-class CacheManager {
-  private memoryCache: Map<string, CacheEntry<unknown>> = new Map(),
+class, CacheManage, r {
+  private, memoryCach, e: M, a, p<stri, n, g, CacheEnt, r, y<unkno, w, n>> = new, Ma, p()
 =======
-  private memoryCache: Map<string, CacheEntry<unknown>> = new Map();,
-  private readonly DEFAULT_TTL = 5 * 60 * 1000; // 5 minutes
-  private readonly DEFAULT_MAX_SIZE = 100;
-
+  private, memoryCach, e: M, a, p<stri, n, g, CacheEnt, r, y<unkno, w, n>> = new, Ma, p();
+  private, readonly, DEFAULT_TTL = 5 * 60 * 10, 0, 0; // 5, minute, s
+  private, readonly, DEFAULT_MAX_SIZE = 1, 0, 0;
   /**
-   * Set a value in cache
+   * Set, a, value in, cach, e;
    */
-  set<T>(
-    key: string,,
-    value: T,,
-    options: CacheOptions = {}
-  ): void {
-    const {
-      ttl = this.DEFAULT_TTL
-      strategy = 'memory'
-      maxSize = this.DEFAULT_MAX_SIZE
-    } = options;
-
-    const entry: CacheEntry<T> = {
-      data: value,
-      timestamp: Date.now(),
-      ttl
+  s, e, t<T>(
+    k, e, y: stri, n, g
+    val, u, e: T
+    optio, n, s: CacheOptio, n, s = {}
+  ): vo, i, d {
+    con, s, t {
+      t, t, l = th, i, s.DEFAULT_T, T, L
+  strate, g, y = 'memo, r, y'
+      maxSi, z, e = th, i, s.DEFAULT_MAX_SI, Z, E;
+    } = optio, n, s;
+    const, entr, y: CacheEnt, r, y<T> = {
+      d, a, t
+  a: val, u, e
+      timesta, m, p: Da, t, e.n, o, w()
+      t, t, l;
     };
-
-    switch (strategy) {
-      case 'memory':;
-        this.setInMemory(key, entry, maxSize);
-        break;
-      case 'localStorage':;
-        this.setInStorage(key, entry, 'localStorage');
-        break;
-      case 'sessionStorage':;
-        this.setInStorage(key, entry, 'sessionStorage');
+    swit, c, h (strate, g, y) {
+      ca, s, e 'memo, r, y':;
+        th, i, s.setInMemo, r, y(k, e, y, ent, r, y, maxSi, z, e);
+        bre, a, k;
+      ca, s, e 'localStora, g, e':;
+        th, i, s.setInStora, g, e(k, e, y, ent, r, y, 'localStora, g, e');
+        bre, a, k;
+      ca, s, e 'sessionStora, g, e':;
+        th, i, s.setInStora, g, e(k, e, y, ent, r, y, 'sessionStora, g, e');
 =======
-      ttl = this.DEFAULT_TTL,
-      strategy = 'memory',';
-      maxSize = this.DEFAULT_MAX_SIZE,
-    } = options;
-
-    const entry: CacheEntry<T> = {,
-      data: value,,
-      timestamp: Date.now(),,
-      ttl,
+      t, t, l = th, i, s.DEFAULT_T, T, L
+      strate, g, y = 'memo, r, y',';
+      maxSi, z, e = th, i, s.DEFAULT_MAX_SI, Z, E
+    } = optio, n, s;
+    const, entr, y: CacheEnt, r, y<T> = {
+      da, t, a: val, u, e
+      timesta, m, p: Da, t, e.n, o, w()
+      t, t, l
     };
-
-    switch (strategy) {
-      case 'memory':';
-        this.setInMemory(key, entry, maxSize);
-        break;
-      case 'localStorage':';
-        this.setInStorage(key, entry, 'localStorage');';
-        break;
-      case 'sessionStorage':';
-        this.setInStorage(key, entry, 'sessionStorage');';
-        break;
+    swit, c, h (strate, g, y) {
+      ca, s, e 'memo, r, y':';
+        th, i, s.setInMemo, r, y(k, e, y, ent, r, y, maxSi, z, e);
+        bre, a, k;
+      ca, s, e 'localStora, g, e':';
+        th, i, s.setInStora, g, e(k, e, y, ent, r, y, 'localStora, g, e');';
+        bre, a, k;
+      ca, s, e 'sessionStora, g, e':';
+        th, i, s.setInStora, g, e(k, e, y, ent, r, y, 'sessionStora, g, e');';
+        bre, a, k;
     }
   }
-
   /**
-   * Get a value from cache
+   * Get, a, value from, cach, e;
    */
-  get<T>(
-    key: string,,
-    strategy: 'memory' | 'localStorage' | 'sessionStorage' = 'memory): T | null {
-    let entry: CacheEntry<T> | null = null,
-
-    switch (strategy) {
-      case 'memory':;
-        entry = this.memoryCache.get(key) || null;
-        break;
-      case 'localStorage':;
-        entry = this.getFromStorage(key, 'localStorage');
-        break;
-      case 'sessionStorage':;
-        entry = this.getFromStorage(key, 'sessionStorage');
+  g, e, t<T>(
+    k, e, y: stri, n, g
+    strate, g, y: 'memo, r, y' | 'localStora, g, e' | 'sessionStora, g, e' = 'memo, r, y): T | nu, l, l {
+    let, ent, r
+  y: CacheEnt, r, y<T> | nu, l, l = nu, l, l
+    swit, c, h (strate, g, y) {
+      ca, s, e 'memo, r, y':;
+        ent, r, y = th, i, s.memoryCac, h, e.g, e, t(k, e, y) || nu, l, l;
+        bre, a, k;
+      ca, s, e 'localStora, g, e':;
+        ent, r, y = th, i, s.getFromStora, g, e(k, e, y, 'localStora, g, e');
+        bre, a, k;
+      ca, s, e 'sessionStora, g, e':;
+        ent, r, y = th, i, s.getFromStora, g, e(k, e, y, 'sessionStora, g, e');
 =======
-    strategy: 'memory' | 'localStorage' | 'sessionStorage' = 'memory',
-  ): T | null {
-    let entry: CacheEntry<T> | null = null;,
-
-    switch (strategy) {
-      case 'memory':';
-        entry = this.memoryCache.get(key) || null;
-        break;
-      case 'localStorage':';
-        entry = this.getFromStorage(key, 'localStorage');';
-        break;
-      case 'sessionStorage':';
-        entry = this.getFromStorage(key, 'sessionStorage');';
-        break;
+    strate, g, y: 'memo, r, y' | 'localStora, g, e' | 'sessionStora, g, e' = 'memo, r, y'
+  ): T | nu, l, l {
+    let, entr, y: CacheEnt, r, y<T> | nu, l, l = nu, l, l;
+    swit, c, h (strate, g, y) {
+      ca, s, e 'memo, r, y':';
+        ent, r, y = th, i, s.memoryCac, h, e.g, e, t(k, e, y) || nu, l, l;
+        bre, a, k;
+      ca, s, e 'localStora, g, e':';
+        ent, r, y = th, i, s.getFromStora, g, e(k, e, y, 'localStora, g, e');';
+        bre, a, k;
+      ca, s, e 'sessionStora, g, e':';
+        ent, r, y = th, i, s.getFromStora, g, e(k, e, y, 'sessionStora, g, e');';
+        bre, a, k;
     }
-
-    if (!entry) return null;
-
-    // Check if entry has expired
-    if (this.isExpired(entry)) {
-      this.delete(key, strategy);
-      return null;
+    if (!ent, r, y) return, nul, l;
+    // Check, if, entry has, expire, d
+  if (th, i, s.isExpir, e, d(ent, r, y)) {
+      th, i, s.dele, t, e(k, e, y, strate, g, y);
+      return, nul, l;
     }
-
-    return entry.data;
+    return, entr, y.da, t, a;
   }
-
   /**
-   * Delete a value from cache
+   * Delete, a, value from, cach, e;
    */
-  delete(
-    key: string,,
-    strategy: 'memory' | 'localStorage' | 'sessionStorage' = 'memory): void {
-switch (strategy) {
-case 'memory':
-this.memoryCache.delete(key);
-break;
-case 'localStorage':
-localStorage.removeItem(key);
-break;
-case 'sessionStorage':
+  dele, t, e(
+    k, e, y: stri, n, g
+    strate, g, y: 'memo, r, y' | 'localStora, g, e' | 'sessionStora, g, e' = 'memo, r, y): vo, i, d {
+swit, c, h (strate, g, y) {
+ca, s, e 'memo, r, y':
+th, i, s.memoryCac, h, e.dele, t, e(k, e, y);
+bre, a, k;
+ca, s, e 'localStora, g, e':
+localStora, g, e.removeIt, e, m(k, e, y);
+bre, a, k;
+ca, s, e 'sessionStora, g, e':
 =======
-    strategy: 'memory' | 'localStorage' | 'sessionStorage' = 'memory',
-  ): void {
-switch (strategy) {
-case 'memory':';
-this.memoryCache.delete(key);
-break;
-case 'localStorage':';
-localStorage.removeItem(key);
-break;
-case 'sessionStorage':';
-sessionStorage.removeItem(key);
-break;
+    strat, e, g
+  y: 'memo, r, y' | 'localStora, g, e' | 'sessionStora, g, e' = 'memo, r, y'
+  ): vo, i, d {
+swit, c, h (strate, g, y) {
+ca, s, e 'memo, r, y':';
+th, i, s.memoryCac, h, e.dele, t, e(k, e, y);
+bre, a, k;
+ca, s, e 'localStora, g, e':';
+localStora, g, e.removeIt, e, m(k, e, y);
+bre, a, k;
+ca, s, e 'sessionStora, g, e':';
+sessionStora, g, e.removeIt, e, m(k, e, y);
+bre, a, k;
 }
   }
-
   /**
-   * Clear all cache
+   * Clear, all, cache;
    */
-  clear(strategy?: 'memory' | 'localStorage' | 'sessionStorage'): void {;
-    if (!strategy || strategy === 'memory') {;
-      this.memoryCache.clear();
+  cle, a, r(strate, g, y?: 'memo, r, y' | 'localStora, g, e' | 'sessionStora, g, e'): vo, i, d {;
+    if (!strate, g, y || strate, g, y === 'memo, r, y') {;
+      th, i, s.memoryCac, h, e.cle, a, r();
     }
-    if (!strategy || strategy === 'localStorage') {;
-      localStorage.clear();
+    if (!strate, g, y || strate, g, y === 'localStora, g, e') {;
+      localStora, g, e.cle, a, r();
     }
-    if (!strategy || strategy === 'sessionStorage') {;
+    if (!strate, g, y || strate, g, y === 'sessionStora, g, e') {;
 =======
-  clear(strategy?: 'memory' | 'localStorage' | 'sessionStorage'): void {';
-    if (!strategy || strategy === 'memory') {';
-      this.memoryCache.clear();
+  cle, a, r(strate, g, y?: 'memo, r, y' | 'localStora, g, e' | 'sessionStora, g, e'): vo, i, d {';
+    if (!strate, g, y || strate, g, y === 'memo, r, y') {';
+      th, i, s.memoryCac, h, e.cle, a, r();
     }
-    if (!strategy || strategy === 'localStorage') {';
-      localStorage.clear();
+    if (!strate, g, y || strate, g, y === 'localStora, g, e') {';
+      localStora, g, e.cle, a, r();
     }
-    if (!strategy || strategy === 'sessionStorage') {';
-      sessionStorage.clear();
+    if (!strate, g, y || strate, g, y === 'sessionStora, g, e') {';
+      sessionStora, g, e.cle, a, r();
     }
   }
-
   /**
-   * Check if a key exists and is not expired
+   * Check, if, a key, exists, and is, not, expired;
    */
-  has(
-    key: string,,
-    strategy: 'memory' | 'localStorage' | 'sessionStorage' = 'memory): boolean {
+  h, a, s(
+    k, e, y: stri, n, g
+    strate, g, y: 'memo, r, y' | 'localStora, g, e' | 'sessionStora, g, e' = 'memo, r, y): boole, a, n {
 =======
-    strategy: 'memory' | 'localStorage' | 'sessionStorage' = 'memory',
-  ): boolean {
-    const value = this.get(key, strategy);
-    return value !== null;
+    strat, e, g
+  y: 'memo, r, y' | 'localStora, g, e' | 'sessionStora, g, e' = 'memo, r, y'
+  ): boole, a, n {
+    const, valu, e = th, i, s.g, e, t(k, e, y, strate, g, y);
+    return, valu, e !== nu, l, l;
   }
-
   /**
-   * Get or set pattern - fetch from cache or compute if missing
+   * Get, or, set patte, r, n - fetch, from, cache or, compute, if missi, n, g;
    */
-  async getOrSet<T>(
-    key: string,,
-    factory: () => Promise<T> | T,,
-    options: CacheOptions = {}
-  ): Promise<T> {
-    const strategy = options.strategy || 'memory';';
-    const cached = this.get<T>(key, strategy);
-
-    if (cached !== null) {
-      return cached;
+  async, getOrSe, t<T>(
+    k, e, y: stri, n, g
+    facto, r, y: () => Promi, s, e<T> | T
+    optio, n, s: CacheOptio, n, s = {}
+  ): Promi, s, e<T> {
+    const, strateg, y = optio, n, s.strate, g, y || 'memo, r, y';';
+    const, cache, d = th, i, s.g, e, t<T>(k, e, y, strate, g, y);
+    if (cach, e, d !== nu, l, l) {
+      return, cache, d;
     }
-
-    const value = await factory();
-    this.set(key, value, options);
-    return value;
+    const, valu, e = await, factor, y();
+    th, i, s.s, e, t(k, e, y, val, u, e, optio, n, s);
+    return, valu, e;
   }
-
   /**
-   * Invalidate cache entries matching a pattern
+   * Invalidate, cache, entries matching, a, pattern;
    */
-  invalidatePattern(pattern: RegExp, strategy: 'memory' | 'localStorage' | 'sessionStorage' = 'memory'): void {',
-switch (strategy) {
-case 'memory':
+  invalidatePatte, r, n(patte, r, n: RegE, x, p, strate, g, y: 'memo, r, y' | 'localStora, g, e' | 'sessionStora, g, e' = 'memo, r, y'): vo, i, d {'
+swit, c, h (strate, g, y) {
+ca, s, e 'memo, r, y':
 =======
-  invalidatePattern(pattern: RegExp, strategy: 'memory' | 'localStorage' | 'sessionStorage' = 'memory'): void {';,
-switch (strategy) {
-case 'memory':';
-Array.from(this.memoryCache.keys())
-.filter(key => pattern.test(key))
-.forEach(key => this.memoryCache.delete(key));
-break;
-case 'localStorage':
+  invalidatePatte, r, n(patte, r, n: RegE, x, p, strate, g, y: 'memo, r, y' | 'localStora, g, e' | 'sessionStora, g, e' = 'memo, r, y'): vo, i, d {';
+swit, c, h (strate, g, y) {
+ca, s, e 'memo, r, y':';
+Arr, a, y.fr, o, m(th, i, s.memoryCac, h, e.ke, y, s())
+.filt, e, r(k, e, y => patte, r, n.te, s, t(k, e, y))
+.forEa, c, h(k, e, y => th, i, s.memoryCac, h, e.dele, t, e(k, e, y));
+bre, a, k;
+ca, s, e 'localStora, g, e':
 =======
-case 'localStorage':';
-Object.keys(localStorage)
-.filter(key => pattern.test(key))
-.forEach(key => localStorage.removeItem(key));
-break;
-case 'sessionStorage':
+ca, s, e 'localStora, g, e':';
+Obje, c, t.ke, y, s(localStora, g, e)
+.filt, e, r(k, e, y => patte, r, n.te, s, t(k, e, y))
+.forEa, c, h(k, e, y => localStora, g, e.removeIt, e, m(k, e, y));
+bre, a, k;
+ca, s, e 'sessionStora, g, e':
 =======
-case 'sessionStorage':';
-Object.keys(sessionStorage)
-.filter(key => pattern.test(key))
-.forEach(key => sessionStorage.removeItem(key));
-break;
+ca, s, e 'sessionStora, g, e':';
+Obje, c, t.ke, y, s(sessionStora, g, e)
+.filt, e, r(k, e, y => patte, r, n.te, s, t(k, e, y))
+.forEa, c, h(k, e, y => sessionStora, g, e.removeIt, e, m(k, e, y));
+bre, a, k;
 }
   }
-
   /**
-   * Get cache statistics
+   * Get, cache, statistics;
    */
-  getStats(): {
-memorySize: number;
-localStorageSize: number;
-sessionStorageSize: number;
+  getSta, t, s(): {
+memorySi, z, e: numb, e, r;
+localStorageSi, z, e: numb, e, r;
+sessionStorageS, i, z
+  e: numb, e, r;
 } {
-    return {
-      memorySize: this.memoryCache.size,
-      localStorageSize: localStorage.length,
-      sessionStorageSize: sessionStorage.length
+    retu, r, n {
+      memorySi, z, e: th, i, s.memoryCac, h, e.si, z, e
+      localStorageSi, z, e: localStora, g, e.leng, t, h
+      sessionStorageSi, z, e: sessionStora, g, e.leng, t, h;
 =======
-      memorySize: this.memoryCache.size,,
-      localStorageSize: localStorage.length,,
-      sessionStorageSize: sessionStorage.length,,
+      memoryS, i, z
+  e: th, i, s.memoryCac, h, e.si, z, e
+      localStorageSi, z, e: localStora, g, e.leng, t, h
+      sessionStorageSi, z, e: sessionStora, g, e.leng, t, h
     };
   }
-
-  // Private helper methods
-
-  private setInMemory<T>(key: string, entry: CacheEntry<T>, maxSize: number): void {,
-    // Implement LRU eviction if cache is full
-    if (this.memoryCache.size >= maxSize) {
-      const firstKey = this.memoryCache.keys().next().value;
-      if (firstKey) {
-        this.memoryCache.delete(firstKey);
+  // Private, helper, methods
+  private, setInMemor, y<T>(k, e, y: stri, n, g, ent, r, y: CacheEnt, r, y<T>, maxSi, z, e: numb, e, r): vo, i, d {
+    // Implement, LRU, eviction if, cache, is fu, l, l
+  if (th, i, s.memoryCac, h, e.si, z, e >= maxSi, z, e) {
+      const, firstKe, y = th, i, s.memoryCac, h, e.ke, y, s().ne, x, t().val, u, e;
+      if (firstK, e, y) {
+        th, i, s.memoryCac, h, e.dele, t, e(firstK, e, y);
       }
     }
-    this.memoryCache.set(key, entry);
+    th, i, s.memoryCac, h, e.s, e, t(k, e, y, ent, r, y);
   }
-
-  private setInStorage<T>(
-    key: string,,
-    entry: CacheEntry<T>,,
-    storage: 'localStorage' | 'sessionStorage): void {
+  private, setInStorag, e<T>(
+    k, e, y: stri, n, g
+    ent, r, y: CacheEnt, r, y<T>
+    stora, g, e: 'localStora, g, e' | 'sessionStora, g, e): vo, i, d {
 =======
-    storage: 'localStorage' | 'sessionStorage',
-  ): void {
-    try {
-      const storageObj = storage === 'localStorage' ? localStorage : sessionStorage;';
-      storageObj.setItem(key, JSON.stringify(entry));
-    } catch (error) {
-      console.warn(`Failed to set ${storage}:`, error);`;
+    stor, a, g
+  e: 'localStora, g, e' | 'sessionStora, g, e'
+  ): vo, i, d {
+    t, r, y {
+      const, storageOb, j = stora, g, e === 'localStora, g, e' ? localStora, g, e : sessionStora, g, e;';
+      storageO, b, j.setIt, e, m(k, e, y, JS, O, N.stringi, f, y(ent, r, y));
+    } cat, c, h (err, o, r) {
+      conso, l, e.wa, r, n(`Failed, to, set ${stora, g, e}:`, err, o, r);`;`
     }
   }
-
-  private getFromStorage<T>(
-    key: string,,
-    storage: 'localStorage' | 'sessionStorage): CacheEntry<T> | null {
-try {
-const storageObj = storage === 'localStorage' ? localStorage : sessionStorage;
+  private, getFromStorag, e<T>(
+    k, e, y: stri, n, g
+    stora, g, e: 'localStora, g, e' | 'sessionStora, g, e): CacheEnt, r, y<T> | nu, l, l {
+t, r, y {
+const, storageOb, j = stora, g, e === 'localStora, g, e' ? localStora, g, e : sessionStora, g, e;
 =======
-    storage: 'localStorage' | 'sessionStorage',
-  ): CacheEntry<T> | null {
-try {
-const storageObj = storage === 'localStorage' ? localStorage : sessionStorage;';
-const item = storageObj.getItem(key);
-return item ? JSON.parse(item) : null;
-} catch (error) {
-      console.warn(`Failed to get from ${storage}:`, error);`;
-      return null;
+    stor, a, g
+  e: 'localStora, g, e' | 'sessionStora, g, e'
+  ): CacheEnt, r, y<T> | nu, l, l {
+t, r, y {
+const, storageOb, j = stora, g, e === 'localStora, g, e' ? localStora, g, e : sessionStora, g, e;';
+const, ite, m = storageO, b, j.getIt, e, m(k, e, y);
+return, ite, m ? JS, O, N.par, s, e(it, e, m) : nu, l, l;
+} cat, c, h (err, o, r) {
+      conso, l, e.wa, r, n(`Failed, to, get fr, o, m ${stora, g, e}:`, err, o, r);`;`
+      return, nul, l;
     }
   }
-
-  private isExpired<T>(entry: CacheEntry<T>): boolean {,
-    return Date.now() - entry.timestamp > entry.ttl;
+  private, isExpire, d<T>(ent, r, y: CacheEnt, r, y<T>): boole, a, n {
+    return, Dat, e.n, o, w() - ent, r, y.timesta, m, p > ent, r, y.t, t, l;
   }
-
   /**
-   * Clean up expired entries (run periodically)
+   * Clean, up, expired entri, e, s (run, periodicall, y)
    */
-  cleanup(): void {
-    // Clean memory cache
-    for (const [key, entry] of this.memoryCache.entries()) {
-      if (this.isExpired(entry)) {
-        this.memoryCache.delete(key);
+  clean, u, p(): vo, i, d {
+    // Clean, memory, cache
+  f, o, r (con, s, t [k, e, y, ent, r, y] of, thi, s.memoryCac, h, e.entri, e, s()) {
+      if (th, i, s.isExpir, e, d(ent, r, y)) {
+        th, i, s.memoryCac, h, e.dele, t, e(k, e, y);
       }
     }
-
-    // Clean localStorage
-    for (let i = 0; i < localStorage.length; i++) {
-      const key = localStorage.key(i);
-      if (key) {
-        const entry = this.getFromStorage(key, 'localStorage');';
-        if (entry && this.isExpired(entry)) {
-          localStorage.removeItem(key);
+    // Clean, localStorag, e
+  f, o, r (le, t, i = 0; i < localStora, g, e.leng, t, h; i++) {
+      const, ke, y = localStora, g, e.k, e, y(i);
+      if (k, e, y) {
+        const, entr, y = th, i, s.getFromStora, g, e(k, e, y, 'localStora, g, e');';
+        if (ent, r, y && th, i, s.isExpir, e, d(ent, r, y)) {
+          localStora, g, e.removeIt, e, m(k, e, y);
         }
       }
     }
-
-    // Clean sessionStorage
-    for (let i = 0; i < sessionStorage.length; i++) {
-      const key = sessionStorage.key(i);
-      if (key) {
-        const entry = this.getFromStorage(key, 'sessionStorage');';
-        if (entry && this.isExpired(entry)) {
-          sessionStorage.removeItem(key);
+    // Clean, sessionStorag, e
+  f, o, r (le, t, i = 0; i < sessionStora, g, e.leng, t, h; i++) {
+      const, ke, y = sessionStora, g, e.k, e, y(i);
+      if (k, e, y) {
+        const, entr, y = th, i, s.getFromStora, g, e(k, e, y, 'sessionStora, g, e');';
+        if (ent, r, y && th, i, s.isExpir, e, d(ent, r, y)) {
+          sessionStora, g, e.removeIt, e, m(k, e, y);
         }
       }
     }
   }
 }
-
-// Export singleton instance
-export const cacheManager = new CacheManager();
-
-// Run cleanup every 5 minutes
-if (typeof window !== 'undefined') {;
+// Export, singleton, instance
+  export, const, cacheManager = new, CacheManage, r();
+// Run, cleanup, every 5, minute, s
+  if (typeof, windo, w !== 'undefin, e, d') {;
 =======
-if (typeof window !== 'undefined') {';
-  setInterval(() => {
-    cacheManager.cleanup();
-  }, 5 * 60 * 1000);
+if (typeof, windo, w !== 'undefin, e, d') {';
+  setInterv, a, l(() => {
+    cacheManag, e, r.clean, u, p();
+  }, 5 * 60 * 10, 0, 0);
 }
-
 export default cacheManager;
 ;

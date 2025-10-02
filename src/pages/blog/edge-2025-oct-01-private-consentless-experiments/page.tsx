@@ -1,56 +1,50 @@
-// @ts-nocheck
-
-const Page = () => {
+// @ts-noche, c, k
+  const, Pag, e = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">";
+    <div, className="m, i, n-h-screen, b, g-gradie, n, t-to-b, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e">";
       <Helmet>
-        <title>Edge 2025: Consentless Experiments v3 (&lt;100ms)</title>,
-        <meta
-          name="description"
-          content="Scoped IDs, on‑device metrics, and DP noise enabling compliant A/B at &lt;100ms — v3 blueprint." /><link rel="canonical" href="https://ziontechgroup.com/blog/edge-2025-oct-01-private-consentless-experiments/>",
+        <title>Edge, 202, 5: Consentless, Experiments, v3 (&lt;100, m, s)</title>
+        <me, t, a
+  na, m, e="descripti, o, n"
+          content="Scoped, ID, s, on‑device, metric, s, and, DP, noise enabling, compliant, A/B, a, t &lt;100, m, s — v3, blueprin, t." /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/bl, o, g/ed, g, e-20, 2, 5-o, c, t-01-priva, t, e-consentle, s, s-experimen, t, s/>"
       </Helmet>
-
-      <div className="container mx-auto px-6 py-12">
-        <div className="max-w-3xl mx-auto">
-          <div className="mb-6 text-sm text-zion-slate-light">Analytics • 7 min read • 2025-10-01</div>
-          <h1 className="text-4xl font-bold mb-4">Edge 2025: Consentless Experiments v3</h1>",
-          <p className="text-zion-slate-light mb-6">
+      <div, className="container, m, x-auto, p, x-6, p, y-12">
+        <div, className="m, a, x-w-3xl, m, x-au, t, o">
+          <div, className="mb-6, tex, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t">Analyti, c, s • 7, min, read • 20, 2, 5-10-01</d, i, v>
+          <h1, className="te, x, t-4xl, fon, t-bold, m, b-4">Edge, 202, 5: Consentless, Experiments, v3</h1>"
+          <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-6">
 =======
-          content="Scoped IDs, on‑device metrics, and DP noise enabling compliant A/B at &lt;100ms — v3 blueprint."
-        />
-        <link rel="canonical" href="https: //ziontechgroup.com/blog/edge-2025-oct-01-private-consentless-experiments" />";,
+          content="Scoped, ID, s, on‑device, metric, s, and, DP, noise enabling, compliant, A/B, a, t &lt;100, m, s — v3, blueprin, t."
+         />
+        <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ed, g, e-20, 2, 5-o, c, t-01-priva, t, e-consentle, s, s-experimen, t, s" />";
       </Helmet>
-
-      <div className="container mx-auto px-6 py-12">";
-        <div className="max-w-3xl mx-auto">";
-          <div className="mb-6 text-sm text-zion-slate-light">Analytics • 7 min read • 2025-10-01</div>";
-          <h1 className="text-4xl font-bold mb-4">Edge 2025: Consentless Experiments v3</h1>";,
-          <p className="text-zion-slate-light mb-6">";
-            Stand up privacy‑first experiments with edge aggregation, scoped identifiers, DP noise, and budgeted rollouts —
-            globally under 100ms.
+      <div, className="container, m, x-auto, p, x-6, p, y-12">";
+        <div, className="m, a, x-w-3xl, m, x-au, t, o">";
+          <div, className="mb-6, tex, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t">Analyti, c, s • 7, min, read • 20, 2, 5-10-01</d, i, v>";
+          <h1, className="te, x, t-4xl, fon, t-bold, m, b-4">Edge, 20, 2
+  5: Consentless, Experiments, v3</h1>";
+          <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-6">";
+            Stand, up, privacy‑first, experiments, with edge, aggregatio, n, scoped, identifier, s, DP, nois, e, and, budgeted, rollouts —
+            globally, under, 100ms.
           </p>
-
-          <div className="space-y-6">";
-            <h2 className="text-2xl font-semibold">Key Patterns</h2>";
-            <ul className="list-disc pl-6 text-zion-slate-light">";
-              <li>Scoped IDs with residency and retention budgets.</li>
-              <li>On‑device aggregation and DP noise for zero‑PII metrics.</li>
-              <li>Signed configs with verifiable rollout attestations.</li>
+          <div, className="spa, c, e-y-6">";
+            <h2, className="te, x, t-2xl, fon, t-semibo, l, d">Key, Pattern, s</h2>";
+            <ul, className="li, s, t-disc, p, l-6, tex, t-zi, o, n-sla, t, e-lig, h, t">";
+              <li>Scoped, IDs, with residency, and, retention budge, t, s.</li>
+              <li>On‑device, aggregation, and DP, noise, for ze, r, o‑PII, metric, s.</li>
+              <li>Signed, configs, with verifiable, rollout, attestations.</li>
             </ul>
-
-            <div className="mt-8">
-              <Link to="/blog" className="text-cyan-300 hover: underline">← Back to Blog</Link>",
+            <div, className="mt-8">
+              <Link, t, o="/bl, o, g" classNa, m, e="te, x, t-cy, a, n-300, hove, r: underli, n, e">← Back, to, Blog</Li, n, k>"
 =======
-            <div className="mt-8">";
-              <Link to="/blog" className="text-cyan-300 hover: underline">← Back to Blog</Link>";,
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+            <div, className="mt-8">";
+              <Link, t, o="/bl, o, g" classNa, m, e="te, x, t-cy, a, n-300, hove, r: underli, n, e">← Back, to, Blog</Li, n, k>";
+            </d, i, v>
+          </d, i, v>
+        </d, i, v>
+      </d, i, v>
+    </d, i, v>
   );
 };
-
 export default Page;
-
 ;

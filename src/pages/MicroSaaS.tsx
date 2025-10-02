@@ -1,61 +1,64 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const MicroSaaS: React.FC = () => {
-  const products = [
+import React from "react";
+import { Helmet } from "react-helmet-async";
+const, MicroSaa, S: Rea, c, t.FC = () => {
+  const, product, s = [
     {
-      name: 'Email Deliverability Optimizer',
-      price: '$149 - $799/mo',
-      features: ['Reputation monitoring', 'Warm-up automation', 'SPF/DKIM/DMARC assistant', 'Seed testing'],
-      link: 'https://ziontechgroup.com/services/micro-saas'
-    },
+      n, a, m
+  e: 'Email, Deliverability, Optimizer'
+      pri, c, e: '$1, 4, 9 - $7, 9, 9/mo'
+      featur, e, s: ['Reputation, monitorin, g', 'Wa, r, m-up, automatio, n', 'S, P, F/DK, I, M/DMARC, assistan, t', 'Seed, testin, g']
+      li, n, k: 'ht, t, p
+  s://ziontechgro, u, p.c, o, m/servic, e, s/mic, r, o-sa, a, s'
+    }
     {
-      name: 'Sales Playbook Copilot',
-      price: '$49 - $299/user/mo',
-      features: ['Persona modeling', 'Sequence experiments', 'CRM sync', 'Deal risk alerts'],
-      link: 'https://ziontechgroup.com/services/micro-saas'
-    },
+      na, m, e: 'Sales, Playbook, Copilot'
+      pri, c, e: '$49 - $2, 9, 9/us, e, r/mo'
+      featur, e, s: ['Persona, modelin, g', 'Sequence, experiment, s', 'CRM, syn, c', 'Deal, risk, alerts']
+      li, n, k: 'ht, t, p
+  s://ziontechgro, u, p.c, o, m/servic, e, s/mic, r, o-sa, a, s'
+    }
     {
-      name: 'Edge AI Inference Platform',
-      price: '$499 - $2,499/mo',
-      features: ['Model optimization', 'OTA updates', 'Fleet telemetry', 'A/B tests'],
-      link: 'https://ziontechgroup.com/services/micro-saas'
-    },
+      na, m, e: 'Edge, AI, Inference Platfo, r, m'
+      pri, c, e: '$4, 9, 9 - $2,4, 9, 9/mo'
+      featur, e, s: ['Model, optimizatio, n', 'OTA, update, s', 'Fleet, telemetr, y', 'A/B, test, s']
+      li, n, k: 'ht, t, p
+  s://ziontechgro, u, p.c, o, m/servic, e, s/mic, r, o-sa, a, s'
+    }
   ];
-
   return (
     <>
       <Helmet>
-        <title>Micro SaaS Solutions - Zion Tech Group</title>
-        <meta name="description" content="Innovative micro SaaS products to solve focused business workflows." />
-        <link rel="canonical" href="https://ziontechgroup.com/micro-saas" />
+        <title>Micro, SaaS, Solutions - Zion, Tech, Group</title>
+        <meta name="descripti, o, n" content="Innovative, micro, SaaS products, to, solve focused, business, workflows."  />
+        <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/mic, r, o-sa, a, s"  />
       </Helmet>
-      <section className="py-16">
-        <div className="container mx-auto px-6 max-w-6xl">
-          <h1 className="text-4xl font-bold mb-8">Micro SaaS Solutions</h1>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {products.map((p) => (
-              <div key={p.name} className="bg-white rounded-lg border p-6">
-                <h2 className="text-xl font-semibold mb-2">{p.name}</h2>
-                <div className="text-blue-600 font-semibold mb-3">{p.price}</div>
-                <ul className="text-sm text-gray-700 space-y-1 mb-4">
-                  {p.features.map((f) => (
-                    <li key={f}>• {f}</li>
+      <section, className="py-16">
+        <div, className="container, m, x-auto, p, x-6, ma, x-w-6, x, l">
+          <h1, className="te, x, t-4xl, fon, t-bold, m, b-8">Micro, SaaS, Solutions</h1>
+          <div, className="grid, gri, d-co, l, s-1 m
+  d:gr, i, d-co, l, s-3, ga, p-6">
+            {produc, t, s.m, a, p((p) => (
+              <div, ke, y={p.na, m, e} classNa, m, e="bg-white, rounde, d-lg, border, p-6">
+                <h2, className="te, x, t-xl, fon, t-semibold, m, b-2">{p.na, m, e}</h2>
+                <div, className="te, x, t-bl, u, e-600, fon, t-semibold, m, b-3">{p.pri, c, e}</d, i, v>
+                <ul, className="te, x, t-sm, tex, t-gr, a, y-700, spac, e-y-1, m, b-4">
+                  {p.featur, e, s.m, a, p((f) => (
+                    <li, ke, y={f}>• {f}</li>
                   ))}
                 </ul>
-                <a className="text-blue-600 hover:underline" href="/micro-saas">Learn more →</a>
-              </div>
+                <a, className="te, x, t-bl, u, e-600, hove, r:underli, n, e" hr, e, f="/mic, r, o-sa, a, s">Learn, mor, e →</a>
+              </d, i, v>
             ))}
-          </div>
-          <div className="mt-10 text-sm text-gray-600">
+          </d, i, v>
+          <div, className="mt-10, tex, t-sm, tex, t-gr, a, y-6, 0, 0">
             <p>
-              Contact us: <a className="text-blue-600" href="tel:+13024640950">+1 302 464 0950</a> · <a className="text-blue-600" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> · 364 E Main St STE 1008, Middletown DE 19709
+              Contact, u, s: <a, className="te, x, t-bl, u, e-6, 0, 0" hr, e, f="t, e, l:+130246409, 5, 0">+1, 302, 464 09, 5, 0</a> · <a, className="te, x, t-bl, u, e-6, 0, 0" hr, e, f="mai, l, t
+  o:kleb, e, r@ziontechgro, u, p.c, o, m">kleb, e, r@ziontechgro, u, p.c, o, m</a> · 364, E, Main St, STE, 1008, Middletown, DE, 19709;
             </p>
-          </div>
-        </div>
-      </section>
-    </>
+          </d, i, v>
+        </d, i, v>
+      </secti, o, n>
+    < />
   );
 };
-
 export default MicroSaaS;

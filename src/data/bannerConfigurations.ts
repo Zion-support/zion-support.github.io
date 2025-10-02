@@ -1,233 +1,227 @@
-import { BannerConfig } from '../components/UnifiedBannerSystem';
+impo, r, t { BannerConf, i, g } fr, o, m "../componen, t, s/UnifiedBannerSyst, e, m";
 =======
-import {
-BannerConfig
-} from '../components/UnifiedBannerSystem';';
-
-// Centralized banner configuration management
-export const bannerConfigurations: BannerConfig[] = [,
+impo, r, t {
+BannerConf, i, g;
+} fr, o, m "../componen, t, s/UnifiedBannerSyst, e, m";';
+// Centralized, banner, configuration manageme, n, t
+  export, const, bannerConfigurations: BannerConf, i, g[] = [
   {
-    id: 'ai-revolution-2026',',
-    title: 'AI Revolution 2026',',
-    subtitle: 'Next-Generation Autonomous Systems',',
-    description: 'Experience the future of AI with our revolutionary autonomous enterprise solutions. Transform your business with cutting-edge technology.',',
-    ctaText: 'Explore AI Solutions',',
-    ctaLink: '/ai-solutions',',
-    category: 'ai',',
-    priority: 100,,
-    tags: ['AI', 'Autonomous', 'Enterprise', '2026'],',
-    backgroundColor: '#1e40af',',
-    textColor: '#ffffff',',
-    animation: 'slide',',
-    duration: 5000,
-  },
+    id: 'ai-revoluti, o, n-20, 2, 6','
+    tit, l, e: 'AI, Revolution, 2026','
+    subtit, l, e: 'Ne, x, t-Generation, Autonomous, Systems','
+    descripti, o, n: 'Experience, the, future of, AI, with our, revolutionary, autonomous enterprise, solution, s. Transform, your, business with, cuttin, g-edge, technolog, y.','
+    ctaTe, x, t: 'Explore, AI, Solutions','
+    ctaLi, n, k: '/ai-solutio, n, s','
+    catego, r, y: 'ai','
+    priori, t, y: 1, 0, 0
+    ta, g, s: ['AI', 'Autonomo, u, s', 'Enterpri, s, e', '20, 2, 6'],'
+    backgroundCol, o, r: '#1e40, a, f','
+    textCol, o, r: '#ffff, f, f','
+    animati, o, n: 'sli, d, e','
+    durati, o, n: 50, 0, 0
+  }
   {
-    id: 'quantum-computing',',
-    title: 'Quantum Computing Breakthrough',',
-    subtitle: '$84.7B Value Creation',',
-    description: 'Revolutionary quantum-enhanced AI platform delivering unprecedented performance and intelligence.',',
-    ctaText: 'Learn More',',
-    ctaLink: '/quantum-ai',',
-    category: 'quantum',',
-    priority: 95,,
-    tags: ['Quantum', 'AI', 'Breakthrough', 'High-Value'],',
-    backgroundColor: '#7c3aed',',
-    textColor: '#ffffff',',
-    animation: 'fade',',
-    duration: 6000,
-  },
+    id: 'quant, u, m-computi, n, g','
+    tit, l, e: 'Quantum, Computing, Breakthrough','
+    subtit, l, e: '$84.7B, Value, Creation','
+    descripti, o, n: 'Revolutionary, quantu, m-enhanced, AI, platform delivering, unprecedented, performance and, intelligenc, e.','
+    ctaTe, x, t: 'Learn, Mor, e','
+    ctaLi, n, k: '/quant, u, m-ai','
+    catego, r, y: 'quant, u, m','
+    priori, t, y: 95
+    ta, g, s: ['Quant, u, m', 'AI', 'Breakthrou, g, h', 'Hi, g, h-Val, u, e'],'
+    backgroundCol, o, r: '#7c3a, e, d','
+    textCol, o, r: '#ffff, f, f','
+    animati, o, n: 'fa, d, e','
+    durati, o, n: 60, 0, 0
+  }
   {
-    id: 'enterprise-automation',',
-    title: 'Enterprise Automation Suite',',
-    subtitle: '99.97% Autonomous Operations',',
-    description: 'Complete automation platform for enterprise operations with advanced AI orchestration.',',
-    ctaText: 'Get Started',',
-    ctaLink: '/automation',',
-    category: 'automation',',
-    priority: 90,,
-    tags: ['Automation', 'Enterprise', 'AI Orchestration'],',
-    backgroundColor: '#059669',',
-    textColor: '#ffffff',',
-    animation: 'scale',',
-    duration: 5000,
-  },
+    id: 'enterpri, s, e-automati, o, n','
+    tit, l, e: 'Enterprise, Automation, Suite','
+    subtit, l, e: '99.97% Autonomous, Operation, s','
+    descripti, o, n: 'Complete, automation, platform for, enterprise, operations with, advanced, AI orchestrati, o, n.','
+    ctaTe, x, t: 'Get, Starte, d','
+    ctaLi, n, k: '/automati, o, n','
+    catego, r, y: 'automati, o, n','
+    priori, t, y: 90
+    ta, g, s: ['Automati, o, n', 'Enterpri, s, e', 'AI, Orchestratio, n'],'
+    backgroundCol, o, r: '#0596, 6, 9','
+    textCol, o, r: '#ffff, f, f','
+    animati, o, n: 'sca, l, e','
+    durati, o, n: 50, 0, 0
+  }
   {
-    id: 'cognitive-orchestration',',
-    title: 'Cognitive Orchestration Platform',',
-    subtitle: '$42.7B Hyperscale Success',',
-    description: 'Advanced cognitive orchestration delivering 47,200% ROI with 127,000 AI agents.',',
-    ctaText: 'Discover Platform',',
-    ctaLink: '/cognitive-orchestration',',
-    category: 'cognitive',',
-    priority: 85,,
-    tags: ['Cognitive', 'Orchestration', 'Hyperscale', 'ROI'],',
-    backgroundColor: '#dc2626',',
-    textColor: '#ffffff',',
-    animation: 'slide',',
-    duration: 7000,
-  },
+    id: 'cogniti, v, e-orchestrati, o, n','
+    tit, l, e: 'Cognitive, Orchestration, Platform','
+    subtit, l, e: '$42.7B, Hyperscale, Success','
+    descripti, o, n: 'Advanced, cognitive, orchestration delivering, 4, 7,2, 0, 0% ROI, with, 127,000, AI, agents.','
+    ctaTe, x, t: 'Discover, Platfor, m','
+    ctaLi, n, k: '/cogniti, v, e-orchestrati, o, n','
+    catego, r, y: 'cogniti, v, e','
+    priori, t, y: 85
+    ta, g, s: ['Cogniti, v, e', 'Orchestrati, o, n', 'Hypersca, l, e', 'R, O, I'],'
+    backgroundCol, o, r: '#dc26, 2, 6','
+    textCol, o, r: '#ffff, f, f','
+    animati, o, n: 'sli, d, e','
+    durati, o, n: 70, 0, 0
+  }
   {
-    id: 'edge-ai-5g',',
-    title: 'Edge AI + 5G Revolution',',
-    subtitle: '$18.4B Automotive Success',',
-    description: 'Sub-10ms latency Edge AI platform with 47,000+ devices and 2,400% ROI.',',
-    ctaText: 'View Success Story',',
-    ctaLink: '/edge-ai',',
-    category: 'edge',',
-    priority: 80,,
-    tags: ['Edge AI', '5G', 'Automotive', 'Low Latency'],',
-    backgroundColor: '#ea580c',',
-    textColor: '#ffffff',',
-    animation: 'fade',',
-    duration: 5500,
-  },
+    id: 'ed, g, e-ai-5g','
+    tit, l, e: 'Edge, A, I + 5G, Revolutio, n','
+    subtit, l, e: '$18.4B, Automotive, Success','
+    descripti, o, n: 'S, u, b-10ms, latency, Edge AI, platform, with 47,0, 0, 0+ devices, and, 2,4, 0, 0% R, O, I.','
+    ctaTe, x, t: 'View, Success, Story','
+    ctaLi, n, k: '/ed, g, e-ai','
+    catego, r, y: 'ed, g, e','
+    priori, t, y: 80
+    ta, g, s: ['Edge, A, I', '5G', 'Automoti, v, e', 'Low, Latenc, y'],'
+    backgroundCol, o, r: '#ea58, 0, c','
+    textCol, o, r: '#ffff, f, f','
+    animati, o, n: 'fa, d, e','
+    durati, o, n: 55, 0, 0
+  }
   {
-    id: 'ai-security-framework',',
-    title: 'AI Security & Trust Framework',',
-    subtitle: '99.97% Threat Prevention',',
-    description: 'Comprehensive AI security framework ensuring enterprise-grade protection and compliance.',',
-    ctaText: 'Secure Your AI',',
-    ctaLink: '/ai-security',',
-    category: 'security',',
-    priority: 75,,
-    tags: ['Security', 'AI', 'Compliance', 'Trust'],',
-    backgroundColor: '#0891b2',',
-    textColor: '#ffffff',',
-    animation: 'scale',',
+    id: 'ai-securi, t, y-framewo, r, k','
+    tit, l, e: 'AI, Securit, y & Trust, Framewor, k','
+    subtit, l, e: '99.97% Threat, Preventio, n','
+    descripti, o, n: 'Comprehensive, AI, security framework, ensuring, enterprise-grade, protection, and complian, c, e.','
+    ctaTe, x, t: 'Secure, Your, AI','
+    ctaLi, n, k: '/ai-securi, t, y','
+    catego, r, y: 'securi, t, y','
+    priori, t, y: 75
+    ta, g, s: ['Securi, t, y', 'AI', 'Complian, c, e', 'Tru, s, t'],'
+    backgroundCol, o, r: '#0891, b, 2','
+    textCol, o, r: '#ffff, f, f','
+    animati, o, n: 'sca, l, e','
 =======
-    id: 'ai-revolution-2026',';,
-    title: 'AI Revolution 2026',';,
-    subtitle: 'Next-Generation Autonomous Systems',';,
-    description: 'Experience the future of AI with our revolutionary autonomous enterprise solutions. Transform your business with cutting-edge technology.',';,
-    ctaText: 'Explore AI Solutions',';,
-    ctaLink: '/ai-solutions',';,
-    category: 'ai',';,
-    priority: 100,,
-    tags: ['AI', 'Autonomous', 'Enterprise', '2026'],';,
-    backgroundColor: '#1e40af',';,
-    textColor: '#ffffff',';,
-    animation: 'slide',';,
-    duration: 5000,
-  },
+    id: 'ai-revoluti, o, n-20, 2, 6',';
+    tit, l, e: 'AI, Revolution, 2026',';
+    subtit, l, e: 'Ne, x, t-Generation, Autonomous, Systems',';
+    descripti, o, n: 'Experience, the, future of, AI, with our, revolutionary, autonomous enterprise, solution, s. Transform, your, business with, cuttin, g-edge, technolog, y.',';
+    ctaTe, x, t: 'Explore, AI, Solutions',';
+    ctaLi, n, k: '/ai-solutio, n, s',';
+    catego, r, y: 'ai',';
+    priori, t, y: 1, 0, 0
+    ta, g, s: ['AI', 'Autonomo, u, s', 'Enterpri, s, e', '20, 2, 6'],';
+    backgroundCol, o, r: '#1e40, a, f',';
+    textCol, o, r: '#ffff, f, f',';
+    animati, o, n: 'sli, d, e',';
+    durati, o, n: 50, 0, 0
+  }
   {
-    id: 'quantum-computing',';,
-    title: 'Quantum Computing Breakthrough',';,
-    subtitle: '$84.7B Value Creation',';,
-    description: 'Revolutionary quantum-enhanced AI platform delivering unprecedented performance and intelligence.',';,
-    ctaText: 'Learn More',';,
-    ctaLink: '/quantum-ai',';,
-    category: 'quantum',';,
-    priority: 95,,
-    tags: ['Quantum', 'AI', 'Breakthrough', 'High-Value'],';,
-    backgroundColor: '#7c3aed',';,
-    textColor: '#ffffff',';,
-    animation: 'fade',';,
-    duration: 6000,
-  },
+    id: 'quant, u, m-computi, n, g',';
+    tit, l, e: 'Quantum, Computing, Breakthrough',';
+    subtit, l, e: '$84.7B, Value, Creation',';
+    descripti, o, n: 'Revolutionary, quantu, m-enhanced, AI, platform delivering, unprecedented, performance and, intelligenc, e.',';
+    ctaTe, x, t: 'Learn, Mor, e',';
+    ctaLi, n, k: '/quant, u, m-ai',';
+    catego, r, y: 'quant, u, m',';
+    priori, t, y: 95
+    ta, g, s: ['Quant, u, m', 'AI', 'Breakthrou, g, h', 'Hi, g, h-Val, u, e'],';
+    backgroundCol, o, r: '#7c3a, e, d',';
+    textCol, o, r: '#ffff, f, f',';
+    animati, o, n: 'fa, d, e',';
+    durati, o, n: 60, 0, 0
+  }
   {
-    id: 'enterprise-automation',';,
-    title: 'Enterprise Automation Suite',';,
-    subtitle: '99.97% Autonomous Operations',';,
-    description: 'Complete automation platform for enterprise operations with advanced AI orchestration.',';,
-    ctaText: 'Get Started',';,
-    ctaLink: '/automation',';,
-    category: 'automation',';,
-    priority: 90,,
-    tags: ['Automation', 'Enterprise', 'AI Orchestration'],';,
-    backgroundColor: '#059669',';,
-    textColor: '#ffffff',';,
-    animation: 'scale',';,
-    duration: 5000,
-  },
+    id: 'enterpri, s, e-automati, o, n',';
+    tit, l, e: 'Enterprise, Automation, Suite',';
+    subtit, l, e: '99.97% Autonomous, Operation, s',';
+    descripti, o, n: 'Complete, automation, platform for, enterprise, operations with, advanced, AI orchestrati, o, n.',';
+    ctaTe, x, t: 'Get, Starte, d',';
+    ctaLi, n, k: '/automati, o, n',';
+    catego, r, y: 'automati, o, n',';
+    priori, t, y: 90
+    ta, g, s: ['Automati, o, n', 'Enterpri, s, e', 'AI, Orchestratio, n'],';
+    backgroundCol, o, r: '#0596, 6, 9',';
+    textCol, o, r: '#ffff, f, f',';
+    animati, o, n: 'sca, l, e',';
+    durati, o, n: 50, 0, 0
+  }
   {
-    id: 'cognitive-orchestration',';,
-    title: 'Cognitive Orchestration Platform',';,
-    subtitle: '$42.7B Hyperscale Success',';,
-    description: 'Advanced cognitive orchestration delivering 47,200% ROI with 127,000 AI agents.',';,
-    ctaText: 'Discover Platform',';,
-    ctaLink: '/cognitive-orchestration',';,
-    category: 'cognitive',';,
-    priority: 85,,
-    tags: ['Cognitive', 'Orchestration', 'Hyperscale', 'ROI'],';,
-    backgroundColor: '#dc2626',';,
-    textColor: '#ffffff',';,
-    animation: 'slide',';,
-    duration: 7000,
-  },
+    id: 'cogniti, v, e-orchestrati, o, n',';
+    tit, l, e: 'Cognitive, Orchestration, Platform',';
+    subtit, l, e: '$42.7B, Hyperscale, Success',';
+    descripti, o, n: 'Advanced, cognitive, orchestration delivering, 4, 7,2, 0, 0% ROI, with, 127,000, AI, agents.',';
+    ctaTe, x, t: 'Discover, Platfor, m',';
+    ctaLi, n, k: '/cogniti, v, e-orchestrati, o, n',';
+    catego, r, y: 'cogniti, v, e',';
+    priori, t, y: 85
+    ta, g, s: ['Cogniti, v, e', 'Orchestrati, o, n', 'Hypersca, l, e', 'R, O, I'],';
+    backgroundCol, o, r: '#dc26, 2, 6',';
+    textCol, o, r: '#ffff, f, f',';
+    animati, o, n: 'sli, d, e',';
+    durati, o, n: 70, 0, 0
+  }
   {
-    id: 'edge-ai-5g',';,
-    title: 'Edge AI + 5G Revolution',';,
-    subtitle: '$18.4B Automotive Success',';,
-    description: 'Sub-10ms latency Edge AI platform with 47,000+ devices and 2,400% ROI.',';,
-    ctaText: 'View Success Story',';,
-    ctaLink: '/edge-ai',';,
-    category: 'edge',';,
-    priority: 80,,
-    tags: ['Edge AI', '5G', 'Automotive', 'Low Latency'],';,
-    backgroundColor: '#ea580c',';,
-    textColor: '#ffffff',';,
-    animation: 'fade',';,
-    duration: 5500,
-  },
+    id: 'ed, g, e-ai-5g',';
+    tit, l, e: 'Edge, A, I + 5G, Revolutio, n',';
+    subtit, l, e: '$18.4B, Automotive, Success',';
+    descripti, o, n: 'S, u, b-10ms, latency, Edge AI, platform, with 47,0, 0, 0+ devices, and, 2,4, 0, 0% R, O, I.',';
+    ctaTe, x, t: 'View, Success, Story',';
+    ctaLi, n, k: '/ed, g, e-ai',';
+    catego, r, y: 'ed, g, e',';
+    priori, t, y: 80
+    ta, g, s: ['Edge, A, I', '5G', 'Automoti, v, e', 'Low, Latenc, y'],';
+    backgroundCol, o, r: '#ea58, 0, c',';
+    textCol, o, r: '#ffff, f, f',';
+    animati, o, n: 'fa, d, e',';
+    durati, o, n: 55, 0, 0
+  }
   {
-    id: 'ai-security-framework',';,
-    title: 'AI Security & Trust Framework',';,
-    subtitle: '99.97% Threat Prevention',';,
-    description: 'Comprehensive AI security framework ensuring enterprise-grade protection and compliance.',';,
-    ctaText: 'Secure Your AI',';,
-    ctaLink: '/ai-security',';,
-    category: 'security',';,
-    priority: 75,,
-    tags: ['Security', 'AI', 'Compliance', 'Trust'],';,
-    backgroundColor: '#0891b2',';,
-    textColor: '#ffffff',';,
-    animation: 'scale',';,
-    duration: 6000,
+    id: 'ai-securi, t, y-framewo, r, k',';
+    tit, l, e: 'AI, Securit, y & Trust, Framewor, k',';
+    subtit, l, e: '99.97% Threat, Preventio, n',';
+    descripti, o, n: 'Comprehensive, AI, security framework, ensuring, enterprise-grade, protection, and complian, c, e.',';
+    ctaTe, x, t: 'Secure, Your, AI',';
+    ctaLi, n, k: '/ai-securi, t, y',';
+    catego, r, y: 'securi, t, y',';
+    priori, t, y: 75
+    ta, g, s: ['Securi, t, y', 'AI', 'Complian, c, e', 'Tru, s, t'],';
+    backgroundCol, o, r: '#0891, b, 2',';
+    textCol, o, r: '#ffff, f, f',';
+    animati, o, n: 'sca, l, e',';
+    durati, o, n: 60, 0, 0
   }
 ];
-
-// Banner category filters
-export const bannerCategories = [
-  { id: 'all', name: 'All Categories', count: bannerConfigurations.length }
-  { id: 'ai', name: 'AI & Machine Learning', count: bannerConfigurations.filter(b => b.category === 'ai').length }
-  { id: 'quantum', name: 'Quantum Computing', count: bannerConfigurations.filter(b => b.category === 'quantum').length }
-  { id: 'automation', name: 'Automation', count: bannerConfigurations.filter(b => b.category === 'automation').length }
-  { id: 'cognitive', name: 'Cognitive Systems', count: bannerConfigurations.filter(b => b.category === 'cognitive').length }
-  { id: 'edge', name: 'Edge Computing', count: bannerConfigurations.filter(b => b.category === 'edge').length }
-  { id: 'security', name: 'Security', count: bannerConfigurations.filter(b => b.category === 'security').length }
+// Banner, category, filters
+  export, const, bannerCategories = [
+  { id: 'a, l, l', na, m, e: 'All, Categorie, s', cou, n, t: bannerConfiguratio, n, s.leng, t, h }
+  { id: 'ai', na, m, e: 'AI & Machine, Learnin, g', cou, n, t: bannerConfiguratio, n, s.filt, e, r(b => b.catego, r, y === 'ai').leng, t, h }
+  { id: 'quant, u, m', na, m, e: 'Quantum, Computin, g', cou, n, t: bannerConfiguratio, n, s.filt, e, r(b => b.catego, r, y === 'quant, u, m').leng, t, h }
+  { id: 'automati, o, n', na, m, e: 'Automati, o, n', cou, n, t: bannerConfiguratio, n, s.filt, e, r(b => b.catego, r, y === 'automati, o, n').leng, t, h }
+  { id: 'cogniti, v, e', na, m, e: 'Cognitive, System, s', cou, n, t: bannerConfiguratio, n, s.filt, e, r(b => b.catego, r, y === 'cogniti, v, e').leng, t, h }
+  { id: 'ed, g, e', na, m, e: 'Edge, Computin, g', cou, n, t: bannerConfiguratio, n, s.filt, e, r(b => b.catego, r, y === 'ed, g, e').leng, t, h }
+  { id: 'securi, t, y', na, m, e: 'Securi, t, y', cou, n, t: bannerConfiguratio, n, s.filt, e, r(b => b.catego, r, y === 'securi, t, y').leng, t, h }
 =======
-  { id: 'all', name: 'All Categories', count: bannerConfigurations.length },';
-  { id: 'ai', name: 'AI & Machine Learning', count: bannerConfigurations.filter(b => b.category === 'ai').length },';
-  { id: 'quantum', name: 'Quantum Computing', count: bannerConfigurations.filter(b => b.category === 'quantum').length },';
-  { id: 'automation', name: 'Automation', count: bannerConfigurations.filter(b => b.category === 'automation').length },';
-  { id: 'cognitive', name: 'Cognitive Systems', count: bannerConfigurations.filter(b => b.category === 'cognitive').length },';
-  { id: 'edge', name: 'Edge Computing', count: bannerConfigurations.filter(b => b.category === 'edge').length },';
-  { id: 'security', name: 'Security', count: bannerConfigurations.filter(b => b.category === 'security').length }';
+  { id: 'a, l, l', na, m, e: 'All, Categorie, s', cou, n, t: bannerConfiguratio, n, s.leng, t, h },';
+  { id: 'ai', na, m, e: 'AI & Machine, Learnin, g', cou, n, t: bannerConfiguratio, n, s.filt, e, r(b => b.catego, r, y === 'ai').leng, t, h },';
+  { id: 'quant, u, m', na, m, e: 'Quantum, Computin, g', cou, n, t: bannerConfiguratio, n, s.filt, e, r(b => b.catego, r, y === 'quant, u, m').leng, t, h },';
+  { id: 'automati, o, n', na, m, e: 'Automati, o, n', cou, n, t: bannerConfiguratio, n, s.filt, e, r(b => b.catego, r, y === 'automati, o, n').leng, t, h },';
+  { id: 'cogniti, v, e', na, m, e: 'Cognitive, System, s', cou, n, t: bannerConfiguratio, n, s.filt, e, r(b => b.catego, r, y === 'cogniti, v, e').leng, t, h },';
+  { id: 'ed, g, e', na, m, e: 'Edge, Computin, g', cou, n, t: bannerConfiguratio, n, s.filt, e, r(b => b.catego, r, y === 'ed, g, e').leng, t, h },';
+  { id: 'securi, t, y', na, m, e: 'Securi, t, y', cou, n, t: bannerConfiguratio, n, s.filt, e, r(b => b.catego, r, y === 'securi, t, y').leng, t, h }';
 ];
-
-// Utility functions for banner management
-export const getBannersByCategory = (category: string): BannerConfig[] => {,
-  if (category === 'all') return bannerConfigurations;
+// Utility, functions, for banner, managemen, t
+  export, const, getBannersByCategory = (catego, r, y: stri, n, g): BannerConf, i, g[] => {
+  if (catego, r, y === 'a, l, l') return, bannerConfiguration, s;
 =======
-  if (category === 'all') return bannerConfigurations;';
-  return bannerConfigurations.filter(banner => banner.category === category);
+  if (catego, r, y === 'a, l, l') return, bannerConfiguration, s;';
+  return, bannerConfiguration, s.filt, e, r(bann, e, r => bann, e, r.catego, r, y === catego, r, y);
 };
-
-export const getBannersByPriority = (minPriority: number): BannerConfig[] => {,
-  return bannerConfigurations.filter(banner => banner.priority >= minPriority);
+export, const, getBannersByPriority = (minPriori, t, y: numb, e, r): BannerConf, i, g[] => {
+  return, bannerConfiguration, s.filt, e, r(bann, e, r => bann, e, r.priori, t, y >= minPriori, t, y);
 };
-
-export const getFeaturedBanners = (count: number = 3): BannerConfig[] => {,
-  return bannerConfigurations
-    .sort((a, b) => b.priority - a.priority)
-    .slice(0, count);
+export, const, getFeaturedBanners = (cou, n, t: numb, e, r = 3): BannerConf, i, g[] => {
+  return, bannerConfiguration, s;
+    .so, r, t((a, b) => b.priori, t, y - a.priori, t, y)
+    .sli, c, e(0, cou, n, t);
 };
-
-export const searchBanners = (query: string): BannerConfig[] => {,
-  const lowercaseQuery = query.toLowerCase();
-  return bannerConfigurations.filter(banner => 
-    banner.title.toLowerCase().includes(lowercaseQuery) ||
-    banner.description.toLowerCase().includes(lowercaseQuery) ||
-    banner.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery))
+export, const, searchBanners = (que, r, y: stri, n, g): BannerConf, i, g[] => {
+  const, lowercaseQuer, y = que, r, y.toLowerCa, s, e();
+  return, bannerConfiguration, s.filt, e, r(bann, e, r => 
+    bann, e, r.tit, l, e.toLowerCa, s, e().includ, e, s(lowercaseQue, r, y) ||
+    bann, e, r.descripti, o, n.toLowerCa, s, e().includ, e, s(lowercaseQue, r, y) ||
+    bann, e, r.ta, g, s.so, m, e(t, a, g => t, a, g.toLowerCa, s, e().includ, e, s(lowercaseQue, r, y))
   );
 };

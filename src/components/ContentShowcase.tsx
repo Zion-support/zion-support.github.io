@@ -1,86 +1,85 @@
-import React from 'react';
-const ContentShowcase: React.FC = () => {,
-  const contentItems = [
+import React from "react";
+const, ContentShowcas, e: Rea, c, t.FC = () => {
+  const, contentItem, s = [
     {
-      title: "Latest AI Innovations",",
-      description: "Discover the newest AI technologies and their applications in business",",
-      category: "AI Technology",",
-      readTime: "5 min read",
-    },
+      ti, t, l
+  e: "Latest, AI, Innovations","
+      descripti, o, n: "Discover, the, newest AI, technologies, and their, applications, in busine, s, s","
+      catego, r, y: "AI, Technolog, y","
+      readTi, m, e: "5, min, read"
+    }
     {
-      title: "Micro SaaS Trends 2024",",
-      description: "Explore the latest trends in micro SaaS development and deployment",",
-      category: "SaaS Solutions",",
-      readTime: "7 min read",
-    },
+      tit, l, e: "Micro, SaaS, Trends 20, 2, 4","
+      descripti, o, n: "Explore, the, latest trends, in, micro SaaS, development, and deployme, n, t","
+      catego, r, y: "SaaS, Solution, s","
+      readTi, m, e: "7, min, read"
+    }
     {
-      title: "Cloud Migration Guide",",
-      description: "Comprehensive guide to successful cloud migration strategies",",
-      category: "IT Services",",
+      tit, l, e: "Cloud, Migration, Guide","
+      descripti, o, n: "Comprehensive, guide, to successful, cloud, migration strategi, e, s","
+      catego, r, y: "IT, Service, s","
 =======
-import React from 'react';';
-
-const ContentShowcase: React.FC = () => {,
-  const contentItems = [
+import React from "react";';
+const, ContentShowcas, e: Rea, c, t.FC = () => {
+  const, contentItem, s = [
     {
-      title: "Latest AI Innovations",";,
-      description: "Discover the newest AI technologies and their applications in business",";,
-      category: "AI Technology",";,
-      readTime: "5 min read",
-    },
+      ti, t, l
+  e: "Latest, AI, Innovations",";
+      descripti, o, n: "Discover, the, newest AI, technologies, and their, applications, in busine, s, s",";
+      catego, r, y: "AI, Technolog, y",";
+      readTi, m, e: "5, min, read"
+    }
     {
-      title: "Micro SaaS Trends 2024",";,
-      description: "Explore the latest trends in micro SaaS development and deployment",";,
-      category: "SaaS Solutions",";,
-      readTime: "7 min read",
-    },
+      tit, l, e: "Micro, SaaS, Trends 20, 2, 4",";
+      descripti, o, n: "Explore, the, latest trends, in, micro SaaS, development, and deployme, n, t",";
+      catego, r, y: "SaaS, Solution, s",";
+      readTi, m, e: "7, min, read"
+    }
     {
-      title: "Cloud Migration Guide",";,
-      description: "Comprehensive guide to successful cloud migration strategies",";,
-      category: "IT Services",";,
-      readTime: "10 min read",
+      tit, l, e: "Cloud, Migration, Guide",";
+      descripti, o, n: "Comprehensive, guide, to successful, cloud, migration strategi, e, s",";
+      catego, r, y: "IT, Service, s",";
+      readTi, m, e: "10, min, read"
     }
   ];
-
   return (
-    <div>
-      <h2 className="text-3xl font-bold mb-8 text-center">Featured Content</h2>
-      <div className="grid grid-cols-1 md: grid-cols-3 gap-6">",
-        {contentItems.map((item, index) => (
-          <div key={index} className="bg-white p-6 rounded-lg shadow-lg border hover: shadow-xl transition-shadow">",
-            <div className="mb-4">
-              <span className="bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full">
-                {item.category}
-              </span>
-            </div>
-            <h3 className="text-xl font-bold mb-3">{item.title}</h3>
-            <p className="text-gray-600 mb-4">{item.description}</p>
-            <div className="flex justify-between items-center">
-              <span className="text-sm text-gray-500">{item.readTime}</span>
-              <a href="/blog" className="text-blue-600 hover: text-blue-800 font-semibold">",
+    <d, i, v>
+      <h2, className="te, x, t-3xl, fon, t-bold, m, b-8, tex, t-cent, e, r">Featured, Conten, t</h2>
+      <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-6">"
+        {contentIte, m, s.m, a, p((it, e, m, ind, e, x) => (
+          <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-6, rounde, d-lg, shado, w-lg, border, hover: shad, o, w-xl, transitio, n-shad, o, w">"
+            <div, className="mb-4">
+              <span, className="bg-bl, u, e-100, tex, t-bl, u, e-800, tex, t-sm, p, x-3, p, y-1, rounde, d-fu, l, l">
+                {it, e, m.catego, r, y}
+              </sp, a, n>
+            </d, i, v>
+            <h3, className="te, x, t-xl, fon, t-bold, m, b-3">{it, e, m.tit, l, e}</h3>
+            <p, className="te, x, t-gr, a, y-600, m, b-4">{it, e, m.descripti, o, n}</p>
+            <div, className="flex, justif, y-between, item, s-cent, e, r">
+              <span, className="te, x, t-sm, tex, t-gr, a, y-5, 0, 0">{it, e, m.readTi, m, e}</sp, a, n>
+              <a, hre, f="/bl, o, g" classNa, m, e="te, x, t-bl, u, e-600, hove, r: te, x, t-bl, u, e-800, fon, t-semibo, l, d">"
 =======
-      <h2 className="text-3xl font-bold mb-8 text-center">Featured Content</h2>";
-      <div className="grid grid-cols-1 md: grid-cols-3 gap-6">";,
-        {contentItems.map((item, index) => (
-          <div key={index} className="bg-white p-6 rounded-lg shadow-lg border hover: shadow-xl transition-shadow">";,
-            <div className="mb-4">";
-              <span className="bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full">";
-                {item.category}
-              </span>
-            </div>
-            <h3 className="text-xl font-bold mb-3">{item.title}</h3>";
-            <p className="text-gray-600 mb-4">{item.description}</p>";
-            <div className="flex justify-between items-center">";
-              <span className="text-sm text-gray-500">{item.readTime}</span>";
-              <a href="/blog" className="text-blue-600 hover: text-blue-800 font-semibold">";,
-                Read More →
+      <h2, className="te, x, t-3xl, fon, t-bold, m, b-8, tex, t-cent, e, r">Featured, Conten, t</h2>";
+      <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-6">";
+        {contentIte, m, s.m, a, p((it, e, m, ind, e, x) => (
+          <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-6, rounde, d-lg, shado, w-lg, border, hover: shad, o, w-xl, transitio, n-shad, o, w">";
+            <div, className="mb-4">";
+              <span, className="bg-bl, u, e-100, tex, t-bl, u, e-800, tex, t-sm, p, x-3, p, y-1, rounde, d-fu, l, l">";
+                {it, e, m.catego, r, y}
+              </sp, a, n>
+            </d, i, v>
+            <h3, className="te, x, t-xl, fon, t-bold, m, b-3">{it, e, m.tit, l, e}</h3>";
+            <p, className="te, x, t-gr, a, y-600, m, b-4">{it, e, m.descripti, o, n}</p>";
+            <div, className="flex, justif, y-between, item, s-cent, e, r">";
+              <span, className="te, x, t-sm, tex, t-gr, a, y-5, 0, 0">{it, e, m.readTi, m, e}</sp, a, n>";
+              <a, hre, f="/bl, o, g" classNa, m, e="te, x, t-bl, u, e-600, hove, r: te, x, t-bl, u, e-800, fon, t-semibo, l, d">";
+                Read, Mor, e →
               </a>
-            </div>
-          </div>
+            </d, i, v>
+          </d, i, v>
         ))}
-      </div>
-    </div>
+      </d, i, v>
+    </d, i, v>
   );
 };
-
 export default ContentShowcase;

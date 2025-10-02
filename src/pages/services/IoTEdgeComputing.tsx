@@ -1,749 +1,751 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Network } from 'lucide-react';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
+import React from "react";
+import { Helmet } from "react-helmet-async";
+impo, r, t { Netwo, r, k } fr, o, m "luci, d, e-rea, c, t";
+import, Header, from "../../componen, t, s/Head, e, r";
+import, Footer, from "../../componen, t, s/Foot, e, r";
 =======
-import React from 'react';';
-import {
-Helmet
-} from 'react-helmet-async';';
-import {
-Network
-} from 'lucide-react';';
-import Header from '../../components/Header';';
-import Footer from '../../components/Footer';';
-
-const IoTEdgeComputing: React.FC = () => {,
-  const features = [
+import React from "react";';
+impo, r, t {
+Helm, e, t;
+} fr, o, m "rea, c, t-helm, e, t-asy, n, c";';
+impo, r, t {
+Netwo, r, k;
+} fr, o, m "luci, d, e-rea, c, t";';
+import, Header, from "../../componen, t, s/Head, e, r";';
+import, Footer, from "../../componen, t, s/Foot, e, r";';
+const, IoTEdgeComputin, g: Rea, c, t.FC = () => {
+  const, feature, s = [
     {
-      icon: Cpu,,
-      title: "Edge AI Processing",",
-      description: "Real-time AI inference at the edge with optimized models for low-latency decision making.",",
+      i, c, o
+  n: C, p, u
+      tit, l, e: "Edge, AI, Processing","
+      descripti, o, n: "Re, a, l-time, AI, inference at, the, edge with, optimized, models for, lo, w-latency, decision, making.","
 =======
-      title: "Edge AI Processing",";,
-      description: "Real-time AI inference at the edge with optimized models for low-latency decision making.",";,
-      benefit: "95% latency reduction",
-    },
+      tit, l, e: "Edge, AI, Processing",";
+      descripti, o, n: "Re, a, l-time, AI, inference at, the, edge with, optimized, models for, lo, w-latency, decision, making.",";
+      benef, i, t: "95% latency, reductio, n"
+    }
     {
-      icon: Network,,
-      title: "5G Integration",",
-      description: "Seamless 5G connectivity with edge computing for ultra-low latency applications.",",
+      ic, o, n: Netwo, r, k
+      tit, l, e: "5G, Integratio, n","
+      descripti, o, n: "Seamless, 5G, connectivity with, edge, computing for, ultr, a-low, latency, applications.","
 =======
-      title: "5G Integration",";,
-      description: "Seamless 5G connectivity with edge computing for ultra-low latency applications.",";,
-      benefit: "Sub-millisecond response times",
-    },
+      tit, l, e: "5G, Integratio, n",";
+      descripti, o, n: "Seamless, 5G, connectivity with, edge, computing for, ultr, a-low, latency, applications.",";
+      benef, i, t: "S, u, b-millisecond, response, times"
+    }
     {
-      icon: Shield,,
-      title: "Edge Security",",
-      description: "Advanced security protocols for edge devices with encrypted communication and threat detection.",",
+      ic, o, n: Shie, l, d
+      tit, l, e: "Edge, Securit, y","
+      descripti, o, n: "Advanced, security, protocols for, edge, devices with, encrypted, communication and, threat, detection.","
 =======
-      title: "Edge Security",";,
-      description: "Advanced security protocols for edge devices with encrypted communication and threat detection.",";,
-      benefit: "Zero-trust architecture",
-    },
+      tit, l, e: "Edge, Securit, y",";
+      descripti, o, n: "Advanced, security, protocols for, edge, devices with, encrypted, communication and, threat, detection.",";
+      benef, i, t: "Ze, r, o-trust, architectur, e"
+    }
     {
-      icon: Database,,
-      title: "Data Synchronization",",
-      description: "Intelligent data synchronization between edge devices and cloud with conflict resolution.",",
+      ic, o, n: Databa, s, e
+      tit, l, e: "Data, Synchronizatio, n","
+      descripti, o, n: "Intelligent, data, synchronization between, edge, devices and, cloud, with conflict, resolutio, n.","
 =======
-      title: "Data Synchronization",";,
-      description: "Intelligent data synchronization between edge devices and cloud with conflict resolution.",";,
-      benefit: "99.9% data consistency",
-    },
+      tit, l, e: "Data, Synchronizatio, n",";
+      descripti, o, n: "Intelligent, data, synchronization between, edge, devices and, cloud, with conflict, resolutio, n.",";
+      benef, i, t: "99.9% data, consistenc, y"
+    }
     {
-      icon: Zap,,
-      title: "Real-time Analytics",",
-      description: "Stream processing and analytics at the edge for immediate insights and actions.",",
+      ic, o, n: Z, a, p
+      tit, l, e: "Re, a, l-time, Analytic, s","
+      descripti, o, n: "Stream, processing, and analytics, at, the edge, for, immediate insights, and, actions.","
 =======
-      title: "Real-time Analytics",";,
-      description: "Stream processing and analytics at the edge for immediate insights and actions.",";,
-      benefit: "Real-time decision making",
-    },
+      tit, l, e: "Re, a, l-time, Analytic, s",";
+      descripti, o, n: "Stream, processing, and analytics, at, the edge, for, immediate insights, and, actions.",";
+      benef, i, t: "Re, a, l-time, decision, making"
+    }
     {
-      icon: Globe,,
-      title: "Global Connectivity",",
-      description: "Worldwide IoT device management with regional compliance and data sovereignty.",",
+      ic, o, n: Glo, b, e
+      tit, l, e: "Global, Connectivit, y","
+      descripti, o, n: "Worldwide, IoT, device management, with, regional compliance, and, data sovereign, t, y.","
 =======
-      title: "Global Connectivity",";,
-      description: "Worldwide IoT device management with regional compliance and data sovereignty.",";,
-      benefit: "Global deployment ready",
+      tit, l, e: "Global, Connectivit, y",";
+      descripti, o, n: "Worldwide, IoT, device management, with, regional compliance, and, data sovereign, t, y.",";
+      benef, i, t: "Global, deployment, ready"
     }
   ];
-
-  const pricing = [
+  const, pricin, g = [
     {
-      name: "Development",
-      price: "$5,000",
-      period: "/month",
-      description: "Perfect for IoT projects in development and testing phases",
-      features: [,
-        "Up to 1,000 connected devices",
-        "Basic edge computing capabilities",
-        "Standard data analytics",
-        "Email support",
-        "Monthly device health reports",
-        "Basic security monitoring",
-        "Cloud data storage (100GB)",
-        "Standard integrations (10)"
+      na, m, e: "Developme, n, t"
+      pri, c, e: "$5,0, 0, 0"
+      peri, o, d: "/mon, t, h"
+      descripti, o, n: "Perfect, for, IoT projects, in, development and, testing, phases"
+      featur, e, s: [
+        "Up, to, 1,000, connected, devices"
+        "Basic, edge, computing capabiliti, e, s"
+        "Standard, data, analytics"
+        "Email, suppor, t"
+        "Monthly, device, health repor, t, s"
+        "Basic, security, monitoring"
+        "Cloud, data, storage (100, G, B)"
+        "Standard, integration, s (10)"
       ]
-      popular: false
-    },
+      popul, a, r: fal, s, e;
+    }
     {
-      name: "Production",
-      price: "$15,000",
-      period: "/month",
-      description: "Ideal for production IoT deployments with high device counts",
-      features: [,
-        "Up to 10,000 connected devices",
-        "Advanced edge AI processing",
-        "Real-time analytics & insights",
-        "Priority support",
-        "Weekly performance reports",
-        "Advanced security & threat detection",
-        "Cloud data storage (1TB)",
-        "Advanced integrations (50)",
-        "Custom device protocols",
-        "Edge-to-cloud synchronization",
-        "5G connectivity support"
+      na, m, e: "Producti, o, n"
+      pri, c, e: "$15,0, 0, 0"
+      peri, o, d: "/mon, t, h"
+      descripti, o, n: "Ideal, for, production IoT, deployments, with high, device, counts"
+      featur, e, s: [
+        "Up, to, 10,000, connected, devices"
+        "Advanced, edge, AI processi, n, g"
+        "Re, a, l-time, analytic, s & insigh, t, s"
+        "Priority, suppor, t"
+        "Weekly, performance, reports"
+        "Advanced, securit, y & threat, detectio, n"
+        "Cloud, data, storage (1, T, B)"
+        "Advanced, integration, s (50)"
+        "Custom, device, protocols"
+        "Ed, g, e-to-cloud, synchronizatio, n"
+        "5G, connectivity, support"
       ]
-      popular: true
-    },
+      popul, a, r: tr, u, e;
+    }
     {
-      name: "Enterprise",
-      price: "$45,000",
-      period: "/month",
-      description: "Complete solution for large-scale enterprise IoT deployments",
-      features: [,
-        "Unlimited connected devices",
-        "Premium edge AI with custom models",
-        "Enterprise-grade analytics platform",
-        "Dedicated IoT engineer",
-        "Daily monitoring & optimization",
-        "Full security suite with compliance",
-        "Unlimited cloud data storage",
-        "Unlimited integrations",
-        "Custom protocol development",
-        "Multi-region deployment",
-        "Private 5G network setup",
-        "SLA guarantee",
-        "On-premise edge infrastructure"
+      na, m, e: "Enterpri, s, e"
+      pri, c, e: "$45,0, 0, 0"
+      peri, o, d: "/mon, t, h"
+      descripti, o, n: "Complete, solution, for lar, g, e-scale, enterprise, IoT deploymen, t, s"
+      featur, e, s: [
+        "Unlimited, connected, devices"
+        "Premium, edge, AI with, custom, models"
+        "Enterpri, s, e-grade, analytics, platform"
+        "Dedicated, IoT, engineer"
+        "Daily, monitorin, g & optimizati, o, n"
+        "Full, security, suite with, complianc, e"
+        "Unlimited, cloud, data stora, g, e"
+        "Unlimited, integration, s"
+        "Custom, protocol, development"
+        "Mul, t, i-region, deploymen, t"
+        "Private, 5G, network set, u, p"
+        "SLA, guarante, e"
+        "On-premise, edge, infrastructure"
       ]
-      popular: false
+      popul, a, r: fal, s, e;
 =======
-      name: "Development",";,
-      price: "$5,000",";,
-      period: "/month",";,
-      description: "Perfect for IoT projects in development and testing phases",";,
-      features: [,
-        "Up to 1,000 connected devices",";
-        "Basic edge computing capabilities",";
-        "Standard data analytics",";
-        "Email support",";
-        "Monthly device health reports",";
-        "Basic security monitoring",";
-        "Cloud data storage (100GB)",";
-        "Standard integrations (10)"
-      ],
-      popular: false,
-    },
+      n, a, m
+  e: "Developme, n, t",";
+      pri, c, e: "$5,0, 0, 0",";
+      peri, o, d: "/mon, t, h",";
+      descripti, o, n: "Perfect, for, IoT projects, in, development and, testing, phases",";
+      featur, e, s: [
+        "Up, to, 1,000, connected, devices",";
+        "Basic, edge, computing capabiliti, e, s",";
+        "Standard, data, analytics",";
+        "Email, suppor, t",";
+        "Monthly, device, health repor, t, s",";
+        "Basic, security, monitoring",";
+        "Cloud, data, storage (100, G, B)",";
+        "Standard, integration, s (10)"
+      ]
+      popul, a, r: fal, s, e
+    }
     {
-      name: "Production",";,
-      price: "$15,000",";,
-      period: "/month",";,
-      description: "Ideal for production IoT deployments with high device counts",";,
-      features: [,
-        "Up to 10,000 connected devices",";
-        "Advanced edge AI processing",";
-        "Real-time analytics & insights",";
-        "Priority support",";
-        "Weekly performance reports",";
-        "Advanced security & threat detection",";
-        "Cloud data storage (1TB)",";
-        "Advanced integrations (50)",";
-        "Custom device protocols",";
-        "Edge-to-cloud synchronization",";
-        "5G connectivity support"
-      ],
-      popular: true,
-    },
+      na, m, e: "Producti, o, n",";
+      pri, c, e: "$15,0, 0, 0",";
+      peri, o, d: "/mon, t, h",";
+      descripti, o, n: "Ideal, for, production IoT, deployments, with high, device, counts",";
+      featur, e, s: [
+        "Up, to, 10,000, connected, devices",";
+        "Advanced, edge, AI processi, n, g",";
+        "Re, a, l-time, analytic, s & insigh, t, s",";
+        "Priority, suppor, t",";
+        "Weekly, performance, reports",";
+        "Advanced, securit, y & threat, detectio, n",";
+        "Cloud, data, storage (1, T, B)",";
+        "Advanced, integration, s (50)",";
+        "Custom, device, protocols",";
+        "Ed, g, e-to-cloud, synchronizatio, n",";
+        "5G, connectivity, support"
+      ]
+      popul, a, r: tr, u, e
+    }
     {
-      name: "Enterprise",";,
-      price: "$45,000",";,
-      period: "/month",";,
-      description: "Complete solution for large-scale enterprise IoT deployments",";,
-      features: [,
-        "Unlimited connected devices",";
-        "Premium edge AI with custom models",";
-        "Enterprise-grade analytics platform",";
-        "Dedicated IoT engineer",";
-        "Daily monitoring & optimization",";
-        "Full security suite with compliance",";
-        "Unlimited cloud data storage",";
-        "Unlimited integrations",";
-        "Custom protocol development",";
-        "Multi-region deployment",";
-        "Private 5G network setup",";
-        "SLA guarantee",";
-        "On-premise edge infrastructure"
-      ],
-      popular: false,
+      na, m, e: "Enterpri, s, e",";
+      pri, c, e: "$45,0, 0, 0",";
+      peri, o, d: "/mon, t, h",";
+      descripti, o, n: "Complete, solution, for lar, g, e-scale, enterprise, IoT deploymen, t, s",";
+      featur, e, s: [
+        "Unlimited, connected, devices",";
+        "Premium, edge, AI with, custom, models",";
+        "Enterpri, s, e-grade, analytics, platform",";
+        "Dedicated, IoT, engineer",";
+        "Daily, monitorin, g & optimizati, o, n",";
+        "Full, security, suite with, complianc, e",";
+        "Unlimited, cloud, data stora, g, e",";
+        "Unlimited, integration, s",";
+        "Custom, protocol, development",";
+        "Mul, t, i-region, deploymen, t",";
+        "Private, 5G, network set, u, p",";
+        "SLA, guarante, e",";
+        "On-premise, edge, infrastructure"
+      ]
+      popul, a, r: fal, s, e
     }
   ];
-
-  const testimonials = [
+  const, testimonial, s = [
     {
-      name: "Robert Kim",",
-      role: "CTO, Smart Manufacturing Corp",",
-      content: "Zion's IoT edge computing solution reduced our production line latency by 98%. Real-time quality control now catches defects instantly, saving us $2M annually.",",
+      na, m, e: "Robert, Ki, m","
+      ro, l, e: "C, T, O, Smart, Manufacturing, Corp","
+      conte, n, t: "Zi, o, n's, IoT, edge computing, solution, reduced our, production, line latency, by, 98%. Re, a, l-time, quality, control now, catches, defects instant, l, y, saving, u, s $2M, annuall, y.","
 =======
-      name: "Robert Kim",";,
-      role: "CTO, Smart Manufacturing Corp",";,
-      content: "Zion's IoT edge computing solution reduced our production line latency by 98%. Real-time quality control now catches defects instantly, saving us $2M annually.",";,
-      rating: 5,,
-      company: "Smart Manufacturing Corp",
-    },
+      na, m, e: "Robert, Ki, m",";
+      ro, l, e: "C, T, O, Smart, Manufacturing, Corp",";
+      conte, n, t: "Zi, o, n's, IoT, edge computing, solution, reduced our, production, line latency, by, 98%. Re, a, l-time, quality, control now, catches, defects instant, l, y, saving, u, s $2M, annuall, y.",";
+      rati, n, g: 5
+      compa, n, y: "Smart, Manufacturing, Corp"
+    }
     {
-      name: "Sarah Williams",",
-      role: "VP Technology, Smart City Initiative",",
-      content: "The edge AI processing for traffic management reduced congestion by 35% and emergency response times by 50%. The system pays for itself every quarter.",",
+      na, m, e: "Sarah, William, s","
+      ro, l, e: "VP, Technolog, y, Smart, City, Initiative","
+      conte, n, t: "The, edge, AI processing, for, traffic management, reduced, congestion by, 3, 5% and, emergency, response times, by, 50%. The, system, pays for, itself, every quart, e, r.","
 =======
-      name: "Sarah Williams",";,
-      role: "VP Technology, Smart City Initiative",";,
-      content: "The edge AI processing for traffic management reduced congestion by 35% and emergency response times by 50%. The system pays for itself every quarter.",";,
-      rating: 5,,
-      company: "Smart City Initiative",
-    },
+      na, m, e: "Sarah, William, s",";
+      ro, l, e: "VP, Technolog, y, Smart, City, Initiative",";
+      conte, n, t: "The, edge, AI processing, for, traffic management, reduced, congestion by, 3, 5% and, emergency, response times, by, 50%. The, system, pays for, itself, every quart, e, r.",";
+      rati, n, g: 5
+      compa, n, y: "Smart, City, Initiative"
+    }
     {
-      name: "Dr. Michael Chen",",
-      role: "Head of R&D, Healthcare IoT",",
-      content: "Patient monitoring with edge computing ensures real-time alerts reach medical staff instantly. We've prevented 15 critical incidents this year alone.",",
+      na, m, e: "Dr. Michael, Che, n","
+      ro, l, e: "Head, of, R&D, Healthcare, Io, T","
+      conte, n, t: "Patient, monitoring, with edge, computing, ensures re, a, l-time, alerts, reach medical, staff, instantly. We've, prevented, 15 critical, incidents, this year, alon, e.","
 =======
-      name: "Dr. Michael Chen",";,
-      role: "Head of R&D, Healthcare IoT",";,
-      content: "Patient monitoring with edge computing ensures real-time alerts reach medical staff instantly. We've prevented 15 critical incidents this year alone.",";,
-      rating: 5,,
-      company: "Healthcare IoT",
+      na, m, e: "Dr. Michael, Che, n",";
+      ro, l, e: "Head, of, R&D, Healthcare, Io, T",";
+      conte, n, t: "Patient, monitoring, with edge, computing, ensures re, a, l-time, alerts, reach medical, staff, instantly. We've, prevented, 15 critical, incidents, this year, alon, e.",";
+      rati, n, g: 5
+      compa, n, y: "Healthcare, Io, T"
     }
   ];
-
-  const useCases = [
+  const, useCase, s = [
     {
-      title: "Smart Manufacturing",",
-      icon: Cpu,,
-      description: "Real-time quality control, predictive maintenance, and automated optimization on production lines.",",
-      metrics: "98% defect detection accuracy",",
-      benefits: ["Predictive maintenance", "Quality control automation", "Energy optimization"]",
-    },
+      tit, l, e: "Smart, Manufacturin, g","
+      ic, o, n: C, p, u
+      descripti, o, n: "Re, a, l-time, quality, control, predictive, maintenanc, e, and, automated, optimization on, production, lines.","
+      metri, c, s: "98% defect, detection, accuracy","
+      benefi, t, s: ["Predictive, maintenanc, e", "Quality, control, automation", "Energy, optimizatio, n"]"
+    }
     {
-      title: "Smart Cities",",
-      icon: Globe,,
-      description: "Traffic management, environmental monitoring, and public safety systems with real-time response.",",
-      metrics: "35% traffic reduction",",
-      benefits: ["Traffic optimization", "Environmental monitoring", "Public safety alerts"]",
-    },
+      tit, l, e: "Smart, Citie, s","
+      ic, o, n: Glo, b, e
+      descripti, o, n: "Traffic, managemen, t, environmental, monitorin, g, and, public, safety systems, with, real-time, respons, e.","
+      metri, c, s: "35% traffic, reductio, n","
+      benefi, t, s: ["Traffic, optimizatio, n", "Environmental, monitorin, g", "Public, safety, alerts"]"
+    }
     {
-      title: "Healthcare IoT",",
-      icon: Monitor,,
-      description: "Patient monitoring, medical device integration, and emergency response systems.",",
-      metrics: "50% faster emergency response",",
-      benefits: ["Real-time patient monitoring", "Medical device integration", "Emergency automation"]",
-    },
+      tit, l, e: "Healthcare, Io, T","
+      ic, o, n: Monit, o, r
+      descripti, o, n: "Patient, monitorin, g, medical, device, integration, and, emergency, response syste, m, s.","
+      metri, c, s: "50% faster, emergency, response","
+      benefi, t, s: ["Re, a, l-time, patient, monitoring", "Medical, device, integration", "Emergency, automatio, n"]"
+    }
     {
-      title: "Retail Analytics",",
-      icon: BarChart3,,
-      description: "Customer behavior analysis, inventory management, and personalized experiences.",",
-      metrics: "60% inventory efficiency gain",",
-      benefits: ["Customer analytics", "Inventory optimization", "Personalized experiences"]",
+      tit, l, e: "Retail, Analytic, s","
+      ic, o, n: BarChar, t, 3
+      descripti, o, n: "Customer, behavior, analysis, inventory, managemen, t, and, personalized, experiences.","
+      metri, c, s: "60% inventory, efficiency, gain","
+      benefi, t, s: ["Customer, analytic, s", "Inventory, optimizatio, n", "Personalized, experience, s"]"
 =======
-      title: "Smart Manufacturing",";,
-      icon: Cpu,,
-      description: "Real-time quality control, predictive maintenance, and automated optimization on production lines.",";,
-      metrics: "98% defect detection accuracy",";,
-      benefits: ["Predictive maintenance", "Quality control automation", "Energy optimization"]";,
-    },
+      tit, l, e: "Smart, Manufacturin, g",";
+      ic, o, n: C, p, u
+      descripti, o, n: "Re, a, l-time, quality, control, predictive, maintenanc, e, and, automated, optimization on, production, lines.",";
+      metri, c, s: "98% defect, detection, accuracy",";
+      benefi, t, s: ["Predictive, maintenanc, e", "Quality, control, automation", "Energy, optimizatio, n"]";
+    }
     {
-      title: "Smart Cities",";,
-      icon: Globe,,
-      description: "Traffic management, environmental monitoring, and public safety systems with real-time response.",";,
-      metrics: "35% traffic reduction",";,
-      benefits: ["Traffic optimization", "Environmental monitoring", "Public safety alerts"]";,
-    },
+      tit, l, e: "Smart, Citie, s",";
+      ic, o, n: Glo, b, e
+      descripti, o, n: "Traffic, managemen, t, environmental, monitorin, g, and, public, safety systems, with, real-time, respons, e.",";
+      metri, c, s: "35% traffic, reductio, n",";
+      benefi, t, s: ["Traffic, optimizatio, n", "Environmental, monitorin, g", "Public, safety, alerts"]";
+    }
     {
-      title: "Healthcare IoT",";,
-      icon: Monitor,,
-      description: "Patient monitoring, medical device integration, and emergency response systems.",";,
-      metrics: "50% faster emergency response",";,
-      benefits: ["Real-time patient monitoring", "Medical device integration", "Emergency automation"]";,
-    },
+      tit, l, e: "Healthcare, Io, T",";
+      ic, o, n: Monit, o, r
+      descripti, o, n: "Patient, monitorin, g, medical, device, integration, and, emergency, response syste, m, s.",";
+      metri, c, s: "50% faster, emergency, response",";
+      benefi, t, s: ["Re, a, l-time, patient, monitoring", "Medical, device, integration", "Emergency, automatio, n"]";
+    }
     {
-      title: "Retail Analytics",";,
-      icon: BarChart3,,
-      description: "Customer behavior analysis, inventory management, and personalized experiences.",";,
-      metrics: "60% inventory efficiency gain",";,
-      benefits: ["Customer analytics", "Inventory optimization", "Personalized experiences"]";,
+      tit, l, e: "Retail, Analytic, s",";
+      ic, o, n: BarChar, t, 3
+      descripti, o, n: "Customer, behavior, analysis, inventory, managemen, t, and, personalized, experiences.",";
+      metri, c, s: "60% inventory, efficiency, gain",";
+      benefi, t, s: ["Customer, analytic, s", "Inventory, optimizatio, n", "Personalized, experience, s"]";
     }
   ];
-
-  const industries = [
-    { name: "Manufacturing", devices: "Industrial sensors, PLCs, robotics" }
-    { name: "Healthcare", devices: "Patient monitors, medical devices, wearables" }
-    { name: "Retail", devices: "POS systems, inventory sensors, customer analytics" }
-    { name: "Transportation", devices: "Fleet tracking, traffic sensors, autonomous vehicles" }
-    { name: "Energy", devices: "Smart meters, grid sensors, renewable energy" }
-    { name: "Agriculture", devices: "Soil sensors, weather stations, irrigation systems" }
+  const, industrie, s = [
+    { na, m, e: "Manufacturi, n, g", devic, e, s: "Industrial, sensor, s, PL, C, s, roboti, c, s" }
+    { na, m, e: "Healthca, r, e", devic, e, s: "Patient, monitor, s, medical, device, s, wearabl, e, s" }
+    { na, m, e: "Reta, i, l", devic, e, s: "POS, system, s, inventory, sensor, s, customer, analytic, s" }
+    { na, m, e: "Transportati, o, n", devic, e, s: "Fleet, trackin, g, traffic, sensor, s, autonomous, vehicle, s" }
+    { na, m, e: "Ener, g, y", devic, e, s: "Smart, meter, s, grid, sensor, s, renewable, energ, y" }
+    { na, m, e: "Agricultu, r, e", devic, e, s: "Soil, sensor, s, weather, station, s, irrigation, system, s" }
 =======
-    { name: "Manufacturing", devices: "Industrial sensors, PLCs, robotics" },";
-    { name: "Healthcare", devices: "Patient monitors, medical devices, wearables" },";
-    { name: "Retail", devices: "POS systems, inventory sensors, customer analytics" },";
-    { name: "Transportation", devices: "Fleet tracking, traffic sensors, autonomous vehicles" },";
-    { name: "Energy", devices: "Smart meters, grid sensors, renewable energy" },";
-    { name: "Agriculture", devices: "Soil sensors, weather stations, irrigation systems" }";
+    { na, m, e: "Manufacturi, n, g", devic, e, s: "Industrial, sensor, s, PL, C, s, roboti, c, s" },";
+    { na, m, e: "Healthca, r, e", devic, e, s: "Patient, monitor, s, medical, device, s, wearabl, e, s" },";
+    { na, m, e: "Reta, i, l", devic, e, s: "POS, system, s, inventory, sensor, s, customer, analytic, s" },";
+    { na, m, e: "Transportati, o, n", devic, e, s: "Fleet, trackin, g, traffic, sensor, s, autonomous, vehicle, s" },";
+    { na, m, e: "Ener, g, y", devic, e, s: "Smart, meter, s, grid, sensor, s, renewable, energ, y" },";
+    { na, m, e: "Agricultu, r, e", devic, e, s: "Soil, sensor, s, weather, station, s, irrigation, system, s" }";
   ];
-
   return (
     <>
       <Helmet>
-        <title>IoT & Edge Computing - Zion Tech Group | Smart Connected Solutions</title>
-        <meta
-          name="description"
-          content="Advanced IoT and edge computing solutions with real-time AI processing, 5G integration, and global connectivity. 95% latency reduction, enterprise security." /><meta name="keywords" content="IoT solutions, edge computing, smart devices, connected systems, real-time analytics, 5G IoT, industrial IoT" /><link rel="canonical" href="https://ziontechgroup.com/services/iot-edge-computing/>",
+        <title>I, o, T & Edge, Computin, g - Zion, Tech, Group | Smart, Connected, Solutions</title>
+        <me, t, a
+  na, m, e="descripti, o, n"
+          content="Advanced, IoT, and edge, computing, solutions with, rea, l-time, AI, processing, 5G, integratio, n, and, global, connectivity. 95% latency, reductio, n, enterprise, securit, y." /><meta name="keywor, d, s" content="IoT, solution, s, edge, computin, g, smart, device, s, connected, system, s, re, a, l-time, analytic, s, 5G, Io, T, industrial, Io, T" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/i, o, t-ed, g, e-computi, n, g/>"
 =======
-          content="Advanced IoT and edge computing solutions with real-time AI processing, 5G integration, and global connectivity. 95% latency reduction, enterprise security."
-        />
-        <meta name="keywords" content="IoT solutions, edge computing, smart devices, connected systems, real-time analytics, 5G IoT, industrial IoT" />";
-        <link rel="canonical" href="https: //ziontechgroup.com/services/iot-edge-computing" />";,
+          content="Advanced, IoT, and edge, computing, solutions with, rea, l-time, AI, processing, 5G, integratio, n, and, global, connectivity. 95% latency, reductio, n, enterprise, securit, y."
+         />
+        <meta name="keywor, d, s" content="IoT, solution, s, edge, computin, g, smart, device, s, connected, system, s, re, a, l-time, analytic, s, 5G, Io, T, industrial, Io, T" />";
+        <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/servic, e, s/i, o, t-ed, g, e-computi, n, g" />";
       </Helmet>
-
-      <Header />
-      
-      <main className="min-h-screen bg-white">";
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-orange-900 via-orange-800 to-red-900 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className="text-center">
-              <h1 className="text-5xl md: text-7xl font-bold mb-6">",
-                IoT & <span className="bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">Edge Computing</span>
+      <Head, e, r   />
+      <main, className="m, i, n-h-screen, b, g-whi, t, e">";
+        {/* Hero, Sectio, n */}
+        <section, className="bg-gradie, n, t-to-br, fro, m-oran, g, e-900, vi, a-oran, g, e-800, t, o-r, e, d-900, tex, t-white, p, y-20">
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8">"
+            <div, className="te, x, t-cent, e, r">
+              <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">"
+                I, o, T & <span, className="bg-gradie, n, t-to-r, fro, m-oran, g, e-400, t, o-r, e, d-400, b, g-cl, i, p-text, tex, t-transpare, n, t">Edge, Computin, g</sp, a, n>
               </h1>
-              <p className="text-xl md:text-2xl text-orange-100 max-w-4xl mx-auto mb-8">
-                Advanced IoT and edge computing solutions with real-time AI processing
-                5G integration, and global connectivity for smart connected systems.
+              <p, className="te, x, t-xl, m, d:te, x, t-2xl, tex, t-oran, g, e-100, ma, x-w-4xl, m, x-auto, m, b-8">
+                Advanced, IoT, and edge, computing, solutions with, rea, l-time, AI, processing
+  5G, integratio, n, and, global, connectivity for, smart, connected syste, m, s.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+              <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
 =======
-        <section className="bg-gradient-to-br from-orange-900 via-orange-800 to-red-900 text-white py-20">";
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
-            <div className="text-center">";
-              <h1 className="text-5xl md: text-7xl font-bold mb-6">";,
-                IoT & <span className="bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">Edge Computing</span>";
+        <section, className="bg-gradie, n, t-to-br, fro, m-oran, g, e-900, vi, a-oran, g, e-800, t, o-r, e, d-900, tex, t-white, p, y-20">";
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
+            <div, className="te, x, t-cent, e, r">";
+              <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">";
+                I, o, T & <span, className="bg-gradie, n, t-to-r, fro, m-oran, g, e-400, t, o-r, e, d-400, b, g-cl, i, p-text, tex, t-transpare, n, t">Edge, Computin, g</sp, a, n>";
               </h1>
-              <p className="text-xl md: text-2xl text-orange-100 max-w-4xl mx-auto mb-8">";,
-                Advanced IoT and edge computing solutions with real-time AI processing, 
-                5G integration, and global connectivity for smart connected systems.
+              <p, className="te, x, t-x, l, m
+  d: te, x, t-2xl, tex, t-oran, g, e-100, ma, x-w-4xl, m, x-auto, m, b-8">";
+                Advanced, IoT, and edge, computing, solutions with, rea, l-time, AI, processing
+                5G, integratio, n, and, global, connectivity for, smart, connected syste, m, s.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
+              <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
                 <a
-                  href="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-orange-600 hover: bg-orange-700 text-white font-semibold rounded-lg transition-colors",
+  hr, e, f="/conta, c, t"
+                  classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, b, g-oran, g, e-600, hov, e
+  r: bg-oran, g, e-700, tex, t-white, fon, t-semibold, rounde, d-lg, transitio, n-colo, r, s"
                 >
-                  <Phone className="w-5 h-5 mr-2/>
+                  <Phone, className="w-5 h-5, m, r-2  />
 =======
-                  <Phone className="w-5 h-5 mr-2" />";
-                  Schedule Demo
+                  <Phone, className="w-5 h-5, m, r-2" />";
+                  Schedule, Dem, o;
                 </a>
                 <a
-                  href="#pricing"
-                  className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover: bg-white hover:text-orange-900 font-semibold rounded-lg transition-colors",
+  hr, e, f="#prici, n, g"
+                  classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, borde, r-2, borde, r-white, tex, t-white, hove, r: bg-white, hov, e
+  r:te, x, t-oran, g, e-900, fon, t-semibold, rounde, d-lg, transitio, n-colo, r, s"
                 >
-                  View Pricing
-                  <ArrowRight className="w-5 h-5 ml-2/>
+                  View, Pricin, g;
+                  <ArrowRight, className="w-5 h-5, m, l-2  />
 =======
-                  <ArrowRight className="w-5 h-5 ml-2" />";
+                  <ArrowRight, className="w-5 h-5, m, l-2" />";
                 </a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Key Benefits */}
-        <section className="py-16 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              </d, i, v>
+            </d, i, v>
+          </d, i, v>
+        </secti, o, n>
+        {/* Key, Benefit, s */}
+        <section, className="py-16, b, g-gr, a, y-50">
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8">"
+            <div, className="text-center mb-12">
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
 =======
-        <section className="py-16 bg-gray-50">";
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
-            <div className="text-center mb-12">";
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">";
-                Why Choose Our IoT & Edge Computing Solutions?
+        <section, className="py-16, b, g-gr, a, y-50">";
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
+            <div, className="text-center mb-12">";
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
+                Why, Choose, Our I, o, T & Edge, Computing, Solutions?
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
-                Transform your operations with intelligent edge computing and seamless IoT connectivity.
+              <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
+                Transform, your, operations with, intelligent, edge computing, and, seamless IoT, connectivit, y.
               </p>
-            </div>
-
-            <div className="grid md: grid-cols-4 gap-8">",
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-4">
-                  <Zap className="w-8 h-8 text-orange-600/>
+            </d, i, v>
+            <div, className="gri, d, m
+  d: gr, i, d-co, l, s-4, ga, p-8">"
+              <div, className="te, x, t-cent, e, r">
+                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-oran, g, e-100, rounde, d-full, m, b-4">
+                  <Zap, className="w-8 h-8, tex, t-oran, g, e-6, 0, 0  />
 =======
-            <div className="grid md: grid-cols-4 gap-8">";,
-              <div className="text-center">";
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-4">";
-                  <Zap className="w-8 h-8 text-orange-600" />";
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">95% Latency Reduction</h3>";
-                <p className="text-gray-600">Real-time edge processing</p>";
-              </div>
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
-                  <Network className="w-8 h-8 text-blue-600/>
+            <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-8">";
+              <div, className="te, x, t-cent, e, r">";
+                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-oran, g, e-100, rounde, d-full, m, b-4">";
+                  <Zap, className="w-8 h-8, tex, t-oran, g, e-6, 0, 0" />";
+                </d, i, v>
+                <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">95% Latency, Reductio, n</h3>";
+                <p, className="te, x, t-gr, a, y-6, 0, 0">Re, a, l-time, edge, processing</p>";
+              </d, i, v>
+              <div, className="te, x, t-cent, e, r">
+                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-bl, u, e-100, rounde, d-full, m, b-4">
+                  <Network, className="w-8 h-8, tex, t-bl, u, e-6, 0, 0  />
 =======
-              <div className="text-center">";
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">";
-                  <Network className="w-8 h-8 text-blue-600" />";
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">5G Integration</h3>";
-                <p className="text-gray-600">Ultra-low latency connectivity</p>";
-              </div>
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
-                  <Shield className="w-8 h-8 text-green-600/>
+              <div, className="te, x, t-cent, e, r">";
+                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-bl, u, e-100, rounde, d-full, m, b-4">";
+                  <Network, className="w-8 h-8, tex, t-bl, u, e-6, 0, 0" />";
+                </d, i, v>
+                <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">5G, Integratio, n</h3>";
+                <p, className="te, x, t-gr, a, y-6, 0, 0">Ult, r, a-low, latency, connectivity</p>";
+              </d, i, v>
+              <div, className="te, x, t-cent, e, r">
+                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-4">
+                  <Shield, className="w-8 h-8, tex, t-gre, e, n-6, 0, 0  />
 =======
-              <div className="text-center">";
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">";
-                  <Shield className="w-8 h-8 text-green-600" />";
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Zero-Trust Security</h3>";
-                <p className="text-gray-600">Enterprise-grade protection</p>";
-              </div>
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">
-                  <Globe className="w-8 h-8 text-purple-600/>
+              <div, className="te, x, t-cent, e, r">";
+                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-4">";
+                  <Shield, className="w-8 h-8, tex, t-gre, e, n-6, 0, 0" />";
+                </d, i, v>
+                <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">Ze, r, o-Trust, Securit, y</h3>";
+                <p, className="te, x, t-gr, a, y-6, 0, 0">Enterpri, s, e-grade, protectio, n</p>";
+              </d, i, v>
+              <div, className="te, x, t-cent, e, r">
+                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-purp, l, e-100, rounde, d-full, m, b-4">
+                  <Globe, className="w-8 h-8, tex, t-purp, l, e-6, 0, 0  />
 =======
-              <div className="text-center">";
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">";
-                  <Globe className="w-8 h-8 text-purple-600" />";
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Global Scale</h3>";
-                <p className="text-gray-600">Worldwide deployment ready</p>";
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Use Cases */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              <div, className="te, x, t-cent, e, r">";
+                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-purp, l, e-100, rounde, d-full, m, b-4">";
+                  <Globe, className="w-8 h-8, tex, t-purp, l, e-6, 0, 0" />";
+                </d, i, v>
+                <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">Global, Scal, e</h3>";
+                <p, className="te, x, t-gr, a, y-6, 0, 0">Worldwide, deployment, ready</p>";
+              </d, i, v>
+            </d, i, v>
+          </d, i, v>
+        </secti, o, n>
+        {/* Use, Case, s */}
+        <section, className="py-20">
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8">"
+            <div, className="te, x, t-center, m, b-16">
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
 =======
-        <section className="py-20">";
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
-            <div className="text-center mb-16">";
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">";
-                Industry-Leading Use Cases
+        <section, className="py-20">";
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
+            <div, className="te, x, t-center, m, b-16">";
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
+                Indust, r, y-Leading, Use, Cases;
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
-                See how our IoT and edge computing solutions transform different industries.
+              <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
+                See, how, our IoT, and, edge computing, solutions, transform different, industrie, s.
               </p>
-            </div>
-
-            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">",
-              {useCases.map((useCase, index) => {
-                const Icon = useCase.icon;
+            </d, i, v>
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+  g:gr, i, d-co, l, s-4, ga, p-8">"
+              {useCas, e, s.m, a, p((useCa, s, e, ind, e, x) => {
+                const, Ico, n = useCa, s, e.ic, o, n;
                 return (
-                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-6">
-                      <Icon className="w-8 h-8 text-orange-600/>
+                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
+                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-oran, g, e-100, rounde, d-full, m, b-6">
+                      <Icon, className="w-8 h-8, tex, t-oran, g, e-6, 0, 0  />
 =======
-            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">";,
-              {useCases.map((useCase, index) => {
-                const Icon = useCase.icon;
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+  g:gr, i, d-co, l, s-4, ga, p-8">";
+              {useCas, e, s.m, a, p((useCa, s, e, ind, e, x) => {
+                const, Ico, n = useCa, s, e.ic, o, n;
                 return (
-                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">";,
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-6">";
-                      <Icon className="w-8 h-8 text-orange-600" />";
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-4">{useCase.title}</h3>";
-                    <p className="text-gray-600 mb-4">{useCase.description}</p>";
-                    <div className="text-orange-600 font-semibold mb-4">{useCase.metrics}</div>";
-                    <ul className="space-y-2">";
-                      {useCase.benefits.map((benefit, benefitIndex) => (
-                        <li key={benefitIndex} className="flex items-center text-sm">
-                          <CheckCircle className="w-4 h-4 text-orange-500 mr-2 flex-shrink-0/>
-                          <span className="text-gray-700">{benefit}</span>
+                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";
+                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-oran, g, e-100, rounde, d-full, m, b-6">";
+                      <Icon, className="w-8 h-8, tex, t-oran, g, e-6, 0, 0" />";
+                    </d, i, v>
+                    <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">{useCa, s, e.tit, l, e}</h3>";
+                    <p, className="te, x, t-gr, a, y-600, m, b-4">{useCa, s, e.descripti, o, n}</p>";
+                    <div, className="te, x, t-oran, g, e-600, fon, t-semibold, m, b-4">{useCa, s, e.metri, c, s}</d, i, v>";
+                    <ul, className="spa, c, e-y-2">";
+                      {useCa, s, e.benefi, t, s.m, a, p((benef, i, t, benefitInd, e, x) => (
+                        <li, ke, y={benefitInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm">
+                          <CheckCircle, className="w-4 h-4, tex, t-oran, g, e-500, m, r-2, fle, x-shri, n, k-0  />
+                          <span, className="te, x, t-gr, a, y-7, 0, 0">{benef, i, t}</sp, a, n>
 =======
-                        <li key={benefitIndex} className="flex items-center text-sm">";
-                          <CheckCircle className="w-4 h-4 text-orange-500 mr-2 flex-shrink-0" />";
-                          <span className="text-gray-700">{benefit}</span>";
+                        <li, ke, y={benefitInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm">";
+                          <CheckCircle, className="w-4 h-4, tex, t-oran, g, e-500, m, r-2, fle, x-shri, n, k-0" />";
+                          <span, className="te, x, t-gr, a, y-7, 0, 0">{benef, i, t}</sp, a, n>";
                         </li>
                       ))}
                     </ul>
-                  </div>
+                  </d, i, v>
                 );
               })}
-            </div>
-          </div>
-        </section>
-
-        {/* Features */}
-        <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            </d, i, v>
+          </d, i, v>
+        </secti, o, n>
+        {/* Featur, e, s */}
+        <section, className="py-20, b, g-gr, a, y-50">
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8">"
+            <div, className="te, x, t-center, m, b-16">
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
 =======
-        <section className="py-20 bg-gray-50">";
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
-            <div className="text-center mb-16">";
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">";
-                Advanced Edge Computing Capabilities
+        <section, className="py-20, b, g-gr, a, y-50">";
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
+            <div, className="te, x, t-center, m, b-16">";
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
+                Advanced, Edge, Computing Capabiliti, e, s;
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
-                Powerful features that make your IoT infrastructure truly intelligent and responsive.
+              <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
+                Powerful, features, that make, your, IoT infrastructure, truly, intelligent and, responsiv, e.
               </p>
-            </div>
-
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
-              {features.map((feature, index) => {
-                const Icon = feature.icon;
+            </d, i, v>
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+  g:gr, i, d-co, l, s-3, ga, p-8">"
+              {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
+                const, Ico, n = featu, r, e.ic, o, n;
                 return (
-                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",
-                    <div className="inline-flex items-center justify-center w-12 h-12 bg-orange-100 rounded-lg mb-4">
-                      <Icon className="w-6 h-6 text-orange-600/>
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
-                    <p className="text-gray-600 mb-4">{feature.description}</p>
-                    <div className="inline-flex items-center text-orange-600 font-semibold text-sm">
-                      <CheckCircle className="w-4 h-4 mr-1/>
+                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
+                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-oran, g, e-100, rounde, d-lg, m, b-4">
+                      <Icon, className="w-6 h-6, tex, t-oran, g, e-6, 0, 0  />
+                    </d, i, v>
+                    <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}</h3>
+                    <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>
+                    <div, className="inli, n, e-flex, item, s-center, tex, t-oran, g, e-600, fon, t-semibold, tex, t-sm">
+                      <CheckCircle, className="w-4 h-4, m, r-1  />
 =======
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">";,
-              {features.map((feature, index) => {
-                const Icon = feature.icon;
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+  g:gr, i, d-co, l, s-3, ga, p-8">";
+              {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
+                const, Ico, n = featu, r, e.ic, o, n;
                 return (
-                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">";,
-                    <div className="inline-flex items-center justify-center w-12 h-12 bg-orange-100 rounded-lg mb-4">";
-                      <Icon className="w-6 h-6 text-orange-600" />";
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>";
-                    <p className="text-gray-600 mb-4">{feature.description}</p>";
-                    <div className="inline-flex items-center text-orange-600 font-semibold text-sm">";
-                      <CheckCircle className="w-4 h-4 mr-1" />";
-                      {feature.benefit}
-                    </div>
-                  </div>
+                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";
+                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-oran, g, e-100, rounde, d-lg, m, b-4">";
+                      <Icon, className="w-6 h-6, tex, t-oran, g, e-6, 0, 0" />";
+                    </d, i, v>
+                    <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}</h3>";
+                    <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>";
+                    <div, className="inli, n, e-flex, item, s-center, tex, t-oran, g, e-600, fon, t-semibold, tex, t-sm">";
+                      <CheckCircle, className="w-4 h-4, m, r-1" />";
+                      {featu, r, e.benef, i, t}
+                    </d, i, v>
+                  </d, i, v>
                 );
               })}
-            </div>
-          </div>
-        </section>
-
-        {/* Industries */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            </d, i, v>
+          </d, i, v>
+        </secti, o, n>
+        {/* Industri, e, s */}
+        <section, className="py-20">
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8">"
+            <div, className="te, x, t-center, m, b-16">
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
 =======
-        <section className="py-20">";
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
-            <div className="text-center mb-16">";
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">";
-                Industries We Serve
+        <section, className="py-20">";
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
+            <div, className="te, x, t-center, m, b-16">";
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
+                Industries, We, Serve;
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
-                Comprehensive IoT solutions across diverse industries with specialized device support.
+              <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
+                Comprehensive, IoT, solutions across, diverse, industries with, specialized, device suppo, r, t.
               </p>
-            </div>
-
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
-              {industries.map((industry, index) => (
-                <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">{industry.name}</h3>
-                  <div className="text-gray-600">
-                    <p className="font-semibold mb-2">Supported Devices: </p>",
-                    <p className="text-sm">{industry.devices}</p>
+            </d, i, v>
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+  g:gr, i, d-co, l, s-3, ga, p-8">"
+              {industri, e, s.m, a, p((indust, r, y, ind, e, x) => (
+                <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">
+                  <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">{indust, r, y.na, m, e}</h3>
+                  <div, className="te, x, t-gr, a, y-6, 0, 0">
+                    <p, className="fo, n, t-semibold, m, b-2">Supported, Device, s: </p>"
+                    <p, className="te, x, t-sm">{indust, r, y.devic, e, s}</p>
 =======
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">";,
-              {industries.map((industry, index) => (
-                <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">";
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">{industry.name}</h3>";
-                  <div className="text-gray-600">";
-                    <p className="font-semibold mb-2">Supported Devices: </p>";,
-                    <p className="text-sm">{industry.devices}</p>";
-                  </div>
-                </div>
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+  g:gr, i, d-co, l, s-3, ga, p-8">";
+              {industri, e, s.m, a, p((indust, r, y, ind, e, x) => (
+                <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";
+                  <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">{indust, r, y.na, m, e}</h3>";
+                  <div, className="te, x, t-gr, a, y-6, 0, 0">";
+                    <p, className="fo, n, t-semibold, m, b-2">Supported, Device, s: </p>";
+                    <p, className="te, x, t-sm">{indust, r, y.devic, e, s}</p>";
+                  </d, i, v>
+                </d, i, v>
               ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Pricing */}
-        <section id="pricing" className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            </d, i, v>
+          </d, i, v>
+        </secti, o, n>
+        {/* Prici, n, g */}
+        <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8">"
+            <div, className="te, x, t-center, m, b-16">
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
 =======
-        <section id="pricing" className="py-20 bg-gray-50">";
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
-            <div className="text-center mb-16">";
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">";
-                Scalable Pricing for Every Deployment
+        <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">";
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
+            <div, className="te, x, t-center, m, b-16">";
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
+                Scalable, Pricing, for Every, Deploymen, t;
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
-                Choose the plan that fits your IoT deployment size and complexity.
+              <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
+                Choose, the, plan that, fits, your IoT, deployment, size and, complexit, y.
               </p>
-            </div>
-
-            <div className="grid md: grid-cols-3 gap-8">",
+            </d, i, v>
+            <div, className="gri, d, m
+  d: gr, i, d-co, l, s-3, ga, p-8">"
 =======
-            <div className="grid md: grid-cols-3 gap-8">";,
-              {pricing.map((plan, index) => (
-                <div key={index} className={`bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? 'ring-2 ring-orange-500 relative' : ''}`}>`;
-                  {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">";
-                      <span className="bg-orange-500 text-white px-4 py-1 rounded-full text-sm font-semibold">";
-                        Most Popular
-                      </span>
-                    </div>
+            <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";
+              {prici, n, g.m, a, p((pl, a, n, ind, e, x) => (
+                <div, ke, y={ind, e, x} classNa, m, e={`bg-white, rounde, d-2xl, shado, w-l, g, p-8 ${pl, a, n.popul, a, r ? 'ri, n, g-2, rin, g-oran, g, e-500, relativ, e' : ''}`}>`;`
+                  {pl, a, n.popul, a, r && (
+                    <div, className="absolu, t, e -t, o, p-4, lef, t-1/2, transfor, m -transla, t, e-x-1/2">";
+                      <span, className="bg-oran, g, e-500, tex, t-white, p, x-4, p, y-1, rounde, d-full, tex, t-sm, fon, t-semibo, l, d">";
+                        Most, Popula, r;
+                      </sp, a, n>
+                    </d, i, v>
                   )}
-                  <div className="text-center mb-8">";
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>";
-                    <div className="flex items-center justify-center mb-2">";
-                      <span className="text-4xl font-bold text-gray-900">{plan.price}</span>";
-                      <span className="text-gray-600 ml-1">{plan.period}</span>";
-                    </div>
-                    <p className="text-gray-600">{plan.description}</p>";
-                  </div>
-                  <ul className="space-y-4 mb-8">";
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center">
-                        <CheckCircle className="w-5 h-5 text-orange-500 mr-3 flex-shrink-0/>
-                        <span className="text-gray-700">{feature}</span>
+                  <div, className="te, x, t-center, m, b-8">";
+                    <h3, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">{pl, a, n.na, m, e}</h3>";
+                    <div, className="flex, item, s-center, justif, y-center, m, b-2">";
+                      <span, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0">{pl, a, n.pri, c, e}</sp, a, n>";
+                      <span, className="te, x, t-gr, a, y-600, m, l-1">{pl, a, n.peri, o, d}</sp, a, n>";
+                    </d, i, v>
+                    <p, className="te, x, t-gr, a, y-6, 0, 0">{pl, a, n.descripti, o, n}</p>";
+                  </d, i, v>
+                  <ul, className="spa, c, e-y-4, m, b-8">";
+                    {pl, a, n.featur, e, s.m, a, p((featu, r, e, featureInd, e, x) => (
+                      <li, ke, y={featureInd, e, x} classNa, m, e="flex, item, s-cent, e, r">
+                        <CheckCircle, className="w-5 h-5, tex, t-oran, g, e-500, m, r-3, fle, x-shri, n, k-0  />
+                        <span, className="te, x, t-gr, a, y-7, 0, 0">{featu, r, e}</sp, a, n>
 =======
-                      <li key={featureIndex} className="flex items-center">";
-                        <CheckCircle className="w-5 h-5 text-orange-500 mr-3 flex-shrink-0" />";
-                        <span className="text-gray-700">{feature}</span>";
+                      <li, ke, y={featureInd, e, x} classNa, m, e="flex, item, s-cent, e, r">";
+                        <CheckCircle, className="w-5 h-5, tex, t-oran, g, e-500, m, r-3, fle, x-shri, n, k-0" />";
+                        <span, className="te, x, t-gr, a, y-7, 0, 0">{featu, r, e}</sp, a, n>";
                       </li>
                     ))}
                   </ul>
                   <a
-                    href="/contact"
-                    className={
-`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${`;
-plan.popular
-? 'bg-orange-600 text-white hover:bg-orange-700'
+  hr, e, f="/conta, c, t"
+                    classNa, m, e={
+`w-full, block, text-center, p, y-3, p, x-6, rounde, d-lg, fon, t-semibold, transitio, n-colo, r, s ${`;`
+pl, a, n.popul, a, r;
+? 'bg-oran, g, e-600, tex, t-white, hove, r: bg-oran, g, e-7, 0, 0'
 =======
-? 'bg-orange-600 text-white hover: bg-orange-700',';,
-: 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-}`}`;
+? 'bg-oran, g, e-600, tex, t-white, hov, e
+  r: bg-oran, g, e-7, 0, 0',';
+: 'bg-gr, a, y-100, tex, t-gr, a, y-900, hove, r:bg-gr, a, y-2, 0, 0'
+}`}`;`
                   >
-                    Get Started
+                    Get, Starte, d;
                   </a>
-                </div>
+                </d, i, v>
               ))}
-            </div>
-
-            <div className="text-center mt-12">";
-              <p className="text-gray-600 mb-4">Need a custom IoT solution?</p>";
+            </d, i, v>
+            <div, className="te, x, t-center, m, t-12">";
+              <p, className="te, x, t-gr, a, y-600, m, b-4">Need, a, custom IoT, solutio, n?</p>";
               <a
-                href="/contact"
-                className="inline-flex items-center text-orange-600 hover: text-orange-700 font-semibold",
+  hr, e, f="/conta, c, t"
+                classNa, m, e="inli, n, e-flex, item, s-center, tex, t-oran, g, e-600, hove, r: te, x, t-oran, g, e-700, fon, t-semibo, l, d"
               >
-                Contact our IoT Specialists
-                <ArrowRight className="w-4 h-4 ml-1/>
+                Contact, our, IoT Specialis, t, s;
+                <ArrowRight, className="w-4 h-4, m, l-1  />
 =======
-                <ArrowRight className="w-4 h-4 ml-1" />";
+                <ArrowRight, className="w-4 h-4, m, l-1" />";
               </a>
-            </div>
-          </div>
-        </section>
-
-        {/* Testimonials */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            </d, i, v>
+          </d, i, v>
+        </secti, o, n>
+        {/* Testimonia, l, s */}
+        <section, className="py-20">
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8">"
+            <div, className="te, x, t-center, m, b-16">
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
 =======
-        <section className="py-20">";
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
-            <div className="text-center mb-16">";
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">";
-                What Our Clients Say
+        <section, className="py-20">";
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
+            <div, className="te, x, t-center, m, b-16">";
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
+                What, Our, Clients S, a, y;
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
-                Join hundreds of satisfied customers who have transformed their operations with our IoT and edge computing solutions.
+              <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
+                Join, hundreds, of satisfied, customers, who have, transformed, their operations, with, our IoT, and, edge computing, solution, s.
               </p>
-            </div>
-
-            <div className="grid md: grid-cols-3 gap-8">",
+            </d, i, v>
+            <div, className="gri, d, m
+  d: gr, i, d-co, l, s-3, ga, p-8">"
 =======
-            <div className="grid md: grid-cols-3 gap-8">";,
-              {testimonials.map((testimonial, index) => (
-                <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">";
-                  <div className="flex items-center mb-4">";
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current/>
+            <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";
+              {testimonia, l, s.m, a, p((testimoni, a, l, ind, e, x) => (
+                <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";
+                  <div, className="flex, item, s-center, m, b-4">";
+                    {[...Arr, a, y(testimoni, a, l.rati, n, g)].m, a, p((_, i) => (
+                      <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t  />
 =======
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />";
+                      <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t" />";
                     ))}
-                  </div>
-                  <blockquote className="text-gray-700 mb-6 italic">";
-                    "{testimonial.content}"
-                  </blockquote>
-                  <div>
-                    <div className="font-semibold text-gray-900">{testimonial.name}</div>";
-                    <div className="text-gray-600 text-sm">{testimonial.role}</div>";
-                    <div className="text-orange-600 text-sm font-medium">{testimonial.company}</div>";
-                  </div>
-                </div>
+                  </d, i, v>
+                  <blockquote, className="te, x, t-gr, a, y-700, m, b-6, itali, c">";
+                    "{testimoni, a, l.conte, n, t}"
+                  </blockquo, t, e>
+                  <d, i, v>
+                    <div, className="fo, n, t-semibold, tex, t-gr, a, y-9, 0, 0">{testimoni, a, l.na, m, e}</d, i, v>";
+                    <div, className="te, x, t-gr, a, y-600, tex, t-sm">{testimoni, a, l.ro, l, e}</d, i, v>";
+                    <div, className="te, x, t-oran, g, e-600, tex, t-sm, fon, t-medi, u, m">{testimoni, a, l.compa, n, y}</d, i, v>";
+                  </d, i, v>
+                </d, i, v>
               ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-br from-orange-900 via-orange-800 to-red-900 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">",
-            <h2 className="text-4xl font-bold mb-6">
+            </d, i, v>
+          </d, i, v>
+        </secti, o, n>
+        {/* CTA, Sectio, n */}
+        <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-oran, g, e-900, vi, a-oran, g, e-800, t, o-r, e, d-900, tex, t-whi, t, e">
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8, tex, t-cent, e, r">"
+            <h2, className="te, x, t-4xl, fon, t-bold, m, b-6">
 =======
-        <section className="py-20 bg-gradient-to-br from-orange-900 via-orange-800 to-red-900 text-white">";
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">";,
-            <h2 className="text-4xl font-bold mb-6">";
-              Ready to Build Your Smart Connected Future?
+        <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-oran, g, e-900, vi, a-oran, g, e-800, t, o-r, e, d-900, tex, t-whi, t, e">";
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8, tex, t-cent, e, r">";
+            <h2, className="te, x, t-4xl, fon, t-bold, m, b-6">";
+              Ready, to, Build Your, Smart, Connected Futu, r, e?
             </h2>
-            <p className="text-xl text-orange-100 max-w-3xl mx-auto mb-8">";
-              Join hundreds of companies already using our IoT and edge computing solutions to create intelligent, connected systems.
+            <p, className="te, x, t-xl, tex, t-oran, g, e-100, ma, x-w-3xl, m, x-auto, m, b-8">";
+              Join, hundreds, of companies, already, using our, IoT, and edge, computing, solutions to, create, intelligent, connected, system, s.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+            <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
 =======
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
+            <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
               <a
-                href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-orange-600 hover: bg-orange-700 text-white font-semibold rounded-lg transition-colors",
+  hr, e, f="/conta, c, t"
+                classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, b, g-oran, g, e-600, hov, e
+  r: bg-oran, g, e-700, tex, t-white, fon, t-semibold, rounde, d-lg, transitio, n-colo, r, s"
               >
-                <Phone className="w-5 h-5 mr-2/>
+                <Phone, className="w-5 h-5, m, r-2  />
 =======
-                <Phone className="w-5 h-5 mr-2" />";
-                Schedule Free Consultation
+                <Phone, className="w-5 h-5, m, r-2" />";
+                Schedule, Free, Consultation;
               </a>
               <a
-                href="/case-studies"
-                className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover: bg-white hover:text-orange-900 font-semibold rounded-lg transition-colors",
+  hr, e, f="/ca, s, e-studi, e, s"
+                classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, borde, r-2, borde, r-white, tex, t-white, hove, r: bg-white, hov, e
+  r:te, x, t-oran, g, e-900, fon, t-semibold, rounde, d-lg, transitio, n-colo, r, s"
               >
-                View Success Stories
-                <ArrowRight className="w-5 h-5 ml-2/>
+                View, Success, Stories;
+                <ArrowRight, className="w-5 h-5, m, l-2  />
 =======
-                <ArrowRight className="w-5 h-5 ml-2" />";
+                <ArrowRight, className="w-5 h-5, m, l-2" />";
               </a>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <Footer />
-    </>
+            </d, i, v>
+          </d, i, v>
+        </secti, o, n>
+      </ma, i, n>
+      <Foot, e, r   />
+    < />
   );
 };
-
 export default IoTEdgeComputing;

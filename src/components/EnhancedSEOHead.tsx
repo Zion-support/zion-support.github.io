@@ -1,167 +1,156 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-interface SEOHeadProps {
-  title?: string;
-  description?: string;
-  keywords?: string | string[];
-  canonical?: string;
-  image?: string;
-  url?: string;
-  type?: string;
-  author?: string;
+import React from "react";
+import { Helmet } from "react-helmet-async";
+interface, SEOHeadProp, s {
+  tit, l, e?: stri, n, g;
+  descripti, o, n?: stri, n, g;
+  keywor, d, s?: stri, n, g | stri, n, g[];
+  canonic, a, l?: stri, n, g;
+  ima, g, e?: stri, n, g;
+  u, r, l?: stri, n, g;
+  ty, p, e?: stri, n, g;
+  auth, o, r?: stri, n, g;
 }
-
-const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
-  title = 'Zion Tech Group - Revolutionary AI and IT Solutions',
-  description = "Transform your enterprise with Zion Tech Group's revolutionary AI solutions.",
-  keywords = 'AI solutions, enterprise AI, artificial intelligence, machine learning, automation',
-  canonical,
-  url = 'https://ziontechgroup.com',
-  image = 'https://ziontechgroup.com/og-image.jpg',
-  type = 'website',
-  author = 'Zion Tech Group'
+const, EnhancedSEOHea, d: Rea, c, t.FC<SEOHeadPro, p, s> = ({
+  tit, l, e = 'Zion, Tech, Group - Revolutionary, AI, and IT, Solution, s'
+  descripti, o, n = "Transform, your, enterprise with, Zion, Tech Gro, u, p's, revolutionary, AI solutio, n, s."
+  keywor, d, s = 'AI, solution, s, enterprise, A, I, artificial, intelligenc, e, machine, learnin, g, automati, o, n'
+  canonic, a, l
+  u, r, l = 'htt, p, s://ziontechgro, u, p.c, o, m'
+  ima, g, e = 'htt, p, s://ziontechgro, u, p.c, o, m/og-ima, g, e.j, p, g'
+  ty, p, e = 'websi, t, e'
+  auth, o, r = 'Zion, Tech, Group'
 }) => {
-  const metaKeywords = Array.isArray(keywords) ? keywords.join(', ') : keywords;
-  const canonicalUrl = canonical || url;
-
-  const structuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'Zion Tech Group',
-    description,
-    url: 'https://ziontechgroup.com',
-    logo: 'https://ziontechgroup.com/logo.png',
-    sameAs: [
-      'https://linkedin.com/company/zion-tech-group',
-      'https://twitter.com/ziontechgroup',
-      'https://github.com/ZionClouds'
-    ],
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-555-123-4567",
-      "contactType": "customer service",
-      "email": "info@ziontechgroup.com"
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "123 Innovation Drive",
-      "addressLocality": "San Francisco",
-      "addressRegion": "CA",
-      "postalCode": "94105",
-      "addressCountry": "US"
-    },
-    "foundingDate": "2020",
-    "numberOfEmployees": "500+",
-    "industry": "Artificial Intelligence",
-    "services": [
-      "AI Workflow Automation",
-      "Enterprise AI Solutions",
-      "AI Data Analytics",
-      "Cybersecurity AI",
-      "Quantum Computing",
-      "AI Consulting"
+  const, metaKeyword, s = Arr, a, y.isArr, a, y(keywor, d, s) ? keywor, d, s.jo, i, n(', ') : keywor, d, s;
+  const, canonicalUr, l = canonic, a, l || u, r, l;
+  const, structuredDat, a = {
+    '@conte, x, t': 'htt, p, s://sche, m, a.o, r, g'
+    '@ty, p, e': 'Organizati, o, n'
+    na, m, e: 'Zion, Tech, Group'
+    descripti, o, n
+    u, r, l: 'ht, t, p
+  s://ziontechgro, u, p.c, o, m'
+    lo, g, o: 'ht, t, p
+  s://ziontechgro, u, p.c, o, m/lo, g, o.p, n, g'
+    same, A, s: [
+      'ht, t, p
+  s://linked, i, n.c, o, m/compa, n, y/zi, o, n-te, c, h-gro, u, p'
+      'htt, p, s://twitt, e, r.c, o, m/ziontechgro, u, p'
+      'htt, p, s://gith, u, b.c, o, m/ZionClou, d, s'
+    ]
+    "contactPoi, n, t": {
+      "@ty, p, e": "ContactPoi, n, t"
+      "telepho, n, e": "+1-5, 5, 5-1, 2, 3-45, 6, 7"
+      "contactTy, p, e": "customer, servic, e"
+      "ema, i, l": "in, f, o@ziontechgro, u, p.c, o, m"
+    }
+    "addre, s, s": {
+      "@ty, p, e": "PostalAddre, s, s"
+      "streetAddre, s, s": "123, Innovation, Drive"
+      "addressLocali, t, y": "San, Francisc, o"
+      "addressRegi, o, n": "CA"
+      "postalCo, d, e": "941, 0, 5"
+      "addressCount, r, y": "US"
+    }
+    "foundingDa, t, e": "20, 2, 0"
+    "numberOfEmploye, e, s": "5, 0, 0+"
+    "indust, r, y": "Artificial, Intelligenc, e"
+    "servic, e, s": [
+      "AI, Workflow, Automation"
+      "Enterprise, AI, Solutions"
+      "AI, Data, Analytics"
+      "Cybersecurity, A, I"
+      "Quantum, Computin, g"
+      "AI, Consultin, g"
     ]
   };
 =======
-    contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: '+1-302-464-0950',
-      contactType: 'customer service',
-      email: 'info@ziontechgroup.com'
+    contactPoi, n, t: {
+      '@ty, p, e': 'ContactPoi, n, t'
+      telepho, n, e: '+1-3, 0, 2-4, 6, 4-09, 5, 0'
+      contactTy, p, e: 'customer, servic, e'
+      ema, i, l: 'in, f, o@ziontechgro, u, p.c, o, m'
     }
-  } as const;
-
+  } as, cons, t;
   return (
     <Helmet>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords.join(', ')} />
+      <title>{tit, l, e}</title>
+      <meta name="descripti, o, n" content={descripti, o, n}  />
+      <meta name="keywor, d, s" content={keywor, d, s.jo, i, n(', ')}  />
 =======
-      <meta name="keywords" content={metaKeywords} />
-      <meta name="author" content={author} />
-      <meta name="robots" content="index, follow" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
-      <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:type" content={type} />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
-      
-      {/* Twitter Card Meta Tags */}
+      <meta name="keywor, d, s" content={metaKeywor, d, s}  />
+      <meta name="auth, o, r" content={auth, o, r}  />
+      <meta name="robo, t, s" content="ind, e, x, foll, o, w"  />
+      <meta name="viewpo, r, t" content="wid, t, h=devi, c, e-wid, t, h, initi, a, l-sca, l, e=1.0"  />
+      <meta, propert, y="og:tit, l, e" content={tit, l, e}  />
+      <meta, propert, y="og:descripti, o, n" content={descripti, o, n}  />
+      <meta, propert, y="og:ima, g, e" content={ima, g, e}  />
+      <meta, propert, y="og:u, r, l" content={canonicalU, r, l}  />
+      <meta, propert, y="og:ty, p, e" content={ty, p, e}  />
+      <meta, propert, y="og: site_na, m, e" content="Zion, Tech, Group"  />
+      <meta, propert, y="o
+  g:loca, l, e" content="en_, U, S"  />
+      {/* Twitter, Card, Meta Ta, g, s */}
 =======
-
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
-      <meta name="twitter:site" content="@ziontechgroup" />
-      <meta name="twitter:creator" content="@ziontechgroup" />
-      
-      {/* Article-specific tags */}
-      {publishedTime && <meta property="article:published_time" content={publishedTime} />}
-      {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
-      {section && <meta property="article:section" content={section} />}
-      {tags.map((tag, index) => (
-        <meta key={index} property="article:tag" content={tag} />
+      <meta name="twitt, e, r: ca, r, d" content="summary_large_ima, g, e"  />
+      <meta name="twit, t, e
+  r:tit, l, e" content={tit, l, e}  />
+      <meta name="twitt, e, r:descripti, o, n" content={descripti, o, n}  />
+      <meta name="twitt, e, r:ima, g, e" content={ima, g, e}  />
+      <meta name="twitt, e, r: si, t, e" content="@ziontechgro, u, p"  />
+      <meta name="twit, t, e
+  r:creat, o, r" content="@ziontechgro, u, p"  />
+      {/* Artic, l, e-specific, tag, s */}
+      {publishedTi, m, e && <meta, propert, y="artic, l, e:published_ti, m, e" content={publishedTi, m, e} />}
+      {modifiedTi, m, e && <meta, propert, y="artic, l, e:modified_ti, m, e" content={modifiedTi, m, e} />}
+      {secti, o, n && <meta, propert, y="artic, l, e:secti, o, n" content={secti, o, n} />}
+      {ta, g, s.m, a, p((t, a, g, ind, e, x) => (
+        <meta, ke, y={ind, e, x} proper, t, y="artic, l, e:t, a, g" content={t, a, g}  />
       ))}
-      
-      {/* Additional SEO Tags */}
-      <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-      <meta name="googlebot" content="index, follow" />
-      <meta name="bingbot" content="index, follow" />
-      
-      {/* Performance and Security */}
-      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-      <meta httpEquiv="X-Frame-Options" content="DENY" />
-      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
-      <meta name="referrer" content="strict-origin-when-cross-origin" />
+      {/* Additional, SEO, Tags */}
+      <meta name="robo, t, s" content="ind, e, x, foll, o, w, m, a, x-ima, g, e-previ, e, w:lar, g, e, m, a, x-snipp, e, t:-1, m, a, x-vid, e, o-previ, e, w:-1"  />
+      <meta name="googleb, o, t" content="ind, e, x, foll, o, w"  />
+      <meta name="bingb, o, t" content="ind, e, x, foll, o, w"  />
+      {/* Performance, and, Security */}
+      <meta, httpEqui, v="X-Conte, n, t-Ty, p, e-Optio, n, s" content="nosni, f, f"  />
+      <meta, httpEqui, v="X-Fra, m, e-Optio, n, s" content="DE, N, Y"  />
+      <meta, httpEqui, v="X-X, S, S-Protecti, o, n" content="1; mo, d, e=blo, c, k"  />
+      <meta name="referr, e, r" content="stri, c, t-orig, i, n-wh, e, n-cro, s, s-orig, i, n"  />
 =======
-      {/* Additional Meta Tags */}
-      <meta name="theme-color" content="#3B82F6" />
-      <meta name="msapplication-TileColor" content="#3B82F6" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-      
-      {/* Canonical URL */}
-      <link rel="canonical" href={url} />
-      
-      {/* Favicon */}
+      {/* Additional, Meta, Tags */}
+      <meta name="the, m, e-col, o, r" content="#3B82, F, 6"  />
+      <meta name="msapplicati, o, n-TileCol, o, r" content="#3B82, F, 6"  />
+      <meta name="app, l, e-mobi, l, e-w, e, b-a, p, p-capab, l, e" content="y, e, s"  />
+      <meta name="app, l, e-mobi, l, e-w, e, b-a, p, p-stat, u, s-b, a, r-sty, l, e" content="defau, l, t"  />
+      <meta name="app, l, e-mobi, l, e-w, e, b-a, p, p-tit, l, e" content="Zion, Tech, Group"  />
+      {/* Canonical, UR, L */}
+      <link, re, l="canonic, a, l" hr, e, f={u, r, l}  />
+      {/* Favic, o, n */}
 =======
-
-      <link rel="canonical" href={canonicalUrl} />
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-
-      <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      
-      {/* Favicon and Icons */}
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="manifest" href="/site.webmanifest" />
-      
-      {/* Theme Color */}
-      <meta name="theme-color" content="#1e293b" />
-      <meta name="msapplication-TileColor" content="#1e293b" />
+      <link, re, l="canonic, a, l" hr, e, f={canonicalU, r, l}  />
+      <link, re, l="ic, o, n" ty, p, e="ima, g, e/x-ic, o, n" hr, e, f="/favic, o, n.i, c, o"  />
+      <link, re, l="app, l, e-tou, c, h-ic, o, n" siz, e, s="180x1, 8, 0" hr, e, f="/app, l, e-tou, c, h-ic, o, n.p, n, g"  />
+      <link, re, l="ic, o, n" ty, p, e="ima, g, e/p, n, g" siz, e, s="32x, 3, 2" hr, e, f="/favic, o, n-32x, 3, 2.p, n, g"  />
+      <link, re, l="ic, o, n" ty, p, e="ima, g, e/p, n, g" siz, e, s="16x, 1, 6" hr, e, f="/favic, o, n-16x, 1, 6.p, n, g"  />
+      <script, typ, e="applicati, o, n/ld+js, o, n">{JS, O, N.stringi, f, y(structuredDa, t, a)}</scri, p, t>
+      <link, re, l="preconne, c, t" hr, e, f="htt, p, s: //fon, t, s.googleap, i, s.c, o, m"  />
+      <link, re, l="preconne, c, t" hr, e, f="ht, t, p
+  s://fon, t, s.gstat, i, c.c, o, m" crossOrig, i, n="anonymo, u, s"  />
+      {/* Favicon, and, Icons */}
+      <link, re, l="ic, o, n" ty, p, e="ima, g, e/x-ic, o, n" hr, e, f="/favic, o, n.i, c, o"  />
+      <link, re, l="app, l, e-tou, c, h-ic, o, n" siz, e, s="180x1, 8, 0" hr, e, f="/app, l, e-tou, c, h-ic, o, n.p, n, g"  />
+      <link, re, l="ic, o, n" ty, p, e="ima, g, e/p, n, g" siz, e, s="32x, 3, 2" hr, e, f="/favic, o, n-32x, 3, 2.p, n, g"  />
+      <link, re, l="ic, o, n" ty, p, e="ima, g, e/p, n, g" siz, e, s="16x, 1, 6" hr, e, f="/favic, o, n-16x, 1, 6.p, n, g"  />
+      <link, re, l="manife, s, t" hr, e, f="/si, t, e.webmanife, s, t"  />
+      {/* Theme, Colo, r */}
+      <meta name="the, m, e-col, o, r" content="#1e29, 3, b"  />
+      <meta name="msapplicati, o, n-TileCol, o, r" content="#1e29, 3, b"  />
 =======
-      {/* DNS Prefetch */}
-      <link rel="dns-prefetch" href="//api.ziontechgroup.com" />
-      
-      {/* Performance Hints */}
-      <meta httpEquiv="x-dns-prefetch-control" content="on" />
+      {/* DNS, Prefetc, h */}
+      <link, re, l="d, n, s-prefet, c, h" hr, e, f="//a, p, i.ziontechgro, u, p.c, o, m"  />
+      {/* Performance, Hint, s */}
+      <meta, httpEqui, v="x-d, n, s-prefet, c, h-contr, o, l" content="on"  />
 =======
     </Helmet>
   );
 };
-
 export default EnhancedSEOHead;

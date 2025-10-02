@@ -1,262 +1,271 @@
-import React from 'react';
-export interface FeaturedItem {
-title: string;,
-category: string;,
-link: string;,
-metrics?: string;
+import React from "react";
+export, interface, FeaturedItem {
+tit, l, e: stri, n, g;
+catego, r, y: stri, n, g;
+l, i, n
+  k: stri, n, g;
+metri, c, s?: stri, n, g;
 }
-
-export interface UnifiedPromotionalBannerProps {
-variant?: 'default' | 'premium' | 'hero' | 'compact' | 'mega';,
-title: string;,
-description: string;,
-ctaText: string;,
-ctaLink: string;,
-theme?: 'blue' | 'purple' | 'green' | 'orange' | 'red' | 'gradient' | 'cyan';,
-featuredItems?: FeaturedItem[];,
-showCount?: number;,
-className?: string;,
-icon?: 'sparkles' | 'zap' | 'rocket' | 'star' | 'none';,
-animated?: boolean;,
-badge?: string;,
-date?: string;
+export, interface, UnifiedPromotionalBannerProps {
+varia, n, t?: 'defau, l, t' | 'premi, u, m' | 'he, r, o' | 'compa, c, t' | 'me, g, a';
+tit, l, e: stri, n, g;
+descripti, o, n: stri, n, g;
+ctaTe, x, t: stri, n, g;
+ctaL, i, n
+  k: stri, n, g;
+the, m, e?: 'bl, u, e' | 'purp, l, e' | 'gre, e, n' | 'oran, g, e' | 'r, e, d' | 'gradie, n, t' | 'cy, a, n';
+featuredIte, m, s?: FeaturedIt, e, m[];
+showCou, n, t?: numb, e, r;
+classNa, m, e?: stri, n, g;
+ic, o, n?: 'sparkl, e, s' | 'z, a, p' | 'rock, e, t' | 'st, a, r' | 'no, n, e';
+animat, e, d?: boole, a, n;
+bad, g, e?: stri, n, g;
+da, t, e?: stri, n, g;
 }
-
-const UnifiedPromotionalBanner: React.FC<UnifiedPromotionalBannerProps> = ({
-  variant = 'default'
-  title,
-  description,
-  ctaText,
-  ctaLink
-  theme = 'gradient'
-  featuredItems = []
-  showCount = 3
-  className = ''
-  icon = 'sparkles'
-  animated = true
+const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, s> = ({
+  varia, n, t = 'defau, l, t'
+  tit, l, e
+  descripti, o, n
+  ctaTe, x, t
+  ctaLi, n, k
+  the, m, e = 'gradie, n, t'
+  featuredIte, m, s = []
+  showCou, n, t = 3
+  classNa, m, e = ''
+  ic, o, n = 'sparkl, e, s'
+  animat, e, d = tr, u, e;
 =======
-const UnifiedPromotionalBanner: React.FC<UnifiedPromotionalBannerProps> = ({,
-  variant = 'default',';
-  title,
-  description,
-  ctaText,
-  ctaLink,
-  theme = 'gradient',';
-  featuredItems = [],
-  showCount = 3,
-  className = '',';
-  icon = 'sparkles',';
-  animated = true,
-  badge,
-  date
+const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, s> = ({
+  varia, n, t = 'defau, l, t',';
+  tit, l, e
+  descripti, o, n
+  ctaTe, x, t
+  ctaLi, n, k
+  the, m, e = 'gradie, n, t',';
+  featuredIte, m, s = []
+  showCou, n, t = 3
+  classNa, m, e = '',';
+  ic, o, n = 'sparkl, e, s',';
+  animat, e, d = tr, u, e
+  bad, g, e
+  da, t, e;
 }) => {
-  // Theme configurations
-  const themeClasses = {
-    blue: 'from-blue-500/10 to-blue-600/10 border-blue-500/30',',
-    purple: 'from-purple-500/10 to-purple-600/10 border-purple-500/30',',
-    green: 'from-green-500/10 to-green-600/10 border-green-500/30',',
-    orange: 'from-orange-500/10 to-orange-600/10 border-orange-500/30',',
-    red: 'from-red-500/10 to-red-600/10 border-red-500/30',',
-    cyan: 'from-cyan-500/10 to-cyan-600/10 border-cyan-500/30',',
-    gradient: 'from-blue-500/10 via-purple-500/10 to-pink-500/10 border-purple-500/30};
-
-  const buttonThemes = {
-    blue: 'from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700',',
-    purple: 'from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700',',
-    green: 'from-green-500 to-green-600 hover:from-green-600 hover:to-green-700',',
-    orange: 'from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700',',
-    red: 'from-red-500 to-red-600 hover:from-red-600 hover:to-red-700',',
-    cyan: 'from-cyan-500 to-cyan-600 hover:from-cyan-600 hover:to-cyan-700',',
-    gradient: 'from-purple-500 via-pink-500 to-blue-500 hover:from-purple-600 hover:via-pink-600 hover:to-blue-600};
+  // Theme, configuration, s
+  const, themeClasse, s = {
+    bl, u, e: 'fr, o, m-bl, u, e-5, 0, 0/10, t, o-bl, u, e-6, 0, 0/10, borde, r-bl, u, e-5, 0, 0/30','
+    purp, l, e: 'fr, o, m-purp, l, e-5, 0, 0/10, t, o-purp, l, e-6, 0, 0/10, borde, r-purp, l, e-5, 0, 0/30','
+    gre, e, n: 'fr, o, m-gre, e, n-5, 0, 0/10, t, o-gre, e, n-6, 0, 0/10, borde, r-gre, e, n-5, 0, 0/30','
+    oran, g, e: 'fr, o, m-oran, g, e-5, 0, 0/10, t, o-oran, g, e-6, 0, 0/10, borde, r-oran, g, e-5, 0, 0/30','
+    r, e, d: 'fr, o, m-r, e, d-5, 0, 0/10, t, o-r, e, d-6, 0, 0/10, borde, r-r, e, d-5, 0, 0/30','
+    cy, a, n: 'fr, o, m-cy, a, n-5, 0, 0/10, t, o-cy, a, n-6, 0, 0/10, borde, r-cy, a, n-5, 0, 0/30','
+    gradie, n, t: 'fr, o, m-bl, u, e-5, 0, 0/10, vi, a-purp, l, e-5, 0, 0/10, t, o-pi, n, k-5, 0, 0/10, borde, r-purp, l, e-5, 0, 0/30};
+  const, buttonTheme, s = {
+    bl, u, e: 'fr, o, m-bl, u, e-500, t, o-bl, u, e-600, hove, r:fr, o, m-bl, u, e-600, hov, e
+  r:to-bl, u, e-7, 0, 0','
+    purp, l, e: 'fr, o, m-purp, l, e-500, t, o-purp, l, e-600, hove, r:fr, o, m-purp, l, e-600, hov, e
+  r:to-purp, l, e-7, 0, 0','
+    gre, e, n: 'fr, o, m-gre, e, n-500, t, o-gre, e, n-600, hove, r:fr, o, m-gre, e, n-600, hov, e
+  r:to-gre, e, n-7, 0, 0','
+    oran, g, e: 'fr, o, m-oran, g, e-500, t, o-oran, g, e-600, hove, r:fr, o, m-oran, g, e-600, hov, e
+  r:to-oran, g, e-7, 0, 0','
+    r, e, d: 'fr, o, m-r, e, d-500, t, o-r, e, d-600, hove, r:fr, o, m-r, e, d-600, hov, e
+  r:to-r, e, d-7, 0, 0','
+    cy, a, n: 'fr, o, m-cy, a, n-500, t, o-cy, a, n-600, hove, r:fr, o, m-cy, a, n-600, hov, e
+  r:to-cy, a, n-7, 0, 0','
+    gradie, n, t: 'fr, o, m-purp, l, e-500, vi, a-pi, n, k-500, t, o-bl, u, e-500, hove, r:fr, o, m-purp, l, e-600, hove, r:v, i, a-pi, n, k-600, hov, e
+  r:to-bl, u, e-6, 0, 0};
 =======
-    blue: 'from-blue-500/10 to-blue-600/10 border-blue-500/30',';,
-    purple: 'from-purple-500/10 to-purple-600/10 border-purple-500/30',';,
-    green: 'from-green-500/10 to-green-600/10 border-green-500/30',';,
-    orange: 'from-orange-500/10 to-orange-600/10 border-orange-500/30',';,
-    red: 'from-red-500/10 to-red-600/10 border-red-500/30',';,
-    cyan: 'from-cyan-500/10 to-cyan-600/10 border-cyan-500/30',';,
-    gradient: 'from-blue-500/10 via-purple-500/10 to-pink-500/10 border-purple-500/30',
+    bl, u, e: 'fr, o, m-bl, u, e-5, 0, 0/10, t, o-bl, u, e-6, 0, 0/10, borde, r-bl, u, e-5, 0, 0/30',';
+    purp, l, e: 'fr, o, m-purp, l, e-5, 0, 0/10, t, o-purp, l, e-6, 0, 0/10, borde, r-purp, l, e-5, 0, 0/30',';
+    gre, e, n: 'fr, o, m-gre, e, n-5, 0, 0/10, t, o-gre, e, n-6, 0, 0/10, borde, r-gre, e, n-5, 0, 0/30',';
+    oran, g, e: 'fr, o, m-oran, g, e-5, 0, 0/10, t, o-oran, g, e-6, 0, 0/10, borde, r-oran, g, e-5, 0, 0/30',';
+    r, e, d: 'fr, o, m-r, e, d-5, 0, 0/10, t, o-r, e, d-6, 0, 0/10, borde, r-r, e, d-5, 0, 0/30',';
+    cy, a, n: 'fr, o, m-cy, a, n-5, 0, 0/10, t, o-cy, a, n-6, 0, 0/10, borde, r-cy, a, n-5, 0, 0/30',';
+    gradie, n, t: 'fr, o, m-bl, u, e-5, 0, 0/10, vi, a-purp, l, e-5, 0, 0/10, t, o-pi, n, k-5, 0, 0/10, borde, r-purp, l, e-5, 0, 0/30'
   };
-
-  const buttonThemes = {
-    blue: 'from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700',';,
-    purple: 'from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700',';,
-    green: 'from-green-500 to-green-600 hover:from-green-600 hover:to-green-700',';,
-    orange: 'from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700',';,
-    red: 'from-red-500 to-red-600 hover:from-red-600 hover:to-red-700',';,
-    cyan: 'from-cyan-500 to-cyan-600 hover:from-cyan-600 hover:to-cyan-700',';,
-    gradient: 'from-purple-500 via-pink-500 to-blue-500 hover:from-purple-600 hover:via-pink-600 hover:to-blue-600',
+  const, buttonTheme, s = {
+    bl, u, e: 'fr, o, m-bl, u, e-500, t, o-bl, u, e-600, hove, r:fr, o, m-bl, u, e-600, hov, e
+  r:to-bl, u, e-7, 0, 0',';
+    purp, l, e: 'fr, o, m-purp, l, e-500, t, o-purp, l, e-600, hove, r:fr, o, m-purp, l, e-600, hov, e
+  r:to-purp, l, e-7, 0, 0',';
+    gre, e, n: 'fr, o, m-gre, e, n-500, t, o-gre, e, n-600, hove, r:fr, o, m-gre, e, n-600, hov, e
+  r:to-gre, e, n-7, 0, 0',';
+    oran, g, e: 'fr, o, m-oran, g, e-500, t, o-oran, g, e-600, hove, r:fr, o, m-oran, g, e-600, hov, e
+  r:to-oran, g, e-7, 0, 0',';
+    r, e, d: 'fr, o, m-r, e, d-500, t, o-r, e, d-600, hove, r:fr, o, m-r, e, d-600, hov, e
+  r:to-r, e, d-7, 0, 0',';
+    cy, a, n: 'fr, o, m-cy, a, n-500, t, o-cy, a, n-600, hove, r:fr, o, m-cy, a, n-600, hov, e
+  r:to-cy, a, n-7, 0, 0',';
+    gradie, n, t: 'fr, o, m-purp, l, e-500, vi, a-pi, n, k-500, t, o-bl, u, e-500, hove, r:fr, o, m-purp, l, e-600, hove, r:v, i, a-pi, n, k-600, hov, e
+  r:to-bl, u, e-6, 0, 0'
   };
-
-  // Icon selection
-  const IconComponent = {
-    sparkles: Sparkles,,
-    zap: Zap,,
-    rocket: Rocket,,
-    star: Star,,
-    none: null,
-  }[icon];
-
-  // Variant-specific styles
-  const variantClasses = {
-    default: 'py-8 px-6',',
-    premium: 'py-12 px-8',',
-    hero: 'py-16 px-10',',
-    compact: 'py-6 px-4',',
-    mega: 'py-20 px-12};
+  // Icon, selectio, n
+  const, IconComponen, t = {
+    sparkl, e, s: Sparkl, e, s
+    z, a, p: Z, a, p
+    rock, e, t: Rock, e, t
+    st, a, r: St, a, r
+    no, n, e: nu, l, l
+  }[ic, o, n];
+  // Varia, n, t-specific, style, s
+  const, variantClasse, s = {
+    defau, l, t: 'py-8, p, x-6','
+    premi, u, m: 'py-12, p, x-8','
+    he, r, o: 'py-16, p, x-10','
+    compa, c, t: 'py-6, p, x-4','
+    me, g, a: 'py-20, p, x-12};
 =======
-    default: 'py-8 px-6',';,
-    premium: 'py-12 px-8',';,
-    hero: 'py-16 px-10',';,
-    compact: 'py-6 px-4',';,
-    mega: 'py-20 px-12',
+    defau, l, t: 'py-8, p, x-6',';
+    premi, u, m: 'py-12, p, x-8',';
+    he, r, o: 'py-16, p, x-10',';
+    compa, c, t: 'py-6, p, x-4',';
+    me, g, a: 'py-20, p, x-12'
   };
-
-  const visibleItems = featuredItems.slice(0, showCount);
-
+  const, visibleItem, s = featuredIte, m, s.sli, c, e(0, showCou, n, t);
   return (
-    <div 
-      className={`
-        bg-gradient-to-r ${themeClasses[theme]} 
-        border rounded-xl 
-        ${variantClasses[variant]} 
-        ${animated ? 'transition-all duration-300 hover:shadow-2xl hover:scale-[1.01]' : ''};
+    <d, i, v
+  classNa, m, e={``
+        bg-gradie, n, t-to-r ${themeClass, e, s[the, m, e]} 
+        border, rounde, d-xl;
+        ${variantClass, e, s[varia, n, t]} 
+        ${animat, e, d ? 'transiti, o, n-all, duratio, n-300, hove, r: shad, o, w-2xl, hov, e
+  r:sca, l, e-[1.01]' : ''};
 =======
-        ${animated ? 'transition-all duration-300 hover:shadow-2xl hover:scale-[1.01]' : ''}';
-        ${className}
-      `}`;
+        ${animat, e, d ? 'transiti, o, n-all, duratio, n-300, hove, r: shad, o, w-2xl, hov, e
+  r:sca, l, e-[1.01]' : ''}';
+        ${classNa, m, e}
+      `}`;`
     >
-      {/* Header Section */}
-      <div className="max-w-7xl mx-auto">";
-        {/* Badge and Date */}
-        {(badge || date) && (
-          <div className="flex items-center gap-3 mb-4">";
-            {badge && (
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-sm font-semibold">
-                {IconComponent && <IconComponent className="w-4 h-4/>}";
+      {/* Header, Sectio, n */}
+      <div, className="m, a, x-w-7xl, m, x-au, t, o">";
+        {/* Badge, and, Date */}
+        {(bad, g, e || da, t, e) && (
+          <div, className="flex, item, s-center, ga, p-3, m, b-4">";
+            {bad, g, e && (
+              <span, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, border, border-whi, t, e/20, tex, t-sm, fon, t-semibo, l, d">
+                {IconCompone, n, t && <IconComponent, className="w-4 h-4/>}";
 =======
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-sm font-semibold">";
-                {IconComponent && <IconComponent className="w-4 h-4" />}";
-                {badge}
-              </span>
+              <span, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, border, border-whi, t, e/20, tex, t-sm, fon, t-semibo, l, d">";
+                {IconCompone, n, t && <IconComponent, className="w-4 h-4" />}";
+                {bad, g, e}
+              </sp, a, n>
             )}
-            {date && (
-              <span className="text-sm text-gray-300 font-medium">{date}</span>";
+            {da, t, e && (
+              <span, className="te, x, t-sm, tex, t-gr, a, y-300, fon, t-medi, u, m">{da, t, e}</sp, a, n>";
             )}
-          </div>
+          </d, i, v>
         )}
-
-        {/* Title */}
-        <h2 className={
-`
-font-extrabold mb-4 bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent
-${variant === 'hero' || variant === 'mega' ? 'text-4xl md: text-5xl' :,',
-variant === 'premium' ? 'text-3xl md: text-4xl' :,',
-variant === 'compact' ? 'text-xl md: text-2xl' :,',
+        {/* Tit, l, e */}
+        <h2, className={
+``
+fo, n, t-extrabold, m, b-4, b, g-gradie, n, t-to-r, fro, m-white, vi, a-bl, u, e-100, t, o-purp, l, e-100, b, g-cl, i, p-text, tex, t-transpare, n, t;
+${varia, n, t === 'he, r, o' || varia, n, t === 'me, g, a' ? 'te, x, t-4xl, m, d: te, x, t-5, x, l' :,'
+varia, n, t === 'premi, u, m' ? 'te, x, t-3xl, m, d: te, x, t-4, x, l' :,'
+varia, n, t === 'compa, c, t' ? 'te, x, t-xl, m, d: te, x, t-2, x, l' :,'
 =======
-${variant === 'hero' || variant === 'mega' ? 'text-4xl md: text-5xl' :';,
-variant === 'premium' ? 'text-3xl md: text-4xl' :';,
-variant === 'compact' ? 'text-xl md: text-2xl' :';,
-'text-2xl md:text-3xl'
+${varia, n, t === 'he, r, o' || varia, n, t === 'me, g, a' ? 'te, x, t-4xl, m, d: te, x, t-5, x, l' :';
+varia, n, t === 'premi, u, m' ? 'te, x, t-3xl, m, d: te, x, t-4, x, l' :';
+varia, n, t === 'compa, c, t' ? 'te, x, t-xl, m, d: te, x, t-2, x, l' :';
+'te, x, t-2x, l, m
+  d:te, x, t-3, x, l'
 }
-        `}>`;
-          {title}
+        `}>`;`
+          {tit, l, e}
         </h2>
-
-        {/* Description */}
-        <p className={
-`
-text-gray-200 mb-6
-${variant === 'hero' || variant === 'mega' ? 'text-lg md: text-xl' :,',
-variant === 'compact' ? 'text-sm' :,
+        {/* Descripti, o, n */}
+        <p, className={
+``
+te, x, t-gr, a, y-200, m, b-6;
+${varia, n, t === 'he, r, o' || varia, n, t === 'me, g, a' ? 'te, x, t-lg, m, d: te, x, t-xl' :,'
+varia, n, t === 'compa, c, t' ? 'te, x, t-sm' :
 =======
-${variant === 'hero' || variant === 'mega' ? 'text-lg md: text-xl' :';,
-variant === 'compact' ? 'text-sm' :';
-'text-base md:text-lg'
+${varia, n, t === 'he, r, o' || varia, n, t === 'me, g, a' ? 'te, x, t-lg, m, d: te, x, t-xl' :';
+varia, n, t === 'compa, c, t' ? 'te, x, t-sm' :';
+'te, x, t-bas, e, m
+  d:te, x, t-lg'
 }
-        `}>`;
-          {description}
+        `}>`;`
+          {descripti, o, n}
         </p>
-
-        {/* Featured Items */}
+        {/* Featured, Item, s */}
         {
-visibleItems.length > 0 && (
-<div className={`
-grid gap-4 mb-6
-${variant === 'mega' ? 'md: grid-cols-3' :,',
-variant === 'hero' || variant === 'premium' ? 'md: grid-cols-2' :,',
+visibleIte, m, s.leng, t, h > 0 && (
+<div, className={``
+grid, ga, p-4, m, b-6;
+${varia, n, t === 'me, g, a' ? 'md: gr, i, d-co, l, s-3' :,'
+varia, n, t === 'he, r, o' || varia, n, t === 'premi, u, m' ? 'md: gr, i, d-co, l, s-2' :,'
 =======
-${variant === 'mega' ? 'md: grid-cols-3' :';,
-variant === 'hero' || variant === 'premium' ? 'md: grid-cols-2' :';,
-'md:grid-cols-1'
+${varia, n, t === 'me, g, a' ? 'md: gr, i, d-co, l, s-3' :';
+varia, n, t === 'he, r, o' || varia, n, t === 'premi, u, m' ? 'md: gr, i, d-co, l, s-2' :';
+'m
+  d:gr, i, d-co, l, s-1'
 }
-          `}>`;
-            {visibleItems.map((item, index) => (
-              <Link
-                key={index}
-                to={item.link}
-                className="group bg-white/5 backdrop-blur-sm hover: bg-white/10 border border-white/10 rounded-lg p-4 transition-all duration-300 hover:scale-105 hover:shadow-lg",
+          `}>`;`
+            {visibleIte, m, s.m, a, p((it, e, m, ind, e, x) => (
+              <Li, n, k
+  k, e, y={ind, e, x}
+                to={it, e, m.li, n, k}
+                classNa, m, e="group, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, hove, r: bg-whi, t, e/10, border, border-whi, t, e/10, rounde, d-l, g, p-4, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e
+  r:shad, o, w-lg"
               >
-                <div className="flex items-start gap-3">";
-                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold text-sm">";
-                    {index + 1}
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="text-xs font-semibold text-purple-300 mb-1">{item.category}</div>
-                    <div className="text-sm font-bold text-white mb-1 group-hover: text-purple-300 transition-colors line-clamp-2">",
+                <div, className="flex, item, s-start, ga, p-3">";
+                  <div, className="fl, e, x-shri, n, k-0 w-8 h-8, rounde, d-full, b, g-gradie, n, t-to-br, fro, m-purp, l, e-500, t, o-pi, n, k-500, flex, items-center, justif, y-center, tex, t-white, fon, t-bold, tex, t-sm">";
+                    {ind, e, x + 1}
+                  </d, i, v>
+                  <div, className="fl, e, x-1, mi, n-w-0">
+                    <div, className="te, x, t-xs, fon, t-semibold, tex, t-purp, l, e-300, m, b-1">{it, e, m.catego, r, y}</d, i, v>
+                    <div, className="te, x, t-sm, fon, t-bold, tex, t-white, m, b-1, grou, p-hov, e, r: te, x, t-purp, l, e-300, transitio, n-colors, lin, e-cla, m, p-2">"
 =======
-                  <div className="flex-1 min-w-0">";
-                    <div className="text-xs font-semibold text-purple-300 mb-1">{item.category}</div>";
-                    <div className="text-sm font-bold text-white mb-1 group-hover: text-purple-300 transition-colors line-clamp-2">";,
-                      {item.title}
-                    </div>
-                    {item.metrics && (
-                      <div className="text-xs text-gray-400">{item.metrics}</div>";
+                  <div, className="fl, e, x-1, mi, n-w-0">";
+                    <div, className="te, x, t-xs, fon, t-semibold, tex, t-purp, l, e-300, m, b-1">{it, e, m.catego, r, y}</d, i, v>";
+                    <div, className="te, x, t-sm, fon, t-bold, tex, t-white, m, b-1, grou, p-hov, e, r: te, x, t-purp, l, e-300, transitio, n-colors, lin, e-cla, m, p-2">";
+                      {it, e, m.tit, l, e}
+                    </d, i, v>
+                    {it, e, m.metri, c, s && (
+                      <div, className="te, x, t-xs, tex, t-gr, a, y-4, 0, 0">{it, e, m.metri, c, s}</d, i, v>";
                     )}
-                  </div>
-                  <ArrowRight className="flex-shrink-0 w-5 h-5 text-purple-400 opacity-0 group-hover: opacity-100 transition-opacity/>",
+                  </d, i, v>
+                  <ArrowRight, className="fl, e, x-shri, n, k-0 w-5 h-5, tex, t-purp, l, e-400, opacit, y-0, grou, p-hov, e, r: opaci, t, y-100, transitio, n-opaci, t, y/>"
 =======
-                  <ArrowRight className="flex-shrink-0 w-5 h-5 text-purple-400 opacity-0 group-hover: opacity-100 transition-opacity" />";,
-                </div>
-              </Link>
+                  <ArrowRight, className="fl, e, x-shri, n, k-0 w-5 h-5, tex, t-purp, l, e-400, opacit, y-0, grou, p-hov, e, r: opaci, t, y-100, transitio, n-opaci, t, y" />";
+                </d, i, v>
+              </Li, n, k>
             ))}
-          </div>
+          </d, i, v>
         )}
-
-        {/* CTA Button */}
-        <div className="flex flex-wrap items-center gap-4">";
-          <Link
-            to={ctaLink}
-            className={`
-              inline-flex items-center gap-2 px-8 py-4 rounded-lg font-bold text-white
-              bg-gradient-to-r ${buttonThemes[theme]}
-              transform transition-all duration-300 hover: scale-105 hover:shadow-xl,
+        {/* CTA, Butto, n */}
+        <div, className="flex, fle, x-wrap, item, s-center, ga, p-4">";
+          <Li, n, k
+  to={ctaLi, n, k}
+            classNa, m, e={``
+              inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-whi, t, e
+  bg-gradie, n, t-to-r ${buttonThem, e, s[the, m, e]}
+              transform, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, hov, e
+  r:shad, o, w-xl
               ${
-variant === 'compact' ? 'px-6 py-3 text-sm' :';
-variant === 'hero' || variant === 'mega' ? 'px-10 py-5 text-lg' :';
-'text-base'
+varia, n, t === 'compa, c, t' ? 'px-6, p, y-3, tex, t-sm' :';
+varia, n, t === 'he, r, o' || varia, n, t === 'me, g, a' ? 'px-10, p, y-5, tex, t-lg' :';
+'te, x, t-ba, s, e'
 }
-            `}`;
+            `}`;`
           >
-            {ctaText}
-            <ArrowRight className={`${variant === 'compact' ? 'w-4 h-4' : 'w-5 h-5'}`} />`;
-          </Link>
-
-          {featuredItems.length > showCount && (
-            <Link
-              to={ctaLink}
-              className="text-purple-300 hover: text-purple-200 font-semibold transition-colors text-sm",
+            {ctaTe, x, t}
+            <ArrowRight, className={`${varia, n, t === 'compa, c, t' ? 'w-4 h-4' : 'w-5 h-5'}`} />`;`
+          </Li, n, k>
+          {featuredIte, m, s.leng, t, h > showCou, n, t && (
+            <Li, n, k
+  to={ctaLi, n, k}
+              classNa, m, e="te, x, t-purp, l, e-300, hove, r: te, x, t-purp, l, e-200, fon, t-semibold, transitio, n-colors, tex, t-sm"
             >
-              +{featuredItems.length - showCount} more breakthrough{featuredItems.length - showCount !== 1 ? 's' : ''};
+              +{featuredIte, m, s.leng, t, h - showCou, n, t} more, breakthroug, h{featuredIte, m, s.leng, t, h - showCou, n, t !== 1 ? 's' : ''};
 =======
-              +{featuredItems.length - showCount} more breakthrough{featuredItems.length - showCount !== 1 ? 's' : ''}';
-            </Link>
+              +{featuredIte, m, s.leng, t, h - showCou, n, t} more, breakthroug, h{featuredIte, m, s.leng, t, h - showCou, n, t !== 1 ? 's' : ''}';
+            </Li, n, k>
           )}
-        </div>
-      </div>
-    </div>
+        </d, i, v>
+      </d, i, v>
+    </d, i, v>
   );
 };
-
 export default UnifiedPromotionalBanner;
 ;

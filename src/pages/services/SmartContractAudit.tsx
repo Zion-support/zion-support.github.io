@@ -1,784 +1,786 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Globe } from 'lucide-react';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
+import React from "react";
+import { Helmet } from "react-helmet-async";
+impo, r, t { Glo, b, e } fr, o, m "luci, d, e-rea, c, t";
+import, Header, from "../../componen, t, s/Head, e, r";
+import, Footer, from "../../componen, t, s/Foot, e, r";
 =======
-import React from 'react';';
-import {
-Helmet
-} from 'react-helmet-async';';
-import {
-Globe
-} from 'lucide-react';';
-import Header from '../../components/Header';';
-import Footer from '../../components/Footer';';
-
-const SmartContractAudit: React.FC = () => {,
-  const features = [
+import React from "react";';
+impo, r, t {
+Helm, e, t;
+} fr, o, m "rea, c, t-helm, e, t-asy, n, c";';
+impo, r, t {
+Glo, b, e;
+} fr, o, m "luci, d, e-rea, c, t";';
+import, Header, from "../../componen, t, s/Head, e, r";';
+import, Footer, from "../../componen, t, s/Foot, e, r";';
+const, SmartContractAudi, t: Rea, c, t.FC = () => {
+  const, feature, s = [
     {
-      icon: Shield,,
-      title: "Comprehensive Security Analysis",",
-      description: "Deep code analysis using static analysis, dynamic testing, and formal verification to identify vulnerabilities.",",
+      i, c, o
+  n: Shie, l, d
+      tit, l, e: "Comprehensive, Security, Analysis","
+      descripti, o, n: "Deep, code, analysis using, static, analysis, dynamic, testin, g, and, formal, verification to, identify, vulnerabilities.","
 =======
-      title: "Comprehensive Security Analysis",";,
-      description: "Deep code analysis using static analysis, dynamic testing, and formal verification to identify vulnerabilities.",";,
-      benefit: "99.8% vulnerability detection rate",
-    },
+      tit, l, e: "Comprehensive, Security, Analysis",";
+      descripti, o, n: "Deep, code, analysis using, static, analysis, dynamic, testin, g, and, formal, verification to, identify, vulnerabilities.",";
+      benef, i, t: "99.8% vulnerability, detection, rate"
+    }
     {
-      icon: Search,,
-      title: "Automated Vulnerability Scanning",",
-      description: "AI-powered scanning tools that detect common smart contract vulnerabilities and security patterns.",",
+      ic, o, n: Sear, c, h
+      tit, l, e: "Automated, Vulnerability, Scanning","
+      descripti, o, n: "AI-powered, scanning, tools that, detect, common smart, contract, vulnerabilities and, security, patterns.","
 =======
-      title: "Automated Vulnerability Scanning",";,
-      description: "AI-powered scanning tools that detect common smart contract vulnerabilities and security patterns.",";,
-      benefit: "100+ vulnerability patterns detected",
-    },
+      tit, l, e: "Automated, Vulnerability, Scanning",";
+      descripti, o, n: "AI-powered, scanning, tools that, detect, common smart, contract, vulnerabilities and, security, patterns.",";
+      benef, i, t: "1, 0, 0+ vulnerability, patterns, detected"
+    }
     {
-      icon: AlertTriangle,,
-      title: "Risk Assessment & Mitigation",",
-      description: "Detailed risk analysis with prioritized recommendations and mitigation strategies.",",
+      ic, o, n: AlertTriang, l, e
+      tit, l, e: "Risk, Assessmen, t & Mitigati, o, n","
+      descripti, o, n: "Detailed, risk, analysis with, prioritized, recommendations and, mitigation, strategies.","
 =======
-      title: "Risk Assessment & Mitigation",";,
-      description: "Detailed risk analysis with prioritized recommendations and mitigation strategies.",";,
-      benefit: "Zero critical vulnerabilities in production",
-    },
+      tit, l, e: "Risk, Assessmen, t & Mitigati, o, n",";
+      descripti, o, n: "Detailed, risk, analysis with, prioritized, recommendations and, mitigation, strategies.",";
+      benef, i, t: "Zero, critical, vulnerabilities in, productio, n"
+    }
     {
-      icon: CheckCircle,,
-      title: "Compliance Verification",",
-      description: "Ensure compliance with industry standards, regulatory requirements, and best practices.",",
+      ic, o, n: CheckCirc, l, e
+      tit, l, e: "Compliance, Verificatio, n","
+      descripti, o, n: "Ensure, compliance, with industry, standard, s, regulatory, requirement, s, and, best, practices.","
 =======
-      title: "Compliance Verification",";,
-      description: "Ensure compliance with industry standards, regulatory requirements, and best practices.",";,
-      benefit: "100% compliance with standards",
-    },
+      tit, l, e: "Compliance, Verificatio, n",";
+      descripti, o, n: "Ensure, compliance, with industry, standard, s, regulatory, requirement, s, and, best, practices.",";
+      benef, i, t: "1, 0, 0% compliance, with, standards"
+    }
     {
-      icon: Clock,,
-      title: "Fast Turnaround",",
-      description: "Rapid audit completion with detailed reports delivered within 5-10 business days.",",
+      ic, o, n: Clo, c, k
+      tit, l, e: "Fast, Turnaroun, d","
+      descripti, o, n: "Rapid, audit, completion with, detailed, reports delivered, within, 5-10, business, days.","
 =======
-      title: "Fast Turnaround",";,
-      description: "Rapid audit completion with detailed reports delivered within 5-10 business days.",";,
-      benefit: "5-10 day delivery guarantee",
-    },
+      tit, l, e: "Fast, Turnaroun, d",";
+      descripti, o, n: "Rapid, audit, completion with, detailed, reports delivered, within, 5-10, business, days.",";
+      benef, i, t: "5-10, day, delivery guarant, e, e"
+    }
     {
-      icon: Users,,
-      title: "Expert Team",",
-      description: "Certified blockchain security experts with extensive experience in smart contract auditing.",",
+      ic, o, n: Use, r, s
+      tit, l, e: "Expert, Tea, m","
+      descripti, o, n: "Certified, blockchain, security experts, with, extensive experience, in, smart contract, auditin, g.","
 =======
-      title: "Expert Team",";,
-      description: "Certified blockchain security experts with extensive experience in smart contract auditing.",";,
-      benefit: "50+ successful audits completed",
+      tit, l, e: "Expert, Tea, m",";
+      descripti, o, n: "Certified, blockchain, security experts, with, extensive experience, in, smart contract, auditin, g.",";
+      benef, i, t: "50+ successful, audits, completed"
     }
   ];
-
-  const pricing = [
+  const, pricin, g = [
     {
-      name: "Basic Audit",
-      price: "$2,500",
-      period: "one-time",
-      description: "Perfect for simple smart contracts and token contracts",
-      features: [,
-        "Static code analysis",
-        "Manual code review",
-        "Basic vulnerability scan",
-        "Security report",
-        "Email support",
-        "1 revision included",
-        "Standard compliance check",
-        "Up to 500 lines of code"
+      na, m, e: "Basic, Audi, t"
+      pri, c, e: "$2,5, 0, 0"
+      peri, o, d: "o, n, e-ti, m, e"
+      descripti, o, n: "Perfect, for, simple smart, contracts, and token, contract, s"
+      featur, e, s: [
+        "Static, code, analysis"
+        "Manual, code, review"
+        "Basic, vulnerability, scan"
+        "Security, repor, t"
+        "Email, suppor, t"
+        "1, revision, included"
+        "Standard, compliance, check"
+        "Up, to, 500 lines, of, code"
       ]
-      popular: false
-    },
+      popul, a, r: fal, s, e;
+    }
     {
-      name: "Professional Audit",
-      price: "$8,500",
-      period: "one-time",
-      description: "Comprehensive audit for complex DeFi protocols and dApps",
-      features: [,
-        "Full static & dynamic analysis",
-        "Comprehensive manual review",
-        "Advanced vulnerability scanning",
-        "Detailed security report",
-        "Priority support",
-        "3 revisions included",
-        "Full compliance verification",
-        "Up to 2,000 lines of code",
-        "Gas optimization analysis",
-        "Architecture review"
+      na, m, e: "Professional, Audi, t"
+      pri, c, e: "$8,5, 0, 0"
+      peri, o, d: "o, n, e-ti, m, e"
+      descripti, o, n: "Comprehensive, audit, for complex, DeFi, protocols and, dApp, s"
+      featur, e, s: [
+        "Full, stati, c & dynamic, analysi, s"
+        "Comprehensive, manual, review"
+        "Advanced, vulnerability, scanning"
+        "Detailed, security, report"
+        "Priority, suppor, t"
+        "3, revisions, included"
+        "Full, compliance, verification"
+        "Up, to, 2,000, lines, of co, d, e"
+        "Gas, optimization, analysis"
+        "Architecture, revie, w"
       ]
-      popular: true
-    },
+      popul, a, r: tr, u, e;
+    }
     {
-      name: "Enterprise Audit",
-      price: "$25,000",
-      period: "one-time",
-      description: "Complete audit solution for enterprise blockchain projects",
-      features: [,
-        "End-to-end security analysis",
-        "Multi-contract system review",
-        "Formal verification",
-        "Executive summary report",
-        "Dedicated security consultant",
-        "Unlimited revisions",
-        "Full regulatory compliance",
-        "Unlimited lines of code",
-        "Performance optimization",
-        "Architecture & design review",
-        "Post-deployment monitoring",
-        "Security training included"
+      na, m, e: "Enterprise, Audi, t"
+      pri, c, e: "$25,0, 0, 0"
+      peri, o, d: "o, n, e-ti, m, e"
+      descripti, o, n: "Complete, audit, solution for, enterprise, blockchain projec, t, s"
+      featur, e, s: [
+        "E, n, d-to-end, security, analysis"
+        "Mul, t, i-contract, system, review"
+        "Formal, verificatio, n"
+        "Executive, summary, report"
+        "Dedicated, security, consultant"
+        "Unlimited, revision, s"
+        "Full, regulatory, compliance"
+        "Unlimited, lines, of co, d, e"
+        "Performance, optimizatio, n"
+        "Architectu, r, e & design, revie, w"
+        "Po, s, t-deployment, monitorin, g"
+        "Security, training, included"
       ]
-      popular: false
+      popul, a, r: fal, s, e;
 =======
-      name: "Basic Audit",";,
-      price: "$2,500",";,
-      period: "one-time",";,
-      description: "Perfect for simple smart contracts and token contracts",";,
-      features: [,
-        "Static code analysis",";
-        "Manual code review",";
-        "Basic vulnerability scan",";
-        "Security report",";
-        "Email support",";
-        "1 revision included",";
-        "Standard compliance check",";
-        "Up to 500 lines of code"
-      ],
-      popular: false,
-    },
+      n, a, m
+  e: "Basic, Audi, t",";
+      pri, c, e: "$2,5, 0, 0",";
+      peri, o, d: "o, n, e-ti, m, e",";
+      descripti, o, n: "Perfect, for, simple smart, contracts, and token, contract, s",";
+      featur, e, s: [
+        "Static, code, analysis",";
+        "Manual, code, review",";
+        "Basic, vulnerability, scan",";
+        "Security, repor, t",";
+        "Email, suppor, t",";
+        "1, revision, included",";
+        "Standard, compliance, check",";
+        "Up, to, 500 lines, of, code"
+      ]
+      popul, a, r: fal, s, e
+    }
     {
-      name: "Professional Audit",";,
-      price: "$8,500",";,
-      period: "one-time",";,
-      description: "Comprehensive audit for complex DeFi protocols and dApps",";,
-      features: [,
-        "Full static & dynamic analysis",";
-        "Comprehensive manual review",";
-        "Advanced vulnerability scanning",";
-        "Detailed security report",";
-        "Priority support",";
-        "3 revisions included",";
-        "Full compliance verification",";
-        "Up to 2,000 lines of code",";
-        "Gas optimization analysis",";
-        "Architecture review"
-      ],
-      popular: true,
-    },
+      na, m, e: "Professional, Audi, t",";
+      pri, c, e: "$8,5, 0, 0",";
+      peri, o, d: "o, n, e-ti, m, e",";
+      descripti, o, n: "Comprehensive, audit, for complex, DeFi, protocols and, dApp, s",";
+      featur, e, s: [
+        "Full, stati, c & dynamic, analysi, s",";
+        "Comprehensive, manual, review",";
+        "Advanced, vulnerability, scanning",";
+        "Detailed, security, report",";
+        "Priority, suppor, t",";
+        "3, revisions, included",";
+        "Full, compliance, verification",";
+        "Up, to, 2,000, lines, of co, d, e",";
+        "Gas, optimization, analysis",";
+        "Architecture, revie, w"
+      ]
+      popul, a, r: tr, u, e
+    }
     {
-      name: "Enterprise Audit",";,
-      price: "$25,000",";,
-      period: "one-time",";,
-      description: "Complete audit solution for enterprise blockchain projects",";,
-      features: [,
-        "End-to-end security analysis",";
-        "Multi-contract system review",";
-        "Formal verification",";
-        "Executive summary report",";
-        "Dedicated security consultant",";
-        "Unlimited revisions",";
-        "Full regulatory compliance",";
-        "Unlimited lines of code",";
-        "Performance optimization",";
-        "Architecture & design review",";
-        "Post-deployment monitoring",";
-        "Security training included"
-      ],
-      popular: false,
+      na, m, e: "Enterprise, Audi, t",";
+      pri, c, e: "$25,0, 0, 0",";
+      peri, o, d: "o, n, e-ti, m, e",";
+      descripti, o, n: "Complete, audit, solution for, enterprise, blockchain projec, t, s",";
+      featur, e, s: [
+        "E, n, d-to-end, security, analysis",";
+        "Mul, t, i-contract, system, review",";
+        "Formal, verificatio, n",";
+        "Executive, summary, report",";
+        "Dedicated, security, consultant",";
+        "Unlimited, revision, s",";
+        "Full, regulatory, compliance",";
+        "Unlimited, lines, of co, d, e",";
+        "Performance, optimizatio, n",";
+        "Architectu, r, e & design, revie, w",";
+        "Po, s, t-deployment, monitorin, g",";
+        "Security, training, included"
+      ]
+      popul, a, r: fal, s, e
     }
   ];
-
-  const testimonials = [
+  const, testimonial, s = [
     {
-      name: "Michael Chen",",
-      role: "CTO, DeFi Protocol",",
-      content: "The smart contract audit identified 3 critical vulnerabilities that could have resulted in $50M in losses. The team's expertise saved our project and gave us confidence for mainnet launch.",",
+      na, m, e: "Michael, Che, n","
+      ro, l, e: "C, T, O, DeFi, Protoco, l","
+      conte, n, t: "The, smart, contract audit, identified, 3 critical, vulnerabilities, that could, have, resulted in $50M, in, losses. The, tea, m's, expertise, saved our, project, and gave, us, confidence for, mainnet, launch.","
 =======
-      name: "Michael Chen",";,
-      role: "CTO, DeFi Protocol",";,
-      content: "The smart contract audit identified 3 critical vulnerabilities that could have resulted in $50M in losses. The team's expertise saved our project and gave us confidence for mainnet launch.",";,
-      rating: 5,,
-      company: "DeFi Protocol",
-    },
+      na, m, e: "Michael, Che, n",";
+      ro, l, e: "C, T, O, DeFi, Protoco, l",";
+      conte, n, t: "The, smart, contract audit, identified, 3 critical, vulnerabilities, that could, have, resulted in $50M, in, losses. The, tea, m's, expertise, saved our, project, and gave, us, confidence for, mainnet, launch.",";
+      rati, n, g: 5
+      compa, n, y: "DeFi, Protoco, l"
+    }
     {
-      name: "Sarah Rodriguez",",
-      role: "Founder, NFT Marketplace",",
-      content: "Professional audit process with clear communication and actionable recommendations. The compliance verification helped us meet regulatory requirements for our marketplace launch.",",
+      na, m, e: "Sarah, Rodrigue, z","
+      ro, l, e: "Found, e, r, NFT, Marketplac, e","
+      conte, n, t: "Professional, audit, process with, clear, communication and, actionable, recommendations. The, compliance, verification helped, us, meet regulatory, requirements, for our, marketplace, launch.","
 =======
-      name: "Sarah Rodriguez",";,
-      role: "Founder, NFT Marketplace",";,
-      content: "Professional audit process with clear communication and actionable recommendations. The compliance verification helped us meet regulatory requirements for our marketplace launch.",";,
-      rating: 5,,
-      company: "NFT Marketplace",
-    },
+      na, m, e: "Sarah, Rodrigue, z",";
+      ro, l, e: "Found, e, r, NFT, Marketplac, e",";
+      conte, n, t: "Professional, audit, process with, clear, communication and, actionable, recommendations. The, compliance, verification helped, us, meet regulatory, requirements, for our, marketplace, launch.",";
+      rati, n, g: 5
+      compa, n, y: "NFT, Marketplac, e"
+    }
     {
-      name: "Dr. James Wilson",",
-      role: "Head of Blockchain, FinTech",",
-      content: "The enterprise audit package provided comprehensive security coverage for our multi-contract system. The formal verification process gave us mathematical proof of our contract's correctness.",",
+      na, m, e: "Dr. James, Wilso, n","
+      ro, l, e: "Head, of, Blockchain, FinTe, c, h","
+      conte, n, t: "The, enterprise, audit package, provided, comprehensive security, coverage, for our, mult, i-contract, syste, m. The, formal, verification process, gave, us mathematical, proof, of our, contrac, t's, correctnes, s.","
 =======
-      name: "Dr. James Wilson",";,
-      role: "Head of Blockchain, FinTech",";,
-      content: "The enterprise audit package provided comprehensive security coverage for our multi-contract system. The formal verification process gave us mathematical proof of our contract's correctness.",";,
-      rating: 5,,
-      company: "FinTech",
+      na, m, e: "Dr. James, Wilso, n",";
+      ro, l, e: "Head, of, Blockchain, FinTe, c, h",";
+      conte, n, t: "The, enterprise, audit package, provided, comprehensive security, coverage, for our, mult, i-contract, syste, m. The, formal, verification process, gave, us mathematical, proof, of our, contrac, t's, correctnes, s.",";
+      rati, n, g: 5
+      compa, n, y: "FinTe, c, h"
     }
   ];
-
-  const auditTypes = [
+  const, auditType, s = [
     {
-      title: "DeFi Protocols",",
-      icon: Globe,,
-      description: "Comprehensive auditing for decentralized finance protocols including lending, borrowing, and trading platforms.",",
-      vulnerabilities: ["Reentrancy attacks", "Flash loan exploits", "Oracle manipulation", "Liquidity pool risks"]",
-    },
+      tit, l, e: "DeFi, Protocol, s","
+      ic, o, n: Glo, b, e
+      descripti, o, n: "Comprehensive, auditing, for decentralized, finance, protocols including, lendin, g, borrowi, n, g, and, trading, platforms.","
+      vulnerabiliti, e, s: ["Reentrancy, attack, s", "Flash, loan, exploits", "Oracle, manipulatio, n", "Liquidity, pool, risks"]"
+    }
     {
-      title: "NFT Smart Contracts",",
-      icon: Code,,
-      description: "Specialized auditing for NFT marketplaces, minting contracts, and token standards compliance.",",
-      vulnerabilities: ["Metadata manipulation", "Royalty bypass", "Minting vulnerabilities", "Transfer restrictions"]",
-    },
+      tit, l, e: "NFT, Smart, Contracts","
+      ic, o, n: Co, d, e
+      descripti, o, n: "Specialized, auditing, for NFT, marketplace, s, minting, contract, s, and, token, standards complian, c, e.","
+      vulnerabiliti, e, s: ["Metadata, manipulatio, n", "Royalty, bypas, s", "Minting, vulnerabilitie, s", "Transfer, restriction, s"]"
+    }
     {
-      title: "Token Contracts",",
-      icon: Database,,
-      description: "Security analysis for ERC-20, ERC-721, ERC-1155, and custom token implementations.",",
-      vulnerabilities: ["Supply manipulation", "Access control issues", "Transfer bugs", "Approval vulnerabilities"]",
-    },
+      tit, l, e: "Token, Contract, s","
+      ic, o, n: Databa, s, e
+      descripti, o, n: "Security, analysis, for E, R, C-20, E, R, C-7, 2, 1, E, R, C-11, 5, 5, and, custom, token implementatio, n, s.","
+      vulnerabiliti, e, s: ["Supply, manipulatio, n", "Access, control, issues", "Transfer, bug, s", "Approval, vulnerabilitie, s"]"
+    }
     {
-      title: "DAO Governance",",
-      icon: Users,,
-      description: "Auditing governance contracts, voting mechanisms, and treasury management systems.",",
-      vulnerabilities: ["Vote manipulation", "Treasury exploits", "Proposal vulnerabilities", "Execution risks"]",
+      tit, l, e: "DAO, Governanc, e","
+      ic, o, n: Use, r, s
+      descripti, o, n: "Auditing, governance, contracts, voting, mechanism, s, and, treasury, management syste, m, s.","
+      vulnerabiliti, e, s: ["Vote, manipulatio, n", "Treasury, exploit, s", "Proposal, vulnerabilitie, s", "Execution, risk, s"]"
 =======
-      title: "DeFi Protocols",";,
-      icon: Globe,,
-      description: "Comprehensive auditing for decentralized finance protocols including lending, borrowing, and trading platforms.",";,
-      vulnerabilities: ["Reentrancy attacks", "Flash loan exploits", "Oracle manipulation", "Liquidity pool risks"]";,
-    },
+      tit, l, e: "DeFi, Protocol, s",";
+      ic, o, n: Glo, b, e
+      descripti, o, n: "Comprehensive, auditing, for decentralized, finance, protocols including, lendin, g, borrowi, n, g, and, trading, platforms.",";
+      vulnerabiliti, e, s: ["Reentrancy, attack, s", "Flash, loan, exploits", "Oracle, manipulatio, n", "Liquidity, pool, risks"]";
+    }
     {
-      title: "NFT Smart Contracts",";,
-      icon: Code,,
-      description: "Specialized auditing for NFT marketplaces, minting contracts, and token standards compliance.",";,
-      vulnerabilities: ["Metadata manipulation", "Royalty bypass", "Minting vulnerabilities", "Transfer restrictions"]";,
-    },
+      tit, l, e: "NFT, Smart, Contracts",";
+      ic, o, n: Co, d, e
+      descripti, o, n: "Specialized, auditing, for NFT, marketplace, s, minting, contract, s, and, token, standards complian, c, e.",";
+      vulnerabiliti, e, s: ["Metadata, manipulatio, n", "Royalty, bypas, s", "Minting, vulnerabilitie, s", "Transfer, restriction, s"]";
+    }
     {
-      title: "Token Contracts",";,
-      icon: Database,,
-      description: "Security analysis for ERC-20, ERC-721, ERC-1155, and custom token implementations.",";,
-      vulnerabilities: ["Supply manipulation", "Access control issues", "Transfer bugs", "Approval vulnerabilities"]";,
-    },
+      tit, l, e: "Token, Contract, s",";
+      ic, o, n: Databa, s, e
+      descripti, o, n: "Security, analysis, for E, R, C-20, E, R, C-7, 2, 1, E, R, C-11, 5, 5, and, custom, token implementatio, n, s.",";
+      vulnerabiliti, e, s: ["Supply, manipulatio, n", "Access, control, issues", "Transfer, bug, s", "Approval, vulnerabilitie, s"]";
+    }
     {
-      title: "DAO Governance",";,
-      icon: Users,,
-      description: "Auditing governance contracts, voting mechanisms, and treasury management systems.",";,
-      vulnerabilities: ["Vote manipulation", "Treasury exploits", "Proposal vulnerabilities", "Execution risks"]";,
+      tit, l, e: "DAO, Governanc, e",";
+      ic, o, n: Use, r, s
+      descripti, o, n: "Auditing, governance, contracts, voting, mechanism, s, and, treasury, management syste, m, s.",";
+      vulnerabiliti, e, s: ["Vote, manipulatio, n", "Treasury, exploit, s", "Proposal, vulnerabilitie, s", "Execution, risk, s"]";
     }
   ];
-
-  const process = [
+  const, proces, s = [
     {
-      step: "01",",
-      title: "Initial Assessment",",
-      description: "Code review and architecture analysis to understand the smart contract functionality and design.",
-    },
+      st, e, p: "01","
+      tit, l, e: "Initial, Assessmen, t","
+      descripti, o, n: "Code, review, and architecture, analysis, to understand, the, smart contract, functionality, and desi, g, n."
+    }
     {
-      step: "02",",
-      title: "Automated Scanning",",
-      description: "AI-powered vulnerability detection using industry-leading security tools and custom analyzers.",
-    },
+      st, e, p: "02","
+      tit, l, e: "Automated, Scannin, g","
+      descripti, o, n: "AI-powered, vulnerability, detection using, industr, y-leading, security, tools and, custom, analyzers."
+    }
     {
-      step: "03",",
-      title: "Manual Review",",
-      description: "Expert manual code review focusing on business logic, edge cases, and complex interactions.",
-    },
+      st, e, p: "03","
+      tit, l, e: "Manual, Revie, w","
+      descripti, o, n: "Expert, manual, code review, focusing, on business, logi, c, edge, case, s, and, complex, interactions."
+    }
     {
-      step: "04",",
-      title: "Risk Analysis",",
-      description: "Comprehensive risk assessment with vulnerability prioritization and impact analysis.",
-    },
+      st, e, p: "04","
+      tit, l, e: "Risk, Analysi, s","
+      descripti, o, n: "Comprehensive, risk, assessment with, vulnerability, prioritization and, impact, analysis."
+    }
     {
-      step: "05",",
-      title: "Report Generation",",
-      description: "Detailed security report with findings, recommendations, and remediation guidance.",
-    },
+      st, e, p: "05","
+      tit, l, e: "Report, Generatio, n","
+      descripti, o, n: "Detailed, security, report with, finding, s, recommendatio, n, s, and, remediation, guidance."
+    }
     {
-      step: "06",",
-      title: "Follow-up Support",",
+      st, e, p: "06","
+      tit, l, e: "Foll, o, w-up, Suppor, t","
 =======
-      step: "01",";,
-      title: "Initial Assessment",";,
-      description: "Code review and architecture analysis to understand the smart contract functionality and design.",
-    },
+      st, e, p: "01",";
+      tit, l, e: "Initial, Assessmen, t",";
+      descripti, o, n: "Code, review, and architecture, analysis, to understand, the, smart contract, functionality, and desi, g, n."
+    }
     {
-      step: "02",";,
-      title: "Automated Scanning",";,
-      description: "AI-powered vulnerability detection using industry-leading security tools and custom analyzers.",
-    },
+      st, e, p: "02",";
+      tit, l, e: "Automated, Scannin, g",";
+      descripti, o, n: "AI-powered, vulnerability, detection using, industr, y-leading, security, tools and, custom, analyzers."
+    }
     {
-      step: "03",";,
-      title: "Manual Review",";,
-      description: "Expert manual code review focusing on business logic, edge cases, and complex interactions.",
-    },
+      st, e, p: "03",";
+      tit, l, e: "Manual, Revie, w",";
+      descripti, o, n: "Expert, manual, code review, focusing, on business, logi, c, edge, case, s, and, complex, interactions."
+    }
     {
-      step: "04",";,
-      title: "Risk Analysis",";,
-      description: "Comprehensive risk assessment with vulnerability prioritization and impact analysis.",
-    },
+      st, e, p: "04",";
+      tit, l, e: "Risk, Analysi, s",";
+      descripti, o, n: "Comprehensive, risk, assessment with, vulnerability, prioritization and, impact, analysis."
+    }
     {
-      step: "05",";,
-      title: "Report Generation",";,
-      description: "Detailed security report with findings, recommendations, and remediation guidance.",
-    },
+      st, e, p: "05",";
+      tit, l, e: "Report, Generatio, n",";
+      descripti, o, n: "Detailed, security, report with, finding, s, recommendatio, n, s, and, remediation, guidance."
+    }
     {
-      step: "06",";,
-      title: "Follow-up Support",";,
-      description: "Ongoing support for vulnerability remediation and re-audit services.",
+      st, e, p: "06",";
+      tit, l, e: "Foll, o, w-up, Suppor, t",";
+      descripti, o, n: "Ongoing, support, for vulnerability, remediation, and re-audit, service, s."
     }
   ];
-
   return (
     <>
       <Helmet>
-        <title>Smart Contract Audit - Zion Tech Group | Blockchain Security Experts</title>
-        <meta
-          name="description"
-          content="Professional smart contract auditing services with 99.8% vulnerability detection rate. Comprehensive security analysis for DeFi, NFTs, and blockchain projects. 5-10 day delivery." /><meta name="keywords" content="smart contract audit, blockchain security, DeFi audit, NFT audit, smart contract security, vulnerability assessment, blockchain compliance" /><link rel="canonical" href="https://ziontechgroup.com/services/smart-contract-audit/>",
+        <title>Smart, Contract, Audit - Zion, Tech, Group | Blockchain, Security, Experts</title>
+        <me, t, a
+  na, m, e="descripti, o, n"
+          content="Professional, smart, contract auditing, services, with 99.8% vulnerability, detection, rate. Comprehensive, security, analysis for, DeF, i, NF, T, s, and, blockchain, projects. 5-10, day, delivery." /><meta name="keywor, d, s" content="smart, contract, audit, blockchain, securit, y, DeFi, audi, t, NFT, audi, t, smart, contract, security, vulnerability, assessmen, t, blockchain, complianc, e" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/sma, r, t-contra, c, t-aud, i, t/>"
 =======
-          content="Professional smart contract auditing services with 99.8% vulnerability detection rate. Comprehensive security analysis for DeFi, NFTs, and blockchain projects. 5-10 day delivery."
-        />
-        <meta name="keywords" content="smart contract audit, blockchain security, DeFi audit, NFT audit, smart contract security, vulnerability assessment, blockchain compliance" />";
-        <link rel="canonical" href="https: //ziontechgroup.com/services/smart-contract-audit" />";,
+          content="Professional, smart, contract auditing, services, with 99.8% vulnerability, detection, rate. Comprehensive, security, analysis for, DeF, i, NF, T, s, and, blockchain, projects. 5-10, day, delivery."
+         />
+        <meta name="keywor, d, s" content="smart, contract, audit, blockchain, securit, y, DeFi, audi, t, NFT, audi, t, smart, contract, security, vulnerability, assessmen, t, blockchain, complianc, e" />";
+        <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/servic, e, s/sma, r, t-contra, c, t-aud, i, t" />";
       </Helmet>
-
-      <Header />
-      
-      <main className="min-h-screen bg-white">";
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-red-900 via-orange-800 to-yellow-900 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className="text-center">
-              <h1 className="text-5xl md: text-7xl font-bold mb-6">",
-                Smart Contract <span className="bg-gradient-to-r from-red-400 to-yellow-400 bg-clip-text text-transparent">Audit</span>
+      <Head, e, r   />
+      <main, className="m, i, n-h-screen, b, g-whi, t, e">";
+        {/* Hero, Sectio, n */}
+        <section, className="bg-gradie, n, t-to-br, fro, m-r, e, d-900, vi, a-oran, g, e-800, t, o-yell, o, w-900, tex, t-white, p, y-20">
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8">"
+            <div, className="te, x, t-cent, e, r">
+              <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">"
+                Smart, Contrac, t <span, className="bg-gradie, n, t-to-r, fro, m-r, e, d-400, t, o-yell, o, w-400, b, g-cl, i, p-text, tex, t-transpare, n, t">Aud, i, t</sp, a, n>
               </h1>
-              <p className="text-xl md: text-2xl text-red-100 max-w-4xl mx-auto mb-8">",
-                Professional smart contract auditing services with 99.8% vulnerability detection rate. 
-                Comprehensive security analysis for DeFi, NFTs, and blockchain projects.
+              <p, className="te, x, t-xl, m, d: te, x, t-2xl, tex, t-r, e, d-100, ma, x-w-4xl, m, x-auto, m, b-8">"
+                Professional, smart, contract auditing, services, with 99.8% vulnerability, detection, rate. 
+                Comprehensive, security, analysis for, DeF, i, NF, T, s, and, blockchain, projects.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+              <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
 =======
-        <section className="bg-gradient-to-br from-red-900 via-orange-800 to-yellow-900 text-white py-20">";
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
-            <div className="text-center">";
-              <h1 className="text-5xl md: text-7xl font-bold mb-6">";,
-                Smart Contract <span className="bg-gradient-to-r from-red-400 to-yellow-400 bg-clip-text text-transparent">Audit</span>";
+        <section, className="bg-gradie, n, t-to-br, fro, m-r, e, d-900, vi, a-oran, g, e-800, t, o-yell, o, w-900, tex, t-white, p, y-20">";
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
+            <div, className="te, x, t-cent, e, r">";
+              <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">";
+                Smart, Contrac, t <span, className="bg-gradie, n, t-to-r, fro, m-r, e, d-400, t, o-yell, o, w-400, b, g-cl, i, p-text, tex, t-transpare, n, t">Aud, i, t</sp, a, n>";
               </h1>
-              <p className="text-xl md: text-2xl text-red-100 max-w-4xl mx-auto mb-8">";,
-                Professional smart contract auditing services with 99.8% vulnerability detection rate. 
-                Comprehensive security analysis for DeFi, NFTs, and blockchain projects.
+              <p, className="te, x, t-x, l, m
+  d: te, x, t-2xl, tex, t-r, e, d-100, ma, x-w-4xl, m, x-auto, m, b-8">";
+                Professional, smart, contract auditing, services, with 99.8% vulnerability, detection, rate. 
+                Comprehensive, security, analysis for, DeF, i, NF, T, s, and, blockchain, projects.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
+              <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
                 <a
-                  href="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-red-600 hover: bg-red-700 text-white font-semibold rounded-lg transition-colors",
+  hr, e, f="/conta, c, t"
+                  classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, b, g-r, e, d-600, hov, e
+  r: bg-r, e, d-700, tex, t-white, fon, t-semibold, rounde, d-lg, transitio, n-colo, r, s"
                 >
-                  <Phone className="w-5 h-5 mr-2/>
+                  <Phone, className="w-5 h-5, m, r-2  />
 =======
-                  <Phone className="w-5 h-5 mr-2" />";
-                  Request Quote
+                  <Phone, className="w-5 h-5, m, r-2" />";
+                  Request, Quot, e;
                 </a>
                 <a
-                  href="#pricing"
-                  className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover: bg-white hover:text-red-900 font-semibold rounded-lg transition-colors",
+  hr, e, f="#prici, n, g"
+                  classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, borde, r-2, borde, r-white, tex, t-white, hove, r: bg-white, hov, e
+  r:te, x, t-r, e, d-900, fon, t-semibold, rounde, d-lg, transitio, n-colo, r, s"
                 >
-                  View Pricing
-                  <ArrowRight className="w-5 h-5 ml-2/>
+                  View, Pricin, g;
+                  <ArrowRight, className="w-5 h-5, m, l-2  />
 =======
-                  <ArrowRight className="w-5 h-5 ml-2" />";
+                  <ArrowRight, className="w-5 h-5, m, l-2" />";
                 </a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Key Benefits */}
-        <section className="py-16 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              </d, i, v>
+            </d, i, v>
+          </d, i, v>
+        </secti, o, n>
+        {/* Key, Benefit, s */}
+        <section, className="py-16, b, g-gr, a, y-50">
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8">"
+            <div, className="text-center mb-12">
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
 =======
-        <section className="py-16 bg-gray-50">";
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
-            <div className="text-center mb-12">";
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">";
-                Why Choose Our Smart Contract Auditing Services?
+        <section, className="py-16, b, g-gr, a, y-50">";
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
+            <div, className="text-center mb-12">";
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
+                Why, Choose, Our Smart, Contract, Auditing Servic, e, s?
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
-                Protect your blockchain project with industry-leading security expertise and comprehensive analysis.
+              <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
+                Protect, your, blockchain project, with, industry-leading, security, expertise and, comprehensive, analysis.
               </p>
-            </div>
-
-            <div className="grid md: grid-cols-4 gap-8">",
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-red-100 rounded-full mb-4">
-                  <Shield className="w-8 h-8 text-red-600/>
+            </d, i, v>
+            <div, className="gri, d, m
+  d: gr, i, d-co, l, s-4, ga, p-8">"
+              <div, className="te, x, t-cent, e, r">
+                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-r, e, d-100, rounde, d-full, m, b-4">
+                  <Shield, className="w-8 h-8, tex, t-r, e, d-6, 0, 0  />
 =======
-            <div className="grid md: grid-cols-4 gap-8">";,
-              <div className="text-center">";
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-red-100 rounded-full mb-4">";
-                  <Shield className="w-8 h-8 text-red-600" />";
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">99.8% Detection Rate</h3>";
-                <p className="text-gray-600">Industry-leading vulnerability detection</p>";
-              </div>
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-4">
-                  <Clock className="w-8 h-8 text-orange-600/>
+            <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-8">";
+              <div, className="te, x, t-cent, e, r">";
+                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-r, e, d-100, rounde, d-full, m, b-4">";
+                  <Shield, className="w-8 h-8, tex, t-r, e, d-6, 0, 0" />";
+                </d, i, v>
+                <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">99.8% Detection, Rat, e</h3>";
+                <p, className="te, x, t-gr, a, y-6, 0, 0">Indust, r, y-leading, vulnerability, detection</p>";
+              </d, i, v>
+              <div, className="te, x, t-cent, e, r">
+                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-oran, g, e-100, rounde, d-full, m, b-4">
+                  <Clock, className="w-8 h-8, tex, t-oran, g, e-6, 0, 0  />
 =======
-              <div className="text-center">";
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-4">";
-                  <Clock className="w-8 h-8 text-orange-600" />";
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">5-10 Day Delivery</h3>";
-                <p className="text-gray-600">Fast turnaround guaranteed</p>";
-              </div>
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-yellow-100 rounded-full mb-4">
-                  <Users className="w-8 h-8 text-yellow-600/>
+              <div, className="te, x, t-cent, e, r">";
+                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-oran, g, e-100, rounde, d-full, m, b-4">";
+                  <Clock, className="w-8 h-8, tex, t-oran, g, e-6, 0, 0" />";
+                </d, i, v>
+                <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">5-10, Day, Delivery</h3>";
+                <p, className="te, x, t-gr, a, y-6, 0, 0">Fast, turnaround, guaranteed</p>";
+              </d, i, v>
+              <div, className="te, x, t-cent, e, r">
+                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-yell, o, w-100, rounde, d-full, m, b-4">
+                  <Users, className="w-8 h-8, tex, t-yell, o, w-6, 0, 0  />
 =======
-              <div className="text-center">";
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-yellow-100 rounded-full mb-4">";
-                  <Users className="w-8 h-8 text-yellow-600" />";
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">50+ Audits Completed</h3>";
-                <p className="text-gray-600">Proven track record of success</p>";
-              </div>
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
-                  <CheckCircle className="w-8 h-8 text-green-600/>
+              <div, className="te, x, t-cent, e, r">";
+                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-yell, o, w-100, rounde, d-full, m, b-4">";
+                  <Users, className="w-8 h-8, tex, t-yell, o, w-6, 0, 0" />";
+                </d, i, v>
+                <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">50+ Audits, Complete, d</h3>";
+                <p, className="te, x, t-gr, a, y-6, 0, 0">Proven, track, record of, succes, s</p>";
+              </d, i, v>
+              <div, className="te, x, t-cent, e, r">
+                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-4">
+                  <CheckCircle, className="w-8 h-8, tex, t-gre, e, n-6, 0, 0  />
 =======
-              <div className="text-center">";
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">";
-                  <CheckCircle className="w-8 h-8 text-green-600" />";
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">100% Compliance</h3>";
-                <p className="text-gray-600">Meet all regulatory standards</p>";
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Audit Types */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              <div, className="te, x, t-cent, e, r">";
+                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-4">";
+                  <CheckCircle, className="w-8 h-8, tex, t-gre, e, n-6, 0, 0" />";
+                </d, i, v>
+                <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">1, 0, 0% Complian, c, e</h3>";
+                <p, className="te, x, t-gr, a, y-6, 0, 0">Meet, all, regulatory standar, d, s</p>";
+              </d, i, v>
+            </d, i, v>
+          </d, i, v>
+        </secti, o, n>
+        {/* Audit, Type, s */}
+        <section, className="py-20">
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8">"
+            <div, className="te, x, t-center, m, b-16">
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
 =======
-        <section className="py-20">";
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
-            <div className="text-center mb-16">";
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">";
-                Specialized Audit Services
+        <section, className="py-20">";
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
+            <div, className="te, x, t-center, m, b-16">";
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
+                Specialized, Audit, Services;
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
-                Expert auditing for all types of blockchain projects and smart contract implementations.
+              <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
+                Expert, auditing, for all, types, of blockchain, projects, and smart, contract, implementations.
               </p>
-            </div>
-
-            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">",
-              {auditTypes.map((audit, index) => {
-                const Icon = audit.icon;
+            </d, i, v>
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+  g:gr, i, d-co, l, s-4, ga, p-8">"
+              {auditTyp, e, s.m, a, p((aud, i, t, ind, e, x) => {
+                const, Ico, n = aud, i, t.ic, o, n;
                 return (
-                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-red-100 rounded-full mb-6">
-                      <Icon className="w-8 h-8 text-red-600/>
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-4">{audit.title}</h3>
-                    <p className="text-gray-600 mb-6">{audit.description}</p>
-                    <div className="mb-4">
-                      <h4 className="font-semibold text-gray-900 mb-2">Common Vulnerabilities: </h4>",
-                      <ul className="space-y-1">
-                        {audit.vulnerabilities.map((vuln, vulnIndex) => (
-                          <li key={vulnIndex} className="flex items-center text-sm">
-                            <AlertTriangle className="w-4 h-4 text-orange-500 mr-2 flex-shrink-0/>
-                            <span className="text-gray-700">{vuln}</span>
+                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
+                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-r, e, d-100, rounde, d-full, m, b-6">
+                      <Icon, className="w-8 h-8, tex, t-r, e, d-6, 0, 0  />
+                    </d, i, v>
+                    <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">{aud, i, t.tit, l, e}</h3>
+                    <p, className="te, x, t-gr, a, y-600, m, b-6">{aud, i, t.descripti, o, n}</p>
+                    <div, className="mb-4">
+                      <h4, className="fo, n, t-semibold, tex, t-gr, a, y-900, m, b-2">Common, Vulnerabilitie, s: </h4>"
+                      <ul, className="spa, c, e-y-1">
+                        {aud, i, t.vulnerabiliti, e, s.m, a, p((vu, l, n, vulnInd, e, x) => (
+                          <li, ke, y={vulnInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm">
+                            <AlertTriangle, className="w-4 h-4, tex, t-oran, g, e-500, m, r-2, fle, x-shri, n, k-0  />
+                            <span, className="te, x, t-gr, a, y-7, 0, 0">{vu, l, n}</sp, a, n>
 =======
-            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">";,
-              {auditTypes.map((audit, index) => {
-                const Icon = audit.icon;
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+  g:gr, i, d-co, l, s-4, ga, p-8">";
+              {auditTyp, e, s.m, a, p((aud, i, t, ind, e, x) => {
+                const, Ico, n = aud, i, t.ic, o, n;
                 return (
-                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">";,
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-red-100 rounded-full mb-6">";
-                      <Icon className="w-8 h-8 text-red-600" />";
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-4">{audit.title}</h3>";
-                    <p className="text-gray-600 mb-6">{audit.description}</p>";
-                    <div className="mb-4">";
-                      <h4 className="font-semibold text-gray-900 mb-2">Common Vulnerabilities: </h4>";,
-                      <ul className="space-y-1">";
-                        {audit.vulnerabilities.map((vuln, vulnIndex) => (
-                          <li key={vulnIndex} className="flex items-center text-sm">";
-                            <AlertTriangle className="w-4 h-4 text-orange-500 mr-2 flex-shrink-0" />";
-                            <span className="text-gray-700">{vuln}</span>";
+                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";
+                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-r, e, d-100, rounde, d-full, m, b-6">";
+                      <Icon, className="w-8 h-8, tex, t-r, e, d-6, 0, 0" />";
+                    </d, i, v>
+                    <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">{aud, i, t.tit, l, e}</h3>";
+                    <p, className="te, x, t-gr, a, y-600, m, b-6">{aud, i, t.descripti, o, n}</p>";
+                    <div, className="mb-4">";
+                      <h4, className="fo, n, t-semibold, tex, t-gr, a, y-900, m, b-2">Common, Vulnerabilitie, s: </h4>";
+                      <ul, className="spa, c, e-y-1">";
+                        {aud, i, t.vulnerabiliti, e, s.m, a, p((vu, l, n, vulnInd, e, x) => (
+                          <li, ke, y={vulnInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm">";
+                            <AlertTriangle, className="w-4 h-4, tex, t-oran, g, e-500, m, r-2, fle, x-shri, n, k-0" />";
+                            <span, className="te, x, t-gr, a, y-7, 0, 0">{vu, l, n}</sp, a, n>";
                           </li>
                         ))}
                       </ul>
-                    </div>
-                  </div>
+                    </d, i, v>
+                  </d, i, v>
                 );
               })}
-            </div>
-          </div>
-        </section>
-
-        {/* Process */}
-        <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            </d, i, v>
+          </d, i, v>
+        </secti, o, n>
+        {/* Proce, s, s */}
+        <section, className="py-20, b, g-gr, a, y-50">
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8">"
+            <div, className="te, x, t-center, m, b-16">
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
 =======
-        <section className="py-20 bg-gray-50">";
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
-            <div className="text-center mb-16">";
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">";
-                Our Audit Process
+        <section, className="py-20, b, g-gr, a, y-50">";
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
+            <div, className="te, x, t-center, m, b-16">";
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
+                Our, Audit, Process;
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
-                Systematic approach ensuring comprehensive security analysis and detailed reporting.
+              <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
+                Systematic, approach, ensuring comprehensive, security, analysis and, detailed, reporting.
               </p>
-            </div>
-
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            </d, i, v>
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+  g:gr, i, d-co, l, s-3, ga, p-8">"
 =======
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">";,
-              {process.map((step, index) => (
-                <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">";
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-red-100 rounded-lg mb-4">";
-                    <span className="text-red-600 font-bold text-lg">{step.step}</span>";
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{step.title}</h3>";
-                  <p className="text-gray-600">{step.description}</p>";
-                </div>
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+  g:gr, i, d-co, l, s-3, ga, p-8">";
+              {proce, s, s.m, a, p((st, e, p, ind, e, x) => (
+                <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";
+                  <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-r, e, d-100, rounde, d-lg, m, b-4">";
+                    <span, className="te, x, t-r, e, d-600, fon, t-bold, tex, t-lg">{st, e, p.st, e, p}</sp, a, n>";
+                  </d, i, v>
+                  <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{st, e, p.tit, l, e}</h3>";
+                  <p, className="te, x, t-gr, a, y-6, 0, 0">{st, e, p.descripti, o, n}</p>";
+                </d, i, v>
               ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Features */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            </d, i, v>
+          </d, i, v>
+        </secti, o, n>
+        {/* Featur, e, s */}
+        <section, className="py-20">
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8">"
+            <div, className="te, x, t-center, m, b-16">
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
 =======
-        <section className="py-20">";
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
-            <div className="text-center mb-16">";
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">";
-                Advanced Security Analysis
+        <section, className="py-20">";
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
+            <div, className="te, x, t-center, m, b-16">";
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
+                Advanced, Security, Analysis;
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
-                Comprehensive security testing using cutting-edge tools and expert manual review.
+              <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
+                Comprehensive, security, testing using, cuttin, g-edge, tools, and expert, manual, review.
               </p>
-            </div>
-
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
-              {features.map((feature, index) => {
-                const Icon = feature.icon;
+            </d, i, v>
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+  g:gr, i, d-co, l, s-3, ga, p-8">"
+              {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
+                const, Ico, n = featu, r, e.ic, o, n;
                 return (
-                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",
-                    <div className="inline-flex items-center justify-center w-12 h-12 bg-red-100 rounded-lg mb-4">
-                      <Icon className="w-6 h-6 text-red-600/>
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
-                    <p className="text-gray-600 mb-4">{feature.description}</p>
-                    <div className="inline-flex items-center text-green-600 font-semibold text-sm">
-                      <CheckCircle className="w-4 h-4 mr-1/>
+                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
+                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-r, e, d-100, rounde, d-lg, m, b-4">
+                      <Icon, className="w-6 h-6, tex, t-r, e, d-6, 0, 0  />
+                    </d, i, v>
+                    <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}</h3>
+                    <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>
+                    <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">
+                      <CheckCircle, className="w-4 h-4, m, r-1  />
 =======
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">";,
-              {features.map((feature, index) => {
-                const Icon = feature.icon;
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+  g:gr, i, d-co, l, s-3, ga, p-8">";
+              {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
+                const, Ico, n = featu, r, e.ic, o, n;
                 return (
-                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">";,
-                    <div className="inline-flex items-center justify-center w-12 h-12 bg-red-100 rounded-lg mb-4">";
-                      <Icon className="w-6 h-6 text-red-600" />";
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>";
-                    <p className="text-gray-600 mb-4">{feature.description}</p>";
-                    <div className="inline-flex items-center text-green-600 font-semibold text-sm">";
-                      <CheckCircle className="w-4 h-4 mr-1" />";
-                      {feature.benefit}
-                    </div>
-                  </div>
+                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";
+                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-r, e, d-100, rounde, d-lg, m, b-4">";
+                      <Icon, className="w-6 h-6, tex, t-r, e, d-6, 0, 0" />";
+                    </d, i, v>
+                    <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}</h3>";
+                    <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>";
+                    <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">";
+                      <CheckCircle, className="w-4 h-4, m, r-1" />";
+                      {featu, r, e.benef, i, t}
+                    </d, i, v>
+                  </d, i, v>
                 );
               })}
-            </div>
-          </div>
-        </section>
-
-        {/* Pricing */}
-        <section id="pricing" className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            </d, i, v>
+          </d, i, v>
+        </secti, o, n>
+        {/* Prici, n, g */}
+        <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8">"
+            <div, className="te, x, t-center, m, b-16">
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
 =======
-        <section id="pricing" className="py-20 bg-gray-50">";
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
-            <div className="text-center mb-16">";
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">";
-                Transparent Pricing for Every Project Size
+        <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">";
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
+            <div, className="te, x, t-center, m, b-16">";
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
+                Transparent, Pricing, for Every, Project, Size;
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
-                Choose the audit package that fits your smart contract complexity and security requirements.
+              <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
+                Choose, the, audit package, that, fits your, smart, contract complexity, and, security requiremen, t, s.
               </p>
-            </div>
-
-            <div className="grid md: grid-cols-3 gap-8">",
+            </d, i, v>
+            <div, className="gri, d, m
+  d: gr, i, d-co, l, s-3, ga, p-8">"
 =======
-            <div className="grid md: grid-cols-3 gap-8">";,
-              {pricing.map((plan, index) => (
-                <div key={index} className={`bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? 'ring-2 ring-red-500 relative' : ''}`}>`;
-                  {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">";
-                      <span className="bg-red-500 text-white px-4 py-1 rounded-full text-sm font-semibold">";
-                        Most Popular
-                      </span>
-                    </div>
+            <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";
+              {prici, n, g.m, a, p((pl, a, n, ind, e, x) => (
+                <div, ke, y={ind, e, x} classNa, m, e={`bg-white, rounde, d-2xl, shado, w-l, g, p-8 ${pl, a, n.popul, a, r ? 'ri, n, g-2, rin, g-r, e, d-500, relativ, e' : ''}`}>`;`
+                  {pl, a, n.popul, a, r && (
+                    <div, className="absolu, t, e -t, o, p-4, lef, t-1/2, transfor, m -transla, t, e-x-1/2">";
+                      <span, className="bg-r, e, d-500, tex, t-white, p, x-4, p, y-1, rounde, d-full, tex, t-sm, fon, t-semibo, l, d">";
+                        Most, Popula, r;
+                      </sp, a, n>
+                    </d, i, v>
                   )}
-                  <div className="text-center mb-8">";
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>";
-                    <div className="flex items-center justify-center mb-2">";
-                      <span className="text-4xl font-bold text-gray-900">{plan.price}</span>";
-                      <span className="text-gray-600 ml-1">/{plan.period}</span>";
-                    </div>
-                    <p className="text-gray-600">{plan.description}</p>";
-                  </div>
-                  <ul className="space-y-4 mb-8">";
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center">
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0/>
-                        <span className="text-gray-700">{feature}</span>
+                  <div, className="te, x, t-center, m, b-8">";
+                    <h3, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">{pl, a, n.na, m, e}</h3>";
+                    <div, className="flex, item, s-center, justif, y-center, m, b-2">";
+                      <span, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0">{pl, a, n.pri, c, e}</sp, a, n>";
+                      <span, className="te, x, t-gr, a, y-600, m, l-1">/{pl, a, n.peri, o, d}</sp, a, n>";
+                    </d, i, v>
+                    <p, className="te, x, t-gr, a, y-6, 0, 0">{pl, a, n.descripti, o, n}</p>";
+                  </d, i, v>
+                  <ul, className="spa, c, e-y-4, m, b-8">";
+                    {pl, a, n.featur, e, s.m, a, p((featu, r, e, featureInd, e, x) => (
+                      <li, ke, y={featureInd, e, x} classNa, m, e="flex, item, s-cent, e, r">
+                        <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3, fle, x-shri, n, k-0  />
+                        <span, className="te, x, t-gr, a, y-7, 0, 0">{featu, r, e}</sp, a, n>
 =======
-                      <li key={featureIndex} className="flex items-center">";
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />";
-                        <span className="text-gray-700">{feature}</span>";
+                      <li, ke, y={featureInd, e, x} classNa, m, e="flex, item, s-cent, e, r">";
+                        <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3, fle, x-shri, n, k-0" />";
+                        <span, className="te, x, t-gr, a, y-7, 0, 0">{featu, r, e}</sp, a, n>";
                       </li>
                     ))}
                   </ul>
                   <a
-                    href="/contact"
-                    className={
-`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${`;
-plan.popular
-? 'bg-red-600 text-white hover:bg-red-700'
+  hr, e, f="/conta, c, t"
+                    classNa, m, e={
+`w-full, block, text-center, p, y-3, p, x-6, rounde, d-lg, fon, t-semibold, transitio, n-colo, r, s ${`;`
+pl, a, n.popul, a, r;
+? 'bg-r, e, d-600, tex, t-white, hove, r: bg-r, e, d-7, 0, 0'
 =======
-? 'bg-red-600 text-white hover: bg-red-700',';,
-: 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-}`}`;
+? 'bg-r, e, d-600, tex, t-white, hov, e
+  r: bg-r, e, d-7, 0, 0',';
+: 'bg-gr, a, y-100, tex, t-gr, a, y-900, hove, r:bg-gr, a, y-2, 0, 0'
+}`}`;`
                   >
-                    Request Quote
+                    Request, Quot, e;
                   </a>
-                </div>
+                </d, i, v>
               ))}
-            </div>
-
-            <div className="text-center mt-12">";
-              <p className="text-gray-600 mb-4">Need a custom audit solution?</p>";
+            </d, i, v>
+            <div, className="te, x, t-center, m, t-12">";
+              <p, className="te, x, t-gr, a, y-600, m, b-4">Need, a, custom audit, solutio, n?</p>";
               <a
-                href="/contact"
-                className="inline-flex items-center text-red-600 hover: text-red-700 font-semibold",
+  hr, e, f="/conta, c, t"
+                classNa, m, e="inli, n, e-flex, item, s-center, tex, t-r, e, d-600, hove, r: te, x, t-r, e, d-700, fon, t-semibo, l, d"
               >
-                Contact our Security Team
-                <ArrowRight className="w-4 h-4 ml-1/>
+                Contact, our, Security Te, a, m;
+                <ArrowRight, className="w-4 h-4, m, l-1  />
 =======
-                <ArrowRight className="w-4 h-4 ml-1" />";
+                <ArrowRight, className="w-4 h-4, m, l-1" />";
               </a>
-            </div>
-          </div>
-        </section>
-
-        {/* Testimonials */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            </d, i, v>
+          </d, i, v>
+        </secti, o, n>
+        {/* Testimonia, l, s */}
+        <section, className="py-20">
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8">"
+            <div, className="te, x, t-center, m, b-16">
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
 =======
-        <section className="py-20">";
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
-            <div className="text-center mb-16">";
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">";
-                What Our Clients Say
+        <section, className="py-20">";
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
+            <div, className="te, x, t-center, m, b-16">";
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
+                What, Our, Clients S, a, y;
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
-                Join dozens of successful blockchain projects that trust our security expertise.
+              <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
+                Join, dozens, of successful, blockchain, projects that, trust, our security, expertis, e.
               </p>
-            </div>
-
-            <div className="grid md: grid-cols-3 gap-8">",
+            </d, i, v>
+            <div, className="gri, d, m
+  d: gr, i, d-co, l, s-3, ga, p-8">"
 =======
-            <div className="grid md: grid-cols-3 gap-8">";,
-              {testimonials.map((testimonial, index) => (
-                <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">";
-                  <div className="flex items-center mb-4">";
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current/>
+            <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";
+              {testimonia, l, s.m, a, p((testimoni, a, l, ind, e, x) => (
+                <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";
+                  <div, className="flex, item, s-center, m, b-4">";
+                    {[...Arr, a, y(testimoni, a, l.rati, n, g)].m, a, p((_, i) => (
+                      <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t  />
 =======
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />";
+                      <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t" />";
                     ))}
-                  </div>
-                  <blockquote className="text-gray-700 mb-6 italic">";
-                    "{testimonial.content}"
-                  </blockquote>
-                  <div>
-                    <div className="font-semibold text-gray-900">{testimonial.name}</div>";
-                    <div className="text-gray-600 text-sm">{testimonial.role}</div>";
-                    <div className="text-red-600 text-sm font-medium">{testimonial.company}</div>";
-                  </div>
-                </div>
+                  </d, i, v>
+                  <blockquote, className="te, x, t-gr, a, y-700, m, b-6, itali, c">";
+                    "{testimoni, a, l.conte, n, t}"
+                  </blockquo, t, e>
+                  <d, i, v>
+                    <div, className="fo, n, t-semibold, tex, t-gr, a, y-9, 0, 0">{testimoni, a, l.na, m, e}</d, i, v>";
+                    <div, className="te, x, t-gr, a, y-600, tex, t-sm">{testimoni, a, l.ro, l, e}</d, i, v>";
+                    <div, className="te, x, t-r, e, d-600, tex, t-sm, fon, t-medi, u, m">{testimoni, a, l.compa, n, y}</d, i, v>";
+                  </d, i, v>
+                </d, i, v>
               ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-br from-red-900 via-orange-800 to-yellow-900 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">",
-            <h2 className="text-4xl font-bold mb-6">
+            </d, i, v>
+          </d, i, v>
+        </secti, o, n>
+        {/* CTA, Sectio, n */}
+        <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-r, e, d-900, vi, a-oran, g, e-800, t, o-yell, o, w-900, tex, t-whi, t, e">
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8, tex, t-cent, e, r">"
+            <h2, className="te, x, t-4xl, fon, t-bold, m, b-6">
 =======
-        <section className="py-20 bg-gradient-to-br from-red-900 via-orange-800 to-yellow-900 text-white">";
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">";,
-            <h2 className="text-4xl font-bold mb-6">";
-              Ready to Secure Your Smart Contracts?
+        <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-r, e, d-900, vi, a-oran, g, e-800, t, o-yell, o, w-900, tex, t-whi, t, e">";
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, tex, t-cent, e, r">";
+            <h2, className="te, x, t-4xl, fon, t-bold, m, b-6">";
+              Ready, to, Secure Your, Smart, Contracts?
             </h2>
-            <p className="text-xl text-red-100 max-w-3xl mx-auto mb-8">";
-              Protect your blockchain project with professional smart contract auditing from certified security experts.
+            <p, className="te, x, t-xl, tex, t-r, e, d-100, ma, x-w-3xl, m, x-auto, m, b-8">";
+              Protect, your, blockchain project, with, professional smart, contract, auditing from, certified, security exper, t, s.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+            <div, className="flex, fle, x-co, l, s
+  m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
 =======
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
+            <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
               <a
-                href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-red-600 hover: bg-red-700 text-white font-semibold rounded-lg transition-colors",
+  hr, e, f="/conta, c, t"
+                classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, b, g-r, e, d-600, hov, e
+  r: bg-r, e, d-700, tex, t-white, fon, t-semibold, rounde, d-lg, transitio, n-colo, r, s"
               >
-                <Phone className="w-5 h-5 mr-2/>
+                <Phone, className="w-5 h-5, m, r-2  />
 =======
-                <Phone className="w-5 h-5 mr-2" />";
-                Request Free Quote
+                <Phone, className="w-5 h-5, m, r-2" />";
+                Request, Free, Quote;
               </a>
               <a
-                href="/case-studies"
-                className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover: bg-white hover:text-red-900 font-semibold rounded-lg transition-colors",
+  hr, e, f="/ca, s, e-studi, e, s"
+                classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, borde, r-2, borde, r-white, tex, t-white, hove, r: bg-white, hov, e
+  r:te, x, t-r, e, d-900, fon, t-semibold, rounde, d-lg, transitio, n-colo, r, s"
               >
-                View Audit Reports
-                <ArrowRight className="w-5 h-5 ml-2/>
+                View, Audit, Reports;
+                <ArrowRight, className="w-5 h-5, m, l-2  />
 =======
-                <ArrowRight className="w-5 h-5 ml-2" />";
+                <ArrowRight, className="w-5 h-5, m, l-2" />";
               </a>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <Footer />
-    </>
+            </d, i, v>
+          </d, i, v>
+        </secti, o, n>
+      </ma, i, n>
+      <Foot, e, r   />
+    < />
   );
 };
-
 export default SmartContractAudit;

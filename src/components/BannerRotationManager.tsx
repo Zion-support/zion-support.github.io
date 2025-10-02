@@ -1,154 +1,140 @@
-import React, { lazy, Suspense, useState, useEffect } from 'react';
-// Define available banners with their import paths
-const bannerComponents = {
-  'october2025-tech-breakthrough': lazy(() => import('./October2025TechBreakthroughBanner')),
-  'october2025-next-gen-ai': lazy(() => import('./October2025NextGenAIBanner')),
-  'october2025-operational-excellence': lazy(() => import('./October2025OperationalExcellenceBanner')),
-  'october2025-edge-ai-quantum': lazy(() => import('./October2025EdgeAIQuantumCryptoBanner')),
-  'october2025-breakthrough-content': lazy(() => import('./October2025BreakthroughContentBanner')),
-  'october2025-ai-revolution': lazy(() => import('./October2025AIRevolutionBanner')),
-  'october2025-new-content': lazy(() => import('./October2025NewContentBanner')),
-  'october2025-new-breakthrough': lazy(() => import('./October2025NewBreakthroughBanner')),
-  'october2025-document-automation': lazy(() => import('./October2025DocumentAutomationBanner')),
-  'october2025-revops': lazy(() => import('./October2025RevOpsBanner')),
-  'january2026-revolutionary': lazy(() => import('./January2026RevolutionaryBanner')),
-  'new-services-2026': lazy(() => import('./NewServicesPromoBanner2026'))
+import, Reac, t, { la, z, y, Suspen, s, e, useSta, t, e, useEffe, c, t } fr, o, m "rea, c, t";
+// Define, available, banners with, their, import pat, h, s
+  const, bannerComponent, s = {
+  'october20, 2, 5-te, c, h-breakthrou, g, h': la, z, y(() => impo, r, t('./October2025TechBreakthroughBann, e, r'))
+  'october20, 2, 5-ne, x, t-g, e, n-ai': la, z, y(() => impo, r, t('./October2025NextGenAIBann, e, r'))
+  'october20, 2, 5-operation, a, l-excellen, c, e': la, z, y(() => impo, r, t('./October2025OperationalExcellenceBann, e, r'))
+  'october20, 2, 5-ed, g, e-ai-quant, u, m': la, z, y(() => impo, r, t('./October2025EdgeAIQuantumCryptoBann, e, r'))
+  'october20, 2, 5-breakthrou, g, h-conte, n, t': la, z, y(() => impo, r, t('./October2025BreakthroughContentBann, e, r'))
+  'october20, 2, 5-ai-revoluti, o, n': la, z, y(() => impo, r, t('./October2025AIRevolutionBann, e, r'))
+  'october20, 2, 5-n, e, w-conte, n, t': la, z, y(() => impo, r, t('./October2025NewContentBann, e, r'))
+  'october20, 2, 5-n, e, w-breakthrou, g, h': la, z, y(() => impo, r, t('./October2025NewBreakthroughBann, e, r'))
+  'october20, 2, 5-docume, n, t-automati, o, n': la, z, y(() => impo, r, t('./October2025DocumentAutomationBann, e, r'))
+  'october20, 2, 5-revo, p, s': la, z, y(() => impo, r, t('./October2025RevOpsBann, e, r'))
+  'january20, 2, 6-revolutiona, r, y': la, z, y(() => impo, r, t('./January2026RevolutionaryBann, e, r'))
+  'n, e, w-servic, e, s-20, 2, 6': la, z, y(() => impo, r, t('./NewServicesPromoBanner20, 2, 6'))
 =======
-import React, { lazy, Suspense, useState, useEffect } from 'react';';
-
-// Define available banners with their import paths
-const bannerComponents = {
-  'october2025-tech-breakthrough': lazy(() => import('./October2025TechBreakthroughBanner')),';
-  'october2025-next-gen-ai': lazy(() => import('./October2025NextGenAIBanner')),';
-  'october2025-operational-excellence': lazy(() => import('./October2025OperationalExcellenceBanner')),';
-  'october2025-edge-ai-quantum': lazy(() => import('./October2025EdgeAIQuantumCryptoBanner')),';
-  'october2025-breakthrough-content': lazy(() => import('./October2025BreakthroughContentBanner')),';
-  'october2025-ai-revolution': lazy(() => import('./October2025AIRevolutionBanner')),';
-  'october2025-new-content': lazy(() => import('./October2025NewContentBanner')),';
-  'october2025-new-breakthrough': lazy(() => import('./October2025NewBreakthroughBanner')),';
-  'october2025-document-automation': lazy(() => import('./October2025DocumentAutomationBanner')),';
-  'october2025-revops': lazy(() => import('./October2025RevOpsBanner')),';
-  'january2026-revolutionary': lazy(() => import('./January2026RevolutionaryBanner')),';
-  'new-services-2026': lazy(() => import('./NewServicesPromoBanner2026')),';
+import, Reac, t, { la, z, y, Suspen, s, e, useSta, t, e, useEffe, c, t } fr, o, m "rea, c, t";';
+// Define, available, banners with, their, import pat, h, s
+  const, bannerComponent, s = {
+  'october20, 2, 5-te, c, h-breakthrou, g, h': la, z, y(() => impo, r, t('./October2025TechBreakthroughBann, e, r')),';
+  'october20, 2, 5-ne, x, t-g, e, n-ai': la, z, y(() => impo, r, t('./October2025NextGenAIBann, e, r')),';
+  'october20, 2, 5-operation, a, l-excellen, c, e': la, z, y(() => impo, r, t('./October2025OperationalExcellenceBann, e, r')),';
+  'october20, 2, 5-ed, g, e-ai-quant, u, m': la, z, y(() => impo, r, t('./October2025EdgeAIQuantumCryptoBann, e, r')),';
+  'october20, 2, 5-breakthrou, g, h-conte, n, t': la, z, y(() => impo, r, t('./October2025BreakthroughContentBann, e, r')),';
+  'october20, 2, 5-ai-revoluti, o, n': la, z, y(() => impo, r, t('./October2025AIRevolutionBann, e, r')),';
+  'october20, 2, 5-n, e, w-conte, n, t': la, z, y(() => impo, r, t('./October2025NewContentBann, e, r')),';
+  'october20, 2, 5-n, e, w-breakthrou, g, h': la, z, y(() => impo, r, t('./October2025NewBreakthroughBann, e, r')),';
+  'october20, 2, 5-docume, n, t-automati, o, n': la, z, y(() => impo, r, t('./October2025DocumentAutomationBann, e, r')),';
+  'october20, 2, 5-revo, p, s': la, z, y(() => impo, r, t('./October2025RevOpsBann, e, r')),';
+  'january20, 2, 6-revolutiona, r, y': la, z, y(() => impo, r, t('./January2026RevolutionaryBann, e, r')),';
+  'n, e, w-servic, e, s-20, 2, 6': la, z, y(() => impo, r, t('./NewServicesPromoBanner20, 2, 6')),';
 };
-
-export type BannerKey = keyof typeof bannerComponents;
-
-interface BannerRotationManagerProps {
-/** Array of banner keys to display in rotation */
-banners?: BannerKey[];
-/** Rotation interval in milliseconds (default: 8000) */
-interval?: number;
-/** Whether to auto-rotate banners (default: true) */
-autoRotate?: boolean;
-/** Maximum number of banners to show (default: 3) */
+export, type, BannerKey = keyof, typeof, bannerComponents;
+interface, BannerRotationManagerProp, s {
+/** Array, of, banner keys, to, display in, rotatio, n */
+banne, r, s?: BannerK, e, y[];
+/** Rotation, interval, in millisecon, d, s (defau, l, t: 80, 0, 0) */
+interv, a, l?: numb, e, r;
+/** Whether, to, auto-rotate, banner, s (defau, l, t: tr, u, e) */
+autoRota, t, e?: boole, a, n;
+/** Maximum, number, of banners, to, show (defau, l, t: 3) */
 =======
-/** Rotation interval in milliseconds (default: 8000) */,,
-interval?: number;
-/** Whether to auto-rotate banners (default: true) */,,
-autoRotate?: boolean;
-/** Maximum number of banners to show (default: 3) */,,
-maxBanners?: number;
+/** Rotation, interval, in millisecon, d, s (defa, u, l
+  t: 80, 0, 0) */
+interv, a, l?: numb, e, r;
+/** Whether, to, auto-rotate, banner, s (defau, l, t: tr, u, e) */
+autoRota, t, e?: boole, a, n;
+/** Maximum, number, of banners, to, show (defau, l, t: 3) */
+maxBanne, r, s?: numb, e, r;
 }
-
-const LoadingFallback = () => (
-  <div className="bg-gradient-to-r from-purple-900/40 to-blue-900/40 rounded-xl p-8 border border-purple-500/30 animate-pulse">";
-    <div className="h-32 bg-white/10 rounded"></div>";
-  </div>
+const, LoadingFallbac, k = () => (
+  <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/40, t, o-bl, u, e-9, 0, 0/40, rounde, d-x, l, p-8, border, border-purp, l, e-5, 0, 0/30, animat, e-pul, s, e">";
+    <div, className="h-32, b, g-whi, t, e/10, rounde, d"></d, i, v>";
+  </d, i, v>
 );
-
 /**
- * Banner Rotation Manager Component
+ * Banner, Rotation, Manager Compone, n, t;
  * 
- * Manages banner display with lazy loading, rotation, and performance optimization
+ * Manages, banner, display with, lazy, loading, rotati, o, n, and, performance, optimization;
  */
-export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({ banners = [
-    'october2025-new-breakthrough',
-    'october2025-tech-breakthrough',
-    'october2025-next-gen-ai'
+export, const, BannerRotationManager: Rea, c, t.FC<BannerRotationManagerPro, p, s> = ({ banne, r, s = [
+    'october20, 2, 5-n, e, w-breakthrou, g, h'
+    'october20, 2, 5-te, c, h-breakthrou, g, h'
+    'october20, 2, 5-ne, x, t-g, e, n-ai'
   ]
-  interval = 8000
+  interv, a, l = 80, 0, 0;
 =======
-export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({,
-  banners = [
-    'october2025-new-breakthrough',';
-    'october2025-tech-breakthrough',';
-    'october2025-next-gen-ai',';
-  ],
-  interval = 8000,
-  autoRotate = false, // Disabled by default to reduce unnecessary re-renders
-  maxBanners = 3
+export, const, BannerRotationManager: Rea, c, t.FC<BannerRotationManagerPro, p, s> = ({
+  banne, r, s = [
+    'october20, 2, 5-n, e, w-breakthrou, g, h',';
+    'october20, 2, 5-te, c, h-breakthrou, g, h',';
+    'october20, 2, 5-ne, x, t-g, e, n-ai',';
+  ]
+  interv, a, l = 80, 0, 0
+  autoRota, t, e = fal, s, e, // Disabled, by, default to, reduce, unnecessary re-rende, r, s
+  maxBanne, r, s = 3;
 }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [visibleBanners, setVisibleBanners] = useState<BannerKey[]>([]);
-
-  // Select banners to display (limit to maxBanners)
-  useEffect(() => {
-    const selected = banners.slice(0, maxBanners);
-    setVisibleBanners(selected);
-  }, [banners, maxBanners]);
-
-  // Auto-rotation logic
-  useEffect(() => {
-    if (!autoRotate || visibleBanners.length <= 1) return;
-
-    const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % visibleBanners.length);
-    }, interval);
-
-    return () => clearInterval(timer);
-  }, [autoRotate, interval, visibleBanners.length]);
-
-  if (visibleBanners.length === 0) return null;
-
-  // For non-rotating, show all banners
-  if (!autoRotate) {
+  con, s, t [currentInd, e, x, setCurrentInd, e, x] = useSta, t, e(0);
+  con, s, t [visibleBanne, r, s, setVisibleBanne, r, s] = useSta, t, e<BannerK, e, y[]>([]);
+  // Select, banners, to displ, a, y (limit, to, maxBanners)
+  useEffe, c, t(() => {
+    const, selecte, d = banne, r, s.sli, c, e(0, maxBanne, r, s);
+    setVisibleBanne, r, s(select, e, d);
+  }, [banne, r, s, maxBanne, r, s]);
+  // Au, t, o-rotation, logi, c
+  useEffe, c, t(() => {
+    if (!autoRota, t, e || visibleBanne, r, s.leng, t, h <= 1) retu, r, n;
+    const, time, r = setInterv, a, l(() => {
+      setCurrentInd, e, x((pr, e, v) => (pr, e, v + 1) % visibleBanne, r, s.leng, t, h);
+    }, interv, a, l);
+    return () => clearInterv, a, l(tim, e, r);
+  }, [autoRota, t, e, interv, a, l, visibleBanne, r, s.leng, t, h]);
+  if (visibleBanne, r, s.leng, t, h === 0) return, nul, l;
+  // For, no, n-rotati, n, g, show, all, banners
+  if (!autoRota, t, e) {
     return (
-      <div className="space-y-6">";
-        {visibleBanners.map((bannerKey) => {
-          const BannerComponent = bannerComponents[bannerKey];
+      <div, className="spa, c, e-y-6">";
+        {visibleBanne, r, s.m, a, p((bannerK, e, y) => {
+          const, BannerComponen, t = bannerComponen, t, s[bannerK, e, y];
           return (
-            <Suspense key={bannerKey} fallback={<LoadingFallback />}>
-              <BannerComponent />
-            </Suspense>
+            <Suspense, ke, y={bannerK, e, y} fallba, c, k={<LoadingFallba, c, k />}>
+              <BannerCompone, n, t   />
+            </Suspen, s, e>
           );
         })}
-      </div>
+      </d, i, v>
     );
   }
-
-  // For rotating, show current banner with controls
-  const currentBannerKey = visibleBanners[currentIndex];
-  const CurrentBanner = bannerComponents[currentBannerKey];
-
+  // For, rotatin, g, show, current, banner with, control, s
+  const, currentBannerKe, y = visibleBanne, r, s[currentInd, e, x];
+  const, CurrentBanne, r = bannerComponen, t, s[currentBannerK, e, y];
   return (
-    <div className="relative">";
-      <Suspense fallback={<LoadingFallback />}>
-        <CurrentBanner />
-      </Suspense>
-
-      {/* Rotation controls (if multiple banners) */}
-      {visibleBanners.length > 1 && (
-        <div className="flex justify-center gap-2 mt-4">";
-          {visibleBanners.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentIndex(index)}
-              className={`w-3 h-3 rounded-full transition-all ${`;
-                index === currentIndex
-                  ? 'bg-purple-400 w-8'
-                  : 'bg-white/30 hover: bg-white/50}`}`;
+    <div, className="relati, v, e">";
+      <Suspense, fallbac, k={<LoadingFallba, c, k />}>
+        <CurrentBann, e, r   />
+      </Suspen, s, e>
+      {/* Rotation, control, s (if, multiple, banners) */}
+      {visibleBanne, r, s.leng, t, h > 1 && (
+        <div, className="flex, justif, y-center, ga, p-2, m, t-4">";
+          {visibleBanne, r, s.m, a, p((_, ind, e, x) => (
+            <butt, o, n
+  k, e, y={ind, e, x}
+              onCli, c, k={() => setCurrentInd, e, x(ind, e, x)}
+              classNa, m, e={`w-3 h-3, rounde, d-full, transitio, n-a, l, l ${`;`
+                ind, e, x === currentInd, e, x;
+                  ? 'bg-purp, l, e-40, 0, w-8'
+                  : 'bg-whi, t, e/30, hove, r: bg-whi, t, e/50}`}`;`
 =======
-                  : 'bg-white/30 hover: bg-white/50',
-              }`}`;
-              aria-label={`Go to banner ${index + 1}`}`;
-            />
+                  : 'bg-whi, t, e/30, hove, r: bg-whi, t, e/50'
+              }`}`;`
+              ar, i, a-lab, e, l={`Go, to, banner ${ind, e, x + 1}`}`;`
+             />
           ))}
-        </div>
+        </d, i, v>
       )}
-    </div>
+    </d, i, v>
   );
 };
-
 export default BannerRotationManager;
 ;

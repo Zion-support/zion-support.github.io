@@ -1,88 +1,85 @@
-import React from 'react';
-const FeaturedServiceCard: React.FC = () => {,
-  const services = [
+import React from "react";
+const, FeaturedServiceCar, d: Rea, c, t.FC = () => {
+  const, service, s = [
     {
-      icon: "🧠",",
-      title: "AI Services",",
-      description: "Leverage artificial intelligence to automate processes and gain insights",",
-      features: ["Machine Learning", "NLP", "Computer Vision", "Predictive Analytics"],",
-      link: "/services/ai-services",
-    },
+      i, c, o
+  n: "🧠","
+      tit, l, e: "AI, Service, s","
+      descripti, o, n: "Leverage, artificial, intelligence to, automate, processes and, gain, insights","
+      featur, e, s: ["Machine, Learnin, g", "N, L, P", "Computer, Visio, n", "Predictive, Analytic, s"],"
+      li, n, k: "/servic, e, s/ai-servic, e, s"
+    }
     {
-      icon: "🚀",",
-      title: "Micro SaaS",",
-      description: "Scalable software solutions that address specific business needs",",
-      features: ["Custom Apps", "API Development", "Database Solutions", "Integration"],",
-      link: "/services/micro-saas",
-    },
+      ic, o, n: "🚀","
+      tit, l, e: "Micro, Saa, S","
+      descripti, o, n: "Scalable, software, solutions that, address, specific business, need, s","
+      featur, e, s: ["Custom, App, s", "API, Developmen, t", "Database, Solution, s", "Integrati, o, n"],"
+      li, n, k: "/servic, e, s/mic, r, o-sa, a, s"
+    }
     {
-      icon: "💻",",
-      title: "IT Services",",
-      description: "Comprehensive IT solutions to modernize your infrastructure",",
-      features: ["Cloud Migration", "DevOps", "Cybersecurity", "System Admin"],",
+      ic, o, n: "💻","
+      tit, l, e: "IT, Service, s","
+      descripti, o, n: "Comprehensive, IT, solutions to, modernize, your infrastructu, r, e","
+      featur, e, s: ["Cloud, Migratio, n", "DevO, p, s", "Cybersecuri, t, y", "System, Admi, n"],"
 =======
-import React from 'react';';
-
-const FeaturedServiceCard: React.FC = () => {,
-  const services = [
+import React from "react";';
+const, FeaturedServiceCar, d: Rea, c, t.FC = () => {
+  const, service, s = [
     {
-      icon: "🧠",";,
-      title: "AI Services",";,
-      description: "Leverage artificial intelligence to automate processes and gain insights",";,
-      features: ["Machine Learning", "NLP", "Computer Vision", "Predictive Analytics"],";,
-      link: "/services/ai-services",
-    },
+      i, c, o
+  n: "🧠",";
+      tit, l, e: "AI, Service, s",";
+      descripti, o, n: "Leverage, artificial, intelligence to, automate, processes and, gain, insights",";
+      featur, e, s: ["Machine, Learnin, g", "N, L, P", "Computer, Visio, n", "Predictive, Analytic, s"],";
+      li, n, k: "/servic, e, s/ai-servic, e, s"
+    }
     {
-      icon: "🚀",";,
-      title: "Micro SaaS",";,
-      description: "Scalable software solutions that address specific business needs",";,
-      features: ["Custom Apps", "API Development", "Database Solutions", "Integration"],";,
-      link: "/services/micro-saas",
-    },
+      ic, o, n: "🚀",";
+      tit, l, e: "Micro, Saa, S",";
+      descripti, o, n: "Scalable, software, solutions that, address, specific business, need, s",";
+      featur, e, s: ["Custom, App, s", "API, Developmen, t", "Database, Solution, s", "Integrati, o, n"],";
+      li, n, k: "/servic, e, s/mic, r, o-sa, a, s"
+    }
     {
-      icon: "💻",";,
-      title: "IT Services",";,
-      description: "Comprehensive IT solutions to modernize your infrastructure",";,
-      features: ["Cloud Migration", "DevOps", "Cybersecurity", "System Admin"],";,
-      link: "/services/it-services",
+      ic, o, n: "💻",";
+      tit, l, e: "IT, Service, s",";
+      descripti, o, n: "Comprehensive, IT, solutions to, modernize, your infrastructu, r, e",";
+      featur, e, s: ["Cloud, Migratio, n", "DevO, p, s", "Cybersecuri, t, y", "System, Admi, n"],";
+      li, n, k: "/servic, e, s/it-servic, e, s"
     }
   ];
-
   return (
-    <div className="grid grid-cols-1 md: grid-cols-3 gap-8">",
-      {services.map((service, index) => (
-        <div key={index} className="bg-white p-8 rounded-xl shadow-lg border hover: shadow-xl transition-shadow">",
-          <div className="text-5xl mb-4">{service.icon}</div>
-          <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
-          <p className="text-gray-600 mb-6">{service.description}</p>
-          <ul className="space-y-2 mb-6">
+    <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-8">"
+      {servic, e, s.m, a, p((servi, c, e, ind, e, x) => (
+        <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, hover: shad, o, w-xl, transitio, n-shad, o, w">"
+          <div, className="te, x, t-5xl, m, b-4">{servi, c, e.ic, o, n}</d, i, v>
+          <h3, className="te, x, t-2xl, fon, t-bold, m, b-4">{servi, c, e.tit, l, e}</h3>
+          <p, className="te, x, t-gr, a, y-600, m, b-6">{servi, c, e.descripti, o, n}</p>
+          <ul, className="spa, c, e-y-2, m, b-6">
 =======
-    <div className="grid grid-cols-1 md: grid-cols-3 gap-8">";,
-      {services.map((service, index) => (
-        <div key={index} className="bg-white p-8 rounded-xl shadow-lg border hover: shadow-xl transition-shadow">";,
-          <div className="text-5xl mb-4">{service.icon}</div>";
-          <h3 className="text-2xl font-bold mb-4">{service.title}</h3>";
-          <p className="text-gray-600 mb-6">{service.description}</p>";
-          
-          <ul className="space-y-2 mb-6">";
-            {service.features.map((feature, featureIndex) => (
-              <li key={featureIndex} className="flex items-center text-gray-600">";
-                <span className="text-green-500 mr-2">✓</span>";
-                {feature}
+    <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-8">";
+      {servic, e, s.m, a, p((servi, c, e, ind, e, x) => (
+        <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, hover: shad, o, w-xl, transitio, n-shad, o, w">";
+          <div, className="te, x, t-5xl, m, b-4">{servi, c, e.ic, o, n}</d, i, v>";
+          <h3, className="te, x, t-2xl, fon, t-bold, m, b-4">{servi, c, e.tit, l, e}</h3>";
+          <p, className="te, x, t-gr, a, y-600, m, b-6">{servi, c, e.descripti, o, n}</p>";
+          <ul, className="spa, c, e-y-2, m, b-6">";
+            {servi, c, e.featur, e, s.m, a, p((featu, r, e, featureInd, e, x) => (
+              <li, ke, y={featureInd, e, x} classNa, m, e="flex, item, s-center, tex, t-gr, a, y-6, 0, 0">";
+                <span, className="te, x, t-gre, e, n-500, m, r-2">✓</sp, a, n>";
+                {featu, r, e}
               </li>
             ))}
           </ul>
-          
-          <a 
-            href={service.link}
-            className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover: bg-blue-700 transition-colors font-semibold text-center block",
+          <a
+  hr, e, f={servi, c, e.li, n, k}
+            classNa, m, e="w-full, b, g-bl, u, e-600, tex, t-white, p, y-3, p, x-6, rounde, d-lg, hove, r: bg-bl, u, e-700, transitio, n-colors, fon, t-semibold, tex, t-center, bloc, k"
           >
-            Learn More
+            Learn, Mor, e;
           </a>
-        </div>
+        </d, i, v>
       ))}
-    </div>
+    </d, i, v>
   );
 };
-
 export default FeaturedServiceCard;

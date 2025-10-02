@@ -1,275 +1,289 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 =======
-import React from 'react';';
-import {
-Helmet
-} from 'react-helmet-async';';
-
-const Team: React.FC = () => {,
-  const teamMembers = [
+import React from "react";';
+impo, r, t {
+Helm, e, t;
+} fr, o, m "rea, c, t-helm, e, t-asy, n, c";';
+const, Tea, m: Rea, c, t.FC = () => {
+  const, teamMember, s = [
     {
-      name: 'Kleber Santos',',
-      role: 'CEO & Founder',',
-      bio: 'Visionary leader with 15+ years in AI and enterprise technology',',
-      image: '/images/team/kleber-santos.jpg',',
-      linkedin: 'https://linkedin.com/in/kleber-santos},
+      n, a, m
+  e: 'Kleber, Santo, s','
+      ro, l, e: 'C, E, O & Found, e, r','
+      b, i, o: 'Visionary, leader, with 15+ years, in, AI and, enterprise, technology','
+      ima, g, e: '/imag, e, s/te, a, m/kleb, e, r-sant, o, s.j, p, g','
+      linked, i, n: 'ht, t, p
+  s://linked, i, n.c, o, m/in/kleb, e, r-sant, o, s}
     {
-      name: 'Dr. Sarah Chen',',
-      role: 'Chief Technology Officer',',
-      bio: 'AI research expert with PhD in Machine Learning from MIT',',
-      image: '/images/team/sarah-chen.jpg',',
-      linkedin: 'https://linkedin.com/in/sarah-chen-ai},
+      na, m, e: 'Dr. Sarah, Che, n','
+      ro, l, e: 'Chief, Technology, Officer','
+      b, i, o: 'AI, research, expert with, PhD, in Machine, Learning, from M, I, T','
+      ima, g, e: '/imag, e, s/te, a, m/sar, a, h-ch, e, n.j, p, g','
+      linked, i, n: 'ht, t, p
+  s://linked, i, n.c, o, m/in/sar, a, h-ch, e, n-ai}
     {
-      name: 'Michael Rodriguez',',
-      role: 'Head of Engineering',',
-      bio: 'Full-stack architect with expertise in scalable cloud systems',',
-      image: '/images/team/michael-rodriguez.jpg',',
-      linkedin: 'https://linkedin.com/in/michael-rodriguez-eng},
+      na, m, e: 'Michael, Rodrigue, z','
+      ro, l, e: 'Head, of, Engineering','
+      b, i, o: 'Fu, l, l-stack, architect, with expertise, in, scalable cloud, system, s','
+      ima, g, e: '/imag, e, s/te, a, m/micha, e, l-rodrigu, e, z.j, p, g','
+      linked, i, n: 'ht, t, p
+  s://linked, i, n.c, o, m/in/micha, e, l-rodrigu, e, z-e, n, g}
     {
-      name: 'Dr. Emily Watson',',
-      role: 'AI Research Director',',
-      bio: 'Quantum computing specialist and AI ethics researcher',',
-      image: '/images/team/emily-watson.jpg',',
-      linkedin: 'https://linkedin.com/in/emily-watson-ai},
+      na, m, e: 'Dr. Emily, Watso, n','
+      ro, l, e: 'AI, Research, Director','
+      b, i, o: 'Quantum, computing, specialist and, AI, ethics research, e, r','
+      ima, g, e: '/imag, e, s/te, a, m/emi, l, y-wats, o, n.j, p, g','
+      linked, i, n: 'ht, t, p
+  s://linked, i, n.c, o, m/in/emi, l, y-wats, o, n-ai}
     {
-      name: 'James Park',',
-      role: 'Head of Product',',
-      bio: 'Product strategy expert with focus on user experience and innovation',',
-      image: '/images/team/james-park.jpg',',
-      linkedin: 'https://linkedin.com/in/james-park-product},
+      na, m, e: 'James, Par, k','
+      ro, l, e: 'Head, of, Product','
+      b, i, o: 'Product, strategy, expert with, focus, on user, experience, and innovati, o, n','
+      ima, g, e: '/imag, e, s/te, a, m/jam, e, s-pa, r, k.j, p, g','
+      linked, i, n: 'ht, t, p
+  s://linked, i, n.c, o, m/in/jam, e, s-pa, r, k-produ, c, t}
     {
-      name: 'Lisa Thompson',',
-      role: 'Head of Customer Success',',
-      bio: 'Customer success leader with 10+ years in enterprise software',',
-      image: '/images/team/lisa-thompson.jpg',',
-      linkedin: 'https://linkedin.com/in/lisa-thompson-cs}
+      na, m, e: 'Lisa, Thompso, n','
+      ro, l, e: 'Head, of, Customer Succe, s, s','
+      b, i, o: 'Customer, success, leader with, 1, 0+ years, in, enterprise softwa, r, e','
+      ima, g, e: '/imag, e, s/te, a, m/li, s, a-thomps, o, n.j, p, g','
+      linked, i, n: 'ht, t, p
+  s://linked, i, n.c, o, m/in/li, s, a-thomps, o, n-cs}
 =======
-      name: 'Kleber Santos',';,
-      role: 'CEO & Founder',';,
-      bio: 'Visionary leader with 15+ years in AI and enterprise technology',';,
-      image: '/images/team/kleber-santos.jpg',';,
-      linkedin: 'https://linkedin.com/in/kleber-santos',
-    },
+      na, m, e: 'Kleber, Santo, s',';
+      ro, l, e: 'C, E, O & Found, e, r',';
+      b, i, o: 'Visionary, leader, with 15+ years, in, AI and, enterprise, technology',';
+      ima, g, e: '/imag, e, s/te, a, m/kleb, e, r-sant, o, s.j, p, g',';
+      linked, i, n: 'ht, t, p
+  s://linked, i, n.c, o, m/in/kleb, e, r-sant, o, s'
+    }
     {
-      name: 'Dr. Sarah Chen',';,
-      role: 'Chief Technology Officer',';,
-      bio: 'AI research expert with PhD in Machine Learning from MIT',';,
-      image: '/images/team/sarah-chen.jpg',';,
-      linkedin: 'https://linkedin.com/in/sarah-chen-ai',
-    },
+      na, m, e: 'Dr. Sarah, Che, n',';
+      ro, l, e: 'Chief, Technology, Officer',';
+      b, i, o: 'AI, research, expert with, PhD, in Machine, Learning, from M, I, T',';
+      ima, g, e: '/imag, e, s/te, a, m/sar, a, h-ch, e, n.j, p, g',';
+      linked, i, n: 'ht, t, p
+  s://linked, i, n.c, o, m/in/sar, a, h-ch, e, n-ai'
+    }
     {
-      name: 'Michael Rodriguez',';,
-      role: 'Head of Engineering',';,
-      bio: 'Full-stack architect with expertise in scalable cloud systems',';,
-      image: '/images/team/michael-rodriguez.jpg',';,
-      linkedin: 'https://linkedin.com/in/michael-rodriguez-eng',
-    },
+      na, m, e: 'Michael, Rodrigue, z',';
+      ro, l, e: 'Head, of, Engineering',';
+      b, i, o: 'Fu, l, l-stack, architect, with expertise, in, scalable cloud, system, s',';
+      ima, g, e: '/imag, e, s/te, a, m/micha, e, l-rodrigu, e, z.j, p, g',';
+      linked, i, n: 'ht, t, p
+  s://linked, i, n.c, o, m/in/micha, e, l-rodrigu, e, z-e, n, g'
+    }
     {
-      name: 'Dr. Emily Watson',';,
-      role: 'AI Research Director',';,
-      bio: 'Quantum computing specialist and AI ethics researcher',';,
-      image: '/images/team/emily-watson.jpg',';,
-      linkedin: 'https://linkedin.com/in/emily-watson-ai',
-    },
+      na, m, e: 'Dr. Emily, Watso, n',';
+      ro, l, e: 'AI, Research, Director',';
+      b, i, o: 'Quantum, computing, specialist and, AI, ethics research, e, r',';
+      ima, g, e: '/imag, e, s/te, a, m/emi, l, y-wats, o, n.j, p, g',';
+      linked, i, n: 'ht, t, p
+  s://linked, i, n.c, o, m/in/emi, l, y-wats, o, n-ai'
+    }
     {
-      name: 'James Park',';,
-      role: 'Head of Product',';,
-      bio: 'Product strategy expert with focus on user experience and innovation',';,
-      image: '/images/team/james-park.jpg',';,
-      linkedin: 'https://linkedin.com/in/james-park-product',
-    },
+      na, m, e: 'James, Par, k',';
+      ro, l, e: 'Head, of, Product',';
+      b, i, o: 'Product, strategy, expert with, focus, on user, experience, and innovati, o, n',';
+      ima, g, e: '/imag, e, s/te, a, m/jam, e, s-pa, r, k.j, p, g',';
+      linked, i, n: 'ht, t, p
+  s://linked, i, n.c, o, m/in/jam, e, s-pa, r, k-produ, c, t'
+    }
     {
-      name: 'Lisa Thompson',';,
-      role: 'Head of Customer Success',';,
-      bio: 'Customer success leader with 10+ years in enterprise software',';,
-      image: '/images/team/lisa-thompson.jpg',';,
-      linkedin: 'https://linkedin.com/in/lisa-thompson-cs',
+      na, m, e: 'Lisa, Thompso, n',';
+      ro, l, e: 'Head, of, Customer Succe, s, s',';
+      b, i, o: 'Customer, success, leader with, 1, 0+ years, in, enterprise softwa, r, e',';
+      ima, g, e: '/imag, e, s/te, a, m/li, s, a-thomps, o, n.j, p, g',';
+      linked, i, n: 'ht, t, p
+  s://linked, i, n.c, o, m/in/li, s, a-thomps, o, n-cs'
     }
   ];
-
-  const values = [
+  const, value, s = [
     {
-      title: 'Innovation First',',
-      description: 'We push the boundaries of what\'s possible with AI and technology',',
-      icon: '🚀},
+      tit, l, e: 'Innovation, Firs, t','
+      descripti, o, n: 'We, push, the boundaries, of, what\'s, possible, with AI, and, technology','
+      ic, o, n: '🚀}
     {
-      title: 'Customer Success',',
-      description: 'Our clients\' success is our ultimate measure of achievement',',
-      icon: '🎯},
+      tit, l, e: 'Customer, Succes, s','
+      descripti, o, n: 'Our, client, s\' success, is, our ultimate, measure, of achieveme, n, t','
+      ic, o, n: '🎯}
     {
-      title: 'Ethical AI',',
-      description: 'We build AI systems that are fair, transparent, and beneficial',',
-      icon: '⚖️},
+      tit, l, e: 'Ethical, A, I','
+      descripti, o, n: 'We, build, AI systems, that, are fa, i, r, transpare, n, t, and, beneficia, l','
+      ic, o, n: '⚖️}
     {
-      title: 'Collaboration',',
-      description: 'Great results come from great teams working together',',
-      icon: '🤝}
+      tit, l, e: 'Collaborati, o, n','
+      descripti, o, n: 'Great, results, come from, great, teams working, togethe, r','
+      ic, o, n: '🤝}
 =======
-      title: 'Innovation First',';,
-      description: 'We push the boundaries of what\'s possible with AI and technology',';,
-      icon: '🚀',
-    },
+      tit, l, e: 'Innovation, Firs, t',';
+      descripti, o, n: 'We, push, the boundaries, of, what\'s, possible, with AI, and, technology',';
+      ic, o, n: '🚀'
+    }
     {
-      title: 'Customer Success',';,
-      description: 'Our clients\' success is our ultimate measure of achievement',';,
-      icon: '🎯',
-    },
+      tit, l, e: 'Customer, Succes, s',';
+      descripti, o, n: 'Our, client, s\' success, is, our ultimate, measure, of achieveme, n, t',';
+      ic, o, n: '🎯'
+    }
     {
-      title: 'Ethical AI',';,
-      description: 'We build AI systems that are fair, transparent, and beneficial',';,
-      icon: '⚖️',
-    },
+      tit, l, e: 'Ethical, A, I',';
+      descripti, o, n: 'We, build, AI systems, that, are fa, i, r, transpare, n, t, and, beneficia, l',';
+      ic, o, n: '⚖️'
+    }
     {
-      title: 'Collaboration',';,
-      description: 'Great results come from great teams working together',';,
-      icon: '🤝',
+      tit, l, e: 'Collaborati, o, n',';
+      descripti, o, n: 'Great, results, come from, great, teams working, togethe, r',';
+      ic, o, n: '🤝'
     }
   ];
-
   return (
     <>
       <Helmet>
-        <title>Our Team - Zion Tech Group</title>
-        <meta name="description" content="Meet the talented team of AI experts, engineers, and innovators behind Zion Tech Group's cutting-edge solutions." /><link rel="canonical" href="https://ziontechgroup.com/team/>",
+        <title>Our, Tea, m - Zion, Tech, Group</title>
+        <meta name="descripti, o, n" content="Meet, the, talented team, of, AI exper, t, s, enginee, r, s, and, innovators, behind Zion, Tech, Group's, cuttin, g-edge, solution, s." /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/te, a, m/>"
 =======
-        <meta name="description" content="Meet the talented team of AI experts, engineers, and innovators behind Zion Tech Group's cutting-edge solutions." />";
-        <link rel="canonical" href="https: //ziontechgroup.com/team" />";,
+        <meta name="descripti, o, n" content="Meet, the, talented team, of, AI exper, t, s, enginee, r, s, and, innovators, behind Zion, Tech, Group's, cuttin, g-edge, solution, s." />";
+        <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/te, a, m" />";
       </Helmet>
-      
-      <div className="min-h-screen bg-gray-50">";
-        {/* Header */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className="text-center">
-              <h1 className="text-4xl md: text-5xl font-bold mb-4">",
-                Meet Our Team
+      <div, className="m, i, n-h-screen, b, g-gr, a, y-50">";
+        {/* Head, e, r */}
+        <div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, p, y-16">
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8">"
+            <div, className="te, x, t-cent, e, r">
+              <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4">"
+                Meet, Our, Team;
               </h1>
-              <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-                The brilliant minds behind Zion Tech Group's innovative AI and IT solutions. ;
-                We're passionate about transforming businesses through technology.;
+              <p, className="te, x, t-xl, tex, t-bl, u, e-100, ma, x-w-3xl, m, x-au, t, o">
+                The, brilliant, minds behind, Zion, Tech Gro, u, p's, innovative, AI and, IT, solutions. ;
+                We're, passionate, about transforming, businesses, through technolo, g, y.;
 =======
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">";
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
-            <div className="text-center">";
-              <h1 className="text-4xl md: text-5xl font-bold mb-4">";,
-                Meet Our Team
+        <div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, p, y-16">";
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
+            <div, className="te, x, t-cent, e, r">";
+              <h1, className="te, x, t-4x, l, m
+  d: te, x, t-5xl, fon, t-bold, m, b-4">";
+                Meet, Our, Team;
               </h1>
-              <p className="text-xl text-blue-100 max-w-3xl mx-auto">";
-                The brilliant minds behind Zion Tech Group's innovative AI and IT solutions. ';
-                We're passionate about transforming businesses through technology.';
+              <p, className="te, x, t-xl, tex, t-bl, u, e-100, ma, x-w-3xl, m, x-au, t, o">";
+                The, brilliant, minds behind, Zion, Tech Gro, u, p's, innovative, AI and, IT, solutions. ';
+                We're, passionate, about transforming, businesses, through technolo, g, y.';
               </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Team Members */}
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">",
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            </d, i, v>
+          </d, i, v>
+        </d, i, v>
+        {/* Team, Member, s */}
+        <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8, p, y-16">"
+          <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l
+  g:gr, i, d-co, l, s-3, ga, p-8">"
 =======
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">";,
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">";,
-            {teamMembers.map((member, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-xl shadow-lg overflow-hidden hover: shadow-xl transition-all duration-300",
+        <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, p, y-16">";
+          <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l
+  g:gr, i, d-co, l, s-3, ga, p-8">";
+            {teamMembe, r, s.m, a, p((memb, e, r, ind, e, x) => (
+              <d, i, v
+  k, e, y={ind, e, x}
+                classNa, m, e="bg-white, rounde, d-xl, shado, w-lg, overflo, w-hidden, hove, r: shad, o, w-xl, transitio, n-all, duratio, n-3, 0, 0"
               >
-                <div className="h-64 bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center">";
-                  <div className="text-6xl text-white">👤</div>";
-                </div>
-                <div className="p-6">";
-                  <h3 className="text-xl font-semibold text-gray-900 mb-1">";
-                    {member.name}
+                <div, className="h-64, b, g-gradie, n, t-to-br, fro, m-bl, u, e-400, t, o-purp, l, e-500, flex, items-center, justif, y-cent, e, r">";
+                  <div, className="te, x, t-6xl, tex, t-whi, t, e">👤</d, i, v>";
+                </d, i, v>
+                <div, className="p-6">";
+                  <h3, className="te, x, t-xl, fon, t-semibold, tex, t-gr, a, y-900, m, b-1">";
+                    {memb, e, r.na, m, e}
                   </h3>
-                  <p className="text-blue-600 font-medium mb-3">";
-                    {member.role}
+                  <p, className="te, x, t-bl, u, e-600, fon, t-medium, m, b-3">";
+                    {memb, e, r.ro, l, e}
                   </p>
-                  <p className="text-gray-600 text-sm leading-relaxed mb-4">";
-                    {member.bio}
+                  <p, className="te, x, t-gr, a, y-600, tex, t-sm, leadin, g-relaxed, m, b-4">";
+                    {memb, e, r.b, i, o}
                   </p>
                   <a
-                    href={member.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center text-blue-600 hover: text-blue-700 transition-colors",
+  hr, e, f={memb, e, r.linked, i, n}
+                    targ, e, t="_bla, n, k"
+                    r, e, l="noopener, noreferre, r"
+                    classNa, m, e="inli, n, e-flex, item, s-center, tex, t-bl, u, e-600, hove, r: te, x, t-bl, u, e-700, transitio, n-colo, r, s"
                   >
-                    <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clipRule="evenodd/>
+                    <svg, className="w-4 h-4, m, r-1" fi, l, l="currentCol, o, r" viewB, o, x="0, 0, 20 20">
+                      <path, fillRul, e="eveno, d, d" d="M, 1, 6.338, 1, 6.338H, 1, 3.67V, 1, 2.16, c, 0-.9, 9, 5-.0, 1, 7-2.2, 7, 7-1.3, 8, 7-2.2, 7, 7-1.3, 9, 0-1.60, 1, 1.0, 8, 6-1.60, 1, 2.207, v, 4.248, H, 8.01, 4, v-8.59, h, 2.559, v, 1.17, 4, h.03, 7, c.3, 5, 6-.67, 5, 1.2, 2, 7-1.38, 7, 2.5, 2, 6-1.38, 7, 2.703, 0, 3.20, 3, 1.77, 8, 3.20, 3, 4.092, v, 4.711z, M, 5.00, 5, 6.575, a, 1.54, 8, 1.548, 0, 11-.0, 0, 3-3.09, 6, 1.54, 8, 1.548, 0, 01.00, 3, 3.096, z, m-1.33, 7, 9.763, H, 6.3, 4, v-8.59, H, 3.667, v, 8.59zM, 1, 7.668, 1H, 2.328, C, 1.595, 1, 1 1.581, 1, 2.298v, 1, 5.403C1, 1, 8.41, 8, 1.595, 19, 2.328, 19h1, 5.3, 4, c.734, 0, 1.3, 3, 2-.58, 2, 1.3, 3, 2-1.299, V, 2.298C1, 9, 1.581, 1, 8.402, 1, 17.668, 1, z" clipRu, l, e="eveno, d, d  />
 =======
-                    <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">";
-                      <path fillRule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clipRule="evenodd" />";
-                    </svg>
-                    LinkedIn
+                    <svg, className="w-4 h-4, m, r-1" fi, l, l="currentCol, o, r" viewB, o, x="0, 0, 20 20">";
+                      <path, fillRul, e="eveno, d, d" d="M, 1, 6.338, 1, 6.338H, 1, 3.67V, 1, 2.16, c, 0-.9, 9, 5-.0, 1, 7-2.2, 7, 7-1.3, 8, 7-2.2, 7, 7-1.3, 9, 0-1.60, 1, 1.0, 8, 6-1.60, 1, 2.207, v, 4.248, H, 8.01, 4, v-8.59, h, 2.559, v, 1.17, 4, h.03, 7, c.3, 5, 6-.67, 5, 1.2, 2, 7-1.38, 7, 2.5, 2, 6-1.38, 7, 2.703, 0, 3.20, 3, 1.77, 8, 3.20, 3, 4.092, v, 4.711z, M, 5.00, 5, 6.575, a, 1.54, 8, 1.548, 0, 11-.0, 0, 3-3.09, 6, 1.54, 8, 1.548, 0, 01.00, 3, 3.096, z, m-1.33, 7, 9.763, H, 6.3, 4, v-8.59, H, 3.667, v, 8.59zM, 1, 7.668, 1H, 2.328, C, 1.595, 1, 1 1.581, 1, 2.298v, 1, 5.403C1, 1, 8.41, 8, 1.595, 19, 2.328, 19h1, 5.3, 4, c.734, 0, 1.3, 3, 2-.58, 2, 1.3, 3, 2-1.299, V, 2.298C1, 9, 1.581, 1, 8.402, 1, 17.668, 1, z" clipRu, l, e="eveno, d, d" />";
+                    </s, v, g>
+                    Linked, I, n;
                   </a>
-                </div>
-              </div>
+                </d, i, v>
+              </d, i, v>
             ))}
-          </div>
-        </div>
-
-        {/* Company Values */}
-        <div className="bg-white py-16">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          </d, i, v>
+        </d, i, v>
+        {/* Company, Value, s */}
+        <div, className="bg-white, p, y-16">
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8">"
+            <div, className="text-center mb-12">
+              <h2, className="te, x, t-3xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
 =======
-        <div className="bg-white py-16">";
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
-            <div className="text-center mb-12">";
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">";
-                Our Values
+        <div, className="bg-white, p, y-16">";
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
+            <div, className="text-center mb-12">";
+              <h2, className="te, x, t-3xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
+                Our, Value, s;
               </h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">";
-                The principles that guide everything we do at Zion Tech Group
+              <p, className="te, x, t-lg, tex, t-gr, a, y-600, ma, x-w-2xl, m, x-au, t, o">";
+                The, principles, that guide, everything, we do, at, Zion Tech, Grou, p;
               </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">",
+            </d, i, v>
+            <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l
+  g:gr, i, d-co, l, s-4, ga, p-8">"
 =======
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">";,
-              {values.map((value, index) => (
-                <div key={index} className="text-center">";
-                  <div className="text-4xl mb-4">{value.icon}</div>";
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">";
-                    {value.title}
+            <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l
+  g:gr, i, d-co, l, s-4, ga, p-8">";
+              {valu, e, s.m, a, p((val, u, e, ind, e, x) => (
+                <div, ke, y={ind, e, x} classNa, m, e="te, x, t-cent, e, r">";
+                  <div, className="te, x, t-4xl, m, b-4">{val, u, e.ic, o, n}</d, i, v>";
+                  <h3, className="te, x, t-lg, fon, t-semibold, tex, t-gr, a, y-900, m, b-2">";
+                    {val, u, e.tit, l, e}
                   </h3>
-                  <p className="text-gray-600 text-sm">";
-                    {value.description}
+                  <p, className="te, x, t-gr, a, y-600, tex, t-sm">";
+                    {val, u, e.descripti, o, n}
                   </p>
-                </div>
+                </d, i, v>
               ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Join Our Team */}
-        <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-16">
-          <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">",
-            <h2 className="text-3xl font-bold mb-4">
-              Join Our Team
+            </d, i, v>
+          </d, i, v>
+        </d, i, v>
+        {/* Join, Our, Team */}
+        <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-bl, u, e-600, tex, t-white, p, y-16">
+          <div, className="m, a, x-w-4xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8, tex, t-cent, e, r">"
+            <h2, className="te, x, t-3xl, fon, t-bold, m, b-4">
+              Join, Our, Team;
             </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              We're always looking for talented individuals who share our passion for AI and innovation.;
+            <p, className="te, x, t-xl, tex, t-purp, l, e-100, m, b-8">
+              We're, always, looking for, talented, individuals who, share, our passion, for, AI and, innovatio, n.;
 =======
-        <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-16">";
-          <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">";,
-            <h2 className="text-3xl font-bold mb-4">";
-              Join Our Team
+        <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-bl, u, e-600, tex, t-white, p, y-16">";
+          <div, className="m, a, x-w-4xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, tex, t-cent, e, r">";
+            <h2, className="te, x, t-3xl, fon, t-bold, m, b-4">";
+              Join, Our, Team;
             </h2>
-            <p className="text-xl text-purple-100 mb-8">";
-              We're always looking for talented individuals who share our passion for AI and innovation.';
+            <p, className="te, x, t-xl, tex, t-purp, l, e-100, m, b-8">";
+              We're, always, looking for, talented, individuals who, share, our passion, for, AI and, innovatio, n.';
             </p>
             <a
-              href="/careers"
-              className="inline-flex items-center px-8 py-3 bg-white text-purple-600 rounded-lg hover: bg-gray-100 transition-colors font-medium",
+  hr, e, f="/caree, r, s"
+              classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-3, b, g-white, tex, t-purp, l, e-600, rounde, d-lg, hov, e
+  r: bg-gr, a, y-100, transitio, n-colors, fon, t-medi, u, m"
             >
-              View Open Positions
+              View, Open, Positions;
             </a>
-          </div>
-        </div>
-      </div>
-    </>
+          </d, i, v>
+        </d, i, v>
+      </d, i, v>
+    < />
   );
 };
-
 export default Team;

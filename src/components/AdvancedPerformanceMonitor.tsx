@@ -1,471 +1,462 @@
-import React, { useState, useEffect, useCallback } from 'react';';
-import {
-
-} from 'framer-motion';
-interface PerformanceMetrics {
-fcp: number;,
-lcp: number;,
-fid: number;,
-cls: number;,
-ttfb: number;,
-inp: number;,
-bundleSize: number;,
-loadTime: number;
+import, Reac, t, { useSta, t, e, useEffe, c, t, useCallba, c, k } fr, o, m "rea, c, t";';
+impo, r, t {
+} fr, o, m "fram, e, r-moti, o, n";
+interface, PerformanceMetric, s {
+f, c, p: numb, e, r;
+l, c, p: numb, e, r;
+f, i, d: numb, e, r;
+c, l, s: numb, e, r;
+tt, f, b: numb, e, r;
+i, n, p: numb, e, r;
+bundleSi, z, e: numb, e, r;
+loadT, i, m
+  e: numb, e, r;
 }
-
-interface PerformanceAlert {
-id: string;,
-type: 'warning' | 'error' | 'info';,
-message: string;,
-timestamp: number;,
-metric: string;,
-value: number;,
-threshold: number;
+interface, PerformanceAler, t {
+id: stri, n, g;
+ty, p, e: 'warni, n, g' | 'err, o, r' | 'in, f, o';
+messa, g, e: stri, n, g;
+timesta, m, p: numb, e, r;
+metr, i, c: stri, n, g;
+val, u, e: numb, e, r;
+thresh, o, l
+  d: numb, e, r;
 }
-
-const AdvancedPerformanceMonitor: React.FC = () => {,
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    fcp: 0,
-    lcp: 0,
-    fid: 0,
-    cls: 0,
-    ttfb: 0,
-    inp: 0,
-    bundleSize: 0,
-    loadTime: 0
+const, AdvancedPerformanceMonito, r: Rea, c, t.FC = () => {
+  con, s, t [metri, c, s, setMetri, c, s] = useSta, t, e<PerformanceMetri, c, s>({
+    f, c, p: 0
+    l, c, p: 0
+    f, i, d: 0
+    c, l, s: 0
+    tt, f, b: 0
+    i, n, p: 0
+    bundleSi, z, e: 0
+    loadTi, m, e: 0;
 =======
-    fcp: 0,,
-    lcp: 0,,
-    fid: 0,,
-    cls: 0,,
-    ttfb: 0,,
-    inp: 0,,
-    bundleSize: 0,,
-    loadTime: 0,,
+    fc
+  p: 0
+    l, c, p: 0
+    f, i, d: 0
+    c, l, s: 0
+    tt, f, b: 0
+    i, n, p: 0
+    bundleSi, z, e: 0
+    loadTi, m, e: 0
   });
-
-  const [alerts, setAlerts] = useState<PerformanceAlert[]>([]);
-  const [isMonitoring, setIsMonitoring] = useState(false);
-  const [history, setHistory] = useState<PerformanceMetrics[]>([]);
-
-  // Performance thresholds
-  const thresholds = {
-    fcp: { good: 1800, poor: 3000 },
-    lcp: { good: 2500, poor: 4000 },
-    fid: { good: 100, poor: 300 },
-    cls: { good: 0.1, poor: 0.25 },
-    ttfb: { good: 800, poor: 1800 },
-    inp: { good: 200, poor: 500 },
-    bundleSize: { good: 500000, poor: 1000000 }, // bytes,
-    loadTime: { good: 2000, poor: 4000 }, // ms
+  con, s, t [aler, t, s, setAler, t, s] = useSta, t, e<PerformanceAle, r, t[]>([]);
+  con, s, t [isMonitori, n, g, setIsMonitori, n, g] = useSta, t, e(fal, s, e);
+  con, s, t [histo, r, y, setHisto, r, y] = useSta, t, e<PerformanceMetri, c, s[]>([]);
+  // Performance, threshold, s
+  const, threshold, s = {
+    f, c, p: { g, o, o
+  d: 18, 0, 0, po, o, r: 30, 0, 0 }
+    l, c, p: { g, o, o
+  d: 25, 0, 0, po, o, r: 40, 0, 0 }
+    f, i, d: { g, o, o
+  d: 1, 0, 0, po, o, r: 3, 0, 0 }
+    c, l, s: { g, o, o
+  d: 0.1, po, o, r: 0.25 }
+    tt, f, b: { g, o, o
+  d: 8, 0, 0, po, o, r: 18, 0, 0 }
+    i, n, p: { g, o, o
+  d: 2, 0, 0, po, o, r: 5, 0, 0 }
+    bundleSi, z, e: { g, o, o
+  d: 5000, 0, 0, po, o, r: 10000, 0, 0 }, // byt, e, s
+    loadTi, m, e: { g, o, o
+  d: 20, 0, 0, po, o, r: 40, 0, 0 }, // ms;
   };
-
-  const getMetricStatus = useCallback((metric: string, value: number) => {,
-    const threshold = thresholds[metric as keyof typeof thresholds];
-    if (!threshold) return 'unknown';
-    if (value <= threshold.good) return 'good';
-    if (value <= threshold.poor) return 'needs-improvement';
-    return 'poor';
+  const, getMetricStatu, s = useCallba, c, k((metr, i, c: stri, n, g, val, u, e: numb, e, r) => {
+    const, threshol, d = threshol, d, s[metric, as, keyof typeof, threshold, s];
+    if (!thresho, l, d) retu, r, n 'unkno, w, n';
+    if (val, u, e <= thresho, l, d.go, o, d) retu, r, n 'go, o, d';
+    if (val, u, e <= thresho, l, d.po, o, r) retu, r, n 'nee, d, s-improveme, n, t';
+    retu, r, n 'po, o, r';
 =======
-    if (!threshold) return 'unknown';';
-    
-    if (value <= threshold.good) return 'good';';
-    if (value <= threshold.poor) return 'needs-improvement';';
-    return 'poor';';
+    if (!thresho, l, d) retu, r, n 'unkno, w, n';';
+    if (val, u, e <= thresho, l, d.go, o, d) retu, r, n 'go, o, d';';
+    if (val, u, e <= thresho, l, d.po, o, r) retu, r, n 'nee, d, s-improveme, n, t';';
+    retu, r, n 'po, o, r';';
   }, []);
-
-  const getMetricColor = (status: string) => {,
-switch (status) {
-case 'good': return 'text-green-600 bg-green-100';
-case 'needs-improvement': return 'text-yellow-600 bg-yellow-100';
-case 'poor': return 'text-red-600 bg-red-100';
-default: return 'text-gray-600 bg-gray-100';
+  const, getMetricColo, r = (stat, u, s: stri, n, g) => {
+swit, c, h (stat, u, s) {
+ca, s, e 'go, o, d': retu, r, n 'te, x, t-gre, e, n-600, b, g-gre, e, n-1, 0, 0';
+ca, s, e 'nee, d, s-improveme, n, t': retu, r, n 'te, x, t-yell, o, w-600, b, g-yell, o, w-1, 0, 0';
+ca, s, e 'po, o, r': retu, r, n 'te, x, t-r, e, d-600, b, g-r, e, d-1, 0, 0';
+defau, l, t: retu, r, n 'te, x, t-gr, a, y-600, b, g-gr, a, y-1, 0, 0';
 =======
-case 'good': return 'text-green-600 bg-green-100';';
-case 'needs-improvement': return 'text-yellow-600 bg-yellow-100';';
-case 'poor': return 'text-red-600 bg-red-100';';
-default: return 'text-gray-600 bg-gray-100';';
+ca, s, e 'go, o, d': retu, r, n 'te, x, t-gre, e, n-600, b, g-gre, e, n-1, 0, 0';';
+ca, s, e 'nee, d, s-improveme, n, t': retu, r, n 'te, x, t-yell, o, w-600, b, g-yell, o, w-1, 0, 0';';
+ca, s, e 'po, o, r': retu, r, n 'te, x, t-r, e, d-600, b, g-r, e, d-1, 0, 0';';
+defa, u, l
+  t: retu, r, n 'te, x, t-gr, a, y-600, b, g-gr, a, y-1, 0, 0';';
 };
   };
-
-  const collectMetrics = useCallback(async () => {
-    try {
-      // Collect Web Vitals
-      const vitals = await new Promise<Partial<PerformanceMetrics>>((resolve) => {
-        const collected: Partial<PerformanceMetrics> = {};
-        let count = 0;
-        const total = 4;
-
-        const onMetric = (metric: any) => {,
-          collected[metric.name.toLowerCase() as keyof PerformanceMetrics] = metric.value;
-          count++;
-          if (count === total) resolve(collected);
+  const, collectMetric, s = useCallba, c, k(asy, n, c () => {
+    t, r, y {
+      // Collect, Web, Vitals
+  const, vital, s = await, new, Promise<Parti, a, l<PerformanceMetri, c, s>>((resol, v, e) => {
+        const, collecte, d: Parti, a, l<PerformanceMetri, c, s> = {};
+        let, coun, t = 0;
+        const, tota, l = 4;
+        const, onMetri, c = (metr, i, c: a, n, y) => {
+          collect, e, d[metr, i, c.na, m, e.toLowerCa, s, e() as, keyof, PerformanceMetrics] = metr, i, c.val, u, e;
+          cou, n, t++;
+          if (cou, n, t === tot, a, l) resol, v, e(collect, e, d);
         };
-
-        // Simulate Web Vitals collection
-        setTimeout(() => {
-          onMetric({ name: 'FCP', value: 1200 });';
-          onMetric({ name: 'LCP', value: 2100 });';
-          onMetric({ name: 'FID', value: 45 });';
-          onMetric({ name: 'CLS', value: 0.05 });';
-        }, 100);
+        // Simulate, Web, Vitals collecti, o, n
+  setTimeo, u, t(() => {
+          onMetr, i, c({ na, m, e: 'F, C, P', val, u, e: 12, 0, 0 });';
+          onMetr, i, c({ na, m, e: 'L, C, P', val, u, e: 21, 0, 0 });';
+          onMetr, i, c({ na, m, e: 'F, I, D', val, u, e: 45 });';
+          onMetr, i, c({ na, m, e: 'C, L, S', val, u, e: 0.05 });';
+        }, 1, 0, 0);
       });
-
-      // Get bundle size and load time
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;';
-      const loadTime = navigation ? navigation.loadEventEnd - navigation.fetchStart : 0;
-      
-      // Estimate bundle size (simulated)
-      const bundleSize = document.querySelectorAll('script').length * 50000;
+      // Get, bundle, size and, load, time
+  const, navigatio, n = performan, c, e.getEntriesByTy, p, e('navigati, o, n')[0] as, PerformanceNavigationTimin, g;';
+      const, loadTim, e = navigati, o, n ? navigati, o, n.loadEventE, n, d - navigati, o, n.fetchSta, r, t : 0;
+      // Estimate, bundle, size (simulat, e, d)
+      const, bundleSiz, e = docume, n, t.querySelectorA, l, l('scri, p, t').leng, t, h * 500, 0, 0;
 =======
-      const bundleSize = document.querySelectorAll('script').length * 50000;';
-
-      const newMetrics: PerformanceMetrics = {,
-        fcp: vitals.fcp || 0,,
-        lcp: vitals.lcp || 0,,
-        fid: vitals.fid || 0,,
-        cls: vitals.cls || 0,,
-        ttfb: navigation ? navigation.responseStart - navigation.fetchStart : 0,,
-        inp: vitals.inp || 0,,
-        bundleSize,
-        loadTime
+      const, bundleSiz, e = docume, n, t.querySelectorA, l, l('scri, p, t').leng, t, h * 500, 0, 0;';
+      const, newMetric, s: PerformanceMetri, c, s = {
+        f, c, p: vita, l, s.f, c, p || 0
+        l, c, p: vita, l, s.l, c, p || 0
+        f, i, d: vita, l, s.f, i, d || 0
+        c, l, s: vita, l, s.c, l, s || 0
+        tt, f, b: navigati, o, n ? navigati, o, n.responseSta, r, t - navigati, o, n.fetchSta, r, t : 0
+        i, n, p: vita, l, s.i, n, p || 0
+        bundleSi, z, e
+        loadTi, m, e;
       };
-
-      setMetrics(newMetrics);
-      setHistory(prev => [...prev.slice(-9), newMetrics]);
-
-      // Check for alerts
-      const newAlerts: PerformanceAlert[] = [],
-      Object.entries(newMetrics).forEach(([key, value]) => {
-        const status = getMetricStatus(key, value);
-        if (status === 'poor') {;
-          newAlerts.push({
-            id: `${key}-${Date.now()}`,`;
-            type: 'error',',
+      setMetri, c, s(newMetri, c, s);
+      setHisto, r, y(pr, e, v => [...pr, e, v.sli, c, e(-9), newMetri, c, s]);
+      // Check, for, alerts
+  const, newAlert, s: PerformanceAle, r, t[] = []
+      Obje, c, t.entri, e, s(newMetri, c, s).forEa, c, h(([k, e, y, val, u, e]) => {
+        const, statu, s = getMetricStat, u, s(k, e, y, val, u, e);
+        if (stat, u, s === 'po, o, r') {;
+          newAler, t, s.pu, s, h({
+            id: `${k, e, y}-${Da, t, e.n, o, w()}`,`;`
+            ty, p, e: 'err, o, r','
 =======
-      const newAlerts: PerformanceAlert[] = [];,
-      Object.entries(newMetrics).forEach(([key, value]) => {
-        const status = getMetricStatus(key, value);
-        if (status === 'poor') {';
-          newAlerts.push({
-            id: `${key}-${Date.now()}`,`;
-            type: 'error',';,
-            message: `${key.toUpperCase()} is ${status}: ${value}`,`;
-            timestamp: Date.now(),,
-            metric: key,,
-            value,
-            threshold: thresholds[key as keyof typeof thresholds].poor
+      const, newAlert, s: PerformanceAle, r, t[] = [];
+      Obje, c, t.entri, e, s(newMetri, c, s).forEa, c, h(([k, e, y, val, u, e]) => {
+        const, statu, s = getMetricStat, u, s(k, e, y, val, u, e);
+        if (stat, u, s === 'po, o, r') {';
+          newAler, t, s.pu, s, h({
+            id: `${k, e, y}-${Da, t, e.n, o, w()}`,`;`
+            ty, p, e: 'err, o, r',';
+            messa, g, e: `${k, e, y.toUpperCa, s, e()} is ${stat, u, s}: ${val, u, e}`,`;`
+            timesta, m, p: Da, t, e.n, o, w()
+            metr, i, c: k, e, y
+            val, u, e
+            thresho, l, d: threshol, d, s[key, as, keyof typeof, threshold, s].po, o, r;
           });
-        } else if (status === 'needs-improvement') {;
-          newAlerts.push({
-            id: `${key}-${Date.now()}`,`;
-            type: 'warning',',
+        } else, i, f (stat, u, s === 'nee, d, s-improveme, n, t') {;
+          newAler, t, s.pu, s, h({
+            id: `${k, e, y}-${Da, t, e.n, o, w()}`,`;`
+            ty, p, e: 'warni, n, g','
 =======
-            threshold: thresholds[key as keyof typeof thresholds].poor,,
+            thresho, l, d: threshol, d, s[key, as, keyof typeof, threshold, s].po, o, r
           });
-        } else if (status === 'needs-improvement') {';
-          newAlerts.push({
-            id: `${key}-${Date.now()}`,`;
-            type: 'warning',';,
-            message: `${key.toUpperCase()} needs improvement: ${value}`,`;
-            timestamp: Date.now(),,
-            metric: key,,
-            value,
-            threshold: thresholds[key as keyof typeof thresholds].poor
+        } else, i, f (stat, u, s === 'nee, d, s-improveme, n, t') {';
+          newAler, t, s.pu, s, h({
+            id: `${k, e, y}-${Da, t, e.n, o, w()}`,`;`
+            ty, p, e: 'warni, n, g',';
+            messa, g, e: `${k, e, y.toUpperCa, s, e()} needs, improvemen, t: ${val, u, e}`,`;`
+            timesta, m, p: Da, t, e.n, o, w()
+            metr, i, c: k, e, y
+            val, u, e
+            thresho, l, d: threshol, d, s[key, as, keyof typeof, threshold, s].po, o, r;
 =======
-            threshold: thresholds[key as keyof typeof thresholds].poor,,
+            thresh, o, l
+  d: threshol, d, s[key, as, keyof typeof, threshold, s].po, o, r
           });
         }
       });
-
-      if (newAlerts.length > 0) {
-        setAlerts(prev => [...prev.slice(-4), ...newAlerts]);
+      if (newAler, t, s.leng, t, h > 0) {
+        setAler, t, s(pr, e, v => [...pr, e, v.sli, c, e(-4), ...newAler, t, s]);
       }
-
-    } catch (error) {
-      console.error('Error collecting performance metrics: ', error);',
+    } cat, c, h (err, o, r) {
+      conso, l, e.err, o, r('Error, collecting, performance metri, c, s: ', err, o, r);'
 =======
-      console.error('Error collecting performance metrics: ', error);';,
+      conso, l, e.err, o, r('Error, collecting, performance metri, c, s: ', err, o, r);';
     }
-  }, [getMetricStatus]);
-
-  useEffect(() => {
-    if (isMonitoring) {
-      const interval = setInterval(collectMetrics, 5000);
-      collectMetrics(); // Initial collection
-      return () => clearInterval(interval);
+  }, [getMetricStat, u, s]);
+  useEffe, c, t(() => {
+    if (isMonitori, n, g) {
+      const, interva, l = setInterv, a, l(collectMetri, c, s, 50, 0, 0);
+      collectMetri, c, s(); // Initial, collectio, n
+  return () => clearInterv, a, l(interv, a, l);
     }
-  }, [isMonitoring, collectMetrics]);
-
-  const formatValue = (metric: string, value: number) => {,
-switch (metric) {
-case 'cls':
-return value.toFixed(3);
-case 'bundleSize':
-return `${(value / 1024).toFixed(1)
-} KB`;
-      case 'loadTime':
-      case 'fcp':
-      case 'lcp':
-      case 'fid':
-      case 'ttfb':
-      case 'inp':
-        return `${value}ms`;
-      default:
-        return value.toString();
+  }, [isMonitori, n, g, collectMetri, c, s]);
+  const, formatValu, e = (metr, i, c: stri, n, g, val, u, e: numb, e, r) => {
+swit, c, h (metr, i, c) {
+ca, s, e 'c, l, s':
+return, valu, e.toFix, e, d(3);
+ca, s, e 'bundleSi, z, e':
+retu, r, n `${(val, u, e / 10, 2, 4).toFix, e, d(1)`
+} KB`;`
+      ca, s, e 'loadTi, m, e':
+      ca, s, e 'f, c, p':
+      ca, s, e 'l, c, p':
+      ca, s, e 'f, i, d':
+      ca, s, e 'tt, f, b':
+      ca, s, e 'i, n, p':
+        retu, r, n `${val, u, e}ms`;`
+      defau, l, t:
+        return, valu, e.toStri, n, g();
 =======
-case 'cls':';
-return value.toFixed(3);
-case 'bundleSize':';
-return `${(value / 1024).toFixed(1)`;
-} KB`;`;
-      case 'loadTime':';
-      case 'fcp':';
-      case 'lcp':';
-      case 'fid':';
-      case 'ttfb':';
-      case 'inp':';
-        return `${value}ms`;`;
-      default: return value.toString();,
+ca, s, e 'c, l, s':';
+return, valu, e.toFix, e, d(3);
+ca, s, e 'bundleSi, z, e':';
+retu, r, n `${(val, u, e / 10, 2, 4).toFix, e, d(1)`;`
+} KB`;`;`
+      ca, s, e 'loadTi, m, e':';
+      ca, s, e 'f, c, p':';
+      ca, s, e 'l, c, p':';
+      ca, s, e 'f, i, d':';
+      ca, s, e 'tt, f, b':';
+      ca, s, e 'i, n, p':';
+        retu, r, n `${val, u, e}ms`;`;`
+      defau, l, t: return, valu, e.toStri, n, g();
     }
   };
-
-  const clearAlerts = () => {
-    setAlerts([]);
+  const, clearAlert, s = () => {
+    setAler, t, s([]);
   };
-
-  const exportMetrics = () => {
-    const data = {
-      metrics,
-      history,
-      alerts,
-      timestamp: new Date().toISOString()
+  const, exportMetric, s = () => {
+    const, dat, a = {
+      metri, c, s
+      histo, r, y
+      aler, t, s
+      timesta, m, p: new, Dat, e().toISOStri, n, g()
 =======
-      timestamp: new Date().toISOString(),,
+      timest, a, m
+  p: new, Dat, e().toISOStri, n, g()
     };
-    
-    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });';
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');';
-    a.href = url;
-    a.download = `performance-metrics-${Date.now()}.json`;`;
-    a.click();
-    URL.revokeObjectURL(url);
+    const, blo, b = new, Blo, b([JS, O, N.stringi, f, y(da, t, a, nu, l, l, 2)], { ty, p, e: 'applicati, o, n/js, o, n' });';
+    const, ur, l = U, R, L.createObjectU, R, L(bl, o, b);
+    cons, t, a = docume, n, t.createEleme, n, t('a');';
+    a.hr, e, f = u, r, l;
+    a.downlo, a, d = `performan, c, e-metri, c, s-${Da, t, e.n, o, w()}.js, o, n`;`;`
+    a.cli, c, k();
+    U, R, L.revokeObjectU, R, L(u, r, l);
   };
-
   return (
-    <div className="bg-white rounded-lg shadow-lg p-6 max-w-6xl mx-auto">";
-      <div className="flex justify-between items-center mb-6">";
-        <h2 className="text-2xl font-bold text-gray-900">Advanced Performance Monitor</h2>";
-        <div className="flex gap-2">";
-          <button
-            onClick={() => setIsMonitoring(!isMonitoring)}
-            className={
-`px-4 py-2 rounded-lg font-medium transition-colors ${`;
-isMonitoring
-? 'bg-red-600 text-white hover:bg-red-700'
-: 'bg-green-600 text-white hover:bg-green-700'
-}`}`;
+    <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6, ma, x-w-6xl, m, x-au, t, o">";
+      <div, className="flex, justif, y-between, item, s-center, m, b-6">";
+        <h2, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0">Advanced, Performance, Monitor</h2>";
+        <div, className="flex, ga, p-2">";
+          <butt, o, n
+  onCli, c, k={() => setIsMonitori, n, g(!isMonitori, n, g)}
+            classNa, m, e={
+`px-4, p, y-2, rounde, d-lg, fon, t-medium, transitio, n-colo, r, s ${`;`
+isMonitori, n, g;
+? 'bg-r, e, d-600, tex, t-white, hove, r: bg-r, e, d-7, 0, 0'
+: 'bg-gre, e, n-600, tex, t-white, hov, e
+  r:bg-gre, e, n-7, 0, 0'
+}`}`;`
           >
-            {isMonitoring ? 'Stop Monitoring' : 'Start Monitoring'};
+            {isMonitori, n, g ? 'Stop, Monitorin, g' : 'Start, Monitorin, g'};
 =======
-? 'bg-red-600 text-white hover: bg-red-700',';,
-: 'bg-green-600 text-white hover:bg-green-700'
-}`}`;
+? 'bg-r, e, d-600, tex, t-white, hove, r: bg-r, e, d-7, 0, 0',';
+: 'bg-gre, e, n-600, tex, t-white, hove, r:bg-gre, e, n-7, 0, 0'
+}`}`;`
           >
-            {isMonitoring ? 'Stop Monitoring' : 'Start Monitoring'}';
-          </button>
-          <button
-            onClick={collectMetrics}
-            className="px-4 py-2 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors",
+            {isMonitori, n, g ? 'Stop, Monitorin, g' : 'Start, Monitorin, g'}';
+          </butt, o, n>
+          <butt, o, n
+  onCli, c, k={collectMetri, c, s}
+            classNa, m, e="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounde, d-lg, hove, r: bg-bl, u, e-700, transitio, n-colo, r, s"
           >
-            Refresh Metrics
-          </button>
-          <button
-            onClick={exportMetrics}
-            className="px-4 py-2 bg-gray-600 text-white rounded-lg hover: bg-gray-700 transition-colors",
+            Refresh, Metric, s;
+          </butt, o, n>
+          <butt, o, n
+  onCli, c, k={exportMetri, c, s}
+            classNa, m, e="px-4, p, y-2, b, g-gr, a, y-600, tex, t-white, rounde, d-lg, hove, r: bg-gr, a, y-700, transitio, n-colo, r, s"
           >
-            Export Data
-          </button>
-        </div>
-      </div>
-
-      {/* Alerts Section */}
-      {alerts.length > 0 && (
-        <div className="mb-6">";
-          <div className="flex justify-between items-center mb-3">";
-            <h3 className="text-lg font-semibold text-gray-900">Performance Alerts</h3>";
-            <button
-              onClick={clearAlerts}
-              className="text-sm text-gray-500 hover: text-gray-700",
+            Export, Dat, a;
+          </butt, o, n>
+        </d, i, v>
+      </d, i, v>
+      {/* Alerts, Sectio, n */}
+      {aler, t, s.leng, t, h > 0 && (
+        <div, className="mb-6">";
+          <div, className="flex, justif, y-between, item, s-center, m, b-3">";
+            <h3, className="te, x, t-lg, fon, t-semibold, tex, t-gr, a, y-9, 0, 0">Performance, Alert, s</h3>";
+            <butt, o, n
+  onCli, c, k={clearAler, t, s}
+              classNa, m, e="te, x, t-sm, tex, t-gr, a, y-500, hove, r: te, x, t-gr, a, y-7, 0, 0"
             >
-              Clear All
-            </button>
-          </div>
-          <div className="space-y-2">";
-            <AnimatePresence>
-              {alerts.map((alert) => (
-                <motion.div
-                  key={alert.id}
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                  className={
-`p-3 rounded-lg border-l-4 ${`;
-alert.type === 'error'
-? 'bg-red-50 border-red-400 text-red-800'
-: alert.type === 'warning'
+              Clear, Al, l;
+            </butt, o, n>
+          </d, i, v>
+          <div, className="spa, c, e-y-2">";
+            <AnimatePresen, c, e>
+              {aler, t, s.m, a, p((ale, r, t) => (
+                <moti, o, n.d, i, v
+  k, e, y={ale, r, t.id}
+                  initi, a, l={{ opaci, t, y: 0, y: -10 }}
+                  anima, t, e={{ opaci, t, y: 1, y: 0 }}
+                  ex, i, t={{ opaci, t, y: 0, y: -10 }}
+                  classNa, m, e={
+`p-3, rounde, d-lg, borde, r-l-4 ${`;`
+ale, r, t.ty, p, e === 'err, o, r'
+? 'bg-r, e, d-50, borde, r-r, e, d-400, tex, t-r, e, d-8, 0, 0'
+: ale, r, t.ty, p, e === 'warni, n, g'
 =======
-: alert.type === 'warning',';
-? 'bg-yellow-50 border-yellow-400 text-yellow-800'
-: 'bg-blue-50 border-blue-400 text-blue-800'
-}`}`;
+: ale, r, t.ty, p, e === 'warni, n, g',';
+? 'bg-yell, o, w-50, borde, r-yell, o, w-400, tex, t-yell, o, w-8, 0, 0'
+: 'bg-bl, u, e-50, borde, r-bl, u, e-400, tex, t-bl, u, e-8, 0, 0'
+}`}`;`
                 >
-                  <div className="flex justify-between items-start">";
-                    <div>
-                      <p className="font-medium">{alert.message}</p>";
-                      <p className="text-sm opacity-75">";
-                        {new Date(alert.timestamp).toLocaleTimeString()}
+                  <div, className="flex, justif, y-between, item, s-sta, r, t">";
+                    <d, i, v>
+                      <p, className="fo, n, t-medi, u, m">{ale, r, t.messa, g, e}</p>";
+                      <p, className="te, x, t-sm, opacit, y-75">";
+                        {new, Dat, e(ale, r, t.timesta, m, p).toLocaleTimeStri, n, g()}
                       </p>
-                    </div>
-                    <button
-                      onClick={() => setAlerts(prev => prev.filter(a => a.id !== alert.id))}
-                      className="text-gray-400 hover: text-gray-600",
+                    </d, i, v>
+                    <butt, o, n
+  onCli, c, k={() => setAler, t, s(pr, e, v => pr, e, v.filt, e, r(a => a.id !== ale, r, t.id))}
+                      classNa, m, e="te, x, t-gr, a, y-400, hove, r: te, x, t-gr, a, y-6, 0, 0"
                     >
                       ✕
-                    </button>
-                  </div>
-                </motion.div>
+                    </butt, o, n>
+                  </d, i, v>
+                </moti, o, n.d, i, v>
               ))}
-            </AnimatePresence>
-          </div>
-        </div>
+            </AnimatePresen, c, e>
+          </d, i, v>
+        </d, i, v>
       )}
-
-      {/* Metrics Grid */}
-      <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-4 mb-6">",
-        {Object.entries(metrics).map(([key, value]) => {
-          const status = getMetricStatus(key, value);
+      {/* Metrics, Gri, d */}
+      <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l
+  g:gr, i, d-co, l, s-4, ga, p-4, m, b-6">"
+        {Obje, c, t.entri, e, s(metri, c, s).m, a, p(([k, e, y, val, u, e]) => {
+          const, statu, s = getMetricStat, u, s(k, e, y, val, u, e);
           return (
-            <div key={key} className="bg-gray-50 rounded-lg p-4">
-              <div className="flex justify-between items-center mb-2">
-                <h4 className="font-semibold text-gray-900 uppercase text-sm">{key}</h4>
-                <span className={`px-2 py-1 rounded-full text-xs font-medium ${getMetricColor(status)}`}>`;
-                  {status.replace('-', ' ')};
+            <div, ke, y={k, e, y} classNa, m, e="bg-gr, a, y-50, rounde, d-l, g, p-4">
+              <div, className="flex, justif, y-between, item, s-center, m, b-2">
+                <h4, className="fo, n, t-semibold, tex, t-gr, a, y-900, uppercase, text-sm">{k, e, y}</h4>
+                <span, className={`px-2, p, y-1, rounde, d-full, tex, t-xs, fon, t-medi, u, m ${getMetricCol, o, r(stat, u, s)}`}>`;`
+                  {stat, u, s.repla, c, e('-', ' ')};
 =======
-      <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-4 mb-6">";,
-        {Object.entries(metrics).map(([key, value]) => {
-          const status = getMetricStatus(key, value);
+      <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l
+  g:gr, i, d-co, l, s-4, ga, p-4, m, b-6">";
+        {Obje, c, t.entri, e, s(metri, c, s).m, a, p(([k, e, y, val, u, e]) => {
+          const, statu, s = getMetricStat, u, s(k, e, y, val, u, e);
           return (
-            <div key={key} className="bg-gray-50 rounded-lg p-4">";
-              <div className="flex justify-between items-center mb-2">";
-                <h4 className="font-semibold text-gray-900 uppercase text-sm">{key}</h4>";
-                <span className={`px-2 py-1 rounded-full text-xs font-medium ${getMetricColor(status)}`}>`;
-                  {status.replace('-', ' ')}';
-                </span>
-              </div>
-              <p className="text-2xl font-bold text-gray-900">";
-                {formatValue(key, value)}
+            <div, ke, y={k, e, y} classNa, m, e="bg-gr, a, y-50, rounde, d-l, g, p-4">";
+              <div, className="flex, justif, y-between, item, s-center, m, b-2">";
+                <h4, className="fo, n, t-semibold, tex, t-gr, a, y-900, uppercase, text-sm">{k, e, y}</h4>";
+                <span, className={`px-2, p, y-1, rounde, d-full, tex, t-xs, fon, t-medi, u, m ${getMetricCol, o, r(stat, u, s)}`}>`;`
+                  {stat, u, s.repla, c, e('-', ' ')}';
+                </sp, a, n>
+              </d, i, v>
+              <p, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0">";
+                {formatVal, u, e(k, e, y, val, u, e)}
               </p>
-              <div className="mt-2">";
-                <div className="w-full bg-gray-200 rounded-full h-2">";
-                  <div
-                    className={
-`h-2 rounded-full transition-all duration-300 ${`;
-status === 'good'
-? 'bg-green-500'
-: status === 'needs-improvement'
+              <div, className="mt-2">";
+                <div, className="w-full, b, g-gr, a, y-200, rounde, d-ful, l, h-2">";
+                  <d, i, v 
+  classNa, m, e={
+`h-2, rounde, d-full, transitio, n-all, duratio, n-3, 0, 0 ${`;`
+stat, u, s === 'go, o, d'
+? 'bg-gre, e, n-5, 0, 0'
+: stat, u, s === 'nee, d, s-improveme, n, t'
 =======
-: status === 'needs-improvement',';
-? 'bg-yellow-500'
-: 'bg-red-500'
-}`}`;
-                    style={{
-                      width: `${Math.min(,
-                        (value / (thresholds[key as keyof typeof thresholds]?.poor || 1)) * 100
-                        100
-                      )}%`}}
+: stat, u, s === 'nee, d, s-improveme, n, t',';
+? 'bg-yell, o, w-5, 0, 0'
+: 'bg-r, e, d-5, 0, 0'
+}`}`;`
+                    sty, l, e={{
+                      wid, t, h: `${Ma, t, h.m, i, n(,`
+                        (val, u, e / (threshol, d, s[key, as, keyof typeof, threshold, s]?.po, o, r || 1)) * 1, 0, 0
+  1, 0, 0;
+                      )}%`}}`
 =======
-                      width: `${Math.min(,`;
-                        (value / (thresholds[key as keyof typeof thresholds]?.poor || 1)) * 100,
-                        100
-                      )}%`,`;
-                    }}
-                  />
-                </div>
-              </div>
-            </div>
+                      wid, t, h: `${Ma, t, h.m, i, n(,`;`
+                        (val, u, e / (threshol, d, s[key, as, keyof typeof, threshold, s]?.po, o, r || 1)) * 1, 0, 0
+                        1, 0, 0;
+                      )}%`,`;`
+                    }}  />
+                </d, i, v>
+              </d, i, v>
+            </d, i, v>
           );
         })}
-      </div>
-
-      {/* Performance History Chart */}
-      {history.length > 0 && (
-        <div className="bg-gray-50 rounded-lg p-4">";
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">Performance History</h3>";
-          <div className="h-64 flex items-end justify-between gap-2">";
-            {history.map((entry, index) => (
-              <div key={index} className="flex flex-col items-center flex-1">";
-                <div
-                  className="bg-blue-500 w-full rounded-t"
-                  style={{
-                    height: `${(entry.lcp / 4000) * 200}px`,
-                    minHeight: '4px'
+      </d, i, v>
+      {/* Performance, History, Chart */}
+      {histo, r, y.leng, t, h > 0 && (
+        <div, className="bg-gr, a, y-50, rounde, d-l, g, p-4">";
+          <h3, className="te, x, t-lg, fon, t-semibold, tex, t-gr, a, y-900, m, b-4">Performance, Histor, y</h3>";
+          <div, className="h-64, flex, items-end, justif, y-between, ga, p-2">";
+            {histo, r, y.m, a, p((ent, r, y, ind, e, x) => (
+              <div, ke, y={ind, e, x} classNa, m, e="flex, fle, x-col, item, s-center, fle, x-1">";
+                <d, i, v 
+  classNa, m, e="bg-bl, u, e-50, 0, w-full, rounde, d-t"
+                  sty, l, e={{
+                    heig, h, t: `${(ent, r, y.l, c, p / 40, 0, 0) * 2, 0, 0}px`,`
+                    minHeig, h, t: '4, p, x'
 =======
-                    height: `${(entry.lcp / 4000) * 200}px`,`;
-                    minHeight: '4px',';,
+                    hei, g, h
+  t: `${(ent, r, y.l, c, p / 40, 0, 0) * 2, 0, 0}px`,`;`
+                    minHeig, h, t: '4, p, x',';
                   }}
-                  title={`LCP: ${entry.lcp}ms`}`;
-                />
-                <span className="text-xs text-gray-500 mt-1">{index}</span>";
-              </div>
+                  tit, l, e={`L, C, P: ${ent, r, y.l, c, p}ms`}`;`  />
+                <span, className="te, x, t-xs, tex, t-gr, a, y-500, m, t-1">{ind, e, x}</sp, a, n>";
+              </d, i, v>
             ))}
-          </div>
-          <div className="mt-2 text-center">";
-            <span className="text-sm text-gray-600">Last 10 measurements (LCP in ms)</span>";
-          </div>
-        </div>
+          </d, i, v>
+          <div, className="mt-2, tex, t-cent, e, r">";
+            <span, className="te, x, t-sm, tex, t-gr, a, y-6, 0, 0">Last, 10, measurements (LCP, in, ms)</sp, a, n>";
+          </d, i, v>
+        </d, i, v>
       )}
-
-      {/* Recommendations */}
-      <div className="mt-6 bg-blue-50 rounded-lg p-4">";
-        <h3 className="text-lg font-semibold text-blue-900 mb-2">Performance Recommendations</h3>";
-        <ul className="space-y-1 text-sm text-blue-800">";
+      {/* Recommendatio, n, s */}
+      <div, className="mt-6, b, g-bl, u, e-50, rounde, d-l, g, p-4">";
+        <h3, className="te, x, t-lg, fon, t-semibold, tex, t-bl, u, e-900, m, b-2">Performance, Recommendation, s</h3>";
+        <ul, className="spa, c, e-y-1, tex, t-sm, tex, t-bl, u, e-8, 0, 0">";
           {
-metrics.lcp > thresholds.lcp.poor && (
-<li>• Optimize Largest Contentful Paint: Consider image optimization and critical CSS</li>
+metri, c, s.l, c, p > threshol, d, s.l, c, p.po, o, r && (
+<li>• Optimize, Largest, Contentful Pai, n, t: Consider, image, optimization and, critical, CSS</li>
 =======
-<li>• Optimize Largest Contentful Paint: Consider image optimization and critical CSS</li>,,
+<li>• Optimize, Largest, Contentful Pa, i, n
+  t: Consider, image, optimization and, critical, CSS</li>
 )
-},
+}
           {
-metrics.fcp > thresholds.fcp.poor && (
-<li>• Improve First Contentful Paint: Reduce render-blocking resources</li>
+metri, c, s.f, c, p > threshol, d, s.f, c, p.po, o, r && (
+<li>• Improve, First, Contentful Pai, n, t: Reduce, rende, r-blocking, resource, s</li>
 =======
-<li>• Improve First Contentful Paint: Reduce render-blocking resources</li>,,
+<li>• Improve, First, Contentful Pa, i, n
+  t: Reduce, rende, r-blocking, resource, s</li>
 )
-},
+}
           {
-metrics.cls > thresholds.cls.poor && (
-<li>• Reduce Cumulative Layout Shift: Add dimensions to images and ads</li>
+metri, c, s.c, l, s > threshol, d, s.c, l, s.po, o, r && (
+<li>• Reduce, Cumulative, Layout Shi, f, t: Add, dimensions, to images, and, ads</li>
 =======
-<li>• Reduce Cumulative Layout Shift: Add dimensions to images and ads</li>,,
+<li>• Reduce, Cumulative, Layout Sh, i, f
+  t: Add, dimensions, to images, and, ads</li>
 )
-},
+}
           {
-metrics.bundleSize > thresholds.bundleSize.poor && (
-<li>• Reduce bundle size: Implement code splitting and tree shaking</li>
+metri, c, s.bundleSi, z, e > threshol, d, s.bundleSi, z, e.po, o, r && (
+<li>• Reduce, bundle, size: Implement, code, splitting and, tree, shaking</li>
 =======
-<li>• Reduce bundle size: Implement code splitting and tree shaking</li>,,
+<li>• Reduce, bundle, siz
+  e: Implement, code, splitting and, tree, shaking</li>
 )
-},
-          {metrics.fcp <= thresholds.fcp.good && metrics.lcp <= thresholds.lcp.good && metrics.cls <= thresholds.cls.good && (
-            <li>• Great job! Your performance metrics are in the green zone.</li>
+}
+          {metri, c, s.f, c, p <= threshol, d, s.f, c, p.go, o, d && metri, c, s.l, c, p <= threshol, d, s.l, c, p.go, o, d && metri, c, s.c, l, s <= threshol, d, s.c, l, s.go, o, d && (
+            <li>• Great, jo, b! Your, performance, metrics are, in, the green, zon, e.</li>
           )}
         </ul>
-      </div>
-    </div>
+      </d, i, v>
+    </d, i, v>
   );
 };
-
 export default AdvancedPerformanceMonitor;

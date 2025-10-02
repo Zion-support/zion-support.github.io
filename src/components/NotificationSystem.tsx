@@ -1,293 +1,282 @@
-import React, { useEffect } from 'react';';
-import {
-
-} from 'framer-motion';';
-import {
-
-} from 'lucide-react';
-interface Notification {
-id: string,
-message: string,
-type: 'success' | 'error' | 'info' | 'warning';',
-duration?: number;
-persistent?: boolean;
-actions?: Array<{
-label: string;
-action: () => void;
-variant?: 'primary' | 'secondary';
+import, Reac, t, { useEffe, c, t } fr, o, m "rea, c, t";';
+impo, r, t {
+} fr, o, m "fram, e, r-moti, o, n";';
+impo, r, t {
+} fr, o, m "luci, d, e-rea, c, t";
+interface, Notificatio, n {
+id: stri, n, g
+messa, g, e: stri, n, g
+ty, p, e: 'succe, s, s' | 'err, o, r' | 'in, f, o' | 'warni, n, g';'
+durati, o, n?: numb, e, r;
+persiste, n, t?: boole, a, n;
+actio, n, s?: Arr, a, y<{
+lab, e, l: stri, n, g;
+act, i, o
+  n: () => vo, i, d;
+varia, n, t?: 'prima, r, y' | 'seconda, r, y';
 =======
-} from 'lucide-react';';
-
-interface Notification {
-id: string;,
-message: string;,
-type: 'success' | 'error' | 'info' | 'warning';';,
-duration?: number;
-persistent?: boolean;
-actions?: Array<{,
-label: string;,
-action: () => void;,
-variant?: 'primary' | 'secondary';';
+} fr, o, m "luci, d, e-rea, c, t";';
+interface, Notificatio, n {
+id: stri, n, g;
+messa, g, e: stri, n, g;
+t, y, p
+  e: 'succe, s, s' | 'err, o, r' | 'in, f, o' | 'warni, n, g';';
+durati, o, n?: numb, e, r;
+persiste, n, t?: boole, a, n;
+actio, n, s?: Arr, a, y<{
+lab, e, l: stri, n, g;
+act, i, o
+  n: () => vo, i, d;
+varia, n, t?: 'prima, r, y' | 'seconda, r, y';';
 }>;
 }
-
-interface NotificationSystemProps {
-notifications: Notification[];,
-onRemove: (id: string) => void;,
-position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left' | 'top-center' | 'bottom-center';,
-maxNotifications?: number;
+interface, NotificationSystemProp, s {
+notificatio, n, s: Notificati, o, n[];
+onRemo, v, e: (i
+  d: stri, n, g) => vo, i, d;
+positi, o, n?: 't, o, p-rig, h, t' | 't, o, p-le, f, t' | 'bott, o, m-rig, h, t' | 'bott, o, m-le, f, t' | 't, o, p-cent, e, r' | 'bott, o, m-cent, e, r';
+maxNotificatio, n, s?: numb, e, r;
 }
-
-const NotificationSystem: React.FC<NotificationSystemProps> = ({,
-  notifications,
-  onRemove
-  position = 'top-right'
+const, NotificationSyste, m: Rea, c, t.FC<NotificationSystemPro, p, s> = ({
+  notificatio, n, s
+  onRemo, v, e
+  positi, o, n = 't, o, p-rig, h, t'
 =======
-  onRemove,
-  position = 'top-right',';
-  maxNotifications = 5
+  onRemo, v, e
+  positi, o, n = 't, o, p-rig, h, t',';
+  maxNotificatio, n, s = 5;
 }) => {
-  // Auto-remove notifications after duration
-  useEffect(() => {
-    notifications.forEach(notification => {
-      if (!notification.persistent && notification.duration) {
-        const timer = setTimeout(() => {
-          onRemove(notification.id);
-        }, notification.duration);
-
-        return () => clearTimeout(timer);
+  // Au, t, o-remove, notifications, after durati, o, n
+  useEffe, c, t(() => {
+    notificatio, n, s.forEa, c, h(notificati, o, n => {
+      if (!notificati, o, n.persiste, n, t && notificati, o, n.durati, o, n) {
+        const, time, r = setTimeo, u, t(() => {
+          onRemo, v, e(notificati, o, n.id);
+        }, notificati, o, n.durati, o, n);
+        return () => clearTimeo, u, t(tim, e, r);
       }
     });
-  }, [notifications, onRemove]);
-
-  const getIcon = (type: Notification['type']) => {',
-switch (type) {
-case 'success':
-return <CheckCircle className="w-5 h-5 text-green-600" />;
-case 'error':
-return <XCircle className="w-5 h-5 text-red-600" />;
-case 'warning':
-return <AlertTriangle className="w-5 h-5 text-yellow-600" />;
-case 'info':
-default:
-return <Info className="w-5 h-5 text-blue-600" />;
+  }, [notificatio, n, s, onRemo, v, e]);
+  const, getIco, n = (ty, p, e: Notificati, o, n['ty, p, e']) => {'
+swit, c, h (ty, p, e) {
+ca, s, e 'succe, s, s':
+retu, r, n <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-6, 0, 0" />;
+ca, s, e 'err, o, r':
+retu, r, n <XCircle, className="w-5 h-5, tex, t-r, e, d-6, 0, 0" />;
+ca, s, e 'warni, n, g':
+retu, r, n <AlertTriangle, className="w-5 h-5, tex, t-yell, o, w-6, 0, 0" />;
+ca, s, e 'in, f, o':
+defau, l, t:
+retu, r, n <Info, className="w-5 h-5, tex, t-bl, u, e-6, 0, 0" />;
 }
   };
-
-  const getStyles = (type: Notification['type']) => {',
-switch (type) {
-case 'success':
-return 'bg-green-50 border-green-200 text-green-800';
-case 'error':
-return 'bg-red-50 border-red-200 text-red-800';
-case 'warning':
-return 'bg-yellow-50 border-yellow-200 text-yellow-800';
-case 'info':
-default:
-return 'bg-blue-50 border-blue-200 text-blue-800';
+  const, getStyle, s = (ty, p, e: Notificati, o, n['ty, p, e']) => {'
+swit, c, h (ty, p, e) {
+ca, s, e 'succe, s, s':
+retu, r, n 'bg-gre, e, n-50, borde, r-gre, e, n-200, tex, t-gre, e, n-8, 0, 0';
+ca, s, e 'err, o, r':
+retu, r, n 'bg-r, e, d-50, borde, r-r, e, d-200, tex, t-r, e, d-8, 0, 0';
+ca, s, e 'warni, n, g':
+retu, r, n 'bg-yell, o, w-50, borde, r-yell, o, w-200, tex, t-yell, o, w-8, 0, 0';
+ca, s, e 'in, f, o':
+defau, l, t: retu, r, n 'bg-bl, u, e-50, borde, r-bl, u, e-200, tex, t-bl, u, e-8, 0, 0';
 =======
-  const getIcon = (type: Notification['type']) => {';,
-switch (type) {
-case 'success':';
-return <CheckCircle className="w-5 h-5 text-green-600" />;";
-case 'error':';
-return <XCircle className="w-5 h-5 text-red-600" />;";
-case 'warning':';
-return <AlertTriangle className="w-5 h-5 text-yellow-600" />;";
-case 'info':';
-default:
-return <Info className="w-5 h-5 text-blue-600" />;";
+  const, getIco, n = (ty, p, e: Notificati, o, n['ty, p, e']) => {';
+swit, c, h (ty, p, e) {
+ca, s, e 'succe, s, s':';
+retu, r, n <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-6, 0, 0" />;";
+ca, s, e 'err, o, r':';
+retu, r, n <XCircle, className="w-5 h-5, tex, t-r, e, d-6, 0, 0" />;";
+ca, s, e 'warni, n, g':';
+retu, r, n <AlertTriangle, className="w-5 h-5, tex, t-yell, o, w-6, 0, 0" />;";
+ca, s, e 'in, f, o':';
+defa, u, l
+  t:
+retu, r, n <Info, className="w-5 h-5, tex, t-bl, u, e-6, 0, 0" />;";
 };
   };
-
-  const getStyles = (type: Notification['type']) => {';,
-switch (type) {
-case 'success':';
-return 'bg-green-50 border-green-200 text-green-800';';
-case 'error':';
-return 'bg-red-50 border-red-200 text-red-800';';
-case 'warning':';
-return 'bg-yellow-50 border-yellow-200 text-yellow-800';';
-case 'info':';
-default:
-return 'bg-blue-50 border-blue-200 text-blue-800';';
+  const, getStyle, s = (ty, p, e: Notificati, o, n['ty, p, e']) => {';
+swit, c, h (ty, p, e) {
+ca, s, e 'succe, s, s':';
+retu, r, n 'bg-gre, e, n-50, borde, r-gre, e, n-200, tex, t-gre, e, n-8, 0, 0';';
+ca, s, e 'err, o, r':';
+retu, r, n 'bg-r, e, d-50, borde, r-r, e, d-200, tex, t-r, e, d-8, 0, 0';';
+ca, s, e 'warni, n, g':';
+retu, r, n 'bg-yell, o, w-50, borde, r-yell, o, w-200, tex, t-yell, o, w-8, 0, 0';';
+ca, s, e 'in, f, o':';
+defa, u, l
+  t:
+retu, r, n 'bg-bl, u, e-50, borde, r-bl, u, e-200, tex, t-bl, u, e-8, 0, 0';';
 };
   };
-
-  const getPositionClasses = () => {
-switch (position) {
-case 'top-left':
-return 'top-4 left-4';
-case 'top-center':
-return 'top-4 left-1/2 transform -translate-x-1/2';
-case 'bottom-left':
-return 'bottom-4 left-4';
-case 'bottom-center':
-return 'bottom-4 left-1/2 transform -translate-x-1/2';
-case 'bottom-right':
-return 'bottom-4 right-4';
-case 'top-right':
-default:
-return 'top-4 right-4';
+  const, getPositionClasse, s = () => {
+swit, c, h (positi, o, n) {
+ca, s, e 't, o, p-le, f, t':
+retu, r, n 't, o, p-4, lef, t-4';
+ca, s, e 't, o, p-cent, e, r':
+retu, r, n 't, o, p-4, lef, t-1/2, transfor, m -transla, t, e-x-1/2';
+ca, s, e 'bott, o, m-le, f, t':
+retu, r, n 'bott, o, m-4, lef, t-4';
+ca, s, e 'bott, o, m-cent, e, r':
+retu, r, n 'bott, o, m-4, lef, t-1/2, transfor, m -transla, t, e-x-1/2';
+ca, s, e 'bott, o, m-rig, h, t':
+retu, r, n 'bott, o, m-4, righ, t-4';
+ca, s, e 't, o, p-rig, h, t':
+defau, l, t: retu, r, n 't, o, p-4, righ, t-4';
 =======
-case 'top-left':';
-return 'top-4 left-4';';
-case 'top-center':';
-return 'top-4 left-1/2 transform -translate-x-1/2';';
-case 'bottom-left':';
-return 'bottom-4 left-4';';
-case 'bottom-center':';
-return 'bottom-4 left-1/2 transform -translate-x-1/2';';
-case 'bottom-right':';
-return 'bottom-4 right-4';';
-case 'top-right':';
-default:
-return 'top-4 right-4';';
+ca, s, e 't, o, p-le, f, t':';
+retu, r, n 't, o, p-4, lef, t-4';';
+ca, s, e 't, o, p-cent, e, r':';
+retu, r, n 't, o, p-4, lef, t-1/2, transfor, m -transla, t, e-x-1/2';';
+ca, s, e 'bott, o, m-le, f, t':';
+retu, r, n 'bott, o, m-4, lef, t-4';';
+ca, s, e 'bott, o, m-cent, e, r':';
+retu, r, n 'bott, o, m-4, lef, t-1/2, transfor, m -transla, t, e-x-1/2';';
+ca, s, e 'bott, o, m-rig, h, t':';
+retu, r, n 'bott, o, m-4, righ, t-4';';
+ca, s, e 't, o, p-rig, h, t':';
+defa, u, l
+  t:
+retu, r, n 't, o, p-4, righ, t-4';';
 };
   };
-
-  const notificationVariants = {
-    initial: {,
-      opacity: 0,
-      y: position.includes('top') ? -50 : 50,
-      scale: 0.8
+  const, notificationVariant, s = {
+    initi, a, l: {
+      opaci, t, y: 0
+      y: positi, o, n.includ, e, s('t, o, p') ? -50 : 50
+      sca, l, e: 0.8;
     }
-    animate: {,
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: {,
-        type: 'spring',
-        stiffness: 300,
-        damping: 25
+    anima, t, e: {
+      opaci, t, y: 1
+      y: 0
+      sca, l, e: 1
+      transiti, o, n: {
+        ty, p, e: 'spri, n, g'
+        stiffne, s, s: 3, 0, 0
+        dampi, n, g: 25;
       }
     }
-    exit: {,
-      opacity: 0,
-      y: position.includes('top') ? -50 : 50,
-      scale: 0.8,
-      transition: {,
-        duration: 0.2
+    ex, i, t: {
+      opaci, t, y: 0
+      y: positi, o, n.includ, e, s('t, o, p') ? -50 : 50
+      sca, l, e: 0.8
+      transiti, o, n: {
+        durati, o, n: 0.2;
 =======
-      opacity: 0,,
-      y: position.includes('top') ? -50 : 50,';
-      scale: 0.8,
-    },
-    animate: {,
-      opacity: 1,,
-      y: 0,
-      scale: 1,,
-      transition: {,
-        type: 'spring',';,
-        stiffness: 300,,
-        damping: 25,
+      opac, i, t
+  y: 0
+      y: positi, o, n.includ, e, s('t, o, p') ? -50 : 50,';
+      sca, l, e: 0.8
+    }
+    anima, t, e: {
+      opaci, t, y: 1
+      y: 0
+      sca, l, e: 1
+      transiti, o, n: {
+        ty, p, e: 'spri, n, g',';
+        stiffne, s, s: 3, 0, 0
+        dampi, n, g: 25
       }
-    },
-    exit: {,
-      opacity: 0,,
-      y: position.includes('top') ? -50 : 50,';
-      scale: 0.8,,
-      transition: {,
-        duration: 0.2,
+    }
+    ex, i, t: {
+      opaci, t, y: 0
+      y: positi, o, n.includ, e, s('t, o, p') ? -50 : 50,';
+      sca, l, e: 0.8
+      transiti, o, n: {
+        durati, o, n: 0.2
       }
     }
   };
-
-  // Limit number of notifications
-  const displayNotifications = notifications.slice(0, maxNotifications);
-
+  // Limit, number, of notificatio, n, s
+  const, displayNotification, s = notificatio, n, s.sli, c, e(0, maxNotificatio, n, s);
   return (
-    <div className={`fixed ${getPositionClasses()} z-50 space-y-3 max-w-sm w-full`}>`;
-      <AnimatePresence mode="popLayout">
+    <div, className={`fix, e, d ${getPositionClass, e, s()} z-50, spac, e-y-3, ma, x-w-s, m, w-fu, l, l`}>`;`
+      <AnimatePresence, mod, e="popLayo, u, t">
 =======
-      <AnimatePresence mode="popLayout">";
-        {displayNotifications.map((notification) => (
-          <motion.div
-            key={notification.id}
-            variants={notificationVariants}
-            initial="initial"
-            animate="animate"
-            exit="exit"
-            layout
-            className={`
-              relative p-4 rounded-lg border shadow-lg backdrop-blur-sm
-              ${getStyles(notification.type)}
-              transform transition-all duration-300
-            `}`;
-            role="alert"
-            aria-live="polite"
+      <AnimatePresence, mod, e="popLayo, u, t">";
+        {displayNotificatio, n, s.m, a, p((notificati, o, n) => (
+          <moti, o, n.d, i, v
+  k, e, y={notificati, o, n.id}
+            varian, t, s={notificationVarian, t, s}
+            initi, a, l="initi, a, l"
+            anima, t, e="anima, t, e"
+            ex, i, t="ex, i, t"
+            layo, u, t
+  classNa, m, e={``
+              relativ, e, p-4, rounde, d-lg, border, shadow-lg, backdro, p-bl, u, r-sm;
+              ${getStyl, e, s(notificati, o, n.ty, p, e)}
+              transform, transitio, n-all, duratio, n-3, 0, 0;
+            `}`;`
+            ro, l, e="ale, r, t"
+            ar, i, a-li, v, e="poli, t, e"
           >
-            <div className="flex items-start space-x-3">";
-              {/* Icon */}
-              <div className="flex-shrink-0 mt-0.5">";
-                {getIcon(notification.type)}
-              </div>
-
-              {/* Content */}
-              <div className="flex-1 min-w-0">";
-                <p className="text-sm font-medium leading-5">";
-                  {notification.message}
+            <div, className="flex, item, s-start, spac, e-x-3">";
+              {/* Ic, o, n */}
+              <div, className="fl, e, x-shri, n, k-0, m, t-0.5">";
+                {getIc, o, n(notificati, o, n.ty, p, e)}
+              </d, i, v>
+              {/* Conte, n, t */}
+              <div, className="fl, e, x-1, mi, n-w-0">";
+                <p, className="te, x, t-sm, fon, t-medium, leadin, g-5">";
+                  {notificati, o, n.messa, g, e}
                 </p>
-
-                {/* Actions */}
-                {notification.actions && notification.actions.length > 0 && (
-                  <div className="mt-3 flex space-x-2">";
-                    {notification.actions.map((action, index) => (
-                      <button
-                        key={index}
-                        onClick={action.action}
-                        className={
-`
-text-xs font-medium px-3 py-1 rounded-md transition-colors
-${action.variant === 'primary'
-? 'bg-blue-600 text-white hover:bg-blue-700'
+                {/* Actio, n, s */}
+                {notificati, o, n.actio, n, s && notificati, o, n.actio, n, s.leng, t, h > 0 && (
+                  <div, className="mt-3, flex, space-x-2">";
+                    {notificati, o, n.actio, n, s.m, a, p((acti, o, n, ind, e, x) => (
+                      <butt, o, n
+  k, e, y={ind, e, x}
+                        onCli, c, k={acti, o, n.acti, o, n}
+                        classNa, m, e={
+``
+te, x, t-xs, fon, t-medium, p, x-3, p, y-1, rounde, d-md, transitio, n-colo, r, s;
+${acti, o, n.varia, n, t === 'prima, r, y'
+? 'bg-bl, u, e-600, tex, t-white, hove, r: bg-bl, u, e-7, 0, 0'
 =======
-? 'bg-blue-600 text-white hover: bg-blue-700',';,
-: 'bg-gray-200 text-gray-800 hover:bg-gray-300'
+? 'bg-bl, u, e-600, tex, t-white, hov, e
+  r: bg-bl, u, e-7, 0, 0',';
+: 'bg-gr, a, y-200, tex, t-gr, a, y-800, hove, r:bg-gr, a, y-3, 0, 0'
 }
-                        `}`;
+                        `}`;`
                       >
-                        {action.label}
-                      </button>
+                        {acti, o, n.lab, e, l}
+                      </butt, o, n>
                     ))}
-                  </div>
+                  </d, i, v>
                 )}
-              </div>
-
-              {/* Close Button */}
-              {!notification.persistent && (
-                <button
-                  onClick={() => onRemove(notification.id)}
-                  className="flex-shrink-0 ml-2 p-1 rounded-full hover: bg-black hover:bg-opacity-10 transition-colors",
-                  aria-label="Close notification"
+              </d, i, v>
+              {/* Close, Butto, n */}
+              {!notificati, o, n.persiste, n, t && (
+                <butt, o, n
+  onCli, c, k={() => onRemo, v, e(notificati, o, n.id)}
+                  classNa, m, e="fl, e, x-shri, n, k-0, m, l-2 p-1, rounde, d-full, hove, r: bg-black, hov, e
+  r:bg-opaci, t, y-10, transitio, n-colo, r, s"
+                  ar, i, a-lab, e, l="Close, notificatio, n"
                 >
-                  <X className="w-4 h-4/>
+                  <X, className="w-4 h-4  />
 =======
-                  <X className="w-4 h-4" />";
-                </button>
+                  <X, className="w-4 h-4" />";
+                </butt, o, n>
               )}
-            </div>
-
-            {/* Progress Bar for Auto-dismiss */}
-            {!notification.persistent && notification.duration && (
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-black bg-opacity-10 rounded-b-lg overflow-hidden">";
-                <motion.div
-                  className="h-full bg-current opacity-30"
-                  initial={{ width: '100%' }};
-                  animate={{ width: '0%' }};
-                  transition={{ duration: notification.duration / 1000, ease: 'linear' }};
+            </d, i, v>
+            {/* Progress, Bar, for Au, t, o-dismi, s, s */}
+            {!notificati, o, n.persiste, n, t && notificati, o, n.durati, o, n && (
+              <div, className="absolute, botto, m-0, lef, t-0, righ, t-0 h-1, b, g-black, b, g-opaci, t, y-10, rounde, d-b-lg, overflo, w-hidd, e, n">";
+                <moti, o, n .d, i, v
+  classNa, m, e="h-full, b, g-current, opacit, y-30"
+                  initi, a, l={{ wid, t, h: '1, 0, 0%' }};
+                  anima, t, e={{ wid, t, h: '0%' }};
+                  transiti, o, n={{ durati, o, n: notificati, o, n.durati, o, n / 10, 0, 0, ea, s, e: 'line, a, r' }};
 =======
-                  initial={{ width: '100%' }}';
-                  animate={{ width: '0%' }}';
-                  transition={{ duration: notification.duration / 1000, ease: 'linear' }}';
-                />
-              </div>
+                  initi, a, l={{ wid, t, h: '1, 0, 0%' }}';
+                  anima, t, e={{ wid, t, h: '0%' }}';
+                  transiti, o, n={{ durati, o, n: notificati, o, n.durati, o, n / 10, 0, 0, ea, s, e: 'line, a, r' }}';  />
+              </d, i, v>
             )}
-          </motion.div>
+          </moti, o, n.d, i, v>
         ))}
-      </AnimatePresence>
-    </div>
+      </AnimatePresen, c, e>
+    </d, i, v>
   );
 };
-
 export default NotificationSystem;

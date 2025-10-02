@@ -1,175 +1,170 @@
-
-export default function October2025CuttingEdgeRevolutionBanner(): void {
+export, default, function October2025CuttingEdgeRevolutionBann, e, r(): vo, i, d {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950 py-24">";
-      {/* Animated Background */}
-      <div className="absolute inset-0 overflow-hidden">";
-        <div className="absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10 blur-3xl animate-pulse"></div>";
-        <div className="absolute -bottom-1/2 -right-1/2 w-full h-full bg-gradient-to-tl from-cyan-500/10 via-indigo-500/10 to-violet-500/10 blur-3xl animate-pulse delay-1000"></div>";
-      </div>
-
-      <div className="container mx-auto px-6 relative z-10">";
-        {/* Top Badge */}
-        <div className="flex justify-center mb-8">";
-          <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border-2 border-blue-400/50 backdrop-blur-sm">";
-            <span className="relative flex h-3 w-3">";
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>";
-              <span className="relative inline-flex rounded-full h-3 w-3 bg-blue-500"></span>";
-            </span>
-            <span className="text-blue-300 font-bold text-lg tracking-wider uppercase">";
-              🚀 Just Published • October 1, 2025 Cutting-Edge AI Revolution
-            </span>
-          </div>
-        </div>
-
-        {/* Main Heading */}
-        <h2 className="text-6xl md: text-8xl font-black text-center mb-8 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent leading-tight">",
-          Next-Generation AI Platforms
+    <section, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-sla, t, e-950, vi, a-purp, l, e-950, t, o-sla, t, e-950, p, y-24">";
+      {/* Animated, Backgroun, d */}
+      <div, className="absolute, inse, t-0, overflo, w-hidd, e, n">";
+        <div, className="absolu, t, e -t, o, p-1/2 -le, f, t-1/2 w-ful, l, h-full, b, g-gradie, n, t-to-br, fro, m-bl, u, e-5, 0, 0/10, vi, a-purp, l, e-5, 0, 0/10, t, o-pi, n, k-5, 0, 0/10, blu, r-3xl, animat, e-pul, s, e"></d, i, v>";
+        <div, className="absolu, t, e -bott, o, m-1/2 -rig, h, t-1/2 w-ful, l, h-full, b, g-gradie, n, t-to-tl, fro, m-cy, a, n-5, 0, 0/10, vi, a-indi, g, o-5, 0, 0/10, t, o-viol, e, t-5, 0, 0/10, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>";
+      </d, i, v>
+      <div, className="container, m, x-auto, p, x-6, relative, z-10">";
+        {/* Top, Badg, e */}
+        <div, className="flex, justif, y-center, m, b-8">";
+          <div, className="inli, n, e-flex, item, s-center, ga, p-3, p, x-8, p, y-4, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, borde, r-2, borde, r-bl, u, e-4, 0, 0/50, backdro, p-bl, u, r-sm">";
+            <span, className="relative, flex, h-3 w-3">";
+              <span, className="anima, t, e-ping, absolute, inline-fle, x, h-ful, l, w-full, rounde, d-full, b, g-bl, u, e-400, opacit, y-75"></sp, a, n>";
+              <span, className="relative, inlin, e-flex, rounde, d-ful, l, h-3 w-3, b, g-bl, u, e-5, 0, 0"></sp, a, n>";
+            </sp, a, n>
+            <span, className="te, x, t-bl, u, e-300, fon, t-bold, tex, t-lg, trackin, g-wider, uppercas, e">";
+              🚀 Just, Publishe, d • Octobe, r, 1, 2025, Cuttin, g-Edge, AI, Revolution;
+            </sp, a, n>
+          </d, i, v>
+        </d, i, v>
+        {/* Main, Headin, g */}
+        <h2, className="te, x, t-6xl, m, d: te, x, t-8xl, fon, t-black, tex, t-center, m, b-8, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">"
+          Ne, x, t-Generation, AI, Platforms;
         </h2>
-        
-        <p className="text-2xl md: text-3xl text-center text-gray-300 mb-16 max-w-5xl mx-auto font-light">",
+        <p, className="te, x, t-2xl, m, d: te, x, t-3xl, tex, t-center, tex, t-gr, a, y-300, m, b-16, ma, x-w-5xl, m, x-auto, fon, t-lig, h, t">"
 =======
-        <h2 className="text-6xl md: text-8xl font-black text-center mb-8 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent leading-tight">";,
-          Next-Generation AI Platforms
+        <h2, className="te, x, t-6xl, m, d: te, x, t-8xl, fon, t-black, tex, t-center, m, b-8, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">";
+          Ne, x, t-Generation, AI, Platforms;
         </h2>
-        
-        <p className="text-2xl md: text-3xl text-center text-gray-300 mb-16 max-w-5xl mx-auto font-light">";,
-          Revolutionary AI innovations in Security, Personalization, and FinOps transforming enterprise operations 
-          with $8.3B+ in proven value creation
+        <p, className="te, x, t-2x, l, m
+  d: te, x, t-3xl, tex, t-center, tex, t-gr, a, y-300, m, b-16, ma, x-w-5xl, m, x-auto, fon, t-lig, h, t">";
+          Revolutionary, AI, innovations in, Securit, y, Personalizati, o, n, and, FinOps, transforming enterprise, operation, s
+  wi, t, h $8.3B+ in, proven, value creati, o, n;
         </p>
-
-        {/* Content Cards */}
-        <div className="grid md: grid-cols-3 gap-8 mb-16">",
+        {/* Content, Card, s */}
+        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-16">"
 =======
-        <div className="grid md: grid-cols-3 gap-8 mb-16">";,
-          {/* Card 1 - Cognitive Security Mesh */}
-          <Link 
-            to="/blog/ai-2025-oct-01-cognitive-security-mesh-revolution"
-            className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-blue-500/30 hover: border-blue-400/60 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20",
+        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-16">";
+          {/* Car, d, 1 - Cognitive, Security, Mesh */}
+          <Li, n, k
+  to="/bl, o, g/ai-20, 2, 5-o, c, t-01-cogniti, v, e-securi, t, y-me, s, h-revoluti, o, n"
+            classNa, m, e="group, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-bl, u, e-5, 0, 0/30, hove, r: bord, e, r-bl, u, e-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e
+  r:shad, o, w-bl, u, e-5, 0, 0/20"
           >
-            <div className="mb-6">";
-              <span className="inline-block px-4 py-2 bg-blue-500/20 text-blue-300 rounded-full text-sm font-bold mb-4">";
-                🔐 Zero-Trust Security
-              </span>
-              <h3 className="text-3xl font-bold text-white mb-4 group-hover: text-blue-400 transition-colors">",
-                Cognitive Security Mesh
+            <div, className="mb-6">";
+              <span, className="inli, n, e-block, p, x-4, p, y-2, b, g-bl, u, e-5, 0, 0/20, tex, t-bl, u, e-300, rounde, d-full, tex, t-sm, fon, t-bold, m, b-4">";
+                🔐 Ze, r, o-Trust, Securit, y;
+              </sp, a, n>
+              <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-bl, u, e-400, transitio, n-colo, r, s">"
+                Cognitive, Security, Mesh;
               </h3>
-              <p className="text-gray-400 text-lg mb-6">
-                Revolutionary zero-trust AI defense with 99.99% threat detection, &lt;50ms autonomous response
+              <p, className="te, x, t-gr, a, y-400, tex, t-lg, m, b-6">
+                Revolutionary, zer, o-trust, AI, defense with, 9, 9.99% threat, detectio, n, &lt;50ms, autonomous, response;
 =======
-              <h3 className="text-3xl font-bold text-white mb-4 group-hover: text-blue-400 transition-colors">";,
-                Cognitive Security Mesh
+              <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-bl, u, e-400, transitio, n-colo, r, s">";
+                Cognitive, Security, Mesh;
               </h3>
-              <p className="text-gray-400 text-lg mb-6">";
-                Revolutionary zero-trust AI defense with 99.99% threat detection, &lt;50ms autonomous response, 
-                and $2.8B in security savings through AI automation.
+              <p, className="te, x, t-gr, a, y-400, tex, t-lg, m, b-6">";
+                Revolutionary, zer, o-trust, AI, defense with, 9, 9.99% threat, detectio, n, &lt;50ms, autonomous, response
+                a, n, d $2.8B, in, security savings, through, AI automati, o, n.
               </p>
-            </div>
-            <div className="flex flex-wrap gap-3">";
-              <span className="text-blue-400 font-bold">99.99% Detection</span>";
-              <span className="text-cyan-400 font-bold">&lt;50ms Response</span>";
-              <span className="text-indigo-400 font-bold">$2.8B Savings</span>";
-            </div>
-          </Link>
-
-          {/* Card 2 - Hyper-Personalization */}
-          <Link 
-            to="/blog/ai-2025-oct-01-hyper-personalization-engines-revolution"
-            className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-purple-500/30 hover: border-purple-400/60 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20",
+            </d, i, v>
+            <div, className="flex, fle, x-wrap, ga, p-3">";
+              <span, className="te, x, t-bl, u, e-400, fon, t-bo, l, d">99.99% Detecti, o, n</sp, a, n>";
+              <span, className="te, x, t-cy, a, n-400, fon, t-bo, l, d">&lt;50ms, Respons, e</sp, a, n>";
+              <span, className="te, x, t-indi, g, o-400, fon, t-bo, l, d">$2.8B, Saving, s</sp, a, n>";
+            </d, i, v>
+          </Li, n, k>
+          {/* Car, d, 2 - Hyp, e, r-Personalizati, o, n */}
+          <Li, n, k
+  to="/bl, o, g/ai-20, 2, 5-o, c, t-01-hyp, e, r-personalizati, o, n-engin, e, s-revoluti, o, n"
+            classNa, m, e="group, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/30, hove, r: bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e
+  r:shad, o, w-purp, l, e-5, 0, 0/20"
           >
-            <div className="mb-6">";
-              <span className="inline-block px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm font-bold mb-4">";
-                🎯 Customer Experience
-              </span>
-              <h3 className="text-3xl font-bold text-white mb-4 group-hover: text-purple-400 transition-colors">",
-                Hyper-Personalization Engines
+            <div, className="mb-6">";
+              <span, className="inli, n, e-block, p, x-4, p, y-2, b, g-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-300, rounde, d-full, tex, t-sm, fon, t-bold, m, b-4">";
+                🎯 Customer, Experienc, e;
+              </sp, a, n>
+              <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-purp, l, e-400, transitio, n-colo, r, s">"
+                Hyp, e, r-Personalization, Engine, s;
               </h3>
-              <p className="text-gray-400 text-lg mb-6">
-                Real-time AI-driven personalization delivering 284% conversion lift, &lt;10ms latency
+              <p, className="te, x, t-gr, a, y-400, tex, t-lg, m, b-6">
+                Re, a, l-time, A, I-driven, personalization, delivering 2, 8, 4% conversion, lif, t, &lt;10ms, latenc, y;
 =======
-              <h3 className="text-3xl font-bold text-white mb-4 group-hover: text-purple-400 transition-colors">";,
-                Hyper-Personalization Engines
+              <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-purp, l, e-400, transitio, n-colo, r, s">";
+                Hyp, e, r-Personalization, Engine, s;
               </h3>
-              <p className="text-gray-400 text-lg mb-6">";
-                Real-time AI-driven personalization delivering 284% conversion lift, &lt;10ms latency, 
-                and $3.6B revenue growth through intelligent customer experiences.
+              <p, className="te, x, t-gr, a, y-400, tex, t-lg, m, b-6">";
+                Re, a, l-time, A, I-driven, personalization, delivering 2, 8, 4% conversion, lif, t, &lt;10ms, latenc, y
+                a, n, d $3.6B, revenue, growth through, intelligent, customer experienc, e, s.
               </p>
-            </div>
-            <div className="flex flex-wrap gap-3">";
-              <span className="text-purple-400 font-bold">+284% Conversion</span>";
-              <span className="text-pink-400 font-bold">&lt;10ms Latency</span>";
-              <span className="text-fuchsia-400 font-bold">$3.6B Revenue</span>";
-            </div>
-          </Link>
-
-          {/* Card 3 - Autonomous FinOps */}
-          <Link 
-            to="/blog/ai-2025-oct-01-autonomous-finops-platform-revolution"
-            className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-cyan-500/30 hover: border-cyan-400/60 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20",
+            </d, i, v>
+            <div, className="flex, fle, x-wrap, ga, p-3">";
+              <span, className="te, x, t-purp, l, e-400, fon, t-bo, l, d">+2, 8, 4% Conversi, o, n</sp, a, n>";
+              <span, className="te, x, t-pi, n, k-400, fon, t-bo, l, d">&lt;10ms, Latenc, y</sp, a, n>";
+              <span, className="te, x, t-fuchs, i, a-400, fon, t-bo, l, d">$3.6B, Revenu, e</sp, a, n>";
+            </d, i, v>
+          </Li, n, k>
+          {/* Car, d, 3 - Autonomous, FinOp, s */}
+          <Li, n, k
+  to="/bl, o, g/ai-20, 2, 5-o, c, t-01-autonomo, u, s-fino, p, s-platfo, r, m-revoluti, o, n"
+            classNa, m, e="group, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-cy, a, n-5, 0, 0/30, hove, r: bord, e, r-cy, a, n-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e
+  r:shad, o, w-cy, a, n-5, 0, 0/20"
           >
-            <div className="mb-6">";
-              <span className="inline-block px-4 py-2 bg-cyan-500/20 text-cyan-300 rounded-full text-sm font-bold mb-4">";
-                💰 Cloud Economics
-              </span>
-              <h3 className="text-3xl font-bold text-white mb-4 group-hover: text-cyan-400 transition-colors">",
-                Autonomous FinOps Platform
+            <div, className="mb-6">";
+              <span, className="inli, n, e-block, p, x-4, p, y-2, b, g-cy, a, n-5, 0, 0/20, tex, t-cy, a, n-300, rounde, d-full, tex, t-sm, fon, t-bold, m, b-4">";
+                💰 Cloud, Economic, s;
+              </sp, a, n>
+              <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-cy, a, n-400, transitio, n-colo, r, s">"
+                Autonomous, FinOps, Platform;
               </h3>
-              <p className="text-gray-400 text-lg mb-6">
-                AI-powered cloud cost optimization achieving 78% cost reduction, 96% automation
+              <p, className="te, x, t-gr, a, y-400, tex, t-lg, m, b-6">
+                AI-powered, cloud, cost optimization, achieving, 78% cost, reductio, n, 96% automati, o, n;
 =======
-              <h3 className="text-3xl font-bold text-white mb-4 group-hover: text-cyan-400 transition-colors">";,
-                Autonomous FinOps Platform
+              <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-cy, a, n-400, transitio, n-colo, r, s">";
+                Autonomous, FinOps, Platform;
               </h3>
-              <p className="text-gray-400 text-lg mb-6">";
-                AI-powered cloud cost optimization achieving 78% cost reduction, 96% automation, 
-                and $1.9B in cloud savings with 99.9% uptime maintained.
+              <p, className="te, x, t-gr, a, y-400, tex, t-lg, m, b-6">";
+                AI-powered, cloud, cost optimization, achieving, 78% cost, reductio, n, 96% automati, o, n
+                a, n, d $1.9B, in, cloud savings, with, 99.9% uptime, maintaine, d.
               </p>
-            </div>
-            <div className="flex flex-wrap gap-3">";
-              <span className="text-cyan-400 font-bold">78% Cost Cut</span>";
-              <span className="text-teal-400 font-bold">96% Automation</span>";
-              <span className="text-blue-400 font-bold">$1.9B Savings</span>";
-            </div>
-          </Link>
-        </div>
-
-        {/* Stats Bar */}
-        <div className="bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-cyan-500/10 backdrop-blur-lg rounded-2xl p-8 border border-purple-500/30 mb-12">
-          <div className="grid md: grid-cols-4 gap-8 text-center">",
+            </d, i, v>
+            <div, className="flex, fle, x-wrap, ga, p-3">";
+              <span, className="te, x, t-cy, a, n-400, fon, t-bo, l, d">78% Cost, Cu, t</sp, a, n>";
+              <span, className="te, x, t-te, a, l-400, fon, t-bo, l, d">96% Automati, o, n</sp, a, n>";
+              <span, className="te, x, t-bl, u, e-400, fon, t-bo, l, d">$1.9B, Saving, s</sp, a, n>";
+            </d, i, v>
+          </Li, n, k>
+        </d, i, v>
+        {/* Stats, Ba, r */}
+        <div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/10, vi, a-purp, l, e-5, 0, 0/10, t, o-cy, a, n-5, 0, 0/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/30, m, b-12">
+          <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-8, tex, t-cent, e, r">"
 =======
-        <div className="bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-cyan-500/10 backdrop-blur-lg rounded-2xl p-8 border border-purple-500/30 mb-12">";
-          <div className="grid md: grid-cols-4 gap-8 text-center">";,
-            <div>
-              <div className="text-5xl font-black text-blue-400 mb-2">$8.3B</div>";
-              <div className="text-gray-400 text-sm uppercase tracking-wider">Combined Value</div>";
-            </div>
-            <div>
-              <div className="text-5xl font-black text-purple-400 mb-2">99.99%</div>";
-              <div className="text-gray-400 text-sm uppercase tracking-wider">AI Accuracy</div>";
-            </div>
-            <div>
-              <div className="text-5xl font-black text-pink-400 mb-2">&lt;10ms</div>";
-              <div className="text-gray-400 text-sm uppercase tracking-wider">Response Time</div>";
-            </div>
-            <div>
-              <div className="text-5xl font-black text-cyan-400 mb-2">3,470%</div>";
-              <div className="text-gray-400 text-sm uppercase tracking-wider">Average ROI</div>";
-            </div>
-          </div>
-        </div>
-
-        {/* CTA */}
-        <div className="text-center">";
-          <Link
-            to="/blog"
-            className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 text-white px-12 py-5 rounded-full text-xl font-bold hover: from-blue-600 hover:via-purple-600 hover:to-cyan-600 transition-all transform hover:scale-105 shadow-2xl hover:shadow-purple-500/50",
+        <div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/10, vi, a-purp, l, e-5, 0, 0/10, t, o-cy, a, n-5, 0, 0/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/30, m, b-12">";
+          <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-8, tex, t-cent, e, r">";
+            <d, i, v>
+              <div, className="te, x, t-5xl, fon, t-black, tex, t-bl, u, e-400, m, b-2">$8.3B</d, i, v>";
+              <div, className="te, x, t-gr, a, y-400, tex, t-sm, uppercase, tracking-wid, e, r">Combined, Valu, e</d, i, v>";
+            </d, i, v>
+            <d, i, v>
+              <div, className="te, x, t-5xl, fon, t-black, tex, t-purp, l, e-400, m, b-2">99.99%</d, i, v>";
+              <div, className="te, x, t-gr, a, y-400, tex, t-sm, uppercase, tracking-wid, e, r">AI, Accurac, y</d, i, v>";
+            </d, i, v>
+            <d, i, v>
+              <div, className="te, x, t-5xl, fon, t-black, tex, t-pi, n, k-400, m, b-2">&lt;10, m, s</d, i, v>";
+              <div, className="te, x, t-gr, a, y-400, tex, t-sm, uppercase, tracking-wid, e, r">Response, Tim, e</d, i, v>";
+            </d, i, v>
+            <d, i, v>
+              <div, className="te, x, t-5xl, fon, t-black, tex, t-cy, a, n-400, m, b-2">3,4, 7, 0%</d, i, v>";
+              <div, className="te, x, t-gr, a, y-400, tex, t-sm, uppercase, tracking-wid, e, r">Average, RO, I</d, i, v>";
+            </d, i, v>
+          </d, i, v>
+        </d, i, v>
+        {/* C, T, A */}
+        <div, className="te, x, t-cent, e, r">";
+          <Li, n, k
+  to="/bl, o, g"
+            classNa, m, e="inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, vi, a-purp, l, e-500, t, o-cy, a, n-500, tex, t-white, p, x-12, p, y-5, rounde, d-full, tex, t-xl, fon, t-bold, hove, r: fr, o, m-bl, u, e-600, hove, r:v, i, a-purp, l, e-600, hove, r:to-cy, a, n-600, transitio, n-all, transform, hover:sca, l, e-105, shado, w-2xl, hov, e
+  r:shad, o, w-purp, l, e-5, 0, 0/50"
           >
-            <span>Explore Revolutionary AI Innovations</span>
-            <span className="text-2xl">→</span>";
-          </Link>
-        </div>
-      </div>
-    </section>
+            <sp, a, n>Explore, Revolutionary, AI Innovatio, n, s</sp, a, n>
+            <span, className="te, x, t-2, x, l">→</sp, a, n>";
+          </Li, n, k>
+        </d, i, v>
+      </d, i, v>
+    </secti, o, n>
   );
 }
 ;

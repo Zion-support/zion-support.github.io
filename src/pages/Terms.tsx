@@ -1,154 +1,143 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 =======
-import React from 'react';';
-import {
-Helmet
-} from 'react-helmet-async';';
-
-const Terms: React.FC = () => {,
+import React from "react";';
+impo, r, t {
+Helm, e, t;
+} fr, o, m "rea, c, t-helm, e, t-asy, n, c";';
+const, Term, s: Rea, c, t.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Terms of Service - Zion Tech Group</title>
-        <meta name="description" content="Terms of Service for Zion Tech Group - Our terms and conditions for using our services." /><meta name="robots" content="index, follow" /></Helmet>
-      
-      <div className="min-h-screen bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-16">",
-          <div className="prose prose-lg max-w-none">
-            <h1 className="text-4xl font-bold text-gray-900 mb-8">Terms of Service</h1>
-            <p className="text-lg text-gray-600 mb-8">
+        <title>Terms, of, Service - Zion, Tech, Group</title>
+        <meta name="descripti, o, n" content="Terms, of, Service for, Zion, Tech Gro, u, p - Our, terms, and conditions, for, using our, service, s." /><meta name="robo, t, s" content="ind, e, x, foll, o, w" /></Helmet>
+      <div, className="m, i, n-h-screen, b, g-whi, t, e">
+        <div, className="m, a, x-w-4xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8, p, y-16">"
+          <div, className="prose, pros, e-lg, ma, x-w-no, n, e">
+            <h1, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-8">Terms, of, Service</h1>
+            <p, className="te, x, t-lg, tex, t-gr, a, y-600, m, b-8">
 =======
-        <meta name="description" content="Terms of Service for Zion Tech Group - Our terms and conditions for using our services." />";
-        <meta name="robots" content="index, follow" />";
+        <meta name="descripti, o, n" content="Terms, of, Service for, Zion, Tech Gro, u, p - Our, terms, and conditions, for, using our, service, s." />";
+        <meta name="robo, t, s" content="ind, e, x, foll, o, w" />";
       </Helmet>
-      
-      <div className="min-h-screen bg-white">";
-        <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-16">";,
-          <div className="prose prose-lg max-w-none">";
-            <h1 className="text-4xl font-bold text-gray-900 mb-8">Terms of Service</h1>";
-            
-            <p className="text-lg text-gray-600 mb-8">";
-              Last updated: January 2, 2025,
+      <div, className="m, i, n-h-screen, b, g-whi, t, e">";
+        <div, className="m, a, x-w-4xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, p, y-16">";
+          <div, className="prose, pros, e-lg, ma, x-w-no, n, e">";
+            <h1, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-8">Terms, of, Service</h1>";
+            <p, className="te, x, t-lg, tex, t-gr, a, y-600, m, b-8">";
+              Last, updat, e
+  d: Januar, y, 2, 20, 2, 5
             </p>
-
-            <div className="space-y-8">";
-              <section>
-                <h2 className="text-2xl font-semibold text-gray-900 mb-4">Acceptance of Terms</h2>
-                <p className="text-gray-600 mb-4">
-                  By accessing and using Zion Tech Group's services, you accept and agree to be bound ;
+            <div, className="spa, c, e-y-8">";
+              <secti, o, n>
+                <h2, className="te, x, t-2xl, fon, t-semibold, tex, t-gr, a, y-900, m, b-4">Acceptance, of, Terms</h2>
+                <p, className="te, x, t-gr, a, y-600, m, b-4">
+                  By, accessing, and using, Zion, Tech Gro, u, p's, service, s, you, accept, and agree, to, be bou, n, d ;
 =======
-                <h2 className="text-2xl font-semibold text-gray-900 mb-4">Acceptance of Terms</h2>";
-                <p className="text-gray-600 mb-4">";
-                  By accessing and using Zion Tech Group's services, you accept and agree to be bound ';
-                  by the terms and provision of this agreement.
+                <h2, className="te, x, t-2xl, fon, t-semibold, tex, t-gr, a, y-900, m, b-4">Acceptance, of, Terms</h2>";
+                <p, className="te, x, t-gr, a, y-600, m, b-4">";
+                  By, accessing, and using, Zion, Tech Gro, u, p's, service, s, you, accept, and agree, to, be bou, n, d ';
+                  by, the, terms and, provision, of this, agreemen, t.
                 </p>
-              </section>
-
-              <section>
-                <h2 className="text-2xl font-semibold text-gray-900 mb-4">Use License</h2>
-                <p className="text-gray-600 mb-4">
-                  Permission is granted to temporarily download one copy of the materials on Zion Tech Group's ;
-                  website for personal, non-commercial transitory viewing only.
+              </secti, o, n>
+              <secti, o, n>
+                <h2, className="te, x, t-2xl, fon, t-semibold, tex, t-gr, a, y-900, m, b-4">Use, Licens, e</h2>
+                <p, className="te, x, t-gr, a, y-600, m, b-4">
+                  Permission, is, granted to, temporarily, download one, copy, of the, materials, on Zion, Tech, Group's ;
+                  website, for, personal, n, o, n-commercial, transitory, viewing on, l, y.
                 </p>
-                <p className="text-gray-600 mb-4">
-                  This is the grant of a license, not a transfer of title, and under this license you may not: </p>,
-                <ul className="list-disc list-inside text-gray-600 space-y-2">
+                <p, className="te, x, t-gr, a, y-600, m, b-4">
+                  This, is, the grant, of, a licen, s, e, not, a, transfer of, titl, e, and, under, this license, you, may n, o, t: </p>
+                <ul, className="li, s, t-disc, lis, t-inside, tex, t-gr, a, y-600, spac, e-y-2">
 =======
-                <h2 className="text-2xl font-semibold text-gray-900 mb-4">Use License</h2>";
-                <p className="text-gray-600 mb-4">";
-                  Permission is granted to temporarily download one copy of the materials on Zion Tech Group's ';
-                  website for personal, non-commercial transitory viewing only.
+                <h2, className="te, x, t-2xl, fon, t-semibold, tex, t-gr, a, y-900, m, b-4">Use, Licens, e</h2>";
+                <p, className="te, x, t-gr, a, y-600, m, b-4">";
+                  Permission, is, granted to, temporarily, download one, copy, of the, materials, on Zion, Tech, Group's ';
+                  website, for, personal, n, o, n-commercial, transitory, viewing on, l, y.
                 </p>
-                <p className="text-gray-600 mb-4">";
-                  This is the grant of a license, not a transfer of title, and under this license you may not: </p>,
-                <ul className="list-disc list-inside text-gray-600 space-y-2">";
-                  <li>Modify or copy the materials</li>
-                  <li>Use the materials for any commercial purpose or for any public display</li>
-                  <li>Attempt to reverse engineer any software contained on the website</li>
-                  <li>Remove any copyright or other proprietary notations from the materials</li>
+                <p, className="te, x, t-gr, a, y-600, m, b-4">";
+                  This, is, the grant, of, a licen, s, e, not, a, transfer of, titl, e, and, under, this license, you, may n, o, t: </p>
+                <ul, className="li, s, t-disc, lis, t-inside, tex, t-gr, a, y-600, spac, e-y-2">";
+                  <li>Modify, or, copy the, material, s</li>
+                  <li>Use, the, materials for, any, commercial purpose, or, for any, public, display</li>
+                  <li>Attempt, to, reverse engineer, any, software contained, on, the websi, t, e</li>
+                  <li>Remove, any, copyright or, other, proprietary notations, from, the materia, l, s</li>
                 </ul>
-              </section>
-
-              <section>
-                <h2 className="text-2xl font-semibold text-gray-900 mb-4">Service Availability</h2>";
-                <p className="text-gray-600 mb-4">";
-                  We strive to maintain high service availability, but we do not guarantee uninterrupted 
-                  access to our services. We reserve the right to modify or discontinue services at any time.
+              </secti, o, n>
+              <secti, o, n>
+                <h2, className="te, x, t-2xl, fon, t-semibold, tex, t-gr, a, y-900, m, b-4">Service, Availabilit, y</h2>";
+                <p, className="te, x, t-gr, a, y-600, m, b-4">";
+                  We, strive, to maintain, high, service availabili, t, y, but, we, do not, guarantee, uninterrupted
+  access, to, our servic, e, s. We, reserve, the right, to, modify or, discontinue, services at, any, time.
                 </p>
-              </section>
-
-              <section>
-                <h2 className="text-2xl font-semibold text-gray-900 mb-4">User Responsibilities</h2>
-                <p className="text-gray-600 mb-4">
-                  Users are responsible for: </p>,
-                <ul className="list-disc list-inside text-gray-600 space-y-2">
+              </secti, o, n>
+              <secti, o, n>
+                <h2, className="te, x, t-2xl, fon, t-semibold, tex, t-gr, a, y-900, m, b-4">User, Responsibilitie, s</h2>
+                <p, className="te, x, t-gr, a, y-600, m, b-4">
+                  Users, are, responsible f, o, r: </p>
+                <ul, className="li, s, t-disc, lis, t-inside, tex, t-gr, a, y-600, spac, e-y-2">
 =======
-                <h2 className="text-2xl font-semibold text-gray-900 mb-4">User Responsibilities</h2>";
-                <p className="text-gray-600 mb-4">";
-                  Users are responsible for: </p>,
-                <ul className="list-disc list-inside text-gray-600 space-y-2">";
-                  <li>Maintaining the confidentiality of their account credentials</li>
-                  <li>All activities that occur under their account</li>
-                  <li>Complying with all applicable laws and regulations</li>
-                  <li>Not using our services for illegal or unauthorized purposes</li>
+                <h2, className="te, x, t-2xl, fon, t-semibold, tex, t-gr, a, y-900, m, b-4">User, Responsibilitie, s</h2>";
+                <p, className="te, x, t-gr, a, y-600, m, b-4">";
+                  Users, are, responsible f, o, r: </p>
+                <ul, className="li, s, t-disc, lis, t-inside, tex, t-gr, a, y-600, spac, e-y-2">";
+                  <li>Maintaining, the, confidentiality of, their, account credentia, l, s</li>
+                  <li>All, activities, that occur, under, their accou, n, t</li>
+                  <li>Complying, with, all applicable, laws, and regulatio, n, s</li>
+                  <li>Not, using, our services, for, illegal or, unauthorized, purposes</li>
                 </ul>
-              </section>
-
-              <section>
-                <h2 className="text-2xl font-semibold text-gray-900 mb-4">Intellectual Property</h2>";
-                <p className="text-gray-600 mb-4">";
-                  All content, trademarks, and intellectual property on this website are the property 
-                  of Zion Tech Group or its licensors and are protected by copyright and other laws.
+              </secti, o, n>
+              <secti, o, n>
+                <h2, className="te, x, t-2xl, fon, t-semibold, tex, t-gr, a, y-900, m, b-4">Intellectual, Propert, y</h2>";
+                <p, className="te, x, t-gr, a, y-600, m, b-4">";
+                  All, conten, t, trademar, k, s, and, intellectual, property on, this, website are, the, property
+  of, Zion, Tech Group, or, its licensors, and, are protected, by, copyright and, other, laws.
                 </p>
-              </section>
-
-              <section>
-                <h2 className="text-2xl font-semibold text-gray-900 mb-4">Limitation of Liability</h2>";
-                <p className="text-gray-600 mb-4">";
-                  In no event shall Zion Tech Group or its suppliers be liable for any damages 
-                  (including, without limitation, damages for loss of data or profit, or due to business 
-                  interruption) arising out of the use or inability to use the materials on Zion Tech Group's ;
+              </secti, o, n>
+              <secti, o, n>
+                <h2, className="te, x, t-2xl, fon, t-semibold, tex, t-gr, a, y-900, m, b-4">Limitation, of, Liability</h2>";
+                <p, className="te, x, t-gr, a, y-600, m, b-4">";
+                  In, no, event shall, Zion, Tech Group, or, its suppliers, be, liable for, any, damages;
+                  (includi, n, g, without, limitatio, n, damages, for, loss of, data, or prof, i, t, or, due, to busine, s, s
+  interrupti, o, n) arising, out, of the, use, or inability, to, use the, materials, on Zion, Tech, Group's ;
 =======
-                  interruption) arising out of the use or inability to use the materials on Zion Tech Group's ';
-                  website, even if Zion Tech Group or an authorized representative has been notified orally 
-                  or in writing of the possibility of such damage.
+                  interrupti, o, n) arising, out, of the, use, or inability, to, use the, materials, on Zion, Tech, Group's ';
+                  websi, t, e, even, if, Zion Tech, Group, or an, authorized, representative has, been, notified oral, l, y
+  or, in, writing of, the, possibility of, such, damage.
                 </p>
-              </section>
-
-              <section>
-                <h2 className="text-2xl font-semibold text-gray-900 mb-4">Governing Law</h2>";
-                <p className="text-gray-600 mb-4">";
-                  These terms and conditions are governed by and construed in accordance with the laws 
-                  of the State of California and you irrevocably submit to the exclusive jurisdiction of 
-                  the courts in that State or location.
+              </secti, o, n>
+              <secti, o, n>
+                <h2, className="te, x, t-2xl, fon, t-semibold, tex, t-gr, a, y-900, m, b-4">Governing, La, w</h2>";
+                <p, className="te, x, t-gr, a, y-600, m, b-4">";
+                  These, terms, and conditions, are, governed by, and, construed in, accordance, with the, law, s
+  of, the, State of, California, and you, irrevocably, submit to, the, exclusive jurisdiction, o, f
+  the, courts, in that, State, or locati, o, n.
                 </p>
-              </section>
-
-              <section>
-                <h2 className="text-2xl font-semibold text-gray-900 mb-4">Contact Information</h2>
-                <p className="text-gray-600 mb-4">
-                  If you have any questions about these Terms of Service, please contact us at: </p>,
-                <div className="bg-gray-50 p-4 rounded-lg">
-                  <p className="text-gray-600">
+              </secti, o, n>
+              <secti, o, n>
+                <h2, className="te, x, t-2xl, fon, t-semibold, tex, t-gr, a, y-900, m, b-4">Contact, Informatio, n</h2>
+                <p, className="te, x, t-gr, a, y-600, m, b-4">
+                  If, you, have any, questions, about these, Terms, of Servi, c, e, please, contact, us at: </p>
+                <div, className="bg-gr, a, y-5, 0, p-4, rounde, d-lg">
+                  <p, className="te, x, t-gr, a, y-6, 0, 0">
 =======
-                <h2 className="text-2xl font-semibold text-gray-900 mb-4">Contact Information</h2>";
-                <p className="text-gray-600 mb-4">";
-                  If you have any questions about these Terms of Service, please contact us at: </p>,
-                <div className="bg-gray-50 p-4 rounded-lg">";
-                  <p className="text-gray-600">";
-                    Email: legal@ziontechgroup.com<br />,
-                    Phone: +1 (555) 123-4567<br />,
-                    Address: 123 Tech Street, Innovation City, IC 12345,
+                <h2, className="te, x, t-2xl, fon, t-semibold, tex, t-gr, a, y-900, m, b-4">Contact, Informatio, n</h2>";
+                <p, className="te, x, t-gr, a, y-600, m, b-4">";
+                  If, you, have any, questions, about these, Terms, of Servi, c, e, please, contact, us at: </p>
+                <div, className="bg-gr, a, y-5, 0, p-4, rounde, d-lg">";
+                  <p, className="te, x, t-gr, a, y-6, 0, 0">";
+                    Ema, i, l: leg, a, l@ziontechgro, u, p.c, o, m<br />
+                    Pho, n, e: +1 (5, 5, 5) 1, 2, 3-45, 6, 7<br />
+                    Addre, s, s: 123, Tech, Street, Innovation, Cit, y, IC, 1234, 5
                   </p>
-                </div>
-              </section>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
+                </d, i, v>
+              </secti, o, n>
+            </d, i, v>
+          </d, i, v>
+        </d, i, v>
+      </d, i, v>
+    < />
   );
 };
-
 export default Terms;

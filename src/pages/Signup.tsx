@@ -1,18 +1,16 @@
 import React from "react";
-
-const Signup: React.FC = () => {
+const, Signu, p: Rea, c, t.FC = () => {
     return (
-        <section className="min-h-[40vh] max-w-md">
-            <h1 className="text-3xl font-bold mb-4">Create Account</h1>
-            <form className="grid gap-4">
-                <input className="border rounded-md px-3 py-2" placeholder="Name" />
-                <input className="border rounded-md px-3 py-2" placeholder="Email" />
-                <input className="border rounded-md px-3 py-2" placeholder="Password" type="password" />
-                <button className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700" type="button">Sign up</button>
-            </form>
-        </section>
+        <section, className="m, i, n-h-[40, v, h] m, a, x-w-md">
+            <h1, className="te, x, t-3xl, fon, t-bold, m, b-4">Create, Accoun, t</h1>
+            <form, className="grid, ga, p-4">
+                <input, className="border, rounde, d-md, p, x-3, p, y-2" placehold, e, r="Na, m, e"  />
+                <input, className="border, rounde, d-md, p, x-3, p, y-2" placehold, e, r="Ema, i, l"  />
+                <input, className="border, rounde, d-md, p, x-3, p, y-2" placehold, e, r="Passwo, r, d" ty, p, e="passwo, r, d"  />
+                <button, className="bg-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounde, d-md, hov, e
+  r:bg-bl, u, e-7, 0, 0" ty, p, e="butt, o, n">Sign, u, p</butt, o, n>
+            </fo, r, m>
+        </secti, o, n>
     );
 };
-
 export default Signup;
-

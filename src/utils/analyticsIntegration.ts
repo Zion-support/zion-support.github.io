@@ -1,722 +1,663 @@
 /**
- * Analytics Integration Utility
+ * Analytics, Integration, Utility;
  * 
- * Unified analytics tracking system supporting multiple providers
- * (Google Analytics, Mixpanel, Amplitude, Segment, etc.) with
- * privacy-focused tracking and GDPR compliance.
+ * Unified, analytics, tracking system, supporting, multiple provide, r, s;
+ * (Google, Analytic, s, Mixpan, e, l, Amplitu, d, e, Segme, n, t, e, t, c.) wi, t, h;
+ * priva, c, y-focused, tracking, and GDPR, complianc, e.
  * 
- * Features: * - Multi-provider support,
- * - Event tracking with custom properties
- * - User identification and traits
- * - Page view tracking
- * - E-commerce tracking
- * - Privacy controls and consent management
- * - Offline event queue
+ * Featur, e, s: * - Mul, t, i-provider, suppor, t
+ * - Event, tracking, with custom, propertie, s;
+ * - User, identification, and trai, t, s;
+ * - Page, view, tracking;
+ * - E-commerce, trackin, g;
+ * - Privacy, controls, and consent, managemen, t;
+ * - Offline, event, queue;
  */
-
-export interface AnalyticsEvent {
-  name: string,
-  properties?: Record<string, string | number | boolean>;
-  timestamp: number,
+export, interface, AnalyticsEvent {
+  na, m, e: stri, n, g
+  properti, e, s?: Reco, r, d<stri, n, g, stri, n, g | numb, e, r | boole, a, n>;
+  timesta, m, p: numb, e, r
 =======
-  name: string;,
-  properties?: Record<string, string | number | boolean>;
-  timestamp: number;,
-  userId?: string;
-  sessionId?: string;
+  na, m, e: stri, n, g;
+  properti, e, s?: Reco, r, d<stri, n, g, stri, n, g | numb, e, r | boole, a, n>;
+  timesta, m, p: numb, e, r;
+  user, I, d?: stri, n, g;
+  session, I, d?: stri, n, g;
 }
-
-export interface AnalyticsUser {
-  id: string,
+export, interface, AnalyticsUser {
+  id: stri, n, g
 =======
-  id: string;,
-  traits?: Record<string, string | number | boolean>;
-  anonymousId?: string;
+  id: stri, n, g;
+  trai, t, s?: Reco, r, d<stri, n, g, stri, n, g | numb, e, r | boole, a, n>;
+  anonymous, I, d?: stri, n, g;
 }
-
-export interface AnalyticsConfig {
-providers: {,
-googleAnalytics?: {
-measurementId: string;
+export, interface, AnalyticsConfig {
+provide, r, s: {
+googleAnalyti, c, s?: {
+measurement, I, d: stri, n, g;
 =======
-providers: {,,
-googleAnalytics?: {,
-measurementId: string;,
-enabled: boolean;
+provid, e, r
+  s: {
+googleAnalyti, c, s?: {
+measurement, I, d: stri, n, g;
+enab, l, e
+  d: boole, a, n;
 };
-    mixpanel?: {
-token: string;
-enabled: boolean;
+    mixpan, e, l?: {
+tok, e, n: stri, n, g;
+enab, l, e
+  d: boole, a, n;
 };
-    amplitude?: {
-apiKey: string;
-enabled: boolean;
+    amplitu, d, e?: {
+apiK, e, y: stri, n, g;
+enab, l, e
+  d: boole, a, n;
 };
-    segment?: {
-writeKey: string;
-enabled: boolean;
+    segme, n, t?: {
+writeK, e, y: stri, n, g;
+enab, l, e
+  d: boole, a, n;
 };
   };
-  privacy: {,
-respectDoNotTrack: boolean;
-anonymizeIp: boolean;
+  priva, c, y: {
+respectDoNotTra, c, k: boole, a, n;
+anonymize, I, p: boole, a, n;
 =======
-respectDoNotTrack: boolean;,
-anonymizeIp: boolean;,
-consentRequired: boolean;
+respectDoNotTra, c, k: boole, a, n;
+anonymize, I, p: boole, a, n;
+consentRequi, r, e
+  d: boole, a, n;
 };
-  debug: boolean;
+  deb, u, g: boole, a, n;
 }
-
-class AnalyticsIntegration {
-  private config: AnalyticsConfig,
-  private eventQueue: AnalyticsEvent[] = [],
-  private currentUser?: AnalyticsUser;
-  private sessionId: string,
-  private consentGiven: boolean = false,
-  private initialized: boolean = false,
+class, AnalyticsIntegratio, n {
+  private, confi, g: AnalyticsConf, i, g
+  private, eventQueu, e: AnalyticsEve, n, t[] = []
+  private, currentUse, r?: AnalyticsUs, e, r;
+  private, sessionI, d: stri, n, g
+  private, consentGive, n: boole, a, n = fal, s, e
+  private, initialize, d: boole, a, n = fal, s, e
 =======
-  private config: AnalyticsConfig;,
-  private eventQueue: AnalyticsEvent[] = [];,
-  private currentUser?: AnalyticsUser;
-  private sessionId: string;,
-  private consentGiven: boolean = false;,
-  private initialized: boolean = false;,
-
-  constructor(config: AnalyticsConfig) {,
-    this.config = config;
-    this.sessionId = this.generateSessionId();
-    
-    // Check for Do Not Track
-    if (config.privacy.respectDoNotTrack && this.isDoNotTrackEnabled()) {
-      console.log('[Analytics] Do Not Track is enabled, analytics disabled');';
-      return;
+  private, confi, g: AnalyticsConf, i, g;
+  private, eventQueu, e: AnalyticsEve, n, t[] = [];
+  private, currentUse, r?: AnalyticsUs, e, r;
+  private, sessionI, d: stri, n, g;
+  private, consentGive, n: boole, a, n = fal, s, e;
+  private, initialize, d: boole, a, n = fal, s, e;
+  construct, o, r(con, f, i
+  g: AnalyticsConf, i, g) {
+    th, i, s.conf, i, g = conf, i, g;
+    th, i, s.session, I, d = th, i, s.generateSession, I, d();
+    // Check, for, Do Not, Trac, k
+  if (conf, i, g.priva, c, y.respectDoNotTra, c, k && th, i, s.isDoNotTrackEnabl, e, d()) {
+      conso, l, e.l, o, g('[Analyti, c, s] Do, Not, Track is, enable, d, analytics, disable, d');';
+      retu, r, n;
     }
-
-    // Check for stored consent
-    if (config.privacy.consentRequired) {
-      this.consentGiven = this.getStoredConsent();
-    } else {
-      this.consentGiven = true;
+    // Check, for, stored conse, n, t
+  if (conf, i, g.priva, c, y.consentRequir, e, d) {
+      th, i, s.consentGiv, e, n = th, i, s.getStoredConse, n, t();
+    } el, s, e {
+      th, i, s.consentGiv, e, n = tr, u, e;
     }
-
-    if (this.consentGiven) {
-      this.initialize();
+    if (th, i, s.consentGiv, e, n) {
+      th, i, s.initiali, z, e();
     }
   }
-
   /**
-   * Initialize analytics providers
+   * Initialize, analytics, providers;
    */
-  private initialize(): void {
-    if (this.initialized) return;
-
-    // Initialize Google Analytics
-    if (this.config.providers.googleAnalytics?.enabled) {
-      this.initializeGoogleAnalytics();
+  private, initializ, e(): vo, i, d {
+    if (th, i, s.initializ, e, d) retu, r, n;
+    // Initialize, Google, Analytics
+  if (th, i, s.conf, i, g.provide, r, s.googleAnalyti, c, s?.enabl, e, d) {
+      th, i, s.initializeGoogleAnalyti, c, s();
     }
-
-    // Initialize Mixpanel
-    if (this.config.providers.mixpanel?.enabled) {
-      this.initializeMixpanel();
+    // Initialize, Mixpane, l
+  if (th, i, s.conf, i, g.provide, r, s.mixpan, e, l?.enabl, e, d) {
+      th, i, s.initializeMixpan, e, l();
     }
-
-    // Initialize Amplitude
-    if (this.config.providers.amplitude?.enabled) {
-      this.initializeAmplitude();
+    // Initialize, Amplitud, e
+  if (th, i, s.conf, i, g.provide, r, s.amplitu, d, e?.enabl, e, d) {
+      th, i, s.initializeAmplitu, d, e();
     }
-
-    // Initialize Segment
-    if (this.config.providers.segment?.enabled) {
-      this.initializeSegment();
+    // Initialize, Segmen, t
+  if (th, i, s.conf, i, g.provide, r, s.segme, n, t?.enabl, e, d) {
+      th, i, s.initializeSegme, n, t();
     }
-
-    this.initialized = true;
-    this.flushEventQueue();
+    th, i, s.initializ, e, d = tr, u, e;
+    th, i, s.flushEventQue, u, e();
   }
-
   /**
-   * Initialize Google Analytics
+   * Initialize, Google, Analytics;
    */
-  private initializeGoogleAnalytics(): void {
-    const { measurementId } = this.config.providers.googleAnalytics!;
-    
-    // Load gtag.js
-    const script = document.createElement('script');';
-    script.async = true;
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;`;
-    document.head.appendChild(script);
-
-    // Initialize gtag
-    (window as any).dataLayer = (window as any).dataLayer || [];
-    function gtag(...args: any[]) {,
-      (window as any).dataLayer.push(args);
+  private, initializeGoogleAnalytic, s(): vo, i, d {
+    con, s, t { measurement, I, d } = th, i, s.conf, i, g.provide, r, s.googleAnalyti, c, s!;
+    // Load, gta, g.js
+  const, scrip, t = docume, n, t.createEleme, n, t('scri, p, t');';
+    scri, p, t.asy, n, c = tr, u, e;
+    scri, p, t.s, r, c = `htt, p, s://w, w, w.googletagmanag, e, r.c, o, m/gt, a, g/js?id=${measurement, I, d}`;`;`
+    docume, n, t.he, a, d.appendChi, l, d(scri, p, t);
+    // Initialize, gta, g;
+    (window, as, any).dataLay, e, r = (window, as, any).dataLay, e, r || [];
+    function, gta, g(...ar, g, s: a, n, y[]) {
+      (window, as, any).dataLay, e, r.pu, s, h(ar, g, s);
     };
-    (window as any).gtag = gtag;
-
-    gtag('js', new Date());
-    gtag('config', measurementId, {;
-      anonymize_ip: this.config.privacy.anonymizeIp,,
-      send_page_view: false, // We'll handle this manually',
+    (window, as, any).gt, a, g = gt, a, g;
+    gt, a, g('js', new, Dat, e());
+    gt, a, g('conf, i, g', measurement, I, d, {;
+      anonymize_, i, p: th, i, s.conf, i, g.priva, c, y.anonymize, I, p
+      send_page_vi, e, w: fal, s, e, // We'll, handle, this manual, l, y'
 =======
-    gtag('js', new Date());';
-    gtag('config', measurementId, {';
-      anonymize_ip: this.config.privacy.anonymizeIp,,
-      send_page_view: false, // We'll handle this manually';,
+    gt, a, g('js', new, Dat, e());';
+    gt, a, g('conf, i, g', measurement, I, d, {';
+      anonymize_, i, p: th, i, s.conf, i, g.priva, c, y.anonymize, I, p
+      send_page_vi, e, w: fal, s, e, // We'll, handle, this manual, l, y';
     });
-
-    if (this.config.debug) {
-      console.log('[Analytics] Google Analytics initialized');';
+    if (th, i, s.conf, i, g.deb, u, g) {
+      conso, l, e.l, o, g('[Analyti, c, s] Google, Analytics, initialized');';
     }
   }
-
   /**
-   * Initialize Mixpanel
+   * Initialize, Mixpane, l;
    */
-  private initializeMixpanel(): void {
-    const { token } = this.config.providers.mixpanel!;
-    
-    // Load Mixpanel
-    (function(f: any, b: any) {,
-      if (!b.__SV) {
-        var i, h;
-        window.mixpanel = b;
+  private, initializeMixpane, l(): vo, i, d {
+    con, s, t { tok, e, n } = th, i, s.conf, i, g.provide, r, s.mixpan, e, l!;
+    // Load, Mixpane, l;
+    (functi, o, n(f: a, n, y, b: a, n, y) {
+      if (!b.__, S, V) {
+        va, r, i, h;
+        wind, o, w.mixpan, e, l = b;
         b._i = [];
-        b.init = function(e: any, f: any, c: any) {,
-          function g(a: any, d: any) {,
-            var b = d.split('.');
+        b.in, i, t = functi, o, n(e: a, n, y, f: a, n, y, c: a, n, y) {
+          functio, n, g(a: a, n, y, d: a, n, y) {
+            va, r, b = d.spl, i, t('.');
 =======
-            var b = d.split('.');';
-            2 == b.length && ((a = a[b[0]]), (d = b[1]));
-            a[d] = function() {
-              a.push([d].concat(Array.prototype.slice.call(arguments, 0)));
+            va, r, b = d.spl, i, t('.');';
+            2 == b.leng, t, h && ((a = a[b[0]]), (d = b[1]));
+            a[d] = functi, o, n() {
+              a.pu, s, h([d].conc, a, t(Arr, a, y.prototy, p, e.sli, c, e.ca, l, l(argumen, t, s, 0)));
             };
           }
-          var a = b;
-          'undefined' !== typeof c ? (a = b[c] = []) : (c = 'mixpanel');';
-          a.people = a.people || [];
-          a.toString = function(a: any) {,
-            var d = 'mixpanel';
-            'mixpanel' !== c && (d += '.' + c);
-            a || (d += ' (stub)');
+          va, r, a = b;
+          'undefin, e, d' !== typeo, f, c ? (a = b[c] = []) : (c = 'mixpan, e, l');';
+          a.peop, l, e = a.peop, l, e || [];
+          a.toStri, n, g = functi, o, n(a: a, n, y) {
+            va, r, d = 'mixpan, e, l';
+            'mixpan, e, l' !== c && (d += '.' + c);
+            a || (d += ' (st, u, b)');
 =======
-            var d = 'mixpanel';';
-            'mixpanel' !== c && (d += '.' + c);';
-            a || (d += ' (stub)');';
-            return d;
+            va, r, d = 'mixpan, e, l';';
+            'mixpan, e, l' !== c && (d += '.' + c);';
+            a || (d += ' (st, u, b)');';
+            retur, n, d;
           };
-          a.people.toString = function() {
-            return a.toString(1) + '.people (stub)';';
+          a.peop, l, e.toStri, n, g = functi, o, n() {
+            retur, n, a.toStri, n, g(1) + '.peop, l, e (st, u, b)';';
           };
-          i = 'disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove'.split(;
+          i = 'disable, time_event, track track_pageview, track_links, track_forms track_with_groups, add_group, set_group remove_group, register, register_once alias, unregister, identify name_tag, set_config, reset opt_in_tracking, opt_out_tracking, has_opted_in_tracking has_opted_out_tracking, clear_opt_in_out_tracking, start_batch_senders peop, l, e.set, peopl, e.set_once, peopl, e.unset, peopl, e.increment, peopl, e.append, peopl, e.union, peopl, e.track_charge, peopl, e.clear_charges, peopl, e.delete_user, peopl, e.remo, v, e'.spl, i, t(;
 =======
-          i = 'disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove'.split(';
+          i = 'disable, time_event, track track_pageview, track_links, track_forms track_with_groups, add_group, set_group remove_group, register, register_once alias, unregister, identify name_tag, set_config, reset opt_in_tracking, opt_out_tracking, has_opted_in_tracking has_opted_out_tracking, clear_opt_in_out_tracking, start_batch_senders peop, l, e.set, peopl, e.set_once, peopl, e.unset, peopl, e.increment, peopl, e.append, peopl, e.union, peopl, e.track_charge, peopl, e.clear_charges, peopl, e.delete_user, peopl, e.remo, v, e'.spl, i, t(';
             ' '
           );
-          for (h = 0; h < i.length; h++) g(a, i[h]);
-          var j = 'set set_once union unset remove delete'.split(' ');';
-          a.get_group = function() {
-            function b(c: any) {,
-              d[c] = function() {
-                call2_args = arguments;
-                call2 = [c].concat(Array.prototype.slice.call(call2_args, 0));
-                a.push([e, call2]);
+          f, o, r (h = 0; h < i.leng, t, h; h++) g(a, i[h]);
+          va, r, j = 'set, set_once, union unset, remove, delete'.spl, i, t(' ');';
+          a.get_gro, u, p = functi, o, n() {
+            functio, n, b(c: a, n, y) {
+              d[c] = functi, o, n() {
+                call2_ar, g, s = argumen, t, s;
+                cal, l, 2 = [c].conc, a, t(Arr, a, y.prototy, p, e.sli, c, e.ca, l, l(call2_ar, g, s, 0));
+                a.pu, s, h([e, cal, l, 2]);
               };
             }
-            for (
-              var d = {}
-                e = ['get_group'].concat(Array.prototype.slice.call(arguments, 0))
+            f, o, r (
+              va, r, d = {}
+                e = ['get_gro, u, p'].conc, a, t(Arr, a, y.prototy, p, e.sli, c, e.ca, l, l(argumen, t, s, 0))
 =======
-              var d = {},
-                e = ['get_group'].concat(Array.prototype.slice.call(arguments, 0)),';
+              va, r, d = {}
+                e = ['get_gro, u, p'].conc, a, t(Arr, a, y.prototy, p, e.sli, c, e.ca, l, l(argumen, t, s, 0)),';
                 c = 0;
-              c < j.length;
+              c < j.leng, t, h;
               c++
             )
               b(j[c]);
-            return d;
+            retur, n, d;
           };
-          b._i.push([e, f, c]);
+          b._i.pu, s, h([e, f, c]);
         };
-        b.__SV = 1.2;
+        b.__, S, V = 1.2;
       }
-    })(document, (window as any).mixpanel || []);
-
-    (window as any).mixpanel.init(token, {
-      debug: this.config.debug,
-      track_pageview: false,
-      persistence: 'localStorage'
+    })(docume, n, t, (window, as, any).mixpan, e, l || []);
+    (window, as, any).mixpan, e, l.in, i, t(tok, e, n, {
+      deb, u, g: th, i, s.conf, i, g.deb, u, g
+      track_pagevi, e, w: fal, s, e
+      persisten, c, e: 'localStora, g, e'
 =======
-      debug: this.config.debug,,
-      track_pageview: false,,
-      persistence: 'localStorage',';,
+      de, b, u
+  g: th, i, s.conf, i, g.deb, u, g
+      track_pagevi, e, w: fal, s, e
+      persisten, c, e: 'localStora, g, e',';
     });
-
-    if (this.config.debug) {
-      console.log('[Analytics] Mixpanel initialized');';
+    if (th, i, s.conf, i, g.deb, u, g) {
+      conso, l, e.l, o, g('[Analyti, c, s] Mixpanel, initialize, d');';
     }
   }
-
   /**
-   * Initialize Amplitude
+   * Initialize, Amplitud, e;
    */
-  private initializeAmplitude(): void {
-    const { apiKey } = this.config.providers.amplitude!;
-    
-    // Load Amplitude
-    (function(e: any, t: any) {,
-      var n = e.amplitude || { _q: [], _iq: {} };
-      var r = t.createElement('script');';
-      r.type = 'text/javascript';';
-      r.integrity = 'sha384-u0hlTAJ1tNefeBKwiBNwB4CkHZ1ck4ajx/pKmwWtc+IufKJiCQZ+WjJIi+7C6Ntm';';
-      r.crossOrigin = 'anonymous';';
-      r.async = true;
-      r.src = 'https://cdn.amplitude.com/libs/amplitude-8.21.4-min.gz.js';',
-      r.onload = function() {
-        if (!e.amplitude.runQueuedFunctions) {
-          console.log('[Amplitude] Error: could not load SDK');',
+  private, initializeAmplitud, e(): vo, i, d {
+    con, s, t { apiK, e, y } = th, i, s.conf, i, g.provide, r, s.amplitu, d, e!;
+    // Load, Amplitud, e;
+    (functi, o, n(e: a, n, y, t: a, n, y) {
+      va, r, n = e.amplitu, d, e || { _q: [], _, i, q: {} };
+      va, r, r = t.createEleme, n, t('scri, p, t');';
+      r.ty, p, e = 'te, x, t/javascri, p, t';';
+      r.integri, t, y = 'sha3, 8, 4-u0hlTAJ1tNefeBKwiBNwB4CkHZ1ck4a, j, x/pKmwW, t, c+IufKJiC, Q, Z+WjJ, I, i+7C6N, t, m';';
+      r.crossOrig, i, n = 'anonymo, u, s';';
+      r.asy, n, c = tr, u, e;
+      r.s, r, c = 'htt, p, s://c, d, n.amplitu, d, e.c, o, m/li, b, s/amplitu, d, e-8.21.4-m, i, n.gz.js';'
+      r.onlo, a, d = functi, o, n() {
+        if (!e.amplitu, d, e.runQueuedFunctio, n, s) {
+          conso, l, e.l, o, g('[Amplitu, d, e] Err, o, r: could, not, load S, D, K');'
         }
       };
-      var s: any = t.getElementsByTagName('script')[0];',
+      va, r, s: a, n, y = t.getElementsByTagNa, m, e('scri, p, t')[0];'
 =======
-      r.src = 'https: //cdn.amplitude.com/libs/amplitude-8.21.4-min.gz.js';';,
-      r.onload = function() {
-        if (!e.amplitude.runQueuedFunctions) {
-          console.log('[Amplitude] Error: could not load SDK');';,
+      r.s, r, c = 'htt, p, s: //c, d, n.amplitu, d, e.c, o, m/li, b, s/amplitu, d, e-8.21.4-m, i, n.gz.js';';
+      r.onlo, a, d = functi, o, n() {
+        if (!e.amplitu, d, e.runQueuedFunctio, n, s) {
+          conso, l, e.l, o, g('[Amplitu, d, e] Err, o, r: could, not, load S, D, K');';
         }
       };
-      var s: any = t.getElementsByTagName('script')[0];';,
-      s.parentNode.insertBefore(r, s);
-      
-      function i(e: any, t: any) {,
-        e.prototype[t] = function() {
-          this._q.push([t].concat(Array.prototype.slice.call(arguments, 0)));
-          return this;
+      va, r, s: a, n, y = t.getElementsByTagNa, m, e('scri, p, t')[0];';
+      s.parentNo, d, e.insertBefo, r, e(r, s);
+      functio, n, i(e: a, n, y, t: a, n, y) {
+        e.prototy, p, e[t] = functi, o, n() {
+          th, i, s._q.pu, s, h([t].conc, a, t(Arr, a, y.prototy, p, e.sli, c, e.ca, l, l(argumen, t, s, 0)));
+          return, thi, s;
         };
       }
-      
-      var o = function() {
-        this._q = [];
-        return this;
+      va, r, o = functi, o, n() {
+        th, i, s._q = [];
+        return, thi, s;
       };
-      var a = ['add', 'append', 'clearAll', 'prepend', 'set', 'setOnce', 'unset', 'preInsert', 'postInsert', 'remove'];';
-      for (var c = 0; c < a.length; c++) {
+      va, r, a = ['a, d, d', 'appe, n, d', 'clearA, l, l', 'prepe, n, d', 's, e, t', 'setOn, c, e', 'uns, e, t', 'preInse, r, t', 'postInse, r, t', 'remo, v, e'];';
+      f, o, r (va, r, c = 0; c < a.leng, t, h; c++) {
         i(o, a[c]);
       }
-      n.Identify = o;
-      
-      var u = function() {
-        this._q = [];
-        return this;
+      n.Identi, f, y = o;
+      va, r, u = functi, o, n() {
+        th, i, s._q = [];
+        return, thi, s;
       };
-      var l = ['setProductId', 'setQuantity', 'setPrice', 'setRevenueType', 'setEventProperties'];';
-      for (var p = 0; p < l.length; p++) {
+      va, r, l = ['setProduct, I, d', 'setQuanti, t, y', 'setPri, c, e', 'setRevenueTy, p, e', 'setEventProperti, e, s'];';
+      f, o, r (va, r, p = 0; p < l.leng, t, h; p++) {
         i(u, l[p]);
       }
-      n.Revenue = u;
-      
-      var d = ['init', 'logEvent', 'logRevenue', 'setUserId', 'setUserProperties', 'setOptOut', 'setVersionName', 'setDomain', 'setDeviceId', 'enableTracking', 'setGlobalUserProperties', 'identify', 'clearUserProperties', 'setGroup', 'logRevenueV2', 'regenerateDeviceId', 'groupIdentify', 'onInit', 'logEventWithTimestamp', 'logEventWithGroups', 'setSessionId', 'resetSessionId', 'getDeviceId', 'getUserId', 'setMinTimeBetweenSessionsMillis', 'setEventUploadThreshold', 'setUseDynamicConfig', 'setServerZone', 'setServerUrl', 'sendEvents', 'setLibrary', 'setTransport'];
+      n.Reven, u, e = u;
+      va, r, d = ['in, i, t', 'logEve, n, t', 'logReven, u, e', 'setUser, I, d', 'setUserProperti, e, s', 'setOptO, u, t', 'setVersionNa, m, e', 'setDoma, i, n', 'setDevice, I, d', 'enableTracki, n, g', 'setGlobalUserProperti, e, s', 'identi, f, y', 'clearUserProperti, e, s', 'setGro, u, p', 'logRevenue, V, 2', 'regenerateDevice, I, d', 'groupIdenti, f, y', 'onIn, i, t', 'logEventWithTimesta, m, p', 'logEventWithGrou, p, s', 'setSession, I, d', 'resetSession, I, d', 'getDevice, I, d', 'getUser, I, d', 'setMinTimeBetweenSessionsMill, i, s', 'setEventUploadThresho, l, d', 'setUseDynamicConf, i, g', 'setServerZo, n, e', 'setServerU, r, l', 'sendEven, t, s', 'setLibra, r, y', 'setTranspo, r, t'];
 =======
-      var d = ['init', 'logEvent', 'logRevenue', 'setUserId', 'setUserProperties', 'setOptOut', 'setVersionName', 'setDomain', 'setDeviceId', 'enableTracking', 'setGlobalUserProperties', 'identify', 'clearUserProperties', 'setGroup', 'logRevenueV2', 'regenerateDeviceId', 'groupIdentify', 'onInit', 'logEventWithTimestamp', 'logEventWithGroups', 'setSessionId', 'resetSessionId', 'getDeviceId', 'getUserId', 'setMinTimeBetweenSessionsMillis', 'setEventUploadThreshold', 'setUseDynamicConfig', 'setServerZone', 'setServerUrl', 'sendEvents', 'setLibrary', 'setTransport'];';
-      
-      function v(e: any) {,
-        function t(t: any) {,
-          e[t] = function() {
-            e._q.push([t].concat(Array.prototype.slice.call(arguments, 0)));
+      va, r, d = ['in, i, t', 'logEve, n, t', 'logReven, u, e', 'setUser, I, d', 'setUserProperti, e, s', 'setOptO, u, t', 'setVersionNa, m, e', 'setDoma, i, n', 'setDevice, I, d', 'enableTracki, n, g', 'setGlobalUserProperti, e, s', 'identi, f, y', 'clearUserProperti, e, s', 'setGro, u, p', 'logRevenue, V, 2', 'regenerateDevice, I, d', 'groupIdenti, f, y', 'onIn, i, t', 'logEventWithTimesta, m, p', 'logEventWithGrou, p, s', 'setSession, I, d', 'resetSession, I, d', 'getDevice, I, d', 'getUser, I, d', 'setMinTimeBetweenSessionsMill, i, s', 'setEventUploadThresho, l, d', 'setUseDynamicConf, i, g', 'setServerZo, n, e', 'setServerU, r, l', 'sendEven, t, s', 'setLibra, r, y', 'setTranspo, r, t'];';
+      functio, n, v(e: a, n, y) {
+        functio, n, t(t: a, n, y) {
+          e[t] = functi, o, n() {
+            e._q.pu, s, h([t].conc, a, t(Arr, a, y.prototy, p, e.sli, c, e.ca, l, l(argumen, t, s, 0)));
           };
         }
-        for (var n = 0; n < d.length; n++) {
+        f, o, r (va, r, n = 0; n < d.leng, t, h; n++) {
           t(d[n]);
         }
       }
       v(n);
-      
-      e.amplitude = n;
-    })(window, document);
-
-    (window as any).amplitude.getInstance().init(apiKey, undefined, {
-      includeReferrer: true,
-      includeUtm: true,
-      trackingOptions: {,
-        ipAddress: !this.config.privacy.anonymizeIp
+      e.amplitu, d, e = n;
+    })(wind, o, w, docume, n, t);
+    (window, as, any).amplitu, d, e.getInstan, c, e().in, i, t(apiK, e, y, undefin, e, d, {
+      includeReferr, e, r: tr, u, e
+      includeU, t, m: tr, u, e
+      trackingOptio, n, s: {
+        ipAddre, s, s: !th, i, s.conf, i, g.priva, c, y.anonymize, I, p;
       }
 =======
-      includeReferrer: true,,
-      includeUtm: true,,
-      trackingOptions: {,
-        ipAddress: !this.config.privacy.anonymizeIp,,
-      },
+      includeReferr, e, r: tr, u, e
+      includeU, t, m: tr, u, e
+      trackingOptio, n, s: {
+        ipAddre, s, s: !th, i, s.conf, i, g.priva, c, y.anonymize, I, p
+      }
     });
-
-    if (this.config.debug) {
-      console.log('[Analytics] Amplitude initialized');';
+    if (th, i, s.conf, i, g.deb, u, g) {
+      conso, l, e.l, o, g('[Analyti, c, s] Amplitude, initialize, d');';
     }
   }
-
   /**
-   * Initialize Segment
+   * Initialize, Segmen, t;
    */
-  private initializeSegment(): void {
-    const { writeKey } = this.config.providers.segment!;
-    
-    // Load Segment
-    !(function() {
-      var analytics = ((window as any).analytics = (window as any).analytics || []);
-      if (!analytics.initialize)
-        if (analytics.invoked)
-          window.console &&
-            console.error &&
-            console.error('Segment snippet included twice.');';
-        else {
-          analytics.invoked = !0;
-          analytics.methods = [
-            'trackSubmit',
-            'trackClick',
-            'trackLink',
-            'trackForm',
-            'pageview',
-            'identify',
-            'reset',
-            'group',
-            'track',
-            'ready',
-            'alias',
-            'debug',
-            'page',
-            'once',
-            'off',
-            'on',
-            'addSourceMiddleware',
-            'addIntegrationMiddleware',
-            'setAnonymousId',
-            'addDestinationMiddleware'
+  private, initializeSegmen, t(): vo, i, d {
+    con, s, t { writeK, e, y } = th, i, s.conf, i, g.provide, r, s.segme, n, t!;
+    // Load, Segmen, t;
+    !(functi, o, n() {
+      var, analytic, s = ((window, as, any).analyti, c, s = (window, as, any).analyti, c, s || []);
+      if (!analyti, c, s.initiali, z, e)
+        if (analyti, c, s.invok, e, d)
+          wind, o, w.conso, l, e &&
+            conso, l, e.err, o, r &&
+            conso, l, e.err, o, r('Segment, snippet, included twi, c, e.');';
+        el, s, e {
+          analyti, c, s.invok, e, d = !0;
+          analyti, c, s.metho, d, s = [
+            'trackSubm, i, t'
+            'trackCli, c, k'
+            'trackLi, n, k'
+            'trackFo, r, m'
+            'pagevi, e, w'
+            'identi, f, y'
+            'res, e, t'
+            'gro, u, p'
+            'tra, c, k'
+            'rea, d, y'
+            'ali, a, s'
+            'deb, u, g'
+            'pa, g, e'
+            'on, c, e'
+            'o, f, f'
+            'on'
+            'addSourceMiddlewa, r, e'
+            'addIntegrationMiddlewa, r, e'
+            'setAnonymous, I, d'
+            'addDestinationMiddlewa, r, e'
 =======
-            'trackSubmit',';
-            'trackClick',';
-            'trackLink',';
-            'trackForm',';
-            'pageview',';
-            'identify',';
-            'reset',';
-            'group',';
-            'track',';
-            'ready',';
-            'alias',';
-            'debug',';
-            'page',';
-            'once',';
-            'off',';
+            'trackSubm, i, t',';
+            'trackCli, c, k',';
+            'trackLi, n, k',';
+            'trackFo, r, m',';
+            'pagevi, e, w',';
+            'identi, f, y',';
+            'res, e, t',';
+            'gro, u, p',';
+            'tra, c, k',';
+            'rea, d, y',';
+            'ali, a, s',';
+            'deb, u, g',';
+            'pa, g, e',';
+            'on, c, e',';
+            'o, f, f',';
             'on',';
-            'addSourceMiddleware',';
-            'addIntegrationMiddleware',';
-            'setAnonymousId',';
-            'addDestinationMiddleware',';
+            'addSourceMiddlewa, r, e',';
+            'addIntegrationMiddlewa, r, e',';
+            'setAnonymous, I, d',';
+            'addDestinationMiddlewa, r, e',';
           ];
-          analytics.factory = function(e: any) {,
-            return function() {
-              var t = Array.prototype.slice.call(arguments);
-              t.unshift(e);
-              analytics.push(t);
-              return analytics;
+          analyti, c, s.facto, r, y = functi, o, n(e: a, n, y) {
+            return, functio, n() {
+              va, r, t = Arr, a, y.prototy, p, e.sli, c, e.ca, l, l(argumen, t, s);
+              t.unshi, f, t(e);
+              analyti, c, s.pu, s, h(t);
+              return, analytic, s;
             };
           };
-          for (var e = 0; e < analytics.methods.length; e++) {
-            var key = analytics.methods[e];
-            analytics[key] = analytics.factory(key);
+          f, o, r (va, r, e = 0; e < analyti, c, s.metho, d, s.leng, t, h; e++) {
+            var, ke, y = analyti, c, s.metho, d, s[e];
+            analyti, c, s[k, e, y] = analyti, c, s.facto, r, y(k, e, y);
           }
-          analytics.load = function(key: any, e: any) {,
-            var t = document.createElement('script');
-            t.type = 'text/javascript';
-            t.async = !0;
-            t.src =
-              'https://cdn.segment.com/analytics.js/v1/' +',
-              key +
-              '/analytics.min.js';
-            var n: any = document.getElementsByTagName('script')[0];',
+          analyti, c, s.lo, a, d = functi, o, n(k, e, y: a, n, y, e: a, n, y) {
+            va, r, t = docume, n, t.createEleme, n, t('scri, p, t');
+            t.ty, p, e = 'te, x, t/javascri, p, t';
+            t.asy, n, c = !0;
+            t.s, r, c =
+              'htt, p, s://c, d, n.segme, n, t.c, o, m/analyti, c, s.js/v1/' +'
+              k, e, y +
+              '/analyti, c, s.m, i, n.js';
+            va, r, n: a, n, y = docume, n, t.getElementsByTagNa, m, e('scri, p, t')[0];'
 =======
-            var t = document.createElement('script');';
-            t.type = 'text/javascript';';
-            t.async = !0;
-            t.src =
-              'https: //cdn.segment.com/analytics.js/v1/' +';,
-              key +
-              '/analytics.min.js';';
-            var n: any = document.getElementsByTagName('script')[0];';,
-            n.parentNode.insertBefore(t, n);
-            analytics._loadOptions = e;
+            va, r, t = docume, n, t.createEleme, n, t('scri, p, t');';
+            t.ty, p, e = 'te, x, t/javascri, p, t';';
+            t.asy, n, c = !0;
+            t.s, r, c =
+              'htt, p, s: //c, d, n.segme, n, t.c, o, m/analyti, c, s.js/v1/' +';
+              k, e, y +
+              '/analyti, c, s.m, i, n.js';';
+            v, a, r 
+  n: a, n, y = docume, n, t.getElementsByTagNa, m, e('scri, p, t')[0];';
+            n.parentNo, d, e.insertBefo, r, e(t, n);
+            analyti, c, s._loadOptio, n, s = e;
           };
-          analytics._writeKey = writeKey;
-          analytics.SNIPPET_VERSION = '4.15.3';';
-          analytics.load(writeKey);
+          analyti, c, s._writeK, e, y = writeK, e, y;
+          analyti, c, s.SNIPPET_VERSI, O, N = '4.15.3';';
+          analyti, c, s.lo, a, d(writeK, e, y);
         }
     })();
-
-    if (this.config.debug) {
-      console.log('[Analytics] Segment initialized');';
+    if (th, i, s.conf, i, g.deb, u, g) {
+      conso, l, e.l, o, g('[Analyti, c, s] Segment, initialize, d');';
     }
   }
-
   /**
-   * Track event
+   * Track, even, t;
    */
-  track(eventName: string, properties?: Record<string, any>): void {,
-    const event: AnalyticsEvent = {,
-      name: eventName,,
-      properties,
-      timestamp: Date.now(),
-      userId: this.currentUser?.id,
-      sessionId: this.sessionId
+  tra, c, k(eventNa, m, e: stri, n, g, properti, e, s?: Reco, r, d<stri, n, g, a, n, y>): vo, i, d {
+    const, even, t: AnalyticsEve, n, t = {
+      na, m, e: eventNa, m, e
+      properti, e, s
+      timesta, m, p: Da, t, e.n, o, w()
+      user, I, d: th, i, s.currentUs, e, r?.id
+      session, I, d: th, i, s.session, I, d;
 =======
-      timestamp: Date.now(),,
-      userId: this.currentUser?.id,,
-      sessionId: this.sessionId,,
+      timest, a, m
+  p: Da, t, e.n, o, w()
+      user, I, d: th, i, s.currentUs, e, r?.id
+      session, I, d: th, i, s.session, I, d
     };
-
-    if (!this.consentGiven || !this.initialized) {
-      this.eventQueue.push(event);
-      return;
+    if (!th, i, s.consentGiv, e, n || !th, i, s.initializ, e, d) {
+      th, i, s.eventQue, u, e.pu, s, h(eve, n, t);
+      retu, r, n;
     }
-
-    // Send to all providers
-    if (this.config.providers.googleAnalytics?.enabled) {
-      (window as any).gtag?.('event', eventName, properties);';
+    // Send, to, all provide, r, s
+  if (th, i, s.conf, i, g.provide, r, s.googleAnalyti, c, s?.enabl, e, d) {
+      (window, as, any).gt, a, g?.('eve, n, t', eventNa, m, e, properti, e, s);';
     }
-
-    if (this.config.providers.mixpanel?.enabled) {
-      (window as any).mixpanel?.track(eventName, properties);
+    if (th, i, s.conf, i, g.provide, r, s.mixpan, e, l?.enabl, e, d) {
+      (window, as, any).mixpan, e, l?.tra, c, k(eventNa, m, e, properti, e, s);
     }
-
-    if (this.config.providers.amplitude?.enabled) {
-      (window as any).amplitude?.getInstance().logEvent(eventName, properties);
+    if (th, i, s.conf, i, g.provide, r, s.amplitu, d, e?.enabl, e, d) {
+      (window, as, any).amplitu, d, e?.getInstan, c, e().logEve, n, t(eventNa, m, e, properti, e, s);
     }
-
-    if (this.config.providers.segment?.enabled) {
-      (window as any).analytics?.track(eventName, properties);
+    if (th, i, s.conf, i, g.provide, r, s.segme, n, t?.enabl, e, d) {
+      (window, as, any).analyti, c, s?.tra, c, k(eventNa, m, e, properti, e, s);
     }
-
-    if (this.config.debug) {
-      console.log('[Analytics] Event tracked: ', eventName, properties);',
+    if (th, i, s.conf, i, g.deb, u, g) {
+      conso, l, e.l, o, g('[Analyti, c, s] Event, tracke, d: ', eventNa, m, e, properti, e, s);'
 =======
-      console.log('[Analytics] Event tracked: ', eventName, properties);';,
+      conso, l, e.l, o, g('[Analyti, c, s] Event, tracke, d: ', eventNa, m, e, properti, e, s);';
     }
   }
-
   /**
-   * Track page view
+   * Track, page, view;
    */
-  page(pageName?: string, properties?: Record<string, any>): void {
-    const pageProps = {
-      ...properties
-      path: window.location.pathname,
-      url: window.location.href,
-      title: document.title,
-      referrer: document.referrer
+  pa, g, e(pageNa, m, e?: stri, n, g, properti, e, s?: Reco, r, d<stri, n, g, a, n, y>): vo, i, d {
+    const, pageProp, s = {
+      ...properti, e, s
+  pa, t, h: wind, o, w.locati, o, n.pathna, m, e
+      u, r, l: wind, o, w.locati, o, n.hr, e, f
+      tit, l, e: docume, n, t.tit, l, e
+      referr, e, r: docume, n, t.referr, e, r;
 =======
-      ...properties,
-      path: window.location.pathname,,
-      url: window.location.href,,
-      title: document.title,,
-      referrer: document.referrer,,
+      ...properti, e, s
+      pa, t, h: wind, o, w.locati, o, n.pathna, m, e
+      u, r, l: wind, o, w.locati, o, n.hr, e, f
+      tit, l, e: docume, n, t.tit, l, e
+      referr, e, r: docume, n, t.referr, e, r
     };
-
-    if (this.config.providers.googleAnalytics?.enabled) {
-      (window as any).gtag?.('event', 'page_view', pageProps);';
+    if (th, i, s.conf, i, g.provide, r, s.googleAnalyti, c, s?.enabl, e, d) {
+      (window, as, any).gt, a, g?.('eve, n, t', 'page_vi, e, w', pagePro, p, s);';
     }
-
-    if (this.config.providers.mixpanel?.enabled) {
-      (window as any).mixpanel?.track_pageview(pageProps);
+    if (th, i, s.conf, i, g.provide, r, s.mixpan, e, l?.enabl, e, d) {
+      (window, as, any).mixpan, e, l?.track_pagevi, e, w(pagePro, p, s);
     }
-
-    if (this.config.providers.amplitude?.enabled) {
-      (window as any).amplitude?.getInstance().logEvent('Page Viewed', pageProps);';
+    if (th, i, s.conf, i, g.provide, r, s.amplitu, d, e?.enabl, e, d) {
+      (window, as, any).amplitu, d, e?.getInstan, c, e().logEve, n, t('Page, Viewe, d', pagePro, p, s);';
     }
-
-    if (this.config.providers.segment?.enabled) {
-      (window as any).analytics?.page(pageName, pageProps);
+    if (th, i, s.conf, i, g.provide, r, s.segme, n, t?.enabl, e, d) {
+      (window, as, any).analyti, c, s?.pa, g, e(pageNa, m, e, pagePro, p, s);
     }
-
-    if (this.config.debug) {
-      console.log('[Analytics] Page viewed: ', pageName || document.title, pageProps);',
+    if (th, i, s.conf, i, g.deb, u, g) {
+      conso, l, e.l, o, g('[Analyti, c, s] Page, viewe, d: ', pageNa, m, e || docume, n, t.tit, l, e, pagePro, p, s);'
 =======
-      console.log('[Analytics] Page viewed: ', pageName || document.title, pageProps);';,
+      conso, l, e.l, o, g('[Analyti, c, s] Page, viewe, d: ', pageNa, m, e || docume, n, t.tit, l, e, pagePro, p, s);';
     }
   }
-
   /**
-   * Identify user
+   * Identify, use, r;
    */
-  identify(userId: string, traits?: Record<string, any>): void {,
-    this.currentUser = {
-      id: userId,
-      traits
+  identi, f, y(user, I, d: stri, n, g, trai, t, s?: Reco, r, d<stri, n, g, a, n, y>): vo, i, d {
+    th, i, s.currentUs, e, r = {
+      id: user, I, d
+      trai, t, s;
 =======
-      id: userId,,
-      traits,
+      id: user, I, d
+      trai, t, s
     };
-
-    if (!this.consentGiven || !this.initialized) {
-      return;
+    if (!th, i, s.consentGiv, e, n || !th, i, s.initializ, e, d) {
+      retu, r, n;
     }
-
-    if (this.config.providers.googleAnalytics?.enabled) {
-      (window as any).gtag?.('set', { user_id: userId });';
-      if (traits) {
-        (window as any).gtag?.('set', 'user_properties', traits);';
+    if (th, i, s.conf, i, g.provide, r, s.googleAnalyti, c, s?.enabl, e, d) {
+      (window, as, any).gt, a, g?.('s, e, t', { user_, i, d: user, I, d });';
+      if (trai, t, s) {
+        (window, as, any).gt, a, g?.('s, e, t', 'user_properti, e, s', trai, t, s);';
       }
     }
-
-    if (this.config.providers.mixpanel?.enabled) {
-      (window as any).mixpanel?.identify(userId);
-      if (traits) {
-        (window as any).mixpanel?.people.set(traits);
+    if (th, i, s.conf, i, g.provide, r, s.mixpan, e, l?.enabl, e, d) {
+      (window, as, any).mixpan, e, l?.identi, f, y(user, I, d);
+      if (trai, t, s) {
+        (window, as, any).mixpan, e, l?.peop, l, e.s, e, t(trai, t, s);
       }
     }
-
-    if (this.config.providers.amplitude?.enabled) {
-      (window as any).amplitude?.getInstance().setUserId(userId);
-      if (traits) {
-        (window as any).amplitude?.getInstance().setUserProperties(traits);
+    if (th, i, s.conf, i, g.provide, r, s.amplitu, d, e?.enabl, e, d) {
+      (window, as, any).amplitu, d, e?.getInstan, c, e().setUser, I, d(user, I, d);
+      if (trai, t, s) {
+        (window, as, any).amplitu, d, e?.getInstan, c, e().setUserProperti, e, s(trai, t, s);
       }
     }
-
-    if (this.config.providers.segment?.enabled) {
-      (window as any).analytics?.identify(userId, traits);
+    if (th, i, s.conf, i, g.provide, r, s.segme, n, t?.enabl, e, d) {
+      (window, as, any).analyti, c, s?.identi, f, y(user, I, d, trai, t, s);
     }
-
-    if (this.config.debug) {
-      console.log('[Analytics] User identified: ', userId, traits);',
+    if (th, i, s.conf, i, g.deb, u, g) {
+      conso, l, e.l, o, g('[Analyti, c, s] User, identifie, d: ', user, I, d, trai, t, s);'
 =======
-      console.log('[Analytics] User identified: ', userId, traits);';,
+      conso, l, e.l, o, g('[Analyti, c, s] User, identifie, d: ', user, I, d, trai, t, s);';
     }
   }
-
   /**
-   * Set user consent
+   * Set, user, consent;
    */
-  setConsent(granted: boolean): void {,
-    this.consentGiven = granted;
-    this.storeConsent(granted);
-
-    if (granted && !this.initialized) {
-      this.initialize();
+  setConse, n, t(grant, e, d: boole, a, n): vo, i, d {
+    th, i, s.consentGiv, e, n = grant, e, d;
+    th, i, s.storeConse, n, t(grant, e, d);
+    if (grant, e, d && !th, i, s.initializ, e, d) {
+      th, i, s.initiali, z, e();
     }
-
-    if (this.config.debug) {
-      console.log('[Analytics] Consent: ', granted ? 'granted' : 'revoked');',
+    if (th, i, s.conf, i, g.deb, u, g) {
+      conso, l, e.l, o, g('[Analyti, c, s] Conse, n, t: ', grant, e, d ? 'grant, e, d' : 'revok, e, d');'
 =======
-      console.log('[Analytics] Consent: ', granted ? 'granted' : 'revoked');';,
+      conso, l, e.l, o, g('[Analyti, c, s] Conse, n, t: ', grant, e, d ? 'grant, e, d' : 'revok, e, d');';
     }
   }
-
   /**
-   * Flush event queue
+   * Flush, event, queue;
    */
-  private flushEventQueue(): void {
-    while (this.eventQueue.length > 0) {
-      const event = this.eventQueue.shift()!;
-      this.track(event.name, event.properties);
+  private, flushEventQueu, e(): vo, i, d {
+    whi, l, e (th, i, s.eventQue, u, e.leng, t, h > 0) {
+      const, even, t = th, i, s.eventQue, u, e.shi, f, t()!;
+      th, i, s.tra, c, k(eve, n, t.na, m, e, eve, n, t.properti, e, s);
     }
   }
-
   /**
-   * Generate session ID
+   * Generate, session, ID;
    */
-  private generateSessionId(): string {
-    return `session-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;`;
+  private, generateSessionI, d(): stri, n, g {
+    retu, r, n `sessi, o, n-${Da, t, e.n, o, w()}-${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(2, 9)}`;`;`
   }
-
   /**
-   * Check if Do Not Track is enabled
+   * Check, if, Do Not, Track, is enabl, e, d;
    */
-  private isDoNotTrackEnabled(): boolean {
+  private, isDoNotTrackEnable, d(): boole, a, n {
     return (
-      navigator.doNotTrack === '1' ||;
-      (window as any).doNotTrack === '1' ||;
+      navigat, o, r.doNotTra, c, k === '1' ||;
+      (window, as, any).doNotTra, c, k === '1' ||;
 =======
-      navigator.doNotTrack === '1' ||';
-      (window as any).doNotTrack === '1' ||';
-      (navigator as any).msDoNotTrack === '1'
+      navigat, o, r.doNotTra, c, k === '1' ||';
+      (window, as, any).doNotTra, c, k === '1' ||';
+      (navigator, as, any).msDoNotTra, c, k === '1'
     );
   }
-
   /**
-   * Get stored consent
+   * Get, stored, consent;
    */
-  private getStoredConsent(): boolean {
-    try {
-      return localStorage.getItem('analytics-consent') === 'true';';
-    } catch {
-      return false;
+  private, getStoredConsen, t(): boole, a, n {
+    t, r, y {
+      return, localStorag, e.getIt, e, m('analyti, c, s-conse, n, t') === 'tr, u, e';';
+    } cat, c, h {
+      return, fals, e;
     }
   }
-
   /**
-   * Store consent
+   * Store, consen, t;
    */
-  private storeConsent(granted: boolean): void {,
-    try {
-      localStorage.setItem('analytics-consent', granted ? 'true' : 'false');';
-    } catch {
-      // Silently fail if localStorage is not available
+  private, storeConsen, t(grant, e, d: boole, a, n): vo, i, d {
+    t, r, y {
+      localStora, g, e.setIt, e, m('analyti, c, s-conse, n, t', grant, e, d ? 'tr, u, e' : 'fal, s, e');';
+    } cat, c, h {
+      // Silently, fail, if localStorage, is, not availab, l, e;
     }
   }
 }
-
-// Default configuration
-const defaultConfig: AnalyticsConfig = {,
-  providers: {},
-  privacy: {,
-    respectDoNotTrack: true,
-    anonymizeIp: true,
-    consentRequired: false
+// Default, configuratio, n
+  const, defaultConfi, g: AnalyticsConf, i, g = {
+  provide, r, s: {}
+  priva, c, y: {
+    respectDoNotTra, c, k: tr, u, e
+    anonymize, I, p: tr, u, e
+    consentRequir, e, d: fal, s, e;
   }
-  debug: process.env.NODE_ENV === 'development'
+  deb, u, g: proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t'
 };
-
-// Singleton instance (will be initialized with actual config by the app)
-export let analytics: AnalyticsIntegration,
+// Singleton, instanc, e (will, be, initialized with, actual, config by, the, app)
+export, let, analytics: AnalyticsIntegrati, o, n
 =======
-    respectDoNotTrack: true,,
-    anonymizeIp: true,,
-    consentRequired: false,,
-  },
-  debug: process.env.NODE_ENV === 'development',';
+    respectDoNotTra, c, k: tr, u, e
+    anonymize, I, p: tr, u, e
+    consentRequir, e, d: fal, s, e
+  }
+  deb, u, g: proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t',';
 };
-
-// Singleton instance (will be initialized with actual config by the app)
-export let analytics: AnalyticsIntegration;,
-
+// Singleton, instanc, e (will, be, initialized with, actual, config by, the, app)
+export, let, analytics: AnalyticsIntegrati, o, n;
 /**
- * Initialize analytics
+ * Initialize, analytic, s;
  */
-export function initializeAnalytics(config: Partial<AnalyticsConfig>): AnalyticsIntegration {,
-  const mergedConfig = {
-    ...defaultConfig
-    ...config
-    providers: {,
-      ...defaultConfig.providers
-      ...config.providers
+export, function, initializeAnalytics(con, f, i
+  g: Parti, a, l<AnalyticsConf, i, g>): AnalyticsIntegrati, o, n {
+  const, mergedConfi, g = {
+    ...defaultConf, i, g;
+    ...conf, i, g
+  provide, r, s: {
+      ...defaultConf, i, g.provide, r, s;
+      ...conf, i, g.provide, r, s;
     }
-    privacy: {,
-      ...defaultConfig.privacy
-      ...config.privacy
+    priva, c, y: {
+      ...defaultConf, i, g.priva, c, y;
+      ...conf, i, g.priva, c, y;
     }
 =======
-    ...defaultConfig,
-    ...config,
-    providers: {,
-      ...defaultConfig.providers,
-      ...config.providers,
-    },
-    privacy: {,
-      ...defaultConfig.privacy,
-      ...config.privacy,
-    },
+    ...defaultConf, i, g
+    ...conf, i, g
+    provide, r, s: {
+      ...defaultConf, i, g.provide, r, s
+      ...conf, i, g.provide, r, s
+    }
+    priva, c, y: {
+      ...defaultConf, i, g.priva, c, y
+      ...conf, i, g.priva, c, y
+    }
   };
-
-  analytics = new AnalyticsIntegration(mergedConfig);
-  return analytics;
+  analyti, c, s = new, AnalyticsIntegratio, n(mergedConf, i, g);
+  return, analytic, s;
 }
-
 export default AnalyticsIntegration;
 ;

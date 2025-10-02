@@ -1,535 +1,464 @@
-import React from 'react';
-import '@testing-library/jest-dom';
-import UnifiedPromotionalBanner from '../UnifiedPromotionalBanner';
+import React from "react";
+impo, r, t '@testi, n, g-libra, r, y/je, s, t-d, o, m';
+import, UnifiedPromotionalBanner, from "../UnifiedPromotionalBann, e, r";
 =======
-import React from 'react';';
-import '@testing-library/jest-dom';';
-import UnifiedPromotionalBanner from '../UnifiedPromotionalBanner';';
-
-// Wrapper component for Router context
-const RouterWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-  <BrowserRouter>{children}</BrowserRouter>
+import React from "react";';
+impo, r, t '@testi, n, g-libra, r, y/je, s, t-d, o, m';';
+import, UnifiedPromotionalBanner, from "../UnifiedPromotionalBann, e, r";';
+// Wrapper, component, for Router, contex, t
+  const, RouterWrappe, r: Rea, c, t.FC<{ child, r, e
+  n: Rea, c, t.ReactNo, d, e }> = ({ childr, e, n }) => (
+  <BrowserRout, e, r>{childr, e, n}</BrowserRout, e, r>
 );
-
-describe('UnifiedPromotionalBanner', () => {;
-  const defaultProps: UnifiedPromotionalBannerProps = {,
-    title: 'Test Banner Title',',
-    description: 'Test banner description',',
-    ctaText: 'Click Here',',
-    ctaLink: '/test-link};
-
-  describe('Core Functionality', () => {;
-    it('renders with required props', () => {;
+descri, b, e('UnifiedPromotionalBann, e, r', () => {;
+  const, defaultProp, s: UnifiedPromotionalBannerPro, p, s = {
+    tit, l, e: 'Test, Banner, Title','
+    descripti, o, n: 'Test, banner, description','
+    ctaTe, x, t: 'Click, Her, e','
+    ctaLi, n, k: '/te, s, t-li, n, k};
+  descri, b, e('Core, Functionalit, y', () => {;
+    it('renders, with, required pro, p, s', () => {;
 =======
-describe('UnifiedPromotionalBanner', () => {';
-  const defaultProps: UnifiedPromotionalBannerProps = {,
-    title: 'Test Banner Title',';,
-    description: 'Test banner description',';,
-    ctaText: 'Click Here',';,
-    ctaLink: '/test-link',
+descri, b, e('UnifiedPromotionalBann, e, r', () => {';
+  const, defaultProp, s: UnifiedPromotionalBannerPro, p, s = {
+    tit, l, e: 'Test, Banner, Title',';
+    descripti, o, n: 'Test, banner, description',';
+    ctaTe, x, t: 'Click, Her, e',';
+    ctaLi, n, k: '/te, s, t-li, n, k'
   };
-
-  describe('Core Functionality', () => {';
-    it('renders with required props', () => {';
-      render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner {...defaultProps} />
-        </RouterWrapper>
+  descri, b, e('Core, Functionalit, y', () => {';
+    it('renders, with, required pro, p, s', () => {';
+      rend, e, r(
+        <RouterWrapp, e, r>
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s}  />
+        </RouterWrapp, e, r>
       );
-
-      expect(screen.getByText('Test Banner Title')).toBeInTheDocument();';
-      expect(screen.getByText('Test banner description')).toBeInTheDocument();';
-      expect(screen.getByText('Click Here')).toBeInTheDocument();';
+      expe, c, t(scre, e, n.getByTe, x, t('Test, Banner, Title')).toBeInTheDocume, n, t();';
+      expe, c, t(scre, e, n.getByTe, x, t('Test, banner, description')).toBeInTheDocume, n, t();';
+      expe, c, t(scre, e, n.getByTe, x, t('Click, Her, e')).toBeInTheDocume, n, t();';
     });
-
-    it('renders CTA button with correct link', () => {;
+    it('renders, CTA, button with, correct, link', () => {;
 =======
-    it('renders CTA button with correct link', () => {';
-      render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner {...defaultProps} />
-        </RouterWrapper>
+    it('renders, CTA, button with, correct, link', () => {';
+      rend, e, r(
+        <RouterWrapp, e, r>
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s}  />
+        </RouterWrapp, e, r>
       );
-
-      const ctaButton = screen.getByText('Click Here').closest('a');';
-      expect(ctaButton).toHaveAttribute('href', '/test-link');';
+      const, ctaButto, n = scre, e, n.getByTe, x, t('Click, Her, e').close, s, t('a');';
+      expe, c, t(ctaButt, o, n).toHaveAttribu, t, e('hr, e, f', '/te, s, t-li, n, k');';
     });
-
-    it('applies custom className', () => {;
-      const { container } = render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner {...defaultProps} className="custom-class/>
+    it('applies, custom, className', () => {;
+      con, s, t { contain, e, r } = rend, e, r(
+        <RouterWrapp, e, r>
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} classNa, m, e="cust, o, m-cla, s, s  />
 =======
-    it('applies custom className', () => {';
-      const { container } = render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner {...defaultProps} className="custom-class" />";
-        </RouterWrapper>
+    it('applies, custom, className', () => {';
+      con, s, t { contain, e, r } = rend, e, r(
+        <RouterWrapp, e, r>
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} classNa, m, e="cust, o, m-cla, s, s" />";
+        </RouterWrapp, e, r>
       );
-
-      const banner = container.firstChild;
-      expect(banner).toHaveClass('custom-class');';
+      const, banne, r = contain, e, r.firstChi, l, d;
+      expe, c, t(bann, e, r).toHaveCla, s, s('cust, o, m-cla, s, s');';
     });
   });
-
-  describe('Variants', () => {;
-    it('renders default variant correctly', () => {;
-      const { container } = render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner {...defaultProps} variant="default/>
+  descri, b, e('Varian, t, s', () => {;
+    it('renders, default, variant correct, l, y', () => {;
+      con, s, t { contain, e, r } = rend, e, r(
+        <RouterWrapp, e, r>
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} varia, n, t="defau, l, t  />
 =======
-  describe('Variants', () => {';
-    it('renders default variant correctly', () => {';
-      const { container } = render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner {...defaultProps} variant="default" />";
-        </RouterWrapper>
+  descri, b, e('Varian, t, s', () => {';
+    it('renders, default, variant correct, l, y', () => {';
+      con, s, t { contain, e, r } = rend, e, r(
+        <RouterWrapp, e, r>
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} varia, n, t="defau, l, t" />";
+        </RouterWrapp, e, r>
       );
-
-      const banner = container.firstChild;
-      expect(banner).toHaveClass('py-8', 'px-6');';
+      const, banne, r = contain, e, r.firstChi, l, d;
+      expe, c, t(bann, e, r).toHaveCla, s, s('py-8', 'px-6');';
     });
-
-    it('renders compact variant correctly', () => {;
-      const { container } = render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner {...defaultProps} variant="compact/>
+    it('renders, compact, variant correct, l, y', () => {;
+      con, s, t { contain, e, r } = rend, e, r(
+        <RouterWrapp, e, r>
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} varia, n, t="compa, c, t  />
 =======
-    it('renders compact variant correctly', () => {';
-      const { container } = render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner {...defaultProps} variant="compact" />";
-        </RouterWrapper>
+    it('renders, compact, variant correct, l, y', () => {';
+      con, s, t { contain, e, r } = rend, e, r(
+        <RouterWrapp, e, r>
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} varia, n, t="compa, c, t" />";
+        </RouterWrapp, e, r>
       );
-
-      const banner = container.firstChild;
-      expect(banner).toHaveClass('py-6', 'px-4');';
+      const, banne, r = contain, e, r.firstChi, l, d;
+      expe, c, t(bann, e, r).toHaveCla, s, s('py-6', 'px-4');';
     });
-
-    it('renders premium variant correctly', () => {;
-      const { container } = render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner {...defaultProps} variant="premium/>
+    it('renders, premium, variant correct, l, y', () => {;
+      con, s, t { contain, e, r } = rend, e, r(
+        <RouterWrapp, e, r>
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} varia, n, t="premi, u, m  />
 =======
-    it('renders premium variant correctly', () => {';
-      const { container } = render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner {...defaultProps} variant="premium" />";
-        </RouterWrapper>
+    it('renders, premium, variant correct, l, y', () => {';
+      con, s, t { contain, e, r } = rend, e, r(
+        <RouterWrapp, e, r>
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} varia, n, t="premi, u, m" />";
+        </RouterWrapp, e, r>
       );
-
-      const banner = container.firstChild;
-      expect(banner).toHaveClass('py-12', 'px-8');';
+      const, banne, r = contain, e, r.firstChi, l, d;
+      expe, c, t(bann, e, r).toHaveCla, s, s('py-12', 'px-8');';
     });
-
-    it('renders hero variant correctly', () => {;
-      const { container } = render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner {...defaultProps} variant="hero/>
+    it('renders, hero, variant correct, l, y', () => {;
+      con, s, t { contain, e, r } = rend, e, r(
+        <RouterWrapp, e, r>
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} varia, n, t="he, r, o  />
 =======
-    it('renders hero variant correctly', () => {';
-      const { container } = render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner {...defaultProps} variant="hero" />";
-        </RouterWrapper>
+    it('renders, hero, variant correct, l, y', () => {';
+      con, s, t { contain, e, r } = rend, e, r(
+        <RouterWrapp, e, r>
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} varia, n, t="he, r, o" />";
+        </RouterWrapp, e, r>
       );
-
-      const banner = container.firstChild;
-      expect(banner).toHaveClass('py-16', 'px-10');';
+      const, banne, r = contain, e, r.firstChi, l, d;
+      expe, c, t(bann, e, r).toHaveCla, s, s('py-16', 'px-10');';
     });
-
-    it('renders mega variant correctly', () => {;
-      const { container } = render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner {...defaultProps} variant="mega/>
+    it('renders, mega, variant correct, l, y', () => {;
+      con, s, t { contain, e, r } = rend, e, r(
+        <RouterWrapp, e, r>
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} varia, n, t="me, g, a  />
 =======
-    it('renders mega variant correctly', () => {';
-      const { container } = render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner {...defaultProps} variant="mega" />";
-        </RouterWrapper>
+    it('renders, mega, variant correct, l, y', () => {';
+      con, s, t { contain, e, r } = rend, e, r(
+        <RouterWrapp, e, r>
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} varia, n, t="me, g, a" />";
+        </RouterWrapp, e, r>
       );
-
-      const banner = container.firstChild;
-      expect(banner).toHaveClass('py-20', 'px-12');';
+      const, banne, r = contain, e, r.firstChi, l, d;
+      expe, c, t(bann, e, r).toHaveCla, s, s('py-20', 'px-12');';
     });
   });
-
-  describe('Themes', () => {;
-    const themes = ['blue', 'purple', 'green', 'orange', 'red', 'cyan', 'gradient'] as const;
+  descri, b, e('Them, e, s', () => {;
+    const, theme, s = ['bl, u, e', 'purp, l, e', 'gre, e, n', 'oran, g, e', 'r, e, d', 'cy, a, n', 'gradie, n, t'] as, cons, t;
 =======
-  describe('Themes', () => {';
-    const themes = ['blue', 'purple', 'green', 'orange', 'red', 'cyan', 'gradient'] as const;';
-
-    themes.forEach(theme => {
-      it(`renders ${theme} theme correctly`, () => {`;
-        const { container } = render(
-          <RouterWrapper>
-            <UnifiedPromotionalBanner {...defaultProps} theme={theme} />
-          </RouterWrapper>
+  descri, b, e('Them, e, s', () => {';
+    const, theme, s = ['bl, u, e', 'purp, l, e', 'gre, e, n', 'oran, g, e', 'r, e, d', 'cy, a, n', 'gradie, n, t'] as, cons, t;';
+    them, e, s.forEa, c, h(the, m, e => {
+      it(`rende, r, s ${the, m, e} theme, correctl, y`, () => {`;`
+        con, s, t { contain, e, r } = rend, e, r(
+          <RouterWrapp, e, r>
+            <UnifiedPromotionalBann, e, r {...defaultPro, p, s} the, m, e={the, m, e}  />
+          </RouterWrapp, e, r>
         );
-
-        const banner = container.firstChild;
-        expect(banner).toHaveClass('bg-gradient-to-r');';
+        const, banne, r = contain, e, r.firstChi, l, d;
+        expe, c, t(bann, e, r).toHaveCla, s, s('bg-gradie, n, t-to-r');';
       });
     });
   });
-
-  describe('Featured Items', () => {;
-    const featuredItems = [
+  descri, b, e('Featured, Item, s', () => {;
+    const, featuredItem, s = [
       {
-        title: 'Item 1',',
-        category: 'Category 1',',
-        link: '/item-1',',
-        metrics: '99% success},
+        tit, l, e: 'Ite, m, 1','
+        catego, r, y: 'Categor, y, 1','
+        li, n, k: '/it, e, m-1','
+        metri, c, s: '99% succe, s, s}
       {
-        title: 'Item 2',',
-        category: 'Category 2',',
-        link: '/item-2},
+        tit, l, e: 'Ite, m, 2','
+        catego, r, y: 'Categor, y, 2','
+        li, n, k: '/it, e, m-2}
       {
-        title: 'Item 3',',
-        category: 'Category 3',',
-        link: '/item-3}
+        tit, l, e: 'Ite, m, 3','
+        catego, r, y: 'Categor, y, 3','
+        li, n, k: '/it, e, m-3}
     ];
-
-    it('renders featured items when provided', () => {;
+    it('renders, featured, items when, provide, d', () => {;
 =======
-  describe('Featured Items', () => {';
-    const featuredItems = [
+  descri, b, e('Featured, Item, s', () => {';
+    const, featuredItem, s = [
       {
-        title: 'Item 1',';,
-        category: 'Category 1',';,
-        link: '/item-1',';,
-        metrics: '99% success',
-      },
+        tit, l, e: 'Ite, m, 1',';
+        catego, r, y: 'Categor, y, 1',';
+        li, n, k: '/it, e, m-1',';
+        metri, c, s: '99% succe, s, s'
+      }
       {
-        title: 'Item 2',';,
-        category: 'Category 2',';,
-        link: '/item-2',
-      },
+        tit, l, e: 'Ite, m, 2',';
+        catego, r, y: 'Categor, y, 2',';
+        li, n, k: '/it, e, m-2'
+      }
       {
-        title: 'Item 3',';,
-        category: 'Category 3',';,
-        link: '/item-3',
+        tit, l, e: 'Ite, m, 3',';
+        catego, r, y: 'Categor, y, 3',';
+        li, n, k: '/it, e, m-3'
       }
     ];
-
-    it('renders featured items when provided', () => {';
-      render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner {...defaultProps} featuredItems={featuredItems} />
-        </RouterWrapper>
+    it('renders, featured, items when, provide, d', () => {';
+      rend, e, r(
+        <RouterWrapp, e, r>
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} featuredIte, m, s={featuredIte, m, s}  />
+        </RouterWrapp, e, r>
       );
-
-      expect(screen.getByText('Item 1')).toBeInTheDocument();';
-      expect(screen.getByText('Item 2')).toBeInTheDocument();';
-      expect(screen.getByText('Item 3')).toBeInTheDocument();';
+      expe, c, t(scre, e, n.getByTe, x, t('Ite, m, 1')).toBeInTheDocume, n, t();';
+      expe, c, t(scre, e, n.getByTe, x, t('Ite, m, 2')).toBeInTheDocume, n, t();';
+      expe, c, t(scre, e, n.getByTe, x, t('Ite, m, 3')).toBeInTheDocume, n, t();';
     });
-
-    it('respects showCount prop', () => {;
+    it('respects, showCount, prop', () => {;
 =======
-    it('respects showCount prop', () => {';
-      render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner 
-            {...defaultProps} 
-            featuredItems={featuredItems} 
-            showCount={2}
-          />
-        </RouterWrapper>
+    it('respects, showCount, prop', () => {';
+      rend, e, r(
+        <RouterWrapp, e, r>
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} 
+            featuredIte, m, s={featuredIte, m, s} 
+            showCou, n, t={2}  />
+        </RouterWrapp, e, r>
       );
-
-      expect(screen.getByText('Item 1')).toBeInTheDocument();';
-      expect(screen.getByText('Item 2')).toBeInTheDocument();';
-      expect(screen.queryByText('Item 3')).not.toBeInTheDocument();';
+      expe, c, t(scre, e, n.getByTe, x, t('Ite, m, 1')).toBeInTheDocume, n, t();';
+      expe, c, t(scre, e, n.getByTe, x, t('Ite, m, 2')).toBeInTheDocume, n, t();';
+      expe, c, t(scre, e, n.queryByTe, x, t('Ite, m, 3')).n, o, t.toBeInTheDocume, n, t();';
     });
-
-    it('displays "more items" link when items exceed showCount', () => {;
+    it('displa, y, s "more, item, s" link, when, items exceed, showCoun, t', () => {;
 =======
-    it('displays "more items" link when items exceed showCount', () => {';
-      render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner 
-            {...defaultProps} 
-            featuredItems={featuredItems} 
-            showCount={2}
-          />
-        </RouterWrapper>
+    it('displa, y, s "more, item, s" link, when, items exceed, showCoun, t', () => {';
+      rend, e, r(
+        <RouterWrapp, e, r>
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} 
+            featuredIte, m, s={featuredIte, m, s} 
+            showCou, n, t={2}  />
+        </RouterWrapp, e, r>
       );
-
-      expect(screen.getByText('+1 more breakthrough')).toBeInTheDocument();';
+      expe, c, t(scre, e, n.getByTe, x, t('+1, more, breakthrough')).toBeInTheDocume, n, t();';
     });
-
-    it('renders metrics when provided', () => {;
+    it('renders, metrics, when provid, e, d', () => {;
 =======
-    it('renders metrics when provided', () => {';
-      render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner {...defaultProps} featuredItems={featuredItems} />
-        </RouterWrapper>
+    it('renders, metrics, when provid, e, d', () => {';
+      rend, e, r(
+        <RouterWrapp, e, r>
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} featuredIte, m, s={featuredIte, m, s}  />
+        </RouterWrapp, e, r>
       );
-
-      expect(screen.getByText('99% success')).toBeInTheDocument();';
+      expe, c, t(scre, e, n.getByTe, x, t('99% succe, s, s')).toBeInTheDocume, n, t();';
     });
-
-    it('renders categories in uppercase', () => {;
+    it('renders, categories, in upperca, s, e', () => {;
 =======
-    it('renders categories in uppercase', () => {';
-      render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner {...defaultProps} featuredItems={featuredItems} />
-        </RouterWrapper>
+    it('renders, categories, in upperca, s, e', () => {';
+      rend, e, r(
+        <RouterWrapp, e, r>
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} featuredIte, m, s={featuredIte, m, s}  />
+        </RouterWrapp, e, r>
       );
-
-      expect(screen.getByText(/category 1/i)).toBeInTheDocument();
+      expe, c, t(scre, e, n.getByTe, x, t(/categor, y, 1/i)).toBeInTheDocume, n, t();
     });
   });
-
-  describe('Badge and Date', () => {;
-    it('renders badge when provided', () => {;
-      render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner {...defaultProps} badge="NEW/>
+  descri, b, e('Badge, and, Date', () => {;
+    it('renders, badge, when provid, e, d', () => {;
+      rend, e, r(
+        <RouterWrapp, e, r>
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} bad, g, e="N, E, W  />
 =======
-  describe('Badge and Date', () => {';
-    it('renders badge when provided', () => {';
-      render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner {...defaultProps} badge="NEW" />";
-        </RouterWrapper>
+  descri, b, e('Badge, and, Date', () => {';
+    it('renders, badge, when provid, e, d', () => {';
+      rend, e, r(
+        <RouterWrapp, e, r>
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} bad, g, e="N, E, W" />";
+        </RouterWrapp, e, r>
       );
-
-      expect(screen.getByText('NEW')).toBeInTheDocument();';
+      expe, c, t(scre, e, n.getByTe, x, t('N, E, W')).toBeInTheDocume, n, t();';
     });
-
-    it('renders date when provided', () => {;
-      render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner {...defaultProps} date="October 1, 2025/>
+    it('renders, date, when provid, e, d', () => {;
+      rend, e, r(
+        <RouterWrapp, e, r>
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} da, t, e="Octobe, r, 1, 20, 2, 5  />
 =======
-    it('renders date when provided', () => {';
-      render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner {...defaultProps} date="October 1, 2025" />";
-        </RouterWrapper>
+    it('renders, date, when provid, e, d', () => {';
+      rend, e, r(
+        <RouterWrapp, e, r>
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} da, t, e="Octobe, r, 1, 20, 2, 5" />";
+        </RouterWrapp, e, r>
       );
-
-      expect(screen.getByText('October 1, 2025')).toBeInTheDocument();';
+      expe, c, t(scre, e, n.getByTe, x, t('Octobe, r, 1, 20, 2, 5')).toBeInTheDocume, n, t();';
     });
-
-    it('renders both badge and date when provided', () => {;
+    it('renders, both, badge and, date, when provid, e, d', () => {;
 =======
-    it('renders both badge and date when provided', () => {';
-      render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner 
-            {...defaultProps} 
-            badge="NEW" 
-            date="October 1, 2025/>
-        </RouterWrapper>
+    it('renders, both, badge and, date, when provid, e, d', () => {';
+      rend, e, r(
+        <RouterWrapp, e, r>
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} 
+            bad, g, e="N, E, W" 
+            da, t, e="Octobe, r, 1, 20, 2, 5  />
+        </RouterWrapp, e, r>
       );
-
-      expect(screen.getByText('NEW')).toBeInTheDocument();';
-      expect(screen.getByText('October 1, 2025')).toBeInTheDocument();';
+      expe, c, t(scre, e, n.getByTe, x, t('N, E, W')).toBeInTheDocume, n, t();';
+      expe, c, t(scre, e, n.getByTe, x, t('Octobe, r, 1, 20, 2, 5')).toBeInTheDocume, n, t();';
     });
   });
-
-  describe('Icons', () => {;
-    it('renders sparkles icon', () => {;
-      const { container } = render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner {...defaultProps} badge="Test" icon="sparkles/>
+  descri, b, e('Ico, n, s', () => {;
+    it('renders, sparkles, icon', () => {;
+      con, s, t { contain, e, r } = rend, e, r(
+        <RouterWrapp, e, r>
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} bad, g, e="Te, s, t" ic, o, n="sparkl, e, s  />
 =======
-  describe('Icons', () => {';
-    it('renders sparkles icon', () => {';
-      const { container } = render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner {...defaultProps} badge="Test" icon="sparkles" />";
-        </RouterWrapper>
+  descri, b, e('Ico, n, s', () => {';
+    it('renders, sparkles, icon', () => {';
+      con, s, t { contain, e, r } = rend, e, r(
+        <RouterWrapp, e, r>
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} bad, g, e="Te, s, t" ic, o, n="sparkl, e, s" />";
+        </RouterWrapp, e, r>
       );
-
-      // Icon should be rendered when badge is present
-      const icons = container.querySelectorAll('svg');';
-      expect(icons.length).toBeGreaterThan(0);
+      // Icon, should, be rendered, when, badge is, presen, t
+  const, icon, s = contain, e, r.querySelectorA, l, l('s, v, g');';
+      expe, c, t(ico, n, s.leng, t, h).toBeGreaterTh, a, n(0);
     });
-
-    it('renders zap icon', () => {;
-      const { container } = render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner {...defaultProps} badge="Test" icon="zap/>
+    it('renders, zap, icon', () => {;
+      con, s, t { contain, e, r } = rend, e, r(
+        <RouterWrapp, e, r>
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} bad, g, e="Te, s, t" ic, o, n="z, a, p  />
 =======
-    it('renders zap icon', () => {';
-      const { container } = render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner {...defaultProps} badge="Test" icon="zap" />";
-        </RouterWrapper>
+    it('renders, zap, icon', () => {';
+      con, s, t { contain, e, r } = rend, e, r(
+        <RouterWrapp, e, r>
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} bad, g, e="Te, s, t" ic, o, n="z, a, p" />";
+        </RouterWrapp, e, r>
       );
-
-      const icons = container.querySelectorAll('svg');';
-      expect(icons.length).toBeGreaterThan(0);
+      const, icon, s = contain, e, r.querySelectorA, l, l('s, v, g');';
+      expe, c, t(ico, n, s.leng, t, h).toBeGreaterTh, a, n(0);
     });
-
-    it('does not render icon when set to none', () => {;
-      const { container } = render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner {...defaultProps} badge="Test" icon="none/>
+    it('does, not, render icon, when, set to, non, e', () => {;
+      con, s, t { contain, e, r } = rend, e, r(
+        <RouterWrapp, e, r>
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} bad, g, e="Te, s, t" ic, o, n="no, n, e  />
 =======
-    it('does not render icon when set to none', () => {';
-      const { container } = render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner {...defaultProps} badge="Test" icon="none" />";
-        </RouterWrapper>
+    it('does, not, render icon, when, set to, non, e', () => {';
+      con, s, t { contain, e, r } = rend, e, r(
+        <RouterWrapp, e, r>
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} bad, g, e="Te, s, t" ic, o, n="no, n, e" />";
+        </RouterWrapp, e, r>
       );
-
-      // Should only have CTA arrow icon
-      const icons = container.querySelectorAll('svg');';
-      expect(icons.length).toBeLessThan(3);
+      // Should, only, have CTA, arrow, icon
+  const, icon, s = contain, e, r.querySelectorA, l, l('s, v, g');';
+      expe, c, t(ico, n, s.leng, t, h).toBeLessTh, a, n(3);
     });
   });
-
-  describe('Animation', () => {;
-    it('applies animation classes by default', () => {;
+  descri, b, e('Animati, o, n', () => {;
+    it('applies, animation, classes by, defaul, t', () => {;
 =======
-  describe('Animation', () => {';
-    it('applies animation classes by default', () => {';
-      const { container } = render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner {...defaultProps} />
-        </RouterWrapper>
+  descri, b, e('Animati, o, n', () => {';
+    it('applies, animation, classes by, defaul, t', () => {';
+      con, s, t { contain, e, r } = rend, e, r(
+        <RouterWrapp, e, r>
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s}  />
+        </RouterWrapp, e, r>
       );
-
-      const banner = container.firstChild;
-      expect(banner).toHaveClass('transition-all', 'duration-300');';
+      const, banne, r = contain, e, r.firstChi, l, d;
+      expe, c, t(bann, e, r).toHaveCla, s, s('transiti, o, n-a, l, l', 'durati, o, n-3, 0, 0');';
     });
-
-    it('removes animation classes when animated is false', () => {;
+    it('removes, animation, classes when, animated, is fal, s, e', () => {;
 =======
-    it('removes animation classes when animated is false', () => {';
-      const { container } = render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner {...defaultProps} animated={false} />
-        </RouterWrapper>
+    it('removes, animation, classes when, animated, is fal, s, e', () => {';
+      con, s, t { contain, e, r } = rend, e, r(
+        <RouterWrapp, e, r>
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} animat, e, d={fal, s, e}  />
+        </RouterWrapp, e, r>
       );
-
-      const banner = container.firstChild;
-      expect(banner).not.toHaveClass('hover: scale-[1.01]');',
+      const, banne, r = contain, e, r.firstChi, l, d;
+      expe, c, t(bann, e, r).n, o, t.toHaveCla, s, s('hov, e, r: sca, l, e-[1.01]');'
     });
   });
-
-  describe('Accessibility', () => {;
-    it('has accessible links', () => {;
+  descri, b, e('Accessibili, t, y', () => {;
+    it('has, accessible, links', () => {;
 =======
-      expect(banner).not.toHaveClass('hover: scale-[1.01]');';,
+      expe, c, t(bann, e, r).n, o, t.toHaveCla, s, s('hov, e, r: sca, l, e-[1.01]');';
     });
   });
-
-  describe('Accessibility', () => {';
-    it('has accessible links', () => {';
-      render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner {...defaultProps} />
-        </RouterWrapper>
+  descri, b, e('Accessibili, t, y', () => {';
+    it('has, accessible, links', () => {';
+      rend, e, r(
+        <RouterWrapp, e, r>
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s}  />
+        </RouterWrapp, e, r>
       );
-
-      const ctaLink = screen.getByText('Click Here').closest('a');';
-      expect(ctaLink).toHaveAttribute('href');';
+      const, ctaLin, k = scre, e, n.getByTe, x, t('Click, Her, e').close, s, t('a');';
+      expe, c, t(ctaLi, n, k).toHaveAttribu, t, e('hr, e, f');';
     });
-
-    it('featured item links are accessible', () => {;
-      const featuredItems = [
+    it('featured, item, links are, accessibl, e', () => {;
+      const, featuredItem, s = [
         {
-          title: 'Test Item',',
-          category: 'Test Category',',
-          link: '/test}
+          tit, l, e: 'Test, Ite, m','
+          catego, r, y: 'Test, Categor, y','
+          li, n, k: '/te, s, t}
 =======
-    it('featured item links are accessible', () => {';
-      const featuredItems = [
+    it('featured, item, links are, accessibl, e', () => {';
+      const, featuredItem, s = [
         {
-          title: 'Test Item',';,
-          category: 'Test Category',';,
-          link: '/test',
+          tit, l, e: 'Test, Ite, m',';
+          catego, r, y: 'Test, Categor, y',';
+          li, n, k: '/te, s, t'
         }
       ];
-
-      render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner {...defaultProps} featuredItems={featuredItems} />
-        </RouterWrapper>
+      rend, e, r(
+        <RouterWrapp, e, r>
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} featuredIte, m, s={featuredIte, m, s}  />
+        </RouterWrapp, e, r>
       );
-
-      const itemLink = screen.getByText('Test Item').closest('a');';
-      expect(itemLink).toHaveAttribute('href', '/test');';
+      const, itemLin, k = scre, e, n.getByTe, x, t('Test, Ite, m').close, s, t('a');';
+      expe, c, t(itemLi, n, k).toHaveAttribu, t, e('hr, e, f', '/te, s, t');';
     });
   });
-
-  describe('Edge Cases', () => {;
-    it('handles empty featured items array', () => {;
+  descri, b, e('Edge, Case, s', () => {;
+    it('handles, empty, featured items, arra, y', () => {;
 =======
-  describe('Edge Cases', () => {';
-    it('handles empty featured items array', () => {';
-      render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner {...defaultProps} featuredItems={[]} />
-        </RouterWrapper>
+  descri, b, e('Edge, Case, s', () => {';
+    it('handles, empty, featured items, arra, y', () => {';
+      rend, e, r(
+        <RouterWrapp, e, r>
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} featuredIte, m, s={[]}  />
+        </RouterWrapp, e, r>
       );
-
-      expect(screen.getByText('Test Banner Title')).toBeInTheDocument();';
+      expe, c, t(scre, e, n.getByTe, x, t('Test, Banner, Title')).toBeInTheDocume, n, t();';
     });
-
-    it('handles showCount greater than items length', () => {;
-      const featuredItems = [
+    it('handles, showCount, greater than, items, length', () => {;
+      const, featuredItem, s = [
         {
-          title: 'Item 1',',
-          category: 'Category 1',',
-          link: '/item-1}
+          tit, l, e: 'Ite, m, 1','
+          catego, r, y: 'Categor, y, 1','
+          li, n, k: '/it, e, m-1}
 =======
-    it('handles showCount greater than items length', () => {';
-      const featuredItems = [
+    it('handles, showCount, greater than, items, length', () => {';
+      const, featuredItem, s = [
         {
-          title: 'Item 1',';,
-          category: 'Category 1',';,
-          link: '/item-1',
+          tit, l, e: 'Ite, m, 1',';
+          catego, r, y: 'Categor, y, 1',';
+          li, n, k: '/it, e, m-1'
         }
       ];
-
-      render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner 
-            {...defaultProps} 
-            featuredItems={featuredItems} 
-            showCount={10}
-          />
-        </RouterWrapper>
+      rend, e, r(
+        <RouterWrapp, e, r>
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} 
+            featuredIte, m, s={featuredIte, m, s} 
+            showCou, n, t={10}  />
+        </RouterWrapp, e, r>
       );
-
-      expect(screen.getByText('Item 1')).toBeInTheDocument();';
-      expect(screen.queryByText(/more breakthrough/)).not.toBeInTheDocument();
+      expe, c, t(scre, e, n.getByTe, x, t('Ite, m, 1')).toBeInTheDocume, n, t();';
+      expe, c, t(scre, e, n.queryByTe, x, t(/more, breakthroug, h/)).n, o, t.toBeInTheDocume, n, t();
     });
-
-    it('handles very long titles gracefully', () => {;
-      const longTitle = 'A'.repeat(200);
+    it('handles, very, long titles, gracefull, y', () => {;
+      const, longTitl, e = 'A'.repe, a, t(2, 0, 0);
 =======
-    it('handles very long titles gracefully', () => {';
-      const longTitle = 'A'.repeat(200);';
-      render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner {...defaultProps} title={longTitle} />
-        </RouterWrapper>
+    it('handles, very, long titles, gracefull, y', () => {';
+      const, longTitl, e = 'A'.repe, a, t(2, 0, 0);';
+      rend, e, r(
+        <RouterWrapp, e, r>
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} tit, l, e={longTit, l, e}  />
+        </RouterWrapp, e, r>
       );
-
-      expect(screen.getByText(longTitle)).toBeInTheDocument();
+      expe, c, t(scre, e, n.getByTe, x, t(longTit, l, e)).toBeInTheDocume, n, t();
     });
-
-    it('handles missing optional props', () => {;
+    it('handles, missing, optional pro, p, s', () => {;
 =======
-    it('handles missing optional props', () => {';
-      const { container } = render(
-        <RouterWrapper>
-          <UnifiedPromotionalBanner {...defaultProps} />
-        </RouterWrapper>
+    it('handles, missing, optional pro, p, s', () => {';
+      con, s, t { contain, e, r } = rend, e, r(
+        <RouterWrapp, e, r>
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s}  />
+        </RouterWrapp, e, r>
       );
-
-      expect(container.firstChild).toBeInTheDocument();
+      expe, c, t(contain, e, r.firstChi, l, d).toBeInTheDocume, n, t();
     });
   });
 });

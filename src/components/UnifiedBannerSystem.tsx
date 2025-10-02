@@ -1,254 +1,256 @@
-import React, { useState, useEffect } from 'react';';
-import {
-
-} from 'framer-motion';
-export interface BannerConfig {
-id: string;,
-title: string;,
-subtitle?: string;,
-description: string;,
-ctaText: string;,
-ctaLink: string;,
-imageUrl?: string;,
-priority: number;,
-category: string;,
-tags: string[];,
-backgroundColor?: string;,
-textColor?: string;,
-animation?: 'slide' | 'fade' | 'scale' | 'none';,
-duration?: number; // Auto-rotate duration in ms
+import, Reac, t, { useSta, t, e, useEffe, c, t } fr, o, m "rea, c, t";';
+impo, r, t {
+} fr, o, m "fram, e, r-moti, o, n";
+export, interface, BannerConfig {
+id: stri, n, g;
+ti, t, l
+  e: stri, n, g;
+subtit, l, e?: stri, n, g;
+descripti, o, n: stri, n, g;
+ctaTe, x, t: stri, n, g;
+ctaL, i, n
+  k: stri, n, g;
+imageU, r, l?: stri, n, g;
+priori, t, y: numb, e, r;
+catego, r, y: stri, n, g;
+t, a, g
+  s: stri, n, g[];
+backgroundCol, o, r?: stri, n, g;
+textCol, o, r?: stri, n, g;
+animati, o, n?: 'sli, d, e' | 'fa, d, e' | 'sca, l, e' | 'no, n, e';
+durati, o, n?: numb, e, r; // Au, t, o-rotate, duration, in ms;
 }
-
-interface UnifiedBannerSystemProps {
-banners: BannerConfig[];,
-autoRotate?: boolean;,
-rotationInterval?: number;,
-showNavigation?: boolean;,
-maxVisible?: number;
+interface, UnifiedBannerSystemProp, s {
+banne, r, s: BannerConf, i, g[];
+autoRota, t, e?: boole, a, n;
+rotationInterv, a, l?: numb, e, r;
+showNavigati, o, n?: boole, a, n;
+maxVisib, l, e?: numb, e, r;
 }
-
-const UnifiedBannerSystem: React.FC<UnifiedBannerSystemProps> = ({
-  banners
-  autoRotate = true
-  rotationInterval = 5000
-  showNavigation = true
+const, UnifiedBannerSyste, m: Rea, c, t.FC<UnifiedBannerSystemPro, p, s> = ({
+  banne, r, s
+  autoRota, t, e = tr, u, e
+  rotationInterv, a, l = 50, 0, 0
+  showNavigati, o, n = tr, u, e;
 =======
-const UnifiedBannerSystem: React.FC<UnifiedBannerSystemProps> = ({,
-  banners,
-  autoRotate = true,
-  rotationInterval = 5000,
-  showNavigation = true,
-  maxVisible = 3
+const, UnifiedBannerSyst, e
+  m: Rea, c, t.FC<UnifiedBannerSystemPro, p, s> = ({
+  banne, r, s
+  autoRota, t, e = tr, u, e
+  rotationInterv, a, l = 50, 0, 0
+  showNavigati, o, n = tr, u, e
+  maxVisib, l, e = 3;
 }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [visibleBanners, setVisibleBanners] = useState<BannerConfig[]>([]);
-
-  // Sort banners by priority and limit visible ones
-  useEffect(() => {
-    const sortedBanners = banners
-      .sort((a, b) => b.priority - a.priority)
-      .slice(0, maxVisible);
-    setVisibleBanners(sortedBanners);
-  }, [banners, maxVisible]);
-
-  // Auto-rotation logic
-  useEffect(() => {
-    if (!autoRotate || visibleBanners.length <= 1) return;
-
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % visibleBanners.length);
-    }, rotationInterval);
-
-    return () => clearInterval(interval);
-  }, [autoRotate, rotationInterval, visibleBanners.length]);
-
-  const handleBannerClick = (banner: BannerConfig) => {,
-    // Analytics tracking
-    if (typeof window !== 'undefined' && window.gtag) {;
-      window.gtag('event', 'banner_click', {;
+  con, s, t [currentInd, e, x, setCurrentInd, e, x] = useSta, t, e(0);
+  con, s, t [visibleBanne, r, s, setVisibleBanne, r, s] = useSta, t, e<BannerConf, i, g[]>([]);
+  // Sort, banners, by priority, and, limit visible, one, s
+  useEffe, c, t(() => {
+    const, sortedBanner, s = banne, r, s;
+      .so, r, t((a, b) => b.priori, t, y - a.priori, t, y)
+      .sli, c, e(0, maxVisib, l, e);
+    setVisibleBanne, r, s(sortedBanne, r, s);
+  }, [banne, r, s, maxVisib, l, e]);
+  // Au, t, o-rotation, logi, c
+  useEffe, c, t(() => {
+    if (!autoRota, t, e || visibleBanne, r, s.leng, t, h <= 1) retu, r, n;
+    const, interva, l = setInterv, a, l(() => {
+      setCurrentInd, e, x((pr, e, v) => (pr, e, v + 1) % visibleBanne, r, s.leng, t, h);
+    }, rotationInterv, a, l);
+    return () => clearInterv, a, l(interv, a, l);
+  }, [autoRota, t, e, rotationInterv, a, l, visibleBanne, r, s.leng, t, h]);
+  const, handleBannerClic, k = (bann, e, r: BannerConf, i, g) => {
+    // Analytics, trackin, g
+  if (typeof, windo, w !== 'undefin, e, d' && wind, o, w.gt, a, g) {;
+      wind, o, w.gt, a, g('eve, n, t', 'banner_cli, c, k', {;
 =======
-    if (typeof window !== 'undefined' && window.gtag) {';
-      window.gtag('event', 'banner_click', {';
-        banner_id: banner.id,,
-        banner_title: banner.title,,
-        category: banner.category,
+    if (typeof, windo, w !== 'undefin, e, d' && wind, o, w.gt, a, g) {';
+      wind, o, w.gt, a, g('eve, n, t', 'banner_cli, c, k', {';
+        banner_, i, d: bann, e, r.id
+        banner_tit, l, e: bann, e, r.tit, l, e
+        catego, r, y: bann, e, r.catego, r, y
       });
     }
-    
-    // Navigate to banner link
-    window.open(banner.ctaLink, '_blank', 'noopener,noreferrer');';
+    // Navigate, to, banner li, n, k
+  wind, o, w.op, e, n(bann, e, r.ctaLi, n, k, '_bla, n, k', 'noopen, e, r,noreferr, e, r');';
   };
-
-  const getAnimationVariants = (type: string = 'slide') => {',
-    switch (type) {
-      case 'slide':;
+  const, getAnimationVariant, s = (ty, p, e: stri, n, g = 'sli, d, e') => {'
+    swit, c, h (ty, p, e) {
+      ca, s, e 'sli, d, e':;
 =======
-  const getAnimationVariants = (type: string = 'slide') => {';,
-    switch (type) {
-      case 'slide':';
-        return {
-          initial: { x: '100%', opacity: 0 },';
-          animate: { x: 0, opacity: 1 },
-          exit: { x: '-100%', opacity: 0 };
+  const, getAnimationVariant, s = (ty, p, e: stri, n, g = 'sli, d, e') => {';
+    swit, c, h (ty, p, e) {
+      ca, s, e 'sli, d, e':';
+        retu, r, n {
+          initi, a, l: { 
+  x: '1, 0, 0%', opaci, t, y: 0 },';
+          anima, t, e: { 
+  x: 0, opaci, t, y: 1 }
+          ex, i, t: { 
+  x: '-1, 0, 0%', opaci, t, y: 0 };
         };
-      case 'fade':;
+      ca, s, e 'fa, d, e':;
 =======
-          exit: { x: '-100%', opacity: 0 }';
+          ex, i, t: { 
+  x: '-1, 0, 0%', opaci, t, y: 0 }';
         };
-      case 'fade':';
-        return {
-          initial: { opacity: 0 },
-          animate: { opacity: 1 },
-          exit: { opacity: 0 }
+      ca, s, e 'fa, d, e':';
+        retu, r, n {
+          initi, a, l: { opac, i, t
+  y: 0 }
+          anima, t, e: { opac, i, t
+  y: 1 }
+          ex, i, t: { opac, i, t
+  y: 0 }
         };
-      case 'scale':;
+      ca, s, e 'sca, l, e':;
 =======
-      case 'scale':';
-        return {
-          initial: { scale: 0.8, opacity: 0 },
-          animate: { scale: 1, opacity: 1 },
-          exit: { scale: 0.8, opacity: 0 }
+      ca, s, e 'sca, l, e':';
+        retu, r, n {
+          initi, a, l: { sc, a, l
+  e: 0.8, opaci, t, y: 0 }
+          anima, t, e: { sc, a, l
+  e: 1, opaci, t, y: 1 }
+          ex, i, t: { sc, a, l
+  e: 0.8, opaci, t, y: 0 }
         };
-      default: return {,
-          initial: { opacity: 1 },
-          animate: { opacity: 1 },
-          exit: { opacity: 1 }
+      defau, l, t: retu, r, n {
+          initi, a, l: { opac, i, t
+  y: 1 }
+          anima, t, e: { opac, i, t
+  y: 1 }
+          ex, i, t: { opac, i, t
+  y: 1 }
         };
     }
   };
-
-  if (visibleBanners.length === 0) return null;
-
+  if (visibleBanne, r, s.leng, t, h === 0) return, nul, l;
   return (
-    <div className="unified-banner-system">";
-      <div className="banner-container relative overflow-hidden rounded-lg">";
-        <AnimatePresence mode="wait">";
-          {visibleBanners.map((banner, index) => {
-            const isActive = index === currentIndex;
-            const variants = getAnimationVariants(banner.animation);
-            
+    <div, className="unifi, e, d-bann, e, r-syst, e, m">";
+      <div, className="bann, e, r-container, relative, overflow-hidden, rounde, d-lg">";
+        <AnimatePresence, mod, e="wa, i, t">";
+          {visibleBanne, r, s.m, a, p((bann, e, r, ind, e, x) => {
+            const, isActiv, e = ind, e, x === currentInd, e, x;
+            const, variant, s = getAnimationVarian, t, s(bann, e, r.animati, o, n);
             return (
-              <motion.div
-                key={banner.id}
-                variants={variants}
-                initial="initial"
-                animate={isActive ? "animate" : "initial"}";
-                exit="exit"
-                transition={{ duration: 0.5, ease: "easeInOut" }}";
-                className={`banner-item ${isActive ? 'active' : 'hidden'}`}`;
-                style={{
-                  backgroundColor: banner.backgroundColor || '#1e40af',',
-                  color: banner.textColor || '#ffffff}}
+              <moti, o, n.d, i, v
+  k, e, y={bann, e, r.id}
+                varian, t, s={varian, t, s}
+                initi, a, l="initi, a, l"
+                anima, t, e={isActi, v, e ? "anima, t, e" : "initi, a, l"}";
+                ex, i, t="ex, i, t"
+                transiti, o, n={{ durati, o, n: 0.5, ea, s, e: "easeInO, u, t" }}";
+                classNa, m, e={`bann, e, r-it, e, m ${isActi, v, e ? 'acti, v, e' : 'hidd, e, n'}`}`;`
+                sty, l, e={{
+                  backgroundCol, o, r: bann, e, r.backgroundCol, o, r || '#1e40, a, f','
+                  col, o, r: bann, e, r.textCol, o, r || '#ffff, f, f}}
               >
-                <div className="banner-content p-6 md: p-8">",
-                  <div className="flex flex-col md: flex-row items-center justify-between gap-6">",
-                    <div className="flex-1">
-                      <h2 className="text-2xl md: text-3xl font-bold mb-2">",
+                <div, className="bann, e, r-conten, t, p-6, m, d: p-8">"
+                  <div, className="flex, fle, x-col, m, d: fl, e, x-row, item, s-center, justif, y-between, ga, p-6">"
+                    <div, className="fl, e, x-1">
+                      <h2, className="te, x, t-2xl, m, d: te, x, t-3xl, fon, t-bold, m, b-2">"
 =======
-                  backgroundColor: banner.backgroundColor || '#1e40af',';,
-                  color: banner.textColor || '#ffffff',
+                  backgroundCol, o, r: bann, e, r.backgroundCol, o, r || '#1e40, a, f',';
+                  col, o, r: bann, e, r.textCol, o, r || '#ffff, f, f'
                 }}
               >
-                <div className="banner-content p-6 md: p-8">";,
-                  <div className="flex flex-col md: flex-row items-center justify-between gap-6">";,
-                    <div className="flex-1">";
-                      <h2 className="text-2xl md: text-3xl font-bold mb-2">";,
-                        {banner.title}
+                <div, className="bann, e, r-conten, t, p-6, m, d: p-8">";
+                  <div, className="flex, fle, x-col, m, d: fl, e, x-row, item, s-center, justif, y-between, ga, p-6">";
+                    <div, className="fl, e, x-1">";
+                      <h2, className="te, x, t-2x, l, m
+  d: te, x, t-3xl, fon, t-bold, m, b-2">";
+                        {bann, e, r.tit, l, e}
                       </h2>
                       {
-banner.subtitle && (
-<h3 className="text-lg md:text-xl font-semibold mb-3 opacity-90">
+bann, e, r.subtit, l, e && (
+<h3, className="te, x, t-lg, m, d: te, x, t-xl, fon, t-semibold, m, b-3, opacit, y-90">
 =======
-<h3 className="text-lg md: text-xl font-semibold mb-3 opacity-90">,";,
-{banner.subtitle
+<h3, className="te, x, t-l, g, m
+  d: te, x, t-xl, fon, t-semibold, m, b-3, opacit, y-90">,";
+{bann, e, r.subtit, l, e;
 }
                         </h3>
                       )}
-                      <p className="text-base md: text-lg mb-6 opacity-80">",
+                      <p, className="te, x, t-base, m, d: te, x, t-lg, m, b-6, opacit, y-80">"
 =======
-                      <p className="text-base md: text-lg mb-6 opacity-80">";,
-                        {banner.description}
+                      <p, className="te, x, t-base, m, d: te, x, t-lg, m, b-6, opacit, y-80">";
+                        {bann, e, r.descripti, o, n}
                       </p>
-                      <div className="flex flex-wrap gap-2 mb-4">";
-                        {banner.tags.map((tag, tagIndex) => (
-                          <span
-                            key={tagIndex}
-                            className="px-3 py-1 bg-white bg-opacity-20 rounded-full text-sm"
+                      <div, className="flex, fle, x-wrap, ga, p-2, m, b-4">";
+                        {bann, e, r.ta, g, s.m, a, p((t, a, g, tagInd, e, x) => (
+                          <sp, a, n
+  k, e, y={tagInd, e, x}
+                            classNa, m, e="px-3, p, y-1, b, g-white, b, g-opaci, t, y-20, rounde, d-full, tex, t-sm"
                           >
-                            {tag}
-                          </span>
+                            {t, a, g}
+                          </sp, a, n>
                         ))}
-                      </div>
-                      <button
-                        onClick={() => handleBannerClick(banner)}
-                        className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors duration-200",
+                      </d, i, v>
+                      <butt, o, n
+  onCli, c, k={() => handleBannerCli, c, k(bann, e, r)}
+                        classNa, m, e="bg-white, tex, t-bl, u, e-600, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r: bg-gr, a, y-100, transitio, n-colors, duratio, n-2, 0, 0"
                       >
-                        {banner.ctaText}
-                      </button>
-                    </div>
-                    {banner.imageUrl && (
-                      <div className="flex-shrink-0">";
-                        <img
-                          src={banner.imageUrl}
-                          alt={banner.title}
-                          className="w-48 h-48 object-cover rounded-lg"
-                          loading="lazy/>
-                      </div>
+                        {bann, e, r.ctaTe, x, t}
+                      </butt, o, n>
+                    </d, i, v>
+                    {bann, e, r.imageU, r, l && (
+                      <div, className="fl, e, x-shri, n, k-0">";
+                        <i, m, g 
+  s, r, c={bann, e, r.imageU, r, l}
+                          a, l, t={bann, e, r.tit, l, e}
+                          classNa, m, e="w-4, 8, h-48, objec, t-cover, rounde, d-lg"
+                          loadi, n, g="la, z, y  />
+                      </d, i, v>
                     )}
-                  </div>
-                </div>
-              </motion.div>
+                  </d, i, v>
+                </d, i, v>
+              </moti, o, n.d, i, v>
             );
           })}
-        </AnimatePresence>
-      </div>
-
-      {showNavigation && visibleBanners.length > 1 && (
-        <div className="banner-navigation mt-4 flex justify-center gap-2">";
-          {visibleBanners.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentIndex(index)}
-              className={`w-3 h-3 rounded-full transition-colors duration-200 ${`;
-                index === currentIndex ? 'bg-blue-600' : 'bg-gray-300'
-              }`}`;
-              aria-label={`Go to banner ${index + 1}`}`;
-            />
+        </AnimatePresen, c, e>
+      </d, i, v>
+      {showNavigati, o, n && visibleBanne, r, s.leng, t, h > 1 && (
+        <div, className="bann, e, r-navigation, m, t-4, flex, justify-center, ga, p-2">";
+          {visibleBanne, r, s.m, a, p((_, ind, e, x) => (
+            <butt, o, n
+  k, e, y={ind, e, x}
+              onCli, c, k={() => setCurrentInd, e, x(ind, e, x)}
+              classNa, m, e={`w-3 h-3, rounde, d-full, transitio, n-colors, duratio, n-2, 0, 0 ${`;`
+                ind, e, x === currentInd, e, x ? 'bg-bl, u, e-6, 0, 0' : 'bg-gr, a, y-3, 0, 0'
+              }`}`;`
+              ar, i, a-lab, e, l={`Go, to, banner ${ind, e, x + 1}`}`;`
+             />
           ))}
-        </div>
+        </d, i, v>
       )}
-
-      <style jsx>{
-`
-.banner-item {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
+      <style, js, x>{
+``
+.bann, e, r-it, e, m {
+positi, o, n: absolu, t, e;
+t, o, p: 0;
+le, f, t: 0;
+wid, t, h: 1, 0, 0%;
+hei, g, h
+  t: 1, 0, 0%;
 }
-        
-        .banner-item.hidden {
-          pointer-events: none,
+        .bann, e, r-it, e, m.hidd, e, n {
+          point, e, r-even, t, s: no, n, e
 =======
-          pointer-events: none;,
+          point, e, r-even, t, s: no, n, e;
         }
-        
-        .banner-container {
-min-height: 300px;
-position: relative;
+        .bann, e, r-contain, e, r {
+m, i, n-heig, h, t: 300, p, x;
+posit, i, o
+  n: relati, v, e;
 }
-        
-        @media (max-width: 768px) {,
-          .banner-container {
-            min-height: 400px,
+        @med, i, a (m, a, x-wid, t, h: 768, p, x) {
+          .bann, e, r-contain, e, r {
+            m, i, n-heig, h, t: 400, p, x
 =======
-            min-height: 400px;,
+            m, i, n-heig, h, t: 400, p, x;
           }
         }
-      `}</style>`;
-    </div>
+      `}</sty, l, e>`;`
+    </d, i, v>
   );
 };
-
 export default UnifiedBannerSystem;

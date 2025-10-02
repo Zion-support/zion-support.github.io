@@ -1,255 +1,236 @@
 /**
- * Tests for Banner Rotation System
+ * Tests, for, Banner Rotation, Syste, m;
  */
-
-import {
-
-} from '../bannerRotation';
-describe('Banner Rotation System', () => {;
-  // Sample test banners
-  const testBanners: BannerConfig[] = [,
+impo, r, t {
+} fr, o, m "../bannerRotati, o, n";
+descri, b, e('Banner, Rotation, System', () => {;
+  // Sample, test, banners
+  const, testBanner, s: BannerConf, i, g[] = [
     {
-      id: 'banner1',
-      component: 'TestBanner1',
-      priority: 10,
-      category: 'breakthrough',
-      impressions: 1000,
-      clicks: 50,
-      active: true
-    },
+      id: 'banne, r, 1'
+      compone, n, t: 'TestBanne, r, 1'
+      priori, t, y: 10
+      catego, r, y: 'breakthrou, g, h'
+      impressio, n, s: 10, 0, 0
+      clic, k, s: 50
+      acti, v, e: tr, u, e;
+    }
     {
-      id: 'banner2',
-      component: 'TestBanner2',
-      priority: 8,
-      category: 'enterprise',
-      impressions: 800,
-      clicks: 80,
-      active: true
-    },
+      id: 'banne, r, 2'
+      compone, n, t: 'TestBanne, r, 2'
+      priori, t, y: 8
+      catego, r, y: 'enterpri, s, e'
+      impressio, n, s: 8, 0, 0
+      clic, k, s: 80
+      acti, v, e: tr, u, e;
+    }
     {
-      id: 'banner3',
-      component: 'TestBanner3',
-      priority: 6,
-      category: 'innovation',
-      impressions: 500,
-      clicks: 25,
-      active: true
-    },
+      id: 'banne, r, 3'
+      compone, n, t: 'TestBanne, r, 3'
+      priori, t, y: 6
+      catego, r, y: 'innovati, o, n'
+      impressio, n, s: 5, 0, 0
+      clic, k, s: 25
+      acti, v, e: tr, u, e;
+    }
     {
-      id: 'banner4',
-      component: 'TestBanner4',
-      priority: 9,
-      category: 'breakthrough',
-      impressions: 0,
-      clicks: 0,
-      active: false
+      id: 'banne, r, 4'
+      compone, n, t: 'TestBanne, r, 4'
+      priori, t, y: 9
+      catego, r, y: 'breakthrou, g, h'
+      impressio, n, s: 0
+      clic, k, s: 0
+      acti, v, e: fal, s, e;
     }
   ];
-
-  describe('calculateEngagementScore', () => {;
-    it('should calculate correct CTR for banner with impressions', () => {;
+  descri, b, e('calculateEngagementSco, r, e', () => {;
+    it('should, calculate, correct CTR, for, banner with, impression, s', () => {;
 =======
-} from '../bannerRotation';';
-
-describe('Banner Rotation System', () => {';
-  // Sample test banners
-  const testBanners: BannerConfig[] = [,
+} fr, o, m "../bannerRotati, o, n";';
+descri, b, e('Banner, Rotation, System', () => {';
+  // Sample, test, banners
+  const, testBanner, s: BannerConf, i, g[] = [
     {
-      id: 'banner1',';,
-      component: 'TestBanner1',';,
-      priority: 10,,
-      category: 'breakthrough',';,
-      impressions: 1000,,
-      clicks: 50,,
-      active: true,,
-    },
+      id: 'banne, r, 1',';
+      compone, n, t: 'TestBanne, r, 1',';
+      priori, t, y: 10
+      catego, r, y: 'breakthrou, g, h',';
+      impressio, n, s: 10, 0, 0
+      clic, k, s: 50
+      acti, v, e: tr, u, e
+    }
     {
-      id: 'banner2',';,
-      component: 'TestBanner2',';,
-      priority: 8,,
-      category: 'enterprise',';,
-      impressions: 800,,
-      clicks: 80,,
-      active: true,,
-    },
+      id: 'banne, r, 2',';
+      compone, n, t: 'TestBanne, r, 2',';
+      priori, t, y: 8
+      catego, r, y: 'enterpri, s, e',';
+      impressio, n, s: 8, 0, 0
+      clic, k, s: 80
+      acti, v, e: tr, u, e
+    }
     {
-      id: 'banner3',';,
-      component: 'TestBanner3',';,
-      priority: 6,,
-      category: 'innovation',';,
-      impressions: 500,,
-      clicks: 25,,
-      active: true,,
-    },
+      id: 'banne, r, 3',';
+      compone, n, t: 'TestBanne, r, 3',';
+      priori, t, y: 6
+      catego, r, y: 'innovati, o, n',';
+      impressio, n, s: 5, 0, 0
+      clic, k, s: 25
+      acti, v, e: tr, u, e
+    }
     {
-      id: 'banner4',';,
-      component: 'TestBanner4',';,
-      priority: 9,,
-      category: 'breakthrough',';,
-      impressions: 0,,
-      clicks: 0,,
-      active: false,,
-    },
+      id: 'banne, r, 4',';
+      compone, n, t: 'TestBanne, r, 4',';
+      priori, t, y: 9
+      catego, r, y: 'breakthrou, g, h',';
+      impressio, n, s: 0
+      clic, k, s: 0
+      acti, v, e: fal, s, e
+    }
   ];
-
-  describe('calculateEngagementScore', () => {';
-    it('should calculate correct CTR for banner with impressions', () => {';
-      const score = calculateEngagementScore(testBanners[0]);
-      expect(score).toBe(5); // 50/1000 * 100 = 5%
+  descri, b, e('calculateEngagementSco, r, e', () => {';
+    it('should, calculate, correct CTR, for, banner with, impression, s', () => {';
+      const, scor, e = calculateEngagementSco, r, e(testBanne, r, s[0]);
+      expe, c, t(sco, r, e).to, B, e(5); // 50/10, 0, 0 * 1, 0, 0 = 5%
     });
-
-    it('should return 0 for banner without impressions', () => {;
+    it('should, return, 0 for, banner, without impressio, n, s', () => {;
 =======
-    it('should return 0 for banner without impressions', () => {';
-      const score = calculateEngagementScore(testBanners[3]);
-      expect(score).toBe(0);
+    it('should, return, 0 for, banner, without impressio, n, s', () => {';
+      const, scor, e = calculateEngagementSco, r, e(testBanne, r, s[3]);
+      expe, c, t(sco, r, e).to, B, e(0);
     });
-
-    it('should handle banner with only impressions', () => {;
+    it('should, handle, banner with, only, impressions', () => {;
 =======
-    it('should handle banner with only impressions', () => {';
-      const banner = { ...testBanners[0], clicks: 0 };
-      const score = calculateEngagementScore(banner);
-      expect(score).toBe(0);
+    it('should, handle, banner with, only, impressions', () => {';
+      const, banne, r = { ...testBanne, r, s[0], clic, k, s: 0 };
+      const, scor, e = calculateEngagementSco, r, e(bann, e, r);
+      expe, c, t(sco, r, e).to, B, e(0);
     });
   });
-
-  describe('calculateFreshnessScore', () => {;
-    it('should return 100 for never-shown banner', () => {;
+  descri, b, e('calculateFreshnessSco, r, e', () => {;
+    it('should, return, 100 for, neve, r-shown, banne, r', () => {;
 =======
-  describe('calculateFreshnessScore', () => {';
-    it('should return 100 for never-shown banner', () => {';
-      const banner = { ...testBanners[0], lastShown: undefined };
-      const score = calculateFreshnessScore(banner);
-      expect(score).toBe(100);
+  descri, b, e('calculateFreshnessSco, r, e', () => {';
+    it('should, return, 100 for, neve, r-shown, banne, r', () => {';
+      const, banne, r = { ...testBanne, r, s[0], lastSho, w, n: undefin, e, d };
+      const, scor, e = calculateFreshnessSco, r, e(bann, e, r);
+      expe, c, t(sco, r, e).to, B, e(1, 0, 0);
     });
-
-    it('should return lower score for recently shown banner', () => {;
-      const banner = {
-        ...testBanners[0]
-        lastShown: new Date(Date.now() - 2 * 60 * 60 * 1000), // 2 hours ago
+    it('should, return, lower score, for, recently shown, banne, r', () => {;
+      const, banne, r = {
+        ...testBanne, r, s[0]
+        lastSho, w, n: new, Dat, e(Da, t, e.n, o, w() - 2 * 60 * 60 * 10, 0, 0), // 2, hours, ago;
 =======
-    it('should return lower score for recently shown banner', () => {';
-      const banner = {
-        ...testBanners[0],
-        lastShown: new Date(Date.now() - 2 * 60 * 60 * 1000), // 2 hours ago,
+    it('should, return, lower score, for, recently shown, banne, r', () => {';
+      const, banne, r = {
+        ...testBanne, r, s[0]
+        lastSho, w, n: new, Dat, e(Da, t, e.n, o, w() - 2 * 60 * 60 * 10, 0, 0), // 2, hours, ago
       };
-      const score = calculateFreshnessScore(banner);
-      expect(score).toBeLessThan(20);
+      const, scor, e = calculateFreshnessSco, r, e(bann, e, r);
+      expe, c, t(sco, r, e).toBeLessTh, a, n(20);
     });
-
-    it('should return higher score for banner not shown in 24+ hours', () => {;
-      const banner = {
-        ...testBanners[0]
-        lastShown: new Date(Date.now() - 25 * 60 * 60 * 1000), // 25 hours ago
+    it('should, return, higher score, for, banner not, shown, in 24+ hou, r, s', () => {;
+      const, banne, r = {
+        ...testBanne, r, s[0]
+        lastSho, w, n: new, Dat, e(Da, t, e.n, o, w() - 25 * 60 * 60 * 10, 0, 0), // 25, hours, ago;
 =======
-    it('should return higher score for banner not shown in 24+ hours', () => {';
-      const banner = {
-        ...testBanners[0],
-        lastShown: new Date(Date.now() - 25 * 60 * 60 * 1000), // 25 hours ago,
+    it('should, return, higher score, for, banner not, shown, in 24+ hou, r, s', () => {';
+      const, banne, r = {
+        ...testBanne, r, s[0]
+        lastSho, w, n: new, Dat, e(Da, t, e.n, o, w() - 25 * 60 * 60 * 10, 0, 0), // 25, hours, ago
       };
-      const score = calculateFreshnessScore(banner);
-      expect(score).toBeGreaterThan(80);
+      const, scor, e = calculateFreshnessSco, r, e(bann, e, r);
+      expe, c, t(sco, r, e).toBeGreaterTh, a, n(80);
     });
   });
-
-  describe('calculateBannerScore', () => {;
-    it('should calculate weighted score correctly', () => {;
+  descri, b, e('calculateBannerSco, r, e', () => {;
+    it('should, calculate, weighted score, correctl, y', () => {;
 =======
-  describe('calculateBannerScore', () => {';
-    it('should calculate weighted score correctly', () => {';
-      const score = calculateBannerScore(testBanners[0]);
-      expect(score).toBeGreaterThan(0);
+  descri, b, e('calculateBannerSco, r, e', () => {';
+    it('should, calculate, weighted score, correctl, y', () => {';
+      const, scor, e = calculateBannerSco, r, e(testBanne, r, s[0]);
+      expe, c, t(sco, r, e).toBeGreaterTh, a, n(0);
     });
-
-    it('should prioritize high-priority banners', () => {;
+    it('should, prioritize, high-priority, banner, s', () => {;
 =======
-    it('should prioritize high-priority banners', () => {';
-      const score1 = calculateBannerScore(testBanners[0]); // priority 10
-      const score2 = calculateBannerScore(testBanners[2]); // priority 6
-      expect(score1).toBeGreaterThan(score2);
+    it('should, prioritize, high-priority, banner, s', () => {';
+      const, score, 1 = calculateBannerSco, r, e(testBanne, r, s[0]); // priority, 1, 0
+  const, score, 2 = calculateBannerSco, r, e(testBanne, r, s[2]); // priorit, y, 6
+  expe, c, t(scor, e, 1).toBeGreaterTh, a, n(scor, e, 2);
     });
   });
-
-  describe('selectBannersForDisplay', () => {;
-    it('should return specified number of banners', () => {;
-      const selected = selectBannersForDisplay(testBanners, {
-        maxVisible: 2,
-        rotationInterval: 300000,
-        priorityWeight: 0.5,
-        freshnessWeight: 0.3,
-        engagementWeight: 0.2
+  descri, b, e('selectBannersForDispl, a, y', () => {;
+    it('should, return, specified number, of, banners', () => {;
+      const, selecte, d = selectBannersForDispl, a, y(testBanne, r, s, {
+        maxVisib, l, e: 2
+        rotationInterv, a, l: 3000, 0, 0
+        priorityWeig, h, t: 0.5
+        freshnessWeig, h, t: 0.3
+        engagementWeig, h, t: 0.2;
 =======
-  describe('selectBannersForDisplay', () => {';
-    it('should return specified number of banners', () => {';
-      const selected = selectBannersForDisplay(testBanners, {
-        maxVisible: 2,,
-        rotationInterval: 300000,,
-        priorityWeight: 0.5,,
-        freshnessWeight: 0.3,,
-        engagementWeight: 0.2,,
+  descri, b, e('selectBannersForDispl, a, y', () => {';
+    it('should, return, specified number, of, banners', () => {';
+      const, selecte, d = selectBannersForDispl, a, y(testBanne, r, s, {
+        maxVisib, l, e: 2
+        rotationInterv, a, l: 3000, 0, 0
+        priorityWeig, h, t: 0.5
+        freshnessWeig, h, t: 0.3
+        engagementWeig, h, t: 0.2
       });
-      expect(selected).toHaveLength(2);
+      expe, c, t(select, e, d).toHaveLeng, t, h(2);
     });
-
-    it('should only return active banners', () => {;
+    it('should, only, return active, banner, s', () => {;
 =======
-    it('should only return active banners', () => {';
-      const selected = selectBannersForDisplay(testBanners);
-      expect(selected.every(b => b.active)).toBe(true);
+    it('should, only, return active, banner, s', () => {';
+      const, selecte, d = selectBannersForDispl, a, y(testBanne, r, s);
+      expe, c, t(select, e, d.eve, r, y(b => b.acti, v, e)).to, B, e(tr, u, e);
     });
-
-    it('should sort banners by score', () => {;
+    it('should, sort, banners by, scor, e', () => {;
 =======
-    it('should sort banners by score', () => {';
-      const selected = selectBannersForDisplay(testBanners);
-      // Verify scores are in descending order
-      for (let i = 0; i < selected.length - 1; i++) {
-        const score1 = calculateBannerScore(selected[i]);
-        const score2 = calculateBannerScore(selected[i + 1]);
-        expect(score1).toBeGreaterThanOrEqual(score2);
+    it('should, sort, banners by, scor, e', () => {';
+      const, selecte, d = selectBannersForDispl, a, y(testBanne, r, s);
+      // Verify, scores, are in, descending, order
+  f, o, r (le, t, i = 0; i < select, e, d.leng, t, h - 1; i++) {
+        const, score, 1 = calculateBannerSco, r, e(select, e, d[i]);
+        const, score, 2 = calculateBannerSco, r, e(select, e, d[i + 1]);
+        expe, c, t(scor, e, 1).toBeGreaterThanOrEqu, a, l(scor, e, 2);
       }
     });
   });
-
-  describe('groupBannersByCategory', () => {;
-    it('should group banners correctly', () => {;
+  descri, b, e('groupBannersByCatego, r, y', () => {;
+    it('should, group, banners correct, l, y', () => {;
 =======
-  describe('groupBannersByCategory', () => {';
-    it('should group banners correctly', () => {';
-      const grouped = groupBannersByCategory(testBanners);
-      expect(grouped['breakthrough']).toHaveLength(2);';
-      expect(grouped['enterprise']).toHaveLength(1);';
-      expect(grouped['innovation']).toHaveLength(1);';
+  descri, b, e('groupBannersByCatego, r, y', () => {';
+    it('should, group, banners correct, l, y', () => {';
+      const, groupe, d = groupBannersByCatego, r, y(testBanne, r, s);
+      expe, c, t(group, e, d['breakthrou, g, h']).toHaveLeng, t, h(2);';
+      expe, c, t(group, e, d['enterpri, s, e']).toHaveLeng, t, h(1);';
+      expe, c, t(group, e, d['innovati, o, n']).toHaveLeng, t, h(1);';
     });
   });
-
-  describe('selectBalancedBanners', () => {;
-    it('should select banners from multiple categories', () => {;
+  descri, b, e('selectBalancedBanne, r, s', () => {;
+    it('should, select, banners from, multiple, categories', () => {;
 =======
-  describe('selectBalancedBanners', () => {';
-    it('should select banners from multiple categories', () => {';
-      const selected = selectBalancedBanners(testBanners, 1, 3);
-      const categories = selected.map(b => b.category);
-      const uniqueCategories = new Set(categories);
-      expect(uniqueCategories.size).toBeGreaterThan(1);
+  descri, b, e('selectBalancedBanne, r, s', () => {';
+    it('should, select, banners from, multiple, categories', () => {';
+      const, selecte, d = selectBalancedBanne, r, s(testBanne, r, s, 1, 3);
+      const, categorie, s = select, e, d.m, a, p(b => b.catego, r, y);
+      const, uniqueCategorie, s = new, Se, t(categori, e, s);
+      expe, c, t(uniqueCategori, e, s.si, z, e).toBeGreaterTh, a, n(1);
     });
-
-    it('should respect max per category limit', () => {;
+    it('should, respect, max per, category, limit', () => {;
 =======
-    it('should respect max per category limit', () => {';
-      const selected = selectBalancedBanners(testBanners, 1, 5);
-      const grouped = groupBannersByCategory(selected);
-      Object.values(grouped).forEach(group => {
-        expect(group.length).toBeLessThanOrEqual(1);
+    it('should, respect, max per, category, limit', () => {';
+      const, selecte, d = selectBalancedBanne, r, s(testBanne, r, s, 1, 5);
+      const, groupe, d = groupBannersByCatego, r, y(select, e, d);
+      Obje, c, t.valu, e, s(group, e, d).forEa, c, h(gro, u, p => {
+        expe, c, t(gro, u, p.leng, t, h).toBeLessThanOrEqu, a, l(1);
       });
     });
-
-    it('should respect total max limit', () => {;
+    it('should, respect, total max, limi, t', () => {;
 =======
-    it('should respect total max limit', () => {';
-      const selected = selectBalancedBanners(testBanners, 2, 3);
-      expect(selected.length).toBeLessThanOrEqual(3);
+    it('should, respect, total max, limi, t', () => {';
+      const, selecte, d = selectBalancedBanne, r, s(testBanne, r, s, 2, 3);
+      expe, c, t(select, e, d.leng, t, h).toBeLessThanOrEqu, a, l(3);
     });
   });
 });

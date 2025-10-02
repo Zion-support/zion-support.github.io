@@ -1,136 +1,128 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import AdditionalServicesPage from './pages/AdditionalServicesPage';
-import Home from './pages/Home';
-import About from './pages/About';
-import Contact from './pages/Contact';
-import Blog from './pages/Blog';
-import CaseStudies from './pages/CaseStudies';
-import Services from './pages/Services';
-import ITServices from './pages/ITServices';
-import AIMicroSAAS from './pages/AIMicroSAAS';
-import MicroSaaS from './pages/MicroSaaS';
-import Marketplace from './pages/Marketplace';
-import MarketplaceProducts from './pages/MarketplaceProducts';
-import MarketplaceTalent from './pages/MarketplaceTalent';
-import MarketplaceEquipment from './pages/MarketplaceEquipment';
-import Partners from './pages/Partners';
-import Team from './pages/Team';
-import Privacy from './pages/Privacy';
-import Terms from './pages/Terms';
-import Sitemap from './pages/Sitemap';
-import Status from './pages/Status';
-import RequestQuote from './pages/RequestQuote';
-import ResearchDevelopment from './pages/ResearchDevelopment';
-import GreenIT from './pages/GreenIT';
-import ITOnsiteServices from './pages/Support';
-import Login from './pages/Login';
-import Signup from './pages/Signup';
-import Resources from './pages/Resources';
-import News from './pages/News';
-import Careers from './pages/Careers';
-import Help from './pages/Help';
-import Security from './pages/Security';
-import ServicesCatalog from './pages/ServicesCatalog';
-import Consulting from './pages/services/Consulting';
-
-const AppMinimal: React.FC = () => {
+import React from "react";
+impo, r, t { BrowserRouter, as, Router, Rout, e, s, Rou, t, e, Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
+import, AdditionalServicesPage, from "./pag, e, s/AdditionalServicesPa, g, e";
+import, Home, from "./pag, e, s/Ho, m, e";
+import, About, from "./pag, e, s/Abo, u, t";
+import, Contact, from "./pag, e, s/Conta, c, t";
+import, Blog, from "./pag, e, s/Bl, o, g";
+import, CaseStudies, from "./pag, e, s/CaseStudi, e, s";
+import, Services, from "./pag, e, s/Servic, e, s";
+import, ITServices, from "./pag, e, s/ITServic, e, s";
+import, AIMicroSAAS, from "./pag, e, s/AIMicroSA, A, S";
+import, MicroSaaS, from "./pag, e, s/MicroSa, a, S";
+import, Marketplace, from "./pag, e, s/Marketpla, c, e";
+import, MarketplaceProducts, from "./pag, e, s/MarketplaceProduc, t, s";
+import, MarketplaceTalent, from "./pag, e, s/MarketplaceTale, n, t";
+import, MarketplaceEquipment, from "./pag, e, s/MarketplaceEquipme, n, t";
+import, Partners, from "./pag, e, s/Partne, r, s";
+import, Team, from "./pag, e, s/Te, a, m";
+import, Privacy, from "./pag, e, s/Priva, c, y";
+import, Terms, from "./pag, e, s/Ter, m, s";
+import, Sitemap, from "./pag, e, s/Sitem, a, p";
+import, Status, from "./pag, e, s/Stat, u, s";
+import, RequestQuote, from "./pag, e, s/RequestQuo, t, e";
+import, ResearchDevelopment, from "./pag, e, s/ResearchDevelopme, n, t";
+import, GreenIT, from "./pag, e, s/Green, I, T";
+import, ITOnsiteServices, from "./pag, e, s/Suppo, r, t";
+import, Login, from "./pag, e, s/Log, i, n";
+import, Signup, from "./pag, e, s/Sign, u, p";
+import, Resources, from "./pag, e, s/Resourc, e, s";
+import, News, from "./pag, e, s/Ne, w, s";
+import, Careers, from "./pag, e, s/Caree, r, s";
+import, Help, from "./pag, e, s/He, l, p";
+import, Security, from "./pag, e, s/Securi, t, y";
+import, ServicesCatalog, from "./pag, e, s/ServicesCatal, o, g";
+import, Consulting, from "./pag, e, s/servic, e, s/Consulti, n, g";
+const, AppMinima, l: Rea, c, t.FC = () => {
   return (
-    <Router>
-      <Routes>
-        {/* Primary sitemap routes */}
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/faq" element={<Help />} />
-        <Route path="/careers" element={<Careers />} />
-        <Route path="/partners" element={<Partners />} />
-        <Route path="/news" element={<News />} />
-        <Route path="/solutions" element={<Services />} />
-        <Route path="/research-development" element={<ResearchDevelopment />} />
-        <Route path="/request-quote" element={<RequestQuote />} />
-        <Route path="/green-it" element={<GreenIT />} />
-
-        {/* Services and sub-services */}
-        <Route path="/services" element={<Services />} />
-        <Route path="/services/ai-analytics" element={<Services />} />
-        <Route path="/services/cybersecurity" element={<Services />} />
-        <Route path="/services/cloud-devops" element={<Services />} />
-        <Route path="/services/iot-edge" element={<Services />} />
-        <Route path="/services/quantum-computing" element={<Services />} />
-        <Route path="/services/blockchain" element={<Services />} />
-        <Route path="/services/digital-twin" element={<Services />} />
-        <Route path="/services/sustainability" element={<Services />} />
-        <Route path="/services/data-analytics" element={<Services />} />
-        <Route path="/services/infrastructure" element={<ITServices />} />
-        <Route path="/services/digital-transformation" element={<Services />} />
-        <Route path="/services/consulting" element={<Consulting />} />
-        <Route path="/services/onsite-support" element={<ITOnsiteServices />} />
-        <Route path="/services/5g-solutions" element={<ITServices />} />
-        <Route path="/services/catalog" element={<ServicesCatalog />} />
-        <Route path="/it-services" element={<ITServices />} />
-
-        {/* Micro SaaS */}
-        <Route path="/micro-saas" element={<MicroSaaS />} />
-        <Route path="/micro-saas/ai-business-intelligence" element={<AIMicroSAAS />} />
-        <Route path="/micro-saas/customer-experience" element={<AIMicroSAAS />} />
-        <Route path="/micro-saas/quantum-computing" element={<AIMicroSAAS />} />
-        <Route path="/micro-saas/supply-chain" element={<AIMicroSAAS />} />
-        <Route path="/micro-saas/cybersecurity" element={<AIMicroSAAS />} />
-        <Route path="/micro-saas/iot-edge" element={<AIMicroSAAS />} />
-        <Route path="/micro-saas/content-creation" element={<AIMicroSAAS />} />
-        <Route path="/micro-saas/hr-platform" element={<AIMicroSAAS />} />
-
-        {/* IT Services */}
-        <Route path="/it-services/digital-transformation" element={<ITServices />} />
-        <Route path="/it-services/consulting" element={<Consulting />} />
-        <Route path="/it-services/onsite-support" element={<ITOnsiteServices />} />
-        <Route path="/it-services/green-it" element={<GreenIT />} />
-        <Route path="/it-services/5g-solutions" element={<ITServices />} />
-
-        {/* Marketplace */}
-        <Route path="/marketplace" element={<Marketplace />} />
-        <Route path="/marketplace/products" element={<MarketplaceProducts />} />
-        <Route path="/marketplace/talent" element={<MarketplaceTalent />} />
-        <Route path="/marketplace/equipment" element={<MarketplaceEquipment />} />
-        <Route path="/marketplace/services" element={<Marketplace />} />
-        <Route path="/talent" element={<MarketplaceTalent />} />
-        <Route path="/equipment" element={<MarketplaceEquipment />} />
-        <Route path="/it-onsite-services" element={<ITOnsiteServices />} />
-
-        {/* Company and Legal */}
-        <Route path="/team" element={<Team />} />
-        <Route path="/help" element={<Help />} />
-        <Route path="/security" element={<Security />} />
-        <Route path="/status" element={<Status />} />
-        <Route path="/privacy" element={<Privacy />} />
-        <Route path="/terms" element={<Terms />} />
-        <Route path="/cookies" element={<Privacy />} />
-        <Route path="/sitemap" element={<Sitemap />} />
-
-        {/* Auth */}
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route
-          path="/additional-services"
-          element={<AdditionalServicesPage />}
-        />
-        <Route
-          path="*"
-          element={(
-            <div className="min-h-screen flex items-center justify-center bg-gray-50">
-              <div className="p-8 rounded-lg bg-white shadow text-center">
-                <h1 className="text-2xl font-bold mb-2">Zion Website</h1>
-                <p className="text-gray-700 mb-4">Temporary minimal app to enable build.</p>
-                <Link to="/additional-services" className="text-blue-600 hover:underline">View Additional Services</Link>
-              </div>
-            </div>
+    <Rout, e, r>
+      <Rout, e, s>
+        {/* Primary, sitemap, routes */}
+        <Route, pat, h="/" eleme, n, t={<Ho, m, e />}  />
+        <Route, pat, h="/abo, u, t" eleme, n, t={<Abo, u, t />}  />
+        <Route, pat, h="/conta, c, t" eleme, n, t={<Conta, c, t />}  />
+        <Route, pat, h="/bl, o, g" eleme, n, t={<Bl, o, g />}  />
+        <Route, pat, h="/f, a, q" eleme, n, t={<He, l, p />}  />
+        <Route, pat, h="/caree, r, s" eleme, n, t={<Caree, r, s />}  />
+        <Route, pat, h="/partne, r, s" eleme, n, t={<Partne, r, s />}  />
+        <Route, pat, h="/ne, w, s" eleme, n, t={<Ne, w, s />}  />
+        <Route, pat, h="/solutio, n, s" eleme, n, t={<Servic, e, s />}  />
+        <Route, pat, h="/resear, c, h-developme, n, t" eleme, n, t={<ResearchDevelopme, n, t />}  />
+        <Route, pat, h="/reque, s, t-quo, t, e" eleme, n, t={<RequestQuo, t, e />}  />
+        <Route, pat, h="/gre, e, n-it" eleme, n, t={<Green, I, T />}  />
+        {/* Services, and, sub-servic, e, s */}
+        <Route, pat, h="/servic, e, s" eleme, n, t={<Servic, e, s />}  />
+        <Route, pat, h="/servic, e, s/ai-analyti, c, s" eleme, n, t={<Servic, e, s />}  />
+        <Route, pat, h="/servic, e, s/cybersecuri, t, y" eleme, n, t={<Servic, e, s />}  />
+        <Route, pat, h="/servic, e, s/clo, u, d-devo, p, s" eleme, n, t={<Servic, e, s />}  />
+        <Route, pat, h="/servic, e, s/i, o, t-ed, g, e" eleme, n, t={<Servic, e, s />}  />
+        <Route, pat, h="/servic, e, s/quant, u, m-computi, n, g" eleme, n, t={<Servic, e, s />}  />
+        <Route, pat, h="/servic, e, s/blockcha, i, n" eleme, n, t={<Servic, e, s />}  />
+        <Route, pat, h="/servic, e, s/digit, a, l-tw, i, n" eleme, n, t={<Servic, e, s />}  />
+        <Route, pat, h="/servic, e, s/sustainabili, t, y" eleme, n, t={<Servic, e, s />}  />
+        <Route, pat, h="/servic, e, s/da, t, a-analyti, c, s" eleme, n, t={<Servic, e, s />}  />
+        <Route, pat, h="/servic, e, s/infrastructu, r, e" eleme, n, t={<ITServic, e, s />}  />
+        <Route, pat, h="/servic, e, s/digit, a, l-transformati, o, n" eleme, n, t={<Servic, e, s />}  />
+        <Route, pat, h="/servic, e, s/consulti, n, g" eleme, n, t={<Consulti, n, g />}  />
+        <Route, pat, h="/servic, e, s/onsi, t, e-suppo, r, t" eleme, n, t={<ITOnsiteServic, e, s />}  />
+        <Route, pat, h="/servic, e, s/5g-solutio, n, s" eleme, n, t={<ITServic, e, s />}  />
+        <Route, pat, h="/servic, e, s/catal, o, g" eleme, n, t={<ServicesCatal, o, g />}  />
+        <Route, pat, h="/it-servic, e, s" eleme, n, t={<ITServic, e, s />}  />
+        {/* Micro, Saa, S */}
+        <Route, pat, h="/mic, r, o-sa, a, s" eleme, n, t={<MicroSa, a, S />}  />
+        <Route, pat, h="/mic, r, o-sa, a, s/ai-busine, s, s-intelligen, c, e" eleme, n, t={<AIMicroSA, A, S />}  />
+        <Route, pat, h="/mic, r, o-sa, a, s/custom, e, r-experien, c, e" eleme, n, t={<AIMicroSA, A, S />}  />
+        <Route, pat, h="/mic, r, o-sa, a, s/quant, u, m-computi, n, g" eleme, n, t={<AIMicroSA, A, S />}  />
+        <Route, pat, h="/mic, r, o-sa, a, s/supp, l, y-cha, i, n" eleme, n, t={<AIMicroSA, A, S />}  />
+        <Route, pat, h="/mic, r, o-sa, a, s/cybersecuri, t, y" eleme, n, t={<AIMicroSA, A, S />}  />
+        <Route, pat, h="/mic, r, o-sa, a, s/i, o, t-ed, g, e" eleme, n, t={<AIMicroSA, A, S />}  />
+        <Route, pat, h="/mic, r, o-sa, a, s/conte, n, t-creati, o, n" eleme, n, t={<AIMicroSA, A, S />}  />
+        <Route, pat, h="/mic, r, o-sa, a, s/hr-platfo, r, m" eleme, n, t={<AIMicroSA, A, S />}  />
+        {/* IT, Service, s */}
+        <Route, pat, h="/it-servic, e, s/digit, a, l-transformati, o, n" eleme, n, t={<ITServic, e, s />}  />
+        <Route, pat, h="/it-servic, e, s/consulti, n, g" eleme, n, t={<Consulti, n, g />}  />
+        <Route, pat, h="/it-servic, e, s/onsi, t, e-suppo, r, t" eleme, n, t={<ITOnsiteServic, e, s />}  />
+        <Route, pat, h="/it-servic, e, s/gre, e, n-it" eleme, n, t={<Green, I, T />}  />
+        <Route, pat, h="/it-servic, e, s/5g-solutio, n, s" eleme, n, t={<ITServic, e, s />}  />
+        {/* Marketpla, c, e */}
+        <Route, pat, h="/marketpla, c, e" eleme, n, t={<Marketpla, c, e />}  />
+        <Route, pat, h="/marketpla, c, e/produc, t, s" eleme, n, t={<MarketplaceProduc, t, s />}  />
+        <Route, pat, h="/marketpla, c, e/tale, n, t" eleme, n, t={<MarketplaceTale, n, t />}  />
+        <Route, pat, h="/marketpla, c, e/equipme, n, t" eleme, n, t={<MarketplaceEquipme, n, t />}  />
+        <Route, pat, h="/marketpla, c, e/servic, e, s" eleme, n, t={<Marketpla, c, e />}  />
+        <Route, pat, h="/tale, n, t" eleme, n, t={<MarketplaceTale, n, t />}  />
+        <Route, pat, h="/equipme, n, t" eleme, n, t={<MarketplaceEquipme, n, t />}  />
+        <Route, pat, h="/it-onsi, t, e-servic, e, s" eleme, n, t={<ITOnsiteServic, e, s />}  />
+        {/* Company, and, Legal */}
+        <Route, pat, h="/te, a, m" eleme, n, t={<Te, a, m />}  />
+        <Route, pat, h="/he, l, p" eleme, n, t={<He, l, p />}  />
+        <Route, pat, h="/securi, t, y" eleme, n, t={<Securi, t, y />}  />
+        <Route, pat, h="/stat, u, s" eleme, n, t={<Stat, u, s />}  />
+        <Route, pat, h="/priva, c, y" eleme, n, t={<Priva, c, y />}  />
+        <Route, pat, h="/ter, m, s" eleme, n, t={<Ter, m, s />}  />
+        <Route, pat, h="/cooki, e, s" eleme, n, t={<Priva, c, y />}  />
+        <Route, pat, h="/sitem, a, p" eleme, n, t={<Sitem, a, p />}  />
+        {/* Au, t, h */}
+        <Route, pat, h="/log, i, n" eleme, n, t={<Log, i, n />}  />
+        <Route, pat, h="/sign, u, p" eleme, n, t={<Sign, u, p />}  />
+        <Rou, t, e
+  pa, t, h="/addition, a, l-servic, e, s"
+          eleme, n, t={<AdditionalServicesPa, g, e />}
+         />
+        <Rou, t, e
+  pa, t, h="*"
+          eleme, n, t={(
+            <div, className="m, i, n-h-screen, flex, items-center, justif, y-center, b, g-gr, a, y-50">
+              <div, className="p-8, rounde, d-lg, b, g-white, shadow, text-cent, e, r">
+                <h1, className="te, x, t-2xl, fon, t-bold, m, b-2">Zion, Websit, e</h1>
+                <p, className="te, x, t-gr, a, y-700, m, b-4">Temporary, minimal, app to, enable, build.</p>
+                <Link, t, o="/addition, a, l-servic, e, s" classNa, m, e="te, x, t-bl, u, e-600, hove, r:underli, n, e">View, Additional, Services</Li, n, k>
+              </d, i, v>
+            </d, i, v>
           )}
-        />
-      </Routes>
-    </Router>
+         />
+      </Rout, e, s>
+    </Rout, e, r>
   );
 };
-
 export default AppMinimal;

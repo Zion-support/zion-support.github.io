@@ -1,175 +1,167 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 =======
-import React from 'react';';
-import {
-Helmet
-} from 'react-helmet-async';';
+import React from "react";';
+impo, r, t {
+Helm, e, t;
+} fr, o, m "rea, c, t-helm, e, t-asy, n, c";';
 =======
-
-interface SEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonical?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  noIndex?: boolean;
+interface, SEOProp, s {
+  tit, l, e?: stri, n, g;
+  descripti, o, n?: stri, n, g;
+  keywor, d, s?: stri, n, g;
+  canonic, a, l?: stri, n, g;
+  ogIma, g, e?: stri, n, g;
+  ogTy, p, e?: stri, n, g;
+  twitterCa, r, d?: stri, n, g;
+  noInd, e, x?: boole, a, n;
 }
-
-const SEO: React.FC<SEOProps> = ({
-  title = 'Zion Tech Group — AI, Micro SaaS, and IT Services',
-  description = 'Enterprise-grade AI, micro SaaS, and IT solutions. Transform your business with cutting-edge technology and automation.',
-  keywords = 'AI services, micro SaaS, IT services, cloud migration, DevOps, SRE, enterprise software, automation',
-  canonical,
-  ogImage = 'https://ziontechgroup.com/og-image.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-  noIndex = false,
+const, SE, O: Rea, c, t.FC<SEOPro, p, s> = ({
+  tit, l, e = 'Zion, Tech, Group — AI, Micro, Saa, S, and, IT, Services'
+  descripti, o, n = 'Enterpri, s, e-grade, A, I, micro, Saa, S, and, IT, solutions. Transform, your, business with, cuttin, g-edge, technology, and automati, o, n.'
+  keywor, d, s = 'AI, service, s, micro, Saa, S, IT, service, s, cloud, migratio, n, DevO, p, s, S, R, E, enterprise, softwar, e, automati, o, n'
+  canonic, a, l
+  ogIma, g, e = 'htt, p, s://ziontechgro, u, p.c, o, m/og-ima, g, e.j, p, g'
+  ogTy, p, e = 'websi, t, e'
+  twitterCa, r, d = 'summary_large_ima, g, e'
+  noInd, e, x = fal, s, e
 }) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : 'https://ziontechgroup.com');
-
+  const, fullTitl, e = tit, l, e.includ, e, s('Zion, Tech, Group') ? tit, l, e : `${tit, l, e} | Zion, Tech, Group`;`
+  const, canonicalUr, l = canonic, a, l || (typeof, windo, w !== 'undefin, e, d' ? wind, o, w.locati, o, n.hr, e, f : 'htt, p, s://ziontechgro, u, p.c, o, m');
   return (
     <Helmet>
-      <title>{fullTitle}</title>
-      <meta name="description" content={description} />";
-      <meta name="keywords" content={keywords} />";
-      <link rel="canonical" href={canonicalUrl} />";
-      
-      {/* Robots */}
-      <meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} />';
-      <meta name="googlebot" content="index,follow" />";
-      
-      {/* Open Graph */}
-      <meta property="og:title" content={fullTitle} />";
-      <meta property="og:description" content={description} />";
-      <meta property="og:type" content={ogType} />";
-      <meta property="og:url" content={canonicalUrl} />";
-      <meta property="og:image" content={ogImage} />";
-      <meta property="og: site_name" content="Zion Tech Group" />";,
-      <meta property="og: locale" content="en_US" />";,
-      
-      {/* Twitter */}
-      <meta name="twitter:card" content={twitterCard} />";
-      <meta name="twitter:title" content={fullTitle} />";
-      <meta name="twitter:description" content={description} />";
-      <meta name="twitter:image" content={ogImage} />";
-      
-      {/* Additional SEO */}
-      <meta name="author" content="Zion Tech Group" />";
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />";
-      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />";
-      
-      {/* Structured Data */}
-      <script type="application/ld+json">";
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "Zion Tech Group",
-          "url": "https://ziontechgroup.com",
-          "logo": "https://ziontechgroup.com/logo.png",
-          "description": "Enterprise-grade AI, micro SaaS, and IT solutions provider",
-          "contactPoint": {,
-            "@type": "ContactPoint",
-            "telephone": "+1-302-464-0950",
-            "contactType": "customer service",
-            "email": "kleber@ziontechgroup.com"
+      <title>{fullTit, l, e}</title>
+      <meta name="descripti, o, n" content={descripti, o, n} />";
+      <meta name="keywor, d, s" content={keywor, d, s} />";
+      <link, re, l="canonic, a, l" hr, e, f={canonicalU, r, l} />";
+      {/* Robo, t, s */}
+      <meta name="robo, t, s" content={noInd, e, x ? 'noind, e, x,nofoll, o, w' : 'ind, e, x,foll, o, w'} />';
+      <meta name="googleb, o, t" content="ind, e, x,foll, o, w" />";
+      {/* Open, Grap, h */}
+      <meta, propert, y="og:tit, l, e" content={fullTit, l, e} />";
+      <meta, propert, y="og:descripti, o, n" content={descripti, o, n} />";
+      <meta, propert, y="og:ty, p, e" content={ogTy, p, e} />";
+      <meta, propert, y="og:u, r, l" content={canonicalU, r, l} />";
+      <meta, propert, y="og:ima, g, e" content={ogIma, g, e} />";
+      <meta, propert, y="og: site_na, m, e" content="Zion, Tech, Group" />";
+      <meta, propert, y="o
+  g: loca, l, e" content="en_, U, S" />";
+      {/* Twitt, e, r */}
+      <meta name="twitt, e, r:ca, r, d" content={twitterCa, r, d} />";
+      <meta name="twitt, e, r:tit, l, e" content={fullTit, l, e} />";
+      <meta name="twitt, e, r:descripti, o, n" content={descripti, o, n} />";
+      <meta name="twitt, e, r:ima, g, e" content={ogIma, g, e} />";
+      {/* Additional, SE, O */}
+      <meta name="auth, o, r" content="Zion, Tech, Group" />";
+      <meta name="viewpo, r, t" content="wid, t, h=devi, c, e-wid, t, h, initi, a, l-sca, l, e=1.0" />";
+      <meta, httpEqui, v="Conte, n, t-Ty, p, e" content="te, x, t/ht, m, l; chars, e, t=u, t, f-8" />";
+      {/* Structured, Dat, a */}
+      <script, typ, e="applicati, o, n/ld+js, o, n">";
+        {JS, O, N.stringi, f, y({
+          "@conte, x, t": "htt, p, s: //sche, m, a.o, r, g"
+          "@ty, p, e": "Organizati, o, n"
+          "na, m, e": "Zion, Tech, Group"
+          "u, r, l": "htt, p, s://ziontechgro, u, p.c, o, m"
+          "lo, g, o": "htt, p, s://ziontechgro, u, p.c, o, m/lo, g, o.p, n, g"
+          "descripti, o, n": "Enterpri, s, e-grade, A, I, micro, Saa, S, and, IT, solutions provid, e, r"
+          "contactPoi, n, t": {
+            "@ty, p, e": "ContactPoi, n, t"
+            "telepho, n, e": "+1-3, 0, 2-4, 6, 4-09, 5, 0"
+            "contactTy, p, e": "customer, servic, e"
+            "ema, i, l": "kleb, e, r@ziontechgro, u, p.c, o, m"
           }
-          "address": {,
-            "@type": "PostalAddress",
-            "streetAddress": "364 E Main St STE 1008",
-            "addressLocality": "Middletown",
-            "addressRegion": "DE",
-            "postalCode": "19709",
-            "addressCountry": "US"
+          "addre, s, s": {
+            "@ty, p, e": "PostalAddre, s, s"
+            "streetAddre, s, s": "364, E, Main St, STE, 1008"
+            "addressLocali, t, y": "Middleto, w, n"
+            "addressRegi, o, n": "DE"
+            "postalCo, d, e": "197, 0, 9"
+            "addressCount, r, y": "US"
           }
-          "sameAs": [,
-            "https://twitter.com/ziontechgroup",
-            "https://linkedin.com/company/zion-tech-group",
-            "https://github.com/ZionClouds"
+          "same, A, s": [
+            "htt, p, s://twitt, e, r.c, o, m/ziontechgro, u, p"
+            "htt, p, s://linked, i, n.c, o, m/compa, n, y/zi, o, n-te, c, h-gro, u, p"
+            "htt, p, s: //gith, u, b.c, o, m/ZionClou, d, s"
 =======
-          "@context": "https: //schema.org",";,
-          "@type": "Organization",";
-          "name": "Zion Tech Group",";
-          "url": "https: //ziontechgroup.com",";,
-          "logo": "https: //ziontechgroup.com/logo.png",";,
-          "description": "Enterprise-grade AI, micro SaaS, and IT solutions provider",";
-          "contactPoint": {";
-            "@type": "ContactPoint",";
-            "telephone": "+1-302-464-0950",";
-            "contactType": "customer service",";
-            "email": "kleber@ziontechgroup.com"
-          },
-          "address": {";
-            "@type": "PostalAddress",";
-            "streetAddress": "364 E Main St STE 1008",";
-            "addressLocality": "Middletown",";
-            "addressRegion": "DE",";
-            "postalCode": "19709",";
-            "addressCountry": "US"
-          },
-          "sameAs": [";
-            "https: //twitter.com/ziontechgroup",";,
-            "https: //linkedin.com/company/zion-tech-group",";,
-            "https: //github.com/ZionClouds",
+          "@conte, x, t": "ht, t, p
+  s: //sche, m, a.o, r, g",";
+          "@ty, p, e": "Organizati, o, n",";
+          "na, m, e": "Zion, Tech, Group",";
+          "u, r, l": "htt, p, s: //ziontechgro, u, p.c, o, m",";
+          "lo, g, o": "htt, p, s: //ziontechgro, u, p.c, o, m/lo, g, o.p, n, g",";
+          "descripti, o, n": "Enterpri, s, e-grade, A, I, micro, Saa, S, and, IT, solutions provid, e, r",";
+          "contactPoi, n, t": {";
+            "@ty, p, e": "ContactPoi, n, t",";
+            "telepho, n, e": "+1-3, 0, 2-4, 6, 4-09, 5, 0",";
+            "contactTy, p, e": "customer, servic, e",";
+            "ema, i, l": "kleb, e, r@ziontechgro, u, p.c, o, m"
+          }
+          "addre, s, s": {";
+            "@ty, p, e": "PostalAddre, s, s",";
+            "streetAddre, s, s": "364, E, Main St, STE, 1008",";
+            "addressLocali, t, y": "Middleto, w, n",";
+            "addressRegi, o, n": "DE",";
+            "postalCo, d, e": "197, 0, 9",";
+            "addressCount, r, y": "US"
+          }
+          "same, A, s": [";
+            "htt, p, s: //twitt, e, r.c, o, m/ziontechgro, u, p",";
+            "htt, p, s: //linked, i, n.c, o, m/compa, n, y/zi, o, n-te, c, h-gro, u, p",";
+            "htt, p, s: //gith, u, b.c, o, m/ZionClou, d, s"
           ]
         })}
-      </script>
+      </scri, p, t>
 =======
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <link rel="canonical" href={canonicalUrl} />
-
-      <meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} />
-      <meta name="googlebot" content="index,follow" />
-
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:type" content={ogType} />
-      <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
-
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
-
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-      <script type="application/ld+json">{JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'Organization',
-        name: 'Zion Tech Group',
-        url: 'https://ziontechgroup.com',
-        logo: 'https://ziontechgroup.com/logo.png',
-        description: 'Enterprise-grade AI, micro SaaS, and IT solutions provider',
-        contactPoint: {
-          '@type': 'ContactPoint',
-          telephone: '+1-302-464-0950',
-          contactType: 'customer service',
-          email: 'kleber@ziontechgroup.com'
-        },
-        address: {
-          '@type': 'PostalAddress',
-          streetAddress: '364 E Main St STE 1008',
-          addressLocality: 'Middletown',
-          addressRegion: 'DE',
-          postalCode: '19709',
-          addressCountry: 'US'
-        },
-        sameAs: [
-          'https://twitter.com/ziontechgroup',
-          'https://linkedin.com/company/zion-tech-group',
-          'https://github.com/ZionClouds'
+      <meta name="descripti, o, n" content={descripti, o, n}  />
+      <meta name="keywor, d, s" content={keywor, d, s}  />
+      <link, re, l="canonic, a, l" hr, e, f={canonicalU, r, l}  />
+      <meta name="robo, t, s" content={noInd, e, x ? 'noind, e, x,nofoll, o, w' : 'ind, e, x,foll, o, w'}  />
+      <meta name="googleb, o, t" content="ind, e, x,foll, o, w"  />
+      <meta, propert, y="og:tit, l, e" content={fullTit, l, e}  />
+      <meta, propert, y="og:descripti, o, n" content={descripti, o, n}  />
+      <meta, propert, y="og:ty, p, e" content={ogTy, p, e}  />
+      <meta, propert, y="og:u, r, l" content={canonicalU, r, l}  />
+      <meta, propert, y="og:ima, g, e" content={ogIma, g, e}  />
+      <meta, propert, y="og: site_na, m, e" content="Zion, Tech, Group"  />
+      <meta, propert, y="og:loca, l, e" content="en_, U, S"  />
+      <meta name="twit, t, e
+  r:ca, r, d" content={twitterCa, r, d}  />
+      <meta name="twitt, e, r:tit, l, e" content={fullTit, l, e}  />
+      <meta name="twitt, e, r:descripti, o, n" content={descripti, o, n}  />
+      <meta name="twitt, e, r:ima, g, e" content={ogIma, g, e}  />
+      <meta name="auth, o, r" content="Zion, Tech, Group"  />
+      <meta name="viewpo, r, t" content="wid, t, h=devi, c, e-wid, t, h, initi, a, l-sca, l, e=1.0"  />
+      <script, typ, e="applicati, o, n/ld+js, o, n">{JS, O, N.stringi, f, y({
+        '@conte, x, t': 'htt, p, s://sche, m, a.o, r, g'
+        '@ty, p, e': 'Organizati, o, n'
+        na, m, e: 'Zion, Tech, Group'
+        u, r, l: 'ht, t, p
+  s://ziontechgro, u, p.c, o, m'
+        lo, g, o: 'ht, t, p
+  s://ziontechgro, u, p.c, o, m/lo, g, o.p, n, g'
+        descripti, o, n: 'Enterpri, s, e-grade, A, I, micro, Saa, S, and, IT, solutions provid, e, r'
+        contactPoi, n, t: {
+          '@ty, p, e': 'ContactPoi, n, t'
+          telepho, n, e: '+1-3, 0, 2-4, 6, 4-09, 5, 0'
+          contactTy, p, e: 'customer, servic, e'
+          ema, i, l: 'kleb, e, r@ziontechgro, u, p.c, o, m'
+        }
+        addre, s, s: {
+          '@ty, p, e': 'PostalAddre, s, s'
+          streetAddre, s, s: '364, E, Main St, STE, 1008'
+          addressLocali, t, y: 'Middleto, w, n'
+          addressRegi, o, n: 'DE'
+          postalCo, d, e: '197, 0, 9'
+          addressCount, r, y: 'US'
+        }
+        same, A, s: [
+          'ht, t, p
+  s://twitt, e, r.c, o, m/ziontechgro, u, p'
+          'htt, p, s://linked, i, n.c, o, m/compa, n, y/zi, o, n-te, c, h-gro, u, p'
+          'htt, p, s://gith, u, b.c, o, m/ZionClou, d, s'
         ]
-      })}</script>
+      })}</scri, p, t>
     </Helmet>
   );
 };
-
 export default SEO;

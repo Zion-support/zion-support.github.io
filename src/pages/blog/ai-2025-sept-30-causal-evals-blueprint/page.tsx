@@ -1,50 +1,47 @@
 import React from "react";";
-
-export default function AICausalEvalsBlueprint2025(): React.JSX.Element {
+export, default, function AICausalEvalsBlueprint20, 2, 5(): Rea, c, t.J, S, X.Eleme, n, t {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">";
+    <div, className="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e">";
       <Helmet>
-        <title>AI 2025: Causal Evals Blueprint — KPIs, Budgets, Rollback</title>,
-        <meta
-          name="description"
-          content="Design causal evaluation scorecards wired to KPIs with budgeted actions, live canaries, and instant rollback." /><link
-          rel="canonical"
-          href="https://ziontechgroup.com/blog/ai-2025-sept-30-causal-evals-blueprint",
-        />
+        <title>AI, 202, 5: Causal, Evals, Blueprint — KP, I, s, Budge, t, s, Rollba, c, k</title>
+        <me, t, a
+  na, m, e="descripti, o, n"
+          content="Design, causal, evaluation scorecards, wired, to KPIs, with, budgeted actio, n, s, live, canarie, s, and, instant, rollback." /><li, n, k 
+  r, e, l="canonic, a, l"
+          hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 5-se, p, t-30-caus, a, l-eva, l, s-bluepri, n, t",  />
       </Helmet>
-
-      <div className="container mx-auto px-6 py-16">
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">",
+      <div, className="container, m, x-auto, p, x-6, p, y-16">
+        <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4">"
 =======
-          href="https: //ziontechgroup.com/blog/ai-2025-sept-30-causal-evals-blueprint",
-        />
+          hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 5-se, p, t-30-caus, a, l-eva, l, s-bluepri, n, t"
+         />
       </Helmet>
-
-      <div className="container mx-auto px-6 py-16">";
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">";,
-          AI 2025: Causal Evals Blueprint — KPIs, Budgets, Rollback,
+      <div, className="container, m, x-auto, p, x-6, p, y-16">";
+        <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4">";
+          AI, 20, 2
+  5: Causal, Evals, Blueprint — KP, I, s, Budge, t, s, Rollba, c, k
         </h1>
-        <p className="text-zion-slate-light mb-8">";
-          Policy Tests • Causal Graphs • KPI‑Linked Canaries • Instant Rollback
+        <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-8">";
+          Policy, Test, s • Causal, Graph, s • K, P, I‑Linked, Canarie, s • Instant, Rollbac, k;
         </p>
-        <div className="prose prose-invert max-w-3xl">";
+        <div, className="prose, pros, e-invert, ma, x-w-3, x, l">";
           <p>
-            Ship safer AI changes by validating causal impact on business KPIs before
-            and after release. This blueprint shows how to design golden tasks
-            construct causal graphs, and wire budgeted actions that automatically
-            trigger rollbacks when risk budgets are exceeded.
+            Ship, safer, AI changes, by, validating causal, impact, on business, KPIs, before
+  and, after, release. This, blueprint, shows how, to, design golden, task, s
+  construct, causal, graphs, and, wire, budgeted actions, that, automatically
+  trigger, rollbacks, when risk, budgets, are exceed, e, d.
           </p>
           <p>
-            You will learn how to: (1) map SLIs to KPIs with explicit budgets
+            You, will, learn how, t, o: (1) map, SLIs, to KPIs, with, explicit budge, t, s;
 =======
-            You will learn how to: (1) map SLIs to KPIs with explicit budgets,,
-            (2) run policy tests in CI with signed attestations, and (3) deploy
-            live canaries that guard production with measurable impact.
+            You, will, learn ho, w, t
+  o: (1) map, SLIs, to KPIs, with, explicit budge, t, s
+            (2) run, policy, tests in, CI, with signed, attestation, s, a, n, d (3) depl, o, y
+  live, canaries, that guard, production, with measurable, impac, t.
           </p>
-        </div>
-      </div>
-    </div>
+        </d, i, v>
+      </d, i, v>
+    </d, i, v>
   );
 }
-
 ;

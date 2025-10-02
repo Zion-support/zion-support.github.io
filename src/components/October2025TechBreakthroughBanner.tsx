@@ -1,467 +1,474 @@
-
-const October2025TechBreakthroughBanner = () => {
+const, October2025TechBreakthroughBanne, r = () => {
   return (
-    <div className="relative bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 overflow-hidden">
-      {/* Animated Background */};
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0 bg-[radial-gradient(circle at 50% 50%,rgba(120,219,255,0.3),transparent 50%)]"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle at 80% 20%,rgba(79,209,197,0.3),transparent 50%)]"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle at 20% 80%,rgba(99,102,241,0.3),transparent 50%)]"></div>
-      </div>
-
-      {/* Animated Grid */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size: 64px_64px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,#000,transparent)]"></div>",
-
-      <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">",
-        {/* Breaking News Badge */}
-        <div className="flex items-center justify-center gap-3 mb-8">
-          <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold text-sm animate-pulse shadow-lg shadow-cyan-500/50">
-            <Sparkles className="w-5 h-5/>
-            <span>BREAKTHROUGH OCTOBER 1, 2025</span>
-            <Sparkles className="w-5 h-5/>
+    <div, className="relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, overflo, w-hidd, e, n">
+      {/* Animated, Backgroun, d */};
+      <div, className="absolute, inse, t-0, opacit, y-20">
+        <div, className="absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 50% 50%,rg, b, a(1, 2, 0,2, 1, 9,2, 5, 5,0.3),transparent, 5, 0%)]"></d, i, v>
+        <div, className="absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 80% 20%,rg, b, a(79,2, 0, 9,1, 9, 7,0.3),transparent, 5, 0%)]"></d, i, v>
+        <div, className="absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 20% 80%,rg, b, a(99,1, 0, 2,2, 4, 1,0.3),transparent, 5, 0%)]"></d, i, v>
+      </d, i, v>
+      {/* Animated, Gri, d */}
+      <div, className="absolute, inse, t-0, b, g-[line, a, r-gradie, n, t(rg, b, a(2, 5, 5,2, 5, 5,2, 5, 5,0.03)_1, p, x,transparent_1, p, x),line, a, r-gradie, n, t(90d, e, g,rg, b, a(2, 5, 5,2, 5, 5,2, 5, 5,0.03)_1, p, x,transparent_1, p, x)] bg-[si, z, e: 64px_64, p, x] [ma, s, k-im, a, g
+  e:radi, a, l-gradie, n, t(ellipse_, 8, 0%_, 5, 0%_at_, 5, 0%_, 5, 0%,#0, 0, 0,transpare, n, t)]"></d, i, v>"
+      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8, p, y-12">"
+        {/* Breaking, News, Badge */}
+        <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-8">
+          <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-6, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-500, tex, t-white, fon, t-bold, tex, t-sm, animat, e-pulse, shado, w-lg, shado, w-cy, a, n-5, 0, 0/50">
+            <Sparkles, className="w-5 h-5  />
+            <sp, a, n>BREAKTHROUGH, OCTOBER, 1, 20, 2, 5</sp, a, n>
+            <Sparkles, className="w-5 h-5  />
 =======
-    <div className="relative bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 overflow-hidden">";
-      {/* Animated Background */};
-      <div className="absolute inset-0 opacity-20">";
-        <div className="absolute inset-0 bg-[radial-gradient(circle at 50% 50%,rgba(120,219,255,0.3),transparent 50%)]"></div>";
-        <div className="absolute inset-0 bg-[radial-gradient(circle at 80% 20%,rgba(79,209,197,0.3),transparent 50%)]"></div>";
-        <div className="absolute inset-0 bg-[radial-gradient(circle at 20% 80%,rgba(99,102,241,0.3),transparent 50%)]"></div>";
-      </div>
-
-      {/* Animated Grid */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size: 64px_64px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,#000,transparent)]"></div>";,
-
-      <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">";,
-        {/* Breaking News Badge */}
-        <div className="flex items-center justify-center gap-3 mb-8">";
-          <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold text-sm animate-pulse shadow-lg shadow-cyan-500/50">";
-            <Sparkles className="w-5 h-5" />";
-            <span>BREAKTHROUGH OCTOBER 1, 2025</span>
-            <Sparkles className="w-5 h-5" />";
-          </div>
-        </div>
-
-        {/* Main Headline */}
-        <div className="text-center mb-10">
-          <h2 className="text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">",
-            🚀 <span className="bg-gradient-to-r from-cyan-300 via-blue-300 to-indigo-300 bg-clip-text text-transparent">
-              3 Revolutionary Enterprise Technologies
-            </span> 🚀
+    <div, className="relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, overflo, w-hidd, e, n">";
+      {/* Animated, Backgroun, d */};
+      <div, className="absolute, inse, t-0, opacit, y-20">";
+        <div, className="absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 50% 50%,rg, b, a(1, 2, 0,2, 1, 9,2, 5, 5,0.3),transparent, 5, 0%)]"></d, i, v>";
+        <div, className="absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 80% 20%,rg, b, a(79,2, 0, 9,1, 9, 7,0.3),transparent, 5, 0%)]"></d, i, v>";
+        <div, className="absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 20% 80%,rg, b, a(99,1, 0, 2,2, 4, 1,0.3),transparent, 5, 0%)]"></d, i, v>";
+      </d, i, v>
+      {/* Animated, Gri, d */}
+      <div, className="absolute, inse, t-0, b, g-[line, a, r-gradie, n, t(rg, b, a(2, 5, 5,2, 5, 5,2, 5, 5,0.03)_1, p, x,transparent_1, p, x),line, a, r-gradie, n, t(90d, e, g,rg, b, a(2, 5, 5,2, 5, 5,2, 5, 5,0.03)_1, p, x,transparent_1, p, x)] bg-[si, z, e: 64px_64, p, x] [ma, s, k-im, a, g
+  e:radi, a, l-gradie, n, t(ellipse_, 8, 0%_, 5, 0%_at_, 5, 0%_, 5, 0%,#0, 0, 0,transpare, n, t)]"></d, i, v>";
+      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8, p, y-12">";
+        {/* Breaking, News, Badge */}
+        <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-8">";
+          <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-6, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-500, tex, t-white, fon, t-bold, tex, t-sm, animat, e-pulse, shado, w-lg, shado, w-cy, a, n-5, 0, 0/50">";
+            <Sparkles, className="w-5 h-5" />";
+            <sp, a, n>BREAKTHROUGH, OCTOBER, 1, 20, 2, 5</sp, a, n>
+            <Sparkles, className="w-5 h-5" />";
+          </d, i, v>
+        </d, i, v>
+        {/* Main, Headlin, e */}
+        <div, className="te, x, t-center, m, b-10">
+          <h2, className="te, x, t-4xl, m, d: te, x, t-5x, l, l
+  g:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-4, leadin, g-tig, h, t">"
+            🚀 <span, className="bg-gradie, n, t-to-r, fro, m-cy, a, n-300, vi, a-bl, u, e-300, t, o-indi, g, o-300, b, g-cl, i, p-text, tex, t-transpare, n, t">
+              3, Revolutionary, Enterprise Technologi, e, s;
+            </sp, a, n> 🚀
           </h2>
-          <p className="text-xl md: text-2xl text-cyan-100 font-medium">",
+          <p, className="te, x, t-xl, m, d: te, x, t-2xl, tex, t-cy, a, n-100, fon, t-medi, u, m">"
 =======
-        <div className="text-center mb-10">";
-          <h2 className="text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">";,
-            🚀 <span className="bg-gradient-to-r from-cyan-300 via-blue-300 to-indigo-300 bg-clip-text text-transparent">";
-              3 Revolutionary Enterprise Technologies
-            </span> 🚀
+        <div, className="te, x, t-center, m, b-10">";
+          <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, l, g:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-4, leadin, g-tig, h, t">";
+            🚀 <span, className="bg-gradie, n, t-to-r, fro, m-cy, a, n-300, vi, a-bl, u, e-300, t, o-indi, g, o-300, b, g-cl, i, p-text, tex, t-transpare, n, t">";
+              3, Revolutionary, Enterprise Technologi, e, s;
+            </sp, a, n> 🚀
           </h2>
-          <p className="text-xl md: text-2xl text-cyan-100 font-medium">";,
-            ⚡ Quantum-Safe Cryptography • Autonomous Risk Management • AI-Powered Digital Twins
+          <p, className="te, x, t-x, l, m
+  d: te, x, t-2xl, tex, t-cy, a, n-100, fon, t-medi, u, m">";
+            ⚡ Quant, u, m-Safe, Cryptograph, y • Autonomous, Risk, Management • AI-Powered, Digital, Twins;
           </p>
-        </div>
-
-        {/* Key Metrics Grid */}
-        <div className="grid md: grid-cols-4 gap-4 mb-10">",
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400/30 hover: border-cyan-400/60 transition-all duration-300 hover:scale-105">",
-            <div className="text-cyan-300 text-4xl font-bold mb-2">99.97%</div>
-            <div className="text-white text-sm font-medium">Quantum Attack Protection</div>
-            <div className="text-cyan-200 text-xs mt-1">Future-Proof Security</div>
-          </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/30 hover: border-blue-400/60 transition-all duration-300 hover:scale-105">",
-            <div className="text-blue-300 text-4xl font-bold mb-2">98.9%</div>
-            <div className="text-white text-sm font-medium">Risk Prediction Accuracy</div>
-            <div className="text-blue-200 text-xs mt-1">90+ Days Early Warning</div>
-          </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-indigo-400/30 hover: border-indigo-400/60 transition-all duration-300 hover:scale-105">",
-            <div className="text-indigo-300 text-4xl font-bold mb-2">99.4%</div>
-            <div className="text-white text-sm font-medium">Digital Twin Accuracy</div>
-            <div className="text-indigo-200 text-xs mt-1">Real-World Fidelity</div>
-          </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-purple-400/30 hover: border-purple-400/60 transition-all duration-300 hover:scale-105">",
-            <div className="text-purple-300 text-4xl font-bold mb-2">$151B</div>
-            <div className="text-white text-sm font-medium">Combined Annual Value</div>
-            <div className="text-purple-200 text-xs mt-1">Fortune 500 Average</div>
+        </d, i, v>
+        {/* Key, Metrics, Grid */}
+        <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-10">"
+          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-cy, a, n-4, 0, 0/30, hove, r: bord, e, r-cy, a, n-4, 0, 0/60, transitio, n-all, duratio, n-300, hov, e
+  r:sca, l, e-1, 0, 5">"
+            <div, className="te, x, t-cy, a, n-300, tex, t-4xl, fon, t-bold, m, b-2">99.97%</d, i, v>
+            <div, className="te, x, t-white, tex, t-sm, fon, t-medi, u, m">Quantum, Attack, Protection</d, i, v>
+            <div, className="te, x, t-cy, a, n-200, tex, t-xs, m, t-1">Futu, r, e-Proof, Securit, y</d, i, v>
+          </d, i, v>
+          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-bl, u, e-4, 0, 0/30, hove, r: bord, e, r-bl, u, e-4, 0, 0/60, transitio, n-all, duratio, n-300, hov, e
+  r:sca, l, e-1, 0, 5">"
+            <div, className="te, x, t-bl, u, e-300, tex, t-4xl, fon, t-bold, m, b-2">98.9%</d, i, v>
+            <div, className="te, x, t-white, tex, t-sm, fon, t-medi, u, m">Risk, Prediction, Accuracy</d, i, v>
+            <div, className="te, x, t-bl, u, e-200, tex, t-xs, m, t-1">90+ Days, Early, Warning</d, i, v>
+          </d, i, v>
+          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-indi, g, o-4, 0, 0/30, hove, r: bord, e, r-indi, g, o-4, 0, 0/60, transitio, n-all, duratio, n-300, hov, e
+  r:sca, l, e-1, 0, 5">"
+            <div, className="te, x, t-indi, g, o-300, tex, t-4xl, fon, t-bold, m, b-2">99.4%</d, i, v>
+            <div, className="te, x, t-white, tex, t-sm, fon, t-medi, u, m">Digital, Twin, Accuracy</d, i, v>
+            <div, className="te, x, t-indi, g, o-200, tex, t-xs, m, t-1">Re, a, l-World, Fidelit, y</d, i, v>
+          </d, i, v>
+          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-purp, l, e-4, 0, 0/30, hove, r: bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, duratio, n-300, hov, e
+  r:sca, l, e-1, 0, 5">"
+            <div, className="te, x, t-purp, l, e-300, tex, t-4xl, fon, t-bold, m, b-2">$15, 1, B</d, i, v>
+            <div, className="te, x, t-white, tex, t-sm, fon, t-medi, u, m">Combined, Annual, Value</d, i, v>
+            <div, className="te, x, t-purp, l, e-200, tex, t-xs, m, t-1">Fortune, 500, Average</d, i, v>
 =======
-        <div className="grid md: grid-cols-4 gap-4 mb-10">";,
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400/30 hover: border-cyan-400/60 transition-all duration-300 hover:scale-105">";,
-            <div className="text-cyan-300 text-4xl font-bold mb-2">99.97%</div>";
-            <div className="text-white text-sm font-medium">Quantum Attack Protection</div>";
-            <div className="text-cyan-200 text-xs mt-1">Future-Proof Security</div>";
-          </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/30 hover: border-blue-400/60 transition-all duration-300 hover:scale-105">";,
-            <div className="text-blue-300 text-4xl font-bold mb-2">98.9%</div>";
-            <div className="text-white text-sm font-medium">Risk Prediction Accuracy</div>";
-            <div className="text-blue-200 text-xs mt-1">90+ Days Early Warning</div>";
-          </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-indigo-400/30 hover: border-indigo-400/60 transition-all duration-300 hover:scale-105">";,
-            <div className="text-indigo-300 text-4xl font-bold mb-2">99.4%</div>";
-            <div className="text-white text-sm font-medium">Digital Twin Accuracy</div>";
-            <div className="text-indigo-200 text-xs mt-1">Real-World Fidelity</div>";
-          </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-purple-400/30 hover: border-purple-400/60 transition-all duration-300 hover:scale-105">";,
-            <div className="text-purple-300 text-4xl font-bold mb-2">$151B</div>";
-            <div className="text-white text-sm font-medium">Combined Annual Value</div>";
-            <div className="text-purple-200 text-xs mt-1">Fortune 500 Average</div>";
-          </div>
-        </div>
-
-        {/* Featured Content Cards */}
-        <div className="grid md: grid-cols-3 gap-6 mb-10">",
-          {/* Quantum-Safe Cryptography */}
-          <div className="group bg-gradient-to-br from-cyan-900/80 to-cyan-950/80 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400/30 hover: border-cyan-400 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/30 hover:scale-105">",
-            <div className="flex items-center gap-3 mb-4">
-              <div className="p-3 rounded-xl bg-cyan-500/20 group-hover: bg-cyan-500/30 transition-colors">",
-                <Lock className="w-8 h-8 text-cyan-300/>
+        <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-10">";
+          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-cy, a, n-4, 0, 0/30, hove, r: bord, e, r-cy, a, n-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5">";
+            <div, className="te, x, t-cy, a, n-300, tex, t-4xl, fon, t-bold, m, b-2">99.97%</d, i, v>";
+            <div, className="te, x, t-white, tex, t-sm, fon, t-medi, u, m">Quantum, Attack, Protection</d, i, v>";
+            <div, className="te, x, t-cy, a, n-200, tex, t-xs, m, t-1">Futu, r, e-Proof, Securit, y</d, i, v>";
+          </d, i, v>
+          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-bl, u, e-4, 0, 0/30, hove, r: bord, e, r-bl, u, e-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5">";
+            <div, className="te, x, t-bl, u, e-300, tex, t-4xl, fon, t-bold, m, b-2">98.9%</d, i, v>";
+            <div, className="te, x, t-white, tex, t-sm, fon, t-medi, u, m">Risk, Prediction, Accuracy</d, i, v>";
+            <div, className="te, x, t-bl, u, e-200, tex, t-xs, m, t-1">90+ Days, Early, Warning</d, i, v>";
+          </d, i, v>
+          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-indi, g, o-4, 0, 0/30, hove, r: bord, e, r-indi, g, o-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5">";
+            <div, className="te, x, t-indi, g, o-300, tex, t-4xl, fon, t-bold, m, b-2">99.4%</d, i, v>";
+            <div, className="te, x, t-white, tex, t-sm, fon, t-medi, u, m">Digital, Twin, Accuracy</d, i, v>";
+            <div, className="te, x, t-indi, g, o-200, tex, t-xs, m, t-1">Re, a, l-World, Fidelit, y</d, i, v>";
+          </d, i, v>
+          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-purp, l, e-4, 0, 0/30, hove, r: bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, duratio, n-300, hov, e
+  r:sca, l, e-1, 0, 5">";
+            <div, className="te, x, t-purp, l, e-300, tex, t-4xl, fon, t-bold, m, b-2">$15, 1, B</d, i, v>";
+            <div, className="te, x, t-white, tex, t-sm, fon, t-medi, u, m">Combined, Annual, Value</d, i, v>";
+            <div, className="te, x, t-purp, l, e-200, tex, t-xs, m, t-1">Fortune, 500, Average</d, i, v>";
+          </d, i, v>
+        </d, i, v>
+        {/* Featured, Content, Cards */}
+        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-10">"
+          {/* Quant, u, m-Safe, Cryptograph, y */}
+          <div, className="group, b, g-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/80, t, o-cy, a, n-9, 5, 0/80, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-cy, a, n-4, 0, 0/30, hove, r: bord, e, r-cy, a, n-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-cy, a, n-5, 0, 0/30, hov, e
+  r:sca, l, e-1, 0, 5">"
+            <div, className="flex, item, s-center, ga, p-3, m, b-4">
+              <div, className="p-3, rounde, d-xl, b, g-cy, a, n-5, 0, 0/20, grou, p-hov, e, r: bg-cy, a, n-5, 0, 0/30, transitio, n-colo, r, s">"
+                <Lock, className="w-8 h-8, tex, t-cy, a, n-3, 0, 0  />
 =======
-        <div className="grid md: grid-cols-3 gap-6 mb-10">";,
-          {/* Quantum-Safe Cryptography */}
-          <div className="group bg-gradient-to-br from-cyan-900/80 to-cyan-950/80 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400/30 hover: border-cyan-400 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/30 hover:scale-105">";,
-            <div className="flex items-center gap-3 mb-4">";
-              <div className="p-3 rounded-xl bg-cyan-500/20 group-hover: bg-cyan-500/30 transition-colors">";,
-                <Lock className="w-8 h-8 text-cyan-300" />";
-              </div>
-              <div className="flex-1">";
-                <div className="text-xs font-bold text-cyan-300 uppercase tracking-wide mb-1">Quantum Security</div>";
-                <div className="text-sm text-cyan-100 font-medium">NIST-Approved • Production-Ready</div>";
-              </div>
-            </div>
-            <h3 className="text-xl font-bold text-white mb-3 group-hover: text-cyan-300 transition-colors">",
-              Quantum-Safe Cryptography Revolution
+        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-10">";
+          {/* Quant, u, m-Safe, Cryptograph, y */}
+          <div, className="group, b, g-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/80, t, o-cy, a, n-9, 5, 0/80, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-cy, a, n-4, 0, 0/30, hove, r: bord, e, r-cy, a, n-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-cy, a, n-5, 0, 0/30, hove, r:sca, l, e-1, 0, 5">";
+            <div, className="flex, item, s-center, ga, p-3, m, b-4">";
+              <div, className="p-3, rounde, d-xl, b, g-cy, a, n-5, 0, 0/20, grou, p-hov, e, r: bg-cy, a, n-5, 0, 0/30, transitio, n-colo, r, s">";
+                <Lock, className="w-8 h-8, tex, t-cy, a, n-3, 0, 0" />";
+              </d, i, v>
+              <div, className="fl, e, x-1">";
+                <div, className="te, x, t-xs, fon, t-bold, tex, t-cy, a, n-300, uppercase, tracking-wide, m, b-1">Quantum, Securit, y</d, i, v>";
+                <div, className="te, x, t-sm, tex, t-cy, a, n-100, fon, t-medi, u, m">NI, S, T-Approv, e, d • Producti, o, n-Rea, d, y</d, i, v>";
+              </d, i, v>
+            </d, i, v>
+            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
+  r: te, x, t-cy, a, n-300, transitio, n-colo, r, s">"
+              Quant, u, m-Safe, Cryptography, Revolution;
             </h3>
-            <div className="space-y-2 mb-4">
-              <div className="flex items-center gap-2 text-cyan-100 text-sm">
-                <Shield className="w-4 h-4 text-cyan-400/>
-                <span>99.97% Quantum Attack Protection</span>
-              </div>
-              <div className="flex items-center gap-2 text-cyan-100 text-sm">
-                <Zap className="w-4 h-4 text-cyan-400/>
-                <span>67% Cost Reduction vs Legacy</span>
-              </div>
-              <div className="flex items-center gap-2 text-cyan-100 text-sm">
-                <Target className="w-4 h-4 text-cyan-400/>
-                <span>$78.3B Digital Assets Protected</span>
-              </div>
-              <div className="flex items-center gap-2 text-cyan-100 text-sm">
-                <Award className="w-4 h-4 text-cyan-400/>
+            <div, className="spa, c, e-y-2, m, b-4">
+              <div, className="flex, item, s-center, ga, p-2, tex, t-cy, a, n-100, tex, t-sm">
+                <Shield, className="w-4 h-4, tex, t-cy, a, n-4, 0, 0  />
+                <sp, a, n>99.97% Quantum, Attack, Protection</sp, a, n>
+              </d, i, v>
+              <div, className="flex, item, s-center, ga, p-2, tex, t-cy, a, n-100, tex, t-sm">
+                <Zap, className="w-4 h-4, tex, t-cy, a, n-4, 0, 0  />
+                <sp, a, n>67% Cost, Reduction, vs Lega, c, y</sp, a, n>
+              </d, i, v>
+              <div, className="flex, item, s-center, ga, p-2, tex, t-cy, a, n-100, tex, t-sm">
+                <Target, className="w-4 h-4, tex, t-cy, a, n-4, 0, 0  />
+                <sp, a, n>$78.3B, Digital, Assets Protect, e, d</sp, a, n>
+              </d, i, v>
+              <div, className="flex, item, s-center, ga, p-2, tex, t-cy, a, n-100, tex, t-sm">
+                <Award, className="w-4 h-4, tex, t-cy, a, n-4, 0, 0  />
 =======
-            <h3 className="text-xl font-bold text-white mb-3 group-hover: text-cyan-300 transition-colors">";,
-              Quantum-Safe Cryptography Revolution
+            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-cy, a, n-300, transitio, n-colo, r, s">";
+              Quant, u, m-Safe, Cryptography, Revolution;
             </h3>
-            <div className="space-y-2 mb-4">";
-              <div className="flex items-center gap-2 text-cyan-100 text-sm">";
-                <Shield className="w-4 h-4 text-cyan-400" />";
-                <span>99.97% Quantum Attack Protection</span>
-              </div>
-              <div className="flex items-center gap-2 text-cyan-100 text-sm">";
-                <Zap className="w-4 h-4 text-cyan-400" />";
-                <span>67% Cost Reduction vs Legacy</span>
-              </div>
-              <div className="flex items-center gap-2 text-cyan-100 text-sm">";
-                <Target className="w-4 h-4 text-cyan-400" />";
-                <span>$78.3B Digital Assets Protected</span>
-              </div>
-              <div className="flex items-center gap-2 text-cyan-100 text-sm">";
-                <Award className="w-4 h-4 text-cyan-400" />";
-                <span>845x ROI • 10-Year Future-Proofing</span>
-              </div>
-            </div>
-            <Link 
-              to="/blog/ai-2025-oct-01-quantum-safe-cryptography-enterprise-systems"
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-cyan-500 to-blue-500 hover: from-cyan-400 hover:to-blue-400 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 group-hover:scale-105",
+            <div, className="spa, c, e-y-2, m, b-4">";
+              <div, className="flex, item, s-center, ga, p-2, tex, t-cy, a, n-100, tex, t-sm">";
+                <Shield, className="w-4 h-4, tex, t-cy, a, n-4, 0, 0" />";
+                <sp, a, n>99.97% Quantum, Attack, Protection</sp, a, n>
+              </d, i, v>
+              <div, className="flex, item, s-center, ga, p-2, tex, t-cy, a, n-100, tex, t-sm">";
+                <Zap, className="w-4 h-4, tex, t-cy, a, n-4, 0, 0" />";
+                <sp, a, n>67% Cost, Reduction, vs Lega, c, y</sp, a, n>
+              </d, i, v>
+              <div, className="flex, item, s-center, ga, p-2, tex, t-cy, a, n-100, tex, t-sm">";
+                <Target, className="w-4 h-4, tex, t-cy, a, n-4, 0, 0" />";
+                <sp, a, n>$78.3B, Digital, Assets Protect, e, d</sp, a, n>
+              </d, i, v>
+              <div, className="flex, item, s-center, ga, p-2, tex, t-cy, a, n-100, tex, t-sm">";
+                <Award, className="w-4 h-4, tex, t-cy, a, n-4, 0, 0" />";
+                <sp, a, n>845x, RO, I • 10-Year, Futur, e-Proofi, n, g</sp, a, n>
+              </d, i, v>
+            </d, i, v>
+            <Li, n, k
+  to="/bl, o, g/ai-20, 2, 5-o, c, t-01-quant, u, m-sa, f, e-cryptograp, h, y-enterpri, s, e-syste, m, s"
+              classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, p, x-5, p, y-2.5, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-500, hove, r: fr, o, m-cy, a, n-400, hove, r:to-bl, u, e-400, tex, t-white, fon, t-semibold, rounde, d-lg, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-cy, a, n-5, 0, 0/50, grou, p-ho, v, e
+  r:sca, l, e-1, 0, 5"
             >
-              Read Full Analysis
-              <ArrowRight className="w-4 h-4 group-hover: translate-x-1 transition-transform/>",
+              Read, Full, Analysis;
+              <ArrowRight, className="w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
 =======
-              <ArrowRight className="w-4 h-4 group-hover: translate-x-1 transition-transform" />";,
-            </Link>
-          </div>
-
-          {/* Autonomous Risk Management */}
-          <div className="group bg-gradient-to-br from-blue-900/80 to-blue-950/80 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/30 hover: border-blue-400 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/30 hover:scale-105">",
-            <div className="flex items-center gap-3 mb-4">
-              <div className="p-3 rounded-xl bg-blue-500/20 group-hover: bg-blue-500/30 transition-colors">",
-                <TrendingUp className="w-8 h-8 text-blue-300/>
+              <ArrowRight, className="w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+            </Li, n, k>
+          </d, i, v>
+          {/* Autonomous, Risk, Management */}
+          <div, className="group, b, g-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/80, t, o-bl, u, e-9, 5, 0/80, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-bl, u, e-4, 0, 0/30, hove, r: bord, e, r-bl, u, e-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-bl, u, e-5, 0, 0/30, hov, e
+  r:sca, l, e-1, 0, 5">"
+            <div, className="flex, item, s-center, ga, p-3, m, b-4">
+              <div, className="p-3, rounde, d-xl, b, g-bl, u, e-5, 0, 0/20, grou, p-hov, e, r: bg-bl, u, e-5, 0, 0/30, transitio, n-colo, r, s">"
+                <TrendingUp, className="w-8 h-8, tex, t-bl, u, e-3, 0, 0  />
 =======
-          <div className="group bg-gradient-to-br from-blue-900/80 to-blue-950/80 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/30 hover: border-blue-400 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/30 hover:scale-105">";,
-            <div className="flex items-center gap-3 mb-4">";
-              <div className="p-3 rounded-xl bg-blue-500/20 group-hover: bg-blue-500/30 transition-colors">";,
-                <TrendingUp className="w-8 h-8 text-blue-300" />";
-              </div>
-              <div className="flex-1">";
-                <div className="text-xs font-bold text-blue-300 uppercase tracking-wide mb-1">Risk Intelligence</div>";
-                <div className="text-sm text-blue-100 font-medium">AI-Powered • Autonomous</div>";
-              </div>
-            </div>
-            <h3 className="text-xl font-bold text-white mb-3 group-hover: text-blue-300 transition-colors">",
-              Autonomous Risk Management Platform
+          <div, className="group, b, g-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/80, t, o-bl, u, e-9, 5, 0/80, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-bl, u, e-4, 0, 0/30, hove, r: bord, e, r-bl, u, e-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-bl, u, e-5, 0, 0/30, hove, r:sca, l, e-1, 0, 5">";
+            <div, className="flex, item, s-center, ga, p-3, m, b-4">";
+              <div, className="p-3, rounde, d-xl, b, g-bl, u, e-5, 0, 0/20, grou, p-hov, e, r: bg-bl, u, e-5, 0, 0/30, transitio, n-colo, r, s">";
+                <TrendingUp, className="w-8 h-8, tex, t-bl, u, e-3, 0, 0" />";
+              </d, i, v>
+              <div, className="fl, e, x-1">";
+                <div, className="te, x, t-xs, fon, t-bold, tex, t-bl, u, e-300, uppercase, tracking-wide, m, b-1">Risk, Intelligenc, e</d, i, v>";
+                <div, className="te, x, t-sm, tex, t-bl, u, e-100, fon, t-medi, u, m">AI-Power, e, d • Autonomo, u, s</d, i, v>";
+              </d, i, v>
+            </d, i, v>
+            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
+  r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">"
+              Autonomous, Risk, Management Platfo, r, m;
             </h3>
-            <div className="space-y-2 mb-4">
-              <div className="flex items-center gap-2 text-blue-100 text-sm">
-                <Shield className="w-4 h-4 text-blue-400/>
-                <span>98.9% Risk Prediction Accuracy</span>
-              </div>
-              <div className="flex items-center gap-2 text-blue-100 text-sm">
-                <Zap className="w-4 h-4 text-blue-400/>
-                <span>84% Cost Reduction in Operations</span>
-              </div>
-              <div className="flex items-center gap-2 text-blue-100 text-sm">
-                <Target className="w-4 h-4 text-blue-400/>
-                <span>$127B Losses Prevented Annually</span>
-              </div>
-              <div className="flex items-center gap-2 text-blue-100 text-sm">
-                <Award className="w-4 h-4 text-blue-400/>
+            <div, className="spa, c, e-y-2, m, b-4">
+              <div, className="flex, item, s-center, ga, p-2, tex, t-bl, u, e-100, tex, t-sm">
+                <Shield, className="w-4 h-4, tex, t-bl, u, e-4, 0, 0  />
+                <sp, a, n>98.9% Risk, Prediction, Accuracy</sp, a, n>
+              </d, i, v>
+              <div, className="flex, item, s-center, ga, p-2, tex, t-bl, u, e-100, tex, t-sm">
+                <Zap, className="w-4 h-4, tex, t-bl, u, e-4, 0, 0  />
+                <sp, a, n>84% Cost, Reduction, in Operatio, n, s</sp, a, n>
+              </d, i, v>
+              <div, className="flex, item, s-center, ga, p-2, tex, t-bl, u, e-100, tex, t-sm">
+                <Target, className="w-4 h-4, tex, t-bl, u, e-4, 0, 0  />
+                <sp, a, n>$127B, Losses, Prevented Annual, l, y</sp, a, n>
+              </d, i, v>
+              <div, className="flex, item, s-center, ga, p-2, tex, t-bl, u, e-100, tex, t-sm">
+                <Award, className="w-4 h-4, tex, t-bl, u, e-4, 0, 0  />
 =======
-            <h3 className="text-xl font-bold text-white mb-3 group-hover: text-blue-300 transition-colors">";,
-              Autonomous Risk Management Platform
+            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">";
+              Autonomous, Risk, Management Platfo, r, m;
             </h3>
-            <div className="space-y-2 mb-4">";
-              <div className="flex items-center gap-2 text-blue-100 text-sm">";
-                <Shield className="w-4 h-4 text-blue-400" />";
-                <span>98.9% Risk Prediction Accuracy</span>
-              </div>
-              <div className="flex items-center gap-2 text-blue-100 text-sm">";
-                <Zap className="w-4 h-4 text-blue-400" />";
-                <span>84% Cost Reduction in Operations</span>
-              </div>
-              <div className="flex items-center gap-2 text-blue-100 text-sm">";
-                <Target className="w-4 h-4 text-blue-400" />";
-                <span>$127B Losses Prevented Annually</span>
-              </div>
-              <div className="flex items-center gap-2 text-blue-100 text-sm">";
-                <Award className="w-4 h-4 text-blue-400" />";
-                <span>2,836% ROI • 24/7 Monitoring</span>
-              </div>
-            </div>
-            <Link 
-              to="/blog/ai-2025-oct-01-autonomous-risk-management-platform-revolution"
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-blue-500 to-indigo-500 hover: from-blue-400 hover:to-indigo-400 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-blue-500/50 group-hover:scale-105",
+            <div, className="spa, c, e-y-2, m, b-4">";
+              <div, className="flex, item, s-center, ga, p-2, tex, t-bl, u, e-100, tex, t-sm">";
+                <Shield, className="w-4 h-4, tex, t-bl, u, e-4, 0, 0" />";
+                <sp, a, n>98.9% Risk, Prediction, Accuracy</sp, a, n>
+              </d, i, v>
+              <div, className="flex, item, s-center, ga, p-2, tex, t-bl, u, e-100, tex, t-sm">";
+                <Zap, className="w-4 h-4, tex, t-bl, u, e-4, 0, 0" />";
+                <sp, a, n>84% Cost, Reduction, in Operatio, n, s</sp, a, n>
+              </d, i, v>
+              <div, className="flex, item, s-center, ga, p-2, tex, t-bl, u, e-100, tex, t-sm">";
+                <Target, className="w-4 h-4, tex, t-bl, u, e-4, 0, 0" />";
+                <sp, a, n>$127B, Losses, Prevented Annual, l, y</sp, a, n>
+              </d, i, v>
+              <div, className="flex, item, s-center, ga, p-2, tex, t-bl, u, e-100, tex, t-sm">";
+                <Award, className="w-4 h-4, tex, t-bl, u, e-4, 0, 0" />";
+                <sp, a, n>2,8, 3, 6% R, O, I • 24/7, Monitorin, g</sp, a, n>
+              </d, i, v>
+            </d, i, v>
+            <Li, n, k
+  to="/bl, o, g/ai-20, 2, 5-o, c, t-01-autonomo, u, s-ri, s, k-manageme, n, t-platfo, r, m-revoluti, o, n"
+              classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, p, x-5, p, y-2.5, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-indi, g, o-500, hove, r: fr, o, m-bl, u, e-400, hove, r:to-indi, g, o-400, tex, t-white, fon, t-semibold, rounde, d-lg, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, grou, p-ho, v, e
+  r:sca, l, e-1, 0, 5"
             >
-              Explore Platform
-              <ArrowRight className="w-4 h-4 group-hover: translate-x-1 transition-transform/>",
+              Explore, Platfor, m;
+              <ArrowRight, className="w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
 =======
-              <ArrowRight className="w-4 h-4 group-hover: translate-x-1 transition-transform" />";,
-            </Link>
-          </div>
-
-          {/* AI-Powered Digital Twins */}
-          <div className="group bg-gradient-to-br from-indigo-900/80 to-indigo-950/80 backdrop-blur-sm rounded-2xl p-6 border border-indigo-400/30 hover: border-indigo-400 transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-500/30 hover:scale-105">",
-            <div className="flex items-center gap-3 mb-4">
-              <div className="p-3 rounded-xl bg-indigo-500/20 group-hover: bg-indigo-500/30 transition-colors">",
-                <Target className="w-8 h-8 text-indigo-300/>
+              <ArrowRight, className="w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+            </Li, n, k>
+          </d, i, v>
+          {/* AI-Powered, Digital, Twins */}
+          <div, className="group, b, g-gradie, n, t-to-br, fro, m-indi, g, o-9, 0, 0/80, t, o-indi, g, o-9, 5, 0/80, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-indi, g, o-4, 0, 0/30, hove, r: bord, e, r-indi, g, o-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-indi, g, o-5, 0, 0/30, hov, e
+  r:sca, l, e-1, 0, 5">"
+            <div, className="flex, item, s-center, ga, p-3, m, b-4">
+              <div, className="p-3, rounde, d-xl, b, g-indi, g, o-5, 0, 0/20, grou, p-hov, e, r: bg-indi, g, o-5, 0, 0/30, transitio, n-colo, r, s">"
+                <Target, className="w-8 h-8, tex, t-indi, g, o-3, 0, 0  />
 =======
-          <div className="group bg-gradient-to-br from-indigo-900/80 to-indigo-950/80 backdrop-blur-sm rounded-2xl p-6 border border-indigo-400/30 hover: border-indigo-400 transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-500/30 hover:scale-105">";,
-            <div className="flex items-center gap-3 mb-4">";
-              <div className="p-3 rounded-xl bg-indigo-500/20 group-hover: bg-indigo-500/30 transition-colors">";,
-                <Target className="w-8 h-8 text-indigo-300" />";
-              </div>
-              <div className="flex-1">";
-                <div className="text-xs font-bold text-indigo-300 uppercase tracking-wide mb-1">Digital Intelligence</div>";
-                <div className="text-sm text-indigo-100 font-medium">Real-Time • Self-Learning</div>";
-              </div>
-            </div>
-            <h3 className="text-xl font-bold text-white mb-3 group-hover: text-indigo-300 transition-colors">",
-              Next-Gen AI-Powered Digital Twins
+          <div, className="group, b, g-gradie, n, t-to-br, fro, m-indi, g, o-9, 0, 0/80, t, o-indi, g, o-9, 5, 0/80, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-indi, g, o-4, 0, 0/30, hove, r: bord, e, r-indi, g, o-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-indi, g, o-5, 0, 0/30, hove, r:sca, l, e-1, 0, 5">";
+            <div, className="flex, item, s-center, ga, p-3, m, b-4">";
+              <div, className="p-3, rounde, d-xl, b, g-indi, g, o-5, 0, 0/20, grou, p-hov, e, r: bg-indi, g, o-5, 0, 0/30, transitio, n-colo, r, s">";
+                <Target, className="w-8 h-8, tex, t-indi, g, o-3, 0, 0" />";
+              </d, i, v>
+              <div, className="fl, e, x-1">";
+                <div, className="te, x, t-xs, fon, t-bold, tex, t-indi, g, o-300, uppercase, tracking-wide, m, b-1">Digital, Intelligenc, e</d, i, v>";
+                <div, className="te, x, t-sm, tex, t-indi, g, o-100, fon, t-medi, u, m">Re, a, l-Ti, m, e • Se, l, f-Learni, n, g</d, i, v>";
+              </d, i, v>
+            </d, i, v>
+            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
+  r: te, x, t-indi, g, o-300, transitio, n-colo, r, s">"
+              Ne, x, t-Gen, A, I-Powered, Digital, Twins;
             </h3>
-            <div className="space-y-2 mb-4">
-              <div className="flex items-center gap-2 text-indigo-100 text-sm">
-                <Shield className="w-4 h-4 text-indigo-400/>
-                <span>99.4% Physical-Digital Accuracy</span>
-              </div>
-              <div className="flex items-center gap-2 text-indigo-100 text-sm">
-                <Zap className="w-4 h-4 text-indigo-400/>
-                <span>87% Downtime Reduction</span>
-              </div>
-              <div className="flex items-center gap-2 text-indigo-100 text-sm">
-                <Target className="w-4 h-4 text-indigo-400/>
-                <span>$23.7B Annual Value Creation</span>
-              </div>
-              <div className="flex items-center gap-2 text-indigo-100 text-sm">
-                <Award className="w-4 h-4 text-indigo-400/>
+            <div, className="spa, c, e-y-2, m, b-4">
+              <div, className="flex, item, s-center, ga, p-2, tex, t-indi, g, o-100, tex, t-sm">
+                <Shield, className="w-4 h-4, tex, t-indi, g, o-4, 0, 0  />
+                <sp, a, n>99.4% Physic, a, l-Digital, Accurac, y</sp, a, n>
+              </d, i, v>
+              <div, className="flex, item, s-center, ga, p-2, tex, t-indi, g, o-100, tex, t-sm">
+                <Zap, className="w-4 h-4, tex, t-indi, g, o-4, 0, 0  />
+                <sp, a, n>87% Downtime, Reductio, n</sp, a, n>
+              </d, i, v>
+              <div, className="flex, item, s-center, ga, p-2, tex, t-indi, g, o-100, tex, t-sm">
+                <Target, className="w-4 h-4, tex, t-indi, g, o-4, 0, 0  />
+                <sp, a, n>$23.7B, Annual, Value Creati, o, n</sp, a, n>
+              </d, i, v>
+              <div, className="flex, item, s-center, ga, p-2, tex, t-indi, g, o-100, tex, t-sm">
+                <Award, className="w-4 h-4, tex, t-indi, g, o-4, 0, 0  />
 =======
-            <h3 className="text-xl font-bold text-white mb-3 group-hover: text-indigo-300 transition-colors">";,
-              Next-Gen AI-Powered Digital Twins
+            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-indi, g, o-300, transitio, n-colo, r, s">";
+              Ne, x, t-Gen, A, I-Powered, Digital, Twins;
             </h3>
-            <div className="space-y-2 mb-4">";
-              <div className="flex items-center gap-2 text-indigo-100 text-sm">";
-                <Shield className="w-4 h-4 text-indigo-400" />";
-                <span>99.4% Physical-Digital Accuracy</span>
-              </div>
-              <div className="flex items-center gap-2 text-indigo-100 text-sm">";
-                <Zap className="w-4 h-4 text-indigo-400" />";
-                <span>87% Downtime Reduction</span>
-              </div>
-              <div className="flex items-center gap-2 text-indigo-100 text-sm">";
-                <Target className="w-4 h-4 text-indigo-400" />";
-                <span>$23.7B Annual Value Creation</span>
-              </div>
-              <div className="flex items-center gap-2 text-indigo-100 text-sm">";
-                <Award className="w-4 h-4 text-indigo-400" />";
-                <span>5,575% ROI • 94% Failure Prediction</span>
-              </div>
-            </div>
-            <Link 
-              to="/blog/ai-2025-oct-01-next-gen-digital-twins-enterprise-transformation"
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-indigo-500 to-purple-500 hover: from-indigo-400 hover:to-purple-400 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 group-hover:scale-105",
+            <div, className="spa, c, e-y-2, m, b-4">";
+              <div, className="flex, item, s-center, ga, p-2, tex, t-indi, g, o-100, tex, t-sm">";
+                <Shield, className="w-4 h-4, tex, t-indi, g, o-4, 0, 0" />";
+                <sp, a, n>99.4% Physic, a, l-Digital, Accurac, y</sp, a, n>
+              </d, i, v>
+              <div, className="flex, item, s-center, ga, p-2, tex, t-indi, g, o-100, tex, t-sm">";
+                <Zap, className="w-4 h-4, tex, t-indi, g, o-4, 0, 0" />";
+                <sp, a, n>87% Downtime, Reductio, n</sp, a, n>
+              </d, i, v>
+              <div, className="flex, item, s-center, ga, p-2, tex, t-indi, g, o-100, tex, t-sm">";
+                <Target, className="w-4 h-4, tex, t-indi, g, o-4, 0, 0" />";
+                <sp, a, n>$23.7B, Annual, Value Creati, o, n</sp, a, n>
+              </d, i, v>
+              <div, className="flex, item, s-center, ga, p-2, tex, t-indi, g, o-100, tex, t-sm">";
+                <Award, className="w-4 h-4, tex, t-indi, g, o-4, 0, 0" />";
+                <sp, a, n>5,5, 7, 5% R, O, I • 94% Failure, Predictio, n</sp, a, n>
+              </d, i, v>
+            </d, i, v>
+            <Li, n, k
+  to="/bl, o, g/ai-20, 2, 5-o, c, t-01-ne, x, t-g, e, n-digit, a, l-twi, n, s-enterpri, s, e-transformati, o, n"
+              classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, p, x-5, p, y-2.5, b, g-gradie, n, t-to-r, fro, m-indi, g, o-500, t, o-purp, l, e-500, hove, r: fr, o, m-indi, g, o-400, hove, r:to-purp, l, e-400, tex, t-white, fon, t-semibold, rounde, d-lg, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-indi, g, o-5, 0, 0/50, grou, p-ho, v, e
+  r:sca, l, e-1, 0, 5"
             >
-              Discover Technology
-              <ArrowRight className="w-4 h-4 group-hover: translate-x-1 transition-transform/>",
+              Discover, Technolog, y;
+              <ArrowRight, className="w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
 =======
-              <ArrowRight className="w-4 h-4 group-hover: translate-x-1 transition-transform" />";,
-            </Link>
-          </div>
-        </div>
-
-        {/* Why These Technologies Matter */}
-        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 mb-8">";
-          <h3 className="text-2xl font-bold text-white mb-6 text-center">";
-            🎯 Why These Technologies Are Game-Changers
+              <ArrowRight, className="w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+            </Li, n, k>
+          </d, i, v>
+        </d, i, v>
+        {/* Why, These, Technologies Matt, e, r */}
+        <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, border, border-whi, t, e/20, m, b-8">";
+          <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r">";
+            🎯 Why, These, Technologies Are, Gam, e-Change, r, s;
           </h3>
-          <div className="grid md: grid-cols-3 gap-6">",
-            <div className="text-center">
-              <div className="text-cyan-300 text-3xl font-bold mb-2">3-5 Years</div>
-              <div className="text-white text-sm font-medium">Quantum Threat Window</div>
-              <div className="text-cyan-200 text-xs mt-1">Deploy quantum-safe security NOW before it's too late</div>;
+          <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">"
+            <div, className="te, x, t-cent, e, r">
+              <div, className="te, x, t-cy, a, n-300, tex, t-3xl, fon, t-bold, m, b-2">3-5, Year, s</d, i, v>
+              <div, className="te, x, t-white, tex, t-sm, fon, t-medi, u, m">Quantum, Threat, Window</d, i, v>
+              <div, className="te, x, t-cy, a, n-200, tex, t-xs, m, t-1">Deploy, quantu, m-safe, security, NOW before, i, t's, too, late</d, i, v>;
 =======
-          <div className="grid md: grid-cols-3 gap-6">";,
-            <div className="text-center">";
-              <div className="text-cyan-300 text-3xl font-bold mb-2">3-5 Years</div>";
-              <div className="text-white text-sm font-medium">Quantum Threat Window</div>";
-              <div className="text-cyan-200 text-xs mt-1">Deploy quantum-safe security NOW before it's too late</div>';
-            </div>
-            <div className="text-center">";
-              <div className="text-blue-300 text-3xl font-bold mb-2">90+ Days</div>";
-              <div className="text-white text-sm font-medium">Risk Prediction Lead Time</div>";
-              <div className="text-blue-200 text-xs mt-1">Prevent crises before they happen with AI foresight</div>";
-            </div>
-            <div className="text-center">";
-              <div className="text-indigo-300 text-3xl font-bold mb-2">100ms</div>";
-              <div className="text-white text-sm font-medium">Digital Twin Sync Speed</div>";
-              <div className="text-indigo-200 text-xs mt-1">Real-time operational intelligence at your fingertips</div>";
-            </div>
-          </div>
-        </div>
-
-        {/* Industry Applications */}
-        <div className="mb-8">";
-          <h3 className="text-2xl font-bold text-white mb-6 text-center">";
-            🌐 Proven Results Across Industries
+          <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">";
+            <div, className="te, x, t-cent, e, r">";
+              <div, className="te, x, t-cy, a, n-300, tex, t-3xl, fon, t-bold, m, b-2">3-5, Year, s</d, i, v>";
+              <div, className="te, x, t-white, tex, t-sm, fon, t-medi, u, m">Quantum, Threat, Window</d, i, v>";
+              <div, className="te, x, t-cy, a, n-200, tex, t-xs, m, t-1">Deploy, quantu, m-safe, security, NOW before, i, t's, too, late</d, i, v>';
+            </d, i, v>
+            <div, className="te, x, t-cent, e, r">";
+              <div, className="te, x, t-bl, u, e-300, tex, t-3xl, fon, t-bold, m, b-2">90+ Da, y, s</d, i, v>";
+              <div, className="te, x, t-white, tex, t-sm, fon, t-medi, u, m">Risk, Prediction, Lead Ti, m, e</d, i, v>";
+              <div, className="te, x, t-bl, u, e-200, tex, t-xs, m, t-1">Prevent, crises, before they, happen, with AI, foresigh, t</d, i, v>";
+            </d, i, v>
+            <div, className="te, x, t-cent, e, r">";
+              <div, className="te, x, t-indi, g, o-300, tex, t-3xl, fon, t-bold, m, b-2">100, m, s</d, i, v>";
+              <div, className="te, x, t-white, tex, t-sm, fon, t-medi, u, m">Digital, Twin, Sync Spe, e, d</d, i, v>";
+              <div, className="te, x, t-indi, g, o-200, tex, t-xs, m, t-1">Re, a, l-time, operational, intelligence at, your, fingertips</d, i, v>";
+            </d, i, v>
+          </d, i, v>
+        </d, i, v>
+        {/* Industry, Application, s */}
+        <div, className="mb-8">";
+          <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r">";
+            🌐 Proven, Results, Across Industri, e, s;
           </h3>
-          <div className="grid grid-cols-2 md: grid-cols-5 gap-4">",
-            <div className="text-center p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover: border-cyan-400/50 transition-all duration-300 hover:scale-105">",
-              <div className="text-2xl mb-2">🏭</div>
-              <div className="text-white text-sm font-semibold">Manufacturing</div>
-              <div className="text-cyan-200 text-xs mt-1">127x ROI Average</div>
-            </div>
-            <div className="text-center p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover: border-blue-400/50 transition-all duration-300 hover:scale-105">",
-              <div className="text-2xl mb-2">🏦</div>
-              <div className="text-white text-sm font-semibold">Financial Services</div>
-              <div className="text-blue-200 text-xs mt-1">845x ROI Average</div>
-            </div>
-            <div className="text-center p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover: border-indigo-400/50 transition-all duration-300 hover:scale-105">",
-              <div className="text-2xl mb-2">🏥</div>
-              <div className="text-white text-sm font-semibold">Healthcare</div>
-              <div className="text-indigo-200 text-xs mt-1">47x ROI Average</div>
-            </div>
-            <div className="text-center p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover: border-purple-400/50 transition-all duration-300 hover:scale-105">",
-              <div className="text-2xl mb-2">⚡</div>
-              <div className="text-white text-sm font-semibold">Energy & Utilities</div>
-              <div className="text-purple-200 text-xs mt-1">89x ROI Average</div>
-            </div>
-            <div className="text-center p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover: border-pink-400/50 transition-all duration-300 hover:scale-105">",
-              <div className="text-2xl mb-2">🏙️</div>
-              <div className="text-white text-sm font-semibold">Smart Cities</div>
-              <div className="text-pink-200 text-xs mt-1">34x ROI Average</div>
+          <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-5, ga, p-4">"
+            <div, className="te, x, t-cente, r, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/20, hove, r: bord, e, r-cy, a, n-4, 0, 0/50, transitio, n-all, duratio, n-300, hov, e
+  r:sca, l, e-1, 0, 5">"
+              <div, className="te, x, t-2xl, m, b-2">🏭</d, i, v>
+              <div, className="te, x, t-white, tex, t-sm, fon, t-semibo, l, d">Manufacturi, n, g</d, i, v>
+              <div, className="te, x, t-cy, a, n-200, tex, t-xs, m, t-1">127x, ROI, Average</d, i, v>
+            </d, i, v>
+            <div, className="te, x, t-cente, r, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/20, hove, r: bord, e, r-bl, u, e-4, 0, 0/50, transitio, n-all, duratio, n-300, hov, e
+  r:sca, l, e-1, 0, 5">"
+              <div, className="te, x, t-2xl, m, b-2">🏦</d, i, v>
+              <div, className="te, x, t-white, tex, t-sm, fon, t-semibo, l, d">Financial, Service, s</d, i, v>
+              <div, className="te, x, t-bl, u, e-200, tex, t-xs, m, t-1">845x, ROI, Average</d, i, v>
+            </d, i, v>
+            <div, className="te, x, t-cente, r, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/20, hove, r: bord, e, r-indi, g, o-4, 0, 0/50, transitio, n-all, duratio, n-300, hov, e
+  r:sca, l, e-1, 0, 5">"
+              <div, className="te, x, t-2xl, m, b-2">🏥</d, i, v>
+              <div, className="te, x, t-white, tex, t-sm, fon, t-semibo, l, d">Healthca, r, e</d, i, v>
+              <div, className="te, x, t-indi, g, o-200, tex, t-xs, m, t-1">47x, ROI, Average</d, i, v>
+            </d, i, v>
+            <div, className="te, x, t-cente, r, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/20, hove, r: bord, e, r-purp, l, e-4, 0, 0/50, transitio, n-all, duratio, n-300, hov, e
+  r:sca, l, e-1, 0, 5">"
+              <div, className="te, x, t-2xl, m, b-2">⚡</d, i, v>
+              <div, className="te, x, t-white, tex, t-sm, fon, t-semibo, l, d">Ener, g, y & Utiliti, e, s</d, i, v>
+              <div, className="te, x, t-purp, l, e-200, tex, t-xs, m, t-1">89x, ROI, Average</d, i, v>
+            </d, i, v>
+            <div, className="te, x, t-cente, r, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/20, hove, r: bord, e, r-pi, n, k-4, 0, 0/50, transitio, n-all, duratio, n-300, hov, e
+  r:sca, l, e-1, 0, 5">"
+              <div, className="te, x, t-2xl, m, b-2">🏙️</d, i, v>
+              <div, className="te, x, t-white, tex, t-sm, fon, t-semibo, l, d">Smart, Citie, s</d, i, v>
+              <div, className="te, x, t-pi, n, k-200, tex, t-xs, m, t-1">34x, ROI, Average</d, i, v>
 =======
-          <div className="grid grid-cols-2 md: grid-cols-5 gap-4">";,
-            <div className="text-center p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover: border-cyan-400/50 transition-all duration-300 hover:scale-105">";,
-              <div className="text-2xl mb-2">🏭</div>";
-              <div className="text-white text-sm font-semibold">Manufacturing</div>";
-              <div className="text-cyan-200 text-xs mt-1">127x ROI Average</div>";
-            </div>
-            <div className="text-center p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover: border-blue-400/50 transition-all duration-300 hover:scale-105">";,
-              <div className="text-2xl mb-2">🏦</div>";
-              <div className="text-white text-sm font-semibold">Financial Services</div>";
-              <div className="text-blue-200 text-xs mt-1">845x ROI Average</div>";
-            </div>
-            <div className="text-center p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover: border-indigo-400/50 transition-all duration-300 hover:scale-105">";,
-              <div className="text-2xl mb-2">🏥</div>";
-              <div className="text-white text-sm font-semibold">Healthcare</div>";
-              <div className="text-indigo-200 text-xs mt-1">47x ROI Average</div>";
-            </div>
-            <div className="text-center p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover: border-purple-400/50 transition-all duration-300 hover:scale-105">";,
-              <div className="text-2xl mb-2">⚡</div>";
-              <div className="text-white text-sm font-semibold">Energy & Utilities</div>";
-              <div className="text-purple-200 text-xs mt-1">89x ROI Average</div>";
-            </div>
-            <div className="text-center p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover: border-pink-400/50 transition-all duration-300 hover:scale-105">";,
-              <div className="text-2xl mb-2">🏙️</div>";
-              <div className="text-white text-sm font-semibold">Smart Cities</div>";
-              <div className="text-pink-200 text-xs mt-1">34x ROI Average</div>";
-            </div>
-          </div>
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center">
-          <div className="inline-flex flex-col sm: flex-row gap-4 items-center justify-center">",
+          <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-5, ga, p-4">";
+            <div, className="te, x, t-cente, r, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/20, hove, r: bord, e, r-cy, a, n-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5">";
+              <div, className="te, x, t-2xl, m, b-2">🏭</d, i, v>";
+              <div, className="te, x, t-white, tex, t-sm, fon, t-semibo, l, d">Manufacturi, n, g</d, i, v>";
+              <div, className="te, x, t-cy, a, n-200, tex, t-xs, m, t-1">127x, ROI, Average</d, i, v>";
+            </d, i, v>
+            <div, className="te, x, t-cente, r, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/20, hove, r: bord, e, r-bl, u, e-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5">";
+              <div, className="te, x, t-2xl, m, b-2">🏦</d, i, v>";
+              <div, className="te, x, t-white, tex, t-sm, fon, t-semibo, l, d">Financial, Service, s</d, i, v>";
+              <div, className="te, x, t-bl, u, e-200, tex, t-xs, m, t-1">845x, ROI, Average</d, i, v>";
+            </d, i, v>
+            <div, className="te, x, t-cente, r, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/20, hove, r: bord, e, r-indi, g, o-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5">";
+              <div, className="te, x, t-2xl, m, b-2">🏥</d, i, v>";
+              <div, className="te, x, t-white, tex, t-sm, fon, t-semibo, l, d">Healthca, r, e</d, i, v>";
+              <div, className="te, x, t-indi, g, o-200, tex, t-xs, m, t-1">47x, ROI, Average</d, i, v>";
+            </d, i, v>
+            <div, className="te, x, t-cente, r, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/20, hove, r: bord, e, r-purp, l, e-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5">";
+              <div, className="te, x, t-2xl, m, b-2">⚡</d, i, v>";
+              <div, className="te, x, t-white, tex, t-sm, fon, t-semibo, l, d">Ener, g, y & Utiliti, e, s</d, i, v>";
+              <div, className="te, x, t-purp, l, e-200, tex, t-xs, m, t-1">89x, ROI, Average</d, i, v>";
+            </d, i, v>
+            <div, className="te, x, t-cente, r, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/20, hove, r: bord, e, r-pi, n, k-4, 0, 0/50, transitio, n-all, duratio, n-300, hov, e
+  r:sca, l, e-1, 0, 5">";
+              <div, className="te, x, t-2xl, m, b-2">🏙️</d, i, v>";
+              <div, className="te, x, t-white, tex, t-sm, fon, t-semibo, l, d">Smart, Citie, s</d, i, v>";
+              <div, className="te, x, t-pi, n, k-200, tex, t-xs, m, t-1">34x, ROI, Average</d, i, v>";
+            </d, i, v>
+          </d, i, v>
+        </d, i, v>
+        {/* Call, to, Action */}
+        <div, className="te, x, t-cent, e, r">
+          <div, className="inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, item, s-center, justif, y-cent, e, r">"
 =======
-        <div className="text-center">";
-          <div className="inline-flex flex-col sm: flex-row gap-4 items-center justify-center">";,
-            <Link 
-              to="/blog"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-500 hover: from-cyan-400 hover:via-blue-400 hover:to-indigo-400 text-white font-bold rounded-xl transition-all duration-300 shadow-2xl hover:shadow-cyan-500/50 hover:scale-105 text-lg",
+        <div, className="te, x, t-cent, e, r">";
+          <div, className="inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, item, s-center, justif, y-cent, e, r">";
+            <Li, n, k
+  to="/bl, o, g"
+              classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, vi, a-bl, u, e-500, t, o-indi, g, o-500, hove, r: fr, o, m-cy, a, n-400, hove, r:v, i, a-bl, u, e-400, hove, r:to-indi, g, o-400, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-2xl, hove, r:shad, o, w-cy, a, n-5, 0, 0/50, hov, e
+  r:sca, l, e-105, tex, t-lg"
             >
-              <Sparkles className="w-6 h-6/>
-              Read All 3 Breakthrough Articles
-              <ArrowRight className="w-6 h-6/>
+              <Sparkles, className="w-6 h-6  />
+              Read, All, 3 Breakthrough, Article, s;
+              <ArrowRight, className="w-6 h-6  />
 =======
-              <Sparkles className="w-6 h-6" />";
-              Read All 3 Breakthrough Articles
-              <ArrowRight className="w-6 h-6" />";
-            </Link>
-            <Link 
-              to="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 hover: bg-white/20 backdrop-blur-sm text-white font-bold rounded-xl transition-all duration-300 border-2 border-white/30 hover:border-white/60 hover:scale-105 text-lg",
+              <Sparkles, className="w-6 h-6" />";
+              Read, All, 3 Breakthrough, Article, s;
+              <ArrowRight, className="w-6 h-6" />";
+            </Li, n, k>
+            <Li, n, k
+  to="/conta, c, t"
+              classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, b, g-whi, t, e/10, hove, r: bg-whi, t, e/20, backdro, p-bl, u, r-sm, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, borde, r-2, borde, r-whi, t, e/30, hove, r:bord, e, r-whi, t, e/60, hov, e
+  r:sca, l, e-105, tex, t-lg"
             >
-              Get Free Assessment
-              <ArrowRight className="w-6 h-6/>
+              Get, Free, Assessment;
+              <ArrowRight, className="w-6 h-6  />
 =======
-              <ArrowRight className="w-6 h-6" />";
-            </Link>
-          </div>
-          <p className="text-cyan-200 text-sm mt-4">";
-            ⚡ <strong>Limited Time</strong>: Free technology assessment for qualified enterprises • No obligation
+              <ArrowRight, className="w-6 h-6" />";
+            </Li, n, k>
+          </d, i, v>
+          <p, className="te, x, t-cy, a, n-200, tex, t-sm, m, t-4">";
+            ⚡ <stro, n, g>Limited, Tim, e</stro, n, g>: Free, technology, assessment for, qualified, enterprises • No, obligatio, n;
           </p>
-        </div>
-
-        {/* Trust Indicators */}
-        <div className="mt-10 pt-8 border-t border-white/20 text-center">";
-          <div className="text-cyan-200 text-sm mb-3">";
-            <strong>Trusted by Fortune 500 Leaders</strong> • 89+ Enterprise Deployments • $251B+ Value Created
-          </div>
-          <div className="flex flex-wrap items-center justify-center gap-6 text-white/60 text-xs">";
-            <span>✅ NIST-Certified</span>
-            <span>•</span>
-            <span>✅ ISO 27001</span>
-            <span>•</span>
-            <span>✅ SOC 2 Type II</span>
-            <span>•</span>
-            <span>✅ GDPR Compliant</span>
-            <span>•</span>
-            <span>✅ 99.99% Uptime SLA</span>
-          </div>
-        </div>
-      </div>
-    </div>
+        </d, i, v>
+        {/* Trust, Indicator, s */}
+        <div, className="mt-10, p, t-8, borde, r-t, borde, r-whi, t, e/20, tex, t-cent, e, r">";
+          <div, className="te, x, t-cy, a, n-200, tex, t-sm, m, b-3">";
+            <stro, n, g>Trusted, by, Fortune 500, Leader, s</stro, n, g> • 89+ Enterprise, Deployment, s • $25, 1, B+ Value, Create, d;
+          </d, i, v>
+          <div, className="flex, fle, x-wrap, item, s-center, justif, y-center, ga, p-6, tex, t-whi, t, e/60, tex, t-xs">";
+            <sp, a, n>✅ NI, S, T-Certifi, e, d</sp, a, n>
+            <sp, a, n>•</sp, a, n>
+            <sp, a, n>✅ ISO, 2700, 1</sp, a, n>
+            <sp, a, n>•</sp, a, n>
+            <sp, a, n>✅ SOC, 2, Type II</sp, a, n>
+            <sp, a, n>•</sp, a, n>
+            <sp, a, n>✅ GDPR, Complian, t</sp, a, n>
+            <sp, a, n>•</sp, a, n>
+            <sp, a, n>✅ 99.99% Uptime, SL, A</sp, a, n>
+          </d, i, v>
+        </d, i, v>
+      </d, i, v>
+    </d, i, v>
   );
 };
-
 export default October2025TechBreakthroughBanner;
 ;

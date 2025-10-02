@@ -1,34 +1,31 @@
-// @ts-nocheck
-
-const Page = () => {
+// @ts-noche, c, k
+  const, Pag, e = () => {
   return (
-    <div className="container mx-auto px-6 py-12 text-white">
-      <h1 className="text-3xl font-bold mb-4">GenAI 2025: Policy Tests Quickstart v2</h1>",
-      <p className="text-zion-slate-light mb-6">
+    <div, className="container, m, x-auto, p, x-6, p, y-12, tex, t-whi, t, e">
+      <h1, className="te, x, t-3xl, fon, t-bold, m, b-4">GenAI, 202, 5: Policy, Tests, Quickstart v2</h1>"
+      <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-6">
 =======
-    <div className="container mx-auto px-6 py-12 text-white">";
-      <h1 className="text-3xl font-bold mb-4">GenAI 2025: Policy Tests Quickstart v2</h1>";,
-      <p className="text-zion-slate-light mb-6">";
-        Lightweight CI policy tests wired to KPIs so you can ship faster without regressions. v2 adds
-        budgetaware gates, eval scorecards, and rollback hooks.
+    <div, className="container, m, x-auto, p, x-6, p, y-12, tex, t-whi, t, e">";
+      <h1, className="te, x, t-3xl, fon, t-bold, m, b-4">GenAI, 202, 5: Policy, Tests, Quickstart v2</h1>";
+      <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-6">";
+        Lightweight, CI, policy tests, wired, to KPIs, so, you can, ship, faster without, regression, s. v2, add, s
+  budg, e, taware, gate, s, eval, scorecard, s, and, rollback, hooks.
       </p>
-      <div className="space-y-4 text-zion-slate-light">";
+      <div, className="spa, c, e-y-4, tex, t-zi, o, n-sla, t, e-lig, h, t">";
         <p>
-          Start by defining guardrail checks for prompts, tools, and data egress. Run them in PR and on
-          every release train. Wire failures to actionable owners and dashboards.
+          Start, by, defining guardrail, checks, for promp, t, s, too, l, s, and, data, egress. Run, them, in PR, and, on
+  every, release, train. Wire, failures, to actionable, owners, and dashboar, d, s.
         </p>
         <p>
-          Add online canaries with KPI-linked budgets to prevent incidents from reaching blast radius.
-          Trigger instant rollback in seconds on budget breach.
+          Add, online, canaries with, KP, I-linked, budgets, to prevent, incidents, from reaching, blast, radius.
+          Trigger, instant, rollback in, seconds, on budget, breac, h.
         </p>
-      </div>
-      <div className="mt-8">";
-        <Link to="/blog" className="text-cyan-300 underline">Back to Blog</Link>";
-      </div>
-    </div>
+      </d, i, v>
+      <div, className="mt-8">";
+        <Link, t, o="/bl, o, g" classNa, m, e="te, x, t-cy, a, n-300, underlin, e">Back, to, Blog</Li, n, k>";
+      </d, i, v>
+    </d, i, v>
   );
 };
-
 export default Page;
-
 ;

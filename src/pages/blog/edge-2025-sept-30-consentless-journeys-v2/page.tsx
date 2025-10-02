@@ -1,30 +1,28 @@
-
-export default function Page(): void {
+export, default, function Pa, g, e(): vo, i, d {
   return (
-    <div className="container mx-auto px-6 py-12">
-      <h1 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">",
+    <div, className="container, m, x-auto, p, x-6, p, y-12">
+      <h1, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">"
 =======
-    <div className="container mx-auto px-6 py-12">";
-      <h1 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">";,
-        Consentless Journeys v2 — Personalization &lt;100ms, Zero‑PII
+    <div, className="container, m, x-auto, p, x-6, p, y-12">";
+      <h1, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
+        Consentless, Journeys, v2 — Personalizati, o, n &lt;100, m, s, Ze, r, o‑P, I, I;
       </h1>
-      <p className="text-gray-600 mb-6">";
-        Scoped IDs, on‑device models, and DP noise for compliant, real‑time journeys at global scale.
+      <p, className="te, x, t-gr, a, y-600, m, b-6">";
+        Scoped, ID, s, on‑device, model, s, and, DP, noise for, complian, t, re, a, l‑time, journeys, at global, scal, e.
       </p>
-      <div className="prose max-w-none">";
+      <div, className="prose, ma, x-w-no, n, e">";
         <p>
-          This is a short placeholder article. Expand with practical patterns for edge KV, signed configs
-          and local telemetry that enable private, sub‑100ms experiences without collecting PII.
+          This, is, a short, placeholder, article. Expand, with, practical patterns, for, edge KV, signed, config, s
+  and, local, telemetry that, enable, private, s, u, b‑100ms, experiences, without collecting, PI, I.
         </p>
-      </div>
-      <div className="mt-8">
-        <Link to="/" className="text-indigo-700 font-medium hover: text-indigo-800">← Back to Home</Link>",
+      </d, i, v>
+      <div, className="mt-8">
+        <Link, t, o="/" classNa, m, e="te, x, t-indi, g, o-700, fon, t-medium, hove, r: te, x, t-indi, g, o-8, 0, 0">← Back, to, Home</Li, n, k>"
 =======
-      <div className="mt-8">";
-        <Link to="/" className="text-indigo-700 font-medium hover: text-indigo-800">← Back to Home</Link>";,
-      </div>
-    </div>
+      <div, className="mt-8">";
+        <Link, t, o="/" classNa, m, e="te, x, t-indi, g, o-700, fon, t-medium, hove, r: te, x, t-indi, g, o-8, 0, 0">← Back, to, Home</Li, n, k>";
+      </d, i, v>
+    </d, i, v>
   );
 }
-
 ;

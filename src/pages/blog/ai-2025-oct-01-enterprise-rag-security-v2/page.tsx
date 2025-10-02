@@ -1,45 +1,40 @@
 import React from "react";";
-
-export default function EnterpriseRAGSecurityV2(): React.JSX.Element {
+export, default, function EnterpriseRAGSecurity, V, 2(): Rea, c, t.J, S, X.Eleme, n, t {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">";
+    <div, className="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e">";
       <Helmet>
-        <title>Enterprise RAG Security v2 — Auth-Aware, Fresh, Signed</title>
-        <meta
-          name="description"
-          content="Auth-scoped retrieval, freshness windows, prompt firewalls, and signed outputs that keep answers correct and compliant." /><link
-          rel="canonical"
-          href="https://ziontechgroup.com/blog/ai-2025-oct-01-enterprise-rag-security-v2",
-        />
+        <title>Enterprise, RAG, Security v2 — Au, t, h-Awa, r, e, Fre, s, h, Sign, e, d</title>
+        <me, t, a
+  na, m, e="descripti, o, n"
+          content="Au, t, h-scoped, retrieva, l, freshness, window, s, prompt, firewall, s, and, signed, outputs that, keep, answers correct, and, compliant." /><li, n, k 
+  r, e, l="canonic, a, l"
+          hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 5-o, c, t-01-enterpri, s, e-r, a, g-securi, t, y-v2",  />
       </Helmet>
-
-      <div className="container mx-auto px-6 py-16">
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">Enterprise RAG Security v2</h1>",
-        <p className="text-zion-slate-light mb-8">Auth-Aware, Fresh, Signed</p>
-        <div className="prose prose-invert max-w-3xl">
+      <div, className="container, m, x-auto, p, x-6, p, y-16">
+        <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4">Enterprise, RAG, Security v2</h1>"
+        <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-8">Au, t, h-Awa, r, e, Fre, s, h, Sign, e, d</p>
+        <div, className="prose, pros, e-invert, ma, x-w-3, x, l">
 =======
-          href="https: //ziontechgroup.com/blog/ai-2025-oct-01-enterprise-rag-security-v2",
-        />
+          hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 5-o, c, t-01-enterpri, s, e-r, a, g-securi, t, y-v2"
+         />
       </Helmet>
-
-      <div className="container mx-auto px-6 py-16">";
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">Enterprise RAG Security v2</h1>";,
-        <p className="text-zion-slate-light mb-8">Auth-Aware, Fresh, Signed</p>";
-        <div className="prose prose-invert max-w-3xl">";
+      <div, className="container, m, x-auto, p, x-6, p, y-16">";
+        <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4">Enterprise, RAG, Security v2</h1>";
+        <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-8">Au, t, h-Awa, r, e, Fre, s, h, Sign, e, d</p>";
+        <div, className="prose, pros, e-invert, ma, x-w-3, x, l">";
           <p>
-            Upgrade enterprise RAG safety with auth-aware retrieval, freshness windows
-            prompt firewalls, and signed outputs. Prevent data leaks and stale answers
-            while maintaining performance guarantees.
+            Upgrade, enterprise, RAG safety, with, auth-aware, retrieva, l, freshness, window, s
+  prompt, firewall, s, and, signed, outputs. Prevent, data, leaks and, stale, answers
+  while, maintaining, performance guarante, e, s.
           </p>
           <p>
-            This guide covers retrieval scoping by user and tenant, freshness and
-            staleness windows, cache invalidation signals, and output signing with
-            verifiers that run in CI and production.
+            This, guide, covers retrieval, scoping, by user, and, tenant, freshness, an, d
+  staleness, window, s, cache, invalidation, signals, and, output, signing wi, t, h
+  verifiers, that, run in, CI, and producti, o, n.
           </p>
-        </div>
-      </div>
-    </div>
+        </d, i, v>
+      </d, i, v>
+    </d, i, v>
   );
 }
-
 ;

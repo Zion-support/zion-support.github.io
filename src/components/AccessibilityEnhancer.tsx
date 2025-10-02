@@ -1,112 +1,98 @@
-import React, { useEffect, PropsWithChildren } from 'react';
-
-const AccessibilityEnhancer: React.FC<PropsWithChildren> = ({ children }) => {
-  useEffect(() => {
-    // Skip link functionality
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Tab') {
-        document.body.classList.add('keyboard-navigation');
+import, Reac, t, { useEffe, c, t, PropsWithChildr, e, n } fr, o, m "rea, c, t";
+const, AccessibilityEnhance, r: Rea, c, t.FC<PropsWithChildr, e, n> = ({ childr, e, n }) => {
+  useEffe, c, t(() => {
+    // Skip, link, functionality
+  const, handleKeyDow, n = (eve, n, t: KeyboardEve, n, t) => {
+      if (eve, n, t.k, e, y === 'T, a, b') {
+        docume, n, t.bo, d, y.classLi, s, t.a, d, d('keyboa, r, d-navigati, o, n');
       }
 =======
-const AccessibilityEnhancer: React.FC = () => {
-useEffect(() => {
-// Skip link functionality
-const handleKeyDown = (event: KeyboardEvent) => {,
-if (event.key === 'Tab') {
-document.body.classList.add('keyboard-navigation');
+const, AccessibilityEnhance, r: Rea, c, t.FC = () => {
+useEffe, c, t(() => {
+// Skip, link, functionality
+  const, handleKeyDow, n = (ev, e, n
+  t: KeyboardEve, n, t) => {
+if (eve, n, t.k, e, y === 'T, a, b') {
+docume, n, t.bo, d, y.classLi, s, t.a, d, d('keyboa, r, d-navigati, o, n');
 }
     };
-
-    const handleMouseDown = () => {
-      document.body.classList.remove('keyboard-navigation');
+    const, handleMouseDow, n = () => {
+      docume, n, t.bo, d, y.classLi, s, t.remo, v, e('keyboa, r, d-navigati, o, n');
     };
-
-    // Focus management for modals and overlays
-    // const trapFocus = (element: HTMLElement) => {
-    //   const focusableElements = element.querySelectorAll(
-    //     'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    // Focus, management, for modals, and, overlays;
+    // const, trapFocu, s = (eleme, n, t: HTMLEleme, n, t) => {
+    //   const, focusableElement, s = eleme, n, t.querySelectorA, l, l(
+    //     'butt, o, n, [hr, e, f], inp, u, t, sele, c, t, textar, e, a, [tabind, e, x]:n, o, t([tabind, e, x="-1"])'
     //   );
-    //   const firstElement = focusableElements[0] as HTMLElement;
-    //   const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
-
-    //   const handleTabKey = (e: KeyboardEvent) => {
-    //     if (e.key === 'Tab') {
-    //       if (e.shiftKey) {
-    //         if (document.activeElement === firstElement) {
-    //           lastElement.focus();
-    //           e.preventDefault();
+    //   const, firstElemen, t = focusableElemen, t, s[0] as, HTMLElemen, t;
+    //   const, lastElemen, t = focusableElemen, t, s[focusableElemen, t, s.leng, t, h - 1] as, HTMLElemen, t;
+    //   const, handleTabKe, y = (e: KeyboardEve, n, t) => {
+    //     if (e.k, e, y === 'T, a, b') {
+    //       if (e.shiftK, e, y) {
+    //         if (docume, n, t.activeEleme, n, t === firstEleme, n, t) {
+    //           lastEleme, n, t.foc, u, s();
+    //           e.preventDefau, l, t();
     //         }
-    //       } else {
-    //         if (document.activeElement === lastElement) {
-    //           firstElement.focus();
-    //           e.preventDefault();
+    //       } el, s, e {
+    //         if (docume, n, t.activeEleme, n, t === lastEleme, n, t) {
+    //           firstEleme, n, t.foc, u, s();
+    //           e.preventDefau, l, t();
     //         }
     //       }
     //     }
     //   };
-
-    //   element.addEventListener('keydown', handleTabKey);
-    //   firstElement?.focus();
-
+    //   eleme, n, t.addEventListen, e, r('keydo, w, n', handleTabK, e, y);
+    //   firstEleme, n, t?.foc, u, s();
     //   return () => {
-    //     element.removeEventListener('keydown', handleTabKey);
+    //     eleme, n, t.removeEventListen, e, r('keydo, w, n', handleTabK, e, y);
     //   };
     // };
-
-    // Add ARIA labels to interactive elements without labels
-    const addAriaLabels = () => {
-      const buttons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
-      buttons.forEach((button) => {
-        const text = button.textContent?.trim();
-        if (text && text.length > 0) {
-          button.setAttribute('aria-label', text);
+    // Add, ARIA, labels to, interactive, elements without, label, s
+  const, addAriaLabel, s = () => {
+      const, button, s = docume, n, t.querySelectorA, l, l('butt, o, n:n, o, t([ar, i, a-lab, e, l]):n, o, t([ar, i, a-labelled, b, y])');
+      butto, n, s.forEa, c, h((butt, o, n) => {
+        const, tex, t = butt, o, n.textConte, n, t?.tr, i, m();
+        if (te, x, t && te, x, t.leng, t, h > 0) {
+          butt, o, n.setAttribu, t, e('ar, i, a-lab, e, l', te, x, t);
         }
       });
-
-      const links = document.querySelectorAll('a:not([aria-label]):not([aria-labelledby])');
-      links.forEach((link) => {
-        const text = link.textContent?.trim();
-        if (text && text.length > 0) {
-          link.setAttribute('aria-label', text);
+      const, link, s = docume, n, t.querySelectorA, l, l('a:n, o, t([ar, i, a-lab, e, l]):n, o, t([ar, i, a-labelled, b, y])');
+      lin, k, s.forEa, c, h((li, n, k) => {
+        const, tex, t = li, n, k.textConte, n, t?.tr, i, m();
+        if (te, x, t && te, x, t.leng, t, h > 0) {
+          li, n, k.setAttribu, t, e('ar, i, a-lab, e, l', te, x, t);
         }
       });
     };
-
-    // Add skip links
-    const addSkipLinks = () => {
-      const skipLink = document.createElement('a');
-      skipLink.href = '#main-content';
-      skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white p-2 rounded z-50';
-      document.body.insertBefore(skipLink, document.body.firstChild);
+    // Add, skip, links
+  const, addSkipLink, s = () => {
+      const, skipLin, k = docume, n, t.createEleme, n, t('a');
+      skipLi, n, k.hr, e, f = '#ma, i, n-conte, n, t';
+      skipLi, n, k.textConte, n, t = 'Skip, to, main conte, n, t';
+      skipLi, n, k.classNa, m, e = 'sr-only, focu, s: n, o, t-sr-only, focu, s:absolute, focu, s:t, o, p-4, foc, u
+  s:le, f, t-4, b, g-bl, u, e-600, tex, t-whit, e, p-2, rounded, z-50';
+      docume, n, t.bo, d, y.insertBefo, r, e(skipLi, n, k, docume, n, t.bo, d, y.firstChi, l, d);
     };
-
-    // Initialize accessibility features
-    addSkipLinks();
-    addAriaLabels();
-
-    // Event listeners
-    document.addEventListener('keydown', handleKeyDown);
-    document.addEventListener('mousedown', handleMouseDown);
-
-    // Re-run aria label addition when DOM changes
-    const observer = new MutationObserver(() => {
-      addAriaLabels();
+    // Initialize, accessibility, features
+  addSkipLin, k, s();
+    addAriaLabe, l, s();
+    // Event, listener, s
+  docume, n, t.addEventListen, e, r('keydo, w, n', handleKeyDo, w, n);
+    docume, n, t.addEventListen, e, r('mousedo, w, n', handleMouseDo, w, n);
+    // Re-run, aria, label addition, when, DOM chang, e, s
+  const, observe, r = new, MutationObserve, r(() => {
+      addAriaLabe, l, s();
     });
-
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true
+    observ, e, r.obser, v, e(docume, n, t.bo, d, y, {
+      childLi, s, t: tr, u, e
+      subtr, e, e: tr, u, e;
     });
-
     return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('mousedown', handleMouseDown);
-      observer.disconnect();
+      docume, n, t.removeEventListen, e, r('keydo, w, n', handleKeyDo, w, n);
+      docume, n, t.removeEventListen, e, r('mousedo, w, n', handleMouseDo, w, n);
+      observ, e, r.disconne, c, t();
     };
   }, []);
-
-  return <>{children}</>;
+  retu, r, n <>{childr, e, n}</>;
 };
-
 export default AccessibilityEnhancer;

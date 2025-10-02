@@ -1,26 +1,24 @@
-import React from 'react';
-
-const Cookies: React.FC = () => {
+import React from "react";
+const, Cookie, s: Rea, c, t.FC = () => {
   return (
-    <div className="prose max-w-3xl">
-      <h1>Cookies Policy</h1>
+    <div, className="prose, ma, x-w-3, x, l">
+      <h1>Cookies, Polic, y</h1>
       <p>
-        We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept" or using our site, you consent to our use of cookies.
+        We, use, cookies to, enhance, your browsing, experienc, e, serve, personalized, content, and, analyze, our traff, i, c. By, clickin, g "Acce, p, t" or, using, our si, t, e, you, consent, to our, use, of cooki, e, s.
       </p>
-      <h2>Types of cookies we use</h2>
+      <h2>Types, of, cookies we, us, e</h2>
       <ul>
-        <li>Essential cookies: Required for core site functionality.</li>
-        <li>Analytics cookies: Help us understand usage and improve performance.</li>
-        <li>Functional cookies: Remember your preferences and settings.</li>
+        <li>Essential, cookie, s: Required, for, core site, functionalit, y.</li>
+        <li>Analytics, cookie, s: Help, us, understand usage, and, improve performan, c, e.</li>
+        <li>Functional, cookie, s: Remember, your, preferences and, setting, s.</li>
       </ul>
-      <h2>Managing cookies</h2>
+      <h2>Managing, cookie, s</h2>
       <p>
-        You can manage or disable cookies in your browser settings. Disabling cookies may impact site functionality.
+        You, can, manage or, disable, cookies in, your, browser settin, g, s. Disabling, cookies, may impact, site, functionality.
       </p>
-      <p className="text-sm text-gray-500">Last updated: 2025-10-02</p>
-    </div>
+      <p, className="te, x, t-sm, tex, t-gr, a, y-5, 0, 0">Last, updat, e
+  d: 20, 2, 5-10-02</p>
+    </d, i, v>
   );
 };
-
 export default Cookies;
-

@@ -1,188 +1,192 @@
-import React from 'react';
+import React from "react";
 =======
-import React from 'react';';
-
-const UltimateContentShowcase2026: React.FC = () => {,
+import React from "react";';
+const, UltimateContentShowcase202, 6: Rea, c, t.FC = () => {
   return (
-    <section className="py-20 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-slate-900/20">";
-      <div className="container mx-auto px-6">";
-        {/* Header */}
-        <div className="text-center mb-16">";
-          <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 mb-6">";
-            <span className="text-purple-400 font-bold text-sm tracking-wider uppercase">";
-              🚀 NEW 2026 CONTENT REVOLUTION
-            </span>
-          </div>
-          <h2 className="text-6xl font-extrabold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">";
-            Ultimate AI Innovation Hub
+    <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/20, vi, a-bl, u, e-9, 0, 0/20, t, o-sla, t, e-9, 0, 0/20">";
+      <div, className="container, m, x-auto, p, x-6">";
+        {/* Head, e, r */}
+        <div, className="te, x, t-center, m, b-16">";
+          <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-6, p, y-3, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-pi, n, k-5, 0, 0/20, border, border-purp, l, e-5, 0, 0/30, m, b-6">";
+            <span, className="te, x, t-purp, l, e-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e">";
+              🚀 NEW, 2026, CONTENT REVOLUTI, O, N;
+            </sp, a, n>
+          </d, i, v>
+          <h2, className="te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-pi, n, k-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transpare, n, t">";
+            Ultimate, AI, Innovation H, u, b;
           </h2>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">";
-            Discover groundbreaking AI breakthroughs, quantum computing advances, and autonomous systems that are reshaping the future of enterprise technology.
+          <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d">";
+            Discover, groundbreaking, AI breakthroug, h, s, quantum, computing, advances, and, autonomous, systems that, are, reshaping the, future, of enterprise, technolog, y.
           </p>
-        </div>
-
-        {/* Content Grid */}
-        <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">",
-          {/* Quantum AI Breakthrough */}
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105 group">",
-            <div className="text-6xl mb-4 group-hover: animate-pulse">⚛️</div>",
-            <h3 className="text-2xl font-bold text-white mb-4">Quantum-Neural Fusion</h3>
-            <p className="text-gray-400 mb-6 leading-relaxed">
+        </d, i, v>
+        {/* Content, Gri, d */}
+        <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+  g:gr, i, d-co, l, s-3, ga, p-8, m, b-16">"
+          {/* Quantum, AI, Breakthrough */}
+          <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:transform, hov, e
+  r:sca, l, e-105, grou, p">"
+            <div, className="te, x, t-6xl, m, b-4, grou, p-hov, e, r: anima, t, e-pul, s, e">⚛️</d, i, v>"
+            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4">Quant, u, m-Neural, Fusio, n</h3>
+            <p, className="te, x, t-gr, a, y-400, m, b-6, leadin, g-relax, e, d">
 =======
-        <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">";,
-          {/* Quantum AI Breakthrough */}
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105 group">";,
-            <div className="text-6xl mb-4 group-hover: animate-pulse">⚛️</div>";,
-            <h3 className="text-2xl font-bold text-white mb-4">Quantum-Neural Fusion</h3>";
-            <p className="text-gray-400 mb-6 leading-relaxed">";
-              Revolutionary quantum-classical hybrid AI achieving 1000x processing speed with 99.9% accuracy in complex decision-making scenarios.
+        <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+  g:gr, i, d-co, l, s-3, ga, p-8, m, b-16">";
+          {/* Quantum, AI, Breakthrough */}
+          <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-105, grou, p">";
+            <div, className="te, x, t-6xl, m, b-4, grou, p-hov, e, r: anima, t, e-pul, s, e">⚛️</d, i, v>";
+            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4">Quant, u, m-Neural, Fusio, n</h3>";
+            <p, className="te, x, t-gr, a, y-400, m, b-6, leadin, g-relax, e, d">";
+              Revolutionary, quantu, m-classical, hybrid, AI achieving, 1000x, processing speed, with, 99.9% accuracy, in, complex decisi, o, n-making, scenario, s.
             </p>
-            <div className="space-y-3">";
-              <div className="flex items-center gap-3">";
-                <span className="w-2 h-2 bg-purple-400 rounded-full"></span>";
-                <span className="text-gray-300 text-sm">Real-time quantum optimization</span>";
-              </div>
-              <div className="flex items-center gap-3">";
-                <span className="w-2 h-2 bg-purple-400 rounded-full"></span>";
-                <span className="text-gray-300 text-sm">Neural network acceleration</span>";
-              </div>
-              <div className="flex items-center gap-3">";
-                <span className="w-2 h-2 bg-purple-400 rounded-full"></span>";
-                <span className="text-gray-300 text-sm">Enterprise-grade security</span>";
-              </div>
-            </div>
-            <a title="Internal link" 
-              href="/quantum-ai" 
-              className="inline-block mt-6 text-purple-400 hover: text-purple-300 font-semibold transition-colors duration-300",
+            <div, className="spa, c, e-y-3">";
+              <div, className="flex, item, s-center, ga, p-3">";
+                <span, className="w-2 h-2, b, g-purp, l, e-400, rounde, d-fu, l, l"></sp, a, n>";
+                <span, className="te, x, t-gr, a, y-300, tex, t-sm">Re, a, l-time, quantum, optimization</sp, a, n>";
+              </d, i, v>
+              <div, className="flex, item, s-center, ga, p-3">";
+                <span, className="w-2 h-2, b, g-purp, l, e-400, rounde, d-fu, l, l"></sp, a, n>";
+                <span, className="te, x, t-gr, a, y-300, tex, t-sm">Neural, network, acceleration</sp, a, n>";
+              </d, i, v>
+              <div, className="flex, item, s-center, ga, p-3">";
+                <span, className="w-2 h-2, b, g-purp, l, e-400, rounde, d-fu, l, l"></sp, a, n>";
+                <span, className="te, x, t-gr, a, y-300, tex, t-sm">Enterpri, s, e-grade, securit, y</sp, a, n>";
+              </d, i, v>
+            </d, i, v>
+            <a, titl, e="Internal, lin, k" 
+              hr, e, f="/quant, u, m-ai" 
+              classNa, m, e="inli, n, e-block, m, t-6, tex, t-purp, l, e-400, hov, e
+  r: te, x, t-purp, l, e-300, fon, t-semibold, transitio, n-colors, duratio, n-3, 0, 0"
             >
-              Explore Quantum AI →
+              Explore, Quantum, AI →
             </a>
-          </div>
-
-          {/* Meta-Cognitive AI */}
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105 group">",
-            <div className="text-6xl mb-4 group-hover: animate-pulse">🧠</div>",
-            <h3 className="text-2xl font-bold text-white mb-4">Meta-Cognitive AI</h3>
-            <p className="text-gray-400 mb-6 leading-relaxed">
+          </d, i, v>
+          {/* Me, t, a-Cognitive, A, I */}
+          <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10, hove, r: bord, e, r-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:transform, hov, e
+  r:sca, l, e-105, grou, p">"
+            <div, className="te, x, t-6xl, m, b-4, grou, p-hov, e, r: anima, t, e-pul, s, e">🧠</d, i, v>"
+            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4">Me, t, a-Cognitive, A, I</h3>
+            <p, className="te, x, t-gr, a, y-400, m, b-6, leadin, g-relax, e, d">
 =======
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105 group">";,
-            <div className="text-6xl mb-4 group-hover: animate-pulse">🧠</div>";,
-            <h3 className="text-2xl font-bold text-white mb-4">Meta-Cognitive AI</h3>";
-            <p className="text-gray-400 mb-6 leading-relaxed">";
-              AI that thinks about thinking - self-aware systems capable of reasoning about their own reasoning processes and improving autonomously.
+          <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10, hove, r: bord, e, r-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-105, grou, p">";
+            <div, className="te, x, t-6xl, m, b-4, grou, p-hov, e, r: anima, t, e-pul, s, e">🧠</d, i, v>";
+            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4">Me, t, a-Cognitive, A, I</h3>";
+            <p, className="te, x, t-gr, a, y-400, m, b-6, leadin, g-relax, e, d">";
+              AI, that, thinks about, thinkin, g - se, l, f-aware, systems, capable of, reasoning, about their, own, reasoning processes, and, improving autonomous, l, y.
             </p>
-            <div className="space-y-3">";
-              <div className="flex items-center gap-3">";
-                <span className="w-2 h-2 bg-blue-400 rounded-full"></span>";
-                <span className="text-gray-300 text-sm">Self-reflection capabilities</span>";
-              </div>
-              <div className="flex items-center gap-3">";
-                <span className="w-2 h-2 bg-blue-400 rounded-full"></span>";
-                <span className="text-gray-300 text-sm">Autonomous learning</span>";
-              </div>
-              <div className="flex items-center gap-3">";
-                <span className="w-2 h-2 bg-blue-400 rounded-full"></span>";
-                <span className="text-gray-300 text-sm">Cognitive optimization</span>";
-              </div>
-            </div>
-            <a title="Internal link" 
-              href="/meta-cognitive-ai" 
-              className="inline-block mt-6 text-blue-400 hover: text-blue-300 font-semibold transition-colors duration-300",
+            <div, className="spa, c, e-y-3">";
+              <div, className="flex, item, s-center, ga, p-3">";
+                <span, className="w-2 h-2, b, g-bl, u, e-400, rounde, d-fu, l, l"></sp, a, n>";
+                <span, className="te, x, t-gr, a, y-300, tex, t-sm">Se, l, f-reflection, capabilitie, s</sp, a, n>";
+              </d, i, v>
+              <div, className="flex, item, s-center, ga, p-3">";
+                <span, className="w-2 h-2, b, g-bl, u, e-400, rounde, d-fu, l, l"></sp, a, n>";
+                <span, className="te, x, t-gr, a, y-300, tex, t-sm">Autonomous, learnin, g</sp, a, n>";
+              </d, i, v>
+              <div, className="flex, item, s-center, ga, p-3">";
+                <span, className="w-2 h-2, b, g-bl, u, e-400, rounde, d-fu, l, l"></sp, a, n>";
+                <span, className="te, x, t-gr, a, y-300, tex, t-sm">Cognitive, optimizatio, n</sp, a, n>";
+              </d, i, v>
+            </d, i, v>
+            <a, titl, e="Internal, lin, k" 
+              hr, e, f="/me, t, a-cogniti, v, e-ai" 
+              classNa, m, e="inli, n, e-block, m, t-6, tex, t-bl, u, e-400, hov, e
+  r: te, x, t-bl, u, e-300, fon, t-semibold, transitio, n-colors, duratio, n-3, 0, 0"
             >
-              Learn About Meta-Cognition →
+              Learn, About, Meta-Cogniti, o, n →
             </a>
-          </div>
-
-          {/* Autonomous Operations */}
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-green-500/50 transition-all duration-300 hover:transform hover:scale-105 group">",
-            <div className="text-6xl mb-4 group-hover: animate-pulse">🤖</div>",
-            <h3 className="text-2xl font-bold text-white mb-4">Autonomous Operations</h3>
-            <p className="text-gray-400 mb-6 leading-relaxed">
+          </d, i, v>
+          {/* Autonomous, Operation, s */}
+          <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10, hove, r: bord, e, r-gre, e, n-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:transform, hov, e
+  r:sca, l, e-105, grou, p">"
+            <div, className="te, x, t-6xl, m, b-4, grou, p-hov, e, r: anima, t, e-pul, s, e">🤖</d, i, v>"
+            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4">Autonomous, Operation, s</h3>
+            <p, className="te, x, t-gr, a, y-400, m, b-6, leadin, g-relax, e, d">
 =======
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-green-500/50 transition-all duration-300 hover:transform hover:scale-105 group">";,
-            <div className="text-6xl mb-4 group-hover: animate-pulse">🤖</div>";,
-            <h3 className="text-2xl font-bold text-white mb-4">Autonomous Operations</h3>";
-            <p className="text-gray-400 mb-6 leading-relaxed">";
-              Fully autonomous enterprise systems achieving 98% automation rates with self-healing, self-optimizing, and self-scaling capabilities.
+          <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10, hove, r: bord, e, r-gre, e, n-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-105, grou, p">";
+            <div, className="te, x, t-6xl, m, b-4, grou, p-ho, v, e
+  r: anima, t, e-pul, s, e">🤖</d, i, v>";
+            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4">Autonomous, Operation, s</h3>";
+            <p, className="te, x, t-gr, a, y-400, m, b-6, leadin, g-relax, e, d">";
+              Fully, autonomous, enterprise systems, achieving, 98% automation, rates, with se, l, f-heali, n, g, se, l, f-optimizi, n, g, and, sel, f-scaling, capabilitie, s.
             </p>
-            <div className="space-y-3">";
-              <div className="flex items-center gap-3">";
-                <span className="w-2 h-2 bg-green-400 rounded-full"></span>";
-                <span className="text-gray-300 text-sm">Self-healing systems</span>";
-              </div>
-              <div className="flex items-center gap-3">";
-                <span className="w-2 h-2 bg-green-400 rounded-full"></span>";
-                <span className="text-gray-300 text-sm">Dynamic optimization</span>";
-              </div>
-              <div className="flex items-center gap-3">";
-                <span className="w-2 h-2 bg-green-400 rounded-full"></span>";
-                <span className="text-gray-300 text-sm">Zero-touch operations</span>";
-              </div>
-            </div>
-            <a title="Internal link" 
-              href="/autonomous-operations" 
-              className="inline-block mt-6 text-green-400 hover: text-green-300 font-semibold transition-colors duration-300",
+            <div, className="spa, c, e-y-3">";
+              <div, className="flex, item, s-center, ga, p-3">";
+                <span, className="w-2 h-2, b, g-gre, e, n-400, rounde, d-fu, l, l"></sp, a, n>";
+                <span, className="te, x, t-gr, a, y-300, tex, t-sm">Se, l, f-healing, system, s</sp, a, n>";
+              </d, i, v>
+              <div, className="flex, item, s-center, ga, p-3">";
+                <span, className="w-2 h-2, b, g-gre, e, n-400, rounde, d-fu, l, l"></sp, a, n>";
+                <span, className="te, x, t-gr, a, y-300, tex, t-sm">Dynamic, optimizatio, n</sp, a, n>";
+              </d, i, v>
+              <div, className="flex, item, s-center, ga, p-3">";
+                <span, className="w-2 h-2, b, g-gre, e, n-400, rounde, d-fu, l, l"></sp, a, n>";
+                <span, className="te, x, t-gr, a, y-300, tex, t-sm">Ze, r, o-touch, operation, s</sp, a, n>";
+              </d, i, v>
+            </d, i, v>
+            <a, titl, e="Internal, lin, k" 
+              hr, e, f="/autonomo, u, s-operatio, n, s" 
+              classNa, m, e="inli, n, e-block, m, t-6, tex, t-gre, e, n-400, hove, r: te, x, t-gre, e, n-300, fon, t-semibold, transitio, n-colors, duratio, n-3, 0, 0"
             >
-              Discover Autonomy →
+              Discover, Autonom, y →
             </a>
-          </div>
-        </div>
-
-        {/* Stats Banner */}
-        <div className="bg-gradient-to-r from-purple-900/30 to-blue-900/30 rounded-2xl p-8 border border-purple-500/20">
-          <div className="grid md: grid-cols-4 gap-8 text-center">",
+          </d, i, v>
+        </d, i, v>
+        {/* Stats, Banne, r */}
+        <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/30, t, o-bl, u, e-9, 0, 0/30, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/20">
+          <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-8, tex, t-cent, e, r">"
             {[
-              { value: '2026', label: 'Revolutionary Year', icon: '🌟' }
-              { value: '500+', label: 'Enterprise Clients', icon: '🏢' }
-              { value: '$2B+', label: 'Cost Savings Delivered', icon: '💰' }
-              { value: '99.9%', label: 'System Uptime', icon: '⚡' }
+              { val, u, e: '20, 2, 6', lab, e, l: 'Revolutionary, Yea, r', ic, o, n: '🌟' }
+              { val, u, e: '5, 0, 0+', lab, e, l: 'Enterprise, Client, s', ic, o, n: '🏢' }
+              { val, u, e: '$2B+', lab, e, l: 'Cost, Savings, Delivered', ic, o, n: '💰' }
+              { val, u, e: '99.9%', lab, e, l: 'System, Uptim, e', ic, o, n: '⚡' }
 =======
-        <div className="bg-gradient-to-r from-purple-900/30 to-blue-900/30 rounded-2xl p-8 border border-purple-500/20">";
-          <div className="grid md: grid-cols-4 gap-8 text-center">";,
+        <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/30, t, o-bl, u, e-9, 0, 0/30, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/20">";
+          <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-8, tex, t-cent, e, r">";
             {[
-              { value: '2026', label: 'Revolutionary Year', icon: '🌟' },';
-              { value: '500+', label: 'Enterprise Clients', icon: '🏢' },';
-              { value: '$2B+', label: 'Cost Savings Delivered', icon: '💰' },';
-              { value: '99.9%', label: 'System Uptime', icon: '⚡' }';
-            ].map((stat, index) => (
-              <div key={index} className="text-center">";
-                <div className="text-4xl mb-2">{stat.icon}</div>";
-                <div className="text-3xl font-extrabold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-1">";
-                  {stat.value}
-                </div>
-                <div className="text-gray-400 text-sm font-medium">";
-                  {stat.label}
-                </div>
-              </div>
+              { va, l, u
+  e: '20, 2, 6', lab, e, l: 'Revolutionary, Yea, r', ic, o, n: '🌟' },';
+              { val, u, e: '5, 0, 0+', lab, e, l: 'Enterprise, Client, s', ic, o, n: '🏢' },';
+              { val, u, e: '$2B+', lab, e, l: 'Cost, Savings, Delivered', ic, o, n: '💰' },';
+              { val, u, e: '99.9%', lab, e, l: 'System, Uptim, e', ic, o, n: '⚡' }';
+            ].m, a, p((st, a, t, ind, e, x) => (
+              <div, ke, y={ind, e, x} classNa, m, e="te, x, t-cent, e, r">";
+                <div, className="te, x, t-4xl, m, b-2">{st, a, t.ic, o, n}</d, i, v>";
+                <div, className="te, x, t-3xl, fon, t-extrabold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-1">";
+                  {st, a, t.val, u, e}
+                </d, i, v>
+                <div, className="te, x, t-gr, a, y-400, tex, t-sm, fon, t-medi, u, m">";
+                  {st, a, t.lab, e, l}
+                </d, i, v>
+              </d, i, v>
             ))}
-          </div>
-        </div>
-
-        {/* CTA */}
-        <div className="text-center mt-12">";
-          <p className="text-lg text-gray-300 mb-8">";
-            Ready to experience the future of AI? Join the revolution today.
+          </d, i, v>
+        </d, i, v>
+        {/* C, T, A */}
+        <div, className="te, x, t-center, m, t-12">";
+          <p, className="te, x, t-lg, tex, t-gr, a, y-300, m, b-8">";
+            Ready, to, experience the, future, of AI? Join, the, revolution tod, a, y.
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+          <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
 =======
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
-            <a title="Internal link" 
-              href="/contact" 
-              className="bg-gradient-to-r from-purple-500 to-blue-600 hover: from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1",
+          <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
+            <a, titl, e="Internal, lin, k" 
+              hr, e, f="/conta, c, t" 
+              classNa, m, e="bg-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transform, hove
+  r:-transla, t, e-y-1"
             >
-              Get Started Now
+              Get, Started, Now;
             </a>
-            <a title="Internal link" 
-              href="/case-studies" 
-              className="border-2 border-purple-500 text-purple-400 hover: bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300",
+            <a, titl, e="Internal, lin, k" 
+              hr, e, f="/ca, s, e-studi, e, s" 
+              classNa, m, e="bord, e, r-2, borde, r-purp, l, e-500, tex, t-purp, l, e-400, hove, r: bg-purp, l, e-500, hov, e
+  r:te, x, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-3, 0, 0"
             >
-              View Success Stories
+              View, Success, Stories;
             </a>
-          </div>
-        </div>
-      </div>
-    </section>
+          </d, i, v>
+        </d, i, v>
+      </d, i, v>
+    </secti, o, n>
   );
 };
-
 export default UltimateContentShowcase2026;

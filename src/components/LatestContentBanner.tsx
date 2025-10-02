@@ -1,73 +1,68 @@
-import React from 'react';
+import React from "react";
 =======
-import React from 'react';';
-
-interface LatestContentBannerProps {
-variant?: 'info' | 'success' | 'warning';,
-autoRotate?: boolean;,
-rotationInterval?: number;,
-className?: string;
+import React from "react";';
+interface, LatestContentBannerProp, s {
+varia, n, t?: 'in, f, o' | 'succe, s, s' | 'warni, n, g';
+autoRota, t, e?: boole, a, n;
+rotationInterv, a, l?: numb, e, r;
+classNa, m, e?: stri, n, g;
 }
-
-const LatestContentBanner: React.FC<LatestContentBannerProps> = ({
-  variant = 'info'
-  className = ''
+const, LatestContentBanne, r: Rea, c, t.FC<LatestContentBannerPro, p, s> = ({
+  varia, n, t = 'in, f, o'
+  classNa, m, e = ''
 }) => {
-  const variantStyles = {
-    info: 'bg-gradient-to-r from-blue-600 to-indigo-600',',
-    success: 'bg-gradient-to-r from-green-600 to-emerald-600',',
-    warning: 'bg-gradient-to-r from-yellow-600 to-orange-600};
-
+  const, variantStyle, s = {
+    in, f, o: 'bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-6, 0, 0','
+    succe, s, s: 'bg-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-emera, l, d-6, 0, 0','
+    warni, n, g: 'bg-gradie, n, t-to-r, fro, m-yell, o, w-600, t, o-oran, g, e-6, 0, 0};
   return (
-    <div className={`${variantStyles[variant]} text-white p-4 ${className}`}>`;
-      <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between flex-wrap gap-4">
-          <div className="flex items-center gap-3">
-            <Sparkles className="w-6 h-6 animate-pulse/>
-            <div>
-              <h3 className="font-bold text-lg">
-                🔥 New Today: Runtime Scorecards · Edge A/B &lt;100ms · Agent Guardrails v2,
+    <div, className={`${variantStyl, e, s[varia, n, t]} te, x, t-whit, e, p-4 ${classNa, m, e}`}>`;`
+      <div, className="container, m, x-auto, p, x-6">
+        <div, className="flex, item, s-center, justif, y-between, fle, x-wrap, ga, p-4">
+          <div, className="flex, item, s-center, ga, p-3">
+            <Sparkles, className="w-6 h-6, animat, e-pul, s, e  />
+            <d, i, v>
+              <h3, className="fo, n, t-bold, tex, t-lg">
+                🔥 New, Toda, y: Runtime, Scorecard, s · Edg, e, A/B &lt;100, m, s · Agent, Guardrails, v2
               </h3>
-              <p className="text-sm opacity-90">
+              <p, className="te, x, t-sm, opacit, y-90">
 =======
-const LatestContentBanner: React.FC<LatestContentBannerProps> = ({,
-  variant = 'info',';
-  className = ''
+const, LatestContentBanne, r: Rea, c, t.FC<LatestContentBannerPro, p, s> = ({
+  varia, n, t = 'in, f, o',';
+  classNa, m, e = ''
 }) => {
-  const variantStyles = {
-    info: 'bg-gradient-to-r from-blue-600 to-indigo-600',';,
-    success: 'bg-gradient-to-r from-green-600 to-emerald-600',';,
-    warning: 'bg-gradient-to-r from-yellow-600 to-orange-600',
+  const, variantStyle, s = {
+    in, f, o: 'bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-6, 0, 0',';
+    succe, s, s: 'bg-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-emera, l, d-6, 0, 0',';
+    warni, n, g: 'bg-gradie, n, t-to-r, fro, m-yell, o, w-600, t, o-oran, g, e-6, 0, 0'
   };
-
   return (
-    <div className={`${variantStyles[variant]} text-white p-4 ${className}`}>`;
-      <div className="container mx-auto px-6">";
-        <div className="flex items-center justify-between flex-wrap gap-4">";
-          <div className="flex items-center gap-3">";
-            <Sparkles className="w-6 h-6 animate-pulse" />";
-            <div>
-              <h3 className="font-bold text-lg">";
-                🔥 New Today: Runtime Scorecards · Edge A/B &lt;100ms · Agent Guardrails v2,
+    <div, className={`${variantStyl, e, s[varia, n, t]} te, x, t-whit, e, p-4 ${classNa, m, e}`}>`;`
+      <div, className="container, m, x-auto, p, x-6">";
+        <div, className="flex, item, s-center, justif, y-between, fle, x-wrap, ga, p-4">";
+          <div, className="flex, item, s-center, ga, p-3">";
+            <Sparkles, className="w-6 h-6, animat, e-pul, s, e" />";
+            <d, i, v>
+              <h3, className="fo, n, t-bold, tex, t-lg">";
+                🔥 New, Toda, y: Runtime, Scorecard, s · Edg, e, A/B &lt;100, m, s · Agent, Guardrails, v2
               </h3>
-              <p className="text-sm opacity-90">";
-                Now live: 3 new guides + dozens of updated insights,
+              <p, className="te, x, t-sm, opacit, y-90">";
+                Now, liv, e: 3, new, guides + dozens, of, updated insigh, t, s
               </p>
-            </div>
-          </div>
-          <Link
-            to="/blog"
-            className="bg-white text-gray-900 px-6 py-2 rounded-lg font-semibold hover: bg-opacity-90 transition-all flex items-center gap-2 flex-shrink-0",
+            </d, i, v>
+          </d, i, v>
+          <Li, n, k
+  to="/bl, o, g"
+            classNa, m, e="bg-white, tex, t-gr, a, y-900, p, x-6, p, y-2, rounde, d-lg, fon, t-semibold, hove, r: bg-opaci, t, y-90, transitio, n-all, flex, items-center, ga, p-2, fle, x-shri, n, k-0"
           >
-            <TrendingUp className="w-4 h-4/>
+            <TrendingUp, className="w-4 h-4  />
 =======
-            <TrendingUp className="w-4 h-4" />";
-            Explore Now
-          </Link>
-        </div>
-      </div>
-    </div>
+            <TrendingUp, className="w-4 h-4" />";
+            Explore, No, w;
+          </Li, n, k>
+        </d, i, v>
+      </d, i, v>
+    </d, i, v>
   );
 };
-
 export default LatestContentBanner;

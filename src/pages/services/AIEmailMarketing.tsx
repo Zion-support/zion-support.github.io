@@ -1,760 +1,763 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { TrendingUp } from 'lucide-react';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
+import React from "react";
+import { Helmet } from "react-helmet-async";
+impo, r, t { Trending, U, p } fr, o, m "luci, d, e-rea, c, t";
+import, Header, from "../../componen, t, s/Head, e, r";
+import, Footer, from "../../componen, t, s/Foot, e, r";
 =======
-import React from 'react';';
-import {
-Helmet
-} from 'react-helmet-async';';
-import {
-TrendingUp
-} from 'lucide-react';';
-import Header from '../../components/Header';';
-import Footer from '../../components/Footer';';
-
-const AIEmailMarketing: React.FC = () => {,
-  const features = [
+import React from "react";';
+impo, r, t {
+Helm, e, t;
+} fr, o, m "rea, c, t-helm, e, t-asy, n, c";';
+impo, r, t {
+Trending, U, p;
+} fr, o, m "luci, d, e-rea, c, t";';
+import, Header, from "../../componen, t, s/Head, e, r";';
+import, Footer, from "../../componen, t, s/Foot, e, r";';
+const, AIEmailMarketin, g: Rea, c, t.FC = () => {
+  const, feature, s = [
     {
-      icon: Brain,,
-      title: "AI Content Generation",",
-      description: "Automatically generate personalized email content based on customer behavior, preferences, and engagement history.",",
+      i, c, o
+  n: Bra, i, n
+      tit, l, e: "AI, Content, Generation","
+      descripti, o, n: "Automatically, generate, personalized email, content, based on, customer, behavior, preferenc, e, s, and, engagement, history.","
 =======
-      title: "AI Content Generation",";,
-      description: "Automatically generate personalized email content based on customer behavior, preferences, and engagement history.",";,
-      benefit: "300% increase in open rates",
-    },
+      tit, l, e: "AI, Content, Generation",";
+      descripti, o, n: "Automatically, generate, personalized email, content, based on, customer, behavior, preferenc, e, s, and, engagement, history.",";
+      benef, i, t: "3, 0, 0% increase, in, open rat, e, s"
+    }
     {
-      icon: Target,,
-      title: "Smart Segmentation",",
-      description: "AI-powered audience segmentation that identifies high-value customers and predicts optimal send times.",",
+      ic, o, n: Targ, e, t
+      tit, l, e: "Smart, Segmentatio, n","
+      descripti, o, n: "AI-powered, audience, segmentation that, identifies, high-value, customers, and predicts, optimal, send tim, e, s.","
 =======
-      title: "Smart Segmentation",";,
-      description: "AI-powered audience segmentation that identifies high-value customers and predicts optimal send times.",";,
-      benefit: "85% improvement in click-through rates",
-    },
+      tit, l, e: "Smart, Segmentatio, n",";
+      descripti, o, n: "AI-powered, audience, segmentation that, identifies, high-value, customers, and predicts, optimal, send tim, e, s.",";
+      benef, i, t: "85% improvement, in, click-through, rate, s"
+    }
     {
-      icon: BarChart3,,
-      title: "Predictive Analytics",",
-      description: "Advanced analytics that predict campaign performance and optimize subject lines, content, and timing.",",
+      ic, o, n: BarChar, t, 3
+      tit, l, e: "Predictive, Analytic, s","
+      descripti, o, n: "Advanced, analytics, that predict, campaign, performance and, optimize, subject lin, e, s, conte, n, t, and, timin, g.","
 =======
-      title: "Predictive Analytics",";,
-      description: "Advanced analytics that predict campaign performance and optimize subject lines, content, and timing.",";,
-      benefit: "250% ROI improvement",
-    },
+      tit, l, e: "Predictive, Analytic, s",";
+      descripti, o, n: "Advanced, analytics, that predict, campaign, performance and, optimize, subject lin, e, s, conte, n, t, and, timin, g.",";
+      benef, i, t: "2, 5, 0% ROI, improvemen, t"
+    }
     {
-      icon: Zap,,
-      title: "Automated Campaigns",",
-      description: "Intelligent automation that triggers personalized campaigns based on customer actions and lifecycle stages.",",
+      ic, o, n: Z, a, p
+      tit, l, e: "Automated, Campaign, s","
+      descripti, o, n: "Intelligent, automation, that triggers, personalized, campaigns based, on, customer actions, and, lifecycle stag, e, s.","
 =======
-      title: "Automated Campaigns",";,
-      description: "Intelligent automation that triggers personalized campaigns based on customer actions and lifecycle stages.",";,
-      benefit: "70% reduction in manual work",
-    },
+      tit, l, e: "Automated, Campaign, s",";
+      descripti, o, n: "Intelligent, automation, that triggers, personalized, campaigns based, on, customer actions, and, lifecycle stag, e, s.",";
+      benef, i, t: "70% reduction, in, manual wo, r, k"
+    }
     {
-      icon: Clock,,
-      title: "Optimal Timing",",
-      description: "AI determines the best time to send emails to each individual recipient for maximum engagement.",",
+      ic, o, n: Clo, c, k
+      tit, l, e: "Optimal, Timin, g","
+      descripti, o, n: "AI, determines, the best, time, to send, emails, to each, individual, recipient for, maximum, engagement.","
 =======
-      title: "Optimal Timing",";,
-      description: "AI determines the best time to send emails to each individual recipient for maximum engagement.",";,
-      benefit: "45% increase in engagement",
-    },
+      tit, l, e: "Optimal, Timin, g",";
+      descripti, o, n: "AI, determines, the best, time, to send, emails, to each, individual, recipient for, maximum, engagement.",";
+      benef, i, t: "45% increase, in, engagement"
+    }
     {
-      icon: Shield,,
-      title: "Deliverability Optimization",",
-      description: "Advanced algorithms ensure maximum inbox placement and compliance with email regulations.",",
+      ic, o, n: Shie, l, d
+      tit, l, e: "Deliverability, Optimizatio, n","
+      descripti, o, n: "Advanced, algorithms, ensure maximum, inbox, placement and, compliance, with email, regulation, s.","
 =======
-      title: "Deliverability Optimization",";,
-      description: "Advanced algorithms ensure maximum inbox placement and compliance with email regulations.",";,
-      benefit: "98% deliverability rate",
+      tit, l, e: "Deliverability, Optimizatio, n",";
+      descripti, o, n: "Advanced, algorithms, ensure maximum, inbox, placement and, compliance, with email, regulation, s.",";
+      benef, i, t: "98% deliverability, rat, e"
     }
   ];
-
-  const pricing = [
+  const, pricin, g = [
     {
-      name: "Starter",
-      price: "$79",
-      period: "/month",
-      description: "Perfect for small businesses starting with AI-powered email marketing",
-      features: [,
-        "Up to 10,000 subscribers",
-        "Basic AI content generation",
-        "Simple automation",
-        "Email support",
-        "Basic analytics",
-        "Standard templates",
-        "5 campaigns/month",
-        "Basic segmentation"
+      na, m, e: "Start, e, r"
+      pri, c, e: "$79"
+      peri, o, d: "/mon, t, h"
+      descripti, o, n: "Perfect, for, small businesses, starting, with AI-powered, email, marketing"
+      featur, e, s: [
+        "Up, to, 10,000, subscriber, s"
+        "Basic, AI, content generati, o, n"
+        "Simple, automatio, n"
+        "Email, suppor, t"
+        "Basic, analytic, s"
+        "Standard, template, s"
+        "5, campaign, s/mon, t, h"
+        "Basic, segmentatio, n"
       ]
-      popular: false
-    },
+      popul, a, r: fal, s, e;
+    }
     {
-      name: "Professional",
-      price: "$199",
-      period: "/month",
-      description: "Ideal for growing businesses with advanced email marketing needs",
-      features: [,
-        "Up to 50,000 subscribers",
-        "Advanced AI content generation",
-        "Smart automation workflows",
-        "Priority support",
-        "Advanced analytics & insights",
-        "Custom templates",
-        "Unlimited campaigns",
-        "Advanced segmentation",
-        "A/B testing",
-        "API access"
+      na, m, e: "Profession, a, l"
+      pri, c, e: "$1, 9, 9"
+      peri, o, d: "/mon, t, h"
+      descripti, o, n: "Ideal, for, growing businesses, with, advanced email, marketing, needs"
+      featur, e, s: [
+        "Up, to, 50,000, subscriber, s"
+        "Advanced, AI, content generati, o, n"
+        "Smart, automation, workflows"
+        "Priority, suppor, t"
+        "Advanced, analytic, s & insigh, t, s"
+        "Custom, template, s"
+        "Unlimited, campaign, s"
+        "Advanced, segmentatio, n"
+        "A/B, testin, g"
+        "API, acces, s"
       ]
-      popular: true
-    },
+      popul, a, r: tr, u, e;
+    }
     {
-      name: "Enterprise",
-      price: "$599",
-      period: "/month",
-      description: "Complete solution for large organizations with enterprise requirements",
-      features: [,
-        "Unlimited subscribers",
-        "Enterprise AI capabilities",
-        "Complex automation workflows",
-        "Dedicated account manager",
-        "Enterprise analytics suite",
-        "White-label templates",
-        "Unlimited campaigns",
-        "Advanced AI segmentation",
-        "Custom integrations",
-        "Advanced security features",
-        "SLA guarantee",
-        "Training & consultation"
+      na, m, e: "Enterpri, s, e"
+      pri, c, e: "$5, 9, 9"
+      peri, o, d: "/mon, t, h"
+      descripti, o, n: "Complete, solution, for large, organizations, with enterprise, requirement, s"
+      featur, e, s: [
+        "Unlimited, subscriber, s"
+        "Enterprise, AI, capabilities"
+        "Complex, automation, workflows"
+        "Dedicated, account, manager"
+        "Enterprise, analytics, suite"
+        "Whi, t, e-label, template, s"
+        "Unlimited, campaign, s"
+        "Advanced, AI, segmentation"
+        "Custom, integration, s"
+        "Advanced, security, features"
+        "SLA, guarante, e"
+        "Traini, n, g & consultati, o, n"
       ]
-      popular: false
+      popul, a, r: fal, s, e;
 =======
-      name: "Starter",";,
-      price: "$79",";,
-      period: "/month",";,
-      description: "Perfect for small businesses starting with AI-powered email marketing",";,
-      features: [,
-        "Up to 10,000 subscribers",";
-        "Basic AI content generation",";
-        "Simple automation",";
-        "Email support",";
-        "Basic analytics",";
-        "Standard templates",";
-        "5 campaigns/month",";
-        "Basic segmentation"
-      ],
-      popular: false,
-    },
+      n, a, m
+  e: "Start, e, r",";
+      pri, c, e: "$79",";
+      peri, o, d: "/mon, t, h",";
+      descripti, o, n: "Perfect, for, small businesses, starting, with AI-powered, email, marketing",";
+      featur, e, s: [
+        "Up, to, 10,000, subscriber, s",";
+        "Basic, AI, content generati, o, n",";
+        "Simple, automatio, n",";
+        "Email, suppor, t",";
+        "Basic, analytic, s",";
+        "Standard, template, s",";
+        "5, campaign, s/mon, t, h",";
+        "Basic, segmentatio, n"
+      ]
+      popul, a, r: fal, s, e
+    }
     {
-      name: "Professional",";,
-      price: "$199",";,
-      period: "/month",";,
-      description: "Ideal for growing businesses with advanced email marketing needs",";,
-      features: [,
-        "Up to 50,000 subscribers",";
-        "Advanced AI content generation",";
-        "Smart automation workflows",";
-        "Priority support",";
-        "Advanced analytics & insights",";
-        "Custom templates",";
-        "Unlimited campaigns",";
-        "Advanced segmentation",";
-        "A/B testing",";
-        "API access"
-      ],
-      popular: true,
-    },
+      na, m, e: "Profession, a, l",";
+      pri, c, e: "$1, 9, 9",";
+      peri, o, d: "/mon, t, h",";
+      descripti, o, n: "Ideal, for, growing businesses, with, advanced email, marketing, needs",";
+      featur, e, s: [
+        "Up, to, 50,000, subscriber, s",";
+        "Advanced, AI, content generati, o, n",";
+        "Smart, automation, workflows",";
+        "Priority, suppor, t",";
+        "Advanced, analytic, s & insigh, t, s",";
+        "Custom, template, s",";
+        "Unlimited, campaign, s",";
+        "Advanced, segmentatio, n",";
+        "A/B, testin, g",";
+        "API, acces, s"
+      ]
+      popul, a, r: tr, u, e
+    }
     {
-      name: "Enterprise",";,
-      price: "$599",";,
-      period: "/month",";,
-      description: "Complete solution for large organizations with enterprise requirements",";,
-      features: [,
-        "Unlimited subscribers",";
-        "Enterprise AI capabilities",";
-        "Complex automation workflows",";
-        "Dedicated account manager",";
-        "Enterprise analytics suite",";
-        "White-label templates",";
-        "Unlimited campaigns",";
-        "Advanced AI segmentation",";
-        "Custom integrations",";
-        "Advanced security features",";
-        "SLA guarantee",";
-        "Training & consultation"
-      ],
-      popular: false,
+      na, m, e: "Enterpri, s, e",";
+      pri, c, e: "$5, 9, 9",";
+      peri, o, d: "/mon, t, h",";
+      descripti, o, n: "Complete, solution, for large, organizations, with enterprise, requirement, s",";
+      featur, e, s: [
+        "Unlimited, subscriber, s",";
+        "Enterprise, AI, capabilities",";
+        "Complex, automation, workflows",";
+        "Dedicated, account, manager",";
+        "Enterprise, analytics, suite",";
+        "Whi, t, e-label, template, s",";
+        "Unlimited, campaign, s",";
+        "Advanced, AI, segmentation",";
+        "Custom, integration, s",";
+        "Advanced, security, features",";
+        "SLA, guarante, e",";
+        "Traini, n, g & consultati, o, n"
+      ]
+      popul, a, r: fal, s, e
     }
   ];
-
-  const testimonials = [
+  const, testimonial, s = [
     {
-      name: "Jennifer Martinez",",
-      role: "Marketing Director, E-Commerce Platform",",
-      content: "AI email marketing increased our revenue by 180% in just 3 months. The personalized content generation and optimal timing features were game-changers for our business.",",
+      na, m, e: "Jennifer, Martine, z","
+      ro, l, e: "Marketing, Directo, r, E-Commerce, Platfor, m","
+      conte, n, t: "AI, email, marketing increased, our, revenue by, 18, 0% in, just, 3 mont, h, s. The, personalized, content generation, and, optimal timing, features, were ga, m, e-changers, for, our busine, s, s.","
 =======
-      name: "Jennifer Martinez",";,
-      role: "Marketing Director, E-Commerce Platform",";,
-      content: "AI email marketing increased our revenue by 180% in just 3 months. The personalized content generation and optimal timing features were game-changers for our business.",";,
-      rating: 5,,
-      company: "E-Commerce Platform",
-    },
+      na, m, e: "Jennifer, Martine, z",";
+      ro, l, e: "Marketing, Directo, r, E-Commerce, Platfor, m",";
+      conte, n, t: "AI, email, marketing increased, our, revenue by, 18, 0% in, just, 3 mont, h, s. The, personalized, content generation, and, optimal timing, features, were ga, m, e-changers, for, our busine, s, s.",";
+      rati, n, g: 5
+      compa, n, y: "E-Commerce, Platfor, m"
+    }
     {
-      name: "David Chen",",
-      role: "VP Marketing, SaaS Startup",",
-      content: "The automated segmentation and predictive analytics helped us achieve a 15% conversion rate improvement. ROI increased by 250% within the first quarter.",",
+      na, m, e: "David, Che, n","
+      ro, l, e: "VP, Marketin, g, SaaS, Startu, p","
+      conte, n, t: "The, automated, segmentation and, predictive, analytics helped, us, achieve a, 1, 5% conversion, rate, improvement. ROI, increased, by 2, 5, 0% within, the, first quart, e, r.","
 =======
-      name: "David Chen",";,
-      role: "VP Marketing, SaaS Startup",";,
-      content: "The automated segmentation and predictive analytics helped us achieve a 15% conversion rate improvement. ROI increased by 250% within the first quarter.",";,
-      rating: 5,,
-      company: "SaaS Startup",
-    },
+      na, m, e: "David, Che, n",";
+      ro, l, e: "VP, Marketin, g, SaaS, Startu, p",";
+      conte, n, t: "The, automated, segmentation and, predictive, analytics helped, us, achieve a, 1, 5% conversion, rate, improvement. ROI, increased, by 2, 5, 0% within, the, first quart, e, r.",";
+      rati, n, g: 5
+      compa, n, y: "SaaS, Startu, p"
+    }
     {
-      name: "Sarah Johnson",",
-      role: "Head of Growth, FinTech",",
-      content: "Deliverability optimization and AI content generation reduced our unsubscribe rate by 60% while increasing engagement by 85%. The platform is incredibly intuitive.",",
+      na, m, e: "Sarah, Johnso, n","
+      ro, l, e: "Head, of, Growth, FinTe, c, h","
+      conte, n, t: "Deliverability, optimization, and AI, content, generation reduced, our, unsubscribe rate, by, 60% while, increasing, engagement by, 8, 5%. The, platform, is incredibly, intuitiv, e.","
 =======
-      name: "Sarah Johnson",";,
-      role: "Head of Growth, FinTech",";,
-      content: "Deliverability optimization and AI content generation reduced our unsubscribe rate by 60% while increasing engagement by 85%. The platform is incredibly intuitive.",";,
-      rating: 5,,
-      company: "FinTech",
+      na, m, e: "Sarah, Johnso, n",";
+      ro, l, e: "Head, of, Growth, FinTe, c, h",";
+      conte, n, t: "Deliverability, optimization, and AI, content, generation reduced, our, unsubscribe rate, by, 60% while, increasing, engagement by, 8, 5%. The, platform, is incredibly, intuitiv, e.",";
+      rati, n, g: 5
+      compa, n, y: "FinTe, c, h"
     }
   ];
-
-  const useCases = [
+  const, useCase, s = [
     {
-      title: "E-Commerce",",
-      icon: Globe,,
-      description: "Personalized product recommendations, abandoned cart recovery, and post-purchase follow-ups.",",
-      benefits: ["40% increase in sales", "60% cart recovery rate", "35% customer lifetime value"]",
-    },
+      tit, l, e: "E-Commer, c, e","
+      ic, o, n: Glo, b, e
+      descripti, o, n: "Personalized, product, recommendations, abandoned, cart, recovery, and, pos, t-purchase, follo, w-u, p, s.","
+      benefi, t, s: ["40% increase, in, sales", "60% cart, recovery, rate", "35% customer, lifetime, value"]"
+    }
     {
-      title: "SaaS & B2B",",
-      icon: TrendingUp,,
-      description: "Lead nurturing, customer onboarding, feature announcements, and churn prevention campaigns.",",
-      benefits: ["50% faster onboarding", "30% reduction in churn", "45% increase in upgrades"]",
-    },
+      tit, l, e: "Sa, a, S & B, 2, B","
+      ic, o, n: Trending, U, p
+      descripti, o, n: "Lead, nurturin, g, customer, onboardin, g, feature, announcement, s, and, churn, prevention campaig, n, s.","
+      benefi, t, s: ["50% faster, onboardin, g", "30% reduction, in, churn", "45% increase, in, upgrades"]"
+    }
     {
-      title: "Healthcare",",
-      icon: Users,,
-      description: "Patient engagement, appointment reminders, health tips, and medication compliance.",",
-      benefits: ["70% appointment compliance", "40% patient engagement", "25% readmission reduction"]",
-    },
+      tit, l, e: "Healthca, r, e","
+      ic, o, n: Use, r, s
+      descripti, o, n: "Patient, engagemen, t, appointment, reminder, s, health, tip, s, and, medication, compliance.","
+      benefi, t, s: ["70% appointment, complianc, e", "40% patient, engagemen, t", "25% readmission, reductio, n"]"
+    }
     {
-      title: "Education",",
-      icon: Brain,,
-      description: "Student engagement, course updates, enrollment campaigns, and alumni communication.",",
-      benefits: ["55% enrollment increase", "60% course completion", "80% student satisfaction"]",
+      tit, l, e: "Educati, o, n","
+      ic, o, n: Bra, i, n
+      descripti, o, n: "Student, engagemen, t, course, update, s, enrollment, campaign, s, and, alumni, communication.","
+      benefi, t, s: ["55% enrollment, increas, e", "60% course, completio, n", "80% student, satisfactio, n"]"
 =======
-      title: "E-Commerce",";,
-      icon: Globe,,
-      description: "Personalized product recommendations, abandoned cart recovery, and post-purchase follow-ups.",";,
-      benefits: ["40% increase in sales", "60% cart recovery rate", "35% customer lifetime value"]";,
-    },
+      tit, l, e: "E-Commer, c, e",";
+      ic, o, n: Glo, b, e
+      descripti, o, n: "Personalized, product, recommendations, abandoned, cart, recovery, and, pos, t-purchase, follo, w-u, p, s.",";
+      benefi, t, s: ["40% increase, in, sales", "60% cart, recovery, rate", "35% customer, lifetime, value"]";
+    }
     {
-      title: "SaaS & B2B",";,
-      icon: TrendingUp,,
-      description: "Lead nurturing, customer onboarding, feature announcements, and churn prevention campaigns.",";,
-      benefits: ["50% faster onboarding", "30% reduction in churn", "45% increase in upgrades"]";,
-    },
+      tit, l, e: "Sa, a, S & B, 2, B",";
+      ic, o, n: Trending, U, p
+      descripti, o, n: "Lead, nurturin, g, customer, onboardin, g, feature, announcement, s, and, churn, prevention campaig, n, s.",";
+      benefi, t, s: ["50% faster, onboardin, g", "30% reduction, in, churn", "45% increase, in, upgrades"]";
+    }
     {
-      title: "Healthcare",";,
-      icon: Users,,
-      description: "Patient engagement, appointment reminders, health tips, and medication compliance.",";,
-      benefits: ["70% appointment compliance", "40% patient engagement", "25% readmission reduction"]";,
-    },
+      tit, l, e: "Healthca, r, e",";
+      ic, o, n: Use, r, s
+      descripti, o, n: "Patient, engagemen, t, appointment, reminder, s, health, tip, s, and, medication, compliance.",";
+      benefi, t, s: ["70% appointment, complianc, e", "40% patient, engagemen, t", "25% readmission, reductio, n"]";
+    }
     {
-      title: "Education",";,
-      icon: Brain,,
-      description: "Student engagement, course updates, enrollment campaigns, and alumni communication.",";,
-      benefits: ["55% enrollment increase", "60% course completion", "80% student satisfaction"]";,
+      tit, l, e: "Educati, o, n",";
+      ic, o, n: Bra, i, n
+      descripti, o, n: "Student, engagemen, t, course, update, s, enrollment, campaign, s, and, alumni, communication.",";
+      benefi, t, s: ["55% enrollment, increas, e", "60% course, completio, n", "80% student, satisfactio, n"]";
     }
   ];
-
-  const capabilities = [
+  const, capabilitie, s = [
     {
-      title: "Content Personalization",",
-      description: "AI generates unique email content for each recipient based on their behavior, preferences, and engagement history.",
-    },
+      tit, l, e: "Content, Personalizatio, n","
+      descripti, o, n: "AI, generates, unique email, content, for each, recipient, based on, their, behavior, preferenc, e, s, and, engagement, history."
+    }
     {
-      title: "Behavioral Triggers",",
-      description: "Automated campaigns triggered by customer actions like website visits, product views, or purchase history.",
-    },
+      tit, l, e: "Behavioral, Trigger, s","
+      descripti, o, n: "Automated, campaigns, triggered by, customer, actions like, website, visits, product, view, s, or, purchase, history."
+    }
     {
-      title: "Predictive Segmentation",",
-      description: "Machine learning algorithms identify high-value segments and predict customer lifetime value.",
-    },
+      tit, l, e: "Predictive, Segmentatio, n","
+      descripti, o, n: "Machine, learning, algorithms identify, hig, h-value, segments, and predict, customer, lifetime val, u, e."
+    }
     {
-      title: "Subject Line Optimization",",
-      description: "AI tests and optimizes subject lines for maximum open rates using natural language processing.",
-    },
+      tit, l, e: "Subject, Line, Optimization","
+      descripti, o, n: "AI, tests, and optimizes, subject, lines for, maximum, open rates, using, natural language, processin, g."
+    }
     {
-      title: "Send Time Optimization",",
-      description: "Advanced algorithms determine the optimal send time for each individual recipient.",
-    },
+      tit, l, e: "Send, Time, Optimization","
+      descripti, o, n: "Advanced, algorithms, determine the, optimal, send time, for, each individual, recipien, t."
+    }
     {
-      title: "Performance Prediction",",
+      tit, l, e: "Performance, Predictio, n","
 =======
-      title: "Content Personalization",";,
-      description: "AI generates unique email content for each recipient based on their behavior, preferences, and engagement history.",
-    },
+      tit, l, e: "Content, Personalizatio, n",";
+      descripti, o, n: "AI, generates, unique email, content, for each, recipient, based on, their, behavior, preferenc, e, s, and, engagement, history."
+    }
     {
-      title: "Behavioral Triggers",";,
-      description: "Automated campaigns triggered by customer actions like website visits, product views, or purchase history.",
-    },
+      tit, l, e: "Behavioral, Trigger, s",";
+      descripti, o, n: "Automated, campaigns, triggered by, customer, actions like, website, visits, product, view, s, or, purchase, history."
+    }
     {
-      title: "Predictive Segmentation",";,
-      description: "Machine learning algorithms identify high-value segments and predict customer lifetime value.",
-    },
+      tit, l, e: "Predictive, Segmentatio, n",";
+      descripti, o, n: "Machine, learning, algorithms identify, hig, h-value, segments, and predict, customer, lifetime val, u, e."
+    }
     {
-      title: "Subject Line Optimization",";,
-      description: "AI tests and optimizes subject lines for maximum open rates using natural language processing.",
-    },
+      tit, l, e: "Subject, Line, Optimization",";
+      descripti, o, n: "AI, tests, and optimizes, subject, lines for, maximum, open rates, using, natural language, processin, g."
+    }
     {
-      title: "Send Time Optimization",";,
-      description: "Advanced algorithms determine the optimal send time for each individual recipient.",
-    },
+      tit, l, e: "Send, Time, Optimization",";
+      descripti, o, n: "Advanced, algorithms, determine the, optimal, send time, for, each individual, recipien, t."
+    }
     {
-      title: "Performance Prediction",";,
-      description: "Predict campaign performance before sending and optimize for maximum ROI.",
+      tit, l, e: "Performance, Predictio, n",";
+      descripti, o, n: "Predict, campaign, performance before, sending, and optimize, for, maximum R, O, I."
     }
   ];
-
   return (
     <>
       <Helmet>
-        <title>AI Email Marketing - Zion Tech Group | Intelligent Email Automation</title>
-        <meta
-          name="description"
-          content="Transform your email marketing with AI-powered personalization, automation, and analytics. 300% increase in open rates, 85% improvement in CTR, and 250% ROI improvement." /><meta name="keywords" content="AI email marketing, email automation, personalized emails, email analytics, marketing automation, email campaigns, AI content generation" /><link rel="canonical" href="https://ziontechgroup.com/services/ai-email-marketing/>",
+        <title>AI, Email, Marketing - Zion, Tech, Group | Intelligent, Email, Automation</title>
+        <me, t, a
+  na, m, e="descripti, o, n"
+          content="Transform, your, email marketing, with, AI-powered, personalizatio, n, automati, o, n, and, analytic, s. 3, 0, 0% increase, in, open rat, e, s, 85% improvement, in, CTR, and, 25, 0% ROI, improvemen, t." /><meta name="keywor, d, s" content="AI, email, marketing, email, automatio, n, personalized, email, s, email, analytic, s, marketing, automatio, n, email, campaign, s, AI, content, generation" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/ai-ema, i, l-marketi, n, g/>"
 =======
-          content="Transform your email marketing with AI-powered personalization, automation, and analytics. 300% increase in open rates, 85% improvement in CTR, and 250% ROI improvement."
-        />
-        <meta name="keywords" content="AI email marketing, email automation, personalized emails, email analytics, marketing automation, email campaigns, AI content generation" />";
-        <link rel="canonical" href="https: //ziontechgroup.com/services/ai-email-marketing" />";,
+          content="Transform, your, email marketing, with, AI-powered, personalizatio, n, automati, o, n, and, analytic, s. 3, 0, 0% increase, in, open rat, e, s, 85% improvement, in, CTR, and, 25, 0% ROI, improvemen, t."
+         />
+        <meta name="keywor, d, s" content="AI, email, marketing, email, automatio, n, personalized, email, s, email, analytic, s, marketing, automatio, n, email, campaign, s, AI, content, generation" />";
+        <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/servic, e, s/ai-ema, i, l-marketi, n, g" />";
       </Helmet>
-
-      <Header />
-      
-      <main className="min-h-screen bg-white">";
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-emerald-900 via-green-800 to-teal-900 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className="text-center">
-              <h1 className="text-5xl md: text-7xl font-bold mb-6">",
-                AI Email <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">Marketing</span>
+      <Head, e, r   />
+      <main, className="m, i, n-h-screen, b, g-whi, t, e">";
+        {/* Hero, Sectio, n */}
+        <section, className="bg-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-gre, e, n-800, t, o-te, a, l-900, tex, t-white, p, y-20">
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8">"
+            <div, className="te, x, t-cent, e, r">
+              <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">"
+                AI, Emai, l <span, className="bg-gradie, n, t-to-r, fro, m-emera, l, d-400, t, o-te, a, l-400, b, g-cl, i, p-text, tex, t-transpare, n, t">Marketi, n, g</sp, a, n>
               </h1>
-              <p className="text-xl md: text-2xl text-emerald-100 max-w-4xl mx-auto mb-8">",
-                Transform your email marketing with AI-powered personalization, automation, and analytics. 
-                300% increase in open rates, 85% improvement in CTR, and 250% ROI improvement.
+              <p, className="te, x, t-xl, m, d: te, x, t-2xl, tex, t-emera, l, d-100, ma, x-w-4xl, m, x-auto, m, b-8">"
+                Transform, your, email marketing, with, AI-powered, personalizatio, n, automati, o, n, and, analytic, s. 
+                3, 0, 0% increase, in, open rat, e, s, 85% improvement, in, CTR, and, 25, 0% ROI, improvemen, t.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+              <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
 =======
-        <section className="bg-gradient-to-br from-emerald-900 via-green-800 to-teal-900 text-white py-20">";
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
-            <div className="text-center">";
-              <h1 className="text-5xl md: text-7xl font-bold mb-6">";,
-                AI Email <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">Marketing</span>";
+        <section, className="bg-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-gre, e, n-800, t, o-te, a, l-900, tex, t-white, p, y-20">";
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
+            <div, className="te, x, t-cent, e, r">";
+              <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">";
+                AI, Emai, l <span, className="bg-gradie, n, t-to-r, fro, m-emera, l, d-400, t, o-te, a, l-400, b, g-cl, i, p-text, tex, t-transpare, n, t">Marketi, n, g</sp, a, n>";
               </h1>
-              <p className="text-xl md: text-2xl text-emerald-100 max-w-4xl mx-auto mb-8">";,
-                Transform your email marketing with AI-powered personalization, automation, and analytics. 
-                300% increase in open rates, 85% improvement in CTR, and 250% ROI improvement.
+              <p, className="te, x, t-x, l, m
+  d: te, x, t-2xl, tex, t-emera, l, d-100, ma, x-w-4xl, m, x-auto, m, b-8">";
+                Transform, your, email marketing, with, AI-powered, personalizatio, n, automati, o, n, and, analytic, s. 
+                3, 0, 0% increase, in, open rat, e, s, 85% improvement, in, CTR, and, 25, 0% ROI, improvemen, t.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
+              <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
                 <a
-                  href="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-emerald-600 hover: bg-emerald-700 text-white font-semibold rounded-lg transition-colors",
+  hr, e, f="/conta, c, t"
+                  classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, b, g-emera, l, d-600, hov, e
+  r: bg-emera, l, d-700, tex, t-white, fon, t-semibold, rounde, d-lg, transitio, n-colo, r, s"
                 >
-                  <Phone className="w-5 h-5 mr-2/>
+                  <Phone, className="w-5 h-5, m, r-2  />
 =======
-                  <Phone className="w-5 h-5 mr-2" />";
-                  Schedule Demo
+                  <Phone, className="w-5 h-5, m, r-2" />";
+                  Schedule, Dem, o;
                 </a>
                 <a
-                  href="#pricing"
-                  className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover: bg-white hover:text-emerald-900 font-semibold rounded-lg transition-colors",
+  hr, e, f="#prici, n, g"
+                  classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, borde, r-2, borde, r-white, tex, t-white, hove, r: bg-white, hov, e
+  r:te, x, t-emera, l, d-900, fon, t-semibold, rounde, d-lg, transitio, n-colo, r, s"
                 >
-                  View Pricing
-                  <ArrowRight className="w-5 h-5 ml-2/>
+                  View, Pricin, g;
+                  <ArrowRight, className="w-5 h-5, m, l-2  />
 =======
-                  <ArrowRight className="w-5 h-5 ml-2" />";
+                  <ArrowRight, className="w-5 h-5, m, l-2" />";
                 </a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Key Benefits */}
-        <section className="py-16 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              </d, i, v>
+            </d, i, v>
+          </d, i, v>
+        </secti, o, n>
+        {/* Key, Benefit, s */}
+        <section, className="py-16, b, g-gr, a, y-50">
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8">"
+            <div, className="text-center mb-12">
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
 =======
-        <section className="py-16 bg-gray-50">";
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
-            <div className="text-center mb-12">";
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">";
-                Why Choose AI Email Marketing?
+        <section, className="py-16, b, g-gr, a, y-50">";
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8">";
+            <div, className="text-center mb-12">";
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
+                Why, Choose, AI Email, Marketin, g?
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
-                Leverage artificial intelligence to create more effective, personalized, and profitable email campaigns.
+              <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
+                Leverage, artificial, intelligence to, create, more effecti, v, e, personaliz, e, d, and, profitable, email campaig, n, s.
               </p>
-            </div>
-
-            <div className="grid md: grid-cols-4 gap-8">",
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-emerald-100 rounded-full mb-4">
-                  <Target className="w-8 h-8 text-emerald-600/>
+            </d, i, v>
+            <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-8">"
+              <div, className="te, x, t-cent, e, r">
+                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-emera, l, d-100, rounde, d-full, m, b-4">
+                  <Target, className="w-8 h-8, tex, t-emera, l, d-6, 0, 0  />
 =======
-            <div className="grid md: grid-cols-4 gap-8">";,
-              <div className="text-center">";
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-emerald-100 rounded-full mb-4">";
-                  <Target className="w-8 h-8 text-emerald-600" />";
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">300% Open Rate Boost</h3>";
-                <p className="text-gray-600">AI-optimized content and timing</p>";
-              </div>
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
-                  <BarChart3 className="w-8 h-8 text-green-600/>
+            <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-8">";
+              <div, className="te, x, t-cent, e, r">";
+                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-emera, l, d-100, rounde, d-full, m, b-4">";
+                  <Target, className="w-8 h-8, tex, t-emera, l, d-6, 0, 0" />";
+                </d, i, v>
+                <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">3, 0, 0% Open, Rate, Boost</h3>";
+                <p, className="te, x, t-gr, a, y-6, 0, 0">AI-optimized, content, and timi, n, g</p>";
+              </d, i, v>
+              <div, className="te, x, t-cent, e, r">
+                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-4">
+                  <BarChart3, className="w-8 h-8, tex, t-gre, e, n-6, 0, 0  />
 =======
-              <div className="text-center">";
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">";
-                  <BarChart3 className="w-8 h-8 text-green-600" />";
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">250% ROI Improvement</h3>";
-                <p className="text-gray-600">Predictive analytics and optimization</p>";
-              </div>
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-teal-100 rounded-full mb-4">
-                  <Zap className="w-8 h-8 text-teal-600/>
+              <div, className="te, x, t-cent, e, r">";
+                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-4">";
+                  <BarChart3, className="w-8 h-8, tex, t-gre, e, n-6, 0, 0" />";
+                </d, i, v>
+                <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">2, 5, 0% ROI, Improvemen, t</h3>";
+                <p, className="te, x, t-gr, a, y-6, 0, 0">Predictive, analytics, and optimizati, o, n</p>";
+              </d, i, v>
+              <div, className="te, x, t-cent, e, r">
+                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-te, a, l-100, rounde, d-full, m, b-4">
+                  <Zap, className="w-8 h-8, tex, t-te, a, l-6, 0, 0  />
 =======
-              <div className="text-center">";
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-teal-100 rounded-full mb-4">";
-                  <Zap className="w-8 h-8 text-teal-600" />";
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">70% Less Manual Work</h3>";
-                <p className="text-gray-600">Intelligent automation workflows</p>";
-              </div>
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
-                  <Shield className="w-8 h-8 text-blue-600/>
+              <div, className="te, x, t-cent, e, r">";
+                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-te, a, l-100, rounde, d-full, m, b-4">";
+                  <Zap, className="w-8 h-8, tex, t-te, a, l-6, 0, 0" />";
+                </d, i, v>
+                <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">70% Less, Manual, Work</h3>";
+                <p, className="te, x, t-gr, a, y-6, 0, 0">Intelligent, automation, workflows</p>";
+              </d, i, v>
+              <div, className="te, x, t-cent, e, r">
+                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-bl, u, e-100, rounde, d-full, m, b-4">
+                  <Shield, className="w-8 h-8, tex, t-bl, u, e-6, 0, 0  />
 =======
-              <div className="text-center">";
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">";
-                  <Shield className="w-8 h-8 text-blue-600" />";
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">98% Deliverability</h3>";
-                <p className="text-gray-600">Advanced inbox placement optimization</p>";
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Use Cases */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              <div, className="te, x, t-cent, e, r">";
+                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-bl, u, e-100, rounde, d-full, m, b-4">";
+                  <Shield, className="w-8 h-8, tex, t-bl, u, e-6, 0, 0" />";
+                </d, i, v>
+                <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">98% Deliverabili, t, y</h3>";
+                <p, className="te, x, t-gr, a, y-6, 0, 0">Advanced, inbox, placement optimizati, o, n</p>";
+              </d, i, v>
+            </d, i, v>
+          </d, i, v>
+        </secti, o, n>
+        {/* Use, Case, s */}
+        <section, className="py-20">
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8">"
+            <div, className="te, x, t-center, m, b-16">
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
 =======
-        <section className="py-20">";
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
-            <div className="text-center mb-16">";
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">";
-                Industry Applications
+        <section, className="py-20">";
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
+            <div, className="te, x, t-center, m, b-16">";
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
+                Industry, Application, s;
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
-                AI email marketing solutions tailored for different industries and business models.
+              <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
+                AI, email, marketing solutions, tailored, for different, industries, and business, model, s.
               </p>
-            </div>
-
-            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">",
-              {useCases.map((useCase, index) => {
-                const Icon = useCase.icon;
+            </d, i, v>
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+  g:gr, i, d-co, l, s-4, ga, p-8">"
+              {useCas, e, s.m, a, p((useCa, s, e, ind, e, x) => {
+                const, Ico, n = useCa, s, e.ic, o, n;
                 return (
-                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-emerald-100 rounded-full mb-6">
-                      <Icon className="w-8 h-8 text-emerald-600/>
+                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
+                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-emera, l, d-100, rounde, d-full, m, b-6">
+                      <Icon, className="w-8 h-8, tex, t-emera, l, d-6, 0, 0  />
 =======
-            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">";,
-              {useCases.map((useCase, index) => {
-                const Icon = useCase.icon;
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+  g:gr, i, d-co, l, s-4, ga, p-8">";
+              {useCas, e, s.m, a, p((useCa, s, e, ind, e, x) => {
+                const, Ico, n = useCa, s, e.ic, o, n;
                 return (
-                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">";,
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-emerald-100 rounded-full mb-6">";
-                      <Icon className="w-8 h-8 text-emerald-600" />";
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-4">{useCase.title}</h3>";
-                    <p className="text-gray-600 mb-6">{useCase.description}</p>";
-                    <ul className="space-y-2">";
-                      {useCase.benefits.map((benefit, benefitIndex) => (
-                        <li key={benefitIndex} className="flex items-center text-sm">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0/>
-                          <span className="text-gray-700">{benefit}</span>
+                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";
+                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-emera, l, d-100, rounde, d-full, m, b-6">";
+                      <Icon, className="w-8 h-8, tex, t-emera, l, d-6, 0, 0" />";
+                    </d, i, v>
+                    <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">{useCa, s, e.tit, l, e}</h3>";
+                    <p, className="te, x, t-gr, a, y-600, m, b-6">{useCa, s, e.descripti, o, n}</p>";
+                    <ul, className="spa, c, e-y-2">";
+                      {useCa, s, e.benefi, t, s.m, a, p((benef, i, t, benefitInd, e, x) => (
+                        <li, ke, y={benefitInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm">
+                          <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0  />
+                          <span, className="te, x, t-gr, a, y-7, 0, 0">{benef, i, t}</sp, a, n>
 =======
-                        <li key={benefitIndex} className="flex items-center text-sm">";
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />";
-                          <span className="text-gray-700">{benefit}</span>";
+                        <li, ke, y={benefitInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm">";
+                          <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0" />";
+                          <span, className="te, x, t-gr, a, y-7, 0, 0">{benef, i, t}</sp, a, n>";
                         </li>
                       ))}
                     </ul>
-                  </div>
+                  </d, i, v>
                 );
               })}
-            </div>
-          </div>
-        </section>
-
-        {/* Capabilities */}
-        <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            </d, i, v>
+          </d, i, v>
+        </secti, o, n>
+        {/* Capabiliti, e, s */}
+        <section, className="py-20, b, g-gr, a, y-50">
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8">"
+            <div, className="te, x, t-center, m, b-16">
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
 =======
-        <section className="py-20 bg-gray-50">";
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
-            <div className="text-center mb-16">";
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">";
-                AI-Powered Capabilities
+        <section, className="py-20, b, g-gr, a, y-50">";
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
+            <div, className="te, x, t-center, m, b-16">";
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
+                AI-Powered, Capabilitie, s;
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
-                Advanced artificial intelligence features that make your email marketing more effective.
+              <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
+                Advanced, artificial, intelligence features, that, make your, email, marketing more, effectiv, e.
               </p>
-            </div>
-
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            </d, i, v>
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+  g:gr, i, d-co, l, s-3, ga, p-8">"
 =======
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">";,
-              {capabilities.map((capability, index) => (
-                <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">";
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">{capability.title}</h3>";
-                  <p className="text-gray-600">{capability.description}</p>";
-                </div>
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+  g:gr, i, d-co, l, s-3, ga, p-8">";
+              {capabiliti, e, s.m, a, p((capabili, t, y, ind, e, x) => (
+                <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";
+                  <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">{capabili, t, y.tit, l, e}</h3>";
+                  <p, className="te, x, t-gr, a, y-6, 0, 0">{capabili, t, y.descripti, o, n}</p>";
+                </d, i, v>
               ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Features */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            </d, i, v>
+          </d, i, v>
+        </secti, o, n>
+        {/* Featur, e, s */}
+        <section, className="py-20">
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8">"
+            <div, className="te, x, t-center, m, b-16">
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
 =======
-        <section className="py-20">";
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
-            <div className="text-center mb-16">";
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">";
-                Comprehensive Email Marketing Features
+        <section, className="py-20">";
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8">";
+            <div, className="te, x, t-center, m, b-16">";
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
+                Comprehensive, Email, Marketing Featur, e, s;
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
-                Everything you need to create, send, and optimize high-performing email campaigns.
+              <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
+                Everything, you, need to, creat, e, se, n, d, and, optimize, high-performing, email, campaigns.
               </p>
-            </div>
-
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
-              {features.map((feature, index) => {
-                const Icon = feature.icon;
+            </d, i, v>
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+  g:gr, i, d-co, l, s-3, ga, p-8">"
+              {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
+                const, Ico, n = featu, r, e.ic, o, n;
                 return (
-                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",
-                    <div className="inline-flex items-center justify-center w-12 h-12 bg-emerald-100 rounded-lg mb-4">
-                      <Icon className="w-6 h-6 text-emerald-600/>
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
-                    <p className="text-gray-600 mb-4">{feature.description}</p>
-                    <div className="inline-flex items-center text-green-600 font-semibold text-sm">
-                      <CheckCircle className="w-4 h-4 mr-1/>
+                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
+                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-emera, l, d-100, rounde, d-lg, m, b-4">
+                      <Icon, className="w-6 h-6, tex, t-emera, l, d-6, 0, 0  />
+                    </d, i, v>
+                    <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}</h3>
+                    <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>
+                    <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">
+                      <CheckCircle, className="w-4 h-4, m, r-1  />
 =======
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">";,
-              {features.map((feature, index) => {
-                const Icon = feature.icon;
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+  g:gr, i, d-co, l, s-3, ga, p-8">";
+              {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
+                const, Ico, n = featu, r, e.ic, o, n;
                 return (
-                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">";,
-                    <div className="inline-flex items-center justify-center w-12 h-12 bg-emerald-100 rounded-lg mb-4">";
-                      <Icon className="w-6 h-6 text-emerald-600" />";
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>";
-                    <p className="text-gray-600 mb-4">{feature.description}</p>";
-                    <div className="inline-flex items-center text-green-600 font-semibold text-sm">";
-                      <CheckCircle className="w-4 h-4 mr-1" />";
-                      {feature.benefit}
-                    </div>
-                  </div>
+                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";
+                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-emera, l, d-100, rounde, d-lg, m, b-4">";
+                      <Icon, className="w-6 h-6, tex, t-emera, l, d-6, 0, 0" />";
+                    </d, i, v>
+                    <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}</h3>";
+                    <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>";
+                    <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">";
+                      <CheckCircle, className="w-4 h-4, m, r-1" />";
+                      {featu, r, e.benef, i, t}
+                    </d, i, v>
+                  </d, i, v>
                 );
               })}
-            </div>
-          </div>
-        </section>
-
-        {/* Pricing */}
-        <section id="pricing" className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            </d, i, v>
+          </d, i, v>
+        </secti, o, n>
+        {/* Prici, n, g */}
+        <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8">"
+            <div, className="te, x, t-center, m, b-16">
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
 =======
-        <section id="pricing" className="py-20 bg-gray-50">";
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
-            <div className="text-center mb-16">";
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">";
-                Affordable Pricing for Every Business
+        <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">";
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
+            <div, className="te, x, t-center, m, b-16">";
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
+                Affordable, Pricing, for Every, Busines, s;
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
-                Choose the plan that fits your email marketing needs and subscriber count.
+              <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
+                Choose, the, plan that, fits, your email, marketing, needs and, subscriber, count.
               </p>
-            </div>
-
-            <div className="grid md: grid-cols-3 gap-8">",
+            </d, i, v>
+            <div, className="gri, d, m
+  d: gr, i, d-co, l, s-3, ga, p-8">"
 =======
-            <div className="grid md: grid-cols-3 gap-8">";,
-              {pricing.map((plan, index) => (
-                <div key={index} className={`bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? 'ring-2 ring-emerald-500 relative' : ''}`}>`;
-                  {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">";
-                      <span className="bg-emerald-500 text-white px-4 py-1 rounded-full text-sm font-semibold">";
-                        Most Popular
-                      </span>
-                    </div>
+            <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";
+              {prici, n, g.m, a, p((pl, a, n, ind, e, x) => (
+                <div, ke, y={ind, e, x} classNa, m, e={`bg-white, rounde, d-2xl, shado, w-l, g, p-8 ${pl, a, n.popul, a, r ? 'ri, n, g-2, rin, g-emera, l, d-500, relativ, e' : ''}`}>`;`
+                  {pl, a, n.popul, a, r && (
+                    <div, className="absolu, t, e -t, o, p-4, lef, t-1/2, transfor, m -transla, t, e-x-1/2">";
+                      <span, className="bg-emera, l, d-500, tex, t-white, p, x-4, p, y-1, rounde, d-full, tex, t-sm, fon, t-semibo, l, d">";
+                        Most, Popula, r;
+                      </sp, a, n>
+                    </d, i, v>
                   )}
-                  <div className="text-center mb-8">";
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>";
-                    <div className="flex items-center justify-center mb-2">";
-                      <span className="text-4xl font-bold text-gray-900">{plan.price}</span>";
-                      <span className="text-gray-600 ml-1">/{plan.period}</span>";
-                    </div>
-                    <p className="text-gray-600">{plan.description}</p>";
-                  </div>
-                  <ul className="space-y-4 mb-8">";
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center">
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0/>
-                        <span className="text-gray-700">{feature}</span>
+                  <div, className="te, x, t-center, m, b-8">";
+                    <h3, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">{pl, a, n.na, m, e}</h3>";
+                    <div, className="flex, item, s-center, justif, y-center, m, b-2">";
+                      <span, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0">{pl, a, n.pri, c, e}</sp, a, n>";
+                      <span, className="te, x, t-gr, a, y-600, m, l-1">/{pl, a, n.peri, o, d}</sp, a, n>";
+                    </d, i, v>
+                    <p, className="te, x, t-gr, a, y-6, 0, 0">{pl, a, n.descripti, o, n}</p>";
+                  </d, i, v>
+                  <ul, className="spa, c, e-y-4, m, b-8">";
+                    {pl, a, n.featur, e, s.m, a, p((featu, r, e, featureInd, e, x) => (
+                      <li, ke, y={featureInd, e, x} classNa, m, e="flex, item, s-cent, e, r">
+                        <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3, fle, x-shri, n, k-0  />
+                        <span, className="te, x, t-gr, a, y-7, 0, 0">{featu, r, e}</sp, a, n>
 =======
-                      <li key={featureIndex} className="flex items-center">";
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />";
-                        <span className="text-gray-700">{feature}</span>";
+                      <li, ke, y={featureInd, e, x} classNa, m, e="flex, item, s-cent, e, r">";
+                        <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3, fle, x-shri, n, k-0" />";
+                        <span, className="te, x, t-gr, a, y-7, 0, 0">{featu, r, e}</sp, a, n>";
                       </li>
                     ))}
                   </ul>
                   <a
-                    href="/contact"
-                    className={
-`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${`;
-plan.popular
-? 'bg-emerald-600 text-white hover:bg-emerald-700'
+  hr, e, f="/conta, c, t"
+                    classNa, m, e={
+`w-full, block, text-center, p, y-3, p, x-6, rounde, d-lg, fon, t-semibold, transitio, n-colo, r, s ${`;`
+pl, a, n.popul, a, r;
+? 'bg-emera, l, d-600, tex, t-white, hove, r: bg-emera, l, d-7, 0, 0'
 =======
-? 'bg-emerald-600 text-white hover: bg-emerald-700',';,
-: 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-}`}`;
+? 'bg-emera, l, d-600, tex, t-white, hov, e
+  r: bg-emera, l, d-7, 0, 0',';
+: 'bg-gr, a, y-100, tex, t-gr, a, y-900, hove, r:bg-gr, a, y-2, 0, 0'
+}`}`;`
                   >
-                    Get Started
+                    Get, Starte, d;
                   </a>
-                </div>
+                </d, i, v>
               ))}
-            </div>
-
-            <div className="text-center mt-12">";
-              <p className="text-gray-600 mb-4">Need a custom email marketing solution?</p>";
+            </d, i, v>
+            <div, className="te, x, t-center, m, t-12">";
+              <p, className="te, x, t-gr, a, y-600, m, b-4">Need, a, custom email, marketing, solution?</p>";
               <a
-                href="/contact"
-                className="inline-flex items-center text-emerald-600 hover: text-emerald-700 font-semibold",
+  hr, e, f="/conta, c, t"
+                classNa, m, e="inli, n, e-flex, item, s-center, tex, t-emera, l, d-600, hove, r: te, x, t-emera, l, d-700, fon, t-semibo, l, d"
               >
-                Contact our Marketing Team
-                <ArrowRight className="w-4 h-4 ml-1/>
+                Contact, our, Marketing Te, a, m;
+                <ArrowRight, className="w-4 h-4, m, l-1  />
 =======
-                <ArrowRight className="w-4 h-4 ml-1" />";
+                <ArrowRight, className="w-4 h-4, m, l-1" />";
               </a>
-            </div>
-          </div>
-        </section>
-
-        {/* Testimonials */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            </d, i, v>
+          </d, i, v>
+        </secti, o, n>
+        {/* Testimonia, l, s */}
+        <section, className="py-20">
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8">"
+            <div, className="te, x, t-center, m, b-16">
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
 =======
-        <section className="py-20">";
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
-            <div className="text-center mb-16">";
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">";
-                What Our Clients Say
+        <section, className="py-20">";
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
+            <div, className="te, x, t-center, m, b-16">";
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
+                What, Our, Clients S, a, y;
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
-                Join hundreds of companies already using our AI email marketing to boost their campaigns.
+              <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
+                Join, hundreds, of companies, already, using our, AI, email marketing, to, boost their, campaign, s.
               </p>
-            </div>
-
-            <div className="grid md: grid-cols-3 gap-8">",
+            </d, i, v>
+            <div, className="gri, d, m
+  d: gr, i, d-co, l, s-3, ga, p-8">"
 =======
-            <div className="grid md: grid-cols-3 gap-8">";,
-              {testimonials.map((testimonial, index) => (
-                <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">";
-                  <div className="flex items-center mb-4">";
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current/>
+            <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";
+              {testimonia, l, s.m, a, p((testimoni, a, l, ind, e, x) => (
+                <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";
+                  <div, className="flex, item, s-center, m, b-4">";
+                    {[...Arr, a, y(testimoni, a, l.rati, n, g)].m, a, p((_, i) => (
+                      <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t  />
 =======
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />";
+                      <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t" />";
                     ))}
-                  </div>
-                  <blockquote className="text-gray-700 mb-6 italic">";
-                    "{testimonial.content}"
-                  </blockquote>
-                  <div>
-                    <div className="font-semibold text-gray-900">{testimonial.name}</div>";
-                    <div className="text-gray-600 text-sm">{testimonial.role}</div>";
-                    <div className="text-emerald-600 text-sm font-medium">{testimonial.company}</div>";
-                  </div>
-                </div>
+                  </d, i, v>
+                  <blockquote, className="te, x, t-gr, a, y-700, m, b-6, itali, c">";
+                    "{testimoni, a, l.conte, n, t}"
+                  </blockquo, t, e>
+                  <d, i, v>
+                    <div, className="fo, n, t-semibold, tex, t-gr, a, y-9, 0, 0">{testimoni, a, l.na, m, e}</d, i, v>";
+                    <div, className="te, x, t-gr, a, y-600, tex, t-sm">{testimoni, a, l.ro, l, e}</d, i, v>";
+                    <div, className="te, x, t-emera, l, d-600, tex, t-sm, fon, t-medi, u, m">{testimoni, a, l.compa, n, y}</d, i, v>";
+                  </d, i, v>
+                </d, i, v>
               ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-br from-emerald-900 via-green-800 to-teal-900 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">",
-            <h2 className="text-4xl font-bold mb-6">
+            </d, i, v>
+          </d, i, v>
+        </secti, o, n>
+        {/* CTA, Sectio, n */}
+        <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-gre, e, n-800, t, o-te, a, l-900, tex, t-whi, t, e">
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8, tex, t-cent, e, r">"
+            <h2, className="te, x, t-4xl, fon, t-bold, m, b-6">
 =======
-        <section className="py-20 bg-gradient-to-br from-emerald-900 via-green-800 to-teal-900 text-white">";
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">";,
-            <h2 className="text-4xl font-bold mb-6">";
-              Ready to Transform Your Email Marketing?
+        <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-gre, e, n-800, t, o-te, a, l-900, tex, t-whi, t, e">";
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, tex, t-cent, e, r">";
+            <h2, className="te, x, t-4xl, fon, t-bold, m, b-6">";
+              Ready, to, Transform Your, Email, Marketing?
             </h2>
-            <p className="text-xl text-emerald-100 max-w-3xl mx-auto mb-8">";
-              Start using AI-powered email marketing to achieve 300% higher open rates and 250% better ROI.
+            <p, className="te, x, t-xl, tex, t-emera, l, d-100, ma, x-w-3xl, m, x-auto, m, b-8">";
+              Start, using, AI-powered, email, marketing to, achieve, 300% higher, open, rates and, 25, 0% better, RO, I.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+            <div, className="flex, fle, x-co, l, s
+  m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
 =======
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
+            <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
               <a
-                href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-emerald-600 hover: bg-emerald-700 text-white font-semibold rounded-lg transition-colors",
+  hr, e, f="/conta, c, t"
+                classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, b, g-emera, l, d-600, hov, e
+  r: bg-emera, l, d-700, tex, t-white, fon, t-semibold, rounde, d-lg, transitio, n-colo, r, s"
               >
-                <Phone className="w-5 h-5 mr-2/>
+                <Phone, className="w-5 h-5, m, r-2  />
 =======
-                <Phone className="w-5 h-5 mr-2" />";
-                Schedule Demo
+                <Phone, className="w-5 h-5, m, r-2" />";
+                Schedule, Dem, o;
               </a>
               <a
-                href="/case-studies"
-                className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover: bg-white hover:text-emerald-900 font-semibold rounded-lg transition-colors",
+  hr, e, f="/ca, s, e-studi, e, s"
+                classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, borde, r-2, borde, r-white, tex, t-white, hove, r: bg-white, hov, e
+  r:te, x, t-emera, l, d-900, fon, t-semibold, rounde, d-lg, transitio, n-colo, r, s"
               >
-                View Success Stories
-                <ArrowRight className="w-5 h-5 ml-2/>
+                View, Success, Stories;
+                <ArrowRight, className="w-5 h-5, m, l-2  />
 =======
-                <ArrowRight className="w-5 h-5 ml-2" />";
+                <ArrowRight, className="w-5 h-5, m, l-2" />";
               </a>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <Footer />
-    </>
+            </d, i, v>
+          </d, i, v>
+        </secti, o, n>
+      </ma, i, n>
+      <Foot, e, r   />
+    < />
   );
 };
-
 export default AIEmailMarketing;

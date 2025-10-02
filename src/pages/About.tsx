@@ -1,276 +1,272 @@
-import React from 'react';
-import {
-Helmet
-} from 'react-helmet-async';
-import {
-
-} from 'lucide-react';
-
-const About: React.FC = () => {
-  const stats = [
-    { number: '10+', label: 'Years Experience', icon: Award },
-    { number: '500+', label: 'Projects Completed', icon: CheckCircle },
-    { number: '50+', label: 'Happy Clients', icon: Users },
-    { number: '99%', label: 'Client Satisfaction', icon: Star }
+import React from "react";
+impo, r, t {
+Helm, e, t;
+} fr, o, m "rea, c, t-helm, e, t-asy, n, c";
+impo, r, t {
+} fr, o, m "luci, d, e-rea, c, t";
+const, Abou, t: Rea, c, t.FC = () => {
+  const, stat, s = [
+    { num, b, e
+  r: '10+', lab, e, l: 'Years, Experienc, e', ic, o, n: Awa, r, d }
+    { numb, e, r: '5, 0, 0+', lab, e, l: 'Projects, Complete, d', ic, o, n: CheckCirc, l, e }
+    { numb, e, r: '50+', lab, e, l: 'Happy, Client, s', ic, o, n: Use, r, s }
+    { numb, e, r: '99%', lab, e, l: 'Client, Satisfactio, n', ic, o, n: St, a, r }
 =======
-    { number: '99%', label: 'Client Satisfaction', icon: Star },
+    { numb, e, r: '99%', lab, e, l: 'Client, Satisfactio, n', ic, o, n: St, a, r }
   ];
-
-  const values = [
+  const, value, s = [
     {
-      icon: Target,
-      title: 'Innovation First',
-      description: 'We stay ahead of technology trends to deliver solutions that give you a competitive edge in the market.'
+      ic, o, n: Targ, e, t
+      tit, l, e: 'Innovation, Firs, t'
+      descripti, o, n: 'We, stay, ahead of, technology, trends to, deliver, solutions that, give, you a, competitive, edge in, the, market.'
 =======
-      description: 'We stay ahead of technology trends to deliver solutions that give you a competitive edge in the market.',
-    },
+      descript, i, o
+  n: 'We, stay, ahead of, technology, trends to, deliver, solutions that, give, you a, competitive, edge in, the, market.'
+    }
     {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-grade security measures protect your data and ensure compliance with industry standards.'
+      ic, o, n: Shie, l, d
+      tit, l, e: 'Enterprise, Securit, y'
+      descripti, o, n: 'Ba, n, k-grade, security, measures protect, your, data and, ensure, compliance with, industry, standards.'
 =======
-      description: 'Bank-grade security measures protect your data and ensure compliance with industry standards.',
-    },
+      descript, i, o
+  n: 'Ba, n, k-grade, security, measures protect, your, data and, ensure, compliance with, industry, standards.'
+    }
     {
-      icon: TrendingUp,
-      title: 'Measurable Results',
-      description: 'We deliver quantifiable outcomes with average 75% cost reduction and 10x efficiency gains.'
+      ic, o, n: Trending, U, p
+      tit, l, e: 'Measurable, Result, s'
+      descripti, o, n: 'We, deliver, quantifiable outcomes, with, average 75% cost, reduction, and 10x, efficiency, gains.'
 =======
-      description: 'We deliver quantifiable outcomes with average 75% cost reduction and 10x efficiency gains.',
-    },
+      descript, i, o
+  n: 'We, deliver, quantifiable outcomes, with, average 75% cost, reduction, and 10x, efficiency, gains.'
+    }
     {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Serving clients worldwide with 24/7 support and localized solutions for international markets.'
+      ic, o, n: Glo, b, e
+      tit, l, e: 'Global, Reac, h'
+      descripti, o, n: 'Serving, clients, worldwide with, 2, 4/7, support, and localized, solutions, for international, market, s.'
     }
 =======
-      description: 'Serving clients worldwide with 24/7 support and localized solutions for international markets.',
-    },
+      descripti, o, n: 'Serving, clients, worldwide with, 2, 4/7, support, and localized, solutions, for international, market, s.'
+    }
   ];
-
-  const team = [
+  const, tea, m = [
     {
-      name: 'Kleber Santos',
-      role: 'CEO & Founder',
-      description: 'Technology visionary with 15+ years in AI and enterprise solutions.',
-      email: 'kleber@ziontechgroup.com'
+      na, m, e: 'Kleber, Santo, s'
+      ro, l, e: 'C, E, O & Found, e, r'
+      descripti, o, n: 'Technology, visionary, with 15+ years, in, AI and, enterprise, solutions.'
+      ema, i, l: 'kleb, e, r@ziontechgro, u, p.c, o, m'
 =======
-      email: 'kleber@ziontechgroup.com',
-    },
+      em, a, i
+  l: 'kleb, e, r@ziontechgro, u, p.c, o, m'
+    }
     {
-      name: 'AI Engineering Team',
-      role: 'Machine Learning Specialists',
-      description: 'Expert team of AI engineers specializing in cutting-edge machine learning technologies.',
-      email: 'ai-team@ziontechgroup.com'
+      na, m, e: 'AI, Engineering, Team'
+      ro, l, e: 'Machine, Learning, Specialists'
+      descripti, o, n: 'Expert, team, of AI, engineers, specializing in, cuttin, g-edge, machine, learning technologi, e, s.'
+      ema, i, l: 'ai-te, a, m@ziontechgro, u, p.c, o, m'
 =======
-      email: 'ai-team@ziontechgroup.com',
-    },
+      em, a, i
+  l: 'ai-te, a, m@ziontechgro, u, p.c, o, m'
+    }
     {
-      name: 'DevOps Specialists',
-      role: 'Infrastructure Experts',
-      description: 'Cloud and DevOps professionals ensuring scalable and secure infrastructure solutions.',
-      email: 'devops@ziontechgroup.com'
+      na, m, e: 'DevOps, Specialist, s'
+      ro, l, e: 'Infrastructure, Expert, s'
+      descripti, o, n: 'Cloud, and, DevOps professionals, ensuring, scalable and, secure, infrastructure solutio, n, s.'
+      ema, i, l: 'devo, p, s@ziontechgro, u, p.c, o, m'
     }
 =======
-      email: 'devops@ziontechgroup.com',
-    },
+      ema, i, l: 'devo, p, s@ziontechgro, u, p.c, o, m'
+    }
   ];
-
   return (
     <>
       <Helmet>
-        <title>About Us - Zion Tech Group | Leading AI & Technology Solutions</title>
-        <meta name="description" content="Learn about Zion Tech Group's mission, team, and commitment to delivering cutting-edge AI and IT solutions that transform businesses worldwide." />
+        <title>About, U, s - Zion, Tech, Group | Leading, A, I & Technology, Solution, s</title>
+        <meta name="descripti, o, n" content="Learn, about, Zion Tech, Grou, p's, missio, n, te, a, m, and, commitment, to delivering, cuttin, g-edge, AI, and IT, solutions, that transform, businesses, worldwide."  />
       </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-        <div className="container mx-auto px-4 py-12">
-          {/* Header */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              About <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Zion Tech Group</span>
+      <div, className="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-gr, a, y-50, t, o-bl, u, e-50">
+        <div, className="container, m, x-auto, p, x-4, p, y-12">
+          {/* Head, e, r */}
+          <div, className="te, x, t-center, m, b-16">
+            <h1, className="te, x, t-4xl, m, d:te, x, t-6xl, fon, t-bold, tex, t-gr, a, y-900, m, b-6">
+              Abo, u, t <span, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, b, g-cl, i, p-text, tex, t-transpare, n, t">Zion, Tech, Group</sp, a, n>
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              We are a leading provider of cutting-edge AI and IT solutions that transform businesses. 
-              Our mission is to empower organizations with innovative technology that drives growth and success.
+            <p, className="te, x, t-xl, tex, t-gr, a, y-600, ma, x-w-3xl, m, x-auto, m, b-8">
+              We, are, a leading, provider, of cutti, n, g-edge, AI, and IT, solutions, that transform, businesse, s. 
+              Our, mission, is to, empower, organizations with, innovative, technology that, drives, growth and, succes, s.
             </p>
-          </div>
-
-          {/* Stats */}
-          <section className="mb-16">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => {
-                const Icon = stat.icon;
+          </d, i, v>
+          {/* Sta, t, s */}
+          <section, className="mb-16">
+            <div, className="grid, gri, d-co, l, s-2, m, d:gr, i, d-co, l, s-4, ga, p-8">
+              {sta, t, s.m, a, p((st, a, t, ind, e, x) => {
+                const, Ico, n = st, a, t.ic, o, n;
                 return (
-                  <div key={index} className="text-center">
-                    <div className="bg-white rounded-lg shadow-lg p-6">
-                      <Icon className="w-8 h-8 text-blue-600 mx-auto mb-4" />
-                      <div className="text-3xl font-bold text-gray-900 mb-2">{stat.number}</div>
-                      <div className="text-gray-600">{stat.label}</div>
-                    </div>
-                  </div>
+                  <div, ke, y={ind, e, x} classNa, m, e="te, x, t-cent, e, r">
+                    <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6">
+                      <Icon, className="w-8 h-8, tex, t-bl, u, e-600, m, x-auto, m, b-4"  />
+                      <div, className="te, x, t-3xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">{st, a, t.numb, e, r}</d, i, v>
+                      <div, className="te, x, t-gr, a, y-6, 0, 0">{st, a, t.lab, e, l}</d, i, v>
+                    </d, i, v>
+                  </d, i, v>
                 );
               })}
-            </div>
-          </section>
-
-          {/* Mission & Vision */}
-          <section className="mb-16">
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-white rounded-lg shadow-lg p-8">
-                <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
-                  <Target className="w-6 h-6 text-blue-600" />
-                </div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h2>
-                <p className="text-gray-600">
-                  To democratize advanced AI and technology solutions, making them accessible and affordable 
-                  for businesses of all sizes. We believe that cutting-edge technology should be a catalyst 
-                  for growth, not a barrier to entry.
+            </d, i, v>
+          </secti, o, n>
+          {/* Missi, o, n & Visi, o, n */}
+          <section, className="mb-16">
+            <div, className="grid, m, d:gr, i, d-co, l, s-2, ga, p-8">
+              <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-8">
+                <div, className="bg-bl, u, e-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-6">
+                  <Target, className="w-6 h-6, tex, t-bl, u, e-6, 0, 0"  />
+                </d, i, v>
+                <h2, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">Our, Missio, n</h2>
+                <p, className="te, x, t-gr, a, y-6, 0, 0">
+                  To, democratize, advanced AI, and, technology solutio, n, s, making, them, accessible and, affordabl, e
+  for, businesses, of all, size, s. We, believe, that cutti, n, g-edge, technology, should be, a, catalyst
+  for, growt, h, not, a, barrier to, entr, y.
                 </p>
-              </div>
-              <div className="bg-white rounded-lg shadow-lg p-8">
-                <div className="bg-purple-100 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
-                  <Globe className="w-6 h-6 text-purple-600" />
-                </div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h2>
-                <p className="text-gray-600">
-                  To be the global leader in AI-powered business transformation, creating a world where 
-                  every organization can leverage advanced technology to achieve unprecedented levels of 
-                  efficiency, innovation, and success.
+              </d, i, v>
+              <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-8">
+                <div, className="bg-purp, l, e-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-6">
+                  <Globe, className="w-6 h-6, tex, t-purp, l, e-6, 0, 0"  />
+                </d, i, v>
+                <h2, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">Our, Visio, n</h2>
+                <p, className="te, x, t-gr, a, y-6, 0, 0">
+                  To, be, the global, leader, in AI-powered, business, transformation, creating, a, world whe, r, e
+  every, organization, can leverage, advanced, technology to, achieve, unprecedented levels, o, f
+  efficien, c, y, innovati, o, n, and, succes, s.
                 </p>
-              </div>
-            </div>
-          </section>
-
-          {/* Values */}
-          <section className="mb-16">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Core Values</h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                These principles guide everything we do and shape our commitment to excellence.
+              </d, i, v>
+            </d, i, v>
+          </secti, o, n>
+          {/* Valu, e, s */}
+          <section, className="mb-16">
+            <div, className="text-center mb-12">
+              <h2, className="te, x, t-3xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">Our, Core, Values</h2>
+              <p, className="te, x, t-lg, tex, t-gr, a, y-600, ma, x-w-2xl, m, x-au, t, o">
+                These, principles, guide everything, we, do and, shape, our commitment, to, excellence.
               </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {values.map((value, index) => {
-                const Icon = value.icon;
+            </d, i, v>
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+  g:gr, i, d-co, l, s-4, ga, p-8">
+              {valu, e, s.m, a, p((val, u, e, ind, e, x) => {
+                const, Ico, n = val, u, e.ic, o, n;
                 return (
-                  <div key={index} className="bg-white rounded-lg shadow-lg p-6 text-center">
-                    <div className="bg-gradient-to-br from-blue-600 to-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Icon className="w-8 h-8 text-white" />
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">{value.title}</h3>
-                    <p className="text-gray-600">{value.description}</p>
-                  </div>
+                  <div, ke, y={ind, e, x} classNa, m, e="bg-white, rounde, d-lg, shado, w-l, g, p-6, tex, t-cent, e, r">
+                    <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-600, t, o-purp, l, e-60, 0, w-1, 6, h-16, rounde, d-full, flex, items-center, justif, y-center, m, x-auto, m, b-4">
+                      <Icon, className="w-8 h-8, tex, t-whi, t, e"  />
+                    </d, i, v>
+                    <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{val, u, e.tit, l, e}</h3>
+                    <p, className="te, x, t-gr, a, y-6, 0, 0">{val, u, e.descripti, o, n}</p>
+                  </d, i, v>
                 );
               })}
-            </div>
-          </section>
-
-          {/* Team */}
-          <section className="mb-16">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Meet Our Team</h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Our diverse team of experts brings together decades of experience in AI, technology, and business transformation.
+            </d, i, v>
+          </secti, o, n>
+          {/* Te, a, m */}
+          <section, className="mb-16">
+            <div, className="text-center mb-12">
+              <h2, className="te, x, t-3xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">Meet, Our, Team</h2>
+              <p, className="te, x, t-lg, tex, t-gr, a, y-600, ma, x-w-2xl, m, x-au, t, o">
+                Our, diverse, team of, experts, brings together, decades, of experience, in, AI, technolo, g, y, and, business, transformation.
               </p>
-            </div>
-            <div className="grid md:grid-cols-3 gap-8">
-              {team.map((member, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-lg p-6 text-center">
-                  <div className="bg-gradient-to-br from-blue-600 to-purple-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Users className="w-10 h-10 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>
-                  <p className="text-blue-600 font-semibold mb-3">{member.role}</p>
-                  <p className="text-gray-600 mb-4">{member.description}</p>
-                  <a 
-                    href={`mailto:${member.email}`}
-                    className="text-blue-600 hover:text-blue-700 transition-colors"
+            </d, i, v>
+            <div, className="grid, m, d:gr, i, d-co, l, s-3, ga, p-8">
+              {te, a, m.m, a, p((memb, e, r, ind, e, x) => (
+                <div, ke, y={ind, e, x} classNa, m, e="bg-white, rounde, d-lg, shado, w-l, g, p-6, tex, t-cent, e, r">
+                  <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-600, t, o-purp, l, e-60, 0, w-2, 0, h-20, rounde, d-full, flex, items-center, justif, y-center, m, x-auto, m, b-4">
+                    <Users, className="w-1, 0, h-10, tex, t-whi, t, e"  />
+                  </d, i, v>
+                  <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">{memb, e, r.na, m, e}</h3>
+                  <p, className="te, x, t-bl, u, e-600, fon, t-semibold, m, b-3">{memb, e, r.ro, l, e}</p>
+                  <p, className="te, x, t-gr, a, y-600, m, b-4">{memb, e, r.descripti, o, n}</p>
+                  <a
+  hr, e, f={`mail, t, o:${memb, e, r.ema, i, l}`}`
+                    classNa, m, e="te, x, t-bl, u, e-600, hove, r:te, x, t-bl, u, e-700, transitio, n-colo, r, s"
                   >
-                    {member.email}
+                    {memb, e, r.ema, i, l}
                   </a>
-                </div>
+                </d, i, v>
               ))}
-            </div>
-          </section>
-
-          {/* Company Info */}
-          <section className="mb-16">
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <div className="text-center mb-8">
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">Company Information</h2>
-                <p className="text-lg text-gray-600">
-                  Zion Tech Group is headquartered in Delaware, USA, with a global presence serving clients worldwide.
+            </d, i, v>
+          </secti, o, n>
+          {/* Company, Inf, o */}
+          <section, className="mb-16">
+            <div, className="bg-white, rounde, d-xl, shado, w-l, g, p-8">
+              <div, className="te, x, t-center, m, b-8">
+                <h2, className="te, x, t-3xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">Company, Informatio, n</h2>
+                <p, className="te, x, t-lg, tex, t-gr, a, y-6, 0, 0">
+                  Zion, Tech, Group is, headquartered, in Delawa, r, e, U, S, A, with, a, global presence, serving, clients worldwi, d, e.
                 </p>
-              </div>
-              <div className="grid md:grid-cols-3 gap-8">
-                <div className="text-center">
-                  <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <MapPin className="w-8 h-8 text-blue-600" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Headquarters</h3>
-                  <p className="text-gray-600">
-                    364 E Main St STE 1008<br />
-                    Middletown, DE 19709<br />
-                    United States
+              </d, i, v>
+              <div, className="grid, m, d:gr, i, d-co, l, s-3, ga, p-8">
+                <div, className="te, x, t-cent, e, r">
+                  <div, className="bg-bl, u, e-10, 0, w-1, 6, h-16, rounde, d-full, flex, items-center, justif, y-center, m, x-auto, m, b-4">
+                    <MapPin, className="w-8 h-8, tex, t-bl, u, e-6, 0, 0"  />
+                  </d, i, v>
+                  <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">Headquarte, r, s</h3>
+                  <p, className="te, x, t-gr, a, y-6, 0, 0">
+                    364, E, Main St, STE, 1008<br   />
+                    Middleto, w, n, DE, 1970, 9<br   />
+                    United, State, s;
                   </p>
-                </div>
-                <div className="text-center">
-                  <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Phone className="w-8 h-8 text-green-600" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Contact</h3>
-                  <p className="text-gray-600">
-                    Phone: +1 302 464 0950<br />
-                    Email: kleber@ziontechgroup.com<br />
-                    Available 24/7
+                </d, i, v>
+                <div, className="te, x, t-cent, e, r">
+                  <div, className="bg-gre, e, n-10, 0, w-1, 6, h-16, rounde, d-full, flex, items-center, justif, y-center, m, x-auto, m, b-4">
+                    <Phone, className="w-8 h-8, tex, t-gre, e, n-6, 0, 0"  />
+                  </d, i, v>
+                  <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">Conta, c, t</h3>
+                  <p, className="te, x, t-gr, a, y-6, 0, 0">
+                    Pho, n, e: +1, 302, 464 09, 5, 0<br   />
+                    Em, a, i
+  l: kleb, e, r@ziontechgro, u, p.c, o, m<br   />
+                    Available, 2, 4/7;
                   </p>
-                </div>
-                <div className="text-center">
-                  <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Award className="w-8 h-8 text-purple-600" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Certifications</h3>
-                  <p className="text-gray-600">
-                    AWS Certified<br />
-                    Microsoft Partner<br />
-                    Google Cloud Partner<br />
-                    HIPAA Compliant
+                </d, i, v>
+                <div, className="te, x, t-cent, e, r">
+                  <div, className="bg-purp, l, e-10, 0, w-1, 6, h-16, rounde, d-full, flex, items-center, justif, y-center, m, x-auto, m, b-4">
+                    <Award, className="w-8 h-8, tex, t-purp, l, e-6, 0, 0"  />
+                  </d, i, v>
+                  <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">Certificatio, n, s</h3>
+                  <p, className="te, x, t-gr, a, y-6, 0, 0">
+                    AWS, Certifie, d<br   />
+                    Microsoft, Partne, r<br   />
+                    Google, Cloud, Partner<br   />
+                    HIPAA, Complian, t;
                   </p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Contact CTA */}
-          <section className="text-center">
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-white">
-              <h2 className="text-3xl font-bold mb-4">Ready to Work With Us?</h2>
-              <p className="text-xl mb-8 opacity-90">
-                Let's discuss how our technology solutions can transform your business.
+                </d, i, v>
+              </d, i, v>
+            </d, i, v>
+          </secti, o, n>
+          {/* Contact, CT, A */}
+          <section, className="te, x, t-cent, e, r">
+            <div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, rounde, d-x, l, p-8, tex, t-whi, t, e">
+              <h2, className="te, x, t-3xl, fon, t-bold, m, b-4">Ready, to, Work With, U, s?</h2>
+              <p, className="te, x, t-xl, m, b-8, opacit, y-90">
+                L, e, t's, discuss, how our, technology, solutions can, transform, your busine, s, s.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
-                  href="tel:+13024640950" 
-                  className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
+              <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">
+                <a
+  hr, e, f="t, e, l:+130246409, 5, 0" 
+                  classNa, m, e="bg-white, tex, t-bl, u, e-600, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, hove, r:bg-gr, a, y-100, transitio, n-colors, tex, t-cent, e, r"
                 >
-                  <Phone className="w-5 h-5 inline mr-2" />
-                  Call +1 302 464 0950
+                  <Phone, className="w-5 h-5, inline, mr-2"  />
+                  Ca, l, l +1, 302, 464 09, 5, 0;
                 </a>
-                <a 
-                  href="mailto:kleber@ziontechgroup.com" 
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center"
+                <a
+  hr, e, f="mail, t, o:kleb, e, r@ziontechgro, u, p.c, o, m" 
+                  classNa, m, e="bord, e, r-2, borde, r-white, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, hove, r:bg-white, hov, e
+  r:te, x, t-bl, u, e-600, transitio, n-colors, tex, t-cent, e, r"
                 >
-                  <Mail className="w-5 h-5 inline mr-2" />
-                  Email Us Today
+                  <Mail, className="w-5 h-5, inline, mr-2"  />
+                  Email, Us, Today;
                 </a>
-              </div>
-            </div>
-          </section>
-        </div>
-      </div>
-    </>
+              </d, i, v>
+            </d, i, v>
+          </secti, o, n>
+        </d, i, v>
+      </d, i, v>
+    < />
   );
 };
-
 export default About;

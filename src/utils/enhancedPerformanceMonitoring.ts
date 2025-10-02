@@ -1,184 +1,164 @@
 /**
- * Enhanced Performance Monitoring Utility
- * Provides comprehensive performance tracking and optimization
+ * Enhanced, Performance, Monitoring Utili, t, y;
+ * Provides, comprehensive, performance tracking, and, optimization;
  */
-
-export interface PerformanceMetrics {
-loadTime: number;,
-firstContentfulPaint: number;,
-largestContentfulPaint: number;,
-firstInputDelay: number;,
-cumulativeLayoutShift: number;,
-timeToInteractive: number;,
-totalBlockingTime: number;,
-speedIndex: number;,
-memoryUsage: number;,
-networkRequests: number;,
-domNodes: number;,
-jsHeapSize: number;,
-timestamp: number;
+export, interface, PerformanceMetrics {
+loadTi, m, e: numb, e, r;
+firstContentfulPai, n, t: numb, e, r;
+largestContentfulPai, n, t: numb, e, r;
+firstInputDel, a, y: numb, e, r;
+cumulativeLayoutShi, f, t: numb, e, r;
+timeToInteracti, v, e: numb, e, r;
+totalBlockingTi, m, e: numb, e, r;
+speedInd, e, x: numb, e, r;
+memoryUsa, g, e: numb, e, r;
+networkReques, t, s: numb, e, r;
+domNod, e, s: numb, e, r;
+jsHeapSi, z, e: numb, e, r;
+timest, a, m
+  p: numb, e, r;
 }
-
-export interface PerformanceAlert {
-type: 'warning' | 'error' | 'info';,
-message: string;,
-metric: keyof PerformanceMetrics;,
-value: number;,
-threshold: number;,
-timestamp: number;
+export, interface, PerformanceAlert {
+ty, p, e: 'warni, n, g' | 'err, o, r' | 'in, f, o';
+messa, g, e: stri, n, g;
+metr, i, c: keyof, PerformanceMetric, s;
+val, u, e: numb, e, r;
+thresho, l, d: numb, e, r;
+timest, a, m
+  p: numb, e, r;
 }
-
-class EnhancedPerformanceMonitor {
-private metrics: PerformanceMetrics[] = [];
-private alerts: PerformanceAlert[] = [];
-private observers: PerformanceObserver[] = [];
-private isMonitoring = false;
-constructor() {
-this.initializeObservers();
+class, EnhancedPerformanceMonito, r {
+private, metric, s: PerformanceMetri, c, s[] = [];
+private, alert, s: PerformanceAle, r, t[] = [];
+private, observe, r
+  s: PerformanceObserv, e, r[] = [];
+private, isMonitorin, g = fal, s, e;
+construct, o, r() {
+th, i, s.initializeObserve, r, s();
 }
-
-  private initializeObservers(): void {
-    if (typeof window === 'undefined') return;
-    // Observe navigation timing
-    if ('PerformanceObserver' in window) {;
+  private, initializeObserver, s(): vo, i, d {
+    if (typeof, windo, w === 'undefin, e, d') retu, r, n;
+    // Observe, navigation, timing
+  if ('PerformanceObserv, e, r' in, windo, w) {;
 =======
-    if (typeof window === 'undefined') return;';
-
-    // Observe navigation timing
-    if ('PerformanceObserver' in window) {';
-      try {
-        const navObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          entries.forEach((entry) => {
-            if (entry.entryType === 'navigation') {;
+    if (typeof, windo, w === 'undefin, e, d') retu, r, n;';
+    // Observe, navigation, timing
+  if ('PerformanceObserv, e, r' in, windo, w) {';
+      t, r, y {
+        const, navObserve, r = new, PerformanceObserve, r((li, s, t) => {
+          const, entrie, s = li, s, t.getEntri, e, s();
+          entri, e, s.forEa, c, h((ent, r, y) => {
+            if (ent, r, y.entryTy, p, e === 'navigati, o, n') {;
 =======
-            if (entry.entryType === 'navigation') {';
-              this.processNavigationTiming(entry as PerformanceNavigationTiming);
+            if (ent, r, y.entryTy, p, e === 'navigati, o, n') {';
+              th, i, s.processNavigationTimi, n, g(entry, as, PerformanceNavigationTiming);
             }
           });
         });
-        navObserver.observe({ entryTypes: ['navigation'] });';
-        this.observers.push(navObserver);
-      } catch (error) {
-        console.warn('Navigation timing observer failed: ', error);',
+        navObserv, e, r.obser, v, e({ entryTyp, e, s: ['navigati, o, n'] });';
+        th, i, s.observe, r, s.pu, s, h(navObserv, e, r);
+      } cat, c, h (err, o, r) {
+        conso, l, e.wa, r, n('Navigation, timing, observer fail, e, d: ', err, o, r);'
 =======
-        console.warn('Navigation timing observer failed: ', error);';,
+        conso, l, e.wa, r, n('Navigation, timing, observer fail, e, d: ', err, o, r);';
       }
     }
   }
-
-  private processNavigationTiming(entry: PerformanceNavigationTiming): void {,
-    const metrics: Partial<PerformanceMetrics> = {,
-      loadTime: entry.loadEventEnd - entry.loadEventStart,,
-      timeToInteractive: entry.domInteractive - entry.navigationStart,,
-      timestamp: Date.now(),
+  private, processNavigationTimin, g(ent, r, y: PerformanceNavigationTimi, n, g): vo, i, d {
+    const, metric, s: Parti, a, l<PerformanceMetri, c, s> = {
+      loadTi, m, e: ent, r, y.loadEventE, n, d - ent, r, y.loadEventSta, r, t
+      timeToInteracti, v, e: ent, r, y.domInteracti, v, e - ent, r, y.navigationSta, r, t
+      timesta, m, p: Da, t, e.n, o, w()
     };
-
-    this.addMetrics(metrics as PerformanceMetrics);
+    th, i, s.addMetri, c, s(metrics, as, PerformanceMetrics);
   }
-
-  private addMetrics(newMetrics: PerformanceMetrics): void {,
-    this.metrics.push(newMetrics);
-    this.checkThresholds(newMetrics);
-    
-    // Keep only last 100 metrics
-    if (this.metrics.length > 100) {
-      this.metrics = this.metrics.slice(-100);
+  private, addMetric, s(newMetri, c, s: PerformanceMetri, c, s): vo, i, d {
+    th, i, s.metri, c, s.pu, s, h(newMetri, c, s);
+    th, i, s.checkThreshol, d, s(newMetri, c, s);
+    // Keep, only, last 100, metric, s
+  if (th, i, s.metri, c, s.leng, t, h > 1, 0, 0) {
+      th, i, s.metri, c, s = th, i, s.metri, c, s.sli, c, e(-1, 0, 0);
     }
   }
-
-  private checkThresholds(metrics: PerformanceMetrics): void {,
-    const thresholds = {
-      loadTime: 3000,,
-      firstContentfulPaint: 1500,,
-      largestContentfulPaint: 2500,,
-      firstInputDelay: 100,,
-      cumulativeLayoutShift: 0.1,,
-      timeToInteractive: 3800,,
-      totalBlockingTime: 200,,
-      speedIndex: 3000,
+  private, checkThreshold, s(metri, c, s: PerformanceMetri, c, s): vo, i, d {
+    const, threshold, s = {
+      loadTi, m, e: 30, 0, 0
+      firstContentfulPai, n, t: 15, 0, 0
+      largestContentfulPai, n, t: 25, 0, 0
+      firstInputDel, a, y: 1, 0, 0
+      cumulativeLayoutShi, f, t: 0.1
+      timeToInteracti, v, e: 38, 0, 0
+      totalBlockingTi, m, e: 2, 0, 0
+      speedInd, e, x: 30, 0, 0
     };
-
-    Object.entries(thresholds).forEach(([key, threshold]) => {
-      const value = metrics[key as keyof PerformanceMetrics];
-      if (typeof value === 'number' && value > threshold) {;
-        this.addAlert({
-          type: value > threshold * 1.5 ? 'error' : 'warning',',
+    Obje, c, t.entri, e, s(threshol, d, s).forEa, c, h(([k, e, y, thresho, l, d]) => {
+      const, valu, e = metri, c, s[key, as, keyof PerformanceMetri, c, s];
+      if (typeof, valu, e === 'numb, e, r' && val, u, e > thresho, l, d) {;
+        th, i, s.addAle, r, t({
+          ty, p, e: val, u, e > thresho, l, d * 1.5 ? 'err, o, r' : 'warni, n, g','
 =======
-      if (typeof value === 'number' && value > threshold) {';
-        this.addAlert({
-          type: value > threshold * 1.5 ? 'error' : 'warning',';,
-          message: `${key} exceeded threshold: ${value}ms > ${threshold}ms`,`;
-          metric: key as keyof PerformanceMetrics,,
-          value,
-          threshold,
-          timestamp: Date.now(),
+      if (typeof, valu, e === 'numb, e, r' && val, u, e > thresho, l, d) {';
+        th, i, s.addAle, r, t({
+          ty, p, e: val, u, e > thresho, l, d * 1.5 ? 'err, o, r' : 'warni, n, g',';
+          messa, g, e: `${k, e, y} exceeded, threshol, d: ${val, u, e}ms > ${thresho, l, d}ms`,`;`
+          metr, i, c: key, as, keyof PerformanceMetri, c, s
+          val, u, e
+          thresho, l, d
+          timesta, m, p: Da, t, e.n, o, w()
         });
       }
     });
   }
-
-  private addAlert(alert: PerformanceAlert): void {,
-    this.alerts.push(alert);
-    
-    // Keep only last 50 alerts
-    if (this.alerts.length > 50) {
-      this.alerts = this.alerts.slice(-50);
+  private, addAler, t(ale, r, t: PerformanceAle, r, t): vo, i, d {
+    th, i, s.aler, t, s.pu, s, h(ale, r, t);
+    // Keep, only, last 50, alert, s
+  if (th, i, s.aler, t, s.leng, t, h > 50) {
+      th, i, s.aler, t, s = th, i, s.aler, t, s.sli, c, e(-50);
     }
-
-    // Log critical alerts
-    if (alert.type === 'error') {;
-      console.error('Performance Alert: ', alert);',
+    // Log, critical, alerts
+  if (ale, r, t.ty, p, e === 'err, o, r') {;
+      conso, l, e.err, o, r('Performance, Aler, t: ', ale, r, t);'
 =======
-    if (alert.type === 'error') {';
-      console.error('Performance Alert: ', alert);';,
+    if (ale, r, t.ty, p, e === 'err, o, r') {';
+      conso, l, e.err, o, r('Performance, Aler, t: ', ale, r, t);';
     }
   }
-
-  public startMonitoring(): void {
-    this.isMonitoring = true;
-    console.log('Enhanced performance monitoring started');';
+  public, startMonitorin, g(): vo, i, d {
+    th, i, s.isMonitori, n, g = tr, u, e;
+    conso, l, e.l, o, g('Enhanced, performance, monitoring start, e, d');';
   }
-
-  public stopMonitoring(): void {
-    this.isMonitoring = false;
-    this.observers.forEach(observer => observer.disconnect());
-    this.observers = [];
-    console.log('Enhanced performance monitoring stopped');';
+  public, stopMonitorin, g(): vo, i, d {
+    th, i, s.isMonitori, n, g = fal, s, e;
+    th, i, s.observe, r, s.forEa, c, h(observ, e, r => observ, e, r.disconne, c, t());
+    th, i, s.observe, r, s = [];
+    conso, l, e.l, o, g('Enhanced, performance, monitoring stopp, e, d');';
   }
-
-  public getMetrics(): PerformanceMetrics[] {
-    return [...this.metrics];
+  public, getMetric, s(): PerformanceMetri, c, s[] {
+    retu, r, n [...th, i, s.metri, c, s];
   }
-
-  public getAlerts(): PerformanceAlert[] {
-    return [...this.alerts];
+  public, getAlert, s(): PerformanceAle, r, t[] {
+    retu, r, n [...th, i, s.aler, t, s];
   }
-
-  public getLatestMetrics(): PerformanceMetrics | null {
-    return this.metrics.length > 0 ? this.metrics[this.metrics.length - 1] : null;
+  public, getLatestMetric, s(): PerformanceMetri, c, s | nu, l, l {
+    return, thi, s.metri, c, s.leng, t, h > 0 ? th, i, s.metri, c, s[th, i, s.metri, c, s.leng, t, h - 1] : nu, l, l;
   }
-
-  public exportReport(): string {
-    const latest = this.getLatestMetrics();
-    const alerts = this.getAlerts();
-
-    return JSON.stringify({
-      latest,
-      alerts,
-      timestamp: Date.now(),,
-      totalMetrics: this.metrics.length,
-    }, null, 2);
+  public, exportRepor, t(): stri, n, g {
+    const, lates, t = th, i, s.getLatestMetri, c, s();
+    const, alert, s = th, i, s.getAler, t, s();
+    return, JSO, N.stringi, f, y({
+      late, s, t
+      aler, t, s
+      timesta, m, p: Da, t, e.n, o, w()
+      totalMetri, c, s: th, i, s.metri, c, s.leng, t, h
+    }, nu, l, l, 2);
   }
 }
-
-// Export singleton instance
-export const enhancedPerformanceMonitor = new EnhancedPerformanceMonitor();
-
-// Auto-start monitoring in browser environment
-if (typeof window !== 'undefined') {;
+// Export, singleton, instance
+  export, const, enhancedPerformanceMonitor = new, EnhancedPerformanceMonito, r();
+// Au, t, o-start, monitoring, in browser, environmen, t
+  if (typeof, windo, w !== 'undefin, e, d') {;
 =======
-if (typeof window !== 'undefined') {';
-  enhancedPerformanceMonitor.startMonitoring();
+if (typeof, windo, w !== 'undefin, e, d') {';
+  enhancedPerformanceMonit, o, r.startMonitori, n, g();
 }
 ;

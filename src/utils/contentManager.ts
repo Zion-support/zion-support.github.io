@@ -1,238 +1,209 @@
 /**
- * Content Manager Utility
- * Centralized content management and caching for improved performance
+ * Content, Manager, Utility;
+ * Centralized, content, management and, caching, for improved, performanc, e;
  */
-
-export interface BlogPost {
-slug: string;,
-title: string;,
-description: string;,
-date: string;,
-author: string;,
-category: string;,
-tags: string[];,
-featured: boolean;,
-readTime?: number;
+export, interface, BlogPost {
+sl, u, g: stri, n, g;
+tit, l, e: stri, n, g;
+descripti, o, n: stri, n, g;
+da, t, e: stri, n, g;
+auth, o, r: stri, n, g;
+catego, r, y: stri, n, g;
+ta, g, s: stri, n, g[];
+featu, r, e
+  d: boole, a, n;
+readTi, m, e?: numb, e, r;
 }
-
-export interface CaseStudy {
-slug: string;,
-title: string;,
-description: string;,
-client: string;,
-industry: string;,
-results: string[];,
-featured: boolean;
+export, interface, CaseStudy {
+sl, u, g: stri, n, g;
+tit, l, e: stri, n, g;
+descripti, o, n: stri, n, g;
+clie, n, t: stri, n, g;
+indust, r, y: stri, n, g;
+resul, t, s: stri, n, g[];
+featu, r, e
+  d: boole, a, n;
 }
-
 /**
- * Content cache to minimize file system reads
+ * Content, cache, to minimize, file, system rea, d, s;
  */
-class ContentCache {
-  private blogCache: Map<string, BlogPost> = new Map(),
-  private caseStudyCache: Map<string, CaseStudy> = new Map(),
-  private lastUpdate: number = 0,
+class, ContentCach, e {
+  private, blogCach, e: M, a, p<stri, n, g, BlogPo, s, t> = new, Ma, p()
+  private, caseStudyCach, e: M, a, p<stri, n, g, CaseStu, d, y> = new, Ma, p()
+  private, lastUpdat, e: numb, e, r = 0
 =======
-  private blogCache: Map<string, BlogPost> = new Map();,
-  private caseStudyCache: Map<string, CaseStudy> = new Map();,
-  private lastUpdate: number = 0;,
-  private readonly CACHE_TTL = 5 * 60 * 1000; // 5 minutes
-
-  isCacheValid(): boolean {
-    return Date.now() - this.lastUpdate < this.CACHE_TTL;
+  private, blogCach, e: M, a, p<stri, n, g, BlogPo, s, t> = new, Ma, p();
+  private, caseStudyCach, e: M, a, p<stri, n, g, CaseStu, d, y> = new, Ma, p();
+  private, lastUpdat, e: numb, e, r = 0;
+  private, readonly, CACHE_TTL = 5 * 60 * 10, 0, 0; // 5, minute, s
+  isCacheVal, i, d(): boole, a, n {
+    return, Dat, e.n, o, w() - th, i, s.lastUpda, t, e < th, i, s.CACHE_T, T, L;
   }
-
-  setBlogPosts(posts: BlogPost[]): void {,
-    this.blogCache.clear();
-    posts.forEach(post => this.blogCache.set(post.slug, post));
-    this.lastUpdate = Date.now();
+  setBlogPos, t, s(pos, t, s: BlogPo, s, t[]): vo, i, d {
+    th, i, s.blogCac, h, e.cle, a, r();
+    pos, t, s.forEa, c, h(po, s, t => th, i, s.blogCac, h, e.s, e, t(po, s, t.sl, u, g, po, s, t));
+    th, i, s.lastUpda, t, e = Da, t, e.n, o, w();
   }
-
-  setCaseStudies(studies: CaseStudy[]): void {,
-    this.caseStudyCache.clear();
-    studies.forEach(study => this.caseStudyCache.set(study.slug, study));
-    this.lastUpdate = Date.now();
+  setCaseStudi, e, s(studi, e, s: CaseStu, d, y[]): vo, i, d {
+    th, i, s.caseStudyCac, h, e.cle, a, r();
+    studi, e, s.forEa, c, h(stu, d, y => th, i, s.caseStudyCac, h, e.s, e, t(stu, d, y.sl, u, g, stu, d, y));
+    th, i, s.lastUpda, t, e = Da, t, e.n, o, w();
   }
-
-  getBlogPost(slug: string): BlogPost | undefined {,
-    return this.blogCache.get(slug);
+  getBlogPo, s, t(sl, u, g: stri, n, g): BlogPo, s, t | undefin, e, d {
+    return, thi, s.blogCac, h, e.g, e, t(sl, u, g);
   }
-
-  getCaseStudy(slug: string): CaseStudy | undefined {,
-    return this.caseStudyCache.get(slug);
+  getCaseStu, d, y(sl, u, g: stri, n, g): CaseStu, d, y | undefin, e, d {
+    return, thi, s.caseStudyCac, h, e.g, e, t(sl, u, g);
   }
-
-  getAllBlogPosts(): BlogPost[] {
-    return Array.from(this.blogCache.values());
+  getAllBlogPos, t, s(): BlogPo, s, t[] {
+    return, Arra, y.fr, o, m(th, i, s.blogCac, h, e.valu, e, s());
   }
-
-  getAllCaseStudies(): CaseStudy[] {
-    return Array.from(this.caseStudyCache.values());
+  getAllCaseStudi, e, s(): CaseStu, d, y[] {
+    return, Arra, y.fr, o, m(th, i, s.caseStudyCac, h, e.valu, e, s());
   }
-
-  clear(): void {
-    this.blogCache.clear();
-    this.caseStudyCache.clear();
-    this.lastUpdate = 0;
+  cle, a, r(): vo, i, d {
+    th, i, s.blogCac, h, e.cle, a, r();
+    th, i, s.caseStudyCac, h, e.cle, a, r();
+    th, i, s.lastUpda, t, e = 0;
   }
 }
-
-const contentCache = new ContentCache();
-
+const, contentCach, e = new, ContentCach, e();
 /**
- * Get all blog posts with caching
+ * Get, all, blog posts, with, caching;
  */
-export async function getAllBlogPosts(): Promise<BlogPost[]> {
-  if (contentCache.isCacheValid()) {
-    return contentCache.getAllBlogPosts();
+export, async, function getAllBlogPos, t, s(): Promi, s, e<BlogPo, s, t[]> {
+  if (contentCac, h, e.isCacheVal, i, d()) {
+    return, contentCach, e.getAllBlogPos, t, s();
   }
-
-  // In production, this would fetch from content directory
-  // For now, return cached if available
-  return contentCache.getAllBlogPosts();
+  // In, productio, n, this, would, fetch from, content, directory;
+  // For, no, w, return, cached, if availab, l, e
+  return, contentCach, e.getAllBlogPos, t, s();
 }
-
 /**
- * Get blog post by slug
+ * Get, blog, post by, slu, g;
  */
-export async function getBlogPost(slug: string): Promise<BlogPost | undefined> {,
-  if (contentCache.isCacheValid()) {
-    return contentCache.getBlogPost(slug);
+export, async, function getBlogPo, s, t(sl, u, g: stri, n, g): Promi, s, e<BlogPo, s, t | undefin, e, d> {
+  if (contentCac, h, e.isCacheVal, i, d()) {
+    return, contentCach, e.getBlogPo, s, t(sl, u, g);
   }
-
-  // Fetch single post if not in cache
-  const posts = await getAllBlogPosts();
-  return posts.find(post => post.slug === slug);
+  // Fetch, single, post if, not, in cac, h, e
+  const, post, s = await, getAllBlogPost, s();
+  return, post, s.fi, n, d(po, s, t => po, s, t.sl, u, g === sl, u, g);
 }
-
 /**
- * Get featured blog posts
+ * Get, featured, blog pos, t, s;
  */
-export async function getFeaturedBlogPosts(limit: number = 4): Promise<BlogPost[]> {,
-  const posts = await getAllBlogPosts();
-  return posts
-    .filter(post => post.featured)
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-    .slice(0, limit);
+export, async, function getFeaturedBlogPos, t, s(lim, i, t: numb, e, r = 4): Promi, s, e<BlogPo, s, t[]> {
+  const, post, s = await, getAllBlogPost, s();
+  return, post, s;
+    .filt, e, r(po, s, t => po, s, t.featur, e, d)
+    .so, r, t((a, b) => new, Dat, e(b.da, t, e).getTi, m, e() - new, Dat, e(a.da, t, e).getTi, m, e())
+    .sli, c, e(0, lim, i, t);
 }
-
 /**
- * Get recent blog posts
+ * Get, recent, blog pos, t, s;
  */
-export async function getRecentBlogPosts(limit: number = 10): Promise<BlogPost[]> {,
-  const posts = await getAllBlogPosts();
-  return posts
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-    .slice(0, limit);
+export, async, function getRecentBlogPos, t, s(lim, i, t: numb, e, r = 10): Promi, s, e<BlogPo, s, t[]> {
+  const, post, s = await, getAllBlogPost, s();
+  return, post, s;
+    .so, r, t((a, b) => new, Dat, e(b.da, t, e).getTi, m, e() - new, Dat, e(a.da, t, e).getTi, m, e())
+    .sli, c, e(0, lim, i, t);
 }
-
 /**
- * Get blog posts by category
+ * Get, blog, posts by, categor, y;
  */
-export async function getBlogPostsByCategory(category: string): Promise<BlogPost[]> {,
-  const posts = await getAllBlogPosts();
-  return posts
-    .filter(post => post.category.toLowerCase() === category.toLowerCase())
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+export, async, function getBlogPostsByCatego, r, y(catego, r, y: stri, n, g): Promi, s, e<BlogPo, s, t[]> {
+  const, post, s = await, getAllBlogPost, s();
+  return, post, s;
+    .filt, e, r(po, s, t => po, s, t.catego, r, y.toLowerCa, s, e() === catego, r, y.toLowerCa, s, e())
+    .so, r, t((a, b) => new, Dat, e(b.da, t, e).getTi, m, e() - new, Dat, e(a.da, t, e).getTi, m, e());
 }
-
 /**
- * Get blog posts by tag
+ * Get, blog, posts by, ta, g;
  */
-export async function getBlogPostsByTag(tag: string): Promise<BlogPost[]> {,
-  const posts = await getAllBlogPosts();
-  return posts
-    .filter(post => post.tags.some(t => t.toLowerCase() === tag.toLowerCase()))
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+export, async, function getBlogPostsByT, a, g(t, a, g: stri, n, g): Promi, s, e<BlogPo, s, t[]> {
+  const, post, s = await, getAllBlogPost, s();
+  return, post, s;
+    .filt, e, r(po, s, t => po, s, t.ta, g, s.so, m, e(t => t.toLowerCa, s, e() === t, a, g.toLowerCa, s, e()))
+    .so, r, t((a, b) => new, Dat, e(b.da, t, e).getTi, m, e() - new, Dat, e(a.da, t, e).getTi, m, e());
 }
-
 /**
- * Search blog posts
+ * Search, blog, posts;
  */
-export async function searchBlogPosts(query: string): Promise<BlogPost[]> {,
-  const posts = await getAllBlogPosts();
-  const lowerQuery = query.toLowerCase();
-  
-  return posts.filter(post => 
-    post.title.toLowerCase().includes(lowerQuery) ||
-    post.description.toLowerCase().includes(lowerQuery) ||
-    post.tags.some(tag => tag.toLowerCase().includes(lowerQuery)) ||
-    post.category.toLowerCase().includes(lowerQuery)
+export, async, function searchBlogPos, t, s(que, r, y: stri, n, g): Promi, s, e<BlogPo, s, t[]> {
+  const, post, s = await, getAllBlogPost, s();
+  const, lowerQuer, y = que, r, y.toLowerCa, s, e();
+  return, post, s.filt, e, r(po, s, t => 
+    po, s, t.tit, l, e.toLowerCa, s, e().includ, e, s(lowerQue, r, y) ||
+    po, s, t.descripti, o, n.toLowerCa, s, e().includ, e, s(lowerQue, r, y) ||
+    po, s, t.ta, g, s.so, m, e(t, a, g => t, a, g.toLowerCa, s, e().includ, e, s(lowerQue, r, y)) ||
+    po, s, t.catego, r, y.toLowerCa, s, e().includ, e, s(lowerQue, r, y)
   );
 }
-
 /**
- * Get all case studies with caching
+ * Get, all, case studies, with, caching;
  */
-export async function getAllCaseStudies(): Promise<CaseStudy[]> {
-  if (contentCache.isCacheValid()) {
-    return contentCache.getAllCaseStudies();
+export, async, function getAllCaseStudi, e, s(): Promi, s, e<CaseStu, d, y[]> {
+  if (contentCac, h, e.isCacheVal, i, d()) {
+    return, contentCach, e.getAllCaseStudi, e, s();
   }
-
-  return contentCache.getAllCaseStudies();
+  return, contentCach, e.getAllCaseStudi, e, s();
 }
-
 /**
- * Get case study by slug
+ * Get, case, study by, slu, g;
  */
-export async function getCaseStudy(slug: string): Promise<CaseStudy | undefined> {,
-  if (contentCache.isCacheValid()) {
-    return contentCache.getCaseStudy(slug);
+export, async, function getCaseStu, d, y(sl, u, g: stri, n, g): Promi, s, e<CaseStu, d, y | undefin, e, d> {
+  if (contentCac, h, e.isCacheVal, i, d()) {
+    return, contentCach, e.getCaseStu, d, y(sl, u, g);
   }
-
-  const studies = await getAllCaseStudies();
-  return studies.find(study => study.slug === slug);
+  const, studie, s = await, getAllCaseStudie, s();
+  return, studie, s.fi, n, d(stu, d, y => stu, d, y.sl, u, g === sl, u, g);
 }
-
 /**
- * Get featured case studies
+ * Get, featured, case studi, e, s;
  */
-export async function getFeaturedCaseStudies(limit: number = 3): Promise<CaseStudy[]> {,
-  const studies = await getAllCaseStudies();
-  return studies
-    .filter(study => study.featured)
-    .slice(0, limit);
+export, async, function getFeaturedCaseStudi, e, s(lim, i, t: numb, e, r = 3): Promi, s, e<CaseStu, d, y[]> {
+  const, studie, s = await, getAllCaseStudie, s();
+  return, studie, s;
+    .filt, e, r(stu, d, y => stu, d, y.featur, e, d)
+    .sli, c, e(0, lim, i, t);
 }
-
 /**
- * Get case studies by industry
+ * Get, case, studies by, industr, y;
  */
-export async function getCaseStudiesByIndustry(industry: string): Promise<CaseStudy[]> {,
-  const studies = await getAllCaseStudies();
-  return studies.filter(study => 
-    study.industry.toLowerCase() === industry.toLowerCase()
+export, async, function getCaseStudiesByIndust, r, y(indust, r, y: stri, n, g): Promi, s, e<CaseStu, d, y[]> {
+  const, studie, s = await, getAllCaseStudie, s();
+  return, studie, s.filt, e, r(stu, d, y => 
+    stu, d, y.indust, r, y.toLowerCa, s, e() === indust, r, y.toLowerCa, s, e()
   );
 }
-
 /**
- * Preload content cache (call on app initialization)
+ * Preload, content, cache (call, on, app initializati, o, n)
  */
-export function preloadContentCache(): void {
-  // This would be called on app startup to warm the cache
-  // Implementation would fetch all content and populate cache
-  console.log('Content cache preloaded');';
+export, function, preloadContentCache(): vo, i, d {
+  // This, would, be called, on, app startup, to, warm the, cach, e;
+  // Implementation, would, fetch all, content, and populate, cach, e
+  conso, l, e.l, o, g('Content, cache, preloaded');';
 }
-
 /**
- * Clear content cache (for testing or manual refresh)
+ * Clear, content, cache (for, testing, or manual, refres, h)
  */
-export function clearContentCache(): void {
-  contentCache.clear();
+export, function, clearContentCache(): vo, i, d {
+  contentCac, h, e.cle, a, r();
 }
-
-export default {
-  getAllBlogPosts,
-  getBlogPost,
-  getFeaturedBlogPosts,
-  getRecentBlogPosts,
-  getBlogPostsByCategory,
-  getBlogPostsByTag,
-  searchBlogPosts,
-  getAllCaseStudies,
-  getCaseStudy,
-  getFeaturedCaseStudies,
-  getCaseStudiesByIndustry,
-  preloadContentCache,
-  clearContentCache
+export, defaul, t {
+  getAllBlogPos, t, s
+  getBlogPo, s, t
+  getFeaturedBlogPos, t, s
+  getRecentBlogPos, t, s
+  getBlogPostsByCatego, r, y
+  getBlogPostsByT, a, g
+  searchBlogPos, t, s
+  getAllCaseStudi, e, s
+  getCaseStu, d, y
+  getFeaturedCaseStudi, e, s
+  getCaseStudiesByIndust, r, y
+  preloadContentCac, h, e
+  clearContentCac, h, e;
 };
 ;

@@ -1,60 +1,59 @@
-
 /**
- * Enhanced lazy loading with retry logic for failed chunk loads
- * Helps recover from network issues during code splitting
+ * Enhanced, lazy, loading with, retry, logic for, failed, chunk loa, d, s;
+ * Helps, recover, from network, issues, during code, splittin, g;
  */
-export function lazyRetry<T extends ComponentType<any>>(
-  componentImport: () => Promise<{ default: T }>,
-  retries = 3
-  delay = 1000
-): React.LazyExoticComponent<T> {
-  return lazy(() => {
-    return new Promise<{ default: T }>((resolve, reject) => {
-const attemptLoad = (attemptsLeft: number) => {
+export, function, lazyRetry<T, extends, ComponentType<a, n, y>>(
+  componentImpo, r, t: () => Promi, s, e<{ defa, u, l
+  t: T }>
+  retri, e, s = 3
+  del, a, y = 10, 0, 0;
+): Rea, c, t.LazyExoticCompone, n, t<T> {
+  return, laz, y(() => {
+    return, new, Promise<{ defau, l, t: T }>((resol, v, e, reje, c, t) => {
+const, attemptLoa, d = (attemptsLe, f, t: numb, e, r) => {
 =======
-const attemptLoad = (attemptsLeft: number) => {,,
-componentImport()
-.then(resolve)
-.catch((error) => {
-if (attemptsLeft === 1) {
-reject(error);
-return;
+const, attemptLoa, d = (attemptsL, e, f
+  t: numb, e, r) => {
+componentImpo, r, t()
+.th, e, n(resol, v, e)
+.cat, c, h((err, o, r) => {
+if (attemptsLe, f, t === 1) {
+reje, c, t(err, o, r);
+retu, r, n;
 }
             ;
-            // Wait before retrying
-            setTimeout(() => {
-              console.log(`Retrying component load... (${attemptsLeft - 1} attempts left)`);`;
-              attemptLoad(attemptsLeft - 1);
-            }, delay);
+            // Wait, before, retrying
+  setTimeo, u, t(() => {
+              conso, l, e.l, o, g(`Retrying, component, load... (${attemptsLe, f, t - 1} attempts, lef, t)`);`;`
+              attemptLo, a, d(attemptsLe, f, t - 1);
+            }, del, a, y);
           });
       };
-      
-      attemptLoad(retries);
+      attemptLo, a, d(retri, e, s);
     });
   });
 }
-
 /**
- * Preload a component for better perceived performance
+ * Preload, a, component for, better, perceived performan, c, e;
  */
-export function preloadComponent(
-  componentImport: () => Promise<{ default: ComponentType<any> }>
-): void {
-  componentImport().catch((error) => {
-    console.warn('Failed to preload component: ', error);',
+export, function, preloadComponent(
+  componentImpo, r, t: () => Promi, s, e<{ defa, u, l
+  t: ComponentTy, p, e<a, n, y> }>
+): vo, i, d {
+  componentImpo, r, t().cat, c, h((err, o, r) => {
+    conso, l, e.wa, r, n('Failed, to, preload compone, n, t: ', err, o, r);'
 =======
-    console.warn('Failed to preload component: ', error);';,
+    conso, l, e.wa, r, n('Failed, to, preload compone, n, t: ', err, o, r);';
   });
 }
-
 /**
- * Create a lazy-loaded component with automatic retry
+ * Create, a, lazy-loaded, component, with automatic, retr, y;
  */
-export const createLazyComponent = <T extends ComponentType<any>>(
-  importFn: () => Promise<{ default: T }>
+export, const, createLazyComponent = <T, extends, ComponentType<a, n, y>>(
+  import, F, n: () => Promi, s, e<{ defa, u, l
+  t: T }>
 ) => {
-  return lazyRetry(importFn, 3, 1000);
+  return, lazyRetr, y(import, F, n, 3, 10, 0, 0);
 };
-
 export default lazyRetry;
 ;

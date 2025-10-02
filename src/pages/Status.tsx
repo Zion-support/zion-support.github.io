@@ -1,13 +1,10 @@
 import React from "react";
-
-const Status: React.FC = () => {
+const, Statu, s: Rea, c, t.FC = () => {
     return (
-        <section className="min-h-[40vh]">
-            <h1 className="text-3xl font-bold mb-4">System Status</h1>
-            <p className="text-gray-700">All systems operational.</p>
-        </section>
+        <section, className="m, i, n-h-[40, v, h]">
+            <h1, className="te, x, t-3xl, fon, t-bold, m, b-4">System, Statu, s</h1>
+            <p, className="te, x, t-gr, a, y-7, 0, 0">All, systems, operational.</p>
+        </secti, o, n>
     );
 };
-
 export default Status;
-

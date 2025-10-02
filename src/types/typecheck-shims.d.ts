@@ -1,70 +1,66 @@
-// Shims to relax CI type-check by treating page modules as any
-declare module "../pages/*" {
-const Component: React.ComponentType;
+// Shims, to, relax CI, typ, e-check, by, treating page, modules, as a, n, y
+  declare, modul, e "../pag, e, s/*" {
+const, Componen, t: Rea, c, t.ComponentTy, p, e;
 export default Component;
 }
-
-declare module "../content/*" {
-const Content: React.ComponentType;
-export = Content;
+declare, modul, e "../conte, n, t/*" {
+const, Conten, t: Rea, c, t.ComponentTy, p, e;
+expo, r, t = Conte, n, t;
 }
-
-declare module "../components/*" {
-const Component: React.ComponentType;
+declare, modul, e "../componen, t, s/*" {
+const, Componen, t: Rea, c, t.ComponentTy, p, e;
 =======
-declare module "../pages/*" {";
-const Component: React.ComponentType;,
+declare, modul, e "../pag, e, s/*" {";
+const, Compone, n
+  t: Rea, c, t.ComponentTy, p, e;
 export default Component;
 }
-
-declare module "../content/*" {";
-const Content: React.ComponentType;,
-export = Content;
+declare, modul, e "../conte, n, t/*" {";
+const, Conten, t: Rea, c, t.ComponentTy, p, e;
+expo, r, t = Conte, n, t;
 }
-
-declare module "../components/*" {";
-const Component: React.ComponentType;,
+declare, modul, e "../componen, t, s/*" {";
+const, Componen, t: Rea, c, t.ComponentTy, p, e;
 export default Component;
 }
-
-declare module "lucide-react" {";
-	export const TrendingUp: React.ComponentType<{ className?: string }>;
-	export const Shield: React.ComponentType<{ className?: string }>;
-	export const Zap: React.ComponentType<{ className?: string }>;
-	export const Activity: React.ComponentType<{ className?: string }>;
-	export const AlertTriangle: React.ComponentType<{ className?: string }>;
-	export const RefreshCw: React.ComponentType<{ className?: string }>;
-	export const Home: React.ComponentType<{ className?: string }>;
-	const all: Record<string, React.ComponentType>,
+declare, modul, e "luci, d, e-rea, c, t" {";
+	export, const, TrendingUp: Rea, c, t.ComponentTy, p, e<{ classNa, m, e?: stri, n, g }>;
+	export, const, Shield: Rea, c, t.ComponentTy, p, e<{ classNa, m, e?: stri, n, g }>;
+	export, const, Zap: Rea, c, t.ComponentTy, p, e<{ classNa, m, e?: stri, n, g }>;
+	export, const, Activity: Rea, c, t.ComponentTy, p, e<{ classNa, m, e?: stri, n, g }>;
+	export, const, AlertTriangle: Rea, c, t.ComponentTy, p, e<{ classNa, m, e?: stri, n, g }>;
+	export, const, RefreshCw: Rea, c, t.ComponentTy, p, e<{ classNa, m, e?: stri, n, g }>;
+	export, const, Home: Rea, c, t.ComponentTy, p, e<{ classNa, m, e?: stri, n, g }>;
+	const, al, l: Reco, r, d<stri, n, g, Rea, c, t.ComponentTy, p, e>
 	export default all;
 }
-
-declare module "web-vitals" {
-export const onCLS: (callback: (metric: Metric) => void) => void;
-export const onFCP: (callback: (metric: Metric) => void) => void;
-export const onLCP: (callback: (metric: Metric) => void) => void;
-export const onTTFB: (callback: (metric: Metric) => void) => void;
-export interface Metric {
-name: string,
-value: number,
-delta: number,
-id: string,
+declare, modul, e "w, e, b-vita, l, s" {
+export, const, onCLS: (callba, c, k: (metr, i, c: Metr, i, c) => vo, i, d) => vo, i, d;
+export, const, onFCP: (callba, c, k: (metr, i, c: Metr, i, c) => vo, i, d) => vo, i, d;
+export, const, onLCP: (callba, c, k: (metr, i, c: Metr, i, c) => vo, i, d) => vo, i, d;
+export, const, onTTFB: (callba, c, k: (metr, i, c: Metr, i, c) => vo, i, d) => vo, i, d;
+export, interface, Metric {
+n, a, m
+  e: stri, n, g
+val, u, e: numb, e, r
+del, t, a: numb, e, r
+id: stri, n, g
 =======
-	const all: Record<string, React.ComponentType>;,
+	const, al, l: Reco, r, d<stri, n, g, Rea, c, t.ComponentTy, p, e>;
 	export default all;
 }
-
-declare module "web-vitals" {";
-export const onCLS: (callback: (metric: Metric) => void) => void;,
-export const onFCP: (callback: (metric: Metric) => void) => void;,
-export const onLCP: (callback: (metric: Metric) => void) => void;,
-export const onTTFB: (callback: (metric: Metric) => void) => void;,
-export interface Metric {
-name: string;,
-value: number;,
-delta: number;,
-id: string;,
-entries: PerformanceEntry[];
+declare, modul, e "w, e, b-vita, l, s" {";
+export, const, onCLS: (callba, c, k: (metr, i, c: Metr, i, c) => vo, i, d) => vo, i, d;
+export, const, onFCP: (callba, c, k: (metr, i, c: Metr, i, c) => vo, i, d) => vo, i, d;
+export, const, onLCP: (callba, c, k: (metr, i, c: Metr, i, c) => vo, i, d) => vo, i, d;
+export, const, onTTFB: (callba, c, k: (metr, i, c: Metr, i, c) => vo, i, d) => vo, i, d;
+export, interface, Metric {
+na, m, e: stri, n, g;
+val, u, e: numb, e, r;
+del, t, a: numb, e, r;
+id: stri, n, g;
+entr, i, e
+  s: PerformanceEnt, r, y[];
 }
 }
 ;

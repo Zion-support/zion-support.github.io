@@ -1,50 +1,45 @@
 import React from "react";";
-
-export default function ConsentlessJourneysV3(): React.JSX.Element {
+export, default, function ConsentlessJourneys, V, 3(): Rea, c, t.J, S, X.Eleme, n, t {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">";
+    <div, className="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e">";
       <Helmet>
-        <title>Consentless Journeys v3 — Private Personalization &lt;100ms</title>
-        <meta
-          name="description"
-          content="Scoped IDs, signed configs, and on-device models for zero‑PII journeys worldwide under 100ms." /><link
-          rel="canonical"
-          href="https://ziontechgroup.com/blog/edge-2025-oct-01-consentless-journeys-v3",
-        />
+        <title>Consentless, Journeys, v3 — Private, Personalizatio, n &lt;100, m, s</title>
+        <me, t, a
+  na, m, e="descripti, o, n"
+          content="Scoped, ID, s, signed, config, s, and, o, n-device, models, for ze, r, o‑PII, journeys, worldwide under, 100m, s." /><li, n, k 
+  r, e, l="canonic, a, l"
+          hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/bl, o, g/ed, g, e-20, 2, 5-o, c, t-01-consentle, s, s-journe, y, s-v3",  />
       </Helmet>
-
-      <div className="container mx-auto px-6 py-16">
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">Consentless Journeys v3</h1>",
-        <p className="text-zion-slate-light mb-8">Private Personalization &lt;100ms</p>
-        <div className="prose prose-invert max-w-3xl">
+      <div, className="container, m, x-auto, p, x-6, p, y-16">
+        <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4">Consentless, Journeys, v3</h1>"
+        <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-8">Private, Personalizatio, n &lt;100, m, s</p>
+        <div, className="prose, pros, e-invert, ma, x-w-3, x, l">
 =======
-          href="https: //ziontechgroup.com/blog/edge-2025-oct-01-consentless-journeys-v3",
-        />
+          hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ed, g, e-20, 2, 5-o, c, t-01-consentle, s, s-journe, y, s-v3"
+         />
       </Helmet>
-
-      <div className="container mx-auto px-6 py-16">";
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">Consentless Journeys v3</h1>";,
-        <p className="text-zion-slate-light mb-8">Private Personalization &lt;100ms</p>";
-        <div className="prose prose-invert max-w-3xl">";
+      <div, className="container, m, x-auto, p, x-6, p, y-16">";
+        <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4">Consentless, Journeys, v3</h1>";
+        <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-8">Private, Personalizatio, n &lt;100, m, s</p>";
+        <div, className="prose, pros, e-invert, ma, x-w-3, x, l">";
           <p>
-            Deliver privacy‑first personalization with scoped identifiers, signed
-            configuration, and on‑device models. Achieve global &lt;100ms UX without
-            collecting PII.
+            Deliver, privac, y‑first, personalization, with scoped, identifier, s, sign, e, d
+  configurati, o, n, and, o, n‑device, model, s. Achieve, globa, l &lt;100ms, UX, without
+  collecting, PI, I.
           </p>
           <p>
-            This blueprint details scoped ID design, cache strategies, device‑side
-            redaction, and differential privacy signals for compliant analytics.
+            This, blueprint, details scoped, ID, design, cache, strategie, s, devi, c, e‑si, d, e
+  redacti, o, n, and, differential, privacy signals, for, compliant analyti, c, s.
           </p>
-        </div>
-        <div className="mt-8">
-          <Link to="/blog" className="text-cyan-300 hover: underline">← Back to Blog</Link>",
+        </d, i, v>
+        <div, className="mt-8">
+          <Link, t, o="/bl, o, g" classNa, m, e="te, x, t-cy, a, n-300, hove, r: underli, n, e">← Back, to, Blog</Li, n, k>"
 =======
-        <div className="mt-8">";
-          <Link to="/blog" className="text-cyan-300 hover: underline">← Back to Blog</Link>";,
-        </div>
-      </div>
-    </div>
+        <div, className="mt-8">";
+          <Link, t, o="/bl, o, g" classNa, m, e="te, x, t-cy, a, n-300, hove, r: underli, n, e">← Back, to, Blog</Li, n, k>";
+        </d, i, v>
+      </d, i, v>
+    </d, i, v>
   );
 }
-
 ;

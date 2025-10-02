@@ -1,681 +1,683 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Zap } from 'lucide-react';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
+import React from "react";
+import { Helmet } from "react-helmet-async";
+impo, r, t { Z, a, p } fr, o, m "luci, d, e-rea, c, t";
+import, Header, from "../../componen, t, s/Head, e, r";
+import, Footer, from "../../componen, t, s/Foot, e, r";
 =======
-import React from 'react';';
-import {
-Helmet
-} from 'react-helmet-async';';
-import {
-Zap
-} from 'lucide-react';';
-import Header from '../../components/Header';';
-import Footer from '../../components/Footer';';
-
-const AIPredictiveAnalytics: React.FC = () => {,
-  const features = [
+import React from "react";';
+impo, r, t {
+Helm, e, t;
+} fr, o, m "rea, c, t-helm, e, t-asy, n, c";';
+impo, r, t {
+Z, a, p;
+} fr, o, m "luci, d, e-rea, c, t";';
+import, Header, from "../../componen, t, s/Head, e, r";';
+import, Footer, from "../../componen, t, s/Foot, e, r";';
+const, AIPredictiveAnalytic, s: Rea, c, t.FC = () => {
+  const, feature, s = [
     {
-      icon: Brain,,
-      title: "Machine Learning Models",",
-      description: "Advanced ML algorithms that predict future trends, customer behavior, and business outcomes with 94% accuracy.",",
+      i, c, o
+  n: Bra, i, n
+      tit, l, e: "Machine, Learning, Models","
+      descripti, o, n: "Advanced, ML, algorithms that, predict, future tren, d, s, customer, behavio, r, and, business, outcomes with, 9, 4% accura, c, y.","
 =======
-      title: "Machine Learning Models",";,
-      description: "Advanced ML algorithms that predict future trends, customer behavior, and business outcomes with 94% accuracy.",";,
-      benefit: "94% prediction accuracy rate",
-    },
+      tit, l, e: "Machine, Learning, Models",";
+      descripti, o, n: "Advanced, ML, algorithms that, predict, future tren, d, s, customer, behavio, r, and, business, outcomes with, 9, 4% accura, c, y.",";
+      benef, i, t: "94% prediction, accuracy, rate"
+    }
     {
-      icon: TrendingUp,,
-      title: "Real-Time Forecasting",",
-      description: "Live predictive analytics that update continuously as new data flows in, providing instant insights.",",
+      ic, o, n: Trending, U, p
+      tit, l, e: "Re, a, l-Time, Forecastin, g","
+      descripti, o, n: "Live, predictive, analytics that, update, continuously as, new, data flows, i, n, providing, instant, insights.","
 =======
-      title: "Real-Time Forecasting",";,
-      description: "Live predictive analytics that update continuously as new data flows in, providing instant insights.",";,
-      benefit: "Real-time decision making",
-    },
+      tit, l, e: "Re, a, l-Time, Forecastin, g",";
+      descripti, o, n: "Live, predictive, analytics that, update, continuously as, new, data flows, i, n, providing, instant, insights.",";
+      benef, i, t: "Re, a, l-time, decision, making"
+    }
     {
-      icon: Target,,
-      title: "Customer Lifetime Value",",
-      description: "Predict customer behavior, churn risk, and lifetime value to optimize marketing spend and retention.",",
+      ic, o, n: Targ, e, t
+      tit, l, e: "Customer, Lifetime, Value","
+      descripti, o, n: "Predict, customer, behavior, churn, ris, k, and, lifetime, value to, optimize, marketing spend, and, retention.","
 =======
-      title: "Customer Lifetime Value",";,
-      description: "Predict customer behavior, churn risk, and lifetime value to optimize marketing spend and retention.",";,
-      benefit: "35% increase in customer retention",
-    },
+      tit, l, e: "Customer, Lifetime, Value",";
+      descripti, o, n: "Predict, customer, behavior, churn, ris, k, and, lifetime, value to, optimize, marketing spend, and, retention.",";
+      benef, i, t: "35% increase, in, customer retenti, o, n"
+    }
     {
-      icon: BarChart3,,
-      title: "Revenue Forecasting",",
-      description: "Accurate revenue predictions based on historical data, market trends, and external factors.",",
+      ic, o, n: BarChar, t, 3
+      tit, l, e: "Revenue, Forecastin, g","
+      descripti, o, n: "Accurate, revenue, predictions based, on, historical da, t, a, market, trend, s, and, external, factors.","
 =======
-      title: "Revenue Forecasting",";,
-      description: "Accurate revenue predictions based on historical data, market trends, and external factors.",";,
-      benefit: "98% forecast accuracy",
-    },
+      tit, l, e: "Revenue, Forecastin, g",";
+      descripti, o, n: "Accurate, revenue, predictions based, on, historical da, t, a, market, trend, s, and, external, factors.",";
+      benef, i, t: "98% forecast, accurac, y"
+    }
     {
-      icon: Shield,,
-      title: "Risk Assessment",",
-      description: "Identify potential risks and opportunities before they impact your business operations.",",
+      ic, o, n: Shie, l, d
+      tit, l, e: "Risk, Assessmen, t","
+      descripti, o, n: "Identify, potential, risks and, opportunities, before they, impact, your business, operation, s.","
 =======
-      title: "Risk Assessment",";,
-      description: "Identify potential risks and opportunities before they impact your business operations.",";,
-      benefit: "60% risk reduction",
-    },
+      tit, l, e: "Risk, Assessmen, t",";
+      descripti, o, n: "Identify, potential, risks and, opportunities, before they, impact, your business, operation, s.",";
+      benef, i, t: "60% risk, reductio, n"
+    }
     {
-      icon: Clock,,
-      title: "Automated Insights",",
-      description: "AI-generated insights and recommendations delivered directly to decision-makers.",",
+      ic, o, n: Clo, c, k
+      tit, l, e: "Automated, Insight, s","
+      descripti, o, n: "AI-generated, insights, and recommendations, delivered, directly to, decisio, n-make, r, s.","
 =======
-      title: "Automated Insights",";,
-      description: "AI-generated insights and recommendations delivered directly to decision-makers.",";,
-      benefit: "50% faster decision making",
+      tit, l, e: "Automated, Insight, s",";
+      descripti, o, n: "AI-generated, insights, and recommendations, delivered, directly to, decisio, n-make, r, s.",";
+      benef, i, t: "50% faster, decision, making"
     }
   ];
-
-  const pricing = [
+  const, pricin, g = [
     {
-      name: "Starter",
-      price: "$299",
-      period: "/month",
-      description: "Perfect for small businesses wanting to leverage predictive analytics",
-      features: [,
-        "Up to 10 predictive models",
-        "5 data sources",
-        "Basic dashboard",
-        "Email support",
-        "Monthly reports",
-        "Standard integrations",
-        "Historical data analysis",
-        "Basic forecasting"
+      na, m, e: "Start, e, r"
+      pri, c, e: "$2, 9, 9"
+      peri, o, d: "/mon, t, h"
+      descripti, o, n: "Perfect, for, small businesses, wanting, to leverage, predictive, analytics"
+      featur, e, s: [
+        "Up, to, 10 predictive, model, s"
+        "5, data, sources"
+        "Basic, dashboar, d"
+        "Email, suppor, t"
+        "Monthly, report, s"
+        "Standard, integration, s"
+        "Historical, data, analysis"
+        "Basic, forecastin, g"
       ]
-      popular: false
-    },
+      popul, a, r: fal, s, e;
+    }
     {
-      name: "Professional",
-      price: "$899",
-      period: "/month",
-      description: "Ideal for growing companies with complex data needs",
-      features: [,
-        "Unlimited predictive models",
-        "25 data sources",
-        "Advanced dashboard & visualization",
-        "Priority support",
-        "Real-time monitoring",
-        "Advanced integrations",
-        "Custom model training",
-        "API access",
-        "Automated alerts",
-        "A/B testing insights"
+      na, m, e: "Profession, a, l"
+      pri, c, e: "$8, 9, 9"
+      peri, o, d: "/mon, t, h"
+      descripti, o, n: "Ideal, for, growing companies, with, complex data, need, s"
+      featur, e, s: [
+        "Unlimited, predictive, models"
+        "25, data, sources"
+        "Advanced, dashboar, d & visualizati, o, n"
+        "Priority, suppor, t"
+        "Re, a, l-time, monitorin, g"
+        "Advanced, integration, s"
+        "Custom, model, training"
+        "API, acces, s"
+        "Automated, alert, s"
+        "A/B, testing, insights"
       ]
-      popular: true
-    },
+      popul, a, r: tr, u, e;
+    }
     {
-      name: "Enterprise",
-      price: "$2,999",
-      period: "/month",
-      description: "Complete solution for large organizations with enterprise requirements",
-      features: [,
-        "Unlimited everything",
-        "Unlimited data sources",
-        "Enterprise dashboard",
-        "Dedicated data scientist",
-        "Custom model development",
-        "Unlimited integrations",
-        "Advanced security & compliance",
-        "White-label options",
-        "SLA guarantee",
-        "On-premise deployment",
-        "Custom reporting",
-        "Training & consultation"
+      na, m, e: "Enterpri, s, e"
+      pri, c, e: "$2,9, 9, 9"
+      peri, o, d: "/mon, t, h"
+      descripti, o, n: "Complete, solution, for large, organizations, with enterprise, requirement, s"
+      featur, e, s: [
+        "Unlimited, everythin, g"
+        "Unlimited, data, sources"
+        "Enterprise, dashboar, d"
+        "Dedicated, data, scientist"
+        "Custom, model, development"
+        "Unlimited, integration, s"
+        "Advanced, securit, y & complian, c, e"
+        "Whi, t, e-label, option, s"
+        "SLA, guarante, e"
+        "On-premise, deploymen, t"
+        "Custom, reportin, g"
+        "Traini, n, g & consultati, o, n"
       ]
-      popular: false
+      popul, a, r: fal, s, e;
 =======
-      name: "Starter",";,
-      price: "$299",";,
-      period: "/month",";,
-      description: "Perfect for small businesses wanting to leverage predictive analytics",";,
-      features: [,
-        "Up to 10 predictive models",";
-        "5 data sources",";
-        "Basic dashboard",";
-        "Email support",";
-        "Monthly reports",";
-        "Standard integrations",";
-        "Historical data analysis",";
-        "Basic forecasting"
-      ],
-      popular: false,
-    },
+      n, a, m
+  e: "Start, e, r",";
+      pri, c, e: "$2, 9, 9",";
+      peri, o, d: "/mon, t, h",";
+      descripti, o, n: "Perfect, for, small businesses, wanting, to leverage, predictive, analytics",";
+      featur, e, s: [
+        "Up, to, 10 predictive, model, s",";
+        "5, data, sources",";
+        "Basic, dashboar, d",";
+        "Email, suppor, t",";
+        "Monthly, report, s",";
+        "Standard, integration, s",";
+        "Historical, data, analysis",";
+        "Basic, forecastin, g"
+      ]
+      popul, a, r: fal, s, e
+    }
     {
-      name: "Professional",";,
-      price: "$899",";,
-      period: "/month",";,
-      description: "Ideal for growing companies with complex data needs",";,
-      features: [,
-        "Unlimited predictive models",";
-        "25 data sources",";
-        "Advanced dashboard & visualization",";
-        "Priority support",";
-        "Real-time monitoring",";
-        "Advanced integrations",";
-        "Custom model training",";
-        "API access",";
-        "Automated alerts",";
-        "A/B testing insights"
-      ],
-      popular: true,
-    },
+      na, m, e: "Profession, a, l",";
+      pri, c, e: "$8, 9, 9",";
+      peri, o, d: "/mon, t, h",";
+      descripti, o, n: "Ideal, for, growing companies, with, complex data, need, s",";
+      featur, e, s: [
+        "Unlimited, predictive, models",";
+        "25, data, sources",";
+        "Advanced, dashboar, d & visualizati, o, n",";
+        "Priority, suppor, t",";
+        "Re, a, l-time, monitorin, g",";
+        "Advanced, integration, s",";
+        "Custom, model, training",";
+        "API, acces, s",";
+        "Automated, alert, s",";
+        "A/B, testing, insights"
+      ]
+      popul, a, r: tr, u, e
+    }
     {
-      name: "Enterprise",";,
-      price: "$2,999",";,
-      period: "/month",";,
-      description: "Complete solution for large organizations with enterprise requirements",";,
-      features: [,
-        "Unlimited everything",";
-        "Unlimited data sources",";
-        "Enterprise dashboard",";
-        "Dedicated data scientist",";
-        "Custom model development",";
-        "Unlimited integrations",";
-        "Advanced security & compliance",";
-        "White-label options",";
-        "SLA guarantee",";
-        "On-premise deployment",";
-        "Custom reporting",";
-        "Training & consultation"
-      ],
-      popular: false,
+      na, m, e: "Enterpri, s, e",";
+      pri, c, e: "$2,9, 9, 9",";
+      peri, o, d: "/mon, t, h",";
+      descripti, o, n: "Complete, solution, for large, organizations, with enterprise, requirement, s",";
+      featur, e, s: [
+        "Unlimited, everythin, g",";
+        "Unlimited, data, sources",";
+        "Enterprise, dashboar, d",";
+        "Dedicated, data, scientist",";
+        "Custom, model, development",";
+        "Unlimited, integration, s",";
+        "Advanced, securit, y & complian, c, e",";
+        "Whi, t, e-label, option, s",";
+        "SLA, guarante, e",";
+        "On-premise, deploymen, t",";
+        "Custom, reportin, g",";
+        "Traini, n, g & consultati, o, n"
+      ]
+      popul, a, r: fal, s, e
     }
   ];
-
-  const testimonials = [
+  const, testimonial, s = [
     {
-      name: "Jennifer Martinez",",
-      role: "VP Marketing, RetailTech Solutions",",
-      content: "The predictive analytics platform helped us increase our customer retention by 40% and optimize our marketing spend by $2M annually. The ROI was evident within the first quarter.",",
+      na, m, e: "Jennifer, Martine, z","
+      ro, l, e: "VP, Marketin, g, RetailTech, Solution, s","
+      conte, n, t: "The, predictive, analytics platform, helped, us increase, our, customer retention, by, 40% and, optimize, our marketing, spend, by $2M, annuall, y. The, ROI, was evident, within, the first, quarte, r.","
 =======
-      name: "Jennifer Martinez",";,
-      role: "VP Marketing, RetailTech Solutions",";,
-      content: "The predictive analytics platform helped us increase our customer retention by 40% and optimize our marketing spend by $2M annually. The ROI was evident within the first quarter.",";,
-      rating: 5,,
-      company: "RetailTech Solutions",
-    },
+      na, m, e: "Jennifer, Martine, z",";
+      ro, l, e: "VP, Marketin, g, RetailTech, Solution, s",";
+      conte, n, t: "The, predictive, analytics platform, helped, us increase, our, customer retention, by, 40% and, optimize, our marketing, spend, by $2M, annuall, y. The, ROI, was evident, within, the first, quarte, r.",";
+      rati, n, g: 5
+      compa, n, y: "RetailTech, Solution, s"
+    }
     {
-      name: "David Kim",",
-      role: "CFO, FinTech Innovations",",
-      content: "Revenue forecasting accuracy improved from 78% to 98%. This gave us the confidence to make strategic investments and secure additional funding rounds.",",
+      na, m, e: "David, Ki, m","
+      ro, l, e: "C, F, O, FinTech, Innovation, s","
+      conte, n, t: "Revenue, forecasting, accuracy improved, from, 78% to, 9, 8%. This, gave, us the, confidence, to make, strategic, investments and, secure, additional funding, round, s.","
 =======
-      name: "David Kim",";,
-      role: "CFO, FinTech Innovations",";,
-      content: "Revenue forecasting accuracy improved from 78% to 98%. This gave us the confidence to make strategic investments and secure additional funding rounds.",";,
-      rating: 5,,
-      company: "FinTech Innovations",
-    },
+      na, m, e: "David, Ki, m",";
+      ro, l, e: "C, F, O, FinTech, Innovation, s",";
+      conte, n, t: "Revenue, forecasting, accuracy improved, from, 78% to, 9, 8%. This, gave, us the, confidence, to make, strategic, investments and, secure, additional funding, round, s.",";
+      rati, n, g: 5
+      compa, n, y: "FinTech, Innovation, s"
+    }
     {
-      name: "Dr. Sarah Thompson",",
-      role: "Head of Analytics, Healthcare Network",",
-      content: "The risk assessment models identified potential issues 3 months before they occurred, saving us $5M in potential losses and improving patient outcomes.",",
+      na, m, e: "Dr. Sarah, Thompso, n","
+      ro, l, e: "Head, of, Analytics, Healthcare, Networ, k","
+      conte, n, t: "The, risk, assessment models, identified, potential issues, 3, months before, they, occurred, saving, u, s $5M, in, potential losses, and, improving patient, outcome, s.","
 =======
-      name: "Dr. Sarah Thompson",";,
-      role: "Head of Analytics, Healthcare Network",";,
-      content: "The risk assessment models identified potential issues 3 months before they occurred, saving us $5M in potential losses and improving patient outcomes.",";,
-      rating: 5,,
-      company: "Healthcare Network",
+      na, m, e: "Dr. Sarah, Thompso, n",";
+      ro, l, e: "Head, of, Analytics, Healthcare, Networ, k",";
+      conte, n, t: "The, risk, assessment models, identified, potential issues, 3, months before, they, occurred, saving, u, s $5M, in, potential losses, and, improving patient, outcome, s.",";
+      rati, n, g: 5
+      compa, n, y: "Healthcare, Networ, k"
     }
   ];
-
-  const useCases = [
+  const, useCase, s = [
     {
-      title: "E-Commerce Optimization",",
-      icon: Globe,,
-      description: "Predict customer purchase behavior, optimize inventory, and personalize shopping experiences.",",
-      benefits: ["25% increase in conversion", "30% reduction in inventory costs", "40% improvement in customer satisfaction"]",
-    },
+      tit, l, e: "E-Commerce, Optimizatio, n","
+      ic, o, n: Glo, b, e
+      descripti, o, n: "Predict, customer, purchase behavi, o, r, optimize, inventor, y, and, personalize, shopping experienc, e, s.","
+      benefi, t, s: ["25% increase, in, conversion", "30% reduction, in, inventory cos, t, s", "40% improvement, in, customer satisfacti, o, n"]"
+    }
     {
-      title: "Financial Services",",
-      icon: Database,,
-      description: "Credit risk assessment, fraud detection, and investment portfolio optimization.",",
-      benefits: ["60% reduction in bad debt", "95% fraud detection accuracy", "20% increase in portfolio returns"]",
-    },
+      tit, l, e: "Financial, Service, s","
+      ic, o, n: Databa, s, e
+      descripti, o, n: "Credit, risk, assessment, fraud, detectio, n, and, investment, portfolio optimizati, o, n.","
+      benefi, t, s: ["60% reduction, in, bad de, b, t", "95% fraud, detection, accuracy", "20% increase, in, portfolio retur, n, s"]"
+    }
     {
-      title: "Healthcare Analytics",",
-      icon: Users,,
-      description: "Patient outcome prediction, resource allocation, and treatment optimization.",",
-      benefits: ["35% improvement in patient outcomes", "25% reduction in readmissions", "40% cost savings"]",
-    },
+      tit, l, e: "Healthcare, Analytic, s","
+      ic, o, n: Use, r, s
+      descripti, o, n: "Patient, outcome, prediction, resource, allocatio, n, and, treatment, optimization.","
+      benefi, t, s: ["35% improvement, in, patient outcom, e, s", "25% reduction, in, readmissions", "40% cost, saving, s"]"
+    }
     {
-      title: "Supply Chain",",
-      icon: Zap,,
-      description: "Demand forecasting, supplier risk assessment, and logistics optimization.",",
-      benefits: ["45% reduction in stockouts", "30% improvement in delivery times", "25% cost reduction"]",
+      tit, l, e: "Supply, Chai, n","
+      ic, o, n: Z, a, p
+      descripti, o, n: "Demand, forecastin, g, supplier, risk, assessment, and, logistics, optimization.","
+      benefi, t, s: ["45% reduction, in, stockouts", "30% improvement, in, delivery tim, e, s", "25% cost, reductio, n"]"
 =======
-      title: "E-Commerce Optimization",";,
-      icon: Globe,,
-      description: "Predict customer purchase behavior, optimize inventory, and personalize shopping experiences.",";,
-      benefits: ["25% increase in conversion", "30% reduction in inventory costs", "40% improvement in customer satisfaction"]";,
-    },
+      tit, l, e: "E-Commerce, Optimizatio, n",";
+      ic, o, n: Glo, b, e
+      descripti, o, n: "Predict, customer, purchase behavi, o, r, optimize, inventor, y, and, personalize, shopping experienc, e, s.",";
+      benefi, t, s: ["25% increase, in, conversion", "30% reduction, in, inventory cos, t, s", "40% improvement, in, customer satisfacti, o, n"]";
+    }
     {
-      title: "Financial Services",";,
-      icon: Database,,
-      description: "Credit risk assessment, fraud detection, and investment portfolio optimization.",";,
-      benefits: ["60% reduction in bad debt", "95% fraud detection accuracy", "20% increase in portfolio returns"]";,
-    },
+      tit, l, e: "Financial, Service, s",";
+      ic, o, n: Databa, s, e
+      descripti, o, n: "Credit, risk, assessment, fraud, detectio, n, and, investment, portfolio optimizati, o, n.",";
+      benefi, t, s: ["60% reduction, in, bad de, b, t", "95% fraud, detection, accuracy", "20% increase, in, portfolio retur, n, s"]";
+    }
     {
-      title: "Healthcare Analytics",";,
-      icon: Users,,
-      description: "Patient outcome prediction, resource allocation, and treatment optimization.",";,
-      benefits: ["35% improvement in patient outcomes", "25% reduction in readmissions", "40% cost savings"]";,
-    },
+      tit, l, e: "Healthcare, Analytic, s",";
+      ic, o, n: Use, r, s
+      descripti, o, n: "Patient, outcome, prediction, resource, allocatio, n, and, treatment, optimization.",";
+      benefi, t, s: ["35% improvement, in, patient outcom, e, s", "25% reduction, in, readmissions", "40% cost, saving, s"]";
+    }
     {
-      title: "Supply Chain",";,
-      icon: Zap,,
-      description: "Demand forecasting, supplier risk assessment, and logistics optimization.",";,
-      benefits: ["45% reduction in stockouts", "30% improvement in delivery times", "25% cost reduction"]";,
+      tit, l, e: "Supply, Chai, n",";
+      ic, o, n: Z, a, p
+      descripti, o, n: "Demand, forecastin, g, supplier, risk, assessment, and, logistics, optimization.",";
+      benefi, t, s: ["45% reduction, in, stockouts", "30% improvement, in, delivery tim, e, s", "25% cost, reductio, n"]";
     }
   ];
-
   return (
     <>
       <Helmet>
-        <title>AI Predictive Analytics - Zion Tech Group | Advanced Forecasting & Insights</title>
-        <meta
-          name="description"
-          content="Transform your business with AI predictive analytics that deliver 94% accuracy in forecasting, customer behavior prediction, and risk assessment. Real-time insights for better decisions." /><meta name="keywords" content="predictive analytics, machine learning, forecasting, business intelligence, data analytics, AI insights, predictive modeling" /><link rel="canonical" href="https://ziontechgroup.com/services/ai-predictive-analytics/>",
+        <title>AI, Predictive, Analytics - Zion, Tech, Group | Advanced, Forecastin, g & Insigh, t, s</title>
+        <me, t, a
+  na, m, e="descripti, o, n"
+          content="Transform, your, business with, AI, predictive analytics, that, deliver 94% accuracy, in, forecasting, customer, behavior, prediction, and, risk, assessment. Re, a, l-time, insights, for better, decision, s." /><meta name="keywor, d, s" content="predictive, analytic, s, machine, learnin, g, forecasti, n, g, business, intelligenc, e, data, analytic, s, AI, insight, s, predictive, modelin, g" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/ai-predicti, v, e-analyti, c, s/>"
 =======
-          content="Transform your business with AI predictive analytics that deliver 94% accuracy in forecasting, customer behavior prediction, and risk assessment. Real-time insights for better decisions."
-        />
-        <meta name="keywords" content="predictive analytics, machine learning, forecasting, business intelligence, data analytics, AI insights, predictive modeling" />";
-        <link rel="canonical" href="https: //ziontechgroup.com/services/ai-predictive-analytics" />";,
+          content="Transform, your, business with, AI, predictive analytics, that, deliver 94% accuracy, in, forecasting, customer, behavior, prediction, and, risk, assessment. Re, a, l-time, insights, for better, decision, s."
+         />
+        <meta name="keywor, d, s" content="predictive, analytic, s, machine, learnin, g, forecasti, n, g, business, intelligenc, e, data, analytic, s, AI, insight, s, predictive, modelin, g" />";
+        <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/servic, e, s/ai-predicti, v, e-analyti, c, s" />";
       </Helmet>
-
-      <Header />
-      
-      <main className="min-h-screen bg-white">";
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-indigo-900 via-blue-800 to-purple-900 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className="text-center">
-              <h1 className="text-5xl md: text-7xl font-bold mb-6">",
-                AI Predictive <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">Analytics</span>
+      <Head, e, r   />
+      <main, className="m, i, n-h-screen, b, g-whi, t, e">";
+        {/* Hero, Sectio, n */}
+        <section, className="bg-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-bl, u, e-800, t, o-purp, l, e-900, tex, t-white, p, y-20">
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8">"
+            <div, className="te, x, t-cent, e, r">
+              <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">"
+                AI, Predictiv, e <span, className="bg-gradie, n, t-to-r, fro, m-indi, g, o-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">Analyti, c, s</sp, a, n>
               </h1>
-              <p className="text-xl md:text-2xl text-indigo-100 max-w-4xl mx-auto mb-8">
-                Transform your business with advanced AI predictive analytics that deliver 94% accuracy in forecasting
-                customer behavior prediction, and risk assessment for data-driven decision making.
+              <p, className="te, x, t-xl, m, d:te, x, t-2xl, tex, t-indi, g, o-100, ma, x-w-4xl, m, x-auto, m, b-8">
+                Transform, your, business with, advanced, AI predictive, analytics, that deliver, 9, 4% accuracy, in, forecasting
+  customer, behavior, prediction, and, risk, assessment for, dat, a-driven, decision, making.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+              <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
 =======
-        <section className="bg-gradient-to-br from-indigo-900 via-blue-800 to-purple-900 text-white py-20">";
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
-            <div className="text-center">";
-              <h1 className="text-5xl md: text-7xl font-bold mb-6">";,
-                AI Predictive <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">Analytics</span>";
+        <section, className="bg-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-bl, u, e-800, t, o-purp, l, e-900, tex, t-white, p, y-20">";
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
+            <div, className="te, x, t-cent, e, r">";
+              <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">";
+                AI, Predictiv, e <span, className="bg-gradie, n, t-to-r, fro, m-indi, g, o-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">Analyti, c, s</sp, a, n>";
               </h1>
-              <p className="text-xl md: text-2xl text-indigo-100 max-w-4xl mx-auto mb-8">";,
-                Transform your business with advanced AI predictive analytics that deliver 94% accuracy in forecasting, 
-                customer behavior prediction, and risk assessment for data-driven decision making.
+              <p, className="te, x, t-x, l, m
+  d: te, x, t-2xl, tex, t-indi, g, o-100, ma, x-w-4xl, m, x-auto, m, b-8">";
+                Transform, your, business with, advanced, AI predictive, analytics, that deliver, 9, 4% accuracy, in, forecasting
+                customer, behavior, prediction, and, risk, assessment for, dat, a-driven, decision, making.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
+              <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
                 <a
-                  href="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-indigo-600 hover: bg-indigo-700 text-white font-semibold rounded-lg transition-colors",
+  hr, e, f="/conta, c, t"
+                  classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, b, g-indi, g, o-600, hov, e
+  r: bg-indi, g, o-700, tex, t-white, fon, t-semibold, rounde, d-lg, transitio, n-colo, r, s"
                 >
-                  <Phone className="w-5 h-5 mr-2/>
+                  <Phone, className="w-5 h-5, m, r-2  />
 =======
-                  <Phone className="w-5 h-5 mr-2" />";
-                  Schedule Demo
+                  <Phone, className="w-5 h-5, m, r-2" />";
+                  Schedule, Dem, o;
                 </a>
                 <a
-                  href="#pricing"
-                  className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover: bg-white hover:text-indigo-900 font-semibold rounded-lg transition-colors",
+  hr, e, f="#prici, n, g"
+                  classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, borde, r-2, borde, r-white, tex, t-white, hove, r: bg-white, hov, e
+  r:te, x, t-indi, g, o-900, fon, t-semibold, rounde, d-lg, transitio, n-colo, r, s"
                 >
-                  View Pricing
-                  <ArrowRight className="w-5 h-5 ml-2/>
+                  View, Pricin, g;
+                  <ArrowRight, className="w-5 h-5, m, l-2  />
 =======
-                  <ArrowRight className="w-5 h-5 ml-2" />";
+                  <ArrowRight, className="w-5 h-5, m, l-2" />";
                 </a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Key Benefits */}
-        <section className="py-16 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              </d, i, v>
+            </d, i, v>
+          </d, i, v>
+        </secti, o, n>
+        {/* Key, Benefit, s */}
+        <section, className="py-16, b, g-gr, a, y-50">
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8">"
+            <div, className="text-center mb-12">
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
 =======
-        <section className="py-16 bg-gray-50">";
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
-            <div className="text-center mb-12">";
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">";
-                Why Choose Our AI Predictive Analytics?
+        <section, className="py-16, b, g-gr, a, y-50">";
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
+            <div, className="text-center mb-12">";
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
+                Why, Choose, Our AI, Predictive, Analytics?
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
-                Harness the power of advanced machine learning to predict the future and make smarter business decisions.
+              <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
+                Harness, the, power of, advanced, machine learning, to, predict the, future, and make, smarter, business decisio, n, s.
               </p>
-            </div>
-
-            <div className="grid md: grid-cols-4 gap-8">",
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-full mb-4">
-                  <TrendingUp className="w-8 h-8 text-indigo-600/>
+            </d, i, v>
+            <div, className="gri, d, m
+  d: gr, i, d-co, l, s-4, ga, p-8">"
+              <div, className="te, x, t-cent, e, r">
+                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-indi, g, o-100, rounde, d-full, m, b-4">
+                  <TrendingUp, className="w-8 h-8, tex, t-indi, g, o-6, 0, 0  />
 =======
-            <div className="grid md: grid-cols-4 gap-8">";,
-              <div className="text-center">";
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-full mb-4">";
-                  <TrendingUp className="w-8 h-8 text-indigo-600" />";
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">94% Accuracy</h3>";
-                <p className="text-gray-600">Industry-leading prediction accuracy</p>";
-              </div>
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
-                  <Clock className="w-8 h-8 text-blue-600/>
+            <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-8">";
+              <div, className="te, x, t-cent, e, r">";
+                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-indi, g, o-100, rounde, d-full, m, b-4">";
+                  <TrendingUp, className="w-8 h-8, tex, t-indi, g, o-6, 0, 0" />";
+                </d, i, v>
+                <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">94% Accura, c, y</h3>";
+                <p, className="te, x, t-gr, a, y-6, 0, 0">Indust, r, y-leading, prediction, accuracy</p>";
+              </d, i, v>
+              <div, className="te, x, t-cent, e, r">
+                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-bl, u, e-100, rounde, d-full, m, b-4">
+                  <Clock, className="w-8 h-8, tex, t-bl, u, e-6, 0, 0  />
 =======
-              <div className="text-center">";
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">";
-                  <Clock className="w-8 h-8 text-blue-600" />";
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Real-Time Insights</h3>";
-                <p className="text-gray-600">Instant predictions and recommendations</p>";
-              </div>
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
-                  <Target className="w-8 h-8 text-green-600/>
+              <div, className="te, x, t-cent, e, r">";
+                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-bl, u, e-100, rounde, d-full, m, b-4">";
+                  <Clock, className="w-8 h-8, tex, t-bl, u, e-6, 0, 0" />";
+                </d, i, v>
+                <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">Re, a, l-Time, Insight, s</h3>";
+                <p, className="te, x, t-gr, a, y-6, 0, 0">Instant, predictions, and recommendatio, n, s</p>";
+              </d, i, v>
+              <div, className="te, x, t-cent, e, r">
+                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-4">
+                  <Target, className="w-8 h-8, tex, t-gre, e, n-6, 0, 0  />
 =======
-              <div className="text-center">";
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">";
-                  <Target className="w-8 h-8 text-green-600" />";
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">35% Retention Boost</h3>";
-                <p className="text-gray-600">Improved customer retention rates</p>";
-              </div>
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">
-                  <Shield className="w-8 h-8 text-purple-600/>
+              <div, className="te, x, t-cent, e, r">";
+                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-4">";
+                  <Target, className="w-8 h-8, tex, t-gre, e, n-6, 0, 0" />";
+                </d, i, v>
+                <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">35% Retention, Boos, t</h3>";
+                <p, className="te, x, t-gr, a, y-6, 0, 0">Improved, customer, retention rat, e, s</p>";
+              </d, i, v>
+              <div, className="te, x, t-cent, e, r">
+                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-purp, l, e-100, rounde, d-full, m, b-4">
+                  <Shield, className="w-8 h-8, tex, t-purp, l, e-6, 0, 0  />
 =======
-              <div className="text-center">";
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">";
-                  <Shield className="w-8 h-8 text-purple-600" />";
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">60% Risk Reduction</h3>";
-                <p className="text-gray-600">Proactive risk identification</p>";
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Use Cases */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              <div, className="te, x, t-cent, e, r">";
+                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-purp, l, e-100, rounde, d-full, m, b-4">";
+                  <Shield, className="w-8 h-8, tex, t-purp, l, e-6, 0, 0" />";
+                </d, i, v>
+                <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">60% Risk, Reductio, n</h3>";
+                <p, className="te, x, t-gr, a, y-6, 0, 0">Proactive, risk, identification</p>";
+              </d, i, v>
+            </d, i, v>
+          </d, i, v>
+        </secti, o, n>
+        {/* Use, Case, s */}
+        <section, className="py-20">
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8">"
+            <div, className="te, x, t-center, m, b-16">
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
 =======
-        <section className="py-20">";
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
-            <div className="text-center mb-16">";
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">";
-                Industry Applications
+        <section, className="py-20">";
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
+            <div, className="te, x, t-center, m, b-16">";
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
+                Industry, Application, s;
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
-                Our AI predictive analytics solutions are transforming businesses across multiple industries.
+              <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
+                Our, AI, predictive analytics, solutions, are transforming, businesses, across multiple, industrie, s.
               </p>
-            </div>
-
-            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">",
-              {useCases.map((useCase, index) => {
-                const Icon = useCase.icon;
+            </d, i, v>
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+  g:gr, i, d-co, l, s-4, ga, p-8">"
+              {useCas, e, s.m, a, p((useCa, s, e, ind, e, x) => {
+                const, Ico, n = useCa, s, e.ic, o, n;
                 return (
-                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-full mb-6">
-                      <Icon className="w-8 h-8 text-indigo-600/>
+                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
+                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-indi, g, o-100, rounde, d-full, m, b-6">
+                      <Icon, className="w-8 h-8, tex, t-indi, g, o-6, 0, 0  />
 =======
-            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">";,
-              {useCases.map((useCase, index) => {
-                const Icon = useCase.icon;
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+  g:gr, i, d-co, l, s-4, ga, p-8">";
+              {useCas, e, s.m, a, p((useCa, s, e, ind, e, x) => {
+                const, Ico, n = useCa, s, e.ic, o, n;
                 return (
-                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">";,
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-full mb-6">";
-                      <Icon className="w-8 h-8 text-indigo-600" />";
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-4">{useCase.title}</h3>";
-                    <p className="text-gray-600 mb-6">{useCase.description}</p>";
-                    <ul className="space-y-2">";
-                      {useCase.benefits.map((benefit, benefitIndex) => (
-                        <li key={benefitIndex} className="flex items-center text-sm">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0/>
-                          <span className="text-gray-700">{benefit}</span>
+                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";
+                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-indi, g, o-100, rounde, d-full, m, b-6">";
+                      <Icon, className="w-8 h-8, tex, t-indi, g, o-6, 0, 0" />";
+                    </d, i, v>
+                    <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">{useCa, s, e.tit, l, e}</h3>";
+                    <p, className="te, x, t-gr, a, y-600, m, b-6">{useCa, s, e.descripti, o, n}</p>";
+                    <ul, className="spa, c, e-y-2">";
+                      {useCa, s, e.benefi, t, s.m, a, p((benef, i, t, benefitInd, e, x) => (
+                        <li, ke, y={benefitInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm">
+                          <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0  />
+                          <span, className="te, x, t-gr, a, y-7, 0, 0">{benef, i, t}</sp, a, n>
 =======
-                        <li key={benefitIndex} className="flex items-center text-sm">";
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />";
-                          <span className="text-gray-700">{benefit}</span>";
+                        <li, ke, y={benefitInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm">";
+                          <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0" />";
+                          <span, className="te, x, t-gr, a, y-7, 0, 0">{benef, i, t}</sp, a, n>";
                         </li>
                       ))}
                     </ul>
-                  </div>
+                  </d, i, v>
                 );
               })}
-            </div>
-          </div>
-        </section>
-
-        {/* Features */}
-        <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            </d, i, v>
+          </d, i, v>
+        </secti, o, n>
+        {/* Featur, e, s */}
+        <section, className="py-20, b, g-gr, a, y-50">
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8">"
+            <div, className="te, x, t-center, m, b-16">
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
 =======
-        <section className="py-20 bg-gray-50">";
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
-            <div className="text-center mb-16">";
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">";
-                Advanced AI Capabilities
+        <section, className="py-20, b, g-gr, a, y-50">";
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
+            <div, className="te, x, t-center, m, b-16">";
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
+                Advanced, AI, Capabilities;
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
-                Powerful machine learning features that deliver accurate predictions and actionable insights.
+              <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
+                Powerful, machine, learning features, that, deliver accurate, predictions, and actionable, insight, s.
               </p>
-            </div>
-
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
-              {features.map((feature, index) => {
-                const Icon = feature.icon;
+            </d, i, v>
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+  g:gr, i, d-co, l, s-3, ga, p-8">"
+              {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
+                const, Ico, n = featu, r, e.ic, o, n;
                 return (
-                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",
-                    <div className="inline-flex items-center justify-center w-12 h-12 bg-indigo-100 rounded-lg mb-4">
-                      <Icon className="w-6 h-6 text-indigo-600/>
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
-                    <p className="text-gray-600 mb-4">{feature.description}</p>
-                    <div className="inline-flex items-center text-green-600 font-semibold text-sm">
-                      <CheckCircle className="w-4 h-4 mr-1/>
+                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
+                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-indi, g, o-100, rounde, d-lg, m, b-4">
+                      <Icon, className="w-6 h-6, tex, t-indi, g, o-6, 0, 0  />
+                    </d, i, v>
+                    <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}</h3>
+                    <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>
+                    <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">
+                      <CheckCircle, className="w-4 h-4, m, r-1  />
 =======
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">";,
-              {features.map((feature, index) => {
-                const Icon = feature.icon;
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+  g:gr, i, d-co, l, s-3, ga, p-8">";
+              {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
+                const, Ico, n = featu, r, e.ic, o, n;
                 return (
-                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">";,
-                    <div className="inline-flex items-center justify-center w-12 h-12 bg-indigo-100 rounded-lg mb-4">";
-                      <Icon className="w-6 h-6 text-indigo-600" />";
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>";
-                    <p className="text-gray-600 mb-4">{feature.description}</p>";
-                    <div className="inline-flex items-center text-green-600 font-semibold text-sm">";
-                      <CheckCircle className="w-4 h-4 mr-1" />";
-                      {feature.benefit}
-                    </div>
-                  </div>
+                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";
+                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-indi, g, o-100, rounde, d-lg, m, b-4">";
+                      <Icon, className="w-6 h-6, tex, t-indi, g, o-6, 0, 0" />";
+                    </d, i, v>
+                    <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}</h3>";
+                    <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>";
+                    <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">";
+                      <CheckCircle, className="w-4 h-4, m, r-1" />";
+                      {featu, r, e.benef, i, t}
+                    </d, i, v>
+                  </d, i, v>
                 );
               })}
-            </div>
-          </div>
-        </section>
-
-        {/* Pricing */}
-        <section id="pricing" className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            </d, i, v>
+          </d, i, v>
+        </secti, o, n>
+        {/* Prici, n, g */}
+        <section, i, d="prici, n, g" classNa, m, e="py-20">
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8">"
+            <div, className="te, x, t-center, m, b-16">
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
 =======
-        <section id="pricing" className="py-20">";
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
-            <div className="text-center mb-16">";
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">";
-                Transparent Pricing for Every Business Size
+        <section, i, d="prici, n, g" classNa, m, e="py-20">";
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
+            <div, className="te, x, t-center, m, b-16">";
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
+                Transparent, Pricing, for Every, Business, Size;
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
-                Choose the plan that fits your data analytics needs and budget.
+              <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
+                Choose, the, plan that, fits, your data, analytics, needs and, budge, t.
               </p>
-            </div>
-
-            <div className="grid md: grid-cols-3 gap-8">",
+            </d, i, v>
+            <div, className="gri, d, m
+  d: gr, i, d-co, l, s-3, ga, p-8">"
 =======
-            <div className="grid md: grid-cols-3 gap-8">";,
-              {pricing.map((plan, index) => (
-                <div key={index} className={`bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? 'ring-2 ring-indigo-500 relative' : ''}`}>`;
-                  {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">";
-                      <span className="bg-indigo-500 text-white px-4 py-1 rounded-full text-sm font-semibold">";
-                        Most Popular
-                      </span>
-                    </div>
+            <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";
+              {prici, n, g.m, a, p((pl, a, n, ind, e, x) => (
+                <div, ke, y={ind, e, x} classNa, m, e={`bg-white, rounde, d-2xl, shado, w-l, g, p-8 ${pl, a, n.popul, a, r ? 'ri, n, g-2, rin, g-indi, g, o-500, relativ, e' : ''}`}>`;`
+                  {pl, a, n.popul, a, r && (
+                    <div, className="absolu, t, e -t, o, p-4, lef, t-1/2, transfor, m -transla, t, e-x-1/2">";
+                      <span, className="bg-indi, g, o-500, tex, t-white, p, x-4, p, y-1, rounde, d-full, tex, t-sm, fon, t-semibo, l, d">";
+                        Most, Popula, r;
+                      </sp, a, n>
+                    </d, i, v>
                   )}
-                  <div className="text-center mb-8">";
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>";
-                    <div className="flex items-center justify-center mb-2">";
-                      <span className="text-4xl font-bold text-gray-900">{plan.price}</span>";
-                      <span className="text-gray-600 ml-1">{plan.period}</span>";
-                    </div>
-                    <p className="text-gray-600">{plan.description}</p>";
-                  </div>
-                  <ul className="space-y-4 mb-8">";
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center">
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0/>
-                        <span className="text-gray-700">{feature}</span>
+                  <div, className="te, x, t-center, m, b-8">";
+                    <h3, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">{pl, a, n.na, m, e}</h3>";
+                    <div, className="flex, item, s-center, justif, y-center, m, b-2">";
+                      <span, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0">{pl, a, n.pri, c, e}</sp, a, n>";
+                      <span, className="te, x, t-gr, a, y-600, m, l-1">{pl, a, n.peri, o, d}</sp, a, n>";
+                    </d, i, v>
+                    <p, className="te, x, t-gr, a, y-6, 0, 0">{pl, a, n.descripti, o, n}</p>";
+                  </d, i, v>
+                  <ul, className="spa, c, e-y-4, m, b-8">";
+                    {pl, a, n.featur, e, s.m, a, p((featu, r, e, featureInd, e, x) => (
+                      <li, ke, y={featureInd, e, x} classNa, m, e="flex, item, s-cent, e, r">
+                        <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3, fle, x-shri, n, k-0  />
+                        <span, className="te, x, t-gr, a, y-7, 0, 0">{featu, r, e}</sp, a, n>
 =======
-                      <li key={featureIndex} className="flex items-center">";
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />";
-                        <span className="text-gray-700">{feature}</span>";
+                      <li, ke, y={featureInd, e, x} classNa, m, e="flex, item, s-cent, e, r">";
+                        <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3, fle, x-shri, n, k-0" />";
+                        <span, className="te, x, t-gr, a, y-7, 0, 0">{featu, r, e}</sp, a, n>";
                       </li>
                     ))}
                   </ul>
                   <a
-                    href="/contact"
-                    className={
-`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${`;
-plan.popular
-? 'bg-indigo-600 text-white hover:bg-indigo-700'
+  hr, e, f="/conta, c, t"
+                    classNa, m, e={
+`w-full, block, text-center, p, y-3, p, x-6, rounde, d-lg, fon, t-semibold, transitio, n-colo, r, s ${`;`
+pl, a, n.popul, a, r;
+? 'bg-indi, g, o-600, tex, t-white, hove, r: bg-indi, g, o-7, 0, 0'
 =======
-? 'bg-indigo-600 text-white hover: bg-indigo-700',';,
-: 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-}`}`;
+? 'bg-indi, g, o-600, tex, t-white, hov, e
+  r: bg-indi, g, o-7, 0, 0',';
+: 'bg-gr, a, y-100, tex, t-gr, a, y-900, hove, r:bg-gr, a, y-2, 0, 0'
+}`}`;`
                   >
-                    Get Started
+                    Get, Starte, d;
                   </a>
-                </div>
+                </d, i, v>
               ))}
-            </div>
-
-            <div className="text-center mt-12">";
-              <p className="text-gray-600 mb-4">Need a custom solution?</p>";
+            </d, i, v>
+            <div, className="te, x, t-center, m, t-12">";
+              <p, className="te, x, t-gr, a, y-600, m, b-4">Need, a, custom soluti, o, n?</p>";
               <a
-                href="/contact"
-                className="inline-flex items-center text-indigo-600 hover: text-indigo-700 font-semibold",
+  hr, e, f="/conta, c, t"
+                classNa, m, e="inli, n, e-flex, item, s-center, tex, t-indi, g, o-600, hove, r: te, x, t-indi, g, o-700, fon, t-semibo, l, d"
               >
-                Contact our Data Science Team
-                <ArrowRight className="w-4 h-4 ml-1/>
+                Contact, our, Data Science, Tea, m;
+                <ArrowRight, className="w-4 h-4, m, l-1  />
 =======
-                <ArrowRight className="w-4 h-4 ml-1" />";
+                <ArrowRight, className="w-4 h-4, m, l-1" />";
               </a>
-            </div>
-          </div>
-        </section>
-
-        {/* Testimonials */}
-        <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            </d, i, v>
+          </d, i, v>
+        </secti, o, n>
+        {/* Testimonia, l, s */}
+        <section, className="py-20, b, g-gr, a, y-50">
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8">"
+            <div, className="te, x, t-center, m, b-16">
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
 =======
-        <section className="py-20 bg-gray-50">";
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
-            <div className="text-center mb-16">";
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">";
-                What Our Clients Say
+        <section, className="py-20, b, g-gr, a, y-50">";
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
+            <div, className="te, x, t-center, m, b-16">";
+              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
+                What, Our, Clients S, a, y;
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
-                Join hundreds of companies already using our AI predictive analytics to make smarter decisions.
+              <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
+                Join, hundreds, of companies, already, using our, AI, predictive analytics, to, make smarter, decision, s.
               </p>
-            </div>
-
-            <div className="grid md: grid-cols-3 gap-8">",
+            </d, i, v>
+            <div, className="gri, d, m
+  d: gr, i, d-co, l, s-3, ga, p-8">"
 =======
-            <div className="grid md: grid-cols-3 gap-8">";,
-              {testimonials.map((testimonial, index) => (
-                <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">";
-                  <div className="flex items-center mb-4">";
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current/>
+            <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";
+              {testimonia, l, s.m, a, p((testimoni, a, l, ind, e, x) => (
+                <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";
+                  <div, className="flex, item, s-center, m, b-4">";
+                    {[...Arr, a, y(testimoni, a, l.rati, n, g)].m, a, p((_, i) => (
+                      <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t  />
 =======
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />";
+                      <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t" />";
                     ))}
-                  </div>
-                  <blockquote className="text-gray-700 mb-6 italic">";
-                    "{testimonial.content}"
-                  </blockquote>
-                  <div>
-                    <div className="font-semibold text-gray-900">{testimonial.name}</div>";
-                    <div className="text-gray-600 text-sm">{testimonial.role}</div>";
-                    <div className="text-indigo-600 text-sm font-medium">{testimonial.company}</div>";
-                  </div>
-                </div>
+                  </d, i, v>
+                  <blockquote, className="te, x, t-gr, a, y-700, m, b-6, itali, c">";
+                    "{testimoni, a, l.conte, n, t}"
+                  </blockquo, t, e>
+                  <d, i, v>
+                    <div, className="fo, n, t-semibold, tex, t-gr, a, y-9, 0, 0">{testimoni, a, l.na, m, e}</d, i, v>";
+                    <div, className="te, x, t-gr, a, y-600, tex, t-sm">{testimoni, a, l.ro, l, e}</d, i, v>";
+                    <div, className="te, x, t-indi, g, o-600, tex, t-sm, fon, t-medi, u, m">{testimoni, a, l.compa, n, y}</d, i, v>";
+                  </d, i, v>
+                </d, i, v>
               ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-br from-indigo-900 via-blue-800 to-purple-900 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">",
-            <h2 className="text-4xl font-bold mb-6">
+            </d, i, v>
+          </d, i, v>
+        </secti, o, n>
+        {/* CTA, Sectio, n */}
+        <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-bl, u, e-800, t, o-purp, l, e-900, tex, t-whi, t, e">
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8, tex, t-cent, e, r">"
+            <h2, className="te, x, t-4xl, fon, t-bold, m, b-6">
 =======
-        <section className="py-20 bg-gradient-to-br from-indigo-900 via-blue-800 to-purple-900 text-white">";
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">";,
-            <h2 className="text-4xl font-bold mb-6">";
-              Ready to Predict the Future of Your Business?
+        <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-bl, u, e-800, t, o-purp, l, e-900, tex, t-whi, t, e">";
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, tex, t-cent, e, r">";
+            <h2, className="te, x, t-4xl, fon, t-bold, m, b-6">";
+              Ready, to, Predict the, Future, of Your, Busines, s?
             </h2>
-            <p className="text-xl text-indigo-100 max-w-3xl mx-auto mb-8">";
-              Transform your decision-making with AI predictive analytics that deliver accurate forecasts and actionable insights.
+            <p, className="te, x, t-xl, tex, t-indi, g, o-100, ma, x-w-3xl, m, x-auto, m, b-8">";
+              Transform, your, decision-making, with, AI predictive, analytics, that deliver, accurate, forecasts and, actionable, insights.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+            <div, className="flex, fle, x-co, l, s
+  m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
 =======
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
+            <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
               <a
-                href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-indigo-600 hover: bg-indigo-700 text-white font-semibold rounded-lg transition-colors",
+  hr, e, f="/conta, c, t"
+                classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, b, g-indi, g, o-600, hov, e
+  r: bg-indi, g, o-700, tex, t-white, fon, t-semibold, rounde, d-lg, transitio, n-colo, r, s"
               >
-                <Phone className="w-5 h-5 mr-2/>
+                <Phone, className="w-5 h-5, m, r-2  />
 =======
-                <Phone className="w-5 h-5 mr-2" />";
-                Schedule Free Demo
+                <Phone, className="w-5 h-5, m, r-2" />";
+                Schedule, Free, Demo;
               </a>
               <a
-                href="/case-studies"
-                className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover: bg-white hover:text-indigo-900 font-semibold rounded-lg transition-colors",
+  hr, e, f="/ca, s, e-studi, e, s"
+                classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, borde, r-2, borde, r-white, tex, t-white, hove, r: bg-white, hov, e
+  r:te, x, t-indi, g, o-900, fon, t-semibold, rounde, d-lg, transitio, n-colo, r, s"
               >
-                View Success Stories
-                <ArrowRight className="w-5 h-5 ml-2/>
+                View, Success, Stories;
+                <ArrowRight, className="w-5 h-5, m, l-2  />
 =======
-                <ArrowRight className="w-5 h-5 ml-2" />";
+                <ArrowRight, className="w-5 h-5, m, l-2" />";
               </a>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <Footer />
-    </>
+            </d, i, v>
+          </d, i, v>
+        </secti, o, n>
+      </ma, i, n>
+      <Foot, e, r   />
+    < />
   );
 };
-
 export default AIPredictiveAnalytics;

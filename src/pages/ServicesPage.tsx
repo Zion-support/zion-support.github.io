@@ -1,53 +1,51 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-
-const ServicesPage: React.FC = () => {
+import React from "react";
+impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
+const, ServicesPag, e: Rea, c, t.FC = () => {
   return (
-    <main className="py-20">
-      <div className="container mx-auto px-6">
-        <div className="max-w-6xl mx-auto">
-          <h1 className="text-4xl font-bold mb-8 text-center">Our Services</h1>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-lg border">
-              <div className="text-4xl mb-4">🧠</div>
-              <h2 className="text-2xl font-bold mb-4">AI Services</h2>
-              <p className="text-gray-600 mb-4">Automation, analytics, chatbots, and computer vision.</p>
-              <ul className="text-sm text-gray-600 space-y-1 mb-4">
-                <li>• Predictive analytics</li>
-                <li>• RAG chatbots</li>
-                <li>• Document processing (IDP)</li>
+    <main, className="py-20">
+      <div, className="container, m, x-auto, p, x-6">
+        <div, className="max-w-6xl mx-auto">
+          <h1, className="te, x, t-4xl, fon, t-bold, m, b-8, tex, t-cent, e, r">Our, Service, s</h1>
+          <div, className="grid, gri, d-co, l, s-1, m, d:gr, i, d-co, l, s-2 l
+  g:gr, i, d-co, l, s-3, ga, p-8">
+            <div, className="bg-whit, e, p-6, rounde, d-lg, shado, w-lg, borde, r">
+              <div, className="te, x, t-4xl, m, b-4">🧠</d, i, v>
+              <h2, className="te, x, t-2xl, fon, t-bold, m, b-4">AI, Service, s</h2>
+              <p, className="te, x, t-gr, a, y-600, m, b-4">Automati, o, n, analyti, c, s, chatbo, t, s, and, computer, vision.</p>
+              <ul, className="te, x, t-sm, tex, t-gr, a, y-600, spac, e-y-1, m, b-4">
+                <li>• Predictive, analytic, s</li>
+                <li>• RAG, chatbot, s</li>
+                <li>• Document, processin, g (I, D, P)</li>
               </ul>
-              <Link className="text-blue-600 hover:underline" to="/services/ai-services">Explore AI Services →</Link>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-lg border">
-              <div className="text-4xl mb-4">🚀</div>
-              <h2 className="text-2xl font-bold mb-4">Micro SaaS</h2>
-              <p className="text-gray-600 mb-4">Targeted apps for specific workflows with subscriptions.</p>
-              <ul className="text-sm text-gray-600 space-y-1 mb-4">
-                <li>• Email deliverability optimizer</li>
-                <li>• Sales playbook copilot</li>
-                <li>• Edge AI inference</li>
+              <Link, className="te, x, t-bl, u, e-600, hove, r: underli, n, e" to="/servic, e, s/ai-servic, e, s">Explore, AI, Services →</Li, n, k>
+            </d, i, v>
+            <div, className="bg-whit, e, p-6, rounde, d-lg, shado, w-lg, borde, r">
+              <div, className="te, x, t-4xl, m, b-4">🚀</d, i, v>
+              <h2, className="te, x, t-2xl, fon, t-bold, m, b-4">Micro, Saa, S</h2>
+              <p, className="te, x, t-gr, a, y-600, m, b-4">Targeted, apps, for specific, workflows, with subscriptio, n, s.</p>
+              <ul, className="te, x, t-sm, tex, t-gr, a, y-600, spac, e-y-1, m, b-4">
+                <li>• Email, deliverability, optimizer</li>
+                <li>• Sales, playbook, copilot</li>
+                <li>• Edge, AI, inference</li>
               </ul>
-              <Link className="text-blue-600 hover:underline" to="/services/micro-saas">Explore Micro SaaS →</Link>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-lg border">
-              <div className="text-4xl mb-4">💻</div>
-              <h2 className="text-2xl font-bold mb-4">IT Services</h2>
-              <p className="text-gray-600 mb-4">Cloud, DevOps, security, and infrastructure.</p>
-              <ul className="text-sm text-gray-600 space-y-1 mb-4">
-                <li>• Cloud migration</li>
-                <li>• DevOps & SRE</li>
-                <li>• Zero trust security</li>
+              <Link, className="te, x, t-bl, u, e-600, hov, e
+  r:underli, n, e" to="/servic, e, s/mic, r, o-sa, a, s">Explore, Micro, SaaS →</Li, n, k>
+            </d, i, v>
+            <div, className="bg-whit, e, p-6, rounde, d-lg, shado, w-lg, borde, r">
+              <div, className="te, x, t-4xl, m, b-4">💻</d, i, v>
+              <h2, className="te, x, t-2xl, fon, t-bold, m, b-4">IT, Service, s</h2>
+              <p, className="te, x, t-gr, a, y-600, m, b-4">Clo, u, d, DevO, p, s, securi, t, y, and, infrastructur, e.</p>
+              <ul, className="te, x, t-sm, tex, t-gr, a, y-600, spac, e-y-1, m, b-4">
+                <li>• Cloud, migratio, n</li>
+                <li>• DevO, p, s & S, R, E</li>
+                <li>• Zero, trust, security</li>
               </ul>
-              <Link className="text-blue-600 hover:underline" to="/services/it-services">Explore IT Services →</Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
+              <Link, className="te, x, t-bl, u, e-600, hove, r:underli, n, e" to="/servic, e, s/it-servic, e, s">Explore, IT, Services →</Li, n, k>
+            </d, i, v>
+          </d, i, v>
+        </d, i, v>
+      </d, i, v>
+    </ma, i, n>
   );
 };
-
 export default ServicesPage;
