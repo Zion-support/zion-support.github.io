@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown, Zap, Phone } from 'lucide-react';
 
-const Header: React.FC = () => {
+const ModernHeader: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const location = useLocation();
@@ -234,5 +234,5 @@ const Header: React.FC = () => {
   );
 };
 
-export default Header;
+export default ModernHeader;
 
