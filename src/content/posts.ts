@@ -8,7 +8,9 @@ export interface BlogPost {
   readTime?: string;
 }
 
-export const posts: BlogPost[] = [
+export const posts: BlogPost[] = [];
+
+posts.push(
   {
     slug: "ai-2027-operational-trust-blueprint",
     title: "AI 2027: Operational Trust Blueprint",
@@ -1583,7 +1585,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
-  },
+  }
 );
 
 // Sept 30, 2025 – New articles to expand catalog and promote on homepage
@@ -1988,4 +1990,4 @@ posts.push(
     featured: true,
     readTime: "7 min read"
   }
-];
+);
