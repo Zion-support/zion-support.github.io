@@ -1,19 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { CheckCircle, Rocket, Shield, Sparkles, Zap, Users, Target, Award, ArrowRight } from "lucide-react";
-=======
-import {
-Link
-} from "react-router-dom";
-import {
-Helmet
-} from "react-helmet-async";
-import {
-
-} from "lucide-react";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a267
+import { CheckCircle, Sparkles } from "lucide-react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import NewServicesPromoBanner2026 from "../components/NewServicesPromoBanner2026";
@@ -34,7 +22,6 @@ const Home = () => {
       featured: true
     },
     {
-<<<<<<< HEAD
       id: '2',
       title: 'Quantum AI Breakthrough: Solving Impossible Problems in Seconds',
       summary: 'Explore quantum-enhanced AI delivering 500x faster results and revolutionizing computational capabilities.',
@@ -53,51 +40,6 @@ const Home = () => {
       featured: true
     }
   ];
-
-=======
-id: '2',
-title: 'Quantum AI Breakthrough: Solving Impossible Problems in Seconds',
-summary: 'Explore quantum-enhanced AI delivering 500x faster results and revolutionizing computational capabilities.',
-category: 'Quantum Computing',
-date: '2025-01-10',
-readMinutes: 20,
-featured: false
-}
-    {
-id: '3',
-title: 'Manufacturing AI Transformation: $50M Savings & 95% Efficiency',
-summary: 'See how a Fortune 500 manufacturer achieved $50M annual savings and 95% efficiency improvements.',
-category: 'Success Story',
-date: '2025-01-05',
-readMinutes: 15,
-featured: true
-}
-  ];
-
-    {
-      slug: 'ai-revolution-2026'
-      title: 'AI Revolution 2026: The Next Frontier of Enterprise Intelligence'
-      description: 'Discover autonomous AI agents, neural interfaces, and predictive intelligence systems achieving 300% productivity gains.'
-      category: 'AI Innovation'
-      publishedAt: '2025-01-15'
-    }
-    {
-slug: 'quantum-ai-breakthrough',
-title: 'Quantum AI Breakthrough: Solving Impossible Problems in Seconds',
-description: 'Explore quantum-enhanced AI delivering 500x faster results and revolutionizing computational capabilities.',
-category: 'Quantum Computing',
-publishedAt: '2025-01-10'
-}
-    {
-slug: 'manufacturing-success',
-title: 'Manufacturing AI Transformation: $50M Savings & 95% Efficiency',
-description: 'See how a Fortune 500 manufacturer achieved $50M annual savings and 95% efficiency improvements.',
-category: 'Success Story',
-publishedAt: '2025-01-05'
-}
-  ];
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a267
   return (
     <>
       <Helmet>
@@ -126,7 +68,7 @@ publishedAt: '2025-01-05'
         <link rel="canonical" href="https://ziontechgroup.com" />
         
         {/* Enhanced Structured Data */}
-            <script type="application/ld+json">
+        <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
@@ -142,7 +84,6 @@ publishedAt: '2025-01-05'
             },
             "image": "https://ziontechgroup.com/og-image.jpg",
             "contactPoint": {
-<<<<<<< HEAD
               "@type": "ContactPoint",
               "telephone": "+1-302-464-0950",
               "contactType": "customer service",
@@ -150,15 +91,6 @@ publishedAt: '2025-01-05'
               "areaServed": "US",
               "email": "kleber@ziontechgroup.com"
             },
-=======
-"@type": "ContactPoint",
-"telephone": "+1-302-464-0950",
-"contactType": "customer service",
-"availableLanguage": "English",
-"areaServed": "US",
-"email": "kleber@ziontechgroup.com"
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a267
             "sameAs": [
               "https://linkedin.com/company/zion-tech-group",
               "https://twitter.com/ziontechgroup",
@@ -167,7 +99,6 @@ publishedAt: '2025-01-05'
             "foundingDate": "2020",
             "numberOfEmployees": "50-100",
             "address": {
-<<<<<<< HEAD
               "@type": "PostalAddress",
               "streetAddress": "364 E Main St STE 1008",
               "addressLocality": "Middletown",
@@ -214,82 +145,16 @@ publishedAt: '2025-01-05'
                     "name": "Quantum Computing Consulting",
                     "description": "Expert consulting on quantum computing solutions"
                   }
-=======
-"@type": "PostalAddress",
-"streetAddress": "364 E Main St STE 1008",
-"addressLocality": "Middletown",
-"addressRegion": "DE",
-"postalCode": "19709",
-"addressCountry": "US"
-}
-            "serviceArea": {
-"@type": "Country",
-"name": "United States"
-}
-            "hasOfferCatalog": {
-"@type": "OfferCatalog",
-"name": "AI and IT Solutions",
-"itemListElement": [,
-{
-"@type": "Offer",
-"itemOffered": {,
-"@type": "Service",
-"name": "AI Workflow Automation",
-"description": "Automate complex business processes with AI-powered workflows"
-}
-                }
-                {
-"@type": "Offer",
-"itemOffered": {,
-"@type": "Service",
-"name": "AI Virtual Assistant",
-"description": "Intelligent virtual assistants for customer service and support"
-}
-                }
-                {
-"@type": "Offer",
-"itemOffered": {,
-"@type": "Service",
-"name": "AI Data Analytics",
-"description": "Advanced data analytics and insights powered by AI"
-}
-                }
-                {
-"@type": "Offer",
-"itemOffered": {,
-"@type": "Service",
-"name": "Quantum Computing Consulting",
-"description": "Expert consulting on quantum computing solutions"
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a267
                 }
               ]
             },
             "aggregateRating": {
-<<<<<<< HEAD
               "@type": "AggregateRating",
               "ratingValue": "4.8",
               "reviewCount": "150",
               "bestRating": "5",
               "worstRating": "1"
             }
-          ]
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.8",
-          "reviewCount": "150",
-          "bestRating": "5",
-          "worstRating": "1"
-        }
-=======
-"@type": "AggregateRating",
-"ratingValue": "4.8",
-"reviewCount": "150",
-"bestRating": "5",
-"worstRating": "1"
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a267
           })}
         </script>
         
