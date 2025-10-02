@@ -141,6 +141,7 @@ const StartupSolutionsPage: React.FC = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <div className="bg-white p-8 rounded-xl shadow-sm text-center">
+<<<<<<< HEAD
                 <div className="text-4xl mb-4">💡</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Ideation</h3>
                 <p className="text-gray-600">Validate your concept and define your MVP requirements</p>
@@ -162,6 +163,29 @@ const StartupSolutionsPage: React.FC = () => {
                 <div className="text-4xl mb-4">🏆</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Scale</h3>
                 <p className="text-gray-600">Expand globally and prepare for enterprise growth</p>
+=======
+                <div className="text-3xl mb-4">💡</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Ideation</h3>
+                <p className="text-gray-600">Validate your idea and create a technical roadmap</p>
+              </div>
+              
+              <div className="bg-white p-8 rounded-xl shadow-sm text-center">
+                <div className="text-3xl mb-4">🚀</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">MVP Development</h3>
+                <p className="text-gray-600">Build and launch your minimum viable product</p>
+              </div>
+              
+              <div className="bg-white p-8 rounded-xl shadow-sm text-center">
+                <div className="text-3xl mb-4">📈</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Growth</h3>
+                <p className="text-gray-600">Scale your product and optimize for growth</p>
+              </div>
+              
+              <div className="bg-white p-8 rounded-xl shadow-sm text-center">
+                <div className="text-3xl mb-4">🏢</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Scale</h3>
+                <p className="text-gray-600">Build enterprise-grade solutions for scale</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6b6c
               </div>
             </div>
           </div>
@@ -177,6 +201,7 @@ const StartupSolutionsPage: React.FC = () => {
               </p>
             </div>
             
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center">
                 <div className="text-4xl mb-4">⚛️</div>
@@ -199,6 +224,26 @@ const StartupSolutionsPage: React.FC = () => {
               <div className="text-center">
                 <div className="text-4xl mb-4">🤖</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">AI/ML</h3>
+=======
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              <div className="bg-gradient-to-br from-orange-50 to-red-50 p-6 rounded-xl text-center">
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Frontend</h3>
+                <p className="text-gray-600">React, Vue.js, Next.js</p>
+              </div>
+              
+              <div className="bg-gradient-to-br from-blue-50 to-orange-50 p-6 rounded-xl text-center">
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Backend</h3>
+                <p className="text-gray-600">Node.js, Python, Go</p>
+              </div>
+              
+              <div className="bg-gradient-to-br from-green-50 to-blue-50 p-6 rounded-xl text-center">
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Cloud</h3>
+                <p className="text-gray-600">AWS, Vercel, Netlify</p>
+              </div>
+              
+              <div className="bg-gradient-to-br from-purple-50 to-green-50 p-6 rounded-xl text-center">
+                <h3 className="text-lg font-bold text-gray-900 mb-2">AI/ML</h3>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6b6c
                 <p className="text-gray-600">OpenAI, TensorFlow, PyTorch</p>
               </div>
             </div>
@@ -216,6 +261,7 @@ const StartupSolutionsPage: React.FC = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+<<<<<<< HEAD
               <div className="bg-white p-8 rounded-xl shadow-sm text-center">
                 <div className="text-4xl font-bold text-orange-600 mb-2">90%</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Faster Time to Market</h3>
@@ -232,6 +278,24 @@ const StartupSolutionsPage: React.FC = () => {
                 <div className="text-4xl font-bold text-orange-600 mb-2">$2M+</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Funding Raised</h3>
                 <p className="text-gray-600">Average funding raised by our clients</p>
+=======
+              <div className="bg-gradient-to-br from-orange-50 to-red-50 p-8 rounded-xl text-center">
+                <div className="text-4xl font-bold text-orange-600 mb-2">3x</div>
+                <div className="text-lg font-semibold text-gray-900 mb-2">Faster Development</div>
+                <p className="text-gray-600">Average speed improvement in product development</p>
+              </div>
+              
+              <div className="bg-gradient-to-br from-blue-50 to-orange-50 p-8 rounded-xl text-center">
+                <div className="text-4xl font-bold text-blue-600 mb-2">50%</div>
+                <div className="text-lg font-semibold text-gray-900 mb-2">Cost Reduction</div>
+                <p className="text-gray-600">Average reduction in development costs</p>
+              </div>
+              
+              <div className="bg-gradient-to-br from-green-50 to-blue-50 p-8 rounded-xl text-center">
+                <div className="text-4xl font-bold text-green-600 mb-2">90%</div>
+                <div className="text-lg font-semibold text-gray-900 mb-2">Success Rate</div>
+                <p className="text-gray-600">Startups that successfully raise funding</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6b6c
               </div>
             </div>
           </div>
