@@ -4,13 +4,13 @@ import { Calendar, User, Star, Play } from 'lucide-react';
 
 const Demo: React.FC = () => {
   const [formData, setFormData] = useState({
-    firstName: ''
-    lastName: ''
-    email: ''
-    company: ''
-    phone: ''
-    jobTitle: ''
-    companySize: ''
+    firstName: '',
+    lastName: '',
+    email: '',
+    company: '',
+    phone: '',
+    jobTitle: '',
+    companySize: '',
     useCase: ''
     preferredDate: ''
     preferredTime: ''

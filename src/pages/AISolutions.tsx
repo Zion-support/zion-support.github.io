@@ -6,11 +6,11 @@ import { } from 'react-helmet-async';
 const AISolutions: React.FC = () => {
   const aiSolutions = [
     {
-      icon: Brain
-      title: 'Machine Learning & Deep Learning'
-      description: 'Advanced AI models for predictive analytics, pattern recognition, and intelligent decision making.'
+      icon: Brain,
+      title: 'Machine Learning & Deep Learning',
+      description: 'Advanced AI models for predictive analytics, pattern recognition, and intelligent decision making.',
       features: ['Neural Networks', 'Predictive Analytics', 'Pattern Recognition', 'Automated Learning']
-    }
+    },
     {
       icon: Zap
       title: 'AI Automation'

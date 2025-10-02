@@ -5,12 +5,12 @@ import { Users, Target, Award, Brain, Shield } from 'lucide-react';
 const AboutPage: React.FC = () => {
   const values = [
     {
-      icon: Brain
-      title: 'Innovation'
+      icon: Brain,
+      title: 'Innovation',
       description: 'Pushing the boundaries of AI technology to create revolutionary solutions'
-    }
+    },
     {
-      icon: Shield
+      icon: Shield,
       title: 'Security'
       description: 'Ensuring enterprise-grade security and compliance in all our solutions'
     }

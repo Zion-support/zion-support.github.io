@@ -4,23 +4,23 @@ import { ArrowRight, TrendingUp, Zap, Star, Rocket, Brain, Shield } from 'lucide
 const Revolutionary2026ContentMegaBanner: React.FC = () => {
   const revolutionaryContent = [
     {
-      id: 1
-      title: "AI 2026: The Meta-Cognitive Revolution"
-      description: "Breakthrough AI that thinks about thinking - achieving 1000x processing speed with quantum-neural convergence"
-      slug: "ai-meta-cognitive-revolution-2026"
-      category: "Revolutionary AI"
-      date: "2026-01-15"
-      readTime: "45 min"
-      trending: true
-      icon: "🧠"
-      impact: "1000x Speed"
+      id: 1,
+      title: "AI 2026: The Meta-Cognitive Revolution",
+      description: "Breakthrough AI that thinks about thinking - achieving 1000x processing speed with quantum-neural convergence",
+      slug: "ai-meta-cognitive-revolution-2026",
+      category: "Revolutionary AI",
+      date: "2026-01-15",
+      readTime: "45 min",
+      trending: true,
+      icon: "🧠",
+      impact: "1000x Speed",
       featured: true
-    }
+    },
     {
-      id: 2
-      title: "Autonomous Enterprise Operations 2026"
-      description: "98% automation rates with self-healing systems, predictive maintenance, and zero-downtime operations"
-      slug: "autonomous-enterprise-operations-2026"
+      id: 2,
+      title: "Autonomous Enterprise Operations 2026",
+      description: "98% automation rates with self-healing systems, predictive maintenance, and zero-downtime operations",
+      slug: "autonomous-enterprise-operations-2026",
       category: "Enterprise Automation"
       date: "2026-01-15"
       readTime: "38 min"

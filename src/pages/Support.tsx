@@ -43,8 +43,8 @@ const Support: React.FC = () => {
 
   const faqCategories = [
     {
-      id: 'general'
-      title: 'General'
+      id: 'general',
+      title: 'General',
       icon: BookOpen
     }
     {

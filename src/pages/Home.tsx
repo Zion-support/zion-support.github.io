@@ -13,14 +13,14 @@ const Home = () => {
   // Mock data for the homepage
   const latestInsights = [
     {
-      id: '1'
-      title: 'AI Revolution 2026: The Next Frontier of Enterprise Intelligence'
-      summary: 'Discover autonomous AI agents, neural interfaces, and predictive intelligence systems achieving 300% productivity gains.'
-      category: 'AI Innovation'
-      date: '2025-01-15'
-      readMinutes: 25
+      id: '1',
+      title: 'AI Revolution 2026: The Next Frontier of Enterprise Intelligence',
+      summary: 'Discover autonomous AI agents, neural interfaces, and predictive intelligence systems achieving 300% productivity gains.',
+      category: 'AI Innovation',
+      date: '2025-01-15',
+      readMinutes: 25,
       featured: true
-    }
+    },
     {
       id: '2'
       title: 'Quantum AI Breakthrough: Solving Impossible Problems in Seconds'

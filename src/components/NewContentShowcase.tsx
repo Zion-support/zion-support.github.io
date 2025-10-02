@@ -32,20 +32,20 @@ const newArticles2025 = [
 
 const newServices2026 = [
   {
-    id: '1'
-    name: 'AI Autonomous Infrastructure Platform'
-    description: 'Self-healing systems with 99.9% uptime and 85% MTTR reduction'
-    category: 'AI Infrastructure'
-    icon: '🤖'
-    link: '/services/ai-autonomous-infrastructure-platform'
+    id: '1',
+    name: 'AI Autonomous Infrastructure Platform',
+    description: 'Self-healing systems with 99.9% uptime and 85% MTTR reduction',
+    category: 'AI Infrastructure',
+    icon: '🤖',
+    link: '/services/ai-autonomous-infrastructure-platform',
     pricing: 'Starting at $5,000/month'
-  }
+  },
   {
-    id: '2'
-    name: 'Quantum-AI Hybrid Computing'
-    description: 'Revolutionary quantum computing applications for enterprise'
-    category: 'Quantum Computing'
-    icon: '⚛️'
+    id: '2',
+    name: 'Quantum-AI Hybrid Computing',
+    description: 'Revolutionary quantum computing applications for enterprise',
+    category: 'Quantum Computing',
+    icon: '⚛️',
     link: '/services/quantum-ai-hybrid-computing'
     pricing: 'Starting at $10,000/month'
   }

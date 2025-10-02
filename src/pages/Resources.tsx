@@ -5,11 +5,11 @@ import { BookOpen, FileText, Video, Users, Code, MessageSquare, Download } from 
 const Resources: React.FC = () => {
   const resourceCategories = [
     {
-      icon: BookOpen
-      title: 'Case Studies'
-      description: 'Real-world success stories and implementation results from our clients'
-      link: '/case-studies'
-      color: 'blue'
+      icon: BookOpen,
+      title: 'Case Studies',
+      description: 'Real-world success stories and implementation results from our clients',
+      link: '/case-studies',
+      color: 'blue',
       count: '25+'
     }
     {

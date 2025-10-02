@@ -6,11 +6,11 @@ import { ArrowRight, } from 'lucide-react';
 const CaseStudiesPage: React.FC = () => {
   const caseStudies = [
     {
-      id: 'fortune-100-manufacturing'
-      title: 'Fortune 100 Manufacturing Transformation'
-      company: 'Global Manufacturing Corp'
-      industry: 'Manufacturing'
-      challenge: 'Optimize production lines and reduce operational costs'
+      id: 'fortune-100-manufacturing',
+      title: 'Fortune 100 Manufacturing Transformation',
+      company: 'Global Manufacturing Corp',
+      industry: 'Manufacturing',
+      challenge: 'Optimize production lines and reduce operational costs',
       solution: 'AI-powered predictive maintenance and workflow automation'
       results: {
         costReduction: '73%'

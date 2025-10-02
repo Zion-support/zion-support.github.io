@@ -1,12 +1,12 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { 
-  Cloud
-  Shield
-  Server
-  Database
-  Network
-  Lock
+  Cloud,
+  Shield,
+  Server,
+  Database,
+  Network,
+  Lock,
   CheckCircle
   ArrowRight
   DollarSign

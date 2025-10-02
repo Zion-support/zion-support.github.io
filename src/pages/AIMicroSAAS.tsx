@@ -1,12 +1,12 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { 
-  Brain
-  Zap
-  Shield
-  BarChart3
-  MessageSquare
-  FileText
+  Brain,
+  Zap,
+  Shield,
+  BarChart3,
+  MessageSquare,
+  FileText,
   Users
   CheckCircle
   ArrowRight
