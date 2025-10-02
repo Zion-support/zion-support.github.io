@@ -1,15 +1,11 @@
 import React from "react";
-import {
-createRoot
-} from "react-dom/client";
+import { createRoot } from "react-dom/client";
 import App from "./App";
 
-// Report web vitals to help monitor performance in production
 async function reportWebVitals() {
   try {
-    const { onCLS, onFID, onLCP, onFCP, onTTFB, onINP } = await import('web-vitals');
+    const { onCLS, onFID, onLCP, onFCP, onTTFB, onINP } = await import("web-vitals");
     const log = (metric: { name: string; value: number }) => {
-      // Replace with analytics endpoint if available
       console.log(`[WebVitals] ${metric.name}:`, Math.round(metric.value));
     };
     onCLS(log);
@@ -17,14 +13,13 @@ async function reportWebVitals() {
     onLCP(log);
     onFCP(log);
     onTTFB(log);
-    // @ts-ignore web-vitals v4 also exports onINP
-    if (onINP) onINP(log);
+    if (onINP) onINP(log as any);
   } catch {
-    // no-op in dev or if unsupported
+    // ignore in unsupported environments
   }
 }
 
-const container = document.getElementById('root');
+const container = document.getElementById("root");
 if (container) {
 	const root = createRoot(container);
 	root.render(
@@ -35,4 +30,10 @@ if (container) {
   if (import.meta.env.PROD) {
     void reportWebVitals();
   }
+}
+
+if ("serviceWorker" in navigator) {
+	window.addEventListener("load", () => {
+		navigator.serviceWorker.register("/sw.js").catch(() => {});
+	});
 }

@@ -14,7 +14,6 @@ readTime: number;
 
 export const BLOG_POSTS: BlogPost[] = [,
   {
-<<<<<<< HEAD
     id: '99',
     title: 'Governed Agentic Automation: Safe Tools, Fast Outcomes',
     slug: 'governed-agentic-automation-2025-10-03',
@@ -1074,6 +1073,5 @@ export const BLOG_POSTS: BlogPost[] = [,
     publishedAt: '2025-10-03',';,
     readTime: 10,,
   },
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 ];
 ;

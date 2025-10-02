@@ -40,6 +40,9 @@ const Sidebar: React.FC = () => {
         { label: 'Data Analytics', path: '/services/analytics' },
         { label: 'Cybersecurity', path: '/services/security' },
         { label: 'Automation', path: '/services/automation' },
+        { label: 'AI Compliance Monitor', path: '/services/ai-compliance-monitor' },
+        { label: 'SEO Split Testing', path: '/services/seo-split-testing' },
+        { label: 'Image CDN Optimizer', path: '/services/image-cdn-optimizer' },
       ],
     },
     {

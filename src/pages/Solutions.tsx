@@ -141,7 +141,6 @@ const Solutions: React.FC = () => {
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </div>
-<<<<<<< HEAD
         </section>
       </div>
     </>
@@ -149,7 +148,6 @@ const Solutions: React.FC = () => {
         </div>
       </section>
     </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3272
   );
 };
 

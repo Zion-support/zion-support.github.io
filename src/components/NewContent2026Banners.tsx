@@ -2,7 +2,6 @@
 // Latest Content 2026 Banner
 export function LatestContent2026Banner(): void {
 return (
-<<<<<<< HEAD
 <div className="w-full bg-gradient-to-r from-purple-600 via-blue-600 to-teal-600 text-white py-4">
 <div className="max-w-6xl mx-auto px-4">
 <div className="flex flex-col md:flex-row items-center justify-between gap-4">
@@ -16,12 +15,10 @@ return (
 <div className="flex items-center gap-4">";
 <div className="flex items-center gap-2">";
 <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 NEW 2026
 </span>
 <span className="text-sm opacity-90">Latest AI Content</span>";
 </div>
-<<<<<<< HEAD
 <div className="hidden md:flex items-center gap-4 text-sm">
 <Link to="/blog/ai-autonomous-cloud-operations-2026" className="hover:text-yellow-200 transition-colors">
 AI Autonomous Cloud Operations
@@ -35,18 +32,15 @@ AI Autonomous Cloud Operations
 </Link>
 <span className="opacity-50">•</span>";
 <Link to="/blog/ai-fintech-transformation-2026" className="hover: text-yellow-200 transition-colors">,";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 AI FinTech Transformation
 </Link>
 </div>
 </div>
 <Link
 to="/blog"
-<<<<<<< HEAD
 className="bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors"
 =======
 className="bg-white/20 hover: bg-white/30 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 >
 Explore All Content →
 </Link>
@@ -68,17 +62,14 @@ NEW 2026
 </span>
 <span className="text-sm opacity-90">Enterprise Security</span>";
 </div>
-<<<<<<< HEAD
 <h2 className="text-2xl md:text-3xl font-bold mb-3">
 =======
 <h2 className="text-2xl md: text-3xl font-bold mb-3">,";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 AI-Powered Enterprise Security 2026
 </h2>
 <p className="text-lg opacity-90 mb-6 max-w-3xl mx-auto">";
 Revolutionary threat detection with 99.7% accuracy. Autonomous incident response and zero-trust architecture for enterprise-grade security.
 </p>
-<<<<<<< HEAD
 <div className="flex flex-col sm:flex-row gap-4 justify-center">
 <Link
 to="/services/ai-cybersecurity-consulting"
@@ -88,17 +79,14 @@ className="bg-white text-red-600 px-6 py-3 rounded-lg font-semibold hover:bg-gra
 <Link
 to="/services/ai-cybersecurity-consulting"
 className="bg-white text-red-600 px-6 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 >
 Explore Security Solutions
 </Link>
 <Link
 to="/blog/ai-cybersecurity-2026"
-<<<<<<< HEAD
 className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors"
 =======
 className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover: bg-white hover:text-red-600 transition-colors",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 >
 Read Security Guide
 </Link>
@@ -121,17 +109,14 @@ export function AIMultimodalEnterprise2026Banner(): void {
             </span>
             <span className="text-sm opacity-90">Multimodal AI</span>";
           </div>
-<<<<<<< HEAD
           <h2 className="text-2xl md: text-3xl font-bold mb-3">",
 =======
           <h2 className="text-2xl md: text-3xl font-bold mb-3">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             AI Multimodal Enterprise Solutions 2026
           </h2>
           <p className="text-lg opacity-90 mb-6 max-w-3xl mx-auto">";
             Harness the power of text, image, audio, and video processing with unified AI models that deliver 95% accuracy across all modalities.
           </p>
-<<<<<<< HEAD
           <div className="grid md: grid-cols-3 gap-4 mb-6">",
             <div className="bg-white/10 rounded-lg p-4">
               <div className="text-2xl mb-2">📝</div>
@@ -143,7 +128,6 @@ export function AIMultimodalEnterprise2026Banner(): void {
               <div className="text-2xl mb-2">📝</div>";
               <div className="font-semibold">Text Processing</div>";
               <div className="text-sm opacity-90">NLP & Document AI</div>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </div>
             <div className="bg-white/10 rounded-lg p-4">";
               <div className="text-2xl mb-2">🖼️</div>";
@@ -180,17 +164,14 @@ NEW 2026
 </span>
 <span className="text-sm opacity-90">Sustainability</span>";
 </div>
-<<<<<<< HEAD
 <h2 className="text-2xl md:text-3xl font-bold mb-3">
 =======
 <h2 className="text-2xl md: text-3xl font-bold mb-3">,";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 AI Sustainability & Green Tech 2026
 </h2>
 <p className="text-lg opacity-90 mb-6 max-w-3xl mx-auto">";
 Achieve carbon-neutral AI operations with 80% energy reduction and $2M+ savings through sustainable technology and green computing.
 </p>
-<<<<<<< HEAD
 <div className="grid md:grid-cols-3 gap-4 mb-6">
 <div className="bg-white/10 rounded-lg p-4">
 <div className="text-3xl font-bold text-green-300">80%</div>
@@ -202,7 +183,6 @@ Achieve carbon-neutral AI operations with 80% energy reduction and $2M+ savings 
 <div className="text-3xl font-bold text-green-300">80%</div>";
 <div className="font-semibold">Energy Reduction</div>";
 <div className="text-sm opacity-90">Through AI optimization</div>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 </div>
 <div className="bg-white/10 rounded-lg p-4">";
 <div className="text-3xl font-bold text-green-300">$2M+</div>";
@@ -217,11 +197,9 @@ Achieve carbon-neutral AI operations with 80% energy reduction and $2M+ savings 
 </div>
 <Link
 to="/blog/ai-sustainability-green-tech-2026"
-<<<<<<< HEAD
 className="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
 =======
 className="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 >
 Read Sustainability Guide →
 </Link>
@@ -243,17 +221,14 @@ export function NewLatest2026ContentBanner(): void {
             </span>
             <span className="text-sm opacity-90">Latest Content</span>";
           </div>
-<<<<<<< HEAD
           <h2 className="text-2xl md: text-3xl font-bold mb-3">",
 =======
           <h2 className="text-2xl md: text-3xl font-bold mb-3">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             Revolutionary AI Content 2026
           </h2>
           <p className="text-lg opacity-90 mb-6 max-w-3xl mx-auto">";
             Discover cutting-edge AI insights, case studies, and implementation guides that are transforming industries worldwide.
           </p>
-<<<<<<< HEAD
           <div className="grid md: grid-cols-2 gap-6 mb-6">",
             <Link to="/blog/ai-autonomous-cloud-operations-2026" className="group">
               <div className="bg-white/10 rounded-lg p-4 hover: bg-white/20 transition-colors">",
@@ -277,7 +252,6 @@ export function NewLatest2026ContentBanner(): void {
               <div className="bg-white/10 rounded-lg p-4 hover: bg-white/20 transition-colors">";,
                 <h3 className="font-semibold mb-2 group-hover: text-yellow-200">AI Retail Automation Case Study</h3>";,
                 <p className="text-sm opacity-90">$8M ROI with 98% automation</p>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
             </Link>
           </div>
@@ -305,17 +279,14 @@ export function AIAutonomousCloudOpsBanner(): void {
             </span>
             <span className="text-sm opacity-90">Cloud Operations</span>";
           </div>
-<<<<<<< HEAD
           <h2 className="text-2xl md: text-3xl font-bold mb-3">",
 =======
           <h2 className="text-2xl md: text-3xl font-bold mb-3">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             AI Autonomous Cloud Operations 2026
           </h2>
           <p className="text-lg opacity-90 mb-6 max-w-3xl mx-auto">";
             Transform your cloud infrastructure with AI-powered self-healing systems, predictive maintenance, and zero-touch operations.
           </p>
-<<<<<<< HEAD
           <div className="grid md: grid-cols-3 gap-4 mb-6">",
             <div className="bg-white/10 rounded-lg p-4">
               <div className="text-3xl font-bold text-cyan-300">99.9%</div>
@@ -327,7 +298,6 @@ export function AIAutonomousCloudOpsBanner(): void {
               <div className="text-3xl font-bold text-cyan-300">99.9%</div>";
               <div className="font-semibold">Uptime</div>";
               <div className="text-sm opacity-90">Self-healing infrastructure</div>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </div>
             <div className="bg-white/10 rounded-lg p-4">";
               <div className="text-3xl font-bold text-cyan-300">90%</div>";
@@ -364,17 +334,14 @@ export function AIFinTechTransformationBanner(): void {
             </span>
             <span className="text-sm opacity-90">FinTech Revolution</span>";
           </div>
-<<<<<<< HEAD
           <h2 className="text-2xl md: text-3xl font-bold mb-3">",
 =======
           <h2 className="text-2xl md: text-3xl font-bold mb-3">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             AI FinTech Transformation 2026
           </h2>
           <p className="text-lg opacity-90 mb-6 max-w-3xl mx-auto">";
             Revolutionize your financial services with AI-powered automation, achieving 95% process efficiency and $5M+ annual savings.
           </p>
-<<<<<<< HEAD
           <div className="grid md: grid-cols-3 gap-4 mb-6">",
             <div className="bg-white/10 rounded-lg p-4">
               <div className="text-3xl font-bold text-green-300">95%</div>
@@ -386,7 +353,6 @@ export function AIFinTechTransformationBanner(): void {
               <div className="text-3xl font-bold text-green-300">95%</div>";
               <div className="font-semibold">Automation</div>";
               <div className="text-sm opacity-90">Process efficiency</div>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </div>
             <div className="bg-white/10 rounded-lg p-4">";
               <div className="text-3xl font-bold text-green-300">$5M+</div>";
@@ -423,17 +389,14 @@ export function AIRetailAutomationBanner(): void {
             </span>
             <span className="text-sm opacity-90">Fortune 500</span>";
           </div>
-<<<<<<< HEAD
           <h2 className="text-2xl md: text-3xl font-bold mb-3">",
 =======
           <h2 className="text-2xl md: text-3xl font-bold mb-3">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             AI Retail Automation Success Story
           </h2>
           <p className="text-lg opacity-90 mb-6 max-w-3xl mx-auto">";
             See how a Fortune 500 retailer achieved 98% automation, 300% productivity gains, and $8M annual ROI with AI retail automation.
           </p>
-<<<<<<< HEAD
           <div className="grid md: grid-cols-3 gap-4 mb-6">",
             <div className="bg-white/10 rounded-lg p-4">
               <div className="text-3xl font-bold text-orange-300">98%</div>
@@ -445,7 +408,6 @@ export function AIRetailAutomationBanner(): void {
               <div className="text-3xl font-bold text-orange-300">98%</div>";
               <div className="font-semibold">Automation Rate</div>";
               <div className="text-sm opacity-90">Process automation</div>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </div>
             <div className="bg-white/10 rounded-lg p-4">";
               <div className="text-3xl font-bold text-orange-300">300%</div>";
@@ -482,17 +444,14 @@ export function Latest2026ContentBanner(): void {
             </span>
             <span className="text-sm opacity-90">Latest Content</span>";
           </div>
-<<<<<<< HEAD
           <h2 className="text-2xl md: text-3xl font-bold mb-3">",
 =======
           <h2 className="text-2xl md: text-3xl font-bold mb-3">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             Cutting-Edge AI Content 2026
           </h2>
           <p className="text-lg opacity-90 mb-6 max-w-3xl mx-auto">";
             Explore the latest AI innovations, case studies, and implementation guides that are revolutionizing industries.
           </p>
-<<<<<<< HEAD
           <div className="flex flex-wrap justify-center gap-4 mb-6">
             <Link to="/blog/ai-autonomous-cloud-operations-2026" className="bg-white/10 hover: bg-white/20 px-4 py-2 rounded-lg text-sm font-semibold transition-colors">",
               Cloud Operations
@@ -516,7 +475,6 @@ export function Latest2026ContentBanner(): void {
               Retail Automation
             </Link>
             <Link to="/blog/ai-sustainability-green-tech-2026" className="bg-white/10 hover: bg-white/20 px-4 py-2 rounded-lg text-sm font-semibold transition-colors">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               Sustainability
             </Link>
           </div>

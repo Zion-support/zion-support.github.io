@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 const January2026RevolutionaryContentBanner: React.FC = () => {,
   const revolutionaryContent = [
@@ -69,7 +68,6 @@ const January2026RevolutionaryContentBanner: React.FC = () => {,
       highlight: "MEGA SUCCESS",";,
       impact: "$10B Revenue",";,
       type: "case-study",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       readTime: "12 min",
     }
   ];
@@ -77,7 +75,6 @@ const January2026RevolutionaryContentBanner: React.FC = () => {,
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 relative overflow-hidden">";
       {/* Animated Background */}
-<<<<<<< HEAD
       <div className="absolute inset-0 overflow-hidden opacity-20">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>;
@@ -87,12 +84,10 @@ const January2026RevolutionaryContentBanner: React.FC = () => {,
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>";
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>';
         <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       </div>
 
       <div className="container mx-auto px-6 relative z-10">";
         {/* Header */}
-<<<<<<< HEAD
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-8">
             <Sparkles className="w-5 h-5 text-blue-400/>
@@ -102,12 +97,10 @@ const January2026RevolutionaryContentBanner: React.FC = () => {,
           <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-8">";
             <Sparkles className="w-5 h-5 text-blue-400" />";
             <span className="text-blue-400 font-bold text-sm tracking-wider uppercase">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               January 2026 • Revolutionary Content Launch
             </span>
           </div>
           
-<<<<<<< HEAD
           <h2 className="text-4xl md: text-5xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">",
             Revolutionary AI Breakthroughs: The Future is Here,
           </h2>
@@ -119,17 +112,14 @@ const January2026RevolutionaryContentBanner: React.FC = () => {,
           </h2>
           
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             Experience the cutting-edge of AI innovation with our latest breakthrough content: 98% automation rates, quantum computing revolutions, and Fortune 500 transformations worth $10B.,
           </p>
         </div>
 
         {/* Content Grid */}
-<<<<<<< HEAD
         <div className="grid md: grid-cols-3 gap-8 mb-12">",
 =======
         <div className="grid md: grid-cols-3 gap-8 mb-12">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           {revolutionaryContent.map((content, index) => (
             <div 
               key={index} 
@@ -151,11 +141,9 @@ const January2026RevolutionaryContentBanner: React.FC = () => {,
                 <span className="text-blue-400 text-sm font-semibold uppercase tracking-wide">";
                   {content.category}
                 </span>
-<<<<<<< HEAD
                 <h3 className="text-xl font-bold text-white mb-3 group-hover: text-blue-300 transition-colors">",
 =======
                 <h3 className="text-xl font-bold text-white mb-3 group-hover: text-blue-300 transition-colors">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   {content.title}
                 </h3>
                 <p className="text-gray-400 text-sm leading-relaxed mb-4">";
@@ -164,7 +152,6 @@ const January2026RevolutionaryContentBanner: React.FC = () => {,
               </div>
 
               {/* Impact Badge */}
-<<<<<<< HEAD
               <div className="mb-6">
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-full">
                   <Target className="w-4 h-4 text-green-400/>
@@ -176,7 +163,6 @@ const January2026RevolutionaryContentBanner: React.FC = () => {,
                   <Target className="w-4 h-4 text-green-400" />";
                   <span className="text-green-400 font-bold text-sm">";
                     Impact: {content.impact}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   </span>
                 </div>
               </div>
@@ -186,20 +172,17 @@ const January2026RevolutionaryContentBanner: React.FC = () => {,
                 to={`/${content.type === 'blog' ? 'blog' : 'case-studies'}/${content.slug}`}`;
                 className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover: from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 group-hover:shadow-lg group-hover:shadow-blue-500/25",
               >
-<<<<<<< HEAD
                 {content.type === 'blog' ? 'Read Article' : 'View Case Study'};
                 <ArrowRight className="w-4 h-4/>
 =======
                 {content.type === 'blog' ? 'Read Article' : 'View Case Study'}';
                 <ArrowRight className="w-4 h-4" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </Link>
             </div>
           ))}
         </div>
 
         {/* Stats Section */}
-<<<<<<< HEAD
         <div className="grid md: grid-cols-4 gap-6 mb-12">",
           {[
             { value: '98%', label: 'Automation Rate', icon: '🤖', color: 'from-blue-400 to-cyan-400' }
@@ -219,7 +202,6 @@ const January2026RevolutionaryContentBanner: React.FC = () => {,
           ].map((stat, index) => (
             <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-4 border border-white/10 text-center">";
               <div className="text-3xl mb-2">{stat.icon}</div>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               <div className={`text-2xl font-extrabold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-1`}>`;
                 {stat.value}
               </div>
@@ -236,7 +218,6 @@ const January2026RevolutionaryContentBanner: React.FC = () => {,
             <h3 className="text-2xl font-bold mb-4 text-white">";
               Ready to Experience the AI Revolution?
             </h3>
-<<<<<<< HEAD
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Join the Fortune 500 companies already transforming their operations with Zion Tech Group's breakthrough AI solutions.;
             </p>
@@ -246,7 +227,6 @@ const January2026RevolutionaryContentBanner: React.FC = () => {,
               Join the Fortune 500 companies already transforming their operations with Zion Tech Group's breakthrough AI solutions.';
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               <Link 
                 to="/contact" 
                 className="bg-gradient-to-r from-blue-500 to-purple-600 hover: from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1",

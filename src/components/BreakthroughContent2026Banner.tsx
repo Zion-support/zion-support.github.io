@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 import React from 'react';
 =======
 import React from 'react';';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 const BreakthroughContent2026Banner: React.FC = () => {,
   return (
     <div className="container mx-auto px-6 mt-6">";

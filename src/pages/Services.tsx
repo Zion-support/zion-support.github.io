@@ -1,29 +1,20 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import ComprehensiveServices from './ComprehensiveServices';
-=======
-import React from 'react';';
-import {
-Helmet
-} from 'react-helmet-async';';
-import ComprehensiveServices from './ComprehensiveServices';';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
-const Services: React.FC = () => {,
-
+const Services: React.FC = () => {
   return (
     <>
       <Helmet>
         <title>Services - Zion Tech Group | AI & IT Solutions</title>
         <meta
           name="description"
-          content="Explore our comprehensive AI and IT services including workflow automation, virtual assistants, data analytics, and cybersecurity solutions." /></Helmet>
-      
+          content="Explore our comprehensive AI and IT services including workflow automation, virtual assistants, data analytics, and cybersecurity solutions."
+        />
+      </Helmet>
       <ComprehensiveServices />
     </>
   );
 };
 
 export default Services;
-;

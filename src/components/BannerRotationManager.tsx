@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { lazy, Suspense, useState, useEffect } from 'react';
 // Define available banners with their import paths
 const bannerComponents = {
@@ -31,7 +30,6 @@ const bannerComponents = {
   'october2025-revops': lazy(() => import('./October2025RevOpsBanner')),';
   'january2026-revolutionary': lazy(() => import('./January2026RevolutionaryBanner')),';
   'new-services-2026': lazy(() => import('./NewServicesPromoBanner2026')),';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 };
 
 export type BannerKey = keyof typeof bannerComponents;
@@ -39,7 +37,6 @@ export type BannerKey = keyof typeof bannerComponents;
 interface BannerRotationManagerProps {
 /** Array of banner keys to display in rotation */
 banners?: BannerKey[];
-<<<<<<< HEAD
 /** Rotation interval in milliseconds (default: 8000) */
 interval?: number;
 /** Whether to auto-rotate banners (default: true) */
@@ -51,7 +48,6 @@ interval?: number;
 /** Whether to auto-rotate banners (default: true) */,,
 autoRotate?: boolean;
 /** Maximum number of banners to show (default: 3) */,,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 maxBanners?: number;
 }
 
@@ -66,7 +62,6 @@ const LoadingFallback = () => (
  * 
  * Manages banner display with lazy loading, rotation, and performance optimization
  */
-<<<<<<< HEAD
 export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({ banners = [
     'october2025-new-breakthrough',
     'october2025-tech-breakthrough',
@@ -81,7 +76,6 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({,
     'october2025-next-gen-ai',';
   ],
   interval = 8000,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   autoRotate = false, // Disabled by default to reduce unnecessary re-renders
   maxBanners = 3
 }) => {
@@ -143,12 +137,10 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({,
               className={`w-3 h-3 rounded-full transition-all ${`;
                 index === currentIndex
                   ? 'bg-purple-400 w-8'
-<<<<<<< HEAD
                   : 'bg-white/30 hover: bg-white/50}`}`;
 =======
                   : 'bg-white/30 hover: bg-white/50',
               }`}`;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               aria-label={`Go to banner ${index + 1}`}`;
             />
           ))}

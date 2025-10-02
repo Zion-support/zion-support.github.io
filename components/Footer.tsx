@@ -1,24 +1,38 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
+import { Globe, Mail, Phone, MapPin } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   const footerLinks = {
     services: [
+      { name: 'All Services', href: '/services' },
       { name: 'AI Services', href: '/ai-services' },
       { name: 'Micro SaaS', href: '/services/micro-saas' },
       { name: 'IT Services', href: '/services/it-services-comprehensive' },
       { name: 'Blockchain Solutions', href: '/services/blockchain-solutions' },
       { name: 'Quantum Computing', href: '/services/ai-quantum-computing-2026' },
+      { name: 'Cloud Migration', href: '/services/cloud-migration-service' },
+      { name: 'Cybersecurity', href: '/services/cybersecurity-solutions' },
+      { name: 'Data Analytics', href: '/services/data-analytics-business-intelligence' },
       { name: 'Additional Services', href: '/additional-services' },
       { name: 'Comprehensive Services', href: '/comprehensive-services' },
+      { name: 'AI Content Tools', href: '/services/ai-powered-content-tools' },
+      { name: 'Telemedicine Platform', href: '/services/telemedicine-platform' },
+      { name: 'Remote Collaboration', href: '/services/remote-collaboration-suite' },
+      { name: 'API Integration', href: '/services/api-integration-platform' },
+      { name: 'Customer Insights', href: '/services/ai-customer-insights-platform' },
     ],
     solutions: [
       { name: 'All Solutions', href: '/solutions' },
       { name: 'Enterprise Solutions', href: '/enterprise' },
       { name: 'Innovative IT Solutions', href: '/innovative-it-solutions' },
       { name: 'Advanced AI Solutions', href: '/advanced-ai-solutions' },
+      { name: 'Healthcare Technology', href: '/services/healthcare-technology-solutions' },
+      { name: 'FinTech Solutions', href: '/services/financial-technology-solutions' },
+      { name: 'E-commerce Solutions', href: '/services/ecommerce-technology-solutions' },
+      { name: 'Manufacturing AI', href: '/services/manufacturing-ai-platform' },
     ],
     company: [
       { name: 'About Us', href: '/about' },
@@ -27,6 +41,8 @@ const Footer: React.FC = () => {
       { name: 'Contact', href: '/contact' },
       { name: 'Pricing', href: '/pricing' },
       { name: 'Support', href: '/support' },
+      { name: 'Partners', href: '/partners' },
+      { name: 'Portfolio', href: '/portfolio' },
     ],
     resources: [
       { name: 'All Resources', href: '/resources' },
@@ -36,6 +52,7 @@ const Footer: React.FC = () => {
       { name: 'Privacy Policy', href: '/privacy' },
       { name: 'Terms of Service', href: '/terms' },
       { name: 'Security', href: '/security' },
+      { name: 'Sitemap', href: '/sitemap' },
     ]
   };
 
@@ -45,14 +62,13 @@ const Footer: React.FC = () => {
     { name: 'GitHub', href: '#', icon: '🐙' },
     { name: 'YouTube', href: '#', icon: '📺' },
   ];
-
   return (
     <footer className="bg-gray-900 text-white">
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center space-x-2 mb-6">
+            <Link to="/" className="flex items-center space-x-2 mb-6">
               <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">Z</span>
               </div>
@@ -60,33 +76,10 @@ const Footer: React.FC = () => {
             </Link>
             
             <p className="text-gray-400 mb-6 leading-relaxed">
-              Leading technology solutions provider helping businesses transform their digital presence 
-              with cutting-edge AI, cloud architecture, and innovative development services.
+              Revolutionary AI breakthroughs delivering 1000x performance gains, 95% automation, 
+              and $150M+ ROI for Fortune 500 companies worldwide.
             </p>
             
-            {/* Contact Information */}
-            <div className="space-y-3 mb-6">
-              <div className="flex items-center text-gray-400">
-                <span className="mr-3">📞</span>
-                <a href="tel:+13024640950" className="hover:text-white transition-colors">
-                  +1 302 464 0950
-                </a>
-              </div>
-              <div className="flex items-center text-gray-400">
-                <span className="mr-3">✉️</span>
-                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white transition-colors">
-                  kleber@ziontechgroup.com
-                </a>
-              </div>
-              <div className="flex items-start text-gray-400">
-                <span className="mr-3 mt-1">📍</span>
-                <span>
-                  364 E Main St STE 1008<br />
-                  Middletown, DE 19709
-                </span>
-              </div>
-            </div>
-
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
                 <a
@@ -105,10 +98,10 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
-              {footerLinks.services.map((link) => (
+              {footerLinks.services.slice(0, 6).map((link) => (
                 <li key={link.name}>
                   <Link
-                    href={link.href}
+                    to={link.href}
                     className="text-gray-400 hover:text-white transition-colors"
                   >
                     {link.name}
@@ -125,24 +118,7 @@ const Footer: React.FC = () => {
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
                   <Link
-                    href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Resources */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Resources</h3>
-            <ul className="space-y-2">
-              {footerLinks.resources.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
+                    to={link.href}
                     className="text-gray-400 hover:text-white transition-colors"
                   >
                     {link.name}
@@ -178,21 +154,19 @@ const Footer: React.FC = () => {
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            © {currentYear} Zion Tech Solutions. All rights reserved.
+            © {currentYear} Zion Tech Group. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link href="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
+            <Link to="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
               Terms of Service
             </Link>
-            <Link href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
+            <Link to="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
               Privacy Policy
             </Link>
-            <Link href="/sitemap" className="text-gray-400 hover:text-white text-sm transition-colors">Sitemap</Link>
+            <Link to="/sitemap" className="text-gray-400 hover:text-white text-sm transition-colors">Sitemap</Link>
           </div>
         </div>
       </div>
     </footer>
   );
 };
-
-export default Footer;

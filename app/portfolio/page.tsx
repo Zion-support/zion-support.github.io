@@ -1,285 +1,308 @@
-import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+export default function PortfolioPage() {
+  return (
+    <div className="max-w-6xl mx-auto px-6 py-12">
+      <h1 className="text-3xl font-bold text-gray-900 mb-4">Portfolio</h1>
+      <p className="text-gray-600">Explore selected projects and case studies delivered by Zion Tech Group.</p>
+    </div>
+  );
+}
 
-export const metadata: Metadata = {
-  title: 'Portfolio - Zion Tech Group',
-  description: 'Explore our portfolio of successful AI implementations, micro SaaS solutions, and IT transformations across various industries.',
-  robots: {
-    index: true,
-    follow: true,
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { 
+  ExternalLink, 
+  ArrowRight, 
+  Star, 
+  Users, 
+  TrendingUp, 
+  Zap,
+  Brain,
+  Cpu,
+  Cloud,
+  Shield,
+  Globe,
+  Award
+} from 'lucide-react';
+
+export const metadata = {
+  title: 'Portfolio — Zion Tech Group AI & IT Solutions Showcase',
+  description: 'Explore our portfolio of successful AI implementations, enterprise transformations, and cutting-edge technology solutions delivering proven ROI.',
+  keywords: 'zion tech group portfolio, AI solutions showcase, enterprise technology portfolio, AI implementation case studies',
+  openGraph: {
+    title: 'Portfolio — Zion Tech Group AI & IT Solutions Showcase',
+    description: 'Explore our portfolio of successful AI implementations, enterprise transformations, and cutting-edge technology solutions.',
+    type: 'website',
+    url: 'https://ziontechgroup.com/portfolio',
+    images: [
+      {
+        url: '/og-portfolio.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Zion Tech Group Portfolio - AI Solutions Showcase',
+      },
+    ],
   },
 };
 
 export default function PortfolioPage() {
-  const portfolioCategories = [
+  const portfolioItems = [
     {
-      title: 'AI & Machine Learning',
-      description: 'Advanced AI solutions that drive business transformation',
-      projects: [
-        {
-          title: 'Quantum AI Transformation',
-          client: 'Fortune 500 Manufacturing',
-          description: 'Implemented quantum-enhanced AI for autonomous operations',
-          results: '$500B ROI achieved',
-          technologies: ['Quantum Computing', 'Neural Networks', 'Machine Learning'],
-          link: '/case-studies/fortune-500-quantum-ai-transformation-success-story'
-        },
-        {
-          title: 'AI Financial Forecasting',
-          client: 'Global Financial Services',
-          description: 'Advanced predictive analytics for financial markets',
-          results: '95% accuracy in predictions',
-          technologies: ['Deep Learning', 'Time Series Analysis', 'Risk Modeling'],
-          link: '/services/ai-financial-forecasting-suite'
-        },
-        {
-          title: 'AI Customer Insights Platform',
-          client: 'E-commerce Leader',
-          description: 'Real-time customer behavior analysis and personalization',
-          results: '300% increase in conversion rates',
-          technologies: ['Computer Vision', 'NLP', 'Real-time Analytics'],
-          link: '/services/ai-customer-insights-platform'
-        }
-      ]
+      title: "Fortune 500 AI Transformation",
+      category: "Enterprise AI",
+      description: "Delivered 1000x performance improvements and $150M ROI through quantum-enhanced AI implementation.",
+      technologies: ["Quantum AI", "Autonomous Systems", "Enterprise Integration"],
+      results: ["1000x Performance", "$150M ROI", "95% Automation"],
+      image: "/portfolio/fortune-500.jpg",
+      link: "/case-studies/fortune-500-ai-transformation"
     },
     {
-      title: 'Micro SaaS Solutions',
-      description: 'Scalable software-as-a-service platforms for specific business needs',
-      projects: [
-        {
-          title: 'AI Lead Scoring API',
-          client: 'B2B SaaS Company',
-          description: 'Intelligent lead qualification and scoring system',
-          results: '250% improvement in sales efficiency',
-          technologies: ['Machine Learning', 'REST APIs', 'Real-time Processing'],
-          link: '/services/micro-saas/ai-lead-scoring-api'
-        },
-        {
-          title: 'AI Sales Copilot',
-          client: 'Sales Technology Firm',
-          description: 'AI-powered sales assistant for enterprise teams',
-          results: '180% increase in sales productivity',
-          technologies: ['NLP', 'Conversational AI', 'CRM Integration'],
-          link: '/services/micro-saas/ai-sales-copilot'
-        },
-        {
-          title: 'Smart Inventory Management',
-          client: 'Retail Chain',
-          description: 'AI-driven inventory optimization and demand forecasting',
-          results: '40% reduction in inventory costs',
-          technologies: ['Predictive Analytics', 'IoT Integration', 'Supply Chain AI'],
-          link: '/services/smart-inventory-management-saas'
-        }
-      ]
+      title: "Autonomous Enterprise Platform",
+      category: "Business Automation",
+      description: "Built self-managing AI systems achieving 95% automation across enterprise operations.",
+      technologies: ["Neural Networks", "Process Automation", "Real-time Analytics"],
+      results: ["95% Automation", "60% Cost Reduction", "24/7 Operations"],
+      image: "/portfolio/autonomous-enterprise.jpg",
+      link: "/case-studies/autonomous-enterprise-2-billion-success"
     },
     {
-      title: 'IT Infrastructure & DevOps',
-      description: 'Modern infrastructure solutions and cloud transformations',
-      projects: [
-        {
-          title: 'Cloud-Native DevOps Platform',
-          client: 'Technology Startup',
-          description: 'Complete DevOps transformation with CI/CD automation',
-          results: '90% faster deployment cycles',
-          technologies: ['Kubernetes', 'Docker', 'CI/CD Pipelines', 'Infrastructure as Code'],
-          link: '/services/cloud-native-devops-platform'
-        },
-        {
-          title: 'AI Observability Platform',
-          client: 'Enterprise Software Company',
-          description: 'Comprehensive monitoring and observability solution',
-          results: '99.9% uptime achieved',
-          technologies: ['Prometheus', 'Grafana', 'Machine Learning', 'Real-time Monitoring'],
-          link: '/services/it-services/ai-observability-platform'
-        },
-        {
-          title: 'FinOps Cost Optimizer',
-          client: 'Multi-Cloud Enterprise',
-          description: 'Intelligent cloud cost management and optimization',
-          results: '35% reduction in cloud costs',
-          technologies: ['Cloud Analytics', 'Cost Optimization', 'Automated Scaling'],
-          link: '/services/finops-cost-optimizer'
-        }
-      ]
+      title: "Quantum Neural Superintelligence",
+      category: "Advanced AI",
+      description: "Developed next-generation quantum neural architectures for unprecedented computational power.",
+      technologies: ["Quantum Computing", "Neural Networks", "Superintelligence"],
+      results: ["1000x Speed", "Advanced Reasoning", "Breakthrough Performance"],
+      image: "/portfolio/quantum-neural.jpg",
+      link: "/case-studies/ai-2026-quantum-neural-superintelligence-25-billion-success"
     },
     {
-      title: 'Cybersecurity & Compliance',
-      description: 'Advanced security solutions and compliance frameworks',
-      projects: [
-        {
-          title: 'AI Cybersecurity Automation',
-          client: 'Financial Services',
-          description: 'Intelligent threat detection and response system',
-          results: '99.8% threat detection accuracy',
-          technologies: ['AI/ML', 'Threat Intelligence', 'Automated Response'],
-          link: '/services/ai-cybersecurity-automation-suite'
-        },
-        {
-          title: 'SOC2 Readiness Program',
-          client: 'SaaS Provider',
-          description: 'Complete compliance and security framework implementation',
-          results: 'SOC2 Type II certification achieved',
-          technologies: ['Security Frameworks', 'Compliance Automation', 'Risk Assessment'],
-          link: '/services/it-services/soc2-readiness'
-        }
-      ]
+      title: "Healthcare AI Diagnostics",
+      category: "Healthcare Technology",
+      description: "Revolutionary AI-powered diagnostic platform improving patient outcomes and operational efficiency.",
+      technologies: ["Medical AI", "Image Processing", "Predictive Analytics"],
+      results: ["99% Accuracy", "50% Faster Diagnosis", "Improved Outcomes"],
+      image: "/portfolio/healthcare-ai.jpg",
+      link: "/services/healthcare-ai-diagnostics-platform"
+    },
+    {
+      title: "Financial Intelligence Platform",
+      category: "FinTech Solutions",
+      description: "Advanced AI platform for real-time financial analysis and automated trading strategies.",
+      technologies: ["Financial AI", "Real-time Processing", "Risk Management"],
+      results: ["Real-time Analysis", "Automated Trading", "Risk Reduction"],
+      image: "/portfolio/fintech-ai.jpg",
+      link: "/services/ai-financial-analysis-platform"
+    },
+    {
+      title: "Manufacturing AI Optimization",
+      category: "Industrial AI",
+      description: "Intelligent manufacturing systems optimizing production and predictive maintenance.",
+      technologies: ["IoT Integration", "Predictive Maintenance", "Quality Control"],
+      results: ["30% Efficiency", "Predictive Maintenance", "Quality Improvement"],
+      image: "/portfolio/manufacturing-ai.jpg",
+      link: "/services/manufacturing-ai-platform"
     }
   ];
 
-  const stats = [
-    { number: '500+', label: 'Projects Completed' },
-    { number: '$2.5T+', label: 'Client Value Generated' },
-    { number: '99.9%', label: 'Client Satisfaction Rate' },
-    { number: '50+', label: 'Fortune 500 Clients' }
+  const categories = [
+    "All Projects",
+    "Enterprise AI",
+    "Business Automation", 
+    "Advanced AI",
+    "Healthcare Technology",
+    "FinTech Solutions",
+    "Industrial AI"
   ];
 
   return (
-    <div className="min-h-screen py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Our Portfolio
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover our successful implementations across AI, micro SaaS, and IT solutions. 
-            Each project represents our commitment to delivering transformative results.
-          </p>
-        </div>
-
-        {/* Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
-          {stats.map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
-                {stat.number}
-              </div>
-              <div className="text-gray-600 font-medium">
-                {stat.label}
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Portfolio Categories */}
-        <div className="space-y-20">
-          {portfolioCategories.map((category, categoryIndex) => (
-            <div key={categoryIndex} className="bg-white rounded-xl shadow-lg p-8">
-              <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                  {category.title}
-                </h2>
-                <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                  {category.description}
-                </p>
-              </div>
-
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {category.projects.map((project, projectIndex) => (
-                  <div key={projectIndex} className="bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow">
-                    <div className="mb-4">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">
-                        {project.title}
-                      </h3>
-                      <p className="text-blue-600 font-medium text-sm mb-3">
-                        {project.client}
-                      </p>
-                      <p className="text-gray-600 text-sm mb-4">
-                        {project.description}
-                      </p>
-                    </div>
-
-                    <div className="mb-4">
-                      <div className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold mb-3">
-                        {project.results}
-                      </div>
-                      <div className="flex flex-wrap gap-2">
-                        {project.technologies.map((tech, techIndex) => (
-                          <span
-                            key={techIndex}
-                            className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-medium"
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-
-                    <Link
-                      href={project.link}
-                      className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium text-sm"
-                    >
-                      View Details
-                      <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </Link>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Call to Action */}
-        <div className="mt-20 text-center">
-          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl p-12 text-white">
-            <h2 className="text-3xl font-bold mb-4">
-              Ready to Start Your Next Project?
-            </h2>
-            <p className="text-xl mb-8 opacity-90">
-              Let's discuss how we can transform your business with cutting-edge technology solutions.
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10"></div>
+        <div className="relative max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-6">
+              Our Portfolio
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto">
+              Revolutionary AI implementations and enterprise transformations delivering 
+              unprecedented results for Fortune 500 companies and leading organizations worldwide.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
-                Get Started
-              </Link>
-              <Link
-                href="/case-studies"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-              >
-                View Case Studies
-              </Link>
-            </div>
           </div>
         </div>
+      </section>
 
-        {/* Industries Served */}
-        <div className="mt-20">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
-            Industries We Serve
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
-            {[
-              'Manufacturing',
-              'Financial Services',
-              'Healthcare',
-              'Retail & E-commerce',
-              'Technology',
-              'Real Estate',
-              'Education',
-              'Government',
-              'Energy & Utilities',
-              'Transportation',
-              'Media & Entertainment',
-              'Professional Services'
-            ].map((industry, index) => (
-              <div key={index} className="text-center">
-                <div className="bg-gray-100 rounded-lg p-4 mb-2">
-                  <div className="text-2xl mb-2">🏢</div>
+      {/* Category Filter */}
+      <section className="py-8 px-4 bg-white border-b">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-wrap justify-center gap-4">
+            {categories.map((category) => (
+              <button
+                key={category}
+                className="px-6 py-3 rounded-full border border-gray-300 text-gray-700 hover:bg-blue-50 hover:border-blue-500 hover:text-blue-600 transition-all duration-300 font-medium"
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Portfolio Grid */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {portfolioItems.map((item, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">
+                <div className="h-48 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                    <Brain className="w-8 h-8 text-white" />
+                  </div>
                 </div>
-                <div className="text-sm font-medium text-gray-700">
-                  {industry}
+                
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="px-3 py-1 bg-blue-100 text-blue-600 text-sm font-medium rounded-full">
+                      {item.category}
+                    </span>
+                    <div className="flex items-center">
+                      <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                      <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                      <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                      <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                      <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                    </div>
+                  </div>
+                  
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                    {item.title}
+                  </h3>
+                  
+                  <p className="text-gray-600 mb-4">
+                    {item.description}
+                  </p>
+                  
+                  <div className="mb-4">
+                    <h4 className="text-sm font-semibold text-gray-900 mb-2">Technologies:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {item.technologies.map((tech, techIndex) => (
+                        <span key={techIndex} className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-gray-900 mb-2">Results:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {item.results.map((result, resultIndex) => (
+                        <span key={resultIndex} className="px-2 py-1 bg-green-100 text-green-700 text-xs rounded font-medium">
+                          {result}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  <Link
+                    to={item.link}
+                    className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:translate-x-1 transition-all duration-300"
+                  >
+                    View Case Study
+                    <ArrowRight className="ml-2 w-4 h-4" />
+                  </Link>
                 </div>
               </div>
             ))}
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-20 px-4 bg-gradient-to-r from-blue-600 to-purple-600">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Portfolio Impact</h2>
+            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+              Measurable results across all our implementations
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="text-5xl font-bold text-white mb-2">500+</div>
+              <div className="text-blue-100">Projects Delivered</div>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold text-white mb-2">$2.5T+</div>
+              <div className="text-blue-100">Total ROI Generated</div>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold text-white mb-2">1000x</div>
+              <div className="text-blue-100">Average Performance Gain</div>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold text-white mb-2">99%</div>
+              <div className="text-blue-100">Client Satisfaction</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Technologies We Use */}
+      <section className="py-20 px-4 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Technologies We Master</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Cutting-edge technologies powering our revolutionary solutions
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+            {[
+              { name: "Quantum AI", icon: Cpu },
+              { name: "Neural Networks", icon: Brain },
+              { name: "Cloud Computing", icon: Cloud },
+              { name: "Blockchain", icon: Shield },
+              { name: "IoT Solutions", icon: Globe },
+              { name: "Automation", icon: Zap }
+            ].map((tech, index) => (
+              <div key={index} className="text-center group">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-100 to-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:from-blue-600 group-hover:to-purple-600 transition-all duration-300">
+                  <tech.icon className="w-8 h-8 text-blue-600 group-hover:text-white transition-colors" />
+                </div>
+                <h3 className="font-semibold text-gray-900">{tech.name}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 bg-gray-50">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-gray-900 mb-6">
+            Ready to Join Our Success Stories?
+          </h2>
+          <p className="text-xl text-gray-600 mb-8">
+            Let's create your next breakthrough project together
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              to="/contact" 
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300"
+            >
+              Start Your Project
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Link>
+            <Link 
+              to="/case-studies" 
+              className="inline-flex items-center px-8 py-4 border-2 border-gray-300 text-gray-700 font-semibold rounded-lg hover:border-blue-500 hover:text-blue-600 transition-all duration-300"
+            >
+              View All Case Studies
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

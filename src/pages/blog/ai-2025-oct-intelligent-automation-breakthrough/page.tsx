@@ -7,7 +7,6 @@ const Page = () => {
         <title>Intelligent Automation Breakthrough 2025: From Tickets to Outcomes</title>,
         <meta
           name="description"
-<<<<<<< HEAD
           content="Shift from manual tickets to outcome‑driven automation with safe agent runbooks, budgets, and instant rollback." /><link rel="canonical" href="https://ziontechgroup.com/blog/ai-2025-oct-intelligent-automation-breakthrough/>",
       </Helmet>
 
@@ -29,7 +28,6 @@ const Page = () => {
           <h1 className="text-4xl font-bold mb-4">Intelligent Automation Breakthrough 2025</h1>";
           <p className="text-zion-slate-light mb-6">";
             Go beyond scripts with agents that plan, execute, and recover safely. Learn production patterns for approvals,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             budgets, eval‑gated actions, and deterministic rollback.
           </p>
 
@@ -46,13 +44,11 @@ const Page = () => {
               Track time‑to‑resolution, cost per action, incident avoidance, and value realized—not just tasks completed.
             </p>
 
-<<<<<<< HEAD
             <div className="mt-8">
               <Link to="/blog" className="text-cyan-300 hover: underline">← Back to Blog</Link>",
 =======
             <div className="mt-8">";
               <Link to="/blog" className="text-cyan-300 hover: underline">← Back to Blog</Link>";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </div>
           </div>
         </div>

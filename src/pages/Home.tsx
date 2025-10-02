@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { CheckCircle, Rocket, Shield, Sparkles, Zap, Users, Target, Award, ArrowRight } from "lucide-react";
@@ -13,7 +12,8 @@ Helmet
 import {
 
 } from "lucide-react";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a267
+=======
+import { CheckCircle, Sparkles } from "lucide-react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import NewServicesPromoBanner2026 from "../components/NewServicesPromoBanner2026";
@@ -34,7 +34,6 @@ const Home = () => {
       featured: true
     },
     {
-<<<<<<< HEAD
       id: '2',
       title: 'Quantum AI Breakthrough: Solving Impossible Problems in Seconds',
       summary: 'Explore quantum-enhanced AI delivering 500x faster results and revolutionizing computational capabilities.',
@@ -97,7 +96,7 @@ publishedAt: '2025-01-05'
 }
   ];
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a267
+=======
   return (
     <>
       <Helmet>
@@ -126,7 +125,7 @@ publishedAt: '2025-01-05'
         <link rel="canonical" href="https://ziontechgroup.com" />
         
         {/* Enhanced Structured Data */}
-            <script type="application/ld+json">
+        <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
@@ -142,7 +141,6 @@ publishedAt: '2025-01-05'
             },
             "image": "https://ziontechgroup.com/og-image.jpg",
             "contactPoint": {
-<<<<<<< HEAD
               "@type": "ContactPoint",
               "telephone": "+1-302-464-0950",
               "contactType": "customer service",
@@ -158,7 +156,7 @@ publishedAt: '2025-01-05'
 "areaServed": "US",
 "email": "kleber@ziontechgroup.com"
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a267
+=======
             "sameAs": [
               "https://linkedin.com/company/zion-tech-group",
               "https://twitter.com/ziontechgroup",
@@ -167,7 +165,6 @@ publishedAt: '2025-01-05'
             "foundingDate": "2020",
             "numberOfEmployees": "50-100",
             "address": {
-<<<<<<< HEAD
               "@type": "PostalAddress",
               "streetAddress": "364 E Main St STE 1008",
               "addressLocality": "Middletown",
@@ -261,12 +258,11 @@ publishedAt: '2025-01-05'
 "name": "Quantum Computing Consulting",
 "description": "Expert consulting on quantum computing solutions"
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a267
+=======
                 }
               ]
             },
             "aggregateRating": {
-<<<<<<< HEAD
               "@type": "AggregateRating",
               "ratingValue": "4.8",
               "reviewCount": "150",
@@ -289,7 +285,7 @@ publishedAt: '2025-01-05'
 "bestRating": "5",
 "worstRating": "1"
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a267
+=======
           })}
         </script>
         

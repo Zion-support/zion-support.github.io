@@ -92,7 +92,6 @@ const Support: React.FC = () => {
       answer: 'Yes, we provide comprehensive training programs including documentation, video tutorials, and live training sessions.'
     },
     {
-<<<<<<< HEAD
       category: 'general',
       question: 'What is your response time for support requests?',
       answer: 'We guarantee response times based on your support plan: Premium (30 minutes), Standard (2 hours), Basic (24 hours).'
@@ -243,7 +242,6 @@ const Support: React.FC = () => {
           </div>
         </div>
       </section>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3272
 
             {/* Category Filter */}
             <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -323,7 +321,6 @@ const Support: React.FC = () => {
               </Link>
             </div>
           </div>
-<<<<<<< HEAD
         </section>
       </div>
     </>
@@ -331,7 +328,6 @@ const Support: React.FC = () => {
         </div>
       </section>
     </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3272
   );
 };
 

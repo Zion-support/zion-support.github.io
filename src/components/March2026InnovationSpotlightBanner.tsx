@@ -2,7 +2,6 @@
 const March2026InnovationSpotlightBanner = () => {
   const innovations = [
     {
-<<<<<<< HEAD
       title: 'Neural-Synaptic Fusion AI',',
       description: 'Revolutionary brain-computer interface achieving 99.98% neural accuracy',',
       impact: '500% cognitive enhancement',',
@@ -41,13 +40,11 @@ const March2026InnovationSpotlightBanner = () => {
       icon: '🌌',';,
       color: 'from-emerald-500 to-teal-500',
     }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   ];
 
   return (
     <div className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 relative overflow-hidden">";
       {/* Animated background effects */}
-<<<<<<< HEAD
       <div className="absolute inset-0 overflow-hidden opacity-20">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>;
@@ -57,12 +54,10 @@ const March2026InnovationSpotlightBanner = () => {
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>";
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>';
         <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       </div>
 
       <div className="container mx-auto px-6 relative z-10">";
         {/* Header Section */}
-<<<<<<< HEAD
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-purple-500/20 to-indigo-500/20 border border-purple-500/30 mb-8">
             <Rocket className="w-6 h-6 text-purple-400 animate-pulse/>
@@ -84,7 +79,6 @@ const March2026InnovationSpotlightBanner = () => {
           </div>
 
           <h2 className="text-5xl md: text-6xl font-extrabold mb-6 bg-gradient-to-r from-purple-400 via-indigo-400 to-blue-400 bg-clip-text text-transparent">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             The Innovation Revolution
           </h2>
           
@@ -94,7 +88,6 @@ const March2026InnovationSpotlightBanner = () => {
           </p>
 
           {/* Innovation Stats */}
-<<<<<<< HEAD
           <div className="grid grid-cols-2 md: grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">",
             {[
               { value: '99.98%', label: 'Neural Accuracy', icon: '🧠', color: 'text-purple-400' }
@@ -108,7 +101,6 @@ const March2026InnovationSpotlightBanner = () => {
               { value: '1000x', label: 'Processing Speed', icon: '⚡', color: 'text-indigo-400' },';
               { value: '$5.2B', label: 'Market Creation', icon: '💰', color: 'text-blue-400' },';
               { value: '500%', label: 'Enhancement', icon: '📈', color: 'text-emerald-400' }';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             ].map((stat, index) => (
               <div key={index} className="text-center">";
                 <div className="text-4xl mb-2">{stat.icon}</div>";
@@ -124,11 +116,9 @@ const March2026InnovationSpotlightBanner = () => {
         </div>
 
         {/* Innovation Cards */}
-<<<<<<< HEAD
         <div className="grid md: grid-cols-3 gap-8 mb-16">",
 =======
         <div className="grid md: grid-cols-3 gap-8 mb-16">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           {innovations.map((innovation, index) => (
             <div 
               key={index}
@@ -140,20 +130,16 @@ const March2026InnovationSpotlightBanner = () => {
               
               <div className="relative p-8">";
                 {/* Innovation Icon */}
-<<<<<<< HEAD
                 <div className="text-6xl mb-6 text-center group-hover: animate-pulse">",
 =======
                 <div className="text-6xl mb-6 text-center group-hover: animate-pulse">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   {innovation.icon}
                 </div>
 
                 {/* Title */}
-<<<<<<< HEAD
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-purple-400 transition-colors duration-300 leading-tight text-center">",
 =======
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-purple-400 transition-colors duration-300 leading-tight text-center">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   {innovation.title}
                 </h3>
 
@@ -163,7 +149,6 @@ const March2026InnovationSpotlightBanner = () => {
                 </p>
 
                 {/* Impact */}
-<<<<<<< HEAD
                 <div className="text-center mb-6">
                   <div className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${innovation.color} text-white text-sm font-bold`}>
                     Impact: {innovation.impact},
@@ -171,7 +156,6 @@ const March2026InnovationSpotlightBanner = () => {
                 <div className="text-center mb-6">";
                   <div className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${innovation.color} text-white text-sm font-bold`}>`;
                     Impact: {innovation.impact}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   </div>
                 </div>
 
@@ -181,11 +165,9 @@ const March2026InnovationSpotlightBanner = () => {
                   className={`group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r ${innovation.color} hover:opacity-90 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1`}`;
                 >
                   <span>Explore Innovation</span>
-<<<<<<< HEAD
                   <ArrowRight className="w-4 h-4 group-hover/btn: translate-x-1 transition-transform duration-300/>",
 =======
                   <ArrowRight className="w-4 h-4 group-hover/btn: translate-x-1 transition-transform duration-300" />";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </a>
               </div>
             </div>
@@ -193,7 +175,6 @@ const March2026InnovationSpotlightBanner = () => {
         </div>
 
         {/* Success Stories */}
-<<<<<<< HEAD
         <div className="bg-gradient-to-r from-purple-500/10 to-indigo-500/10 rounded-3xl p-8 md: p-12 border border-purple-500/20 mb-16">",
           <div className="text-center mb-12">
             <h3 className="text-4xl font-extrabold text-white mb-4">
@@ -201,7 +182,6 @@ const March2026InnovationSpotlightBanner = () => {
         <div className="bg-gradient-to-r from-purple-500/10 to-indigo-500/10 rounded-3xl p-8 md: p-12 border border-purple-500/20 mb-16">";,
           <div className="text-center mb-12">";
             <h3 className="text-4xl font-extrabold text-white mb-4">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               Revolutionary Success Stories
             </h3>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">";
@@ -209,7 +189,6 @@ const March2026InnovationSpotlightBanner = () => {
             </p>
           </div>
 
-<<<<<<< HEAD
           <div className="grid md: grid-cols-3 gap-8">",
             {[
               {
@@ -249,7 +228,6 @@ const March2026InnovationSpotlightBanner = () => {
                 achievement: '$5.2B Market Creation',';,
                 revenue: '98% Customer Satisfaction',';,
                 icon: <Sparkles className="w-8 h-8" />";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               }
             ].map((story, index) => (
               <div key={index} className="text-center">";
@@ -271,7 +249,6 @@ const March2026InnovationSpotlightBanner = () => {
               <h3 className="text-3xl font-bold text-white mb-4">";
                 Join the Innovation Revolution
               </h3>
-<<<<<<< HEAD
               <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
                 Be part of the future. Get exclusive access to revolutionary innovations
                 early research insights, and transformative technologies that are reshaping our world.
@@ -283,16 +260,13 @@ const March2026InnovationSpotlightBanner = () => {
                 early research insights, and transformative technologies that are reshaping our world.
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 <a title="Internal link"
                   href="/innovations"
                   className="bg-gradient-to-r from-purple-500 to-indigo-600 hover: from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 flex items-center justify-center gap-2",
                 >
-<<<<<<< HEAD
                   <Rocket className="w-5 h-5/>
 =======
                   <Rocket className="w-5 h-5" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   <span>Explore All Innovations</span>
                 </a>
                 <a title="Internal link"
@@ -300,11 +274,9 @@ const March2026InnovationSpotlightBanner = () => {
                   className="border-2 border-purple-500 text-purple-400 hover: bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2",
                 >
                   <span>Partner With Us</span>
-<<<<<<< HEAD
                   <ArrowRight className="w-5 h-5/>
 =======
                   <ArrowRight className="w-5 h-5" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </a>
               </div>
             </div>

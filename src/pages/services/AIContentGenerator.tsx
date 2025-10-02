@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import {
@@ -13,23 +12,19 @@ import {
 
 } from 'lucide-react';';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 const AIContentGenerator: React.FC = () => {,
   return (
     <>
       <Helmet>
         <title>AI Content Generator Pro - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Generate high-quality blog posts, social media content, and marketing copy with advanced AI. Includes SEO optimization and brand voice training." /></Helmet>
 =======
         <meta name="description" content="Generate high-quality blog posts, social media content, and marketing copy with advanced AI. Includes SEO optimization and brand voice training." />";
       </Helmet>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">";
         <div className="container mx-auto px-4 py-12">";
           {/* Header */}
-<<<<<<< HEAD
           <div className="text-center mb-16">
             <div className="bg-gradient-to-r from-blue-600 to-purple-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
               <FileText className="w-10 h-10 text-white/>
@@ -41,7 +36,6 @@ const AIContentGenerator: React.FC = () => {,
               <FileText className="w-10 h-10 text-white" />";
             </div>
             <h1 className="text-4xl md: text-6xl font-bold text-gray-900 mb-6">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               AI Content Generator Pro
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">";
@@ -52,13 +46,11 @@ const AIContentGenerator: React.FC = () => {,
               <div className="flex items-center justify-center mb-4">";
                 <span className="text-3xl font-bold text-blue-600">Starting at $29/month</span>";
               </div>
-<<<<<<< HEAD
               <p className="text-gray-600 mb-6">Perfect for content creators, marketers, and businesses looking to scale their content production.</p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center">",
 =======
               <p className="text-gray-600 mb-6">Perfect for content creators, marketers, and businesses looking to scale their content production.</p>";
               <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 <a 
                   href="tel: +13024640950" ,
                   className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover: bg-blue-700 transition-colors text-center",
@@ -76,7 +68,6 @@ const AIContentGenerator: React.FC = () => {,
           </div>
 
           {/* Features */}
-<<<<<<< HEAD
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Key Features</h2>
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
@@ -90,12 +81,10 @@ const AIContentGenerator: React.FC = () => {,
               <div className="bg-white rounded-lg shadow-lg p-6">";
                 <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">";
                   <FileText className="w-6 h-6 text-blue-600" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Multi-Language Support</h3>";
                 <p className="text-gray-600">Generate content in 50+ languages with native-level quality and cultural context.</p>";
               </div>
-<<<<<<< HEAD
               <div className="bg-white rounded-lg shadow-lg p-6">
                 <div className="bg-green-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                   <Zap className="w-6 h-6 text-green-600/>
@@ -103,12 +92,10 @@ const AIContentGenerator: React.FC = () => {,
               <div className="bg-white rounded-lg shadow-lg p-6">";
                 <div className="bg-green-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">";
                   <Zap className="w-6 h-6 text-green-600" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">SEO Optimization</h3>";
                 <p className="text-gray-600">Automatically optimize content for search engines with keyword integration and meta descriptions.</p>";
               </div>
-<<<<<<< HEAD
               <div className="bg-white rounded-lg shadow-lg p-6">
                 <div className="bg-purple-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                   <Users className="w-6 h-6 text-purple-600/>
@@ -130,12 +117,10 @@ const AIContentGenerator: React.FC = () => {,
               <div className="bg-white rounded-lg shadow-lg p-6">";
                 <div className="bg-orange-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">";
                   <CheckCircle className="w-6 h-6 text-orange-600" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Content Scheduling</h3>";
                 <p className="text-gray-600">Schedule content across multiple platforms with automated posting and optimization.</p>";
               </div>
-<<<<<<< HEAD
               <div className="bg-white rounded-lg shadow-lg p-6">
                 <div className="bg-red-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                   <Shield className="w-6 h-6 text-red-600/>
@@ -143,12 +128,10 @@ const AIContentGenerator: React.FC = () => {,
               <div className="bg-white rounded-lg shadow-lg p-6">";
                 <div className="bg-red-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">";
                   <Shield className="w-6 h-6 text-red-600" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Analytics Dashboard</h3>";
                 <p className="text-gray-600">Track content performance with detailed analytics and engagement metrics.</p>";
               </div>
-<<<<<<< HEAD
               <div className="bg-white rounded-lg shadow-lg p-6">
                 <div className="bg-indigo-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                   <Star className="w-6 h-6 text-indigo-600/>
@@ -156,7 +139,6 @@ const AIContentGenerator: React.FC = () => {,
               <div className="bg-white rounded-lg shadow-lg p-6">";
                 <div className="bg-indigo-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">";
                   <Star className="w-6 h-6 text-indigo-600" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Quality Assurance</h3>";
                 <p className="text-gray-600">Built-in quality checks ensure content meets your standards before publication.</p>";
@@ -165,7 +147,6 @@ const AIContentGenerator: React.FC = () => {,
           </section>
 
           {/* Pricing */}
-<<<<<<< HEAD
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Pricing Plans</h2>
             <div className="grid md: grid-cols-3 gap-8">",
@@ -209,7 +190,6 @@ const AIContentGenerator: React.FC = () => {,
                   </li>
                   <li className="flex items-center text-gray-600">";
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     Email support
                   </li>
                 </ul>
@@ -224,7 +204,6 @@ const AIContentGenerator: React.FC = () => {,
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">";
                   <span className="bg-yellow-400 text-gray-900 px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>";
                 </div>
-<<<<<<< HEAD
                 <h3 className="text-2xl font-bold mb-4">Professional</h3>
                 <div className="text-3xl font-bold mb-6">$79/month</div>
                 <ul className="space-y-3 mb-8">
@@ -268,7 +247,6 @@ const AIContentGenerator: React.FC = () => {,
                   </li>
                   <li className="flex items-center">";
                     <CheckCircle className="w-5 h-5 text-green-300 mr-3" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     Priority support
                   </li>
                 </ul>
@@ -279,7 +257,6 @@ const AIContentGenerator: React.FC = () => {,
                   Get Started
                 </a>
               </div>
-<<<<<<< HEAD
               <div className="bg-white rounded-lg shadow-lg p-8">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise</h3>
                 <div className="text-3xl font-bold text-blue-600 mb-6">Custom</div>
@@ -325,7 +302,6 @@ const AIContentGenerator: React.FC = () => {,
                   </li>
                   <li className="flex items-center text-gray-600">";
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     White-label options
                   </li>
                 </ul>
@@ -346,11 +322,9 @@ const AIContentGenerator: React.FC = () => {,
               <p className="text-lg text-gray-600 mb-8">";
                 Contact us today for a free consultation and to discuss your content generation needs.
               </p>
-<<<<<<< HEAD
               <div className="flex flex-col sm: flex-row gap-4 justify-center">",
 =======
               <div className="flex flex-col sm: flex-row gap-4 justify-center">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 <a 
                   href="tel: +13024640950" ,
                   className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover: bg-blue-700 transition-colors text-center",

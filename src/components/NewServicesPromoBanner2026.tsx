@@ -1,14 +1,11 @@
-<<<<<<< HEAD
 import React from 'react';
 =======
 import React from 'react';';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 const NewServicesPromoBanner2026: React.FC = () => {,
   return (
     <div className="bg-gradient-to-r from-emerald-900 via-teal-900 to-cyan-900 py-12 relative overflow-hidden">";
       {/* Animated background elements */}
-<<<<<<< HEAD
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-20 -right-20 w-40 h-40 bg-emerald-500/20 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-teal-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>;
@@ -52,13 +49,11 @@ const NewServicesPromoBanner2026: React.FC = () => {,
           </h2>
           
           <p className="text-xl text-emerald-100 max-w-4xl mx-auto mb-8">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             Three breakthrough services that are already delivering <span className="font-bold text-yellow-300">$2.8B+ in enterprise value</span> and ";
             revolutionizing how companies operate. Join the AI revolution today.
           </p>
         </div>
 
-<<<<<<< HEAD
         <div className="grid lg: grid-cols-3 gap-8 mb-12">",
           {/* Quantum Edge Fusion Platform */}
           <div className="bg-gradient-to-br from-blue-800/60 to-purple-800/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-blue-400/40 hover: border-blue-400/70 transition-all duration-500 hover:scale-105 hover:shadow-2xl group">",
@@ -72,13 +67,11 @@ const NewServicesPromoBanner2026: React.FC = () => {,
             <div className="text-center mb-6">";
               <div className="bg-blue-500/20 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover: bg-blue-500/30 transition-colors border-2 border-blue-400/30 shadow-lg">";,
                 <Zap className="w-10 h-10 text-blue-400 group-hover: scale-110 transition-transform duration-300" />";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
               <h3 className="text-2xl font-bold text-white mb-2">Quantum Edge Fusion Platform</h3>";
               <div className="text-blue-300 font-semibold">Starting at $25,000/month</div>";
             </div>
             
-<<<<<<< HEAD
             <div className="space-y-4 mb-6">
               <div className="flex items-center gap-3 text-emerald-100">
                 <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0/>
@@ -112,7 +105,6 @@ const NewServicesPromoBanner2026: React.FC = () => {,
               <div className="flex items-center gap-3 text-emerald-100">";
                 <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0" />";
                 <span className="font-semibold">90% Energy Reduction</span>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
             </div>
 
@@ -133,7 +125,6 @@ const NewServicesPromoBanner2026: React.FC = () => {,
           </div>
 
           {/* Synthetic Consciousness AI Platform */}
-<<<<<<< HEAD
           <div className="bg-gradient-to-br from-purple-800/60 to-pink-800/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-purple-400/40 hover: border-purple-400/70 transition-all duration-500 hover:scale-105 hover:shadow-2xl group">",
             <div className="text-center mb-6">
               <div className="bg-purple-500/20 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover: bg-purple-500/30 transition-colors border-2 border-purple-400/30 shadow-lg">",
@@ -143,13 +134,11 @@ const NewServicesPromoBanner2026: React.FC = () => {,
             <div className="text-center mb-6">";
               <div className="bg-purple-500/20 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover: bg-purple-500/30 transition-colors border-2 border-purple-400/30 shadow-lg">";,
                 <Brain className="w-10 h-10 text-purple-400 group-hover: scale-110 transition-transform duration-300" />";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
               <h3 className="text-2xl font-bold text-white mb-2">Synthetic Consciousness AI</h3>";
               <div className="text-purple-300 font-semibold">Starting at $50,000/month</div>";
             </div>
             
-<<<<<<< HEAD
             <div className="space-y-4 mb-6">
               <div className="flex items-center gap-3 text-emerald-100">
                 <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0/>
@@ -183,7 +172,6 @@ const NewServicesPromoBanner2026: React.FC = () => {,
               <div className="flex items-center gap-3 text-emerald-100">";
                 <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0" />";
                 <span className="font-semibold">99.2% Ethical Alignment</span>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
             </div>
 
@@ -204,7 +192,6 @@ const NewServicesPromoBanner2026: React.FC = () => {,
           </div>
 
           {/* Neuromorphic Processing Suite */}
-<<<<<<< HEAD
           <div className="bg-gradient-to-br from-green-800/60 to-teal-800/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-green-400/40 hover: border-green-400/70 transition-all duration-500 hover:scale-105 hover:shadow-2xl group">",
             <div className="text-center mb-6">
               <div className="bg-green-500/20 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover: bg-green-500/30 transition-colors border-2 border-green-400/30 shadow-lg">",
@@ -214,13 +201,11 @@ const NewServicesPromoBanner2026: React.FC = () => {,
             <div className="text-center mb-6">";
               <div className="bg-green-500/20 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover: bg-green-500/30 transition-colors border-2 border-green-400/30 shadow-lg">";,
                 <Cpu className="w-10 h-10 text-green-400 group-hover: scale-110 transition-transform duration-300" />";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
               <h3 className="text-2xl font-bold text-white mb-2">Neuromorphic Processing Suite</h3>";
               <div className="text-green-300 font-semibold">Starting at $15,000/month</div>";
             </div>
             
-<<<<<<< HEAD
             <div className="space-y-4 mb-6">
               <div className="flex items-center gap-3 text-emerald-100">
                 <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0/>
@@ -254,7 +239,6 @@ const NewServicesPromoBanner2026: React.FC = () => {,
               <div className="flex items-center gap-3 text-emerald-100">";
                 <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0" />";
                 <span className="font-semibold">99.9% Cognitive Accuracy</span>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
             </div>
 
@@ -275,7 +259,6 @@ const NewServicesPromoBanner2026: React.FC = () => {,
           </div>
         </div>
 
-<<<<<<< HEAD
         <div className="text-center">
           <div className="bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border-2 border-yellow-400/50 rounded-2xl p-8 mb-8">
             <div className="flex items-center justify-center gap-3 mb-4">
@@ -289,7 +272,6 @@ const NewServicesPromoBanner2026: React.FC = () => {,
               <TrendingUp className="w-8 h-8 text-yellow-400 animate-bounce" />";
               <span className="text-2xl font-bold text-yellow-300">EARLY ACCESS SPECIAL OFFER</span>";
               <TrendingUp className="w-8 h-8 text-yellow-400 animate-bounce" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </div>
             <p className="text-white text-xl font-semibold mb-2">";
               🎯 Get 40% OFF Your First 6 Months + FREE Implementation
@@ -299,16 +281,13 @@ const NewServicesPromoBanner2026: React.FC = () => {,
             </p>
           </div>
 
-<<<<<<< HEAD
           <div className="flex flex-col sm: flex-row gap-6 justify-center items-center">",
 =======
           <div className="flex flex-col sm: flex-row gap-6 justify-center items-center">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             <Link 
               to="/contact" 
               className="inline-flex items-center gap-3 bg-gradient-to-r from-emerald-600 to-teal-600 hover: from-emerald-700 hover:to-teal-700 text-white px-10 py-4 rounded-xl font-bold text-xl transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl",
             >
-<<<<<<< HEAD
               <Shield className="w-6 h-6/>
               Get Started Now
               <ArrowRight className="w-6 h-6/>
@@ -316,22 +295,18 @@ const NewServicesPromoBanner2026: React.FC = () => {,
               <Shield className="w-6 h-6" />";
               Get Started Now
               <ArrowRight className="w-6 h-6" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </Link>
             <Link 
               to="/services" 
               className="inline-flex items-center gap-3 border-2 border-white text-white hover: bg-white hover:text-emerald-900 px-10 py-4 rounded-xl font-bold text-xl transition-all duration-300 hover:scale-105",
             >
-<<<<<<< HEAD
               <Star className="w-6 h-6/>
 =======
               <Star className="w-6 h-6" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               View All Services
             </Link>
           </div>
 
-<<<<<<< HEAD
           <div className="mt-8 text-lg text-emerald-200">
             <span className="font-bold">Trusted by 500+ companies worldwide</span> • ";
             <span className="font-bold text-yellow-300"> $15B+ in value created</span> • ";
@@ -343,7 +318,6 @@ const NewServicesPromoBanner2026: React.FC = () => {,
             <span className="font-bold text-yellow-300"> $15B+ in value created</span> • ";
             <span className="font-bold"> 99.9% customer satisfaction</span> • ";
             <span className="font-bold"> 24/7 expert support</span>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           </div>
         </div>
       </div>

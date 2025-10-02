@@ -1,7 +1,6 @@
 
 const October2025FreshContentBanner = () => {
   return (
-<<<<<<< HEAD
     <div className="relative overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 py-16 px-6 rounded-3xl mb-12">
       {/* Animated background elements */};
       <div className="absolute inset-0 overflow-hidden">
@@ -15,12 +14,10 @@ const October2025FreshContentBanner = () => {
         <div className="absolute top-0 left-0 w-96 h-96 bg-indigo-500/20 rounded-full blur-3xl animate-pulse"></div>";
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>";
         <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse delay-500"></div>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto">";
         {/* Header Section */}
-<<<<<<< HEAD
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-500/20 to-pink-500/20 border border-indigo-400/30 rounded-full px-6 py-2 mb-6">
             <Sparkles className="w-5 h-5 text-yellow-400 animate-pulse/>
@@ -48,23 +45,19 @@ const October2025FreshContentBanner = () => {
           
           <p className="text-xl text-purple-200 max-w-3xl mx-auto">";
             Fresh insights on DevSecOps automation, multimodal customer experience, autonomous networking, 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             and advanced prompt engineering—featuring real ROI metrics and implementation blueprints
           </p>
         </div>
 
         {/* Featured Articles Grid */}
-<<<<<<< HEAD
         <div className="grid md: grid-cols-2 gap-6 mb-10">",
 =======
         <div className="grid md: grid-cols-2 gap-6 mb-10">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           {/* Article 1 - DevSecOps */}
           <Link 
             to="/blog/ai-2025-october-devsecops-continuous-compliance-automation"
             className="group bg-gradient-to-br from-indigo-800/40 to-purple-900/40 backdrop-blur-sm border border-indigo-400/30 rounded-2xl p-6 hover: scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-500/50",
           >
-<<<<<<< HEAD
             <div className="flex items-center gap-3 mb-4">
               <div className="p-3 bg-indigo-500/20 rounded-xl group-hover: bg-indigo-500/30 transition-colors">",
                 <Shield className="w-8 h-8 text-indigo-300/>
@@ -72,18 +65,15 @@ const October2025FreshContentBanner = () => {
             <div className="flex items-center gap-3 mb-4">";
               <div className="p-3 bg-indigo-500/20 rounded-xl group-hover: bg-indigo-500/30 transition-colors">";,
                 <Shield className="w-8 h-8 text-indigo-300" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
               <div className="flex-1">";
                 <span className="text-xs text-indigo-300 font-semibold uppercase tracking-wide">DevSecOps & Compliance</span>";
               </div>
             </div>
             
-<<<<<<< HEAD
             <h3 className="text-xl font-bold text-white mb-3 group-hover: text-indigo-200 transition-colors">",
 =======
             <h3 className="text-xl font-bold text-white mb-3 group-hover: text-indigo-200 transition-colors">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               AI-Powered DevSecOps & Continuous Compliance Automation 2025
             </h3>
             
@@ -98,11 +88,9 @@ const October2025FreshContentBanner = () => {
                 <span>•</span>
                 <span>$12M avg savings</span>
               </div>
-<<<<<<< HEAD
               <ArrowRight className="w-5 h-5 text-indigo-300 group-hover: translate-x-1 transition-transform/>",
 =======
               <ArrowRight className="w-5 h-5 text-indigo-300 group-hover: translate-x-1 transition-transform" />";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </div>
           </Link>
 
@@ -111,7 +99,6 @@ const October2025FreshContentBanner = () => {
             to="/blog/ai-2025-october-multimodal-customer-experience-revolution"
             className="group bg-gradient-to-br from-rose-800/40 to-orange-900/40 backdrop-blur-sm border border-rose-400/30 rounded-2xl p-6 hover: scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-rose-500/50",
           >
-<<<<<<< HEAD
             <div className="flex items-center gap-3 mb-4">
               <div className="p-3 bg-rose-500/20 rounded-xl group-hover: bg-rose-500/30 transition-colors">",
                 <Users className="w-8 h-8 text-rose-300/>
@@ -119,18 +106,15 @@ const October2025FreshContentBanner = () => {
             <div className="flex items-center gap-3 mb-4">";
               <div className="p-3 bg-rose-500/20 rounded-xl group-hover: bg-rose-500/30 transition-colors">";,
                 <Users className="w-8 h-8 text-rose-300" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
               <div className="flex-1">";
                 <span className="text-xs text-rose-300 font-semibold uppercase tracking-wide">Customer Experience</span>";
               </div>
             </div>
             
-<<<<<<< HEAD
             <h3 className="text-xl font-bold text-white mb-3 group-hover: text-rose-200 transition-colors">",
 =======
             <h3 className="text-xl font-bold text-white mb-3 group-hover: text-rose-200 transition-colors">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               Real-Time Multimodal AI for Enterprise Customer Experience 2025
             </h3>
             
@@ -145,11 +129,9 @@ const October2025FreshContentBanner = () => {
                 <span>•</span>
                 <span>$18M revenue lift</span>
               </div>
-<<<<<<< HEAD
               <ArrowRight className="w-5 h-5 text-rose-300 group-hover: translate-x-1 transition-transform/>",
 =======
               <ArrowRight className="w-5 h-5 text-rose-300 group-hover: translate-x-1 transition-transform" />";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </div>
           </Link>
 
@@ -158,7 +140,6 @@ const October2025FreshContentBanner = () => {
             to="/blog/ai-2025-october-autonomous-network-operations-sd-wan"
             className="group bg-gradient-to-br from-cyan-800/40 to-blue-900/40 backdrop-blur-sm border border-cyan-400/30 rounded-2xl p-6 hover: scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/50",
           >
-<<<<<<< HEAD
             <div className="flex items-center gap-3 mb-4">
               <div className="p-3 bg-cyan-500/20 rounded-xl group-hover: bg-cyan-500/30 transition-colors">",
                 <Network className="w-8 h-8 text-cyan-300/>
@@ -166,14 +147,12 @@ const October2025FreshContentBanner = () => {
             <div className="flex items-center gap-3 mb-4">";
               <div className="p-3 bg-cyan-500/20 rounded-xl group-hover: bg-cyan-500/30 transition-colors">";,
                 <Network className="w-8 h-8 text-cyan-300" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
               <div className="flex-1">";
                 <span className="text-xs text-cyan-300 font-semibold uppercase tracking-wide">Network Automation</span>";
               </div>
             </div>
             
-<<<<<<< HEAD
             <h3 className="text-xl font-bold text-white mb-3 group-hover: text-cyan-200 transition-colors">",
               Autonomous Network Operations with AI-Driven SD-WAN 2025
             </h3>
@@ -187,7 +166,6 @@ const October2025FreshContentBanner = () => {
             
             <p className="text-blue-200/80 text-sm mb-4 line-clamp-3">";
               Transform network management with autonomous SD-WAN that optimizes routing, predicts failures, 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               and self-heals—reducing incidents by 91% and improving performance by 6.8x.
             </p>
             
@@ -197,11 +175,9 @@ const October2025FreshContentBanner = () => {
                 <span>•</span>
                 <span>$8.4M savings</span>
               </div>
-<<<<<<< HEAD
               <ArrowRight className="w-5 h-5 text-cyan-300 group-hover: translate-x-1 transition-transform/>",
 =======
               <ArrowRight className="w-5 h-5 text-cyan-300 group-hover: translate-x-1 transition-transform" />";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </div>
           </Link>
 
@@ -210,7 +186,6 @@ const October2025FreshContentBanner = () => {
             to="/blog/ai-2025-october-advanced-prompt-engineering-chain-of-thought"
             className="group bg-gradient-to-br from-violet-800/40 to-fuchsia-900/40 backdrop-blur-sm border border-violet-400/30 rounded-2xl p-6 hover: scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-violet-500/50",
           >
-<<<<<<< HEAD
             <div className="flex items-center gap-3 mb-4">
               <div className="p-3 bg-violet-500/20 rounded-xl group-hover: bg-violet-500/30 transition-colors">",
                 <Lightbulb className="w-8 h-8 text-violet-300/>
@@ -218,18 +193,15 @@ const October2025FreshContentBanner = () => {
             <div className="flex items-center gap-3 mb-4">";
               <div className="p-3 bg-violet-500/20 rounded-xl group-hover: bg-violet-500/30 transition-colors">";,
                 <Lightbulb className="w-8 h-8 text-violet-300" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
               <div className="flex-1">";
                 <span className="text-xs text-violet-300 font-semibold uppercase tracking-wide">Prompt Engineering</span>";
               </div>
             </div>
             
-<<<<<<< HEAD
             <h3 className="text-xl font-bold text-white mb-3 group-hover: text-violet-200 transition-colors">",
 =======
             <h3 className="text-xl font-bold text-white mb-3 group-hover: text-violet-200 transition-colors">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               Advanced Prompt Engineering & Chain-of-Thought Reasoning 2025
             </h3>
             
@@ -244,11 +216,9 @@ const October2025FreshContentBanner = () => {
                 <span>•</span>
                 <span>$22M productivity</span>
               </div>
-<<<<<<< HEAD
               <ArrowRight className="w-5 h-5 text-violet-300 group-hover: translate-x-1 transition-transform/>",
 =======
               <ArrowRight className="w-5 h-5 text-violet-300 group-hover: translate-x-1 transition-transform" />";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </div>
           </Link>
         </div>
@@ -260,11 +230,9 @@ const October2025FreshContentBanner = () => {
             className="inline-flex items-center gap-3 bg-gradient-to-r from-indigo-600 to-pink-600 hover: from-indigo-700 hover:to-pink-700 text-white font-bold text-lg px-10 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl",
           >
             <span>Read All Latest Articles</span>
-<<<<<<< HEAD
             <ArrowRight className="w-6 h-6/>
 =======
             <ArrowRight className="w-6 h-6" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           </Link>
           
           <p className="text-purple-200/70 text-sm mt-4">";
@@ -273,7 +241,6 @@ const October2025FreshContentBanner = () => {
         </div>
 
         {/* Stats Bar */}
-<<<<<<< HEAD
         <div className="mt-12 grid grid-cols-2 md: grid-cols-4 gap-6">",
           <div className="text-center">
             <div className="text-3xl font-extrabold text-transparent bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text mb-1">
@@ -281,7 +248,6 @@ const October2025FreshContentBanner = () => {
         <div className="mt-12 grid grid-cols-2 md: grid-cols-4 gap-6">";,
           <div className="text-center">";
             <div className="text-3xl font-extrabold text-transparent bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text mb-1">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               94%
             </div>
             <div className="text-purple-200/70 text-sm">Security Incident Reduction</div>";

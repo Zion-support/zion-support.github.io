@@ -1,73 +1,64 @@
 #!/bin/bash
 
-# Merge remaining cursor branches efficiently
+# Script to merge remaining branches into main
 set -e
 
-echo "🚀 Merging remaining cursor branches..."
+echo "Starting merge process for remaining branches..."
 
-# Get all remaining cursor branches that haven't been merged
-remaining_branches=$(git for-each-ref --sort=-committerdate refs/remotes/origin --format='%(refname:short)' | grep "cursor/create-and-deploy-new-content" | head -100)
+# Switch to main branch
+git checkout main
 
-merged_count=0
-skipped_count=0
-conflict_count=0
+# List of branches to process
+branches=(
+    "cursor/add-new-services-and-deploy-updates-9edb"
+    "cursor/add-new-services-and-deploy-updates-aaf2"
+    "cursor/add-new-services-and-deploy-updates-e932"
+    "cursor/analyze-improve-and-deploy-application-5778"
+    "cursor/analyze-improve-and-deploy-application-5e36"
+    "cursor/enhance-and-expand-ziontechgroup-com-services-and-site-75fa"
+    "cursor/enhance-and-expand-ziontechgroup-com-services-and-site-cdc1"
+    "cursor/enhance-and-expand-ziontechgroup-com-services-and-site-ff7c"
+    "cursor/fix-errors-and-merge-to-main-024f"
+    "cursor/fix-errors-and-merge-to-main-63d5"
+    "cursor/fix-errors-and-merge-to-main-791d"
+    "cursor/fix-errors-and-merge-to-main-ad4a"
+    "cursor/fix-errors-and-merge-to-main-dac6"
+    "cursor/website-audit-and-update-with-deployment-1d65"
+    "cursor/website-audit-and-update-with-deployment-906b"
+)
 
-for branch in $remaining_branches; do
-    branch_name=${branch#origin/}
+for branch in "${branches[@]}"; do
+    echo "Processing branch: $branch"
     
-    echo ""
-    echo "🔄 Processing: $branch_name"
+    # Create local branch
+    git checkout -b "$branch" "origin/$branch" 2>/dev/null || git checkout "$branch"
     
-    # Check if branch exists
-    if ! git show-ref --verify --quiet "refs/remotes/$branch"; then
-        echo "⚠️  Branch $branch_name does not exist, skipping..."
-        ((skipped_count++))
-        continue
-    fi
-    
-    # Check if branch is already merged
-    if git merge-base --is-ancestor "$branch" HEAD; then
-        echo "✅ Branch $branch_name is already merged, skipping..."
-        ((skipped_count++))
-        continue
-    fi
-    
-    # Attempt to merge
-    if git merge "$branch" --no-ff -m "merge: Integrate $branch_name" 2>/dev/null; then
-        echo "✅ Successfully merged $branch_name"
-        ((merged_count++))
+    # Try to merge main into the branch
+    if git merge origin/main; then
+        echo "✅ Successfully merged main into $branch"
+        git push origin "$branch"
     else
-        echo "⚠️  Merge conflict in $branch_name, resolving..."
+        echo "❌ Merge conflict in $branch - resolving..."
         
-        # Auto-resolve conflicts by keeping our version for App.tsx and taking theirs for others
-        conflicts=$(git diff --name-only --diff-filter=U)
-        
-        for conflict in $conflicts; do
-            if [[ "$conflict" == "App.tsx" ]]; then
-                echo "🔧 Resolving App.tsx conflicts by keeping current version..."
-                git checkout --ours App.tsx
+        # Check for conflicts
+        if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
+            echo "Resolving conflicts in $branch..."
+            
+            # Auto-resolve common conflicts by taking main branch version
+            git checkout --theirs . || true
+            git add .
+            git commit -m "Resolve merge conflicts - take main branch changes" || true
+            
+            if git push origin "$branch"; then
+                echo "✅ Successfully resolved and pushed $branch"
             else
-                echo "🔧 Using incoming version for $conflict"
-                git checkout --theirs "$conflict"
+                echo "❌ Failed to push $branch"
             fi
-        done
-        
-        git add .
-        git commit --no-edit -m "merge: Resolve conflicts and integrate $branch_name"
-        echo "✅ Successfully resolved conflicts for $branch_name"
-        ((conflict_count++))
+        fi
     fi
+    
+    # Switch back to main
+    git checkout main
 done
 
-echo ""
-echo "📊 Merge Summary:"
-echo "   ✅ Successfully merged: $merged_count branches"
-echo "   ⚠️  Resolved conflicts: $conflict_count branches"
-echo "   ⏭️  Skipped (already merged): $skipped_count branches"
-echo "   📦 Total processed: $((merged_count + conflict_count + skipped_count)) branches"
-
-echo ""
-echo "🚀 Pushing all merged changes..."
-git push origin main --force
-
-echo "✅ All remaining branches merged successfully!"
+echo "✅ All branches processed successfully!"

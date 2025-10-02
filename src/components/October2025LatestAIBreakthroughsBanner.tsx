@@ -1,7 +1,6 @@
 
 export default function October2025LatestAIBreakthroughsBanner(): void {
   return (
-<<<<<<< HEAD
     <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-rose-900 border-y border-white/10">
       <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-8">
@@ -29,22 +28,18 @@ export default function October2025LatestAIBreakthroughsBanner(): void {
           </h2>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">";
             🎯 <strong>Breaking Today: </strong> Deploy autonomous self-healing infrastructure achieving 99.97% uptime and $67M+ savings, ,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             unlock cognitive search with 97% answer accuracy driving $124M+ productivity gains, and implement real-time personalization 
             multiplying conversions by 8.7x with $234M+ revenue impact. Essential insights for forward-thinking technology leaders!
           </p>
         </div>
 
-<<<<<<< HEAD
         <div className="grid md: grid-cols-3 gap-6 mb-8">",
 =======
         <div className="grid md: grid-cols-3 gap-6 mb-8">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           <Link
             to="/blog/ai-2025-oct-autonomous-infrastructure-healing"
             className="group bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-xl p-6 border border-purple-500/30 hover: border-purple-400/50 transition-all hover:scale-105",
           >
-<<<<<<< HEAD
             <div className="flex items-center gap-3 mb-4">
               <div className="p-3 bg-purple-500/20 rounded-lg">
                 <Server className="h-6 w-6 text-purple-400/>
@@ -52,13 +47,11 @@ export default function October2025LatestAIBreakthroughsBanner(): void {
             <div className="flex items-center gap-3 mb-4">";
               <div className="p-3 bg-purple-500/20 rounded-lg">";
                 <Server className="h-6 w-6 text-purple-400" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
               <span className="px-3 py-1 bg-purple-500/30 text-purple-300 rounded-full text-xs font-bold">";
                 Infrastructure AI
               </span>
             </div>
-<<<<<<< HEAD
             <h3 className="text-xl font-bold mb-3 text-white group-hover: text-purple-300 transition-colors">",
               Autonomous Infrastructure Self-Healing Revolution
             </h3>
@@ -100,7 +93,6 @@ export default function October2025LatestAIBreakthroughsBanner(): void {
             <div className="flex items-center text-purple-400 font-semibold group-hover: gap-3 gap-2 transition-all">";,
               Read Full Analysis
               <ArrowRight className="h-4 w-4" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </div>
           </Link>
 
@@ -108,7 +100,6 @@ export default function October2025LatestAIBreakthroughsBanner(): void {
             to="/blog/ai-2025-oct-cognitive-search-enterprise"
             className="group bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-xl p-6 border border-indigo-500/30 hover: border-indigo-400/50 transition-all hover:scale-105",
           >
-<<<<<<< HEAD
             <div className="flex items-center gap-3 mb-4">
               <div className="p-3 bg-indigo-500/20 rounded-lg">
                 <Search className="h-6 w-6 text-indigo-400/>
@@ -116,13 +107,11 @@ export default function October2025LatestAIBreakthroughsBanner(): void {
             <div className="flex items-center gap-3 mb-4">";
               <div className="p-3 bg-indigo-500/20 rounded-lg">";
                 <Search className="h-6 w-6 text-indigo-400" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
               <span className="px-3 py-1 bg-indigo-500/30 text-indigo-300 rounded-full text-xs font-bold">";
                 Cognitive AI
               </span>
             </div>
-<<<<<<< HEAD
             <h3 className="text-xl font-bold mb-3 text-white group-hover: text-indigo-300 transition-colors">",
               Cognitive Enterprise Search at Scale
             </h3>
@@ -164,7 +153,6 @@ export default function October2025LatestAIBreakthroughsBanner(): void {
             <div className="flex items-center text-indigo-400 font-semibold group-hover: gap-3 gap-2 transition-all">";,
               Read Full Analysis
               <ArrowRight className="h-4 w-4" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </div>
           </Link>
 
@@ -172,7 +160,6 @@ export default function October2025LatestAIBreakthroughsBanner(): void {
             to="/blog/ai-2025-oct-realtime-personalization-engine"
             className="group bg-gradient-to-br from-rose-500/20 to-purple-500/20 rounded-xl p-6 border border-rose-500/30 hover: border-rose-400/50 transition-all hover:scale-105",
           >
-<<<<<<< HEAD
             <div className="flex items-center gap-3 mb-4">
               <div className="p-3 bg-rose-500/20 rounded-lg">
                 <Target className="h-6 w-6 text-rose-400/>
@@ -180,13 +167,11 @@ export default function October2025LatestAIBreakthroughsBanner(): void {
             <div className="flex items-center gap-3 mb-4">";
               <div className="p-3 bg-rose-500/20 rounded-lg">";
                 <Target className="h-6 w-6 text-rose-400" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
               <span className="px-3 py-1 bg-rose-500/30 text-rose-300 rounded-full text-xs font-bold">";
                 Personalization AI
               </span>
             </div>
-<<<<<<< HEAD
             <h3 className="text-xl font-bold mb-3 text-white group-hover: text-rose-300 transition-colors">",
               Real-Time AI Personalization Engine
             </h3>
@@ -228,7 +213,6 @@ export default function October2025LatestAIBreakthroughsBanner(): void {
             <div className="flex items-center text-rose-400 font-semibold group-hover: gap-3 gap-2 transition-all">";,
               Read Full Analysis
               <ArrowRight className="h-4 w-4" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </div>
           </Link>
         </div>
@@ -239,11 +223,9 @@ export default function October2025LatestAIBreakthroughsBanner(): void {
             className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-rose-600 text-white rounded-lg font-bold text-lg hover: from-purple-500 hover:to-rose-500 transition-all hover:scale-105 shadow-lg hover:shadow-xl",
           >
             Explore All Latest AI Innovations
-<<<<<<< HEAD
             <ArrowRight className="h-5 w-5/>
 =======
             <ArrowRight className="h-5 w-5" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           </Link>
         </div>
       </div>

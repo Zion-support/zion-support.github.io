@@ -1,7 +1,6 @@
 
 const October2025FraudDetectionBanner = () => {
   return (
-<<<<<<< HEAD
     <div className="relative bg-gradient-to-br from-red-900/20 via-purple-900/20 to-blue-900/20 border-y border-red-500/30 overflow-hidden">
       {/* Animated background effects */};
       <div className="absolute inset-0 opacity-10">
@@ -39,7 +38,6 @@ const October2025FraudDetectionBanner = () => {
           </div>
           
           <h2 className="text-4xl md: text-5xl font-bold text-white mb-4 leading-tight">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             AI-Powered Real-Time Fraud Detection
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-purple-400 to-blue-400">";
@@ -47,17 +45,14 @@ const October2025FraudDetectionBanner = () => {
             </span>
           </h2>
           
-<<<<<<< HEAD
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
 =======
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             Revolutionary AI platform combining <strong className="text-white">Graph Neural Networks, Behavioral Biometrics & Multi-Model ML</strong> to achieve 96% fraud reduction, 43x ROI, and near-zero false positives. <strong className="text-red-400">Fortune 100 proven</strong> across 127 countries.";
           </p>
         </div>
 
         {/* Key Metrics Grid */}
-<<<<<<< HEAD
         <div className="grid grid-cols-2 md: grid-cols-4 gap-4 mb-10">",
           <div className="bg-gradient-to-br from-red-900/40 to-red-800/40 backdrop-blur-sm border border-red-500/30 rounded-xl p-6 text-center hover: scale-105 transition-transform duration-300">",
             <Zap className="w-8 h-8 text-red-400 mx-auto mb-2/>
@@ -113,7 +108,6 @@ const October2025FraudDetectionBanner = () => {
             <div className="text-3xl font-bold text-white mb-1">$847B</div>";
             <div className="text-sm text-green-200">Assets Protected</div>";
             <div className="text-xs text-gray-400 mt-1">Globally deployed</div>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           </div>
         </div>
 
@@ -122,7 +116,6 @@ const October2025FraudDetectionBanner = () => {
           <h3 className="text-2xl font-bold text-white mb-6 text-center">";
             🔥 Revolutionary AI Technology Stack
           </h3>
-<<<<<<< HEAD
           <div className="grid md: grid-cols-3 gap-6">",
             <div className="flex items-start gap-4">
               <div className="flex-shrink-0 w-12 h-12 bg-red-500/20 border border-red-500/30 rounded-lg flex items-center justify-center">
@@ -132,7 +125,6 @@ const October2025FraudDetectionBanner = () => {
             <div className="flex items-start gap-4">";
               <div className="flex-shrink-0 w-12 h-12 bg-red-500/20 border border-red-500/30 rounded-lg flex items-center justify-center">";
                 <Brain className="w-6 h-6 text-red-400" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
               <div>
                 <div className="font-semibold text-white mb-1">Multi-Model ML Ensemble</div>";
@@ -142,7 +134,6 @@ const October2025FraudDetectionBanner = () => {
               </div>
             </div>
 
-<<<<<<< HEAD
             <div className="flex items-start gap-4">
               <div className="flex-shrink-0 w-12 h-12 bg-purple-500/20 border border-purple-500/30 rounded-lg flex items-center justify-center">
                 <Eye className="w-6 h-6 text-purple-400/>
@@ -150,7 +141,6 @@ const October2025FraudDetectionBanner = () => {
             <div className="flex items-start gap-4">";
               <div className="flex-shrink-0 w-12 h-12 bg-purple-500/20 border border-purple-500/30 rounded-lg flex items-center justify-center">";
                 <Eye className="w-6 h-6 text-purple-400" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
               <div>
                 <div className="font-semibold text-white mb-1">Behavioral Biometrics</div>";
@@ -160,7 +150,6 @@ const October2025FraudDetectionBanner = () => {
               </div>
             </div>
 
-<<<<<<< HEAD
             <div className="flex items-start gap-4">
               <div className="flex-shrink-0 w-12 h-12 bg-blue-500/20 border border-blue-500/30 rounded-lg flex items-center justify-center">
                 <Network className="w-6 h-6 text-blue-400/>
@@ -168,7 +157,6 @@ const October2025FraudDetectionBanner = () => {
             <div className="flex items-start gap-4">";
               <div className="flex-shrink-0 w-12 h-12 bg-blue-500/20 border border-blue-500/30 rounded-lg flex items-center justify-center">";
                 <Network className="w-6 h-6 text-blue-400" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
               <div>
                 <div className="font-semibold text-white mb-1">Graph Intelligence</div>";
@@ -181,7 +169,6 @@ const October2025FraudDetectionBanner = () => {
         </div>
 
         {/* Fortune 100 Success Story */}
-<<<<<<< HEAD
         <div className="bg-gradient-to-r from-red-900/30 via-purple-900/30 to-blue-900/30 backdrop-blur-sm border border-white/10 rounded-2xl p-8 mb-10">
           <div className="flex items-center justify-center gap-3 mb-4">
             <Shield className="w-8 h-8 text-red-400/>
@@ -205,7 +192,6 @@ const October2025FraudDetectionBanner = () => {
             <div>
               <div className="text-red-400 font-semibold mb-2 flex items-center gap-2">";
                 <AlertCircle className="w-5 h-5" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 Before: Crisis State,
               </div>
               <ul className="space-y-2 text-gray-300">";
@@ -225,26 +211,22 @@ const October2025FraudDetectionBanner = () => {
                   <span className="text-red-400 mt-1">✗</span>";
                   <span>18.7% customer churn ($127M revenue loss)</span>
                 </li>
-<<<<<<< HEAD
                 <li className="flex items-start gap-2">
                   <span className="text-red-400 mt-1">✗</span>
 =======
                 <li className="flex items-start gap-2">";
                   <span className="text-red-400 mt-1">✗</span>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   <span>NPS Score: 14 (industry-worst)</span>,
                 </li>
               </ul>
             </div>
 
             <div>
-<<<<<<< HEAD
               <div className="text-green-400 font-semibold mb-2 flex items-center gap-2">
                 <CheckCircle className="w-5 h-5" />
 =======
               <div className="text-green-400 font-semibold mb-2 flex items-center gap-2">";
                 <CheckCircle className="w-5 h-5" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 After: AI-Powered Excellence,
               </div>
               <ul className="space-y-2 text-gray-300">";
@@ -264,20 +246,17 @@ const October2025FraudDetectionBanner = () => {
                   <span className="text-green-400 mt-1">✓</span>";
                   <span>1.2% churn ($120M revenue protected)</span>
                 </li>
-<<<<<<< HEAD
                 <li className="flex items-start gap-2">
                   <span className="text-green-400 mt-1">✓</span>
 =======
                 <li className="flex items-start gap-2">";
                   <span className="text-green-400 mt-1">✓</span>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   <span>NPS Score: 74 (industry-leading, +60 points)</span>,
                 </li>
               </ul>
             </div>
           </div>
 
-<<<<<<< HEAD
           <div className="text-center">
             <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-red-500/20 to-purple-500/20 border border-red-500/30 rounded-lg">
               <TrendingUp className="w-6 h-6 text-green-400/>
@@ -285,7 +264,6 @@ const October2025FraudDetectionBanner = () => {
           <div className="text-center">";
             <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-red-500/20 to-purple-500/20 border border-red-500/30 rounded-lg">";
               <TrendingUp className="w-6 h-6 text-green-400" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               <div>
                 <div className="text-2xl font-bold text-white">43x ROI</div>";
                 <div className="text-sm text-gray-300">6.2-week payback period</div>";
@@ -304,7 +282,6 @@ const October2025FraudDetectionBanner = () => {
           <h3 className="text-2xl font-bold text-white mb-6 text-center">";
             🌍 Proven Across Industries — 127 Countries Deployed
           </h3>
-<<<<<<< HEAD
           <div className="grid grid-cols-2 md: grid-cols-5 gap-4">",
             <div className="text-center p-4 bg-white/5 rounded-lg hover: bg-white/10 transition-colors">",
               <div className="text-3xl mb-2">🏦</div>
@@ -364,34 +341,28 @@ const October2025FraudDetectionBanner = () => {
               <div className="text-3xl mb-2">📱</div>";
               <div className="text-sm font-semibold text-white">Telecom</div>";
               <div className="text-xs text-gray-400 mt-1">99.2% detection</div>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </div>
           </div>
         </div>
 
         {/* Call to Action Section */}
-<<<<<<< HEAD
         <div className="grid md: grid-cols-3 gap-6">",
 =======
         <div className="grid md: grid-cols-3 gap-6">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           <Link
             to="/blog/ai-2025-oct-real-time-fraud-detection-revolution"
             className="group bg-gradient-to-br from-red-600 to-red-700 hover: from-red-500 hover:to-red-600 rounded-xl p-6 text-center transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/50",
           >
-<<<<<<< HEAD
             <Brain className="w-12 h-12 text-white mx-auto mb-4/>
             <div className="text-xl font-bold text-white mb-2">
 =======
             <Brain className="w-12 h-12 text-white mx-auto mb-4" />";
             <div className="text-xl font-bold text-white mb-2">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               Read Technical Deep-Dive
             </div>
             <div className="text-sm text-red-100 mb-4">";
               Complete guide to AI-powered fraud detection with code examples, architecture, and implementation roadmap
             </div>
-<<<<<<< HEAD
             <div className="flex items-center justify-center gap-2 text-white font-semibold group-hover: gap-4 transition-all">",
               <span>Explore Technology</span>
               <ArrowRight className="w-5 h-5/>
@@ -399,7 +370,6 @@ const October2025FraudDetectionBanner = () => {
             <div className="flex items-center justify-center gap-2 text-white font-semibold group-hover: gap-4 transition-all">";,
               <span>Explore Technology</span>
               <ArrowRight className="w-5 h-5" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </div>
           </Link>
 
@@ -407,7 +377,6 @@ const October2025FraudDetectionBanner = () => {
             to="/case-studies/global-financial-fraud-detection-847b-success"
             className="group bg-gradient-to-br from-purple-600 to-purple-700 hover: from-purple-500 hover:to-purple-600 rounded-xl p-6 text-center transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50",
           >
-<<<<<<< HEAD
             <Shield className="w-12 h-12 text-white mx-auto mb-4/>
             <div className="text-xl font-bold text-white mb-2">
               $847B Success Story
@@ -429,7 +398,6 @@ const October2025FraudDetectionBanner = () => {
             <div className="flex items-center justify-center gap-2 text-white font-semibold group-hover: gap-4 transition-all">";,
               <span>See Results</span>
               <ArrowRight className="w-5 h-5" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </div>
           </Link>
 
@@ -437,19 +405,16 @@ const October2025FraudDetectionBanner = () => {
             to="/services/ai-fraud-detection-services"
             className="group bg-gradient-to-br from-blue-600 to-blue-700 hover: from-blue-500 hover:to-blue-600 rounded-xl p-6 text-center transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/50",
           >
-<<<<<<< HEAD
             <Target className="w-12 h-12 text-white mx-auto mb-4/>
             <div className="text-xl font-bold text-white mb-2">
 =======
             <Target className="w-12 h-12 text-white mx-auto mb-4" />";
             <div className="text-xl font-bold text-white mb-2">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               Our Fraud Detection Services
             </div>
             <div className="text-sm text-blue-100 mb-4">";
               Comprehensive platform, managed services, consulting — flexible pricing with guaranteed ROI and proven results
             </div>
-<<<<<<< HEAD
             <div className="flex items-center justify-center gap-2 text-white font-semibold group-hover: gap-4 transition-all">",
               <span>Get Protected</span>
               <ArrowRight className="w-5 h-5/>
@@ -457,7 +422,6 @@ const October2025FraudDetectionBanner = () => {
             <div className="flex items-center justify-center gap-2 text-white font-semibold group-hover: gap-4 transition-all">";,
               <span>Get Protected</span>
               <ArrowRight className="w-5 h-5" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </div>
           </Link>
         </div>
@@ -475,7 +439,6 @@ const October2025FraudDetectionBanner = () => {
               to="/contact"
               className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-red-600 to-purple-600 hover: from-red-500 hover:to-purple-500 rounded-lg text-white font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/50",
             >
-<<<<<<< HEAD
               <Shield className="w-6 h-6/>
               <span>Schedule Free Assessment</span>
               <ArrowRight className="w-6 h-6/>
@@ -483,13 +446,11 @@ const October2025FraudDetectionBanner = () => {
               <Shield className="w-6 h-6" />";
               <span>Schedule Free Assessment</span>
               <ArrowRight className="w-6 h-6" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </Link>
           </div>
         </div>
 
         {/* Trust Indicators */}
-<<<<<<< HEAD
         <div className="mt-10 pt-8 border-t border-white/10">
           <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-gray-400">
             <div className="flex items-center gap-2">
@@ -531,7 +492,6 @@ const October2025FraudDetectionBanner = () => {
             </div>
             <div className="flex items-center gap-2">";
               <CheckCircle className="w-4 h-4 text-green-400" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               <span>90-Day Rapid Deployment</span>
             </div>
           </div>

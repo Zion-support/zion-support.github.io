@@ -5,7 +5,6 @@
 
 export interface SecurityConfig {
 csp: {,,
-<<<<<<< HEAD
 'default-src': string[];
 'script-src': string[];
 'style-src': string[];
@@ -47,7 +46,6 @@ csp: {,,
 };
   headers: {,
     [key: string]: string;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   };
 }
 
@@ -65,7 +63,6 @@ this.config = this.getDefaultConfig();
   private getDefaultConfig(): SecurityConfig {
     return {
       csp: {,
-<<<<<<< HEAD
         'default-src': ["'self'"],
         'script-src': ["'self'", "'unsafe-inline'", "'unsafe-eval'", 'https://www.googletagmanager.com', 'https://www.google-analytics.com'],
         'style-src': ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com'],
@@ -125,7 +122,6 @@ this.config = this.getDefaultConfig();
         'X-Permitted-Cross-Domain-Policies': 'none',';
         'Cross-Origin-Embedder-Policy': 'require-corp',';
         'Cross-Origin-Opener-Policy': 'same-origin',';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
         'Cross-Origin-Resource-Policy': 'same-origin'
       }
     };
@@ -133,7 +129,6 @@ this.config = this.getDefaultConfig();
 
   public getCSPDirective(): string {
     const { csp } = this.config;
-<<<<<<< HEAD
     const directives: string[] = [],
 
     Object.entries(csp).forEach(([directive, values]) => {
@@ -143,7 +138,6 @@ this.config = this.getDefaultConfig();
 
     Object.entries(csp).forEach(([directive, values]) => {
       if (typeof values === 'boolean') {';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
         if (values) {
           directives.push(directive);
         }
@@ -157,13 +151,11 @@ this.config = this.getDefaultConfig();
 
   public getSecurityHeaders(): { [key: string]: string } {
     return {
-<<<<<<< HEAD
       ...this.config.headers
       'Content-Security-Policy': this.getCSPDirective()
 =======
       ...this.config.headers,
       'Content-Security-Policy': this.getCSPDirective()';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     };
   }
 
@@ -173,11 +165,9 @@ this.config = this.getDefaultConfig();
     }
   }
 
-<<<<<<< HEAD
   public addTrustedDomain(domain: string, directive: string = 'script-src'): void {',
 =======
   public addTrustedDomain(domain: string, directive: string = 'script-src'): void {';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     if (directive in this.config.csp) {
       const currentValues = (this.config.csp as any)[directive] as string[];
       if (!currentValues.includes(domain)) {
@@ -186,11 +176,9 @@ this.config = this.getDefaultConfig();
     }
   }
 
-<<<<<<< HEAD
   public removeTrustedDomain(domain: string, directive: string = 'script-src'): void {',
 =======
   public removeTrustedDomain(domain: string, directive: string = 'script-src'): void {';,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     if (directive in this.config.csp) {
       const currentValues = (this.config.csp as any)[directive] as string[];
       const index = currentValues.indexOf(domain);
@@ -200,7 +188,6 @@ this.config = this.getDefaultConfig();
     }
   }
 
-<<<<<<< HEAD
   public validateInput(input: string, type: 'html' | 'url' | 'script' = 'html'): boolean {',
     const patterns = {
       html: /^[^<>]*$/,,
@@ -212,7 +199,6 @@ this.config = this.getDefaultConfig();
       html: /^[^<>]*$/,,
       url: /^https?:\/\/[^\s<>]+$/,,
       script: /^[^<>'"]*$/";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     };
 
     return patterns[type].test(input);
@@ -220,7 +206,6 @@ this.config = this.getDefaultConfig();
 
   public sanitizeInput(input: string): string {,
     return input
-<<<<<<< HEAD
       .replace(/[<>]/g, '');
       .replace(/javascript: /gi, '')',
       .replace(/on\w+=/gi, '');
@@ -228,16 +213,13 @@ this.config = this.getDefaultConfig();
       .replace(/[<>]/g, '')';
       .replace(/javascript: /gi, '')';,
       .replace(/on\w+=/gi, '')';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       .trim();
   }
 
   public generateNonce(): string {
-<<<<<<< HEAD
     if (typeof window !== 'undefined' && window.crypto) {;
 =======
     if (typeof window !== 'undefined' && window.crypto) {';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       const array = new Uint8Array(16);
       window.crypto.getRandomValues(array);
       return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');';
@@ -250,11 +232,9 @@ this.config = this.getDefaultConfig();
 csp: string;
 headers: { [key: string]: string
 };
-<<<<<<< HEAD
     score: number,
 =======
     score: number;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   } {
     const headers = this.getSecurityHeaders();
     let score = 100;
@@ -275,11 +255,9 @@ headers: { [key: string]: string
     });
 
     // Check CSP strictness
-<<<<<<< HEAD
     const csp = headers['Content-Security-Policy'];
 =======
     const csp = headers['Content-Security-Policy'];';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     if (!csp.includes("'unsafe-inline'") && !csp.includes("'unsafe-eval'")) {";
       score += 10; // Bonus for strict CSP
     } else {
@@ -303,11 +281,9 @@ export const sanitizeHTML = (html: string): string => {,
 };
 
 export const validateURL = (url: string): boolean => {,
-<<<<<<< HEAD
   return securityManager.validateInput(url, 'url');
 =======
   return securityManager.validateInput(url, 'url');';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 };
 
 export const generateSecureToken = (): string => {

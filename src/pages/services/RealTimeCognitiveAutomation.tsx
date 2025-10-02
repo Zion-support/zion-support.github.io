@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Link } from "react-router-dom";
 import Header from "../../components/Header";
 =======
@@ -6,7 +5,6 @@ import {
 Link
 } from "react-router-dom";";
 import Header from "../../components/Header";";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 
 const RealTimeCognitiveAutomation = () => {
   return (
@@ -22,21 +20,17 @@ const RealTimeCognitiveAutomation = () => {
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">";
         <Header />
 
-<<<<<<< HEAD
         <article className="container mx-auto px-6 py-20">
 =======
         <article className="container mx-auto px-6 py-20">";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           {/* Back Link */};
           <Link
             to="/services"
             className="inline-flex items-center text-zion-cyan hover: text-zion-blue-light mb-8 transition-colors",
           >
-<<<<<<< HEAD
             <ArrowLeft className="w-4 h-4 mr-2/>
 =======
             <ArrowLeft className="w-4 h-4 mr-2" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             Back to Services
           </Link>
 
@@ -52,29 +46,24 @@ const RealTimeCognitiveAutomation = () => {
               <span className="text-zion-slate-light">Starting at $7,999/month</span>";
             </div>
 
-<<<<<<< HEAD
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 leading-tight">",
 =======
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 leading-tight">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               Real-Time Cognitive Automation Platform
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400 mt-2">";
                 Transform Business Operations with Intelligent Automation
               </span>
             </h1>
 
-<<<<<<< HEAD
             <p className="text-xl text-zion-slate-light leading-relaxed mb-8">
               Revolutionize your business operations with AI-powered workflows that deliver instant decision-making
 =======
             <p className="text-xl text-zion-slate-light leading-relaxed mb-8">";
               Revolutionize your business operations with AI-powered workflows that deliver instant decision-making, 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               self-learning automation, and 99.97% accuracy. Achieve 87% cost reduction and 10x productivity gains.
             </p>
 
             {/* Key Metrics Banner */}
-<<<<<<< HEAD
             <div className="grid md: grid-cols-4 gap-6">",
               <div className="bg-purple-900/40 rounded-xl p-6 border border-purple-500/30 text-center hover: scale-105 transition-transform">",
                 <div className="text-4xl font-bold text-purple-400 mb-2">94%</div>
@@ -108,7 +97,6 @@ const RealTimeCognitiveAutomation = () => {
               <div className="bg-cyan-900/40 rounded-xl p-6 border border-cyan-500/30 text-center hover: scale-105 transition-transform">";,
                 <div className="text-4xl font-bold text-cyan-400 mb-2">6 Mo</div>";
                 <div className="text-sm text-zion-slate-light">Average ROI Time</div>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
             </div>
           </div>
@@ -117,7 +105,6 @@ const RealTimeCognitiveAutomation = () => {
           <div className="max-w-5xl mx-auto space-y-12 text-zion-slate-light">";
             {/* Business Impact */}
             <section>
-<<<<<<< HEAD
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <TrendingUp className="w-8 h-8 text-green-400/>
                 Business Impact
@@ -157,13 +144,11 @@ const RealTimeCognitiveAutomation = () => {
                       </li>
                       <li className="flex items-start gap-2">";
                         <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                         <span>Live process optimization</span>
                       </li>
                     </ul>
                   </div>
                   <div>
-<<<<<<< HEAD
                     <h3 className="text-xl font-bold text-white mb-4">🧠 Self-Learning Systems</h3>
                     <ul className="space-y-3">
                       <li className="flex items-start gap-2">
@@ -189,7 +174,6 @@ const RealTimeCognitiveAutomation = () => {
                       </li>
                       <li className="flex items-start gap-2">";
                         <CheckCircle className="w-5 h-5 text-blue-400 flex-shrink-0 mt-1" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                         <span>Autonomous error correction</span>
                       </li>
                     </ul>
@@ -200,7 +184,6 @@ const RealTimeCognitiveAutomation = () => {
 
             {/* Platform Capabilities */}
             <section>
-<<<<<<< HEAD
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Brain className="w-8 h-8 text-purple-400/>
                 Platform Capabilities
@@ -284,7 +267,6 @@ const RealTimeCognitiveAutomation = () => {
                     <div className="text-4xl mb-4">{capability.icon}</div>";
                     <h3 className="text-xl font-bold text-white mb-3">{capability.title}</h3>";
                     <p className="text-zion-slate-light">{capability.description}</p>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   </div>
                 ))}
               </div>
@@ -296,7 +278,6 @@ const RealTimeCognitiveAutomation = () => {
               <div className="space-y-6">";
                 {[
                   {
-<<<<<<< HEAD
                     industry: "Financial Services",",
                     savings: "$12.4M",",
                     automation: "95%",",
@@ -342,7 +323,6 @@ const RealTimeCognitiveAutomation = () => {
                     savings: "$6.8M",";,
                     automation: "89%",";,
                     highlights: ["Order processing: 99.8% automation", "Customer service: 89% auto-resolution", "Returns: 95% automated"]";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   }
                 ].map((solution, index) => (
                   <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/30">";
@@ -359,13 +339,11 @@ const RealTimeCognitiveAutomation = () => {
                     </div>
                     <ul className="space-y-2">";
                       {solution.highlights.map((highlight, hIndex) => (
-<<<<<<< HEAD
                         <li key={hIndex} className="flex items-start gap-2">
                           <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1/>
 =======
                         <li key={hIndex} className="flex items-start gap-2">";
                           <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                           <span>{highlight}</span>
                         </li>
                       ))}
@@ -377,7 +355,6 @@ const RealTimeCognitiveAutomation = () => {
 
             {/* Pricing Packages */}
             <section>
-<<<<<<< HEAD
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <DollarSign className="w-8 h-8 text-green-400/>
                 Pricing & Packages
@@ -421,7 +398,6 @@ const RealTimeCognitiveAutomation = () => {
                     name: "Enterprise",";,
                     price: "$49,999",";,
                     features: ["Unlimited transactions", "Unlimited workflows", "Custom AI models", "Dedicated team", "99.97% SLA"]";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   }
                 ].map((pkg, index) => (
                   <div key={index} className={`bg-white/5 backdrop-blur-sm rounded-xl p-6 border ${pkg.popular ? 'border-purple-500/50 ring-2 ring-purple-500/30' : 'border-zion-cyan/30'}`}>`;
@@ -434,13 +410,11 @@ const RealTimeCognitiveAutomation = () => {
                     <div className="text-4xl font-bold text-green-400 mb-6">{pkg.price}<span className="text-lg text-zion-slate-light">/month</span></div>";
                     <ul className="space-y-3">";
                       {pkg.features.map((feature, fIndex) => (
-<<<<<<< HEAD
                         <li key={fIndex} className="flex items-start gap-2">
                           <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1/>
 =======
                         <li key={fIndex} className="flex items-start gap-2">";
                           <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                           <span>{feature}</span>
                         </li>
                       ))}
@@ -452,7 +426,6 @@ const RealTimeCognitiveAutomation = () => {
 
             {/* Limited Time Offer */}
             <section>
-<<<<<<< HEAD
               <div className="bg-gradient-to-r from-purple-900/40 via-pink-900/40 to-cyan-900/40 rounded-xl p-8 border-2 border-purple-500/50">
                 <div className="flex items-center justify-between flex-wrap gap-6">
                   <div className="flex-1">
@@ -466,12 +439,10 @@ const RealTimeCognitiveAutomation = () => {
                     <div className="flex items-center gap-3 mb-4">";
                       <Rocket className="w-8 h-8 text-purple-400" />";
                       <h3 className="text-2xl font-bold text-white">🚀 October 2025 Launch Special</h3>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     </div>
                     <p className="text-xl text-purple-200 mb-4">";
                       Get Your <strong>First 3 Months at 50% OFF</strong>
                     </p>
-<<<<<<< HEAD
                     <ul className="space-y-2">
                       <li className="flex items-start gap-2">
                         <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1/>
@@ -495,7 +466,6 @@ const RealTimeCognitiveAutomation = () => {
                       </li>
                       <li className="flex items-start gap-2">";
                         <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                         <span>6 months extended support included</span>
                       </li>
                     </ul>
@@ -509,11 +479,9 @@ const RealTimeCognitiveAutomation = () => {
                       className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-bold rounded-lg hover: from-purple-600 hover:to-cyan-600 transition-all transform hover:scale-105",
                     >
                       Get Started Today
-<<<<<<< HEAD
                       <Zap className="w-5 h-5/>
 =======
                       <Zap className="w-5 h-5" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     </Link>
                   </div>
                 </div>
@@ -532,11 +500,9 @@ const RealTimeCognitiveAutomation = () => {
                   className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-zion-blue to-zion-cyan text-white font-bold rounded-lg hover: from-zion-blue-light hover:to-zion-cyan transition-all transform hover:scale-105",
                 >
                   Schedule Free Assessment
-<<<<<<< HEAD
                   <Zap className="w-5 h-5/>
 =======
                   <Zap className="w-5 h-5" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </Link>
                 <Link
                   to="/contact"

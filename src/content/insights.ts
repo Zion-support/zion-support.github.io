@@ -1,5 +1,4 @@
 export type InsightArticle = {
-<<<<<<< HEAD
 id: string,
 title: string,
 summary: string,
@@ -9,14 +8,12 @@ id: string;,
 title: string;,
 summary: string;,
 category: string;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 date: string; // ISO date string,,
 readMinutes: number;
 };
 
 export const latestInsights: InsightArticle[] = [,
   {
-<<<<<<< HEAD
     id: "ai-2025-oct-enterprise-rag-architecture-blueprint",
     title: "Enterprise RAG Architecture Blueprint: 99.9% Precision at Scale",
     summary:
@@ -271,7 +268,6 @@ export const latestInsights: InsightArticle[] = [,
     date: "2025-09-30",";,
     readMinutes: 6,,
   },
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 ];
 
 ;

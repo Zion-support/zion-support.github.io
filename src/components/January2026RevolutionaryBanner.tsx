@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 const January2026RevolutionaryBanner: React.FC = () => {,
 return (
@@ -29,7 +28,6 @@ return (
 <Sparkles className="w-6 h-6 text-yellow-400 animate-pulse" />";
 </div>
 <h2 className="text-3xl md: text-4xl font-bold mb-4 bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent">,";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 Three Game-Changing AI Technologies That Will Transform Your Business
 </h2>
 <p className="text-lg text-blue-100 max-w-4xl mx-auto mb-6">";
@@ -38,7 +36,6 @@ These revolutionary technologies are already creating <span className="font-bold
 transforming how businesses operate at the highest level.
 </p>
 </div>
-<<<<<<< HEAD
 <div className="grid md:grid-cols-3 gap-6 mb-8">
 {/* Quantum Edge Fusion */
 }
@@ -54,7 +51,6 @@ transforming how businesses operate at the highest level.
             <div className="flex items-center gap-3 mb-4">";
               <div className="bg-blue-500/20 p-2 rounded-lg border border-blue-400/30">";
                 <Zap className="w-6 h-6 text-blue-400" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
               <div>
                 <h3 className="text-lg font-bold text-white">Quantum Edge Fusion</h3>";
@@ -64,7 +60,6 @@ transforming how businesses operate at the highest level.
             <p className="text-blue-100 text-sm mb-4">";
               Revolutionary quantum-edge convergence delivering sub-millisecond processing with 99.99% reliability and 90% energy reduction.
             </p>
-<<<<<<< HEAD
             <div className="space-y-2 mb-4">
               <div className="flex items-center gap-2 text-xs text-blue-200">
                 <TrendingUp className="w-3 h-3 text-green-400/>
@@ -80,7 +75,6 @@ transforming how businesses operate at the highest level.
               </div>
               <div className="flex items-center gap-2 text-xs text-blue-200">";
                 <Shield className="w-3 h-3 text-green-400" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 <span>99.97% Fraud Detection (Financial Services)</span>
               </div>
             </div>
@@ -88,16 +82,13 @@ transforming how businesses operate at the highest level.
               to="/blog/ai-2026-january-quantum-edge-fusion" 
               className="inline-flex items-center gap-2 bg-blue-600 hover: bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 hover:scale-105",
             >
-<<<<<<< HEAD
               Learn More <ArrowRight className="w-4 h-4/>
 =======
               Learn More <ArrowRight className="w-4 h-4" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </Link>
           </div>
 
           {/* Synthetic Consciousness */}
-<<<<<<< HEAD
           <div className="bg-gradient-to-br from-purple-800/50 to-pink-800/50 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover: border-purple-400/60 transition-all duration-300 hover:scale-105 hover:shadow-xl">",
             <div className="flex items-center gap-3 mb-4">
               <div className="bg-purple-500/20 p-2 rounded-lg border border-purple-400/30">
@@ -107,7 +98,6 @@ transforming how businesses operate at the highest level.
             <div className="flex items-center gap-3 mb-4">";
               <div className="bg-purple-500/20 p-2 rounded-lg border border-purple-400/30">";
                 <Brain className="w-6 h-6 text-purple-400" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
               <div>
                 <h3 className="text-lg font-bold text-white">Synthetic Consciousness</h3>";
@@ -117,7 +107,6 @@ transforming how businesses operate at the highest level.
             <p className="text-purple-100 text-sm mb-4">";
               Genuine artificial consciousness with emotional intelligence, creative autonomy, and moral reasoning capabilities.
             </p>
-<<<<<<< HEAD
             <div className="space-y-2 mb-4">
               <div className="flex items-center gap-2 text-xs text-purple-200">
                 <TrendingUp className="w-3 h-3 text-green-400/>
@@ -133,7 +122,6 @@ transforming how businesses operate at the highest level.
               </div>
               <div className="flex items-center gap-2 text-xs text-purple-200">";
                 <Star className="w-3 h-3 text-green-400" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 <span>89% Patient Satisfaction (Emotional AI)</span>
               </div>
             </div>
@@ -141,16 +129,13 @@ transforming how businesses operate at the highest level.
               to="/blog/ai-2026-january-synthetic-consciousness-breakthrough" 
               className="inline-flex items-center gap-2 bg-purple-600 hover: bg-purple-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 hover:scale-105",
             >
-<<<<<<< HEAD
               Explore Now <ArrowRight className="w-4 h-4/>
 =======
               Explore Now <ArrowRight className="w-4 h-4" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </Link>
           </div>
 
           {/* Neuromorphic Processing */}
-<<<<<<< HEAD
           <div className="bg-gradient-to-br from-green-800/50 to-teal-800/50 backdrop-blur-sm rounded-xl p-6 border border-green-400/30 hover: border-green-400/60 transition-all duration-300 hover:scale-105 hover:shadow-xl">",
             <div className="flex items-center gap-3 mb-4">
               <div className="bg-green-500/20 p-2 rounded-lg border border-green-400/30">
@@ -160,7 +145,6 @@ transforming how businesses operate at the highest level.
             <div className="flex items-center gap-3 mb-4">";
               <div className="bg-green-500/20 p-2 rounded-lg border border-green-400/30">";
                 <Cpu className="w-6 h-6 text-green-400" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
               <div>
                 <h3 className="text-lg font-bold text-white">Neuromorphic Processing</h3>";
@@ -170,7 +154,6 @@ transforming how businesses operate at the highest level.
             <p className="text-green-100 text-sm mb-4">";
               Brain-inspired AI architecture with real-time learning, pattern recognition, and autonomous adaptation.
             </p>
-<<<<<<< HEAD
             <div className="space-y-2 mb-4">
               <div className="flex items-center gap-2 text-xs text-green-200">
                 <TrendingUp className="w-3 h-3 text-green-400/>
@@ -186,7 +169,6 @@ transforming how businesses operate at the highest level.
               </div>
               <div className="flex items-center gap-2 text-xs text-green-200">";
                 <Shield className="w-3 h-3 text-green-400" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 <span>78% Accident Reduction (Autonomous Vehicles)</span>
               </div>
             </div>
@@ -194,16 +176,13 @@ transforming how businesses operate at the highest level.
               to="/blog/ai-2026-january-neuromorphic-processing-revolution" 
               className="inline-flex items-center gap-2 bg-green-600 hover: bg-green-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 hover:scale-105",
             >
-<<<<<<< HEAD
               Discover More <ArrowRight className="w-4 h-4/>
 =======
               Discover More <ArrowRight className="w-4 h-4" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </Link>
           </div>
         </div>
 
-<<<<<<< HEAD
         <div className="text-center">
           <div className="bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-400/40 rounded-xl p-6 mb-6">
             <div className="flex items-center justify-center gap-3 mb-3">
@@ -217,7 +196,6 @@ transforming how businesses operate at the highest level.
               <Star className="w-6 h-6 text-yellow-400 animate-pulse" />";
               <span className="text-lg font-bold text-yellow-300">LIMITED TIME: Early Access Program</span>";,
               <Star className="w-6 h-6 text-yellow-400 animate-pulse" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </div>
             <p className="text-white text-lg font-semibold mb-2">";
               🎯 Get 40% OFF Implementation + FREE Strategic Consultation
@@ -227,16 +205,13 @@ transforming how businesses operate at the highest level.
             </p>
           </div>
 
-<<<<<<< HEAD
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">",
 =======
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             <Link 
               to="/services" 
               className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 hover: from-purple-700 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-bold text-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl",
             >
-<<<<<<< HEAD
               <Sparkles className="w-5 h-5/>
               Explore All Services
               <ArrowRight className="w-5 h-5/>
@@ -244,22 +219,18 @@ transforming how businesses operate at the highest level.
               <Sparkles className="w-5 h-5" />";
               Explore All Services
               <ArrowRight className="w-5 h-5" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </Link>
             <Link 
               to="/contact" 
               className="inline-flex items-center gap-2 border-2 border-white text-white hover: bg-white hover:text-purple-900 px-8 py-3 rounded-lg font-bold text-lg transition-all duration-300 hover:scale-105",
             >
-<<<<<<< HEAD
               <Brain className="w-5 h-5/>
 =======
               <Brain className="w-5 h-5" />";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               Schedule Consultation
             </Link>
           </div>
 
-<<<<<<< HEAD
           <div className="mt-6 text-sm text-blue-200">
             <span className="font-bold">Trusted by 500+ companies worldwide</span> • ";
             <span className="font-bold text-yellow-300"> $15B+ in value created</span> • ";
@@ -269,7 +240,6 @@ transforming how businesses operate at the highest level.
             <span className="font-bold">Trusted by 500+ companies worldwide</span> • ";
             <span className="font-bold text-yellow-300"> $15B+ in value created</span> • ";
             <span className="font-bold"> 99.9% customer satisfaction</span>";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           </div>
         </div>
       </div>

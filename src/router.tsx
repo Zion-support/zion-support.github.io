@@ -47,7 +47,7 @@ import PerformanceMonitor from './components/PerformanceMonitor';
 import EnhancedSEOHead from './components/EnhancedSEOHead';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
-const AppRouter: React.FC = () => {,
+const AppRouter: React.FC = () => {
   return (
     <HelmetProvider>
       <Router>
@@ -133,7 +133,6 @@ const EnterpriseAITransformationSuccessStrategies = lazy(() => import('./pages/b
 const MultiAgentEnterpriseOrchestration = lazy(() => import('./pages/blog/ai-2025-multiagent-enterprise-orchestration-revolution'));
 const MultimodalEnterpriseIntelligence = lazy(() => import('./pages/blog/ai-2025-oct-multimodal-enterprise-intelligence'));
 const NextGenIntelligentAutomationBreakthrough = lazy(() => import('./pages/blog/ai-2025-oct-next-gen-intelligent-automation-breakthrough'));
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-035f
 
 export const AppRouter: React.FC = () => {
   return (

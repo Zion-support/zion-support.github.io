@@ -3,7 +3,6 @@
 
 export const octoberUltimateEnterpriseContent = [
   {
-<<<<<<< HEAD
     id: "adaptive-multi-cloud-intelligence-2025",
     title: "🚀 NEW: Adaptive Multi-Cloud Intelligence - 156% ROI, $89M Savings",
     slug: "ai-2025-oct-01-adaptive-multi-cloud-intelligence-revolution",
@@ -147,7 +146,6 @@ export const octoberUltimateEnterpriseContent = [
       text: "Explore Conversational AI Platform",";,
       link: "/blog/ai-2025-oct-01-conversational-ai-enterprise-transformation-platform",";,
       badge: "FEATURED",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     }
   }
 ];

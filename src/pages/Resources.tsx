@@ -89,43 +89,35 @@ const Resources: React.FC = () => {
       title: 'The Future of AI in Manufacturing',
       excerpt: 'Exploring how AI is revolutionizing manufacturing processes and predictive maintenance.',
       date: '2025-01-15',
-<<<<<<< HEAD
       link: '/blog/ai-manufacturing-future',
 =======
       link: '/blog/ai-manufacturing-future'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-22df
     },
     {
       title: 'Cybersecurity Best Practices for AI Systems',
       excerpt: 'Essential security measures to protect your AI infrastructure and data.',
       date: '2025-01-12',
-<<<<<<< HEAD
       link: '/blog/ai-cybersecurity-best-practices',
 =======
       link: '/blog/ai-cybersecurity-best-practices'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-22df
     },
     {
       title: 'ROI Calculation for AI Implementations',
       excerpt: 'A comprehensive guide to measuring and maximizing ROI from AI investments.',
       date: '2025-01-10',
-<<<<<<< HEAD
       link: '/blog/ai-roi-calculation-guide',
 =======
       link: '/blog/ai-roi-calculation-guide'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-22df
     },
     {
       title: 'Building Ethical AI Systems',
       excerpt: 'Principles and practices for developing AI systems that are fair and transparent.',
       date: '2025-01-08',
-<<<<<<< HEAD
       link: '/blog/ethical-ai-systems',
     },
 =======
       link: '/blog/ethical-ai-systems'
     }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-22df
   ];
 
   return (

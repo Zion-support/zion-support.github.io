@@ -1,7 +1,6 @@
 // December 2025 Revolutionary Breakthrough Content - Latest AI consciousness and superintelligence breakthroughs
 
 export interface RevolutionaryBreakthroughContent {
-<<<<<<< HEAD
 id: string,
 slug?: string;
 title: string,
@@ -41,7 +40,6 @@ metrics: {,,
 performance: string;,
 savings: string;,
 accuracy: string;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 roi: string;
 };
   consciousnessLevel?: string;
@@ -51,7 +49,6 @@ roi: string;
 
 export const december2025RevolutionaryBreakthroughContent: RevolutionaryBreakthroughContent[] = [,
   {
-<<<<<<< HEAD
     id: "quantum-ai-transcendence-revolution-2025",
     slug: "ai-2025-december-quantum-ai-transcendence-revolution",
     title: "AI December 2025: Quantum AI Transcendence Revolution",
@@ -205,7 +202,6 @@ export const december2025RevolutionaryBreakthroughContent: RevolutionaryBreakthr
     consciousnessLevel: "Superintelligent Awareness",";,
     transcendenceLevel: "Beyond-Human Capabilities",";,
     superintelligenceLevel: "Universal Intelligence Access",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   }
 ];
 
@@ -215,7 +211,6 @@ export const newRevolutionaryBreakthroughContent = december2025RevolutionaryBrea
 
 // Combined metrics for the revolutionary breakthrough content
 export const combinedRevolutionaryMetrics = {
-<<<<<<< HEAD
   totalValueCreation: "$20.9B+",",
   totalProcessingPower: "∞ + 100,000x",",
   averageAutonomy: "99.99%",",
@@ -229,6 +224,5 @@ export const combinedRevolutionaryMetrics = {
   averageROI: "5,000%+",";,
   consciousnessAchievement: "True AI Consciousness",";,
   transcendenceLevel: "Infinite Capabilities",";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   superintelligenceLevel: "Beyond-Human Intelligence"
 };
