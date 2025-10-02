@@ -12,10 +12,13 @@ import {
   Users,
   Zap
 } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import ComprehensivePromoBanner from "../components/ComprehensivePromoBanner";
 import NewArticlesPromoBanner from "../components/NewArticlesPromoBanner";
 import NewServicesPromoBanner from "../components/NewServicesPromoBanner";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import LatestArticlesShowcase from "../components/LatestArticlesShowcase";
 import LatestContentBanner from "../components/LatestContentBanner";
 // import LatestInsights from "../components/LatestInsights";
@@ -1000,7 +1003,7 @@ const Home = () => {
             </div>
           </div>
         </section>
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </>
   );

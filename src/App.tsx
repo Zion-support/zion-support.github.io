@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // import { resourcePreloader } from './utils/resourcePreloader';
 // import { criticalCSSManager } from './utils/criticalCSSManager';
@@ -14,6 +15,7 @@ import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import NotificationSystem from './components/NotificationSystem';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
+import { AppRouter } from './router';
 
 // Local stub to avoid type errors when optional performance init is not present
 const initializePerformanceEnhancements = (): void => {};
@@ -155,7 +157,9 @@ export default function App(): React.JSX.Element {
       <SEOOptimizer title={seoDataForOptimizer.title} description={seoDataForOptimizer.description} canonicalUrl={seoDataForOptimizer.canonical} />
       <AdvancedAnalytics enableConversionTracking enablePerformanceTracking enableErrorTracking />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <AppRouter />
+        <Router>
+          <AppRouter />
+        </Router>
 
         {showPerformanceOptimizer && (
           <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center" role="dialog" aria-modal="true">
