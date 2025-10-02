@@ -5,7 +5,8 @@
     "skipLibCheck": true
   },
   "include": [
-    "src/types/**/*.d.ts"
+    "src/main.tsx",
+    "src/App.minimal.tsx"
   ],
   "exclude": [
     "node_modules",
