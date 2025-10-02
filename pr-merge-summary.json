@@ -1,8 +1,26 @@
 {
-  "timestamp": "2025-10-02T06:01:40.106Z",
-  "totalPRs": 1,
-  "merged": 0,
-  "failed": 0,
-  "mergedPRs": [],
-  "failedPRs": []
+  "totalPRs": 3,
+  "successfulMerges": 1,
+  "failedMerges": 2,
+  "prs": [
+    {
+      "number": 24703,
+      "title": "Enhance and expand ziontechgroup.com services and site",
+      "branch": "cursor/enhance-and-expand-ziontechgroup-com-services-and-site-44c4",
+      "status": "processed"
+    },
+    {
+      "number": 24702,
+      "title": "Enhance and expand ziontechgroup.com services and site",
+      "branch": "cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f3e7",
+      "status": "processed"
+    },
+    {
+      "number": 24701,
+      "title": "Enhance and expand ziontechgroup.com services and site",
+      "branch": "cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d21e",
+      "status": "processed"
+    }
+  ],
+  "timestamp": "2025-10-02T21:19:39.463Z"
 }
