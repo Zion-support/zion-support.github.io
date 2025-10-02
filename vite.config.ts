@@ -38,38 +38,55 @@ export default defineConfig({
         preset: 'smallest'
       },
       output: {
-        manualChunks: (id) => {
-          // Vendor chunks
-          if (id.includes('node_modules')) {
-            // Group React-related packages
-            if (id.includes('react') || id.includes('react-dom')) {
-              return 'vendor-react';
-            }
-            // Group UI libraries
-            if (id.includes('framer-motion') || id.includes('lucide-react')) {
-              return 'vendor-ui';
-            }
-            // Group utility libraries
-            if (id.includes('clsx') || id.includes('tailwind-merge') || id.includes('axios')) {
-              return 'vendor-utils';
-            }
-            return 'vendor';
+        
+      
+      manualChunks: (id) => {
+        // Vendor chunks - more granular splitting
+        if (id.includes('node_modules')) {
+          // React ecosystem
+          if (id.includes('react') || id.includes('react-dom') || id.includes('react-router')) {
+            return 'vendor-react';
           }
-          // App chunks
-          if (id.includes('src/pages/')) {
-            return 'pages';
+          // UI libraries
+          if (id.includes('framer-motion') || id.includes('lucide-react')) {
+            return 'vendor-ui';
           }
-          if (id.includes('src/components/')) {
-            return 'components';
+          // Utility libraries
+          if (id.includes('clsx') || id.includes('tailwind-merge') || id.includes('axios')) {
+            return 'vendor-utils';
           }
-          if (id.includes('src/utils/')) {
-            return 'utils';
+          // Charts and data visualization
+          if (id.includes('recharts') || id.includes('d3')) {
+            return 'vendor-charts';
           }
-          if (id.includes('src/hooks/')) {
-            return 'hooks';
+          // Large libraries
+          if (id.includes('lodash') || id.includes('moment')) {
+            return 'vendor-large';
           }
-          return 'app';
-        },
+          return 'vendor';
+        }
+        
+        // App chunks - feature-based splitting
+        if (id.includes('src/pages/services/')) {
+          return 'pages-services';
+        }
+        if (id.includes('src/pages/case-studies/')) {
+          return 'pages-case-studies';
+        }
+        if (id.includes('src/pages/blog/')) {
+          return 'pages-blog';
+        }
+        if (id.includes('src/components/')) {
+          return 'components';
+        }
+        if (id.includes('src/utils/')) {
+          return 'utils';
+        }
+        if (id.includes('src/hooks/')) {
+          return 'hooks';
+        }
+        return 'app';
+      },
         chunkFileNames: 'assets/js/[name]-[hash].js',
         entryFileNames: 'assets/js/main-[hash].js',
         assetFileNames: (assetInfo) => {

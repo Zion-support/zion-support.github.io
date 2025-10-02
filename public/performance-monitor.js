@@ -1,84 +1,114 @@
 
-// Performance monitoring script
-class PerformanceMonitor {
-  constructor() {
-    this.metrics = {};
-    this.observers = [];
-    this.init();
-  }
-
-  init() {
-    // Monitor Core Web Vitals
-    if ('web-vitals' in window) {
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-        getCLS(this.handleMetric);
-        getFID(this.handleMetric);
-        getFCP(this.handleMetric);
-        getLCP(this.handleMetric);
-        getTTFB(this.handleMetric);
-      });
-    }
-
-    // Monitor memory usage
-    if ('memory' in performance) {
-      setInterval(() => {
-        const memory = performance.memory;
-        this.metrics.memory = {
-          used: memory.usedJSHeapSize,
-          total: memory.totalJSHeapSize,
-          limit: memory.jsHeapSizeLimit
-        };
-      }, 5000);
-    }
-
-    // Monitor long tasks
+// Performance monitoring for Zion Tech Group
+(function() {
+  'use strict';
+  
+  // Core Web Vitals monitoring
+  function measureWebVitals() {
+    // Largest Contentful Paint
     if ('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver((list) => {
-        list.getEntries().forEach((entry) => {
-          if (entry.duration > 50) {
-            console.warn('Long task detected:', entry);
+      const lcpObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1];
+        console.log('LCP:', lastEntry.startTime);
+        
+        // Send to analytics
+        if (window.gtag) {
+          window.gtag('event', 'web_vitals', {
+            event_category: 'Performance',
+            event_label: 'LCP',
+            value: Math.round(lastEntry.startTime)
+          });
+        }
+      });
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+      
+      // First Input Delay
+      const fidObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          console.log('FID:', entry.processingStart - entry.startTime);
+          
+          if (window.gtag) {
+            window.gtag('event', 'web_vitals', {
+              event_category: 'Performance',
+              event_label: 'FID',
+              value: Math.round(entry.processingStart - entry.startTime)
+            });
           }
         });
       });
-      observer.observe({ entryTypes: ['longtask'] });
-      this.observers.push(observer);
+      fidObserver.observe({ entryTypes: ['first-input'] });
+      
+      // Cumulative Layout Shift
+      const clsObserver = new PerformanceObserver((list) => {
+        let clsValue = 0;
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          if (!entry.hadRecentInput) {
+            clsValue += entry.value;
+          }
+        });
+        
+        if (clsValue > 0) {
+          console.log('CLS:', clsValue);
+          
+          if (window.gtag) {
+            window.gtag('event', 'web_vitals', {
+              event_category: 'Performance',
+              event_label: 'CLS',
+              value: Math.round(clsValue * 1000)
+            });
+          }
+        }
+      });
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
     }
   }
-
-  handleMetric = (metric) => {
-    this.metrics[metric.name] = {
-      value: metric.value,
-      rating: metric.rating,
-      delta: metric.delta
-    };
+  
+  // Resource loading optimization
+  function optimizeResourceLoading() {
+    // Preload critical resources
+    const criticalResources = [
+      '/assets/css/main.css',
+      '/assets/js/main.js'
+    ];
     
-    // Report poor metrics
-    if (metric.rating === 'poor') {
-      console.warn('Poor performance metric:', metric);
-      // Send to analytics
-      this.reportToAnalytics(metric);
-    }
-  };
-
-  reportToAnalytics(metric) {
-    // Send to your analytics service
-    if (typeof gtag !== 'undefined') {
-      gtag('event', 'performance_metric', {
-        metric_name: metric.name,
-        metric_value: metric.value,
-        metric_rating: metric.rating
+    criticalResources.forEach(resource => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = resource;
+      link.as = resource.endsWith('.css') ? 'style' : 'script';
+      document.head.appendChild(link);
+    });
+    
+    // Lazy load non-critical images
+    if ('IntersectionObserver' in window) {
+      const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            img.src = img.dataset.src;
+            img.classList.remove('lazy');
+            imageObserver.unobserve(img);
+          }
+        });
+      });
+      
+      document.querySelectorAll('img[data-src]').forEach(img => {
+        imageObserver.observe(img);
       });
     }
   }
-
-  getMetrics() {
-    return this.metrics;
+  
+  // Initialize when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+      measureWebVitals();
+      optimizeResourceLoading();
+    });
+  } else {
+    measureWebVitals();
+    optimizeResourceLoading();
   }
-
-  destroy() {
-    this.observers.forEach(observer => observer.disconnect());
-  }
-}
-
-// Initialize performance monitoring
-window.performanceMonitor = new PerformanceMonitor();
+})();

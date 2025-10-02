@@ -1,267 +1,213 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
-  const [reducedMotion, setReducedMotion] = useState(false);
-  const [highContrast, setHighContrast] = useState(false);
-  const [fontSize, setFontSize] = useState(1);
-
   useEffect(() => {
-    // Check for reduced motion preference
-    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-    setReducedMotion(mediaQuery.matches);
+    // Add accessibility enhancements
+    const enhanceAccessibility = () => {
+      // 1. Add ARIA landmarks
+      const main = document.querySelector('main');
+      if (main && !main.getAttribute('role')) {
+        main.setAttribute('role', 'main');
+      }
 
-    const handleChange = (e: MediaQueryListEvent) => {
-      setReducedMotion(e.matches);
+      const header = document.querySelector('header');
+      if (header && !header.getAttribute('role')) {
+        header.setAttribute('role', 'banner');
+      }
+
+      const footer = document.querySelector('footer');
+      if (footer && !footer.getAttribute('role')) {
+        footer.setAttribute('role', 'contentinfo');
+      }
+
+      // 2. Enhance navigation
+      const nav = document.querySelector('nav');
+      if (nav && !nav.getAttribute('role')) {
+        nav.setAttribute('role', 'navigation');
+        nav.setAttribute('aria-label', 'Main navigation');
+      }
+
+      // 3. Add focus management
+      const focusableElements = document.querySelectorAll(
+        'a[href], button, input, textarea, select, [tabindex]:not([tabindex="-1"])'
+      );
+
+      focusableElements.forEach((element) => {
+        if (!element.getAttribute('tabindex')) {
+          element.setAttribute('tabindex', '0');
+        }
+      });
+
+      // 4. Enhance form elements
+      const inputs = document.querySelectorAll('input, textarea, select');
+      inputs.forEach((input) => {
+        if (!input.getAttribute('aria-label') && !input.getAttribute('aria-labelledby')) {
+          const label = document.querySelector(`label[for="${input.id}"]`);
+          if (label) {
+            input.setAttribute('aria-labelledby', label.id || `label-${input.id}`);
+          }
+        }
+      });
+
+      // 5. Add keyboard navigation support
+      const addKeyboardSupport = () => {
+        // Escape key to close modals
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') {
+            const modals = document.querySelectorAll('[role="dialog"]');
+            modals.forEach((modal) => {
+              const closeButton = modal.querySelector('[aria-label*="close"], [aria-label*="Close"]');
+              if (closeButton) {
+                (closeButton as HTMLElement).click();
+              }
+            });
+          }
+        });
+
+        // Arrow keys for dropdown navigation
+        const dropdowns = document.querySelectorAll('[aria-haspopup="true"]');
+        dropdowns.forEach((dropdown) => {
+          dropdown.addEventListener('keydown', (e) => {
+            const menu = dropdown.nextElementSibling;
+            if (menu && menu.getAttribute('role') === 'menu') {
+              const menuItems = menu.querySelectorAll('[role="menuitem"]');
+              const currentIndex = Array.from(menuItems).indexOf(document.activeElement as Element);
+              
+              switch (e.key) {
+                case 'ArrowDown':
+                  e.preventDefault();
+                  const nextIndex = (currentIndex + 1) % menuItems.length;
+                  (menuItems[nextIndex] as HTMLElement).focus();
+                  break;
+                case 'ArrowUp':
+                  e.preventDefault();
+                  const prevIndex = currentIndex <= 0 ? menuItems.length - 1 : currentIndex - 1;
+                  (menuItems[prevIndex] as HTMLElement).focus();
+                  break;
+                case 'Home':
+                  e.preventDefault();
+                  (menuItems[0] as HTMLElement).focus();
+                  break;
+                case 'End':
+                  e.preventDefault();
+                  (menuItems[menuItems.length - 1] as HTMLElement).focus();
+                  break;
+              }
+            }
+          });
+        });
+      };
+
+      addKeyboardSupport();
+
+      // 6. Add screen reader announcements
+      const announceToScreenReader = (message: string) => {
+        const announcement = document.createElement('div');
+        announcement.setAttribute('aria-live', 'polite');
+        announcement.setAttribute('aria-atomic', 'true');
+        announcement.className = 'sr-only';
+        announcement.textContent = message;
+        document.body.appendChild(announcement);
+        
+        setTimeout(() => {
+          document.body.removeChild(announcement);
+        }, 1000);
+      };
+
+      // 7. Enhance color contrast
+      const enhanceColorContrast = () => {
+        const style = document.createElement('style');
+        style.textContent = `
+          /* High contrast mode support */
+          @media (prefers-contrast: high) {
+            :root {
+              --color-primary: #0000ff;
+              --color-secondary: #000000;
+              --color-text: #000000;
+              --color-background: #ffffff;
+            }
+            
+            button, a {
+              border: 2px solid currentColor;
+            }
+          }
+          
+          /* Reduced motion support */
+          @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+              animation-duration: 0.01ms !important;
+              animation-iteration-count: 1 !important;
+              transition-duration: 0.01ms !important;
+              scroll-behavior: auto !important;
+            }
+          }
+          
+          /* Focus indicators */
+          *:focus {
+            outline: 2px solid #3b82f6;
+            outline-offset: 2px;
+          }
+          
+          /* Skip link */
+          .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: #000;
+            color: #fff;
+            padding: 8px;
+            text-decoration: none;
+            z-index: 1000;
+          }
+          
+          .skip-link:focus {
+            top: 6px;
+          }
+          
+          /* Screen reader only content */
+          .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+          }
+        `;
+        document.head.appendChild(style);
+      };
+
+      enhanceColorContrast();
+
+      // 8. Add loading states
+      const addLoadingStates = () => {
+        const buttons = document.querySelectorAll('button[type="submit"], button[data-loading]');
+        buttons.forEach((button) => {
+          button.addEventListener('click', () => {
+            button.setAttribute('aria-busy', 'true');
+            button.setAttribute('disabled', 'true');
+            button.textContent = 'Loading...';
+          });
+        });
+      };
+
+      addLoadingStates();
     };
 
-    mediaQuery.addEventListener('change', handleChange);
+    // Run enhancements after a short delay to ensure DOM is ready
+    const timer = setTimeout(enhanceAccessibility, 100);
 
-    // Check for high contrast preference
-    const highContrastQuery = window.matchMedia('(prefers-contrast: high)');
-    setHighContrast(highContrastQuery.matches);
-
-    const handleContrastChange = (e: MediaQueryListEvent) => {
-      setHighContrast(e.matches);
-    };
-
-    highContrastQuery.addEventListener('change', handleContrastChange);
-
-    // Apply accessibility enhancements
-    applyAccessibilityEnhancements();
-
-    return () => {
-      mediaQuery.removeEventListener('change', handleChange);
-      highContrastQuery.removeEventListener('change', handleContrastChange);
-    };
+    return () => clearTimeout(timer);
   }, []);
 
-  const applyAccessibilityEnhancements = () => {
-    // Add skip navigation link
-    const skipLink = document.createElement('a');
-    skipLink.href = '#main-content';
-    skipLink.textContent = 'Skip to main content';
-    skipLink.className = 'skip-link';
-    skipLink.style.cssText = `
-      position: absolute;
-      top: -40px;
-      left: 6px;
-      background: #000;
-      color: #fff;
-      padding: 8px;
-      text-decoration: none;
-      z-index: 1000;
-      border-radius: 4px;
-    `;
-    
-    skipLink.addEventListener('focus', () => {
-      skipLink.style.top = '6px';
-    });
-    
-    skipLink.addEventListener('blur', () => {
-      skipLink.style.top = '-40px';
-    });
-
-    if (!document.querySelector('.skip-link')) {
-      document.body.insertBefore(skipLink, document.body.firstChild);
-    }
-
-    // Add focus indicators
-    const style = document.createElement('style');
-    style.textContent = `
-      *:focus {
-        outline: 2px solid #4A90E2 !important;
-        outline-offset: 2px !important;
-      }
-      
-      .skip-link:focus {
-        outline: 2px solid #fff !important;
-        outline-offset: 2px !important;
-      }
-      
-      ${reducedMotion ? `
-        *, *::before, *::after {
-          animation-duration: 0.01ms !important;
-          animation-iteration-count: 1 !important;
-          transition-duration: 0.01ms !important;
-        }
-      ` : ''}
-      
-      ${highContrast ? `
-        body {
-          filter: contrast(150%) !important;
-        }
-      ` : ''}
-    `;
-    
-    if (!document.querySelector('#accessibility-styles')) {
-      style.id = 'accessibility-styles';
-      document.head.appendChild(style);
-    }
-
-    // Add ARIA landmarks
-    const main = document.querySelector('main');
-    if (main && !main.getAttribute('role')) {
-      main.setAttribute('role', 'main');
-      main.id = 'main-content';
-    }
-
-    const nav = document.querySelector('nav');
-    if (nav && !nav.getAttribute('role')) {
-      nav.setAttribute('role', 'navigation');
-    }
-
-    const header = document.querySelector('header');
-    if (header && !header.getAttribute('role')) {
-      header.setAttribute('role', 'banner');
-    }
-
-    const footer = document.querySelector('footer');
-    if (footer && !footer.getAttribute('role')) {
-      footer.setAttribute('role', 'contentinfo');
-    }
-
-    // Add keyboard navigation support
-    document.addEventListener('keydown', handleKeyboardNavigation);
-  };
-
-  const handleKeyboardNavigation = (event: KeyboardEvent) => {
-    // Handle escape key for modals
-    if (event.key === 'Escape') {
-      const modal = document.querySelector('[role="dialog"]');
-      if (modal) {
-        const closeButton = modal.querySelector('[aria-label="Close"]') as HTMLElement;
-        if (closeButton) {
-          closeButton.focus();
-        }
-      }
-    }
-
-    // Handle arrow keys for custom components
-    if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
-      const focusedElement = document.activeElement;
-      if (focusedElement && focusedElement.getAttribute('role') === 'menuitem') {
-        event.preventDefault();
-        const menuItems = Array.from(document.querySelectorAll('[role="menuitem"]'));
-        const currentIndex = menuItems.indexOf(focusedElement);
-        const nextIndex = event.key === 'ArrowDown' 
-          ? Math.min(currentIndex + 1, menuItems.length - 1)
-          : Math.max(currentIndex - 1, 0);
-        
-        (menuItems[nextIndex] as HTMLElement)?.focus();
-      }
-    }
-  };
-
-  const increaseFontSize = () => {
-    setFontSize(prev => Math.min(prev + 0.1, 1.5));
-  };
-
-  const decreaseFontSize = () => {
-    setFontSize(prev => Math.max(prev - 0.1, 0.8));
-  };
-
-  const resetFontSize = () => {
-    setFontSize(1);
-  };
-
-  useEffect(() => {
-    document.documentElement.style.fontSize = `${fontSize}rem`;
-  }, [fontSize]);
-
-  return (
-    <>
-      {/* Accessibility Controls */}
-      <div 
-        className="accessibility-controls"
-        style={{
-          position: 'fixed',
-          top: '10px',
-          right: '10px',
-          zIndex: 1000,
-          background: 'rgba(0, 0, 0, 0.8)',
-          color: 'white',
-          padding: '10px',
-          borderRadius: '8px',
-          fontSize: '14px'
-        }}
-        role="region"
-        aria-label="Accessibility controls"
-      >
-        <h3 style={{ margin: '0 0 10px 0', fontSize: '16px' }}>Accessibility</h3>
-        <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-          <button
-            onClick={increaseFontSize}
-            aria-label="Increase font size"
-            style={{
-              background: '#4A90E2',
-              color: 'white',
-              border: 'none',
-              padding: '5px 10px',
-              borderRadius: '4px',
-              cursor: 'pointer'
-            }}
-          >
-            A+
-          </button>
-          <button
-            onClick={decreaseFontSize}
-            aria-label="Decrease font size"
-            style={{
-              background: '#4A90E2',
-              color: 'white',
-              border: 'none',
-              padding: '5px 10px',
-              borderRadius: '4px',
-              cursor: 'pointer'
-            }}
-          >
-            A-
-          </button>
-          <button
-            onClick={resetFontSize}
-            aria-label="Reset font size"
-            style={{
-              background: '#4A90E2',
-              color: 'white',
-              border: 'none',
-              padding: '5px 10px',
-              borderRadius: '4px',
-              cursor: 'pointer'
-            }}
-          >
-            Reset
-          </button>
-        </div>
-        <div style={{ marginTop: '10px', fontSize: '12px' }}>
-          <div>Reduced Motion: {reducedMotion ? 'On' : 'Off'}</div>
-          <div>High Contrast: {highContrast ? 'On' : 'Off'}</div>
-          <div>Font Size: {Math.round(fontSize * 100)}%</div>
-        </div>
-      </div>
-
-      {/* Screen Reader Only Content */}
-      <div className="sr-only" style={{
-        position: 'absolute',
-        width: '1px',
-        height: '1px',
-        padding: '0',
-        margin: '-1px',
-        overflow: 'hidden',
-        clip: 'rect(0, 0, 0, 0)',
-        whiteSpace: 'nowrap',
-        border: '0'
-      }}>
-        <h1>Zion Tech Group - Advanced AI and IT Solutions</h1>
-        <p>Leading provider of AI-powered IT solutions, enterprise automation, and cutting-edge technology services.</p>
-      </div>
-
-      {children}
-    </>
-  );
+  return <>{children}</>;
 };
 
 export default AccessibilityEnhancer;
