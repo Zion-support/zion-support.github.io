@@ -1,11 +1,5 @@
 import React from 'react';
 import { Brain, Atom, Bot, ArrowRight, Sparkles, TrendingUp, Star, Zap, Rocket, CheckCircle } from 'lucide-react';
-// Fallback: content module may be relocated; guard import
-let revolutionaryBreakthroughs2025: any[] = [];
-let breakthroughServices2025: any[] = [];
-let latestCaseStudies2025: any[] = [];
-// Content import disabled to avoid hard build failure if the source file moves.
-// Page gracefully renders with empty sections when content is unavailable.
 
 export default function RevolutionaryBreakthroughs2025() {
   const getIconComponent = (icon: string) => {
