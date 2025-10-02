@@ -98,14 +98,14 @@ export default function SitemapPage() {
   ];
 
   const mainPages = [
-    { name: 'Home', link: '/', icon: Home },
+    { name: 'Home', link: '/', icon: Globe },
     { name: 'About Us', link: '/about', icon: Users },
     { name: 'Services Overview', link: '/services', icon: Settings },
     { name: 'Contact', link: '/contact', icon: Phone },
     { name: 'Enterprise Solutions', link: '/enterprise', icon: Building },
     { name: 'Case Studies', link: '/case-studies', icon: FileText },
-    { name: 'Blog', link: '/blog', icon: FileText },
-    { name: 'Guides', link: '/guides', icon: Book },
+    { name: 'Blog', link: '/blog', icon: MessageSquare },
+    { name: 'Guides', link: '/guides', icon: FileText },
     { name: 'Privacy Policy', link: '/privacy', icon: Lock },
     { name: 'Terms of Service', link: '/terms', icon: FileText },
     { name: 'Security', link: '/security', icon: Shield }
