@@ -1,7 +1,7 @@
-const axios = require('axios');
-const cheerio = require('cheerio');
-const fs = require('fs');
-const path = require('path');
+import axios from 'axios';
+import * as cheerio from 'cheerio';
+import fs from 'fs';
+import path from 'path';
 
 class WebsiteLinkAnalyzer {
   constructor(baseUrl) {
@@ -269,8 +269,8 @@ async function main() {
 }
 
 // Run the analysis if this script is executed directly
-if (require.main === module) {
+if (import.meta.url === `file://${process.argv[1]}`) {
   main();
 }
 
-module.exports = { WebsiteLinkAnalyzer };
+export { WebsiteLinkAnalyzer };
