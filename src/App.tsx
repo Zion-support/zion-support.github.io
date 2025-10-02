@@ -27,6 +27,22 @@ const SitemapPage = React.lazy(() => import('./pages/Sitemap'));
 const CookiesPage = React.lazy(() => import('./pages/Cookies'));
 const AdditionalServicesPage = React.lazy(() => import('./pages/AdditionalServicesPage'));
 
+// Service-specific pages
+const AIServicesPage = React.lazy(() => import('./pages/services/AIServicesPage'));
+const MicroSAASPage = React.lazy(() => import('./pages/services/MicroSAASPage'));
+const ITServicesPage = React.lazy(() => import('./pages/services/ITServicesPage'));
+const RealTimeCognitiveAutomationPage = React.lazy(() => import('./pages/services/RealTimeCognitiveAutomationPage'));
+const QuantumComputingConsultingPage = React.lazy(() => import('./pages/services/QuantumComputingConsultingPage'));
+const CognitiveComputingTransformationPage = React.lazy(() => import('./pages/services/CognitiveComputingTransformationPage'));
+
+// Solution-specific pages
+const EnterpriseSolutionsPage = React.lazy(() => import('./pages/solutions/EnterpriseSolutionsPage'));
+const SMBSolutionsPage = React.lazy(() => import('./pages/solutions/SMBSolutionsPage'));
+const StartupSolutionsPage = React.lazy(() => import('./pages/solutions/StartupSolutionsPage'));
+
+// Additional pages
+const DocumentationPage = React.lazy(() => import('./pages/DocumentationPage'));
+
 // 404 Page
 const NotFoundPage = () => (
   <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -47,43 +63,57 @@ const App: React.FC = () => {
         <PerformanceOptimizer>
           <AccessibilityEnhancer>
             <SEOOptimizer>
-          <Router>
-            <div className="min-h-screen bg-gray-50 flex flex-col">
-              <Header />
-              
-              <main className="flex-1">
-                <Suspense fallback={<LoadingSpinner size="lg" className="min-h-screen" />}>
-                  <Routes>
-                    {/* Main Routes */}
-                    <Route path="/" element={<HomePage />} />
-                    <Route path="/services" element={<ServicesPage />} />
-                    <Route path="/solutions" element={<SolutionsPage />} />
-                    <Route path="/about" element={<AboutPage />} />
-                    <Route path="/contact" element={<ContactPage />} />
-                    <Route path="/blog" element={<BlogPage />} />
-                    <Route path="/case-studies" element={<CaseStudiesPage />} />
-                    <Route path="/resources" element={<ResourcesPage />} />
-                    <Route path="/team" element={<TeamPage />} />
-                    <Route path="/support" element={<SupportPage />} />
-                    
-                    {/* Legal Pages */}
-                    <Route path="/privacy" element={<PrivacyPage />} />
-                    <Route path="/terms" element={<TermsPage />} />
-                    <Route path="/cookies" element={<CookiesPage />} />
-                    <Route path="/sitemap" element={<SitemapPage />} />
-                    
-                    {/* Additional Services */}
-                    <Route path="/additional-services" element={<AdditionalServicesPage />} />
-                    
-                    {/* 404 Route */}
-                    <Route path="*" element={<NotFoundPage />} />
-                  </Routes>
-                </Suspense>
-              </main>
-              
-              <Footer />
-            </div>
-          </Router>
+              <Router>
+                <div className="min-h-screen bg-gray-50 flex flex-col">
+                  <Header />
+                  
+                  <main className="flex-1">
+                    <Suspense fallback={<LoadingSpinner size="lg" className="min-h-screen" />}>
+                      <Routes>
+                        {/* Main Routes */}
+                        <Route path="/" element={<HomePage />} />
+                        <Route path="/services" element={<ServicesPage />} />
+                        <Route path="/solutions" element={<SolutionsPage />} />
+                        <Route path="/about" element={<AboutPage />} />
+                        <Route path="/contact" element={<ContactPage />} />
+                        <Route path="/blog" element={<BlogPage />} />
+                        <Route path="/case-studies" element={<CaseStudiesPage />} />
+                        <Route path="/resources" element={<ResourcesPage />} />
+                        <Route path="/team" element={<TeamPage />} />
+                        <Route path="/support" element={<SupportPage />} />
+                        <Route path="/documentation" element={<DocumentationPage />} />
+                        
+                        {/* Service-specific Routes */}
+                        <Route path="/services/ai-services" element={<AIServicesPage />} />
+                        <Route path="/services/micro-saas" element={<MicroSAASPage />} />
+                        <Route path="/services/it-services" element={<ITServicesPage />} />
+                        <Route path="/services/real-time-cognitive-automation" element={<RealTimeCognitiveAutomationPage />} />
+                        <Route path="/services/quantum-computing-consulting" element={<QuantumComputingConsultingPage />} />
+                        <Route path="/services/cognitive-computing-transformation" element={<CognitiveComputingTransformationPage />} />
+                        
+                        {/* Solution-specific Routes */}
+                        <Route path="/solutions/enterprise" element={<EnterpriseSolutionsPage />} />
+                        <Route path="/solutions/smb" element={<SMBSolutionsPage />} />
+                        <Route path="/solutions/startup" element={<StartupSolutionsPage />} />
+                        
+                        {/* Legal Pages */}
+                        <Route path="/privacy" element={<PrivacyPage />} />
+                        <Route path="/terms" element={<TermsPage />} />
+                        <Route path="/cookies" element={<CookiesPage />} />
+                        <Route path="/sitemap" element={<SitemapPage />} />
+                        
+                        {/* Additional Services */}
+                        <Route path="/additional-services" element={<AdditionalServicesPage />} />
+                        
+                        {/* 404 Route */}
+                        <Route path="*" element={<NotFoundPage />} />
+                      </Routes>
+                    </Suspense>
+                  </main>
+                  
+                  <Footer />
+                </div>
+              </Router>
             </SEOOptimizer>
           </AccessibilityEnhancer>
         </PerformanceOptimizer>
