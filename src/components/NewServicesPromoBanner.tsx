@@ -1,7 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Rocket, Star, Zap } from 'lucide-react';
-import { newServices2026 } from '../content/new-services-2026';
 
 interface NewServicesPromoBannerProps {
   variant?: 'default' | 'showcase' | 'premium' | 'grid';

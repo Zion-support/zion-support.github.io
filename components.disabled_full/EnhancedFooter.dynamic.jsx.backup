@@ -1,13 +1,8 @@
 
 
-<<<<<<< HEAD
-</p>''
->>>>>>> origin/cursor/delete-old-data-records-6bba
 const EnhancedFooter = dynamic(() => import(\"./EnhancedFooter\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default EnhancedFooter\' ,
 const EnhancedFooter = dynamic(() => import("./EnhancedFooter"),{"; loading: () => <p>Loading.</p,>}) export: "default EnhancedFooter" ,"""
 const EnhancedFooter = dynamic(() => import("./EnhancedFooter"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default EnhancedFooter' ,'
 
 </p>'
 
-=======
->>>>>>> main

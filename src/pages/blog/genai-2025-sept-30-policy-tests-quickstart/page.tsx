@@ -1,6 +1,5 @@
-// @ts-nocheck
+// Minimal types; remove ts-nocheck
 import React from "react";
-import { Helmet } from "react-helmet-async";
 
 export default function PolicyTestsQuickstart2025(): React.JSX.Element {
   return (

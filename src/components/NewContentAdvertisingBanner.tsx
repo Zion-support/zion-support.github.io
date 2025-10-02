@@ -1,45 +1,80 @@
 import React from 'react';
-import { ArrowRight, Sparkles, TrendingUp, Zap, Star, Users, Award, Target } from 'lucide-react';
+
+interface FeaturedContent {
+  id: number;
+  title: string;
+  category: string;
+  readTime: string;
+  rating: number;
+  readers: string;
+  badge: string;
+  gradient: string;
+  icon: React.ReactNode;
+  link: string;
+}
 
 const NewContentAdvertisingBanner: React.FC = () => {
-  const featuredContent = [
+  const featuredContent: FeaturedContent[] = [
+    {
+      id: 0,
+      title: 'Governed Agent Rollbacks',
+      category: 'AI Operations',
+      readTime: '7 min',
+      rating: 5.0,
+      readers: '25K+',
+      badge: 'NEW',
+      gradient: 'from-pink-500 to-red-500',
+      icon: <Sparkles className="w-6 h-6" />,
+      link: '/blog/ai-2025-oct-03-governed-agent-rollbacks'
+    },
+    {
+      id: 7,
+      title: 'Consentless Personalization (Edge)',
+      category: 'Edge Computing',
+      readTime: '6 min',
+      rating: 4.9,
+      readers: '19K+',
+      badge: 'FEATURED',
+      gradient: 'from-teal-500 to-cyan-500',
+      icon: <TrendingUp className="w-6 h-6" />,
+      link: '/blog/edge-2025-oct-02-consentless-personalization-blueprint'
+    },
     {
       id: 1,
-      title: 'AI 2025: Platform ROI Scorecards',
-      category: 'Platform Engineering',
+      title: 'AI 2027: Operational Trust Blueprint',
+      category: 'AI Strategy',
       readTime: '8 min',
       rating: 4.9,
-      readers: '75K+',
+      readers: '58K+',
       badge: 'NEW',
       gradient: 'from-blue-500 to-purple-500',
       icon: <Star className="w-6 h-6" />,
-      link: '/blog/ai-2025-sept-30-platform-roi-scorecards'
+      link: '/blog/ai-2027-operational-trust-blueprint'
     },
     {
       id: 2,
-      title: 'Edge 2025: Consentless Experiments v3',
-      category: 'Analytics',
+      title: 'Edge 2026: Private Feature Flags',
+      category: 'Architecture',
       readTime: '7 min',
-      rating: 4.9,
-      readers: '52K+',
-      badge: 'NEW',
+      rating: 4.8,
+      readers: '41K+',
+      badge: 'TRENDING',
       gradient: 'from-cyan-500 to-blue-500',
       icon: <TrendingUp className="w-6 h-6" />,
-      link: '/blog/edge-2025-sept-30-consentless-experiments-v3'
+      link: '/blog/edge-2026-private-feature-flags'
     },
     {
       id: 3,
-      title: 'GenAI 2025: Eval & Policy Blueprints',
-      category: 'AI Governance',
-      readTime: '10 min',
-      rating: 5.0,
-      readers: '60K+',
+      title: 'GenAI Quality Tiers v2 (2026)',
+      category: 'GenAI',
+      readTime: '8 min',
+      rating: 4.9,
+      readers: '47K+',
       badge: 'FEATURED',
       gradient: 'from-green-500 to-emerald-500',
       icon: <Award className="w-6 h-6" />,
-      link: '/blog/genai-2025-sept-30-eval-policy-blueprints'
-    },
-    
+      link: '/blog/genai-quality-tiers-v2-2026'
+    }
   ];
 
   const achievements = [
@@ -152,7 +187,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
 
                 {/* CTA Button */}
                 <a
-                  href={(content as any).link || '/blog'}
+                  href={content.link || '/blog'}
                   className={`group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r ${content.gradient} hover:opacity-90 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1`}
                 >
                   <span>Read Now</span>

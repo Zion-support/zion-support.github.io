@@ -2,45 +2,52 @@
 
 const promoted = [
   {
-<<<<<<< HEAD
-    href: '/blog/ai-2025-october-01-executive-ai-roadmap',
-    title: 'Executive AI Roadmap — October 2025',
-    desc: 'A 90‑day plan to ship reliable AI with guardrails, scorecards, and budgets.',
-    emoji: '🧭',
-    pill: 'New • Oct 1, 2025',
+    href: '/blog/ai-2026-hyperintelligence-breakthrough',
+    title: 'AI 2026: Hyperintelligence Breakthrough',
+    desc: 'Revolutionary cognitive enhancement achieving 10,000x performance with sub-millisecond decision-making.',
+    emoji: '🧠',
+    pill: 'BREAKTHROUGH • Jan 25, 2026',
+    theme: 'from-purple-600 to-pink-600',
+  },
+  {
+    href: '/blog/ai-2025-edge-intelligence-revolution',
+    title: 'AI 2025: The Edge Intelligence Revolution',
+    desc: 'Real-time AI at planet scale: <10ms latency, 65% bandwidth savings, 45% SLA gains.',
+    emoji: '🌐',
+    pill: 'NEW • Oct 1, 2025',
     theme: 'from-indigo-600 to-sky-600',
   },
   {
-    href: '/blog/ai-2025-sept-30-autonomous-risk-budgets-v2',
-    title: 'Autonomous Risk Budgets V2',
-    desc: 'Dynamic guardrails and live scorecards that cut incidents by 80%.',
-    emoji: '🛡️',
-    pill: 'Sep 30, 2025',
-    theme: 'from-rose-600 to-amber-600',
-=======
-    href: '/blog/ai-2025-september-30-new-governed-agent-patterns',
-    title: 'New Governed Agent Patterns',
-    desc: 'Approvals, verifiers, budgets, and rollback for safe autonomy.',
-    emoji: '🛡️',
-    pill: 'New • Sep 30, 2025',
-    theme: 'from-indigo-600 to-sky-600',
+    href: '/case-studies/hyperintelligence-mega-success-2026',
+    title: 'Hyperintelligence Mega Success 2026',
+    desc: 'How a Fortune 500 company achieved $3.2B ROI through revolutionary AI hyperintelligence transformation.',
+    emoji: '🏆',
+    pill: 'MEGA SUCCESS • Jan 26, 2026',
+    theme: 'from-green-600 to-emerald-600',
   },
   {
-    href: '/blog/ai-2025-september-30-autonomous-finops-scorecards',
-    title: 'Autonomous FinOps Scorecards',
-    desc: 'KPI-linked budgets and routing that prevent cost regressions.',
-    emoji: '📊',
-    pill: 'New • Sep 30, 2025',
-    theme: 'from-emerald-600 to-teal-600',
+    href: '/blog/ai-2026-neural-architecture-search-breakthrough',
+    title: 'Neural Architecture Search 2026',
+    desc: 'Revolutionary NAS algorithms that design optimal neural architectures 1000x faster than humans.',
+    emoji: '🔬',
+    pill: 'New • Jan 15, 2026',
+    theme: 'from-cyan-600 to-blue-600',
   },
   {
-    href: '/blog/ai-2025-september-30-enterprise-ai-roadmap',
-    title: 'Enterprise AI Roadmap',
-    desc: 'Plan, fund, and govern AI with measurable outcomes.',
-    emoji: '🗺️',
-    pill: 'New • Sep 30, 2025',
-    theme: 'from-fuchsia-600 to-purple-600',
->>>>>>> feat/sept-30-content-promo
+    href: '/guides/ai-2025-executive-edge-ai-deployment-guide',
+    title: 'Executive Guide: Deploying Edge AI (90-Day Blueprint)',
+    desc: 'Phased plan for secure, low-latency edge AI with OTA, MLOps, and ROI tracking.',
+    emoji: '📘',
+    pill: 'GUIDE • Oct 1, 2025',
+    theme: 'from-amber-600 to-orange-600',
+  },
+  {
+    href: '/services/ai-2026-hyperintelligence-breakthrough',
+    title: 'AI Hyperintelligence Services',
+    desc: 'Transform your enterprise with revolutionary AI achieving consciousness-level reasoning and autonomous operations.',
+    emoji: '🚀',
+    pill: 'NEW SERVICE • Jan 25, 2026',
+    theme: 'from-orange-600 to-red-600',
   },
 ];
 
@@ -59,7 +66,7 @@ export default function UnifiedContentPromotion() {
         <div className="grid md:grid-cols-2 gap-6">
           {promoted.map((c) => (
             <a key={c.href} href={c.href} className="group">
-              <div className={`rounded-2xl overflow-hidden border border-white/10 bg-gradient-to-r ${c.theme} p-[1px]`}> 
+              <div className={`rounded-2xl overflow-hidden border border-white/10 bg-gradient-to-r ${c.theme} p-[1px]`}>
                 <div className="bg-slate-900 rounded-2xl p-6 h-full">
                   <div className="flex items-center justify-between mb-4">
                     <div className="text-3xl">{c.emoji}</div>

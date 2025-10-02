@@ -1,5 +1,4 @@
 import React from 'react';
-import { ArrowRight, Sparkles, TrendingUp, Zap, Brain, Target, Users, Award, Clock, Globe, Rocket } from 'lucide-react';
 
 const AITrendsInsightsBanner2026: React.FC = () => {
   const trendingTopics = [

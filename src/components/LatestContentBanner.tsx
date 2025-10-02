@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Sparkles, TrendingUp } from 'lucide-react';
 
 interface LatestContentBannerProps {
   variant?: 'info' | 'success' | 'warning';
@@ -26,16 +24,20 @@ const LatestContentBanner: React.FC<LatestContentBannerProps> = ({
           <div className="flex items-center gap-3">
             <Sparkles className="w-6 h-6 animate-pulse" />
             <div>
-              <h3 className="font-bold text-lg">🔥 New: Governed Agent Runbooks · Edge Rate Limiter Blueprint</h3>
-              <p className="text-sm opacity-90">Budgets, KPI canaries, rollback for agents + zero‑PII rate limiting at &lt;100ms. Explore the latest →</p>
+              <h3 className="font-bold text-lg">
+                🔥 New Today: Runtime Scorecards · Edge A/B &lt;100ms · Agent Guardrails v2
+              </h3>
+              <p className="text-sm opacity-90">
+                Now live: 3 new guides + dozens of updated insights
+              </p>
             </div>
           </div>
           <Link
-            to="/blog/ai-2026-governed-agent-runbooks"
+            to="/blog"
             className="bg-white text-gray-900 px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-all flex items-center gap-2 flex-shrink-0"
           >
             <TrendingUp className="w-4 h-4" />
-            Read Now
+            Explore Now
           </Link>
         </div>
       </div>

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { 
   TrendingUp, 
   ArrowRight, 
@@ -9,7 +8,6 @@ import {
   BookOpen,
   Zap,
   Brain,
-  Cloud,
   Shield
 } from 'lucide-react';
 
@@ -18,54 +16,34 @@ const TrendingContentBanner: React.FC = () => {
 
   const trendingItems = [
     {
-      title: "AI Executive Playbook 2027",
-      description: "Exec roadmap: KPI scorecards, budgets, and governance.",
-      views: "14.8K",
-      readTime: "12 min",
-      category: "AI Strategy",
-      icon: Brain,
-      link: "/blog/ai-executive-playbook-2027",
-      badge: "NEW"
-    },
-    {
-      title: "AI 2027 Cost Optimization",
-      description: "Quality tiers + semantic caches for predictable spend.",
-      views: "13.6K",
-      readTime: "9 min",
+      title: "AI Disaster Recovery Playbooks",
+      description: "Failovers, warm pools, and rollback drills under 60 minutes.",
+      views: "11.2K",
+      readTime: "7 min",
       category: "AI Operations",
       icon: TrendingUp,
-      link: "/blog/ai-2027-cost-optimization-playbook",
-      badge: "HOT"
-    },
-    {
-      title: "Edge Private Feature Flags 2026",
-      description: "Signed configs, scoped IDs, on‑device telemetry <100ms.",
-      views: "11.9K",
-      readTime: "8 min",
-      category: "Architecture",
-      icon: Zap,
-      link: "/blog/edge-2026-private-feature-flags",
-      badge: "TRENDING"
-    },
-    {
-      title: "Edge Rate Limiter 2026",
-      description: "Global token buckets with KV and consistent hashing under 10ms.",
-      views: "13.2K",
-      readTime: "7 min",
-      category: "Architecture",
-      icon: Zap,
-      link: "/blog/edge-rate-limiter-blueprint-2026",
+      link: "/blog/ai-disaster-recovery-playbooks-2025",
       badge: "NEW"
     },
     {
-      title: "Agent Red‑Teaming 2026",
-      description: "Simulation labs: jailbreak corpora, tool fuzzers, KPI‑linked budgets.",
-      views: "12.7K",
+      title: "Private Feature Flags: Zero‑PII Experiments",
+      description: "Signed configs, scoped IDs, and edge analytics under 100ms.",
+      views: "13.6K",
       readTime: "8 min",
-      category: "AI Security",
+      category: "Experimentation",
       icon: Shield,
-      link: "/blog/agent-red-teaming-2026",
-      badge: "HOT"
+      link: "/blog/ai-2025-oct-01-private-feature-flags-zero-pii",
+      badge: "NEW"
+    },
+    {
+      title: "Runtime Rollback Guardrails",
+      description: "Canary scorecards, kill switches, and instant reversibility.",
+      views: "12.1K",
+      readTime: "7 min",
+      category: "Reliability",
+      icon: TrendingUp,
+      link: "/blog/ai-2025-oct-01-runtime-rollback-guardrails",
+      badge: "TRENDING"
     },
     {
       title: "AI Autonomous Infrastructure 2026",
@@ -76,16 +54,6 @@ const TrendingContentBanner: React.FC = () => {
       icon: TrendingUp,
       link: "/blog/ai-autonomous-infrastructure-2026",
       badge: "HOT"
-    },
-    {
-      title: "Zero‑Trust for GenAI 2026",
-      description: "Prompt firewalls, egress, signed outputs for safe GenAI.",
-      views: "11.8K",
-      readTime: "8 min",
-      category: "Security",
-      icon: Shield,
-      link: "/blog/zero-trust-for-genai-2026",
-      badge: "NEW"
     },
     {
       title: "Zero‑Trust for GenAI 2026",
@@ -116,6 +84,16 @@ const TrendingContentBanner: React.FC = () => {
       icon: Zap,
       link: "/blog/edge-llm-caching-blueprint-2026",
       badge: "POPULAR"
+    },
+    {
+      title: "GenAI Data Governance Quickstart",
+      description: "Policy tests, lineage, consent scopes, and KPI‑linked checks.",
+      views: "9.8K",
+      readTime: "6 min",
+      category: "AI Governance",
+      icon: Shield,
+      link: "/blog/genai-data-governance-quickstart-2025",
+      badge: "HOT"
     }
   ];
 

@@ -1,13 +1,8 @@
 
 
-<<<<<<< HEAD
-</p>''
->>>>>>> origin/cursor/delete-old-data-records-6bba
 const AnalyticsTracker = dynamic(() => import(\"./AnalyticsTracker\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default AnalyticsTracker\' ,
 const AnalyticsTracker = dynamic(() => import("./AnalyticsTracker"),{"; loading: () => <p>Loading.</p,>}) export: "default AnalyticsTracker" ,"""
 const AnalyticsTracker = dynamic(() => import("./AnalyticsTracker"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default AnalyticsTracker' ,'
 
 </p>'
 
-=======
->>>>>>> main
