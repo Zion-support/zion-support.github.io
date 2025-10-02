@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useCallback, useMemo } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { Menu, X, ChevronDown, Zap, Phone } from 'lucide-react';
 
 <<<<<<< HEAD
 const ModernHeader: React.FC = () => {
@@ -7,11 +8,11 @@ const ModernHeader: React.FC = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const location = useLocation();
 
-  const toggleDropdown = (dropdown: string) => {
+  const toggleDropdown = useCallback((dropdown: string) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
-  };
+  }, [activeDropdown]);
 
-  const isActive = (path: string) => location.pathname === path;
+  const isActive = useCallback((path: string) => location.pathname === path, [location.pathname]);
 
   const navigationItems = [
     {
