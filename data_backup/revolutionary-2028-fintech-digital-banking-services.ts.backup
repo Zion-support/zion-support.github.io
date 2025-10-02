@@ -1,4 +1,0 @@
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;

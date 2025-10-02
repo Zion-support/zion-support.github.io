@@ -31,8 +31,8 @@ export default defineConfig({
         preset: 'smallest'
       },
       output: {
-        // Simplified chunk splitting for better caching
         manualChunks: (id) => {
+          // Vendor chunks
           if (id.includes('node_modules')) {
             // Group React-related packages
             if (id.includes('react') || id.includes('react-dom')) {
@@ -46,17 +46,25 @@ export default defineConfig({
             if (id.includes('clsx') || id.includes('tailwind-merge') || id.includes('axios')) {
               return 'vendor-utils';
             }
-            // All other vendor packages
+            if (id.includes('axios')) {
+              return 'vendor-http';
+            }
             return 'vendor';
           }
-          // App code chunks
-          if (id.includes('components/')) {
+          // App chunks
+          if (id.includes('src/pages/')) {
+            return 'pages';
+          }
+          if (id.includes('src/components/')) {
             return 'components';
           }
-          if (id.includes('app/')) {
-            return 'app';
+          if (id.includes('src/utils/')) {
+            return 'utils';
           }
-          return 'main';
+          if (id.includes('src/hooks/')) {
+            return 'hooks';
+          }
+          return 'app';
         },
         chunkFileNames: 'assets/js/[name]-[hash].js',
         entryFileNames: 'assets/js/main-[hash].js',
@@ -70,8 +78,7 @@ export default defineConfig({
         },
       },
     },
-    // Optimize chunk size
-    chunkSizeWarningLimit: 500,
+    chunkSizeWarningLimit: 1000,
     terserOptions: {
       compress: {
         drop_console: true,
