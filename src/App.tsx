@@ -11,7 +11,7 @@ import PerformanceMonitor from './components/PerformanceMonitor';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import EnhancedSEOHead from './components/EnhancedSEOHead';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import HomePage from './pages/HomePage';
+import Home from './pages/Home';
 
 // Types and interfaces
 interface Notification {
@@ -163,7 +163,7 @@ const ContactPage = () => (
 // App Router Component
 const AppRouter = () => (
   <Routes>
-    <Route path="/" element={<HomePage />} />
+    <Route path="/" element={<Home />} />
     <Route path="/services" element={<ServicesPage />} />
     <Route path="/case-studies" element={<CaseStudiesPage />} />
     <Route path="/blog" element={<BlogPage />} />

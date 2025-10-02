@@ -7,6 +7,14 @@ export default defineConfig({
   plugins: [
     react({
       jsxRuntime: 'automatic',
+      babel: {
+        plugins: [
+          // Remove console logs in production
+          ...(process.env.NODE_ENV === 'production' ? [
+            ['transform-remove-console', { exclude: ['error', 'warn'] }]
+          ] : [])
+        ]
+      }
     }),
   ],
   resolve: {
