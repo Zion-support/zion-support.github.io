@@ -141,9 +141,16 @@ const Solutions: React.FC = () => {
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </div>
+<<<<<<< HEAD
+        {/* end CTA container */}
+      </section>
+    </div>
+    </>
+=======
         </section>
       </div>
       </>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-627b
   );
 };
 

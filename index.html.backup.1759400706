@@ -1,5 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zion Tech Group - AI & IT Solutions</title>
+    <meta name="description" content="Leading AI and IT solutions provider. Transform your business with cutting-edge technology, automation, and expert consulting services." />
+  </head>
+=======
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -79,6 +88,7 @@
 		}
 		</script>
 	</head>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-627b
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>

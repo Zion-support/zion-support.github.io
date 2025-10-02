@@ -148,10 +148,16 @@ const Support: React.FC = () => {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            {/* Category Filter */}
+=======
 
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">
           {/* Category Filter */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-627b
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               <button
                 onClick={() => setSelectedCategory('all')}

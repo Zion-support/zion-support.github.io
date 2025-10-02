@@ -73,14 +73,37 @@ const App: React.FC = () => {
 
   return (
     <HelmetProvider>
-      <SEO />
-      <PerformanceOptimizer />
-      <ErrorBoundary>
-        <Router>
-          <div className="min-h-screen bg-white">
+      <Router>
+        <div className="min-h-screen bg-gray-50">
+          <SEOHead />
+          <EnhancedErrorBoundary>
             <Header />
-            
-            <React.Suspense fallback={<LoadingSpinner />}>
+
+            {/* Dynamic Banner System */}
+            <motion.div
+              initial="initial"
+              animate="in"
+              exit="out"
+              variants={pageVariants}
+              transition={pageTransition}
+              className="relative"
+            >
+              <BannerManager
+                banners={bannerData}
+                rotationInterval={8000}
+                maxVisibleBanners={3}
+              />
+            </motion.div>
+
+            {/* Main Content */}
+            <motion.main
+              initial="initial"
+              animate="in"
+              exit="out"
+              variants={pageVariants}
+              transition={pageTransition}
+              className="relative z-10"
+            >
               <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/about" element={<AboutPage />} />
@@ -89,29 +112,35 @@ const App: React.FC = () => {
                 <Route path="/solutions/*" element={<SolutionsPage />} />
                 <Route path="/blog/*" element={<BlogPage />} />
                 <Route path="/case-studies" element={<CaseStudiesPage />} />
-                
+
+                {/* Blog Routes */}
+                <Route path="/blog/:slug" element={<BlogPage />} />
+
                 {/* 404 Fallback */}
-                <Route path="*" element={
-                  <div className="min-h-screen flex items-center justify-center bg-gray-50">
-                    <div className="text-center">
-                      <h1 className="text-6xl font-bold text-gray-300 mb-4">404</h1>
-                      <p className="text-xl text-gray-600 mb-8">Page not found</p>
-                      <a 
-                        href="/" 
-                        className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
-                      >
-                        Return Home
-                      </a>
+                <Route
+                  path="*"
+                  element={
+                    <div className="min-h-screen flex items-center justify-center">
+                      <div className="text-center">
+                        <h1 className="text-6xl font-bold text-gray-300 mb-4">404</h1>
+                        <p className="text-xl text-gray-600 mb-8">Page not found</p>
+                        <a
+                          href="/"
+                          className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+                        >
+                          Return Home
+                        </a>
+                      </div>
                     </div>
-                  </div>
-                } />
+                  }
+                />
               </Routes>
             </React.Suspense>
 
             <Footer />
-          </div>
-        </Router>
-      </ErrorBoundary>
+          </EnhancedErrorBoundary>
+        </div>
+      </Router>
     </HelmetProvider>
   );
 };
