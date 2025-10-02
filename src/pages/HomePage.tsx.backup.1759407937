@@ -1,9 +1,16 @@
 import React from 'react';
+<<<<<<< HEAD
+import SEO from '../components/SEO';
+import {
+
+} from '../components/LazyLoader';
+=======
 import { Helmet } from 'react-helmet-async';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStoriesShowcase from '../components/SuccessStoriesShowcase';
 import LatestInsights from '../components/LatestInsights';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-ea70
 
 const HomePage: React.FC = () => {
   return (

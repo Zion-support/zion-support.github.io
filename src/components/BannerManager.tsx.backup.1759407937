@@ -3,6 +3,28 @@ import {
 
 } from 'framer-motion';
 
+<<<<<<< HEAD
+interface BannerData {
+id: string;
+title: string;
+subtitle?: string;
+description: string;
+ctaText: string;
+ctaLink: string;
+imageUrl?: string;
+category: string;
+priority: number;
+isActive: boolean;
+startDate?: string;
+endDate?: string;
+}
+
+interface BannerManagerProps {
+banners: BannerData[];
+rotationInterval?: number;
+maxVisibleBanners?: number;
+}
+=======
 interface Banner {
   id: string;
   title: string;
@@ -16,6 +38,7 @@ interface Banner {
 const BannerManager: React.FC = () => {
   const [currentBannerIndex, setCurrentBannerIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-ea70
 
   const banners: Banner[] = [
     {

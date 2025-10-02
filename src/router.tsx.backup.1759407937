@@ -1,6 +1,14 @@
+<<<<<<< HEAD
+import React, { Suspense, lazy } from 'react';
+import {
+
+} from 'react-router-dom';
+import Loading from './components/Loading';
+=======
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-ea70
 
 // Pages
 import HomePage from './pages/HomePage';
