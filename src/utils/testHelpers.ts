@@ -60,110 +60,96 @@ export const waitForElement = async (
   selector: string,
   timeout = 5000,
 ): Promise<Element> => {
-  return new Promise((resolve, reject) => {
-    const startTime = Date.now();
-    
-    const checkElement = () => {
-      const element = document.querySelector(selector);
-      if (element) {
-        resolve(element);
-        return;
-      }
-      
-      if (Date.now() - startTime > timeout) {
-        reject(new Error(`Element ${selector} not found after ${timeout}ms`));
-        return;
-      }
-      
-      setTimeout(checkElement, 50);
-    };
-    
-    checkElement();
+  await waitFor(() => !!document.querySelector(selector), timeout);
+  return document.querySelector(selector)!;
+};
+
+/**
+ * Wait for element to disappear from DOM
+ */
+export const waitForElementToBeRemoved = async (
+  selector: string,
+  timeout = 5000,
+): Promise<void> => {
+  await waitFor(() => !document.querySelector(selector), timeout);
+};
+
+/**
+ * Simulate user click
+ */
+export const click = (element: Element): void => {
+  const clickEvent = new MouseEvent('click', {
+    bubbles: true,
+    cancelable: true,
+    view: window
   });
+  element.dispatchEvent(clickEvent);
 };
 
 /**
- * Mock localStorage for testing
+ * Simulate user typing
  */
-export const mockLocalStorage = () => {
-  const store: Record<string, string> = {};
+export const type = (element: HTMLInputElement | HTMLTextAreaElement, text: string): void => {
+  element.focus();
+  element.value = text;
+  const inputEvent = new Event('input', {
+    bubbles: true,
+    cancelable: true,
+  });
+  element.dispatchEvent(inputEvent);
   
-  return {
-    getItem: jest.fn((key: string) => store[key] || null),
-    setItem: jest.fn((key: string, value: string) => {
-      store[key] = value;
-    }),
-    removeItem: jest.fn((key: string) => {
-      delete store[key];
-    }),
-    clear: jest.fn(() => {
-      Object.keys(store).forEach(key => delete store[key]);
-    }),
-    length: Object.keys(store).length,
-    key: jest.fn((index: number) => Object.keys(store)[index] || null),
-  };
+  const changeEvent = new Event('change', {
+    bubbles: true,
+    cancelable: true,
+  });
+  element.dispatchEvent(changeEvent);
 };
 
 /**
- * Mock sessionStorage for testing
+
+/**
+ * Mock console methods
  */
-export const mockSessionStorage = () => {
-  const store: Record<string, string> = {};
+  }
   
-  return {
-    getItem: jest.fn((key: string) => store[key] || null),
-    setItem: jest.fn((key: string, value: string) => {
-      store[key] = value;
-    }),
-    removeItem: jest.fn((key: string) => {
-      delete store[key];
-    }),
-    clear: jest.fn(() => {
-      Object.keys(store).forEach(key => delete store[key]);
-    }),
-    length: Object.keys(store).length,
-    key: jest.fn((index: number) => Object.keys(store)[index] || null),
-  };
+  if (options.mockFetch) {
+    mockFetch({});
+  }
+  
+  if (options.mockConsole) {
+    mockConsole();
+  }
 };
 
 /**
- * Mock fetch for testing
+ * Generate mock data
  */
-export const mockFetch = (response: any, status = 200) => {
-  global.fetch = jest.fn(() =>
-    Promise.resolve({
-      ok: status >= 200 && status < 300,
-      status,
-      json: () => Promise.resolve(response),
-      text: () => Promise.resolve(JSON.stringify(response)),
-      headers: new Headers(),
-    } as Response)
-  );
+export const generateMockData = {
+  string: (length = 10): string => {
+  object: <T extends Record<string, any>>(schema: { [K in keyof T]: () => T[K] }): T => {
+    const result = {} as T;
+    Object.keys(schema).forEach(key => {
+      result[key as keyof T] = schema[key as keyof T]();
+    });
+    return result;
+  }
 };
 
 /**
  * Performance measurement utility
  */
-export class PerformanceMeasurer {
-  private measurements: Map<string, number[]> = new Map();
-  
   start(label: string): void {
     performance.mark(`${label}-start`);
   }
-  
-  end(label: string): number {
-    performance.mark(`${label}-end`);
-    performance.measure(label, `${label}-start`, `${label}-end`);
-    
-    const measure = performance.getEntriesByName(label, 'measure')[0];
-    const duration = measure.duration;
-    
     if (!this.measurements.has(label)) {
       this.measurements.set(label, []);
     }
     this.measurements.get(label)!.push(duration);
     
     return duration;
+  }
+    }
+    return measurements.reduce((sum, time) => sum + time, 0) / measurements.length;
   }
   
   getResults(): Record<string, { average: number; count: number; total: number }> {
@@ -191,7 +177,43 @@ export class PerformanceMeasurer {
 /**
  * Accessibility testing helpers
  */
-export const accessibilityHelpers = {
+    
+    interactiveElements.forEach(element => {
+      const hasAriaLabel = element.hasAttribute('aria-label');
+      const hasAriaLabelledBy = element.hasAttribute('aria-labelledby');
+      const hasTextContent = element.textContent?.trim();
+      const hasTitle = element.hasAttribute('title');
+      
+      if (!hasAriaLabel && !hasAriaLabelledBy && !hasTextContent && !hasTitle) {
+        errors.push(`Interactive element ${element.tagName} is missing accessible name`);
+      }
+    });
+    
+    return errors;
+  },
+  
+  checkHeadingHierarchy: (container: HTMLElement): string[] => {
+    const errors: string[] = [];
+    const headings = Array.from(container.querySelectorAll('h1, h2, h3, h4, h5, h6'));
+    let previousLevel = 0;
+    
+    headings.forEach((heading, index) => {
+      const level = parseInt(heading.tagName.substring(1));
+      
+      if (index === 0 && level !== 1) {
+        errors.push('First heading should be h1');
+      }
+      
+      if (level > previousLevel + 1) {
+        errors.push(`Heading level skipped from h${previousLevel} to h${level}`);
+      }
+      
+      previousLevel = level;
+    });
+    
+    return errors;
+  },
+  
   checkColorContrast: (container: HTMLElement): string[] => {
     const issues: string[] = [];
     const elements = container.querySelectorAll('*');
@@ -207,20 +229,17 @@ export const accessibilityHelpers = {
       }
     });
     
-    return issues;
-  },
-  
-  checkAltText: (container: HTMLElement): string[] => {
-    const issues: string[] = [];
-    const images = container.querySelectorAll('img');
-    
-    images.forEach(img => {
-      if (!img.alt) {
-        issues.push(`Image missing alt text: ${img.src}`);
-      }
-    });
-    
-    return issues;
+    return errors;
+  }
+};
+
+/**
+ * Component testing utilities
+ */
+  }
+};
+
+    }
   },
   
   checkHeadingStructure: (container: HTMLElement): string[] => {
@@ -309,318 +328,17 @@ export const setupTestEnvironment = (options: TestSetupOptions = {}) => {
   }
 };
 
-/**
- * Cleanup test environment
- */
-export const cleanupTestEnvironment = () => {
-  jest.clearAllMocks();
-  jest.restoreAllMocks();
-};
-
-/**
- * Create mock component
- */
-export const createMockComponent = (name: string) => {
-  const MockComponent = (props: MockComponentProps) => {
-    return React.createElement('div', { 'data-testid': name, ...props });
-  };
-  
-  MockComponent.displayName = name;
-  return MockComponent;
-};
-
-/**
- * Generate test data
- */
-export const generateTestData = <T>(
-  generator: () => T,
-  count: number = 10
-): T[] => {
-  return Array.from({ length: count }, generator);
-};
-
-/**
- * Wait for async operations to complete
- */
-export const flushPromises = (): Promise<void> => {
-  return new Promise(resolve => setImmediate(resolve));
-};
-
-/**
- * Mock IntersectionObserver
- */
-export const mockIntersectionObserver = () => {
-  const mockObserver = {
-    observe: jest.fn(),
-    unobserve: jest.fn(),
-    disconnect: jest.fn(),
-  };
-  
-  Object.defineProperty(window, 'IntersectionObserver', {
-    writable: true,
-    configurable: true,
-    value: jest.fn().mockImplementation(() => mockObserver),
-  });
-  
-  return mockObserver;
-};
-
-/**
- * Mock ResizeObserver
- */
-export const mockResizeObserver = (): void => {
-  global.ResizeObserver = jest.fn().mockImplementation(() => ({
-    observe: jest.fn(),,
-    unobserve: jest.fn(),,
-    disconnect: jest.fn(),,
-  }));
-};
-
-/**
- * Mock matchMedia
- */
-export const mockMatchMedia = (matches: boolean): void => {,
-  Object.defineProperty(window, 'matchMedia', {';
-    writable: true,,
-    value: jest.fn().mockImplementation(query => ({,
-      matches,
-      media: query,,
-      onchange: null,,
-      addListener: jest.fn(),,
-      removeListener: jest.fn(),,
-      addEventListener: jest.fn(),,
-      removeEventListener: jest.fn(),,
-      dispatchEvent: jest.fn(),,
-    })),
-  });
-};
-
-/**
- * Wait for async component to render
- */
-export const waitForAsyncComponent = async (
-  component: React.ComponentType<any>,
-  props: any = {},
-  timeout = 5000,
-): Promise<void> => {
-  await waitFor(() => {
-    try {
-      const element = document.querySelector(`[data-testid="${component.name}"]`);
-      return !!element;
-    } catch {
-      return false;
-    }
-  }, timeout);
-};
-
-/**
- * Mock console methods for testing
- */
-export const mockConsole = (): void => {
-  const originalConsole = { ...console };
-  
-  beforeEach(() => {
-    console.log = jest.fn();
-    console.error = jest.fn();
-    console.warn = jest.fn();
-    console.info = jest.fn();
-  });
-  
-  afterEach(() => {
-    Object.assign(console, originalConsole);
-  });
-};
-
-/**
- * Create mock router
- */
-export const createMockRouter = (pathname = '/', search = ''): any => ({
-  pathname,
-  search,
-  hash: '',
-  query: {},
-  push: jest.fn(),
-  replace: jest.fn(),
-  back: jest.fn(),
-  forward: jest.fn(),
-  reload: jest.fn(),
-  prefetch: jest.fn(),
-});
-
-/**
- * Mock Next.js router
- */
-export const mockNextRouter = (pathname = '/', query = {}): void => {
-  const mockRouter = createMockRouter(pathname);
-  mockRouter.query = query;
-  
-  jest.mock('next/router', () => ({
-    useRouter: () => mockRouter,
-    withRouter: (Component: any) => Component,
-  }));
-};
-
-/**
- * Create test environment setup
- */
-export const setupTestEnvironment = (): void => {
-  mockLocalStorage();
-  mockIntersectionObserver();
-  mockResizeObserver();
-  mockMatchMedia(true);
-  mockConsole();
-};
-
-/**
- * Clean up test environment
- */
-export const cleanupTestEnvironment = (): void => {
-  // Clean up any global mocks
-  if (global.fetch) {
-    delete global.fetch;
-  }
-  
-  // Clear localStorage
-  if (window.localStorage) {
-    window.localStorage.clear();
-  }
-  
-  // Reset window.location
-  if (window.location) {
-    window.location = new URL('http://localhost:3000') as any;
-  }
-};
-
-/**
- * Create mock API response
- */
-export const createMockApiResponse = <T>(data: T, status = 200): Response => ({
-  ok: status >= 200 && status < 300,
-  status,
-  statusText: status === 200 ? 'OK' : 'Error',
-  headers: new Headers(),
-  body: null,
-  bodyUsed: false,
-  arrayBuffer: () => Promise.resolve(new ArrayBuffer(0)),
-  blob: () => Promise.resolve(new Blob()),
-  formData: () => Promise.resolve(new FormData()),
-  json: () => Promise.resolve(data),
-  text: () => Promise.resolve(JSON.stringify(data)),
-  clone: () => createMockApiResponse(data, status),
-});
-
-/**
- * Mock fetch with different responses
- */
-export const mockFetchResponses = (responses: Array<{ url: string; response: any; status?: number }>): void => {
-  global.fetch = jest.fn().mockImplementation((url: string) => {
-    const match = responses.find(r => url.includes(r.url));
-    if (match) {
-      return Promise.resolve(createMockApiResponse(match.response, match.status));
-    }
-    return Promise.resolve(createMockApiResponse({}, 404));
-  });
-};
-
-/**
- * Wait for network requests to complete
- */
-export const waitForNetworkRequests = async (timeout = 5000): Promise<void> => {
-  await waitFor(() => {
-    // Check if there are any pending fetch requests
-    return !(global.fetch as any)?.mock?.calls?.some((call: any) => !call[1]?.resolved);
-  }, timeout);
-};
-
-/**
- * Create mock error
- */
-export const createMockError = (message: string, status = 500): Error => {
-  const error = new Error(message) as any;
-  error.status = status;
-  error.response = {
-    status,
-    statusText: 'Internal Server Error',
-    data: { message },
-  };
-  return error;
-};
-
-/**
- * Mock window.scrollTo
- */
-export const mockScrollTo = (): void => {
-  Object.defineProperty(window, 'scrollTo', {
-    writable: true,
-    value: jest.fn(),
-  });
-  
-  return mockObserver;
-};
-
-/**
- * Create test wrapper with providers
- */
-export const mockGetComputedStyle = (styles: Record<string, string> = {}): void => {
-  Object.defineProperty(window, 'getComputedStyle', {
-    writable: true,
-    value: jest.fn().mockImplementation(() => ({
-      getPropertyValue: (prop: string) => styles[prop] || '',
-      ...styles,
-    })),
-  });
-};
-
-/**
- * Simulate user interaction
- */
-export const createMockEvent = (type: string, options: any = {}): Event => {
-  const event = new Event(type, {
-    bubbles: true,
-    cancelable: true,
-    ...options,
-  });
-  return event;
-};
-
-/**
- * Assertion helpers
- */
-export const mockTimers = (): void => {
-  jest.useFakeTimers();
-};
-
-/**
- * Restore real timers
- */
-export const restoreTimers = (): void => {
-  jest.useRealTimers();
-};
-
-/**
- * Advance timers by specified time
- */
-export const advanceTimers = (ms: number): void => {
-  jest.advanceTimersByTime(ms);
-};
-
-/**
- * Run all pending timers
- */
-export const runAllTimers = (): void => {
-  jest.runAllTimers();
-};
-
-/**
- * Run only pending timers
- */
-export const runOnlyPendingTimers = (): void => {
-  jest.runOnlyPendingTimers();
-};
-
-/**
- * Clear all timers
- */
-export const clearAllTimers = (): void => {
-  jest.clearAllTimers();
+export default {
+  wait,
+  waitFor,
+  waitForElement,
+  waitForElementToBeRemoved,
+  click,
+  type,
+  mockLocalStorage,
+  mockSessionStorage,
+  mockFetch,
+  mockConsole,
+  setupTestEnvironment,
+  generateMockData,
 };
