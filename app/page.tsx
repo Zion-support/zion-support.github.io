@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import QuantumNeuralIntegrationAdvertisingBanner from '../components/QuantumNeuralIntegrationAdvertisingBanner';
+import AutonomousEnterpriseMeshAdvertisingBanner from '../components/AutonomousEnterpriseMeshAdvertisingBanner';
 import { 
   ArrowRight, 
   CheckCircle, 
@@ -60,6 +62,12 @@ export const metadata = {
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+      {/* NEW: Quantum-Neural Integration Revolution Banner - Most Prominent */}
+      <QuantumNeuralIntegrationAdvertisingBanner />
+      
+      {/* NEW: Autonomous Enterprise Mesh Revolution Banner - Most Prominent */}
+      <AutonomousEnterpriseMeshAdvertisingBanner />
+      
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10"></div>
