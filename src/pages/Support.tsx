@@ -97,6 +97,15 @@ const Support: React.FC = () => {
     }
   ];
 
+  const filteredFaqs = faqs.filter((faq) => {
+    const matchesCategory = selectedCategory === 'all' || faq.category === selectedCategory;
+    const query = searchQuery.trim().toLowerCase();
+    const matchesQuery =
+      query.length === 0 ||
+      (faq.question?.toLowerCase().includes(query) || faq.answer?.toLowerCase().includes(query));
+    return matchesCategory && matchesQuery;
+  });
+
   const quickActions = [
     { title: 'Report a Bug', description: 'Found an issue? Let us know', link: '/contact', icon: '🐛' },
     { title: 'Request a Feature', description: "Have an idea? We'd love to hear it", link: '/contact', icon: '💡' },
@@ -134,7 +143,8 @@ const Support: React.FC = () => {
           </div>
         </div>
       </section>
-
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Category Filter */}
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               <button
@@ -213,7 +223,6 @@ const Support: React.FC = () => {
               </Link>
             </div>
           </div>
-        </div>
       </section>
     </div>
   );
