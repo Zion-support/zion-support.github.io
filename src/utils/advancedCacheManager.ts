@@ -4,24 +4,24 @@
  */
 
 interface CacheConfig {
-  maxAge: number; // milliseconds
-  maxSize: number; // maximum number of entries
-  strategy: 'LRU' | 'LFU' | 'FIFO';
+maxAge: number; // milliseconds,
+maxSize: number; // maximum number of entries,
+strategy: 'LRU' | 'LFU' | 'FIFO';
 }
 
 interface CacheEntry<T> {
-  value: T;
-  timestamp: number;
-  accessCount: number;
-  size: number;
+value: T;,
+timestamp: number;,
+accessCount: number;,
+size: number;
 }
 
 interface CacheStats {
-  hits: number;
-  misses: number;
-  evictions: number;
-  currentSize: number;
-  hitRate: number;
+hits: number;
+misses: number;
+evictions: number;
+currentSize: number;
+hitRate: number;
 }
 
 class AdvancedCacheManager<T = any> {
@@ -156,21 +156,19 @@ class AdvancedCacheManager<T = any> {
    * Evict entries based on strategy
    */
   private evict(): void {
-    if (this.cache.size === 0) return;
-
-    let keyToEvict: string | null = null;
-
-    switch (this.config.strategy) {
-      case 'LRU': // Least Recently Used
-        keyToEvict = this.findLRUKey();
-        break;
-      case 'LFU': // Least Frequently Used
-        keyToEvict = this.findLFUKey();
-        break;
-      case 'FIFO': // First In First Out
-        keyToEvict = this.cache.keys().next().value;
-        break;
-    }
+if (this.cache.size === 0) return;
+let keyToEvict: string | null = null;,
+switch (this.config.strategy) {
+case 'LRU': // Least Recently Used,
+keyToEvict = this.findLRUKey();
+break;
+case 'LFU': // Least Frequently Used,
+keyToEvict = this.findLFUKey();
+break;
+case 'FIFO': // First In First Out,
+keyToEvict = this.cache.keys().next().value || null;
+break;
+}
 
     if (keyToEvict) {
       this.cache.delete(keyToEvict);

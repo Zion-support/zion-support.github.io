@@ -1,6 +1,7 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles, TrendingUp, Zap } from 'lucide-react';
+import {
+
+} from 'lucide-react';
 
 const LatestContentBanner2025: React.FC = () => {
   const latestArticles = [
@@ -12,6 +13,24 @@ const LatestContentBanner2025: React.FC = () => {
       emoji: "🚀",
       highlight: "BREAKTHROUGH",
       impact: "$50M+ Savings"
+    },
+    {
+      title: "Zero‑PII Telemetry v2",
+      description: "Decision‑grade signals without centralized IDs — privacy‑first analytics",
+      slug: "edge-2025-oct-01-zero-pii-telemetry-v2",
+      category: "Observability",
+      emoji: "🛡️",
+      highlight: "NEW",
+      impact: "Zero PII"
+    },
+    {
+      title: "Live Evals & Scorecards",
+      description: "Ship GenAI fast without regressions — KPI‑wired canaries",
+      slug: "genai-2025-oct-01-eval-scorecards-live-canaries",
+      category: "GenAI",
+      emoji: "📈",
+      highlight: "NEW",
+      impact: "No regressions"
     },
     {
       title: "AI 2026: Future Predictions & Mega Trends",
@@ -60,12 +79,12 @@ const LatestContentBanner2025: React.FC = () => {
     },
     {
       title: "AI 2025: Autonomous Operations Revolution",
-      description: "95% Automation, $2M+ Annual Savings",
+      description: "98% Automation, $10M+ Annual Savings",
       slug: "ai-autonomous-operations-2025",
       category: "AI Innovation",
       emoji: "🚀",
-      highlight: "NEW TODAY",
-      impact: "95% Automation"
+      highlight: "BREAKTHROUGH",
+      impact: "98% Automation"
     },
     {
       title: "Fortune 500 AI Transformation",
@@ -93,39 +112,6 @@ const LatestContentBanner2025: React.FC = () => {
       emoji: "🤖",
       highlight: "NEW TODAY",
       impact: "70% Cost Savings"
-    },
-    {
-      id: 2,
-      title: 'AI Enterprise Transformation: $50M Annual Savings Blueprint',
-      slug: 'ai-enterprise-transformation-2025',
-      excerpt: 'Discover how Fortune 500 companies achieve $50M annual savings, 95% process automation, and 300% ROI through comprehensive AI transformation strategies and proven implementation frameworks.',
-      category: 'Enterprise AI Transformation',
-      date: '2025-01-28',
-      readTime: '50 min',
-      trending: true,
-      icon: '💰'
-    },
-    {
-      id: 3,
-      title: 'AI Innovation Labs: Product Development Revolution 2025',
-      slug: 'ai-innovation-labs-product-development-2025',
-      excerpt: 'Revolutionize product development with AI Innovation Labs achieving 10x faster time-to-market, 85% cost reduction, and 300% innovation acceleration through cutting-edge AI-powered development.',
-      category: 'AI Innovation Labs',
-      date: '2025-01-25',
-      readTime: '40 min',
-      trending: true,
-      icon: '🚀'
-    },
-    {
-      id: 4,
-      title: 'AI/ML Pipeline Automation: Complete 2025 Enterprise Guide',
-      slug: 'ai-ml-pipeline-automation-2025',
-      excerpt: 'Master AI/ML pipeline automation with proven strategies achieving 90% faster deployments and 75% cost reduction. Complete guide covering orchestration, monitoring, and MLOps best practices.',
-      category: 'MLOps & Automation',
-      date: '2025-01-20',
-      readTime: '45 min',
-      trending: true,
-      icon: '⚙️'
     }
   ];
 
@@ -159,7 +145,7 @@ const LatestContentBanner2025: React.FC = () => {
         </div>
 
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-          🚀 BREAKTHROUGH: Revolutionary AI Technologies 2025!
+          🚀 JUST PUBLISHED: Revolutionary AI Breakthrough Articles!
         </h2>
         <p className="text-xl text-blue-100 mb-8 max-w-3xl">
           Experience <span className="font-bold text-yellow-300">3 REVOLUTIONARY breakthrough technologies</span> including our latest: "Meta-Cognitive AI: The Thinking AI Revolution" (95% decision accuracy, $2M+ savings), "Quantum-Neural Networks: 1000x Processing Speed" ($5M+ infrastructure savings), and "Autonomous Enterprise Operations: 98% Automation" ($10M+ annual savings) - plus comprehensive case studies and implementation guides!
@@ -219,9 +205,9 @@ const LatestContentBanner2025: React.FC = () => {
                 <div className="flex items-center justify-between text-sm text-gray-500 mb-6 pb-6 border-b border-white/10">
                   <span className="flex items-center gap-2">
                     <Zap className="w-4 h-4 text-cyan-400" />
-                    {article.readTime}
+                    {article.readTime || '5 min'}
                   </span>
-                  <span>{article.date ? new Date(article.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : 'Recent'}</span>
+                  <span>{article.date ? new Date(article.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : ''}</span>
                 </div>
 
                 {/* CTA Button */}
@@ -249,14 +235,14 @@ const LatestContentBanner2025: React.FC = () => {
                 Join 50,000+ AI leaders and innovators.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
+                <a title="Internal link"
                   href="/blog"
                   className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 flex items-center justify-center gap-2"
                 >
                   <Sparkles className="w-5 h-5" />
                   <span>Explore All Articles</span>
                 </a>
-                <a
+                <a title="Internal link"
                   href="/contact"
                   className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
                 >

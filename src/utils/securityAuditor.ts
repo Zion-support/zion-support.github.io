@@ -4,29 +4,29 @@
  */
 
 interface SecurityVulnerability {
-  severity: 'critical' | 'high' | 'medium' | 'low';
-  category: 'xss' | 'csrf' | 'auth' | 'data' | 'dependency' | 'config';
-  description: string;
-  impact: string;
-  remediation: string;
-  cweId?: string;
+severity: 'critical' | 'high' | 'medium' | 'low';
+category: 'xss' | 'csrf' | 'auth' | 'data' | 'dependency' | 'config';
+description: string;
+impact: string;
+remediation: string;
+cweId?: string;
 }
 
 interface SecurityReport {
-  score: number;
-  vulnerabilities: SecurityVulnerability[];
-  secureAreas: string[];
-  summary: {
-    critical: number;
-    high: number;
-    medium: number;
-    low: number;
-  };
+score: number;
+vulnerabilities: SecurityVulnerability[];
+secureAreas: string[];
+summary: {,
+critical: number;
+high: number;
+medium: number;
+low: number;
+};
   complianceStatus: {
-    owasp: boolean;
-    gdpr: boolean;
-    soc2: boolean;
-  };
+owasp: boolean;,
+gdpr: boolean;,
+soc2: boolean;
+};
 }
 
 export class SecurityAuditor {
@@ -184,10 +184,10 @@ export class SecurityAuditor {
    * Check compliance status
    */
   private checkCompliance(vulnerabilities: SecurityVulnerability[]): {
-    owasp: boolean;
-    gdpr: boolean;
-    soc2: boolean;
-  } {
+owasp: boolean;,
+gdpr: boolean;,
+soc2: boolean;
+} {
     const criticalOrHigh = vulnerabilities.filter(
       v => v.severity === 'critical' || v.severity === 'high'
     ).length;
@@ -223,9 +223,9 @@ export class SecurityAuditor {
    * Apply quick security fixes
    */
   applyQuickFixes(): {
-    applied: string[];
-    manual: string[];
-  } {
+applied: string[];,
+manual: string[];
+} {
     const applied = [
       'Added Content-Security-Policy header',
       'Enabled HSTS header',
@@ -269,17 +269,16 @@ export class SecurityAuditor {
    * Generate comprehensive security report
    */
   generateReport(): string {
-    const audit = this.auditSecurity();
-    const recommendations = this.generateRecommendations();
-    const fixes = this.applyQuickFixes();
-    const dependencies = this.checkDependencies();
-
-    const getRiskLevel = (score: number): string => {
-      if (score >= 90) return 'LOW RISK ✅';
-      if (score >= 75) return 'MODERATE RISK ⚠️';
-      if (score >= 60) return 'HIGH RISK 🔴';
-      return 'CRITICAL RISK 🚨';
-    };
+const audit = this.auditSecurity();
+const recommendations = this.generateRecommendations();
+const fixes = this.applyQuickFixes();
+const dependencies = this.checkDependencies();
+const getRiskLevel = (score: number): string => {,
+if (score >= 90) return 'LOW RISK ✅';
+if (score >= 75) return 'MODERATE RISK ⚠️';
+if (score >= 60) return 'HIGH RISK 🔴';
+return 'CRITICAL RISK 🚨';
+};
 
     return `
 # Security Audit Report

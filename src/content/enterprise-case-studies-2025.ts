@@ -1,20 +1,21 @@
 // Enterprise case studies showcasing real-world AI implementations and results
 
 export interface EnterpriseCaseStudy {
-  id: string;
-  title: string;
-  company: string;
-  industry: string;
-  description: string;
-  challenge: string;
-  solution: string;
-  results: {
-    metrics: {
-      performance: string;
-      savings: string;
-      accuracy: string;
-      roi: string;
-    };
+id: string;
+slug?: string;
+title: string;
+company: string;
+industry: string;
+description: string;
+challenge: string;
+solution: string;
+results: {,
+metrics: {,
+performance: string;
+savings: string;
+accuracy: string;
+roi: string;
+};
     timeframe: string;
     scale: string;
   };

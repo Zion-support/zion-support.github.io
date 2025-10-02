@@ -1,14 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  Truck as TruckIcon, 
-  BarChart3 as ChartBarIcon, 
-  DollarSign as CurrencyDollarIcon, 
-  CheckCircle as CheckCircleIcon, 
-  ArrowRight as ArrowRightIcon,
-  Sparkles as SparklesIcon,
-  Clock as ClockIcon,
-  Globe as GlobeAltIcon
+import {
+Globe as GlobeAltIcon
 } from 'lucide-react';
 
 const October2025SupplyChainRevolutionBanner: React.FC = () => {

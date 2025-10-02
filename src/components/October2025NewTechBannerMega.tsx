@@ -1,6 +1,3 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { Sparkles, Shield, Brain, TrendingUp, ArrowRight } from "lucide-react";
 
 const October2025NewTechBannerMega = () => {
   return (

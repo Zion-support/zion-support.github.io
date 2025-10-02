@@ -17,7 +17,7 @@
 
 export interface AnalyticsEvent {
   name: string;
-  properties?: Record<string, any>;
+  properties?: Record<string, string | number | boolean>;
   timestamp: number;
   userId?: string;
   sessionId?: string;
@@ -25,34 +25,34 @@ export interface AnalyticsEvent {
 
 export interface AnalyticsUser {
   id: string;
-  traits?: Record<string, any>;
+  traits?: Record<string, string | number | boolean>;
   anonymousId?: string;
 }
 
 export interface AnalyticsConfig {
-  providers: {
-    googleAnalytics?: {
-      measurementId: string;
-      enabled: boolean;
-    };
+providers: {,
+googleAnalytics?: {,
+measurementId: string;
+enabled: boolean;
+};
     mixpanel?: {
-      token: string;
-      enabled: boolean;
-    };
+token: string;,
+enabled: boolean;
+};
     amplitude?: {
-      apiKey: string;
-      enabled: boolean;
-    };
+apiKey: string;,
+enabled: boolean;
+};
     segment?: {
-      writeKey: string;
-      enabled: boolean;
-    };
+writeKey: string;,
+enabled: boolean;
+};
   };
   privacy: {
-    respectDoNotTrack: boolean;
-    anonymizeIp: boolean;
-    consentRequired: boolean;
-  };
+respectDoNotTrack: boolean;,
+anonymizeIp: boolean;,
+consentRequired: boolean;
+};
   debug: boolean;
 }
 
@@ -155,7 +155,7 @@ class AnalyticsIntegration {
     // Load Mixpanel
     (function(f: any, b: any) {
       if (!b.__SV) {
-        var e, g, i, h;
+        var i, h;
         window.mixpanel = b;
         b._i = [];
         b.init = function(e: any, f: any, c: any) {

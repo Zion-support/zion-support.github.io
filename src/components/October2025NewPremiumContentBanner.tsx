@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Shield, Zap, TrendingUp, ArrowRight, Sparkles, Lock, Activity, BarChart3 } from 'lucide-react';
 
 const October2025NewPremiumContentBanner: React.FC = () => {
   return (

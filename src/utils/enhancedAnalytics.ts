@@ -3,22 +3,24 @@
  * Tracks user behavior, performance, and business metrics
  */
 
-import { getPerformanceOptimizer } from './performanceOptimizer';
+// import {
+getPerformanceOptimizer
+} from './performanceOptimizer';
 
 interface PageView {
-  path: string;
-  title: string;
-  timestamp: number;
-  referrer: string;
-  userAgent: string;
+path: string;
+title: string;
+timestamp: number;
+referrer: string;
+userAgent: string;
 }
 
 interface UserEvent {
-  category: string;
-  action: string;
-  label?: string;
-  value?: number;
-  timestamp: number;
+category: string;
+action: string;
+label?: string;
+value?: number;
+timestamp: number;
 }
 
 interface ConversionEvent {
@@ -29,26 +31,24 @@ interface ConversionEvent {
 }
 
 interface SessionData {
-  sessionId: string;
-  startTime: number;
-  pageViews: PageView[];
-  events: UserEvent[];
-  conversions: ConversionEvent[];
-  performanceMetrics: any;
+sessionId: string;
+startTime: number;
+pageViews: PageView[];
+events: UserEvent[];
+conversions: ConversionEvent[];
+performanceMetrics: any;
 }
 
 class EnhancedAnalytics {
-  private session: SessionData;
-  private isInitialized = false;
-  private performanceOptimizer: any;
-
-  constructor() {
-    this.session = this.createNewSession();
-    
-    if (typeof window !== 'undefined') {
-      this.performanceOptimizer = getPerformanceOptimizer();
-      this.initialize();
-    }
+private session: SessionData;,
+private isInitialized = false;
+private performanceOptimizer: any;,
+constructor() {
+this.session = this.createNewSession();
+if (typeof window !== 'undefined') {
+this.performanceOptimizer = getPerformanceOptimizer();
+this.initialize();
+}
   }
 
   /**
@@ -430,11 +430,11 @@ class EnhancedAnalytics {
    * Get analytics report
    */
   getReport(): {
-    summary: any;
-    engagement: any;
-    performance: any;
-    conversions: any;
-  } {
+summary: any;,
+engagement: any;,
+performance: any;,
+conversions: any;
+} {
     return {
       summary: {
         sessionId: this.session.sessionId,

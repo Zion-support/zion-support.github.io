@@ -1,4 +1,3 @@
-import { lazy } from 'react';
 
 /**
  * Lazy load components with better error handling and retry logic
@@ -10,14 +9,14 @@ export const lazyLoadWithRetry = <T extends React.ComponentType<any>>(
 ): React.LazyExoticComponent<T> => {
   return lazy(() => {
     return new Promise<{ default: T }>((resolve, reject) => {
-      const attemptLoad = (attemptsLeft: number) => {
-        componentImport()
-          .then(resolve)
-          .catch((error) => {
-            if (attemptsLeft === 0) {
-              reject(error);
-              return;
-            }
+const attemptLoad = (attemptsLeft: number) => {,
+componentImport()
+.then(resolve)
+.catch((error) => {
+if (attemptsLeft === 0) {
+reject(error);
+return;
+}
             
             setTimeout(() => {
               console.log(`Retrying component load... ${attemptsLeft} attempts left`);

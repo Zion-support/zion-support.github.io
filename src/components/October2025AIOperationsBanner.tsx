@@ -1,5 +1,3 @@
-import { ArrowRight, Shield, TrendingDown, Activity } from "lucide-react";
-import { Link } from "react-router-dom";
 
 const October2025AIOperationsBanner = () => {
   const newArticles = [

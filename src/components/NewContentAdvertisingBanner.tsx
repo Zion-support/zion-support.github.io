@@ -1,24 +1,23 @@
 import React from 'react';
-import { ArrowRight, Sparkles, TrendingUp, Zap, Star, Users, Award, Target } from 'lucide-react';
 
 interface FeaturedContent {
-  id: number;
-  title: string;
-  category: string;
-  readTime: string;
-  rating: number;
-  readers: string;
-  badge: string;
-  gradient: string;
-  icon: React.ReactNode;
-  link: string;
+id: number;
+title: string;
+category: string;
+readTime: string;
+rating: number;
+readers: string;
+badge: string;
+gradient: string;
+icon: React.ReactNode;
+link: string;
 }
 
 const NewContentAdvertisingBanner: React.FC = () => {
   const featuredContent: FeaturedContent[] = [
     {
       id: 0,
-      title: 'Autonomous Customer Service 2025',
+      title: 'Governed Agent Rollbacks',
       category: 'AI Operations',
       readTime: '7 min',
       rating: 5.0,
@@ -26,7 +25,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
       badge: 'NEW',
       gradient: 'from-pink-500 to-red-500',
       icon: <Sparkles className="w-6 h-6" />,
-      link: '/blog/ai-2025-oct-02-autonomous-customer-service-playbook'
+      link: '/blog/ai-2025-oct-03-governed-agent-rollbacks'
     },
     {
       id: 7,
@@ -42,76 +41,39 @@ const NewContentAdvertisingBanner: React.FC = () => {
     },
     {
       id: 1,
-      title: 'Neural Code Synthesis 2025',
-      category: 'AI Engineering',
-      readTime: '9 min',
-      rating: 5.0,
-      readers: '120K+',
+      title: 'AI 2027: Operational Trust Blueprint',
+      category: 'AI Strategy',
+      readTime: '8 min',
+      rating: 4.9,
+      readers: '58K+',
       badge: 'NEW',
       gradient: 'from-blue-500 to-purple-500',
       icon: <Star className="w-6 h-6" />,
-      link: '/blog/ai-2025-sept-30-neural-code-synthesis'
+      link: '/blog/ai-2027-operational-trust-blueprint'
     },
     {
       id: 2,
-      title: 'Edge 2026: Attested Analytics',
-      category: 'Analytics',
+      title: 'Edge 2026: Private Feature Flags',
+      category: 'Architecture',
       readTime: '7 min',
-      rating: 4.9,
-      readers: '87K+',
-      badge: 'FEATURED',
+      rating: 4.8,
+      readers: '41K+',
+      badge: 'TRENDING',
       gradient: 'from-cyan-500 to-blue-500',
       icon: <TrendingUp className="w-6 h-6" />,
-      link: '/blog/edge-2026-attested-analytics'
+      link: '/blog/edge-2026-private-feature-flags'
     },
     {
       id: 3,
-      title: 'E2E AI Tracing 2026',
-      category: 'AI Operations',
-      readTime: '12 min',
-      rating: 5.0,
-      readers: '65K+',
-      badge: 'NEW',
+      title: 'GenAI Quality Tiers v2 (2026)',
+      category: 'GenAI',
+      readTime: '8 min',
+      rating: 4.9,
+      readers: '47K+',
+      badge: 'FEATURED',
       gradient: 'from-green-500 to-emerald-500',
       icon: <Award className="w-6 h-6" />,
-      link: '/blog/ai-2026-e2e-ai-tracing'
-    },
-    {
-      id: 4,
-      title: 'Consentless Analytics v4 (2027)',
-      category: 'Analytics',
-      readTime: '6 min',
-      rating: 4.9,
-      readers: '52K+',
-      badge: 'FEATURED',
-      gradient: 'from-emerald-500 to-cyan-500',
-      icon: <TrendingUp className="w-6 h-6" />,
-      link: '/blog/edge-2027-consentless-analytics-v4'
-    }
-    ,
-    {
-      id: 5,
-      title: 'Operational Trust Scorecards v3',
-      category: 'AI Operations',
-      readTime: '9 min',
-      rating: 5.0,
-      readers: '41K+',
-      badge: 'NEW',
-      gradient: 'from-purple-500 to-pink-500',
-      icon: <Sparkles className="w-6 h-6" />,
-      link: '/blog/ai-2025-oct-01-operational-trust-v3'
-    },
-    {
-      id: 6,
-      title: 'Consentless Experiments v3 (<100ms)',
-      category: 'Analytics',
-      readTime: '7 min',
-      rating: 4.9,
-      readers: '33K+',
-      badge: 'NEW',
-      gradient: 'from-teal-500 to-emerald-500',
-      icon: <TrendingUp className="w-6 h-6" />,
-      link: '/blog/edge-2025-oct-01-private-consentless-experiments'
+      link: '/blog/genai-quality-tiers-v2-2026'
     }
   ];
 
@@ -261,14 +223,14 @@ const NewContentAdvertisingBanner: React.FC = () => {
                 <div className="text-sm text-gray-400">First 3 months</div>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a
+                <a title="Internal link"
                   href="/subscribe"
                   className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 flex items-center justify-center gap-2"
                 >
                   <Sparkles className="w-5 h-5" />
                   <span>Get Premium Access</span>
                 </a>
-                <a
+                <a title="Internal link"
                   href="/contact"
                   className="border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
                 >

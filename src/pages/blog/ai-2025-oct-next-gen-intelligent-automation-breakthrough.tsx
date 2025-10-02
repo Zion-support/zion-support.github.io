@@ -1,6 +1,3 @@
-import { ArrowLeft, Zap, Brain, TrendingUp, CheckCircle, Rocket } from "lucide-react";
-import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
 import Header from "../../components/Header";
 
 const NextGenIntelligentAutomationBreakthrough = () => {

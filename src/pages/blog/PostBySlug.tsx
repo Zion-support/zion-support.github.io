@@ -1,11 +1,5 @@
 import React from "react";
-import { useParams, Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
-import { posts as staticPosts } from "../../content/posts";
-import { latestArticles } from "../../content/latest-articles";
-import { blogPosts } from "../../content/blog-posts";
 import Header from "../../components/Header";
-import { ArrowLeft, Calendar, Clock } from "lucide-react";
 
 export default function PostBySlug(): React.JSX.Element {
   const { slug } = useParams();
@@ -52,22 +46,22 @@ export default function PostBySlug(): React.JSX.Element {
   }, [slug]);
 
   if (!article) {
-    return (
-      <>
-        <Header />
-        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white p-8">
-          <div className="max-w-3xl mx-auto pt-20">
-            <h1 className="text-3xl font-bold mb-4">Article not found</h1>
-            <p className="text-zion-slate-light mb-6">The post you are looking for does not exist or has been moved.</p>
-            <Link to="/blog" className="text-zion-cyan hover:underline inline-flex items-center gap-2">
-              <ArrowLeft className="w-4 h-4" />
-              Back to Blog
-            </Link>
-          </div>
-        </div>
-      </>
-    );
-  }
+return (
+<>
+<Header />
+<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white p-8">
+<div className="max-w-3xl mx-auto pt-20">
+<h1 className="text-3xl font-bold mb-4">Article not found</h1>
+<p className="text-zion-slate-light mb-6">The post you are looking for does not exist or has been moved.</p>
+<Link to="/blog" className="text-zion-cyan hover:underline inline-flex items-center gap-2">,
+<ArrowLeft className="w-4 h-4" />
+Back to Blog
+</Link>
+</div>
+</div>
+</>
+);
+}
 
   return (
     <>

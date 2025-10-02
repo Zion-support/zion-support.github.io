@@ -1,13 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Rocket, Star, Zap } from 'lucide-react';
-import { newServices2026 } from '../content/new-services-2026';
 
 interface NewServicesPromoBannerProps {
-  variant?: 'default' | 'showcase' | 'premium' | 'grid';
-  showCount?: number;
-  featuredOnly?: boolean;
-  className?: string;
+variant?: 'default' | 'showcase' | 'premium' | 'grid';
+showCount?: number;
+featuredOnly?: boolean;
+className?: string;
 }
 
 const NewServicesPromoBanner: React.FC<NewServicesPromoBannerProps> = ({

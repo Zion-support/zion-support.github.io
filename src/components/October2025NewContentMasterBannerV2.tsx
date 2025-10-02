@@ -1,8 +1,5 @@
-import React from 'react';
-import { Rocket, Sparkles, Star } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
-export default function October2025NewContentMasterBannerV2() {
+export default function October2025NewContentMasterBannerV2(): void {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-rose-900 via-orange-900 to-amber-900 border-4 border-orange-500 rounded-2xl shadow-2xl mb-8 animate-pulse-slow">
       {/* Animated Background */}

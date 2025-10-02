@@ -1,5 +1,3 @@
-import { Bot, Shield, Database, TrendingUp, Sparkles, ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
 
 const October2025NewAIContentMegaBanner = () => {
   return (

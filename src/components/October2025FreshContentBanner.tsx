@@ -1,6 +1,3 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Shield, Users, Network, Sparkles, Lightbulb } from 'lucide-react';
 
 const October2025FreshContentBanner = () => {
   return (

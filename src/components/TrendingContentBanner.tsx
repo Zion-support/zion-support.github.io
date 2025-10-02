@@ -1,16 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  TrendingUp, 
-  ArrowRight, 
-  Eye, 
-  Clock, 
-  Star,
-  BookOpen,
-  Zap,
-  Brain,
-  Cloud,
-  Shield
+import {
+Shield
 } from 'lucide-react';
 
 const TrendingContentBanner: React.FC = () => {
@@ -110,13 +100,13 @@ const TrendingContentBanner: React.FC = () => {
   const currentItem = trendingItems[currentIndex];
 
   const getBadgeColor = (badge: string) => {
-    switch (badge) {
-      case 'HOT': return 'bg-red-500 text-white';
-      case 'NEW': return 'bg-green-500 text-white';
-      case 'TRENDING': return 'bg-blue-500 text-white';
-      case 'POPULAR': return 'bg-purple-500 text-white';
-      default: return 'bg-gray-500 text-white';
-    }
+switch (badge) {
+case 'HOT': return 'bg-red-500 text-white';,
+case 'NEW': return 'bg-green-500 text-white';,
+case 'TRENDING': return 'bg-blue-500 text-white';,
+case 'POPULAR': return 'bg-purple-500 text-white';,
+default: return 'bg-gray-500 text-white';
+}
   };
 
   const Icon = currentItem.icon;

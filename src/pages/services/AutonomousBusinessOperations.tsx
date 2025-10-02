@@ -1,6 +1,3 @@
-import { ArrowRight, CheckCircle, Clock, DollarSign, Rocket, Shield, TrendingUp, Users, Zap } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
 
 const AutonomousBusinessOperations = () => {
   return (

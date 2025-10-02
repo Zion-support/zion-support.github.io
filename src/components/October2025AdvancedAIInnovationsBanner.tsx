@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Brain, Database, Zap, Sparkles, Atom } from 'lucide-react';
 
 const October2025AdvancedAIInnovationsBanner = () => {
   return (
@@ -180,4 +178,4 @@ const October2025AdvancedAIInnovationsBanner = () => {
   );
 };
 
-export default October2025AdvancedAIInnovationsBanner;
+export default React.memo(October2025AdvancedAIInnovationsBanner);

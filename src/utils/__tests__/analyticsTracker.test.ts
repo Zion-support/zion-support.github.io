@@ -3,12 +3,7 @@
  */
 
 import {
-  trackEvent,
-  trackPageView,
-  trackBannerInteraction,
-  trackConversion,
-  trackError,
-  trackFormSubmission,
+
 } from '../analyticsTracker';
 
 // Mock global objects
@@ -112,11 +107,11 @@ describe('Analytics Tracking System', () => {
 
       const stored = mockLocalStorage.getItem('analytics_events');
       if (stored) {
-        const events = JSON.parse(stored);
-        const pageViewEvent = events.find((e: any) => e.category === 'page_view');
-        expect(pageViewEvent).toBeTruthy();
-        expect(pageViewEvent.label).toBe('/test-path');
-      }
+const events = JSON.parse(stored);
+const pageViewEvent = events.find((e: any) => e.category === 'page_view');,
+expect(pageViewEvent).toBeTruthy();
+expect(pageViewEvent.label).toBe('/test-path');
+}
     });
   });
 
@@ -139,13 +134,13 @@ describe('Analytics Tracking System', () => {
 
       const stored = mockLocalStorage.getItem('analytics_events');
       if (stored) {
-        const events = JSON.parse(stored);
-        const bannerEvent = events.find(
-          (e: any) => e.category === 'banner' && e.action === 'click'
-        );
-        expect(bannerEvent).toBeTruthy();
-        expect(bannerEvent.metadata.source).toBe('homepage');
-      }
+const events = JSON.parse(stored);
+const bannerEvent = events.find(
+(e: any) => e.category === 'banner' && e.action === 'click',
+);
+expect(bannerEvent).toBeTruthy();
+expect(bannerEvent.metadata.source).toBe('homepage');
+}
     });
   });
 
@@ -159,12 +154,12 @@ describe('Analytics Tracking System', () => {
 
       const stored = mockLocalStorage.getItem('analytics_events');
       if (stored) {
-        const events = JSON.parse(stored);
-        const conversionEvent = events.find((e: any) => e.category === 'conversion');
-        expect(conversionEvent).toBeTruthy();
-        expect(conversionEvent.action).toBe('newsletter_signup');
-        expect(conversionEvent.value).toBe(10);
-      }
+const events = JSON.parse(stored);
+const conversionEvent = events.find((e: any) => e.category === 'conversion');,
+expect(conversionEvent).toBeTruthy();
+expect(conversionEvent.action).toBe('newsletter_signup');
+expect(conversionEvent.value).toBe(10);
+}
     });
   });
 

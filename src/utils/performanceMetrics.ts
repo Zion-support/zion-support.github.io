@@ -13,34 +13,34 @@
  */
 
 export interface PerformanceMetric {
-  name: string;
-  value: number;
-  rating: 'good' | 'needs-improvement' | 'poor';
-  timestamp: number;
+name: string;
+value: number;
+rating: 'good' | 'needs-improvement' | 'poor';
+timestamp: number;
 }
 
 export interface ResourceTiming {
-  name: string;
-  duration: number;
-  size: number;
-  type: string;
+name: string;
+duration: number;
+size: number;
+type: string;
 }
 
 export interface PerformanceBudget {
-  metric: string;
-  budget: number;
-  current: number;
-  status: 'pass' | 'warn' | 'fail';
+metric: string;
+budget: number;
+current: number;
+status: 'pass' | 'warn' | 'fail';
 }
 
 export interface PerformanceReport {
-  webVitals: {
-    lcp?: PerformanceMetric;
-    fid?: PerformanceMetric;
-    cls?: PerformanceMetric;
-    fcp?: PerformanceMetric;
-    ttfb?: PerformanceMetric;
-  };
+webVitals: {,
+lcp?: PerformanceMetric;
+fid?: PerformanceMetric;
+cls?: PerformanceMetric;
+fcp?: PerformanceMetric;
+ttfb?: PerformanceMetric;
+};
   customMetrics: PerformanceMetric[];
   resourceTimings: ResourceTiming[];
   budgets: PerformanceBudget[];
@@ -256,7 +256,7 @@ class PerformanceMetricsTracker {
    * Track resource timing
    */
   private trackResourceTiming(entry: PerformanceResourceTiming): void {
-    const resourceType = this.getResourceType(entry.name);
+    // const resourceType = this.getResourceType(entry.name); // Available for future use
     const size = entry.transferSize || 0;
     
     // Track large resources

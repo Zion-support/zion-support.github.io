@@ -1,5 +1,3 @@
-import { ArrowRight, Brain, Sparkles, TrendingUp } from "lucide-react";
-import { Link } from "react-router-dom";
 
 const October2025CuttingEdgeInnovationsBanner = () => {
   return (

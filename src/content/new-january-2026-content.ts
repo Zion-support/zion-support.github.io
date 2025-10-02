@@ -1,27 +1,27 @@
 // New January 2026 Content - Revolutionary AI Breakthroughs
 export interface BlogPost {
-  id: string;
-  title: string;
-  excerpt: string;
-  content: string;
-  author: string;
-  publishedAt: string;
-  readTime: number;
-  category: string;
-  tags: string[];
-  featured: boolean;
-  imageUrl?: string;
+id: string;
+title: string;
+excerpt: string;
+content: string;
+author: string;
+publishedAt: string;
+readTime: number;
+category: string;
+tags: string[];
+featured: boolean;
+imageUrl?: string;
 }
 
 export interface Service {
-  id: string;
-  name: string;
-  description: string;
-  features: string[];
-  pricing: {
-    starting: string;
-    enterprise: string;
-  };
+id: string;
+name: string;
+description: string;
+features: string[];
+pricing: {,
+starting: string;
+enterprise: string;
+};
   benefits: string[];
   category: string;
 }

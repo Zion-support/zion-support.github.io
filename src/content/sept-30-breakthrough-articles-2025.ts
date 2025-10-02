@@ -1,21 +1,21 @@
 export interface BreakthroughArticle {
-  id: string;
-  slug: string;
-  title: string;
-  description: string;
-  excerpt: string;
-  author: string;
-  date: string;
-  category: string;
-  tags: string[];
-  featured: boolean;
-  readTime: string;
-  impact: string;
-  metrics: {
-    improvement: string;
-    roi: string;
-    timeframe: string;
-  };
+id: string;
+slug: string;
+title: string;
+description: string;
+excerpt: string;
+author: string;
+date: string;
+category: string;
+tags: string[];
+featured: boolean;
+readTime: string;
+impact: string;
+metrics: {,
+improvement: string;
+roi: string;
+timeframe: string;
+};
 }
 
 export const sept30BreakthroughArticles: BreakthroughArticle[] = [

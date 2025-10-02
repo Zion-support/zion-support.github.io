@@ -4,36 +4,35 @@
  */
 
 export interface SecurityConfig {
-  csp: {
-    'default-src': string[];
-    'script-src': string[];
-    'style-src': string[];
-    'img-src': string[];
-    'connect-src': string[];
-    'font-src': string[];
-    'object-src': string[];
-    'media-src': string[];
-    'frame-src': string[];
-    'worker-src': string[];
-    'child-src': string[];
-    'form-action': string[];
-    'frame-ancestors': string[];
-    'base-uri': string[];
-    'manifest-src': string[];
-    'upgrade-insecure-requests': boolean;
-    'block-all-mixed-content': boolean;
-  };
+csp: {,
+'default-src': string[];
+'script-src': string[];
+'style-src': string[];
+'img-src': string[];
+'connect-src': string[];
+'font-src': string[];
+'object-src': string[];
+'media-src': string[];
+'frame-src': string[];
+'worker-src': string[];
+'child-src': string[];
+'form-action': string[];
+'frame-ancestors': string[];
+'base-uri': string[];
+'manifest-src': string[];
+'upgrade-insecure-requests': boolean;
+'block-all-mixed-content': boolean;
+};
   headers: {
     [key: string]: string;
   };
 }
 
 export class SecurityManager {
-  private config: SecurityConfig;
-
-  constructor() {
-    this.config = this.getDefaultConfig();
-  }
+private config: SecurityConfig;,
+constructor() {
+this.config = this.getDefaultConfig();
+}
 
   // Added for compatibility with callers that expect an initialize() method
   public initialize(): void {
@@ -155,8 +154,9 @@ export class SecurityManager {
   }
 
   public getSecurityReport(): {
-    csp: string;
-    headers: { [key: string]: string };
+csp: string;,
+headers: { [key: string]: string
+};
     score: number;
   } {
     const headers = this.getSecurityHeaders();
