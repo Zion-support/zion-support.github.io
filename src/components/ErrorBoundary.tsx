@@ -60,7 +60,7 @@ class ErrorBoundary extends Component<Props, State> {
       existingErrors.unshift(errorData);
       existingErrors.splice(5); // Keep only last 5 errors
       localStorage.setItem('app-errors', JSON.stringify(existingErrors));
-    } catch (e) {
+    } catch {
       // Silently fail if localStorage is not available
     }
   };
