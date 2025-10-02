@@ -5,66 +5,6 @@ import { NewContent2026MegaBanner } from '../components/NewContent2026Banners';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
-import Ultimate2025ContentShowcaseBanner from '../components/Ultimate2025ContentShowcaseBanner';
-import March2027QuantumSingularityBanner from '../components/March2027QuantumSingularityBanner';
-import NewServicesHero from '../components/NewServicesHero';
-  AIMultimodalEnterprise2026Banner,
-  AISustainabilityTransformationBanner,
-  LatestContent2026Banner
-} from '../components/PromotionalBanner';
-import {
-  NewContent2026Banner as NewContent2026BannerComponent,
-  AutonomousOperationsBanner,
-  FinOpsAdvancedBanner,
-  PlatformArchitectureBanner,
-  AutonomousOperationsSuccessBanner,
-  NewContentShowcaseBanner2026,
-  LatestContent2026Banner,
-  AISecurityEnterprise2026Banner,
-  AIMultimodalEnterprise2026Banner,
-  AISustainabilityTransformationBanner,
-  NewLatest2026ContentBanner,
-  AIAutonomousCloudOpsBanner,
-  AIFinTechTransformationBanner,
-  AIRetailAutomationBanner,
-  Latest2026ContentBanner
-} from '../components/NewContent2026Banners';
-import ContentShowcase from '../components/ContentShowcase';
-import FeaturedServiceCard from '../components/FeaturedServiceCard';
-import SuccessStory from '../components/SuccessStory';
-import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
-import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
-import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
-import LatestContent2026Banner from '../components/LatestContent2026Banner';
-import NewContent2026ShowcaseBanner from '../components/NewContent2026ShowcaseBanner';
-import LatestContentPromotionalBanner from '../components/LatestContentPromotionalBanner';
-import NewContentPromotionalBanner2026 from '../components/NewContentPromotionalBanner2026';
-import AIInnovationShowcaseBanner2026 from '../components/AIInnovationShowcaseBanner2026';
-import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
-import UltimateContent2026Showcase from '../components/UltimateContent2026Showcase';
-import Revolutionary2027ContentBanner from '../components/Revolutionary2027ContentBanner';
-import UltimateContent2027Showcase from '../components/UltimateContent2027Showcase';
-import NewContentShowcase2026 from '../src/components/NewContentShowcase2026';
-import September30NewAIBreakthroughsBanner from '../components/September30NewAIBreakthroughsBanner';
-import September30BreakthroughContentBanner from '../components/September30BreakthroughContentBanner';
-import Revolutionary2026ContentShowcaseBanner from '../components/Revolutionary2026ContentShowcaseBanner';
-import Latest2026ContentMegaBanner from '../components/Latest2026ContentMegaBanner';
-import Ultimate2026ContentShowcaseBanner from '../components/Ultimate2026ContentShowcaseBanner';
-import RevolutionaryQuantumAIBreakthroughBanner from '../components/RevolutionaryQuantumAIBreakthroughBanner';
-import AutonomousBusinessSystemsMegaBanner from '../components/AutonomousBusinessSystemsMegaBanner';
-import QuantumAI2027BreakthroughBanner from '../components/QuantumAI2027BreakthroughBanner';
-import AutonomousBusinessIntelligence2026Banner from '../components/AutonomousBusinessIntelligence2026Banner';
-import NewContent2027ShowcaseBanner from '../components/NewContent2027ShowcaseBanner';
-import RevolutionaryBreakthrough2026Banner from '../src/components/RevolutionaryBreakthrough2026Banner';
-import AICostOptimizationBanner from '../src/components/AICostOptimizationBanner';
-import AutonomyBlueprint2026Banner from '../components/AutonomyBlueprint2026Banner';
-import September30ContentPromo2025 from '../components/September30ContentPromo2025';
-import NewContent2026BreakthroughBanner from '../components/NewContent2026BreakthroughBanner';
-import InteractiveAI2026BreakthroughCalculator from '../components/InteractiveAI2026BreakthroughCalculator';
-import FreshContent2027ShowcaseBanner from '../components/FreshContent2027ShowcaseBanner';
-import RevolutionaryAI2027Banner from '../components/RevolutionaryAI2027Banner';
-import AI2028RevolutionaryBreakthroughBanner from '../components/AI2028RevolutionaryBreakthroughBanner';
-import AI2028ContentShowcaseBanner from '../components/AI2028ContentShowcaseBanner';
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
   description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Transform your business with cutting-edge technology and automation.',
@@ -157,7 +97,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </header>
+      </div>
 
       {/* NEW INNOVATIVE SERVICES SHOWCASE */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
@@ -549,46 +489,7 @@ export default function HomePage() {
       </section>
 
       {/* NEW DECEMBER 2026 ULTIMATE AUTONOMOUS REVOLUTION - MOST PROMINENT */}
-      <December2026UltimateAutonomousBanner />
-
-      {/* NEW NOVEMBER 2026 QUANTUM SUPERINTELLIGENCE - MOST PROMINENT */}
-      <November2026QuantumSuperintelligenceBanner />
-
-      {/* NEW AUGUST 2026 QUANTUM CONSCIOUSNESS - MOST PROMINENT */}
-      <August2026QuantumConsciousnessBanner />
-
-      {/* ULTIMATE AUTONOMOUS REVOLUTION 2026 - MOST PROMINENT */}
-      <UltimateAutonomousRevolutionBanner />
-
-      {/* NEW JULY 2026 MEGA BREAKTHROUGH - FEATURED PROMINENTLY */}
-      <July2026MegaBreakthroughBanner />
-
-      {/* NEW APRIL 2026 ULTIMATE BREAKTHROUGH - MOST PROMINENT */}
-      <April2026UltimateBreakthroughBanner />
-
-      {/* NEW MAY 2026 REVOLUTIONARY BREAKTHROUGH - FEATURED PROMINENTLY */}
-      <May2026RevolutionaryBreakthroughBanner />
-
-      {/* NEW JUNE 2026 ULTIMATE BREAKTHROUGH - FEATURED PROMINENTLY */}
-      <June2026UltimateBreakthroughBanner />
-
-      {/* NEW APRIL 2026 MEGA BREAKTHROUGH */}
-      <April2026MegaBreakthroughBanner />
-
-      {/* NEW MARCH 2026 MEGA BREAKTHROUGH - MOST PROMINENT */}
-      <March2026MegaBreakthroughBanner />
-
-      {/* NEW 2026 REVOLUTIONARY CONTENT - Featured prominently */}
-      <AI2026RevolutionaryAutonomousSystemsBanner />
-      
-      {/* NEW 2026 QUANTUM AI REVOLUTION - Featured prominently */}
-      <AI2026QuantumAIRevolutionBanner />
-      
-      {/* Revolutionary 2029 Content Mega Banner - Featured prominently */}
-      <Revolutionary2029ContentMegaBanner />
-      
-      {/* Ultimate 2030 Consciousness Banner */}
-      <Ultimate2030ConsciousnessBanner />
+      {/* Content Banners */}
 
       {/* Fresh content promo — newly published */}
       <section className="py-4 border-t border-b border-white/10 bg-white/5">
@@ -607,18 +508,12 @@ export default function HomePage() {
             </div>
       
       {/* 🌟 AI 2028 REVOLUTIONARY BREAKTHROUGH BANNER */}
-      <AI2028RevolutionaryBreakthroughBanner />
       
       {/* 🌟 AI 2028 CONTENT SHOWCASE */}
-      <AI2028ContentShowcaseBanner />
-      <Ultimate2025ContentShowcaseBanner />
       
       {/* 🌟 AI 2028 REVOLUTIONARY BREAKTHROUGH BANNER */}
-      <AI2028RevolutionaryBreakthroughBanner />
       
       {/* 🌟 AI 2028 CONTENT SHOWCASE */}
-      <AI2028ContentShowcaseBanner />
-      <Ultimate2025ContentShowcaseBanner />
       
       {/* New Content Promo Strip */}
       <div className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
@@ -823,65 +718,11 @@ export default function HomePage() {
         </div>
       </section>
       {/* 🚀🚀🚀 FRESH CONTENT 2027 - Revolutionary AI Breakthroughs! 🚀🚀🚀 */}
-      <RevolutionaryAI2027Banner />
       
       {/* Content Banners */}
       <NewContent2026MegaBanner />
-      {/* Latest 2026 Revolutionary Content Banners */}
-      <AINeuralSuperintelligenceBanner />
-      <AIQuantumComputingBanner />
-      <NewAIAutonomousSystemsBanner />
-      <NeuralSuperintelligenceCaseStudyBanner />
-      <InteractiveAIToolsBanner />
-      <NewLatestContentShowcaseBanner />
-      
-      {/* Latest Content Banner 2025 - September 30 */}
-      <LatestContentBanner2025 />
-      
-      {/* Latest 2026 Content Banner */}
-      
-      {/* Promotional Banners */}
-      <AIEnterpriseTransformationBanner />
-      <AIEnterpriseSuccessBanner />
-      <LatestEnterpriseContentBanner />
-      <NewContentShowcase2026Banner />
-      <AIEthicalFrameworkBanner />
-      <AIEthicsSuccessBanner />
-      <LatestContent2026Banner />
-      <AISecurityEnterprise2026Banner />
-      <AIMultimodalEnterprise2026Banner />
-      <AISustainabilityTransformationBanner />
-      <NewLatest2026ContentBanner />
-      <AINeuralArchitectureOptimizationBanner />
-      <AIFederatedLearningBanner />
-      <FederatedLearningSuccessBanner />
-      <AIAutonomousCloudOpsBanner />
-      <AIFinTechTransformationBanner />
-      <AIRetailAutomationBanner />
-      <Latest2026ContentBanner />
-      <AIOperationalExcellenceBanner />
-      <AIAgentObservabilityBanner />
-      <ManufacturingTransformationBanner />
-      <NewContent2026Banner />
-      <AIMultimodalEnterpriseBanner />
-      <AIEnterpriseAutomationBanner />
-      <AIDataAnalyticsEnterpriseBanner />
-      <EnterpriseTransformationSuccessBanner />
-      <HealthcareTransformationBanner />
-      <NewContentShowcaseBanner />
-      <AIRoadmapsBanner />
-      <AIFinOpsBanner />
-      <AutonomousAgentsBanner />
-      <AIGovernanceBanner />
-      <FinTechSuccessBanner />
-      <AIContentShowcaseBanner />
-      <CustomerServiceAIBanner />
-      <HealthcareAIBanner />
-      <RetailSuccessBanner />
-      <AIRevolutionBanner />
-      <NewBlogBanner />
-      <WorkflowAutomationBanner />
-      <AIAnalyticsBanner />
+      {/* Content Banners */}
+      {/* Additional Content Banners */}
       
       {/* Hero Section */}
       <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
@@ -1157,7 +998,6 @@ export default function HomePage() {
 
       {/* Featured Services */}
       {/* New Services Hero Section */}
-      <NewServicesHero />
 
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4">
@@ -1174,98 +1014,86 @@ export default function HomePage() {
             <FeaturedServiceCard
               title="AI Data Analytics"
               description="Transform data into actionable insights with predictive modeling and real-time dashboards"
-              price="$199/month"
+              icon="📊"
               features={['Predictive Analytics', 'Real-time Dashboards', 'Data Integration']}
-              to="/services/ai-data-analytics"
-              popular={true}
+              href="/services/ai-data-analytics"
             />
             <FeaturedServiceCard
               title="AI Workflow Automation"
               description="Automate business processes with intelligent workflow design and smart triggers"
-              price="$149/month"
+              icon="⚙️"
               features={['Process Automation', 'Smart Triggers', 'Performance Monitoring']}
-              to="/services/ai-workflow-automation"
-              popular={false}
+              href="/services/ai-workflow-automation"
             />
             <FeaturedServiceCard
               title="AI Virtual Assistant"
               description="24/7 intelligent customer support with natural language processing"
-              price="$99/month"
+              icon="🤖"
               features={['24/7 Support', 'Multi-channel', 'Personalized Responses']}
-              to="/services/ai-virtual-assistant"
-              popular={false}
+              href="/services/ai-virtual-assistant"
             />
             <FeaturedServiceCard
               title="Cloud Migration"
               description="Seamless migration to cloud infrastructure with zero downtime"
-              price="$2,999"
+              icon="💰"
               features={['Zero Downtime', 'Security Compliance', 'Cost Optimization']}
-              to="/services/cloud-migration"
-              popular={false}
+              href="/services/cloud-migration"
             />
             <FeaturedServiceCard
               title="DevOps Automation"
               description="Automate CI/CD pipelines and infrastructure management"
-              price="$399/month"
+              icon="🔒"
               features={['CI/CD Pipelines', 'Infrastructure as Code', 'Auto-scaling']}
-              to="/services/devops-automation"
-              popular={false}
+              href="/services/devops-automation"
             />
             <FeaturedServiceCard
               title="Cybersecurity Consulting"
               description="Advanced threat detection and zero-trust security architecture"
-              price="$599/month"
+              icon="🏥"
               features={['Threat Detection', 'Zero-trust Architecture', 'Compliance']}
-              to="/services/cybersecurity-consulting"
-              popular={false}
+              href="/services/cybersecurity-consulting"
             />
             <FeaturedServiceCard
               title="AI Edge Computing"
               description="Real-time AI processing at the edge with sub-50ms response times"
-              price="$799/month"
+              icon="🛒"
               features={['Sub-50ms Latency', 'Edge Intelligence', 'Offline Capability']}
-              to="/services/ai-edge-computing"
-              popular={false}
+              href="/services/ai-edge-computing"
             />
             <FeaturedServiceCard
               title="AI Finance Automation"
               description="Automate financial processes with 95% accuracy and $3M+ savings"
-              price="$1,299/month"
+              icon="🏭"
               features={['95% Automation', 'Fraud Detection', 'Real-time Reporting']}
-              to="/services/ai-finance-automation"
-              popular={false}
+              href="/services/ai-finance-automation"
             />
             <FeaturedServiceCard
               title="AI Edge Computing"
               description="Real-time AI processing at the edge with sub-50ms response times"
-              price="$799/month"
+              icon="🛒"
               features={['Sub-50ms Latency', 'Edge Intelligence', 'Offline Capability']}
-              to="/services/ai-edge-computing"
-              popular={false}
+              href="/services/ai-edge-computing"
             />
             <FeaturedServiceCard
               title="AI Finance Automation"
               description="Automate financial processes with 95% accuracy and $3M+ savings"
-              price="$1,299/month"
+              icon="🏭"
               features={['95% Automation', 'Fraud Detection', 'Real-time Reporting']}
-              to="/services/ai-finance-automation"
-              popular={false}
+              href="/services/ai-finance-automation"
             />
             <FeaturedServiceCard
               title="AI Infrastructure Orchestration"
               description="Achieve 99.99% uptime and 85% cost reduction with intelligent automation"
-              price="$15,000/month"
+              icon="🚀"
               features={['99.99% Uptime', 'Self-Healing', '85% Cost Reduction']}
-              to="/services/ai-infrastructure-orchestration-platform-2026"
-              popular={true}
+              href="/services/ai-infrastructure-orchestration-platform-2026"
             />
             <FeaturedServiceCard
               title="AI DevSecOps Automation"
               description="Reduce security vulnerabilities by 95% with automated security operations"
-              price="$12,500/month"
+              icon="🏢"
               features={['95% Vuln Reduction', 'Automated Compliance', '$18M+ ROI']}
-              to="/services/ai-devsecops-automation"
-              popular={true}
+              href="/services/ai-devsecops-automation"
             />
           </div>
         </div>
@@ -1982,28 +1810,34 @@ export default function HomePage() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <SuccessStory
-              company="TechCorp Inc."
+              title="TechCorp Inc. - E-commerce Success"
+              description="AI Data Analytics automation reduced manual data processing from 40 hours/week to 4 hours/week, achieving 90% time reduction and 60% cost savings."
               industry="E-commerce"
-              challenge="Manual data processing taking 40 hours/week"
-              solution="AI Data Analytics automation"
-              result="90% time reduction, 60% cost savings"
-              metric="$500K saved annually"
+              metrics={[
+                { label: "Time Saved", value: "90%" },
+                { label: "Cost Savings", value: "$500K annually" },
+                { label: "Efficiency Gain", value: "60%" }
+              ]}
             />
             <SuccessStory
-              company="HealthTech Solutions"
+              title="HealthTech Solutions - Healthcare Success"
+              description="AI Virtual Assistant implementation provided 24/7 customer support, achieving 80% faster response time and 95% customer satisfaction."
               industry="Healthcare"
-              challenge="Customer support overwhelmed with queries"
-              solution="AI Virtual Assistant implementation"
-              result="80% faster response time, 24/7 support"
-              metric="95% customer satisfaction"
+              metrics={[
+                { label: "Response Time", value: "80% faster" },
+                { label: "Customer Satisfaction", value: "95%" },
+                { label: "Support Coverage", value: "24/7" }
+              ]}
             />
             <SuccessStory
-              company="FinanceFlow Ltd."
+              title="FinanceFlow Ltd. - Fintech Success"
+              description="AI Workflow Automation platform eliminated complex workflow bottlenecks, achieving 75% process efficiency improvement and 300% ROI in 6 months."
               industry="Fintech"
-              challenge="Complex workflow bottlenecks"
-              solution="AI Workflow Automation platform"
-              result="75% process efficiency improvement"
-              metric="300% ROI in 6 months"
+              metrics={[
+                { label: "Efficiency Improvement", value: "75%" },
+                { label: "ROI", value: "300%" },
+                { label: "Timeframe", value: "6 months" }
+              ]}
             />
           </div>
         </div>
