@@ -83,7 +83,7 @@ const ModernFooter: React.FC = () => {
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
             <div className="flex space-x-6">
-              <a
+              <a title="External link"
                 href="https://linkedin.com/company/ziontechgroup"
                 className="text-gray-400 hover:text-white transition-colors"
                 target="_blank"
@@ -91,7 +91,7 @@ const ModernFooter: React.FC = () => {
               >
                 LinkedIn
               </a>
-              <a
+              <a title="External link"
                 href="https://twitter.com/ziontechgroup"
                 className="text-gray-400 hover:text-white transition-colors"
                 target="_blank"
@@ -99,7 +99,7 @@ const ModernFooter: React.FC = () => {
               >
                 Twitter
               </a>
-              <a
+              <a title="External link"
                 href="https://github.com/ziontechgroup"
                 className="text-gray-400 hover:text-white transition-colors"
                 target="_blank"

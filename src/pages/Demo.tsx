@@ -162,13 +162,13 @@ const Demo: React.FC = () => {
                   </div>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a
+                  <a title="Internal link"
                     href="/contact"
                     className="inline-flex items-center px-8 py-4 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-lg transition-colors"
                   >
                     Contact Us
                   </a>
-                  <a
+                  <a title="Internal link"
                     href="/"
                     className="inline-flex items-center px-8 py-4 border border-slate-600 text-white hover:bg-slate-800 font-semibold rounded-lg transition-colors"
                   >

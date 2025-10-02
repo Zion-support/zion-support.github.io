@@ -72,10 +72,10 @@ class ContentOptimizer {
   private optimizeImages(content: string): string {
     // Add lazy loading attributes to images
     return content.replace(
-      /<img([^>]*)>/gi,
+      /<img alt="Zion Tech Group"([^>]*)>/gi,
       (match, attributes) => {
         if (!attributes.includes('loading=')) {
-          return `<img${attributes} loading="lazy">`;
+          return `<img alt="Zion Tech Group"${attributes} loading="lazy">`;
         }
         return match;
       }

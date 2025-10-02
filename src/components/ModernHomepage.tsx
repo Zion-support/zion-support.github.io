@@ -101,13 +101,13 @@ const ModernHomepage: React.FC = () => {
               autonomous operations, and revolutionary technology solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
+              <a title="Internal link"
                 href="/services"
                 className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors"
               >
                 Explore Services
               </a>
-              <a
+              <a title="Internal link"
                 href="/case-studies"
                 className="px-8 py-3 border-2 border-white hover:bg-white hover:text-blue-900 rounded-lg font-semibold transition-colors"
               >
@@ -190,13 +190,13 @@ const ModernHomepage: React.FC = () => {
             Contact us today to learn how our AI solutions can revolutionize your operations
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
+            <a title="Internal link"
               href="/contact"
               className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors"
             >
               Get Started
             </a>
-            <a
+            <a title="Internal link"
               href="tel:+13024640950"
               className="px-8 py-3 border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white rounded-lg font-semibold transition-colors"
             >

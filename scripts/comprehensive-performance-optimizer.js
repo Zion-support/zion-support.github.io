@@ -13,9 +13,13 @@
  * - SEO optimization
  */
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+import fs from 'fs';
+import path from 'path';
+import { execSync } from 'child_process';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 class ComprehensivePerformanceOptimizer {
   constructor() {
@@ -342,9 +346,9 @@ class ComprehensivePerformanceOptimizer {
 }
 
 // Run the optimizer
-if (require.main === module) {
+if (import.meta.url === `file://${process.argv[1]}`) {
   const optimizer = new ComprehensivePerformanceOptimizer();
   optimizer.run().catch(console.error);
 }
 
-module.exports = ComprehensivePerformanceOptimizer;
+export default ComprehensivePerformanceOptimizer;

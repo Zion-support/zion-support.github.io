@@ -84,28 +84,28 @@ const HomePage: React.FC = () => {
                   <div className="service-card">
                     <h3>Artificial Intelligence</h3>
                     <p>Machine learning, natural language processing, and AI automation solutions.</p>
-                    <a href="/services#ai" className="service-link">Learn More →</a>
+                    <a title="Internal link" href="/services#ai" className="service-link">Learn More →</a>
                   </div>
                 </AnimatedSection>
                 <AnimatedSection animation="slideLeft" delay={600}>
                   <div className="service-card">
                     <h3>Blockchain Technology</h3>
                     <p>Smart contracts, DeFi solutions, and blockchain infrastructure development.</p>
-                    <a href="/services#blockchain" className="service-link">Learn More →</a>
+                    <a title="Internal link" href="/services#blockchain" className="service-link">Learn More →</a>
                   </div>
                 </AnimatedSection>
                 <AnimatedSection animation="slideRight" delay={400}>
                   <div className="service-card">
                     <h3>Cloud Computing</h3>
                     <p>Scalable cloud infrastructure, migration services, and cloud-native applications.</p>
-                    <a href="/services#cloud" className="service-link">Learn More →</a>
+                    <a title="Internal link" href="/services#cloud" className="service-link">Learn More →</a>
                   </div>
                 </AnimatedSection>
                 <AnimatedSection animation="slideRight" delay={600}>
                   <div className="service-card">
                     <h3>Cybersecurity</h3>
                     <p>Security audits, penetration testing, and comprehensive security solutions.</p>
-                    <a href="/services#security" className="service-link">Learn More →</a>
+                    <a title="Internal link" href="/services#security" className="service-link">Learn More →</a>
                   </div>
                 </AnimatedSection>
               </div>
@@ -128,7 +128,7 @@ const HomePage: React.FC = () => {
                   <h2 className="section-title">🚀 October 2025 Updates</h2>
                   <p className="promo-text">Fresh insights on Multi-Agent AI Systems, Zero-Trust Architecture 2.0, Quantum-Safe Cryptography, Real-Time AI Training, Sustainable AI practices, Kubernetes Service Mesh comparisons, and Agentic Workflows. Plus: GenAI in production, privacy-first Edge AI, and incident-ready CI/CD playbooks.</p>
                 </div>
-                <a href="/blog" className="btn btn-primary">Explore the latest posts →</a>
+                <a title="Internal link" href="/blog" className="btn btn-primary">Explore the latest posts →</a>
               </div>
             </div>
           </section>
@@ -195,7 +195,7 @@ const HomePage: React.FC = () => {
                       </div>
                       <h3 className="blog-title">{post.title}</h3>
                       <p className="blog-excerpt">{post.excerpt}</p>
-                      <a href="/blog" className="service-link">Read on the blog →</a>
+                      <a title="Internal link" href="/blog" className="service-link">Read on the blog →</a>
                     </div>
                   </article>
                 ))}

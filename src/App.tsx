@@ -94,13 +94,13 @@ const ContactPage = () => (
           <div className="space-y-4">
             <div>
               <h3 className="font-semibold text-gray-900">Phone</h3>
-              <a href="tel:+13024640950" className="text-blue-600 hover:text-blue-700">
+              <a title="Internal link" href="tel:+13024640950" className="text-blue-600 hover:text-blue-700">
                 +1 302 464 0950
               </a>
             </div>
             <div>
               <h3 className="font-semibold text-gray-900">Email</h3>
-              <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:text-blue-700">
+              <a title="Internal link" href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:text-blue-700">
                 kleber@ziontechgroup.com
               </a>
             </div>

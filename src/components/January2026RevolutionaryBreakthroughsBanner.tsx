@@ -159,14 +159,14 @@ const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {
               Ready to transform your enterprise with revolutionary AI?
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
+              <a title="Internal link"
                 href="/blog"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 Explore All Content
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
-              <a
+              <a title="Internal link"
                 href="/services"
                 className="inline-flex items-center px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 hover:border-white/30 text-white font-semibold rounded-xl transition-all duration-300"
               >

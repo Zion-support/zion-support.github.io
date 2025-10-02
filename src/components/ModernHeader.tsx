@@ -40,7 +40,7 @@ const ModernHeader: React.FC = () => {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
-            <a
+            <a title="Internal link"
               href="tel:+13024640950"
               className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
             >
@@ -100,7 +100,7 @@ const ModernHeader: React.FC = () => {
                 </Link>
               ))}
               <div className="px-4 py-2 border-t border-gray-200 mt-2">
-                <a
+                <a title="Internal link"
                   href="tel:+13024640950"
                   className="block text-gray-700 hover:text-blue-600 transition-colors font-medium mb-2"
                 >
