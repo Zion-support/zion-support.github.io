@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import './index.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import ModernHomepage from './components/LatestContentBanner2025';
 import SEOOptimizer from './components/SEOOptimizer';
 import AdvancedAnalytics from './components/AdvancedAnalytics';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';

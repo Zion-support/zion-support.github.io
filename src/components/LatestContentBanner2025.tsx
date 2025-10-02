@@ -3,93 +3,6 @@ import React from 'react';
 const LatestContentBanner2025: React.FC = () => {
   const latestArticles = [
     {
-      title: "AI 2026 Mega Breakthrough Revolution",
-      description: "Meta-Cognitive AI, Quantum-Neural Networks, Autonomous Operations - $50M+ Annual Savings",
-      slug: "ai-2026-mega-breakthrough-revolution",
-      category: "Revolutionary AI",
-      emoji: "🚀",
-      highlight: "BREAKTHROUGH",
-      impact: "$50M+ Savings"
-    },
-    {
-      title: "Zero‑PII Telemetry v2",
-      description: "Decision‑grade signals without centralized IDs — privacy‑first analytics",
-      slug: "edge-2025-oct-01-zero-pii-telemetry-v2",
-      category: "Observability",
-      emoji: "🛡️",
-      highlight: "NEW",
-      impact: "Zero PII"
-    },
-    {
-      title: "Live Evals & Scorecards",
-      description: "Ship GenAI fast without regressions — KPI‑wired canaries",
-      slug: "genai-2025-oct-01-eval-scorecards-live-canaries",
-      category: "GenAI",
-      emoji: "📈",
-      highlight: "NEW",
-      impact: "No regressions"
-    },
-    {
-      title: "AI 2026: Future Predictions & Mega Trends",
-      description: "Comprehensive analysis of revolutionary AI trends and transformative predictions through 2030",
-      slug: "ai-2026-future-predictions-mega-trends",
-      category: "Future Predictions",
-      emoji: "🔮",
-      highlight: "TRENDS",
-      impact: "2030 Vision"
-    },
-    {
-      title: "Enterprise AI Transformation 2026: Complete Guide",
-      description: "12-phase framework proven to deliver $50M+ annual savings and 300% ROI for Fortune 500 companies",
-      slug: "enterprise-ai-transformation-2026-complete-guide",
-      category: "Implementation Guide",
-      emoji: "📚",
-      highlight: "COMPLETE",
-      impact: "300% ROI"
-    },
-    {
-      title: "Next-Generation Enterprise Automation: The 2026 AI Revolution",
-      description: "98% Automation Rate, 1000x Processing Speed, $2.5B Cost Savings",
-      slug: "ai-2026-next-generation-enterprise-automation",
-      category: "AI Innovation",
-      emoji: "🚀",
-      highlight: "BREAKTHROUGH",
-      impact: "98% Automation"
-    },
-    {
-      title: "Quantum AI Breakthrough: Revolutionary Computing Paradigm",
-      description: "10^18 Operations/sec, 99.9% Accuracy, $10B Market Value",
-      slug: "quantum-ai-breakthrough-2026-revolutionary-computing",
-      category: "Quantum Computing",
-      emoji: "⚛️",
-      highlight: "REVOLUTIONARY",
-      impact: "10^18 Ops/sec"
-    },
-    {
-      title: "Fortune 500 Quantum AI Transformation: $10B Revenue Impact",
-      description: "500% Productivity Increase, 95% Process Automation, Market Leadership",
-      slug: "fortune-500-quantum-ai-transformation-2026",
-      category: "Success Story",
-      emoji: "🏆",
-      highlight: "MEGA SUCCESS",
-      impact: "$10B Revenue"
-=======
-      title: "Meta-Cognitive AI: The Thinking AI Revolution",
-      description: "95% Decision Accuracy, $2M+ Annual Savings",
-      slug: "meta-cognitive-ai-revolution-2025",
-      category: "AI Innovation",
-      emoji: "🧠",
-      highlight: "BREAKTHROUGH",
-      impact: "95% Decision Accuracy"
-    },
-    {
-      title: "Quantum-Neural Networks: 1000x Processing Speed",
-      description: "Revolutionary Processing Power, $5M+ Savings",
-      slug: "quantum-neural-networks-2025",
-      category: "Quantum Computing",
-      emoji: "⚛️",
-      highlight: "BREAKTHROUGH",
-      impact: "1000x Speed Boost"
     },
     {
       title: "AI 2025: Autonomous Operations Revolution",
@@ -191,7 +104,6 @@ const LatestContentBanner2025: React.FC = () => {
           </p>
         </div>
 
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">🚀 JUST PUBLISHED: 14 Revolutionary Breakthrough Articles!</h2>
         <p className="text-xl text-blue-100 mb-8 max-w-3xl">
           Experience <span className="font-bold text-yellow-300">3 REVOLUTIONARY breakthrough technologies</span> including our latest: "Meta-Cognitive AI: The Thinking AI Revolution" (95% decision accuracy, $2M+ savings), "Quantum-Neural Networks: 1000x Processing Speed" ($5M+ infrastructure savings), and "Autonomous Enterprise Operations: 98% Automation" ($10M+ annual savings) - plus comprehensive case studies and implementation guides!
         </p>
@@ -252,7 +164,6 @@ const LatestContentBanner2025: React.FC = () => {
                     <Zap className="w-4 h-4 text-cyan-400" />
                     {article.readTime}
                   </span>
-                  <span>{article.date ? new Date(article.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : ''}</span>
                 </div>
 
                 {/* CTA Button */}
