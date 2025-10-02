@@ -159,8 +159,62 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Success Stories */}
+      <section className="py-12 md:py-20 px-4 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Success Stories</h2>
+            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4">
+              Real results from Fortune 500 companies and enterprise clients
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
+            <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-6 md:p-8 rounded-xl">
+              <div className="flex items-center mb-4">
+                <Target className="w-6 md:w-8 h-6 md:h-8 text-blue-600 mr-3" />
+                <h3 className="text-xl md:text-2xl font-semibold">Fortune 500 Transformation</h3>
+              </div>
+              <p className="text-sm md:text-base text-gray-600 mb-4 md:mb-6">
+                "Zion Tech Group's AI solutions delivered a 1000x performance improvement 
+                and $150M ROI within the first year of implementation."
+              </p>
+              <div className="flex items-center">
+                <div className="w-10 md:w-12 h-10 md:h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                  <Users className="w-5 md:w-6 h-5 md:h-6 text-blue-600" />
+                </div>
+                <div>
+                  <div className="font-semibold text-sm md:text-base">Sarah Chen</div>
+                  <div className="text-gray-600 text-sm md:text-base">CTO, Global Tech Corp</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-green-50 to-blue-50 p-6 md:p-8 rounded-xl">
+              <div className="flex items-center mb-4">
+                <Zap className="w-6 md:w-8 h-6 md:h-8 text-green-600 mr-3" />
+                <h3 className="text-xl md:text-2xl font-semibold">95% Automation Achievement</h3>
+              </div>
+              <p className="text-sm md:text-base text-gray-600 mb-4 md:mb-6">
+                "Our autonomous enterprise system now handles 95% of routine operations, 
+                freeing our team to focus on strategic initiatives."
+              </p>
+              <div className="flex items-center">
+                <div className="w-10 md:w-12 h-10 md:h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                  <Rocket className="w-5 md:w-6 h-5 md:h-6 text-green-600" />
+                </div>
+                <div>
+                  <div className="font-semibold text-sm md:text-base">Michael Rodriguez</div>
+                  <div className="text-gray-600 text-sm md:text-base">CEO, InnovateCorp</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Services Showcase */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-20 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Latest Micro SaaS Solutions</h2>
@@ -178,7 +232,6 @@ export default function HomePage() {
               <p className="text-gray-600 text-sm mb-3">95% accuracy in insights</p>
               <div className="text-xs text-blue-600 font-semibold">Starting at $99/month</div>
             </div>
-
             <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl border border-green-200">
               <div className="w-10 h-10 bg-green-500 rounded-lg flex items-center justify-center mb-4">
                 <Users className="w-5 h-5 text-white" />
@@ -415,6 +468,8 @@ export default function HomePage() {
                 <p>🌐 Website: <a href="https://ziontechgroup.com" className="text-blue-400 hover:underline">https://ziontechgroup.com</a></p>
                 <p className="text-xs text-gray-400">Available 24/7 for enterprise clients • Free consultation for projects over $10K</p>
               </div>
+                View $5.2B Success Story
+              </Link>
             </div>
           </div>
         </div>
