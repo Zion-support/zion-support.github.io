@@ -22,6 +22,9 @@ const SolutionsPage = React.lazy(() => import('./pages/SolutionsPage'));
 const BlogPage = React.lazy(() => import('./pages/BlogPage'));
 const CaseStudiesPage = React.lazy(() => import('./pages/CaseStudiesPage'));
 const Resources = React.lazy(() => import('./pages/Resources'));
+<<<<<<< HEAD
+const ServicesCatalog = React.lazy(() => import('./pages/ServicesCatalog'));
+=======
 const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Terms = React.lazy(() => import('./pages/Terms'));
 const Team = React.lazy(() => import('./pages/Team'));
@@ -30,6 +33,7 @@ const SitemapPage = React.lazy(() => import('./pages/Sitemap'));
 const CookiesPage = React.lazy(() => import('./pages/Cookies'));
 
 // Loading component
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-a2c4
 const LoadingSpinner = () => (
   <div className="flex items-center justify-center min-h-screen">
     <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
@@ -69,11 +73,17 @@ const App: React.FC = () => {,
     canonical: string,
   }
 
+<<<<<<< HEAD
+  const seoDataForOptimizer: SEOData = useMemo(() => ({ title: 'Zion Tech Group - Leading AI & Technology Solutions',',
+    description: 'Cutting-edge AI, cloud, and digital transformation solutions for modern enterprises.',',
+    canonical: typeof window !== 'undefined' ? window.location.href : 'https://zion.app/}), []);
+=======
   const seoDataForOptimizer: SEOData = useMemo(() => ({
     title: 'Zion Tech Group - Leading AI & Technology Solutions',
     description: 'Cutting-edge AI, cloud, and digital transformation solutions for modern enterprises.',
     canonical: typeof window !== 'undefined' ? window.location.href : 'https://ziontechgroup.com/',
   }), []);
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-a2c4
 
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {,
@@ -125,6 +135,43 @@ const App: React.FC = () => {,
                 <BannerManager />
               </motion.div>
 
+<<<<<<< HEAD
+              <motion.main
+                initial="initial"
+                animate="in"
+                exit="out"
+                variants={pageVariants}
+                transition={pageTransition}
+                className="relative z-10"
+              >
+                <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 grid grid-cols-1 xl:grid-cols-[18rem_1fr] gap-8">",
+                  <Sidebar />
+                  <div id="main-content">
+                    <React.Suspense fallback={<LoadingSpinner />}>
+                      <Routes>
+                        <Route path="/" element={<HomePage />} />
+                        <Route path="/solutions/*" element={<SolutionsPage />} />
+                        <Route path="/services/*" element={<ServicesPage />} />
+                        <Route path="/services/catalog" element={<ServicesCatalog />} />
+                        <Route path="/services/ai-services" element={<ServicesPage category="ai-solutions/>} />
+                        <Route path="/services/micro-saas" element={<ServicesPage category="automation/>} />
+                        <Route path="/services/it-services" element={<ServicesPage category="cloud/>} />
+                        <Route path="/services/cloud" element={<ServicesPage category="cloud/>} />
+                        <Route path="/services/analytics" element={<ServicesPage category="analytics/>} />
+                        <Route path="/services/security" element={<ServicesPage category="security/>} />
+                        <Route path="/services/automation" element={<ServicesPage category="automation/>} />
+                        <Route path="/about" element={<AboutPage />} />
+                        <Route path="/contact" element={<ContactPage />} />
+                        <Route path="/blog/*" element={<BlogPage />} />
+                        <Route path="/case-studies" element={<CaseStudiesPage />} />
+                        <Route path="/resources" element={<Resources />} />
+                        <Route path="*" element={";
+                          <div className="min-h-screen flex items-center justify-center">
+                            <div className="text-center">
+                              <h1 className="text-6xl font-bold text-gray-300 mb-4">404</h1>
+                              <p className="text-xl text-gray-600 mb-8">Page not found</p>
+                              <a href="/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors">Return Home</a>",
+=======
                 {/* Dynamic Banner System */}
                 <motion.div
                   initial="initial"
@@ -221,6 +268,7 @@ const App: React.FC = () => {,
                                   Return Home
                                 </a>
                               </div>
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-a2c4
                             </div>
                           </div>
                         } />
