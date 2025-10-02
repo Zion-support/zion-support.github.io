@@ -124,11 +124,11 @@ export default function HomePage() {
             </div>
             
             <h1 className="text-5xl md:text-7xl font-extrabold mb-8 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent leading-tight">
-              Revolutionary AI Solutions for Enterprise
+              Revolutionary AI & Technology Solutions for Enterprise
             </h1>
             
             <p className="text-2xl md:text-3xl text-gray-300 mb-8 font-semibold max-w-3xl mx-auto">
-              Transform Your Business with Advanced AI, Automation, and Cloud Solutions
+              Transform Your Business with Advanced AI, Micro SaaS, and Enterprise IT Solutions. Real implementations with proven ROI.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -183,12 +183,12 @@ export default function HomePage() {
 
       {/* Featured Content Banners */}
       <SimplifiedBanner
-        title="Latest AI Breakthroughs"
-        description="Discover our newest AI innovations and enterprise solutions"
-        link="/blog/ai-breakthroughs-2024"
-        badge="NEW"
+        title="New Services 2026 - Revolutionary AI Solutions"
+        description="Discover our latest breakthrough services including Quantum ML, AI Healthcare, and Metaverse Development"
+        link="/services-advertising"
+        badge="NEW 2026"
         badgeColor="green"
-        icon="🧠"
+        icon="🚀"
       />
 
       <SimplifiedBanner
@@ -198,6 +198,15 @@ export default function HomePage() {
         badge="FEATURED"
         badgeColor="blue"
         icon="💼"
+      />
+
+      <SimplifiedBanner
+        title="Comprehensive Services Catalog"
+        description="Explore our complete portfolio of AI, Micro SaaS, and IT solutions with transparent pricing"
+        link="/comprehensive-services"
+        badge="CATALOG"
+        badgeColor="purple"
+        icon="📋"
       />
 
       {/* Services Section */}
