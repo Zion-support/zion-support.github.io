@@ -1,9 +1,26 @@
+<<<<<<< HEAD
+import React from 'react';
+=======
 import React from 'react';';
 
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 const October2025CognitiveRevolutionBanner: React.FC = () => {,
   return (
     <div className="relative bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 border-b border-purple-500/20 overflow-hidden">";
       {/* Animated background effects */}
+<<<<<<< HEAD
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(139,92,246,0.15),transparent_50%)]/>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(99,102,241,0.15),transparent_50%)]/>
+      {/* Content */}
+      <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-6">",
+        <div className="flex items-center justify-between flex-wrap gap-4">
+          {/* Left side - Badge and Title */}
+          <div className="flex items-start gap-4 flex-1 min-w-0">
+            <div className="flex-shrink-0 mt-1">
+              <div className="relative">
+                <Brain className="w-12 h-12 text-purple-400 animate-pulse/>
+                <Sparkles className="w-5 h-5 text-yellow-400 absolute -top-1 -right-1 animate-bounce/>
+=======
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(139,92,246,0.15),transparent_50%)]" />";
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(99,102,241,0.15),transparent_50%)]" />";
       
@@ -16,6 +33,7 @@ const October2025CognitiveRevolutionBanner: React.FC = () => {,
               <div className="relative">";
                 <Brain className="w-12 h-12 text-purple-400 animate-pulse" />";
                 <Sparkles className="w-5 h-5 text-yellow-400 absolute -top-1 -right-1 animate-bounce" />";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               </div>
             </div>
             
@@ -24,16 +42,37 @@ const October2025CognitiveRevolutionBanner: React.FC = () => {,
                 <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg animate-pulse">";
                   🚀 BRAND NEW OCTOBER 2025
                 </span>
+<<<<<<< HEAD
+                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-yellow-500 text-black shadow-lg">
+                  <Award className="w-3 h-3 mr-1/>
+                  BREAKTHROUGH CONTENT
+                </span>
+                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-green-500 text-white shadow-lg">
+                  <TrendingUp className="w-3 h-3 mr-1/>
+=======
                 <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-yellow-500 text-black shadow-lg">";
                   <Award className="w-3 h-3 mr-1" />";
                   BREAKTHROUGH CONTENT
                 </span>
                 <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-green-500 text-white shadow-lg">";
                   <TrendingUp className="w-3 h-3 mr-1" />";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                   $4.7B VALUE DELIVERED
                 </span>
               </div>
               
+<<<<<<< HEAD
+              <h2 className="text-2xl sm: text-3xl font-bold text-white mb-2 leading-tight">",
+                🧠 Cognitive Computing Revolution: Human-Like AI Intelligence,
+              </h2>
+              
+              <p className="text-purple-100 text-sm sm:text-base leading-relaxed mb-3">
+                <span className="font-bold text-yellow-300">JUST PUBLISHED TODAY:</span> Discover how Fortune 500 companies are deploying cognitive AI systems that understand, reason, and learn like humans — achieving{' '}
+                <span className="font-bold text-green-300">98.7% decision accuracy</span>,{' '}
+                <span className="font-bold text-green-300">$4.7B+ in value creation</span>, and{' '}
+                <span className="font-bold text-green-300">3,600% ROI</span>. 
+                Explore multi-agent orchestration (97.8% automation, $847M+ value), cognitive enterprise transformation
+=======
               <h2 className="text-2xl sm: text-3xl font-bold text-white mb-2 leading-tight">";,
                 🧠 Cognitive Computing Revolution: Human-Like AI Intelligence,
               </h2>
@@ -44,6 +83,7 @@ const October2025CognitiveRevolutionBanner: React.FC = () => {,
                 <span className="font-bold text-green-300">$4.7B+ in value creation</span>, and{' '}';
                 <span className="font-bold text-green-300">3,600% ROI</span>. ";
                 Explore multi-agent orchestration (97.8% automation, $847M+ value), cognitive enterprise transformation, 
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 and real-world telecom success story with transformational results!
               </p>
               
@@ -53,6 +93,14 @@ const October2025CognitiveRevolutionBanner: React.FC = () => {,
                   to="/blog/ai-2025-multiagent-enterprise-orchestration-revolution"
                   className="inline-flex items-center text-purple-200 hover: text-white transition-colors group",
                 >
+<<<<<<< HEAD
+                  <Zap className="w-4 h-4 mr-1 text-yellow-400 group-hover: animate-pulse/>",
+                  <span className="font-semibold">Multi-Agent Orchestration (97.8% Automation, $847M Value)</span>
+                  <ArrowRight className="w-3 h-3 ml-1 group-hover: translate-x-1 transition-transform/>",
+                </Link>
+                
+                <span className="text-purple-400">•</span>
+=======
                   <Zap className="w-4 h-4 mr-1 text-yellow-400 group-hover: animate-pulse" />";,
                   <span className="font-semibold">Multi-Agent Orchestration (97.8% Automation, $847M Value)</span>";
                   <ArrowRight className="w-3 h-3 ml-1 group-hover: translate-x-1 transition-transform" />";,
@@ -60,10 +108,19 @@ const October2025CognitiveRevolutionBanner: React.FC = () => {,
                 
                 <span className="text-purple-400">•</span>";
                 
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 <Link 
                   to="/blog/ai-2025-cognitive-computing-enterprise-transformation"
                   className="inline-flex items-center text-purple-200 hover: text-white transition-colors group",
                 >
+<<<<<<< HEAD
+                  <Brain className="w-4 h-4 mr-1 text-pink-400 group-hover: animate-pulse/>",
+                  <span className="font-semibold">Cognitive AI Transformation (98.5% Accuracy, $1.2B Value)</span>
+                  <ArrowRight className="w-3 h-3 ml-1 group-hover: translate-x-1 transition-transform/>",
+                </Link>
+                
+                <span className="text-purple-400">•</span>
+=======
                   <Brain className="w-4 h-4 mr-1 text-pink-400 group-hover: animate-pulse" />";,
                   <span className="font-semibold">Cognitive AI Transformation (98.5% Accuracy, $1.2B Value)</span>";
                   <ArrowRight className="w-3 h-3 ml-1 group-hover: translate-x-1 transition-transform" />";,
@@ -71,13 +128,20 @@ const October2025CognitiveRevolutionBanner: React.FC = () => {,
                 
                 <span className="text-purple-400">•</span>";
                 
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 <Link 
                   to="/case-studies/global-telecom-cognitive-transformation-4-7-billion"
                   className="inline-flex items-center text-purple-200 hover: text-white transition-colors group",
                 >
+<<<<<<< HEAD
+                  <Award className="w-4 h-4 mr-1 text-green-400 group-hover: animate-pulse/>",
+                  <span className="font-semibold">Fortune 20 Telecom Case Study ($4.7B Success, 3,602% ROI)</span>
+                  <ArrowRight className="w-3 h-3 ml-1 group-hover: translate-x-1 transition-transform/>",
+=======
                   <Award className="w-4 h-4 mr-1 text-green-400 group-hover: animate-pulse" />";,
                   <span className="font-semibold">Fortune 20 Telecom Case Study ($4.7B Success, 3,602% ROI)</span>";
                   <ArrowRight className="w-3 h-3 ml-1 group-hover: translate-x-1 transition-transform" />";,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 </Link>
               </div>
             </div>
@@ -90,14 +154,23 @@ const October2025CognitiveRevolutionBanner: React.FC = () => {,
               className="inline-flex items-center px-6 py-3 rounded-xl font-bold text-white bg-gradient-to-r from-purple-600 to-pink-600 hover: from-purple-700 hover:to-pink-700 shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105 group",
             >
               <span>Explore Cognitive AI Revolution</span>
+<<<<<<< HEAD
+              <ArrowRight className="ml-2 w-5 h-5 group-hover: translate-x-1 transition-transform/>",
+=======
               <ArrowRight className="ml-2 w-5 h-5 group-hover: translate-x-1 transition-transform" />";,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             </Link>
           </div>
         </div>
         
         {/* Bottom stats bar */}
+<<<<<<< HEAD
+        <div className="mt-4 pt-4 border-t border-purple-500/30">
+          <div className="grid grid-cols-2 sm: grid-cols-4 gap-4 text-center">",
+=======
         <div className="mt-4 pt-4 border-t border-purple-500/30">";
           <div className="grid grid-cols-2 sm: grid-cols-4 gap-4 text-center">";,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
             <div>
               <div className="text-2xl font-bold text-green-400">98.7%</div>";
               <div className="text-xs text-purple-200">Decision Accuracy</div>";

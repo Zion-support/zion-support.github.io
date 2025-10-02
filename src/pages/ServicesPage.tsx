@@ -1,47 +1,206 @@
-import React from 'react';';
-import { Helmet } from 'react-helmet-async';';
-import FeaturedServiceCard from '../components/FeaturedServiceCard';';
+import React from 'react';
+import {
 
-const ServicesPage: React.FC = () => {,
+} from 'react-router-dom';
+import SEO from '../components/SEO';
+type ServicesPageProps = {
+category?:,
+| 'ai-solutions'
+| 'cloud'
+| 'analytics'
+| 'security'
+| 'automation'
+| 'quantum-computing'
+| 'cloud-devops';
+service?: string;
+};
+
+const ServicesPage: React.FC<ServicesPageProps> = ({ service, category }) => {
+  const { service: urlService } = useParams();
+  const activeService = service || urlService || category || 'overview';
+
   const services = [
     {
-      title: "AI & Machine Learning",";,
-      description: "Advanced AI solutions including machine learning, deep learning, and neural networks for enterprise applications.",";,
-      icon: "🤖",";,
-      features: ["Machine Learning Models", "Deep Learning Networks", "AI Automation", "Predictive Analytics"]";,
+      id: 'ai-content-generator',
+      title: 'AI Content Generator Pro',
+      description: 'Revolutionary AI-powered content generation for marketing, documentation, and creative writing',
+      icon: Brain,
+      features: [
+        'Multi-format content generation',
+        'Brand voice consistency',
+        'SEO optimization',
+        'Multi-language support',
+        'Real-time collaboration'
+      ],
+      stats: { value: '85%', label: 'Faster Content Creation' },
+      color: 'from-blue-500 to-purple-600'
     },
     {
-      title: "Cloud Computing",";,
-      description: "Comprehensive cloud solutions including migration, infrastructure, and optimization services.",";,
-      icon: "☁️",";,
-      features: ["Cloud Migration", "Infrastructure Setup", "Cost Optimization", "Security Implementation"]";,
+      id: 'smart-appointment-scheduler',
+      title: 'Smart Appointment Scheduler',
+      description: 'Intelligent scheduling system with AI-powered optimization and conflict resolution',
+      icon: Zap,
+      features: [
+        'AI-powered scheduling optimization',
+        'Automatic conflict resolution',
+        'Multi-timezone support',
+        'Integration with calendar systems',
+        'Smart reminder system'
+      ],
+      stats: { value: '73%', label: 'Scheduling Efficiency' },
+      color: 'from-green-500 to-teal-600'
     },
     {
-      title: "Digital Transformation",";,
-      description: "Complete digital modernization strategies to transform your business operations.",";,
-      icon: "🚀",";,
-      features: ["Process Automation", "System Integration", "Workflow Optimization", "Change Management"]";,
+      id: 'ai-workflow-automation',
+      title: 'AI Workflow Automation',
+      description: 'Comprehensive workflow automation with intelligent decision-making capabilities',
+      icon: Brain,
+      features: [
+        'Intelligent process automation',
+        'Dynamic workflow adaptation',
+        'Exception handling',
+        'Performance monitoring',
+        'Scalable architecture'
+      ],
+      stats: { value: '520%', label: 'Productivity Increase' },
+      color: 'from-yellow-500 to-orange-600'
     },
     {
-      title: "Cybersecurity",";,
-      description: "Advanced security solutions to protect your digital assets and ensure compliance.",";,
-      icon: "🛡️",";,
-      features: ["Security Audits", "Threat Detection", "Compliance Management", "Incident Response"]";,
+      id: 'ai-virtual-assistant',
+      title: 'AI Virtual Assistant',
+      description: 'Advanced virtual assistant with natural language processing and contextual understanding',
+      icon: Users,
+      features: [
+        'Natural language processing',
+        'Contextual understanding',
+        'Multi-channel support',
+        'Learning capabilities',
+        'Integration with business systems'
+      ],
+      stats: { value: '99.7%', label: 'Accuracy Rate' },
+      color: 'from-purple-500 to-pink-600'
     },
     {
-      title: "Data Analytics",";,
-      description: "Transform your data into actionable insights with advanced analytics and visualization.",";,
-      icon: "📊",";,
-      features: ["Data Visualization", "Business Intelligence", "Real-time Analytics", "Reporting Systems"]";,
+      id: 'ai-data-analytics',
+      title: 'AI Data Analytics',
+      description: 'Advanced analytics platform with AI-powered insights and predictive modeling',
+      icon: Brain,
+      features: [
+        'Predictive analytics',
+        'Real-time data processing',
+        'Automated insights generation',
+        'Interactive dashboards',
+        'Custom reporting'
+      ],
+      stats: { value: '2,400%', label: 'ROI Improvement' },
+      color: 'from-indigo-500 to-blue-600'
     },
     {
-      title: "DevOps & Automation",";,
-      description: "Streamline your development and deployment processes with modern DevOps practices.",";,
-      icon: "⚙️",";,
-      features: ["CI/CD Pipelines", "Infrastructure as Code", "Monitoring & Logging", "Performance Optimization"]";,
+      id: 'ai-intelligent-document-processing',
+      title: 'Intelligent Document Processing',
+      description: 'AI-powered document processing with OCR, classification, and data extraction',
+      icon: Shield,
+      features: [
+        'Advanced OCR technology',
+        'Document classification',
+        'Data extraction automation',
+        'Quality assurance',
+        'Compliance monitoring'
+      ],
+      stats: { value: '98.9%', label: 'Processing Accuracy' },
+      color: 'from-emerald-500 to-green-600'
+    },
+    {
+      id: 'real-time-cognitive-automation',
+      title: 'Real-Time Cognitive Automation',
+      description: 'Real-time cognitive automation with sub-2ms latency for instant decision making',
+      icon: Zap,
+      features: [
+        'Sub-2ms latency processing',
+        'Real-time decision making',
+        'Cognitive load balancing',
+        'Adaptive algorithms',
+        'High availability'
+      ],
+      stats: { value: '<2ms', label: 'Response Time' },
+      color: 'from-red-500 to-pink-600'
+    },
+    {
+      id: 'advanced-cybersecurity-ai',
+      title: 'Advanced Cybersecurity AI',
+      description: 'Next-generation cybersecurity with AI-powered threat detection and prevention',
+      icon: Shield,
+      features: [
+        'AI threat detection',
+        'Behavioral analysis',
+        'Automated response',
+        'Zero-day protection',
+        'Compliance monitoring'
+      ],
+      stats: { value: '99.97%', label: 'Threat Prevention' },
+      color: 'from-gray-500 to-slate-600'
+    },
+    {
+      id: 'edge-ai-inference',
+      title: 'Edge AI Inference Platform',
+      description: 'Deploy compact, low-latency AI models to edge devices with OTA updates and observability.',
+      icon: Zap,
+      features: [
+        'Hardware-aware model optimization',
+        'Online/offline fallback and caching',
+        'Shadow deployments and A/B tests',
+        'Fleet telemetry and drift detection',
+        'Secure OTA updates with rollback'
+      ],
+      stats: { value: '<10ms', label: 'On-device inference' },
+      color: 'from-cyan-500 to-blue-600'
+    },
+    {
+      id: 'email-deliverability-optimizer',
+      title: 'Email Deliverability Optimizer',
+      description: 'Boost sender reputation, warm up inboxes, and maximize inbox placement automatically.',
+      icon: Brain,
+      features: [
+        'Reputation monitoring and alerts',
+        'Automated warm-up sequences',
+        'SPF/DKIM/DMARC assistant',
+        'Seed list testing and analytics',
+        'ESP integrations (SES, SendGrid, Mailgun)'
+      ],
+      stats: { value: '25-40%', label: 'Open rate lift' },
+      color: 'from-amber-500 to-orange-600'
+    },
+    {
+      id: 'sales-playbook-copilot',
+      title: 'Sales Playbook Copilot',
+      description: 'Adaptive AI that personalizes outreach, follow-ups, and mutual action plans by ICP.',
+      icon: Users,
+      features: [
+        'ICP and persona modeling',
+        'Sequence experimentation and guardrails',
+        'Meeting summarization to CRM',
+        'Deal risk signals and nudges',
+        'Auto-CSAT and NPS follow-ups'
+      ],
+      stats: { value: '30-60%', label: 'Reply rate improvement' },
+      color: 'from-fuchsia-500 to-pink-600'
+    },
+    {
+      id: 'code-quality-gatekeeper',
+      title: 'Code Quality Gatekeeper',
+      description: 'Policy-as-code quality gates with AI-powered static analysis and auto-fixes in PRs.',
+      icon: Shield,
+      features: [
+        'Repo-wide rules and waivers',
+        'AI suggestions with diffs',
+        'Security patterns and supply-chain checks',
+        'Test coverage enforcement',
+        'Language support for TS/JS, Python, Go'
+      ],
+      stats: { value: '70%', label: 'Defects caught pre-merge' },
+      color: 'from-slate-500 to-gray-700'
     }
-  }
-} as const;
+  ];
 
 const Card: React.FC<{ title: string; emoji: string; children: React.ReactNode }> = ({ title, emoji, children }) => (
   <div className="bg-white p-6 rounded-lg shadow-lg border">
@@ -116,85 +275,192 @@ const CategorySection: React.FC<{ slug: keyof typeof offerings.categories }> = (
 };
 
 const ServicesPage: React.FC<ServicesPageProps> = ({ category }) => {
-  const location = useLocation();
-  const selectedCategory = (category as keyof typeof offerings.categories) || ((): keyof typeof offerings.categories | undefined => {
-    const path = location.pathname;
-    if (path.includes('/services/ai')) return 'ai-solutions';
-    if (path.includes('/services/cloud')) return 'cloud';
-    if (path.includes('/services/analytics')) return 'analytics';
-    if (path.includes('/services/security')) return 'security';
-    if (path.includes('/services/automation')) return 'automation';
-    return undefined;
-  })();
+const location = useLocation();
+const selectedCategory = (category as keyof typeof offerings.categories) || ((): keyof typeof offerings.categories | undefined => {,
+const path = location.pathname;
+if (path.includes('/services/ai')) return 'ai-solutions';
+if (path.includes('/services/cloud')) return 'cloud';
+if (path.includes('/services/analytics')) return 'analytics';
+if (path.includes('/services/security')) return 'security';
+if (path.includes('/services/automation')) return 'automation';
+return undefined;
+})();
 
+const ServicesPage: React.FC = () => {
   return (
     <>
-      <Helmet>
-        <title>Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive IT services including AI solutions, cloud computing, digital transformation, and cybersecurity." />";
-      </Helmet>
+      <SEO 
+        title="Services - Zion Tech Group"
+        description="Comprehensive AI services, micro SaaS solutions, and IT services. Transform your business with our cutting-edge technology solutions."
+        keywords="AI services, micro SaaS, IT services, cloud migration, DevOps, cybersecurity"
+      />
       
-      <div className="container mx-auto px-4 py-8">";
-        <div className="text-center mb-12">";
-          <h1 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">";,
-            Our Services
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
-            Comprehensive IT solutions designed to accelerate your digital transformation 
-            and drive business growth.
-          </p>
-        </div>
+      <main className="py-20">
+        <div className="container mx-auto px-6">
+          <div className="max-w-6xl mx-auto">
+            <h1 className="text-4xl font-bold mb-8 text-center">Our Services</h1>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {/* AI Services */}
+              <div className="bg-white p-6 rounded-lg shadow-lg border">
+                <div className="text-4xl mb-4">🧠</div>
+                <h2 className="text-2xl font-bold mb-4">AI Services</h2>
+                <p className="text-gray-600 mb-4">
+                  Leverage artificial intelligence to automate processes, gain insights, and drive innovation.
+                </p>
+                <ul className="text-sm text-gray-600 space-y-1">
+                  <li>• Machine Learning Solutions</li>
+                  <li>• Natural Language Processing</li>
+                  <li>• Computer Vision</li>
+                  <li>• Predictive Analytics</li>
+                </ul>
+              </div>
 
-        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">";,
-          {services.map((service, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover: shadow-xl transition-shadow">";,
-              <div className="text-4xl mb-4">{service.icon}</div>";
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>";
-              <p className="text-gray-600 mb-6">{service.description}</p>";
-              
-              <ul className="space-y-2">";
-                {service.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center text-gray-700">";
-                    <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>";
-                    {feature}
-                  </li>
+              {/* Micro SaaS */}
+              <div className="bg-white p-6 rounded-lg shadow-lg border">
+                <div className="text-4xl mb-4">🚀</div>
+                <h2 className="text-2xl font-bold mb-4">Micro SaaS Solutions</h2>
+                <p className="text-gray-600 mb-4">
+                  Scalable software solutions that address specific business needs and workflows.
+                </p>
+                <ul className="text-sm text-gray-600 space-y-1">
+                  <li>• Custom Web Applications</li>
+                  <li>• API Development</li>
+                  <li>• Database Solutions</li>
+                  <li>• Integration Services</li>
+                </ul>
+              </div>
+
+<<<<<<< HEAD
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.4 }}
+              className="bg-white p-8 rounded-xl shadow-lg"
+            >
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                Key Features
+              </h3>
+              <ul className="space-y-4">
+                {selectedService.features.map((feature, index) => (
+                  <motion.li
+                    key={index}
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.6 + index * 0.1 }}
+                    className="flex items-center"
+                  >
+                    <CheckCircle className="text-green-500 mr-3" size={20} />
+                    <span className="text-gray-700">{feature}</span>
+                  </motion.li>
                 ))}
               </ul>
-              
-              <button className="w-full mt-6 bg-blue-600 text-white py-2 px-4 rounded-lg hover: bg-blue-700 transition-colors">";,
-                Learn More
-              </button>
-            </div>
-            {!selectedCategory && <ServicesGrid />}
-            {selectedCategory && <CategorySection slug={selectedCategory} />}
-            <div className="mt-12">
-              <div className="bg-blue-50 border border-blue-100 rounded-lg p-6 flex flex-col sm: flex-row sm:items-center sm:justify-between gap-4">",
-                <div>
-                  <p className="text-lg font-semibold text-blue-900">Ready to accelerate your roadmap?</p>
-                  <p className="text-blue-800">Contact us at +1 302 464 0950 • kleber@ziontechgroup.com • 364 E Main St STE 1008 Middletown DE 19709</p>
+
+              {/* Pricing Tiers */}
+              <div className="mt-10">
+                <h4 className="text-xl font-semibold text-gray-900 mb-4">Pricing</h4>
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <div className="border rounded-lg p-4">
+                    <div className="text-gray-900 font-semibold">Growth</div>
+                    <div className="text-2xl font-bold text-purple-600 mt-1">$149/mo</div>
+                    <div className="text-sm text-gray-500">Best for startups and SMBs</div>
+                  </div>
+                  <div className="border rounded-lg p-4">
+                    <div className="text-gray-900 font-semibold">Scale</div>
+                    <div className="text-2xl font-bold text-purple-600 mt-1">$499/mo</div>
+                    <div className="text-sm text-gray-500">Advanced features and SLAs</div>
+                  </div>
                 </div>
-                <div className="flex gap-3">
-                  <a href="/contact" className="px-5 py-2 rounded-md bg-blue-600 text-white hover: bg-blue-700">Contact Sales</a>",
-                  <a href="/demo" className="px-5 py-2 rounded-md border border-blue-600 text-blue-600 hover: bg-blue-50">Book a Demo</a>",
-                </div>
+                <p className="text-sm text-gray-500 mt-2">Enterprise pricing available on request.</p>
               </div>
+
+              {/* Reference Links */}
+              <div className="mt-6">
+                <h4 className="text-sm font-semibold text-gray-900 mb-2">Learn more</h4>
+                <ul className="list-disc list-inside text-sm text-blue-600">
+                  <li>
+                    <a href="https://developers.google.com/machine-learning" target="_blank" rel="noopener noreferrer">ML engineering best practices</a>
+                  </li>
+                  <li>
+                    <a href="https://owasp.org/www-project-top-ten/" target="_blank" rel="noopener noreferrer">OWASP Top 10 (security)</a>
+                  </li>
+                  <li>
+                    <a href="https://12factor.net/" target="_blank" rel="noopener noreferrer">12-Factor App methodology</a>
+                  </li>
+                </ul>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* All Services Overview */}
+      {activeService === 'overview' && (
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                All Services
+              </h2>
+              <p className="text-xl text-gray-600">
+                Comprehensive AI services for every business need
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {services.map((service, index) => (
+                <motion.div
+                  key={service.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+                >
+                  <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-4`}>
+                    <service.icon className="text-white" size={32} />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-600 mb-4">
+                    {service.description}
+                  </p>
+                  <div className="text-sm font-semibold text-purple-600 mb-4">
+                    {service.stats.value} {service.stats.label}
+                  </div>
+                  <Link
+                    to={`/services/${service.id}`}
+                    className="text-purple-600 hover:text-purple-700 font-semibold flex items-center"
+                  >
+                    Learn More
+                    <ArrowRight className="ml-1" size={16} />
+                  </Link>
+                </motion.div>
+              ))}
+=======
+              {/* IT Services */}
+              <div className="bg-white p-6 rounded-lg shadow-lg border">
+                <div className="text-4xl mb-4">💻</div>
+                <h2 className="text-2xl font-bold mb-4">IT Services</h2>
+                <p className="text-gray-600 mb-4">
+                  Comprehensive IT solutions to modernize your infrastructure and operations.
+                </p>
+                <ul className="text-sm text-gray-600 space-y-1">
+                  <li>• Cloud Migration</li>
+                  <li>• DevOps & SRE</li>
+                  <li>• Cybersecurity</li>
+                  <li>• System Administration</li>
+                </ul>
+              </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-3e47
             </div>
           </div>
         </div>
-
-        {/* CTA Section */}
-        <section className="text-center mt-16 bg-gray-50 rounded-lg p-8">";
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">";
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-gray-600 mb-6">";
-            Contact our experts to discuss your specific needs and get a customized solution.
-          </p>
-          <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover: bg-blue-700 transition-colors">";,
-            Get Started Today
-          </button>
-        </section>
-      </div>
+      </main>
     </>
   );
 };

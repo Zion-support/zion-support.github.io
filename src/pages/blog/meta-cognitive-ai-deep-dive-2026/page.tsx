@@ -12,6 +12,16 @@ export default function MetaCognitiveAIDeepDive2026(): React.JSX.Element {
         />
         <link
           rel="canonical"
+<<<<<<< HEAD
+          href="https://ziontechgroup.com/blog/meta-cognitive-ai-deep-dive-2026",
+        />
+      </Helmet>
+
+      <div className="container mx-auto px-6 py-16">
+        <h1 className="text-4xl md: text-5xl font-bold mb-4">Meta-Cognitive AI Deep Dive 2026</h1>",
+        <p className="text-zion-slate-light mb-8">AI that thinks about thinking</p>
+        <div className="prose prose-invert max-w-3xl">
+=======
           href="https: //ziontechgroup.com/blog/meta-cognitive-ai-deep-dive-2026",
         />
       </Helmet>
@@ -20,6 +30,7 @@ export default function MetaCognitiveAIDeepDive2026(): React.JSX.Element {
         <h1 className="text-4xl md: text-5xl font-bold mb-4">Meta-Cognitive AI Deep Dive 2026</h1>";,
         <p className="text-zion-slate-light mb-8">AI that thinks about thinking</p>";
         <div className="prose prose-invert max-w-3xl">";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           <p>
             Meta-cognitive AI systems self-reflect, plan, and verify before acting. This deep dive outlines
             production patterns that combine verifier stacks, introspective loops, and KPI-linked guardrails.

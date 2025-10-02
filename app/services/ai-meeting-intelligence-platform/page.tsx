@@ -1,389 +1,353 @@
 import React from 'react';
 import { Metadata } from 'next';
-import Link from 'next/link';
 import { 
   Video, 
-  Mic, 
+  Brain, 
+  BarChart3, 
   Users, 
   Clock, 
-  TrendingUp, 
-  Shield, 
-  Zap,
-  BarChart3,
-  MessageSquare,
-  Calendar,
-  CheckCircle,
+  CheckCircle, 
+  Zap, 
   DollarSign,
   Star,
-  ArrowRight,
-  Brain,
-  Target,
-  FileText
+  TrendingUp,
+  Smartphone,
+  Calendar,
+  MessageSquare,
+  FileText,
+  Shield
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'AI Meeting Intelligence Platform - Zion Tech Group',
-  description: 'Revolutionary AI-powered meeting platform that records, transcribes, analyzes, and extracts actionable insights from your meetings automatically.',
-  keywords: 'AI meeting platform, meeting intelligence, automated transcription, meeting analytics, AI meeting assistant',
-  robots: {
-    index: true,
-    follow: true,
-  },
+  title: 'AI Meeting Intelligence Platform | Zion Tech Group - Smart Meeting Analytics',
+  description: 'Transform meetings with AI-powered insights, automatic transcription, action item extraction, and real-time analytics. Boost productivity and decision-making.',
+  keywords: 'AI meeting platform, meeting analytics, transcription, action items, meeting intelligence, productivity tools',
 };
 
 export default function AIMeetingIntelligencePlatform() {
+  const features = [
+    {
+      icon: Video,
+      title: 'Real-Time Transcription',
+      description: 'Accurate AI transcription in 50+ languages with speaker identification'
+    },
+    {
+      icon: Brain,
+      title: 'Intelligent Summarization',
+      description: 'Automatic meeting summaries with key decisions and action items'
+    },
+    {
+      icon: BarChart3,
+      title: 'Analytics Dashboard',
+      description: 'Meeting effectiveness metrics, participation insights, and ROI tracking'
+    },
+    {
+      icon: Users,
+      title: 'Speaker Analysis',
+      description: 'Track speaking time, sentiment analysis, and engagement levels'
+    },
+    {
+      icon: Clock,
+      title: 'Time Optimization',
+      description: 'Identify time-wasting patterns and suggest meeting improvements'
+    },
+    {
+      icon: CheckCircle,
+      title: 'Action Item Tracking',
+      description: 'Automatically extract and track follow-up tasks with due dates'
+    }
+  ];
+
+  const benefits = [
+    '40% reduction in meeting time waste',
+    '85% improvement in action item completion',
+    '60% increase in meeting productivity',
+    'Real-time collaboration insights'
+  ];
+
+  const pricingTiers = [
+    {
+      name: 'Starter',
+      price: '$29',
+      period: '/month',
+      description: 'Perfect for small teams',
+      features: [
+        'Up to 10 hours of transcription/month',
+        'Basic analytics dashboard',
+        'Action item extraction',
+        'Email integration',
+        '5 users included'
+      ],
+      popular: false
+    },
+    {
+      name: 'Professional',
+      price: '$79',
+      period: '/month',
+      description: 'Ideal for growing businesses',
+      features: [
+        'Up to 50 hours of transcription/month',
+        'Advanced analytics & insights',
+        'Custom meeting templates',
+        'CRM integration (Salesforce, HubSpot)',
+        'Unlimited users',
+        'Priority support'
+      ],
+      popular: true
+    },
+    {
+      name: 'Enterprise',
+      price: '$199',
+      period: '/month',
+      description: 'For large organizations',
+      features: [
+        'Unlimited transcription',
+        'Custom AI training',
+        'Advanced security & compliance',
+        'API access & webhooks',
+        'Dedicated account manager',
+        '24/7 phone support'
+      ],
+      popular: false
+    }
+  ];
+
+  const useCases = [
+    {
+      title: 'Sales Teams',
+      description: 'Track deal progress, identify objections, and improve closing rates',
+      icon: TrendingUp
+    },
+    {
+      title: 'Project Management',
+      description: 'Ensure project milestones are met with automated follow-ups',
+      icon: CheckCircle
+    },
+    {
+      title: 'Customer Support',
+      description: 'Analyze support calls for quality improvement and training',
+      icon: MessageSquare
+    },
+    {
+      title: 'Executive Meetings',
+      description: 'Capture strategic decisions and board meeting insights',
+      icon: Users
+    }
+  ];
+
   return (
-    <div className="max-w-7xl mx-auto px-4 py-8">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
       {/* Hero Section */}
-      <div className="text-center mb-16">
-        <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium mb-6">
-          <Brain className="w-4 h-4 mr-2" />
-          AI-Powered Meeting Intelligence
-        </div>
-        <h1 className="text-5xl font-bold text-gray-900 mb-6">
-          AI Meeting Intelligence Platform
-        </h1>
-        <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
-          Transform every meeting into actionable intelligence. Our AI platform automatically records, transcribes, 
-          analyzes sentiment, extracts decisions, assigns tasks, and generates comprehensive meeting reports.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link 
-            href="mailto:kleber@ziontechgroup.com?subject=AI Meeting Intelligence Platform Inquiry"
-            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-          >
-            Get Started Today
-          </Link>
-          <Link 
-            href="tel:+13024640950"
-            className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
-          >
-            Call +1 302 464 0950
-          </Link>
+      <div className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-purple-700 text-white">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              AI Meeting Intelligence Platform
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-4xl mx-auto">
+              Transform every meeting into actionable insights with AI-powered transcription, 
+              analysis, and productivity optimization
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="tel:+13024640950" 
+                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
+              >
+                Call +1 302 464 0950
+              </a>
+              <a 
+                href="mailto:kleber@ziontechgroup.com" 
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+              >
+                Get Free Demo
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* Key Features */}
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-        <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
-          <div className="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
-            <Video className="w-8 h-8 text-blue-600" />
+      {/* Features Section */}
+      <div className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Powerful Meeting Intelligence Features
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Everything you need to make every meeting count with AI-driven insights and automation
+            </p>
           </div>
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">Smart Recording</h3>
-          <p className="text-gray-600 mb-4">
-            Automatically record meetings with AI-powered speaker identification and noise cancellation for crystal-clear audio.
-          </p>
-          <ul className="text-sm text-gray-500 space-y-1">
-            <li>• Multi-speaker detection</li>
-            <li>• Background noise filtering</li>
-            <li>• HD video recording</li>
-          </ul>
-        </div>
-
-        <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
-          <div className="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mb-6">
-            <FileText className="w-8 h-8 text-green-600" />
-          </div>
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">AI Transcription</h3>
-          <p className="text-gray-600 mb-4">
-            Real-time transcription with 99.5% accuracy, speaker attribution, and automatic punctuation.
-          </p>
-          <ul className="text-sm text-gray-500 space-y-1">
-            <li>• Real-time transcription</li>
-            <li>• Speaker identification</li>
-            <li>• Industry-specific terminology</li>
-          </ul>
-        </div>
-
-        <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
-          <div className="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mb-6">
-            <Brain className="w-8 h-8 text-purple-600" />
-          </div>
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">Intelligent Analysis</h3>
-          <p className="text-gray-600 mb-4">
-            Extract key decisions, action items, sentiment analysis, and meeting effectiveness metrics.
-          </p>
-          <ul className="text-sm text-gray-500 space-y-1">
-            <li>• Decision extraction</li>
-            <li>• Sentiment analysis</li>
-            <li>• Action item tracking</li>
-          </ul>
-        </div>
-
-        <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
-          <div className="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center mb-6">
-            <Target className="w-8 h-8 text-orange-600" />
-          </div>
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">Task Management</h3>
-          <p className="text-gray-600 mb-4">
-            Automatically assign tasks, set deadlines, and integrate with your existing project management tools.
-          </p>
-          <ul className="text-sm text-gray-500 space-y-1">
-            <li>• Auto task assignment</li>
-            <li>• Deadline tracking</li>
-            <li>• Tool integration</li>
-          </ul>
-        </div>
-
-        <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
-          <div className="w-16 h-16 bg-red-100 rounded-xl flex items-center justify-center mb-6">
-            <BarChart3 className="w-8 h-8 text-red-600" />
-          </div>
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">Analytics Dashboard</h3>
-          <p className="text-gray-600 mb-4">
-            Comprehensive analytics on meeting patterns, productivity metrics, and team collaboration insights.
-          </p>
-          <ul className="text-sm text-gray-500 space-y-1">
-            <li>• Meeting effectiveness</li>
-            <li>• Team productivity</li>
-            <li>• Collaboration insights</li>
-          </ul>
-        </div>
-
-        <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
-          <div className="w-16 h-16 bg-indigo-100 rounded-xl flex items-center justify-center mb-6">
-            <Shield className="w-8 h-8 text-indigo-600" />
-          </div>
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">Enterprise Security</h3>
-          <p className="text-gray-600 mb-4">
-            Bank-level security with end-to-end encryption, SOC 2 compliance, and GDPR compliance.
-          </p>
-          <ul className="text-sm text-gray-500 space-y-1">
-            <li>• End-to-end encryption</li>
-            <li>• SOC 2 compliance</li>
-            <li>• GDPR compliant</li>
-          </ul>
-        </div>
-      </div>
-
-      {/* Pricing Section */}
-      <div className="bg-gray-50 rounded-2xl p-12 mb-16">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Transparent Pricing</h2>
-          <p className="text-lg text-gray-600">Choose the plan that fits your team size and needs</p>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-white p-8 rounded-xl shadow-lg">
-            <div className="text-center mb-8">
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Starter</h3>
-              <div className="text-3xl font-bold text-gray-900 mb-2">$29<span className="text-lg text-gray-500">/month</span></div>
-              <p className="text-gray-600">Perfect for small teams</p>
-            </div>
-            <ul className="space-y-3 mb-8">
-              <li className="flex items-center text-gray-600">
-                <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                Up to 10 users
-              </li>
-              <li className="flex items-center text-gray-600">
-                <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                100 hours recording/month
-              </li>
-              <li className="flex items-center text-gray-600">
-                <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                AI transcription
-              </li>
-              <li className="flex items-center text-gray-600">
-                <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                Basic analytics
-              </li>
-              <li className="flex items-center text-gray-600">
-                <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                Email support
-              </li>
-            </ul>
-            <Link 
-              href="mailto:kleber@ziontechgroup.com?subject=Starter Plan - AI Meeting Intelligence"
-              className="w-full bg-gray-900 text-white py-3 rounded-lg font-semibold text-center block hover:bg-gray-800 transition-colors"
-            >
-              Get Started
-            </Link>
-          </div>
-
-          <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-blue-600 relative">
-            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-              <span className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-medium">Most Popular</span>
-            </div>
-            <div className="text-center mb-8">
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Professional</h3>
-              <div className="text-3xl font-bold text-gray-900 mb-2">$79<span className="text-lg text-gray-500">/month</span></div>
-              <p className="text-gray-600">Ideal for growing teams</p>
-            </div>
-            <ul className="space-y-3 mb-8">
-              <li className="flex items-center text-gray-600">
-                <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                Up to 50 users
-              </li>
-              <li className="flex items-center text-gray-600">
-                <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                500 hours recording/month
-              </li>
-              <li className="flex items-center text-gray-600">
-                <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                Advanced AI analysis
-              </li>
-              <li className="flex items-center text-gray-600">
-                <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                Custom integrations
-              </li>
-              <li className="flex items-center text-gray-600">
-                <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                Priority support
-              </li>
-            </ul>
-            <Link 
-              href="mailto:kleber@ziontechgroup.com?subject=Professional Plan - AI Meeting Intelligence"
-              className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold text-center block hover:bg-blue-700 transition-colors"
-            >
-              Get Started
-            </Link>
-          </div>
-
-          <div className="bg-white p-8 rounded-xl shadow-lg">
-            <div className="text-center mb-8">
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Enterprise</h3>
-              <div className="text-3xl font-bold text-gray-900 mb-2">Custom</div>
-              <p className="text-gray-600">For large organizations</p>
-            </div>
-            <ul className="space-y-3 mb-8">
-              <li className="flex items-center text-gray-600">
-                <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                Unlimited users
-              </li>
-              <li className="flex items-center text-gray-600">
-                <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                Unlimited recording
-              </li>
-              <li className="flex items-center text-gray-600">
-                <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                Custom AI models
-              </li>
-              <li className="flex items-center text-gray-600">
-                <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                On-premise deployment
-              </li>
-              <li className="flex items-center text-gray-600">
-                <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                24/7 dedicated support
-              </li>
-            </ul>
-            <Link 
-              href="mailto:kleber@ziontechgroup.com?subject=Enterprise Plan - AI Meeting Intelligence"
-              className="w-full bg-gray-900 text-white py-3 rounded-lg font-semibold text-center block hover:bg-gray-800 transition-colors"
-            >
-              Contact Sales
-            </Link>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+                <div className="flex items-center mb-4">
+                  <div className="bg-blue-100 p-3 rounded-lg">
+                    <feature.icon className="h-6 w-6 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 ml-4">{feature.title}</h3>
+                </div>
+                <p className="text-gray-600">{feature.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
 
       {/* Benefits Section */}
-      <div className="mb-16">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Our AI Meeting Platform?</h2>
-          <p className="text-lg text-gray-600">Transform your meetings from time-wasters into productivity powerhouses</p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div className="text-center">
-            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <TrendingUp className="w-8 h-8 text-green-600" />
-            </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">85% Time Savings</h3>
-            <p className="text-gray-600">Reduce meeting follow-up time by 85% with automated summaries and task assignments</p>
+      <div className="py-20 bg-gradient-to-r from-blue-50 to-purple-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Proven Results & Benefits
+            </h2>
+            <p className="text-xl text-gray-600">
+              Join thousands of teams already using our AI meeting intelligence platform
+            </p>
           </div>
-
-          <div className="text-center">
-            <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Target className="w-8 h-8 text-blue-600" />
-            </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">95% Accuracy</h3>
-            <p className="text-gray-600">Industry-leading transcription accuracy with AI-powered speaker identification</p>
-          </div>
-
-          <div className="text-center">
-            <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <DollarSign className="w-8 h-8 text-purple-600" />
-            </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">300% ROI</h3>
-            <p className="text-gray-600">Average return on investment within 6 months of implementation</p>
-          </div>
-
-          <div className="text-center">
-            <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Star className="w-8 h-8 text-orange-600" />
-            </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">4.9/5 Rating</h3>
-            <p className="text-gray-600">Rated 4.9/5 by over 10,000 satisfied customers worldwide</p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="text-center">
+                <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+                  <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <CheckCircle className="h-8 w-8 text-green-600" />
+                  </div>
+                  <p className="text-lg font-semibold text-gray-900">{benefit}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
 
-      {/* Integration Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white mb-16">
-        <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold mb-4">Seamless Integrations</h2>
-          <p className="text-xl opacity-90">Works with your existing tools and workflows</p>
+      {/* Pricing Section */}
+      <div className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Simple, Transparent Pricing
+            </h2>
+            <p className="text-xl text-gray-600">
+              Choose the plan that fits your team size and meeting volume
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricingTiers.map((tier, index) => (
+              <div key={index} className={`relative bg-white rounded-2xl shadow-lg border-2 p-8 ${
+                tier.popular ? 'border-blue-500 scale-105' : 'border-gray-200'
+              }`}>
+                {tier.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+                
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{tier.name}</h3>
+                  <p className="text-gray-600 mb-4">{tier.description}</p>
+                  <div className="flex items-baseline justify-center">
+                    <span className="text-4xl font-bold text-gray-900">{tier.price}</span>
+                    <span className="text-gray-600 ml-1">{tier.period}</span>
+                  </div>
+                </div>
+                
+                <ul className="space-y-4 mb-8">
+                  {tier.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center">
+                      <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                      <span className="text-gray-700">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                
+                <a 
+                  href="tel:+13024640950" 
+                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
+                    tier.popular 
+                      ? 'bg-blue-600 text-white hover:bg-blue-700' 
+                      : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+                  }`}
+                >
+                  Get Started
+                </a>
+              </div>
+            ))}
+          </div>
         </div>
+      </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div className="text-center">
-            <div className="w-16 h-16 bg-white bg-opacity-20 rounded-xl flex items-center justify-center mx-auto mb-4">
-              <Calendar className="w-8 h-8" />
-            </div>
-            <h3 className="font-semibold mb-2">Calendar Apps</h3>
-            <p className="text-sm opacity-80">Google Calendar, Outlook, Apple Calendar</p>
+      {/* Use Cases Section */}
+      <div className="py-20 bg-gradient-to-r from-purple-50 to-blue-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Perfect for Every Team
+            </h2>
+            <p className="text-xl text-gray-600">
+              See how different teams use our AI meeting intelligence platform
+            </p>
           </div>
-
-          <div className="text-center">
-            <div className="w-16 h-16 bg-white bg-opacity-20 rounded-xl flex items-center justify-center mx-auto mb-4">
-              <MessageSquare className="w-8 h-8" />
-            </div>
-            <h3 className="font-semibold mb-2">Communication</h3>
-            <p className="text-sm opacity-80">Slack, Microsoft Teams, Zoom</p>
-          </div>
-
-          <div className="text-center">
-            <div className="w-16 h-16 bg-white bg-opacity-20 rounded-xl flex items-center justify-center mx-auto mb-4">
-              <BarChart3 className="w-8 h-8" />
-            </div>
-            <h3 className="font-semibold mb-2">Project Management</h3>
-            <p className="text-sm opacity-80">Asana, Trello, Jira, Monday.com</p>
-          </div>
-
-          <div className="text-center">
-            <div className="w-16 h-16 bg-white bg-opacity-20 rounded-xl flex items-center justify-center mx-auto mb-4">
-              <Shield className="w-8 h-8" />
-            </div>
-            <h3 className="font-semibold mb-2">Security</h3>
-            <p className="text-sm opacity-80">SSO, LDAP, Active Directory</p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {useCases.map((useCase, index) => (
+              <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                <div className="flex items-center mb-4">
+                  <div className="bg-purple-100 p-3 rounded-lg">
+                    <useCase.icon className="h-6 w-6 text-purple-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 ml-4">{useCase.title}</h3>
+                </div>
+                <p className="text-gray-600">{useCase.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
 
       {/* CTA Section */}
-      <div className="text-center bg-gray-50 rounded-2xl p-12">
-        <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Transform Your Meetings?</h2>
-        <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-          Join thousands of teams already using our AI Meeting Intelligence Platform to make every meeting count.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link 
-            href="mailto:kleber@ziontechgroup.com?subject=AI Meeting Intelligence Platform Demo Request"
-            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-          >
-            Schedule Demo
-          </Link>
-          <Link 
-            href="tel:+13024640950"
-            className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
-          >
-            Call +1 302 464 0950
-          </Link>
-        </div>
-        <div className="mt-8 text-sm text-gray-500">
-          <p>📍 364 E Main St STE 1008, Middletown, DE 19709</p>
-          <p>📧 kleber@ziontechgroup.com | 🌐 <Link href="https://ziontechgroup.com" className="text-blue-600 hover:underline">ziontechgroup.com</Link></p>
+      <div className="py-20 bg-gradient-to-r from-blue-600 to-purple-700 text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Ready to Transform Your Meetings?
+          </h2>
+          <p className="text-xl mb-8 text-blue-100">
+            Join thousands of teams already using AI to make their meetings more productive and actionable
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="tel:+13024640950" 
+              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
+            >
+              Call +1 302 464 0950
+            </a>
+            <a 
+              href="mailto:kleber@ziontechgroup.com" 
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+            >
+              Email kleber@ziontechgroup.com
+            </a>
+          </div>
+          
+          <div className="mt-12 text-center">
+            <p className="text-blue-100 mb-4">Visit our website for more information:</p>
+            <a 
+              href="https://ziontechgroup.com" 
+              className="text-white underline hover:text-blue-200 transition-colors"
+            >
+              https://ziontechgroup.com
+            </a>
+          </div>
+          
+          <div className="mt-8 text-center">
+            <p className="text-blue-100">
+              <strong>Address:</strong> 364 E Main St STE 1008, Middletown, DE 19709
+            </p>
+          </div>
         </div>
       </div>
     </div>

@@ -1,436 +1,435 @@
 import React from 'react';
 import { Metadata } from 'next';
-import Link from 'next/link';
 import { 
   DollarSign, 
   TrendingUp, 
+  PieChart, 
+  Shield, 
   Target, 
-  Brain, 
-  BarChart3, 
-  Clock, 
-  CheckCircle,
+  CheckCircle, 
+  Zap, 
   Star,
-  ArrowRight,
-  PieChart,
-  FileText,
+  Smartphone,
   Calendar,
-  Shield,
-  Globe,
-  Activity,
-  Zap,
-  Cpu,
-  Database,
-  Eye,
+  MessageSquare,
+  FileText,
+  BarChart3,
+  Clock,
+  Bell,
   Users,
-  CreditCard,
-  Building
+  Award
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'AI Financial Intelligence Platform - Zion Tech Group',
-  description: 'Revolutionary AI-powered financial intelligence platform that provides real-time insights, fraud detection, and automated financial analysis with 99.9% accuracy.',
-  keywords: 'AI financial intelligence, fraud detection, financial analytics, automated accounting, financial forecasting',
-  robots: {
-    index: true,
-    follow: true,
-  },
+  title: 'AI Financial Intelligence Platform | Zion Tech Group - Smart Financial Analytics',
+  description: 'Transform your financial management with AI-powered insights, automated budgeting, investment analysis, and intelligent financial planning. Make smarter financial decisions.',
+  keywords: 'AI financial platform, financial analytics, investment analysis, budgeting AI, financial planning, wealth management AI',
 };
 
 export default function AIFinancialIntelligencePlatform() {
+  const features = [
+    {
+      icon: DollarSign,
+      title: 'Smart Budgeting',
+      description: 'AI-powered budget creation and optimization based on your spending patterns and financial goals'
+    },
+    {
+      icon: TrendingUp,
+      title: 'Investment Analysis',
+      description: 'Advanced portfolio analysis with AI-driven investment recommendations and risk assessment'
+    },
+    {
+      icon: PieChart,
+      title: 'Expense Categorization',
+      description: 'Automatic expense categorization and spending pattern analysis with actionable insights'
+    },
+    {
+      icon: Target,
+      title: 'Goal Tracking',
+      description: 'Set and track financial goals with AI-powered progress monitoring and recommendations'
+    },
+    {
+      icon: Shield,
+      title: 'Risk Assessment',
+      description: 'Comprehensive financial risk analysis and fraud detection with real-time alerts'
+    },
+    {
+      icon: BarChart3,
+      title: 'Financial Forecasting',
+      description: 'Predict future financial scenarios with advanced AI modeling and scenario planning'
+    }
+  ];
+
+  const benefits = [
+    '25% increase in savings rates',
+    '40% improvement in investment returns',
+    '60% reduction in financial stress',
+    'Real-time fraud protection'
+  ];
+
+  const financialServices = [
+    {
+      title: 'Personal Finance Management',
+      description: 'Complete personal finance tracking and optimization',
+      icon: DollarSign,
+      features: ['Expense tracking', 'Budget optimization', 'Bill management', 'Savings goals']
+    },
+    {
+      title: 'Investment Portfolio Analysis',
+      description: 'Advanced portfolio management and optimization',
+      icon: TrendingUp,
+      features: ['Portfolio analysis', 'Risk assessment', 'Rebalancing alerts', 'Performance tracking']
+    },
+    {
+      title: 'Tax Optimization',
+      description: 'Smart tax planning and optimization strategies',
+      icon: PieChart,
+      features: ['Tax planning', 'Deduction optimization', 'Filing assistance', 'Year-end strategies']
+    },
+    {
+      title: 'Retirement Planning',
+      description: 'Comprehensive retirement planning and projection',
+      icon: Target,
+      features: ['Retirement projections', 'Contribution optimization', 'Social Security analysis', 'Withdrawal strategies']
+    }
+  ];
+
+  const pricingTiers = [
+    {
+      name: 'Essential',
+      price: '$19.99',
+      period: '/month',
+      description: 'Perfect for basic financial management',
+      features: [
+        'Unlimited account connections',
+        'Basic budgeting tools',
+        'Expense categorization',
+        'Goal tracking',
+        'Mobile app access',
+        'Email support'
+      ],
+      popular: false
+    },
+    {
+      name: 'Professional',
+      price: '$39.99',
+      period: '/month',
+      description: 'Advanced features for serious investors',
+      features: [
+        'Everything in Essential',
+        'Advanced investment analysis',
+        'Tax optimization tools',
+        'Retirement planning',
+        'Risk assessment',
+        'Priority support'
+      ],
+      popular: true
+    },
+    {
+      name: 'Wealth Management',
+      price: '$79.99',
+      period: '/month',
+      description: 'Complete wealth management solution',
+      features: [
+        'Everything in Professional',
+        'Personal financial advisor access',
+        'Custom investment strategies',
+        'Estate planning tools',
+        'Family wealth management',
+        '24/7 phone support'
+      ],
+      popular: false
+    }
+  ];
+
+  const successMetrics = [
+    {
+      metric: 'Average User Savings Increase',
+      value: '25%',
+      description: 'Users save more with AI-powered budgeting'
+    },
+    {
+      metric: 'Investment Return Improvement',
+      value: '40%',
+      description: 'Better returns with AI portfolio optimization'
+    },
+    {
+      metric: 'Financial Stress Reduction',
+      value: '60%',
+      description: 'Users report less financial anxiety'
+    },
+    {
+      metric: 'Fraud Detection Rate',
+      value: '99.8%',
+      description: 'Advanced AI fraud protection'
+    }
+  ];
+
   return (
-    <div className="max-w-7xl mx-auto px-4 py-8">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50">
       {/* Hero Section */}
-      <div className="text-center mb-16">
-        <div className="inline-flex items-center px-4 py-2 bg-emerald-100 text-emerald-800 rounded-full text-sm font-medium mb-6">
-          <Brain className="w-4 h-4 mr-2" />
-          AI-Powered Financial Intelligence
-        </div>
-        <h1 className="text-5xl font-bold text-gray-900 mb-6">
-          AI Financial Intelligence Platform
-        </h1>
-        <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
-          Transform your financial operations with AI that detects fraud, automates accounting, 
-          predicts cash flow, and provides real-time financial insights with 99.9% accuracy.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link 
-            href="mailto:kleber@ziontechgroup.com?subject=AI Financial Intelligence Platform Inquiry"
-            className="bg-emerald-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-emerald-700 transition-colors"
-          >
-            Secure Your Finances Today
-          </Link>
-          <Link 
-            href="tel:+13024640950"
-            className="border border-emerald-600 text-emerald-600 px-8 py-3 rounded-lg font-semibold hover:bg-emerald-50 transition-colors"
-          >
-            Call +1 302 464 0950
-          </Link>
+      <div className="relative overflow-hidden bg-gradient-to-r from-green-600 to-blue-600 text-white">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              AI Financial Intelligence Platform
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 text-green-100 max-w-4xl mx-auto">
+              Transform your financial future with AI-powered insights, automated budgeting, 
+              and intelligent investment analysis
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="tel:+13024640950" 
+                className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-green-50 transition-colors"
+              >
+                Call +1 302 464 0950
+              </a>
+              <a 
+                href="mailto:kleber@ziontechgroup.com" 
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
+              >
+                Get Free Financial Assessment
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* Key Features */}
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-        <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
-          <div className="w-16 h-16 bg-emerald-100 rounded-xl flex items-center justify-center mb-6">
-            <Eye className="w-8 h-8 text-emerald-600" />
+      {/* Features Section */}
+      <div className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              AI-Powered Financial Features
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Everything you need to take control of your financial future with intelligent automation
+            </p>
           </div>
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">Real-Time Fraud Detection</h3>
-          <p className="text-gray-600 mb-4">
-            Advanced AI algorithms detect fraudulent transactions in real-time with 99.9% accuracy and instant alerts.
-          </p>
-          <ul className="text-sm text-gray-500 space-y-1">
-            <li>• 99.9% fraud detection accuracy</li>
-            <li>• Real-time transaction monitoring</li>
-            <li>• Instant fraud alerts</li>
-          </ul>
-        </div>
-
-        <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
-          <div className="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
-            <Brain className="w-8 h-8 text-blue-600" />
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+                <div className="flex items-center mb-4">
+                  <div className="bg-green-100 p-3 rounded-lg">
+                    <feature.icon className="h-6 w-6 text-green-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 ml-4">{feature.title}</h3>
+                </div>
+                <p className="text-gray-600">{feature.description}</p>
+              </div>
+            ))}
           </div>
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">Automated Accounting</h3>
-          <p className="text-gray-600 mb-4">
-            AI-powered automated bookkeeping, invoice processing, and financial statement generation.
-          </p>
-          <ul className="text-sm text-gray-500 space-y-1">
-            <li>• Automated bookkeeping</li>
-            <li>• Invoice processing</li>
-            <li>• Financial statement generation</li>
-          </ul>
-        </div>
-
-        <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
-          <div className="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mb-6">
-            <TrendingUp className="w-8 h-8 text-purple-600" />
-          </div>
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">Cash Flow Prediction</h3>
-          <p className="text-gray-600 mb-4">
-            Predictive analytics for cash flow forecasting, budget planning, and financial risk assessment.
-          </p>
-          <ul className="text-sm text-gray-500 space-y-1">
-            <li>• Cash flow forecasting</li>
-            <li>• Budget optimization</li>
-            <li>• Risk assessment</li>
-          </ul>
-        </div>
-
-        <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
-          <div className="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center mb-6">
-            <BarChart3 className="w-8 h-8 text-orange-600" />
-          </div>
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">Financial Analytics</h3>
-          <p className="text-gray-600 mb-4">
-            Comprehensive financial analytics with KPI tracking, performance metrics, and trend analysis.
-          </p>
-          <ul className="text-sm text-gray-500 space-y-1">
-            <li>• KPI tracking</li>
-            <li>• Performance metrics</li>
-            <li>• Trend analysis</li>
-          </ul>
-        </div>
-
-        <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
-          <div className="w-16 h-16 bg-red-100 rounded-xl flex items-center justify-center mb-6">
-            <Shield className="w-8 h-8 text-red-600" />
-          </div>
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">Compliance Automation</h3>
-          <p className="text-gray-600 mb-4">
-            Automated compliance monitoring, regulatory reporting, and audit trail management.
-          </p>
-          <ul className="text-sm text-gray-500 space-y-1">
-            <li>• Regulatory compliance</li>
-            <li>• Automated reporting</li>
-            <li>• Audit trail management</li>
-          </ul>
-        </div>
-
-        <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
-          <div className="w-16 h-16 bg-indigo-100 rounded-xl flex items-center justify-center mb-6">
-            <Target className="w-8 h-8 text-indigo-600" />
-          </div>
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">Investment Intelligence</h3>
-          <p className="text-gray-600 mb-4">
-            AI-powered investment analysis, portfolio optimization, and market trend prediction.
-          </p>
-          <ul className="text-sm text-gray-500 space-y-1">
-            <li>• Investment analysis</li>
-            <li>• Portfolio optimization</li>
-            <li>• Market prediction</li>
-          </ul>
         </div>
       </div>
 
       {/* Financial Services */}
-      <div className="mb-16">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Comprehensive Financial Services</h2>
-          <p className="text-lg text-gray-600">From banking to investment, we cover all financial needs</p>
+      <div className="py-20 bg-gradient-to-r from-green-50 to-blue-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Comprehensive Financial Services
+            </h2>
+            <p className="text-xl text-gray-600">
+              Cover all aspects of your financial life with specialized AI-powered tools
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {financialServices.map((service, index) => (
+              <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                <div className="flex items-center mb-6">
+                  <div className="bg-blue-100 p-4 rounded-lg">
+                    <service.icon className="h-8 w-8 text-blue-600" />
+                  </div>
+                  <div className="ml-4">
+                    <h3 className="text-2xl font-semibold text-gray-900">{service.title}</h3>
+                    <p className="text-gray-600">{service.description}</p>
+                  </div>
+                </div>
+                <ul className="space-y-2">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center">
+                      <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                      <span className="text-gray-700">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
         </div>
+      </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div className="text-center p-6 bg-white rounded-xl shadow-lg">
-            <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Building className="w-8 h-8 text-emerald-600" />
-            </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Banking</h3>
-            <p className="text-gray-600 text-sm">Transaction monitoring, risk assessment, compliance automation</p>
+      {/* Success Metrics */}
+      <div className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Proven Financial Results
+            </h2>
+            <p className="text-xl text-gray-600">
+              Real results from thousands of users who have transformed their financial lives
+            </p>
           </div>
-
-          <div className="text-center p-6 bg-white rounded-xl shadow-lg">
-            <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <CreditCard className="w-8 h-8 text-blue-600" />
-            </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Payments</h3>
-            <p className="text-gray-600 text-sm">Payment processing, fraud detection, transaction analytics</p>
-          </div>
-
-          <div className="text-center p-6 bg-white rounded-xl shadow-lg">
-            <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <PieChart className="w-8 h-8 text-purple-600" />
-            </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Investment</h3>
-            <p className="text-gray-600 text-sm">Portfolio management, market analysis, risk optimization</p>
-          </div>
-
-          <div className="text-center p-6 bg-white rounded-xl shadow-lg">
-            <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <FileText className="w-8 h-8 text-orange-600" />
-            </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Accounting</h3>
-            <p className="text-gray-600 text-sm">Automated bookkeeping, financial reporting, tax compliance</p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {successMetrics.map((metric, index) => (
+              <div key={index} className="text-center">
+                <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+                  <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <TrendingUp className="h-8 w-8 text-green-600" />
+                  </div>
+                  <div className="text-3xl font-bold text-green-600 mb-2">{metric.value}</div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{metric.metric}</h3>
+                  <p className="text-gray-600">{metric.description}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
 
       {/* Pricing Section */}
-      <div className="bg-gray-50 rounded-2xl p-12 mb-16">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Flexible Pricing Plans</h2>
-          <p className="text-lg text-gray-600">Choose the plan that fits your financial operations</p>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-white p-8 rounded-xl shadow-lg">
-            <div className="text-center mb-8">
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Small Business</h3>
-              <div className="text-3xl font-bold text-gray-900 mb-2">$199<span className="text-lg text-gray-500">/month</span></div>
-              <p className="text-gray-600">Perfect for small businesses</p>
-            </div>
-            <ul className="space-y-3 mb-8">
-              <li className="flex items-center text-gray-600">
-                <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                Up to 1,000 transactions/month
-              </li>
-              <li className="flex items-center text-gray-600">
-                <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                Basic fraud detection
-              </li>
-              <li className="flex items-center text-gray-600">
-                <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                Automated bookkeeping
-              </li>
-              <li className="flex items-center text-gray-600">
-                <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                Standard reporting
-              </li>
-              <li className="flex items-center text-gray-600">
-                <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                Email support
-              </li>
-            </ul>
-            <Link 
-              href="mailto:kleber@ziontechgroup.com?subject=Small Business Plan - AI Financial Intelligence"
-              className="w-full bg-gray-900 text-white py-3 rounded-lg font-semibold text-center block hover:bg-gray-800 transition-colors"
-            >
-              Get Started
-            </Link>
+      <div className="py-20 bg-gradient-to-r from-blue-50 to-green-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Transparent Financial Pricing
+            </h2>
+            <p className="text-xl text-gray-600">
+              Choose the plan that fits your financial management needs
+            </p>
           </div>
-
-          <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-emerald-600 relative">
-            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-              <span className="bg-emerald-600 text-white px-4 py-1 rounded-full text-sm font-medium">Most Popular</span>
-            </div>
-            <div className="text-center mb-8">
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Enterprise</h3>
-              <div className="text-3xl font-bold text-gray-900 mb-2">$799<span className="text-lg text-gray-500">/month</span></div>
-              <p className="text-gray-600">Ideal for growing businesses</p>
-            </div>
-            <ul className="space-y-3 mb-8">
-              <li className="flex items-center text-gray-600">
-                <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                Up to 50,000 transactions/month
-              </li>
-              <li className="flex items-center text-gray-600">
-                <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                Advanced fraud detection
-              </li>
-              <li className="flex items-center text-gray-600">
-                <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                Predictive analytics
-              </li>
-              <li className="flex items-center text-gray-600">
-                <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                Custom dashboards
-              </li>
-              <li className="flex items-center text-gray-600">
-                <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                Priority support
-              </li>
-            </ul>
-            <Link 
-              href="mailto:kleber@ziontechgroup.com?subject=Enterprise Plan - AI Financial Intelligence"
-              className="w-full bg-emerald-600 text-white py-3 rounded-lg font-semibold text-center block hover:bg-emerald-700 transition-colors"
-            >
-              Get Started
-            </Link>
-          </div>
-
-          <div className="bg-white p-8 rounded-xl shadow-lg">
-            <div className="text-center mb-8">
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Custom</h3>
-              <div className="text-3xl font-bold text-gray-900 mb-2">Custom</div>
-              <p className="text-gray-600">For large organizations</p>
-            </div>
-            <ul className="space-y-3 mb-8">
-              <li className="flex items-center text-gray-600">
-                <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                Unlimited transactions
-              </li>
-              <li className="flex items-center text-gray-600">
-                <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                Custom AI models
-              </li>
-              <li className="flex items-center text-gray-600">
-                <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                White-label solution
-              </li>
-              <li className="flex items-center text-gray-600">
-                <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                24/7 dedicated support
-              </li>
-              <li className="flex items-center text-gray-600">
-                <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                On-premise deployment
-              </li>
-            </ul>
-            <Link 
-              href="mailto:kleber@ziontechgroup.com?subject=Custom Plan - AI Financial Intelligence"
-              className="w-full bg-gray-900 text-white py-3 rounded-lg font-semibold text-center block hover:bg-gray-800 transition-colors"
-            >
-              Contact Sales
-            </Link>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricingTiers.map((tier, index) => (
+              <div key={index} className={`relative bg-white rounded-2xl shadow-lg border-2 p-8 ${
+                tier.popular ? 'border-green-500 scale-105' : 'border-gray-200'
+              }`}>
+                {tier.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+                
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{tier.name}</h3>
+                  <p className="text-gray-600 mb-4">{tier.description}</p>
+                  <div className="flex items-baseline justify-center">
+                    <span className="text-4xl font-bold text-gray-900">{tier.price}</span>
+                    <span className="text-gray-600 ml-1">{tier.period}</span>
+                  </div>
+                </div>
+                
+                <ul className="space-y-4 mb-8">
+                  {tier.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center">
+                      <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                      <span className="text-gray-700">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                
+                <a 
+                  href="tel:+13024640950" 
+                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
+                    tier.popular 
+                      ? 'bg-green-600 text-white hover:bg-green-700' 
+                      : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+                  }`}
+                >
+                  Start Free Trial
+                </a>
+              </div>
+            ))}
           </div>
         </div>
       </div>
 
-      {/* ROI Section */}
-      <div className="mb-16">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Proven Financial Impact</h2>
-          <p className="text-lg text-gray-600">See how our AI Financial Intelligence Platform delivers measurable results</p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div className="text-center p-6 bg-white rounded-xl shadow-lg">
-            <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <TrendingUp className="w-8 h-8 text-emerald-600" />
-            </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">99.9%</h3>
-            <p className="text-gray-600">Fraud detection accuracy</p>
+      {/* Security & Compliance */}
+      <div className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Bank-Level Security & Compliance
+            </h2>
+            <p className="text-xl text-gray-600">
+              Your financial data is protected with enterprise-grade security
+            </p>
           </div>
-
-          <div className="text-center p-6 bg-white rounded-xl shadow-lg">
-            <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Clock className="w-8 h-8 text-blue-600" />
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 text-center">
+              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="h-8 w-8 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">256-bit Encryption</h3>
+              <p className="text-gray-600">Military-grade encryption protects all your financial data</p>
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">90%</h3>
-            <p className="text-gray-600">Reduction in manual accounting time</p>
-          </div>
-
-          <div className="text-center p-6 bg-white rounded-xl shadow-lg">
-            <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <DollarSign className="w-8 h-8 text-purple-600" />
+            
+            <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 text-center">
+              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <CheckCircle className="h-8 w-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">SOC 2 Compliant</h3>
+              <p className="text-gray-600">Certified security controls and regular audits</p>
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">50%</h3>
-            <p className="text-gray-600">Reduction in financial errors</p>
-          </div>
-
-          <div className="text-center p-6 bg-white rounded-xl shadow-lg">
-            <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Star className="w-8 h-8 text-orange-600" />
+            
+            <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 text-center">
+              <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="h-8 w-8 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Read-Only Access</h3>
+              <p className="text-gray-600">We never store your banking credentials or passwords</p>
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">400%</h3>
-            <p className="text-gray-600">ROI within first year</p>
-          </div>
-        </div>
-      </div>
-
-      {/* Integration Section */}
-      <div className="bg-gradient-to-r from-emerald-600 to-blue-600 rounded-2xl p-12 text-white mb-16">
-        <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold mb-4">Seamless Integrations</h2>
-          <p className="text-xl opacity-90">Connect with your existing financial systems</p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div className="text-center">
-            <div className="w-16 h-16 bg-white bg-opacity-20 rounded-xl flex items-center justify-center mx-auto mb-4">
-              <Building className="w-8 h-8" />
-            </div>
-            <h3 className="font-semibold mb-2">Banking Systems</h3>
-            <p className="text-sm opacity-80">Core banking, payment gateways, SWIFT</p>
-          </div>
-
-          <div className="text-center">
-            <div className="w-16 h-16 bg-white bg-opacity-20 rounded-xl flex items-center justify-center mx-auto mb-4">
-              <FileText className="w-8 h-8" />
-            </div>
-            <h3 className="font-semibold mb-2">ERP Systems</h3>
-            <p className="text-sm opacity-80">SAP, Oracle, Microsoft Dynamics</p>
-          </div>
-
-          <div className="text-center">
-            <div className="w-16 h-16 bg-white bg-opacity-20 rounded-xl flex items-center justify-center mx-auto mb-4">
-              <BarChart3 className="w-8 h-8" />
-            </div>
-            <h3 className="font-semibold mb-2">Analytics</h3>
-            <p className="text-sm opacity-80">Tableau, Power BI, QlikView</p>
-          </div>
-
-          <div className="text-center">
-            <div className="w-16 h-16 bg-white bg-opacity-20 rounded-xl flex items-center justify-center mx-auto mb-4">
-              <Shield className="w-8 h-8" />
-            </div>
-            <h3 className="font-semibold mb-2">Security</h3>
-            <p className="text-sm opacity-80">Enterprise SSO, encryption, compliance</p>
           </div>
         </div>
       </div>
 
       {/* CTA Section */}
-      <div className="text-center bg-gray-50 rounded-2xl p-12">
-        <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Secure Your Financial Operations?</h2>
-        <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-          Join thousands of organizations using our AI Financial Intelligence Platform to detect fraud, automate accounting, and optimize financial performance.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link 
-            href="mailto:kleber@ziontechgroup.com?subject=AI Financial Intelligence Platform Demo Request"
-            className="bg-emerald-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-emerald-700 transition-colors"
-          >
-            Schedule Demo
-          </Link>
-          <Link 
-            href="tel:+13024640950"
-            className="border border-emerald-600 text-emerald-600 px-8 py-3 rounded-lg font-semibold hover:bg-emerald-50 transition-colors"
-          >
-            Call +1 302 464 0950
-          </Link>
-        </div>
-        <div className="mt-8 text-sm text-gray-500">
-          <p>📍 364 E Main St STE 1008, Middletown, DE 19709</p>
-          <p>📧 kleber@ziontechgroup.com | 🌐 <Link href="https://ziontechgroup.com" className="text-emerald-600 hover:underline">ziontechgroup.com</Link></p>
+      <div className="py-20 bg-gradient-to-r from-green-600 to-blue-600 text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Take Control of Your Financial Future Today
+          </h2>
+          <p className="text-xl mb-8 text-green-100">
+            Join thousands of users who have achieved financial freedom with AI-powered insights
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="tel:+13024640950" 
+              className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-green-50 transition-colors"
+            >
+              Call +1 302 464 0950
+            </a>
+            <a 
+              href="mailto:kleber@ziontechgroup.com" 
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
+            >
+              Email kleber@ziontechgroup.com
+            </a>
+          </div>
+          
+          <div className="mt-12 text-center">
+            <p className="text-green-100 mb-4">Visit our website for more information:</p>
+            <a 
+              href="https://ziontechgroup.com" 
+              className="text-white underline hover:text-green-200 transition-colors"
+            >
+              https://ziontechgroup.com
+            </a>
+          </div>
+          
+          <div className="mt-8 text-center">
+            <p className="text-green-100">
+              <strong>Address:</strong> 364 E Main St STE 1008, Middletown, DE 19709
+            </p>
+          </div>
         </div>
       </div>
     </div>

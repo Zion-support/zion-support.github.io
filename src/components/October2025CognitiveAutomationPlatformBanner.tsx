@@ -1,5 +1,9 @@
+<<<<<<< HEAD
+import React from 'react';
+=======
 import React from 'react';';
 
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 const October2025CognitiveAutomationPlatformBanner: React.FC = () => {,
   return (
     <motion.div
@@ -9,8 +13,13 @@ const October2025CognitiveAutomationPlatformBanner: React.FC = () => {,
       className="relative overflow-hidden bg-gradient-to-r from-emerald-900 via-teal-900 to-cyan-900 rounded-2xl p-8 my-8 shadow-2xl"
     >
       {/* Animated Background */}
+<<<<<<< HEAD
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(16,185,129,0.3),rgba(255,255,255,0))]/>
+=======
       <div className="absolute inset-0 opacity-20">";
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(16,185,129,0.3),rgba(255,255,255,0))]" />";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
       </div>
 
       <div className="relative z-10">";
@@ -21,6 +30,17 @@ const October2025CognitiveAutomationPlatformBanner: React.FC = () => {,
           transition={{ delay: 0.2 }}
           className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/20 backdrop-blur-sm rounded-full border border-emerald-400/30 mb-6"
         >
+<<<<<<< HEAD
+          <span className="text-2xl">🧠🤖</span>
+          <span className="text-emerald-200 font-semibold text-sm">ENTERPRISE REVOLUTION: OCTOBER 1, 2025</span>",
+          <span className="text-2xl">🚀💎</span>
+        </motion.div>
+
+        {/* Main Content */}
+        <div className="grid lg: grid-cols-2 gap-8 items-center">",
+          <div>
+            <h2 className="text-4xl lg: text-5xl font-bold text-white mb-4 leading-tight">",
+=======
           <span className="text-2xl">🧠🤖</span>";
           <span className="text-emerald-200 font-semibold text-sm">ENTERPRISE REVOLUTION: OCTOBER 1, 2025</span>";,
           <span className="text-2xl">🚀💎</span>";
@@ -30,13 +50,18 @@ const October2025CognitiveAutomationPlatformBanner: React.FC = () => {,
         <div className="grid lg: grid-cols-2 gap-8 items-center">";,
           <div>
             <h2 className="text-4xl lg: text-5xl font-bold text-white mb-4 leading-tight">";,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               Cognitive Automation Platform 3.0
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400 mt-2">";
                 The Enterprise Operating System
               </span>
             </h2>
             
+<<<<<<< HEAD
+            <p className="text-emerald-100 text-lg mb-6 leading-relaxed">
+=======
             <p className="text-emerald-100 text-lg mb-6 leading-relaxed">";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
               Next-generation cognitive automation achieves <strong className="text-white">96% automation rate</strong> with ";
               <strong className="text-white"> 99.94% accuracy</strong>, creating <strong className="text-white">$15.7B in enterprise value</strong> across ";
               <strong className="text-white"> 12,500+ automated processes</strong>.";
@@ -84,12 +109,21 @@ const October2025CognitiveAutomationPlatformBanner: React.FC = () => {,
           </div>
 
           {/* Visual Element */}
+<<<<<<< HEAD
+          <div className="hidden lg: block">",
+            <div className="relative">
+              <motion.div
+                animate={{
+                  scale: [1, 1.05, 1],
+                  rotate: [0, 3, 0]
+=======
           <div className="hidden lg: block">";,
             <div className="relative">";
               <motion.div
                 animate={{
                   scale: [1, 1.05, 1],,
                   rotate: [0, 3, 0],,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                 }}
                 transition={{
                   duration: 5,,
@@ -98,6 +132,24 @@ const October2025CognitiveAutomationPlatformBanner: React.FC = () => {,
                 }}
                 className="bg-gradient-to-br from-emerald-500/20 to-teal-500/20 backdrop-blur-lg rounded-2xl p-8 border border-emerald-400/30"
               >
+<<<<<<< HEAD
+                <h3 className="text-2xl font-bold text-white mb-4">Platform Features: </h3>",
+                <ul className="space-y-3 text-emerald-100">
+                  <li className="flex items-start gap-3">
+                    <span className="text-2xl">🧠</span>
+                    <span><strong>Cognitive Understanding: </strong> Natural language & visual intelligence</span>,
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-2xl">⚙️</span>
+                    <span><strong>Autonomous Decisions: </strong> 99.94% accuracy without human input</span>,
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-2xl">📈</span>
+                    <span><strong>Continuous Learning: </strong> Real-time adaptation & optimization</span>,
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-2xl">🌍</span>
+=======
                 <h3 className="text-2xl font-bold text-white mb-4">Platform Features: </h3>";,
                 <ul className="space-y-3 text-emerald-100">";
                   <li className="flex items-start gap-3">";
@@ -114,6 +166,7 @@ const October2025CognitiveAutomationPlatformBanner: React.FC = () => {,
                   </li>
                   <li className="flex items-start gap-3">";
                     <span className="text-2xl">🌍</span>";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
                     <span><strong>Global Scale: </strong> 67 countries, 95 departments, 84,000 employees</span>,
                   </li>
                 </ul>
@@ -129,8 +182,13 @@ const October2025CognitiveAutomationPlatformBanner: React.FC = () => {,
           transition={{ delay: 0.8 }}
           className="mt-8 pt-6 border-t border-emerald-400/30 text-center"
         >
+<<<<<<< HEAD
+          <p className="text-emerald-200 text-sm">
+            🏆 <strong className="text-white">ENTERPRISE TRANSFORMATION: </strong> Fortune 50 Success Story | 87% Cost Reduction | 25x Faster Processing",
+=======
           <p className="text-emerald-200 text-sm">";
             🏆 <strong className="text-white">ENTERPRISE TRANSFORMATION: </strong> Fortune 50 Success Story | 87% Cost Reduction | 25x Faster Processing";,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
           </p>
         </motion.div>
       </div>

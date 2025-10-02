@@ -16,7 +16,11 @@ export const lazyWithRetry = <T extends ComponentType<any>>(
 ): React.LazyExoticComponent<T> => {
   return lazy(() =>
     new Promise<{ default: T }>((resolve, reject) => {
+<<<<<<< HEAD
+const attemptImport = async (retriesLeft: number) => {
+=======
 const attemptImport = async (retriesLeft: number) => {,,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 try {
 const module = await importFunc();
 resolve(module);
@@ -40,13 +44,21 @@ resolve(module);
 
 /**
  * Preload a lazy component
+<<<<<<< HEAD
+ * Useful for prefetching components before they're needed;
+=======
  * Useful for prefetching components before they're needed';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
  */
 export const preloadComponent = (
   importFunc: () => Promise<any>,
 ): Promise<void> => {
   return importFunc().then(() => {}).catch((error) => {
+<<<<<<< HEAD
+    console.error('Failed to preload component: ', error);',
+=======
     console.error('Failed to preload component: ', error);';,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   });
 };
 
@@ -60,8 +72,13 @@ export const createLazyRoute = <T extends ComponentType<any>>(
   const LazyComponent = lazyWithRetry(importFunc);
   
   return {
+<<<<<<< HEAD
+    Component: LazyComponent,
+    preload: () => preloadComponent(importFunc)
+=======
     Component: LazyComponent,,
     preload: () => preloadComponent(importFunc),,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   };
 };
 
@@ -73,8 +90,12 @@ export const useLazyLoadOnVisible = (
   callback: () => void,,
   options?: IntersectionObserverInit
 ): (() => void) => {
+<<<<<<< HEAD
+  if (typeof window === 'undefined') return () => {};
+=======
   if (typeof window === 'undefined') return () => {};';
 
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -85,9 +106,15 @@ export const useLazyLoadOnVisible = (
       });
     },
     {
+<<<<<<< HEAD
+      rootMargin: '50px',
+      threshold: 0.01,
+      ...options
+=======
       rootMargin: '50px',';,
       threshold: 0.01,,
       ...options,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     }
   );
 
@@ -103,11 +130,18 @@ export const useLazyLoadOnVisible = (
  * Logs component bundle sizes in development
  */
 export const logBundleSize = (componentName: string): void => {,
+<<<<<<< HEAD
+  if (process.env.NODE_ENV !== 'development') return;
+  const entries = performance.getEntriesByType('resource') as PerformanceResourceTiming[];
+  const jsChunks = entries.filter(
+    (entry) => entry.name.includes('.js') && entry.name.includes('chunk');
+=======
   if (process.env.NODE_ENV !== 'development') return;';
 
   const entries = performance.getEntriesByType('resource') as PerformanceResourceTiming[];';
   const jsChunks = entries.filter(
     (entry) => entry.name.includes('.js') && entry.name.includes('chunk')';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
   );
 
   if (jsChunks.length > 0) {
@@ -124,8 +158,13 @@ export const logBundleSize = (componentName: string): void => {,
 export const createSmartPreloader = () => {
 const preloadQueue: Array<() => Promise<any>> = [];
 let isPreloading = false;
+<<<<<<< HEAD
+const getConnectionSpeed = (): 'slow' | 'fast' | 'unknown' => {
+if (typeof navigator === 'undefined') return 'unknown';
+=======
 const getConnectionSpeed = (): 'slow' | 'fast' | 'unknown' => {,';
 if (typeof navigator === 'undefined') return 'unknown';';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 const connection = (navigator as any).connection;
 if (!connection) return 'unknown';';
 const effectiveType = connection.effectiveType;
@@ -151,7 +190,11 @@ return effectiveType === '4g' || effectiveType === '5g' ? 'fast' : 'slow';';
           // Small delay between preloads to avoid overwhelming the network
           await new Promise((resolve) => setTimeout(resolve, 100));
         } catch (error) {
+<<<<<<< HEAD
+          console.error('Preload error: ', error);',
+=======
           console.error('Preload error: ', error);';,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
         }
       }
     }
@@ -163,12 +206,20 @@ return effectiveType === '4g' || effectiveType === '5g' ? 'fast' : 'slow';';
 add: (importFunc: () => Promise<any>) => {,,
 preloadQueue.push(importFunc);
 // Start processing after idle
+<<<<<<< HEAD
+if (typeof requestIdleCallback !== 'undefined') {;
+=======
 if (typeof requestIdleCallback !== 'undefined') {';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
 requestIdleCallback(() => processQueue());
 } else {
         setTimeout(() => processQueue(), 0);
       }
+<<<<<<< HEAD
+    }
+=======
     },
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208
     clear: () => {,
       preloadQueue.length = 0;
     }
