@@ -51,13 +51,25 @@ function Header() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </button>
-            <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
               <div className="py-2">
                 <Link href="/services/ai-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
                   AI Services & Solutions
                 </Link>
+                <Link href="/services/ai-powered-business-automation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  AI Business Automation
+                </Link>
                 <Link href="/services/micro-saas" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
                   Micro SaaS Solutions
+                </Link>
+                <Link href="/services/cloud-infrastructure-devops" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  Cloud Infrastructure & DevOps
+                </Link>
+                <Link href="/services/cybersecurity-compliance" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  Cybersecurity & Compliance
+                </Link>
+                <Link href="/services/data-analytics-business-intelligence" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  Data Analytics & BI
                 </Link>
                 <Link href="/services/it-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
                   IT Services & Solutions
@@ -125,8 +137,20 @@ function Footer() {
               <Link href="/services/ai-services" className="block text-gray-600 hover:text-blue-600 transition-colors">
                 AI Services & Solutions
               </Link>
+              <Link href="/services/ai-powered-business-automation" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                AI Business Automation
+              </Link>
               <Link href="/services/micro-saas" className="block text-gray-600 hover:text-blue-600 transition-colors">
                 Micro SaaS Solutions
+              </Link>
+              <Link href="/services/cloud-infrastructure-devops" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                Cloud Infrastructure & DevOps
+              </Link>
+              <Link href="/services/cybersecurity-compliance" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                Cybersecurity & Compliance
+              </Link>
+              <Link href="/services/data-analytics-business-intelligence" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                Data Analytics & BI
               </Link>
               <Link href="/services/it-services" className="block text-gray-600 hover:text-blue-600 transition-colors">
                 IT Services & Solutions

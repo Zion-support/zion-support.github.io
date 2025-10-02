@@ -43,6 +43,24 @@ export default function ServicesOverview() {
       benefits: 'Automate 70% of repetitive tasks, improve decision-making by 85%'
     },
     {
+      name: 'AI-Powered Business Automation',
+      description: 'Transform your business operations with intelligent automation solutions',
+      icon: Zap,
+      color: 'blue',
+      link: '/services/ai-powered-business-automation',
+      services: [
+        'Intelligent Workflow Automation',
+        'AI-Powered Document Intelligence',
+        'Intelligent Customer Service Automation',
+        'Predictive Analytics & Forecasting',
+        'AI-Powered Email Marketing Automation',
+        'Intelligent Appointment Scheduling'
+      ],
+      pricing: '$800 - $35,000/month',
+      delivery: '1-8 weeks',
+      benefits: 'Reduce process time by 60-80% and operational costs by 40%'
+    },
+    {
       name: 'Micro SaaS Solutions',
       description: 'Production-ready micro SaaS applications for modern businesses',
       icon: Code,
@@ -61,9 +79,63 @@ export default function ServicesOverview() {
       benefits: 'Launch faster with 50% lower development costs'
     },
     {
+      name: 'Cloud Infrastructure & DevOps',
+      description: 'Enterprise-grade cloud infrastructure, DevOps automation, and CI/CD solutions',
+      icon: Cloud,
+      color: 'purple',
+      link: '/services/cloud-infrastructure-devops',
+      services: [
+        'Cloud Migration & Architecture',
+        'CI/CD Pipeline Automation',
+        'Kubernetes & Container Orchestration',
+        'Infrastructure Monitoring & Observability',
+        'Security & Compliance Automation',
+        'Database Management & Optimization'
+      ],
+      pricing: '$2,000 - $50,000/project',
+      delivery: '2-12 weeks',
+      benefits: 'Reduce infrastructure costs by 40% and improve performance by 60%'
+    },
+    {
+      name: 'Cybersecurity & Compliance',
+      description: 'Enterprise-grade cybersecurity solutions and compliance automation',
+      icon: Shield,
+      color: 'red',
+      link: '/services/cybersecurity-compliance',
+      services: [
+        'Security Assessment & Penetration Testing',
+        'Compliance Automation (SOC2, GDPR, HIPAA)',
+        'Threat Detection & Response',
+        'Identity & Access Management (IAM)',
+        'Data Protection & Encryption',
+        'Security Operations Center (SOC)'
+      ],
+      pricing: '$2,500 - $40,000/month',
+      delivery: '2-8 weeks',
+      benefits: 'Reduce security risks by 90% with comprehensive protection'
+    },
+    {
+      name: 'Data Analytics & Business Intelligence',
+      description: 'Transform your data into actionable insights with advanced analytics',
+      icon: BarChart3,
+      color: 'green',
+      link: '/services/data-analytics-business-intelligence',
+      services: [
+        'Advanced Data Analytics Platform',
+        'Business Intelligence Dashboards',
+        'Data Warehouse & ETL Solutions',
+        'Predictive Analytics & Machine Learning',
+        'Real-Time Data Streaming Analytics',
+        'Data Visualization & Reporting'
+      ],
+      pricing: '$2,500 - $35,000/month',
+      delivery: '2-12 weeks',
+      benefits: 'Increase data-driven decision making by 300% and reduce analysis time by 80%'
+    },
+    {
       name: 'IT Services & Solutions',
       description: 'Enterprise-grade IT services and infrastructure management',
-      icon: Cloud,
+      icon: Settings,
       color: 'purple',
       link: '/services/it-services',
       services: [
