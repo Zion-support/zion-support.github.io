@@ -6,92 +6,92 @@ import { Helmet } from 'react-helmet-async';
 const Support: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-
+  const supportChannels = [
     {
-      icon: Phone
-      title: 'Phone Support'
-      description: 'Speak directly with our technical experts'
-      availability: '24/7'
-      responseTime: '< 2 minutes'
+      icon: Phone,
+      title: 'Phone Support',
+      description: 'Speak directly with our technical experts',
+      availability: '24/7',
+      responseTime: '< 2 minutes',
       contact: '+1 (555) 123-4567'
-    }
+    },
     {
-      icon: MessageCircle
-      title: 'Live Chat'
-      description: 'Get instant help through our chat system'
-      availability: '24/7'
-      responseTime: '< 30 seconds'
+      icon: MessageCircle,
+      title: 'Live Chat',
+      description: 'Get instant help through our chat system',
+      availability: '24/7',
+      responseTime: '< 30 seconds',
       contact: 'Start Chat'
-    }
+    },
     {
-      icon: Mail
-      title: 'Email Support'
-      description: 'Send us detailed questions and get comprehensive answers'
-      availability: '24/7'
-      responseTime: '< 2 hours'
+      icon: Mail,
+      title: 'Email Support',
+      description: 'Send us detailed questions and get comprehensive answers',
+      availability: '24/7',
+      responseTime: '< 2 hours',
       contact: 'support@ziontechgroup.com'
-    }
+    },
     {
-      icon: Video
-      title: 'Video Call'
-      description: 'Schedule a screen sharing session with our experts'
-      availability: 'Business Hours'
-      responseTime: '< 4 hours'
+      icon: Video,
+      title: 'Video Call',
+      description: 'Schedule a screen sharing session with our experts',
+      availability: 'Business Hours',
+      responseTime: '< 4 hours',
       contact: 'Schedule Call'
     }
   ];
 
   const faqCategories = [
     {
-      id: 'general'
-      title: 'General'
+      id: 'general',
+      title: 'General',
       icon: BookOpen
-    }
+    },
     {
-      id: 'technical'
-      title: 'Technical'
+      id: 'technical',
+      title: 'Technical',
       icon: Zap
-    }
+    },
     {
-      id: 'billing'
-      title: 'Billing'
+      id: 'billing',
+      title: 'Billing',
       icon: Users
-    }
+    },
     {
-      id: 'account'
-      title: 'Account'
+      id: 'account',
+      title: 'Account',
       icon: Clock
     }
   ];
 
   const faqs = [
     {
-      category: 'general'
-      question: 'What services does Zion Tech Group offer?'
+      category: 'general',
+      question: 'What services does Zion Tech Group offer?',
       answer: 'We offer comprehensive AI and IT solutions including automation, cybersecurity, cloud infrastructure, data analytics, and digital transformation services.'
-    }
+    },
     {
-      category: 'technical'
-      question: 'How do I integrate your AI solutions with my existing systems?'
+      category: 'technical',
+      question: 'How do I integrate your AI solutions with my existing systems?',
       answer: 'Our team provides complete integration support with APIs, documentation, and hands-on assistance to ensure seamless implementation.'
-    }
+    },
     {
-      category: 'billing'
-      question: 'What are your pricing models?'
+      category: 'billing',
+      question: 'What are your pricing models?',
       answer: 'We offer flexible pricing including subscription-based, project-based, and custom enterprise solutions tailored to your needs.'
-    }
+    },
     {
-      category: 'account'
-      question: 'How do I update my account information?'
+      category: 'account',
+      question: 'How do I update my account information?',
       answer: 'You can update your account information through our client portal or contact our support team for assistance.'
-    }
+    },
     {
-      category: 'technical'
-      question: 'Do you provide training for your solutions?'
+      category: 'technical',
+      question: 'Do you provide training for your solutions?',
       answer: 'Yes, we provide comprehensive training programs including documentation, video tutorials, and live training sessions.'
-    }
+    },
     {
-      question: 'Is there a community where I can get help from other users?'
+      question: 'Is there a community where I can get help from other users?',
       answer: "Yes! We have an active community forum where users can ask questions, share best practices, and get help from both our team and other experienced users. It's a great place to learn and network."
     }
   ];
@@ -105,9 +105,10 @@ const Support: React.FC = () => {
     return matchesCategory && matchesQuery;
   });
 
-    { title: 'Report a Bug', description: 'Found an issue? Let us know', link: '/contact', icon: '🐛' }
-    { title: 'Request a Feature', description: "Have an idea? We'd love to hear it", link: '/contact', icon: '💡' }
-    { title: 'Schedule Training', description: 'Book a training session for your team', link: '/training', icon: '🎓' }
+  const quickLinks = [
+    { title: 'Report a Bug', description: 'Found an issue? Let us know', link: '/contact', icon: '🐛' },
+    { title: 'Request a Feature', description: "Have an idea? We'd love to hear it", link: '/contact', icon: '💡' },
+    { title: 'Schedule Training', description: 'Book a training session for your team', link: '/training', icon: '🎓' },
     { title: 'View Status Page', description: 'Check system status and uptime', link: '/status', icon: '📊' }
   ];
 
